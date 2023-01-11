@@ -71,6 +71,12 @@ void main() {
         .thenAnswer((_) async => endpoint);
     registerMockService<SubiquityServer>(server);
 
+    final refresh = MockRefreshService();
+    when(refresh.state).thenReturn(const RefreshState.checking());
+    when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
+    when(refresh.check()).thenAnswer((_) async => const RefreshState.done());
+    registerMockService<RefreshService>(refresh);
+
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<TelemetryService>(MockTelemetryService());
 
@@ -104,6 +110,11 @@ extension on WidgetTester {
     when(installer.hasRoute(any)).thenReturn(true);
     when(installer.monitorStatus()).thenAnswer((_) => Stream.value(status));
 
+    final refresh = MockRefreshService();
+    when(refresh.state).thenReturn(const RefreshState.status(
+        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
+    when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
+
     final journal = MockJournalService();
     when(journal.start(any, output: anyNamed('output')))
         .thenAnswer((_) => const Stream.empty());
@@ -116,6 +127,7 @@ extension on WidgetTester {
     registerMockService<JournalService>(journal);
     registerMockService<LocaleService>(locale);
     registerMockService<ProductService>(ProductService());
+    registerMockService<RefreshService>(refresh);
     registerMockService<StorageService>(StorageService(MockSubiquityClient()));
     registerMockService<SubiquityClient>(MockSubiquityClient());
     registerMockService<TelemetryService>(MockTelemetryService());

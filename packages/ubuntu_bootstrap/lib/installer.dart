@@ -91,6 +91,7 @@ Future<void> runInstallerApp(
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
+  tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
   tryRegisterService<SessionService>(
       () => SubiquitySessionService(getService<SubiquityClient>()));
   if (liveRun) tryRegisterService(SoundService.new);
@@ -167,6 +168,7 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
 
   await getService<InstallerService>().init();
   await getService<DesktopService>().inhibit();
+  await getService<RefreshService>().check();
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {

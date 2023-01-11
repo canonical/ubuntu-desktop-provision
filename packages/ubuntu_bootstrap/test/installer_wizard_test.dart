@@ -10,6 +10,7 @@ import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_model.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
@@ -38,6 +39,7 @@ import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
 import 'loading/test_loading.dart';
+import 'refresh/test_refresh.dart';
 import 'rst/test_rst.dart';
 import 'secure_boot/test_secure_boot.dart';
 import 'source/not_enough_disk_space/test_not_enough_disk_space.dart';
@@ -98,6 +100,7 @@ void main() {
     final ethernetModel = buildEthernetModel();
     final wifiModel = buildWifiModel();
     final hiddenWifiModel = buildHiddenWifiModel();
+    final refreshModel = buildRefreshModel();
     final sourceModel = buildSourceModel();
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel();
@@ -127,6 +130,7 @@ void main() {
           ethernetModelProvider.overrideWith((_) => ethernetModel),
           wifiModelProvider.overrideWith((_) => wifiModel),
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
+          refreshModelProvider.overrideWith((_) => refreshModel),
           sourceModelProvider.overrideWith((_) => sourceModel),
           notEnoughDiskSpaceModelProvider
               .overrideWith((_) => notEnoughDiskSpaceModel),
@@ -173,6 +177,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(SourcePage), findsOneWidget);
+    verify(refreshModel.init()).called(1); // skipped
     verify(sourceModel.init()).called(1);
 
     await tester.tapNext();
@@ -376,6 +381,40 @@ void main() {
     expect(find.byType(InstallPage), findsOneWidget);
     verify(installModel.init()).called(1);
   });
+
+  testWidgets('refresh', (tester) async {
+    final localeModel = buildLocaleModel();
+    final networkModel = buildNetworkModel();
+    final ethernetModel = buildEthernetModel();
+    final wifiModel = buildWifiModel();
+    final hiddenWifiModel = buildHiddenWifiModel();
+    final refreshModel = buildRefreshModel(
+        state: const RefreshState.status(
+            RefreshStatus(availability: RefreshCheckState.AVAILABLE)));
+
+    registerMockService<TelemetryService>(MockTelemetryService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          localeModelProvider.overrideWith((_) => localeModel),
+          networkModelProvider.overrideWith((_) => networkModel),
+          ethernetModelProvider.overrideWith((_) => ethernetModel),
+          wifiModelProvider.overrideWith((_) => wifiModel),
+          hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
+          refreshModelProvider.overrideWith((_) => refreshModel),
+        ],
+        child: tester.buildTestWizard(),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.jumpToWizardRoute(Routes.network);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(RefreshPage), findsOneWidget);
+    verify(refreshModel.init()).called(1);
+  });
 }
 
 extension on WidgetTester {
@@ -386,6 +425,12 @@ extension on WidgetTester {
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
+
+    final refresh = MockRefreshService();
+    when(refresh.state).thenReturn(const RefreshState.status(
+        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
+    when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
+    registerMockService<RefreshService>(refresh);
 
     return MaterialApp(
       localizationsDelegates: localizationsDelegates,

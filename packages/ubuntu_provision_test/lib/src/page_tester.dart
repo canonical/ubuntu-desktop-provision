@@ -296,6 +296,25 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> tapSkip() {
+    return tapButton(find.ul10n((l10n) => l10n.skipLabel));
+  }
+
+  Future<void> testRefreshPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(RefreshPage);
+
+    final context = element(find.byType(RefreshPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.refreshPageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testSourcePage({
     String? sourceId,
     String? screenshot,
