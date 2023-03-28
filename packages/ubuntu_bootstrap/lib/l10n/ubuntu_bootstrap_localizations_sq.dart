@@ -792,4 +792,15 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
   String refreshSnapCleanup(Object snap) {
     return 'Cleaning up $snap...';
   }
+
+  @override
+  String get recoveryKeyTitle => 'TPM recovery key';
+
+  @override
+  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+
+  @override
+  String recoveryKeyWarning(Object color) {
+    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+  }
 }

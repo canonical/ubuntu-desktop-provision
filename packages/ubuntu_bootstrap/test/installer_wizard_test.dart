@@ -17,6 +17,7 @@ import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_d
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/welcome/welcome_model.dart';
@@ -108,6 +109,7 @@ void main() {
     final bitLockerModel = buildBitLockerModel();
     final guidedReformatModel = buildGuidedReformatModel();
     final securityKeyModel = buildSecurityKeyModel(useSecurityKey: false);
+    final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
@@ -139,6 +141,7 @@ void main() {
           bitLockerModelProvider.overrideWith((_) => bitLockerModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
           securityKeyModelProvider.overrideWith((_) => securityKeyModel),
+          recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
@@ -191,6 +194,7 @@ void main() {
     verify(bitLockerModel.init()).called(1); // skipped
     verify(guidedReformatModel.init()).called(1); // skipped
     verify(securityKeyModel.init()).called(1); // skipped
+    verify(recoveryKeyModel.init()).called(1); // skipped
     verify(confirmModel.init()).called(1);
 
     await tester.tapButton(l10n.confirmInstallButton);
