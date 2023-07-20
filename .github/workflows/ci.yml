@@ -93,15 +93,6 @@ jobs:
         branch: create-pull-request/l10n
         delete-branch: true
 
-  subiquity:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - name: Check subiquity integration
-      run: ./scripts/subiquity_integration
-
   test:
     runs-on: ubuntu-22.04
     steps:

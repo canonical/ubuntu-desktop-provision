@@ -1,4 +1,4 @@
-name: ubuntu_desktop_installer
+name: ubuntu_desktop_provision
 
 packages:
   - packages/**
