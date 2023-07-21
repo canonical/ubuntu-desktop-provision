@@ -21,8 +21,7 @@ class XdgKeyboardService implements KeyboardService {
   final GSettings _inputSourceSettings;
   final AssetBundle _assetBundle;
 
-  String _langFilename(String lang) =>
-      'packages/ubuntu_init/assets/kbds/$lang.jsonl';
+  String _langFilename(String lang) => 'assets/kbds/$lang.jsonl';
 
   Future<String> _getLanguage() async {
     await _client.connect();
@@ -48,7 +47,10 @@ class XdgKeyboardService implements KeyboardService {
 
   Future<List<KeyboardLayout>> _getLayouts() async {
     final lang = await _getLanguage();
-    final keyboardData = await _assetBundle.loadString(_langFilename(lang));
+    final keyboardData = await _assetBundle
+        .loadString(_langFilename(lang))
+        .onError((error, stackTrace) => _assetBundle
+            .loadString('packages/ubuntu_init/${_langFilename(lang)}'));
     return keyboardData
         .split('\n')
         .where((line) => line.isNotEmpty)

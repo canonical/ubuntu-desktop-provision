@@ -47,10 +47,9 @@ void main() {
 
     final fakeAssetBundle = FakeAssetBundle(
       {
-        'packages/ubuntu_init/assets/kbds/en.jsonl':
-            '["us", "English (US)", [["", "English (US)"],'
-                '["altgr-intl", "English (US) - English (intl., with AltGr dead keys)"]]]\n'
-                '["de", "German", [["", "German"]]]'
+        'assets/kbds/en.jsonl': '["us", "English (US)", [["", "English (US)"],'
+            '["altgr-intl", "English (US) - English (intl., with AltGr dead keys)"]]]\n'
+            '["de", "German", [["", "German"]]]'
       },
     );
 
