@@ -1,9 +1,8 @@
 import 'dart:async';
-import 'dart:io';
+import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -172,27 +171,19 @@ class InstallModel extends SafeChangeNotifier {
     super.dispose();
   }
 
-  // Resolves the path to the assets in the app bundle so that it works in the
-  // snap and development environments.
-  String _resolveAssetsDirectory() {
-    final appdir = p.dirname(Platform.resolvedExecutable);
-    return p.join(appdir, 'data', 'flutter_assets');
-  }
-
   /// Prefetches slide images into the image cache to avoid flicker while
   /// loading larger screenshot images
-  Future<void> precacheSlideImages(BuildContext context) {
-    final assets = _resolveAssetsDirectory();
-    return Directory(
-            '$assets/packages/ubuntu_bootstrap/assets/slides/screenshots')
-        .list(recursive: true)
-        .where((f) => p.extension(f.path) == '.png')
-        .forEach((slide) {
-      if (slide is File) {
-        final path = p.relative(slide.path, from: assets);
-        precacheImage(AssetImage(path), context);
+  Future<void> precacheSlideImages(BuildContext context) async {
+    final assets = await DefaultAssetBundle.of(context)
+        .loadString('AssetManifest.json')
+        .then((v) => (json.decode(v) as Map).keys.where(
+            (asset) => asset.endsWith('.png') && asset.contains('/slides/')));
+
+    if (context.mounted) {
+      for (final asset in assets) {
+        precacheImage(AssetImage(asset), context);
       }
-    });
+    }
   }
 
   Future<void> reboot() => _session.reboot(immediate: false);
