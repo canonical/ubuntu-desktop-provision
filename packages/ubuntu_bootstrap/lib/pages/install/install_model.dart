@@ -184,7 +184,7 @@ class InstallModel extends SafeChangeNotifier {
   Future<void> precacheSlideImages(BuildContext context) {
     final assets = _resolveAssetsDirectory();
     return Directory(
-            '$assets/packages/ubuntu_bootstrap/assets/installation_slides/screenshots')
+            '$assets/packages/ubuntu_bootstrap/assets/slides/screenshots')
         .list(recursive: true)
         .where((f) => p.extension(f.path) == '.png')
         .forEach((slide) {

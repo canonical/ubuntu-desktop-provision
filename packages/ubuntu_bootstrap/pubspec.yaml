@@ -66,11 +66,11 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
-    - assets/installation_slides/
-    - assets/installation_slides/icons/
-    - assets/installation_slides/icons/dark/
-    - assets/installation_slides/screenshots/
-    - assets/installation_slides/screenshots/dark/
-    - assets/installation_slides/screenshots/light/
+    - assets/slides/
+    - assets/slides/icons/
+    - assets/slides/icons/dark/
+    - assets/slides/screenshots/
+    - assets/slides/screenshots/dark/
+    - assets/slides/screenshots/light/
     - assets/storage/
     - assets/welcome/
