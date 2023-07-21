@@ -35,7 +35,7 @@ class BitLockerPage extends ConsumerWidget {
           children: [
             Flexible(
               child: SvgPicture.asset(
-                'assets/bitlocker/qr-code.svg',
+                'assets/storage/bitlocker.svg',
                 colorFilter: ColorFilter.mode(
                   Theme.of(context).brightness == Brightness.light
                       ? Colors.black
