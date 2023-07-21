@@ -19,7 +19,7 @@ class StorageIcon extends StatelessWidget {
     return SizedBox.square(
       dimension: 48,
       child: SvgPicture.asset(
-        'assets/install_alongside/$asset.svg',
+        'assets/storage/$asset.svg',
       ),
     );
   }

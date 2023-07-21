@@ -9,7 +9,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 import 'slide_layouts.dart';
 
-String _slideAsset(String name) => 'assets/installation_slides/$name';
+String _slideAsset(String name) => 'assets/slides/$name';
 String _slideIcon(String name) => _slideAsset('icons/$name');
 String _slideScreenshot(String name) => _slideAsset('screenshots/$name');
 

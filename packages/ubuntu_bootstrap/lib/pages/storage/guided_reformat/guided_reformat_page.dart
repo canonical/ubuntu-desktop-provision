@@ -75,7 +75,7 @@ class GuidedReformatPage extends ConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   SvgPicture.asset(
-                    'assets/select_guided_storage/ubuntu.svg',
+                    'assets/storage/ubuntu.svg',
                     width: 48,
                     height: 48,
                   ),

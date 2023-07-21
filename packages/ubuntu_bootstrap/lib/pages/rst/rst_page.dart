@@ -36,7 +36,7 @@ class RstPage extends ConsumerWidget {
             children: <Widget>[
               Flexible(
                 child: SvgPicture.asset(
-                  'assets/rst/qr-code.svg',
+                  'assets/storage/rst.svg',
                   colorFilter: ColorFilter.mode(
                     Theme.of(context).brightness == Brightness.light
                         ? Colors.black
