@@ -15,6 +15,7 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^2.3.6
   gsettings: ^0.2.7
+  handy_window: ^0.3.0
   meta: ^1.7.0
   stdlibc: ^0.1.0
   timezone_map:
@@ -23,10 +24,13 @@ dependencies:
       path: packages/timezone_map
       ref: 5af6896c75b5ab8f78b93f7f358836a8c4c7857f
   ubuntu_localizations: ^0.3.3
+  ubuntu_logger: ^0.0.3
   ubuntu_provision:
     path: ../ubuntu_provision
   ubuntu_service: ^0.2.0
   ubuntu_session: ^0.0.4
+  ubuntu_utils:
+    path: ../ubuntu_utils
   ubuntu_wizard:
     path: ../ubuntu_wizard
   xdg_locale: ^0.0.1
