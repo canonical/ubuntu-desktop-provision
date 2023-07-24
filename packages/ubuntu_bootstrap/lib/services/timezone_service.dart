@@ -12,7 +12,7 @@ class SubiquityTimezoneService implements TimezoneService {
   }
 
   @override
-  Future<void> setTimezone(String timezone) {
-    return _subiquity.setTimezone(timezone);
+  Future<void> setTimezone(String? timezone) {
+    return _subiquity.setTimezone(timezone ?? 'geoip');
   }
 }

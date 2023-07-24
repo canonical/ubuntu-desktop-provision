@@ -26,6 +26,9 @@ void main() {
 
       final service = SubiquityTimezoneService(client);
 
+      await service.setTimezone(null);
+      verify(client.setTimezone('geoip')).called(1);
+
       await service.setTimezone('Europe/Oslo');
       verify(client.setTimezone('Europe/Oslo')).called(1);
     });

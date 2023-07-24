@@ -25,13 +25,13 @@ void main() {
 
   test('save', () async {
     final service = MockTimezoneService();
-    when(service.setTimezone('geoip')).thenAnswer((_) async {});
+    when(service.setTimezone(null)).thenAnswer((_) async {});
     when(service.setTimezone('Europe/Oslo')).thenAnswer((_) async {});
 
     final model = TimezoneModel(service, MockGeoService());
 
     await model.save();
-    verify(service.setTimezone('geoip')).called(1);
+    verify(service.setTimezone(null)).called(1);
 
     model.selectLocation(const GeoLocation(timezone: 'Europe/Oslo'));
 
