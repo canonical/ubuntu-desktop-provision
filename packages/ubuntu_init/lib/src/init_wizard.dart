@@ -10,6 +10,7 @@ enum InitStep {
   network,
   timezone,
   identity,
+  theme,
 }
 
 class InitRoutes {
@@ -19,6 +20,7 @@ class InitRoutes {
   static const String network = '/network';
   static const String timezone = '/timezone';
   static const String identity = '/identity';
+  static const String theme = '/theme';
 }
 
 class InitWizard extends ConsumerStatefulWidget {
@@ -75,6 +77,13 @@ class _WelcomeWizardState extends ConsumerState<InitWizard> {
             step: InitStep.identity.index,
           ),
           onLoad: (_) => IdentityPage.load(ref),
+        ),
+        InitRoutes.theme: WizardRoute(
+          builder: (_) => const ThemePage(),
+          userData: WizardRouteData(
+            step: InitStep.theme.index,
+          ),
+          onLoad: (_) => ThemePage.load(ref),
           onNext: (_) =>
               YaruWindow.of(context).close().then((_) => InitRoutes.initial),
         ),
