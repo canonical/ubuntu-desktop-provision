@@ -6,13 +6,18 @@ environment:
   flutter: ">=3.10.0"
 
 dependencies:
+  dbus: ^0.7.3
   flutter:
     sdk: flutter
   flutter_test:
     sdk: flutter
+  gsettings: ^0.2.7
   ubuntu_flavor: ^0.2.0
+  ubuntu_init:
+    path: ../ubuntu_init
   ubuntu_provision:
     path: ../ubuntu_provision
+  ubuntu_service: ^0.2.2
   ubuntu_test: ^0.1.0-0
   ubuntu_wizard:
     path: ../ubuntu_wizard
