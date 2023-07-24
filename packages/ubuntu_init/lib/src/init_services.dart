@@ -25,6 +25,7 @@ Future<void> registerInitServices() {
   tryRegisterService<NetworkService>(NetworkService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
+  tryRegisterService<UdevService>(UdevService.new);
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {
