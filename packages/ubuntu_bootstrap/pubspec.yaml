@@ -65,6 +65,7 @@ dev_dependencies:
   yaru_test: ^0.1.0
 
 flutter:
+  uses-material-design: true
   assets:
     - assets/
     - assets/slides/
