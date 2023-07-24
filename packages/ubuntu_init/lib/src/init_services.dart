@@ -24,6 +24,7 @@ Future<void> registerInitServices() {
   tryRegisterService<LocaleService>(XdgLocaleService.new);
   tryRegisterService<NetworkService>(NetworkService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
+  tryRegisterService<ThemeService>(GtkThemeService.new);
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
 

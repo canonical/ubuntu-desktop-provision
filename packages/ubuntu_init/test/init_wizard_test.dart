@@ -15,6 +15,7 @@ import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
+import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 
 void main() {
@@ -31,6 +32,7 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
+    final themeModel = buildThemeModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -43,6 +45,7 @@ void main() {
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
+          themeModelProvider.overrideWith((_) => themeModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -72,6 +75,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(ThemePage), findsOneWidget);
+    verify(themeModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 

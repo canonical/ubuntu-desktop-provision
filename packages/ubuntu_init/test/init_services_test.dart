@@ -16,6 +16,7 @@ void main() {
     expect(tryGetService<LocaleService>(), isNotNull);
     expect(tryGetService<NetworkService>(), isNotNull);
     expect(tryGetService<SessionService>(), isNotNull);
+    expect(tryGetService<ThemeService>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
   });
 }
