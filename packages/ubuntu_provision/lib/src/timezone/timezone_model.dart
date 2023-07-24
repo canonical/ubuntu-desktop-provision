@@ -29,7 +29,7 @@ class TimezoneModel extends TimezoneController {
   }
 
   Future<void> save() async {
-    final timezone = selectedLocation?.timezone ?? 'geoip';
+    final timezone = selectedLocation?.timezone;
     log.debug('Saved $timezone');
     _service.setTimezone(timezone);
   }

@@ -28,11 +28,11 @@ class XdgTimezoneService implements TimezoneService {
   }
 
   @override
-  Future<void> setTimezone(String timezone) async {
+  Future<void> setTimezone(String? timezone) async {
     await _object.callMethod(
       'org.freedesktop.timedate1',
       'SetTimezone',
-      [DBusString(timezone), const DBusBoolean(false)],
+      [DBusString(timezone ?? 'Etc/UTC'), const DBusBoolean(false)],
       replySignature: DBusSignature.empty,
     );
   }

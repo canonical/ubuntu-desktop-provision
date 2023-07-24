@@ -25,11 +25,24 @@ void main() {
     when(object.callMethod(
       'org.freedesktop.timedate1',
       'SetTimezone',
+      const [DBusString('Etc/UTC'), DBusBoolean(false)],
+      replySignature: DBusSignature.empty,
+    )).thenAnswer((_) async => DBusMethodSuccessResponse());
+    when(object.callMethod(
+      'org.freedesktop.timedate1',
+      'SetTimezone',
       const [DBusString('Europe/Berlin'), DBusBoolean(false)],
       replySignature: DBusSignature.empty,
     )).thenAnswer((_) async => DBusMethodSuccessResponse());
 
     final service = XdgTimezoneService(object);
+    await service.setTimezone(null);
+    verify(object.callMethod(
+      'org.freedesktop.timedate1',
+      'SetTimezone',
+      const [DBusString('Etc/UTC'), DBusBoolean(false)],
+      replySignature: DBusSignature.empty,
+    )).called(1);
     await service.setTimezone('Europe/Berlin');
     verify(object.callMethod(
       'org.freedesktop.timedate1',
