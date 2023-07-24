@@ -14,6 +14,7 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
+import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 
 void main() {
@@ -24,6 +25,10 @@ void main() {
   testWidgets('init', (tester) async {
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
+    final networkModel = buildNetworkModel();
+    final ethernetModel = buildEthernetModel();
+    final wifiModel = buildWifiModel();
+    final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
 
@@ -32,6 +37,10 @@ void main() {
         overrides: [
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
+          networkModelProvider.overrideWith((_) => networkModel),
+          ethernetModelProvider.overrideWith((_) => ethernetModel),
+          wifiModelProvider.overrideWith((_) => wifiModel),
+          hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
         ],
@@ -48,6 +57,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(KeyboardPage), findsOneWidget);
     verify(keyboardModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(NetworkPage), findsOneWidget);
+    verify(networkModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

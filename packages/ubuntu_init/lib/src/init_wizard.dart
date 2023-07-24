@@ -7,6 +7,7 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 enum InitStep {
   locale,
   keyboard,
+  network,
   timezone,
   identity,
 }
@@ -15,6 +16,7 @@ class InitRoutes {
   static const String initial = '/';
   static const String locale = '/locale';
   static const String keyboard = '/keyboard';
+  static const String network = '/network';
   static const String timezone = '/timezone';
   static const String identity = '/identity';
 }
@@ -52,6 +54,13 @@ class _WelcomeWizardState extends ConsumerState<InitWizard> {
             step: InitStep.keyboard.index,
           ),
           onLoad: (_) => KeyboardPage.load(ref),
+        ),
+        InitRoutes.network: WizardRoute(
+          builder: (_) => const NetworkPage(),
+          userData: WizardRouteData(
+            step: InitStep.network.index,
+          ),
+          onLoad: (_) => NetworkPage.load(ref),
         ),
         InitRoutes.timezone: WizardRoute(
           builder: (_) => const TimezonePage(),
