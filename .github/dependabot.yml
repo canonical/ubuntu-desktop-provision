@@ -4,4 +4,5 @@ updates:
     directory: /
     schedule:
         interval: "daily"
+        time: "04:00"
     target-branch: "main"
