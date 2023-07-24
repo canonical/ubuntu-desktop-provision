@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -264,4 +265,32 @@ extension UbuntuProvisionTester on WidgetTester {
       matchesGoldenFile('screenshots/$screenshot.png'),
     );
   }
+}
+
+Future<void> expectLocale(String locale) async {
+  expect(
+    await getService<LocaleService>().getLocale(),
+    locale,
+  );
+}
+
+Future<void> expectKeyboard(KeyboardSetting keyboard) async {
+  expect(
+    await getService<KeyboardService>().getKeyboard().then((k) => k.setting),
+    keyboard,
+  );
+}
+
+Future<void> expectTimezone(String timezone) async {
+  expect(
+    await getService<TimezoneService>().getTimezone(),
+    timezone,
+  );
+}
+
+Future<void> expectIdentity(Identity identity) async {
+  expect(
+    await getService<IdentityService>().getIdentity(),
+    identity,
+  );
 }
