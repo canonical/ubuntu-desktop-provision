@@ -25,8 +25,11 @@ jobs:
       - run: |
           sudo apt update
           sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
-          sudo apt install -y accountsservice dbus-x11 network-manager upower xvfb
+          sudo apt install -y accountsservice dbus dbus-x11 gsettings-desktop-schemas network-manager upower xvfb
+          echo "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$UID/bus" >> $GITHUB_ENV
+          echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
+          gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
       - run: |
-          sudo xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
-            flutter test integration_test
+          sudo -E xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
+            $FLUTTER_ROOT/bin/flutter test integration_test
         working-directory: packages/ubuntu_init
