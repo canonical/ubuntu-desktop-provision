@@ -27,13 +27,6 @@ jobs:
           sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
           sudo apt install -y accountsservice dbus-x11 network-manager polkitd upower xvfb
       - run: |
-          sudo cp integration_test/assets/10-network-manager.yaml /etc/netplan/
-          sudo cp integration_test/assets/*.pkla /var/lib/polkit-1/localauthority/50-local.d/
-          sudo netplan apply
-        working-directory: packages/ubuntu_init
-      - run: |
-          dbus-run-session -- xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
+          sudo xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
             flutter test integration_test
-        env:
-          LANG: en_US.UTF-8
         working-directory: packages/ubuntu_init
