@@ -38,7 +38,8 @@ extension UbuntuProvisionTester on WidgetTester {
   }
 
   Future<void> testKeyboardPage({
-    KeyboardSetting? keyboard,
+    String? layout,
+    String? variant,
     String? screenshot,
   }) async {
     await _pumpUntilPage(KeyboardPage);
@@ -48,21 +49,19 @@ extension UbuntuProvisionTester on WidgetTester {
 
     expect(find.titleBar(l10n.keyboardTitle), findsOneWidget);
 
-    if (keyboard != null) {
-      if (keyboard.layout.isNotEmpty) {
-        final tile = find.listTile(keyboard.layout, skipOffstage: false);
-        await ensureVisible(tile.last);
-        await pump();
-        await tap(tile.last);
-        await pump();
-      }
-      if (keyboard.variant.isNotEmpty) {
-        final tile = find.listTile(keyboard.variant, skipOffstage: false);
-        await ensureVisible(tile.first);
-        await pump();
-        await tap(tile.first);
-        await pump();
-      }
+    if (layout != null) {
+      final tile = find.listTile(layout, skipOffstage: false);
+      await ensureVisible(tile.last);
+      await pump();
+      await tap(tile.last);
+      await pump();
+    }
+    if (variant != null) {
+      final tile = find.listTile(variant, skipOffstage: false);
+      await ensureVisible(tile.first);
+      await pump();
+      await tap(tile.first);
+      await pump();
     }
     await pumpAndSettle();
 
@@ -291,6 +290,10 @@ Future<void> expectTimezone(String timezone) async {
 Future<void> expectIdentity(Identity identity) async {
   expect(
     await getService<IdentityService>().getIdentity(),
-    identity,
+    isA<Identity>()
+        .having((id) => id.realname, 'realname', identity.realname)
+        .having((id) => id.username, 'username', identity.username)
+        .having((id) => id.hostname, 'hostname', identity.hostname)
+        .having((id) => id.autoLogin, 'autoLogin', identity.autoLogin),
   );
 }

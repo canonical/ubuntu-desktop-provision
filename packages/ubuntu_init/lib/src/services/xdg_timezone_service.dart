@@ -3,12 +3,14 @@ import 'package:meta/meta.dart';
 import 'package:ubuntu_provision/services.dart';
 
 class XdgTimezoneService implements TimezoneService {
-  XdgTimezoneService([@visibleForTesting DBusRemoteObject? object])
-      : _object = object ?? _createRemoteObject();
+  XdgTimezoneService({
+    @visibleForTesting DBusClient? bus,
+    @visibleForTesting DBusRemoteObject? object,
+  }) : _object = object ?? _createRemoteObject(bus);
 
-  static DBusRemoteObject _createRemoteObject() {
+  static DBusRemoteObject _createRemoteObject(DBusClient? bus) {
     return DBusRemoteObject(
-      DBusClient.system(),
+      bus ?? DBusClient.system(),
       name: 'org.freedesktop.timedate1',
       path: DBusObjectPath('/org/freedesktop/timedate1'),
     );
