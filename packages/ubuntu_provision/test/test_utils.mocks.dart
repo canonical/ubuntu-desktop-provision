@@ -1073,6 +1073,14 @@ class MockThemeService extends _i1.Mock implements _i23.ThemeService {
   }
 
   @override
+  _i8.Future<_i24.Brightness> getBrightness() => (super.noSuchMethod(
+        Invocation.method(
+          #getBrightness,
+          [],
+        ),
+        returnValue: _i8.Future<_i24.Brightness>.value(_i24.Brightness.dark),
+      ) as _i8.Future<_i24.Brightness>);
+  @override
   _i8.Future<void> setBrightness(_i24.Brightness? brightness) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -1082,6 +1090,14 @@ class MockThemeService extends _i1.Mock implements _i23.ThemeService {
         returnValue: _i8.Future<void>.value(),
         returnValueForMissingStub: _i8.Future<void>.value(),
       ) as _i8.Future<void>);
+  @override
+  _i8.Future<String?> getAccent() => (super.noSuchMethod(
+        Invocation.method(
+          #getAccent,
+          [],
+        ),
+        returnValue: _i8.Future<String?>.value(),
+      ) as _i8.Future<String?>);
   @override
   _i8.Future<void> setAccent(String? accent) => (super.noSuchMethod(
         Invocation.method(

@@ -5,6 +5,8 @@ export 'package:nm/nm.dart';
 
 /// Extends [NetworkManagerClient] with convenience properties and methods.
 class NetworkService extends NetworkManagerClient {
+  NetworkService({super.bus});
+
   /// `true` if there is a full network connection.
   bool get isConnected {
     return connectivity == NetworkManagerConnectivityState.full;

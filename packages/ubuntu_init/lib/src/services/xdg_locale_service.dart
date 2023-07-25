@@ -1,10 +1,13 @@
+import 'package:dbus/dbus.dart';
 import 'package:meta/meta.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:xdg_locale/xdg_locale.dart';
 
 class XdgLocaleService implements LocaleService {
-  XdgLocaleService([@visibleForTesting XdgLocaleClient? client])
-      : _client = client ?? XdgLocaleClient();
+  XdgLocaleService({
+    DBusClient? bus,
+    @visibleForTesting XdgLocaleClient? client,
+  }) : _client = client ?? XdgLocaleClient(bus: bus);
 
   final XdgLocaleClient _client;
   @override

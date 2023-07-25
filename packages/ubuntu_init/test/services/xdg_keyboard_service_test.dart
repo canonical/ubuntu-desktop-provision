@@ -54,9 +54,9 @@ void main() {
     );
 
     final service = XdgKeyboardService(
-      client,
-      MockGSettings(),
-      fakeAssetBundle,
+      client: client,
+      settings: MockGSettings(),
+      assetBundle: fakeAssetBundle,
     );
     expect(await service.getKeyboard(), equals(keyboardSetup));
   });
@@ -68,7 +68,10 @@ void main() {
     when(client.x11Model).thenReturn('pc105');
     when(client.x11Options).thenReturn('terminate:ctrl_alt_bksp');
 
-    final service = XdgKeyboardService(client, MockGSettings());
+    final service = XdgKeyboardService(
+      client: client,
+      settings: MockGSettings(),
+    );
     await service.setKeyboard(keyboardSetup.setting);
 
     verify(client.setX11Keyboard(
@@ -85,7 +88,10 @@ void main() {
     final gsettings = MockGSettings();
     when(gsettings.set('sources', any)).thenAnswer((_) async {});
 
-    final service = XdgKeyboardService(MockXdgLocaleClient(), gsettings);
+    final service = XdgKeyboardService(
+      client: MockXdgLocaleClient(),
+      settings: gsettings,
+    );
     await service.setInputSource(keyboardSetup.setting);
 
     verify(gsettings.set(

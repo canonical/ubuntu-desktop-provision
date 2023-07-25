@@ -16,7 +16,7 @@ void main() {
       signature: DBusSignature.string,
     )).thenAnswer((_) async => const DBusString('Europe/Rome'));
 
-    final service = XdgTimezoneService(object);
+    final service = XdgTimezoneService(object: object);
     expect(await service.getTimezone(), equals('Europe/Rome'));
   });
 
@@ -35,7 +35,7 @@ void main() {
       replySignature: DBusSignature.empty,
     )).thenAnswer((_) async => DBusMethodSuccessResponse());
 
-    final service = XdgTimezoneService(object);
+    final service = XdgTimezoneService(object: object);
     await service.setTimezone(null);
     verify(object.callMethod(
       'org.freedesktop.timedate1',

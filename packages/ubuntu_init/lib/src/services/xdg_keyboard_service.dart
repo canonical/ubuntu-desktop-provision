@@ -8,13 +8,14 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:xdg_locale/xdg_locale.dart';
 
 class XdgKeyboardService implements KeyboardService {
-  XdgKeyboardService([
+  XdgKeyboardService({
+    DBusClient? bus,
     @visibleForTesting XdgLocaleClient? client,
-    @visibleForTesting GSettings? inputSourceSettings,
+    @visibleForTesting GSettings? settings,
     @visibleForTesting AssetBundle? assetBundle,
-  ])  : _client = client ?? XdgLocaleClient(),
-        _inputSourceSettings =
-            inputSourceSettings ?? GSettings('org.gnome.desktop.input-sources'),
+  })  : _client = client ?? XdgLocaleClient(bus: bus),
+        _inputSourceSettings = settings ??
+            GSettings(sessionBus: bus, 'org.gnome.desktop.input-sources'),
         _assetBundle = assetBundle ?? rootBundle;
 
   final XdgLocaleClient _client;
