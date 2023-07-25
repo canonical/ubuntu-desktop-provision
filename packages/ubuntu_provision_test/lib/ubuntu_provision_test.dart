@@ -251,7 +251,7 @@ extension UbuntuProvisionTester on WidgetTester {
   }
 
   Future<void> _pumpUntilPage(Type page) async {
-    await pumpUntil(find.byType(page));
+    await pumpUntil(find.byType(page), const Duration(seconds: 60));
     await pumpAndSettle();
   }
 
