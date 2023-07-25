@@ -10,24 +10,30 @@ import 'theme_service_test.mocks.dart';
 
 @GenerateMocks([GSettings])
 void main() {
-  test('set color-scheme via gsettings', () async {
+  test('color-scheme via gsettings', () async {
     final settings = MockGSettings();
     when(settings.set(any, any)).thenAnswer((_) async {});
 
     final service = GtkThemeService(settings: settings);
 
+    when(settings.get('color-scheme'))
+        .thenAnswer((_) async => const DBusString('prefer-dark'));
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Yaru-dark'));
 
+    expect(await service.getBrightness(), Brightness.dark);
     await service.setBrightness(Brightness.light);
     verifyInOrder([
       settings.set('gtk-theme', const DBusString('Yaru')),
       settings.set('color-scheme', const DBusString('prefer-light')),
     ]);
 
+    when(settings.get('color-scheme'))
+        .thenAnswer((_) async => const DBusString('prefer-light'));
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Yaru'));
 
+    expect(await service.getBrightness(), Brightness.light);
     await service.setBrightness(Brightness.dark);
     verifyInOrder([
       settings.set('gtk-theme', const DBusString('Yaru-dark')),
@@ -35,7 +41,7 @@ void main() {
     ]);
   });
 
-  test('set accent color via gsettings', () async {
+  test('accent color via gsettings', () async {
     final settings = MockGSettings();
     when(settings.set('gtk-theme', any)).thenAnswer((_) async {});
 
@@ -44,6 +50,9 @@ void main() {
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Yaru-dark'));
 
+    expect(await service.getAccent(), null);
+    when(settings.get('gtk-theme'))
+        .thenAnswer((_) async => const DBusString('Yaru-red-dark'));
     await service.setAccent('red');
     verify(settings.set('gtk-theme', const DBusString('Yaru-red-dark')))
         .called(1);
@@ -51,6 +60,7 @@ void main() {
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Any-red'));
 
+    expect(await service.getAccent(), 'red');
     await service.setAccent('prussianGreen');
     verify(settings.set('gtk-theme', const DBusString('Any-prussiangreen')))
         .called(1);
