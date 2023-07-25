@@ -25,7 +25,7 @@ jobs:
       - run: |
           sudo apt update
           sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
-          sudo apt install -y accountsservice dbus-x11 network-manager polkitd upower xvfb
+          sudo apt install -y accountsservice dbus-x11 network-manager upower xvfb
       - run: |
           sudo xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' \
             flutter test integration_test
