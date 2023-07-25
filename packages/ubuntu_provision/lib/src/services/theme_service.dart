@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:meta/meta.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 
 /// An interface for managing the system theme.
 abstract class ThemeService {
@@ -24,8 +25,8 @@ abstract class ThemeService {
 
 class GtkThemeService implements ThemeService {
   GtkThemeService({DBusClient? bus, GSettings? settings})
-      : settings = settings ??
-            GSettings(sessionBus: bus, 'org.gnome.desktop.interface');
+      : settings =
+            settings ?? createService<GSettings>('org.gnome.desktop.interface');
 
   @protected
   final GSettings settings;

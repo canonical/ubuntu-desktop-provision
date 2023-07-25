@@ -2,6 +2,7 @@ import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:meta/meta.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_session/ubuntu_session.dart';
 
 /// @internal
@@ -27,14 +28,14 @@ class GnomeService implements DesktopService {
     @visibleForTesting GSettings? sessionSettings,
     @visibleForTesting GSettings? screensaverSettings,
     @visibleForTesting GnomeSessionManager? gnomeSessionManager,
-  })  : _dingSettings =
-            dingSettings ?? GSettings('org.gnome.shell.extensions.ding'),
+  })  : _dingSettings = dingSettings ??
+            createService<GSettings>('org.gnome.shell.extensions.ding'),
         _mediaHandlingSettings = mediaHandlingSettings ??
-            GSettings('org.gnome.desktop.media-handling'),
-        _screensaverSettings =
-            screensaverSettings ?? GSettings('org.gnome.desktop.screensaver'),
-        _sessionSettings =
-            sessionSettings ?? GSettings('org.gnome.desktop.session'),
+            createService<GSettings>('org.gnome.desktop.media-handling'),
+        _screensaverSettings = screensaverSettings ??
+            createService<GSettings>('org.gnome.desktop.screensaver'),
+        _sessionSettings = sessionSettings ??
+            createService<GSettings>('org.gnome.desktop.session'),
         _gnomeSessionManager = gnomeSessionManager ?? GnomeSessionManager();
 
   final GSettings _dingSettings;

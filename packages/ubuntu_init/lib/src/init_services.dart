@@ -1,3 +1,4 @@
+import 'package:gsettings/gsettings.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -19,6 +20,7 @@ export 'services/xdg_timezone_service.dart';
 
 Future<void> registerInitServices() {
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
+  tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
   tryRegisterService<LocaleService>(XdgLocaleService.new);

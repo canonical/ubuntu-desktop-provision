@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gsettings/gsettings.dart';
 import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
@@ -75,6 +76,7 @@ Future<void> runInstallerApp(
     tryRegisterService(() => ConfigService(options['config']!));
   }
   tryRegisterService<DesktopService>(() => GnomeService());
+  tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(() => SubiquityIdentityService(
       getService<SubiquityClient>(), getService<PostInstallService>()));
   tryRegisterService<InstallerService>(() => InstallerService(
