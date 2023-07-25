@@ -16,24 +16,24 @@ void main() {
     autoLogin: true,
   );
   test('get default user identity', () async {
-    final dBusClient = createMockDBusClient(identityData: testIdentity);
-    final service = XdgIdentityService(dBusClient, 1000);
+    final client = createMockDBusClient(identityData: testIdentity);
+    final service = XdgIdentityService.uid(1000, bus: client);
     expect(await service.getIdentity(), equals(testIdentity));
   });
 
   test('set identity', () async {
-    final dBusClient = createMockDBusClient();
-    final service = XdgIdentityService(dBusClient, 0);
+    final client = createMockDBusClient();
+    final service = XdgIdentityService.uid(0, bus: client);
     await service.setIdentity(testIdentity);
     expect(await service.getIdentity(), equals(testIdentity));
   });
 
   test('apply', () async {
-    final dBusClient = createMockDBusClient();
-    final service = XdgIdentityService(dBusClient, 0);
+    final client = createMockDBusClient();
+    final service = XdgIdentityService.uid(0, bus: client);
     await service.setIdentity(testIdentity.copyWith(password: 'password'));
 
-    verify(dBusClient.callMethod(
+    verify(client.callMethod(
       destination: 'org.freedesktop.Accounts',
       path: DBusObjectPath('/org/freedesktop/Accounts'),
       interface: 'org.freedesktop.Accounts',
@@ -49,7 +49,7 @@ void main() {
       allowInteractiveAuthorization: false,
     )).called(1);
 
-    verify(dBusClient.callMethod(
+    verify(client.callMethod(
       destination: 'org.freedesktop.Accounts',
       path: DBusObjectPath('/test/object/path'),
       interface: 'org.freedesktop.Accounts.User',
@@ -64,7 +64,7 @@ void main() {
       allowInteractiveAuthorization: false,
     )).called(1);
 
-    verify(dBusClient.callMethod(
+    verify(client.callMethod(
       destination: 'org.freedesktop.Accounts',
       path: DBusObjectPath('/test/object/path'),
       interface: 'org.freedesktop.Accounts.User',
@@ -78,7 +78,7 @@ void main() {
       allowInteractiveAuthorization: false,
     )).called(1);
 
-    verify(dBusClient.callMethod(
+    verify(client.callMethod(
       destination: 'org.freedesktop.hostname1',
       path: DBusObjectPath('/org/freedesktop/hostname1'),
       interface: 'org.freedesktop.hostname1',

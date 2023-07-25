@@ -1,28 +1,28 @@
 import 'package:dbus/dbus.dart';
-import 'package:meta/meta.dart';
 import 'package:stdlibc/stdlibc.dart';
 import 'package:ubuntu_provision/services.dart';
 
 class XdgIdentityService implements IdentityService {
-  XdgIdentityService([
-    @visibleForTesting DBusClient? dBusClient,
-    @visibleForTesting int? userId,
-  ])  : _dBusClient = dBusClient ?? DBusClient.system(),
-        _userId = userId ?? getuid();
+  XdgIdentityService({DBusClient? bus})
+      : _client = bus ?? DBusClient.system(),
+        _userId = getuid();
+
+  XdgIdentityService.uid(this._userId, {DBusClient? bus})
+      : _client = bus ?? DBusClient.system();
 
   static const _defaultUserId = 1000;
 
-  final DBusClient _dBusClient;
+  final DBusClient _client;
   final int _userId;
   Identity? _identity;
 
   DBusRemoteObject get _accountObject => DBusRemoteObject(
-        _dBusClient,
+        _client,
         name: 'org.freedesktop.Accounts',
         path: DBusObjectPath('/org/freedesktop/Accounts'),
       );
   DBusRemoteObject get _hostnameObject => DBusRemoteObject(
-        _dBusClient,
+        _client,
         name: 'org.freedesktop.hostname1',
         path: DBusObjectPath('/org/freedesktop/hostname1'),
       );
@@ -42,7 +42,7 @@ class XdgIdentityService implements IdentityService {
               replySignature: DBusSignature.objectPath)
           .then((response) => response.values.first.asObjectPath());
       final userObject = DBusRemoteObject(
-        _dBusClient,
+        _client,
         name: 'org.freedesktop.Accounts',
         path: userObjectPath,
       );
@@ -101,7 +101,7 @@ class XdgIdentityService implements IdentityService {
         .then((response) => response.values.first.asObjectPath());
 
     final userObject = DBusRemoteObject(
-      _dBusClient,
+      _client,
       name: 'org.freedesktop.Accounts',
       path: userObjectPath,
     );

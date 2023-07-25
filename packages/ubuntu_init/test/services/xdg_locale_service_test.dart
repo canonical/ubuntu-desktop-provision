@@ -12,7 +12,7 @@ void main() {
     final client = MockXdgLocaleClient();
     when(client.locale).thenAnswer((_) => {'LANG': 'en_US.UTF-8'});
 
-    final service = XdgLocaleService(client);
+    final service = XdgLocaleService(client: client);
     expect(await service.getLocale(), equals('en_US.UTF-8'));
   });
 
@@ -23,7 +23,7 @@ void main() {
           'LC_MESSAGES': 'en_US.UTF-8',
         });
 
-    final service = XdgLocaleService(client);
+    final service = XdgLocaleService(client: client);
     await service.setLocale('en_GB.UTF-8');
 
     verify(client.setLocale({

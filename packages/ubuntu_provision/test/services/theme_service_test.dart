@@ -14,7 +14,7 @@ void main() {
     final settings = MockGSettings();
     when(settings.set(any, any)).thenAnswer((_) async {});
 
-    final service = GtkThemeService(settings);
+    final service = GtkThemeService(settings: settings);
 
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Yaru-dark'));
@@ -39,7 +39,7 @@ void main() {
     final settings = MockGSettings();
     when(settings.set('gtk-theme', any)).thenAnswer((_) async {});
 
-    final service = GtkThemeService(settings);
+    final service = GtkThemeService(settings: settings);
 
     when(settings.get('gtk-theme'))
         .thenAnswer((_) async => const DBusString('Yaru-dark'));
