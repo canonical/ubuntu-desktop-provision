@@ -64,20 +64,29 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
   }
 }
 
-class _InstallWizard extends ConsumerWidget {
+class _InstallWizard extends ConsumerStatefulWidget {
   const _InstallWizard({this.welcome});
 
   final bool? welcome;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_InstallWizard> createState() => _InstallWizardState();
+}
+
+class _InstallWizardState extends ConsumerState<_InstallWizard> {
+  late final WizardController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+
     final preInstall = <String, WizardRoute>{
       Routes.locale: WizardRoute(
         builder: (_) => const LocalePage(),
         userData: WizardRouteData(step: InstallationStep.locale.index),
         onLoad: (_) => LocalePage.load(context, ref),
       ),
-      if (welcome == true)
+      if (widget.welcome == true)
         Routes.welcome: WizardRoute(
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(step: InstallationStep.locale.index),
@@ -157,12 +166,12 @@ class _InstallWizard extends ConsumerWidget {
       );
     }
 
-    return Wizard(
+    _controller = WizardController(
       initialRoute: Routes.initial,
-      userData: WizardData(totalSteps: InstallationStep.values.length),
-      routes: <String, WizardRoute>{
+      routes: {
         Routes.loading: WizardRoute(
           builder: (_) => const LoadingPage(),
+          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
         ),
         ...preInstall.map(guardRoute),
         Routes.confirm: WizardRoute(
@@ -176,6 +185,20 @@ class _InstallWizard extends ConsumerWidget {
           onLoad: (_) => InstallPage.load(context, ref),
         ),
       },
+    )..replace();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Wizard(
+      controller: _controller,
+      userData: WizardData(totalSteps: InstallationStep.values.length),
       observers: [_InstallerObserver(getService<TelemetryService>())],
     );
   }
@@ -194,30 +217,52 @@ class _InstallerObserver extends NavigatorObserver {
   }
 }
 
-class _AutoinstallWizard extends StatelessWidget {
+class _AutoinstallWizard extends ConsumerStatefulWidget {
   const _AutoinstallWizard({this.status});
 
   final ApplicationStatus? status;
 
   @override
-  Widget build(BuildContext context) {
-    return Wizard(
-      routes: <String, WizardRoute>{
+  ConsumerState<_AutoinstallWizard> createState() => _AutoinstallWizardState();
+}
+
+class _AutoinstallWizardState extends ConsumerState<_AutoinstallWizard> {
+  late final WizardController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = WizardController(
+      routes: {
         Routes.loading: WizardRoute(
-            builder: (_) => const LoadingPage(),
-            userData: const WizardRouteData(
-              hasPrevious: false,
-              hasNext: false,
-            )),
+          builder: (_) => const LoadingPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
+        ),
         Routes.confirm: WizardRoute(
           builder: (_) => const ConfirmPage(),
-          onLoad: (_) => status?.isInstalling != true,
+          onLoad: (_) => widget.status?.isInstalling != true,
         ),
         Routes.install: WizardRoute(
           builder: (_) => const InstallPage(),
         ),
       },
-    );
+    )..replace();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Wizard(controller: _controller);
   }
 }
 
