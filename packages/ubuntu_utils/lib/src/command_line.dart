@@ -1,7 +1,6 @@
 import 'dart:io' as io;
 
 import 'package:args/args.dart';
-import 'package:flutter/foundation.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
 

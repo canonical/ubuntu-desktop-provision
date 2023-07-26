@@ -7,9 +7,10 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('register init services', () async {
-    await registerInitServices();
+    await registerInitServices([]);
 
     expect(tryGetService<ActiveDirectoryService>(), isNotNull);
+    expect(tryGetService<ArgResults>(), isNotNull);
     expect(tryGetService<GeoService>(), isNotNull);
     expect(tryGetService<IdentityService>(), isNotNull);
     expect(tryGetService<KeyboardService>(), isNotNull);
