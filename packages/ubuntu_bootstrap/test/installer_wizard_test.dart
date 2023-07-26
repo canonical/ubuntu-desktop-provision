@@ -70,6 +70,7 @@ void main() {
 
     expect(find.byType(LoadingPage), findsOneWidget);
     await tester.pump(const Duration(seconds: 1));
+    verify(loadingModel.init()).called(1);
 
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);

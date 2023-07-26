@@ -23,21 +23,12 @@ class InitRoutes {
   static const String theme = '/theme';
 }
 
-class InitWizard extends ConsumerStatefulWidget {
+class InitWizard extends ConsumerWidget {
   const InitWizard({super.key});
 
   @override
-  ConsumerState<InitWizard> createState() => _WelcomeWizardState();
-}
-
-class _WelcomeWizardState extends ConsumerState<InitWizard> {
-  late final WizardController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = WizardController(
+  Widget build(BuildContext context, WidgetRef ref) {
+    return WizardBuilder(
       routes: {
         // TODO: loading screen?
         InitRoutes.initial: WizardRoute(
@@ -88,19 +79,6 @@ class _WelcomeWizardState extends ConsumerState<InitWizard> {
               YaruWindow.of(context).close().then((_) => InitRoutes.initial),
         ),
       },
-    )..replace();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Wizard(
-      controller: _controller,
       userData: WizardData(totalSteps: InitStep.values.length),
     );
   }

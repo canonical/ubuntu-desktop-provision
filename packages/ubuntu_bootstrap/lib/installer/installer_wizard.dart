@@ -140,41 +140,29 @@ class _InstallWizard extends ConsumerWidget {
       ),
     };
 
-    MapEntry<String, WizardRoute> guardRoute(String name, WizardRoute route) {
-      final model = ref.read(installerModelProvider);
-      return MapEntry(
-        name,
-        WizardRoute(
-          builder: route.builder,
-          userData: route.userData,
-          onLoad: (settings) async {
-            return model.hasRoute(name) &&
-                (await route.onLoad?.call(settings) ?? true);
-          },
-          onNext: route.onNext,
-          onBack: route.onBack,
-        ),
-      );
-    }
-
-    return Wizard(
+    return WizardBuilder(
       initialRoute: Routes.initial,
       userData: WizardData(totalSteps: InstallationStep.values.length),
       routes: <String, WizardRoute>{
         Routes.loading: WizardRoute(
           builder: (_) => const LoadingPage(),
+          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
         ),
-        ...preInstall.map(guardRoute),
+        ...preInstall,
         Routes.confirm: WizardRoute(
           builder: (_) => const ConfirmPage(),
           userData: WizardRouteData(step: InstallationStep.storage.index),
           onLoad: (_) => ConfirmPage.load(ref),
         ),
-        ...postInstall.map(guardRoute),
+        ...postInstall,
         Routes.install: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => InstallPage.load(context, ref),
         ),
+      },
+      predicate: (route) => switch (route) {
+        Routes.loading || Routes.confirm || Routes.install => true,
+        _ => ref.read(installerModelProvider).hasRoute(route)
       },
       observers: [_InstallerObserver(getService<TelemetryService>())],
     );
@@ -194,21 +182,23 @@ class _InstallerObserver extends NavigatorObserver {
   }
 }
 
-class _AutoinstallWizard extends StatelessWidget {
+class _AutoinstallWizard extends ConsumerWidget {
   const _AutoinstallWizard({this.status});
 
   final ApplicationStatus? status;
 
   @override
-  Widget build(BuildContext context) {
-    return Wizard(
+  Widget build(BuildContext context, WidgetRef ref) {
+    return WizardBuilder(
       routes: <String, WizardRoute>{
         Routes.loading: WizardRoute(
-            builder: (_) => const LoadingPage(),
-            userData: const WizardRouteData(
-              hasPrevious: false,
-              hasNext: false,
-            )),
+          builder: (_) => const LoadingPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
+        ),
         Routes.confirm: WizardRoute(
           builder: (_) => const ConfirmPage(),
           onLoad: (_) => status?.isInstalling != true,

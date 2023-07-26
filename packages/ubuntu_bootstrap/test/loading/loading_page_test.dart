@@ -1,18 +1,31 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/pages/loading/loading_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_page.dart';
 
 import 'test_loading.dart';
 
 void main() {
-  testWidgets('init & advance', (tester) async {
+  testWidgets('init', (tester) async {
+    WidgetRef? ref;
+
     final model = buildLoadingModel(delay: const Duration(seconds: 3));
-    await tester.pumpWidget(tester.buildApp((_) => buildLoadingPage(model)));
-
-    verify(model.init()).called(1);
+    await tester.pumpWidget(tester.buildApp(
+      (_) => ProviderScope(
+        overrides: [loadingModelProvider.overrideWith((_) => model)],
+        child: Consumer(builder: (context, aref, child) {
+          ref = aref;
+          return const LoadingPage();
+        }),
+      ),
+    ));
     expect(find.byType(LoadingPage), findsOneWidget);
+    expect(ref, isNotNull);
 
-    await tester.pumpAndSettle(const Duration(seconds: 3));
-    expect(find.byType(LoadingPage), findsNothing);
+    final future = LoadingPage.init(ref!);
+    await tester.pump(const Duration(seconds: 3));
+    await expectLater(future, completes);
+    verify(model.init()).called(1);
   });
 }

@@ -10,19 +10,15 @@ import 'loading_model.dart';
 class LoadingPage extends ConsumerStatefulWidget {
   const LoadingPage({super.key});
 
+  static Future<void> init(WidgetRef ref) {
+    return ref.read(loadingModelProvider).init();
+  }
+
   @override
   ConsumerState<LoadingPage> createState() => _LoadingPageState();
 }
 
 class _LoadingPageState extends ConsumerState<LoadingPage> {
-  @override
-  void initState() {
-    super.initState();
-
-    final model = ref.read(loadingModelProvider);
-    model.init().then((_) => Wizard.of(context).replace());
-  }
-
   @override
   Widget build(BuildContext context) {
     final flavor = ref.watch(flavorProvider);
