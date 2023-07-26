@@ -59,4 +59,35 @@ void main() {
 
     await expectLater(windowClosed, completes);
   });
+
+  testWidgets('routes', (tester) async {
+    await tester.runApp(() => app.main(['--routes=locale,keyboard,identity']));
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectLocale('en_US.UTF-8');
+
+    await tester.testKeyboardPage(layout: 'English (US)');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectKeyboard(const KeyboardSetting(layout: 'us'));
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+
+    const identity = Identity(
+      realname: 'User',
+      username: 'user',
+      hostname: 'ubuntu',
+    );
+    await tester.testIdentityPage(
+      identity: identity,
+      password: 'password',
+    );
+    await tester.tapNext(); // TODO: tapDone()
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await expectLater(windowClosed, completes);
+  });
 }

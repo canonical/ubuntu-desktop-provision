@@ -24,12 +24,17 @@ export 'services/xdg_timezone_service.dart';
 Future<void> registerInitServices(List<String> args) {
   var options = tryGetService<ArgResults>();
   if (options == null) {
-    options = parseCommandLine(args)!;
+    options = parseCommandLine(args, onPopulateOptions: (parser) {
+      parser.addOption('config', valueHelp: 'path', help: 'Config file path');
+      parser.addOption('routes', hide: true);
+    })!;
     registerServiceInstance<ArgResults>(options);
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
-  tryRegisterService<ArgResults>(() => parseCommandLine(args)!);
+  if (options['config'] != null) {
+    tryRegisterService(() => ConfigService(options!['config']!));
+  }
   tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
