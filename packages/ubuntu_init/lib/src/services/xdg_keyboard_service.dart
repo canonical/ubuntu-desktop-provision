@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:xdg_locale/xdg_locale.dart';
 
 class XdgKeyboardService implements KeyboardService {
@@ -15,7 +16,7 @@ class XdgKeyboardService implements KeyboardService {
     @visibleForTesting AssetBundle? assetBundle,
   })  : _client = client ?? XdgLocaleClient(bus: bus),
         _inputSourceSettings = settings ??
-            GSettings(sessionBus: bus, 'org.gnome.desktop.input-sources'),
+            createService<GSettings>('org.gnome.desktop.input-sources'),
         _assetBundle = assetBundle ?? rootBundle;
 
   final XdgLocaleClient _client;
