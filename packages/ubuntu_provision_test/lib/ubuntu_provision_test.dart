@@ -9,6 +9,9 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+export 'src/expect.dart';
+export 'src/fake_init.dart';
+
 extension UbuntuProvisionTester on WidgetTester {
   Future<void> testLocalePage({
     String? language,
@@ -37,7 +40,8 @@ extension UbuntuProvisionTester on WidgetTester {
   }
 
   Future<void> testKeyboardPage({
-    KeyboardSetting? keyboard,
+    String? layout,
+    String? variant,
     String? screenshot,
   }) async {
     await _pumpUntilPage(KeyboardPage);
@@ -47,21 +51,19 @@ extension UbuntuProvisionTester on WidgetTester {
 
     expect(find.titleBar(l10n.keyboardTitle), findsOneWidget);
 
-    if (keyboard != null) {
-      if (keyboard.layout.isNotEmpty) {
-        final tile = find.listTile(keyboard.layout, skipOffstage: false);
-        await ensureVisible(tile.last);
-        await pump();
-        await tap(tile.last);
-        await pump();
-      }
-      if (keyboard.variant.isNotEmpty) {
-        final tile = find.listTile(keyboard.variant, skipOffstage: false);
-        await ensureVisible(tile.first);
-        await pump();
-        await tap(tile.first);
-        await pump();
-      }
+    if (layout != null) {
+      final tile = find.listTile(layout, skipOffstage: false);
+      await ensureVisible(tile.last);
+      await pump();
+      await tap(tile.last);
+      await pump();
+    }
+    if (variant != null) {
+      final tile = find.listTile(variant, skipOffstage: false);
+      await ensureVisible(tile.first);
+      await pump();
+      await tap(tile.first);
+      await pump();
     }
     await pumpAndSettle();
 
