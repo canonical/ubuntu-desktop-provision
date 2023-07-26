@@ -12,12 +12,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 Future<void> main(List<String> args) async {
-  final options = parseCommandLine(args, onPopulateOptions: (parser) {
-    addLoggingOptions(parser);
-  })!;
-  setupLogger(options);
-
-  final log = Logger();
+  final log = Logger.setup();
 
   return runZonedGuarded(() async {
     FlutterError.onError = (error) {

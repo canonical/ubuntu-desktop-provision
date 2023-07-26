@@ -50,10 +50,9 @@ Future<void> runInstallerApp(
         valueHelp: 'path',
         help: 'A comma-separated list of page routes',
         hide: true);
-    addLoggingOptions(parser);
   })!;
   final liveRun = options['dry-run'] != true;
-  setupLogger(options, path: liveRun ? '/var/log/installer' : null);
+  final log = Logger.setup(path: liveRun ? '/var/log/installer' : null);
 
   final serverMode = liveRun ? ServerMode.LIVE : ServerMode.DRY_RUN;
   final subiquityPath = await getSubiquityPath()
@@ -122,8 +121,6 @@ Future<void> runInstallerApp(
     '--storage-version=2',
     ...options.rest,
   ]).then(_initInstallerApp);
-
-  final log = Logger();
 
   runZonedGuarded(() async {
     FlutterError.onError = (error) {
