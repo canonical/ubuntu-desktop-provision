@@ -6,10 +6,14 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  tearDown(resetAllServices);
+
   test('register init services', () async {
-    await registerInitServices();
+    await registerInitServices([]);
 
     expect(tryGetService<ActiveDirectoryService>(), isNotNull);
+    expect(tryGetService<ArgResults>(), isNotNull);
+    expect(tryGetService<ConfigService>(), isNull);
     expect(tryGetService<GeoService>(), isNotNull);
     expect(tryGetService<IdentityService>(), isNotNull);
     expect(tryGetService<KeyboardService>(), isNotNull);
@@ -18,5 +22,11 @@ void main() {
     expect(tryGetService<SessionService>(), isNotNull);
     expect(tryGetService<ThemeService>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
+  });
+
+  test('register config service', () async {
+    await registerInitServices(['--config=foo.yaml']);
+
+    expect(tryGetService<ConfigService>(), isNotNull);
   });
 }

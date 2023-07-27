@@ -4,6 +4,8 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import 'init_model.dart';
+
 enum InitStep {
   locale,
   keyboard,
@@ -23,11 +25,22 @@ class InitRoutes {
   static const String theme = '/theme';
 }
 
-class InitWizard extends ConsumerWidget {
+class InitWizard extends ConsumerStatefulWidget {
   const InitWizard({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<InitWizard> createState() => _InitWizardState();
+}
+
+class _InitWizardState extends ConsumerState<InitWizard> {
+  @override
+  void initState() {
+    super.initState();
+    ref.read(initModelProvider).init();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return WizardBuilder(
       routes: {
         // TODO: loading screen?
@@ -80,6 +93,10 @@ class InitWizard extends ConsumerWidget {
         ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
+      predicate: (route) => switch (route) {
+        InitRoutes.initial => true,
+        _ => ref.read(initModelProvider).hasRoute(route),
+      },
     );
   }
 }

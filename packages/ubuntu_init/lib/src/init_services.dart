@@ -1,7 +1,9 @@
+import 'package:args/args.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 import 'services/realmd_active_directory_service.dart';
 import 'services/xdg_identity_service.dart';
@@ -10,6 +12,7 @@ import 'services/xdg_locale_service.dart';
 import 'services/xdg_session_service.dart';
 import 'services/xdg_timezone_service.dart';
 
+export 'package:args/args.dart' show ArgResults;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_identity_service.dart';
@@ -18,8 +21,20 @@ export 'services/xdg_locale_service.dart';
 export 'services/xdg_session_service.dart';
 export 'services/xdg_timezone_service.dart';
 
-Future<void> registerInitServices() {
+Future<void> registerInitServices(List<String> args) {
+  var options = tryGetService<ArgResults>();
+  if (options == null) {
+    options = parseCommandLine(args, onPopulateOptions: (parser) {
+      parser.addOption('config', valueHelp: 'path', help: 'Config file path');
+      parser.addOption('routes', hide: true);
+    })!;
+    registerServiceInstance<ArgResults>(options);
+  }
+
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
+  if (options['config'] != null) {
+    tryRegisterService(() => ConfigService(options!['config']!));
+  }
   tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);

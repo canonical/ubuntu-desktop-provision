@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -71,6 +72,7 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterService<ActiveDirectoryService>(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
+  tryRegisterServiceInstance<ArgResults>(options);
   if (options['config'] != null) {
     tryRegisterService(() => ConfigService(options['config']!));
   }

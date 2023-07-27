@@ -21,7 +21,7 @@ Future<void> main(List<String> args) async {
 
     await YaruWindowTitleBar.ensureInitialized();
 
-    await registerInitServices();
+    await registerInitServices(args);
 
     runApp(ProviderScope(
       child: Consumer(
