@@ -12,7 +12,7 @@ dependencies:
   crypt: ^4.3.0
   dartx: ^1.0.0
   dbus: ^0.7.3
-  file: ^6.1.0
+  file: ^7.0.0
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0-beta.1
