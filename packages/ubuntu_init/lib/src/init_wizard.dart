@@ -25,27 +25,18 @@ class InitRoutes {
   static const String theme = '/theme';
 }
 
-class InitWizard extends ConsumerStatefulWidget {
+class InitWizard extends ConsumerWidget {
   const InitWizard({super.key});
 
   @override
-  ConsumerState<InitWizard> createState() => _InitWizardState();
-}
-
-class _InitWizardState extends ConsumerState<InitWizard> {
-  @override
-  void initState() {
-    super.initState();
-    ref.read(initModelProvider).init();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return WizardBuilder(
       routes: {
         // TODO: loading screen?
         InitRoutes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
+          onReplace: (_) =>
+              ref.read(initModelProvider).init().then((_) => null),
         ),
         InitRoutes.locale: WizardRoute(
           builder: (_) => const LocalePage(),
