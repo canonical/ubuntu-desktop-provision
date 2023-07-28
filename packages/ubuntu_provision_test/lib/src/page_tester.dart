@@ -188,39 +188,38 @@ extension UbuntuProvisionPageTester on WidgetTester {
     }
   }
 
-  Future<void> testActiveDirectoryPage(
-    WidgetTester tester, {
+  Future<void> testActiveDirectoryPage({
     String? domainName,
     String? adminName,
     String? password,
     String? screenshot,
   }) async {
-    await tester.pumpUntilPage(ActiveDirectoryPage);
+    await pumpUntilPage(ActiveDirectoryPage);
 
-    final context = tester.element(find.byType(ActiveDirectoryPage));
+    final context = element(find.byType(ActiveDirectoryPage));
     final l10n = ActiveDirectoryLocalizations.of(context);
 
     expect(find.titleBar(l10n.activeDirectoryTitle), findsOneWidget);
 
     if (domainName != null) {
-      await tester.enterText(
+      await enterText(
         find.textField(l10n.activeDirectoryDomainLabel),
         domainName,
       );
     }
     if (adminName != null) {
-      await tester.enterText(
+      await enterText(
         find.textField(l10n.activeDirectoryAdminLabel),
         adminName,
       );
     }
     if (password != null) {
-      await tester.enterText(
+      await enterText(
         find.textField(l10n.activeDirectoryPasswordLabel),
         password,
       );
     }
-    await tester.pumpAndSettle();
+    await pumpAndSettle();
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
@@ -380,6 +379,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> tapRestart() {
+    return tapButton(find.ul10n((l10n) => l10n.restartLabel));
+  }
+
   Future<void> testBitLockerPage({
     String? screenshot,
   }) async {
@@ -514,32 +517,36 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testSecurityKeyPage(
-    WidgetTester tester, {
+  Future<void> testSecurityKeyPage({
     required String securityKey,
     String? screenshot,
   }) async {
-    await tester.pumpUntilPage(SecurityKeyPage);
+    await pumpUntilPage(SecurityKeyPage);
 
-    final context = tester.element(find.byType(SecurityKeyPage));
+    final context = element(find.byType(SecurityKeyPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.chooseSecurityKeyTitle), findsOneWidget);
 
-    await tester.enterText(
+    await enterText(
       find.textField(l10n.chooseSecurityKey),
       securityKey,
     );
-    await tester.enterText(
+    await enterText(
       find.textField(l10n.confirmSecurityKey),
       securityKey,
     );
 
-    await tester.pumpAndSettle();
+    await pumpAndSettle();
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+  }
+
+  Future<void> tapConfirm() {
+    return tapButton(find.l10n(
+        (UbuntuBootstrapLocalizations l10n) => l10n.confirmInstallButton));
   }
 
   Future<void> testConfirmPage({
@@ -555,6 +562,16 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+  }
+
+  Future<void> tapRestartNow() {
+    return tapButton(
+        find.l10n((UbuntuBootstrapLocalizations l10n) => l10n.restartNow));
+  }
+
+  Future<void> tapContinueTesting() {
+    return tapButton(
+        find.l10n((UbuntuBootstrapLocalizations l10n) => l10n.continueTesting));
   }
 
   Future<void> testInstallPage({
