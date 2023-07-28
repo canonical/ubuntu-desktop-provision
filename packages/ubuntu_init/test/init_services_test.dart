@@ -13,7 +13,7 @@ void main() {
 
     expect(tryGetService<ActiveDirectoryService>(), isNotNull);
     expect(tryGetService<ArgResults>(), isNotNull);
-    expect(tryGetService<ConfigService>(), isNull);
+    expect(tryGetService<ConfigService>(), isNotNull);
     expect(tryGetService<GeoService>(), isNotNull);
     expect(tryGetService<IdentityService>(), isNotNull);
     expect(tryGetService<KeyboardService>(), isNotNull);
@@ -22,11 +22,5 @@ void main() {
     expect(tryGetService<SessionService>(), isNotNull);
     expect(tryGetService<ThemeService>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
-  });
-
-  test('register config service', () async {
-    await registerInitServices(['--config=foo.yaml']);
-
-    expect(tryGetService<ConfigService>(), isNotNull);
   });
 }

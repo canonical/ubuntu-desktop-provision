@@ -3,6 +3,29 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
 
 void main() {
+  test('lookup path', () {
+    final priority = [
+      // admin
+      '/etc/ubuntu-provision.conf',
+      '/etc/ubuntu-provision.yaml',
+      '/etc/ubuntu-provision.yml',
+      // oem
+      '/usr/local/share/ubuntu-provision.conf',
+      '/usr/local/share/ubuntu-provision.yaml',
+      '/usr/local/share/ubuntu-provision.yml',
+      // distro
+      '/usr/share/ubuntu-provision.conf',
+      '/usr/share/ubuntu-provision.yaml',
+      '/usr/share/ubuntu-provision.yml',
+    ];
+
+    final fs = MemoryFileSystem();
+    for (final path in priority.reversed) {
+      fs.file(path).createSync(recursive: true);
+      expect(ConfigService.lookupPath(fs), path);
+    }
+  });
+
   test('yaml', () async {
     final fs = MemoryFileSystem();
     fs.file('/path/to/foo.yaml')
