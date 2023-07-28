@@ -70,6 +70,21 @@ void main() {
     verifyNever(bundle.load(assetName));
   });
 
+  test('app package asset', () async {
+    final bundle = MockAssetBundle();
+    final proxy = ProxyAssetBundle(bundle, package: 'qux');
+
+    await IOOverrides.runZoned(() async {
+      when(bundle.load(pkgAssetPath))
+          .thenAnswer((_) async => 'bar'.toByteData());
+      expect(await proxy.loadString('packages/qux/$assetName'), equals('bar'));
+    }, createFile: MockFileCreator({pkgAssetPath}));
+
+    verifyNever(bundle.load(appAssetPath));
+    verify(bundle.load(pkgAssetPath)).called(1);
+    verifyNever(bundle.load(assetName));
+  });
+
   test('structured package asset', () async {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
