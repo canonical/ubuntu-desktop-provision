@@ -9,18 +9,8 @@ ignore:
 scripts:
   # analyze all packages
   analyze: >
-    melos exec -c 1 -- \
+    melos exec -c 1 --ignore="subiquity_*" -- \
       flutter analyze .
-
-  # collect coverage information for all packages
-  coverage: >
-    melos exec -c 1 --fail-fast --dir-exists=test -- \
-      flutter test --coverage && melos run coverage:cleanup
-
-  # cleanup generated files from coverage
-  coverage:cleanup: >
-    melos exec --file-exists=coverage/lcov.info -- \
-      lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
 
   # format all packages
   format: >
@@ -52,5 +42,5 @@ scripts:
 
   # run tests in all packages
   test: >
-    melos exec -c 1 --fail-fast --dir-exists=test -- \
+    melos exec -c 1 --fail-fast --dir-exists=test --ignore="subiquity_*" -- \
       flutter test

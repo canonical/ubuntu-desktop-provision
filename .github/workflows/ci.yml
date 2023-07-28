@@ -27,6 +27,36 @@ jobs:
     - run: melos pub get
     - run: melos analyze
 
+  coverage:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        package:
+          - ubuntu_bootstrap
+          - ubuntu_init
+          - ubuntu_provision
+          - ubuntu_utils
+          - ubuntu_wizard
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+        flutter-version: ${{env.FLUTTER_VERSION}}
+    - run: flutter pub get
+      working-directory: packages/${{matrix.package}}
+    - run: flutter test --coverage
+      working-directory: packages/${{matrix.package}}
+    - run: sudo apt update && sudo apt install lcov
+    - run: lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
+      working-directory: packages/${{matrix.package}}
+    - uses: codecov/codecov-action@v3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
+
   format:
     runs-on: ubuntu-22.04
     steps:
@@ -118,17 +148,5 @@ jobs:
         channel: 'stable'
         flutter-version: ${{env.FLUTTER_VERSION}}
     - run: flutter pub global activate melos
-    - name: Install dependencies
-      run: |
-        sudo apt update && sudo apt install lcov
-        make install_deps
-    - name: Setup environment
-      run: |
-        sudo loginctl enable-linger $USER
-        sudo systemctl start user@$UID.service
-        echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
     - run: melos pub get
-    - run: melos coverage
-    - uses: codecov/codecov-action@v3
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
+    - run: melos test
