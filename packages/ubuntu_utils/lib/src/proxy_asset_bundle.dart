@@ -29,6 +29,13 @@ class ProxyAssetBundle extends AssetBundle {
   }
 
   String _findAsset(String assetName, {required String package}) {
+    if (p.isWithin('packages/$package', assetName)) {
+      return _findAsset(
+        p.relative(assetName, from: 'packages/$package'),
+        package: package,
+      );
+    }
+
     // <app>/data/flutter_assets/
     final exePath = Platform.resolvedExecutable;
     final bundlePath = p.join(p.dirname(exePath), 'data', 'flutter_assets');
