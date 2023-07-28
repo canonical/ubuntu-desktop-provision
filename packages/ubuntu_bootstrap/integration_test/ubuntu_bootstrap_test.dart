@@ -361,7 +361,7 @@ void main() {
 
     await tester.testConfirmPage();
     await tester.tapConfirm();
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
