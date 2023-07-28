@@ -32,9 +32,7 @@ Future<void> registerInitServices(List<String> args) {
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
-  if (options['config'] != null) {
-    tryRegisterService(() => ConfigService(options!['config']!));
-  }
+  tryRegisterService<ConfigService>(() => ConfigService(options!['config']));
   tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);

@@ -73,9 +73,7 @@ Future<void> runInstallerApp(
   tryRegisterService<ActiveDirectoryService>(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
   tryRegisterServiceInstance<ArgResults>(options);
-  if (options['config'] != null) {
-    tryRegisterService(() => ConfigService(options['config']!));
-  }
+  tryRegisterService<ConfigService>(() => ConfigService(options['config']));
   tryRegisterService<DesktopService>(() => GnomeService());
   tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(() => SubiquityIdentityService(
