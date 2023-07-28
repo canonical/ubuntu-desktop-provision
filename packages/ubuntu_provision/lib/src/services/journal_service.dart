@@ -2,8 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:async/async.dart';
-
 enum JournalOutput {
   /// The default and generates an output that is mostly identical to the
   /// formatting of classic syslog files, showing one line per journal entry.
@@ -20,8 +18,11 @@ class JournalService {
   Stream<String> start(
     List<String> ids, {
     JournalOutput output = JournalOutput.short,
-  }) async* {
-    final process = await Process.start(
+  }) {
+    Process? process;
+    late final StreamController<String> controller;
+
+    Process.start(
       'journalctl',
       [
         '--follow',
@@ -31,18 +32,20 @@ class JournalService {
         '--output=${output.name}'
       ],
       environment: {'SYSTEMD_COLORS': '0'},
+    ).then(
+      (p) {
+        p.stdout
+            .transform<String>(utf8.decoder)
+            .transform<String>(const LineSplitter())
+            .forEach(controller.add);
+        p.stderr
+            .transform<String>(utf8.decoder)
+            .transform<String>(const LineSplitter())
+            .forEach(controller.add);
+        process = p;
+      },
     );
-    try {
-      yield* StreamGroup.mergeBroadcast([
-        process.stdout
-            .transform<String>(utf8.decoder)
-            .transform<String>(const LineSplitter()),
-        process.stderr
-            .transform<String>(utf8.decoder)
-            .transform<String>(const LineSplitter()),
-      ]);
-    } finally {
-      process.kill();
-    }
+    controller = StreamController<String>.broadcast(onCancel: process?.kill);
+    return controller.stream;
   }
 }
