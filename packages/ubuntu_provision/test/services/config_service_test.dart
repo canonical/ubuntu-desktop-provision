@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path/path.dart' as p;
 import 'package:ubuntu_provision/src/services/config_service.dart';
 
 void main() {
@@ -17,6 +20,8 @@ void main() {
       '/usr/share/ubuntu-provision.conf',
       '/usr/share/ubuntu-provision.yaml',
       '/usr/share/ubuntu-provision.yml',
+      // app
+      '${p.dirname(Platform.resolvedExecutable)}/data/flutter_assets/ubuntu-provision.conf',
     ];
 
     final fs = MemoryFileSystem();
