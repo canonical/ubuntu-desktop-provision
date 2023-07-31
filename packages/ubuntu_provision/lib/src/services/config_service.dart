@@ -13,19 +13,25 @@ import 'package:yaml/yaml.dart';
 final log = Logger('config');
 
 class ConfigService {
-  ConfigService(
-    String? path, {
+  ConfigService({
+    String? path,
+    String? scope,
     @visibleForTesting FileSystem fs = const LocalFileSystem(),
-  })  : _path = path ?? lookupPath(fs),
+  })  : _scope = scope,
+        _path = path ?? lookupPath(fs),
         _fs = fs;
 
   final String? _path;
+  final String? _scope;
   final FileSystem _fs;
   Map<String, dynamic>? _config;
 
-  Future<T?> get<T>(String key) async {
+  Future<T?> get<T>(String key, {String? scope}) async {
     _config ??= await load();
-    return _config?[key] as T?;
+    if (scope == null && _scope == null) {
+      return _config?[key] as T?;
+    }
+    return _config?[scope ?? _scope]?[key] as T?;
   }
 
   @visibleForTesting
