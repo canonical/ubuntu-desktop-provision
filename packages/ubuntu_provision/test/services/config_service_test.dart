@@ -31,15 +31,7 @@ void main() {
     fs.file('/path/to/foo.yaml')
       ..createSync(recursive: true)
       ..writeAsStringSync('''
-b: true
-i: 123
-d: 123.456
-s: foo
-l:
-  - 1
-  - 2
-  - 3
-o:
+test1:
   b: true
   i: 123
   d: 123.456
@@ -48,9 +40,22 @@ o:
     - 1
     - 2
     - 3
+  o:
+    b: true
+    i: 123
+    d: 123.456
+    s: foo
+    l:
+      - 1
+      - 2
+      - 3
+
+test2:
+  foo: bar
 ''');
 
-    final config = ConfigService('/path/to/foo.yaml', fs: fs);
+    final config =
+        ConfigService(scope: 'test1', path: '/path/to/foo.yaml', fs: fs);
     expect(await config.get('b'), isTrue);
     expect(await config.get('i'), 123);
     expect(await config.get('d'), 123.456);
@@ -63,6 +68,7 @@ o:
       's': 'foo',
       'l': [1, 2, 3],
     });
+    expect(await config.get('foo', scope: 'test2'), 'bar');
   });
 
   test('toml', () async {
@@ -70,15 +76,20 @@ o:
     fs.file('/path/to/foo.toml')
       ..createSync(recursive: true)
       ..writeAsStringSync('''
-b = true
-i = 123
-d = 123.456
-s = "foo"
-l = [1, 2, 3]
-o = { b = true, i = 123, d = 123.456, s = "foo", l = [1, 2, 3] }
+[test1]
+  b = true
+  i = 123
+  d = 123.456
+  s = "foo"
+  l = [1, 2, 3]
+  o = { b = true, i = 123, d = 123.456, s = "foo", l = [1, 2, 3] }
+
+[test2]
+  foo = "bar"
 ''');
 
-    final config = ConfigService('/path/to/foo.toml', fs: fs);
+    final config =
+        ConfigService(scope: 'test1', path: '/path/to/foo.toml', fs: fs);
     expect(await config.get('b'), isTrue);
     expect(await config.get('i'), 123);
     expect(await config.get('d'), 123.456);
@@ -91,6 +102,7 @@ o = { b = true, i = 123, d = 123.456, s = "foo", l = [1, 2, 3] }
       's': 'foo',
       'l': [1, 2, 3],
     });
+    expect(await config.get('foo', scope: 'test2'), 'bar');
   });
 
   test('json', () async {
@@ -99,22 +111,28 @@ o = { b = true, i = 123, d = 123.456, s = "foo", l = [1, 2, 3] }
       ..createSync(recursive: true)
       ..writeAsStringSync('''
 {
-  "b": true,
-  "i": 123,
-  "d": 123.456,
-  "s": "foo",
-  "l": [1, 2, 3],
-  "o": {
+  "test1": {
     "b": true,
     "i": 123,
     "d": 123.456,
     "s": "foo",
-    "l": [1, 2, 3]
+    "l": [1, 2, 3],
+    "o": {
+      "b": true,
+      "i": 123,
+      "d": 123.456,
+      "s": "foo",
+      "l": [1, 2, 3]
+    }
+  },
+  "test2": {
+    "foo": "bar"
   }
 }
 ''');
 
-    final config = ConfigService('/path/to/foo.json', fs: fs);
+    final config =
+        ConfigService(scope: 'test1', path: '/path/to/foo.json', fs: fs);
     expect(await config.get('b'), isTrue);
     expect(await config.get('i'), 123);
     expect(await config.get('d'), 123.456);
@@ -127,5 +145,6 @@ o = { b = true, i = 123, d = 123.456, s = "foo", l = [1, 2, 3] }
       's': 'foo',
       'l': [1, 2, 3],
     });
+    expect(await config.get('foo', scope: 'test2'), 'bar');
   });
 }

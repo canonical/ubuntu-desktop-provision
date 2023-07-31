@@ -270,10 +270,15 @@ class MockConfigService extends _i1.Mock implements _i9.ConfigService {
   }
 
   @override
-  _i8.Future<T?> get<T>(String? key) => (super.noSuchMethod(
+  _i8.Future<T?> get<T>(
+    String? key, {
+    String? scope,
+  }) =>
+      (super.noSuchMethod(
         Invocation.method(
           #get,
           [key],
+          {#scope: scope},
         ),
         returnValue: _i8.Future<T?>.value(),
       ) as _i8.Future<T?>);
