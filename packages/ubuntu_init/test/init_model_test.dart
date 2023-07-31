@@ -22,7 +22,7 @@ void main() {
     verify(args['pages']).called(1);
   });
 
-  test('has route', () async {
+  test('configured page array', () async {
     final config = MockConfigService();
     when(config.get('pages')).thenAnswer((_) async => ['a', '/b']);
 
@@ -37,5 +37,17 @@ void main() {
 
     expect(model.hasRoute('c'), isFalse);
     expect(model.hasRoute('/c'), isFalse);
+  });
+
+  test('configured page string', () async {
+    final config = MockConfigService();
+    when(config.get('pages')).thenAnswer((_) async => 'c, e');
+
+    final model = InitModel(config: config);
+    await model.init();
+
+    expect(model.hasRoute('c'), isTrue);
+    expect(model.hasRoute('d'), isFalse);
+    expect(model.hasRoute('e'), isTrue);
   });
 }

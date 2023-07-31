@@ -142,7 +142,7 @@ void main() {
     expect(service.hasRoute('c'), isTrue);
   });
 
-  test('configured pages', () async {
+  test('configured page array', () async {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     when(client.monitorStatus()).thenAnswer(
@@ -157,6 +157,23 @@ void main() {
     expect(service.hasRoute('a'), isTrue);
     expect(service.hasRoute('b'), isTrue);
     expect(service.hasRoute('c'), isFalse);
+  });
+
+  test('configured page string', () async {
+    final client = MockSubiquityClient();
+    when(client.getInteractiveSections()).thenAnswer((_) async => null);
+    when(client.monitorStatus()).thenAnswer(
+        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+
+    final config = MockConfigService();
+    when(config.get('pages')).thenAnswer((_) async => 'c, e');
+
+    final service = InstallerService(client, config: config);
+    await service.load();
+
+    expect(service.hasRoute('c'), isTrue);
+    expect(service.hasRoute('d'), isFalse);
+    expect(service.hasRoute('e'), isTrue);
   });
 
   test('start installation', () async {

@@ -54,7 +54,10 @@ extension ApplicationStatusX on ApplicationStatus {
 }
 
 extension on ConfigService {
-  Future<List<String>?> getPages() {
-    return get<List>('pages').then((value) => value?.cast());
+  Future<List<String>?> getPages() async {
+    final value = await get('pages');
+    return (value is List ? value.cast<String>() : value?.toString().split(','))
+        ?.map((p) => p.trim())
+        .toList();
   }
 }
