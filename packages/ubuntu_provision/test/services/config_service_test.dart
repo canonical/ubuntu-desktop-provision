@@ -21,7 +21,7 @@ void main() {
       '/usr/share/ubuntu-provision.yaml',
       '/usr/share/ubuntu-provision.yml',
       // app
-      '${p.dirname(Platform.resolvedExecutable)}/data/flutter_assets/ubuntu-provision.conf',
+      '${p.dirname(Platform.resolvedExecutable)}/data/flutter_assets/assets/ubuntu-provision.conf',
     ];
 
     final fs = MemoryFileSystem();
