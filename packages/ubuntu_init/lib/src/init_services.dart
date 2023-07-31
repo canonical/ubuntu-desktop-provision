@@ -26,7 +26,7 @@ Future<void> registerInitServices(List<String> args) {
   if (options == null) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {
       parser.addOption('config', valueHelp: 'path', help: 'Config file path');
-      parser.addOption('routes', hide: true);
+      parser.addOption('pages', hide: true);
     })!;
     registerServiceInstance<ArgResults>(options);
   }

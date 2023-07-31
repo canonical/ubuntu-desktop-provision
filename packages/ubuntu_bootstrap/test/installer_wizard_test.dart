@@ -321,7 +321,7 @@ void main() {
     verify(activeDirectoryModel.init()).called(1);
   });
 
-  testWidgets('routes', (tester) async {
+  testWidgets('pages', (tester) async {
     final keyboardModel = buildKeyboardModel();
     final confirmModel = buildConfirmModel();
     final identityModel = buildIdentityModel(isValid: true);
@@ -341,7 +341,7 @@ void main() {
               .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(routes: [
+        child: tester.buildTestWizard(pages: [
           Routes.keyboard,
           Routes.identity,
           Routes.activeDirectory,
@@ -379,10 +379,10 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({bool? welcome, List<String>? routes}) {
+  Widget buildTestWizard({bool? welcome, List<String>? pages}) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
-      return routes?.contains(i.positionalArguments.single) ?? true;
+      return pages?.contains(i.positionalArguments.single) ?? true;
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);

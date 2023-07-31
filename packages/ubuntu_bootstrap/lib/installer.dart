@@ -27,7 +27,7 @@ export 'slides.dart';
 
 Future<void> runInstallerApp(
   List<String> args, {
-  List<String>? routes,
+  List<String>? pages,
   List<WidgetBuilder>? slides,
   ThemeData? theme,
   ThemeData? darkTheme,
@@ -47,10 +47,8 @@ Future<void> runInstallerApp(
         defaultsTo: 'examples/sources/desktop.yaml',
         help: 'Path of the source catalog (dry-run only)');
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
-    parser.addOption('routes',
-        valueHelp: 'path',
-        help: 'A comma-separated list of page routes',
-        hide: true);
+    parser.addOption('pages',
+        valueHelp: 'path', help: 'A comma-separated list of pages', hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
   final log = Logger.setup(path: liveRun ? '/var/log/installer' : null);
@@ -81,7 +79,7 @@ Future<void> runInstallerApp(
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
       config: tryGetService<ConfigService>(),
-      routes: options['routes']?.split(',') ?? routes));
+      pages: options['pages']?.split(',') ?? pages));
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
       () => SubiquityKeyboardService(getService<SubiquityClient>()));

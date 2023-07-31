@@ -11,20 +11,20 @@ import 'init_model_test.mocks.dart';
 void main() {
   test('init', () async {
     final config = MockConfigService();
-    when(config.get('routes')).thenAnswer((_) async => null);
+    when(config.get('pages')).thenAnswer((_) async => null);
 
     final args = MockArgResults();
-    when(args['routes']).thenReturn(null);
+    when(args['pages']).thenReturn(null);
 
     final model = InitModel(config: config, args: args);
     await model.init();
-    verify(config.get('routes')).called(1);
-    verify(args['routes']).called(1);
+    verify(config.get('pages')).called(1);
+    verify(args['pages']).called(1);
   });
 
   test('has route', () async {
     final config = MockConfigService();
-    when(config.get('routes')).thenAnswer((_) async => ['a', '/b']);
+    when(config.get('pages')).thenAnswer((_) async => ['a', '/b']);
 
     final model = InitModel(config: config);
     await model.init();
