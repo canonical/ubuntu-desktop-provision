@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:file/file.dart';
 import 'package:file/local.dart';
@@ -59,10 +60,18 @@ class ConfigService {
   /// - /etc/ubuntu-provision.{conf,yaml,yml} (admin)
   /// - /usr/local/share/ubuntu-provision.{conf,yaml,yml} (oem)
   /// - /usr/share/ubuntu-provision.{conf,yaml,yml} (distro)
+  /// - <app>/data/flutter_assets/ubuntu-provision.{conf,yaml,yml} (app)
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     const exts = ['conf', 'yaml', 'yml'];
-    final dirs = [...xdg.configDirs, fs.directory('/etc'), ...xdg.dataDirs];
+    final assets = p.join(
+        p.dirname(Platform.resolvedExecutable), 'data', 'flutter_assets');
+    final dirs = [
+      ...xdg.configDirs,
+      fs.directory('/etc'),
+      ...xdg.dataDirs,
+      fs.directory(assets),
+    ];
     for (final dir in dirs) {
       for (final ext in exts) {
         final path = p.join(dir.path, 'ubuntu-provision.$ext');
