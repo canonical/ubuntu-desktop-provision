@@ -23,11 +23,11 @@ import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 
 import 'init_wizard_test.mocks.dart';
 
-InitModel buildInitModel({List<String>? routes}) {
+InitModel buildInitModel({List<String>? pages}) {
   final model = MockInitModel();
   when(model.hasRoute(any)).thenAnswer((i) {
     final a = i.positionalArguments.single as String;
-    return routes
+    return pages
             ?.map((r) => r.removePrefix('/'))
             .contains(a.removePrefix('/')) ??
         true;
@@ -109,8 +109,8 @@ void main() {
     await expectLater(windowClosed, completes);
   });
 
-  testWidgets('routes', (tester) async {
-    final initModel = buildInitModel(routes: [
+  testWidgets('pages', (tester) async {
+    final initModel = buildInitModel(pages: [
       InitRoutes.locale,
       InitRoutes.keyboard,
       InitRoutes.identity,

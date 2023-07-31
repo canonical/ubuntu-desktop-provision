@@ -142,14 +142,14 @@ void main() {
     expect(service.hasRoute('c'), isTrue);
   });
 
-  test('configured routes', () async {
+  test('configured pages', () async {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     when(client.monitorStatus()).thenAnswer(
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
     final config = MockConfigService();
-    when(config.get('routes')).thenAnswer((_) async => ['a', 'b']);
+    when(config.get('pages')).thenAnswer((_) async => ['a', 'b']);
 
     final service = InstallerService(client, config: config);
     await service.load();

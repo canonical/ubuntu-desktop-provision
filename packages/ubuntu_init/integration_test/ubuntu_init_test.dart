@@ -60,8 +60,8 @@ void main() {
     await expectLater(windowClosed, completes);
   });
 
-  testWidgets('routes', (tester) async {
-    await tester.runApp(() => app.main(['--routes=locale,keyboard,identity']));
+  testWidgets('pages', (tester) async {
+    await tester.runApp(() => app.main(['--pages=locale,keyboard,identity']));
 
     await tester.testLocalePage();
     await tester.tapNext();

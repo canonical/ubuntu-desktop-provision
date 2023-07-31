@@ -20,25 +20,25 @@ class InitModel {
 
   final ConfigService? _config;
   final ArgResults? _args;
-  Set<String>? _routes;
+  Set<String>? _pages;
 
   Future<void> init() async {
-    _routes ??= (await _config?.getRoutes() ?? _args?.getRoutes())
+    _pages ??= (await _config?.getPages() ?? _args?.getPages())
         ?.map((r) => r.removePrefix('/'))
         .toSet();
   }
 
   bool hasRoute(String route) {
-    return _routes?.contains(route.removePrefix('/')) ?? true;
+    return _pages?.contains(route.removePrefix('/')) ?? true;
   }
 }
 
 extension on ConfigService {
-  Future<List<String>?> getRoutes() {
-    return get<List>('routes').then((value) => value?.cast());
+  Future<List<String>?> getPages() {
+    return get<List>('pages').then((value) => value?.cast());
   }
 }
 
 extension on ArgResults {
-  List<String>? getRoutes() => (this['routes'] as String?)?.split(',');
+  List<String>? getPages() => (this['pages'] as String?)?.split(',');
 }
