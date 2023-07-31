@@ -64,8 +64,8 @@ class ConfigService {
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     const exts = ['conf', 'yaml', 'yml'];
-    final assets = p.join(
-        p.dirname(Platform.resolvedExecutable), 'data', 'flutter_assets');
+    final assets = p.join(p.dirname(Platform.resolvedExecutable), 'data',
+        'flutter_assets', 'assets');
     final dirs = [
       ...xdg.configDirs,
       fs.directory('/etc'),
