@@ -13,9 +13,11 @@ dependencies:
   dbus: ^0.7.3
   flutter:
     sdk: flutter
+  flutter_html: ^3.0.0-beta.1
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.3.6
+  flutter_svg: ^2.0.0
   gsettings: ^0.2.7
   handy_window: ^0.3.0
   meta: ^1.7.0
@@ -36,6 +38,7 @@ dependencies:
   ubuntu_wizard:
     path: ../ubuntu_wizard
   xdg_locale: ^0.0.1
+  yaru: ^0.9.0
   yaru_widgets: ^2.5.0
 
 dev_dependencies:

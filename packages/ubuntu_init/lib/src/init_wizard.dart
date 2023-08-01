@@ -5,6 +5,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'init_model.dart';
+import 'init_pages.dart';
 
 enum InitStep {
   locale,
@@ -23,6 +24,7 @@ class InitRoutes {
   static const String timezone = '/timezone';
   static const String identity = '/identity';
   static const String theme = '/theme';
+  static const String privacy = '/privacy';
 }
 
 class InitWizard extends ConsumerWidget {
@@ -79,6 +81,10 @@ class InitWizard extends ConsumerWidget {
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
+        ),
+        InitRoutes.privacy: WizardRoute(
+          builder: (_) => const PrivacyPage(),
+          onLoad: (_) => PrivacyPage.load(ref),
           onNext: (_) =>
               YaruWindow.of(context).close().then((_) => InitRoutes.initial),
         ),
