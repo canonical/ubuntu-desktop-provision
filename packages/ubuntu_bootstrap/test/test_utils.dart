@@ -35,6 +35,7 @@ extension InstallerTester on WidgetTester {
   InstallerService,
   PostInstallService,
   ProductService,
+  RefreshService,
   StorageService,
 ])
 class _Dummy {} // ignore: unused_element

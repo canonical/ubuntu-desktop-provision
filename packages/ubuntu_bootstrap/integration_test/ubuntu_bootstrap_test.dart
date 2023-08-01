@@ -52,6 +52,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
     await tester.testSourcePage(sourceId: kMinimalSourceId);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -113,6 +117,10 @@ void main() {
 
     await tester.testNetworkPage(mode: ConnectMode.none);
     await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
     await tester.pumpAndSettle();
 
     await tester.testSourcePage();
@@ -188,6 +196,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
     await tester.testSourcePage(sourceId: kNormalSourceId);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -247,6 +259,10 @@ void main() {
 
     await tester.testNetworkPage(mode: ConnectMode.none);
     await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
     await tester.pumpAndSettle();
 
     await tester.testSourcePage(sourceId: kNormalSourceId);
@@ -314,6 +330,10 @@ void main() {
 
     await tester.testNetworkPage(mode: ConnectMode.none);
     await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
     await tester.pumpAndSettle();
 
     await tester.testSourcePage(sourceId: kNormalSourceId);

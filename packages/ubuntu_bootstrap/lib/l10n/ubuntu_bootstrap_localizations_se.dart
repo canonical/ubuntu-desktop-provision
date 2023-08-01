@@ -666,4 +666,130 @@ class UbuntuBootstrapLocalizationsSe extends UbuntuBootstrapLocalizations {
 
   @override
   String get notEnoughDiskSpaceRequired => 'Required:';
+
+  @override
+  String get refreshPageTitle => 'Update available';
+
+  @override
+  String refreshCurrent(Object snap, Object version) {
+    return 'The current $snap version is $version.';
+  }
+
+  @override
+  String refreshInstall(Object version) {
+    return 'Update to version $version';
+  }
+
+  @override
+  String refreshUpToDate(Object version) {
+    return 'The current version $version is up-to-date.';
+  }
+
+  @override
+  String refreshUpdating(Object snap) {
+    return 'Updating $snap...';
+  }
+
+  @override
+  String get refreshRestart => 'Please restart the installer.';
+
+  @override
+  String refreshSnapPrerequisites(Object snap) {
+    return 'Ensuring $snap prerequisites...';
+  }
+
+  @override
+  String refreshSnapRefresh(Object snap) {
+    return 'Refreshing $snap...';
+  }
+
+  @override
+  String refreshSnapCheckRerefresh(Object snap) {
+    return 'Checking $snap re-refresh...';
+  }
+
+  @override
+  String refreshSnapPrepare(Object snap) {
+    return 'Preparing $snap...';
+  }
+
+  @override
+  String refreshSnapDownload(Object snap) {
+    return 'Downloading $snap...';
+  }
+
+  @override
+  String refreshSnapValidate(Object snap) {
+    return 'Validating $snap...';
+  }
+
+  @override
+  String refreshSnapMount(Object snap) {
+    return 'Mounting $snap...';
+  }
+
+  @override
+  String refreshSnapStopServices(Object snap) {
+    return 'Stopping $snap services...';
+  }
+
+  @override
+  String refreshSnapRemoveAliases(Object snap) {
+    return 'Removing $snap aliases...';
+  }
+
+  @override
+  String refreshSnapUnlink(Object snap) {
+    return 'Unlinking $snap...';
+  }
+
+  @override
+  String refreshSnapUpdateAssets(Object snap) {
+    return 'Updating $snap assets...';
+  }
+
+  @override
+  String refreshSnapUpdateKernelCommandLine(Object snap) {
+    return 'Updating $snap kernel command line...';
+  }
+
+  @override
+  String refreshSnapCopyData(Object snap) {
+    return 'Copying $snap data...';
+  }
+
+  @override
+  String refreshSnapSetupProfiles(Object snap) {
+    return 'Setting up $snap security profiles...';
+  }
+
+  @override
+  String refreshSnapLink(Object snap) {
+    return 'Linking $snap...';
+  }
+
+  @override
+  String refreshSnapAutoConnect(Object snap) {
+    return 'Connecting $snap plugs and slots...';
+  }
+
+  @override
+  String refreshSnapSetAutoAliases(Object snap) {
+    return 'Setting automatic $snap aliases...';
+  }
+
+  @override
+  String refreshSnapSetupAliases(Object snap) {
+    return 'Setting up $snap aliases...';
+  }
+
+  @override
+  String refreshSnapStartServices(Object snap) {
+    return 'Starting $snap services...';
+  }
+
+  @override
+  String refreshSnapCleanup(Object snap) {
+    return 'Cleaning up $snap...';
+  }
 }

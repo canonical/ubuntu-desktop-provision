@@ -15,6 +15,7 @@ enum InstallationStep {
   locale,
   keyboard,
   network,
+  refresh,
   source,
   type,
   storage,
@@ -49,7 +50,7 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
     super.didChangeDependencies();
 
     final model = ref.read(installerModelProvider);
-    YaruWindow.setClosable(context, !model.isInstalling);
+    YaruWindow.setClosable(context, !model.isInstalling && !model.isRefreshing);
   }
 
   @override
@@ -96,6 +97,11 @@ class _InstallWizard extends ConsumerWidget {
         builder: (_) => const NetworkPage(),
         userData: WizardRouteData(step: InstallationStep.network.index),
         onLoad: (_) => NetworkPage.load(ref),
+      ),
+      Routes.refresh: WizardRoute(
+        builder: (_) => const RefreshPage(),
+        userData: WizardRouteData(step: InstallationStep.refresh.index),
+        onLoad: (_) => RefreshPage.load(ref),
       ),
       Routes.source: WizardRoute(
         builder: (_) => const SourceWizard(),

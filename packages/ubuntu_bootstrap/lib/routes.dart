@@ -16,4 +16,5 @@ abstract class Routes {
   static const notEnoughDiskSpace = '/not-enough-disk-space';
   static const activeDirectory = '/active-directory';
   static const storage = '/storage';
+  static const refresh = '/refresh';
 }

@@ -1346,6 +1346,162 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Required:'**
   String get notEnoughDiskSpaceRequired;
+
+  /// No description provided for @refreshPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Update available'**
+  String get refreshPageTitle;
+
+  /// No description provided for @refreshCurrent.
+  ///
+  /// In en, this message translates to:
+  /// **'The current {snap} version is {version}.'**
+  String refreshCurrent(Object snap, Object version);
+
+  /// No description provided for @refreshInstall.
+  ///
+  /// In en, this message translates to:
+  /// **'Update to version {version}'**
+  String refreshInstall(Object version);
+
+  /// No description provided for @refreshUpToDate.
+  ///
+  /// In en, this message translates to:
+  /// **'The current version {version} is up-to-date.'**
+  String refreshUpToDate(Object version);
+
+  /// No description provided for @refreshUpdating.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating {snap}...'**
+  String refreshUpdating(Object snap);
+
+  /// No description provided for @refreshRestart.
+  ///
+  /// In en, this message translates to:
+  /// **'Please restart the installer.'**
+  String get refreshRestart;
+
+  /// No description provided for @refreshSnapPrerequisites.
+  ///
+  /// In en, this message translates to:
+  /// **'Ensuring {snap} prerequisites...'**
+  String refreshSnapPrerequisites(Object snap);
+
+  /// No description provided for @refreshSnapRefresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Refreshing {snap}...'**
+  String refreshSnapRefresh(Object snap);
+
+  /// No description provided for @refreshSnapCheckRerefresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Checking {snap} re-refresh...'**
+  String refreshSnapCheckRerefresh(Object snap);
+
+  /// No description provided for @refreshSnapPrepare.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing {snap}...'**
+  String refreshSnapPrepare(Object snap);
+
+  /// No description provided for @refreshSnapDownload.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading {snap}...'**
+  String refreshSnapDownload(Object snap);
+
+  /// No description provided for @refreshSnapValidate.
+  ///
+  /// In en, this message translates to:
+  /// **'Validating {snap}...'**
+  String refreshSnapValidate(Object snap);
+
+  /// No description provided for @refreshSnapMount.
+  ///
+  /// In en, this message translates to:
+  /// **'Mounting {snap}...'**
+  String refreshSnapMount(Object snap);
+
+  /// No description provided for @refreshSnapStopServices.
+  ///
+  /// In en, this message translates to:
+  /// **'Stopping {snap} services...'**
+  String refreshSnapStopServices(Object snap);
+
+  /// No description provided for @refreshSnapRemoveAliases.
+  ///
+  /// In en, this message translates to:
+  /// **'Removing {snap} aliases...'**
+  String refreshSnapRemoveAliases(Object snap);
+
+  /// No description provided for @refreshSnapUnlink.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlinking {snap}...'**
+  String refreshSnapUnlink(Object snap);
+
+  /// No description provided for @refreshSnapUpdateAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating {snap} assets...'**
+  String refreshSnapUpdateAssets(Object snap);
+
+  /// No description provided for @refreshSnapUpdateKernelCommandLine.
+  ///
+  /// In en, this message translates to:
+  /// **'Updating {snap} kernel command line...'**
+  String refreshSnapUpdateKernelCommandLine(Object snap);
+
+  /// No description provided for @refreshSnapCopyData.
+  ///
+  /// In en, this message translates to:
+  /// **'Copying {snap} data...'**
+  String refreshSnapCopyData(Object snap);
+
+  /// No description provided for @refreshSnapSetupProfiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting up {snap} security profiles...'**
+  String refreshSnapSetupProfiles(Object snap);
+
+  /// No description provided for @refreshSnapLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Linking {snap}...'**
+  String refreshSnapLink(Object snap);
+
+  /// No description provided for @refreshSnapAutoConnect.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting {snap} plugs and slots...'**
+  String refreshSnapAutoConnect(Object snap);
+
+  /// No description provided for @refreshSnapSetAutoAliases.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting automatic {snap} aliases...'**
+  String refreshSnapSetAutoAliases(Object snap);
+
+  /// No description provided for @refreshSnapSetupAliases.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting up {snap} aliases...'**
+  String refreshSnapSetupAliases(Object snap);
+
+  /// No description provided for @refreshSnapStartServices.
+  ///
+  /// In en, this message translates to:
+  /// **'Starting {snap} services...'**
+  String refreshSnapStartServices(Object snap);
+
+  /// No description provided for @refreshSnapCleanup.
+  ///
+  /// In en, this message translates to:
+  /// **'Cleaning up {snap}...'**
+  String refreshSnapCleanup(Object snap);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {
