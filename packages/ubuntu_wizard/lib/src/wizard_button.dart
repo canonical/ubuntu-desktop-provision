@@ -93,7 +93,7 @@ class WizardButton extends StatefulWidget {
                 ? UbuntuLocalizations.of(context).nextLabel
                 : UbuntuLocalizations.of(context).doneLabel),
         visible: visible,
-        enabled: !isLoading && (enabled ?? hasNext),
+        enabled: !isLoading && enabled != false,
         loading: isLoading,
         flat: flat,
         highlighted: highlighted,
