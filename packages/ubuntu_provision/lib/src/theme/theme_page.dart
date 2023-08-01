@@ -25,7 +25,7 @@ class ThemePage extends ConsumerWidget {
       bottomBar: WizardBar(
         leading: WizardButton.previous(context),
         trailing: [
-          WizardButton.next(context, enabled: true),
+          WizardButton.next(context),
         ],
       ),
       title: YaruWindowTitleBar(
