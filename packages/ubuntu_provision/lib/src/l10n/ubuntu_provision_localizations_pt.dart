@@ -239,6 +239,21 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'Não pretendo ligar à Internet por agora';
+
+  @override
+  String get privacyPageTitle => 'Location services';
+
+  @override
+  String get privacyLocationTitle => 'Enable location services?';
+
+  @override
+  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+
+  @override
+  String get privacyLocationEnable => 'Location services';
+
+  @override
+  String get privacyPolicyLink => 'Data Privacy';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

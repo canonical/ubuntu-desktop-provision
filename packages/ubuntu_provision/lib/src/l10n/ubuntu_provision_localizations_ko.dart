@@ -239,4 +239,19 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => '지금은 인터넷에 연결하지 않기';
+
+  @override
+  String get privacyPageTitle => 'Location services';
+
+  @override
+  String get privacyLocationTitle => 'Enable location services?';
+
+  @override
+  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+
+  @override
+  String get privacyLocationEnable => 'Location services';
+
+  @override
+  String get privacyPolicyLink => 'Data Privacy';
 }

@@ -7,6 +7,7 @@ export 'src/services/keyboard_service.dart';
 export 'src/services/locale_service.dart';
 export 'src/services/network_service.dart';
 export 'src/services/power_service.dart';
+export 'src/services/privacy_service.dart' hide log;
 export 'src/services/session_service.dart';
 export 'src/services/sound_service.dart';
 export 'src/services/telemetry_service.dart' hide log;

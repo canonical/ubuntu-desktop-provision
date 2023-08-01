@@ -51,11 +51,15 @@ void main() {
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
+    await tester.testThemePage(theme: Brightness.dark);
+    await tester.tapNext();
+    await expectTheme(Brightness.dark);
+
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.testThemePage(theme: Brightness.dark);
+    await tester.testPrivacyPage();
     await tester.tapDone();
-    await expectTheme(Brightness.dark);
+    await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);
   });

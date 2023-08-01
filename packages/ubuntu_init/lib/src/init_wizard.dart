@@ -23,6 +23,7 @@ class InitRoutes {
   static const String timezone = '/timezone';
   static const String identity = '/identity';
   static const String theme = '/theme';
+  static const String privacy = '/privacy';
 }
 
 class InitWizard extends ConsumerWidget {
@@ -79,6 +80,10 @@ class InitWizard extends ConsumerWidget {
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
+        ),
+        InitRoutes.privacy: WizardRoute(
+          builder: (_) => const PrivacyPage(),
+          onLoad: (_) => PrivacyPage.load(ref),
           onNext: (_) =>
               YaruWindow.of(context).close().then((_) => InitRoutes.initial),
         ),

@@ -4,7 +4,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i8;
-import 'dart:ui' as _i24;
+import 'dart:ui' as _i25;
 
 import 'package:dbus/dbus.dart' as _i18;
 import 'package:mockito/mockito.dart' as _i1;
@@ -23,13 +23,14 @@ import 'package:ubuntu_provision/src/services/keyboard_service.dart' as _i15;
 import 'package:ubuntu_provision/src/services/locale_service.dart' as _i16;
 import 'package:ubuntu_provision/src/services/network_service.dart' as _i17;
 import 'package:ubuntu_provision/src/services/power_service.dart' as _i19;
-import 'package:ubuntu_provision/src/services/session_service.dart' as _i20;
-import 'package:ubuntu_provision/src/services/sound_service.dart' as _i21;
-import 'package:ubuntu_provision/src/services/telemetry_service.dart' as _i22;
-import 'package:ubuntu_provision/src/services/theme_service.dart' as _i23;
-import 'package:ubuntu_provision/src/services/timezone_service.dart' as _i25;
+import 'package:ubuntu_provision/src/services/privacy_service.dart' as _i20;
+import 'package:ubuntu_provision/src/services/session_service.dart' as _i21;
+import 'package:ubuntu_provision/src/services/sound_service.dart' as _i22;
+import 'package:ubuntu_provision/src/services/telemetry_service.dart' as _i23;
+import 'package:ubuntu_provision/src/services/theme_service.dart' as _i24;
+import 'package:ubuntu_provision/src/services/timezone_service.dart' as _i26;
 import 'package:ubuntu_provision/src/services/udev_service.dart' as _i6;
-import 'package:ubuntu_utils/src/url_launcher.dart' as _i26;
+import 'package:ubuntu_utils/src/url_launcher.dart' as _i27;
 import 'package:upower/upower.dart' as _i5;
 
 // ignore_for_file: type=lint
@@ -960,10 +961,63 @@ class MockPowerService extends _i1.Mock implements _i19.PowerService {
       ) as _i8.Future<void>);
 }
 
+/// A class which mocks [PrivacyService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockPrivacyService extends _i1.Mock implements _i20.PrivacyService {
+  MockPrivacyService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i8.Future<bool> isLocationEnabled() => (super.noSuchMethod(
+        Invocation.method(
+          #isLocationEnabled,
+          [],
+        ),
+        returnValue: _i8.Future<bool>.value(false),
+      ) as _i8.Future<bool>);
+  @override
+  _i8.Future<void> setLocationEnabled(bool? enabled) => (super.noSuchMethod(
+        Invocation.method(
+          #setLocationEnabled,
+          [enabled],
+        ),
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
+  @override
+  _i8.Future<bool> isReportingEnabled() => (super.noSuchMethod(
+        Invocation.method(
+          #isReportingEnabled,
+          [],
+        ),
+        returnValue: _i8.Future<bool>.value(false),
+      ) as _i8.Future<bool>);
+  @override
+  _i8.Future<void> setReportingEnabled(bool? enabled) => (super.noSuchMethod(
+        Invocation.method(
+          #setReportingEnabled,
+          [enabled],
+        ),
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
+  @override
+  _i8.Future<void> close() => (super.noSuchMethod(
+        Invocation.method(
+          #close,
+          [],
+        ),
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
+}
+
 /// A class which mocks [SessionService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSessionService extends _i1.Mock implements _i20.SessionService {
+class MockSessionService extends _i1.Mock implements _i21.SessionService {
   MockSessionService() {
     _i1.throwOnMissingStub(this);
   }
@@ -993,7 +1047,7 @@ class MockSessionService extends _i1.Mock implements _i20.SessionService {
 /// A class which mocks [SoundService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSoundService extends _i1.Mock implements _i21.SoundService {
+class MockSoundService extends _i1.Mock implements _i22.SoundService {
   MockSoundService() {
     _i1.throwOnMissingStub(this);
   }
@@ -1012,7 +1066,7 @@ class MockSoundService extends _i1.Mock implements _i21.SoundService {
 /// A class which mocks [TelemetryService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTelemetryService extends _i1.Mock implements _i22.TelemetryService {
+class MockTelemetryService extends _i1.Mock implements _i23.TelemetryService {
   MockTelemetryService() {
     _i1.throwOnMissingStub(this);
   }
@@ -1072,21 +1126,21 @@ class MockTelemetryService extends _i1.Mock implements _i22.TelemetryService {
 /// A class which mocks [ThemeService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockThemeService extends _i1.Mock implements _i23.ThemeService {
+class MockThemeService extends _i1.Mock implements _i24.ThemeService {
   MockThemeService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i8.Future<_i24.Brightness> getBrightness() => (super.noSuchMethod(
+  _i8.Future<_i25.Brightness> getBrightness() => (super.noSuchMethod(
         Invocation.method(
           #getBrightness,
           [],
         ),
-        returnValue: _i8.Future<_i24.Brightness>.value(_i24.Brightness.dark),
-      ) as _i8.Future<_i24.Brightness>);
+        returnValue: _i8.Future<_i25.Brightness>.value(_i25.Brightness.dark),
+      ) as _i8.Future<_i25.Brightness>);
   @override
-  _i8.Future<void> setBrightness(_i24.Brightness? brightness) =>
+  _i8.Future<void> setBrightness(_i25.Brightness? brightness) =>
       (super.noSuchMethod(
         Invocation.method(
           #setBrightness,
@@ -1126,7 +1180,7 @@ class MockThemeService extends _i1.Mock implements _i23.ThemeService {
 /// A class which mocks [TimezoneService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTimezoneService extends _i1.Mock implements _i25.TimezoneService {
+class MockTimezoneService extends _i1.Mock implements _i26.TimezoneService {
   MockTimezoneService() {
     _i1.throwOnMissingStub(this);
   }
@@ -1206,7 +1260,7 @@ class MockUdevService extends _i1.Mock implements _i6.UdevService {
 /// A class which mocks [UrlLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUrlLauncher extends _i1.Mock implements _i26.UrlLauncher {
+class MockUrlLauncher extends _i1.Mock implements _i27.UrlLauncher {
   MockUrlLauncher() {
     _i1.throwOnMissingStub(this);
   }

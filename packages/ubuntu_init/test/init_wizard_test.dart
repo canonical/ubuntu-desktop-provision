@@ -18,6 +18,7 @@ import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
+import '../../ubuntu_provision/test/privacy/test_privacy.dart';
 import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 
@@ -52,6 +53,7 @@ void main() {
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
     final themeModel = buildThemeModel();
+    final privacyModel = buildPrivacyModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -66,6 +68,7 @@ void main() {
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
           themeModelProvider.overrideWith((_) => themeModel),
+          privacyModelProvider.overrideWith((_) => privacyModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -100,6 +103,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(ThemePage), findsOneWidget);
     verify(themeModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(PrivacyPage), findsOneWidget);
+    verify(privacyModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
@@ -156,7 +164,7 @@ void main() {
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.tapDone();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);

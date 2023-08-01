@@ -39,10 +39,12 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
   tryRegisterService<LocaleService>(XdgLocaleService.new);
   tryRegisterService<NetworkService>(NetworkService.new);
+  tryRegisterService<PrivacyService>(GnomePrivacyService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<ThemeService>(GtkThemeService.new);
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
+  tryRegisterService(UrlLauncher.new);
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {

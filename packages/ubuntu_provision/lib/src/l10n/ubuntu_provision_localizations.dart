@@ -704,6 +704,36 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'I don\'t want to connect to the internet just now'**
   String get networkNoneOption;
+
+  /// No description provided for @privacyPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location services'**
+  String get privacyPageTitle;
+
+  /// No description provided for @privacyLocationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable location services?'**
+  String get privacyLocationTitle;
+
+  /// No description provided for @privacyLocationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Let applications know your geographical location.\nYou can change this anytime in System Settings.'**
+  String get privacyLocationSubtitle;
+
+  /// No description provided for @privacyLocationEnable.
+  ///
+  /// In en, this message translates to:
+  /// **'Location services'**
+  String get privacyLocationEnable;
+
+  /// No description provided for @privacyPolicyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Privacy'**
+  String get privacyPolicyLink;
 }
 
 class _UbuntuProvisionLocalizationsDelegate extends LocalizationsDelegate<UbuntuProvisionLocalizations> {
