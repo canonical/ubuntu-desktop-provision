@@ -21,6 +21,7 @@ dependencies:
   gsettings: ^0.2.7
   handy_window: ^0.3.0
   meta: ^1.7.0
+  snapcraft_launcher: ^0.1.0
   stdlibc: ^0.1.0
   timezone_map:
     git:

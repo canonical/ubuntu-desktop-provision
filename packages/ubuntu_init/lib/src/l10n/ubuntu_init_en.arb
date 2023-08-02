@@ -8,5 +8,13 @@
   "privacyLocationEnable": "Location services",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Data Privacy",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "storeHeader": "Get started with more applications",
+  "@storeHeader": {},
+  "storeDescription": "Ubuntu's App Store offers a range of apps you can get started with from the get-go.",
+  "@storeDescription": {},
+  "storeOpen": "Open App Store",
+  "@storeOpen": {}
 }

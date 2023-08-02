@@ -22,6 +22,7 @@ import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
+import 'store/test_store.dart';
 
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +41,7 @@ void main() {
     final identityModel = buildIdentityModel(isValid: true);
     final themeModel = buildThemeModel();
     final privacyModel = buildPrivacyModel();
+    final storeModel = buildStoreModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -55,10 +57,13 @@ void main() {
           identityModelProvider.overrideWith((_) => identityModel),
           themeModelProvider.overrideWith((_) => themeModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
+          storeModelProvider.overrideWith((_) => storeModel),
         ],
         child: tester.buildTestWizard(),
       ),
     );
+
+    final windowClosed = YaruTestWindow.waitForClosed();
 
     await tester.pump(const Duration(seconds: 1));
 
@@ -95,7 +100,10 @@ void main() {
     expect(find.byType(PrivacyPage), findsOneWidget);
     verify(privacyModel.init()).called(1);
 
-    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(StorePage), findsOneWidget);
+    verify(storeModel.init()).called(1);
 
     await tester.tapDone();
     await tester.pumpAndSettle();
