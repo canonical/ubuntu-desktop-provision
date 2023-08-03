@@ -12,7 +12,7 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 import 'storage_dialogs.dart';
 import 'storage_model.dart';
 
-export 'storage_model.dart' show AdvancedFeature, StorageType;
+export 'storage_model.dart' show StorageType;
 
 /// Select between guided and manual partitioning.
 class StoragePage extends ConsumerWidget {
@@ -108,7 +108,7 @@ class StoragePage extends ConsumerWidget {
                     child: Text(lang.installationTypeAdvancedLabel),
                   ),
                   const SizedBox(width: kWizardSpacing),
-                  Text(model.advancedFeature.localize(lang, model.encryption)),
+                  Text(model.guidedCapability?.localize(lang) ?? ''),
                 ],
               ),
             ),
@@ -143,17 +143,17 @@ class StoragePage extends ConsumerWidget {
   }
 }
 
-extension _AdvancedFeatureL10n on AdvancedFeature {
-  String localize(UbuntuBootstrapLocalizations lang, bool encryption) {
+extension _GuidedCapabilityL10n on GuidedCapability {
+  String localize(UbuntuBootstrapLocalizations lang) {
     switch (this) {
-      case AdvancedFeature.none:
-        return lang.installationTypeNoneSelected;
-      case AdvancedFeature.lvm:
-        return encryption
-            ? lang.installationTypeLVMEncryptionSelected
-            : lang.installationTypeLVMSelected;
-      case AdvancedFeature.zfs:
+      case GuidedCapability.LVM:
+        return lang.installationTypeLVMSelected;
+      case GuidedCapability.LVM_LUKS:
+        return lang.installationTypeLVMEncryptionSelected;
+      case GuidedCapability.ZFS:
         return lang.installationTypeZFSSelected;
+      default:
+        return lang.installationTypeNoneSelected;
     }
   }
 }

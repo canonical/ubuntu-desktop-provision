@@ -18,8 +18,7 @@ export 'test_storage.mocks.dart';
 @GenerateMocks([StorageModel])
 StorageModel buildStorageModel({
   StorageType? type = StorageType.erase,
-  AdvancedFeature? advancedFeature,
-  bool? encryption,
+  GuidedCapability? guidedCapability,
   ProductInfo? productInfo,
   List<OsProber>? existingOS,
   bool? canInstallAlongside,
@@ -29,9 +28,8 @@ StorageModel buildStorageModel({
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
-  when(model.advancedFeature)
-      .thenReturn(advancedFeature ?? AdvancedFeature.none);
-  when(model.encryption).thenReturn(encryption ?? false);
+  when(model.guidedCapability)
+      .thenReturn(guidedCapability ?? GuidedCapability.DIRECT);
   when(model.productInfo).thenReturn(productInfo ?? ProductInfo(name: ''));
   when(model.existingOS).thenReturn(existingOS);
   when(model.canInstallAlongside).thenReturn(canInstallAlongside ?? false);

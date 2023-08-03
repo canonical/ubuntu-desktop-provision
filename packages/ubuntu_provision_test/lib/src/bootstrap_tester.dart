@@ -108,8 +108,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
   Future<void> testStoragePage({
     StorageType? type,
-    AdvancedFeature? advancedFeature,
-    bool? useEncryption,
+    GuidedCapability? guidedCapability,
     String? screenshot,
   }) async {
     await pumpUntilPage(StoragePage);
@@ -123,18 +122,24 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       await tapRadio<StorageType>(type);
       await pump();
     }
-    if (advancedFeature != null) {
+    if (guidedCapability != null) {
       await tapButton(l10n.installationTypeAdvancedLabel);
       await pumpAndSettle();
 
-      await tapRadio<AdvancedFeature>(advancedFeature);
-      await pump();
-
-      if (useEncryption != null) {
-        await toggleButton(
-          l10n.installationTypeEncrypt('Ubuntu'),
-          true,
-        );
+      switch (guidedCapability) {
+        case GuidedCapability.DIRECT:
+          await tap(find.text(l10n.installationTypeNone));
+          break;
+        case GuidedCapability.LVM:
+          await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
+          break;
+        case GuidedCapability.LVM_LUKS:
+          await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
+          await pump();
+          await tap(find.text(l10n.installationTypeEncrypt('Ubuntu')));
+          break;
+        default:
+          break;
       }
 
       await pumpAndSettle();
@@ -148,7 +153,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
     await pumpAndSettle();
 
-    if (advancedFeature == null && screenshot != null) {
+    if (guidedCapability == null && screenshot != null) {
       await takeScreenshot(screenshot);
     }
   }

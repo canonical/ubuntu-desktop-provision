@@ -362,7 +362,8 @@ void main() {
     });
 
     testWidgets('none selected', (tester) async {
-      final model = buildStorageModel(advancedFeature: AdvancedFeature.none);
+      final model =
+          buildStorageModel(guidedCapability: GuidedCapability.DIRECT);
       await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
       final context = tester.element(find.byType(StoragePage));
@@ -372,7 +373,7 @@ void main() {
     });
 
     testWidgets('lvm selected', (tester) async {
-      final model = buildStorageModel(advancedFeature: AdvancedFeature.lvm);
+      final model = buildStorageModel(guidedCapability: GuidedCapability.LVM);
       await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
       final context = tester.element(find.byType(StoragePage));
@@ -382,8 +383,8 @@ void main() {
     });
 
     testWidgets('encrypted lvm selected', (tester) async {
-      final model = buildStorageModel(
-          advancedFeature: AdvancedFeature.lvm, encryption: true);
+      final model =
+          buildStorageModel(guidedCapability: GuidedCapability.LVM_LUKS);
       await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
       final context = tester.element(find.byType(StoragePage));

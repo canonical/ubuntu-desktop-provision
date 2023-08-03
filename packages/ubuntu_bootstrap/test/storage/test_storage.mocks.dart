@@ -3,10 +3,11 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:subiquity_client/subiquity_client.dart' as _i4;
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart' as _i3;
 import 'package:ubuntu_bootstrap/services.dart' as _i2;
 
@@ -48,28 +49,10 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValueForMissingStub: null,
       );
   @override
-  _i3.AdvancedFeature get advancedFeature => (super.noSuchMethod(
-        Invocation.getter(#advancedFeature),
-        returnValue: _i3.AdvancedFeature.none,
-      ) as _i3.AdvancedFeature);
-  @override
-  set advancedFeature(_i3.AdvancedFeature? feature) => super.noSuchMethod(
+  set guidedCapability(_i4.GuidedCapability? capability) => super.noSuchMethod(
         Invocation.setter(
-          #advancedFeature,
-          feature,
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  bool get encryption => (super.noSuchMethod(
-        Invocation.getter(#encryption),
-        returnValue: false,
-      ) as bool);
-  @override
-  set encryption(bool? encryption) => super.noSuchMethod(
-        Invocation.setter(
-          #encryption,
-          encryption,
+          #guidedCapability,
+          capability,
         ),
         returnValueForMissingStub: null,
       );
@@ -112,34 +95,34 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: false,
       ) as bool);
   @override
-  _i4.Future<void> init() => (super.noSuchMethod(
+  _i5.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
   @override
-  _i4.Future<void> save() => (super.noSuchMethod(
+  _i5.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
           #save,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
   @override
-  _i4.Future<void> resetStorage() => (super.noSuchMethod(
+  _i5.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
           #resetStorage,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -147,7 +130,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValueForMissingStub: null,
       );
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

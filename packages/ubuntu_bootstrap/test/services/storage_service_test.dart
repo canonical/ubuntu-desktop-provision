@@ -71,7 +71,7 @@ void main() {
     when(client.setStorageV2()).thenAnswer((_) async => fakeStorageResponse());
 
     final service = StorageService(client);
-    service.useLvm = true;
+    service.guidedCapability = GuidedCapability.LVM;
 
     service.guidedTarget = target;
     await service.setGuidedStorage();
@@ -296,8 +296,8 @@ void main() {
     service.securityKey = 'foo123';
     expect(service.securityKey, equals('foo123'));
 
-    service.useEncryption = true;
     service.guidedTarget = target;
+    service.guidedCapability = GuidedCapability.LVM_LUKS;
     await service.setGuidedStorage();
     verify(client.setGuidedStorageV2(choice)).called(1);
     verify(client.setStorageV2()).called(1);
