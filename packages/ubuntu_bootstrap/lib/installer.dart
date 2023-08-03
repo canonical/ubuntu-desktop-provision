@@ -38,6 +38,8 @@ Future<void> runInstallerApp(
     parser.addFlag('dry-run',
         defaultsTo: Platform.environment['LIVE_RUN'] != '1',
         help: 'Run Subiquity server in dry-run mode');
+    parser.addOption('dry-run-config',
+        valueHelp: 'path', help: 'Path of the dry-run config file');
     parser.addOption('machine-config',
         valueHelp: 'path',
         defaultsTo: 'examples/machines/simple.json',
@@ -114,6 +116,8 @@ Future<void> runInstallerApp(
   tryRegisterService(UrlLauncher.new);
 
   final initialized = getService<SubiquityServer>().start(args: [
+    if (options['dry-run-config'] != null)
+      '--dry-run-config=${options['dry-run-config']}',
     if (options['machine-config'] != null)
       '--machine-config=${options['machine-config']}',
     if (options['source-catalog'] != null)
