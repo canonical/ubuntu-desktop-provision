@@ -10,8 +10,7 @@ import 'test_storage.dart';
 void main() {
   test('init', () async {
     final service = MockStorageService();
-    when(service.useLvm).thenReturn(true);
-    when(service.useEncryption).thenReturn(true);
+    when(service.guidedCapability).thenReturn(GuidedCapability.LVM_LUKS);
     when(service.hasBitLocker()).thenAnswer((_) async => true);
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
@@ -23,8 +22,7 @@ void main() {
     );
     await model.init();
 
-    expect(model.advancedFeature, AdvancedFeature.lvm);
-    expect(model.encryption, isTrue);
+    expect(model.guidedCapability, GuidedCapability.LVM_LUKS);
     expect(model.hasBitLocker, isTrue);
   });
 
@@ -54,8 +52,11 @@ void main() {
   });
 
   test('notify changes', () {
+    final storage = MockStorageService();
+    when(storage.guidedCapability).thenReturn(null);
+
     final model = StorageModel(
-      MockStorageService(),
+      storage,
       MockTelemetryService(),
       MockProductService(),
     );
@@ -69,13 +70,11 @@ void main() {
     expect(wasNotified, isTrue);
 
     wasNotified = false;
-    expect(model.advancedFeature, equals(AdvancedFeature.none));
-    model.advancedFeature = AdvancedFeature.lvm;
+    model.guidedCapability = GuidedCapability.LVM;
     expect(wasNotified, isTrue);
 
     wasNotified = false;
-    expect(model.encryption, isFalse);
-    model.encryption = true;
+    model.guidedCapability = GuidedCapability.LVM_LUKS;
     expect(wasNotified, isTrue);
   });
 
@@ -96,7 +95,7 @@ void main() {
   test('save talks to telemetry service', () async {
     final storage = MockStorageService();
     when(storage.hasMultipleDisks).thenReturn(false);
-    when(storage.useEncryption).thenReturn(false);
+    when(storage.guidedCapability).thenReturn(null);
 
     final telemetry = MockTelemetryService();
     final model = StorageModel(
@@ -121,18 +120,17 @@ void main() {
     verify(telemetry.addMetric('PartitionMethod', 'manual')).called(1);
     reset(telemetry);
 
-    model.advancedFeature = AdvancedFeature.lvm;
+    when(storage.guidedCapability).thenReturn(GuidedCapability.LVM);
     await model.save();
     verify(telemetry.addMetric('PartitionMethod', 'use_lvm')).called(1);
     reset(telemetry);
 
-    model.advancedFeature = AdvancedFeature.zfs;
+    when(storage.guidedCapability).thenReturn(GuidedCapability.ZFS);
     await model.save();
     verify(telemetry.addMetric('PartitionMethod', 'use_zfs')).called(1);
     reset(telemetry);
 
-    when(storage.useEncryption).thenReturn(true);
-    model.advancedFeature = AdvancedFeature.none;
+    when(storage.guidedCapability).thenReturn(GuidedCapability.LVM_LUKS);
     await model.save();
     verify(telemetry.addMetric('PartitionMethod', 'use_crypto')).called(1);
     reset(telemetry);
@@ -141,7 +139,7 @@ void main() {
   test('set lvm', () {
     final storage = MockStorageService();
     when(storage.hasMultipleDisks).thenReturn(false);
-    when(storage.useEncryption).thenReturn(false);
+    when(storage.guidedCapability).thenReturn(null);
 
     final model = StorageModel(
       storage,
@@ -149,19 +147,16 @@ void main() {
       MockProductService(),
     );
 
-    model.advancedFeature = AdvancedFeature.lvm;
-    verify(storage.useLvm = true).called(1);
+    model.guidedCapability = GuidedCapability.LVM;
+    verify(storage.guidedCapability = GuidedCapability.LVM).called(1);
 
-    model.advancedFeature = AdvancedFeature.none;
-    verify(storage.useLvm = false).called(1);
+    model.guidedCapability = GuidedCapability.LVM_LUKS;
+    verify(storage.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
   });
 
   test('can install alongside, erase disk, manual partition', () async {
     final service = MockStorageService();
-    when(service.useLvm).thenReturn(false);
-    when(service.useEncryption).thenReturn(false);
-    when(service.useLvm).thenReturn(false);
-    when(service.useEncryption).thenReturn(false);
+    when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
 
     final model = StorageModel(

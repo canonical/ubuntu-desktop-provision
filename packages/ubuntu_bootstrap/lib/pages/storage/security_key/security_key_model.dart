@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
 /// Provider for [SecurityKeyModel].
@@ -42,7 +43,7 @@ class SecurityKeyModel extends SafeChangeNotifier {
 
   /// Initializes the model.
   Future<bool> init() async {
-    if (!_service.useEncryption) {
+    if (_service.guidedCapability != GuidedCapability.LVM_LUKS) {
       return false;
     }
     await loadSecurityKey();

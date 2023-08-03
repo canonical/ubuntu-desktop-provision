@@ -21,13 +21,12 @@ class StorageService {
 
   bool? _needRoot;
   bool? _needBoot;
-  bool? _useLvm;
-  bool? _useEncryption;
   bool? _hasMultipleDisks;
   int? _installMinimumSize;
   int? _largestDiskSize;
   List<OsProber>? _existingOS;
   GuidedStorageTarget? _guidedTarget;
+  GuidedCapability? _guidedCapability;
   String? _securityKey;
 
   /// Whether the system has multiple disks available for guided partitioning.
@@ -39,22 +38,8 @@ class StorageService {
   /// Whether the storage configuration is missing a boot partition.
   bool get needBoot => _needBoot ?? true;
 
-  /// Whether FDE (Full Disk Encryption) should be used.
-  bool get useEncryption => _useEncryption ?? false;
-  set useEncryption(bool useEncryption) {
-    log.debug('use encryption: $useEncryption');
-    _useEncryption = useEncryption;
-  }
-
   /// Whether Secure Boot is enabled.
   Future<bool> hasSecureBoot() async => false; // TODO: add support for it
-
-  /// Whether the storage configuration should use LVM.
-  bool get useLvm => _useLvm ?? false;
-  set useLvm(bool useLvm) {
-    log.debug('use LVM: $useLvm');
-    _useLvm = useLvm;
-  }
 
   /// A security key for full disk encryption.
   String? get securityKey => _securityKey;
@@ -71,6 +56,13 @@ class StorageService {
   set guidedTarget(GuidedStorageTarget? target) {
     log.debug('select guided target: $target');
     _guidedTarget = target;
+  }
+
+  /// The selected guided capability.
+  GuidedCapability? get guidedCapability => _guidedCapability;
+  set guidedCapability(GuidedCapability? capability) {
+    log.debug('select guided capability: $capability');
+    _guidedCapability = capability;
   }
 
   /// A list of existing OS installations or null if not detected.
@@ -96,11 +88,7 @@ class StorageService {
       GuidedChoiceV2(
         target: guidedTarget!,
         password: securityKey,
-        capability: useEncryption
-            ? GuidedCapability.LVM_LUKS
-            : useLvm
-                ? GuidedCapability.LVM
-                : GuidedCapability.DIRECT,
+        capability: guidedCapability ?? guidedTarget!.allowed.first,
         sizingPolicy: SizingPolicy.ALL,
       ),
     );

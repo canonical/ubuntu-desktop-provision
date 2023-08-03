@@ -16,18 +16,6 @@ enum StorageType {
   manual,
 }
 
-/// Available advanced features.
-enum AdvancedFeature {
-  /// No advanced features.
-  none,
-
-  /// Use LVM.
-  lvm,
-
-  /// Use ZFS (experimental).
-  zfs,
-}
-
 /// Provider for [StorageModel].
 final storageModelProvider = ChangeNotifierProvider((_) => StorageModel(
       getService<StorageService>(),
@@ -49,8 +37,6 @@ class StorageModel extends SafeChangeNotifier {
   final ProductService _product;
 
   StorageType? _type;
-  var _advancedFeature = AdvancedFeature.none;
-  var _encryption = false;
   var _hasBitLocker = false;
   List<GuidedStorageTarget>? _targets;
 
@@ -65,28 +51,15 @@ class StorageModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  /// The selected advanced feature.
-  AdvancedFeature get advancedFeature => _advancedFeature;
-  set advancedFeature(AdvancedFeature feature) {
-    if (_advancedFeature == feature) return;
-    _advancedFeature = feature;
-    _syncService();
-    notifyListeners();
-  }
+  /// The selected guided target.
+  GuidedStorageTarget? get guidedTarget => _storage.guidedTarget;
 
-  /// Whether to encrypt the disk.
-  bool get encryption => _encryption;
-  set encryption(bool encryption) {
-    if (_encryption == encryption) return;
-    _encryption = encryption;
-    _syncService();
+  /// The selected guided capability.
+  GuidedCapability? get guidedCapability => _storage.guidedCapability;
+  set guidedCapability(GuidedCapability? capability) {
+    if (_storage.guidedCapability == capability) return;
+    _storage.guidedCapability = capability;
     notifyListeners();
-  }
-
-  void _syncService() {
-    _storage.useLvm = advancedFeature == AdvancedFeature.lvm;
-    _storage.useEncryption =
-        encryption && advancedFeature == AdvancedFeature.lvm;
   }
 
   /// The version of the OS.
@@ -130,9 +103,6 @@ class StorageModel extends SafeChangeNotifier {
             : canManualPartition
                 ? StorageType.manual
                 : null;
-    _advancedFeature =
-        _storage.useLvm ? AdvancedFeature.lvm : AdvancedFeature.none;
-    _encryption = _storage.useEncryption;
     _hasBitLocker = await _storage.hasBitLocker();
     notifyListeners();
   }
@@ -149,12 +119,11 @@ class StorageModel extends SafeChangeNotifier {
     // All possible values for the partition method
     // were extracted from Ubiquity's ubi-partman.py
     // (see PageGtk.get_autopartition_choice()).
-    if (advancedFeature == AdvancedFeature.lvm) {
+    if (guidedCapability == GuidedCapability.LVM) {
       return 'use_lvm';
-    } else if (advancedFeature == AdvancedFeature.zfs) {
+    } else if (guidedCapability == GuidedCapability.ZFS) {
       return 'use_zfs';
-    } else if (_storage.useEncryption &&
-        advancedFeature != AdvancedFeature.zfs) {
+    } else if (guidedCapability == GuidedCapability.LVM_LUKS) {
       return 'use_crypto';
     } else if (type == StorageType.erase) {
       return 'use_device';

@@ -264,32 +264,6 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
         returnValue: false,
       ) as bool);
   @override
-  bool get useEncryption => (super.noSuchMethod(
-        Invocation.getter(#useEncryption),
-        returnValue: false,
-      ) as bool);
-  @override
-  set useEncryption(bool? useEncryption) => super.noSuchMethod(
-        Invocation.setter(
-          #useEncryption,
-          useEncryption,
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
-  bool get useLvm => (super.noSuchMethod(
-        Invocation.getter(#useLvm),
-        returnValue: false,
-      ) as bool);
-  @override
-  set useLvm(bool? useLvm) => super.noSuchMethod(
-        Invocation.setter(
-          #useLvm,
-          useLvm,
-        ),
-        returnValueForMissingStub: null,
-      );
-  @override
   set securityKey(String? securityKey) => super.noSuchMethod(
         Invocation.setter(
           #securityKey,
@@ -302,6 +276,14 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
         Invocation.setter(
           #guidedTarget,
           target,
+        ),
+        returnValueForMissingStub: null,
+      );
+  @override
+  set guidedCapability(_i4.GuidedCapability? capability) => super.noSuchMethod(
+        Invocation.setter(
+          #guidedCapability,
+          capability,
         ),
         returnValueForMissingStub: null,
       );

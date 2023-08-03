@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -8,11 +9,15 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'storage_model.dart';
 
+enum AdvancedFeature { none, lvm, zfs }
+
 /// Shows a dialog to select advanced installation features.
 Future<void> showAdvancedFeaturesDialog(
     BuildContext context, StorageModel model) async {
-  final advancedFeature = ValueNotifier(model.advancedFeature);
-  final encryption = ValueNotifier(model.encryption);
+  final advancedFeature = ValueNotifier(
+      model.guidedCapability?.toAdvancedFeature() ?? AdvancedFeature.none);
+  final encryption =
+      ValueNotifier(model.guidedCapability == GuidedCapability.LVM_LUKS);
 
   final result = await showDialog<bool>(
     context: context,
@@ -92,7 +97,32 @@ Future<void> showAdvancedFeaturesDialog(
   );
 
   if (result == true) {
-    model.advancedFeature = advancedFeature.value;
-    model.encryption = encryption.value;
+    model.guidedCapability =
+        advancedFeature.value.toGuidedCapability(encryption: encryption.value);
+  }
+}
+
+extension on GuidedCapability {
+  AdvancedFeature? toAdvancedFeature() {
+    switch (this) {
+      case GuidedCapability.LVM:
+      case GuidedCapability.LVM_LUKS:
+        return AdvancedFeature.lvm;
+      default:
+        return AdvancedFeature.none;
+    }
+  }
+}
+
+extension on AdvancedFeature {
+  GuidedCapability toGuidedCapability({bool? encryption}) {
+    switch (this) {
+      case AdvancedFeature.lvm:
+        return encryption == true
+            ? GuidedCapability.LVM_LUKS
+            : GuidedCapability.LVM;
+      default:
+        return GuidedCapability.DIRECT;
+    }
   }
 }
