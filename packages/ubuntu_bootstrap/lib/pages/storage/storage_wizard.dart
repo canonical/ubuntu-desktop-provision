@@ -7,6 +7,7 @@ import 'bitlocker/bitlocker_page.dart';
 import 'guided_reformat/guided_reformat_page.dart';
 import 'guided_resize/guided_resize_page.dart';
 import 'manual/manual_storage_page.dart';
+import 'recovery_key/recovery_key_page.dart';
 import 'security_key/security_key_page.dart';
 import 'storage_model.dart';
 import 'storage_page.dart';
@@ -16,6 +17,7 @@ export 'bitlocker/bitlocker_page.dart';
 export 'guided_reformat/guided_reformat_page.dart';
 export 'guided_resize/guided_resize_page.dart';
 export 'manual/manual_storage_page.dart';
+export 'recovery_key/recovery_key_page.dart';
 export 'security_key/security_key_page.dart';
 export 'storage_page.dart';
 export 'storage_routes.dart';
@@ -66,6 +68,12 @@ class StorageWizard extends ConsumerWidget {
           builder: (_) => const SecurityKeyPage(),
           userData: WizardRouteData(step: InstallationStep.storage.index),
           onLoad: (_) => SecurityKeyPage.load(ref),
+        ),
+      if (type != StorageType.manual)
+        StorageRoutes.recoveryKey: WizardRoute(
+          builder: (_) => const RecoveryKeyPage(),
+          userData: WizardRouteData(step: InstallationStep.storage.index),
+          onLoad: (_) => RecoveryKeyPage.load(ref),
         ),
     };
 

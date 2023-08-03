@@ -1502,6 +1502,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Cleaning up {snap}...'**
   String refreshSnapCleanup(Object snap);
+
+  /// No description provided for @recoveryKeyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM recovery key'**
+  String get recoveryKeyTitle;
+
+  /// No description provided for @recoveryKeyCommand.
+  ///
+  /// In en, this message translates to:
+  /// **'You can access your recovery key after installation with the following command:'**
+  String get recoveryKeyCommand;
+
+  /// No description provided for @recoveryKeyWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
+  String recoveryKeyWarning(Object color);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

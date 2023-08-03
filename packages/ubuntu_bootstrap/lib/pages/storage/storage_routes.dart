@@ -4,4 +4,5 @@ abstract class StorageRoutes {
   static const guidedResize = '/guided-resize';
   static const manual = '/manual';
   static const securityKey = '/security-key';
+  static const recoveryKey = '/recovery-key';
 }

@@ -824,5 +824,16 @@
     "placeholders": {
       "snap": {}
     }
+  },
+  "recoveryKeyTitle": "TPM recovery key",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
   }
 }
