@@ -70,13 +70,12 @@ Future<void> showAdvancedFeaturesDialog(
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing),
-                // https://github.com/canonical/ubuntu-desktop-installer/issues/373
-                // YaruRadioButton<AdvancedFeature>(
-                //   title: Text(lang.installationTypeZFS),
-                //   value: AdvancedFeature.zfs,
-                //   groupValue: advancedFeature.value,
-                //   onChanged: (v) => advancedFeature.value = v!,
-                // ),
+                YaruRadioButton<AdvancedFeature>(
+                  title: Text(lang.installationTypeZFS),
+                  value: AdvancedFeature.zfs,
+                  groupValue: advancedFeature.value,
+                  onChanged: (v) => advancedFeature.value = v!,
+                ),
               ],
             );
           },
@@ -108,6 +107,8 @@ extension on GuidedCapability {
       case GuidedCapability.LVM:
       case GuidedCapability.LVM_LUKS:
         return AdvancedFeature.lvm;
+      case GuidedCapability.ZFS:
+        return AdvancedFeature.zfs;
       default:
         return AdvancedFeature.none;
     }
@@ -121,6 +122,8 @@ extension on AdvancedFeature {
         return encryption == true
             ? GuidedCapability.LVM_LUKS
             : GuidedCapability.LVM;
+      case AdvancedFeature.zfs:
+        return GuidedCapability.ZFS;
       default:
         return GuidedCapability.DIRECT;
     }

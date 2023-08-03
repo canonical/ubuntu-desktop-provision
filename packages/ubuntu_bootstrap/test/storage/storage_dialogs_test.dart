@@ -17,6 +17,10 @@ void main() {
     when(model.existingOS).thenReturn(null);
     when(model.type).thenReturn(StorageType.erase);
     when(model.guidedCapability).thenReturn(null);
+    when(model.canInstallAlongside).thenReturn(false);
+    when(model.canEraseDisk).thenReturn(true);
+    when(model.canManualPartition).thenReturn(true);
+    when(model.hasBitLocker).thenReturn(false);
 
     await tester.pumpWidget(
       ProviderScope(
@@ -43,7 +47,7 @@ void main() {
     await result;
 
     verify(model.guidedCapability = GuidedCapability.ZFS).called(1);
-  }, skip: true); // #373
+  });
 
   testWidgets('select lvm', (tester) async {
     final model = MockStorageModel();

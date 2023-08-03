@@ -98,7 +98,10 @@ void main() {
     );
   });
 
-  testWidgets('guided lvm + encryption', (tester) async {
+  final capabilityVariant =
+      ValueVariant({GuidedCapability.LVM_LUKS, GuidedCapability.ZFS});
+
+  testWidgets('guided capability', (tester) async {
     const identity = Identity(
       realname: 'User',
       hostname: 'ubuntu',
@@ -130,7 +133,7 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
-      guidedCapability: GuidedCapability.LVM_LUKS,
+      guidedCapability: capabilityVariant.currentValue,
     );
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -165,10 +168,9 @@ void main() {
 
     await verifySubiquityConfig(
       identity: identity,
-      useLvm: true,
-      useEncryption: true,
+      capability: capabilityVariant.currentValue,
     );
-  });
+  }, variant: capabilityVariant);
 
   testWidgets('manual partitioning', (tester) async {
     final storage = [
@@ -398,8 +400,7 @@ Future<void> verifySubiquityConfig({
   String? locale,
   String? timezone,
   List<Disk>? storage,
-  bool? useLvm,
-  bool? useEncryption,
+  GuidedCapability? capability,
 }) async {
   final path = await getSubiquityLogFile('autoinstall-user-data');
   await expectLater(path, existsLater);
@@ -455,20 +456,26 @@ Future<void> verifySubiquityConfig({
     }
   }
 
-  if (useLvm != null) {
-    expect(
-        actualStorage
-            .where((config) => config['type'] == 'lvm_volgroup')
-            .isNotEmpty,
-        useLvm);
-  }
-
-  if (useEncryption != null) {
-    expect(
-        actualStorage
-            .where((config) => config['type'] == 'dm_crypt')
-            .isNotEmpty,
-        useEncryption);
+  if (capability != null) {
+    switch (capability) {
+      case GuidedCapability.LVM:
+        expect(
+            actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
+            isNotEmpty);
+        break;
+      case GuidedCapability.LVM_LUKS:
+        expect(
+            actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
+            isNotEmpty);
+        expect(actualStorage.where((config) => config['type'] == 'dm_crypt'),
+            isNotEmpty);
+      case GuidedCapability.ZFS:
+        expect(actualStorage.where((config) => config['type'] == 'zpool'),
+            isNotEmpty);
+        break;
+      default:
+        break;
+    }
   }
 }
 

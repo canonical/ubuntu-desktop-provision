@@ -393,6 +393,16 @@ void main() {
       expect(find.text(l10n.installationTypeLVMEncryptionSelected),
           findsOneWidget);
     });
+
+    testWidgets('zfs selected', (tester) async {
+      final model = buildStorageModel(guidedCapability: GuidedCapability.ZFS);
+      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+
+      final context = tester.element(find.byType(StoragePage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeZFSSelected), findsOneWidget);
+    });
   });
 
   testWidgets('no type', (tester) async {
