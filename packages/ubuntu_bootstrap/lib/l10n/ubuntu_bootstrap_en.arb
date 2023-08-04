@@ -232,6 +232,10 @@
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS selected",
   "@installationTypeZFSSelected": {},
+  "installationTypeTPM": "EXPERIMENTAL: Hardware-backed full disk encryption",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM selected",
+  "@installationTypeTPMSelected": {},
   "installationTypeReinstall": "Erase {os} and reinstall",
   "@installationTypeReinstall": {
     "type": "text",

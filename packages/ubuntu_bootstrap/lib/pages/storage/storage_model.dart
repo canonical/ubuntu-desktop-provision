@@ -71,6 +71,25 @@ class StorageModel extends SafeChangeNotifier {
   /// Whether BitLocker is detected.
   bool get hasBitLocker => _hasBitLocker;
 
+  /// Whether direct guided storage targets are available.
+  bool get hasDirect => _getTargets<GuidedStorageTargetReformat>()
+      .any((t) => t.allowed.contains(GuidedCapability.DIRECT));
+
+  /// Whether LVM guided storage targets are available.
+  bool get hasLvm => _getTargets<GuidedStorageTargetReformat>().any((t) => t
+      .allowed
+      .any((c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS));
+
+  /// Whether ZFS guided storage targets are available.
+  bool get hasZfs => _getTargets<GuidedStorageTargetReformat>()
+      .any((t) => t.allowed.contains(GuidedCapability.ZFS));
+
+  /// Whether TPM is detected.
+  bool get hasTpm =>
+      _getTargets<GuidedStorageTargetReformat>().any((t) => t.allowed.any((c) =>
+          c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+          c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED));
+
   /// Whether installation alongside an existing OS is possible.
   ///
   /// That is, whether a) an existing partition can be safely resized smaller to
@@ -82,9 +101,7 @@ class StorageModel extends SafeChangeNotifier {
 
   /// Whether erasing the disk is possible i.e. whether any guided reformat
   /// targets are allowed.
-  bool get canEraseDisk {
-    return _getTargets<GuidedStorageTargetReformat>().isNotEmpty;
-  }
+  bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm;
 
   /// Whether manual partitioning is possible i.e. whether a manual partitioning
   /// target is allowed.
@@ -103,6 +120,11 @@ class StorageModel extends SafeChangeNotifier {
             : canManualPartition
                 ? StorageType.manual
                 : null;
+    _storage.guidedCapability ??= _targets
+        ?.whereType<GuidedStorageTargetReformat>()
+        .expand((t) => t.allowed)
+        .toSet()
+        .firstOrNull;
     _hasBitLocker = await _storage.hasBitLocker();
     notifyListeners();
   }

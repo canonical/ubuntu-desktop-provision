@@ -18,23 +18,30 @@ export 'test_storage.mocks.dart';
 @GenerateMocks([StorageModel])
 StorageModel buildStorageModel({
   StorageType? type = StorageType.erase,
-  GuidedCapability? guidedCapability,
+  GuidedCapability? guidedCapability = GuidedCapability.DIRECT,
   ProductInfo? productInfo,
   List<OsProber>? existingOS,
   bool? canInstallAlongside,
   bool? canEraseDisk,
   bool? canManualPartition,
   bool? hasBitLocker,
+  bool? hasDirect,
+  bool? hasLvm,
+  bool? hasZfs,
+  bool? hasTpm,
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
-  when(model.guidedCapability)
-      .thenReturn(guidedCapability ?? GuidedCapability.DIRECT);
+  when(model.guidedCapability).thenReturn(guidedCapability);
   when(model.productInfo).thenReturn(productInfo ?? ProductInfo(name: ''));
   when(model.existingOS).thenReturn(existingOS);
   when(model.canInstallAlongside).thenReturn(canInstallAlongside ?? false);
   when(model.canEraseDisk).thenReturn(canEraseDisk ?? true);
   when(model.canManualPartition).thenReturn(canManualPartition ?? true);
   when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
+  when(model.hasDirect).thenReturn(hasDirect ?? true);
+  when(model.hasLvm).thenReturn(hasLvm ?? true);
+  when(model.hasZfs).thenReturn(hasZfs ?? true);
+  when(model.hasTpm).thenReturn(hasTpm ?? false);
   return model;
 }

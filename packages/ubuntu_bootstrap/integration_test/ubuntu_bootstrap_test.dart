@@ -172,6 +172,80 @@ void main() {
     );
   }, variant: capabilityVariant);
 
+  testWidgets('tpm', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(() => app.main([
+          '--source-catalog=examples/sources/tpm.yaml',
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml'
+        ]));
+    await tester.pumpAndSettle();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testSourcePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRecoveryKeyPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testThemePage();
+    await tester.tapNext();
+    await tester.pump();
+
+    await tester.testInstallPage();
+    await tester.pumpAndSettle();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+  });
+
   testWidgets('manual partitioning', (tester) async {
     final storage = [
       fakeDisk(
@@ -471,6 +545,16 @@ Future<void> verifySubiquityConfig({
             isNotEmpty);
       case GuidedCapability.ZFS:
         expect(actualStorage.where((config) => config['type'] == 'zpool'),
+            isNotEmpty);
+        break;
+      case GuidedCapability.CORE_BOOT_ENCRYPTED:
+        expect(
+            actualStorage
+                .where((config) => config['path'] == '/dev/mapper/ubuntu-data'),
+            isNotEmpty);
+        expect(
+            actualStorage
+                .where((config) => config['path'] == '/dev/mapper/ubuntu-save'),
             isNotEmpty);
         break;
       default:

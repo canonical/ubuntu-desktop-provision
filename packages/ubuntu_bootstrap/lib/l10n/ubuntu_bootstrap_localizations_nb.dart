@@ -247,6 +247,12 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS valgt';
 
   @override
+  String get installationTypeTPM => 'EXPERIMENTAL: Hardware-backed full disk encryption';
+
+  @override
+  String get installationTypeTPMSelected => 'TPM selected';
+
+  @override
   String installationTypeReinstall(Object os) {
     return 'Slett og formatere $os og reinstallere';
   }

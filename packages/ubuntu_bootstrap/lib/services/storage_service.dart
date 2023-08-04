@@ -17,7 +17,11 @@ class StorageService {
   final SubiquityClient _client;
 
   /// Initializes the service.
-  Future<void> init() => _client.getStorageV2().then(_updateStorage);
+  Future<void> init() {
+    _guidedTarget = null;
+    _guidedCapability = null;
+    return _client.getStorageV2().then(_updateStorage);
+  }
 
   bool? _needRoot;
   bool? _needBoot;

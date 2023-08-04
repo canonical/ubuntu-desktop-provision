@@ -13,14 +13,7 @@ import 'test_storage.dart';
 
 void main() {
   testWidgets('select zfs', (tester) async {
-    final model = MockStorageModel();
-    when(model.existingOS).thenReturn(null);
-    when(model.type).thenReturn(StorageType.erase);
-    when(model.guidedCapability).thenReturn(null);
-    when(model.canInstallAlongside).thenReturn(false);
-    when(model.canEraseDisk).thenReturn(true);
-    when(model.canManualPartition).thenReturn(true);
-    when(model.hasBitLocker).thenReturn(false);
+    final model = buildStorageModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -29,18 +22,11 @@ void main() {
       ),
     );
 
-    final context = tester.element(find.byType(StoragePage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester
-        .tap(find.radioButton<AdvancedFeature>(l10n.installationTypeZFS));
-    await tester.pump();
-
-    await tester.tap(find.checkButton(l10n.installationTypeEncrypt('Ubuntu')));
+    await tester.tap(find.radio(AdvancedFeature.zfs));
     await tester.pump();
 
     await tester.tapOk();
@@ -50,14 +36,7 @@ void main() {
   });
 
   testWidgets('select lvm', (tester) async {
-    final model = MockStorageModel();
-    when(model.existingOS).thenReturn(null);
-    when(model.type).thenReturn(StorageType.erase);
-    when(model.guidedCapability).thenReturn(GuidedCapability.LVM);
-    when(model.canInstallAlongside).thenReturn(false);
-    when(model.canEraseDisk).thenReturn(true);
-    when(model.canManualPartition).thenReturn(true);
-    when(model.hasBitLocker).thenReturn(false);
+    final model = buildStorageModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -66,15 +45,11 @@ void main() {
       ),
     );
 
-    final context = tester.element(find.byType(StoragePage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester.tap(
-        find.radioButton<AdvancedFeature>(l10n.installationTypeLVM('Ubuntu')));
+    await tester.tap(find.radio(AdvancedFeature.lvm));
     await tester.pump();
 
     await tester.tapOk();
@@ -84,14 +59,7 @@ void main() {
   });
 
   testWidgets('select encrypted lvm', (tester) async {
-    final model = MockStorageModel();
-    when(model.existingOS).thenReturn(null);
-    when(model.type).thenReturn(StorageType.erase);
-    when(model.guidedCapability).thenReturn(GuidedCapability.LVM);
-    when(model.canInstallAlongside).thenReturn(false);
-    when(model.canEraseDisk).thenReturn(true);
-    when(model.canManualPartition).thenReturn(true);
-    when(model.hasBitLocker).thenReturn(false);
+    final model = buildStorageModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -107,8 +75,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester.tap(
-        find.radioButton<AdvancedFeature>(l10n.installationTypeLVM('Ubuntu')));
+    await tester.tap(find.radio(AdvancedFeature.lvm));
     await tester.pump();
 
     await tester.tap(find.checkButton(l10n.installationTypeEncrypt('Ubuntu')));
@@ -118,5 +85,39 @@ void main() {
     await result;
 
     verify(model.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
+  });
+
+  testWidgets('select tpm', (tester) async {
+    final model = buildStorageModel(
+      hasTpm: true,
+      hasDirect: false,
+      hasLvm: false,
+      hasZfs: false,
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [storageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const StoragePage()),
+      ),
+    );
+
+    final result = showAdvancedFeaturesDialog(
+        tester.element(find.byType(StoragePage)), model);
+    await tester.pumpAndSettle();
+
+    expect(find.radio(AdvancedFeature.none), findsNothing);
+    expect(find.radio(AdvancedFeature.lvm), findsNothing);
+    expect(find.radio(AdvancedFeature.zfs), findsNothing);
+    expect(find.radio(AdvancedFeature.tpm), findsOneWidget);
+
+    await tester.tap(find.radio(AdvancedFeature.tpm));
+    await tester.pump();
+
+    await tester.tapOk();
+    await result;
+
+    verify(model.guidedCapability = GuidedCapability.CORE_BOOT_ENCRYPTED)
+        .called(1);
   });
 }

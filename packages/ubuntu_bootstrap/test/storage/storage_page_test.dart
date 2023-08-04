@@ -405,8 +405,11 @@ void main() {
     });
   });
 
-  testWidgets('no type', (tester) async {
-    final model = buildStorageModel(type: null);
+  testWidgets('no capabilities', (tester) async {
+    final model = buildStorageModel(
+        canEraseDisk: false,
+        canInstallAlongside: false,
+        canManualPartition: false);
     await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
     expect(find.button(find.nextLabel), isDisabled);
@@ -415,8 +418,28 @@ void main() {
     verifyNever(model.save());
   });
 
-  testWidgets('continue', (tester) async {
-    final model = buildStorageModel(type: StorageType.manual);
+  testWidgets('can erase disk', (tester) async {
+    final model = buildStorageModel(canEraseDisk: true);
+    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+
+    expect(find.button(find.nextLabel), isEnabled);
+
+    await tester.tapNext();
+    verify(model.save()).called(1);
+  });
+
+  testWidgets('can install alongside', (tester) async {
+    final model = buildStorageModel(canInstallAlongside: true);
+    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+
+    expect(find.button(find.nextLabel), isEnabled);
+
+    await tester.tapNext();
+    verify(model.save()).called(1);
+  });
+
+  testWidgets('can manual partition', (tester) async {
+    final model = buildStorageModel(canManualPartition: true);
     await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
     await tester.tapNext();
