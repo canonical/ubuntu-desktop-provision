@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/services/storage_service.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-const kRecoveryKeyCommand = 'snap recovery -show-keys';
+const kRecoveryKeyCommand = 'snap recovery --show-keys';
 
 final recoveryKeyModelProvider = Provider(
   (_) => RecoveryKeyModel(getService<StorageService>()),
