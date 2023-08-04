@@ -138,6 +138,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           await pump();
           await tap(find.text(l10n.installationTypeEncrypt('Ubuntu')));
           break;
+        case GuidedCapability.ZFS:
+          await tap(find.text(l10n.installationTypeZFS));
+          await pump();
+          break;
         default:
           break;
       }
