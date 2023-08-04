@@ -323,6 +323,21 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> testRecoveryKeyPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(RecoveryKeyPage);
+
+    final context = element(find.byType(RecoveryKeyPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.recoveryKeyTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testConfirmPage({
     String? screenshot,
   }) async {

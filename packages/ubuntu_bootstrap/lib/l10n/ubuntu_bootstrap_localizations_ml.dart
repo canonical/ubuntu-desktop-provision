@@ -247,6 +247,12 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS തിരഞ്ഞെടുത്തു';
 
   @override
+  String get installationTypeTPM => 'EXPERIMENTAL: Hardware-backed full disk encryption';
+
+  @override
+  String get installationTypeTPMSelected => 'TPM selected';
+
+  @override
   String installationTypeReinstall(Object os) {
     return '$os മായ്ച്ച് വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക';
   }

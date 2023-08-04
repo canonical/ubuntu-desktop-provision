@@ -247,6 +247,12 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS 선택됨';
 
   @override
+  String get installationTypeTPM => 'EXPERIMENTAL: Hardware-backed full disk encryption';
+
+  @override
+  String get installationTypeTPMSelected => 'TPM selected';
+
+  @override
   String installationTypeReinstall(Object os) {
     return '$os 지우고 다시 설치';
   }

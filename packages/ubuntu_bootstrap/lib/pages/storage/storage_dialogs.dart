@@ -9,7 +9,7 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'storage_model.dart';
 
-enum AdvancedFeature { none, lvm, zfs }
+enum AdvancedFeature { none, lvm, zfs, tpm }
 
 /// Shows a dialog to select advanced installation features.
 Future<void> showAdvancedFeaturesDialog(
@@ -39,44 +39,53 @@ Future<void> showAdvancedFeaturesDialog(
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                YaruRadioButton<AdvancedFeature>(
-                  title: Text(lang.installationTypeNone),
-                  value: AdvancedFeature.none,
-                  groupValue: advancedFeature.value,
-                  onChanged: (v) => advancedFeature.value = v!,
-                ),
-                const SizedBox(height: kWizardSpacing),
-                YaruRadioButton<AdvancedFeature>(
-                  title: Consumer(builder: (context, ref, child) {
-                    final flavor = ref.watch(flavorProvider);
-                    return Text(lang.installationTypeLVM(flavor.name));
-                  }),
-                  value: AdvancedFeature.lvm,
-                  groupValue: advancedFeature.value,
-                  onChanged: (v) => advancedFeature.value = v!,
-                ),
-                Padding(
-                  padding: kWizardIndentation,
-                  child: YaruCheckButton(
+                if (model.hasDirect)
+                  YaruRadioButton<AdvancedFeature>(
+                    title: Text(lang.installationTypeNone),
+                    value: AdvancedFeature.none,
+                    groupValue: advancedFeature.value,
+                    onChanged: (v) => advancedFeature.value = v!,
+                  ),
+                if (model.hasLvm) ...[
+                  YaruRadioButton<AdvancedFeature>(
                     title: Consumer(builder: (context, ref, child) {
                       final flavor = ref.watch(flavorProvider);
-                      return Text(lang.installationTypeEncrypt(flavor.name));
+                      return Text(lang.installationTypeLVM(flavor.name));
                     }),
-                    subtitle: Text(lang.installationTypeEncryptInfo),
-                    value: encryption.value,
-                    onChanged: advancedFeature.value == AdvancedFeature.lvm
-                        ? (v) => encryption.value = v!
-                        : null,
+                    value: AdvancedFeature.lvm,
+                    groupValue: advancedFeature.value,
+                    onChanged: (v) => advancedFeature.value = v!,
                   ),
-                ),
-                const SizedBox(height: kWizardSpacing),
-                YaruRadioButton<AdvancedFeature>(
-                  title: Text(lang.installationTypeZFS),
-                  value: AdvancedFeature.zfs,
-                  groupValue: advancedFeature.value,
-                  onChanged: (v) => advancedFeature.value = v!,
-                ),
-              ],
+                  Padding(
+                    padding: kWizardIndentation,
+                    child: YaruCheckButton(
+                      title: Consumer(builder: (context, ref, child) {
+                        final flavor = ref.watch(flavorProvider);
+                        return Text(lang.installationTypeEncrypt(flavor.name));
+                      }),
+                      subtitle: Text(lang.installationTypeEncryptInfo),
+                      value: encryption.value,
+                      onChanged: advancedFeature.value == AdvancedFeature.lvm
+                          ? (v) => encryption.value = v!
+                          : null,
+                    ),
+                  ),
+                ],
+                if (model.hasZfs)
+                  YaruRadioButton<AdvancedFeature>(
+                    title: Text(lang.installationTypeZFS),
+                    value: AdvancedFeature.zfs,
+                    groupValue: advancedFeature.value,
+                    onChanged: (v) => advancedFeature.value = v!,
+                  ),
+                if (model.hasTpm)
+                  YaruRadioButton<AdvancedFeature>(
+                    title: Text(lang.installationTypeTPM),
+                    value: AdvancedFeature.tpm,
+                    groupValue: advancedFeature.value,
+                    onChanged: (v) => advancedFeature.value = v!,
+                  ),
+              ].withSpacing(kWizardSpacing),
             );
           },
         ),
@@ -101,6 +110,15 @@ Future<void> showAdvancedFeaturesDialog(
   }
 }
 
+extension on Iterable<Widget> {
+  List<Widget> withSpacing(double spacing) {
+    return expand((item) sync* {
+      yield SizedBox(height: spacing);
+      yield item;
+    }).skip(1).toList();
+  }
+}
+
 extension on GuidedCapability {
   AdvancedFeature? toAdvancedFeature() {
     switch (this) {
@@ -109,6 +127,9 @@ extension on GuidedCapability {
         return AdvancedFeature.lvm;
       case GuidedCapability.ZFS:
         return AdvancedFeature.zfs;
+      case GuidedCapability.CORE_BOOT_ENCRYPTED:
+      case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
+        return AdvancedFeature.tpm;
       default:
         return AdvancedFeature.none;
     }
@@ -124,6 +145,8 @@ extension on AdvancedFeature {
             : GuidedCapability.LVM;
       case AdvancedFeature.zfs:
         return GuidedCapability.ZFS;
+      case AdvancedFeature.tpm:
+        return GuidedCapability.CORE_BOOT_ENCRYPTED;
       default:
         return GuidedCapability.DIRECT;
     }

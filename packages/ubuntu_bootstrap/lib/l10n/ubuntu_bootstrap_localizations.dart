@@ -645,6 +645,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'ZFS selected'**
   String get installationTypeZFSSelected;
 
+  /// No description provided for @installationTypeTPM.
+  ///
+  /// In en, this message translates to:
+  /// **'EXPERIMENTAL: Hardware-backed full disk encryption'**
+  String get installationTypeTPM;
+
+  /// No description provided for @installationTypeTPMSelected.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM selected'**
+  String get installationTypeTPMSelected;
+
   /// No description provided for @installationTypeReinstall.
   ///
   /// In en, this message translates to:

@@ -247,6 +247,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'Vybrané ZFS';
 
   @override
+  String get installationTypeTPM => 'EXPERIMENTAL: Hardware-backed full disk encryption';
+
+  @override
+  String get installationTypeTPMSelected => 'TPM selected';
+
+  @override
   String installationTypeReinstall(Object os) {
     return 'Vymazať $os a preinštalovať';
   }

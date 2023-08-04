@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services/storage_service.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
@@ -11,8 +12,13 @@ final recoveryKeyModelProvider = Provider(
 class RecoveryKeyModel {
   RecoveryKeyModel(this._storage);
 
-  final StorageService _storage; // ignore: unused_field
+  final StorageService _storage;
 
-  // TODO: TPM
-  Future<bool> init() async => false;
+  Future<bool> init() async {
+    return switch (_storage.guidedCapability) {
+      GuidedCapability.CORE_BOOT_ENCRYPTED => true,
+      GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED => true,
+      _ => false,
+    };
+  }
 }

@@ -247,4 +247,59 @@ void main() {
     await model.resetStorage();
     verify(service.resetStorage()).called(1);
   });
+
+  test('capabilities', () async {
+    final storage = MockStorageService();
+
+    GuidedCapability? capability;
+    when(storage.guidedCapability).thenReturn(null);
+    when(storage.guidedCapability = any).thenAnswer((i) {
+      capability = i.positionalArguments.single as GuidedCapability?;
+    });
+    when(storage.hasBitLocker()).thenAnswer((_) async => false);
+
+    final model = StorageModel(
+      storage,
+      MockTelemetryService(),
+      MockProductService(),
+    );
+
+    when(storage.getGuidedStorage())
+        .thenAnswer((_) async => fakeGuidedStorageResponse());
+    await model.init();
+    expect(capability, isNull);
+    expect(model.hasDirect, isFalse);
+    expect(model.hasLvm, isFalse);
+    expect(model.hasZfs, isFalse);
+    expect(model.hasTpm, isFalse);
+
+    when(storage.getGuidedStorage())
+        .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [
+              fakeGuidedStorageTargetReformat(allowed: [
+                GuidedCapability.DIRECT,
+                GuidedCapability.LVM,
+                GuidedCapability.LVM_LUKS,
+                GuidedCapability.ZFS,
+              ]),
+            ]));
+    await model.init();
+    expect(capability, GuidedCapability.DIRECT);
+    expect(model.hasDirect, isTrue);
+    expect(model.hasLvm, isTrue);
+    expect(model.hasZfs, isTrue);
+    expect(model.hasTpm, isFalse);
+
+    when(storage.getGuidedStorage())
+        .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [
+              fakeGuidedStorageTargetReformat(allowed: [
+                GuidedCapability.CORE_BOOT_ENCRYPTED,
+              ]),
+            ]));
+    await model.init();
+    expect(capability, GuidedCapability.CORE_BOOT_ENCRYPTED);
+    expect(model.hasDirect, isFalse);
+    expect(model.hasLvm, isFalse);
+    expect(model.hasZfs, isFalse);
+    expect(model.hasTpm, isTrue);
+  });
 }
