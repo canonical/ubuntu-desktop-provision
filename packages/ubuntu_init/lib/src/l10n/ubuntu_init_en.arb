@@ -1,1 +1,12 @@
-{}
+{
+  "privacyPageTitle": "Location services",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Enable location services?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Let applications know your geographical location.\nYou can change this anytime in System Settings.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Location services",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Data Privacy",
+  "@privacyPolicyLink": {}
+}

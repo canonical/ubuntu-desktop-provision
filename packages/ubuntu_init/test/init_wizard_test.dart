@@ -1,14 +1,15 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/l10n.dart';
 import 'package:ubuntu_init/src/init_model.dart';
+import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
@@ -20,22 +21,8 @@ import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
+import 'privacy/test_privacy.dart';
 
-import 'init_wizard_test.mocks.dart';
-
-InitModel buildInitModel({List<String>? pages}) {
-  final model = MockInitModel();
-  when(model.hasRoute(any)).thenAnswer((i) {
-    final a = i.positionalArguments.single as String;
-    return pages
-            ?.map((r) => r.removePrefix('/'))
-            .contains(a.removePrefix('/')) ??
-        true;
-  });
-  return model;
-}
-
-@GenerateMocks([InitModel])
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -52,6 +39,7 @@ void main() {
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
     final themeModel = buildThemeModel();
+    final privacyModel = buildPrivacyModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -66,6 +54,7 @@ void main() {
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
           themeModelProvider.overrideWith((_) => themeModel),
+          privacyModelProvider.overrideWith((_) => privacyModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -100,6 +89,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(ThemePage), findsOneWidget);
     verify(themeModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(PrivacyPage), findsOneWidget);
+    verify(privacyModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
@@ -156,7 +150,7 @@ void main() {
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.tapDone();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);
@@ -168,7 +162,10 @@ extension on WidgetTester {
     return WizardApp(
       localizationsDelegates: localizationsDelegates,
       supportedLocales: supportedLocales,
-      home: const InitWizard(),
+      home: DefaultAssetBundle(
+        bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
+        child: const InitWizard(),
+      ),
     );
   }
 }
