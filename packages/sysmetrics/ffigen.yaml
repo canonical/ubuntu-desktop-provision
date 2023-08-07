@@ -1,0 +1,8 @@
+name: LibSysmetrics
+description: ubuntu-report/sysmetrics
+output: 'lib/src/libsysmetrics.g.dart'
+preamble: |
+  // coverage:ignore-file
+headers:
+  entry-points:
+    - /usr/include/sysmetrics/libsysmetrics.h # libsysmetrics-dev
