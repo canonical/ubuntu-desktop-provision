@@ -1,0 +1,13 @@
+name: sysmetrics
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  ffi: ^2.0.0
+  meta: ^1.8.0
+
+dev_dependencies:
+  ffigen: ^9.0.1
+  flutter_lints: ^2.0.0
