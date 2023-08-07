@@ -1,4 +1,29 @@
 {
+  "welcomePageTitle": "Welcome",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Welcome to {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "WHAT'S NEW?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "A streamlined start",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Supporting a cleaner setup experience.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "New look App Store",
+  "@welcomeStoretitle": {},
+  "welcomeStoreSubtitle": "It's never been easier to find your favourite software.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Enhanced security",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "New options for hardware-backed or ZFS encryption.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">View changelog</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
   "privacyPageTitle": "Location services",
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Enable location services?",

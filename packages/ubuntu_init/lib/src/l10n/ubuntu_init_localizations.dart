@@ -237,6 +237,66 @@ abstract class UbuntuInitLocalizations {
     Locale('zh', 'TW')
   ];
 
+  /// No description provided for @welcomePageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get welcomePageTitle;
+
+  /// No description provided for @welcomePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to {distro}'**
+  String welcomePageHeader(Object distro);
+
+  /// No description provided for @welcomeWhatsNew.
+  ///
+  /// In en, this message translates to:
+  /// **'WHAT\'S NEW?'**
+  String get welcomeWhatsNew;
+
+  /// No description provided for @welcomeStartTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A streamlined start'**
+  String get welcomeStartTitle;
+
+  /// No description provided for @welcomeStartSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Supporting a cleaner setup experience.'**
+  String get welcomeStartSubtitle;
+
+  /// No description provided for @welcomeStoreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New look App Store'**
+  String get welcomeStoreTitle;
+
+  /// No description provided for @welcomeStoreSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s never been easier to find your favourite software.'**
+  String get welcomeStoreSubtitle;
+
+  /// No description provided for @welcomeSecurityTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enhanced security'**
+  String get welcomeSecurityTitle;
+
+  /// No description provided for @welcomeSecuritySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New options for hardware-backed or ZFS encryption.'**
+  String get welcomeSecuritySubtitle;
+
+  /// No description provided for @welcomeChangelogLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'<a href=\"{url}\">View changelog</a>'**
+  String welcomeChangelogLabel(Object url);
+
   /// No description provided for @privacyPageTitle.
   ///
   /// In en, this message translates to:

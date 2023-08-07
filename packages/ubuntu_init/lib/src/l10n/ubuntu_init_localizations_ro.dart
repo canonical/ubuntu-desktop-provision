@@ -5,6 +5,40 @@ class UbuntuInitLocalizationsRo extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
+  String get welcomePageTitle => 'Welcome';
+
+  @override
+  String welcomePageHeader(Object distro) {
+    return 'Welcome to $distro';
+  }
+
+  @override
+  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+
+  @override
+  String get welcomeStartTitle => 'A streamlined start';
+
+  @override
+  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+
+  @override
+  String get welcomeStoreTitle => 'New look App Store';
+
+  @override
+  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+
+  @override
+  String get welcomeSecurityTitle => 'Enhanced security';
+
+  @override
+  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+
+  @override
+  String welcomeChangelogLabel(Object url) {
+    return '<a href=\"$url\">View changelog</a>';
+  }
+
+  @override
   String get privacyPageTitle => 'Location services';
 
   @override
