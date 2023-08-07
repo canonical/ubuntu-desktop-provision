@@ -6,8 +6,6 @@
 import 'dart:async' as _i3;
 import 'dart:ui' as _i4;
 
-import 'package:file/file.dart' as _i5;
-import 'package:file/local.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:ubuntu_bootstrap/pages/welcome/welcome_model.dart' as _i2;
 
@@ -68,15 +66,10 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         returnValueForMissingStub: null,
       );
   @override
-  String releaseNotesURL(
-    _i4.Locale? locale, {
-    _i5.FileSystem? fs = const _i6.LocalFileSystem(),
-  }) =>
-      (super.noSuchMethod(
+  String releaseNotesURL(_i4.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
           #releaseNotesURL,
           [locale],
-          {#fs: fs},
         ),
         returnValue: '',
       ) as String);

@@ -2,7 +2,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 
 import 'test_guided_resize.mocks.dart';
 export '../../test_utils.dart';

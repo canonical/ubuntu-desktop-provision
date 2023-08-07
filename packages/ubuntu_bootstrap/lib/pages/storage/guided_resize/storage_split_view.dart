@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:split_view/split_view.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 import 'storage_button.dart';

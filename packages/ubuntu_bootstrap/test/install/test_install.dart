@@ -5,7 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 
 import 'test_install.mocks.dart';
 export '../test_utils.dart';

@@ -59,6 +59,7 @@ extension UbuntuProvisionTester on WidgetTester {
   LocaleService,
   NetworkService,
   PowerService,
+  ProductService,
   SessionService,
   SoundService,
   TelemetryService,

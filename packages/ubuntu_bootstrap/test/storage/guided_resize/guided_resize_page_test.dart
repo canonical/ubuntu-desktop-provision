@@ -7,7 +7,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
-import 'package:ubuntu_bootstrap/services/product_service.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 

@@ -75,4 +75,32 @@ class ProductService {
       version: match != null ? info.substring(match.start) : null,
     );
   }
+
+  /// Returns the URL of the release notes for the given [languageCode].
+  String getReleaseNotesURL(String languageCode) {
+    final fileOnCdrom = _fileSystem.file('/cdrom/.disk/release_notes_url');
+    if (fileOnCdrom.existsSync()) {
+      try {
+        final url = fileOnCdrom
+            .readAsLinesSync()
+            .firstWhere((line) => line.trim().isNotEmpty);
+        return url.replaceAll(r'${LANG}', languageCode);
+        // ignore: empty_catches
+      } catch (e) {}
+    }
+    try {
+      final lines = _fileSystem
+          .file('/usr/share/distro-info/ubuntu.csv')
+          .readAsLinesSync();
+      final last = lines.lastWhere((line) => line.trim().isNotEmpty);
+      final codeName = last.split(',')[1].replaceAll(RegExp('\\s+'), '');
+      assert(codeName.isNotEmpty);
+      return 'https://wiki.ubuntu.com/$codeName/ReleaseNotes';
+      // ignore: avoid_catches_without_on_clauses
+    } catch (e) {
+      // Those are not actual release notes,
+      // but it's a better fallback than a non-existent wiki page.
+      return 'https://ubuntu.com/download/desktop';
+    }
+  }
 }
