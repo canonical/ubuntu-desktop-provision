@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
-import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -27,10 +26,7 @@ Future<void> main(List<String> args) async {
       child: Consumer(
         builder: (context, ref, child) => WizardApp(
           locale: ref.watch(localeProvider),
-          localizationsDelegates: const [
-            ...UbuntuProvisionLocalizations.localizationsDelegates,
-            ...GlobalUbuntuLocalizations.delegates,
-          ],
+          localizationsDelegates: localizationsDelegates,
           supportedLocales: supportedLocales,
           home: DefaultAssetBundle(
             bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),

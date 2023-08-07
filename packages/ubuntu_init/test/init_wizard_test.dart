@@ -4,9 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_init/l10n.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
-import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -166,10 +166,7 @@ void main() {
 extension on WidgetTester {
   Widget buildTestWizard() {
     return WizardApp(
-      localizationsDelegates: const [
-        ...UbuntuProvisionLocalizations.localizationsDelegates,
-        ...GlobalUbuntuLocalizations.delegates,
-      ],
+      localizationsDelegates: localizationsDelegates,
       supportedLocales: supportedLocales,
       home: const InitWizard(),
     );
