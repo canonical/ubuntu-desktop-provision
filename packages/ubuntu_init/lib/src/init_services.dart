@@ -46,6 +46,7 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<NetworkService>(NetworkService.new);
   tryRegisterService<PrivacyService>(GnomePrivacyService.new);
   tryRegisterService<PrivilegedDesktopLauncher>(PrivilegedDesktopLauncher.new);
+  tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<ThemeService>(GtkThemeService.new);
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);

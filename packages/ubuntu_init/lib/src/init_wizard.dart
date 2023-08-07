@@ -18,6 +18,7 @@ enum InitStep {
 
 class InitRoutes {
   static const String initial = '/';
+  static const String welcome = '/welcome';
   static const String locale = '/locale';
   static const String keyboard = '/keyboard';
   static const String network = '/network';
@@ -40,6 +41,10 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) =>
               ref.read(initModelProvider).init().then((_) => null),
+        ),
+        InitRoutes.welcome: WizardRoute(
+          builder: (_) => const WelcomePage(),
+          onLoad: (_) => WelcomePage.load(ref),
         ),
         InitRoutes.locale: WizardRoute(
           builder: (_) => const LocalePage(),

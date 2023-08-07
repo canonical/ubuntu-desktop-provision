@@ -5,6 +5,21 @@ import 'package:yaru_test/yaru_test.dart';
 import 'wizard_tester.dart';
 
 extension UbuntuInitPageTester on WidgetTester {
+  Future<void> testWelcomeInitPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(WelcomePage);
+
+    final context = element(find.byType(WelcomePage));
+    final l10n = UbuntuInitLocalizations.of(context);
+
+    expect(find.titleBar(l10n.welcomePageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testPrivacyPage({
     String? screenshot,
   }) async {
