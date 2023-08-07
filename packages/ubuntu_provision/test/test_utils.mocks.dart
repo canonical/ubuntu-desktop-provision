@@ -993,6 +993,14 @@ class MockProductService extends _i1.Mock implements _i6.ProductService {
           ),
         ),
       ) as _i6.ProductInfo);
+  @override
+  String getReleaseNotesURL(String? languageCode) => (super.noSuchMethod(
+        Invocation.method(
+          #getReleaseNotesURL,
+          [languageCode],
+        ),
+        returnValue: '',
+      ) as String);
 }
 
 /// A class which mocks [SessionService].
