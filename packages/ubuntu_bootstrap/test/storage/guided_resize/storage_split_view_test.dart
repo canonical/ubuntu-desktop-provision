@@ -6,8 +6,8 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_button.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/widgets/storage_size_box.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 import '../../test_utils.dart';

@@ -3,7 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 
 import 'test_storage.dart';
 

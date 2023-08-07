@@ -9,7 +9,7 @@ import 'dart:ui' as _i6;
 import 'package:flutter/widgets.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart' as _i3;
-import 'package:ubuntu_bootstrap/services.dart' as _i2;
+import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

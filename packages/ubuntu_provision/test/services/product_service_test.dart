@@ -1,7 +1,7 @@
 import 'package:file/memory.dart';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 
 void main() {
   const isoPath = '/cdrom/.disk/info';
