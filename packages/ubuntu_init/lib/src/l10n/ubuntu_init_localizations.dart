@@ -266,6 +266,30 @@ abstract class UbuntuInitLocalizations {
   /// In en, this message translates to:
   /// **'Data Privacy'**
   String get privacyPolicyLink;
+
+  /// No description provided for @storeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu Store'**
+  String get storeTitle;
+
+  /// No description provided for @storeHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started with more applications'**
+  String get storeHeader;
+
+  /// No description provided for @storeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.'**
+  String get storeDescription;
+
+  /// No description provided for @storeOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Open App Store'**
+  String get storeOpen;
 }
 
 class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {

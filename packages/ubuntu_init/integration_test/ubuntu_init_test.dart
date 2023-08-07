@@ -17,6 +17,8 @@ void main() {
   tearDown(resetAllServices);
 
   testWidgets('init', (tester) async {
+    final windowClosed = YaruTestWindow.waitForClosed();
+
     await tester.runApp(() => app.main([]));
 
     await tester.testLocalePage(language: 'Deutsch');
@@ -55,9 +57,11 @@ void main() {
     await tester.tapNext();
     await expectTheme(Brightness.dark);
 
-    final windowClosed = YaruTestWindow.waitForClosed();
-
     await tester.testPrivacyPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testStorePage();
     await tester.tapDone();
     await tester.pumpAndSettle();
 

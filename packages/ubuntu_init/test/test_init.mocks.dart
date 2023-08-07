@@ -73,6 +73,50 @@ class MockPrivacyService extends _i1.Mock implements _i2.PrivacyService {
       ) as _i3.Future<void>);
 }
 
+/// A class which mocks [PrivilegedDesktopLauncher].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockPrivilegedDesktopLauncher extends _i1.Mock
+    implements _i2.PrivilegedDesktopLauncher {
+  MockPrivilegedDesktopLauncher() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  bool get isAvailable => (super.noSuchMethod(
+        Invocation.getter(#isAvailable),
+        returnValue: false,
+      ) as bool);
+  @override
+  _i3.Future<void> connect() => (super.noSuchMethod(
+        Invocation.method(
+          #connect,
+          [],
+        ),
+        returnValue: _i3.Future<void>.value(),
+        returnValueForMissingStub: _i3.Future<void>.value(),
+      ) as _i3.Future<void>);
+  @override
+  _i3.Future<void> close() => (super.noSuchMethod(
+        Invocation.method(
+          #close,
+          [],
+        ),
+        returnValue: _i3.Future<void>.value(),
+        returnValueForMissingStub: _i3.Future<void>.value(),
+      ) as _i3.Future<void>);
+  @override
+  _i3.Future<void> openDesktopEntry(String? desktopFileId) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #openDesktopEntry,
+          [desktopFileId],
+        ),
+        returnValue: _i3.Future<void>.value(),
+        returnValueForMissingStub: _i3.Future<void>.value(),
+      ) as _i3.Future<void>);
+}
+
 /// A class which mocks [UrlLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.

@@ -42,6 +42,7 @@ InitModel buildInitModel({List<String>? pages}) {
 
 @GenerateMocks([
   PrivacyService,
+  PrivilegedDesktopLauncher,
   UrlLauncher,
 ])
 class _Dummy {} // ignore: unused_element

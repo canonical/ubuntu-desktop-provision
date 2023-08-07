@@ -25,6 +25,7 @@ class InitRoutes {
   static const String identity = '/identity';
   static const String theme = '/theme';
   static const String privacy = '/privacy';
+  static const String store = '/store';
 }
 
 class InitWizard extends ConsumerWidget {
@@ -85,6 +86,10 @@ class InitWizard extends ConsumerWidget {
         InitRoutes.privacy: WizardRoute(
           builder: (_) => const PrivacyPage(),
           onLoad: (_) => PrivacyPage.load(ref),
+        ),
+        InitRoutes.store: WizardRoute(
+          builder: (_) => const StorePage(),
+          onLoad: (_) => StorePage.load(ref),
           onNext: (_) =>
               YaruWindow.of(context).close().then((_) => InitRoutes.initial),
         ),
