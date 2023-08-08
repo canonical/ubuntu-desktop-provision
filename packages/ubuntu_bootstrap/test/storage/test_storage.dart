@@ -24,11 +24,13 @@ StorageModel buildStorageModel({
   bool? canInstallAlongside,
   bool? canEraseDisk,
   bool? canManualPartition,
+  bool? hasAdvancedFeatures,
   bool? hasBitLocker,
   bool? hasDirect,
   bool? hasLvm,
   bool? hasZfs,
   bool? hasTpm,
+  bool? hasDd,
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
@@ -38,10 +40,12 @@ StorageModel buildStorageModel({
   when(model.canInstallAlongside).thenReturn(canInstallAlongside ?? false);
   when(model.canEraseDisk).thenReturn(canEraseDisk ?? true);
   when(model.canManualPartition).thenReturn(canManualPartition ?? true);
+  when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures ?? true);
   when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
   when(model.hasDirect).thenReturn(hasDirect ?? true);
   when(model.hasLvm).thenReturn(hasLvm ?? true);
   when(model.hasZfs).thenReturn(hasZfs ?? true);
   when(model.hasTpm).thenReturn(hasTpm ?? false);
+  when(model.hasDd).thenReturn(hasDd ?? false);
   return model;
 }

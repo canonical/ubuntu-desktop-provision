@@ -403,6 +403,16 @@ void main() {
 
       expect(find.text(l10n.installationTypeZFSSelected), findsOneWidget);
     });
+
+    testWidgets('no advanced features', (tester) async {
+      final model = buildStorageModel(hasAdvancedFeatures: false);
+      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+
+      final context = tester.element(find.byType(StoragePage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+    });
   });
 
   testWidgets('no capabilities', (tester) async {

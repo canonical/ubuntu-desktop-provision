@@ -90,6 +90,10 @@ class StorageModel extends SafeChangeNotifier {
           c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
           c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED));
 
+  /// Whether DD guided storage targets are available.
+  bool get hasDd => _getTargets<GuidedStorageTargetReformat>()
+      .any((t) => t.allowed.contains(GuidedCapability.DD));
+
   /// Whether installation alongside an existing OS is possible.
   ///
   /// That is, whether a) an existing partition can be safely resized smaller to
@@ -101,13 +105,16 @@ class StorageModel extends SafeChangeNotifier {
 
   /// Whether erasing the disk is possible i.e. whether any guided reformat
   /// targets are allowed.
-  bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm;
+  bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm || hasDd;
 
   /// Whether manual partitioning is possible i.e. whether a manual partitioning
   /// target is allowed.
   bool get canManualPartition {
     return _getTargets<GuidedStorageTargetManual>().isNotEmpty;
   }
+
+  /// Whether any advanced features are available.
+  bool get hasAdvancedFeatures => hasLvm || hasZfs || hasTpm;
 
   /// Initializes the model.
   Future<void> init() async {
