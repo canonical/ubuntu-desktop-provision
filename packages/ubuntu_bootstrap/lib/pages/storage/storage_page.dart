@@ -95,22 +95,23 @@ class StoragePage extends ConsumerWidget {
                 onChanged: (value) => model.type = value!,
               ),
             ),
-            Padding(
-              padding: kWizardIndentation,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  OutlinedButton(
-                    onPressed: model.type == StorageType.erase
-                        ? () => showAdvancedFeaturesDialog(context, model)
-                        : null,
-                    child: Text(lang.installationTypeAdvancedLabel),
-                  ),
-                  const SizedBox(width: kWizardSpacing),
-                  Text(model.guidedCapability?.localize(lang) ?? ''),
-                ],
+            if (model.hasAdvancedFeatures)
+              Padding(
+                padding: kWizardIndentation,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    OutlinedButton(
+                      onPressed: model.type == StorageType.erase
+                          ? () => showAdvancedFeaturesDialog(context, model)
+                          : null,
+                      child: Text(lang.installationTypeAdvancedLabel),
+                    ),
+                    const SizedBox(width: kWizardSpacing),
+                    Text(model.guidedCapability?.localize(lang) ?? ''),
+                  ],
+                ),
               ),
-            ),
             const SizedBox(height: kWizardSpacing),
           ],
           if (model.canManualPartition)
