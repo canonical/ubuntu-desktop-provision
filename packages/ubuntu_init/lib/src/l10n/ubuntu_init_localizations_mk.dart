@@ -39,6 +39,36 @@ class UbuntuInitLocalizationsMk extends UbuntuInitLocalizations {
   }
 
   @override
+  String get telemetryPageTitle => 'Telemetry';
+
+  @override
+  String telemetryHeader(Object distro) {
+    return 'Help improve $distro';
+  }
+
+  @override
+  String telemetryDescription(Object distro) {
+    return 'Share data anonymously with $distro so we can improve your experience.';
+  }
+
+  @override
+  String telemetryLabelOn(Object distro) {
+    return 'Yes, share system data with the $distro team';
+  }
+
+  @override
+  String get telemetryLabelOff => 'No, don\'t share system data';
+
+  @override
+  String get telemetryReportLabel => 'Reporting details';
+
+  @override
+  String get telemetryReportTitle => 'Reporting details';
+
+  @override
+  String get telemetryLegalLabel => 'Legal';
+
+  @override
   String get privacyPageTitle => 'Location services';
 
   @override

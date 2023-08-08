@@ -24,6 +24,36 @@
       "url": {}
     }
   },
+  "telemetryPageTitle": "Telemetry",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Help improve {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Share data anonymously with {distro} so we can improve your experience.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Yes, share system data with the {distro} team",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "No, don't share system data",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Reporting details",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Reporting details",
+  "telemetryLegalLabel": "Legal",
+  "@telemetryLegalLabel": {},
   "privacyPageTitle": "Location services",
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Enable location services?",

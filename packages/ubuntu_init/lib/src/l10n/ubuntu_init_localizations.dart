@@ -297,6 +297,54 @@ abstract class UbuntuInitLocalizations {
   /// **'<a href=\"{url}\">View changelog</a>'**
   String welcomeChangelogLabel(Object url);
 
+  /// No description provided for @telemetryPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Telemetry'**
+  String get telemetryPageTitle;
+
+  /// No description provided for @telemetryHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Help improve {distro}'**
+  String telemetryHeader(Object distro);
+
+  /// No description provided for @telemetryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Share data anonymously with {distro} so we can improve your experience.'**
+  String telemetryDescription(Object distro);
+
+  /// No description provided for @telemetryLabelOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, share system data with the {distro} team'**
+  String telemetryLabelOn(Object distro);
+
+  /// No description provided for @telemetryLabelOff.
+  ///
+  /// In en, this message translates to:
+  /// **'No, don\'t share system data'**
+  String get telemetryLabelOff;
+
+  /// No description provided for @telemetryReportLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Reporting details'**
+  String get telemetryReportLabel;
+
+  /// No description provided for @telemetryReportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reporting details'**
+  String get telemetryReportTitle;
+
+  /// No description provided for @telemetryLegalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Legal'**
+  String get telemetryLegalLabel;
+
   /// No description provided for @privacyPageTitle.
   ///
   /// In en, this message translates to:
