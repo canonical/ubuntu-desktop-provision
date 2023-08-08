@@ -27,7 +27,10 @@ class TelemetryModel extends ChangeNotifier {
 
   Future<bool> init() async => true;
 
-  Future<String?> collect() => _sysmetrics.collect();
+  Stream<String> collect() {
+    // TODO: report error
+    return _sysmetrics.collect().then((value) => value ?? '').asStream();
+  }
 
   Future<void> save() async {
     if (_enabled) {

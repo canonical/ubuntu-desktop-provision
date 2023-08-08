@@ -30,7 +30,7 @@ void main() {
 
     final model = TelemetryModel(sysmetrics);
 
-    expect(await model.collect(), 'foo');
+    await expectLater(model.collect(), emits('foo'));
     verify(sysmetrics.collect()).called(1);
   });
 

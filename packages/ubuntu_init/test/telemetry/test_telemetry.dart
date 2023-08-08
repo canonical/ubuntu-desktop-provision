@@ -9,11 +9,11 @@ export 'test_telemetry.mocks.dart';
 @GenerateMocks([TelemetryModel])
 TelemetryModel buildTelemetryModel({
   bool? enabled,
-  String? collect,
+  Stream<String>? collect,
 }) {
   final model = MockTelemetryModel();
   when(model.enabled).thenReturn(enabled ?? true);
   when(model.init()).thenAnswer((_) async => true);
-  when(model.collect()).thenAnswer((_) async => collect);
+  when(model.collect()).thenAnswer((_) => collect ?? Stream.value(''));
   return model;
 }

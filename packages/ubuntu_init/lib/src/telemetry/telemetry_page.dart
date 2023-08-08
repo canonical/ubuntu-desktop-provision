@@ -72,7 +72,7 @@ class TelemetryPage extends ConsumerWidget {
                     },
                     shrinkWrap: true,
                     onLinkTap: (_, __, ___) =>
-                        showTelemetryDialog(context, model.collect),
+                        showTelemetryDialog(context, model.collect()),
                   ),
                   const SizedBox(width: kWizardSpacing * 2),
                   Html(

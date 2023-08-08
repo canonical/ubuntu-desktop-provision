@@ -6,18 +6,18 @@ import 'telemetry_widgets.dart';
 
 Future<void> showTelemetryDialog(
   BuildContext context,
-  Future<String?> Function() collect,
+  Stream<String> data,
 ) async {
   return showDialog(
     context: context,
-    builder: (_) => TelemetryDialog(collect: collect),
+    builder: (_) => TelemetryDialog(data: data),
   );
 }
 
 class TelemetryDialog extends StatelessWidget {
-  const TelemetryDialog({super.key, required this.collect});
+  const TelemetryDialog({super.key, required this.data});
 
-  final Future<String?> Function() collect;
+  final Stream<String> data;
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +34,7 @@ class TelemetryDialog extends StatelessWidget {
               title: Text(l10n.telemetryReportTitle),
             ),
             Expanded(
-              child: TelemetryView(
-                // TODO: report error
-                data: collect().then((value) => value ?? '').asStream(),
-              ),
+              child: TelemetryView(data: data),
             ),
           ],
         ),

@@ -55,13 +55,13 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
   @override
-  _i3.Future<String?> collect() => (super.noSuchMethod(
+  _i3.Stream<String> collect() => (super.noSuchMethod(
         Invocation.method(
           #collect,
           [],
         ),
-        returnValue: _i3.Future<String?>.value(),
-      ) as _i3.Future<String?>);
+        returnValue: _i3.Stream<String>.empty(),
+      ) as _i3.Stream<String>);
   @override
   _i3.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
