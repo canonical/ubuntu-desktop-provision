@@ -168,7 +168,7 @@ void main() {
 extension on WidgetTester {
   Widget buildTestWizard() {
     return WizardApp(
-      localizationsDelegates: localizationsDelegates,
+      localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
       supportedLocales: supportedLocales,
       home: DefaultAssetBundle(
         bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),

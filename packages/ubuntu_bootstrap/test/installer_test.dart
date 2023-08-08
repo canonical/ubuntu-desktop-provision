@@ -136,7 +136,7 @@ extension on WidgetTester {
       child: SlidesContext(
         slides: [(_) => const SizedBox.shrink()],
         child: WizardApp(
-          localizationsDelegates: localizationsDelegates,
+          localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
           supportedLocales: supportedLocales,
           home: const InstallerWizard(),
         ),

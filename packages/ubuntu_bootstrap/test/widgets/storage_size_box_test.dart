@@ -134,7 +134,7 @@ extension StorageSizeBoxTester on WidgetTester {
   Future<void> pumpStorageSizeBox(StorageSizeBox widget) {
     return pumpWidget(
       MaterialApp(
-        localizationsDelegates: localizationsDelegates,
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
         home: Scaffold(body: widget),
       ),
     );

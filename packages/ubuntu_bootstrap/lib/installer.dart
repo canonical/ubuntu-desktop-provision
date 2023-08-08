@@ -147,7 +147,8 @@ Future<void> runInstallerApp(
                   .windowTitle(flavor.name);
             },
             locale: ref.watch(localeProvider),
-            localizationsDelegates: localizationsDelegates,
+            localizationsDelegates:
+                GlobalUbuntuBootstrapLocalizations.delegates,
             supportedLocales: supportedLocales,
             home: DefaultAssetBundle(
               bundle: ProxyAssetBundle(

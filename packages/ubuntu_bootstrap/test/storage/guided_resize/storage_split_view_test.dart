@@ -120,7 +120,7 @@ void main() {
 
     await tester.pumpWidget(
       MaterialApp(
-        localizationsDelegates: localizationsDelegates,
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
         home: Scaffold(
           body: StorageSplitView(
             currentSize: 55,
@@ -161,7 +161,7 @@ void main() {
     // rebuild with different size and limits
     await tester.pumpWidget(
       MaterialApp(
-        localizationsDelegates: localizationsDelegates,
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
         home: Scaffold(
           body: StorageSplitView(
             currentSize: 35,
