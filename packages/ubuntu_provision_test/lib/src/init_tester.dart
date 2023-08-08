@@ -20,6 +20,27 @@ extension UbuntuInitPageTester on WidgetTester {
     }
   }
 
+  Future<void> testTelemetryPage({
+    bool? enabled,
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(TelemetryPage);
+
+    final context = element(find.byType(TelemetryPage));
+    final l10n = TelemetryLocalizations.of(context);
+
+    expect(find.titleBar(l10n.telemetryPageTitle), findsOneWidget);
+
+    if (enabled != null) {
+      await tapRadio(enabled);
+    }
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testPrivacyPage({
     String? screenshot,
   }) async {

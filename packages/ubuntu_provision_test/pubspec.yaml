@@ -13,6 +13,8 @@ dependencies:
   flutter_test:
     sdk: flutter
   gsettings: ^0.2.7
+  sysmetrics:
+    path: ../sysmetrics
   ubuntu_bootstrap:
     path: ../ubuntu_bootstrap
   ubuntu_flavor: ^0.2.0

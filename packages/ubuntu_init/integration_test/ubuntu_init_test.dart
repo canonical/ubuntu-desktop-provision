@@ -61,6 +61,10 @@ void main() {
     await tester.tapNext();
     await expectTheme(Brightness.dark);
 
+    await tester.testTelemetryPage(enabled: false);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testPrivacyPage();
     await tester.tapNext();
     await tester.pumpAndSettle();

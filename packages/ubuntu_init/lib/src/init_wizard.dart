@@ -25,6 +25,7 @@ class InitRoutes {
   static const String timezone = '/timezone';
   static const String identity = '/identity';
   static const String theme = '/theme';
+  static const String telemetry = '/telemetry';
   static const String privacy = '/privacy';
   static const String store = '/store';
 }
@@ -87,6 +88,10 @@ class InitWizard extends ConsumerWidget {
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
+        ),
+        InitRoutes.telemetry: WizardRoute(
+          builder: (_) => const TelemetryPage(),
+          onLoad: (_) => TelemetryPage.load(ref),
         ),
         InitRoutes.privacy: WizardRoute(
           builder: (_) => const PrivacyPage(),

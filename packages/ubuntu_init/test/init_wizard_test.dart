@@ -23,6 +23,7 @@ import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'store/test_store.dart';
+import 'telemetry/test_telemetry.dart';
 import 'welcome/test_welcome.dart';
 
 void main() {
@@ -42,6 +43,7 @@ void main() {
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
     final themeModel = buildThemeModel();
+    final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
     final storeModel = buildStoreModel();
 
@@ -59,6 +61,7 @@ void main() {
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
           themeModelProvider.overrideWith((_) => themeModel),
+          telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
           storeModelProvider.overrideWith((_) => storeModel),
         ],
@@ -101,6 +104,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(ThemePage), findsOneWidget);
     verify(themeModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(TelemetryPage), findsOneWidget);
+    verify(telemetryModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
