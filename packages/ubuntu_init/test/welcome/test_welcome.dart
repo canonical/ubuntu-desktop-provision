@@ -1,0 +1,22 @@
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
+import 'package:ubuntu_init/src/welcome/welcome_model.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+
+import 'test_welcome.mocks.dart';
+export '../test_init.dart';
+export 'test_welcome.mocks.dart';
+
+@GenerateMocks([WelcomeModel])
+WelcomeModel buildWelcomeModel({
+  ProductInfo? productInfo,
+  String? releaseNotesUrl,
+}) {
+  final model = MockWelcomeModel();
+  when(model.init()).thenAnswer((_) async => true);
+  when(model.productInfo)
+      .thenReturn(productInfo ?? ProductInfo(name: 'Ubuntu'));
+  when(model.releaseNotesURL(any))
+      .thenReturn(releaseNotesUrl ?? 'https://ubuntu.com/download/desktop');
+  return model;
+}

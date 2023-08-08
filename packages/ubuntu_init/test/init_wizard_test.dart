@@ -23,6 +23,7 @@ import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'store/test_store.dart';
+import 'welcome/test_welcome.dart';
 
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +32,7 @@ void main() {
 
   testWidgets('init', (tester) async {
     final initModel = buildInitModel();
+    final welcomeModel = buildWelcomeModel();
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -47,6 +49,7 @@ void main() {
       ProviderScope(
         overrides: [
           initModelProvider.overrideWith((_) => initModel),
+          welcomeModelProvider.overrideWith((_) => welcomeModel),
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -67,6 +70,10 @@ void main() {
 
     await tester.pump(const Duration(seconds: 1));
 
+    await tester.pumpAndSettle();
+    expect(find.byType(WelcomePage), findsOneWidget);
+
+    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
 

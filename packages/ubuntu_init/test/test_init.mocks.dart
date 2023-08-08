@@ -3,11 +3,12 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_init/ubuntu_init.dart' as _i2;
-import 'package:ubuntu_utils/src/url_launcher.dart' as _i4;
+import 'package:ubuntu_init/ubuntu_init.dart' as _i3;
+import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
+import 'package:ubuntu_utils/src/url_launcher.dart' as _i5;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -20,64 +21,74 @@ import 'package:ubuntu_utils/src/url_launcher.dart' as _i4;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeProductInfo_0 extends _i1.SmartFake implements _i2.ProductInfo {
+  _FakeProductInfo_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [PrivacyService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPrivacyService extends _i1.Mock implements _i2.PrivacyService {
+class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
   MockPrivacyService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<bool> isLocationEnabled() => (super.noSuchMethod(
+  _i4.Future<bool> isLocationEnabled() => (super.noSuchMethod(
         Invocation.method(
           #isLocationEnabled,
           [],
         ),
-        returnValue: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
   @override
-  _i3.Future<void> setLocationEnabled(bool? enabled) => (super.noSuchMethod(
+  _i4.Future<void> setLocationEnabled(bool? enabled) => (super.noSuchMethod(
         Invocation.method(
           #setLocationEnabled,
           [enabled],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
   @override
-  _i3.Future<bool> isReportingEnabled() => (super.noSuchMethod(
+  _i4.Future<bool> isReportingEnabled() => (super.noSuchMethod(
         Invocation.method(
           #isReportingEnabled,
           [],
         ),
-        returnValue: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
   @override
-  _i3.Future<void> setReportingEnabled(bool? enabled) => (super.noSuchMethod(
+  _i4.Future<void> setReportingEnabled(bool? enabled) => (super.noSuchMethod(
         Invocation.method(
           #setReportingEnabled,
           [enabled],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
   @override
-  _i3.Future<void> close() => (super.noSuchMethod(
+  _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
           #close,
           [],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }
 
 /// A class which mocks [PrivilegedDesktopLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockPrivilegedDesktopLauncher extends _i1.Mock
-    implements _i2.PrivilegedDesktopLauncher {
+    implements _i3.PrivilegedDesktopLauncher {
   MockPrivilegedDesktopLauncher() {
     _i1.throwOnMissingStub(this);
   }
@@ -88,70 +99,102 @@ class MockPrivilegedDesktopLauncher extends _i1.Mock
         returnValue: false,
       ) as bool);
   @override
-  _i3.Future<void> connect() => (super.noSuchMethod(
+  _i4.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
           #connect,
           [],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
   @override
-  _i3.Future<void> close() => (super.noSuchMethod(
+  _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
           #close,
           [],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
   @override
-  _i3.Future<void> openDesktopEntry(String? desktopFileId) =>
+  _i4.Future<void> openDesktopEntry(String? desktopFileId) =>
       (super.noSuchMethod(
         Invocation.method(
           #openDesktopEntry,
           [desktopFileId],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+}
+
+/// A class which mocks [ProductService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockProductService extends _i1.Mock implements _i2.ProductService {
+  MockProductService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.ProductInfo getProductInfo() => (super.noSuchMethod(
+        Invocation.method(
+          #getProductInfo,
+          [],
+        ),
+        returnValue: _FakeProductInfo_0(
+          this,
+          Invocation.method(
+            #getProductInfo,
+            [],
+          ),
+        ),
+      ) as _i2.ProductInfo);
+  @override
+  String getReleaseNotesURL(String? languageCode) => (super.noSuchMethod(
+        Invocation.method(
+          #getReleaseNotesURL,
+          [languageCode],
+        ),
+        returnValue: '',
+      ) as String);
 }
 
 /// A class which mocks [UrlLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUrlLauncher extends _i1.Mock implements _i4.UrlLauncher {
+class MockUrlLauncher extends _i1.Mock implements _i5.UrlLauncher {
   MockUrlLauncher() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<bool> launchUrl(String? url) => (super.noSuchMethod(
+  _i4.Future<bool> launchUrl(String? url) => (super.noSuchMethod(
         Invocation.method(
           #launchUrl,
           [url],
         ),
-        returnValue: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
 }
 
 /// A class which mocks [InitModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockInitModel extends _i1.Mock implements _i2.InitModel {
+class MockInitModel extends _i1.Mock implements _i3.InitModel {
   MockInitModel() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<void> init() => (super.noSuchMethod(
+  _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
   @override
   bool hasRoute(String? route) => (super.noSuchMethod(
         Invocation.method(

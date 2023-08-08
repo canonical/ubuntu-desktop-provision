@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -43,6 +44,7 @@ InitModel buildInitModel({List<String>? pages}) {
 @GenerateMocks([
   PrivacyService,
   PrivilegedDesktopLauncher,
+  ProductService,
   UrlLauncher,
 ])
 class _Dummy {} // ignore: unused_element

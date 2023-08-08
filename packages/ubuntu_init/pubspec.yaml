@@ -40,6 +40,7 @@ dependencies:
     path: ../ubuntu_wizard
   xdg_locale: ^0.0.1
   yaru: ^0.9.0
+  yaru_icons: ^1.0.0
   yaru_widgets: ^2.5.0
 
 dev_dependencies:

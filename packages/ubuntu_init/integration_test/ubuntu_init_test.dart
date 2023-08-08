@@ -21,6 +21,10 @@ void main() {
 
     await tester.runApp(() => app.main([]));
 
+    await tester.testWelcomeInitPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testLocalePage(language: 'Deutsch');
     await tester.tapNext();
     await tester.pumpAndSettle();

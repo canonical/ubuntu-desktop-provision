@@ -22,6 +22,7 @@ void main() {
     expect(tryGetService<NetworkService>(), isNotNull);
     expect(tryGetService<PrivacyService>(), isNotNull);
     expect(tryGetService<PrivilegedDesktopLauncher>(), isNotNull);
+    expect(tryGetService<ProductService>(), isNotNull);
     expect(tryGetService<SessionService>(), isNotNull);
     expect(tryGetService<ThemeService>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
