@@ -437,7 +437,7 @@ extension on WidgetTester {
     registerMockService<RefreshService>(refresh);
 
     return MaterialApp(
-      localizationsDelegates: localizationsDelegates,
+      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
       supportedLocales: supportedLocales,
       theme: yaruLight,
       home: InstallerWizard(welcome: welcome),

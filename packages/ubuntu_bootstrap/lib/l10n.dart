@@ -7,9 +7,11 @@ export 'package:ubuntu_localizations/ubuntu_localizations.dart';
 export 'package:ubuntu_provision/l10n.dart';
 export 'l10n/ubuntu_bootstrap_localizations.dart';
 
-/// All localization delegates for the Ubuntu Desktop Installer.
-const localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-  ...UbuntuBootstrapLocalizations.localizationsDelegates,
-  ...UbuntuProvisionLocalizations.localizationsDelegates,
-  ...GlobalUbuntuLocalizations.delegates,
-];
+/// All localization delegates for Ubuntu Bootstrap.
+class GlobalUbuntuBootstrapLocalizations {
+  static const List<LocalizationsDelegate<dynamic>> delegates = [
+    ...UbuntuBootstrapLocalizations.localizationsDelegates,
+    ...UbuntuProvisionLocalizations.localizationsDelegates,
+    ...GlobalUbuntuLocalizations.delegates,
+  ];
+}

@@ -111,7 +111,7 @@ extension on WidgetTester {
     return pumpWidget(
       ProviderScope(
         child: MaterialApp(
-          localizationsDelegates: localizationsDelegates,
+          localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
           home: Consumer(
             builder: (context, ref, child) {
               return Wizard(

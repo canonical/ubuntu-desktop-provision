@@ -17,7 +17,7 @@ extension UbuntuInitTester on WidgetTester {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
     return MaterialApp(
-      localizationsDelegates: localizationsDelegates,
+      localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
       theme: yaruLight,
       home: Wizard(
         routes: {

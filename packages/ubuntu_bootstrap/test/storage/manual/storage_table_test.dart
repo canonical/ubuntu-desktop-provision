@@ -63,7 +63,7 @@ void main() {
     OnStorageSelected? onSelected,
   }) {
     return MaterialApp(
-      localizationsDelegates: localizationsDelegates,
+      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
       home: StorageTable(
         columns: columns,
         storages: [sda, sdb, sdc, sdd],
