@@ -45,6 +45,7 @@ InitModel buildInitModel({List<String>? pages}) {
   PrivacyService,
   PrivilegedDesktopLauncher,
   ProductService,
+  Sysmetrics,
   UrlLauncher,
 ])
 class _Dummy {} // ignore: unused_element
