@@ -31,6 +31,41 @@ classDiagram
     ubuntu_welcome: - snapcraft.yaml
 ```
 
+## Configuration
+
+Supported formats:
+- [TOML](https://toml.io/) (`.conf`)
+
+    ```toml
+    [bootstrap]
+    pages = "locale,keyboard,source,storage"
+
+    [init]
+    pages = "timezone,identity"
+    ```
+
+- [YAML](https://yaml.org/) (`.yaml`, `.yml`)
+
+    ```yaml
+    bootstrap:
+      pages:
+        - locale
+        - keyboard
+        - source
+        - storage
+
+    init:
+      pages:
+        - timezone
+        - identity
+    ```
+
+Lookup order:
+- `/etc/ubuntu-provision.{conf,yaml,yml}` (admin)
+- `/usr/local/share/ubuntu-provision.{conf,yaml,yml}` (oem)
+- `/usr/share/ubuntu-provision.{conf,yaml,yml}` (distro)
+- `<app>/data/flutter_assets/ubuntu-provision.{conf,yaml,yml}` (app)
+
 ## Contributing
 
 See our [contributor guidelines](CONTRIBUTING.md).
