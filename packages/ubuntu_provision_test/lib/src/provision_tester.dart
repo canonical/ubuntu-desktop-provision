@@ -66,15 +66,17 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
 
-      await tapButton(l10n.keyboardDetectButton);
-      await pumpAndSettle();
+      if (find.button(l10n.keyboardDetectButton).evaluate().isNotEmpty) {
+        await tapButton(l10n.keyboardDetectButton);
+        await pumpAndSettle();
 
-      await takeScreenshot('$screenshot-detect');
+        await takeScreenshot('$screenshot-detect');
 
-      await tap(find.descendant(
-          of: find.byType(AlertDialog),
-          matching: find.byType(YaruWindowControl)));
-      await pumpAndSettle();
+        await tap(find.descendant(
+            of: find.byType(AlertDialog),
+            matching: find.byType(YaruWindowControl)));
+        await pumpAndSettle();
+      }
     }
   }
 
