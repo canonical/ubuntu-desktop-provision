@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:ubuntu_init/main.dart' as app;
+import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -19,7 +19,7 @@ void main() {
   testWidgets('init', (tester) async {
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.runApp(() => app.main([]));
+    await tester.runApp(() => runInitApp([]));
 
     await tester.testWelcomeInitPage();
     await tester.tapNext();
@@ -77,7 +77,7 @@ void main() {
   });
 
   testWidgets('pages', (tester) async {
-    await tester.runApp(() => app.main(['--pages=locale,keyboard,identity']));
+    await tester.runApp(() => runInitApp(['--pages=locale,keyboard,identity']));
 
     await tester.testLocalePage();
     await tester.tapNext();
