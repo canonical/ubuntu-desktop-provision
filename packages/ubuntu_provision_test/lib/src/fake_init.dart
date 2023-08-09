@@ -38,7 +38,8 @@ Future<void> registerFakeInitServices({
   registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
   registerService<LocaleService>(() => XdgLocaleService(bus: client));
   registerService<NetworkService>(() => NetworkService(bus: client));
-  registerService<Sysmetrics>(FakeSysmetrics.new);
+  registerService<ProductService>(_FakeProductService.new);
+  registerService<Sysmetrics>(_FakeSysmetrics.new);
   registerService<ThemeService>(() => GtkThemeService(bus: client));
   registerService<TimezoneService>(() => XdgTimezoneService(bus: client));
   addTearDown(resetAllServices);
@@ -338,7 +339,7 @@ class _FakeXdgTimedateObject extends DBusObject {
   }
 }
 
-class FakeSysmetrics implements Sysmetrics {
+class _FakeSysmetrics implements Sysmetrics {
   @override
   Future<String?> collect() async => null;
 
@@ -356,4 +357,13 @@ class FakeSysmetrics implements Sysmetrics {
   Future<String?> sendReport(String data,
           {bool alwaysReport = false, String baseUrl = ''}) async =>
       null;
+}
+
+class _FakeProductService implements ProductService {
+  @override
+  ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.10');
+
+  @override
+  String getReleaseNotesURL(String languageCode) =>
+      'https://wiki.ubuntu.com/ManticMinotaur/ReleaseNotes';
 }
