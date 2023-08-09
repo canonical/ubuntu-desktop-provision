@@ -36,16 +36,16 @@ Future<void> main() async {
     await resetAllServices();
   });
 
-  testWidgets('1.locale', (tester) async {
+  testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(
-      screenshot: '$currentThemeName/1.locale',
+      screenshot: '$currentThemeName/01.locale',
     );
   }, variant: themeVariant);
 
-  testWidgets('2.welcome', (tester) async {
+  testWidgets('02.welcome', (tester) async {
     await tester
         .runApp(() => runInstallerApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
@@ -55,11 +55,11 @@ Future<void> main() async {
 
     await tester.testWelcomePage(
       option: Option.welcomeInstallOption,
-      screenshot: '$currentThemeName/2.welcome',
+      screenshot: '$currentThemeName/02.welcome',
     );
   }, variant: themeVariant);
 
-  testWidgets('3.rst', (tester) async {
+  testWidgets('03.rst', (tester) async {
     registerService<SubiquityClient>(FakeSubiquityClient.new);
 
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -69,11 +69,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testRstPage(
-      screenshot: '$currentThemeName/3.rst',
+      screenshot: '$currentThemeName/03.rst',
     );
   }, variant: themeVariant);
 
-  testWidgets('3.keyboard', (tester) async {
+  testWidgets('03.keyboard', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -81,11 +81,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
-      screenshot: '$currentThemeName/3.keyboard',
+      screenshot: '$currentThemeName/03.keyboard',
     );
   }, variant: themeVariant);
 
-  testWidgets('4.network', (tester) async {
+  testWidgets('04.network', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -94,11 +94,11 @@ Future<void> main() async {
 
     await tester.testNetworkPage(
       mode: ConnectMode.none,
-      screenshot: '$currentThemeName/4.network',
+      screenshot: '$currentThemeName/04.network',
     );
   }, variant: themeVariant);
 
-  testWidgets('5.refresh', (tester) async {
+  testWidgets('05.refresh', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -106,11 +106,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testRefreshPage(
-      screenshot: '$currentThemeName/5.refresh',
+      screenshot: '$currentThemeName/05.refresh',
     );
   }, variant: themeVariant);
 
-  testWidgets('5.source', (tester) async {
+  testWidgets('05.source', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -118,11 +118,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testSourcePage(
-      screenshot: '$currentThemeName/5.source',
+      screenshot: '$currentThemeName/05.source',
     );
   }, variant: themeVariant);
 
-  testWidgets('6.not-enough-space', (tester) async {
+  testWidgets('06.not-enough-space', (tester) async {
     final client = FakeSubiquityClient();
     registerServiceInstance<SubiquityClient>(client);
 
@@ -137,11 +137,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testNotEnoughDiskSpacePage(
-      screenshot: '$currentThemeName/6.not-enough-space',
+      screenshot: '$currentThemeName/06.not-enough-space',
     );
   }, variant: themeVariant);
 
-  testWidgets('6.storage', (tester) async {
+  testWidgets('06.storage', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -150,11 +150,11 @@ Future<void> main() async {
 
     await tester.testStoragePage(
       type: StorageType.erase,
-      screenshot: '$currentThemeName/6.storage',
+      screenshot: '$currentThemeName/06.storage',
     );
   }, variant: themeVariant);
 
-  testWidgets('6.storage-advanced-features', (tester) async {
+  testWidgets('06.storage-advanced-features', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -164,11 +164,11 @@ Future<void> main() async {
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.LVM,
-      screenshot: '$currentThemeName/6.storage-advanced-features',
+      screenshot: '$currentThemeName/06.storage-advanced-features',
     );
   }, variant: themeVariant);
 
-  testWidgets('6.storage-alongside-windows', (tester) async {
+  testWidgets('06.storage-alongside-windows', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10.json',
         ], theme: currentTheme));
@@ -179,11 +179,11 @@ Future<void> main() async {
 
     await tester.testStoragePage(
       type: StorageType.alongside,
-      screenshot: '$currentThemeName/6.storage-alongside-windows',
+      screenshot: '$currentThemeName/06.storage-alongside-windows',
     );
   }, variant: themeVariant);
 
-  testWidgets('7.storage-manual', (tester) async {
+  testWidgets('07.storage-manual', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--',
           '--bootloader=uefi',
@@ -210,11 +210,11 @@ Future<void> main() async {
           ],
         ),
       ],
-      screenshot: '$currentThemeName/7.storage-manual',
+      screenshot: '$currentThemeName/07.storage-manual',
     );
   }, variant: themeVariant);
 
-  testWidgets('7.storage-guided-resize', (tester) async {
+  testWidgets('07.storage-guided-resize', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
           '--',
@@ -231,11 +231,11 @@ Future<void> main() async {
 
     await tester.testGuidedResizePage(
       sizes: {'ext4': 32768},
-      screenshot: '$currentThemeName/7.storage-guided-resize',
+      screenshot: '$currentThemeName/07.storage-guided-resize',
     );
   }, variant: themeVariant);
 
-  testWidgets('7.storage-guided-reformat', (tester) async {
+  testWidgets('07.storage-guided-reformat', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/imsm.json',
         ], theme: currentTheme));
@@ -249,11 +249,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testGuidedReformatPage(
-      screenshot: '$currentThemeName/7.storage-guided-reformat',
+      screenshot: '$currentThemeName/07.storage-guided-reformat',
     );
   }, variant: themeVariant);
 
-  testWidgets('7.bitlocker', (tester) async {
+  testWidgets('07.bitlocker', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10.json',
         ], theme: currentTheme));
@@ -267,11 +267,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testBitLockerPage(
-      screenshot: '$currentThemeName/7.bitlocker',
+      screenshot: '$currentThemeName/07.bitlocker',
     );
   }, variant: themeVariant);
 
-  testWidgets('8.security-key', (tester) async {
+  testWidgets('08.security-key', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
         ], theme: currentTheme));
@@ -289,11 +289,11 @@ Future<void> main() async {
 
     await tester.testSecurityKeyPage(
       securityKey: 'password',
-      screenshot: '$currentThemeName/8.security-key',
+      screenshot: '$currentThemeName/08.security-key',
     );
   }, variant: themeVariant);
 
-  testWidgets('9.confirm', (tester) async {
+  testWidgets('09.confirm', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--',
           '--bootloader=uefi',
@@ -310,7 +310,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testConfirmPage(
-      screenshot: '$currentThemeName/9.confirm',
+      screenshot: '$currentThemeName/09.confirm',
     );
   }, variant: themeVariant);
 

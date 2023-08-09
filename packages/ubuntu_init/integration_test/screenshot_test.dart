@@ -13,7 +13,7 @@ Future<void> main() async {
 
   setUp(registerFakeInitServices);
 
-  testWidgets('1.locale', (tester) async {
+  testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -21,11 +21,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(
-      screenshot: '$currentThemeName/1.locale',
+      screenshot: '$currentThemeName/01.locale',
     );
   }, variant: themeVariant);
 
-  testWidgets('2.keyboard', (tester) async {
+  testWidgets('02.keyboard', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -33,11 +33,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
-      screenshot: '$currentThemeName/2.keyboard',
+      screenshot: '$currentThemeName/02.keyboard',
     );
   }, variant: themeVariant);
 
-  testWidgets('3.network', (tester) async {
+  testWidgets('03.network', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -46,11 +46,11 @@ Future<void> main() async {
 
     await tester.testNetworkPage(
       mode: ConnectMode.none,
-      screenshot: '$currentThemeName/3.network',
+      screenshot: '$currentThemeName/03.network',
     );
   }, variant: themeVariant);
 
-  testWidgets('4.timezone', (tester) async {
+  testWidgets('04.timezone', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -58,11 +58,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testTimezonePage(
-      screenshot: '$currentThemeName/4.timezone',
+      screenshot: '$currentThemeName/04.timezone',
     );
   }, variant: themeVariant);
 
-  testWidgets('5.identity', (tester) async {
+  testWidgets('05.identity', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -76,11 +76,11 @@ Future<void> main() async {
         username: 'user',
       ),
       password: 'password',
-      screenshot: '$currentThemeName/5.identity',
+      screenshot: '$currentThemeName/05.identity',
     );
   }, variant: themeVariant);
 
-  testWidgets('6.theme', (tester) async {
+  testWidgets('06.theme', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -88,20 +88,20 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testThemePage(
-      screenshot: '$currentThemeName/6.theme',
+      screenshot: '$currentThemeName/06.theme',
     );
   }, variant: themeVariant);
 
-  testWidgets('7.welcome', (tester) async {
+  testWidgets('07.welcome', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.testWelcomeInitPage(
-      screenshot: '$currentThemeName/7.welcome',
+      screenshot: '$currentThemeName/07.welcome',
     );
   }, variant: themeVariant);
 
-  testWidgets('8.telemetry', (tester) async {
+  testWidgets('08.telemetry', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -109,11 +109,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testTelemetryPage(
-      screenshot: '$currentThemeName/8.telemetry',
+      screenshot: '$currentThemeName/08.telemetry',
     );
   }, variant: themeVariant);
 
-  testWidgets('9.privacy', (tester) async {
+  testWidgets('09.privacy', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -121,7 +121,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testPrivacyPage(
-      screenshot: '$currentThemeName/9.privacy',
+      screenshot: '$currentThemeName/09.privacy',
     );
   }, variant: themeVariant);
 
