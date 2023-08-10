@@ -16,6 +16,8 @@ Future<void> runInitApp(
   String package = 'ubuntu_init',
   ThemeData? theme,
   ThemeData? darkTheme,
+  GenerateAppTitle? onGenerateTitle,
+  Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final log = Logger.setup();
 
@@ -33,8 +35,12 @@ Future<void> runInitApp(
         builder: (context, ref, child) => WizardApp(
           theme: theme,
           darkTheme: darkTheme,
+          onGenerateTitle: onGenerateTitle,
           locale: ref.watch(localeProvider),
-          localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
+          localizationsDelegates: [
+            ...?localizationsDelegates,
+            ...GlobalUbuntuInitLocalizations.delegates,
+          ],
           supportedLocales: supportedLocales,
           home: DefaultAssetBundle(
             bundle: ProxyAssetBundle(rootBundle, package: package),
