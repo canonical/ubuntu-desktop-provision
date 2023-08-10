@@ -589,5 +589,201 @@
     "placeholders": {
       "DISTRO": {}
     }
+  },
+  "refreshInstall": "Zaktualizuj do wersji {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpToDate": "Bieżąca wersja {version} jest aktualna.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapRefresh": "Odświeżanie {snap}...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Sprawdzanie ponownego odświeżenia {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Montowanie {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Aktualizowanie zasobów {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "Konfigurowanie aliasów {snap}...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "Uruchamianie usług {snap}...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Czyszczenie {snap}...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "Klucz odzyskiwania modułu TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Możesz uzyskać dostęp do klucza odzyskiwania po instalacji za pomocą następującego polecenia:",
+  "@recoveryKeyCommand": {},
+  "installationTypeTPM": "EKSPERYMENTALNE: włącz sprzętowe szyfrowanie całego dysku",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "Wybrano moduł TPM",
+  "@installationTypeTPMSelected": {},
+  "refreshPageTitle": "Dostępna aktualizacja",
+  "@refreshPageTitle": {},
+  "refreshCurrent": "Bieżąca wersja {snap} to {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshUpdating": "Aktualizowanie {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Uruchom ponownie instalator.",
+  "@refreshRestart": {},
+  "refreshSnapPrerequisites": "Sprawdzanie wymagań wstępnych {snap}...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Przygotowywanie {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "Pobieranie {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Sprawdzanie poprawności {snap}...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Zatrzymywanie usług {snap}...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Usuwanie aliasów {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Odłączanie {snap}...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Aktualizowanie wiersza poleceń jądra {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Kopiowanie danych {snap}...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Konfigurowanie profili bezpieczeństwa {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "Łączenie {snap}...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Łączenie wtyczek i gniazd {snap}...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Ustawianie automatycznych aliasów {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. W razie potrzeby zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Ostrzeżenie:</font> ta funkcja jest obsługiwana tylko w niektórych konfiguracjach sprzętowych i może nie obsługiwać aktualizacji do przyszłych wersji Ubuntu. Przed włączeniem przeczytaj <a href=\"{url}\">informacje o wydaniu</a>.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
   }
 }
