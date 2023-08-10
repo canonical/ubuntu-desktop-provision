@@ -155,5 +155,9 @@
   "networkHiddenWifiNameRequired": "یک نام برای شبکه مورد نیاز است",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "من نمی‌خواهم همین حالا به اینترنت متّصل شوم",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "activeDirectoryAdminLabel": "کاربرپیسته به دامنه",
+  "@activeDirectoryAdminLabel": {},
+  "activeDirectoryErrorMessage": "شوربختانه در حال حاضر اکتیو دایرکتوری نمی‌تواند برپا شود. پس از به راه افتادن سامانه <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> را برای کمک ببینید.",
+  "@activeDirectoryErrorMessage": {}
 }
