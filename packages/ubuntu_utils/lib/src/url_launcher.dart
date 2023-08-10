@@ -9,8 +9,10 @@ Future<bool> launchUrl(String url) {
 }
 
 class UrlLauncher {
+  Future<bool> canLaunchUrl(String url) => canLaunchUrlString(url);
+
   Future<bool> launchUrl(String url) async {
-    if (!await canLaunchUrlString(url)) {
+    if (!await canLaunchUrl(url)) {
       log.error('Unable to launch $url');
       return false;
     }

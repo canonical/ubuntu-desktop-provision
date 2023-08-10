@@ -6,21 +6,19 @@ import 'test_store.dart';
 
 void main() {
   test('launcher', () async {
-    final launcher = MockPrivilegedDesktopLauncher();
-    when(launcher.isAvailable).thenReturn(true);
+    final launcher = MockUrlLauncher();
+    when(launcher.canLaunchUrl(kStoreUrl)).thenAnswer((_) async => true);
+    when(launcher.launchUrl(kStoreUrl)).thenAnswer((_) async => true);
 
     final model = StoreModel(launcher);
     expect(await model.init(), isTrue);
-    verify(launcher.connect()).called(1);
+    verify(launcher.canLaunchUrl(kStoreUrl)).called(1);
 
-    when(launcher.isAvailable).thenReturn(false);
+    when(launcher.canLaunchUrl(kStoreUrl)).thenAnswer((_) async => false);
     expect(await model.init(), isFalse);
-    verify(launcher.connect()).called(1);
+    verify(launcher.canLaunchUrl(kStoreUrl)).called(1);
 
     await model.launch();
-    verify(launcher.openDesktopEntry(kStoreDesktopId)).called(1);
-
-    await model.dispose();
-    verify(launcher.close()).called(1);
+    verify(launcher.launchUrl(kStoreUrl)).called(1);
   });
 }

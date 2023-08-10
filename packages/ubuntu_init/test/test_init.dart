@@ -43,7 +43,6 @@ InitModel buildInitModel({List<String>? pages}) {
 
 @GenerateMocks([
   PrivacyService,
-  PrivilegedDesktopLauncher,
   ProductService,
   Sysmetrics,
   UrlLauncher,
