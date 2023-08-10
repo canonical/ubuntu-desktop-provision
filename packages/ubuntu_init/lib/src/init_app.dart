@@ -18,6 +18,7 @@ Future<void> runInitApp(
   ThemeData? darkTheme,
   GenerateAppTitle? onGenerateTitle,
   Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
+  FutureOr<void> Function()? onDone,
 }) async {
   final log = Logger.setup();
 
@@ -44,7 +45,7 @@ Future<void> runInitApp(
           supportedLocales: supportedLocales,
           home: DefaultAssetBundle(
             bundle: ProxyAssetBundle(rootBundle, package: package),
-            child: InitWizard(pages: pages),
+            child: InitWizard(pages: pages, onDone: onDone),
           ),
         ),
       ),
