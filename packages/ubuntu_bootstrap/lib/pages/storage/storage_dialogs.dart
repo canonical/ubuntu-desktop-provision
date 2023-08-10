@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'storage_model.dart';
@@ -32,60 +35,80 @@ Future<void> showAdvancedFeaturesDialog(
         contentPadding: const EdgeInsets.all(kYaruPagePadding),
         actionsPadding: const EdgeInsets.all(kYaruPagePadding),
         buttonPadding: EdgeInsets.zero,
-        scrollable: true,
         content: AnimatedBuilder(
           animation: Listenable.merge([advancedFeature, encryption]),
           builder: (context, child) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                if (model.hasDirect)
-                  YaruRadioButton<AdvancedFeature>(
-                    title: Text(lang.installationTypeNone),
-                    value: AdvancedFeature.none,
-                    groupValue: advancedFeature.value,
-                    onChanged: (v) => advancedFeature.value = v!,
-                  ),
-                if (model.hasLvm) ...[
-                  YaruRadioButton<AdvancedFeature>(
-                    title: Consumer(builder: (context, ref, child) {
-                      final flavor = ref.watch(flavorProvider);
-                      return Text(lang.installationTypeLVM(flavor.name));
-                    }),
-                    value: AdvancedFeature.lvm,
-                    groupValue: advancedFeature.value,
-                    onChanged: (v) => advancedFeature.value = v!,
-                  ),
-                  Padding(
-                    padding: kWizardIndentation,
-                    child: YaruCheckButton(
+            return SizedBox(
+              width: kWizardDialogWidth,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  if (model.hasDirect)
+                    YaruRadioButton<AdvancedFeature>(
+                      title: Text(lang.installationTypeNone),
+                      value: AdvancedFeature.none,
+                      groupValue: advancedFeature.value,
+                      onChanged: (v) => advancedFeature.value = v!,
+                    ),
+                  if (model.hasLvm) ...[
+                    YaruRadioButton<AdvancedFeature>(
                       title: Consumer(builder: (context, ref, child) {
                         final flavor = ref.watch(flavorProvider);
-                        return Text(lang.installationTypeEncrypt(flavor.name));
+                        return Text(lang.installationTypeLVM(flavor.name));
                       }),
-                      subtitle: Text(lang.installationTypeEncryptInfo),
-                      value: encryption.value,
-                      onChanged: advancedFeature.value == AdvancedFeature.lvm
-                          ? (v) => encryption.value = v!
-                          : null,
+                      value: AdvancedFeature.lvm,
+                      groupValue: advancedFeature.value,
+                      onChanged: (v) => advancedFeature.value = v!,
                     ),
-                  ),
-                ],
-                if (model.hasZfs)
-                  YaruRadioButton<AdvancedFeature>(
-                    title: Text(lang.installationTypeZFS),
-                    value: AdvancedFeature.zfs,
-                    groupValue: advancedFeature.value,
-                    onChanged: (v) => advancedFeature.value = v!,
-                  ),
-                if (model.hasTpm)
-                  YaruRadioButton<AdvancedFeature>(
-                    title: Text(lang.installationTypeTPM),
-                    value: AdvancedFeature.tpm,
-                    groupValue: advancedFeature.value,
-                    onChanged: (v) => advancedFeature.value = v!,
-                  ),
-              ].withSpacing(kWizardSpacing),
+                    Padding(
+                      padding: kWizardIndentation,
+                      child: YaruCheckButton(
+                        title: Consumer(builder: (context, ref, child) {
+                          final flavor = ref.watch(flavorProvider);
+                          return Text(
+                              lang.installationTypeEncrypt(flavor.name));
+                        }),
+                        subtitle: Text(lang.installationTypeEncryptInfo),
+                        value: encryption.value,
+                        onChanged: advancedFeature.value == AdvancedFeature.lvm
+                            ? (v) => encryption.value = v!
+                            : null,
+                      ),
+                    ),
+                  ],
+                  if (model.hasZfs)
+                    YaruRadioButton<AdvancedFeature>(
+                      title: Text(lang.installationTypeZFS),
+                      value: AdvancedFeature.zfs,
+                      groupValue: advancedFeature.value,
+                      onChanged: (v) => advancedFeature.value = v!,
+                    ),
+                  if (model.hasTpm) ...[
+                    YaruRadioButton<AdvancedFeature>(
+                      title: Text(lang.installationTypeTPM),
+                      value: AdvancedFeature.tpm,
+                      groupValue: advancedFeature.value,
+                      onChanged: (v) => advancedFeature.value = v!,
+                    ),
+                    Padding(
+                      padding: kWizardIndentation,
+                      child: Html(
+                        data: lang.installationTypeTPMWarning(
+                          Theme.of(context).colorScheme.error.toHex(),
+                          model.getReleaseNotesURL(
+                              Localizations.localeOf(context)),
+                        ),
+                        style: {
+                          'body': Style(margin: Margins.zero),
+                          'a': Style(color: Theme.of(context).colorScheme.link),
+                        },
+                        onLinkTap: (url, _, __) => launchUrl(url!),
+                      ),
+                    ),
+                  ],
+                ].withSpacing(kWizardSpacing),
+              ),
             );
           },
         ),

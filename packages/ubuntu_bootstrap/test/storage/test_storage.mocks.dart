@@ -3,8 +3,8 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i5;
-import 'dart:ui' as _i6;
+import 'dart:async' as _i6;
+import 'dart:ui' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:subiquity_client/subiquity_client.dart' as _i4;
@@ -125,34 +125,42 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: false,
       ) as bool);
   @override
-  _i5.Future<void> init() => (super.noSuchMethod(
+  String getReleaseNotesURL(_i5.Locale? locale) => (super.noSuchMethod(
+        Invocation.method(
+          #getReleaseNotesURL,
+          [locale],
+        ),
+        returnValue: '',
+      ) as String);
+  @override
+  _i6.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
   @override
-  _i5.Future<void> save() => (super.noSuchMethod(
+  _i6.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
           #save,
           [],
         ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
   @override
-  _i5.Future<void> resetStorage() => (super.noSuchMethod(
+  _i6.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
           #resetStorage,
           [],
         ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
   @override
-  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -160,7 +168,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValueForMissingStub: null,
       );
   @override
-  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],
