@@ -232,8 +232,16 @@
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS selected",
   "@installationTypeZFSSelected": {},
-  "installationTypeTPM": "EXPERIMENTAL: Hardware-backed full disk encryption",
+  "installationTypeTPM": "EXPERIMENTAL: Enable hardware-backed full disk encryption",
   "@installationTypeTPM": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"{url}\">release notes</a> before enabling.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
   "installationTypeTPMSelected": "TPM selected",
   "@installationTypeTPMSelected": {},
   "installationTypeReinstall": "Erase {os} and reinstall",

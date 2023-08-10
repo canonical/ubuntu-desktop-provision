@@ -648,8 +648,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTPM.
   ///
   /// In en, this message translates to:
-  /// **'EXPERIMENTAL: Hardware-backed full disk encryption'**
+  /// **'EXPERIMENTAL: Enable hardware-backed full disk encryption'**
   String get installationTypeTPM;
+
+  /// No description provided for @installationTypeTPMWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'<font color=\"{color}\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"{url}\">release notes</a> before enabling.'**
+  String installationTypeTPMWarning(Object color, Object url);
 
   /// No description provided for @installationTypeTPMSelected.
   ///
