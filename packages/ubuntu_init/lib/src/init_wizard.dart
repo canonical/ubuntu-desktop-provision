@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -32,10 +34,15 @@ class InitRoutes {
 }
 
 class InitWizard extends ConsumerWidget {
-  InitWizard({super.key, List<String>? pages})
-      : _pages = pages?.map((r) => r.removePrefix('/')).toSet();
+  InitWizard({
+    super.key,
+    List<String>? pages,
+    FutureOr<void> Function()? onDone,
+  })  : _pages = pages?.map((r) => r.removePrefix('/')).toSet(),
+        _onDone = onDone;
 
   final Set<String>? _pages;
+  final FutureOr<void> Function()? _onDone;
 
   bool _hasRoute(String route) {
     return _pages?.contains(route.removePrefix('/')) ?? true;
@@ -108,8 +115,12 @@ class InitWizard extends ConsumerWidget {
         InitRoutes.store: WizardRoute(
           builder: (_) => const StorePage(),
           onLoad: (_) => StorePage.load(ref),
-          onNext: (_) =>
-              YaruWindow.of(context).close().then((_) => InitRoutes.initial),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
+            await _onDone?.call();
+            await window.close();
+            return InitRoutes.initial;
+          },
         ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
