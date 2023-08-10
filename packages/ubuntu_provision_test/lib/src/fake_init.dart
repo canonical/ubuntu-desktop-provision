@@ -7,6 +7,7 @@ import 'package:sysmetrics/src/sysmetrics.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 Future<void> registerFakeInitServices({
   Identity identity = const Identity(),
@@ -42,6 +43,7 @@ Future<void> registerFakeInitServices({
   registerService<Sysmetrics>(_FakeSysmetrics.new);
   registerService<ThemeService>(() => GtkThemeService(bus: client));
   registerService<TimezoneService>(() => XdgTimezoneService(bus: client));
+  registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);
 }
 
@@ -366,4 +368,12 @@ class _FakeProductService implements ProductService {
   @override
   String getReleaseNotesURL(String languageCode) =>
       'https://wiki.ubuntu.com/ManticMinotaur/ReleaseNotes';
+}
+
+class _FakeUrlLauncher implements UrlLauncher {
+  @override
+  Future<bool> canLaunchUrl(String url) async => true;
+
+  @override
+  Future<bool> launchUrl(String url) async => true;
 }
