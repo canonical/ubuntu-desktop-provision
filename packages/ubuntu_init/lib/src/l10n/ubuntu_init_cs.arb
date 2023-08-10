@@ -1,1 +1,52 @@
-{}
+{
+  "welcomePageHeader": "Vítejte v {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "CO JE NOVÉHO?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartSubtitle": "Podpora jasnějšího nastavování.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Nový vzhled katalogu aplikací",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "Vylepšené zabezpečení",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Zobrazit seznam změn</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetrie",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Pomozte {distro} vylepšit",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Sdílet anonymní data s {distro}, na základě kterých můžeme vylepšit dojem z používání.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Ne, nesdílet systémové informace",
+  "@telemetryLabelOff": {},
+  "welcomePageTitle": "Vítejte",
+  "@welcomePageTitle": {},
+  "welcomeStartTitle": "Zjednodušený začátek",
+  "@welcomeStartTitle": {},
+  "welcomeStoreSubtitle": "Najít vámi oblíbený software nikdy nebylo snazší.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecuritySubtitle": "Nové předvolby pro šifrování s pomocí hardware nebo na ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryLabelOn": "Ano, sdílet údaje o systému s týmem {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  }
+}
