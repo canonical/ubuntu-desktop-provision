@@ -85,50 +85,6 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
       ) as _i4.Future<void>);
 }
 
-/// A class which mocks [PrivilegedDesktopLauncher].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockPrivilegedDesktopLauncher extends _i1.Mock
-    implements _i3.PrivilegedDesktopLauncher {
-  MockPrivilegedDesktopLauncher() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  bool get isAvailable => (super.noSuchMethod(
-        Invocation.getter(#isAvailable),
-        returnValue: false,
-      ) as bool);
-  @override
-  _i4.Future<void> connect() => (super.noSuchMethod(
-        Invocation.method(
-          #connect,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-  @override
-  _i4.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-  @override
-  _i4.Future<void> openDesktopEntry(String? desktopFileId) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #openDesktopEntry,
-          [desktopFileId],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-}
-
 /// A class which mocks [ProductService].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -237,6 +193,14 @@ class MockUrlLauncher extends _i1.Mock implements _i6.UrlLauncher {
     _i1.throwOnMissingStub(this);
   }
 
+  @override
+  _i4.Future<bool> canLaunchUrl(String? url) => (super.noSuchMethod(
+        Invocation.method(
+          #canLaunchUrl,
+          [url],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
   @override
   _i4.Future<bool> launchUrl(String? url) => (super.noSuchMethod(
         Invocation.method(
