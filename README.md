@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/canonical/ubuntu-desktop-provision/actions/workflows/ci.yml/badge.svg)](https://github.com/canonical/ubuntu-desktop-provision/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/canonical/ubuntu-desktop-provision/branch/main/graph/badge.svg?token=JcedDc47dU)](https://codecov.io/gh/canonical/ubuntu-desktop-provision)
+[![screenshots](https://img.shields.io/badge/screenshots-gray?logo=ubuntu)](https://github.com/canonical/ubuntu-desktop-provision-screenshots)
 
 ```mermaid
 classDiagram
@@ -30,6 +31,12 @@ classDiagram
     ubuntu_welcome: - provision.conf
     ubuntu_welcome: - snapcraft.yaml
 ```
+
+## Used by
+
+- [Ubuntu Desktop Installer](https://github.com/canonical/ubuntu-desktop-installer)
+- [Ubuntu Core Desktop Init](https://github.com/canonical/ubuntu-core-desktop-init)
+- [Ubuntu Welcome](https://github.com/canonical/ubuntu-welcome)
 
 ## Configuration
 
