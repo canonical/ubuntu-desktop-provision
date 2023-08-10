@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageHeader": "Witamy w {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "CO NOWEGO?",
+  "@welcomeWhatsNew": {},
+  "welcomeStoreTitle": "Nowy wygląd sklepu z aplikacjami",
+  "@welcomeStoreTitle": {},
+  "welcomeSecuritySubtitle": "Nowe opcje szyfrowania sprzętowego lub ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeSecurityTitle": "Zwiększone bezpieczeństwo",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Zobacz listę zmian</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Pomóż ulepszyć {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Udostępniaj anonimowo dane {distro}, abyśmy mogli poprawić Twoje wrażenia.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Tak, udostępniaj dane systemowe zespołowi {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Nie, nie udostępniaj danych systemowych",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Szczegóły raportowania",
+  "@telemetryReportLabel": {},
+  "telemetryLegalLabel": "Informacje prawne",
+  "@telemetryLegalLabel": {},
+  "welcomePageTitle": "Witamy",
+  "@welcomePageTitle": {},
+  "welcomeStartTitle": "Usprawniony początek",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Obsługiwanie przejrzystszej konfiguracji.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "Znalezienie ulubionego oprogramowania nigdy nie było łatwiejsze.",
+  "@welcomeStoreSubtitle": {},
+  "telemetryReportTitle": "Szczegóły raportowania",
+  "@telemetryReportTitle": {},
+  "privacyPageTitle": "Usługi lokalizacyjne",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Włączyć usługi lokalizacyjne?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Informuj aplikacje o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Usługi lokalizacyjne",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Prywatność danych",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Sklep Ubuntu",
+  "@storeTitle": {},
+  "storeHeader": "Rozpocznij z większą liczbą aplikacji",
+  "@storeHeader": {},
+  "storeDescription": "Sklep Ubuntu oferuje szereg aplikacji, z którymi możesz zacząć od razu.",
+  "@storeDescription": {},
+  "storeOpen": "Otwórz sklep z aplikacjami",
+  "@storeOpen": {}
+}
