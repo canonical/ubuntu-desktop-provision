@@ -16,7 +16,7 @@ class StoreModel extends ChangeNotifier {
 
   final UrlLauncher _launcher;
 
-  Future<bool> init() => _launcher.canLaunchUrl(kStoreUrl);
+  Future<bool> init() async => true;
 
   Future<void> launch() => _launcher.launchUrl(kStoreUrl);
 }
