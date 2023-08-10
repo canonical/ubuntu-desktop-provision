@@ -247,7 +247,12 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'حُدد ZFS';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+
+  @override
+  String installationTypeTPMWarning(Object color, Object url) {
+    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+  }
 
   @override
   String get installationTypeTPMSelected => 'TPM selected';

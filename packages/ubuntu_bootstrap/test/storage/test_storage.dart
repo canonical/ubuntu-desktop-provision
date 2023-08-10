@@ -20,6 +20,7 @@ StorageModel buildStorageModel({
   StorageType? type = StorageType.erase,
   GuidedCapability? guidedCapability = GuidedCapability.DIRECT,
   ProductInfo? productInfo,
+  String? releaseNotesURL,
   List<OsProber>? existingOS,
   bool? canInstallAlongside,
   bool? canEraseDisk,
@@ -36,6 +37,7 @@ StorageModel buildStorageModel({
   when(model.type).thenReturn(type);
   when(model.guidedCapability).thenReturn(guidedCapability);
   when(model.productInfo).thenReturn(productInfo ?? ProductInfo(name: ''));
+  when(model.getReleaseNotesURL(any)).thenReturn(releaseNotesURL ?? '');
   when(model.existingOS).thenReturn(existingOS);
   when(model.canInstallAlongside).thenReturn(canInstallAlongside ?? false);
   when(model.canEraseDisk).thenReturn(canEraseDisk ?? true);

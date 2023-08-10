@@ -32,7 +32,7 @@ class ActiveDirectoryErrorDialog extends StatelessWidget {
       actionsPadding: const EdgeInsets.all(kYaruPagePadding),
       buttonPadding: EdgeInsets.zero,
       content: SizedBox(
-        width: 600,
+        width: kWizardDialogWidth,
         child: Row(
           children: [
             const Icon(YaruIcons.error, size: 96),

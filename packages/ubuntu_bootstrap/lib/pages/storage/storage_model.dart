@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -64,6 +66,11 @@ class StorageModel extends SafeChangeNotifier {
 
   /// The version of the OS.
   ProductInfo get productInfo => _product.getProductInfo();
+
+  /// The release notes URL.
+  String getReleaseNotesURL(Locale locale) {
+    return _product.getReleaseNotesURL(locale.languageCode);
+  }
 
   /// A list of existing OS installations or null if not detected.
   List<OsProber>? get existingOS => _storage.existingOS;
