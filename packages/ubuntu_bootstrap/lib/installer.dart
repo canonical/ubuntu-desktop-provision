@@ -11,6 +11,7 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -29,6 +30,7 @@ Future<void> runInstallerApp(
   List<String> args, {
   List<String>? pages,
   List<WidgetBuilder>? slides,
+  UbuntuFlavor? flavor,
   ThemeData? theme,
   ThemeData? darkTheme,
 }) async {
@@ -138,28 +140,36 @@ Future<void> runInstallerApp(
       child: SlidesContext(
         slides: slides ?? defaultSlides,
         child: Consumer(
-          builder: (context, ref, child) => WizardApp(
-            theme: theme,
-            darkTheme: darkTheme,
-            onGenerateTitle: (context) {
-              final flavor = ref.watch(flavorProvider);
-              return UbuntuBootstrapLocalizations.of(context)
-                  .windowTitle(flavor.name);
-            },
-            locale: ref.watch(localeProvider),
-            localizationsDelegates:
-                GlobalUbuntuBootstrapLocalizations.delegates,
-            supportedLocales: supportedLocales,
-            home: DefaultAssetBundle(
-              bundle: ProxyAssetBundle(
-                rootBundle,
-                package: 'ubuntu_bootstrap',
+          builder: (context, ref, child) {
+            if (flavor != null) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                ref.read(flavorProvider.notifier).state = flavor;
+              });
+            }
+            return WizardApp(
+              flavor: flavor,
+              theme: theme,
+              darkTheme: darkTheme,
+              onGenerateTitle: (context) {
+                final flavor = ref.watch(flavorProvider);
+                return UbuntuBootstrapLocalizations.of(context)
+                    .windowTitle(flavor.name);
+              },
+              locale: ref.watch(localeProvider),
+              localizationsDelegates:
+                  GlobalUbuntuBootstrapLocalizations.delegates,
+              supportedLocales: supportedLocales,
+              home: DefaultAssetBundle(
+                bundle: ProxyAssetBundle(
+                  rootBundle,
+                  package: 'ubuntu_bootstrap',
+                ),
+                child: InstallerWizard(
+                  welcome: options['welcome'],
+                ),
               ),
-              child: InstallerWizard(
-                welcome: options['welcome'],
-              ),
-            ),
-          ),
+            );
+          },
         ),
       ),
     ));
