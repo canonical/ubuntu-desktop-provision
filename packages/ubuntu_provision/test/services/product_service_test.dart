@@ -96,6 +96,20 @@ UBUNTU_CODENAME=focal
       expect(info.toString(), 'Ubuntu 20.04.2 LTS');
     });
 
+    test('/var/lib/snapd/hostfs/etc/os-release', () async {
+      final fileSystem = MemoryFileSystem();
+      await fileSystem.file(hostPath).create(recursive: true).then((f) {
+        f.writeAsString('''
+PRETTY_NAME="Ubuntu 23.10"
+''');
+      });
+      final info = ProductService(fileSystem).getProductInfo();
+
+      expect(info.name, 'Ubuntu');
+      expect(info.version, '23.10');
+      expect(info.toString(), 'Ubuntu 23.10');
+    });
+
     test('should return product info for kubuntu', () async {
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
