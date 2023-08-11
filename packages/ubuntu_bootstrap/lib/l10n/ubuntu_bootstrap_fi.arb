@@ -582,5 +582,7 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "installationTypeTPMSelected": "TPM valittu",
+  "@installationTypeTPMSelected": {}
 }
