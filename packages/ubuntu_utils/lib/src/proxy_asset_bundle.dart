@@ -29,11 +29,10 @@ class ProxyAssetBundle extends AssetBundle {
   }
 
   String _findAsset(String assetName, {required String package}) {
-    if (p.isWithin('packages/$package', assetName)) {
-      return _findAsset(
-        p.relative(assetName, from: 'packages/$package'),
-        package: package,
-      );
+    if (p.isWithin('packages/', assetName)) {
+      final candidate =
+          _findAsset(p.split(assetName).skip(2).join('/'), package: package);
+      if (File(candidate).existsSync()) return candidate;
     }
 
     // <app>/data/flutter_assets/
