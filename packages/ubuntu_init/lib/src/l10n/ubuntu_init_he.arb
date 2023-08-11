@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageTitle": "ברוך בואך",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "ברוך בואך אל {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "מה חדש?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "התחלה חלקה",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "תמיכה בחוויית הקמה פשוטה יותר.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "חנות יישומים במראה חדש",
+  "@welcomeStoreTitle": {},
+  "telemetryReportLabel": "פרטי דיווח",
+  "@telemetryReportLabel": {},
+  "welcomeStoreSubtitle": "מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "אבטחה משופרת",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">הצגת יומן השינויים</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryHeader": "סיוע בשיפור {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryPageTitle": "מדדים",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "אפשר לשתף נתונים עם {distro} בצורה אלמונית כדי לאפשר לנו לשפר את החוויה שלך.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "כן, לשתף את נתוני המערכת שלי עם צוות {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "לא, לא לשתף את נתוני המערכת שלי",
+  "@telemetryLabelOff": {},
+  "telemetryReportTitle": "פרטי דיווח",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "משפטי",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "שירותי מיקום",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "להפעיל שירותי מיקום?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "לאפשר ליישומים לדעת מה מיקומך הגאוגרפי.\nאפשר לשנות זאת בכל עת דרך הגדרות המערכת.",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "פרטיות נתונים",
+  "@privacyPolicyLink": {},
+  "privacyLocationEnable": "שירותי מיקום",
+  "@privacyLocationEnable": {},
+  "storeTitle": "חנות אובונטו",
+  "@storeTitle": {},
+  "storeHeader": "פתיחה טובה עם יותר יישומים",
+  "@storeHeader": {},
+  "storeDescription": "חנות היישומים של אובונטו מציעה מגוון רחב של יישומים שאפשר להתחיל להשתמש במהלך ההקמה.",
+  "@storeDescription": {},
+  "storeOpen": "פתיחת חנות היישומים",
+  "@storeOpen": {}
+}
