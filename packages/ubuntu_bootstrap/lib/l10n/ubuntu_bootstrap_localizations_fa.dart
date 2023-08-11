@@ -255,7 +255,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM گزیده';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -679,7 +679,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'لازم:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'به‌روز رسانی موجود';
 
   @override
   String refreshCurrent(Object snap, Object version) {
@@ -698,7 +698,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'به روز رساندن $snap…';
   }
 
   @override
@@ -711,7 +711,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'تازه سازی $snap…';
   }
 
   @override
@@ -721,22 +721,22 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'آماده سازی $snap…';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'بار گرفتن $snap…';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'اعتبار سنجی $snap…';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'سوار کردن $snap…';
   }
 
   @override
@@ -751,7 +751,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'رفع پیوند $snap…';
   }
 
   @override
@@ -776,7 +776,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'پیوند دادن $snap…';
   }
 
   @override

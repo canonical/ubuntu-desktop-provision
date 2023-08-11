@@ -172,7 +172,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainNotFound => 'دامنه پیدا نشد';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'کاربرپیسته به دامنه';
 
   @override
   String get activeDirectoryAdminEmpty => 'لازم';
@@ -190,7 +190,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'خطا در پیکربندی وصل شدن به شاخهٔ فعّال';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'شوربختانه در حال حاضر اکتیو دایرکتوری نمی‌تواند برپا شود. پس از به راه افتادن سامانه <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> را برای کمک ببینید.';
 
   @override
   String get networkPageTitle => 'وصل شدن به شبکه';

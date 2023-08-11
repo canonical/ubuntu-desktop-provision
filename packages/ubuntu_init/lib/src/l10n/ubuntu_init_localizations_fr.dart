@@ -5,7 +5,7 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Bienvenue';
 
   @override
   String welcomePageHeader(Object distro) {
