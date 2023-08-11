@@ -4,6 +4,7 @@ import 'package:meta/meta.dart';
 
 const String isoPath = '/cdrom/.disk/info';
 const String localPath = '/etc/os-release';
+const String hostPath = '/var/lib/snapd/hostfs/etc/os-release';
 
 /// A class which contains the system name and version
 class ProductInfo {
@@ -30,6 +31,11 @@ class ProductService {
   ProductInfo getProductInfo() {
     try {
       _cachedProductInfo ??= _extractIsoInfo(_fileSystem.file(isoPath));
+      // ignore: empty_catches
+    } on Exception {}
+
+    try {
+      _cachedProductInfo ??= _extractLocalInfo(_fileSystem.file(hostPath));
       // ignore: empty_catches
     } on Exception {}
 
