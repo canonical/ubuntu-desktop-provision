@@ -1,5 +1,852 @@
 {
   "@@locale": "zh_TW",
-  "appTitle": "Traditional Chinese",
-  "@appTitle": {}
+  "appTitle": "Ubuntu 桌面安裝程式",
+  "@appTitle": {},
+  "changeButtonText": "變更",
+  "@changeButtonText": {},
+  "quitButtonText": "離開安裝程式",
+  "@quitButtonText": {},
+  "loadingHeader": "正在準備 {DISTRO}…",
+  "@loadingHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "welcomePageTitle": "試用或安裝 {DISTRO}",
+  "@welcomePageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "welcomeRepairOption": "修復系統",
+  "@welcomeRepairOption": {},
+  "welcomeRepairDescription": "修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。",
+  "@welcomeRepairDescription": {},
+  "welcomeInstallDescription": "安裝 {RELEASE} ，可與您目前的作業系統共存，或取代該系統，這不會耗費太多時間。",
+  "@welcomeInstallDescription": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "configureSecureBootTitle": "設定安全開機 (Secure Boot)",
+  "@configureSecureBootTitle": {},
+  "configureSecureBootOption": "設定安全開機 (Secure Boot)",
+  "@configureSecureBootOption": {},
+  "chooseSecurityKey": "選擇安全密鑰",
+  "@chooseSecurityKey": {},
+  "dontInstallDriverSoftwareNow": "不要立即安裝驅動程式",
+  "@dontInstallDriverSoftwareNow": {},
+  "dontInstallDriverSoftwareNowDescription": "您可以在「軟體與更新」中再行安裝。",
+  "@dontInstallDriverSoftwareNowDescription": {},
+  "configureSecureBootSecurityKeyRequired": "需要安全密鑰",
+  "@configureSecureBootSecurityKeyRequired": {},
+  "secureBootSecurityKeysDontMatch": "安全密鑰前後不符",
+  "@secureBootSecurityKeysDontMatch": {},
+  "showSecurityKey": "顯示安全密鑰",
+  "@showSecurityKey": {},
+  "updatesOtherSoftwarePageTitle": "應用程式與更新",
+  "@updatesOtherSoftwarePageTitle": {},
+  "normalInstallationTitle": "普通安裝",
+  "@normalInstallationTitle": {},
+  "minimalInstallationSubtitle": "網頁瀏覽器和基本公用程式。",
+  "@minimalInstallationSubtitle": {},
+  "minimalInstallationTitle": "最小安裝",
+  "@minimalInstallationTitle": {},
+  "installDriversTitle": "安裝第三方軟體以使用顯示卡、無線網路等硬體",
+  "@installDriversTitle": {},
+  "installCodecsSubtitle": "這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。",
+  "@installCodecsSubtitle": {},
+  "offlineWarning": "您目前已離線",
+  "@offlineWarning": {},
+  "chooseSecurityKeyTitle": "安全密鑰",
+  "@chooseSecurityKeyTitle": {},
+  "chooseSecurityKeyHint": "選擇安全密鑰",
+  "@chooseSecurityKeyHint": {},
+  "chooseSecurityKeyConfirmHint": "確認安全密鑰",
+  "@chooseSecurityKeyConfirmHint": {},
+  "chooseSecurityKeyMismatch": "安全密鑰前後不符",
+  "@chooseSecurityKeyMismatch": {},
+  "installationTypeTitle": "安裝類型",
+  "@installationTypeTitle": {},
+  "installationTypeOSDetected": "本電腦目前已安裝 {os}，請問您想要做什麼？",
+  "@installationTypeOSDetected": {
+    "type": "text",
+    "placeholders": {
+      "os": {}
+    }
+  },
+  "installationTypeMultiOSDetected": "本電腦目前已安裝多個作業系統，請問您想要做什麼？",
+  "@installationTypeMultiOSDetected": {},
+  "installationTypeAdvancedLabel": "進階功能…",
+  "@installationTypeAdvancedLabel": {},
+  "installationTypeNone": "無",
+  "@installationTypeNone": {},
+  "partitionSizeLabel": "大小：",
+  "@partitionSizeLabel": {},
+  "shutdown": "關機",
+  "@shutdown": {},
+  "restartIntoWindowsTitle": "是否重啟進入 Windows",
+  "@restartIntoWindowsTitle": {},
+  "installationSlidesProductivityTitle": "強化您的生產力",
+  "@installationSlidesProductivityTitle": {},
+  "installationSlidesSupportDocumentation": "官方文件",
+  "@installationSlidesSupportDocumentation": {},
+  "copyingFiles": "正在複製檔案…",
+  "@copyingFiles": {},
+  "installingSystem": "正在安裝系統…",
+  "@installingSystem": {},
+  "configuringSystem": "正在設定系統…",
+  "@configuringSystem": {},
+  "notEnoughDiskSpaceAvailable": "可用：",
+  "@notEnoughDiskSpaceAvailable": {},
+  "notEnoughDiskSpaceRequired": "需要：",
+  "@notEnoughDiskSpaceRequired": {},
+  "refreshUpToDate": "目前的版本 {version} 為最新版本。",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpdating": "正在更新 {snap}…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "請重新啟動安裝程式。",
+  "@refreshRestart": {},
+  "refreshSnapRefresh": "正在更新 {snap}…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "正在準備 {snap}…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "正在清理 {snap}…",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "confirmSecurityKey": "確認安全密鑰",
+  "@confirmSecurityKey": {},
+  "loadingPageTitle": "歡迎使用 {DISTRO}",
+  "@loadingPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "welcomeTryOption": "試用 {RELEASE}",
+  "@welcomeTryOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "welcomeTryDescription": "您可以試用 {RELEASE}，而不會對您的電腦進行任何變動。",
+  "@welcomeTryDescription": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "onBatteryWarning": "<font color=\"{color}\">警告：</font>本電腦沒有外部電源供應。",
+  "@onBatteryWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "updatesOtherSoftwarePageDescription": "你首先想安裝些什麼程式？",
+  "@updatesOtherSoftwarePageDescription": {},
+  "welcomeReleaseNotesLabel": "您也可以閱覽<a href=\"{url}\">版本資訊</a>。",
+  "@welcomeReleaseNotesLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "normalInstallationSubtitle": "瀏覽器、公用程式、辦公室套件、遊戲與媒體播放器。",
+  "@normalInstallationSubtitle": {},
+  "otherOptions": "其它選項",
+  "@otherOptions": {},
+  "installThirdPartyTitle": "安裝第三方軟體以使用顯示卡、無線網路等硬體，並提供額外的媒體格式支援",
+  "@installThirdPartyTitle": {},
+  "rstTitle": "快速儲存技術 (RST) 已啟用",
+  "@rstTitle": {},
+  "rstHeader": "關閉 RST 以繼續安裝",
+  "@rstHeader": {},
+  "rstDescription": "本電腦已啟用 Intel 快速儲存技術 (RST)，為了繼續安裝 {DISTRO} 請先在 Windows 下關閉該功能。",
+  "@rstDescription": {},
+  "rstInstructions": "請用其他裝置掃描 QR Code 或造訪 <a href=\"https://{url}\">{url}</a> 以取得詳細步驟",
+  "@rstInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "windowTitle": "安裝 {RELEASE}",
+  "@windowTitle": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "welcomeInstallOption": "安裝 {RELEASE}",
+  "@welcomeInstallOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "configureSecureBootDescription": "您已經選擇安裝第三方驅動，本功能需要關閉安全開機 (Secure Boot) 才能使用。\n為此您需要在此輸入一個安全密鑰，並在系統重啟時輸入。",
+  "@configureSecureBootDescription": {},
+  "installThirdPartySubtitle": "這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。",
+  "@installThirdPartySubtitle": {},
+  "installDriversSubtitle": "這些驅動程式受到所付文件描述之授權條款約束，均為專有軟體。",
+  "@installDriversSubtitle": {},
+  "installCodecsTitle": "安裝第三方軟體以提供額外的媒體格式支援",
+  "@installCodecsTitle": {},
+  "chooseSecurityKeyHeader": "磁碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全金鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
+  "@chooseSecurityKeyHeader": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "chooseSecurityKeyRequired": "需要輸入安全密鑰",
+  "@chooseSecurityKeyRequired": {},
+  "chooseSecurityKeyWarning": "<font color=\"{color}\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。",
+  "@chooseSecurityKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "installationTypeDualOSDetected": "本電腦目前已安裝 {os1} 與 {os2}，請問您想要做什麼？",
+  "@installationTypeDualOSDetected": {
+    "type": "text",
+    "placeholders": {
+      "os1": {},
+      "os2": {}
+    }
+  },
+  "installationTypeNoOSDetected": "本電腦目前沒有被檢測到的作業系統。請問您想要做什麼？",
+  "@installationTypeNoOSDetected": {},
+  "installationTypeErase": "清除磁碟並安裝 {DISTRO}",
+  "@installationTypeErase": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationFailed": "安裝失敗",
+  "@installationFailed": {},
+  "refreshSnapValidate": "正在驗證 {snap}…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "正在解除 {snap} 的連結…",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "notEnoughDiskSpaceTitle": "可用空間不足",
+  "@notEnoughDiskSpaceTitle": {},
+  "refreshSnapMount": "正在掛載 {snap}…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "正在更新 {snap} 的附加檔案 (assets)…",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "正在更新 {snap} 的核心指令 (kernel command line)…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "notEnoughDiskSpaceUbuntu": "磁碟可用空間不足，無法安裝 {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "refreshSnapStopServices": "正在停止 {snap} 的服務…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "正在移除 {snap} 的指令別名…",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "正在複製 {snap} 的資料…",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshPageTitle": "有可用的更新",
+  "@refreshPageTitle": {},
+  "refreshSnapSetupProfiles": "正在設定 {snap} 的安全設定檔…",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshCurrent": "目前 {snap} 的版本是 {version}。",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshSnapLink": "正在連結 {snap}…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshInstall": "更新到版本 {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapPrerequisites": "正在確保 {snap} 的相依需求…",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "正在連接 {snap} 的介面插頭 (plugs) 與插座 (slots)…",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "正在設定 {snap} 的指令別名…",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "正在啟動 {snap} 的服務…",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "TPM 復原密鑰",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "安裝後，您可以透過以下指令來取得您的復原密鑰：",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "installationTypeEraseWarning": "<font color=\"{color}\">警告：</font>這將會刪除所有作業系統下的全部應用程式、文件、圖片、音樂等檔案。",
+  "@installationTypeEraseWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "installationTypeAdvancedTitle": "進階功能",
+  "@installationTypeAdvancedTitle": {},
+  "installationTypeNoneSelected": "尚未選擇任何項目",
+  "@installationTypeNoneSelected": {},
+  "installationTypeLVM": "在新的 {RELEASE} 安裝中使用 LVM",
+  "@installationTypeLVM": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installationTypeLVMSelected": "已選擇 LVM",
+  "@installationTypeLVMSelected": {},
+  "installationTypeLVMEncryptionSelected": "已選擇 LVM 及加密",
+  "@installationTypeLVMEncryptionSelected": {},
+  "installationTypeZFSSelected": "已選擇 ZFS",
+  "@installationTypeZFSSelected": {},
+  "installationTypeEncrypt": "加密新安裝的 {RELEASE} 以確保資訊安全",
+  "@installationTypeEncrypt": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installationTypeEncryptInfo": "在下一步中您需要輸入安全密鑰。",
+  "@installationTypeEncryptInfo": {},
+  "installationTypeZFS": "實驗功能：清除磁碟並使用 ZFS",
+  "@installationTypeZFS": {},
+  "installationTypeTPM": "實驗功能：使用硬體支援的全磁碟加密",
+  "@installationTypeTPM": {},
+  "refreshSnapSetAutoAliases": "正在設定 {snap} 的自動指令別名…",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">警告：</font>本功能僅支援特定硬體配置，且升級 Ubuntu 版本後有失去支援的可能。請在啟用本功能前詳讀<a href=\"{url}\">版本資訊</a>。",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "已選擇 TPM",
+  "@installationTypeTPMSelected": {},
+  "installationTypeReinstall": "清除 {os} 並重新安裝",
+  "@installationTypeReinstall": {
+    "type": "text",
+    "placeholders": {
+      "os": {}
+    }
+  },
+  "installationTypeReinstallWarning": "<font color=\"{color}\">警告：</font>這將會刪除 {os} 下的全部應用程式、文件、圖片、音樂等檔案。",
+  "@installationTypeReinstallWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "os": {}
+    }
+  },
+  "installationTypeAlongside": "安裝 {product} 與 {os} 共存",
+  "@installationTypeAlongside": {
+    "type": "text",
+    "placeholders": {
+      "product": {},
+      "os": {}
+    }
+  },
+  "installationTypeAlongsideDual": "安裝 {product} 與 {os1} 和 {os2} 共存",
+  "@installationTypeAlongsideDual": {
+    "type": "text",
+    "placeholders": {
+      "product": {},
+      "os1": {},
+      "os2": {}
+    }
+  },
+  "installationTypeAlongsideMulti": "安裝 {product} 與其它系統共存",
+  "@installationTypeAlongsideMulti": {
+    "type": "text",
+    "placeholders": {
+      "product": {}
+    }
+  },
+  "installationTypeAlongsideUnknown": "安裝 {product} 與其它分割區共存",
+  "@installationTypeAlongsideUnknown": {
+    "type": "text",
+    "placeholders": {
+      "product": {}
+    }
+  },
+  "installationTypeAlongsideInfo": "應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。",
+  "@installationTypeAlongsideInfo": {},
+  "installationTypeManual": "手動磁碟分割",
+  "@installationTypeManual": {},
+  "selectGuidedStorageDropdownLabel": "選取磁碟：",
+  "@selectGuidedStorageDropdownLabel": {},
+  "installationTypeManualInfo": "您可以手動建立與調整分割區，或是在 {DISTRO} 上使用多個分割區。",
+  "@installationTypeManualInfo": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "selectGuidedStoragePageTitle": "清除磁碟並安裝 {DISTRO}",
+  "@selectGuidedStoragePageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "selectGuidedStorageInstallNow": "立即安裝",
+  "@selectGuidedStorageInstallNow": {},
+  "installAlongsideSpaceDivider": "請拖曳下方的分隔棒來分配磁碟空間：",
+  "@installAlongsideSpaceDivider": {},
+  "installAlongsideHiddenPartitions": "{num} 個小分割區已被隱藏，若需要詳細設定，請使用<a href=\"{url}\">進階分割工具</a>",
+  "@installAlongsideHiddenPartitions": {
+    "type": "text",
+    "placeholders": {
+      "num": {},
+      "url": {}
+    }
+  },
+  "installAlongsideResizePartition": "調整分割區",
+  "@installAlongsideResizePartition": {},
+  "selectGuidedStorageInfoLabel": "會使用整部磁碟：",
+  "@selectGuidedStorageInfoLabel": {},
+  "installAlongsideAllocateSpace": "分配空間",
+  "@installAlongsideAllocateSpace": {},
+  "installAlongsideFiles": "檔案",
+  "@installAlongsideFiles": {},
+  "installAlongsidePartition": "分割區：",
+  "@installAlongsidePartition": {},
+  "installAlongsideAvailable": "剩餘：",
+  "@installAlongsideAvailable": {},
+  "allocateDiskSpace": "手動分割",
+  "@allocateDiskSpace": {},
+  "allocateDiskSpaceInvalidMountPointSlash": "掛載點必須以 \"/\" 開頭",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "installAlongsideSize": "大小：",
+  "@installAlongsideSize": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "掛載點不可包含空白字元",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "diskHeadersMountPoint": "掛載點",
+  "@diskHeadersMountPoint": {},
+  "diskHeadersDevice": "裝置",
+  "@diskHeadersDevice": {},
+  "diskHeadersType": "類型",
+  "@diskHeadersType": {},
+  "diskHeadersSize": "大小",
+  "@diskHeadersSize": {},
+  "diskHeadersSystem": "系統",
+  "@diskHeadersSystem": {},
+  "freeDiskSpace": "可用空間",
+  "@freeDiskSpace": {},
+  "diskHeadersUsed": "已用",
+  "@diskHeadersUsed": {},
+  "diskHeadersFormat": "格式化",
+  "@diskHeadersFormat": {},
+  "newPartitionTable": "新建分割表",
+  "@newPartitionTable": {},
+  "newPartitionTableConfirmationTitle": "新建分割區",
+  "@newPartitionTableConfirmationTitle": {},
+  "newPartitionTableConfirmationMessage": "在整個磁碟上建立新分割表會移除目前所有的分割區，本操作若有需要可以復原。",
+  "@newPartitionTableConfirmationMessage": {},
+  "partitionLimitReached": "已達上限",
+  "@partitionLimitReached": {},
+  "tooManyPrimaryPartitions": "主要分割區過多",
+  "@tooManyPrimaryPartitions": {},
+  "bootLoaderDevice": "安裝開機載入程式的裝置",
+  "@bootLoaderDevice": {},
+  "partitionCreateTitle": "建立分割區",
+  "@partitionCreateTitle": {},
+  "partitionEditTitle": "編輯分割區",
+  "@partitionEditTitle": {},
+  "partitionTypePrimary": "主要分割區",
+  "@partitionTypePrimary": {},
+  "partitionTypeLogical": "邏輯分割區",
+  "@partitionTypeLogical": {},
+  "partitionTypeLabel": "新分割區的類型：",
+  "@partitionTypeLabel": {},
+  "partitionLocationLabel": "新分割區的位置：",
+  "@partitionLocationLabel": {},
+  "partitionLocationBeginning": "此空間的起始位置",
+  "@partitionLocationBeginning": {},
+  "partitionLocationEnd": "此空間的結束位置",
+  "@partitionLocationEnd": {},
+  "partitionFormatLabel": "用於：",
+  "@partitionFormatLabel": {},
+  "partitionFormatNone": "保持未格式化",
+  "@partitionFormatNone": {},
+  "partitionFormatKeep": "保持 {format} 格式",
+  "@partitionFormatKeep": {
+    "type": "text",
+    "placeholders": {
+      "format": {}
+    }
+  },
+  "partitionErase": "格式化分割區",
+  "@partitionErase": {},
+  "partitionMountPointLabel": "掛載點：",
+  "@partitionMountPointLabel": {},
+  "confirmPageTitle": "準備開始安裝",
+  "@confirmPageTitle": {},
+  "confirmPartitionsTitle": "分割區",
+  "@confirmPartitionsTitle": {},
+  "confirmHeader": "若要繼續，下列修改將會被寫入硬碟，您之後可以手動進行調整。",
+  "@confirmHeader": {},
+  "confirmPartitionTables": "下列裝置的分割區將會被修改：",
+  "@confirmPartitionTables": {},
+  "confirmDevicesTitle": "裝置",
+  "@confirmDevicesTitle": {},
+  "confirmPartitionTable": "{serial} ({path})",
+  "@confirmPartitionTable": {
+    "description": "An entry for a disk whose partition table is being changed",
+    "placeholders": {
+      "serial": {},
+      "path": {}
+    }
+  },
+  "confirmPartitionFormat": "分割區 <b>{sysname}</b> 格式化為 <b>{format}</b>",
+  "@confirmPartitionFormat": {
+    "description": "A formatted partition entry",
+    "placeholders": {
+      "sysname": {},
+      "format": {}
+    }
+  },
+  "confirmPartitionResize": "分割區 <b>{sysname}</b> 的大小從 <b>{oldsize}</b> 調整為 <b>{newsize}</b>",
+  "@confirmPartitionResize": {
+    "description": "A resized partition entry",
+    "placeholders": {
+      "sysname": {},
+      "oldsize": {},
+      "newsize": {}
+    }
+  },
+  "confirmPartitionFormatMount": "分割區 <b>{sysname}</b> 格式化為 <b>{format}</b> 並掛載到 <b>{mount}</b>",
+  "@confirmPartitionFormatMount": {
+    "description": "A formatted and mounted partition entry",
+    "placeholders": {
+      "sysname": {},
+      "format": {},
+      "mount": {}
+    }
+  },
+  "confirmPartitionMount": "分割區 <b>{sysname}</b> 掛載到 <b>{mount}</b>",
+  "@confirmPartitionMount": {
+    "description": "A mounted partition entry",
+    "placeholders": {
+      "sysname": {},
+      "mount": {}
+    }
+  },
+  "confirmPartitionCreate": "分割區 <b>{sysname}</b> 將被建立",
+  "@confirmPartitionCreate": {
+    "description": "A created partition entry",
+    "placeholders": {
+      "sysname": {}
+    }
+  },
+  "confirmInstallButton": "開始安裝",
+  "@confirmInstallButton": {},
+  "confirmPartitionChanges": "下列分割區的修改將被套用：",
+  "@confirmPartitionChanges": {},
+  "installationCompleteTitle": "安裝完成",
+  "@installationCompleteTitle": {},
+  "readyToUse": "**{system}** 安裝完成，可以開始使用",
+  "@readyToUse": {
+    "type": "text",
+    "placeholders": {
+      "system": {}
+    }
+  },
+  "restartInto": "重新開機進入 {system}",
+  "@restartInto": {
+    "type": "text",
+    "placeholders": {
+      "system": {}
+    }
+  },
+  "restartWarning": "您現在可以繼續試用 {RELEASE}，但直到電腦重啟前，在此系統上進行的變更與儲存的文件將不會被保存。",
+  "@restartWarning": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "restartNow": "立即重新啟動",
+  "@restartNow": {},
+  "continueTesting": "繼續試用",
+  "@continueTesting": {},
+  "bitlockerTitle": "BitLocker 已被啟動",
+  "@bitlockerTitle": {},
+  "bitlockerHeader": "請關閉 BitLocker 以繼續安裝",
+  "@bitlockerHeader": {},
+  "bitlockerDescription": "本電腦已啟用 Windows BitLocker 加密技術，\n您必須使用 Windows 來開出分割空間，或選擇「{option}」以繼續。",
+  "@bitlockerDescription": {
+    "type": "text",
+    "placeholders": {
+      "option": {}
+    }
+  },
+  "bitlockerInstructions": "請用其他裝置掃描 QR Code 或造訪 <a href=\"https://{url}\">{url}</a> 以取得詳細步驟",
+  "@bitlockerInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "restartIntoWindows": "重啟進入 Windows",
+  "@restartIntoWindows": {},
+  "restartIntoWindowsDescription": "您是否要重啟您的電腦？您之後將要重啟進入 {DISTRO} 的安裝程式才能完成安裝 {DISTRO}。",
+  "@restartIntoWindowsDescription": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesTitle": "歡迎使用 {RELEASE}",
+  "@installationSlidesTitle": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installationSlidesAvailable": "可選用：",
+  "@installationSlidesAvailable": {},
+  "installationSlidesIncluded": "已安裝：",
+  "@installationSlidesIncluded": {},
+  "installationSlidesWelcomeTitle": "快速、免費、滿滿的新功能",
+  "@installationSlidesWelcomeTitle": {},
+  "installationSlidesWelcomeHeader": "最新版本的 {DISTRO} 讓使用電腦成為更加容易的體驗。",
+  "@installationSlidesWelcomeHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesWelcomeBody": "無論您是開發者、創作者、玩家還是管理者，您都能在 {RELEASE} 找到新的工具來提高生產力並增強使用體驗。",
+  "@installationSlidesWelcomeBody": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installationSlidesSoftwareTitle": "包含您需要的所有應用程式",
+  "@installationSlidesSoftwareTitle": {},
+  "installationSlidesSoftwareBody": "在 Ubuntu 軟體中心安裝、管理和更新所有應用程式，包括來自 Snap Store 和 {DISTRO} 套件庫中的上千個應用程式。",
+  "@installationSlidesSoftwareBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesDevelopmentTitle": "利用最佳的開源之力進行開發",
+  "@installationSlidesDevelopmentTitle": {},
+  "installationSlidesCreativityTitle": "激發您的創造力",
+  "@installationSlidesCreativityTitle": {},
+  "installationSlidesDevelopmentBody": "{DISTRO} 乃一個理想的工作站，適合研發應用程式、網站、資料科學、人工智慧/機器學習，以及進行 DevOps 和系統管理。每一個 {DISTRO} 版本皆包含最新的工具鏈，並支援所有主流的開發環境 (IDE)。",
+  "@installationSlidesDevelopmentBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesCreativityBody": "如果您是動畫師、設計師、影片創作者或遊戲開發者，您可以容易的代入您的工作流程到 {DISTRO}，其有開源與行業標準的軟體與應用程式支援。",
+  "@installationSlidesCreativityBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesGamingTitle": "適合進行遊戲",
+  "@installationSlidesGamingTitle": {},
+  "installationSlidesGamingBody": "{DISTRO} 為了增進效能與相容性，支援最新的 NVIDIA 與 Mesa 驅動程式。上千個 Windows 遊戲在 {DISTRO} 上面無需另外配置即可透過如 Steam 等的應用程式上遊玩。",
+  "@installationSlidesGamingBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesSecurityTitle": "隱私與安全",
+  "@installationSlidesSecurityTitle": {},
+  "installationSlidesSecurityBody": "{DISTRO} 提供保持隱私與安全的所有工具，內建防火牆與 VPN 支援，以及一群以隱私為中心的應用程式來保障您有您資料的絕對掌控權。",
+  "@installationSlidesSecurityBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesSecurityLts": "所有 {DISTRO} LTS 版本均提供五年的安全更新，若使用 Ubuntu Pro 訂閱可延長至十年。",
+  "@installationSlidesSecurityLts": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesProductivityBody": "{DISTRO} 桌面包含 LibreOffice，是與 Microsoft Office 相容，用於文件、試算表與簡報的開源應用程式，另有流行的協作工具可供使用。",
+  "@installationSlidesProductivityBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesAccessibilityBody": "{DISTRO} 的中心思想是每個人都能夠使用電腦，{DISTRO} 以先進的親和力工具以及提供變更語言、顏色、文字大小的選項，使得無論何人何地均可以輕鬆使用電腦。",
+  "@installationSlidesAccessibilityBody": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesSupportTitle": "幫助與支援",
+  "@installationSlidesSupportTitle": {},
+  "installationSlidesAccessibilityTitle": "人人均可使用",
+  "@installationSlidesAccessibilityTitle": {},
+  "installationSlidesAccessibilityOrca": "Orca 螢幕閱讀程式",
+  "@installationSlidesAccessibilityOrca": {},
+  "installationSlidesAccessibilityLanguages": "語言支援",
+  "@installationSlidesAccessibilityLanguages": {},
+  "installationSlidesSupportHeader": "{DISTRO} 的官方文件可以透過線上或在 Dock 中的「求助」圖示存取。",
+  "@installationSlidesSupportHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu 含括了各式各樣的問題與回答，而 Ubuntu Discourse 則可為新手與有經驗的使用者提供指南與討論。",
+  "@installationSlidesSupportCommunity": {},
+  "installationSlidesSupportEnterprise": "對於企業使用者，Canonical 提供了商業支援，以便在工作場所輕鬆、安全的安裝與管理 Ubuntu。",
+  "@installationSlidesSupportEnterprise": {},
+  "installationSlidesSupportResources": "有用資源：",
+  "@installationSlidesSupportResources": {},
+  "installationSlidesSupportUbuntuPro": "Ubuntu Pro 的 24/7 全天候企業級支援",
+  "@installationSlidesSupportUbuntuPro": {},
+  "refreshSnapCheckRerefresh": "正在檢查 {snap} 是否需要再次更新…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "正在下載 {snap}…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  }
 }
