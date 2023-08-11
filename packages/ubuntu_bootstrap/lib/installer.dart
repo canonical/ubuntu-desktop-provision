@@ -33,6 +33,8 @@ Future<void> runInstallerApp(
   UbuntuFlavor? flavor,
   ThemeData? theme,
   ThemeData? darkTheme,
+  GenerateAppTitle? onGenerateTitle,
+  Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final options = parseCommandLine(args, onPopulateOptions: (parser) {
     parser.addOption('config',
@@ -150,14 +152,17 @@ Future<void> runInstallerApp(
               flavor: flavor,
               theme: theme,
               darkTheme: darkTheme,
-              onGenerateTitle: (context) {
-                final flavor = ref.watch(flavorProvider);
-                return UbuntuBootstrapLocalizations.of(context)
-                    .windowTitle(flavor.name);
-              },
+              onGenerateTitle: onGenerateTitle ??
+                  (context) {
+                    final flavor = ref.watch(flavorProvider);
+                    return UbuntuBootstrapLocalizations.of(context)
+                        .windowTitle(flavor.name);
+                  },
               locale: ref.watch(localeProvider),
-              localizationsDelegates:
-                  GlobalUbuntuBootstrapLocalizations.delegates,
+              localizationsDelegates: [
+                ...?localizationsDelegates,
+                ...GlobalUbuntuBootstrapLocalizations.delegates,
+              ],
               supportedLocales: supportedLocales,
               home: DefaultAssetBundle(
                 bundle: ProxyAssetBundle(
