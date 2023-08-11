@@ -5,7 +5,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Tervetuloa';
 
   @override
   String welcomePageHeader(Object distro) {

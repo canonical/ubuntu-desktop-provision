@@ -5,93 +5,93 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'ברוך בואך';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'ברוך בואך אל $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'מה חדש?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'התחלה חלקה';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'תמיכה בחוויית הקמה פשוטה יותר.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'חנות יישומים במראה חדש';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'אבטחה משופרת';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">הצגת יומן השינויים</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'מדדים';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'סיוע בשיפור $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'אפשר לשתף נתונים עם $distro בצורה אלמונית כדי לאפשר לנו לשפר את החוויה שלך.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'כן, לשתף את נתוני המערכת שלי עם צוות $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'לא, לא לשתף את נתוני המערכת שלי';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'פרטי דיווח';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'פרטי דיווח';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'משפטי';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'שירותי מיקום';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'להפעיל שירותי מיקום?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'לאפשר ליישומים לדעת מה מיקומך הגאוגרפי.\nאפשר לשנות זאת בכל עת דרך הגדרות המערכת.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'שירותי מיקום';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'פרטיות נתונים';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'חנות אובונטו';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'פתיחה טובה עם יותר יישומים';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'חנות היישומים של אובונטו מציעה מגוון רחב של יישומים שאפשר להתחיל להשתמש במהלך ההקמה.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'פתיחת חנות היישומים';
 }
