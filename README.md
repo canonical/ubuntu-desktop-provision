@@ -36,6 +36,7 @@ classDiagram
 ## Used by
 
 - [Ubuntu Desktop Installer](https://github.com/canonical/ubuntu-desktop-installer)
+- [Ubuntu Flavor Installer](https://github.com/canonical/ubuntu-flavor-installer)
 - [Ubuntu Core Desktop Init](https://github.com/canonical/ubuntu-core-desktop-init)
 - [Ubuntu Welcome](https://github.com/canonical/ubuntu-welcome)
 
