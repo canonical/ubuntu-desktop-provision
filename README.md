@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/canonical/ubuntu-desktop-provision/actions/workflows/ci.yml/badge.svg)](https://github.com/canonical/ubuntu-desktop-provision/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/canonical/ubuntu-desktop-provision/branch/main/graph/badge.svg?token=JcedDc47dU)](https://codecov.io/gh/canonical/ubuntu-desktop-provision)
+[![weblate](https://hosted.weblate.org/widget/ubuntu-desktop-installer/svg-badge.svg)](https://hosted.weblate.org/engage/ubuntu-desktop-installer/)
 [![screenshots](https://img.shields.io/badge/screenshots-gray?logo=ubuntu)](https://github.com/canonical/ubuntu-desktop-provision-screenshots)
 
 ```mermaid
@@ -72,6 +73,10 @@ Lookup order:
 - `/usr/local/share/ubuntu-provision.{conf,yaml,yml}` (oem)
 - `/usr/share/ubuntu-provision.{conf,yaml,yml}` (distro)
 - `<app>/data/flutter_assets/ubuntu-provision.{conf,yaml,yml}` (app)
+
+## Translations
+
+This project is being translated using [Weblate](https://hosted.weblate.org/engage/ubuntu-desktop-installer/), a web tool designed to ease translating for both developers and translators.
 
 ## Contributing
 
