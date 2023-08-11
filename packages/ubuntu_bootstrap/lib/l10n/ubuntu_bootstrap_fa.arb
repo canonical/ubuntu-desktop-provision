@@ -553,5 +553,65 @@
     "placeholders": {
       "DISTRO": {}
     }
+  },
+  "installationTypeTPMSelected": "TPM گزیده",
+  "@installationTypeTPMSelected": {},
+  "refreshUpdating": "به روز رساندن {snap}…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "تازه سازی {snap}…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshPageTitle": "به‌روز رسانی موجود",
+  "@refreshPageTitle": {},
+  "refreshSnapPrepare": "آماده سازی {snap}…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "بار گرفتن {snap}…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "اعتبار سنجی {snap}…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "سوار کردن {snap}…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "رفع پیوند {snap}…",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "پیوند دادن {snap}…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
   }
 }

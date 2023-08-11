@@ -589,5 +589,201 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "installationTypeTPM": "ניסיוני: להפעיל הצפנת מלוא הכונן בגיבוי חומרה",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM נבחר",
+  "@installationTypeTPMSelected": {},
+  "refreshRestart": "נא להפעיל את תוכנית ההתקנה מחדש.",
+  "@refreshRestart": {},
+  "refreshSnapPrerequisites": "התלויות של {snap} נבדקות…",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">אזהרה:</font> יכולת זאת נתמכת רק בהגדרות חומרה מסוימות ועלולה שלא לתמוך בשדרוג לגרסאות עתידיות של אובונטו. נא לקרוא את <a href=\"{url}\">הערות המהדורה</a> טרם ההפעלה.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshPageTitle": "קיים עדכון",
+  "@refreshPageTitle": {},
+  "refreshSnapRemoveAliases": "הכינויים של {snap} נמחקים…",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshCurrent": "הגרסה הנוכחית של {snap} היא {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshSnapRefresh": "{snap} מתרענן…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "הרענון של {snap} נבדק…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "{snap} בהכנות…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "הקישור של {snap} מנותק…",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "{snap} בהורדה…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "{snap} באימות…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "{snap} מעוגן…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "שירותי {snap} נעצרים…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "המשאבים של {snap} מתעדכנים…",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "שורת פקודת הליבה של {snap} מתעדכנת…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "הנתונים של {snap} מועתקים…",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshInstall": "עדכון לגרסה {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "פרופילי האבטחה של {snap} מוגדרים…",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "{snap} מקושר…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "הגרסה הנוכחית של {version} עדכנית.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapAutoConnect": "התקעים והשקעים של {snap} מחוברים…",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "הכינויים האוטומטיים של {snap} מוגדרים…",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "הכינויים של {snap} מוגדרים…",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "השירותים של {snap} מופעלים…",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "{snap} מתפנה…",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "מפתח שחזור TPM",
+  "@recoveryKeyTitle": {},
+  "refreshUpdating": "{snap} מתעדכן…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">אזהרה:</font> איבוד מפתח האבטחה יוביל לאיבוד הנתונים שלך. במידת הצורך, כדאי לכתוב את המפתח שלך על נייר ולשמור אותו במקום בטוח בנפרד.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "recoveryKeyCommand": "הגישה למפתח השחזור שלך לאחר ההתקנה אפשרית באמצעות הפקודה:",
+  "@recoveryKeyCommand": {}
 }
