@@ -1,6 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
+
+extension WizardFlavorX on UbuntuFlavor {
+  ThemeData? get theme => yaru?.theme;
+  ThemeData? get darkTheme => yaru?.darkTheme;
+
+  YaruVariant? get yaru => switch (this) {
+        UbuntuFlavor.budgie => YaruVariant.ubuntuBudgieBlue,
+        UbuntuFlavor.cinnamon => YaruVariant.ubuntuCinnamonBrown,
+        UbuntuFlavor.kubuntu => YaruVariant.kubuntuBlue,
+        UbuntuFlavor.lubuntu => YaruVariant.lubuntuBlue,
+        UbuntuFlavor.mate => YaruVariant.ubuntuMateGreen,
+        UbuntuFlavor.studio => YaruVariant.ubuntuStudioBlue,
+        UbuntuFlavor.unity => YaruVariant.ubuntuUnityPurple,
+        UbuntuFlavor.xubuntu => YaruVariant.xubuntuBlue,
+        _ => null,
+      };
+}
 
 extension WizardThemeDataX on ThemeData {
   ThemeData customize() {

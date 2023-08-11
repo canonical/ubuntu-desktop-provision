@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
@@ -7,6 +8,7 @@ import 'wizard_theme.dart';
 class WizardApp extends StatelessWidget {
   const WizardApp({
     super.key,
+    this.flavor,
     this.theme,
     this.darkTheme,
     this.onGenerateTitle,
@@ -16,6 +18,7 @@ class WizardApp extends StatelessWidget {
     required this.home,
   });
 
+  final UbuntuFlavor? flavor;
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final GenerateAppTitle? onGenerateTitle;
@@ -35,8 +38,9 @@ class WizardApp extends StatelessWidget {
             YaruWindow.of(context).setTitle(title);
             return title;
           },
-          theme: (theme ?? yaru.theme)?.customize(),
-          darkTheme: (darkTheme ?? yaru.darkTheme)?.customize(),
+          theme: (theme ?? flavor?.theme ?? yaru.theme)?.customize(),
+          darkTheme:
+              (darkTheme ?? flavor?.darkTheme ?? yaru.darkTheme)?.customize(),
           highContrastTheme: yaruHighContrastLight.customize(),
           highContrastDarkTheme: yaruHighContrastDark.customize(),
           debugShowCheckedModeBanner: false,
