@@ -190,7 +190,7 @@
   "@rstTitle": {},
   "rstHeader": "關閉 RST 以繼續安裝",
   "@rstHeader": {},
-  "rstDescription": "本電腦已啟用 Intel 快速儲存技術 (RST)，為了繼續安裝 {DISTRO} 請先在 Windows 下關閉該功能。",
+  "rstDescription": "本電腦已啟用 Intel 快速儲存技術 (RST)，為了繼續安裝 Ubuntu 請先在 Windows 下關閉該功能。",
   "@rstDescription": {},
   "rstInstructions": "請用其他裝置掃描 QR Code 或造訪 <a href=\"https://{url}\">{url}</a> 以取得詳細步驟",
   "@rstInstructions": {
@@ -221,7 +221,7 @@
   "@installDriversSubtitle": {},
   "installCodecsTitle": "安裝第三方軟體以提供額外的媒體格式支援",
   "@installCodecsTitle": {},
-  "chooseSecurityKeyHeader": "磁碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全金鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
+  "chooseSecurityKeyHeader": "磁碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全密鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
   "@chooseSecurityKeyHeader": {
     "type": "text",
     "placeholders": {
