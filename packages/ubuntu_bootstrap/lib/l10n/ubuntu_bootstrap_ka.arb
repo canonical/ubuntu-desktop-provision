@@ -35,5 +35,28 @@
   },
   "rstTitle": "RST ჩართულია",
   "@rstTitle": {},
-  "@keyboardHeader": {}
+  "loadingPageTitle": "მოგესალმებათ {DISTRO}",
+  "@loadingPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "loadingHeader": "{DISTRO}-ის მომზადება…",
+  "@loadingHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "installAlongsideAvailable": "ხელმისაწვდომი:",
+  "@installAlongsideAvailable": {},
+  "installAlongsidePartition": "დანაყოფი:",
+  "@installAlongsidePartition": {},
+  "installAlongsideSize": "ზომა:",
+  "@installAlongsideSize": {},
+  "diskHeadersDevice": "მოწყობილობა",
+  "@diskHeadersDevice": {},
+  "diskHeadersType": "ტიპი",
+  "@diskHeadersType": {}
 }
