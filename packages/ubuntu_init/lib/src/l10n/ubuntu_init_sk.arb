@@ -1,1 +1,76 @@
-{}
+{
+  "welcomeStartSubtitle": "Podpora jednoduchšieho nastavenia.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStartTitle": "Zjednodušený štart",
+  "@welcomeStartTitle": {},
+  "welcomeStoreSubtitle": "Nájsť svoj obľúbený softvér nebolo nikdy jednoduchšie.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Vylepšené zabezpečenie",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Zobraziť zoznam zmien</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "welcomeStoreTitle": "Nový vzhľad obchodu s aplikáciami",
+  "@welcomeStoreTitle": {},
+  "welcomeSecuritySubtitle": "Nové možnosti pre hardvérové šifrovanie alebo ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryLabelOn": "Áno, zdieľať systémové údaje s {distro} tímom",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Nie, nezdieľať systémové údaje",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Podrobnosti hlásenia",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Podrobnosti hlásenia",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "Právne",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Lokalizačné služby",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Povoliť lokalizačné služby?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Dajte aplikáciám informácie o svojej geografickej polohe.\nMôžete to kedykoľvek zmeniť v systémových nastaveniach.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Lokalizačné služby",
+  "@privacyLocationEnable": {},
+  "storeOpen": "Otvoriť obchod s aplikáciami",
+  "@storeOpen": {},
+  "storeDescription": "Obchod s aplikáciami Ubuntu ponúka celú škálu aplikácií, s ktorými môžete začať hneď od začiatku.",
+  "@storeDescription": {},
+  "welcomePageTitle": "Vitajte",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Vitajte v {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "ČO JE NOVÉ?",
+  "@welcomeWhatsNew": {},
+  "telemetryHeader": "Pomôžte zlepšiť {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Anonymné zdieľanie údajov s {distro} aby sme mohli zlepšiť vaše skúsenosti.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyPolicyLink": "Ochrana osobných údajov",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Obchod Ubuntu",
+  "@storeTitle": {},
+  "storeHeader": "Začnite s viacerými aplikáciami",
+  "@storeHeader": {}
+}
