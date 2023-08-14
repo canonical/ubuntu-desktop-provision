@@ -665,7 +665,7 @@
       "version": {}
     }
   },
-  "refreshInstall": "Aktualizácia na verziu {version}",
+  "refreshInstall": "Aktualizovať na verziu {version}",
   "@refreshInstall": {
     "type": "text",
     "placeholders": {
@@ -686,7 +686,7 @@
       "snap": {}
     }
   },
-  "refreshSnapPrerequisites": "Kontrolujú sa predpoklady {snap}...",
+  "refreshSnapPrerequisites": "Kontrolujú sa súčasti {snap}...",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
@@ -835,7 +835,7 @@
       "snap": {}
     }
   },
-  "refreshSnapAutoConnect": "Pripája sa {snap} zástrčky a sloty...",
+  "refreshSnapAutoConnect": "Pripájajú sa zástrčky a sloty {snap}...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
