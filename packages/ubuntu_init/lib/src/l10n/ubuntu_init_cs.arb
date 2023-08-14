@@ -3,7 +3,7 @@
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "CO JE NOVÉHO?",
   "@welcomeWhatsNew": {},
-  "welcomeStartSubtitle": "Podpora jasnějšího nastavování.",
+  "welcomeStartSubtitle": "Podporuje srozumitelnější nastavování.",
   "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Nový vzhled katalogu aplikací",
   "@welcomeStoreTitle": {},
@@ -48,5 +48,29 @@
     "placeholders": {
       "distro": {}
     }
-  }
+  },
+  "telemetryReportLabel": "Podrobnosti hlášení",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Podrobnosti hlášení",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "Právní informace",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Služby určování polohy",
+  "@privacyPageTitle": {},
+  "privacyLocationEnable": "Služby určování polohy",
+  "@privacyLocationEnable": {},
+  "privacyLocationTitle": "Zapnout služby určování polohy?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "Soukromí údajů",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Obchod Ubuntu",
+  "@storeTitle": {},
+  "storeHeader": "Začněte s více aplikacemi",
+  "@storeHeader": {},
+  "storeDescription": "Ubuntu obchod s aplikacemi nabízí širokou škálu aplikací, kterými je možné začít.",
+  "@storeDescription": {},
+  "storeOpen": "Otevřít Obchod s aplikacemi",
+  "@storeOpen": {}
 }
