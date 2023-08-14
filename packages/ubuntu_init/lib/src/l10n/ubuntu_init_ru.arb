@@ -12,7 +12,7 @@
       "url": {}
     }
   },
-  "telemetryPageTitle": "Телеметрия",
+  "telemetryPageTitle": "Сбор данных",
   "@telemetryPageTitle": {},
   "welcomeStoreTitle": "Новый внешний вид центра приложений",
   "@welcomeStoreTitle": {},
@@ -68,5 +68,9 @@
   "welcomeStoreSubtitle": "Поиск любимого программного обеспечения ещё никогда не был таким простым.",
   "@welcomeStoreSubtitle": {},
   "welcomeSecuritySubtitle": "Новые параметры для аппаратного или ZFS шифрования.",
-  "@welcomeSecuritySubtitle": {}
+  "@welcomeSecuritySubtitle": {},
+  "welcomeStartSubtitle": "Поддержка более чистой настройки.",
+  "@welcomeStartSubtitle": {},
+  "telemetryLegalLabel": "Правовая информация",
+  "@telemetryLegalLabel": {}
 }
