@@ -644,5 +644,201 @@
     "placeholders": {
       "DISTRO": {}
     }
+  },
+  "refreshSnapPrerequisites": "Zajišťování závislostí pro {snap}…",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "Znovunačítání {snap}…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "Napojování {snap}…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPM": "EXPERIMENTÁLNÍ: zapnout na hardware založené šifrování celého disku",
+  "@installationTypeTPM": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Varování:</font> Tato funkce je podporovaná pouze na určitých kombinacích hardware a může se stát, že nebude podporován přechod na budoucí vydání Ubuntu. Před zapnutím si přečtětě <a href=\"{url}\">poznámky k vydání</a>.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "TPM vybráno",
+  "@installationTypeTPMSelected": {},
+  "refreshPageTitle": "Je k dispozici aktualizace",
+  "@refreshPageTitle": {},
+  "refreshCurrent": "Stávající verze {snap} je {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshInstall": "Aktualizovat na verzi {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Zjišťování opětovného znovunačítání {snap}…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "Stávající verze {version} je aktuální.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpdating": "Aktualizování {snap}…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Příprava {snap}…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Instalátor ukončete a pak spusťte znovu.",
+  "@refreshRestart": {},
+  "refreshSnapDownload": "Stahování {snap}…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "Start služeb {snap}…",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Ověřování {snap}…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Připojování {snap}…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Zastavování služeb {snap}…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Odebírání alternativních názvů {snap}…",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Rušení odkazování na {snap}…",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Aktualizace dat {snap}…",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů pro spouštění jádra systému {snap}…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Kopírování dat {snap}…",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Nastavování profilů zabezpečení {snap}…",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Připojování rozhraní a slotů {snap}…",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Nastavování automatických alternativních názvů pro {snap}…",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "Nastavování alternativních názvů pro {snap}…",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Úklid {snap}…",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "Obnovovací klíč k TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Po dokončení instalace je možné si nechat obnovovací klíč zobrazit pomocí následujícího příkazu:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Varování:</font> Pokud klíč k zabezpečení ztratíte, budou veškerá data ztracena. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
   }
 }
