@@ -88,7 +88,7 @@
   "@partitionSizeLabel": {},
   "shutdown": "關機",
   "@shutdown": {},
-  "restartIntoWindowsTitle": "是否重啟進入 Windows",
+  "restartIntoWindowsTitle": "是否重啟進入 Windows？",
   "@restartIntoWindowsTitle": {},
   "installationSlidesProductivityTitle": "強化您的生產力",
   "@installationSlidesProductivityTitle": {},
@@ -190,7 +190,7 @@
   "@rstTitle": {},
   "rstHeader": "關閉 RST 以繼續安裝",
   "@rstHeader": {},
-  "rstDescription": "本電腦已啟用 Intel 快速儲存技術 (RST)，為了繼續安裝 Ubuntu 請先在 Windows 下關閉該功能。",
+  "rstDescription": "本電腦已啟用 Intel 快速儲存技術 (Rapid Storage Technology)，為了繼續安裝 Ubuntu，請先在 Windows 下關閉該功能。",
   "@rstDescription": {},
   "rstInstructions": "請用其他裝置掃描 QR Code 或造訪 <a href=\"https://{url}\">{url}</a> 以取得詳細步驟",
   "@rstInstructions": {
@@ -692,11 +692,11 @@
   "@restartNow": {},
   "continueTesting": "繼續試用",
   "@continueTesting": {},
-  "bitlockerTitle": "BitLocker 已被啟動",
+  "bitlockerTitle": "BitLocker 已啟用",
   "@bitlockerTitle": {},
   "bitlockerHeader": "請關閉 BitLocker 以繼續安裝",
   "@bitlockerHeader": {},
-  "bitlockerDescription": "本電腦已啟用 Windows BitLocker 加密技術，\n您必須使用 Windows 來開出分割空間，或選擇「{option}」以繼續。",
+  "bitlockerDescription": "本電腦已啟用 Windows BitLocker 加密技術，\n您必須使用 Windows 來建立磁區空間，或選擇「{option}」以繼續。",
   "@bitlockerDescription": {
     "type": "text",
     "placeholders": {
@@ -775,7 +775,7 @@
   },
   "installationSlidesGamingTitle": "適合進行遊戲",
   "@installationSlidesGamingTitle": {},
-  "installationSlidesGamingBody": "{DISTRO} 為了增進效能與相容性，支援最新的 NVIDIA 與 Mesa 驅動程式。上千個 Windows 遊戲在 {DISTRO} 上面無需另外配置即可透過如 Steam 等的應用程式上遊玩。",
+  "installationSlidesGamingBody": "{DISTRO} 為了增進效能與相容性，支援最新的 NVIDIA 與 Mesa 驅動程式。上千個 Windows 遊戲在 {DISTRO} 上面無需另外配置，即可透過如 Steam 等的應用程式上遊玩。",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
@@ -829,7 +829,7 @@
   },
   "installationSlidesSupportCommunity": "Ask Ubuntu 含括了各式各樣的問題與回答，而 Ubuntu Discourse 則可為新手與有經驗的使用者提供指南與討論。",
   "@installationSlidesSupportCommunity": {},
-  "installationSlidesSupportEnterprise": "對於企業使用者，Canonical 提供了商業支援，以便在工作場所輕鬆、安全的安裝與管理 Ubuntu。",
+  "installationSlidesSupportEnterprise": "Canonical 對企業用戶提供商業支援，以便在工作場所輕鬆、安全的安裝與管理 Ubuntu。",
   "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "有用資源：",
   "@installationSlidesSupportResources": {},
