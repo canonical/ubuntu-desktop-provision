@@ -41,7 +41,7 @@
   "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "您可以在「軟體與更新」中再行安裝。",
   "@dontInstallDriverSoftwareNowDescription": {},
-  "configureSecureBootSecurityKeyRequired": "需要安全密鑰",
+  "configureSecureBootSecurityKeyRequired": "安全密鑰為必填欄位",
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "安全密鑰前後不符",
   "@secureBootSecurityKeysDontMatch": {},
@@ -221,14 +221,14 @@
   "@installDriversSubtitle": {},
   "installCodecsTitle": "安裝第三方軟體以提供額外的媒體格式支援",
   "@installCodecsTitle": {},
-  "chooseSecurityKeyHeader": "磁碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全密鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
+  "chooseSecurityKeyHeader": "硬碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全密鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
   "@chooseSecurityKeyHeader": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "chooseSecurityKeyRequired": "需要輸入安全密鑰",
+  "chooseSecurityKeyRequired": "安全密鑰為必填欄位",
   "@chooseSecurityKeyRequired": {},
   "chooseSecurityKeyWarning": "<font color=\"{color}\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。",
   "@chooseSecurityKeyWarning": {
@@ -247,7 +247,7 @@
   },
   "installationTypeNoOSDetected": "本電腦目前沒有被檢測到的作業系統。請問您想要做什麼？",
   "@installationTypeNoOSDetected": {},
-  "installationTypeErase": "清除磁碟並安裝 {DISTRO}",
+  "installationTypeErase": "清除硬碟並安裝 {DISTRO}",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
@@ -293,7 +293,7 @@
       "snap": {}
     }
   },
-  "notEnoughDiskSpaceUbuntu": "磁碟可用空間不足，無法安裝 {DISTRO}",
+  "notEnoughDiskSpaceUbuntu": "硬碟可用空間不足，無法安裝 {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
@@ -409,11 +409,11 @@
       "RELEASE": {}
     }
   },
-  "installationTypeLVMSelected": "已選擇 LVM",
+  "installationTypeLVMSelected": "已選用 LVM",
   "@installationTypeLVMSelected": {},
-  "installationTypeLVMEncryptionSelected": "已選擇 LVM 及加密",
+  "installationTypeLVMEncryptionSelected": "已選用 LVM 及加密",
   "@installationTypeLVMEncryptionSelected": {},
-  "installationTypeZFSSelected": "已選擇 ZFS",
+  "installationTypeZFSSelected": "已選用 ZFS",
   "@installationTypeZFSSelected": {},
   "installationTypeEncrypt": "加密新安裝的 {RELEASE} 以確保資訊安全",
   "@installationTypeEncrypt": {
@@ -424,9 +424,9 @@
   },
   "installationTypeEncryptInfo": "在下一步中您需要輸入安全密鑰。",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "實驗功能：清除磁碟並使用 ZFS",
+  "installationTypeZFS": "實驗功能：清除硬碟並使用 ZFS",
   "@installationTypeZFS": {},
-  "installationTypeTPM": "實驗功能：使用硬體支援的全磁碟加密",
+  "installationTypeTPM": "實驗功能：使用 TPM 支援的全硬碟加密",
   "@installationTypeTPM": {},
   "refreshSnapSetAutoAliases": "正在設定 {snap} 的自動指令別名…",
   "@refreshSnapSetAutoAliases": {
@@ -443,7 +443,7 @@
       "url": {}
     }
   },
-  "installationTypeTPMSelected": "已選擇 TPM",
+  "installationTypeTPMSelected": "已選用 TPM 加密",
   "@installationTypeTPMSelected": {},
   "installationTypeReinstall": "清除 {os} 並重新安裝",
   "@installationTypeReinstall": {
@@ -493,9 +493,9 @@
   },
   "installationTypeAlongsideInfo": "應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "手動磁碟分割",
+  "installationTypeManual": "手動硬碟分割",
   "@installationTypeManual": {},
-  "selectGuidedStorageDropdownLabel": "選取磁碟：",
+  "selectGuidedStorageDropdownLabel": "選取硬碟：",
   "@selectGuidedStorageDropdownLabel": {},
   "installationTypeManualInfo": "您可以手動建立與調整分割區，或是在 {DISTRO} 上使用多個分割區。",
   "@installationTypeManualInfo": {
@@ -504,7 +504,7 @@
       "DISTRO": {}
     }
   },
-  "selectGuidedStoragePageTitle": "清除磁碟並安裝 {DISTRO}",
+  "selectGuidedStoragePageTitle": "清除硬碟並安裝 {DISTRO}",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
@@ -513,9 +513,9 @@
   },
   "selectGuidedStorageInstallNow": "立即安裝",
   "@selectGuidedStorageInstallNow": {},
-  "installAlongsideSpaceDivider": "請拖曳下方的分隔棒來分配磁碟空間：",
+  "installAlongsideSpaceDivider": "請拖曳下方的分隔棒來分配硬碟空間：",
   "@installAlongsideSpaceDivider": {},
-  "installAlongsideHiddenPartitions": "{num} 個小分割區已被隱藏，若需要詳細設定，請使用<a href=\"{url}\">進階分割工具</a>",
+  "installAlongsideHiddenPartitions": "{num} 個小型分割區已被隱藏，若需要詳細設定，請使用<a href=\"{url}\">進階分割工具</a>",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -525,7 +525,7 @@
   },
   "installAlongsideResizePartition": "調整分割區",
   "@installAlongsideResizePartition": {},
-  "selectGuidedStorageInfoLabel": "會使用整部磁碟：",
+  "selectGuidedStorageInfoLabel": "會使用整部硬碟：",
   "@selectGuidedStorageInfoLabel": {},
   "installAlongsideAllocateSpace": "分配空間",
   "@installAlongsideAllocateSpace": {},
@@ -563,7 +563,7 @@
   "@newPartitionTable": {},
   "newPartitionTableConfirmationTitle": "新建分割區",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "在整個磁碟上建立新分割表會移除目前所有的分割區，本操作若有需要可以復原。",
+  "newPartitionTableConfirmationMessage": "在整個硬碟上建立新分割表會移除目前所有的分割區，本操作若有需要可以復原。",
   "@newPartitionTableConfirmationMessage": {},
   "partitionLimitReached": "已達上限",
   "@partitionLimitReached": {},
@@ -755,7 +755,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesDevelopmentTitle": "利用最佳的開源之力進行開發",
+  "installationSlidesDevelopmentTitle": "站在開源的肩膀上進行開發",
   "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityTitle": "激發您的創造力",
   "@installationSlidesCreativityTitle": {},
@@ -773,7 +773,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingTitle": "適合進行遊戲",
+  "installationSlidesGamingTitle": "玩遊戲，很可以",
   "@installationSlidesGamingTitle": {},
   "installationSlidesGamingBody": "{DISTRO} 為了增進效能與相容性，支援最新的 NVIDIA 與 Mesa 驅動程式。上千個 Windows 遊戲在 {DISTRO} 上面無需另外配置，即可透過如 Steam 等的應用程式上遊玩。",
   "@installationSlidesGamingBody": {
