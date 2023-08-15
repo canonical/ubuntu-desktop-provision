@@ -115,7 +115,7 @@
   "@chooseSecurityKeyHeader": {},
   "confirmSecurityKey": "Confirme la clave de seguridad",
   "@confirmSecurityKey": {},
-  "configureSecureBootSecurityKeyRequired": "Se necesita una clave de seguridad",
+  "configureSecureBootSecurityKeyRequired": "Se debe ingresar una clave de seguridad",
   "@configureSecureBootSecurityKeyRequired": {},
   "chooseSecurityKeyTitle": "Clave de seguridad",
   "@chooseSecurityKeyTitle": {},
@@ -588,6 +588,202 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
+    }
+  },
+  "installationTypeTPM": "EXPERIMENTAL: Activar el cifrado del disco completo por hardware",
+  "@installationTypeTPM": {},
+  "refreshSnapCopyData": "Copiando los datos {snap}...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Configurando los perfiles de seguridad {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "Enlazando {snap}...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Estableciendo los alias automáticos {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "Configurando los alias {snap}...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshPageTitle": "Actualización disponible",
+  "@refreshPageTitle": {},
+  "installationTypeTPMSelected": "TPM seleccionado",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Advertencia:</font> Esta característica solo es compatible con ciertas configuraciones de hardware y es posible que no admita la actualización a futuras versiones de Ubuntu. Lea las <a href=\"{url}\">notas de la versión</a> antes de activarlo.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshCurrent": "La versión actual de {snap} es {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshSnapPrepare": "Preparando {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "Descargando {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Deteniendo los servicios {snap}...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshInstall": "Actualizar a la versión {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Comprobando la actualización {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Montando {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Validando {snap}...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Eliminando el alias {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Desvinculando {snap}...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Los artículos se están actualizando {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "La versión actual {version} está actualizada.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Actualizando la línea de comandos del kernel {snap} ...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "Actualizando {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Por favor, reinicie el instalador.",
+  "@refreshRestart": {},
+  "recoveryKeyTitle": "Clave de recuperación para el TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Advertencia:</font> Si pierdes esta clave de seguridad, se perderán todos los datos. Si lo necesitas, anota tu clave y guárdala en un lugar seguro.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "refreshSnapStartServices": "Iniciando los servicios {snap}...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyCommand": "Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:",
+  "@recoveryKeyCommand": {},
+  "refreshSnapPrerequisites": "Asegurando {snap} los requisitos previos...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Conectar {snap} las conexiones y dispositivos...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Limpiando {snap}...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "Actualizando {snap}…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
     }
   }
 }
