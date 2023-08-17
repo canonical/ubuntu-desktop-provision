@@ -14,7 +14,7 @@
       "url": {}
     }
   },
-  "telemetryPageTitle": "Prenos údajov",
+  "telemetryPageTitle": "Telemetria",
   "@telemetryPageTitle": {},
   "welcomeStoreTitle": "Nový vzhľad obchodu s aplikáciami",
   "@welcomeStoreTitle": {},
@@ -39,7 +39,7 @@
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Povoliť služby umiestnenia?",
   "@privacyLocationTitle": {},
-  "privacyLocationSubtitle": "Dajte aplikáciám údaje o svojej geografickej polohe.\nMôžete to kedykoľvek zmeniť v systémových nastaveniach.",
+  "privacyLocationSubtitle": "Poskytnite aplikáciám údaje o svojej geografickej polohe.\nMôžete to kedykoľvek zmeniť v systémových nastaveniach.",
   "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Služby umiestnenia",
   "@privacyLocationEnable": {},
@@ -60,14 +60,14 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Anonymné zdieľanie údajov s {distro} aby sme mohli zlepšiť vaše skúsenosti z používania.",
+  "telemetryDescription": "Anonymné zdieľanie údajov s {distro}, aby sme mohli zlepšiť váš dojem z používania.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "privacyPolicyLink": "Ochrana údajov",
+  "privacyPolicyLink": "Súkromie údajov",
   "@privacyPolicyLink": {},
   "storeTitle": "Obchod Ubuntu",
   "@storeTitle": {},
