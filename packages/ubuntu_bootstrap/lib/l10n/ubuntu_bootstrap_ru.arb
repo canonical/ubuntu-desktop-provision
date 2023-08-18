@@ -587,5 +587,201 @@
     "placeholders": {
       "DISTRO": {}
     }
+  },
+  "installationTypeTPM": "ЭКСПЕРИМЕНТАЛЬНО: Включить аппаратное шифрование диска",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM выбран",
+  "@installationTypeTPMSelected": {},
+  "partitionFormatKeep": "Оставить в формате {format}",
+  "@partitionFormatKeep": {
+    "type": "text",
+    "placeholders": {
+      "format": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Удаление псевдонимов {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Отсоединение {snap}...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Подготовка {snap}…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "Обновление {snap}…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Пожалуйста перезапустите установщик.",
+  "@refreshRestart": {},
+  "refreshSnapPrerequisites": "Обеспечение предварительных условий {snap}...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "Обновление данных {snap}…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Внимание:</font> Эта функция поддерживается только на определённых конфигурациях оборудования и может не поддерживать обновление до будущих выпусков Ubuntu. Пожалуйста, прочитайте <a href=\"{url}\">примечания к выпуску</a> перед включением.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshPageTitle": "Доступно обновление",
+  "@refreshPageTitle": {},
+  "refreshCurrent": "Текущей версией {snap} является {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshInstall": "Обновить до версии {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpToDate": "Текущая версия ({version}) является последней.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapDownload": "Скачивание {snap}…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Проверка {snap}…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Монтирование {snap}…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Остановка сервисов {snap}…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Обновление ассетов {snap}…",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Обновление командной строки ядра {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Настройка профилей безопасности {snap}…",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Копирование данных {snap}…",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "Соединение {snap}…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Подключение вилок и слотов {snap}...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Настройка автоматических псевдонимов {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "Настройка псевдонимов {snap}...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "Запуск сервисов {snap}…",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Очистка {snap}…",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "Ключ восстановления TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Вы можете получить доступ к ключу восстановления после установки с помощью следующей команды:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Предупреждение:</font> Если вы потеряете этот ключ безопасности, то все данные будут потеряны. Если вам нужно, запишите свой ключ и храните его в любом безопасном месте.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
   }
 }

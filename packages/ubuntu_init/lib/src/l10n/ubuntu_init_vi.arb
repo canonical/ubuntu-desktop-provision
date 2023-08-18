@@ -1,1 +1,60 @@
-{}
+{
+  "welcomePageTitle": "Chào mừng",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Chào mừng tới {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "CÓ GÌ MỚI?",
+  "@welcomeWhatsNew": {},
+  "welcomeStoreTitle": "App Store với diện mạo mới",
+  "@welcomeStoreTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Xem nhật ký thay đổi</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Thu thập dữ liệu",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "Chia sẻ dữ liệu ẩn danh với {distro} để chúng tôi có thể cải thiện trải nghiệm của bạn.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Có, chia sẻ dữ liệu hệ thống với đội ngũ {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Không, không chia sẻ dữ liệu gì hết",
+  "@telemetryLabelOff": {},
+  "telemetryLegalLabel": "Hợp pháp",
+  "@telemetryLegalLabel": {},
+  "privacyLocationEnable": "Dịch vụ định vị",
+  "@privacyLocationEnable": {},
+  "welcomeStartSubtitle": "Hỗ trợ trải nghiệm cài đặt gọn gàng hơn.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "Tìm kiếm phần mềm yêu thích của bạn chưa bao giờ dễ dàng hơn.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Bảo mật được tăng cường",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "Các tùy chọn mới cho mã hóa bằng phần cứng hoặc ZTS.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryHeader": "Giúp cải thiện {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Bật dịch vụ định vị?",
+  "@privacyLocationTitle": {},
+  "privacyPageTitle": "Dịch vụ định vị",
+  "@privacyPageTitle": {},
+  "privacyLocationSubtitle": "Cho phép các ứng dụng biết vị trí địa lý của bạn.\nBạn có thể thay đổi điều này bất cứ lúc nào trong Cài đặt hệ thống.",
+  "@privacyLocationSubtitle": {}
+}

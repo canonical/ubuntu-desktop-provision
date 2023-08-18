@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageHeader": "Добро пожаловать в {distro}",
+  "@welcomePageHeader": {},
+  "welcomeStartTitle": "Оптимизированный запуск",
+  "@welcomeStartTitle": {},
+  "welcomeSecurityTitle": "Повышенная безопасность",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Посмотреть список изменений</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Сбор данных",
+  "@telemetryPageTitle": {},
+  "welcomeStoreTitle": "Новый внешний вид центра приложений",
+  "@welcomeStoreTitle": {},
+  "telemetryLabelOn": "Да, поделиться системными данными с командой {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Нет, не делиться системными данными",
+  "@telemetryLabelOff": {},
+  "privacyPageTitle": "Сервисы определения местоположения",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Включить сервисы определения местоположения?",
+  "@privacyLocationTitle": {},
+  "privacyPolicyLink": "Конфиденциальность данных",
+  "@privacyPolicyLink": {},
+  "storeHeader": "Начните работу с другими приложениями",
+  "@storeHeader": {},
+  "telemetryHeader": "Помочь улучшить {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Длитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "Детали отчёта",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Детали отчёта",
+  "@telemetryReportTitle": {},
+  "privacyLocationEnable": "Сервисы определения местоположения",
+  "@privacyLocationEnable": {},
+  "storeOpen": "Открыть центр приложений",
+  "@storeOpen": {},
+  "privacyLocationSubtitle": "Сообщите приложениям о вашем географическом местоположении.\nЭтот параметр вы можете изменить в любое время в системных настройках.",
+  "@privacyLocationSubtitle": {},
+  "storeTitle": "Центр приложений Ubuntu",
+  "@storeTitle": {},
+  "storeDescription": "Центр приложений Ubuntu предлагает целый ряд приложений, с которыми вы можете начать работу с самого начала.",
+  "@storeDescription": {},
+  "welcomePageTitle": "Добро пожаловать",
+  "@welcomePageTitle": {},
+  "welcomeWhatsNew": "ЧТО НОВОГО?",
+  "@welcomeWhatsNew": {},
+  "welcomeStoreSubtitle": "Поиск любимого программного обеспечения ещё никогда не был таким простым.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecuritySubtitle": "Новые параметры для аппаратного или ZFS шифрования.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeStartSubtitle": "Поддержка более чистой настройки.",
+  "@welcomeStartSubtitle": {},
+  "telemetryLegalLabel": "Правовая информация",
+  "@telemetryLegalLabel": {}
+}

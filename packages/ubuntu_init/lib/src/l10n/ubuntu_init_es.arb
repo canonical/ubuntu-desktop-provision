@@ -1,1 +1,76 @@
-{}
+{
+  "welcomeStoreTitle": "Un nuevo aspecto para la Tienda de Aplicaciones",
+  "@welcomeStoreTitle": {},
+  "telemetryReportLabel": "Detalles del informe",
+  "@telemetryReportLabel": {},
+  "welcomePageTitle": "Bienvenido",
+  "@welcomePageTitle": {},
+  "welcomeStartSubtitle": "Apoya una experiencia de configuración más limpia.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStartTitle": "Un comienzo simplificado",
+  "@welcomeStartTitle": {},
+  "welcomeStoreSubtitle": "Nunca ha sido tan fácil encontrar tu software favorito.",
+  "@welcomeStoreSubtitle": {},
+  "welcomePageHeader": "Bienvenido a {distro}",
+  "@welcomePageHeader": {},
+  "welcomeSecurityTitle": "Mayor seguridad",
+  "@welcomeSecurityTitle": {},
+  "privacyPageTitle": "Servicios de ubicación",
+  "@privacyPageTitle": {},
+  "welcomeWhatsNew": "¿QUÉ HAY DE NUEVO?",
+  "@welcomeWhatsNew": {},
+  "welcomeSecuritySubtitle": "Nuevas opciones de cifrado por hardware o ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryReportTitle": "Detalles del informe",
+  "@telemetryReportTitle": {},
+  "privacyLocationTitle": "¿Habilitar los servicios de ubicación?",
+  "@privacyLocationTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Ver registro de cambios</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetría",
+  "@telemetryPageTitle": {},
+  "privacyLocationSubtitle": "Permite que las aplicaciones conozcan tu ubicación geográfica.\nPuedes cambiar esto en cualquier momento en los Ajustes del sistema.",
+  "@privacyLocationSubtitle": {},
+  "telemetryHeader": "Ayuda a mejorar {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationEnable": "Servicios de ubicación",
+  "@privacyLocationEnable": {},
+  "telemetryDescription": "Comparte datos de forma anónima con {distro} para que podamos mejorar tu experiencia.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Sí, comparte los datos del sistema con el equipo {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "No, no compartir datos del sistema",
+  "@telemetryLabelOff": {},
+  "telemetryLegalLabel": "Información Legal",
+  "@telemetryLegalLabel": {},
+  "privacyPolicyLink": "Protección de los datos",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Tienda de Ubuntu",
+  "@storeTitle": {},
+  "storeHeader": "Comienza con más aplicaciones",
+  "@storeHeader": {},
+  "storeDescription": "La Tienda de aplicaciones de Ubuntu ofrece una serie de aplicaciones con las que puedes empezar desde el primer momento.",
+  "@storeDescription": {},
+  "storeOpen": "Abrir la Tienda de Aplicaciones",
+  "@storeOpen": {}
+}

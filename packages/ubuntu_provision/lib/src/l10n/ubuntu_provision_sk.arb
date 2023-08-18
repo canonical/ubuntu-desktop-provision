@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Pripojiť sa k sieti",
   "@networkPageTitle": {},
-  "networkPageHeader": "Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom, alebo si vyberte Wi-Fi sieť",
+  "networkPageHeader": "Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom alebo si vyberte Wi-Fi sieť",
   "@networkPageHeader": {},
   "networkWiredOption": "Použiť káblové pripojenie",
   "@networkWiredOption": {},

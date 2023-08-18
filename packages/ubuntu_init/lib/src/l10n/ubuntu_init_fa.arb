@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageTitle": "خوش آمدید",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "به {distro}‌ خوش آمدید",
+  "@welcomePageHeader": {},
+  "welcomeStartTitle": "شروعی روان‌تر",
+  "@welcomeStartTitle": {},
+  "welcomeStoreTitle": "فروشگاه کاره با ظاهر جدید",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "امنیت بهبود یافته",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">دیدن گزارش دگرگونی</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "گزارش از دور",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "هم‌رسانی ناشناس داده‌ها با {distro} برای بهبود تجربه‌تان.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "بله. داده‌ها با گروه {distro} هم‌رسانی شوند",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportTitle": "جزییات گزارش",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "حقوقی",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "خدمات مکانی",
+  "@privacyPageTitle": {},
+  "privacyLocationEnable": "خدمات مکانی",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "محرمانگی داده‌ها",
+  "@privacyPolicyLink": {},
+  "storeTitle": "فروشگاه اوبونتو",
+  "@storeTitle": {},
+  "storeHeader": "آغاز به کار با برنامه‌های بیش‌تر",
+  "@storeHeader": {},
+  "storeOpen": "گشودن فروشگاه کاره",
+  "@storeOpen": {},
+  "welcomeWhatsNew": "چیزهای جدید؟",
+  "@welcomeWhatsNew": {},
+  "welcomeStartSubtitle": "پشتیبانی از یک تجربهٔ برپایی تمیزتر.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "یافتن نرم‌افزارهای دلخواهتان هرگز بدین سادگی نبوده.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecuritySubtitle": "گزینه‌هایی جدید برای رمزنگاری ZFS یا با پشتیبانی از سخت‌افزار.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryHeader": "کمک به بهبود {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "نه. داده‌های سامانه هم‌رسانی نشوند",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "گزارش کردن جزییات",
+  "@telemetryReportLabel": {},
+  "privacyLocationTitle": "به کار انداختن خدمات مکانی؟",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.",
+  "@privacyLocationSubtitle": {},
+  "storeDescription": "فروشگاه کارهٔ اوبونتو دامنه‌ای وسیع از کاره‌هایی که می‌توانید به راحتی بگیریدشان را فراهم می‌کند.",
+  "@storeDescription": {}
+}

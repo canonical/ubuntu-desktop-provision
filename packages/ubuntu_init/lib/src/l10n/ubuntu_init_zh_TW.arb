@@ -1,1 +1,76 @@
-{}
+{
+  "welcomeWhatsNew": "新功能介紹",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "流暢的開局",
+  "@welcomeStartTitle": {},
+  "telemetryPageTitle": "數據蒐集",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "將您的資料匿名分享予 {distro} 以改善您的體驗。",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomePageTitle": "歡迎",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "歡迎使用 {distro}",
+  "@welcomePageHeader": {},
+  "welcomeStartSubtitle": "提供更加簡潔的安裝體驗。",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "尋找您喜愛的軟體從未如此簡單。",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "增強安全性",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "提供硬體支援磁碟加密或 ZFS 加密的選項。",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">檢視變更日誌</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryHeader": "協助我們改善 {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "是，請將系統資料分享給 {distro} 團隊",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "回報資料細節",
+  "@telemetryReportLabel": {},
+  "telemetryLabelOff": "否，不要分享系統資料",
+  "@telemetryLabelOff": {},
+  "telemetryReportTitle": "回報資料細節",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "法律條款",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "地理位置服務",
+  "@privacyPageTitle": {},
+  "privacyLocationSubtitle": "讓應用程式知道您的地理位置，\n您可以在「系統設定」中隨時變更。",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "地理位置",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "隱私條款",
+  "@privacyPolicyLink": {},
+  "privacyLocationTitle": "是否開啟地理位置服務？",
+  "@privacyLocationTitle": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "storeHeader": "取得更多應用程式",
+  "@storeHeader": {},
+  "storeDescription": "Ubuntu 的應用程式商店提供各種應用程式，供您立即安裝使用。",
+  "@storeDescription": {},
+  "storeOpen": "開啟應用程式商店",
+  "@storeOpen": {},
+  "welcomeStoreTitle": "商店新介面",
+  "@welcomeStoreTitle": {}
+}
