@@ -1,1 +1,8 @@
-{}
+{
+  "welcomePageHeader": "{distro} dağıtımına hoş geldiniz",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "NELER YENİ?",
+  "@welcomeWhatsNew": {},
+  "welcomePageTitle": "Hoş Geldiniz",
+  "@welcomePageTitle": {}
+}
