@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'Vybrané ZFS';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EXPERIMENTÁLNE: Povolenie hardvérového šifrovania celého disku';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Upozornenie:</font> Táto funkcia je podporovaná iba v určitých hardvérových konfiguráciách a nemusí podporovať inováciu na budúce vydania Ubuntu. Prečítajte si <a href=\"$url\">poznámky k vydaniu</a> pred povolením.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'Vybrané TPM';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -679,139 +679,139 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Vyžadované:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'K dispozícii je aktualizácia';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'Aktuálna verzia $snap je $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Aktualizovať na verziu $version';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'Aktuálna verzia $version je najnovšia.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'Aktualizuje sa $snap...';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Prosím reštartujte inštalátor.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Kontrolujú sa súčasti $snap...';
   }
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'Obnovuje sa $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Kontroluje sa opätovné obnovenie $snap...';
   }
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'Pripravuje sa $snap...';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'Sťahuje sa $snap...';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'Overuje sa $snap...';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'Pripája sa $snap...';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'Zastavujú sa služby $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'Odstraňuje sa alias $snap...';
   }
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'Odpája sa $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(Object snap) {
-    return 'Updating $snap assets...';
+    return 'Aktualizujú sa položky $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(Object snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Aktualizuje sa príkazový riadok jadra $snap...';
   }
 
   @override
   String refreshSnapCopyData(Object snap) {
-    return 'Copying $snap data...';
+    return 'Kopírujú sa údaje $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(Object snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Nastavujú sa bezpečnostné profily $snap...';
   }
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'Prepája sa $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(Object snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Pripájajú sa zástrčky a sloty $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(Object snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Nastavujú sa automatické aliasy $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(Object snap) {
-    return 'Setting up $snap aliases...';
+    return 'Nastavujú sa aliasy $snap ...';
   }
 
   @override
   String refreshSnapStartServices(Object snap) {
-    return 'Starting $snap services...';
+    return 'Spúšťajú sa služby $snap...';
   }
 
   @override
   String refreshSnapCleanup(Object snap) {
-    return 'Cleaning up $snap...';
+    return 'Čistí sa $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM kľúč na obnovenie';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:';
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim dátam sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.';
   }
 }

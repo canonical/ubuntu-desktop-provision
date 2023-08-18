@@ -19,7 +19,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Zjednodušený začátek';
 
   @override
-  String get welcomeStartSubtitle => 'Podpora jasnějšího nastavování.';
+  String get welcomeStartSubtitle => 'Podporuje srozumitelnější nastavování.';
 
   @override
   String get welcomeStoreTitle => 'Nový vzhled katalogu aplikací';
@@ -60,38 +60,38 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ne, nesdílet systémové informace';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Podrobnosti hlášení';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Podrobnosti hlášení';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Právní informace';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Služby určování polohy';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Zapnout služby určování polohy?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Služby určování polohy';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Soukromí údajů';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Obchod Ubuntu';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'Začněte s více aplikacemi';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'Ubuntu obchod s aplikacemi nabízí širokou škálu aplikací, kterými je možné začít.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'Otevřít Obchod s aplikacemi';
 }

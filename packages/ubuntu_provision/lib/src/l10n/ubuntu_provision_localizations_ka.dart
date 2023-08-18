@@ -5,13 +5,13 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'აირჩიეთ თქვენი დროის სარტყელი';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'მდებარეობა';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'დროის სარტყელი';
 
   @override
   String get keyboardTitle => 'კლავიატური განლაგება';
@@ -20,223 +20,223 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება:';
 
   @override
-  String get keyboardTestHint => 'Type here to test your keyboard';
+  String get keyboardTestHint => 'კლავიატურის დასატესტად აქ აკრიფეთ';
 
   @override
-  String get keyboardDetectTitle => 'Detect keyboard layout';
+  String get keyboardDetectTitle => 'კლავიატური განლაგების აღმოჩენა';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'აღმოჩენა';
 
   @override
-  String get keyboardVariantLabel => 'Keyboard variant:';
+  String get keyboardVariantLabel => 'კლავიატურის ვარიანტი:';
 
   @override
-  String get keyboardPressKeyLabel => 'Please press one of the following keys:';
+  String get keyboardPressKeyLabel => 'დააწექით ერთ-ერთ შემდეგ ღილაკს:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Is the following key present on your keyboard?';
+  String get keyboardKeyPresentLabel => 'აქვს თქვენს კლავიატურას შემდეგი ღილაკი?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'აირჩიეთ თქვენი თემა';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'ამისი შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'მუქი';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'ღია';
 
   @override
   String localePageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'მოგესალმებით $DISTRO';
   }
 
   @override
   String get localeHeader => 'აირჩიეთ თქვენი ენა:';
 
   @override
-  String get identityPageTitle => 'Set up your account';
+  String get identityPageTitle => 'მოირგეთ თქვენი ანგარიში';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'ავტომატურად შესვლა';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'შესასვლელად პაროლის მოთხოვნა';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'თქვენი სახელი';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'სახელი აუცილებელია';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'სახელი, რომელსაც ის იყენებს, როცა სხვა კომპიუტერებს ელაპარაკება.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'კომპიუტერის სახელი აუცილებელია';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'კომპიუტერის სახელი ძალიან გრძელია.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'კომპუტერის სახელი არასწორია';
 
   @override
-  String get identityUsernameLabel => 'Pick a username';
+  String get identityUsernameLabel => 'აირჩიეთ მომხმარებლის სახელი';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'მოხმარებლის სახელი აუცილებელია';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'მომხმარებლის სახელი არასწორია';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'ეს მომხმარებლის სახელი უკვე არსებობს.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'სახელი დაცულია სისტემური გამოყენებისთვის.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'სახელი არასწორ სიმბოლოებს შეიცავს.';
 
   @override
-  String get identityPasswordLabel => 'Choose a password';
+  String get identityPasswordLabel => 'აირჩიეთ პაროლი';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'პაროლი აუცილებელია';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm your password';
+  String get identityConfirmPasswordLabel => 'დაადასტურეთ პაროლი';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'პაროლები არ ემთხვევა';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'ჩვენება';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'დამალვა';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Active Directory-ის გამოყენება';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
 
   @override
-  String get activeDirectoryTitle => 'Configure Active Directory';
+  String get activeDirectoryTitle => 'Active Directory-ის მორგება';
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'დომენთან მიერთების დატესტვა';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'დომენი';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'აუცილებელია';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'ძალიან გრძელია';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'არასწორი სიმბოლოები';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'იწყება წერტილით (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'მთავრდება წერტილით (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'იწყება ტირეთი (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'სრულდება ტირეთი (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'შეიცავს ერთზე მეტ მიმდევრობით წერტილს (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'დომენი ვერ ვიპოვე';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'დომენში შესვლის მომხმარებელი';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'აუცილებელია';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'არასწორი სიმბოლოები';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'პაროლი';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'აუცილებელია';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Active Directory-სთან კავშირის დამყარების შეცდომა';
 
   @override
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Connect to a network';
+  String get networkPageTitle => 'ქსელთან მიერთება';
 
   @override
   String get networkPageHeader => 'Connecting this computer to the internet will help Ubuntu install any extra software needed and help choose your time zone.\n\nConnect by Ethernet cable, or choose a Wi-Fi network';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'მავთულიანი მიერთების გამოყენება';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'მავთულიანი ქსელი აღმოჩენილი არაა';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'მავთულიანი მიერთება გაითიშა';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'ამ კომპიუტერზე Ethernet-ის გამოსაყენებლად, აუცილებელია სადენიანი ქსელი ჩართოთ';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'მავთულიანი მიერთების ჩართვა';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Wi-Fi ქსელთან მიერთება';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'უსადენო ქსელი გაითიშა';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'Wi-Fi მოწყობილობები აღმოჩენილი არაა';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'ამ კომპიუტერზე Wi-Fi-ის გამოსაყენებლად უსადენო ქსელის ჩართვა აუცილებელია';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Wi-Fi-ის ჩართვა';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'დამალულ Wi-Fi ქსელთან მიერთება';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'ქსელის სახელი';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'ქსელის სახელი აუცილებელია';
 
   @override
-  String get networkNoneOption => 'I don\'t want to connect to the internet just now';
+  String get networkNoneOption => 'ინტერნეტთან მიერთება ჯერ არ მინდა';
 }

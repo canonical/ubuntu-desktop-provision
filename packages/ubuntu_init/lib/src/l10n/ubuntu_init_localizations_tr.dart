@@ -5,15 +5,15 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Hoş Geldiniz';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return '$distro dağıtımına hoş geldiniz';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'NELER YENİ?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
