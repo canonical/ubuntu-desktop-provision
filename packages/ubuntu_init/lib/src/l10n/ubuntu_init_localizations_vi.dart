@@ -5,59 +5,59 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Chào mừng';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Chào mừng tới $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'CÓ GÌ MỚI?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Hỗ trợ trải nghiệm cài đặt gọn gàng hơn.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'App Store với diện mạo mới';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Tìm kiếm phần mềm yêu thích của bạn chưa bao giờ dễ dàng hơn.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Bảo mật được tăng cường';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Các tùy chọn mới cho mã hóa bằng phần cứng hoặc ZTS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Xem nhật ký thay đổi</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Thu thập dữ liệu';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Giúp cải thiện $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Chia sẻ dữ liệu ẩn danh với $distro để chúng tôi có thể cải thiện trải nghiệm của bạn.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Có, chia sẻ dữ liệu hệ thống với đội ngũ $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Không, không chia sẻ dữ liệu gì hết';
 
   @override
   String get telemetryReportLabel => 'Reporting details';
@@ -66,19 +66,19 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get telemetryReportTitle => 'Reporting details';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Hợp pháp';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Dịch vụ định vị';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Bật dịch vụ định vị?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Cho phép các ứng dụng biết vị trí địa lý của bạn.\nBạn có thể thay đổi điều này bất cứ lúc nào trong Cài đặt hệ thống.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Dịch vụ định vị';
 
   @override
   String get privacyPolicyLink => 'Data Privacy';

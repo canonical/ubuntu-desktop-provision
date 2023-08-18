@@ -20,12 +20,12 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'მოგესალმებათ $DISTRO';
   }
 
   @override
   String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO-ის მომზადება…';
   }
 
   @override
@@ -216,7 +216,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Advanced features';
 
   @override
-  String get installationTypeNone => 'None';
+  String get installationTypeNone => 'არც-ერთი';
 
   @override
   String get installationTypeNoneSelected => 'None selected';
@@ -327,16 +327,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installAlongsideAllocateSpace => 'Allocate space';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'ფაილები';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'დანაყოფი:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'ზომა:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'ხელმისაწვდომი:';
 
   @override
   String get allocateDiskSpace => 'Manual partitioning';
@@ -348,25 +348,25 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'მოწყობილობა';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'ტიპი';
 
   @override
   String get diskHeadersMountPoint => 'Mount point';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'ზომა';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'გამოყენებულია';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'სისტემა';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'ფორმატი';
 
   @override
   String get freeDiskSpace => 'Free space';
@@ -396,16 +396,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get partitionEditTitle => 'Edit partition';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'ზომა:';
 
   @override
   String get partitionTypeLabel => 'Type for the new partition:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'ძირითადი';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'ლოგიკური';
 
   @override
   String get partitionLocationLabel => 'Location for the new partition:';
@@ -440,10 +440,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get confirmHeader => 'If you continue, the changes listed below will be written to the disks. You will be able to make further changes manually.';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'მოწყობილობები';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'დანაყოფები';
 
   @override
   String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
@@ -482,7 +482,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'დაყენება';
 
   @override
   String get installationCompleteTitle => 'Installation complete';
@@ -544,10 +544,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'ხელმისაწვდომია:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'ჩასმულია:';
 
   @override
   String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
@@ -673,10 +673,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'ხელმისაწვდომია:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'აუცილებელია:';
 
   @override
   String get refreshPageTitle => 'Update available';

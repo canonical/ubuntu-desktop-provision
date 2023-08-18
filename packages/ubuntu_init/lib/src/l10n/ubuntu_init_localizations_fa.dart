@@ -5,93 +5,93 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'خوش آمدید';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'به $distro‌ خوش آمدید';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'چیزهای جدید؟';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'شروعی روان‌تر';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'پشتیبانی از یک تجربهٔ برپایی تمیزتر.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'فروشگاه کاره با ظاهر جدید';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'یافتن نرم‌افزارهای دلخواهتان هرگز بدین سادگی نبوده.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'امنیت بهبود یافته';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'گزینه‌هایی جدید برای رمزنگاری ZFS یا با پشتیبانی از سخت‌افزار.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">دیدن گزارش دگرگونی</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'گزارش از دور';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'کمک به بهبود $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'هم‌رسانی ناشناس داده‌ها با $distro برای بهبود تجربه‌تان.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'بله. داده‌ها با گروه $distro هم‌رسانی شوند';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'نه. داده‌های سامانه هم‌رسانی نشوند';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'گزارش کردن جزییات';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'جزییات گزارش';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'حقوقی';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'خدمات مکانی';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'به کار انداختن خدمات مکانی؟';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'خدمات مکانی';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'محرمانگی داده‌ها';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'فروشگاه اوبونتو';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'آغاز به کار با برنامه‌های بیش‌تر';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'فروشگاه کارهٔ اوبونتو دامنه‌ای وسیع از کاره‌هایی که می‌توانید به راحتی بگیریدشان را فراهم می‌کند.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'گشودن فروشگاه کاره';
 }
