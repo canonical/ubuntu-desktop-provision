@@ -2,7 +2,7 @@
   "@@locale": "tr",
   "changeButtonText": "Değiştir",
   "@changeButtonText": {},
-  "welcomePageTitle": "{DISTRO}'yu dene veya kur",
+  "welcomePageTitle": "{DISTRO} dene veya kur",
   "@welcomePageTitle": {},
   "welcome": "Hoş Geldiniz",
   "@welcome": {},
@@ -616,6 +616,209 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
+    }
+  },
+  "installationTypeTPM": "DENEYSEL: Donanım destekli tam disk şifrelemeyi etkinleştir",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM seçildi",
+  "@installationTypeTPMSelected": {},
+  "partitionFormatKeep": "{format} olarak biçimlendirilmiş bırak",
+  "@partitionFormatKeep": {
+    "type": "text",
+    "placeholders": {
+      "format": {}
+    }
+  },
+  "refreshCurrent": "Geçerli {snap} sürümü: {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshUpdating": "{snap} güncelleniyor...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Kurucuyu yeniden başlatın.",
+  "@refreshRestart": {},
+  "refreshSnapSetAutoAliases": "Otomatik {snap} takma adları ayarlanıyor...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "{snap} fişleri ve yuvaları bağlanıyor...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "TPM kurtarma anahtarı",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Uyarı:</font> Bu güvenlik anahtarını kaybederseniz tüm veriler kaybolur. Gerekirse, anahtarınızı bir yere yazın ve güvenli başka bir yerde saklayın.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "refreshPageTitle": "Güncelleme var",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Şu sürüme güncelle: {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpToDate": "Geçerli sürüm {version} güncel.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapRefresh": "{snap} yenileniyor...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "{snap} hazırlanıyor...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "{snap} indiriliyor...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "{snap} doğrulanıyor...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "{snap} bağlanıyor...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "{snap} hizmetleri durduruluyor...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "{snap} takma adları kaldırılıyor...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "{snap} bağlantısı kaldırılıyor...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "{snap} varlıkları güncelleniyor...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "{snap} çekirdek komut satırı güncelleniyor...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "{snap} verileri kopyalanıyor...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "{snap} güvenlik profilleri ayarlanıyor...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "{snap} bağlanıyor...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "{snap} takma adları ayarlanıyor...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "{snap} hizmetleri başlatılıyor...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyCommand": "Kurtarma anahtarınıza kurulumdan sonra aşağıdaki komutla erişebilirsiniz:",
+  "@recoveryKeyCommand": {},
+  "refreshSnapCleanup": "{snap} temizleniyor...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrerequisites": "{snap} ön koşulları sağlanıyor...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "{snap} yeniden yenilemesi denetleniyor...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Uyarı:</font> Bu özellik yalnızca belirli donanım yapılandırmalarında desteklenir ve gelecekteki Ubuntu sürümlerine yükseltmeyi desteklemeyebilir. Lütfen etkinleştirmeden önce <a href=\"{url}\">sürüm notlarını</a> okuyun.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
     }
   }
 }
