@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageTitle": "Välkommen",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Välkommen till {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "VAD ÄR NYTT?",
+  "@welcomeWhatsNew": {},
+  "welcomeSecuritySubtitle": "Nya alternativ för hårdvarustöd kryptering eller ZFS-kryptering.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeSecurityTitle": "Utökad säkerhet",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Visa ändringslogg</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetri",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "Dela data anonymt med {distro} så att vi kan förbättra din upplevelse.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Ja, dela systemdata med {distro}-teamet",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLegalLabel": "Juridisk information",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Platstjänster",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Aktivera platstjänster?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Låt program veta din geografiska plats.\nDu kan ändra detta när som helst i Systeminställningarna.",
+  "@privacyLocationSubtitle": {},
+  "storeOpen": "Öppna App Store",
+  "@storeOpen": {},
+  "welcomeStartTitle": "En strömlinjeformad start",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Stödjer en renare installationsupplevelse.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Nytt utseende App Store",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Det har aldrig varit lättare att hitta din favoritprogramvara.",
+  "@welcomeStoreSubtitle": {},
+  "telemetryHeader": "Hjälp till att förbättra {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Nej, dela inte systemdata",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Rapporteringsdetaljer",
+  "@telemetryReportLabel": {},
+  "privacyLocationEnable": "Platstjänster",
+  "@privacyLocationEnable": {},
+  "storeHeader": "Kom igång med fler program",
+  "@storeHeader": {},
+  "telemetryReportTitle": "Rapporteringsdetaljer",
+  "@telemetryReportTitle": {},
+  "privacyPolicyLink": "Dataintegritet",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "storeDescription": "Ubuntus App Store erbjuder en rad program som du kan komma igång med direkt.",
+  "@storeDescription": {}
+}
