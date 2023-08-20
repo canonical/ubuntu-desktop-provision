@@ -1,1 +1,60 @@
-{}
+{
+  "welcomePageTitle": "Willkommen",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Willkommen bei {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "WAS IST NEU?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "Ein optimierter Start",
+  "@welcomeStartTitle": {},
+  "welcomeSecuritySubtitle": "Neue Optionen für hardwaregestützte oder ZFS-Verschlüsselung.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryPageTitle": "Telemetrie",
+  "@telemetryPageTitle": {},
+  "telemetryLegalLabel": "Rechtliches",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Standortbezogene Dienste",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Standortbezogene Dienste aktivieren?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Lassen Sie Anwendungen Ihren geografischen Aufenthaltsort kennen.\nSie können dies jederzeit in den Systemeinstellungen ändern.",
+  "@privacyLocationSubtitle": {},
+  "welcomeStoreSubtitle": "Es war noch nie so einfach, Ihre Lieblingssoftware zu finden.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Erhöhte Sicherheit",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Änderungsprotokoll ansehen</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryHeader": "Helfen Sie mit, {distro} zu verbessern",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Teilen Sie Ihre Daten anonym mit {distro}, damit wir Ihr Erlebnis verbessern können.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Ja, Systemdaten mit dem {distro}-Team teilen",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Nein, keine Systemdaten teilen",
+  "@telemetryLabelOff": {},
+  "privacyLocationEnable": "Standortbezogene Dienste",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Datenschutz",
+  "@privacyPolicyLink": {}
+}
