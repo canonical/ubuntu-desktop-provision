@@ -4,5 +4,73 @@
   "welcomeWhatsNew": "NELER YENİ?",
   "@welcomeWhatsNew": {},
   "welcomePageTitle": "Hoş Geldiniz",
-  "@welcomePageTitle": {}
+  "@welcomePageTitle": {},
+  "storeOpen": "Uygulama Mağazasını Aç",
+  "@storeOpen": {},
+  "welcomeStoreTitle": "Yeni görünüm Uygulama Mağazası",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Gözde yazılımınızı bulmak hiç bu kadar kolay olmamıştı.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeStartTitle": "Modern bir başlangıç",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Daha temiz bir kurulum deneyimini destekler.",
+  "@welcomeStartSubtitle": {},
+  "welcomeSecurityTitle": "Arttırılmış güvenlik",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "Donanım destekli ya da ZFS şifrelemesi için yeni seçenekler.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Değişiklik günlüğünü görüntüle</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetri",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "{distro} iyileştirmenize yardım et",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Deneyiminizi geliştirebilmemiz için verileri {distro} ile anonim olarak paylaşın.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Evet, sistem verilerini {distro} ekibiyle paylaş",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Hayır, sistem verilerini paylaşma",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Raporlama ayrıntıları",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Raporlama ayrıntıları",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "Yasal",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Konum hizmetleri",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Konum hizmetleri etkinleştirilsin mi?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Uygulamaların coğrafi konumunuzu öğrenmesine izin verin.\nBunu istediğiniz zaman Sistem Ayarları'ndan değiştirebilirsiniz.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Konum hizmetleri",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Veri Gizliliği",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Ubuntu Mağaza",
+  "@storeTitle": {},
+  "storeHeader": "Daha fazla uygulamayı kullanmaya başlayın",
+  "@storeHeader": {},
+  "storeDescription": "Ubuntu'nun Uygulama Mağazası, başlangıçtan itibaren kullanabileceğiniz bir dizi uygulama sunar.",
+  "@storeDescription": {}
 }
