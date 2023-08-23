@@ -723,7 +723,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Instalátor ukončete a pak spusťte znovu.",
+  "refreshRestart": "Instalátor ukončete a spusťte znovu kliknutím na Restartovat.",
   "@refreshRestart": {},
   "refreshSnapDownload": "Stahování {snap}…",
   "@refreshSnapDownload": {
