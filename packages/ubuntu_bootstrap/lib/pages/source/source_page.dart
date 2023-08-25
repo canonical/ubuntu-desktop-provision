@@ -23,6 +23,7 @@ class SourcePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
+    final showSources = model.sources.length > 1;
     final lang = UbuntuBootstrapLocalizations.of(context);
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -39,20 +40,26 @@ class SourcePage extends ConsumerWidget {
           ...model.sources
               .map((source) => Align(
                     alignment: AlignmentDirectional.centerStart,
-                    child: YaruRadioButton<String>(
-                      title: Text(source.localizeTitle(context)),
-                      subtitle: Text(source.localizeSubtitle(context)),
-                      contentPadding: kWizardPadding,
-                      value: source.id,
-                      groupValue: model.sourceId,
-                      onChanged: model.setSourceId,
+                    child: Visibility(
+                      visible: showSources,
+                      child: YaruRadioButton<String>(
+                        title: Text(source.localizeTitle(context)),
+                        subtitle: Text(source.localizeSubtitle(context)),
+                        contentPadding: kWizardPadding,
+                        value: source.id,
+                        groupValue: model.sourceId,
+                        onChanged: model.setSourceId,
+                      ),
                     ),
                   ))
               .withSpacing(kWizardSpacing)
               .toList(),
-          Padding(
-            padding: const EdgeInsets.all(kYaruPagePadding),
-            child: Text(lang.otherOptions),
+          Visibility(
+            visible: showSources,
+            child: Padding(
+              padding: const EdgeInsets.all(kYaruPagePadding),
+              child: Text(lang.otherOptions),
+            ),
           ),
           Align(
             alignment: AlignmentDirectional.centerStart,
