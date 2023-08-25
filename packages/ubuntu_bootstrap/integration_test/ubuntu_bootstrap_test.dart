@@ -98,10 +98,7 @@ void main() {
     );
   });
 
-  final capabilityVariant =
-      ValueVariant({GuidedCapability.LVM_LUKS, GuidedCapability.ZFS});
-
-  testWidgets('guided capability', (tester) async {
+  testWidgets('LVM Encrypted', (tester) async {
     const identity = Identity(
       realname: 'User',
       hostname: 'ubuntu',
@@ -133,7 +130,7 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
-      guidedCapability: capabilityVariant.currentValue,
+      guidedCapability: GuidedCapability.LVM_LUKS,
     );
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -168,9 +165,76 @@ void main() {
 
     await verifySubiquityConfig(
       identity: identity,
-      capability: capabilityVariant.currentValue,
+      capability: GuidedCapability.LVM_LUKS,
     );
-  }, variant: capabilityVariant);
+  });
+
+  testWidgets('ZFS unencrypted', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(() => app.main(<String>[]));
+    await tester.pumpAndSettle();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testSourcePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+      guidedCapability: GuidedCapability.ZFS,
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testThemePage();
+    await tester.tapNext();
+    await tester.pump();
+
+    await tester.testInstallPage();
+    await tester.pumpAndSettle();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.ZFS,
+    );
+  });
 
   testWidgets('tpm', (tester) async {
     const identity = Identity(
