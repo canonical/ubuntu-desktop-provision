@@ -43,8 +43,7 @@ class SecurityKeyModel extends SafeChangeNotifier {
 
   /// Initializes the model.
   Future<bool> init() async {
-    if (_service.guidedCapability != GuidedCapability.LVM_LUKS &&
-        _service.guidedCapability != GuidedCapability.ZFS) {
+    if (_service.guidedCapability != GuidedCapability.LVM_LUKS) {
       return false;
     }
     await loadSecurityKey();
