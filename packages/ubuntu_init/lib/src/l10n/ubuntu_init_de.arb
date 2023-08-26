@@ -56,5 +56,21 @@
   "privacyLocationEnable": "Standortbezogene Dienste",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Datenschutz",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "welcomeStartSubtitle": "Unterstützung einer saubereren Einrichtung.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Neues Aussehen des App Store",
+  "@welcomeStoreTitle": {},
+  "telemetryReportLabel": "Einzelheiten der Berichterstattung",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Einzelheiten der Berichterstattung",
+  "@telemetryReportTitle": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "storeHeader": "Loslegen mit mehr Anwendungen",
+  "@storeHeader": {},
+  "storeDescription": "Der App Store von Ubuntu bietet eine Reihe von Apps, die Sie von Anfang an nutzen können.",
+  "@storeDescription": {},
+  "storeOpen": "App Store öffnen",
+  "@storeOpen": {}
 }
