@@ -1,1 +1,21 @@
-{}
+{
+  "welcomePageTitle": "Bonvenon",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Bonvenon al {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "KIO NOVAS?",
+  "@welcomeWhatsNew": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Vidi protokolon de ŝanĝoj</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "storeTitle": "Ubuntu-Programvendejo",
+  "@storeTitle": {},
+  "privacyPolicyLink": "Datena privateco",
+  "@privacyPolicyLink": {},
+  "storeOpen": "Malfermi Programvendejon",
+  "@storeOpen": {}
+}
