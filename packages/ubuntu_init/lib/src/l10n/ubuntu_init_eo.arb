@@ -17,5 +17,38 @@
   "privacyPolicyLink": "Datena privateco",
   "@privacyPolicyLink": {},
   "storeOpen": "Malfermi Programvendejon",
-  "@storeOpen": {}
+  "@storeOpen": {},
+  "welcomeStoreTitle": "Novaspekta Programvendejo",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "Plifortikigita sekureco",
+  "@welcomeSecurityTitle": {},
+  "welcomeStartTitle": "Glatigita komenco",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Pli simpla komenca agordado.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "La plej facila kielo trovi viajn preferatajn programojn.",
+  "@welcomeStoreSubtitle": {},
+  "telemetryPageTitle": "Telemetrio",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Helpu plibonigi {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeSecuritySubtitle": "Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryLegalLabel": "Juraĵoj",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Lokado-servo",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Ĉu ŝalti lokado-servon?",
+  "@privacyLocationTitle": {},
+  "privacyLocationEnable": "Lokado-servo",
+  "@privacyLocationEnable": {},
+  "telemetryReportLabel": "Raportotaj detaloj",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Raportotaj detaloj",
+  "@telemetryReportTitle": {}
 }
