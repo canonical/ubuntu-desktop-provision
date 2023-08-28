@@ -139,6 +139,9 @@ class StorageModel extends SafeChangeNotifier {
         .expand((t) => t.allowed)
         .toSet()
         .firstOrNull;
+    if (hasDirect) {
+      _storage.guidedCapability = GuidedCapability.DIRECT;
+    }
     _hasBitLocker = await _storage.hasBitLocker();
     notifyListeners();
   }
