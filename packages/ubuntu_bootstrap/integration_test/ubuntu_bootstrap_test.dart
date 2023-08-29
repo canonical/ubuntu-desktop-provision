@@ -245,7 +245,9 @@ void main() {
 
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
-          '--dry-run-config=examples/dry-run-configs/tpm.yaml'
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          '--',
+          '--bootloader=uefi',
         ]));
     await tester.pumpAndSettle();
 
