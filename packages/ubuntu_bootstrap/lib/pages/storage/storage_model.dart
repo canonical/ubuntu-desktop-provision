@@ -137,7 +137,6 @@ class StorageModel extends SafeChangeNotifier {
     _storage.guidedCapability ??= _targets
         ?.whereType<GuidedStorageTargetReformat>()
         .expand((t) => t.allowed)
-        .toSet()
         .firstOrNull;
     _hasBitLocker = await _storage.hasBitLocker();
     notifyListeners();
