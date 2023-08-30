@@ -783,5 +783,12 @@
   "recoveryKeyTitle": "Chave de recuperação do TPM",
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Você pode acessar sua chave de recuperação após a instalação com o seguinte comando:",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "refreshUpToDate": "A versão atual {version} está atualizada.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  }
 }
