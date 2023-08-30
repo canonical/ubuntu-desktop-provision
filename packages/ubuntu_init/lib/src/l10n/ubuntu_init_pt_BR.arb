@@ -1,1 +1,76 @@
-{}
+{
+  "welcomePageTitle": "Boas-vindas",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Boas-vindas ao {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "O QUE É NOVIDADE?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "Um começo simplificado",
+  "@welcomeStartTitle": {},
+  "welcomeStoreSubtitle": "Nunca foi tão fácil encontrar o seu software favorito.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Segurança aprimorada",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "Novas opções para criptografia ZFS ou com suporte de hardware.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryHeader": "Ajude a melhorar o {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Compartilhe dados anonimamente com o {distro} para que possamos melhorar sua experiência.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "Detalhes do relatório",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Detalhes do relatório",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "Legal",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Serviços de localização",
+  "@privacyPageTitle": {},
+  "privacyLocationEnable": "Serviços de localização",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Privacidade de Dados",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "storeHeader": "Comece com mais aplicativos",
+  "@storeHeader": {},
+  "storeOpen": "Abrir App Store",
+  "@storeOpen": {},
+  "welcomeStartSubtitle": "Suportando uma experiência de instalação mais limpa.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Novo visual da Loja de Aplicativos",
+  "@welcomeStoreTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Exibir log de alterações</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "telemetryLabelOn": "Sim, compartilhe dados do sistema com a equipe do {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Não, não compartilhe dados do sistema",
+  "@telemetryLabelOff": {},
+  "privacyLocationTitle": "Habilitar serviços de localização?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Informe aos aplicativos sua localização geográfica.\nVocê pode alterar isso a qualquer momento nas Configurações do Sistema.",
+  "@privacyLocationSubtitle": {},
+  "storeDescription": "A App Store do Ubuntu oferece uma variedade de aplicativos com os quais você pode começar desde o início.",
+  "@storeDescription": {}
+}
