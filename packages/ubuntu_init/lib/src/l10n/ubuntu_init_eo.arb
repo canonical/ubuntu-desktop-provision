@@ -50,5 +50,27 @@
   "telemetryReportLabel": "Raportotaj detaloj",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Raportotaj detaloj",
-  "@telemetryReportTitle": {}
+  "@telemetryReportTitle": {},
+  "telemetryLabelOn": "Jes, sendu sistemajn datenojn al la evoluigantoj de {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Sendi datenojn anonime al {distro} por plibonigi vian sperton.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Ne, sendu neniom da sistemaj datenoj",
+  "@telemetryLabelOff": {},
+  "storeHeader": "Ekĝuu pli da programoj",
+  "@storeHeader": {},
+  "privacyLocationSubtitle": "Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.",
+  "@privacyLocationSubtitle": {},
+  "storeDescription": "La Programvendejo de Ubuntu ofertas multon da programoj, kiujn vi povas ekĝui.",
+  "@storeDescription": {}
 }
