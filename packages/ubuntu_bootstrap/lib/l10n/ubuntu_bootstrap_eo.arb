@@ -697,5 +697,93 @@
     "placeholders": {
       "snap": {}
     }
+  },
+  "installationTypeTPMSelected": "Aparato-baza ĉifrado elektiĝis",
+  "@installationTypeTPMSelected": {},
+  "refreshUpToDate": "La aktuala versio {version} estas la plej nova.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapValidate": "Validigante {snap}…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Forviŝante alinomojn de {snap}…",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Bonvolu relanĉi la instalilon.",
+  "@refreshRestart": {},
+  "refreshSnapCheckRerefresh": "Kontrolante, ĉu {snap} refreŝiĝu…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrerequisites": "Certigante necesaĵojn por {snap}…",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Muntante {snap}…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Ĝisdatigante la kernan komandlinion de {snap}…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Konektante ŝtopilojn kaj ŝtopilingojn de {snap}…",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Averto:</font> Se vi perdos ĉi tiun sekurigan ŝlosilon, vi perdos ĉiom da datenoj. Skribu vian ŝlosilon kaj konservu ĝin en sekura alia loko, se tio necesas.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "recoveryKeyTitle": "Ŝlosilo por aparato-baza ĉifrado",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Post instalo, vi povas legi vian restaŭran ŝlosilon per la jena komando:",
+  "@recoveryKeyCommand": {},
+  "installationTypeTPM": "EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon",
+  "@installationTypeTPM": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Averto:</font> Ĉi tiu funkcio estas nur subtenata sur kelkaj aparataj agordoj kaj eble ne estos ĝisdatigebla al estontaj versioj de Ubuntu. Bonvolu legi la <a href=\"{url}\">notojn pri la versio</a> antaŭ ol ŝalti la funkcion.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshSnapStopServices": "Haltigante servojn de {snap}…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
   }
 }
