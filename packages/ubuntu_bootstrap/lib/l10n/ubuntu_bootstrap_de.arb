@@ -757,5 +757,26 @@
       "color": {},
       "url": {}
     }
+  },
+  "refreshSnapUpdateAssets": "{snap}-Güter werden aktualisiert...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "{snap}-Kernel-Befehlszeile wird aktualisiert...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "{snap}-Stecker und -Steckplätze werden verbunden...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
   }
 }
