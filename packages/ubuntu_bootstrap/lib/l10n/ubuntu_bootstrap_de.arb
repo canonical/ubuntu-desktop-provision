@@ -589,5 +589,194 @@
     "placeholders": {
       "DISTRO": {}
     }
+  },
+  "refreshInstall": "Aktualisierung auf Version {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpToDate": "Die aktuelle Version {version} ist auf dem neuesten Stand.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpdating": "{snap} wird aktualisiert...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Bitte starten Sie das Installationsprogramm neu.",
+  "@refreshRestart": {},
+  "installationTypeTPM": "EXPERIMENTELL: Hardwaregestützte vollständige Festplattenverschlüsselung aktivieren",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM ausgewählt",
+  "@installationTypeTPMSelected": {},
+  "refreshPageTitle": "Aktualisierung verfügbar",
+  "@refreshPageTitle": {},
+  "refreshCurrent": "Die aktuelle {snap}-Version ist {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshSnapPrerequisites": "Voraussetzungen für {snap} werden sichergestellt...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "{snap} wird aufgefrischt...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "{snap} wird vorbereitet...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "{snap} wird heruntergeladen...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "{snap} wird validiert...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "{snap} wird eingehängt...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "{snap}-Dienste werden gestoppt...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "{snap}-Aliase werden entfernt...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Verknüpfung zu {snap} wird aufgehoben...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "{snap}-Daten werden kopiert...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "{snap}-Sicherheitsprofile werden eingerichtet...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "{snap} wird verknüpft...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Automatische {snap}-Aliase werden festgelegt...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "{snap}-Aliase werden eingerichtet...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "{snap}-Dienste werden gestartet...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "{snap} wird bereinigt...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "TPM-Wiederherstellungsschlüssel",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Sie können nach der Installation mit folgendem Befehl auf Ihren Wiederherstellungsschlüssel zugreifen:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Warnung:</font> Wenn Sie diesen Sicherheitsschlüssel verlieren, sind alle Daten verloren. Bei Bedarf notieren Sie sich den Schlüssel und bewahren ihn an einem sicheren Ort auf.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Warnung:</font> Diese Funktion wird nur auf bestimmten Hardwarekonfigurationen unterstützt und unterstützt möglicherweise keine Aktualisierungen auf zukünftige Ubuntu-Versionen. Bitte lesen Sie die <a href=\"{url}\">Veröffentlichungshinweise</a> vor dem Aktivieren.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "{snap}-Güter werden aktualisiert...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "{snap}-Kernel-Befehlszeile wird aktualisiert...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "{snap}-Stecker und -Steckplätze werden verbunden...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
   }
 }

@@ -644,5 +644,201 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "installationTypeTPMSelected": "TPM vald",
+  "@installationTypeTPMSelected": {},
+  "refreshPageTitle": "Uppdatering tillgänglig",
+  "@refreshPageTitle": {},
+  "refreshCurrent": "Din nuvarande {snap} version är {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshUpToDate": "Den aktuella versionen {version} är uppdaterad.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshUpdating": "Uppdaterar {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Förbereder {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "Laddar ner {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Stoppar {snap} tjänster...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "Tar bort {snap} alias...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapLink": "Länkar {snap}...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "Ansluter {snap} pluggar och fack...",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupAliases": "Ställer in {snap} alias...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "Startar {snap} tjänster...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Rensar upp {snap}...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyTitle": "TPM återställningsnyckel",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Varning:</font> Om du förlorar denna säkerhetsnyckel, så kommer all data att gå förlorad. Om du behöver, skriv ner din nyckel och förvara den på ett säkert ställe någon annanstans.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  },
+  "refreshRestart": "Starta om installationsprogrammet.",
+  "@refreshRestart": {},
+  "installationTypeTPM": "EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering",
+  "@installationTypeTPM": {},
+  "refreshSnapPrerequisites": "Säkerställer {snap} förutsättningar...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapRefresh": "Uppdaterar {snap}...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Varning:</font> Denna funktion stöds endast på vissa hårdvarukonfigurationer och kanske inte stöder uppgradering till framtida Ubuntu-utgåvor. Läs <a href=\"{url}\">versionsinformationen</a> innan du aktiverar.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshInstall": "Uppdatera till version {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Kontrollerar {snap} efter uppdateringen...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Uppdaterar {snap} tillgångar...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Validerar {snap}..",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Monterar {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUnlink": "Avlänkar {snap}...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Uppdaterar {snap} kärnans kommandorad...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Kopierar {snap} data...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Ställer in {snap} säkerhetsprofiler...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Ställer in automatiska {snap} alias...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyCommand": "Du kan komma åt din återställningsnyckel efter installationen med följande kommando:",
+  "@recoveryKeyCommand": {}
 }

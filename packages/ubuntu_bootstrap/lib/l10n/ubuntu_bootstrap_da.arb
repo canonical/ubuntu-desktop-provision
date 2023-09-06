@@ -1,16 +1,16 @@
 {
   "@@locale": "da",
-  "installThirdPartyTitle": "Installér tredjeparts programvare til grafik og Wi-Fi maskinel, så vel som yderligere medieformater",
+  "installThirdPartyTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware, såvel som yderligere medieformater",
   "@installThirdPartyTitle": {},
   "chooseSecurityKeyRequired": "En sikkerhedsnøgle er påkrævet",
   "@chooseSecurityKeyRequired": {},
-  "installDriversTitle": "Installér tredjeparts programvare til grafik og Wi-Fi maskinel",
+  "installDriversTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware",
   "@installDriversTitle": {},
   "installDriversSubtitle": "Disse chauffører er underlagt de licensvilkår, som er inkluderet i deres dokumentation. De er proprietære.",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Hent og installér understøttelse af yderligere medieformater",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Denne programvare er underlagt licensbetingelserne, som er inkluderet i dens dokumentation. Nogle er proprietære.",
+  "installCodecsSubtitle": "Denne software er underlagt licensbetingelserne, som er inkluderet i dens dokumentation. Nogle er proprietære.",
   "@installCodecsSubtitle": {},
   "onBatteryWarning": "<font color=\"{color}\">Advarsel:</font> Computeren er ikke sluttet til en strømkilde.",
   "@onBatteryWarning": {
@@ -25,11 +25,11 @@
   "@chooseSecurityKeyConfirmHint": {},
   "showSecurityKey": "Vis sikkerhedsnøgle",
   "@showSecurityKey": {},
-  "normalInstallationSubtitle": "Netlæsere, værktøjer, kontorpakker, spil og medieafspillere.",
+  "normalInstallationSubtitle": "Webbrowser, værktøjer, kontorpakker, spil og medieafspillere.",
   "@normalInstallationSubtitle": {},
   "minimalInstallationTitle": "Minimal installation",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Netlæsere og basale værktøjer.",
+  "minimalInstallationSubtitle": "Webbrowser og grund liggende værktøjer.",
   "@minimalInstallationSubtitle": {},
   "otherOptions": "Andre muligheder",
   "@otherOptions": {},
@@ -58,7 +58,7 @@
       "url": {}
     }
   },
-  "quitButtonText": "Forlad installation",
+  "quitButtonText": "Afslut installation",
   "@quitButtonText": {},
   "welcome": "Velkommen",
   "@welcome": {},
@@ -70,13 +70,13 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "confirmSecurityKey": "Bekræft sikkerhedsnøglen",
   "@confirmSecurityKey": {},
-  "dontInstallDriverSoftwareNow": "Installér ikke driver-programvaren lige nu",
+  "dontInstallDriverSoftwareNow": "Installér ikke driver-softwaren lige nu",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Du kan installere det senere fra Programvare & Opdateringer.",
+  "dontInstallDriverSoftwareNowDescription": "Du kan installere det senere fra Software & Opdateringer.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "secureBootSecurityKeysDontMatch": "Sikkerhedsnøgler stemmer ikke overens",
   "@secureBootSecurityKeysDontMatch": {},
-  "offlineWarning": "Du er aktuelt offline",
+  "offlineWarning": "Du er i øjeblikket offline",
   "@offlineWarning": {},
   "chooseSecurityKeyMismatch": "Sikkerhedsnøglerne stemmer ikke overens",
   "@chooseSecurityKeyMismatch": {},
@@ -96,9 +96,9 @@
       "RELEASE": {}
     }
   },
-  "changeButtonText": "Skift",
+  "changeButtonText": "Ændre",
   "@changeButtonText": {},
-  "welcomeRepairDescription": "Reparation vil geninstallere al installeret programvare, uden at røre dokumenter eller indstillinger.",
+  "welcomeRepairDescription": "Reparation geninstallerer al installeret software uden at røre ved dokumenter eller indstillinger.",
   "@welcomeRepairDescription": {},
   "welcomeTryOption": "Prøv {RELEASE}",
   "@welcomeTryOption": {
@@ -125,9 +125,9 @@
       "url": {}
     }
   },
-  "configureSecureBootTitle": "Konfigurér Sikret Start",
+  "configureSecureBootTitle": "Konfigurér Sikker Start",
   "@configureSecureBootTitle": {},
-  "configureSecureBootOption": "Konfigurér Sikret Start",
+  "configureSecureBootOption": "Konfigurér Sikker Start",
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Vælg sikkerhedsnøgle",
   "@chooseSecurityKey": {},
@@ -135,9 +135,9 @@
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Hvilke apps vil du installere, til at starte med?",
   "@updatesOtherSoftwarePageDescription": {},
-  "installThirdPartySubtitle": "Denne programvare er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.",
+  "installThirdPartySubtitle": "Denne software er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.",
   "@installThirdPartySubtitle": {},
-  "configureSecureBootDescription": "Du har valgt at installere tredjeparts driver-programvare. Dette kræver at man slår Sikret Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.",
+  "configureSecureBootDescription": "Du har valgt at installere tredjeparts driver-software. Dette kræver at man slår Sikker Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.",
   "@configureSecureBootDescription": {},
   "normalInstallationTitle": "Normal installation",
   "@normalInstallationTitle": {},
@@ -642,5 +642,17 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Advarsel:</font> Denne funktion understøttes kun på visse hardwarekonfigurationer og understøtter muligvis ikke opgraderinger til fremtidige Ubuntu-versioner. Læs venligst <a href=\"{url}\">Udgivelsesbemærkningerne</a>, før du aktiverer.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPM": "EKSPERIMENTEL: Hardware-assisteret fuld diskkrypterings aktivering",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM Valgt",
+  "@installationTypeTPMSelected": {}
 }

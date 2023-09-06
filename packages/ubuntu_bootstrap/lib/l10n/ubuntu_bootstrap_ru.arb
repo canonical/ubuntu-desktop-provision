@@ -783,5 +783,12 @@
     "placeholders": {
       "color": {}
     }
+  },
+  "refreshSnapCheckRerefresh": "Проверка обновления данных {snap}…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
   }
 }
