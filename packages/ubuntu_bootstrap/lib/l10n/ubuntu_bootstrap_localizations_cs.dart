@@ -702,7 +702,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Instalátor ukončete a pak spusťte znovu.';
+  String get refreshRestart => 'Instalátor ukončete a spusťte znovu kliknutím na Restartovat.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {

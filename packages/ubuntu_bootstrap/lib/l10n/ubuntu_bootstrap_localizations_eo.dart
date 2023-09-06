@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS elektita';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Averto:</font> Ĉi tiu funkcio estas nur subtenata sur kelkaj aparataj agordoj kaj eble ne estos ĝisdatigebla al estontaj versioj de Ubuntu. Bonvolu legi la <a href=\"$url\">notojn pri la versio</a> antaŭ ol ŝalti la funkcion.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'Aparato-baza ĉifrado elektiĝis';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -679,139 +679,139 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Bezonata:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Ĝisdatigo estas havebla';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'La aktuala versio de $snap estas $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Ĝisdatigi al versio $version';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'La aktuala versio $version estas la plej nova.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'Ĝisdatigante $snap…';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Bonvolu relanĉi la instalilon.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Certigante necesaĵojn por $snap…';
   }
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'Refreŝigante $snap…';
   }
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Kontrolante, ĉu $snap refreŝiĝu…';
   }
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'Pretigante $snap…';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'Elŝutante $snap…';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'Validigante $snap…';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'Muntante $snap…';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'Haltigante servojn de $snap…';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'Forviŝante alinomojn de $snap…';
   }
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'Malligante $snap…';
   }
 
   @override
   String refreshSnapUpdateAssets(Object snap) {
-    return 'Updating $snap assets...';
+    return 'Ĝisdatigante havaĵojn de $snap…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(Object snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Ĝisdatigante la kernan komandlinion de $snap…';
   }
 
   @override
   String refreshSnapCopyData(Object snap) {
-    return 'Copying $snap data...';
+    return 'Kopiante datenojn pri $snap…';
   }
 
   @override
   String refreshSnapSetupProfiles(Object snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Agordante sekurecajn profilojn de $snap…';
   }
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'Ligante $snap…';
   }
 
   @override
   String refreshSnapAutoConnect(Object snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Konektante ŝtopilojn kaj ŝtopilingojn de $snap…';
   }
 
   @override
   String refreshSnapSetAutoAliases(Object snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Agordante aŭtomatajn alinomojn de $snap…';
   }
 
   @override
   String refreshSnapSetupAliases(Object snap) {
-    return 'Setting up $snap aliases...';
+    return 'Agordante alinomojn de $snap…';
   }
 
   @override
   String refreshSnapStartServices(Object snap) {
-    return 'Starting $snap services...';
+    return 'Lanĉante servojn de $snap…';
   }
 
   @override
   String refreshSnapCleanup(Object snap) {
-    return 'Cleaning up $snap...';
+    return 'Viŝante $snap…';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Ŝlosilo por aparato-baza ĉifrado';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Post instalo, vi povas legi vian restaŭran ŝlosilon per la jena komando:';
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Averto:</font> Se vi perdos ĉi tiun sekurigan ŝlosilon, vi perdos ĉiom da datenoj. Skribu vian ŝlosilon kaj konservu ĝin en sekura alia loko, se tio necesas.';
   }
 }

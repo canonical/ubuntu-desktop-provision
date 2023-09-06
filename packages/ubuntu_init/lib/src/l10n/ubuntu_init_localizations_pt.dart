@@ -100,5 +100,94 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
 class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
   UbuntuInitLocalizationsPtBr(): super('pt_BR');
 
+  @override
+  String get welcomePageTitle => 'Boas-vindas';
 
+  @override
+  String welcomePageHeader(Object distro) {
+    return 'Boas-vindas ao $distro';
+  }
+
+  @override
+  String get welcomeWhatsNew => 'O QUE É NOVIDADE?';
+
+  @override
+  String get welcomeStartTitle => 'Um começo simplificado';
+
+  @override
+  String get welcomeStartSubtitle => 'Suportando uma experiência de instalação mais limpa.';
+
+  @override
+  String get welcomeStoreTitle => 'Novo visual da Loja de Aplicativos';
+
+  @override
+  String get welcomeStoreSubtitle => 'Nunca foi tão fácil encontrar o seu software favorito.';
+
+  @override
+  String get welcomeSecurityTitle => 'Segurança aprimorada';
+
+  @override
+  String get welcomeSecuritySubtitle => 'Novas opções para criptografia ZFS ou com suporte de hardware.';
+
+  @override
+  String welcomeChangelogLabel(Object url) {
+    return '<a href=\"$url\">Exibir log de alterações</a>';
+  }
+
+  @override
+  String get telemetryPageTitle => 'Telemetria';
+
+  @override
+  String telemetryHeader(Object distro) {
+    return 'Ajude a melhorar o $distro';
+  }
+
+  @override
+  String telemetryDescription(Object distro) {
+    return 'Compartilhe dados anonimamente com o $distro para que possamos melhorar sua experiência.';
+  }
+
+  @override
+  String telemetryLabelOn(Object distro) {
+    return 'Sim, compartilhe dados do sistema com a equipe do $distro';
+  }
+
+  @override
+  String get telemetryLabelOff => 'Não, não compartilhe dados do sistema';
+
+  @override
+  String get telemetryReportLabel => 'Detalhes do relatório';
+
+  @override
+  String get telemetryReportTitle => 'Detalhes do relatório';
+
+  @override
+  String get telemetryLegalLabel => 'Legal';
+
+  @override
+  String get privacyPageTitle => 'Serviços de localização';
+
+  @override
+  String get privacyLocationTitle => 'Habilitar serviços de localização?';
+
+  @override
+  String get privacyLocationSubtitle => 'Informe aos aplicativos sua localização geográfica.\nVocê pode alterar isso a qualquer momento nas Configurações do Sistema.';
+
+  @override
+  String get privacyLocationEnable => 'Serviços de localização';
+
+  @override
+  String get privacyPolicyLink => 'Privacidade de Dados';
+
+  @override
+  String get storeTitle => 'Ubuntu Store';
+
+  @override
+  String get storeHeader => 'Comece com mais aplicativos';
+
+  @override
+  String get storeDescription => 'A App Store do Ubuntu oferece uma variedade de aplicativos com os quais você pode começar desde o início.';
+
+  @override
+  String get storeOpen => 'Abrir App Store';
 }

@@ -716,7 +716,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Проверка обновления данных $snap…';
   }
 
   @override
