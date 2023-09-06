@@ -16,82 +16,82 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'NELER YENİ?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Modern bir başlangıç';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Daha temiz bir kurulum deneyimini destekler.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Yeni görünüm Uygulama Mağazası';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Gözde yazılımınızı bulmak hiç bu kadar kolay olmamıştı.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Arttırılmış güvenlik';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Donanım destekli ya da ZFS şifrelemesi için yeni seçenekler.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Değişiklik günlüğünü görüntüle</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetri';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return '$distro iyileştirmenize yardım et';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Deneyiminizi geliştirebilmemiz için verileri $distro ile anonim olarak paylaşın.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Evet, sistem verilerini $distro ekibiyle paylaş';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Hayır, sistem verilerini paylaşma';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Raporlama ayrıntıları';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Raporlama ayrıntıları';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Yasal';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Konum hizmetleri';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Konum hizmetleri etkinleştirilsin mi?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Uygulamaların coğrafi konumunuzu öğrenmesine izin verin.\nBunu istediğiniz zaman Sistem Ayarları\'ndan değiştirebilirsiniz.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Konum hizmetleri';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Veri Gizliliği';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Ubuntu Mağaza';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'Daha fazla uygulamayı kullanmaya başlayın';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'Ubuntu\'nun Uygulama Mağazası, başlangıçtan itibaren kullanabileceğiniz bir dizi uygulama sunar.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'Uygulama Mağazasını Aç';
 }

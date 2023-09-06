@@ -1063,6 +1063,17 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get installationTypeZFSSelected => 'ZFS selecionado';
 
   @override
+  String get installationTypeTPM => 'EXPERIMENTAL: Habilitar criptografia completa de disco com suporte de hardware';
+
+  @override
+  String installationTypeTPMWarning(Object color, Object url) {
+    return '<font color=\"$color\">Atenção:</font> Esta funcionalidade só é compatível com determinadas configurações de hardware e pode não suportar atualizações para versões futuras do Ubuntu. Por favor leia as <a href=\"$url\">notas de versão</a> antes de habilitar.';
+  }
+
+  @override
+  String get installationTypeTPMSelected => 'TPM selecionado';
+
+  @override
   String installationTypeReinstall(Object os) {
     return 'Apagar $os e reinstalar';
   }
@@ -1482,4 +1493,141 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get notEnoughDiskSpaceRequired => 'Necessário:';
+
+  @override
+  String get refreshPageTitle => 'Atualização disponível';
+
+  @override
+  String refreshCurrent(Object snap, Object version) {
+    return 'A versão atual do $snap é $version.';
+  }
+
+  @override
+  String refreshInstall(Object version) {
+    return 'Atualizar para a versão $version';
+  }
+
+  @override
+  String refreshUpToDate(Object version) {
+    return 'A versão atual $version está atualizada.';
+  }
+
+  @override
+  String refreshUpdating(Object snap) {
+    return 'Atualizando $snap...';
+  }
+
+  @override
+  String get refreshRestart => 'Por favor reinicie o instalador.';
+
+  @override
+  String refreshSnapPrerequisites(Object snap) {
+    return 'Garantindo os pré-requisitos do $snap...';
+  }
+
+  @override
+  String refreshSnapRefresh(Object snap) {
+    return 'Atualizando $snap...';
+  }
+
+  @override
+  String refreshSnapCheckRerefresh(Object snap) {
+    return 'Verificando reatualização de $snap...';
+  }
+
+  @override
+  String refreshSnapPrepare(Object snap) {
+    return 'Preparando $snap...';
+  }
+
+  @override
+  String refreshSnapDownload(Object snap) {
+    return 'Baixando $snap...';
+  }
+
+  @override
+  String refreshSnapValidate(Object snap) {
+    return 'Validando $snap...';
+  }
+
+  @override
+  String refreshSnapMount(Object snap) {
+    return 'Montando $snap...';
+  }
+
+  @override
+  String refreshSnapStopServices(Object snap) {
+    return 'Parando os serviços de $snap...';
+  }
+
+  @override
+  String refreshSnapRemoveAliases(Object snap) {
+    return 'Removendo aliases de $snap...';
+  }
+
+  @override
+  String refreshSnapUnlink(Object snap) {
+    return 'Desvinculando $snap...';
+  }
+
+  @override
+  String refreshSnapUpdateAssets(Object snap) {
+    return 'Atualizando ativos de $snap...';
+  }
+
+  @override
+  String refreshSnapUpdateKernelCommandLine(Object snap) {
+    return 'Atualizando a linha de comando do kernel de $snap...';
+  }
+
+  @override
+  String refreshSnapCopyData(Object snap) {
+    return 'Copiando dados de $snap...';
+  }
+
+  @override
+  String refreshSnapSetupProfiles(Object snap) {
+    return 'Configurando perfis de segurança de $snap...';
+  }
+
+  @override
+  String refreshSnapLink(Object snap) {
+    return 'Vinculando $snap...';
+  }
+
+  @override
+  String refreshSnapAutoConnect(Object snap) {
+    return 'Conectando plugues e slots de $snap...';
+  }
+
+  @override
+  String refreshSnapSetAutoAliases(Object snap) {
+    return 'Definindo aliases automáticos de $snap...';
+  }
+
+  @override
+  String refreshSnapSetupAliases(Object snap) {
+    return 'Definindo aliases de $snap...';
+  }
+
+  @override
+  String refreshSnapStartServices(Object snap) {
+    return 'Iniciando serviços de $snap...';
+  }
+
+  @override
+  String refreshSnapCleanup(Object snap) {
+    return 'Limpando $snap...';
+  }
+
+  @override
+  String get recoveryKeyTitle => 'Chave de recuperação do TPM';
+
+  @override
+  String get recoveryKeyCommand => 'Você pode acessar sua chave de recuperação após a instalação com o seguinte comando:';
+
+  @override
+  String recoveryKeyWarning(Object color) {
+    return '<font color=\"$color\">Atenção:</font> Se você perder essa chave de segurança, todos os dados serão perdidos. Se precisar, anote sua chave e guarde-a em um lugar seguro externo.';
+  }
 }

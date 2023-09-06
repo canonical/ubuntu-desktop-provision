@@ -13,10 +13,10 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get changeButtonText => 'Skift';
+  String get changeButtonText => 'Ændre';
 
   @override
-  String get quitButtonText => 'Forlad installation';
+  String get quitButtonText => 'Afslut installation';
 
   @override
   String loadingPageTitle(Object DISTRO) {
@@ -37,7 +37,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get welcomeRepairOption => 'Reparér installation';
 
   @override
-  String get welcomeRepairDescription => 'Reparation vil geninstallere al installeret programvare, uden at røre dokumenter eller indstillinger.';
+  String get welcomeRepairDescription => 'Reparation geninstallerer al installeret software uden at røre ved dokumenter eller indstillinger.';
 
   @override
   String welcomeTryOption(Object RELEASE) {
@@ -79,13 +79,13 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get configureSecureBootTitle => 'Konfigurér Sikret Start';
+  String get configureSecureBootTitle => 'Konfigurér Sikker Start';
 
   @override
-  String get configureSecureBootDescription => 'Du har valgt at installere tredjeparts driver-programvare. Dette kræver at man slår Sikret Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.';
+  String get configureSecureBootDescription => 'Du har valgt at installere tredjeparts driver-software. Dette kræver at man slår Sikker Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.';
 
   @override
-  String get configureSecureBootOption => 'Konfigurér Sikret Start';
+  String get configureSecureBootOption => 'Konfigurér Sikker Start';
 
   @override
   String get chooseSecurityKey => 'Vælg sikkerhedsnøgle';
@@ -94,10 +94,10 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Bekræft sikkerhedsnøglen';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Installér ikke driver-programvaren lige nu';
+  String get dontInstallDriverSoftwareNow => 'Installér ikke driver-softwaren lige nu';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Du kan installere det senere fra Programvare & Opdateringer.';
+  String get dontInstallDriverSoftwareNowDescription => 'Du kan installere det senere fra Software & Opdateringer.';
 
   @override
   String get configureSecureBootSecurityKeyRequired => 'Sikkerhedsnøgle er påkrævet';
@@ -118,25 +118,25 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get normalInstallationTitle => 'Normal installation';
 
   @override
-  String get normalInstallationSubtitle => 'Netlæsere, værktøjer, kontorpakker, spil og medieafspillere.';
+  String get normalInstallationSubtitle => 'Webbrowser, værktøjer, kontorpakker, spil og medieafspillere.';
 
   @override
   String get minimalInstallationTitle => 'Minimal installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Netlæsere og basale værktøjer.';
+  String get minimalInstallationSubtitle => 'Webbrowser og grund liggende værktøjer.';
 
   @override
   String get otherOptions => 'Andre muligheder';
 
   @override
-  String get installThirdPartyTitle => 'Installér tredjeparts programvare til grafik og Wi-Fi maskinel, så vel som yderligere medieformater';
+  String get installThirdPartyTitle => 'Installér tredjeparts software til grafik og Wi-Fi hardware, såvel som yderligere medieformater';
 
   @override
-  String get installThirdPartySubtitle => 'Denne programvare er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.';
+  String get installThirdPartySubtitle => 'Denne software er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.';
 
   @override
-  String get installDriversTitle => 'Installér tredjeparts programvare til grafik og Wi-Fi maskinel';
+  String get installDriversTitle => 'Installér tredjeparts software til grafik og Wi-Fi hardware';
 
   @override
   String get installDriversSubtitle => 'Disse chauffører er underlagt de licensvilkår, som er inkluderet i deres dokumentation. De er proprietære.';
@@ -145,7 +145,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installCodecsTitle => 'Hent og installér understøttelse af yderligere medieformater';
 
   @override
-  String get installCodecsSubtitle => 'Denne programvare er underlagt licensbetingelserne, som er inkluderet i dens dokumentation. Nogle er proprietære.';
+  String get installCodecsSubtitle => 'Denne software er underlagt licensbetingelserne, som er inkluderet i dens dokumentation. Nogle er proprietære.';
 
   @override
   String onBatteryWarning(Object color) {
@@ -153,7 +153,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get offlineWarning => 'Du er aktuelt offline';
+  String get offlineWarning => 'Du er i øjeblikket offline';
 
   @override
   String get chooseSecurityKeyTitle => 'Sikkerhedsnøgle';
@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS valgt';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EKSPERIMENTEL: Hardware-assisteret fuld diskkrypterings aktivering';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Advarsel:</font> Denne funktion understøttes kun på visse hardwarekonfigurationer og understøtter muligvis ikke opgraderinger til fremtidige Ubuntu-versioner. Læs venligst <a href=\"$url\">Udgivelsesbemærkningerne</a>, før du aktiverer.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM Valgt';
 
   @override
   String installationTypeReinstall(Object os) {
