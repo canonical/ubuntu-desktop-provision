@@ -1,1 +1,76 @@
-{}
+{
+  "telemetryDescription": "Partilhar os dados anonimamente com o {distro} para que possamos melhorar a sua experiência.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "storeHeader": "Comece com mais aplicações",
+  "@storeHeader": {},
+  "telemetryReportTitle": "Detalhes do relatório",
+  "@telemetryReportTitle": {},
+  "welcomePageTitle": "Bem-vindo",
+  "@welcomePageTitle": {},
+  "privacyPolicyLink": "Privacidade da Informação",
+  "@privacyPolicyLink": {},
+  "welcomeStoreSubtitle": "Nunca foi tão fácil encontrar o seu software favorito.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Visualizar registo de alteração</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryLegalLabel": "Jurídico",
+  "@telemetryLegalLabel": {},
+  "welcomeSecuritySubtitle": "Novas opções para a criptografia baseada em hardware ou ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "privacyPageTitle": "Serviço de localização",
+  "@privacyPageTitle": {},
+  "storeTitle": "Ubuntu Store",
+  "@storeTitle": {},
+  "welcomePageHeader": "Bem-vindo ao {distro}",
+  "@welcomePageHeader": {},
+  "privacyLocationEnable": "Serviço de localização",
+  "@privacyLocationEnable": {},
+  "telemetryHeader": "Ajude a melhorar o {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeStoreTitle": "Novo visual da App Store",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "Segurança melhorada",
+  "@welcomeSecurityTitle": {},
+  "telemetryReportLabel": "Detalhes do relatório",
+  "@telemetryReportLabel": {},
+  "storeDescription": "A App Store do Ubuntu oferece uma variedade de aplicações com os quais você pode começar desde o início.",
+  "@storeDescription": {},
+  "telemetryLabelOn": "Sim, partilhe os dados do sistema com a equipa do {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Ativar serviço de localização?",
+  "@privacyLocationTitle": {},
+  "welcomeStartTitle": "Um início simplificado",
+  "@welcomeStartTitle": {},
+  "storeOpen": "Abrir App Store",
+  "@storeOpen": {},
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "privacyLocationSubtitle": "Deixe as aplicações saberem a sua localização geográfica.\nVocê pode alterar isso a qualquer momento nas configurações do sistema.",
+  "@privacyLocationSubtitle": {},
+  "welcomeWhatsNew": "O QUE É NOVO?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Não, não partilhe os dados do sistema",
+  "@telemetryLabelOff": {},
+  "welcomeStartSubtitle": "Apoiando uma experiência de configuração mais limpa.",
+  "@welcomeStartSubtitle": {}
+}
