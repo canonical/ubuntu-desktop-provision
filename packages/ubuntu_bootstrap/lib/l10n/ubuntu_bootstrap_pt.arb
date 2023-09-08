@@ -599,5 +599,34 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "refreshPageTitle": "Atualização disponível",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Atualizar para a versão {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshCurrent": "A versão atual de {snap} é {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Aviso:</font> Este recurso é compatível apenas com determinadas configurações de hardware e pode não oferecer suporte à atualização para versões futuras do Ubuntu. Por favor leia as <a href=\"{url}\">notas de lançamento</a> antes de ativar.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "TPM selecionado",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPM": "EXPERIMENTAL: Ativar a criptografia completa de disco com suporte de hardware",
+  "@installationTypeTPM": {}
 }
