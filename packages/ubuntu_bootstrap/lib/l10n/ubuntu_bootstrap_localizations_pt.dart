@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS selecionado';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EXPERIMENTAL: Ativar a criptografia completa de disco com suporte de hardware';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Aviso:</font> Este recurso é compatível apenas com determinadas configurações de hardware e pode não oferecer suporte à atualização para versões futuras do Ubuntu. Por favor leia as <a href=\"$url\">notas de lançamento</a> antes de ativar.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM selecionado';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -679,140 +679,140 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Necessário:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Atualização disponível';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'A versão atual de $snap é $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Atualizar para a versão $version';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'A versão atual $version está atualizada.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'A atualizar $snap...';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Por favor reinicie o instalador.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Garantindo os pré-requisitos de $snap...';
   }
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'A refrescar $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'A verificar o re-refrescamento de $snap...';
   }
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'A preparar $snap...';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'A transferir $snap...';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'A validar $snap...';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'A montar $snap...';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'A parar serviços de $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'A remover pseudónimos de $snap...';
   }
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'A desvincular $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(Object snap) {
-    return 'Updating $snap assets...';
+    return 'A atuallizar os recursos de $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(Object snap) {
-    return 'Updating $snap kernel command line...';
+    return 'A atualizar a linha de comando do kernel de $snap...';
   }
 
   @override
   String refreshSnapCopyData(Object snap) {
-    return 'Copying $snap data...';
+    return 'A copiar os dados de $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(Object snap) {
-    return 'Setting up $snap security profiles...';
+    return 'A configurar os perfis de segurança de $snap...';
   }
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'A vincular $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(Object snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'A conectar os conectores e encaixes de $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(Object snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'A definir um pseudónimo automático de $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(Object snap) {
-    return 'Setting up $snap aliases...';
+    return 'A definir pseudónimos de $snap...';
   }
 
   @override
   String refreshSnapStartServices(Object snap) {
-    return 'Starting $snap services...';
+    return 'A iniciar serviços de $snap...';
   }
 
   @override
   String refreshSnapCleanup(Object snap) {
-    return 'Cleaning up $snap...';
+    return 'A limpar $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Chave de recuperação TPM';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Você pode acessar à sua chave de recuperação após a instalação com o seguinte comando:';
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Aviso:</font> Se você perder esta chave de segurança, todos os dados serão perdidos. Se precisar, anote a sua chave e guarde-a num local seguro noutro lugar.';
   }
 }
 
