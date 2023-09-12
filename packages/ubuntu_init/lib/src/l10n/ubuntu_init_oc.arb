@@ -1,4 +1,76 @@
 {
   "welcomePageTitle": "Benvengut",
-  "@welcomePageTitle": {}
+  "@welcomePageTitle": {},
+  "telemetryDescription": "Partejatz de donadas anonimas amb {distro} perque poscam melhorar vòstra experiéncia.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "storeHeader": "Començatz amb mai d’aplicacions",
+  "@storeHeader": {},
+  "telemetryReportTitle": "Detalhs del rapòrt",
+  "@telemetryReportTitle": {},
+  "privacyPolicyLink": "Proteccion de las donadas",
+  "@privacyPolicyLink": {},
+  "welcomeStoreSubtitle": "Jamai es pas estat tan simple de trobar vòstre logicial preferit.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Veire lo jornal de modificacions</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryLegalLabel": "Informacions legalas",
+  "@telemetryLegalLabel": {},
+  "welcomeSecuritySubtitle": "Opcions novèlas de chiframent material o ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "privacyPageTitle": "Servicis de localizacion",
+  "@privacyPageTitle": {},
+  "storeTitle": "Botiga Ubuntu",
+  "@storeTitle": {},
+  "welcomePageHeader": "La benvenguda dins {distro}",
+  "@welcomePageHeader": {},
+  "privacyLocationEnable": "Servicis de localizacion",
+  "@privacyLocationEnable": {},
+  "telemetryHeader": "Ajudar a melhorar {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeStoreTitle": "Un estil novèl per la logitèca",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "Seguretat renfortida",
+  "@welcomeSecurityTitle": {},
+  "telemetryReportLabel": "Detalhs del rapòrt",
+  "@telemetryReportLabel": {},
+  "storeDescription": "La botiga d’aplicacions d’Ubuntu ofrís una seria d’aplicacions que podètz utilizar tre la debuta.",
+  "@storeDescription": {},
+  "telemetryLabelOn": "Òc, partejar las donadas sistèma amb la còla de {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Activar los servicis de localizacion ?",
+  "@privacyLocationTitle": {},
+  "welcomeStartTitle": "Un començament simplificat",
+  "@welcomeStartTitle": {},
+  "storeOpen": "Dobrir la botiga d’aplicacions",
+  "@storeOpen": {},
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "privacyLocationSubtitle": "Permet que las aplicacions ajan accès a vòstre posicion geografica.\nO podètz cambiar quand volètz als Paramètres del sistèma.",
+  "@privacyLocationSubtitle": {},
+  "welcomeWhatsNew": "QUÉ DE NÒU ?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Non, partejar pas cap de donadas sistèma",
+  "@telemetryLabelOff": {},
+  "welcomeStartSubtitle": "Encoratja a una experiéncia de configuracion mai neta.",
+  "@welcomeStartSubtitle": {}
 }
