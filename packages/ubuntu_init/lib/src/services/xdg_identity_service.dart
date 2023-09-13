@@ -1,3 +1,4 @@
+import 'package:crypt/crypt.dart';
 import 'package:dbus/dbus.dart';
 import 'package:stdlibc/stdlibc.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -108,7 +109,7 @@ class XdgIdentityService implements IdentityService {
     await userObject.callMethod(
       'org.freedesktop.Accounts.User',
       'SetPassword',
-      [DBusString(_identity!.password), const DBusString('')],
+      [DBusString(Crypt.sha512(_identity!.password).toString()), const DBusString('')],
       replySignature: DBusSignature.empty,
     );
     await userObject.callMethod(
