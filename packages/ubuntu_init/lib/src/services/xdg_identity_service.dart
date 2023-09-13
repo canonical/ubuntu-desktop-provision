@@ -109,7 +109,12 @@ class XdgIdentityService implements IdentityService {
     await userObject.callMethod(
       'org.freedesktop.Accounts.User',
       'SetPassword',
-      [DBusString(Crypt.sha512(_identity!.password).toString()), const DBusString('')],
+      [
+        DBusString(
+          Crypt.sha512(_identity!.password, salt: _passwordSalt).toString(),
+        ),
+        const DBusString(''),
+      ],
       replySignature: DBusSignature.empty,
     );
     await userObject.callMethod(
