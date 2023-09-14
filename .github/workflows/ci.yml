@@ -84,7 +84,7 @@ jobs:
     - run: sudo apt update && sudo apt install lcov
     - run: lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
       working-directory: packages/${{matrix.package}}
-    - uses: codecov/codecov-action@v3
+    - uses: codecov/codecov-action@v4
       with:
         token: ${{secrets.CODECOV_TOKEN}}
 
