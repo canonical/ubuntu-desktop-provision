@@ -30,7 +30,8 @@ void main() {
 
   test('apply', () async {
     final client = createMockDBusClient();
-    final service = XdgIdentityService.uid(0, bus: client);
+    final service =
+        XdgIdentityService.uid(0, bus: client, passwordSalt: 'testsalt');
     await service.setIdentity(testIdentity.copyWith(password: 'password'));
 
     verify(client.callMethod(
@@ -55,7 +56,8 @@ void main() {
       interface: 'org.freedesktop.Accounts.User',
       name: 'SetPassword',
       values: [
-        const DBusString('password'),
+        const DBusString(
+            '\$6\$testsalt\$n5m85kZD9QCuizzEg/zol4HTaQ7qa9Z009rBoYAQaxBOhwiJwJsjgcZs2mwYMElypap3uDPrmdOPlLy4S28M5.'),
         const DBusString(''),
       ],
       replySignature: DBusSignature.empty,

@@ -1,19 +1,27 @@
+import 'package:crypt/crypt.dart';
 import 'package:dbus/dbus.dart';
+import 'package:meta/meta.dart';
 import 'package:stdlibc/stdlibc.dart';
 import 'package:ubuntu_provision/services.dart';
 
 class XdgIdentityService implements IdentityService {
-  XdgIdentityService({DBusClient? bus})
+  XdgIdentityService({DBusClient? bus, @visibleForTesting String? passwordSalt})
       : _client = bus ?? DBusClient.system(),
+        _passwordSalt = passwordSalt,
         _userId = getuid();
 
-  XdgIdentityService.uid(this._userId, {DBusClient? bus})
-      : _client = bus ?? DBusClient.system();
+  XdgIdentityService.uid(
+    this._userId, {
+    DBusClient? bus,
+    @visibleForTesting passwordSalt,
+  })  : _client = bus ?? DBusClient.system(),
+        _passwordSalt = passwordSalt;
 
   static const _defaultUserId = 1000;
 
   final DBusClient _client;
   final int _userId;
+  final String? _passwordSalt;
   Identity? _identity;
 
   DBusRemoteObject get _accountObject => DBusRemoteObject(
@@ -108,7 +116,12 @@ class XdgIdentityService implements IdentityService {
     await userObject.callMethod(
       'org.freedesktop.Accounts.User',
       'SetPassword',
-      [DBusString(_identity!.password), const DBusString('')],
+      [
+        DBusString(
+          Crypt.sha512(_identity!.password, salt: _passwordSalt).toString(),
+        ),
+        const DBusString(''),
+      ],
       replySignature: DBusSignature.empty,
     );
     await userObject.callMethod(
