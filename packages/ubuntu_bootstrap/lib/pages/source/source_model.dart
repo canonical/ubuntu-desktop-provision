@@ -103,7 +103,9 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
   /// save the selected installation options.
   Future<void> save() {
     return Future.wait([
-      _client.setSource(_sourceId!).then((_) => _storage.init()),
+      _client
+          .setSource(_sourceId!, searchDrivers: installDrivers)
+          .then((_) => _storage.init()),
       _client.setDrivers(install: installDrivers),
       _client.setCodecs(install: installCodecs && isOnline),
     ]);
