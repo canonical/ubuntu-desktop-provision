@@ -125,6 +125,14 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: false,
       ) as bool);
   @override
+  List<_i4.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
+        Invocation.method(
+          #getAllTargets,
+          [],
+        ),
+        returnValue: <_i4.GuidedStorageTarget>[],
+      ) as List<_i4.GuidedStorageTarget>);
+  @override
   String getReleaseNotesURL(_i5.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
           #getReleaseNotesURL,
