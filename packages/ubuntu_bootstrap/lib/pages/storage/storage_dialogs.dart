@@ -1,3 +1,4 @@
+import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -84,29 +85,10 @@ Future<void> showAdvancedFeaturesDialog(
                       groupValue: advancedFeature.value,
                       onChanged: (v) => advancedFeature.value = v!,
                     ),
-                  if (model.hasTpm) ...[
-                    YaruRadioButton<AdvancedFeature>(
-                      title: Text(lang.installationTypeTPM),
-                      value: AdvancedFeature.tpm,
-                      groupValue: advancedFeature.value,
-                      onChanged: (v) => advancedFeature.value = v!,
-                    ),
-                    Padding(
-                      padding: kWizardIndentation,
-                      child: Html(
-                        data: lang.installationTypeTPMWarning(
-                          Theme.of(context).colorScheme.error.toHex(),
-                          model.getReleaseNotesURL(
-                              Localizations.localeOf(context)),
-                        ),
-                        style: {
-                          'body': Style(margin: Margins.zero),
-                          'a': Style(color: Theme.of(context).colorScheme.link),
-                        },
-                        onLinkTap: (url, _, __) => launchUrl(url!),
-                      ),
-                    ),
-                  ],
+                  TpmOption(
+                    advancedFeature: advancedFeature,
+                    model: model,
+                  ),
                 ].withSpacing(kWizardSpacing),
               ),
             );
@@ -130,6 +112,71 @@ Future<void> showAdvancedFeaturesDialog(
   if (result == true) {
     model.guidedCapability =
         advancedFeature.value.toGuidedCapability(encryption: encryption.value);
+  }
+}
+
+class TpmOption extends StatelessWidget {
+  final ValueNotifier<AdvancedFeature> advancedFeature;
+  final StorageModel model;
+
+  const TpmOption({
+    super.key,
+    required this.advancedFeature,
+    required this.model,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    var compatible = true;
+
+    final target = model
+        .getAllTargets()
+        .firstOrNullWhere((t) => t is GuidedStorageTargetReformat);
+
+    if (target == null) return const SizedBox();
+
+    var data = lang.installationTypeTPMWarning(
+      Theme.of(context).colorScheme.error.toHex(),
+      model.getReleaseNotesURL(Localizations.localeOf(context)),
+    );
+
+    if (target.disallowed.isNotEmpty) {
+      final element = target.disallowed.first;
+      final reason = element.reason.toString().split('.').last;
+      final message = element.message;
+      compatible = false;
+
+      final color = Theme.of(context).disabledColor.toHex();
+
+      data = message == null
+          ? '<span style="color: $color">Info: Unknown</span> '
+          : '<span style="color: $color">$reason: $message</span>';
+    }
+
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        YaruRadioButton<AdvancedFeature>(
+          title: Text(lang.installationTypeTPM),
+          value: AdvancedFeature.tpm,
+          groupValue: advancedFeature.value,
+          onChanged: compatible ? (v) => advancedFeature.value = v! : null,
+        ),
+        Padding(
+          padding: kWizardIndentation,
+          child: Html(
+            data: data,
+            style: {
+              'body': Style(margin: Margins.zero),
+              'a': Style(color: Theme.of(context).colorScheme.link),
+            },
+            onLinkTap: (url, _, __) => launchUrl(url!),
+          ),
+        ),
+      ],
+    );
   }
 }
 

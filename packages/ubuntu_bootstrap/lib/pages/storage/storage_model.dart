@@ -42,6 +42,8 @@ class StorageModel extends SafeChangeNotifier {
   var _hasBitLocker = false;
   List<GuidedStorageTarget>? _targets;
 
+  List<GuidedStorageTarget> getAllTargets() => _targets ?? [];
+
   Iterable<T> _getTargets<T extends GuidedStorageTarget>() =>
       _targets?.whereType<T>().where((t) => t.allowed.isNotEmpty) ?? [];
 

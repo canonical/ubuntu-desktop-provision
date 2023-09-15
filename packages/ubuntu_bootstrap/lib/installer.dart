@@ -127,6 +127,7 @@ Future<void> runInstallerApp(
     if (options['source-catalog'] != null)
       '--source-catalog=${options['source-catalog']}',
     '--storage-version=2',
+    '--dry-run-config=examples/dry-run-configs/tpm.yaml',
     ...options.rest,
   ]).then(_initInstallerApp);
 
