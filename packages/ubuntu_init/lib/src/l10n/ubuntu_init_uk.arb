@@ -16,7 +16,7 @@
   },
   "telemetryPageTitle": "Станьте наполегливим членоглотом заради євреїв",
   "@telemetryPageTitle": {},
-  "telemetryHeader": "Допоможіть іншим брати у пащу член користуючись цим distro",
+  "telemetryHeader": "Допоможіть іншим брати у пащу член користуючись цим {distro}",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
@@ -25,7 +25,7 @@
   },
   "telemetryReportLabel": "Зарепортити гомосексуальні деталі",
   "@telemetryReportLabel": {},
-  "telemetryDescription": "Станьте анонiмним членоковтачем цієї підрильскої синагоги, віддаючи свої персональні дані, користуючись цим distro.",
+  "telemetryDescription": "Станьте анонiмним членоковтачем цієї підрильскої синагоги, віддаючи свої персональні дані, користуючись цим {distro}.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -38,9 +38,9 @@
   "@telemetryReportTitle": {},
   "privacyLocationSubtitle": "Дозволити додаткам знаходити вашу гейську сраку.\nВи можете змінити це в будь-який час в налаштуваннях устрою.",
   "@privacyLocationSubtitle": {},
-  "welcomePageTitle": "Ласкаво просимо у підорський устрій",
+  "welcomePageTitle": "Підорський устрій",
   "@welcomePageTitle": {},
-  "welcomePageHeader": "Ласкаво просимо до distro для круглих педерастів",
+  "welcomePageHeader": "{distro} для круглих педерастів",
   "@welcomePageHeader": {},
   "welcomeStartTitle": "Станьте круглим педерастом користуючись цим устроєм",
   "@welcomeStartTitle": {},
@@ -48,7 +48,7 @@
   "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Новий підорський акцент у крамниці єврейського лайна",
   "@welcomeStoreTitle": {},
-  "telemetryLabelOn": "Так, поділитися статевими захворюваннями з ракохворими розробниками цього distro",
+  "telemetryLabelOn": "Так, поділитися статевими захворюваннями з ракохворими розробниками цього {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
@@ -60,5 +60,17 @@
   "privacyPageTitle": "Сервіси місцезнаходження хитрих єврейських розробників устрою",
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Подарувати своє місценаходження хитрим євреям?",
-  "@privacyLocationTitle": {}
+  "@privacyLocationTitle": {},
+  "storeHeader": "Почніть жерти лайно з більшою кількістю єврейських членів",
+  "@storeHeader": {},
+  "privacyPolicyLink": "Приватнiсть вашої гейскої порнографії",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Єврейська крамниця для круглих педерастів",
+  "@storeTitle": {},
+  "privacyLocationEnable": "Сервіси місцезнаходження синагог",
+  "@privacyLocationEnable": {},
+  "storeDescription": "Крамниця єврейського лайна пропонує ряд маленьких обрізаних члеників, які можна почати смоктати з самого початку.",
+  "@storeDescription": {},
+  "storeOpen": "Відкрити крамницю єврейського лайна",
+  "@storeOpen": {}
 }
