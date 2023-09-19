@@ -58,11 +58,12 @@ void main() {
   test('get storage', () async {
     final installer = MockInstallerService();
     final storage = MockStorageService();
+    final network = MockNetworkService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
 
-    final model = ConfirmModel(installer, storage);
+    final model = ConfirmModel(installer, storage, network);
     await model.init();
     verifyInOrder([
       storage.getStorage(),
@@ -95,13 +96,14 @@ void main() {
 
     final installer = MockInstallerService();
     final storage = MockStorageService();
+    final network = MockNetworkService();
     when(storage.guidedTarget).thenReturn(target);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
 
-    final model = ConfirmModel(installer, storage);
+    final model = ConfirmModel(installer, storage, network);
     await model.init();
     verify(storage.setGuidedStorage()).called(1);
   });
@@ -109,17 +111,34 @@ void main() {
   test('start installation', () async {
     final installer = MockInstallerService();
     final storage = MockStorageService();
+    final network = MockNetworkService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
 
-    final model = ConfirmModel(installer, storage);
+    final model = ConfirmModel(installer, storage, network);
     await model.init();
     await model.startInstallation();
 
     verifyNever(storage.setStorage());
     verify(storage.securityKey = null).called(1);
     verify(installer.start()).called(1);
+  });
+
+  test('mark network configured', () async {
+    final installer = MockInstallerService();
+    final storage = MockStorageService();
+    final network = MockNetworkService();
+    when(storage.guidedTarget).thenReturn(null);
+    when(storage.getStorage()).thenAnswer((_) async => testDisks);
+    when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
+    when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
+
+    final model = ConfirmModel(installer, storage, network);
+    await model.init();
+    await model.markNetworkConfigured();
+
+    verify(network.markConfigured()).called(1);
   });
 }

@@ -118,8 +118,9 @@ class ConfirmPage extends ConsumerWidget {
             label: lang.confirmInstallButton,
             onNext: () {
               // start installation after the page transition (#1393)
-              Future.delayed(kThemeAnimationDuration).then((_) {
-                model.startInstallation();
+              Future.delayed(kThemeAnimationDuration).then((_) async {
+                await model.markNetworkConfigured();
+                await model.startInstallation();
               });
             },
           ),

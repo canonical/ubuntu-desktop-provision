@@ -80,6 +80,15 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
   @override
+  _i4.Future<void> markNetworkConfigured() => (super.noSuchMethod(
+        Invocation.method(
+          #markNetworkConfigured,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+  @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,

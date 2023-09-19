@@ -313,15 +313,6 @@ class MockNetworkModel extends _i1.Mock implements _i8.NetworkModel {
         returnValueForMissingStub: _i6.Future<void>.value(),
       ) as _i6.Future<void>);
   @override
-  _i6.Future<void> markConfigured() => (super.noSuchMethod(
-        Invocation.method(
-          #markConfigured,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
-  @override
   _i6.Future<void> cleanup() => (super.noSuchMethod(
         Invocation.method(
           #cleanup,

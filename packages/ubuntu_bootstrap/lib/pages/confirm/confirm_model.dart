@@ -2,17 +2,21 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/services.dart';
 
-final confirmModelProvider = ChangeNotifierProvider((_) =>
-    ConfirmModel(getService<InstallerService>(), getService<StorageService>()));
+final confirmModelProvider = ChangeNotifierProvider(
+  (_) => ConfirmModel(getService<InstallerService>(),
+      getService<StorageService>(), getService<NetworkService>()),
+);
 
 /// View model for [ConfirmPage].
 class ConfirmModel extends SafeChangeNotifier {
   /// Creates a model with the given installer and storage services.
-  ConfirmModel(this._installer, this._storage);
+  ConfirmModel(this._installer, this._storage, this._network);
 
   final InstallerService _installer;
   final StorageService _storage;
+  final NetworkService _network;
   List<Disk>? _disks;
   Map<String, List<Partition>>? _partitions;
   Map<String, List<Partition>>? _originals;
@@ -46,6 +50,8 @@ class ConfirmModel extends SafeChangeNotifier {
     _storage.securityKey = null; // no longer needed
     await _installer.start();
   }
+
+  Future<void> markNetworkConfigured() => _network.markConfigured();
 
   void _updateDisks(List<Disk> disks) {
     bool isPartitionModified(Partition p) {

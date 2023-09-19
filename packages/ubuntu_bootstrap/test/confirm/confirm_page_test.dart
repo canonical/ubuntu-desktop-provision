@@ -131,6 +131,7 @@ void main() {
     verifyNever(model.startInstallation());
 
     await tester.pumpAndSettle(kThemeAnimationDuration);
+    verify(model.markNetworkConfigured()).called(1);
     verify(model.startInstallation()).called(1);
   });
 }
