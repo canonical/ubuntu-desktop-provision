@@ -7,8 +7,6 @@
       "url": {}
     }
   },
-  "normalInstallationSubtitle": "Peramban web, utilitas, perangkat lunak perkantoran, permainan, dan pemutar media.",
-  "@normalInstallationSubtitle": {},
   "configureSecureBootDescription": "Anda telah memilih untuk memasang perangkat lunak driver pihak ketiga. Ini membutuhkan mematikan Boot Aman.\nUntuk melakukan ini, Anda harus memilih kunci keamanan sekarang, dan memasukkannya saat sistem dimulai ulang.",
   "@configureSecureBootDescription": {},
   "secureBootSecurityKeysDontMatch": "Kunci keamanan tidak cocok",
@@ -139,12 +137,6 @@
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Aplikasi apa yang ingin Anda pasang untuk memulai?",
   "@updatesOtherSoftwarePageDescription": {},
-  "normalInstallationTitle": "Instalasi normal",
-  "@normalInstallationTitle": {},
-  "minimalInstallationTitle": "Instalasi minimal",
-  "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Peramban web dan utilitas dasar.",
-  "@minimalInstallationSubtitle": {},
   "otherOptions": "Opsi lain",
   "@otherOptions": {},
   "installThirdPartyTitle": "Pasang perangkat lunak pihak ketiga untuk perangkat keras Wi-Fi dan grafis, serta format media tambahan",

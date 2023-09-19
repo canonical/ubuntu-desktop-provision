@@ -13,10 +13,10 @@ import 'test_source.dart';
 
 void main() {
   testWidgets('source id', (tester) async {
-    final model = buildSourceModel(sourceId: kNormalSourceId);
+    final model = buildSourceModel(sourceId: kExpandedSourceId);
     await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
 
-    expect(find.radio(kNormalSourceId), isChecked);
+    expect(find.radio(kExpandedSourceId), isChecked);
     expect(find.radio(kMinimalSourceId), isNotChecked);
 
     when(model.sourceId).thenReturn('ubuntu-desktop-minimal');
@@ -110,7 +110,7 @@ void main() {
   });
 
   testWidgets('continue on the next page', (tester) async {
-    final model = buildSourceModel(sourceId: kNormalSourceId);
+    final model = buildSourceModel(sourceId: kExpandedSourceId);
     await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
 
     await tester.tapNext();

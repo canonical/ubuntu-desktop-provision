@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Які програми ви хотіли б встановити для початку?';
 
   @override
-  String get normalInstallationTitle => 'Звичайна установка';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Веб-браузер, утиліти, офісне програмне забезпечення, ігри та медіа-плеєри.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Мінімальна установка';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Веб-браузер та базові утиліти.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Інші параметри';

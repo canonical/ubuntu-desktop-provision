@@ -9,8 +9,6 @@
       "RELEASE": {}
     }
   },
-  "normalInstallationSubtitle": "Web 浏览器、实用程序、办公软件、游戏和媒体播放器。",
-  "@normalInstallationSubtitle": {},
   "changeButtonText": "更改",
   "@changeButtonText": {},
   "welcome": "欢迎",
@@ -136,10 +134,6 @@
   "@configureSecureBootDescription": {},
   "rstDescription": "这台电脑使用了英特尔RST（快速存储技术）。在安装Ubuntu之前，您需要在Windows中关闭RST。",
   "@rstDescription": {},
-  "minimalInstallationTitle": "最小安装",
-  "@minimalInstallationTitle": {},
-  "normalInstallationTitle": "正常安装",
-  "@normalInstallationTitle": {},
   "installationTypeAlongsideInfo": "将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。",
   "@installationTypeAlongsideInfo": {},
   "welcomeRepairDescription": "修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。",
@@ -235,8 +229,6 @@
       "path": {}
     }
   },
-  "minimalInstallationSubtitle": "浏览器和基础实用程序。",
-  "@minimalInstallationSubtitle": {},
   "otherOptions": "其他选项",
   "@otherOptions": {},
   "installThirdPartyTitle": "为图形和 Wi-Fi 硬件以及其他媒体格式安装第三方软件",

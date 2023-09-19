@@ -34,7 +34,7 @@ SourceModel buildSourceModel({
       isDefault: false,
     ),
     const SourceSelection(
-      id: kNormalSourceId,
+      id: kExpandedSourceId,
       name: '',
       description: '',
       size: 0,
@@ -42,7 +42,7 @@ SourceModel buildSourceModel({
       isDefault: true,
     ),
   ]);
-  when(model.sourceId).thenReturn(sourceId ?? kNormalSourceId);
+  when(model.sourceId).thenReturn(sourceId ?? kExpandedSourceId);
   when(model.installDrivers).thenReturn(installDrivers ?? false);
   when(model.installCodecs).thenReturn(installCodecs ?? false);
   when(model.onBattery).thenReturn(onBattery ?? false);

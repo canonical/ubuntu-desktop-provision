@@ -10,7 +10,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 /// @internal
 final log = Logger('source');
 
-const kNormalSourceId = 'ubuntu-desktop';
+const kExpandedSourceId = 'ubuntu-desktop';
 const kMinimalSourceId = 'ubuntu-desktop-minimal';
 
 final sourceModelProvider = ChangeNotifierProvider(

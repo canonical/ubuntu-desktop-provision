@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Cilat programe dëshiron të instalosh si fillim?';
 
   @override
-  String get normalInstallationTitle => 'Instalim normal';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Web browser, utilities, office software, games and media players.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Instalim minimal';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Shfletues interneti dhe mjete bazë.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Opsione të tjera';

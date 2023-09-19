@@ -87,18 +87,10 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Instalatu hirugarreneko softwarea grafiko eta Wi-Fi hardwarearentzako, batia multimedia formatu gehigarrientzako euskarria",
   "@installThirdPartyTitle": {},
-  "minimalInstallationSubtitle": "Web nabigatzailea eta oinarrizko utilitateak.",
-  "@minimalInstallationSubtitle": {},
-  "normalInstallationTitle": "Instalazio normala",
-  "@normalInstallationTitle": {},
-  "minimalInstallationTitle": "Instalazio minimoa",
-  "@minimalInstallationTitle": {},
   "changeButtonText": "Aldatu",
   "@changeButtonText": {},
   "showSecurityKey": "Erakutsi segurtasun gakoa",
   "@showSecurityKey": {},
   "welcome": "Ongi etorri",
-  "@welcome": {},
-  "normalInstallationSubtitle": "Web nabigatzailea, utilitateak, bulegotika softwarea, jokoak eta multimedia-erreproduzitzaileak.",
-  "@normalInstallationSubtitle": {}
+  "@welcome": {}
 }

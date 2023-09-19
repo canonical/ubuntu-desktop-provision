@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Hvilke apps vil du installere, til at starte med?';
 
   @override
-  String get normalInstallationTitle => 'Normal installation';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Webbrowser, værktøjer, kontorpakker, spil og medieafspillere.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Minimal installation';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Webbrowser og grund liggende værktøjer.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Andre muligheder';
