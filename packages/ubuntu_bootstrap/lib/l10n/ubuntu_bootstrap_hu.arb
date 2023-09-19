@@ -234,7 +234,7 @@
   "@diskHeadersUsed": {},
   "diskHeadersSystem": "Rendszer",
   "@diskHeadersSystem": {},
-  "diskHeadersFormat": "Formátum",
+  "diskHeadersFormat": "Formázás",
   "@diskHeadersFormat": {},
   "freeDiskSpace": "Szabad hely",
   "@freeDiskSpace": {},
@@ -374,7 +374,7 @@
   "@installAlongsidePartition": {},
   "installAlongsideAvailable": "Elérhető:",
   "@installAlongsideAvailable": {},
-  "installAlongsideHiddenPartitions": "{num} a kisebb partíció el van rejtve, használja a <a href=\"{url}\">speciális particionáló eszközt</a> a jobb szabályozáshoz",
+  "installAlongsideHiddenPartitions": "{num} kisebb partíció el van rejtve, használja a <a href=\"{url}\">speciális particionáló eszközt</a> a jobb szabályozáshoz",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -628,6 +628,209 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
+    }
+  },
+  "recoveryKeyTitle": "TPM helyreállítási kulcs",
+  "@recoveryKeyTitle": {},
+  "refreshPageTitle": "Frissítés érhető el",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Frissítés a(z) {version} verzióra",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapUnlink": "A(z) {snap} kapcsolatának megszüntetése…",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "A(z) {snap} eszközeinek frissítése…",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrerequisites": "A(z) {snap} előfeltételeinek biztosítása…",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "A(z) {snap} szolgáltatásainak indítása…",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapAutoConnect": "A(z) {snap} csatlakozóinak és foglalatainak kapcsolódása…",
+  "@refreshSnapAutoConnect": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "A(z) {snap} rendszermag parancssorának frissítése…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshCurrent": "A jelenlegi {snap} verzió {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "partitionFormatKeep": "{format} formátumra formázva hagyás",
+  "@partitionFormatKeep": {
+    "type": "text",
+    "placeholders": {
+      "format": {}
+    }
+  },
+  "refreshSnapRefresh": "A(z) {snap} frissítése…",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "A(z) {snap} biztonsági profiljainak beállítása…",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "A(z) {snap} frissítése…",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "A(z) {snap} tisztítása…",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ez a funkció csak bizonyos hardverkonfigurációkon támogatott, és lehet, hogy nem támogatja a jövőbeli Ubuntu kiadásokra való frissítést. Olvassa el a <a href=\"{url}\">kiadási megjegyzéseket</a> az engedélyezés előtt.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "TPM kiválasztva",
+  "@installationTypeTPMSelected": {},
+  "refreshSnapLink": "A(z) {snap} kapcsolása…",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "A(z) {snap} előkészítése…",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "A(z) {snap} adatainak másolása…",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "A(z) {snap} ellenőrzése…",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPM": "KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése",
+  "@installationTypeTPM": {},
+  "refreshSnapDownload": "A(z) {snap} letöltése…",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "A(z) {snap} újrafrissítésének ellenőrzése…",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "A(z) {snap} szolgáltatásainak leállítása…",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "A(z) {snap} csatolása…",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyCommand": "A helyreállítási kulcsot a telepítés után érheti el a következő paranccsal:",
+  "@recoveryKeyCommand": {},
+  "refreshSnapSetupAliases": "A(z) {snap} álneveinek beállítása…",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Automatikus {snap} álnevek beállítása…",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "A jelenlegi {version} verzió naprakész.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapRemoveAliases": "A(z) {snap} álnevek eltávolítása…",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Indítsa újra a telepítőt.",
+  "@refreshRestart": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
     }
   }
 }
