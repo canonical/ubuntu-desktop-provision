@@ -113,16 +113,6 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const PrivacyPage(),
           onLoad: (_) => PrivacyPage.load(ref),
         ),
-        InitRoutes.store: WizardRoute(
-          builder: (_) => const StorePage(),
-          onLoad: (_) => StorePage.load(ref),
-          onNext: (_) async {
-            final window = YaruWindow.of(context);
-            await _onDone?.call();
-            await window.close();
-            return InitRoutes.initial;
-          },
-        ),
         InitRoutes.launchsession: WizardRoute(
           builder: (_) => const LaunchSessionPage(),
           onNext: (_) async {
