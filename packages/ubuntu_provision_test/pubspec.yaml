@@ -30,4 +30,4 @@ dependencies:
     path: ../ubuntu_wizard
   yaru: ^0.9.0
   yaru_test: ^0.1.3
-  yaru_widgets: ^2.5.0
+  yaru_widgets: ^3.0.0
