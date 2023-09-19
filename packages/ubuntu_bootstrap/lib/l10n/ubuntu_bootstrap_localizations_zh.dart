@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => '您想先安装哪些应用？';
 
   @override
-  String get normalInstallationTitle => '正常安装';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Web 浏览器、实用程序、办公软件、游戏和媒体播放器。';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => '最小安装';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => '浏览器和基础实用程序。';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => '其他选项';
@@ -929,18 +929,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get updatesOtherSoftwarePageDescription => '你首先想安裝些什麼程式？';
-
-  @override
-  String get normalInstallationTitle => '普通安裝';
-
-  @override
-  String get normalInstallationSubtitle => '瀏覽器、公用程式、辦公室套件、遊戲與媒體播放器。';
-
-  @override
-  String get minimalInstallationTitle => '最小安裝';
-
-  @override
-  String get minimalInstallationSubtitle => '網頁瀏覽器和基本公用程式。';
 
   @override
   String get otherOptions => '其它選項';

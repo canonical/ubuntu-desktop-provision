@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'ആരംഭിക്കുന്നതിന് ഏതൊക്കെ ആപ്പുകളാണ് നിങ്ങൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ ആഗ്രഹിക്കുന്നത്?';
 
   @override
-  String get normalInstallationTitle => 'സാധാരണ ഇൻസ്റ്റലേഷൻ';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'വെബ് ബ്രൗസർ, യൂട്ടിലിറ്റികൾ, ഓഫീസ് സോഫ്റ്റ്‌വെയർ, ഗെയിമുകൾ, മീഡിയ പ്ലെയറുകൾ.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'കുറഞ്ഞ ഇൻസ്റ്റാളേഷൻ';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'വെബ് ബ്രൗസറും അടിസ്ഥാന യൂട്ടിലിറ്റികളും.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'മറ്റ് തിരഞ്ഞെടുപ്പുകൾ';

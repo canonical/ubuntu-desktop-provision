@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Které aplikace chcete mít hned od začátku nainstalované?';
 
   @override
-  String get normalInstallationTitle => 'Normální instalace';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Webový prohlížeč, nástroje, kancelářský software a přehrávače multimédií.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Minimální instalace';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Webový prohlížeč a základní nástroje.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Další možnosti';

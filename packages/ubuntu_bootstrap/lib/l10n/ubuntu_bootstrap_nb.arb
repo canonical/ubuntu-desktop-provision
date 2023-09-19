@@ -79,12 +79,6 @@
   "@selectGuidedStorageInstallNow": {},
   "updatesOtherSoftwarePageDescription": "Hvilke apper vil du installere til å begynne med?",
   "@updatesOtherSoftwarePageDescription": {},
-  "normalInstallationSubtitle": "Nettleser, verktøy, kontorprogramvare, spill og mediespillere.",
-  "@normalInstallationSubtitle": {},
-  "minimalInstallationTitle": "Minimal installasjon",
-  "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Nettleser og grunnleggende verktøy.",
-  "@minimalInstallationSubtitle": {},
   "otherOptions": "Andre valg",
   "@otherOptions": {},
   "installationTypeErase": "Formatere harddisken og installere {DISTRO}",
@@ -94,8 +88,6 @@
       "DISTRO": {}
     }
   },
-  "normalInstallationTitle": "Normal installasjon",
-  "@normalInstallationTitle": {},
   "configureSecureBootDescription": "Du har valgt å installere tredjeparts driverprogramvare. Dette krever at du slår av sikker oppstart.\nFor å gjøre dette, må du velge en sikkerhetsnøkkel nå, og angi den når systemet starter på nytt.",
   "@configureSecureBootDescription": {},
   "chooseSecurityKeyHeader": "Diskkryptering beskytter filene dine i tilfelle du mister datamaskinen. Det krever at du oppgir en sikkerhetsnøkkel hver gang datamaskinen starter opp.\n\nEventuelle filer utenfor {RELEASE} blir ikke kryptert.",

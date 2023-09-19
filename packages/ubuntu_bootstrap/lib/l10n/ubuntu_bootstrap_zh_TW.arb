@@ -49,12 +49,6 @@
   "@showSecurityKey": {},
   "updatesOtherSoftwarePageTitle": "應用程式與更新",
   "@updatesOtherSoftwarePageTitle": {},
-  "normalInstallationTitle": "普通安裝",
-  "@normalInstallationTitle": {},
-  "minimalInstallationSubtitle": "網頁瀏覽器和基本公用程式。",
-  "@minimalInstallationSubtitle": {},
-  "minimalInstallationTitle": "最小安裝",
-  "@minimalInstallationTitle": {},
   "installDriversTitle": "安裝第三方軟體以使用顯示卡、無線網路等硬體",
   "@installDriversTitle": {},
   "installCodecsSubtitle": "這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。",
@@ -180,8 +174,6 @@
       "url": {}
     }
   },
-  "normalInstallationSubtitle": "瀏覽器、公用程式、辦公室套件、遊戲與媒體播放器。",
-  "@normalInstallationSubtitle": {},
   "otherOptions": "其它選項",
   "@otherOptions": {},
   "installThirdPartyTitle": "安裝第三方軟體以使用顯示卡、無線網路等硬體，並提供額外的媒體格式支援",

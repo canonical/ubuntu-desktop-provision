@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Kokias programas pradžiai norėtumėte įdiegti?';
 
   @override
-  String get normalInstallationTitle => 'Įprastas programų paketas';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Saityno naršyklė, paslaugų programos, raštinės programinė įranga, žaidimai ir medijos leistuvės.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Minimalus programų paketas';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Saityno naršyklė ir pagrindinės paslaugų programos.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Kitos parinktys';

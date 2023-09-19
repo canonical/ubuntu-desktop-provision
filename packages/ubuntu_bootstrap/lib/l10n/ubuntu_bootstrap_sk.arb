@@ -1,7 +1,5 @@
 {
   "@@locale": "sk",
-  "minimalInstallationSubtitle": "Webový prehliadač a základné nástroje.",
-  "@minimalInstallationSubtitle": {},
   "otherOptions": "Ďalšie možnosti",
   "@otherOptions": {},
   "installThirdPartyTitle": "Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií",
@@ -117,8 +115,6 @@
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Ktoré aplikácie chcete mať ihneď od začiatku nainštalované?",
   "@updatesOtherSoftwarePageDescription": {},
-  "normalInstallationTitle": "Normálna inštalácia",
-  "@normalInstallationTitle": {},
   "diskHeadersMountPoint": "Prípojný bod",
   "@diskHeadersMountPoint": {},
   "newPartitionTable": "Nová tabuľka rozdelenia na oddiely",
@@ -127,10 +123,6 @@
   "@rstHeader": {},
   "showSecurityKey": "Zobraziť kľúč zabezpečenia",
   "@showSecurityKey": {},
-  "normalInstallationSubtitle": "Webový prehliadač, nástroje, kancelársky softvér, hry a prehrávače multimédií.",
-  "@normalInstallationSubtitle": {},
-  "minimalInstallationTitle": "Minimálna inštalácia",
-  "@minimalInstallationTitle": {},
   "onBatteryWarning": "<font color=\"{color}\">Upozornenie:</font> Počítač nie je pripojený k napájaniu zo zásuvky.",
   "@onBatteryWarning": {
     "type": "text",

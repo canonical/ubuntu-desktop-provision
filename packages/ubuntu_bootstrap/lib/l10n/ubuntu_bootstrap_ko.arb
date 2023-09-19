@@ -17,8 +17,6 @@
       "url": {}
     }
   },
-  "minimalInstallationTitle": "최소 설치",
-  "@minimalInstallationTitle": {},
   "configureSecureBootTitle": "Secure Boot 구성",
   "@configureSecureBootTitle": {},
   "configureSecureBootOption": "Secure Boot 구성",
@@ -43,10 +41,6 @@
   "@newPartitionTable": {},
   "changeButtonText": "바꾸기",
   "@changeButtonText": {},
-  "normalInstallationSubtitle": "웹 브라우저, 유틸리티, 오피스 소프트웨어, 게임 및 미디어 플레이어.",
-  "@normalInstallationSubtitle": {},
-  "normalInstallationTitle": "일반 설치",
-  "@normalInstallationTitle": {},
   "installationTypeOSDetected": "현재 컴퓨터에 {os}(이)가 설치되어 있습니다. 어떻게 하시겠습니까?",
   "@installationTypeOSDetected": {
     "type": "text",
@@ -84,8 +78,6 @@
   "@dontInstallDriverSoftwareNowDescription": {},
   "updatesOtherSoftwarePageTitle": "애플리케이션 및 업데이트",
   "@updatesOtherSoftwarePageTitle": {},
-  "minimalInstallationSubtitle": "웹 브라우저와 기본 유틸리티.",
-  "@minimalInstallationSubtitle": {},
   "installThirdPartyTitle": "그래픽 및 Wi-Fi 하드웨어를 위한 서드파티 소프트웨어와, 부가적인 미디어 포맷 설치",
   "@installThirdPartyTitle": {},
   "installationTypeErase": "디스크 지우고 {DISTRO} 설치",

@@ -115,10 +115,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'אילו יישומים להתקין בתור התחלה?';
 
   @override
-  String get normalInstallationTitle => 'התקנה רגילה';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'דפדפן, עזרים, חבילת תכניות משרדיות, משחקים ונגני מדיה.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
   String get minimalInstallationTitle => 'התקנה מצומצמת';

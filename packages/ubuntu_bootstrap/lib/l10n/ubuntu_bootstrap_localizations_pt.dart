@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Que aplicações gostaria de instalar para começar?';
 
   @override
-  String get normalInstallationTitle => 'Instalação normal';
+  String get expandedInstallationTitle => 'Expanded installation';
 
   @override
-  String get normalInstallationSubtitle => 'Navegador web, utilitários, software de escritório, jogos e reprodutores multimédia.';
+  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Instalação mínima';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Navegador web e utilitários básicos.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Outras opções';
@@ -929,18 +929,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get updatesOtherSoftwarePageDescription => 'Quais apps você gostaria de instalar para começar?';
-
-  @override
-  String get normalInstallationTitle => 'Instalação normal';
-
-  @override
-  String get normalInstallationSubtitle => 'Navegador web, utilitários, pacote office, jogos e reprodutores de mídia.';
-
-  @override
-  String get minimalInstallationTitle => 'Instalação mínima';
-
-  @override
-  String get minimalInstallationSubtitle => 'Navegador web e utilitários básicos.';
 
   @override
   String get otherOptions => 'Outras opções';
