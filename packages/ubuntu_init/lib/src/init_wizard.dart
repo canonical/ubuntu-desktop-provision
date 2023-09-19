@@ -31,6 +31,7 @@ class InitRoutes {
   static const String telemetry = '/telemetry';
   static const String privacy = '/privacy';
   static const String store = '/store';
+  static const String launchsession = '/launchsession';
 }
 
 class InitWizard extends ConsumerWidget {
@@ -115,6 +116,15 @@ class InitWizard extends ConsumerWidget {
         InitRoutes.store: WizardRoute(
           builder: (_) => const StorePage(),
           onLoad: (_) => StorePage.load(ref),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
+            await _onDone?.call();
+            await window.close();
+            return InitRoutes.initial;
+          },
+        ),
+        InitRoutes.launchsession: WizardRoute(
+          builder: (_) => const LaunchSessionPage(),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
