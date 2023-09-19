@@ -169,7 +169,5 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-
-    verify(model.markConfigured()).called(1);
   });
 }

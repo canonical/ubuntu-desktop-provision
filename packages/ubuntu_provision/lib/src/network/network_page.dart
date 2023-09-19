@@ -89,11 +89,8 @@ class NetworkPage extends ConsumerWidget {
             enabled:
                 model.isEnabled && !model.isConnecting && model.isConnected,
             visible: !model.isEnabled || !model.canConnect,
-            onNext: () => Future.wait([
-              // suspend network activity when proceeding on the next page
-              model.cleanup(),
-              model.markConfigured(),
-            ]),
+            // suspend network activity when proceeding on the next page
+            onNext: model.cleanup,
             // resume network activity if/when returning back to this page
             onBack: model.init,
           ),

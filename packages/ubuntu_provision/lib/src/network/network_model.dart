@@ -103,8 +103,6 @@ class NetworkModel extends SafeChangeNotifier implements ConnectModel {
     }
   }
 
-  Future<void> markConfigured() => _service.markConfigured();
-
   @override
   Future<void> cleanup() async {
     for (final model in _connectModels.values) {
