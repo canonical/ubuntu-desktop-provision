@@ -122,10 +122,10 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
     return Future.wait([
       _client.getSource().then((value) {
         // the desired order:
-        // 1. ubuntu-desktop (1)
-        // 2. ubuntu-desktop-minimal (0)
+        // 1. ubuntu-desktop-minimal (1)
+        // 2. ubuntu-desktop (0)
         // 3. any other source (-1)
-        const order = [kMinimalSourceId, kNormalSourceId];
+        const order = [kExpandedSourceId, kMinimalSourceId];
         _sources = List.of(value.sources)
           ..sort((a, b) => order.indexOf(b.id).compareTo(order.indexOf(a.id)));
         _sourceId = value.currentId;
