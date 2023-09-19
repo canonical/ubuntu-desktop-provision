@@ -254,7 +254,7 @@ Widget _buildProductivitySlide(BuildContext context) {
     table: SlideTable(
       rows: [
         [
-          Text(lang.installationSlidesIncluded),
+          Text(lang.installationSlidesAvailable),
           const SlideLabel(
             icon: _SlideIcon('thunderbird.png'),
             label: Text('Thunderbird'),
