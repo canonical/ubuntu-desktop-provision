@@ -143,15 +143,11 @@ class TpmOption extends StatelessWidget {
 
     if (target.disallowed.isNotEmpty) {
       final element = target.disallowed.first;
-      final reason = element.reason.toString().split('.').last;
-      final message = element.message;
+      final message = element.message ?? '';
       compatible = false;
 
       final color = Theme.of(context).disabledColor.toHex();
-
-      data = message == null
-          ? '<span style="color: $color">Info: Unknown</span> '
-          : '<span style="color: $color">$reason: $message</span>';
+      data = '<span style="color: $color">$message</span>';
     }
 
     return Column(
