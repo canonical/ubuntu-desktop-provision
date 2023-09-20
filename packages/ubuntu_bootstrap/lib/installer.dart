@@ -57,7 +57,9 @@ Future<void> runInstallerApp(
         valueHelp: 'path', help: 'A comma-separated list of pages', hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
-  final log = Logger.setup(path: liveRun ? '/var/log/installer' : null);
+  final exe = p.basename(Platform.resolvedExecutable);
+  final log =
+      Logger.setup(path: liveRun ? '/var/log/installer/$exe.log' : null);
 
   final serverMode = liveRun ? ServerMode.LIVE : ServerMode.DRY_RUN;
   final subiquityPath = await getSubiquityPath()
