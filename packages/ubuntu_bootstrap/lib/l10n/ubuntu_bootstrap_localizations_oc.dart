@@ -115,10 +115,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Quinas aplicacions volètz installar per començar ?';
 
   @override
-  String get expandedInstallationTitle => 'Expanded installation';
+  String get fullInstallationTitle => 'Full installation';
 
   @override
-  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
   String get minimalInstallationTitle => 'Default installation';

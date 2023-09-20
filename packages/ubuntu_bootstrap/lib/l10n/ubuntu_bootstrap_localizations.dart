@@ -417,17 +417,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'What apps would you like to install to start with?'**
   String get updatesOtherSoftwarePageDescription;
 
-  /// No description provided for @expandedInstallationTitle.
+  /// No description provided for @fullInstallationTitle.
   ///
   /// In en, this message translates to:
-  /// **'Expanded installation'**
-  String get expandedInstallationTitle;
+  /// **'Full installation'**
+  String get fullInstallationTitle;
 
-  /// No description provided for @expandedInstallationSubtitle.
+  /// No description provided for @fullInstallationSubtitle.
   ///
   /// In en, this message translates to:
   /// **'An offline-friendly selection of office tools, utilities, web browser and games.'**
-  String get expandedInstallationSubtitle;
+  String get fullInstallationSubtitle;
 
   /// No description provided for @minimalInstallationTitle.
   ///

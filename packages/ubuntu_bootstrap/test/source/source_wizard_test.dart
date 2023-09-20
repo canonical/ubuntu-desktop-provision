@@ -83,7 +83,7 @@ extension on WidgetTester {
     final client = MockSubiquityClient();
     when(client.getSource()).thenAnswer((_) async =>
         const SourceSelectionAndSetting(
-            sources: [], currentId: kExpandedSourceId, searchDrivers: false));
+            sources: [], currentId: kFullSourceId, searchDrivers: false));
     when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
         install: true, drivers: [], localOnly: false, searchDrivers: false));
     when(client.getCodecs())

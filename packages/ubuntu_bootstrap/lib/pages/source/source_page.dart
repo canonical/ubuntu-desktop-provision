@@ -11,7 +11,7 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'source_model.dart';
 
-export 'source_model.dart' show kExpandedSourceId, kMinimalSourceId;
+export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 
 class SourcePage extends ConsumerWidget {
   const SourcePage({super.key});
@@ -137,9 +137,8 @@ extension on Iterable<Widget> {
 extension on SourceSelection {
   String localizeTitle(BuildContext context) {
     switch (id) {
-      case kExpandedSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .expandedInstallationTitle;
+      case kFullSourceId:
+        return UbuntuBootstrapLocalizations.of(context).fullInstallationTitle;
       case kMinimalSourceId:
         return UbuntuBootstrapLocalizations.of(context)
             .minimalInstallationTitle;
@@ -150,9 +149,9 @@ extension on SourceSelection {
 
   String localizeSubtitle(BuildContext context) {
     switch (id) {
-      case kExpandedSourceId:
+      case kFullSourceId:
         return UbuntuBootstrapLocalizations.of(context)
-            .expandedInstallationSubtitle;
+            .fullInstallationSubtitle;
       case kMinimalSourceId:
         return UbuntuBootstrapLocalizations.of(context)
             .minimalInstallationSubtitle;
