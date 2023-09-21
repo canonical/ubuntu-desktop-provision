@@ -128,7 +128,6 @@ class TpmOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    var compatible = true;
 
     final target = model
         .getAllTargets()
@@ -140,11 +139,12 @@ class TpmOption extends StatelessWidget {
       Theme.of(context).colorScheme.error.toHex(),
       model.getReleaseNotesURL(Localizations.localeOf(context)),
     );
+    Function(AdvancedFeature?)? onChanged = (v) => advancedFeature.value = v!;
 
     if (target.disallowed.isNotEmpty) {
       final element = target.disallowed.first;
       final message = element.message ?? '';
-      compatible = false;
+      onChanged = null;
 
       final color = Theme.of(context).disabledColor.toHex();
       data = '<span style="color: $color">$message</span>';
@@ -158,7 +158,7 @@ class TpmOption extends StatelessWidget {
           title: Text(lang.installationTypeTPM),
           value: AdvancedFeature.tpm,
           groupValue: advancedFeature.value,
-          onChanged: compatible ? (v) => advancedFeature.value = v! : null,
+          onChanged: onChanged,
         ),
         Padding(
           padding: kWizardIndentation,

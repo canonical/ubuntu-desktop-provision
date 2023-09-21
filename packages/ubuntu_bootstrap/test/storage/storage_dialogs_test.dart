@@ -87,12 +87,13 @@ void main() {
     verify(model.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
   });
 
-  testWidgets('select tpm', (tester) async {
+  testWidgets('tpm supported', (tester) async {
     final model = buildStorageModel(
       hasTpm: true,
       hasDirect: false,
       hasLvm: false,
       hasZfs: false,
+      scenario: SecureBootScenarios.supported,
     );
 
     await tester.pumpWidget(
@@ -111,13 +112,94 @@ void main() {
     expect(find.radio(AdvancedFeature.zfs), findsNothing);
     expect(find.radio(AdvancedFeature.tpm), findsOneWidget);
 
-    await tester.tap(find.radio(AdvancedFeature.tpm));
+    final finder = find.radio(AdvancedFeature.tpm);
+    await tester.tap(finder);
     await tester.pump();
-
     await tester.tapOk();
     await result;
 
     verify(model.guidedCapability = GuidedCapability.CORE_BOOT_ENCRYPTED)
         .called(1);
+  });
+
+  testWidgets('tpm requires uefi and secure boot', (tester) async {
+    final model = buildStorageModel(
+      hasTpm: true,
+      scenario: SecureBootScenarios.bios,
+    );
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [storageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const StoragePage()),
+      ),
+    );
+
+    final result = showAdvancedFeaturesDialog(
+        tester.element(find.byType(StoragePage)), model);
+    await tester.pumpAndSettle();
+
+    final finder = find.radio(AdvancedFeature.tpm);
+    expect(finder, findsOneWidget);
+    expect(finder, isDisabled);
+
+    await tester.pump();
+    await tester.tapCancel();
+
+    await result;
+    expect(model.guidedCapability, GuidedCapability.DIRECT);
+  });
+
+  testWidgets('tpm not present', (tester) async {
+    final model = buildStorageModel(
+      hasTpm: false,
+      scenario: SecureBootScenarios.noTpm,
+    );
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [storageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const StoragePage()),
+      ),
+    );
+
+    final result = showAdvancedFeaturesDialog(
+        tester.element(find.byType(StoragePage)), model);
+    await tester.pumpAndSettle();
+
+    final finder = find.radio(AdvancedFeature.tpm);
+    expect(finder, findsOneWidget);
+    expect(finder, isDisabled);
+
+    await tester.pump();
+    await tester.tapCancel();
+
+    await result;
+    expect(model.guidedCapability, GuidedCapability.DIRECT);
+  });
+
+  testWidgets('tpm incompatible with third party drivers', (tester) async {
+    final model = buildStorageModel(
+      hasTpm: true,
+      scenario: SecureBootScenarios.thirdPartyDrivers,
+    );
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [storageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const StoragePage()),
+      ),
+    );
+
+    final result = showAdvancedFeaturesDialog(
+        tester.element(find.byType(StoragePage)), model);
+    await tester.pumpAndSettle();
+
+    final finder = find.radio(AdvancedFeature.tpm);
+    expect(finder, findsOneWidget);
+    expect(finder, isDisabled);
+
+    await tester.pump();
+    await tester.tapCancel();
+
+    await result;
+    expect(model.guidedCapability, GuidedCapability.DIRECT);
   });
 }
