@@ -6,7 +6,7 @@
   "@windowTitle": {},
   "welcome": "Le damos la bienvenida",
   "@welcome": {},
-  "welcomePageTitle": "Probar o instalar {DISTRO}",
+  "welcomePageTitle": "Prueba o instala {DISTRO}",
   "@welcomePageTitle": {},
   "welcomeRepairOption": "Reparar instalación",
   "@welcomeRepairOption": {},
@@ -86,7 +86,7 @@
   "@chooseSecurityKeyHint": {},
   "chooseSecurityKeyConfirmHint": "Confirmar la clave de seguridad",
   "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Se necesita una clave de seguridad",
+  "chooseSecurityKeyRequired": "Se requiere una clave de seguridad",
   "@chooseSecurityKeyRequired": {},
   "chooseSecurityKeyMismatch": "Las claves de seguridad no coinciden",
   "@chooseSecurityKeyMismatch": {},
@@ -777,5 +777,13 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "minimalInstallationTitle": "Instalación predeterminada",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Sólo lo esencial, el navegador web y las utilidades básicas.",
+  "@minimalInstallationSubtitle": {},
+  "expandedInstallationSubtitle": "Una selección de herramientas de oficina, utilidades, navegador web y juegos compatibles sin conexión.",
+  "@expandedInstallationSubtitle": {},
+  "expandedInstallationTitle": "Instalación ampliada",
+  "@expandedInstallationTitle": {}
 }
