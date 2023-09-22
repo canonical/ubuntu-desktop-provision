@@ -1,1 +1,8 @@
-{}
+{
+  "welcomePageTitle": "Benvenuti",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Benvenuto in {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "COSA C'È DI NUOVO?",
+  "@welcomeWhatsNew": {}
+}
