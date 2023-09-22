@@ -131,6 +131,7 @@ extension on WidgetTester {
     registerMockService<StorageService>(StorageService(MockSubiquityClient()));
     registerMockService<SubiquityClient>(MockSubiquityClient());
     registerMockService<TelemetryService>(MockTelemetryService());
+    registerMockService<NetworkService>(MockNetworkService());
 
     return ProviderScope(
       child: SlidesContext(
