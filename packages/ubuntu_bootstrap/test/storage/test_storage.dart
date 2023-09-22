@@ -22,6 +22,7 @@ StorageModel buildStorageModel({
   ProductInfo? productInfo,
   String? releaseNotesURL,
   List<OsProber>? existingOS,
+  SecureBootScenarios? scenario,
   bool? canInstallAlongside,
   bool? canEraseDisk,
   bool? canManualPartition,
@@ -49,5 +50,62 @@ StorageModel buildStorageModel({
   when(model.hasZfs).thenReturn(hasZfs ?? true);
   when(model.hasTpm).thenReturn(hasTpm ?? false);
   when(model.hasDd).thenReturn(hasDd ?? false);
+  when(model.getAllTargets()).thenAnswer((_) => switch (scenario) {
+        SecureBootScenarios.supported => [Supported],
+        SecureBootScenarios.noTpm => [NoTpm],
+        SecureBootScenarios.bios => [Bios],
+        SecureBootScenarios.thirdPartyDrivers => [ThirdPartyDrivers],
+        _ => [],
+      });
   return model;
 }
+
+/// I could not find a documented list of valid permutations over GuidedCapability
+/// and GuidedDisallowedCapabilityReason. Thus, this is a best-guess at permutations
+/// we care about whilst allowing for easy addition.
+enum SecureBootScenarios {
+  supported,
+  noTpm,
+  bios,
+  thirdPartyDrivers,
+}
+
+const Supported = GuidedStorageTargetReformat(
+  diskId: 'disk-vda',
+  allowed: [GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED],
+  disallowed: [],
+);
+
+const NoTpm = GuidedStorageTargetReformat(
+  diskId: 'disk-vda',
+  allowed: [],
+  disallowed: [
+    GuidedDisallowedCapability(
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        reason:
+            GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+        message: 'tpm required')
+  ],
+);
+
+const Bios = GuidedStorageTargetReformat(
+  diskId: 'disk-vda',
+  allowed: [],
+  disallowed: [
+    GuidedDisallowedCapability(
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        reason: GuidedDisallowedCapabilityReason.NOT_UEFI,
+        message: 'uefi & secure boot required')
+  ],
+);
+
+const ThirdPartyDrivers = GuidedStorageTargetReformat(
+  diskId: 'disk-vda',
+  allowed: [],
+  disallowed: [
+    GuidedDisallowedCapability(
+        capability: GuidedCapability.CORE_BOOT_UNENCRYPTED,
+        reason: GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS,
+        message: 'third party drivers incompatible')
+  ],
+);
