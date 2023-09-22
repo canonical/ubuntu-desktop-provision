@@ -293,17 +293,20 @@ Widget _buildAccessibilitySlide(BuildContext context) {
       rows: [
         [
           Text(lang.installationSlidesIncluded),
-          const SlideLabel(
-            icon: _SlideIcon('writer.png'),
-            label: Text('LibreOffice Writer'),
+          SlideLabel(
+            icon: const _SlideIcon('languages.png'),
+            label: Text(lang.installationSlidesAccessibilityLanguages),
           ),
           SlideLabel(
             icon: const _SlideIcon('orca.png'),
             label: Text(lang.installationSlidesAccessibilityOrca),
           ),
-          SlideLabel(
-            icon: const _SlideIcon('languages.png'),
-            label: Text(lang.installationSlidesAccessibilityLanguages),
+        ],
+        [
+          Text(lang.installationSlidesAvailable),
+          const SlideLabel(
+            icon: _SlideIcon('writer.png'),
+            label: Text('LibreOffice Writer'),
           ),
         ],
       ],
