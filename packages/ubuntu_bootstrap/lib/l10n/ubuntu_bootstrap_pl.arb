@@ -785,5 +785,9 @@
   "expandedInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
   "@expandedInstallationSubtitle": {},
   "expandedInstallationTitle": "Instalacja rozszerzona",
-  "@expandedInstallationTitle": {}
+  "@expandedInstallationTitle": {},
+  "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
+  "@fullInstallationSubtitle": {},
+  "fullInstallationTitle": "Instalacja pełna",
+  "@fullInstallationTitle": {}
 }
