@@ -86,6 +86,7 @@ void main() {
       '--machine-config=examples/machines/simple.json',
       '--source-catalog=examples/sources/desktop.yaml',
       '--storage-version=2',
+      '--dry-run-config=examples/dry-run-configs/tpm.yaml',
       '--foo',
       'bar',
     ])).called(1);
@@ -131,6 +132,7 @@ extension on WidgetTester {
     registerMockService<StorageService>(StorageService(MockSubiquityClient()));
     registerMockService<SubiquityClient>(MockSubiquityClient());
     registerMockService<TelemetryService>(MockTelemetryService());
+    registerMockService<NetworkService>(MockNetworkService());
 
     return ProviderScope(
       child: SlidesContext(
