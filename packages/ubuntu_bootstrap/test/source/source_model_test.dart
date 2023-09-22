@@ -143,7 +143,8 @@ void main() {
     model.setInstallDrivers(true);
     model.setInstallCodecs(true);
     await model.save();
-    verify(client.setSource('ubuntu-desktop-minimal')).called(1);
+    verify(client.setSource('ubuntu-desktop-minimal', searchDrivers: true))
+        .called(1);
     verify(client.setDrivers(install: true)).called(1);
     verify(client.setCodecs(install: true)).called(1);
     verify(storage.init()).called(1);
