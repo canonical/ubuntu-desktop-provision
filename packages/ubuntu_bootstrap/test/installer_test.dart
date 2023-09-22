@@ -86,6 +86,7 @@ void main() {
       '--machine-config=examples/machines/simple.json',
       '--source-catalog=examples/sources/desktop.yaml',
       '--storage-version=2',
+      '--dry-run-config=examples/dry-run-configs/tpm.yaml',
       '--foo',
       'bar',
     ])).called(1);
