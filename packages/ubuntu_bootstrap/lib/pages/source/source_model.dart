@@ -10,7 +10,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 /// @internal
 final log = Logger('source');
 
-const kExpandedSourceId = 'ubuntu-desktop';
+const kFullSourceId = 'ubuntu-desktop';
 const kMinimalSourceId = 'ubuntu-desktop-minimal';
 
 final sourceModelProvider = ChangeNotifierProvider(
@@ -125,7 +125,7 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
         // 1. ubuntu-desktop-minimal (1)
         // 2. ubuntu-desktop (0)
         // 3. any other source (-1)
-        const order = [kExpandedSourceId, kMinimalSourceId];
+        const order = [kFullSourceId, kMinimalSourceId];
         _sources = List.of(value.sources)
           ..sort((a, b) => order.indexOf(b.id).compareTo(order.indexOf(a.id)));
         _sourceId = value.currentId;

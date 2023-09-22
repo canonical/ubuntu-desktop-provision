@@ -71,7 +71,7 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getSource()).thenAnswer((_) async =>
         const SourceSelectionAndSetting(
-            sources: [], currentId: kExpandedSourceId, searchDrivers: false));
+            sources: [], currentId: kFullSourceId, searchDrivers: false));
     when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
         install: true, drivers: [], localOnly: false, searchDrivers: false));
     when(client.getCodecs())
@@ -95,7 +95,7 @@ void main() {
     );
 
     await model.init();
-    expect(model.sourceId, kExpandedSourceId);
+    expect(model.sourceId, kFullSourceId);
     verify(client.getSource()).called(1);
     expect(model.installDrivers, isTrue);
     verify(client.getDrivers()).called(1);
@@ -107,7 +107,7 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getSource()).thenAnswer((_) async =>
         const SourceSelectionAndSetting(
-            sources: [], currentId: kExpandedSourceId, searchDrivers: false));
+            sources: [], currentId: kFullSourceId, searchDrivers: false));
 
     final network = MockNetworkService();
     when(network.isConnected).thenReturn(true);
@@ -124,14 +124,14 @@ void main() {
       storage: storage,
     );
 
-    await model.setSourceId(kExpandedSourceId);
-    verify(client.setSource(kExpandedSourceId)).called(1);
+    await model.setSourceId(kFullSourceId);
+    verify(client.setSource(kFullSourceId)).called(1);
     verify(storage.init()).called(1);
 
     model.setInstallDrivers(false);
     model.setInstallCodecs(false);
     await model.save();
-    verify(client.setSource(kExpandedSourceId)).called(1);
+    verify(client.setSource(kFullSourceId)).called(1);
     verify(client.setDrivers(install: false)).called(1);
     verify(client.setCodecs(install: false)).called(1);
     verify(storage.init()).called(1);
@@ -161,7 +161,7 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getSource()).thenAnswer((_) async =>
         const SourceSelectionAndSetting(
-            sources: [], currentId: kExpandedSourceId, searchDrivers: false));
+            sources: [], currentId: kFullSourceId, searchDrivers: false));
     when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
         install: true, drivers: [], localOnly: false, searchDrivers: false));
     when(client.getCodecs())
@@ -206,7 +206,7 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getSource()).thenAnswer((_) async =>
         const SourceSelectionAndSetting(
-            sources: [], currentId: kExpandedSourceId, searchDrivers: false));
+            sources: [], currentId: kFullSourceId, searchDrivers: false));
     when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
         install: true, drivers: [], localOnly: false, searchDrivers: false));
     when(client.getCodecs())

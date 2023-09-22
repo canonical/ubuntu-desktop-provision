@@ -115,10 +115,10 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => '어떤 앱을 설치하고 시작하시겠습니까?';
 
   @override
-  String get expandedInstallationTitle => 'Expanded installation';
+  String get fullInstallationTitle => 'Full installation';
 
   @override
-  String get expandedInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
   String get minimalInstallationTitle => 'Default installation';
