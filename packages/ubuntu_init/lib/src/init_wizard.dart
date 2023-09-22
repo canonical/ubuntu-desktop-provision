@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
@@ -122,8 +121,8 @@ class InitWizard extends ConsumerWidget {
             final window = YaruWindow.of(context);
             IdentityService identityService = getService<IdentityService>();
             var identity = await identityService.getIdentity();
-            var gdmService = GdmService(identity.username, identity.password);
-            await gdmService.authenticateUser();
+            var gdmService = GdmService();
+            await gdmService.openNewSession(identity.username, identity.password);
             await _onDone?.call();
             await window.close();
             return InitRoutes.initial;
