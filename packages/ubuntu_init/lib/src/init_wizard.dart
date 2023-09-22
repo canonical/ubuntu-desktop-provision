@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
@@ -115,8 +117,13 @@ class InitWizard extends ConsumerWidget {
         ),
         InitRoutes.launchsession: WizardRoute(
           builder: (_) => const LaunchSessionPage(),
+          onLoad: (_) => LaunchSessionPage.load(ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
+            IdentityService identityService = getService<IdentityService>();
+            var identity = await identityService.getIdentity();
+            var gdmService = GdmService(identity.username, identity.password);
+            await gdmService.authenticateUser();
             await _onDone?.call();
             await window.close();
             return InitRoutes.initial;
