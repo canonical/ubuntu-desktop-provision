@@ -155,7 +155,9 @@ Future<void> main() async {
   }, variant: themeVariant);
 
   testWidgets('06.storage-advanced-features', (tester) async {
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester.runApp(() => runInstallerApp([
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+        ], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
