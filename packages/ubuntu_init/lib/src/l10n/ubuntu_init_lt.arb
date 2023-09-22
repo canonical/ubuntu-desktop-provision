@@ -1,1 +1,8 @@
-{}
+{
+  "welcomePageTitle": "Sveiki!",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Išbandykite ar įdiekite {distro} sistemą",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "Kas naujo?",
+  "@welcomeWhatsNew": {}
+}

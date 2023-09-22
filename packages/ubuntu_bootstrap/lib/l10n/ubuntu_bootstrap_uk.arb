@@ -445,5 +445,18 @@
   "@partitionEditTitle": {},
   "partitionSizeLabel": "Розмір:",
   "@partitionSizeLabel": {},
-  "@partitionUnitMB": {}
+  "loadingHeader": "Висираня {DISTRO}…",
+  "@loadingHeader": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "loadingPageTitle": "Смокчіть члени у цьому {DISTRO}",
+  "@loadingPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  }
 }

@@ -777,5 +777,13 @@
       "color": {},
       "url": {}
     }
-  }
+  },
+  "minimalInstallationTitle": "Instalacja domyślna",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
+  "@minimalInstallationSubtitle": {},
+  "expandedInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
+  "@expandedInstallationSubtitle": {},
+  "expandedInstallationTitle": "Instalacja rozszerzona",
+  "@expandedInstallationTitle": {}
 }

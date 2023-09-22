@@ -1,1 +1,76 @@
-{}
+{
+  "telemetryDescription": "Adatok névtelen megosztása a(z) {distro} disztribúcióval, hogy javíthassuk az élményét.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "storeHeader": "Kezdje el több alkalmazással",
+  "@storeHeader": {},
+  "telemetryReportTitle": "Jelentéskészítés részletei",
+  "@telemetryReportTitle": {},
+  "welcomePageTitle": "Üdvözöljük",
+  "@welcomePageTitle": {},
+  "privacyPolicyLink": "Adatvédelem",
+  "@privacyPolicyLink": {},
+  "welcomeStoreSubtitle": "Soha sem volt még ilyen egyszerű megtalálni a kedvenc szoftverét.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Változásnapló megtekintése</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryLegalLabel": "Jogi nyilatkozat",
+  "@telemetryLegalLabel": {},
+  "welcomeSecuritySubtitle": "Új lehetőségek a hardveresen támogatott vagy ZFS titkosításhoz.",
+  "@welcomeSecuritySubtitle": {},
+  "privacyPageTitle": "Helymeghatározó szolgáltatások",
+  "@privacyPageTitle": {},
+  "storeTitle": "Ubuntu alkalmazásbolt",
+  "@storeTitle": {},
+  "welcomePageHeader": "Üdvözli a(z) {distro}!",
+  "@welcomePageHeader": {},
+  "privacyLocationEnable": "Helymeghatározó szolgáltatások",
+  "@privacyLocationEnable": {},
+  "telemetryHeader": "Segítség a(z) {distro} továbbfejlesztéséhez",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeStoreTitle": "Új megjelenésű alkalmazásbolt",
+  "@welcomeStoreTitle": {},
+  "welcomeSecurityTitle": "Fokozott biztonság",
+  "@welcomeSecurityTitle": {},
+  "telemetryReportLabel": "Jelentéskészítés részletei",
+  "@telemetryReportLabel": {},
+  "storeDescription": "Az Ubuntu alkalmazásboltja számos olyan alkalmazást kínál, amelyekkel már az első pillanattól kezdve elkezdheti a munkát.",
+  "@storeDescription": {},
+  "telemetryLabelOn": "Igen, a rendszer adatainak megosztása a(z) {distro} csapatával",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Engedélyezi a helymeghatározó szolgáltatásokat?",
+  "@privacyLocationTitle": {},
+  "welcomeStartTitle": "Egyszerűsített indítás",
+  "@welcomeStartTitle": {},
+  "storeOpen": "Alkalmazásbolt megnyitása",
+  "@storeOpen": {},
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "privacyLocationSubtitle": "Tudassa az alkalmazásokkal a földrajzi helyzetét.\nEzt bármikor megváltoztathatja a rendszerbeállításokban.",
+  "@privacyLocationSubtitle": {},
+  "welcomeWhatsNew": "ÚJDONSÁGOK",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Nem, ne ossza meg a rendszer adatait",
+  "@telemetryLabelOff": {},
+  "welcomeStartSubtitle": "Tisztább beállítási élmény támogatása.",
+  "@welcomeStartSubtitle": {}
+}

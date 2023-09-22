@@ -80,9 +80,9 @@
   "@configureSecureBootOption": {},
   "configureSecureBootSecurityKeyRequired": "נדרש מפתח אבטחה",
   "@configureSecureBootSecurityKeyRequired": {},
-  "minimalInstallationTitle": "התקנה מצומצמת",
+  "minimalInstallationTitle": "התקנת ברירת מחדל",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "דפדפן ועזרים בסיסיים.",
+  "minimalInstallationSubtitle": "היסודות, דפדפן ועזרים בסיסיים.",
   "@minimalInstallationSubtitle": {},
   "otherOptions": "אפשרויות נוספות",
   "@otherOptions": {},
@@ -781,5 +781,9 @@
     }
   },
   "recoveryKeyCommand": "הגישה למפתח השחזור שלך לאחר ההתקנה אפשרית באמצעות הפקודה:",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "expandedInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים שלאו דווקא דורשת אינטרנט.",
+  "@expandedInstallationSubtitle": {},
+  "expandedInstallationTitle": "התקנה מורחבת",
+  "@expandedInstallationTitle": {}
 }

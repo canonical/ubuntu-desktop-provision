@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Billentyűzetkiosztás",
   "@keyboardTitle": {},
-  "keyboardHeader": "Válasszon billentyűzetkiosztást:",
+  "keyboardHeader": "Billentyűzetkiosztás kiválasztása:",
   "@keyboardHeader": {},
   "keyboardTestHint": "Gépeljen itt a billentyűzet kipróbálásához",
   "@keyboardTestHint": {},
@@ -36,7 +36,7 @@
       "DISTRO": {}
     }
   },
-  "localeHeader": "Válasszon nyelvet:",
+  "localeHeader": "Nyelv kiválasztása:",
   "@localeHeader": {},
   "identityPageTitle": "A fiók beállítása",
   "@identityPageTitle": {},
@@ -54,7 +54,7 @@
   "@identityHostnameLabel": {},
   "identityHostnameInfo": "A más számítógépekkel való kommunikáció során használt név.",
   "@identityHostnameInfo": {},
-  "identityHostnameRequired": "A számítógépnév megadása kötelező",
+  "identityHostnameRequired": "A számítógép nevének megadása kötelező",
   "@identityHostnameRequired": {},
   "identityHostnameTooLong": "Ez a számítógépnév túl hosszú.",
   "@identityHostnameTooLong": {},

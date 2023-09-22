@@ -224,9 +224,9 @@
       "path": {}
     }
   },
-  "confirmPartitionChanges": "Bus pritaikyti šie skaidinių pakeitimai:",
+  "confirmPartitionChanges": "Bus pritaikyti šie skirsnių pakeitimai:",
   "@confirmPartitionChanges": {},
-  "confirmPartitionResize": "skaidinio <b>{sysname}</b> dydis pakeistas iš <b>{oldsize}</b> į <b>{newsize}</b>",
+  "confirmPartitionResize": "skirsnio <b>{sysname}</b> dydis pakeistas iš <b>{oldsize}</b> į <b>{newsize}</b>",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
@@ -251,7 +251,7 @@
   },
   "bitlockerDescription": "Šis kompiuteris naudoja „Windows BitLocker“ šifravimą.\nNorėdami tęsti, turite pasinaudoti „Windows“ ir sukurti laisvą vietą arba pasirinkti variantą '{option}'.",
   "@bitlockerDescription": {},
-  "newPartitionTableConfirmationMessage": "Sukūrus naują skaidinių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skaidiniai. Jei reikia, šią operaciją galima atšaukti.",
+  "newPartitionTableConfirmationMessage": "Sukūrus naują skirsnių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skirsniai. Kol kas šią operaciją galima atšaukti, jei reikės.",
   "@newPartitionTableConfirmationMessage": {},
   "installationTypeAlongsideInfo": "Dokumentai, muzika ir kiti asmeniniai failai bus išsaugoti. Kas kartą įjungę kompiuterį, galėsite pasirinkti, kurią operacinę sistemą paleisti.",
   "@installationTypeAlongsideInfo": {},
@@ -265,29 +265,29 @@
   "@installAlongsideAllocateSpace": {},
   "installAlongsideFiles": "Failai",
   "@installAlongsideFiles": {},
-  "installAlongsidePartition": "Skaidinys:",
+  "installAlongsidePartition": "Skirsnis:",
   "@installAlongsidePartition": {},
   "installAlongsideAvailable": "Prieinama:",
   "@installAlongsideAvailable": {},
   "installAlongsideSize": "Dydis:",
   "@installAlongsideSize": {},
-  "partitionCreateTitle": "Kurti skaidinį",
+  "partitionCreateTitle": "Kurti skirsnį",
   "@partitionCreateTitle": {},
-  "newPartitionTable": "Nauja skaidinių lentelė",
+  "newPartitionTable": "Nauja skirsnių lentelė",
   "@newPartitionTable": {},
   "bootLoaderDevice": "Įrenginys, skirtas pradinio įkėliklio diegimui",
   "@bootLoaderDevice": {},
-  "partitionEditTitle": "Taisyti skaidinį",
+  "partitionEditTitle": "Keisti skirsnį",
   "@partitionEditTitle": {},
-  "partitionTypeLabel": "Naujo skaidinio tipas:",
+  "partitionTypeLabel": "Naujo skirsnio tipas:",
   "@partitionTypeLabel": {},
   "partitionTypePrimary": "Pirminis",
   "@partitionTypePrimary": {},
   "partitionLocationBeginning": "Šios vietos pradžia",
   "@partitionLocationBeginning": {},
-  "confirmPartitionTables": "Šių įrenginių skaidinių lentelėms yra atlikti pakeitimai:",
+  "confirmPartitionTables": "Šių įrenginių skirsnių lentelėms yra atlikti pakeitimai:",
   "@confirmPartitionTables": {},
-  "confirmPartitionCreate": "sukurtas skaidinys <b>{sysname}</b>",
+  "confirmPartitionCreate": "sukurtas skirsnis <b>{sysname}</b>",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
@@ -298,11 +298,11 @@
   "@appTitle": {},
   "diskHeadersType": "Tipas",
   "@diskHeadersType": {},
-  "diskHeadersMountPoint": "Prijungimo taškas",
+  "diskHeadersMountPoint": "Prijungimo vieta",
   "@diskHeadersMountPoint": {},
   "installationTypeManual": "Rankinis skaidymas",
   "@installationTypeManual": {},
-  "partitionLocationLabel": "Naujo skaidinio vieta:",
+  "partitionLocationLabel": "Naujo skirsnio vieta:",
   "@partitionLocationLabel": {},
   "partitionLocationEnd": "Šios vietos pabaiga",
   "@partitionLocationEnd": {},
@@ -328,7 +328,7 @@
       "product": {}
     }
   },
-  "installationTypeManualInfo": "Jūs galite kurti skaidinius, keisti jų dydį arba pasirinkti kelis skaidinius, skirtus {DISTRO}",
+  "installationTypeManualInfo": "Galite dalinti laikmenas į skirsnius, keisti skirsnių dydį arba pasirinkti kelis skirsnius {DISTRO} įdiegimui",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -337,11 +337,11 @@
   },
   "diskHeadersFormat": "Formatuoti",
   "@diskHeadersFormat": {},
-  "newPartitionTableConfirmationTitle": "Naujas tuščias skaidinys",
+  "newPartitionTableConfirmationTitle": "Naujas tuščias skirsnis",
   "@newPartitionTableConfirmationTitle": {},
   "confirmPageTitle": "Pasiruošę įdiegti",
   "@confirmPageTitle": {},
-  "confirmPartitionFormatMount": "skaidinys <b>{sysname}</b> formatuotas kaip <b>{format}</b> ir panaudotas kaip <b>{mount}</b>",
+  "confirmPartitionFormatMount": "skirsnis <b>{sysname}</b> formatuotas kaip <b>{format}</b> ir naudojamas kaip <b>{mount}</b>",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
@@ -360,7 +360,7 @@
   "@installCodecsSubtitle": {},
   "installationTypeZFS": "EKSPERIMENTINIS: Ištrinti diską ir naudoti ZFS",
   "@installationTypeZFS": {},
-  "installationTypeAlongsideUnknown": "Įdiegti {product} šalia kitų skaidinių",
+  "installationTypeAlongsideUnknown": "Įdiegti {product} šalia kitų skirsnių",
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
@@ -384,7 +384,7 @@
   "@diskHeadersSize": {},
   "allocateDiskSpace": "Rankinis skaidymas",
   "@allocateDiskSpace": {},
-  "installAlongsideHiddenPartitions": "{num} mažesni skaidiniai yra paslėpti. Norėdami didesnių valdymo galimybių, naudokite <a href=\"{url}\">išplėstinį skaidymo įrankį</a>",
+  "installAlongsideHiddenPartitions": "{num} mažesni skirsniai yra paslėpti. Norėdami daugiau galimybių, naudokite <a href=\"{url}\">išplėstinį skaidymo įrankį</a>",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -392,7 +392,7 @@
       "url": {}
     }
   },
-  "installAlongsideResizePartition": "Keisti skaidinio dydį",
+  "installAlongsideResizePartition": "Keisti skirsnio dydį",
   "@installAlongsideResizePartition": {},
   "diskHeadersDevice": "Įrenginys",
   "@diskHeadersDevice": {},
@@ -406,15 +406,15 @@
   "@partitionTypeLogical": {},
   "partitionSizeLabel": "Dydis:",
   "@partitionSizeLabel": {},
-  "partitionErase": "Formatuoti skaidinį",
+  "partitionErase": "Formatuoti skirsnį",
   "@partitionErase": {},
-  "partitionMountPointLabel": "Prijungimo taškas:",
+  "partitionMountPointLabel": "Prijungimo vieta:",
   "@partitionMountPointLabel": {},
   "confirmHeader": "Jei tęsite, žemiau išvardyti pakeitimai bus įrašyti į diskus. Tolimesnius pakeitimus galėsite atlikti rankiniu būdu.",
   "@confirmHeader": {},
   "installationCompleteTitle": "Įdiegimas baigtas",
   "@installationCompleteTitle": {},
-  "confirmPartitionMount": "skaidinys <b>{sysname}</b> panaudotas kaip <b>{mount}</b>",
+  "confirmPartitionMount": "skirsnis <b>{sysname}</b> naudojamas kaip <b>{mount}</b>",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
@@ -422,7 +422,7 @@
       "mount": {}
     }
   },
-  "confirmPartitionFormat": "skaidinys <b>{sysname}</b> formatuotas kaip <b>{format}</b>",
+  "confirmPartitionFormat": "skirsnis <b>{sysname}</b> formatuotas kaip <b>{format}</b>",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
@@ -441,7 +441,7 @@
   "@partitionFormatNone": {},
   "freeDiskSpace": "Laisva vieta",
   "@freeDiskSpace": {},
-  "tooManyPrimaryPartitions": "Per daug pirminių skaidinių",
+  "tooManyPrimaryPartitions": "Per daug pirminių skirsnių",
   "@tooManyPrimaryPartitions": {},
   "readyToUse": "**{system}** įdiegta ir paruošta naudoti",
   "@readyToUse": {
@@ -472,7 +472,7 @@
   },
   "confirmDevicesTitle": "Įrenginiai",
   "@confirmDevicesTitle": {},
-  "confirmPartitionsTitle": "Skaidiniai",
+  "confirmPartitionsTitle": "Skirsniai",
   "@confirmPartitionsTitle": {},
   "installationSlidesTitle": "Jus sveikina {RELEASE}",
   "@installationSlidesTitle": {
@@ -624,6 +624,15 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSpace": "Prijungimo vietos negali turėti tarpų",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Įspėjimas:</font> Jei prarasite šį saugumo raktą, visi duomenys bus prarasti. Rekomenduojame užsirašyti šį raktą ir laikyti jį saugioje vietoje atokiai nuo šio kompiuterio.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
     }
   }
 }
