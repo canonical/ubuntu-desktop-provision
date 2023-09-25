@@ -284,7 +284,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideUnknown(Object product) {
-    return 'Įdiegti $product šalia kitų skaidinių';
+    return 'Įdiegti $product šalia kitų skirsnių';
   }
 
   @override
@@ -295,7 +295,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(Object DISTRO) {
-    return 'Jūs galite kurti skaidinius, keisti jų dydį arba pasirinkti kelis skaidinius, skirtus $DISTRO';
+    return 'Galite dalinti laikmenas į skirsnius, keisti skirsnių dydį arba pasirinkti kelis skirsnius $DISTRO įdiegimui';
   }
 
   @override
@@ -317,11 +317,11 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(Object num, Object url) {
-    return '$num mažesni skaidiniai yra paslėpti. Norėdami didesnių valdymo galimybių, naudokite <a href=\"$url\">išplėstinį skaidymo įrankį</a>';
+    return '$num mažesni skirsniai yra paslėpti. Norėdami daugiau galimybių, naudokite <a href=\"$url\">išplėstinį skaidymo įrankį</a>';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Keisti skaidinio dydį';
+  String get installAlongsideResizePartition => 'Keisti skirsnio dydį';
 
   @override
   String get installAlongsideAllocateSpace => 'Paskirstyti vietą';
@@ -330,7 +330,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get installAlongsideFiles => 'Failai';
 
   @override
-  String get installAlongsidePartition => 'Skaidinys:';
+  String get installAlongsidePartition => 'Skirsnis:';
 
   @override
   String get installAlongsideSize => 'Dydis:';
@@ -345,7 +345,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Prijungimo vietos negali turėti tarpų';
 
   @override
   String get diskHeadersDevice => 'Įrenginys';
@@ -354,7 +354,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get diskHeadersType => 'Tipas';
 
   @override
-  String get diskHeadersMountPoint => 'Prijungimo taškas';
+  String get diskHeadersMountPoint => 'Prijungimo vieta';
 
   @override
   String get diskHeadersSize => 'Dydis';
@@ -372,16 +372,16 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get freeDiskSpace => 'Laisva vieta';
 
   @override
-  String get newPartitionTable => 'Nauja skaidinių lentelė';
+  String get newPartitionTable => 'Nauja skirsnių lentelė';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'Naujas tuščias skaidinys';
+  String get newPartitionTableConfirmationTitle => 'Naujas tuščias skirsnis';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Sukūrus naują skaidinių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skaidiniai. Jei reikia, šią operaciją galima atšaukti.';
+  String get newPartitionTableConfirmationMessage => 'Sukūrus naują skirsnių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skirsniai. Kol kas šią operaciją galima atšaukti, jei reikės.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Per daug pirminių skaidinių';
+  String get tooManyPrimaryPartitions => 'Per daug pirminių skirsnių';
 
   @override
   String get partitionLimitReached => 'Pasiekta riba';
@@ -390,16 +390,16 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get bootLoaderDevice => 'Įrenginys, skirtas pradinio įkėliklio diegimui';
 
   @override
-  String get partitionCreateTitle => 'Kurti skaidinį';
+  String get partitionCreateTitle => 'Kurti skirsnį';
 
   @override
-  String get partitionEditTitle => 'Taisyti skaidinį';
+  String get partitionEditTitle => 'Keisti skirsnį';
 
   @override
   String get partitionSizeLabel => 'Dydis:';
 
   @override
-  String get partitionTypeLabel => 'Naujo skaidinio tipas:';
+  String get partitionTypeLabel => 'Naujo skirsnio tipas:';
 
   @override
   String get partitionTypePrimary => 'Pirminis';
@@ -408,7 +408,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get partitionTypeLogical => 'Loginis';
 
   @override
-  String get partitionLocationLabel => 'Naujo skaidinio vieta:';
+  String get partitionLocationLabel => 'Naujo skirsnio vieta:';
 
   @override
   String get partitionLocationBeginning => 'Šios vietos pradžia';
@@ -428,10 +428,10 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get partitionErase => 'Formatuoti skaidinį';
+  String get partitionErase => 'Formatuoti skirsnį';
 
   @override
-  String get partitionMountPointLabel => 'Prijungimo taškas:';
+  String get partitionMountPointLabel => 'Prijungimo vieta:';
 
   @override
   String get confirmPageTitle => 'Pasiruošę įdiegti';
@@ -443,10 +443,10 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get confirmDevicesTitle => 'Įrenginiai';
 
   @override
-  String get confirmPartitionsTitle => 'Skaidiniai';
+  String get confirmPartitionsTitle => 'Skirsniai';
 
   @override
-  String get confirmPartitionTables => 'Šių įrenginių skaidinių lentelėms yra atlikti pakeitimai:';
+  String get confirmPartitionTables => 'Šių įrenginių skirsnių lentelėms yra atlikti pakeitimai:';
 
   @override
   String confirmPartitionTable(Object serial, Object path) {
@@ -454,31 +454,31 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'Bus pritaikyti šie skaidinių pakeitimai:';
+  String get confirmPartitionChanges => 'Bus pritaikyti šie skirsnių pakeitimai:';
 
   @override
   String confirmPartitionResize(Object sysname, Object oldsize, Object newsize) {
-    return 'skaidinio <b>$sysname</b> dydis pakeistas iš <b>$oldsize</b> į <b>$newsize</b>';
+    return 'skirsnio <b>$sysname</b> dydis pakeistas iš <b>$oldsize</b> į <b>$newsize</b>';
   }
 
   @override
   String confirmPartitionFormatMount(Object sysname, Object format, Object mount) {
-    return 'skaidinys <b>$sysname</b> formatuotas kaip <b>$format</b> ir panaudotas kaip <b>$mount</b>';
+    return 'skirsnis <b>$sysname</b> formatuotas kaip <b>$format</b> ir naudojamas kaip <b>$mount</b>';
   }
 
   @override
   String confirmPartitionFormat(Object sysname, Object format) {
-    return 'skaidinys <b>$sysname</b> formatuotas kaip <b>$format</b>';
+    return 'skirsnis <b>$sysname</b> formatuotas kaip <b>$format</b>';
   }
 
   @override
   String confirmPartitionMount(Object sysname, Object mount) {
-    return 'skaidinys <b>$sysname</b> panaudotas kaip <b>$mount</b>';
+    return 'skirsnis <b>$sysname</b> naudojamas kaip <b>$mount</b>';
   }
 
   @override
   String confirmPartitionCreate(Object sysname) {
-    return 'sukurtas skaidinys <b>$sysname</b>';
+    return 'sukurtas skirsnis <b>$sysname</b>';
   }
 
   @override
@@ -812,6 +812,6 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Įspėjimas:</font> Jei prarasite šį saugumo raktą, visi duomenys bus prarasti. Rekomenduojame užsirašyti šį raktą ir laikyti jį saugioje vietoje atokiai nuo šio kompiuterio.';
   }
 }

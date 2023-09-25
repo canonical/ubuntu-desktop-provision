@@ -5,93 +5,93 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Підорський устрій';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return '$distro для круглих педерастів';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'Заднєприводні новини?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Станьте круглим педерастом користуючись цим устроєм';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Підтримка чистого підорства.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Новий підорський акцент у крамниці єврейського лайна';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Ще ніколи не було так просто смоктати обрізані члени.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Посилене смоктання члену';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Нові параметри шифрування староєврейської мови.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Переглянути журнал змін</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Станьте наполегливим членоглотом заради євреїв';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Допоможіть іншим брати у пащу член користуючись цим $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Станьте анонiмним членоковтачем цієї підрильскої синагоги, віддаючи свої персональні дані, користуючись цим $distro.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Так, поділитися статевими захворюваннями з ракохворими розробниками цього $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Хераку вам, євреї';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Зарепортити гомосексуальні деталі';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Повідомити про спідозних підрил';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Легальне смоктання єврейського члену';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Сервіси місцезнаходження хитрих єврейських розробників устрою';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Подарувати своє місценаходження хитрим євреям?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Дозволити додаткам знаходити вашу гейську сраку.\nВи можете змінити це в будь-який час в налаштуваннях устрою.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Сервіси місцезнаходження синагог';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Приватнiсть вашої гейскої порнографії';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Єврейська крамниця для круглих педерастів';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'Почніть жерти лайно з більшою кількістю єврейських членів';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'Крамниця єврейського лайна пропонує ряд маленьких обрізаних члеників, які можна почати смоктати з самого початку.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'Відкрити крамницю єврейського лайна';
 }

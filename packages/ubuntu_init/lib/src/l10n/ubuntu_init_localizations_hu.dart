@@ -5,93 +5,93 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Üdvözöljük';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Üdvözli a(z) $distro!';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'ÚJDONSÁGOK';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Egyszerűsített indítás';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Tisztább beállítási élmény támogatása.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Új megjelenésű alkalmazásbolt';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Soha sem volt még ilyen egyszerű megtalálni a kedvenc szoftverét.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Fokozott biztonság';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Új lehetőségek a hardveresen támogatott vagy ZFS titkosításhoz.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Változásnapló megtekintése</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetria';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Segítség a(z) $distro továbbfejlesztéséhez';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Adatok névtelen megosztása a(z) $distro disztribúcióval, hogy javíthassuk az élményét.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Igen, a rendszer adatainak megosztása a(z) $distro csapatával';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Nem, ne ossza meg a rendszer adatait';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Jelentéskészítés részletei';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Jelentéskészítés részletei';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Jogi nyilatkozat';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Helymeghatározó szolgáltatások';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Engedélyezi a helymeghatározó szolgáltatásokat?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Tudassa az alkalmazásokkal a földrajzi helyzetét.\nEzt bármikor megváltoztathatja a rendszerbeállításokban.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Helymeghatározó szolgáltatások';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Adatvédelem';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Ubuntu alkalmazásbolt';
 
   @override
-  String get storeHeader => 'Get started with more applications';
+  String get storeHeader => 'Kezdje el több alkalmazással';
 
   @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
+  String get storeDescription => 'Az Ubuntu alkalmazásboltja számos olyan alkalmazást kínál, amelyekkel már az első pillanattól kezdve elkezdheti a munkát.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'Alkalmazásbolt megnyitása';
 }
