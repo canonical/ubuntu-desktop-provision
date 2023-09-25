@@ -36,46 +36,55 @@ class MockActiveDirectoryModel extends _i1.Mock
         Invocation.getter(#domainName),
         returnValue: '',
       ) as String);
+
   @override
   bool get isDomainNameValid => (super.noSuchMethod(
         Invocation.getter(#isDomainNameValid),
         returnValue: false,
       ) as bool);
+
   @override
   String get adminName => (super.noSuchMethod(
         Invocation.getter(#adminName),
         returnValue: '',
       ) as String);
+
   @override
   bool get isAdminNameValid => (super.noSuchMethod(
         Invocation.getter(#isAdminNameValid),
         returnValue: false,
       ) as bool);
+
   @override
   String get password => (super.noSuchMethod(
         Invocation.getter(#password),
         returnValue: '',
       ) as String);
+
   @override
   bool get isPasswordValid => (super.noSuchMethod(
         Invocation.getter(#isPasswordValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isValid => (super.noSuchMethod(
         Invocation.getter(#isValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<void> setDomainName(String? value) => (super.noSuchMethod(
         Invocation.method(
@@ -85,6 +94,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> validateDomainName() => (super.noSuchMethod(
         Invocation.method(
@@ -94,6 +104,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> pingDomainController() => (super.noSuchMethod(
         Invocation.method(
@@ -103,6 +114,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> setAdminName(String? value) => (super.noSuchMethod(
         Invocation.method(
@@ -112,6 +124,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> validateAdminName() => (super.noSuchMethod(
         Invocation.method(
@@ -121,6 +134,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> setPassword(String? value) => (super.noSuchMethod(
         Invocation.method(
@@ -130,6 +144,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> validatePassword() => (super.noSuchMethod(
         Invocation.method(
@@ -139,6 +154,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -147,6 +163,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -156,6 +173,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<_i4.AdJoinResult> getJoinResult() => (super.noSuchMethod(
         Invocation.method(
@@ -164,6 +182,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         ),
         returnValue: _i3.Future<_i4.AdJoinResult>.value(_i4.AdJoinResult.OK),
       ) as _i3.Future<_i4.AdJoinResult>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -172,6 +191,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -180,6 +200,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -188,6 +209,7 @@ class MockActiveDirectoryModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

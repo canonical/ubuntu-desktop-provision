@@ -34,36 +34,43 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         Invocation.getter(#sources),
         returnValue: <_i3.SourceSelection>[],
       ) as List<_i3.SourceSelection>);
+
   @override
   bool get installDrivers => (super.noSuchMethod(
         Invocation.getter(#installDrivers),
         returnValue: false,
       ) as bool);
+
   @override
   bool get installCodecs => (super.noSuchMethod(
         Invocation.getter(#installCodecs),
         returnValue: false,
       ) as bool);
+
   @override
   bool get onBattery => (super.noSuchMethod(
         Invocation.getter(#onBattery),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isOnline => (super.noSuchMethod(
         Invocation.getter(#isOnline),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Future<void> setSourceId(String? sourceId) => (super.noSuchMethod(
         Invocation.method(
@@ -73,6 +80,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void setInstallDrivers(bool? installDrivers) => super.noSuchMethod(
         Invocation.method(
@@ -81,6 +89,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setInstallCodecs(bool? installCodecs) => super.noSuchMethod(
         Invocation.method(
@@ -89,6 +98,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -98,6 +108,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -107,6 +118,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -115,6 +127,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -123,6 +136,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -131,6 +145,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -139,6 +154,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setProperties(_i4.Stream<List<String>>? properties) =>
       super.noSuchMethod(
@@ -148,6 +164,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addPropertyListener(
     String? property,
@@ -163,6 +180,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void enablePropertyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -171,6 +189,7 @@ class MockSourceModel extends _i1.Mock implements _i2.SourceModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void disablePropertyListeners() => super.noSuchMethod(
         Invocation.method(

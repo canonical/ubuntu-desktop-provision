@@ -36,32 +36,38 @@ class MockGuidedReformatModel extends _i1.Mock
         Invocation.getter(#storages),
         returnValue: <_i3.GuidedStorageTarget>[],
       ) as List<_i3.GuidedStorageTarget>);
+
   @override
   int get selectedIndex => (super.noSuchMethod(
         Invocation.getter(#selectedIndex),
         returnValue: 0,
       ) as int);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.GuidedStorageTargetReformat? getStorage(int? index) =>
       (super.noSuchMethod(Invocation.method(
         #getStorage,
         [index],
       )) as _i3.GuidedStorageTargetReformat?);
+
   @override
   _i3.Disk? getDisk(int? index) => (super.noSuchMethod(Invocation.method(
         #getDisk,
         [index],
       )) as _i3.Disk?);
+
   @override
   void selectStorage(int? index) => super.noSuchMethod(
         Invocation.method(
@@ -70,6 +76,7 @@ class MockGuidedReformatModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -78,6 +85,7 @@ class MockGuidedReformatModel extends _i1.Mock
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> loadGuidedStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -87,6 +95,7 @@ class MockGuidedReformatModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> saveGuidedStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -96,6 +105,7 @@ class MockGuidedReformatModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> resetGuidedStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -105,6 +115,7 @@ class MockGuidedReformatModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -113,6 +124,7 @@ class MockGuidedReformatModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -121,6 +133,7 @@ class MockGuidedReformatModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -129,6 +142,7 @@ class MockGuidedReformatModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

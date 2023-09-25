@@ -32,41 +32,49 @@ class MockXdgLocaleClient extends _i1.Mock implements _i2.XdgLocaleClient {
         Invocation.getter(#locale),
         returnValue: <String, String>{},
       ) as Map<String, String>);
+
   @override
   String get x11Layout => (super.noSuchMethod(
         Invocation.getter(#x11Layout),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Model => (super.noSuchMethod(
         Invocation.getter(#x11Model),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Variant => (super.noSuchMethod(
         Invocation.getter(#x11Variant),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Options => (super.noSuchMethod(
         Invocation.getter(#x11Options),
         returnValue: '',
       ) as String);
+
   @override
   String get vConsoleKeymap => (super.noSuchMethod(
         Invocation.getter(#vConsoleKeymap),
         returnValue: '',
       ) as String);
+
   @override
   String get vConsoleKeymapToggle => (super.noSuchMethod(
         Invocation.getter(#vConsoleKeymapToggle),
         returnValue: '',
       ) as String);
+
   @override
   _i3.Stream<List<String>> get propertiesChanged => (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i3.Stream<List<String>>.empty(),
       ) as _i3.Stream<List<String>>);
+
   @override
   _i3.Future<void> setLocale(
     Map<String, String>? locale,
@@ -83,6 +91,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i2.XdgLocaleClient {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> setVConsoleKeyboard(
     String? keymap,
@@ -103,6 +112,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i2.XdgLocaleClient {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> setX11Keyboard(
     String? layout,
@@ -127,6 +137,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i2.XdgLocaleClient {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
@@ -136,6 +147,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i2.XdgLocaleClient {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> close() => (super.noSuchMethod(
         Invocation.method(

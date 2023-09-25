@@ -33,21 +33,25 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         Invocation.getter(#option),
         returnValue: _i2.Option.none,
       ) as _i2.Option);
+
   @override
   bool get isConnected => (super.noSuchMethod(
         Invocation.getter(#isConnected),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -57,6 +61,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void selectOption(_i2.Option? option) => super.noSuchMethod(
         Invocation.method(
@@ -65,6 +70,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String releaseNotesURL(_i4.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
@@ -73,6 +79,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValue: '',
       ) as String);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -81,6 +88,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -89,6 +97,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -97,6 +106,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -105,6 +115,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setProperties(_i3.Stream<List<String>>? properties) =>
       super.noSuchMethod(
@@ -114,6 +125,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addPropertyListener(
     String? property,
@@ -129,6 +141,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void enablePropertyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -137,6 +150,7 @@ class MockWelcomeModel extends _i1.Mock implements _i2.WelcomeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void disablePropertyListeners() => super.noSuchMethod(
         Invocation.method(

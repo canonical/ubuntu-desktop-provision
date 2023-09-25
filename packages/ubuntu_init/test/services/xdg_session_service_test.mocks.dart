@@ -32,6 +32,7 @@ class MockUbuntuSession extends _i1.Mock implements _i2.UbuntuSession {
         Invocation.getter(#desktop),
         returnValue: _i2.UbuntuDesktop.gnome,
       ) as _i2.UbuntuDesktop);
+
   @override
   _i3.Future<void> logout() => (super.noSuchMethod(
         Invocation.method(
@@ -41,6 +42,7 @@ class MockUbuntuSession extends _i1.Mock implements _i2.UbuntuSession {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(
@@ -50,6 +52,7 @@ class MockUbuntuSession extends _i1.Mock implements _i2.UbuntuSession {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> shutdown() => (super.noSuchMethod(
         Invocation.method(

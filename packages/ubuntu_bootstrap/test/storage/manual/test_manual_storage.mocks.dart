@@ -38,56 +38,67 @@ class MockManualStorageModel extends _i1.Mock
         Invocation.getter(#isValid),
         returnValue: false,
       ) as bool);
+
   @override
   List<_i3.Disk> get disks => (super.noSuchMethod(
         Invocation.getter(#disks),
         returnValue: <_i3.Disk>[],
       ) as List<_i3.Disk>);
+
   @override
   int get selectedDiskIndex => (super.noSuchMethod(
         Invocation.getter(#selectedDiskIndex),
         returnValue: 0,
       ) as int);
+
   @override
   int get selectedObjectIndex => (super.noSuchMethod(
         Invocation.getter(#selectedObjectIndex),
         returnValue: 0,
       ) as int);
+
   @override
   _i4.Stream<dynamic> get onSelectionChanged => (super.noSuchMethod(
         Invocation.getter(#onSelectionChanged),
         returnValue: _i4.Stream<dynamic>.empty(),
       ) as _i4.Stream<dynamic>);
+
   @override
   bool get canAddPartition => (super.noSuchMethod(
         Invocation.getter(#canAddPartition),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canRemovePartition => (super.noSuchMethod(
         Invocation.getter(#canRemovePartition),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canEditPartition => (super.noSuchMethod(
         Invocation.getter(#canEditPartition),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canReformatDisk => (super.noSuchMethod(
         Invocation.getter(#canReformatDisk),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   bool isStorageSelected(
     int? diskIndex, [
@@ -103,6 +114,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Future<void> addPartition(
     _i3.Disk? disk,
@@ -127,6 +139,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> editPartition(
     _i3.Disk? disk,
@@ -153,6 +166,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> deletePartition(
     _i3.Disk? disk,
@@ -169,6 +183,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   bool canSelectStorage(
     int? diskIndex, [
@@ -184,6 +199,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValue: false,
       ) as bool);
+
   @override
   void selectStorage(
     int? diskIndex, [
@@ -199,6 +215,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void selectBootDisk(int? diskIndex) => super.noSuchMethod(
         Invocation.method(
@@ -207,6 +224,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<void> getStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -216,6 +234,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> setStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -225,6 +244,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -234,6 +254,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> reformatDisk(_i3.Disk? disk) => (super.noSuchMethod(
         Invocation.method(
@@ -243,6 +264,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -252,6 +274,7 @@ class MockManualStorageModel extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -260,6 +283,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -268,6 +292,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -276,6 +301,7 @@ class MockManualStorageModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

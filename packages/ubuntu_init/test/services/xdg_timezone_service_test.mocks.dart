@@ -92,11 +92,13 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
           Invocation.getter(#client),
         ),
       ) as _i2.DBusClient);
+
   @override
   String get name => (super.noSuchMethod(
         Invocation.getter(#name),
         returnValue: '',
       ) as String);
+
   @override
   _i3.DBusObjectPath get path => (super.noSuchMethod(
         Invocation.getter(#path),
@@ -105,12 +107,14 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
           Invocation.getter(#path),
         ),
       ) as _i3.DBusObjectPath);
+
   @override
   _i7.Stream<_i6.DBusPropertiesChangedSignal> get propertiesChanged =>
       (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i7.Stream<_i6.DBusPropertiesChangedSignal>.empty(),
       ) as _i7.Stream<_i6.DBusPropertiesChangedSignal>);
+
   @override
   set propertiesChanged(
           _i7.Stream<_i6.DBusPropertiesChangedSignal>? _propertiesChanged) =>
@@ -121,6 +125,7 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i7.Future<_i4.DBusIntrospectNode> introspect() => (super.noSuchMethod(
         Invocation.method(
@@ -136,6 +141,7 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
           ),
         )),
       ) as _i7.Future<_i4.DBusIntrospectNode>);
+
   @override
   _i7.Future<_i3.DBusValue> getProperty(
     String? interface,
@@ -163,6 +169,7 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
           ),
         )),
       ) as _i7.Future<_i3.DBusValue>);
+
   @override
   _i7.Future<Map<String, _i3.DBusValue>> getAllProperties(String? interface) =>
       (super.noSuchMethod(
@@ -173,6 +180,7 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
         returnValue: _i7.Future<Map<String, _i3.DBusValue>>.value(
             <String, _i3.DBusValue>{}),
       ) as _i7.Future<Map<String, _i3.DBusValue>>);
+
   @override
   _i7.Future<void> setProperty(
     String? interface,
@@ -191,6 +199,7 @@ class MockDBusRemoteObject extends _i1.Mock implements _i6.DBusRemoteObject {
         returnValue: _i7.Future<void>.value(),
         returnValueForMissingStub: _i7.Future<void>.value(),
       ) as _i7.Future<void>);
+
   @override
   _i7.Future<_i5.DBusMethodSuccessResponse> callMethod(
     String? interface,

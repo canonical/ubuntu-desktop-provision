@@ -59,6 +59,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
           Invocation.getter(#productInfo),
         ),
       ) as _i2.ProductInfo);
+
   @override
   _i3.InstallationEvent get event => (super.noSuchMethod(
         Invocation.getter(#event),
@@ -67,46 +68,55 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
           Invocation.getter(#event),
         ),
       ) as _i3.InstallationEvent);
+
   @override
   bool get isDone => (super.noSuchMethod(
         Invocation.getter(#isDone),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasError => (super.noSuchMethod(
         Invocation.getter(#hasError),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isInstalling => (super.noSuchMethod(
         Invocation.getter(#isInstalling),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Stream<String> get log => (super.noSuchMethod(
         Invocation.getter(#log),
         returnValue: _i4.Stream<String>.empty(),
       ) as _i4.Stream<String>);
+
   @override
   bool get isLogVisible => (super.noSuchMethod(
         Invocation.getter(#isLogVisible),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isPlaying => (super.noSuchMethod(
         Invocation.getter(#isPlaying),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   void toggleLogVisibility() => super.noSuchMethod(
         Invocation.method(
@@ -115,6 +125,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void togglePlaying() => super.noSuchMethod(
         Invocation.method(
@@ -123,6 +134,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -132,6 +144,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -140,6 +153,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<void> precacheSlideImages(_i5.BuildContext? context) =>
       (super.noSuchMethod(
@@ -150,6 +164,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(
@@ -159,6 +174,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -167,6 +183,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -175,6 +192,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

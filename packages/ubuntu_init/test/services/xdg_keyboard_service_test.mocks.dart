@@ -44,41 +44,49 @@ class MockXdgLocaleClient extends _i1.Mock implements _i3.XdgLocaleClient {
         Invocation.getter(#locale),
         returnValue: <String, String>{},
       ) as Map<String, String>);
+
   @override
   String get x11Layout => (super.noSuchMethod(
         Invocation.getter(#x11Layout),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Model => (super.noSuchMethod(
         Invocation.getter(#x11Model),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Variant => (super.noSuchMethod(
         Invocation.getter(#x11Variant),
         returnValue: '',
       ) as String);
+
   @override
   String get x11Options => (super.noSuchMethod(
         Invocation.getter(#x11Options),
         returnValue: '',
       ) as String);
+
   @override
   String get vConsoleKeymap => (super.noSuchMethod(
         Invocation.getter(#vConsoleKeymap),
         returnValue: '',
       ) as String);
+
   @override
   String get vConsoleKeymapToggle => (super.noSuchMethod(
         Invocation.getter(#vConsoleKeymapToggle),
         returnValue: '',
       ) as String);
+
   @override
   _i4.Stream<List<String>> get propertiesChanged => (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i4.Stream<List<String>>.empty(),
       ) as _i4.Stream<List<String>>);
+
   @override
   _i4.Future<void> setLocale(
     Map<String, String>? locale,
@@ -95,6 +103,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i3.XdgLocaleClient {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> setVConsoleKeyboard(
     String? keymap,
@@ -115,6 +124,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i3.XdgLocaleClient {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> setX11Keyboard(
     String? layout,
@@ -139,6 +149,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i3.XdgLocaleClient {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
@@ -148,6 +159,7 @@ class MockXdgLocaleClient extends _i1.Mock implements _i3.XdgLocaleClient {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -172,11 +184,13 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         Invocation.getter(#schemaName),
         returnValue: '',
       ) as String);
+
   @override
   _i4.Stream<List<String>> get keysChanged => (super.noSuchMethod(
         Invocation.getter(#keysChanged),
         returnValue: _i4.Stream<List<String>>.empty(),
       ) as _i4.Stream<List<String>>);
+
   @override
   _i4.Future<List<String>> list() => (super.noSuchMethod(
         Invocation.method(
@@ -185,6 +199,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         ),
         returnValue: _i4.Future<List<String>>.value(<String>[]),
       ) as _i4.Future<List<String>>);
+
   @override
   _i4.Future<_i2.DBusValue> get(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -199,6 +214,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
           ),
         )),
       ) as _i4.Future<_i2.DBusValue>);
+
   @override
   _i4.Future<_i2.DBusValue> getDefault(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -213,6 +229,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
           ),
         )),
       ) as _i4.Future<_i2.DBusValue>);
+
   @override
   _i4.Future<bool> isSet(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -221,6 +238,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> set(
     String? name,
@@ -237,6 +255,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> unset(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -246,6 +265,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> setAll(Map<String, _i2.DBusValue?>? values) =>
       (super.noSuchMethod(
@@ -256,6 +276,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(

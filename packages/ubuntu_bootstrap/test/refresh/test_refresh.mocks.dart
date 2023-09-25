@@ -47,11 +47,13 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
           Invocation.getter(#state),
         ),
       ) as _i2.RefreshState);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -60,6 +62,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -68,6 +71,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<_i2.RefreshState> check() => (super.noSuchMethod(
         Invocation.method(
@@ -82,6 +86,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
           ),
         )),
       ) as _i4.Future<_i2.RefreshState>);
+
   @override
   _i4.Future<void> refresh() => (super.noSuchMethod(
         Invocation.method(
@@ -91,6 +96,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> restart() => (super.noSuchMethod(
         Invocation.method(
@@ -100,6 +106,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -108,6 +115,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -116,6 +124,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

@@ -33,6 +33,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -41,6 +42,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> launch() => (super.noSuchMethod(
         Invocation.method(
@@ -50,6 +52,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -58,6 +61,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -66,6 +70,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -74,6 +79,7 @@ class MockStoreModel extends _i1.Mock implements _i2.StoreModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

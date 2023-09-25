@@ -35,6 +35,7 @@ class MockRstModel extends _i1.Mock implements _i2.RstModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(

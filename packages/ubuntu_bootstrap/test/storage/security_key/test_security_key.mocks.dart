@@ -34,6 +34,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         Invocation.getter(#securityKey),
         returnValue: '',
       ) as String);
+
   @override
   set securityKey(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -42,11 +43,13 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get confirmedSecurityKey => (super.noSuchMethod(
         Invocation.getter(#confirmedSecurityKey),
         returnValue: '',
       ) as String);
+
   @override
   set confirmedSecurityKey(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -55,11 +58,13 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get showSecurityKey => (super.noSuchMethod(
         Invocation.getter(#showSecurityKey),
         returnValue: false,
       ) as bool);
+
   @override
   set showSecurityKey(bool? value) => super.noSuchMethod(
         Invocation.setter(
@@ -68,21 +73,25 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get isValid => (super.noSuchMethod(
         Invocation.getter(#isValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -91,6 +100,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> loadSecurityKey() => (super.noSuchMethod(
         Invocation.method(
@@ -100,6 +110,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> saveSecurityKey() => (super.noSuchMethod(
         Invocation.method(
@@ -109,6 +120,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -117,6 +129,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -125,6 +138,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -133,6 +147,7 @@ class MockSecurityKeyModel extends _i1.Mock implements _i2.SecurityKeyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

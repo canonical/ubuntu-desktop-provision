@@ -45,21 +45,25 @@ class MockGnomeSessionManager extends _i1.Mock
         Invocation.getter(#renderer),
         returnValue: '',
       ) as String);
+
   @override
   bool get sessionIsActive => (super.noSuchMethod(
         Invocation.getter(#sessionIsActive),
         returnValue: false,
       ) as bool);
+
   @override
   String get sessionName => (super.noSuchMethod(
         Invocation.getter(#sessionName),
         returnValue: '',
       ) as String);
+
   @override
   _i4.Stream<List<String>> get propertiesChanged => (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i4.Stream<List<String>>.empty(),
       ) as _i4.Stream<List<String>>);
+
   @override
   _i4.Future<void> logout(
           {_i3.GnomeLogoutMode? mode = _i3.GnomeLogoutMode.normal}) =>
@@ -72,6 +76,7 @@ class MockGnomeSessionManager extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(
@@ -81,6 +86,7 @@ class MockGnomeSessionManager extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> shutdown() => (super.noSuchMethod(
         Invocation.method(
@@ -90,6 +96,7 @@ class MockGnomeSessionManager extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<bool> canShutdown() => (super.noSuchMethod(
         Invocation.method(
@@ -98,6 +105,7 @@ class MockGnomeSessionManager extends _i1.Mock
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<bool> isSessionRunning() => (super.noSuchMethod(
         Invocation.method(
@@ -106,6 +114,7 @@ class MockGnomeSessionManager extends _i1.Mock
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<int> inhibit({
     required String? appId,
@@ -126,6 +135,7 @@ class MockGnomeSessionManager extends _i1.Mock
         ),
         returnValue: _i4.Future<int>.value(0),
       ) as _i4.Future<int>);
+
   @override
   _i4.Future<void> uninhibit(int? cookie) => (super.noSuchMethod(
         Invocation.method(
@@ -135,6 +145,7 @@ class MockGnomeSessionManager extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<bool> isInhibited(Set<_i3.GnomeInhibitionFlag>? flags) =>
       (super.noSuchMethod(
@@ -144,6 +155,7 @@ class MockGnomeSessionManager extends _i1.Mock
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
@@ -153,6 +165,7 @@ class MockGnomeSessionManager extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -177,11 +190,13 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         Invocation.getter(#schemaName),
         returnValue: '',
       ) as String);
+
   @override
   _i4.Stream<List<String>> get keysChanged => (super.noSuchMethod(
         Invocation.getter(#keysChanged),
         returnValue: _i4.Stream<List<String>>.empty(),
       ) as _i4.Stream<List<String>>);
+
   @override
   _i4.Future<List<String>> list() => (super.noSuchMethod(
         Invocation.method(
@@ -190,6 +205,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         ),
         returnValue: _i4.Future<List<String>>.value(<String>[]),
       ) as _i4.Future<List<String>>);
+
   @override
   _i4.Future<_i2.DBusValue> get(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -204,6 +220,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
           ),
         )),
       ) as _i4.Future<_i2.DBusValue>);
+
   @override
   _i4.Future<_i2.DBusValue> getDefault(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -218,6 +235,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
           ),
         )),
       ) as _i4.Future<_i2.DBusValue>);
+
   @override
   _i4.Future<bool> isSet(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -226,6 +244,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> set(
     String? name,
@@ -242,6 +261,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> unset(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -251,6 +271,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> setAll(Map<String, _i2.DBusValue?>? values) =>
       (super.noSuchMethod(
@@ -261,6 +282,7 @@ class MockGSettings extends _i1.Mock implements _i5.GSettings {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(

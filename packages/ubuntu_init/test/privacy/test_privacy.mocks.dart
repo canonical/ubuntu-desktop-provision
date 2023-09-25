@@ -33,16 +33,19 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         Invocation.getter(#isLocationEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isReportingEnabled => (super.noSuchMethod(
         Invocation.getter(#isReportingEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -51,6 +54,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> setLocationEnabled(bool? value) => (super.noSuchMethod(
         Invocation.method(
@@ -60,6 +64,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> setReportingEnabled(bool? value) => (super.noSuchMethod(
         Invocation.method(
@@ -69,6 +74,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -77,6 +83,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -85,6 +92,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -93,6 +101,7 @@ class MockPrivacyModel extends _i1.Mock implements _i2.PrivacyModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

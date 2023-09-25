@@ -34,21 +34,25 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         Invocation.getter(#locations),
         returnValue: <_i3.GeoLocation>[],
       ) as Iterable<_i3.GeoLocation>);
+
   @override
   Iterable<_i3.GeoLocation> get timezones => (super.noSuchMethod(
         Invocation.getter(#timezones),
         returnValue: <_i3.GeoLocation>[],
       ) as Iterable<_i3.GeoLocation>);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -58,6 +62,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -67,6 +72,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void selectLocation(_i3.GeoLocation? location) => super.noSuchMethod(
         Invocation.method(
@@ -75,6 +81,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void selectTimezone(_i3.GeoLocation? timezone) => super.noSuchMethod(
         Invocation.method(
@@ -83,6 +90,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<Iterable<_i3.GeoLocation>> searchLocation(String? location) =>
       (super.noSuchMethod(
@@ -93,6 +101,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         returnValue:
             _i4.Future<Iterable<_i3.GeoLocation>>.value(<_i3.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i3.GeoLocation>>);
+
   @override
   _i4.Future<Iterable<_i3.GeoLocation>> searchCoordinates(
           _i3.LatLng? coordinates) =>
@@ -104,6 +113,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         returnValue:
             _i4.Future<Iterable<_i3.GeoLocation>>.value(<_i3.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i3.GeoLocation>>);
+
   @override
   _i4.Future<Iterable<_i3.GeoLocation>> searchTimezone(String? timezone) =>
       (super.noSuchMethod(
@@ -114,6 +124,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         returnValue:
             _i4.Future<Iterable<_i3.GeoLocation>>.value(<_i3.GeoLocation>[]),
       ) as _i4.Future<Iterable<_i3.GeoLocation>>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -122,6 +133,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -130,6 +142,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -138,6 +151,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

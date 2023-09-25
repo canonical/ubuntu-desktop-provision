@@ -34,21 +34,25 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         Invocation.getter(#disks),
         returnValue: <_i3.Disk>[],
       ) as List<_i3.Disk>);
+
   @override
   Map<String, List<_i3.Partition>> get partitions => (super.noSuchMethod(
         Invocation.getter(#partitions),
         returnValue: <String, List<_i3.Partition>>{},
       ) as Map<String, List<_i3.Partition>>);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Partition? getOriginalPartition(
     String? sysname,
@@ -61,6 +65,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
           number,
         ],
       )) as _i3.Partition?);
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -70,6 +75,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> startInstallation() => (super.noSuchMethod(
         Invocation.method(
@@ -79,6 +85,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> markNetworkConfigured() => (super.noSuchMethod(
         Invocation.method(
@@ -88,6 +95,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -96,6 +104,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -104,6 +113,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -112,6 +122,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(
