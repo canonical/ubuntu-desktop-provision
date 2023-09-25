@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String welcomePageTitle(Object DISTRO) {
-    return 'Probar o instalar $DISTRO';
+    return 'Prueba o instala $DISTRO';
   }
 
   @override
@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => '¿Qué aplicaciones le gustaría instalar para comenzar?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Instalación completa';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Una selección de herramientas ofimáticas, utilidades, navegador web y juegos sin conexión.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Instalación predeterminada';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Sólo lo esencial, el navegador web y las utilidades básicas.';
 
   @override
   String get otherOptions => 'Otras opciones';
@@ -170,7 +170,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get chooseSecurityKeyConfirmHint => 'Confirmar la clave de seguridad';
 
   @override
-  String get chooseSecurityKeyRequired => 'Se necesita una clave de seguridad';
+  String get chooseSecurityKeyRequired => 'Se requiere una clave de seguridad';
 
   @override
   String get chooseSecurityKeyMismatch => 'Las claves de seguridad no coinciden';

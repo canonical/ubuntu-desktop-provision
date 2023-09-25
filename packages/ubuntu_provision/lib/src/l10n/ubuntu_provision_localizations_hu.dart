@@ -17,7 +17,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Billentyűzetkiosztás';
 
   @override
-  String get keyboardHeader => 'Válasszon billentyűzetkiosztást:';
+  String get keyboardHeader => 'Billentyűzetkiosztás kiválasztása:';
 
   @override
   String get keyboardTestHint => 'Gépeljen itt a billentyűzet kipróbálásához';
@@ -55,7 +55,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get localeHeader => 'Válasszon nyelvet:';
+  String get localeHeader => 'Nyelv kiválasztása:';
 
   @override
   String get identityPageTitle => 'A fiók beállítása';
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityHostnameInfo => 'A más számítógépekkel való kommunikáció során használt név.';
 
   @override
-  String get identityHostnameRequired => 'A számítógépnév megadása kötelező';
+  String get identityHostnameRequired => 'A számítógép nevének megadása kötelező';
 
   @override
   String get identityHostnameTooLong => 'Ez a számítógépnév túl hosszú.';

@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Jakie programy chcesz zainstalować na początek?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Instalacja pełna';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Instalacja domyślna';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.';
 
   @override
   String get otherOptions => 'Pozostałe opcje';

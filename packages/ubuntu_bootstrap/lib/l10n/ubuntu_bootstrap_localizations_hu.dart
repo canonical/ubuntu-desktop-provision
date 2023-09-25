@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS kiválasztva';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Figyelmeztetés:</font> ez a funkció csak bizonyos hardverkonfigurációkon támogatott, és lehet, hogy nem támogatja a jövőbeli Ubuntu kiadásokra való frissítést. Olvassa el a <a href=\"$url\">kiadási megjegyzéseket</a> az engedélyezés előtt.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM kiválasztva';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -317,7 +317,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(Object num, Object url) {
-    return '$num a kisebb partíció el van rejtve, használja a <a href=\"$url\">speciális particionáló eszközt</a> a jobb szabályozáshoz';
+    return '$num kisebb partíció el van rejtve, használja a <a href=\"$url\">speciális particionáló eszközt</a> a jobb szabályozáshoz';
   }
 
   @override
@@ -366,7 +366,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get diskHeadersSystem => 'Rendszer';
 
   @override
-  String get diskHeadersFormat => 'Formátum';
+  String get diskHeadersFormat => 'Formázás';
 
   @override
   String get freeDiskSpace => 'Szabad hely';
@@ -424,7 +424,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(Object format) {
-    return 'Leave formatted as $format';
+    return '$format formátumra formázva hagyás';
   }
 
   @override
@@ -679,139 +679,139 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Szükséges:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Frissítés érhető el';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'A jelenlegi $snap verzió $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Frissítés a(z) $version verzióra';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'A jelenlegi $version verzió naprakész.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'A(z) $snap frissítése…';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Indítsa újra a telepítőt.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'A(z) $snap előfeltételeinek biztosítása…';
   }
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'A(z) $snap frissítése…';
   }
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'A(z) $snap újrafrissítésének ellenőrzése…';
   }
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'A(z) $snap előkészítése…';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'A(z) $snap letöltése…';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'A(z) $snap ellenőrzése…';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'A(z) $snap csatolása…';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'A(z) $snap szolgáltatásainak leállítása…';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'A(z) $snap álnevek eltávolítása…';
   }
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'A(z) $snap kapcsolatának megszüntetése…';
   }
 
   @override
   String refreshSnapUpdateAssets(Object snap) {
-    return 'Updating $snap assets...';
+    return 'A(z) $snap eszközeinek frissítése…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(Object snap) {
-    return 'Updating $snap kernel command line...';
+    return 'A(z) $snap rendszermag parancssorának frissítése…';
   }
 
   @override
   String refreshSnapCopyData(Object snap) {
-    return 'Copying $snap data...';
+    return 'A(z) $snap adatainak másolása…';
   }
 
   @override
   String refreshSnapSetupProfiles(Object snap) {
-    return 'Setting up $snap security profiles...';
+    return 'A(z) $snap biztonsági profiljainak beállítása…';
   }
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'A(z) $snap kapcsolása…';
   }
 
   @override
   String refreshSnapAutoConnect(Object snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'A(z) $snap csatlakozóinak és foglalatainak kapcsolódása…';
   }
 
   @override
   String refreshSnapSetAutoAliases(Object snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Automatikus $snap álnevek beállítása…';
   }
 
   @override
   String refreshSnapSetupAliases(Object snap) {
-    return 'Setting up $snap aliases...';
+    return 'A(z) $snap álneveinek beállítása…';
   }
 
   @override
   String refreshSnapStartServices(Object snap) {
-    return 'Starting $snap services...';
+    return 'A(z) $snap szolgáltatásainak indítása…';
   }
 
   @override
   String refreshSnapCleanup(Object snap) {
-    return 'Cleaning up $snap...';
+    return 'A(z) $snap tisztítása…';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM helyreállítási kulcs';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'A helyreállítási kulcsot a telepítés után érheti el a következő paranccsal:';
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.';
   }
 }

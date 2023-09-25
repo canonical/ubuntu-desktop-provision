@@ -5,10 +5,10 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsIt([String locale = 'it']) : super(locale);
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'Seleziona il tuo fuso orario';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'Posizione';
 
   @override
   String get timezoneTimezoneLabel => 'Fuso orario';
