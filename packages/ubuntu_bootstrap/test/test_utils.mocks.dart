@@ -61,6 +61,7 @@ class MockInstallerService extends _i1.Mock implements _i4.InstallerService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<void> load() => (super.noSuchMethod(
         Invocation.method(
@@ -70,6 +71,7 @@ class MockInstallerService extends _i1.Mock implements _i4.InstallerService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<void> start() => (super.noSuchMethod(
         Invocation.method(
@@ -79,6 +81,7 @@ class MockInstallerService extends _i1.Mock implements _i4.InstallerService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Stream<_i3.ApplicationStatus?> monitorStatus() => (super.noSuchMethod(
         Invocation.method(
@@ -87,6 +90,7 @@ class MockInstallerService extends _i1.Mock implements _i4.InstallerService {
         ),
         returnValue: _i5.Stream<_i3.ApplicationStatus?>.empty(),
       ) as _i5.Stream<_i3.ApplicationStatus?>);
+
   @override
   bool hasRoute(String? route) => (super.noSuchMethod(
         Invocation.method(
@@ -114,6 +118,7 @@ class MockPostInstallService extends _i1.Mock
         ),
         returnValue: _i5.Future<String?>.value(),
       ) as _i5.Future<String?>);
+
   @override
   _i5.Future<void> set(
     String? key,
@@ -130,6 +135,7 @@ class MockPostInstallService extends _i1.Mock
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<Map<String, String?>> load() => (super.noSuchMethod(
         Invocation.method(
@@ -139,6 +145,7 @@ class MockPostInstallService extends _i1.Mock
         returnValue:
             _i5.Future<Map<String, String?>>.value(<String, String?>{}),
       ) as _i5.Future<Map<String, String?>>);
+
   @override
   _i5.Future<void> save(Map<String, String?>? config) => (super.noSuchMethod(
         Invocation.method(
@@ -166,11 +173,13 @@ class MockRefreshService extends _i1.Mock implements _i2.RefreshService {
           Invocation.getter(#state),
         ),
       ) as _i2.RefreshState);
+
   @override
   _i5.Stream<_i2.RefreshState> get stateChanged => (super.noSuchMethod(
         Invocation.getter(#stateChanged),
         returnValue: _i5.Stream<_i2.RefreshState>.empty(),
       ) as _i5.Stream<_i2.RefreshState>);
+
   @override
   _i5.Future<_i2.RefreshState> check() => (super.noSuchMethod(
         Invocation.method(
@@ -185,6 +194,7 @@ class MockRefreshService extends _i1.Mock implements _i2.RefreshService {
           ),
         )),
       ) as _i5.Future<_i2.RefreshState>);
+
   @override
   _i5.Future<void> refresh() => (super.noSuchMethod(
         Invocation.method(
@@ -194,6 +204,7 @@ class MockRefreshService extends _i1.Mock implements _i2.RefreshService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -218,16 +229,19 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         Invocation.getter(#hasMultipleDisks),
         returnValue: false,
       ) as bool);
+
   @override
   bool get needRoot => (super.noSuchMethod(
         Invocation.getter(#needRoot),
         returnValue: false,
       ) as bool);
+
   @override
   bool get needBoot => (super.noSuchMethod(
         Invocation.getter(#needBoot),
         returnValue: false,
       ) as bool);
+
   @override
   set securityKey(String? securityKey) => super.noSuchMethod(
         Invocation.setter(
@@ -236,6 +250,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   set guidedTarget(_i3.GuidedStorageTarget? target) => super.noSuchMethod(
         Invocation.setter(
@@ -244,6 +259,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   set guidedCapability(_i3.GuidedCapability? capability) => super.noSuchMethod(
         Invocation.setter(
@@ -252,16 +268,19 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   int get installMinimumSize => (super.noSuchMethod(
         Invocation.getter(#installMinimumSize),
         returnValue: 0,
       ) as int);
+
   @override
   int get largestDiskSize => (super.noSuchMethod(
         Invocation.getter(#largestDiskSize),
         returnValue: 0,
       ) as int);
+
   @override
   _i5.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -271,6 +290,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<bool> hasSecureBoot() => (super.noSuchMethod(
         Invocation.method(
@@ -279,6 +299,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<bool>.value(false),
       ) as _i5.Future<bool>);
+
   @override
   _i5.Future<bool> hasBitLocker() => (super.noSuchMethod(
         Invocation.method(
@@ -287,6 +308,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<bool>.value(false),
       ) as _i5.Future<bool>);
+
   @override
   _i5.Future<_i3.GuidedStorageResponseV2> getGuidedStorage() =>
       (super.noSuchMethod(
@@ -303,6 +325,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
           ),
         )),
       ) as _i5.Future<_i3.GuidedStorageResponseV2>);
+
   @override
   _i5.Future<void> setGuidedStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -312,6 +335,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<List<_i3.Disk>> getStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -320,6 +344,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> getOriginalStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -328,6 +353,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> addPartition(
     _i3.Disk? disk,
@@ -345,6 +371,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> editPartition(
     _i3.Disk? disk,
@@ -360,6 +387,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> deletePartition(
     _i3.Disk? disk,
@@ -375,6 +403,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> setStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -383,6 +412,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> resetStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -391,6 +421,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> addBootPartition(_i3.Disk? disk) =>
       (super.noSuchMethod(
@@ -400,6 +431,7 @@ class MockStorageService extends _i1.Mock implements _i7.StorageService {
         ),
         returnValue: _i5.Future<List<_i3.Disk>>.value(<_i3.Disk>[]),
       ) as _i5.Future<List<_i3.Disk>>);
+
   @override
   _i5.Future<List<_i3.Disk>> reformatDisk(_i3.Disk? disk) =>
       (super.noSuchMethod(

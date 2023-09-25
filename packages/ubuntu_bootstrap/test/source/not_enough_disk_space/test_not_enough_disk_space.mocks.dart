@@ -35,21 +35,25 @@ class MockNotEnoughDiskSpaceModel extends _i1.Mock
         Invocation.getter(#largestDiskSize),
         returnValue: 0,
       ) as int);
+
   @override
   int get installMinimumSize => (super.noSuchMethod(
         Invocation.getter(#installMinimumSize),
         returnValue: 0,
       ) as int);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -58,6 +62,7 @@ class MockNotEnoughDiskSpaceModel extends _i1.Mock
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -66,6 +71,7 @@ class MockNotEnoughDiskSpaceModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -74,6 +80,7 @@ class MockNotEnoughDiskSpaceModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -82,6 +89,7 @@ class MockNotEnoughDiskSpaceModel extends _i1.Mock
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

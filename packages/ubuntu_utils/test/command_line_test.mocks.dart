@@ -46,6 +46,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
           Invocation.getter(#encoding),
         ),
       ) as _i2.Encoding);
+
   @override
   set encoding(_i2.Encoding? _encoding) => super.noSuchMethod(
         Invocation.setter(
@@ -54,11 +55,13 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<dynamic> get done => (super.noSuchMethod(
         Invocation.getter(#done),
         returnValue: _i4.Future<dynamic>.value(),
       ) as _i4.Future<dynamic>);
+
   @override
   void add(List<int>? data) => super.noSuchMethod(
         Invocation.method(
@@ -67,6 +70,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void write(Object? object) => super.noSuchMethod(
         Invocation.method(
@@ -75,6 +79,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void writeAll(
     Iterable<dynamic>? objects, [
@@ -90,6 +95,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void writeln([Object? object = r'']) => super.noSuchMethod(
         Invocation.method(
@@ -98,6 +104,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void writeCharCode(int? charCode) => super.noSuchMethod(
         Invocation.method(
@@ -106,6 +113,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addError(
     Object? error, [
@@ -121,6 +129,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i4.Future<dynamic> addStream(_i4.Stream<List<int>>? stream) =>
       (super.noSuchMethod(
@@ -130,6 +139,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValue: _i4.Future<dynamic>.value(),
       ) as _i4.Future<dynamic>);
+
   @override
   _i4.Future<dynamic> flush() => (super.noSuchMethod(
         Invocation.method(
@@ -138,6 +148,7 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
         ),
         returnValue: _i4.Future<dynamic>.value(),
       ) as _i4.Future<dynamic>);
+
   @override
   _i4.Future<dynamic> close() => (super.noSuchMethod(
         Invocation.method(

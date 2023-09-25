@@ -34,41 +34,49 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         Invocation.getter(#secureBootMode),
         returnValue: _i2.SecureBootMode.turnOff,
       ) as _i2.SecureBootMode);
+
   @override
   String get securityKey => (super.noSuchMethod(
         Invocation.getter(#securityKey),
         returnValue: '',
       ) as String);
+
   @override
   String get confirmKey => (super.noSuchMethod(
         Invocation.getter(#confirmKey),
         returnValue: '',
       ) as String);
+
   @override
   bool get areTextFieldsEnabled => (super.noSuchMethod(
         Invocation.getter(#areTextFieldsEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isFormValid => (super.noSuchMethod(
         Invocation.getter(#isFormValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isConfirmationKeyValid => (super.noSuchMethod(
         Invocation.getter(#isConfirmationKeyValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> hasSecureBoot() => (super.noSuchMethod(
         Invocation.method(
@@ -77,6 +85,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   void setSecureBootMode(_i2.SecureBootMode? mode) => super.noSuchMethod(
         Invocation.method(
@@ -85,6 +94,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setSecurityKey(String? key) => super.noSuchMethod(
         Invocation.method(
@@ -93,6 +103,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setConfirmKey(String? key) => super.noSuchMethod(
         Invocation.method(
@@ -101,6 +112,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -109,6 +121,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -117,6 +130,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -125,6 +139,7 @@ class MockSecureBootModel extends _i1.Mock implements _i2.SecureBootModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

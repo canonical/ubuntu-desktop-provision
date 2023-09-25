@@ -177,6 +177,7 @@ class MockActiveDirectoryService extends _i1.Mock
         ),
         returnValue: _i9.Future<bool>.value(false),
       ) as _i9.Future<bool>);
+
   @override
   _i9.Future<bool> isUsed() => (super.noSuchMethod(
         Invocation.method(
@@ -185,6 +186,7 @@ class MockActiveDirectoryService extends _i1.Mock
         ),
         returnValue: _i9.Future<bool>.value(false),
       ) as _i9.Future<bool>);
+
   @override
   _i9.Future<void> setUsed(bool? used) => (super.noSuchMethod(
         Invocation.method(
@@ -194,6 +196,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<_i2.AdConnectionInfo> getConnectionInfo() => (super.noSuchMethod(
         Invocation.method(
@@ -209,6 +212,7 @@ class MockActiveDirectoryService extends _i1.Mock
           ),
         )),
       ) as _i9.Future<_i2.AdConnectionInfo>);
+
   @override
   _i9.Future<void> setConnectionInfo(_i2.AdConnectionInfo? info) =>
       (super.noSuchMethod(
@@ -219,6 +223,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<List<_i2.AdDomainNameValidation>> checkDomainName(
           String? domain) =>
@@ -230,6 +235,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<List<_i2.AdDomainNameValidation>>.value(
             <_i2.AdDomainNameValidation>[]),
       ) as _i9.Future<List<_i2.AdDomainNameValidation>>);
+
   @override
   _i9.Future<_i2.AdAdminNameValidation> checkAdminName(String? admin) =>
       (super.noSuchMethod(
@@ -240,6 +246,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<_i2.AdAdminNameValidation>.value(
             _i2.AdAdminNameValidation.OK),
       ) as _i9.Future<_i2.AdAdminNameValidation>);
+
   @override
   _i9.Future<_i2.AdPasswordValidation> checkPassword(String? password) =>
       (super.noSuchMethod(
@@ -250,6 +257,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<_i2.AdPasswordValidation>.value(
             _i2.AdPasswordValidation.OK),
       ) as _i9.Future<_i2.AdPasswordValidation>);
+
   @override
   _i9.Future<_i2.AdDomainNameValidation> pingDomainController(String? domain) =>
       (super.noSuchMethod(
@@ -260,6 +268,7 @@ class MockActiveDirectoryService extends _i1.Mock
         returnValue: _i9.Future<_i2.AdDomainNameValidation>.value(
             _i2.AdDomainNameValidation.OK),
       ) as _i9.Future<_i2.AdDomainNameValidation>);
+
   @override
   _i9.Future<_i2.AdJoinResult> getJoinResult({bool? wait = true}) =>
       (super.noSuchMethod(
@@ -293,6 +302,7 @@ class MockConfigService extends _i1.Mock implements _i10.ConfigService {
         ),
         returnValue: _i9.Future<T?>.value(),
       ) as _i9.Future<T?>);
+
   @override
   _i9.Future<Map<String, dynamic>?> load() => (super.noSuchMethod(
         Invocation.method(
@@ -320,6 +330,7 @@ class MockDesktopService extends _i1.Mock implements _i11.DesktopService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -347,6 +358,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeSource(_i13.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
@@ -355,6 +367,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i9.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -364,6 +377,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<_i14.GeoLocation?> lookupLocation() => (super.noSuchMethod(
         Invocation.method(
@@ -372,6 +386,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         ),
         returnValue: _i9.Future<_i14.GeoLocation?>.value(),
       ) as _i9.Future<_i14.GeoLocation?>);
+
   @override
   _i9.Future<Iterable<_i14.GeoLocation>> searchLocation(String? location) =>
       (super.noSuchMethod(
@@ -382,6 +397,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         returnValue:
             _i9.Future<Iterable<_i14.GeoLocation>>.value(<_i14.GeoLocation>[]),
       ) as _i9.Future<Iterable<_i14.GeoLocation>>);
+
   @override
   _i9.Future<Iterable<_i14.GeoLocation>> searchCoordinates(
           _i14.LatLng? coordinates) =>
@@ -393,6 +409,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         returnValue:
             _i9.Future<Iterable<_i14.GeoLocation>>.value(<_i14.GeoLocation>[]),
       ) as _i9.Future<Iterable<_i14.GeoLocation>>);
+
   @override
   _i9.Future<Iterable<_i14.GeoLocation>> searchTimezone(String? timezone) =>
       (super.noSuchMethod(
@@ -403,6 +420,7 @@ class MockGeoService extends _i1.Mock implements _i12.GeoService {
         returnValue:
             _i9.Future<Iterable<_i14.GeoLocation>>.value(<_i14.GeoLocation>[]),
       ) as _i9.Future<Iterable<_i14.GeoLocation>>);
+
   @override
   _i9.Future<void> cancelSearch() => (super.noSuchMethod(
         Invocation.method(
@@ -436,6 +454,7 @@ class MockIdentityService extends _i1.Mock implements _i3.IdentityService {
           ),
         )),
       ) as _i9.Future<_i3.Identity>);
+
   @override
   _i9.Future<void> setIdentity(_i3.Identity? identity) => (super.noSuchMethod(
         Invocation.method(
@@ -445,6 +464,7 @@ class MockIdentityService extends _i1.Mock implements _i3.IdentityService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<_i2.UsernameValidation> validateUsername(String? username) =>
       (super.noSuchMethod(
@@ -493,6 +513,7 @@ class MockKeyboardService extends _i1.Mock implements _i16.KeyboardService {
         Invocation.getter(#canDetectLayout),
         returnValue: false,
       ) as bool);
+
   @override
   _i9.Future<_i2.KeyboardSetup> getKeyboard() => (super.noSuchMethod(
         Invocation.method(
@@ -507,6 +528,7 @@ class MockKeyboardService extends _i1.Mock implements _i16.KeyboardService {
           ),
         )),
       ) as _i9.Future<_i2.KeyboardSetup>);
+
   @override
   _i9.Future<void> setKeyboard(_i2.KeyboardSetting? setting) =>
       (super.noSuchMethod(
@@ -517,6 +539,7 @@ class MockKeyboardService extends _i1.Mock implements _i16.KeyboardService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> setInputSource(
     _i2.KeyboardSetting? setting, {
@@ -531,6 +554,7 @@ class MockKeyboardService extends _i1.Mock implements _i16.KeyboardService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<_i2.AnyStep> getKeyboardStep([String? step = r'0']) =>
       (super.noSuchMethod(
@@ -564,6 +588,7 @@ class MockLocaleService extends _i1.Mock implements _i17.LocaleService {
         ),
         returnValue: _i9.Future<String>.value(''),
       ) as _i9.Future<String>);
+
   @override
   _i9.Future<void> setLocale(String? locale) => (super.noSuchMethod(
         Invocation.method(
@@ -588,134 +613,160 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         Invocation.getter(#isConnected),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isConnectedSite => (super.noSuchMethod(
         Invocation.getter(#isConnectedSite),
         returnValue: false,
       ) as bool);
+
   @override
   List<_i4.NetworkManagerDevice> get wiredDevices => (super.noSuchMethod(
         Invocation.getter(#wiredDevices),
         returnValue: <_i4.NetworkManagerDevice>[],
       ) as List<_i4.NetworkManagerDevice>);
+
   @override
   List<_i4.NetworkManagerDevice> get wirelessDevices => (super.noSuchMethod(
         Invocation.getter(#wirelessDevices),
         returnValue: <_i4.NetworkManagerDevice>[],
       ) as List<_i4.NetworkManagerDevice>);
+
   @override
   _i9.Stream<_i4.NetworkManagerDevice> get deviceAdded => (super.noSuchMethod(
         Invocation.getter(#deviceAdded),
         returnValue: _i9.Stream<_i4.NetworkManagerDevice>.empty(),
       ) as _i9.Stream<_i4.NetworkManagerDevice>);
+
   @override
   _i9.Stream<_i4.NetworkManagerDevice> get deviceRemoved => (super.noSuchMethod(
         Invocation.getter(#deviceRemoved),
         returnValue: _i9.Stream<_i4.NetworkManagerDevice>.empty(),
       ) as _i9.Stream<_i4.NetworkManagerDevice>);
+
   @override
   _i9.Stream<_i4.NetworkManagerActiveConnection> get activeConnectionAdded =>
       (super.noSuchMethod(
         Invocation.getter(#activeConnectionAdded),
         returnValue: _i9.Stream<_i4.NetworkManagerActiveConnection>.empty(),
       ) as _i9.Stream<_i4.NetworkManagerActiveConnection>);
+
   @override
   _i9.Stream<_i4.NetworkManagerActiveConnection> get activeConnectionRemoved =>
       (super.noSuchMethod(
         Invocation.getter(#activeConnectionRemoved),
         returnValue: _i9.Stream<_i4.NetworkManagerActiveConnection>.empty(),
       ) as _i9.Stream<_i4.NetworkManagerActiveConnection>);
+
   @override
   _i9.Stream<List<String>> get propertiesChanged => (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i9.Stream<List<String>>.empty(),
       ) as _i9.Stream<List<String>>);
+
   @override
   List<_i4.NetworkManagerDevice> get devices => (super.noSuchMethod(
         Invocation.getter(#devices),
         returnValue: <_i4.NetworkManagerDevice>[],
       ) as List<_i4.NetworkManagerDevice>);
+
   @override
   List<_i4.NetworkManagerDevice> get allDevices => (super.noSuchMethod(
         Invocation.getter(#allDevices),
         returnValue: <_i4.NetworkManagerDevice>[],
       ) as List<_i4.NetworkManagerDevice>);
+
   @override
   bool get networkingEnabled => (super.noSuchMethod(
         Invocation.getter(#networkingEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get wirelessEnabled => (super.noSuchMethod(
         Invocation.getter(#wirelessEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get wirelessHardwareEnabled => (super.noSuchMethod(
         Invocation.getter(#wirelessHardwareEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get wwanEnabled => (super.noSuchMethod(
         Invocation.getter(#wwanEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   bool get wwanHardwareEnabled => (super.noSuchMethod(
         Invocation.getter(#wwanHardwareEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   List<_i4.NetworkManagerActiveConnection> get activeConnections =>
       (super.noSuchMethod(
         Invocation.getter(#activeConnections),
         returnValue: <_i4.NetworkManagerActiveConnection>[],
       ) as List<_i4.NetworkManagerActiveConnection>);
+
   @override
   String get primaryConnectionType => (super.noSuchMethod(
         Invocation.getter(#primaryConnectionType),
         returnValue: '',
       ) as String);
+
   @override
   _i4.NetworkManagerMetered get metered => (super.noSuchMethod(
         Invocation.getter(#metered),
         returnValue: _i4.NetworkManagerMetered.unknown,
       ) as _i4.NetworkManagerMetered);
+
   @override
   bool get startup => (super.noSuchMethod(
         Invocation.getter(#startup),
         returnValue: false,
       ) as bool);
+
   @override
   String get version => (super.noSuchMethod(
         Invocation.getter(#version),
         returnValue: '',
       ) as String);
+
   @override
   _i4.NetworkManagerConnectivityState get connectivity => (super.noSuchMethod(
         Invocation.getter(#connectivity),
         returnValue: _i4.NetworkManagerConnectivityState.unknown,
       ) as _i4.NetworkManagerConnectivityState);
+
   @override
   bool get connectivityCheckAvailable => (super.noSuchMethod(
         Invocation.getter(#connectivityCheckAvailable),
         returnValue: false,
       ) as bool);
+
   @override
   bool get connectivityCheckEnabled => (super.noSuchMethod(
         Invocation.getter(#connectivityCheckEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   String get connectivityCheckUri => (super.noSuchMethod(
         Invocation.getter(#connectivityCheckUri),
         returnValue: '',
       ) as String);
+
   @override
   _i4.NetworkManagerState get state => (super.noSuchMethod(
         Invocation.getter(#state),
         returnValue: _i4.NetworkManagerState.unknown,
       ) as _i4.NetworkManagerState);
+
   @override
   _i4.NetworkManagerSettings get settings => (super.noSuchMethod(
         Invocation.getter(#settings),
@@ -724,6 +775,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
           Invocation.getter(#settings),
         ),
       ) as _i4.NetworkManagerSettings);
+
   @override
   _i4.NetworkManagerDnsManager get dnsManager => (super.noSuchMethod(
         Invocation.getter(#dnsManager),
@@ -732,6 +784,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
           Invocation.getter(#dnsManager),
         ),
       ) as _i4.NetworkManagerDnsManager);
+
   @override
   Map<String, Map<String, _i19.DBusValue>> getWifiSettings(
           {required String? ssid}) =>
@@ -743,6 +796,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         ),
         returnValue: <String, Map<String, _i19.DBusValue>>{},
       ) as Map<String, Map<String, _i19.DBusValue>>);
+
   @override
   _i9.Future<void> markConfigured() => (super.noSuchMethod(
         Invocation.method(
@@ -752,6 +806,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
@@ -761,6 +816,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> setWirelessEnabled(bool? value) => (super.noSuchMethod(
         Invocation.method(
@@ -770,6 +826,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> setWwanEnabled(bool? value) => (super.noSuchMethod(
         Invocation.method(
@@ -779,6 +836,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> setConnectivityCheckEnabled(bool? value) =>
       (super.noSuchMethod(
@@ -789,6 +847,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<_i4.NetworkManagerActiveConnection> addAndActivateConnection({
     Map<String, Map<String, _i19.DBusValue>>? connection = const {},
@@ -819,6 +878,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
           ),
         )),
       ) as _i9.Future<_i4.NetworkManagerActiveConnection>);
+
   @override
   _i9.Future<_i4.NetworkManagerActiveConnection> activateConnection({
     required _i4.NetworkManagerDevice? device,
@@ -849,6 +909,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
           ),
         )),
       ) as _i9.Future<_i4.NetworkManagerActiveConnection>);
+
   @override
   _i9.Future<void> deactivateConnection(
           _i4.NetworkManagerActiveConnection? connection) =>
@@ -860,6 +921,7 @@ class MockNetworkService extends _i1.Mock implements _i18.NetworkService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -887,6 +949,7 @@ class MockPowerService extends _i1.Mock implements _i20.PowerService {
           Invocation.getter(#kbdBacklight),
         ),
       ) as _i5.UPowerKbdBacklight);
+
   @override
   set kbdBacklight(_i5.UPowerKbdBacklight? _kbdBacklight) => super.noSuchMethod(
         Invocation.setter(
@@ -895,31 +958,37 @@ class MockPowerService extends _i1.Mock implements _i20.PowerService {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get daemonVersion => (super.noSuchMethod(
         Invocation.getter(#daemonVersion),
         returnValue: '',
       ) as String);
+
   @override
   bool get onBattery => (super.noSuchMethod(
         Invocation.getter(#onBattery),
         returnValue: false,
       ) as bool);
+
   @override
   bool get lidIsPresent => (super.noSuchMethod(
         Invocation.getter(#lidIsPresent),
         returnValue: false,
       ) as bool);
+
   @override
   bool get lidIsClosed => (super.noSuchMethod(
         Invocation.getter(#lidIsClosed),
         returnValue: false,
       ) as bool);
+
   @override
   List<_i5.UPowerDevice> get devices => (super.noSuchMethod(
         Invocation.getter(#devices),
         returnValue: <_i5.UPowerDevice>[],
       ) as List<_i5.UPowerDevice>);
+
   @override
   _i5.UPowerDevice get displayDevice => (super.noSuchMethod(
         Invocation.getter(#displayDevice),
@@ -928,21 +997,25 @@ class MockPowerService extends _i1.Mock implements _i20.PowerService {
           Invocation.getter(#displayDevice),
         ),
       ) as _i5.UPowerDevice);
+
   @override
   _i9.Stream<_i5.UPowerDevice> get deviceAdded => (super.noSuchMethod(
         Invocation.getter(#deviceAdded),
         returnValue: _i9.Stream<_i5.UPowerDevice>.empty(),
       ) as _i9.Stream<_i5.UPowerDevice>);
+
   @override
   _i9.Stream<_i5.UPowerDevice> get deviceRemoved => (super.noSuchMethod(
         Invocation.getter(#deviceRemoved),
         returnValue: _i9.Stream<_i5.UPowerDevice>.empty(),
       ) as _i9.Stream<_i5.UPowerDevice>);
+
   @override
   _i9.Stream<List<String>> get propertiesChanged => (super.noSuchMethod(
         Invocation.getter(#propertiesChanged),
         returnValue: _i9.Stream<List<String>>.empty(),
       ) as _i9.Stream<List<String>>);
+
   @override
   _i9.Future<void> connect() => (super.noSuchMethod(
         Invocation.method(
@@ -952,6 +1025,7 @@ class MockPowerService extends _i1.Mock implements _i20.PowerService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<String> getCriticalAction() => (super.noSuchMethod(
         Invocation.method(
@@ -960,6 +1034,7 @@ class MockPowerService extends _i1.Mock implements _i20.PowerService {
         ),
         returnValue: _i9.Future<String>.value(''),
       ) as _i9.Future<String>);
+
   @override
   _i9.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -993,6 +1068,7 @@ class MockProductService extends _i1.Mock implements _i6.ProductService {
           ),
         ),
       ) as _i6.ProductInfo);
+
   @override
   String getReleaseNotesURL(String? languageCode) => (super.noSuchMethod(
         Invocation.method(
@@ -1021,6 +1097,7 @@ class MockSessionService extends _i1.Mock implements _i21.SessionService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> shutdown({bool? immediate = false}) => (super.noSuchMethod(
         Invocation.method(
@@ -1065,6 +1142,7 @@ class MockTelemetryService extends _i1.Mock implements _i23.TelemetryService {
         Invocation.getter(#path),
         returnValue: '',
       ) as String);
+
   @override
   _i9.Future<void> init([Map<String, dynamic>? metrics = const {}]) =>
       (super.noSuchMethod(
@@ -1075,6 +1153,7 @@ class MockTelemetryService extends _i1.Mock implements _i23.TelemetryService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> addStage(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -1084,6 +1163,7 @@ class MockTelemetryService extends _i1.Mock implements _i23.TelemetryService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> addMetric(
     String? key,
@@ -1100,6 +1180,7 @@ class MockTelemetryService extends _i1.Mock implements _i23.TelemetryService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> addMetrics(Map<String, dynamic>? entries) =>
       (super.noSuchMethod(
@@ -1128,6 +1209,7 @@ class MockThemeService extends _i1.Mock implements _i24.ThemeService {
         ),
         returnValue: _i9.Future<_i25.Brightness>.value(_i25.Brightness.dark),
       ) as _i9.Future<_i25.Brightness>);
+
   @override
   _i9.Future<void> setBrightness(_i25.Brightness? brightness) =>
       (super.noSuchMethod(
@@ -1138,6 +1220,7 @@ class MockThemeService extends _i1.Mock implements _i24.ThemeService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<String?> getAccent() => (super.noSuchMethod(
         Invocation.method(
@@ -1146,6 +1229,7 @@ class MockThemeService extends _i1.Mock implements _i24.ThemeService {
         ),
         returnValue: _i9.Future<String?>.value(),
       ) as _i9.Future<String?>);
+
   @override
   _i9.Future<void> setAccent(String? accent) => (super.noSuchMethod(
         Invocation.method(
@@ -1155,6 +1239,7 @@ class MockThemeService extends _i1.Mock implements _i24.ThemeService {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -1182,6 +1267,7 @@ class MockTimezoneService extends _i1.Mock implements _i26.TimezoneService {
         ),
         returnValue: _i9.Future<String>.value(''),
       ) as _i9.Future<String>);
+
   @override
   _i9.Future<void> setTimezone(String? timezone) => (super.noSuchMethod(
         Invocation.method(
@@ -1230,6 +1316,7 @@ class MockUdevService extends _i1.Mock implements _i7.UdevService {
           ),
         ),
       ) as _i7.UdevDeviceInfo);
+
   @override
   _i7.UdevDeviceInfo bySyspath(String? syspath) => (super.noSuchMethod(
         Invocation.method(
@@ -1262,6 +1349,7 @@ class MockUrlLauncher extends _i1.Mock implements _i27.UrlLauncher {
         ),
         returnValue: _i9.Future<bool>.value(false),
       ) as _i9.Future<bool>);
+
   @override
   _i9.Future<bool> launchUrl(String? url) => (super.noSuchMethod(
         Invocation.method(

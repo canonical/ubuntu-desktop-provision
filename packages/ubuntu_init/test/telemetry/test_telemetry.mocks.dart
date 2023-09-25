@@ -33,6 +33,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         Invocation.getter(#enabled),
         returnValue: false,
       ) as bool);
+
   @override
   set enabled(bool? value) => super.noSuchMethod(
         Invocation.setter(
@@ -41,11 +42,13 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -54,6 +57,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Stream<String> collect() => (super.noSuchMethod(
         Invocation.method(
@@ -62,6 +66,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValue: _i3.Stream<String>.empty(),
       ) as _i3.Stream<String>);
+
   @override
   _i3.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -71,6 +76,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -79,6 +85,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -87,6 +94,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -95,6 +103,7 @@ class MockTelemetryModel extends _i1.Mock implements _i2.TelemetryModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

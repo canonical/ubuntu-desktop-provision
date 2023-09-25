@@ -48,6 +48,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   set guidedCapability(_i4.GuidedCapability? capability) => super.noSuchMethod(
         Invocation.setter(
@@ -56,6 +57,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i2.ProductInfo get productInfo => (super.noSuchMethod(
         Invocation.getter(#productInfo),
@@ -64,66 +66,79 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
           Invocation.getter(#productInfo),
         ),
       ) as _i2.ProductInfo);
+
   @override
   bool get hasBitLocker => (super.noSuchMethod(
         Invocation.getter(#hasBitLocker),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasDirect => (super.noSuchMethod(
         Invocation.getter(#hasDirect),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasLvm => (super.noSuchMethod(
         Invocation.getter(#hasLvm),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasZfs => (super.noSuchMethod(
         Invocation.getter(#hasZfs),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasTpm => (super.noSuchMethod(
         Invocation.getter(#hasTpm),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasDd => (super.noSuchMethod(
         Invocation.getter(#hasDd),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canInstallAlongside => (super.noSuchMethod(
         Invocation.getter(#canInstallAlongside),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canEraseDisk => (super.noSuchMethod(
         Invocation.getter(#canEraseDisk),
         returnValue: false,
       ) as bool);
+
   @override
   bool get canManualPartition => (super.noSuchMethod(
         Invocation.getter(#canManualPartition),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasAdvancedFeatures => (super.noSuchMethod(
         Invocation.getter(#hasAdvancedFeatures),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   List<_i4.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
         Invocation.method(
@@ -132,6 +147,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValue: <_i4.GuidedStorageTarget>[],
       ) as List<_i4.GuidedStorageTarget>);
+
   @override
   String getReleaseNotesURL(_i5.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
@@ -140,6 +156,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValue: '',
       ) as String);
+
   @override
   _i6.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -149,6 +166,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: _i6.Future<void>.value(),
         returnValueForMissingStub: _i6.Future<void>.value(),
       ) as _i6.Future<void>);
+
   @override
   _i6.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -158,6 +176,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: _i6.Future<void>.value(),
         returnValueForMissingStub: _i6.Future<void>.value(),
       ) as _i6.Future<void>);
+
   @override
   _i6.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
@@ -167,6 +186,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         returnValue: _i6.Future<void>.value(),
         returnValueForMissingStub: _i6.Future<void>.value(),
       ) as _i6.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -175,6 +195,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -183,6 +204,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -191,6 +213,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

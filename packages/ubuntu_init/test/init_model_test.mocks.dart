@@ -33,21 +33,25 @@ class MockArgResults extends _i1.Mock implements _i2.ArgResults {
         Invocation.getter(#rest),
         returnValue: <String>[],
       ) as List<String>);
+
   @override
   List<String> get arguments => (super.noSuchMethod(
         Invocation.getter(#arguments),
         returnValue: <String>[],
       ) as List<String>);
+
   @override
   Iterable<String> get options => (super.noSuchMethod(
         Invocation.getter(#options),
         returnValue: <String>[],
       ) as Iterable<String>);
+
   @override
   dynamic operator [](String? name) => super.noSuchMethod(Invocation.method(
         #[],
         [name],
       ));
+
   @override
   bool wasParsed(String? name) => (super.noSuchMethod(
         Invocation.method(
@@ -79,6 +83,7 @@ class MockConfigService extends _i1.Mock implements _i3.ConfigService {
         ),
         returnValue: _i4.Future<T?>.value(),
       ) as _i4.Future<T?>);
+
   @override
   _i4.Future<Map<String, dynamic>?> load() => (super.noSuchMethod(
         Invocation.method(

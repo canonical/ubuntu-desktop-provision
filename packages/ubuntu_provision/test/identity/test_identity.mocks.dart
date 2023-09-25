@@ -34,6 +34,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         Invocation.getter(#realName),
         returnValue: '',
       ) as String);
+
   @override
   set realName(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -42,11 +43,13 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get hostname => (super.noSuchMethod(
         Invocation.getter(#hostname),
         returnValue: '',
       ) as String);
+
   @override
   set hostname(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -55,11 +58,13 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get username => (super.noSuchMethod(
         Invocation.getter(#username),
         returnValue: '',
       ) as String);
+
   @override
   set username(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -68,11 +73,13 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get password => (super.noSuchMethod(
         Invocation.getter(#password),
         returnValue: '',
       ) as String);
+
   @override
   set password(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -81,11 +88,13 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   String get confirmedPassword => (super.noSuchMethod(
         Invocation.getter(#confirmedPassword),
         returnValue: '',
       ) as String);
+
   @override
   set confirmedPassword(String? value) => super.noSuchMethod(
         Invocation.setter(
@@ -94,16 +103,19 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i3.PasswordStrength get passwordStrength => (super.noSuchMethod(
         Invocation.getter(#passwordStrength),
         returnValue: _i3.PasswordStrength.weak,
       ) as _i3.PasswordStrength);
+
   @override
   bool get autoLogin => (super.noSuchMethod(
         Invocation.getter(#autoLogin),
         returnValue: false,
       ) as bool);
+
   @override
   set autoLogin(bool? value) => super.noSuchMethod(
         Invocation.setter(
@@ -112,16 +124,19 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get isConnected => (super.noSuchMethod(
         Invocation.getter(#isConnected),
         returnValue: false,
       ) as bool);
+
   @override
   bool get useActiveDirectory => (super.noSuchMethod(
         Invocation.getter(#useActiveDirectory),
         returnValue: false,
       ) as bool);
+
   @override
   set useActiveDirectory(bool? value) => super.noSuchMethod(
         Invocation.setter(
@@ -130,26 +145,31 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get isValid => (super.noSuchMethod(
         Invocation.getter(#isValid),
         returnValue: false,
       ) as bool);
+
   @override
   _i2.UsernameValidation get usernameValidation => (super.noSuchMethod(
         Invocation.getter(#usernameValidation),
         returnValue: _i2.UsernameValidation.OK,
       ) as _i2.UsernameValidation);
+
   @override
   bool get usernameOk => (super.noSuchMethod(
         Invocation.getter(#usernameOk),
         returnValue: false,
       ) as bool);
+
   @override
   bool get showPassword => (super.noSuchMethod(
         Invocation.getter(#showPassword),
         returnValue: false,
       ) as bool);
+
   @override
   set showPassword(bool? value) => super.noSuchMethod(
         Invocation.setter(
@@ -158,16 +178,19 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.Future<void> validate() => (super.noSuchMethod(
         Invocation.method(
@@ -177,6 +200,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -186,6 +210,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -195,6 +220,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -203,6 +229,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -211,6 +238,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -219,6 +247,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -227,6 +256,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setProperties(_i4.Stream<List<String>>? properties) =>
       super.noSuchMethod(
@@ -236,6 +266,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void addPropertyListener(
     String? property,
@@ -251,6 +282,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void enablePropertyListeners() => super.noSuchMethod(
         Invocation.method(
@@ -259,6 +291,7 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void disablePropertyListeners() => super.noSuchMethod(
         Invocation.method(

@@ -48,6 +48,7 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> setLocationEnabled(bool? enabled) => (super.noSuchMethod(
         Invocation.method(
@@ -57,6 +58,7 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<bool> isReportingEnabled() => (super.noSuchMethod(
         Invocation.method(
@@ -65,6 +67,7 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<void> setReportingEnabled(bool? enabled) => (super.noSuchMethod(
         Invocation.method(
@@ -74,6 +77,7 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   _i4.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
@@ -107,6 +111,7 @@ class MockProductService extends _i1.Mock implements _i2.ProductService {
           ),
         ),
       ) as _i2.ProductInfo);
+
   @override
   String getReleaseNotesURL(String? languageCode) => (super.noSuchMethod(
         Invocation.method(
@@ -133,6 +138,7 @@ class MockSysmetrics extends _i1.Mock implements _i3.Sysmetrics {
         ),
         returnValue: _i4.Future<String?>.value(),
       ) as _i4.Future<String?>);
+
   @override
   _i4.Future<String?> sendReport(
     String? data, {
@@ -150,6 +156,7 @@ class MockSysmetrics extends _i1.Mock implements _i3.Sysmetrics {
         ),
         returnValue: _i4.Future<String?>.value(),
       ) as _i4.Future<String?>);
+
   @override
   _i4.Future<String?> sendDecline({
     bool? alwaysReport = false,
@@ -166,6 +173,7 @@ class MockSysmetrics extends _i1.Mock implements _i3.Sysmetrics {
         ),
         returnValue: _i4.Future<String?>.value(),
       ) as _i4.Future<String?>);
+
   @override
   _i4.Future<String?> collectAndSend(
     _i5.ReportType? type, {
@@ -201,6 +209,7 @@ class MockUrlLauncher extends _i1.Mock implements _i6.UrlLauncher {
         ),
         returnValue: _i4.Future<bool>.value(false),
       ) as _i4.Future<bool>);
+
   @override
   _i4.Future<bool> launchUrl(String? url) => (super.noSuchMethod(
         Invocation.method(
@@ -228,6 +237,7 @@ class MockInitModel extends _i1.Mock implements _i3.InitModel {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
   @override
   bool hasRoute(String? route) => (super.noSuchMethod(
         Invocation.method(

@@ -49,74 +49,88 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
           Invocation.getter(#productInfo),
         ),
       ) as _i2.ProductInfo);
+
   @override
   List<_i4.OsProber> get existingOS => (super.noSuchMethod(
         Invocation.getter(#existingOS),
         returnValue: <_i4.OsProber>[],
       ) as List<_i4.OsProber>);
+
   @override
   int get storageCount => (super.noSuchMethod(
         Invocation.getter(#storageCount),
         returnValue: 0,
       ) as int);
+
   @override
   int get currentSize => (super.noSuchMethod(
         Invocation.getter(#currentSize),
         returnValue: 0,
       ) as int);
+
   @override
   int get minimumSize => (super.noSuchMethod(
         Invocation.getter(#minimumSize),
         returnValue: 0,
       ) as int);
+
   @override
   int get maximumSize => (super.noSuchMethod(
         Invocation.getter(#maximumSize),
         returnValue: 0,
       ) as int);
+
   @override
   int get totalSize => (super.noSuchMethod(
         Invocation.getter(#totalSize),
         returnValue: 0,
       ) as int);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.GuidedStorageTargetResize? getStorage(int? index) =>
       (super.noSuchMethod(Invocation.method(
         #getStorage,
         [index],
       )) as _i4.GuidedStorageTargetResize?);
+
   @override
   _i4.Disk? getDisk(int? index) => (super.noSuchMethod(Invocation.method(
         #getDisk,
         [index],
       )) as _i4.Disk?);
+
   @override
   _i4.OsProber? getOS(int? index) => (super.noSuchMethod(Invocation.method(
         #getOS,
         [index],
       )) as _i4.OsProber?);
+
   @override
   _i4.Partition? getPartition(int? index) =>
       (super.noSuchMethod(Invocation.method(
         #getPartition,
         [index],
       )) as _i4.Partition?);
+
   @override
   List<_i4.Partition>? getAllPartitions(int? index) =>
       (super.noSuchMethod(Invocation.method(
         #getAllPartitions,
         [index],
       )) as List<_i4.Partition>?);
+
   @override
   void selectStorage(int? index) => super.noSuchMethod(
         Invocation.method(
@@ -125,6 +139,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void resizeStorage(int? size) => super.noSuchMethod(
         Invocation.method(
@@ -133,6 +148,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   _i5.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -141,6 +157,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValue: _i5.Future<bool>.value(false),
       ) as _i5.Future<bool>);
+
   @override
   _i5.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -150,6 +167,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   _i5.Future<void> reset() => (super.noSuchMethod(
         Invocation.method(
@@ -159,6 +177,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         returnValue: _i5.Future<void>.value(),
         returnValueForMissingStub: _i5.Future<void>.value(),
       ) as _i5.Future<void>);
+
   @override
   void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -167,6 +186,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -175,6 +195,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -183,6 +204,7 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

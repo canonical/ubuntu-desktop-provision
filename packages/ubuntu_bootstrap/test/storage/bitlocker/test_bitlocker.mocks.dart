@@ -34,11 +34,13 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
@@ -47,6 +49,7 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
   @override
   _i3.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(
@@ -56,6 +59,7 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -64,6 +68,7 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -72,6 +77,7 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -80,6 +86,7 @@ class MockBitLockerModel extends _i1.Mock implements _i2.BitLockerModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(

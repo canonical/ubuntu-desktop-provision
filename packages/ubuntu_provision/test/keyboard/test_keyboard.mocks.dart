@@ -33,41 +33,49 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         Invocation.getter(#layoutCount),
         returnValue: 0,
       ) as int);
+
   @override
   bool get canDetectLayout => (super.noSuchMethod(
         Invocation.getter(#canDetectLayout),
         returnValue: false,
       ) as bool);
+
   @override
   int get selectedLayoutIndex => (super.noSuchMethod(
         Invocation.getter(#selectedLayoutIndex),
         returnValue: 0,
       ) as int);
+
   @override
   int get variantCount => (super.noSuchMethod(
         Invocation.getter(#variantCount),
         returnValue: 0,
       ) as int);
+
   @override
   int get selectedVariantIndex => (super.noSuchMethod(
         Invocation.getter(#selectedVariantIndex),
         returnValue: 0,
       ) as int);
+
   @override
   bool get isValid => (super.noSuchMethod(
         Invocation.getter(#isValid),
         returnValue: false,
       ) as bool);
+
   @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isDisposed => (super.noSuchMethod(
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
   @override
   String layoutName(int? index) => (super.noSuchMethod(
         Invocation.method(
@@ -76,6 +84,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValue: '',
       ) as String);
+
   @override
   _i3.Future<void> selectLayout(
     int? index, [
@@ -92,6 +101,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> trySelectLayoutVariant(
     String? layout,
@@ -108,6 +118,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   int searchLayout(String? query) => (super.noSuchMethod(
         Invocation.method(
@@ -116,6 +127,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValue: 0,
       ) as int);
+
   @override
   String variantName(int? index) => (super.noSuchMethod(
         Invocation.method(
@@ -124,6 +136,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValue: '',
       ) as String);
+
   @override
   _i3.Future<void> selectVariant(int? index) => (super.noSuchMethod(
         Invocation.method(
@@ -133,6 +146,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
@@ -142,6 +156,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> updateInputSource() => (super.noSuchMethod(
         Invocation.method(
@@ -151,6 +166,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   _i3.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
@@ -160,6 +176,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -168,6 +185,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
@@ -176,6 +194,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void dispose() => super.noSuchMethod(
         Invocation.method(
@@ -184,6 +203,7 @@ class MockKeyboardModel extends _i1.Mock implements _i2.KeyboardModel {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void notifyListeners() => super.noSuchMethod(
         Invocation.method(
