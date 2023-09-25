@@ -785,5 +785,9 @@
   "expandedInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים שלאו דווקא דורשת אינטרנט.",
   "@expandedInstallationSubtitle": {},
   "expandedInstallationTitle": "התקנה מורחבת",
-  "@expandedInstallationTitle": {}
+  "@expandedInstallationTitle": {},
+  "fullInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים ללא צורך בחיבור לאינטרנט.",
+  "@fullInstallationSubtitle": {},
+  "fullInstallationTitle": "התקנה מלאה",
+  "@fullInstallationTitle": {}
 }

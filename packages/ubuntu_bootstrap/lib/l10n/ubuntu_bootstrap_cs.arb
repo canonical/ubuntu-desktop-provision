@@ -832,5 +832,13 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Výběr kancelářských a jiných nástrojů, webový prohlížeč a hry.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Výchozí instalace",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Pouze nezbytné, webový prohlížeč a základní nástroje.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Plná instalace",
+  "@fullInstallationTitle": {}
 }

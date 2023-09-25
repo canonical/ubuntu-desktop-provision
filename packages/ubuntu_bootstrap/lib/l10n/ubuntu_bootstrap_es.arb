@@ -785,5 +785,9 @@
   "expandedInstallationSubtitle": "Una selección de herramientas de oficina, utilidades, navegador web y juegos compatibles sin conexión.",
   "@expandedInstallationSubtitle": {},
   "expandedInstallationTitle": "Instalación ampliada",
-  "@expandedInstallationTitle": {}
+  "@expandedInstallationTitle": {},
+  "fullInstallationSubtitle": "Una selección de herramientas ofimáticas, utilidades, navegador web y juegos sin conexión.",
+  "@fullInstallationSubtitle": {},
+  "fullInstallationTitle": "Instalación completa",
+  "@fullInstallationTitle": {}
 }

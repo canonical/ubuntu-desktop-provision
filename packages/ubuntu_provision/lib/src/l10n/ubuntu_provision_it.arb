@@ -62,5 +62,9 @@
   "networkHiddenWifiNameRequired": "È richiesto il nome della rete",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Non voglio connettermi alla rete in questo momento",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "timezonePageTitle": "Seleziona il tuo fuso orario",
+  "@timezonePageTitle": {},
+  "timezoneLocationLabel": "Posizione",
+  "@timezoneLocationLabel": {}
 }

@@ -489,7 +489,7 @@
   "@installationTypeManual": {},
   "selectGuidedStorageDropdownLabel": "選取硬碟：",
   "@selectGuidedStorageDropdownLabel": {},
-  "installationTypeManualInfo": "您可以手動建立與調整分割區，或是在 {DISTRO} 上使用多個分割區。",
+  "installationTypeManualInfo": "您可以手動建立與調整分割區，或是在 {DISTRO} 上使用多個分割區",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -840,5 +840,13 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "可離線使用的辦公室套件、公用程式、網頁瀏覽器與遊戲。",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "預設安裝",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "僅安裝必要功能、網頁瀏覽器與公用程式。",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "完整安裝",
+  "@fullInstallationTitle": {}
 }

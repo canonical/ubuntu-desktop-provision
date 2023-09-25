@@ -62,9 +62,9 @@
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Welche Anwendungen möchten Sie am Anfang installieren?",
   "@updatesOtherSoftwarePageDescription": {},
-  "minimalInstallationTitle": "Minimale Installation",
+  "minimalInstallationTitle": "Standard-Installation",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Webbrowser und grundlegende Dienstprogramme.",
+  "minimalInstallationSubtitle": "Nur das Nötigste, Webbrowser und grundlegende Dienstprogramme.",
   "@minimalInstallationSubtitle": {},
   "otherOptions": "Weitere Optionen",
   "@otherOptions": {},
@@ -774,5 +774,9 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Eine offline-freundliche Auswahl an Office-Programmen, Dienstprogrammen, Webbrowsern und Spielen.",
+  "@fullInstallationSubtitle": {},
+  "fullInstallationTitle": "Vollständige Installation",
+  "@fullInstallationTitle": {}
 }
