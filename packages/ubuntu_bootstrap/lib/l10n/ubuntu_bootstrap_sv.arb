@@ -832,5 +832,13 @@
     }
   },
   "recoveryKeyCommand": "Du kan komma åt din återställningsnyckel efter installationen med följande kommando:",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "fullInstallationSubtitle": "Ett offline-vänligt urval av kontorsverktyg, verktyg, webbläsare och spel.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Standard installation",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Bara de viktigaste, webbläsare och grundläggande verktyg.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Fullständig installation",
+  "@fullInstallationTitle": {}
 }
