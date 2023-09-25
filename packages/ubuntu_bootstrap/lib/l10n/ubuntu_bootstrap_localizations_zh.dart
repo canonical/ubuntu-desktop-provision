@@ -931,6 +931,18 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get updatesOtherSoftwarePageDescription => '你首先想安裝些什麼程式？';
 
   @override
+  String get fullInstallationTitle => '完整安裝';
+
+  @override
+  String get fullInstallationSubtitle => '可離線使用的辦公室套件、公用程式、網頁瀏覽器與遊戲。';
+
+  @override
+  String get minimalInstallationTitle => '預設安裝';
+
+  @override
+  String get minimalInstallationSubtitle => '僅安裝必要功能、網頁瀏覽器與公用程式。';
+
+  @override
   String get otherOptions => '其它選項';
 
   @override
@@ -1099,7 +1111,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationTypeManualInfo(Object DISTRO) {
-    return '您可以手動建立與調整分割區，或是在 $DISTRO 上使用多個分割區。';
+    return '您可以手動建立與調整分割區，或是在 $DISTRO 上使用多個分割區';
   }
 
   @override
