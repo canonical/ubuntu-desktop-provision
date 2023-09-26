@@ -94,4 +94,13 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Uygulama Mağazasını Aç';
+
+  @override
+  String get launchsessionTitle => 'Setup complete';
+
+  @override
+  String get launchsessionHeader => 'All done!';
+
+  @override
+  String get launchsessionDescription => 'You can now begin using Ubuntu Core Desktop.';
 }
