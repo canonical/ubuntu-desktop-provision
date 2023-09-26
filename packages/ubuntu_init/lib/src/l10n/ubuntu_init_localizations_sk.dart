@@ -94,4 +94,13 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Otvoriť centrum aplikácií';
+
+  @override
+  String get launchsessionTitle => 'Setup complete';
+
+  @override
+  String get launchsessionHeader => 'All done!';
+
+  @override
+  String get launchsessionDescription => 'You can now begin using Ubuntu Core Desktop.';
 }

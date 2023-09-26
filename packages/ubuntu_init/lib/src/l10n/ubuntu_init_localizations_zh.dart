@@ -94,6 +94,15 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Open App Store';
+
+  @override
+  String get launchsessionTitle => 'Setup complete';
+
+  @override
+  String get launchsessionHeader => 'All done!';
+
+  @override
+  String get launchsessionDescription => 'You can now begin using Ubuntu Core Desktop.';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

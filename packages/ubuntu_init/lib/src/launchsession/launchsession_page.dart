@@ -19,23 +19,22 @@ class LaunchSessionPage extends ConsumerWidget {
     final l10n = LaunchsessionLocalizations.of(context);
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(l10n.storeTitle),
+        title: Text(l10n.launchsessionTitle),
       ),
       content: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: SvgPicture.asset('assets/store.svg', package: 'ubuntu_init'),
-          ),
-          Text(
-            l10n.storeHeader,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          FractionallySizedBox(
-            widthFactor: 0.5,
-            child: Text(l10n.storeDescription, textAlign: TextAlign.center),
-          ),
-        ].withSpacing(kWizardSpacing),
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset('assets/ready-to-go.svg', package: 'ubuntu_init'),
+            Text(
+              l10n.launchsessionHeader,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            FractionallySizedBox(
+              widthFactor: 0.5,
+              child: Text(l10n.launchsessionDescription, textAlign: TextAlign.center),
+            ),
+          ].withSpacing(kWizardSpacing),
       ),
       bottomBar: WizardBar(
         leading: WizardButton.previous(context),
