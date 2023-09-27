@@ -840,5 +840,13 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Výber vhodný pre režim off-line kancelárske nástroje, pomôcky, webový prehliadač a hry.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Predvolená inštalácia",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Len to najnutnejšie, webový prehliadač a základné nástroje.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Úplná inštalácia",
+  "@fullInstallationTitle": {}
 }

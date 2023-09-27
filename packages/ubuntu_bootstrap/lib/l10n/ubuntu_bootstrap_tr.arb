@@ -812,5 +812,13 @@
       "color": {},
       "url": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Ofis araçları, yardımcı araçlar, web tarayıcısı ve oyunlardan oluşan çevrimdışı dostu bir seçim.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Öntanımlı kurulum",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Yalnızca gerekli olanlar, web tarayıcısı ve temel yardımcı araçlar.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Tam kurulum",
+  "@fullInstallationTitle": {}
 }
