@@ -10,6 +10,11 @@ final log = Logger('dart_gdm_service');
 
 class GdmService {
   DBusClient? _connection;
+  bool _testing = false;
+
+  void setTesting() {
+    _testing = true;
+  }
 
   Future<DBusClient> getClientConnection() async {
     if (_connection == null) {
@@ -42,6 +47,9 @@ class GdmService {
   }
 
   Future<void> openNewSession() async {
+    if (_testing) {
+      return;
+    }
     IdentityService identityService = getService<IdentityService>();
     var identity = await identityService.getIdentity();
 
