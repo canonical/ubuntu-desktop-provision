@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:dbus/dbus.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 
 /// @internal
 final log = Logger('dart_gdm_service');
@@ -39,7 +41,14 @@ class GdmService {
     return userVerifier;
   }
 
-  Future<void> openNewSession(String username, String? password) async {
+  Future<void> openNewSession() async {
+
+    IdentityService identityService = getService<IdentityService>();
+    var identity = await identityService.getIdentity();
+
+    var username = identity.username;
+    var password = identity.password;
+
     var userVerifier = await getUserVerifier();
     var greeter = await getGreeter();
 
@@ -73,12 +82,10 @@ class GdmService {
         .listen((signal) => log.info('Problem signal received $signal'));
     secretInfoQuerySignal.listen((signal) {
       log.info('SecretInfoQuery signal received $signal');
-      if (password != null) {
-        unawaited(userVerifier.callMethod(
-            'org.gnome.DisplayManager.UserVerifier',
-            'AnswerQuery',
-            [signal.values[0], DBusString(password)]));
-      }
+      unawaited(userVerifier.callMethod(
+        'org.gnome.DisplayManager.UserVerifier',
+        'AnswerQuery',
+        [signal.values[0], DBusString(password)]));
     });
     sessionOpenedSignal.listen((signal) async {
       log.info('SessionOpened signal received $signal');
