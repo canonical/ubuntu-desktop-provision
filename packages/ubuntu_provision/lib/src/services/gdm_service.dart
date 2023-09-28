@@ -48,7 +48,7 @@ class GdmService {
     await openNewSessionWithUsernameAndPassword(identity.username, identity.password);
   }
 
-Future<void> openNewSessionWithUsernameAndPassword(String username, String password) async {
+  Future<void> openNewSessionWithUsernameAndPassword(String username, String password) async {
     var userVerifier = await getUserVerifier();
     var greeter = await getGreeter();
 
