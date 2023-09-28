@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -114,20 +116,39 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const PrivacyPage(),
           onLoad: (_) => PrivacyPage.load(ref),
         ),
-        InitRoutes.launchsession: WizardRoute(
-          builder: (_) => const LaunchSessionPage(),
-          onLoad: (_) => LaunchSessionPage.load(ref),
+        InitRoutes.launchsession: () {
+          bool shownPage = false;
+          return WizardRoute(
+            userData: const WizardRouteData(hasNext: false),
+            builder: (_) => const LaunchSessionPage(),
+            onLoad: (_) {
+              shownPage = true;
+              return LaunchSessionPage.load(ref);
+            },
+            onNext: (_) async {
+              if (shownPage) {
+                final window = YaruWindow.of(context);
+                GdmService gdmService = getService<GdmService>();
+                await gdmService.openNewSession();
+                await _onDone?.call();
+                await window.close();
+                return InitRoutes.initial;
+              } else {
+                return null;
+              }
+            }
+          );
+        }(),
+        InitRoutes.store: WizardRoute(
+          userData: const WizardRouteData(hasNext: false),
+          builder: (_) => const StorePage(),
+          onLoad: (_) => StorePage.load(ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
-            IdentityService identityService = getService<IdentityService>();
-            var identity = await identityService.getIdentity();
-            var gdmService = GdmService();
-            await gdmService.openNewSession(
-                identity.username, identity.password);
             await _onDone?.call();
             await window.close();
             return InitRoutes.initial;
-          },
+          }
         ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
