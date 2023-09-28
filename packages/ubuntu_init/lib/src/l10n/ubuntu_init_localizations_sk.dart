@@ -22,7 +22,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Podpora jednoduchšieho nastavenia.';
 
   @override
-  String get welcomeStoreTitle => 'Nový vzhľad obchodu s aplikáciami';
+  String get welcomeStoreTitle => 'Nový vzhľad centra s aplikáciami';
 
   @override
   String get welcomeStoreSubtitle => 'Nájsť svoj obľúbený softvér nebolo nikdy jednoduchšie.';
@@ -84,14 +84,14 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Súkromie údajov';
 
   @override
-  String get storeTitle => 'Obchod Ubuntu';
+  String get storeTitle => 'Centrum Ubuntu';
 
   @override
   String get storeHeader => 'Začnite s viacerými aplikáciami';
 
   @override
-  String get storeDescription => 'Obchod s aplikáciami Ubuntu ponúka celú škálu aplikácií, s ktorými môžete začať hneď od začiatku.';
+  String get storeDescription => 'Centrum aplikácií Ubuntu ponúka celú škálu softvéru, s ktorým môžete začať ihneď od začiatku.';
 
   @override
-  String get storeOpen => 'Otvoriť obchod s aplikáciami';
+  String get storeOpen => 'Otvoriť centrum aplikácií';
 }
