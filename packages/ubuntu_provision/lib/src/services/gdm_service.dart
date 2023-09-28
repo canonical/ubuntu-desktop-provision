@@ -46,9 +46,10 @@ class GdmService {
     IdentityService identityService = getService<IdentityService>();
     var identity = await identityService.getIdentity();
 
-    var username = identity.username;
-    var password = identity.password;
+    await openNewSessionWithUsernameAndPassword(identity.username, identity.password);
+  }
 
+Future<void> openNewSessionWithUsernameAndPassword(String username, String password) async {
     var userVerifier = await getUserVerifier();
     var greeter = await getGreeter();
 
