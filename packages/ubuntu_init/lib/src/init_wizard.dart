@@ -146,7 +146,7 @@ class InitWizard extends ConsumerWidget {
             await _onDone?.call();
             await window.close();
             return InitRoutes.initial;
-          }
+          },
         ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
