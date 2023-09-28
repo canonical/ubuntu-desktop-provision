@@ -42,7 +42,6 @@ class GdmService {
   }
 
   Future<void> openNewSession() async {
-
     IdentityService identityService = getService<IdentityService>();
     var identity = await identityService.getIdentity();
 
