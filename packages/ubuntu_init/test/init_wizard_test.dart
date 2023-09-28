@@ -117,8 +117,8 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(StorePage), findsOneWidget);
-    verify(storeModel.init()).called(1);
+    expect(find.byType(LaunchSessionPage), findsOneWidget);
+    verify(LaunchsessionModel).called(1);
 
     await tester.tapDone();
     await tester.pumpAndSettle();
