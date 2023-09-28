@@ -106,4 +106,24 @@ void main() {
 
     await expectLater(windowClosed, completes);
   });
+
+  testWidgets('page_launchsession', (tester) async {
+    await tester.runApp(() => runInitApp(['--pages=locale,launchsession']));
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+
+    GdmService gdmService = getService<GdmService>();
+    gdmService.setTesting();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectLocale('en_US.UTF-8');
+
+    await tester.testLaunchSession();
+    await tester.tapDone();
+    await tester.pumpAndSettle();
+
+    await expectLater(windowClosed, completes);
+  });
 }
