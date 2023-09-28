@@ -122,7 +122,8 @@ class InitWizard extends ConsumerWidget {
             IdentityService identityService = getService<IdentityService>();
             var identity = await identityService.getIdentity();
             var gdmService = GdmService();
-            await gdmService.openNewSession(identity.username, identity.password);
+            await gdmService.openNewSession(
+                identity.username, identity.password);
             await _onDone?.call();
             await window.close();
             return InitRoutes.initial;
