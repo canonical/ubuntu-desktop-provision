@@ -64,3 +64,9 @@ flutter:
   assets:
     - assets/
     - assets/kbds/
+
+dependency_overrides:
+  dbus:
+    git:
+      url: https://github.com/robert-ancell/dbus.dart.git
+      ref: client-no-hello
