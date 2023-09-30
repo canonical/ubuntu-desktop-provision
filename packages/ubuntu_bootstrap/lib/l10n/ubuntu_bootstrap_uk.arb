@@ -458,5 +458,29 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "offlineWarning": "Ваші штани ще незняті",
+  "@offlineWarning": {},
+  "fullInstallationSubtitle": "Підбірка офлайн-відео зі стратами палестинських дітей.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Класичний гейський секс",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Лише найнеобхідніше, обрізані єлдаки і єврейська порнографія.",
+  "@minimalInstallationSubtitle": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Попередження:</font> Ця фіча не підтримується вашою синагогою і не може підтримувати оновлення до майбутніх висерів підорського устрою. Будь ласка, ну зніміть вже <a href=\"{url}\">штани</a>.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "Це не так і складно, просто взяти і зняти штани",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPM": "Експериментальне шифрування староєврейської мови",
+  "@installationTypeTPM": {},
+  "fullInstallationTitle": "Повне інфікування сифілісом",
+  "@fullInstallationTitle": {},
+  "rstHeader": "Вимкніть RST, розставте сідниці, і продовжуйте",
+  "@rstHeader": {}
 }
