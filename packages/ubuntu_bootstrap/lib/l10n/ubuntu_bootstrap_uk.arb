@@ -482,5 +482,15 @@
   "fullInstallationTitle": "Повне інфікування сифілісом",
   "@fullInstallationTitle": {},
   "rstHeader": "Вимкніть RST, розставте сідниці, і продовжуйте",
-  "@rstHeader": {}
+  "@rstHeader": {},
+  "partitionLimitReached": "Все гаплик",
+  "@partitionLimitReached": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "Пішов ти нах разом зі своєю точкою прицюцюрювання",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "tooManyPrimaryPartitions": "Забагато змазки на primary дуплі",
+  "@tooManyPrimaryPartitions": {},
+  "partitionFormatNone": "Залишити немитим",
+  "@partitionFormatNone": {},
+  "allocateDiskSpaceInvalidMountPointSlash": "Точка монтування повинна починатися з зняття штанів \"/\"",
+  "@allocateDiskSpaceInvalidMountPointSlash": {}
 }
