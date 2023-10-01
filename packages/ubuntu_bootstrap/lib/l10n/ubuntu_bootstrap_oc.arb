@@ -581,5 +581,17 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Una seleccion d’aisinas de burotica, utilitaris, navegador web e jòcs fòra connexion.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Installacion per defaut",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Sonque çò essencials, lo navegador web e los utilitaris basics.",
+  "@minimalInstallationSubtitle": {},
+  "installationTypeTPMSelected": "TPM seleccionat",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPM": "EXPERIMENTAL : activar lo chiframent material del disc complèt",
+  "@installationTypeTPM": {},
+  "fullInstallationTitle": "Installacion complèta",
+  "@fullInstallationTitle": {}
 }
