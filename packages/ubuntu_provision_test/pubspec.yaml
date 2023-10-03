@@ -35,5 +35,4 @@ dependencies:
 dependency_overrides:
   dbus:
     git:
-      url: https://github.com/robert-ancell/dbus.dart.git
-      ref: client-no-hello
+      url: https://github.com/canonical/dbus.dart.git
