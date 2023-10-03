@@ -10,23 +10,31 @@ final log = Logger('dart_gdm_service');
 
 class GdmService {
   bool _testing = false;
+  DBusClient? gdmClient;
 
   void setTesting() {
     _testing = true;
   }
 
   Future<DBusClient> getClientConnection() async {
-    var gdmObject = DBusRemoteObject(DBusClient.system(),
-        name: 'org.gnome.DisplayManager',
-        path: DBusObjectPath('/org/gnome/DisplayManager/Manager'));
-    var response = await gdmObject.callMethod(
-        'org.gnome.DisplayManager.Manager', 'OpenSession', [],
-        replySignature: DBusSignature('s'));
-    var address = response.values[0].asString();
-    return DBusClient(DBusAddress(address), messageBus: false);
+    if (gdmClient == null) {
+      log.info('Asking for GDM connection');
+      var gdmObject = DBusRemoteObject(DBusClient.system(),
+          name: 'org.gnome.DisplayManager',
+          path: DBusObjectPath('/org/gnome/DisplayManager/Manager'));
+      var response = await gdmObject.callMethod(
+          'org.gnome.DisplayManager.Manager', 'OpenSession', [],
+          replySignature: DBusSignature('s'));
+      var address = response.values[0].asString();
+      gdmClient = DBusClient(DBusAddress(address), messageBus: false);
+    } else {
+      log.info('Re-using GDM connection');
+    }
+    return gdmClient!;
   }
 
   Future<DBusRemoteObject> getGreeter() async {
+    log.info('Getting Greeter GDM connection');
     var connection = await getClientConnection();
     var greeter = DBusRemoteObject(connection,
         name: 'org.gnome.DisplayManager.Greeter',
@@ -35,6 +43,7 @@ class GdmService {
   }
 
   Future<DBusRemoteObject> getUserVerifier() async {
+    log.info('Getting User Verifier GDM connection');
     var connection = await getClientConnection();
     var userVerifier = DBusRemoteObject(connection,
         name: 'org.gnome.DisplayManager.UserVerifier',
@@ -83,7 +92,7 @@ class GdmService {
     infoQuerySignal
         .listen((signal) => log.info('InfoQuery signal received $signal'));
     problemSignal
-        .listen((signal) => log.info('Problem signal received $signal'));
+        .listen((signal) => log.warning('Problem signal received $signal'));
     secretInfoQuerySignal.listen((signal) {
       log.info('SecretInfoQuery signal received $signal');
       unawaited(userVerifier.callMethod(
@@ -98,6 +107,7 @@ class GdmService {
       completer.complete();
     });
 
+    log.info('Starting user verification');
     unawaited(userVerifier.callMethod(
         'org.gnome.DisplayManager.UserVerifier',
         'BeginVerificationForUser',
