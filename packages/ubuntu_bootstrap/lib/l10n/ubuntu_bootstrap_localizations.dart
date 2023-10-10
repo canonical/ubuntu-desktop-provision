@@ -1101,6 +1101,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'**{system}** is installed and ready to use'**
   String readyToUse(Object system);
 
+  /// No description provided for @rebootToConfigure.
+  ///
+  /// In en, this message translates to:
+  /// **'**{system}** has been copied to the disk'**
+  String rebootToConfigure(Object system);
+
   /// No description provided for @restartInto.
   ///
   /// In en, this message translates to:
@@ -1112,6 +1118,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.'**
   String restartWarning(Object RELEASE);
+
+  /// No description provided for @rebootToConfigureWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'You have to restart the computer to continue the installation process.'**
+  String get rebootToConfigureWarning;
 
   /// No description provided for @shutdown.
   ///

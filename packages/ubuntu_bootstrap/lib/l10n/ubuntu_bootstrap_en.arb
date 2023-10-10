@@ -492,6 +492,13 @@
       "system": {}
     }
   },
+  "rebootToConfigure": "**{system}** has been copied to the disk",
+  "@rebootToConfigure": {
+    "type": "text",
+    "placeholders": {
+      "system": {}
+    }
+  },
   "restartInto": "Restart into {system}",
   "@restartInto": {
     "type": "text",
@@ -506,6 +513,8 @@
       "RELEASE": {}
     }
   },
+  "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
+  "@rebootToConfigureWarning": {},
   "shutdown": "Shut Down",
   "@shutdown": {},
   "restartNow": "Restart now",

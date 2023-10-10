@@ -17,6 +17,7 @@ final installModelProvider = ChangeNotifierProvider(
     getService<JournalService>(),
     getService<ProductService>(),
     getService<SessionService>(),
+    getService<ConfigService>(),
   ),
 );
 
@@ -60,12 +61,19 @@ class InstallationEvent {
 /// View model for [InstallPage].
 class InstallModel extends SafeChangeNotifier {
   /// Creates an instance with the given client.
-  InstallModel(this._client, this._journal, this._product, this._session);
+  InstallModel(
+    this._client,
+    this._journal,
+    this._product,
+    this._session,
+    this._config,
+  );
 
   final SubiquityClient _client;
   final JournalService _journal;
   final ProductService _product;
   final SessionService _session;
+  final ConfigService _config;
 
   Stream<String>? _log;
   ApplicationStatus? _status;
@@ -154,15 +162,19 @@ class InstallModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
+  late final ProvisioningMode _provisioningMode;
+
+  ProvisioningMode get provisioningMode => _provisioningMode;
+
   /// Initializes and starts monitoring the status of the installation.
-  Future<void> init() {
-    return _client.getStatus().then((status) {
-      _log = _journal.start([status.logSyslogId, status.eventSyslogId]);
-      _events = _journal.start([status.eventSyslogId],
-          output: JournalOutput.cat).listen(_processEvent);
-      _statuses = _client.monitorStatus().listen(_updateStatus);
-      _updateStatus(status);
-    });
+  Future<void> init() async {
+    final status = await _client.getStatus();
+    _log = _journal.start([status.logSyslogId, status.eventSyslogId]);
+    _events = _journal.start([status.eventSyslogId],
+        output: JournalOutput.cat).listen(_processEvent);
+    _statuses = _client.monitorStatus().listen(_updateStatus);
+    _updateStatus(status);
+    _provisioningMode = await _config.provisioningMode;
   }
 
   @override

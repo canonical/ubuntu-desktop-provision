@@ -108,6 +108,12 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
       ) as bool);
 
   @override
+  _i2.ProvisioningMode get provisioningMode => (super.noSuchMethod(
+        Invocation.getter(#provisioningMode),
+        returnValue: _i2.ProvisioningMode.standard,
+      ) as _i2.ProvisioningMode);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,

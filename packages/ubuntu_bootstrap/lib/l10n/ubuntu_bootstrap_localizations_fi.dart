@@ -513,6 +513,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String rebootToConfigure(Object system) {
+    return '**$system** has been copied to the disk';
+  }
+
+  @override
   String restartInto(Object system) {
     return 'Käynnistä uudelleen käyttöjärjestelmään \"$system\"';
   }
@@ -521,6 +526,9 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String restartWarning(Object RELEASE) {
     return 'Voit jatkaa julkaisun $RELEASE testaamista nyt, mutta mitkään tekemäsi muutokset tai tallentamasi asiakirjat eivät säily, ennen kuin käynnistät tietokoneen uudelleen.';
   }
+
+  @override
+  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
 
   @override
   String get shutdown => 'Sammuta';
