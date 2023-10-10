@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Quinas aplicacions volètz installar per començar ?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Installacion complèta';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Una seleccion d’aisinas de burotica, utilitaris, navegador web e jòcs fòra connexion.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Installacion per defaut';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Sonque çò essencials, lo navegador web e los utilitaris basics.';
 
   @override
   String get otherOptions => 'Autras opcions';
@@ -247,7 +247,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS seleccionat';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'EXPERIMENTAL : activar lo chiframent material del disc complèt';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
@@ -255,7 +255,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM seleccionat';
 
   @override
   String installationTypeReinstall(Object os) {

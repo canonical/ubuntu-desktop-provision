@@ -931,6 +931,18 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get updatesOtherSoftwarePageDescription => 'Quais apps você gostaria de instalar para começar?';
 
   @override
+  String get fullInstallationTitle => 'Instalação completa';
+
+  @override
+  String get fullInstallationSubtitle => 'Uma seleção off-line de ferramentas de escritório, utilitários, navegador da web e jogos.';
+
+  @override
+  String get minimalInstallationTitle => 'Instalação padrão';
+
+  @override
+  String get minimalInstallationSubtitle => 'Apenas o essencial, navegador da web e utilitários básicos.';
+
+  @override
   String get otherOptions => 'Outras opções';
 
   @override

@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Milyen alkalmazásokat szeretne telepíteni a kezdéshez?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Teljes telepítés';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok, webböngésző és játékok.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Alapértelmezett telepítés';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Csak a legszükségesebbek, webböngésző és alapvető segédprogramok.';
 
   @override
   String get otherOptions => 'Egyéb lehetőségek';

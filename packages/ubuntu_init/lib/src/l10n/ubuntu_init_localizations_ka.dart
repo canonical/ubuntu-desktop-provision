@@ -5,7 +5,7 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'მოგესალმებით';
 
   @override
   String welcomePageHeader(Object distro) {
