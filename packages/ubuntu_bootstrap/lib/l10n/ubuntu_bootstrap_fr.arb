@@ -565,5 +565,99 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "recoveryKeyTitle": "Clé de récupération du TPM",
+  "@recoveryKeyTitle": {},
+  "refreshPageTitle": "Mise à jour disponible",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Mettre à jour à la version {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "fullInstallationSubtitle": "Une sélection d'outils de bureau, utilitaires, navigateur internet et jeux adaptée au hors ligne.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Installation par défaut",
+  "@minimalInstallationTitle": {},
+  "refreshCurrent": "La version actuelle du {snap} est {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "minimalInstallationSubtitle": "Seulement les essentiels, navigateur internet et utilitaires de base.",
+  "@minimalInstallationSubtitle": {},
+  "refreshSnapRefresh": "Rafraîchissement de {snap}...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "Mise à jour de {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMSelected": "TPM sélectionné",
+  "@installationTypeTPMSelected": {},
+  "refreshSnapPrepare": "Préparer de {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Validation de {snap}...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "Téléchargement de {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Arrêt des services de {snap}...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Montage de {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "La version actuelle {version} est à jour.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "fullInstallationTitle": "Installation complète",
+  "@fullInstallationTitle": {},
+  "refreshSnapRemoveAliases": "Suppression des alias de {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Veuillez redémarrer l'installateur.",
+  "@refreshRestart": {}
 }

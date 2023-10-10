@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Quelles applications souhaitez-vous installer pour commencer ?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Installation complète';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Une sélection d\'outils de bureau, utilitaires, navigateur internet et jeux adaptée au hors ligne.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Installation par défaut';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Seulement les essentiels, navigateur internet et utilitaires de base.';
 
   @override
   String get otherOptions => 'Autres options';
@@ -255,7 +255,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM sélectionné';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -679,30 +679,30 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Requis :';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Mise à jour disponible';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'La version actuelle du $snap est $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Mettre à jour à la version $version';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'La version actuelle $version est à jour.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'Mise à jour de $snap...';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Veuillez redémarrer l\'installateur.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
@@ -711,7 +711,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'Rafraîchissement de $snap...';
   }
 
   @override
@@ -721,32 +721,32 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'Préparer de $snap...';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'Téléchargement de $snap...';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'Validation de $snap...';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'Montage de $snap...';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'Arrêt des services de $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'Suppression des alias de $snap...';
   }
 
   @override
@@ -805,7 +805,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Clé de récupération du TPM';
 
   @override
   String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';

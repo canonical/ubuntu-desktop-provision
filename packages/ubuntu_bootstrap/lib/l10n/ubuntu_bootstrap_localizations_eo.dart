@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Kiajn programojn vi volas instali por komenci?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Plena instalo';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Senrete uzebla kolekto da laborprogramoj, utilaĵoj, TTT-legilo kaj ludoj.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Implicita instalo';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Nur la esencaĵoj: TTT-legilo kaj bazaj ilaĵoj.';
 
   @override
   String get otherOptions => 'Aliaj opcioj';

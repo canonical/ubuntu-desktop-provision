@@ -16,7 +16,7 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   String get changeButtonText => 'Modifica';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Esci dall\' installazione';
 
   @override
   String loadingPageTitle(Object DISTRO) {

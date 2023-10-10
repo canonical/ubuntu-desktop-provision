@@ -576,5 +576,207 @@
     }
   },
   "installationTypeTPMSelected": "TPM valittu",
-  "@installationTypeTPMSelected": {}
+  "@installationTypeTPMSelected": {},
+  "recoveryKeyTitle": "TPM-palautusavain",
+  "@recoveryKeyTitle": {},
+  "refreshPageTitle": "Päivitys saatavilla",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Päivitä versioon {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshSnapUnlink": "Poistetaan snapin {snap} linkitys...",
+  "@refreshSnapUnlink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapUpdateAssets": "Päivitetään snapin {snap} resurssit...",
+  "@refreshSnapUpdateAssets": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "fullInstallationSubtitle": "Yhteydettömään tilaan soveltuva kokoelma toimisto-ohjelmistoja, työkaluja, verkkoselain ja pelejä.",
+  "@fullInstallationSubtitle": {},
+  "refreshSnapPrerequisites": "Varmistetaan snapin {snap} edellytyksiä...",
+  "@refreshSnapPrerequisites": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStartServices": "Käynnistetään {snap}-palveluja...",
+  "@refreshSnapStartServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "minimalInstallationTitle": "Oletusasennus",
+  "@minimalInstallationTitle": {},
+  "refreshSnapUpdateKernelCommandLine": "Päivitetään snapin {snap} ytimen komentorivi...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshCurrent": "Nykyinen {snap}-versio on {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "minimalInstallationSubtitle": "Vain tarpeellinen, verkkoselain ja perustyökalut.",
+  "@minimalInstallationSubtitle": {},
+  "partitionFormatKeep": "Jätä alustetuksi muotoon {format}",
+  "@partitionFormatKeep": {
+    "type": "text",
+    "placeholders": {
+      "format": {}
+    }
+  },
+  "refreshSnapRefresh": "Päivitetään {snap}...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetupProfiles": "Asetetaan snapin {snap} tietoturvaprofiileja...",
+  "@refreshSnapSetupProfiles": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "Päivitetään {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCleanup": "Siivotaan {snap}...",
+  "@refreshSnapCleanup": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPMWarning": "<font color=\"{color}\">Varoitus:</font> Tämä ominaisuus on tuettu vain tietyillä laitteistokokoonpanoilla, eikä se välttämättä mahdollista päivitystä uudempiin Ubuntu-julkaisuisin. Lue <a href=\"{url}\">julkaisutiedot</a>, ennen kuin otat tämän käyttöön.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "refreshSnapLink": "Linkitetään {snap}...",
+  "@refreshSnapLink": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Valmistellaan {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Kopioidaan snapin {snap} dataa...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Vahvistetaan {snap}...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "installationTypeTPM": "KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta",
+  "@installationTypeTPM": {},
+  "refreshSnapDownload": "Ladataan {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Tarkistetaan {snap} uudelleenpäivitys...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Pysäytetään {snap}-palvelut...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Liitetään {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "recoveryKeyCommand": "Pääset palautusavaimeesi asennuksen jälkeen seuraavalla komennolla:",
+  "@recoveryKeyCommand": {},
+  "refreshSnapSetupAliases": "Asetetaan {snap}-aliaksia...",
+  "@refreshSnapSetupAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapSetAutoAliases": "Asetetaan automaattisia {snap}-aliaksia...",
+  "@refreshSnapSetAutoAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "Nykyinen versio {version} on ajan tasalla.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "fullInstallationTitle": "Täysi asennus",
+  "@fullInstallationTitle": {},
+  "refreshSnapRemoveAliases": "Poistetaan {snap}-aliakset...",
+  "@refreshSnapRemoveAliases": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshRestart": "Käynnistä asennusohjelma uudelleen.",
+  "@refreshRestart": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Varoitus:</font> Jos kadotat tämän turva-avaimen, kaikki data menetetään. Kirjoita tarvittaessa avain muistiin johonkin turvalliseen paikkaan.",
+  "@recoveryKeyWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {}
+    }
+  }
 }

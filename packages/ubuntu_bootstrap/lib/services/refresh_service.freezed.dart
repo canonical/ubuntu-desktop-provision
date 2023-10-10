@@ -93,25 +93,25 @@ class _$RefreshStateCopyWithImpl<$Res, $Val extends RefreshState>
 }
 
 /// @nodoc
-abstract class _$$_RefreshCheckingCopyWith<$Res> {
-  factory _$$_RefreshCheckingCopyWith(
-          _$_RefreshChecking value, $Res Function(_$_RefreshChecking) then) =
-      __$$_RefreshCheckingCopyWithImpl<$Res>;
+abstract class _$$RefreshCheckingImplCopyWith<$Res> {
+  factory _$$RefreshCheckingImplCopyWith(_$RefreshCheckingImpl value,
+          $Res Function(_$RefreshCheckingImpl) then) =
+      __$$RefreshCheckingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshCheckingCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$_RefreshChecking>
-    implements _$$_RefreshCheckingCopyWith<$Res> {
-  __$$_RefreshCheckingCopyWithImpl(
-      _$_RefreshChecking _value, $Res Function(_$_RefreshChecking) _then)
+class __$$RefreshCheckingImplCopyWithImpl<$Res>
+    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshCheckingImpl>
+    implements _$$RefreshCheckingImplCopyWith<$Res> {
+  __$$RefreshCheckingImplCopyWithImpl(
+      _$RefreshCheckingImpl _value, $Res Function(_$RefreshCheckingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_RefreshChecking extends _RefreshChecking {
-  const _$_RefreshChecking() : super._();
+class _$RefreshCheckingImpl extends _RefreshChecking {
+  const _$RefreshCheckingImpl() : super._();
 
   @override
   String toString() {
@@ -121,7 +121,7 @@ class _$_RefreshChecking extends _RefreshChecking {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_RefreshChecking);
+        (other.runtimeType == runtimeType && other is _$RefreshCheckingImpl);
   }
 
   @override
@@ -209,15 +209,15 @@ class _$_RefreshChecking extends _RefreshChecking {
 }
 
 abstract class _RefreshChecking extends RefreshState {
-  const factory _RefreshChecking() = _$_RefreshChecking;
+  const factory _RefreshChecking() = _$RefreshCheckingImpl;
   const _RefreshChecking._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_RefreshStatusCopyWith<$Res> {
-  factory _$$_RefreshStatusCopyWith(
-          _$_RefreshStatus value, $Res Function(_$_RefreshStatus) then) =
-      __$$_RefreshStatusCopyWithImpl<$Res>;
+abstract class _$$RefreshStatusImplCopyWith<$Res> {
+  factory _$$RefreshStatusImplCopyWith(
+          _$RefreshStatusImpl value, $Res Function(_$RefreshStatusImpl) then) =
+      __$$RefreshStatusImplCopyWithImpl<$Res>;
   @useResult
   $Res call({RefreshStatus status});
 
@@ -225,11 +225,11 @@ abstract class _$$_RefreshStatusCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RefreshStatusCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$_RefreshStatus>
-    implements _$$_RefreshStatusCopyWith<$Res> {
-  __$$_RefreshStatusCopyWithImpl(
-      _$_RefreshStatus _value, $Res Function(_$_RefreshStatus) _then)
+class __$$RefreshStatusImplCopyWithImpl<$Res>
+    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshStatusImpl>
+    implements _$$RefreshStatusImplCopyWith<$Res> {
+  __$$RefreshStatusImplCopyWithImpl(
+      _$RefreshStatusImpl _value, $Res Function(_$RefreshStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -237,7 +237,7 @@ class __$$_RefreshStatusCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$_RefreshStatus(
+    return _then(_$RefreshStatusImpl(
       null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -256,8 +256,8 @@ class __$$_RefreshStatusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RefreshStatus extends _RefreshStatus {
-  const _$_RefreshStatus(this.status) : super._();
+class _$RefreshStatusImpl extends _RefreshStatus {
+  const _$RefreshStatusImpl(this.status) : super._();
 
   @override
   final RefreshStatus status;
@@ -271,7 +271,7 @@ class _$_RefreshStatus extends _RefreshStatus {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshStatus &&
+            other is _$RefreshStatusImpl &&
             (identical(other.status, status) || other.status == status));
   }
 
@@ -281,8 +281,8 @@ class _$_RefreshStatus extends _RefreshStatus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshStatusCopyWith<_$_RefreshStatus> get copyWith =>
-      __$$_RefreshStatusCopyWithImpl<_$_RefreshStatus>(this, _$identity);
+  _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
+      __$$RefreshStatusImplCopyWithImpl<_$RefreshStatusImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -366,20 +366,21 @@ class _$_RefreshStatus extends _RefreshStatus {
 }
 
 abstract class _RefreshStatus extends RefreshState {
-  const factory _RefreshStatus(final RefreshStatus status) = _$_RefreshStatus;
+  const factory _RefreshStatus(final RefreshStatus status) =
+      _$RefreshStatusImpl;
   const _RefreshStatus._() : super._();
 
   RefreshStatus get status;
   @JsonKey(ignore: true)
-  _$$_RefreshStatusCopyWith<_$_RefreshStatus> get copyWith =>
+  _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_RefreshProgressCopyWith<$Res> {
-  factory _$$_RefreshProgressCopyWith(
-          _$_RefreshProgress value, $Res Function(_$_RefreshProgress) then) =
-      __$$_RefreshProgressCopyWithImpl<$Res>;
+abstract class _$$RefreshProgressImplCopyWith<$Res> {
+  factory _$$RefreshProgressImplCopyWith(_$RefreshProgressImpl value,
+          $Res Function(_$RefreshProgressImpl) then) =
+      __$$RefreshProgressImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Change change});
 
@@ -387,11 +388,11 @@ abstract class _$$_RefreshProgressCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RefreshProgressCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$_RefreshProgress>
-    implements _$$_RefreshProgressCopyWith<$Res> {
-  __$$_RefreshProgressCopyWithImpl(
-      _$_RefreshProgress _value, $Res Function(_$_RefreshProgress) _then)
+class __$$RefreshProgressImplCopyWithImpl<$Res>
+    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshProgressImpl>
+    implements _$$RefreshProgressImplCopyWith<$Res> {
+  __$$RefreshProgressImplCopyWithImpl(
+      _$RefreshProgressImpl _value, $Res Function(_$RefreshProgressImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -399,7 +400,7 @@ class __$$_RefreshProgressCopyWithImpl<$Res>
   $Res call({
     Object? change = null,
   }) {
-    return _then(_$_RefreshProgress(
+    return _then(_$RefreshProgressImpl(
       null == change
           ? _value.change
           : change // ignore: cast_nullable_to_non_nullable
@@ -418,8 +419,8 @@ class __$$_RefreshProgressCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RefreshProgress extends _RefreshProgress {
-  const _$_RefreshProgress(this.change) : super._();
+class _$RefreshProgressImpl extends _RefreshProgress {
+  const _$RefreshProgressImpl(this.change) : super._();
 
   @override
   final Change change;
@@ -433,7 +434,7 @@ class _$_RefreshProgress extends _RefreshProgress {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshProgress &&
+            other is _$RefreshProgressImpl &&
             (identical(other.change, change) || other.change == change));
   }
 
@@ -443,8 +444,9 @@ class _$_RefreshProgress extends _RefreshProgress {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshProgressCopyWith<_$_RefreshProgress> get copyWith =>
-      __$$_RefreshProgressCopyWithImpl<_$_RefreshProgress>(this, _$identity);
+  _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
+      __$$RefreshProgressImplCopyWithImpl<_$RefreshProgressImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -528,35 +530,35 @@ class _$_RefreshProgress extends _RefreshProgress {
 }
 
 abstract class _RefreshProgress extends RefreshState {
-  const factory _RefreshProgress(final Change change) = _$_RefreshProgress;
+  const factory _RefreshProgress(final Change change) = _$RefreshProgressImpl;
   const _RefreshProgress._() : super._();
 
   Change get change;
   @JsonKey(ignore: true)
-  _$$_RefreshProgressCopyWith<_$_RefreshProgress> get copyWith =>
+  _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_RefreshDoneCopyWith<$Res> {
-  factory _$$_RefreshDoneCopyWith(
-          _$_RefreshDone value, $Res Function(_$_RefreshDone) then) =
-      __$$_RefreshDoneCopyWithImpl<$Res>;
+abstract class _$$RefreshDoneImplCopyWith<$Res> {
+  factory _$$RefreshDoneImplCopyWith(
+          _$RefreshDoneImpl value, $Res Function(_$RefreshDoneImpl) then) =
+      __$$RefreshDoneImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshDoneCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$_RefreshDone>
-    implements _$$_RefreshDoneCopyWith<$Res> {
-  __$$_RefreshDoneCopyWithImpl(
-      _$_RefreshDone _value, $Res Function(_$_RefreshDone) _then)
+class __$$RefreshDoneImplCopyWithImpl<$Res>
+    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshDoneImpl>
+    implements _$$RefreshDoneImplCopyWith<$Res> {
+  __$$RefreshDoneImplCopyWithImpl(
+      _$RefreshDoneImpl _value, $Res Function(_$RefreshDoneImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_RefreshDone extends _RefreshDone {
-  const _$_RefreshDone() : super._();
+class _$RefreshDoneImpl extends _RefreshDone {
+  const _$RefreshDoneImpl() : super._();
 
   @override
   String toString() {
@@ -566,7 +568,7 @@ class _$_RefreshDone extends _RefreshDone {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_RefreshDone);
+        (other.runtimeType == runtimeType && other is _$RefreshDoneImpl);
   }
 
   @override
@@ -654,25 +656,25 @@ class _$_RefreshDone extends _RefreshDone {
 }
 
 abstract class _RefreshDone extends RefreshState {
-  const factory _RefreshDone() = _$_RefreshDone;
+  const factory _RefreshDone() = _$RefreshDoneImpl;
   const _RefreshDone._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_RefreshErrorCopyWith<$Res> {
-  factory _$$_RefreshErrorCopyWith(
-          _$_RefreshError value, $Res Function(_$_RefreshError) then) =
-      __$$_RefreshErrorCopyWithImpl<$Res>;
+abstract class _$$RefreshErrorImplCopyWith<$Res> {
+  factory _$$RefreshErrorImplCopyWith(
+          _$RefreshErrorImpl value, $Res Function(_$RefreshErrorImpl) then) =
+      __$$RefreshErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Object? error});
 }
 
 /// @nodoc
-class __$$_RefreshErrorCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$_RefreshError>
-    implements _$$_RefreshErrorCopyWith<$Res> {
-  __$$_RefreshErrorCopyWithImpl(
-      _$_RefreshError _value, $Res Function(_$_RefreshError) _then)
+class __$$RefreshErrorImplCopyWithImpl<$Res>
+    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshErrorImpl>
+    implements _$$RefreshErrorImplCopyWith<$Res> {
+  __$$RefreshErrorImplCopyWithImpl(
+      _$RefreshErrorImpl _value, $Res Function(_$RefreshErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -680,7 +682,7 @@ class __$$_RefreshErrorCopyWithImpl<$Res>
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_$_RefreshError(
+    return _then(_$RefreshErrorImpl(
       freezed == error ? _value.error : error,
     ));
   }
@@ -688,8 +690,8 @@ class __$$_RefreshErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RefreshError extends _RefreshError {
-  const _$_RefreshError([this.error]) : super._();
+class _$RefreshErrorImpl extends _RefreshError {
+  const _$RefreshErrorImpl([this.error]) : super._();
 
   @override
   final Object? error;
@@ -703,7 +705,7 @@ class _$_RefreshError extends _RefreshError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshError &&
+            other is _$RefreshErrorImpl &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -714,8 +716,8 @@ class _$_RefreshError extends _RefreshError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshErrorCopyWith<_$_RefreshError> get copyWith =>
-      __$$_RefreshErrorCopyWithImpl<_$_RefreshError>(this, _$identity);
+  _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
+      __$$RefreshErrorImplCopyWithImpl<_$RefreshErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -799,11 +801,11 @@ class _$_RefreshError extends _RefreshError {
 }
 
 abstract class _RefreshError extends RefreshState {
-  const factory _RefreshError([final Object? error]) = _$_RefreshError;
+  const factory _RefreshError([final Object? error]) = _$RefreshErrorImpl;
   const _RefreshError._() : super._();
 
   Object? get error;
   @JsonKey(ignore: true)
-  _$$_RefreshErrorCopyWith<_$_RefreshError> get copyWith =>
+  _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

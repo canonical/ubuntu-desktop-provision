@@ -1,4 +1,40 @@
 {
   "welcomePageTitle": "Bienvenue",
-  "@welcomePageTitle": {}
+  "@welcomePageTitle": {},
+  "privacyPolicyLink": "Protection des données",
+  "@privacyPolicyLink": {},
+  "privacyPageTitle": "Services de localisation",
+  "@privacyPageTitle": {},
+  "welcomePageHeader": "Bienvenue sur {distro}",
+  "@welcomePageHeader": {},
+  "privacyLocationEnable": "Services de localisation",
+  "@privacyLocationEnable": {},
+  "telemetryHeader": "Aider à améliorer {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeSecurityTitle": "Sécurité renforcée",
+  "@welcomeSecurityTitle": {},
+  "telemetryLabelOn": "Oui, partager les données du système avec l'équipe {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Activer les services de localisation ?",
+  "@privacyLocationTitle": {},
+  "welcomeStartTitle": "Un démarrage simplifié",
+  "@welcomeStartTitle": {},
+  "storeOpen": "Ouvrir l’App Store",
+  "@storeOpen": {},
+  "telemetryPageTitle": "Télémétrie",
+  "@telemetryPageTitle": {},
+  "welcomeWhatsNew": "QUOI DE NEUF ?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Non, ne pas partager les données du système",
+  "@telemetryLabelOff": {}
 }

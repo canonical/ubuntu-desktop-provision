@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Millä sovelluksin haluat aloittaa?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Täysi asennus';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Yhteydettömään tilaan soveltuva kokoelma toimisto-ohjelmistoja, työkaluja, verkkoselain ja pelejä.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Oletusasennus';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Vain tarpeellinen, verkkoselain ja perustyökalut.';
 
   @override
   String get otherOptions => 'Muut valinnat';
@@ -247,11 +247,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS valittu';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Varoitus:</font> Tämä ominaisuus on tuettu vain tietyillä laitteistokokoonpanoilla, eikä se välttämättä mahdollista päivitystä uudempiin Ubuntu-julkaisuisin. Lue <a href=\"$url\">julkaisutiedot</a>, ennen kuin otat tämän käyttöön.';
   }
 
   @override
@@ -424,7 +424,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(Object format) {
-    return 'Leave formatted as $format';
+    return 'Jätä alustetuksi muotoon $format';
   }
 
   @override
@@ -679,104 +679,104 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Vaadittu:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Päivitys saatavilla';
 
   @override
   String refreshCurrent(Object snap, Object version) {
-    return 'The current $snap version is $version.';
+    return 'Nykyinen $snap-versio on $version.';
   }
 
   @override
   String refreshInstall(Object version) {
-    return 'Update to version $version';
+    return 'Päivitä versioon $version';
   }
 
   @override
   String refreshUpToDate(Object version) {
-    return 'The current version $version is up-to-date.';
+    return 'Nykyinen versio $version on ajan tasalla.';
   }
 
   @override
   String refreshUpdating(Object snap) {
-    return 'Updating $snap...';
+    return 'Päivitetään $snap...';
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Käynnistä asennusohjelma uudelleen.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Varmistetaan snapin $snap edellytyksiä...';
   }
 
   @override
   String refreshSnapRefresh(Object snap) {
-    return 'Refreshing $snap...';
+    return 'Päivitetään $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(Object snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Tarkistetaan $snap uudelleenpäivitys...';
   }
 
   @override
   String refreshSnapPrepare(Object snap) {
-    return 'Preparing $snap...';
+    return 'Valmistellaan $snap...';
   }
 
   @override
   String refreshSnapDownload(Object snap) {
-    return 'Downloading $snap...';
+    return 'Ladataan $snap...';
   }
 
   @override
   String refreshSnapValidate(Object snap) {
-    return 'Validating $snap...';
+    return 'Vahvistetaan $snap...';
   }
 
   @override
   String refreshSnapMount(Object snap) {
-    return 'Mounting $snap...';
+    return 'Liitetään $snap...';
   }
 
   @override
   String refreshSnapStopServices(Object snap) {
-    return 'Stopping $snap services...';
+    return 'Pysäytetään $snap-palvelut...';
   }
 
   @override
   String refreshSnapRemoveAliases(Object snap) {
-    return 'Removing $snap aliases...';
+    return 'Poistetaan $snap-aliakset...';
   }
 
   @override
   String refreshSnapUnlink(Object snap) {
-    return 'Unlinking $snap...';
+    return 'Poistetaan snapin $snap linkitys...';
   }
 
   @override
   String refreshSnapUpdateAssets(Object snap) {
-    return 'Updating $snap assets...';
+    return 'Päivitetään snapin $snap resurssit...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(Object snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Päivitetään snapin $snap ytimen komentorivi...';
   }
 
   @override
   String refreshSnapCopyData(Object snap) {
-    return 'Copying $snap data...';
+    return 'Kopioidaan snapin $snap dataa...';
   }
 
   @override
   String refreshSnapSetupProfiles(Object snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Asetetaan snapin $snap tietoturvaprofiileja...';
   }
 
   @override
   String refreshSnapLink(Object snap) {
-    return 'Linking $snap...';
+    return 'Linkitetään $snap...';
   }
 
   @override
@@ -786,32 +786,32 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapSetAutoAliases(Object snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Asetetaan automaattisia $snap-aliaksia...';
   }
 
   @override
   String refreshSnapSetupAliases(Object snap) {
-    return 'Setting up $snap aliases...';
+    return 'Asetetaan $snap-aliaksia...';
   }
 
   @override
   String refreshSnapStartServices(Object snap) {
-    return 'Starting $snap services...';
+    return 'Käynnistetään $snap-palveluja...';
   }
 
   @override
   String refreshSnapCleanup(Object snap) {
-    return 'Cleaning up $snap...';
+    return 'Siivotaan $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM-palautusavain';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Pääset palautusavaimeesi asennuksen jälkeen seuraavalla komennolla:';
 
   @override
   String recoveryKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Varoitus:</font> Jos kadotat tämän turva-avaimen, kaikki data menetetään. Kirjoita tarvittaessa avain muistiin johonkin turvalliseen paikkaan.';
   }
 }

@@ -158,5 +158,7 @@
   "installingSystem": "Installazione del sistema…",
   "@installingSystem": {},
   "showSecurityKey": "Mostra chiave di sicurezza",
-  "@showSecurityKey": {}
+  "@showSecurityKey": {},
+  "quitButtonText": "Esci dall' installazione",
+  "@quitButtonText": {}
 }

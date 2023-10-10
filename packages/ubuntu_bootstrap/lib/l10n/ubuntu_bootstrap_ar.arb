@@ -162,5 +162,9 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "confirmSecurityKey": "تأكيد مفتاح الأمان",
+  "@confirmSecurityKey": {},
+  "chooseSecurityKey": "اختيار مفتاح أمان",
+  "@chooseSecurityKey": {}
 }
