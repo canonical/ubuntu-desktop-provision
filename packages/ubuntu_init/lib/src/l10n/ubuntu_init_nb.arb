@@ -1,1 +1,16 @@
-{}
+{
+  "welcomePageTitle": "Velkommen",
+  "@welcomePageTitle": {},
+  "privacyPolicyLink": "Databeskyttelse",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Ubuntu-butikken",
+  "@storeTitle": {},
+  "welcomePageHeader": "Velkommen til {distro}",
+  "@welcomePageHeader": {},
+  "welcomeStartTitle": "En strømlinjeformet start",
+  "@welcomeStartTitle": {},
+  "welcomeWhatsNew": "Hva er nytt?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Nei, ikke del systemdata",
+  "@telemetryLabelOff": {}
+}
