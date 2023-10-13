@@ -1,1 +1,76 @@
-{}
+{
+  "welcomeWhatsNew": "ЩО НОВОГО?",
+  "@welcomeWhatsNew": {},
+  "welcomeSecurityTitle": "Підвищена безпека",
+  "@welcomeSecurityTitle": {},
+  "welcomeStoreSubtitle": "",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecuritySubtitle": "Нові параметри для апаратного або ZFS шифрування.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Переглянути журнал змін</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Телеметрія",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Допомогти покращити {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "Подробиці звіту",
+  "@telemetryReportLabel": {},
+  "telemetryDescription": "Діліться даними з {distro} анонімно, щоб ми могли покращити ваш досвід.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLegalLabel": "",
+  "@telemetryLegalLabel": {},
+  "telemetryReportTitle": "Подробиці звіту",
+  "@telemetryReportTitle": {},
+  "privacyLocationSubtitle": "",
+  "@privacyLocationSubtitle": {},
+  "welcomePageTitle": "Ласкаво просимо!",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Ласкаво просимо в {distro}",
+  "@welcomePageHeader": {},
+  "welcomeStartTitle": "",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "",
+  "@welcomeStoreTitle": {},
+  "telemetryLabelOn": "",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "",
+  "@telemetryLabelOff": {},
+  "privacyPageTitle": "",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "",
+  "@privacyLocationTitle": {},
+  "storeHeader": "",
+  "@storeHeader": {},
+  "privacyPolicyLink": "",
+  "@privacyPolicyLink": {},
+  "storeTitle": "Центр додатків Ubuntu",
+  "@storeTitle": {},
+  "privacyLocationEnable": "Сервіси визначення місцезнаходження",
+  "@privacyLocationEnable": {},
+  "storeDescription": "",
+  "@storeDescription": {},
+  "storeOpen": "Відкрити центр додатків",
+  "@storeOpen": {}
+}
