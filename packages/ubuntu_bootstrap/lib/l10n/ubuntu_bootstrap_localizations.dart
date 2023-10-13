@@ -75,6 +75,7 @@ import 'ubuntu_bootstrap_localizations_th.dart';
 import 'ubuntu_bootstrap_localizations_tl.dart';
 import 'ubuntu_bootstrap_localizations_tr.dart';
 import 'ubuntu_bootstrap_localizations_ug.dart';
+import 'ubuntu_bootstrap_localizations_uk.dart';
 import 'ubuntu_bootstrap_localizations_vi.dart';
 import 'ubuntu_bootstrap_localizations_zh.dart';
 
@@ -230,6 +231,7 @@ abstract class UbuntuBootstrapLocalizations {
     Locale('tl'),
     Locale('tr'),
     Locale('ug'),
+    Locale('uk'),
     Locale('vi'),
     Locale('zh'),
     Locale('zh', 'TW')
@@ -1547,7 +1549,7 @@ class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<Ubuntu
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_UbuntuBootstrapLocalizationsDelegate old) => false;
@@ -1643,6 +1645,7 @@ UbuntuBootstrapLocalizations lookupUbuntuBootstrapLocalizations(Locale locale) {
     case 'tl': return UbuntuBootstrapLocalizationsTl();
     case 'tr': return UbuntuBootstrapLocalizationsTr();
     case 'ug': return UbuntuBootstrapLocalizationsUg();
+    case 'uk': return UbuntuBootstrapLocalizationsUk();
     case 'vi': return UbuntuBootstrapLocalizationsVi();
     case 'zh': return UbuntuBootstrapLocalizationsZh();
   }
