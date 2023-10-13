@@ -98,5 +98,9 @@
   "networkHiddenWifiNameRequired": "Необхідно вказати назву мережі",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Я не хочу зараз підключатися до Інтернету",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "keyboardDetectButton": "Виявити",
+  "@keyboardDetectButton": {},
+  "keyboardVariantLabel": "Варіант клавіатури:",
+  "@keyboardVariantLabel": {}
 }
