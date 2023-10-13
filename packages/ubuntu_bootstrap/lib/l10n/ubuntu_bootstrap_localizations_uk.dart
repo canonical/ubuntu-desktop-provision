@@ -20,12 +20,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(Object DISTRO) {
-    return 'Смокчіть члени у цьому $DISTRO';
+    return 'Ласкаво просимо до $DISTRO';
   }
 
   @override
   String loadingHeader(Object DISTRO) {
-    return 'Висираня $DISTRO…';
+    return 'Підготовка $DISTRO…';
   }
 
   @override
