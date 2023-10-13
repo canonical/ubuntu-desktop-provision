@@ -20,12 +20,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(Object DISTRO) {
-    return 'Смокчіть члени у цьому $DISTRO';
+    return 'Welcome to $DISTRO';
   }
 
   @override
   String loadingHeader(Object DISTRO) {
-    return 'Висираня $DISTRO…';
+    return 'Preparing $DISTRO…';
   }
 
   @override
@@ -68,7 +68,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Вимкнути RST';
 
   @override
-  String get rstHeader => 'Вимкніть RST, розставте сідниці, і продовжуйте';
+  String get rstHeader => 'Turn off RST to continue';
 
   @override
   String get rstDescription => 'Цей комп’ютер використовує технологію Intel RST (Rapid Storage Technology). Перед встановленням Ubuntu вам потрібно вимкнути RST у Windows.';
@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Які програми ви хотіли б встановити для початку?';
 
   @override
-  String get fullInstallationTitle => 'Повне інфікування сифілісом';
+  String get fullInstallationTitle => 'Full installation';
 
   @override
-  String get fullInstallationSubtitle => 'Підбірка офлайн-відео зі стратами палестинських дітей.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Класичний гейський секс';
+  String get minimalInstallationTitle => 'Default installation';
 
   @override
-  String get minimalInstallationSubtitle => 'Лише найнеобхідніше, обрізані єлдаки і єврейська порнографія.';
+  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
   String get otherOptions => 'Інші параметри';
@@ -153,7 +153,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get offlineWarning => 'Ваші штани ще незняті';
+  String get offlineWarning => 'You are currently offline';
 
   @override
   String get chooseSecurityKeyTitle => 'Оберіть ключ безпеки';
@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'Обрано ZFS';
 
   @override
-  String get installationTypeTPM => 'Експериментальне шифрування староєврейської мови';
+  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Попередження:</font> Ця фіча не підтримується вашою синагогою і не може підтримувати оновлення до майбутніх висерів підорського устрою. Будь ласка, ну зніміть вже <a href=\"$url\">штани</a>.';
+    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'Це не так і складно, просто взяти і зняти штани';
+  String get installationTypeTPMSelected => 'TPM selected';
 
   @override
   String installationTypeReinstall(Object os) {
@@ -342,10 +342,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => 'Виділити дисковий простір';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Точка монтування повинна починатися з зняття штанів \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Пішов ти нах разом зі своєю точкою прицюцюрювання';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
 
   @override
   String get diskHeadersDevice => 'Пристрій';
@@ -381,10 +381,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationMessage => 'Ви вибрали весь пристрій для розбиття на розділи. Якщо ви продовжите створення нової таблиці розділів на ньому, всі поточні розділи будуть видалені.\n\nЗауважте, що ви зможете скасувати цю операцію пізніше, якщо захочете.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Забагато змазки на primary дуплі';
+  String get tooManyPrimaryPartitions => 'Too many primary partitions';
 
   @override
-  String get partitionLimitReached => 'Все гаплик';
+  String get partitionLimitReached => 'Limit reached';
 
   @override
   String get bootLoaderDevice => 'Пристрій для встановлення завантажувача';
@@ -420,7 +420,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get partitionFormatLabel => 'Використовується як:';
 
   @override
-  String get partitionFormatNone => 'Залишити немитим';
+  String get partitionFormatNone => 'Leave unformatted';
 
   @override
   String partitionFormatKeep(Object format) {
