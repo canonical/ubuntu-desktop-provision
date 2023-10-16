@@ -20,12 +20,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Ласкаво просимо в $DISTRO';
   }
 
   @override
   String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
+    return 'Підготовка $DISTRO…';
   }
 
   @override
@@ -68,7 +68,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Вимкнути RST';
 
   @override
-  String get rstHeader => 'Turn off RST to continue';
+  String get rstHeader => 'Вимкніть RST для продовженя';
 
   @override
   String get rstDescription => 'Цей комп’ютер використовує технологію Intel RST (Rapid Storage Technology). Перед встановленням Ubuntu вам потрібно вимкнути RST у Windows.';
@@ -115,16 +115,16 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Які програми ви хотіли б встановити для початку?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get fullInstallationTitle => 'Повна установка';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'Зручний для роботи в автономному режимі набір офісних інструментів, утиліт, веб-браузера та ігор.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Мінімальна установка';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Тільки найнеобхідніше, веб-браузер та базові утиліти.';
 
   @override
   String get otherOptions => 'Інші параметри';
@@ -153,7 +153,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Ви зараз не в мережі';
 
   @override
   String get chooseSecurityKeyTitle => 'Оберіть ключ безпеки';
@@ -247,15 +247,15 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'Обрано ZFS';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'ЕКСПЕРИМЕНТАЛЬНО: Увімкнути апаратне шифрування диска';
 
   @override
   String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+    return '<font color=\"$color\">Увага:</font> Ця функція підтримується лише на певних конфігураціях обладнання та може не підтримувати оновлення до майбутніх випусків Ubuntu. Будь ласка, прочитайте <a href=\"$url\">примітки до випуску</a> перед увімкненням.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM обрано';
 
   @override
   String installationTypeReinstall(Object os) {
