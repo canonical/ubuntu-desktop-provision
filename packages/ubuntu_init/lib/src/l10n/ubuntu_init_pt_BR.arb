@@ -1,5 +1,5 @@
 {
-  "welcomePageTitle": "Boas-vindas",
+  "welcomePageTitle": "Bem-vindo",
   "@welcomePageTitle": {},
   "welcomePageHeader": "Boas-vindas ao {distro}",
   "@welcomePageHeader": {},
