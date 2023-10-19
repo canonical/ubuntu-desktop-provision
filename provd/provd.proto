@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package provd;
+
+option go_package="github.com/canonical/ubuntu-desktop-provision/provd";
+
+// Service definition for HelloWorld
+service HelloWorldService {
+  // Simple RPC to get a Hello World message
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
