@@ -1,0 +1,3 @@
+Verbosity: 2
+Paths:
+  Socket: "/run/test.sock"
