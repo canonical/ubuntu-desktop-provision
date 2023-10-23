@@ -1,34 +1,55 @@
+// Package main is the windows-agent entry point.
 package main
 
 import (
+	"context"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
-	log "github.com/sirupsen/logrus"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 )
 
-func main() {
-	var a app
-	a = daemon.New()
-	exitCode := run(a)
+//FIXME go:generate go run ../generate_completion_documentation.go completion ../../generated
+//FIXME go:generate go run ../generate_completion_documentation.go update-readme
+//FIXME go:generate go run ../generate_completion_documentation.go update-doc-cli-ref
 
-	log.Errorf("Exiting with code: %d", exitCode)
-	os.Exit(exitCode)
+func main() {
+	//i18n.InitI18nDomain(common.TEXTDOMAIN)
+	a := daemon.New()
+	os.Exit(run(a))
 }
 
 type app interface {
 	Run() error
+	UsageError() bool
+	Hup() bool
 	Quit()
 }
 
 func run(a app) int {
+	defer installSignalHandler(a)()
+
+	log.SetFormatter(&log.TextFormatter{
+		DisableLevelTruncation: true,
+		DisableTimestamp:       true,
+
+		// ForceColors is necessary on Windows, not only to have colors but to
+		// prevent logrus from falling back to structured logs.
+		ForceColors: true,
+	})
+
 	if err := a.Run(); err != nil {
-		log.Errorf("Run error: %v", err) // Added log
+		log.Error(context.Background(), err)
+
+		if a.UsageError() {
+			return 2
+		}
 		return 1
 	}
+
 	return 0
 }
 
@@ -38,18 +59,21 @@ func installSignalHandler(a app) func() {
 
 	wg := sync.WaitGroup{}
 	wg.Add(1)
-
 	go func() {
 		defer wg.Done()
 		for {
 			switch v, ok := <-c; v {
 			case syscall.SIGINT, syscall.SIGTERM:
-				log.Info("Received SIGINT/SIGTERM, quitting")
 				a.Quit()
 				return
+			case syscall.SIGHUP:
+				if a.Hup() {
+					a.Quit()
+					return
+				}
 			default:
+				// channel was closed: we exited
 				if !ok {
-					log.Info("Signal channel closed, exiting goroutine")
 					return
 				}
 			}
@@ -57,8 +81,6 @@ func installSignalHandler(a app) func() {
 	}()
 
 	return func() {
-		log.Info("Cleaning up signal handlers") // Added log
-
 		signal.Stop(c)
 		close(c)
 		wg.Wait()
