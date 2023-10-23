@@ -19,9 +19,6 @@ import (
 func initViperConfig(name string, cmd *cobra.Command, vip *viper.Viper) (err error) {
 	defer decorate.OnError(&err, "can't load configuration")
 
-	// Force a visit of the local flags so persistent flags for all parents are merged.
-	//cmd.LocalFlags() // TODO: still necessary?
-
 	// Get cmdline flag for verbosity to configure logger until we have everything parsed.
 	v, err := cmd.Flags().GetCount("verbosity")
 	if err != nil {

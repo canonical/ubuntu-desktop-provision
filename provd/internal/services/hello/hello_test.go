@@ -30,10 +30,8 @@ func TestSayHello(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// These are the function arguments.
 		name string
 
-		// This is the expected return.
 		wantErr bool
 	}{
 		"Successfully greets a given name": {name: "Matt"},
@@ -68,7 +66,6 @@ func TestSayHello(t *testing.T) {
 func newHelloClient(t *testing.T) (client provd.HelloWorldServiceClient) {
 	t.Helper()
 
-	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
 	require.NoError(t, err, "Setup: could not setup temporary socket dir path")
 	t.Cleanup(func() { _ = os.RemoveAll(tmpDir) })
@@ -93,7 +90,7 @@ func newHelloClient(t *testing.T) (client provd.HelloWorldServiceClient) {
 
 	conn, err := grpc.Dial("unix://"+socketPath, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	require.NoError(t, err, "Setup: Could not connect to GRPC server")
-	t.Cleanup(func() { _ = conn.Close() }) // We don't care about the error on cleanup
+	t.Cleanup(func() { _ = conn.Close() })
 
 	return provd.NewHelloWorldServiceClient(conn)
 }

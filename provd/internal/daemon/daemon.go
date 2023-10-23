@@ -48,7 +48,7 @@ type GRPCServiceRegisterer func(context.Context) *grpc.Server
 // New returns an new, initialized daemon server, which handles systemd activation.
 // If systemd activation is used, it will override any socket passed here.
 func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ...Option) (d *Daemon, err error) {
-	defer decorate.OnError(&err /*i18n.G(*/, "can't create daemon") //)
+	defer decorate.OnError(&err, "can't create daemon")
 
 	log.Debug(ctx, "Building new daemon")
 
@@ -91,7 +91,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 		}
 
 		if len(listeners) != 1 {
-			return nil, fmt.Errorf( /*i18n.G(*/ "unexpected number of systemd socket activation (%d != 1)" /*)*/, len(listeners))
+			return nil, fmt.Errorf("unexpected number of systemd socket activation (%d != 1)", len(listeners))
 		}
 		lis = listeners[0]
 	}
@@ -111,13 +111,13 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 
 // Serve listens on a tcp socket and starts serving GRPC requests on it.
 func (d *Daemon) Serve(ctx context.Context) (err error) {
-	defer decorate.OnError(&err /*i18n.G(*/, "error while serving") //)
+	defer decorate.OnError(&err, "error while serving")
 
 	log.Debugf(ctx, "Starting to serve requests on %s", d.lis.Addr())
 
 	// Signal to systemd that we are ready.
 	if sent, err := d.systemdSdNotifier(false, "READY=1"); err != nil {
-		return fmt.Errorf( /*i18n.G(*/ "couldn't send ready notification to systemd: %v" /*)*/, err)
+		return fmt.Errorf("couldn't send ready notification to systemd: %v", err)
 	} else if sent {
 		log.Debug(context.Background(), "Ready state sent to systemd")
 	}

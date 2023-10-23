@@ -12,12 +12,7 @@ import (
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 )
 
-//FIXME go:generate go run ../generate_completion_documentation.go completion ../../generated
-//FIXME go:generate go run ../generate_completion_documentation.go update-readme
-//FIXME go:generate go run ../generate_completion_documentation.go update-doc-cli-ref
-
 func main() {
-	//i18n.InitI18nDomain(common.TEXTDOMAIN)
 	a := daemon.New()
 	os.Exit(run(a))
 }
@@ -35,10 +30,6 @@ func run(a app) int {
 	log.SetFormatter(&log.TextFormatter{
 		DisableLevelTruncation: true,
 		DisableTimestamp:       true,
-
-		// ForceColors is necessary on Windows, not only to have colors but to
-		// prevent logrus from falling back to structured logs.
-		ForceColors: true,
 	})
 
 	if err := a.Run(); err != nil {
