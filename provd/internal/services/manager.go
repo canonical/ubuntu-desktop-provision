@@ -20,7 +20,7 @@ type Manager struct {
 func NewManager(ctx context.Context) (m Manager, err error) {
 	defer decorate.OnError(&err, "can't create provd object")
 
-	log.Debug(ctx, "Building authd object")
+	log.Debug(ctx, "Building provd object")
 
 	helloService := hello.NewService(ctx)
 

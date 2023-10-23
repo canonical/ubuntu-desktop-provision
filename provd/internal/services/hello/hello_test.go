@@ -72,7 +72,7 @@ func newHelloClient(t *testing.T) (client provd.HelloWorldServiceClient) {
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
 	require.NoError(t, err, "Setup: could not setup temporary socket dir path")
 	t.Cleanup(func() { _ = os.RemoveAll(tmpDir) })
-	socketPath := filepath.Join(tmpDir, "authd.sock")
+	socketPath := filepath.Join(tmpDir, "provd.sock")
 
 	lis, err := net.Listen("unix", socketPath)
 	require.NoError(t, err, "Setup: could not create unix socket")
