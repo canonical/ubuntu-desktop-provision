@@ -223,7 +223,7 @@ class _DonePage extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MarkdownBody(
-                  data: coreInstall ? lang.rebootToConfigure(model.productInfo) : lang.readyToUse(model.productInfo),
+                  data: coreInstall ? lang.rebootToConfigure('Ubuntu Core Desktop') : lang.readyToUse(model.productInfo),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),
