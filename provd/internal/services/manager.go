@@ -29,7 +29,7 @@ func NewManager(ctx context.Context) (m Manager, err error) {
 	}, nil
 }
 
-// RegisterGRPCServices returns a new grpc Server
+// RegisterGRPCServices returns a new grpc Server.
 func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	slog.Debug("Registering GRPC services")
 
