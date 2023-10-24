@@ -285,7 +285,22 @@ func TestNoConfigSetDefaults(t *testing.T) {
 	require.Equal(t, "", a.Config().Paths.Socket, "No socket address as default")
 }
 
-func TestBadConfigReturnsError(t *testing.T) {
+func TestBadConfigFile(t *testing.T) {
+	tempDir := t.TempDir()
+	configPath := filepath.Join(tempDir, "empty_config.yaml")
+
+	// Write "foo" to the file
+	err := os.WriteFile(configPath, []byte("foo"), 0644)
+	require.NoError(t, err, "Failed to create config file with 'blah'")
+
+	a := daemon.New()
+	a.SetArgs("version", "--config", configPath)
+
+	err = a.Run()
+	require.Error(t, err, "Run should return an error on invalid config file")
+}
+
+func TestMissingConfigReturnsError(t *testing.T) {
 	a := daemon.New()
 	// Use version to still run preExec to load no config but without running server
 	a.SetArgs("version", "--config", "/does/not/exist.yaml")
