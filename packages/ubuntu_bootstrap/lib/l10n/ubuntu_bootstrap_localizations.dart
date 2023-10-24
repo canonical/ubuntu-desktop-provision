@@ -1068,7 +1068,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rebootToConfigure.
   ///
   /// In en, this message translates to:
-  /// **'**$system** has been copied to the disk'**
+  /// **'**{system}** has been copied to the disk'**
   String rebootToConfigure(Object system);
 
   /// No description provided for @restartInto.
