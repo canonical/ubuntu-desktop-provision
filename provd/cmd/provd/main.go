@@ -1,15 +1,13 @@
-// Package main is the windows-agent entry point.
 package main
 
 import (
-	"context"
+	"log/slog"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 )
 
 func main() {
@@ -27,13 +25,8 @@ type app interface {
 func run(a app) int {
 	defer installSignalHandler(a)()
 
-	log.SetFormatter(&log.TextFormatter{
-		DisableLevelTruncation: true,
-		DisableTimestamp:       true,
-	})
-
 	if err := a.Run(); err != nil {
-		log.Error(context.Background(), err)
+		slog.Error("applicatoin run failed", "errorDetail", err)
 
 		if a.UsageError() {
 			return 2

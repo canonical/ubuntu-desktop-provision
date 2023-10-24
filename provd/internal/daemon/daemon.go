@@ -7,7 +7,8 @@ import (
 	"net"
 	"os"
 
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
+	"log/slog"
+
 	"github.com/coreos/go-systemd/activation"
 	"github.com/coreos/go-systemd/daemon"
 	"github.com/ubuntu/decorate"
@@ -50,7 +51,7 @@ type GRPCServiceRegisterer func(context.Context) *grpc.Server
 func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ...Option) (d *Daemon, err error) {
 	defer decorate.OnError(&err, "can't create daemon")
 
-	log.Debug(ctx, "Building new daemon")
+	slog.Debug("Building new daemon")
 
 	// Set default options.
 	opts := options{
@@ -68,7 +69,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 	var lis net.Listener
 
 	if opts.socketPath != "" {
-		log.Debugf(ctx, "Listening on %s", opts.socketPath)
+		slog.Debug("Listening on", "socketPath", opts.socketPath)
 
 		// manual socket
 		// TODO: if socket exists, remove
@@ -82,7 +83,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 			return nil, fmt.Errorf("could not change socket permission: %v", err)
 		}
 	} else {
-		log.Debug(ctx, "Use socket activation")
+		slog.Debug("Use socket activation")
 
 		// systemd activation
 		listeners, err := opts.systemdActivationListener()
@@ -113,16 +114,16 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 func (d *Daemon) Serve(ctx context.Context) (err error) {
 	defer decorate.OnError(&err, "error while serving")
 
-	log.Debugf(ctx, "Starting to serve requests on %s", d.lis.Addr())
+	slog.Debug("Starting to serve requests on", "socketAddress", d.lis.Addr())
 
 	// Signal to systemd that we are ready.
 	if sent, err := d.systemdSdNotifier(false, "READY=1"); err != nil {
 		return fmt.Errorf("couldn't send ready notification to systemd: %v", err)
 	} else if sent {
-		log.Debug(context.Background(), "Ready state sent to systemd")
+		slog.Debug("Ready state sent to systemd")
 	}
 
-	log.Infof(ctx, "Serving GRPC requests on %v", d.lis.Addr())
+	slog.Info("Serving GRPC requests on", "socketAddress", d.lis.Addr())
 	if err := d.grpcServer.Serve(d.lis); err != nil {
 		return fmt.Errorf("grpc error: %v", err)
 	}
@@ -132,13 +133,13 @@ func (d *Daemon) Serve(ctx context.Context) (err error) {
 // Quit gracefully quits listening loop and stops the grpc server.
 // It can drops any existing connexion is force is true.
 func (d Daemon) Quit(ctx context.Context, force bool) {
-	log.Info(ctx, "Stopping daemon requested.")
+	slog.Info("Stopping daemon requested.")
 	if force {
 		d.grpcServer.Stop()
 		return
 	}
 
-	log.Info(ctx, "Wait for active requests to close.")
+	slog.Info("Wait for active requests to close.")
 	d.grpcServer.GracefulStop()
-	log.Debug(ctx, "All connections have now ended.")
+	slog.Debug("All connections have now ended.")
 }

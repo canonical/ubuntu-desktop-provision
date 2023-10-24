@@ -3,14 +3,13 @@ package daemon
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"runtime"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/daemon"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/ubuntu/decorate"
 )
 
 // cmdName is the binary name for the agent.
@@ -34,8 +33,7 @@ type systemPaths struct {
 
 // daemonConfig defines configuration parameters of the daemon.
 type daemonConfig struct {
-	Verbosity int
-	Paths     systemPaths
+	Paths systemPaths
 }
 
 // New registers commands and return a new App.
@@ -66,8 +64,7 @@ func New() *App {
 				return fmt.Errorf("unable to decode configuration into struct: %w", err)
 			}
 
-			setVerboseMode(a.config.Verbosity)
-			log.Debug(context.Background(), "Debug mode is enabled")
+			slog.Debug("Debug mode is enabled")
 
 			return nil
 		},
@@ -81,7 +78,6 @@ func New() *App {
 
 	a.viper = viper
 
-	installVerbosityFlag(&a.rootCmd, a.viper)
 	installConfigFlag(&a.rootCmd)
 
 	// subcommands
@@ -116,13 +112,6 @@ func (a *App) serve(config daemonConfig) error {
 	close(a.ready)
 
 	return daemon.Serve(ctx)
-}
-
-// installVerbosityFlag adds the -v and -vv options and returns the reference to it.
-func installVerbosityFlag(cmd *cobra.Command, viper *viper.Viper) *int {
-	r := cmd.PersistentFlags().CountP("verbosity", "v", "issue INFO (-v), DEBUG (-vv) or DEBUG with caller (-vvv) output")
-	decorate.LogOnError(viper.BindPFlag("verbosity", cmd.PersistentFlags().Lookup("verbosity")))
-	return r
 }
 
 // Run executes the command and associated process. It returns an error on syntax/usage error.

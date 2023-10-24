@@ -233,7 +233,6 @@ func TestAppGetRootCmd(t *testing.T) {
 func TestConfigLoad(t *testing.T) {
 	customizedSocketPath := filepath.Join(t.TempDir(), "mysocket")
 	var config daemon.DaemonConfig
-	config.Verbosity = 1
 	config.Paths.Socket = customizedSocketPath
 
 	a, wait := startDaemon(t, &config)
@@ -242,13 +241,11 @@ func TestConfigLoad(t *testing.T) {
 
 	_, err := os.Stat(customizedSocketPath)
 	require.NoError(t, err, "Socket should exist")
-	require.Equal(t, 1, a.Config().Verbosity, "Verbosity is set from config")
 }
 
 func TestAutoDetectConfig(t *testing.T) {
 	customizedSocketPath := filepath.Join(t.TempDir(), "mysocket")
 	var config daemon.DaemonConfig
-	config.Verbosity = 1
 	config.Paths.Socket = customizedSocketPath
 
 	configPath := daemon.GenerateTestConfig(t, &config)
@@ -275,7 +272,6 @@ func TestAutoDetectConfig(t *testing.T) {
 
 	_, err = os.Stat(customizedSocketPath)
 	require.NoError(t, err, "Socket should exist")
-	require.Equal(t, 1, a.Config().Verbosity, "Verbosity is set from config")
 }
 
 func TestNoConfigSetDefaults(t *testing.T) {
@@ -286,7 +282,6 @@ func TestNoConfigSetDefaults(t *testing.T) {
 	err := a.Run()
 	require.NoError(t, err, "Run should not return an error")
 
-	require.Equal(t, 0, a.Config().Verbosity, "Default Verbosity")
 	require.Equal(t, "", a.Config().Paths.Socket, "No socket address as default")
 }
 

@@ -1,7 +1,7 @@
 // Package consts defines the constants used by the project
 package consts
 
-import log "github.com/sirupsen/logrus"
+import "log/slog"
 
 var (
 	// Version is the version of the executable.
@@ -13,7 +13,7 @@ const (
 	TEXTDOMAIN = "provd"
 
 	// DefaultLogLevel is the default logging level selected without any option.
-	DefaultLogLevel = log.WarnLevel
+	DefaultLogLevel = slog.LevelWarn
 
 	// DefaultSocketPath is the default socket path.
 	DefaultSocketPath = "/run/provd.sock"

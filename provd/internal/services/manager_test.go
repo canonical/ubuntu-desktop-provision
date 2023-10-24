@@ -15,7 +15,7 @@ func TestNewManager(t *testing.T) {
 	tests := map[string]struct {
 		wantErr bool
 	}{
-		"Successfully created the manager.": {},
+		"Successfully creates the manager.": {},
 	}
 	for name, tc := range tests {
 		tc := tc

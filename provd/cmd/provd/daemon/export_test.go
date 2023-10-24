@@ -35,9 +35,6 @@ func GenerateTestConfig(t *testing.T, origConf *daemonConfig) string {
 		conf = *origConf
 	}
 
-	if conf.Verbosity == 0 {
-		conf.Verbosity = 2
-	}
 	if conf.Paths.Socket == "" {
 		conf.Paths.Socket = filepath.Join(t.TempDir(), "provd.socket")
 	}

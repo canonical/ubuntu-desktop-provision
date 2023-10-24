@@ -1,3 +1,2 @@
-Verbosity: 0
 Paths:
   Socket: "/run/test.sock"

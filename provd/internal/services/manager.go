@@ -5,10 +5,10 @@ import (
 	"context"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/hello"
 	"github.com/ubuntu/decorate"
 	"google.golang.org/grpc"
+	"log/slog"
 )
 
 // Manager mediate the whole business logic of the application.
@@ -20,7 +20,7 @@ type Manager struct {
 func NewManager(ctx context.Context) (m Manager, err error) {
 	defer decorate.OnError(&err, "can't create provd object")
 
-	log.Debug(ctx, "Building provd object")
+	slog.Debug("Building provd object")
 
 	helloService := hello.Service{}
 
@@ -31,7 +31,7 @@ func NewManager(ctx context.Context) (m Manager, err error) {
 
 // RegisterGRPCServices returns a new grpc Server
 func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
-	log.Debug(ctx, "Registering GRPC services")
+	slog.Debug("Registering GRPC services")
 
 	grpcServer := grpc.NewServer()
 

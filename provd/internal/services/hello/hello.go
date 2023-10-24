@@ -4,7 +4,6 @@ import (
 	"context"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/logs"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
