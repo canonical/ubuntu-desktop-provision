@@ -10,11 +10,11 @@ var (
 
 const (
 	// TEXTDOMAIN is the gettext domain for l10n.
-	TEXTDOMAIN = "provsrv"
+	TEXTDOMAIN = "provd"
 
 	// DefaultLogLevel is the default logging level selected without any option.
 	DefaultLogLevel = log.WarnLevel
 
 	// DefaultSocketPath is the default socket path.
-	DefaultSocketPath = "/run/provsrv.sock"
+	DefaultSocketPath = "/run/provd.sock"
 )

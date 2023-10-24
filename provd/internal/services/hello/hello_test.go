@@ -66,6 +66,7 @@ func TestSayHello(t *testing.T) {
 func newHelloClient(t *testing.T) (client provd.HelloWorldServiceClient) {
 	t.Helper()
 
+	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
 	require.NoError(t, err, "Setup: could not setup temporary socket dir path")
 	t.Cleanup(func() { _ = os.RemoveAll(tmpDir) })
@@ -74,7 +75,7 @@ func newHelloClient(t *testing.T) (client provd.HelloWorldServiceClient) {
 	lis, err := net.Listen("unix", socketPath)
 	require.NoError(t, err, "Setup: could not create unix socket")
 
-	service := hello.NewService(context.Background())
+	service := hello.Service{}
 
 	grpcServer := grpc.NewServer()
 	provd.RegisterHelloWorldServiceServer(grpcServer, &service)

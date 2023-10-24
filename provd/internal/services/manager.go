@@ -22,7 +22,7 @@ func NewManager(ctx context.Context) (m Manager, err error) {
 
 	log.Debug(ctx, "Building provd object")
 
-	helloService := hello.NewService(ctx)
+	helloService := hello.Service{}
 
 	return Manager{
 		helloService: helloService,

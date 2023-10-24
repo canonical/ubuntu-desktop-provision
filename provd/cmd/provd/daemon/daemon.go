@@ -27,7 +27,7 @@ type App struct {
 	ready chan struct{}
 }
 
-// only overriable for tests.
+// only overridable for tests.
 type systemPaths struct {
 	Socket string
 }
@@ -44,7 +44,7 @@ func New() *App {
 	a.rootCmd = cobra.Command{
 		Use:   fmt.Sprintf("%s COMMAND", cmdName),
 		Short: "Provisioning daemon",
-		Long:  "Provisioning servie daemon.",
+		Long:  "Ubuntu Desktop Provisioning daemon.",
 		Args:  cobra.NoArgs,
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 			// Command parsing has been successful. Returns to not print usage anymore.
@@ -53,6 +53,7 @@ func New() *App {
 			// Set config defaults
 			a.config = daemonConfig{
 				Paths: systemPaths{
+					// Empty by default for socket activation
 					Socket: "",
 				},
 			}
