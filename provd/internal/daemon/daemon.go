@@ -69,7 +69,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 	var lis net.Listener
 
 	if opts.socketPath != "" {
-		slog.Debug("Listening on", "socketPath", opts.socketPath)
+		slog.Debug(fmt.Sprintf("Listening on %s", opts.socketPath))
 
 		// manual socket
 		// TODO: if socket exists, remove
@@ -114,7 +114,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 func (d *Daemon) Serve(ctx context.Context) (err error) {
 	defer decorate.OnError(&err, "error while serving")
 
-	slog.Debug("Starting to serve requests on", "socketAddress", d.lis.Addr())
+	slog.Debug(fmt.Sprintf("Starting to serve requests on %s", d.lis.Addr()))
 
 	// Signal to systemd that we are ready.
 	if sent, err := d.systemdSdNotifier(false, "READY=1"); err != nil {
@@ -123,7 +123,7 @@ func (d *Daemon) Serve(ctx context.Context) (err error) {
 		slog.Debug("Ready state sent to systemd")
 	}
 
-	slog.Info("Serving GRPC requests on", "socketAddress", d.lis.Addr())
+	slog.Info(fmt.Sprintf("Serving GRPC requests on %v", d.lis.Addr()))
 	if err := d.grpcServer.Serve(d.lis); err != nil {
 		return fmt.Errorf("grpc error: %v", err)
 	}

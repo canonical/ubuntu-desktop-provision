@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log/slog"
 	"os"
 	"os/signal"
@@ -26,7 +27,7 @@ func run(a app) int {
 	defer installSignalHandler(a)()
 
 	if err := a.Run(); err != nil {
-		slog.Error("application run failed", "errorDetail", err)
+		slog.Error(fmt.Sprintf("%v", err))
 
 		if a.UsageError() {
 			return 2

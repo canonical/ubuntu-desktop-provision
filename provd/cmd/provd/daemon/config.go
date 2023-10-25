@@ -27,7 +27,7 @@ func initViperConfig(name string, cmd *cobra.Command, vip *viper.Viper) (err err
 		vip.AddConfigPath("/etc/provd/")
 		// Add the executable path to the config search path.
 		if binPath, err := os.Executable(); err != nil {
-			slog.Warn("Failed to get current executable path, not adding it as a config dir", "errorDetail", err)
+			slog.Warn(fmt.Sprintf("Failed to get current executable path, not adding it as a config dir: %v", err))
 		} else {
 			vip.AddConfigPath(filepath.Dir(binPath))
 		}
@@ -36,12 +36,12 @@ func initViperConfig(name string, cmd *cobra.Command, vip *viper.Viper) (err err
 	if err := vip.ReadInConfig(); err != nil {
 		var e viper.ConfigFileNotFoundError
 		if errors.As(err, &e) {
-			slog.Info("No configuration file.\nWe will only use the defaults, env variables or flags.", "errorDetail", e)
+			slog.Info(fmt.Sprintf("No configuration file: %v.\nWe will only use the defaults, env variables or flags.", e))
 		} else {
 			return fmt.Errorf("invalid configuration file: %w", err)
 		}
 	} else {
-		slog.Info("Using configuration file", "pathToConfigFileUsed", vip.ConfigFileUsed())
+		slog.Info(fmt.Sprintf("Using configuration file: %v", vip.ConfigFileUsed()))
 	}
 
 	// Handle environment.
