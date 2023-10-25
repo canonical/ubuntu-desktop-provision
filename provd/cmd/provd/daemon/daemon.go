@@ -15,7 +15,7 @@ import (
 // cmdName is the binary name for the agent.
 const cmdName = "provd"
 
-// App encapsulate commands and options of the daemon, which can be controlled by env variables and config files.
+// App encapsulates commands and options of the daemon, which can be controlled by env variables and config files.
 type App struct {
 	rootCmd cobra.Command
 	viper   *viper.Viper

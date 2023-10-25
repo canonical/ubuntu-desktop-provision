@@ -11,7 +11,7 @@ import (
 	"log/slog"
 )
 
-// Manager mediate the whole business logic of the application.
+// Manager mediates the whole business logic of the application.
 type Manager struct {
 	helloService hello.Service
 }

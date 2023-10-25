@@ -26,7 +26,7 @@ func run(a app) int {
 	defer installSignalHandler(a)()
 
 	if err := a.Run(); err != nil {
-		slog.Error("applicatoin run failed", "errorDetail", err)
+		slog.Error("application run failed", "errorDetail", err)
 
 		if a.UsageError() {
 			return 2

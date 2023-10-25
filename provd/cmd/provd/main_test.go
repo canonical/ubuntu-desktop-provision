@@ -20,7 +20,7 @@ type myApp struct {
 func (a *myApp) Run() error {
 	<-a.done
 	if a.runError {
-		return errors.New("Error requested")
+		return errors.New("error requested")
 	}
 	return nil
 }

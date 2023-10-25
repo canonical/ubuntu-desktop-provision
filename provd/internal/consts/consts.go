@@ -1,4 +1,4 @@
-// Package consts defines the constants used by the project
+// Package consts defines the constants used by the project.
 package consts
 
 import "log/slog"
