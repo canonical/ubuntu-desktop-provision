@@ -290,7 +290,7 @@ func TestBadConfigFile(t *testing.T) {
 	configPath := filepath.Join(tempDir, "empty_config.yaml")
 
 	// Write "foo" to the file
-	err := os.WriteFile(configPath, []byte("foo"), 0644)
+	err := os.WriteFile(configPath, []byte("foo"), 0600)
 	require.NoError(t, err, "Failed to create config file with 'blah'")
 
 	a := daemon.New()

@@ -1,3 +1,4 @@
+// Package hello implements the HelloWorld gRPC service.
 package hello
 
 import (
@@ -8,6 +9,7 @@ import (
 	"google.golang.org/grpc/status"
 )
 
+// Service is the implementation of the HelloWorld module service.
 type Service struct {
 	provd.UnimplementedHelloWorldServiceServer
 }
@@ -28,5 +30,3 @@ func (s *Service) SayHello(ctx context.Context, req *provd.HelloRequest) (*provd
 		Message: message,
 	}, nil
 }
-
-func (s *Service) Quit(ctx context.Context) {}

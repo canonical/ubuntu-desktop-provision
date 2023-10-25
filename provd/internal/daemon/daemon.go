@@ -4,10 +4,9 @@ package daemon
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"net"
 	"os"
-
-	"log/slog"
 
 	"github.com/coreos/go-systemd/activation"
 	"github.com/coreos/go-systemd/daemon"
@@ -79,7 +78,7 @@ func New(ctx context.Context, registerGRPCService GRPCServiceRegisterer, args ..
 		}
 		// We want everyone to be able to write to our socket and we will filter permissions
 		// #nosec G302
-		if err = os.Chmod(opts.socketPath, 0666); err != nil {
+		if err = os.Chmod(opts.socketPath, 0600); err != nil {
 			return nil, fmt.Errorf("could not change socket permission: %v", err)
 		}
 	} else {

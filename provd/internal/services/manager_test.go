@@ -20,7 +20,6 @@ func TestNewManager(t *testing.T) {
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
-
 			_, err := services.NewManager(context.Background())
 			if tc.wantErr {
 				require.Error(t, err, "NewManager should have returned an error, but did not")

@@ -3,12 +3,12 @@ package services
 
 import (
 	"context"
+	"log/slog"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/hello"
 	"github.com/ubuntu/decorate"
 	"google.golang.org/grpc"
-	"log/slog"
 )
 
 // Manager mediates the whole business logic of the application.

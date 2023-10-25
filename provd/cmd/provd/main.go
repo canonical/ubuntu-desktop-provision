@@ -1,3 +1,4 @@
+// Package main is the Ubuntu Desktop Provisioning daemon entry point.
 package main
 
 import (
