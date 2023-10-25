@@ -1,8 +1,10 @@
+import 'package:args/args.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -60,20 +62,23 @@ class StoragePage extends ConsumerWidget {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final args = tryGetService<ArgResults>();
+    final coreInstall = args?['core-install'] != '0';
+    final List<OsProber> existingOS = coreInstall ? [] : (model.existingOS ?? []);
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.installationTypeTitle),
       ),
-      header: Text(_formatHeader(context, model.existingOS ?? [])),
+      header: Text(_formatHeader(context, existingOS)),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (model.canInstallAlongside || model.hasBitLocker)
+          if ((model.canInstallAlongside || model.hasBitLocker) && !coreInstall)
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
                 title: Text(_formatAlongside(
-                    lang, model.productInfo, model.existingOS ?? [])),
+                    lang, model.productInfo, existingOS)),
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,
@@ -95,7 +100,7 @@ class StoragePage extends ConsumerWidget {
                 onChanged: (value) => model.type = value!,
               ),
             ),
-            if (model.hasAdvancedFeatures)
+            if (model.hasAdvancedFeatures && !coreInstall)
               Padding(
                 padding: kWizardIndentation,
                 child: Row(
@@ -114,7 +119,7 @@ class StoragePage extends ConsumerWidget {
               ),
             const SizedBox(height: kWizardSpacing),
           ],
-          if (model.canManualPartition)
+          if (model.canManualPartition && !coreInstall)
             YaruRadioButton<StorageType>(
               title: Text(lang.installationTypeManual),
               subtitle: Text(lang.installationTypeManualInfo(flavor.name)),
