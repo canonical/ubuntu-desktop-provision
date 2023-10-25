@@ -1,0 +1,15 @@
+name: subiquity_test
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  build_runner: ^2.2.0
+  mockito: 5.4.2
+  path: ^1.8.0
+  subiquity_client:
+    path: ../subiquity_client
+
+dev_dependencies:
+  test: ^1.23.1

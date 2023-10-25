@@ -185,5 +185,17 @@ jobs:
         channel: 'stable'
         flutter-version: ${{env.FLUTTER_VERSION}}
     - run: flutter pub global activate melos
+    - name: Install dependencies
+      run: |
+        sudo apt update && sudo apt install lcov
+        make install_deps
+    - name: Setup environment
+      run: |
+        sudo loginctl enable-linger $USER
+        sudo systemctl start user@$UID.service
+        echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
     - run: melos pub get
-    - run: melos test
+    - run: melos coverage
+    - uses: codecov/codecov-action@v3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
