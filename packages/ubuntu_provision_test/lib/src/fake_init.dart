@@ -4,6 +4,7 @@ import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:sysmetrics/src/sysmetrics.dart';
+import 'package:ubuntu_flavor/src/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -364,6 +365,9 @@ class _FakeSysmetrics implements Sysmetrics {
 class _FakeProductService implements ProductService {
   @override
   ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.10');
+
+  @override
+  UbuntuFlavor? getFlavor() => const UbuntuFlavor(id: 'FakeUbuntu', name: 'Ubuntu Fake Flavo(u)r');
 
   @override
   String getReleaseNotesURL(String languageCode) =>

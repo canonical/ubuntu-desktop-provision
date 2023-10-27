@@ -4,6 +4,7 @@ import 'package:integration_test/integration_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
+import 'package:ubuntu_flavor/src/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -434,6 +435,9 @@ class FakeDesktopService implements DesktopService {
 class FakeProductService implements ProductService {
   @override
   ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.04');
+
+  @override
+  UbuntuFlavor? getFlavor() => const UbuntuFlavor(id: 'FakeUbuntu', name: 'Ubuntu Fake Flavo(u)r');
 
   @override
   String getReleaseNotesURL(String languageCode) =>

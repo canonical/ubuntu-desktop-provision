@@ -1,6 +1,7 @@
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:meta/meta.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 
 const String isoPath = '/cdrom/.disk/info';
 const String localPath = '/etc/os-release';
@@ -20,11 +21,18 @@ class ProductInfo {
 /// A class which reads current system info
 class ProductService {
   ProductInfo? _cachedProductInfo;
+  final UbuntuFlavor? _flavor;
 
   final FileSystem _fileSystem;
 
-  ProductService([@visibleForTesting FileSystem? fileSystem])
-      : _fileSystem = fileSystem ?? const LocalFileSystem();
+  ProductService({@visibleForTesting FileSystem? fileSystem, UbuntuFlavor? flavor})
+      : _fileSystem = fileSystem ?? const LocalFileSystem(),
+      _flavor = flavor;
+
+  /// Returns the flavor data, if passed during construction
+  UbuntuFlavor? getFlavor() {
+    return _flavor;
+  }
 
   /// Returns system version from CD ISO or hard disk falls back to simple
   /// "Ubuntu" text when cannot find file.

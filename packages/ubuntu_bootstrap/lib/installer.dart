@@ -98,7 +98,7 @@ Future<void> runInstallerApp(
       () => SubiquityNetworkService(getService<SubiquityClient>()));
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
-  tryRegisterService(ProductService.new);
+  tryRegisterService<ProductService>(() => ProductService(flavor: flavor));
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
   tryRegisterService<SessionService>(
       () => SubiquitySessionService(getService<SubiquityClient>()));

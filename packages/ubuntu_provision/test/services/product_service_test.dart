@@ -14,7 +14,7 @@ void main() {
         f.writeAsString(
             'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, '21.04');
@@ -41,7 +41,7 @@ UBUNTU_CODENAME=hirsute
 
           ''');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.version, '21.04');
       expect(info.toString(), 'Ubuntu 21.04');
@@ -49,7 +49,7 @@ UBUNTU_CODENAME=hirsute
 
     test('should return Ubuntu as fallback value', () {
       final fileSystem = MemoryFileSystem();
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, isNull);
@@ -62,7 +62,7 @@ UBUNTU_CODENAME=hirsute
         f.writeAsString(
             'Ubuntu 20.04.2.0 LTS "Focal Fossa" - Release amd64 (20210209.1)');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, '20.04.2.0 LTS');
@@ -89,7 +89,7 @@ UBUNTU_CODENAME=focal
 
           ''');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, '20.04.2 LTS');
@@ -103,7 +103,7 @@ UBUNTU_CODENAME=focal
 PRETTY_NAME="Ubuntu 23.10"
 ''');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, '23.10');
@@ -116,7 +116,7 @@ PRETTY_NAME="Ubuntu 23.10"
         f.writeAsString(
             'Kubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Kubuntu');
       expect(info.version, '21.04');
@@ -129,7 +129,7 @@ PRETTY_NAME="Ubuntu 23.10"
         f.writeAsString(
             'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      final info = ProductService(fileSystem).getProductInfo();
+      final info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu-MATE');
       expect(info.version, '21.04');
@@ -142,7 +142,7 @@ PRETTY_NAME="Ubuntu 23.10"
         f.writeAsString(
             'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      final service = ProductService(fileSystem);
+      final service = ProductService(fileSystem: fileSystem);
       var info = service.getProductInfo();
 
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
@@ -163,14 +163,14 @@ PRETTY_NAME="Ubuntu 23.10"
         f.writeAsString(
             'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      var info = ProductService(fileSystem).getProductInfo();
+      var info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
             'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
 
-      info = ProductService(fileSystem).getProductInfo();
+      info = ProductService(fileSystem: fileSystem).getProductInfo();
 
       expect(info.name, 'Ubuntu-MATE');
       expect(info.version, '21.04');
@@ -186,7 +186,7 @@ PRETTY_NAME="Ubuntu 23.10"
 https://wiki.ubuntu.com/IntrepidReleaseNotes/\${LANG}
     ''');
 
-    final service = ProductService(fs);
+    final service = ProductService(fileSystem: fs);
     final url = service.getReleaseNotesURL('fr');
     expect(url, equals('https://wiki.ubuntu.com/IntrepidReleaseNotes/fr'));
   });
@@ -201,14 +201,14 @@ version,codename,series,created,release,eol,eol-server,eol-esm
 5.04,Hoary Hedgehog,hoary,2004-10-20,2005-04-08,2006-10-31
     ''');
 
-    final service = ProductService(fs);
+    final service = ProductService(fileSystem: fs);
     final url = service.getReleaseNotesURL('en');
     expect(url, equals('https://wiki.ubuntu.com/HoaryHedgehog/ReleaseNotes'));
   });
 
   test('release notes URL fallback', () {
     final fs = MemoryFileSystem.test();
-    final service = ProductService(fs);
+    final service = ProductService(fileSystem: fs);
     final url = service.getReleaseNotesURL('en');
     expect(url, equals('https://ubuntu.com/download/desktop'));
   });
