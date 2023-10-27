@@ -367,7 +367,8 @@ class _FakeProductService implements ProductService {
   ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.10');
 
   @override
-  UbuntuFlavor? getFlavor() => const UbuntuFlavor(id: 'FakeUbuntu', name: 'Ubuntu Fake Flavo(u)r');
+  UbuntuFlavor? getFlavor() =>
+      const UbuntuFlavor(id: 'FakeUbuntu', name: 'Ubuntu Fake Flavo(u)r');
 
   @override
   String getReleaseNotesURL(String languageCode) =>

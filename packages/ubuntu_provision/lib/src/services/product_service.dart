@@ -25,9 +25,10 @@ class ProductService {
 
   final FileSystem _fileSystem;
 
-  ProductService({@visibleForTesting FileSystem? fileSystem, UbuntuFlavor? flavor})
+  ProductService(
+      {@visibleForTesting FileSystem? fileSystem, UbuntuFlavor? flavor})
       : _fileSystem = fileSystem ?? const LocalFileSystem(),
-      _flavor = flavor;
+        _flavor = flavor;
 
   /// Returns the flavor data, if passed during construction
   UbuntuFlavor? getFlavor() {
