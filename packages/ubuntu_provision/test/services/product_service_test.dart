@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:file/memory.dart';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/services.dart';
 
 void main() {
@@ -14,11 +17,19 @@ void main() {
         f.writeAsString(
             'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
       });
-      final info = ProductService(fileSystem: fileSystem).getProductInfo();
+      final service = ProductService(
+          fileSystem: fileSystem,
+          flavor: const UbuntuFlavor(
+              id: 'FakeUbuntu', name: 'Ubuntu Fake Flavo(u)r'));
+      final info = service.getProductInfo();
 
       expect(info.name, 'Ubuntu');
       expect(info.version, '21.04');
       expect(info.toString(), 'Ubuntu 21.04');
+
+      final flavor = service.getFlavor();
+      expect(flavor?.id, 'FakeUbuntu');
+      expect(flavor?.name, 'Ubuntu Fake Flavo(u)r');
     });
 
     test('should return product info from disk when iso file doesnt exists',
