@@ -33,6 +33,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: |
         sudo apt update
         sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
@@ -98,6 +99,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
+    - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
     - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
