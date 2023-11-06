@@ -17,9 +17,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-    - run: flutter pub global activate melos
-    - run: melos pub get
+    - uses: bluefireteam/melos-action@v2
     - run: melos analyze
 
   bootstrap:
@@ -67,7 +65,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: flutter pub get
+    - uses: bluefireteam/melos-action@v2
       working-directory: packages/${{matrix.package}}
     - run: flutter test --coverage
       working-directory: packages/${{matrix.package}}
@@ -85,9 +83,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-    - run: flutter pub global activate melos
-    - run: melos pub get
+    - uses: bluefireteam/melos-action@v2
     - run: melos format
 
   init:
@@ -115,9 +111,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-    - run: flutter pub global activate melos
-    - run: melos pub get
+    - uses: bluefireteam/melos-action@v2
     - run: melos generate
     - name: Check for outdated mocks
       if: github.event_name == 'pull_request'
@@ -139,9 +133,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-    - run: flutter pub global activate melos
-    - run: melos pub get
+    - uses: bluefireteam/melos-action@v2
     - run: melos gen-l10n
     - name: Check for outdated l10n
       if: github.event_name == 'pull_request'
@@ -163,8 +155,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
-    - run: flutter pub global activate melos
+    - uses: bluefireteam/melos-action@v2
     - name: Install dependencies
       run: |
         sudo apt update && sudo apt install lcov
@@ -174,7 +165,6 @@ jobs:
         sudo loginctl enable-linger $USER
         sudo systemctl start user@$UID.service
         echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
-    - run: melos pub get
     - run: melos coverage
     - uses: codecov/codecov-action@v3
       with:
