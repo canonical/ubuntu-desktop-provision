@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'endpoint.dart';
 import 'server/common.dart';
-import 'server/process.dart';
 import 'server/paths.dart';
+import 'server/process.dart';
 import 'types.dart';
 
 const _kWaitTimes = 90;
