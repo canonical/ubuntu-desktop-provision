@@ -51,8 +51,7 @@ class SourcePage extends ConsumerWidget {
                       ),
                     ),
                   ))
-              .withSpacing(kWizardSpacing)
-              .toList(),
+              .withSpacing(kWizardSpacing),
           Visibility(
             child: Padding(
               padding: const EdgeInsets.all(kYaruPagePadding),
