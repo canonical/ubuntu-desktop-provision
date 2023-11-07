@@ -19,7 +19,9 @@ void main() {
   testWidgets('init', (tester) async {
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.runApp(() => runInitApp(['--pages=welcome,locale,keyboard,network,timezone,identity,theme,telemetry,privacy,store']));
+    await tester.runApp(() => runInitApp([
+          '--pages=welcome,locale,keyboard,network,timezone,identity,theme,telemetry,privacy,store'
+        ]));
 
     await tester.testWelcomeInitPage();
     await tester.tapNext();

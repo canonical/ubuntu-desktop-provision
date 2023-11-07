@@ -58,10 +58,12 @@ class GdmService {
     IdentityService identityService = getService<IdentityService>();
     var identity = await identityService.getIdentity();
 
-    await openNewSessionWithUsernameAndPassword(identity.username, identity.password);
+    await openNewSessionWithUsernameAndPassword(
+        identity.username, identity.password);
   }
 
-  Future<void> openNewSessionWithUsernameAndPassword(String username, String password) async {
+  Future<void> openNewSessionWithUsernameAndPassword(
+      String username, String password) async {
     var userVerifier = await getUserVerifier();
     var greeter = await getGreeter();
 
@@ -95,10 +97,8 @@ class GdmService {
         .listen((signal) => log.warning('Problem signal received $signal'));
     secretInfoQuerySignal.listen((signal) {
       log.info('SecretInfoQuery signal received $signal');
-      unawaited(userVerifier.callMethod(
-        'org.gnome.DisplayManager.UserVerifier',
-        'AnswerQuery',
-        [signal.values[0], DBusString(password)]));
+      unawaited(userVerifier.callMethod('org.gnome.DisplayManager.UserVerifier',
+          'AnswerQuery', [signal.values[0], DBusString(password)]));
     });
     sessionOpenedSignal.listen((signal) async {
       log.info('SessionOpened signal received $signal');

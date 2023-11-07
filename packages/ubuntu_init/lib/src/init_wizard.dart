@@ -117,25 +117,24 @@ class InitWizard extends ConsumerWidget {
         InitRoutes.launchsession: () {
           bool shownPage = false;
           return WizardRoute(
-            userData: const WizardRouteData(hasNext: false),
-            builder: (_) => const LaunchSessionPage(),
-            onLoad: (_) {
-              shownPage = true;
-              return LaunchSessionPage.load(ref);
-            },
-            onNext: (_) async {
-              if (shownPage) {
-                final window = YaruWindow.of(context);
-                GdmService gdmService = getService<GdmService>();
-                await gdmService.openNewSession();
-                await _onDone?.call();
-                await window.close();
-                return InitRoutes.initial;
-              } else {
-                return null;
-              }
-            }
-          );
+              userData: const WizardRouteData(hasNext: false),
+              builder: (_) => const LaunchSessionPage(),
+              onLoad: (_) {
+                shownPage = true;
+                return LaunchSessionPage.load(ref);
+              },
+              onNext: (_) async {
+                if (shownPage) {
+                  final window = YaruWindow.of(context);
+                  GdmService gdmService = getService<GdmService>();
+                  await gdmService.openNewSession();
+                  await _onDone?.call();
+                  await window.close();
+                  return InitRoutes.initial;
+                } else {
+                  return null;
+                }
+              });
         }(),
         InitRoutes.store: WizardRoute(
           userData: const WizardRouteData(hasNext: false),
