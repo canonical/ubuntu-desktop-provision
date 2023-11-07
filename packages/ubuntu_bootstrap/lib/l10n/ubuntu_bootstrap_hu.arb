@@ -832,5 +832,13 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok, webböngésző és játékok.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Alapértelmezett telepítés",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Csak a legszükségesebbek, webböngésző és alapvető segédprogramok.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Teljes telepítés",
+  "@fullInstallationTitle": {}
 }

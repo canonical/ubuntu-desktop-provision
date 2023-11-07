@@ -101,7 +101,7 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
   UbuntuInitLocalizationsPtBr(): super('pt_BR');
 
   @override
-  String get welcomePageTitle => 'Boas-vindas';
+  String get welcomePageTitle => 'Bem-vindo';
 
   @override
   String welcomePageHeader(Object distro) {

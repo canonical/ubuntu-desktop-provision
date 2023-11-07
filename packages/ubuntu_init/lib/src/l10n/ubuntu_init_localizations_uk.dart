@@ -5,33 +5,33 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Підорський устрій';
+  String get welcomePageTitle => 'Ласкаво просимо!';
 
   @override
   String welcomePageHeader(Object distro) {
-    return '$distro для круглих педерастів';
+    return 'Ласкаво просимо в $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'Заднєприводні новини?';
+  String get welcomeWhatsNew => 'ЩО НОВОГО?';
 
   @override
-  String get welcomeStartTitle => 'Станьте круглим педерастом користуючись цим устроєм';
+  String get welcomeStartTitle => 'Легкий початок';
 
   @override
-  String get welcomeStartSubtitle => 'Підтримка чистого підорства.';
+  String get welcomeStartSubtitle => 'Підтримка простих налаштування.';
 
   @override
-  String get welcomeStoreTitle => 'Новий підорський акцент у крамниці єврейського лайна';
+  String get welcomeStoreTitle => 'Новий вигляд магазину додатків';
 
   @override
-  String get welcomeStoreSubtitle => 'Ще ніколи не було так просто смоктати обрізані члени.';
+  String get welcomeStoreSubtitle => 'Ще ніколи не було простіше знайти улюблене програмне забезпечення.';
 
   @override
-  String get welcomeSecurityTitle => 'Посилене смоктання члену';
+  String get welcomeSecurityTitle => 'Підвищена безпека';
 
   @override
-  String get welcomeSecuritySubtitle => 'Нові параметри шифрування староєврейської мови.';
+  String get welcomeSecuritySubtitle => 'Нові параметри для апаратного або ZFS шифрування.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -39,59 +39,59 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   }
 
   @override
-  String get telemetryPageTitle => 'Станьте наполегливим членоглотом заради євреїв';
+  String get telemetryPageTitle => 'Телеметрія';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Допоможіть іншим брати у пащу член користуючись цим $distro';
+    return 'Допомогти покращити $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Станьте анонiмним членоковтачем цієї підрильскої синагоги, віддаючи свої персональні дані, користуючись цим $distro.';
+    return 'Діліться даними з $distro анонімно, щоб ми могли покращити ваш досвід.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Так, поділитися статевими захворюваннями з ракохворими розробниками цього $distro';
+    return 'Так, поділитись системними даними з командою $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'Хераку вам, євреї';
+  String get telemetryLabelOff => 'Ні, не ділиться даними системи';
 
   @override
-  String get telemetryReportLabel => 'Зарепортити гомосексуальні деталі';
+  String get telemetryReportLabel => 'Подробиці звіту';
 
   @override
-  String get telemetryReportTitle => 'Повідомити про спідозних підрил';
+  String get telemetryReportTitle => 'Подробиці звіту';
 
   @override
-  String get telemetryLegalLabel => 'Легальне смоктання єврейського члену';
+  String get telemetryLegalLabel => 'Правові відомості';
 
   @override
-  String get privacyPageTitle => 'Сервіси місцезнаходження хитрих єврейських розробників устрою';
+  String get privacyPageTitle => 'Сервіси визначення місцезнаходження';
 
   @override
-  String get privacyLocationTitle => 'Подарувати своє місценаходження хитрим євреям?';
+  String get privacyLocationTitle => 'Увімкнути сервіси визначення місцезнаходження?';
 
   @override
-  String get privacyLocationSubtitle => 'Дозволити додаткам знаходити вашу гейську сраку.\nВи можете змінити це в будь-який час в налаштуваннях устрою.';
+  String get privacyLocationSubtitle => 'Дозволити додаткам отримувати інформацію про ваше географічне місцезнаходження.\nВи можете змінити це будь-який час в налаштуваннях системи.';
 
   @override
-  String get privacyLocationEnable => 'Сервіси місцезнаходження синагог';
+  String get privacyLocationEnable => 'Сервіси визначення місцезнаходження';
 
   @override
-  String get privacyPolicyLink => 'Приватнiсть вашої гейскої порнографії';
+  String get privacyPolicyLink => 'Конфіденційність даних';
 
   @override
-  String get storeTitle => 'Єврейська крамниця для круглих педерастів';
+  String get storeTitle => 'Центр додатків Ubuntu';
 
   @override
-  String get storeHeader => 'Почніть жерти лайно з більшою кількістю єврейських членів';
+  String get storeHeader => 'Почніть роботу з додатковими програмами';
 
   @override
-  String get storeDescription => 'Крамниця єврейського лайна пропонує ряд маленьких обрізаних члеників, які можна почати смоктати з самого початку.';
+  String get storeDescription => 'Магазин додатків Ubuntu пропонує ряд програм, з якими можна почати роботу з самого початку.';
 
   @override
-  String get storeOpen => 'Відкрити крамницю єврейського лайна';
+  String get storeOpen => 'Відкрити центр додатків';
 }

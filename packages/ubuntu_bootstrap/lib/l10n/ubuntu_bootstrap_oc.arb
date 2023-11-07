@@ -581,5 +581,106 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Una seleccion d’aisinas de burotica, utilitaris, navegador web e jòcs fòra connexion.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Installacion per defaut",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Sonque çò essencials, lo navegador web e los utilitaris basics.",
+  "@minimalInstallationSubtitle": {},
+  "installationTypeTPMSelected": "TPM seleccionat",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPM": "EXPERIMENTAL : activar lo chiframent material del disc complèt",
+  "@installationTypeTPM": {},
+  "fullInstallationTitle": "Installacion complèta",
+  "@fullInstallationTitle": {},
+  "refreshPageTitle": "Mesa a jorn disponible",
+  "@refreshPageTitle": {},
+  "refreshInstall": "Metre a jorn cap a la version {version}",
+  "@refreshInstall": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshCurrent": "La version actuala de {snap} es {version}.",
+  "@refreshCurrent": {
+    "type": "text",
+    "placeholders": {
+      "snap": {},
+      "version": {}
+    }
+  },
+  "refreshSnapRefresh": "Actualizacion de {snap}...",
+  "@refreshSnapRefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpdating": "Actualizacion de {snap}...",
+  "@refreshUpdating": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapPrepare": "Preparacion de {snap}...",
+  "@refreshSnapPrepare": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCopyData": "Còpia de las donadas {snap}...",
+  "@refreshSnapCopyData": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapValidate": "Validacion de {snap}...",
+  "@refreshSnapValidate": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapDownload": "Telecargament de {snap}...",
+  "@refreshSnapDownload": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapCheckRerefresh": "Verificacion de mesa a jorn de {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapStopServices": "Arrèst dels servicis {snap}...",
+  "@refreshSnapStopServices": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshSnapMount": "Montatge de {snap}...",
+  "@refreshSnapMount": {
+    "type": "text",
+    "placeholders": {
+      "snap": {}
+    }
+  },
+  "refreshUpToDate": "La version actuala {version} es actualizada.",
+  "@refreshUpToDate": {
+    "type": "text",
+    "placeholders": {
+      "version": {}
+    }
+  },
+  "refreshRestart": "Mercés de reaviar l’installador.",
+  "@refreshRestart": {}
 }

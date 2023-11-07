@@ -777,5 +777,13 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Senrete uzebla kolekto da laborprogramoj, utilaĵoj, TTT-legilo kaj ludoj.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Implicita instalo",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Nur la esencaĵoj: TTT-legilo kaj bazaj ilaĵoj.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Plena instalo",
+  "@fullInstallationTitle": {}
 }

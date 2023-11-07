@@ -5,18 +5,18 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsNb([String locale = 'nb']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Velkommen';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Velkommen til $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'Hva er nytt?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'En strømlinjeformet start';
 
   @override
   String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
@@ -57,7 +57,7 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Nei, ikke del systemdata';
 
   @override
   String get telemetryReportLabel => 'Reporting details';
@@ -81,10 +81,10 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get privacyLocationEnable => 'Location services';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Databeskyttelse';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Ubuntu-butikken';
 
   @override
   String get storeHeader => 'Get started with more applications';

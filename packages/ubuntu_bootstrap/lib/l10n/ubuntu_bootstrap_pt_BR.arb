@@ -782,5 +782,13 @@
     "placeholders": {
       "version": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Uma seleção off-line de ferramentas de escritório, utilitários, navegador da web e jogos.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Instalação padrão",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Apenas o essencial, navegador da web e utilitários básicos.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Instalação completa",
+  "@fullInstallationTitle": {}
 }

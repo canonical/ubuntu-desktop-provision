@@ -88,10 +88,10 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   String get configureSecureBootOption => 'Configure Secure Boot';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'اختيار مفتاح أمان';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'تأكيد مفتاح الأمان';
 
   @override
   String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';

@@ -445,18 +445,43 @@
   "@partitionEditTitle": {},
   "partitionSizeLabel": "Розмір:",
   "@partitionSizeLabel": {},
-  "loadingHeader": "Висираня {DISTRO}…",
+  "@partitionUnitMB": {},
+  "loadingHeader": "Підготовка {DISTRO}…",
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "loadingPageTitle": "Смокчіть члени у цьому {DISTRO}",
+  "loadingPageTitle": "Ласкаво просимо в {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "offlineWarning": "Ви зараз не в мережі",
+  "@offlineWarning": {},
+  "fullInstallationSubtitle": "Зручний для роботи в автономному режимі набір офісних інструментів, утиліт, веб-браузера та ігор.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Мінімальна установка",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Тільки найнеобхідніше, веб-браузер та базові утиліти.",
+  "@minimalInstallationSubtitle": {},
+  "installationTypeTPMWarning": "<font color=\"{color}\">Увага:</font> Ця функція підтримується лише на певних конфігураціях обладнання та може не підтримувати оновлення до майбутніх випусків Ubuntu. Будь ласка, прочитайте <a href=\"{url}\">примітки до випуску</a> перед увімкненням.",
+  "@installationTypeTPMWarning": {
+    "type": "text",
+    "placeholders": {
+      "color": {},
+      "url": {}
+    }
+  },
+  "installationTypeTPMSelected": "TPM обрано",
+  "@installationTypeTPMSelected": {},
+  "installationTypeTPM": "ЕКСПЕРИМЕНТАЛЬНО: Увімкнути апаратне шифрування диска",
+  "@installationTypeTPM": {},
+  "fullInstallationTitle": "Повна установка",
+  "@fullInstallationTitle": {},
+  "rstHeader": "Вимкніть RST для продовженя",
+  "@rstHeader": {}
 }

@@ -1,11 +1,11 @@
 {
-  "welcomeWhatsNew": "Заднєприводні новини?",
+  "welcomeWhatsNew": "ЩО НОВОГО?",
   "@welcomeWhatsNew": {},
-  "welcomeSecurityTitle": "Посилене смоктання члену",
+  "welcomeSecurityTitle": "Підвищена безпека",
   "@welcomeSecurityTitle": {},
-  "welcomeStoreSubtitle": "Ще ніколи не було так просто смоктати обрізані члени.",
+  "welcomeStoreSubtitle": "Ще ніколи не було простіше знайти улюблене програмне забезпечення.",
   "@welcomeStoreSubtitle": {},
-  "welcomeSecuritySubtitle": "Нові параметри шифрування староєврейської мови.",
+  "welcomeSecuritySubtitle": "Нові параметри для апаратного або ZFS шифрування.",
   "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Переглянути журнал змін</a>",
   "@welcomeChangelogLabel": {
@@ -14,63 +14,63 @@
       "url": {}
     }
   },
-  "telemetryPageTitle": "Станьте наполегливим членоглотом заради євреїв",
+  "telemetryPageTitle": "Телеметрія",
   "@telemetryPageTitle": {},
-  "telemetryHeader": "Допоможіть іншим брати у пащу член користуючись цим {distro}",
+  "telemetryHeader": "Допомогти покращити {distro}",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryReportLabel": "Зарепортити гомосексуальні деталі",
+  "telemetryReportLabel": "Подробиці звіту",
   "@telemetryReportLabel": {},
-  "telemetryDescription": "Станьте анонiмним членоковтачем цієї підрильскої синагоги, віддаючи свої персональні дані, користуючись цим {distro}.",
+  "telemetryDescription": "Діліться даними з {distro} анонімно, щоб ми могли покращити ваш досвід.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryLegalLabel": "Легальне смоктання єврейського члену",
+  "telemetryLegalLabel": "Правові відомості",
   "@telemetryLegalLabel": {},
-  "telemetryReportTitle": "Повідомити про спідозних підрил",
+  "telemetryReportTitle": "Подробиці звіту",
   "@telemetryReportTitle": {},
-  "privacyLocationSubtitle": "Дозволити додаткам знаходити вашу гейську сраку.\nВи можете змінити це в будь-який час в налаштуваннях устрою.",
+  "privacyLocationSubtitle": "Дозволити додаткам отримувати інформацію про ваше географічне місцезнаходження.\nВи можете змінити це будь-який час в налаштуваннях системи.",
   "@privacyLocationSubtitle": {},
-  "welcomePageTitle": "Підорський устрій",
+  "welcomePageTitle": "Ласкаво просимо!",
   "@welcomePageTitle": {},
-  "welcomePageHeader": "{distro} для круглих педерастів",
+  "welcomePageHeader": "Ласкаво просимо в {distro}",
   "@welcomePageHeader": {},
-  "welcomeStartTitle": "Станьте круглим педерастом користуючись цим устроєм",
+  "welcomeStartTitle": "Легкий початок",
   "@welcomeStartTitle": {},
-  "welcomeStartSubtitle": "Підтримка чистого підорства.",
+  "welcomeStartSubtitle": "Підтримка простих налаштування.",
   "@welcomeStartSubtitle": {},
-  "welcomeStoreTitle": "Новий підорський акцент у крамниці єврейського лайна",
+  "welcomeStoreTitle": "Новий вигляд магазину додатків",
   "@welcomeStoreTitle": {},
-  "telemetryLabelOn": "Так, поділитися статевими захворюваннями з ракохворими розробниками цього {distro}",
+  "telemetryLabelOn": "Так, поділитись системними даними з командою {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryLabelOff": "Хераку вам, євреї",
+  "telemetryLabelOff": "Ні, не ділиться даними системи",
   "@telemetryLabelOff": {},
-  "privacyPageTitle": "Сервіси місцезнаходження хитрих єврейських розробників устрою",
+  "privacyPageTitle": "Сервіси визначення місцезнаходження",
   "@privacyPageTitle": {},
-  "privacyLocationTitle": "Подарувати своє місценаходження хитрим євреям?",
+  "privacyLocationTitle": "Увімкнути сервіси визначення місцезнаходження?",
   "@privacyLocationTitle": {},
-  "storeHeader": "Почніть жерти лайно з більшою кількістю єврейських членів",
+  "storeHeader": "Почніть роботу з додатковими програмами",
   "@storeHeader": {},
-  "privacyPolicyLink": "Приватнiсть вашої гейскої порнографії",
+  "privacyPolicyLink": "Конфіденційність даних",
   "@privacyPolicyLink": {},
-  "storeTitle": "Єврейська крамниця для круглих педерастів",
+  "storeTitle": "Центр додатків Ubuntu",
   "@storeTitle": {},
-  "privacyLocationEnable": "Сервіси місцезнаходження синагог",
+  "privacyLocationEnable": "Сервіси визначення місцезнаходження",
   "@privacyLocationEnable": {},
-  "storeDescription": "Крамниця єврейського лайна пропонує ряд маленьких обрізаних члеників, які можна почати смоктати з самого початку.",
+  "storeDescription": "Магазин додатків Ubuntu пропонує ряд програм, з якими можна почати роботу з самого початку.",
   "@storeDescription": {},
-  "storeOpen": "Відкрити крамницю єврейського лайна",
+  "storeOpen": "Відкрити центр додатків",
   "@storeOpen": {}
 }

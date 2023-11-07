@@ -5,7 +5,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get timezonePageTitle => 'Де ви знаходитесь?';
+  String get timezonePageTitle => 'Виберіть часовий пояс';
 
   @override
   String get timezoneLocationLabel => 'Місце розташування';
@@ -26,10 +26,10 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'Визначити розкладку клавіатури';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Визначити';
 
   @override
-  String get keyboardVariantLabel => 'Keyboard variant:';
+  String get keyboardVariantLabel => 'Варіант клавіатури:';
 
   @override
   String get keyboardPressKeyLabel => 'Будь ласка, натисніть одну з цих клавiш:';
@@ -51,14 +51,14 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Ласкаво просимо до $DISTRO';
   }
 
   @override
   String get localeHeader => 'Оберіть мову:';
 
   @override
-  String get identityPageTitle => 'Хто ви?';
+  String get identityPageTitle => 'Налаштуйте обліковий запис';
 
   @override
   String get identityAutoLogin => 'Входити автоматично';
@@ -73,7 +73,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityRealNameRequired => 'Потрібно вказати ім\'я';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Це ім\'я занадто довге.';
 
   @override
   String get identityHostnameLabel => 'Iм\'я вашого комп\'ютера';
@@ -85,7 +85,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'Потрібно вказати ім\'я комп\'ютера';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Ім\'я комп\'ютера занадто довге.';
 
   @override
   String get identityInvalidHostname => 'Ім\'я комп\'ютера вказано невірно';
@@ -124,73 +124,73 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityPasswordMismatch => 'Паролі не збігаються';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Показати';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Сховати';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Скористатися Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'На наступному кроці ви введете назву домену та інші подробиці.';
 
   @override
-  String get activeDirectoryTitle => 'Configure Active Directory';
+  String get activeDirectoryTitle => 'Налаштування Active Directory';
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'Тестування з\'єднання з доменом';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Домен';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Обов\'язково заповнити';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Цей домен занадто довгий';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Заборонені символи';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Починається з крапки (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Закінчується крапкою (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Починається з тире (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Закінчується дефісом (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Містить кілька послідовних крапок (.)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Домен не знайдено';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Користувач домену';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Обов\'язково заповнити';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Заборонені символи';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Пароль';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Обов\'язково заповнити';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Помилка при налаштовуванні з\'єднання із Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'На жаль, зараз неможливо налаштувати Active Directory. Коли ваша система буде запущена, відвідайте <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, щоб отримати допомогу.';
 
   @override
   String get networkPageTitle => 'Підключитись до інтернету';

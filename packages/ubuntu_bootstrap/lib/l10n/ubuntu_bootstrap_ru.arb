@@ -782,5 +782,13 @@
     "placeholders": {
       "snap": {}
     }
-  }
+  },
+  "fullInstallationSubtitle": "Удобный для работы в автономном режиме набор офисных инструментов, утилит, веб-браузера и игр.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Минимальная установка",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Только самое необходимое, веб-браузер и базовые утилиты.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationTitle": "Полная установка",
+  "@fullInstallationTitle": {}
 }

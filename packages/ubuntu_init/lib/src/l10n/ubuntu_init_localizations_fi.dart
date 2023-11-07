@@ -9,11 +9,11 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Tervetuloa, tämä on $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'MITÄ UUTTA?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
@@ -35,29 +35,29 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Näytä muutosloki</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetria';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Auta parantamaan ${distro}a';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Jaa tietoja anonyymisti ${distro}n kanssa, jotta voimme parantaa kokemustasi.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Kyllä, jaa järjestelmän tietoja $distro-tiimille';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Ei, älä jaa järjestelmän tietoja';
 
   @override
   String get telemetryReportLabel => 'Reporting details';
@@ -69,22 +69,22 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Legal';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Sijaintipalvelut';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Otetaanko sijaintipalvelut käyttöön?';
 
   @override
   String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Sijaintipalvelut';
 
   @override
   String get privacyPolicyLink => 'Data Privacy';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
+  String get storeTitle => 'Ubuntu-kauppa';
 
   @override
   String get storeHeader => 'Get started with more applications';
@@ -93,5 +93,5 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
 
   @override
-  String get storeOpen => 'Open App Store';
+  String get storeOpen => 'Avaa Sovelluskauppa';
 }

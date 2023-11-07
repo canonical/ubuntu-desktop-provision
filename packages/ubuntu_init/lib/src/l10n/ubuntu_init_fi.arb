@@ -1,4 +1,50 @@
 {
   "welcomePageTitle": "Tervetuloa",
-  "@welcomePageTitle": {}
+  "@welcomePageTitle": {},
+  "telemetryDescription": "Jaa tietoja anonyymisti {distro}n kanssa, jotta voimme parantaa kokemustasi.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeChangelogLabel": "<a href=\"{url}\">Näytä muutosloki</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "privacyPageTitle": "Sijaintipalvelut",
+  "@privacyPageTitle": {},
+  "storeTitle": "Ubuntu-kauppa",
+  "@storeTitle": {},
+  "welcomePageHeader": "Tervetuloa, tämä on {distro}",
+  "@welcomePageHeader": {},
+  "privacyLocationEnable": "Sijaintipalvelut",
+  "@privacyLocationEnable": {},
+  "telemetryHeader": "Auta parantamaan {distro}a",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Kyllä, jaa järjestelmän tietoja {distro}-tiimille",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyLocationTitle": "Otetaanko sijaintipalvelut käyttöön?",
+  "@privacyLocationTitle": {},
+  "storeOpen": "Avaa Sovelluskauppa",
+  "@storeOpen": {},
+  "telemetryPageTitle": "Telemetria",
+  "@telemetryPageTitle": {},
+  "welcomeWhatsNew": "MITÄ UUTTA?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOff": "Ei, älä jaa järjestelmän tietoja",
+  "@telemetryLabelOff": {}
 }

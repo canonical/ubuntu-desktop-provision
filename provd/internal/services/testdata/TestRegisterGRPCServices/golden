@@ -1,0 +1,6 @@
+provd.HelloWorldService:
+    methods:
+        - name: SayHello
+          isclientstream: false
+          isserverstream: false
+    metadata: provd.proto
