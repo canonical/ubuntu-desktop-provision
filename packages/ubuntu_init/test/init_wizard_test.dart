@@ -32,7 +32,18 @@ void main() {
   setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
 
   testWidgets('init', (tester) async {
-    final initModel = buildInitModel();
+    final initModel = buildInitModel(pages: [
+      InitRoutes.welcome,
+      InitRoutes.locale,
+      InitRoutes.keyboard,
+      InitRoutes.network,
+      InitRoutes.timezone,
+      InitRoutes.identity,
+      InitRoutes.theme,
+      InitRoutes.telemetry,
+      InitRoutes.privacy,
+      InitRoutes.store,
+    ]);
     final welcomeModel = buildWelcomeModel();
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
@@ -117,8 +128,8 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(LaunchSessionPage), findsOneWidget);
-    //verify(LaunchsessionModel).called(1);
+    expect(find.byType(StorePage), findsOneWidget);
+    verify(StoreModel).called(1);
 
     await tester.tapDone();
     await tester.pumpAndSettle();
