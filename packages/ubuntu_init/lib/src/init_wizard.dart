@@ -114,27 +114,6 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const PrivacyPage(),
           onLoad: (_) => PrivacyPage.load(ref),
         ),
-        InitRoutes.store: () {
-          bool shownPage = false;
-          return WizardRoute(
-            userData: const WizardRouteData(hasNext: false),
-            builder: (_) => const StorePage(),
-            onLoad: (_) {
-              shownPage = true;
-              return StorePage.load(ref);
-            },
-            onNext: (_) async {
-              if (shownPage) {
-                final window = YaruWindow.of(context);
-                await _onDone?.call();
-                await window.close();
-                return InitRoutes.initial;
-              } else {
-                return null;
-              }
-            },
-          );
-        }(),
         InitRoutes.launchsession: () {
           bool shownPage = false;
           return WizardRoute(
@@ -157,6 +136,17 @@ class InitWizard extends ConsumerWidget {
                 }
               });
         }(),
+        InitRoutes.store: WizardRoute(
+          userData: const WizardRouteData(hasNext: false),
+          builder: (_) => const StorePage(),
+          onLoad: (_) => StorePage.load(ref),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
+            await _onDone?.call();
+            await window.close();
+            return InitRoutes.initial;
+          },
+        ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
       predicate: (route) => switch (route) {
