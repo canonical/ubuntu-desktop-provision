@@ -135,7 +135,7 @@ void main() {
     when(client.openUrl('GET', wasWaiting))
         .thenAnswer((_) async => statusResponse(isRunning));
     when(client.openUrl('GET', wasRunning))
-        .thenAnswer((_) async => throw HttpException(''));
+        .thenAnswer((_) async => throw const HttpException(''));
 
     final monitor = SubiquityStatusMonitor(client);
 
