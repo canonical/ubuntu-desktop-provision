@@ -51,6 +51,7 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);
+  tryRegisterService(GdmService.new);
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {

@@ -19,7 +19,9 @@ void main() {
   testWidgets('init', (tester) async {
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.runApp(() => runInitApp([]));
+    await tester.runApp(() => runInitApp([
+          '--pages=welcome,locale,keyboard,network,timezone,identity,theme,telemetry,privacy,store'
+        ]));
 
     await tester.testWelcomeInitPage();
     await tester.tapNext();
@@ -103,6 +105,26 @@ void main() {
     await tester.tapNext(); // TODO: tapDone()
     await tester.pumpAndSettle();
     await expectIdentity(identity);
+
+    await expectLater(windowClosed, completes);
+  });
+
+  testWidgets('page_launchsession', (tester) async {
+    await tester.runApp(() => runInitApp(['--pages=locale,launchsession']));
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+
+    GdmService gdmService = getService<GdmService>();
+    gdmService.setTesting();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectLocale('en_US.UTF-8');
+
+    await tester.testLaunchSession();
+    await tester.tapDone();
+    await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);
   });

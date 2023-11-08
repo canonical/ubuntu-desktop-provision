@@ -81,3 +81,8 @@ flutter:
     - assets/slides/screenshots/light/
     - assets/storage/
     - assets/welcome/
+
+dependency_overrides:
+  dbus:
+    git:
+      url: https://github.com/canonical/dbus.dart.git

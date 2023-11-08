@@ -398,6 +398,24 @@ abstract class UbuntuInitLocalizations {
   /// In en, this message translates to:
   /// **'Open App Store'**
   String get storeOpen;
+
+  /// No description provided for @launchsessionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Setup complete'**
+  String get launchsessionTitle;
+
+  /// No description provided for @launchsessionHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'All done!'**
+  String get launchsessionHeader;
+
+  /// No description provided for @launchsessionDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can now begin using Ubuntu Core Desktop.'**
+  String get launchsessionDescription;
 }
 
 class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {

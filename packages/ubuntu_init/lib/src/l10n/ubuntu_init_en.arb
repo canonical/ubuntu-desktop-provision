@@ -71,5 +71,11 @@
   "storeDescription": "Ubuntu's App Store offers a range of apps you can get started with from the get-go.",
   "@storeDescription": {},
   "storeOpen": "Open App Store",
-  "@storeOpen": {}
+  "@storeOpen": {},
+  "launchsessionTitle": "Setup complete",
+  "@launchsessionTitle": {},
+  "launchsessionHeader": "All done!",
+  "@launchsessionHeader": {},
+  "launchsessionDescription": "You can now begin using Ubuntu Core Desktop.",
+  "@launchsessionDescription": {}
 }

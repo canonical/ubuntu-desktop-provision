@@ -32,7 +32,18 @@ void main() {
   setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
 
   testWidgets('init', (tester) async {
-    final initModel = buildInitModel();
+    final initModel = buildInitModel(pages: [
+      InitRoutes.welcome,
+      InitRoutes.locale,
+      InitRoutes.keyboard,
+      InitRoutes.network,
+      InitRoutes.timezone,
+      InitRoutes.identity,
+      InitRoutes.theme,
+      InitRoutes.telemetry,
+      InitRoutes.privacy,
+      InitRoutes.store,
+    ]);
     final welcomeModel = buildWelcomeModel();
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
