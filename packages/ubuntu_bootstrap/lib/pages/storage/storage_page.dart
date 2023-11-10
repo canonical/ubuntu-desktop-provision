@@ -64,7 +64,8 @@ class StoragePage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     final args = tryGetService<ArgResults>();
     final disableInstallAlong = args?['disable-install-along'] != '0';
-    final List<OsProber> existingOS = disableInstallAlong ? [] : (model.existingOS ?? []);
+    final List<OsProber> existingOS =
+        disableInstallAlong ? [] : (model.existingOS ?? []);
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.installationTypeTitle),
@@ -73,12 +74,13 @@ class StoragePage extends ConsumerWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if ((model.canInstallAlongside || model.hasBitLocker) && !disableInstallAlong)
+          if ((model.canInstallAlongside || model.hasBitLocker) &&
+              !disableInstallAlong)
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
-                title: Text(_formatAlongside(
-                    lang, model.productInfo, existingOS)),
+                title:
+                    Text(_formatAlongside(lang, model.productInfo, existingOS)),
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,

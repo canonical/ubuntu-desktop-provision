@@ -223,13 +223,17 @@ class _DonePage extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MarkdownBody(
-                  data: !liveSystem ? lang.rebootToConfigure('Ubuntu Core Desktop') : lang.readyToUse(model.productInfo),
+                  data: !liveSystem
+                      ? lang.rebootToConfigure('Ubuntu Core Desktop')
+                      : lang.readyToUse(model.productInfo),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing * 1.5),
-                Text(!liveSystem ? lang.rebootToConfigureWarning : lang.restartWarning(flavor.name)),
+                Text(!liveSystem
+                    ? lang.rebootToConfigureWarning
+                    : lang.restartWarning(flavor.name)),
                 const SizedBox(height: kWizardSpacing * 1.5),
                 Row(
                   children: [

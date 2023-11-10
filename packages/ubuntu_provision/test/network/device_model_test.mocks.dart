@@ -257,16 +257,18 @@ class MockNetworkManagerSettingsConnection extends _i1.Mock
   @override
   _i3.Future<Map<String, Map<String, _i4.DBusValue>>> getSettings() =>
       (super.noSuchMethod(Invocation.method(#getSettings, []),
-          returnValue: Future<Map<String, Map<String, _i4.DBusValue>>>.value(
-              <String, Map<String, _i4.DBusValue>>{})) as _i3
-          .Future<Map<String, Map<String, _i4.DBusValue>>>);
+              returnValue:
+                  Future<Map<String, Map<String, _i4.DBusValue>>>.value(
+                      <String, Map<String, _i4.DBusValue>>{}))
+          as _i3.Future<Map<String, Map<String, _i4.DBusValue>>>);
   @override
   _i3.Future<Map<String, Map<String, _i4.DBusValue>>> getSecrets(
           [String? settingName = r'']) =>
       (super.noSuchMethod(Invocation.method(#getSecrets, [settingName]),
-          returnValue: Future<Map<String, Map<String, _i4.DBusValue>>>.value(
-              <String, Map<String, _i4.DBusValue>>{})) as _i3
-          .Future<Map<String, Map<String, _i4.DBusValue>>>);
+              returnValue:
+                  Future<Map<String, Map<String, _i4.DBusValue>>>.value(
+                      <String, Map<String, _i4.DBusValue>>{}))
+          as _i3.Future<Map<String, Map<String, _i4.DBusValue>>>);
   @override
   _i3.Future<void> clearSecrets() =>
       (super.noSuchMethod(Invocation.method(#clearSecrets, []),
