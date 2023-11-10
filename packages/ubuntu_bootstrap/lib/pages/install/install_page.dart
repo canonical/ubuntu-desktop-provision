@@ -203,7 +203,7 @@ class _DonePage extends ConsumerWidget {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
     final args = tryGetService<ArgResults>();
-    final coreInstall = args?['core-install'] != '0';
+    final liveSystem = args?['live-system'] != '0';
 
     return WizardPage(
       headerPadding: EdgeInsets.zero,
@@ -223,13 +223,13 @@ class _DonePage extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MarkdownBody(
-                  data: coreInstall ? lang.rebootToConfigure('Ubuntu Core Desktop') : lang.readyToUse(model.productInfo),
+                  data: !liveSystem ? lang.rebootToConfigure('Ubuntu Core Desktop') : lang.readyToUse(model.productInfo),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing * 1.5),
-                Text(coreInstall ? lang.rebootToConfigureWarning : lang.restartWarning(flavor.name)),
+                Text(!liveSystem ? lang.rebootToConfigureWarning : lang.restartWarning(flavor.name)),
                 const SizedBox(height: kWizardSpacing * 1.5),
                 Row(
                   children: [
@@ -243,7 +243,7 @@ class _DonePage extends ConsumerWidget {
                       ),
                     ),
                     const SizedBox(width: kWizardSpacing),
-                    if (!coreInstall)
+                    if (liveSystem)
                       Expanded(
                         child: OutlinedButton(
                           onPressed: YaruWindow.of(context).close,

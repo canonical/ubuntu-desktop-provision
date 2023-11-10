@@ -63,8 +63,8 @@ class StoragePage extends ConsumerWidget {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
     final args = tryGetService<ArgResults>();
-    final coreInstall = args?['core-install'] != '0';
-    final List<OsProber> existingOS = coreInstall ? [] : (model.existingOS ?? []);
+    final disableInstallAlong = args?['disable-install-along'] != '0';
+    final List<OsProber> existingOS = disableInstallAlong ? [] : (model.existingOS ?? []);
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.installationTypeTitle),
@@ -73,7 +73,7 @@ class StoragePage extends ConsumerWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if ((model.canInstallAlongside || model.hasBitLocker) && !coreInstall)
+          if ((model.canInstallAlongside || model.hasBitLocker) && !disableInstallAlong)
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
@@ -100,7 +100,7 @@ class StoragePage extends ConsumerWidget {
                 onChanged: (value) => model.type = value!,
               ),
             ),
-            if (model.hasAdvancedFeatures && !coreInstall)
+            if (model.hasAdvancedFeatures && !disableInstallAlong)
               Padding(
                 padding: kWizardIndentation,
                 child: Row(
@@ -119,7 +119,7 @@ class StoragePage extends ConsumerWidget {
               ),
             const SizedBox(height: kWizardSpacing),
           ],
-          if (model.canManualPartition && !coreInstall)
+          if (model.canManualPartition && !disableInstallAlong)
             YaruRadioButton<StorageType>(
               title: Text(lang.installationTypeManual),
               subtitle: Text(lang.installationTypeManualInfo(flavor.name)),
