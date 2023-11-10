@@ -55,6 +55,8 @@ Future<void> runInstallerApp(
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
     parser.addOption('pages',
         valueHelp: 'path', help: 'A comma-separated list of pages', hide: true);
+    parser.addOption('live-system', help: 'Whether the installer is running in a "live" system with a desktop and all, or not.', defaultsTo: '1');
+    parser.addOption('disable-install-along', help: 'It is not possible to install Core Desktop along other operating systems, so in that case, that option must be disabled.', defaultsTo: '0');
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);

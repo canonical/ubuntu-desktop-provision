@@ -1,8 +1,10 @@
+import 'package:args/args.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -200,6 +202,9 @@ class _DonePage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
+    final args = tryGetService<ArgResults>();
+    final liveSystem = args?['live-system'] != '0';
+
     return WizardPage(
       headerPadding: EdgeInsets.zero,
       contentPadding: EdgeInsets.zero,
@@ -218,13 +223,13 @@ class _DonePage extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MarkdownBody(
-                  data: lang.readyToUse(model.productInfo),
+                  data: !liveSystem ? lang.rebootToConfigure('Ubuntu Core Desktop') : lang.readyToUse(model.productInfo),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing * 1.5),
-                Text(lang.restartWarning(flavor.name)),
+                Text(!liveSystem ? lang.rebootToConfigureWarning : lang.restartWarning(flavor.name)),
                 const SizedBox(height: kWizardSpacing * 1.5),
                 Row(
                   children: [
@@ -238,12 +243,13 @@ class _DonePage extends ConsumerWidget {
                       ),
                     ),
                     const SizedBox(width: kWizardSpacing),
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: YaruWindow.of(context).close,
-                        child: Text(lang.continueTesting),
+                    if (liveSystem)
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: YaruWindow.of(context).close,
+                          child: Text(lang.continueTesting),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ],
