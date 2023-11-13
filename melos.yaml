@@ -68,7 +68,6 @@ command:
       build_runner: ^2.4.6
       fake_async: ^1.3.1
       ffigen: ^9.0.1
-      flutter_lints: ^3.0.1
       freezed: ^2.4.5
       json_serializable: ^6.7.1
       mockito: 5.4.2
