@@ -25,8 +25,8 @@ abstract class ThemeService {
 
 class GtkThemeService implements ThemeService {
   GtkThemeService({DBusClient? bus, GSettings? settings})
-      : settings =
-            settings ?? createService<GSettings>('org.gnome.desktop.interface');
+      : settings = settings ??
+            createService<GSettings, String>('org.gnome.desktop.interface');
 
   @protected
   final GSettings settings;

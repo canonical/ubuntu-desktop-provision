@@ -27,23 +27,22 @@ class ManualStoragePage extends ConsumerStatefulWidget {
 
 class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
   final _scrollController = AutoScrollController();
-  StreamSubscription? _scrollSubscription;
+  late void Function() _scrollListener;
 
   @override
   void initState() {
     super.initState();
 
     final model = ref.read(manualStorageModelProvider);
-    _scrollSubscription = model.onSelectionChanged.listen((_) {
-      _scrollToSelection();
-    });
-    _scrollToSelection();
+    _scrollListener = _scrollToSelection;
+    model.selectionChangedNotifier.addListener(_scrollListener);
   }
 
   @override
   void dispose() {
     _scrollController.dispose();
-    _scrollSubscription?.cancel();
+    final model = ref.read(manualStorageModelProvider);
+    model.selectionChangedNotifier.removeListener(_scrollListener);
     super.dispose();
   }
 

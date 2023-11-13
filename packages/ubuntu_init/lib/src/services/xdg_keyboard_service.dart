@@ -16,7 +16,7 @@ class XdgKeyboardService implements KeyboardService {
     @visibleForTesting AssetBundle? assetBundle,
   })  : _client = client ?? XdgLocaleClient(bus: bus),
         _inputSourceSettings = settings ??
-            createService<GSettings>('org.gnome.desktop.input-sources'),
+            createService<GSettings, String>('org.gnome.desktop.input-sources'),
         _assetBundle = assetBundle ?? rootBundle;
 
   final XdgLocaleClient _client;
@@ -59,9 +59,9 @@ class XdgKeyboardService implements KeyboardService {
         .map((line) {
       final jsonData = json.decode(line);
       return KeyboardLayout(
-        code: jsonData[0],
-        name: jsonData[1],
-        variants: (jsonData[2] as List)
+        code: jsonData[0] as String,
+        name: jsonData[1] as String,
+        variants: (jsonData[2] as List<String>)
             .map((e) => KeyboardVariant(code: e[0], name: e[1]))
             .toList(),
       );

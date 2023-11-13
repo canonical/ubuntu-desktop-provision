@@ -69,8 +69,8 @@ class InstallModel extends SafeChangeNotifier {
   Stream<String>? _log;
   ApplicationStatus? _status;
   InstallationEvent _event = const InstallationEvent(InstallationAction.none);
-  StreamSubscription? _events;
-  StreamSubscription? _statuses;
+  StreamSubscription<String>? _events;
+  StreamSubscription<ApplicationStatus?>? _statuses;
 
   /// Detailed info of the product being installed.
   ProductInfo get productInfo => _product.getProductInfo();
@@ -176,8 +176,9 @@ class InstallModel extends SafeChangeNotifier {
   Future<void> precacheSlideImages(BuildContext context) async {
     final assets = await DefaultAssetBundle.of(context)
         .loadString('AssetManifest.json')
-        .then((v) => (json.decode(v) as Map).keys.where(
-            (asset) => asset.endsWith('.png') && asset.contains('/slides/')));
+        .then((v) => (json.decode(v) as Map).keys.whereType<String>().where(
+              (asset) => asset.endsWith('.png') && asset.contains('/slides/'),
+            ));
 
     if (context.mounted) {
       for (final asset in assets) {

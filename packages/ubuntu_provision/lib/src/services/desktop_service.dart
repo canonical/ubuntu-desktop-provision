@@ -29,13 +29,15 @@ class GnomeService implements DesktopService {
     @visibleForTesting GSettings? screensaverSettings,
     @visibleForTesting GnomeSessionManager? gnomeSessionManager,
   })  : _dingSettings = dingSettings ??
-            createService<GSettings>('org.gnome.shell.extensions.ding'),
+            createService<GSettings, String>('org.gnome.shell.extensions.ding'),
         _mediaHandlingSettings = mediaHandlingSettings ??
-            createService<GSettings>('org.gnome.desktop.media-handling'),
+            createService<GSettings, String>(
+              'org.gnome.desktop.media-handling',
+            ),
         _screensaverSettings = screensaverSettings ??
-            createService<GSettings>('org.gnome.desktop.screensaver'),
+            createService<GSettings, String>('org.gnome.desktop.screensaver'),
         _sessionSettings = sessionSettings ??
-            createService<GSettings>('org.gnome.desktop.session'),
+            createService<GSettings, String>('org.gnome.desktop.session'),
         _gnomeSessionManager = gnomeSessionManager ?? GnomeSessionManager();
 
   final GSettings _dingSettings;

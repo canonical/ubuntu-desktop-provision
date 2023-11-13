@@ -34,7 +34,11 @@ dependencies:
   ubuntu_localizations: ^0.3.3
   ubuntu_logger: ^0.1.0
   ubuntu_provision: ^0.1.0
-  ubuntu_service: ^0.2.2
+  ubuntu_service:
+    git:
+      url: https://github.com/spydon/ubuntu-flutter-plugins.git
+      ref: ubuntu_service/param-generics
+      path: packages/ubuntu_service
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0

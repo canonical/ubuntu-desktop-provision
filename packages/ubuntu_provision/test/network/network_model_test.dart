@@ -92,7 +92,7 @@ void main() {
     expect(model.hasActiveConnection, isTrue);
     verify(wifi.hasActiveConnection).called(1);
 
-    expect(model.onAvailabilityChanged, isA<Stream>());
+    expect(model.onAvailabilityChanged, isA<Stream<bool>>());
     verify(wifi.onAvailabilityChanged).called(1);
 
     when(wifi.onSelected()).thenAnswer((_) async {});

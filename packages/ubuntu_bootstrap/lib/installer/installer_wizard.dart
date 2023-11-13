@@ -181,7 +181,7 @@ class _InstallerObserver extends NavigatorObserver {
   final TelemetryService _telemetry;
 
   @override
-  void didPush(Route route, Route? previousRoute) {
+  void didPush(Route<Object?> route, Route<Object?>? previousRoute) {
     if (route.settings.name != null) {
       _telemetry.addStage(route.settings.name!.removePrefix('/'));
     }

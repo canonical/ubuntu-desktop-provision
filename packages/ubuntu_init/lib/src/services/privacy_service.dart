@@ -22,9 +22,9 @@ class GnomePrivacyService implements PrivacyService {
     @visibleForTesting GSettings? locationSettings,
     @visibleForTesting GSettings? privacySettings,
   })  : _locationSettings = locationSettings ??
-            createService<GSettings>('org.gnome.system.location'),
+            createService<GSettings, String>('org.gnome.system.location'),
         _privacySettings = privacySettings ??
-            createService<GSettings>('org.gnome.desktop.privacy');
+            createService<GSettings, String>('org.gnome.desktop.privacy');
 
   final GSettings _locationSettings;
   final GSettings _privacySettings;

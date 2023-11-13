@@ -97,8 +97,8 @@ class _SlideTransitions extends StatelessWidget {
 }
 
 extension on Animation<double> {
-  Animation get firstHalf =>
+  Animation<double> get firstHalf =>
       CurvedAnimation(parent: this, curve: const Interval(0, 0.5));
-  Animation get secondHalf =>
+  Animation<double> get secondHalf =>
       CurvedAnimation(parent: this, curve: const Interval(0.5, 1));
 }

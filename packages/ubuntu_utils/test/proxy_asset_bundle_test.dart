@@ -141,7 +141,11 @@ extension StringData on String {
 }
 
 Future<String> parseMockData(String data) async => 'baz';
-Future<String> loadMockData<T>(String? k, StructuredDataParser? p) async => '';
+Future<String> loadMockData<T>(
+  String? k,
+  StructuredDataParser<String>? p,
+) async =>
+    '';
 
 class MockFileCreator {
   MockFileCreator(this.paths);
@@ -164,6 +168,6 @@ class MockFile extends Mock implements File {
     return super.noSuchMethod(
       Invocation.method(#existsSync, []),
       returnValue: false,
-    );
+    ) as bool;
   }
 }

@@ -10,7 +10,8 @@ import 'privacy_service_test.mocks.dart';
 
 @GenerateMocks([GSettings])
 void main() {
-  setUpAll(() => registerServiceFactory<GSettings>((_) => MockGSettings()));
+  setUpAll(
+      () => registerServiceFactory<GSettings, Object>((_) => MockGSettings()));
 
   test('location', () async {
     final settings = MockGSettings();

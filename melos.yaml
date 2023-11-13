@@ -49,7 +49,11 @@ command:
       ubuntu_flavor: ^0.2.0
       ubuntu_localizations: ^0.3.3
       ubuntu_logger: ^0.1.0
-      ubuntu_service: ^0.2.2
+      ubuntu_service:
+        git:
+          url: https://github.com/spydon/ubuntu-flutter-plugins.git
+          ref: ubuntu_service/param-generics
+          path: packages/ubuntu_service
       ubuntu_session: ^0.0.4
       ubuntu_widgets: ^0.2.0
       udev: ^0.0.3
@@ -125,3 +129,6 @@ scripts:
   test: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
       flutter test
+
+  # run pub upgrade in all packages
+  upgrade: melos exec flutter pub upgrade

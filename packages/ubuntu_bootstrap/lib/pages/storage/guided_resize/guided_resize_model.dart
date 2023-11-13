@@ -127,7 +127,7 @@ class GuidedResizeModel extends SafeChangeNotifier {
   /// there are any available.
   Future<bool> init() {
     return _storage.getStorage().then((disks) async {
-      _disks = Map.fromIterable(disks, key: (d) => d.id);
+      _disks = {for (final disk in disks) disk.id: disk};
       final response = await _storage.getGuidedStorage();
       _updateStorage(response);
       final gaps = response.targets

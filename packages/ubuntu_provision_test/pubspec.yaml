@@ -19,7 +19,11 @@ dependencies:
   ubuntu_flavor: ^0.2.0
   ubuntu_init: ^0.1.0
   ubuntu_provision: ^0.1.0
-  ubuntu_service: ^0.2.2
+  ubuntu_service:
+    git:
+      url: https://github.com/spydon/ubuntu-flutter-plugins.git
+      ref: ubuntu_service/param-generics
+      path: packages/ubuntu_service
   ubuntu_test: ^0.1.0-0
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
