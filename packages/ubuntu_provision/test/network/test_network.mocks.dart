@@ -58,8 +58,9 @@ class _FakeEthernetDevice_2 extends _i1.SmartFake
         );
 }
 
-class _FakeWifiDevice_3 extends _i1.SmartFake implements _i4.WifiDevice {
-  _FakeWifiDevice_3(
+class _FakeNetworkManagerActiveConnection_3 extends _i1.SmartFake
+    implements _i2.NetworkManagerActiveConnection {
+  _FakeNetworkManagerActiveConnection_3(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -68,9 +69,19 @@ class _FakeWifiDevice_3 extends _i1.SmartFake implements _i4.WifiDevice {
         );
 }
 
-class _FakeNetworkManagerAccessPoint_4 extends _i1.SmartFake
+class _FakeWifiDevice_4 extends _i1.SmartFake implements _i4.WifiDevice {
+  _FakeWifiDevice_4(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeNetworkManagerAccessPoint_5 extends _i1.SmartFake
     implements _i2.NetworkManagerAccessPoint {
-  _FakeNetworkManagerAccessPoint_4(
+  _FakeNetworkManagerAccessPoint_5(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -118,10 +129,10 @@ class MockConnectModel extends _i1.Mock implements _i5.ConnectModel {
       ) as bool);
 
   @override
-  _i6.Stream<dynamic> get onAvailabilityChanged => (super.noSuchMethod(
+  _i6.Stream<bool> get onAvailabilityChanged => (super.noSuchMethod(
         Invocation.getter(#onAvailabilityChanged),
-        returnValue: _i6.Stream<dynamic>.empty(),
-      ) as _i6.Stream<dynamic>);
+        returnValue: _i6.Stream<bool>.empty(),
+      ) as _i6.Stream<bool>);
 
   @override
   _i5.ConnectMode get connectMode => (super.noSuchMethod(
@@ -275,10 +286,10 @@ class MockNetworkModel extends _i1.Mock implements _i8.NetworkModel {
       ) as bool);
 
   @override
-  _i6.Stream<dynamic> get onAvailabilityChanged => (super.noSuchMethod(
+  _i6.Stream<bool> get onAvailabilityChanged => (super.noSuchMethod(
         Invocation.getter(#onAvailabilityChanged),
-        returnValue: _i6.Stream<dynamic>.empty(),
-      ) as _i6.Stream<dynamic>);
+        returnValue: _i6.Stream<bool>.empty(),
+      ) as _i6.Stream<bool>);
 
   @override
   _i5.ConnectMode get connectMode => (super.noSuchMethod(
@@ -673,10 +684,10 @@ class MockEthernetModel extends _i1.Mock implements _i3.EthernetModel {
       ) as List<_i3.EthernetDevice>);
 
   @override
-  _i6.Stream<dynamic> get onAvailabilityChanged => (super.noSuchMethod(
+  _i6.Stream<bool> get onAvailabilityChanged => (super.noSuchMethod(
         Invocation.getter(#onAvailabilityChanged),
-        returnValue: _i6.Stream<dynamic>.empty(),
-      ) as _i6.Stream<dynamic>);
+        returnValue: _i6.Stream<bool>.empty(),
+      ) as _i6.Stream<bool>);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -947,10 +958,10 @@ class MockHiddenWifiModel extends _i1.Mock implements _i9.HiddenWifiModel {
       ) as List<_i4.WifiDevice>);
 
   @override
-  _i6.Stream<dynamic> get onAvailabilityChanged => (super.noSuchMethod(
+  _i6.Stream<bool> get onAvailabilityChanged => (super.noSuchMethod(
         Invocation.getter(#onAvailabilityChanged),
-        returnValue: _i6.Stream<dynamic>.empty(),
-      ) as _i6.Stream<dynamic>);
+        returnValue: _i6.Stream<bool>.empty(),
+      ) as _i6.Stream<bool>);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -965,13 +976,21 @@ class MockHiddenWifiModel extends _i1.Mock implements _i9.HiddenWifiModel {
       ) as bool);
 
   @override
-  _i6.Future<dynamic> connect() => (super.noSuchMethod(
+  _i6.Future<_i2.NetworkManagerActiveConnection> connect() =>
+      (super.noSuchMethod(
         Invocation.method(
           #connect,
           [],
         ),
-        returnValue: _i6.Future<dynamic>.value(),
-      ) as _i6.Future<dynamic>);
+        returnValue: _i6.Future<_i2.NetworkManagerActiveConnection>.value(
+            _FakeNetworkManagerActiveConnection_3(
+          this,
+          Invocation.method(
+            #connect,
+            [],
+          ),
+        )),
+      ) as _i6.Future<_i2.NetworkManagerActiveConnection>);
 
   @override
   void setSsid(String? ssid) => super.noSuchMethod(
@@ -1026,7 +1045,7 @@ class MockHiddenWifiModel extends _i1.Mock implements _i9.HiddenWifiModel {
           #createDevice,
           [device],
         ),
-        returnValue: _FakeWifiDevice_3(
+        returnValue: _FakeWifiDevice_4(
           this,
           Invocation.method(
             #createDevice,
@@ -1174,7 +1193,7 @@ class MockAccessPoint extends _i1.Mock implements _i4.AccessPoint {
   @override
   _i2.NetworkManagerAccessPoint get accessPoint => (super.noSuchMethod(
         Invocation.getter(#accessPoint),
-        returnValue: _FakeNetworkManagerAccessPoint_4(
+        returnValue: _FakeNetworkManagerAccessPoint_5(
           this,
           Invocation.getter(#accessPoint),
         ),
@@ -1647,10 +1666,10 @@ class MockWifiModel extends _i1.Mock implements _i4.WifiModel {
       ) as List<_i4.WifiDevice>);
 
   @override
-  _i6.Stream<dynamic> get onAvailabilityChanged => (super.noSuchMethod(
+  _i6.Stream<bool> get onAvailabilityChanged => (super.noSuchMethod(
         Invocation.getter(#onAvailabilityChanged),
-        returnValue: _i6.Stream<dynamic>.empty(),
-      ) as _i6.Stream<dynamic>);
+        returnValue: _i6.Stream<bool>.empty(),
+      ) as _i6.Stream<bool>);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -1747,7 +1766,7 @@ class MockWifiModel extends _i1.Mock implements _i4.WifiModel {
           #createDevice,
           [device],
         ),
-        returnValue: _FakeWifiDevice_3(
+        returnValue: _FakeWifiDevice_4(
           this,
           Invocation.method(
             #createDevice,
@@ -1775,14 +1794,15 @@ class MockWifiModel extends _i1.Mock implements _i4.WifiModel {
       );
 
   @override
-  _i6.Future<dynamic> requestScan({String? ssid}) => (super.noSuchMethod(
+  _i6.Future<void> requestScan({String? ssid}) => (super.noSuchMethod(
         Invocation.method(
           #requestScan,
           [],
           {#ssid: ssid},
         ),
-        returnValue: _i6.Future<dynamic>.value(),
-      ) as _i6.Future<dynamic>);
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
 
   @override
   void updateDevices() => super.noSuchMethod(

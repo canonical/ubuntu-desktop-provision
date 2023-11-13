@@ -263,7 +263,7 @@ class SubiquityClient {
   Future<bool> hasBitLocker() async {
     final request = await _openUrl('GET', 'storage/has_bitlocker');
     return _receive(
-        'hasBitLocker()', request, (List<Disk> disks) => disks.isNotEmpty);
+        'hasBitLocker()', request, (List<Object?> disks) => disks.isNotEmpty);
   }
 
   Future<GuidedStorageResponseV2> getGuidedStorageV2({bool wait = true}) async {

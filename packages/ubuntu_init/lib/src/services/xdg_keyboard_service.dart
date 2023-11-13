@@ -61,8 +61,9 @@ class XdgKeyboardService implements KeyboardService {
       return KeyboardLayout(
         code: jsonData[0] as String,
         name: jsonData[1] as String,
-        variants: (jsonData[2] as List<String>)
-            .map((e) => KeyboardVariant(code: e[0], name: e[1]))
+        variants: (jsonData[2] as List<dynamic>)
+            .map((e) =>
+                KeyboardVariant(code: e[0] as String, name: e[1] as String))
             .toList(),
       );
     }).toList();

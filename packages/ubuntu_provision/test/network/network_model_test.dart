@@ -165,7 +165,7 @@ void main() {
 
   test('finds best mode', () {
     final ethernet = MockConnectModel();
-    final ethernetChanged = StreamController(sync: true);
+    final ethernetChanged = StreamController<bool>(sync: true);
     when(ethernet.connectMode).thenReturn(ConnectMode.ethernet);
     when(ethernet.isEnabled).thenReturn(true);
     when(ethernet.hasActiveConnection).thenReturn(false);
@@ -173,14 +173,14 @@ void main() {
         .thenAnswer((_) => ethernetChanged.stream);
 
     final wifi = MockConnectModel();
-    final wifiChanged = StreamController(sync: true);
+    final wifiChanged = StreamController<bool>(sync: true);
     when(wifi.connectMode).thenReturn(ConnectMode.wifi);
     when(wifi.isEnabled).thenReturn(true);
     when(wifi.hasActiveConnection).thenReturn(false);
     when(wifi.onAvailabilityChanged).thenAnswer((_) => wifiChanged.stream);
 
     final hiddenWifi = MockConnectModel();
-    final hiddenWifiChanged = StreamController(sync: true);
+    final hiddenWifiChanged = StreamController<bool>(sync: true);
     when(hiddenWifi.connectMode).thenReturn(ConnectMode.hiddenWifi);
     when(hiddenWifi.isEnabled).thenReturn(true);
     when(hiddenWifi.hasActiveConnection).thenReturn(false);
