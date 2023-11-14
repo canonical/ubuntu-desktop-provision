@@ -143,7 +143,7 @@ extension StringData on String {
 Future<String> parseMockData(String data) async => 'baz';
 Future<String> loadMockData<T>(
   String? k,
-  StructuredDataParser<String>? p,
+  StructuredDataParser<Object?>? p,
 ) async =>
     '';
 
