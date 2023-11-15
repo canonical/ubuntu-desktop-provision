@@ -32,8 +32,4 @@ dependencies:
   yaru_widgets: ^3.2.2
 
 dev_dependencies:
-  ubuntu_lints:
-    git:
-      url: https://github.com/canonical/ubuntu-flutter-plugins.git
-      path: packages/ubuntu_lints
-      ref: main
+  ubuntu_lints: ^0.1.0

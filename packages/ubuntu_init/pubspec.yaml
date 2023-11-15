@@ -54,11 +54,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mockito: 5.4.2
-  ubuntu_lints:
-    git:
-      url: https://github.com/canonical/ubuntu-flutter-plugins.git
-      path: packages/ubuntu_lints
-      ref: main
+  ubuntu_lints: ^0.1.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-0
   yaru_test: ^0.1.5

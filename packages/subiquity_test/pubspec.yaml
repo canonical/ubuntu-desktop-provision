@@ -12,9 +12,5 @@ dependencies:
   subiquity_client: ^0.1.0
 
 dev_dependencies:
-  ubuntu_lints:
-    git:
-      url: https://github.com/canonical/ubuntu-flutter-plugins.git
-      path: packages/ubuntu_lints
-      ref: main
+  ubuntu_lints: ^0.1.0
   test: any
