@@ -35,6 +35,18 @@ jobs:
     name: "Go: Tests"
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: "./provd/go.mod"
+
+      - name: Install dependencies
+        run: |
+          sudo DEBIAN_FRONTEND=noninteractive apt update
+          sudo DEBIAN_FRONTEND=noninteractive apt install -y ${{ env.apt_deps }}
       - name: Run tests
         run: |
           set -eu
