@@ -9,15 +9,8 @@ on:
   pull_request:
   workflow_dispatch:
 
-env:
-  APT_DEPS: >-
-    libglib2.0-dev
-    gcc
-    gettext
-    libpam0g-dev
-
 jobs:
-  analyze:
+  flutter-analyze:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -57,7 +50,7 @@ jobs:
       env:
         SUBIQUITY_REPLAY_TIMESCALE: 100
 
-  coverage:
+  flutter-coverage:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
@@ -83,7 +76,7 @@ jobs:
       with:
         token: ${{secrets.CODECOV_TOKEN}}
 
-  format:
+  flutter-format:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -112,7 +105,7 @@ jobs:
     - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
       working-directory: packages/ubuntu_init
 
-  mocks:
+  flutter-mocks:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -156,7 +149,7 @@ jobs:
         branch: create-pull-request/l10n
         delete-branch: true
 
-  test:
+  flutter-tests:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -182,10 +175,6 @@ jobs:
     name: "Go: Code sanity"
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: |
-          sudo DEBIAN_FRONTEND=noninteractive apt update
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y ${{ env.apt_deps }}
       - uses: actions/checkout@v4
       - name: Go code sanity check
         uses: canonical/desktop-engineering/gh-actions/go/code-sanity@main
@@ -211,10 +200,6 @@ jobs:
         with:
           go-version-file: "./provd/go.mod"
 
-      - name: Install dependencies
-        run: |
-          sudo DEBIAN_FRONTEND=noninteractive apt update
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y ${{ env.apt_deps }}
       - name: Run tests
         run: |
           set -eu
