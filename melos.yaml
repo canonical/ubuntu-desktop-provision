@@ -45,6 +45,7 @@ command:
       ubuntu_lints: ^0.1.0
       ubuntu_localizations: ^0.3.3
       ubuntu_logger: ^0.1.0
+      ubuntu_service: ^0.3.0
       ubuntu_session: ^0.0.4
       ubuntu_widgets: ^0.2.0
       udev: ^0.0.3
