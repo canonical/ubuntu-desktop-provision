@@ -226,7 +226,8 @@ jobs:
 
           cd provd
           go test -race ./...
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     file: /tmp/coverage.combined
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: /tmp/coverage.out
+          flags: provd
