@@ -20,16 +20,16 @@ classDiagram
     ubuntu_init: - xdg/dbus/gsettings-based services
     ubuntu_init: - configurable subset of pages
     ubuntu_desktop_installer: - (main.dart)
-    ubuntu_desktop_installer: - provision.conf
+    ubuntu_desktop_installer: - ubuntu-provision.yaml
     ubuntu_desktop_installer: - snapcraft.yaml
     ubuntu_flavor_installer: - (main.dart)
-    ubuntu_flavor_installer: - provision.conf
+    ubuntu_flavor_installer: - ubuntu-provision.yaml
     ubuntu_flavor_installer: - snapcraft.yaml
     ubuntu_core_desktop_init: - (main.dart)
-    ubuntu_core_desktop_init: - provision.conf
+    ubuntu_core_desktop_init: - ubuntu-provision.yaml
     ubuntu_core_desktop_init: - snapcraft.yaml
     ubuntu_welcome: - (main.dart)
-    ubuntu_welcome: - provision.conf
+    ubuntu_welcome: - ubuntu-provision.yaml
     ubuntu_welcome: - snapcraft.yaml
 ```
 
@@ -63,7 +63,6 @@ Lookup order:
 - `/etc/ubuntu-provision.{yaml,yml}` (admin)
 - `/usr/local/share/ubuntu-provision.{yaml,yml}` (oem)
 - `/usr/share/ubuntu-provision.{yaml,yml}` (distro)
-- `<app>/data/flutter_assets/ubuntu-provision.{yaml,yml}` (app)
 
 ## Translations
 

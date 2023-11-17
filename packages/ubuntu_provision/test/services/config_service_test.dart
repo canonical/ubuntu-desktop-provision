@@ -17,9 +17,6 @@ void main() {
       // distro
       '/usr/share/ubuntu-provision.yaml',
       '/usr/share/ubuntu-provision.yml',
-      // app
-      '${p.dirname(Platform.resolvedExecutable)}/data/flutter_assets/ubuntu-provision.yaml',
-      '${p.dirname(Platform.resolvedExecutable)}/data/flutter_assets/ubuntu-provision.yml',
     ];
 
     final fs = MemoryFileSystem();

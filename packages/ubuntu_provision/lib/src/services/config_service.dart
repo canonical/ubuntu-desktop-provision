@@ -57,21 +57,13 @@ class ConfigService {
   /// - /etc/ubuntu-provision.{yaml,yml} (admin)
   /// - /usr/local/share/ubuntu-provision.{yaml,yml} (oem)
   /// - /usr/share/ubuntu-provision.{yaml,yml} (distro)
-  /// - <app>/data/flutter_assets/ubuntu-provision.{yaml,yml} (app)
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     const extensions = ['yaml', 'yml'];
-    final assets = p.join(
-      p.dirname(Platform.resolvedExecutable),
-      'data',
-      'flutter_assets',
-      'assets',
-    );
     final dirs = [
       ...xdg.configDirs,
       fs.directory('/etc'),
       ...xdg.dataDirs,
-      fs.directory(assets),
     ];
     for (final dir in dirs) {
       for (final ext in extensions) {
