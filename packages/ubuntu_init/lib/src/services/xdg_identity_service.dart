@@ -13,7 +13,7 @@ class XdgIdentityService implements IdentityService {
   XdgIdentityService.uid(
     this._userId, {
     DBusClient? bus,
-    @visibleForTesting passwordSalt,
+    @visibleForTesting String? passwordSalt,
   })  : _client = bus ?? DBusClient.system(),
         _passwordSalt = passwordSalt;
 

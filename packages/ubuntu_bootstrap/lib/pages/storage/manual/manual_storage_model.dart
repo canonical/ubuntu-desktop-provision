@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:dartx/dartx.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -101,8 +102,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   }
 
   /// Notifies selection changes for auto-scrolling.
-  Stream get onSelectionChanged => _selectionController.stream;
-  final _selectionController = StreamController.broadcast();
+  ChangeNotifier selectionChangedNotifier = ChangeNotifier();
 
   /// Whether a partition can be added for the currently selected disk.
   bool get canAddPartition => selectedGap?.usable == GapUsable.YES;
@@ -173,7 +173,7 @@ class ManualStorageModel extends SafeChangeNotifier {
 
     _selectedDiskIndex = diskIndex;
     _selectedObjectIndex = objectIndex;
-    _selectionController.add(null);
+    selectionChangedNotifier.notifyListeners();
     notifyListeners();
   }
 
@@ -232,7 +232,7 @@ class ManualStorageModel extends SafeChangeNotifier {
 
   @override
   void dispose() {
-    _selectionController.close();
+    selectionChangedNotifier.dispose();
     super.dispose();
   }
 }

@@ -18,8 +18,8 @@ dependencies:
   yaru_widgets: 3.2.2
 
 dev_dependencies:
-  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
+  ubuntu_lints: ^0.1.0
   ubuntu_test: ^0.1.0-0
   yaru_test: ^0.1.5

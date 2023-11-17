@@ -32,7 +32,8 @@ Future<void> registerFakeInitServices({
 
   final keyfile =
       GSettingsKeyfileBackend(file: File('${tempDir.path}/gsettings.ini'));
-  registerServiceFactory<GSettings>((s) => GSettings(s, backend: keyfile));
+  registerServiceFactory<GSettings, String>(
+      (s) => GSettings(s, backend: keyfile));
 
   registerService<IdentityService>(
       () => XdgIdentityService.uid(0, bus: client));

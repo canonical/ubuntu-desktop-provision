@@ -11,4 +11,4 @@ dependencies:
 
 dev_dependencies:
   ffigen: ^9.0.1
-  flutter_lints: ^3.0.1
+  ubuntu_lints: ^0.1.0

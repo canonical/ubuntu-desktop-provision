@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -37,7 +38,7 @@ ManualStorageModel buildManualStorageModel({
   when(model.selectedDiskIndex).thenReturn(selectedDiskIndex ?? 0);
   when(model.selectedPartition).thenReturn(selectedPartition);
   when(model.selectedObjectIndex).thenReturn(selectedObjectIndex ?? 0);
-  when(model.onSelectionChanged).thenAnswer((_) => const Stream.empty());
+  when(model.selectionChangedNotifier).thenAnswer((_) => ChangeNotifier());
   when(model.isStorageSelected(any, any)).thenReturn(false);
   when(model.canSelectStorage(any, any)).thenReturn(true);
 

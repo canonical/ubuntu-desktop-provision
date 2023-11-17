@@ -18,7 +18,7 @@ class MascotAvatar extends StatelessWidget {
   final double? progress;
 
   /// Requests the mascot asset to be pre-cached.
-  static Future precacheAsset(BuildContext context) async {
+  static Future<void> precacheAsset(BuildContext context) async {
     return precacheImage(_kMascotAsset, context);
   }
 

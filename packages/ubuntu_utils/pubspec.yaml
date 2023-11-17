@@ -18,14 +18,14 @@ dependencies:
   safe_change_notifier: ^0.3.1
   ubuntu_localizations: ^0.3.3
   ubuntu_logger: ^0.1.0
-  ubuntu_service: ^0.2.2
+  ubuntu_service: ^0.3.0
   url_launcher: ^6.2.1
 
 dev_dependencies:
   build_runner: ^2.4.6
-  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
   mockito: 5.4.2
   plugin_platform_interface: ^2.1.6
+  ubuntu_lints: ^0.1.0
   url_launcher_platform_interface: ^2.2.0

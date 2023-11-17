@@ -82,7 +82,7 @@ class MockUrlLauncherPlatform extends Mock
     return super.noSuchMethod(
       Invocation.method(#canLaunch, [url]),
       returnValue: Future.value(false),
-    );
+    ) as Future<bool>;
   }
 
   @override
@@ -90,6 +90,6 @@ class MockUrlLauncherPlatform extends Mock
     return super.noSuchMethod(
       Invocation.method(#launchUrl, [url, options]),
       returnValue: Future.value(false),
-    );
+    ) as Future<bool>;
   }
 }

@@ -95,7 +95,7 @@ class SubiquityClient {
     return _receive(
       'getInteractiveSections()',
       request,
-      (List? values) => values?.cast<String>(),
+      (List<Object?>? values) => values?.cast<String>(),
     );
   }
 
@@ -263,7 +263,7 @@ class SubiquityClient {
   Future<bool> hasBitLocker() async {
     final request = await _openUrl('GET', 'storage/has_bitlocker');
     return _receive(
-        'hasBitLocker()', request, (List disks) => disks.isNotEmpty);
+        'hasBitLocker()', request, (List<Object?> disks) => disks.isNotEmpty);
   }
 
   Future<GuidedStorageResponseV2> getGuidedStorageV2({bool wait = true}) async {
@@ -289,7 +289,9 @@ class SubiquityClient {
     }
 
     String hidePasswordResponse(String method, String response) {
-      final guided = GuidedStorageResponseV2.fromJson(jsonDecode(response));
+      final guided = GuidedStorageResponseV2.fromJson(
+        jsonDecode(response) as Map<String, Object?>,
+      );
       final json = jsonEncode(guided.copyWith(
         configured: guided.configured?.copyWith(
           password: hidePassword(guided.configured?.password),
@@ -525,7 +527,7 @@ class SubiquityClient {
     return _receive(
         'checkActiveDirectoryDomainName($domain)',
         request,
-        (List values) => values
+        (List<Object?> values) => values
             .cast<String>()
             .map(AdDomainNameValidation.values.byName)
             .toList());

@@ -100,8 +100,8 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
   bool? _hadActiveConnection;
 
   @override
-  Stream get onAvailabilityChanged => _onAvailable.stream;
-  final _onAvailable = StreamController();
+  Stream<bool> get onAvailabilityChanged => _onAvailable.stream;
+  final _onAvailable = StreamController<bool>();
 
   @override
   void notifyListeners() {

@@ -125,8 +125,7 @@ void main() {
 
     var wasNotified = false;
     model.addListener(() => wasNotified = true);
-    model.onSelectionChanged
-        .listen(expectAsync1((value) => expect(value, isNull), count: 2));
+    model.selectionChangedNotifier.addListener(expectAsync0(() {}, count: 2));
 
     wasNotified = false;
     model.selectStorage(-1);
@@ -348,7 +347,10 @@ void main() {
   test('dispose', () async {
     final model = ManualStorageModel(MockStorageService());
     model.dispose();
-    expect(model.onSelectionChanged, emitsDone);
+    expect(
+      () => model.selectionChangedNotifier.notifyListeners(),
+      throwsFlutterError,
+    );
   });
 
   test('valid', () async {

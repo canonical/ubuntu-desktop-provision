@@ -32,7 +32,7 @@ class NetworkModel extends SafeChangeNotifier implements ConnectModel {
   bool get isEnabled => _connectModel?.isEnabled ?? false;
 
   @override
-  Stream get onAvailabilityChanged =>
+  Stream<bool> get onAvailabilityChanged =>
       _connectModel?.onAvailabilityChanged ?? const Stream.empty();
 
   @override

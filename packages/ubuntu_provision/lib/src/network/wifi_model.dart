@@ -121,15 +121,13 @@ class WifiModel extends NetworkDeviceModel<WifiDevice> {
 
   /// Requests all devices to scan for access points, or a specific access point
   /// if `ssid` is specified.
-  Future requestScan({String? ssid}) async {
+  Future<void> requestScan({String? ssid}) async {
     if (!isEnabled) return;
-    final scans = <Future<void>>[];
-    for (final device in devices) {
-      if (device.isAvailable) {
-        scans.add(device.requestScan(ssid: ssid));
-      }
-    }
-    return Future.wait(scans);
+    await Future.wait(
+      devices
+          .where((device) => device.isAvailable)
+          .map((device) => device.requestScan(ssid: ssid)),
+    );
   }
 }
 

@@ -80,15 +80,16 @@ Future<void> runInstallerApp(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
-      () => ConfigService(scope: 'bootstrap', path: options['config']));
+    () => ConfigService(scope: 'bootstrap', path: options['config'] as String?),
+  );
   tryRegisterService<DesktopService>(() => GnomeService());
-  tryRegisterServiceFactory<GSettings>((schema) => GSettings(schema));
+  tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(() => SubiquityIdentityService(
       getService<SubiquityClient>(), getService<PostInstallService>()));
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
       config: tryGetService<ConfigService>(),
-      pages: options['pages']?.split(',') ?? pages));
+      pages: (options['pages'] as String?)?.split(',') ?? pages));
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
       () => SubiquityKeyboardService(getService<SubiquityClient>()));
@@ -173,7 +174,7 @@ Future<void> runInstallerApp(
                   package: 'ubuntu_bootstrap',
                 ),
                 child: InstallerWizard(
-                  welcome: options['welcome'],
+                  welcome: options['welcome'] as bool?,
                 ),
               ),
             );

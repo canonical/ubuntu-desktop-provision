@@ -60,7 +60,7 @@ class GuidedReformatModel extends SafeChangeNotifier {
   /// Loads the storages available for guided partitioning.
   Future<void> loadGuidedStorage() async {
     await _service.getStorage().then((disks) {
-      _disks = Map.fromIterable(disks, key: (d) => d.id);
+      _disks = {for (final disk in disks) disk.id: disk};
     });
     return _service.getGuidedStorage().then(_updateGuidedStorage);
   }

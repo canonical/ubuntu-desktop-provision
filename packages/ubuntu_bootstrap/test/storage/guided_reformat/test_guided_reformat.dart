@@ -20,10 +20,10 @@ GuidedReformatModel buildGuidedReformatModel({
   when(model.selectedIndex).thenReturn(selectedIndex ?? 0);
   when(model.selectedDisk).thenReturn(selectedDisk);
   when(model.selectedStorage).thenReturn(selectedStorage);
-  when(model.getDisk(any))
-      .thenAnswer((i) => disks?.elementAtOrNull(i.positionalArguments.first));
+  when(model.getDisk(any)).thenAnswer(
+      (i) => disks?.elementAtOrNull(i.positionalArguments.first as int));
   when(model.getStorage(any)).thenAnswer(
-      (i) => storages?.elementAtOrNull(i.positionalArguments.first));
+      (i) => storages?.elementAtOrNull(i.positionalArguments.first as int));
   when(model.init()).thenAnswer((_) async => (storages?.length ?? 0) > 1);
   return model;
 }

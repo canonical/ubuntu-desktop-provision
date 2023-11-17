@@ -34,7 +34,7 @@ class HiddenWifiModel extends NetworkDeviceModel<WifiDevice> {
   ConnectMode get connectMode => ConnectMode.hiddenWifi;
 
   @override
-  Future connect() async {
+  Future<NetworkManagerActiveConnection> connect() async {
     final wifi = service.getWifiSettings(ssid: _ssid);
     return service.addAndActivateConnection(
       connection: wifi,

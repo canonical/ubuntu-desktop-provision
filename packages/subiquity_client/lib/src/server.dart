@@ -49,7 +49,8 @@ class SubiquityServer {
           Uri.http(endpoint.authority, 'meta/status'),
         );
         final response = await request.close();
-        final json = jsonDecode(await response.transform(utf8.decoder).join());
+        final json = jsonDecode(await response.transform(utf8.decoder).join())
+            as Map<String, Object?>;
         final status = ApplicationStatus.fromJson(json);
         log.info(status.state);
         if (status.state == ApplicationState.STARTING_UP ||
