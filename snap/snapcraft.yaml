@@ -170,10 +170,7 @@ parts:
       cp snap/local/ubuntu-desktop-installer.desktop $CRAFT_PART_INSTALL/usr/share/applications/
       dart pub global activate melos
       dart pub global run melos bootstrap
-      # https://github.com/canonical/ubuntu-desktop-installer/issues/1146
-      (cd packages/ubuntu_wizard && flutter pub get)
       cd packages/ubuntu_bootstrap
-      flutter pub get
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
 
