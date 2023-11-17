@@ -20,16 +20,12 @@ classDiagram
     ubuntu_init: - xdg/dbus/gsettings-based services
     ubuntu_init: - configurable subset of pages
     ubuntu_desktop_installer: - (main.dart)
-    ubuntu_desktop_installer: - ubuntu-provision.yaml
     ubuntu_desktop_installer: - snapcraft.yaml
     ubuntu_flavor_installer: - (main.dart)
-    ubuntu_flavor_installer: - ubuntu-provision.yaml
     ubuntu_flavor_installer: - snapcraft.yaml
     ubuntu_core_desktop_init: - (main.dart)
-    ubuntu_core_desktop_init: - ubuntu-provision.yaml
     ubuntu_core_desktop_init: - snapcraft.yaml
     ubuntu_welcome: - (main.dart)
-    ubuntu_welcome: - ubuntu-provision.yaml
     ubuntu_welcome: - snapcraft.yaml
 ```
 
