@@ -40,7 +40,6 @@ command:
       split_view: ^3.2.1
       stdlibc: ^0.1.4
       synchronized: ^3.1.0
-      toml: ^0.14.0
       ubuntu_flavor: ^0.2.0
       ubuntu_lints: ^0.1.0
       ubuntu_localizations: ^0.3.3
