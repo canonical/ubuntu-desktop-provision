@@ -1,5 +1,37 @@
 version: 2
 updates:
+  # Infrastructure
+  ## GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+        interval: "daily"
+        time: "02:00"
+    target-branch: "main"
+    commit-message:
+      prefix: "deps(ci)"
+
+  # Codebase
+  ## Go dependencies
+  - package-ecosystem: "gomod"
+    directory: "/provd"
+    schedule:
+        interval: "daily"
+        time: "02:00"
+    target-branch: "main"
+    commit-message:
+      prefix: "deps(go)"
+
+  - package-ecosystem: "gomod"
+    directory: "/provd/tools"
+    schedule:
+        interval: "daily"
+        time: "02:00"
+    target-branch: "main"
+    commit-message:
+      prefix: "deps(go-tools)"
+
+  ## Git Submodules
   - package-ecosystem: gitsubmodule
     directory: /
     schedule:
