@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package keyboard;
+
+service KeyboardService {
+    rpc SetKeyboard(SetKeyboardRequest) returns (SetKeyboardResponse) {}
+    rpc SetInputSource(SetInputSourceRequest) returns (SetInputSourceResponse) {}
+}
+
+message KeyboardSettings {
+    string layout = 1;
+    string varient = 2;
+}
+
+message SetKeyboardRequest {
+    KeyboardSettings settings = 1;
+}
+
+message SetKeyboardResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message SetInputSourceRequest {
+  KeyboardSettings settings = 1;
+  string user = 2;
+}
+
+message SetInputSourceResponse {
+  bool success = 1;
+  string error = 2;
+}
