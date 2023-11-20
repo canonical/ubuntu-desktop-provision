@@ -1,8 +1,5 @@
-import 'dart:io';
-
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:path/path.dart' as p;
 import 'package:ubuntu_provision/src/services/config_service.dart';
 
 void main() {

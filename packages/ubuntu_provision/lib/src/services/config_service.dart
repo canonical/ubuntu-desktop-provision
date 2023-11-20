@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:meta/meta.dart';
