@@ -20,16 +20,12 @@ classDiagram
     ubuntu_init: - xdg/dbus/gsettings-based services
     ubuntu_init: - configurable subset of pages
     ubuntu_desktop_installer: - (main.dart)
-    ubuntu_desktop_installer: - provision.conf
     ubuntu_desktop_installer: - snapcraft.yaml
     ubuntu_flavor_installer: - (main.dart)
-    ubuntu_flavor_installer: - provision.conf
     ubuntu_flavor_installer: - snapcraft.yaml
     ubuntu_core_desktop_init: - (main.dart)
-    ubuntu_core_desktop_init: - provision.conf
     ubuntu_core_desktop_init: - snapcraft.yaml
     ubuntu_welcome: - (main.dart)
-    ubuntu_welcome: - provision.conf
     ubuntu_welcome: - snapcraft.yaml
 ```
 
@@ -43,16 +39,6 @@ classDiagram
 ## Configuration
 
 Supported formats:
-- [TOML](https://toml.io/) (`.conf`)
-
-    ```toml
-    [bootstrap]
-    pages = "locale,keyboard,source,storage"
-
-    [init]
-    pages = "timezone,identity"
-    ```
-
 - [YAML](https://yaml.org/) (`.yaml`, `.yml`)
 
     ```yaml
@@ -70,10 +56,9 @@ Supported formats:
     ```
 
 Lookup order:
-- `/etc/ubuntu-provision.{conf,yaml,yml}` (admin)
-- `/usr/local/share/ubuntu-provision.{conf,yaml,yml}` (oem)
-- `/usr/share/ubuntu-provision.{conf,yaml,yml}` (distro)
-- `<app>/data/flutter_assets/ubuntu-provision.{conf,yaml,yml}` (app)
+- `/etc/ubuntu-provision.{yaml,yml}` (admin)
+- `/usr/local/share/ubuntu-provision.{yaml,yml}` (oem)
+- `/usr/share/ubuntu-provision.{yaml,yml}` (distro)
 
 ## Translations
 
