@@ -31,10 +31,15 @@ updates:
     commit-message:
       prefix: "deps(go-tools)"
 
-  ## Git Submodules
+  ## Subiquity dependencies
   - package-ecosystem: gitsubmodule
     directory: /
     schedule:
         interval: "daily"
         time: "02:00"
     target-branch: "main"
+    commit-message:
+      prefix: "deps(subiquity)"
+    allow:
+      - dependency-name: packages/subiquity_client/subiquity
+        dependency-type: direct:production
