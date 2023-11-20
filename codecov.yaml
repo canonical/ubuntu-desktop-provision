@@ -4,4 +4,3 @@ ignore:
   - "**/*.g.dart"
   - "**/*.mocks.dart"
   - "**/l10n/*.dart"
-  - "provd/*"
