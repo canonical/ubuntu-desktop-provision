@@ -30,13 +30,9 @@ import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-import '../../ubuntu_provision/test/active_directory/test_active_directory.dart';
-import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
-import '../../ubuntu_provision/test/theme/test_theme.dart';
-import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
 import 'loading/test_loading.dart';
@@ -111,10 +107,6 @@ void main() {
     final securityKeyModel = buildSecurityKeyModel(useSecurityKey: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
-    final timezoneModel = buildTimezoneModel();
-    final identityModel = buildIdentityModel(isValid: true);
-    final activeDirectoryModel = buildActiveDirectoryModel();
-    final themeModel = buildThemeModel();
     final installModel = buildInstallModel(isDone: true);
 
     registerMockService<DesktopService>(MockDesktopService());
@@ -143,11 +135,6 @@ void main() {
           securityKeyModelProvider.overrideWith((_) => securityKeyModel),
           recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
-          timezoneModelProvider.overrideWith((_) => timezoneModel),
-          identityModelProvider.overrideWith((_) => identityModel),
-          activeDirectoryModelProvider
-              .overrideWith((_) => activeDirectoryModel),
-          themeModelProvider.overrideWith((_) => themeModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
         child: tester.buildTestWizard(welcome: true),
@@ -198,21 +185,6 @@ void main() {
     verify(confirmModel.init()).called(1);
 
     await tester.tapButton(l10n.confirmInstallButton);
-    await tester.pumpAndSettle();
-    expect(find.byType(TimezonePage), findsOneWidget);
-    verify(timezoneModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(IdentityPage), findsOneWidget);
-    verify(identityModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(ThemePage), findsOneWidget);
-    verify(themeModel.init()).called(1);
-
-    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(InstallPage), findsOneWidget);
     verify(installModel.init()).called(1);
@@ -302,40 +274,9 @@ void main() {
     verify(bitlockerModel.init()).called(1);
   });
 
-  testWidgets('active directory', (tester) async {
-    final localeModel = buildLocaleModel();
-    final identityModel =
-        buildIdentityModel(useActiveDirectory: true, isValid: true);
-    final activeDirectoryModel = buildActiveDirectoryModel(isUsed: true);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
-
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [
-          localeModelProvider.overrideWith((_) => localeModel),
-          identityModelProvider.overrideWith((_) => identityModel),
-          activeDirectoryModelProvider
-              .overrideWith((_) => activeDirectoryModel),
-        ],
-        child: tester.buildTestWizard(),
-      ),
-    );
-    await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(Routes.identity);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(ActiveDirectoryPage), findsOneWidget);
-    verify(activeDirectoryModel.init()).called(1);
-  });
-
   testWidgets('pages', (tester) async {
     final keyboardModel = buildKeyboardModel();
     final confirmModel = buildConfirmModel();
-    final identityModel = buildIdentityModel(isValid: true);
-    final activeDirectoryModel =
-        buildActiveDirectoryModel(isUsed: true, isValid: true);
     final installModel = buildInstallModel(isDone: true);
 
     registerMockService<TelemetryService>(MockTelemetryService());
@@ -345,15 +286,10 @@ void main() {
         overrides: [
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
-          identityModelProvider.overrideWith((_) => identityModel),
-          activeDirectoryModelProvider
-              .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
         child: tester.buildTestWizard(pages: [
           Routes.keyboard,
-          Routes.identity,
-          Routes.activeDirectory,
         ]),
       ),
     );
@@ -371,16 +307,6 @@ void main() {
     verify(confirmModel.init()).called(1);
 
     await tester.tapButton(l10n.confirmInstallButton);
-    await tester.pumpAndSettle();
-    expect(find.byType(IdentityPage), findsOneWidget);
-    verify(identityModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(ActiveDirectoryPage), findsOneWidget);
-    verify(activeDirectoryModel.init()).called(1);
-
-    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(InstallPage), findsOneWidget);
     verify(installModel.init()).called(1);
