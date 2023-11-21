@@ -183,6 +183,8 @@ parts:
       - libcairo2
       - libegl-mesa0
       - libegl1
+      # Needed for the dri drivers see https://github.com/canonical/ubuntu-desktop-installer/issues/2391
+      - libelf1
       - libgl1
       - libglib2.0-0
       - libglib2.0-dev
