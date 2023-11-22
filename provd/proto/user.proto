@@ -1,20 +1,44 @@
 syntax = "proto3";
 
-package user;
+package identity;
 
-service UserService {
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+service IdentityService {
+  rpc GetIdentity(GetIdentityRequest) returns (GetIdentityResponse);
+  rpc SetIdentity(SetIdentityRequest) returns (SetIdentityResponse);
+  rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
 }
 
-message CreateUserRequest {
-    string realName = 1;
-    string hostname = 2;
-    string username = 3;
-    string password = 4;
-    bool autoLogin = 5;
+message Identity {
+  string realName = 1;
+  string hostname = 2;
+  string username = 3;
+  string password = 4;
+  bool autoLogin = 5;
 }
 
-message CreateUserResponse {
+message GetIdentityRequest {}
+
+message GetIdentityResponse {
   bool success = 1;
   string error = 2;
+  Identity identity = 3;
+}
+
+message SetIdentityRequest {
+  Identity identity = 1;
+}
+
+message SetIdentityResponse {
+  bool success = 1;
+  string error = 2;
+}
+
+message ValidateUsernameRequest {
+  string username = 1;
+}
+
+message ValidateUsernameResponse {
+  bool success = 1;
+  string error = 2;
+  bool valid = 3;
 }

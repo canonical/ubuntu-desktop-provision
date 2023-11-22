@@ -4,7 +4,9 @@ package theme;
 
 service ThemeService {
     rpc SetBrightness(SetBrightnessRequest) returns (SetBrightnessResponse);
+    rpc GetBrightness(GetBrightnessRequest) returns (GetBrightnessResponse);
     rpc SetAccent(SetAccentRequest) returns (SetAccentResponse);
+    rpc GetAccent(GetAccentRequest) returns (GetAccentResponse);
 }
 
 enum Brightness {
@@ -21,6 +23,14 @@ message SetBrightnessResponse {
     string error = 2;
 }
 
+message GetBrightnessRequest {}
+
+message GetBrightnessResponse {
+    bool success = 1;
+    Brightness brightness = 2;
+    string error = 3;
+}
+
 message SetAccentRequest {
     string accent = 1;
 }
@@ -28,4 +38,12 @@ message SetAccentRequest {
 message SetAccentResponse {
     bool success = 1;
     string error = 2;
+}
+
+message GetAccentRequest {}
+
+message GetAccentResponse {
+    bool success = 1;
+    string accent = 2;
+    string error = 3;
 }
