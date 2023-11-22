@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - bootstrap-snap
+  pull_request:
+    branches:
+      - bootstrap-snap
   workflow_dispatch:
 
 jobs:
