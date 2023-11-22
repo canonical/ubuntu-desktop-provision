@@ -3,12 +3,61 @@ syntax = "proto3";
 package active_directory;
 
 service ActiveDirectoryService {
+    rpc HasSupport(HasSupportRequest) returns (HasSupportResponse);
+    rpc IsUsed(IsUsedRequest) returns (IsUsedResponse);
+    rpc SetUsed(SetUsedRequest) returns (SetUsedResponse);
+    rpc GetConnectionInfoRequset(GetConnectionInfoRequest) returns (GetConnectionInfoResponse);
+    rpc SetConnectionInfo(SetConnectionInfoRequest) returns (SetConnectionInfoResponse);
     rpc CheckDomainName(TestDomainNameRequest) returns (TestDomainNameResponse);
     rpc CheckAdminName(CheckAdminNameRequest) returns (CheckAdminNameResponse);
     rpc CheckPassword(CheckPasswordRequest) returns (CheckPasswordResponse);
     rpc PingDomainController(PingDomainControllerRequest) returns (PingDomainControllerResponse);
     rpc GetJoinResult(GetJoinResultRequest) returns (GetJoinResultResponse);
+}
 
+message HasSupportRequest {
+}
+
+message HasSupportResponse {
+    bool success = 1;
+    string error = 2;
+    bool has_support = 3;
+}
+
+message IsUsedRequest {
+}
+
+message IsUsedResponse {
+    bool success = 1;
+    string error = 2;
+    bool is_used = 3;
+}
+
+message SetUsedRequest {
+    bool is_used = 1;
+}
+
+message SetUsedResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message GetConnectionInfoRequset {
+}
+
+message GetConnectionInfoResponse {
+    bool success = 1;
+    string error = 2;
+    AdConnectionInfo ad_connection_info = 3;
+}
+
+message SetConnectionInfoRequest {
+    AdConnectionInfo ad_connection_info = 1;
+}
+
+message SetConnectionInfoResponse {
+    bool success = 1;
+    string error = 2;
 }
 
 message PingDomainControllerRequest {

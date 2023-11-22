@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package accessibility;
+
+service AccessibilityDirectoryService {
+    rpc GetHighContract(GetHighConstrastRequest) returns (GetHighConstrastResponse) {}
+    rpc SetHighContract(SetHighConstrastRequest) returns (SetHighConstrastResponse) {}
+    rpc GetReducedMotion(GetReducedMotionRequest) returns (GetReducedMotionResponse) {}
+    rpc SetReducedMotion(SetReducedMotionRequest) returns (SetReducedMotionResponse) {}
+    rpc GetScreenReader(GetScreenReaderRequest) returns (GetScreenReaderResponse) {}
+    rpc SetScreenReader(SetScreenReaderRequest) returns (SetScreenReaderResponse) {}
+    rpc GetLargeText(GetLargeTextRequest) returns (GetLargeTextResponse) {}
+    rpc SetLargeText(SetLargeTextRequest) returns (SetLargeTextResponse) {}
+}
+
+message GetHighConstrastRequest {
+}
+
+message GetHighConstrastResponse {
+    bool success = 1;
+    string error = 2;
+    bool enabled = 3;
+}
+
+message SetHighConstrastRequest {
+    bool enabled = 1;
+}
+
+message SetHighConstrastResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message GetReducedMotionRequest {
+}
+
+message GetReducedMotionResponse {
+    bool success = 1;
+    string error = 2;
+    bool enabled = 3;
+}
+
+message SetReducedMotionRequest {
+    bool enabled = 1;
+}
+
+message SetReducedMotionResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message GetScreenReaderRequest {
+}
+
+message GetScreenReaderResponse {
+    bool success = 1;
+    string error = 2;
+    bool enabled = 3;
+}
+
+message SetScreenReaderRequest {
+    bool enabled = 1;
+}
+
+message SetScreenReaderResponse {
+    string error = 2;
+    bool enabled = 3;
+}
+
+
+message GetLargeTextRequest {
+}
+
+message GetLargeTextResponse {
+    bool success = 1;
+    string error = 2;
+    bool enabled = 3;
+}
+
+message SetLargeTextRequest {
+    bool enabled = 1;
+}
+
+message SetLargeTextResponse {
+    bool success = 1;
+    string error = 2;
+}

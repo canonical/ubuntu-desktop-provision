@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package eula;
+
+// Just a placeholder until we have designed the EULA
+service EULAService {
+    rpc AcceptEULA(AcceptEULARequest) returns (AcceptEULAResponse) {}
+}
+
+message AcceptEULARequest {
+    string eulaId = 1;
+    string username = 2;
+}
+
+message AcceptEULAResponse {
+    bool success = 1;
+    string message = 2;
+}

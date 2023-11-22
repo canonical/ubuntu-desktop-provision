@@ -20,6 +20,7 @@ message GetLocaleRequest {
 }
 
 message GetLocaleResponse {
-  string locale = 1;
+  bool success = 1;
   string error = 2;
+  string locale = 3;
 }
