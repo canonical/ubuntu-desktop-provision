@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Ubuntu Desktop Init
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=preferences-system
+Exec=ubuntu-desktop-init
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;System;
+OnlyShowIn=GNOME;Unity;
+NoDisplay=true
+X-GNOME-HiddenUnderSystemd=true
