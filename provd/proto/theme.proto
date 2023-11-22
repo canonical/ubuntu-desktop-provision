@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package theme;
+
+service ThemeService {
+    rpc SetBrightness(SetBrightnessRequest) returns (SetBrightnessResponse);
+    rpc SetAccent(SetAccentRequest) returns (SetAccentResponse);
+}
+
+enum Brightness {
+    LIGHT = 0;
+    DARK = 1;
+}
+
+message SetBrightnessRequest {
+    Brightness brightness = 1;
+}
+
+message SetBrightnessResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message SetAccentRequest {
+    string accent = 1;
+}
+
+message SetAccentResponse {
+    bool success = 1;
+    string error = 2;
+}

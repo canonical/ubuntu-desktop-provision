@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package privacy;
+
+service PrivacyService {
+    rpc SetPrivacySettings (SetPrivacySettingsRequest) returns (SetPrivacySettingsResponse) {}
+}
+
+message SetPrivacySettingsRequest {
+    bool locationEnabled = 1;
+    bool reportingEnabled = 2;
+}
+
+message SetPrivacySettingsResponse {
+    bool success = 1;
+    string error = 2;
+}
