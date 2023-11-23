@@ -45,12 +45,10 @@ void main() {
     final urlLauncher = MockUrlLauncher();
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (context) => ProviderScope(
-          child: Scaffold(
-            body: Builder(builder: defaultSlides.last),
-          ),
+    await tester.pumpApp(
+      (context) => ProviderScope(
+        child: Scaffold(
+          body: Builder(builder: defaultSlides.last),
         ),
       ),
     );

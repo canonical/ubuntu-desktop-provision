@@ -25,7 +25,7 @@ void main() {
 
   testWidgets('telemetry enabled', (tester) async {
     final model = buildTelemetryModel(enabled: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.radio(true), isChecked);
 
@@ -35,7 +35,7 @@ void main() {
 
   testWidgets('telemetry disabled', (tester) async {
     final model = buildTelemetryModel(enabled: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.radio(false), isChecked);
 
@@ -46,7 +46,7 @@ void main() {
   testWidgets('show report', (tester) async {
     final model = buildTelemetryModel();
 
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(TelemetryPage));
     final l10n = TelemetryLocalizations.of(context);
@@ -65,7 +65,7 @@ void main() {
         .thenAnswer((_) async => true);
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(TelemetryPage));
     final l10n = TelemetryLocalizations.of(context);

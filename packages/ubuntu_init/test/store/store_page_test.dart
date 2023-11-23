@@ -22,7 +22,7 @@ void main() {
   testWidgets('launch store', (tester) async {
     final model = buildStoreModel(canLaunch: true);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StorePage));
     final l10n = StoreLocalizations.of(context);

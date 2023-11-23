@@ -82,7 +82,7 @@ void main() {
       testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
       testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
     });
-    await tester.pumpWidget(tester.buildApp((_) => buildConfirmPage(model)));
+    await tester.pumpApp((_) => buildConfirmPage(model));
 
     for (final disk in testDisks) {
       expect(find.byKey(ValueKey(disk)), findsOneWidget);
@@ -100,7 +100,7 @@ void main() {
     }, originals: {
       'sdb': [const Partition(number: 6, size: 123)],
     });
-    await tester.pumpWidget(tester.buildApp((_) => buildConfirmPage(model)));
+    await tester.pumpApp((_) => buildConfirmPage(model));
 
     final context = tester.element(find.byType(ConfirmPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -119,7 +119,7 @@ void main() {
 
   testWidgets('starts installation', (tester) async {
     final model = buildConfirmModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildConfirmPage(model)));
+    await tester.pumpApp((_) => buildConfirmPage(model));
 
     final context = tester.element(find.byType(ConfirmPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);

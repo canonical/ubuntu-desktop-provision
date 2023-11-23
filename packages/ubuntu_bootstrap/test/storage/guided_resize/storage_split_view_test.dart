@@ -16,7 +16,7 @@ void main() {
   testWidgets('resize by drag', (tester) async {
     int? size;
 
-    await tester.pumpWidget(tester.buildApp(
+    await tester.pumpApp(
       (_) => StorageSplitView(
         currentSize: 50,
         minimumSize: 20,
@@ -27,7 +27,7 @@ void main() {
         productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
         onResize: (v) => size = v,
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     expect(size, isNull);
@@ -48,7 +48,7 @@ void main() {
   testWidgets('resize existing partition via dialog', (tester) async {
     int? size;
 
-    await tester.pumpWidget(tester.buildApp(
+    await tester.pumpApp(
       (_) => StorageSplitView(
         currentSize: toBytes(50, DataUnit.megabytes),
         minimumSize: toBytes(20, DataUnit.megabytes),
@@ -59,7 +59,7 @@ void main() {
         productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
         onResize: (v) => size = v,
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     final windows = find.ancestor(
@@ -83,7 +83,7 @@ void main() {
   testWidgets('allocate installation space via dialog', (tester) async {
     int? size;
 
-    await tester.pumpWidget(tester.buildApp(
+    await tester.pumpApp(
       (_) => StorageSplitView(
         currentSize: toBytes(50, DataUnit.megabytes),
         minimumSize: toBytes(20, DataUnit.megabytes),
@@ -94,7 +94,7 @@ void main() {
         productInfo: ProductInfo(name: 'Ubuntu'),
         onResize: (v) => size = v,
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     final windows = find.ancestor(

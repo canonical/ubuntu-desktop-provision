@@ -21,7 +21,7 @@ void main() {
 
   testWidgets('brightness', (tester) async {
     final model = buildThemeModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final lightOptionCard = find.widgetWithImage(
       YaruSelectableContainer,
@@ -48,8 +48,8 @@ void main() {
 
   testWidgets('yaru accent', (tester) async {
     final model = buildThemeModel();
-    await tester.pumpWidget(tester.buildApp(
-        (_) => YaruTheme(builder: (context, yaru, child) => buildPage(model))));
+    await tester.pumpApp(
+        (_) => YaruTheme(builder: (context, yaru, child) => buildPage(model)));
 
     for (final variant in YaruVariant.accents) {
       final colorDisk = find.byWidgetPredicate((widget) {
@@ -64,7 +64,7 @@ void main() {
 
   testWidgets('non-yaru theme', (tester) async {
     final model = buildThemeModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.byType(YaruColorDisk), findsNothing);
   });
