@@ -3,24 +3,16 @@ syntax = "proto3";
 package locale;
 
 service LocaleService {
-  rpc SetLocale (SetLocaleRequest) returns (SetLocaleResponse) {};
-  rpc GetLocale (GetLocaleRequest) returns (GetLocaleResponse) {};
+  rpc SetLocale (SetLocaleRequest) returns (Empty) {};
+  rpc GetLocale (Empty) returns (GetLocaleResponse) {};
 }
+
+message Empty {}
 
 message SetLocaleRequest {
   string locale = 1;
 }
 
-message SetLocaleResponse {
-  bool success = 1;
-  string error = 2;
-}
-
-message GetLocaleRequest {
-}
-
 message GetLocaleResponse {
-  bool success = 1;
-  string error = 2;
-  string locale = 3;
+  string locale = 1;
 }

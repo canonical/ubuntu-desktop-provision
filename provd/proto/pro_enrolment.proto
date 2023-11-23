@@ -4,24 +4,20 @@ package pro_enrollment;
 
 service ProEnrollmentService {
     rpc GenerateEnrolmentCode(GenerateEnrolmentCodeRequest) returns (GenerateEnrolmentCodeResponse);
-    rpc SetTokenManually(SetTokenManuallyRequest) returns (SetTokenManuallyResponse);
+    rpc SetTokenManually(SetTokenManuallyRequest) returns (Empty);
 }
+
+message Empty {}
 
 message GenerateEnrolmentCodeRequest {
     string token = 1;
 }
 
 message GenerateEnrolmentCodeResponse {
-    bool success = 1;
-    string message = 2;
-    string code = 3;
+    string code = 1;
 }
 
 message SetTokenManuallyRequest {
     string token = 1;
 }
 
-message SetTokenManuallyResponse {
-    bool success = 1;
-    string message = 2;
-}

@@ -3,10 +3,12 @@ syntax = "proto3";
 package identity;
 
 service IdentityService {
-  rpc GetIdentity(GetIdentityRequest) returns (GetIdentityResponse);
-  rpc SetIdentity(SetIdentityRequest) returns (SetIdentityResponse);
+  rpc GetIdentity(Empty) returns (GetIdentityResponse);
+  rpc SetIdentity(SetIdentityRequest) returns (Empty);
   rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
 }
+
+message Empty {}
 
 message Identity {
   string realName = 1;
@@ -16,21 +18,12 @@ message Identity {
   bool autoLogin = 5;
 }
 
-message GetIdentityRequest {}
-
 message GetIdentityResponse {
-  bool success = 1;
-  string error = 2;
-  Identity identity = 3;
+  Identity identity = 1;
 }
 
 message SetIdentityRequest {
   Identity identity = 1;
-}
-
-message SetIdentityResponse {
-  bool success = 1;
-  string error = 2;
 }
 
 message ValidateUsernameRequest {
@@ -38,7 +31,5 @@ message ValidateUsernameRequest {
 }
 
 message ValidateUsernameResponse {
-  bool success = 1;
-  string error = 2;
-  bool valid = 3;
+  bool valid = 1;
 }

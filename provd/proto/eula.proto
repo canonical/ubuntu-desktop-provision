@@ -4,15 +4,12 @@ package eula;
 
 // Just a placeholder until we have designed the EULA
 service EULAService {
-    rpc AcceptEULA(AcceptEULARequest) returns (AcceptEULAResponse) {}
+    rpc AcceptEULA(AcceptEULARequest) returns (Empty) {}
 }
+
+message Empty {}
 
 message AcceptEULARequest {
     string eulaId = 1;
     string username = 2;
-}
-
-message AcceptEULAResponse {
-    bool success = 1;
-    string message = 2;
 }

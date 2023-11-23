@@ -3,9 +3,11 @@ syntax = "proto3";
 package keyboard;
 
 service KeyboardService {
-    rpc SetKeyboard(SetKeyboardRequest) returns (SetKeyboardResponse) {}
-    rpc SetInputSource(SetInputSourceRequest) returns (SetInputSourceResponse) {}
+    rpc SetKeyboard(SetKeyboardRequest) returns (Empty) {}
+    rpc SetInputSource(SetInputSourceRequest) returns (Empty) {}
 }
+
+message Empty {}
 
 message KeyboardSettings {
     string layout = 1;
@@ -16,17 +18,8 @@ message SetKeyboardRequest {
     KeyboardSettings settings = 1;
 }
 
-message SetKeyboardResponse {
-    bool success = 1;
-    string error = 2;
-}
-
 message SetInputSourceRequest {
   KeyboardSettings settings = 1;
   string user = 2;
 }
 
-message SetInputSourceResponse {
-  bool success = 1;
-  string error = 2;
-}

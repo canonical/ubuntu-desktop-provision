@@ -3,11 +3,13 @@ syntax = "proto3";
 package theme;
 
 service ThemeService {
-    rpc SetBrightness(SetBrightnessRequest) returns (SetBrightnessResponse);
-    rpc GetBrightness(GetBrightnessRequest) returns (GetBrightnessResponse);
-    rpc SetAccent(SetAccentRequest) returns (SetAccentResponse);
-    rpc GetAccent(GetAccentRequest) returns (GetAccentResponse);
+    rpc SetBrightness(SetBrightnessRequest) returns (Empty);
+    rpc GetBrightness(Empty) returns (GetBrightnessResponse);
+    rpc SetAccent(SetAccentRequest) returns (Empty);
+    rpc GetAccent(Empty) returns (GetAccentResponse);
 }
+
+message Empty {}
 
 enum Brightness {
     LIGHT = 0;
@@ -18,32 +20,14 @@ message SetBrightnessRequest {
     Brightness brightness = 1;
 }
 
-message SetBrightnessResponse {
-    bool success = 1;
-    string error = 2;
-}
-
-message GetBrightnessRequest {}
-
 message GetBrightnessResponse {
-    bool success = 1;
-    Brightness brightness = 2;
-    string error = 3;
+    Brightness brightness = 1;
 }
 
 message SetAccentRequest {
     string accent = 1;
 }
 
-message SetAccentResponse {
-    bool success = 1;
-    string error = 2;
-}
-
-message GetAccentRequest {}
-
 message GetAccentResponse {
-    bool success = 1;
-    string accent = 2;
-    string error = 3;
+    string error = 1;
 }
