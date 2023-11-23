@@ -4,3 +4,15 @@ ignore:
   - "**/*.g.dart"
   - "**/*.mocks.dart"
   - "**/l10n/*.dart"
+
+coverage:
+  precision: 2
+  round: down
+  range: 80...100
+  status:
+    project: yes
+    patch: yes
+    changes: no
+  threshold:
+    project: 5%
+    patch: 5%
