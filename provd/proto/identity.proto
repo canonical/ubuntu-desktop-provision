@@ -31,5 +31,5 @@ message ValidateUsernameRequest {
 }
 
 message ValidateUsernameResponse {
-  bool valid = 1;
+  bool validation = 1;
 }

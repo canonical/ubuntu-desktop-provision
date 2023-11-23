@@ -3,70 +3,38 @@ syntax = "proto3";
 package active_directory;
 
 service ActiveDirectoryService {
-    rpc HasSupport(HasSupportRequest) returns (HasSupportResponse);
-    rpc IsUsed(IsUsedRequest) returns (IsUsedResponse);
-    rpc SetUsed(SetUsedRequest) returns (SetUsedResponse);
-    rpc GetConnectionInfoRequset(GetConnectionInfoRequest) returns (GetConnectionInfoResponse);
-    rpc SetConnectionInfo(SetConnectionInfoRequest) returns (SetConnectionInfoResponse);
-    rpc CheckDomainName(TestDomainNameRequest) returns (TestDomainNameResponse);
+    rpc HasSupport(Empty) returns (HasSupportResponse);
+    rpc IsUsed(Empty) returns (IsUsedResponse);
+    rpc SetUsed(SetUsedRequest) returns (Empty);
+    rpc GetConnectionInfo(Empty) returns (GetConnectionInfoResponse);
+    rpc SetConnectionInfo(SetConnectionInfoRequest) returns (Empty);
+    rpc CheckDomainName(CheckDomainNameRequest) returns (CheckDomainNameResponse);
     rpc CheckAdminName(CheckAdminNameRequest) returns (CheckAdminNameResponse);
     rpc CheckPassword(CheckPasswordRequest) returns (CheckPasswordResponse);
     rpc PingDomainController(PingDomainControllerRequest) returns (PingDomainControllerResponse);
     rpc GetJoinResult(GetJoinResultRequest) returns (GetJoinResultResponse);
 }
 
-message HasSupportRequest {
-}
+message Empty {}
 
 message HasSupportResponse {
-    bool success = 1;
-    string error = 2;
-    bool has_support = 3;
-}
-
-message IsUsedRequest {
+    bool has_support = 1;
 }
 
 message IsUsedResponse {
-    bool success = 1;
-    string error = 2;
-    bool is_used = 3;
+    bool is_used = 1;
 }
 
 message SetUsedRequest {
     bool is_used = 1;
 }
 
-message SetUsedResponse {
-    bool success = 1;
-    string error = 2;
-}
-
-message GetConnectionInfoRequset {
-}
-
 message GetConnectionInfoResponse {
-    bool success = 1;
-    string error = 2;
-    AdConnectionInfo ad_connection_info = 3;
+    AdConnectionInfo ad_connection_info = 1;
 }
 
 message SetConnectionInfoRequest {
     AdConnectionInfo ad_connection_info = 1;
-}
-
-message SetConnectionInfoResponse {
-    bool success = 1;
-    string error = 2;
-}
-
-message PingDomainControllerRequest {
-    string domain = 1;
-}
-
-message PingDomainControllerResponse {
-    bool success = 1;
-    string error = 2;
 }
 
 message CheckAdminNameRequest {
@@ -74,8 +42,12 @@ message CheckAdminNameRequest {
 }
 
 message CheckAdminNameResponse {
-    bool success = 1;
-    string error = 2;
+    enum AdAdminNameValidation {
+    OK = 0;
+    EMPTY = 1;
+    INVALID_CHARS = 2;
+    }
+    AdAdminNameValidation validation = 1;
 }
 
 message CheckPasswordRequest {
@@ -83,17 +55,42 @@ message CheckPasswordRequest {
 }
 
 message CheckPasswordResponse {
-    bool success = 1;
-    string error = 2;
+    enum AdPasswordValidation {
+        OK = 0;
+        EMPTY = 1;
+    }
+    AdPasswordValidation validation = 1;
 }
 
-message TestDomainNameRequest {
+message CheckDomainNameRequest {
     string domain_name = 1;
 }
 
-message TestDomainNameResponse {
-    bool success = 1;
-    string error = 2;
+message CheckDomainNameResponse {
+    repeated AdDomainNameValidation validation = 1;
+}
+
+message PingDomainControllerRequest {
+    string domain = 1;
+}
+
+message PingDomainControllerResponse {
+    AdDomainNameValidation validation= 1;
+}
+
+message GetJoinResultRequest {
+    AdConnectionInfo ad_connection_info = 1;
+}
+
+message GetJoinResultResponse {
+    enum AdJoinResult {
+        OK = 0;
+        JOIN_ERROR = 1;
+        EMPTY_HOSTNAME = 2;
+        PAM_ERROR = 3;
+        UNKNOWN = 4;
+    }
+    AdJoinResult join_result = 1;
 }
 
 message AdConnectionInfo {
@@ -102,20 +99,15 @@ message AdConnectionInfo {
     string password = 3;
 }
 
-message GetJoinResultRequest {
-    AdConnectionInfo ad_connection_info = 1;
-}
-
-message GetJoinResultResponse {
-    bool success = 1;
-    string error = 2;
-    JoinResult status = 3;
-}
-
-enum JoinResult {
+enum AdDomainNameValidation {
     OK = 0;
-    JOIN_ERROR = 1;
-    EMPTY_HOSTNAME = 2;
-    PAM_ERROR = 3;
-    UNKNOWN = 4;
+    EMPTY = 1;
+    TOO_LONG = 2;
+    INVALID_CHARS = 3;
+    START_DOT = 4;
+    END_DOT = 5;
+    START_HYPHEN = 6;
+    END_HYPHEN = 7;
+    MULTIPLE_DOTS = 8;
+    REALM_NOT_FOUND = 9;
 }
