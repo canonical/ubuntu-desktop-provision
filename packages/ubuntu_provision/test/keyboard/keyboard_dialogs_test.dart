@@ -26,13 +26,11 @@ void main() {
     });
     registerMockService<KeyboardService>(service);
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => DetectKeyboardView(
-          pressKey: null,
-          keyPresent: null,
-          onKeyPress: (_) {},
-        ),
+    await tester.pumpApp(
+      (_) => DetectKeyboardView(
+        pressKey: null,
+        keyPresent: null,
+        onKeyPress: (_) {},
       ),
     );
 

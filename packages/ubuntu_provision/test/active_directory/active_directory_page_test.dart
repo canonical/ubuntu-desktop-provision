@@ -26,8 +26,7 @@ void main() {
       adminName: 'admin',
       password: 'password',
     );
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     expect(find.textField('ubuntu.com'), findsOneWidget);
     expect(find.textField('admin'), findsOneWidget);
@@ -41,8 +40,7 @@ void main() {
       domainNameValidation: [validation],
     );
 
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
     final context = tester.element(find.byType(ActiveDirectoryPage));
     final error = validation.localize(context);
     if (error.isNotEmpty) {
@@ -66,8 +64,7 @@ void main() {
     final model = buildActiveDirectoryModel(
         adminName: 'admin', adminNameValidation: validation);
 
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
     final context = tester.element(find.byType(ActiveDirectoryPage));
     final error = validation.localize(context);
     if (error.isNotEmpty) {
@@ -90,8 +87,7 @@ void main() {
     final model = buildActiveDirectoryModel(
         password: 'password', passwordValidation: validation);
 
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
     final context = tester.element(find.byType(ActiveDirectoryPage));
     final error = validation.localize(context);
     if (error.isNotEmpty) {
@@ -109,24 +105,21 @@ void main() {
 
   testWidgets('valid input', (tester) async {
     final model = buildActiveDirectoryModel(isValid: true);
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildActiveDirectoryModel(isValid: false);
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });
 
   testWidgets('save AD connection info', (tester) async {
     final model = buildActiveDirectoryModel(isValid: true);
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     await tester.tapNext();
     verify(model.save()).called(1);
@@ -139,8 +132,7 @@ void main() {
   testWidgets('AD join error', (tester) async {
     final model = buildActiveDirectoryModel(
         isValid: true, joinResult: AdJoinResult.JOIN_ERROR);
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildActiveDirectoryPage(model)));
+    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     await tester.tapNext();
     verify(model.save()).called(1);

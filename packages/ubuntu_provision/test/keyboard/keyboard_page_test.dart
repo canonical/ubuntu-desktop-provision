@@ -32,7 +32,7 @@ void main() {
     final model = buildKeyboardModel(
       layouts: List.generate(3, (i) => 'Layout $i'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     for (var i = 0; i < 3; ++i) {
       final layoutTile = find.listTile('Layout $i');
@@ -46,7 +46,7 @@ void main() {
     final model = buildKeyboardModel(
       variants: List.generate(3, (i) => 'Variant $i'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     for (var i = 0; i < 3; ++i) {
       await tester.tap(find.byType(MenuButtonBuilder<int>));
@@ -61,7 +61,7 @@ void main() {
 
   testWidgets('type to test keyboard', (tester) async {
     final model = buildKeyboardModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     final context = tester.element(find.byType(KeyboardPage));
     final l10n = KeyboardLocalizations.of(context);
@@ -75,7 +75,7 @@ void main() {
 
   testWidgets('detect keyboard layout', (tester) async {
     final model = buildKeyboardModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     final context = tester.element(find.byType(KeyboardPage));
     final l10n = KeyboardLocalizations.of(context);
@@ -96,7 +96,7 @@ void main() {
 
   testWidgets('keyboard detection unsupported', (tester) async {
     final model = buildKeyboardModel(canDetectLayout: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     final context = tester.element(find.byType(KeyboardPage));
     final l10n = KeyboardLocalizations.of(context);
@@ -107,14 +107,14 @@ void main() {
 
   testWidgets('valid input', (tester) async {
     final model = buildKeyboardModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildKeyboardModel(isValid: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });
@@ -124,7 +124,7 @@ void main() {
     when(model.searchLayout('foo')).thenReturn(-1);
     when(model.searchLayout('bar')).thenReturn(2);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     final keySearch = find.byType(KeySearch);
     expect(keySearch, findsOneWidget);
@@ -149,7 +149,7 @@ void main() {
 
   testWidgets('continue on the next page', (tester) async {
     final model = buildKeyboardModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildKeyboardPage(model)));
+    await tester.pumpApp((_) => buildKeyboardPage(model));
 
     await tester.tapNext();
     await tester.pumpAndSettle();

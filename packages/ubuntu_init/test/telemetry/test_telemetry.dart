@@ -3,7 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_model.dart';
 
 import 'test_telemetry.mocks.dart';
-export '../test_init.dart';
+export '../test_utils.dart';
 export 'test_telemetry.mocks.dart';
 
 @GenerateMocks([TelemetryModel])

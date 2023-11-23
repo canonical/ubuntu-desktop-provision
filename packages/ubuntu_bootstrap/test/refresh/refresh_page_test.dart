@@ -22,7 +22,7 @@ void main() {
 
   testWidgets('checking', (tester) async {
     final model = buildRefreshModel(state: const RefreshState.checking());
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);
@@ -42,7 +42,7 @@ void main() {
 
   testWidgets('available', (tester) async {
     final model = buildRefreshModel(state: available);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);
@@ -70,7 +70,7 @@ void main() {
 
   testWidgets('unavailable', (tester) async {
     final model = buildRefreshModel(state: unavailable);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);
@@ -98,7 +98,7 @@ void main() {
 
   testWidgets('progress', (tester) async {
     final model = buildRefreshModel(state: notReady);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);
@@ -111,7 +111,7 @@ void main() {
 
   testWidgets('done', (tester) async {
     final model = buildRefreshModel(state: done);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);
@@ -127,7 +127,7 @@ void main() {
 
   testWidgets('error', (tester) async {
     final model = buildRefreshModel(state: error);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final indicator = find.byType(CircularProgressIndicator);
     expect(indicator, findsOneWidget);

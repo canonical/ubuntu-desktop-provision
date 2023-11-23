@@ -25,7 +25,7 @@ void main() {
 
   testWidgets('location on', (tester) async {
     final model = buildPrivacyModel(isLocationEnabled: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final toggle = find.byType(YaruSwitch);
     expect(toggle, isChecked);
@@ -36,7 +36,7 @@ void main() {
 
   testWidgets('location off', (tester) async {
     final model = buildPrivacyModel(isLocationEnabled: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final toggle = find.byType(YaruSwitch);
     expect(toggle, isNotChecked);
@@ -53,7 +53,7 @@ void main() {
         .thenAnswer((_) async => true);
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(PrivacyPage));
     final l10n = PrivacyLocalizations.of(context);

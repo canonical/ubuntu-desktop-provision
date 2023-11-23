@@ -56,6 +56,7 @@ void main() {
     );
     await tester.ensureVisible(menuItem);
     await tester.tap(menuItem);
+    await tester.pump();
 
     expect(selected, equals(1));
   });

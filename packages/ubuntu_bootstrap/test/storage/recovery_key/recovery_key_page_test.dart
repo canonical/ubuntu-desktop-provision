@@ -16,7 +16,7 @@ void main() {
 
   testWidgets('command', (tester) async {
     final model = buildRecoveryKeyModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.text(kRecoveryKeyCommand), findsOneWidget);
   });

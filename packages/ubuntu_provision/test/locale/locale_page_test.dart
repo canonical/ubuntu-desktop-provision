@@ -13,7 +13,7 @@ void main() {
     final model = buildLocaleModel();
     await model.init();
 
-    await tester.pumpWidget(tester.buildApp((_) => buildLocalePage(model)));
+    await tester.pumpApp((_) => buildLocalePage(model));
     await tester.pumpAndSettle();
 
     final languageList = find.byType(ListWidget);
@@ -66,7 +66,7 @@ void main() {
     final model = buildLocaleModel();
     await model.init();
 
-    await tester.pumpWidget(tester.buildApp((_) => buildLocalePage(model)));
+    await tester.pumpApp((_) => buildLocalePage(model));
 
     final languageList = find.byType(ListWidget);
     expect(languageList, findsOneWidget);
@@ -98,7 +98,7 @@ void main() {
     final model = buildLocaleModel();
     await model.init();
 
-    await tester.pumpWidget(tester.buildApp((_) => buildLocalePage(model)));
+    await tester.pumpApp((_) => buildLocalePage(model));
 
     await tester.tapNext();
     await tester.pumpAndSettle();

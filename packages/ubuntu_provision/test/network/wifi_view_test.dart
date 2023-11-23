@@ -51,25 +51,23 @@ void main() {
     WifiDevice? selectedDevice;
     AccessPoint? selectedAccessPoint;
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            wifiModelProvider.overrideWith((_) => model),
-          ],
-          child: Material(
-            child: Column(
-              children: [
-                WifiView(
-                  expanded: true,
-                  onEnabled: () {},
-                  onSelected: (device, accessPoint) {
-                    selectedDevice = device;
-                    selectedAccessPoint = accessPoint;
-                  },
-                ),
-              ],
-            ),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Material(
+          child: Column(
+            children: [
+              WifiView(
+                expanded: true,
+                onEnabled: () {},
+                onSelected: (device, accessPoint) {
+                  selectedDevice = device;
+                  selectedAccessPoint = accessPoint;
+                },
+              ),
+            ],
           ),
         ),
       ),
@@ -117,25 +115,23 @@ void main() {
 
     var wasEnabled = false;
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            wifiModelProvider.overrideWith((_) => model),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Column(
+          children: [
+            WifiRadioButton(
+              value: ConnectMode.wifi,
+              onChanged: (v) {},
+            ),
+            WifiView(
+              expanded: true,
+              onEnabled: () => wasEnabled = true,
+              onSelected: (device, accessPoint) {},
+            ),
           ],
-          child: Column(
-            children: [
-              WifiRadioButton(
-                value: ConnectMode.wifi,
-                onChanged: (v) {},
-              ),
-              WifiView(
-                expanded: true,
-                onEnabled: () => wasEnabled = true,
-                onSelected: (device, accessPoint) {},
-              ),
-            ],
-          ),
         ),
       ),
     );
@@ -158,25 +154,23 @@ void main() {
   testWidgets('no wifi devices', (tester) async {
     final model = buildWifiModel();
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            wifiModelProvider.overrideWith((_) => model),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Column(
+          children: [
+            WifiRadioButton(
+              value: ConnectMode.wifi,
+              onChanged: (v) {},
+            ),
+            WifiView(
+              expanded: true,
+              onEnabled: () {},
+              onSelected: (device, accessPoint) {},
+            ),
           ],
-          child: Column(
-            children: [
-              WifiRadioButton(
-                value: ConnectMode.wifi,
-                onChanged: (v) {},
-              ),
-              WifiView(
-                expanded: true,
-                onEnabled: () {},
-                onSelected: (device, accessPoint) {},
-              ),
-            ],
-          ),
         ),
       ),
     );
@@ -192,17 +186,15 @@ void main() {
   testWidgets('starts periodic scanning', (tester) async {
     final model = buildWifiModel();
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            wifiModelProvider.overrideWith((_) => model),
-          ],
-          child: WifiView(
-            expanded: true,
-            onEnabled: () {},
-            onSelected: (device, accessPoint) {},
-          ),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: WifiView(
+          expanded: true,
+          onEnabled: () {},
+          onSelected: (device, accessPoint) {},
         ),
       ),
     );

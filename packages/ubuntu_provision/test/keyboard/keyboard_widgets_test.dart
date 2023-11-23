@@ -9,12 +9,10 @@ void main() {
   testWidgets('press key', (tester) async {
     int? keyPress;
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => DetectKeyboardView(
-          pressKey: const ['x', 'y', 'z'],
-          onKeyPress: (code) => keyPress = code,
-        ),
+    await tester.pumpApp(
+      (_) => DetectKeyboardView(
+        pressKey: const ['x', 'y', 'z'],
+        onKeyPress: (code) => keyPress = code,
       ),
     );
 
@@ -35,9 +33,7 @@ void main() {
   });
 
   testWidgets('find key', (tester) async {
-    await tester.pumpWidget(
-      tester.buildApp((_) => const DetectKeyboardView(keyPresent: 'x')),
-    );
+    await tester.pumpApp((_) => const DetectKeyboardView(keyPresent: 'x'));
 
     final context = tester.element(find.byType(DetectKeyboardView));
     final l10n = KeyboardLocalizations.of(context);

@@ -20,7 +20,7 @@ void main() {
 
   testWidgets('security key input', (tester) async {
     final model = buildSecurityKeyModel(securityKey: 'foo');
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final textField = find.textField('foo');
     expect(textField, findsOneWidget);
@@ -31,7 +31,7 @@ void main() {
   testWidgets('security key confirmation', (tester) async {
     final model =
         buildSecurityKeyModel(securityKey: 'foo', confirmedSecurityKey: 'foo');
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final textFields = find.textField('foo');
     expect(textFields, findsNWidgets(2));
@@ -43,21 +43,21 @@ void main() {
 
   testWidgets('valid input', (tester) async {
     final model = buildSecurityKeyModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildSecurityKeyModel(isValid: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });
 
   testWidgets('show security key', (tester) async {
     final model = buildSecurityKeyModel(showSecurityKey: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(SecurityKeyPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -71,7 +71,7 @@ void main() {
 
   testWidgets('save security key', (tester) async {
     final model = buildSecurityKeyModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tapNext();
     verify(model.saveSecurityKey()).called(1);

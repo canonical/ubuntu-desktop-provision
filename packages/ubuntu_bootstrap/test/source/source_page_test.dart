@@ -14,7 +14,7 @@ import 'test_source.dart';
 void main() {
   testWidgets('source id', (tester) async {
     final model = buildSourceModel(sourceId: kFullSourceId);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     expect(find.radio(kFullSourceId), isChecked);
     expect(find.radio(kMinimalSourceId), isNotChecked);
@@ -28,7 +28,7 @@ void main() {
 
   testWidgets('install drivers', (tester) async {
     final model = buildSourceModel(installDrivers: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     final context = tester.element(find.byType(SourcePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -46,7 +46,7 @@ void main() {
 
   testWidgets('install codecs', (tester) async {
     final model = buildSourceModel(installCodecs: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     final context = tester.element(find.byType(SourcePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -64,7 +64,7 @@ void main() {
 
   testWidgets('on battery', (tester) async {
     final model = buildSourceModel(onBattery: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
     await tester.pumpAndSettle();
 
     final context = tester.element(find.byType(SourcePage));
@@ -81,14 +81,14 @@ void main() {
 
   testWidgets('not on battery', (tester) async {
     final model = buildSourceModel(onBattery: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     expect(find.byType(Html), findsNothing);
   });
 
   testWidgets('offline', (tester) async {
     final model = buildSourceModel(isOnline: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     final context = tester.element(find.byType(SourcePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -111,7 +111,7 @@ void main() {
 
   testWidgets('continue on the next page', (tester) async {
     final model = buildSourceModel(sourceId: kFullSourceId);
-    await tester.pumpWidget(tester.buildApp((_) => buildSourcePage(model)));
+    await tester.pumpApp((_) => buildSourcePage(model));
 
     await tester.tapNext();
     await tester.pumpAndSettle();

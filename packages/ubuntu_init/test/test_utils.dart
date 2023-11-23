@@ -9,20 +9,22 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-import 'test_init.mocks.dart';
-export 'test_init.mocks.dart';
+import 'test_utils.mocks.dart';
+export 'test_utils.mocks.dart';
 
 extension UbuntuInitTester on WidgetTester {
-  Widget buildApp(WidgetBuilder builder) {
+  Future<void> pumpApp(WidgetBuilder builder) async {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
-    return MaterialApp(
-      localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
-      theme: yaruLight,
-      home: Wizard(
-        routes: {
-          '/': WizardRoute(builder: builder),
-        },
+    return pumpWidget(
+      MaterialApp(
+        localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
+        theme: yaruLight,
+        home: Wizard(
+          routes: {
+            '/': WizardRoute(builder: builder),
+          },
+        ),
       ),
     );
   }

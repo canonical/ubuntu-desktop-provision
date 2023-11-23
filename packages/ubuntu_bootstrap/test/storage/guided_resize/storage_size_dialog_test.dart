@@ -12,7 +12,7 @@ import '../../test_utils.dart';
 
 void main() {
   testWidgets('resize storage', (tester) async {
-    await tester.pumpWidget(tester.buildApp((_) => const Scaffold()));
+    await tester.pumpApp((_) => const Scaffold());
 
     final result = showStorageSizeDialog(
       tester.element(find.byType(Scaffold)),
@@ -54,19 +54,30 @@ void main() {
       maximumSize: toBytes(100, DataUnit.gigabytes),
     );
     await tester.pumpAndSettle();
+    final context = tester.element(find.byType(StorageSizeDialog));
 
     for (final unit in DataUnit.values) {
-      await tester.tap(find.byType(MenuButtonBuilder<DataUnit>));
+      final menuButton = find.byType(MenuButtonBuilder<DataUnit>).last;
+      expect(menuButton, findsOneWidget);
+      await tester.pumpAndSettle();
+      await tester.ensureVisible(menuButton);
+      await tester.pumpAndSettle();
+      // TODO: This is needed to a bug in Flutter 3.16.0 where the focus still
+      // is on the text field within the SpinBox (only in tests).
+      FocusScope.of(context).unfocus();
+      await tester.tap(menuButton);
       await tester.pumpAndSettle();
 
-      await tester.ensureVisible(find.byKey(ValueKey(unit)).last);
-      await tester.pump();
-      await tester.tap(find.byKey(ValueKey(unit)).last);
-      await tester.pump();
+      final dropDownUnit = find.byKey(ValueKey(unit)).last;
+      await tester.ensureVisible(dropDownUnit);
+      await tester.pumpAndSettle();
+      expect(dropDownUnit, findsOneWidget);
+      await tester.tap(dropDownUnit);
+      await tester.pumpAndSettle();
 
       final min = fromBytes(toBytes(20, DataUnit.gigabytes), unit).round();
       final max = fromBytes(toBytes(100, DataUnit.gigabytes), unit).round();
-      expect(find.textContaining(RegExp('$min-$max \\w+')), findsOneWidget);
+      expect(find.text('$min-$max ${unit.l10n(context)}'), findsOneWidget);
     }
 
     await tester.tapOk();
@@ -76,7 +87,7 @@ void main() {
   });
 
   testWidgets('cancel', (tester) async {
-    await tester.pumpWidget(tester.buildApp((_) => const Scaffold()));
+    await tester.pumpApp((_) => const Scaffold());
 
     final result = showStorageSizeDialog(
       tester.element(find.byType(Scaffold)),

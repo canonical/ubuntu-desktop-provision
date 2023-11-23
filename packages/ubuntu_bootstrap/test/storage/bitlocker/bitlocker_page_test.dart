@@ -18,10 +18,10 @@ void main() {
   testWidgets('restart', (tester) async {
     final model = buildBitLockerModel();
 
-    await tester.pumpWidget(
-      ProviderScope(
+    await tester.pumpApp(
+      (_) => ProviderScope(
         overrides: [bitLockerModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const BitLockerPage()),
+        child: const BitLockerPage(),
       ),
     );
 
@@ -58,10 +58,10 @@ void main() {
         .thenAnswer((_) async => true);
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(
-      ProviderScope(
+    await tester.pumpApp(
+      (_) => ProviderScope(
         overrides: [bitLockerModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const BitLockerPage()),
+        child: const BitLockerPage(),
       ),
     );
 

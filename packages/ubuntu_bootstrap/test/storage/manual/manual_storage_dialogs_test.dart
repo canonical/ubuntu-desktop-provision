@@ -113,7 +113,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [manualStorageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const ManualStoragePage()),
+        child: tester.buildApp((_) => ManualStoragePage()),
       ),
     );
 

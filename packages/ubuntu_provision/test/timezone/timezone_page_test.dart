@@ -21,7 +21,7 @@ void main() {
   testWidgets('saves the location', (tester) async {
     final model = buildTimezoneModel();
     when(model.init()).thenAnswer((_) async => '');
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     await tester.tapNext();
     verify(model.save()).called(1);
@@ -32,7 +32,7 @@ void main() {
     when(model.searchLocation('test'))
         .thenAnswer((_) async => const <GeoLocation>[]);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     await tester.enterText(find.byType(EditableText).first, 'test');
     await tester.pump();
@@ -44,7 +44,7 @@ void main() {
     when(model.searchTimezone('test'))
         .thenAnswer((_) async => const <GeoLocation>[]);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     await tester.enterText(find.byType(EditableText).last, 'test');
     await tester.pump();
@@ -61,7 +61,7 @@ void main() {
     when(model.searchLocation('b')).thenAnswer((_) async => locations);
     when(model.selectLocation(const GeoLocation())).thenAnswer((_) {});
 
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     expect(find.byType(ListView), findsNothing);
     expect(find.text('b'), findsNothing);
@@ -91,7 +91,7 @@ void main() {
     when(model.searchTimezone('b')).thenAnswer((_) async => timezones);
     when(model.selectTimezone(const GeoLocation())).thenAnswer((_) {});
 
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     expect(find.byType(ListView), findsNothing);
     expect(find.text('b'), findsNothing);
@@ -146,7 +146,7 @@ void main() {
     when(model.searchCoordinates(any)).thenAnswer((_) async => locations);
     when(model.searchTimezone(any)).thenAnswer((_) async => timezones);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     expect(find.byType(TimezoneMap), findsOneWidget);
     await tester.tap(find.byType(TimezoneMap));
@@ -164,7 +164,7 @@ void main() {
 
   testWidgets('format location', (tester) async {
     final model = buildTimezoneModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     final page = find.byType(TimezonePage);
     expect(page, findsOneWidget);
@@ -190,7 +190,7 @@ void main() {
 
   testWidgets('format timezone', (tester) async {
     final model = buildTimezoneModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildTimezonePage(model)));
+    await tester.pumpApp((_) => buildTimezonePage(model));
 
     final page = find.byType(TimezonePage);
     expect(page, findsOneWidget);

@@ -16,17 +16,15 @@ void main() {
 
     final model = buildEthernetModel(devices: [MockEthernetDevice()]);
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            ethernetModelProvider.overrideWith((_) => model),
-          ],
-          child: Material(
-            child: EthernetRadioButton(
-              value: ConnectMode.none,
-              onChanged: (value) => mode = value,
-            ),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          ethernetModelProvider.overrideWith((_) => model),
+        ],
+        child: Material(
+          child: EthernetRadioButton(
+            value: ConnectMode.none,
+            onChanged: (value) => mode = value,
           ),
         ),
       ),
@@ -44,24 +42,22 @@ void main() {
 
     var wasEnabled = false;
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            ethernetModelProvider.overrideWith((_) => model),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          ethernetModelProvider.overrideWith((_) => model),
+        ],
+        child: Column(
+          children: [
+            EthernetRadioButton(
+              value: ConnectMode.none,
+              onChanged: (value) {},
+            ),
+            EthernetView(
+              expanded: true,
+              onEnabled: () => wasEnabled = true,
+            ),
           ],
-          child: Column(
-            children: [
-              EthernetRadioButton(
-                value: ConnectMode.none,
-                onChanged: (value) {},
-              ),
-              EthernetView(
-                expanded: true,
-                onEnabled: () => wasEnabled = true,
-              ),
-            ],
-          ),
         ),
       ),
     );
@@ -83,24 +79,22 @@ void main() {
   testWidgets('no ethernet devices', (tester) async {
     final model = buildEthernetModel();
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            ethernetModelProvider.overrideWith((_) => model),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          ethernetModelProvider.overrideWith((_) => model),
+        ],
+        child: Column(
+          children: [
+            EthernetRadioButton(
+              value: ConnectMode.none,
+              onChanged: (value) {},
+            ),
+            EthernetView(
+              expanded: true,
+              onEnabled: () {},
+            ),
           ],
-          child: Column(
-            children: [
-              EthernetRadioButton(
-                value: ConnectMode.none,
-                onChanged: (value) {},
-              ),
-              EthernetView(
-                expanded: true,
-                onEnabled: () {},
-              ),
-            ],
-          ),
         ),
       ),
     );

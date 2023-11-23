@@ -134,20 +134,3 @@ class StorageSizeDialog extends StatelessWidget {
     );
   }
 }
-
-// TODO: share somewhere
-extension _DataUnitLocalizations on DataUnit {
-  String l10n(BuildContext context) {
-    final lang = UbuntuLocalizations.of(context);
-    switch (this) {
-      case DataUnit.bytes:
-        return lang.byte;
-      case DataUnit.kilobytes:
-        return lang.kilobyte;
-      case DataUnit.megabytes:
-        return lang.megabyte;
-      case DataUnit.gigabytes:
-        return lang.gigabyte;
-    }
-  }
-}

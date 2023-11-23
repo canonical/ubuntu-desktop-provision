@@ -11,7 +11,7 @@ void main() {
     WidgetRef? ref;
 
     final model = buildLoadingModel(delay: const Duration(seconds: 3));
-    await tester.pumpWidget(tester.buildApp(
+    await tester.pumpApp(
       (_) => ProviderScope(
         overrides: [loadingModelProvider.overrideWith((_) => model)],
         child: Consumer(builder: (context, aref, child) {
@@ -19,7 +19,7 @@ void main() {
           return const LoadingPage();
         }),
       ),
-    ));
+    );
     expect(find.byType(LoadingPage), findsOneWidget);
     expect(ref, isNotNull);
 
