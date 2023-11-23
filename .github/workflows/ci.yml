@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos analyze
 
@@ -35,7 +35,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: |
         sudo apt update
@@ -59,7 +59,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos format
 
@@ -75,7 +75,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
@@ -88,7 +88,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos generate
     - name: Check for outdated mocks
@@ -110,7 +110,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos gen-l10n
     - name: Check for outdated l10n
@@ -132,7 +132,7 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - name: Install dependencies
       run: |
