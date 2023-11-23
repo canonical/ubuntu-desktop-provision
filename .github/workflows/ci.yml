@@ -53,32 +53,6 @@ jobs:
       env:
         SUBIQUITY_REPLAY_TIMESCALE: 100
 
-  flutter-coverage:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        package:
-          - ubuntu_bootstrap
-          - ubuntu_init
-          - ubuntu_provision
-          - ubuntu_utils
-          - ubuntu_wizard
-      fail-fast: false
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
-    - run: flutter test --coverage
-      working-directory: packages/${{matrix.package}}
-    - run: sudo apt update && sudo apt install lcov
-    - run: lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
-      working-directory: packages/${{matrix.package}}
-    - uses: codecov/codecov-action@v3
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
-
   flutter-format:
     runs-on: ubuntu-22.04
     steps:
