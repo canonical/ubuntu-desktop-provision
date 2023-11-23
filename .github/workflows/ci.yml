@@ -146,6 +146,7 @@ jobs:
     - run: melos coverage
     - uses: codecov/codecov-action@v3
       with:
+        flags: UI
         token: ${{secrets.CODECOV_TOKEN}}
 
   go-sanity:
@@ -193,3 +194,4 @@ jobs:
         with:
           file: /tmp/coverage.out
           flags: provd
+          token: ${{secrets.CODECOV_TOKEN}}
