@@ -20,7 +20,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: melos analyze
 
   bootstrap:
@@ -36,7 +36,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: |
         sudo apt update
         sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
@@ -60,7 +60,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: melos format
 
   init:
@@ -76,7 +76,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
     - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
@@ -89,7 +89,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: melos generate
     - name: Check for outdated mocks
       if: github.event_name == 'pull_request'
@@ -111,7 +111,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - run: melos gen-l10n
     - name: Check for outdated l10n
       if: github.event_name == 'pull_request'
@@ -133,7 +133,7 @@ jobs:
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
+    - uses: bluefireteam/melos-action@v3
     - name: Install dependencies
       run: |
         sudo apt update && sudo apt install lcov
