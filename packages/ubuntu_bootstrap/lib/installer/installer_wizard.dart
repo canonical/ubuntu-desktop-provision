@@ -19,9 +19,6 @@ enum InstallationStep {
   source,
   type,
   storage,
-  timezone,
-  identity,
-  theme,
 }
 
 class InstallerWizard extends ConsumerStatefulWidget {
@@ -120,32 +117,6 @@ class _InstallWizard extends ConsumerWidget {
       ),
     };
 
-    final postInstall = <String, WizardRoute>{
-      Routes.timezone: WizardRoute(
-        builder: (_) => const TimezonePage(),
-        userData: WizardRouteData(
-          step: InstallationStep.timezone.index,
-          hasPrevious: false,
-        ),
-        onLoad: (_) => TimezonePage.load(context, ref),
-      ),
-      Routes.identity: WizardRoute(
-        builder: (_) => const IdentityPage(),
-        userData: WizardRouteData(step: InstallationStep.identity.index),
-        onLoad: (_) => IdentityPage.load(ref),
-      ),
-      Routes.activeDirectory: WizardRoute(
-        builder: (_) => const ActiveDirectoryPage(),
-        userData: WizardRouteData(step: InstallationStep.identity.index),
-        onLoad: (_) => ActiveDirectoryPage.load(ref),
-      ),
-      Routes.theme: WizardRoute(
-        builder: (_) => const ThemePage(),
-        userData: WizardRouteData(step: InstallationStep.theme.index),
-        onLoad: (_) => ThemePage.load(ref),
-      ),
-    };
-
     return WizardBuilder(
       initialRoute: Routes.initial,
       userData: WizardData(totalSteps: InstallationStep.values.length),
@@ -160,7 +131,6 @@ class _InstallWizard extends ConsumerWidget {
           userData: WizardRouteData(step: InstallationStep.storage.index),
           onLoad: (_) => ConfirmPage.load(ref),
         ),
-        ...postInstall,
         Routes.install: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => InstallPage.load(context, ref),

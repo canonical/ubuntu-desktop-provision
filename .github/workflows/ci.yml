@@ -4,13 +4,16 @@ on:
   push:
     branches:
       - main
-      - 'ubuntu/**'
-      - 'canary-*'
+      - archive/main
   pull_request:
+    branches:
+      - main
+      - archive/main
+
   workflow_dispatch:
 
 jobs:
-  analyze:
+  flutter-analyze:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -50,7 +53,7 @@ jobs:
       env:
         SUBIQUITY_REPLAY_TIMESCALE: 100
 
-  coverage:
+  flutter-coverage:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
@@ -76,7 +79,7 @@ jobs:
       with:
         token: ${{secrets.CODECOV_TOKEN}}
 
-  format:
+  flutter-format:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -105,7 +108,7 @@ jobs:
     - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
       working-directory: packages/ubuntu_init
 
-  mocks:
+  flutter-mocks:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -149,7 +152,7 @@ jobs:
         branch: create-pull-request/l10n
         delete-branch: true
 
-  test:
+  flutter-tests:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
@@ -170,3 +173,49 @@ jobs:
     - uses: codecov/codecov-action@v3
       with:
         token: ${{secrets.CODECOV_TOKEN}}
+
+  go-sanity:
+    name: "Go: Code sanity"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go code sanity check
+        uses: canonical/desktop-engineering/gh-actions/go/code-sanity@main
+        with:
+          golangci-lint-configfile: ".golangci.yaml"
+          tools-directory: "./provd/tools"
+          working-directory: "./provd"
+      - name: Build cmd/provd
+        run: |
+          set -eu
+          cd provd
+          go build ./cmd/provd
+
+  go-tests:
+    name: "Go: Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: "./provd/go.mod"
+
+      - name: Run tests
+        run: |
+          set -eu
+
+          cd provd
+          go test -coverpkg=./... -coverprofile=/tmp/coverage.out -covermode=set ./... -shuffle=on
+      - name: Run tests (with race detector)
+        run: |
+
+          cd provd
+          go test -race ./...
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: /tmp/coverage.out
+          flags: provd

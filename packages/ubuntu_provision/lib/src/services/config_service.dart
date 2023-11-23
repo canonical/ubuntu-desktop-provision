@@ -1,11 +1,7 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
-import 'package:toml/toml.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
@@ -43,9 +39,8 @@ class ConfigService {
       final data = await file.readAsString();
       final config = switch (p.extension(_path!)) {
         '.yml' || '.yaml' => loadYaml(data),
-        '.conf' || '.tml' || '.toml' => TomlDocument.parse(data).toMap(),
-        '.json' => jsonDecode(data),
-        _ => throw UnsupportedError(_path!),
+        _ => throw UnsupportedError(
+            'Only supports yaml/yml files, so $_path is not supported.'),
       };
       log.debug('loaded $_path');
       return (config as Map).cast();
@@ -57,23 +52,19 @@ class ConfigService {
 
   /// Looks up the config file path in the following order:
   ///
-  /// - /etc/ubuntu-provision.{conf,yaml,yml} (admin)
-  /// - /usr/local/share/ubuntu-provision.{conf,yaml,yml} (oem)
-  /// - /usr/share/ubuntu-provision.{conf,yaml,yml} (distro)
-  /// - <app>/data/flutter_assets/ubuntu-provision.{conf,yaml,yml} (app)
+  /// - /etc/ubuntu-provision.{yaml,yml} (admin)
+  /// - /usr/local/share/ubuntu-provision.{yaml,yml} (oem)
+  /// - /usr/share/ubuntu-provision.{yaml,yml} (distro)
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
-    const exts = ['conf', 'yaml', 'yml'];
-    final assets = p.join(p.dirname(Platform.resolvedExecutable), 'data',
-        'flutter_assets', 'assets');
+    const extensions = ['yaml', 'yml'];
     final dirs = [
       ...xdg.configDirs,
       fs.directory('/etc'),
       ...xdg.dataDirs,
-      fs.directory(assets),
     ];
     for (final dir in dirs) {
-      for (final ext in exts) {
+      for (final ext in extensions) {
         final path = p.join(dir.path, 'ubuntu-provision.$ext');
         if (fs.file(path).existsSync()) return path;
       }

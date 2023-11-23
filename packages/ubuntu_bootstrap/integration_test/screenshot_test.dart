@@ -316,68 +316,6 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('10.timezone', (tester) async {
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.timezone);
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage(
-      screenshot: '$currentThemeName/10.timezone',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('11.identity', (tester) async {
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.identity);
-    await tester.pumpAndSettle();
-
-    await tester.testIdentityPage(
-      identity: const Identity(
-        realname: 'Ubuntu User',
-        hostname: 'ubuntu',
-        username: 'user',
-      ),
-      password: 'password',
-      screenshot: '$currentThemeName/11.identity',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('12.active-directory', (tester) async {
-    final client = FakeSubiquityClient();
-    registerServiceInstance<SubiquityClient>(client);
-
-    final service = FakeActiveDirectoryService(client);
-    registerServiceInstance<ActiveDirectoryService>(service);
-
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.activeDirectory);
-    await tester.pumpAndSettle();
-
-    await tester.testActiveDirectoryPage(
-      adminName: 'admin',
-      password: 'password',
-      screenshot: '$currentThemeName/12.active-directory',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('13.theme', (tester) async {
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.theme);
-    await tester.pumpAndSettle();
-
-    await tester.testThemePage(
-      screenshot: '$currentThemeName/13.theme',
-    );
-  }, variant: themeVariant);
-
   testWidgets('14.install', (tester) async {
     await YaruTestWindow.ensureInitialized(
       state: const YaruWindowState(isActive: true, isClosable: false),
@@ -414,13 +352,6 @@ Future<void> main() async {
       screenshot: '$currentThemeName/15.complete',
     );
   }, variant: themeVariant);
-}
-
-class FakeActiveDirectoryService extends SubiquityActiveDirectoryService {
-  FakeActiveDirectoryService(super.client);
-
-  @override
-  Future<bool> isUsed() async => true;
 }
 
 class FakeDesktopService implements DesktopService {
