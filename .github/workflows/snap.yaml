@@ -1,4 +1,4 @@
-name: Build Ubuntu Bootstrap Snap
+name: Build Snap
 
 on:
   push:
