@@ -112,7 +112,6 @@ Future<void> runInstallerApp(
     }
     return TelemetryService(path);
   });
-  tryRegisterService<ThemeService>(GtkThemeService.new);
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
