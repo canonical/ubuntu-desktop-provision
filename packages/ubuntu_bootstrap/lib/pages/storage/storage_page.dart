@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
@@ -60,11 +61,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.installationTypeTitle),
-      ),
-      header: Text(_formatHeader(context, model.existingOS ?? [])),
+    return HorizontalPage(
+      windowTitle: lang.installationTypeTitle,
+      title: _formatHeader(context, model.existingOS ?? []),
+      icon: SvgPicture.asset('assets/icons/disk.svg'),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -124,23 +124,15 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
         ],
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
-        trailing: [
-          WizardButton.next(
-            context,
-            enabled: model.canEraseDisk ||
-                model.canInstallAlongside ||
-                model.canManualPartition,
-            arguments: model.type,
-            onNext: model.save,
-            // If the user returns back to select another installation type, the
-            // previously configured storage must be reset to make all guided
-            // partitioning targets available.
-            onBack: model.resetStorage,
-          ),
-        ],
-      ),
+      isNextEnabled: model.canEraseDisk ||
+          model.canInstallAlongside ||
+          model.canManualPartition,
+      nextArguments: model.type,
+      onNext: model.save,
+      // If the user returns back to select another installation type, the
+      // previously configured storage must be reset to make all guided
+      // partitioning targets available.
+      onBack: model.resetStorage,
     );
   }
 }
