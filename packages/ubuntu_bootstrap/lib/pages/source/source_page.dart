@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
@@ -27,18 +29,18 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.updatesOtherSoftwarePageTitle),
+    return HorizontalPage(
+      windowTitle: lang.updatesOtherSoftwarePageTitle,
+      title: lang.updatesOtherSoftwarePageDescription,
+      icon: SvgPicture.asset(
+        'assets/icons/mascot.svg',
+        colorFilter: ColorFilter.mode(
+          context.isDarkMode ? Colors.white : Colors.black,
+          BlendMode.srcIn,
+        ),
       ),
-      headerPadding: EdgeInsets.zero,
-      contentPadding: EdgeInsets.zero,
       content: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(kYaruPagePadding),
-            child: Text(lang.updatesOtherSoftwarePageDescription),
-          ),
           ...model.sources
               .map((source) => Align(
                     alignment: AlignmentDirectional.centerStart,
@@ -105,23 +107,15 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
               showCloseIcon: true,
             )
           : null,
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
-        trailing: [
-          WizardButton.next(
-            context,
-            enabled: model.sourceId != null,
-            onNext: () async {
-              final telemetry = tryGetService<TelemetryService>();
-              await telemetry?.addMetrics({
-                'Minimal': model.sourceId?.contains('minimal') ?? false,
-                'RestrictedAddons': model.installCodecs,
-              });
-              await model.save();
-            },
-          ),
-        ],
-      ),
+      isNextEnabled: model.sourceId != null,
+      onNext: () async {
+        final telemetry = tryGetService<TelemetryService>();
+        await telemetry?.addMetrics({
+          'Minimal': model.sourceId?.contains('minimal') ?? false,
+          'RestrictedAddons': model.installCodecs,
+        });
+        await model.save();
+      },
     );
   }
 }
