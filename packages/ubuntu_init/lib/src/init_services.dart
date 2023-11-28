@@ -48,6 +48,8 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<Sysmetrics>(Sysmetrics.new);
   tryRegisterService<ThemeService>(GtkThemeService.new);
+  tryRegisterService<ThemeVariantService>(
+      () => ThemeVariantService(config: tryGetService<ConfigService>()));
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);
