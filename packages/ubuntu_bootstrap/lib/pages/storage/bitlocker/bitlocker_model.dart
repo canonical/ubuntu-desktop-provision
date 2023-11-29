@@ -4,8 +4,7 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
-/// @internal
-final log = Logger('bitlocker');
+final _log = Logger('bitlocker');
 
 /// Provider for [BitLockerModel].
 final bitLockerModelProvider = ChangeNotifierProvider((_) =>
@@ -22,7 +21,7 @@ class BitLockerModel extends SafeChangeNotifier {
   Future<bool> init() async {
     final hasBitLocker = await _storage.hasBitLocker();
     if (hasBitLocker) {
-      log.info('BitLocker must be turned off');
+      _log.info('BitLocker must be turned off');
     }
     return hasBitLocker;
   }

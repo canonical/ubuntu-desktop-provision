@@ -1,8 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meta/meta.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-/// @internal
+@internal
 final log = Logger('network');
 
 final noConnectModelProvider = ChangeNotifierProvider((_) => NoConnectModel());

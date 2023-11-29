@@ -6,7 +6,7 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-import 'services/privacy_service.dart' hide log;
+import 'services/privacy_service.dart';
 import 'services/realmd_active_directory_service.dart';
 import 'services/xdg_identity_service.dart';
 import 'services/xdg_keyboard_service.dart';

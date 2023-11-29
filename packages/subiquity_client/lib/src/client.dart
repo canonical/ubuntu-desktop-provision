@@ -8,8 +8,7 @@ import 'endpoint.dart';
 import 'status_monitor.dart';
 import 'types.dart';
 
-/// @internal
-final log = Logger('subiquity_client');
+final _log = Logger('subiquity_client');
 
 const _kMaxResponseLogLength = 1200;
 
@@ -47,7 +46,7 @@ class SubiquityClient {
   Endpoint? _endpoint;
 
   void open(Endpoint endpoint) {
-    log.info('Opening socket to $endpoint');
+    _log.info('Opening socket to $endpoint');
     _endpoint = endpoint;
     _client.connectionFactory = (uri, proxyHost, proxyPort) async {
       return Socket.startConnect(endpoint.address, endpoint.port);
@@ -56,7 +55,7 @@ class SubiquityClient {
   }
 
   Future<void> close() async {
-    log.info('Closing socket to $_endpoint');
+    _log.info('Closing socket to $_endpoint');
     _client.close();
   }
 
@@ -71,7 +70,7 @@ class SubiquityClient {
     if (response.statusCode != 200) {
       throw SubiquityException(method, response.statusCode, str);
     }
-    log.debug(() => formatResponseLog(method, str));
+    _log.debug(() => formatResponseLog(method, str));
     final json = jsonDecode(str);
     return decode?.call(json as V) ?? json as R;
   }
@@ -83,7 +82,7 @@ class SubiquityClient {
   ]) async {
     await _ready.future;
     final url = Uri.http(_endpoint!.authority, path, queryParameters);
-    log.debug('$method $url');
+    _log.debug('$method $url');
     final request = await _client.openUrl(method, url);
     request.headers.contentType =
         ContentType('application', 'json', charset: 'utf-8');
@@ -222,7 +221,7 @@ class SubiquityClient {
       final request = await _openUrl('GET', 'meta/status');
       status = await _receive('status()', request, ApplicationStatus.fromJson);
     }
-    log.info('state: ${current?.name} => ${status.state.name}');
+    _log.info('state: ${current?.name} => ${status.state.name}');
     return status;
   }
 

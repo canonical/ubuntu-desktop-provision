@@ -1,11 +1,7 @@
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:meta/meta.dart';
-import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-
-/// @internal
-final log = Logger('privacy');
 
 abstract class PrivacyService {
   Future<bool> isLocationEnabled();

@@ -6,8 +6,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
-/// @internal
-final log = Logger('config');
+final _log = Logger('config');
 
 class ConfigService {
   ConfigService({
@@ -42,10 +41,10 @@ class ConfigService {
         _ => throw UnsupportedError(
             'Only supports yaml/yml files, so $_path is not supported.'),
       };
-      log.debug('loaded $_path');
+      _log.debug('loaded $_path');
       return (config as Map).cast();
     } on FileSystemException catch (e) {
-      log.error('failed to load $_path', e);
+      _log.error('failed to load $_path', e);
       return null;
     }
   }
