@@ -78,7 +78,7 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
-    () => ConfigService(scope: 'bootstrap', path: options['config'] as String?),
+    () => ConfigService(path: options['config'] as String?),
   );
   tryRegisterService<DesktopService>(() => GnomeService());
   tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
