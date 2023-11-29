@@ -5,7 +5,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-final log = Logger('timezone');
+final _log = Logger('timezone');
 
 final timezoneModelProvider = ChangeNotifierProvider(
   (_) => TimezoneModel(
@@ -21,7 +21,7 @@ class TimezoneModel extends TimezoneController {
 
   Future<void> init() async {
     return _service.getTimezone().then((timezone) async {
-      log.debug('Initialized $timezone');
+      _log.debug('Initialized $timezone');
       return searchTimezone(timezone).then((timezones) {
         selectTimezone(timezones.firstOrNull);
       });
@@ -30,7 +30,7 @@ class TimezoneModel extends TimezoneController {
 
   Future<void> save() async {
     final timezone = selectedLocation?.timezone;
-    log.debug('Saved $timezone');
+    _log.debug('Saved $timezone');
     _service.setTimezone(timezone);
   }
 }

@@ -6,8 +6,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 part 'refresh_service.freezed.dart';
 
-/// @internal
-final log = Logger('refresh');
+final _log = Logger('refresh');
 
 @freezed
 class RefreshState with _$RefreshState {
@@ -39,7 +38,7 @@ class RefreshService {
 
   void _setState(RefreshState state) {
     if (_state == state) return;
-    log.debug(state);
+    _log.debug(state);
     _state = state;
     _controller.add(state);
   }

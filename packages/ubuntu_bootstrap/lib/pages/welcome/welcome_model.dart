@@ -6,8 +6,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-/// @internal
-final log = Logger('welcome');
+final _log = Logger('welcome');
 
 final welcomeModelProvider = ChangeNotifierProvider(
   (_) => WelcomeModel(
@@ -60,7 +59,7 @@ class WelcomeModel extends SafeChangeNotifier with PropertyStreamNotifier {
   void selectOption(Option option) {
     if (_option == option) return;
     _option = option;
-    log.info('Selected ${option.name} option');
+    _log.info('Selected ${option.name} option');
     notifyListeners();
   }
 

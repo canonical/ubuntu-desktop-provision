@@ -2,8 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 
-/// @internal
-final log = Logger('keyboard');
+final _log = Logger('keyboard');
 
 /// Detects keyboard layout with help of subiquity's keyboard API.
 class KeyboardDetector extends ValueNotifier<AnyStep?> {
@@ -31,7 +30,7 @@ class KeyboardDetector extends ValueNotifier<AnyStep?> {
 
   void _updateCurrentStep(AnyStep? step) {
     if (step is StepResult) {
-      log.info('Detected ${step.layout} (${step.variant}) keyboard layout');
+      _log.info('Detected ${step.layout} (${step.variant}) keyboard layout');
       _onResult?.call(step);
     }
     value = step;

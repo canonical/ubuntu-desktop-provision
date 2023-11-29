@@ -3,9 +3,6 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-/// @internal
-final log = Logger('RST');
-
 final rstModelProvider =
     Provider<RstModel>((_) => RstModel(getService<SubiquityClient>()));
 
