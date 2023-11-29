@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
 
 import '../../services.dart';
 
+part 'theme_variant_service.freezed.dart';
+part 'theme_variant_service.g.dart';
+
 final _log = Logger('theme_variant');
+
+@freezed
+class ThemeConfig with _$ThemeConfig {
+  // ignore: invalid_annotation_target
+  @JsonSerializable(fieldRename: FieldRename.kebab, explicitToJson: true)
+  const factory ThemeConfig({
+    String? accentColor,
+    String? elevatedButtonColor,
+    String? elevatedButtonTextColor,
+    String? windowTitle,
+  }) = _ThemeConfig;
+  factory ThemeConfig.fromJson(Map<String, dynamic> json) =>
+      _$ThemeConfigFromJson(json);
+}
 
 class ThemeVariant {
   const ThemeVariant({
@@ -16,24 +35,17 @@ class ThemeVariant {
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final String? windowTitle;
-}
 
-class ThemeVariantService {
-  ThemeVariantService({ConfigService? config}) : _config = config;
-
-  final ConfigService? _config;
-  ThemeVariant? themeVariant;
-
-  Future<(ThemeData?, ThemeData?)> _loadTheme() async {
-    final accentColor = await _config?.getColor('accent-color');
+  factory ThemeVariant.fromThemeConfig(ThemeConfig themeConfig) {
+    final accentColor = _parseColorString(themeConfig.accentColor);
     if (accentColor == null) {
-      return (null, null);
+      return ThemeVariant(windowTitle: themeConfig.windowTitle);
     }
 
     final elevatedButtonColor =
-        await _config?.getColor('elevated-button-color');
+        _parseColorString(themeConfig.elevatedButtonColor);
     final elevatedButtonTextColor =
-        await _config?.getColor('elevated-button-text-color');
+        _parseColorString(themeConfig.elevatedButtonTextColor);
 
     final theme = createYaruLightTheme(
       primaryColor: accentColor,
@@ -45,32 +57,35 @@ class ThemeVariantService {
       elevatedButtonColor: elevatedButtonColor,
       elevatedButtonTextColor: elevatedButtonTextColor,
     );
-    return (theme, darkTheme);
-  }
-
-  Future<void> load() async {
-    final (theme, darkTheme) = await _loadTheme();
-    final windowTitle = await _config?.get<String>('window-title');
-
-    themeVariant = ThemeVariant(
+    return ThemeVariant(
       theme: theme,
       darkTheme: darkTheme,
-      windowTitle: windowTitle,
+      windowTitle: themeConfig.windowTitle,
     );
   }
-}
 
-extension on ConfigService {
-  Future<Color?> getColor(String name) async {
-    final colorString = (await get<String>(name))?.replaceFirst(r'#', '');
+  static Color? _parseColorString(String? colorString) {
     if (colorString == null) {
       return null;
     }
-    final color = int.tryParse(colorString, radix: 16);
+    final color = int.tryParse(colorString.replaceFirst(r'#', ''), radix: 16);
     if (color == null) {
-      _log.error('could not parse color \'$colorString\' for $name');
+      _log.error('could not parse color \'$colorString\'');
       return null;
     }
     return Color(color).withOpacity(1);
+  }
+}
+
+class ThemeVariantService {
+  ThemeVariantService({ConfigService? config}) : _config = config;
+
+  final ConfigService? _config;
+  ThemeVariant? themeVariant;
+
+  Future<void> load() async {
+    final themeConfig = ThemeConfig.fromJson(
+        (await _config!.get<YamlMap>('theme'))?.value.cast() ?? {});
+    themeVariant = ThemeVariant.fromThemeConfig(themeConfig);
   }
 }
