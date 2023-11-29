@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 
+import 'layouts/slide_layout_styles.dart';
 import 'slide_layouts.dart';
-
-String _slideAsset(String name) => 'assets/slides/$name';
-String _slideIcon(String name) => _slideAsset('icons/$name');
-String _slideScreenshot(String name) => _slideAsset('screenshots/$name');
+import 'slide_widgets.dart';
 
 /// The list of default installation slides.
 final defaultSlides = <WidgetBuilder>[
@@ -42,7 +38,7 @@ Widget _buildWelcomeSlide(BuildContext context) {
       ],
     ),
     image: MascotAvatar(
-      image: AssetImage(_slideAsset('mascot.png'), package: 'ubuntu_bootstrap'),
+      image: AssetImage(slideAsset('mascot.png'), package: 'ubuntu_bootstrap'),
       size: const Size.square(300),
     ),
   );
@@ -59,26 +55,26 @@ Widget _buildSoftwareSlide(BuildContext context) {
     banner: Container(
       alignment: Alignment.center,
       color: const Color(0xff2c2c2c), // TODO: fix screenshot background
-      child: const _SlideScreenshot('store.png'),
+      child: const SlideScreenshot('store.png'),
     ),
     table: SlideTable(
       rows: [
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('spotify.png'),
+            icon: SlideIcon('spotify.png'),
             label: Text('Spotify'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('shotcut.png'),
+            icon: SlideIcon('shotcut.png'),
             label: Text('Shotcut'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('telegram.png'),
+            icon: SlideIcon('telegram.png'),
             label: Text('Telegram'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('nextcloud.png'),
+            icon: SlideIcon('nextcloud.png'),
             label: Text('Nextcloud'),
           ),
         ],
@@ -95,25 +91,25 @@ Widget _buildDevelopmentSlide(BuildContext context) {
       final flavor = ref.watch(flavorProvider);
       return Text(lang.installationSlidesDevelopmentBody(flavor.name));
     }),
-    image: const _SlideScreenshot('vscode.png'),
+    image: const SlideScreenshot('vscode.png'),
     table: SlideTable(
       rows: [
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('vscode.png'),
+            icon: SlideIcon('vscode.png'),
             label: Text('Visual Studio Code'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('intellij.png'),
+            icon: SlideIcon('intellij.png'),
             label: Text('IDEA Ultimate'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('pycharm.png'),
+            icon: SlideIcon('pycharm.png'),
             label: Text('Pycharm'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('gitkraken.png'),
+            icon: SlideIcon('gitkraken.png'),
             label: Text('GitKraken'),
           ),
         ],
@@ -130,25 +126,25 @@ Widget _buildCreativitySlide(BuildContext context) {
       final flavor = ref.watch(flavorProvider);
       return Text(lang.installationSlidesCreativityBody(flavor.name));
     }),
-    image: const _SlideScreenshot('blender.png'),
+    image: const SlideScreenshot('blender.png'),
     table: SlideTable(
       rows: [
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('blender.png'),
+            icon: SlideIcon('blender.png'),
             label: Text('Blender'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('audacity.png'),
+            icon: SlideIcon('audacity.png'),
             label: Text('Audacity'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('kdenlive.png'),
+            icon: SlideIcon('kdenlive.png'),
             label: Text('Kdenlive'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('godot.png'),
+            icon: SlideIcon('godot.png'),
             label: Text('Godot'),
           ),
         ],
@@ -165,7 +161,7 @@ Widget _buildGamingSlide(BuildContext context) {
       final flavor = ref.watch(flavorProvider);
       return Text(lang.installationSlidesGamingBody(flavor.name));
     }),
-    banner: const _SlideScreenshot(
+    banner: const SlideScreenshot(
       'steam.png',
       alignment: Alignment.topLeft,
       fit: BoxFit.cover,
@@ -175,22 +171,22 @@ Widget _buildGamingSlide(BuildContext context) {
         [
           Text(lang.installationSlidesIncluded),
           const SlideLabel(
-            icon: _SlideIcon('gamemode.png'),
+            icon: SlideIcon('gamemode.png'),
             label: Text('Feral GameMode'),
           ),
         ],
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('steam.png'),
+            icon: SlideIcon('steam.png'),
             label: Text('Steam'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('discord.png'),
+            icon: SlideIcon('discord.png'),
             label: Text('Discord'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('obs.png'),
+            icon: SlideIcon('obs.png'),
             label: Text('OBS Studio'),
           ),
         ],
@@ -208,28 +204,28 @@ Widget _buildSecuritySlide(BuildContext context) {
       return Text(lang.installationSlidesSecurityBody(flavor.name));
     }),
     // TODO: show installationSlidesSecurityLts in LTS releases
-    image: const _SlideScreenshot('bitwarden.png'),
+    image: const SlideScreenshot('bitwarden.png'),
     table: SlideTable(
       rows: [
         [
           Text(lang.installationSlidesIncluded),
           const SlideLabel(
-            icon: _SlideIcon('firefox.png'),
+            icon: SlideIcon('firefox.png'),
             label: Text('Firefox'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('wireguard.png'),
+            icon: SlideIcon('wireguard.png'),
             label: Text('WireGuard'),
           ),
         ],
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('brave.png'),
+            icon: SlideIcon('brave.png'),
             label: Text('Brave'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('bitwarden.png'),
+            icon: SlideIcon('bitwarden.png'),
             label: Text('Bitwarden'),
           ),
         ],
@@ -246,7 +242,7 @@ Widget _buildProductivitySlide(BuildContext context) {
       final flavor = ref.watch(flavorProvider);
       return Text(lang.installationSlidesProductivityBody(flavor.name));
     }),
-    banner: const _SlideScreenshot(
+    banner: const SlideScreenshot(
       'libreoffice.png',
       alignment: Alignment.topLeft,
       fit: BoxFit.cover,
@@ -256,22 +252,22 @@ Widget _buildProductivitySlide(BuildContext context) {
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('thunderbird.png'),
+            icon: SlideIcon('thunderbird.png'),
             label: Text('Thunderbird'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('libreoffice.png'),
+            icon: SlideIcon('libreoffice.png'),
             label: Text('LibreOffice'),
           ),
         ],
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('teams.png'),
+            icon: SlideIcon('teams.png'),
             label: Text('Microsoft Teams'),
           ),
           const SlideLabel(
-            icon: _SlideIcon('slack.png'),
+            icon: SlideIcon('slack.png'),
             label: Text('Slack'),
           ),
         ],
@@ -288,24 +284,24 @@ Widget _buildAccessibilitySlide(BuildContext context) {
       final flavor = ref.watch(flavorProvider);
       return Text(lang.installationSlidesAccessibilityBody(flavor.name));
     }),
-    image: const _SlideScreenshot('accessibility.png'),
+    image: const SlideScreenshot('accessibility.png'),
     table: SlideTable(
       rows: [
         [
           Text(lang.installationSlidesIncluded),
           SlideLabel(
-            icon: const _SlideIcon('languages.png'),
+            icon: const SlideIcon('languages.png'),
             label: Text(lang.installationSlidesAccessibilityLanguages),
           ),
           SlideLabel(
-            icon: const _SlideIcon('orca.png'),
+            icon: const SlideIcon('orca.png'),
             label: Text(lang.installationSlidesAccessibilityOrca),
           ),
         ],
         [
           Text(lang.installationSlidesAvailable),
           const SlideLabel(
-            icon: _SlideIcon('writer.png'),
+            icon: SlideIcon('writer.png'),
             label: Text('LibreOffice Writer'),
           ),
         ],
@@ -328,95 +324,28 @@ Widget _buildSupportSlide(BuildContext context) {
         Text(lang.installationSlidesSupportEnterprise),
       ],
     ),
-    image: SvgPicture.asset(_slideAsset('ask-ubuntu-${context.theme}.svg')),
+    image: SvgPicture.asset(
+      slideAsset('ask-ubuntu-${Theme.of(context).brightness.name}.svg'),
+    ),
     list: SlideList(
       children: [
-        _SlideLink(
+        SlideLink(
           text: lang.installationSlidesSupportDocumentation,
           url: 'https://help.ubuntu.com',
         ),
-        const _SlideLink(
+        const SlideLink(
           text: 'Ask Ubuntu',
           url: 'https://askubuntu.com',
         ),
-        const _SlideLink(
+        const SlideLink(
           text: 'Ubuntu Discourse',
           url: 'https://discourse.ubuntu.com',
         ),
-        _SlideLink(
+        SlideLink(
           text: lang.installationSlidesSupportUbuntuPro,
           url: 'https://ubuntu.com/pro',
         ),
       ],
     ),
   );
-}
-
-extension _SlideContext on BuildContext {
-  String get theme => Theme.of(this).brightness.name;
-}
-
-class _SlideIcon extends StatelessWidget {
-  const _SlideIcon(this.name);
-
-  final String name;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context).brightness.name;
-    return Image.asset(
-      _slideIcon('$theme/$name'),
-      errorBuilder: (_, __, ___) => Image.asset(_slideIcon(name)),
-    );
-  }
-}
-
-class _SlideScreenshot extends StatelessWidget {
-  const _SlideScreenshot(
-    this.name, {
-    this.alignment = Alignment.center,
-    this.fit,
-  });
-
-  final String name;
-  final AlignmentGeometry alignment;
-  final BoxFit? fit;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context).brightness.name;
-    return Image.asset(
-      _slideScreenshot('$theme/$name'),
-      errorBuilder: (_, __, ___) => Image.asset(
-        _slideScreenshot(name),
-        alignment: alignment,
-        fit: fit,
-      ),
-      alignment: alignment,
-      fit: fit,
-    );
-  }
-}
-
-class _SlideLink extends StatelessWidget {
-  const _SlideLink({required this.text, required this.url});
-
-  final String text;
-  final String url;
-
-  @override
-  Widget build(BuildContext context) {
-    return Html(
-      data: '<a href="$url">$text</a>',
-      shrinkWrap: true,
-      style: {
-        'body': Style(margin: Margins.zero),
-        'a': Style(
-          color: Theme.of(context).colorScheme.onBackground,
-          textDecoration: TextDecoration.none,
-        ),
-      },
-      onAnchorTap: (url, _, __) => launchUrl(url!),
-    );
-  }
 }

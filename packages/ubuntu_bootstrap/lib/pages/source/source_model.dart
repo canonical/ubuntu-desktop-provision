@@ -7,8 +7,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-/// @internal
-final log = Logger('source');
+final _log = Logger('source');
 
 const kFullSourceId = 'ubuntu-desktop';
 const kMinimalSourceId = 'ubuntu-desktop-minimal';
@@ -68,7 +67,7 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
     }
 
     _sourceId = sourceId;
-    log.info('Selected $sourceId installation source');
+    _log.info('Selected $sourceId installation source');
     notifyListeners();
 
     return _client
@@ -84,7 +83,7 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
     }
 
     _installDrivers = installDrivers;
-    log.info('Install drivers: $installDrivers');
+    _log.info('Install drivers: $installDrivers');
     notifyListeners();
   }
 
@@ -95,7 +94,7 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
     }
 
     _installCodecs = installCodecs;
-    log.info('Install codecs: $installCodecs');
+    _log.info('Install codecs: $installCodecs');
     notifyListeners();
   }
 

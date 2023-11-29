@@ -2,13 +2,19 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'endpoint.dart';
-import 'server/common.dart';
 import 'server/paths.dart';
 import 'server/process.dart';
 import 'types.dart';
+import 'package:meta/meta.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 const _kWaitTimes = 90;
 const _kWaitDuration = Duration(seconds: 1);
+
+enum ServerMode { LIVE, DRY_RUN }
+
+@internal
+final log = Logger('subiquity_server');
 
 Future<Endpoint> defaultEndpoint(ServerMode serverMode) async {
   final socketPath = await getSocketPath(serverMode);

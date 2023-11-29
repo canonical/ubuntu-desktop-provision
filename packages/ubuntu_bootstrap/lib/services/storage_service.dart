@@ -6,8 +6,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 export 'package:subiquity_client/subiquity_client.dart'
     show Disk, DiskX, Partition;
 
-/// @internal
-final log = Logger('storage');
+final _log = Logger('storage');
 
 /// Provides means to read and modify the storage configuration.
 class StorageService {
@@ -50,7 +49,7 @@ class StorageService {
   set securityKey(String? securityKey) {
     if (securityKey != null) {
       final hiddenKey = '*' * securityKey.length;
-      log.debug('set security key: $hiddenKey');
+      _log.debug('set security key: $hiddenKey');
     }
     _securityKey = securityKey;
   }
@@ -58,14 +57,14 @@ class StorageService {
   /// A guided storage target.
   GuidedStorageTarget? get guidedTarget => _guidedTarget;
   set guidedTarget(GuidedStorageTarget? target) {
-    log.debug('select guided target: $target');
+    _log.debug('select guided target: $target');
     _guidedTarget = target;
   }
 
   /// The selected guided capability.
   GuidedCapability? get guidedCapability => _guidedCapability;
   set guidedCapability(GuidedCapability? capability) {
-    log.debug('select guided capability: $capability');
+    _log.debug('select guided capability: $capability');
     _guidedCapability = capability;
   }
 
@@ -100,7 +99,7 @@ class StorageService {
   }
 
   List<Disk> _updateStorage(StorageResponseV2 response) {
-    log.debug('Update storage: $response');
+    _log.debug('Update storage: $response');
     _needRoot = response.needRoot;
     _needBoot = response.needBoot;
     _hasMultipleDisks = response.disks.length > 1;
