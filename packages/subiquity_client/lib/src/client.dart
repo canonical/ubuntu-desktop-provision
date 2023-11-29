@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:meta/meta.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 import 'endpoint.dart';
