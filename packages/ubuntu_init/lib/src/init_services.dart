@@ -37,7 +37,7 @@ Future<void> registerInitServices(List<String> args) {
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
   tryRegisterService<ConfigService>(
-      () => ConfigService(scope: 'init', path: options!['config'] as String?));
+      () => ConfigService(path: options!['config'] as String?));
   tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
@@ -48,6 +48,8 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<Sysmetrics>(Sysmetrics.new);
   tryRegisterService<ThemeService>(GtkThemeService.new);
+  tryRegisterService<ThemeVariantService>(
+      () => ThemeVariantService(config: tryGetService<ConfigService>()));
   tryRegisterService<TimezoneService>(XdgTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);

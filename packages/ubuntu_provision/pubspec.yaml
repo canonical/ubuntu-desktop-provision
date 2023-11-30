@@ -18,8 +18,10 @@ dependencies:
     sdk: flutter
   flutter_html: ^3.0.0-beta.1
   flutter_riverpod: ^2.4.5
+  freezed_annotation: ^2.4.1
   form_field_validator: ^1.1.0
   gsettings: ^0.2.8
+  json_annotation: ^4.8.1
   meta: ^1.9.1
   nm: ^0.5.0
   path: ^1.8.3
@@ -54,6 +56,8 @@ dev_dependencies:
   fake_async: ^1.3.1
   flutter_test:
     sdk: flutter
+  freezed: ^2.4.5
+  json_serializable: ^6.7.1
   mockito: 5.4.2
   ubuntu_lints: ^0.1.0
   ubuntu_test: ^0.1.0-0

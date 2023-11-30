@@ -78,7 +78,7 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
-    () => ConfigService(scope: 'bootstrap', path: options['config'] as String?),
+    () => ConfigService(path: options['config'] as String?),
   );
   tryRegisterService<DesktopService>(() => GnomeService());
   tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
@@ -112,7 +112,8 @@ Future<void> runInstallerApp(
     }
     return TelemetryService(path);
   });
-  tryRegisterService<ThemeService>(GtkThemeService.new);
+  tryRegisterService<ThemeVariantService>(
+      () => ThemeVariantService(config: tryGetService<ConfigService>()));
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
@@ -136,6 +137,10 @@ Future<void> runInstallerApp(
     final window = await YaruWindow.ensureInitialized();
     await window.onClose(_closeInstallerApp);
 
+    final themeVariantService = getService<ThemeVariantService>();
+    await themeVariantService.load();
+    final themeVariant = themeVariantService.themeVariant;
+
     runApp(ProviderScope(
       child: SlidesContext(
         slides: slides ?? defaultSlides,
@@ -148,10 +153,13 @@ Future<void> runInstallerApp(
             }
             return WizardApp(
               flavor: flavor,
-              theme: theme,
-              darkTheme: darkTheme,
+              theme: theme ?? themeVariant?.theme,
+              darkTheme: darkTheme ?? themeVariant?.darkTheme,
               onGenerateTitle: onGenerateTitle ??
                   (context) {
+                    final windowTitle = themeVariant?.windowTitle;
+                    if (windowTitle != null) return windowTitle;
+
                     final flavor = ref.watch(flavorProvider);
                     return UbuntuBootstrapLocalizations.of(context)
                         .windowTitle(flavor.name);
