@@ -1,0 +1,15 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: provd
+Upstream-Contact: Matt <matt.hagemann@canonical.com>
+Source: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
+
+Files: lib/systemd/system/provd.service
+       lib/systemd/system/provd.socket
+       usr/bin/provd
+       debian/*
+Copyright: 2023 Canonical
+License: GPL-3.0
+ On Debian systems, the complete text of the GNU General Public License version 3
+ can be found in '/usr/share/common-licenses/GPL-3'.
+
+# If there are files under different licenses, list them here in a similar format.

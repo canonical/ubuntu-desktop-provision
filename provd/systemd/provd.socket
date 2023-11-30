@@ -1,0 +1,12 @@
+[Unit]
+Description=Socket for Ubuntu Desktop Provisioning Daemon
+
+[Socket]
+ListenStream=/run/provd/provd.sock
+# Temporary permissions for testing.
+SocketMode=0666
+SocketUser=nobody
+SocketGroup=nogroup
+
+[Install]
+WantedBy=sockets.target

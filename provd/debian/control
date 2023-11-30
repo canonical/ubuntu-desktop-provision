@@ -1,0 +1,18 @@
+Source: provd
+Section: admin
+Priority: optional
+Maintainer: Matt <matt.hagemann@canonical.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Homepage: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd.git
+Vcs-Browser: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
+
+Package: provd
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Ubuntu init backend
+ Backend service used by Ubuntu init to
+ preform different system setup activities.

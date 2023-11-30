@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --without=autoreconf,makefile
+
+override_dh_dwz:
+	# Skip dwz compression
