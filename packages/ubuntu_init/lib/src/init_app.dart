@@ -7,6 +7,7 @@ import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
@@ -33,6 +34,10 @@ Future<void> runInitApp(
 
     await registerInitServices(args);
 
+    final themeVariantService = getService<ThemeVariantService>();
+    await themeVariantService.load();
+    final themeVariant = themeVariantService.themeVariant;
+
     runApp(ProviderScope(
       child: Consumer(
         builder: (context, ref, child) {
@@ -43,9 +48,10 @@ Future<void> runInitApp(
           }
           return WizardApp(
             flavor: flavor,
-            theme: theme,
-            darkTheme: darkTheme,
-            onGenerateTitle: onGenerateTitle,
+            theme: theme ?? themeVariant?.theme,
+            darkTheme: darkTheme ?? themeVariant?.darkTheme,
+            onGenerateTitle:
+                onGenerateTitle ?? (_) => themeVariant?.windowTitle ?? '',
             locale: ref.watch(localeProvider),
             localizationsDelegates: [
               ...?localizationsDelegates,

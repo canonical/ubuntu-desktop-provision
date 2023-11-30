@@ -9,5 +9,6 @@ export 'locale.dart';
 export 'network.dart';
 export 'services.dart';
 export 'theme.dart';
+export 'theme_variant.dart';
 export 'timezone.dart';
 export 'widgets.dart';
