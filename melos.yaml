@@ -65,7 +65,7 @@ command:
       ffigen: ^9.0.1
       freezed: ^2.4.5
       json_serializable: ^6.7.1
-      mockito: 5.4.2
+      mockito: 5.4.3
       plugin_platform_interface: ^2.1.6
       test: any
       ubuntu_test: ^0.1.0-0
