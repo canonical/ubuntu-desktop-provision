@@ -22,5 +22,5 @@ dev_dependencies:
   freezed: ^2.4.5
   json_serializable: ^6.7.1
   ubuntu_lints: ^0.1.0
-  mockito: 5.4.2
+  mockito: 5.4.3
   test: any
