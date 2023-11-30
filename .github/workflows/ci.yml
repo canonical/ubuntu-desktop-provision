@@ -16,7 +16,7 @@ jobs:
   flutter-analyze:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -32,7 +32,7 @@ jobs:
           - screenshot_test.dart
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -56,7 +56,7 @@ jobs:
   flutter-format:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -72,7 +72,7 @@ jobs:
           - screenshot_test.dart
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -85,7 +85,7 @@ jobs:
   flutter-mocks:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -107,7 +107,7 @@ jobs:
   l10n:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
@@ -129,7 +129,7 @@ jobs:
   flutter-tests:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - uses: asdf-vm/actions/install@v3
