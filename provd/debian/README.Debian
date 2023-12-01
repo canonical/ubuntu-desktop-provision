@@ -1,6 +1,0 @@
-provd for Debian
-
-The backend daemon that runs as part of the Ubuntu inital setup post install.
-Used for inital user settings setup.
-
- -- Matt <matt.hagemann@canonical.com>  Wed, 29 Nov 2023 16:42:49 +0200

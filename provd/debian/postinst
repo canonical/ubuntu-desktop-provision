@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-
-systemctl enable provd.service
-systemctl start provd.service
-
-exit 0
