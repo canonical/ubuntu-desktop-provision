@@ -61,7 +61,7 @@ dev_dependencies:
   freezed: ^2.4.5
   integration_test:
     sdk: flutter
-  mockito: 5.4.2
+  mockito: 5.4.3
   subiquity_test: ^0.1.0
   ubuntu_lints: ^0.1.0
   ubuntu_provision_test: ^0.1.0
