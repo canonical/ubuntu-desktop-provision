@@ -5,8 +5,5 @@ Requires=provd.socket
 [Service]
 ExecStart=/usr/bin/provd
 Restart=on-failure
-User=nobody
-Group=nogroup
-
-[Install]
-WantedBy=multi-user.target
+ProtectSystem=strict
+PrivateTmp=true
