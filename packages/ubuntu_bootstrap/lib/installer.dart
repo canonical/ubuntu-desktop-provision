@@ -28,7 +28,6 @@ export 'slides.dart';
 
 Future<void> runInstallerApp(
   List<String> args, {
-  List<String>? pages,
   List<WidgetBuilder>? slides,
   UbuntuFlavor? flavor,
   ThemeData? theme,
@@ -53,8 +52,6 @@ Future<void> runInstallerApp(
         defaultsTo: 'examples/sources/desktop.yaml',
         help: 'Path of the source catalog (dry-run only)');
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
-    parser.addOption('pages',
-        valueHelp: 'path', help: 'A comma-separated list of pages', hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
@@ -84,8 +81,7 @@ Future<void> runInstallerApp(
   tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
-      config: tryGetService<ConfigService>(),
-      pages: (options['pages'] as String?)?.split(',') ?? pages));
+      pageConfig: tryGetService<PageConfigService>()));
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
       () => SubiquityKeyboardService(getService<SubiquityClient>()));
@@ -93,6 +89,8 @@ Future<void> runInstallerApp(
       () => SubiquityLocaleService(getService<SubiquityClient>()));
   tryRegisterService<NetworkService>(
       () => SubiquityNetworkService(getService<SubiquityClient>()));
+  tryRegisterService(
+      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
@@ -195,6 +193,7 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
   await getService<InstallerService>().init();
   await getService<DesktopService>().inhibit();
   await getService<RefreshService>().check();
+  await getService<PageConfigService>().load();
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {
