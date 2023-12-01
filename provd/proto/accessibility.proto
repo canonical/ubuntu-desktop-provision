@@ -3,23 +3,139 @@ syntax = "proto3";
 package accessibility;
 
 service AccessibilityService {
-    rpc GetHighContract(Empty) returns (GetHighConstrastResponse) {}
-    rpc SetHighContract(SetHighConstrastRequest) returns (Empty) {}
+
+    // Seeing
+    rpc GetHighContrast(Empty) returns (GetHighContrastResponse) {}
+    rpc EnableHighContrast(Empty) returns (Empty) {}
+    rpc DisableHighContrast(Empty) returns (Empty) {}
+
     rpc GetReducedMotion(Empty) returns (GetReducedMotionResponse) {}
-    rpc SetReducedMotion(SetReducedMotionRequest) returns (Empty) {}
-    rpc GetScreenReader(Empty) returns (GetScreenReaderResponse) {}
-    rpc SetScreenReader(SetScreenReaderRequest) returns (Empty) {}
+    rpc EnableReducedMotion(Empty) returns (Empty) {}
+    rpc DisableReducedMotion(Empty) returns (Empty) {}
+
     rpc GetLargeText(Empty) returns (GetLargeTextResponse) {}
-    rpc SetLargeText(SetLargeTextRequest) returns (Empty) {}
+    rpc EnableLargeText(Empty) returns (Empty) {}
+    rpc DisableLargeText(Empty) returns (Empty) {}
+
+    rpc GetCursorSize(Empty) returns (GetCursorSizeResponse) {}
+    rpc SetCursorSize(SetCursorSizeRequest) returns (Empty) {}
+
+    rpc GetSoundKeys(Empty) returns (GetSoundKeysResponse) {}
+    rpc EnableSoundKeys(Empty) returns (Empty) {}
+    rpc DisableSoundKeys(Empty) returns (Empty) {}
+
+    rpc GetOverlayScrollbars(Empty) returns (GetOverlayScrollbarsResponse) {}
+    rpc EnableOverlayScrollbars(Empty) returns (Empty) {}
+    rpc DisableOverlayScrollbars(Empty) returns (Empty) {}
+
+    rpc GetScreenReader(Empty) returns (GetScreenReaderResponse) {}
+    rpc EnableScreenReader(Empty) returns (Empty) {}
+    rpc DisableScreenReader(Empty) returns (Empty) {}
+
+    // Hearing
+    rpc GetOveramplification(Empty) returns (GetOveramplificationResponse) {}
+    rpc EnableOveramplification(Empty) returns (Empty) {}
+    rpc DisableOveramplification(Empty) returns (Empty) {}
+
+    rpc GetVisualAlerts(Empty) returns (GetVisualAlertsResponse) {}
+    rpc EnableVisualAlerts(EnableVisualAlertsRequest) returns (Empty) {}
+    rpc DisableVisualAlerts(Empty) returns (Empty) {}
+
+    // Typing
+    rpc GetScreenKeyboard(Empty) returns (GetScreenKeyboardResponse) {}
+    rpc EnableScreenKeyboard(Empty) returns (Empty) {}
+    rpc DisableScreenKeyboard(Empty) returns (Empty) {}
+
+    rpc GetEnableByKeyboard(Empty) returns (GetEnableByKeyboardResponse) {}
+    rpc EnableEnableByKeyboard(Empty) returns (Empty) {}
+    rpc DisableEnableByKeyboard(Empty) returns (Empty) {}
+
+    rpc GetCursorBlinking(Empty) returns (GetCursorBlinkingResponse) {}
+    rpc EnableCursorBlinking(EnableCursorBlinkingRequest) returns (Empty) {}
+    rpc DisableCursorBlinking(Empty) returns (Empty) {}
+
+    rpc GetRepeatedKeys(Empty) returns (GetRepeatedKeysResponse) {}
+    rpc EnableRepeatedKeys(Empty) returns (Empty) {}
+    rpc DisableRepeatedKeys(Empty) returns (Empty) {}
+
+    rpc GetStickyKeys(Empty) returns (GetStickyKeysResponse) {}
+    rpc EnableStickyKeys(Empty) returns (Empty) {}
+    rpc DisableStickyKeys(Empty) returns (Empty) {}
+
+    rpc GetSlowKeys(Empty) returns (GetSlowKeysResponse) {}
+    rpc EnableSlowKeys(Empty) returns (Empty) {}
+    rpc DisableSlowKeys(Empty) returns (Empty) {}
+
+    rpc GetBounceKeys(Empty) returns (GetBounceKeysResponse) {}
+    rpc EnableBounceKeys(Empty) returns (Empty) {}
+    rpc DisableBounceKeys(Empty) returns (Empty) {}
+
+    // Pointing & Clicking
+    rpc GetMouseKeys(Empty) returns (GetMouseKeysResponse) {}
+    rpc EnableMouseKeys(Empty) returns (Empty) {}
+    rpc DisableMouseKeys(Empty) returns (Empty) {}
+
+    rpc GetLocationPointer(Empty) returns (GetLocationPointerResponse) {}
+    rpc EnableLocationPointer(Empty) returns (Empty) {}
+    rpc DisableLocationPointer(Empty) returns (Empty) {}
+
+    rpc GetDoubleClickDelay(Empty) returns (GetDoubleClickDelayResponse) {}
+    rpc SetDoubleClickDelay(SetDoubleClickDelayRequest) returns (Empty) {}
+
+    rpc GetSimulatedSecondaryClicks(Empty) returns (GetSimulatedSecondaryClicksResponse) {}
+    rpc EnableSimulatedSecondaryClicks(Empty) returns (Empty) {}
+    rpc DisableSimulatedSecondaryClicks(Empty) returns (Empty) {}
+
+    rpc GetHoverClicks(Empty) returns (GetHoverClicksResponse) {}
+    rpc EnableHoverClicks(Empty) returns (Empty) {}
+    rpc DisableHoverClicks(Empty) returns (Empty) {}
+
 }
 
 message Empty {}
 
-message GetHighConstrastResponse {
-    bool enabled = 1;
+message GetDoubleClickDelayResponse {
+    float delay = 1;
 }
 
-message SetHighConstrastRequest {
+message SetDoubleClickDelayRequest {
+    float delay = 1;
+}
+
+message GetCursorSizeResponse {
+    CursorSize size = 1;
+}
+
+message SetCursorSizeRequest {
+    CursorSize size = 1;
+}
+
+enum CursorSize {
+    DEFAULT = 0;
+    MEDIUM = 1;
+    LARGE = 2;
+    LARGER = 3;
+    LARGEST = 4;
+}
+
+message EnableVisualAlertsRequest {
+    FlashArea area = 1;
+}
+
+enum FlashArea {
+    ENTIRE_SCREEN = 0;
+    ENTIRE_WINDOW = 1;
+}
+
+message GetCursorBlinkingResponse {
+    bool enabled = 1;
+    float blinking_speed = 2;
+}
+
+message EnableCursorBlinkingRequest {
+    float blinking_speed = 1;
+}
+message GetHighContrastResponse {
     bool enabled = 1;
 }
 
@@ -27,7 +143,15 @@ message GetReducedMotionResponse {
     bool enabled = 1;
 }
 
-message SetReducedMotionRequest {
+message GetLargeTextResponse {
+    bool enabled = 1;
+}
+
+message GetSoundKeysResponse {
+    bool enabled = 1;
+}
+
+message GetOverlayScrollbarsResponse {
     bool enabled = 1;
 }
 
@@ -35,14 +159,51 @@ message GetScreenReaderResponse {
     bool enabled = 1;
 }
 
-message SetScreenReaderRequest {
+message GetOveramplificationResponse {
     bool enabled = 1;
 }
 
-message GetLargeTextResponse {
+message GetVisualAlertsResponse {
+    bool enabled = 1;
+    FlashArea area = 2;
+}
+
+message GetScreenKeyboardResponse {
     bool enabled = 1;
 }
 
-message SetLargeTextRequest {
+message GetEnableByKeyboardResponse {
+    bool enabled = 1;
+}
+
+message GetRepeatedKeysResponse {
+    bool enabled = 1;
+}
+
+message GetStickyKeysResponse {
+    bool enabled = 1;
+}
+
+message GetSlowKeysResponse {
+    bool enabled = 1;
+}
+
+message GetBounceKeysResponse {
+    bool enabled = 1;
+}
+
+message GetMouseKeysResponse {
+    bool enabled = 1;
+}
+
+message GetLocationPointerResponse {
+    bool enabled = 1;
+}
+
+message GetSimulatedSecondaryClicksResponse {
+    bool enabled = 1;
+}
+
+message GetHoverClicksResponse {
     bool enabled = 1;
 }
