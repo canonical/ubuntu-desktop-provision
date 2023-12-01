@@ -11,8 +11,8 @@ class InstallerService {
 
   final SubiquityClient _client;
   final PageConfigService? _pageConfig;
-  List<String>? _excludedPages;
-  List<String>? _subiquityPages;
+  Set<String>? _excludedPages;
+  Set<String>? _subiquityPages;
 
   Future<void> init() async {
     await _client.setVariant(Variant.DESKTOP);
@@ -36,11 +36,8 @@ class InstallerService {
 
   Future<void> load() async {
     await monitorStatus().firstWhere((s) => s?.isLoading == false);
-    _subiquityPages = await _client.getInteractiveSections();
-    _excludedPages = _pageConfig?.pages.entries
-        .whereNot((e) => e.value.visible)
-        .map((e) => e.key)
-        .toList();
+    _subiquityPages = (await _client.getInteractiveSections())?.toSet();
+    _excludedPages = _pageConfig?.excludedPages;
 
     if ((_subiquityPages?.isNotEmpty ?? false) &&
         (_excludedPages?.isNotEmpty ?? false)) {

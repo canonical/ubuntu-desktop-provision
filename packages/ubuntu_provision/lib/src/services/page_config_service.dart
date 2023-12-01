@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:yaml/yaml.dart';
@@ -73,6 +74,9 @@ class PageConfigService {
 
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
+
+  Set<String> get excludedPages =>
+      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toSet();
 
   Future<void> load() async {
     final pageConfig = PageConfig.fromJson({
