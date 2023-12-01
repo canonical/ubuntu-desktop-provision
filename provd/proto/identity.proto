@@ -2,15 +2,15 @@ syntax = "proto3";
 
 package identity;
 
-service IdentityService {
-  rpc GetIdentity(Empty) returns (GetIdentityResponse);
-  rpc SetIdentity(SetIdentityRequest) returns (Empty);
+service UserService {
+  rpc GetUser(Empty) returns (GetUserResponse);
+  rpc SetIdentity(CreateUserRequest) returns (Empty);
   rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
 }
 
 message Empty {}
 
-message Identity {
+message User {
   string realName = 1;
   string hostname = 2;
   string username = 3;
@@ -18,12 +18,12 @@ message Identity {
   bool autoLogin = 5;
 }
 
-message GetIdentityResponse {
-  Identity identity = 1;
+message GetUserResponse {
+  User user = 1;
 }
 
-message SetIdentityRequest {
-  Identity identity = 1;
+message CreateUserRequest {
+  User identity = 1;
 }
 
 message ValidateUsernameRequest {
@@ -31,5 +31,5 @@ message ValidateUsernameRequest {
 }
 
 message ValidateUsernameResponse {
-  bool validation = 1;
+  bool valid = 1;
 }

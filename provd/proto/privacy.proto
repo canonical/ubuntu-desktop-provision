@@ -3,13 +3,13 @@ syntax = "proto3";
 package privacy;
 
 service PrivacyService {
-    rpc SetPrivacySettings (SetPrivacySettingsRequest) returns (Emtpy) {}
+    rpc GetLocationServices(Empty) returns (GetLocationServicesResponse) {}
+    rpc EnableLocationServices(Empty) returns (Empty) {}
+    rpc DisableLocationServices(Empty) returns (Empty) {}
 }
 
 message Empty {}
 
-message SetPrivacySettingsRequest {
-    bool locationEnabled = 1;
-    bool reportingEnabled = 2;
+message GetLocationServicesResponse {
+    bool enabled = 1;
 }
-

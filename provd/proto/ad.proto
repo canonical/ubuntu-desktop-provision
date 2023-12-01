@@ -43,9 +43,9 @@ message CheckAdminNameRequest {
 
 message CheckAdminNameResponse {
     enum AdAdminNameValidation {
-    OK = 0;
-    EMPTY = 1;
-    INVALID_CHARS = 2;
+        OK = 0;
+        EMPTY = 1;
+        INVALID_CHARS = 2;
     }
     AdAdminNameValidation validation = 1;
 }

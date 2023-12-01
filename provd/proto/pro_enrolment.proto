@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pro_enrollment;
 
-service ProEnrollmentService {
+service ProEnrolmentService {
     rpc GenerateEnrolmentCode(GenerateEnrolmentCodeRequest) returns (GenerateEnrolmentCodeResponse);
     rpc SetTokenManually(SetTokenManuallyRequest) returns (Empty);
 }

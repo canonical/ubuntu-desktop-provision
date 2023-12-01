@@ -11,7 +11,7 @@ message Empty {}
 
 message KeyboardSettings {
     string layout = 1;
-    string varient = 2;
+    string variant = 2;
 }
 
 message SetKeyboardRequest {
@@ -20,6 +20,4 @@ message SetKeyboardRequest {
 
 message SetInputSourceRequest {
   KeyboardSettings settings = 1;
-  string user = 2;
 }
-
