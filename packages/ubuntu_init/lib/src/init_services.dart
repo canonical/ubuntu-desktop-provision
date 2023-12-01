@@ -43,6 +43,8 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
   tryRegisterService<LocaleService>(XdgLocaleService.new);
   tryRegisterService<NetworkService>(NetworkService.new);
+  tryRegisterService<PageConfigService>(
+      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService<PrivacyService>(GnomePrivacyService.new);
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);

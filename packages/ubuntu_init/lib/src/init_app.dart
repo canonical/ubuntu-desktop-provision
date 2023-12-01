@@ -14,7 +14,6 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 Future<void> runInitApp(
   List<String> args, {
-  List<String>? pages,
   String package = 'ubuntu_init',
   UbuntuFlavor? flavor,
   ThemeData? theme,
@@ -38,6 +37,8 @@ Future<void> runInitApp(
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
 
+    await getService<PageConfigService>().load();
+
     runApp(ProviderScope(
       child: Consumer(
         builder: (context, ref, child) {
@@ -60,7 +61,7 @@ Future<void> runInitApp(
             supportedLocales: supportedLocales,
             home: DefaultAssetBundle(
               bundle: ProxyAssetBundle(rootBundle, package: package),
-              child: InitWizard(pages: pages, onDone: onDone),
+              child: InitWizard(onDone: onDone),
             ),
           );
         },
