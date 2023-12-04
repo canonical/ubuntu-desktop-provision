@@ -89,6 +89,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(NetworkPage), findsOneWidget);
     verify(networkModel.init()).called(1);
+    await tester.pumpAndSettle();
 
     await tester.tapNext();
     await tester.pumpAndSettle();
