@@ -3,7 +3,7 @@ Description=Ubuntu Desktop Provisioning Daemon
 Requires=provd.socket
 
 [Service]
-ExecStart=/usr/bin/provd
+ExecStart=/usr/sbin/provd
 Restart=on-failure
 ProtectSystem=strict
 PrivateTmp=true
