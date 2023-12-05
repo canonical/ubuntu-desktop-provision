@@ -7,7 +7,7 @@ import 'dart:async' as _i4;
 
 import 'package:args/src/arg_results.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_provision/src/services/config_service.dart' as _i3;
+import 'package:ubuntu_provision/services.dart' as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -64,34 +64,33 @@ class MockArgResults extends _i1.Mock implements _i2.ArgResults {
       ) as bool);
 }
 
-/// A class which mocks [ConfigService].
+/// A class which mocks [PageConfigService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockConfigService extends _i1.Mock implements _i3.ConfigService {
-  MockConfigService() {
+class MockPageConfigService extends _i1.Mock implements _i3.PageConfigService {
+  MockPageConfigService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<T?> get<T>(
-    String? key, {
-    String? scope,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #get,
-          [key],
-          {#scope: scope},
-        ),
-        returnValue: _i4.Future<T?>.value(),
-      ) as _i4.Future<T?>);
+  Map<String, _i3.PageConfigEntry> get pages => (super.noSuchMethod(
+        Invocation.getter(#pages),
+        returnValue: <String, _i3.PageConfigEntry>{},
+      ) as Map<String, _i3.PageConfigEntry>);
 
   @override
-  _i4.Future<Map<String, dynamic>?> load() => (super.noSuchMethod(
+  Set<String> get excludedPages => (super.noSuchMethod(
+        Invocation.getter(#excludedPages),
+        returnValue: <String>{},
+      ) as Set<String>);
+
+  @override
+  _i4.Future<void> load() => (super.noSuchMethod(
         Invocation.method(
           #load,
           [],
         ),
-        returnValue: _i4.Future<Map<String, dynamic>?>.value(),
-      ) as _i4.Future<Map<String, dynamic>?>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }

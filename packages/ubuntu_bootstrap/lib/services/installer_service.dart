@@ -1,15 +1,18 @@
 import 'package:dartx/dartx.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 
-class InstallerService {
-  InstallerService(this._client, {ConfigService? config, List<String>? pages})
-      : _config = config,
-        _pages = pages?.map((r) => r.removePrefix('/')).toList();
+final _log = Logger('installer_service');
 
-  List<String>? _pages;
+class InstallerService {
+  InstallerService(this._client, {PageConfigService? pageConfig})
+      : _pageConfig = pageConfig;
+
   final SubiquityClient _client;
-  final ConfigService? _config;
+  final PageConfigService? _pageConfig;
+  Set<String>? _excludedPages;
+  Set<String>? _subiquityPages;
 
   Future<void> init() async {
     await _client.setVariant(Variant.DESKTOP);
@@ -33,8 +36,16 @@ class InstallerService {
 
   Future<void> load() async {
     await monitorStatus().firstWhere((s) => s?.isLoading == false);
-    _pages ??=
-        await _client.getInteractiveSections() ?? await _config?.getPages();
+    _subiquityPages = (await _client.getInteractiveSections())?.toSet();
+    _excludedPages = _pageConfig?.excludedPages;
+
+    final requiredExcludedPages =
+        _excludedPages?.intersection(_subiquityPages ?? {});
+    if (requiredExcludedPages?.isNotEmpty ?? false) {
+      _log.info(
+          '$requiredExcludedPages are required by subiquity and cannot be excluded!');
+      _excludedPages!.removeAll(requiredExcludedPages!);
+    }
   }
 
   Future<void> start() => _client.confirm('/dev/tty1');
@@ -42,7 +53,10 @@ class InstallerService {
   Stream<ApplicationStatus?> monitorStatus() => _client.monitorStatus();
 
   bool hasRoute(String route) {
-    return _pages?.contains(route.removePrefix('/')) ?? true;
+    if (_subiquityPages?.isNotEmpty ?? false) {
+      return _subiquityPages!.contains(route.removePrefix('/'));
+    }
+    return !(_excludedPages?.contains(route.removePrefix('/')) ?? false);
   }
 }
 
@@ -54,13 +68,4 @@ extension ApplicationStatusX on ApplicationStatus {
   bool get isInstalling =>
       state.index >= ApplicationState.RUNNING.index &&
       state.index < ApplicationState.DONE.index;
-}
-
-extension on ConfigService {
-  Future<List<String>?> getPages() async {
-    final value = await get('pages');
-    return (value is List ? value.cast<String>() : value?.toString().split(','))
-        ?.map((p) => p.trim())
-        .toList();
-  }
 }

@@ -60,6 +60,7 @@ extension UbuntuProvisionTester on WidgetTester {
   KeyboardService,
   LocaleService,
   NetworkService,
+  PageConfigService,
   PowerService,
   ProductService,
   SessionService,

@@ -148,32 +148,15 @@ void main() {
     when(client.monitorStatus()).thenAnswer(
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
-    final config = MockConfigService();
-    when(config.get('pages')).thenAnswer((_) async => ['a', 'b']);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.excludedPages).thenReturn({'c'});
 
-    final service = InstallerService(client, config: config);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
 
     expect(service.hasRoute('a'), isTrue);
     expect(service.hasRoute('b'), isTrue);
     expect(service.hasRoute('c'), isFalse);
-  });
-
-  test('configured page string', () async {
-    final client = MockSubiquityClient();
-    when(client.getInteractiveSections()).thenAnswer((_) async => null);
-    when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
-
-    final config = MockConfigService();
-    when(config.get('pages')).thenAnswer((_) async => 'c, e');
-
-    final service = InstallerService(client, config: config);
-    await service.load();
-
-    expect(service.hasRoute('c'), isTrue);
-    expect(service.hasRoute('d'), isFalse);
-    expect(service.hasRoute('e'), isTrue);
   });
 
   test('start installation', () async {

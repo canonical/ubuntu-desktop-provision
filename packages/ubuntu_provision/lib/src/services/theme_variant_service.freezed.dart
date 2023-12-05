@@ -136,8 +136,7 @@ class __$$ThemeConfigImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(fieldRename: FieldRename.kebab, explicitToJson: true)
+@JsonSerializable()
 class _$ThemeConfigImpl implements _ThemeConfig {
   const _$ThemeConfigImpl(
       {this.accentColor,

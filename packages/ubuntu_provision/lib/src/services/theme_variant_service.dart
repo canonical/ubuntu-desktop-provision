@@ -13,8 +13,6 @@ final _log = Logger('theme_variant');
 
 @freezed
 class ThemeConfig with _$ThemeConfig {
-  // ignore: invalid_annotation_target
-  @JsonSerializable(fieldRename: FieldRename.kebab, explicitToJson: true)
   const factory ThemeConfig({
     String? accentColor,
     String? elevatedButtonColor,

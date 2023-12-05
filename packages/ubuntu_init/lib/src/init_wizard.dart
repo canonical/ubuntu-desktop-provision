@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -36,17 +35,10 @@ class InitRoutes {
 class InitWizard extends ConsumerWidget {
   InitWizard({
     super.key,
-    List<String>? pages,
     FutureOr<void> Function()? onDone,
-  })  : _pages = pages?.map((r) => r.removePrefix('/')).toSet(),
-        _onDone = onDone;
+  }) : _onDone = onDone;
 
-  final Set<String>? _pages;
   final FutureOr<void> Function()? _onDone;
-
-  bool _hasRoute(String route) {
-    return _pages?.contains(route.removePrefix('/')) ?? true;
-  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -126,7 +118,7 @@ class InitWizard extends ConsumerWidget {
       userData: WizardData(totalSteps: InitStep.values.length),
       predicate: (route) => switch (route) {
         InitRoutes.initial => true,
-        _ => _hasRoute(route) && ref.read(initModelProvider).hasRoute(route),
+        _ => ref.read(initModelProvider).hasRoute(route),
       },
     );
   }
