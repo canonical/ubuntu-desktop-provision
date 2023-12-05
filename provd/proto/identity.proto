@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package identity;
+
+service UserService {
+  rpc GetUser(Empty) returns (GetUserResponse);
+  rpc SetIdentity(CreateUserRequest) returns (Empty);
+  rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
+}
+
+message Empty {}
+
+message User {
+  string realName = 1;
+  string hostname = 2;
+  string username = 3;
+  string password = 4;
+  bool autoLogin = 5;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message CreateUserRequest {
+  User identity = 1;
+}
+
+message ValidateUsernameRequest {
+  string username = 1;
+}
+
+message ValidateUsernameResponse {
+  bool valid = 1;
+}
