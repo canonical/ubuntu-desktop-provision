@@ -1,0 +1,33 @@
+#!/bin/bash
+TARGET=/target
+
+set -eux
+
+(
+cat << 'EOF'
+#!/bin/bash
+wget "https://github.com/d-loose/provision-testing/raw/main/ubuntu-desktop-init_0%2Bgit.ef84de5_amd64.snap"
+snap install --dangerous --devmode ubuntu-desktop-init_0+git.ef84de5_amd64.snap
+EOF
+) > $TARGET/usr/bin/install-ubuntu-init
+chmod +x $TARGET/usr/bin/install-ubuntu-init
+
+(
+cat << 'EOF'
+[Unit]
+Description=Installs ubuntu-desktop-init snap
+After=network-online.target snapd.seeded.service
+Before=display-manager.service
+
+[Service]
+ExecStart=/usr/bin/install-ubuntu-init
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+) > $TARGET/etc/systemd/system/install-ubuntu-init.service
+ln -s /etc/systemd/system/install-ubuntu-init.service $TARGET/etc/systemd/system/multi-user.target.wants/
+
+sed -i 's|/usr/libexec/gnome-initial-setup|/snap/ubuntu-desktop-init/current/bin/ubuntu_init|' $TARGET/usr/share/applications/gnome-initial-setup.desktop
