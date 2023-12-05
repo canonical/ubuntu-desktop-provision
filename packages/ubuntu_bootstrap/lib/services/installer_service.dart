@@ -39,13 +39,12 @@ class InstallerService {
     _subiquityPages = (await _client.getInteractiveSections())?.toSet();
     _excludedPages = _pageConfig?.excludedPages;
 
-    if ((_subiquityPages?.isNotEmpty ?? false) &&
-        (_excludedPages?.isNotEmpty ?? false)) {
-      final requiredExcludedPages =
-          _excludedPages!.intersection(_subiquityPages!);
+    final requiredExcludedPages =
+        _excludedPages?.intersection(_subiquityPages ?? {});
+    if (requiredExcludedPages?.isNotEmpty ?? false) {
       _log.info(
           '$requiredExcludedPages are required by subiquity and cannot be excluded!');
-      _excludedPages!.removeAll(requiredExcludedPages);
+      _excludedPages!.removeAll(requiredExcludedPages!);
     }
   }
 
