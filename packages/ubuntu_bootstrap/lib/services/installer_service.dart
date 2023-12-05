@@ -42,10 +42,10 @@ class InstallerService {
     if ((_subiquityPages?.isNotEmpty ?? false) &&
         (_excludedPages?.isNotEmpty ?? false)) {
       final requiredExcludedPages =
-          _excludedPages!.where(_subiquityPages!.contains);
+          _excludedPages!.intersection(_subiquityPages!);
       _log.info(
           '$requiredExcludedPages are required by subiquity and cannot be excluded!');
-      _excludedPages!.removeWhere(requiredExcludedPages.contains);
+      _excludedPages!.removeAll(requiredExcludedPages);
     }
   }
 
