@@ -1,0 +1,4 @@
+#!/bin/sh
+TARGET=/target
+
+echo "users: []" > $TARGET/etc/cloud/cloud.cfg.d/99-disable-user-creation.cfg
