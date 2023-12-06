@@ -1,14 +1,20 @@
 syntax = "proto3";
 
-package identity;
+package user;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
 
 service UserService {
-  rpc GetUser(Empty) returns (GetUserResponse);
-  rpc SetIdentity(CreateUserRequest) returns (Empty);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  rpc CreateUser(CreateUserRequest) returns (Empty);
   rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
 }
 
 message Empty {}
+
+message GetUserRequest {
+  string user_id = 1;
+}
 
 message User {
   string realName = 1;
