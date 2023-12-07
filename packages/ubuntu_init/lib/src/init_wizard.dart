@@ -75,13 +75,6 @@ class InitWizard extends ConsumerWidget {
           ),
           onLoad: (_) => NetworkPage.load(ref),
         ),
-        InitRoutes.timezone: WizardRoute(
-          builder: (_) => const TimezonePage(),
-          userData: WizardRouteData(
-            step: InitStep.timezone.index,
-          ),
-          onLoad: (_) => TimezonePage.load(context, ref),
-        ),
         InitRoutes.identity: WizardRoute(
           builder: (_) => const IdentityPage(),
           userData: WizardRouteData(
@@ -89,20 +82,27 @@ class InitWizard extends ConsumerWidget {
           ),
           onLoad: (_) => IdentityPage.load(ref),
         ),
+        InitRoutes.privacy: WizardRoute(
+          builder: (_) => const PrivacyPage(),
+          onLoad: (_) => PrivacyPage.load(ref),
+        ),
+        InitRoutes.timezone: WizardRoute(
+          builder: (_) => const TimezonePage(),
+          userData: WizardRouteData(
+            step: InitStep.timezone.index,
+          ),
+          onLoad: (_) => TimezonePage.load(context, ref),
+        ),
+        InitRoutes.telemetry: WizardRoute(
+          builder: (_) => const TelemetryPage(),
+          onLoad: (_) => TelemetryPage.load(ref),
+        ),
         InitRoutes.theme: WizardRoute(
           builder: (_) => const ThemePage(),
           userData: WizardRouteData(
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
-        ),
-        InitRoutes.telemetry: WizardRoute(
-          builder: (_) => const TelemetryPage(),
-          onLoad: (_) => TelemetryPage.load(ref),
-        ),
-        InitRoutes.privacy: WizardRoute(
-          builder: (_) => const PrivacyPage(),
-          onLoad: (_) => PrivacyPage.load(ref),
         ),
         InitRoutes.store: WizardRoute(
           builder: (_) => const StorePage(),

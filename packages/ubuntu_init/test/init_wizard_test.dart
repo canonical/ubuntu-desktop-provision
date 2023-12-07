@@ -93,18 +93,18 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(TimezonePage), findsOneWidget);
-    verify(timezoneModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(ThemePage), findsOneWidget);
-    verify(themeModel.init()).called(1);
+    expect(find.byType(PrivacyPage), findsOneWidget);
+    verify(privacyModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(TimezonePage), findsOneWidget);
+    verify(timezoneModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -113,8 +113,8 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(PrivacyPage), findsOneWidget);
-    verify(privacyModel.init()).called(1);
+    expect(find.byType(ThemePage), findsOneWidget);
+    verify(themeModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
