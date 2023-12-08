@@ -94,6 +94,7 @@ scripts:
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
           ! -name '*.g.dart' \
           ! -name '*.freezed.dart' \
+          ! -name '*.pb*.dart' \
           ! -path '*/l10n/*' \
           ! -path '*/.*/*' \
           | xargs dart format --set-exit-if-changed"
