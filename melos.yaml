@@ -125,4 +125,4 @@ scripts:
   upgrade: melos exec flutter pub upgrade
 
   protoc:
-    run: protoc --dart_out=grpc:./packages/provd_client/lib/src/generated -I./provd/protos
+    run: protoc --dart_out=grpc:./packages/provd_client/lib/src/generated -I./provd/protos ./provd/protos/*.proto

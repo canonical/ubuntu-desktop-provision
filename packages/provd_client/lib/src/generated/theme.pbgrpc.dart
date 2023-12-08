@@ -15,28 +15,28 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'theme.pb.dart' as $6;
+import 'theme.pb.dart' as $7;
 
 export 'theme.pb.dart';
 
 @$pb.GrpcServiceName('theme.ThemeService')
 class ThemeServiceClient extends $grpc.Client {
-  static final _$setTheme = $grpc.ClientMethod<$6.SetThemeRequest, $6.Empty>(
+  static final _$setTheme = $grpc.ClientMethod<$7.SetThemeRequest, $7.Empty>(
       '/theme.ThemeService/SetTheme',
-      ($6.SetThemeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.Empty.fromBuffer(value));
-  static final _$getTheme = $grpc.ClientMethod<$6.Empty, $6.GetThemeResponse>(
+      ($7.SetThemeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.Empty.fromBuffer(value));
+  static final _$getTheme = $grpc.ClientMethod<$7.Empty, $7.GetThemeResponse>(
       '/theme.ThemeService/GetTheme',
-      ($6.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.GetThemeResponse.fromBuffer(value));
-  static final _$setAccent = $grpc.ClientMethod<$6.SetAccentRequest, $6.Empty>(
+      ($7.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.GetThemeResponse.fromBuffer(value));
+  static final _$setAccent = $grpc.ClientMethod<$7.SetAccentRequest, $7.Empty>(
       '/theme.ThemeService/SetAccent',
-      ($6.SetAccentRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.Empty.fromBuffer(value));
-  static final _$getAccent = $grpc.ClientMethod<$6.Empty, $6.GetAccentResponse>(
+      ($7.SetAccentRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.Empty.fromBuffer(value));
+  static final _$getAccent = $grpc.ClientMethod<$7.Empty, $7.GetAccentResponse>(
       '/theme.ThemeService/GetAccent',
-      ($6.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.GetAccentResponse.fromBuffer(value));
+      ($7.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.GetAccentResponse.fromBuffer(value));
 
   ThemeServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -44,19 +44,19 @@ class ThemeServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$6.Empty> setTheme($6.SetThemeRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.Empty> setTheme($7.SetThemeRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setTheme, request, options: options);
   }
 
-  $grpc.ResponseFuture<$6.GetThemeResponse> getTheme($6.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.GetThemeResponse> getTheme($7.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getTheme, request, options: options);
   }
 
-  $grpc.ResponseFuture<$6.Empty> setAccent($6.SetAccentRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.Empty> setAccent($7.SetAccentRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setAccent, request, options: options);
   }
 
-  $grpc.ResponseFuture<$6.GetAccentResponse> getAccent($6.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.GetAccentResponse> getAccent($7.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccent, request, options: options);
   }
 }
@@ -66,54 +66,54 @@ abstract class ThemeServiceBase extends $grpc.Service {
   $core.String get $name => 'theme.ThemeService';
 
   ThemeServiceBase() {
-    $addMethod($grpc.ServiceMethod<$6.SetThemeRequest, $6.Empty>(
+    $addMethod($grpc.ServiceMethod<$7.SetThemeRequest, $7.Empty>(
         'SetTheme',
         setTheme_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $6.SetThemeRequest.fromBuffer(value),
-        ($6.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$6.Empty, $6.GetThemeResponse>(
+        ($core.List<$core.int> value) => $7.SetThemeRequest.fromBuffer(value),
+        ($7.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.Empty, $7.GetThemeResponse>(
         'GetTheme',
         getTheme_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $6.Empty.fromBuffer(value),
-        ($6.GetThemeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$6.SetAccentRequest, $6.Empty>(
+        ($core.List<$core.int> value) => $7.Empty.fromBuffer(value),
+        ($7.GetThemeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.SetAccentRequest, $7.Empty>(
         'SetAccent',
         setAccent_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $6.SetAccentRequest.fromBuffer(value),
-        ($6.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$6.Empty, $6.GetAccentResponse>(
+        ($core.List<$core.int> value) => $7.SetAccentRequest.fromBuffer(value),
+        ($7.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.Empty, $7.GetAccentResponse>(
         'GetAccent',
         getAccent_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $6.Empty.fromBuffer(value),
-        ($6.GetAccentResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $7.Empty.fromBuffer(value),
+        ($7.GetAccentResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$6.Empty> setTheme_Pre($grpc.ServiceCall call, $async.Future<$6.SetThemeRequest> request) async {
+  $async.Future<$7.Empty> setTheme_Pre($grpc.ServiceCall call, $async.Future<$7.SetThemeRequest> request) async {
     return setTheme(call, await request);
   }
 
-  $async.Future<$6.GetThemeResponse> getTheme_Pre($grpc.ServiceCall call, $async.Future<$6.Empty> request) async {
+  $async.Future<$7.GetThemeResponse> getTheme_Pre($grpc.ServiceCall call, $async.Future<$7.Empty> request) async {
     return getTheme(call, await request);
   }
 
-  $async.Future<$6.Empty> setAccent_Pre($grpc.ServiceCall call, $async.Future<$6.SetAccentRequest> request) async {
+  $async.Future<$7.Empty> setAccent_Pre($grpc.ServiceCall call, $async.Future<$7.SetAccentRequest> request) async {
     return setAccent(call, await request);
   }
 
-  $async.Future<$6.GetAccentResponse> getAccent_Pre($grpc.ServiceCall call, $async.Future<$6.Empty> request) async {
+  $async.Future<$7.GetAccentResponse> getAccent_Pre($grpc.ServiceCall call, $async.Future<$7.Empty> request) async {
     return getAccent(call, await request);
   }
 
-  $async.Future<$6.Empty> setTheme($grpc.ServiceCall call, $6.SetThemeRequest request);
-  $async.Future<$6.GetThemeResponse> getTheme($grpc.ServiceCall call, $6.Empty request);
-  $async.Future<$6.Empty> setAccent($grpc.ServiceCall call, $6.SetAccentRequest request);
-  $async.Future<$6.GetAccentResponse> getAccent($grpc.ServiceCall call, $6.Empty request);
+  $async.Future<$7.Empty> setTheme($grpc.ServiceCall call, $7.SetThemeRequest request);
+  $async.Future<$7.GetThemeResponse> getTheme($grpc.ServiceCall call, $7.Empty request);
+  $async.Future<$7.Empty> setAccent($grpc.ServiceCall call, $7.SetAccentRequest request);
+  $async.Future<$7.GetAccentResponse> getAccent($grpc.ServiceCall call, $7.Empty request);
 }
