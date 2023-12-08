@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v3.20.3
-// source: provd.proto
+// source: provd.protos
 
 package provd
 
@@ -107,5 +107,5 @@ var HelloWorldService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "provd.proto",
+	Metadata: "provd.protos",
 }

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package eula;
+
+// Just a placeholder until we have designed the EULA
+service EulaService {
+    rpc AcceptEula(Empty) returns (Empty) {}
+}
+
+message Empty {}

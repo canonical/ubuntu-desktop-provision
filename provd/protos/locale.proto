@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package locale;
+
+service LocaleService {
+  rpc SetLocale (SetLocaleRequest) returns (Empty) {};
+  rpc GetLocale (Empty) returns (GetLocaleResponse) {};
+}
+
+message Empty {}
+
+message SetLocaleRequest {
+  string locale = 1;
+}
+
+message GetLocaleResponse {
+  string locale = 1;
+}
