@@ -12,5 +12,5 @@ dependencies:
   subiquity_client: ^0.1.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.1.0
+  ubuntu_lints: ^0.2.0
   test: any
