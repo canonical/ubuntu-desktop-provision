@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'dart:io';
 
 import 'package:subiquity_client/subiquity_client.dart';
@@ -46,7 +48,7 @@ void main() {
     });
 
     test('call back on process start', () async {
-      bool cbCalled = false;
+      var cbCalled = false;
       final process = SubiquityProcess(
         'bash',
         ['-c', 'exit 0'],
@@ -59,7 +61,7 @@ void main() {
 
     test('defer launch', () async {
       final fut = Future.delayed(const Duration(milliseconds: 50));
-      bool futAwaited = false;
+      var futAwaited = false;
       final process = SubiquityProcess('bash', ['-c', 'exit 0'],
           deferStart: fut.then((_) => futAwaited = true));
       await process.start();
@@ -138,7 +140,7 @@ void main() {
     });
 
     test('keyboard', () async {
-      var ks = KeyboardSetting(
+      const ks = KeyboardSetting(
         layout: 'us',
         variant: '',
         toggle: null,
@@ -146,7 +148,7 @@ void main() {
 
       await client.setKeyboard(ks);
 
-      var kb = await client.getKeyboard();
+      final kb = await client.getKeyboard();
       expect(kb.setting.layout, 'us');
       expect(kb.setting.variant, '');
       expect(kb.setting.toggle, null);
@@ -160,12 +162,12 @@ void main() {
     });
 
     test('has rst', () async {
-      var rst = await client.hasRst();
+      final rst = await client.hasRst();
       expect(rst, isFalse);
     });
 
     test('has bitlocker', () async {
-      var bitLocker = await client.hasBitLocker();
+      final bitLocker = await client.hasBitLocker();
       expect(bitLocker, isFalse);
     });
 
@@ -221,7 +223,7 @@ void main() {
       var response = await client.addPartitionV2(
         disks.first,
         disks.first.partitions.whereType<Gap>().single,
-        Partition(mount: '/foo', format: 'ext2'),
+        const Partition(mount: '/foo', format: 'ext2'),
       );
       expect(response.disks, isNotNull);
       expect(response.disks, hasLength(disks.length));
@@ -266,10 +268,10 @@ void main() {
       expect(disks.first.partitions.whereType<Gap>(), hasLength(1));
 
       // add
-      var response = await client.addPartitionV2(
+      final response = await client.addPartitionV2(
         disks.first,
         disks.first.partitions.whereType<Gap>().single,
-        Partition(format: 'swap'),
+        const Partition(format: 'swap'),
       );
       expect(response.disks, isNotNull);
       expect(response.disks, hasLength(disks.length));
@@ -308,7 +310,7 @@ void main() {
       var response = await client.addPartitionV2(
         disks.first,
         disks.first.partitions.whereType<Gap>().single,
-        Partition(mount: '/foo', format: 'ext2'),
+        const Partition(mount: '/foo', format: 'ext2'),
       );
       expect(response.disks, isNotNull);
       expect(response.disks, hasLength(disks.length));
@@ -349,7 +351,7 @@ void main() {
     });
 
     test('mirror', () async {
-      expect(await client.setMirror(MirrorPost(elected: 'test')),
+      expect(await client.setMirror(const MirrorPost(elected: 'test')),
           MirrorPostResponse.OK);
       final test = await client.getMirror();
       expect(test.elected, endsWith('test'));
@@ -357,9 +359,11 @@ void main() {
       expect(test.staged, isNull);
 
       expect(
-          await client.setMirror(
-              MirrorPost(elected: 'https://archive.ubuntu.com/ubuntu')),
-          MirrorPostResponse.OK);
+        await client.setMirror(
+          const MirrorPost(elected: 'https://archive.ubuntu.com/ubuntu'),
+        ),
+        MirrorPostResponse.OK,
+      );
       final archive = await client.getMirror();
       expect(archive.elected, 'https://archive.ubuntu.com/ubuntu');
       expect(archive.candidates, isNotEmpty);
@@ -367,7 +371,7 @@ void main() {
     });
 
     test('identity', () async {
-      var newId = IdentityData(
+      var newId = const IdentityData(
         realname: 'übuntù', // utf-8
         username: 'ubuntu',
         cryptedPassword:
@@ -377,14 +381,14 @@ void main() {
 
       await client.setIdentity(newId);
 
-      var id = await client.getIdentity();
+      final id = await client.getIdentity();
       expect(id.realname, 'übuntù');
       expect(id.username, 'ubuntu');
       expect(id.cryptedPassword, '');
       expect(id.hostname, 'ubuntu-desktop');
 
       // empty defaults for null values
-      newId = IdentityData();
+      newId = const IdentityData();
 
       // Server now throws exception if invalid username is POST'ed.
       expect(() async {
@@ -396,7 +400,7 @@ void main() {
       const valid = 'ubuntu';
       const alreadyUsed = 'root';
       const systemReserved = 'plugdev';
-      final String tooLong = 'u' * 33;
+      final tooLong = 'u' * 33;
       const invalidChars = '123root';
 
       var validation = await client.validateUsername(valid);
@@ -520,7 +524,7 @@ void main() {
     });
 
     test('AD info', () async {
-      final info = AdConnectionInfo(
+      const info = AdConnectionInfo(
         domainName: 'foo.bar.baz',
         adminName: 'admin',
         password: 'password',
@@ -627,7 +631,7 @@ void main() {
     });
 
     test('wslsetupoptions', () async {
-      var newConf = WSLSetupOptions(
+      var newConf = const WSLSetupOptions(
         installLanguageSupportPackages: false,
       );
 
@@ -636,7 +640,7 @@ void main() {
       var conf = await client.wslSetupOptions();
       expect(conf.installLanguageSupportPackages, false);
 
-      newConf = WSLSetupOptions(
+      newConf = const WSLSetupOptions(
         installLanguageSupportPackages: true,
       );
 
@@ -647,7 +651,7 @@ void main() {
     });
 
     test('wslconfbase', () async {
-      var newConf = WSLConfigurationBase(
+      var newConf = const WSLConfigurationBase(
         automountRoot: '/mnt/',
         automountOptions: '-f',
         networkGeneratehosts: false,
@@ -662,7 +666,7 @@ void main() {
       expect(conf.networkGeneratehosts, false);
       expect(conf.networkGenerateresolvconf, false);
 
-      newConf = WSLConfigurationBase(
+      newConf = const WSLConfigurationBase(
         automountRoot: '',
         automountOptions: '',
         networkGeneratehosts: true,
@@ -679,7 +683,7 @@ void main() {
     });
 
     test('wslconfadvanced', () async {
-      var newConf = WSLConfigurationAdvanced(
+      var newConf = const WSLConfigurationAdvanced(
         automountEnabled: true,
         automountMountfstab: true,
         interopEnabled: true,
@@ -696,7 +700,7 @@ void main() {
       expect(conf.interopAppendwindowspath, true);
       expect(conf.systemdEnabled, false);
 
-      newConf = WSLConfigurationAdvanced(
+      newConf = const WSLConfigurationAdvanced(
         automountEnabled: false,
         automountMountfstab: false,
         interopEnabled: false,

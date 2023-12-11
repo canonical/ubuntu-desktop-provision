@@ -14,7 +14,6 @@ final testDisks = <Disk>[
   fakeDisk(
     path: '/dev/sda',
     size: 12,
-    preserve: false,
     partitions: [
       const Partition(
         path: '/dev/sda1',
@@ -37,7 +36,6 @@ final testDisks = <Disk>[
   fakeDisk(
     path: '/dev/sdb',
     size: 23,
-    preserve: false,
     partitions: [
       const Partition(
         path: '/dev/sdb3',

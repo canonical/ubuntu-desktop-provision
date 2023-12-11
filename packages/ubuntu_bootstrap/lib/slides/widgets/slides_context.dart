@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 class SlidesContext extends InheritedWidget {
   /// Creates an inherited slide widget with the specified slides.
   const SlidesContext({
-    super.key,
     required this.slides,
     required super.child,
+    super.key,
   });
 
   /// The installation slides.

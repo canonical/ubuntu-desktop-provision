@@ -18,8 +18,8 @@ dependencies:
     sdk: flutter
   flutter_html: ^3.0.0-beta.1
   flutter_riverpod: ^2.4.9
-  freezed_annotation: ^2.4.1
   form_field_validator: ^1.1.0
+  freezed_annotation: ^2.4.1
   gsettings: ^0.2.8
   json_annotation: ^4.8.1
   meta: ^1.10.0

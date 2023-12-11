@@ -77,8 +77,8 @@ Future<void> runInstallerApp(
   tryRegisterService<ConfigService>(
     () => ConfigService(path: options['config'] as String?),
   );
-  tryRegisterService<DesktopService>(() => GnomeService());
-  tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
+  tryRegisterService<DesktopService>(GnomeService.new);
+  tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
       pageConfig: tryGetService<PageConfigService>()));
@@ -127,7 +127,7 @@ Future<void> runInstallerApp(
     ...options.rest,
   ]).then(_initInstallerApp);
 
-  runZonedGuarded(() async {
+  await runZonedGuarded(() async {
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
@@ -174,7 +174,7 @@ Future<void> runInstallerApp(
                   package: 'ubuntu_bootstrap',
                 ),
                 child: InstallerWizard(
-                  welcome: options['welcome'] as bool?,
+                  welcome: options['welcome'] as bool? ?? false,
                 ),
               ),
             );

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class SlideList extends StatelessWidget {
-  const SlideList({super.key, required this.children});
+  const SlideList({required this.children, super.key});
 
   final List<Widget> children;
 

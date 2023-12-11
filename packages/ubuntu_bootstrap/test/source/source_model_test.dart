@@ -1,3 +1,5 @@
+// ignore_for_file: close_sinks
+
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -87,8 +89,6 @@ void main() {
 
     final model = SourceModel(
       client: client,
-      installDrivers: false,
-      installCodecs: false,
       power: power,
       network: network,
       storage: MockStorageService(),
@@ -117,8 +117,6 @@ void main() {
 
     final model = SourceModel(
       client: client,
-      installDrivers: false,
-      installCodecs: false,
       power: MockPowerService(),
       network: network,
       storage: storage,

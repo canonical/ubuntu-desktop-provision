@@ -10,13 +10,13 @@ import 'test_keyboard.dart';
 void main() {
   test('init', () async {
     final service = MockKeyboardService();
-    when(service.getKeyboardStep('0')).thenAnswer((_) async {
+    when(service.getKeyboardStep()).thenAnswer((_) async {
       return const AnyStep.stepPressKey(keycodes: {}, symbols: ['a', 'b', 'c']);
     });
 
     final detector = KeyboardDetector(service);
     await detector.init();
-    verify(service.getKeyboardStep('0')).called(1);
+    verify(service.getKeyboardStep()).called(1);
 
     expect(detector.value, isA<StepPressKey>());
     expect(detector.pressKey, equals(['a', 'b', 'c']));
@@ -24,7 +24,7 @@ void main() {
 
   test('key press', () async {
     final service = MockKeyboardService();
-    when(service.getKeyboardStep('0')).thenAnswer((_) async {
+    when(service.getKeyboardStep()).thenAnswer((_) async {
       return const AnyStep.stepPressKey(
         symbols: ['a', 'b', 'c'],
         keycodes: {12: '34'},

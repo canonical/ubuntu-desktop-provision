@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -11,6 +10,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../l10n.dart';
 import 'storage_model.dart';
 
 enum AdvancedFeature { none, lvm, zfs, tpm }
@@ -109,21 +109,20 @@ Future<void> showAdvancedFeaturesDialog(
     },
   );
 
-  if (result == true) {
+  if (result ?? false) {
     model.guidedCapability =
         advancedFeature.value.toGuidedCapability(encryption: encryption.value);
   }
 }
 
 class TpmOption extends StatelessWidget {
-  final ValueNotifier<AdvancedFeature> advancedFeature;
-  final StorageModel model;
-
   const TpmOption({
-    super.key,
     required this.advancedFeature,
     required this.model,
+    super.key,
   });
+  final ValueNotifier<AdvancedFeature> advancedFeature;
+  final StorageModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -206,7 +205,7 @@ extension on AdvancedFeature {
   GuidedCapability toGuidedCapability({bool? encryption}) {
     switch (this) {
       case AdvancedFeature.lvm:
-        return encryption == true
+        return (encryption ?? false)
             ? GuidedCapability.LVM_LUKS
             : GuidedCapability.LVM;
       case AdvancedFeature.zfs:

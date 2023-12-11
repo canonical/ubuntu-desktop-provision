@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
+import '../../services.dart';
 import 'connect_model.dart';
 import 'network_device.dart';
 
@@ -32,10 +32,10 @@ class EthernetModel extends NetworkDeviceModel<EthernetDevice> {
   ConnectMode get connectMode => ConnectMode.ethernet;
 
   @override
-  void onSelected() async {}
+  Future<void> onSelected() async {}
 
   @override
-  void onDeselected() async {}
+  Future<void> onDeselected() async {}
 
   @override
   Future<void> enable() async {

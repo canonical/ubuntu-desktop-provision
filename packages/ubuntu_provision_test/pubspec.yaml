@@ -14,6 +14,7 @@ dependencies:
   flutter_test:
     sdk: flutter
   gsettings: ^0.2.8
+  subiquity_client: ^0.1.0
   sysmetrics: ^0.1.0
   ubuntu_bootstrap: ^0.1.0
   ubuntu_flavor: ^0.2.1

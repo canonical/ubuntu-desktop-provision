@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import '../services.dart';
 
 final installerModelProvider = ChangeNotifierProvider.autoDispose(
   (_) => InstallerModel(
@@ -23,7 +23,7 @@ class InstallerModel extends SafeChangeNotifier {
   StreamSubscription<RefreshState>? _refreshChange;
 
   ApplicationStatus? get status => _status;
-  bool get isInstalling => status?.isInstalling == true;
+  bool get isInstalling => status?.isInstalling ?? false;
   bool get isRefreshing => _refresh.state.busy;
 
   Future<void> init() async {

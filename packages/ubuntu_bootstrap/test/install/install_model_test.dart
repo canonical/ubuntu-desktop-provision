@@ -1,3 +1,5 @@
+// ignore_for_file: close_sinks
+
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -28,7 +30,7 @@ void main() async {
   test('client status monitor', () async {
     final client = MockSubiquityClient();
     final journal = MockJournalService();
-    when(journal.start(['log', 'event'], output: JournalOutput.short))
+    when(journal.start(['log', 'event']))
         .thenAnswer((_) => const Stream.empty());
     when(journal.start(['event'], output: JournalOutput.cat))
         .thenAnswer((_) => const Stream.empty());
@@ -38,8 +40,8 @@ void main() async {
 
     when(client.getStatus())
         .thenAnswer((_) async => testStatus(ApplicationState.values.first));
-    when(client.monitorStatus()).thenAnswer((_) => Stream.fromIterable(
-        ApplicationState.values.map((state) => testStatus(state))));
+    when(client.monitorStatus()).thenAnswer(
+        (_) => Stream.fromIterable(ApplicationState.values.map(testStatus)));
 
     final stateChanges = StreamController<ApplicationState?>();
     model.addListener(() => stateChanges.add(model.state));
@@ -47,7 +49,7 @@ void main() async {
     // initializing the model queries the initial client status, and then runs
     // the client status query loop until it reaches DONE
     await model.init();
-    verify(client.getStatus(current: null)).called(1);
+    verify(client.getStatus()).called(1);
 
     final expectedStateChanges = ApplicationState.values.where((state) {
       return state != ApplicationState.ERROR &&
@@ -61,10 +63,10 @@ void main() async {
     when(client.getStatus())
         .thenAnswer((_) async => testStatus(ApplicationState.values.first));
     when(client.monitorStatus()).thenAnswer((_) => Stream.fromIterable(
-        [...ApplicationState.values.map((state) => testStatus(state)), null]));
+        [...ApplicationState.values.map(testStatus), null]));
 
     final journal = MockJournalService();
-    when(journal.start(['log', 'event'], output: JournalOutput.short))
+    when(journal.start(['log', 'event']))
         .thenAnswer((_) => const Stream.empty());
     when(journal.start(['event'], output: JournalOutput.cat))
         .thenAnswer((_) => const Stream.empty());
@@ -117,7 +119,7 @@ void main() async {
     );
 
     final journal = MockJournalService();
-    when(journal.start(['log', 'event'], output: JournalOutput.short))
+    when(journal.start(['log', 'event']))
         .thenAnswer((_) => const Stream.empty());
     when(journal.start(['event'], output: JournalOutput.cat))
         .thenAnswer((_) => const Stream.empty());
@@ -166,14 +168,14 @@ void main() async {
     );
 
     await model.reboot();
-    verify(session.reboot(immediate: false)).called(1);
+    verify(session.reboot()).called(1);
   });
 
   test('events', () async {
     final events = StreamController<String>(sync: true);
 
     final journal = MockJournalService();
-    when(journal.start(['log', 'event'], output: JournalOutput.short))
+    when(journal.start(['log', 'event']))
         .thenAnswer((_) => const Stream.empty());
     when(journal.start(['event'], output: JournalOutput.cat))
         .thenAnswer((_) => events.stream);

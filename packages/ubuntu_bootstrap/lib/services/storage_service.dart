@@ -10,7 +10,7 @@ final _log = Logger('storage');
 
 /// Provides means to read and modify the storage configuration.
 class StorageService {
-  /// Creates the service with the given [client].
+  /// Creates the service with the given [_client].
   StorageService(this._client);
 
   final SubiquityClient _client;

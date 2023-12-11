@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'package:subiquity_client/src/extensions.dart';
 import 'package:subiquity_client/src/types.dart';
 import 'package:test/test.dart';

@@ -20,7 +20,7 @@ class SubiquityStatusMonitor {
   StreamController<ApplicationStatus?>? _statusController;
   late final String _host;
 
-  /// Starts monitoring the status using the provided [socketPath].
+  /// Starts monitoring the status using the provided `socketPath`.
   Future<bool> start(Endpoint endpoint) async {
     _client.connectionFactory = (uri, proxyHost, proxyPort) async {
       return Socket.startConnect(endpoint.address, endpoint.port);

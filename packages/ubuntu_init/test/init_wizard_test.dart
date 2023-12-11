@@ -188,7 +188,7 @@ extension on WidgetTester {
       supportedLocales: supportedLocales,
       home: DefaultAssetBundle(
         bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
-        child: InitWizard(),
+        child: const InitWizard(),
       ),
     );
   }

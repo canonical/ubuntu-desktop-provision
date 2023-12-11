@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlideColumn extends StatelessWidget {
-  const SlideColumn({super.key, required this.children, this.spacing});
+  const SlideColumn({required this.children, super.key, this.spacing});
 
   final List<Widget> children;
   final double? spacing;

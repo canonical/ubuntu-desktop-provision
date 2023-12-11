@@ -13,6 +13,6 @@ RefreshModel buildRefreshModel({RefreshState? state}) {
   when(model.state).thenReturn(state ??
       const RefreshState.status(
           RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
-  when(model.init()).thenAnswer((_) async => state?.available == true);
+  when(model.init()).thenAnswer((_) async => state?.available ?? false);
   return model;
 }

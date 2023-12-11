@@ -1,16 +1,19 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:meta/meta.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
 import 'endpoint.dart';
 import 'server/paths.dart';
 import 'server/process.dart';
 import 'types.dart';
-import 'package:meta/meta.dart';
-import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 const _kWaitTimes = 90;
 const _kWaitDuration = Duration(seconds: 1);
 
+// TODO(Lukas): Rename enums to dart style.
+// ignore: constant_identifier_names
 enum ServerMode { LIVE, DRY_RUN }
 
 @internal
@@ -22,11 +25,11 @@ Future<Endpoint> defaultEndpoint(ServerMode serverMode) async {
 }
 
 class SubiquityServer {
+  SubiquityServer({required this.endpoint, this.process});
+
   /// An optional server launcher, should we need to start the server.
   SubiquityProcess? process;
   final Endpoint endpoint;
-
-  SubiquityServer({this.process, required this.endpoint});
 
   Future<Endpoint> start({
     List<String>? args,

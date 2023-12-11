@@ -32,7 +32,7 @@ class GnomePrivacyService implements PrivacyService {
   Future<bool> isLocationEnabled() async {
     try {
       return await _locationSettings.get('enabled').then((v) => v.asBoolean());
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Error getting location settings: $e');
       return false;
     }
@@ -40,10 +40,10 @@ class GnomePrivacyService implements PrivacyService {
 
   @override
   Future<void> setLocationEnabled(bool enabled) async {
-    setReportingEnabled(true);
+    await setReportingEnabled(true);
     try {
       return await _locationSettings.set('enabled', DBusBoolean(enabled));
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Error setting location settings: $e');
       return;
     }
@@ -55,7 +55,7 @@ class GnomePrivacyService implements PrivacyService {
       return await _privacySettings
           .get('report-technical-problems')
           .then((v) => v.asBoolean());
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Error getting privacy settings: $e');
       return false;
     }
@@ -66,7 +66,7 @@ class GnomePrivacyService implements PrivacyService {
     try {
       return await _privacySettings.set(
           'report-technical-problems', DBusBoolean(enabled));
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Error setting privacy settings: $e');
       return;
     }

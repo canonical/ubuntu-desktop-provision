@@ -17,9 +17,9 @@ typedef OnWifiSelected = void Function(
 
 class WifiRadioButton extends ConsumerWidget {
   const WifiRadioButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -51,10 +51,10 @@ class WifiRadioButton extends ConsumerWidget {
 
 class WifiView extends ConsumerStatefulWidget {
   const WifiView({
-    super.key,
     required this.expanded,
     required this.onEnabled,
     required this.onSelected,
+    super.key,
   });
 
   final bool expanded;
@@ -114,8 +114,8 @@ class _WifiViewState extends ConsumerState<WifiView> {
 
 class WifiListView extends ConsumerWidget {
   const WifiListView({
-    super.key,
     required this.onSelected,
+    super.key,
   });
 
   final OnWifiSelected onSelected;
@@ -156,9 +156,9 @@ class WifiListView extends ConsumerWidget {
 
 class WifiListTile extends ConsumerWidget {
   const WifiListTile({
-    super.key,
     required this.selected,
     required this.onSelected,
+    super.key,
   });
 
   final bool selected;

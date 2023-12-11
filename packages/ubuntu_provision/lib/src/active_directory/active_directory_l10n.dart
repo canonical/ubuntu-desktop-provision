@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:ubuntu_provision/l10n.dart';
-import 'package:ubuntu_provision/services.dart';
+import '../../l10n.dart';
+import '../../services.dart';
 
 abstract class ActiveDirectoryLocalizations
     extends UbuntuProvisionLocalizations {

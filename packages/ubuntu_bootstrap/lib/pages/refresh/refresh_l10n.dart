@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
+import '../../l10n.dart';
 
 extension TaskL10n on Task {
   String localize(BuildContext context, String snap) {

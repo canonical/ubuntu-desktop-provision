@@ -6,11 +6,11 @@ import 'storage_icon.dart';
 
 class StorageButton extends StatelessWidget {
   const StorageButton({
-    super.key,
     required this.name,
+    required this.size,
+    super.key,
     this.sysname,
     this.format,
-    required this.size,
     this.onPressed,
   });
 

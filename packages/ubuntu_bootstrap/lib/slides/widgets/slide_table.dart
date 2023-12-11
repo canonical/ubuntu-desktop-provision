@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlideTable extends StatelessWidget {
-  const SlideTable({super.key, required this.rows});
+  const SlideTable({required this.rows, super.key});
 
   final List<List<Widget>> rows;
 

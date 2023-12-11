@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
+import '../l10n.dart';
+import '../services.dart';
 import 'layouts/slide_layout_styles.dart';
 import 'slide_layouts.dart';
 import 'slide_widgets.dart';

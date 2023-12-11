@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../services.dart';
 import 'active_directory_dialogs.dart';
 import 'active_directory_l10n.dart';
 import 'active_directory_model.dart';
@@ -63,7 +63,7 @@ class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
             onNext: () async {
               final model = ref.read(activeDirectoryModelProvider);
               await model.save();
-              model.getJoinResult().then((result) {
+              await model.getJoinResult().then((result) {
                 if (mounted &&
                     (result == AdJoinResult.JOIN_ERROR ||
                         result == AdJoinResult.PAM_ERROR)) {

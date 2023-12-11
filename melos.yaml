@@ -90,7 +90,7 @@ scripts:
 
   # format all packages
   format: >
-    melos exec -c 1 --fail-fast -- \
+    melos exec -c 1 -- \
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
           ! -name '*.g.dart' \
           ! -name '*.freezed.dart' \

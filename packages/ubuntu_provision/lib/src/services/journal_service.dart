@@ -20,6 +20,7 @@ class JournalService {
     JournalOutput output = JournalOutput.short,
   }) {
     Process? process;
+    // ignore: close_sinks
     late final StreamController<String> controller;
 
     Process.start(

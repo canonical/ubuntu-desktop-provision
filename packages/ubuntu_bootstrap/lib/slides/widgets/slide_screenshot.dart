@@ -5,6 +5,7 @@ import '../layouts/slide_layout_styles.dart';
 class SlideScreenshot extends StatelessWidget {
   const SlideScreenshot(
     this.name, {
+    super.key,
     this.alignment = Alignment.center,
     this.fit,
   });

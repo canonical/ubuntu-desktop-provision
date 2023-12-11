@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:ubuntu_init/ubuntu_init.dart';
+import '../../ubuntu_init.dart';
 
 abstract class PrivacyLocalizations extends UbuntuInitLocalizations {
   PrivacyLocalizations(super.locale);

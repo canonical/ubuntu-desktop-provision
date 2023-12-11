@@ -12,7 +12,7 @@ import 'test_keyboard.dart';
 void main() {
   testWidgets('detect layout', (tester) async {
     final service = MockKeyboardService();
-    when(service.getKeyboardStep('0')).thenAnswer((_) async {
+    when(service.getKeyboardStep()).thenAnswer((_) async {
       return const AnyStep.stepPressKey(symbols: ['a'], keycodes: {30: '40'});
     });
     when(service.getKeyboardStep('40')).thenAnswer((_) async {
@@ -28,8 +28,6 @@ void main() {
 
     await tester.pumpApp(
       (_) => DetectKeyboardView(
-        pressKey: null,
-        keyPresent: null,
         onKeyPress: (_) {},
       ),
     );
@@ -39,7 +37,7 @@ void main() {
     // init
     final result = showDetectKeyboardDialog(context);
     await tester.pumpAndSettle();
-    verify(service.getKeyboardStep('0')).called(1);
+    verify(service.getKeyboardStep()).called(1);
 
     // press a
     expect(find.text('a'), findsOneWidget);

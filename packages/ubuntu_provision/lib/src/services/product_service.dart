@@ -19,12 +19,11 @@ class ProductInfo {
 
 /// A class which reads current system info
 class ProductService {
+  ProductService([@visibleForTesting FileSystem? fileSystem])
+      : _fileSystem = fileSystem ?? const LocalFileSystem();
   ProductInfo? _cachedProductInfo;
 
   final FileSystem _fileSystem;
-
-  ProductService([@visibleForTesting FileSystem? fileSystem])
-      : _fileSystem = fileSystem ?? const LocalFileSystem();
 
   /// Returns system version from CD ISO or hard disk falls back to simple
   /// "Ubuntu" text when cannot find file.
@@ -92,7 +91,7 @@ class ProductService {
             .firstWhere((line) => line.trim().isNotEmpty);
         return url.replaceAll(r'${LANG}', languageCode);
         // ignore: empty_catches
-      } catch (e) {}
+      } on Exception catch (_) {}
     }
     try {
       final lines = _fileSystem

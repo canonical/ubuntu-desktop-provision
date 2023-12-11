@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlideLabel extends StatelessWidget {
-  const SlideLabel({super.key, required this.icon, required this.label});
+  const SlideLabel({required this.icon, required this.label, super.key});
 
   final Widget icon;
   final Widget label;
