@@ -39,11 +39,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testTimezonePage(timezone: 'Europe/Berlin');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    await expectTimezone('Europe/Berlin');
-
     const identity = Identity(
       realname: 'User',
       username: 'user',
@@ -57,17 +52,22 @@ void main() {
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
-    await tester.testThemePage(theme: Brightness.dark);
+    await tester.testPrivacyPage();
     await tester.tapNext();
-    await expectTheme(Brightness.dark);
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage(timezone: 'Europe/Berlin');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectTimezone('Europe/Berlin');
 
     await tester.testTelemetryPage(enabled: false);
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testPrivacyPage();
+    await tester.testThemePage(theme: Brightness.dark);
     await tester.tapNext();
-    await tester.pumpAndSettle();
+    await expectTheme(Brightness.dark);
 
     await tester.testStorePage();
     await tester.tapDone();

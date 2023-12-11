@@ -29,14 +29,18 @@ Future<void> runInitApp(
       log.error('Unhandled exception', error.exception, error.stack);
     };
 
+    log.debug('Initializing YaruWindowTitleBar');
     await YaruWindowTitleBar.ensureInitialized();
 
+    log.debug('Initializing services');
     await registerInitServices(args);
 
+    log.debug('Loading theme config');
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
 
+    log.debug('Loading page config');
     await getService<PageConfigService>().load();
 
     runApp(ProviderScope(

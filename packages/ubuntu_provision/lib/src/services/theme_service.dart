@@ -3,7 +3,10 @@ import 'dart:ui';
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:meta/meta.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+
+final _log = Logger('gtk_theme_service');
 
 /// An interface for managing the system theme.
 abstract class ThemeService {
@@ -33,40 +36,60 @@ class GtkThemeService implements ThemeService {
 
   @override
   Future<Brightness> getBrightness() async {
-    final scheme = await settings.get('color-scheme').then((v) => v.asString());
-    return scheme.hasSuffix('dark') ? Brightness.dark : Brightness.light;
+    try {
+      final scheme =
+          await settings.get('color-scheme').then((v) => v.asString());
+      return scheme.hasSuffix('dark') ? Brightness.dark : Brightness.light;
+    } catch (e) {
+      _log.error('Error getting theme settings: $e');
+      return Brightness.light;
+    }
   }
 
   @override
   Future<void> setBrightness(Brightness brightness) async {
-    final theme = await settings.get('gtk-theme').then((v) => v.asString());
-    switch (brightness) {
-      case Brightness.dark:
-        await settings.set('gtk-theme', DBusString(theme.addSuffix('dark')));
-        await settings.set('color-scheme', const DBusString('prefer-dark'));
-        break;
-      case Brightness.light:
-        await settings.set('gtk-theme', DBusString(theme.removeSuffix('dark')));
-        await settings.set('color-scheme', const DBusString('prefer-light'));
-        break;
+    try {
+      final theme = await settings.get('gtk-theme').then((v) => v.asString());
+      switch (brightness) {
+        case Brightness.dark:
+          await settings.set('gtk-theme', DBusString(theme.addSuffix('dark')));
+          await settings.set('color-scheme', const DBusString('prefer-dark'));
+          break;
+        case Brightness.light:
+          await settings.set(
+              'gtk-theme', DBusString(theme.removeSuffix('dark')));
+          await settings.set('color-scheme', const DBusString('prefer-light'));
+          break;
+      }
+    } catch (e) {
+      _log.error('Error setting theme settings: $e');
     }
   }
 
   @override
   Future<String?> getAccent() async {
-    final theme = await settings.get('gtk-theme').then((v) => v.asString());
-    return theme.removeSuffix('dark').split('-').elementAtOrNull(1);
+    try {
+      final theme = await settings.get('gtk-theme').then((v) => v.asString());
+      return theme.removeSuffix('dark').split('-').elementAtOrNull(1);
+    } catch (e) {
+      _log.error('Error getting accent color: $e');
+      return null;
+    }
   }
 
   @override
   Future<void> setAccent(String? accent) async {
-    final theme = await settings.get('gtk-theme').then((v) => v.asString());
-    final value = [
-      theme.getPrefix(),
-      if (accent?.isNotEmpty ?? false) accent!.toLowerCase(),
-      if (theme.hasSuffix('dark')) 'dark',
-    ].join('-');
-    return settings.set('gtk-theme', DBusString(value));
+    try {
+      final theme = await settings.get('gtk-theme').then((v) => v.asString());
+      final value = [
+        theme.getPrefix(),
+        if (accent?.isNotEmpty ?? false) accent!.toLowerCase(),
+        if (theme.hasSuffix('dark')) 'dark',
+      ].join('-');
+      return settings.set('gtk-theme', DBusString(value));
+    } catch (e) {
+      _log.error('Error setting accent color: $e');
+    }
   }
 
   @override
