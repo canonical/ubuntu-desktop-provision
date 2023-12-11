@@ -11,4 +11,4 @@ dependencies:
 
 dev_dependencies:
   ffigen: ^10.0.0
-  ubuntu_lints: ^0.1.0
+  ubuntu_lints: ^0.2.0

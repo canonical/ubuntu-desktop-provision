@@ -28,4 +28,4 @@ dependencies:
   yaru_widgets: 3.3.1
 
 dev_dependencies:
-  ubuntu_lints: ^0.1.0
+  ubuntu_lints: ^0.2.0

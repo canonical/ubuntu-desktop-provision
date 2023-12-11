@@ -27,5 +27,5 @@ dev_dependencies:
     sdk: flutter
   mockito: 5.4.3
   plugin_platform_interface: ^2.1.7
-  ubuntu_lints: ^0.1.0
+  ubuntu_lints: ^0.2.0
   url_launcher_platform_interface: ^2.2.0
