@@ -6,3 +6,28 @@ coverage/
 pubspec.lock
 pubspec_overrides.yaml
 /*.snap
+
+# Debian package build files
+*.ddeb
+*.deb
+*.build
+*.changes
+*.dsc
+*.tar.xz
+*.buildinfo
+
+# debhelper directory (contains temporary files used during package build)
+provd/debian/.debhelper/
+provd/debian/provd/*
+provd/debian/files
+provd/debian/debhelper-build-stamp
+provd/debian/*.debhelper.log
+provd/debian/*.postrm.debhelper
+provd/debian/*.substvars
+provd/debian/tmp/
+
+# Object directory (contains compiled objects and binaries)
+obj-x86_64-linux-gnu/
+
+# Vendor directory (contains vendored dependencies)
+provd/vendor/

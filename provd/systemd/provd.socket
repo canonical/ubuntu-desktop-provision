@@ -1,0 +1,9 @@
+[Unit]
+Description=Socket for Ubuntu Desktop Provisioning Daemon
+
+[Socket]
+ListenStream=/run/provd/provd.sock
+SocketMode=0660
+
+[Install]
+WantedBy=sockets.target

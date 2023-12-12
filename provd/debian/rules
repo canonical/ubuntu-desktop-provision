@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+export GO111MODULE=on
+export GOCACHE := $(shell mktemp -d /tmp/gocache-XXXX)
+export GOFLAGS := --mod=vendor -buildmode=pie
+
+export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	# Create the vendor directory when building the source package
+	[ -d vendor/ ] || go mod vendor
+
+override_dh_auto_install:
+	dh_auto_install
+
+	# Manually copy .service and .socket files from the sibling systemd directory
+	mkdir -p debian/tmp/lib/systemd/system
+	cp -a systemd/*.service debian/tmp/lib/systemd/system/
+	cp -a systemd/*.socket debian/tmp/lib/systemd/system/
+
+	# Move binaries to sbin
+	mkdir -p debian/tmp/sbin
+	mv debian/provd/usr/bin/* debian/tmp/sbin/
