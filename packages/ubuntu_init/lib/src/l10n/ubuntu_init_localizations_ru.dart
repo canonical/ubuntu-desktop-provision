@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Открыть центр приложений';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

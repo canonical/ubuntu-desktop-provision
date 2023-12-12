@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Uygulama Mağazasını Aç';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

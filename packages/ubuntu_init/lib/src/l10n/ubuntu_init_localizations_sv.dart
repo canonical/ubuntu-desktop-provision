@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Öppna App Store';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

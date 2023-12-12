@@ -52,6 +52,10 @@ void main() {
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
+    await tester.testUbuntuProPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testPrivacyPage();
     await tester.tapNext();
     await tester.pumpAndSettle();

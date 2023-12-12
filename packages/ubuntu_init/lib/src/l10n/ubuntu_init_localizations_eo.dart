@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Malfermi Programvendejon';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

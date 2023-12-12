@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Otwórz sklep z aplikacjami';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

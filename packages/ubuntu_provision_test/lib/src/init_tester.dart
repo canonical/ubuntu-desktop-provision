@@ -55,6 +55,21 @@ extension UbuntuInitPageTester on WidgetTester {
     }
   }
 
+  Future<void> testUbuntuProPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(UbuntuProPage);
+
+    final context = element(find.byType(UbuntuProPage));
+    final l10n = PrivacyLocalizations.of(context);
+
+    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testStorePage({
     String? screenshot,
   }) async {

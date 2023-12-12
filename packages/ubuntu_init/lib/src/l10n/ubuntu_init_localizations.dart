@@ -398,6 +398,12 @@ abstract class UbuntuInitLocalizations {
   /// In en, this message translates to:
   /// **'Open App Store'**
   String get storeOpen;
+
+  /// No description provided for @ubuntuProPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu Pro'**
+  String get ubuntuProPageTitle;
 }
 
 class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {

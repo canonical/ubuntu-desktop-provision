@@ -94,6 +94,9 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Open App Store';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

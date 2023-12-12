@@ -94,6 +94,9 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Abrir App Store';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

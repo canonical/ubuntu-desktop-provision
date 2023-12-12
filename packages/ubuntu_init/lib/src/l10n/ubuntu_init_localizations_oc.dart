@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Dobrir la botiga d’aplicacions';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

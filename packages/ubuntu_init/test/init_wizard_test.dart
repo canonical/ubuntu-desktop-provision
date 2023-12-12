@@ -97,6 +97,10 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(PrivacyPage), findsOneWidget);
     verify(privacyModel.init()).called(1);
 

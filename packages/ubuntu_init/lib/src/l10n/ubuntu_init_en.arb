@@ -71,5 +71,7 @@
   "storeDescription": "Ubuntu's App Store offers a range of apps you can get started with from the get-go.",
   "@storeDescription": {},
   "storeOpen": "Open App Store",
-  "@storeOpen": {}
+  "@storeOpen": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Otevřít Obchod s aplikacemi';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

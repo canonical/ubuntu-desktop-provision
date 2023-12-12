@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Otvoriť centrum aplikácií';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

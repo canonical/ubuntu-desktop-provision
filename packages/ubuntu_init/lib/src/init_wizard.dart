@@ -12,8 +12,8 @@ enum InitStep {
   locale,
   keyboard,
   network,
-  timezone,
   identity,
+  timezone,
   theme,
 }
 
@@ -23,11 +23,12 @@ class InitRoutes {
   static const String locale = '/locale';
   static const String keyboard = '/keyboard';
   static const String network = '/network';
-  static const String timezone = '/timezone';
   static const String identity = '/identity';
-  static const String theme = '/theme';
-  static const String telemetry = '/telemetry';
+  static const String ubuntuPro = '/ubuntuPro';
   static const String privacy = '/privacy';
+  static const String timezone = '/timezone';
+  static const String telemetry = '/telemetry';
+  static const String theme = '/theme';
   static const String store = '/store';
 }
 
@@ -80,6 +81,13 @@ class InitWizard extends ConsumerWidget {
             step: InitStep.identity.index,
           ),
           onLoad: (_) => IdentityPage.load(ref),
+        ),
+        InitRoutes.ubuntuPro: WizardRoute(
+          builder: (_) => const UbuntuProPage(),
+          userData: WizardRouteData(
+            step: InitStep.identity.index,
+          ),
+          onLoad: (_) => UbuntuProPage.load(ref),
         ),
         InitRoutes.privacy: WizardRoute(
           builder: (_) => const PrivacyPage(),

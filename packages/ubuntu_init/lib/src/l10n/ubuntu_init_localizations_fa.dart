@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'گشودن فروشگاه کاره';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

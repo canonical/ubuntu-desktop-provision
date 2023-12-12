@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Avaa Sovelluskauppa';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

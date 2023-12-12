@@ -94,4 +94,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
 
   @override
   String get storeOpen => 'Відкрити центр додатків';
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

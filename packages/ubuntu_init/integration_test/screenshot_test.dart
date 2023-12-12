@@ -136,6 +136,18 @@ Future<void> main() async {
       screenshot: '$currentThemeName/10.store',
     );
   }, variant: themeVariant);
+
+  testWidgets('12.ubuntu-pro', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitRoutes.ubuntuPro);
+    await tester.pumpAndSettle();
+
+    await tester.testUbuntuProPage(
+      screenshot: '$currentThemeName/10.ubuntu-pro',
+    );
+  }, variant: themeVariant);
 }
 
 ThemeData get currentTheme => themeVariant.currentValue!;
