@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import '../../installer.dart';
-import 'bitlocker/bitlocker_page.dart';
-import 'guided_reformat/guided_reformat_page.dart';
-import 'guided_resize/guided_resize_page.dart';
-import 'manual/manual_storage_page.dart';
-import 'recovery_key/recovery_key_page.dart';
-import 'security_key/security_key_page.dart';
-import 'storage_model.dart';
-import 'storage_page.dart';
-import 'storage_routes.dart';
 
 export 'bitlocker/bitlocker_page.dart';
 export 'guided_reformat/guided_reformat_page.dart';

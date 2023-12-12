@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../l10n.dart';
-import '../../services.dart';
-import 'source_model.dart';
 
 export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 

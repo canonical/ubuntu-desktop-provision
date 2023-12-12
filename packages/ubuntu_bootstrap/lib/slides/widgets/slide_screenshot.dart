@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../layouts/slide_layout_styles.dart';
+import 'package:ubuntu_bootstrap/slides/layouts/slide_layout_styles.dart';
 
 class SlideScreenshot extends StatelessWidget {
   const SlideScreenshot(

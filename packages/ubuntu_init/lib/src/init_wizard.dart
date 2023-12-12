@@ -2,12 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_init/src/init_model.dart';
+import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'init_model.dart';
-import 'init_pages.dart';
 
 enum InitStep {
   locale,

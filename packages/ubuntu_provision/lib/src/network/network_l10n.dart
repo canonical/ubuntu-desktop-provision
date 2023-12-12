@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import '../../l10n.dart';
+import 'package:ubuntu_provision/l10n.dart';
 
 abstract class NetworkLocalizations extends UbuntuProvisionLocalizations {
   NetworkLocalizations(super.locale);

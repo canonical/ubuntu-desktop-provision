@@ -63,7 +63,7 @@ dev_dependencies:
     sdk: flutter
   mockito: 5.4.3
   subiquity_test: ^0.1.0
-  ubuntu_lints: ^0.2.0
+  ubuntu_lints: ^0.3.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-0
   yaml: ^3.1.0

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/flavor.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/locale/locale_l10n.dart';
+import 'package:ubuntu_provision/src/locale/locale_model.dart';
+import 'package:ubuntu_provision/widgets.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../flavor.dart';
-import '../../services.dart';
-import '../../widgets.dart';
-import 'locale_l10n.dart';
-import 'locale_model.dart';
 
 class LocalePage extends ConsumerWidget {
   const LocalePage({super.key});

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'slide_transitions.dart';
+import 'package:ubuntu_bootstrap/pages/install/slide_transitions.dart';
 
 /// The default interval for automatic slide changes.
 const kDefaultSlideInterval = Duration(seconds: 25);

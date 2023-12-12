@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'slide_layout_styles.dart';
+import 'package:ubuntu_bootstrap/slides/layouts/slide_layout_styles.dart';
 
 /// A "cinematic" layout with a wide banner at the top.
 class CinematicSlideLayout extends StatelessWidget {

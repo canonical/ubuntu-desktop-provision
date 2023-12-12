@@ -1,11 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
-
-import '../../services.dart';
-import 'active_directory_l10n.dart';
-import 'active_directory_model.dart';
 
 class DomainNameFormField extends ConsumerWidget {
   const DomainNameFormField({super.key, this.fieldWidth});

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ubuntu_init/src/store/store_l10n.dart';
+import 'package:ubuntu_init/src/store/store_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'store_l10n.dart';
-import 'store_model.dart';
 
 class StorePage extends ConsumerWidget {
   const StorePage({super.key});

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
+import 'package:ubuntu_provision/src/active_directory/active_directory_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../services.dart';
-import 'active_directory_dialogs.dart';
-import 'active_directory_l10n.dart';
-import 'active_directory_model.dart';
-import 'active_directory_widgets.dart';
 
 class ActiveDirectoryPage extends ConsumerStatefulWidget {
   const ActiveDirectoryPage({super.key});

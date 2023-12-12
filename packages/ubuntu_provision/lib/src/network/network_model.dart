@@ -1,10 +1,9 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-
-import '../../services.dart';
-import 'connect_model.dart';
 
 final networkModelProvider = ChangeNotifierProvider((_) {
   return NetworkModel(getService<NetworkService>());

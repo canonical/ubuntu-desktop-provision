@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/ethernet_model.dart';
+import 'package:ubuntu_provision/src/network/network_l10n.dart';
+import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'connect_model.dart';
-import 'ethernet_model.dart';
-import 'network_l10n.dart';
-import 'wifi_model.dart';
 
 class NoConnectView extends ConsumerWidget {
   const NoConnectView({

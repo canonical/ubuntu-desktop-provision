@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
+import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
+import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../installer.dart';
-import '../../l10n.dart';
-import 'bottom_bar.dart';
-import 'install_model.dart';
-import 'slide_view.dart';
 
 extension InstallationActionL10n on InstallationAction {
   String localize(UbuntuBootstrapLocalizations lang) {

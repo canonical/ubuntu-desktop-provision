@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import '../services.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 final installerModelProvider = ChangeNotifierProvider.autoDispose(
   (_) => InstallerModel(

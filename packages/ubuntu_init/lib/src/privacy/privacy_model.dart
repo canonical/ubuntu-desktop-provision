@@ -2,9 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_init/src/init_services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-
-import '../init_services.dart';
 
 const kPrivacyPolicyUrl = 'https://ubuntu.com/legal/data-privacy';
 

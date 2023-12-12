@@ -5,10 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-
-import '../../../services.dart';
-import 'manual_storage_page.dart';
-import 'storage_types.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 /// The default mount points for auto-completion.
 const kDefaultMountPoints = <String>[

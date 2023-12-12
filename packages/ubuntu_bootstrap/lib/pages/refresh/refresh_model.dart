@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:stdlibc/stdlibc.dart';
-import '../../services.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 export 'package:subiquity_client/subiquity_client.dart' show RefreshCheckState;
 export 'package:ubuntu_bootstrap/services.dart' show RefreshState;

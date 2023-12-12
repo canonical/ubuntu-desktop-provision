@@ -2,21 +2,21 @@ import 'package:args/args.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:sysmetrics/sysmetrics.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_init/src/services/privacy_service.dart';
+import 'package:ubuntu_init/src/services/realmd_active_directory_service.dart';
+import 'package:ubuntu_init/src/services/xdg_identity_service.dart';
+import 'package:ubuntu_init/src/services/xdg_keyboard_service.dart';
+import 'package:ubuntu_init/src/services/xdg_locale_service.dart';
+import 'package:ubuntu_init/src/services/xdg_session_service.dart';
+import 'package:ubuntu_init/src/services/xdg_timezone_service.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-import 'services/privacy_service.dart';
-import 'services/realmd_active_directory_service.dart';
-import 'services/xdg_identity_service.dart';
-import 'services/xdg_keyboard_service.dart';
-import 'services/xdg_locale_service.dart';
-import 'services/xdg_session_service.dart';
-import 'services/xdg_timezone_service.dart';
-
 export 'package:args/args.dart' show ArgResults;
 export 'package:sysmetrics/sysmetrics.dart' show Sysmetrics;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
+
 export 'services/privacy_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_identity_service.dart';

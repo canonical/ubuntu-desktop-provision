@@ -3,10 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:meta/meta.dart';
+import 'package:subiquity_client/src/endpoint.dart';
+import 'package:subiquity_client/src/types.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
-
-import 'endpoint.dart';
-import 'types.dart';
 
 final _log = Logger('subiquity_status');
 

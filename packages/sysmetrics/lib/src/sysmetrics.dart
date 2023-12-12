@@ -3,7 +3,7 @@ import 'dart:isolate';
 
 import 'package:ffi/ffi.dart' as ffi;
 
-import 'libsysmetrics.dart';
+import 'package:sysmetrics/src/libsysmetrics.dart';
 
 /// Defines the desired kind of interaction in [Sysmetrics.collectAndSend]
 enum ReportType {

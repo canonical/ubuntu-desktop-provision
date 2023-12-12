@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'package:path/path.dart' as p;
 
-import '../../subiquity_server.dart';
-import 'pidfile.dart';
+import 'package:path/path.dart' as p;
+import 'package:subiquity_client/src/server/pidfile.dart';
+import 'package:subiquity_client/subiquity_server.dart';
 
 // Prefer local curtin and probert python modules that are pinned to the
 // correct versions

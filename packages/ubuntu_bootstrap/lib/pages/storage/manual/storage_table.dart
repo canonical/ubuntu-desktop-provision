@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_columns.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'storage_columns.dart';
-import 'storage_types.dart';
 
 typedef CanSelectStorage = bool Function(int disk, [int object]);
 typedef IsStorageSelected = bool Function(int disk, [int object]);

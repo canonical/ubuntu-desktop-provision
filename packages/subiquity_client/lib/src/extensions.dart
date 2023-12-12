@@ -1,6 +1,6 @@
 import 'package:path/path.dart' as p;
 
-import 'types.dart';
+import 'package:subiquity_client/src/types.dart';
 
 extension DiskX on Disk {
   /// "/dev/sda" => "sda"

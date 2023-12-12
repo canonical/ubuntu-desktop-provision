@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_detector.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_widgets.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../services.dart';
-import 'keyboard_detector.dart';
-import 'keyboard_l10n.dart';
-import 'keyboard_widgets.dart';
 
 const _kDialogWidthFactor = 0.65;
 const _kDialogHeightFactor = 0.15;

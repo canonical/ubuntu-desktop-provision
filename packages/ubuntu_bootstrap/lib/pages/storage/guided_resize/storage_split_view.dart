@@ -2,12 +2,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:split_view/split_view.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_button.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_size_dialog.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import '../../../l10n.dart';
-import 'storage_button.dart';
-import 'storage_size_dialog.dart';
 
 class StorageSplitView extends StatefulWidget {
   const StorageSplitView({

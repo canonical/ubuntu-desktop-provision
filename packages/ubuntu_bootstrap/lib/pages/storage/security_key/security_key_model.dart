@@ -2,9 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-
-import '../../../services.dart';
-import 'security_key_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_page.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 /// Provider for [SecurityKeyModel].
 final securityKeyModelProvider = ChangeNotifierProvider(

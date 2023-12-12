@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'src/l10n/ubuntu_provision_localizations.dart';
+import 'package:ubuntu_provision/src/l10n/ubuntu_provision_localizations.dart';
 export 'src/l10n/ubuntu_provision_localizations.dart';
 
 /// All supported locales for Ubuntu Provision.

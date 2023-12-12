@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
+import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../../../l10n.dart';
-import '../../../widgets.dart';
-import 'manual_storage_model.dart';
-import 'storage_types.dart';
 
 const _kInputFieldWidth = 400.0;
 const _kValidMountPointPattern = r'^(/\S*|)$';

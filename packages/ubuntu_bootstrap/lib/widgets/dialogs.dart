@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import '../l10n.dart';
 
 /// Shows a confirmation dialog with the given title and message.
 Future<bool> showConfirmationDialog(
