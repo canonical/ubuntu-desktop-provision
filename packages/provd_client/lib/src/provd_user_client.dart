@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:grpc/grpc.dart';
+import 'package:meta/meta.dart';
 
 import 'generated/user.pbgrpc.dart';
 
@@ -16,6 +17,9 @@ class ProvdUserClient {
             ),
           ),
         );
+
+  @visibleForTesting
+  ProvdUserClient.withClient(this._userClient);
 
   final UserServiceClient _userClient;
 
