@@ -94,6 +94,7 @@ scripts:
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
           ! -name '*.g.dart' \
           ! -name '*.freezed.dart' \
+          ! -name '*.pb*.dart' \
           ! -path '*/l10n/*' \
           ! -path '*/.*/*' \
           | xargs dart format --set-exit-if-changed"
@@ -123,3 +124,9 @@ scripts:
 
   # run pub upgrade in all packages
   upgrade: melos exec flutter pub upgrade
+
+  protoc:
+    run: |
+      rm -rf ./packages/provd_client/lib/src/generated/* &&
+      protoc --dart_out=grpc:./packages/provd_client/lib/src/generated \
+        -I./provd/protos ./provd/protos/*.proto
