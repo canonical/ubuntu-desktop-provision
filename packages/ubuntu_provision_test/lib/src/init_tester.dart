@@ -69,19 +69,4 @@ extension UbuntuInitPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
   }
-
-  Future<void> testStorePage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(StorePage);
-
-    final context = element(find.byType(StorePage));
-    final l10n = StoreLocalizations.of(context);
-
-    expect(find.titleBar(l10n.storeTitle), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-  }
 }

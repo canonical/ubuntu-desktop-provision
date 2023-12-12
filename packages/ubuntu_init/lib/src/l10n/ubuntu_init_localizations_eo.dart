@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Datena privateco';
 
   @override
-  String get storeTitle => 'Ubuntu-Programvendejo';
-
-  @override
-  String get storeHeader => 'Ekĝuu pli da programoj';
-
-  @override
-  String get storeDescription => 'La Programvendejo de Ubuntu ofertas multon da programoj, kiujn vi povas ekĝui.';
-
-  @override
-  String get storeOpen => 'Malfermi Programvendejon';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

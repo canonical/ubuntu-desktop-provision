@@ -42,12 +42,6 @@
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "محرمانگی داده‌ها",
   "@privacyPolicyLink": {},
-  "storeTitle": "فروشگاه اوبونتو",
-  "@storeTitle": {},
-  "storeHeader": "آغاز به کار با برنامه‌های بیش‌تر",
-  "@storeHeader": {},
-  "storeOpen": "گشودن فروشگاه کاره",
-  "@storeOpen": {},
   "welcomeWhatsNew": "چیزهای جدید؟",
   "@welcomeWhatsNew": {},
   "welcomeStartSubtitle": "پشتیبانی از یک تجربهٔ برپایی تمیزتر.",
@@ -70,7 +64,5 @@
   "privacyLocationTitle": "به کار انداختن خدمات مکانی؟",
   "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.",
-  "@privacyLocationSubtitle": {},
-  "storeDescription": "فروشگاه کارهٔ اوبونتو دامنه‌ای وسیع از کاره‌هایی که می‌توانید به راحتی بگیریدشان را فراهم می‌کند.",
-  "@storeDescription": {}
+  "@privacyLocationSubtitle": {}
 }

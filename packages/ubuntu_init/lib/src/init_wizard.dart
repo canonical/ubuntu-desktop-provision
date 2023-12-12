@@ -29,7 +29,6 @@ class InitRoutes {
   static const String timezone = '/timezone';
   static const String telemetry = '/telemetry';
   static const String theme = '/theme';
-  static const String store = '/store';
 }
 
 class InitWizard extends ConsumerWidget {
@@ -110,10 +109,6 @@ class InitWizard extends ConsumerWidget {
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
-        ),
-        InitRoutes.store: WizardRoute(
-          builder: (_) => const StorePage(),
-          onLoad: (_) => StorePage.load(ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();

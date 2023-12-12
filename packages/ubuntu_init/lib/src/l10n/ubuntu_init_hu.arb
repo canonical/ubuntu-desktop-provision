@@ -6,8 +6,6 @@
       "distro": {}
     }
   },
-  "storeHeader": "Kezdje el több alkalmazással",
-  "@storeHeader": {},
   "telemetryReportTitle": "Jelentéskészítés részletei",
   "@telemetryReportTitle": {},
   "welcomePageTitle": "Üdvözöljük",
@@ -29,8 +27,6 @@
   "@welcomeSecuritySubtitle": {},
   "privacyPageTitle": "Helymeghatározó szolgáltatások",
   "@privacyPageTitle": {},
-  "storeTitle": "Ubuntu alkalmazásbolt",
-  "@storeTitle": {},
   "welcomePageHeader": "Üdvözli a(z) {distro}!",
   "@welcomePageHeader": {},
   "privacyLocationEnable": "Helymeghatározó szolgáltatások",
@@ -48,8 +44,6 @@
   "@welcomeSecurityTitle": {},
   "telemetryReportLabel": "Jelentéskészítés részletei",
   "@telemetryReportLabel": {},
-  "storeDescription": "Az Ubuntu alkalmazásboltja számos olyan alkalmazást kínál, amelyekkel már az első pillanattól kezdve elkezdheti a munkát.",
-  "@storeDescription": {},
   "telemetryLabelOn": "Igen, a rendszer adatainak megosztása a(z) {distro} csapatával",
   "@telemetryLabelOn": {
     "type": "text",
@@ -61,8 +55,6 @@
   "@privacyLocationTitle": {},
   "welcomeStartTitle": "Egyszerűsített indítás",
   "@welcomeStartTitle": {},
-  "storeOpen": "Alkalmazásbolt megnyitása",
-  "@storeOpen": {},
   "telemetryPageTitle": "Telemetria",
   "@telemetryPageTitle": {},
   "privacyLocationSubtitle": "Tudassa az alkalmazásokkal a földrajzi helyzetét.\nEzt bármikor megváltoztathatja a rendszerbeállításokban.",

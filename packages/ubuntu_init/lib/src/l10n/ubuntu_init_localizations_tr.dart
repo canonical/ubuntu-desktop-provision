@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Veri Gizliliği';
 
   @override
-  String get storeTitle => 'Ubuntu Mağaza';
-
-  @override
-  String get storeHeader => 'Daha fazla uygulamayı kullanmaya başlayın';
-
-  @override
-  String get storeDescription => 'Ubuntu\'nun Uygulama Mağazası, başlangıçtan itibaren kullanabileceğiniz bir dizi uygulama sunar.';
-
-  @override
-  String get storeOpen => 'Uygulama Mağazasını Aç';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

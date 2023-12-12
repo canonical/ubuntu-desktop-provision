@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Конфиденциальность данных';
 
   @override
-  String get storeTitle => 'Центр приложений Ubuntu';
-
-  @override
-  String get storeHeader => 'Начните работу с другими приложениями';
-
-  @override
-  String get storeDescription => 'Центр приложений Ubuntu предлагает целый ряд приложений, с которыми вы можете начать работу с самого начала.';
-
-  @override
-  String get storeOpen => 'Открыть центр приложений';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

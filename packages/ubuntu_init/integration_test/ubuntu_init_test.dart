@@ -70,13 +70,9 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testThemePage(theme: Brightness.dark);
-    await tester.tapNext();
-    await expectTheme(Brightness.dark);
-
-    await tester.testStorePage();
     await tester.tapDone();
+    await expectTheme(Brightness.dark);
     await tester.pumpAndSettle();
-
     await expectLater(windowClosed, completes);
   });
 }

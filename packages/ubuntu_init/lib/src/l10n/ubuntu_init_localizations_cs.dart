@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Soukromí údajů';
 
   @override
-  String get storeTitle => 'Obchod Ubuntu';
-
-  @override
-  String get storeHeader => 'Začněte s více aplikacemi';
-
-  @override
-  String get storeDescription => 'Ubuntu obchod s aplikacemi nabízí širokou škálu aplikací, kterými je možné začít.';
-
-  @override
-  String get storeOpen => 'Otevřít Obchod s aplikacemi';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

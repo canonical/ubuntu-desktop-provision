@@ -61,16 +61,8 @@
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Увімкнути сервіси визначення місцезнаходження?",
   "@privacyLocationTitle": {},
-  "storeHeader": "Почніть роботу з додатковими програмами",
-  "@storeHeader": {},
   "privacyPolicyLink": "Конфіденційність даних",
   "@privacyPolicyLink": {},
-  "storeTitle": "Центр додатків Ubuntu",
-  "@storeTitle": {},
   "privacyLocationEnable": "Сервіси визначення місцезнаходження",
-  "@privacyLocationEnable": {},
-  "storeDescription": "Магазин додатків Ubuntu пропонує ряд програм, з якими можна почати роботу з самого початку.",
-  "@storeDescription": {},
-  "storeOpen": "Відкрити центр додатків",
-  "@storeOpen": {}
+  "@privacyLocationEnable": {}
 }

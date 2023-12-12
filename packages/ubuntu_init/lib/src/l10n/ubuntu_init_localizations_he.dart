@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'פרטיות נתונים';
 
   @override
-  String get storeTitle => 'חנות אובונטו';
-
-  @override
-  String get storeHeader => 'פתיחה טובה עם יותר יישומים';
-
-  @override
-  String get storeDescription => 'חנות היישומים של אובונטו מציעה מגוון רחב של יישומים שאפשר להתחיל להשתמש במהלך ההקמה.';
-
-  @override
-  String get storeOpen => 'פתיחת חנות היישומים';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

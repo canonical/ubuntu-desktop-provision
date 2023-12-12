@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Adatvédelem';
 
   @override
-  String get storeTitle => 'Ubuntu alkalmazásbolt';
-
-  @override
-  String get storeHeader => 'Kezdje el több alkalmazással';
-
-  @override
-  String get storeDescription => 'Az Ubuntu alkalmazásboltja számos olyan alkalmazást kínál, amelyekkel már az első pillanattól kezdve elkezdheti a munkát.';
-
-  @override
-  String get storeOpen => 'Alkalmazásbolt megnyitása';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

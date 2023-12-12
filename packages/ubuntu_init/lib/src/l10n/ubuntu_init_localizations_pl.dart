@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Prywatność danych';
 
   @override
-  String get storeTitle => 'Sklep Ubuntu';
-
-  @override
-  String get storeHeader => 'Rozpocznij z większą liczbą aplikacji';
-
-  @override
-  String get storeDescription => 'Sklep Ubuntu oferuje szereg aplikacji, z którymi możesz zacząć od razu.';
-
-  @override
-  String get storeOpen => 'Otwórz sklep z aplikacjami';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

@@ -64,13 +64,5 @@
   "telemetryLegalLabel": "Información Legal",
   "@telemetryLegalLabel": {},
   "privacyPolicyLink": "Protección de los datos",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Tienda de Ubuntu",
-  "@storeTitle": {},
-  "storeHeader": "Comienza con más aplicaciones",
-  "@storeHeader": {},
-  "storeDescription": "La Tienda de aplicaciones de Ubuntu ofrece una serie de aplicaciones con las que puedes empezar desde el primer momento.",
-  "@storeDescription": {},
-  "storeOpen": "Abrir la Tienda de Aplicaciones",
-  "@storeOpen": {}
+  "@privacyPolicyLink": {}
 }

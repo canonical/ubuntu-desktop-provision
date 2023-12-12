@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Dataintegritet';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
-
-  @override
-  String get storeHeader => 'Kom igång med fler program';
-
-  @override
-  String get storeDescription => 'Ubuntus App Store erbjuder en rad program som du kan komma igång med direkt.';
-
-  @override
-  String get storeOpen => 'Öppna App Store';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

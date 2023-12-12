@@ -84,17 +84,5 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Databeskyttelse';
 
   @override
-  String get storeTitle => 'Ubuntu-butikken';
-
-  @override
-  String get storeHeader => 'Get started with more applications';
-
-  @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
-
-  @override
-  String get storeOpen => 'Open App Store';
-
-  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 }
