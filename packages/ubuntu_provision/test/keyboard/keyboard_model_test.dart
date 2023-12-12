@@ -185,12 +185,12 @@ void main() {
     });
 
     test('invalid selection throws', () {
-      expect(() async => await model.selectLayout(-1), throwsAssertionError);
-      expect(() async => await model.selectLayout(model.layoutCount),
+      expect(() async => model.selectLayout(-1), throwsAssertionError);
+      expect(() async => model.selectLayout(model.layoutCount),
           throwsAssertionError);
 
-      expect(() async => await model.selectVariant(-1), throwsAssertionError);
-      expect(() async => await model.selectVariant(model.variantCount),
+      expect(() async => model.selectVariant(-1), throwsAssertionError);
+      expect(() async => model.selectVariant(model.variantCount),
           throwsAssertionError);
     });
 
@@ -279,7 +279,7 @@ void main() {
     // case-insensitive
     final foo = model.searchLayout('fOO');
     expect(model.layoutName(foo), equals('Foo'));
-    model.selectLayout(foo);
+    await model.selectLayout(foo);
     expect(model.searchLayout('foo'), foo);
 
     // wrap around

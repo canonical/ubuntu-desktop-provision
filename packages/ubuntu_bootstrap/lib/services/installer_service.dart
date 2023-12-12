@@ -18,7 +18,7 @@ class InstallerService {
     await _client.setVariant(Variant.DESKTOP);
     final status =
         await monitorStatus().firstWhere((s) => s?.isLoading == false);
-    if (status?.interactive == true) {
+    if (status?.interactive ?? false) {
       // Use the default values for a number of endpoints that aren't used in
       // the bootstrap stage, or for which a UI page isn't implemented yet.
       await _client.markConfigured([

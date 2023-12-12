@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
+import '../../services.dart';
 import 'connect_model.dart';
 
 final networkModelProvider = ChangeNotifierProvider((_) {
@@ -52,18 +52,19 @@ class NetworkModel extends SafeChangeNotifier implements ConnectModel {
   }
 
   ConnectMode _findBestConnectMode() {
-    if (_preferredConnectModel?.isEnabled == true) {
+    if (_preferredConnectModel?.isEnabled ?? false) {
       return _preferredConnectMode!;
     }
     final best = _connectModels.keys.firstWhereOrNull((mode) {
       final model = _connectModels[mode];
-      return model?.isEnabled == true && model?.hasActiveConnection == true;
+      if (model == null) return false;
+      return model.isEnabled && model.hasActiveConnection;
     });
     return best ?? ConnectMode.none;
   }
 
   void _updateConnectMode() {
-    if (_preferredConnectModel?.isEnabled == true) {
+    if (_preferredConnectModel?.isEnabled ?? false) {
       // the preferred (previously selected) mode is available -> re-select
       selectConnectMode(_preferredConnectMode);
     } else if (_connectModel?.isEnabled == false ||

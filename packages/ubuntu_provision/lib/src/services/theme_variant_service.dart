@@ -30,10 +30,6 @@ class ThemeVariant {
     this.windowTitle,
   });
 
-  final ThemeData? theme;
-  final ThemeData? darkTheme;
-  final String? windowTitle;
-
   factory ThemeVariant.fromThemeConfig(ThemeConfig themeConfig) {
     final accentColor = _parseColorString(themeConfig.accentColor);
     if (accentColor == null) {
@@ -62,11 +58,15 @@ class ThemeVariant {
     );
   }
 
+  final ThemeData? theme;
+  final ThemeData? darkTheme;
+  final String? windowTitle;
+
   static Color? _parseColorString(String? colorString) {
     if (colorString == null) {
       return null;
     }
-    final color = int.tryParse(colorString.replaceFirst(r'#', ''), radix: 16);
+    final color = int.tryParse(colorString.replaceFirst('#', ''), radix: 16);
     if (color == null) {
       _log.error('could not parse color \'$colorString\'');
       return null;

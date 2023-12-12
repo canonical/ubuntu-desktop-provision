@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
-import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+import '../../installer.dart';
+import '../../routes.dart';
 import 'not_enough_disk_space/not_enough_disk_space_page.dart';
 import 'source_page.dart';
 

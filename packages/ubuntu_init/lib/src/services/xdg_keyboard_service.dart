@@ -87,9 +87,12 @@ class XdgKeyboardService implements KeyboardService {
         layouts: await _getLayouts(),
       );
       return keyboardSetup;
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Failed to get keyboard setup', e);
-      return KeyboardSetup(setting: KeyboardSetting(layout: ''), layouts: []);
+      return const KeyboardSetup(
+        setting: KeyboardSetting(layout: ''),
+        layouts: [],
+      );
     }
   }
 
@@ -114,7 +117,7 @@ class XdgKeyboardService implements KeyboardService {
               DBusStruct([const DBusString('xkb'), DBusString(xkbString)])
             ]),
       );
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Failed to set input source', e);
     }
   }
@@ -131,7 +134,7 @@ class XdgKeyboardService implements KeyboardService {
         false,
         false,
       );
-    } catch (e) {
+    } on Exception catch (e) {
       _log.error('Failed to set keyboard', e);
     }
   }

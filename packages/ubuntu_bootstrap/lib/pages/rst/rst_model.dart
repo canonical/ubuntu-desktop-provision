@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+
+import '../../services.dart';
+import 'rst_page.dart';
 
 final rstModelProvider =
     Provider<RstModel>((_) => RstModel(getService<SubiquityClient>()));

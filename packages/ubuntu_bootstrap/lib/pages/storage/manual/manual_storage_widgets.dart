@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../../l10n.dart';
+import '../../../widgets.dart';
 import 'manual_storage_dialogs.dart';
 import 'manual_storage_model.dart';
 import 'storage_columns.dart';
@@ -161,7 +161,7 @@ class _PartitionLabel extends StatelessWidget {
 }
 
 class PartitionTable extends ConsumerWidget {
-  const PartitionTable({super.key, required this.controller});
+  const PartitionTable({required this.controller, super.key});
 
   final AutoScrollController controller;
 
@@ -208,9 +208,10 @@ class PartitionButtonRow extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Tooltip(
-                  message: model.selectedGap?.tooManyPrimaryPartitions == true
-                      ? lang.tooManyPrimaryPartitions
-                      : '',
+                  message:
+                      (model.selectedGap?.tooManyPrimaryPartitions ?? false)
+                          ? lang.tooManyPrimaryPartitions
+                          : '',
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: BorderSide.none,
@@ -287,6 +288,6 @@ class PartitionButtonRow extends ConsumerWidget {
       );
       if (!confirmed) return;
     }
-    model.reformatDisk(disk);
+    await model.reformatDisk(disk);
   }
 }

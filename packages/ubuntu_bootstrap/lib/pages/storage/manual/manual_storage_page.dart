@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../../l10n.dart';
 import 'manual_storage_model.dart';
 import 'manual_storage_widgets.dart';
 import 'storage_selector.dart';

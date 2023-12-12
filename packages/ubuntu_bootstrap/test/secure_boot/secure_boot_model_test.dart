@@ -6,8 +6,7 @@ import 'test_secure_boot.dart';
 
 void main() {
   test('init model with secure boot off should have not validated form', () {
-    final model = SecureBootModel(
-        storage: MockStorageService(), secureBootMode: SecureBootMode.turnOff);
+    final model = SecureBootModel(storage: MockStorageService());
 
     expect(model.isFormValid, false);
   });
@@ -24,8 +23,7 @@ void main() {
   });
 
   test('init model with secure boot off should have text field enabled', () {
-    final model = SecureBootModel(
-        storage: MockStorageService(), secureBootMode: SecureBootMode.turnOff);
+    final model = SecureBootModel(storage: MockStorageService());
 
     expect(model.areTextFieldsEnabled, true);
   });

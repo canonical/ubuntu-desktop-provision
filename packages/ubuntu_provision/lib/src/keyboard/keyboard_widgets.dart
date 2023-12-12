@@ -52,7 +52,6 @@ class KeyPresentView extends StatelessWidget {
         DefaultTextStyle(
           style: Theme.of(context).textTheme.headlineSmall!,
           child: Align(
-            alignment: Alignment.center,
             child: Text(_keyPresent),
           ),
         ),
@@ -111,7 +110,6 @@ class _DetectKeyboardViewState extends State<DetectKeyboardView> {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (widget._pressKey != null) PressKeyView(widget._pressKey!),
           if (widget._keyPresent != null) KeyPresentView(widget._keyPresent!),

@@ -45,9 +45,6 @@ void main() {
         const DBusInt32(1),
       ],
       replySignature: DBusSignature.objectPath,
-      noReplyExpected: false,
-      noAutoStart: false,
-      allowInteractiveAuthorization: false,
     )).called(1);
 
     verify(client.callMethod(
@@ -61,9 +58,6 @@ void main() {
         const DBusString(''),
       ],
       replySignature: DBusSignature.empty,
-      noReplyExpected: false,
-      noAutoStart: false,
-      allowInteractiveAuthorization: false,
     )).called(1);
 
     verify(client.callMethod(
@@ -75,9 +69,6 @@ void main() {
         const DBusBoolean(true),
       ],
       replySignature: DBusSignature.empty,
-      noReplyExpected: false,
-      noAutoStart: false,
-      allowInteractiveAuthorization: false,
     )).called(1);
 
     verify(client.callMethod(
@@ -89,9 +80,6 @@ void main() {
         DBusString(testIdentity.hostname),
         const DBusBoolean(false),
       ],
-      noReplyExpected: false,
-      noAutoStart: false,
-      allowInteractiveAuthorization: false,
     )).called(1);
   });
 }
@@ -108,9 +96,6 @@ MockDBusClient createMockDBusClient({
     name: anyNamed('name'),
     values: anyNamed('values'),
     replySignature: DBusSignature.objectPath,
-    noReplyExpected: false,
-    noAutoStart: false,
-    allowInteractiveAuthorization: false,
   )).thenAnswer(
     (i) async {
       if (['FindUserById', 'CreateUser']
@@ -131,10 +116,6 @@ MockDBusClient createMockDBusClient({
     interface: 'org.freedesktop.hostname1',
     name: 'SetStaticHostname',
     values: anyNamed('values'),
-    replySignature: null,
-    noReplyExpected: false,
-    noAutoStart: false,
-    allowInteractiveAuthorization: false,
   )).thenAnswer((_) async => DBusMethodSuccessResponse());
 
   when(dBusClient.callMethod(
@@ -144,15 +125,12 @@ MockDBusClient createMockDBusClient({
     name: 'Get',
     values: anyNamed('values'),
     replySignature: DBusSignature.variant,
-    noReplyExpected: false,
-    noAutoStart: false,
-    allowInteractiveAuthorization: false,
   )).thenAnswer(
     (i) async {
       final values =
-          (i.namedArguments[const Symbol('values')] as List<DBusValue>);
+          i.namedArguments[const Symbol('values')] as List<DBusValue>;
       final destination =
-          (i.namedArguments[const Symbol('destination')] as String);
+          i.namedArguments[const Symbol('destination')] as String;
       DBusValue? response;
       switch (destination) {
         case 'org.freedesktop.Accounts':
@@ -187,9 +165,6 @@ MockDBusClient createMockDBusClient({
     name: anyNamed('name'),
     values: anyNamed('values'),
     replySignature: DBusSignature.empty,
-    noReplyExpected: false,
-    noAutoStart: false,
-    allowInteractiveAuthorization: false,
   )).thenAnswer((i) async => DBusMethodSuccessResponse([]));
 
   return dBusClient;

@@ -50,14 +50,14 @@ void main() {
     expect(model.selectedIndex, isPositive);
 
     // falls back to the base locale (en_US)
-    model.selectLocale(const Locale('foo'));
+    await model.selectLocale(const Locale('foo'));
     expect(model.locale(model.selectedIndex), equals(const Locale('en', 'US')));
 
     final firstLocale = model.locale(0);
     final lastLocale = model.locale(model.languageCount - 1);
     expect(firstLocale, isNot(equals(lastLocale)));
 
-    model.selectLocale(Locale.fromSubtags(
+    await model.selectLocale(Locale.fromSubtags(
         languageCode: lastLocale.languageCode,
         countryCode: lastLocale.countryCode,
         scriptCode: 'bar'));

@@ -2,9 +2,9 @@ import 'package:dartx/dartx.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 
-export 'package:subiquity_client/subiquity_client.dart' show Disk, Partition;
+import '../../../services.dart';
+import 'guided_reformat_page.dart';
 
 /// Provider for [GuidedReformatModel].
 final guidedReformatModelProvider = ChangeNotifierProvider(

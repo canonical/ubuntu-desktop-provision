@@ -2,8 +2,7 @@ import 'dart:io';
 
 /// Vocabulary type that combines an [InternetAddress] and a [port] number
 class Endpoint {
-  final InternetAddress address;
-  final int port;
+  Endpoint(this.address, {required this.port});
 
   /// Creates an Unix domain socket endpoint.
   factory Endpoint.unix(String socketPath) => Endpoint(
@@ -17,7 +16,8 @@ class Endpoint {
         port: port,
       );
 
-  Endpoint(this.address, {required this.port});
+  final InternetAddress address;
+  final int port;
 
   @override
   String toString() =>

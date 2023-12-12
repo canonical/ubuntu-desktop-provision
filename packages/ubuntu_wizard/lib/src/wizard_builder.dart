@@ -5,9 +5,9 @@ typedef WizardPredicate = bool Function(String name);
 
 class WizardBuilder extends StatefulWidget {
   const WizardBuilder({
+    required this.routes,
     super.key,
     this.initialRoute,
-    required this.routes,
     this.predicate,
     this.observers = const [],
     this.userData,

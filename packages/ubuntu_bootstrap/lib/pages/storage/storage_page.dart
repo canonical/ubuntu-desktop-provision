@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../l10n.dart';
 import 'storage_dialogs.dart';
 import 'storage_model.dart';
 
@@ -77,7 +77,7 @@ class StoragePage extends ConsumerWidget {
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,
-                onChanged: (v) => model.type = v!,
+                onChanged: (v) => model.type = v,
               ),
             ),
           if (model.canEraseDisk) ...[
@@ -92,7 +92,7 @@ class StoragePage extends ConsumerWidget {
                 ),
                 value: StorageType.erase,
                 groupValue: model.type,
-                onChanged: (value) => model.type = value!,
+                onChanged: (value) => model.type = value,
               ),
             ),
             if (model.hasAdvancedFeatures)
@@ -120,7 +120,7 @@ class StoragePage extends ConsumerWidget {
               subtitle: Text(lang.installationTypeManualInfo(flavor.name)),
               value: StorageType.manual,
               groupValue: model.type,
-              onChanged: (v) => model.type = v!,
+              onChanged: (v) => model.type = v,
             ),
         ],
       ),

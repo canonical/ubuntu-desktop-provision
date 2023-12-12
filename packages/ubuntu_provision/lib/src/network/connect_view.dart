@@ -9,9 +9,9 @@ import 'wifi_model.dart';
 
 class NoConnectView extends ConsumerWidget {
   const NoConnectView({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -21,9 +21,9 @@ class NoConnectView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = NetworkLocalizations.of(context);
     final ethernet = ref.watch(ethernetModelProvider
-        .select((EthernetModel m) => m.isEnabled && m.devices.isNotEmpty));
-    final wifi = ref.watch(wifiModelProvider
-        .select((WifiModel m) => m.isEnabled && m.devices.isNotEmpty));
+        .select((m) => m.isEnabled && m.devices.isNotEmpty));
+    final wifi = ref.watch(
+        wifiModelProvider.select((m) => m.isEnabled && m.devices.isNotEmpty));
 
     return YaruRadioButton<ConnectMode>(
       title: Text(lang.networkNoneOption),

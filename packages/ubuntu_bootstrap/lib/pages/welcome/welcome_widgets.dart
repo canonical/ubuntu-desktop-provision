@@ -5,12 +5,12 @@ import 'welcome_model.dart';
 
 class OptionButton extends StatelessWidget {
   const OptionButton({
-    super.key,
     required this.title,
-    this.subtitle,
     required this.value,
     required this.groupValue,
     required this.onChanged,
+    super.key,
+    this.subtitle,
   });
 
   final Widget title;

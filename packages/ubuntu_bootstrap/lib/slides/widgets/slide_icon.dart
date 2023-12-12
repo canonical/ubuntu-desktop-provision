@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../layouts/slide_layout_styles.dart';
 
 class SlideIcon extends StatelessWidget {
-  const SlideIcon(this.name);
+  const SlideIcon(this.name, {super.key});
 
   final String name;
 

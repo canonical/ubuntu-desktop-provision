@@ -5,12 +5,12 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 class StorageSelector extends StatelessWidget {
   const StorageSelector({
+    required this.storages,
+    required this.onSelected,
     super.key,
     this.title,
     this.selected,
     this.enabled,
-    required this.storages,
-    required this.onSelected,
   });
 
   final String? title;
@@ -25,7 +25,7 @@ class StorageSelector extends StatelessWidget {
       final fullName = <String?>[
         storage.model,
         storage.vendor,
-      ].where((p) => p?.isNotEmpty == true).join(' ');
+      ].where((p) => p?.isNotEmpty ?? false).join(' ');
       return '${storage.sysname} $fullName (${context.formatByteSize(storage.size)})';
     }
 

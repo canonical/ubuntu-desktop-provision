@@ -3,13 +3,14 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i7;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i8;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i6;
-import 'package:subiquity_client/subiquity_client.dart' as _i4;
+import 'package:mockito/src/dummies.dart' as _i7;
+import 'package:subiquity_client/subiquity_client.dart' as _i5;
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart' as _i3;
+import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart' as _i4;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -44,7 +45,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
   }
 
   @override
-  set type(_i3.StorageType? type) => super.noSuchMethod(
+  set type(_i4.StorageType? type) => super.noSuchMethod(
         Invocation.setter(
           #type,
           type,
@@ -53,7 +54,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       );
 
   @override
-  set guidedCapability(_i4.GuidedCapability? capability) => super.noSuchMethod(
+  set guidedCapability(_i5.GuidedCapability? capability) => super.noSuchMethod(
         Invocation.setter(
           #guidedCapability,
           capability,
@@ -143,21 +144,21 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
-  List<_i4.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
+  List<_i5.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
         Invocation.method(
           #getAllTargets,
           [],
         ),
-        returnValue: <_i4.GuidedStorageTarget>[],
-      ) as List<_i4.GuidedStorageTarget>);
+        returnValue: <_i5.GuidedStorageTarget>[],
+      ) as List<_i5.GuidedStorageTarget>);
 
   @override
-  String getReleaseNotesURL(_i5.Locale? locale) => (super.noSuchMethod(
+  String getReleaseNotesURL(_i6.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
           #getReleaseNotesURL,
           [locale],
         ),
-        returnValue: _i6.dummyValue<String>(
+        returnValue: _i7.dummyValue<String>(
           this,
           Invocation.method(
             #getReleaseNotesURL,
@@ -167,37 +168,37 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as String);
 
   @override
-  _i7.Future<void> init() => (super.noSuchMethod(
+  _i8.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i7.Future<void>.value(),
-        returnValueForMissingStub: _i7.Future<void>.value(),
-      ) as _i7.Future<void>);
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
 
   @override
-  _i7.Future<void> save() => (super.noSuchMethod(
+  _i8.Future<void> save() => (super.noSuchMethod(
         Invocation.method(
           #save,
           [],
         ),
-        returnValue: _i7.Future<void>.value(),
-        returnValueForMissingStub: _i7.Future<void>.value(),
-      ) as _i7.Future<void>);
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
 
   @override
-  _i7.Future<void> resetStorage() => (super.noSuchMethod(
+  _i8.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
           #resetStorage,
           [],
         ),
-        returnValue: _i7.Future<void>.value(),
-        returnValueForMissingStub: _i7.Future<void>.value(),
-      ) as _i7.Future<void>);
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
 
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -206,7 +207,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       );
 
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

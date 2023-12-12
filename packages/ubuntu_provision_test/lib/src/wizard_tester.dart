@@ -1,19 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 extension UbuntuWizardTester on WidgetTester {
   Future<void> tapConfirm() {
-    return tapButton(find.l10n(
-        (UbuntuBootstrapLocalizations l10n) => l10n.confirmInstallButton));
+    return tapButton(find.l10n<UbuntuBootstrapLocalizations>(
+      (l10n) => l10n.confirmInstallButton,
+    ));
   }
 
   Future<void> tapContinueTesting() {
     return tapButton(
-        find.l10n((UbuntuBootstrapLocalizations l10n) => l10n.continueTesting));
+      find.l10n<UbuntuBootstrapLocalizations>((l10n) => l10n.continueTesting),
+    );
   }
 
   Future<void> tapSkip() {
@@ -26,7 +30,8 @@ extension UbuntuWizardTester on WidgetTester {
 
   Future<void> tapRestartNow() {
     return tapButton(
-        find.l10n((UbuntuBootstrapLocalizations l10n) => l10n.restartNow));
+      find.l10n<UbuntuBootstrapLocalizations>((l10n) => l10n.restartNow),
+    );
   }
 
   Future<void> pumpUntilPage(Type page) async {
@@ -36,7 +41,7 @@ extension UbuntuWizardTester on WidgetTester {
 
   Future<void> jumpToPage(String route) async {
     final context = element(find.byType(WizardPage));
-    Wizard.of(context).jump(route);
+    unawaited(Wizard.of(context).jump(route));
     await pumpUntil(find.byElementPredicate((element) {
       return Wizard.maybeOf(element)?.controller.currentRoute == route;
     }));

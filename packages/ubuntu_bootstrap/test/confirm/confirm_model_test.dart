@@ -10,7 +10,6 @@ void main() {
   final testDisks = <Disk>[
     fakeDisk(
       path: '/dev/sda',
-      preserve: false,
       partitions: [const Partition(number: 1, preserve: false)],
     ),
     fakeDisk(
@@ -23,7 +22,6 @@ void main() {
     ),
     fakeDisk(
       path: '/dev/sdc',
-      preserve: false,
       partitions: [
         const Partition(number: 3, preserve: false),
         const Partition(number: 4, grubDevice: false),
@@ -92,7 +90,7 @@ void main() {
   });
 
   test('set guided storage', () async {
-    const target = GuidedStorageTarget.reformat(diskId: 'sda', allowed: []);
+    const target = GuidedStorageTarget.reformat(diskId: 'sda');
 
     final installer = MockInstallerService();
     final storage = MockStorageService();

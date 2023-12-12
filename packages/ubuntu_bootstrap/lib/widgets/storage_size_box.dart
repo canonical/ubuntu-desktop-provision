@@ -7,13 +7,13 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 /// Storage size entry with a spinbox and a data size unit dropdown.
 class StorageSizeBox extends StatelessWidget {
   const StorageSizeBox({
-    super.key,
     required this.size,
     required this.unit,
-    this.minimum = 0,
     required this.maximum,
     required this.onSizeChanged,
     required this.onUnitSelected,
+    super.key,
+    this.minimum = 0,
     this.autofocus = false,
     this.spacing = kWizardBarSpacing,
   });

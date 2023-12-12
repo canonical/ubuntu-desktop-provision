@@ -5,8 +5,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+
+import '../../services.dart';
+import 'install_page.dart';
 
 export 'package:subiquity_client/subiquity_client.dart' show ApplicationState;
 
@@ -29,17 +31,6 @@ enum InstallationAction {
 class InstallationEvent {
   const InstallationEvent(this.action, {this.description});
 
-  final InstallationAction action;
-  final String? description;
-
-  InstallationEvent copyWith(
-      {InstallationAction? action, String? description}) {
-    return InstallationEvent(
-      action ?? this.action,
-      description: description ?? this.description,
-    );
-  }
-
   factory InstallationEvent.fromString(String action, {String? description}) {
     late final InstallationAction installationAction;
     switch (action) {
@@ -53,6 +44,17 @@ class InstallationEvent {
         installationAction = InstallationAction.copyingFiles;
     }
     return InstallationEvent(installationAction, description: description);
+  }
+
+  final InstallationAction action;
+  final String? description;
+
+  InstallationEvent copyWith(
+      {InstallationAction? action, String? description}) {
+    return InstallationEvent(
+      action ?? this.action,
+      description: description ?? this.description,
+    );
   }
 }
 
@@ -88,7 +90,7 @@ class InstallModel extends SafeChangeNotifier {
   /// Whether the installation state is ERROR.
   bool get hasError => state == ApplicationState.ERROR;
 
-  /// Whether the installation process is active [RUNNING,DONE).
+  /// Whether the installation process is active `[RUNNING,DONE]`.
   bool get isInstalling =>
       state != null &&
       state!.index >= ApplicationState.RUNNING.index &&
@@ -120,8 +122,8 @@ class InstallModel extends SafeChangeNotifier {
   //     subiquity/Install/install/curtin_install/run: executing curtin install initial step
   //     subiquity/Install/install/curtin_install/run: executing curtin install partitioning step
   // ```
-  void _processEvent(String syslog) {
-    syslog = syslog.replaceFirst(RegExp(r'  subiquity/[\w/]+: '), '');
+  void _processEvent(String event) {
+    final syslog = event.replaceFirst(RegExp(r' {2}subiquity/[\w/]+: '), '');
     final trimmed = syslog.trimLeft();
     if (trimmed.startsWith('subiquity')) return;
     if (trimmed == syslog) {
@@ -182,10 +184,10 @@ class InstallModel extends SafeChangeNotifier {
 
     if (context.mounted) {
       for (final asset in assets) {
-        precacheImage(AssetImage(asset), context);
+        await precacheImage(AssetImage(asset), context);
       }
     }
   }
 
-  Future<void> reboot() => _session.reboot(immediate: false);
+  Future<void> reboot() => _session.reboot();
 }

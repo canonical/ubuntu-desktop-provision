@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+import '../../installer.dart';
 import 'bitlocker/bitlocker_page.dart';
 import 'guided_reformat/guided_reformat_page.dart';
 import 'guided_resize/guided_resize_page.dart';

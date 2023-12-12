@@ -12,9 +12,9 @@ import 'wifi_model.dart';
 
 class HiddenWifiRadioButton extends ConsumerWidget {
   const HiddenWifiRadioButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -40,8 +40,8 @@ class HiddenWifiRadioButton extends ConsumerWidget {
 
 class HiddenWifiView extends ConsumerStatefulWidget {
   const HiddenWifiView({
-    super.key,
     required this.expanded,
+    super.key,
   });
 
   final bool expanded;

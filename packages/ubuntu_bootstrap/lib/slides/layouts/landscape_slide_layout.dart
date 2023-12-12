@@ -5,11 +5,11 @@ import 'slide_layout_styles.dart';
 /// A layout with a landscape screenshot on the right.
 class LandscapeSlideLayout extends StatelessWidget {
   const LandscapeSlideLayout({
-    super.key,
     required this.title,
     required this.body,
     required this.image,
     required this.table,
+    super.key,
   });
 
   final Widget title;
@@ -25,7 +25,7 @@ class LandscapeSlideLayout extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Spacer(flex: 1),
+            const Spacer(),
             Expanded(
               flex: 8,
               child: DefaultTextStyle(
@@ -33,7 +33,7 @@ class LandscapeSlideLayout extends StatelessWidget {
                 child: title,
               ),
             ),
-            const Spacer(flex: 1),
+            const Spacer(),
             Expanded(
               flex: 14,
               child: Column(
@@ -49,7 +49,7 @@ class LandscapeSlideLayout extends StatelessWidget {
                 ],
               ),
             ),
-            const Spacer(flex: 1),
+            const Spacer(),
           ],
         ),
       ],

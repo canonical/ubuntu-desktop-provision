@@ -30,7 +30,7 @@ abstract class UdevDeviceInfo {
     return <String?>[
       modelName,
       vendorName,
-    ].where((p) => p?.isNotEmpty == true).join(' ');
+    ].where((p) => p?.isNotEmpty ?? false).join(' ');
   }
 
   /// The model of the specified device (e.g. 'sda' -> 'UltraFit').

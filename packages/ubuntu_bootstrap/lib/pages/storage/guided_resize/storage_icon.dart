@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class StorageIcon extends StatelessWidget {
-  const StorageIcon({super.key, required this.name});
+  const StorageIcon({required this.name, super.key});
 
   final String? name;
 

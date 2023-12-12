@@ -6,11 +6,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 // ubuntu-flutter-plugins/ubuntu_widgets
 class TelemetryButton extends StatelessWidget {
   const TelemetryButton({
-    super.key,
     required this.title,
     required this.value,
     required this.groupValue,
     required this.onChanged,
+    super.key,
   });
 
   final Widget title;
@@ -50,7 +50,7 @@ class TelemetryButton extends StatelessWidget {
 }
 
 class TelemetryView extends StatelessWidget {
-  const TelemetryView({super.key, required this.data});
+  const TelemetryView({required this.data, super.key});
 
   final Stream<String> data;
 

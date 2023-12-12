@@ -101,8 +101,8 @@ void main() {
     verify(privacyModel.init()).called(1);
 
     await tester.tapNext();
-    await tester.pumpAndSettle();
     await tester.pumpUntil(find.byType(TimezonePage));
+    await tester.pumpAndSettle();
     expect(find.byType(TimezonePage), findsOneWidget);
     verify(timezoneModel.init()).called(1);
 
@@ -188,7 +188,7 @@ extension on WidgetTester {
       supportedLocales: supportedLocales,
       home: DefaultAssetBundle(
         bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
-        child: InitWizard(),
+        child: const InitWizard(),
       ),
     );
   }

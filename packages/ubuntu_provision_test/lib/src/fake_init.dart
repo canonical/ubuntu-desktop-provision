@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
-import 'package:sysmetrics/src/sysmetrics.dart';
+import 'package:sysmetrics/sysmetrics.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -347,18 +347,26 @@ class _FakeSysmetrics implements Sysmetrics {
   Future<String?> collect() async => null;
 
   @override
-  Future<String?> collectAndSend(ReportType type,
-          {bool alwaysReport = false, String baseUrl = ''}) async =>
+  Future<String?> collectAndSend(
+    ReportType type, {
+    bool alwaysReport = false,
+    String baseUrl = '',
+  }) async =>
       null;
 
   @override
-  Future<String?> sendDecline(
-          {bool alwaysReport = false, String baseUrl = ''}) async =>
+  Future<String?> sendDecline({
+    bool alwaysReport = false,
+    String baseUrl = '',
+  }) async =>
       null;
 
   @override
-  Future<String?> sendReport(String data,
-          {bool alwaysReport = false, String baseUrl = ''}) async =>
+  Future<String?> sendReport(
+    String data, {
+    bool alwaysReport = false,
+    String baseUrl = '',
+  }) async =>
       null;
 }
 

@@ -5,11 +5,11 @@ import 'slide_layout_styles.dart';
 /// A layout reserved for the last slide.
 class OutroSlideLayout extends StatelessWidget {
   const OutroSlideLayout({
-    super.key,
     required this.title,
     required this.body,
     required this.image,
     required this.list,
+    super.key,
   });
 
   final Widget title;
@@ -60,7 +60,7 @@ class OutroSlideLayout extends StatelessWidget {
                   ],
                 ),
               ),
-              const Spacer(flex: 1),
+              const Spacer(),
             ],
           ),
         ],

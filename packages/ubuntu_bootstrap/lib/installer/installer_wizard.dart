@@ -2,13 +2,13 @@ import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/routes.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../pages.dart';
+import '../routes.dart';
+import '../services.dart';
 import 'installer_model.dart';
 
 enum InstallationStep {
@@ -24,10 +24,10 @@ enum InstallationStep {
 class InstallerWizard extends ConsumerStatefulWidget {
   const InstallerWizard({
     super.key,
-    this.welcome,
+    this.welcome = false,
   });
 
-  final bool? welcome;
+  final bool welcome;
 
   @override
   ConsumerState<InstallerWizard> createState() => _InstallerWizardState();
@@ -63,9 +63,9 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
 }
 
 class _InstallWizard extends ConsumerWidget {
-  const _InstallWizard({this.welcome});
+  const _InstallWizard({this.welcome = false});
 
-  final bool? welcome;
+  final bool welcome;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -75,7 +75,7 @@ class _InstallWizard extends ConsumerWidget {
         userData: WizardRouteData(step: InstallationStep.locale.index),
         onLoad: (_) => LocalePage.load(context, ref),
       ),
-      if (welcome == true)
+      if (welcome)
         Routes.welcome: WizardRoute(
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(step: InstallationStep.locale.index),

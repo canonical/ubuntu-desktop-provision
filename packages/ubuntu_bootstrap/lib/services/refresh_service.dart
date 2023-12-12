@@ -54,8 +54,8 @@ class RefreshService {
   Future<RefreshState> check() async {
     try {
       _setState(const RefreshState.checking());
-      _setStatus(await _client.checkRefresh(wait: true));
-    } catch (e) {
+      _setStatus(await _client.checkRefresh());
+    } on Exception catch (e) {
       _setState(RefreshState.error(e));
     }
     return _state;
@@ -69,7 +69,7 @@ class RefreshService {
         if (_state.ready) {
           _setState(const RefreshState.done());
         }
-      } catch (e) {
+      } on Exception catch (_) {
         // subiquity restarted, consider the refresh done
         _setState(const RefreshState.done());
         return false;

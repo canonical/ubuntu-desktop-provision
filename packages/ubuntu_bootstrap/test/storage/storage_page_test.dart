@@ -361,8 +361,7 @@ void main() {
     });
 
     testWidgets('none selected', (tester) async {
-      final model =
-          buildStorageModel(guidedCapability: GuidedCapability.DIRECT);
+      final model = buildStorageModel();
       await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
       final context = tester.element(find.byType(StoragePage));

@@ -214,7 +214,6 @@ void main() {
     verify(service.setIdentity(const Identity(
       username: 'someone',
       password: 'not-empty',
-      autoLogin: false,
     ))).called(1);
   });
 
@@ -390,7 +389,7 @@ void main() {
     );
     expect(model.isValid, isFalse);
 
-    void testValid(
+    Future<void> testValid(
       String realname,
       String username,
       String password,
@@ -405,9 +404,9 @@ void main() {
       expect(model.isValid, matcher);
     }
 
-    testValid('User', kRoot, 'password', 'password', isFalse);
-    testValid('User', kPlugdev, 'password', 'password', isFalse);
-    testValid('User', kTooLong, 'password', 'password', isFalse);
+    await testValid('User', kRoot, 'password', 'password', isFalse);
+    await testValid('User', kPlugdev, 'password', 'password', isFalse);
+    await testValid('User', kTooLong, 'password', 'password', isFalse);
   });
 
   test('respect existing values', () async {
@@ -450,6 +449,7 @@ void main() {
   });
 
   test('site connectivity', () async {
+    // ignore: close_sinks
     final networkChanged = StreamController<List<String>>(sync: true);
 
     final service = MockIdentityService();
