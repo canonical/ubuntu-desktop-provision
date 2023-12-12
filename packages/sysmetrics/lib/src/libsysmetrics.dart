@@ -2,7 +2,7 @@ import 'dart:ffi' as ffi;
 
 import 'package:meta/meta.dart';
 
-import 'libsysmetrics.g.dart';
+import 'package:sysmetrics/src/libsysmetrics.g.dart';
 
 LibSysmetrics? _lib;
 LibSysmetrics get lib =>

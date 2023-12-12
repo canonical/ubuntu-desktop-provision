@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import '../../ubuntu_init.dart';
+import 'package:ubuntu_init/ubuntu_init.dart';
 
 abstract class WelcomeLocalizations extends UbuntuInitLocalizations {
   WelcomeLocalizations(super.locale);

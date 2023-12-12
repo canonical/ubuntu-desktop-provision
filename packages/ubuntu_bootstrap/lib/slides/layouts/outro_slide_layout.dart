@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'slide_layout_styles.dart';
+import 'package:ubuntu_bootstrap/slides/layouts/slide_layout_styles.dart';
 
 /// A layout reserved for the last slide.
 class OutroSlideLayout extends StatelessWidget {

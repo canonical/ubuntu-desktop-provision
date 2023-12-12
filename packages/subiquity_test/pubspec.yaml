@@ -13,4 +13,4 @@ dependencies:
 
 dev_dependencies:
   test: any
-  ubuntu_lints: ^0.2.0
+  ubuntu_lints: ^0.3.0

@@ -1,8 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_provision_test/src/wizard_tester.dart';
 import 'package:yaru_test/yaru_test.dart';
-
-import 'wizard_tester.dart';
 
 extension UbuntuInitPageTester on WidgetTester {
   Future<void> testWelcomeInitPage({

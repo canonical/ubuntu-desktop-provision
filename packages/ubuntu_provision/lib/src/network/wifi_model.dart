@@ -6,12 +6,11 @@ import 'package:dbus/dbus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/network_device.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-
-import '../../services.dart';
-import 'connect_model.dart';
-import 'network_device.dart';
 
 @visibleForTesting
 const kWifiScanInterval = Duration(seconds: 15);

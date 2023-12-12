@@ -1,9 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:yaml/yaml.dart';
-
-import '../../services.dart';
 
 part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';

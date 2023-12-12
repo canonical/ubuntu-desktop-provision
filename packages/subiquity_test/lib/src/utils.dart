@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../subiquity_test.dart';
+import 'package:subiquity_test/subiquity_test.dart';
 
 /// Cleans up the .subiquity directory to ensure a clean test environment.
 Future<void> cleanUpSubiquity() async {

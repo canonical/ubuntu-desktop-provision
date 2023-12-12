@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../services.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 final loadingModelProvider = Provider.autoDispose(
   (_) => LoadingModel(getService<InstallerService>()),

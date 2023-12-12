@@ -67,7 +67,7 @@ command:
       mockito: 5.4.3
       plugin_platform_interface: ^2.1.7
       test: any
-      ubuntu_lints: ^0.2.0
+      ubuntu_lints: ^0.3.0
       ubuntu_test: ^0.1.0-0
       url_launcher_platform_interface: ^2.2.0
       yaru_test: ^0.1.5

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import 'storage_icon.dart';
 
 class StorageButton extends StatelessWidget {
   const StorageButton({
