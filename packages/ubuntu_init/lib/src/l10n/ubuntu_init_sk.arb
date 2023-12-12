@@ -43,10 +43,6 @@
   "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Služby umiestnenia",
   "@privacyLocationEnable": {},
-  "storeOpen": "Otvoriť centrum aplikácií",
-  "@storeOpen": {},
-  "storeDescription": "Centrum aplikácií Ubuntu ponúka celú škálu softvéru, s ktorým môžete začať ihneď od začiatku.",
-  "@storeDescription": {},
   "welcomePageTitle": "Vitajte",
   "@welcomePageTitle": {},
   "welcomePageHeader": "Vitajte v {distro}",
@@ -68,9 +64,5 @@
     }
   },
   "privacyPolicyLink": "Súkromie údajov",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Centrum Ubuntu",
-  "@storeTitle": {},
-  "storeHeader": "Začnite s viacerými aplikáciami",
-  "@storeHeader": {}
+  "@privacyPolicyLink": {}
 }

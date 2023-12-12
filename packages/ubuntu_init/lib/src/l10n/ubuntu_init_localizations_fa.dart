@@ -84,14 +84,5 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'محرمانگی داده‌ها';
 
   @override
-  String get storeTitle => 'فروشگاه اوبونتو';
-
-  @override
-  String get storeHeader => 'آغاز به کار با برنامه‌های بیش‌تر';
-
-  @override
-  String get storeDescription => 'فروشگاه کارهٔ اوبونتو دامنه‌ای وسیع از کاره‌هایی که می‌توانید به راحتی بگیریدشان را فراهم می‌کند.';
-
-  @override
-  String get storeOpen => 'گشودن فروشگاه کاره';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

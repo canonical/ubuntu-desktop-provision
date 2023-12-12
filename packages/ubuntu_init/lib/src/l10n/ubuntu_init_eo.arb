@@ -12,12 +12,8 @@
       "url": {}
     }
   },
-  "storeTitle": "Ubuntu-Programvendejo",
-  "@storeTitle": {},
   "privacyPolicyLink": "Datena privateco",
   "@privacyPolicyLink": {},
-  "storeOpen": "Malfermi Programvendejon",
-  "@storeOpen": {},
   "welcomeStoreTitle": "Novaspekta Programvendejo",
   "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "Plifortikigita sekureco",
@@ -67,10 +63,6 @@
   },
   "telemetryLabelOff": "Ne, sendu neniom da sistemaj datenoj",
   "@telemetryLabelOff": {},
-  "storeHeader": "Ekĝuu pli da programoj",
-  "@storeHeader": {},
   "privacyLocationSubtitle": "Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.",
-  "@privacyLocationSubtitle": {},
-  "storeDescription": "La Programvendejo de Ubuntu ofertas multon da programoj, kiujn vi povas ekĝui.",
-  "@storeDescription": {}
+  "@privacyLocationSubtitle": {}
 }

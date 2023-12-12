@@ -84,14 +84,5 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Конфіденційність даних';
 
   @override
-  String get storeTitle => 'Центр додатків Ubuntu';
-
-  @override
-  String get storeHeader => 'Почніть роботу з додатковими програмами';
-
-  @override
-  String get storeDescription => 'Магазин додатків Ubuntu пропонує ряд програм, з якими можна почати роботу з самого початку.';
-
-  @override
-  String get storeOpen => 'Відкрити центр додатків';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

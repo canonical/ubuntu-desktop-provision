@@ -64,13 +64,5 @@
   "privacyLocationEnable": "Usługi lokalizacyjne",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Prywatność danych",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Sklep Ubuntu",
-  "@storeTitle": {},
-  "storeHeader": "Rozpocznij z większą liczbą aplikacji",
-  "@storeHeader": {},
-  "storeDescription": "Sklep Ubuntu oferuje szereg aplikacji, z którymi możesz zacząć od razu.",
-  "@storeDescription": {},
-  "storeOpen": "Otwórz sklep z aplikacjami",
-  "@storeOpen": {}
+  "@privacyPolicyLink": {}
 }

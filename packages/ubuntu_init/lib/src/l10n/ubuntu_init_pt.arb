@@ -6,8 +6,6 @@
       "distro": {}
     }
   },
-  "storeHeader": "Comece com mais aplicações",
-  "@storeHeader": {},
   "telemetryReportTitle": "Detalhes do relatório",
   "@telemetryReportTitle": {},
   "welcomePageTitle": "Bem-vindo",
@@ -29,8 +27,6 @@
   "@welcomeSecuritySubtitle": {},
   "privacyPageTitle": "Serviço de localização",
   "@privacyPageTitle": {},
-  "storeTitle": "Ubuntu Store",
-  "@storeTitle": {},
   "welcomePageHeader": "Bem-vindo ao {distro}",
   "@welcomePageHeader": {},
   "privacyLocationEnable": "Serviço de localização",
@@ -48,8 +44,6 @@
   "@welcomeSecurityTitle": {},
   "telemetryReportLabel": "Detalhes do relatório",
   "@telemetryReportLabel": {},
-  "storeDescription": "A App Store do Ubuntu oferece uma variedade de aplicações com os quais você pode começar desde o início.",
-  "@storeDescription": {},
   "telemetryLabelOn": "Sim, partilhe os dados do sistema com a equipa do {distro}",
   "@telemetryLabelOn": {
     "type": "text",
@@ -61,8 +55,6 @@
   "@privacyLocationTitle": {},
   "welcomeStartTitle": "Um início simplificado",
   "@welcomeStartTitle": {},
-  "storeOpen": "Abrir App Store",
-  "@storeOpen": {},
   "telemetryPageTitle": "Telemetria",
   "@telemetryPageTitle": {},
   "privacyLocationSubtitle": "Deixe as aplicações saberem a sua localização geográfica.\nVocê pode alterar isso a qualquer momento nas configurações do sistema.",

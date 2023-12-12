@@ -84,16 +84,7 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Privacidade da Informação';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
-
-  @override
-  String get storeHeader => 'Comece com mais aplicações';
-
-  @override
-  String get storeDescription => 'A App Store do Ubuntu oferece uma variedade de aplicações com os quais você pode começar desde o início.';
-
-  @override
-  String get storeOpen => 'Abrir App Store';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -178,16 +169,4 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
 
   @override
   String get privacyPolicyLink => 'Privacidade de Dados';
-
-  @override
-  String get storeTitle => 'Ubuntu Store';
-
-  @override
-  String get storeHeader => 'Comece com mais aplicativos';
-
-  @override
-  String get storeDescription => 'A App Store do Ubuntu oferece uma variedade de aplicativos com os quais você pode começar desde o início.';
-
-  @override
-  String get storeOpen => 'Abrir App Store';
 }

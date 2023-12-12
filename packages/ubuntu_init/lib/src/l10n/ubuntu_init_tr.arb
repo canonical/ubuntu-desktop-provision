@@ -5,8 +5,6 @@
   "@welcomeWhatsNew": {},
   "welcomePageTitle": "Hoş Geldiniz",
   "@welcomePageTitle": {},
-  "storeOpen": "Uygulama Mağazasını Aç",
-  "@storeOpen": {},
   "welcomeStoreTitle": "Yeni görünüm Uygulama Mağazası",
   "@welcomeStoreTitle": {},
   "welcomeStoreSubtitle": "Gözde yazılımınızı bulmak hiç bu kadar kolay olmamıştı.",
@@ -66,11 +64,5 @@
   "privacyLocationEnable": "Konum hizmetleri",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Veri Gizliliği",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Ubuntu Mağaza",
-  "@storeTitle": {},
-  "storeHeader": "Daha fazla uygulamayı kullanmaya başlayın",
-  "@storeHeader": {},
-  "storeDescription": "Ubuntu'nun Uygulama Mağazası, başlangıçtan itibaren kullanabileceğiniz bir dizi uygulama sunar.",
-  "@storeDescription": {}
+  "@privacyPolicyLink": {}
 }

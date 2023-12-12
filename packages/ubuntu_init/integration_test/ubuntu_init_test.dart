@@ -52,6 +52,10 @@ void main() {
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
+    await tester.testUbuntuProPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testPrivacyPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -66,13 +70,9 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testThemePage(theme: Brightness.dark);
-    await tester.tapNext();
-    await expectTheme(Brightness.dark);
-
-    await tester.testStorePage();
     await tester.tapDone();
+    await expectTheme(Brightness.dark);
     await tester.pumpAndSettle();
-
     await expectLater(windowClosed, completes);
   });
 }
