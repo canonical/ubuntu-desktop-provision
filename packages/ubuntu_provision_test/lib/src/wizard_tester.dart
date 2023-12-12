@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -39,7 +41,7 @@ extension UbuntuWizardTester on WidgetTester {
 
   Future<void> jumpToPage(String route) async {
     final context = element(find.byType(WizardPage));
-    await Wizard.of(context).jump(route);
+    unawaited(Wizard.of(context).jump(route));
     await pumpUntil(find.byElementPredicate((element) {
       return Wizard.maybeOf(element)?.controller.currentRoute == route;
     }));
