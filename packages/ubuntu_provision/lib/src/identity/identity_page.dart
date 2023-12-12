@@ -12,7 +12,7 @@ import 'identity_widgets.dart';
 
 /// The installer page for setting up the user data.
 ///
-/// It uses [WizardPage] and [WizardAction] to create an installer page.
+/// It uses [WizardPage] and `WizardAction` to create an installer page.
 class IdentityPage extends ConsumerWidget {
   /// Creates a the installer page for setting up the user data.
   const IdentityPage({super.key});

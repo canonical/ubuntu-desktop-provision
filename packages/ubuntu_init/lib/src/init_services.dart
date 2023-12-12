@@ -31,14 +31,14 @@ Future<void> registerInitServices(List<String> args) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {
       parser.addOption('config', valueHelp: 'path', help: 'Config file path');
       parser.addOption('pages', hide: true);
-    })!;
-    registerServiceInstance<ArgResults>(options);
+    });
+    registerServiceInstance<ArgResults>(options!);
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
   tryRegisterService<ConfigService>(
       () => ConfigService(path: options!['config'] as String?));
-  tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
+  tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<IdentityService>(XdgIdentityService.new);
   tryRegisterService<KeyboardService>(XdgKeyboardService.new);
   tryRegisterService<LocaleService>(XdgLocaleService.new);

@@ -5,10 +5,10 @@ import 'slide_layout_styles.dart';
 /// A layout reserved for the first slide.
 class IntroSlideLayout extends StatelessWidget {
   const IntroSlideLayout({
-    super.key,
     required this.title,
     required this.body,
     required this.image,
+    super.key,
   });
 
   final Widget title;
@@ -43,7 +43,7 @@ class IntroSlideLayout extends StatelessWidget {
                   ],
                 ),
               ),
-              const Spacer(flex: 1),
+              const Spacer(),
               Expanded(
                 flex: 8,
                 child: image,

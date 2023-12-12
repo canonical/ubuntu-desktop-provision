@@ -15,7 +15,7 @@ Future<void> showTelemetryDialog(
 }
 
 class TelemetryDialog extends StatelessWidget {
-  const TelemetryDialog({super.key, required this.data});
+  const TelemetryDialog({required this.data, super.key});
 
   final Stream<String> data;
 

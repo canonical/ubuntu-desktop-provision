@@ -5,11 +5,11 @@ import 'slide_layout_styles.dart';
 /// A "cinematic" layout with a wide banner at the top.
 class CinematicSlideLayout extends StatelessWidget {
   const CinematicSlideLayout({
-    super.key,
     required this.banner,
     required this.title,
     required this.body,
     required this.table,
+    super.key,
   });
 
   final Widget banner;
@@ -27,7 +27,7 @@ class CinematicSlideLayout extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Spacer(flex: 1),
+            const Spacer(),
             Expanded(
               flex: 8,
               child: DefaultTextStyle(
@@ -35,7 +35,7 @@ class CinematicSlideLayout extends StatelessWidget {
                 child: title,
               ),
             ),
-            const Spacer(flex: 1),
+            const Spacer(),
             Expanded(
               flex: 14,
               child: Column(
@@ -50,7 +50,7 @@ class CinematicSlideLayout extends StatelessWidget {
                 ],
               ),
             ),
-            const Spacer(flex: 1),
+            const Spacer(),
           ],
         ),
       ],

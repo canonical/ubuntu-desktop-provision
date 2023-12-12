@@ -4,10 +4,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
-import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+
+import '../../ubuntu_provision.dart';
 
 final _log = Logger('identity');
 
@@ -183,7 +184,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
     );
     _log.info('Saved identity: $identity');
 
-    _telemetry?.addMetric('UseActiveDirectory', useActiveDirectory);
+    await _telemetry?.addMetric('UseActiveDirectory', useActiveDirectory);
 
     await Future.wait([
       _service.setIdentity(identity),

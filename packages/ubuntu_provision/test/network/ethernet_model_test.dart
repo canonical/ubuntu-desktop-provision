@@ -130,12 +130,12 @@ void main() {
     when(device.state).thenReturn(NetworkManagerDeviceState.disconnected);
 
     when(device.availableConnections).thenReturn([]);
-    model.enable();
+    await model.enable();
     verify(service.addAndActivateConnection(device: device)).called(1);
 
     when(device.availableConnections)
         .thenReturn([MockNetworkManagerSettingsConnection()]);
-    model.enable();
+    await model.enable();
     verify(service.activateConnection(device: device)).called(1);
   });
 

@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:dartx/dartx.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+
+import '../ubuntu_init.dart';
 
 final initModelProvider = Provider(
   (_) => InitModel(

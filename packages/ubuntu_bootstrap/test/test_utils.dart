@@ -11,12 +11,12 @@ export 'test_utils.mocks.dart';
 
 extension WidgetTesterX on WidgetTester {
   Future<void> pumpApp(WidgetBuilder builder) async {
-    return pumpWidget(await buildApp(builder));
+    return pumpWidget(buildApp(builder));
   }
 
   Future<void> pumpContainer(String name, WidgetBuilder builder) async {
     return pumpWidget(
-      Container(key: ValueKey(name), child: await buildApp(builder)),
+      Container(key: ValueKey(name), child: buildApp(builder)),
     );
   }
 

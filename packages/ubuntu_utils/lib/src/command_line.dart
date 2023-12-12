@@ -29,11 +29,11 @@ ArgResults? parseCommandLine(
 
 void _printUsage(
   String options, {
+  required void Function(int exitCode) exit,
   String? error,
   io.IOSink? out,
-  required void Function(int exitCode) exit,
 }) {
-  final hasError = error?.isNotEmpty == true;
+  final hasError = error?.isNotEmpty ?? false;
   out ??= hasError ? io.stderr : io.stdout;
   if (hasError) {
     out.write('Error: $error\n\n');

@@ -97,7 +97,7 @@ Widget buildNetworkPage({
       return FutureBuilder(
         future: NetworkPage.load(ref),
         builder: (context, snapshot) {
-          return snapshot.data == true
+          return (snapshot.data ?? false)
               ? const NetworkPage()
               : const SizedBox.shrink();
         },

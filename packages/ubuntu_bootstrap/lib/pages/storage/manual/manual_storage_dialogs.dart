@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../../l10n.dart';
+import '../../../widgets.dart';
 import 'manual_storage_model.dart';
 import 'storage_types.dart';
 
@@ -142,7 +142,7 @@ Future<void> showEditPartitionDialog(
       final partitionSize = ValueNotifier(partition.size ?? 0);
       final partitionUnit = ValueNotifier(DataUnit.megabytes);
       final partitionFormat = ValueNotifier<PartitionFormat?>(
-          partition.preserve == true && !partition.isWiped
+          (partition.preserve ?? false) && !partition.isWiped
               ? null
               : PartitionFormat.fromPartition(partition));
       final partitionMount = ValueNotifier(partition.mount);
@@ -192,7 +192,7 @@ Future<void> showEditPartitionDialog(
                         : null;
                     return MenuButtonBuilder<PartitionFormat?>(
                       entries: [
-                        if (partition.preserve == true) ...[
+                        if (partition.preserve ?? false) ...[
                           const MenuButtonEntry(value: null),
                           const MenuButtonEntry(value: null, isDivider: true),
                         ],
@@ -200,7 +200,7 @@ Future<void> showEditPartitionDialog(
                             .map((f) => MenuButtonEntry(value: f)),
                         const MenuButtonEntry(value: null, isDivider: true),
                         const MenuButtonEntry(value: PartitionFormat.swap),
-                        if (partition.preserve != true) ...[
+                        if ((partition.preserve ?? false) != true) ...[
                           const MenuButtonEntry(value: null, isDivider: true),
                           const MenuButtonEntry(value: PartitionFormat.none),
                         ],
@@ -272,9 +272,9 @@ Future<void> showEditPartitionDialog(
 
 class _PartitionMountField extends StatelessWidget {
   const _PartitionMountField({
-    this.initialMount,
     required this.partitionFormat,
     required this.partitionMount,
+    this.initialMount,
   });
 
   final String? initialMount;

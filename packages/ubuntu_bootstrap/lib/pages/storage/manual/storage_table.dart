@@ -12,9 +12,9 @@ typedef OnStorageSelected = void Function(int disk, [int object]);
 
 class StorageTable extends StatelessWidget {
   const StorageTable({
-    super.key,
     required this.storages,
     required this.columns,
+    super.key,
     this.controller,
     this.canSelect,
     this.isSelected,
@@ -59,9 +59,9 @@ class StorageTable extends StatelessWidget {
       DataRow.byIndex(
         index: diskIndex,
         selected: isSelected?.call(diskIndex) ?? false,
-        onSelectChanged: canSelect?.call(diskIndex) == true
+        onSelectChanged: canSelect?.call(diskIndex) ?? false
             ? (selected) {
-                if (selected == true) {
+                if (selected ?? false) {
                   onSelected?.call(diskIndex);
                 }
               }
@@ -86,9 +86,9 @@ class StorageTable extends StatelessWidget {
         DataRow(
           key: ValueKey(Object.hashAll([diskIndex, objectIndex])),
           selected: isSelected?.call(diskIndex, objectIndex) ?? false,
-          onSelectChanged: canSelect?.call(diskIndex, objectIndex) == true
+          onSelectChanged: (canSelect?.call(diskIndex, objectIndex) ?? false)
               ? (selected) {
-                  if (selected == true) {
+                  if (selected ?? false) {
                     onSelected?.call(diskIndex, objectIndex);
                   }
                 }

@@ -33,7 +33,7 @@ class InitRoutes {
 }
 
 class InitWizard extends ConsumerWidget {
-  InitWizard({
+  const InitWizard({
     super.key,
     FutureOr<void> Function()? onDone,
   }) : _onDone = onDone;

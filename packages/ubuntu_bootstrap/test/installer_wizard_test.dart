@@ -101,7 +101,7 @@ void main() {
     final sourceModel = buildSourceModel();
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel();
-    final storageModel = buildStorageModel(type: StorageType.erase);
+    final storageModel = buildStorageModel();
     final bitLockerModel = buildBitLockerModel();
     final guidedReformatModel = buildGuidedReformatModel();
     final securityKeyModel = buildSecurityKeyModel(useSecurityKey: false);
@@ -348,7 +348,7 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({bool? welcome, List<String>? pages}) {
+  Widget buildTestWizard({bool welcome = false, List<String>? pages}) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return pages?.contains(i.positionalArguments.single) ?? true;

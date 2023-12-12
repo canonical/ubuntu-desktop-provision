@@ -143,10 +143,10 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
       );
 
   @override
-  void resizeStorage(int? size) => super.noSuchMethod(
+  void resizeStorage(int? newSize) => super.noSuchMethod(
         Invocation.method(
           #resizeStorage,
-          [size],
+          [newSize],
         ),
         returnValueForMissingStub: null,
       );

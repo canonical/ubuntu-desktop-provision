@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
+import '../../services.dart';
 import 'connect_model.dart';
 import 'network_device.dart';
 import 'wifi_model.dart';
@@ -18,14 +18,14 @@ class HiddenWifiModel extends NetworkDeviceModel<WifiDevice> {
 
   @override
   bool get isConnected =>
-      selectedDevice?.isActive == true &&
+      (selectedDevice?.isActive ?? false) &&
       selectedDevice?.activeAccessPoint?.name == ssid;
 
   @override
   bool get hasActiveConnection => false;
 
   @override
-  bool get isConnecting => selectedDevice?.isConnecting == true;
+  bool get isConnecting => selectedDevice?.isConnecting ?? false;
 
   @override
   bool get isEnabled => service.wirelessEnabled;

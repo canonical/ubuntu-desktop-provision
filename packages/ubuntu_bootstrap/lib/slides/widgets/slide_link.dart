@@ -1,9 +1,9 @@
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 class SlideLink extends StatelessWidget {
-  const SlideLink({required this.text, required this.url});
+  const SlideLink({required this.text, required this.url, super.key});
 
   final String text;
   final String url;

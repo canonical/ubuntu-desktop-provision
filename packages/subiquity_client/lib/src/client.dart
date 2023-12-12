@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_types_on_closure_parameters
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -20,6 +22,8 @@ String _formatResponseLog(String method, String response) {
   return '==> $method $formatted';
 }
 
+// TODO(Lukas): Rename enums to dart style.
+// ignore: constant_identifier_names
 enum Variant { SERVER, DESKTOP, WSL_SETUP, WSL_CONFIGURATION }
 
 extension VariantString on Variant {
@@ -262,7 +266,10 @@ class SubiquityClient {
   Future<bool> hasBitLocker() async {
     final request = await _openUrl('GET', 'storage/has_bitlocker');
     return _receive(
-        'hasBitLocker()', request, (List<Object?> disks) => disks.isNotEmpty);
+      'hasBitLocker()',
+      request,
+      (List<Object?> disks) => disks.isNotEmpty,
+    );
   }
 
   Future<GuidedStorageResponseV2> getGuidedStorageV2({bool wait = true}) async {
@@ -487,7 +494,7 @@ class SubiquityClient {
 
   Future<AdConnectionInfo> getActiveDirectory() async {
     final request = await _openUrl('GET', 'active_directory');
-    return await _receive(
+    return _receive(
       'getActiveDirectory()',
       request,
       (json) {
@@ -524,12 +531,13 @@ class SubiquityClient {
         await _openUrl('POST', 'active_directory/check_domain_name');
     request.write(jsonEncode(domain));
     return _receive(
-        'checkActiveDirectoryDomainName($domain)',
-        request,
-        (List<Object?> values) => values
-            .cast<String>()
-            .map(AdDomainNameValidation.values.byName)
-            .toList());
+      'checkActiveDirectoryDomainName($domain)',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(AdDomainNameValidation.values.byName)
+          .toList(),
+    );
   }
 
   Future<AdDomainNameValidation> pingActiveDirectoryDomainController(

@@ -5,11 +5,11 @@ import 'slide_layout_styles.dart';
 /// A layout with a portrait screenshot on the left.
 class PortraitSlideLayout extends StatelessWidget {
   const PortraitSlideLayout({
-    super.key,
     required this.title,
     required this.body,
     required this.image,
     required this.table,
+    super.key,
   });
 
   final Widget title;
@@ -26,7 +26,7 @@ class PortraitSlideLayout extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             image,
-            const Spacer(flex: 1),
+            const Spacer(),
             Expanded(
               flex: 14,
               child: Column(
@@ -48,7 +48,7 @@ class PortraitSlideLayout extends StatelessWidget {
                 ],
               ),
             ),
-            const Spacer(flex: 1),
+            const Spacer(),
           ],
         ),
       ],

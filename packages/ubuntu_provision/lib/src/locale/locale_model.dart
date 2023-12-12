@@ -4,10 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
-import 'package:ubuntu_provision/l10n.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart' show KeySearchX;
+
+import '../../l10n.dart';
+import '../../services.dart';
 
 final _log = Logger('locale');
 
@@ -20,7 +21,7 @@ final localeModelProvider = ChangeNotifierProvider((ref) {
 
 /// Implements the business logic of the locale page.
 class LocaleModel extends SafeChangeNotifier {
-  /// Creates a model with the specified [client].
+  /// Creates a model with the specified [locale] and [sound].
   LocaleModel({
     required LocaleService locale,
     required SoundService? sound,

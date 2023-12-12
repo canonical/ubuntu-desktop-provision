@@ -10,9 +10,9 @@ import 'network_tile.dart';
 
 class EthernetRadioButton extends ConsumerWidget {
   const EthernetRadioButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -43,9 +43,9 @@ class EthernetRadioButton extends ConsumerWidget {
 
 class EthernetView extends ConsumerWidget {
   const EthernetView({
-    super.key,
     required this.expanded,
     required this.onEnabled,
+    super.key,
   });
 
   final bool expanded;

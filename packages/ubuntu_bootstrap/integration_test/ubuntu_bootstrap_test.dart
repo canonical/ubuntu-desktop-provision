@@ -23,7 +23,7 @@ void main() {
     await cleanUpSubiquity();
     registerMockService<DesktopService>(FakeDesktopService());
   });
-  tearDown(() async => await resetAllServices());
+  tearDown(() async => resetAllServices());
 
   testWidgets('minimal installation', (tester) async {
     const language = 'Français';
@@ -51,7 +51,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage(sourceId: null);
+    await tester.testSourcePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -260,7 +260,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage(sourceId: null);
+    await tester.testSourcePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -310,7 +310,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage(sourceId: null);
+    await tester.testSourcePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -366,7 +366,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage(sourceId: null);
+    await tester.testSourcePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

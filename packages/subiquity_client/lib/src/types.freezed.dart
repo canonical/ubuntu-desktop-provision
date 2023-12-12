@@ -7769,7 +7769,10 @@ mixin _$GuidedChoiceV2 {
   GuidedStorageTarget get target => throw _privateConstructorUsedError;
   GuidedCapability get capability => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
-  RecoveryKey? get recoveryKey => throw _privateConstructorUsedError;
+  RecoveryKey? get recoveryKey =>
+      throw _privateConstructorUsedError; // TODO(Lukas): Change `generator.py` to accommodate for putting the
+// SizingPolicy parameter together with the other required parameters.
+// ignore: always_put_required_named_parameters_first
   SizingPolicy? get sizingPolicy => throw _privateConstructorUsedError;
   bool get resetPartition => throw _privateConstructorUsedError;
 
@@ -7957,6 +7960,9 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   final String? password;
   @override
   final RecoveryKey? recoveryKey;
+// TODO(Lukas): Change `generator.py` to accommodate for putting the
+// SizingPolicy parameter together with the other required parameters.
+// ignore: always_put_required_named_parameters_first
   @override
   final SizingPolicy? sizingPolicy;
   @override
@@ -8026,7 +8032,9 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
   String? get password;
   @override
   RecoveryKey? get recoveryKey;
-  @override
+  @override // TODO(Lukas): Change `generator.py` to accommodate for putting the
+// SizingPolicy parameter together with the other required parameters.
+// ignore: always_put_required_named_parameters_first
   SizingPolicy? get sizingPolicy;
   @override
   bool get resetPartition;

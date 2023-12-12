@@ -23,7 +23,6 @@ class StorePage extends ConsumerWidget {
         title: Text(l10n.storeTitle),
       ),
       content: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             child: SvgPicture.asset('assets/store.svg', package: 'ubuntu_init'),

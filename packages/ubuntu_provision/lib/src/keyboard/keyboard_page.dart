@@ -42,7 +42,7 @@ class KeyboardPage extends ConsumerWidget {
                     onPressed: () async {
                       final result = await showDetectKeyboardDialog(context);
                       if (result != null) {
-                        model.trySelectLayoutVariant(
+                        await model.trySelectLayoutVariant(
                             result.layout, result.variant);
                       }
                     },

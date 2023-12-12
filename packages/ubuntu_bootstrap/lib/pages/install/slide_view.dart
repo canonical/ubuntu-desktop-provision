@@ -14,9 +14,9 @@ const kDefaultSlideInterval = Duration(seconds: 25);
 class SlideView extends StatefulWidget {
   /// Creates a slide show with the given slides and interval.
   SlideView({
-    super.key,
     required this.controller,
     required this.slides,
+    super.key,
     this.interval = kDefaultSlideInterval,
     this.wrap = false,
     this.autofocus = false,

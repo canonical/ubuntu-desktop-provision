@@ -35,9 +35,9 @@ class PageConfigEntryConverter
   const PageConfigEntryConverter();
 
   @override
-  Map<String, PageConfigEntry> fromJson(Map<String, dynamic> objects) {
+  Map<String, PageConfigEntry> fromJson(Map<String, dynamic> json) {
     final pages = <String, PageConfigEntry>{};
-    for (final entry in objects.entries) {
+    for (final entry in json.entries) {
       if (entry.value is bool) {
         pages[entry.key] = PageConfigEntry(visible: entry.value as bool);
       } else if (entry.value is Map<String, dynamic>) {
@@ -56,13 +56,14 @@ class PageConfigEntryConverter
   }
 
   @override
+  // ignore: avoid_renaming_method_parameters
   Map<String, dynamic> toJson(Map<String, PageConfigEntry> pages) {
     final objects = <String, dynamic>{};
     for (final entry in pages.entries) {
       if (entry.value.image != null || entry.value.title != null) {
         objects[entry.key] = entry.value.toJson();
       } else {
-        objects[entry.key] = (entry.value.visible);
+        objects[entry.key] = entry.value.visible;
       }
     }
     return objects;

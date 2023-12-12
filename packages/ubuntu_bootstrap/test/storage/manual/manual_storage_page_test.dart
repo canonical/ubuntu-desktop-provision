@@ -19,7 +19,6 @@ import 'test_manual_storage.dart';
 final testDisks = <Disk>[
   fakeDisk(
     path: '/dev/sda',
-    canBeBootDevice: false,
     size: 12,
     partitions: [
       const Partition(

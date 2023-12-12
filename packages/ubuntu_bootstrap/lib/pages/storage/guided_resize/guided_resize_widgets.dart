@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+import '../../../l10n.dart';
 import 'guided_resize_model.dart';
 
 class StorageSelector extends ConsumerWidget {
   const StorageSelector({
-    super.key,
     required this.count,
+    super.key,
     this.selectedIndex,
     this.onSelected,
   });
@@ -64,9 +64,9 @@ class StorageSelector extends ConsumerWidget {
 
 class HiddenPartitionLabel extends StatelessWidget {
   const HiddenPartitionLabel({
-    super.key,
     required this.partitions,
     required this.onTap,
+    super.key,
   });
 
   final List<Partition> partitions;
