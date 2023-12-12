@@ -29,7 +29,8 @@ message GetUserResponse {
 }
 
 message CreateUserRequest {
-  User identity = 1;
+  User user = 1;
+  bool is_admin = 2;
 }
 
 message ValidateUsernameRequest {
