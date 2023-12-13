@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: provd
-Upstream-Contact: Matt <matt.hagemann@canonical.com>
+Upstream-Contact: https://github.com/canonical/ubuntu-desktop-provision/issues
 Source: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
 
 Files: *
