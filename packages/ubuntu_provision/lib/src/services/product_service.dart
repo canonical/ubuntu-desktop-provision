@@ -90,8 +90,9 @@ class ProductService {
             .readAsLinesSync()
             .firstWhere((line) => line.trim().isNotEmpty);
         return url.replaceAll(r'${LANG}', languageCode);
-        // ignore: empty_catches
-      } on Exception catch (_) {}
+        // TODO: error handling
+        // ignore: empty_catches, avoid_catches_without_on_clauses
+      } catch (_) {}
     }
     try {
       final lines = _fileSystem
@@ -101,6 +102,7 @@ class ProductService {
       final codeName = last.split(',')[1].replaceAll(RegExp('\\s+'), '');
       assert(codeName.isNotEmpty);
       return 'https://wiki.ubuntu.com/$codeName/ReleaseNotes';
+      // TODO: error handling
       // ignore: avoid_catches_without_on_clauses
     } catch (e) {
       // Those are not actual release notes,

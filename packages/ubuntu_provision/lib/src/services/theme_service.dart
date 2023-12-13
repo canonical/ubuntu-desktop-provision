@@ -1,3 +1,7 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+// TODO: replace this service with a new one that communicates with provd
+// TODO: move to ubuntu_init
+
 import 'dart:ui';
 
 import 'package:dbus/dbus.dart';
@@ -40,7 +44,7 @@ class GtkThemeService implements ThemeService {
       final scheme =
           await settings.get('color-scheme').then((v) => v.asString());
       return scheme.hasSuffix('dark') ? Brightness.dark : Brightness.light;
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error getting theme settings: $e');
       return Brightness.light;
     }
@@ -61,7 +65,7 @@ class GtkThemeService implements ThemeService {
           await settings.set('color-scheme', const DBusString('prefer-light'));
           break;
       }
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error setting theme settings: $e');
     }
   }
@@ -71,7 +75,7 @@ class GtkThemeService implements ThemeService {
     try {
       final theme = await settings.get('gtk-theme').then((v) => v.asString());
       return theme.removeSuffix('dark').split('-').elementAtOrNull(1);
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error getting accent color: $e');
       return null;
     }
@@ -87,7 +91,7 @@ class GtkThemeService implements ThemeService {
         if (theme.hasSuffix('dark')) 'dark',
       ].join('-');
       return settings.set('gtk-theme', DBusString(value));
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error setting accent color: $e');
     }
   }
