@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+
 import 'package:dbus/dbus.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:meta/meta.dart';
@@ -32,7 +34,7 @@ class GnomePrivacyService implements PrivacyService {
   Future<bool> isLocationEnabled() async {
     try {
       return await _locationSettings.get('enabled').then((v) => v.asBoolean());
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error getting location settings: $e');
       return false;
     }
@@ -43,7 +45,7 @@ class GnomePrivacyService implements PrivacyService {
     await setReportingEnabled(true);
     try {
       return await _locationSettings.set('enabled', DBusBoolean(enabled));
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error setting location settings: $e');
       return;
     }
@@ -55,7 +57,7 @@ class GnomePrivacyService implements PrivacyService {
       return await _privacySettings
           .get('report-technical-problems')
           .then((v) => v.asBoolean());
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error getting privacy settings: $e');
       return false;
     }
@@ -66,7 +68,7 @@ class GnomePrivacyService implements PrivacyService {
     try {
       return await _privacySettings.set(
           'report-technical-problems', DBusBoolean(enabled));
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Error setting privacy settings: $e');
       return;
     }

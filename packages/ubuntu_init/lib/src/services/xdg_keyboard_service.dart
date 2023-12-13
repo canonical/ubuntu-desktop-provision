@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+
 import 'dart:convert';
 
 import 'package:dbus/dbus.dart';
@@ -87,7 +89,7 @@ class XdgKeyboardService implements KeyboardService {
         layouts: await _getLayouts(),
       );
       return keyboardSetup;
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Failed to get keyboard setup', e);
       return const KeyboardSetup(
         setting: KeyboardSetting(layout: ''),
@@ -117,7 +119,7 @@ class XdgKeyboardService implements KeyboardService {
               DBusStruct([const DBusString('xkb'), DBusString(xkbString)])
             ]),
       );
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Failed to set input source', e);
     }
   }
@@ -134,7 +136,7 @@ class XdgKeyboardService implements KeyboardService {
         false,
         false,
       );
-    } on Exception catch (e) {
+    } catch (e) {
       _log.error('Failed to set keyboard', e);
     }
   }
