@@ -30,4 +30,4 @@ EOF
 ) > $TARGET/etc/systemd/system/install-ubuntu-init.service
 ln -s /etc/systemd/system/install-ubuntu-init.service $TARGET/etc/systemd/system/multi-user.target.wants/
 
-sed -i 's|/usr/libexec/gnome-initial-setup|/snap/ubuntu-desktop-init/current/bin/ubuntu_init|' $TARGET/usr/share/applications/gnome-initial-setup.desktop
+sed -i 's|/usr/libexec/gnome-initial-setup|env LOG_FILE=/tmp/init.log LOG_LEVEL=debug /snap/ubuntu-desktop-init/current/bin/ubuntu_init|' $TARGET/usr/share/applications/gnome-initial-setup.desktop
