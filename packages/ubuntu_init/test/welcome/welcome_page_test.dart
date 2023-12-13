@@ -30,7 +30,7 @@ void main() {
 
     final model = buildWelcomeModel(releaseNotesUrl: testUrl);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(WelcomePage));
     final l10n = WelcomeLocalizations.of(context);

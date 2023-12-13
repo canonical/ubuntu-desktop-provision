@@ -201,6 +201,7 @@ void main() {
       findsNothing,
     );
 
+    // ignore: unawaited_futures
     Wizard.of(context).next();
     await tester.pumpAndSettle();
 

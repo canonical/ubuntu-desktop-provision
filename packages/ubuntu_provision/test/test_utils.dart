@@ -24,25 +24,27 @@ extension UbuntuProvisionTester on WidgetTester {
     return UbuntuLocalizations.of(widget);
   }
 
-  Widget buildApp(WidgetBuilder builder) {
+  Future<void> pumpApp(WidgetBuilder builder) async {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
-    return MaterialApp(
-      localizationsDelegates: const [
-        UbuntuProvisionLocalizations.delegate,
-        ...GlobalUbuntuLocalizations.delegates,
-      ],
-      theme: yaruLight,
-      home: Wizard(
-        routes: {
-          '/': WizardRoute(
-            builder: builder,
-            onNext: (settings) => '/next',
-          ),
-          '/next': WizardRoute(
-            builder: (_) => const Text('Next page'),
-          ),
-        },
+    return pumpWidget(
+      MaterialApp(
+        localizationsDelegates: const [
+          UbuntuProvisionLocalizations.delegate,
+          ...GlobalUbuntuLocalizations.delegates,
+        ],
+        theme: yaruLight,
+        home: Wizard(
+          routes: {
+            '/': WizardRoute(
+              builder: builder,
+              onNext: (settings) => '/next',
+            ),
+            '/next': WizardRoute(
+              builder: (_) => const Text('Next page'),
+            ),
+          },
+        ),
       ),
     );
   }
@@ -58,6 +60,7 @@ extension UbuntuProvisionTester on WidgetTester {
   KeyboardService,
   LocaleService,
   NetworkService,
+  PageConfigService,
   PowerService,
   ProductService,
   SessionService,

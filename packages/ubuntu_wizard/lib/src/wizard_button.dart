@@ -3,10 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/src/wizard_data.dart';
 import 'package:wizard_router/wizard_router.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'wizard_data.dart';
 
 /// Wizard activation callback signature.
 typedef WizardCallback = FutureOr<void> Function();
@@ -45,9 +44,9 @@ class WizardButton extends StatefulWidget {
     final routeData =
         (wizard?.routeData ?? rootWizard?.routeData) as WizardRouteData?;
     final hasPrevious = routeData?.hasPrevious ??
-        (wizard?.hasPrevious == true || rootWizard?.hasPrevious == true);
+        ((wizard?.hasPrevious ?? false) || (rootWizard?.hasPrevious ?? false));
     final isLoading =
-        wizard?.isLoading == true || rootWizard?.isLoading == true;
+        (wizard?.isLoading ?? false) || (rootWizard?.isLoading ?? false);
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
@@ -59,7 +58,7 @@ class WizardButton extends StatefulWidget {
           execute: () {
             // navigate the root wizard at the end of a nested wizard
             final effectiveWizard =
-                wizard?.hasPrevious == true ? wizard : rootWizard;
+                (wizard?.hasPrevious ?? false) ? wizard : rootWizard;
             return effectiveWizard?.back();
           }),
     );
@@ -82,9 +81,9 @@ class WizardButton extends StatefulWidget {
     final routeData =
         (wizard?.routeData ?? rootWizard?.routeData) as WizardRouteData?;
     final hasNext = routeData?.hasNext ??
-        (wizard?.hasNext == true || rootWizard?.hasNext == true);
+        ((wizard?.hasNext ?? false) || (rootWizard?.hasNext ?? false));
     final isLoading =
-        wizard?.isLoading == true || rootWizard?.isLoading == true;
+        (wizard?.isLoading ?? false) || (rootWizard?.isLoading ?? false);
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
@@ -93,14 +92,15 @@ class WizardButton extends StatefulWidget {
                 ? UbuntuLocalizations.of(context).nextLabel
                 : UbuntuLocalizations.of(context).doneLabel),
         visible: visible,
-        enabled: !isLoading && enabled != false,
+        enabled: !isLoading && (enabled ?? true),
         loading: isLoading,
         flat: flat,
         highlighted: highlighted,
         onActivated: onNext,
         execute: () async {
           // navigate the root wizard at the end of a nested wizard
-          final effectiveWizard = wizard?.hasNext == true ? wizard : rootWizard;
+          final effectiveWizard =
+              (wizard?.hasNext ?? false) ? wizard : rootWizard;
           try {
             await effectiveWizard?.next(arguments: arguments);
           } on WizardException catch (_) {
@@ -185,16 +185,16 @@ class _WizardButtonState extends State<WizardButton> {
           ? Future.delayed(_kLoadingDelay, () => loading)
           : null,
       builder: (context, snapshot) {
-        final child = snapshot.data == true
+        final child = (snapshot.data ?? false)
             ? SizedBox.square(
                 dimension: IconTheme.of(context).size,
                 child: const YaruCircularProgressIndicator(strokeWidth: 3),
               )
             : Text(widget.label!);
 
-        return widget.highlighted == true
+        return (widget.highlighted ?? false)
             ? PushButton.elevated(onPressed: maybeActivate, child: child)
-            : widget.flat == true
+            : (widget.flat ?? false)
                 ? PushButton.outlined(onPressed: maybeActivate, child: child)
                 : PushButton.filled(onPressed: maybeActivate, child: child);
       },

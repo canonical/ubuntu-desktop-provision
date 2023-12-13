@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/theme/theme_l10n.dart';
+import 'package:ubuntu_provision/src/theme/theme_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'theme_l10n.dart';
-import 'theme_model.dart';
 
 class ThemePage extends ConsumerWidget {
   const ThemePage({super.key});

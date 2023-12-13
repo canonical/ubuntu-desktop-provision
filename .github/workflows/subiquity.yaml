@@ -1,0 +1,17 @@
+name: Subiquity integration
+on:
+  push:
+    branches:
+      - bootstrap-snap
+  pull_request:
+    branches:
+      - bootstrap-snap
+jobs:
+  subiquity:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: Check subiquity integration
+      run: ./scripts/subiquity_integration

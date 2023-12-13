@@ -1,8 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_provision_test/src/wizard_tester.dart';
 import 'package:yaru_test/yaru_test.dart';
-
-import 'wizard_tester.dart';
 
 extension UbuntuInitPageTester on WidgetTester {
   Future<void> testWelcomeInitPage({
@@ -56,15 +55,15 @@ extension UbuntuInitPageTester on WidgetTester {
     }
   }
 
-  Future<void> testStorePage({
+  Future<void> testUbuntuProPage({
     String? screenshot,
   }) async {
-    await pumpUntilPage(StorePage);
+    await pumpUntilPage(UbuntuProPage);
 
-    final context = element(find.byType(StorePage));
-    final l10n = StoreLocalizations.of(context);
+    final context = element(find.byType(UbuntuProPage));
+    final l10n = PrivacyLocalizations.of(context);
 
-    expect(find.titleBar(l10n.storeTitle), findsOneWidget);
+    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);

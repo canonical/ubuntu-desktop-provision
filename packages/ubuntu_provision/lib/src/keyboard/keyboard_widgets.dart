@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import 'keyboard_l10n.dart';
 
 /// Asks the user to press one of keys.
 class PressKeyView extends StatelessWidget {
@@ -52,7 +51,6 @@ class KeyPresentView extends StatelessWidget {
         DefaultTextStyle(
           style: Theme.of(context).textTheme.headlineSmall!,
           child: Align(
-            alignment: Alignment.center,
             child: Text(_keyPresent),
           ),
         ),
@@ -111,7 +109,6 @@ class _DetectKeyboardViewState extends State<DetectKeyboardView> {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (widget._pressKey != null) PressKeyView(widget._pressKey!),
           if (widget._keyPresent != null) KeyPresentView(widget._keyPresent!),

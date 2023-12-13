@@ -5,9 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-
-import 'storage_types.dart';
 
 /// The default mount points for auto-completion.
 const kDefaultMountPoints = <String>[
@@ -82,7 +82,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   /// Returns the original config of the selected partition, or null if not a
   /// preserved partition.
   Partition? originalConfig(Partition? partition) {
-    return partition?.preserve == true
+    return (partition?.preserve ?? false)
         ? _originalConfigs[partition!.sysname]
         : null;
   }
@@ -111,7 +111,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   bool get canRemovePartition => selectedPartition != null;
 
   /// Whether the currently selected partition can be edited.
-  bool get canEditPartition => selectedPartition?.canEdit == true;
+  bool get canEditPartition => selectedPartition?.canEdit ?? false;
 
   /// Whether the currently selected disk can be reformatted.
   bool get canReformatDisk => selectedDisk != null && selectedObject == null;
@@ -152,7 +152,7 @@ class ManualStorageModel extends SafeChangeNotifier {
       size: size,
       format: format?.type,
       mount: mount,
-      wipe: wipe == true ? 'superblock' : null,
+      wipe: (wipe ?? false) ? 'superblock' : null,
     );
     return _service.editPartition(disk, newPartition).then(_updateDisks);
   }

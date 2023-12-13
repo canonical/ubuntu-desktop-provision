@@ -9,13 +9,13 @@ extension GapExtension on Gap {
 }
 
 extension PartitionExtension on Partition {
-  bool get canWipe => PartitionFormat.fromPartition(this)?.canWipe == true;
+  bool get canWipe => PartitionFormat.fromPartition(this)?.canWipe ?? false;
   bool get canEdit => format != 'BitLocker';
   bool get isEncrypted => format == 'BitLocker';
   bool get isWiped => wipe == 'superblock';
   bool mustWipe(String? format) {
     // a preserved partition must be wiped if its format changed
-    return preserve == true && format != null && this.format != format;
+    return (preserve ?? false) && format != null && this.format != format;
   }
 }
 

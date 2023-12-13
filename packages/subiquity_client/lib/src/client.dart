@@ -1,15 +1,15 @@
+// ignore_for_file: avoid_types_on_closure_parameters
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:subiquity_client/src/endpoint.dart';
+import 'package:subiquity_client/src/status_monitor.dart';
+import 'package:subiquity_client/src/types.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-import 'endpoint.dart';
-import 'status_monitor.dart';
-import 'types.dart';
-
-/// @internal
-final log = Logger('subiquity_client');
+final _log = Logger('subiquity_client');
 
 const _kMaxResponseLogLength = 1200;
 
@@ -21,6 +21,8 @@ String _formatResponseLog(String method, String response) {
   return '==> $method $formatted';
 }
 
+// TODO(Lukas): Rename enums to dart style.
+// ignore: constant_identifier_names
 enum Variant { SERVER, DESKTOP, WSL_SETUP, WSL_CONFIGURATION }
 
 extension VariantString on Variant {
@@ -47,7 +49,7 @@ class SubiquityClient {
   Endpoint? _endpoint;
 
   void open(Endpoint endpoint) {
-    log.info('Opening socket to $endpoint');
+    _log.info('Opening socket to $endpoint');
     _endpoint = endpoint;
     _client.connectionFactory = (uri, proxyHost, proxyPort) async {
       return Socket.startConnect(endpoint.address, endpoint.port);
@@ -56,7 +58,7 @@ class SubiquityClient {
   }
 
   Future<void> close() async {
-    log.info('Closing socket to $_endpoint');
+    _log.info('Closing socket to $_endpoint');
     _client.close();
   }
 
@@ -71,7 +73,7 @@ class SubiquityClient {
     if (response.statusCode != 200) {
       throw SubiquityException(method, response.statusCode, str);
     }
-    log.debug(() => formatResponseLog(method, str));
+    _log.debug(() => formatResponseLog(method, str));
     final json = jsonDecode(str);
     return decode?.call(json as V) ?? json as R;
   }
@@ -83,7 +85,7 @@ class SubiquityClient {
   ]) async {
     await _ready.future;
     final url = Uri.http(_endpoint!.authority, path, queryParameters);
-    log.debug('$method $url');
+    _log.debug('$method $url');
     final request = await _client.openUrl(method, url);
     request.headers.contentType =
         ContentType('application', 'json', charset: 'utf-8');
@@ -222,7 +224,7 @@ class SubiquityClient {
       final request = await _openUrl('GET', 'meta/status');
       status = await _receive('status()', request, ApplicationStatus.fromJson);
     }
-    log.info('state: ${current?.name} => ${status.state.name}');
+    _log.info('state: ${current?.name} => ${status.state.name}');
     return status;
   }
 
@@ -263,7 +265,10 @@ class SubiquityClient {
   Future<bool> hasBitLocker() async {
     final request = await _openUrl('GET', 'storage/has_bitlocker');
     return _receive(
-        'hasBitLocker()', request, (List<Object?> disks) => disks.isNotEmpty);
+      'hasBitLocker()',
+      request,
+      (List<Object?> disks) => disks.isNotEmpty,
+    );
   }
 
   Future<GuidedStorageResponseV2> getGuidedStorageV2({bool wait = true}) async {
@@ -488,7 +493,7 @@ class SubiquityClient {
 
   Future<AdConnectionInfo> getActiveDirectory() async {
     final request = await _openUrl('GET', 'active_directory');
-    return await _receive(
+    return _receive(
       'getActiveDirectory()',
       request,
       (json) {
@@ -525,12 +530,13 @@ class SubiquityClient {
         await _openUrl('POST', 'active_directory/check_domain_name');
     request.write(jsonEncode(domain));
     return _receive(
-        'checkActiveDirectoryDomainName($domain)',
-        request,
-        (List<Object?> values) => values
-            .cast<String>()
-            .map(AdDomainNameValidation.values.byName)
-            .toList());
+      'checkActiveDirectoryDomainName($domain)',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(AdDomainNameValidation.values.byName)
+          .toList(),
+    );
   }
 
   Future<AdDomainNameValidation> pingActiveDirectoryDomainController(

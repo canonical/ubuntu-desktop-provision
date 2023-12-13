@@ -13,8 +13,8 @@ import '../test_utils.dart';
 
 void main() {
   testWidgets('inherited slides', (tester) async {
-    slide1(_) => const Text('slide1');
-    slide2(_) => const Text('slide2');
+    Text slide1(_) => const Text('slide1');
+    Text slide2(_) => const Text('slide2');
 
     final widget =
         SlidesContext(slides: [slide1, slide2], child: const Text('page'));
@@ -45,12 +45,10 @@ void main() {
     final urlLauncher = MockUrlLauncher();
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (context) => ProviderScope(
-          child: Scaffold(
-            body: Builder(builder: defaultSlides.last),
-          ),
+    await tester.pumpApp(
+      (context) => ProviderScope(
+        child: Scaffold(
+          body: Builder(builder: defaultSlides.last),
         ),
       ),
     );
@@ -64,13 +62,13 @@ void main() {
     final context = tester.element(find.byType(Scaffold));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expectLaunchUrl(
+    await expectLaunchUrl(
       l10n.installationSlidesSupportDocumentation,
       'https://help.ubuntu.com',
     );
-    expectLaunchUrl('Ask Ubuntu', 'https://askubuntu.com');
-    expectLaunchUrl('Ubuntu Discourse', 'https://discourse.ubuntu.com');
-    expectLaunchUrl(
+    await expectLaunchUrl('Ask Ubuntu', 'https://askubuntu.com');
+    await expectLaunchUrl('Ubuntu Discourse', 'https://discourse.ubuntu.com');
+    await expectLaunchUrl(
       l10n.installationSlidesSupportUbuntuPro,
       'https://ubuntu.com/pro',
     );

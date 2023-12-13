@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_columns.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'storage_columns.dart';
-import 'storage_types.dart';
 
 typedef CanSelectStorage = bool Function(int disk, [int object]);
 typedef IsStorageSelected = bool Function(int disk, [int object]);
@@ -12,9 +11,9 @@ typedef OnStorageSelected = void Function(int disk, [int object]);
 
 class StorageTable extends StatelessWidget {
   const StorageTable({
-    super.key,
     required this.storages,
     required this.columns,
+    super.key,
     this.controller,
     this.canSelect,
     this.isSelected,
@@ -59,9 +58,9 @@ class StorageTable extends StatelessWidget {
       DataRow.byIndex(
         index: diskIndex,
         selected: isSelected?.call(diskIndex) ?? false,
-        onSelectChanged: canSelect?.call(diskIndex) == true
+        onSelectChanged: canSelect?.call(diskIndex) ?? false
             ? (selected) {
-                if (selected == true) {
+                if (selected ?? false) {
                   onSelected?.call(diskIndex);
                 }
               }
@@ -86,9 +85,9 @@ class StorageTable extends StatelessWidget {
         DataRow(
           key: ValueKey(Object.hashAll([diskIndex, objectIndex])),
           selected: isSelected?.call(diskIndex, objectIndex) ?? false,
-          onSelectChanged: canSelect?.call(diskIndex, objectIndex) == true
+          onSelectChanged: (canSelect?.call(diskIndex, objectIndex) ?? false)
               ? (selected) {
-                  if (selected == true) {
+                  if (selected ?? false) {
                     onSelected?.call(diskIndex, objectIndex);
                   }
                 }

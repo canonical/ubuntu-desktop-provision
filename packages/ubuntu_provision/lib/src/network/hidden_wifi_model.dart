@@ -1,11 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/network_device.dart';
+import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-
-import 'connect_model.dart';
-import 'network_device.dart';
-import 'wifi_model.dart';
 
 final hiddenWifiModelProvider = ChangeNotifierProvider((_) =>
     HiddenWifiModel(getService<NetworkService>(), getService<UdevService>()));
@@ -18,14 +17,14 @@ class HiddenWifiModel extends NetworkDeviceModel<WifiDevice> {
 
   @override
   bool get isConnected =>
-      selectedDevice?.isActive == true &&
+      (selectedDevice?.isActive ?? false) &&
       selectedDevice?.activeAccessPoint?.name == ssid;
 
   @override
   bool get hasActiveConnection => false;
 
   @override
-  bool get isConnecting => selectedDevice?.isConnecting == true;
+  bool get isConnecting => selectedDevice?.isConnecting ?? false;
 
   @override
   bool get isEnabled => service.wirelessEnabled;

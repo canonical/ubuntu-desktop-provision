@@ -64,13 +64,5 @@
   "privacyLocationSubtitle": "Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.",
   "@privacyLocationSubtitle": {},
   "privacyPolicyLink": "Soukromí údajů",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Obchod Ubuntu",
-  "@storeTitle": {},
-  "storeHeader": "Začněte s více aplikacemi",
-  "@storeHeader": {},
-  "storeDescription": "Ubuntu obchod s aplikacemi nabízí širokou škálu aplikací, kterými je možné začít.",
-  "@storeDescription": {},
-  "storeOpen": "Otevřít Obchod s aplikacemi",
-  "@storeOpen": {}
+  "@privacyPolicyLink": {}
 }

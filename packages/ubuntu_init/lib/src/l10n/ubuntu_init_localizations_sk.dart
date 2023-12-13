@@ -84,14 +84,5 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Súkromie údajov';
 
   @override
-  String get storeTitle => 'Centrum Ubuntu';
-
-  @override
-  String get storeHeader => 'Začnite s viacerými aplikáciami';
-
-  @override
-  String get storeDescription => 'Centrum aplikácií Ubuntu ponúka celú škálu softvéru, s ktorým môžete začať ihneď od začiatku.';
-
-  @override
-  String get storeOpen => 'Otvoriť centrum aplikácií';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

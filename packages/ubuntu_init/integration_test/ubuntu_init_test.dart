@@ -39,11 +39,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testTimezonePage(timezone: 'Europe/Berlin');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    await expectTimezone('Europe/Berlin');
-
     const identity = Identity(
       realname: 'User',
       username: 'user',
@@ -57,11 +52,7 @@ void main() {
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
-    await tester.testThemePage(theme: Brightness.dark);
-    await tester.tapNext();
-    await expectTheme(Brightness.dark);
-
-    await tester.testTelemetryPage(enabled: false);
+    await tester.testUbuntuProPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -69,41 +60,19 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testStorePage();
+    await tester.testTimezonePage(timezone: 'Europe/Berlin');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectTimezone('Europe/Berlin');
+
+    await tester.testTelemetryPage(enabled: false);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testThemePage(theme: Brightness.dark);
     await tester.tapDone();
+    await expectTheme(Brightness.dark);
     await tester.pumpAndSettle();
-
-    await expectLater(windowClosed, completes);
-  });
-
-  testWidgets('pages', (tester) async {
-    await tester.runApp(() => runInitApp(['--pages=locale,keyboard,identity']));
-
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    await expectLocale('en_US.UTF-8');
-
-    await tester.testKeyboardPage(layout: 'English (US)');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    await expectKeyboard(const KeyboardSetting(layout: 'us'));
-
-    final windowClosed = YaruTestWindow.waitForClosed();
-
-    const identity = Identity(
-      realname: 'User',
-      username: 'user',
-      hostname: 'ubuntu',
-    );
-    await tester.testIdentityPage(
-      identity: identity,
-      password: 'password',
-    );
-    await tester.tapNext(); // TODO: tapDone()
-    await tester.pumpAndSettle();
-    await expectIdentity(identity);
-
     await expectLater(windowClosed, completes);
   });
 }

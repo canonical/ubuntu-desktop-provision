@@ -295,8 +295,8 @@ void main() {
   });
 
   test('edit partition', () async {
-    const partition = Partition(
-        number: 1, size: 123, wipe: null, format: 'ext3', mount: '/tst');
+    const partition =
+        Partition(number: 1, size: 123, format: 'ext3', mount: '/tst');
     final edited = partition.copyWith(
         size: 456, wipe: 'superblock', format: 'ext2', mount: '/tmp');
 

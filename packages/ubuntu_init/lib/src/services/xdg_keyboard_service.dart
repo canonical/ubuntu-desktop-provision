@@ -4,9 +4,12 @@ import 'package:dbus/dbus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gsettings/gsettings.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:xdg_locale/xdg_locale.dart';
+
+final _log = Logger('xdg_keyboard_service');
 
 class XdgKeyboardService implements KeyboardService {
   XdgKeyboardService({
@@ -71,18 +74,26 @@ class XdgKeyboardService implements KeyboardService {
 
   @override
   Future<KeyboardSetup> getKeyboard() async {
-    await _client.connect();
-    final keyboardSetup = KeyboardSetup(
-      setting: KeyboardSetting(
-        layout: _client.x11Layout,
-        toggle: _client.vConsoleKeymapToggle.isNotEmpty
-            ? _client.vConsoleKeymapToggle
-            : null,
-        variant: _client.x11Variant,
-      ),
-      layouts: await _getLayouts(),
-    );
-    return keyboardSetup;
+    try {
+      await _client.connect();
+      final keyboardSetup = KeyboardSetup(
+        setting: KeyboardSetting(
+          layout: _client.x11Layout,
+          toggle: _client.vConsoleKeymapToggle.isNotEmpty
+              ? _client.vConsoleKeymapToggle
+              : null,
+          variant: _client.x11Variant,
+        ),
+        layouts: await _getLayouts(),
+      );
+      return keyboardSetup;
+    } on Exception catch (e) {
+      _log.error('Failed to get keyboard setup', e);
+      return const KeyboardSetup(
+        setting: KeyboardSetting(layout: ''),
+        layouts: [],
+      );
+    }
   }
 
   @override
@@ -94,29 +105,38 @@ class XdgKeyboardService implements KeyboardService {
 
   @override
   Future<void> setInputSource(KeyboardSetting setting, {String? user}) async {
-    final xkbString = setting.variant.isNotEmpty
-        ? '${setting.layout}+${setting.variant}'
-        : setting.layout;
-    await _inputSourceSettings.set(
-      'sources',
-      DBusArray(
-          DBusSignature.struct([DBusSignature.string, DBusSignature.string]), [
-        DBusStruct([const DBusString('xkb'), DBusString(xkbString)])
-      ]),
-    );
+    try {
+      final xkbString = setting.variant.isNotEmpty
+          ? '${setting.layout}+${setting.variant}'
+          : setting.layout;
+      await _inputSourceSettings.set(
+        'sources',
+        DBusArray(
+            DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
+            [
+              DBusStruct([const DBusString('xkb'), DBusString(xkbString)])
+            ]),
+      );
+    } on Exception catch (e) {
+      _log.error('Failed to set input source', e);
+    }
   }
 
   @override
   Future<void> setKeyboard(KeyboardSetting setting) async {
-    await _client.connect();
-    await _client.setX11Keyboard(
-      setting.layout,
-      _client.x11Model,
-      setting.variant,
-      _client.x11Options,
-      false,
-      false,
-    );
+    try {
+      await _client.connect();
+      await _client.setX11Keyboard(
+        setting.layout,
+        _client.x11Model,
+        setting.variant,
+        _client.x11Options,
+        false,
+        false,
+      );
+    } on Exception catch (e) {
+      _log.error('Failed to set keyboard', e);
+    }
   }
 
   @override

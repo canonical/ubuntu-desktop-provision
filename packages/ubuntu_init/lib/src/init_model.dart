@@ -8,40 +8,23 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 
 final initModelProvider = Provider(
   (_) => InitModel(
-    config: tryGetService<ConfigService>(),
+    pageConfig: tryGetService<PageConfigService>(),
     args: tryGetService<ArgResults>(),
   ),
 );
 
 class InitModel {
-  InitModel({ConfigService? config, ArgResults? args})
-      : _config = config,
-        _args = args;
+  InitModel({PageConfigService? pageConfig, ArgResults? args})
+      : _pageConfig = pageConfig;
 
-  final ConfigService? _config;
-  final ArgResults? _args;
-  Set<String>? _pages;
+  final PageConfigService? _pageConfig;
+  Set<String>? _excludedPages;
 
   Future<void> init() async {
-    _pages ??= (await _config?.getPages() ?? _args?.getPages())
-        ?.map((r) => r.removePrefix('/'))
-        .toSet();
+    _excludedPages = _pageConfig?.excludedPages;
   }
 
   bool hasRoute(String route) {
-    return _pages?.contains(route.removePrefix('/')) ?? true;
+    return !(_excludedPages?.contains(route.removePrefix('/')) ?? false);
   }
-}
-
-extension on ConfigService {
-  Future<List<String>?> getPages() async {
-    final value = await get('pages');
-    return (value is List ? value.cast<String>() : value?.toString().split(','))
-        ?.map((p) => p.trim())
-        .toList();
-  }
-}
-
-extension on ArgResults {
-  List<String>? getPages() => (this['pages'] as String?)?.split(',');
 }

@@ -279,7 +279,7 @@ void main() {
 
     final ssid = String.fromCharCodes(kTestSsid);
 
-    fakeAsync((async) async {
+    unawaited(fakeAsync((async) async {
       final timeout = model.requestScan(ssid: ssid);
       expect(model.devices.first.lastScan, -1);
       expect(model.devices.first.scanning, isTrue);
@@ -292,7 +292,7 @@ void main() {
       expect(model.devices.first.scanning, isFalse);
       verify(wireless.lastScan).called(1);
       verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
-    });
+    }));
 
     final scan = model.requestScan(ssid: ssid);
     wirelessChanged.add(['LastScan']);
@@ -344,7 +344,7 @@ void main() {
   test('enable', () async {
     when(service.setWirelessEnabled(true)).thenAnswer((_) async {});
 
-    model.enable();
+    unawaited(model.enable());
     verify(service.setWirelessEnabled(true)).called(1);
   });
 

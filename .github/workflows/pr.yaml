@@ -1,6 +1,10 @@
 name: PR
 
-on: [pull_request_target]
+on:
+  pull_request_target:
+    branches:
+      - main
+      - archive/main
 
 jobs:
   cla:
@@ -18,4 +22,4 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v4
+    - uses: actions/labeler@v5

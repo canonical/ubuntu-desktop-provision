@@ -33,7 +33,7 @@ void main() {
       storages: testStorages,
       disks: testDisks,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tap(find.byType(MenuButtonBuilder<int>));
     await tester.pumpAndSettle();
@@ -54,7 +54,7 @@ void main() {
       storages: testStorages,
       disks: testDisks,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tap(find.byType(MenuButtonBuilder<int>));
     await tester.pumpAndSettle();
@@ -66,6 +66,7 @@ void main() {
     );
     await tester.ensureVisible(dropdownItem.last);
     await tester.tap(dropdownItem.last);
+    await tester.pump();
     verify(model.selectStorage(1)).called(1);
   });
 
@@ -78,7 +79,7 @@ void main() {
       selectedDisk: selectedDisk,
       selectedStorage: selectedStorage,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
     expect(find.text(selectedDisk.sysname), findsOneWidget);
     final context = tester.element(find.byType(GuidedReformatPage));
     expect(
@@ -91,7 +92,7 @@ void main() {
       disks: testDisks,
       selectedStorage: testStorages.first,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tapNext();
     verify(model.saveGuidedStorage()).called(1);

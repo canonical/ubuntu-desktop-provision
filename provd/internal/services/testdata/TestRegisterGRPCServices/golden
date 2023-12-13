@@ -3,4 +3,4 @@ provd.HelloWorldService:
         - name: SayHello
           isclientstream: false
           isserverstream: false
-    metadata: provd.proto
+    metadata: provd.protos

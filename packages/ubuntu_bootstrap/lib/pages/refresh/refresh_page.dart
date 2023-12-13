@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'refresh_model.dart';
-import 'refresh_widgets.dart';
 
 class RefreshPage extends ConsumerWidget {
   const RefreshPage({super.key});

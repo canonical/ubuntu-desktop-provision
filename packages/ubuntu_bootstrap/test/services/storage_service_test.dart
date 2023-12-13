@@ -139,8 +139,8 @@ void main() {
     expect(service.needRoot, isTrue);
     expect(service.needBoot, isFalse);
 
-    when(client.resetStorageV2()).thenAnswer((_) async => fakeStorageResponse(
-        needRoot: false, needBoot: true, disks: [], installMinimumSize: 0));
+    when(client.resetStorageV2()).thenAnswer(
+        (_) async => fakeStorageResponse(needBoot: true, disks: []));
 
     await service.resetStorage();
 

@@ -11,6 +11,10 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_bootstrap/slides.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -18,17 +22,11 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-import 'installer/installer_wizard.dart';
-import 'l10n.dart';
-import 'services.dart';
-import 'slides.dart';
-
 export 'installer/installer_wizard.dart';
 export 'slides.dart';
 
 Future<void> runInstallerApp(
   List<String> args, {
-  List<String>? pages,
   List<WidgetBuilder>? slides,
   UbuntuFlavor? flavor,
   ThemeData? theme,
@@ -53,8 +51,6 @@ Future<void> runInstallerApp(
         defaultsTo: 'examples/sources/desktop.yaml',
         help: 'Path of the source catalog (dry-run only)');
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
-    parser.addOption('pages',
-        valueHelp: 'path', help: 'A comma-separated list of pages', hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
@@ -78,14 +74,13 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
-    () => ConfigService(scope: 'bootstrap', path: options['config'] as String?),
+    () => ConfigService(path: options['config'] as String?),
   );
-  tryRegisterService<DesktopService>(() => GnomeService());
-  tryRegisterServiceFactory<GSettings, String>((schema) => GSettings(schema));
+  tryRegisterService<DesktopService>(GnomeService.new);
+  tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
-      config: tryGetService<ConfigService>(),
-      pages: (options['pages'] as String?)?.split(',') ?? pages));
+      pageConfig: tryGetService<PageConfigService>()));
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
       () => SubiquityKeyboardService(getService<SubiquityClient>()));
@@ -93,6 +88,8 @@ Future<void> runInstallerApp(
       () => SubiquityLocaleService(getService<SubiquityClient>()));
   tryRegisterService<NetworkService>(
       () => SubiquityNetworkService(getService<SubiquityClient>()));
+  tryRegisterService(
+      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
@@ -112,7 +109,8 @@ Future<void> runInstallerApp(
     }
     return TelemetryService(path);
   });
-  tryRegisterService<ThemeService>(GtkThemeService.new);
+  tryRegisterService<ThemeVariantService>(
+      () => ThemeVariantService(config: tryGetService<ConfigService>()));
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
@@ -128,13 +126,17 @@ Future<void> runInstallerApp(
     ...options.rest,
   ]).then(_initInstallerApp);
 
-  runZonedGuarded(() async {
+  await runZonedGuarded(() async {
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
 
     final window = await YaruWindow.ensureInitialized();
     await window.onClose(_closeInstallerApp);
+
+    final themeVariantService = getService<ThemeVariantService>();
+    await themeVariantService.load();
+    final themeVariant = themeVariantService.themeVariant;
 
     runApp(ProviderScope(
       child: SlidesContext(
@@ -148,10 +150,13 @@ Future<void> runInstallerApp(
             }
             return WizardApp(
               flavor: flavor,
-              theme: theme,
-              darkTheme: darkTheme,
+              theme: theme ?? themeVariant?.theme,
+              darkTheme: darkTheme ?? themeVariant?.darkTheme,
               onGenerateTitle: onGenerateTitle ??
                   (context) {
+                    final windowTitle = themeVariant?.windowTitle;
+                    if (windowTitle != null) return windowTitle;
+
                     final flavor = ref.watch(flavorProvider);
                     return UbuntuBootstrapLocalizations.of(context)
                         .windowTitle(flavor.name);
@@ -168,7 +173,7 @@ Future<void> runInstallerApp(
                   package: 'ubuntu_bootstrap',
                 ),
                 child: InstallerWizard(
-                  welcome: options['welcome'] as bool?,
+                  welcome: options['welcome'] as bool? ?? false,
                 ),
               ),
             );
@@ -187,6 +192,7 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
   await getService<InstallerService>().init();
   await getService<DesktopService>().inhibit();
   await getService<RefreshService>().check();
+  await getService<PageConfigService>().load();
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {

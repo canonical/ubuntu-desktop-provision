@@ -36,7 +36,7 @@ void main() {
             ),
           ],
         });
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(
       find.text('sda1 - Ubuntu 22.04 LTS - 123 B'),
@@ -46,7 +46,7 @@ void main() {
 
   testWidgets('storage selection', (tester) async {
     final model = buildGuidedResizeModel(storageCount: 5, selectedIndex: 1);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final item1 = find.descendant(
       of: find.byType(MenuButtonBuilder<int>),
@@ -63,6 +63,7 @@ void main() {
     );
     await tester.ensureVisible(item2.last);
     await tester.tap(item2.last);
+    await tester.pump();
 
     verify(model.selectStorage(2)).called(1);
   });
@@ -72,7 +73,7 @@ void main() {
       selectedPartition: const Partition(number: 1),
       totalSize: 100,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.byType(SplitView), findsOneWidget);
     final controller =
@@ -96,7 +97,7 @@ void main() {
         ],
       },
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(GuidedResizePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -112,7 +113,7 @@ void main() {
       existingOs: [],
       productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(GuidedResizePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -128,7 +129,7 @@ void main() {
       existingOs: [windows10],
       productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(GuidedResizePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -144,7 +145,7 @@ void main() {
       existingOs: [ubuntu2110, ubuntu2204],
       productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(GuidedResizePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -161,7 +162,7 @@ void main() {
       existingOs: [windows10, ubuntu2110, ubuntu2204],
       productInfo: ProductInfo(name: 'Ubuntu', version: '22.10'),
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(GuidedResizePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);

@@ -3,8 +3,7 @@ import 'package:file/local.dart';
 import 'package:meta/meta.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-/// @internal
-final log = Logger('post-install');
+final _log = Logger('post-install');
 
 class PostInstallService {
   PostInstallService(this._path, {@visibleForTesting FileSystem? fs})
@@ -34,11 +33,11 @@ class PostInstallService {
     try {
       final config =
           await file.readAsLines().then((lines) => lines.toKeyValueMap());
-      log.debug('loaded ${config.length} entries from $_path');
+      _log.debug('loaded ${config.length} entries from $_path');
       return config;
     } on FileSystemException catch (e) {
       if (file.existsSync()) {
-        log.error('failed to load $_path', e);
+        _log.error('failed to load $_path', e);
       }
       return {};
     }
@@ -51,9 +50,9 @@ class PostInstallService {
       final data = config.toKeyValueList().join('\n');
       await file.create(recursive: true);
       await file.writeAsString('$data\n');
-      log.debug('saved ${config.length} entries to $_path');
+      _log.debug('saved ${config.length} entries to $_path');
     } on FileSystemException catch (e) {
-      log.error('failed to save $_path', e);
+      _log.error('failed to save $_path', e);
     }
   }
 }

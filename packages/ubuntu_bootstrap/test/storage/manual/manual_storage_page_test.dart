@@ -19,7 +19,6 @@ import 'test_manual_storage.dart';
 final testDisks = <Disk>[
   fakeDisk(
     path: '/dev/sda',
-    canBeBootDevice: false,
     size: 12,
     partitions: [
       const Partition(
@@ -77,7 +76,7 @@ void main() {
 
   testWidgets('list of disks and partitions', (tester) async {
     final model = buildManualStorageModel(disks: testDisks);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     for (final disk in testDisks) {
@@ -95,7 +94,7 @@ void main() {
 
   testWidgets('select storage', (tester) async {
     final model = buildManualStorageModel(disks: testDisks);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tap(find.text(testDisks.first.sysname));
     await tester.pumpAndSettle();
@@ -121,7 +120,7 @@ void main() {
         canEditPartition: false,
         canRemovePartition: false,
         canReformatDisk: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -146,7 +145,7 @@ void main() {
   testWidgets('can add', (tester) async {
     final model =
         buildManualStorageModel(disks: testDisks, canAddPartition: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final addButton = find.iconButton(Icons.add);
     expect(addButton, findsOneWidget);
@@ -156,7 +155,7 @@ void main() {
   testWidgets('can edit', (tester) async {
     final model =
         buildManualStorageModel(disks: testDisks, canEditPartition: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -168,7 +167,7 @@ void main() {
 
   testWidgets('can format', (tester) async {
     final model = buildManualStorageModel(disks: testDisks);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.byIcon(YaruIcons.checkbox), findsWidgets);
     expect(find.byIcon(YaruIcons.checkbox_checked_filled), findsWidgets);
@@ -183,7 +182,7 @@ void main() {
       selectedPartition: partition,
       canRemovePartition: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final removeButton = find.iconButton(Icons.remove);
     expect(removeButton, findsOneWidget);
@@ -200,7 +199,7 @@ void main() {
       selectedDisk: disk,
       canReformatDisk: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -220,7 +219,7 @@ void main() {
       selectedDisk: disk,
       canReformatDisk: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -244,7 +243,7 @@ void main() {
 
   testWidgets('revert', (tester) async {
     final model = buildManualStorageModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final revertButton = find.button(find.ul10n((l10n) => l10n.revertLabel));
     expect(revertButton, findsOneWidget);
@@ -256,7 +255,7 @@ void main() {
 
   testWidgets('boot disk', (tester) async {
     final model = buildManualStorageModel(disks: testDisks, bootDiskIndex: 1);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tap(find.byType(StorageSelector));
     await tester.pumpAndSettle();
@@ -276,20 +275,22 @@ void main() {
 
     await tester.ensureVisible(menuItem1);
     await tester.tap(menuItem1);
+    await tester.pump();
     verify(model.selectBootDisk(1)).called(1);
   });
 
   testWidgets('set storage', (tester) async {
     final model = buildManualStorageModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tapNext();
+    await tester.pump();
     verify(model.setStorage()).called(1);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildManualStorageModel(isValid: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });
@@ -301,7 +302,7 @@ void main() {
       usable: GapUsable.TOO_MANY_PRIMARY_PARTS,
     );
     final model = buildManualStorageModel(selectedGap: unusableGap);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);

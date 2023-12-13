@@ -64,13 +64,5 @@
   "privacyPolicyLink": "פרטיות נתונים",
   "@privacyPolicyLink": {},
   "privacyLocationEnable": "שירותי מיקום",
-  "@privacyLocationEnable": {},
-  "storeTitle": "חנות אובונטו",
-  "@storeTitle": {},
-  "storeHeader": "פתיחה טובה עם יותר יישומים",
-  "@storeHeader": {},
-  "storeDescription": "חנות היישומים של אובונטו מציעה מגוון רחב של יישומים שאפשר להתחיל להשתמש במהלך ההקמה.",
-  "@storeDescription": {},
-  "storeOpen": "פתיחת חנות היישומים",
-  "@storeOpen": {}
+  "@privacyLocationEnable": {}
 }

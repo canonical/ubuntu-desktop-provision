@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_dialogs.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
+import 'package:ubuntu_provision/src/keyboard/keyboard_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'keyboard_dialogs.dart';
-import 'keyboard_l10n.dart';
-import 'keyboard_model.dart';
 
 class KeyboardPage extends ConsumerWidget {
   const KeyboardPage({super.key});
@@ -42,7 +41,7 @@ class KeyboardPage extends ConsumerWidget {
                     onPressed: () async {
                       final result = await showDetectKeyboardDialog(context);
                       if (result != null) {
-                        model.trySelectLayoutVariant(
+                        await model.trySelectLayoutVariant(
                             result.layout, result.variant);
                       }
                     },

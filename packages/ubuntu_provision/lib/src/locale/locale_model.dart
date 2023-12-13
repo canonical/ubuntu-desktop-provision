@@ -9,8 +9,7 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart' show KeySearchX;
 
-/// @internal
-final log = Logger('locale');
+final _log = Logger('locale');
 
 final localeModelProvider = ChangeNotifierProvider((ref) {
   return LocaleModel(
@@ -21,7 +20,7 @@ final localeModelProvider = ChangeNotifierProvider((ref) {
 
 /// Implements the business logic of the locale page.
 class LocaleModel extends SafeChangeNotifier {
-  /// Creates a model with the specified [client].
+  /// Creates a model with the specified [locale] and [sound].
   LocaleModel({
     required LocaleService locale,
     required SoundService? sound,
@@ -44,7 +43,7 @@ class LocaleModel extends SafeChangeNotifier {
     _selectedIndex = index;
     final locale = _languageList.elementAtOrNull(index)?.locale;
     if (locale != null) {
-      log.info('Selected $locale as UI language');
+      _log.info('Selected $locale as UI language');
     }
     return initDefaultLocale(locale.toString()).then((_) => notifyListeners());
   }
@@ -56,7 +55,7 @@ class LocaleModel extends SafeChangeNotifier {
     assert(_languageList.isEmpty);
     final languages = await loadLocalizedLanguages(supportedLocales);
     _languageList = List.of(languages);
-    log.info('Loaded ${_languageList.length} languages');
+    _log.info('Loaded ${_languageList.length} languages');
     return _locale.getLocale().then((v) {
       selectLocale(parseLocale(v));
       notifyListeners();
@@ -68,7 +67,7 @@ class LocaleModel extends SafeChangeNotifier {
 
   /// Applies the given [locale].
   Future<void> applyLocale(Locale locale) {
-    log.info('Set $locale as system locale');
+    _log.info('Set $locale as system locale');
     return _locale
         .setLocale('${locale.languageCode}_${locale.countryCode}.UTF-8');
   }

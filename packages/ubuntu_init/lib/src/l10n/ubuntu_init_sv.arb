@@ -40,8 +40,6 @@
   "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Låt program veta din geografiska plats.\nDu kan ändra detta när som helst i Systeminställningarna.",
   "@privacyLocationSubtitle": {},
-  "storeOpen": "Öppna App Store",
-  "@storeOpen": {},
   "welcomeStartTitle": "En strömlinjeformad start",
   "@welcomeStartTitle": {},
   "welcomeStartSubtitle": "Stödjer en renare installationsupplevelse.",
@@ -63,14 +61,8 @@
   "@telemetryReportLabel": {},
   "privacyLocationEnable": "Platstjänster",
   "@privacyLocationEnable": {},
-  "storeHeader": "Kom igång med fler program",
-  "@storeHeader": {},
   "telemetryReportTitle": "Rapporteringsdetaljer",
   "@telemetryReportTitle": {},
   "privacyPolicyLink": "Dataintegritet",
-  "@privacyPolicyLink": {},
-  "storeTitle": "Ubuntu Store",
-  "@storeTitle": {},
-  "storeDescription": "Ubuntus App Store erbjuder en rad program som du kan komma igång med direkt.",
-  "@storeDescription": {}
+  "@privacyPolicyLink": {}
 }

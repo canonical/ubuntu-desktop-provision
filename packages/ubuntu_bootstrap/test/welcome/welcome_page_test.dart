@@ -14,7 +14,7 @@ void main() {
 
   testWidgets('release notes', (tester) async {
     final model = buildWelcomeModel(isConnected: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildWelcomePage(model)));
+    await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.byType(Html).hitTestable(), findsOneWidget);
 
@@ -29,14 +29,14 @@ void main() {
 
   testWidgets('offline', (tester) async {
     final model = buildWelcomeModel(isConnected: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildWelcomePage(model)));
+    await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.byType(Html).hitTestable(), findsNothing);
   });
 
   testWidgets('select option', (tester) async {
     final model = buildWelcomeModel(option: Option.none);
-    await tester.pumpWidget(tester.buildApp((_) => buildWelcomePage(model)));
+    await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
 
@@ -49,14 +49,14 @@ void main() {
 
   testWidgets('install ubuntu', (tester) async {
     final model = buildWelcomeModel(option: Option.welcomeInstallOption);
-    await tester.pumpWidget(tester.buildApp((_) => buildWelcomePage(model)));
+    await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('try ubuntu', (tester) async {
     final model = buildWelcomeModel(option: Option.welcomeTryOption);
-    await tester.pumpWidget(tester.buildApp((_) => buildWelcomePage(model)));
+    await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
 

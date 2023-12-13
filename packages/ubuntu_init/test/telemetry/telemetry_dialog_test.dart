@@ -6,8 +6,7 @@ import 'test_telemetry.dart';
 
 void main() {
   testWidgets('telemetry data', (tester) async {
-    await tester.pumpWidget(
-        tester.buildApp((_) => TelemetryDialog(data: Stream.value('foo'))));
+    await tester.pumpApp((_) => TelemetryDialog(data: Stream.value('foo')));
     await tester.pumpAndSettle();
 
     expect(find.byType(SelectableText), findsOneWidget);

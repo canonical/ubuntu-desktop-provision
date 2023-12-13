@@ -31,7 +31,7 @@ Future<void> main() async {
 
   tearDown(() async {
     final windowClosed = YaruTestWindow.waitForClosed();
-    window.close();
+    await window.close();
     await windowClosed;
     await resetAllServices();
   });

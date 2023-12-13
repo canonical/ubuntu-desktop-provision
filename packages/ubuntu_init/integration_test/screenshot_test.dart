@@ -125,15 +125,15 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('10.store', (tester) async {
+  testWidgets('12.ubuntu-pro', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.store);
+    await tester.jumpToPage(InitRoutes.ubuntuPro);
     await tester.pumpAndSettle();
 
-    await tester.testStorePage(
-      screenshot: '$currentThemeName/10.store',
+    await tester.testUbuntuProPage(
+      screenshot: '$currentThemeName/10.ubuntu-pro',
     );
   }, variant: themeVariant);
 }

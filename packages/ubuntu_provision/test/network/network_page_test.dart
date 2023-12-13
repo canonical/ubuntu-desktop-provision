@@ -16,8 +16,7 @@ import 'test_network.dart';
 void main() {
   testWidgets('selects the right connect mode on tap', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildNetworkPage(model: model)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model));
     await tester.pumpAndSettle();
 
     final ethernetTile = find.byType(EthernetRadioButton);
@@ -45,8 +44,8 @@ void main() {
 
   testWidgets('enables ethernet', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester.pumpWidget(tester
-        .buildApp((_) => buildNetworkPage(model: model, ethernet: false)));
+    await tester
+        .pumpApp((_) => buildNetworkPage(model: model, ethernet: false));
     await tester.pumpAndSettle();
 
     final context = tester.element(find.byType(NetworkPage));
@@ -60,8 +59,7 @@ void main() {
 
   testWidgets('enables wifi', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester.pumpWidget(
-        tester.buildApp((_) => buildNetworkPage(model: model, wifi: false)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model, wifi: false));
     await tester.pumpAndSettle();
 
     final context = tester.element(find.byType(NetworkPage));
@@ -75,8 +73,9 @@ void main() {
 
   testWidgets('selects wifi', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester.pumpWidget(tester.buildApp(
-        (_) => buildNetworkPage(model: model, ethernet: false, wifi: true)));
+    await tester.pumpApp(
+      (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),
+    );
     await tester.pumpAndSettle();
 
     final tile = find.listTile('ap').first;
@@ -95,8 +94,7 @@ void main() {
       isEnabled: true,
     );
 
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildNetworkPage(model: model)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model));
     await tester.pumpAndSettle();
 
     verify(model.init());
@@ -117,8 +115,7 @@ void main() {
 
   testWidgets('pre-selects ethernet', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester.pumpWidget(
-        tester.buildApp((_) => buildNetworkPage(model: model, ethernet: true)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model, ethernet: true));
     await tester.pumpAndSettle();
 
     final ethernetRadio = find.radio(ConnectMode.ethernet);
@@ -129,8 +126,7 @@ void main() {
 
   testWidgets('pre-selects wifi', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester.pumpWidget(
-        tester.buildApp((_) => buildNetworkPage(model: model, wifi: true)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model, wifi: true));
     await tester.pumpAndSettle();
 
     final wifiRadio = find.radio(ConnectMode.wifi);
@@ -141,8 +137,7 @@ void main() {
 
   testWidgets('pre-selects no connect', (tester) async {
     final model = NetworkModel(MockNetworkService());
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildNetworkPage(model: model)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model));
     await tester.pumpAndSettle();
 
     final noConnectRadio = find.radio(ConnectMode.none);
@@ -160,8 +155,7 @@ void main() {
       isEnabled: true,
     );
 
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildNetworkPage(model: model)));
+    await tester.pumpApp((_) => buildNetworkPage(model: model));
     await tester.pumpAndSettle();
 
     verify(model.init()).called(1);

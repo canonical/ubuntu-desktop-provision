@@ -3,10 +3,9 @@ import 'package:dartx/dartx.dart' hide IterableSorted, IterableLastOrNull;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
-
-export 'package:subiquity_client/subiquity_client.dart' show Disk, Partition;
 
 /// Provider for [GuidedResizeModel].
 final guidedResizeModelProvider = ChangeNotifierProvider((_) =>
@@ -107,8 +106,8 @@ class GuidedResizeModel extends SafeChangeNotifier {
   }
 
   /// Resizes the selected guided storage.
-  void resizeStorage(int size) {
-    size = size.clamp(minimumSize, maximumSize);
+  void resizeStorage(int newSize) {
+    final size = newSize.clamp(minimumSize, maximumSize);
     if (_currentSize == size) return;
     _currentSize = size;
     notifyListeners();

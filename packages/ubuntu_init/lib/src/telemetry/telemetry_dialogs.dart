@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
+import 'package:ubuntu_init/src/telemetry/telemetry_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'telemetry_l10n.dart';
-import 'telemetry_widgets.dart';
 
 Future<void> showTelemetryDialog(
   BuildContext context,
@@ -15,7 +14,7 @@ Future<void> showTelemetryDialog(
 }
 
 class TelemetryDialog extends StatelessWidget {
-  const TelemetryDialog({super.key, required this.data});
+  const TelemetryDialog({required this.data, super.key});
 
   final Stream<String> data;
 

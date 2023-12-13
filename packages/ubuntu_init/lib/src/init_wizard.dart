@@ -1,21 +1,19 @@
 import 'dart:async';
 
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_init/src/init_model.dart';
+import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'init_model.dart';
-import 'init_pages.dart';
 
 enum InitStep {
   locale,
   keyboard,
   network,
-  timezone,
   identity,
+  timezone,
   theme,
 }
 
@@ -25,28 +23,21 @@ class InitRoutes {
   static const String locale = '/locale';
   static const String keyboard = '/keyboard';
   static const String network = '/network';
-  static const String timezone = '/timezone';
   static const String identity = '/identity';
-  static const String theme = '/theme';
-  static const String telemetry = '/telemetry';
+  static const String ubuntuPro = '/ubuntuPro';
   static const String privacy = '/privacy';
-  static const String store = '/store';
+  static const String timezone = '/timezone';
+  static const String telemetry = '/telemetry';
+  static const String theme = '/theme';
 }
 
 class InitWizard extends ConsumerWidget {
-  InitWizard({
+  const InitWizard({
     super.key,
-    List<String>? pages,
     FutureOr<void> Function()? onDone,
-  })  : _pages = pages?.map((r) => r.removePrefix('/')).toSet(),
-        _onDone = onDone;
+  }) : _onDone = onDone;
 
-  final Set<String>? _pages;
   final FutureOr<void> Function()? _onDone;
-
-  bool _hasRoute(String route) {
-    return _pages?.contains(route.removePrefix('/')) ?? true;
-  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -83,13 +74,6 @@ class InitWizard extends ConsumerWidget {
           ),
           onLoad: (_) => NetworkPage.load(ref),
         ),
-        InitRoutes.timezone: WizardRoute(
-          builder: (_) => const TimezonePage(),
-          userData: WizardRouteData(
-            step: InitStep.timezone.index,
-          ),
-          onLoad: (_) => TimezonePage.load(context, ref),
-        ),
         InitRoutes.identity: WizardRoute(
           builder: (_) => const IdentityPage(),
           userData: WizardRouteData(
@@ -97,24 +81,34 @@ class InitWizard extends ConsumerWidget {
           ),
           onLoad: (_) => IdentityPage.load(ref),
         ),
+        InitRoutes.ubuntuPro: WizardRoute(
+          builder: (_) => const UbuntuProPage(),
+          userData: WizardRouteData(
+            step: InitStep.identity.index,
+          ),
+          onLoad: (_) => UbuntuProPage.load(ref),
+        ),
+        InitRoutes.privacy: WizardRoute(
+          builder: (_) => const PrivacyPage(),
+          onLoad: (_) => PrivacyPage.load(ref),
+        ),
+        InitRoutes.timezone: WizardRoute(
+          builder: (_) => const TimezonePage(),
+          userData: WizardRouteData(
+            step: InitStep.timezone.index,
+          ),
+          onLoad: (_) => TimezonePage.load(context, ref),
+        ),
+        InitRoutes.telemetry: WizardRoute(
+          builder: (_) => const TelemetryPage(),
+          onLoad: (_) => TelemetryPage.load(ref),
+        ),
         InitRoutes.theme: WizardRoute(
           builder: (_) => const ThemePage(),
           userData: WizardRouteData(
             step: InitStep.theme.index,
           ),
           onLoad: (_) => ThemePage.load(ref),
-        ),
-        InitRoutes.telemetry: WizardRoute(
-          builder: (_) => const TelemetryPage(),
-          onLoad: (_) => TelemetryPage.load(ref),
-        ),
-        InitRoutes.privacy: WizardRoute(
-          builder: (_) => const PrivacyPage(),
-          onLoad: (_) => PrivacyPage.load(ref),
-        ),
-        InitRoutes.store: WizardRoute(
-          builder: (_) => const StorePage(),
-          onLoad: (_) => StorePage.load(ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
@@ -126,7 +120,7 @@ class InitWizard extends ConsumerWidget {
       userData: WizardData(totalSteps: InitStep.values.length),
       predicate: (route) => switch (route) {
         InitRoutes.initial => true,
-        _ => _hasRoute(route) && ref.read(initModelProvider).hasRoute(route),
+        _ => ref.read(initModelProvider).hasRoute(route),
       },
     );
   }

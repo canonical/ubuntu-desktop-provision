@@ -4,8 +4,7 @@ import 'package:meta/meta.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-/// @internal
-final log = Logger('privacy');
+final _log = Logger('gnome_privacy_service');
 
 abstract class PrivacyService {
   Future<bool> isLocationEnabled();
@@ -30,26 +29,47 @@ class GnomePrivacyService implements PrivacyService {
   final GSettings _privacySettings;
 
   @override
-  Future<bool> isLocationEnabled() {
-    return _locationSettings.get('enabled').then((v) => v.asBoolean());
+  Future<bool> isLocationEnabled() async {
+    try {
+      return await _locationSettings.get('enabled').then((v) => v.asBoolean());
+    } on Exception catch (e) {
+      _log.error('Error getting location settings: $e');
+      return false;
+    }
   }
 
   @override
-  Future<void> setLocationEnabled(bool enabled) {
-    return _locationSettings.set('enabled', DBusBoolean(enabled));
+  Future<void> setLocationEnabled(bool enabled) async {
+    await setReportingEnabled(true);
+    try {
+      return await _locationSettings.set('enabled', DBusBoolean(enabled));
+    } on Exception catch (e) {
+      _log.error('Error setting location settings: $e');
+      return;
+    }
   }
 
   @override
-  Future<bool> isReportingEnabled() {
-    return _privacySettings
-        .get('report-technical-problems')
-        .then((v) => v.asBoolean());
+  Future<bool> isReportingEnabled() async {
+    try {
+      return await _privacySettings
+          .get('report-technical-problems')
+          .then((v) => v.asBoolean());
+    } on Exception catch (e) {
+      _log.error('Error getting privacy settings: $e');
+      return false;
+    }
   }
 
   @override
-  Future<void> setReportingEnabled(bool enabled) {
-    return _privacySettings.set(
-        'report-technical-problems', DBusBoolean(enabled));
+  Future<void> setReportingEnabled(bool enabled) async {
+    try {
+      return await _privacySettings.set(
+          'report-technical-problems', DBusBoolean(enabled));
+    } on Exception catch (e) {
+      _log.error('Error setting privacy settings: $e');
+      return;
+    }
   }
 
   @override

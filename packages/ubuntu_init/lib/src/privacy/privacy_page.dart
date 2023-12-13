@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ubuntu_init/src/privacy/privacy_l10n.dart';
+import 'package:ubuntu_init/src/privacy/privacy_model.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'privacy_l10n.dart';
-import 'privacy_model.dart';
 
 class PrivacyPage extends ConsumerWidget {
   const PrivacyPage({super.key});
@@ -26,12 +25,10 @@ class PrivacyPage extends ConsumerWidget {
         title: Text(l10n.privacyPageTitle),
       ),
       content: FractionallySizedBox(
-        alignment: Alignment.center,
         widthFactor: 0.5,
         child: Center(
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset('assets/privacy.svg', package: 'ubuntu_init'),
                 const SizedBox(height: 32),
@@ -44,7 +41,7 @@ class PrivacyPage extends ConsumerWidget {
                 const SizedBox(height: 32),
                 YaruSwitchListTile(
                   value: model.isLocationEnabled,
-                  onChanged: (value) => model.setLocationEnabled(value),
+                  onChanged: model.setLocationEnabled,
                   title: Text(l10n.privacyLocationEnable),
                 ),
                 const SizedBox(height: 32),

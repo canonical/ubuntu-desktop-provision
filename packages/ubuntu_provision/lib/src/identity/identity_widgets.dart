@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
+import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-import 'identity_l10n.dart';
-import 'identity_model.dart';
-
 class RealNameFormField extends ConsumerWidget {
-  const RealNameFormField({super.key, required this.fieldWidth});
+  const RealNameFormField({required this.fieldWidth, super.key});
 
   final double? fieldWidth;
 
@@ -182,7 +181,7 @@ class PasswordFormField extends ConsumerWidget {
 }
 
 class ConfirmPasswordFormField extends ConsumerWidget {
-  const ConfirmPasswordFormField({super.key, required this.fieldWidth});
+  const ConfirmPasswordFormField({required this.fieldWidth, super.key});
 
   final double? fieldWidth;
 
@@ -217,9 +216,9 @@ class ConfirmPasswordFormField extends ConsumerWidget {
 
 class ShowPasswordButton extends StatelessWidget {
   const ShowPasswordButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final bool value;
@@ -283,11 +282,11 @@ class UseActiveDirectoryCheckButton extends ConsumerWidget {
         ref.watch(identityModelProvider.select((model) => model.isConnected));
 
     return Visibility(
-      visible: hasActiveDirectorySupport != false,
+      visible: (hasActiveDirectorySupport ?? true) != false,
       child: YaruCheckButton(
         value: useActiveDirectory,
         title: Text(lang.identityActiveDirectoryOption),
-        onChanged: isConnected && hasActiveDirectorySupport == true
+        onChanged: isConnected && (hasActiveDirectorySupport ?? false)
             ? (v) => ref.read(identityModelProvider).useActiveDirectory = v!
             : null,
         subtitle: Text(

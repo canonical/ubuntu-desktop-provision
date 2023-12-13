@@ -3,19 +3,18 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_l10n.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_x.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import 'refresh_l10n.dart';
-import 'refresh_model.dart';
-import 'refresh_x.dart';
 
 String get snapName =>
     Platform.environment['SNAP_NAME'] ??
     p.basename(Platform.resolvedExecutable);
 
 class RefreshView extends StatelessWidget {
-  const RefreshView({super.key, required this.state, this.onRefresh});
+  const RefreshView({required this.state, super.key, this.onRefresh});
 
   final RefreshState state;
   final VoidCallback? onRefresh;
@@ -61,8 +60,8 @@ class RefreshView extends StatelessWidget {
 
 class RefreshBar extends StatelessWidget {
   const RefreshBar({
-    super.key,
     required this.state,
+    super.key,
     this.onSkip,
     this.onRestart,
   });

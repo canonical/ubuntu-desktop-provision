@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 
-import 'refresh_model.dart';
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 
 extension RefreshStateX on RefreshState {
   double? get progress => maybeWhen(

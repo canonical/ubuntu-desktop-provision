@@ -26,7 +26,7 @@ class RefreshModel extends ChangeNotifier {
   }
 
   @override
-  void dispose() async {
+  Future<void> dispose() async {
     await _stateChanged?.cancel();
     _stateChanged = null;
     super.dispose();

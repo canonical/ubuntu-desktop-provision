@@ -2,11 +2,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_provision/src/timezone/timezone_l10n.dart';
+import 'package:ubuntu_provision/src/timezone/timezone_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'timezone_l10n.dart';
-import 'timezone_model.dart';
 
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/38
 class TimezonePage extends ConsumerWidget {

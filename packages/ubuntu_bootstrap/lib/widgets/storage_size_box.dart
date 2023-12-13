@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -8,13 +7,13 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 /// Storage size entry with a spinbox and a data size unit dropdown.
 class StorageSizeBox extends StatelessWidget {
   const StorageSizeBox({
-    super.key,
     required this.size,
     required this.unit,
-    this.minimum = 0,
     required this.maximum,
     required this.onSizeChanged,
     required this.onUnitSelected,
+    super.key,
+    this.minimum = 0,
     this.autofocus = false,
     this.spacing = kWizardBarSpacing,
   });
@@ -68,7 +67,7 @@ class StorageSizeBox extends StatelessWidget {
           child: MenuButtonBuilder<DataUnit>(
             values: DataUnit.values,
             selected: unit,
-            onSelected: (value) => onUnitSelected(value),
+            onSelected: onUnitSelected,
             itemBuilder: (context, unit, _) {
               return Text(unit.l10n(context), key: ValueKey(unit));
             },
@@ -83,21 +82,5 @@ class StorageSizeBox extends StatelessWidget {
         const Spacer(),
       ],
     );
-  }
-}
-
-extension _DataUnitLocalizations on DataUnit {
-  String l10n(BuildContext context) {
-    final lang = UbuntuLocalizations.of(context);
-    switch (this) {
-      case DataUnit.bytes:
-        return lang.byte;
-      case DataUnit.kilobytes:
-        return lang.kilobyte;
-      case DataUnit.megabytes:
-        return lang.megabyte;
-      case DataUnit.gigabytes:
-        return lang.gigabyte;
-    }
   }
 }

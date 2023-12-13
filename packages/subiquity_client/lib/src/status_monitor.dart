@@ -3,13 +3,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:meta/meta.dart';
+import 'package:subiquity_client/src/endpoint.dart';
+import 'package:subiquity_client/src/types.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-import 'endpoint.dart';
-import 'types.dart';
-
-/// @internal
-final log = Logger('subiquity_status');
+final _log = Logger('subiquity_status');
 
 /// Background status monitor for subiquity.
 class SubiquityStatusMonitor {
@@ -21,7 +19,7 @@ class SubiquityStatusMonitor {
   StreamController<ApplicationStatus?>? _statusController;
   late final String _host;
 
-  /// Starts monitoring the status using the provided [socketPath].
+  /// Starts monitoring the status using the provided `socketPath`.
   Future<bool> start(Endpoint endpoint) async {
     _client.connectionFactory = (uri, proxyHost, proxyPort) async {
       return Socket.startConnect(endpoint.address, endpoint.port);
@@ -96,7 +94,7 @@ class SubiquityStatusMonitor {
 
   void _updateStatus(ApplicationStatus? status) {
     if (_status == status) return;
-    log.info('${_status?.state.name} => $status');
+    _log.info('${_status?.state.name} => $status');
     _status = status;
     if (_statusController?.isClosed == false) {
       _statusController!.add(status);

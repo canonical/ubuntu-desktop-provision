@@ -3,9 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-
-import 'connect_model.dart';
 
 abstract class NetworkDeviceModel<T extends NetworkDevice>
     extends SafeChangeNotifier
@@ -177,6 +176,7 @@ class NetworkDevice extends SafeChangeNotifier with PropertyStreamNotifier {
 
   @override
   String toString() =>
+      // ignore: no_runtimetype_tostring
       '$runtimeType(vendor: $vendor, model: $model, state: ${state.name})';
 
   final UdevService? _udev;

@@ -21,8 +21,7 @@ void main() {
   }
 
   testWidgets('no existing OS', (tester) async {
-    await tester
-        .pumpWidget(tester.buildApp((_) => buildPage(buildStorageModel())));
+    await tester.pumpApp((_) => buildPage(buildStorageModel()));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -37,7 +36,7 @@ void main() {
     final model = buildStorageModel(existingOS: [
       const OsProber(long: 'Ubuntu 18.04 LTS', label: 'Ubuntu', type: 'ext4')
     ]);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -53,7 +52,7 @@ void main() {
       const OsProber(long: 'Ubuntu 18.04 LTS', label: 'Ubuntu', type: 'ext4'),
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
     ]);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -71,7 +70,7 @@ void main() {
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
     ]);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -87,7 +86,7 @@ void main() {
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
     ]);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -111,7 +110,7 @@ void main() {
       ],
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -137,7 +136,7 @@ void main() {
       canInstallAlongside: false,
       hasBitLocker: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -163,7 +162,7 @@ void main() {
       ],
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -180,7 +179,7 @@ void main() {
       productInfo: ProductInfo(name: 'Ubuntu 22.10'),
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -211,7 +210,7 @@ void main() {
       ],
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -243,7 +242,7 @@ void main() {
       ],
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -280,7 +279,7 @@ void main() {
       ],
       canInstallAlongside: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -294,7 +293,7 @@ void main() {
 
   testWidgets('can erase disk', (tester) async {
     final model = buildStorageModel(canEraseDisk: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -308,7 +307,7 @@ void main() {
 
   testWidgets('cannot erase disk', (tester) async {
     final model = buildStorageModel(canEraseDisk: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -320,7 +319,7 @@ void main() {
 
   testWidgets('can manual partition', (tester) async {
     final model = buildStorageModel(type: StorageType.manual);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -335,7 +334,7 @@ void main() {
 
   testWidgets('cannot manual partition', (tester) async {
     final model = buildStorageModel(canManualPartition: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -362,8 +361,7 @@ void main() {
     });
 
     testWidgets('none selected', (tester) async {
-      final model =
-          buildStorageModel(guidedCapability: GuidedCapability.DIRECT);
+      final model = buildStorageModel();
       await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
 
       final context = tester.element(find.byType(StoragePage));
@@ -374,7 +372,7 @@ void main() {
 
     testWidgets('lvm selected', (tester) async {
       final model = buildStorageModel(guidedCapability: GuidedCapability.LVM);
-      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+      await tester.pumpApp((_) => buildPage(model));
 
       final context = tester.element(find.byType(StoragePage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -385,7 +383,7 @@ void main() {
     testWidgets('encrypted lvm selected', (tester) async {
       final model =
           buildStorageModel(guidedCapability: GuidedCapability.LVM_LUKS);
-      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+      await tester.pumpApp((_) => buildPage(model));
 
       final context = tester.element(find.byType(StoragePage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -396,7 +394,7 @@ void main() {
 
     testWidgets('zfs selected', (tester) async {
       final model = buildStorageModel(guidedCapability: GuidedCapability.ZFS);
-      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+      await tester.pumpApp((_) => buildPage(model));
 
       final context = tester.element(find.byType(StoragePage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -406,7 +404,7 @@ void main() {
 
     testWidgets('no advanced features', (tester) async {
       final model = buildStorageModel(hasAdvancedFeatures: false);
-      await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+      await tester.pumpApp((_) => buildPage(model));
 
       final context = tester.element(find.byType(StoragePage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -420,7 +418,7 @@ void main() {
         canEraseDisk: false,
         canInstallAlongside: false,
         canManualPartition: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
 
@@ -430,7 +428,7 @@ void main() {
 
   testWidgets('can erase disk', (tester) async {
     final model = buildStorageModel(canEraseDisk: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
 
@@ -440,7 +438,7 @@ void main() {
 
   testWidgets('can install alongside', (tester) async {
     final model = buildStorageModel(canInstallAlongside: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
 
@@ -450,7 +448,7 @@ void main() {
 
   testWidgets('can manual partition', (tester) async {
     final model = buildStorageModel(canManualPartition: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     await tester.tapNext();
     verify(model.save()).called(1);

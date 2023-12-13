@@ -1,3 +1,5 @@
+// ignore_for_file: unawaited_futures
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
@@ -49,7 +51,7 @@ void main() {
     await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.menuItem(PartitionFormat.btrfs.name!));
+    await tester.tap(find.menuItem(PartitionFormat.btrfs.name));
     await tester.pumpAndSettle();
 
     await tester.enterText(find.byType(YaruAutocomplete<String>), '/tst');
@@ -82,7 +84,10 @@ void main() {
     );
 
     showCreatePartitionDialog(
-        tester.element(find.byType(ManualStoragePage)), disk, gap);
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      gap,
+    );
     await tester.pumpAndSettle();
 
     await tester.enterText(find.byType(YaruAutocomplete<String>), '/tst foo');
@@ -138,7 +143,7 @@ void main() {
     await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.menuItem(PartitionFormat.btrfs.name!));
+    await tester.tap(find.menuItem(PartitionFormat.btrfs.name));
     await tester.pumpAndSettle();
 
     await tester.enterText(find.byType(YaruAutocomplete<String>), '/tst');

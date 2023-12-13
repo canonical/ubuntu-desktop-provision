@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'guided_resize_model.dart';
-import 'guided_resize_widgets.dart';
-import 'storage_split_view.dart';
 
 /// Install alongside other OSes.
 class GuidedResizePage extends ConsumerWidget {

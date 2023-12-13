@@ -23,7 +23,7 @@ class InstallerModel extends SafeChangeNotifier {
   StreamSubscription<RefreshState>? _refreshChange;
 
   ApplicationStatus? get status => _status;
-  bool get isInstalling => status?.isInstalling == true;
+  bool get isInstalling => status?.isInstalling ?? false;
   bool get isRefreshing => _refresh.state.busy;
 
   Future<void> init() async {

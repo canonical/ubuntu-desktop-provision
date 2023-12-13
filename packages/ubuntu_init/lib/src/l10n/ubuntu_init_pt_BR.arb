@@ -39,12 +39,6 @@
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Privacidade de Dados",
   "@privacyPolicyLink": {},
-  "storeTitle": "Ubuntu Store",
-  "@storeTitle": {},
-  "storeHeader": "Comece com mais aplicativos",
-  "@storeHeader": {},
-  "storeOpen": "Abrir App Store",
-  "@storeOpen": {},
   "welcomeStartSubtitle": "Suportando uma experiência de instalação mais limpa.",
   "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Novo visual da Loja de Aplicativos",
@@ -70,7 +64,5 @@
   "privacyLocationTitle": "Habilitar serviços de localização?",
   "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Informe aos aplicativos sua localização geográfica.\nVocê pode alterar isso a qualquer momento nas Configurações do Sistema.",
-  "@privacyLocationSubtitle": {},
-  "storeDescription": "A App Store do Ubuntu oferece uma variedade de aplicativos com os quais você pode começar desde o início.",
-  "@storeDescription": {}
+  "@privacyLocationSubtitle": {}
 }

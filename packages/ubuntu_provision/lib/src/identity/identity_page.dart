@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
+import 'package:ubuntu_provision/src/identity/identity_model.dart';
+import 'package:ubuntu_provision/src/identity/identity_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'identity_l10n.dart';
-import 'identity_model.dart';
-import 'identity_widgets.dart';
 
 // The horizontal indentation of the radio button.
 // const _kRadioButtonIndentation = 36.0;
 
 /// The installer page for setting up the user data.
 ///
-/// It uses [WizardPage] and [WizardAction] to create an installer page.
+/// It uses [WizardPage] and `WizardAction` to create an installer page.
 class IdentityPage extends ConsumerWidget {
   /// Creates a the installer page for setting up the user data.
   const IdentityPage({super.key});

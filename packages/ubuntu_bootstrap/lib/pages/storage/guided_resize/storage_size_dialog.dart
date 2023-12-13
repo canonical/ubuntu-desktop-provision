@@ -11,10 +11,10 @@ Future<int?> showStorageSizeDialog(
   BuildContext context, {
   required String title,
   required String? name,
-  String? path,
   required int initialSize,
   required int minimumSize,
   required int maximumSize,
+  String? path,
 }) {
   final unit = ValueNotifier(DataUnit.megabytes);
   final size = ValueNotifier(initialSize);
@@ -40,16 +40,16 @@ Future<int?> showStorageSizeDialog(
 
 class StorageSizeDialog extends StatelessWidget {
   const StorageSizeDialog({
-    super.key,
     required this.title,
     required this.name,
-    this.path,
     required this.size,
     required this.unit,
     required this.minimumSize,
     required this.maximumSize,
     required this.onSizeChanged,
     required this.onUnitSelected,
+    super.key,
+    this.path,
   });
 
   final String title;
@@ -132,22 +132,5 @@ class StorageSizeDialog extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-// TODO: share somewhere
-extension _DataUnitLocalizations on DataUnit {
-  String l10n(BuildContext context) {
-    final lang = UbuntuLocalizations.of(context);
-    switch (this) {
-      case DataUnit.bytes:
-        return lang.byte;
-      case DataUnit.kilobytes:
-        return lang.kilobyte;
-      case DataUnit.megabytes:
-        return lang.megabyte;
-      case DataUnit.gigabytes:
-        return lang.gigabyte;
-    }
   }
 }

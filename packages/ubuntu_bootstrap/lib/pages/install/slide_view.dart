@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'slide_transitions.dart';
+import 'package:ubuntu_bootstrap/pages/install/slide_transitions.dart';
 
 /// The default interval for automatic slide changes.
 const kDefaultSlideInterval = Duration(seconds: 25);
@@ -14,9 +14,9 @@ const kDefaultSlideInterval = Duration(seconds: 25);
 class SlideView extends StatefulWidget {
   /// Creates a slide show with the given slides and interval.
   SlideView({
-    super.key,
     required this.controller,
     required this.slides,
+    super.key,
     this.interval = kDefaultSlideInterval,
     this.wrap = false,
     this.autofocus = false,

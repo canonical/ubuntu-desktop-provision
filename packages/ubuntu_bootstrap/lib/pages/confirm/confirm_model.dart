@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 
@@ -57,7 +58,7 @@ class ConfirmModel extends SafeChangeNotifier {
     bool isPartitionModified(Partition p) {
       return p.wipe != null ||
           p.mount != null ||
-          p.resize == true ||
+          (p.resize ?? false) ||
           p.preserve == false;
     }
 

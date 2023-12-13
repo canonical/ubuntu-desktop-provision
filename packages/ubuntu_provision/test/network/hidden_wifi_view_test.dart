@@ -63,7 +63,7 @@ void main() {
 
     expect(find.byType(TextField), hasNoFocus);
 
-    await pumpHiddenWifiView(tester, model: model, expanded: true);
+    await pumpHiddenWifiView(tester, model: model);
     await tester.pumpAndSettle();
 
     expect(find.byType(TextField), hasFocus);

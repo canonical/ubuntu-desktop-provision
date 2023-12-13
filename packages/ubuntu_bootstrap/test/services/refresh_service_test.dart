@@ -23,19 +23,19 @@ void main() {
     expect(service.state, equals(const RefreshState.checking()));
 
     const available = RefreshStatus(availability: RefreshCheckState.AVAILABLE);
-    when(client.checkRefresh(wait: true)).thenAnswer((_) async => available);
+    when(client.checkRefresh()).thenAnswer((_) async => available);
     expect(await service.check(), equals(const RefreshState.status(available)));
     verify(client.checkRefresh()).called(1);
 
     const unavailable =
         RefreshStatus(availability: RefreshCheckState.UNAVAILABLE);
-    when(client.checkRefresh(wait: true)).thenAnswer((_) async => unavailable);
+    when(client.checkRefresh()).thenAnswer((_) async => unavailable);
     expect(
         await service.check(), equals(const RefreshState.status(unavailable)));
     verify(client.checkRefresh()).called(1);
 
     final error = Exception('err');
-    when(client.checkRefresh(wait: true)).thenThrow(error);
+    when(client.checkRefresh()).thenThrow(error);
     expect(await service.check(), equals(RefreshState.error(error)));
     verify(client.checkRefresh()).called(1);
   });

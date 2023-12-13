@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/ethernet_model.dart';
+import 'package:ubuntu_provision/src/network/network_l10n.dart';
+import 'package:ubuntu_provision/src/network/network_tile.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-import 'connect_model.dart';
-import 'ethernet_model.dart';
-import 'network_l10n.dart';
-import 'network_tile.dart';
-
 class EthernetRadioButton extends ConsumerWidget {
   const EthernetRadioButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -43,9 +42,9 @@ class EthernetRadioButton extends ConsumerWidget {
 
 class EthernetView extends ConsumerWidget {
   const EthernetView({
-    super.key,
     required this.expanded,
     required this.onEnabled,
+    super.key,
   });
 
   final bool expanded;

@@ -15,7 +15,7 @@ void main() {
 
   testWidgets('restart', (tester) async {
     final model = buildRstModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildRstPage(model)));
+    await tester.pumpApp((_) => buildRstPage(model));
 
     final context = tester.element(find.byType(RstPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -52,7 +52,7 @@ void main() {
         .thenAnswer((_) async => true);
     registerMockService<UrlLauncher>(urlLauncher);
 
-    await tester.pumpWidget(tester.buildApp((_) => buildRstPage(model)));
+    await tester.pumpApp((_) => buildRstPage(model));
 
     await tester.tapLink('help.ubuntu.com/rst');
 

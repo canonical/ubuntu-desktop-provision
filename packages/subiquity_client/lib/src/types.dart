@@ -1,3 +1,6 @@
+// TODO(Lukas): Rename enums to dart style
+// ignore_for_file: constant_identifier_names
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'types.freezed.dart';
@@ -536,6 +539,9 @@ class GuidedChoiceV2 with _$GuidedChoiceV2 {
     required GuidedCapability capability,
     String? password,
     RecoveryKey? recoveryKey,
+    // TODO(Lukas): Change `generator.py` to accommodate for putting the
+    // SizingPolicy parameter together with the other required parameters.
+    // ignore: always_put_required_named_parameters_first
     required SizingPolicy? sizingPolicy,
     @Default(false) bool resetPartition,
   }) = _GuidedChoiceV2;

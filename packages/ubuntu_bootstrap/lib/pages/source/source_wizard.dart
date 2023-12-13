@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_page.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_page.dart';
 import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-
-import 'not_enough_disk_space/not_enough_disk_space_page.dart';
-import 'source_page.dart';
 
 export 'not_enough_disk_space/not_enough_disk_space_page.dart';
 export 'source_page.dart';

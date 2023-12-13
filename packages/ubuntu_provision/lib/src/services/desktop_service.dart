@@ -5,8 +5,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_session/ubuntu_session.dart';
 
-/// @internal
-final log = Logger('desktop');
+final _log = Logger('desktop');
 
 /// An interface for accessing to desktop settings.
 abstract class DesktopService {
@@ -49,7 +48,7 @@ class GnomeService implements DesktopService {
   final restoreSettings = <Future<void> Function()>[];
 
   Future<void> _disableAutoMounting() async {
-    log.debug('Disabling automounting');
+    _log.debug('Disabling automounting');
     final previousAutoMount = await _mediaHandlingSettings.get('automount');
     final previousAutoMountOpen =
         await _mediaHandlingSettings.get('automount-open');
@@ -75,7 +74,7 @@ class GnomeService implements DesktopService {
   }
 
   Future<void> _disableScreenBlanking() async {
-    log.debug('Disabling screen blanking');
+    _log.debug('Disabling screen blanking');
     final previousValue = await _sessionSettings.get('idle-delay');
     await _sessionSettings.set('idle-delay', const DBusUint32(0));
     restoreSettings
@@ -83,7 +82,7 @@ class GnomeService implements DesktopService {
   }
 
   Future<void> _disableScreensaver() async {
-    log.debug('Disabling screensaver');
+    _log.debug('Disabling screensaver');
     final previousValue =
         await _screensaverSettings.get('idle-activation-enabled');
     await _screensaverSettings.set(
@@ -116,7 +115,7 @@ class GnomeService implements DesktopService {
 
   @override
   Future<void> close() async {
-    log.debug('Restoring desktop settings');
+    _log.debug('Restoring desktop settings');
     await Future.wait(restoreSettings.map((r) => r.call()));
     await _sessionSettings.close();
     await _screensaverSettings.close();

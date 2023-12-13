@@ -1,3 +1,5 @@
+// ignore_for_file: close_sinks
+
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -27,7 +29,7 @@ void main() async {
     controller.add(done);
     expect(model.state, equals(done));
 
-    model.dispose();
+    await model.dispose();
     expect(controller.hasListener, isFalse);
   });
 

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/connect_view.dart';
+import 'package:ubuntu_provision/src/network/ethernet_model.dart';
+import 'package:ubuntu_provision/src/network/ethernet_view.dart';
+import 'package:ubuntu_provision/src/network/hidden_wifi_model.dart';
+import 'package:ubuntu_provision/src/network/hidden_wifi_view.dart';
+import 'package:ubuntu_provision/src/network/network_l10n.dart';
+import 'package:ubuntu_provision/src/network/network_model.dart';
+import 'package:ubuntu_provision/src/network/wifi_model.dart';
+import 'package:ubuntu_provision/src/network/wifi_view.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'connect_model.dart';
-import 'connect_view.dart';
-import 'ethernet_model.dart';
-import 'ethernet_view.dart';
-import 'hidden_wifi_model.dart';
-import 'hidden_wifi_view.dart';
-import 'network_l10n.dart';
-import 'network_model.dart';
-import 'wifi_model.dart';
-import 'wifi_view.dart';
 
 export 'connect_model.dart' show ConnectMode;
 

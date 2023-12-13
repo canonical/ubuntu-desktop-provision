@@ -7,10 +7,10 @@ environment:
 
 dependencies:
   build_runner: ^2.2.0
-  mockito: 5.4.2
+  mockito: 5.4.3
   path: ^1.8.3
   subiquity_client: ^0.1.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.1.0
   test: any
+  ubuntu_lints: ^0.3.0

@@ -8,8 +8,6 @@
       "distro": {}
     }
   },
-  "storeHeader": "Començatz amb mai d’aplicacions",
-  "@storeHeader": {},
   "telemetryReportTitle": "Detalhs del rapòrt",
   "@telemetryReportTitle": {},
   "privacyPolicyLink": "Proteccion de las donadas",
@@ -29,8 +27,6 @@
   "@welcomeSecuritySubtitle": {},
   "privacyPageTitle": "Servicis de localizacion",
   "@privacyPageTitle": {},
-  "storeTitle": "Botiga Ubuntu",
-  "@storeTitle": {},
   "welcomePageHeader": "La benvenguda dins {distro}",
   "@welcomePageHeader": {},
   "privacyLocationEnable": "Servicis de localizacion",
@@ -48,8 +44,6 @@
   "@welcomeSecurityTitle": {},
   "telemetryReportLabel": "Detalhs del rapòrt",
   "@telemetryReportLabel": {},
-  "storeDescription": "La botiga d’aplicacions d’Ubuntu ofrís una seria d’aplicacions que podètz utilizar tre la debuta.",
-  "@storeDescription": {},
   "telemetryLabelOn": "Òc, partejar las donadas sistèma amb la còla de {distro}",
   "@telemetryLabelOn": {
     "type": "text",
@@ -61,8 +55,6 @@
   "@privacyLocationTitle": {},
   "welcomeStartTitle": "Un començament simplificat",
   "@welcomeStartTitle": {},
-  "storeOpen": "Dobrir la botiga d’aplicacions",
-  "@storeOpen": {},
   "telemetryPageTitle": "Telemetria",
   "@telemetryPageTitle": {},
   "privacyLocationSubtitle": "Permet que las aplicacions ajan accès a vòstre posicion geografica.\nO podètz cambiar quand volètz als Paramètres del sistèma.",

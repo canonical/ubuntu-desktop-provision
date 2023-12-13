@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:package_config/package_config.dart';
 import 'package:path/path.dart' as p;
 
-import 'common.dart';
+import 'package:subiquity_client/subiquity_server.dart';
 
 String? _subiquityPath;
 String? _socketPath;

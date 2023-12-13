@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'security_key_model.dart';
 
 class SecurityKeyFormField extends ConsumerWidget {
   const SecurityKeyFormField({super.key, this.fieldWidth});
@@ -38,7 +37,7 @@ class SecurityKeyFormField extends ConsumerWidget {
 }
 
 class ConfirmSecurityKeyFormField extends ConsumerWidget {
-  const ConfirmSecurityKeyFormField({super.key, required this.fieldWidth});
+  const ConfirmSecurityKeyFormField({required this.fieldWidth, super.key});
 
   final double? fieldWidth;
 

@@ -7,26 +7,13 @@ import 'package:ubuntu_provision/services.dart';
 
 import 'init_model_test.mocks.dart';
 
-@GenerateMocks([ArgResults, ConfigService])
+@GenerateMocks([ArgResults, PageConfigService])
 void main() {
-  test('init', () async {
-    final config = MockConfigService();
-    when(config.get('pages')).thenAnswer((_) async => null);
-
-    final args = MockArgResults();
-    when(args['pages']).thenReturn(null);
-
-    final model = InitModel(config: config, args: args);
-    await model.init();
-    verify(config.get('pages')).called(1);
-    verify(args['pages']).called(1);
-  });
-
   test('configured page array', () async {
-    final config = MockConfigService();
-    when(config.get('pages')).thenAnswer((_) async => ['a', '/b']);
+    final config = MockPageConfigService();
+    when(config.excludedPages).thenReturn({'c'});
 
-    final model = InitModel(config: config);
+    final model = InitModel(pageConfig: config);
     await model.init();
 
     expect(model.hasRoute('a'), isTrue);
@@ -37,17 +24,5 @@ void main() {
 
     expect(model.hasRoute('c'), isFalse);
     expect(model.hasRoute('/c'), isFalse);
-  });
-
-  test('configured page string', () async {
-    final config = MockConfigService();
-    when(config.get('pages')).thenAnswer((_) async => 'c, e');
-
-    final model = InitModel(config: config);
-    await model.init();
-
-    expect(model.hasRoute('c'), isTrue);
-    expect(model.hasRoute('d'), isFalse);
-    expect(model.hasRoute('e'), isTrue);
   });
 }

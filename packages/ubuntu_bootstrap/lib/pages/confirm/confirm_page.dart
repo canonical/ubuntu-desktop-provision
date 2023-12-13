@@ -3,14 +3,9 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'confirm_model.dart';
-
-/// @internal
-final log = Logger('confirm');
 
 class ConfirmPage extends ConsumerWidget {
   const ConfirmPage({super.key});
@@ -23,7 +18,7 @@ class ConfirmPage extends ConsumerWidget {
     final fullName = <String?>[
       disk.model,
       disk.vendor,
-    ].where((p) => p?.isNotEmpty == true).join(' ');
+    ].where((p) => p?.isNotEmpty ?? false).join(' ');
     return '$fullName <b>${disk.sysname}</b>';
   }
 
@@ -140,24 +135,26 @@ class _PartitionLabel extends StatelessWidget {
 
   String formatPartition(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    if (partition.resize == true) {
+    if (partition.resize ?? false) {
       return lang.confirmPartitionResize(
         partition.sysname,
         context.formatByteSize(original?.size ?? 0),
         context.formatByteSize(partition.size ?? 0),
       );
-    } else if (partition.wipe != null && partition.mount?.isNotEmpty == true) {
+    } else if (partition.wipe != null &&
+        (partition.mount?.isNotEmpty ?? false)) {
       return lang.confirmPartitionFormatMount(
         partition.sysname,
         partition.format ?? '',
         partition.mount ?? '',
       );
-    } else if (partition.wipe != null && partition.format?.isNotEmpty == true) {
+    } else if (partition.wipe != null &&
+        (partition.format?.isNotEmpty ?? false)) {
       return lang.confirmPartitionFormat(
         partition.sysname,
         partition.format ?? '',
       );
-    } else if (partition.mount?.isNotEmpty == true) {
+    } else if (partition.mount?.isNotEmpty ?? false) {
       return lang.confirmPartitionMount(
         partition.sysname,
         partition.mount ?? '',

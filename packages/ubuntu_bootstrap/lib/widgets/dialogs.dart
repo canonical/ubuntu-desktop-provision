@@ -42,5 +42,5 @@ Future<bool> showConfirmationDialog(
       );
     },
   );
-  return result == true;
+  return result ?? false;
 }

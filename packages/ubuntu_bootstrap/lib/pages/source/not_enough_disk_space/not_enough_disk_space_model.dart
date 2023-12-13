@@ -4,8 +4,7 @@ import 'package:ubuntu_bootstrap/services/storage_service.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-/// @internal
-final log = Logger('not_enough_disk_space');
+final _log = Logger('not_enough_disk_space');
 
 final notEnoughDiskSpaceModelProvider =
     ChangeNotifierProvider<NotEnoughDiskSpaceModel>(
@@ -21,7 +20,7 @@ class NotEnoughDiskSpaceModel extends SafeChangeNotifier {
 
   Future<bool> init() async {
     if (installMinimumSize > largestDiskSize) {
-      log.error(
+      _log.error(
           'Largest disk $largestDiskSize vs. min install size: $installMinimumSize');
       return true;
     }

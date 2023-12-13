@@ -4,14 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_dialogs.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_columns.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_table.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'manual_storage_dialogs.dart';
-import 'manual_storage_model.dart';
-import 'storage_columns.dart';
-import 'storage_table.dart';
-import 'storage_types.dart';
 
 class PartitionBar extends ConsumerWidget {
   const PartitionBar({super.key});
@@ -161,7 +160,7 @@ class _PartitionLabel extends StatelessWidget {
 }
 
 class PartitionTable extends ConsumerWidget {
-  const PartitionTable({super.key, required this.controller});
+  const PartitionTable({required this.controller, super.key});
 
   final AutoScrollController controller;
 
@@ -208,9 +207,10 @@ class PartitionButtonRow extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Tooltip(
-                  message: model.selectedGap?.tooManyPrimaryPartitions == true
-                      ? lang.tooManyPrimaryPartitions
-                      : '',
+                  message:
+                      (model.selectedGap?.tooManyPrimaryPartitions ?? false)
+                          ? lang.tooManyPrimaryPartitions
+                          : '',
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: BorderSide.none,
@@ -287,6 +287,6 @@ class PartitionButtonRow extends ConsumerWidget {
       );
       if (!confirmed) return;
     }
-    model.reformatDisk(disk);
+    await model.reformatDisk(disk);
   }
 }

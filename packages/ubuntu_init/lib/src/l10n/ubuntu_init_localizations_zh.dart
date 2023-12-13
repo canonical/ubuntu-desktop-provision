@@ -84,16 +84,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Data Privacy';
 
   @override
-  String get storeTitle => 'Ubuntu Store';
-
-  @override
-  String get storeHeader => 'Get started with more applications';
-
-  @override
-  String get storeDescription => 'Ubuntu\'s App Store offers a range of apps you can get started with from the get-go.';
-
-  @override
-  String get storeOpen => 'Open App Store';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -178,16 +169,4 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
 
   @override
   String get privacyPolicyLink => '隱私條款';
-
-  @override
-  String get storeTitle => 'Ubuntu Store';
-
-  @override
-  String get storeHeader => '取得更多應用程式';
-
-  @override
-  String get storeDescription => 'Ubuntu 的應用程式商店提供各種應用程式，供您立即安裝使用。';
-
-  @override
-  String get storeOpen => '開啟應用程式商店';
 }

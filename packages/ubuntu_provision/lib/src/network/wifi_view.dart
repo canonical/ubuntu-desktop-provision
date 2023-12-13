@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/network_l10n.dart';
+import 'package:ubuntu_provision/src/network/network_tile.dart';
+import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'connect_model.dart';
-import 'network_l10n.dart';
-import 'network_tile.dart';
-import 'wifi_model.dart';
 
 typedef OnWifiSelected = void Function(
   WifiDevice device,
@@ -17,9 +16,9 @@ typedef OnWifiSelected = void Function(
 
 class WifiRadioButton extends ConsumerWidget {
   const WifiRadioButton({
-    super.key,
     required this.value,
     required this.onChanged,
+    super.key,
   });
 
   final ConnectMode? value;
@@ -51,10 +50,10 @@ class WifiRadioButton extends ConsumerWidget {
 
 class WifiView extends ConsumerStatefulWidget {
   const WifiView({
-    super.key,
     required this.expanded,
     required this.onEnabled,
     required this.onSelected,
+    super.key,
   });
 
   final bool expanded;
@@ -114,8 +113,8 @@ class _WifiViewState extends ConsumerState<WifiView> {
 
 class WifiListView extends ConsumerWidget {
   const WifiListView({
-    super.key,
     required this.onSelected,
+    super.key,
   });
 
   final OnWifiSelected onSelected;
@@ -156,9 +155,9 @@ class WifiListView extends ConsumerWidget {
 
 class WifiListTile extends ConsumerWidget {
   const WifiListTile({
-    super.key,
     required this.selected,
     required this.onSelected,
+    super.key,
   });
 
   final bool selected;

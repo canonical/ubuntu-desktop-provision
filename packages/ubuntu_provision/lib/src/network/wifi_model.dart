@@ -7,11 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/src/network/connect_model.dart';
+import 'package:ubuntu_provision/src/network/network_device.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-
-import 'connect_model.dart';
-import 'network_device.dart';
 
 @visibleForTesting
 const kWifiScanInterval = Duration(seconds: 15);
@@ -30,13 +29,13 @@ class WifiModel extends NetworkDeviceModel<WifiDevice> {
   bool get canConnect => selectedDevice?._isConnected == false;
 
   @override
-  bool get isConnected => selectedDevice?._isConnected == true;
+  bool get isConnected => selectedDevice?._isConnected ?? false;
 
   @override
   bool get hasActiveConnection => devices.any((device) => device.isActive);
 
   @override
-  bool get isConnecting => selectedDevice?.isConnecting == true;
+  bool get isConnecting => selectedDevice?.isConnecting ?? false;
 
   @override
   bool get isEnabled => service.wirelessEnabled;
@@ -56,14 +55,14 @@ class WifiModel extends NetworkDeviceModel<WifiDevice> {
 
   @override
   Future<void> init() async {
-    super.init();
+    await super.init();
     addPropertyListener('WirelessEnabled', updateDevices);
   }
 
   @override
   Future<void> cleanup() async {
     stopPeriodicScanning();
-    super.cleanup();
+    return super.cleanup();
   }
 
   @override
@@ -289,9 +288,13 @@ class WifiDevice extends NetworkDevice {
     log.debug('Request scan: $this');
     _setScanning(true);
     _completer = Completer();
-    _completer!.future.timeout(kWifiScanTimeout, onTimeout: _cancelScan);
+    unawaited(
+      _completer!.future.timeout(kWifiScanTimeout, onTimeout: _cancelScan),
+    );
     if (!isAvailable) return;
-    _wireless.requestScan(ssids: ssids);
+    unawaited(
+      _wireless.requestScan(ssids: ssids),
+    );
     return _completer!.future;
   }
 

@@ -14,15 +14,13 @@ void main() {
     final ethernet = buildEthernetModel(isEnabled: false);
     final wifi = buildWifiModel(isEnabled: true);
 
-    await tester.pumpWidget(
-      tester.buildApp(
-        (_) => ProviderScope(
-          overrides: [
-            ethernetModelProvider.overrideWith((_) => ethernet),
-            wifiModelProvider.overrideWith((_) => wifi),
-          ],
-          child: NoConnectView(value: ConnectMode.none, onChanged: (_) {}),
-        ),
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          ethernetModelProvider.overrideWith((_) => ethernet),
+          wifiModelProvider.overrideWith((_) => wifi),
+        ],
+        child: NoConnectView(value: ConnectMode.none, onChanged: (_) {}),
       ),
     );
 

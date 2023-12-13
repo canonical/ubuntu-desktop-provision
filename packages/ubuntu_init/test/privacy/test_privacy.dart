@@ -3,7 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/src/privacy/privacy_model.dart';
 
 import 'test_privacy.mocks.dart';
-export '../test_init.dart';
+export '../test_utils.dart';
 export 'test_privacy.mocks.dart';
 
 @GenerateMocks([PrivacyModel])

@@ -6,8 +6,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 part 'refresh_service.freezed.dart';
 
-/// @internal
-final log = Logger('refresh');
+final _log = Logger('refresh');
 
 @freezed
 class RefreshState with _$RefreshState {
@@ -39,7 +38,7 @@ class RefreshService {
 
   void _setState(RefreshState state) {
     if (_state == state) return;
-    log.debug(state);
+    _log.debug(state);
     _state = state;
     _controller.add(state);
   }
@@ -55,8 +54,8 @@ class RefreshService {
   Future<RefreshState> check() async {
     try {
       _setState(const RefreshState.checking());
-      _setStatus(await _client.checkRefresh(wait: true));
-    } catch (e) {
+      _setStatus(await _client.checkRefresh());
+    } on Exception catch (e) {
       _setState(RefreshState.error(e));
     }
     return _state;
@@ -70,7 +69,7 @@ class RefreshService {
         if (_state.ready) {
           _setState(const RefreshState.done());
         }
-      } catch (e) {
+      } on Exception catch (_) {
         // subiquity restarted, consider the refresh done
         _setState(const RefreshState.done());
         return false;

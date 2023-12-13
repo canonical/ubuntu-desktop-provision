@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:xdg_directories/xdg_directories.dart' as xdg;
 
-import 'common.dart';
+import 'package:subiquity_client/subiquity_server.dart';
+import 'package:xdg_directories/xdg_directories.dart' as xdg;
 
 Future<int?> readPidFile() async {
   final file = pidFile();

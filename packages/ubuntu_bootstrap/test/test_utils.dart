@@ -9,10 +9,21 @@ import 'package:yaru/yaru.dart';
 export '../../ubuntu_provision/test/test_utils.mocks.dart';
 export 'test_utils.mocks.dart';
 
-extension InstallerTester on WidgetTester {
+extension WidgetTesterX on WidgetTester {
+  Future<void> pumpApp(WidgetBuilder builder) async {
+    return pumpWidget(buildApp(builder));
+  }
+
+  Future<void> pumpContainer(String name, WidgetBuilder builder) async {
+    return pumpWidget(
+      Container(key: ValueKey(name), child: buildApp(builder)),
+    );
+  }
+
   Widget buildApp(WidgetBuilder builder) {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
+
     return MaterialApp(
       localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
       theme: yaruLight,

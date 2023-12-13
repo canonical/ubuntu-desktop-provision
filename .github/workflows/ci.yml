@@ -16,10 +16,10 @@ jobs:
   flutter-analyze:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos analyze
 
@@ -32,10 +32,10 @@ jobs:
           - screenshot_test.dart
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: |
         sudo apt update
@@ -53,39 +53,13 @@ jobs:
       env:
         SUBIQUITY_REPLAY_TIMESCALE: 100
 
-  flutter-coverage:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        package:
-          - ubuntu_bootstrap
-          - ubuntu_init
-          - ubuntu_provision
-          - ubuntu_utils
-          - ubuntu_wizard
-      fail-fast: false
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - uses: asdf-vm/actions/install@v2
-    - uses: bluefireteam/melos-action@v2
-    - run: flutter test --coverage
-      working-directory: packages/${{matrix.package}}
-    - run: sudo apt update && sudo apt install lcov
-    - run: lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
-      working-directory: packages/${{matrix.package}}
-    - uses: codecov/codecov-action@v3
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
-
   flutter-format:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos format
 
@@ -98,10 +72,10 @@ jobs:
           - screenshot_test.dart
       fail-fast: false
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: sudo apt update
     - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
@@ -111,10 +85,10 @@ jobs:
   flutter-mocks:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos generate
     - name: Check for outdated mocks
@@ -133,10 +107,10 @@ jobs:
   l10n:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - run: melos gen-l10n
     - name: Check for outdated l10n
@@ -155,10 +129,10 @@ jobs:
   flutter-tests:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
-    - uses: asdf-vm/actions/install@v2
+    - uses: asdf-vm/actions/install@v3
     - uses: bluefireteam/melos-action@v2
     - name: Install dependencies
       run: |
@@ -172,6 +146,7 @@ jobs:
     - run: melos coverage
     - uses: codecov/codecov-action@v3
       with:
+        flags: UI
         token: ${{secrets.CODECOV_TOKEN}}
 
   go-sanity:
@@ -219,3 +194,4 @@ jobs:
         with:
           file: /tmp/coverage.out
           flags: provd
+          token: ${{secrets.CODECOV_TOKEN}}

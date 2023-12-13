@@ -23,7 +23,7 @@ void main() {
   testWidgets('not enough disk space', (tester) async {
     final model = buildNotEnoughDiskSpaceModel(
         largestDiskSize: 123456, installMinimumSize: 654321);
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(NotEnoughDiskSpacePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -35,7 +35,7 @@ void main() {
 
   testWidgets('quit', (tester) async {
     final model = buildNotEnoughDiskSpaceModel();
-    await tester.pumpWidget(tester.buildApp((_) => buildPage(model)));
+    await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(NotEnoughDiskSpacePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);

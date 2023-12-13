@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:stdlibc/stdlibc.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-final log = Logger('telemetry');
+final _log = Logger('telemetry');
 
 class TelemetryService {
   TelemetryService(this.path, {@visibleForTesting FileSystem? fs})
@@ -32,7 +32,7 @@ class TelemetryService {
     } else {
       await file.parent.create(recursive: true);
     }
-    log.debug('Writing report to $path');
+    _log.debug('Writing report to $path');
     return _writeMetrics(metrics);
   }
 
@@ -71,7 +71,7 @@ class TelemetryService {
       final file = _fs.file(path);
       await file.writeAsString(json.encode(metrics), flush: true);
     } on FileSystemException catch (e) {
-      log.error('Failed to write report to $path (${e.message})');
+      _log.error('Failed to write report to $path (${e.message})');
     }
   }
 }

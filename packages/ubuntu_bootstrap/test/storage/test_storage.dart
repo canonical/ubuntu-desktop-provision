@@ -51,10 +51,10 @@ StorageModel buildStorageModel({
   when(model.hasTpm).thenReturn(hasTpm ?? false);
   when(model.hasDd).thenReturn(hasDd ?? false);
   when(model.getAllTargets()).thenAnswer((_) => switch (scenario) {
-        SecureBootScenarios.supported => [Supported],
-        SecureBootScenarios.noTpm => [NoTpm],
-        SecureBootScenarios.bios => [Bios],
-        SecureBootScenarios.thirdPartyDrivers => [ThirdPartyDrivers],
+        SecureBootScenarios.supported => [supported],
+        SecureBootScenarios.noTpm => [noTpm],
+        SecureBootScenarios.bios => [bios],
+        SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
         _ => [],
       });
   return model;
@@ -70,15 +70,13 @@ enum SecureBootScenarios {
   thirdPartyDrivers,
 }
 
-const Supported = GuidedStorageTargetReformat(
+const supported = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
   allowed: [GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED],
-  disallowed: [],
 );
 
-const NoTpm = GuidedStorageTargetReformat(
+const noTpm = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
-  allowed: [],
   disallowed: [
     GuidedDisallowedCapability(
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
@@ -88,9 +86,8 @@ const NoTpm = GuidedStorageTargetReformat(
   ],
 );
 
-const Bios = GuidedStorageTargetReformat(
+const bios = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
-  allowed: [],
   disallowed: [
     GuidedDisallowedCapability(
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
@@ -99,9 +96,8 @@ const Bios = GuidedStorageTargetReformat(
   ],
 );
 
-const ThirdPartyDrivers = GuidedStorageTargetReformat(
+const thirdPartyDrivers = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
-  allowed: [],
   disallowed: [
     GuidedDisallowedCapability(
         capability: GuidedCapability.CORE_BOOT_UNENCRYPTED,

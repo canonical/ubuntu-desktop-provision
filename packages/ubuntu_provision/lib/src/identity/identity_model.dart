@@ -9,8 +9,7 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
-/// @internal
-final log = Logger('identity');
+final _log = Logger('identity');
 
 /// The regular expression pattern for valid usernames:
 /// - must start with a lowercase letter
@@ -164,9 +163,9 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
     _realName.value ??= identity.realname.orIfEmpty(null);
     _hostname.value ??= identity.hostname.orIfEmpty(null);
     _username.value ??= identity.username.orIfEmpty(null);
-    log.info('Loaded identity: $identity');
+    _log.info('Loaded identity: $identity');
     _productName.value = await _readProductName();
-    log.info('Read product name: ${_productName.value}');
+    _log.info('Read product name: ${_productName.value}');
 
     _autoLogin.value = identity.autoLogin;
     _hasActiveDirectorySupport.value = await _activeDirectory.hasSupport();
@@ -182,9 +181,9 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
       password: password,
       autoLogin: autoLogin,
     );
-    log.info('Saved identity: $identity');
+    _log.info('Saved identity: $identity');
 
-    _telemetry?.addMetric('UseActiveDirectory', useActiveDirectory);
+    await _telemetry?.addMetric('UseActiveDirectory', useActiveDirectory);
 
     await Future.wait([
       _service.setIdentity(identity),

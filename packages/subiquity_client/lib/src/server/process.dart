@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'package:path/path.dart' as p;
 
-import 'common.dart';
-import 'pidfile.dart';
+import 'package:path/path.dart' as p;
+import 'package:subiquity_client/src/server/pidfile.dart';
+import 'package:subiquity_client/subiquity_server.dart';
 
 // Prefer local curtin and probert python modules that are pinned to the
 // correct versions
@@ -59,29 +59,6 @@ Map<String, String> _pythonPath(String subiquityPath) {
 ///```
 ///
 class SubiquityProcess {
-  /// The program the process will run.
-  final String command;
-
-  /// The program arguments.
-  final List<String> args;
-
-  /// The process working directory
-  final String? workingDirectory;
-
-  /// The process environment variables.
-  final Map<String, String>? environment;
-
-  /// An optional future that must be awaited on before starting the server.
-  /// It may be used to prevent starting the server before a certain condition
-  /// is met or a certain event happens.
-  final Future<void>? deferStart;
-
-  /// An action one may want to take after calling [Process.start].
-  final Future<void> Function()? onProcessStart;
-
-  /// The process created by the [start] method.
-  Process? _serverProcess;
-
   SubiquityProcess(
     this.command,
     this.args, {
@@ -180,6 +157,29 @@ class SubiquityProcess {
       onProcessStart: onProcessStart,
     );
   }
+
+  /// The program the process will run.
+  final String command;
+
+  /// The program arguments.
+  final List<String> args;
+
+  /// The process working directory
+  final String? workingDirectory;
+
+  /// The process environment variables.
+  final Map<String, String>? environment;
+
+  /// An optional future that must be awaited on before starting the server.
+  /// It may be used to prevent starting the server before a certain condition
+  /// is met or a certain event happens.
+  final Future<void>? deferStart;
+
+  /// An action one may want to take after calling [Process.start].
+  final Future<void> Function()? onProcessStart;
+
+  /// The process created by the [start] method.
+  Process? _serverProcess;
 
   /// Starts the server.
   Future<void> start({

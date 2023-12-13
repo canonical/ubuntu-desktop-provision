@@ -11,8 +11,7 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
-/// @internal
-final log = Logger('keyboard');
+final _log = Logger('keyboard');
 
 final keyboardModelProvider =
     ChangeNotifierProvider((_) => KeyboardModel(getService<KeyboardService>()));
@@ -54,7 +53,7 @@ class KeyboardModel extends SafeChangeNotifier {
     if (_selectedLayoutIndex == index) return;
     _selectedLayoutIndex = index;
     _selectedVariantIndex = _selectedLayout!.variants.isNotEmpty ? variant : -1;
-    log.info(
+    _log.info(
         'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
     notifyListeners();
     await updateInputSource();
@@ -105,7 +104,7 @@ class KeyboardModel extends SafeChangeNotifier {
     assert(index > -1 && index < variantCount);
     if (_selectedVariantIndex == index) return;
     _selectedVariantIndex = index;
-    log.info(
+    _log.info(
         'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
     notifyListeners();
     await updateInputSource();
@@ -120,7 +119,7 @@ class KeyboardModel extends SafeChangeNotifier {
     _layouts = await _service.getKeyboard().then((keyboard) {
       return keyboard.layouts.sortedBy((a) => removeDiacritics(a.name));
     });
-    log.info('Loaded ${_layouts.length} keyboard layouts');
+    _log.info('Loaded ${_layouts.length} keyboard layouts');
     final keyboard = await _service.getKeyboard();
     _selectedLayoutIndex = _layouts.indexWhere((layout) {
       return layout.code == keyboard.setting.layout;
@@ -130,7 +129,7 @@ class KeyboardModel extends SafeChangeNotifier {
         return (variant.code) == (keyboard.setting.variant);
       });
     }
-    log.info(
+    _log.info(
         'Initialized ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
     notifyListeners();
   }
@@ -142,7 +141,7 @@ class KeyboardModel extends SafeChangeNotifier {
     final layout = _selectedLayout!.code;
     final variant = _selectedVariant?.code;
     final keyboard = KeyboardSetting(layout: layout, variant: variant ?? '');
-    log.info('Updated $layout ($variant) input source');
+    _log.info('Updated $layout ($variant) input source');
     return _service.setInputSource(
       keyboard,
       user: _platform.environment['USERNAME'] ?? _platform.environment['USER'],
@@ -154,7 +153,7 @@ class KeyboardModel extends SafeChangeNotifier {
     final layout = _selectedLayout!.code;
     final variant = _selectedVariant?.code;
     final keyboard = KeyboardSetting(layout: layout, variant: variant ?? '');
-    log.info('Saved $layout ($variant) keyboard layout');
+    _log.info('Saved $layout ($variant) keyboard layout');
     return _service.setKeyboard(keyboard);
   }
 }

@@ -15,7 +15,7 @@ void main() {
       confirmKey: 'key',
       areTextFieldsEnabled: true,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     final fields = find.widgetWithText(ValidatedFormField, 'key');
     expect(fields, findsNWidgets(2));
@@ -36,7 +36,7 @@ void main() {
 
   testWidgets('disabled input fields', (tester) async {
     final model = buildSecureBootModel(areTextFieldsEnabled: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     final fields = find.byType(ValidatedFormField);
     expect(fields, findsNWidgets(2));
@@ -46,7 +46,7 @@ void main() {
 
   testWidgets('empty security key', (tester) async {
     final model = buildSecureBootModel(securityKey: '');
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     expect(find.byType(SuccessIcon), findsNothing);
   });
@@ -54,7 +54,7 @@ void main() {
   testWidgets('don\'t install', (tester) async {
     final model =
         buildSecureBootModel(secureBootMode: SecureBootMode.dontInstall);
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     expect(find.radio(SecureBootMode.turnOff), isNotChecked);
     expect(find.radio(SecureBootMode.dontInstall), isChecked);
@@ -62,14 +62,14 @@ void main() {
 
   testWidgets('valid input', (tester) async {
     final model = buildSecureBootModel(isFormValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildSecureBootModel(isFormValid: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildSecureBootPage(model)));
+    await tester.pumpApp((_) => buildSecureBootPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });

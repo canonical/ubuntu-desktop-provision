@@ -84,14 +84,5 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Proteccion de las donadas';
 
   @override
-  String get storeTitle => 'Botiga Ubuntu';
-
-  @override
-  String get storeHeader => 'Començatz amb mai d’aplicacions';
-
-  @override
-  String get storeDescription => 'La botiga d’aplicacions d’Ubuntu ofrís una seria d’aplicacions que podètz utilizar tre la debuta.';
-
-  @override
-  String get storeOpen => 'Dobrir la botiga d’aplicacions';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 }

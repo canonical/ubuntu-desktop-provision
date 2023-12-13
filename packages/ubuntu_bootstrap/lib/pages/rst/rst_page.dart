@@ -3,14 +3,13 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'rst_model.dart';
 
 class RstPage extends ConsumerWidget {
   const RstPage({super.key});
@@ -77,7 +76,7 @@ class RstPage extends ConsumerWidget {
                           okElevated: true,
                         );
                         if (confirmed) {
-                          model.reboot().then((_) => window.close());
+                          await model.reboot().then((_) => window.close());
                         }
                       },
                       child: Text(

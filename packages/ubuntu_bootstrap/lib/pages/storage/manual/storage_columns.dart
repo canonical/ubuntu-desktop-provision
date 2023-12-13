@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:yaru_icons/yaru_icons.dart';
-
-import 'manual_storage_model.dart';
-import 'storage_types.dart';
 
 typedef DiskBuilder = Widget Function(BuildContext context, Disk disk);
 typedef GapBuilder = Widget Function(BuildContext context, Disk disk, Gap gap);
@@ -189,7 +188,7 @@ class StorageWipeColumn extends StorageColumn {
             return Consumer(builder: (context, ref, child) {
               final model = ref.read(manualStorageModelProvider);
               final config = model.originalConfig(partition);
-              final forceWipe = config?.mustWipe(partition.format) != false;
+              final forceWipe = config?.mustWipe(partition.format) ?? true;
               return Icon(
                 partition.isWiped || forceWipe
                     ? YaruIcons.checkbox_checked_filled

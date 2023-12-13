@@ -13,7 +13,7 @@ import 'test_identity.dart';
 void main() {
   testWidgets('real name input', (tester) async {
     final model = buildIdentityModel(realName: 'real name');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final textField = find.textField('real name');
     expect(textField, findsOneWidget);
@@ -23,7 +23,7 @@ void main() {
 
   testWidgets('host name input', (tester) async {
     final model = buildIdentityModel(hostname: 'host name');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final textField = find.textField('host name');
     expect(textField, findsOneWidget);
@@ -33,7 +33,7 @@ void main() {
 
   testWidgets('username input', (tester) async {
     final model = buildIdentityModel(username: 'username');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final textField = find.textField('username');
     expect(textField, findsOneWidget);
@@ -43,7 +43,7 @@ void main() {
 
   testWidgets('password input', (tester) async {
     final model = buildIdentityModel(password: 'password');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final textField = find.textField('password');
     expect(textField, findsOneWidget);
@@ -54,7 +54,7 @@ void main() {
   testWidgets('password confirmation', (tester) async {
     final model =
         buildIdentityModel(password: 'passwd', confirmedPassword: 'passwd');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final textField = find.textField('passwd');
     expect(textField, findsNWidgets(2));
@@ -67,7 +67,7 @@ void main() {
   testWidgets('password tab focus', (tester) async {
     final model =
         buildIdentityModel(password: 'passwd', confirmedPassword: 'confirm');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final passwordField = find.textField('passwd');
     expect(passwordField, findsOneWidget);
@@ -91,7 +91,7 @@ void main() {
 
   testWidgets('empty password', (tester) async {
     final model = buildIdentityModel(password: '');
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = UbuntuLocalizations.of(context);
@@ -107,7 +107,7 @@ void main() {
       password: 'not empty',
       passwordStrength: PasswordStrength.weak,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = UbuntuLocalizations.of(context);
@@ -120,7 +120,7 @@ void main() {
       password: 'not empty',
       passwordStrength: PasswordStrength.fair,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = UbuntuLocalizations.of(context);
@@ -133,7 +133,7 @@ void main() {
       password: 'not empty',
       passwordStrength: PasswordStrength.good,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = UbuntuLocalizations.of(context);
@@ -146,7 +146,7 @@ void main() {
       password: 'not empty',
       passwordStrength: PasswordStrength.strong,
     );
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = UbuntuLocalizations.of(context);
@@ -156,21 +156,21 @@ void main() {
 
   testWidgets('valid input', (tester) async {
     final model = buildIdentityModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('invalid input', (tester) async {
     final model = buildIdentityModel(isValid: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
   });
 
   testWidgets('auto-login', (tester) async {
     final model = buildIdentityModel(autoLogin: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
@@ -187,7 +187,7 @@ void main() {
 
   testWidgets('show password', (tester) async {
     final model = buildIdentityModel(showPassword: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
@@ -201,7 +201,7 @@ void main() {
 
   testWidgets('hide password', (tester) async {
     final model = buildIdentityModel(showPassword: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
@@ -215,7 +215,7 @@ void main() {
 
   testWidgets('save identity', (tester) async {
     final model = buildIdentityModel(isValid: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     await tester.tapNext();
     verify(model.save()).called(1);
@@ -224,7 +224,7 @@ void main() {
   testWidgets('has active directory support', (tester) async {
     final model =
         buildIdentityModel(isConnected: true, hasActiveDirectorySupport: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
@@ -241,7 +241,7 @@ void main() {
   testWidgets('no active directory support', (tester) async {
     final model =
         buildIdentityModel(isConnected: true, hasActiveDirectorySupport: false);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
@@ -253,7 +253,7 @@ void main() {
   testWidgets('no site-level connectivity', (tester) async {
     final model =
         buildIdentityModel(isConnected: false, hasActiveDirectorySupport: true);
-    await tester.pumpWidget(tester.buildApp((_) => buildIdentityPage(model)));
+    await tester.pumpApp((_) => buildIdentityPage(model));
 
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);

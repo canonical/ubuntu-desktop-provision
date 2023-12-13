@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class SlidePage<T> extends MaterialPage<T> {
   const SlidePage({
+    required super.child,
     super.key,
     super.name,
     super.arguments,
-    required super.child,
   });
 
   @override
@@ -74,8 +74,10 @@ class _SlideTransitions extends StatelessWidget {
   static final _easeInTween = CurveTween(curve: Curves.easeIn);
   static final _easeOutTween = CurveTween(curve: Curves.easeOutExpo);
 
-  final Animation<Offset> _position, _secondaryPosition;
-  final Animation<double> _opacity, _secondaryOpacity;
+  final Animation<Offset> _position;
+  final Animation<Offset> _secondaryPosition;
+  final Animation<double> _opacity;
+  final Animation<double> _secondaryOpacity;
   final Widget child;
 
   @override
