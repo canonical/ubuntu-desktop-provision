@@ -5,4 +5,3 @@ environment:
 
 dev_dependencies:
   melos: ^3.2.0
-  ubuntu_lints: ^0.1.0
