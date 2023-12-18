@@ -78,6 +78,8 @@ Future<void> runInstallerApp(
   );
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
+  tryRegisterService(
+      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
       pageConfig: tryGetService<PageConfigService>()));
@@ -88,8 +90,6 @@ Future<void> runInstallerApp(
       () => SubiquityLocaleService(getService<SubiquityClient>()));
   tryRegisterService<NetworkService>(
       () => SubiquityNetworkService(getService<SubiquityClient>()));
-  tryRegisterService(
-      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
@@ -137,6 +137,7 @@ Future<void> runInstallerApp(
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
+    await initialized;
 
     runApp(ProviderScope(
       child: SlidesContext(
@@ -182,17 +183,10 @@ Future<void> runInstallerApp(
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
-
-  return initialized;
 }
 
 Future<void> _initInstallerApp(Endpoint endpoint) async {
   getService<SubiquityClient>().open(endpoint);
-
-  await getService<InstallerService>().init();
-  await getService<DesktopService>().inhibit();
-  await getService<RefreshService>().check();
-  await getService<PageConfigService>().load();
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {
@@ -201,14 +195,21 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
     geo = GeoService(sources: [geodata, geoname]);
     registerServiceInstance(geo);
   }
-  await geo.init();
-
   final telemetry = getService<TelemetryService>();
-  await telemetry.init({
-    'Type': 'Flutter',
-    'OEM': false,
-    'Media': getService<ProductService>().getProductInfo().toString(),
-  });
+
+  final services = [
+    getService<InstallerService>().init(),
+    getService<DesktopService>().inhibit(),
+    getService<RefreshService>().check(),
+    getService<PageConfigService>().load(),
+    geo.init(),
+    telemetry.init({
+      'Type': 'Flutter',
+      'OEM': false,
+      'Media': getService<ProductService>().getProductInfo().toString(),
+    }),
+  ];
+  await Future.wait(services);
 }
 
 Future<bool> _closeInstallerApp() async {

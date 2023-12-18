@@ -122,7 +122,7 @@ class _InstallWizard extends ConsumerWidget {
       routes: <String, WizardRoute>{
         Routes.loading: WizardRoute(
           builder: (_) => const LoadingPage(),
-          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
+          onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
         ),
         ...preInstall,
         Routes.confirm: WizardRoute(
@@ -172,7 +172,7 @@ class _AutoinstallWizard extends ConsumerWidget {
             hasPrevious: false,
             hasNext: false,
           ),
-          onReplace: (_) => LoadingPage.init(ref).then((_) => null),
+          onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
         ),
         Routes.confirm: WizardRoute(
           builder: (_) => const ConfirmPage(),

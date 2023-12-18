@@ -47,7 +47,10 @@ import 'welcome/test_welcome.dart';
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
+  setUp(() {
+    YaruTestWindow.ensureInitialized(state: const YaruWindowState());
+    setupMockPageConfig();
+  });
 
   testWidgets('try ubuntu', (tester) async {
     final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));

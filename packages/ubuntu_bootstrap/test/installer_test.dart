@@ -18,7 +18,11 @@ import 'loading/test_loading.dart';
 import 'test_utils.dart';
 
 void main() {
-  setUpAll(YaruTestWindow.ensureInitialized);
+  setUp(() {
+    YaruTestWindow.ensureInitialized();
+    setupMockPageConfig();
+  });
+
   tearDown(resetAllServices);
 
   testWidgets('interactive installation', (tester) async {
