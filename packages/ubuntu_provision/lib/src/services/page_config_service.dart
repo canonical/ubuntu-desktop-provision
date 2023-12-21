@@ -9,6 +9,25 @@ part 'page_config_service.g.dart';
 
 final _log = Logger('page');
 
+class PageConfigService {
+  PageConfigService({ConfigService? config}) : _config = config;
+
+  final ConfigService? _config;
+  final Map<String, PageConfigEntry> pages = {};
+
+  Set<String> get excludedPages =>
+      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toSet();
+
+  Future<void> load() async {
+    final pageConfig = PageConfig.fromJson({
+      'pages': Map<String, dynamic>.from(
+        (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
+      )
+    });
+    pages.addAll(pageConfig.pages);
+  }
+}
+
 @freezed
 class PageConfigEntry with _$PageConfigEntry {
   const factory PageConfigEntry({
@@ -66,24 +85,5 @@ class PageConfigEntryConverter
       }
     }
     return objects;
-  }
-}
-
-class PageConfigService {
-  PageConfigService({ConfigService? config}) : _config = config;
-
-  final ConfigService? _config;
-  final Map<String, PageConfigEntry> pages = {};
-
-  Set<String> get excludedPages =>
-      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toSet();
-
-  Future<void> load() async {
-    final pageConfig = PageConfig.fromJson({
-      'pages': Map<String, dynamic>.from(
-        (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
-      )
-    });
-    pages.addAll(pageConfig.pages);
   }
 }
