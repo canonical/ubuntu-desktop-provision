@@ -38,7 +38,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Длитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
+  "telemetryDescription": "Делитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
