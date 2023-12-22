@@ -4,7 +4,7 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_l10n.dart';
 import 'package:ubuntu_provision/src/locale/locale_model.dart';
 import 'package:ubuntu_provision/src/providers/flavor.dart';
-import 'package:ubuntu_provision/widgets.dart';
+import 'package:ubuntu_provision/src/providers/page_images.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -23,6 +23,9 @@ class LocalePage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
+    final pageImages = ref.watch(pageImagesProvider);
+    print(pageImages.images);
+
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.localePageTitle(flavor.name)),
@@ -32,7 +35,7 @@ class LocalePage extends ConsumerWidget {
         child: Column(
           children: [
             const SizedBox(height: kWizardSpacing / 2),
-            const MascotAvatar(),
+            pageImages.get('locale'),
             const SizedBox(height: kWizardSpacing),
             Text(lang.localeHeader),
             const SizedBox(height: kWizardSpacing / 2),

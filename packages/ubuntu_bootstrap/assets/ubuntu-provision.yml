@@ -1,0 +1,29 @@
+pages:
+  locale:
+    image: "packages/ubuntu_provision/assets/mascot.png"
+    title: "some/key"
+    visible: true
+  welcome:
+    visible: false
+  rst:
+    image: "assets/storage/rst.svg"
+    title: "My Page Title"
+    visible: true
+  keyboard:
+    title: "Keyboard layout"
+    visible: true
+  network:
+    title: "Connect to a network"
+    visible: true
+  refresh:
+    title: "Applications and updates"
+    visible: true
+  source:
+    title: "Type of installation"
+    visible: true
+  secureBoot:
+    title: "My Page Title"
+    visible: true
+  storage:
+    title: "Ready to install"
+    visible: true
