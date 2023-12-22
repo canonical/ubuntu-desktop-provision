@@ -26,7 +26,7 @@ class PageImages {
     ColorMapper? colorMapper,
   }) svgFileLoader = SvgFileLoader.new;
 
-  @visibleForTesting
+  //@visibleForTesting
   final Map<String, Widget> images = {};
 
   Widget get(String pageName) =>
