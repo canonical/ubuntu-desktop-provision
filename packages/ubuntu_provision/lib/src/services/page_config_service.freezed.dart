@@ -138,7 +138,7 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PageConfigEntryImpl &&
@@ -295,7 +295,7 @@ class _$PageConfigImpl implements _PageConfig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PageConfigImpl &&
