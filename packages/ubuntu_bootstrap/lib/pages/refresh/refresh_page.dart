@@ -3,13 +3,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_widgets.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class RefreshPage extends ConsumerWidget {
+class RefreshPage extends ConsumerWidget with ProvisioningPage {
   const RefreshPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(refreshModelProvider).init();
   }
 

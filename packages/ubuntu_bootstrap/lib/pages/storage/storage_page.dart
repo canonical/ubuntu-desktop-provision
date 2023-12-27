@@ -13,10 +13,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 export 'storage_model.dart' show StorageType;
 
 /// Select between guided and manual partitioning.
-class StoragePage extends ConsumerWidget {
+class StoragePage extends ConsumerWidget with ProvisioningPage {
   const StoragePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(storageModelProvider.notifier).init().then((_) => true);
   }
 

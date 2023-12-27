@@ -5,15 +5,17 @@ import 'package:ubuntu_provision/src/locale/locale_l10n.dart';
 import 'package:ubuntu_provision/src/locale/locale_model.dart';
 import 'package:ubuntu_provision/src/providers/flavor.dart';
 import 'package:ubuntu_provision/src/providers/page_images.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class LocalePage extends ConsumerWidget {
+class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
-  static Future<bool> load(BuildContext context, WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(localeModelProvider);
     return model.init().then((_) => model.playWelcomeSound()).then((_) => true);
   }

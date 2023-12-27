@@ -13,10 +13,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'welcome_model.dart' show Option;
 
-class WelcomePage extends ConsumerWidget {
+class WelcomePage extends ConsumerWidget with ProvisioningPage {
   const WelcomePage({super.key});
 
-  static Future<bool> load(BuildContext context, WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return Future.wait([
       ref.read(welcomeModelProvider).init(),
       MascotAvatar.precacheAsset(context),

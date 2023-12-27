@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/connect_view.dart';
 import 'package:ubuntu_provision/src/network/ethernet_model.dart';
@@ -17,10 +18,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 export 'connect_model.dart' show ConnectMode;
 
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/30
-class NetworkPage extends ConsumerWidget {
+class NetworkPage extends ConsumerWidget with ProvisioningPage {
   const NetworkPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(networkModelProvider);
     model.addConnectMode(ref.read(ethernetModelProvider));
     model.addConnectMode(ref.read(wifiModelProvider));

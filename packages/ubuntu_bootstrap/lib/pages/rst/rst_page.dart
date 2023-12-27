@@ -11,10 +11,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class RstPage extends ConsumerWidget {
+class RstPage extends ConsumerWidget with ProvisioningPage {
   const RstPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(rstModelProvider).hasRst();
   }
 

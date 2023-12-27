@@ -15,6 +15,9 @@ class PageConfigService {
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
 
+  Set<String> get includedPages =>
+      pages.entries.where((e) => e.value.visible).map((e) => e.key).toSet();
+
   Set<String> get excludedPages =>
       pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toSet();
 
