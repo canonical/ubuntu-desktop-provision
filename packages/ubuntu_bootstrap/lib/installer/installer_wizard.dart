@@ -60,27 +60,26 @@ class _InstallWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pagesConfig = getService<PageConfigService>();
-    final preInstall = <String, WizardRoute>{
-      for (final pageName in pagesConfig.includedPages)
+    final pageConfig = ref.watch(pageConfigProvider);
+    final preInstallRoutes = <String, WizardRoute>{
+      for (final pageName in pageConfig.includedPages)
         routes[pageName]!:
             InstallationStep.fromName(pageName)!.toRoute(context, ref)!
     };
 
     return WizardBuilder(
       initialRoute: Routes.initial,
-      userData: WizardData(totalSteps: InstallationStep.values.length),
-      routes: <String, WizardRoute>{
+      userData: WizardData(totalSteps: preInstallRoutes.length),
+      routes: {
         Routes.loading: WizardRoute(
           builder: (_) => const LoadingPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
           onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
         ),
-        ...preInstall,
-        Routes.confirm: WizardRoute(
-          builder: (_) => const ConfirmPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
-          onLoad: (_) => const ConfirmPage().load(context, ref),
-        ),
+        ...preInstallRoutes,
         Routes.install: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),

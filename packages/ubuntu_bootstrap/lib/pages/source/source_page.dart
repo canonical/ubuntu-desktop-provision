@@ -12,6 +12,9 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 
+/// A page where the user can decide what type of installation that they would
+/// like to perform, and whether they want to install 3rd party drivers and
+/// codecs.
 class SourcePage extends ConsumerWidget with ProvisioningPage {
   const SourcePage({super.key});
 

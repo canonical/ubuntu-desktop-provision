@@ -6,8 +6,11 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 
 final confirmModelProvider = ChangeNotifierProvider(
-  (_) => ConfirmModel(getService<InstallerService>(),
-      getService<StorageService>(), getService<NetworkService>()),
+  (_) => ConfirmModel(
+    getService<InstallerService>(),
+    getService<StorageService>(),
+    getService<NetworkService>(),
+  ),
 );
 
 /// View model for [ConfirmPage].

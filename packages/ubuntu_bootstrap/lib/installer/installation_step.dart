@@ -19,17 +19,20 @@ enum InstallationStep {
   refresh(RefreshPage.new),
   source(SourcePage.new),
   secureBoot(SecureBootPage.new),
-  storage(StoragePage.new);
+  storage(StoragePage.new),
+  confirm(ConfirmPage.new);
 
   const InstallationStep(this.pageFactory);
 
   final ProvisioningPage Function() pageFactory;
 
   WizardRoute? toRoute(BuildContext context, WidgetRef ref) {
+    final pageConfig = ref.watch(pageConfigProvider);
+    final includedIndex = pageConfig.includedPages.indexOf(name);
     final page = pageFactory();
     return WizardRoute(
       builder: (_) => page,
-      userData: WizardRouteData(step: index),
+      userData: WizardRouteData(step: includedIndex),
       onLoad: (_) => page.load(context, ref),
     );
   }
