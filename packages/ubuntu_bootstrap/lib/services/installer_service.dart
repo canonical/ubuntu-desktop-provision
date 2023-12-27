@@ -37,7 +37,7 @@ class InstallerService {
   Future<void> load() async {
     await monitorStatus().firstWhere((s) => s?.isLoading == false);
     _subiquityPages = (await _client.getInteractiveSections())?.toSet();
-    _excludedPages = _pageConfig?.excludedPages;
+    _excludedPages = _pageConfig?.excludedPages.toSet();
 
     final requiredExcludedPages =
         _excludedPages?.intersection(_subiquityPages ?? {});

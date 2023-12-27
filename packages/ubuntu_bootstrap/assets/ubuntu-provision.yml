@@ -16,14 +16,17 @@ pages:
     title: "Connect to a network"
     visible: true
   refresh:
-    title: "Applications and updates"
+    title: "Update available"
     visible: true
   source:
     title: "Type of installation"
     visible: true
   secureBoot:
-    title: "My Page Title"
+    title: "Configure Secure Boot"
     visible: true
   storage:
+    title: "Ready to install"
+    visible: true
+  confirm:
     title: "Ready to install"
     visible: true

@@ -7,6 +7,8 @@ import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+/// A page to let the user know that the installer has a newer version
+/// available that can be installed.
 class RefreshPage extends ConsumerWidget with ProvisioningPage {
   const RefreshPage({super.key});
 
