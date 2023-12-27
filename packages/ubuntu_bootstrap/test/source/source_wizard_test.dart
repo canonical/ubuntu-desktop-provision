@@ -126,7 +126,7 @@ extension on WidgetTester {
                   ),
                   Routes.source: WizardRoute(
                     builder: (_) => const SourceWizard(),
-                    onLoad: (_) => SourcePage.load(ref),
+                    onLoad: (_) => const SourcePage().load(context, ref),
                   ),
                   '/last': WizardRoute(
                     builder: (context) => WizardPage(

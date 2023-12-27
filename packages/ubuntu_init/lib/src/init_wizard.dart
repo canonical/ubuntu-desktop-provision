@@ -41,6 +41,7 @@ class InitWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // TODO(Lukas): Create init_step.dart, like installation_step.dart
     return WizardBuilder(
       routes: {
         // TODO: loading screen?
@@ -58,21 +59,21 @@ class InitWizard extends ConsumerWidget {
           userData: WizardRouteData(
             step: InitStep.locale.index,
           ),
-          onLoad: (_) => LocalePage.load(context, ref),
+          onLoad: (_) => const LocalePage().load(context, ref),
         ),
         InitRoutes.keyboard: WizardRoute(
           builder: (_) => const KeyboardPage(),
           userData: WizardRouteData(
             step: InitStep.keyboard.index,
           ),
-          onLoad: (_) => KeyboardPage.load(ref),
+          onLoad: (_) => const KeyboardPage().load(context, ref),
         ),
         InitRoutes.network: WizardRoute(
           builder: (_) => const NetworkPage(),
           userData: WizardRouteData(
             step: InitStep.network.index,
           ),
-          onLoad: (_) => NetworkPage.load(ref),
+          onLoad: (_) => const NetworkPage().load(context, ref),
         ),
         InitRoutes.identity: WizardRoute(
           builder: (_) => const IdentityPage(),

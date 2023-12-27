@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
@@ -10,6 +10,7 @@ import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_page.da
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 export 'bitlocker/bitlocker_page.dart';
@@ -21,11 +22,12 @@ export 'security_key/security_key_page.dart';
 export 'storage_page.dart';
 export 'storage_routes.dart';
 
-class StorageWizard extends ConsumerWidget {
+class StorageWizard extends ConsumerWidget with ProvisioningPage {
   const StorageWizard({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
-    return StoragePage.load(ref);
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
+    return const StoragePage().load(context, ref);
   }
 
   @override
@@ -35,7 +37,7 @@ class StorageWizard extends ConsumerWidget {
     final routes = {
       Navigator.defaultRouteName: WizardRoute(
         builder: (_) => const StoragePage(),
-        userData: WizardRouteData(step: InstallationStep.type.index),
+        userData: WizardRouteData(step: InstallationStep.secureBoot.index),
       ),
       if (type != StorageType.manual)
         StorageRoutes.bitlocker: WizardRoute(
