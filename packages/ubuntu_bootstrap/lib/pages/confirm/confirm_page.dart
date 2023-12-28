@@ -16,6 +16,10 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
     return ref.read(confirmModelProvider).init().then((_) => true);
   }
 
+  static Future<bool> loadStatic(WidgetRef ref) {
+    return ref.read(confirmModelProvider).init().then((_) => true);
+  }
+
   String prettyFormatDisk(Disk disk) {
     final fullName = <String?>[
       disk.model,
@@ -52,7 +56,9 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
             child: YaruBorderContainer(
               color: Theme.of(context).colorScheme.surface,
               padding: EdgeInsets.symmetric(
-                  horizontal: kWizardPadding.left, vertical: 10),
+                horizontal: kWizardPadding.left,
+                vertical: 10,
+              ),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
