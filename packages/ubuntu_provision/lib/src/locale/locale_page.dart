@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_provision/src/locale/locale_l10n.dart';
-import 'package:ubuntu_provision/src/locale/locale_model.dart';
-import 'package:ubuntu_provision/src/providers/flavor.dart';
-import 'package:ubuntu_provision/src/providers/page_images.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -26,7 +21,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
     final pageImages = ref.watch(pageImagesProvider);
-    print(pageImages.images);
 
     return WizardPage(
       title: YaruWindowTitleBar(

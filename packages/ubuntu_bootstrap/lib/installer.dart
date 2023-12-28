@@ -137,7 +137,7 @@ Future<void> runInstallerApp(
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
-  final initializeSubiquity = getService<SubiquityServer>().start(args: [
+  final initialized = getService<SubiquityServer>().start(args: [
     if (options['dry-run-config'] != null)
       '--dry-run-config=${options['dry-run-config']}',
     if (options['machine-config'] != null)
@@ -160,8 +160,7 @@ Future<void> runInstallerApp(
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
-
-    final endpoint = await initializeSubiquity;
+    final endpoint = await initialized;
     await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(

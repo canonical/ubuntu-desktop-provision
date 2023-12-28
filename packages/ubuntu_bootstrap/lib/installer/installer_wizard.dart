@@ -2,6 +2,7 @@ import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/routes.dart';
@@ -9,8 +10,6 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-import 'installation_step.dart';
 
 class InstallerWizard extends ConsumerStatefulWidget {
   const InstallerWizard({
