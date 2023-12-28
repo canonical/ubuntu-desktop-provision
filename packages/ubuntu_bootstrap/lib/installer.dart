@@ -137,7 +137,7 @@ Future<void> runInstallerApp(
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
-  final initialized = getService<SubiquityServer>().start(args: [
+  final initializeSubiquity = getService<SubiquityServer>().start(args: [
     if (options['dry-run-config'] != null)
       '--dry-run-config=${options['dry-run-config']}',
     if (options['machine-config'] != null)
@@ -147,7 +147,7 @@ Future<void> runInstallerApp(
     '--storage-version=2',
     '--dry-run-config=examples/dry-run-configs/tpm.yaml',
     ...options.rest,
-  ]).then(_initInstallerApp);
+  ]);
 
   await runZonedGuarded(() async {
     FlutterError.onError = (error) {
@@ -160,7 +160,9 @@ Future<void> runInstallerApp(
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
-    await initialized;
+
+    final endpoint = await initializeSubiquity;
+    await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
       child: SlidesContext(
