@@ -79,28 +79,37 @@ Future<void> runInstallerApp(
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService(
-      () => PageConfigService(config: tryGetService<ConfigService>()));
-  tryRegisterService<InstallerService>(() => InstallerService(
+    () => PageConfigService(config: tryGetService<ConfigService>()),
+  );
+  tryRegisterService<InstallerService>(
+    () => InstallerService(
       getService<SubiquityClient>(),
-      pageConfig: tryGetService<PageConfigService>()));
+      pageConfig: tryGetService<PageConfigService>(),
+    ),
+  );
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
-      () => SubiquityKeyboardService(getService<SubiquityClient>()));
+    () => SubiquityKeyboardService(getService<SubiquityClient>()),
+  );
   tryRegisterService<LocaleService>(
-      () => SubiquityLocaleService(getService<SubiquityClient>()));
+    () => SubiquityLocaleService(getService<SubiquityClient>()),
+  );
   tryRegisterService<NetworkService>(
-      () => SubiquityNetworkService(getService<SubiquityClient>()));
+    () => SubiquityNetworkService(getService<SubiquityClient>()),
+  );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
   tryRegisterService<SessionService>(
-      () => SubiquitySessionService(getService<SubiquityClient>()));
+    () => SubiquitySessionService(getService<SubiquityClient>()),
+  );
   if (liveRun) tryRegisterService(SoundService.new);
   tryRegisterService(() => StorageService(getService<SubiquityClient>()));
   tryRegisterService(SubiquityClient.new);
   tryRegisterService(
-      () => SubiquityServer(process: process, endpoint: endpoint));
+    () => SubiquityServer(process: process, endpoint: endpoint),
+  );
   tryRegisterService<TelemetryService>(() {
     var path = '/var/log/installer/telemetry';
     if (kDebugMode) {
@@ -110,7 +119,8 @@ Future<void> runInstallerApp(
     return TelemetryService(path);
   });
   tryRegisterService<ThemeVariantService>(
-      () => ThemeVariantService(config: tryGetService<ConfigService>()));
+    () => ThemeVariantService(config: tryGetService<ConfigService>()),
+  );
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
