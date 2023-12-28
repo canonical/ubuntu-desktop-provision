@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:args/args.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -35,21 +34,33 @@ Future<void> runInstallerApp(
   Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final options = parseCommandLine(args, onPopulateOptions: (parser) {
-    parser.addOption('config',
-        valueHelp: 'path', help: 'Path to a config file');
-    parser.addFlag('dry-run',
-        defaultsTo: Platform.environment['LIVE_RUN'] != '1',
-        help: 'Run Subiquity server in dry-run mode');
-    parser.addOption('dry-run-config',
-        valueHelp: 'path', help: 'Path of the dry-run config file');
-    parser.addOption('machine-config',
-        valueHelp: 'path',
-        defaultsTo: 'examples/machines/simple.json',
-        help: 'Path of the machine config (dry-run only)');
-    parser.addOption('source-catalog',
-        valueHelp: 'path',
-        defaultsTo: 'examples/sources/desktop.yaml',
-        help: 'Path of the source catalog (dry-run only)');
+    parser.addOption(
+      'config',
+      valueHelp: 'path',
+      help: 'Path to a config file',
+    );
+    parser.addFlag(
+      'dry-run',
+      defaultsTo: Platform.environment['LIVE_RUN'] != '1',
+      help: 'Run Subiquity server in dry-run mode',
+    );
+    parser.addOption(
+      'dry-run-config',
+      valueHelp: 'path',
+      help: 'Path of the dry-run config file',
+    );
+    parser.addOption(
+      'machine-config',
+      valueHelp: 'path',
+      defaultsTo: 'examples/machines/simple.json',
+      help: 'Path of the machine config (dry-run only)',
+    );
+    parser.addOption(
+      'source-catalog',
+      valueHelp: 'path',
+      defaultsTo: 'examples/sources/desktop.yaml',
+      help: 'Path of the source catalog (dry-run only)',
+    );
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
@@ -72,45 +83,57 @@ Future<void> runInstallerApp(
   final baseName = p.basename(Platform.resolvedExecutable);
 
   // conditional registration if not already registered by flavors or tests
-  tryRegisterServiceInstance<ArgResults>(options);
-  tryRegisterService<ConfigService>(
+  tryRegisterServiceInstance(options);
+  tryRegisterService(
     () => ConfigService(path: options['config'] as String?),
   );
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
-  tryRegisterService<InstallerService>(() => InstallerService(
-      getService<SubiquityClient>(),
-      pageConfig: tryGetService<PageConfigService>()));
-  tryRegisterService(JournalService.new);
-  tryRegisterService<KeyboardService>(
-      () => SubiquityKeyboardService(getService<SubiquityClient>()));
-  tryRegisterService<LocaleService>(
-      () => SubiquityLocaleService(getService<SubiquityClient>()));
-  tryRegisterService<NetworkService>(
-      () => SubiquityNetworkService(getService<SubiquityClient>()));
   tryRegisterService(
-      () => PageConfigService(config: tryGetService<ConfigService>()));
+    () => InstallerService(
+      getService<SubiquityClient>(),
+      pageConfig: tryGetService<PageConfigService>(),
+    ),
+  );
+  tryRegisterService(JournalService.new);
+  tryRegisterService(
+    () => SubiquityKeyboardService(getService<SubiquityClient>()),
+  );
+  tryRegisterService(
+    () => SubiquityLocaleService(getService<SubiquityClient>()),
+  );
+  tryRegisterService(
+    () => SubiquityNetworkService(getService<SubiquityClient>()),
+  );
+  tryRegisterService(
+    () => PageConfigService(config: tryGetService<ConfigService>()),
+  );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
-  tryRegisterService<SessionService>(
-      () => SubiquitySessionService(getService<SubiquityClient>()));
+  tryRegisterService(
+    () => SubiquitySessionService(getService<SubiquityClient>()),
+  );
   if (liveRun) tryRegisterService(SoundService.new);
   tryRegisterService(() => StorageService(getService<SubiquityClient>()));
   tryRegisterService(SubiquityClient.new);
   tryRegisterService(
-      () => SubiquityServer(process: process, endpoint: endpoint));
-  tryRegisterService<TelemetryService>(() {
-    var path = '/var/log/installer/telemetry';
+    () => SubiquityServer(process: process, endpoint: endpoint),
+  );
+  tryRegisterService(() {
+    final String path;
     if (kDebugMode) {
       final exe = Platform.resolvedExecutable;
       path = '${p.dirname(exe)}/.${p.basename(exe)}/telemetry';
+    } else {
+      path = '/var/log/installer/telemetry';
     }
     return TelemetryService(path);
   });
-  tryRegisterService<ThemeVariantService>(
-      () => ThemeVariantService(config: tryGetService<ConfigService>()));
+  tryRegisterService(
+    () => ThemeVariantService(config: tryGetService<ConfigService>()),
+  );
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
