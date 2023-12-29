@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/theme/theme_l10n.dart';
 import 'package:ubuntu_provision/src/theme/theme_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class ThemePage extends ConsumerWidget {
+class ThemePage extends ConsumerWidget with ProvisioningPage {
   const ThemePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(themeModelProvider).init();
   }
 
