@@ -7,6 +7,7 @@ import 'package:ubuntu_init/l10n.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
+import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -125,10 +126,10 @@ void main() {
 
   testWidgets('pages', (tester) async {
     final initModel = buildInitModel(pages: [
-      InitRoutes.locale,
-      InitRoutes.keyboard,
-      InitRoutes.identity,
-      InitRoutes.theme,
+      Routes.locale,
+      Routes.keyboard,
+      Routes.identity,
+      Routes.theme,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();

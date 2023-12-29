@@ -1,0 +1,32 @@
+pages:
+  welcome:
+    title: "Welcome"
+    visible: true
+  locale:
+    image: "packages/ubuntu_provision/assets/mascot.png"
+    title: "Welcome to Ubuntu"
+    visible: true
+  keyboard:
+    title: "Keyboard layout"
+    visible: true
+  network:
+    title: "Connect to a network"
+    visible: true
+  identity:
+    title: "Set up your account"
+    visible: false
+  ubuntuPro:
+    title: "Ubuntu Pro"
+    visible: true
+  privacy:
+    title: "Location services"
+    visible: true
+  timezone:
+    title: "Select your timezone"
+    visible: true
+  telemetry:
+    title: "Telemetry"
+    visible: true
+  theme:
+    title: "Choose your theme"
+    visible: true

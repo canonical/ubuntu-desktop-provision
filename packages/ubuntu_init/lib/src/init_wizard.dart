@@ -3,33 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/init_model.dart';
-import 'package:ubuntu_init/src/init_pages.dart';
+import 'package:ubuntu_init/src/init_step.dart';
+import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
-
-enum InitStep {
-  locale,
-  keyboard,
-  network,
-  identity,
-  timezone,
-  theme,
-}
-
-class InitRoutes {
-  static const String initial = '/';
-  static const String welcome = '/welcome';
-  static const String locale = '/locale';
-  static const String keyboard = '/keyboard';
-  static const String network = '/network';
-  static const String identity = '/identity';
-  static const String ubuntuPro = '/ubuntuPro';
-  static const String privacy = '/privacy';
-  static const String timezone = '/timezone';
-  static const String telemetry = '/telemetry';
-  static const String theme = '/theme';
-}
 
 class InitWizard extends ConsumerWidget {
   const InitWizard({
@@ -41,88 +19,39 @@ class InitWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // TODO(Lukas): Create init_step.dart, like installation_step.dart
+    final pageConfig = ref.watch(pageConfigProvider);
+    final routes = <String, WizardRoute>{
+      for (final pageName in pageConfig.includedPages)
+        Routes.routeMap[pageName]!:
+            InitStep.fromName(pageName)!.toRoute(context, ref)!
+    };
+
     return WizardBuilder(
       routes: {
-        // TODO: loading screen?
-        InitRoutes.initial: WizardRoute(
+        Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) =>
               ref.read(initModelProvider).init().then((_) => null),
         ),
-        InitRoutes.welcome: WizardRoute(
-          builder: (_) => const WelcomePage(),
-          onLoad: (_) => WelcomePage.load(ref),
-        ),
-        InitRoutes.locale: WizardRoute(
-          builder: (_) => const LocalePage(),
-          userData: WizardRouteData(
-            step: InitStep.locale.index,
-          ),
-          onLoad: (_) => const LocalePage().load(context, ref),
-        ),
-        InitRoutes.keyboard: WizardRoute(
-          builder: (_) => const KeyboardPage(),
-          userData: WizardRouteData(
-            step: InitStep.keyboard.index,
-          ),
-          onLoad: (_) => const KeyboardPage().load(context, ref),
-        ),
-        InitRoutes.network: WizardRoute(
-          builder: (_) => const NetworkPage(),
-          userData: WizardRouteData(
-            step: InitStep.network.index,
-          ),
-          onLoad: (_) => const NetworkPage().load(context, ref),
-        ),
-        InitRoutes.identity: WizardRoute(
-          builder: (_) => const IdentityPage(),
-          userData: WizardRouteData(
-            step: InitStep.identity.index,
-          ),
-          onLoad: (_) => IdentityPage.load(ref),
-        ),
-        InitRoutes.ubuntuPro: WizardRoute(
-          builder: (_) => const UbuntuProPage(),
-          userData: WizardRouteData(
-            step: InitStep.identity.index,
-          ),
-          onLoad: (_) => UbuntuProPage.load(ref),
-        ),
-        InitRoutes.privacy: WizardRoute(
-          builder: (_) => const PrivacyPage(),
-          onLoad: (_) => PrivacyPage.load(ref),
-        ),
-        InitRoutes.timezone: WizardRoute(
-          builder: (_) => const TimezonePage(),
-          userData: WizardRouteData(
-            step: InitStep.timezone.index,
-          ),
-          onLoad: (_) => TimezonePage.load(context, ref),
-        ),
-        InitRoutes.telemetry: WizardRoute(
-          builder: (_) => const TelemetryPage(),
-          onLoad: (_) => TelemetryPage.load(ref),
-        ),
-        InitRoutes.theme: WizardRoute(
+        ...routes,
+        Routes.theme: WizardRoute(
           builder: (_) => const ThemePage(),
           userData: WizardRouteData(
             step: InitStep.theme.index,
           ),
-          onLoad: (_) => ThemePage.load(ref),
+          onLoad: (_) => const ThemePage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
             await window.close();
-            return InitRoutes.initial;
+            return Routes.initial;
           },
         ),
       },
       userData: WizardData(totalSteps: InitStep.values.length),
-      predicate: (route) => switch (route) {
-        InitRoutes.initial => true,
-        _ => ref.read(initModelProvider).hasRoute(route),
-      },
+      predicate: (route) => route == Routes.initial
+          ? true
+          : ref.read(initModelProvider).hasRoute(route),
     );
   }
 }

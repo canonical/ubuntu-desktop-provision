@@ -62,7 +62,7 @@ class _InstallWizard extends ConsumerWidget {
     final pageConfig = ref.watch(pageConfigProvider);
     final preInstallRoutes = <String, WizardRoute>{
       for (final pageName in pageConfig.includedPages)
-        routes[pageName]!:
+        Routes.routeMap[pageName]!:
             InstallationStep.fromName(pageName)!.toRoute(context, ref)!
     };
 
