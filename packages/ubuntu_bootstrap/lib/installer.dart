@@ -78,8 +78,6 @@ Future<void> runInstallerApp(
   );
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
-  tryRegisterService(
-      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService<InstallerService>(() => InstallerService(
       getService<SubiquityClient>(),
       pageConfig: tryGetService<PageConfigService>()));
@@ -90,6 +88,8 @@ Future<void> runInstallerApp(
       () => SubiquityLocaleService(getService<SubiquityClient>()));
   tryRegisterService<NetworkService>(
       () => SubiquityNetworkService(getService<SubiquityClient>()));
+  tryRegisterService(
+      () => PageConfigService(config: tryGetService<ConfigService>()));
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
