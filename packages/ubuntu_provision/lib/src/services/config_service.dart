@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/services.dart';
@@ -38,17 +40,19 @@ class ConfigService {
   /// assets. If no config file is found, it will return an empty map.
   @visibleForTesting
   Future<Map<String, dynamic>?> load() async {
-    final file = _fs.file(_path ?? '');
+    var path = _path ?? '';
+    final file = _fs.file(path);
     String? assetData;
     if (!file.existsSync()) {
       for (final ext in _extensions) {
         try {
-          assetData = await rootBundle.loadString('assets/$_filename.$ext');
+          path = 'assets/$_filename.$ext';
+          assetData = await rootBundle.loadString(path);
+          break;
           // Since there isn't any `exists` method for assets we'll just try to
           // load the file and catch the exception if it doesn't exist and
           // continue. If no file is found, then we'll return an empty map
           // and log an error.
-          // ignore: avoid_catches_without_on_clauses
         } catch (_) {
           continue;
         }
@@ -61,15 +65,11 @@ class ConfigService {
 
     try {
       final data = assetData ?? await file.readAsString();
-      final config = switch (p.extension(_path!)) {
-        '.yml' || '.yaml' => loadYaml(data),
-        _ => throw UnsupportedError(
-            'Only supports yaml/yml files, so $_path is not supported.'),
-      };
-      _log.debug('loaded $_path');
+      final config = loadYaml(data);
+      _log.debug('Loaded config file from $path');
       return (config as Map).cast();
-    } on FileSystemException catch (e) {
-      _log.error('failed to load $_path', e);
+    } catch (e) {
+      _log.error('Failed to load file from $path', e);
       return null;
     }
   }
