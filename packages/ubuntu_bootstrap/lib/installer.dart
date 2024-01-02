@@ -96,13 +96,13 @@ Future<void> runInstallerApp(
     ),
   );
   tryRegisterService(JournalService.new);
-  tryRegisterService(
+  tryRegisterService<KeyboardService>(
     () => SubiquityKeyboardService(getService<SubiquityClient>()),
   );
-  tryRegisterService(
+  tryRegisterService<LocaleService>(
     () => SubiquityLocaleService(getService<SubiquityClient>()),
   );
-  tryRegisterService(
+  tryRegisterService<NetworkService>(
     () => SubiquityNetworkService(getService<SubiquityClient>()),
   );
   tryRegisterService(
@@ -112,7 +112,7 @@ Future<void> runInstallerApp(
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
-  tryRegisterService(
+  tryRegisterService<SessionService>(
     () => SubiquitySessionService(getService<SubiquityClient>()),
   );
   if (liveRun) tryRegisterService(SoundService.new);
