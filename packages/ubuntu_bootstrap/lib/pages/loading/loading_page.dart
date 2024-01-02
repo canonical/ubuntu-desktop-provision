@@ -9,8 +9,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 class LoadingPage extends ConsumerStatefulWidget {
   const LoadingPage({super.key});
 
-  static Future<void> init(WidgetRef ref) {
-    return ref.read(loadingModelProvider).init();
+  static Future<void> init(BuildContext context, WidgetRef ref) async {
+    await Future.wait([
+      ref.read(pageImagesProvider).preCache(context),
+      ref.read(loadingModelProvider).init(),
+    ]);
   }
 
   @override

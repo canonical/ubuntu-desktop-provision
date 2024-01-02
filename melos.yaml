@@ -45,7 +45,7 @@ command:
       ubuntu_logger: ^0.1.0
       ubuntu_service: ^0.3.0
       ubuntu_session: ^0.0.4
-      ubuntu_widgets: ^0.3.0
+      ubuntu_widgets: 0.3.0
       udev: ^0.0.3
       upower: ^0.7.0
       url_launcher: ^6.2.1
