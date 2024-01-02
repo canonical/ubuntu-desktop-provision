@@ -21,7 +21,7 @@ enum InstallationStep {
 
   final ProvisioningPage Function() pageFactory;
 
-  WizardRoute? toRoute(BuildContext context, WidgetRef ref) {
+  WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final pageConfig = ref.watch(pageConfigProvider);
     final includedIndex = pageConfig.includedPages.indexOf(name);
     final page = pageFactory();
