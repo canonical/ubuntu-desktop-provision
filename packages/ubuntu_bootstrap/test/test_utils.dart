@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+import '../../ubuntu_provision/test/test_utils.mocks.dart';
 
 export '../../ubuntu_provision/test/test_utils.mocks.dart';
 export 'test_utils.mocks.dart';
@@ -49,3 +52,16 @@ extension WidgetTesterX on WidgetTester {
   StorageService,
 ])
 class _Dummy {} // ignore: unused_element
+
+/// Registers a mock [PageConfigService].
+///
+/// The [pages] argument will override the pages that are returned
+/// (empty by default) if provided.
+void setupMockPageConfig({Map<String, PageConfigEntry> pages = const {}}) {
+  final pageConfigService = MockPageConfigService();
+  registerMockService<PageConfigService>(pageConfigService);
+  when(pageConfigService.pages).thenReturn(pages);
+  when(pageConfigService.excludedPages).thenReturn({});
+}
+
+class MockBuildContext extends Mock implements BuildContext {}
