@@ -73,6 +73,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/icons/
     - assets/slides/
     - assets/slides/icons/
     - assets/slides/icons/dark/

@@ -2,6 +2,7 @@ library ubuntu_wizard;
 
 export 'package:wizard_router/wizard_router.dart';
 
+export 'src/layouts/horizontal_page.dart';
 export 'src/wizard_app.dart';
 export 'src/wizard_bar.dart';
 export 'src/wizard_builder.dart';
