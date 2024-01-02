@@ -17,6 +17,6 @@ dependencies:
 
 dev_dependencies:
   build_runner: ^2.4.7
-  mockito: 5.4.3
+  mockito: 5.4.4
   test: any
   ubuntu_lints: ^0.3.0
