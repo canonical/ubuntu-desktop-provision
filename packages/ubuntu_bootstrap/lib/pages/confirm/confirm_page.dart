@@ -16,10 +16,6 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
     return ref.read(confirmModelProvider).init().then((_) => true);
   }
 
-  static Future<bool> loadStatic(WidgetRef ref) {
-    return ref.read(confirmModelProvider).init().then((_) => true);
-  }
-
   String prettyFormatDisk(Disk disk) {
     final fullName = <String?>[
       disk.model,
