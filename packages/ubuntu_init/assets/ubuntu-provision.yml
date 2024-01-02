@@ -14,7 +14,7 @@ pages:
     visible: true
   identity:
     title: "Set up your account"
-    visible: false
+    visible: true
   ubuntuPro:
     title: "Ubuntu Pro"
     visible: true
