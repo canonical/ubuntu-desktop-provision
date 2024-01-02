@@ -40,10 +40,10 @@ class ConfigService {
   /// assets. If no config file is found, it will return an empty map.
   @visibleForTesting
   Future<Map<String, dynamic>?> load() async {
-    var path = _path ?? '';
-    final file = _fs.file(path);
+    var path = _path;
+    final file = _path != null ? _fs.file(_path) : null;
     String? assetData;
-    if (!file.existsSync()) {
+    if (file == null || !file.existsSync()) {
       for (final ext in _extensions) {
         try {
           path = 'assets/$_filename.$ext';
@@ -59,12 +59,12 @@ class ConfigService {
       }
       if (assetData == null) {
         _log.error('No config file found on the filesystem or in assets.');
-        return {};
+        return null;
       }
     }
 
     try {
-      final data = assetData ?? await file.readAsString();
+      final data = assetData ?? await file!.readAsString();
       final config = loadYaml(data);
       _log.debug('Loaded config file from $path');
       return (config as Map).cast();
