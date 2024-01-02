@@ -1,4 +1,3 @@
-// Write tests for page_images.dart
 import 'dart:io';
 import 'dart:typed_data';
 
