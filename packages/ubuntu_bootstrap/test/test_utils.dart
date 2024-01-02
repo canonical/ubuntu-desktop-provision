@@ -7,8 +7,7 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-
-import 'confirm/test_confirm.dart';
+import '../../ubuntu_provision/test/test_utils.mocks.dart';
 
 export '../../ubuntu_provision/test/test_utils.mocks.dart';
 export 'test_utils.mocks.dart';
