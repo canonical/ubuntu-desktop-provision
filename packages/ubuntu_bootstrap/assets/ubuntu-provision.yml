@@ -8,7 +8,7 @@ pages:
     visible: true
   rst:
     image: "assets/storage/rst.svg"
-    title: "Rapid Storage Technology"
+    title: "RST is enabled"
     visible: true
   keyboard:
     title: "Keyboard layout"
@@ -20,13 +20,13 @@ pages:
     title: "Update available"
     visible: true
   source:
-    title: "Type of installation"
+    title: "Applications and updates"
     visible: true
   secureBoot:
     title: "Configure Secure Boot"
     visible: true
   storage:
-    title: "Ready to install"
+    title: "Type of installation"
     visible: true
   confirm:
     title: "Ready to install"
