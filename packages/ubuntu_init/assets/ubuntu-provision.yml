@@ -3,8 +3,8 @@ pages:
     title: "Welcome"
     visible: true
   locale:
-    image: "packages/ubuntu_provision/assets/mascot.png"
     title: "Welcome to Ubuntu"
+    image: "packages/ubuntu_provision/assets/mascot.png"
     visible: true
   keyboard:
     title: "Keyboard layout"
@@ -14,7 +14,7 @@ pages:
     visible: true
   identity:
     title: "Set up your account"
-    visible: false
+    visible: true
   ubuntuPro:
     title: "Ubuntu Pro"
     visible: true

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/services.dart';
@@ -22,6 +24,7 @@ class ConfigService {
   final String? _scope;
   final FileSystem _fs;
   Map<String, dynamic>? _config;
+
   static const _extensions = ['yaml', 'yml'];
   static const _filename = 'ubuntu-provision';
 
@@ -35,15 +38,30 @@ class ConfigService {
 
   /// Loads the config file, if none are found on the filesystem by
   /// [lookupPath], then it will try to load the default config file from the
-  /// assets. If no config file is found, it will return an empty map.
+  /// assets. If no config file is found, it will return null.
   @visibleForTesting
   Future<Map<String, dynamic>?> load() async {
-    final file = _path != null ? _fs.file(_path ?? '') : null;
-    final path = _path;
-    if (path == null || file == null || !file.existsSync()) {
-      return _loadFromAssets();
-    } else {
-      return _loadFromFilesystem(path, file);
+    var path = _path;
+    final file = _path != null ? _fs.file(_path) : null;
+    String? assetData;
+    if (file == null || !file.existsSync()) {
+      for (final ext in _extensions) {
+        try {
+          path = 'assets/$_filename.$ext';
+          assetData = await rootBundle.loadString(path);
+          break;
+          // Since there isn't any `exists` method for assets we'll just try to
+          // load the file and catch the exception if it doesn't exist and
+          // continue. If no file is found, then we'll return an empty map
+          // and log an error.
+        } catch (_) {
+          continue;
+        }
+      }
+      if (assetData == null) {
+        _log.error('No config file found on the filesystem or in assets.');
+        return null;
+      }
     }
   }
 
@@ -52,16 +70,12 @@ class ConfigService {
     File file,
   ) async {
     try {
-      final data = await file.readAsString();
-      final config = switch (p.extension(path)) {
-        '.yml' || '.yaml' => loadYaml(data),
-        _ => throw UnsupportedError(
-            'Only supports yaml/yml files, so $_path is not supported.'),
-      };
-      _log.debug('loaded $_path');
+      final data = assetData ?? await file!.readAsString();
+      final config = loadYaml(data);
+      _log.debug('Loaded config file from $path');
       return (config as Map).cast();
-    } on FileSystemException catch (e) {
-      _log.error('failed to load $_path', e);
+    } catch (e) {
+      _log.error('Failed to load file from $path', e);
       return null;
     }
   }
