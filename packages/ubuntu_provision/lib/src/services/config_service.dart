@@ -24,6 +24,7 @@ class ConfigService {
   final String? _scope;
   final FileSystem _fs;
   Map<String, dynamic>? _config;
+
   static const _extensions = ['yaml', 'yml'];
   static const _filename = 'ubuntu-provision';
 
@@ -37,7 +38,7 @@ class ConfigService {
 
   /// Loads the config file, if none are found on the filesystem by
   /// [lookupPath], then it will try to load the default config file from the
-  /// assets. If no config file is found, it will return an empty map.
+  /// assets. If no config file is found, it will return null.
   @visibleForTesting
   Future<Map<String, dynamic>?> load() async {
     var path = _path;
