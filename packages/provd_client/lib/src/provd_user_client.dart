@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:grpc/grpc.dart';
 import 'package:meta/meta.dart';
-
 import 'package:provd_client/src/generated/user.pbgrpc.dart';
+
+export 'package:provd_client/src/generated/user.pb.dart' show User;
 
 /// Handles the communication with provd regarding user actions.
 class ProvdUserClient {
