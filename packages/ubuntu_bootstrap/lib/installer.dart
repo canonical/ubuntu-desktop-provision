@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -83,13 +84,12 @@ Future<void> runInstallerApp(
   final baseName = p.basename(Platform.resolvedExecutable);
 
   // conditional registration if not already registered by flavors or tests
-  tryRegisterServiceInstance(options);
-  tryRegisterService(
-    () => ConfigService(path: options['config'] as String?),
-  );
+  tryRegisterServiceInstance<ArgResults>(options);
+  tryRegisterService<ConfigService>(
+      () => ConfigService(path: options['config'] as String?));
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
-  tryRegisterService(
+  tryRegisterService<InstallerService>(
     () => InstallerService(
       getService<SubiquityClient>(),
       pageConfig: tryGetService<PageConfigService>(),
@@ -121,7 +121,7 @@ Future<void> runInstallerApp(
   tryRegisterService(
     () => SubiquityServer(process: process, endpoint: endpoint),
   );
-  tryRegisterService(() {
+  tryRegisterService<TelemetryService>(() {
     final String path;
     if (kDebugMode) {
       final exe = Platform.resolvedExecutable;
@@ -131,7 +131,7 @@ Future<void> runInstallerApp(
     }
     return TelemetryService(path);
   });
-  tryRegisterService(
+  tryRegisterService<ThemeVariantService>(
     () => ThemeVariantService(config: tryGetService<ConfigService>()),
   );
   tryRegisterService(UdevService.new);

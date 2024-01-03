@@ -62,6 +62,7 @@ void setupMockPageConfig({Map<String, PageConfigEntry> pages = const {}}) {
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
   when(pageConfigService.excludedPages).thenReturn([]);
+  when(pageConfigService.includedPages).thenReturn(pages.keys.toList());
 }
 
 class MockBuildContext extends Mock implements BuildContext {}
