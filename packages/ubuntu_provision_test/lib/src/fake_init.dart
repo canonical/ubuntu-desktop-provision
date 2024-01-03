@@ -36,8 +36,9 @@ Future<void> registerFakeInitServices({
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
-  registerService<IdentityService>(
-      () => XdgIdentityService.uid(0, bus: client));
+  // TODO: Mock provd backend
+  // registerService<IdentityService>(
+  //     () => XdgIdentityService.uid(0, bus: client));
   registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
   registerService<LocaleService>(() => XdgLocaleService(bus: client));
   registerService<NetworkService>(() => NetworkService(bus: client));
