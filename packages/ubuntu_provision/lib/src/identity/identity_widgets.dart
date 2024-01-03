@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -82,26 +81,6 @@ class HostnameFormField extends ConsumerWidget {
   }
 }
 
-extension UsernameValidationL10n on UsernameValidation {
-  String localize(BuildContext context) {
-    final lang = IdentityLocalizations.of(context);
-    switch (this) {
-      case UsernameValidation.OK:
-        return '';
-      case UsernameValidation.ALREADY_IN_USE:
-        return lang.identityUsernameInUse;
-      case UsernameValidation.SYSTEM_RESERVED:
-        return lang.identityUsernameSystemReserved;
-      case UsernameValidation.INVALID_CHARS:
-        return lang.identityUsernameInvalidChars;
-      case UsernameValidation.TOO_LONG:
-        return lang.identityUsernameTooLong;
-      default:
-        throw UnimplementedError(toString());
-    }
-  }
-}
-
 class UsernameFormField extends ConsumerWidget {
   const UsernameFormField({super.key, this.fieldWidth});
 
@@ -112,8 +91,6 @@ class UsernameFormField extends ConsumerWidget {
     final lang = IdentityLocalizations.of(context);
     final username =
         ref.watch(identityModelProvider.select((model) => model.username));
-    final validation = ref.watch(
-        identityModelProvider.select((model) => model.usernameValidation));
     final model = ref.read(identityModelProvider);
 
     return ValidatedFormField(
@@ -131,7 +108,7 @@ class UsernameFormField extends ConsumerWidget {
         ),
         CallbackValidator(
           (_) => model.usernameOk,
-          errorText: validation.localize(context),
+          errorText: lang.identityInvalidUsername,
         ),
       ]),
       onChanged: (value) async {

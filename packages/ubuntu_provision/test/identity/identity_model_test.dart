@@ -369,12 +369,9 @@ void main() {
     const kTooLong = 'too_long';
 
     final service = MockIdentityService();
-    when(service.validateUsername(kRoot))
-        .thenAnswer((_) async => UsernameValidation.ALREADY_IN_USE);
-    when(service.validateUsername(kPlugdev))
-        .thenAnswer((_) async => UsernameValidation.SYSTEM_RESERVED);
-    when(service.validateUsername(kTooLong))
-        .thenAnswer((_) async => UsernameValidation.TOO_LONG);
+    when(service.validateUsername(kRoot)).thenAnswer((_) async => false);
+    when(service.validateUsername(kPlugdev)).thenAnswer((_) async => false);
+    when(service.validateUsername(kTooLong)).thenAnswer((_) async => false);
 
     final network = MockNetworkService();
     when(network.propertiesChanged).thenAnswer((_) => const Stream.empty());

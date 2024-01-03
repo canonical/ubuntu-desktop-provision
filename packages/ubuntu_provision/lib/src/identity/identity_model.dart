@@ -76,8 +76,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
 
   final _realName = ValueNotifier<String?>(null);
   final _username = ValueNotifier<String?>(null);
-  final _usernameValidation =
-      ValueNotifier<UsernameValidation>(UsernameValidation.OK);
+  final _usernameValidation = ValueNotifier<bool>(true);
   final _hostname = ValueNotifier<String?>(null);
   final _password = ValueNotifier<String?>(null);
   final _confirmedPassword = ValueNotifier<String?>(null);
@@ -147,8 +146,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
   }
 
   /// The server response on whether the desired username is available.
-  UsernameValidation get usernameValidation => _usernameValidation.value;
-  bool get usernameOk => _usernameValidation.value == UsernameValidation.OK;
+  bool get usernameOk => _usernameValidation.value;
 
   Future<void> validate() async {
     if (username.isNotEmpty &&

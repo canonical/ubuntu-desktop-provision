@@ -171,12 +171,6 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
       ) as bool);
 
   @override
-  _i2.UsernameValidation get usernameValidation => (super.noSuchMethod(
-        Invocation.getter(#usernameValidation),
-        returnValue: _i2.UsernameValidation.OK,
-      ) as _i2.UsernameValidation);
-
-  @override
   bool get usernameOk => (super.noSuchMethod(
         Invocation.getter(#usernameOk),
         returnValue: false,
