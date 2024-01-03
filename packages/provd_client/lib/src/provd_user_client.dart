@@ -39,8 +39,12 @@ class ProvdUserClient {
 
   /// Validates the [username] and returns true if it is valid.
   Future<bool> validateUsername(String username) async {
-    final request = ValidateUsernameRequest(username: username);
-    final response = await _userClient.validateUsername(request);
-    return response.valid;
+    try {
+      final request = ValidateUsernameRequest(username: username);
+      final response = await _userClient.validateUsername(request);
+      return response.valid;
+    } on GrpcError catch (_) {
+      return false;
+    }
   }
 }
