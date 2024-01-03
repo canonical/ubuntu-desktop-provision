@@ -3,13 +3,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_widgets.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class SecureBootPage extends ConsumerStatefulWidget {
+class SecureBootPage extends ConsumerStatefulWidget with ProvisioningPage {
   const SecureBootPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(secureBootModelProvider.notifier).hasSecureBoot();
   }
 

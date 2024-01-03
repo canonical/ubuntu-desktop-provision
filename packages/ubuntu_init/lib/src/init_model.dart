@@ -18,7 +18,7 @@ class InitModel {
       : _pageConfig = pageConfig;
 
   final PageConfigService? _pageConfig;
-  Set<String>? _excludedPages;
+  List<String>? _excludedPages;
 
   Future<void> init() async {
     _excludedPages = _pageConfig?.excludedPages;
