@@ -8,10 +8,10 @@ export 'package:provd_client/src/generated/user.pb.dart' show User;
 
 /// Handles the communication with provd regarding user actions.
 class ProvdUserClient {
-  ProvdUserClient(String serverUrl, int port)
+  ProvdUserClient(Object host, int port)
       : _userClient = UserServiceClient(
           ClientChannel(
-            serverUrl,
+            host,
             port: port,
             options: const ChannelOptions(
               credentials: ChannelCredentials.insecure(),
