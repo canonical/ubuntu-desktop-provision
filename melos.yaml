@@ -43,9 +43,9 @@ command:
       ubuntu_flavor: ^0.2.1
       ubuntu_localizations: ^0.3.4
       ubuntu_logger: ^0.1.0
-      ubuntu_service: ^0.3.0
+      ubuntu_service: ^0.3.
       ubuntu_session: ^0.0.4
-      ubuntu_widgets: 0.3.0
+      ubuntu_widgets: ^0.3.2
       udev: ^0.0.3
       upower: ^0.7.0
       url_launcher: ^6.2.1

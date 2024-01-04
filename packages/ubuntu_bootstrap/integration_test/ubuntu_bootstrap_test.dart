@@ -383,7 +383,7 @@ void main() {
   });
 
   testWidgets('welcome', (tester) async {
-    await tester.runApp(() => app.main(<String>['--welcome']));
+    await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
