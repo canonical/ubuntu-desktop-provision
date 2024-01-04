@@ -29,7 +29,10 @@ import 'welcome/test_welcome.dart';
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
+  setUp(() {
+    YaruTestWindow.ensureInitialized(state: const YaruWindowState());
+    setupMockPageConfig();
+  });
 
   testWidgets('init', (tester) async {
     final initModel = buildInitModel();

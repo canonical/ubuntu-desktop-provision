@@ -34,6 +34,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final type = ref.watch(storageModelProvider.select((m) => m.type));
 
+    // TODO(Lukas): Convert to new system
     final routes = {
       Navigator.defaultRouteName: WizardRoute(
         builder: (_) => const StoragePage(),

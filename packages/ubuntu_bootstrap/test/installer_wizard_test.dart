@@ -47,10 +47,7 @@ import 'welcome/test_welcome.dart';
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() {
-    YaruTestWindow.ensureInitialized(state: const YaruWindowState());
-    setupMockPageConfig();
-  });
+  setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
 
   testWidgets('try ubuntu', (tester) async {
     final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));
@@ -66,7 +63,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           welcomeModelProvider.overrideWith((_) => welcomeModel),
         ],
-        child: tester.buildTestWizard(welcome: true),
+        child: tester.buildTestWizard(excludePages: []),
       ),
     );
 
@@ -140,7 +137,7 @@ void main() {
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(welcome: true),
+        child: tester.buildTestWizard(excludePages: []),
       ),
     );
 
@@ -197,7 +194,14 @@ void main() {
     final localeModel = buildLocaleModel();
     final rstModel = buildRstModel(hasRst: true);
 
+    final subiquityClient = MockSubiquityClient();
+    final productService = MockProductService();
     registerMockService<TelemetryService>(MockTelemetryService());
+    registerMockService<NetworkService>(
+      SubiquityNetworkService(subiquityClient),
+    );
+    registerMockService<ProductService>(productService);
+    when(productService.getReleaseNotesURL(any)).thenReturn('');
 
     await tester.pumpWidget(
       ProviderScope(
@@ -351,13 +355,27 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({bool welcome = false, List<String>? pages}) {
+  Widget buildTestWizard({
+    List<String>? pages,
+    List<String> excludePages = const ['welcome'],
+  }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return pages?.contains(i.positionalArguments.single) ?? true;
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
+
+    setupMockPageConfig(excludePages: excludePages);
+    final subiquityClient = MockSubiquityClient();
+    when(subiquityClient.hasRst()).thenAnswer((_) async => false);
+    registerMockService<SubiquityClient>(subiquityClient);
+    registerMockService<SessionService>(
+      SubiquitySessionService(subiquityClient),
+    );
+    final keyboardService = SubiquityKeyboardService(subiquityClient);
+    registerMockService<KeyboardService>(keyboardService);
+    when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
 
     final refresh = MockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.status(
@@ -369,7 +387,7 @@ extension on WidgetTester {
       localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
       supportedLocales: supportedLocales,
       theme: yaruLight,
-      home: InstallerWizard(welcome: welcome),
+      home: const InstallerWizard(),
     );
   }
 

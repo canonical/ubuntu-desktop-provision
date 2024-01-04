@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -55,14 +56,51 @@ class _Dummy {} // ignore: unused_element
 
 /// Registers a mock [PageConfigService].
 ///
-/// The [pages] argument will override the pages that are returned
-/// (empty by default) if provided.
-void setupMockPageConfig({Map<String, PageConfigEntry> pages = const {}}) {
+/// The [overridePages] argument will override the pages that are returned
+/// if provided. If [overridePages] are defined, [excludePages] will be ignored.
+/// All pages defined in [InstallationStep] except `welcome` are returned by default.
+void setupMockPageConfig({
+  Map<String, PageConfigEntry>? overridePages,
+  List<String> excludePages = const ['welcome'],
+}) {
+  final pages = overridePages ??
+      Map.fromEntries(
+        InstallationStep.values
+            .map(
+              (step) => MapEntry(step.name, const PageConfigEntry()),
+            )
+            .where((entry) => !excludePages.contains(entry.key)),
+      );
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
   when(pageConfigService.excludedPages).thenReturn([]);
   when(pageConfigService.includedPages).thenReturn(pages.keys.toList());
 }
+
+const keyboardSetup = KeyboardSetup(
+  setting: KeyboardSetting(layout: 'us', variant: 'altgr-intl'),
+  layouts: [
+    KeyboardLayout(
+      code: 'us',
+      name: 'English (US)',
+      variants: [
+        KeyboardVariant(
+          code: '',
+          name: 'English (US)',
+        ),
+        KeyboardVariant(
+          code: 'altgr-intl',
+          name: 'English (US) - English (intl., with AltGr dead keys)',
+        ),
+      ],
+    ),
+    KeyboardLayout(
+      code: 'de',
+      name: 'German',
+      variants: [KeyboardVariant(code: '', name: 'German')],
+    ),
+  ],
+);
 
 class MockBuildContext extends Mock implements BuildContext {}

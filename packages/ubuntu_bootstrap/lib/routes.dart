@@ -27,15 +27,15 @@ sealed class Routes {
   static String get rst => routeMap['rst']!;
   static String get keyboard => routeMap['keyboard']!;
   static String get network => routeMap['network']!;
-  static String get secureBoot => routeMap['secure-boot']!;
+  static String get secureBoot => routeMap['secureBoot']!;
   static String get source => routeMap['source']!;
   static String get confirm => routeMap['confirm']!;
   static String get theme => routeMap['theme']!;
   static String get identity => routeMap['identity']!;
   static String get install => routeMap['install']!;
   static String get timezone => routeMap['timezone']!;
-  static String get notEnoughDiskSpace => routeMap['not-enough-disk-space']!;
-  static String get activeDirectory => routeMap['active-directory']!;
+  static String get notEnoughDiskSpace => routeMap['notEnoughDiskSpace']!;
+  static String get activeDirectory => routeMap['activeDirectory']!;
   static String get storage => routeMap['storage']!;
   static String get refresh => routeMap['refresh']!;
 }

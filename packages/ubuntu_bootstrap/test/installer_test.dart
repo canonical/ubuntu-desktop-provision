@@ -128,7 +128,9 @@ extension on WidgetTester {
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
 
     final subiquityClient = MockSubiquityClient();
-    when(subiquityClient.getStatus()).thenAnswer((_) async => status);
+    when(subiquityClient.getStatus()).thenAnswer(
+      (_) async => status.copyWith(state: ApplicationState.RUNNING),
+    );
 
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);

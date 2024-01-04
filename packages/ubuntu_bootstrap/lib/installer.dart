@@ -62,7 +62,6 @@ Future<void> runInstallerApp(
       defaultsTo: 'examples/sources/desktop.yaml',
       help: 'Path of the source catalog (dry-run only)',
     );
-    parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
@@ -197,9 +196,7 @@ Future<void> runInstallerApp(
                   rootBundle,
                   package: 'ubuntu_bootstrap',
                 ),
-                child: InstallerWizard(
-                  welcome: options['welcome'] as bool? ?? false,
-                ),
+                child: const InstallerWizard(),
               ),
             );
           },

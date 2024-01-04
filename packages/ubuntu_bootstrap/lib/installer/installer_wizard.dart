@@ -12,12 +12,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 class InstallerWizard extends ConsumerStatefulWidget {
-  const InstallerWizard({
-    super.key,
-    this.welcome = false,
-  });
-
-  final bool welcome;
+  const InstallerWizard({super.key});
 
   @override
   ConsumerState<InstallerWizard> createState() => _InstallerWizardState();
@@ -48,14 +43,12 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
     }
     return status?.interactive == false
         ? _AutoinstallWizard(status: status)
-        : _InstallWizard(welcome: widget.welcome);
+        : const _InstallWizard();
   }
 }
 
 class _InstallWizard extends ConsumerWidget {
-  const _InstallWizard({this.welcome = false});
-
-  final bool welcome;
+  const _InstallWizard();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
