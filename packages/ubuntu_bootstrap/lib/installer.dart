@@ -40,10 +40,6 @@ Future<void> runInstallerApp(
       valueHelp: 'path',
       help: 'Path to a config file',
     );
-    parser.addOption(
-      'exclude-pages',
-      help: 'Pages that you want to exclude from the wizard, comma separated.',
-    );
     parser.addFlag(
       'dry-run',
       defaultsTo: Platform.environment['LIVE_RUN'] != '1',
