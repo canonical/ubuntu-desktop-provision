@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:ubuntu_init/src/routes.dart';
@@ -13,6 +14,8 @@ Future<void> main() async {
   setUpAll(() => autoUpdateGoldenFiles = true);
 
   setUp(registerFakeInitServices);
+
+  tearDown(rootBundle.clear);
 
   testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
