@@ -14,13 +14,17 @@ final pageConfigProvider = Provider((ref) => getService<PageConfigService>());
 final _log = Logger('page');
 
 class PageConfigService {
-  PageConfigService({ConfigService? config}) : _config = config;
+  PageConfigService({ConfigService? config, this.includeWelcome = false})
+      : _config = config;
 
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
+  final bool includeWelcome;
 
-  List<String> get includedPages =>
-      pages.entries.where((e) => e.value.visible).map((e) => e.key).toList();
+  List<String> get includedPages => pages.entries
+      .where((e) => e.value.visible && (includeWelcome || e.key != 'welcome'))
+      .map((e) => e.key)
+      .toList();
 
   List<String> get excludedPages =>
       pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toList();

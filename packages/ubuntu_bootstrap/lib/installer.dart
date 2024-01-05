@@ -40,6 +40,10 @@ Future<void> runInstallerApp(
       valueHelp: 'path',
       help: 'Path to a config file',
     );
+    parser.addOption(
+      'exclude-pages',
+      help: 'Pages that you want to exclude from the wizard, comma separated.',
+    );
     parser.addFlag(
       'dry-run',
       defaultsTo: Platform.environment['LIVE_RUN'] != '1',
@@ -62,6 +66,7 @@ Future<void> runInstallerApp(
       defaultsTo: 'examples/sources/desktop.yaml',
       help: 'Path of the source catalog (dry-run only)',
     );
+    parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
@@ -72,6 +77,7 @@ Future<void> runInstallerApp(
   final subiquityPath = await getSubiquityPath()
       .then((dir) => Directory(dir).existsSync() ? dir : null);
   final endpoint = await defaultEndpoint(serverMode);
+  final includeWelcome = options['welcome'] as bool? ?? false;
   final process = liveRun
       ? null
       : SubiquityProcess.python(
@@ -105,7 +111,10 @@ Future<void> runInstallerApp(
     () => SubiquityNetworkService(getService<SubiquityClient>()),
   );
   tryRegisterService(
-    () => PageConfigService(config: tryGetService<ConfigService>()),
+    () => PageConfigService(
+      config: tryGetService<ConfigService>(),
+      includeWelcome: includeWelcome,
+    ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);

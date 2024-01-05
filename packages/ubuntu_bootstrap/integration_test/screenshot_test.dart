@@ -46,7 +46,8 @@ Future<void> main() async {
   }, variant: themeVariant);
 
   testWidgets('02.welcome', (tester) async {
-    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester
+        .runApp(() => runInstallerApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.jumpToPage(Routes.welcome);

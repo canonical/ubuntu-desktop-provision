@@ -66,9 +66,7 @@ void setupMockPageConfig({
   final pages = overridePages ??
       Map.fromEntries(
         InstallationStep.values
-            .map(
-              (step) => MapEntry(step.name, const PageConfigEntry()),
-            )
+            .map((step) => MapEntry(step.name, const PageConfigEntry()))
             .where((entry) => !excludePages.contains(entry.key)),
       );
   final pageConfigService = MockPageConfigService();
