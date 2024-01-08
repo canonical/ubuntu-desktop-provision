@@ -1,4 +1,4 @@
-abstract class StorageRoutes {
+sealed class StorageRoutes {
   static const bitlocker = '/bitlocker';
   static const guidedReformat = '/guided-reformat';
   static const guidedResize = '/guided-resize';

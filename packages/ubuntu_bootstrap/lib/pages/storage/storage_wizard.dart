@@ -11,6 +11,7 @@ import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_provision/interfaces.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 export 'bitlocker/bitlocker_page.dart';
@@ -33,12 +34,16 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final type = ref.watch(storageModelProvider.select((m) => m.type));
+    final pageConfig = ref.watch(pageConfigProvider);
+    final totalSteps = InstallationStep.fromName(pageConfig.includedPages.last)!
+            .pageIndex(ref) +
+        1;
 
-    // TODO(Lukas): Convert to new system
     final routes = {
       Navigator.defaultRouteName: WizardRoute(
         builder: (_) => const StoragePage(),
-        userData: WizardRouteData(step: InstallationStep.secureBoot.index),
+        userData:
+            WizardRouteData(step: InstallationStep.secureBoot.pageIndex(ref)),
       ),
       if (type != StorageType.manual)
         StorageRoutes.bitlocker: WizardRoute(
@@ -48,40 +53,45 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
       if (type == StorageType.erase)
         StorageRoutes.guidedReformat: WizardRoute(
           builder: (_) => const GuidedReformatPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
+          userData:
+              WizardRouteData(step: InstallationStep.storage.pageIndex(ref)),
           onLoad: (_) => GuidedReformatPage.load(ref),
           onReplace: (_) => StorageRoutes.manual,
         ),
       if (type == StorageType.alongside)
         StorageRoutes.guidedResize: WizardRoute(
           builder: (_) => const GuidedResizePage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
+          userData:
+              WizardRouteData(step: InstallationStep.storage.pageIndex(ref)),
           onLoad: (_) => GuidedResizePage.load(ref),
           onReplace: (_) => StorageRoutes.manual,
         ),
       if (type == StorageType.manual)
         StorageRoutes.manual: WizardRoute(
           builder: (_) => const ManualStoragePage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
+          userData:
+              WizardRouteData(step: InstallationStep.storage.pageIndex(ref)),
           onLoad: (_) => ManualStoragePage.load(ref),
         ),
       if (type != StorageType.manual)
         StorageRoutes.securityKey: WizardRoute(
           builder: (_) => const SecurityKeyPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
+          userData:
+              WizardRouteData(step: InstallationStep.storage.pageIndex(ref)),
           onLoad: (_) => SecurityKeyPage.load(ref),
         ),
       if (type != StorageType.manual)
         StorageRoutes.recoveryKey: WizardRoute(
           builder: (_) => const RecoveryKeyPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.index),
+          userData:
+              WizardRouteData(step: InstallationStep.storage.pageIndex(ref)),
           onLoad: (_) => RecoveryKeyPage.load(ref),
         ),
     };
 
     return Wizard(
       key: ValueKey(type),
-      userData: WizardData(totalSteps: InstallationStep.values.length),
+      userData: WizardData(totalSteps: totalSteps),
       routes: routes,
     );
   }

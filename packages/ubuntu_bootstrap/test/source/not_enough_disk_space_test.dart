@@ -128,6 +128,11 @@ extension on WidgetTester {
                     builder: (_) => const SourcePage(),
                     onLoad: (_) => const SourcePage().load(context, ref),
                   ),
+                  Routes.notEnoughDiskSpace: WizardRoute(
+                    builder: (_) => const NotEnoughDiskSpacePage(),
+                    onLoad: (_) =>
+                        const NotEnoughDiskSpacePage().load(context, ref),
+                  ),
                   '/last': WizardRoute(
                     builder: (context) => WizardPage(
                       content: const Text('last route'),

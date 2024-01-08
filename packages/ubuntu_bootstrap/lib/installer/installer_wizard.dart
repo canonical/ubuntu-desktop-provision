@@ -58,10 +58,13 @@ class _InstallWizard extends ConsumerWidget {
         Routes.routeMap[pageName]!:
             InstallationStep.fromName(pageName)!.toRoute(context, ref)
     };
+    final totalSteps = InstallationStep.fromName(pageConfig.includedPages.last)!
+            .pageIndex(ref) +
+        1;
 
     return WizardBuilder(
       initialRoute: Routes.initial,
-      userData: WizardData(totalSteps: preInstallRoutes.length),
+      userData: WizardData(totalSteps: totalSteps),
       routes: {
         Routes.loading: WizardRoute(
           builder: (_) => const LoadingPage(),

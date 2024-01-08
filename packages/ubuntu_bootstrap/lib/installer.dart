@@ -62,6 +62,7 @@ Future<void> runInstallerApp(
       defaultsTo: 'examples/sources/desktop.yaml',
       help: 'Path of the source catalog (dry-run only)',
     );
+    // TODO: Remove in favor of using the ubuntu-provision.yml config file.
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
