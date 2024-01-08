@@ -17,6 +17,15 @@ Future<void> main() async {
 
   tearDown(rootBundle.clear);
 
+  testWidgets('00.welcome', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.testWelcomeInitPage(
+      screenshot: '$currentThemeName/00.welcome',
+    );
+  }, variant: themeVariant);
+
   testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
@@ -93,15 +102,6 @@ Future<void> main() async {
 
     await tester.testThemePage(
       screenshot: '$currentThemeName/06.theme',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('07.welcome', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.testWelcomeInitPage(
-      screenshot: '$currentThemeName/07.welcome',
     );
   }, variant: themeVariant);
 
