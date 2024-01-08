@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+// TODO(Lukas): Add whether they should be a hidden step or not
 enum InstallationStep {
   locale(LocalePage.new),
   welcome(WelcomePage.new),
@@ -13,6 +14,7 @@ enum InstallationStep {
   network(NetworkPage.new),
   refresh(RefreshPage.new),
   source(SourcePage.new),
+  notEnoughDiskSpace(NotEnoughDiskSpacePage.new),
   secureBoot(SecureBootPage.new),
   storage(StorageWizard.new),
   confirm(ConfirmPage.new);

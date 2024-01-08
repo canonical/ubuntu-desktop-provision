@@ -6,5 +6,5 @@ mixin ProvisioningPage on Widget {
   ///
   /// If it returns true it will be added to the wizard, otherwise it will be
   /// skipped.
-  Future<bool> load(BuildContext context, WidgetRef ref) => Future.value(true);
+  Future<bool> load(BuildContext context, WidgetRef ref) async => true;
 }
