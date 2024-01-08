@@ -1,12 +1,9 @@
 import 'package:meta/meta.dart';
-import 'package:subiquity_client/subiquity_client.dart';
-
-export 'package:subiquity_client/subiquity_client.dart' show UsernameValidation;
 
 abstract class IdentityService {
   Future<Identity> getIdentity();
   Future<void> setIdentity(Identity identity);
-  Future<UsernameValidation> validateUsername(String username);
+  Future<bool> validateUsername(String username);
 }
 
 @immutable

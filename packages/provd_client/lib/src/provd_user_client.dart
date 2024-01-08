@@ -2,15 +2,16 @@ import 'dart:async';
 
 import 'package:grpc/grpc.dart';
 import 'package:meta/meta.dart';
-
 import 'package:provd_client/src/generated/user.pbgrpc.dart';
+
+export 'package:provd_client/src/generated/user.pb.dart' show User;
 
 /// Handles the communication with provd regarding user actions.
 class ProvdUserClient {
-  ProvdUserClient(String serverUrl, int port)
+  ProvdUserClient(Object host, int port)
       : _userClient = UserServiceClient(
           ClientChannel(
-            serverUrl,
+            host,
             port: port,
             options: const ChannelOptions(
               credentials: ChannelCredentials.insecure(),
@@ -38,8 +39,12 @@ class ProvdUserClient {
 
   /// Validates the [username] and returns true if it is valid.
   Future<bool> validateUsername(String username) async {
-    final request = ValidateUsernameRequest(username: username);
-    final response = await _userClient.validateUsername(request);
-    return response.valid;
+    try {
+      final request = ValidateUsernameRequest(username: username);
+      final response = await _userClient.validateUsername(request);
+      return response.valid;
+    } on GrpcError catch (_) {
+      return false;
+    }
   }
 }

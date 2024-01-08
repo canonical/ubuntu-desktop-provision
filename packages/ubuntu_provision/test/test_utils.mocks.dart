@@ -452,15 +452,13 @@ class MockIdentityService extends _i1.Mock implements _i3.IdentityService {
       ) as _i5.Future<void>);
 
   @override
-  _i5.Future<_i2.UsernameValidation> validateUsername(String? username) =>
-      (super.noSuchMethod(
+  _i5.Future<bool> validateUsername(String? username) => (super.noSuchMethod(
         Invocation.method(
           #validateUsername,
           [username],
         ),
-        returnValue:
-            _i5.Future<_i2.UsernameValidation>.value(_i2.UsernameValidation.OK),
-      ) as _i5.Future<_i2.UsernameValidation>);
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
 }
 
 /// A class which mocks [JournalService].
