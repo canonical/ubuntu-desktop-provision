@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
@@ -13,11 +15,22 @@ Future<void> main() async {
 
   setUp(registerFakeInitServices);
 
+  tearDown(rootBundle.clear);
+
+  testWidgets('00.welcome', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.testWelcomeInitPage(
+      screenshot: '$currentThemeName/00.welcome',
+    );
+  }, variant: themeVariant);
+
   testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.locale);
+    await tester.jumpToPage(Routes.locale);
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(
@@ -29,7 +42,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.keyboard);
+    await tester.jumpToPage(Routes.keyboard);
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
@@ -41,7 +54,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.network);
+    await tester.jumpToPage(Routes.network);
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage(
@@ -54,7 +67,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.timezone);
+    await tester.jumpToPage(Routes.timezone);
     await tester.pumpAndSettle();
 
     await tester.testTimezonePage(
@@ -66,7 +79,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.identity);
+    await tester.jumpToPage(Routes.identity);
     await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
@@ -84,7 +97,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.theme);
+    await tester.jumpToPage(Routes.theme);
     await tester.pumpAndSettle();
 
     await tester.testThemePage(
@@ -92,20 +105,11 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('07.welcome', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.testWelcomeInitPage(
-      screenshot: '$currentThemeName/07.welcome',
-    );
-  }, variant: themeVariant);
-
   testWidgets('08.telemetry', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.telemetry);
+    await tester.jumpToPage(Routes.telemetry);
     await tester.pumpAndSettle();
 
     await tester.testTelemetryPage(
@@ -117,7 +121,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.privacy);
+    await tester.jumpToPage(Routes.privacy);
     await tester.pumpAndSettle();
 
     await tester.testPrivacyPage(
@@ -129,7 +133,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitRoutes.ubuntuPro);
+    await tester.jumpToPage(Routes.ubuntuPro);
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(

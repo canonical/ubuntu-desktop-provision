@@ -4,6 +4,7 @@ export 'pages/loading/loading_page.dart';
 export 'pages/refresh/refresh_page.dart';
 export 'pages/rst/rst_page.dart';
 export 'pages/secure_boot/secure_boot_page.dart';
-export 'pages/source/source_wizard.dart';
+export 'pages/source/not_enough_disk_space/not_enough_disk_space_page.dart';
+export 'pages/source/source_page.dart';
 export 'pages/storage/storage_wizard.dart';
 export 'pages/welcome/welcome_page.dart';

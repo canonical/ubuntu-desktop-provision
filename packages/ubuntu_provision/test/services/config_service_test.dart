@@ -1,6 +1,7 @@
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
+import 'package:yaml/yaml.dart';
 
 void main() {
   test('lookup path', () {
@@ -68,5 +69,15 @@ test2:
       });
       expect(await config.get('foo', scope: 'test2'), 'bar');
     }
+  });
+
+  test('load from assets', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    final configService = ConfigService();
+    final result = await configService.get<YamlMap>('test', scope: 'scope');
+    expect(result, isNotNull);
+    expect(result!['title'], 'Welcome');
+    expect(result['image'], 'mascot.png');
+    expect(result['visible'], isTrue);
   });
 }

@@ -5,7 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/source/source_wizard.dart';
+import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -125,8 +125,13 @@ extension on WidgetTester {
                     ),
                   ),
                   Routes.source: WizardRoute(
-                    builder: (_) => const SourceWizard(),
-                    onLoad: (_) => SourcePage.load(ref),
+                    builder: (_) => const SourcePage(),
+                    onLoad: (_) => const SourcePage().load(context, ref),
+                  ),
+                  Routes.notEnoughDiskSpace: WizardRoute(
+                    builder: (_) => const NotEnoughDiskSpacePage(),
+                    onLoad: (_) =>
+                        const NotEnoughDiskSpacePage().load(context, ref),
                   ),
                   '/last': WizardRoute(
                     builder: (context) => WizardPage(

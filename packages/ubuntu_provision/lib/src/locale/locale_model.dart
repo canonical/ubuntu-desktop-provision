@@ -52,7 +52,9 @@ class LocaleModel extends SafeChangeNotifier {
 
   /// Loads available languages.
   Future<void> init() async {
-    assert(_languageList.isEmpty);
+    if (_languageList.isNotEmpty) {
+      return;
+    }
     final languages = await loadLocalizedLanguages(supportedLocales);
     _languageList = List.of(languages);
     _log.info('Loaded ${_languageList.length} languages');

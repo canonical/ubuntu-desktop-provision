@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_provision/src/locale/locale_l10n.dart';
-import 'package:ubuntu_provision/src/locale/locale_model.dart';
-import 'package:ubuntu_provision/src/providers/flavor.dart';
-import 'package:ubuntu_provision/widgets.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class LocalePage extends ConsumerWidget {
+class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
-  static Future<bool> load(BuildContext context, WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(localeModelProvider);
     return model.init().then((_) => model.playWelcomeSound()).then((_) => true);
   }
@@ -23,6 +20,8 @@ class LocalePage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
+    final pageImages = ref.watch(pageImagesProvider);
+
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.localePageTitle(flavor.name)),
@@ -32,7 +31,7 @@ class LocalePage extends ConsumerWidget {
         child: Column(
           children: [
             const SizedBox(height: kWizardSpacing / 2),
-            const MascotAvatar(),
+            pageImages.get('locale'),
             const SizedBox(height: kWizardSpacing),
             Text(lang.localeHeader),
             const SizedBox(height: kWizardSpacing / 2),

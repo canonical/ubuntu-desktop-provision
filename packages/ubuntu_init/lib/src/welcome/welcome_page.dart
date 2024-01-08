@@ -4,16 +4,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_init/src/welcome/welcome_l10n.dart';
 import 'package:ubuntu_init/src/welcome/welcome_model.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class WelcomePage extends ConsumerWidget {
+class WelcomePage extends ConsumerWidget with ProvisioningPage {
   const WelcomePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) async => true;
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async => true;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

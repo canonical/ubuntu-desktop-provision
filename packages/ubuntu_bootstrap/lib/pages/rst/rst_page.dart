@@ -11,10 +11,15 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class RstPage extends ConsumerWidget {
+/// Page inform the user that they have Intel Rapid Storage Technology (RST)
+/// enabled and need to disable it.
+///
+/// If RST is not enabled, this page is skipped.
+class RstPage extends ConsumerWidget with ProvisioningPage {
   const RstPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(rstModelProvider).hasRst();
   }
 
@@ -50,8 +55,10 @@ class RstPage extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(lang.rstHeader,
-                        style: Theme.of(context).textTheme.headlineSmall),
+                    Text(
+                      lang.rstHeader,
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
                     const SizedBox(height: kWizardSpacing),
                     Text(lang.rstDescription),
                     const SizedBox(height: kWizardSpacing),

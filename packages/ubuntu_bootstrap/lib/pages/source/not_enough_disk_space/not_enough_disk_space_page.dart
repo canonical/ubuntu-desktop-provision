@@ -9,10 +9,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class NotEnoughDiskSpacePage extends ConsumerWidget {
+class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
   const NotEnoughDiskSpacePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
     return ref.read(notEnoughDiskSpaceModelProvider).init();
   }
 

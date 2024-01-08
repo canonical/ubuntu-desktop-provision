@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:timezone_map/timezone_map.dart';
@@ -56,6 +59,7 @@ extension UbuntuProvisionTester on WidgetTester {
   DesktopService,
   GeoService,
   IdentityService,
+  Image,
   JournalService,
   KeyboardService,
   LocaleService,
@@ -73,3 +77,11 @@ extension UbuntuProvisionTester on WidgetTester {
   UrlLauncher,
 ])
 class _Dummy {} // ignore: unused_element
+
+@GenerateNiceMocks([
+  MockSpec<BuildContext>(),
+  MockSpec<File>(),
+  MockSpec<SvgFileLoader>(),
+  MockSpec<SvgPicture>(),
+])
+class _Dummy2 {} // ignore: unused_element

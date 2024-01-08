@@ -1,13 +1,43 @@
 import 'package:collection/collection.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:yaml/yaml.dart';
 
 part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';
 
+final pageConfigProvider = Provider((ref) => getService<PageConfigService>());
+
 final _log = Logger('page');
+
+class PageConfigService {
+  PageConfigService({ConfigService? config, this.includeWelcome = false})
+      : _config = config;
+
+  final ConfigService? _config;
+  final Map<String, PageConfigEntry> pages = {};
+  final bool includeWelcome;
+
+  List<String> get includedPages => pages.entries
+      .where((e) => e.value.visible && (includeWelcome || e.key != 'welcome'))
+      .map((e) => e.key)
+      .toList();
+
+  List<String> get excludedPages =>
+      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toList();
+
+  Future<void> load() async {
+    final pageConfig = PageConfig.fromJson({
+      'pages': Map<String, dynamic>.from(
+        (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
+      )
+    });
+    pages.addAll(pageConfig.pages);
+  }
+}
 
 @freezed
 class PageConfigEntry with _$PageConfigEntry {
@@ -66,24 +96,5 @@ class PageConfigEntryConverter
       }
     }
     return objects;
-  }
-}
-
-class PageConfigService {
-  PageConfigService({ConfigService? config}) : _config = config;
-
-  final ConfigService? _config;
-  final Map<String, PageConfigEntry> pages = {};
-
-  Set<String> get excludedPages =>
-      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toSet();
-
-  Future<void> load() async {
-    final pageConfig = PageConfig.fromJson({
-      'pages': Map<String, dynamic>.from(
-        (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
-      )
-    });
-    pages.addAll(pageConfig.pages);
   }
 }
