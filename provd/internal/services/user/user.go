@@ -17,12 +17,8 @@ import (
 )
 
 const (
-	accountsDBusName  string = "org.freedesktop.Accounts"
-	accountsDBusPath  string = "/org/freedesktop/Accounts"
-	hostnameDBusName  string = "org.freedesktop.hostname1"
-	hostnameDBusPath  string = "/org/freedesktop/hostname1"
-	accountsUserIface string = "org.freedesktop.Accounts.User"
-	hostnameIface     string = "org.freedesktop.hostname1"
+	dbusAccountsPrefix = "org.freedesktop.Accounts"
+	dbusHostnamePrefix = "org.freedesktop.hostname1"
 )
 
 type Caller interface {
@@ -39,7 +35,7 @@ type userObjectFactoryImpl struct {
 }
 
 func (f *userObjectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) Caller {
-	userObject := f.conn.Object(accountsDBusName, userObjectPath)
+	userObject := f.conn.Object(dbusAccountsPrefix, userObjectPath)
 	return userObject
 }
 
@@ -61,8 +57,8 @@ type Service struct {
 
 // New retuns a new instance of the User service.
 func New(bus *dbus.Conn, args ...option) *Service {
-	accounts := bus.Object("org.freedesktop.Accounts", "/org/freedesktop/Accounts")
-	hostname := bus.Object("org.freedesktop.hostname1", "/org/freedesktop/hostname1")
+	accounts := bus.Object(dbusAccountsPrefix, "/org/freedesktop/Accounts")
+	hostname := bus.Object(dbusHostnamePrefix, "/org/freedesktop/hostname1")
 	userFactory := &userObjectFactoryImpl{conn: bus}
 
 	opts := options{
@@ -135,7 +131,7 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
-	call := s.accounts.Call("org.freedesktop.Accounts.CreateUser", 0, username, realName, accountType)
+	call := s.accounts.Call(dbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
 
 	err := call.Store(&userObjectPath)
 	if err != nil {
@@ -150,19 +146,19 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	// Set the password for the user
 	userObject := s.userFactory.GetUserObject(userObjectPath)
 	fmt.Printf(hashed)
-	err = userObject.Call("org.freedesktop.Accounts.User.SetPassword", 0, hashed, "").Err
+	err = userObject.Call(dbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
 	}
 
 	// Set autologin for the user
-	err = userObject.Call("org.freedesktop.Accounts.User.SetAutomaticLogin", 0, autologin).Err
+	err = userObject.Call(dbusAccountsPrefix+".User.SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
 	}
 
 	// Set the hostname
-	err = s.hostname.Call("org.freedesktop.hostname1.SetStaticHostname", 0, hostname, false).Err
+	err = s.hostname.Call(dbusHostnamePrefix+".SetStaticHostname", 0, hostname, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
 	}
@@ -180,12 +176,12 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		return nil, status.Errorf(codes.InvalidArgument, "username cannot be empty")
 	}
 
-	err := s.accounts.Call("org.freedesktop.Accounts.FindUserByName", 0, username).Err
+	err := s.accounts.Call(dbusAccountsPrefix+".FindUserByName", 0, username).Err
 	if err != nil {
 
 		// Check if the error is due to user not being found or a D-Bus error
 		if dbusError, ok := err.(dbus.Error); ok {
-			if dbusError.Name == "org.freedesktop.Accounts.Error.Failed" {
+			if dbusError.Name == dbusAccountsPrefix+".Error.Failed" {
 				// User not found
 				return &proto.ValidateUsernameResponse{Valid: true}, nil
 			}
@@ -219,7 +215,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 
 	}
 	var userObjectPath dbus.ObjectPath
-	err = s.accounts.Call("org.freedesktop.Accounts.FindUserById", 0, uidInt).Store(&userObjectPath)
+	err = s.accounts.Call(dbusAccountsPrefix+".FindUserById", 0, uidInt).Store(&userObjectPath)
 
 	if err != nil {
 		return nil, err
@@ -228,7 +224,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 	userObject := s.userFactory.GetUserObject(userObjectPath)
 
 	// Get the username via dbus
-	response, err := userObject.GetProperty("org.freedesktop.Accounts.User." + "UserName")
+	response, err := userObject.GetProperty(dbusAccountsPrefix + ".User.UserName")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get username: %s", err)
 	}
@@ -241,7 +237,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 	}
 
 	// Get the realName via dbus
-	response, err = userObject.GetProperty("org.freedesktop.Accounts.User." + "RealName")
+	response, err = userObject.GetProperty(dbusAccountsPrefix + ".User.RealName")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get realName: %s", err)
 	}
@@ -254,7 +250,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 	}
 
 	// Get autoLogin via dbus
-	response, err = userObject.GetProperty("org.freedesktop.Accounts.User." + "AutomaticLogin")
+	response, err = userObject.GetProperty(dbusAccountsPrefix + ".User.AutomaticLogin")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get autoLogin: %s", err)
 	}
@@ -267,7 +263,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 	}
 
 	// Get the hostname via dbus
-	response, err = s.hostname.GetProperty("org.freedesktop.hostname1." + "Hostname")
+	response, err = s.hostname.GetProperty(dbusHostnamePrefix + ".Hostname")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get hostname: %s", err)
 	}

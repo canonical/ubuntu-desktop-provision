@@ -1,2 +1,2 @@
 Paths:
-  Socket: "/home/ubuntu/sock"
+  Socket: "/run/test.sock"

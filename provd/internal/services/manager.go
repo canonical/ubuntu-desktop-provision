@@ -17,15 +17,6 @@ import (
 	"google.golang.org/grpc/status"
 )
 
-const (
-	accountsDBusName  string = "org.freedesktop.Accounts"
-	accountsDBusPath  string = "/org/freedesktop/Accounts"
-	hostnameDBusName  string = "org.freedesktop.hostname1"
-	hostnameDBusPath  string = "/org/freedesktop/hostname1"
-	accountsUserIface string = "org.freedesktop.Accounts.User"
-	hostnameIface     string = "org.freedesktop.hostname1"
-)
-
 // Manager mediates the whole business logic of the application.
 type Manager struct {
 	helloService hello.Service

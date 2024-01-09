@@ -120,7 +120,7 @@ func TestCreateUser(t *testing.T) {
 				require.Error(t, err, "CreateUser should return an error, but did not")
 				return
 			}
-			require.NoError(t, err, "CreateUser should not return an error, but did")
+			require.NoError(t, err, "CreateUser should not return an error, but did not")
 		})
 	}
 }
