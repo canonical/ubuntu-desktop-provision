@@ -11,7 +11,6 @@ import (
 	"math/big"
 	"os"
 	"regexp"
-	"strconv"
 	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -275,96 +274,4 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 
 	// User found
 	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
-}
-
-// GetUser returns the user information for the given uid.
-func (s *Service) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.GetUserResponse, error) {
-
-	// Validate request
-	if req == nil {
-		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
-	}
-	uid := req.GetUserId()
-	if uid == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "uid cannot be empty")
-	}
-
-	uidInt, err := strconv.ParseInt(uid, 10, 64)
-	if err != nil {
-		// handle error: uid is not a valid integer
-		return nil, status.Errorf(codes.Internal, "int convert: %s", err)
-
-	}
-	var userObjectPath dbus.ObjectPath
-	err = s.accounts.Call(DbusAccountsPrefix+".FindUserById", 0, uidInt).Store(&userObjectPath)
-
-	if err != nil {
-		return nil, err
-	}
-
-	userObject := s.userFactory.GetUserObject(userObjectPath)
-
-	// Get the username via dbus
-	response, err := userObject.GetProperty(DbusAccountsPrefix + ".User.UserName")
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get username: %s", err)
-	}
-	if response.Value() == nil {
-		return nil, status.Errorf(codes.NotFound, "could not find username for given uid")
-	}
-	username, ok := response.Value().(string)
-	if !ok {
-		return nil, status.Errorf(codes.Internal, "unexpected type returned for username: %s", err)
-	}
-
-	// Get the realName via dbus
-	response, err = userObject.GetProperty(DbusAccountsPrefix + ".User.RealName")
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get realName: %s", err)
-	}
-	if response.Value() == nil {
-		return nil, status.Errorf(codes.NotFound, "could not find realName for given uid")
-	}
-	realName, ok := response.Value().(string)
-	if !ok {
-		return nil, status.Errorf(codes.Internal, "unexpected type returned for realName: %s", err)
-	}
-
-	// Get autoLogin via dbus
-	response, err = userObject.GetProperty(DbusAccountsPrefix + ".User.AutomaticLogin")
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get autoLogin: %s", err)
-	}
-	if response.Value() == nil {
-		return nil, status.Errorf(codes.NotFound, "could not find autoLogin for given uid")
-	}
-	autoLogin, ok := response.Value().(bool)
-	if !ok {
-		return nil, status.Errorf(codes.Internal, "unexpected type returned for autoLogin: %s", err)
-	}
-
-	// Get the hostname via dbus
-	response, err = s.hostname.GetProperty(DbusHostnamePrefix + ".Hostname")
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get hostname: %s", err)
-	}
-	if response.Value() == nil {
-		return nil, status.Errorf(codes.NotFound, "could not find hostname")
-	}
-	hostname, ok := response.Value().(string)
-	if !ok {
-		return nil, status.Errorf(codes.Internal, "unexpected type returned for hostname: %s", err)
-	}
-
-	user := &pb.User{
-		RealName:  realName,
-		Hostname:  hostname,
-		Username:  username,
-		AutoLogin: autoLogin,
-	}
-
-	return &pb.GetUserResponse{
-		User: user,
-	}, nil
-
 }

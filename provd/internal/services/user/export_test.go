@@ -70,8 +70,6 @@ func (a *AccountsObjectMock) Call(method string, flags dbus.Flags, args ...inter
 		callResult = a.UserObjectPath
 	case "org.freedesktop.Accounts.FindUserByName":
 		callResult = a.UserObjectPath
-	case "org.freedesktop.Accounts.FindUserById":
-		callResult = a.UserObjectPath
 	default:
 		err = errors.New("Unsupported accounts method")
 	}
