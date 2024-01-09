@@ -46,13 +46,24 @@ func (a *AccountsObjectMock) Call(method string, flags dbus.Flags, args ...inter
 	var err error
 
 	if a.WantError {
-		err = errors.New("Accounts object error")
+		switch method {
+		case "org.freedesktop.Accounts.FindUserByName":
+			dbusError := dbus.Error{
+				Name: "org.freedesktop.Accounts.Error.Failed",
+				Body: []interface{}{"specific error message"},
+			}
+			err = dbusError
+		default:
+			err = errors.New("Accounts object error")
+		}
 	}
 
 	var callResult interface{}
 
 	switch method {
 	case "org.freedesktop.Accounts.CreateUser":
+		callResult = a.UserObjectPath
+	case "org.freedesktop.Accounts.FindUserByName":
 		callResult = a.UserObjectPath
 	default:
 		err = errors.New("Unsupported method")

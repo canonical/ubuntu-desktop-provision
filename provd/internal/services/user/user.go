@@ -184,26 +184,25 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		return nil, status.Errorf(codes.InvalidArgument, "username cannot be empty")
 	}
 
-	// Connect to dbus
-	conn, err := dbus.ConnectSystemBus()
+	err := s.accounts.Call("org.freedesktop.Accounts.FindUserByName", 0, username).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
-	}
-	defer conn.Close()
 
-	accountObject := conn.Object(accountsDBusName, dbus.ObjectPath(accountsDBusPath))
-
-	// Try to find the user by username
-	err = accountObject.CallWithContext(ctx, "org.freedesktop.Accounts.FindUserByName", 0, username).Err
-	if err != nil {
-		if _, ok := err.(dbus.Error); ok {
-			// User not found
-			return &proto.ValidateUsernameResponse{Valid: true}, nil
+		// Check if the error is due to user not being found or a D-Bus error
+		if dbusError, ok := err.(dbus.Error); ok {
+			if dbusError.Name == "org.freedesktop.Accounts.Error.Failed" {
+				// User not found
+				return &proto.ValidateUsernameResponse{Valid: true}, nil
+			}
+			// Handle other dbus errors
+			return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
 		}
+		// Unknown error
+		return nil, status.Errorf(codes.Internal, "unknown error: %v", err)
 	}
 
 	// User found
 	return &proto.ValidateUsernameResponse{Valid: false}, nil
+
 }
 
 func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*proto.GetUserResponse, error) {
