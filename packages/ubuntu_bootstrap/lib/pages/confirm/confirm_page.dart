@@ -4,13 +4,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class ConfirmPage extends ConsumerWidget {
+class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   const ConfirmPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(confirmModelProvider).init().then((_) => true);
   }
 
@@ -50,7 +52,9 @@ class ConfirmPage extends ConsumerWidget {
             child: YaruBorderContainer(
               color: Theme.of(context).colorScheme.surface,
               padding: EdgeInsets.symmetric(
-                  horizontal: kWizardPadding.left, vertical: 10),
+                horizontal: kWizardPadding.left,
+                vertical: 10,
+              ),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

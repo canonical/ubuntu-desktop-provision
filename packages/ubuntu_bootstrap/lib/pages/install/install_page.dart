@@ -12,25 +12,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-extension InstallationActionL10n on InstallationAction {
-  String localize(UbuntuBootstrapLocalizations lang) {
-    switch (this) {
-      case InstallationAction.installingSystem:
-        return lang.installingSystem;
-      case InstallationAction.configuringSystem:
-        return lang.configuringSystem;
-      case InstallationAction.copyingFiles:
-        return lang.copyingFiles;
-      case InstallationAction.none:
-        return '';
-    }
-  }
-}
-
-class InstallPage extends ConsumerWidget {
+class InstallPage extends ConsumerWidget with ProvisioningPage {
   const InstallPage({super.key});
 
-  static Future<bool> load(BuildContext context, WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(installModelProvider);
     return Future.wait([
       model.init(),
@@ -252,5 +238,20 @@ class _DonePage extends ConsumerWidget {
         ],
       ),
     );
+  }
+}
+
+extension InstallationActionL10n on InstallationAction {
+  String localize(UbuntuBootstrapLocalizations lang) {
+    switch (this) {
+      case InstallationAction.installingSystem:
+        return lang.installingSystem;
+      case InstallationAction.configuringSystem:
+        return lang.configuringSystem;
+      case InstallationAction.copyingFiles:
+        return lang.copyingFiles;
+      case InstallationAction.none:
+        return '';
+    }
   }
 }

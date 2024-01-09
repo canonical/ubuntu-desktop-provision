@@ -151,7 +151,7 @@ void main() {
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
     final pageConfig = MockPageConfigService();
-    when(pageConfig.excludedPages).thenReturn({'c'});
+    when(pageConfig.excludedPages).thenReturn(['c']);
 
     final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();

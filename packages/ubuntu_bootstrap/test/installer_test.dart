@@ -127,14 +127,22 @@ extension on WidgetTester {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
 
+    final subiquityClient = MockSubiquityClient();
+    when(subiquityClient.getStatus()).thenAnswer(
+      (_) async => status.copyWith(state: ApplicationState.RUNNING),
+    );
+
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
     registerMockService<JournalService>(journal);
     registerMockService<LocaleService>(locale);
     registerMockService<ProductService>(ProductService());
     registerMockService<RefreshService>(refresh);
-    registerMockService<StorageService>(StorageService(MockSubiquityClient()));
-    registerMockService<SubiquityClient>(MockSubiquityClient());
+    registerMockService<SessionService>(
+      SubiquitySessionService(subiquityClient),
+    );
+    registerMockService<StorageService>(StorageService(subiquityClient));
+    registerMockService<SubiquityClient>(subiquityClient);
     registerMockService<TelemetryService>(MockTelemetryService());
     registerMockService<NetworkService>(MockNetworkService());
 

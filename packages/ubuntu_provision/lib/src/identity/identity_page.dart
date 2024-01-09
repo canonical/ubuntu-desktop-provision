@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_provision/src/identity/identity_widgets.dart';
@@ -12,11 +13,12 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 /// The installer page for setting up the user data.
 ///
 /// It uses [WizardPage] and `WizardAction` to create an installer page.
-class IdentityPage extends ConsumerWidget {
+class IdentityPage extends ConsumerWidget with ProvisioningPage {
   /// Creates a the installer page for setting up the user data.
   const IdentityPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(identityModelProvider).init().then((_) => true);
   }
 

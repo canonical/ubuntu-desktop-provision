@@ -79,10 +79,22 @@ class MockPageConfigService extends _i1.Mock implements _i3.PageConfigService {
       ) as Map<String, _i3.PageConfigEntry>);
 
   @override
-  Set<String> get excludedPages => (super.noSuchMethod(
+  bool get includeWelcome => (super.noSuchMethod(
+        Invocation.getter(#includeWelcome),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  List<String> get includedPages => (super.noSuchMethod(
+        Invocation.getter(#includedPages),
+        returnValue: <String>[],
+      ) as List<String>);
+
+  @override
+  List<String> get excludedPages => (super.noSuchMethod(
         Invocation.getter(#excludedPages),
-        returnValue: <String>{},
-      ) as Set<String>);
+        returnValue: <String>[],
+      ) as List<String>);
 
   @override
   _i4.Future<void> load() => (super.noSuchMethod(

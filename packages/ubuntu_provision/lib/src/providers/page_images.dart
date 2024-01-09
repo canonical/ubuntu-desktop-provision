@@ -19,10 +19,18 @@ class PageImages {
 
   final PageConfigService pageConfigService;
 
-  final Map<String, Widget> _images = {};
+  @visibleForTesting
+  SvgFileLoader Function(
+    File file, {
+    SvgTheme? theme,
+    ColorMapper? colorMapper,
+  }) svgFileLoader = SvgFileLoader.new;
+
+  @visibleForTesting
+  final Map<String, Widget> images = {};
 
   Widget get(String pageName) =>
-      _images[pageName] ?? const Text('PLACEHOLDER, REPLACE WITH DEFAULT');
+      images[pageName] ?? const Text('PLACEHOLDER, REPLACE WITH DEFAULT');
 
   Future<void> preCache(BuildContext context) async {
     final loadFutures = <Future<void>>[];
@@ -31,19 +39,18 @@ class PageImages {
       if (imagePath == null) return;
 
       try {
-        final file = File(imagePath);
-        final extension = path.extension(imagePath);
-        if (extension == '.svg') {
-          loadFutures.add(
-            svg.cache.putIfAbsent(
-              imagePath,
-              () => SvgFileLoader(file).loadBytes(context),
-            ),
-          );
-          _images[pageName] = SvgPicture.file(file);
+        final isAsset = imagePath.startsWith('assets/') ||
+            imagePath.startsWith('packages/');
+        final isAbsolutPath = imagePath.startsWith('/');
+        if (isAsset) {
+          _loadAsset(imagePath, pageName, context);
+        } else if (isAbsolutPath) {
+          loadFutures.add(_loadFile(imagePath, pageName, context));
         } else {
-          loadFutures.add(precacheImage(FileImage(file), context));
-          _images[pageName] = Image.file(file);
+          _log.error(
+            'Error loading image for $pageName from $imagePath since it is '
+            'neither an asset or absolute path.',
+          );
         }
       } on Exception catch (e) {
         _log.error('Error loading image for $pageName from $imagePath: $e');
@@ -51,5 +58,49 @@ class PageImages {
     });
 
     await Future.wait(loadFutures);
+  }
+
+  Future<void> _loadFile(
+    String imagePath,
+    String pageName,
+    BuildContext context,
+  ) async {
+    final file = File(imagePath);
+    if (!await file.exists()) {
+      _log.error(
+        'Error loading image for $pageName from $imagePath: File does not exist.',
+      );
+      return;
+    }
+    final extension = path.extension(imagePath);
+    if (extension == '.svg') {
+      await svg.cache.putIfAbsent(
+        imagePath,
+        () => svgFileLoader(file).loadBytes(context),
+      );
+      images[pageName] = SvgPicture.file(file);
+    } else {
+      if (context.mounted) {
+        await precacheImage(FileImage(file), context);
+      }
+      images[pageName] = Image.file(file);
+    }
+  }
+
+  void _loadAsset(
+    String imagePath,
+    String pageName,
+    BuildContext context,
+  ) {
+    final packageRegExp = RegExp(r'packages\/(.*?)\/');
+    final match = packageRegExp.firstMatch(imagePath);
+    final packageName = match?.group(1);
+
+    final extension = path.extension(imagePath);
+    if (extension == '.svg') {
+      images[pageName] = SvgPicture.asset(imagePath, package: packageName);
+    } else {
+      images[pageName] = Image.asset(imagePath, package: packageName);
+    }
   }
 }

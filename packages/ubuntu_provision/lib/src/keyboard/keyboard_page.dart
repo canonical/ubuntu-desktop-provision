@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_dialogs.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_model.dart';
@@ -7,10 +8,11 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class KeyboardPage extends ConsumerWidget {
+class KeyboardPage extends ConsumerWidget with ProvisioningPage {
   const KeyboardPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(keyboardModelProvider);
     return model
         .init()
