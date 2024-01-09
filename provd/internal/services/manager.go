@@ -7,6 +7,8 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/hello"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
+	proto "github.com/canonical/ubuntu-desktop-provision/provd/proto"
 	"github.com/ubuntu/decorate"
 	"google.golang.org/grpc"
 )
@@ -14,6 +16,7 @@ import (
 // Manager mediates the whole business logic of the application.
 type Manager struct {
 	helloService hello.Service
+	userService  user.Service
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
@@ -23,9 +26,11 @@ func NewManager(ctx context.Context) (m Manager, err error) {
 	slog.Debug("Building provd object")
 
 	helloService := hello.Service{}
+	userService := user.Service{}
 
 	return Manager{
 		helloService: helloService,
+		userService:  userService,
 	}, nil
 }
 
@@ -36,5 +41,6 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	grpcServer := grpc.NewServer()
 
 	provd.RegisterHelloWorldServiceServer(grpcServer, &m.helloService)
+	proto.RegisterUserServiceServer(grpcServer, &m.userService)
 	return grpcServer
 }

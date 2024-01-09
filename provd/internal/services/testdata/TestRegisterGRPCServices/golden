@@ -4,3 +4,15 @@ provd.HelloWorldService:
           isclientstream: false
           isserverstream: false
     metadata: provd.protos
+user.UserService:
+    methods:
+        - name: CreateUser
+          isclientstream: false
+          isserverstream: false
+        - name: ValidateUsername
+          isclientstream: false
+          isserverstream: false
+        - name: GetUser
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/user.proto
