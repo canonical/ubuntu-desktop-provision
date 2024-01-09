@@ -43,8 +43,6 @@ func NewManager(ctx context.Context) (m Manager, err error) {
 		return Manager{}, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
 	}
 
-	slog.Debug("Building provd object")
-
 	helloService := hello.Service{}
 
 	userService := user.New(bus)

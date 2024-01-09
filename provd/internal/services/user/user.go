@@ -7,7 +7,6 @@ import (
 	"crypto/sha512"
 	"encoding/base64"
 	"fmt"
-	"log/slog"
 	"strconv"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/proto"
@@ -137,10 +136,6 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	// Create the user
 	var userObjectPath dbus.ObjectPath
 	call := s.accounts.Call("org.freedesktop.Accounts.CreateUser", 0, username, realName, accountType)
-
-	// Log the response (assuming you have a logger set up)
-
-	slog.Info(fmt.Sprintf("%v", call.Body))
 
 	err := call.Store(&userObjectPath)
 	if err != nil {
