@@ -7,6 +7,7 @@ import (
 	"crypto/sha512"
 	"encoding/base64"
 	"fmt"
+	"math/big"
 	"strconv"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/proto"
@@ -79,23 +80,46 @@ func New(bus *dbus.Conn, args ...option) *Service {
 	}
 }
 
-func hashPassword(password string) (string, error) {
-	// Generate a 16-byte salt
-	salt := make([]byte, 16)
-	if _, err := rand.Read(salt); err != nil {
-		return "", err
+const validSalts = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./"
+
+// Generate a salt string of the specified length using validSalts characters.
+func generateSalt(length int) (string, error) {
+	salt := make([]byte, length)
+	for i := range salt {
+		index, err := rand.Int(rand.Reader, big.NewInt(int64(len(validSalts))))
+		if err != nil {
+			return "", err
+		}
+		salt[i] = validSalts[index.Int64()]
+	}
+	return string(salt), nil
+}
+
+func HashPassword(password string, testSalt *string) (string, error) {
+	if password == "" {
+		return "", status.Errorf(codes.InvalidArgument, "recieved an empty password")
+	}
+	var salt string
+	var err error
+
+	if testSalt != nil {
+		salt = *testSalt
+	} else {
+		// Generate a 16-byte salt
+		salt, err = generateSalt(16)
+		if err != nil {
+			return "", err
+		}
 	}
 
 	// Hash the password with the salt
 	hasher := sha512.New()
-	hasher.Write(salt)
-	hasher.Write([]byte(password))
+	hasher.Write([]byte(salt + password))
 	hashedBytes := hasher.Sum(nil)
 	hashedPassword := base64.RawStdEncoding.EncodeToString(hashedBytes)
 
 	// Format the hash in the SHA-512 crypt format
-	saltStr := base64.RawStdEncoding.EncodeToString(salt)
-	return fmt.Sprintf("$6$%s$%s", saltStr, hashedPassword), nil
+	return fmt.Sprintf("$6$%s$%s", salt, hashedPassword), nil
 }
 
 func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) (*proto.Empty, error) {
@@ -138,7 +162,7 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
 
-	hashed, err := hashPassword(password)
+	hashed, err := HashPassword(password, nil)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
 	}
