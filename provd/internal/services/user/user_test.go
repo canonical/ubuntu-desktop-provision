@@ -297,6 +297,18 @@ func TestValidateUsername(t *testing.T) {
 			username: "",
 			wantErr:  true,
 		},
+		"Reserved username": {
+			username: "root",
+			wantErr:  true,
+		},
+		"Username too long": {
+			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
+			wantErr:  true,
+		},
+		"Invalid characters in username": {
+			username: "invalid@username",
+			wantErr:  true,
+		},
 	}
 
 	for name, tc := range tests {
