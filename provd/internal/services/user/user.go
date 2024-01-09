@@ -7,6 +7,7 @@ import (
 	"crypto/sha512"
 	"encoding/base64"
 	"fmt"
+	"log/slog"
 	"strconv"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/proto"
@@ -25,10 +26,61 @@ const (
 	hostnameIface     string = "org.freedesktop.hostname1"
 )
 
+type Caller interface {
+	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
+}
+
+type UserObjectFactory interface {
+	GetUserObject(userObjectPath dbus.ObjectPath) Caller
+}
+
+type userObjectFactoryImpl struct {
+	conn *dbus.Conn
+}
+
+func (f *userObjectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) Caller {
+	userObject := f.conn.Object(accountsDBusName, userObjectPath)
+	return userObject
+}
+
+type options struct {
+	accounts    Caller
+	hostname    Caller
+	userFactory UserObjectFactory
+}
+
+type option func(*options)
+
 // Service is the implementation of the User module service.
 type Service struct {
 	proto.UnimplementedUserServiceServer
-	string
+	accounts    Caller
+	hostname    Caller
+	userFactory UserObjectFactory
+}
+
+// New retuns a new instance of the User service.
+func New(bus *dbus.Conn, args ...option) *Service {
+	accounts := bus.Object("org.freedesktop.Accounts", "/org/freedesktop/Accounts")
+	hostname := bus.Object("org.freedesktop.hostname1", "/org/freedesktop/hostname1")
+	userFactory := &userObjectFactoryImpl{conn: bus}
+
+	opts := options{
+		accounts:    accounts,
+		hostname:    hostname,
+		userFactory: userFactory,
+	}
+
+	// Apply given options
+	for _, f := range args {
+		f(&opts)
+	}
+
+	return &Service{
+		accounts:    opts.accounts,
+		hostname:    opts.hostname,
+		userFactory: opts.userFactory,
+	}
 }
 
 func hashPassword(password string) (string, error) {
@@ -81,26 +133,17 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	if hostname == "" {
 		return nil, status.Errorf(codes.InvalidArgument, "recieved an empty hostname")
 	}
-
-	// Connect to dbus
-	conn, err := dbus.ConnectSystemBus()
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "Failed to connect to session bus: %s", err)
-	}
-	defer conn.Close()
-
 	// Create the user
-	accountObject := conn.Object(accountsDBusName, dbus.ObjectPath(accountsDBusPath))
-	resp := accountObject.CallWithContext(ctx, "org.freedesktop.Accounts.CreateUser", 0, username, realName, accountType)
-	if resp.Err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create user: %s", resp.Err)
-	}
-
-	// Retrieve the object path of the newly created user
 	var userObjectPath dbus.ObjectPath
-	err = resp.Store(&userObjectPath)
+	call := s.accounts.Call("org.freedesktop.Accounts.CreateUser", 0, username, realName, accountType)
+
+	// Log the response (assuming you have a logger set up)
+
+	slog.Info(fmt.Sprintf("%v", call.Body))
+
+	err := call.Store(&userObjectPath)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get user object path: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
 
 	hashed, err := hashPassword(password)
@@ -109,22 +152,21 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	}
 
 	// Set the password for the user
-	userObject := conn.Object(accountsDBusName, userObjectPath)
+	userObject := s.userFactory.GetUserObject(userObjectPath)
 	fmt.Printf(hashed)
-	err = userObject.CallWithContext(ctx, "org.freedesktop.Accounts.User.SetPassword", 0, hashed, "").Err
+	err = userObject.Call("org.freedesktop.Accounts.User.SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
 	}
 
 	// Set autologin for the user
-	err = userObject.CallWithContext(ctx, "org.freedesktop.Accounts.User.SetAutomaticLogin", 0, autologin).Err
+	err = userObject.Call("org.freedesktop.Accounts.User.SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
 	}
 
 	// Set the hostname
-	hostnameObject := conn.Object(hostnameDBusName, dbus.ObjectPath(hostnameDBusPath))
-	err = hostnameObject.CallWithContext(ctx, "org.freedesktop.hostname1.SetStaticHostname", 0, hostname, false).Err
+	err = s.hostname.Call("org.freedesktop.hostname1.SetStaticHostname", 0, hostname, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
 	}
