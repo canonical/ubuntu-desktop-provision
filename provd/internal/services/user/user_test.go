@@ -34,22 +34,22 @@ func TestCreateUser(t *testing.T) {
 		wantErr bool
 	}{
 		"Successfully creates a user": {
-			realName:  "Matt",
-			username:  "matt",
+			realName:  "Ubuntu",
+			username:  "ubuntu",
 			password:  "password",
 			hostname:  "ubuntu",
 			autoLogin: true,
 		},
 		"Error when realName is empty": {
 			realName:  "",
-			username:  "matt",
+			username:  "ubuntu",
 			password:  "password",
 			hostname:  "ubuntu",
 			autoLogin: true,
 			wantErr:   true,
 		},
 		"Error when username is empty": {
-			realName:  "Matt",
+			realName:  "Ubuntu",
 			username:  "",
 			password:  "password",
 			hostname:  "ubuntu",
@@ -57,16 +57,16 @@ func TestCreateUser(t *testing.T) {
 			wantErr:   true,
 		},
 		"Error when hostname is empty": {
-			realName:  "Matt",
-			username:  "matt",
+			realName:  "Ubuntu",
+			username:  "ubuntu",
 			password:  "password",
 			hostname:  "",
 			autoLogin: true,
 			wantErr:   true,
 		},
 		"Error from Accounts service": {
-			realName:      "Matt",
-			username:      "matt",
+			realName:      "Ubuntu",
+			username:      "ubuntu",
 			password:      "password",
 			hostname:      "ubuntu",
 			autoLogin:     true,
@@ -74,8 +74,8 @@ func TestCreateUser(t *testing.T) {
 			wantErr:       true,
 		},
 		"Error from Hostname service": {
-			realName:      "Matt",
-			username:      "matt",
+			realName:      "Ubuntu",
+			username:      "ubuntu",
 			password:      "password",
 			hostname:      "ubuntu",
 			autoLogin:     true,
@@ -96,19 +96,11 @@ func TestCreateUser(t *testing.T) {
 			}
 
 			hostnameMock := &user.HostnameObjectMock{
-				Hostname:  tc.hostname,
 				WantError: tc.hostnameError,
 			}
 
 			userFactoryMock := user.UserObjectFactoryMock{
-				&user.UserObjectMock{
-					Properties: map[string]interface{}{
-						"RealName":  tc.realName,
-						"UserName":  tc.username,
-						"Password":  tc.password,
-						"AutoLogin": tc.autoLogin,
-					},
-				},
+				&user.UserObjectMock{},
 			}
 
 			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
@@ -130,6 +122,120 @@ func TestCreateUser(t *testing.T) {
 			}
 			require.NoError(t, err, "CreateUser should not return an error, but did")
 		})
+	}
+}
+
+func TestGetUser(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		uid string
+
+		realName  string
+		username  string
+		password  string
+		hostname  string
+		autoLogin bool
+
+		accountsError bool
+		hostnameError bool
+
+		wantErr bool
+	}{
+		"Successfully gets a user": {
+			uid:       "1000",
+			realName:  "Ubuntu",
+			username:  "ubuntu",
+			password:  "password",
+			hostname:  "ubuntu",
+			autoLogin: true,
+		},
+		"Error when uid is empty": {
+			uid:       "",
+			realName:  "Ubuntu",
+			username:  "ubuntu",
+			password:  "password",
+			hostname:  "ubuntu",
+			autoLogin: true,
+			wantErr:   true,
+		},
+		"Error when uid is not a number": {
+			uid:       "notanumber",
+			realName:  "Ubuntu",
+			username:  "ubuntu",
+			password:  "password",
+			hostname:  "ubuntu",
+			autoLogin: true,
+			wantErr:   true,
+		},
+		"Error when accounts returns an error": {
+			uid:           "9999",
+			realName:      "Ubuntu",
+			username:      "ubuntu",
+			password:      "password",
+			hostname:      "ubuntu",
+			autoLogin:     true,
+			wantErr:       true,
+			accountsError: true,
+		},
+		"Error when hostname returns an error": {
+			uid:           "1000",
+			realName:      "Ubuntu",
+			username:      "ubuntu",
+			password:      "password",
+			hostname:      "ubuntu",
+			autoLogin:     true,
+			wantErr:       true,
+			hostnameError: true,
+		},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			t.Cleanup(testutils.StartLocalSystemBus())
+
+			accountsMock := &user.AccountsObjectMock{
+				WantError: tc.accountsError,
+			}
+
+			hostnameMock := &user.HostnameObjectMock{
+				WantError: tc.hostnameError,
+				Properties: map[string]interface{}{
+					"org.freedesktop.hostname1.Hostname": tc.hostname,
+				},
+			}
+			userFactoryMock := user.UserObjectFactoryMock{
+				&user.UserObjectMock{
+					Properties: map[string]interface{}{
+						"org.freedesktop.Accounts.User.RealName":       tc.realName,
+						"org.freedesktop.Accounts.User.UserName":       tc.username,
+						"org.freedesktop.Accounts.User.Password":       tc.password,
+						"org.freedesktop.Accounts.User.AutomaticLogin": tc.autoLogin,
+					},
+				},
+			}
+
+			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
+
+			getReq := &proto.GetUserRequest{
+				UserId: tc.uid,
+			}
+
+			resp, err := client.GetUser(context.Background(), getReq)
+			if tc.wantErr {
+				require.Error(t, err, "ValidateUsername should return an error, but did not")
+				return
+			}
+			require.NoError(t, err, "ValidateUsername should not return an error, but did")
+
+			got := resp.GetUser().String()
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "ValidateUsername returned an unexpected response")
+
+		})
+
 	}
 }
 

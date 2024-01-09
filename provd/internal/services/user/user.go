@@ -28,6 +28,7 @@ const (
 
 type Caller interface {
 	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
+	GetProperty(p string) (dbus.Variant, error)
 }
 
 type UserObjectFactory interface {
@@ -216,33 +217,23 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 		return nil, status.Errorf(codes.InvalidArgument, "uid cannot be empty")
 	}
 
-	// Connect to dbus
-	conn, err := dbus.ConnectSystemBus()
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "Failed to connect to session bus: %s", err)
-	}
-	defer conn.Close()
-
-	accountObject := conn.Object(accountsDBusName, dbus.ObjectPath(accountsDBusPath))
-	var userObjectPath dbus.ObjectPath
-
 	uidInt, err := strconv.ParseInt(uid, 10, 64)
 	if err != nil {
 		// handle error: uid is not a valid integer
 		return nil, status.Errorf(codes.Internal, "int convert: %s", err)
 
 	}
+	var userObjectPath dbus.ObjectPath
+	err = s.accounts.Call("org.freedesktop.Accounts.FindUserById", 0, uidInt).Store(&userObjectPath)
 
-	err = accountObject.CallWithContext(ctx, "org.freedesktop.Accounts.FindUserById", 0, uidInt).Store(&userObjectPath)
 	if err != nil {
 		return nil, err
 	}
 
-	userObject := conn.Object(accountsDBusName, userObjectPath)
-	hostnameObject := conn.Object(hostnameDBusName, dbus.ObjectPath(hostnameDBusPath))
+	userObject := s.userFactory.GetUserObject(userObjectPath)
 
 	// Get the username via dbus
-	response, err := userObject.GetProperty("org.freedesktop.Accounts.User.UserName")
+	response, err := userObject.GetProperty("org.freedesktop.Accounts.User." + "UserName")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get username: %s", err)
 	}
@@ -281,7 +272,7 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 	}
 
 	// Get the hostname via dbus
-	response, err = hostnameObject.GetProperty("org.freedesktop.hostname1." + "Hostname")
+	response, err = s.hostname.GetProperty("org.freedesktop.hostname1." + "Hostname")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get hostname: %s", err)
 	}

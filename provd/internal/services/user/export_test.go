@@ -30,11 +30,12 @@ func WithUserFactory(userFactory UserObjectFactory) option {
 type AccountsObjectMock struct {
 	WantError      bool
 	UserObjectPath dbus.ObjectPath
+	Properties     map[string]interface{}
 }
 
 type HostnameObjectMock struct {
-	WantError bool
-	Hostname  string
+	WantError  bool
+	Properties map[string]interface{}
 }
 
 type UserObjectMock struct {
@@ -65,8 +66,10 @@ func (a *AccountsObjectMock) Call(method string, flags dbus.Flags, args ...inter
 		callResult = a.UserObjectPath
 	case "org.freedesktop.Accounts.FindUserByName":
 		callResult = a.UserObjectPath
+	case "org.freedesktop.Accounts.FindUserById":
+		callResult = a.UserObjectPath
 	default:
-		err = errors.New("Unsupported method")
+		err = errors.New("Unsupported accounts method")
 	}
 
 	return &dbus.Call{
@@ -86,10 +89,9 @@ func (h *HostnameObjectMock) Call(method string, flags dbus.Flags, args ...inter
 
 	switch method {
 	case "org.freedesktop.hostname1.SetStaticHostname":
-		h.Hostname = args[0].(string)
 		callResult = []interface{}{}
 	default:
-		err = errors.New("Unsupported method")
+		err = errors.New("Unsupported hostname method")
 	}
 
 	return &dbus.Call{
@@ -118,7 +120,30 @@ func (u *UserObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	}
 	value, exists := u.Properties[prop]
 	if !exists {
-		return dbus.Variant{}, errors.New("Property not found")
+
+		return dbus.Variant{}, errors.New("User property not found: " + prop)
+	}
+	return dbus.MakeVariant(value), nil
+}
+
+func (u *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
+	if u.WantError {
+		return dbus.Variant{}, errors.New("GetProperty error")
+	}
+	value, exists := u.Properties[prop]
+	if !exists {
+		return dbus.Variant{}, errors.New("Accounts property not found")
+	}
+	return dbus.MakeVariant(value), nil
+}
+
+func (u *HostnameObjectMock) GetProperty(prop string) (dbus.Variant, error) {
+	if u.WantError {
+		return dbus.Variant{}, errors.New("GetProperty error")
+	}
+	value, exists := u.Properties[prop]
+	if !exists {
+		return dbus.Variant{}, errors.New("Hostname1 property not found")
 	}
 	return dbus.MakeVariant(value), nil
 }
