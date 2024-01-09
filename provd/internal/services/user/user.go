@@ -22,33 +22,40 @@ import (
 )
 
 const (
+	// DbusAccountsPrefix is the prefix for the Accounts D-Bus interface.
 	DbusAccountsPrefix = "org.freedesktop.Accounts"
+	// DbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
 	DbusHostnamePrefix = "org.freedesktop.hostname1"
 	UsernameMaxLen     = 32
 	UsernameRegex      = "^[a-z_][a-z0-9_-]*$"
 )
 
-type Caller interface {
+// DbusObject is an abstraction of a dbus object.
+type DbusObject interface {
 	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
 	GetProperty(p string) (dbus.Variant, error)
 }
 
+// UserObjectFactory is a factory for creating DbusObjects for users.
+// This is used to allow mocking of the DbusObjects for testing.
 type UserObjectFactory interface {
-	GetUserObject(userObjectPath dbus.ObjectPath) Caller
+	GetUserObject(userObjectPath dbus.ObjectPath) DbusObject
 }
 
+// userObjectFactoryImpl is the default implementation of UserObjectFactory.
 type userObjectFactoryImpl struct {
 	conn *dbus.Conn
 }
 
-func (f *userObjectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) Caller {
+// Wraps the dbus call for getting a user object.
+func (f *userObjectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) DbusObject {
 	userObject := f.conn.Object(DbusAccountsPrefix, userObjectPath)
 	return userObject
 }
 
 type options struct {
-	accounts    Caller
-	hostname    Caller
+	accounts    DbusObject
+	hostname    DbusObject
 	userFactory UserObjectFactory
 }
 
@@ -57,8 +64,8 @@ type option func(*options)
 // Service is the implementation of the User module service.
 type Service struct {
 	proto.UnimplementedUserServiceServer
-	accounts    Caller
-	hostname    Caller
+	accounts    DbusObject
+	hostname    DbusObject
 	userFactory UserObjectFactory
 }
 
@@ -86,21 +93,23 @@ func New(bus *dbus.Conn, args ...option) *Service {
 	}
 }
 
-const validSalts = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./"
+const validSaltChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./"
 
-// Generate a salt string of the specified length using validSalts characters.
+// generateSalt generates a salt string of the specified length using validSalts characters.
 func generateSalt(length int) (string, error) {
 	salt := make([]byte, length)
 	for i := range salt {
-		index, err := rand.Int(rand.Reader, big.NewInt(int64(len(validSalts))))
+		index, err := rand.Int(rand.Reader, big.NewInt(int64(len(validSaltChars))))
 		if err != nil {
 			return "", err
 		}
-		salt[i] = validSalts[index.Int64()]
+		salt[i] = validSaltChars[index.Int64()]
 	}
 	return string(salt), nil
 }
 
+// HashPassword hashes the given password, returning in the SHA-512 crypt format.
+// A salt can be provided for testing purposes.
 func HashPassword(password string, testSalt *string) (string, error) {
 	if password == "" {
 		return "", status.Errorf(codes.InvalidArgument, "recieved an empty password")
@@ -111,23 +120,20 @@ func HashPassword(password string, testSalt *string) (string, error) {
 	if testSalt != nil {
 		salt = *testSalt
 	} else {
-		// Generate a 16-byte salt
 		salt, err = generateSalt(16)
 		if err != nil {
 			return "", err
 		}
 	}
-
-	// Hash the password with the salt
 	hasher := sha512.New()
 	hasher.Write([]byte(salt + password))
 	hashedBytes := hasher.Sum(nil)
 	hashedPassword := base64.RawStdEncoding.EncodeToString(hashedBytes)
 
-	// Format the hash in the SHA-512 crypt format
 	return fmt.Sprintf("$6$%s$%s", salt, hashedPassword), nil
 }
 
+// CreateUser creates a new user on the system.
 func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) (*proto.Empty, error) {
 
 	// Validate requtest
@@ -165,6 +171,7 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 
 	err := call.Store(&userObjectPath)
 	if err != nil {
+
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
 
@@ -196,6 +203,8 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 	return &proto.Empty{}, nil
 }
 
+// ValidateUsername validates the given username. Returns an enum value indicating
+// the result of the validation.
 func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsernameRequest) (*proto.ValidateUsernameResponse, error) {
 	// Validate request
 	if req == nil {
@@ -206,18 +215,19 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_EMPTY}, nil
 	}
 
-	// Regex check
+	// Check if username uses valid characters
 	matched, _ := regexp.MatchString(UsernameRegex, username)
 	if !matched {
 		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_INVALID_CHARS}, nil
 	}
 
-	// Length check
+	// Check if username is too long
 	if len(username) > UsernameMaxLen {
 		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_TOO_LONG}, nil
 	}
 
-	// Reserved username check
+	// Check if username is in reserved list
+	// Read line by line to avoid loading the whole file into memory
 	file, err := os.Open("reserved-usernames")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "error opening reserved usernames file: %v", err)
@@ -246,6 +256,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_SYSTEM_RESERVED}, nil
 	}
 
+	// Check if username is already in use
 	err = s.accounts.Call(DbusAccountsPrefix+".FindUserByName", 0, username).Err
 	if err != nil {
 
@@ -266,6 +277,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_ALREADY_IN_USE}, nil
 }
 
+// GetUser returns the user information for the given uid.
 func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*proto.GetUserResponse, error) {
 
 	// Validate request

@@ -7,14 +7,14 @@ import (
 )
 
 // WithAccounts overrides the accounts caller for the service.
-func WithAccounts(accounts Caller) option {
+func WithAccounts(accounts DbusObject) option {
 	return func(o *options) {
 		o.accounts = accounts
 	}
 }
 
 // WithHostname overrides the hostname caller for the service.
-func WithHostname(hostname Caller) option {
+func WithHostname(hostname DbusObject) option {
 	return func(o *options) {
 		o.hostname = hostname
 	}
@@ -27,22 +27,26 @@ func WithUserFactory(userFactory UserObjectFactory) option {
 	}
 }
 
+// AccountsObjectMock is a mock AccountsObject.
 type AccountsObjectMock struct {
 	WantError      bool
 	UserObjectPath dbus.ObjectPath
 	Properties     map[string]interface{}
 }
 
+// HostnameObjectMock is a mock HostnameObject.
 type HostnameObjectMock struct {
 	WantError  bool
 	Properties map[string]interface{}
 }
 
+// UserObjectMock is a mock UserObject.
 type UserObjectMock struct {
 	WantError  bool
 	Properties map[string]interface{}
 }
 
+// Call is a mock implementation of the dbus Call method for the AccountsObjectMock.
 func (a *AccountsObjectMock) Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call {
 	var err error
 
@@ -78,6 +82,7 @@ func (a *AccountsObjectMock) Call(method string, flags dbus.Flags, args ...inter
 	}
 }
 
+// Call is a mock implementation of the dbus Call method for the HostnameObjectMock.
 func (h *HostnameObjectMock) Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call {
 	var err error
 
@@ -100,6 +105,7 @@ func (h *HostnameObjectMock) Call(method string, flags dbus.Flags, args ...inter
 	}
 }
 
+// Call is a mock implementation of the dbus Call method for the UserObjectMock.
 func (u *UserObjectMock) Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call {
 	var err error
 	if u.WantError {
@@ -114,6 +120,7 @@ func (u *UserObjectMock) Call(method string, flags dbus.Flags, args ...interface
 	}
 }
 
+// GetProperty is a mock implementation of the dbus GetProperty method for the UserObjectMock.
 func (u *UserObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	if u.WantError {
 		return dbus.Variant{}, errors.New("GetProperty error")
@@ -126,6 +133,7 @@ func (u *UserObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	return dbus.MakeVariant(value), nil
 }
 
+// GetProperty is a mock implementation of the dbus GetProperty method for the AccountsObjectMock.
 func (u *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	if u.WantError {
 		return dbus.Variant{}, errors.New("GetProperty error")
@@ -137,6 +145,7 @@ func (u *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	return dbus.MakeVariant(value), nil
 }
 
+// GetProperty is a mock implementation of the dbus GetProperty method for the HostnameObjectMock.
 func (u *HostnameObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	if u.WantError {
 		return dbus.Variant{}, errors.New("GetProperty error")
@@ -148,10 +157,12 @@ func (u *HostnameObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	return dbus.MakeVariant(value), nil
 }
 
+// UserObjectFactoryMock is a mock UserObjectFactory.
 type UserObjectFactoryMock struct {
 	UserObject *UserObjectMock
 }
 
-func (f UserObjectFactoryMock) GetUserObject(userObjectPath dbus.ObjectPath) Caller {
+// GetUserObject returns a mock UserObject.
+func (f UserObjectFactoryMock) GetUserObject(userObjectPath dbus.ObjectPath) DbusObject {
 	return f.UserObject
 }

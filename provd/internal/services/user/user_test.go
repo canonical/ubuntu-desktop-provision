@@ -241,6 +241,8 @@ func TestGetUser(t *testing.T) {
 					"org.freedesktop.hostname1.Hostname": tc.hostname,
 				},
 			}
+
+			// userFactoryMock is used to return a mock user object with the properties we want to test.
 			userFactoryMock := user.UserObjectFactoryMock{
 				&user.UserObjectMock{
 					Properties: map[string]interface{}{
@@ -342,7 +344,8 @@ func TestValidateUsername(t *testing.T) {
 	}
 }
 
-func newUserClient(t *testing.T, accountsMock user.Caller, hostnameMock user.Caller, userFactoryMock user.UserObjectFactory) proto.UserServiceClient {
+// newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
+func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.UserObjectFactory) proto.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")

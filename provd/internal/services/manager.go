@@ -3,6 +3,7 @@ package services
 
 import (
 	"context"
+	"fmt"
 	"log/slog"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd"
@@ -25,20 +26,23 @@ type Manager struct {
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
-func NewManager(ctx context.Context) (m Manager, err error) {
+func NewManager(ctx context.Context) (m *Manager, err error) {
 	defer decorate.OnError(&err, "can't create provd object")
 
 	// Connect to dbus
-	bus, err := dbus.ConnectSystemBus()
+	bus, err := dbus.ConnectSystemBus(
+		dbus.WithIncomingInterceptor(func(msg *dbus.Message) {
+			slog.Debug(fmt.Sprintf("DBUS: %s", msg))
+		}))
 	if err != nil {
-		return Manager{}, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
+		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
 	}
 
 	helloService := hello.Service{}
 
 	userService := user.New(bus)
 
-	return Manager{
+	return &Manager{
 		helloService: helloService,
 		userService:  *userService,
 		bus:          bus,
@@ -56,7 +60,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	return grpcServer
 }
 
-// stop closes the dbus connection.
+// Stop closes the dbus connection.
 func (m *Manager) Stop() error {
 	slog.Debug("Closing grpc manager and dbus connection")
 
