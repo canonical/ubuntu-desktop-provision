@@ -203,18 +203,18 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 	username := req.GetUsername()
 	if username == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "username cannot be empty")
+		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_EMPTY}, nil
 	}
 
 	// Regex check
 	matched, _ := regexp.MatchString(UsernameRegex, username)
 	if !matched {
-		return nil, status.Errorf(codes.InvalidArgument, "username does not match required pattern")
+		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_INVALID_CHARS}, nil
 	}
 
 	// Length check
 	if len(username) > UsernameMaxLen {
-		return nil, status.Errorf(codes.InvalidArgument, "username exceeds maximum length")
+		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_TOO_LONG}, nil
 	}
 
 	// Reserved username check
@@ -243,7 +243,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 
 	if isReserved {
-		return nil, status.Errorf(codes.InvalidArgument, "username is reserved")
+		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_SYSTEM_RESERVED}, nil
 	}
 
 	err = s.accounts.Call(DbusAccountsPrefix+".FindUserByName", 0, username).Err
@@ -253,7 +253,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		if dbusError, ok := err.(dbus.Error); ok {
 			if dbusError.Name == DbusAccountsPrefix+".Error.Failed" {
 				// User not found
-				return &proto.ValidateUsernameResponse{Valid: true}, nil
+				return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_OK}, nil
 			}
 			// Handle other dbus errors
 			return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
@@ -263,7 +263,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 
 	// User found
-	return &proto.ValidateUsernameResponse{Valid: false}, nil
+	return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_ALREADY_IN_USE}, nil
 }
 
 func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*proto.GetUserResponse, error) {

@@ -6,7 +6,6 @@ import (
 	"net"
 	"os"
 	"path/filepath"
-	"strconv"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
@@ -289,25 +288,24 @@ func TestValidateUsername(t *testing.T) {
 			wantErr:       false,
 		},
 		"Existing username": {
-			username:      "existinguser",
-			accountsError: false,
-			wantErr:       false,
+			username: "existinguser",
+			wantErr:  false,
 		},
 		"Empty username": {
 			username: "",
-			wantErr:  true,
+			wantErr:  false,
 		},
 		"Reserved username": {
 			username: "root",
-			wantErr:  true,
+			wantErr:  false,
 		},
 		"Username too long": {
 			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
-			wantErr:  true,
+			wantErr:  false,
 		},
 		"Invalid characters in username": {
 			username: "invalid@username",
-			wantErr:  true,
+			wantErr:  false,
 		},
 	}
 
@@ -337,7 +335,7 @@ func TestValidateUsername(t *testing.T) {
 			}
 			require.NoError(t, err, "ValidateUsername should not return an error, but did")
 
-			got := strconv.FormatBool(resp.GetValid())
+			got := resp.UsernameValidation.String()
 			want := testutils.LoadWithUpdateFromGolden(t, got)
 			require.Equal(t, want, got, "ValidateUsername returned an unexpected response")
 		})

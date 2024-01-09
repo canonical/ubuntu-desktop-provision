@@ -17,11 +17,11 @@ message GetUserRequest {
 }
 
 message User {
-  string realName = 1;
+  string real_name = 1;
   string hostname = 2;
   string username = 3;
   string password = 4;
-  bool autoLogin = 5;
+  bool auto_login = 5;
 }
 
 message GetUserResponse {
@@ -38,5 +38,14 @@ message ValidateUsernameRequest {
 }
 
 message ValidateUsernameResponse {
-  bool valid = 1;
+  UsernameValidation username_validation = 1;
+}
+
+enum UsernameValidation {
+    OK = 0;
+    ALREADY_IN_USE = 1;
+    SYSTEM_RESERVED = 2;
+    INVALID_CHARS = 3;
+    TOO_LONG = 4;
+    EMPTY = 5;
 }
