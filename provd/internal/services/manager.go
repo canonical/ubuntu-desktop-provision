@@ -9,7 +9,7 @@ import (
 	"github.com/canonical/ubuntu-desktop-provision/provd"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/hello"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
-	proto "github.com/canonical/ubuntu-desktop-provision/provd/proto"
+	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
 
 	"github.com/ubuntu/decorate"
@@ -56,7 +56,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	grpcServer := grpc.NewServer()
 
 	provd.RegisterHelloWorldServiceServer(grpcServer, &m.helloService)
-	proto.RegisterUserServiceServer(grpcServer, &m.userService)
+	pb.RegisterUserServiceServer(grpcServer, &m.userService)
 	return grpcServer
 }
 

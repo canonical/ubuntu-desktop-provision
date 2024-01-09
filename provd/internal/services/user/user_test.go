@@ -10,7 +10,7 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
-	"github.com/canonical/ubuntu-desktop-provision/provd/proto"
+	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
@@ -140,8 +140,8 @@ func TestCreateUser(t *testing.T) {
 
 			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
 
-			userReq := &proto.CreateUserRequest{
-				User: &proto.User{
+			userReq := &pb.CreateUserRequest{
+				User: &pb.User{
 					RealName:  tc.realName,
 					Username:  tc.username,
 					Password:  tc.password,
@@ -256,7 +256,7 @@ func TestGetUser(t *testing.T) {
 
 			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
 
-			getReq := &proto.GetUserRequest{
+			getReq := &pb.GetUserRequest{
 				UserId: tc.uid,
 			}
 
@@ -326,7 +326,7 @@ func TestValidateUsername(t *testing.T) {
 
 			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
 
-			validateReq := &proto.ValidateUsernameRequest{
+			validateReq := &pb.ValidateUsernameRequest{
 				Username: tc.username,
 			}
 
@@ -345,7 +345,7 @@ func TestValidateUsername(t *testing.T) {
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.UserObjectFactory) proto.UserServiceClient {
+func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.UserObjectFactory) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
@@ -362,7 +362,7 @@ func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user
 	service := user.New(bus, user.WithAccounts(accountsMock), user.WithHostname(hostnameMock), user.WithUserFactory(userFactoryMock))
 
 	grpcServer := grpc.NewServer()
-	proto.RegisterUserServiceServer(grpcServer, service)
+	pb.RegisterUserServiceServer(grpcServer, service)
 	done := make(chan struct{})
 	go func() {
 		defer close(done)
@@ -377,7 +377,7 @@ func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user
 	require.NoError(t, err, "Setup: Could not connect to GRPC server")
 	t.Cleanup(func() { _ = conn.Close() })
 
-	return proto.NewUserServiceClient(conn)
+	return pb.NewUserServiceClient(conn)
 }
 
 func TestMain(m *testing.M) {

@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/canonical/ubuntu-desktop-provision/provd/proto"
+	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
@@ -63,7 +63,7 @@ type option func(*options)
 
 // Service is the implementation of the User module service.
 type Service struct {
-	proto.UnimplementedUserServiceServer
+	pb.UnimplementedUserServiceServer
 	accounts    DbusObject
 	hostname    DbusObject
 	userFactory UserObjectFactory
@@ -134,7 +134,7 @@ func HashPassword(password string, testSalt *string) (string, error) {
 }
 
 // CreateUser creates a new user on the system.
-func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) (*proto.Empty, error) {
+func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.Empty, error) {
 
 	// Validate requtest
 	if req == nil {
@@ -200,30 +200,30 @@ func (s *Service) CreateUser(ctx context.Context, req *proto.CreateUserRequest) 
 		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
 	}
 
-	return &proto.Empty{}, nil
+	return &pb.Empty{}, nil
 }
 
 // ValidateUsername validates the given username. Returns an enum value indicating
 // the result of the validation.
-func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsernameRequest) (*proto.ValidateUsernameResponse, error) {
+func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsernameRequest) (*pb.ValidateUsernameResponse, error) {
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
 	}
 	username := req.GetUsername()
 	if username == "" {
-		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_EMPTY}, nil
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_EMPTY}, nil
 	}
 
 	// Check if username uses valid characters
 	matched, _ := regexp.MatchString(UsernameRegex, username)
 	if !matched {
-		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_INVALID_CHARS}, nil
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_INVALID_CHARS}, nil
 	}
 
 	// Check if username is too long
 	if len(username) > UsernameMaxLen {
-		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_TOO_LONG}, nil
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_TOO_LONG}, nil
 	}
 
 	// Check if username is in reserved list
@@ -253,7 +253,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 
 	if isReserved {
-		return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_SYSTEM_RESERVED}, nil
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_SYSTEM_RESERVED}, nil
 	}
 
 	// Check if username is already in use
@@ -264,7 +264,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 		if dbusError, ok := err.(dbus.Error); ok {
 			if dbusError.Name == DbusAccountsPrefix+".Error.Failed" {
 				// User not found
-				return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_OK}, nil
+				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
 			}
 			// Handle other dbus errors
 			return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
@@ -274,11 +274,11 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 
 	// User found
-	return &proto.ValidateUsernameResponse{UsernameValidation: proto.UsernameValidation_ALREADY_IN_USE}, nil
+	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
 }
 
 // GetUser returns the user information for the given uid.
-func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*proto.GetUserResponse, error) {
+func (s *Service) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.GetUserResponse, error) {
 
 	// Validate request
 	if req == nil {
@@ -356,14 +356,14 @@ func (s *Service) GetUser(ctx context.Context, req *proto.GetUserRequest) (*prot
 		return nil, status.Errorf(codes.Internal, "unexpected type returned for hostname: %s", err)
 	}
 
-	user := &proto.User{
+	user := &pb.User{
 		RealName:  realName,
 		Hostname:  hostname,
 		Username:  username,
 		AutoLogin: autoLogin,
 	}
 
-	return &proto.GetUserResponse{
+	return &pb.GetUserResponse{
 		User: user,
 	}, nil
 
