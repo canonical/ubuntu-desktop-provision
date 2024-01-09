@@ -2,6 +2,7 @@
 package user
 
 import (
+	"bufio"
 	"context"
 	"crypto/rand"
 	"crypto/sha512"
@@ -217,11 +218,31 @@ func (s *Service) ValidateUsername(ctx context.Context, req *proto.ValidateUsern
 	}
 
 	// Reserved username check
-	reservedUsernames, err := os.ReadFile("reserved-usernames")
+	file, err := os.Open("reserved-usernames")
 	if err != nil {
+		return nil, status.Errorf(codes.Internal, "error opening reserved usernames file: %v", err)
+	}
+	defer file.Close()
+
+	isReserved := false
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := scanner.Text()
+		// Ignore comment lines
+		if strings.HasPrefix(line, "#") {
+			continue
+		}
+		if line == username {
+			isReserved = true
+			break
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
 		return nil, status.Errorf(codes.Internal, "error reading reserved usernames file: %v", err)
 	}
-	if strings.Contains(string(reservedUsernames), username) {
+
+	if isReserved {
 		return nil, status.Errorf(codes.InvalidArgument, "username is reserved")
 	}
 
