@@ -16,6 +16,7 @@ import (
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/types/known/emptypb"
 
 	"github.com/godbus/dbus/v5"
 )
@@ -133,7 +134,7 @@ func HashPassword(password string, testSalt *string) (string, error) {
 }
 
 // CreateUser creates a new user on the system.
-func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.Empty, error) {
+func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*emptypb.Empty, error) {
 
 	// Validate requtest
 	if req == nil {
@@ -199,7 +200,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*p
 		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
 	}
 
-	return &pb.Empty{}, nil
+	return &emptypb.Empty{}, nil
 }
 
 // ValidateUsername validates the given username. Returns an enum value indicating

@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package keyboard;
 
-service KeyboardService {
-    rpc SetKeyboard(SetKeyboardRequest) returns (Empty) {}
-    rpc SetInputSource(SetInputSourceRequest) returns (Empty) {}
-}
+import "google/protobuf/empty.proto";
 
-message Empty {}
+service KeyboardService {
+    rpc SetKeyboard(SetKeyboardRequest) returns (google.protobuf.Empty) {}
+    rpc SetInputSource(SetInputSourceRequest) returns (google.protobuf.Empty) {}
+}
 
 message KeyboardSettings {
     string layout = 1;

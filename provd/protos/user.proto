@@ -4,12 +4,12 @@ package user;
 
 option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
 
+import "google/protobuf/empty.proto";
+
 service UserService {
-  rpc CreateUser(CreateUserRequest) returns (Empty);
+  rpc CreateUser(CreateUserRequest) returns (google.protobuf.Empty);
   rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
 }
-
-message Empty {}
 
 message User {
   string real_name = 1;
