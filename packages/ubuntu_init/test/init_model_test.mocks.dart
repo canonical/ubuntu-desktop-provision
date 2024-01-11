@@ -5,9 +5,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
 
-import 'package:args/src/arg_results.dart' as _i2;
+import 'package:args/src/arg_results.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_provision/services.dart' as _i3;
+import 'package:ubuntu_init/src/services/gdm_service.dart' as _i5;
+import 'package:ubuntu_provision/services.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -22,10 +23,20 @@ import 'package:ubuntu_provision/services.dart' as _i3;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeIdentity_0 extends _i1.SmartFake implements _i2.Identity {
+  _FakeIdentity_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [ArgResults].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockArgResults extends _i1.Mock implements _i2.ArgResults {
+class MockArgResults extends _i1.Mock implements _i3.ArgResults {
   MockArgResults() {
     _i1.throwOnMissingStub(this);
   }
@@ -67,16 +78,16 @@ class MockArgResults extends _i1.Mock implements _i2.ArgResults {
 /// A class which mocks [PageConfigService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPageConfigService extends _i1.Mock implements _i3.PageConfigService {
+class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
   MockPageConfigService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  Map<String, _i3.PageConfigEntry> get pages => (super.noSuchMethod(
+  Map<String, _i2.PageConfigEntry> get pages => (super.noSuchMethod(
         Invocation.getter(#pages),
-        returnValue: <String, _i3.PageConfigEntry>{},
-      ) as Map<String, _i3.PageConfigEntry>);
+        returnValue: <String, _i2.PageConfigEntry>{},
+      ) as Map<String, _i2.PageConfigEntry>);
 
   @override
   bool get includeWelcome => (super.noSuchMethod(
@@ -101,6 +112,87 @@ class MockPageConfigService extends _i1.Mock implements _i3.PageConfigService {
         Invocation.method(
           #load,
           [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+}
+
+/// A class which mocks [IdentityService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockIdentityService extends _i1.Mock implements _i2.IdentityService {
+  MockIdentityService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<_i2.Identity> getIdentity() => (super.noSuchMethod(
+        Invocation.method(
+          #getIdentity,
+          [],
+        ),
+        returnValue: _i4.Future<_i2.Identity>.value(_FakeIdentity_0(
+          this,
+          Invocation.method(
+            #getIdentity,
+            [],
+          ),
+        )),
+      ) as _i4.Future<_i2.Identity>);
+
+  @override
+  _i4.Future<void> setIdentity(_i2.Identity? identity) => (super.noSuchMethod(
+        Invocation.method(
+          #setIdentity,
+          [identity],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<_i2.UsernameValidation> validateUsername(String? username) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #validateUsername,
+          [username],
+        ),
+        returnValue:
+            _i4.Future<_i2.UsernameValidation>.value(_i2.UsernameValidation.OK),
+      ) as _i4.Future<_i2.UsernameValidation>);
+}
+
+/// A class which mocks [GdmService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGdmService extends _i1.Mock implements _i5.GdmService {
+  MockGdmService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.Future<void> init() => (super.noSuchMethod(
+        Invocation.method(
+          #init,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> launchSession(
+    String? username,
+    String? password,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #launchSession,
+          [
+            username,
+            password,
+          ],
         ),
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
