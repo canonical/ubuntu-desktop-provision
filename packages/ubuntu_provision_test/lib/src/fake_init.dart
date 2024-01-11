@@ -32,6 +32,7 @@ Future<void> registerFakeInitServices({
 
   final keyfile =
       GSettingsKeyfileBackend(file: File('${tempDir.path}/gsettings.ini'));
+  registerService<GdmService>(() => GdmService(bus: client));
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
@@ -62,6 +63,7 @@ class FakeDBusServer extends DBusServer {
     _locale = _FakeXdgLocaleObject(this);
     _network = _FakeXdgNetworkManagerObject(this);
     _timedate = _FakeXdgTimedateObject(this);
+    _gdmSession = _FakeGdmSessionObject(this);
   }
 
   late final DBusClient _client;
@@ -72,6 +74,7 @@ class FakeDBusServer extends DBusServer {
   late final _FakeXdgLocaleObject _locale;
   late final _FakeXdgNetworkManagerObject _network;
   late final _FakeXdgTimedateObject _timedate;
+  late final _FakeGdmSessionObject _gdmSession;
 
   Identity identity;
   KeyboardSetting keyboard;
@@ -107,6 +110,10 @@ class FakeDBusServer extends DBusServer {
 
     await _client.requestName('org.freedesktop.timedate1');
     await _client.registerObject(_timedate);
+
+    await _client.requestName('org.gnome.DisplayManager.UserVerifier');
+    await _client.requestName('org.gnome.DisplayManager.Greeter');
+    await _client.registerObject(_gdmSession);
 
     return address;
   }
@@ -335,6 +342,34 @@ class _FakeXdgTimedateObject extends DBusObject {
           'org.freedesktop.timedate1',
           changedProperties: {'Timezone': DBusString(server.timezone)},
         );
+        return DBusMethodSuccessResponse();
+      default:
+        return DBusMethodErrorResponse.unknownMethod();
+    }
+  }
+}
+
+class _FakeGdmSessionObject extends DBusObject {
+  _FakeGdmSessionObject(this.server)
+      : super(DBusObjectPath('/org/gnome/DisplayManager/Session'));
+
+  final FakeDBusServer server;
+
+  @override
+  Future<DBusMethodResponse> handleMethodCall(DBusMethodCall methodCall) async {
+    switch (methodCall.name) {
+      case 'AnswerQuery':
+        assert(methodCall.interface == 'org.gnome.DisplayManager.UserVerifier');
+        await emitSignal('org.gnome.DisplayManager.Greeter', 'SessionOpened',
+            const [DBusString('gdm-password')]);
+        return DBusMethodSuccessResponse();
+      case 'BeginVerificationForUser':
+        assert(methodCall.interface == 'org.gnome.DisplayManager.UserVerifier');
+        await emitSignal('org.gnome.DisplayManager.UserVerifier',
+            'SecretInfoQuery', const [DBusString('gdm-password')]);
+        return DBusMethodSuccessResponse();
+      case 'StartSessionWhenReady':
+        assert(methodCall.interface == 'org.gnome.DisplayManager.Greeter');
         return DBusMethodSuccessResponse();
       default:
         return DBusMethodErrorResponse.unknownMethod();
