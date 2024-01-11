@@ -37,6 +37,7 @@ func TestHashPassword(t *testing.T) {
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
+			t.Parallel()
 			salt := "pepper"
 			got, err := user.HashPassword(tc.password, &salt)
 
@@ -229,7 +230,7 @@ func TestValidateUsername(t *testing.T) {
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.UserObjectFactory) pb.UserServiceClient {
+func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.ObjectFactory) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")

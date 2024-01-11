@@ -11,7 +11,6 @@ import (
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
-
 	"github.com/ubuntu/decorate"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

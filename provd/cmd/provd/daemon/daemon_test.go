@@ -12,8 +12,6 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
-
-	//	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/stretchr/testify/require"
 )
 

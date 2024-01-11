@@ -7,6 +7,7 @@ import (
 	"crypto/rand"
 	"crypto/sha512"
 	"encoding/base64"
+	"errors"
 	"fmt"
 	"math/big"
 	"os"
@@ -14,11 +15,10 @@ import (
 	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
+	"github.com/godbus/dbus/v5"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
-
-	"github.com/godbus/dbus/v5"
 )
 
 const (
@@ -26,8 +26,10 @@ const (
 	DbusAccountsPrefix = "org.freedesktop.Accounts"
 	// DbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
 	DbusHostnamePrefix = "org.freedesktop.hostname1"
-	UsernameMaxLen     = 32
-	UsernameRegex      = "^[a-z_][a-z0-9_-]*$"
+	// UsernameMaxLen is the maximum length of a username.
+	UsernameMaxLen = 32
+	// UsernameRegex is the regex for a valid username.
+	UsernameRegex = "^[a-z_][a-z0-9_-]*$"
 )
 
 // DbusObject is an abstraction of a dbus object.
@@ -36,44 +38,46 @@ type DbusObject interface {
 	GetProperty(p string) (dbus.Variant, error)
 }
 
-// UserObjectFactory is a factory for creating DbusObjects for users.
+// ObjectFactory is a factory for creating DbusObjects for users.
 // This is used to allow mocking of the DbusObjects for testing.
-type UserObjectFactory interface {
+type ObjectFactory interface {
 	GetUserObject(userObjectPath dbus.ObjectPath) DbusObject
 }
 
-// userObjectFactoryImpl is the default implementation of UserObjectFactory.
-type userObjectFactoryImpl struct {
+// objectFactoryImpl is the default implementation of UserObjectFactory.
+type objectFactoryImpl struct {
 	conn *dbus.Conn
 }
 
 // Wraps the dbus call for getting a user object.
-func (f *userObjectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) DbusObject {
+func (f *objectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) DbusObject {
 	userObject := f.conn.Object(DbusAccountsPrefix, userObjectPath)
 	return userObject
 }
 
+// options are the configurable functional options of the User service.
 type options struct {
 	accounts    DbusObject
 	hostname    DbusObject
-	userFactory UserObjectFactory
+	userFactory ObjectFactory
 }
 
-type option func(*options)
+// Option type exported for tests.
+type Option func(*options)
 
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
 	accounts    DbusObject
 	hostname    DbusObject
-	userFactory UserObjectFactory
+	userFactory ObjectFactory
 }
 
-// New retuns a new instance of the User service.
-func New(bus *dbus.Conn, args ...option) *Service {
+// New returns a new instance of the User service.
+func New(bus *dbus.Conn, args ...Option) *Service {
 	accounts := bus.Object(DbusAccountsPrefix, "/org/freedesktop/Accounts")
 	hostname := bus.Object(DbusHostnamePrefix, "/org/freedesktop/hostname1")
-	userFactory := &userObjectFactoryImpl{conn: bus}
+	userFactory := &objectFactoryImpl{conn: bus}
 
 	opts := options{
 		accounts:    accounts,
@@ -112,7 +116,7 @@ func generateSalt(length int) (string, error) {
 // A salt can be provided for testing purposes.
 func HashPassword(password string, testSalt *string) (string, error) {
 	if password == "" {
-		return "", status.Errorf(codes.InvalidArgument, "recieved an empty password")
+		return "", status.Errorf(codes.InvalidArgument, "received an empty password")
 	}
 	var salt string
 	var err error
@@ -135,7 +139,6 @@ func HashPassword(password string, testSalt *string) (string, error) {
 
 // CreateUser creates a new user on the system.
 func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*emptypb.Empty, error) {
-
 	// Validate requtest
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -146,11 +149,11 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 	username := user.GetUsername()
 	if username == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "recieved an empty username")
+		return nil, status.Errorf(codes.InvalidArgument, "received an empty username")
 	}
 	realName := user.GetRealName()
 	if realName == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "recieved an empty realName")
+		return nil, status.Errorf(codes.InvalidArgument, "received an empty realName")
 	}
 	isAdmin := req.GetIsAdmin()
 	var accountType int32
@@ -163,7 +166,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	autologin := user.GetAutoLogin()
 	hostname := user.GetHostname()
 	if hostname == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "recieved an empty hostname")
+		return nil, status.Errorf(codes.InvalidArgument, "received an empty hostname")
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
@@ -171,7 +174,6 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 
 	err := call.Store(&userObjectPath)
 	if err != nil {
-
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
 
@@ -182,7 +184,6 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 
 	// Set the password for the user
 	userObject := s.userFactory.GetUserObject(userObjectPath)
-	fmt.Printf(hashed)
 	err = userObject.Call(DbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
@@ -259,9 +260,8 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	// Check if username is already in use
 	err = s.accounts.Call(DbusAccountsPrefix+".FindUserByName", 0, username).Err
 	if err != nil {
-
-		// Check if the error is due to user not being found or a D-Bus error
-		if dbusError, ok := err.(dbus.Error); ok {
+		var dbusError dbus.Error
+		if errors.As(err, &dbusError) {
 			if dbusError.Name == DbusAccountsPrefix+".Error.Failed" {
 				// User not found
 				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil

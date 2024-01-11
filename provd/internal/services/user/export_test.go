@@ -7,21 +7,21 @@ import (
 )
 
 // WithAccounts overrides the accounts caller for the service.
-func WithAccounts(accounts DbusObject) option {
+func WithAccounts(accounts DbusObject) Option {
 	return func(o *options) {
 		o.accounts = accounts
 	}
 }
 
 // WithHostname overrides the hostname caller for the service.
-func WithHostname(hostname DbusObject) option {
+func WithHostname(hostname DbusObject) Option {
 	return func(o *options) {
 		o.hostname = hostname
 	}
 }
 
 // WithUserFactory overrides the userObjectFactory for the service.
-func WithUserFactory(userFactory UserObjectFactory) option {
+func WithUserFactory(userFactory ObjectFactory) Option {
 	return func(o *options) {
 		o.userFactory = userFactory
 	}
@@ -125,18 +125,17 @@ func (u *UserObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 	}
 	value, exists := u.Properties[prop]
 	if !exists {
-
 		return dbus.Variant{}, errors.New("User property not found: " + prop)
 	}
 	return dbus.MakeVariant(value), nil
 }
 
 // GetProperty is a mock implementation of the dbus GetProperty method for the AccountsObjectMock.
-func (u *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
-	if u.WantError {
+func (a *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
+	if a.WantError {
 		return dbus.Variant{}, errors.New("GetProperty error")
 	}
-	value, exists := u.Properties[prop]
+	value, exists := a.Properties[prop]
 	if !exists {
 		return dbus.Variant{}, errors.New("Accounts property not found")
 	}
@@ -144,11 +143,11 @@ func (u *AccountsObjectMock) GetProperty(prop string) (dbus.Variant, error) {
 }
 
 // GetProperty is a mock implementation of the dbus GetProperty method for the HostnameObjectMock.
-func (u *HostnameObjectMock) GetProperty(prop string) (dbus.Variant, error) {
-	if u.WantError {
+func (h *HostnameObjectMock) GetProperty(prop string) (dbus.Variant, error) {
+	if h.WantError {
 		return dbus.Variant{}, errors.New("GetProperty error")
 	}
-	value, exists := u.Properties[prop]
+	value, exists := h.Properties[prop]
 	if !exists {
 		return dbus.Variant{}, errors.New("Hostname1 property not found")
 	}
