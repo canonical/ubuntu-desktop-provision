@@ -19,11 +19,13 @@ void main() {
       final image = MockImage();
 
       pageImages.images['testPage'] = image;
+      pageImages.isDarkMode = (_) => false;
 
-      final result = pageImages.get('testPage');
+      final result = pageImages.get('testPage', MockBuildContext());
 
-      expect(result, isInstanceOf<Image>());
-      expect(result, equals(image));
+      expect(result, isInstanceOf<ColorFiltered>());
+      expect((result as ColorFiltered).child, isInstanceOf<Image>());
+      expect(result.child, equals(image));
     });
 
     test('preCache correctly loads images from assets and files', () async {

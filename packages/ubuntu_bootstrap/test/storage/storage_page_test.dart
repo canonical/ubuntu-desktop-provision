@@ -6,6 +6,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -14,13 +15,18 @@ import 'test_storage.dart';
 
 void main() {
   Widget buildPage(StorageModel model) {
+    final pageImages = PageImages(MockPageConfigService());
     return ProviderScope(
-      overrides: [storageModelProvider.overrideWith((_) => model)],
+      overrides: [
+        storageModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
       child: const StoragePage(),
     );
   }
 
   testWidgets('no existing OS', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(1200, 1000));
     await tester.pumpApp((_) => buildPage(buildStorageModel()));
 
     final context = tester.element(find.byType(StoragePage));

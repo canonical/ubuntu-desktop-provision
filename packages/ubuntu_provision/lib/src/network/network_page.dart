@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
-import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/connect_view.dart';
-import 'package:ubuntu_provision/src/network/ethernet_model.dart';
 import 'package:ubuntu_provision/src/network/ethernet_view.dart';
-import 'package:ubuntu_provision/src/network/hidden_wifi_model.dart';
 import 'package:ubuntu_provision/src/network/hidden_wifi_view.dart';
-import 'package:ubuntu_provision/src/network/network_l10n.dart';
-import 'package:ubuntu_provision/src/network/network_model.dart';
-import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_provision/src/network/wifi_view.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 export 'connect_model.dart' show ConnectMode;
@@ -39,10 +33,13 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(networkModelProvider);
     final lang = NetworkLocalizations.of(context);
     return HorizontalPage(
+      name: 'network',
       windowTitle: lang.networkPageTitle,
       title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
-      padding: const EdgeInsets.all(kWizardSpacing),
-      icon: SvgPicture.asset('assets/icons/wifi.svg'),
+      padding: const EdgeInsets.symmetric(
+        horizontal: HorizontalPage.defaultContentPadding,
+        vertical: kWizardSpacing,
+      ),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

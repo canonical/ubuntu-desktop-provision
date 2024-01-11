@@ -1,14 +1,17 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/providers.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/widgets.dart';
 
-class HorizontalPage extends StatelessWidget {
+class HorizontalPage extends ConsumerWidget {
   const HorizontalPage({
+    required this.name,
     required this.windowTitle,
     required this.title,
-    required this.icon,
     required this.content,
     this.onNext,
     this.onBack,
@@ -21,6 +24,9 @@ class HorizontalPage extends StatelessWidget {
     super.key,
   });
 
+  /// The name of the page that is used to get settings from the [PageConfigService].
+  final String name;
+
   /// The title for the title bar.
   final String windowTitle;
 
@@ -29,9 +35,6 @@ class HorizontalPage extends StatelessWidget {
 
   /// A widget shown after the [title].
   final Widget? trailingTitleWidget;
-
-  /// The left, smaller, column that shows something visual, usually an image.
-  final Widget icon;
 
   /// The right, larger, column with the content that should be focus on.
   final Widget content;
@@ -61,29 +64,37 @@ class HorizontalPage extends StatelessWidget {
   static const _contentSpacing = 60.0;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
+    final icon = ref.watch(pageImagesProvider).get(name, context);
 
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
       content: Padding(
-        padding: padding,
+        padding:
+            padding, // TODO(Lukas): Make padding smaller when the size of the window is small.
         child: Row(
           children: [
-            icon,
-            const SizedBox(width: _contentSpacing),
+            if (icon != null) ...[
+              Expanded(
+                flex: 2,
+                child: icon,
+              ),
+              const SizedBox(width: _contentSpacing),
+            ],
             Expanded(
+              flex: 5,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(
-                        width: 400, // TODO(Lukas): Do this properly
+                      Expanded(
                         child: Text(
                           title,
-                          style: theme.textTheme.headlineSmall,
+                          style: theme.textTheme.headlineSmall
+                              ?.copyWith(fontSize: 20), // TODO: Move to theme
                         ),
                       ),
                       if (trailingTitleWidget != null) trailingTitleWidget!,
@@ -94,7 +105,6 @@ class HorizontalPage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(width: kWizardSpacing),
           ],
         ),
       ),

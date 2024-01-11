@@ -5,6 +5,7 @@ import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_dialogs.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_model.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -25,6 +26,7 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(keyboardModelProvider);
     final lang = KeyboardLocalizations.of(context);
     return HorizontalPage(
+      name: 'keyboard',
       windowTitle: lang.keyboardTitle,
       title: lang.keyboardHeader,
       trailingTitleWidget: model.canDetectLayout
@@ -43,7 +45,6 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
         horizontal: HorizontalPage.defaultContentPadding,
         vertical: 40, // TODO(Lukas): Move to correct place
       ),
-      icon: SvgPicture.asset('assets/icons/keyboard.svg'),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

@@ -62,9 +62,9 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
     return HorizontalPage(
+      name: 'storage',
       windowTitle: lang.installationTypeTitle,
       title: _formatHeader(context, model.existingOS ?? []),
-      icon: SvgPicture.asset('assets/icons/disk.svg'),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

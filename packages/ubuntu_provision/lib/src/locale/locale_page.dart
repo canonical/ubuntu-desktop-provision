@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/providers.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -19,29 +21,32 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final flavor = ref.watch(flavorProvider);
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
-    final pageImages = ref.watch(pageImagesProvider);
 
     return HorizontalPage(
+      name: 'locale',
       windowTitle: lang.localePageTitle(flavor.name),
       title: lang.localeHeader,
-      icon: pageImages.get('locale'),
-      onNext: () => model.selectLanguage(model.selectedIndex),
-      content: Expanded(
-        child: ListWidget.builder(
-          selectedIndex: model.selectedIndex,
-          itemCount: model.languageCount,
-          itemBuilder: (context, index) => ListTile(
-            key: ValueKey(index),
-            title: Text(model.language(index)),
-            selected: index == model.selectedIndex,
-          ),
-          onKeySearch: (value) {
-            final index = model.searchLanguage(value);
-            if (index != -1) {
-              model.selectLanguage(index);
-            }
-          },
+      onNext: () async {
+        final locale = model.locale(model.selectedIndex);
+        await model.applyLocale(locale);
+        await tryGetService<TelemetryService>()
+            ?.addMetric('Language', locale.languageCode);
+      },
+      content: ListWidget.builder(
+        selectedIndex: model.selectedIndex,
+        itemCount: model.languageCount,
+        itemBuilder: (context, index) => ListTile(
+          key: ValueKey(index),
+          title: Text(model.language(index)),
+          selected: index == model.selectedIndex,
+          onTap: () => model.selectLanguage(index),
         ),
+        onKeySearch: (value) {
+          final index = model.searchLanguage(value);
+          if (index != -1) {
+            model.selectLanguage(index);
+          }
+        },
       ),
     );
   }

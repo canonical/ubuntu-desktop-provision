@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_model.dart';
 import 'package:ubuntu_provision/src/locale/locale_page.dart';
@@ -21,10 +22,12 @@ LocaleModel buildLocaleModel() {
 
 Widget buildLocalePage(LocaleModel model) {
   registerMockService<TelemetryService>(MockTelemetryService());
+  final pageImages = PageImages(MockPageConfigService());
 
   return ProviderScope(
     overrides: [
       localeModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const LocalePage(),
   );

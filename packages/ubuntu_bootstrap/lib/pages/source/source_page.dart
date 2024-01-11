@@ -30,15 +30,16 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
 
     return HorizontalPage(
+      name: 'source',
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
-      icon: SvgPicture.asset(
-        'assets/icons/mascot.svg',
-        colorFilter: ColorFilter.mode(
-          context.isDarkMode ? Colors.white : Colors.black,
-          BlendMode.srcIn,
-        ),
-      ),
+      //icon: SvgPicture.asset(
+      //  'assets/icons/mascot.svg',
+      //  colorFilter: ColorFilter.mode(
+      //    context.isDarkMode ? Colors.white : Colors.black,
+      //    BlendMode.srcIn,
+      //  ),
+      //),
       content: ListView(
         children: [
           ...model.sources

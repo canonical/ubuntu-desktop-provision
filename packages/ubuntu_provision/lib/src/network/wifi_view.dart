@@ -99,13 +99,9 @@ class _WifiViewState extends ConsumerState<WifiView> {
 
     return AnimatedExpanded(
       expanded: widget.expanded,
-      child: FractionallySizedBox(
-        alignment: Alignment.centerLeft,
-        widthFactor: kWizardWidthFraction,
-        child: Padding(
-          padding: kWizardIndentation,
-          child: WifiListView(onSelected: widget.onSelected),
-        ),
+      child: Padding(
+        padding: kWizardIndentedPadding,
+        child: WifiListView(onSelected: widget.onSelected),
       ),
     );
   }

@@ -1,7 +1,7 @@
 pages:
   locale:
-    image: "packages/ubuntu_provision/assets/mascot.png"
     title: "Welcome"
+    image: "packages/ubuntu_provision/assets/mascot.png"
     visible: true
   welcome:
     title: "Welcome to Ubuntu"
@@ -12,15 +12,18 @@ pages:
     visible: true
   keyboard:
     title: "Keyboard layout"
+    image: "assets/icons/keyboard.svg"
     visible: true
   network:
     title: "Connect to a network"
+    image: "assets/icons/wifi.svg"
     visible: true
   refresh:
     title: "Update available"
     visible: true
   source:
     title: "Applications and updates"
+    image: "assets/icons/mascot.svg"
     visible: true
   notEnoughDiskSpace:
     title: "Not enough disk space"
@@ -30,6 +33,7 @@ pages:
     visible: true
   storage:
     title: "Type of installation"
+    image: "assets/icons/disk.svg"
     visible: true
   confirm:
     title: "Ready to install"
