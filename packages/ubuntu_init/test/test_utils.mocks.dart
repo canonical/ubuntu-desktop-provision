@@ -248,6 +248,16 @@ class MockInitModel extends _i1.Mock implements _i3.InitModel {
       ) as _i4.Future<void>);
 
   @override
+  _i4.Future<void> launchDesktopSession() => (super.noSuchMethod(
+        Invocation.method(
+          #launchDesktopSession,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
   bool hasRoute(String? route) => (super.noSuchMethod(
         Invocation.method(
           #hasRoute,

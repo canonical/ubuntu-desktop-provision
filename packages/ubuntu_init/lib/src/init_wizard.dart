@@ -43,6 +43,7 @@ class InitWizard extends ConsumerWidget {
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
+            await ref.read(initModelProvider).launchDesktopSession();
             await window.close();
             return Routes.initial;
           },
