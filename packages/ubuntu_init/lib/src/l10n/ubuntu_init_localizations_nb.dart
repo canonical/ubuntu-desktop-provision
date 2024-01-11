@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsNb([String locale = 'nb']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Velkommen';
 
   @override

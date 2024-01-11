@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Bonvenon';
 
   @override

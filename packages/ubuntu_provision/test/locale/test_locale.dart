@@ -3,8 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_provision/src/locale/locale_model.dart';
-import 'package:ubuntu_provision/src/locale/locale_page.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 import '../test_utils.dart';

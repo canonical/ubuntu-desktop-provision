@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Welcome';
 
   @override

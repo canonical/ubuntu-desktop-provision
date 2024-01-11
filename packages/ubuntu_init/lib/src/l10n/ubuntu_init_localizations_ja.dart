@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Welcome';
 
   @override

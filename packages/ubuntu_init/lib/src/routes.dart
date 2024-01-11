@@ -1,6 +1,6 @@
 sealed class Routes {
   static Map<String, String> routeMap = {
-    'initial': '/',
+    'loading': '/loading',
     'welcome': '/welcome',
     'locale': '/locale',
     'keyboard': '/keyboard',
@@ -13,7 +13,8 @@ sealed class Routes {
     'theme': '/theme',
   };
 
-  static String get initial => routeMap['initial']!;
+  static String get initial => loading;
+  static String get loading => routeMap['loading']!;
   static String get welcome => routeMap['welcome']!;
   static String get locale => routeMap['locale']!;
   static String get keyboard => routeMap['keyboard']!;

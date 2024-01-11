@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsSq extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Welcome';
 
   @override

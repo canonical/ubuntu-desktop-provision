@@ -5,6 +5,16 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
+  String loadingPageTitle(Object DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(Object DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
   String get welcomePageTitle => 'Ласкаво просимо!';
 
   @override

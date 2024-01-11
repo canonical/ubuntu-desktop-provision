@@ -73,39 +73,46 @@ class HorizontalPage extends ConsumerWidget {
       content: Padding(
         padding:
             padding, // TODO(Lukas): Make padding smaller when the size of the window is small.
-        child: Row(
-          children: [
-            if (icon != null) ...[
+        child: Container(
+          color: Colors.amber,
+          child: Row(
+            children: [
+              if (icon != null) ...[
+                Expanded(
+                  flex: 2,
+                  child: icon,
+                ),
+                const SizedBox(width: _contentSpacing),
+              ],
               Expanded(
-                flex: 2,
-                child: icon,
-              ),
-              const SizedBox(width: _contentSpacing),
-            ],
-            Expanded(
-              flex: 5,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                flex: 5,
+                child: Container(
+                  color: Colors.red,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
-                        child: Text(
-                          title,
-                          style: theme.textTheme.headlineSmall
-                              ?.copyWith(fontSize: 20), // TODO: Move to theme
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              title,
+                              style: theme.textTheme.headlineSmall?.copyWith(
+                                fontSize: 20, // TODO: Move to theme
+                              ),
+                            ),
+                          ),
+                          if (trailingTitleWidget != null) trailingTitleWidget!,
+                        ],
                       ),
-                      if (trailingTitleWidget != null) trailingTitleWidget!,
+                      const SizedBox(height: kWizardSpacing),
+                      Expanded(child: content),
                     ],
                   ),
-                  const SizedBox(height: kWizardSpacing),
-                  Expanded(child: content),
-                ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       snackBar: snackBar,
