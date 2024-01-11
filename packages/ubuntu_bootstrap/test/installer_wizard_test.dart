@@ -88,6 +88,7 @@ void main() {
   });
 
   testWidgets('guided reformat', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(800, 800));
     final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
     final welcomeModel = buildWelcomeModel(option: Option.welcomeInstallOption);
@@ -250,6 +251,7 @@ void main() {
   });
 
   testWidgets('bitlocker', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(800, 800));
     final localeModel = buildLocaleModel();
     final storageModel = buildStorageModel(type: StorageType.alongside);
     final bitlockerModel = buildBitLockerModel(hasBitLocker: true);

@@ -107,9 +107,11 @@ extension on WidgetTester {
 
     final telemetry = MockTelemetryService();
     registerMockService<TelemetryService>(telemetry);
+    final pageImages = PageImages(MockPageConfigService());
 
     return pumpWidget(
       ProviderScope(
+        overrides: [pageImagesProvider.overrideWith((_) => pageImages)],
         child: MaterialApp(
           localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
           home: Consumer(

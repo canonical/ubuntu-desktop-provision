@@ -53,9 +53,13 @@ SourceModel buildSourceModel({
 Widget buildSourcePage(SourceModel model) {
   registerMockService<SubiquityClient>(MockSubiquityClient());
   registerMockService<TelemetryService>(MockTelemetryService());
+  final pageImages = PageImages(MockPageConfigService());
 
   return ProviderScope(
-    overrides: [sourceModelProvider.overrideWith((_) => model)],
+    overrides: [
+      sourceModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
+    ],
     child: const SourcePage(),
   );
 }
