@@ -1,9 +1,4 @@
 comment: false
-ignore:
-  - "**/*.freezed.dart"
-  - "**/*.g.dart"
-  - "**/*.mocks.dart"
-  - "**/l10n/*.dart"
 
 coverage:
   precision: 2
