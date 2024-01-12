@@ -54,6 +54,26 @@ func TestHashPassword(t *testing.T) {
 	}
 }
 
+func TestEmptyCreateUserRequest(t *testing.T) {
+	t.Parallel()
+
+	client := newUserClient(t, nil, nil, nil)
+
+	userResp, err := client.CreateUser(context.Background(), nil)
+	require.Error(t, err, "CreateUser should return an error for nil request")
+	require.Empty(t, userResp, "CreateUser should return a nil response for a nil request")
+}
+
+func TestEmptyValidateUsernameRequest(t *testing.T) {
+	t.Parallel()
+
+	client := newUserClient(t, nil, nil, nil)
+
+	userResp, err := client.ValidateUsername(context.Background(), nil)
+	require.Error(t, err, "ValidateUsername should return an error for nil request")
+	require.Empty(t, userResp, "ValidateUsername should return a nil response for a nil request")
+}
+
 func TestCreateUser(t *testing.T) {
 	t.Parallel()
 
@@ -63,6 +83,7 @@ func TestCreateUser(t *testing.T) {
 		password  string
 		hostname  string
 		autoLogin bool
+		isAdmin   bool
 
 		accountsError bool
 		hostnameError bool
@@ -74,6 +95,7 @@ func TestCreateUser(t *testing.T) {
 			username:  "ubuntu",
 			password:  "password",
 			hostname:  "ubuntu",
+			isAdmin:   true,
 			autoLogin: true,
 		},
 		"Error when realName is empty": {
@@ -149,6 +171,7 @@ func TestCreateUser(t *testing.T) {
 					Hostname:  tc.hostname,
 					AutoLogin: tc.autoLogin,
 				},
+				IsAdmin: tc.isAdmin,
 			}
 
 			_, err := client.CreateUser(context.Background(), userReq)
