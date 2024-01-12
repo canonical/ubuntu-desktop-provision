@@ -386,6 +386,7 @@ void main() {
     });
 
     testWidgets('encrypted lvm selected', (tester) async {
+      await tester.binding.setSurfaceSize(const Size(1000, 1000));
       final model =
           buildStorageModel(guidedCapability: GuidedCapability.LVM_LUKS);
       await tester.pumpApp((_) => buildPage(model));
