@@ -88,6 +88,8 @@ void main() {
   });
 
   testWidgets('guided reformat', (tester) async {
+    // TODO: Fix SourcePage overflow so that this isn't needed
+    await tester.binding.setSurfaceSize(const Size(800, 800));
     final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
     final welcomeModel = buildWelcomeModel(option: Option.welcomeInstallOption);

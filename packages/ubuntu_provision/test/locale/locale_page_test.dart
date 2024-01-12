@@ -45,7 +45,7 @@ void main() {
     await tester.pump();
     await tester.tap(itemItalian);
     await tester.pump();
-    expect((itemItalian.evaluate().single.widget as ListTile).selected, true);
+    expect((itemItalian.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'it');
 
     // scroll backward to French
@@ -53,7 +53,7 @@ void main() {
     await tester.pump();
     await tester.tap(itemFrench);
     await tester.pump();
-    expect((itemFrench.evaluate().single.widget as ListTile).selected, true);
+    expect((itemFrench.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'fr');
 
     // scroll forward to Galego
@@ -62,9 +62,12 @@ void main() {
     await tester.tap(itemGalego);
     await tester.pump();
 
-    expect((itemItalian.evaluate().single.widget as ListTile).selected, false);
-    expect((itemFrench.evaluate().single.widget as ListTile).selected, false);
-    expect((itemGalego.evaluate().single.widget as ListTile).selected, true);
+    expect(
+      (itemItalian.evaluate().single.widget as ListTile).selected,
+      isFalse,
+    );
+    expect((itemFrench.evaluate().single.widget as ListTile).selected, isFalse);
+    expect((itemGalego.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'gl');
   });
 

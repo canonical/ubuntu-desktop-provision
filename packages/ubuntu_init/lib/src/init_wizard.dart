@@ -30,10 +30,8 @@ class InitWizard extends ConsumerWidget {
       routes: {
         Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
-          onReplace: (_) async {
-            await ref.read(pageImagesProvider).preCache(context);
-            return ref.read(initModelProvider).init().then((_) => null);
-          },
+          onReplace: (_) =>
+              ref.read(initModelProvider).init().then((_) => null),
         ),
         ...routes,
         Routes.theme: WizardRoute(

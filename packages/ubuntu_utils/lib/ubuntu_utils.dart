@@ -1,3 +1,4 @@
+export 'src/build_context_extension.dart';
 export 'src/command_line.dart';
 export 'src/data_size.dart';
 export 'src/property_stream_notifier.dart';

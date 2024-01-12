@@ -60,11 +60,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.installationTypeTitle),
-      ),
-      header: Text(_formatHeader(context, model.existingOS ?? [])),
+    return HorizontalPage(
+      name: 'storage',
+      windowTitle: lang.installationTypeTitle,
+      title: _formatHeader(context, model.existingOS ?? []),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -72,8 +71,13 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
-                title: Text(_formatAlongside(
-                    lang, model.productInfo, model.existingOS ?? [])),
+                title: Text(
+                  _formatAlongside(
+                    lang,
+                    model.productInfo,
+                    model.existingOS ?? [],
+                  ),
+                ),
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,
@@ -124,23 +128,15 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
         ],
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
-        trailing: [
-          WizardButton.next(
-            context,
-            enabled: model.canEraseDisk ||
-                model.canInstallAlongside ||
-                model.canManualPartition,
-            arguments: model.type,
-            onNext: model.save,
-            // If the user returns back to select another installation type, the
-            // previously configured storage must be reset to make all guided
-            // partitioning targets available.
-            onBack: model.resetStorage,
-          ),
-        ],
-      ),
+      isNextEnabled: model.canEraseDisk ||
+          model.canInstallAlongside ||
+          model.canManualPartition,
+      nextArguments: model.type,
+      onNext: model.save,
+      // If the user returns back to select another installation type, the
+      // previously configured storage must be reset to make all guided
+      // partitioning targets available.
+      onBack: model.resetStorage,
     );
   }
 }

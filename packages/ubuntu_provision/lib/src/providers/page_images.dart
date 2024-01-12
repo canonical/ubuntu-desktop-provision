@@ -7,6 +7,7 @@ import 'package:path/path.dart' as path;
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 final pageImagesProvider =
     Provider((ref) => PageImages(getService<PageConfigService>()));
@@ -29,8 +30,20 @@ class PageImages {
   @visibleForTesting
   final Map<String, Widget> images = {};
 
-  Widget get(String pageName) =>
-      images[pageName] ?? const Text('PLACEHOLDER, REPLACE WITH DEFAULT');
+  /// Since extension methods can't be mocked this is a workaround to make
+  /// [isDarkMode] mockable.
+  @visibleForTesting
+  bool Function(BuildContext context) isDarkMode =
+      (context) => context.isDarkMode;
+
+  Widget? get(String pageName, BuildContext context) {
+    final image = images[pageName];
+    if (image == null) {
+      return null;
+    }
+    // TODO(Lukas): Add support for dark mode images
+    return isDarkMode(context) ? images[pageName] : images[pageName];
+  }
 
   Future<void> preCache(BuildContext context) async {
     final loadFutures = <Future<void>>[];

@@ -14,6 +14,10 @@ const kWizardWidthFraction = 0.7;
 const kWizardIndentation =
     EdgeInsetsDirectional.only(start: kWizardSpacing * 2);
 
+/// The indentation to align with radio indicators etc.
+const kWizardIndentedPadding =
+    EdgeInsetsDirectional.symmetric(horizontal: kWizardSpacing * 2);
+
 /// The recommended width of wizard dialogs.
 const kWizardDialogWidth = 600.0;
 

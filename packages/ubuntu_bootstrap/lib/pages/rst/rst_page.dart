@@ -42,9 +42,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
                 child: SvgPicture.asset(
                   'assets/storage/rst.svg',
                   colorFilter: ColorFilter.mode(
-                    Theme.of(context).brightness == Brightness.light
-                        ? Colors.black
-                        : Colors.white,
+                    context.isDarkMode ? Colors.white : Colors.black,
                     BlendMode.srcIn,
                   ),
                 ),

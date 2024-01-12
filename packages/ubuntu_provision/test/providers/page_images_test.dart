@@ -19,8 +19,9 @@ void main() {
       final image = MockImage();
 
       pageImages.images['testPage'] = image;
+      pageImages.isDarkMode = (_) => false;
 
-      final result = pageImages.get('testPage');
+      final result = pageImages.get('testPage', MockBuildContext());
 
       expect(result, isInstanceOf<Image>());
       expect(result, equals(image));
