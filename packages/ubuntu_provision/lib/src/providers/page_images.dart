@@ -13,6 +13,7 @@ final pageImagesProvider =
     Provider((ref) => PageImages(getService<PageConfigService>()));
 
 final _log = Logger('page_images');
+final _darkModeSuffix = '_dark';
 
 /// Pre-caches and holds images for all pages.
 class PageImages {
@@ -41,14 +42,8 @@ class PageImages {
     if (image == null) {
       return null;
     }
-    // TODO(Lukas): How should we handle dark mode?
-    return ColorFiltered(
-      colorFilter: ColorFilter.mode(
-        isDarkMode(context) ? Colors.white : Colors.black,
-        BlendMode.srcIn,
-      ),
-      child: images[pageName],
-    );
+    // TODO(Lukas): Add support for dark mode images
+    return context.isDarkMode ? images[pageName] : images[pageName];
   }
 
   Future<void> preCache(BuildContext context) async {
