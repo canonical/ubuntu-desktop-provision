@@ -179,6 +179,7 @@ void main() {
   });
 
   testWidgets('tpm', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(1000, 1000));
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
