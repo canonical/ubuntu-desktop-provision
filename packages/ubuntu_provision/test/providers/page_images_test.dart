@@ -19,6 +19,7 @@ void main() {
       final image = MockImage();
 
       pageImages.images['testPage'] = image;
+      pageImages.isDarkMode = (_) => false;
 
       final result = pageImages.get('testPage', MockBuildContext());
 

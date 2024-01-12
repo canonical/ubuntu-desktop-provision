@@ -42,7 +42,7 @@ class PageImages {
       return null;
     }
     // TODO(Lukas): Add support for dark mode images
-    return context.isDarkMode ? images[pageName] : images[pageName];
+    return isDarkMode(context) ? images[pageName] : images[pageName];
   }
 
   Future<void> preCache(BuildContext context) async {
