@@ -29,6 +29,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
         await tryGetService<TelemetryService>()
             ?.addMetric('Language', locale.languageCode);
       },
+      expandContent: true,
       content: ListWidget.builder(
         selectedIndex: model.selectedIndex,
         itemCount: model.languageCount,

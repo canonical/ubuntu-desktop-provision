@@ -36,10 +36,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       name: 'network',
       windowTitle: lang.networkPageTitle,
       title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
-      padding: const EdgeInsets.symmetric(
-        horizontal: HorizontalPage.defaultContentPadding,
-        vertical: kWizardSpacing,
-      ),
+      expandContent: true,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

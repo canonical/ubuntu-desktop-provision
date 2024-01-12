@@ -18,7 +18,11 @@ class HorizontalPage extends ConsumerWidget {
     this.nextArguments,
     this.trailingTitleWidget,
     this.isNextEnabled = true,
-    this.padding = const EdgeInsets.all(defaultContentPadding),
+    this.expandContent = false,
+    this.padding = const EdgeInsets.symmetric(
+      horizontal: defaultContentPadding,
+      vertical: _verticalContentPadding,
+    ),
     this.bottomBar,
     this.snackBar,
     super.key,
@@ -50,6 +54,9 @@ class HorizontalPage extends ConsumerWidget {
   /// Whether the next button should be enabled or not.
   final bool isNextEnabled;
 
+  /// Whether the next button should be enabled or not.
+  final bool expandContent;
+
   /// The padding applied around the area storing the icon and the content.
   final EdgeInsets padding;
 
@@ -61,6 +68,7 @@ class HorizontalPage extends ConsumerWidget {
 
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
+  static const _verticalContentPadding = 20.0;
   static const _contentSpacing = 60.0;
 
   @override
@@ -73,46 +81,40 @@ class HorizontalPage extends ConsumerWidget {
       content: Padding(
         padding:
             padding, // TODO(Lukas): Make padding smaller when the size of the window is small.
-        child: Container(
-          color: Colors.amber,
-          child: Row(
-            children: [
-              if (icon != null) ...[
-                Expanded(
-                  flex: 2,
-                  child: icon,
-                ),
-                const SizedBox(width: _contentSpacing),
-              ],
+        child: Row(
+          children: [
+            if (icon != null) ...[
               Expanded(
-                flex: 5,
-                child: Container(
-                  color: Colors.red,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                flex: 2,
+                child: icon,
+              ),
+              const SizedBox(width: _contentSpacing),
+            ],
+            Expanded(
+              flex: 5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              title,
-                              style: theme.textTheme.headlineSmall?.copyWith(
-                                fontSize: 20, // TODO: Move to theme
-                              ),
-                            ),
+                      Expanded(
+                        child: Text(
+                          title,
+                          style: theme.textTheme.headlineSmall?.copyWith(
+                            fontSize: 20, // TODO: Move to theme
                           ),
-                          if (trailingTitleWidget != null) trailingTitleWidget!,
-                        ],
+                        ),
                       ),
-                      const SizedBox(height: kWizardSpacing),
-                      Expanded(child: content),
+                      if (trailingTitleWidget != null) trailingTitleWidget!,
                     ],
                   ),
-                ),
+                  const SizedBox(height: kWizardSpacing),
+                  expandContent ? Expanded(child: content) : content,
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       snackBar: snackBar,

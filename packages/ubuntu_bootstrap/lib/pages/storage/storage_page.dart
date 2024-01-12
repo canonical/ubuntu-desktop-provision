@@ -71,8 +71,13 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
-                title: Text(_formatAlongside(
-                    lang, model.productInfo, model.existingOS ?? [])),
+                title: Text(
+                  _formatAlongside(
+                    lang,
+                    model.productInfo,
+                    model.existingOS ?? [],
+                  ),
+                ),
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,

@@ -40,6 +40,7 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
         horizontal: HorizontalPage.defaultContentPadding,
         vertical: 40, // TODO(Lukas): Move to correct place
       ),
+      expandContent: true,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
