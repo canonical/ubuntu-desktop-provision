@@ -26,7 +26,6 @@ void main() {
   }
 
   testWidgets('no existing OS', (tester) async {
-    await tester.binding.setSurfaceSize(const Size(1200, 1000));
     await tester.pumpApp((_) => buildPage(buildStorageModel()));
 
     final context = tester.element(find.byType(StoragePage));

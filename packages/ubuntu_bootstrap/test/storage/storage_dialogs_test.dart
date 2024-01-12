@@ -27,7 +27,6 @@ void main() {
 
   testWidgets('select zfs', (tester) async {
     final model = buildStorageModel();
-    await tester.binding.setSurfaceSize(const Size(900, 900));
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(

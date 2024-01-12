@@ -45,7 +45,6 @@ void main() {
   });
 
   testWidgets('install codecs', (tester) async {
-    await tester.binding.setSurfaceSize(const Size(800, 800));
     final model = buildSourceModel(installCodecs: true);
     await tester.pumpApp((_) => buildSourcePage(model));
 
@@ -88,7 +87,6 @@ void main() {
   });
 
   testWidgets('offline', (tester) async {
-    await tester.binding.setSurfaceSize(const Size(800, 800));
     final model = buildSourceModel(isOnline: false);
     await tester.pumpApp((_) => buildSourcePage(model));
 

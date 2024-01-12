@@ -13,7 +13,6 @@ final pageImagesProvider =
     Provider((ref) => PageImages(getService<PageConfigService>()));
 
 final _log = Logger('page_images');
-final _darkModeSuffix = '_dark';
 
 /// Pre-caches and holds images for all pages.
 class PageImages {

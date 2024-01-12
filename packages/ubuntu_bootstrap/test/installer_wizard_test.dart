@@ -251,7 +251,6 @@ void main() {
   });
 
   testWidgets('bitlocker', (tester) async {
-    await tester.binding.setSurfaceSize(const Size(800, 800));
     final localeModel = buildLocaleModel();
     final storageModel = buildStorageModel(type: StorageType.alongside);
     final bitlockerModel = buildBitLockerModel(hasBitLocker: true);

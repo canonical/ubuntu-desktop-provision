@@ -93,24 +93,24 @@ class GnomeService implements DesktopService {
 
   @override
   Future<void> inhibit() async {
-    await _disableAutoMounting();
-    await _disableScreenBlanking();
-    await _disableScreensaver();
+    //await _disableAutoMounting();
+    //await _disableScreenBlanking();
+    //await _disableScreensaver();
 
-    await _gnomeSessionManager.connect();
-    final cookie = await _gnomeSessionManager.inhibit(
-      appId: 'com.canonical.ubuntu_desktop_installer',
-      topLevelXId: 0,
-      reason: 'Installing Ubuntu',
-      flags: {
-        GnomeInhibitionFlag.autoMount,
-        GnomeInhibitionFlag.idle,
-        GnomeInhibitionFlag.logout,
-        GnomeInhibitionFlag.suspend,
-        GnomeInhibitionFlag.switchUser,
-      },
-    );
-    restoreSettings.add(() => _gnomeSessionManager.uninhibit(cookie));
+    //await _gnomeSessionManager.connect();
+    //final cookie = await _gnomeSessionManager.inhibit(
+    //  appId: 'com.canonical.ubuntu_desktop_installer',
+    //  topLevelXId: 0,
+    //  reason: 'Installing Ubuntu',
+    //  flags: {
+    //    GnomeInhibitionFlag.autoMount,
+    //    GnomeInhibitionFlag.idle,
+    //    GnomeInhibitionFlag.logout,
+    //    GnomeInhibitionFlag.suspend,
+    //    GnomeInhibitionFlag.switchUser,
+    //  },
+    //);
+    //restoreSettings.add(() => _gnomeSessionManager.uninhibit(cookie));
   }
 
   @override
