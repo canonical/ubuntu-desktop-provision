@@ -180,7 +180,7 @@ void main() {
 
   testWidgets('tpm', (tester) async {
     // TODO: Fix StoragePage overflow so that this isn't needed
-    await tester.binding.setSurfaceSize(const Size(1000, 1000));
+    await tester.binding.setSurfaceSize(const Size(1200, 1000));
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
@@ -209,31 +209,31 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    //await tester.testStoragePage(
-    //  type: StorageType.erase,
-    //  guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-    //);
-    //await tester.tapNext();
-    //await tester.pumpAndSettle();
+    await tester.testStoragePage(
+      type: StorageType.erase,
+      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
-    //await tester.testRecoveryKeyPage();
-    //await tester.tapNext();
-    //await tester.pumpAndSettle();
+    await tester.testRecoveryKeyPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
-    //await tester.testConfirmPage();
-    //await tester.tapConfirm();
-    //await tester.pumpAndSettle();
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
-    //await tester.testInstallPage();
-    //await tester.pumpAndSettle();
+    await tester.testInstallPage();
+    await tester.pumpAndSettle();
 
-    //final windowClosed = YaruTestWindow.waitForClosed();
-    //await tester.tapContinueTesting();
-    //await expectLater(windowClosed, completes);
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
 
-    //await verifySubiquityConfig(
-    //  capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-    //);
+    await verifySubiquityConfig(
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
   });
 
   testWidgets('manual partitioning', (tester) async {
