@@ -24,11 +24,18 @@ type Manager struct {
 	bus          *dbus.Conn
 }
 
+type dbusConnectionAdapter struct {
+	*dbus.Conn
+}
+
+func (bus dbusConnectionAdapter) Object(iface string, path dbus.ObjectPath) user.DbusObject {
+	return bus.Object(iface, path)
+}
+
 // NewManager returns a new manager after creating all necessary items for our business logic.
 func NewManager(ctx context.Context) (m *Manager, err error) {
 	defer decorate.OnError(&err, "can't create provd object")
 
-	// Connect to dbus
 	bus, err := dbus.ConnectSystemBus(
 		dbus.WithIncomingInterceptor(func(msg *dbus.Message) {
 			slog.Debug(fmt.Sprintf("DBUS: %s", msg))
@@ -39,7 +46,7 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 
 	helloService := hello.Service{}
 
-	userService := user.New(bus)
+	userService := user.New(dbusConnectionAdapter{bus})
 
 	return &Manager{
 		helloService: helloService,

@@ -38,62 +38,25 @@ type DbusObject interface {
 	GetProperty(p string) (dbus.Variant, error)
 }
 
-// ObjectFactory is a factory for creating DbusObjects for users.
-// This is used to allow mocking of the DbusObjects for testing.
-type ObjectFactory interface {
-	GetUserObject(userObjectPath dbus.ObjectPath) DbusObject
+// DbusConnector is the interface to the dbus connection which allow easy mocking.
+type DbusConnector interface {
+	Object(dest string, path dbus.ObjectPath) DbusObject
 }
-
-// objectFactoryImpl is the default implementation of UserObjectFactory.
-type objectFactoryImpl struct {
-	conn *dbus.Conn
-}
-
-// Wraps the dbus call for getting a user object.
-func (f *objectFactoryImpl) GetUserObject(userObjectPath dbus.ObjectPath) DbusObject {
-	userObject := f.conn.Object(DbusAccountsPrefix, userObjectPath)
-	return userObject
-}
-
-// options are the configurable functional options of the User service.
-type options struct {
-	accounts    DbusObject
-	hostname    DbusObject
-	userFactory ObjectFactory
-}
-
-// Option type exported for tests.
-type Option func(*options)
 
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	accounts    DbusObject
-	hostname    DbusObject
-	userFactory ObjectFactory
+	conn     DbusConnector
+	accounts DbusObject
+	hostname DbusObject
 }
 
 // New returns a new instance of the User service.
-func New(bus *dbus.Conn, args ...Option) *Service {
-	accounts := bus.Object(DbusAccountsPrefix, "/org/freedesktop/Accounts")
-	hostname := bus.Object(DbusHostnamePrefix, "/org/freedesktop/hostname1")
-	userFactory := &objectFactoryImpl{conn: bus}
-
-	opts := options{
-		accounts:    accounts,
-		hostname:    hostname,
-		userFactory: userFactory,
-	}
-
-	// Apply given options
-	for _, f := range args {
-		f(&opts)
-	}
-
+func New(conn DbusConnector) *Service {
 	return &Service{
-		accounts:    opts.accounts,
-		hostname:    opts.hostname,
-		userFactory: opts.userFactory,
+		conn:     conn,
+		accounts: conn.Object(dbusAccountsPrefix, "/org/freedesktop/Accounts"),
+		hostname: conn.Object(dbusHostnamePrefix, "/org/freedesktop/hostname1"),
 	}
 }
 
@@ -139,7 +102,7 @@ func hashPassword(password string, testSalt *string) (string, error) {
 
 // CreateUser creates a new user on the system.
 func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*emptypb.Empty, error) {
-	// Validate requtest
+	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
 	}
@@ -182,14 +145,14 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 
 	// Set the password for the user
-	userObject := s.userFactory.GetUserObject(userObjectPath)
+	userObject := s.conn.Object(dbusAccountsPrefix, userObjectPath)
 	err = userObject.Call(dbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
 	}
 
 	// Set autologin for the user
-	err = userObject.Call(DbusAccountsPrefix+".User.SetAutomaticLogin", 0, autologin).Err
+	err = userObject.Call(dbusAccountsPrefix+".User.SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
 	}
@@ -239,7 +202,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	for scanner.Scan() {
 		line := scanner.Text()
 		// Ignore comment lines
-		if strings.HasPrefix(line, "#") {
+		if strings.HasPrefix(line, "#") { // trim the lines / spaces (stinrgs)
 			continue
 		}
 		if line == username {
