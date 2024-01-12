@@ -386,6 +386,7 @@ void main() {
     });
 
     testWidgets('encrypted lvm selected', (tester) async {
+      // TODO: Fix StoragePage overflow so that this isn't needed
       await tester.binding.setSurfaceSize(const Size(1000, 1000));
       final model =
           buildStorageModel(guidedCapability: GuidedCapability.LVM_LUKS);

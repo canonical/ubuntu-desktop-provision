@@ -74,6 +74,7 @@ void main() {
   });
 
   testWidgets('selects wifi', (tester) async {
+    // TODO: Fix NetworkPage overflow so that this isn't needed
     await tester.binding.setSurfaceSize(const Size(800, 800));
     final model = NetworkModel(MockNetworkService());
     await tester.pumpApp(
