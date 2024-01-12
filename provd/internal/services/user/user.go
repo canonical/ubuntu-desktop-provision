@@ -22,14 +22,14 @@ import (
 )
 
 const (
-	// DbusAccountsPrefix is the prefix for the Accounts D-Bus interface.
-	DbusAccountsPrefix = "org.freedesktop.Accounts"
-	// DbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
-	DbusHostnamePrefix = "org.freedesktop.hostname1"
-	// UsernameMaxLen is the maximum length of a username.
-	UsernameMaxLen = 32
-	// UsernameRegex is the regex for a valid username.
-	UsernameRegex = "^[a-z_][a-z0-9_-]*$"
+	// dbusAccountsPrefix is the prefix for the Accounts D-Bus interface.
+	dbusAccountsPrefix = "org.freedesktop.Accounts"
+	// dbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
+	dbusHostnamePrefix = "org.freedesktop.hostname1"
+	// usernameMaxLen is the maximum length of a username.
+	usernameMaxLen = 32
+	// usernameRegex is the regex for a valid username.
+	usernameRegex = "^[a-z_][a-z0-9_-]*$"
 )
 
 // DbusObject is an abstraction of a dbus object.
@@ -112,9 +112,9 @@ func generateSalt(length int) (string, error) {
 	return string(salt), nil
 }
 
-// HashPassword hashes the given password, returning in the SHA-512 crypt format.
+// hashPassword hashes the given password, returning in the SHA-512 crypt format.
 // A salt can be provided for testing purposes.
-func HashPassword(password string, testSalt *string) (string, error) {
+func hashPassword(password string, testSalt *string) (string, error) {
 	if password == "" {
 		return "", status.Errorf(codes.InvalidArgument, "received an empty password")
 	}
@@ -170,21 +170,20 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
-	call := s.accounts.Call(DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
-
+	call := s.accounts.Call(dbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
 	err := call.Store(&userObjectPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
 
-	hashed, err := HashPassword(password, nil)
+	hashed, err := hashPassword(password, nil)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
 	}
 
 	// Set the password for the user
 	userObject := s.userFactory.GetUserObject(userObjectPath)
-	err = userObject.Call(DbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
+	err = userObject.Call(dbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
 	}
@@ -196,7 +195,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 
 	// Set the hostname
-	err = s.hostname.Call(DbusHostnamePrefix+".SetStaticHostname", 0, hostname, false).Err
+	err = s.hostname.Call(dbusHostnamePrefix+".SetStaticHostname", 0, hostname, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
 	}
@@ -217,13 +216,13 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	}
 
 	// Check if username uses valid characters
-	matched, _ := regexp.MatchString(UsernameRegex, username)
+	matched, _ := regexp.MatchString(usernameRegex, username)
 	if !matched {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_INVALID_CHARS}, nil
 	}
 
 	// Check if username is too long
-	if len(username) > UsernameMaxLen {
+	if len(username) > usernameMaxLen {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_TOO_LONG}, nil
 	}
 
@@ -258,11 +257,11 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	}
 
 	// Check if username is already in use
-	err = s.accounts.Call(DbusAccountsPrefix+".FindUserByName", 0, username).Err
+	err = s.accounts.Call(dbusAccountsPrefix+".FindUserByName", 0, username).Err
 	if err != nil {
 		var dbusError dbus.Error
 		if errors.As(err, &dbusError) {
-			if dbusError.Name == DbusAccountsPrefix+".Error.Failed" {
+			if dbusError.Name == dbusAccountsPrefix+".Error.Failed" {
 				// User not found
 				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
 			}
