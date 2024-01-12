@@ -25,8 +25,8 @@ final defaultSlides = <WidgetBuilder>[
 Widget _buildWelcomeSlide(BuildContext context) {
   final lang = UbuntuBootstrapLocalizations.of(context);
   final product = getService<ProductService>();
-  return TestSlideLayout(
-    //title: Text(lang.installationSlidesWelcomeTitle),
+  return IntroSlideLayout(
+    title: Text(lang.installationSlidesWelcomeTitle),
     body: SlideColumn(
       children: [
         Consumer(builder: (context, ref, child) {

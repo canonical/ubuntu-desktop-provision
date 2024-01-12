@@ -3,4 +3,3 @@ export 'layouts/intro_slide_layout.dart';
 export 'layouts/landscape_slide_layout.dart';
 export 'layouts/outro_slide_layout.dart';
 export 'layouts/portrait_slide_layout.dart';
-export 'layouts/test_slide_layout.dart';
