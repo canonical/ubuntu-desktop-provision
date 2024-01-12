@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsOc([String locale = 'oc']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Benvengut';
 
   @override

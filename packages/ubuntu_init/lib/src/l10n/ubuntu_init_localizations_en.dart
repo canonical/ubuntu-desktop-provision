@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsEn extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Welcome';
 
   @override

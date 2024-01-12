@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsHi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Welcome';
 
   @override

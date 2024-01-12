@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Tervetuloa';
 
   @override

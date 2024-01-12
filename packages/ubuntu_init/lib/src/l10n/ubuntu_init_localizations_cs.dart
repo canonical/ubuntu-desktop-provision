@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Vítejte';
 
   @override

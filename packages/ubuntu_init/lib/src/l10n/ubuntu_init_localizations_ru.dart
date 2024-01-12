@@ -5,16 +5,6 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String loadingPageTitle(Object DISTRO) {
-    return 'Welcome to $DISTRO';
-  }
-
-  @override
-  String loadingHeader(Object DISTRO) {
-    return 'Preparing $DISTRO…';
-  }
-
-  @override
   String get welcomePageTitle => 'Добро пожаловать';
 
   @override

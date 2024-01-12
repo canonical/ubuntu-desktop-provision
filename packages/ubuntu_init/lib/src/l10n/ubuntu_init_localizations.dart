@@ -237,18 +237,6 @@ abstract class UbuntuInitLocalizations {
     Locale('zh', 'TW')
   ];
 
-  /// No description provided for @loadingPageTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome to {DISTRO}'**
-  String loadingPageTitle(Object DISTRO);
-
-  /// No description provided for @loadingHeader.
-  ///
-  /// In en, this message translates to:
-  /// **'Preparing {DISTRO}…'**
-  String loadingHeader(Object DISTRO);
-
   /// No description provided for @welcomePageTitle.
   ///
   /// In en, this message translates to:

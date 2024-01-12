@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_step.dart';
-import 'package:ubuntu_init/src/loading_page.dart';
 import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -29,13 +28,10 @@ class InitWizard extends ConsumerWidget {
 
     return WizardBuilder(
       routes: {
-        Routes.loading: WizardRoute(
-          builder: (_) => const LoadingPage(),
-          userData: const WizardRouteData(
-            hasPrevious: false,
-            hasNext: false,
-          ),
-          onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
+        Routes.initial: WizardRoute(
+          builder: (_) => const SizedBox.shrink(),
+          onReplace: (_) =>
+              ref.read(initModelProvider).init().then((_) => null),
         ),
         ...routes,
         Routes.theme: WizardRoute(

@@ -1,12 +1,4 @@
 {
-  "loadingPageTitle": "Welcome to {DISTRO}",
-  "@loadingPageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
-  "loadingHeader": "Preparing {DISTRO}…",
   "welcomePageTitle": "Welcome",
   "@welcomePageTitle": {},
   "welcomePageHeader": "Welcome to {distro}",
