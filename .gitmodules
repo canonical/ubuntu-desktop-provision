@@ -1,4 +1,4 @@
 [submodule "subiquity"]
 	path = packages/subiquity_client/subiquity
 	url = https://github.com/canonical/subiquity.git
-	branch = ubuntu/mantic
+	branch = main
