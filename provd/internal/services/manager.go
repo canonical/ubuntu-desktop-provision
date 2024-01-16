@@ -46,7 +46,7 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 
 	helloService := hello.Service{}
 
-	userService := user.New(dbusConnectionAdapter{bus}, "foo", "bar")
+	userService := user.New(dbusConnectionAdapter{bus})
 
 	return &Manager{
 		helloService: helloService,

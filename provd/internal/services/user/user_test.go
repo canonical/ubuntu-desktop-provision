@@ -228,12 +228,29 @@ func TestValidateUsername(t *testing.T) {
 	}
 }
 
-type dbusConnectionAdapter struct {
+type dbusConnectionMock struct {
 	*dbus.Conn
+	accountsPath dbus.ObjectPath
+	hostnamePath dbus.ObjectPath
 }
 
-func (bus dbusConnectionAdapter) Object(iface string, path dbus.ObjectPath) user.DbusObject {
-	return bus.Conn.Object(iface, path)
+func (d dbusConnectionMock) Object(iface string, path dbus.ObjectPath) user.DbusObject {
+	switch iface {
+	case consts.DbusAccountsPrefix:
+		// If the path is the default path for Accounts, return the mocked Accounts object for the test
+		if path == "/org/freedesktop/Accounts" {
+			return d.Conn.Object(iface, d.accountsPath)
+		} else {
+			// Otherwise this is being called on a mocked object, so don't override the path
+			return d.Conn.Object(iface, path)
+		}
+	case consts.DbusHostnamePrefix:
+		// If the path is the default path for Hostname, return the mocked Hostname object for the test
+		return d.Conn.Object(iface, d.hostnamePath)
+	default:
+		// Unknown interface, return nil
+		return nil
+	}
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
@@ -250,10 +267,17 @@ func newUserClient(t *testing.T, accountsPath string, hostnamePath string) pb.Us
 
 	bus := testutils.NewDbusConn(t)
 
-	dbusConn := dbusConnectionAdapter{bus}
+	// Concatenate provided paths with base paths
+	fullAccountsPath := dbus.ObjectPath("/org/freedesktop/Accounts/" + accountsPath)
+	fullHostnamePath := dbus.ObjectPath("/org/freedesktop/hostname1/" + hostnamePath)
 
+	dbusConn := dbusConnectionMock{
+		Conn:         bus,
+		accountsPath: fullAccountsPath,
+		hostnamePath: fullHostnamePath,
+	}
 	// Create the service with the necessary mocks
-	service := user.New(dbusConn, "/org/freedesktop/Accounts/"+accountsPath, "/org/freedesktop/hostname1/"+hostnamePath)
+	service := user.New(dbusConn)
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, service)
@@ -328,8 +352,6 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 		return nil
 	}
 }
-
-//dbusError.Name == dbusAccountsPrefix+".Error.Failed"
 
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()

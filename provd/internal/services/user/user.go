@@ -50,11 +50,9 @@ type Service struct {
 }
 
 // New returns a new instance of the User service.
-func New(Conn DbusConnector, accountPath string, hostnamePath string) *Service {
-	acountsObject := Conn.Object(consts.DbusAccountsPrefix, dbus.ObjectPath(accountPath))
-	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, dbus.ObjectPath(hostnamePath))
-	slog.Info("acountsObject", acountsObject)
-	slog.Info("hostnameObject", hostnameObject)
+func New(Conn DbusConnector) *Service {
+	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
+	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/Accounts")
 	return &Service{
 		Conn:     Conn,
 		Accounts: acountsObject,
@@ -140,7 +138,6 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
-
 	hashed, err := hashPassword(password, nil)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
