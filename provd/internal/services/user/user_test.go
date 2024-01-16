@@ -3,15 +3,19 @@ package user_test
 import (
 	"context"
 	"flag"
+	"fmt"
+	"log/slog"
 	"net"
 	"os"
 	"path/filepath"
 	"testing"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
+	"github.com/godbus/dbus/v5/introspect"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -20,7 +24,7 @@ import (
 func TestEmptyCreateUserRequest(t *testing.T) {
 	t.Parallel()
 
-	client := newUserClient(t, nil, nil, nil)
+	client := newUserClient(t, "", "")
 
 	userResp, err := client.CreateUser(context.Background(), nil)
 	require.Error(t, err, "CreateUser should return an error for nil request")
@@ -30,7 +34,7 @@ func TestEmptyCreateUserRequest(t *testing.T) {
 func TestEmptyValidateUsernameRequest(t *testing.T) {
 	t.Parallel()
 
-	client := newUserClient(t, nil, nil, nil)
+	client := newUserClient(t, "", "")
 
 	userResp, err := client.ValidateUsername(context.Background(), nil)
 	require.Error(t, err, "ValidateUsername should return an error for nil request")
@@ -52,6 +56,9 @@ func TestCreateUser(t *testing.T) {
 		hostnameError bool
 
 		wantErr bool
+
+		accountsPath string
+		hostnamePath string
 	}{
 		"Successfully creates a user": {
 			realName:  "Ubuntu",
@@ -60,6 +67,9 @@ func TestCreateUser(t *testing.T) {
 			hostname:  "ubuntu",
 			isAdmin:   true,
 			autoLogin: true,
+
+			accountsPath: "noerror",
+			hostnamePath: "noerror",
 		},
 		"Error when realName is empty": {
 			realName:  "",
@@ -68,6 +78,9 @@ func TestCreateUser(t *testing.T) {
 			hostname:  "ubuntu",
 			autoLogin: true,
 			wantErr:   true,
+
+			accountsPath: "noerror",
+			hostnamePath: "noerror",
 		},
 		"Error when username is empty": {
 			realName:  "Ubuntu",
@@ -76,6 +89,9 @@ func TestCreateUser(t *testing.T) {
 			hostname:  "ubuntu",
 			autoLogin: true,
 			wantErr:   true,
+
+			accountsPath: "noerror",
+			hostnamePath: "noerror",
 		},
 		"Error when hostname is empty": {
 			realName:  "Ubuntu",
@@ -84,6 +100,9 @@ func TestCreateUser(t *testing.T) {
 			hostname:  "",
 			autoLogin: true,
 			wantErr:   true,
+
+			accountsPath: "noerror",
+			hostnamePath: "noerror",
 		},
 		"Error from Accounts service": {
 			realName:      "Ubuntu",
@@ -93,6 +112,9 @@ func TestCreateUser(t *testing.T) {
 			autoLogin:     true,
 			accountsError: true,
 			wantErr:       true,
+
+			accountsPath: "noerror",
+			hostnamePath: "error",
 		},
 		"Error from Hostname service": {
 			realName:      "Ubuntu",
@@ -102,6 +124,9 @@ func TestCreateUser(t *testing.T) {
 			autoLogin:     true,
 			hostnameError: true,
 			wantErr:       true,
+
+			accountsPath: "error",
+			hostnamePath: "noerror",
 		},
 	}
 
@@ -111,20 +136,7 @@ func TestCreateUser(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			accountsMock := &user.AccountsObjectMock{
-				UserObjectPath: dbus.ObjectPath("/org/freedesktop/Accounts/User1000"),
-				WantError:      tc.accountsError,
-			}
-
-			hostnameMock := &user.HostnameObjectMock{
-				WantError: tc.hostnameError,
-			}
-
-			userFactoryMock := user.UserObjectFactoryMock{
-				&user.UserObjectMock{},
-			}
-
-			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
+			client := newUserClient(t, tc.accountsPath, tc.hostnamePath)
 
 			userReq := &pb.CreateUserRequest{
 				User: &pb.User{
@@ -154,31 +166,39 @@ func TestValidateUsername(t *testing.T) {
 		username      string
 		accountsError bool
 		wantErr       bool
+
+		endpoint string
 	}{
 		"Valid username": {
 			username:      "newuser",
 			accountsError: true,
 			wantErr:       false,
+			endpoint:      "error",
 		},
 		"Existing username": {
 			username: "existinguser",
 			wantErr:  false,
+			endpoint: "noerror",
 		},
 		"Empty username": {
 			username: "",
 			wantErr:  false,
+			endpoint: "noerror",
 		},
 		"Reserved username": {
 			username: "root",
 			wantErr:  false,
+			endpoint: "noerror",
 		},
 		"Username too long": {
 			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
 			wantErr:  false,
+			endpoint: "noerror",
 		},
 		"Invalid characters in username": {
 			username: "invalid@username",
 			wantErr:  false,
+			endpoint: "noerror",
 		},
 	}
 
@@ -188,14 +208,7 @@ func TestValidateUsername(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			accountsMock := &user.AccountsObjectMock{
-				WantError: tc.accountsError,
-			}
-
-			hostnameMock := &user.HostnameObjectMock{}
-			userFactoryMock := user.UserObjectFactoryMock{}
-
-			client := newUserClient(t, accountsMock, hostnameMock, userFactoryMock)
+			client := newUserClient(t, tc.endpoint, "")
 
 			validateReq := &pb.ValidateUsernameRequest{
 				Username: tc.username,
@@ -215,8 +228,16 @@ func TestValidateUsername(t *testing.T) {
 	}
 }
 
+type dbusConnectionAdapter struct {
+	*dbus.Conn
+}
+
+func (bus dbusConnectionAdapter) Object(iface string, path dbus.ObjectPath) user.DbusObject {
+	return bus.Conn.Object(iface, path)
+}
+
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user.DbusObject, userFactoryMock user.ObjectFactory) pb.UserServiceClient {
+func newUserClient(t *testing.T, accountsPath string, hostnamePath string) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
@@ -229,8 +250,10 @@ func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user
 
 	bus := testutils.NewDbusConn(t)
 
+	dbusConn := dbusConnectionAdapter{bus}
+
 	// Create the service with the necessary mocks
-	service := user.New(bus, user.WithAccounts(accountsMock), user.WithHostname(hostnameMock), user.WithUserFactory(userFactoryMock))
+	service := user.New(dbusConn, "/org/freedesktop/Accounts/"+accountsPath, "/org/freedesktop/hostname1/"+hostnamePath)
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, service)
@@ -251,8 +274,202 @@ func newUserClient(t *testing.T, accountsMock user.DbusObject, hostnameMock user
 	return pb.NewUserServiceClient(conn)
 }
 
+type accountsdbus struct {
+	endpoint  string
+	wantError bool
+}
+
+func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
+	if a.wantError {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	} else {
+		return "/org/freedesktop/Accounts/Usernoerror", nil
+	}
+}
+
+func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
+	if a.wantError {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	} else {
+		return "/org/freedesktop/Accounts/Usernoerror", nil
+	}
+}
+
+type userdbus struct {
+	endpoint  string
+	wantError bool
+}
+
+func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
+	if u.wantError {
+		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	} else {
+		return nil
+	}
+}
+
+func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
+	if u.wantError {
+		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	} else {
+		return nil
+	}
+}
+
+type hostnamedbus struct {
+	endpoint  string
+	wantError bool
+}
+
+func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
+	if h.wantError {
+		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error"})
+	} else {
+		return nil
+	}
+}
+
+//dbusError.Name == dbusAccountsPrefix+".Error.Failed"
+
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()
+	slog.Info("TestMain")
 	flag.Parse()
-	os.Exit(m.Run())
+	// export domains
+	defer testutils.StartLocalSystemBus()()
+
+	conn, err := dbus.SystemBusPrivate()
+	if err != nil {
+		slog.Error("Setup: can't get a private system bus: %v", err)
+	}
+	defer func() {
+		if err = conn.Close(); err != nil {
+			slog.Error("Teardown: can't close system dbus connection: %v", err)
+		}
+	}()
+	if err = conn.Auth(nil); err != nil {
+		slog.Error("Setup: can't auth on private system bus: %v", err)
+	}
+	if err = conn.Hello(); err != nil {
+		slog.Error("Setup: can't send hello message on private system bus: %v", err)
+	}
+
+	intro := fmt.Sprintf(`
+	<node>
+		<interface name="%s">
+            <method name="FindUserByName">
+              <arg name="name" direction="in" type="s"/>
+              <arg name="user" direction="out" type="o"/>
+			</method>
+            <method name="CreateUser">
+              <arg name="username" direction="in" type="s"/>
+              <arg name="realName" direction="in" type="s"/>
+              <arg name="accountType" direction="in" type="i"/>
+              <arg name="user" direction="out" type="o"/>
+			</method>
+		</interface>̀%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
+
+	for _, s := range []accountsdbus{
+		{
+			endpoint:  "error",
+			wantError: true,
+		},
+		{
+			endpoint:  "noerror",
+			wantError: false,
+		},
+	} {
+		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/Accounts"+"/"+s.endpoint), consts.DbusAccountsPrefix); err != nil {
+			slog.Error("Setup: could not export %s %v", s.endpoint, err)
+		}
+		if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"+"/"+s.endpoint),
+			"org.freedesktop.DBus.Introspectable"); err != nil {
+			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
+		}
+	}
+	reply, err := conn.RequestName(consts.DbusAccountsPrefix, dbus.NameFlagDoNotQueue)
+	if err != nil {
+		slog.Error("Setup: Failed to acquire account name on local system bus: %v", err)
+	}
+	if reply != dbus.RequestNameReplyPrimaryOwner {
+		slog.Error("Setup: Failed to acquire account name on local system bus: name is already taken")
+	}
+
+	// user dbus
+
+	userIntro := fmt.Sprintf(`
+	<node>
+		<interface name="%s">
+            <method name="SetPassword">
+              <arg name="name" direction="in" type="s"/>
+              <arg name="hint" direction="in" type="s"/>
+			</method>
+            <method name="SetAutomaticLogin">
+              <arg name="autoLogin" direction="in" type="b"/>
+			</method>
+		</interface>̀%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
+
+	for _, s := range []userdbus{
+		{
+			endpoint:  "error",
+			wantError: true,
+		},
+		{
+			endpoint:  "noerror",
+			wantError: false,
+		},
+	} {
+		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/Accounts/User"+s.endpoint), consts.DbusUserPrefix); err != nil {
+			slog.Error("Setup: could not export %s %v", s.endpoint, err)
+		}
+		if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/User"+s.endpoint),
+			"org.freedesktop.DBus.Introspectable"); err != nil {
+			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
+		}
+	}
+	reply, err = conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
+	if err != nil {
+		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
+	}
+	if reply != dbus.RequestNameReplyPrimaryOwner {
+		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
+	}
+
+	// hostname dbus
+	hostnameIntro := fmt.Sprintf(`
+	<node>
+		<interface name="%s">
+            <method name="SetStaticHostname">
+              <arg name="hostname" direction="in" type="s"/>
+              <arg name="someBool" direction="in" type="b"/>
+            </method>
+		</interface>̀%s</node>`, consts.DbusHostnamePrefix, introspect.IntrospectDataString)
+
+	for _, s := range []hostnamedbus{
+		{
+			endpoint:  "error",
+			wantError: true,
+		},
+		{
+			endpoint:  "noerror",
+			wantError: false,
+		},
+	} {
+		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/hostname1/"+s.endpoint), consts.DbusHostnamePrefix); err != nil {
+			slog.Error("Setup: could not export %s %v", s.endpoint, err)
+		}
+		if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1/"+s.endpoint),
+			"org.freedesktop.DBus.Introspectable"); err != nil {
+			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
+		}
+	}
+	reply, err = conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
+	if err != nil {
+		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
+	}
+	if reply != dbus.RequestNameReplyPrimaryOwner {
+		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
+	}
+
+	m.Run()
 }

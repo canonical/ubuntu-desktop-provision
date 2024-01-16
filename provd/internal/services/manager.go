@@ -29,7 +29,7 @@ type dbusConnectionAdapter struct {
 }
 
 func (bus dbusConnectionAdapter) Object(iface string, path dbus.ObjectPath) user.DbusObject {
-	return bus.Object(iface, path)
+	return bus.Conn.Object(iface, path)
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
@@ -46,7 +46,7 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 
 	helloService := hello.Service{}
 
-	userService := user.New(dbusConnectionAdapter{bus})
+	userService := user.New(dbusConnectionAdapter{bus}, "foo", "bar")
 
 	return &Manager{
 		helloService: helloService,

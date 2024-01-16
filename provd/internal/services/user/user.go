@@ -9,11 +9,13 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
+	"log/slog"
 	"math/big"
 	"os"
 	"regexp"
 	"strings"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
 	"google.golang.org/grpc/codes"
@@ -22,10 +24,6 @@ import (
 )
 
 const (
-	// dbusAccountsPrefix is the prefix for the Accounts D-Bus interface.
-	dbusAccountsPrefix = "org.freedesktop.Accounts"
-	// dbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
-	dbusHostnamePrefix = "org.freedesktop.hostname1"
 	// usernameMaxLen is the maximum length of a username.
 	usernameMaxLen = 32
 	// usernameRegex is the regex for a valid username.
@@ -46,17 +44,21 @@ type DbusConnector interface {
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	conn     DbusConnector
-	accounts DbusObject
-	hostname DbusObject
+	Conn     DbusConnector
+	Accounts DbusObject
+	Hostname DbusObject
 }
 
 // New returns a new instance of the User service.
-func New(conn DbusConnector) *Service {
+func New(Conn DbusConnector, accountPath string, hostnamePath string) *Service {
+	acountsObject := Conn.Object(consts.DbusAccountsPrefix, dbus.ObjectPath(accountPath))
+	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, dbus.ObjectPath(hostnamePath))
+	slog.Info("acountsObject", acountsObject)
+	slog.Info("hostnameObject", hostnameObject)
 	return &Service{
-		conn:     conn,
-		accounts: conn.Object(dbusAccountsPrefix, "/org/freedesktop/Accounts"),
-		hostname: conn.Object(dbusHostnamePrefix, "/org/freedesktop/hostname1"),
+		Conn:     Conn,
+		Accounts: acountsObject,
+		Hostname: hostnameObject,
 	}
 }
 
@@ -127,13 +129,13 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 	password := user.GetPassword() // allow empty password?
 	autologin := user.GetAutoLogin()
-	hostname := user.GetHostname()
-	if hostname == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "received an empty hostname")
+	Hostname := user.GetHostname()
+	if Hostname == "" {
+		return nil, status.Errorf(codes.InvalidArgument, "received an empty Hostname")
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
-	call := s.accounts.Call(dbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
+	call := s.Accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
 	err := call.Store(&userObjectPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
@@ -145,22 +147,23 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 
 	// Set the password for the user
-	userObject := s.conn.Object(dbusAccountsPrefix, userObjectPath)
-	err = userObject.Call(dbusAccountsPrefix+".User.SetPassword", 0, hashed, "").Err
+	userObject := s.Conn.Object(consts.DbusAccountsPrefix, userObjectPath)
+	slog.Info("userObject", userObject)
+	err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
 	}
 
 	// Set autologin for the user
-	err = userObject.Call(dbusAccountsPrefix+".User.SetAutomaticLogin", 0, autologin).Err
+	err = userObject.Call(consts.DbusUserPrefix+".SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
 	}
 
-	// Set the hostname
-	err = s.hostname.Call(dbusHostnamePrefix+".SetStaticHostname", 0, hostname, false).Err
+	// Set the Hostname
+	err = s.Hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set hostname: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %s", err)
 	}
 
 	return &emptypb.Empty{}, nil
@@ -220,11 +223,11 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	}
 
 	// Check if username is already in use
-	err = s.accounts.Call(dbusAccountsPrefix+".FindUserByName", 0, username).Err
+	err = s.Accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
 	if err != nil {
 		var dbusError dbus.Error
 		if errors.As(err, &dbusError) {
-			if dbusError.Name == dbusAccountsPrefix+".Error.Failed" {
+			if dbusError.Name == consts.DbusAccountsPrefix+".Error.Failed" {
 				// User not found
 				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
 			}
