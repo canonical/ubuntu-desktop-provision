@@ -135,4 +135,4 @@ scripts:
     run: |
       rm -rf ./packages/provd_client/lib/src/generated/* &&
       protoc --dart_out=grpc:./packages/provd_client/lib/src/generated \
-        -I./provd/protos ./provd/protos/*.proto
+        -I./provd/protos ./provd/protos/*.proto google/protobuf/empty.proto
