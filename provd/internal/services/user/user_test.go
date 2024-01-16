@@ -57,8 +57,8 @@ func TestCreateUser(t *testing.T) {
 
 		wantErr bool
 
-		accountsPath string
-		hostnamePath string
+		accountsEndpoint string
+		hostnameEndpoint string
 	}{
 		"Successfully creates a user": {
 			realName:  "Ubuntu",
@@ -68,8 +68,8 @@ func TestCreateUser(t *testing.T) {
 			isAdmin:   true,
 			autoLogin: true,
 
-			accountsPath: "noerror",
-			hostnamePath: "noerror",
+			accountsEndpoint: "noerror",
+			hostnameEndpoint: "noerror",
 		},
 		"Error when realName is empty": {
 			realName:  "",
@@ -79,8 +79,8 @@ func TestCreateUser(t *testing.T) {
 			autoLogin: true,
 			wantErr:   true,
 
-			accountsPath: "noerror",
-			hostnamePath: "noerror",
+			accountsEndpoint: "noerror",
+			hostnameEndpoint: "noerror",
 		},
 		"Error when username is empty": {
 			realName:  "Ubuntu",
@@ -90,8 +90,8 @@ func TestCreateUser(t *testing.T) {
 			autoLogin: true,
 			wantErr:   true,
 
-			accountsPath: "noerror",
-			hostnamePath: "noerror",
+			accountsEndpoint: "noerror",
+			hostnameEndpoint: "noerror",
 		},
 		"Error when hostname is empty": {
 			realName:  "Ubuntu",
@@ -101,8 +101,8 @@ func TestCreateUser(t *testing.T) {
 			autoLogin: true,
 			wantErr:   true,
 
-			accountsPath: "noerror",
-			hostnamePath: "noerror",
+			accountsEndpoint: "noerror",
+			hostnameEndpoint: "noerror",
 		},
 		"Error from Accounts service": {
 			realName:      "Ubuntu",
@@ -113,8 +113,8 @@ func TestCreateUser(t *testing.T) {
 			accountsError: true,
 			wantErr:       true,
 
-			accountsPath: "noerror",
-			hostnamePath: "error",
+			accountsEndpoint: "noerror",
+			hostnameEndpoint: "error",
 		},
 		"Error from Hostname service": {
 			realName:      "Ubuntu",
@@ -125,8 +125,8 @@ func TestCreateUser(t *testing.T) {
 			hostnameError: true,
 			wantErr:       true,
 
-			accountsPath: "error",
-			hostnamePath: "noerror",
+			accountsEndpoint: "error",
+			hostnameEndpoint: "noerror",
 		},
 	}
 
@@ -136,7 +136,7 @@ func TestCreateUser(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			client := newUserClient(t, tc.accountsPath, tc.hostnamePath)
+			client := newUserClient(t, tc.accountsEndpoint, tc.hostnameEndpoint)
 
 			userReq := &pb.CreateUserRequest{
 				User: &pb.User{
@@ -167,38 +167,38 @@ func TestValidateUsername(t *testing.T) {
 		accountsError bool
 		wantErr       bool
 
-		endpoint string
+		accountsEndpoint string
 	}{
 		"Valid username": {
-			username:      "newuser",
-			accountsError: true,
-			wantErr:       false,
-			endpoint:      "error",
+			username:         "newuser",
+			accountsError:    true,
+			wantErr:          false,
+			accountsEndpoint: "error",
 		},
 		"Existing username": {
-			username: "existinguser",
-			wantErr:  false,
-			endpoint: "noerror",
+			username:         "existinguser",
+			wantErr:          false,
+			accountsEndpoint: "noerror",
 		},
 		"Empty username": {
-			username: "",
-			wantErr:  false,
-			endpoint: "noerror",
+			username:         "",
+			wantErr:          false,
+			accountsEndpoint: "noerror",
 		},
 		"Reserved username": {
-			username: "root",
-			wantErr:  false,
-			endpoint: "noerror",
+			username:         "root",
+			wantErr:          false,
+			accountsEndpoint: "noerror",
 		},
 		"Username too long": {
-			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
-			wantErr:  false,
-			endpoint: "noerror",
+			username:         "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
+			wantErr:          false,
+			accountsEndpoint: "noerror",
 		},
 		"Invalid characters in username": {
-			username: "invalid@username",
-			wantErr:  false,
-			endpoint: "noerror",
+			username:         "invalid@username",
+			wantErr:          false,
+			accountsEndpoint: "noerror",
 		},
 	}
 
@@ -208,7 +208,7 @@ func TestValidateUsername(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			client := newUserClient(t, tc.endpoint, "")
+			client := newUserClient(t, tc.accountsEndpoint, "")
 
 			validateReq := &pb.ValidateUsernameRequest{
 				Username: tc.username,
@@ -254,7 +254,7 @@ func (d dbusConnectionMock) Object(iface string, path dbus.ObjectPath) user.Dbus
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T, accountsPath string, hostnamePath string) pb.UserServiceClient {
+func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint string) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
@@ -268,8 +268,8 @@ func newUserClient(t *testing.T, accountsPath string, hostnamePath string) pb.Us
 	bus := testutils.NewDbusConn(t)
 
 	// Concatenate provided paths with base paths
-	fullAccountsPath := dbus.ObjectPath("/org/freedesktop/Accounts/" + accountsPath)
-	fullHostnamePath := dbus.ObjectPath("/org/freedesktop/hostname1/" + hostnamePath)
+	fullAccountsPath := dbus.ObjectPath("/org/freedesktop/Accounts/" + accountsEndpoint)
+	fullHostnamePath := dbus.ObjectPath("/org/freedesktop/hostname1/" + hostnameEndpoint)
 
 	dbusConn := dbusConnectionMock{
 		Conn:         bus,
@@ -350,7 +350,6 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()
-	slog.Info("TestMain")
 	flag.Parse()
 	// export domains
 	defer testutils.StartLocalSystemBus()()

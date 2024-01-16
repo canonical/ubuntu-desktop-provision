@@ -9,7 +9,6 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"log/slog"
 	"math/big"
 	"regexp"
 	"strings"
@@ -144,7 +143,6 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 
 	// Set the password for the user
 	userObject := s.Conn.Object(consts.DbusAccountsPrefix, userObjectPath)
-	slog.Info("userObject", userObject)
 	err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
