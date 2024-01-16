@@ -6,8 +6,9 @@ set -eux
 (
 cat << 'EOF'
 #!/bin/bash
-wget "https://github.com/d-loose/provision-testing/raw/main/ubuntu-desktop-init_0+git.0372cca_amd64.snap"
-snap install --dangerous --devmode ubuntu-desktop-init_0+git.0372cca_amd64.snap
+LATEST=$(wget -qO- https://raw.githubusercontent.com/d-loose/provision-testing/main/ubuntu-desktop-init_latest.snap)
+wget "https://github.com/d-loose/provision-testing/raw/main/$LATEST" -O ubuntu-desktop-init_latest.snap
+snap install --dangerous --devmode ubuntu-desktop-init_latest.snap
 EOF
 ) > $TARGET/usr/bin/install-ubuntu-init
 chmod +x $TARGET/usr/bin/install-ubuntu-init
