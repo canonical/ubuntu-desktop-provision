@@ -306,17 +306,15 @@ type accountsdbus struct {
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 	if a.wantError {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	} else {
-		return "/org/freedesktop/Accounts/Usernoerror", nil
 	}
+	return "/org/freedesktop/Accounts/Usernoerror", nil
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
 	if a.wantError {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	} else {
-		return "/org/freedesktop/Accounts/Usernoerror", nil
 	}
+	return "/org/freedesktop/Accounts/Usernoerror", nil
 }
 
 type userdbus struct {
@@ -327,17 +325,15 @@ type userdbus struct {
 func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
 	if u.wantError {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	} else {
-		return nil
 	}
+	return nil
 }
 
 func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
 	if u.wantError {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	} else {
-		return nil
 	}
+	return nil
 }
 
 type hostnamedbus struct {
@@ -348,9 +344,8 @@ type hostnamedbus struct {
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
 	if h.wantError {
 		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error"})
-	} else {
-		return nil
 	}
+	return nil
 }
 
 func TestMain(m *testing.M) {
