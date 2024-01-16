@@ -33,10 +33,10 @@ message ValidateUsernameResponse {
 }
 
 enum UsernameValidation {
-    OK = 0;
-    ALREADY_IN_USE = 1;
-    SYSTEM_RESERVED = 2;
-    INVALID_CHARS = 3;
-    TOO_LONG = 4;
-    EMPTY = 5;
+  OK = 0;
+  ALREADY_IN_USE = 1;
+  SYSTEM_RESERVED = 2;
+  INVALID_CHARS = 3;
+  TOO_LONG = 4;
+  EMPTY = 5;
 }
