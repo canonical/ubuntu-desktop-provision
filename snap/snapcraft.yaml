@@ -1,6 +1,6 @@
-name: ubuntu-desktop-installer
+name: ubuntu-desktop-bootstrap
 version: git
-summary: Ubuntu Desktop Installer
+summary: Ubuntu Desktop Bootstrap
 description: |
   This project is a modern implementation of the Ubuntu Desktop installer,
   using subiquity as a backend and Flutter for the UI.
@@ -23,10 +23,10 @@ apps:
   subiquity-loadkeys:
     command: bin/subiquity/bin/subiquity-loadkeys
 
-  ubuntu-desktop-installer:
+  ubuntu-desktop-bootstrap:
     command: bin/ubuntu_bootstrap
     command-chain: [bin/launcher]
-    desktop: usr/share/applications/ubuntu-desktop-installer.desktop
+    desktop: usr/share/applications/ubuntu-desktop-bootstrap.desktop
     environment:
       PATH: $SNAP/usr/bin:$SNAP/bin:$PATH
       LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri
@@ -167,7 +167,7 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/etc/subiquity
       cp -r snap/local/postinst.d $CRAFT_PART_INSTALL/etc/subiquity
       mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
-      cp snap/local/ubuntu-desktop-installer.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      cp snap/local/ubuntu-desktop-bootstrap.desktop $CRAFT_PART_INSTALL/usr/share/applications/
       dart pub global activate melos
       dart pub global run melos bootstrap
       cd packages/ubuntu_bootstrap
