@@ -11,7 +11,6 @@ import (
 	"fmt"
 	"log/slog"
 	"math/big"
-	"os"
 	"regexp"
 	"strings"
 
@@ -191,7 +190,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 
 	// Check if username is in reserved list
 	// Read line by line to avoid loading the whole file into memory
-	file, err := os.Open("reserved-usernames")
+	file, err := reservedUsernamesFS.Open("reserved-usernames")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "error opening reserved usernames file: %v", err)
 	}
@@ -200,9 +199,8 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	isReserved := false
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		line := scanner.Text()
-		// Ignore comment lines
-		if strings.HasPrefix(line, "#") { // trim the lines / spaces (stinrgs)
+		line := strings.TrimSpace(scanner.Text()) // Trim the line and ignore comment lines
+		if strings.HasPrefix(line, "#") {
 			continue
 		}
 		if line == username {
