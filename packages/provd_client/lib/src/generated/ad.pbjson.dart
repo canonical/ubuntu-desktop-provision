@@ -37,15 +37,6 @@ final $typed_data.Uint8List adDomainNameValidationDescriptor = $convert.base64De
     'UlRfSFlQSEVOEAYSDgoKRU5EX0hZUEhFThAHEhEKDU1VTFRJUExFX0RPVFMQCBITCg9SRUFMTV'
     '9OT1RfRk9VTkQQCQ==');
 
-@$core.Deprecated('Use emptyDescriptor instead')
-const Empty$json = {
-  '1': 'Empty',
-};
-
-/// Descriptor for `Empty`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List emptyDescriptor = $convert.base64Decode(
-    'CgVFbXB0eQ==');
-
 @$core.Deprecated('Use hasSupportResponseDescriptor instead')
 const HasSupportResponse$json = {
   '1': 'HasSupportResponse',

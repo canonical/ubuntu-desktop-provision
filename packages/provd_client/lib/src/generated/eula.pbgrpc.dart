@@ -15,16 +15,16 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'eula.pb.dart' as $2;
+import 'google/protobuf/empty.pb.dart' as $0;
 
 export 'eula.pb.dart';
 
 @$pb.GrpcServiceName('eula.EulaService')
 class EulaServiceClient extends $grpc.Client {
-  static final _$acceptEula = $grpc.ClientMethod<$2.Empty, $2.Empty>(
+  static final _$acceptEula = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/eula.EulaService/AcceptEula',
-      ($2.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.Empty.fromBuffer(value));
+      ($0.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
 
   EulaServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -32,7 +32,7 @@ class EulaServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$2.Empty> acceptEula($2.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> acceptEula($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$acceptEula, request, options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class EulaServiceBase extends $grpc.Service {
   $core.String get $name => 'eula.EulaService';
 
   EulaServiceBase() {
-    $addMethod($grpc.ServiceMethod<$2.Empty, $2.Empty>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'AcceptEula',
         acceptEula_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.Empty.fromBuffer(value),
-        ($2.Empty value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$2.Empty> acceptEula_Pre($grpc.ServiceCall call, $async.Future<$2.Empty> request) async {
+  $async.Future<$0.Empty> acceptEula_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return acceptEula(call, await request);
   }
 
-  $async.Future<$2.Empty> acceptEula($grpc.ServiceCall call, $2.Empty request);
+  $async.Future<$0.Empty> acceptEula($grpc.ServiceCall call, $0.Empty request);
 }
