@@ -2,14 +2,14 @@ syntax = "proto3";
 
 package theme;
 
-service ThemeService {
-    rpc SetTheme(SetThemeRequest) returns (Empty);
-    rpc GetTheme(Empty) returns (GetThemeResponse);
-    rpc SetAccent(SetAccentRequest) returns (Empty);
-    rpc GetAccent(Empty) returns (GetAccentResponse);
-}
+import "google/protobuf/empty.proto";
 
-message Empty {}
+service ThemeService {
+    rpc SetTheme(SetThemeRequest) returns (google.protobuf.Empty);
+    rpc GetTheme(google.protobuf.Empty) returns (GetThemeResponse);
+    rpc SetAccent(SetAccentRequest) returns (google.protobuf.Empty);
+    rpc GetAccent(google.protobuf.Empty) returns (GetAccentResponse);
+}
 
 enum Theme {
     LIGHT = 0;

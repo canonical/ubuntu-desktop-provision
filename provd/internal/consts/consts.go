@@ -18,3 +18,13 @@ const (
 	// DefaultSocketPath is the default socket path.
 	DefaultSocketPath = "/run/provd.sock"
 )
+
+// D-Bus constants.
+const (
+	// dbusAccountsPrefix is the prefix for the Accounts D-Bus interface.
+	DbusAccountsPrefix = "org.freedesktop.Accounts"
+	// dbusUserPrefix is the prefix for the User D-Bus interface.
+	DbusUserPrefix = "org.freedesktop.Accounts.User"
+	// dbusHostnamePrefix is the prefix for the Hostname D-Bus interface.
+	DbusHostnamePrefix = "org.freedesktop.hostname1"
+)

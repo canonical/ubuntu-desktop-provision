@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
-	//	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	"github.com/stretchr/testify/require"
 )
 
@@ -244,6 +244,7 @@ func TestConfigLoad(t *testing.T) {
 }
 
 func TestAutoDetectConfig(t *testing.T) {
+	t.Cleanup(testutils.StartLocalSystemBus())
 	customizedSocketPath := filepath.Join(t.TempDir(), "mysocket")
 	var config daemon.DaemonConfig
 	config.Paths.Socket = customizedSocketPath
@@ -327,6 +328,7 @@ func requireGoroutineStarted(t *testing.T, f func()) {
 // to wait for the daemon to stop.
 func startDaemon(t *testing.T, conf *daemon.DaemonConfig) (app *daemon.App, done func()) {
 	t.Helper()
+	t.Cleanup(testutils.StartLocalSystemBus())
 
 	a := daemon.NewForTests(t, conf)
 
