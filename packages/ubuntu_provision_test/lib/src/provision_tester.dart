@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
-import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
@@ -216,29 +215,6 @@ extension UbuntuProvisionPageTester on WidgetTester {
         find.textField(l10n.activeDirectoryPasswordLabel),
         password,
       );
-    }
-    await pumpAndSettle();
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-  }
-
-  Future<void> testThemePage({
-    Brightness? theme,
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(ThemePage);
-
-    final context = element(find.byType(ThemePage));
-    final l10n = ThemeLocalizations.of(context);
-
-    expect(find.titleBar(l10n.themePageTitle), findsOneWidget);
-
-    if (theme != null) {
-      final asset = find.asset('assets/theme/${theme.name}-theme.png');
-      expect(asset, findsOneWidget);
-      await tap(asset);
     }
     await pumpAndSettle();
 

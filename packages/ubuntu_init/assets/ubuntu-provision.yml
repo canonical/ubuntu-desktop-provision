@@ -27,6 +27,3 @@ pages:
   telemetry:
     title: "Telemetry"
     visible: true
-  theme:
-    title: "Choose your theme"
-    visible: true

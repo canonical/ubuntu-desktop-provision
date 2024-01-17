@@ -69,12 +69,7 @@ void main() {
     await expectTimezone('Europe/Berlin');
 
     await tester.testTelemetryPage(enabled: false);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
-    await tester.testThemePage(theme: Brightness.dark);
     await tester.tapDone();
-    await expectTheme(Brightness.dark);
     await tester.pumpAndSettle();
     await expectLater(windowClosed, completes);
   });

@@ -93,18 +93,6 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('06.theme', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.theme);
-    await tester.pumpAndSettle();
-
-    await tester.testThemePage(
-      screenshot: '$currentThemeName/06.theme',
-    );
-  }, variant: themeVariant);
-
   testWidgets('08.telemetry', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();

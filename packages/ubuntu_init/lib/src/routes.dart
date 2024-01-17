@@ -10,7 +10,6 @@ sealed class Routes {
     'privacy': '/privacy',
     'timezone': '/timezone',
     'telemetry': '/telemetry',
-    'theme': '/theme',
   };
 
   static String get initial => routeMap['initial']!;
@@ -23,5 +22,4 @@ sealed class Routes {
   static String get privacy => routeMap['privacy']!;
   static String get timezone => routeMap['timezone']!;
   static String get telemetry => routeMap['telemetry']!;
-  static String get theme => routeMap['theme']!;
 }

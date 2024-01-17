@@ -20,7 +20,6 @@ import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
-import '../../ubuntu_provision/test/theme/test_theme.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
@@ -45,7 +44,6 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
-    final themeModel = buildThemeModel();
     final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
 
@@ -62,7 +60,6 @@ void main() {
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
-          themeModelProvider.overrideWith((_) => themeModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
         ],
@@ -116,11 +113,6 @@ void main() {
     expect(find.byType(TelemetryPage), findsOneWidget);
     verify(telemetryModel.init()).called(1);
 
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(ThemePage), findsOneWidget);
-    verify(themeModel.init()).called(1);
-
     await tester.tapDone();
     await tester.pumpAndSettle();
 
@@ -132,12 +124,12 @@ void main() {
       Routes.locale,
       Routes.keyboard,
       Routes.identity,
-      Routes.theme,
+      Routes.telemetry,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final identityModel = buildIdentityModel(isValid: true);
-    final themeModel = buildThemeModel();
+    final telemetryModel = buildTelemetryModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -146,7 +138,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           identityModelProvider.overrideWith((_) => identityModel),
-          themeModelProvider.overrideWith((_) => themeModel),
+          telemetryModelProvider.overrideWith((_) => telemetryModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -169,8 +161,8 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(ThemePage), findsOneWidget);
-    verify(themeModel.init()).called(1);
+    expect(find.byType(TelemetryPage), findsOneWidget);
+    verify(telemetryModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 

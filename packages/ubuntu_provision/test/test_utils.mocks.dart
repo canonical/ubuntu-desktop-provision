@@ -1709,64 +1709,6 @@ class MockTelemetryService extends _i1.Mock implements _i3.TelemetryService {
       ) as _i12.Future<void>);
 }
 
-/// A class which mocks [ThemeService].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockThemeService extends _i1.Mock implements _i3.ThemeService {
-  MockThemeService() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i12.Future<_i17.Brightness> getBrightness() => (super.noSuchMethod(
-        Invocation.method(
-          #getBrightness,
-          [],
-        ),
-        returnValue: _i12.Future<_i17.Brightness>.value(_i17.Brightness.dark),
-      ) as _i12.Future<_i17.Brightness>);
-
-  @override
-  _i12.Future<void> setBrightness(_i17.Brightness? brightness) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setBrightness,
-          [brightness],
-        ),
-        returnValue: _i12.Future<void>.value(),
-        returnValueForMissingStub: _i12.Future<void>.value(),
-      ) as _i12.Future<void>);
-
-  @override
-  _i12.Future<String?> getAccent() => (super.noSuchMethod(
-        Invocation.method(
-          #getAccent,
-          [],
-        ),
-        returnValue: _i12.Future<String?>.value(),
-      ) as _i12.Future<String?>);
-
-  @override
-  _i12.Future<void> setAccent(String? accent) => (super.noSuchMethod(
-        Invocation.method(
-          #setAccent,
-          [accent],
-        ),
-        returnValue: _i12.Future<void>.value(),
-        returnValueForMissingStub: _i12.Future<void>.value(),
-      ) as _i12.Future<void>);
-
-  @override
-  _i12.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i12.Future<void>.value(),
-        returnValueForMissingStub: _i12.Future<void>.value(),
-      ) as _i12.Future<void>);
-}
-
 /// A class which mocks [TimezoneService].
 ///
 /// See the documentation for Mockito's code generation for more information.
