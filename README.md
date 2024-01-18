@@ -4,6 +4,11 @@
 [![codecov](https://codecov.io/gh/canonical/ubuntu-desktop-provision/branch/main/graph/badge.svg?token=JcedDc47dU)](https://codecov.io/gh/canonical/ubuntu-desktop-provision)
 [![screenshots](https://img.shields.io/badge/screenshots-gray?logo=ubuntu)](https://github.com/canonical/ubuntu-desktop-provision-screenshots)
 
+## Bugs
+
+Please report any bugs related to Ubuntu Desktop Provision on [Launchpad](https://bugs.launchpad.net/ubuntu-desktop-provision).
+We use the GitHub issue tracker only for issues related to the development of Ubuntu Desktop Provision itself.
+
 ## Configuration
 
 The Flutter UI can be configured using a [YAML](https://yaml.org/) file.
