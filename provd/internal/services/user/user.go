@@ -50,7 +50,7 @@ type Service struct {
 // New returns a new instance of the User service.
 func New(Conn DbusConnector) *Service {
 	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
-	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/Accounts")
+	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 	return &Service{
 		Conn:     Conn,
 		Accounts: acountsObject,
