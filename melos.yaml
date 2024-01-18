@@ -45,7 +45,7 @@ command:
       ubuntu_logger: ^0.1.0
       ubuntu_service: ^0.3.0
       ubuntu_session: ^0.0.4
-      ubuntu_widgets: ^0.3.0
+      ubuntu_widgets: ^0.3.2
       udev: ^0.0.3
       upower: ^0.7.0
       url_launcher: ^6.2.1
@@ -86,16 +86,23 @@ scripts:
   # cleanup generated files from coverage
   coverage:cleanup: >
     melos exec --file-exists=coverage/lcov.info -- \
-      lcov --remove coverage/lcov.info '**/*.g.dart' '**/*.freezed.dart' -o coverage/lcov.info
+      lcov --remove coverage/lcov.info \
+        '**/*.freezed.dart' \
+        '**/*.g.dart' \
+        '**/*.mocks.dart' \
+        '**/l10n/*.dart' \
+        '**/*.pb*.dart' \
+        -o coverage/lcov.info
 
   # format all packages
   format: >
     melos exec -c 1 -- \
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
-          ! -name '*.g.dart' \
           ! -name '*.freezed.dart' \
-          ! -name '*.pb*.dart' \
+          ! -name '*.g.dart' \
+          ! -name '*.mocks.dart' \
           ! -path '*/l10n/*' \
+          ! -name '*.pb*.dart' \
           ! -path '*/.*/*' \
           | xargs dart format --set-exit-if-changed"
 

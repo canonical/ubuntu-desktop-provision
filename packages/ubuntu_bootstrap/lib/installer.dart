@@ -35,21 +35,34 @@ Future<void> runInstallerApp(
   Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final options = parseCommandLine(args, onPopulateOptions: (parser) {
-    parser.addOption('config',
-        valueHelp: 'path', help: 'Path to a config file');
-    parser.addFlag('dry-run',
-        defaultsTo: Platform.environment['LIVE_RUN'] != '1',
-        help: 'Run Subiquity server in dry-run mode');
-    parser.addOption('dry-run-config',
-        valueHelp: 'path', help: 'Path of the dry-run config file');
-    parser.addOption('machine-config',
-        valueHelp: 'path',
-        defaultsTo: 'examples/machines/simple.json',
-        help: 'Path of the machine config (dry-run only)');
-    parser.addOption('source-catalog',
-        valueHelp: 'path',
-        defaultsTo: 'examples/sources/desktop.yaml',
-        help: 'Path of the source catalog (dry-run only)');
+    parser.addOption(
+      'config',
+      valueHelp: 'path',
+      help: 'Path to a config file',
+    );
+    parser.addFlag(
+      'dry-run',
+      defaultsTo: Platform.environment['LIVE_RUN'] != '1',
+      help: 'Run Subiquity server in dry-run mode',
+    );
+    parser.addOption(
+      'dry-run-config',
+      valueHelp: 'path',
+      help: 'Path of the dry-run config file',
+    );
+    parser.addOption(
+      'machine-config',
+      valueHelp: 'path',
+      defaultsTo: 'examples/machines/simple.json',
+      help: 'Path of the machine config (dry-run only)',
+    );
+    parser.addOption(
+      'source-catalog',
+      valueHelp: 'path',
+      defaultsTo: 'examples/sources/desktop.yaml',
+      help: 'Path of the source catalog (dry-run only)',
+    );
+    // TODO: Remove in favor of using the ubuntu-provision.yml config file.
     parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
   })!;
   final liveRun = options['dry-run'] != true;
@@ -61,6 +74,7 @@ Future<void> runInstallerApp(
   final subiquityPath = await getSubiquityPath()
       .then((dir) => Directory(dir).existsSync() ? dir : null);
   final endpoint = await defaultEndpoint(serverMode);
+  final includeWelcome = options['welcome'] as bool? ?? false;
   final process = liveRun
       ? null
       : SubiquityProcess.python(
@@ -74,43 +88,57 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
-    () => ConfigService(path: options['config'] as String?),
-  );
+      () => ConfigService(path: options['config'] as String?));
   tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
-  tryRegisterService<InstallerService>(() => InstallerService(
+  tryRegisterService<InstallerService>(
+    () => InstallerService(
       getService<SubiquityClient>(),
-      pageConfig: tryGetService<PageConfigService>()));
+      pageConfig: tryGetService<PageConfigService>(),
+    ),
+  );
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
-      () => SubiquityKeyboardService(getService<SubiquityClient>()));
+    () => SubiquityKeyboardService(getService<SubiquityClient>()),
+  );
   tryRegisterService<LocaleService>(
-      () => SubiquityLocaleService(getService<SubiquityClient>()));
+    () => SubiquityLocaleService(getService<SubiquityClient>()),
+  );
   tryRegisterService<NetworkService>(
-      () => SubiquityNetworkService(getService<SubiquityClient>()));
+    () => SubiquityNetworkService(getService<SubiquityClient>()),
+  );
   tryRegisterService(
-      () => PageConfigService(config: tryGetService<ConfigService>()));
+    () => PageConfigService(
+      config: tryGetService<ConfigService>(),
+      includeWelcome: includeWelcome,
+    ),
+  );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
   tryRegisterService<SessionService>(
-      () => SubiquitySessionService(getService<SubiquityClient>()));
+    () => SubiquitySessionService(getService<SubiquityClient>()),
+  );
   if (liveRun) tryRegisterService(SoundService.new);
   tryRegisterService(() => StorageService(getService<SubiquityClient>()));
   tryRegisterService(SubiquityClient.new);
   tryRegisterService(
-      () => SubiquityServer(process: process, endpoint: endpoint));
+    () => SubiquityServer(process: process, endpoint: endpoint),
+  );
   tryRegisterService<TelemetryService>(() {
-    var path = '/var/log/installer/telemetry';
+    final String path;
     if (kDebugMode) {
       final exe = Platform.resolvedExecutable;
       path = '${p.dirname(exe)}/.${p.basename(exe)}/telemetry';
+    } else {
+      path = '/var/log/installer/telemetry';
     }
     return TelemetryService(path);
   });
   tryRegisterService<ThemeVariantService>(
-      () => ThemeVariantService(config: tryGetService<ConfigService>()));
+    () => ThemeVariantService(config: tryGetService<ConfigService>()),
+  );
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
@@ -124,7 +152,7 @@ Future<void> runInstallerApp(
     '--storage-version=2',
     '--dry-run-config=examples/dry-run-configs/tpm.yaml',
     ...options.rest,
-  ]).then(_initInstallerApp);
+  ]);
 
   await runZonedGuarded(() async {
     FlutterError.onError = (error) {
@@ -137,6 +165,8 @@ Future<void> runInstallerApp(
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
+    final endpoint = await initialized;
+    await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
       child: SlidesContext(
@@ -172,9 +202,7 @@ Future<void> runInstallerApp(
                   rootBundle,
                   package: 'ubuntu_bootstrap',
                 ),
-                child: InstallerWizard(
-                  welcome: options['welcome'] as bool? ?? false,
-                ),
+                child: const InstallerWizard(),
               ),
             );
           },
@@ -182,17 +210,10 @@ Future<void> runInstallerApp(
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
-
-  return initialized;
 }
 
 Future<void> _initInstallerApp(Endpoint endpoint) async {
   getService<SubiquityClient>().open(endpoint);
-
-  await getService<InstallerService>().init();
-  await getService<DesktopService>().inhibit();
-  await getService<RefreshService>().check();
-  await getService<PageConfigService>().load();
 
   var geo = tryGetService<GeoService>();
   if (geo == null) {
@@ -201,14 +222,21 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
     geo = GeoService(sources: [geodata, geoname]);
     registerServiceInstance(geo);
   }
-  await geo.init();
-
   final telemetry = getService<TelemetryService>();
-  await telemetry.init({
-    'Type': 'Flutter',
-    'OEM': false,
-    'Media': getService<ProductService>().getProductInfo().toString(),
-  });
+
+  final services = [
+    getService<InstallerService>().init(),
+    getService<DesktopService>().inhibit(),
+    getService<RefreshService>().check(),
+    getService<PageConfigService>().load(),
+    geo.init(),
+    telemetry.init({
+      'Type': 'Flutter',
+      'OEM': false,
+      'Media': getService<ProductService>().getProductInfo().toString(),
+    }),
+  ];
+  await Future.wait(services);
 }
 
 Future<bool> _closeInstallerApp() async {

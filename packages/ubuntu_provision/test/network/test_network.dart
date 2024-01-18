@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/ethernet_model.dart';
 import 'package:ubuntu_provision/src/network/hidden_wifi_model.dart';
@@ -9,6 +10,7 @@ import 'package:ubuntu_provision/src/network/network_model.dart';
 import 'package:ubuntu_provision/src/network/network_page.dart';
 import 'package:ubuntu_provision/src/network/wifi_model.dart';
 
+import '../test_utils.mocks.dart';
 import 'test_network.mocks.dart';
 export '../test_utils.dart';
 export 'test_network.mocks.dart';
@@ -85,6 +87,8 @@ Widget buildNetworkPage({
   when(hiddenWifiModel.onAvailabilityChanged)
       .thenAnswer((_) => const Stream.empty());
 
+  final pageImages = PageImages(MockPageConfigService());
+
   return ProviderScope(
     overrides: [
       networkModelProvider.overrideWith((_) => model),
@@ -92,10 +96,11 @@ Widget buildNetworkPage({
       wifiModelProvider.overrideWith((_) => wifiModel),
       hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
       noConnectModelProvider.overrideWith((_) => NoConnectModel()),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: Consumer(builder: (context, ref, child) {
       return FutureBuilder(
-        future: NetworkPage.load(ref),
+        future: const NetworkPage().load(context, ref),
         builder: (context, snapshot) {
           return (snapshot.data ?? false)
               ? const NetworkPage()

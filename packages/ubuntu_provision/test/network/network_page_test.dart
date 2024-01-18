@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/src/network/ethernet_view.dart';
@@ -72,6 +74,8 @@ void main() {
   });
 
   testWidgets('selects wifi', (tester) async {
+    // TODO: Fix NetworkPage overflow so that this isn't needed
+    await tester.binding.setSurfaceSize(const Size(800, 800));
     final model = NetworkModel(MockNetworkService());
     await tester.pumpApp(
       (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),

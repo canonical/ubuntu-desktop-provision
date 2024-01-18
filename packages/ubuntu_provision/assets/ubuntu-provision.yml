@@ -1,0 +1,6 @@
+# This file is only to be used for tests
+scope:
+  test:
+    title: "Welcome"
+    image: "mascot.png"
+    visible: true

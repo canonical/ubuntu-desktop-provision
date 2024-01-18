@@ -18,6 +18,7 @@ func TestNewManager(t *testing.T) {
 		"Successfully creates the manager": {},
 	}
 	for name, tc := range tests {
+		t.Cleanup(testutils.StartLocalSystemBus())
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			_, err := services.NewManager(context.Background())
@@ -34,6 +35,7 @@ func TestNewManager(t *testing.T) {
 
 func TestRegisterGRPCServices(t *testing.T) {
 	t.Parallel()
+	t.Cleanup(testutils.StartLocalSystemBus())
 
 	m, err := services.NewManager(context.Background())
 	require.NoError(t, err, "Setup: could not create manager for the test")

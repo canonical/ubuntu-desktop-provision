@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package locale;
 
-service LocaleService {
-  rpc SetLocale (SetLocaleRequest) returns (Empty) {};
-  rpc GetLocale (Empty) returns (GetLocaleResponse) {};
-}
+import "google/protobuf/empty.proto";
 
-message Empty {}
+service LocaleService {
+  rpc SetLocale (SetLocaleRequest) returns (google.protobuf.Empty) {};
+  rpc GetLocale (google.protobuf.Empty) returns (GetLocaleResponse) {};
+}
 
 message SetLocaleRequest {
   string locale = 1;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -14,7 +15,6 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
-
   final window = await YaruWindow.ensureInitialized();
 
   setUpAll(() => autoUpdateGoldenFiles = true);
@@ -34,6 +34,7 @@ Future<void> main() async {
     await window.close();
     await windowClosed;
     await resetAllServices();
+    rootBundle.clear();
   });
 
   testWidgets('01.locale', (tester) async {

@@ -1,3 +1,6 @@
+// ignore_for_file: avoid_catches_without_on_clauses
+// TODO: check if catching `Exception` in check() and refresh() is sufficient
+
 import 'dart:async';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -55,7 +58,7 @@ class RefreshService {
     try {
       _setState(const RefreshState.checking());
       _setStatus(await _client.checkRefresh());
-    } on Exception catch (e) {
+    } catch (e) {
       _setState(RefreshState.error(e));
     }
     return _state;
@@ -69,7 +72,7 @@ class RefreshService {
         if (_state.ready) {
           _setState(const RefreshState.done());
         }
-      } on Exception catch (_) {
+      } catch (_) {
         // subiquity restarted, consider the refresh done
         _setState(const RefreshState.done());
         return false;

@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package eula;
 
+import "google/protobuf/empty.proto";
+
 // Just a placeholder until we have designed the EULA
 service EulaService {
-    rpc AcceptEula(Empty) returns (Empty) {}
+    rpc AcceptEula(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }
-
-message Empty {}

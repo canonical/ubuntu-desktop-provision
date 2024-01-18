@@ -2,20 +2,20 @@ syntax = "proto3";
 
 package active_directory;
 
+import "google/protobuf/empty.proto";
+
 service ActiveDirectoryService {
-    rpc HasSupport(Empty) returns (HasSupportResponse);
-    rpc IsUsed(Empty) returns (IsUsedResponse);
-    rpc SetUsed(SetUsedRequest) returns (Empty);
-    rpc GetConnectionInfo(Empty) returns (GetConnectionInfoResponse);
-    rpc SetConnectionInfo(SetConnectionInfoRequest) returns (Empty);
+    rpc HasSupport(google.protobuf.Empty) returns (HasSupportResponse);
+    rpc IsUsed(google.protobuf.Empty) returns (IsUsedResponse);
+    rpc SetUsed(SetUsedRequest) returns (google.protobuf.Empty);
+    rpc GetConnectionInfo(google.protobuf.Empty) returns (GetConnectionInfoResponse);
+    rpc SetConnectionInfo(SetConnectionInfoRequest) returns (google.protobuf.Empty);
     rpc CheckDomainName(CheckDomainNameRequest) returns (CheckDomainNameResponse);
     rpc CheckAdminName(CheckAdminNameRequest) returns (CheckAdminNameResponse);
     rpc CheckPassword(CheckPasswordRequest) returns (CheckPasswordResponse);
     rpc PingDomainController(PingDomainControllerRequest) returns (PingDomainControllerResponse);
     rpc GetJoinResult(GetJoinResultRequest) returns (GetJoinResultResponse);
 }
-
-message Empty {}
 
 message HasSupportResponse {
     bool has_support = 1;

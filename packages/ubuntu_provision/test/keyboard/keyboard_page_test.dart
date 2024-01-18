@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_l10n.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_model.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_page.dart';
@@ -20,9 +21,13 @@ Widget buildKeyboardPage(KeyboardModel model) {
   when(service.getKeyboardStep(any)).thenAnswer(
       (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []));
   registerMockService<KeyboardService>(service);
+  final pageImages = PageImages(MockPageConfigService());
 
   return ProviderScope(
-    overrides: [keyboardModelProvider.overrideWith((_) => model)],
+    overrides: [
+      keyboardModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
+    ],
     child: const KeyboardPage(),
   );
 }

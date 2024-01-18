@@ -2,13 +2,13 @@ syntax = "proto3";
 
 package privacy;
 
-service PrivacyService {
-    rpc GetLocationServices(Empty) returns (GetLocationServicesResponse) {}
-    rpc EnableLocationServices(Empty) returns (Empty) {}
-    rpc DisableLocationServices(Empty) returns (Empty) {}
-}
+import "google/protobuf/empty.proto";
 
-message Empty {}
+service PrivacyService {
+    rpc GetLocationServices(google.protobuf.Empty) returns (GetLocationServicesResponse) {}
+    rpc EnableLocationServices(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableLocationServices(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+}
 
 message GetLocationServicesResponse {
     bool enabled = 1;

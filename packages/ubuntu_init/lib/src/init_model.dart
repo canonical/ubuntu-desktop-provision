@@ -10,18 +10,39 @@ final initModelProvider = Provider(
   (_) => InitModel(
     pageConfig: tryGetService<PageConfigService>(),
     args: tryGetService<ArgResults>(),
+    identityService: tryGetService<IdentityService>(),
+    gdmService: tryGetService<GdmService>(),
   ),
 );
 
 class InitModel {
-  InitModel({PageConfigService? pageConfig, ArgResults? args})
-      : _pageConfig = pageConfig;
+  InitModel({
+    PageConfigService? pageConfig,
+    ArgResults? args,
+    IdentityService? identityService,
+    GdmService? gdmService,
+  })  : _gdmService = gdmService,
+        _identityService = identityService,
+        _pageConfig = pageConfig;
 
   final PageConfigService? _pageConfig;
-  Set<String>? _excludedPages;
+  final IdentityService? _identityService;
+  final GdmService? _gdmService;
+  List<String>? _excludedPages;
 
   Future<void> init() async {
     _excludedPages = _pageConfig?.excludedPages;
+  }
+
+  Future<void> launchDesktopSession() async {
+    final identity = await _identityService?.getIdentity();
+    if (identity == null) return;
+
+    await _gdmService?.init();
+    await _gdmService?.launchSession(
+      identity.username,
+      identity.password,
+    );
   }
 
   bool hasRoute(String route) {

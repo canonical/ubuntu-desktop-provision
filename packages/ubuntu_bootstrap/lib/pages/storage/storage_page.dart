@@ -13,10 +13,11 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 export 'storage_model.dart' show StorageType;
 
 /// Select between guided and manual partitioning.
-class StoragePage extends ConsumerWidget {
+class StoragePage extends ConsumerWidget with ProvisioningPage {
   const StoragePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(storageModelProvider.notifier).init().then((_) => true);
   }
 
@@ -59,11 +60,10 @@ class StoragePage extends ConsumerWidget {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.installationTypeTitle),
-      ),
-      header: Text(_formatHeader(context, model.existingOS ?? [])),
+    return HorizontalPage(
+      name: 'storage',
+      windowTitle: lang.installationTypeTitle,
+      title: _formatHeader(context, model.existingOS ?? []),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -71,8 +71,13 @@ class StoragePage extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
-                title: Text(_formatAlongside(
-                    lang, model.productInfo, model.existingOS ?? [])),
+                title: Text(
+                  _formatAlongside(
+                    lang,
+                    model.productInfo,
+                    model.existingOS ?? [],
+                  ),
+                ),
                 subtitle: Text(lang.installationTypeAlongsideInfo),
                 value: StorageType.alongside,
                 groupValue: model.type,
@@ -123,23 +128,15 @@ class StoragePage extends ConsumerWidget {
             ),
         ],
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
-        trailing: [
-          WizardButton.next(
-            context,
-            enabled: model.canEraseDisk ||
-                model.canInstallAlongside ||
-                model.canManualPartition,
-            arguments: model.type,
-            onNext: model.save,
-            // If the user returns back to select another installation type, the
-            // previously configured storage must be reset to make all guided
-            // partitioning targets available.
-            onBack: model.resetStorage,
-          ),
-        ],
-      ),
+      isNextEnabled: model.canEraseDisk ||
+          model.canInstallAlongside ||
+          model.canManualPartition,
+      nextArguments: model.type,
+      onNext: model.save,
+      // If the user returns back to select another installation type, the
+      // previously configured storage must be reset to make all guided
+      // partitioning targets available.
+      onBack: model.resetStorage,
     );
   }
 }

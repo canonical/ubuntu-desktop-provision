@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -6,21 +7,27 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'test_storage.dart';
 
 void main() {
+  Widget buildPage(WidgetTester tester, StorageModel model) {
+    final pageImages = PageImages(MockPageConfigService());
+    return ProviderScope(
+      overrides: [
+        storageModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
+      child: tester.buildApp((_) => const StoragePage()),
+    );
+  }
+
   testWidgets('select zfs', (tester) async {
     final model = buildStorageModel();
-
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
@@ -37,13 +44,7 @@ void main() {
 
   testWidgets('select lvm', (tester) async {
     final model = buildStorageModel();
-
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
@@ -60,13 +61,7 @@ void main() {
 
   testWidgets('select encrypted lvm', (tester) async {
     final model = buildStorageModel();
-
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -96,12 +91,7 @@ void main() {
       scenario: SecureBootScenarios.supported,
     );
 
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
@@ -127,12 +117,7 @@ void main() {
       hasTpm: true,
       scenario: SecureBootScenarios.bios,
     );
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
@@ -154,12 +139,7 @@ void main() {
       hasTpm: false,
       scenario: SecureBootScenarios.noTpm,
     );
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
@@ -181,12 +161,7 @@ void main() {
       hasTpm: true,
       scenario: SecureBootScenarios.thirdPartyDrivers,
     );
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [storageModelProvider.overrideWith((_) => model)],
-        child: tester.buildApp((_) => const StoragePage()),
-      ),
-    );
+    await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);

@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   ubuntu_flavor: ^0.2.1
   ubuntu_localizations: ^0.3.4
-  ubuntu_widgets: ^0.3.0
+  ubuntu_widgets: ^0.3.2
   wizard_router: ^1.0.4
   yaru: 1.2.0
   yaru_widgets: 3.3.1

@@ -4,31 +4,9 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/services/keyboard_service.dart';
 
+import '../test_utils.dart';
+
 void main() {
-  const keyboardSetup = KeyboardSetup(
-    setting: KeyboardSetting(layout: 'us', variant: 'altgr-intl'),
-    layouts: [
-      KeyboardLayout(
-        code: 'us',
-        name: 'English (US)',
-        variants: [
-          KeyboardVariant(
-            code: '',
-            name: 'English (US)',
-          ),
-          KeyboardVariant(
-            code: 'altgr-intl',
-            name: 'English (US) - English (intl., with AltGr dead keys)',
-          ),
-        ],
-      ),
-      KeyboardLayout(
-        code: 'de',
-        name: 'German',
-        variants: [KeyboardVariant(code: '', name: 'German')],
-      ),
-    ],
-  );
   test('get keyboard', () async {
     final client = MockSubiquityClient();
     when(client.getKeyboard()).thenAnswer((_) async => keyboardSetup);

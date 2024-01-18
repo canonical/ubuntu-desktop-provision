@@ -178,7 +178,7 @@ class _$ErrorReportRefImpl implements _ErrorReportRef {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorReportRefImpl &&
@@ -464,7 +464,7 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApplicationStatusImpl &&
@@ -651,7 +651,7 @@ class _$KeyFingerprintImpl implements _KeyFingerprint {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KeyFingerprintImpl &&
@@ -901,7 +901,7 @@ class _$LiveSessionSSHInfoImpl implements _LiveSessionSSHInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LiveSessionSSHInfoImpl &&
@@ -1109,7 +1109,7 @@ class _$RefreshStatusImpl implements _RefreshStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RefreshStatusImpl &&
@@ -1322,7 +1322,7 @@ class _$StepPressKeyImpl implements StepPressKey {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StepPressKeyImpl &&
@@ -1508,7 +1508,7 @@ class _$StepKeyPresentImpl implements StepKeyPresent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StepKeyPresentImpl &&
@@ -1685,7 +1685,7 @@ class _$StepResultImpl implements StepResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StepResultImpl &&
@@ -1923,7 +1923,7 @@ class _$KeyboardSettingImpl implements _KeyboardSetting {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KeyboardSettingImpl &&
@@ -2082,7 +2082,7 @@ class _$KeyboardVariantImpl implements _KeyboardVariant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KeyboardVariantImpl &&
@@ -2259,7 +2259,7 @@ class _$KeyboardLayoutImpl implements _KeyboardLayout {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KeyboardLayoutImpl &&
@@ -2439,7 +2439,7 @@ class _$KeyboardSetupImpl implements _KeyboardSetup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KeyboardSetupImpl &&
@@ -2666,7 +2666,7 @@ class _$SourceSelectionImpl implements _SourceSelection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SourceSelectionImpl &&
@@ -2872,7 +2872,7 @@ class _$SourceSelectionAndSettingImpl implements _SourceSelectionAndSetting {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SourceSelectionAndSettingImpl &&
@@ -3135,7 +3135,7 @@ class _$ZdevInfoImpl implements _ZdevInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ZdevInfoImpl &&
@@ -3326,7 +3326,7 @@ class _$NetworkStatusImpl implements _NetworkStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NetworkStatusImpl &&
@@ -3537,7 +3537,7 @@ class _$OsProberImpl implements _OsProber {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OsProberImpl &&
@@ -3948,7 +3948,7 @@ class _$PartitionImpl implements Partition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PartitionImpl &&
@@ -4262,7 +4262,7 @@ class _$GapImpl implements Gap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GapImpl &&
@@ -4530,7 +4530,7 @@ class _$ZFSImpl implements _ZFS {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ZFSImpl &&
@@ -4789,7 +4789,7 @@ class _$ZPoolImpl implements _ZPool {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ZPoolImpl &&
@@ -5194,7 +5194,7 @@ class _$DiskImpl implements _Disk {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DiskImpl &&
@@ -5450,7 +5450,7 @@ class _$GuidedDisallowedCapabilityImpl implements _GuidedDisallowedCapability {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedDisallowedCapabilityImpl &&
@@ -5742,7 +5742,7 @@ class _$StorageResponseImpl implements _StorageResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StorageResponseImpl &&
@@ -6024,7 +6024,7 @@ class _$StorageResponseV2Impl implements _StorageResponseV2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StorageResponseV2Impl &&
@@ -6236,7 +6236,7 @@ class _$GuidedResizeValuesImpl implements _GuidedResizeValues {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedResizeValuesImpl &&
@@ -6552,7 +6552,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageTargetReformatImpl &&
@@ -6866,7 +6866,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageTargetResizeImpl &&
@@ -7169,7 +7169,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageTargetUseGapImpl &&
@@ -7432,7 +7432,7 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageTargetManualImpl &&
@@ -7714,7 +7714,7 @@ class _$RecoveryKeyImpl implements _RecoveryKey {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RecoveryKeyImpl &&
@@ -7975,7 +7975,7 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedChoiceV2Impl &&
@@ -8236,7 +8236,7 @@ class _$GuidedStorageResponseV2Impl implements _GuidedStorageResponseV2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageResponseV2Impl &&
@@ -8416,7 +8416,7 @@ class _$AddPartitionV2Impl implements _AddPartitionV2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddPartitionV2Impl &&
@@ -8580,7 +8580,7 @@ class _$ModifyPartitionV2Impl implements _ModifyPartitionV2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModifyPartitionV2Impl &&
@@ -8736,7 +8736,7 @@ class _$ReformatDiskImpl implements _ReformatDisk {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ReformatDiskImpl &&
@@ -8932,7 +8932,7 @@ class _$IdentityDataImpl implements _IdentityData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$IdentityDataImpl &&
@@ -9119,7 +9119,7 @@ class _$SSHDataImpl implements _SSHData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SSHDataImpl &&
@@ -9311,7 +9311,7 @@ class _$SSHIdentityImpl implements _SSHIdentity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SSHIdentityImpl &&
@@ -9503,7 +9503,7 @@ class _$SSHFetchIdResponseImpl implements _SSHFetchIdResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SSHFetchIdResponseImpl &&
@@ -9734,7 +9734,7 @@ class _$ChannelSnapInfoImpl implements _ChannelSnapInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChannelSnapInfoImpl &&
@@ -10041,7 +10041,7 @@ class _$SnapInfoImpl implements _SnapInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SnapInfoImpl &&
@@ -10284,7 +10284,7 @@ class _$DriversResponseImpl implements _DriversResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DriversResponseImpl &&
@@ -10445,7 +10445,7 @@ class _$OEMResponseImpl implements _OEMResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OEMResponseImpl &&
@@ -10584,7 +10584,7 @@ class _$CodecsDataImpl implements _CodecsData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodecsDataImpl &&
@@ -10720,7 +10720,7 @@ class _$DriversPayloadImpl implements _DriversPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DriversPayloadImpl &&
@@ -10886,7 +10886,7 @@ class _$SnapSelectionImpl implements _SnapSelection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SnapSelectionImpl &&
@@ -11081,7 +11081,7 @@ class _$SnapListResponseImpl implements _SnapListResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SnapListResponseImpl &&
@@ -11245,7 +11245,7 @@ class _$TimeZoneInfoImpl implements _TimeZoneInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TimeZoneInfoImpl &&
@@ -11388,7 +11388,7 @@ class _$UbuntuProInfoImpl implements _UbuntuProInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UbuntuProInfoImpl &&
@@ -11539,7 +11539,7 @@ class _$UbuntuProResponseImpl implements _UbuntuProResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UbuntuProResponseImpl &&
@@ -11697,7 +11697,7 @@ class _$UPCSInitiateResponseImpl implements _UPCSInitiateResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UPCSInitiateResponseImpl &&
@@ -11856,7 +11856,7 @@ class _$UPCSWaitResponseImpl implements _UPCSWaitResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UPCSWaitResponseImpl &&
@@ -12028,7 +12028,7 @@ class _$UbuntuProServiceImpl implements _UbuntuProService {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UbuntuProServiceImpl &&
@@ -12237,7 +12237,7 @@ class _$UbuntuProSubscriptionImpl implements _UbuntuProSubscription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UbuntuProSubscriptionImpl &&
@@ -12430,7 +12430,7 @@ class _$UbuntuProCheckTokenAnswerImpl implements _UbuntuProCheckTokenAnswer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UbuntuProCheckTokenAnswerImpl &&
@@ -12630,7 +12630,7 @@ class _$WSLConfigurationBaseImpl implements _WSLConfigurationBase {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WSLConfigurationBaseImpl &&
@@ -12864,7 +12864,7 @@ class _$WSLConfigurationAdvancedImpl implements _WSLConfigurationAdvanced {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WSLConfigurationAdvancedImpl &&
@@ -13031,7 +13031,7 @@ class _$WSLSetupOptionsImpl implements _WSLSetupOptions {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WSLSetupOptionsImpl &&
@@ -13201,7 +13201,7 @@ class _$TaskProgressImpl implements _TaskProgress {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskProgressImpl &&
@@ -13422,7 +13422,7 @@ class _$TaskImpl implements _Task {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskImpl &&
@@ -13695,7 +13695,7 @@ class _$ChangeImpl implements _Change {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangeImpl &&
@@ -13895,7 +13895,7 @@ class _$MirrorCheckResponseImpl implements _MirrorCheckResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MirrorCheckResponseImpl &&
@@ -14077,7 +14077,7 @@ class _$MirrorPostImpl implements _MirrorPost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MirrorPostImpl &&
@@ -14281,7 +14281,7 @@ class _$MirrorGetImpl implements _MirrorGet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MirrorGetImpl &&
@@ -14463,7 +14463,7 @@ class _$AdConnectionInfoImpl implements _AdConnectionInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdConnectionInfoImpl &&

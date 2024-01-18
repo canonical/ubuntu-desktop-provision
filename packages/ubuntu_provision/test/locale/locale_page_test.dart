@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_page.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -9,6 +11,10 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_locale.dart';
 
 void main() {
+  setUp(() {
+    registerMockService<PageConfigService>(MockPageConfigService());
+  });
+
   testWidgets('should display a list of languages', (tester) async {
     final model = buildLocaleModel();
     await model.init();
@@ -39,7 +45,7 @@ void main() {
     await tester.pump();
     await tester.tap(itemItalian);
     await tester.pump();
-    expect((itemItalian.evaluate().single.widget as ListTile).selected, true);
+    expect((itemItalian.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'it');
 
     // scroll backward to French
@@ -47,7 +53,7 @@ void main() {
     await tester.pump();
     await tester.tap(itemFrench);
     await tester.pump();
-    expect((itemFrench.evaluate().single.widget as ListTile).selected, true);
+    expect((itemFrench.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'fr');
 
     // scroll forward to Galego
@@ -56,9 +62,12 @@ void main() {
     await tester.tap(itemGalego);
     await tester.pump();
 
-    expect((itemItalian.evaluate().single.widget as ListTile).selected, false);
-    expect((itemFrench.evaluate().single.widget as ListTile).selected, false);
-    expect((itemGalego.evaluate().single.widget as ListTile).selected, true);
+    expect(
+      (itemItalian.evaluate().single.widget as ListTile).selected,
+      isFalse,
+    );
+    expect((itemFrench.evaluate().single.widget as ListTile).selected, isFalse);
+    expect((itemGalego.evaluate().single.widget as ListTile).selected, isTrue);
     expect(model.selectedLocale?.languageCode, 'gl');
   });
 

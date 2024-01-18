@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:collection/collection.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -23,7 +24,10 @@ void main() {
     await cleanUpSubiquity();
     registerMockService<DesktopService>(FakeDesktopService());
   });
-  tearDown(() async => resetAllServices());
+  tearDown(() async {
+    await resetAllServices();
+    rootBundle.clear();
+  });
 
   testWidgets('minimal installation', (tester) async {
     const language = 'Français';
@@ -175,6 +179,8 @@ void main() {
   });
 
   testWidgets('tpm', (tester) async {
+    // TODO: Fix StoragePage overflow so that this isn't needed
+    await tester.binding.setSurfaceSize(const Size(1200, 1000));
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',

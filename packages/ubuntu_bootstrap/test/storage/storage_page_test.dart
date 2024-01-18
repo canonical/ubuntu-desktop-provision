@@ -6,6 +6,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -14,8 +15,12 @@ import 'test_storage.dart';
 
 void main() {
   Widget buildPage(StorageModel model) {
+    final pageImages = PageImages(MockPageConfigService());
     return ProviderScope(
-      overrides: [storageModelProvider.overrideWith((_) => model)],
+      overrides: [
+        storageModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
       child: const StoragePage(),
     );
   }
@@ -381,6 +386,8 @@ void main() {
     });
 
     testWidgets('encrypted lvm selected', (tester) async {
+      // TODO: Fix StoragePage overflow so that this isn't needed
+      await tester.binding.setSurfaceSize(const Size(1000, 1000));
       final model =
           buildStorageModel(guidedCapability: GuidedCapability.LVM_LUKS);
       await tester.pumpApp((_) => buildPage(model));

@@ -97,6 +97,8 @@ func (a *App) serve(config daemonConfig) error {
 		return err
 	}
 
+	defer func() { _ = m.Stop() }()
+
 	socketPath := config.Paths.Socket
 	var daemonopts []daemon.Option
 	if socketPath != "" {

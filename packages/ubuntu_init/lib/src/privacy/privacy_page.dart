@@ -4,15 +4,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_init/src/privacy/privacy_l10n.dart';
 import 'package:ubuntu_init/src/privacy/privacy_model.dart';
+import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class PrivacyPage extends ConsumerWidget {
+class PrivacyPage extends ConsumerWidget with ProvisioningPage {
   const PrivacyPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(privacyModelProvider).init();
   }
 
