@@ -17,8 +17,8 @@ import (
 
 // Manager mediates the whole business logic of the application.
 type Manager struct {
-	userService  user.Service
-	bus          *dbus.Conn
+	userService user.Service
+	bus         *dbus.Conn
 }
 
 type dbusConnectionAdapter struct {
@@ -44,8 +44,8 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 	userService := user.New(dbusConnectionAdapter{bus})
 
 	return &Manager{
-		userService:  *userService,
-		bus:          bus,
+		userService: *userService,
+		bus:         bus,
 	}, nil
 }
 
