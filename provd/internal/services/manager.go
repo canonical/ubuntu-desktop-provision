@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/canonical/ubuntu-desktop-provision/provd"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/hello"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
@@ -19,7 +17,6 @@ import (
 
 // Manager mediates the whole business logic of the application.
 type Manager struct {
-	helloService hello.Service
 	userService  user.Service
 	bus          *dbus.Conn
 }
@@ -44,12 +41,9 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
 	}
 
-	helloService := hello.Service{}
-
 	userService := user.New(dbusConnectionAdapter{bus})
 
 	return &Manager{
-		helloService: helloService,
 		userService:  *userService,
 		bus:          bus,
 	}, nil
@@ -61,7 +55,6 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 
 	grpcServer := grpc.NewServer()
 
-	provd.RegisterHelloWorldServiceServer(grpcServer, &m.helloService)
 	pb.RegisterUserServiceServer(grpcServer, &m.userService)
 	return grpcServer
 }
