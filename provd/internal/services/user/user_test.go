@@ -228,31 +228,6 @@ func TestValidateUsername(t *testing.T) {
 	}
 }
 
-type dbusConnectionMock struct {
-	*dbus.Conn
-	accountsPath dbus.ObjectPath
-	hostnamePath dbus.ObjectPath
-}
-
-func (d dbusConnectionMock) Object(iface string, path dbus.ObjectPath) user.DbusObject {
-	switch iface {
-	case consts.DbusAccountsPrefix:
-		// If the path is the default path for Accounts, return the mocked Accounts object for the test
-		if path == "/org/freedesktop/Accounts" {
-			return d.Conn.Object(iface, d.accountsPath)
-		} else {
-			// Otherwise this is being called on a mocked object, so don't override the path
-			return d.Conn.Object(iface, path)
-		}
-	case consts.DbusHostnamePrefix:
-		// If the path is the default path for Hostname, return the mocked Hostname object for the test
-		return d.Conn.Object(iface, d.hostnamePath)
-	default:
-		// Unknown interface, return nil
-		return nil
-	}
-}
-
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
 func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint string) pb.UserServiceClient {
 	t.Helper()
@@ -268,16 +243,11 @@ func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint strin
 	bus := testutils.NewDbusConn(t)
 
 	// Concatenate provided paths with base paths
-	fullAccountsPath := dbus.ObjectPath("/org/freedesktop/Accounts/" + accountsEndpoint)
-	fullHostnamePath := dbus.ObjectPath("/org/freedesktop/hostname1/" + hostnameEndpoint)
+	fullAccountsPath := "/org/freedesktop/Accounts/" + accountsEndpoint
+	fullHostnamePath := "/org/freedesktop/hostname1/" + hostnameEndpoint
 
-	dbusConn := dbusConnectionMock{
-		Conn:         bus,
-		accountsPath: fullAccountsPath,
-		hostnamePath: fullHostnamePath,
-	}
 	// Create the service with the necessary mocks
-	service := user.New(dbusConn)
+	service, err := user.New(bus, user.WithAccountsPath(fullAccountsPath), user.WithHostnamePath(fullHostnamePath))
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, service)

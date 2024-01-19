@@ -33,7 +33,11 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
 	}
 
-	userService := user.New(bus)
+	userService, err := user.New(bus)
+
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
+	}
 
 	return &Manager{
 		userService: *userService,

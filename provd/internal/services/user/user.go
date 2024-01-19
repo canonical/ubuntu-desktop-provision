@@ -23,27 +23,15 @@ const (
 	usernameRegex = "^[a-z_][a-z0-9_-]*$"
 )
 
-// DbusObject is an abstraction of a dbus object.
-type DbusObject interface {
-	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
-	GetProperty(p string) (dbus.Variant, error)
-}
-
-// DbusConnector is the interface to the dbus connection which allow easy mocking.
-type DbusConnector interface {
-	Object(dest string, path dbus.ObjectPath) DbusObject
-}
-
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
 	conn     *dbus.Conn
-	accounts DbusObject
-	hostname DbusObject
+	accounts dbus.BusObject
+	hostname dbus.BusObject
 }
 
 // New returns a new instance of the User service.
-// FIXME: Conn could be private too.
 // FIXME:
 /*
   Have an option to change dbus accounts prefix or dbus hostname prefix (indepentenly)
@@ -51,14 +39,35 @@ type Service struct {
   Have one test with invalid accounts prefix -> check for error, nothing else should be done
   Everytime there is an error in user creation/set auto/… check we are back to the initial state
 */
-func New(Conn *dbus.Conn) *Service {
-	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
-	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
-	return &Service{
-		conn:     Conn,
-		accounts: acountsObject,
-		hostname: hostnameObject,
+
+type option func(*Service) error
+
+// New returns a new instance of the User service with optional configurations.
+// Returns an error if unable to obtain necessary DBus objects.
+func New(conn *dbus.Conn, opts ...option) (*Service, error) {
+	s := &Service{
+		conn: conn,
 	}
+
+	// Default objects initialization
+	s.accounts = conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
+	if s.accounts == nil {
+		return nil, errors.New("failed to get default DBus Accounts object")
+	}
+
+	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
+	if s.hostname == nil {
+		return nil, errors.New("failed to get default DBus Hostname object")
+	}
+
+	// Applying options, checking for errors in obtaining DBus objects
+	for _, opt := range opts {
+		if err := opt(s); err != nil {
+			return nil, err
+		}
+	}
+
+	return s, nil
 }
 
 // CreateUser creates a new user on the system.
