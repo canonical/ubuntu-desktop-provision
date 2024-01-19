@@ -37,10 +37,9 @@ type DbusConnector interface {
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	// FIXME: should be private?
-	Conn     *dbus.Conn
-	Accounts DbusObject
-	Hostname DbusObject
+	conn     *dbus.Conn
+	accounts DbusObject
+	hostname DbusObject
 }
 
 // New returns a new instance of the User service.
@@ -56,9 +55,9 @@ func New(Conn *dbus.Conn) *Service {
 	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
 	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 	return &Service{
-		Conn:     Conn,
-		Accounts: acountsObject,
-		Hostname: hostnameObject,
+		conn:     Conn,
+		accounts: acountsObject,
+		hostname: hostnameObject,
 	}
 }
 
@@ -102,7 +101,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
-	call := s.Accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
+	call := s.accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
 	err = call.Store(&userObjectPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
@@ -113,7 +112,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	}
 
 	// Set the password for the user
-	userObject := s.Conn.Object(consts.DbusAccountsPrefix, userObjectPath)
+	userObject := s.conn.Object(consts.DbusAccountsPrefix, userObjectPath)
 	err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
@@ -126,7 +125,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	}
 
 	// Set the Hostname
-	err = s.Hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
+	err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %s", err)
 	}
@@ -187,7 +186,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	}
 
 	// Check if username is already in use
-	err = s.Accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
+	err = s.accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
 
 	// User found
 	if err == nil {
