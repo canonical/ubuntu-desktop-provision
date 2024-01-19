@@ -1,6 +1,13 @@
 #include "password_hash.h"
 
-// Helper function to generate a single character for the salt
+// If crypt_gensalt is available, use it
+#ifdef HAVE_CRYPT_GENSALT
+static gchar *
+generate_salt_for_crypt_hash (void)
+{
+        return g_strdup (crypt_gensalt (NULL, 0, NULL, 0));
+}
+#else
 static gchar salt_char(GRand *rand) {
     const gchar salt_chars[] = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
                                "abcdefghijklmnopqrstuvxyz"
@@ -34,10 +41,16 @@ static gchar * generate_salt_for_crypt_hash(void) {
 
     return salt_str;
 }
+#endif
 
-// Function to hash a password with a generated salt
-gchar * make_crypted(const gchar *plain) {
-    gchar *salt = generate_salt_for_crypt_hash();
+gchar *make_crypted(const gchar *plain, const gchar *test_salt) {
+    gchar *salt;
+    if (test_salt == NULL || *test_salt == '\0') {
+        salt = generate_salt_for_crypt_hash();
+    } else {
+        salt = g_strdup(test_salt);
+    }
+
     gchar *hash = g_strdup(crypt(plain, salt));
     g_free(salt);
     return hash;

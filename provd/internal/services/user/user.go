@@ -1,20 +1,12 @@
 // Package user implements the User gRPC service.
 package user
 
-/*
-#cgo CFLAGS: -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-#cgo LDFLAGS: -lcrypt -lglib-2.0
-#include "password_hash.h"
-*/
-import "C"
-
 import (
 	"bufio"
 	"context"
 	"errors"
 	"regexp"
 	"strings"
-	"unsafe"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -23,17 +15,6 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
-
-// hashPassword hashes a password using the C function make_crypted
-func hashPassword(password string) string {
-	cPassword := C.CString(password)
-	defer C.free(unsafe.Pointer(cPassword))
-
-	cHash := C.make_crypted(cPassword)
-	defer C.free(unsafe.Pointer(cHash))
-
-	return C.GoString(cHash)
-}
 
 const (
 	// usernameMaxLen is the maximum length of a username.
@@ -56,13 +37,22 @@ type DbusConnector interface {
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	Conn     DbusConnector
+	// FIXME: should be private?
+	Conn     *dbus.Conn
 	Accounts DbusObject
 	Hostname DbusObject
 }
 
 // New returns a new instance of the User service.
-func New(Conn DbusConnector) *Service {
+// FIXME: Conn could be private too.
+// FIXME:
+/*
+  Have an option to change dbus accounts prefix or dbus hostname prefix (indepentenly)
+  Have one test with invalid dbus hostname prefix -> check for error, no user should be created (rollback of the transaction)
+  Have one test with invalid accounts prefix -> check for error, nothing else should be done
+  Everytime there is an error in user creation/set auto/… check we are back to the initial state
+*/
+func New(Conn *dbus.Conn) *Service {
 	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
 	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 	return &Service{
@@ -73,7 +63,14 @@ func New(Conn DbusConnector) *Service {
 }
 
 // CreateUser creates a new user on the system.
-func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*emptypb.Empty, error) {
+func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ *emptypb.Empty, err error) {
+	defer func() {
+		if err == nil {
+			return
+		}
+		/* TODO: "rollback" transaction (delete hostname, delete password, delete user…), ignore error or just log them */
+	}()
+
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -106,11 +103,11 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	// Create the user
 	var userObjectPath dbus.ObjectPath
 	call := s.Accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
-	err := call.Store(&userObjectPath)
+	err = call.Store(&userObjectPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
-	hashed := hashPassword(password)
+	hashed, err := hashPassword(password, nil)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
 	}
@@ -191,20 +188,32 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 
 	// Check if username is already in use
 	err = s.Accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
-	if err != nil {
-		var dbusError dbus.Error
-		if errors.As(err, &dbusError) {
-			if dbusError.Name == consts.DbusAccountsPrefix+".Error.Failed" {
-				// User not found
-				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
-			}
-			// Handle other dbus errors
-			return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
-		}
-		// Unknown error
+
+	// User found
+	if err == nil {
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
+	}
+
+	// Inspect the error we got
+	var dbusError dbus.Error
+	isDbusError := errors.As(err, &dbusError)
+
+	// Unknown error
+	if !isDbusError {
 		return nil, status.Errorf(codes.Internal, "unknown error: %v", err)
 	}
 
-	// User found
-	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
+	// Non "user not found" account service error
+	errBody, ok := dbusError.Body[0].(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "unknown error: %v", err)
+	}
+
+	if dbusError.Name != consts.DbusAccountsPrefix+".Error.Failed" || !strings.Contains(errBody, username) {
+		return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
+	}
+
+	// We have "user not found"
+	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
+
 }
