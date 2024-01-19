@@ -1,17 +1,20 @@
 // Package user implements the User gRPC service.
 package user
 
+/*
+#cgo CFLAGS: -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+#cgo LDFLAGS: -lcrypt -lglib-2.0
+#include "password_hash.h"
+*/
+import "C"
+
 import (
 	"bufio"
 	"context"
-	"crypto/rand"
-	"crypto/sha512"
-	"encoding/base64"
 	"errors"
-	"fmt"
-	"math/big"
 	"regexp"
 	"strings"
+	"unsafe"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -20,6 +23,17 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
+
+// hashPassword hashes a password using the C function make_crypted
+func hashPassword(password string) string {
+	cPassword := C.CString(password)
+	defer C.free(unsafe.Pointer(cPassword))
+
+	cHash := C.make_crypted(cPassword)
+	defer C.free(unsafe.Pointer(cHash))
+
+	return C.GoString(cHash)
+}
 
 const (
 	// usernameMaxLen is the maximum length of a username.
@@ -56,46 +70,6 @@ func New(Conn DbusConnector) *Service {
 		Accounts: acountsObject,
 		Hostname: hostnameObject,
 	}
-}
-
-const validSaltChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./"
-
-// generateSalt generates a salt string of the specified length using validSalts characters.
-func generateSalt(length int) (string, error) {
-	salt := make([]byte, length)
-	for i := range salt {
-		index, err := rand.Int(rand.Reader, big.NewInt(int64(len(validSaltChars))))
-		if err != nil {
-			return "", err
-		}
-		salt[i] = validSaltChars[index.Int64()]
-	}
-	return string(salt), nil
-}
-
-// hashPassword hashes the given password, returning in the SHA-512 crypt format.
-// A salt can be provided for testing purposes.
-func hashPassword(password string, testSalt *string) (string, error) {
-	if password == "" {
-		return "", status.Errorf(codes.InvalidArgument, "received an empty password")
-	}
-	var salt string
-	var err error
-
-	if testSalt != nil {
-		salt = *testSalt
-	} else {
-		salt, err = generateSalt(16)
-		if err != nil {
-			return "", err
-		}
-	}
-	hasher := sha512.New()
-	hasher.Write([]byte(salt + password))
-	hashedBytes := hasher.Sum(nil)
-	hashedPassword := base64.RawStdEncoding.EncodeToString(hashedBytes)
-
-	return fmt.Sprintf("$6$%s$%s", salt, hashedPassword), nil
 }
 
 // CreateUser creates a new user on the system.
@@ -136,7 +110,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
 	}
-	hashed, err := hashPassword(password, nil)
+	hashed := hashPassword(password)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
 	}
