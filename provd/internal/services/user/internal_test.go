@@ -1,45 +1,45 @@
 package user
 
-// import (
-// 	"testing"
+import (
+	"testing"
 
-// 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
-// 	"github.com/stretchr/testify/require"
-// )
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
+	"github.com/stretchr/testify/require"
+)
 
-// func TestHashPassword(t *testing.T) {
-// 	t.Parallel()
+func TestHashPassword(t *testing.T) {
+	t.Parallel()
 
-// 	tests := map[string]struct {
-// 		password string
-// 		wantErr  bool
-// 	}{
-// 		"Valid password": {
-// 			password: "securepassword123",
-// 			wantErr:  false,
-// 		},
-// 		"Empty password": {
-// 			password: "",
-// 			wantErr:  true,
-// 		},
-// 	}
+	tests := map[string]struct {
+		password string
+		wantErr  bool
+	}{
+		"Valid password": {
+			password: "securepassword123",
+			wantErr:  false,
+		},
+		"Empty password": {
+			password: "",
+			wantErr:  true,
+		},
+	}
 
-// 	for name, tc := range tests {
-// 		tc := tc
-// 		t.Run(name, func(t *testing.T) {
-// 			t.Parallel()
-// 			salt := "pepper"
-// 			got, err := hashPassword(tc.password)
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			salt := "$6$pepper$"
+			got, err := hashPassword(tc.password, &salt)
 
-// 			if tc.wantErr {
-// 				require.Error(t, err)
-// 				return
-// 			}
+			if tc.wantErr {
+				require.Error(t, err)
+				return
+			}
 
-// 			require.NoError(t, err, "HashPassword should not return an error, but did")
+			require.NoError(t, err, "HashPassword should not return an error, but did")
 
-// 			want := testutils.LoadWithUpdateFromGolden(t, got)
-// 			require.Equal(t, want, got, "HashPassword returned an unexpected response")
-// 		})
-// 	}
-// }
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "HashPassword returned an unexpected response")
+		})
+	}
+}
