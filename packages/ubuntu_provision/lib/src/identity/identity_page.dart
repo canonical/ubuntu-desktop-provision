@@ -70,10 +70,9 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
         );
       }),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
+          NextWizardButton(
             enabled: ref.watch(identityModelProvider.select((m) => m.isValid)),
             onNext: ref.read(identityModelProvider).save,
           ),

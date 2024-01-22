@@ -113,12 +113,9 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
-            onNext: ref.read(timezoneModelProvider).save,
-          ),
+          NextWizardButton(onNext: ref.read(timezoneModelProvider).save),
         ],
       ),
     );

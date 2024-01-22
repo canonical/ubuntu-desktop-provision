@@ -57,14 +57,13 @@ class SecurityKeyPage extends ConsumerWidget {
         );
       }),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
+          NextWizardButton(
             enabled: ref.watch(
                 securityKeyModelProvider.select((model) => model.isValid)),
             onNext: ref.read(securityKeyModelProvider).saveSecurityKey,
-            onBack: ref.read(securityKeyModelProvider).loadSecurityKey,
+            onReturn: ref.read(securityKeyModelProvider).loadSecurityKey,
           ),
         ],
       ),

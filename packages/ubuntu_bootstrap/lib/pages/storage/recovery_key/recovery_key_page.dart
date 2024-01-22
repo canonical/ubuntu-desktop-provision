@@ -53,10 +53,10 @@ class RecoveryKeyPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+      bottomBar: const WizardBar(
+        leading: PreviousWizardButton(),
         trailing: [
-          WizardButton.next(context),
+          NextWizardButton(),
         ],
       ),
     );

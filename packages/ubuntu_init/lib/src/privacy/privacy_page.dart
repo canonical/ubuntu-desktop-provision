@@ -62,10 +62,10 @@ class PrivacyPage extends ConsumerWidget with ProvisioningPage {
           ),
         ),
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+      bottomBar: const WizardBar(
+        leading: PreviousWizardButton(),
         trailing: [
-          WizardButton.next(context),
+          NextWizardButton(),
         ],
       ),
     );
