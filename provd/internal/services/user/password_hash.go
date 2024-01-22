@@ -7,6 +7,7 @@ package user
 #include "password_hash.h"
 */
 import "C"
+
 import (
 	"errors"
 	"unsafe"
