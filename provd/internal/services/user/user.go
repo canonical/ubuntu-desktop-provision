@@ -6,6 +6,7 @@ import (
 	"context"
 	"errors"
 	"log/slog"
+	"os"
 	"regexp"
 	"strings"
 
@@ -44,21 +45,17 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 
 	// Default objects initialization
 	s.accounts = conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
-	if s.accounts == nil {
-		return nil, errors.New("failed to get default DBus Accounts object")
-	}
+
 	err := s.accounts.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
 	if err != nil {
-		return nil, errors.New("failed to ping default DBus Accounts object")
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
 	}
 
 	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
-	if s.hostname == nil {
-		return nil, errors.New("failed to get default DBus Hostname object")
-	}
+
 	err = s.hostname.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
 	if err != nil {
-		return nil, errors.New("failed to ping default DBus Hostname object")
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Hostname object")
 	}
 
 	// Applying options, checking for errors in obtaining DBus objects
@@ -203,31 +200,35 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_TOO_LONG}, nil
 	}
 
-	// Check if username is in reserved list
-	// Read line by line to avoid loading the whole file into memory
-	file, err := reservedUsernamesFS.Open("reserved-usernames")
+	// Open the passwd.master file
+	passwdFile, err := os.Open("/usr/share/base-passwd/passwd.master")
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "error opening reserved usernames file: %v", err)
+		return nil, status.Errorf(codes.Internal, "error opening passwd.master file: %v", err)
 	}
-	defer file.Close()
+	defer passwdFile.Close()
 
-	isReserved := false
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text()) // Trim the line and ignore comment lines
-		if strings.HasPrefix(line, "#") {
-			continue
+	// Open the group.master file
+	groupFile, err := os.Open("/usr/share/base-passwd/group.master")
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "error opening group.master file: %v", err)
+	}
+	defer groupFile.Close()
+
+	// Check the passwd.master file
+	isReserved, err := scanFile(passwdFile, username)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "error reading passwd.master file: %v", err)
+	}
+
+	// If not found, check the group.master file
+	if !isReserved {
+		isReserved, err = scanFile(groupFile, username)
+		if err != nil {
+			return nil, status.Errorf(codes.Internal, "error reading group.master file: %v", err)
 		}
-		if line == username {
-			isReserved = true
-			break
-		}
 	}
 
-	if err := scanner.Err(); err != nil {
-		return nil, status.Errorf(codes.Internal, "error reading reserved usernames file: %v", err)
-	}
-
+	// If found, return reserved
 	if isReserved {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_SYSTEM_RESERVED}, nil
 	}
@@ -261,4 +262,21 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 
 	// We have "user not found"
 	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
+}
+
+// Function to scan a file for the username.
+func scanFile(file *os.File, username string) (bool, error) {
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if strings.HasPrefix(line, "#") || line == "" {
+			continue
+		}
+		// Extract the username from the line
+		fields := strings.SplitN(line, ":", 2)
+		if len(fields) > 0 && fields[0] == username {
+			return true, nil
+		}
+	}
+	return false, scanner.Err()
 }
