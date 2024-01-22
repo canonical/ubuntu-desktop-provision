@@ -1,13 +1,17 @@
 package user_test
 
 import (
+	"bytes"
 	"context"
 	"flag"
 	"fmt"
+	"log"
 	"log/slog"
 	"net"
 	"os"
 	"path/filepath"
+	"reflect"
+	"strings"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
@@ -24,7 +28,7 @@ import (
 func TestEmptyCreateUserRequest(t *testing.T) {
 	t.Parallel()
 
-	client := newUserClient(t, "", "")
+	client := newUserClient(t)
 
 	userResp, err := client.CreateUser(context.Background(), nil)
 	require.Error(t, err, "CreateUser should return an error for nil request")
@@ -34,7 +38,7 @@ func TestEmptyCreateUserRequest(t *testing.T) {
 func TestEmptyValidateUsernameRequest(t *testing.T) {
 	t.Parallel()
 
-	client := newUserClient(t, "", "")
+	client := newUserClient(t)
 
 	userResp, err := client.ValidateUsername(context.Background(), nil)
 	require.Error(t, err, "ValidateUsername should return an error for nil request")
@@ -86,6 +90,57 @@ func TestDbusObjectsAvalible(t *testing.T) {
 	}
 }
 
+func TestInvalidObjects(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		accountsPrefix string
+		hostnamePrefix string
+		wantErr        bool
+	}{
+		"Invalid accounts prefix": {
+			accountsPrefix: "invalid",
+			wantErr:        true,
+		},
+		"Invalid hostname prefix": {
+			hostnamePrefix: "invalid",
+			wantErr:        true,
+		},
+		"Valid accounts path": {
+			wantErr: false,
+		},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			t.Cleanup(testutils.StartLocalSystemBus())
+			bus := testutils.NewDbusConn(t)
+
+			var opts []user.Option
+			v := reflect.ValueOf(tc)
+			for i := 0; i < v.NumField(); i++ {
+				if v.Field(i).String() != "" {
+					fieldName := v.Type().Field(i).Name
+					switch fieldName {
+					case "accountsPrefix":
+						opts = append(opts, user.WithAccountsPrefix(tc.accountsPrefix))
+					case "hostnamePrefix":
+						opts = append(opts, user.WithHostnamePrefix(tc.hostnamePrefix))
+					}
+				}
+			}
+			_, err := user.New(bus, opts...)
+			if tc.wantErr {
+				require.Error(t, err, "New should return an error, but did not")
+				return
+			}
+			require.NoError(t, err, "New should not return an error, but did")
+		})
+	}
+}
+
 func TestCreateUser(t *testing.T) {
 	t.Parallel()
 
@@ -97,81 +152,55 @@ func TestCreateUser(t *testing.T) {
 		autoLogin bool
 		isAdmin   bool
 
-		accountsError bool
-		hostnameError bool
-
 		wantErr bool
-
-		accountsEndpoint string
-		hostnameEndpoint string
 	}{
 		"Successfully creates a user": {
-			realName:  "Ubuntu",
-			username:  "ubuntu",
-			password:  "password",
-			hostname:  "ubuntu",
+			realName:  "ok",
+			username:  "ok",
+			password:  "ok",
+			hostname:  "ok",
 			isAdmin:   true,
 			autoLogin: true,
-
-			accountsEndpoint: "noerror",
-			hostnameEndpoint: "noerror",
 		},
 		"Error when realName is empty": {
 			realName:  "",
-			username:  "ubuntu",
-			password:  "password",
-			hostname:  "ubuntu",
+			username:  "ok",
+			password:  "ok",
+			hostname:  "ok",
 			autoLogin: true,
 			wantErr:   true,
-
-			accountsEndpoint: "noerror",
-			hostnameEndpoint: "noerror",
 		},
 		"Error when username is empty": {
-			realName:  "Ubuntu",
+			realName:  "ok",
 			username:  "",
-			password:  "password",
-			hostname:  "ubuntu",
+			password:  "ok",
+			hostname:  "ok",
 			autoLogin: true,
 			wantErr:   true,
-
-			accountsEndpoint: "noerror",
-			hostnameEndpoint: "noerror",
 		},
 		"Error when hostname is empty": {
-			realName:  "Ubuntu",
-			username:  "ubuntu",
-			password:  "password",
+			realName:  "ok",
+			username:  "ok",
+			password:  "ok",
 			hostname:  "",
 			autoLogin: true,
 			wantErr:   true,
-
-			accountsEndpoint: "noerror",
-			hostnameEndpoint: "noerror",
 		},
 		"Error from Accounts service": {
-			realName:      "Ubuntu",
-			username:      "ubuntu",
-			password:      "password",
-			hostname:      "ubuntu",
-			autoLogin:     true,
-			accountsError: true,
-			wantErr:       true,
-
-			accountsEndpoint: "noerror",
-			hostnameEndpoint: "error",
+			realName:  "ok",
+			username:  "error",
+			password:  "ok",
+			hostname:  "ok",
+			autoLogin: true,
+			wantErr:   true,
 		},
 		"Error from Hostname service": {
-			realName:      "Ubuntu",
-			username:      "ubuntu",
-			password:      "password",
-			hostname:      "ubuntu",
-			autoLogin:     true,
-			hostnameError: true,
-			wantErr:       true,
-
-			accountsEndpoint: "error",
-			hostnameEndpoint: "noerror",
+			realName:  "ok",
+			username:  "ok",
+			password:  "ok",
+			hostname:  "error",
+			autoLogin: true,
+			wantErr:   true,
 		},
 	}
 
@@ -181,7 +210,7 @@ func TestCreateUser(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			client := newUserClient(t, tc.accountsEndpoint, tc.hostnameEndpoint)
+			client := newUserClient(t)
 
 			userReq := &pb.CreateUserRequest{
 				User: &pb.User{
@@ -194,9 +223,16 @@ func TestCreateUser(t *testing.T) {
 				IsAdmin: tc.isAdmin,
 			}
 
+			var logBuffer bytes.Buffer
+			log.SetOutput(&logBuffer)
+
 			_, err := client.CreateUser(context.Background(), userReq)
 			if tc.wantErr {
 				require.Error(t, err, "CreateUser should return an error, but did not")
+				// On error cases, rollback is called. Rollback only logs errors if it fails to rollback.
+				if strings.Contains(logBuffer.String(), "ERROR") {
+					t.Errorf("Expected no error logs, but error logs found: %s", logBuffer.String())
+				}
 				return
 			}
 			require.NoError(t, err, "CreateUser should not return an error, but did not")
@@ -208,42 +244,36 @@ func TestValidateUsername(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		username      string
-		accountsError bool
-		wantErr       bool
-
-		accountsEndpoint string
+		username string
+		wantErr  bool
 	}{
 		"Valid username": {
-			username:         "newuser",
-			accountsError:    true,
-			wantErr:          false,
-			accountsEndpoint: "error",
+			username: "newname",
+			wantErr:  false,
 		},
 		"Existing username": {
-			username:         "existinguser",
-			wantErr:          false,
-			accountsEndpoint: "noerror",
+			username: "ok",
+			wantErr:  false,
 		},
 		"Empty username": {
-			username:         "",
-			wantErr:          false,
-			accountsEndpoint: "noerror",
+			username: "",
+			wantErr:  false,
 		},
 		"Reserved username": {
-			username:         "root",
-			wantErr:          false,
-			accountsEndpoint: "noerror",
+			username: "root",
+			wantErr:  false,
 		},
 		"Username too long": {
-			username:         "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
-			wantErr:          false,
-			accountsEndpoint: "noerror",
+			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
+			wantErr:  false,
 		},
 		"Invalid characters in username": {
-			username:         "invalid@username",
-			wantErr:          false,
-			accountsEndpoint: "noerror",
+			username: "invalid@username",
+			wantErr:  false,
+		},
+		"Error from Accounts service": {
+			username: "error",
+			wantErr:  true,
 		},
 	}
 
@@ -253,7 +283,7 @@ func TestValidateUsername(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			client := newUserClient(t, tc.accountsEndpoint, "")
+			client := newUserClient(t)
 
 			validateReq := &pb.ValidateUsernameRequest{
 				Username: tc.username,
@@ -274,7 +304,7 @@ func TestValidateUsername(t *testing.T) {
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint string) pb.UserServiceClient {
+func newUserClient(t *testing.T) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
@@ -287,12 +317,11 @@ func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint strin
 
 	bus := testutils.NewDbusConn(t)
 
-	// Concatenate provided paths with base paths
-	fullAccountsPath := "/org/freedesktop/Accounts/" + accountsEndpoint
-	fullHostnamePath := "/org/freedesktop/hostname1/" + hostnameEndpoint
+	service, err := user.New(bus)
 
-	// Create the service with the necessary mocks
-	service, err := user.New(bus, user.WithAccountsPath(fullAccountsPath), user.WithHostnamePath(fullHostnamePath))
+	if err != nil {
+		t.Fatalf("Setup: could not create user service: %v", err)
+	}
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, service)
@@ -313,42 +342,50 @@ func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint strin
 	return pb.NewUserServiceClient(conn)
 }
 
+type accountsdbus struct{}
 
 func (a accountsdbus) Ping() *dbus.Error {
 	return nil
 }
 
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
-	if a.wantError {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	if name == "error" {
+		return "", dbus.NewError("org.strange.error", []interface{}{"error"})
 	}
-	return "/org/freedesktop/Accounts/Usernoerror", nil
+	// This is used to also include the username in the error log, used to determine its an error because a user wasn't found.
+	if name != "ok" {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
+	}
+	return "/org/freedesktop/Accounts/Userok", nil
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
-	if a.wantError {
+	if username != "ok" || realname != "ok" {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
 	}
-	return "/org/freedesktop/Accounts/Usernoerror", nil
+	return "/org/freedesktop/Accounts/Userok", nil
+}
+
+func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
+	return nil
 }
 
 type userdbus struct {
-	endpoint  string
-	wantError bool
+	wantAutoLoginError bool
 }
 
 func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
-	if u.wantError {
-		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	}
 	return nil
 }
 
 func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
-	if u.wantError {
+	if u.wantAutoLoginError {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
 	}
 	return nil
+}
+func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	return uint64(1), nil
 }
 
 type hostnamedbus struct {
@@ -360,10 +397,14 @@ func (h hostnamedbus) Ping() *dbus.Error {
 }
 
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
-	if h.wantError {
+	if hostname != "ok" && hostname != "original" {
 		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error"})
 	}
 	return nil
+}
+
+func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	return h.staticHostname, nil
 }
 
 func TestMain(m *testing.M) {
@@ -408,13 +449,17 @@ func TestMain(m *testing.M) {
               <arg name="accountType" direction="in" type="i"/>
               <arg name="user" direction="out" type="o"/>
 			</method>
+			<method name="DeleteUser">
+				<arg name="userID" direction="in" type="u"/>
+        	</method>
 		</interface>̀%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
 
+	a := accountsdbus{}
 	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusAccountsPrefix); err != nil {
 		slog.Error("Setup: could not export Accounts mock %v", err)
-		}
+	}
 	if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"),
-			"org.freedesktop.DBus.Introspectable"); err != nil {
+		"org.freedesktop.DBus.Introspectable"); err != nil {
 		slog.Error("Setup: could not export introspectable for accoutns mock: %v", err)
 	}
 
@@ -447,26 +492,29 @@ func TestMain(m *testing.M) {
             <method name="SetAutomaticLogin">
               <arg name="autoLogin" direction="in" type="b"/>
 			</method>
-		</interface>̀%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
+		</interface>̀
+		<interface name="org.freedesktop.DBus.Properties">
+		<method name="Get">
+			<arg name="interface" direction="in" type="s"/>
+			<arg name="property" direction="in" type="s"/>
+			<arg name="value" direction="out" type="v"/>
+		</method>
+	</interface>%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
 
-	for _, s := range []userdbus{
-		{
-			endpoint:  "error",
-			wantError: true,
-		},
-		{
-			endpoint:  "noerror",
-			wantError: false,
-		},
-	} {
-		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/Accounts/User"+s.endpoint), consts.DbusUserPrefix); err != nil {
-			slog.Error("Setup: could not export %s %v", s.endpoint, err)
-		}
-		if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/User"+s.endpoint),
-			"org.freedesktop.DBus.Introspectable"); err != nil {
-			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
-		}
+	u := userdbus{}
+
+	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), consts.DbusUserPrefix); err != nil {
+		slog.Error("Setup: could not export Userok mock: %v", err)
 	}
+	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/Userok"),
+		"org.freedesktop.DBus.Introspectable"); err != nil {
+		slog.Error("Setup: could not export introspectable for Userok: %v", err)
+	}
+
+	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), "org.freedesktop.DBus.Properties"); err != nil {
+		slog.Error("Setup: could not export Peer mock %v", err)
+	}
+
 	reply, err = conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
 		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
@@ -479,10 +527,10 @@ func TestMain(m *testing.M) {
 	hostnameIntro := fmt.Sprintf(`
 	<node>
 		<interface name="%s">
-            <method name="SetStaticHostname">
-              <arg name="hostname" direction="in" type="s"/>
-              <arg name="someBool" direction="in" type="b"/>
-            </method>
+			<method name="SetStaticHostname">
+				<arg name="hostname" direction="in" type="s"/>
+				<arg name="someBool" direction="in" type="b"/>
+			</method>
 			<property name="StaticHostname" type="s" access="read"/>
 		</interface>
 		<interface name="org.freedesktop.DBus.Properties">
@@ -494,15 +542,23 @@ func TestMain(m *testing.M) {
 		</interface>
 	</node>`, consts.DbusHostnamePrefix)
 
+	h := hostnamedbus{
+		staticHostname: "original",
+	}
+
 	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusHostnamePrefix); err != nil {
 		slog.Error("Setup: could not export hostname1 mock: %v", err)
 	}
 	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"),
-			"org.freedesktop.DBus.Introspectable"); err != nil {
+		"org.freedesktop.DBus.Introspectable"); err != nil {
 		slog.Error("Setup: could not export introspectable for hostname1 mock: %v", err)
 	}
 
 	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Peer"); err != nil {
+		slog.Error("Setup: could not export Peer mock %v", err)
+	}
+
+	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Properties"); err != nil {
 		slog.Error("Setup: could not export Peer mock %v", err)
 	}
 
