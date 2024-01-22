@@ -434,7 +434,7 @@ func TestMain(m *testing.M) {
 		<interface name="%s">
             <method name="Ping">
 			</method>
-		</interface>̀%s</node>`, "org.freedesktop.DBus.Peer", introspect.IntrospectDataString)
+		</interface>̀%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
 
 	intro := fmt.Sprintf(`
 	<node>
@@ -463,7 +463,7 @@ func TestMain(m *testing.M) {
 		slog.Error("Setup: could not export introspectable for accoutns mock: %v", err)
 	}
 
-	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Peer"); err != nil {
+	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusPeerPrefix); err != nil {
 		slog.Error("Setup: could not export Peer mock %v", err)
 	}
 
@@ -554,7 +554,7 @@ func TestMain(m *testing.M) {
 		slog.Error("Setup: could not export introspectable for hostname1 mock: %v", err)
 	}
 
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Peer"); err != nil {
+	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusPeerPrefix); err != nil {
 		slog.Error("Setup: could not export Peer mock %v", err)
 	}
 
