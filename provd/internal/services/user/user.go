@@ -74,7 +74,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	var currentHostname string
 	property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get current hostname: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to get current hostname: %v", err)
 	}
 
 	currentHostname, ok := property.Value().(string)
@@ -92,7 +92,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		// Rollback hostname
 		err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, currentHostname, false).Err
 		if err != nil {
-			slog.Error("failed to rollback hostname: %s", err)
+			slog.Error("failed to rollback hostname: %v", err)
 		}
 		// Delete user
 		if userID == 0 {
@@ -100,7 +100,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		}
 		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
 		if err != nil {
-			slog.Error("failed to rollback user: %s", err)
+			slog.Error("failed to rollback user: %v", err)
 		}
 	}()
 
@@ -138,24 +138,24 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	call := s.accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
 	err = call.Store(&userObjectPath)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to create user: %v", err)
 	}
 	hashed, err := hashPassword(password, nil)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %v", err)
 	}
 
 	// Set the password for the user
 	userObject := s.conn.Object(consts.DbusAccountsPrefix, userObjectPath)
 	err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set password: %v", err)
 	}
 
 	// Update userId for rollback via property
 	uidProperty, err := userObject.GetProperty(consts.DbusUserPrefix + ".Uid")
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get user ID: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to get user ID: %v", err)
 	}
 	userID, ok = uidProperty.Value().(uint64)
 	if !ok {
@@ -165,13 +165,13 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	// Set autologin for the user
 	err = userObject.Call(consts.DbusUserPrefix+".SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set autologin: %v", err)
 	}
 
 	// Set the Hostname
 	err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %v", err)
 	}
 
 	return &emptypb.Empty{}, nil
