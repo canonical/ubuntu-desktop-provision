@@ -8,9 +8,11 @@ pages:
     visible: true
   keyboard:
     title: "Keyboard layout"
+    image: "packages/ubuntu_provision/assets/icons/keyboard.svg"
     visible: true
   network:
     title: "Connect to a network"
+    image: "packages/ubuntu_provision/assets/icons/wifi.svg"
     visible: true
   identity:
     title: "Set up your account"
