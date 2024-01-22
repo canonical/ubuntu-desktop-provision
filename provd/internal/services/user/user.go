@@ -98,6 +98,9 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 			slog.Error("failed to rollback hostname: %s", err)
 		}
 		// Delete user
+		if userID == 0 {
+			return
+		}
 		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
 		if err != nil {
 			slog.Error("failed to rollback user: %s", err)
