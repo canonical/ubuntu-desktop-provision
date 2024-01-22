@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"context"
 	"errors"
+	"log/slog"
 	"regexp"
 	"strings"
 
@@ -31,20 +32,12 @@ type Service struct {
 	hostname dbus.BusObject
 }
 
-// New returns a new instance of the User service.
-// FIXME:
-/*
-  Have an option to change dbus accounts prefix or dbus hostname prefix (indepentenly)
-  Have one test with invalid dbus hostname prefix -> check for error, no user should be created (rollback of the transaction)
-  Have one test with invalid accounts prefix -> check for error, nothing else should be done
-  Everytime there is an error in user creation/set auto/… check we are back to the initial state
-*/
-
-type option func(*Service) error
+// Option is a functional option to set the DBus objects in tests.
+type Option func(*Service) error
 
 // New returns a new instance of the User service with optional configurations.
 // Returns an error if unable to obtain necessary DBus objects.
-func New(conn *dbus.Conn, opts ...option) (*Service, error) {
+func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	s := &Service{
 		conn: conn,
 	}
@@ -54,10 +47,18 @@ func New(conn *dbus.Conn, opts ...option) (*Service, error) {
 	if s.accounts == nil {
 		return nil, errors.New("failed to get default DBus Accounts object")
 	}
+	err := s.accounts.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+	if err != nil {
+		return nil, errors.New("failed to ping default DBus Accounts object")
+	}
 
 	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 	if s.hostname == nil {
 		return nil, errors.New("failed to get default DBus Hostname object")
+	}
+	err = s.hostname.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+	if err != nil {
+		return nil, errors.New("failed to ping default DBus Hostname object")
 	}
 
 	// Applying options, checking for errors in obtaining DBus objects
@@ -223,5 +224,4 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 
 	// We have "user not found"
 	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
-
 }

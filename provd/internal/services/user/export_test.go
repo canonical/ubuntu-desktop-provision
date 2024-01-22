@@ -2,20 +2,18 @@ package user
 
 import (
 	"errors"
-
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
-	"github.com/godbus/dbus/v5"
 )
 
-// Option type exported for tests.
-type Option = option
-
 // WithAccountsPrefix is a functional option to set the DBus accounts prefix.
-func WithAccountsPath(path string) option {
+func WithAccountsPrefix(prefix string) Option {
 	return func(s *Service) error {
-		obj := s.conn.Object(consts.DbusAccountsPrefix, dbus.ObjectPath(path))
+		obj := s.conn.Object(prefix, "/org/freedesktop/Accounts")
 		if obj == nil {
-			return errors.New("invalid accounts path")
+			return errors.New("invalid accounts prefix")
+		}
+		err := obj.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+		if err != nil {
+			return errors.New("invalid accounts prefix")
 		}
 		s.accounts = obj
 		return nil
@@ -23,11 +21,15 @@ func WithAccountsPath(path string) option {
 }
 
 // WithHostnamePrefix is a functional option to set the DBus hostname prefix.
-func WithHostnamePath(path string) option {
+func WithHostnamePrefix(prefix string) Option {
 	return func(s *Service) error {
-		obj := s.conn.Object(consts.DbusHostnamePrefix, dbus.ObjectPath(path))
+		obj := s.conn.Object(prefix, "/org/freedesktop/hostname1")
 		if obj == nil {
-			return errors.New("invalid hostname path")
+			return errors.New("invalid hostname prefix")
+		}
+		err := obj.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+		if err != nil {
+			return errors.New("invalid accounts prefix")
 		}
 		s.hostname = obj
 		return nil

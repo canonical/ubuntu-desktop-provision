@@ -41,6 +41,51 @@ func TestEmptyValidateUsernameRequest(t *testing.T) {
 	require.Empty(t, userResp, "ValidateUsername should return a nil response for a nil request")
 }
 
+func TestDbusObjectsAvalible(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		invalidAccounts bool
+		invalidHostname bool
+		wantErr         bool
+	}{
+		"Invalid accounts object": {
+			invalidAccounts: true,
+			wantErr:         true,
+		},
+		"Invalid hostname object": {
+			invalidHostname: true,
+			wantErr:         true,
+		},
+		"Valid objects": {
+			wantErr: false,
+		},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			t.Cleanup(testutils.StartLocalSystemBus())
+
+			var opts []user.Option
+			if tc.invalidAccounts {
+				opts = append(opts, user.WithAccountsPrefix("invalid"))
+			}
+			if tc.invalidHostname {
+				opts = append(opts, user.WithHostnamePrefix("invalid"))
+			}
+
+			_, err := user.New(testutils.NewDbusConn(t), opts...)
+			if tc.wantErr {
+				require.Error(t, err, "New should return an error, but did not")
+				return
+			}
+			require.NoError(t, err, "New should not return an error, but did")
+		})
+	}
+}
+
 func TestCreateUser(t *testing.T) {
 	t.Parallel()
 
@@ -268,9 +313,9 @@ func newUserClient(t *testing.T, accountsEndpoint string, hostnameEndpoint strin
 	return pb.NewUserServiceClient(conn)
 }
 
-type accountsdbus struct {
-	endpoint  string
-	wantError bool
+
+func (a accountsdbus) Ping() *dbus.Error {
+	return nil
 }
 
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
@@ -307,8 +352,11 @@ func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
 }
 
 type hostnamedbus struct {
-	endpoint  string
-	wantError bool
+	staticHostname string
+}
+
+func (h hostnamedbus) Ping() *dbus.Error {
+	return nil
 }
 
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
@@ -340,6 +388,13 @@ func TestMain(m *testing.M) {
 		slog.Error("Setup: can't send hello message on private system bus: %v", err)
 	}
 
+	peer := fmt.Sprintf(`
+	<node>
+		<interface name="%s">
+            <method name="Ping">
+			</method>
+		</interface>̀%s</node>`, "org.freedesktop.DBus.Peer", introspect.IntrospectDataString)
+
 	intro := fmt.Sprintf(`
 	<node>
 		<interface name="%s">
@@ -355,24 +410,23 @@ func TestMain(m *testing.M) {
 			</method>
 		</interface>̀%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
 
-	for _, s := range []accountsdbus{
-		{
-			endpoint:  "error",
-			wantError: true,
-		},
-		{
-			endpoint:  "noerror",
-			wantError: false,
-		},
-	} {
-		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/Accounts"+"/"+s.endpoint), consts.DbusAccountsPrefix); err != nil {
-			slog.Error("Setup: could not export %s %v", s.endpoint, err)
+	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusAccountsPrefix); err != nil {
+		slog.Error("Setup: could not export Accounts mock %v", err)
 		}
-		if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"+"/"+s.endpoint),
+	if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"),
 			"org.freedesktop.DBus.Introspectable"); err != nil {
-			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
-		}
+		slog.Error("Setup: could not export introspectable for accoutns mock: %v", err)
 	}
+
+	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Peer"); err != nil {
+		slog.Error("Setup: could not export Peer mock %v", err)
+	}
+
+	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/Accounts"),
+		"org.freedesktop.DBus.Introspectable"); err != nil {
+		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
+	}
+
 	reply, err := conn.RequestName(consts.DbusAccountsPrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
 		slog.Error("Setup: Failed to acquire account name on local system bus: %v", err)
@@ -429,26 +483,34 @@ func TestMain(m *testing.M) {
               <arg name="hostname" direction="in" type="s"/>
               <arg name="someBool" direction="in" type="b"/>
             </method>
-		</interface>̀%s</node>`, consts.DbusHostnamePrefix, introspect.IntrospectDataString)
+			<property name="StaticHostname" type="s" access="read"/>
+		</interface>
+		<interface name="org.freedesktop.DBus.Properties">
+			<method name="Get">
+				<arg name="interface" direction="in" type="s"/>
+				<arg name="property" direction="in" type="s"/>
+				<arg name="value" direction="out" type="v"/>
+			</method>
+		</interface>
+	</node>`, consts.DbusHostnamePrefix)
 
-	for _, s := range []hostnamedbus{
-		{
-			endpoint:  "error",
-			wantError: true,
-		},
-		{
-			endpoint:  "noerror",
-			wantError: false,
-		},
-	} {
-		if err := conn.Export(s, dbus.ObjectPath("/org/freedesktop/hostname1/"+s.endpoint), consts.DbusHostnamePrefix); err != nil {
-			slog.Error("Setup: could not export %s %v", s.endpoint, err)
-		}
-		if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1/"+s.endpoint),
-			"org.freedesktop.DBus.Introspectable"); err != nil {
-			slog.Error("Setup: could not export introspectable for %s: %v", s.endpoint, err)
-		}
+	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusHostnamePrefix); err != nil {
+		slog.Error("Setup: could not export hostname1 mock: %v", err)
 	}
+	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"),
+			"org.freedesktop.DBus.Introspectable"); err != nil {
+		slog.Error("Setup: could not export introspectable for hostname1 mock: %v", err)
+	}
+
+	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Peer"); err != nil {
+		slog.Error("Setup: could not export Peer mock %v", err)
+	}
+
+	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"),
+		"org.freedesktop.DBus.Introspectable"); err != nil {
+		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
+	}
+
 	reply, err = conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
 		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
