@@ -10,5 +10,5 @@ dependencies:
   meta: ^1.10.0
 
 dev_dependencies:
-  ffigen: ^10.0.0
+  ffigen: ^11.0.0
   ubuntu_lints: ^0.3.0
