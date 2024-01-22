@@ -14,8 +14,7 @@ enum InitStep {
   ubuntuPro(UbuntuProPage.new),
   privacy(PrivacyPage.new),
   timezone(TimezonePage.new),
-  telemetry(TelemetryPage.new),
-  theme(ThemePage.new); // Special
+  telemetry(TelemetryPage.new);
 
   const InitStep(this.pageFactory);
 

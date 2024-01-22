@@ -24,7 +24,6 @@ void main() {
     expect(tryGetService<ProductService>(), isNotNull);
     expect(tryGetService<SessionService>(), isNotNull);
     expect(tryGetService<Sysmetrics>(), isNotNull);
-    expect(tryGetService<ThemeService>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
     expect(tryGetService<UdevService>(), isNotNull);
     expect(tryGetService<UrlLauncher>(), isNotNull);

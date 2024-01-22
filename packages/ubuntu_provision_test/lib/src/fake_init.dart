@@ -43,7 +43,6 @@ Future<void> registerFakeInitServices({
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
-  registerService<ThemeService>(() => GtkThemeService(bus: client));
   registerService<TimezoneService>(() => XdgTimezoneService(bus: client));
   registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);

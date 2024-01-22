@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/init_model.dart';
+import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -36,12 +37,12 @@ class InitWizard extends ConsumerWidget {
           },
         ),
         ...routes,
-        Routes.theme: WizardRoute(
-          builder: (_) => const ThemePage(),
+        Routes.telemetry: WizardRoute(
+          builder: (_) => const TelemetryPage(),
           userData: WizardRouteData(
-            step: InitStep.theme.index,
+            step: InitStep.telemetry.index,
           ),
-          onLoad: (_) => const ThemePage().load(context, ref),
+          onLoad: (_) => const TelemetryPage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();

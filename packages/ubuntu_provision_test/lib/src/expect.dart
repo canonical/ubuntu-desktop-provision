@@ -1,6 +1,3 @@
-import 'dart:io';
-import 'dart:ui';
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -34,16 +31,5 @@ Future<void> expectIdentity(Identity identity) async {
         .having((id) => id.username, 'username', identity.username)
         .having((id) => id.hostname, 'hostname', identity.hostname)
         .having((id) => id.autoLogin, 'autoLogin', identity.autoLogin),
-  );
-}
-
-Future<void> expectTheme(Brightness brightness) async {
-  return expectLater(
-    await getService<ThemeService>()
-        .getBrightness()
-        .onError((error, stackTrace) => Brightness.light),
-    brightness,
-    // TODO: override GSettings schema dirs (https://github.com/canonical/gsettings.dart/pull/56)
-    skip: Platform.environment['GSETTINGS_SCHEMA_DIR']?.contains('/snap/code/'),
   );
 }
