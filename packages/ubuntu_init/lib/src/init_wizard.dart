@@ -41,6 +41,7 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const TelemetryPage(),
           userData: WizardRouteData(
             step: InitStep.telemetry.index,
+            hasPrevious: false,
           ),
           onLoad: (_) => const TelemetryPage().load(context, ref),
           onNext: (_) async {

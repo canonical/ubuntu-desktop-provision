@@ -11,14 +11,15 @@ enum InitStep {
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   identity(IdentityPage.new),
-  ubuntuPro(UbuntuProPage.new),
-  privacy(PrivacyPage.new),
-  timezone(TimezonePage.new),
-  telemetry(TelemetryPage.new);
+  ubuntuPro(UbuntuProPage.new, hasPrevious: false),
+  privacy(PrivacyPage.new, hasPrevious: false),
+  timezone(TimezonePage.new, hasPrevious: false),
+  telemetry(TelemetryPage.new, hasPrevious: false);
 
-  const InitStep(this.pageFactory);
+  const InitStep(this.pageFactory, {this.hasPrevious = true});
 
   final ProvisioningPage Function() pageFactory;
+  final bool hasPrevious;
 
   WizardRoute? toRoute(BuildContext context, WidgetRef ref) {
     final pageConfig = ref.watch(pageConfigProvider);
@@ -26,7 +27,10 @@ enum InitStep {
     final page = pageFactory();
     return WizardRoute(
       builder: (_) => page,
-      userData: WizardRouteData(step: includedIndex),
+      userData: WizardRouteData(
+        step: includedIndex,
+        hasPrevious: hasPrevious,
+      ),
       onLoad: (_) => page.load(context, ref),
     );
   }
