@@ -119,10 +119,10 @@ extension on WidgetTester {
               return Wizard(
                 routes: {
                   '/first': WizardRoute(
-                    builder: (context) => WizardPage(
-                      content: const Text('first route'),
+                    builder: (context) => const WizardPage(
+                      content: Text('first route'),
                       bottomBar: WizardBar(
-                        trailing: [WizardButton.next(context)],
+                        trailing: [NextWizardButton()],
                       ),
                     ),
                   ),
@@ -136,10 +136,9 @@ extension on WidgetTester {
                         const NotEnoughDiskSpacePage().load(context, ref),
                   ),
                   '/last': WizardRoute(
-                    builder: (context) => WizardPage(
-                      content: const Text('last route'),
-                      bottomBar:
-                          WizardBar(leading: WizardButton.previous(context)),
+                    builder: (context) => const WizardPage(
+                      content: Text('last route'),
+                      bottomBar: WizardBar(leading: PreviousWizardButton()),
                     ),
                   ),
                 },

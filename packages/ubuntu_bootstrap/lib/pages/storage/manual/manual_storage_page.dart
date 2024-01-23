@@ -90,10 +90,9 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
         ],
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
+          NextWizardButton(
             enabled: model.isValid,
             onNext: model.setStorage,
           ),

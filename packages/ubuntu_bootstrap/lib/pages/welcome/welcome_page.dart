@@ -84,15 +84,14 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).nextLabel,
             visible: model.option == Option.welcomeTryOption,
             execute: YaruWindow.of(context).close,
           ),
-          WizardButton.next(
-            context,
+          NextWizardButton(
             visible: model.option != Option.welcomeTryOption,
             enabled: model.option != Option.none,
             arguments: model.option,

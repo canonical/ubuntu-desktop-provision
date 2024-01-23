@@ -85,8 +85,8 @@ class RefreshBar extends StatelessWidget {
 
     return WizardBar(
       leading: state.whenOrNull(
-        checking: () => WizardButton.previous(context),
-        status: (_) => WizardButton.previous(context),
+        checking: PreviousWizardButton.new,
+        status: (_) => const PreviousWizardButton(),
       ),
       trailing: state.whenOrNull(
         checking: () => [skip],

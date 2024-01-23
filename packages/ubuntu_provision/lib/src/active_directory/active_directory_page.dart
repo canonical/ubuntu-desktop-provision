@@ -53,10 +53,9 @@ class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
         );
       }),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
+          NextWizardButton(
             enabled: ref
                 .watch(activeDirectoryModelProvider.select((m) => m.isValid)),
             onNext: () async {

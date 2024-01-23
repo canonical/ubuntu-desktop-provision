@@ -148,11 +148,11 @@ void main() {
         home: Wizard(routes: {
           '/': WizardRoute(builder: (_) {
             return Builder(builder: (context) {
-              return WizardPage(
+              return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: WizardButton.previous(context),
+                  leading: PreviousWizardButton(),
                   trailing: [
-                    WizardButton.next(context),
+                    NextWizardButton(),
                   ],
                 ),
               );
@@ -160,11 +160,11 @@ void main() {
           }),
           '/last': WizardRoute(builder: (_) {
             return Builder(builder: (context) {
-              return WizardPage(
+              return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: WizardButton.previous(context),
+                  leading: PreviousWizardButton(),
                   trailing: [
-                    WizardButton.next(context),
+                    NextWizardButton(),
                   ],
                 ),
               );

@@ -8,9 +8,9 @@ void main() {
   Widget buildPage(BuildContext context, String title) {
     return WizardPage(
       content: Text(title),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
-        trailing: [WizardButton.next(context)],
+      bottomBar: const WizardBar(
+        leading: PreviousWizardButton(),
+        trailing: [NextWizardButton()],
       ),
     );
   }

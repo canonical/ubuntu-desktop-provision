@@ -96,15 +96,14 @@ class GuidedReformatPage extends ConsumerWidget {
         ],
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(
-            context,
+          NextWizardButton(
             onNext: model.saveGuidedStorage,
             // If the user returns back to select another disk, the previously
             // configured guided storage must be reset to avoid multiple disks
             // being configured for guided partitioning.
-            onBack: model.resetGuidedStorage,
+            onExecute: model.resetGuidedStorage,
           ),
         ],
       ),

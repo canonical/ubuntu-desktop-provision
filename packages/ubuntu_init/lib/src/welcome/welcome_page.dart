@@ -85,9 +85,9 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
-      bottomBar: WizardBar(
+      bottomBar: const WizardBar(
         trailing: [
-          WizardButton.next(context),
+          NextWizardButton(),
         ],
       ),
     );

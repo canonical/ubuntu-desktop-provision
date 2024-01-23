@@ -18,10 +18,10 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
       content: const Center(
         child: Text('Ubuntu Pro'),
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+      bottomBar: const WizardBar(
+        leading: PreviousWizardButton(),
         trailing: [
-          WizardButton.next(context),
+          NextWizardButton(),
         ],
       ),
     );

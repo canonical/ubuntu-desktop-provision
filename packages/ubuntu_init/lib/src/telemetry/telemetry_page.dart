@@ -92,9 +92,9 @@ class TelemetryPage extends ConsumerWidget with ProvisioningPage {
         ),
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
-          WizardButton.next(context, onNext: model.save),
+          NextWizardButton(onNext: model.save),
         ],
       ),
     );

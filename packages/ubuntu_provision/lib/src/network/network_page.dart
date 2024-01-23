@@ -73,7 +73,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+        leading: const PreviousWizardButton(),
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).connectLabel,
@@ -81,15 +81,14 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
             visible: model.isEnabled && model.canConnect,
             onActivated: model.connect,
           ),
-          WizardButton.next(
-            context,
+          NextWizardButton(
             enabled:
                 model.isEnabled && !model.isConnecting && model.isConnected,
             visible: !model.isEnabled || !model.canConnect,
             // suspend network activity when proceeding on the next page
             onNext: model.cleanup,
             // resume network activity if/when returning back to this page
-            onBack: model.init,
+            onExecute: model.init,
           ),
         ],
       ),

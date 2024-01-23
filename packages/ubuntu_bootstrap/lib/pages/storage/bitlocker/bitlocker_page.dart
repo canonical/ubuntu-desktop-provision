@@ -88,8 +88,8 @@ class BitLockerPage extends ConsumerWidget {
           ],
         ),
       ),
-      bottomBar: WizardBar(
-        leading: WizardButton.previous(context),
+      bottomBar: const WizardBar(
+        leading: PreviousWizardButton(),
       ),
     );
   }
