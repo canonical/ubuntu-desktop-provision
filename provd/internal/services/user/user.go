@@ -46,14 +46,14 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	// Default objects initialization
 	s.accounts = conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
 
-	err := s.accounts.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+	err := s.accounts.Call(consts.DbusPeerPrefix, 0).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
 	}
 
 	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 
-	err = s.hostname.Call("org.freedesktop.DBus.Peer.Ping", 0).Err
+	err = s.hostname.Call(consts.DbusPeerPrefix, 0).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Hostname object")
 	}
