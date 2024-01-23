@@ -6,8 +6,8 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  build_runner: ^2.2.0
-  mockito: 5.4.3
+  build_runner: ^2.4.8
+  mockito: 5.4.4
   path: ^1.8.3
   subiquity_client: ^0.1.0
 
