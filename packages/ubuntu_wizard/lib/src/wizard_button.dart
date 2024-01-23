@@ -240,7 +240,7 @@ class NextWizardButton extends StatelessWidget {
       routeData?.hasNext,
       wizard?.hasNext,
       rootWizard?.hasNext,
-    ].contains(true);
+    ].any((e) => e == null || e == true);
     final isLoading = [wizard?.isLoading, rootWizard?.isLoading].contains(true);
 
     return AnimatedBuilder(
