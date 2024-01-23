@@ -236,11 +236,11 @@ class NextWizardButton extends StatelessWidget {
     final rootWizard = Wizard.maybeOf(context, root: true);
     final routeData =
         (wizard?.routeData ?? rootWizard?.routeData) as WizardRouteData?;
-    final hasNext = [
-      routeData?.hasNext,
-      wizard?.hasNext,
-      rootWizard?.hasNext,
-    ].any((e) => e == null || e == true);
+    final hasNext = routeData?.hasNext ??
+        [
+          wizard?.hasNext,
+          rootWizard?.hasNext,
+        ].any((e) => e == null || e == true);
     final isLoading = [wizard?.isLoading, rootWizard?.isLoading].contains(true);
 
     return AnimatedBuilder(
