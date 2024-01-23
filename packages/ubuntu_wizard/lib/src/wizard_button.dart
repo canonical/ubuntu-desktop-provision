@@ -83,6 +83,16 @@ class _WizardButtonState extends State<WizardButton> {
   Timer? _loadingTimer;
 
   @override
+  void didUpdateWidget(WizardButton oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.loading && !widget.loading) {
+      activating = false;
+      showSpinner = false;
+      _cancelTimer();
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     if (widget.visible == false) {
       return const SizedBox.shrink();
@@ -98,6 +108,7 @@ class _WizardButtonState extends State<WizardButton> {
             await widget.onActivated?.call();
             if (mounted) {
               await widget.execute?.call();
+              _cancelTimer();
               setState(() {
                 activating = false;
                 showSpinner = false;
@@ -132,12 +143,17 @@ class _WizardButtonState extends State<WizardButton> {
   }
 
   void _startLoadingTimer() {
-    _loadingTimer?.cancel();
+    _cancelTimer();
     _loadingTimer = Timer(_kLoadingDelay, () {
       if (mounted && loading) {
         setState(() => showSpinner = true);
       }
     });
+  }
+
+  void _cancelTimer() {
+    _loadingTimer?.cancel();
+    _loadingTimer = null;
   }
 
   @override
@@ -166,11 +182,13 @@ class PreviousWizardButton extends StatelessWidget {
     final rootWizard = Wizard.maybeOf(context, root: true);
     final routeData =
         (wizard?.routeData ?? rootWizard?.routeData) as WizardRouteData?;
-    final hasPrevious = routeData?.hasPrevious ??
-        wizard?.hasPrevious ??
-        rootWizard?.hasPrevious ??
-        false;
-    final isLoading = wizard?.isLoading ?? rootWizard?.isLoading ?? false;
+    final hasPrevious = [
+      routeData?.hasPrevious,
+      wizard?.hasPrevious,
+      rootWizard?.hasPrevious,
+    ].contains(true);
+    final isLoading = [wizard?.isLoading, rootWizard?.isLoading].contains(true);
+
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
@@ -218,9 +236,13 @@ class NextWizardButton extends StatelessWidget {
     final rootWizard = Wizard.maybeOf(context, root: true);
     final routeData =
         (wizard?.routeData ?? rootWizard?.routeData) as WizardRouteData?;
-    final hasNext =
-        routeData?.hasNext ?? wizard?.hasNext ?? rootWizard?.hasNext ?? true;
-    final isLoading = wizard?.isLoading ?? rootWizard?.isLoading ?? false;
+    final hasNext = [
+      routeData?.hasNext,
+      wizard?.hasNext,
+      rootWizard?.hasNext,
+    ].contains(true);
+    final isLoading = [wizard?.isLoading, rootWizard?.isLoading].contains(true);
+
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
