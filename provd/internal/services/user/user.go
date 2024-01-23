@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"context"
 	"errors"
+	"fmt"
 	"log/slog"
 	"os"
 	"regexp"
@@ -46,14 +47,14 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	// Default objects initialization
 	s.accounts = conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
 
-	err := s.accounts.Call(consts.DbusPeerPrefix, 0).Err
+	err := s.accounts.Call(consts.DbusPeerPrefix+".Ping", 0).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
 	}
 
 	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
 
-	err = s.hostname.Call(consts.DbusPeerPrefix, 0).Err
+	err = s.hostname.Call(consts.DbusPeerPrefix+".Ping", 0).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Hostname object")
 	}
@@ -92,7 +93,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		// Rollback hostname
 		err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, currentHostname, false).Err
 		if err != nil {
-			slog.Error("failed to rollback hostname: %v", err)
+			slog.Error(fmt.Sprintf("failed to rollback hostname: %v", err))
 		}
 		// Delete user
 		if userID == 0 {
@@ -100,7 +101,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		}
 		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
 		if err != nil {
-			slog.Error("failed to rollback user: %v", err)
+			slog.Error(fmt.Sprintf("failed to rollback user: %v", err))
 		}
 	}()
 
