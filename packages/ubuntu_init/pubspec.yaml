@@ -39,17 +39,17 @@ dependencies:
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
   xdg_locale: ^0.0.1
-  yaru: 1.2.0
-  yaru_icons: 2.2.2
-  yaru_widgets: 3.3.1
+  yaru: 1.2.1
+  yaru_icons: 2.3.0
+  yaru_widgets: 3.4.0
 
 dev_dependencies:
-  build_runner: ^2.4.7
+  build_runner: ^2.4.8
   flutter_test:
     sdk: flutter
   integration_test:
     sdk: flutter
-  mockito: 5.4.3
+  mockito: 5.4.4
   ubuntu_lints: ^0.3.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-0
