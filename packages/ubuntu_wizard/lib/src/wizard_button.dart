@@ -80,6 +80,7 @@ class _WizardButtonState extends State<WizardButton> {
   bool activating = false;
   bool get loading => widget.loading || activating;
   bool showSpinner = false;
+  Timer? _loadingTimer;
 
   @override
   Widget build(BuildContext context) {
@@ -87,16 +88,13 @@ class _WizardButtonState extends State<WizardButton> {
       return const SizedBox.shrink();
     }
 
+    if (loading && _loadingTimer == null) {
+      _startLoadingTimer();
+    }
+
     final maybeActivate = (widget.enabled && !loading)
         ? () async {
             setState(() => activating = true);
-
-            Future.delayed(_kLoadingDelay, () {
-              if (mounted && loading) {
-                setState(() => showSpinner = true);
-              }
-            });
-
             await widget.onActivated?.call();
             if (mounted) {
               await widget.execute?.call();
@@ -131,6 +129,21 @@ class _WizardButtonState extends State<WizardButton> {
             )
           : Text(widget.label!),
     );
+  }
+
+  void _startLoadingTimer() {
+    _loadingTimer?.cancel();
+    _loadingTimer = Timer(_kLoadingDelay, () {
+      if (mounted && loading) {
+        setState(() => showSpinner = true);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _loadingTimer?.cancel();
+    super.dispose();
   }
 }
 
