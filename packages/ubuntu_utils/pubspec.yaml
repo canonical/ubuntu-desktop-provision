@@ -19,13 +19,13 @@ dependencies:
   ubuntu_localizations: ^0.3.4
   ubuntu_logger: ^0.1.0
   ubuntu_service: ^0.3.0
-  url_launcher: ^6.2.1
+  url_launcher: ^6.2.4
 
 dev_dependencies:
-  build_runner: ^2.4.7
+  build_runner: ^2.4.8
   flutter_test:
     sdk: flutter
-  mockito: 5.4.3
-  plugin_platform_interface: ^2.1.7
+  mockito: 5.4.4
+  plugin_platform_interface: ^2.1.8
   ubuntu_lints: ^0.3.0
-  url_launcher_platform_interface: ^2.2.0
+  url_launcher_platform_interface: ^2.3.1
