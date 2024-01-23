@@ -63,7 +63,7 @@ class SecurityKeyPage extends ConsumerWidget {
             enabled: ref.watch(
                 securityKeyModelProvider.select((model) => model.isValid)),
             onNext: ref.read(securityKeyModelProvider).saveSecurityKey,
-            onReturn: ref.read(securityKeyModelProvider).loadSecurityKey,
+            onExecute: ref.read(securityKeyModelProvider).loadSecurityKey,
           ),
         ],
       ),

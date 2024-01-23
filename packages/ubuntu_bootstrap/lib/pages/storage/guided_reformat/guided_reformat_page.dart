@@ -103,7 +103,7 @@ class GuidedReformatPage extends ConsumerWidget {
             // If the user returns back to select another disk, the previously
             // configured guided storage must be reset to avoid multiple disks
             // being configured for guided partitioning.
-            onReturn: model.resetGuidedStorage,
+            onExecute: model.resetGuidedStorage,
           ),
         ],
       ),

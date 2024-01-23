@@ -187,7 +187,7 @@ class NextWizardButton extends StatelessWidget {
     this.highlighted = false,
     this.arguments,
     this.onNext,
-    this.onReturn,
+    this.onExecute,
   });
 
   final String? label;
@@ -197,7 +197,7 @@ class NextWizardButton extends StatelessWidget {
   final bool highlighted;
   final Object? arguments;
   final WizardCallback? onNext;
-  final WizardCallback? onReturn;
+  final WizardCallback? onExecute;
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +232,7 @@ class NextWizardButton extends StatelessWidget {
               await rootWizard?.next(arguments: arguments);
             }
           }
-          onReturn?.call();
+          onExecute?.call();
         },
       ),
     );
