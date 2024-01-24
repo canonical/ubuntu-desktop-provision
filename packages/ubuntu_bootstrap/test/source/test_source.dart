@@ -60,6 +60,6 @@ Widget buildSourcePage(SourceModel model) {
       sourceModelProvider.overrideWith((_) => model),
       pageImagesProvider.overrideWith((_) => pageImages),
     ],
-    child: const SourcePage(),
+    child: SourcePage(),
   );
 }

@@ -13,7 +13,9 @@ export 'connect_model.dart' show ConnectMode;
 
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/30
 class NetworkPage extends ConsumerWidget with ProvisioningPage {
-  const NetworkPage({super.key});
+  NetworkPage({super.key});
+
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
@@ -38,8 +40,10 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
       expandContent: true,
       content: Scrollbar(
+        controller: _scrollController,
         thumbVisibility: true,
         child: SingleChildScrollView(
+          controller: _scrollController,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

@@ -15,7 +15,9 @@ export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 /// A page where the user can decide whether they want to install 3rd party
 /// drivers or codecs.
 class SourcePage extends ConsumerWidget with ProvisioningPage {
-  const SourcePage({super.key});
+  SourcePage({super.key});
+
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
@@ -35,8 +37,10 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
       content: Center(
         child: Scrollbar(
           thumbVisibility: true,
+          controller: _scrollController,
           child: ListView(
             shrinkWrap: true,
+            controller: _scrollController,
             children: [
               ...model.sources
                   .map((source) => Align(
