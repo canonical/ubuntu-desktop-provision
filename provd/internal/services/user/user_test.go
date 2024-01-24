@@ -14,12 +14,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
-	"github.com/godbus/dbus/v5"
-	"github.com/godbus/dbus/v5/introspect"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -154,6 +151,15 @@ func TestCreateUser(t *testing.T) {
 
 		wantErr bool
 	}{
+		// "Successfully creates a user":                     {},
+		// "Successfully creates an admin user":              {isAdmin: true},
+		// "Successfully set an user to login automatically": {autoLogin: true},
+
+		// // Specially cases
+		// "Successfully creates a user without realname": {realName: "-"},
+
+		// Error cases
+
 		"Successfully creates a user": {
 			realName:  "ok",
 			username:  "ok",
@@ -223,6 +229,8 @@ func TestCreateUser(t *testing.T) {
 				IsAdmin: tc.isAdmin,
 			}
 
+			tc.username = strings.ReplaceAll(t.Name(), " ", "") + "-" + tc.username
+
 			var logBuffer bytes.Buffer
 			log.SetOutput(&logBuffer)
 
@@ -233,9 +241,23 @@ func TestCreateUser(t *testing.T) {
 				if strings.Contains(logBuffer.String(), "ERROR") {
 					t.Errorf("Expected no error logs, but error logs found: %s", logBuffer.String())
 				}
+				// TODOOOOOOO
 				return
 			}
 			require.NoError(t, err, "CreateUser should not return an error, but did not")
+
+			// Missing assertions
+			// add the username
+			// access global object, and check that the user exists/not exists
+
+			// Alternative:
+			// no t.Parallel()
+			// os.Chdir(t.Tempdir()) // restore original dir
+			// The mock writes its action to the file: CreateUser(parameters), SetAutologin(true)
+			// This is your golden file. /tmp/path_based_on_testname/actions (<- contains the dbus account name actions and hostname actions)
+			// read from this string file: got
+			//
+			// want := testutils.LoadWithUpdateFromGolden(t, got)
 		})
 	}
 }
@@ -342,238 +364,29 @@ func newUserClient(t *testing.T) pb.UserServiceClient {
 	return pb.NewUserServiceClient(conn)
 }
 
-type accountsdbus struct{}
-
-func (a accountsdbus) Ping() *dbus.Error {
-	return nil
-}
-
-func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
-	if name == "error" {
-		return "", dbus.NewError("org.strange.error", []interface{}{"error"})
-	}
-	// This is used to also include the username in the error log, used to determine its an error because a user wasn't found.
-	if name != "ok" {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
-	}
-	return "/org/freedesktop/Accounts/Userok", nil
-}
-
-func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
-	if username != "ok" || realname != "ok" {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	}
-	return "/org/freedesktop/Accounts/Userok", nil
-}
-
-func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
-	return nil
-}
-
-type userdbus struct {
-	wantAutoLoginError bool
-}
-
-func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
-	return nil
-}
-
-func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
-	if u.wantAutoLoginError {
-		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
-	}
-	return nil
-}
-func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
-	return uint64(1), nil
-}
-
-type hostnamedbus struct {
-	staticHostname string
-}
-
-func (h hostnamedbus) Ping() *dbus.Error {
-	return nil
-}
-
-func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
-	if hostname != "ok" && hostname != "original" {
-		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error"})
-	}
-	return nil
-}
-
-func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
-	return h.staticHostname, nil
-}
-
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()
 	flag.Parse()
 	// export domains
+	/*  Use testutils/dbus.go to start and get the bus   */
 	defer testutils.StartLocalSystemBus()()
 
-	conn, err := dbus.SystemBusPrivate()
+	conn, err := testutils.GetSystemBusConnection()
+
 	if err != nil {
-		slog.Error("Setup: can't get a private system bus: %v", err)
-	}
-	defer func() {
-		if err = conn.Close(); err != nil {
-			slog.Error("Teardown: can't close system dbus connection: %v", err)
-		}
-	}()
-	if err = conn.Auth(nil); err != nil {
-		slog.Error("Setup: can't auth on private system bus: %v", err)
-	}
-	if err = conn.Hello(); err != nil {
-		slog.Error("Setup: can't send hello message on private system bus: %v", err)
+		slog.Error(fmt.Sprintf("Could not get system bus connection: %v", err))
+		os.Exit(1)
 	}
 
-	peer := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-            <method name="Ping">
-			</method>
-		</interface>̀%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
+	testutils.ExportAccountsMock(conn)
+	testutils.ExportHostnameMock(conn)
+	testutils.ExportUserMock(conn)
 
-	intro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-            <method name="FindUserByName">
-              <arg name="name" direction="in" type="s"/>
-              <arg name="user" direction="out" type="o"/>
-			</method>
-            <method name="CreateUser">
-              <arg name="username" direction="in" type="s"/>
-              <arg name="realName" direction="in" type="s"/>
-              <arg name="accountType" direction="in" type="i"/>
-              <arg name="user" direction="out" type="o"/>
-			</method>
-			<method name="DeleteUser">
-				<arg name="userID" direction="in" type="u"/>
-        	</method>
-		</interface>̀%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
-
-	a := accountsdbus{}
-	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusAccountsPrefix); err != nil {
-		slog.Error("Setup: could not export Accounts mock %v", err)
-	}
-	if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for accoutns mock: %v", err)
-	}
-
-	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusPeerPrefix); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/Accounts"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
-	}
-
-	reply, err := conn.RequestName(consts.DbusAccountsPrefix, dbus.NameFlagDoNotQueue)
-	if err != nil {
-		slog.Error("Setup: Failed to acquire account name on local system bus: %v", err)
-	}
-	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire account name on local system bus: name is already taken")
-	}
-
+	// global test variable
+	// accountUser = testutils.NewAccountuser()
 	// user dbus
 
-	userIntro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-            <method name="SetPassword">
-              <arg name="name" direction="in" type="s"/>
-              <arg name="hint" direction="in" type="s"/>
-			</method>
-            <method name="SetAutomaticLogin">
-              <arg name="autoLogin" direction="in" type="b"/>
-			</method>
-		</interface>̀
-		<interface name="org.freedesktop.DBus.Properties">
-		<method name="Get">
-			<arg name="interface" direction="in" type="s"/>
-			<arg name="property" direction="in" type="s"/>
-			<arg name="value" direction="out" type="v"/>
-		</method>
-	</interface>%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
-
-	u := userdbus{}
-
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), consts.DbusUserPrefix); err != nil {
-		slog.Error("Setup: could not export Userok mock: %v", err)
-	}
-	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/Userok"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Userok: %v", err)
-	}
-
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), "org.freedesktop.DBus.Properties"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	reply, err = conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
-	if err != nil {
-		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
-	}
-	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
-	}
-
 	// hostname dbus
-	hostnameIntro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-			<method name="SetStaticHostname">
-				<arg name="hostname" direction="in" type="s"/>
-				<arg name="someBool" direction="in" type="b"/>
-			</method>
-			<property name="StaticHostname" type="s" access="read"/>
-		</interface>
-		<interface name="org.freedesktop.DBus.Properties">
-			<method name="Get">
-				<arg name="interface" direction="in" type="s"/>
-				<arg name="property" direction="in" type="s"/>
-				<arg name="value" direction="out" type="v"/>
-			</method>
-		</interface>
-	</node>`, consts.DbusHostnamePrefix)
-
-	h := hostnamedbus{
-		staticHostname: "original",
-	}
-
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusHostnamePrefix); err != nil {
-		slog.Error("Setup: could not export hostname1 mock: %v", err)
-	}
-	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for hostname1 mock: %v", err)
-	}
-
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusPeerPrefix); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Properties"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
-	}
-
-	reply, err = conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
-	if err != nil {
-		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
-	}
-	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
-	}
 
 	m.Run()
 }
