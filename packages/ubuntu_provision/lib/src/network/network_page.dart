@@ -37,40 +37,50 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.networkPageTitle,
       title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
       expandContent: true,
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(lang.networkPageHeader),
-          const SizedBox(height: kWizardSpacing),
-          EthernetRadioButton(
-            value: model.connectMode,
-            onChanged: (_) => model.selectConnectMode(ConnectMode.ethernet),
-          ),
-          EthernetView(
-            expanded: model.connectMode == ConnectMode.ethernet,
-            onEnabled: () => model.selectConnectMode(ConnectMode.ethernet),
-          ),
-          WifiRadioButton(
-            value: model.connectMode,
-            onChanged: (_) => model.selectConnectMode(ConnectMode.wifi),
-          ),
-          WifiView(
-            expanded: model.connectMode == ConnectMode.wifi,
-            onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
-            onSelected: (_, __) => model.selectConnectMode(ConnectMode.wifi),
-          ),
-          HiddenWifiRadioButton(
-            value: model.connectMode,
-            onChanged: (_) => model.selectConnectMode(ConnectMode.hiddenWifi),
-          ),
-          HiddenWifiView(
-            expanded: model.connectMode == ConnectMode.hiddenWifi,
-          ),
-          NoConnectView(
-            value: model.connectMode,
-            onChanged: (_) => model.selectConnectMode(ConnectMode.none),
-          ),
-        ],
+      content: Scrollbar(
+        thumbVisibility: true,
+        child: ListView(
+          shrinkWrap: true,
+          children: <Widget>[
+            Text(lang.networkPageHeader),
+            const SizedBox(height: kWizardSpacing),
+            EthernetRadioButton(
+              value: model.connectMode,
+              onChanged: (_) => model.selectConnectMode(ConnectMode.ethernet),
+            ),
+            EthernetView(
+              expanded: model.connectMode == ConnectMode.ethernet,
+              onEnabled: () => model.selectConnectMode(ConnectMode.ethernet),
+            ),
+            WifiRadioButton(
+              value: model.connectMode,
+              onChanged: (_) => model.selectConnectMode(ConnectMode.wifi),
+            ),
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: model.connectMode == ConnectMode.wifi ? 100 : 0,
+                maxHeight: 200,
+              ),
+              child: WifiView(
+                expanded: model.connectMode == ConnectMode.wifi,
+                onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
+                onSelected: (_, __) =>
+                    model.selectConnectMode(ConnectMode.wifi),
+              ),
+            ),
+            HiddenWifiRadioButton(
+              value: model.connectMode,
+              onChanged: (_) => model.selectConnectMode(ConnectMode.hiddenWifi),
+            ),
+            HiddenWifiView(
+              expanded: model.connectMode == ConnectMode.hiddenWifi,
+            ),
+            NoConnectView(
+              value: model.connectMode,
+              onChanged: (_) => model.selectConnectMode(ConnectMode.none),
+            ),
+          ],
+        ),
       ),
       bottomBar: WizardBar(
         leading: const PreviousWizardButton(),
