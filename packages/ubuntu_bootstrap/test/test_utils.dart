@@ -8,6 +8,7 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
 import '../../ubuntu_provision/test/test_utils.mocks.dart';
 
 export '../../ubuntu_provision/test/test_utils.mocks.dart';
@@ -57,23 +58,19 @@ class _Dummy {} // ignore: unused_element
 /// Registers a mock [PageConfigService].
 ///
 /// The [overridePages] argument will override the pages that are returned
-/// if provided. If [overridePages] are defined, [excludePages] will be ignored.
-/// All pages defined in [InstallationStep] except `welcome` are returned by default.
+/// if provided. All pages defined in [InstallationStep] except `welcome` are
+/// returned by default.
 void setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
-  List<String> excludePages = const ['welcome'],
+  List<String> excludedPages = const ['welcome'],
 }) {
   final pages = overridePages ??
-      Map.fromEntries(
-        InstallationStep.values
-            .map((step) => MapEntry(step.name, const PageConfigEntry()))
-            .where((entry) => !excludePages.contains(entry.key)),
-      );
+      Map.fromEntries(InstallationStep.values
+          .map((step) => MapEntry(step.name, const PageConfigEntry())));
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
-  when(pageConfigService.excludedPages).thenReturn([]);
-  when(pageConfigService.includedPages).thenReturn(pages.keys.toList());
+  when(pageConfigService.excludedPages).thenReturn(excludedPages);
 }
 
 const keyboardSetup = KeyboardSetup(

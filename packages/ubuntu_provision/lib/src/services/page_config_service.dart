@@ -1,15 +1,11 @@
 import 'package:collection/collection.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:yaml/yaml.dart';
 
 part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';
-
-final pageConfigProvider = Provider((ref) => getService<PageConfigService>());
 
 final _log = Logger('page');
 
@@ -21,13 +17,11 @@ class PageConfigService {
   final Map<String, PageConfigEntry> pages = {};
   final bool includeWelcome;
 
-  List<String> get includedPages => pages.entries
-      .where((e) => e.value.visible && (includeWelcome || e.key != 'welcome'))
+  List<String> get excludedPages => pages.entries
+      .whereNot(
+          (e) => e.value.visible && (includeWelcome || e.key != 'welcome'))
       .map((e) => e.key)
       .toList();
-
-  List<String> get excludedPages =>
-      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toList();
 
   Future<void> load() async {
     final pageConfig = PageConfig.fromJson({

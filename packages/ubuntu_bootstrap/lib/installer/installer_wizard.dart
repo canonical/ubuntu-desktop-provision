@@ -52,15 +52,12 @@ class _InstallWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageConfig = ref.watch(pageConfigProvider);
     final preInstallRoutes = <String, WizardRoute>{
-      for (final pageName in pageConfig.includedPages)
-        Routes.routeMap[pageName]!:
-            InstallationStep.fromName(pageName)!.toRoute(context, ref)
+      for (final step in InstallationStep.values)
+        Routes.routeMap[step.name]!: step.toRoute(context, ref)
     };
-    final totalSteps = InstallationStep.fromName(pageConfig.includedPages.last)!
-            .pageIndex(ref) +
-        1;
+    final totalSteps =
+        InstallationStep.values.where((value) => value.discreteStep).length;
 
     return WizardBuilder(
       initialRoute: Routes.initial,

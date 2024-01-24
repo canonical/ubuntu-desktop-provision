@@ -21,14 +21,12 @@ enum InitStep {
   final ProvisioningPage Function() pageFactory;
   final bool hasPrevious;
 
-  WizardRoute? toRoute(BuildContext context, WidgetRef ref) {
-    final pageConfig = ref.watch(pageConfigProvider);
-    final includedIndex = pageConfig.includedPages.indexOf(name);
+  WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();
     return WizardRoute(
       builder: (_) => page,
       userData: WizardRouteData(
-        step: includedIndex,
+        step: values.indexOf(this),
         hasPrevious: hasPrevious,
       ),
       onLoad: (_) => page.load(context, ref),
@@ -38,6 +36,6 @@ enum InitStep {
   String get name => toString().split('.').last;
 
   static InitStep? fromName(String name) {
-    return InitStep.values.firstOrNullWhere((e) => e.name == name);
+    return values.firstOrNullWhere((e) => e.name == name);
   }
 }

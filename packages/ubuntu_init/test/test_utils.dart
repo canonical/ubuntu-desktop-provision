@@ -13,6 +13,7 @@ import 'package:yaru/yaru.dart';
 
 import 'init_model_test.mocks.dart';
 import 'test_utils.mocks.dart';
+
 export 'test_utils.mocks.dart';
 
 extension UbuntuInitTester on WidgetTester {
@@ -48,7 +49,6 @@ void setupMockPageConfig({Map<String, PageConfigEntry>? overridePages}) {
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
   when(pageConfigService.excludedPages).thenReturn([]);
-  when(pageConfigService.includedPages).thenReturn(pages.keys.toList());
 }
 
 @GenerateMocks([InitModel])

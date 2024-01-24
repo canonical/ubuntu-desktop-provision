@@ -19,9 +19,9 @@ pages:
   source:
     title: "Applications and updates"
     image: "packages/ubuntu_provision/assets/icons/mascot.svg"
-  notEnoughDiskSpace:
+  not-enough-disk-space:
     title: "Not enough disk space"
-  secureBoot:
+  secure-boot:
     title: "Configure Secure Boot"
   storage:
     title: "Type of installation"
