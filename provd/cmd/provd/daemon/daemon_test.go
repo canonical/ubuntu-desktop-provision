@@ -14,10 +14,8 @@ import (
 	"time"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	"github.com/godbus/dbus/v5"
-	"github.com/godbus/dbus/v5/introspect"
 	"github.com/stretchr/testify/require"
 )
 
@@ -403,66 +401,15 @@ func TestMain(m *testing.M) {
 
 	defer testutils.StartLocalSystemBus()()
 
-	conn, err := dbus.SystemBusPrivate()
+	conn, err := testutils.GetSystemBusConnection()
+
 	if err != nil {
-		slog.Error("Setup: can't get a private system bus: %v", err)
-	}
-	defer func() {
-		if err = conn.Close(); err != nil {
-			slog.Error("Teardown: can't close system dbus connection: %v", err)
-		}
-	}()
-	if err = conn.Auth(nil); err != nil {
-		slog.Error("Setup: can't auth on private system bus: %v", err)
-	}
-	if err = conn.Hello(); err != nil {
-		slog.Error("Setup: can't send hello message on private system bus: %v", err)
+		slog.Error(fmt.Sprintf("Could not get system bus connection: %v", err))
+		os.Exit(1)
 	}
 
-	peer := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-            <method name="Ping">
-			</method>
-		</interface>̀%s</node>`, "org.freedesktop.DBus.Peer", introspect.IntrospectDataString)
-
-	a := accountsdbus{}
-
-	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Peer"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/Accounts"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
-	}
-
-	reply, err := conn.RequestName(consts.DbusAccountsPrefix, dbus.NameFlagDoNotQueue)
-	if err != nil {
-		slog.Error("Setup: Failed to acquire account name on local system bus: %v", err)
-	}
-	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire account name on local system bus: name is already taken")
-	}
-
-	h := hostnamedbus{}
-
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Peer"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
-	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
-	}
-
-	reply, err = conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
-	if err != nil {
-		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
-	}
-	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
-	}
+	testutils.ExportAccountsMock(conn)
+	testutils.ExportHostnameMock(conn)
 
 	m.Run()
 }
