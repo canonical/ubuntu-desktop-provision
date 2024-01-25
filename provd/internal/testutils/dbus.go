@@ -131,160 +131,155 @@ func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *
 }
 
 // ExportHostnameMock exports the hostname mock to the system bus.
-func ExportHostnameMock(conn *dbus.Conn) {
+func ExportHostnameMock(conn *dbus.Conn) error {
 	peer := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
+    <node>
+        <interface name="%s">
             <method name="Ping">
-			</method>
-		</interface>̀%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
+            </method>
+        </interface>%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
 
 	hostnameIntro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
-			<method name="SetStaticHostname">
-				<arg name="hostname" direction="in" type="s"/>
-				<arg name="someBool" direction="in" type="b"/>
-			</method>
-			<property name="StaticHostname" type="s" access="read"/>
-		</interface>
-		<interface name="org.freedesktop.DBus.Properties">
-			<method name="Get">
-				<arg name="interface" direction="in" type="s"/>
-				<arg name="property" direction="in" type="s"/>
-				<arg name="value" direction="out" type="v"/>
-			</method>
-		</interface>
-	</node>`, consts.DbusHostnamePrefix)
+    <node>
+        <interface name="%s">
+            <method name="SetStaticHostname">
+                <arg name="hostname" direction="in" type="s"/>
+                <arg name="someBool" direction="in" type="b"/>
+            </method>
+            <property name="StaticHostname" type="s" access="read"/>
+        </interface>
+        <interface name="org.freedesktop.DBus.Properties">
+            <method name="Get">
+                <arg name="interface" direction="in" type="s"/>
+                <arg name="property" direction="in" type="s"/>
+                <arg name="value" direction="out" type="v"/>
+            </method>
+        </interface>
+    </node>`, consts.DbusHostnamePrefix)
 
 	h := hostnamedbus{
 		staticHostname: "original",
 	}
 
 	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusHostnamePrefix); err != nil {
-		slog.Error("Setup: could not export hostname1 mock: %v", err)
+		return fmt.Errorf("could not export hostname1 mock: %w", err)
 	}
-	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for hostname1 mock: %v", err)
+	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Introspectable"); err != nil {
+		return fmt.Errorf("could not export introspectable for hostname1 mock: %w", err)
 	}
-
 	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusPeerPrefix); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
+		return fmt.Errorf("could not export Peer mock: %w", err)
 	}
-
 	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Properties"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
+		return fmt.Errorf("could not export DBus Properties mock: %w", err)
 	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
+	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Introspectable"); err != nil {
+		return fmt.Errorf("could not export introspectable for Peer mock: %w", err)
 	}
 
 	reply, err := conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
-		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
+		return fmt.Errorf("failed to acquire hostname name on local system bus: %w", err)
 	}
 	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
+		return fmt.Errorf("hostname name is already taken on local system bus")
 	}
+
+	return nil
 }
 
 // ExportUserMock exports the user mock to the system bus.
-func ExportUserMock(conn *dbus.Conn) {
+func ExportUserMock(conn *dbus.Conn) error {
 	userIntro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
+    <node>
+        <interface name="%s">
             <method name="SetPassword">
               <arg name="name" direction="in" type="s"/>
               <arg name="hint" direction="in" type="s"/>
-			</method>
+            </method>
             <method name="SetAutomaticLogin">
               <arg name="autoLogin" direction="in" type="b"/>
-			</method>
-		</interface>̀
-		<interface name="org.freedesktop.DBus.Properties">
-		<method name="Get">
-			<arg name="interface" direction="in" type="s"/>
-			<arg name="property" direction="in" type="s"/>
-			<arg name="value" direction="out" type="v"/>
-		</method>
-	</interface>%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
+            </method>
+        </interface>
+        <interface name="org.freedesktop.DBus.Properties">
+            <method name="Get">
+                <arg name="interface" direction="in" type="s"/>
+                <arg name="property" direction="in" type="s"/>
+                <arg name="value" direction="out" type="v"/>
+            </method>
+        </interface>%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
 
 	u := userdbus{}
 
 	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), consts.DbusUserPrefix); err != nil {
-		slog.Error("Setup: could not export UserMockUser mock: %v", err)
+		return fmt.Errorf("could not export UserMockUser mock: %w", err)
 	}
-	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for UserMockUser: %v", err)
+	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), "org.freedesktop.DBus.Introspectable"); err != nil {
+		return fmt.Errorf("could not export introspectable for UserMockUser: %w", err)
 	}
-
 	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), "org.freedesktop.DBus.Properties"); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
+		return fmt.Errorf("could not export DBus Properties mock: %w", err)
 	}
 
 	reply, err := conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
-		slog.Error("Setup: Failed to acquire user name on local system bus: %v", err)
+		return fmt.Errorf("failed to acquire user name on local system bus: %w", err)
 	}
 	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire user name on local system bus: name is already taken")
+		return fmt.Errorf("user name is already taken on local system bus")
 	}
+
+	return nil
 }
 
 // ExportAccountsMock exports the accounts mock to the system bus.
-func ExportAccountsMock(conn *dbus.Conn) {
+func ExportAccountsMock(conn *dbus.Conn) error {
 	peer := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
+    <node>
+        <interface name="%s">
             <method name="Ping">
-			</method>
-		</interface>̀%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
+            </method>
+        </interface>%s</node>`, consts.DbusPeerPrefix, introspect.IntrospectDataString)
 
 	intro := fmt.Sprintf(`
-	<node>
-		<interface name="%s">
+    <node>
+        <interface name="%s">
             <method name="FindUserByName">
               <arg name="name" direction="in" type="s"/>
               <arg name="user" direction="out" type="o"/>
-			</method>
+            </method>
             <method name="CreateUser">
               <arg name="username" direction="in" type="s"/>
               <arg name="realName" direction="in" type="s"/>
               <arg name="accountType" direction="in" type="i"/>
               <arg name="user" direction="out" type="o"/>
-			</method>
-			<method name="DeleteUser">
-				<arg name="userID" direction="in" type="u"/>
-        	</method>
-		</interface>̀%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
+            </method>
+            <method name="DeleteUser">
+                <arg name="userID" direction="in" type="u"/>
+            </method>
+        </interface>%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
 
 	a := accountsdbus{}
 	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusAccountsPrefix); err != nil {
-		slog.Error("Setup: could not export Accounts mock %v", err)
+		return fmt.Errorf("could not export Accounts mock: %w", err)
 	}
-	if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for accoutns mock: %v", err)
+	if err := conn.Export(introspect.Introspectable(intro), dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Introspectable"); err != nil {
+		return fmt.Errorf("could not export introspectable for accounts mock: %w", err)
 	}
-
 	if err := conn.Export(a, dbus.ObjectPath("/org/freedesktop/Accounts"), consts.DbusPeerPrefix); err != nil {
-		slog.Error("Setup: could not export Peer mock %v", err)
+		return fmt.Errorf("could not export Peer mock: %w", err)
 	}
-
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/Accounts"),
-		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Peer mock: %v", err)
+	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/Accounts"), "org.freedesktop.DBus.Introspectable"); err != nil {
+		return fmt.Errorf("could not export introspectable for Peer mock: %w", err)
 	}
 
 	reply, err := conn.RequestName(consts.DbusAccountsPrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
-		slog.Error("Setup: Failed to acquire account name on local system bus: %v", err)
+		return fmt.Errorf("failed to acquire account name on local system bus: %w", err)
 	}
 	if reply != dbus.RequestNameReplyPrimaryOwner {
-		slog.Error("Setup: Failed to acquire account name on local system bus: name is already taken")
+		return fmt.Errorf("failed to acquire account name on local system bus: name is already taken")
 	}
+
+	return nil
 }

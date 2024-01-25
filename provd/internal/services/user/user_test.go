@@ -301,9 +301,20 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
-	testutils.ExportAccountsMock(conn)
-	testutils.ExportHostnameMock(conn)
-	testutils.ExportUserMock(conn)
-
+	err = testutils.ExportAccountsMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Accounts mock: %v", err))
+		os.Exit(1)
+	}
+	err = testutils.ExportHostnameMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
+		os.Exit(1)
+	}
+	err = testutils.ExportUserMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export User mock: %v", err))
+		os.Exit(1)
+	}
 	m.Run()
 }
