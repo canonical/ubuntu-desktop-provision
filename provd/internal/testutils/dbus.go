@@ -41,7 +41,7 @@ func (a accountsdbus) Ping() *dbus.Error {
 
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 	if name == "find-user-by-name-error" {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.FindUserByNameError", []interface{}{"FindUserByNameError"})
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.FindUserByNameError", []interface{}{"error requested in FindUserByNameError mocked method"})
 	}
 	// This is used to also include the username in the error log, used to determine its an error because a user wasn't found.
 	if name == "find-user-by-name-not-found" {
@@ -54,7 +54,7 @@ func (a accountsdbus) CreateUser(username string, realname string, accountType i
 	// testname, username, _ = strings.Cut(username, "-")
 
 	if username == "create-user-error" {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"CreateUserErrorUsername"})
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in CreateUserErrorUsername mocked method"})
 	}
 	// check if it’s already in the map first
 	//a.Users.Store()
@@ -78,7 +78,7 @@ func (h hostnamedbus) Ping() *dbus.Error {
 
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
 	if hostname == "set-static-hostname-error" {
-		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"SetStaticHostnameError"})
+		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in SetStaticHostname mocked method"})
 	}
 	return nil
 }
@@ -97,7 +97,7 @@ func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
 
 func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
 	if u.wantAutoLoginError {
-		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in SetAutomaticLogin mocked method"})
 	}
 	return nil
 }
