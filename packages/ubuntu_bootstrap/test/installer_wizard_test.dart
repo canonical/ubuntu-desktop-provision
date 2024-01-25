@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -369,8 +368,8 @@ extension on WidgetTester {
   }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
-      return !excludedPages
-          .contains((i.positionalArguments.first as String).removePrefix('/'));
+      return !excludedPages.contains(
+          (i.positionalArguments.first as String).replaceFirst('/', ''));
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);

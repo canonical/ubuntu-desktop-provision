@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/providers.dart';
@@ -70,7 +69,7 @@ class HorizontalPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final name = ModalRoute.of(context)!.settings.name!.removePrefix('/');
+    final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final icon = ref.watch(pageImagesProvider).get(name, context);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;

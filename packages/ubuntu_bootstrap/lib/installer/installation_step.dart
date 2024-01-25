@@ -1,4 +1,4 @@
-import 'package:dartx/dartx.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
@@ -49,6 +49,6 @@ enum InstallationStep {
   String get name => toString().split('.').last;
 
   static InstallationStep? fromName(String name) {
-    return values.firstOrNullWhere((e) => e.name == name);
+    return values.firstWhereOrNull((e) => e.name == name);
   }
 }

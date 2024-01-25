@@ -1,5 +1,4 @@
 import 'package:collection/collection.dart' hide ListExtensions;
-import 'package:dartx/dartx.dart' hide IterableSorted, IterableLastOrNull;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';

@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -97,7 +96,7 @@ class _InstallerObserver extends NavigatorObserver {
   @override
   void didPush(Route<Object?> route, Route<Object?>? previousRoute) {
     if (route.settings.name != null) {
-      _telemetry.addStage(route.settings.name!.removePrefix('/'));
+      _telemetry.addStage(route.settings.name!.replaceFirst('/', ''));
     }
   }
 }

@@ -1,4 +1,4 @@
-import 'package:dartx/dartx.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -129,7 +129,7 @@ class TpmOption extends StatelessWidget {
 
     final target = model
         .getAllTargets()
-        .firstOrNullWhere((t) => t is GuidedStorageTargetReformat);
+        .firstWhereOrNull((t) => t is GuidedStorageTargetReformat);
 
     if (target == null) return const SizedBox();
 

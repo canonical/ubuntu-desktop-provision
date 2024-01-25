@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -57,8 +56,8 @@ InitModel buildInitModel({List<String>? pages}) {
   when(model.hasRoute(any)).thenAnswer((i) {
     final a = i.positionalArguments.single as String;
     return pages
-            ?.map((r) => r.removePrefix('/'))
-            .contains(a.removePrefix('/')) ??
+            ?.map((r) => r.replaceFirst('/', ''))
+            .contains(a.replaceFirst('/', '')) ??
         true;
   });
   return model;
