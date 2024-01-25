@@ -43,6 +43,8 @@ Future<void> runInitApp(
     log.debug('Loading page config');
     await getService<PageConfigService>().load();
 
+    final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
+
     runApp(ProviderScope(
       child: Consumer(
         builder: (context, ref, child) {
@@ -65,7 +67,9 @@ Future<void> runInitApp(
             supportedLocales: supportedLocales,
             home: DefaultAssetBundle(
               bundle: ProxyAssetBundle(rootBundle, package: package),
-              child: InitWizard(onDone: onDone),
+              child: welcome
+                  ? WelcomeWizard(onDone: onDone)
+                  : InitWizard(onDone: onDone),
             ),
           );
         },

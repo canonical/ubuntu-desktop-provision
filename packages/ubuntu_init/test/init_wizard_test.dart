@@ -35,7 +35,6 @@ void main() {
 
   testWidgets('init', (tester) async {
     final initModel = buildInitModel();
-    final welcomeModel = buildWelcomeModel();
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -51,7 +50,6 @@ void main() {
       ProviderScope(
         overrides: [
           initModelProvider.overrideWith((_) => initModel),
-          welcomeModelProvider.overrideWith((_) => welcomeModel),
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -71,10 +69,6 @@ void main() {
 
     await tester.pump(const Duration(seconds: 1));
 
-    await tester.pumpAndSettle();
-    expect(find.byType(WelcomePage), findsOneWidget);
-
-    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
 
@@ -112,6 +106,33 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(TelemetryPage), findsOneWidget);
     verify(telemetryModel.init()).called(1);
+
+    await tester.tapDone();
+    await tester.pumpAndSettle();
+
+    await expectLater(windowClosed, completes);
+  });
+
+  testWidgets('welcome', (tester) async {
+    final initModel = buildInitModel();
+    final welcomeModel = buildWelcomeModel();
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          initModelProvider.overrideWith((_) => initModel),
+          welcomeModelProvider.overrideWith((_) => welcomeModel),
+        ],
+        child: tester.buildTestWizard(welcome: true),
+      ),
+    );
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+
+    await tester.pump(const Duration(seconds: 1));
+
+    await tester.pumpAndSettle();
+    expect(find.byType(WelcomePage), findsOneWidget);
 
     await tester.tapDone();
     await tester.pumpAndSettle();
@@ -174,13 +195,13 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard() {
+  Widget buildTestWizard({bool welcome = false}) {
     return WizardApp(
       localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
       supportedLocales: supportedLocales,
       home: DefaultAssetBundle(
         bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
-        child: const InitWizard(),
+        child: welcome ? const WelcomeWizard() : const InitWizard(),
       ),
     );
   }

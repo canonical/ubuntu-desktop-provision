@@ -33,6 +33,10 @@ Future<void> registerInitServices(List<String> args) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {
       parser.addOption('config', valueHelp: 'path', help: 'Config file path');
       parser.addOption('pages', hide: true);
+      parser.addFlag(
+        'welcome',
+        help: 'Show welcome wizard',
+      );
     });
     registerServiceInstance<ArgResults>(options!);
   }

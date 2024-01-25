@@ -6,7 +6,6 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InitStep {
-  welcome(WelcomePage.new),
   locale(LocalePage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
@@ -36,6 +35,31 @@ enum InitStep {
   String get name => toString().split('.').last;
 
   static InitStep? fromName(String name) {
+    return values.firstWhereOrNull((e) => e.name == name);
+  }
+}
+
+enum WelcomeStep {
+  welcome(WelcomePage.new);
+
+  const WelcomeStep(this.pageFactory);
+
+  final ProvisioningPage Function() pageFactory;
+
+  WizardRoute toRoute(BuildContext context, WidgetRef ref) {
+    final page = pageFactory();
+    return WizardRoute(
+      builder: (_) => page,
+      userData: WizardRouteData(
+        step: values.indexOf(this),
+      ),
+      onLoad: (_) => page.load(context, ref),
+    );
+  }
+
+  String get name => toString().split('.').last;
+
+  static WelcomeStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
 }
