@@ -10,7 +10,6 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
-	"github.com/godbus/dbus/v5"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 )
@@ -66,18 +65,6 @@ func requireEqualServices(t *testing.T, want, got map[string]grpc.ServiceInfo) {
 		delete(got, name)
 	}
 	require.Empty(t, got, "Expected no extra services, but got %v", got)
-}
-
-type accountsdbus struct{}
-
-func (a accountsdbus) Ping() *dbus.Error {
-	return nil
-}
-
-type hostnamedbus struct{}
-
-func (h hostnamedbus) Ping() *dbus.Error {
-	return nil
 }
 
 func TestMain(m *testing.M) {

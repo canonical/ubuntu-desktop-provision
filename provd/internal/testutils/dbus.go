@@ -33,8 +33,9 @@ func isRunning() bool {
 	return !(busAddr == "" || busAddr == defaultSystemBusAddress)
 }
 
+// writes the action to a file, compared against goldenfiles to test the correct actions are being called.
 func writeActionToFile(action string) {
-	f, err := os.OpenFile("actions", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f, err := os.OpenFile("actions", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0600)
 	if err != nil {
 		slog.Error(fmt.Sprintf("Error opening file: %v", err))
 		os.Exit(1)
@@ -129,6 +130,7 @@ func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *
 	return uint64(1), nil
 }
 
+// ExportHostnameMock exports the hostname mock to the system bus.
 func ExportHostnameMock(conn *dbus.Conn) {
 	peer := fmt.Sprintf(`
 	<node>
@@ -189,6 +191,7 @@ func ExportHostnameMock(conn *dbus.Conn) {
 	}
 }
 
+// ExportUserMock exports the user mock to the system bus.
 func ExportUserMock(conn *dbus.Conn) {
 	userIntro := fmt.Sprintf(`
 	<node>
@@ -232,6 +235,7 @@ func ExportUserMock(conn *dbus.Conn) {
 	}
 }
 
+// ExportAccountsMock exports the accounts mock to the system bus.
 func ExportAccountsMock(conn *dbus.Conn) {
 	peer := fmt.Sprintf(`
 	<node>

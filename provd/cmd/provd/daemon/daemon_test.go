@@ -15,7 +15,6 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/cmd/provd/daemon"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
-	"github.com/godbus/dbus/v5"
 	"github.com/stretchr/testify/require"
 )
 
@@ -381,18 +380,6 @@ func captureStdout(t *testing.T) func() string {
 
 		return out.String()
 	}
-}
-
-type accountsdbus struct{}
-
-func (a accountsdbus) Ping() *dbus.Error {
-	return nil
-}
-
-type hostnamedbus struct{}
-
-func (h hostnamedbus) Ping() *dbus.Error {
-	return nil
 }
 
 func TestMain(m *testing.M) {

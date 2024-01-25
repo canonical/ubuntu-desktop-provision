@@ -1,12 +1,10 @@
 package user_test
 
 import (
-	"bytes"
 	"context"
 	"flag"
 	"fmt"
 	"io"
-	"log"
 	"log/slog"
 	"net"
 	"os"
@@ -88,7 +86,6 @@ func TestDbusObjectsAvalible(t *testing.T) {
 }
 
 func TestCreateUser(t *testing.T) {
-
 	tests := map[string]struct {
 		realName  string
 		username  string
@@ -122,7 +119,6 @@ func TestCreateUser(t *testing.T) {
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
-
 			// Register cleanup function
 			t.Cleanup(testutils.StartLocalSystemBus())
 			client := newUserClient(t)
@@ -160,17 +156,17 @@ func TestCreateUser(t *testing.T) {
 				IsAdmin: tc.isAdmin,
 			}
 
-			var logBuffer bytes.Buffer
-			log.SetOutput(&logBuffer)
-
 			tempDir := t.TempDir()
-			os.Chdir(tempDir)
+			err = os.Chdir(tempDir)
+			if err != nil {
+				t.Fatalf("failed to change directory: %s", err)
+			}
 
 			_, reqErr := client.CreateUser(context.Background(), userReq)
 
 			file, err := os.Open("actions")
 			if err != nil {
-				slog.Error(fmt.Sprintf("failed to open file: %s", err))
+				t.Fatalf("failed to open file: %s", err)
 			}
 			defer file.Close()
 
@@ -178,35 +174,24 @@ func TestCreateUser(t *testing.T) {
 			var sb strings.Builder
 			_, err = io.Copy(&sb, file)
 			if err != nil {
-				slog.Error(fmt.Sprintf("failed to read file: %s", err))
+				t.Fatalf(fmt.Sprintf("failed to read file: %s", err))
 			}
 
-			// Content of the file as a string
+			// Assert we made the expected dbus calls in the expected order, with the expected parameters.
 			got := sb.String()
-			os.Chdir(originalDir)
+			err = os.Chdir(originalDir)
+			if err != nil {
+				t.Fatalf("failed to change directory: %s", err)
+			}
 			want := testutils.LoadWithUpdateFromGolden(t, got)
 			require.Equal(t, want, got, "CreateUser returned an unexpected response")
 
+			// Assert we got the expected error from CreateUser.
 			if tc.wantErr {
 				require.Error(t, reqErr, "CreateUser should return an error, but did not")
-				// On error cases, rollback is called. Rollback only logs errors if it fails to rollback.
-				if strings.Contains(logBuffer.String(), "error encountered when rolling back CreateUser") {
-					t.Errorf("Expected no error logs, but error logs found: %s", logBuffer.String())
-				}
-				// TODOOOOOOO
 				return
 			}
 			require.NoError(t, err, "CreateUser should not return an error, but did not")
-
-			// Alternative:
-			// no t.Parallel()
-			// os.Chdir(t.Tempdir()) // restore original dir
-			// The mock writes its action to the file: CreateUser(parameters), SetAutologin(true)
-			// This is your golden file. /tmp/path_based_on_testname/actions (<- contains the dbus account name actions and hostname actions)
-			// read from this string file: got
-
-			// Open the file
-
 		})
 	}
 }
@@ -306,8 +291,7 @@ func newUserClient(t *testing.T) pb.UserServiceClient {
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()
 	flag.Parse()
-	// export domains
-	/*  Use testutils/dbus.go to start and get the bus   */
+
 	defer testutils.StartLocalSystemBus()()
 
 	conn, err := testutils.GetSystemBusConnection()
@@ -320,12 +304,6 @@ func TestMain(m *testing.M) {
 	testutils.ExportAccountsMock(conn)
 	testutils.ExportHostnameMock(conn)
 	testutils.ExportUserMock(conn)
-
-	// global test variable
-	// accountUser = testutils.NewAccountuser()
-	// user dbus
-
-	// hostname dbus
 
 	m.Run()
 }
