@@ -238,7 +238,7 @@ func TestCreateUser(t *testing.T) {
 			if tc.wantErr {
 				require.Error(t, err, "CreateUser should return an error, but did not")
 				// On error cases, rollback is called. Rollback only logs errors if it fails to rollback.
-				if strings.Contains(logBuffer.String(), "ERROR") {
+				if strings.Contains(logBuffer.String(), "error encountered when rolling back CreateUser") {
 					t.Errorf("Expected no error logs, but error logs found: %s", logBuffer.String())
 				}
 				// TODOOOOOOO

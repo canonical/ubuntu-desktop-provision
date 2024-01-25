@@ -93,7 +93,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		// Rollback hostname
 		err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, currentHostname, false).Err
 		if err != nil {
-			slog.Error(fmt.Sprintf("failed to rollback hostname: %v", err))
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
 		}
 		// Delete user
 		if userID == 0 {
@@ -101,7 +101,7 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		}
 		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
 		if err != nil {
-			slog.Error(fmt.Sprintf("failed to rollback user: %v", err))
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
 		}
 	}()
 
