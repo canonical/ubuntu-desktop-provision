@@ -194,7 +194,7 @@ func TestCreateUser(t *testing.T) {
 		},
 		"Error from Accounts service": {
 			realName:  "ok",
-			username:  "error",
+			username:  "create-user-error",
 			password:  "ok",
 			hostname:  "ok",
 			autoLogin: true,
@@ -204,7 +204,7 @@ func TestCreateUser(t *testing.T) {
 			realName:  "ok",
 			username:  "ok",
 			password:  "ok",
-			hostname:  "error",
+			hostname:  "set-static-hostname-error",
 			autoLogin: true,
 			wantErr:   true,
 		},
@@ -270,7 +270,7 @@ func TestValidateUsername(t *testing.T) {
 		wantErr  bool
 	}{
 		"Valid username": {
-			username: "newname",
+			username: "find-user-by-name-not-found",
 			wantErr:  false,
 		},
 		"Existing username": {
@@ -294,7 +294,7 @@ func TestValidateUsername(t *testing.T) {
 			wantErr:  false,
 		},
 		"Error from Accounts service": {
-			username: "error",
+			username: "find-user-by-name-error",
 			wantErr:  true,
 		},
 	}

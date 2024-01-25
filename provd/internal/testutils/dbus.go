@@ -40,25 +40,25 @@ func (a accountsdbus) Ping() *dbus.Error {
 }
 
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
-	if name == "error" {
-		return "", dbus.NewError("org.strange.error", []interface{}{"error"})
+	if name == "find-user-by-name-error" {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.FindUserByNameError", []interface{}{"FindUserByNameError"})
 	}
 	// This is used to also include the username in the error log, used to determine its an error because a user wasn't found.
-	if name != "ok" {
+	if name == "find-user-by-name-not-found" {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
 	}
-	return "/org/freedesktop/Accounts/Userok", nil
+	return "/org/freedesktop/Accounts/UserMockUser", nil
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
 	// testname, username, _ = strings.Cut(username, "-")
 
-	if username != "ok" || realname != "ok" {
-		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error"})
+	if username == "create-user-error" {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"CreateUserErrorUsername"})
 	}
 	// check if it’s already in the map first
 	//a.Users.Store()
-	return "/org/freedesktop/Accounts/Userok", nil
+	return "/org/freedesktop/Accounts/UserMockUser", nil
 }
 
 func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
@@ -77,8 +77,8 @@ func (h hostnamedbus) Ping() *dbus.Error {
 }
 
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
-	if hostname != "ok" && hostname != "original" {
-		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error"})
+	if hostname == "set-static-hostname-error" {
+		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"SetStaticHostnameError"})
 	}
 	return nil
 }
@@ -187,15 +187,15 @@ func ExportUserMock(conn *dbus.Conn) {
 
 	u := userdbus{}
 
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), consts.DbusUserPrefix); err != nil {
-		slog.Error("Setup: could not export Userok mock: %v", err)
+	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), consts.DbusUserPrefix); err != nil {
+		slog.Error("Setup: could not export UserMockUser mock: %v", err)
 	}
-	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/Userok"),
+	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"),
 		"org.freedesktop.DBus.Introspectable"); err != nil {
-		slog.Error("Setup: could not export introspectable for Userok: %v", err)
+		slog.Error("Setup: could not export introspectable for UserMockUser: %v", err)
 	}
 
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/Userok"), "org.freedesktop.DBus.Properties"); err != nil {
+	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), "org.freedesktop.DBus.Properties"); err != nil {
 		slog.Error("Setup: could not export Peer mock %v", err)
 	}
 
