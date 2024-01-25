@@ -3,6 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
 import 'package:yaml/yaml.dart';
 
+import '../test_utils.dart';
+
 void main() {
   test('lookup path', () {
     final priority = [
@@ -72,8 +74,19 @@ test2:
   });
 
   test('load from assets', () async {
+    final assetBundle = FakeAssetBundle(
+      {
+        'packages/ubuntu_provision/assets/ubuntu-provision.yaml': '''
+scope:
+  test:
+    title: "Welcome"
+    image: "mascot.png"
+    visible: true
+    '''
+      },
+    );
     TestWidgetsFlutterBinding.ensureInitialized();
-    final configService = ConfigService();
+    final configService = ConfigService(assetBundle: assetBundle);
     final result = await configService.get<YamlMap>('test', scope: 'scope');
     expect(result, isNotNull);
     expect(result!['title'], 'Welcome');
