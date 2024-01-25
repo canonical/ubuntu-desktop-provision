@@ -52,11 +52,10 @@ class PageImages {
       if (imagePath == null) return;
 
       try {
-        final isAsset = imagePath.startsWith('assets/') ||
-            imagePath.startsWith('packages/');
+        final isAsset = imagePath.startsWith('assets/');
         final isAbsolutPath = imagePath.startsWith('/');
         if (isAsset) {
-          _loadAsset(imagePath, pageName, context);
+          _loadAsset('packages/ubuntu_provision/$imagePath', pageName, context);
         } else if (isAbsolutPath) {
           loadFutures.add(_loadFile(imagePath, pageName, context));
         } else {
