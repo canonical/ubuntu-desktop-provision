@@ -72,13 +72,13 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 // CreateUser creates a new user on the system.
 func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ *emptypb.Empty, err error) {
 	// Get current statichostname
-	var currentHostname string
+	var initalHostname string
 	property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get current hostname: %v", err)
 	}
 
-	currentHostname, ok := property.Value().(string)
+	initalHostname, ok := property.Value().(string)
 	if !ok {
 		return nil, status.Errorf(codes.Internal, "failed to convert current hostname to string")
 	}
@@ -89,11 +89,25 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		if err == nil {
 			return
 		}
-
-		// Rollback hostname
-		err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, currentHostname, false).Err
+		var currentHostname string
+		property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
 		if err != nil {
 			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			return
+		}
+
+		currentHostname, ok := property.Value().(string)
+		if !ok {
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			return
+		}
+
+		// Rollback hostname
+		if currentHostname != initalHostname {
+			err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, initalHostname, false).Err
+			if err != nil {
+				slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			}
 		}
 		// Delete user
 		if userID == 0 {

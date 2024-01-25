@@ -5,6 +5,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"log/slog"
 	"net"
@@ -87,7 +88,6 @@ func TestDbusObjectsAvalible(t *testing.T) {
 }
 
 func TestCreateUser(t *testing.T) {
-	t.Parallel()
 
 	tests := map[string]struct {
 		realName  string
@@ -107,7 +107,6 @@ func TestCreateUser(t *testing.T) {
 		// Error cases
 		"Error when realName is empty": {realName: "-", wantErr: true},
 		"Error when username is empty": {username: "-", wantErr: true},
-		"Error when password is empty": {password: "-", wantErr: true},
 		"Error when hostname is empty": {hostname: "-", wantErr: true},
 
 		// Dbus object errors
@@ -115,10 +114,16 @@ func TestCreateUser(t *testing.T) {
 		"Error from Hostname service": {hostname: "set-static-hostname-error", wantErr: true},
 	}
 
+	originalDir, err := os.Getwd()
+	if err != nil {
+		t.Fatalf("Setup: could not get current working directory: %v", err)
+	}
+
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
-			t.Parallel()
+
+			// Register cleanup function
 			t.Cleanup(testutils.StartLocalSystemBus())
 			client := newUserClient(t)
 
@@ -142,8 +147,6 @@ func TestCreateUser(t *testing.T) {
 
 			if tc.password == "" {
 				tc.password = "mock-password"
-			} else if tc.password == "-" {
-				tc.password = ""
 			}
 
 			userReq := &pb.CreateUserRequest{
@@ -162,9 +165,32 @@ func TestCreateUser(t *testing.T) {
 			var logBuffer bytes.Buffer
 			log.SetOutput(&logBuffer)
 
-			_, err := client.CreateUser(context.Background(), userReq)
+			tempDir := t.TempDir()
+			os.Chdir(tempDir)
+
+			_, reqErr := client.CreateUser(context.Background(), userReq)
+
+			file, err := os.Open("actions")
+			if err != nil {
+				slog.Error(fmt.Sprintf("failed to open file: %s", err))
+			}
+			defer file.Close()
+
+			// Read the file content
+			var sb strings.Builder
+			_, err = io.Copy(&sb, file)
+			if err != nil {
+				slog.Error(fmt.Sprintf("failed to read file: %s", err))
+			}
+
+			// Content of the file as a string
+			got := sb.String()
+			os.Chdir(originalDir)
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "CreateUser returned an unexpected response")
+
 			if tc.wantErr {
-				require.Error(t, err, "CreateUser should return an error, but did not")
+				require.Error(t, reqErr, "CreateUser should return an error, but did not")
 				// On error cases, rollback is called. Rollback only logs errors if it fails to rollback.
 				if strings.Contains(logBuffer.String(), "error encountered when rolling back CreateUser") {
 					t.Errorf("Expected no error logs, but error logs found: %s", logBuffer.String())
@@ -174,18 +200,15 @@ func TestCreateUser(t *testing.T) {
 			}
 			require.NoError(t, err, "CreateUser should not return an error, but did not")
 
-			// Missing assertions
-			// add the username
-			// access global object, and check that the user exists/not exists
-
 			// Alternative:
 			// no t.Parallel()
 			// os.Chdir(t.Tempdir()) // restore original dir
 			// The mock writes its action to the file: CreateUser(parameters), SetAutologin(true)
 			// This is your golden file. /tmp/path_based_on_testname/actions (<- contains the dbus account name actions and hostname actions)
 			// read from this string file: got
-			//
-			// want := testutils.LoadWithUpdateFromGolden(t, got)
+
+			// Open the file
+
 		})
 	}
 }

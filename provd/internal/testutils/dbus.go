@@ -33,6 +33,20 @@ func isRunning() bool {
 	return !(busAddr == "" || busAddr == defaultSystemBusAddress)
 }
 
+func writeActionToFile(action string) {
+	f, err := os.OpenFile("actions", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Error opening file: %v", err))
+		os.Exit(1)
+	}
+	defer f.Close()
+
+	if _, err := f.WriteString(action); err != nil {
+		slog.Error(fmt.Sprintf("Error writing to file: %v", err))
+		os.Exit(1)
+	}
+}
+
 type accountsdbus struct{}
 
 func (a accountsdbus) Ping() *dbus.Error {
@@ -47,23 +61,23 @@ func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 	if name == "find-user-by-name-not-found" {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
 	}
+	action := fmt.Sprintf("Accounts.FindUserByName(name: %s)\n", name)
+	writeActionToFile(action)
 	return "/org/freedesktop/Accounts/UserMockUser", nil
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
-	// testname, username, _ = strings.Cut(username, "-")
-
 	if username == "create-user-error" {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in CreateUserErrorUsername mocked method"})
 	}
-	// check if it’s already in the map first
-	//a.Users.Store()
+	action := fmt.Sprintf("Accounts.CreateUser(username: \"%s\", realname: \"%s\", accountType: %d)\n", username, realname, accountType)
+	writeActionToFile(action)
 	return "/org/freedesktop/Accounts/UserMockUser", nil
 }
 
 func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
-	//a.Users.Store()
-	// Remove from a.Users for that testname
+	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d)\n", userID)
+	writeActionToFile(action)
 
 	return nil
 }
@@ -80,10 +94,14 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 	if hostname == "set-static-hostname-error" {
 		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in SetStaticHostname mocked method"})
 	}
+	action := fmt.Sprintf("hostname1.SetStaticHostname(hostname: %s)\n", hostname)
+	writeActionToFile(action)
 	return nil
 }
 
 func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	action := fmt.Sprintf("hostname1.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
+	writeActionToFile(action)
 	return h.staticHostname, nil
 }
 
@@ -92,6 +110,8 @@ type userdbus struct {
 }
 
 func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
+	action := "User.SetPassword\n"
+	writeActionToFile(action)
 	return nil
 }
 
@@ -99,9 +119,13 @@ func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
 	if u.wantAutoLoginError {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in SetAutomaticLogin mocked method"})
 	}
+	action := fmt.Sprintf("User.SetAutomaticLogin(autoLogin: %t)\n", autoLogin)
+	writeActionToFile(action)
 	return nil
 }
 func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	action := fmt.Sprintf("User.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
+	writeActionToFile(action)
 	return uint64(1), nil
 }
 
