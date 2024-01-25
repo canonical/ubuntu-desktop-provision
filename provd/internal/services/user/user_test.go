@@ -99,63 +99,20 @@ func TestCreateUser(t *testing.T) {
 
 		wantErr bool
 	}{
-		// "Successfully creates a user":                     {},
-		// "Successfully creates an admin user":              {isAdmin: true},
-		// "Successfully set an user to login automatically": {autoLogin: true},
-
-		// // Specially cases
-		// "Successfully creates a user without realname": {realName: "-"},
+		// Success cases
+		"Successfully creates a user":                     {},
+		"Successfully creates an admin user":              {isAdmin: true},
+		"Successfully set an user to login automatically": {autoLogin: true},
 
 		// Error cases
+		"Error when realName is empty": {realName: "-", wantErr: true},
+		"Error when username is empty": {username: "-", wantErr: true},
+		"Error when password is empty": {password: "-", wantErr: true},
+		"Error when hostname is empty": {hostname: "-", wantErr: true},
 
-		"Successfully creates a user": {
-			realName:  "ok",
-			username:  "ok",
-			password:  "ok",
-			hostname:  "ok",
-			isAdmin:   true,
-			autoLogin: true,
-		},
-		"Error when realName is empty": {
-			realName:  "",
-			username:  "ok",
-			password:  "ok",
-			hostname:  "ok",
-			autoLogin: true,
-			wantErr:   true,
-		},
-		"Error when username is empty": {
-			realName:  "ok",
-			username:  "",
-			password:  "ok",
-			hostname:  "ok",
-			autoLogin: true,
-			wantErr:   true,
-		},
-		"Error when hostname is empty": {
-			realName:  "ok",
-			username:  "ok",
-			password:  "ok",
-			hostname:  "",
-			autoLogin: true,
-			wantErr:   true,
-		},
-		"Error from Accounts service": {
-			realName:  "ok",
-			username:  "create-user-error",
-			password:  "ok",
-			hostname:  "ok",
-			autoLogin: true,
-			wantErr:   true,
-		},
-		"Error from Hostname service": {
-			realName:  "ok",
-			username:  "ok",
-			password:  "ok",
-			hostname:  "set-static-hostname-error",
-			autoLogin: true,
-			wantErr:   true,
-		},
+		// Dbus object errors
+		"Error from Accounts service": {username: "create-user-error", wantErr: true},
+		"Error from Hostname service": {hostname: "set-static-hostname-error", wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -163,8 +120,31 @@ func TestCreateUser(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
-
 			client := newUserClient(t)
+
+			if tc.username == "" {
+				tc.username = "mock-user"
+			} else if tc.username == "-" {
+				tc.username = ""
+			}
+
+			if tc.realName == "" {
+				tc.realName = "mock-user"
+			} else if tc.realName == "-" {
+				tc.realName = ""
+			}
+
+			if tc.hostname == "" {
+				tc.hostname = "mock-hostname"
+			} else if tc.hostname == "-" {
+				tc.hostname = ""
+			}
+
+			if tc.password == "" {
+				tc.password = "mock-password"
+			} else if tc.password == "-" {
+				tc.password = ""
+			}
 
 			userReq := &pb.CreateUserRequest{
 				User: &pb.User{
@@ -217,34 +197,18 @@ func TestValidateUsername(t *testing.T) {
 		username string
 		wantErr  bool
 	}{
-		"Valid username": {
-			username: "find-user-by-name-not-found",
-			wantErr:  false,
-		},
-		"Existing username": {
-			username: "ok",
-			wantErr:  false,
-		},
-		"Empty username": {
-			username: "",
-			wantErr:  false,
-		},
-		"Reserved username": {
-			username: "root",
-			wantErr:  false,
-		},
-		"Username too long": {
-			username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz",
-			wantErr:  false,
-		},
-		"Invalid characters in username": {
-			username: "invalid@username",
-			wantErr:  false,
-		},
-		"Error from Accounts service": {
-			username: "find-user-by-name-error",
-			wantErr:  true,
-		},
+		// Success case
+		"Valid username": {username: "find-user-by-name-not-found"},
+
+		// Error cases
+		"Existing username":              {},
+		"Empty username":                 {username: "-"},
+		"Reserved username":              {username: "root"},
+		"Username too long":              {username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz"},
+		"Invalid characters in username": {username: "invalid@username"},
+
+		// Dbus object error
+		"Error from Accounts service": {username: "find-user-by-name-error", wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -254,6 +218,12 @@ func TestValidateUsername(t *testing.T) {
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			client := newUserClient(t)
+
+			if tc.username == "" {
+				tc.username = "mock-user"
+			} else if tc.username == "-" {
+				tc.username = ""
+			}
 
 			validateReq := &pb.ValidateUsernameRequest{
 				Username: tc.username,
