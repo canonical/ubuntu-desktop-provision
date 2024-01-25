@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -34,7 +33,7 @@ class GuidedReformatModel extends SafeChangeNotifier {
 
   /// Returns the guided storage target at the given index.
   GuidedStorageTargetReformat? getStorage(int index) =>
-      _storages.elementAtOrNull(index);
+      index >= 0 ? _storages.elementAtOrNull(index) : null;
 
   /// Returns the disk of the guided storage target at the given index.
   Disk? getDisk(int index) => _disks[getStorage(index)?.diskId ?? ''];

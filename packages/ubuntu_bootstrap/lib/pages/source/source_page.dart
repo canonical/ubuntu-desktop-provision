@@ -32,7 +32,6 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
 
     return HorizontalPage(
-      name: 'source',
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
       expandContent: true,

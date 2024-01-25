@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -13,6 +12,7 @@ import 'package:yaru/yaru.dart';
 
 import 'init_model_test.mocks.dart';
 import 'test_utils.mocks.dart';
+
 export 'test_utils.mocks.dart';
 
 extension UbuntuInitTester on WidgetTester {
@@ -48,7 +48,6 @@ void setupMockPageConfig({Map<String, PageConfigEntry>? overridePages}) {
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
   when(pageConfigService.excludedPages).thenReturn([]);
-  when(pageConfigService.includedPages).thenReturn(pages.keys.toList());
 }
 
 @GenerateMocks([InitModel])
@@ -57,8 +56,8 @@ InitModel buildInitModel({List<String>? pages}) {
   when(model.hasRoute(any)).thenAnswer((i) {
     final a = i.positionalArguments.single as String;
     return pages
-            ?.map((r) => r.removePrefix('/'))
-            .contains(a.removePrefix('/')) ??
+            ?.map((r) => r.replaceFirst('/', ''))
+            .contains(a.replaceFirst('/', '')) ??
         true;
   });
   return model;

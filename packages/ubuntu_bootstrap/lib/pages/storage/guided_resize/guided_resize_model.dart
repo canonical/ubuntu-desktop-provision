@@ -1,5 +1,4 @@
 import 'package:collection/collection.dart' hide ListExtensions;
-import 'package:dartx/dartx.dart' hide IterableSorted, IterableLastOrNull;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -64,7 +63,7 @@ class GuidedResizeModel extends SafeChangeNotifier {
 
   /// Returns the guided storage at the given index.
   GuidedStorageTargetResize? getStorage(int index) {
-    return _storages.elementAtOrNull(index);
+    return index >= 0 ? _storages.elementAtOrNull(index) : null;
   }
 
   /// Returns the disk of the guided storage at the given index.

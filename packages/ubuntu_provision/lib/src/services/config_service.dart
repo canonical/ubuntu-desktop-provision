@@ -16,13 +16,16 @@ class ConfigService {
     String? path,
     String? scope,
     @visibleForTesting FileSystem fs = const LocalFileSystem(),
+    @visibleForTesting AssetBundle? assetBundle,
   })  : _scope = scope,
         _path = path ?? lookupPath(fs),
-        _fs = fs;
+        _fs = fs,
+        _assetBundle = assetBundle ?? rootBundle;
 
   final String? _path;
   final String? _scope;
   final FileSystem _fs;
+  final AssetBundle _assetBundle;
   Map<String, dynamic>? _config;
 
   static const _extensions = ['yaml', 'yml'];
@@ -76,8 +79,8 @@ class ConfigService {
     String? assetData;
     for (final ext in _extensions) {
       try {
-        path = 'assets/$_filename.$ext';
-        assetData = await rootBundle.loadString(path);
+        path = 'packages/ubuntu_provision/assets/$_filename.$ext';
+        assetData = await _assetBundle.loadString(path);
         break;
         // Since there isn't any `exists` method for assets we'll just try to
         // load the file and catch the exception if it doesn't exist and

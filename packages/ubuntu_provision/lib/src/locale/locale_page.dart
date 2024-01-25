@@ -20,7 +20,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
 
     return HorizontalPage(
-      name: 'locale',
       windowTitle: lang.localePageTitle(flavor.name),
       title: lang.localeHeader,
       onNext: () async {

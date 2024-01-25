@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dartx/dartx.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
@@ -55,7 +54,9 @@ class ManualStorageModel extends SafeChangeNotifier {
   List<Disk> get disks => _disks;
 
   /// Returns the selected disk, or null if no disk is selected.
-  Disk? get selectedDisk => disks.elementAtOrNull(_selectedDiskIndex);
+  Disk? get selectedDisk => _selectedDiskIndex >= 0
+      ? disks.elementAtOrNull(_selectedDiskIndex)
+      : null;
 
   /// The index of the selected disk, or -1 if no disk is selected.
   int get selectedDiskIndex => _selectedDiskIndex;
@@ -88,8 +89,9 @@ class ManualStorageModel extends SafeChangeNotifier {
   }
 
   /// Returns the selected object, or null if no partition or gap is selected.
-  DiskObject? get selectedObject =>
-      selectedDisk?.partitions.elementAtOrNull(_selectedObjectIndex);
+  DiskObject? get selectedObject => _selectedObjectIndex >= 0
+      ? selectedDisk?.partitions.elementAtOrNull(_selectedObjectIndex)
+      : null;
 
   /// The index of the selected disk's selected object, or -1 if no partition
   /// or gap is selected.

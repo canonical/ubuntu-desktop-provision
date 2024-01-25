@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dartx/dartx.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -46,6 +45,6 @@ class InitModel {
   }
 
   bool hasRoute(String route) {
-    return !(_excludedPages?.contains(route.removePrefix('/')) ?? false);
+    return !(_excludedPages?.contains(route.replaceFirst('/', '')) ?? false);
   }
 }

@@ -1,6 +1,8 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -84,3 +86,31 @@ class _Dummy {} // ignore: unused_element
   MockSpec<SvgPicture>(),
 ])
 class _Dummy2 {} // ignore: unused_element
+
+class FakeAssetBundle extends CachingAssetBundle {
+  FakeAssetBundle(this._fakeAssets);
+
+  final Map<String, String> _fakeAssets;
+
+  @override
+  Future<ByteData> load(String key) async {
+    var bytes = Uint8List(0);
+    final fakes = Map.fromEntries(_fakeAssets.keys.map((e) => MapEntry(e, [
+          {'asset': e, 'dpr': 1.0}
+        ])));
+    switch (key) {
+      case 'AssetManifest.bin': // 3.10.0
+      case 'AssetManifest.smcbin': // 3.10.1+
+        return const StandardMessageCodec().encodeMessage(fakes)!;
+      case 'AssetManifest.json':
+        bytes = Uint8List.fromList(jsonEncode(fakes).codeUnits);
+        break;
+      default:
+        if (_fakeAssets.containsKey(key)) {
+          bytes = utf8.encoder.convert(_fakeAssets[key]!);
+        }
+        break;
+    }
+    return ByteData.view(bytes.buffer);
+  }
+}

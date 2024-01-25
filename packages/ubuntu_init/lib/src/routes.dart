@@ -6,7 +6,7 @@ sealed class Routes {
     'keyboard': '/keyboard',
     'network': '/network',
     'identity': '/identity',
-    'ubuntuPro': '/ubuntuPro',
+    'ubuntuPro': '/ubuntu-pro',
     'privacy': '/privacy',
     'timezone': '/timezone',
     'telemetry': '/telemetry',

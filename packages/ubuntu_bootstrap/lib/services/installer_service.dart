@@ -1,4 +1,3 @@
-import 'package:dartx/dartx.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -54,9 +53,9 @@ class InstallerService {
 
   bool hasRoute(String route) {
     if (_subiquityPages?.isNotEmpty ?? false) {
-      return _subiquityPages!.contains(route.removePrefix('/'));
+      return _subiquityPages!.contains(route.replaceFirst('/', ''));
     }
-    return !(_excludedPages?.contains(route.removePrefix('/')) ?? false);
+    return !(_excludedPages?.contains(route.replaceFirst('/', '')) ?? false);
   }
 }
 

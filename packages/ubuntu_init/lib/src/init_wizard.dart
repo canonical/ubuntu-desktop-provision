@@ -20,12 +20,11 @@ class InitWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pageConfig = ref.watch(pageConfigProvider);
     final routes = <String, WizardRoute>{
-      for (final pageName in pageConfig.includedPages)
-        Routes.routeMap[pageName]!:
-            InitStep.fromName(pageName)!.toRoute(context, ref)!
+      for (final step in InitStep.values)
+        Routes.routeMap[step.name]!: step.toRoute(context, ref)
     };
+    final totalSteps = InitStep.values.length;
 
     return WizardBuilder(
       routes: {
@@ -37,10 +36,13 @@ class InitWizard extends ConsumerWidget {
           },
         ),
         ...routes,
+        // TODO: Replace with 'done' page
+        // Currently the following entry explicitly overrides the telemetry page
+        // entry from `routes` and makes it behave as the final page.
         Routes.telemetry: WizardRoute(
           builder: (_) => const TelemetryPage(),
           userData: WizardRouteData(
-            step: InitStep.telemetry.index,
+            step: totalSteps - 1,
             hasPrevious: false,
           ),
           onLoad: (_) => const TelemetryPage().load(context, ref),
@@ -53,7 +55,7 @@ class InitWizard extends ConsumerWidget {
           },
         ),
       },
-      userData: WizardData(totalSteps: InitStep.values.length),
+      userData: WizardData(totalSteps: totalSteps),
       predicate: (route) => route == Routes.initial
           ? true
           : ref.read(initModelProvider).hasRoute(route),

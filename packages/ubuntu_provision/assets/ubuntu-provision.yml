@@ -1,6 +1,39 @@
-# This file is only to be used for tests
-scope:
-  test:
+pages:
+  locale:
     title: "Welcome"
-    image: "mascot.png"
-    visible: true
+    image: "assets/mascot.png"
+  welcome:
+    title: "Welcome to Ubuntu"
+  rst:
+    title: "RST is enabled"
+    image: "assets/storage/rst.svg"
+  keyboard:
+    title: "Keyboard layout"
+    image: "assets/icons/keyboard.svg"
+  network:
+    title: "Connect to a network"
+    image: "assets/icons/wifi.svg"
+  refresh:
+    title: "Update available"
+  source:
+    title: "Applications and updates"
+    image: "assets/icons/mascot.svg"
+  not-enough-disk-space:
+    title: "Not enough disk space"
+  secure-boot:
+    title: "Configure Secure Boot"
+  storage:
+    title: "Type of installation"
+    image: "assets/icons/disk.svg"
+  confirm:
+    title: "Ready to install"
+  identity:
+    title: "Set up your account"
+  ubuntu-pro:
+    title: "Ubuntu Pro"
+  privacy:
+    title: "Location services"
+  timezone:
+    title: "Select your timezone"
+  telemetry:
+    title: "Telemetry"

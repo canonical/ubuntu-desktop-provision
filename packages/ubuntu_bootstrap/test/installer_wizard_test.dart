@@ -63,7 +63,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           welcomeModelProvider.overrideWith((_) => welcomeModel),
         ],
-        child: tester.buildTestWizard(excludePages: []),
+        child: tester.buildTestWizard(excludedPages: []),
       ),
     );
 
@@ -137,7 +137,7 @@ void main() {
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(excludePages: []),
+        child: tester.buildTestWizard(excludedPages: []),
       ),
     );
 
@@ -281,7 +281,7 @@ void main() {
     verify(bitlockerModel.init()).called(1);
   });
 
-  testWidgets('pages', (tester) async {
+  testWidgets('exclude pages', (tester) async {
     final keyboardModel = buildKeyboardModel();
     final confirmModel = buildConfirmModel();
     final installModel = buildInstallModel(isDone: true);
@@ -295,8 +295,16 @@ void main() {
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(pages: [
-          Routes.keyboard,
+        child: tester.buildTestWizard(excludedPages: [
+          'welcome',
+          'locale',
+          'rst',
+          'network',
+          'refresh',
+          'source',
+          'not-enough-disk-space',
+          'secure-boot',
+          'storage',
         ]),
       ),
     );
@@ -356,17 +364,17 @@ void main() {
 
 extension on WidgetTester {
   Widget buildTestWizard({
-    List<String>? pages,
-    List<String> excludePages = const ['welcome'],
+    List<String> excludedPages = const ['welcome'],
   }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
-      return pages?.contains(i.positionalArguments.single) ?? true;
+      return !excludedPages.contains(
+          (i.positionalArguments.first as String).replaceFirst('/', ''));
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
 
-    setupMockPageConfig(excludePages: excludePages);
+    setupMockPageConfig(excludedPages: excludedPages);
     final subiquityClient = MockSubiquityClient();
     when(subiquityClient.hasRst()).thenAnswer((_) async => false);
     registerMockService<SubiquityClient>(subiquityClient);
