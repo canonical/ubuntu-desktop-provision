@@ -10,7 +10,6 @@ import (
 	"net"
 	"os"
 	"path/filepath"
-	"reflect"
 	"strings"
 	"testing"
 
@@ -78,57 +77,6 @@ func TestDbusObjectsAvalible(t *testing.T) {
 			}
 
 			_, err := user.New(testutils.NewDbusConn(t), opts...)
-			if tc.wantErr {
-				require.Error(t, err, "New should return an error, but did not")
-				return
-			}
-			require.NoError(t, err, "New should not return an error, but did")
-		})
-	}
-}
-
-func TestInvalidObjects(t *testing.T) {
-	t.Parallel()
-
-	tests := map[string]struct {
-		accountsPrefix string
-		hostnamePrefix string
-		wantErr        bool
-	}{
-		"Invalid accounts prefix": {
-			accountsPrefix: "invalid",
-			wantErr:        true,
-		},
-		"Invalid hostname prefix": {
-			hostnamePrefix: "invalid",
-			wantErr:        true,
-		},
-		"Valid accounts path": {
-			wantErr: false,
-		},
-	}
-
-	for name, tc := range tests {
-		tc := tc
-		t.Run(name, func(t *testing.T) {
-			t.Parallel()
-			t.Cleanup(testutils.StartLocalSystemBus())
-			bus := testutils.NewDbusConn(t)
-
-			var opts []user.Option
-			v := reflect.ValueOf(tc)
-			for i := 0; i < v.NumField(); i++ {
-				if v.Field(i).String() != "" {
-					fieldName := v.Type().Field(i).Name
-					switch fieldName {
-					case "accountsPrefix":
-						opts = append(opts, user.WithAccountsPrefix(tc.accountsPrefix))
-					case "hostnamePrefix":
-						opts = append(opts, user.WithHostnamePrefix(tc.hostnamePrefix))
-					}
-				}
-			}
-			_, err := user.New(bus, opts...)
 			if tc.wantErr {
 				require.Error(t, err, "New should return an error, but did not")
 				return
