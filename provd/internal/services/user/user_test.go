@@ -160,8 +160,6 @@ func TestCreateUser(t *testing.T) {
 				IsAdmin: tc.isAdmin,
 			}
 
-			tc.username = strings.ReplaceAll(t.Name(), " ", "") + "-" + tc.username
-
 			var logBuffer bytes.Buffer
 			log.SetOutput(&logBuffer)
 

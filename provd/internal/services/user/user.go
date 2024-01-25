@@ -287,9 +287,16 @@ func scanFile(file *os.File, username string) (bool, error) {
 		if strings.HasPrefix(line, "#") || line == "" {
 			continue
 		}
-		// Extract the username from the line
+
+		// Split the line and check format
 		fields := strings.SplitN(line, ":", 2)
-		if len(fields) > 0 && fields[0] == username {
+		if len(fields) < 2 {
+			// Line does not have the expected format
+			return false, fmt.Errorf("invalid line format: %s", line)
+		}
+
+		// Check if the username matches
+		if fields[0] == username {
 			return true, nil
 		}
 	}
