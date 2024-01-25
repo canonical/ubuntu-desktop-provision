@@ -112,7 +112,9 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                       child: Text(lang.installationTypeAdvancedLabel),
                     ),
                     const SizedBox(width: kWizardSpacing),
-                    Text(model.guidedCapability?.localize(lang) ?? ''),
+                    Flexible(
+                      child: Text(model.guidedCapability?.localize(lang) ?? ''),
+                    ),
                   ],
                 ),
               ),

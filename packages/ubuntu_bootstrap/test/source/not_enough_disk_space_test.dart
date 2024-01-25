@@ -127,8 +127,8 @@ extension on WidgetTester {
                     ),
                   ),
                   Routes.source: WizardRoute(
-                    builder: (_) => const SourcePage(),
-                    onLoad: (_) => const SourcePage().load(context, ref),
+                    builder: (_) => SourcePage(),
+                    onLoad: (_) => SourcePage().load(context, ref),
                   ),
                   Routes.notEnoughDiskSpace: WizardRoute(
                     builder: (_) => const NotEnoughDiskSpacePage(),

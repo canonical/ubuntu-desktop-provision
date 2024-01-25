@@ -100,10 +100,10 @@ Widget buildNetworkPage({
     ],
     child: Consumer(builder: (context, ref, child) {
       return FutureBuilder(
-        future: const NetworkPage().load(context, ref),
+        future: NetworkPage().load(context, ref),
         builder: (context, snapshot) {
           return (snapshot.data ?? false)
-              ? const NetworkPage()
+              ? NetworkPage()
               : const SizedBox.shrink();
         },
       );

@@ -179,8 +179,6 @@ void main() {
   });
 
   testWidgets('tpm', (tester) async {
-    // TODO: Fix StoragePage overflow so that this isn't needed
-    await tester.binding.setSurfaceSize(const Size(1200, 1000));
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',

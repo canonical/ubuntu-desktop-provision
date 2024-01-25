@@ -21,7 +21,7 @@ class HorizontalPage extends ConsumerWidget {
     this.expandContent = false,
     this.padding = const EdgeInsets.symmetric(
       horizontal: defaultContentPadding,
-      vertical: _verticalContentPadding,
+      vertical: _minContentPadding,
     ),
     this.bottomBar,
     this.snackBar,
@@ -68,19 +68,22 @@ class HorizontalPage extends ConsumerWidget {
 
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
-  static const _verticalContentPadding = 20.0;
+  static const _minContentPadding = 20.0;
   static const _contentSpacing = 60.0;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final icon = ref.watch(pageImagesProvider).get(name, context);
+    final windowSize = MediaQuery.of(context).size;
+    final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
+    final adjustedPadding =
+        isSmallWindow ? const EdgeInsets.all(_minContentPadding) : padding;
 
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
       content: Padding(
-        padding:
-            padding, // TODO(Lukas): Make padding smaller when the size of the window is small.
+        padding: adjustedPadding,
         child: Row(
           children: [
             if (icon != null) ...[
@@ -88,7 +91,9 @@ class HorizontalPage extends ConsumerWidget {
                 flex: 2,
                 child: icon,
               ),
-              const SizedBox(width: _contentSpacing),
+              SizedBox(
+                width: isSmallWindow ? _minContentPadding : _contentSpacing,
+              ),
             ],
             Expanded(
               flex: 5,
