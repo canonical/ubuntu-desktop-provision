@@ -63,7 +63,7 @@ class GuidedResizeModel extends SafeChangeNotifier {
 
   /// Returns the guided storage at the given index.
   GuidedStorageTargetResize? getStorage(int index) {
-    return _storages.elementAtOrNull(index);
+    return index >= 0 ? _storages.elementAtOrNull(index) : null;
   }
 
   /// Returns the disk of the guided storage at the given index.

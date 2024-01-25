@@ -33,7 +33,7 @@ class GuidedReformatModel extends SafeChangeNotifier {
 
   /// Returns the guided storage target at the given index.
   GuidedStorageTargetReformat? getStorage(int index) =>
-      _storages.elementAtOrNull(index);
+      index >= 0 ? _storages.elementAtOrNull(index) : null;
 
   /// Returns the disk of the guided storage target at the given index.
   Disk? getDisk(int index) => _disks[getStorage(index)?.diskId ?? ''];
