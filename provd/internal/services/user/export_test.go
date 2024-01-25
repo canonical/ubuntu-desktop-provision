@@ -35,3 +35,19 @@ func WithHostnamePrefix(prefix string) Option {
 		return nil
 	}
 }
+
+// WithPasswdMasterPath is a functional option to set the passwd master path.
+func WithPasswdMasterPath(path string) Option {
+	return func(s *Service) error {
+		s.passwdMasterPath = path
+		return nil
+	}
+}
+
+// WithGroupMasterPath is a functional option to set the group master path.
+func WithGroupMasterPath(path string) Option {
+	return func(s *Service) error {
+		s.groupMasterPath = path
+		return nil
+	}
+}

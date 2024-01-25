@@ -29,9 +29,11 @@ const (
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	conn     *dbus.Conn
-	accounts dbus.BusObject
-	hostname dbus.BusObject
+	conn             *dbus.Conn
+	accounts         dbus.BusObject
+	hostname         dbus.BusObject
+	passwdMasterPath string
+	groupMasterPath  string
 }
 
 // Option is a functional option to set the DBus objects in tests.
@@ -58,6 +60,10 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Hostname object")
 	}
+
+	// Default paths initialization
+	s.passwdMasterPath = "/usr/share/base-passwd/passwd.master"
+	s.groupMasterPath = "/usr/share/base-passwd/group.master"
 
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
@@ -216,14 +222,14 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	}
 
 	// Open the passwd.master file
-	passwdFile, err := os.Open("/usr/share/base-passwd/passwd.master")
+	passwdFile, err := os.Open(s.passwdMasterPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "error opening passwd.master file: %v", err)
 	}
 	defer passwdFile.Close()
 
 	// Open the group.master file
-	groupFile, err := os.Open("/usr/share/base-passwd/group.master")
+	groupFile, err := os.Open(s.groupMasterPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "error opening group.master file: %v", err)
 	}

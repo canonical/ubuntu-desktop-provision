@@ -20,6 +20,90 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
+func TestReservedUsernamesFilePaths(t *testing.T) {
+	t.Parallel()
+	tests := map[string]struct {
+		passwdMasterFile string
+		groupMasterFile  string
+		wantErr          bool
+	}{
+		// Success case
+		"Valid paths": {},
+
+		// Invalid paths
+		"Invalid passwd master file path": {passwdMasterFile: "invalid-path", wantErr: true},
+		"Invalid group master file path":  {groupMasterFile: "invalid-path", wantErr: true},
+
+		// Unparsable files
+		"Unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
+		"Unparsable group master file":  {groupMasterFile: "unparsable-group-master", wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc // capture range variable
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Setup dummy passwd and group master files in temp directory
+			tempDir := t.TempDir()
+
+			if tc.passwdMasterFile == "unparsable-passwd-master" {
+				passwdFilePath := filepath.Join(tempDir, tc.passwdMasterFile)
+				file, err := os.Create(passwdFilePath)
+				if err != nil {
+					t.Fatalf("Setup: could not create %s: %v", tc.passwdMasterFile, err)
+				}
+				_, err = file.WriteString("foo") // Write "foo" to the file
+				if err != nil {
+					t.Fatalf("Setup: could not write to %s: %v", tc.passwdMasterFile, err)
+				}
+				file.Close()                         // Close immediately after creating the file
+				tc.passwdMasterFile = passwdFilePath // Update with full path
+			}
+			if tc.groupMasterFile == "unparsable-group-master" {
+				groupFilePath := filepath.Join(tempDir, tc.groupMasterFile)
+				file, err := os.Create(groupFilePath)
+				if err != nil {
+					t.Fatalf("Setup: could not create %s: %v", tc.groupMasterFile, err)
+				}
+				_, err = file.WriteString("bar") // Write "bar" to the file
+				if err != nil {
+					t.Fatalf("Setup: could not write to %s: %v", tc.groupMasterFile, err)
+				}
+				file.Close()                       // Close immediately after creating the file
+				tc.groupMasterFile = groupFilePath // Update with full path
+			}
+
+			// Create service with options
+			var opts []user.Option
+			if tc.passwdMasterFile != "" {
+				opts = append(opts, user.WithPasswdMasterPath(tc.passwdMasterFile))
+			}
+			if tc.groupMasterFile != "" {
+				opts = append(opts, user.WithGroupMasterPath(tc.groupMasterFile))
+			}
+
+			client, err := user.New(testutils.NewDbusConn(t), opts...)
+			if err != nil {
+				t.Fatalf("Setup: could not create user service: %v", err)
+			}
+
+			// Call ValidateUsername with a valid username
+			validateReq := &pb.ValidateUsernameRequest{
+				Username: "find-user-by-name-not-found",
+			}
+
+			_, err = client.ValidateUsername(context.Background(), validateReq)
+
+			if tc.wantErr {
+				require.Error(t, err, "ValidateUsername should return an error, but did not")
+				return
+			}
+			require.NoError(t, err, "ValidateUsername should not return an error, but did")
+		})
+	}
+}
+
 func TestEmptyCreateUserRequest(t *testing.T) {
 	t.Parallel()
 
