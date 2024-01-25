@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Elektu vian horzonon';
 
   @override

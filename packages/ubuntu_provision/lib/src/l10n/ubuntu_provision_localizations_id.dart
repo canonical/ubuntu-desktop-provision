@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Di manakah Anda?';
 
   @override

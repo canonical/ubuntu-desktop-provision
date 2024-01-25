@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsMk extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsMk([String locale = 'mk']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

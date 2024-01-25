@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Selecciona tu zona horaria';
 
   @override

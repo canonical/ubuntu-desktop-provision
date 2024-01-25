@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'タイムゾーンを選択してください。';
 
   @override

@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Valitse aikavyöhyke';
 
   @override

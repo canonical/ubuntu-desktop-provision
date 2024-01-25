@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Időzóna kiválasztása';
 
   @override

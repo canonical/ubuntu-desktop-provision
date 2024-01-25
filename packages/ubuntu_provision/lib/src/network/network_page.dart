@@ -33,7 +33,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(networkModelProvider);
-    final lang = NetworkLocalizations.of(context);
+    final lang = UbuntuProvisionLocalizations.of(context);
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
 

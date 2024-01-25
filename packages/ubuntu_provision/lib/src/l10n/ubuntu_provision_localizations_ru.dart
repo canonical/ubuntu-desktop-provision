@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Выберите свой часовой пояс';
 
   @override

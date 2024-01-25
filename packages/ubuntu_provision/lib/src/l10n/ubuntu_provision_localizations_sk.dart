@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Vyberte si svoje časové pásmo';
 
   @override

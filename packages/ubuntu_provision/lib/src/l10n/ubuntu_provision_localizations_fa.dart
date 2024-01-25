@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'گزینش ناحیهٔ زمانیتان';
 
   @override

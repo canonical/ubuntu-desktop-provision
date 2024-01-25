@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsGu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

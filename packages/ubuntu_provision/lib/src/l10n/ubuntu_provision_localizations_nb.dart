@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsNb([String locale = 'nb']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Hvem er du?';
 
   @override

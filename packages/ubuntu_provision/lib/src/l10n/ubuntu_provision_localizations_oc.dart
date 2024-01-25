@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsOc([String locale = 'oc']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Seleccionatz vòstre fus orari';
 
   @override

@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'On sou?';
 
   @override

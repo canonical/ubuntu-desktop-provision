@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

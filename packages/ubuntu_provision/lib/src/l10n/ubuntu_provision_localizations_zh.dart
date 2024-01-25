@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => '选择您的时区';
 
   @override

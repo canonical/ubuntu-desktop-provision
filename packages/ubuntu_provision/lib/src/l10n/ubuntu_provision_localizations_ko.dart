@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => '시간대를 선택하십시오';
 
   @override

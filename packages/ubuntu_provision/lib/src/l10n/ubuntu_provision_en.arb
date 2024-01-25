@@ -1,4 +1,5 @@
 {
+  "accessibilityPageTitle": "Accessibility in {DISTRO}",
   "timezonePageTitle": "Select your timezone",
   "@timezonePageTitle": {},
   "timezoneLocationLabel": "Location",

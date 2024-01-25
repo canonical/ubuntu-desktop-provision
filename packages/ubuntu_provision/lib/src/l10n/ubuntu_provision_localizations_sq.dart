@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsSq extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Ku ndodheni?';
 
   @override

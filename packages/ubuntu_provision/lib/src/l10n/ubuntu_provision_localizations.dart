@@ -237,6 +237,12 @@ abstract class UbuntuProvisionLocalizations {
     Locale('zh', 'TW')
   ];
 
+  /// No description provided for @accessibilityPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Accessibility in {DISTRO}'**
+  String accessibilityPageTitle(Object DISTRO);
+
   /// No description provided for @timezonePageTitle.
   ///
   /// In en, this message translates to:

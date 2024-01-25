@@ -1,5 +1,6 @@
 library ubuntu_provision;
 
+export 'accessibility.dart';
 export 'active_directory.dart';
 export 'identity.dart';
 export 'interfaces.dart';

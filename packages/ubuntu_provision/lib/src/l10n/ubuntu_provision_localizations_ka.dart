@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'აირჩიეთ თქვენი დროის სარტყელი';
 
   @override

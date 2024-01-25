@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsTh([String locale = 'th']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

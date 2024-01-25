@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Saat diliminizi seçin';
 
   @override

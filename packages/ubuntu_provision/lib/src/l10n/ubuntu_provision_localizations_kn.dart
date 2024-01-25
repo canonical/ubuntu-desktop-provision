@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsKn extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

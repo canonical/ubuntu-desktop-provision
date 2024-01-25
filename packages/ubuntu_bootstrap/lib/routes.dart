@@ -3,6 +3,7 @@ sealed class Routes {
     'initial': '/loading',
     'loading': '/loading',
     'locale': '/locale',
+    'accessibility': '/accessibility',
     'welcome': '/welcome',
     'rst': '/rst',
     'keyboard': '/keyboard',

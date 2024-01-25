@@ -5,6 +5,11 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
   String get timezonePageTitle => 'Vyberte své časové pásmo';
 
   @override
