@@ -28,6 +28,8 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
 
     return HorizontalPage(
       name: 'source',
@@ -38,54 +40,57 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
         child: Scrollbar(
           thumbVisibility: true,
           controller: _scrollController,
-          child: ListView(
-            shrinkWrap: true,
-            controller: _scrollController,
-            children: [
-              ...model.sources
-                  .map((source) => Align(
-                        alignment: AlignmentDirectional.centerStart,
-                        child: Visibility(
-                          child: YaruRadioButton<String>(
-                            title: Text(source.localizeTitle(context)),
-                            subtitle: Text(source.localizeSubtitle(context)),
-                            contentPadding: kWizardPadding,
-                            value: source.id,
-                            groupValue: model.sourceId,
-                            onChanged: model.setSourceId,
+          child: Padding(
+            padding: EdgeInsets.only(right: scrollBarPadding),
+            child: ListView(
+              shrinkWrap: true,
+              controller: _scrollController,
+              children: [
+                ...model.sources
+                    .map((source) => Align(
+                          alignment: AlignmentDirectional.centerStart,
+                          child: Visibility(
+                            child: YaruRadioButton<String>(
+                              title: Text(source.localizeTitle(context)),
+                              subtitle: Text(source.localizeSubtitle(context)),
+                              contentPadding: kWizardPadding,
+                              value: source.id,
+                              groupValue: model.sourceId,
+                              onChanged: model.setSourceId,
+                            ),
                           ),
-                        ),
-                      ))
-                  .withSpacing(kWizardSpacing),
-              Padding(
-                padding: const EdgeInsets.all(kYaruPagePadding),
-                child: Text(lang.otherOptions),
-              ),
-              Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: YaruCheckButton(
-                  title: Text(lang.installDriversTitle),
-                  subtitle: Text(lang.installDriversSubtitle),
-                  contentPadding: kWizardPadding,
-                  value: model.installDrivers,
-                  onChanged: model.setInstallDrivers,
+                        ))
+                    .withSpacing(kWizardSpacing),
+                Padding(
+                  padding: const EdgeInsets.all(kYaruPagePadding),
+                  child: Text(lang.otherOptions),
                 ),
-              ),
-              const SizedBox(height: kWizardSpacing),
-              Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: Tooltip(
-                  message: !model.isOnline ? lang.offlineWarning : '',
+                Align(
+                  alignment: AlignmentDirectional.centerStart,
                   child: YaruCheckButton(
-                    title: Text(lang.installCodecsTitle),
-                    subtitle: Text(lang.installCodecsSubtitle),
+                    title: Text(lang.installDriversTitle),
+                    subtitle: Text(lang.installDriversSubtitle),
                     contentPadding: kWizardPadding,
-                    value: model.installCodecs && model.isOnline,
-                    onChanged: model.isOnline ? model.setInstallCodecs : null,
+                    value: model.installDrivers,
+                    onChanged: model.setInstallDrivers,
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(height: kWizardSpacing),
+                Align(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Tooltip(
+                    message: !model.isOnline ? lang.offlineWarning : '',
+                    child: YaruCheckButton(
+                      title: Text(lang.installCodecsTitle),
+                      subtitle: Text(lang.installCodecsSubtitle),
+                      contentPadding: kWizardPadding,
+                      value: model.installCodecs && model.isOnline,
+                      onChanged: model.isOnline ? model.setInstallCodecs : null,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
