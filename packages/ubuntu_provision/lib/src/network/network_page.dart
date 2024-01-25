@@ -38,7 +38,6 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
 
     return HorizontalPage(
-      name: 'network',
       windowTitle: lang.networkPageTitle,
       title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
       expandContent: true,

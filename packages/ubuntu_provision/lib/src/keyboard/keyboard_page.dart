@@ -21,7 +21,6 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(keyboardModelProvider);
     final lang = KeyboardLocalizations.of(context);
     return HorizontalPage(
-      name: 'keyboard',
       windowTitle: lang.keyboardTitle,
       title: lang.keyboardHeader,
       trailingTitleWidget: model.canDetectLayout

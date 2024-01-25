@@ -1,15 +1,14 @@
 import 'dart:async';
 
+import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/providers.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/widgets.dart';
 
 class HorizontalPage extends ConsumerWidget {
   const HorizontalPage({
-    required this.name,
     required this.windowTitle,
     required this.title,
     required this.content,
@@ -27,9 +26,6 @@ class HorizontalPage extends ConsumerWidget {
     this.snackBar,
     super.key,
   });
-
-  /// The name of the page that is used to get settings from the [PageConfigService].
-  final String name;
 
   /// The title for the title bar.
   final String windowTitle;
@@ -74,6 +70,7 @@ class HorizontalPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
+    final name = ModalRoute.of(context)!.settings.name!.removePrefix('/');
     final icon = ref.watch(pageImagesProvider).get(name, context);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
