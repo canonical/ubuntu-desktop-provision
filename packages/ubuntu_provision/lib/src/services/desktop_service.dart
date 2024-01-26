@@ -65,7 +65,7 @@ class GnomeService implements DesktopService {
     try {
       await _gnomeSessionManager.connect();
       final cookie = await _gnomeSessionManager.inhibit(
-        appId: 'com.canonical.ubuntu_desktop_installer',
+        appId: 'com.canonical.ubuntu_bootstrap',
         topLevelXId: 0,
         reason: 'Installing Ubuntu',
         flags: {

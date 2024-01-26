@@ -69,7 +69,7 @@ void main() {
       screensaverSettings.set(
           'idle-activation-enabled', const DBusBoolean(false)),
       gnomeSessionManager.inhibit(
-        appId: 'com.canonical.ubuntu_desktop_installer',
+        appId: 'com.canonical.ubuntu_bootstrap',
         topLevelXId: 0,
         reason: 'Installing Ubuntu',
         flags: {
