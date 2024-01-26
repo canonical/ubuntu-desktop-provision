@@ -7,6 +7,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InstallationStep {
   locale(LocalePage.new),
+  accessibility(AccessibilityPage.new),
   welcome(WelcomePage.new, discreteStep: false),
   rst(RstPage.new, discreteStep: false),
   keyboard(KeyboardPage.new),

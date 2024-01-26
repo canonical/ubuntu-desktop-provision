@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -21,7 +23,34 @@ class AccessibilityModel extends SafeChangeNotifier
     addPropertyListener('Connectivity', notifyListeners);
   }
 
+  final List<AccessibilityOption> _activeOptions = [];
+  UnmodifiableListView<AccessibilityOption> get activeOptions =>
+      UnmodifiableListView(_activeOptions);
+
   final ProductService product;
 
   String get distroName => product.getProductInfo().name;
+
+  /// Toggles the given [option] and notifies listeners.
+  void toggleOption(AccessibilityOption option) {
+    if (_activeOptions.contains(option)) {
+      _activeOptions.remove(option);
+      _log.info('Disabled $option');
+    } else {
+      _activeOptions.add(option);
+      _log.info('Enabled $option');
+    }
+    notifyListeners();
+  }
+}
+
+/// The available accessibility options that can be activated.
+enum AccessibilityOption {
+  // Seeing
+  highContrast,
+  largeText,
+  reduceAnimation,
+  screenReader,
+  // Hearing
+  visualAlerts,
 }

@@ -243,6 +243,72 @@ abstract class UbuntuProvisionLocalizations {
   /// **'Accessibility in {DISTRO}'**
   String accessibilityPageTitle(Object DISTRO);
 
+  /// No description provided for @accessibilityPageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Customise Ubuntu to your needs before you set up. You can change them later in System Settings.'**
+  String get accessibilityPageBody;
+
+  /// No description provided for @accessibilitySeeingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Seeing'**
+  String get accessibilitySeeingLabel;
+
+  /// No description provided for @accessibilityHearingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Hearing'**
+  String get accessibilityHearingLabel;
+
+  /// No description provided for @accessibilityTypingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Typing'**
+  String get accessibilityTypingLabel;
+
+  /// No description provided for @accessibilityPointingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pointing and clicking'**
+  String get accessibilityPointingLabel;
+
+  /// No description provided for @accessibilityZoomLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Zoom'**
+  String get accessibilityZoomLabel;
+
+  /// No description provided for @accessibilityHighContrastLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'High contrast'**
+  String get accessibilityHighContrastLabel;
+
+  /// No description provided for @accessibilityLargeTextLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Large text'**
+  String get accessibilityLargeTextLabel;
+
+  /// No description provided for @accessibilityReduceAnimationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Reduce animation'**
+  String get accessibilityReduceAnimationLabel;
+
+  /// No description provided for @accessibilityScreenReaderLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Screen reader'**
+  String get accessibilityScreenReaderLabel;
+
+  /// No description provided for @accessibilityVisualAlertsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Visual alerts'**
+  String get accessibilityVisualAlertsLabel;
+
   /// No description provided for @timezonePageTitle.
   ///
   /// In en, this message translates to:
