@@ -2,6 +2,9 @@ package user
 
 import (
 	"errors"
+
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
+	"github.com/godbus/dbus/v5"
 )
 
 // WithAccountsPrefix is a functional option to set the DBus accounts prefix.
@@ -32,6 +35,21 @@ func WithHostnamePrefix(prefix string) Option {
 			return errors.New("invalid accounts prefix")
 		}
 		s.hostname = obj
+		return nil
+	}
+}
+
+// WithHostnamePath is a functional option to set the DBus hostname path.
+func WithHostnamePath(path string) Option {
+	return func(s *Service) error {
+		s.hostname = s.conn.Object(consts.DbusHostnamePrefix, dbus.ObjectPath("/org/freedesktop/"+path))
+		if s.hostname == nil {
+			return errors.New("invalid hostname path")
+		}
+		err := s.hostname.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+		if err != nil {
+			return errors.New("invalid hostname path")
+		}
 		return nil
 	}
 }

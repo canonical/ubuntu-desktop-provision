@@ -43,7 +43,6 @@ func writeActionToFile(action string) {
 		os.Exit(1)
 	}
 	defer f.Close()
-
 	if _, err := f.WriteString(action); err != nil {
 		slog.Error(fmt.Sprintf("Error writing to file: %v", err))
 		os.Exit(1)
@@ -105,6 +104,9 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 }
 
 func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	if h.staticHostname == "hostnameerror" {
+		return "", dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+	}
 	action := fmt.Sprintf("hostname1.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
 	writeActionToFile(action)
 	return h.staticHostname, nil
@@ -162,26 +164,26 @@ func ExportHostnameMock(conn *dbus.Conn) error {
         </interface>
     </node>`, consts.DbusHostnamePrefix)
 
-	h := hostnamedbus{
-		staticHostname: "original",
+	for _, h := range []hostnamedbus{
+		{staticHostname: "hostname1"},
+		{staticHostname: "hostnameerror"},
+	} {
+		if err := conn.Export(h, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), consts.DbusHostnamePrefix); err != nil {
+			return fmt.Errorf("could not export hostname1 mock: %w", err)
+		}
+		if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), "org.freedesktop.DBus.Introspectable"); err != nil {
+			return fmt.Errorf("could not export introspectable for hostname1 mock: %w", err)
+		}
+		if err := conn.Export(h, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), consts.DbusPeerPrefix); err != nil {
+			return fmt.Errorf("could not export Peer mock: %w", err)
+		}
+		if err := conn.Export(h, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), "org.freedesktop.DBus.Properties"); err != nil {
+			return fmt.Errorf("could not export DBus Properties mock: %w", err)
+		}
+		if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), "org.freedesktop.DBus.Introspectable"); err != nil {
+			return fmt.Errorf("could not export introspectable for Peer mock: %w", err)
+		}
 	}
-
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusHostnamePrefix); err != nil {
-		return fmt.Errorf("could not export hostname1 mock: %w", err)
-	}
-	if err := conn.Export(introspect.Introspectable(hostnameIntro), dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Introspectable"); err != nil {
-		return fmt.Errorf("could not export introspectable for hostname1 mock: %w", err)
-	}
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), consts.DbusPeerPrefix); err != nil {
-		return fmt.Errorf("could not export Peer mock: %w", err)
-	}
-	if err := conn.Export(h, dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Properties"); err != nil {
-		return fmt.Errorf("could not export DBus Properties mock: %w", err)
-	}
-	if err := conn.Export(introspect.Introspectable(peer), dbus.ObjectPath("/org/freedesktop/hostname1"), "org.freedesktop.DBus.Introspectable"); err != nil {
-		return fmt.Errorf("could not export introspectable for Peer mock: %w", err)
-	}
-
 	reply, err := conn.RequestName(consts.DbusHostnamePrefix, dbus.NameFlagDoNotQueue)
 	if err != nil {
 		return fmt.Errorf("failed to acquire hostname name on local system bus: %w", err)
@@ -228,7 +230,6 @@ func ExportUserMock(conn *dbus.Conn) error {
 		if err := conn.Export(u, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/Accounts/%s", u.path)), "org.freedesktop.DBus.Properties"); err != nil {
 			return fmt.Errorf("could not export DBus Properties mock: %w", err)
 		}
-
 	}
 
 	reply, err := conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
@@ -240,7 +241,6 @@ func ExportUserMock(conn *dbus.Conn) error {
 	}
 
 	return nil
-
 }
 
 // ExportAccountsMock exports the accounts mock to the system bus.

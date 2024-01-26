@@ -171,12 +171,16 @@ func TestDbusObjectsAvalible(t *testing.T) {
 
 func TestCreateUser(t *testing.T) {
 	tests := map[string]struct {
+		// Request fields
 		realName  string
 		username  string
 		password  string
 		hostname  string
 		autoLogin bool
 		isAdmin   bool
+
+		// Options for dbus objects
+		hostnamePath string
 
 		wantErr bool
 	}{
@@ -191,10 +195,11 @@ func TestCreateUser(t *testing.T) {
 		"Error when hostname is empty": {hostname: "-", wantErr: true},
 
 		// Dbus object errors
-		"Error from Accounts service": {username: "create-user-error", wantErr: true},
-		"Error from Hostname service": {hostname: "set-static-hostname-error", wantErr: true},
-		"Error when deleting user":    {username: "deleteerror", hostname: "set-static-hostname-error", wantErr: true},
-		"Error when getting uid":      {username: "getuiderror", wantErr: true},
+		"Error from Accounts service":        {username: "create-user-error", wantErr: true},
+		"Error from Hostname service":        {hostname: "set-static-hostname-error", wantErr: true},
+		"Error when deleting user":           {username: "deleteerror", hostname: "set-static-hostname-error", wantErr: true},
+		"Error when getting uid":             {username: "getuiderror", wantErr: true},
+		"Error when getting static hostname": {hostnamePath: "hostnameerror", hostname: "set-static-hostname-error", wantErr: true},
 	}
 
 	originalDir, err := os.Getwd()
@@ -207,7 +212,12 @@ func TestCreateUser(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			// Register cleanup function
 			t.Cleanup(testutils.StartLocalSystemBus())
-			client := newUserClient(t)
+			// Get ops
+			var opts []user.Option
+			if tc.hostnamePath != "" {
+				opts = append(opts, user.WithHostnamePath(tc.hostnamePath))
+			}
+			client := newUserClient(t, opts...)
 
 			if tc.username == "" {
 				tc.username = "ok"
@@ -250,7 +260,7 @@ func TestCreateUser(t *testing.T) {
 
 			_, reqErr := client.CreateUser(context.Background(), userReq)
 
-			file, err := os.Open("actions")
+			file, err := os.OpenFile("actions", os.O_CREATE, 0600)
 			if err != nil {
 				t.Fatalf("failed to open file: %s", err)
 			}
@@ -336,7 +346,7 @@ func TestValidateUsername(t *testing.T) {
 }
 
 // newUserClient creates a new user client for testing, with a temp unix socket and mock Dbus connection.
-func newUserClient(t *testing.T) pb.UserServiceClient {
+func newUserClient(t *testing.T, opts ...user.Option) pb.UserServiceClient {
 	t.Helper()
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
@@ -349,7 +359,7 @@ func newUserClient(t *testing.T) pb.UserServiceClient {
 
 	bus := testutils.NewDbusConn(t)
 
-	service, err := user.New(bus)
+	service, err := user.New(bus, opts...)
 
 	if err != nil {
 		t.Fatalf("Setup: could not create user service: %v", err)
