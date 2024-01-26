@@ -13,6 +13,8 @@ import (
 )
 
 const defaultSystemBusAddress = "unix:path=/var/run/dbus/system_bus_socket"
+const uidUserDeletionFails = 9999
+const uidUserGetFails = 9998
 
 // GetSystemBusConnection returns a connection to the system bus with a safety check to avoid mistakenly connecting to the
 // actual system bus.
@@ -64,7 +66,7 @@ func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 	}
 	action := fmt.Sprintf("Accounts.FindUserByName(name: %s)\n", name)
 	writeActionToFile(action)
-	return "/org/freedesktop/Accounts/UserMockUser", nil
+	return fmt.Sprintf("/org/freedesktop/Accounts/User%s", name), nil
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
@@ -73,13 +75,15 @@ func (a accountsdbus) CreateUser(username string, realname string, accountType i
 	}
 	action := fmt.Sprintf("Accounts.CreateUser(username: \"%s\", realname: \"%s\", accountType: %d)\n", username, realname, accountType)
 	writeActionToFile(action)
-	return "/org/freedesktop/Accounts/UserMockUser", nil
+	return fmt.Sprintf("/org/freedesktop/Accounts/User%s", username), nil
 }
 
 func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
+	if userID == uidUserDeletionFails {
+		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in DeleteUser mocked method"})
+	}
 	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d)\n", userID)
 	writeActionToFile(action)
-
 	return nil
 }
 
@@ -107,7 +111,8 @@ func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{
 }
 
 type userdbus struct {
-	wantAutoLoginError bool
+	path string
+	id   uint64
 }
 
 func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
@@ -117,17 +122,17 @@ func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
 }
 
 func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
-	if u.wantAutoLoginError {
-		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in SetAutomaticLogin mocked method"})
-	}
 	action := fmt.Sprintf("User.SetAutomaticLogin(autoLogin: %t)\n", autoLogin)
 	writeActionToFile(action)
 	return nil
 }
 func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	if u.id == uidUserGetFails {
+		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in User.Get mocked method"})
+	}
 	action := fmt.Sprintf("User.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
 	writeActionToFile(action)
-	return uint64(1), nil
+	return u.id, nil
 }
 
 // ExportHostnameMock exports the hostname mock to the system bus.
@@ -209,16 +214,21 @@ func ExportUserMock(conn *dbus.Conn) error {
             </method>
         </interface>%s</node>`, consts.DbusUserPrefix, introspect.IntrospectDataString)
 
-	u := userdbus{}
+	for _, u := range []userdbus{
+		{path: "Userok", id: 1001},
+		{path: "Userdeleteerror", id: uidUserDeletionFails},
+		{path: "Usergetfail", id: uidUserGetFails},
+	} {
+		if err := conn.Export(u, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/Accounts/%s", u.path)), consts.DbusUserPrefix); err != nil {
+			return fmt.Errorf("could not export %s mock: %w", u.path, err)
+		}
+		if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/Accounts/%s", u.path)), "org.freedesktop.DBus.Introspectable"); err != nil {
+			return fmt.Errorf("could not export introspectable for %s: %w", u.path, err)
+		}
+		if err := conn.Export(u, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/Accounts/%s", u.path)), "org.freedesktop.DBus.Properties"); err != nil {
+			return fmt.Errorf("could not export DBus Properties mock: %w", err)
+		}
 
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), consts.DbusUserPrefix); err != nil {
-		return fmt.Errorf("could not export UserMockUser mock: %w", err)
-	}
-	if err := conn.Export(introspect.Introspectable(userIntro), dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), "org.freedesktop.DBus.Introspectable"); err != nil {
-		return fmt.Errorf("could not export introspectable for UserMockUser: %w", err)
-	}
-	if err := conn.Export(u, dbus.ObjectPath("/org/freedesktop/Accounts/UserMockUser"), "org.freedesktop.DBus.Properties"); err != nil {
-		return fmt.Errorf("could not export DBus Properties mock: %w", err)
 	}
 
 	reply, err := conn.RequestName(consts.DbusUserPrefix, dbus.NameFlagDoNotQueue)
@@ -230,6 +240,7 @@ func ExportUserMock(conn *dbus.Conn) error {
 	}
 
 	return nil
+
 }
 
 // ExportAccountsMock exports the accounts mock to the system bus.

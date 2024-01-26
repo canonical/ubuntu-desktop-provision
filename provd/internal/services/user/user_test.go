@@ -193,6 +193,8 @@ func TestCreateUser(t *testing.T) {
 		// Dbus object errors
 		"Error from Accounts service": {username: "create-user-error", wantErr: true},
 		"Error from Hostname service": {hostname: "set-static-hostname-error", wantErr: true},
+		"Error when deleting user":    {username: "deleteerror", hostname: "set-static-hostname-error", wantErr: true},
+		"Error when getting uid":      {username: "getuiderror", wantErr: true},
 	}
 
 	originalDir, err := os.Getwd()
@@ -208,25 +210,25 @@ func TestCreateUser(t *testing.T) {
 			client := newUserClient(t)
 
 			if tc.username == "" {
-				tc.username = "mock-user"
+				tc.username = "ok"
 			} else if tc.username == "-" {
 				tc.username = ""
 			}
 
 			if tc.realName == "" {
-				tc.realName = "mock-user"
+				tc.realName = "ok"
 			} else if tc.realName == "-" {
 				tc.realName = ""
 			}
 
 			if tc.hostname == "" {
-				tc.hostname = "mock-hostname"
+				tc.hostname = "ok"
 			} else if tc.hostname == "-" {
 				tc.hostname = ""
 			}
 
 			if tc.password == "" {
-				tc.password = "mock-password"
+				tc.password = "ok"
 			}
 
 			userReq := &pb.CreateUserRequest{

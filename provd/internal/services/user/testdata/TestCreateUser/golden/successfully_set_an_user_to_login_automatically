@@ -1,6 +1,6 @@
 hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)
-Accounts.CreateUser(username: "mock-user", realname: "mock-user", accountType: 0)
+Accounts.CreateUser(username: "ok", realname: "ok", accountType: 0)
 User.SetPassword
 User.Get(interfaceName: org.freedesktop.Accounts.User, propertyName: Uid)
 User.SetAutomaticLogin(autoLogin: true)
-hostname1.SetStaticHostname(hostname: mock-hostname)
+hostname1.SetStaticHostname(hostname: ok)
