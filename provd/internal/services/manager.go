@@ -41,7 +41,10 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
 	}
 
-	localeService := locale.New(bus)
+	localeService, err := locale.New(bus)
+    if err != nil {
+        return nil, status.Errorf(codes.Internal, "failed to create locale service: %s", err)
+    }
 
 	return &Manager{
 		userService:   *userService,

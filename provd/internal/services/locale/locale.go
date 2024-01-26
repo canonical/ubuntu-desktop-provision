@@ -5,6 +5,7 @@ import (
 	"context"
 	"regexp"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
 	"google.golang.org/grpc/codes"
@@ -26,16 +27,24 @@ type DbusConnector interface {
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedLocaleServiceServer
-	conn   dbus.Conn
+	conn   *dbus.Conn
 	locale DbusObject
 }
 
 // New returns a new instance of the Locale service.
-func New(conn dbus.Conn) *Service {
-	return &Service{
+func New(conn *dbus.Conn) (*Service, error) {
+    
+    s := &Service{
 		conn:   conn,
-		locale: conn.Object("org.freedesktop.locale1", "/org/freedesktop/locale1"),
 	}
+
+    s.locale = conn.Object("org.freedesktop.locale1", dbus.ObjectPath("/org/freedesktop/locale1"))
+    err := s.locale.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
+	}
+
+    return s, nil
 }
 
 func (s *Service) GetLocale(ctx context.Context, req *emptypb.Empty) (*pb.GetLocaleResponse, error) {
