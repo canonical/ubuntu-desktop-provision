@@ -89,7 +89,7 @@ Future<void> runInstallerApp(
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
       () => ConfigService(path: options['config'] as String?));
-  tryRegisterService<DesktopService>(GnomeService.new);
+  if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<InstallerService>(
     () => InstallerService(
@@ -226,7 +226,7 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
 
   final services = [
     getService<InstallerService>().init(),
-    getService<DesktopService>().inhibit(),
+    tryGetService<DesktopService>()?.inhibit() ?? Future.value(),
     getService<RefreshService>().check(),
     getService<PageConfigService>().load(),
     geo.init(),
@@ -242,6 +242,6 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
 Future<bool> _closeInstallerApp() async {
   await getService<SubiquityClient>().close();
   await getService<SubiquityServer>().stop();
-  await getService<DesktopService>().close();
+  await tryGetService<DesktopService>()?.close();
   return true;
 }
