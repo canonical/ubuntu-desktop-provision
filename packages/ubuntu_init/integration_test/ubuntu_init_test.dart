@@ -24,10 +24,6 @@ void main() {
 
     await tester.runApp(() => runInitApp([]));
 
-    await tester.testWelcomeInitPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testLocalePage(language: 'Deutsch');
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -69,6 +65,17 @@ void main() {
     await expectTimezone('Europe/Berlin');
 
     await tester.testTelemetryPage(enabled: false);
+    await tester.tapDone();
+    await tester.pumpAndSettle();
+    await expectLater(windowClosed, completes);
+  });
+
+  testWidgets('welcome', (tester) async {
+    final windowClosed = YaruTestWindow.waitForClosed();
+
+    await tester.runApp(() => runInitApp(['--welcome']));
+
+    await tester.testWelcomeInitPage();
     await tester.tapDone();
     await tester.pumpAndSettle();
     await expectLater(windowClosed, completes);

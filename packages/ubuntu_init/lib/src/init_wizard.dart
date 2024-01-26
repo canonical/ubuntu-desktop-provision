@@ -62,3 +62,54 @@ class InitWizard extends ConsumerWidget {
     );
   }
 }
+
+class WelcomeWizard extends ConsumerWidget {
+  const WelcomeWizard({
+    super.key,
+    FutureOr<void> Function()? onDone,
+  }) : _onDone = onDone;
+
+  final FutureOr<void> Function()? _onDone;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final routes = <String, WizardRoute>{
+      for (final step in WelcomeStep.values)
+        if (ref.read(initModelProvider).hasRoute(Routes.routeMap[step.name]!))
+          Routes.routeMap[step.name]!: step.toRoute(context, ref)
+    };
+
+    return WizardBuilder(
+      routes: {
+        Routes.initial: WizardRoute(
+          builder: (_) => const SizedBox.shrink(),
+          onReplace: (_) async {
+            await ref.read(pageImagesProvider).preCache(context);
+            return ref.read(initModelProvider).init().then((_) => null);
+          },
+        ),
+        ...routes,
+        // TODO: Replace with 'done' page
+        // Currently the following entry explicitly overrides the telemetry page
+        // entry from `routes` and makes it behave as the final page.
+        Routes.welcome: WizardRoute(
+          builder: (_) => const WelcomePage(),
+          userData: WizardRouteData(
+            step: routes.length - 1,
+          ),
+          onLoad: (_) => const WelcomePage().load(context, ref),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
+            await _onDone?.call();
+            await window.close();
+            return Routes.initial;
+          },
+        ),
+      },
+      userData: WizardData(totalSteps: routes.length),
+      predicate: (route) => route == Routes.initial
+          ? true
+          : ref.read(initModelProvider).hasRoute(route),
+    );
+  }
+}

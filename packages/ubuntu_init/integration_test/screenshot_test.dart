@@ -18,7 +18,7 @@ Future<void> main() async {
   tearDown(rootBundle.clear);
 
   testWidgets('00.welcome', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.runApp(() => runInitApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.testWelcomeInitPage(
@@ -28,9 +28,6 @@ Future<void> main() async {
 
   testWidgets('01.locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(Routes.locale);
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(
