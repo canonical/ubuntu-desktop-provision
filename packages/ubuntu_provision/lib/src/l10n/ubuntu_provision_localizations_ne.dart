@@ -10,7 +10,9 @@ class UbuntuProvisionLocalizationsNe extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilityPageBody => 'Customise Ubuntu to your needs before you set up. You can change them later in System Settings.';
+  String accessibilityPageBody(Object DISTRO) {
+    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+  }
 
   @override
   String get accessibilitySeeingLabel => 'Seeing';

@@ -246,8 +246,8 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @accessibilityPageBody.
   ///
   /// In en, this message translates to:
-  /// **'Customise Ubuntu to your needs before you set up. You can change them later in System Settings.'**
-  String get accessibilityPageBody;
+  /// **'Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.'**
+  String accessibilityPageBody(Object DISTRO);
 
   /// No description provided for @accessibilitySeeingLabel.
   ///

@@ -73,9 +73,20 @@ class _FakeImageProvider_2<T extends Object> extends _i1.SmartFake
         );
 }
 
-class _FakeState_3<T extends _i5.StatefulWidget> extends _i1.SmartFake
+class _FakeAlignmentGeometry_3 extends _i1.SmartFake
+    implements _i4.AlignmentGeometry {
+  _FakeAlignmentGeometry_3(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeState_4<T extends _i5.StatefulWidget> extends _i1.SmartFake
     implements _i5.State<T> {
-  _FakeState_3(
+  _FakeState_4(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -88,9 +99,9 @@ class _FakeState_3<T extends _i5.StatefulWidget> extends _i1.SmartFake
       super.toString();
 }
 
-class _FakeStatefulElement_4 extends _i1.SmartFake
+class _FakeStatefulElement_5 extends _i1.SmartFake
     implements _i5.StatefulElement {
-  _FakeStatefulElement_4(
+  _FakeStatefulElement_5(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -103,9 +114,9 @@ class _FakeStatefulElement_4 extends _i1.SmartFake
       super.toString();
 }
 
-class _FakeDiagnosticsNode_5 extends _i1.SmartFake
+class _FakeDiagnosticsNode_6 extends _i1.SmartFake
     implements _i7.DiagnosticsNode {
-  _FakeDiagnosticsNode_5(
+  _FakeDiagnosticsNode_6(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -121,8 +132,8 @@ class _FakeDiagnosticsNode_5 extends _i1.SmartFake
       super.toString();
 }
 
-class _FakeKeyboardSetup_6 extends _i1.SmartFake implements _i2.KeyboardSetup {
-  _FakeKeyboardSetup_6(
+class _FakeKeyboardSetup_7 extends _i1.SmartFake implements _i2.KeyboardSetup {
+  _FakeKeyboardSetup_7(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -131,8 +142,8 @@ class _FakeKeyboardSetup_6 extends _i1.SmartFake implements _i2.KeyboardSetup {
         );
 }
 
-class _FakeAnyStep_7 extends _i1.SmartFake implements _i2.AnyStep {
-  _FakeAnyStep_7(
+class _FakeAnyStep_8 extends _i1.SmartFake implements _i2.AnyStep {
+  _FakeAnyStep_8(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -141,9 +152,9 @@ class _FakeAnyStep_7 extends _i1.SmartFake implements _i2.AnyStep {
         );
 }
 
-class _FakeNetworkManagerSettings_8 extends _i1.SmartFake
+class _FakeNetworkManagerSettings_9 extends _i1.SmartFake
     implements _i8.NetworkManagerSettings {
-  _FakeNetworkManagerSettings_8(
+  _FakeNetworkManagerSettings_9(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -152,9 +163,9 @@ class _FakeNetworkManagerSettings_8 extends _i1.SmartFake
         );
 }
 
-class _FakeNetworkManagerDnsManager_9 extends _i1.SmartFake
+class _FakeNetworkManagerDnsManager_10 extends _i1.SmartFake
     implements _i8.NetworkManagerDnsManager {
-  _FakeNetworkManagerDnsManager_9(
+  _FakeNetworkManagerDnsManager_10(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -163,9 +174,9 @@ class _FakeNetworkManagerDnsManager_9 extends _i1.SmartFake
         );
 }
 
-class _FakeNetworkManagerActiveConnection_10 extends _i1.SmartFake
+class _FakeNetworkManagerActiveConnection_11 extends _i1.SmartFake
     implements _i8.NetworkManagerActiveConnection {
-  _FakeNetworkManagerActiveConnection_10(
+  _FakeNetworkManagerActiveConnection_11(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -174,9 +185,9 @@ class _FakeNetworkManagerActiveConnection_10 extends _i1.SmartFake
         );
 }
 
-class _FakeUPowerKbdBacklight_11 extends _i1.SmartFake
+class _FakeUPowerKbdBacklight_12 extends _i1.SmartFake
     implements _i3.UPowerKbdBacklight {
-  _FakeUPowerKbdBacklight_11(
+  _FakeUPowerKbdBacklight_12(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -185,8 +196,8 @@ class _FakeUPowerKbdBacklight_11 extends _i1.SmartFake
         );
 }
 
-class _FakeUPowerDevice_12 extends _i1.SmartFake implements _i3.UPowerDevice {
-  _FakeUPowerDevice_12(
+class _FakeUPowerDevice_13 extends _i1.SmartFake implements _i3.UPowerDevice {
+  _FakeUPowerDevice_13(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -195,8 +206,8 @@ class _FakeUPowerDevice_12 extends _i1.SmartFake implements _i3.UPowerDevice {
         );
 }
 
-class _FakeProductInfo_13 extends _i1.SmartFake implements _i3.ProductInfo {
-  _FakeProductInfo_13(
+class _FakeProductInfo_14 extends _i1.SmartFake implements _i3.ProductInfo {
+  _FakeProductInfo_14(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -205,9 +216,9 @@ class _FakeProductInfo_13 extends _i1.SmartFake implements _i3.ProductInfo {
         );
 }
 
-class _FakeUdevDeviceInfo_14 extends _i1.SmartFake
+class _FakeUdevDeviceInfo_15 extends _i1.SmartFake
     implements _i3.UdevDeviceInfo {
-  _FakeUdevDeviceInfo_14(
+  _FakeUdevDeviceInfo_15(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -216,8 +227,8 @@ class _FakeUdevDeviceInfo_14 extends _i1.SmartFake
         );
 }
 
-class _FakeWidget_15 extends _i1.SmartFake implements _i5.Widget {
-  _FakeWidget_15(
+class _FakeWidget_16 extends _i1.SmartFake implements _i5.Widget {
+  _FakeWidget_16(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -230,9 +241,9 @@ class _FakeWidget_15 extends _i1.SmartFake implements _i5.Widget {
       super.toString();
 }
 
-class _FakeInheritedWidget_16 extends _i1.SmartFake
+class _FakeInheritedWidget_17 extends _i1.SmartFake
     implements _i5.InheritedWidget {
-  _FakeInheritedWidget_16(
+  _FakeInheritedWidget_17(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -245,8 +256,8 @@ class _FakeInheritedWidget_16 extends _i1.SmartFake
       super.toString();
 }
 
-class _FakeFile_17 extends _i1.SmartFake implements _i9.File {
-  _FakeFile_17(
+class _FakeFile_18 extends _i1.SmartFake implements _i9.File {
+  _FakeFile_18(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -255,8 +266,8 @@ class _FakeFile_17 extends _i1.SmartFake implements _i9.File {
         );
 }
 
-class _FakeUri_18 extends _i1.SmartFake implements Uri {
-  _FakeUri_18(
+class _FakeUri_19 extends _i1.SmartFake implements Uri {
+  _FakeUri_19(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -265,8 +276,8 @@ class _FakeUri_18 extends _i1.SmartFake implements Uri {
         );
 }
 
-class _FakeDirectory_19 extends _i1.SmartFake implements _i9.Directory {
-  _FakeDirectory_19(
+class _FakeDirectory_20 extends _i1.SmartFake implements _i9.Directory {
+  _FakeDirectory_20(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -275,8 +286,8 @@ class _FakeDirectory_19 extends _i1.SmartFake implements _i9.Directory {
         );
 }
 
-class _FakeDateTime_20 extends _i1.SmartFake implements DateTime {
-  _FakeDateTime_20(
+class _FakeDateTime_21 extends _i1.SmartFake implements DateTime {
+  _FakeDateTime_21(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -285,9 +296,9 @@ class _FakeDateTime_20 extends _i1.SmartFake implements DateTime {
         );
 }
 
-class _FakeRandomAccessFile_21 extends _i1.SmartFake
+class _FakeRandomAccessFile_22 extends _i1.SmartFake
     implements _i9.RandomAccessFile {
-  _FakeRandomAccessFile_21(
+  _FakeRandomAccessFile_22(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -296,8 +307,8 @@ class _FakeRandomAccessFile_21 extends _i1.SmartFake
         );
 }
 
-class _FakeIOSink_22 extends _i1.SmartFake implements _i9.IOSink {
-  _FakeIOSink_22(
+class _FakeIOSink_23 extends _i1.SmartFake implements _i9.IOSink {
+  _FakeIOSink_23(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -306,8 +317,8 @@ class _FakeIOSink_22 extends _i1.SmartFake implements _i9.IOSink {
         );
 }
 
-class _FakeFileStat_23 extends _i1.SmartFake implements _i9.FileStat {
-  _FakeFileStat_23(
+class _FakeFileStat_24 extends _i1.SmartFake implements _i9.FileStat {
+  _FakeFileStat_24(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -316,9 +327,9 @@ class _FakeFileStat_23 extends _i1.SmartFake implements _i9.FileStat {
         );
 }
 
-class _FakeFileSystemEntity_24 extends _i1.SmartFake
+class _FakeFileSystemEntity_25 extends _i1.SmartFake
     implements _i9.FileSystemEntity {
-  _FakeFileSystemEntity_24(
+  _FakeFileSystemEntity_25(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -327,8 +338,8 @@ class _FakeFileSystemEntity_24 extends _i1.SmartFake
         );
 }
 
-class _FakeSvgTheme_25 extends _i1.SmartFake implements _i10.SvgTheme {
-  _FakeSvgTheme_25(
+class _FakeSvgTheme_26 extends _i1.SmartFake implements _i10.SvgTheme {
+  _FakeSvgTheme_26(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -337,8 +348,8 @@ class _FakeSvgTheme_25 extends _i1.SmartFake implements _i10.SvgTheme {
         );
 }
 
-class _FakeSvgCacheKey_26 extends _i1.SmartFake implements _i10.SvgCacheKey {
-  _FakeSvgCacheKey_26(
+class _FakeSvgCacheKey_27 extends _i1.SmartFake implements _i10.SvgCacheKey {
+  _FakeSvgCacheKey_27(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -347,8 +358,8 @@ class _FakeSvgCacheKey_26 extends _i1.SmartFake implements _i10.SvgCacheKey {
         );
 }
 
-class _FakeBytesLoader_27 extends _i1.SmartFake implements _i11.BytesLoader {
-  _FakeBytesLoader_27(
+class _FakeBytesLoader_28 extends _i1.SmartFake implements _i11.BytesLoader {
+  _FakeBytesLoader_28(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -357,9 +368,9 @@ class _FakeBytesLoader_27 extends _i1.SmartFake implements _i11.BytesLoader {
         );
 }
 
-class _FakeStatelessElement_28 extends _i1.SmartFake
+class _FakeStatelessElement_29 extends _i1.SmartFake
     implements _i5.StatelessElement {
-  _FakeStatelessElement_28(
+  _FakeStatelessElement_29(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -714,6 +725,15 @@ class MockImage extends _i1.Mock implements _i16.Image {
       ) as _i17.FilterQuality);
 
   @override
+  _i4.AlignmentGeometry get alignment => (super.noSuchMethod(
+        Invocation.getter(#alignment),
+        returnValue: _FakeAlignmentGeometry_3(
+          this,
+          Invocation.getter(#alignment),
+        ),
+      ) as _i4.AlignmentGeometry);
+
+  @override
   _i4.ImageRepeat get repeat => (super.noSuchMethod(
         Invocation.getter(#repeat),
         returnValue: _i4.ImageRepeat.repeat,
@@ -749,7 +769,7 @@ class MockImage extends _i1.Mock implements _i16.Image {
           #createState,
           [],
         ),
-        returnValue: _FakeState_3<_i16.Image>(
+        returnValue: _FakeState_4<_i16.Image>(
           this,
           Invocation.method(
             #createState,
@@ -774,7 +794,7 @@ class MockImage extends _i1.Mock implements _i16.Image {
           #createElement,
           [],
         ),
-        returnValue: _FakeStatefulElement_4(
+        returnValue: _FakeStatefulElement_5(
           this,
           Invocation.method(
             #createElement,
@@ -869,7 +889,7 @@ class MockImage extends _i1.Mock implements _i16.Image {
             #style: style,
           },
         ),
-        returnValue: _FakeDiagnosticsNode_5(
+        returnValue: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #toDiagnosticsNode,
@@ -939,7 +959,7 @@ class MockKeyboardService extends _i1.Mock implements _i3.KeyboardService {
           #getKeyboard,
           [],
         ),
-        returnValue: _i12.Future<_i2.KeyboardSetup>.value(_FakeKeyboardSetup_6(
+        returnValue: _i12.Future<_i2.KeyboardSetup>.value(_FakeKeyboardSetup_7(
           this,
           Invocation.method(
             #getKeyboard,
@@ -981,7 +1001,7 @@ class MockKeyboardService extends _i1.Mock implements _i3.KeyboardService {
           #getKeyboardStep,
           [step],
         ),
-        returnValue: _i12.Future<_i2.AnyStep>.value(_FakeAnyStep_7(
+        returnValue: _i12.Future<_i2.AnyStep>.value(_FakeAnyStep_8(
           this,
           Invocation.method(
             #getKeyboardStep,
@@ -1205,7 +1225,7 @@ class MockNetworkService extends _i1.Mock implements _i3.NetworkService {
   @override
   _i8.NetworkManagerSettings get settings => (super.noSuchMethod(
         Invocation.getter(#settings),
-        returnValue: _FakeNetworkManagerSettings_8(
+        returnValue: _FakeNetworkManagerSettings_9(
           this,
           Invocation.getter(#settings),
         ),
@@ -1214,7 +1234,7 @@ class MockNetworkService extends _i1.Mock implements _i3.NetworkService {
   @override
   _i8.NetworkManagerDnsManager get dnsManager => (super.noSuchMethod(
         Invocation.getter(#dnsManager),
-        returnValue: _FakeNetworkManagerDnsManager_9(
+        returnValue: _FakeNetworkManagerDnsManager_10(
           this,
           Invocation.getter(#dnsManager),
         ),
@@ -1300,7 +1320,7 @@ class MockNetworkService extends _i1.Mock implements _i3.NetworkService {
           },
         ),
         returnValue: _i12.Future<_i8.NetworkManagerActiveConnection>.value(
-            _FakeNetworkManagerActiveConnection_10(
+            _FakeNetworkManagerActiveConnection_11(
           this,
           Invocation.method(
             #addAndActivateConnection,
@@ -1331,7 +1351,7 @@ class MockNetworkService extends _i1.Mock implements _i3.NetworkService {
           },
         ),
         returnValue: _i12.Future<_i8.NetworkManagerActiveConnection>.value(
-            _FakeNetworkManagerActiveConnection_10(
+            _FakeNetworkManagerActiveConnection_11(
           this,
           Invocation.method(
             #activateConnection,
@@ -1416,7 +1436,7 @@ class MockPowerService extends _i1.Mock implements _i3.PowerService {
   @override
   _i3.UPowerKbdBacklight get kbdBacklight => (super.noSuchMethod(
         Invocation.getter(#kbdBacklight),
-        returnValue: _FakeUPowerKbdBacklight_11(
+        returnValue: _FakeUPowerKbdBacklight_12(
           this,
           Invocation.getter(#kbdBacklight),
         ),
@@ -1467,7 +1487,7 @@ class MockPowerService extends _i1.Mock implements _i3.PowerService {
   @override
   _i3.UPowerDevice get displayDevice => (super.noSuchMethod(
         Invocation.getter(#displayDevice),
-        returnValue: _FakeUPowerDevice_12(
+        returnValue: _FakeUPowerDevice_13(
           this,
           Invocation.getter(#displayDevice),
         ),
@@ -1541,7 +1561,7 @@ class MockProductService extends _i1.Mock implements _i3.ProductService {
           #getProductInfo,
           [],
         ),
-        returnValue: _FakeProductInfo_13(
+        returnValue: _FakeProductInfo_14(
           this,
           Invocation.method(
             #getProductInfo,
@@ -1749,7 +1769,7 @@ class MockUdevService extends _i1.Mock implements _i3.UdevService {
           #bySysname,
           [sysname],
         ),
-        returnValue: _FakeUdevDeviceInfo_14(
+        returnValue: _FakeUdevDeviceInfo_15(
           this,
           Invocation.method(
             #bySysname,
@@ -1764,7 +1784,7 @@ class MockUdevService extends _i1.Mock implements _i3.UdevService {
           #bySyspath,
           [syspath],
         ),
-        returnValue: _FakeUdevDeviceInfo_14(
+        returnValue: _FakeUdevDeviceInfo_15(
           this,
           Invocation.method(
             #bySyspath,
@@ -1808,11 +1828,11 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
   @override
   _i5.Widget get widget => (super.noSuchMethod(
         Invocation.getter(#widget),
-        returnValue: _FakeWidget_15(
+        returnValue: _FakeWidget_16(
           this,
           Invocation.getter(#widget),
         ),
-        returnValueForMissingStub: _FakeWidget_15(
+        returnValueForMissingStub: _FakeWidget_16(
           this,
           Invocation.getter(#widget),
         ),
@@ -1843,7 +1863,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
           [ancestor],
           {#aspect: aspect},
         ),
-        returnValue: _FakeInheritedWidget_16(
+        returnValue: _FakeInheritedWidget_17(
           this,
           Invocation.method(
             #dependOnInheritedElement,
@@ -1851,7 +1871,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
             {#aspect: aspect},
           ),
         ),
-        returnValueForMissingStub: _FakeInheritedWidget_16(
+        returnValueForMissingStub: _FakeInheritedWidget_17(
           this,
           Invocation.method(
             #dependOnInheritedElement,
@@ -1901,7 +1921,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
           [name],
           {#style: style},
         ),
-        returnValue: _FakeDiagnosticsNode_5(
+        returnValue: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeElement,
@@ -1909,7 +1929,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
             {#style: style},
           ),
         ),
-        returnValueForMissingStub: _FakeDiagnosticsNode_5(
+        returnValueForMissingStub: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeElement,
@@ -1930,7 +1950,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
           [name],
           {#style: style},
         ),
-        returnValue: _FakeDiagnosticsNode_5(
+        returnValue: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeWidget,
@@ -1938,7 +1958,7 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
             {#style: style},
           ),
         ),
-        returnValueForMissingStub: _FakeDiagnosticsNode_5(
+        returnValueForMissingStub: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeWidget,
@@ -1968,14 +1988,14 @@ class MockBuildContext extends _i1.Mock implements _i5.BuildContext {
           #describeOwnershipChain,
           [name],
         ),
-        returnValue: _FakeDiagnosticsNode_5(
+        returnValue: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeOwnershipChain,
             [name],
           ),
         ),
-        returnValueForMissingStub: _FakeDiagnosticsNode_5(
+        returnValueForMissingStub: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #describeOwnershipChain,
@@ -1992,11 +2012,11 @@ class MockFile extends _i1.Mock implements _i9.File {
   @override
   _i9.File get absolute => (super.noSuchMethod(
         Invocation.getter(#absolute),
-        returnValue: _FakeFile_17(
+        returnValue: _FakeFile_18(
           this,
           Invocation.getter(#absolute),
         ),
-        returnValueForMissingStub: _FakeFile_17(
+        returnValueForMissingStub: _FakeFile_18(
           this,
           Invocation.getter(#absolute),
         ),
@@ -2018,11 +2038,11 @@ class MockFile extends _i1.Mock implements _i9.File {
   @override
   Uri get uri => (super.noSuchMethod(
         Invocation.getter(#uri),
-        returnValue: _FakeUri_18(
+        returnValue: _FakeUri_19(
           this,
           Invocation.getter(#uri),
         ),
-        returnValueForMissingStub: _FakeUri_18(
+        returnValueForMissingStub: _FakeUri_19(
           this,
           Invocation.getter(#uri),
         ),
@@ -2038,11 +2058,11 @@ class MockFile extends _i1.Mock implements _i9.File {
   @override
   _i9.Directory get parent => (super.noSuchMethod(
         Invocation.getter(#parent),
-        returnValue: _FakeDirectory_19(
+        returnValue: _FakeDirectory_20(
           this,
           Invocation.getter(#parent),
         ),
-        returnValueForMissingStub: _FakeDirectory_19(
+        returnValueForMissingStub: _FakeDirectory_20(
           this,
           Invocation.getter(#parent),
         ),
@@ -2062,7 +2082,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             #exclusive: exclusive,
           },
         ),
-        returnValue: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValue: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #create,
@@ -2073,7 +2093,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             },
           ),
         )),
-        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #create,
@@ -2109,14 +2129,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #rename,
           [newPath],
         ),
-        returnValue: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValue: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #rename,
             [newPath],
           ),
         )),
-        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #rename,
@@ -2131,14 +2151,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #renameSync,
           [newPath],
         ),
-        returnValue: _FakeFile_17(
+        returnValue: _FakeFile_18(
           this,
           Invocation.method(
             #renameSync,
             [newPath],
           ),
         ),
-        returnValueForMissingStub: _FakeFile_17(
+        returnValueForMissingStub: _FakeFile_18(
           this,
           Invocation.method(
             #renameSync,
@@ -2153,14 +2173,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #copy,
           [newPath],
         ),
-        returnValue: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValue: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #copy,
             [newPath],
           ),
         )),
-        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #copy,
@@ -2175,14 +2195,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #copySync,
           [newPath],
         ),
-        returnValue: _FakeFile_17(
+        returnValue: _FakeFile_18(
           this,
           Invocation.method(
             #copySync,
             [newPath],
           ),
         ),
-        returnValueForMissingStub: _FakeFile_17(
+        returnValueForMissingStub: _FakeFile_18(
           this,
           Invocation.method(
             #copySync,
@@ -2217,14 +2237,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #lastAccessed,
           [],
         ),
-        returnValue: _i12.Future<DateTime>.value(_FakeDateTime_20(
+        returnValue: _i12.Future<DateTime>.value(_FakeDateTime_21(
           this,
           Invocation.method(
             #lastAccessed,
             [],
           ),
         )),
-        returnValueForMissingStub: _i12.Future<DateTime>.value(_FakeDateTime_20(
+        returnValueForMissingStub: _i12.Future<DateTime>.value(_FakeDateTime_21(
           this,
           Invocation.method(
             #lastAccessed,
@@ -2239,14 +2259,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #lastAccessedSync,
           [],
         ),
-        returnValue: _FakeDateTime_20(
+        returnValue: _FakeDateTime_21(
           this,
           Invocation.method(
             #lastAccessedSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeDateTime_20(
+        returnValueForMissingStub: _FakeDateTime_21(
           this,
           Invocation.method(
             #lastAccessedSync,
@@ -2280,14 +2300,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #lastModified,
           [],
         ),
-        returnValue: _i12.Future<DateTime>.value(_FakeDateTime_20(
+        returnValue: _i12.Future<DateTime>.value(_FakeDateTime_21(
           this,
           Invocation.method(
             #lastModified,
             [],
           ),
         )),
-        returnValueForMissingStub: _i12.Future<DateTime>.value(_FakeDateTime_20(
+        returnValueForMissingStub: _i12.Future<DateTime>.value(_FakeDateTime_21(
           this,
           Invocation.method(
             #lastModified,
@@ -2302,14 +2322,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #lastModifiedSync,
           [],
         ),
-        returnValue: _FakeDateTime_20(
+        returnValue: _FakeDateTime_21(
           this,
           Invocation.method(
             #lastModifiedSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeDateTime_20(
+        returnValueForMissingStub: _FakeDateTime_21(
           this,
           Invocation.method(
             #lastModifiedSync,
@@ -2347,7 +2367,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           {#mode: mode},
         ),
         returnValue:
-            _i12.Future<_i9.RandomAccessFile>.value(_FakeRandomAccessFile_21(
+            _i12.Future<_i9.RandomAccessFile>.value(_FakeRandomAccessFile_22(
           this,
           Invocation.method(
             #open,
@@ -2356,7 +2376,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           ),
         )),
         returnValueForMissingStub:
-            _i12.Future<_i9.RandomAccessFile>.value(_FakeRandomAccessFile_21(
+            _i12.Future<_i9.RandomAccessFile>.value(_FakeRandomAccessFile_22(
           this,
           Invocation.method(
             #open,
@@ -2374,7 +2394,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           [],
           {#mode: mode},
         ),
-        returnValue: _FakeRandomAccessFile_21(
+        returnValue: _FakeRandomAccessFile_22(
           this,
           Invocation.method(
             #openSync,
@@ -2382,7 +2402,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             {#mode: mode},
           ),
         ),
-        returnValueForMissingStub: _FakeRandomAccessFile_21(
+        returnValueForMissingStub: _FakeRandomAccessFile_22(
           this,
           Invocation.method(
             #openSync,
@@ -2423,7 +2443,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             #encoding: encoding,
           },
         ),
-        returnValue: _FakeIOSink_22(
+        returnValue: _FakeIOSink_23(
           this,
           Invocation.method(
             #openWrite,
@@ -2434,7 +2454,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             },
           ),
         ),
-        returnValueForMissingStub: _FakeIOSink_22(
+        returnValueForMissingStub: _FakeIOSink_23(
           this,
           Invocation.method(
             #openWrite,
@@ -2563,7 +2583,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             #flush: flush,
           },
         ),
-        returnValue: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValue: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #writeAsBytes,
@@ -2574,7 +2594,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             },
           ),
         )),
-        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #writeAsBytes,
@@ -2622,7 +2642,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             #flush: flush,
           },
         ),
-        returnValue: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValue: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #writeAsString,
@@ -2634,7 +2654,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             },
           ),
         )),
-        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_17(
+        returnValueForMissingStub: _i12.Future<_i9.File>.value(_FakeFile_18(
           this,
           Invocation.method(
             #writeAsString,
@@ -2739,7 +2759,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           #stat,
           [],
         ),
-        returnValue: _i12.Future<_i9.FileStat>.value(_FakeFileStat_23(
+        returnValue: _i12.Future<_i9.FileStat>.value(_FakeFileStat_24(
           this,
           Invocation.method(
             #stat,
@@ -2747,7 +2767,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           ),
         )),
         returnValueForMissingStub:
-            _i12.Future<_i9.FileStat>.value(_FakeFileStat_23(
+            _i12.Future<_i9.FileStat>.value(_FakeFileStat_24(
           this,
           Invocation.method(
             #stat,
@@ -2762,14 +2782,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #statSync,
           [],
         ),
-        returnValue: _FakeFileStat_23(
+        returnValue: _FakeFileStat_24(
           this,
           Invocation.method(
             #statSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeFileStat_23(
+        returnValueForMissingStub: _FakeFileStat_24(
           this,
           Invocation.method(
             #statSync,
@@ -2787,7 +2807,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           {#recursive: recursive},
         ),
         returnValue:
-            _i12.Future<_i9.FileSystemEntity>.value(_FakeFileSystemEntity_24(
+            _i12.Future<_i9.FileSystemEntity>.value(_FakeFileSystemEntity_25(
           this,
           Invocation.method(
             #delete,
@@ -2796,7 +2816,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           ),
         )),
         returnValueForMissingStub:
-            _i12.Future<_i9.FileSystemEntity>.value(_FakeFileSystemEntity_24(
+            _i12.Future<_i9.FileSystemEntity>.value(_FakeFileSystemEntity_25(
           this,
           Invocation.method(
             #delete,
@@ -2842,11 +2862,11 @@ class MockSvgFileLoader extends _i1.Mock implements _i10.SvgFileLoader {
   @override
   _i9.File get file => (super.noSuchMethod(
         Invocation.getter(#file),
-        returnValue: _FakeFile_17(
+        returnValue: _FakeFile_18(
           this,
           Invocation.getter(#file),
         ),
-        returnValueForMissingStub: _FakeFile_17(
+        returnValueForMissingStub: _FakeFile_18(
           this,
           Invocation.getter(#file),
         ),
@@ -2891,14 +2911,14 @@ class MockSvgFileLoader extends _i1.Mock implements _i10.SvgFileLoader {
           #getTheme,
           [context],
         ),
-        returnValue: _FakeSvgTheme_25(
+        returnValue: _FakeSvgTheme_26(
           this,
           Invocation.method(
             #getTheme,
             [context],
           ),
         ),
-        returnValueForMissingStub: _FakeSvgTheme_25(
+        returnValueForMissingStub: _FakeSvgTheme_26(
           this,
           Invocation.method(
             #getTheme,
@@ -2925,14 +2945,14 @@ class MockSvgFileLoader extends _i1.Mock implements _i10.SvgFileLoader {
           #cacheKey,
           [context],
         ),
-        returnValue: _FakeSvgCacheKey_26(
+        returnValue: _FakeSvgCacheKey_27(
           this,
           Invocation.method(
             #cacheKey,
             [context],
           ),
         ),
-        returnValueForMissingStub: _FakeSvgCacheKey_26(
+        returnValueForMissingStub: _FakeSvgCacheKey_27(
           this,
           Invocation.method(
             #cacheKey,
@@ -2954,13 +2974,26 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
       ) as _i4.BoxFit);
 
   @override
+  _i4.AlignmentGeometry get alignment => (super.noSuchMethod(
+        Invocation.getter(#alignment),
+        returnValue: _FakeAlignmentGeometry_3(
+          this,
+          Invocation.getter(#alignment),
+        ),
+        returnValueForMissingStub: _FakeAlignmentGeometry_3(
+          this,
+          Invocation.getter(#alignment),
+        ),
+      ) as _i4.AlignmentGeometry);
+
+  @override
   _i11.BytesLoader get bytesLoader => (super.noSuchMethod(
         Invocation.getter(#bytesLoader),
-        returnValue: _FakeBytesLoader_27(
+        returnValue: _FakeBytesLoader_28(
           this,
           Invocation.getter(#bytesLoader),
         ),
-        returnValueForMissingStub: _FakeBytesLoader_27(
+        returnValueForMissingStub: _FakeBytesLoader_28(
           this,
           Invocation.getter(#bytesLoader),
         ),
@@ -3000,14 +3033,14 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
           #build,
           [context],
         ),
-        returnValue: _FakeWidget_15(
+        returnValue: _FakeWidget_16(
           this,
           Invocation.method(
             #build,
             [context],
           ),
         ),
-        returnValueForMissingStub: _FakeWidget_15(
+        returnValueForMissingStub: _FakeWidget_16(
           this,
           Invocation.method(
             #build,
@@ -3032,14 +3065,14 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
           #createElement,
           [],
         ),
-        returnValue: _FakeStatelessElement_28(
+        returnValue: _FakeStatelessElement_29(
           this,
           Invocation.method(
             #createElement,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeStatelessElement_28(
+        returnValueForMissingStub: _FakeStatelessElement_29(
           this,
           Invocation.method(
             #createElement,
@@ -3164,7 +3197,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             #style: style,
           },
         ),
-        returnValue: _FakeDiagnosticsNode_5(
+        returnValue: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #toDiagnosticsNode,
@@ -3175,7 +3208,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             },
           ),
         ),
-        returnValueForMissingStub: _FakeDiagnosticsNode_5(
+        returnValueForMissingStub: _FakeDiagnosticsNode_6(
           this,
           Invocation.method(
             #toDiagnosticsNode,

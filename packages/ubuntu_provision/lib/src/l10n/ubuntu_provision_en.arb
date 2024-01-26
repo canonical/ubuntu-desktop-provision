@@ -1,8 +1,18 @@
 {
   "accessibilityPageTitle": "Accessibility in {DISTRO}",
-  "@accessibilityPageTitle": {},
-  "accessibilityPageBody": "Customise Ubuntu to your needs before you set up. You can change them later in System Settings.",
-  "@accessibilityPageTitle": {},
+  "@accessibilityPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.",
+  "@accessibilityPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
   "accessibilitySeeingLabel": "Seeing",
   "@accessibilitySeeingLabel": {},
   "accessibilityHearingLabel": "Hearing",

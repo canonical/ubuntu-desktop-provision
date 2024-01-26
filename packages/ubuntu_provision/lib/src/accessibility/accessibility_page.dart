@@ -16,14 +16,14 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final model = ref.watch(accessibilityModelProvider);
+    final flavor = ref.watch(flavorProvider);
     final lang = UbuntuProvisionLocalizations.of(context);
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
-      windowTitle: lang.accessibilityPageTitle(model.distroName),
-      title: lang.accessibilityPageTitle(model.distroName),
+      windowTitle: lang.accessibilityPageTitle(flavor.name),
+      title: lang.accessibilityPageTitle(flavor.name),
       expandContent: true,
       content: Center(
         child: Scrollbar(
@@ -35,7 +35,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
               padding: EdgeInsets.only(right: scrollBarPadding),
               child: Column(
                 children: [
-                  Text(lang.accessibilityPageBody),
+                  Text(lang.accessibilityPageBody(flavor.name)),
                   const SizedBox(height: kWizardSpacing),
                   YaruExpansionPanel(
                     headers: [
