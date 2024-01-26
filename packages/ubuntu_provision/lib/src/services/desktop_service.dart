@@ -47,70 +47,65 @@ class GnomeService implements DesktopService {
 
   final restoreSettings = <Future<void> Function()>[];
 
-  Future<void> _disableAutoMounting() async {
-    _log.debug('Disabling automounting');
-    final previousAutoMount = await _mediaHandlingSettings.get('automount');
-    final previousAutoMountOpen =
-        await _mediaHandlingSettings.get('automount-open');
-    final previousAutoRunNever =
-        await _mediaHandlingSettings.get('autorun-never');
-    final previousShowVolumes = await _dingSettings.get('show-volumes');
-    final previousShowNetworkVolumes =
-        await _dingSettings.get('show-network-volumes');
-    await _mediaHandlingSettings.set('automount', const DBusBoolean(false));
-    await _mediaHandlingSettings.set(
-        'automount-open', const DBusBoolean(false));
-    await _mediaHandlingSettings.set('autorun-never', const DBusBoolean(true));
-    await _dingSettings.set('show-volumes', const DBusBoolean(false));
-    await _dingSettings.set('show-network-volumes', const DBusBoolean(false));
-    restoreSettings.add(() async {
-      await _mediaHandlingSettings.set('automount', previousAutoMount);
-      await _mediaHandlingSettings.set('automount-open', previousAutoMountOpen);
-      await _mediaHandlingSettings.set('autorun-never', previousAutoRunNever);
-      await _dingSettings.set('show-volumes', previousShowVolumes);
-      await _dingSettings.set(
-          'show-network-volumes', previousShowNetworkVolumes);
-    });
+  Future<void> _trySetAndRestore(
+    GSettings settings,
+    String key,
+    DBusValue value,
+  ) async {
+    try {
+      final previousValue = await settings.get(key);
+      await settings.set(key, value);
+      restoreSettings.add(() => settings.set(key, previousValue));
+    } on Exception catch (e) {
+      _log.error('Failed to set $key to $value', e);
+    }
   }
 
-  Future<void> _disableScreenBlanking() async {
-    _log.debug('Disabling screen blanking');
-    final previousValue = await _sessionSettings.get('idle-delay');
-    await _sessionSettings.set('idle-delay', const DBusUint32(0));
-    restoreSettings
-        .add(() => _sessionSettings.set('idle-delay', previousValue));
-  }
-
-  Future<void> _disableScreensaver() async {
-    _log.debug('Disabling screensaver');
-    final previousValue =
-        await _screensaverSettings.get('idle-activation-enabled');
-    await _screensaverSettings.set(
-        'idle-activation-enabled', const DBusBoolean(false));
-    restoreSettings.add(() =>
-        _screensaverSettings.set('idle-activation-enabled', previousValue));
+  Future<void> _tryInhibitGnomeSession() async {
+    try {
+      await _gnomeSessionManager.connect();
+      final cookie = await _gnomeSessionManager.inhibit(
+        appId: 'com.canonical.ubuntu_bootstrap',
+        topLevelXId: 0,
+        reason: 'Installing Ubuntu',
+        flags: {
+          GnomeInhibitionFlag.autoMount,
+          GnomeInhibitionFlag.idle,
+          GnomeInhibitionFlag.logout,
+          GnomeInhibitionFlag.suspend,
+          GnomeInhibitionFlag.switchUser,
+        },
+      );
+      restoreSettings.add(() => _gnomeSessionManager.uninhibit(cookie));
+    } on Exception catch (e) {
+      _log.error('Failed to inhibit Gnome Session', e);
+    }
   }
 
   @override
   Future<void> inhibit() async {
-    await _disableAutoMounting();
-    await _disableScreenBlanking();
-    await _disableScreensaver();
+    _log.debug('Disabling automounting');
+    await _trySetAndRestore(
+        _mediaHandlingSettings, 'automount', const DBusBoolean(false));
+    await _trySetAndRestore(
+        _mediaHandlingSettings, 'automount-open', const DBusBoolean(false));
+    await _trySetAndRestore(
+        _mediaHandlingSettings, 'autorun-never', const DBusBoolean(true));
+    await _trySetAndRestore(
+        _dingSettings, 'show-volumes', const DBusBoolean(false));
+    await _trySetAndRestore(
+        _dingSettings, 'show-network-volumes', const DBusBoolean(false));
 
-    await _gnomeSessionManager.connect();
-    final cookie = await _gnomeSessionManager.inhibit(
-      appId: 'com.canonical.ubuntu_desktop_installer',
-      topLevelXId: 0,
-      reason: 'Installing Ubuntu',
-      flags: {
-        GnomeInhibitionFlag.autoMount,
-        GnomeInhibitionFlag.idle,
-        GnomeInhibitionFlag.logout,
-        GnomeInhibitionFlag.suspend,
-        GnomeInhibitionFlag.switchUser,
-      },
-    );
-    restoreSettings.add(() => _gnomeSessionManager.uninhibit(cookie));
+    _log.debug('Disabling screen blanking');
+    await _trySetAndRestore(
+        _sessionSettings, 'idle-delay', const DBusUint32(0));
+
+    _log.debug('Disabling screensaver');
+    await _trySetAndRestore(_screensaverSettings, 'idle-activation-enabled',
+        const DBusBoolean(false));
+
+    _log.debug('Inhibiting Gnome session');
+    await _tryInhibitGnomeSession();
   }
 
   @override

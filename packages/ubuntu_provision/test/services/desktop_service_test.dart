@@ -65,8 +65,11 @@ void main() {
       mediaHandlingSettings.set('autorun-never', const DBusBoolean(true)),
       dingSettings.set('show-volumes', const DBusBoolean(false)),
       dingSettings.set('show-network-volumes', const DBusBoolean(false)),
+      sessionSettings.set('idle-delay', const DBusUint32(0)),
+      screensaverSettings.set(
+          'idle-activation-enabled', const DBusBoolean(false)),
       gnomeSessionManager.inhibit(
-        appId: 'com.canonical.ubuntu_desktop_installer',
+        appId: 'com.canonical.ubuntu_bootstrap',
         topLevelXId: 0,
         reason: 'Installing Ubuntu',
         flags: {
