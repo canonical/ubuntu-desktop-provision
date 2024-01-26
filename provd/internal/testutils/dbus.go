@@ -15,6 +15,7 @@ import (
 const defaultSystemBusAddress = "unix:path=/var/run/dbus/system_bus_socket"
 const uidUserDeletionFails = 9999
 const uidUserGetFails = 9998
+const hostnameErrorPath = "hostnameerror"
 
 // GetSystemBusConnection returns a connection to the system bus with a safety check to avoid mistakenly connecting to the
 // actual system bus.
@@ -104,7 +105,7 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 }
 
 func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
-	if h.staticHostname == "hostnameerror" {
+	if h.staticHostname == hostnameErrorPath {
 		return "", dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in Get mocked method"})
 	}
 	action := fmt.Sprintf("hostname1.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
@@ -166,7 +167,7 @@ func ExportHostnameMock(conn *dbus.Conn) error {
 
 	for _, h := range []hostnamedbus{
 		{staticHostname: "hostname1"},
-		{staticHostname: "hostnameerror"},
+		{staticHostname: hostnameErrorPath},
 	} {
 		if err := conn.Export(h, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", h.staticHostname)), consts.DbusHostnamePrefix); err != nil {
 			return fmt.Errorf("could not export hostname1 mock: %w", err)
