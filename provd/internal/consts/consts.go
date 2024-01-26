@@ -29,4 +29,6 @@ const (
 	DbusHostnamePrefix = "org.freedesktop.hostname1"
 	// DbusPeerPrefix is the prefix for the Peer D-Bus interface.
 	DbusPeerPrefix = "org.freedesktop.DBus.Peer"
+	// DbusLocalePrefix is the prefix for the Locale D-Bus interface.
+	DbusLocalePrefix = "org.freedesktop.locale1"
 )

@@ -6,4 +6,3 @@ package provd
 //
 // Should it become default, remove the --experimental_allow_proto3_optional flag from the go generate command below.
 //go:generate sh -c "PATH=\"$PATH:`go env GOPATH`/bin\" protoc --proto_path=. --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative ./protos/user.proto ./protos/locale.proto --experimental_allow_proto3_optional"
-

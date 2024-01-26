@@ -13,40 +13,39 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-// DbusObject is an abstraction of a dbus object.
-type DbusObject interface {
-	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
-	GetProperty(p string) (dbus.Variant, error)
-}
-
-// DbusConnector is the interface to the dbus connection which allow easy mocking.
-type DbusConnector interface {
-	Object(dest string, path dbus.ObjectPath) DbusObject
-}
+// Option is a functional option to set the DBus objects in tests.
+type Option func(*Service) error
 
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedLocaleServiceServer
 	conn   *dbus.Conn
-	locale DbusObject
+	locale dbus.BusObject
 }
 
 // New returns a new instance of the Locale service.
-func New(conn *dbus.Conn) (*Service, error) {
-    
-    s := &Service{
-		conn:   conn,
+func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
+	s := &Service{
+		conn: conn,
 	}
 
-    s.locale = conn.Object("org.freedesktop.locale1", dbus.ObjectPath("/org/freedesktop/locale1"))
-    err := s.locale.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	s.locale = conn.Object("org.freedesktop.locale1", dbus.ObjectPath("/org/freedesktop/locale1"))
+	err := s.locale.Call(consts.DbusPeerPrefix+".Ping", 0).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus locale1 object")
 	}
 
-    return s, nil
+	// Applying options, checking for errors in obtaining DBus objects
+	for _, opt := range opts {
+		if err := opt(s); err != nil {
+			return nil, err
+		}
+	}
+
+	return s, nil
 }
 
+// GetLocale returns the current locale.
 func (s *Service) GetLocale(ctx context.Context, req *emptypb.Empty) (*pb.GetLocaleResponse, error) {
 	// Validate request
 	if req == nil {
@@ -67,6 +66,7 @@ func (s *Service) GetLocale(ctx context.Context, req *emptypb.Empty) (*pb.GetLoc
 	return &pb.GetLocaleResponse{Locale: extractedLocale}, nil
 }
 
+// SetLocale sets the current locale.
 func (s *Service) SetLocale(ctx context.Context, req *pb.SetLocaleRequest) (*emptypb.Empty, error) {
 	// Validate request
 	if req == nil {
