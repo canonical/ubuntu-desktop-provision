@@ -1,3 +1,12 @@
+locale.LocaleService:
+    methods:
+        - name: SetLocale
+          isclientstream: false
+          isserverstream: false
+        - name: GetLocale
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/locale.proto
 user.UserService:
     methods:
         - name: CreateUser
