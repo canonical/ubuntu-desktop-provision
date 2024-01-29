@@ -2,6 +2,9 @@ pages:
   locale:
     title: "Welcome"
     image: "assets/mascot.png"
+  accessibility:
+    title: "Accessibility"
+    image: "assets/icons/accessibility.svg"
   welcome:
     title: "Welcome to Ubuntu"
   rst:

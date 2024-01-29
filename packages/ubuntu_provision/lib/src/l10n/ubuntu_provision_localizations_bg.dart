@@ -5,6 +5,46 @@ class UbuntuProvisionLocalizationsBg extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsBg([String locale = 'bg']) : super(locale);
 
   @override
+  String accessibilityPageTitle(Object DISTRO) {
+    return 'Accessibility in $DISTRO';
+  }
+
+  @override
+  String accessibilityPageBody(Object DISTRO) {
+    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+  }
+
+  @override
+  String get accessibilitySeeingLabel => 'Seeing';
+
+  @override
+  String get accessibilityHearingLabel => 'Hearing';
+
+  @override
+  String get accessibilityTypingLabel => 'Typing';
+
+  @override
+  String get accessibilityPointingLabel => 'Pointing and clicking';
+
+  @override
+  String get accessibilityZoomLabel => 'Zoom';
+
+  @override
+  String get accessibilityHighContrastLabel => 'High contrast';
+
+  @override
+  String get accessibilityLargeTextLabel => 'Large text';
+
+  @override
+  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+
+  @override
+  String get accessibilityScreenReaderLabel => 'Screen reader';
+
+  @override
+  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+
+  @override
   String get timezonePageTitle => 'Select your timezone';
 
   @override

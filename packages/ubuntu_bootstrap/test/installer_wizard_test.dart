@@ -76,6 +76,10 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(AccessibilityPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(WelcomePage), findsOneWidget);
     verify(welcomeModel.init()).called(1);
 
@@ -151,6 +155,10 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(AccessibilityPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(WelcomePage), findsOneWidget);
     verify(welcomeModel.init()).called(1);
 
@@ -214,6 +222,8 @@ void main() {
     );
     await tester.pumpAndSettle();
 
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(RstPage), findsOneWidget);
@@ -312,6 +322,10 @@ void main() {
     final context = tester.element(find.byType(Wizard));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
+    await tester.pumpAndSettle();
+    expect(find.byType(AccessibilityPage), findsOneWidget);
+
+    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(KeyboardPage), findsOneWidget);
     verify(keyboardModel.init()).called(1);

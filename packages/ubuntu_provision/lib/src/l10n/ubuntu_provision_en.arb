@@ -1,4 +1,38 @@
 {
+  "accessibilityPageTitle": "Accessibility in {DISTRO}",
+  "@accessibilityPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.",
+  "@accessibilityPageTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "accessibilitySeeingLabel": "Seeing",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Hearing",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Typing",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Pointing and clicking",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "High contrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Large text",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Reduce animation",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Screen reader",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Visual alerts",
+  "@accessibilityVisualAlertsLabel": {},
   "timezonePageTitle": "Select your timezone",
   "@timezonePageTitle": {},
   "timezoneLocationLabel": "Location",
