@@ -2,8 +2,12 @@
 package locale
 
 import (
+	"bufio"
 	"context"
+	"fmt"
+	"os"
 	"regexp"
+	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -19,8 +23,9 @@ type Option func(*Service) error
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedLocaleServiceServer
-	conn   *dbus.Conn
-	locale dbus.BusObject
+	conn                *dbus.Conn
+	locale              dbus.BusObject
+	localeSupportedPath string
 }
 
 // New returns a new instance of the Locale service.
@@ -34,6 +39,8 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus locale1 object")
 	}
+
+	s.localeSupportedPath = "/usr/share/i18n/SUPPORTED"
 
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
@@ -75,12 +82,44 @@ func (s *Service) SetLocale(ctx context.Context, req *pb.SetLocaleRequest) (*emp
 	if req.Locale == "" {
 		return nil, status.Errorf(codes.InvalidArgument, "locale must be specified")
 	}
-
-	//err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
-	// Set the locale using the dbus object.
+	// Check if the locale is supported
+	if supported, err := isLocaleSupported(req.Locale, s.localeSupportedPath); err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to check if locale is supported: %v", err)
+	} else if !supported {
+		return nil, status.Errorf(codes.InvalidArgument, "locale is not supported")
+	}
 	err := s.locale.Call("org.freedesktop.locale1."+"SetLocale", 0, []string{req.Locale}, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set locale: %v", err)
 	}
 	return &emptypb.Empty{}, nil
+}
+
+// Function to check if a given locale is supported.
+func isLocaleSupported(locale string, supportedPath string) (bool, error) {
+	// Open the locale file
+	file, err := os.Open(supportedPath)
+	if err != nil {
+		return false, fmt.Errorf("failed to open locale file: %v", err)
+	}
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+
+		// Split the line into locale and encoding
+		fields := strings.Fields(line)
+		if len(fields) < 2 {
+			// Line does not have the expected format
+			return false, fmt.Errorf("invalid line format: %s", line)
+		}
+
+		// Check if the input locale matches
+		if fields[0] == locale {
+			return true, nil
+		}
+	}
+	return false, scanner.Err()
 }

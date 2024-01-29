@@ -19,6 +19,67 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+func TestSupportedFilePath(t *testing.T) {
+	t.Parallel()
+	tests := map[string]struct {
+		supportedFilePath string
+		wantErr           bool
+	}{
+		// Success case
+		"Valid path": {},
+
+		// Invalid path
+		"Invalid SUPPORTED file path": {supportedFilePath: "invalid-path", wantErr: true},
+
+		// Unparsable file
+		"Unparsable SUPPORTED file": {supportedFilePath: "unparsable", wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc // capture range variable
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Setup dummy passwd and group master files in temp directory
+			tempDir := t.TempDir()
+
+			if tc.supportedFilePath == "unparsable" {
+				supportedPath := filepath.Join(tempDir, tc.supportedFilePath)
+				file, err := os.Create(supportedPath)
+				if err != nil {
+					t.Fatalf("Setup: could not create %s: %v", tc.supportedFilePath, err)
+				}
+				_, err = file.WriteString("foo") // Write "foo" to the file
+				if err != nil {
+					t.Fatalf("Setup: could not write to %s: %v", tc.supportedFilePath, err)
+				}
+				file.Close()                         // Close immediately after creating the file
+				tc.supportedFilePath = supportedPath // Update with full path
+			}
+
+			// Create service with options
+			var opts []locale.Option
+			if tc.supportedFilePath != "" {
+				opts = append(opts, locale.WithLocaleSupportedPath(tc.supportedFilePath))
+			}
+
+			client, err := locale.New(testutils.NewDbusConn(t), opts...)
+			if err != nil {
+				t.Fatalf("Setup: could not create user service: %v", err)
+			}
+
+			// Call SetLocale with a valid locale
+			_, err = client.SetLocale(context.Background(), &pb.SetLocaleRequest{Locale: "en_US.UTF-8"})
+
+			if tc.wantErr {
+				require.Error(t, err, "SetLocale should return an error, but did not")
+				return
+			}
+			require.NoError(t, err, "SetLocale should not return an error, but did")
+		})
+	}
+}
+
 func TestGetLocale(t *testing.T) {
 	t.Parallel()
 	tests := map[string]struct {
@@ -66,6 +127,7 @@ func TestSetLocale(t *testing.T) {
 		// Error cases
 		"empty locale": {locale: "", wantError: true},
 		"locale error": {locale: "locale_error", wantError: true},
+		"bad locale":   {locale: "bad_locale", wantError: true},
 	}
 	for name, tc := range tests {
 		tc := tc

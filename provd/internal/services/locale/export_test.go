@@ -21,3 +21,11 @@ func WithLocalePath(path string) Option {
 		return nil
 	}
 }
+
+// With is a functional option to set the passwd master path.
+func WithLocaleSupportedPath(path string) Option {
+	return func(s *Service) error {
+		s.localeSupportedPath = path
+		return nil
+	}
+}
