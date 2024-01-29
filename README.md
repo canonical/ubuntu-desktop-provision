@@ -21,16 +21,18 @@ The Flutter UI can be configured using a [YAML](https://yaml.org/) file.
 
   pages:
     locale:
-      title: "Custom Title for Locale Page"
       image: "/path/to/image.png"
       visible: true
     ...
   ```
 
+`visible` defaults to true if not specified and the `image` defaults to an image in in `assets`
+directory, if there is one specified for the page.
+
 Lookup order:
-- `/etc/whitelabeln.{yaml,yml}` (admin)
-- `/usr/local/share/whitelabeln.{yaml,yml}` (oem)
-- `/usr/share/whitelabeln.{yaml,yml}` (distro)
+- `/etc/whitelabel.{yaml,yml}` (admin)
+- `/usr/local/share/whitelabel.{yaml,yml}` (oem)
+- `/usr/share/whitelabel.{yaml,yml}` (distro)
 
 ## Repository Structure
 
