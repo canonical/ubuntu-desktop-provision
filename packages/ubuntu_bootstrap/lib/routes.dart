@@ -24,6 +24,7 @@ sealed class Routes {
   static String get initial => loading;
   static String get loading => routeMap['loading']!;
   static String get locale => routeMap['locale']!;
+  static String get accessibility => routeMap['accessibility']!;
   static String get welcome => routeMap['welcome']!;
   static String get rst => routeMap['rst']!;
   static String get keyboard => routeMap['keyboard']!;

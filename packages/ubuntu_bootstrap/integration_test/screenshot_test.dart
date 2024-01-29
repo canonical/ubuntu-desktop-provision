@@ -50,6 +50,9 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
+    await tester.jumpToPage(Routes.accessibility);
+    await tester.pumpAndSettle();
+
     await tester.testAccessibilityPage(
       screenshot: '$currentThemeName/02.accessibility',
     );
