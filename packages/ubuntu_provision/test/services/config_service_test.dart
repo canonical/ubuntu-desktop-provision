@@ -9,14 +9,14 @@ void main() {
   test('lookup path', () {
     final priority = [
       // admin
-      '/etc/ubuntu-provision.yaml',
-      '/etc/ubuntu-provision.yml',
+      '/etc/whitelabel.yaml',
+      '/etc/whitelabel.yml',
       // oem
-      '/usr/local/share/ubuntu-provision.yaml',
-      '/usr/local/share/ubuntu-provision.yml',
+      '/usr/local/share/whitelabel.yaml',
+      '/usr/local/share/whitelabel.yml',
       // distro
-      '/usr/share/ubuntu-provision.yaml',
-      '/usr/share/ubuntu-provision.yml',
+      '/usr/share/whitelabel.yaml',
+      '/usr/share/whitelabel.yml',
     ];
 
     final fs = MemoryFileSystem();
@@ -76,7 +76,7 @@ test2:
   test('load from assets', () async {
     final assetBundle = FakeAssetBundle(
       {
-        'packages/ubuntu_provision/assets/ubuntu-provision.yaml': '''
+        'packages/ubuntu_provision/assets/whitelabel.yaml': '''
 scope:
   test:
     title: "Welcome"

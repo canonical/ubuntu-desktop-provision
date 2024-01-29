@@ -28,9 +28,9 @@ The Flutter UI can be configured using a [YAML](https://yaml.org/) file.
   ```
 
 Lookup order:
-- `/etc/ubuntu-provision.{yaml,yml}` (admin)
-- `/usr/local/share/ubuntu-provision.{yaml,yml}` (oem)
-- `/usr/share/ubuntu-provision.{yaml,yml}` (distro)
+- `/etc/whitelabeln.{yaml,yml}` (admin)
+- `/usr/local/share/whitelabeln.{yaml,yml}` (oem)
+- `/usr/share/whitelabeln.{yaml,yml}` (distro)
 
 ## Repository Structure
 
