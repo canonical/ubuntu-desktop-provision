@@ -146,15 +146,13 @@ class MockIdentityService extends _i1.Mock implements _i2.IdentityService {
       ) as _i4.Future<void>);
 
   @override
-  _i4.Future<_i2.UsernameValidation> validateUsername(String? username) =>
-      (super.noSuchMethod(
+  _i4.Future<dynamic> validateUsername(String? username) => (super.noSuchMethod(
         Invocation.method(
           #validateUsername,
           [username],
         ),
-        returnValue:
-            _i4.Future<_i2.UsernameValidation>.value(_i2.UsernameValidation.OK),
-      ) as _i4.Future<_i2.UsernameValidation>);
+        returnValue: _i4.Future<dynamic>.value(),
+      ) as _i4.Future<dynamic>);
 }
 
 /// A class which mocks [GdmService].
