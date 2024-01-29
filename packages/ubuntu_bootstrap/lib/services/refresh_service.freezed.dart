@@ -119,7 +119,7 @@ class _$RefreshCheckingImpl extends _RefreshChecking {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$RefreshCheckingImpl);
   }
@@ -268,7 +268,7 @@ class _$RefreshStatusImpl extends _RefreshStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RefreshStatusImpl &&
@@ -431,7 +431,7 @@ class _$RefreshProgressImpl extends _RefreshProgress {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RefreshProgressImpl &&
@@ -566,7 +566,7 @@ class _$RefreshDoneImpl extends _RefreshDone {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$RefreshDoneImpl);
   }
@@ -702,7 +702,7 @@ class _$RefreshErrorImpl extends _RefreshError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RefreshErrorImpl &&
