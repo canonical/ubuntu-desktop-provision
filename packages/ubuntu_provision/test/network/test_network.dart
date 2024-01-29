@@ -61,6 +61,7 @@ Widget buildNetworkPage({
   when(wifiDevice.scanning).thenReturn(false);
   when(wifiDevice.accessPoints).thenReturn([accessPoint]);
   when(wifiDevice.isActive).thenReturn(false);
+  when(wifiDevice.isActiveAccessPoint(any)).thenReturn(false);
 
   final wifiModel = MockWifiModel();
   when(wifiModel.connectMode).thenReturn(ConnectMode.wifi);

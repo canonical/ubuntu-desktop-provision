@@ -136,6 +136,7 @@ class WifiListView extends ConsumerWidget {
               child: WifiListTile(
                 key: ValueKey(index),
                 selected: model.isSelectedDevice(model.devices[index]),
+                showDevice: model.devices.length > 1,
                 onSelected: (device, accessPoint) {
                   model.selectDevice(device);
                   onSelected(device, accessPoint);
@@ -153,58 +154,82 @@ class WifiListTile extends ConsumerWidget {
   const WifiListTile({
     required this.selected,
     required this.onSelected,
+    this.showDevice = true,
     super.key,
   });
 
   final bool selected;
   final OnWifiSelected onSelected;
+  final bool showDevice;
 
   static final accessPointProvider =
       Provider<AccessPoint>((_) => throw UnimplementedError());
+
+  Widget _leadingIcon(
+    AccessPoint accessPoint,
+    WifiDevice device,
+    double? iconSize,
+  ) {
+    if (device.isActiveAccessPoint(accessPoint)) {
+      if (device.isConnecting) {
+        return SizedBox(
+          width: iconSize,
+          height: iconSize,
+          child: const YaruCircularProgressIndicator(strokeWidth: 3),
+        );
+      } else {
+        return const Icon(YaruIcons.ok_simple);
+      }
+    } else {
+      return const SizedBox.shrink();
+    }
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final device = ref.watch(WifiListView.wifiDeviceProvider);
     final textColor = Theme.of(context).textTheme.titleMedium!.color;
     final iconSize = IconTheme.of(context).size;
-    return ExpansionTile(
-      initiallyExpanded: true,
-      controlAffinity: ListTileControlAffinity.leading,
-      title: Text(device.model ?? device.interface),
-      textColor: textColor,
-      iconColor: textColor,
-      trailing: device.isConnecting
-          ? SizedBox(
+
+    final accessPoints = <Widget>[
+      for (final accessPoint in device.accessPoints)
+        ProviderScope(
+          overrides: [accessPointProvider.overrideWithValue(accessPoint)],
+          child: ListTile(
+            key: ValueKey(accessPoint.name),
+            title: Text(accessPoint.name),
+            leading: _leadingIcon(accessPoint, device, iconSize),
+            selected: selected && device.isSelectedAccessPoint(accessPoint),
+            trailing: SizedBox(
               width: iconSize,
               height: iconSize,
-              child: const YaruCircularProgressIndicator(strokeWidth: 3),
-            )
-          : null,
-      children: <Widget>[
-        for (final accessPoint in device.accessPoints)
-          ProviderScope(
-            overrides: [accessPointProvider.overrideWithValue(accessPoint)],
-            child: ListTile(
-              key: ValueKey(accessPoint.name),
-              title: Text(accessPoint.name),
-              leading:
-                  device.isActive && device.isActiveAccessPoint(accessPoint)
-                      ? const Icon(YaruIcons.ok_simple)
-                      : const SizedBox.shrink(),
-              selected: selected && device.isSelectedAccessPoint(accessPoint),
-              trailing: SizedBox(
-                width: iconSize,
-                height: iconSize,
-                child: Icon(_wifiIcon(accessPoint)),
-              ),
-              onTap: () {
-                device.selectAccessPoint(accessPoint);
-                onSelected(device, accessPoint);
-              },
+              child: Icon(_wifiIcon(accessPoint)),
             ),
+            onTap: () {
+              device.selectAccessPoint(accessPoint);
+              onSelected(device, accessPoint);
+            },
           ),
-      ],
-    );
+        ),
+    ];
+
+    return showDevice
+        ? ExpansionTile(
+            initiallyExpanded: true,
+            controlAffinity: ListTileControlAffinity.leading,
+            title: Text(device.model ?? device.interface),
+            textColor: textColor,
+            iconColor: textColor,
+            trailing: device.isConnecting
+                ? SizedBox(
+                    width: iconSize,
+                    height: iconSize,
+                    child: const YaruCircularProgressIndicator(strokeWidth: 3),
+                  )
+                : null,
+            children: accessPoints,
+          )
+        : Column(children: accessPoints);
   }
 }
 
