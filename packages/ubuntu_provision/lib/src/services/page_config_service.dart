@@ -37,7 +37,6 @@ class PageConfigService {
 class PageConfigEntry with _$PageConfigEntry {
   const factory PageConfigEntry({
     String? image,
-    String? title,
     @Default(true) bool visible,
   }) = _PageConfigEntry;
   factory PageConfigEntry.fromJson(Map<String, dynamic> json) =>
@@ -83,7 +82,7 @@ class PageConfigEntryConverter
   Map<String, dynamic> toJson(Map<String, PageConfigEntry> pages) {
     final objects = <String, dynamic>{};
     for (final entry in pages.entries) {
-      if (entry.value.image != null || entry.value.title != null) {
+      if (entry.value.image != null) {
         objects[entry.key] = entry.value.toJson();
       } else {
         objects[entry.key] = entry.value.visible;

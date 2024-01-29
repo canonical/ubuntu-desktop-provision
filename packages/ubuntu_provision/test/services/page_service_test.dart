@@ -7,22 +7,21 @@ import '../test_utils.dart';
 
 void main() {
   test('pages', () async {
-    final config = {
-      'keyboard': false,
-      'network': {
-        'image': '/foo/bar/network.png',
-        'title': 'Network Page Title',
-      },
-    };
+    const config = '''
+pages:
+  welcome:
+    visible: false
+  network:
+    image: "/foo/bar/network.png"
+''';
     final service =
         PageConfigService(config: createMockConfigService(config: config));
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);
-    expect(pages['keyboard']?.visible, isFalse);
+    expect(pages['welcome']?.visible, isFalse);
     expect(pages['network']?.visible, isTrue);
     expect(pages['network']?.image, equals('/foo/bar/network.png'));
-    expect(pages['network']?.title, equals('Network Page Title'));
   });
 
   test('pages without config', () async {
@@ -34,9 +33,9 @@ void main() {
   });
 }
 
-MockConfigService createMockConfigService({Map<String, dynamic>? config}) {
+MockConfigService createMockConfigService({String config = ''}) {
   final mock = MockConfigService();
-  when(mock.get('pages'))
-      .thenAnswer((_) async => YamlMap.wrap(config?.cast() ?? {}));
+  final yaml = loadYaml(config)?['pages'] as YamlMap?;
+  when(mock.get('pages')).thenAnswer((_) async => yaml);
   return mock;
 }
