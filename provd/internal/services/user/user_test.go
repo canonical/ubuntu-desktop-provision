@@ -238,6 +238,9 @@ func TestCreateUser(t *testing.T) {
 			err = os.Chdir(tempDir)
 			require.NoError(t, err, "Setup: failed to change directory")
 
+			err := os.WriteFile("actions", []byte(""), 0600)
+			require.NoError(t, err, "Setup: could not create actions file")
+
 			_, reqErr := client.CreateUser(context.Background(), userReq)
 
 			d, err := os.ReadFile("actions")
@@ -278,7 +281,7 @@ func TestValidateUsername(t *testing.T) {
 		"Error when username contains invalid characters": {username: "invalid@username"},
 
 		// Dbus object error
-		"Error when recieve error from Accounts service": {username: "find-user-by-name-error", wantErr: true},
+		"Error when receive error from Accounts service": {username: "find-user-by-name-error", wantErr: true},
 	}
 
 	for name, tc := range tests {
