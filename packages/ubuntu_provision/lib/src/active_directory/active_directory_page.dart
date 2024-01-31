@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.dart';
-import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
-import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_widgets.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class ActiveDirectoryPage extends ConsumerStatefulWidget {
+class ActiveDirectoryPage extends ConsumerStatefulWidget with ProvisioningPage {
   const ActiveDirectoryPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(activeDirectoryModelProvider).init();
   }
 

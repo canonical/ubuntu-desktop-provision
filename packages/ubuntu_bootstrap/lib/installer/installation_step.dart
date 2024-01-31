@@ -17,6 +17,9 @@ enum InstallationStep {
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
   secureBoot(SecureBootPage.new),
   storage(StorageWizard.new, discreteStep: false),
+  identity(IdentityPage.new),
+  activeDirectory(ActiveDirectoryPage.new),
+  timezone(TimezonePage.new),
   confirm(ConfirmPage.new);
 
   const InstallationStep(this.pageFactory, {this.discreteStep = true});

@@ -73,23 +73,19 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
     await tester.pumpAndSettle();
+    await expectIdentity(identity);
 
     await tester.testTimezonePage(timezone: timezone);
     await tester.tapNext();
     await tester.pumpAndSettle();
     await expectTimezone(timezone);
 
-    await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
     await tester.pumpAndSettle();
-    await expectIdentity(identity);
-
-    await tester.testThemePage();
-    await tester.tapNext();
-    await tester.pump();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
@@ -151,22 +147,18 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testIdentityPage(identity: identity, password: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
-    await tester.testThemePage();
+    await tester.testTimezonePage();
     await tester.tapNext();
-    await tester.pump();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
@@ -222,22 +214,18 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testIdentityPage(identity: identity, password: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
-    await tester.testThemePage();
+    await tester.testTimezonePage();
     await tester.tapNext();
-    await tester.pump();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
@@ -302,22 +290,18 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testIdentityPage(identity: identity, password: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
     await expectIdentity(identity);
 
-    await tester.testThemePage();
+    await tester.testTimezonePage();
     await tester.tapNext();
-    await tester.pump();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
@@ -378,14 +362,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
       password: 'password',
@@ -393,9 +369,13 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testThemePage();
+    await tester.testTimezonePage();
     await tester.tapNext();
-    await tester.pump();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();
@@ -447,14 +427,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
       password: 'password',
@@ -462,9 +434,13 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testThemePage();
+    await tester.testTimezonePage();
     await tester.tapNext();
-    await tester.pump();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
     await tester.pumpAndSettle();

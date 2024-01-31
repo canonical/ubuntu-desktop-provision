@@ -324,6 +324,21 @@ Future<void> main() async {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(
+      identity: const Identity(
+        realname: 'Ubuntu User',
+        hostname: 'ubuntu',
+        username: 'user',
+      ),
+      password: 'password',
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage(
       screenshot: '$currentThemeName/09.confirm',
     );

@@ -200,6 +200,16 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(IdentityPage), findsOneWidget);
+    verify(identityModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(TimezonePage), findsOneWidget);
+    verify(timezoneModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(ConfirmPage), findsOneWidget);
     verify(bitLockerModel.init()).called(1); // skipped
     verify(guidedReformatModel.init()).called(1); // skipped
@@ -208,16 +218,6 @@ void main() {
     verify(confirmModel.init()).called(1);
 
     await tester.tapButton(l10n.confirmInstallButton);
-    await tester.pumpAndSettle();
-    expect(find.byType(TimezonePage), findsOneWidget);
-    verify(timezoneModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(IdentityPage), findsOneWidget);
-    verify(identityModel.init()).called(1);
-
-    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(InstallPage), findsOneWidget);
     verify(installModel.init()).called(1);
@@ -376,6 +376,9 @@ void main() {
           'not-enough-disk-space',
           'secure-boot',
           'storage',
+          'identity',
+          'active-directory',
+          'timezone',
         ]),
       ),
     );

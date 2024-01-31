@@ -2,7 +2,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 
-final log = Logger('ad');
+final _log = Logger('ad');
 
 class SubiquityActiveDirectoryService implements ActiveDirectoryService {
   SubiquityActiveDirectoryService(this._subiquity);
@@ -27,7 +27,7 @@ class SubiquityActiveDirectoryService implements ActiveDirectoryService {
       // the active directory endpoint is not optional so we need to explicitly
       // mark it as configured even if not used to avoid subiquity getting stuck
       // at waiting for it to be configured.
-      _subiquity.markConfigured(['active_directory']);
+      await _subiquity.markConfigured(['active_directory']);
     }
   }
 
@@ -65,8 +65,9 @@ class SubiquityActiveDirectoryService implements ActiveDirectoryService {
   Future<AdJoinResult> getJoinResult({bool wait = true}) async {
     try {
       return await _subiquity.getActiveDirectoryJoinResult(wait: wait);
+      // ignore: avoid_catches_without_on_clauses
     } catch (e) {
-      log.error(e);
+      _log.error(e);
       return AdJoinResult.UNKNOWN;
     }
   }

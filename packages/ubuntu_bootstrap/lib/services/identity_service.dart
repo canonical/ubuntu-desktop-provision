@@ -1,9 +1,8 @@
 import 'package:crypt/crypt.dart';
 import 'package:meta/meta.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/services/post_install_service.dart';
 import 'package:ubuntu_provision/services.dart';
-
-import 'post_install_service.dart';
 
 class SubiquityIdentityService implements IdentityService {
   const SubiquityIdentityService(this._subiquity, this._postInstall);
