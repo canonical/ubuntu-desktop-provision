@@ -15,16 +15,17 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accessibility.pb.dart' as $0;
+import 'accessibility.pb.dart' as $1;
+import 'google/protobuf/empty.pb.dart' as $0;
 
 export 'accessibility.pb.dart';
 
 @$pb.GrpcServiceName('accessibility.AccessibilityService')
 class AccessibilityServiceClient extends $grpc.Client {
-  static final _$getHighContrast = $grpc.ClientMethod<$0.Empty, $0.GetHighContrastResponse>(
+  static final _$getHighContrast = $grpc.ClientMethod<$0.Empty, $1.GetHighContrastResponse>(
       '/accessibility.AccessibilityService/GetHighContrast',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetHighContrastResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetHighContrastResponse.fromBuffer(value));
   static final _$enableHighContrast = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableHighContrast',
       ($0.Empty value) => value.writeToBuffer(),
@@ -33,10 +34,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableHighContrast',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getReducedMotion = $grpc.ClientMethod<$0.Empty, $0.GetReducedMotionResponse>(
+  static final _$getReducedMotion = $grpc.ClientMethod<$0.Empty, $1.GetReducedMotionResponse>(
       '/accessibility.AccessibilityService/GetReducedMotion',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetReducedMotionResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetReducedMotionResponse.fromBuffer(value));
   static final _$enableReducedMotion = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableReducedMotion',
       ($0.Empty value) => value.writeToBuffer(),
@@ -45,10 +46,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableReducedMotion',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getLargeText = $grpc.ClientMethod<$0.Empty, $0.GetLargeTextResponse>(
+  static final _$getLargeText = $grpc.ClientMethod<$0.Empty, $1.GetLargeTextResponse>(
       '/accessibility.AccessibilityService/GetLargeText',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetLargeTextResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetLargeTextResponse.fromBuffer(value));
   static final _$enableLargeText = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableLargeText',
       ($0.Empty value) => value.writeToBuffer(),
@@ -57,18 +58,18 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableLargeText',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getCursorSize = $grpc.ClientMethod<$0.Empty, $0.GetCursorSizeResponse>(
+  static final _$getCursorSize = $grpc.ClientMethod<$0.Empty, $1.GetCursorSizeResponse>(
       '/accessibility.AccessibilityService/GetCursorSize',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetCursorSizeResponse.fromBuffer(value));
-  static final _$setCursorSize = $grpc.ClientMethod<$0.SetCursorSizeRequest, $0.Empty>(
+      ($core.List<$core.int> value) => $1.GetCursorSizeResponse.fromBuffer(value));
+  static final _$setCursorSize = $grpc.ClientMethod<$1.SetCursorSizeRequest, $0.Empty>(
       '/accessibility.AccessibilityService/SetCursorSize',
-      ($0.SetCursorSizeRequest value) => value.writeToBuffer(),
+      ($1.SetCursorSizeRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getSoundKeys = $grpc.ClientMethod<$0.Empty, $0.GetSoundKeysResponse>(
+  static final _$getSoundKeys = $grpc.ClientMethod<$0.Empty, $1.GetSoundKeysResponse>(
       '/accessibility.AccessibilityService/GetSoundKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetSoundKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetSoundKeysResponse.fromBuffer(value));
   static final _$enableSoundKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableSoundKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -77,10 +78,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableSoundKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getOverlayScrollbars = $grpc.ClientMethod<$0.Empty, $0.GetOverlayScrollbarsResponse>(
+  static final _$getOverlayScrollbars = $grpc.ClientMethod<$0.Empty, $1.GetOverlayScrollbarsResponse>(
       '/accessibility.AccessibilityService/GetOverlayScrollbars',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetOverlayScrollbarsResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetOverlayScrollbarsResponse.fromBuffer(value));
   static final _$enableOverlayScrollbars = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableOverlayScrollbars',
       ($0.Empty value) => value.writeToBuffer(),
@@ -89,10 +90,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableOverlayScrollbars',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getScreenReader = $grpc.ClientMethod<$0.Empty, $0.GetScreenReaderResponse>(
+  static final _$getScreenReader = $grpc.ClientMethod<$0.Empty, $1.GetScreenReaderResponse>(
       '/accessibility.AccessibilityService/GetScreenReader',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetScreenReaderResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetScreenReaderResponse.fromBuffer(value));
   static final _$enableScreenReader = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableScreenReader',
       ($0.Empty value) => value.writeToBuffer(),
@@ -101,10 +102,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableScreenReader',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getOveramplification = $grpc.ClientMethod<$0.Empty, $0.GetOveramplificationResponse>(
+  static final _$getOveramplification = $grpc.ClientMethod<$0.Empty, $1.GetOveramplificationResponse>(
       '/accessibility.AccessibilityService/GetOveramplification',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetOveramplificationResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetOveramplificationResponse.fromBuffer(value));
   static final _$enableOveramplification = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableOveramplification',
       ($0.Empty value) => value.writeToBuffer(),
@@ -113,22 +114,22 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableOveramplification',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getVisualAlerts = $grpc.ClientMethod<$0.Empty, $0.GetVisualAlertsResponse>(
+  static final _$getVisualAlerts = $grpc.ClientMethod<$0.Empty, $1.GetVisualAlertsResponse>(
       '/accessibility.AccessibilityService/GetVisualAlerts',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetVisualAlertsResponse.fromBuffer(value));
-  static final _$enableVisualAlerts = $grpc.ClientMethod<$0.EnableVisualAlertsRequest, $0.Empty>(
+      ($core.List<$core.int> value) => $1.GetVisualAlertsResponse.fromBuffer(value));
+  static final _$enableVisualAlerts = $grpc.ClientMethod<$1.EnableVisualAlertsRequest, $0.Empty>(
       '/accessibility.AccessibilityService/EnableVisualAlerts',
-      ($0.EnableVisualAlertsRequest value) => value.writeToBuffer(),
+      ($1.EnableVisualAlertsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$disableVisualAlerts = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/DisableVisualAlerts',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getScreenKeyboard = $grpc.ClientMethod<$0.Empty, $0.GetScreenKeyboardResponse>(
+  static final _$getScreenKeyboard = $grpc.ClientMethod<$0.Empty, $1.GetScreenKeyboardResponse>(
       '/accessibility.AccessibilityService/GetScreenKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetScreenKeyboardResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetScreenKeyboardResponse.fromBuffer(value));
   static final _$enableScreenKeyboard = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableScreenKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
@@ -137,10 +138,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableScreenKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getEnableByKeyboard = $grpc.ClientMethod<$0.Empty, $0.GetEnableByKeyboardResponse>(
+  static final _$getEnableByKeyboard = $grpc.ClientMethod<$0.Empty, $1.GetEnableByKeyboardResponse>(
       '/accessibility.AccessibilityService/GetEnableByKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetEnableByKeyboardResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetEnableByKeyboardResponse.fromBuffer(value));
   static final _$enableEnableByKeyboard = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableEnableByKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
@@ -149,22 +150,22 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableEnableByKeyboard',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getCursorBlinking = $grpc.ClientMethod<$0.Empty, $0.GetCursorBlinkingResponse>(
+  static final _$getCursorBlinking = $grpc.ClientMethod<$0.Empty, $1.GetCursorBlinkingResponse>(
       '/accessibility.AccessibilityService/GetCursorBlinking',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetCursorBlinkingResponse.fromBuffer(value));
-  static final _$enableCursorBlinking = $grpc.ClientMethod<$0.EnableCursorBlinkingRequest, $0.Empty>(
+      ($core.List<$core.int> value) => $1.GetCursorBlinkingResponse.fromBuffer(value));
+  static final _$enableCursorBlinking = $grpc.ClientMethod<$1.EnableCursorBlinkingRequest, $0.Empty>(
       '/accessibility.AccessibilityService/EnableCursorBlinking',
-      ($0.EnableCursorBlinkingRequest value) => value.writeToBuffer(),
+      ($1.EnableCursorBlinkingRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$disableCursorBlinking = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/DisableCursorBlinking',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getRepeatedKeys = $grpc.ClientMethod<$0.Empty, $0.GetRepeatedKeysResponse>(
+  static final _$getRepeatedKeys = $grpc.ClientMethod<$0.Empty, $1.GetRepeatedKeysResponse>(
       '/accessibility.AccessibilityService/GetRepeatedKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetRepeatedKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetRepeatedKeysResponse.fromBuffer(value));
   static final _$enableRepeatedKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableRepeatedKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -173,10 +174,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableRepeatedKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getStickyKeys = $grpc.ClientMethod<$0.Empty, $0.GetStickyKeysResponse>(
+  static final _$getStickyKeys = $grpc.ClientMethod<$0.Empty, $1.GetStickyKeysResponse>(
       '/accessibility.AccessibilityService/GetStickyKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetStickyKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetStickyKeysResponse.fromBuffer(value));
   static final _$enableStickyKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableStickyKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -185,10 +186,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableStickyKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getSlowKeys = $grpc.ClientMethod<$0.Empty, $0.GetSlowKeysResponse>(
+  static final _$getSlowKeys = $grpc.ClientMethod<$0.Empty, $1.GetSlowKeysResponse>(
       '/accessibility.AccessibilityService/GetSlowKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetSlowKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetSlowKeysResponse.fromBuffer(value));
   static final _$enableSlowKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableSlowKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -197,10 +198,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableSlowKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getBounceKeys = $grpc.ClientMethod<$0.Empty, $0.GetBounceKeysResponse>(
+  static final _$getBounceKeys = $grpc.ClientMethod<$0.Empty, $1.GetBounceKeysResponse>(
       '/accessibility.AccessibilityService/GetBounceKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetBounceKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetBounceKeysResponse.fromBuffer(value));
   static final _$enableBounceKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableBounceKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -209,10 +210,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableBounceKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getMouseKeys = $grpc.ClientMethod<$0.Empty, $0.GetMouseKeysResponse>(
+  static final _$getMouseKeys = $grpc.ClientMethod<$0.Empty, $1.GetMouseKeysResponse>(
       '/accessibility.AccessibilityService/GetMouseKeys',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetMouseKeysResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetMouseKeysResponse.fromBuffer(value));
   static final _$enableMouseKeys = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableMouseKeys',
       ($0.Empty value) => value.writeToBuffer(),
@@ -221,10 +222,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableMouseKeys',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getLocationPointer = $grpc.ClientMethod<$0.Empty, $0.GetLocationPointerResponse>(
+  static final _$getLocationPointer = $grpc.ClientMethod<$0.Empty, $1.GetLocationPointerResponse>(
       '/accessibility.AccessibilityService/GetLocationPointer',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetLocationPointerResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetLocationPointerResponse.fromBuffer(value));
   static final _$enableLocationPointer = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableLocationPointer',
       ($0.Empty value) => value.writeToBuffer(),
@@ -233,18 +234,18 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableLocationPointer',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getDoubleClickDelay = $grpc.ClientMethod<$0.Empty, $0.GetDoubleClickDelayResponse>(
+  static final _$getDoubleClickDelay = $grpc.ClientMethod<$0.Empty, $1.GetDoubleClickDelayResponse>(
       '/accessibility.AccessibilityService/GetDoubleClickDelay',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetDoubleClickDelayResponse.fromBuffer(value));
-  static final _$setDoubleClickDelay = $grpc.ClientMethod<$0.SetDoubleClickDelayRequest, $0.Empty>(
+      ($core.List<$core.int> value) => $1.GetDoubleClickDelayResponse.fromBuffer(value));
+  static final _$setDoubleClickDelay = $grpc.ClientMethod<$1.SetDoubleClickDelayRequest, $0.Empty>(
       '/accessibility.AccessibilityService/SetDoubleClickDelay',
-      ($0.SetDoubleClickDelayRequest value) => value.writeToBuffer(),
+      ($1.SetDoubleClickDelayRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getSimulatedSecondaryClicks = $grpc.ClientMethod<$0.Empty, $0.GetSimulatedSecondaryClicksResponse>(
+  static final _$getSimulatedSecondaryClicks = $grpc.ClientMethod<$0.Empty, $1.GetSimulatedSecondaryClicksResponse>(
       '/accessibility.AccessibilityService/GetSimulatedSecondaryClicks',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetSimulatedSecondaryClicksResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetSimulatedSecondaryClicksResponse.fromBuffer(value));
   static final _$enableSimulatedSecondaryClicks = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableSimulatedSecondaryClicks',
       ($0.Empty value) => value.writeToBuffer(),
@@ -253,10 +254,10 @@ class AccessibilityServiceClient extends $grpc.Client {
       '/accessibility.AccessibilityService/DisableSimulatedSecondaryClicks',
       ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getHoverClicks = $grpc.ClientMethod<$0.Empty, $0.GetHoverClicksResponse>(
+  static final _$getHoverClicks = $grpc.ClientMethod<$0.Empty, $1.GetHoverClicksResponse>(
       '/accessibility.AccessibilityService/GetHoverClicks',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.GetHoverClicksResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $1.GetHoverClicksResponse.fromBuffer(value));
   static final _$enableHoverClicks = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/accessibility.AccessibilityService/EnableHoverClicks',
       ($0.Empty value) => value.writeToBuffer(),
@@ -272,7 +273,7 @@ class AccessibilityServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.GetHighContrastResponse> getHighContrast($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetHighContrastResponse> getHighContrast($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getHighContrast, request, options: options);
   }
 
@@ -284,7 +285,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableHighContrast, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetReducedMotionResponse> getReducedMotion($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetReducedMotionResponse> getReducedMotion($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getReducedMotion, request, options: options);
   }
 
@@ -296,7 +297,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableReducedMotion, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetLargeTextResponse> getLargeText($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetLargeTextResponse> getLargeText($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getLargeText, request, options: options);
   }
 
@@ -308,15 +309,15 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableLargeText, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetCursorSizeResponse> getCursorSize($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetCursorSizeResponse> getCursorSize($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getCursorSize, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Empty> setCursorSize($0.SetCursorSizeRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> setCursorSize($1.SetCursorSizeRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setCursorSize, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetSoundKeysResponse> getSoundKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetSoundKeysResponse> getSoundKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSoundKeys, request, options: options);
   }
 
@@ -328,7 +329,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableSoundKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetOverlayScrollbarsResponse> getOverlayScrollbars($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetOverlayScrollbarsResponse> getOverlayScrollbars($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getOverlayScrollbars, request, options: options);
   }
 
@@ -340,7 +341,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableOverlayScrollbars, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetScreenReaderResponse> getScreenReader($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetScreenReaderResponse> getScreenReader($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getScreenReader, request, options: options);
   }
 
@@ -352,7 +353,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableScreenReader, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetOveramplificationResponse> getOveramplification($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetOveramplificationResponse> getOveramplification($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getOveramplification, request, options: options);
   }
 
@@ -364,11 +365,11 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableOveramplification, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetVisualAlertsResponse> getVisualAlerts($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetVisualAlertsResponse> getVisualAlerts($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getVisualAlerts, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Empty> enableVisualAlerts($0.EnableVisualAlertsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> enableVisualAlerts($1.EnableVisualAlertsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$enableVisualAlerts, request, options: options);
   }
 
@@ -376,7 +377,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableVisualAlerts, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetScreenKeyboardResponse> getScreenKeyboard($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetScreenKeyboardResponse> getScreenKeyboard($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getScreenKeyboard, request, options: options);
   }
 
@@ -388,7 +389,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableScreenKeyboard, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetEnableByKeyboardResponse> getEnableByKeyboard($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetEnableByKeyboardResponse> getEnableByKeyboard($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getEnableByKeyboard, request, options: options);
   }
 
@@ -400,11 +401,11 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableEnableByKeyboard, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetCursorBlinkingResponse> getCursorBlinking($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetCursorBlinkingResponse> getCursorBlinking($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getCursorBlinking, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Empty> enableCursorBlinking($0.EnableCursorBlinkingRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> enableCursorBlinking($1.EnableCursorBlinkingRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$enableCursorBlinking, request, options: options);
   }
 
@@ -412,7 +413,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableCursorBlinking, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetRepeatedKeysResponse> getRepeatedKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetRepeatedKeysResponse> getRepeatedKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getRepeatedKeys, request, options: options);
   }
 
@@ -424,7 +425,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableRepeatedKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetStickyKeysResponse> getStickyKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetStickyKeysResponse> getStickyKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getStickyKeys, request, options: options);
   }
 
@@ -436,7 +437,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableStickyKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetSlowKeysResponse> getSlowKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetSlowKeysResponse> getSlowKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSlowKeys, request, options: options);
   }
 
@@ -448,7 +449,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableSlowKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetBounceKeysResponse> getBounceKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetBounceKeysResponse> getBounceKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getBounceKeys, request, options: options);
   }
 
@@ -460,7 +461,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableBounceKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetMouseKeysResponse> getMouseKeys($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetMouseKeysResponse> getMouseKeys($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getMouseKeys, request, options: options);
   }
 
@@ -472,7 +473,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableMouseKeys, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetLocationPointerResponse> getLocationPointer($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetLocationPointerResponse> getLocationPointer($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getLocationPointer, request, options: options);
   }
 
@@ -484,15 +485,15 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableLocationPointer, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetDoubleClickDelayResponse> getDoubleClickDelay($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetDoubleClickDelayResponse> getDoubleClickDelay($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getDoubleClickDelay, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.Empty> setDoubleClickDelay($0.SetDoubleClickDelayRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> setDoubleClickDelay($1.SetDoubleClickDelayRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setDoubleClickDelay, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSimulatedSecondaryClicks, request, options: options);
   }
 
@@ -504,7 +505,7 @@ class AccessibilityServiceClient extends $grpc.Client {
     return $createUnaryCall(_$disableSimulatedSecondaryClicks, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetHoverClicksResponse> getHoverClicks($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.GetHoverClicksResponse> getHoverClicks($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getHoverClicks, request, options: options);
   }
 
@@ -522,13 +523,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
   $core.String get $name => 'accessibility.AccessibilityService';
 
   AccessibilityServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetHighContrastResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetHighContrastResponse>(
         'GetHighContrast',
         getHighContrast_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetHighContrastResponse value) => value.writeToBuffer()));
+        ($1.GetHighContrastResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableHighContrast',
         enableHighContrast_Pre,
@@ -543,13 +544,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetReducedMotionResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetReducedMotionResponse>(
         'GetReducedMotion',
         getReducedMotion_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetReducedMotionResponse value) => value.writeToBuffer()));
+        ($1.GetReducedMotionResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableReducedMotion',
         enableReducedMotion_Pre,
@@ -564,13 +565,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetLargeTextResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetLargeTextResponse>(
         'GetLargeText',
         getLargeText_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetLargeTextResponse value) => value.writeToBuffer()));
+        ($1.GetLargeTextResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableLargeText',
         enableLargeText_Pre,
@@ -585,27 +586,27 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetCursorSizeResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetCursorSizeResponse>(
         'GetCursorSize',
         getCursorSize_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetCursorSizeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.SetCursorSizeRequest, $0.Empty>(
+        ($1.GetCursorSizeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.SetCursorSizeRequest, $0.Empty>(
         'SetCursorSize',
         setCursorSize_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.SetCursorSizeRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.SetCursorSizeRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetSoundKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetSoundKeysResponse>(
         'GetSoundKeys',
         getSoundKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetSoundKeysResponse value) => value.writeToBuffer()));
+        ($1.GetSoundKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableSoundKeys',
         enableSoundKeys_Pre,
@@ -620,13 +621,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetOverlayScrollbarsResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetOverlayScrollbarsResponse>(
         'GetOverlayScrollbars',
         getOverlayScrollbars_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetOverlayScrollbarsResponse value) => value.writeToBuffer()));
+        ($1.GetOverlayScrollbarsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableOverlayScrollbars',
         enableOverlayScrollbars_Pre,
@@ -641,13 +642,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetScreenReaderResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetScreenReaderResponse>(
         'GetScreenReader',
         getScreenReader_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetScreenReaderResponse value) => value.writeToBuffer()));
+        ($1.GetScreenReaderResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableScreenReader',
         enableScreenReader_Pre,
@@ -662,13 +663,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetOveramplificationResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetOveramplificationResponse>(
         'GetOveramplification',
         getOveramplification_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetOveramplificationResponse value) => value.writeToBuffer()));
+        ($1.GetOveramplificationResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableOveramplification',
         enableOveramplification_Pre,
@@ -683,19 +684,19 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetVisualAlertsResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetVisualAlertsResponse>(
         'GetVisualAlerts',
         getVisualAlerts_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetVisualAlertsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.EnableVisualAlertsRequest, $0.Empty>(
+        ($1.GetVisualAlertsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.EnableVisualAlertsRequest, $0.Empty>(
         'EnableVisualAlerts',
         enableVisualAlerts_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.EnableVisualAlertsRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.EnableVisualAlertsRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'DisableVisualAlerts',
@@ -704,13 +705,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetScreenKeyboardResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetScreenKeyboardResponse>(
         'GetScreenKeyboard',
         getScreenKeyboard_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetScreenKeyboardResponse value) => value.writeToBuffer()));
+        ($1.GetScreenKeyboardResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableScreenKeyboard',
         enableScreenKeyboard_Pre,
@@ -725,13 +726,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetEnableByKeyboardResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetEnableByKeyboardResponse>(
         'GetEnableByKeyboard',
         getEnableByKeyboard_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetEnableByKeyboardResponse value) => value.writeToBuffer()));
+        ($1.GetEnableByKeyboardResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableEnableByKeyboard',
         enableEnableByKeyboard_Pre,
@@ -746,19 +747,19 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetCursorBlinkingResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetCursorBlinkingResponse>(
         'GetCursorBlinking',
         getCursorBlinking_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetCursorBlinkingResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.EnableCursorBlinkingRequest, $0.Empty>(
+        ($1.GetCursorBlinkingResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.EnableCursorBlinkingRequest, $0.Empty>(
         'EnableCursorBlinking',
         enableCursorBlinking_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.EnableCursorBlinkingRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.EnableCursorBlinkingRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'DisableCursorBlinking',
@@ -767,13 +768,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetRepeatedKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetRepeatedKeysResponse>(
         'GetRepeatedKeys',
         getRepeatedKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetRepeatedKeysResponse value) => value.writeToBuffer()));
+        ($1.GetRepeatedKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableRepeatedKeys',
         enableRepeatedKeys_Pre,
@@ -788,13 +789,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetStickyKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetStickyKeysResponse>(
         'GetStickyKeys',
         getStickyKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetStickyKeysResponse value) => value.writeToBuffer()));
+        ($1.GetStickyKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableStickyKeys',
         enableStickyKeys_Pre,
@@ -809,13 +810,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetSlowKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetSlowKeysResponse>(
         'GetSlowKeys',
         getSlowKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetSlowKeysResponse value) => value.writeToBuffer()));
+        ($1.GetSlowKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableSlowKeys',
         enableSlowKeys_Pre,
@@ -830,13 +831,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetBounceKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetBounceKeysResponse>(
         'GetBounceKeys',
         getBounceKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetBounceKeysResponse value) => value.writeToBuffer()));
+        ($1.GetBounceKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableBounceKeys',
         enableBounceKeys_Pre,
@@ -851,13 +852,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetMouseKeysResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetMouseKeysResponse>(
         'GetMouseKeys',
         getMouseKeys_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetMouseKeysResponse value) => value.writeToBuffer()));
+        ($1.GetMouseKeysResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableMouseKeys',
         enableMouseKeys_Pre,
@@ -872,13 +873,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetLocationPointerResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetLocationPointerResponse>(
         'GetLocationPointer',
         getLocationPointer_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetLocationPointerResponse value) => value.writeToBuffer()));
+        ($1.GetLocationPointerResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableLocationPointer',
         enableLocationPointer_Pre,
@@ -893,27 +894,27 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetDoubleClickDelayResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetDoubleClickDelayResponse>(
         'GetDoubleClickDelay',
         getDoubleClickDelay_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetDoubleClickDelayResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.SetDoubleClickDelayRequest, $0.Empty>(
+        ($1.GetDoubleClickDelayResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.SetDoubleClickDelayRequest, $0.Empty>(
         'SetDoubleClickDelay',
         setDoubleClickDelay_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.SetDoubleClickDelayRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.SetDoubleClickDelayRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetSimulatedSecondaryClicksResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetSimulatedSecondaryClicksResponse>(
         'GetSimulatedSecondaryClicks',
         getSimulatedSecondaryClicks_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetSimulatedSecondaryClicksResponse value) => value.writeToBuffer()));
+        ($1.GetSimulatedSecondaryClicksResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableSimulatedSecondaryClicks',
         enableSimulatedSecondaryClicks_Pre,
@@ -928,13 +929,13 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $0.GetHoverClicksResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetHoverClicksResponse>(
         'GetHoverClicks',
         getHoverClicks_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($0.GetHoverClicksResponse value) => value.writeToBuffer()));
+        ($1.GetHoverClicksResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableHoverClicks',
         enableHoverClicks_Pre,
@@ -951,7 +952,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.GetHighContrastResponse> getHighContrast_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetHighContrastResponse> getHighContrast_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getHighContrast(call, await request);
   }
 
@@ -963,7 +964,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableHighContrast(call, await request);
   }
 
-  $async.Future<$0.GetReducedMotionResponse> getReducedMotion_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetReducedMotionResponse> getReducedMotion_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getReducedMotion(call, await request);
   }
 
@@ -975,7 +976,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableReducedMotion(call, await request);
   }
 
-  $async.Future<$0.GetLargeTextResponse> getLargeText_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetLargeTextResponse> getLargeText_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getLargeText(call, await request);
   }
 
@@ -987,15 +988,15 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableLargeText(call, await request);
   }
 
-  $async.Future<$0.GetCursorSizeResponse> getCursorSize_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetCursorSizeResponse> getCursorSize_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getCursorSize(call, await request);
   }
 
-  $async.Future<$0.Empty> setCursorSize_Pre($grpc.ServiceCall call, $async.Future<$0.SetCursorSizeRequest> request) async {
+  $async.Future<$0.Empty> setCursorSize_Pre($grpc.ServiceCall call, $async.Future<$1.SetCursorSizeRequest> request) async {
     return setCursorSize(call, await request);
   }
 
-  $async.Future<$0.GetSoundKeysResponse> getSoundKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetSoundKeysResponse> getSoundKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getSoundKeys(call, await request);
   }
 
@@ -1007,7 +1008,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableSoundKeys(call, await request);
   }
 
-  $async.Future<$0.GetOverlayScrollbarsResponse> getOverlayScrollbars_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetOverlayScrollbarsResponse> getOverlayScrollbars_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getOverlayScrollbars(call, await request);
   }
 
@@ -1019,7 +1020,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableOverlayScrollbars(call, await request);
   }
 
-  $async.Future<$0.GetScreenReaderResponse> getScreenReader_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetScreenReaderResponse> getScreenReader_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getScreenReader(call, await request);
   }
 
@@ -1031,7 +1032,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableScreenReader(call, await request);
   }
 
-  $async.Future<$0.GetOveramplificationResponse> getOveramplification_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetOveramplificationResponse> getOveramplification_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getOveramplification(call, await request);
   }
 
@@ -1043,11 +1044,11 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableOveramplification(call, await request);
   }
 
-  $async.Future<$0.GetVisualAlertsResponse> getVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetVisualAlertsResponse> getVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getVisualAlerts(call, await request);
   }
 
-  $async.Future<$0.Empty> enableVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.EnableVisualAlertsRequest> request) async {
+  $async.Future<$0.Empty> enableVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$1.EnableVisualAlertsRequest> request) async {
     return enableVisualAlerts(call, await request);
   }
 
@@ -1055,7 +1056,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableVisualAlerts(call, await request);
   }
 
-  $async.Future<$0.GetScreenKeyboardResponse> getScreenKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetScreenKeyboardResponse> getScreenKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getScreenKeyboard(call, await request);
   }
 
@@ -1067,7 +1068,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableScreenKeyboard(call, await request);
   }
 
-  $async.Future<$0.GetEnableByKeyboardResponse> getEnableByKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetEnableByKeyboardResponse> getEnableByKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getEnableByKeyboard(call, await request);
   }
 
@@ -1079,11 +1080,11 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableEnableByKeyboard(call, await request);
   }
 
-  $async.Future<$0.GetCursorBlinkingResponse> getCursorBlinking_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetCursorBlinkingResponse> getCursorBlinking_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getCursorBlinking(call, await request);
   }
 
-  $async.Future<$0.Empty> enableCursorBlinking_Pre($grpc.ServiceCall call, $async.Future<$0.EnableCursorBlinkingRequest> request) async {
+  $async.Future<$0.Empty> enableCursorBlinking_Pre($grpc.ServiceCall call, $async.Future<$1.EnableCursorBlinkingRequest> request) async {
     return enableCursorBlinking(call, await request);
   }
 
@@ -1091,7 +1092,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableCursorBlinking(call, await request);
   }
 
-  $async.Future<$0.GetRepeatedKeysResponse> getRepeatedKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetRepeatedKeysResponse> getRepeatedKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getRepeatedKeys(call, await request);
   }
 
@@ -1103,7 +1104,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableRepeatedKeys(call, await request);
   }
 
-  $async.Future<$0.GetStickyKeysResponse> getStickyKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetStickyKeysResponse> getStickyKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getStickyKeys(call, await request);
   }
 
@@ -1115,7 +1116,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableStickyKeys(call, await request);
   }
 
-  $async.Future<$0.GetSlowKeysResponse> getSlowKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetSlowKeysResponse> getSlowKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getSlowKeys(call, await request);
   }
 
@@ -1127,7 +1128,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableSlowKeys(call, await request);
   }
 
-  $async.Future<$0.GetBounceKeysResponse> getBounceKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetBounceKeysResponse> getBounceKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getBounceKeys(call, await request);
   }
 
@@ -1139,7 +1140,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableBounceKeys(call, await request);
   }
 
-  $async.Future<$0.GetMouseKeysResponse> getMouseKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetMouseKeysResponse> getMouseKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getMouseKeys(call, await request);
   }
 
@@ -1151,7 +1152,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableMouseKeys(call, await request);
   }
 
-  $async.Future<$0.GetLocationPointerResponse> getLocationPointer_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetLocationPointerResponse> getLocationPointer_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getLocationPointer(call, await request);
   }
 
@@ -1163,15 +1164,15 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableLocationPointer(call, await request);
   }
 
-  $async.Future<$0.GetDoubleClickDelayResponse> getDoubleClickDelay_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetDoubleClickDelayResponse> getDoubleClickDelay_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getDoubleClickDelay(call, await request);
   }
 
-  $async.Future<$0.Empty> setDoubleClickDelay_Pre($grpc.ServiceCall call, $async.Future<$0.SetDoubleClickDelayRequest> request) async {
+  $async.Future<$0.Empty> setDoubleClickDelay_Pre($grpc.ServiceCall call, $async.Future<$1.SetDoubleClickDelayRequest> request) async {
     return setDoubleClickDelay(call, await request);
   }
 
-  $async.Future<$0.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getSimulatedSecondaryClicks(call, await request);
   }
 
@@ -1183,7 +1184,7 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableSimulatedSecondaryClicks(call, await request);
   }
 
-  $async.Future<$0.GetHoverClicksResponse> getHoverClicks_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$1.GetHoverClicksResponse> getHoverClicks_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getHoverClicks(call, await request);
   }
 
@@ -1195,65 +1196,65 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
     return disableHoverClicks(call, await request);
   }
 
-  $async.Future<$0.GetHighContrastResponse> getHighContrast($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetHighContrastResponse> getHighContrast($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableHighContrast($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableHighContrast($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetReducedMotionResponse> getReducedMotion($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetReducedMotionResponse> getReducedMotion($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableReducedMotion($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableReducedMotion($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetLargeTextResponse> getLargeText($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetLargeTextResponse> getLargeText($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableLargeText($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableLargeText($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetCursorSizeResponse> getCursorSize($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.Empty> setCursorSize($grpc.ServiceCall call, $0.SetCursorSizeRequest request);
-  $async.Future<$0.GetSoundKeysResponse> getSoundKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetCursorSizeResponse> getCursorSize($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Empty> setCursorSize($grpc.ServiceCall call, $1.SetCursorSizeRequest request);
+  $async.Future<$1.GetSoundKeysResponse> getSoundKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableSoundKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableSoundKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetOverlayScrollbarsResponse> getOverlayScrollbars($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetOverlayScrollbarsResponse> getOverlayScrollbars($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableOverlayScrollbars($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableOverlayScrollbars($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetScreenReaderResponse> getScreenReader($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetScreenReaderResponse> getScreenReader($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableScreenReader($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableScreenReader($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetOveramplificationResponse> getOveramplification($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetOveramplificationResponse> getOveramplification($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableOveramplification($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableOveramplification($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetVisualAlertsResponse> getVisualAlerts($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.Empty> enableVisualAlerts($grpc.ServiceCall call, $0.EnableVisualAlertsRequest request);
+  $async.Future<$1.GetVisualAlertsResponse> getVisualAlerts($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Empty> enableVisualAlerts($grpc.ServiceCall call, $1.EnableVisualAlertsRequest request);
   $async.Future<$0.Empty> disableVisualAlerts($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetScreenKeyboardResponse> getScreenKeyboard($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetScreenKeyboardResponse> getScreenKeyboard($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableScreenKeyboard($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableScreenKeyboard($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetEnableByKeyboardResponse> getEnableByKeyboard($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetEnableByKeyboardResponse> getEnableByKeyboard($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableEnableByKeyboard($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableEnableByKeyboard($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetCursorBlinkingResponse> getCursorBlinking($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.Empty> enableCursorBlinking($grpc.ServiceCall call, $0.EnableCursorBlinkingRequest request);
+  $async.Future<$1.GetCursorBlinkingResponse> getCursorBlinking($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Empty> enableCursorBlinking($grpc.ServiceCall call, $1.EnableCursorBlinkingRequest request);
   $async.Future<$0.Empty> disableCursorBlinking($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetRepeatedKeysResponse> getRepeatedKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetRepeatedKeysResponse> getRepeatedKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableRepeatedKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableRepeatedKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetStickyKeysResponse> getStickyKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetStickyKeysResponse> getStickyKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableStickyKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableStickyKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetSlowKeysResponse> getSlowKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetSlowKeysResponse> getSlowKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableSlowKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableSlowKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetBounceKeysResponse> getBounceKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetBounceKeysResponse> getBounceKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableBounceKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableBounceKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetMouseKeysResponse> getMouseKeys($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetMouseKeysResponse> getMouseKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableMouseKeys($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableMouseKeys($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetLocationPointerResponse> getLocationPointer($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetLocationPointerResponse> getLocationPointer($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableLocationPointer($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableLocationPointer($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetDoubleClickDelayResponse> getDoubleClickDelay($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.Empty> setDoubleClickDelay($grpc.ServiceCall call, $0.SetDoubleClickDelayRequest request);
-  $async.Future<$0.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetDoubleClickDelayResponse> getDoubleClickDelay($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Empty> setDoubleClickDelay($grpc.ServiceCall call, $1.SetDoubleClickDelayRequest request);
+  $async.Future<$1.GetSimulatedSecondaryClicksResponse> getSimulatedSecondaryClicks($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableSimulatedSecondaryClicks($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableSimulatedSecondaryClicks($grpc.ServiceCall call, $0.Empty request);
-  $async.Future<$0.GetHoverClicksResponse> getHoverClicks($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.GetHoverClicksResponse> getHoverClicks($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableHoverClicks($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableHoverClicks($grpc.ServiceCall call, $0.Empty request);
 }

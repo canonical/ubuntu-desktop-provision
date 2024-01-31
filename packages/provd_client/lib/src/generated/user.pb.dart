@@ -13,87 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Empty extends $pb.GeneratedMessage {
-  factory Empty() => create();
-  Empty._() : super();
-  factory Empty.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Empty.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+import 'user.pbenum.dart';
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Empty', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Empty clone() => Empty()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Empty copyWith(void Function(Empty) updates) => super.copyWith((message) => updates(message as Empty)) as Empty;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static Empty create() => Empty._();
-  Empty createEmptyInstance() => create();
-  static $pb.PbList<Empty> createRepeated() => $pb.PbList<Empty>();
-  @$core.pragma('dart2js:noInline')
-  static Empty getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Empty>(create);
-  static Empty? _defaultInstance;
-}
-
-class GetUserRequest extends $pb.GeneratedMessage {
-  factory GetUserRequest({
-    $core.String? userId,
-  }) {
-    final $result = create();
-    if (userId != null) {
-      $result.userId = userId;
-    }
-    return $result;
-  }
-  GetUserRequest._() : super();
-  factory GetUserRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetUserRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'userId')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  GetUserRequest clone() => GetUserRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  GetUserRequest copyWith(void Function(GetUserRequest) updates) => super.copyWith((message) => updates(message as GetUserRequest)) as GetUserRequest;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetUserRequest create() => GetUserRequest._();
-  GetUserRequest createEmptyInstance() => create();
-  static $pb.PbList<GetUserRequest> createRepeated() => $pb.PbList<GetUserRequest>();
-  @$core.pragma('dart2js:noInline')
-  static GetUserRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserRequest>(create);
-  static GetUserRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get userId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set userId($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasUserId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUserId() => clearField(1);
-}
+export 'user.pbenum.dart';
 
 class User extends $pb.GeneratedMessage {
   factory User({
@@ -126,11 +48,11 @@ class User extends $pb.GeneratedMessage {
   factory User.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'User', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'realName', protoName: 'realName')
+    ..aOS(1, _omitFieldNames ? '' : 'realName')
     ..aOS(2, _omitFieldNames ? '' : 'hostname')
     ..aOS(3, _omitFieldNames ? '' : 'username')
     ..aOS(4, _omitFieldNames ? '' : 'password')
-    ..aOB(5, _omitFieldNames ? '' : 'autoLogin', protoName: 'autoLogin')
+    ..aOB(5, _omitFieldNames ? '' : 'autoLogin')
     ..hasRequiredFields = false
   ;
 
@@ -201,65 +123,17 @@ class User extends $pb.GeneratedMessage {
   void clearAutoLogin() => clearField(5);
 }
 
-class GetUserResponse extends $pb.GeneratedMessage {
-  factory GetUserResponse({
+class CreateUserRequest extends $pb.GeneratedMessage {
+  factory CreateUserRequest({
     User? user,
+    $core.bool? isAdmin,
   }) {
     final $result = create();
     if (user != null) {
       $result.user = user;
     }
-    return $result;
-  }
-  GetUserResponse._() : super();
-  factory GetUserResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetUserResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..aOM<User>(1, _omitFieldNames ? '' : 'user', subBuilder: User.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  GetUserResponse clone() => GetUserResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  GetUserResponse copyWith(void Function(GetUserResponse) updates) => super.copyWith((message) => updates(message as GetUserResponse)) as GetUserResponse;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetUserResponse create() => GetUserResponse._();
-  GetUserResponse createEmptyInstance() => create();
-  static $pb.PbList<GetUserResponse> createRepeated() => $pb.PbList<GetUserResponse>();
-  @$core.pragma('dart2js:noInline')
-  static GetUserResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserResponse>(create);
-  static GetUserResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  User get user => $_getN(0);
-  @$pb.TagNumber(1)
-  set user(User v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasUser() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUser() => clearField(1);
-  @$pb.TagNumber(1)
-  User ensureUser() => $_ensure(0);
-}
-
-class CreateUserRequest extends $pb.GeneratedMessage {
-  factory CreateUserRequest({
-    User? identity,
-  }) {
-    final $result = create();
-    if (identity != null) {
-      $result.identity = identity;
+    if (isAdmin != null) {
+      $result.isAdmin = isAdmin;
     }
     return $result;
   }
@@ -268,7 +142,8 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   factory CreateUserRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..aOM<User>(1, _omitFieldNames ? '' : 'identity', subBuilder: User.create)
+    ..aOM<User>(1, _omitFieldNames ? '' : 'user', subBuilder: User.create)
+    ..aOB(2, _omitFieldNames ? '' : 'isAdmin')
     ..hasRequiredFields = false
   ;
 
@@ -294,15 +169,24 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   static CreateUserRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  User get identity => $_getN(0);
+  User get user => $_getN(0);
   @$pb.TagNumber(1)
-  set identity(User v) { setField(1, v); }
+  set user(User v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasIdentity() => $_has(0);
+  $core.bool hasUser() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIdentity() => clearField(1);
+  void clearUser() => clearField(1);
   @$pb.TagNumber(1)
-  User ensureIdentity() => $_ensure(0);
+  User ensureUser() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get isAdmin => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isAdmin($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIsAdmin() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsAdmin() => clearField(2);
 }
 
 class ValidateUsernameRequest extends $pb.GeneratedMessage {
@@ -357,11 +241,11 @@ class ValidateUsernameRequest extends $pb.GeneratedMessage {
 
 class ValidateUsernameResponse extends $pb.GeneratedMessage {
   factory ValidateUsernameResponse({
-    $core.bool? valid,
+    UsernameValidation? usernameValidation,
   }) {
     final $result = create();
-    if (valid != null) {
-      $result.valid = valid;
+    if (usernameValidation != null) {
+      $result.usernameValidation = usernameValidation;
     }
     return $result;
   }
@@ -370,7 +254,7 @@ class ValidateUsernameResponse extends $pb.GeneratedMessage {
   factory ValidateUsernameResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ValidateUsernameResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..aOB(1, _omitFieldNames ? '' : 'valid')
+    ..e<UsernameValidation>(1, _omitFieldNames ? '' : 'usernameValidation', $pb.PbFieldType.OE, defaultOrMaker: UsernameValidation.OK, valueOf: UsernameValidation.valueOf, enumValues: UsernameValidation.values)
     ..hasRequiredFields = false
   ;
 
@@ -396,13 +280,13 @@ class ValidateUsernameResponse extends $pb.GeneratedMessage {
   static ValidateUsernameResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.bool get valid => $_getBF(0);
+  UsernameValidation get usernameValidation => $_getN(0);
   @$pb.TagNumber(1)
-  set valid($core.bool v) { $_setBool(0, v); }
+  set usernameValidation(UsernameValidation v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValid() => $_has(0);
+  $core.bool hasUsernameValidation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValid() => clearField(1);
+  void clearUsernameValidation() => clearField(1);
 }
 
 

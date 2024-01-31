@@ -49,7 +49,7 @@ void main() {
     );
     await tester.tapNext();
     await tester.pumpAndSettle();
-    await expectIdentity(identity);
+    expectIdentity(identity);
 
     await tester.testUbuntuProPage();
     await tester.tapNext();

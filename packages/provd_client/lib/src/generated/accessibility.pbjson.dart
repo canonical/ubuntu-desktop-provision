@@ -43,15 +43,6 @@ const FlashArea$json = {
 final $typed_data.Uint8List flashAreaDescriptor = $convert.base64Decode(
     'CglGbGFzaEFyZWESEQoNRU5USVJFX1NDUkVFThAAEhEKDUVOVElSRV9XSU5ET1cQAQ==');
 
-@$core.Deprecated('Use emptyDescriptor instead')
-const Empty$json = {
-  '1': 'Empty',
-};
-
-/// Descriptor for `Empty`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List emptyDescriptor = $convert.base64Decode(
-    'CgVFbXB0eQ==');
-
 @$core.Deprecated('Use getDoubleClickDelayResponseDescriptor instead')
 const GetDoubleClickDelayResponse$json = {
   '1': 'GetDoubleClickDelayResponse',

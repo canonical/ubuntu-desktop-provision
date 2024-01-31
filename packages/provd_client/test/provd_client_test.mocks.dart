@@ -3,12 +3,14 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i6;
+import 'dart:async' as _i7;
 
 import 'package:grpc/service_api.dart' as _i2;
 import 'package:grpc/src/client/call.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:provd_client/src/generated/user.pb.dart' as _i5;
+import 'package:provd_client/src/generated/google/protobuf/empty.pb.dart'
+    as _i5;
+import 'package:provd_client/src/generated/user.pb.dart' as _i6;
 import 'package:provd_client/src/generated/user.pbgrpc.dart' as _i4;
 
 // ignore_for_file: type=lint
@@ -66,29 +68,8 @@ class MockUserServiceClient extends _i1.Mock implements _i4.UserServiceClient {
   }
 
   @override
-  _i2.ResponseFuture<_i5.GetUserResponse> getUser(
-    _i5.GetUserRequest? request, {
-    _i2.CallOptions? options,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #getUser,
-          [request],
-          {#options: options},
-        ),
-        returnValue: _FakeResponseFuture_0<_i5.GetUserResponse>(
-          this,
-          Invocation.method(
-            #getUser,
-            [request],
-            {#options: options},
-          ),
-        ),
-      ) as _i2.ResponseFuture<_i5.GetUserResponse>);
-
-  @override
   _i2.ResponseFuture<_i5.Empty> createUser(
-    _i5.CreateUserRequest? request, {
+    _i6.CreateUserRequest? request, {
     _i2.CallOptions? options,
   }) =>
       (super.noSuchMethod(
@@ -108,8 +89,8 @@ class MockUserServiceClient extends _i1.Mock implements _i4.UserServiceClient {
       ) as _i2.ResponseFuture<_i5.Empty>);
 
   @override
-  _i2.ResponseFuture<_i5.ValidateUsernameResponse> validateUsername(
-    _i5.ValidateUsernameRequest? request, {
+  _i2.ResponseFuture<_i6.ValidateUsernameResponse> validateUsername(
+    _i6.ValidateUsernameRequest? request, {
     _i2.CallOptions? options,
   }) =>
       (super.noSuchMethod(
@@ -118,7 +99,7 @@ class MockUserServiceClient extends _i1.Mock implements _i4.UserServiceClient {
           [request],
           {#options: options},
         ),
-        returnValue: _FakeResponseFuture_0<_i5.ValidateUsernameResponse>(
+        returnValue: _FakeResponseFuture_0<_i6.ValidateUsernameResponse>(
           this,
           Invocation.method(
             #validateUsername,
@@ -126,12 +107,12 @@ class MockUserServiceClient extends _i1.Mock implements _i4.UserServiceClient {
             {#options: options},
           ),
         ),
-      ) as _i2.ResponseFuture<_i5.ValidateUsernameResponse>);
+      ) as _i2.ResponseFuture<_i6.ValidateUsernameResponse>);
 
   @override
   _i3.ClientCall<Q, R> $createCall<Q, R>(
     _i2.ClientMethod<Q, R>? method,
-    _i6.Stream<Q>? requests, {
+    _i7.Stream<Q>? requests, {
     _i2.CallOptions? options,
   }) =>
       (super.noSuchMethod(
@@ -187,7 +168,7 @@ class MockUserServiceClient extends _i1.Mock implements _i4.UserServiceClient {
   @override
   _i2.ResponseStream<R> $createStreamingCall<Q, R>(
     _i2.ClientMethod<Q, R>? method,
-    _i6.Stream<Q>? requests, {
+    _i7.Stream<Q>? requests, {
     _i2.CallOptions? options,
   }) =>
       (super.noSuchMethod(
