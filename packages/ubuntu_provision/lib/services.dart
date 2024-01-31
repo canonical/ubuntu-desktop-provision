@@ -1,3 +1,4 @@
+export 'src/services/accessibility_service.dart';
 export 'src/services/active_directory_service.dart';
 export 'src/services/config_service.dart';
 export 'src/services/desktop_service.dart';

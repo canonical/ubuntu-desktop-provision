@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_provision/src/accessibility/accessibility_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_icons/yaru_icons.dart';
@@ -12,7 +11,10 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
   final ScrollController _scrollController = ScrollController();
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async => true;
+  Future<bool> load(BuildContext context, WidgetRef ref) {
+    final model = ref.read(accessibilityModelProvider);
+    return model.init().then((_) => true);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
