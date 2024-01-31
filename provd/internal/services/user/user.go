@@ -4,12 +4,10 @@ package user
 import (
 	"bufio"
 	"context"
-	"crypto/rand"
-	"crypto/sha512"
-	"encoding/base64"
 	"errors"
 	"fmt"
-	"math/big"
+	"log/slog"
+	"os"
 	"regexp"
 	"strings"
 
@@ -28,82 +26,110 @@ const (
 	usernameRegex = "^[a-z_][a-z0-9_-]*$"
 )
 
-// DbusObject is an abstraction of a dbus object.
-type DbusObject interface {
-	Call(method string, flags dbus.Flags, args ...interface{}) *dbus.Call
-	GetProperty(p string) (dbus.Variant, error)
-}
-
-// DbusConnector is the interface to the dbus connection which allow easy mocking.
-type DbusConnector interface {
-	Object(dest string, path dbus.ObjectPath) DbusObject
-}
-
 // Service is the implementation of the User module service.
 type Service struct {
 	pb.UnimplementedUserServiceServer
-	Conn     DbusConnector
-	Accounts DbusObject
-	Hostname DbusObject
+	conn             *dbus.Conn
+	accounts         dbus.BusObject
+	hostname         dbus.BusObject
+	passwdMasterPath string
+	groupMasterPath  string
 }
 
-// New returns a new instance of the User service.
-func New(Conn DbusConnector) *Service {
-	acountsObject := Conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
-	hostnameObject := Conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
-	return &Service{
-		Conn:     Conn,
-		Accounts: acountsObject,
-		Hostname: hostnameObject,
+// Option is a functional option to set the DBus objects in tests.
+type Option func(*Service) error
+
+// New returns a new instance of the User service with optional configurations.
+// Returns an error if unable to obtain necessary DBus objects.
+func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
+	s := &Service{
+		conn: conn,
 	}
-}
 
-const validSaltChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./"
+	// Default objects initialization
+	s.accounts = conn.Object(consts.DbusAccountsPrefix, "/org/freedesktop/Accounts")
 
-// generateSalt generates a salt string of the specified length using validSalts characters.
-func generateSalt(length int) (string, error) {
-	salt := make([]byte, length)
-	for i := range salt {
-		index, err := rand.Int(rand.Reader, big.NewInt(int64(len(validSaltChars))))
-		if err != nil {
-			return "", err
-		}
-		salt[i] = validSaltChars[index.Int64()]
+	err := s.accounts.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Accounts object")
 	}
-	return string(salt), nil
-}
 
-// hashPassword hashes the given password, returning in the SHA-512 crypt format.
-// A salt can be provided for testing purposes.
-func hashPassword(password string, testSalt *string) (string, error) {
-	if password == "" {
-		return "", status.Errorf(codes.InvalidArgument, "received an empty password")
+	s.hostname = conn.Object(consts.DbusHostnamePrefix, "/org/freedesktop/hostname1")
+
+	err = s.hostname.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Hostname object")
 	}
-	var salt string
-	var err error
 
-	if testSalt != nil {
-		salt = *testSalt
-	} else {
-		salt, err = generateSalt(16)
-		if err != nil {
-			return "", err
+	// Default paths initialization
+	s.passwdMasterPath = "/usr/share/base-passwd/passwd.master"
+	s.groupMasterPath = "/usr/share/base-passwd/group.master"
+
+	// Applying options, checking for errors in obtaining DBus objects
+	for _, opt := range opts {
+		if err := opt(s); err != nil {
+			return nil, err
 		}
 	}
-	hasher := sha512.New()
-	hasher.Write([]byte(salt + password))
-	hashedBytes := hasher.Sum(nil)
-	hashedPassword := base64.RawStdEncoding.EncodeToString(hashedBytes)
 
-	return fmt.Sprintf("$6$%s$%s", salt, hashedPassword), nil
+	return s, nil
 }
 
 // CreateUser creates a new user on the system.
-func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*emptypb.Empty, error) {
+func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ *emptypb.Empty, err error) {
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
 	}
+
+	// Get current statichostname
+	var initalHostname string
+	property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to get current hostname: %v", err)
+	}
+
+	initalHostname, ok := property.Value().(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to convert current hostname to string")
+	}
+
+	var userID uint64
+
+	defer func() {
+		if err == nil {
+			return
+		}
+		var currentHostname string
+		property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
+		if err != nil {
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			return
+		}
+
+		currentHostname, ok := property.Value().(string)
+		if !ok {
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			return
+		}
+
+		// Rollback hostname
+		if currentHostname != initalHostname {
+			err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, initalHostname, false).Err
+			if err != nil {
+				slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+			}
+		}
+		// Delete user
+		if userID == 0 {
+			return
+		}
+		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
+		if err != nil {
+			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
+		}
+	}()
+
 	user := req.GetUser()
 	if user == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil user")
@@ -131,33 +157,43 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*e
 	}
 	// Create the user
 	var userObjectPath dbus.ObjectPath
-	call := s.Accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
-	err := call.Store(&userObjectPath)
+	call := s.accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
+	err = call.Store(&userObjectPath)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create user: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to create user: %v", err)
 	}
 	hashed, err := hashPassword(password, nil)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to generate hashed password: %v", err)
 	}
 
 	// Set the password for the user
-	userObject := s.Conn.Object(consts.DbusAccountsPrefix, userObjectPath)
+	userObject := s.conn.Object(consts.DbusAccountsPrefix, userObjectPath)
 	err = userObject.Call(consts.DbusUserPrefix+".SetPassword", 0, hashed, "").Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set password: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set password: %v", err)
+	}
+
+	// Update userId for rollback via property
+	uidProperty, err := userObject.GetProperty(consts.DbusUserPrefix + ".Uid")
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to get user ID: %v", err)
+	}
+	userID, ok = uidProperty.Value().(uint64)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to convert user ID to uint64")
 	}
 
 	// Set autologin for the user
 	err = userObject.Call(consts.DbusUserPrefix+".SetAutomaticLogin", 0, autologin).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set autologin: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set autologin: %v", err)
 	}
 
 	// Set the Hostname
-	err = s.Hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
+	err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %s", err)
+		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %v", err)
 	}
 
 	return &emptypb.Empty{}, nil
@@ -170,6 +206,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
 	}
+
 	username := req.GetUsername()
 	if username == "" {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_EMPTY}, nil
@@ -186,51 +223,90 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_TOO_LONG}, nil
 	}
 
-	// Check if username is in reserved list
-	// Read line by line to avoid loading the whole file into memory
-	file, err := reservedUsernamesFS.Open("reserved-usernames")
+	// Open the passwd.master file
+	passwdFile, err := os.Open(s.passwdMasterPath)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "error opening reserved usernames file: %v", err)
+		return nil, status.Errorf(codes.Internal, "error opening passwd.master file: %v", err)
 	}
-	defer file.Close()
+	defer passwdFile.Close()
 
-	isReserved := false
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text()) // Trim the line and ignore comment lines
-		if strings.HasPrefix(line, "#") {
-			continue
+	// Open the group.master file
+	groupFile, err := os.Open(s.groupMasterPath)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "error opening group.master file: %v", err)
+	}
+	defer groupFile.Close()
+
+	// Check the passwd.master file
+	isReserved, err := scanFile(passwdFile, username)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "error reading passwd.master file: %v", err)
+	}
+
+	// If not found, check the group.master file
+	if !isReserved {
+		isReserved, err = scanFile(groupFile, username)
+		if err != nil {
+			return nil, status.Errorf(codes.Internal, "error reading group.master file: %v", err)
 		}
-		if line == username {
-			isReserved = true
-			break
-		}
 	}
 
-	if err := scanner.Err(); err != nil {
-		return nil, status.Errorf(codes.Internal, "error reading reserved usernames file: %v", err)
-	}
-
+	// If found, return reserved
 	if isReserved {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_SYSTEM_RESERVED}, nil
 	}
 
 	// Check if username is already in use
-	err = s.Accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
-	if err != nil {
-		var dbusError dbus.Error
-		if errors.As(err, &dbusError) {
-			if dbusError.Name == consts.DbusAccountsPrefix+".Error.Failed" {
-				// User not found
-				return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
-			}
-			// Handle other dbus errors
-			return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
-		}
-		// Unknown error
+	err = s.accounts.Call(consts.DbusAccountsPrefix+".FindUserByName", 0, username).Err
+
+	// User found
+	if err == nil {
+		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
+	}
+
+	// Inspect the error we got
+	var dbusError dbus.Error
+	isDbusError := errors.As(err, &dbusError)
+
+	// Unknown error
+	if !isDbusError {
 		return nil, status.Errorf(codes.Internal, "unknown error: %v", err)
 	}
 
-	// User found
-	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_ALREADY_IN_USE}, nil
+	// Non "user not found" account service error
+	errBody, ok := dbusError.Body[0].(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "unknown error: %v", err)
+	}
+
+	if dbusError.Name != consts.DbusAccountsPrefix+".Error.Failed" || !strings.Contains(errBody, username) {
+		return nil, status.Errorf(codes.Internal, "dbus error: %v", dbusError)
+	}
+
+	// We have "user not found"
+	return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_OK}, nil
+}
+
+// Function to scan a file for the username.
+func scanFile(file *os.File, username string) (bool, error) {
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if strings.HasPrefix(line, "#") || line == "" {
+			continue
+		}
+
+		// Split the line and check format
+		fields := strings.SplitN(line, ":", 2)
+		if len(fields) < 2 {
+			// Line does not have the expected format
+			return false, fmt.Errorf("invalid line format: %s", line)
+		}
+
+		// Check if the username matches
+		if fields[0] == username {
+			return true, nil
+		}
+	}
+	return false, scanner.Err()
 }

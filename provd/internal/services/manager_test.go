@@ -3,6 +3,9 @@ package services_test
 import (
 	"context"
 	"flag"
+	"fmt"
+	"log/slog"
+	"os"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services"
@@ -67,6 +70,26 @@ func requireEqualServices(t *testing.T, want, got map[string]grpc.ServiceInfo) {
 func TestMain(m *testing.M) {
 	testutils.InstallUpdateFlag()
 	flag.Parse()
+
+	defer testutils.StartLocalSystemBus()()
+
+	conn, err := testutils.GetSystemBusConnection()
+
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not get system bus connection: %v", err))
+		os.Exit(1)
+	}
+
+	err = testutils.ExportAccountsMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Accounts mock: %v", err))
+		os.Exit(1)
+	}
+	err = testutils.ExportHostnameMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
+		os.Exit(1)
+	}
 
 	m.Run()
 }

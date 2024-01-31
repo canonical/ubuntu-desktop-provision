@@ -28,7 +28,7 @@ func TestHashPassword(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			salt := "pepper"
+			salt := "$6$pepper$"
 			got, err := hashPassword(tc.password, &salt)
 
 			if tc.wantErr {
