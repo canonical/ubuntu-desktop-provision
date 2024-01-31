@@ -383,6 +383,111 @@ class _FakeStatelessElement_29 extends _i1.SmartFake
       super.toString();
 }
 
+/// A class which mocks [AccessibilityService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockAccessibilityService extends _i1.Mock
+    implements _i3.AccessibilityService {
+  MockAccessibilityService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i12.Future<bool> getHighContrast() => (super.noSuchMethod(
+        Invocation.method(
+          #getHighContrast,
+          [],
+        ),
+        returnValue: _i12.Future<bool>.value(false),
+      ) as _i12.Future<bool>);
+
+  @override
+  _i12.Future<void> setHighContrast(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setHighContrast,
+          [value],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+
+  @override
+  _i12.Future<bool> getLargeText() => (super.noSuchMethod(
+        Invocation.method(
+          #getLargeText,
+          [],
+        ),
+        returnValue: _i12.Future<bool>.value(false),
+      ) as _i12.Future<bool>);
+
+  @override
+  _i12.Future<void> setLargeText(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setLargeText,
+          [value],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+
+  @override
+  _i12.Future<bool> getReduceAnimation() => (super.noSuchMethod(
+        Invocation.method(
+          #getReduceAnimation,
+          [],
+        ),
+        returnValue: _i12.Future<bool>.value(false),
+      ) as _i12.Future<bool>);
+
+  @override
+  _i12.Future<void> setReduceAnimation(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setReduceAnimation,
+          [value],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+
+  @override
+  _i12.Future<bool> getScreenReader() => (super.noSuchMethod(
+        Invocation.method(
+          #getScreenReader,
+          [],
+        ),
+        returnValue: _i12.Future<bool>.value(false),
+      ) as _i12.Future<bool>);
+
+  @override
+  _i12.Future<void> setScreenReader(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setScreenReader,
+          [value],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+
+  @override
+  _i12.Future<bool> getVisualAlerts() => (super.noSuchMethod(
+        Invocation.method(
+          #getVisualAlerts,
+          [],
+        ),
+        returnValue: _i12.Future<bool>.value(false),
+      ) as _i12.Future<bool>);
+
+  @override
+  _i12.Future<void> setVisualAlerts(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setVisualAlerts,
+          [value],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+}
+
 /// A class which mocks [ActiveDirectoryService].
 ///
 /// See the documentation for Mockito's code generation for more information.
