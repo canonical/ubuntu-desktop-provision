@@ -22,6 +22,8 @@ dependencies:
   gsettings: ^0.2.8
   handy_window: ^0.3.1
   meta: ^1.10.0
+  provd_client:
+    path: ../provd_client
   stdlibc: ^0.1.4
   sysmetrics: ^0.1.0
   timezone_map:

@@ -15,6 +15,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'google/protobuf/empty.pb.dart' as $0;
 import 'pro_enrolment.pb.dart' as $6;
 
 export 'pro_enrolment.pb.dart';
@@ -25,10 +26,10 @@ class ProEnrolmentServiceClient extends $grpc.Client {
       '/pro_enrollment.ProEnrolmentService/GenerateEnrolmentCode',
       ($6.GenerateEnrolmentCodeRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $6.GenerateEnrolmentCodeResponse.fromBuffer(value));
-  static final _$setTokenManually = $grpc.ClientMethod<$6.SetTokenManuallyRequest, $6.Empty>(
+  static final _$setTokenManually = $grpc.ClientMethod<$6.SetTokenManuallyRequest, $0.Empty>(
       '/pro_enrollment.ProEnrolmentService/SetTokenManually',
       ($6.SetTokenManuallyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.Empty.fromBuffer(value));
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
 
   ProEnrolmentServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -40,7 +41,7 @@ class ProEnrolmentServiceClient extends $grpc.Client {
     return $createUnaryCall(_$generateEnrolmentCode, request, options: options);
   }
 
-  $grpc.ResponseFuture<$6.Empty> setTokenManually($6.SetTokenManuallyRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> setTokenManually($6.SetTokenManuallyRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setTokenManually, request, options: options);
   }
 }
@@ -57,23 +58,23 @@ abstract class ProEnrolmentServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $6.GenerateEnrolmentCodeRequest.fromBuffer(value),
         ($6.GenerateEnrolmentCodeResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$6.SetTokenManuallyRequest, $6.Empty>(
+    $addMethod($grpc.ServiceMethod<$6.SetTokenManuallyRequest, $0.Empty>(
         'SetTokenManually',
         setTokenManually_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $6.SetTokenManuallyRequest.fromBuffer(value),
-        ($6.Empty value) => value.writeToBuffer()));
+        ($0.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$6.GenerateEnrolmentCodeResponse> generateEnrolmentCode_Pre($grpc.ServiceCall call, $async.Future<$6.GenerateEnrolmentCodeRequest> request) async {
     return generateEnrolmentCode(call, await request);
   }
 
-  $async.Future<$6.Empty> setTokenManually_Pre($grpc.ServiceCall call, $async.Future<$6.SetTokenManuallyRequest> request) async {
+  $async.Future<$0.Empty> setTokenManually_Pre($grpc.ServiceCall call, $async.Future<$6.SetTokenManuallyRequest> request) async {
     return setTokenManually(call, await request);
   }
 
   $async.Future<$6.GenerateEnrolmentCodeResponse> generateEnrolmentCode($grpc.ServiceCall call, $6.GenerateEnrolmentCodeRequest request);
-  $async.Future<$6.Empty> setTokenManually($grpc.ServiceCall call, $6.SetTokenManuallyRequest request);
+  $async.Future<$0.Empty> setTokenManually($grpc.ServiceCall call, $6.SetTokenManuallyRequest request);
 }

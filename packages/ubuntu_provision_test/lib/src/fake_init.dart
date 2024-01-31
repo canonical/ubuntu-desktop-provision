@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
+import 'package:provd_client/provd_client.dart' as provd;
 import 'package:sysmetrics/sysmetrics.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -19,7 +20,6 @@ Future<void> registerFakeInitServices({
   addTearDown(() => tempDir.deleteSync(recursive: true));
 
   final server = FakeDBusServer(
-    identity: identity,
     locale: locale,
     keyboard: keyboard,
     timezone: timezone,
@@ -36,8 +36,11 @@ Future<void> registerFakeInitServices({
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
+  registerService(FakeSystemService.new);
+
   registerService<IdentityService>(
-      () => XdgIdentityService.uid(0, bus: client));
+      // ignore: invalid_use_of_visible_for_testing_member
+      () => ProvdIdentityService(userClient: FakeProvdUserClient()));
   registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
   registerService<LocaleService>(() => XdgLocaleService(bus: client));
   registerService<NetworkService>(() => NetworkService(bus: client));
@@ -50,15 +53,11 @@ Future<void> registerFakeInitServices({
 
 class FakeDBusServer extends DBusServer {
   FakeDBusServer({
-    required this.identity,
     required this.locale,
     required this.keyboard,
     required this.timezone,
   }) {
     _dconf = _FakeDConfObject(this);
-    _accounts = _FakeXdgAccounts(this);
-    _user = _FakeXdgAccountsUser(this);
-    _hostname = _FakeXdgHostnameObject(this);
     _locale = _FakeXdgLocaleObject(this);
     _network = _FakeXdgNetworkManagerObject(this);
     _timedate = _FakeXdgTimedateObject(this);
@@ -67,15 +66,11 @@ class FakeDBusServer extends DBusServer {
 
   late final DBusClient _client;
   late final _FakeDConfObject _dconf;
-  late final _FakeXdgAccounts _accounts;
-  late final _FakeXdgAccountsUser _user;
-  late final _FakeXdgHostnameObject _hostname;
   late final _FakeXdgLocaleObject _locale;
   late final _FakeXdgNetworkManagerObject _network;
   late final _FakeXdgTimedateObject _timedate;
   late final _FakeGdmSessionObject _gdmSession;
 
-  Identity identity;
   KeyboardSetting keyboard;
   Iterable<String> locale;
   String timezone;
@@ -91,15 +86,6 @@ class FakeDBusServer extends DBusServer {
     await _client.requestName('org.freedesktop');
     await _client.registerObject(
         DBusObject(DBusObjectPath('/org/freedesktop'), isObjectManager: true));
-
-    await _client.requestName('org.freedesktop.Accounts');
-    await _client.registerObject(_accounts);
-
-    await _client.requestName('org.freedesktop.Accounts.User');
-    await _client.registerObject(_user);
-
-    await _client.requestName('org.freedesktop.hostname1');
-    await _client.registerObject(_hostname);
 
     await _client.requestName('org.freedesktop.locale1');
     await _client.registerObject(_locale);
@@ -136,86 +122,6 @@ class _FakeDConfObject extends DBusObject {
     switch (methodCall.name) {
       case 'Change':
         return DBusMethodSuccessResponse([const DBusString('tag')]);
-      default:
-        return DBusMethodErrorResponse.unknownMethod();
-    }
-  }
-}
-
-class _FakeXdgAccounts extends DBusObject {
-  _FakeXdgAccounts(this.server)
-      : super(DBusObjectPath('/org/freedesktop/Accounts'));
-
-  final FakeDBusServer server;
-
-  @override
-  Future<DBusMethodResponse> handleMethodCall(DBusMethodCall methodCall) async {
-    assert(methodCall.interface == 'org.freedesktop.Accounts');
-    switch (methodCall.name) {
-      case 'CreateUser':
-        server.identity = server.identity.copyWith(
-          username: methodCall.values[0].asString(),
-          realname: methodCall.values[1].asString(),
-        );
-        final user = DBusObjectPath('/org/freedesktop/Accounts/User/1000');
-        await emitSignal('org.freedesktop.Accounts', 'UserAdded', [user]);
-        return DBusMethodSuccessResponse([user]);
-      default:
-        return DBusMethodErrorResponse.unknownMethod();
-    }
-  }
-}
-
-class _FakeXdgAccountsUser extends DBusObject {
-  _FakeXdgAccountsUser(this.server)
-      : super(DBusObjectPath('/org/freedesktop/Accounts/User/1000'));
-
-  final FakeDBusServer server;
-
-  @override
-  Future<DBusMethodResponse> handleMethodCall(DBusMethodCall methodCall) async {
-    assert(methodCall.interface == 'org.freedesktop.Accounts.User');
-    switch (methodCall.name) {
-      case 'SetPassword':
-        return DBusMethodSuccessResponse();
-      case 'SetAutomaticLogin':
-        return DBusMethodSuccessResponse();
-      default:
-        return DBusMethodErrorResponse.unknownMethod();
-    }
-  }
-}
-
-class _FakeXdgHostnameObject extends DBusObject {
-  _FakeXdgHostnameObject(this.server)
-      : super(DBusObjectPath('/org/freedesktop/hostname1'));
-
-  final FakeDBusServer server;
-
-  @override
-  Future<DBusMethodResponse> getProperty(String interface, String name) async {
-    assert(interface == 'org.freedesktop.hostname1');
-    switch (name) {
-      case 'Hostname':
-        return DBusGetPropertyResponse(DBusString(server.identity.hostname));
-      default:
-        return DBusMethodErrorResponse.unknownProperty();
-    }
-  }
-
-  @override
-  Future<DBusMethodResponse> handleMethodCall(DBusMethodCall methodCall) async {
-    assert(methodCall.interface == 'org.freedesktop.hostname1');
-    switch (methodCall.name) {
-      case 'SetStaticHostname':
-        server.identity = server.identity.copyWith(
-          hostname: methodCall.values[0].asString(),
-        );
-        await emitPropertiesChanged(
-          'org.freedesktop.hostname1',
-          changedProperties: {'Hostname': DBusString(server.identity.hostname)},
-        );
-        return DBusMethodSuccessResponse();
       default:
         return DBusMethodErrorResponse.unknownMethod();
     }
@@ -419,4 +325,26 @@ class _FakeUrlLauncher implements UrlLauncher {
 
   @override
   Future<bool> launchUrl(String url) async => true;
+}
+
+class FakeProvdUserClient implements provd.ProvdUserClient {
+  @override
+  Future<void> createUser(provd.User user) async {
+    getService<FakeSystemService>().identity = Identity(
+      realname: user.realName,
+      username: user.username,
+      password: user.password,
+      hostname: user.hostname,
+      autoLogin: user.autoLogin,
+    );
+  }
+
+  @override
+  Future<provd.UsernameValidation> validateUsername(String username) async =>
+      provd.UsernameValidation.OK;
+}
+
+/// Keeps track of changes made by the fake services.
+class FakeSystemService {
+  Identity? identity;
 }

@@ -18,11 +18,12 @@ void main() {
     final request = ValidateUsernameRequest(username: 'foo');
     when(mockUserServiceClient.validateUsername(request)).thenAnswer((_) {
       return MockResponseFuture<ValidateUsernameResponse>(
-        ValidateUsernameResponse(valid: true),
+        ValidateUsernameResponse(usernameValidation: UsernameValidation.OK),
       );
     }); // 1
 
-    expect(await userClient.validateUsername('foo'), isTrue);
+    expect(await userClient.validateUsername('foo'),
+        equals(UsernameValidation.OK));
   });
 }
 
