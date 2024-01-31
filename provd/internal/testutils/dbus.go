@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/godbus/dbus/v5"
@@ -33,6 +34,7 @@ func GetSystemBusConnection() (*dbus.Conn, error) {
 // isRunning checks if the system bus mock is running.
 func isRunning() bool {
 	busAddr := os.Getenv("DBUS_SYSTEM_BUS_ADDRESS")
+	//if !strings.HasPrefix("unix:path=/tmp")…
 	return !(busAddr == "" || busAddr == defaultSystemBusAddress)
 }
 
@@ -57,11 +59,11 @@ func (a accountsdbus) Ping() *dbus.Error {
 }
 
 func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
-	if name == "find-user-by-name-error" {
+	if strings.HasSuffix(name, "find-user-by-name-error") {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.FindUserByNameError", []interface{}{"error requested in FindUserByNameError mocked method"})
 	}
 	// This is used to also include the username in the error log, used to determine its an error because a user wasn't found.
-	if name == "find-user-by-name-not-found" {
+	if strings.HasSuffix(name, "find-user-by-name-not-found") {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
 	}
 	action := fmt.Sprintf("Accounts.FindUserByName(name: %s)\n", name)
@@ -70,7 +72,7 @@ func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 }
 
 func (a accountsdbus) CreateUser(username string, realname string, accountType int32) (string, *dbus.Error) {
-	if username == "create-user-error" {
+	if strings.HasSuffix(username, "create-user-error") {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in CreateUserErrorUsername mocked method"})
 	}
 	action := fmt.Sprintf("Accounts.CreateUser(username: \"%s\", realname: \"%s\", accountType: %d)\n", username, realname, accountType)
@@ -96,7 +98,7 @@ func (h hostnamedbus) Ping() *dbus.Error {
 }
 
 func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Error {
-	if hostname == "set-static-hostname-error" {
+	if strings.HasSuffix(hostname, "set-static-hostname-error") {
 		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in SetStaticHostname mocked method"})
 	}
 	action := fmt.Sprintf("hostname1.SetStaticHostname(hostname: %s)\n", hostname)

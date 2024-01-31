@@ -4,12 +4,10 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"io"
 	"log/slog"
 	"net"
 	"os"
 	"path/filepath"
-	"strings"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
@@ -31,12 +29,13 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 		"Valid paths": {},
 
 		// Invalid paths
-		"Invalid passwd master file path": {passwdMasterFile: "invalid-path", wantErr: true},
-		"Invalid group master file path":  {groupMasterFile: "invalid-path", wantErr: true},
+		"Error on invalid passwd master file path": {passwdMasterFile: "invalid-path", wantErr: true},
+		// FIXME
+		"Error on invalid group master file path": {groupMasterFile: "invalid-path", wantErr: true},
 
 		// Unparsable files
-		"Unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
-		"Unparsable group master file":  {groupMasterFile: "unparsable-group-master", wantErr: true},
+		"Error on unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
+		"Error on unparsable group master file":  {groupMasterFile: "unparsable-group-master", wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -48,30 +47,14 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 			tempDir := t.TempDir()
 
 			if tc.passwdMasterFile == "unparsable-passwd-master" {
-				passwdFilePath := filepath.Join(tempDir, tc.passwdMasterFile)
-				file, err := os.Create(passwdFilePath)
-				if err != nil {
-					t.Fatalf("Setup: could not create %s: %v", tc.passwdMasterFile, err)
-				}
-				_, err = file.WriteString("foo") // Write "foo" to the file
-				if err != nil {
-					t.Fatalf("Setup: could not write to %s: %v", tc.passwdMasterFile, err)
-				}
-				file.Close()                         // Close immediately after creating the file
-				tc.passwdMasterFile = passwdFilePath // Update with full path
+				tc.passwdMasterFile = filepath.Join(tempDir, tc.passwdMasterFile)
+				err := os.WriteFile(tc.passwdMasterFile, []byte("foo"), 0600)
+				require.NoError(t, err, "Setup: could not create passwd.master file")
 			}
 			if tc.groupMasterFile == "unparsable-group-master" {
-				groupFilePath := filepath.Join(tempDir, tc.groupMasterFile)
-				file, err := os.Create(groupFilePath)
-				if err != nil {
-					t.Fatalf("Setup: could not create %s: %v", tc.groupMasterFile, err)
-				}
-				_, err = file.WriteString("bar") // Write "bar" to the file
-				if err != nil {
-					t.Fatalf("Setup: could not write to %s: %v", tc.groupMasterFile, err)
-				}
-				file.Close()                       // Close immediately after creating the file
-				tc.groupMasterFile = groupFilePath // Update with full path
+				tc.groupMasterFile = filepath.Join(tempDir, tc.groupMasterFile)
+				err := os.WriteFile(tc.groupMasterFile, []byte("bar"), 0600)
+				require.NoError(t, err, "Setup: could not create group.master file")
 			}
 
 			// Create service with options
@@ -84,9 +67,7 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 			}
 
 			client, err := user.New(testutils.NewDbusConn(t), opts...)
-			if err != nil {
-				t.Fatalf("Setup: could not create user service: %v", err)
-			}
+			require.NoError(t, err, "Setup: could not create user service")
 
 			// Call ValidateUsername with a valid username
 			validateReq := &pb.ValidateUsernameRequest{
@@ -132,16 +113,19 @@ func TestDbusObjectsAvalible(t *testing.T) {
 		invalidHostname bool
 		wantErr         bool
 	}{
-		"Invalid accounts object": {
+		// Success case
+		"Valid objects": {
+			wantErr: false,
+		},
+
+		// Error cases
+		"Error on invalid accounts object": {
 			invalidAccounts: true,
 			wantErr:         true,
 		},
-		"Invalid hostname object": {
+		"Error on invalid hostname object": {
 			invalidHostname: true,
 			wantErr:         true,
-		},
-		"Valid objects": {
-			wantErr: false,
 		},
 	}
 
@@ -195,17 +179,15 @@ func TestCreateUser(t *testing.T) {
 		"Error when hostname is empty": {hostname: "-", wantErr: true},
 
 		// Dbus object errors
-		"Error from Accounts service":        {username: "create-user-error", wantErr: true},
-		"Error from Hostname service":        {hostname: "set-static-hostname-error", wantErr: true},
-		"Error when deleting user":           {username: "deleteerror", hostname: "set-static-hostname-error", wantErr: true},
-		"Error when getting uid":             {username: "getuiderror", wantErr: true},
-		"Error when getting static hostname": {hostnamePath: "hostnameerror", hostname: "set-static-hostname-error", wantErr: true},
+		"Error from Accounts service":                 {username: "create-user-error", wantErr: true},
+		"Error when setting hostname rolls back user": {hostname: "set-static-hostname-error", wantErr: true},
+		"Error when deleting user":                    {username: "deleteerror", hostname: "set-static-hostname-error", wantErr: true},
+		"Error when getting uid":                      {username: "getuiderror", wantErr: true},
+		"Error when getting static hostname":          {hostnamePath: "hostnameerror", hostname: "set-static-hostname-error", wantErr: true},
 	}
 
 	originalDir, err := os.Getwd()
-	if err != nil {
-		t.Fatalf("Setup: could not get current working directory: %v", err)
-	}
+	require.NoError(t, err, "Setup: could not get current working directory")
 
 	for name, tc := range tests {
 		tc := tc
@@ -254,31 +236,17 @@ func TestCreateUser(t *testing.T) {
 
 			tempDir := t.TempDir()
 			err = os.Chdir(tempDir)
-			if err != nil {
-				t.Fatalf("failed to change directory: %s", err)
-			}
+			require.NoError(t, err, "Setup: failed to change directory")
 
 			_, reqErr := client.CreateUser(context.Background(), userReq)
 
-			file, err := os.OpenFile("actions", os.O_CREATE, 0600)
-			if err != nil {
-				t.Fatalf("failed to open file: %s", err)
-			}
-			defer file.Close()
+			d, err := os.ReadFile("actions")
+			require.NoError(t, err, "Teardown: failed to read actions file ")
+			got := string(d)
 
-			// Read the file content
-			var sb strings.Builder
-			_, err = io.Copy(&sb, file)
-			if err != nil {
-				t.Fatalf(fmt.Sprintf("failed to read file: %s", err))
-			}
-
-			// Assert we made the expected dbus calls in the expected order, with the expected parameters.
-			got := sb.String()
 			err = os.Chdir(originalDir)
-			if err != nil {
-				t.Fatalf("failed to change directory: %s", err)
-			}
+			require.NoError(t, err, "Teardown: failed to change directory")
+
 			want := testutils.LoadWithUpdateFromGolden(t, got)
 			require.Equal(t, want, got, "CreateUser returned an unexpected response")
 
@@ -303,14 +271,14 @@ func TestValidateUsername(t *testing.T) {
 		"Valid username": {username: "find-user-by-name-not-found"},
 
 		// Error cases
-		"Existing username":              {},
-		"Empty username":                 {username: "-"},
-		"Reserved username":              {username: "root"},
-		"Username too long":              {username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz"},
-		"Invalid characters in username": {username: "invalid@username"},
+		"Error when creating user with existing username": {},
+		"Error when username is empty":                    {username: "-"},
+		"Error when username in reserved list":            {username: "root"},
+		"Error when username is too long":                 {username: "thisusernameiswaytoolong1234567890abcdefghijklmnopqrstuvwxyz"},
+		"Error when username contains invalid characters": {username: "invalid@username"},
 
 		// Dbus object error
-		"Error from Accounts service": {username: "find-user-by-name-error", wantErr: true},
+		"Error when recieve error from Accounts service": {username: "find-user-by-name-error", wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -361,9 +329,7 @@ func newUserClient(t *testing.T, opts ...user.Option) pb.UserServiceClient {
 
 	service, err := user.New(bus, opts...)
 
-	if err != nil {
-		t.Fatalf("Setup: could not create user service: %v", err)
-	}
+	require.NoError(t, err, "Setup: could not create user service")
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterUserServiceServer(grpcServer, service)

@@ -77,6 +77,11 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 
 // CreateUser creates a new user on the system.
 func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ *emptypb.Empty, err error) {
+	// Validate request
+	if req == nil {
+		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
+	}
+
 	// Get current statichostname
 	var initalHostname string
 	property, err := s.hostname.GetProperty(consts.DbusHostnamePrefix + ".StaticHostname")
@@ -125,10 +130,6 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		}
 	}()
 
-	// Validate request
-	if req == nil {
-		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
-	}
 	user := req.GetUser()
 	if user == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil user")
@@ -205,6 +206,7 @@ func (s *Service) ValidateUsername(ctx context.Context, req *pb.ValidateUsername
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
 	}
+
 	username := req.GetUsername()
 	if username == "" {
 		return &pb.ValidateUsernameResponse{UsernameValidation: pb.UsernameValidation_EMPTY}, nil
