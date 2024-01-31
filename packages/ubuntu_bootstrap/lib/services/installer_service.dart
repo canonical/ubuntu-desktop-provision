@@ -21,13 +21,10 @@ class InstallerService {
       // Use the default values for a number of endpoints that aren't used in
       // the bootstrap stage, or for which a UI page isn't implemented yet.
       await _client.markConfigured([
-        'active_directory',
-        'identity',
         'mirror',
         'proxy',
         'ssh',
         'snaplist',
-        'timezone',
         'ubuntu_pro',
       ]);
     }
