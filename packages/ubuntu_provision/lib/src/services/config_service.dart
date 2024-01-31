@@ -29,7 +29,7 @@ class ConfigService {
   Map<String, dynamic>? _config;
 
   static const _extensions = ['yaml', 'yml'];
-  static const _filename = 'ubuntu-provision';
+  static const _filename = 'whitelabel';
 
   Future<T?> get<T>(String key, {String? scope}) async {
     _config ??= await load();
@@ -99,9 +99,9 @@ class ConfigService {
 
   /// Looks up the config file path in the following order:
   ///
-  /// - /etc/ubuntu-provision.{yaml,yml} (admin)
-  /// - /usr/local/share/ubuntu-provision.{yaml,yml} (oem)
-  /// - /usr/share/ubuntu-provision.{yaml,yml} (distro)
+  /// - /etc/whitelabel.{yaml,yml} (admin)
+  /// - /usr/local/share/whitelabel.{yaml,yml} (oem)
+  /// - /usr/share/whitelabel.{yaml,yml} (distro)
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     final dirs = [
