@@ -1,6 +1,6 @@
 @TestOn('windows')
 // The tests below require a Windows host with WSL 2 enabled and some Linux
-// distribution already installed (by default Ubuntu-22.04 but can be overriden
+// distribution already installed (by default Ubuntu-22.04 but can be overridden
 // by a --dart-define=DISTRONAME=<your-distro-name>)
 
 import 'dart:io';
