@@ -4,6 +4,7 @@ pages:
   accessibility:
     image: "assets/icons/accessibility.svg"
   welcome:
+    visible: false
   rst:
     image: "assets/storage/rst.svg"
   keyboard:

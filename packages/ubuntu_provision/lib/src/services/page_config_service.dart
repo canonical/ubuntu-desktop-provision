@@ -19,7 +19,8 @@ class PageConfigService {
 
   List<String> get excludedPages => pages.entries
       .whereNot(
-          (e) => e.value.visible && (includeWelcome || e.key != 'welcome'))
+        (e) => e.value.visible || (includeWelcome && e.key == 'welcome'),
+      )
       .map((e) => e.key)
       .toList();
 
@@ -29,6 +30,11 @@ class PageConfigService {
         (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
       )
     });
+
+    if (includeWelcome) {
+      pages['welcome'] = pageConfig.pages['welcome']?.copyWith(visible: true) ??
+          const PageConfigEntry();
+    }
     pages.addAll(pageConfig.pages);
   }
 }
@@ -60,6 +66,7 @@ class PageConfigEntryConverter
   Map<String, PageConfigEntry> fromJson(Map<String, dynamic> json) {
     final pages = <String, PageConfigEntry>{};
     for (final entry in json.entries) {
+      // TODO: Remove boolean values directly after page name
       if (entry.value is bool) {
         pages[entry.key] = PageConfigEntry(visible: entry.value as bool);
       } else if (entry.value is Map<String, dynamic>) {
@@ -68,6 +75,8 @@ class PageConfigEntryConverter
       } else if (entry.value is YamlMap) {
         pages[entry.key] =
             PageConfigEntry.fromJson((entry.value as YamlMap).cast());
+      } else if (entry.value == null) {
+        pages[entry.key] = const PageConfigEntry();
       } else {
         _log.error(
             'Invalid page config entry for ${entry.key}: ${entry.value}');
