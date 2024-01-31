@@ -30,6 +30,7 @@ import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
+import '../../ubuntu_provision/test/accessibility/test_accessibility.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
@@ -50,6 +51,7 @@ void main() {
   setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
 
   testWidgets('try ubuntu', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));
     final localeModel = buildLocaleModel();
     final welcomeModel = buildWelcomeModel(option: Option.welcomeTryOption);
@@ -59,6 +61,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
           welcomeModelProvider.overrideWith((_) => welcomeModel),
@@ -92,6 +95,7 @@ void main() {
   });
 
   testWidgets('guided reformat', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
     final welcomeModel = buildWelcomeModel(option: Option.welcomeInstallOption);
@@ -119,6 +123,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
           welcomeModelProvider.overrideWith((_) => welcomeModel),
@@ -199,6 +204,7 @@ void main() {
   });
 
   testWidgets('rst', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final rstModel = buildRstModel(hasRst: true);
 
@@ -214,6 +220,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
           rstModelProvider.overrideWith((_) => rstModel),
         ],
@@ -231,6 +238,7 @@ void main() {
   });
 
   testWidgets('secure boot', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final sourceModel = buildSourceModel();
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
@@ -241,6 +249,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
           sourceModelProvider.overrideWith((_) => sourceModel),
           notEnoughDiskSpaceModelProvider
@@ -260,6 +269,7 @@ void main() {
   });
 
   testWidgets('bitlocker', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final storageModel = buildStorageModel(type: StorageType.alongside);
     final bitlockerModel = buildBitLockerModel(hasBitLocker: true);
@@ -275,6 +285,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
           storageModelProvider.overrideWith((_) => storageModel),
           bitLockerModelProvider.overrideWith((_) => bitlockerModel),
@@ -292,6 +303,7 @@ void main() {
   });
 
   testWidgets('exclude pages', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final confirmModel = buildConfirmModel();
     final installModel = buildInstallModel(isDone: true);
@@ -301,6 +313,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
@@ -342,6 +355,7 @@ void main() {
   });
 
   testWidgets('refresh', (tester) async {
+    final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final networkModel = buildNetworkModel();
     final ethernetModel = buildEthernetModel();
@@ -356,6 +370,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
           networkModelProvider.overrideWith((_) => networkModel),
           ethernetModelProvider.overrideWith((_) => ethernetModel),

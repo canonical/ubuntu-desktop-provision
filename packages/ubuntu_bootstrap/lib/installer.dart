@@ -89,6 +89,7 @@ Future<void> runInstallerApp(
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
       () => ConfigService(path: options['config'] as String?));
+  tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<InstallerService>(
