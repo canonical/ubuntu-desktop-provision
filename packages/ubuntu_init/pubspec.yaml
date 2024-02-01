@@ -41,7 +41,7 @@ dependencies:
   ubuntu_wizard: ^0.1.0
   xdg_locale: ^0.0.1
   yaru: 1.2.1
-  yaru_icons: 2.3.0
+  yaru_icons: ^2.4.0
   yaru_widgets: 3.4.0
 
 dev_dependencies:
