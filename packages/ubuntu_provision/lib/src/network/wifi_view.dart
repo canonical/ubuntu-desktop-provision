@@ -121,29 +121,32 @@ class WifiListView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(wifiModelProvider);
 
-    return YaruBorderContainer(
-      clipBehavior: Clip.antiAlias,
-      child: OverrideMouseCursor(
-        cursor: SystemMouseCursors.basic,
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: model.devices.length,
-          itemBuilder: (context, index) {
-            return ProviderScope(
-              overrides: [
-                wifiDeviceProvider.overrideWithValue(model.devices[index]),
-              ],
-              child: WifiListTile(
-                key: ValueKey(index),
-                selected: model.isSelectedDevice(model.devices[index]),
-                showDevice: model.devices.length > 1,
-                onSelected: (device, accessPoint) {
-                  model.selectDevice(device);
-                  onSelected(device, accessPoint);
-                },
-              ),
-            );
-          },
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxHeight: 200),
+      child: YaruBorderContainer(
+        clipBehavior: Clip.antiAlias,
+        child: OverrideMouseCursor(
+          cursor: SystemMouseCursors.basic,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: model.devices.length,
+            itemBuilder: (context, index) {
+              return ProviderScope(
+                overrides: [
+                  wifiDeviceProvider.overrideWithValue(model.devices[index]),
+                ],
+                child: WifiListTile(
+                  key: ValueKey(index),
+                  selected: model.isSelectedDevice(model.devices[index]),
+                  showDevice: model.devices.length > 1,
+                  onSelected: (device, accessPoint) {
+                    model.selectDevice(device);
+                    onSelected(device, accessPoint);
+                  },
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
