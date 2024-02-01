@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_visible_for_testing_member
+
 import 'dart:io';
 
 import 'package:dbus/dbus.dart';
@@ -39,10 +41,10 @@ Future<void> registerFakeInitServices({
   registerService(FakeSystemService.new);
 
   registerService<IdentityService>(
-      // ignore: invalid_use_of_visible_for_testing_member
       () => ProvdIdentityService(userClient: FakeProvdUserClient()));
   registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
-  registerService<LocaleService>(() => XdgLocaleService(bus: client));
+  registerService<LocaleService>(
+      () => ProvdLocaleService(client: FakeProvdLocaleClient(server)));
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
@@ -325,6 +327,23 @@ class _FakeUrlLauncher implements UrlLauncher {
 
   @override
   Future<bool> launchUrl(String url) async => true;
+}
+
+class FakeProvdLocaleClient implements provd.ProvdLocaleClient {
+  FakeProvdLocaleClient(this.server);
+
+  // Only needed temporarily while the XdgKeyboardService still exists
+  final FakeDBusServer server;
+
+  String _locale = 'en_US.UTF-8';
+  @override
+  Future<String> getLocale() async => _locale;
+
+  @override
+  Future<void> setLocale(String locale) async {
+    _locale = locale;
+    server.locale = ['LANG=$locale'];
+  }
 }
 
 class FakeProvdUserClient implements provd.ProvdUserClient {
