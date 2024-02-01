@@ -359,24 +359,21 @@ func TestMain(m *testing.M) {
 	defer testutils.StartLocalSystemBus()()
 
 	conn, err := testutils.GetSystemBusConnection()
-
 	if err != nil {
 		slog.Error(fmt.Sprintf("Could not get system bus connection: %v", err))
 		os.Exit(1)
 	}
 
-	err = testutils.ExportAccountsMock(conn)
-	if err != nil {
+	if err = testutils.ExportAccountsMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export Accounts mock: %v", err))
 		os.Exit(1)
 	}
-	err = testutils.ExportHostnameMock(conn)
-	if err != nil {
+	if err = testutils.ExportHostnameMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
 		os.Exit(1)
 	}
-	err = testutils.ExportUserMock(conn)
-	if err != nil {
+
+	if err = testutils.ExportUserMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export User mock: %v", err))
 		os.Exit(1)
 	}

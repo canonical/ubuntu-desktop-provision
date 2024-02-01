@@ -19,26 +19,6 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-func TestEmptySetLocaleRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newLocaleClient(t)
-
-	userResp, err := client.SetLocale(context.Background(), nil)
-	require.Error(t, err, "SetLocale should return an error for nil request")
-	require.Empty(t, userResp, "SetLocale should return a nil response for a nil request")
-}
-
-func TestEmptyGetLocaleRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newLocaleClient(t)
-
-	userResp, err := client.GetLocale(context.Background(), nil)
-	require.Error(t, err, "GetLocale should return an error for nil request")
-	require.Empty(t, userResp, "GetLocale should return a nil response for a nil request")
-}
-
 func TestSupportedFilePath(t *testing.T) {
 	t.Parallel()
 	tests := map[string]struct {
@@ -79,13 +59,15 @@ func TestSupportedFilePath(t *testing.T) {
 			require.NoError(t, err, "Setup: could not create locale service")
 
 			// Call SetLocale with a valid locale
-			_, err = client.SetLocale(context.Background(), &pb.SetLocaleRequest{Locale: "en_US.UTF-8"})
+			resp, err := client.SetLocale(context.Background(), &pb.SetLocaleRequest{Locale: "en_US.UTF-8"})
 
 			if tc.wantErr {
 				require.Error(t, err, "SetLocale should return an error, but did not")
+				require.Nil(t, resp, "SetLocale should return a nil response when in error")
 				return
 			}
 			require.NoError(t, err, "SetLocale should not return an error, but did")
+			require.NotNil(t, resp, "SetLocale should return a non-nil response when not in error")
 		})
 	}
 }
@@ -93,12 +75,16 @@ func TestSupportedFilePath(t *testing.T) {
 func TestGetLocale(t *testing.T) {
 	t.Parallel()
 	tests := map[string]struct {
+		emptyRequest bool
+
+		want      string
 		wantError bool
 	}{
 		// Success case
-		"Successfully finds locale": {},
+		"Successfully returns expected locale": {want: "xh_ZA.UTF-8"},
 
 		// Error case
+		"Error on empty request":                {emptyRequest: true, wantError: true},
 		"Error on getLocale returning an error": {wantError: true},
 	}
 	for name, tc := range tests {
@@ -112,29 +98,40 @@ func TestGetLocale(t *testing.T) {
 				opts = append(opts, locale.WithLocalePath("localeerror"))
 			}
 
-			cleint := newLocaleClient(t, opts...)
+			client := newLocaleClient(t, opts...)
 
-			_, err := cleint.GetLocale(context.Background(), &emptypb.Empty{})
+			var req *emptypb.Empty
+			if !tc.emptyRequest {
+				req = &emptypb.Empty{}
+			} else {
+				req = nil
+			}
 
+			got, err := client.GetLocale(context.Background(), req)
 			if tc.wantError {
 				require.Error(t, err, "GetLocale should have returned an error, but did not")
 				return
 			}
 			require.NoError(t, err, "GetLocale should not return an error, but did")
+			require.Equal(t, tc.want, got.Locale, "GetLocal returns the expected locale")
 		})
 	}
 }
 
 func TestSetLocale(t *testing.T) {
 	t.Parallel()
+
 	tests := map[string]struct {
-		locale    string
+		locale       string
+		emptyRequest bool
+
 		wantError bool
 	}{
 		// Success case
 		"Successcully sets a valid locale": {locale: "en_US.UTF-8"},
 
 		// Error cases
+		"Error on empty request":                {emptyRequest: true, wantError: true},
 		"Error when locale is empty":            {locale: "", wantError: true},
 		"Error when SetLocale returns an error": {locale: "locale_error", wantError: true},
 		"Error on invalid locale":               {locale: "bad_locale", wantError: true},
@@ -145,15 +142,22 @@ func TestSetLocale(t *testing.T) {
 			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			cleint := newLocaleClient(t)
+			client := newLocaleClient(t)
 
-			_, err := cleint.SetLocale(context.Background(), &pb.SetLocaleRequest{Locale: tc.locale})
+			var req *pb.SetLocaleRequest
+			if !tc.emptyRequest {
+				req = &pb.SetLocaleRequest{Locale: tc.locale}
+			} else {
+				req = nil
+			}
 
+			got, err := client.SetLocale(context.Background(), req)
 			if tc.wantError {
 				require.Error(t, err, "SetLocale should have returned an error, but did not")
 				return
 			}
 			require.NoError(t, err, "SetLocale should not return an error, but did")
+			require.NotNil(t, got, "SetLocale should return an empty not nil response when not in error")
 		})
 	}
 }

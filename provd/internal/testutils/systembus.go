@@ -2,10 +2,12 @@ package testutils
 
 import (
 	"context"
+	"errors"
 	"log"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"sync"
 	"testing"
 
@@ -123,4 +125,22 @@ func NewDbusConn(t *testing.T) *dbus.Conn {
 	require.NoError(t, err, "Setup: can’t send hello message on private system bus")
 
 	return bus
+}
+
+// GetSystemBusConnection returns a connection to the system bus with a safety check to avoid mistakenly connecting to the
+// actual system bus.
+func GetSystemBusConnection() (*dbus.Conn, error) {
+	if !isRunning() {
+		return nil, errors.New("system bus mock is not running. If that's intended, manually connect to the system bus instead of using this function")
+	}
+	conn, err := dbus.ConnectSystemBus()
+	if err != nil {
+		return nil, err
+	}
+	return conn, nil
+}
+
+// isRunning checks if the system bus mock is running.
+func isRunning() bool {
+	return strings.HasPrefix(os.Getenv("DBUS_SYSTEM_BUS_ADDRESS"), "unix:abstract=/tmp")
 }

@@ -2,7 +2,6 @@
 package testutils
 
 import (
-	"errors"
 	"fmt"
 	"log/slog"
 	"os"
@@ -13,30 +12,13 @@ import (
 	"github.com/godbus/dbus/v5/introspect"
 )
 
-const defaultSystemBusAddress = "unix:path=/var/run/dbus/system_bus_socket"
-const uidUserDeletionFails = 9999
-const uidUserGetFails = 9998
-const hostnameErrorPath = "hostnameerror"
+// TODO: split it in multiple files, having "mock" in the name.
 
-// GetSystemBusConnection returns a connection to the system bus with a safety check to avoid mistakenly connecting to the
-// actual system bus.
-func GetSystemBusConnection() (*dbus.Conn, error) {
-	if !isRunning() {
-		return nil, errors.New("system bus mock is not running. If that's intended, manually connect to the system bus instead of using this function")
-	}
-	conn, err := dbus.ConnectSystemBus()
-	if err != nil {
-		return nil, err
-	}
-	return conn, nil
-}
-
-// isRunning checks if the system bus mock is running.
-func isRunning() bool {
-	busAddr := os.Getenv("DBUS_SYSTEM_BUS_ADDRESS")
-	//if !strings.HasPrefix("unix:path=/tmp")…
-	return !(busAddr == "" || busAddr == defaultSystemBusAddress)
-}
+const (
+	uidUserDeletionFails = 9999
+	uidUserGetFails      = 9998
+	hostnameErrorPath    = "hostnameerror"
+)
 
 // writes the action to a file, compared against goldenfiles to test the correct actions are being called.
 func writeActionToFile(action string) {
@@ -159,7 +141,7 @@ func (l localebus) Get(interfaceName string, propertyName string) (interface{}, 
 	if l.path == "localeerror" {
 		return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
 	}
-	return "LANG=en_US.UTF-8", nil
+	return "LANG=xh_ZA.UTF-8", nil
 }
 
 // ExportHostnameMock exports the hostname mock to the system bus.

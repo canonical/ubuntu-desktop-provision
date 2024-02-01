@@ -36,7 +36,6 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 	}
 
 	userService, err := user.New(bus)
-
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
 	}
