@@ -1,3 +1,12 @@
+keyboard.KeyboardService:
+    methods:
+        - name: SetKeyboard
+          isclientstream: false
+          isserverstream: false
+        - name: SetInputSource
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/keyboard.proto
 locale.LocaleService:
     methods:
         - name: SetLocale
