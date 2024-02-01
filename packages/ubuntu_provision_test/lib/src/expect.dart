@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 Future<void> expectLocale(String locale) async {
@@ -24,9 +23,9 @@ Future<void> expectTimezone(String timezone) async {
   );
 }
 
-void expectIdentity(Identity identity) {
-  return expect(
-    getService<FakeSystemService>().identity,
+Future<void> expectIdentity(Identity identity) async {
+  return expectLater(
+    await getService<IdentityService>().getIdentity(),
     isA<Identity>()
         .having((id) => id.realname, 'realname', identity.realname)
         .having((id) => id.username, 'username', identity.username)

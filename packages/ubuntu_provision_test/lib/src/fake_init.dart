@@ -36,8 +36,6 @@ Future<void> registerFakeInitServices({
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
-  registerService(FakeSystemService.new);
-
   registerService<IdentityService>(
       // ignore: invalid_use_of_visible_for_testing_member
       () => ProvdIdentityService(userClient: FakeProvdUserClient()));
@@ -329,22 +327,9 @@ class _FakeUrlLauncher implements UrlLauncher {
 
 class FakeProvdUserClient implements provd.ProvdUserClient {
   @override
-  Future<void> createUser(provd.User user) async {
-    getService<FakeSystemService>().identity = Identity(
-      realname: user.realName,
-      username: user.username,
-      password: user.password,
-      hostname: user.hostname,
-      autoLogin: user.autoLogin,
-    );
-  }
+  Future<void> createUser(provd.User user) async {}
 
   @override
   Future<provd.UsernameValidation> validateUsername(String username) async =>
       provd.UsernameValidation.OK;
-}
-
-/// Keeps track of changes made by the fake services.
-class FakeSystemService {
-  Identity? identity;
 }

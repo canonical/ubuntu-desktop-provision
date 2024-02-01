@@ -33,6 +33,12 @@ void main() {
     const language = 'Français';
     const locale = 'fr_FR.UTF-8';
     const keyboard = KeyboardSetting(layout: 'fr', variant: 'latin9');
+    const timezone = 'Europe/Paris';
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
@@ -67,6 +73,16 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage(timezone: timezone);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectTimezone(timezone);
+
     await tester.testConfirmPage();
     await tester.tapConfirm();
     await tester.pumpAndSettle();
@@ -79,12 +95,20 @@ void main() {
     await expectLater(windowClosed, completes);
 
     await verifySubiquityConfig(
+      identity: identity,
       keyboard: keyboard,
       locale: locale,
+      timezone: timezone,
     );
   });
 
   testWidgets('LVM Encrypted', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
@@ -123,6 +147,15 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage();
     await tester.tapConfirm();
     await tester.pumpAndSettle();
@@ -135,11 +168,18 @@ void main() {
     await expectLater(windowClosed, completes);
 
     await verifySubiquityConfig(
+      identity: identity,
       capability: GuidedCapability.LVM_LUKS,
     );
   });
 
   testWidgets('ZFS unencrypted', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
@@ -174,6 +214,15 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage();
     await tester.tapConfirm();
     await tester.pumpAndSettle();
@@ -186,11 +235,18 @@ void main() {
     await expectLater(windowClosed, completes);
 
     await verifySubiquityConfig(
+      identity: identity,
       capability: GuidedCapability.ZFS,
     );
   });
 
   testWidgets('tpm', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
     await tester.runApp(() => app.main([
           '--source-catalog=examples/sources/tpm.yaml',
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
@@ -234,6 +290,15 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage();
     await tester.tapConfirm();
     await tester.pumpAndSettle();
@@ -246,6 +311,7 @@ void main() {
     await expectLater(windowClosed, completes);
 
     await verifySubiquityConfig(
+      identity: identity,
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
   });
@@ -293,6 +359,17 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testManualStoragePage(storage: storage);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(
+      identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+      password: 'password',
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -347,6 +424,17 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testGuidedResizePage(sizes: {'sda3 (ntfs)': 40000});
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(
+      identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+      password: 'password',
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

@@ -324,8 +324,73 @@ Future<void> main() async {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testIdentityPage(
+      identity: const Identity(
+        realname: 'Ubuntu User',
+        hostname: 'ubuntu',
+        username: 'user',
+      ),
+      password: 'password',
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage(
-      screenshot: '$currentThemeName/10.confirm',
+      screenshot: '$currentThemeName/09.confirm',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('10.timezone', (tester) async {
+    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(Routes.timezone);
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage(
+      screenshot: '$currentThemeName/10.timezone',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('11.identity', (tester) async {
+    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(Routes.identity);
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(
+      identity: const Identity(
+        realname: 'Ubuntu User',
+        hostname: 'ubuntu',
+        username: 'user',
+      ),
+      password: 'password',
+      screenshot: '$currentThemeName/11.identity',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('12.active-directory', (tester) async {
+    final client = FakeSubiquityClient();
+    registerServiceInstance<SubiquityClient>(client);
+
+    final service = FakeActiveDirectoryService(client);
+    registerServiceInstance<ActiveDirectoryService>(service);
+
+    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(Routes.activeDirectory);
+    await tester.pumpAndSettle();
+
+    await tester.testActiveDirectoryPage(
+      adminName: 'admin',
+      password: 'password',
+      screenshot: '$currentThemeName/12.active-directory',
     );
   }, variant: themeVariant);
 
@@ -365,6 +430,13 @@ Future<void> main() async {
       screenshot: '$currentThemeName/16.complete',
     );
   }, variant: themeVariant);
+}
+
+class FakeActiveDirectoryService extends SubiquityActiveDirectoryService {
+  FakeActiveDirectoryService(super.client);
+
+  @override
+  Future<bool> isUsed() async => true;
 }
 
 class FakeDesktopService implements DesktopService {

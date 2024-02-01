@@ -86,12 +86,16 @@ Future<void> runInstallerApp(
   final baseName = p.basename(Platform.resolvedExecutable);
 
   // conditional registration if not already registered by flavors or tests
+  tryRegisterService<ActiveDirectoryService>(
+      () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(
       () => ConfigService(path: options['config'] as String?));
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
+  tryRegisterService<IdentityService>(() => SubiquityIdentityService(
+      getService<SubiquityClient>(), getService<PostInstallService>()));
   tryRegisterService<InstallerService>(
     () => InstallerService(
       getService<SubiquityClient>(),
@@ -140,6 +144,8 @@ Future<void> runInstallerApp(
   tryRegisterService<ThemeVariantService>(
     () => ThemeVariantService(config: tryGetService<ConfigService>()),
   );
+  tryRegisterService<TimezoneService>(
+      () => SubiquityTimezoneService(getService<SubiquityClient>()));
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
