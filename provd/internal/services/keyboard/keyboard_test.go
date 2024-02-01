@@ -18,26 +18,6 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-func TestEmptySetInputSourcesRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newKeyboardClient(t)
-
-	keyboardResp, err := client.SetInputSource(context.Background(), nil)
-	require.Error(t, err, "SetInputSources should return an error for nil request")
-	require.Empty(t, keyboardResp, "SetInputSources should return a nil response for a nil request")
-}
-
-func TestEmptySetKeyboardRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newKeyboardClient(t)
-
-	keyboardResp, err := client.SetKeyboard(context.Background(), nil)
-	require.Error(t, err, "SetKeyboard should return an error for nil request")
-	require.Empty(t, keyboardResp, "SetKeyboard should return a nil response for a nil request")
-}
-
 func TestSetKeyboard(t *testing.T) {
 	t.Parallel()
 
@@ -45,7 +25,10 @@ func TestSetKeyboard(t *testing.T) {
 		variant     string
 		layout      string
 		locale1Path string
-		wantErr     bool
+
+		emptyRequest bool
+
+		wantErr bool
 	}{
 		// Success cases
 		"Success on valid layout and variant":    {},
@@ -55,6 +38,7 @@ func TestSetKeyboard(t *testing.T) {
 		"Error on empty layout": {layout: "-", wantErr: true},
 
 		// Dbus errors
+		"Error when request is nil":      {emptyRequest: true, wantErr: true},
 		"Error when gettings X11Model":   {locale1Path: "x11modelerror", wantErr: true},
 		"Error when getting X11Options":  {locale1Path: "x11optionserror", wantErr: true},
 		"Error from locale dbus object":  {locale1Path: "localeerror", wantErr: true},
@@ -86,14 +70,19 @@ func TestSetKeyboard(t *testing.T) {
 				tc.layout = ""
 			}
 
-			keyboardReq := &pb.SetKeyboardRequest{
-				Settings: &pb.KeyboardSettings{
-					Layout:  tc.layout,
-					Variant: tc.variant,
-				},
+			var req *pb.SetKeyboardRequest
+			if tc.emptyRequest {
+				req = nil
+			} else {
+				req = &pb.SetKeyboardRequest{
+					Settings: &pb.KeyboardSettings{
+						Layout:  tc.layout,
+						Variant: tc.variant,
+					},
+				}
 			}
 
-			keyboardResp, err := client.SetKeyboard(context.Background(), keyboardReq)
+			keyboardResp, err := client.SetKeyboard(context.Background(), req)
 			if tc.wantErr {
 				require.Error(t, err, "SetKeyboard should return an error")
 				require.Empty(t, keyboardResp, "SetKeyboard should return a nil response")
