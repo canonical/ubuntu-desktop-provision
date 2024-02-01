@@ -26,13 +26,13 @@ func TestSupportedFilePath(t *testing.T) {
 		wantErr           bool
 	}{
 		// Success case
-		"Valid path": {},
+		"Success with valid SUPPORTED filepath": {},
 
 		// Invalid path
-		"Invalid SUPPORTED file path": {supportedFilePath: "invalid-path", wantErr: true},
+		"Error on invalid SUPPORTED file path": {supportedFilePath: "invalid-path", wantErr: true},
 
 		// Unparsable file
-		"Unparsable SUPPORTED file": {supportedFilePath: "unparsable", wantErr: true},
+		"Error on unparsable SUPPORTED file": {supportedFilePath: "unparsable", wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -44,17 +44,9 @@ func TestSupportedFilePath(t *testing.T) {
 			tempDir := t.TempDir()
 
 			if tc.supportedFilePath == "unparsable" {
-				supportedPath := filepath.Join(tempDir, tc.supportedFilePath)
-				file, err := os.Create(supportedPath)
-				if err != nil {
-					t.Fatalf("Setup: could not create %s: %v", tc.supportedFilePath, err)
-				}
-				_, err = file.WriteString("foo") // Write "foo" to the file
-				if err != nil {
-					t.Fatalf("Setup: could not write to %s: %v", tc.supportedFilePath, err)
-				}
-				file.Close()                         // Close immediately after creating the file
-				tc.supportedFilePath = supportedPath // Update with full path
+				tc.supportedFilePath = filepath.Join(tempDir, "supported")
+				err := os.WriteFile(tc.supportedFilePath, []byte("foo"), 0600)
+				require.NoError(t, err, "Setup: could not write to %s: %v", tc.supportedFilePath, err)
 			}
 
 			// Create service with options
@@ -64,9 +56,7 @@ func TestSupportedFilePath(t *testing.T) {
 			}
 
 			client, err := locale.New(testutils.NewDbusConn(t), opts...)
-			if err != nil {
-				t.Fatalf("Setup: could not create user service: %v", err)
-			}
+			require.NoError(t, err, "Setup: could not create locale service")
 
 			// Call SetLocale with a valid locale
 			_, err = client.SetLocale(context.Background(), &pb.SetLocaleRequest{Locale: "en_US.UTF-8"})
@@ -86,10 +76,10 @@ func TestGetLocale(t *testing.T) {
 		wantError bool
 	}{
 		// Success case
-		"find locale": {},
+		"Successfully finds locale": {},
 
 		// Error case
-		"locale error": {wantError: true},
+		"Error on getLocale returning an error": {wantError: true},
 	}
 	for name, tc := range tests {
 		tc := tc
@@ -122,12 +112,12 @@ func TestSetLocale(t *testing.T) {
 		wantError bool
 	}{
 		// Success case
-		"valid locale": {locale: "en_US.UTF-8"},
+		"Successcully sets a valid locale": {locale: "en_US.UTF-8"},
 
 		// Error cases
-		"empty locale": {locale: "", wantError: true},
-		"locale error": {locale: "locale_error", wantError: true},
-		"bad locale":   {locale: "bad_locale", wantError: true},
+		"Error when locale is empty":            {locale: "", wantError: true},
+		"Error when SetLocale returns an error": {locale: "locale_error", wantError: true},
+		"Error on invalid locale":               {locale: "bad_locale", wantError: true},
 	}
 	for name, tc := range tests {
 		tc := tc
@@ -164,9 +154,7 @@ func newLocaleClient(t *testing.T, opts ...locale.Option) pb.LocaleServiceClient
 
 	service, err := locale.New(bus, opts...)
 
-	if err != nil {
-		t.Fatalf("Setup: could not create user service: %v", err)
-	}
+	require.NoError(t, err, "Setup: could not create locale service")
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterLocaleServiceServer(grpcServer, service)
