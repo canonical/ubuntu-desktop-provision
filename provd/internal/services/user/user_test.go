@@ -26,12 +26,11 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 		wantErr          bool
 	}{
 		// Success case
-		"Valid paths": {},
+		"Successfully find valid reserved-username file paths": {},
 
 		// Invalid paths
 		"Error on invalid passwd master file path": {passwdMasterFile: "invalid-path", wantErr: true},
-		// FIXME
-		"Error on invalid group master file path": {groupMasterFile: "invalid-path", wantErr: true},
+		"Error on invalid group master file path":  {groupMasterFile: "invalid-path", wantErr: true},
 
 		// Unparsable files
 		"Error on unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
@@ -114,7 +113,7 @@ func TestDbusObjectsAvalible(t *testing.T) {
 		wantErr         bool
 	}{
 		// Success case
-		"Valid objects": {
+		"Successfully ping dbus objects": {
 			wantErr: false,
 		},
 
@@ -271,7 +270,7 @@ func TestValidateUsername(t *testing.T) {
 		wantErr  bool
 	}{
 		// Success case
-		"Valid username": {username: "find-user-by-name-not-found"},
+		"Successfully create a user with a valid username": {username: "find-user-by-name-not-found"},
 
 		// Error cases
 		"Error when creating user with existing username": {},
