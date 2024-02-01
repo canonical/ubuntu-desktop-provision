@@ -19,6 +19,26 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+func TestEmptySetLocaleRequest(t *testing.T) {
+	t.Parallel()
+
+	client := newLocaleClient(t)
+
+	userResp, err := client.SetLocale(context.Background(), nil)
+	require.Error(t, err, "SetLocale should return an error for nil request")
+	require.Empty(t, userResp, "SetLocale should return a nil response for a nil request")
+}
+
+func TestEmptyGetLocaleRequest(t *testing.T) {
+	t.Parallel()
+
+	client := newLocaleClient(t)
+
+	userResp, err := client.GetLocale(context.Background(), nil)
+	require.Error(t, err, "GetLocale should return an error for nil request")
+	require.Empty(t, userResp, "GetLocale should return a nil response for a nil request")
+}
+
 func TestSupportedFilePath(t *testing.T) {
 	t.Parallel()
 	tests := map[string]struct {
