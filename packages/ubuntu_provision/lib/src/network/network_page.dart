@@ -67,22 +67,11 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
                   value: model.connectMode,
                   onChanged: (_) => model.selectConnectMode(ConnectMode.wifi),
                 ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: model.connectMode == ConnectMode.wifi ? 100 : 0,
-                    maxHeight: 200,
-                  ),
-                  child: Column(
-                    children: [
-                      WifiView(
-                        expanded: model.connectMode == ConnectMode.wifi,
-                        onEnabled: () =>
-                            model.selectConnectMode(ConnectMode.wifi),
-                        onSelected: (_, __) =>
-                            model.selectConnectMode(ConnectMode.wifi),
-                      ),
-                    ],
-                  ),
+                WifiView(
+                  expanded: model.connectMode == ConnectMode.wifi,
+                  onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
+                  onSelected: (_, __) =>
+                      model.selectConnectMode(ConnectMode.wifi),
                 ),
                 HiddenWifiRadioButton(
                   value: model.connectMode,

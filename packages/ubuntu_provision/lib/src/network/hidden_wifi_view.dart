@@ -82,38 +82,30 @@ class _HiddenWifiViewState extends ConsumerState<HiddenWifiView> {
     return AnimatedExpanded(
       expanded: widget.expanded,
       child: Padding(
-        padding: const EdgeInsets.only(top: 8),
-        child: FractionallySizedBox(
-          alignment: Alignment.centerLeft,
-          widthFactor: kWizardWidthFraction,
-          child: Padding(
-            padding: kWizardIndentation,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                if (model.devices.length > 1)
-                  MenuButtonBuilder<WifiDevice>(
-                    values: model.devices,
-                    selected: model.selectedDevice,
-                    onSelected: model.selectDevice,
-                    itemBuilder: (context, device, child) {
-                      return Text(device.model ?? device.interface);
-                    },
-                  ),
-                if (model.devices.length > 1)
-                  const SizedBox(height: kWizardSpacing),
-                ValidatedFormField(
-                  focusNode: _focusNode,
-                  initialValue: model.ssid,
-                  onChanged: model.setSsid,
-                  validator: RequiredValidator(
-                    errorText: lang.networkHiddenWifiNameRequired,
-                  ),
-                  labelText: lang.networkHiddenWifiNameLabel,
-                ),
-              ],
+        padding: kWizardIndentation.add(const EdgeInsets.only(top: 8)),
+        child: Column(
+          children: <Widget>[
+            if (model.devices.length > 1)
+              MenuButtonBuilder<WifiDevice>(
+                values: model.devices,
+                selected: model.selectedDevice,
+                onSelected: model.selectDevice,
+                itemBuilder: (context, device, child) {
+                  return Text(device.model ?? device.interface);
+                },
+              ),
+            if (model.devices.length > 1)
+              const SizedBox(height: kWizardSpacing),
+            ValidatedFormField(
+              focusNode: _focusNode,
+              initialValue: model.ssid,
+              onChanged: model.setSsid,
+              validator: RequiredValidator(
+                errorText: lang.networkHiddenWifiNameRequired,
+              ),
+              labelText: lang.networkHiddenWifiNameLabel,
             ),
-          ),
+          ],
         ),
       ),
     );
