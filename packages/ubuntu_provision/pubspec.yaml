@@ -27,7 +27,7 @@ dependencies:
   nm: ^0.5.0
   path: ^1.8.3
   platform: ^3.1.2
-  safe_change_notifier: ^0.3.1
+  safe_change_notifier: ^0.3.2
   stdlibc: ^0.1.4
   subiquity_client: ^0.1.0
   timezone_map:
@@ -35,13 +35,13 @@ dependencies:
       url: https://github.com/canonical/ubuntu-flutter-plugins.git
       path: packages/timezone_map
       ref: 5af6896c75b5ab8f78b93f7f358836a8c4c7857f
-  ubuntu_flavor: ^0.2.1
-  ubuntu_localizations: ^0.3.4
-  ubuntu_logger: ^0.1.0
-  ubuntu_service: ^0.3.0
+  ubuntu_flavor: ^0.2.2
+  ubuntu_localizations: ^0.3.5
+  ubuntu_logger: ^0.1.1
+  ubuntu_service: ^0.3.1
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
-  ubuntu_widgets: ^0.3.2
+  ubuntu_widgets: ^0.3.3
   ubuntu_wizard: ^0.1.0
   udev: ^0.0.3
   upower: ^0.7.0
@@ -61,7 +61,7 @@ dev_dependencies:
   json_serializable: ^6.7.1
   mockito: 5.4.4
   ubuntu_lints: ^0.3.0
-  ubuntu_test: ^0.1.0-0
+  ubuntu_test: ^0.1.0-beta.8
   yaru_test: ^0.1.5
 
 flutter:
