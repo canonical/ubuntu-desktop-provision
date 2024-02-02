@@ -3,30 +3,30 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/welcome/welcome_model.dart';
-import 'package:ubuntu_bootstrap/pages/welcome/welcome_widgets.dart';
+import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
+import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-export 'welcome_model.dart' show Option;
+export 'try_or_install_model.dart' show TryOrInstallOption;
 
-class WelcomePage extends ConsumerWidget with ProvisioningPage {
-  const WelcomePage({super.key});
+class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
+  const TryOrInstallPage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     return Future.wait([
-      ref.read(welcomeModelProvider).init(),
+      ref.read(tryOrInstallModelProvider).init(),
       MascotAvatar.precacheAsset(context),
     ]).then((_) => true);
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final model = ref.watch(welcomeModelProvider);
+    final model = ref.watch(tryOrInstallModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
     final brightness = Theme.of(context).brightness;
@@ -34,7 +34,7 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
 
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(lang.welcomePageTitle(flavor.name)),
+        title: Text(lang.tryOrInstallPageTitle(flavor.name)),
       ),
       content: Column(
         children: [
@@ -42,18 +42,18 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
           SvgPicture.asset('assets/welcome/logo-${brightness.name}.svg'),
           const Spacer(),
           OptionButton(
-            value: Option.welcomeInstallOption,
+            value: TryOrInstallOption.installUbuntu,
             groupValue: model.option,
-            title: Text(lang.welcomeInstallOption(flavor.name)),
-            subtitle: Text(lang.welcomeInstallDescription(flavor.name)),
+            title: Text(lang.installOption(flavor.name)),
+            subtitle: Text(lang.installDescription(flavor.name)),
             onChanged: (value) => model.selectOption(value!),
           ),
           const SizedBox(height: kWizardSpacing / 2),
           OptionButton(
-            value: Option.welcomeTryOption,
+            value: TryOrInstallOption.tryUbuntu,
             groupValue: model.option,
-            title: Text(lang.welcomeTryOption(flavor.name)),
-            subtitle: Text(lang.welcomeTryDescription(flavor.name)),
+            title: Text(lang.tryOption(flavor.name)),
+            subtitle: Text(lang.tryDescription(flavor.name)),
             onChanged: (value) => model.selectOption(value!),
           ),
           // const SizedBox(height: kContentSpacing / 2),
@@ -72,8 +72,9 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
             maintainState: true,
             child: Html(
               shrinkWrap: true,
-              data:
-                  lang.welcomeReleaseNotesLabel(model.releaseNotesURL(locale)),
+              data: lang.tryOrInstallReleaseNotesLabel(
+                model.releaseNotesURL(locale),
+              ),
               style: {
                 'body': Style(margin: Margins.zero),
                 'a': Style(color: Theme.of(context).colorScheme.link),
@@ -88,12 +89,12 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).nextLabel,
-            visible: model.option == Option.welcomeTryOption,
+            visible: model.option == TryOrInstallOption.tryUbuntu,
             execute: YaruWindow.of(context).close,
           ),
           NextWizardButton(
-            visible: model.option != Option.welcomeTryOption,
-            enabled: model.option != Option.none,
+            visible: model.option != TryOrInstallOption.tryUbuntu,
+            enabled: model.option != TryOrInstallOption.none,
             arguments: model.option,
           ),
         ],

@@ -27,47 +27,47 @@
       "DISTRO": {}
     }
   },
-  "welcomePageTitle": "Try or install {DISTRO}",
-  "@welcomePageTitle": {
+  "tryOrInstallPageTitle": "Try or install {DISTRO}",
+  "@tryOrInstallPageTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "welcomeRepairOption": "Repair installation",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "Try {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallRepairOption": "Repair installation",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "Try {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "You can try {RELEASE} without making any changes to your computer.",
-  "@welcomeTryDescription": {
+  "tryDescription": "You can try {RELEASE} without making any changes to your computer.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Install {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Install {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

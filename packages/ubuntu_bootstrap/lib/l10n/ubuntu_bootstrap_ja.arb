@@ -10,8 +10,8 @@
   "@installThirdPartySubtitle": {},
   "chooseSecurityKeyTitle": "セキュリティキー",
   "@chooseSecurityKeyTitle": {},
-  "welcomeReleaseNotesLabel": "<a href=\"{url}\">リリースノート</a> もご覧いただくとよいかもしれません。",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">リリースノート</a> もご覧いただくとよいかもしれません。",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -41,8 +41,8 @@
       "color": {}
     }
   },
-  "welcomeRepairDescription": "修復すると、ドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairDescription": "修復すると、ドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。",
+  "@tryOrInstallRepairDescription": {},
   "configureSecureBootSecurityKeyRequired": "セキュリティキーが必要です",
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "セキュリティキーが一致しません",
@@ -58,12 +58,12 @@
   "@appTitle": {},
   "changeButtonText": "変更",
   "@changeButtonText": {},
-  "welcomeRepairOption": "修復インストール",
-  "@welcomeRepairOption": {},
+  "tryOrInstallRepairOption": "修復インストール",
+  "@tryOrInstallRepairOption": {},
   "welcome": "ようこそ",
   "@welcome": {},
-  "welcomePageTitle": "{DISTRO}を試してみるか、インストールします",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "{DISTRO}を試してみるか、インストールします",
+  "@tryOrInstallPageTitle": {},
   "rstInstructions": "手順は、別のデバイスでQRコードをスキャンするか、<a href=\"https://{url}\">{url}</a>をご確認ください。",
   "@rstInstructions": {
     "type": "text",
@@ -98,29 +98,29 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "{RELEASE} を試してみる",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} を試してみる",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "コンピュータに何の変更も加えることなく、{RELEASE} を試すことができます。",
-  "@welcomeTryDescription": {
+  "tryDescription": "コンピュータに何の変更も加えることなく、{RELEASE} を試すことができます。",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} をインストール",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} をインストール",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "現在の OS と一緒に (または代わりに) {RELEASE} をインストールします。これはあまり時間がかからないはずです。",
-  "@welcomeInstallDescription": {
+  "installDescription": "現在の OS と一緒に (または代わりに) {RELEASE} をインストールします。これはあまり時間がかからないはずです。",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

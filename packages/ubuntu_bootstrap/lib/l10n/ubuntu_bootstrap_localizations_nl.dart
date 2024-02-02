@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Uitproberen of installeren';
   }
 
   @override
-  String get welcomeRepairOption => 'Repareer de installatie';
+  String get tryOrInstallRepairOption => 'Repareer de installatie';
 
   @override
-  String get welcomeRepairDescription => 'Reparatie zal opnieuw alles installeren, zonder de bestaande documenten of instellingen aan te passen.';
+  String get tryOrInstallRepairDescription => 'Reparatie zal opnieuw alles installeren, zonder de bestaande documenten of instellingen aan te passen.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '$RELEASE uitproberen';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'U kunt $RELEASE uitproberen, zonder dat er aanpassingen op de bestaande installatie wordt gemaakt.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '$RELEASE installeren';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Installeer $RELEASE naast (of in plaats van) het huidige besturingssysteem, dit zal niet lang duren.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'De wijzigingen in deze uitgave kunt U <a href=\"$url\">hier, in het Engels, lezen</a>.';
   }
 

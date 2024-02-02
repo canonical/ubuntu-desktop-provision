@@ -101,22 +101,22 @@
   },
   "welcome": "Croeso",
   "@welcome": {},
-  "welcomeTryOption": "Rhoi cynnig ar {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Rhoi cynnig ar {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Gosod {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Gosod {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "Efallai hoffech ddarllen <a href=\"{url}\">nodiadau'r fersiwn</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Efallai hoffech ddarllen <a href=\"{url}\">nodiadau'r fersiwn</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -128,8 +128,8 @@
   "@chooseSecurityKey": {},
   "installThirdPartySubtitle": "Mae'r feddalwedd hwn yn destun amodau trwyddedu sydd ynghlwm yn y ddogfennaeth. Mae peth yn fasnachol.",
   "@installThirdPartySubtitle": {},
-  "welcomeInstallDescription": "Gosod {RELEASE} ochr yn ochr â (neu yn lle) eich system weithredu gyfredol. Fydd hyn ddim yn cymryd yn rhy hir.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Gosod {RELEASE} ochr yn ochr â (neu yn lle) eich system weithredu gyfredol. Fydd hyn ddim yn cymryd yn rhy hir.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

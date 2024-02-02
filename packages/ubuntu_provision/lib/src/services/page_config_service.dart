@@ -8,6 +8,7 @@ part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';
 
 final _log = Logger('page');
+const _tryOrInstallName = 'try-or-install';
 
 class PageConfigService {
   PageConfigService({ConfigService? config, this.includeWelcome = false})
@@ -18,9 +19,8 @@ class PageConfigService {
   final bool includeWelcome;
 
   List<String> get excludedPages => pages.entries
-      .whereNot(
-        (e) => e.value.visible || (includeWelcome && e.key == 'welcome'),
-      )
+      .whereNot((e) =>
+          e.value.visible || (includeWelcome && e.key == _tryOrInstallName))
       .map((e) => e.key)
       .toList();
 
@@ -32,8 +32,9 @@ class PageConfigService {
     });
 
     if (includeWelcome) {
-      pages['welcome'] = pageConfig.pages['welcome']?.copyWith(visible: true) ??
-          const PageConfigEntry();
+      pages[_tryOrInstallName] =
+          pageConfig.pages[_tryOrInstallName]?.copyWith(visible: true) ??
+              const PageConfigEntry();
     }
     pages.addAll(pageConfig.pages);
   }

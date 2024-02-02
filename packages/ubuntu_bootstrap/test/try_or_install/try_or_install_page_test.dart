@@ -1,13 +1,13 @@
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_bootstrap/pages/welcome/welcome_page.dart';
+import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
 
-import 'test_welcome.dart';
+import 'test_try_or_install.dart';
 
 void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
@@ -35,27 +35,27 @@ void main() {
   });
 
   testWidgets('select option', (tester) async {
-    final model = buildWelcomeModel(option: Option.none);
+    final model = buildWelcomeModel(option: TryOrInstallOption.none);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
 
-    await tester.tap(find.radio(Option.welcomeInstallOption));
-    verify(model.selectOption(Option.welcomeInstallOption)).called(1);
+    await tester.tap(find.radio(TryOrInstallOption.installUbuntu));
+    verify(model.selectOption(TryOrInstallOption.installUbuntu)).called(1);
 
-    await tester.tap(find.radio(Option.welcomeTryOption));
-    verify(model.selectOption(Option.welcomeTryOption)).called(1);
+    await tester.tap(find.radio(TryOrInstallOption.tryUbuntu));
+    verify(model.selectOption(TryOrInstallOption.tryUbuntu)).called(1);
   });
 
   testWidgets('install ubuntu', (tester) async {
-    final model = buildWelcomeModel(option: Option.welcomeInstallOption);
+    final model = buildWelcomeModel(option: TryOrInstallOption.installUbuntu);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('try ubuntu', (tester) async {
-    final model = buildWelcomeModel(option: Option.welcomeTryOption);
+    final model = buildWelcomeModel(option: TryOrInstallOption.tryUbuntu);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);

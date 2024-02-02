@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Vyzkoušet nebo nainstalovat $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'Opravit instalaci';
+  String get tryOrInstallRepairOption => 'Opravit instalaci';
 
   @override
-  String get welcomeRepairDescription => 'Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.';
+  String get tryOrInstallRepairDescription => 'Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Vyzkoušet $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Můžete si vyzkoušet $RELEASE aniž by se v počítači cokoli měnilo.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Nainstalovat $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'Nejspíš si budete chtít přečíst <a href=\"$url\">poznámky k vydání</a>.';
   }
 

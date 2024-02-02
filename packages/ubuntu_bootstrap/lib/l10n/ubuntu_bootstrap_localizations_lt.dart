@@ -29,39 +29,39 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Išbandykite arba įsidiekite $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'Taisyti diegimą';
+  String get tryOrInstallRepairOption => 'Taisyti diegimą';
 
   @override
-  String get welcomeRepairDescription => 'Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.';
+  String get tryOrInstallRepairDescription => 'Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Išbandyti $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
-    return 'Galite išbandyti $RELEASE neatlikdami kompiuteryje jokių pakeitimų.';
+  String tryDescription(Object RELEASE) {
+    return 'You can try $RELEASE without making any changes to your computer.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Įdiegti $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
-    return 'Įsidiekite $RELEASE šalia savo dabartinės operacinės sistemoje arba vietoje jos. Tai neturėtų ilgai užtrukti.';
+  String installDescription(Object RELEASE) {
+    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
-    return 'Galite pageidauti perskaityti <a href=\"$url\">laidos informaciją</a>.';
+  String tryOrInstallReleaseNotesLabel(Object url) {
+    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
   }
 
   @override

@@ -2,8 +2,8 @@
   "@@locale": "ar",
   "changeButtonText": "تغيير",
   "@changeButtonText": {},
-  "welcomeRepairOption": "تصليح المثبت",
-  "@welcomeRepairOption": {},
+  "tryOrInstallRepairOption": "تصليح المثبت",
+  "@tryOrInstallRepairOption": {},
   "windowTitle": "تثبيت {RELEASE}",
   "@windowTitle": {
     "type": "text",
@@ -15,33 +15,33 @@
   "@quitButtonText": {},
   "welcome": "مرحبا",
   "@welcome": {},
-  "welcomePageTitle": "جرب او ثبت {DISTRO}",
-  "@welcomePageTitle": {},
-  "welcomeRepairDescription": "سيؤدي الإصلاح إلى إعادة تثبيت جميع البرامج المثبتة دون لمس المستندات أو الإعدادات.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "جرب {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "جرب او ثبت {DISTRO}",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairDescription": "سيؤدي الإصلاح إلى إعادة تثبيت جميع البرامج المثبتة دون لمس المستندات أو الإعدادات.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "جرب {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "يمكنك تجربة {RELEASE} بدون إجراء اي تغييرات لجهازك.",
-  "@welcomeTryDescription": {
+  "tryDescription": "يمكنك تجربة {RELEASE} بدون إجراء اي تغييرات لجهازك.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "ثبت {RELEASE}",
+  "installOption": "ثبت {RELEASE}",
   "@welcomeInstallOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "ثبت {RELEASE} بجانب او بدلا من نظامك الحالي. لا ينبغي لهذا الإجراء اخذ الكثير من الوقت.",
-  "@welcomeInstallDescription": {
+  "installDescription": "ثبت {RELEASE} بجانب او بدلا من نظامك الحالي. لا ينبغي لهذا الإجراء اخذ الكثير من الوقت.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -147,8 +147,8 @@
       "url": {}
     }
   },
-  "welcomeReleaseNotesLabel": "قد ترغب في قراءة </a> ملاحظات الإصدار <a href=\"{url}\">.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "قد ترغب في قراءة </a> ملاحظات الإصدار <a href=\"{url}\">.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

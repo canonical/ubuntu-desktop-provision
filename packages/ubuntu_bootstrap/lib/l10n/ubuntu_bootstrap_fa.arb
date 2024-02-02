@@ -6,14 +6,14 @@
   "@confirmSecurityKey": {},
   "configureSecureBootOption": "پیکربندی راه‌اندازی ایمن",
   "@configureSecureBootOption": {},
-  "welcomeRepairOption": "تعمیر نصب",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "تعمیر، همهٔ نرم افزارهای نصب شده را بدون دست زدن به اسناد یا تنظیمات، دوباره نصب می‌کند.",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairOption": "تعمیر نصب",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "تعمیر، همهٔ نرم افزارهای نصب شده را بدون دست زدن به اسناد یا تنظیمات، دوباره نصب می‌کند.",
+  "@tryOrInstallRepairDescription": {},
   "quitButtonText": "خروج از نصب",
   "@quitButtonText": {},
-  "welcomeInstallOption": "نصب {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "نصب {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

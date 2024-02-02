@@ -6,17 +6,17 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-final _log = Logger('welcome');
+final _log = Logger('try_or_install');
 
-final welcomeModelProvider = ChangeNotifierProvider(
-  (_) => WelcomeModel(
+final tryOrInstallModelProvider = ChangeNotifierProvider(
+  (_) => TryOrInstallModel(
     network: getService<NetworkService>(),
     product: getService<ProductService>(),
   ),
 );
 
-/// The available options on the welcome page.
-enum Option {
+/// The available options on the Try or Install page.
+enum TryOrInstallOption {
   /// No option is selected.
   none,
 
@@ -24,16 +24,16 @@ enum Option {
   repairUbuntu,
 
   /// The user wants to try Ubuntu.
-  welcomeTryOption,
+  tryUbuntu,
 
   /// The user wants to install Ubuntu.
-  welcomeInstallOption,
+  installUbuntu,
 }
 
-/// Implements the business logic of the welcome page.
-class WelcomeModel extends SafeChangeNotifier with PropertyStreamNotifier {
+/// Implements the business logic of the try_or_install page.
+class TryOrInstallModel extends SafeChangeNotifier with PropertyStreamNotifier {
   /// Creates the model with the given client.
-  WelcomeModel({
+  TryOrInstallModel({
     required NetworkService network,
     required ProductService product,
   })  : _network = network,
@@ -52,11 +52,11 @@ class WelcomeModel extends SafeChangeNotifier with PropertyStreamNotifier {
   }
 
   /// The currently selected option.
-  Option get option => _option;
-  Option _option = Option.none;
+  TryOrInstallOption get option => _option;
+  TryOrInstallOption _option = TryOrInstallOption.none;
 
   /// Selects the given [option].
-  void selectOption(Option option) {
+  void selectOption(TryOrInstallOption option) {
     if (_option == option) return;
     _option = option;
     _log.info('Selected ${option.name} option');

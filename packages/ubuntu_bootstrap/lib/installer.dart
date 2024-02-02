@@ -74,7 +74,7 @@ Future<void> runInstallerApp(
   final subiquityPath = await getSubiquityPath()
       .then((dir) => Directory(dir).existsSync() ? dir : null);
   final endpoint = await defaultEndpoint(serverMode);
-  final includeWelcome = options['welcome'] as bool? ?? false;
+  final includeTryOrInstall = options['welcome'] as bool? ?? false;
   final process = liveRun
       ? null
       : SubiquityProcess.python(
@@ -115,7 +115,7 @@ Future<void> runInstallerApp(
   tryRegisterService(
     () => PageConfigService(
       config: tryGetService<ConfigService>(),
-      includeWelcome: includeWelcome,
+      includeWelcome: includeTryOrInstall,
     ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));

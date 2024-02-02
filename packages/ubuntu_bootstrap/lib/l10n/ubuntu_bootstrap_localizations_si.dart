@@ -29,39 +29,39 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
-    return 'බලන්න හෝ ස්ථාපනය කරන්න';
+  String tryOrInstallPageTitle(Object DISTRO) {
+    return 'Try or install $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'ස්ථාපනය අලුත්වැඩියාව';
+  String get tryOrInstallRepairOption => 'ස්ථාපනය අලුත්වැඩියාව';
 
   @override
-  String get welcomeRepairDescription => 'ලේඛන හෝ සැකසුම් ස්පර්ශ නොකර ස්ථාපිත සියළුම මෘදුකාංග යළි ස්ථාපනය අළුත්වැඩියාව මගින් සිදුවේ.';
+  String get tryOrInstallRepairDescription => 'ලේඛන හෝ සැකසුම් ස්පර්ශ නොකර ස්ථාපිත සියළුම මෘදුකාංග යළි ස්ථාපනය අළුත්වැඩියාව මගින් සිදුවේ.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '$RELEASE අත්හදා බලන්න';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
-    return 'ඔබගේ පරිගණකයට කිසිදු වෙනසක් නොකර $RELEASE බැලීමට හැකිය.';
+  String tryDescription(Object RELEASE) {
+    return 'You can try $RELEASE without making any changes to your computer.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '$RELEASE ස්ථාපනය කරන්න';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
-    return 'ඔබගේ වත්මන් මෙහෙයුම් පද්ධතිය සමඟ (හෝ ඒ වෙනුවට) $RELEASE ස්ථාපනය කරන්න. මෙයට එතරම් කාලයක් ගත නොවේ.';
+  String installDescription(Object RELEASE) {
+    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
-    return 'මෙතැනින් <a href=\"$url\">නිකුතු සටහන්</a> කියවීමට හැකිය.';
+  String tryOrInstallReleaseNotesLabel(Object url) {
+    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
   }
 
   @override

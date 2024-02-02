@@ -13,7 +13,7 @@
       "DISTRO": {}
     }
   },
-  "welcomePageTitle": "試用或安裝 {DISTRO}",
+  "tryOrInstallPageTitle": "試用或安裝 {DISTRO}",
   "@welcomePageTitle": {
     "type": "text",
     "placeholders": {
@@ -198,8 +198,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "安裝 {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "安裝 {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

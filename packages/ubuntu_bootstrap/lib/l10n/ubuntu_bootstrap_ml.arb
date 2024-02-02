@@ -114,8 +114,8 @@
   "@changeButtonText": {},
   "welcome": "സ്വാഗതം",
   "@welcome": {},
-  "welcomePageTitle": "ഉപയോഗിച്ച് നോക്കുക അല്ലെങ്കിൽ ഇൻസ്റ്റാൾ ചെയ്യുക",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "ഉപയോഗിച്ച് നോക്കുക അല്ലെങ്കിൽ ഇൻസ്റ്റാൾ ചെയ്യുക",
+  "@tryOrInstallPageTitle": {},
   "welcomeRepairOption": "ഇൻസ്റ്റാളേഷൻ നന്നാക്കുക",
   "@welcomeRepairOption": {},
   "welcomeRepairDescription": "റിപ്പയർ ചെയ്യുന്നത് ഡോക്യുമെന്റുകളോ ക്രമീകരണങ്ങളോ സ്പർശിക്കാതെ ഇൻസ്റ്റാൾ ചെയ്ത എല്ലാ സോഫ്റ്റ്വെയറുകളും വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യും.",
@@ -311,8 +311,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} ഇൻസ്റ്റാൾ ചെയ്യുക",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} ഇൻസ്റ്റാൾ ചെയ്യുക",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

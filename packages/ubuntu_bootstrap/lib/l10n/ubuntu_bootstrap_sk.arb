@@ -346,30 +346,30 @@
   "@partitionMountPointLabel": {},
   "quitButtonText": "Opustiť inštaláciu",
   "@quitButtonText": {},
-  "welcomePageTitle": "Vyskúšať alebo nainštalovať {DISTRO}",
-  "@welcomePageTitle": {
+  "tryOrInstallPageTitle": "Vyskúšať alebo nainštalovať {DISTRO}",
+  "@tryOrInstallPageTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "welcomeRepairOption": "Opraviť inštaláciu",
-  "@welcomeRepairOption": {},
-  "welcomeTryOption": "Vyskúšať {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallRepairOption": "Opraviť inštaláciu",
+  "@tryOrInstallRepairOption": {},
+  "tryOption": "Vyskúšať {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "Môžete vyskúšať {RELEASE} bez vykonania zmien vo vašom počítači.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Môžete vyskúšať {RELEASE} bez vykonania zmien vo vašom počítači.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Nainštalovať {RELEASE}",
+  "installOption": "Nainštalovať {RELEASE}",
   "@welcomeInstallOption": {
     "type": "text",
     "placeholders": {
@@ -380,22 +380,22 @@
   "@rstTitle": {},
   "rstDescription": "Na tomto počítači je zapnutá technológia Intel RST (Rapid Storage Technology). Aby bolo možné Ubuntu nainštalovať, je potrebné vo Windows funkciu RST vypnúť.",
   "@rstDescription": {},
-  "welcomeInstallDescription": "Nainštalujte {RELEASE} spoločne z (alebo namiesto) vášho operačného systému. Nemalo by to trvať dlho.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Nainštalujte {RELEASE} spoločne z (alebo namiesto) vášho operačného systému. Nemalo by to trvať dlho.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "Mohli by ste mať záujem o prečítanie si <a href=\"{url}\">poznámok k vydaniu</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Mohli by ste mať záujem o prečítanie si <a href=\"{url}\">poznámok k vydaniu</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
     }
   },
-  "welcomeRepairDescription": "Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairDescription": "Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.",
+  "@tryOrInstallRepairDescription": {},
   "dontInstallDriverSoftwareNow": "Zatiaľ neinštalujte softvér ovládača",
   "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Je ho možné nainštalovať kedykoľvek neskôr pomocou nástroja „Softvér a aktualizácie“.",

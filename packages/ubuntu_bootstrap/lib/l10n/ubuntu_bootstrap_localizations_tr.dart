@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return '$DISTRO dene veya kur';
   }
 
   @override
-  String get welcomeRepairOption => 'Kurulumu tamir et';
+  String get tryOrInstallRepairOption => 'Kurulumu tamir et';
 
   @override
-  String get welcomeRepairDescription => 'Tamir etme seçeneği, tüm yazılımlarınızı tekrardan kuracak ve belgeleriniz ile ayarlarınıza dokunmayacaktır.';
+  String get tryOrInstallRepairDescription => 'Tamir etme seçeneği, tüm yazılımlarınızı tekrardan kuracak ve belgeleriniz ile ayarlarınıza dokunmayacaktır.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '$RELEASE Dene';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Bilgisayarınızda hiç bir değişiklik yapmadan $RELEASE deneyebilirsiniz.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '$RELEASE Kur';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Mevcut işletim sisteminizin yanına (ya da yerine) $RELEASE kur. Çok uzun sürmeyecektir.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return '<a href=\"$url\">Sürüm notlarını</a> okumak isteyebilirsiniz.';
   }
 

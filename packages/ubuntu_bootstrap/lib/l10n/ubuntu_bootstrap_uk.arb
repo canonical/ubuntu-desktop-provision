@@ -13,42 +13,42 @@
   "@changeButtonText": {},
   "welcome": "Ласкаво просимо",
   "@welcome": {},
-  "welcomePageTitle": "Спробувати або встановити",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Виправити встановлення",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Під час виправлення буде перевстановлено все програмне забезпечення, не торкаючись документів чи налаштувань.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "Спробувати {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "Спробувати або встановити",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Виправити встановлення",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Під час виправлення буде перевстановлено все програмне забезпечення, не торкаючись документів чи налаштувань.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "Спробувати {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "Ви можете спробувати {RELEASE}, не роблячи ніяких змін на вашому комп'ютері.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Ви можете спробувати {RELEASE}, не роблячи ніяких змін на вашому комп'ютері.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Встановити {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Встановити {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Встановити {RELEASE} поряд (або замість) вашої поточної операційної системи. Це не повинно зайняти занадто багато часу.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Встановити {RELEASE} поряд (або замість) вашої поточної операційної системи. Це не повинно зайняти занадто багато часу.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "Можливо, ви захочете прочитати <a href=\"{url}\">примітки до випуску</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Можливо, ви захочете прочитати <a href=\"{url}\">примітки до випуску</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

@@ -29,39 +29,39 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
-    return 'آزمودن یا نصب $DISTRO';
+  String tryOrInstallPageTitle(Object DISTRO) {
+    return 'Try or install $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'تعمیر نصب';
+  String get tryOrInstallRepairOption => 'تعمیر نصب';
 
   @override
-  String get welcomeRepairDescription => 'تعمیر، همهٔ نرم افزارهای نصب شده را بدون دست زدن به اسناد یا تنظیمات، دوباره نصب می‌کند.';
+  String get tryOrInstallRepairDescription => 'تعمیر، همهٔ نرم افزارهای نصب شده را بدون دست زدن به اسناد یا تنظیمات، دوباره نصب می‌کند.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
-    return 'آزمودن $RELEASE';
+  String tryOption(Object RELEASE) {
+    return 'Try $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
-    return 'شما می‌توانید $RELEASE را بدون ایجاد هیچ تغییری در رایانه خود امتحان کنید.';
+  String tryDescription(Object RELEASE) {
+    return 'You can try $RELEASE without making any changes to your computer.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'نصب $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
-    return '$RELEASE را در کنار (یا به جای) سیستم‌عامل کنونی شما نصب می‌کنید. این نباید خیلی طول بکشد.';
+  String installDescription(Object RELEASE) {
+    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
-    return 'ممکن است بخواهید <a href=\"$url\">یادداشت‌های انتشار</a> را بخوانید.';
+  String tryOrInstallReleaseNotesLabel(Object url) {
+    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
   }
 
   @override

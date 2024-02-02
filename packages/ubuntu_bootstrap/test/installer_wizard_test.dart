@@ -20,7 +20,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_m
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_bootstrap/pages/welcome/welcome_model.dart';
+import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -46,7 +46,7 @@ import 'secure_boot/test_secure_boot.dart';
 import 'source/not_enough_disk_space/test_not_enough_disk_space.dart';
 import 'source/test_source.dart';
 import 'storage/test_storage.dart';
-import 'welcome/test_welcome.dart';
+import 'try_or_install/test_try_or_install.dart';
 
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
@@ -57,7 +57,8 @@ void main() {
     final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));
     final localeModel = buildLocaleModel();
-    final welcomeModel = buildWelcomeModel(option: Option.welcomeTryOption);
+    final welcomeModel =
+        buildWelcomeModel(option: TryOrInstallOption.tryUbuntu);
 
     registerMockService<TelemetryService>(MockTelemetryService());
 
@@ -67,7 +68,7 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          welcomeModelProvider.overrideWith((_) => welcomeModel),
+          tryOrInstallModelProvider.overrideWith((_) => welcomeModel),
         ],
         child: tester.buildTestWizard(excludedPages: []),
       ),
@@ -86,7 +87,7 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(WelcomePage), findsOneWidget);
+    expect(find.byType(TryOrInstallPage), findsOneWidget);
     verify(welcomeModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -101,7 +102,8 @@ void main() {
     final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
-    final welcomeModel = buildWelcomeModel(option: Option.welcomeInstallOption);
+    final welcomeModel =
+        buildWelcomeModel(option: TryOrInstallOption.installUbuntu);
     final rstModel = buildRstModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -132,7 +134,7 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          welcomeModelProvider.overrideWith((_) => welcomeModel),
+          tryOrInstallModelProvider.overrideWith((_) => welcomeModel),
           rstModelProvider.overrideWith((_) => rstModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -174,7 +176,7 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(WelcomePage), findsOneWidget);
+    expect(find.byType(TryOrInstallPage), findsOneWidget);
     verify(welcomeModel.init()).called(1);
 
     await tester.tapNext();

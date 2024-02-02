@@ -4,7 +4,7 @@ sealed class Routes {
     'loading': '/loading',
     'locale': '/locale',
     'accessibility': '/accessibility',
-    'welcome': '/welcome',
+    'tryOrInstall': '/try-or-install',
     'rst': '/rst',
     'keyboard': '/keyboard',
     'network': '/network',
@@ -25,7 +25,7 @@ sealed class Routes {
   static String get loading => routeMap['loading']!;
   static String get locale => routeMap['locale']!;
   static String get accessibility => routeMap['accessibility']!;
-  static String get welcome => routeMap['welcome']!;
+  static String get tryOrInstall => routeMap['tryOrInstall']!;
   static String get rst => routeMap['rst']!;
   static String get keyboard => routeMap['keyboard']!;
   static String get network => routeMap['network']!;

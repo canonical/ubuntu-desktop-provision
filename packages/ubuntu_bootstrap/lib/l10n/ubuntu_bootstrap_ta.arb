@@ -2,8 +2,8 @@
   "@@locale": "ta",
   "changeButtonText": "மாற்று",
   "@changeButtonText": {},
-  "welcomeRepairOption": "நிறுவலை பழுதுபார்",
-  "@welcomeRepairOption": {},
+  "tryOrInstallRepairOption": "நிறுவலை பழுதுபார்",
+  "@tryOrInstallRepairOption": {},
   "installationTypeTitle": "நிறுவல் வகை",
   "@installationTypeTitle": {},
   "installationTypeNoOSDetected": "இந்த கணினியில் தற்போது எந்த இயங்கு தளங்களும் கண்டறியப்படவில்லை.என்ன செய்ய விரும்புகிறீர்கள்?",
@@ -55,8 +55,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "உங்கள் கணினியில் எந்த மாற்றமும் செய்யாமல் {RELEASE}ஐ சோதிக்கலாம்.",
-  "@welcomeTryDescription": {
+  "tryDescription": "உங்கள் கணினியில் எந்த மாற்றமும் செய்யாமல் {RELEASE}ஐ சோதிக்கலாம்.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -64,17 +64,17 @@
   },
   "welcome": "நல்வரவு",
   "@welcome": {},
-  "welcomePageTitle": "சோதி அல்லது நிறுவு",
-  "@welcomePageTitle": {},
-  "welcomeTryOption": "சோதி {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "சோதி அல்லது நிறுவு",
+  "@tryOrInstallPageTitle": {},
+  "tryOption": "சோதி {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "நிறுவு{RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "நிறுவு{RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

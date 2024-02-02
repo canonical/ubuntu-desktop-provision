@@ -58,7 +58,7 @@ class _Dummy {} // ignore: unused_element
 /// Registers a mock [PageConfigService].
 ///
 /// The [overridePages] argument will override the pages that are returned
-/// if provided. All pages defined in [InstallationStep] except `welcome` are
+/// if provided. All pages defined in [InstallationStep] except `try_or_install` are
 /// returned by default.
 void setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,

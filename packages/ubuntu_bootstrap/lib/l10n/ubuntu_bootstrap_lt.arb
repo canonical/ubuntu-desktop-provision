@@ -20,15 +20,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "Išbandyti {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Išbandyti {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Įdiegti {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Įdiegti {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -90,12 +90,12 @@
       "os": {}
     }
   },
-  "welcomePageTitle": "Išbandykite arba įsidiekite {DISTRO}",
+  "tryOrInstallPageTitle": "Išbandykite arba įsidiekite {DISTRO}",
   "@welcomePageTitle": {},
-  "welcomeRepairOption": "Taisyti diegimą",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairOption": "Taisyti diegimą",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.",
+  "@tryOrInstallRepairDescription": {},
   "welcomeReleaseNotesLabel": "Galite pageidauti perskaityti <a href=\"{url}\">laidos informaciją</a>.",
   "@welcomeReleaseNotesLabel": {
     "type": "text",
