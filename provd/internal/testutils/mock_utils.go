@@ -8,7 +8,7 @@ import (
 )
 
 // Writes the action to a file, compared against goldenfiles to test the correct actions are being called.
-func writeActionToFile(action string) {
+func WriteActionToFile(action string) {
 	f, err := os.OpenFile("actions", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0600)
 	if err != nil {
 		slog.Error(fmt.Sprintf("Error opening file: %v", err))

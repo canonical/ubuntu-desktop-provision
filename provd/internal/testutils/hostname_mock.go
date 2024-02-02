@@ -26,7 +26,7 @@ func (h hostnamedbus) SetStaticHostname(hostname string, someBool bool) *dbus.Er
 		return dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in SetStaticHostname mocked method"})
 	}
 	action := fmt.Sprintf("hostname1.SetStaticHostname(hostname: %s)\n", hostname)
-	writeActionToFile(action)
+	WriteActionToFile(action)
 	return nil
 }
 
@@ -35,7 +35,7 @@ func (h hostnamedbus) Get(interfaceName string, propertyName string) (interface{
 		return "", dbus.NewError("org.freedesktop.hostname1.Error.Failed", []interface{}{"error requested in Get mocked method"})
 	}
 	action := fmt.Sprintf("hostname1.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
-	writeActionToFile(action)
+	WriteActionToFile(action)
 	return h.staticHostname, nil
 }
 
