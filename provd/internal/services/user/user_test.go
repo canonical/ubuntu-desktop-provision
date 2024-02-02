@@ -26,12 +26,11 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 		wantErr          bool
 	}{
 		// Success case
-		"Valid paths": {},
+		"Successfully find valid reserved-username file paths": {},
 
 		// Invalid paths
 		"Error on invalid passwd master file path": {passwdMasterFile: "invalid-path", wantErr: true},
-		// FIXME
-		"Error on invalid group master file path": {groupMasterFile: "invalid-path", wantErr: true},
+		"Error on invalid group master file path":  {groupMasterFile: "invalid-path", wantErr: true},
 
 		// Unparsable files
 		"Error on unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
@@ -114,7 +113,7 @@ func TestDbusObjectsAvalible(t *testing.T) {
 		wantErr         bool
 	}{
 		// Success case
-		"Valid objects": {
+		"Successfully ping dbus objects": {
 			wantErr: false,
 		},
 
@@ -271,7 +270,7 @@ func TestValidateUsername(t *testing.T) {
 		wantErr  bool
 	}{
 		// Success case
-		"Valid username": {username: "find-user-by-name-not-found"},
+		"Successfully create a user with a valid username": {username: "find-user-by-name-not-found"},
 
 		// Error cases
 		"Error when creating user with existing username": {},
@@ -360,24 +359,21 @@ func TestMain(m *testing.M) {
 	defer testutils.StartLocalSystemBus()()
 
 	conn, err := testutils.GetSystemBusConnection()
-
 	if err != nil {
 		slog.Error(fmt.Sprintf("Could not get system bus connection: %v", err))
 		os.Exit(1)
 	}
 
-	err = testutils.ExportAccountsMock(conn)
-	if err != nil {
+	if err = testutils.ExportAccountsMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export Accounts mock: %v", err))
 		os.Exit(1)
 	}
-	err = testutils.ExportHostnameMock(conn)
-	if err != nil {
+	if err = testutils.ExportHostnameMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
 		os.Exit(1)
 	}
-	err = testutils.ExportUserMock(conn)
-	if err != nil {
+
+	if err = testutils.ExportUserMock(conn); err != nil {
 		slog.Error(fmt.Sprintf("Could not export User mock: %v", err))
 		os.Exit(1)
 	}

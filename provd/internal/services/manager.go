@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
@@ -17,8 +18,9 @@ import (
 
 // Manager mediates the whole business logic of the application.
 type Manager struct {
-	userService user.Service
-	bus         *dbus.Conn
+	userService   user.Service
+	localeService locale.Service
+	bus           *dbus.Conn
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
@@ -34,14 +36,19 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 	}
 
 	userService, err := user.New(bus)
-
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
 	}
 
+	localeService, err := locale.New(bus)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create locale service: %s", err)
+	}
+
 	return &Manager{
-		userService: *userService,
-		bus:         bus,
+		userService:   *userService,
+		localeService: *localeService,
+		bus:           bus,
 	}, nil
 }
 
@@ -52,6 +59,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	grpcServer := grpc.NewServer()
 
 	pb.RegisterUserServiceServer(grpcServer, &m.userService)
+	pb.RegisterLocaleServiceServer(grpcServer, &m.localeService)
 	return grpcServer
 }
 

@@ -406,5 +406,11 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
+	err = testutils.ExportLocaleMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
+		os.Exit(1)
+	}
+
 	m.Run()
 }

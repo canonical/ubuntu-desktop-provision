@@ -2,7 +2,10 @@ syntax = "proto3";
 
 package locale;
 
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
 import "google/protobuf/empty.proto";
+
 
 service LocaleService {
   rpc SetLocale (SetLocaleRequest) returns (google.protobuf.Empty) {};
