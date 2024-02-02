@@ -14,6 +14,7 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+// GSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
 type GSettingsSubset interface {
 	IsWritable(key string) bool
 	SetValue(key string, variant *glib.Variant) bool
