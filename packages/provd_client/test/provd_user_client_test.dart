@@ -1,13 +1,11 @@
-import 'dart:async';
-
-import 'package:grpc/grpc.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:provd_client/provd_client.dart';
 import 'package:provd_client/src/generated/user.pbgrpc.dart';
+import 'package:provd_client/src/provd_user_client.dart';
 import 'package:test/test.dart';
 
-import 'provd_client_test.mocks.dart';
+import 'provd_user_client_test.mocks.dart';
+import 'test_utils.dart';
 
 @GenerateMocks([UserServiceClient])
 void main() {
@@ -25,17 +23,4 @@ void main() {
     expect(await userClient.validateUsername('foo'),
         equals(UsernameValidation.OK));
   });
-}
-
-class MockResponseFuture<T> extends Mock implements ResponseFuture<T> {
-  MockResponseFuture(this.value);
-
-  final T value;
-
-  @override
-  Future<S> then<S>(FutureOr<S> Function(T) onValue, {Function? onError}) =>
-      Future.value(value).then(
-        onValue,
-        onError: onError,
-      );
 }

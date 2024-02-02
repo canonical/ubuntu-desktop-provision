@@ -1,17 +1,15 @@
-import 'dart:io';
-
 import 'package:meta/meta.dart';
 import 'package:provd_client/provd_client.dart' as provd;
+import 'package:ubuntu_init/src/services/provd_address.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
-class ProvdIdentityService implements IdentityService {
+class ProvdIdentityService with ProvdAddress implements IdentityService {
   ProvdIdentityService({@visibleForTesting provd.ProvdUserClient? userClient})
-      : _userClient = userClient ?? provd.ProvdUserClient(_socketAddress, 443);
-
-  static final _socketAddress = InternetAddress(
-    '/run/provd/provd.sock',
-    type: InternetAddressType.unix,
-  );
+      : _userClient = userClient ??
+            provd.ProvdUserClient(
+              ProvdAddress.socketAddress,
+              ProvdAddress.port,
+            );
 
   final provd.ProvdUserClient _userClient;
   Identity _identity = const Identity();
