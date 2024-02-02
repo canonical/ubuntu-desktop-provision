@@ -116,7 +116,6 @@ func TestSetInputSources(t *testing.T) {
 				return
 			}
 			require.NoError(t, err, "SetInputSource should not return an error")
-
 		})
 	}
 }
@@ -144,10 +143,12 @@ func TestSetKeyboard(t *testing.T) {
 		"Error on empty settings": {emptySettings: true, wantErr: true},
 
 		// Dbus errors
-		"Error when gettings X11Model":   {locale1Path: "x11modelerror", wantErr: true},
-		"Error when getting X11Options":  {locale1Path: "x11optionserror", wantErr: true},
-		"Error from locale dbus object":  {locale1Path: "localeerror", wantErr: true},
-		"Error when setting X11Keyboard": {layout: "x11keyboarderror", wantErr: true},
+		"Error when gettings X11Model":     {locale1Path: "x11modelerror", wantErr: true},
+		"Error when getting X11Options":    {locale1Path: "x11optionserror", wantErr: true},
+		"Error from locale dbus object":    {locale1Path: "localeerror", wantErr: true},
+		"Error when setting X11Keyboard":   {layout: "x11keyboarderror", wantErr: true},
+		"Error when cant parse X11Model":   {locale1Path: "x11modelparseerror", wantErr: true},
+		"Error when cant parse X11Options": {locale1Path: "x11optionsparseerror", wantErr: true},
 	}
 
 	for name, tc := range tests {

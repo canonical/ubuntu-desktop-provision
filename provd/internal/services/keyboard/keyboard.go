@@ -1,3 +1,4 @@
+// Package keyboard implements the Keyboard gRPC service.
 package keyboard
 
 import (
@@ -116,7 +117,16 @@ func (s *Service) SetKeyboard(ctx context.Context, req *pb.SetKeyboardRequest) (
 		return nil, status.Errorf(codes.Internal, "failed to get X11Options: %v", err)
 	}
 
-	call := s.locale.Call(consts.DbusLocalePrefix+".SetX11Keyboard", 0, req.Settings.Layout, x11Model.Value().(string), req.Settings.Variant, x11Options.Value().(string), false, false)
+	x11ModelStr, ok := x11Model.Value().(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to get X11Model: %v", err)
+	}
+	x11OptionsStr, ok := x11Options.Value().(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to get X11Options: %v", err)
+	}
+
+	call := s.locale.Call(consts.DbusLocalePrefix+".SetX11Keyboard", 0, req.Settings.Layout, x11ModelStr, req.Settings.Variant, x11OptionsStr, false, false)
 	err = call.Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set X11 keyboard: %v", err)
