@@ -18,15 +18,24 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-func TestSetKeyboard(t *testing.T) {
+func TestGsettingsNotWritable(t *testing.T) {
 	t.Parallel()
 
-	tests := map[string]struct {
-		variant     string
-		layout      string
-		locale1Path string
+	bus := testutils.NewDbusConn(t)
+	client, err := keyboard.New(bus, keyboard.WithGSettingsSubset(keyboard.GSettingsSubsetMock{IsWritableError: true}))
 
-		emptyRequest bool
+	require.Error(t, err, "SetInputSource should return an error")
+	require.Empty(t, client, "SetInputSource should return a nil response")
+}
+
+func TestSetInputSources(t *testing.T) {
+	tests := map[string]struct {
+		variant string
+		layout  string
+
+		// Empty flags
+		emptyRequest  bool
+		emptySettings bool
 
 		wantErr bool
 	}{
@@ -35,10 +44,106 @@ func TestSetKeyboard(t *testing.T) {
 		"Success on valid layout, empty variant": {variant: "-"},
 
 		// Error cases
-		"Error on empty layout": {layout: "-", wantErr: true},
+		"Error on empty layout":   {layout: "-", wantErr: true},
+		"Error on empty request":  {emptyRequest: true, wantErr: true},
+		"Error on empty settings": {emptySettings: true, wantErr: true},
+
+		// GSettings errors
+		"Error when calling SetValue": {layout: "gsettingserror", wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Cleanup(testutils.StartLocalSystemBus())
+
+			opts := []keyboard.Option{
+				keyboard.WithGSettingsSubset(keyboard.GSettingsSubsetMock{}),
+			}
+
+			client := newKeyboardClient(t, opts...)
+			if tc.variant == "" {
+				tc.variant = "ok"
+			} else if tc.variant == "-" {
+				tc.variant = ""
+			}
+
+			if tc.layout == "" {
+				tc.layout = "ok"
+			} else if tc.layout == "-" {
+				tc.layout = ""
+			}
+
+			var req *pb.SetInputSourceRequest
+			if tc.emptyRequest {
+				req = nil
+			} else if tc.emptySettings {
+				req = &pb.SetInputSourceRequest{}
+			} else {
+				req = &pb.SetInputSourceRequest{
+					Settings: &pb.KeyboardSettings{
+						Layout:  tc.layout,
+						Variant: tc.variant,
+					},
+				}
+			}
+
+			tempDir := t.TempDir()
+			err := os.Chdir(tempDir)
+			require.NoError(t, err, "Setup: failed to change directory")
+
+			err = os.WriteFile("actions", []byte(""), 0600)
+			require.NoError(t, err, "Setup: could not create actions file")
+
+			keyboardResp, reqErr := client.SetInputSource(context.Background(), req)
+
+			d, err := os.ReadFile("actions")
+			require.NoError(t, err, "Teardown: failed to read actions file ")
+			got := string(d)
+
+			err = os.Chdir(originalDir)
+			require.NoError(t, err, "Teardown: failed to change directory")
+
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+
+			if tc.wantErr {
+				require.Error(t, reqErr, "SetInputSource should return an error")
+				require.Empty(t, keyboardResp, "SetInputSource should return a nil response")
+				return
+			}
+			require.NoError(t, err, "SetInputSource should not return an error")
+
+		})
+	}
+}
+
+func TestSetKeyboard(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		variant     string
+		layout      string
+		locale1Path string
+
+		emptyRequest  bool
+		emptySettings bool
+
+		wantErr bool
+	}{
+		// Success cases
+		"Success on valid layout and variant":    {},
+		"Success on valid layout, empty variant": {variant: "-"},
+
+		// Error cases
+		"Error on empty layout":   {layout: "-", wantErr: true},
+		"Error on empty request":  {emptyRequest: true, wantErr: true},
+		"Error on empty settings": {emptySettings: true, wantErr: true},
 
 		// Dbus errors
-		"Error when request is nil":      {emptyRequest: true, wantErr: true},
 		"Error when gettings X11Model":   {locale1Path: "x11modelerror", wantErr: true},
 		"Error when getting X11Options":  {locale1Path: "x11optionserror", wantErr: true},
 		"Error from locale dbus object":  {locale1Path: "localeerror", wantErr: true},
@@ -73,6 +178,8 @@ func TestSetKeyboard(t *testing.T) {
 			var req *pb.SetKeyboardRequest
 			if tc.emptyRequest {
 				req = nil
+			} else if tc.emptySettings {
+				req = &pb.SetKeyboardRequest{}
 			} else {
 				req = &pb.SetKeyboardRequest{
 					Settings: &pb.KeyboardSettings{

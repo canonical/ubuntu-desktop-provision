@@ -13,6 +13,11 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+type GSettingsSubset interface {
+	IsWritable(key string) bool
+	SetValue(key string, variant *glib.Variant) bool
+}
+
 // Option is a functional option to set the DBus objects in tests.
 type Option func(*Service) error
 
@@ -21,7 +26,7 @@ type Service struct {
 	pb.UnimplementedKeyboardServiceServer
 	conn      *dbus.Conn
 	locale    dbus.BusObject
-	gsettings *gio.Settings
+	gsettings GSettingsSubset
 }
 
 // New returns a new instance of the Keyboard service.
@@ -40,17 +45,17 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 
 	s.gsettings = gio.NewSettings("org.gnome.desktop.input-sources")
 
-	// Check if is writable as a ping test
-	isWritable := s.gsettings.IsWritable("sources")
-	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to gsettings")
-	}
-
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
 		if err := opt(s); err != nil {
 			return nil, err
 		}
+	}
+
+	// Check if is writable as a ping test
+	isWritable := s.gsettings.IsWritable("sources")
+	if !isWritable {
+		return nil, status.Errorf(codes.Internal, "failed to connect to gsettings")
 	}
 
 	return s, nil
@@ -64,6 +69,9 @@ func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequ
 	}
 	if req.Settings == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil settings")
+	}
+	if req.Settings.Layout == "" {
+		return nil, status.Errorf(codes.InvalidArgument, "received an empty layout")
 	}
 
 	var xkbString string
