@@ -11,7 +11,7 @@ import 'provd_identity_service_test.mocks.dart';
 void main() {
   test('set/get identity', () async {
     final client = MockProvdUserClient();
-    final service = ProvdIdentityService(userClient: client);
+    final service = ProvdIdentityService(client: client);
 
     await service.setIdentity(
       const Identity(

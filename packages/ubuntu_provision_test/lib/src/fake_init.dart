@@ -39,7 +39,7 @@ Future<void> registerFakeInitServices({
       (s) => GSettings(s, backend: keyfile));
 
   registerService<IdentityService>(
-      () => ProvdIdentityService(userClient: FakeProvdUserClient()));
+      () => ProvdIdentityService(client: FakeProvdUserClient()));
   registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
   registerService<LocaleService>(
       () => ProvdLocaleService(client: FakeProvdLocaleClient(server)));
