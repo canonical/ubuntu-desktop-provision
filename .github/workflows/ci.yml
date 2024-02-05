@@ -96,7 +96,7 @@ jobs:
       run: ./.github/scripts/check-outdated-files.sh
     - name: Create PR
       if: github.event_name == 'push'
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       with:
         add-paths: '**/*.mocks.dart'
         title: 'chore: regenerate mocks'
@@ -118,7 +118,7 @@ jobs:
       run: ./.github/scripts/check-outdated-files.sh
     - name: Create PR
       if: github.event_name == 'push'
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       with:
         add-paths: '**/l10n/*.dart'
         title: 'chore: regenerate l10n'
