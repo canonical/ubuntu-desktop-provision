@@ -59,23 +59,6 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
           //   subtitle: Text(lang.welcomeRepairDescription),
           //   onChanged: (value) => model.selectOption(value!),
           // ),
-          Visibility(
-            visible: model.isConnected,
-            maintainSize: true,
-            maintainAnimation: true,
-            maintainState: true,
-            child: Html(
-              shrinkWrap: true,
-              data: lang.tryOrInstallReleaseNotesLabel(
-                model.releaseNotesURL(locale),
-              ),
-              style: {
-                'body': Style(margin: Margins.zero),
-                'a': Style(color: Theme.of(context).colorScheme.link),
-              },
-              onLinkTap: (url, _, __) => launchUrl(url!),
-            ),
-          ),
         ],
       ),
       bottomBar: WizardBar(
