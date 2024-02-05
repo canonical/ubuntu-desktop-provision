@@ -40,7 +40,7 @@
     }
   },
   "installOption": "{RELEASE} instalatu",
-  "@welcomeInstallOption": {
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

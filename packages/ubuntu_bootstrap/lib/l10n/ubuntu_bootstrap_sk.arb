@@ -370,7 +370,7 @@
     }
   },
   "installOption": "Nainštalovať {RELEASE}",
-  "@welcomeInstallOption": {
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

@@ -37,7 +37,7 @@
     }
   },
   "installOption": "{RELEASE} स्थापना गर्नुहोस्",
-  "@welcomeInstallOption": {
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
