@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'try_or_install_model.dart' show TryOrInstallOption;
@@ -28,7 +25,6 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(tryOrInstallModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    final locale = Localizations.localeOf(context);
 
     return HorizontalPage(
       windowTitle: lang.tryOrInstallTitle(flavor.name),

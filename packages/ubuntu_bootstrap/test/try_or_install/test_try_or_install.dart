@@ -26,7 +26,7 @@ TryOrInstallModel buildTryOrInstallModel(
 
 final pageImages = PageImages(MockPageConfigService());
 
-Widget buildWelcomePage(TryOrInstallModel model) {
+Widget buildTryOrInstallPage(TryOrInstallModel model) {
   return ProviderScope(
     overrides: [
       tryOrInstallModelProvider.overrideWith((_) => model),

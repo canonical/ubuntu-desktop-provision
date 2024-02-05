@@ -2,9 +2,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_page.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'test_try_or_install.dart';
@@ -12,31 +10,16 @@ import 'test_try_or_install.dart';
 void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
 
-  testWidgets('release notes', (tester) async {
-    final model = buildTryOrInstallModel(isConnected: true);
-    await tester.pumpApp((_) => buildWelcomePage(model));
-
-    expect(find.byType(Html).hitTestable(), findsOneWidget);
-
-    final urlLauncher = MockUrlLauncher();
-    when(urlLauncher.launchUrl(any)).thenAnswer((_) async => true);
-    registerMockService<UrlLauncher>(urlLauncher);
-
-    await tester.tapLink('release notes');
-
-    verify(urlLauncher.launchUrl(kTestReleastNoteUrl)).called(1);
-  });
-
   testWidgets('offline', (tester) async {
     final model = buildTryOrInstallModel(isConnected: false);
-    await tester.pumpApp((_) => buildWelcomePage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage(model));
 
     expect(find.byType(Html).hitTestable(), findsNothing);
   });
 
   testWidgets('select option', (tester) async {
     final model = buildTryOrInstallModel(option: TryOrInstallOption.none);
-    await tester.pumpApp((_) => buildWelcomePage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
 
@@ -50,14 +33,14 @@ void main() {
   testWidgets('install ubuntu', (tester) async {
     final model =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
-    await tester.pumpApp((_) => buildWelcomePage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('try ubuntu', (tester) async {
     final model = buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
-    await tester.pumpApp((_) => buildWelcomePage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
 
