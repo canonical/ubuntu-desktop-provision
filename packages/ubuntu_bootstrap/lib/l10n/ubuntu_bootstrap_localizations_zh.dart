@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return '试用或安装$DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => '修复安装';
+  String get tryOrInstallRepairOption => '修复安装';
 
   @override
-  String get welcomeRepairDescription => '修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。';
+  String get tryOrInstallRepairDescription => '修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '试用 $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return '您可以在不对电脑做任何改动的情况下试用 $RELEASE。';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '安装 $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return '安装 $RELEASE，并可选择保留或替换您当前的操作系统。这个过程应该不会花费太长时间。';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return '您可能想阅读<a href=\"$url\"> 发行注记</a>。';
   }
 
@@ -845,38 +845,38 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return '試用或安裝 $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => '修復系統';
+  String get tryOrInstallRepairOption => '修復系統';
 
   @override
-  String get welcomeRepairDescription => '修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。';
+  String get tryOrInstallRepairDescription => '修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '試用 $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return '您可以試用 $RELEASE，而不會對您的電腦進行任何變動。';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '安裝 $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return '安裝 $RELEASE ，可與您目前的作業系統共存，或取代該系統，這不會耗費太多時間。';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return '您也可以閱覽<a href=\"$url\">版本資訊</a>。';
   }
 

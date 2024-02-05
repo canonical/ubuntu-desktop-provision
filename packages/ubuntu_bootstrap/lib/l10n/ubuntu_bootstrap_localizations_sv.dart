@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Prova eller installera $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'Reparera installation';
+  String get tryOrInstallRepairOption => 'Reparera installation';
 
   @override
-  String get welcomeRepairDescription => 'Reparation kommer att installera om all installerad programvara utan att röra dokument eller inställningar.';
+  String get tryOrInstallRepairDescription => 'Reparation kommer att installera om all installerad programvara utan att röra dokument eller inställningar.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Prova $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Du kan prova $RELEASE utan att göra några ändringar till din dator.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Installera $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Installera $RELEASE bredvid (eller istället för) ditt nuvarande operativsystem. Det här ska inte ta för lång tid.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'Du kanske vill läsa <a href=\"$url\">kommentarer till utgåvan</a>.';
   }
 

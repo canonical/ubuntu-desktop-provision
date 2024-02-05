@@ -10,19 +10,19 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 extension UbuntuBootstrapPageTester on WidgetTester {
-  Future<void> testWelcomePage({
-    Option? option,
+  Future<void> testTryOrInstallPage({
+    TryOrInstallOption? option,
     String? screenshot,
   }) async {
-    await pumpUntilPage(WelcomePage);
+    await pumpUntilPage(TryOrInstallPage);
 
-    final context = element(find.byType(WelcomePage));
+    final context = element(find.byType(TryOrInstallPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.welcomePageTitle('Ubuntu')), findsOneWidget);
+    expect(find.titleBar(l10n.tryOrInstallPageTitle('Ubuntu')), findsOneWidget);
 
     if (option != null) {
-      await tap(find.radio<Option>(option));
+      await tap(find.radio<TryOrInstallOption>(option));
       await pump();
     }
     await pumpAndSettle();

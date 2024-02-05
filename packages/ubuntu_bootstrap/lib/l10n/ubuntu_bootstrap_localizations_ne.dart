@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्';
   }
 
   @override
-  String get welcomeRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'Repair installation';
 
   @override
-  String get welcomeRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '$RELEASE प्रयास गर्नुहोस्';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'तपाईंले आफ्नो कम्प्युटरमा कुनै परिवर्तन नगरी $RELEASE प्रयोग गर्न सक्नुहुन्छ।';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '$RELEASE स्थापना गर्नुहोस्';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'आफ्नो अन्य अपरेटिङ सिस्टम संगै $RELEASE स्थापना गर्नुहोस्। यो छिटो हुनेछ।';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'तपाईंले <a href=\"$url\">रिलिज नोटहरू</a> पढ्न आवश्यक हुन सक्छ।';
   }
 

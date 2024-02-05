@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Vyskúšať alebo nainštalovať $DISTRO';
   }
 
   @override
-  String get welcomeRepairOption => 'Opraviť inštaláciu';
+  String get tryOrInstallRepairOption => 'Opraviť inštaláciu';
 
   @override
-  String get welcomeRepairDescription => 'Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.';
+  String get tryOrInstallRepairDescription => 'Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Vyskúšať $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Môžete vyskúšať $RELEASE bez vykonania zmien vo vašom počítači.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Nainštalovať $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Nainštalujte $RELEASE spoločne z (alebo namiesto) vášho operačného systému. Nemalo by to trvať dlho.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'Mohli by ste mať záujem o prečítanie si <a href=\"$url\">poznámok k vydaniu</a>.';
   }
 

@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Probatu edo instalatu';
   }
 
   @override
-  String get welcomeRepairOption => 'Konpondu instalazioa';
+  String get tryOrInstallRepairOption => 'Konpondu instalazioa';
 
   @override
-  String get welcomeRepairDescription => 'Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.';
+  String get tryOrInstallRepairDescription => 'Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return '$RELEASE probatu';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return '$RELEASE probatu dezakezu zure ordenagailuan aldaketarik egin gabe.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return '$RELEASE instalatu';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return '$RELEASE instalatu zure sistemaren ondoan (edo ordez). Ez du asko iraungo.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return '<a href=\"$url\">kaleratze oharrak</a> irakurri ditzakezu.';
   }
 

@@ -7,8 +7,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "{RELEASE}ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE}ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -16,8 +16,8 @@
   },
   "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ",
   "@welcome": {},
-  "welcomeReleaseNotesLabel": "ਤੁਸੀਂ <a href=\"{url}\">ਰੀਲਿਜ਼ ਨੋਟਿਸ</a> ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ।",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "ਤੁਸੀਂ <a href=\"{url}\">ਰੀਲਿਜ਼ ਨੋਟਿਸ</a> ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ।",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

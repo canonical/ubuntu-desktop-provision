@@ -1,14 +1,14 @@
 {
   "@@locale": "cs",
-  "welcomeInstallDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Nainstalovat {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Nainstalovat {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -34,14 +34,14 @@
   "@changeButtonText": {},
   "welcome": "Vítejte",
   "@welcome": {},
-  "welcomePageTitle": "Vyzkoušet nebo nainstalovat {DISTRO}",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Opravit instalaci",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.",
-  "@welcomeRepairDescription": {},
-  "welcomeReleaseNotesLabel": "Nejspíš si budete chtít přečíst <a href=\"{url}\">poznámky k vydání</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallPageTitle": "Vyzkoušet nebo nainstalovat {DISTRO}",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Opravit instalaci",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOrInstallReleaseNotesLabel": "Nejspíš si budete chtít přečíst <a href=\"{url}\">poznámky k vydání</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -265,15 +265,15 @@
       "url": {}
     }
   },
-  "welcomeTryOption": "Vyzkoušet {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Vyzkoušet {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "Můžete si vyzkoušet {RELEASE} aniž by se v počítači cokoli měnilo.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Můžete si vyzkoušet {RELEASE} aniž by se v počítači cokoli měnilo.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

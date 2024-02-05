@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Kokeile tai asenna ${DISTRO}a';
   }
 
   @override
-  String get welcomeRepairOption => 'Korjaa asennus';
+  String get tryOrInstallRepairOption => 'Korjaa asennus';
 
   @override
-  String get welcomeRepairDescription => 'Korjaus asentaa kaikki ohjelmat uudelleen, asiakirjat ja asetukset säilytetään.';
+  String get tryOrInstallRepairDescription => 'Korjaus asentaa kaikki ohjelmat uudelleen, asiakirjat ja asetukset säilytetään.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Kokeile ${RELEASE}a';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Voit kokeilla ${RELEASE}a tekemättä muutoksia tietokoneellesi.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Asenna $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Asenna $RELEASE nykyisen käyttöjärjestelmäsi rinnalle tai tilalle. Asentaminen ei kestä kauan.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'Voit halutessasi lukea <a href=\"$url\">julkaisumuistion</a>.';
   }
 
