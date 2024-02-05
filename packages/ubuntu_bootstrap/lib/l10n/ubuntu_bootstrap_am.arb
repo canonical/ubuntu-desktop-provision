@@ -9,15 +9,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "ይሞክሩ {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "ይሞክሩ {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "መግጠም {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "መግጠም {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

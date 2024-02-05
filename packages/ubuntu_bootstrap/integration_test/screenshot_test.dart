@@ -58,16 +58,16 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('03.welcome', (tester) async {
+  testWidgets('03.try-or-install', (tester) async {
     await tester
         .runApp(() => runInstallerApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.welcome);
+    await tester.jumpToPage(Routes.tryOrInstall);
     await tester.pumpAndSettle();
 
-    await tester.testWelcomePage(
-      option: Option.welcomeInstallOption,
+    await tester.testTryOrInstallPage(
+      option: TryOrInstallOption.installUbuntu,
       screenshot: '$currentThemeName/03.welcome',
     );
   }, variant: themeVariant);

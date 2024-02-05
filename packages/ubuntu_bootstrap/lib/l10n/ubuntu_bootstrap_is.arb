@@ -13,12 +13,12 @@
   "@changeButtonText": {},
   "welcome": "Velkomin(n)",
   "@welcome": {},
-  "welcomePageTitle": "Prófa eða uppsetja",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Viðgera uppsetningu",
-  "@welcomeRepairOption": {},
-  "welcomeTryOption": "Prófa {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "Prófa eða uppsetja",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Viðgera uppsetningu",
+  "@tryOrInstallRepairOption": {},
+  "tryOption": "Prófa {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -26,8 +26,8 @@
   },
   "rstTitle": "Slökkva á RST",
   "@rstTitle": {},
-  "welcomeInstallOption": "Uppsetja {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Uppsetja {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

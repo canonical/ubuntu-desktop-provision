@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ubuntu_bootstrap/pages/welcome/welcome_model.dart';
+import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 class OptionButton extends StatelessWidget {
@@ -14,9 +14,9 @@ class OptionButton extends StatelessWidget {
 
   final Widget title;
   final Widget? subtitle;
-  final Option value;
-  final Option groupValue;
-  final ValueChanged<Option?>? onChanged;
+  final TryOrInstallOption value;
+  final TryOrInstallOption groupValue;
+  final ValueChanged<TryOrInstallOption?>? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OptionButton extends StatelessWidget {
             color: value == groupValue ? scheme.primary : Colors.transparent),
         borderRadius: BorderRadius.circular(kYaruButtonRadius),
       ),
-      child: YaruRadioButton<Option>(
+      child: YaruRadioButton<TryOrInstallOption>(
         contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 10, 60, 10),
         title: DefaultTextStyle(
           style: Theme.of(context)

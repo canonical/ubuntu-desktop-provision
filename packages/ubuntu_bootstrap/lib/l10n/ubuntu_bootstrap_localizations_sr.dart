@@ -29,38 +29,38 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String welcomePageTitle(Object DISTRO) {
+  String tryOrInstallPageTitle(Object DISTRO) {
     return 'Испробајте или инсталирајте';
   }
 
   @override
-  String get welcomeRepairOption => 'Поправи инсталацију';
+  String get tryOrInstallRepairOption => 'Поправи инсталацију';
 
   @override
-  String get welcomeRepairDescription => 'Поправка ће поново инсталирати све програме без дирања докумената или подешавања.';
+  String get tryOrInstallRepairDescription => 'Поправка ће поново инсталирати све програме без дирања докумената или подешавања.';
 
   @override
-  String welcomeTryOption(Object RELEASE) {
+  String tryOption(Object RELEASE) {
     return 'Испробај $RELEASE';
   }
 
   @override
-  String welcomeTryDescription(Object RELEASE) {
+  String tryDescription(Object RELEASE) {
     return 'Можете испробати $RELEASE без прављења измена на вашем рачунару.';
   }
 
   @override
-  String welcomeInstallOption(Object RELEASE) {
+  String installOption(Object RELEASE) {
     return 'Инсталирај $RELEASE';
   }
 
   @override
-  String welcomeInstallDescription(Object RELEASE) {
+  String installDescription(Object RELEASE) {
     return 'Инсталирај $RELEASE поред (или уместо) вашег тренутног оперативног система. За ово неће требати пуно времена.';
   }
 
   @override
-  String welcomeReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(Object url) {
     return 'You may wish to read the <a href=\"$url\">release notes</a>.';
   }
 

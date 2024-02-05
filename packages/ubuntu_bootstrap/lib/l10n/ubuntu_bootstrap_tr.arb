@@ -2,33 +2,33 @@
   "@@locale": "tr",
   "changeButtonText": "Değiştir",
   "@changeButtonText": {},
-  "welcomePageTitle": "{DISTRO} dene veya kur",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "{DISTRO} dene veya kur",
+  "@tryOrInstallPageTitle": {},
   "welcome": "Hoş Geldiniz",
   "@welcome": {},
   "appTitle": "Ubuntu Masaüstü Kurucu",
   "@appTitle": {},
-  "welcomeTryOption": "{RELEASE} Dene",
-  "@welcomeTryOption": {},
-  "welcomeTryDescription": "Bilgisayarınızda hiç bir değişiklik yapmadan {RELEASE} deneyebilirsiniz.",
-  "@welcomeTryDescription": {},
-  "welcomeInstallOption": "{RELEASE} Kur",
-  "@welcomeInstallOption": {},
+  "tryOption": "{RELEASE} Dene",
+  "@tryOption": {},
+  "tryDescription": "Bilgisayarınızda hiç bir değişiklik yapmadan {RELEASE} deneyebilirsiniz.",
+  "@tryDescription": {},
+  "installOption": "{RELEASE} Kur",
+  "@installOption": {},
   "windowTitle": "{RELEASE} Kur",
   "@windowTitle": {},
-  "welcomeRepairOption": "Kurulumu tamir et",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Tamir etme seçeneği, tüm yazılımlarınızı tekrardan kuracak ve belgeleriniz ile ayarlarınıza dokunmayacaktır.",
-  "@welcomeRepairDescription": {},
-  "welcomeInstallDescription": "Mevcut işletim sisteminizin yanına (ya da yerine) {RELEASE} kur. Çok uzun sürmeyecektir.",
-  "@welcomeInstallDescription": {
+  "tryOrInstallRepairOption": "Kurulumu tamir et",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Tamir etme seçeneği, tüm yazılımlarınızı tekrardan kuracak ve belgeleriniz ile ayarlarınıza dokunmayacaktır.",
+  "@tryOrInstallRepairDescription": {},
+  "installDescription": "Mevcut işletim sisteminizin yanına (ya da yerine) {RELEASE} kur. Çok uzun sürmeyecektir.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "<a href=\"{url}\">Sürüm notlarını</a> okumak isteyebilirsiniz.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">Sürüm notlarını</a> okumak isteyebilirsiniz.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

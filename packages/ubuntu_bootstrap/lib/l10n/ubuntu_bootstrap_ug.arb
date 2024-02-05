@@ -1,14 +1,14 @@
 {
   "@@locale": "ug",
-  "welcomeTryOption": "‏{RELEASE} نى سىناپ كۆرىمەن",
-  "@welcomeTryOption": {
+  "tryOption": "‏{RELEASE} نى سىناپ كۆرىمەن",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "‏{RELEASE} نى ئورنىتىمەن",
-  "@welcomeInstallOption": {
+  "installOption": "‏{RELEASE} نى ئورنىتىمەن",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

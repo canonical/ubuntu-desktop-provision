@@ -7,15 +7,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "Δοκιμάστε το {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Δοκιμάστε το {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Εγκατάσταση του {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Εγκατάσταση του {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -23,8 +23,8 @@
   },
   "rstTitle": "Απενεργοποίηση του RST",
   "@rstTitle": {},
-  "welcomeReleaseNotesLabel": "Ίσως θέλετε να διαβάσετε τις <a href=\"{url}\">σημειώσεις έκδοσης</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Ίσως θέλετε να διαβάσετε τις <a href=\"{url}\">σημειώσεις έκδοσης</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

@@ -101,19 +101,19 @@
       "path": {}
     }
   },
-  "welcomePageTitle": "Provo ose instalo",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Riparo instalimin",
-  "@welcomeRepairOption": {},
-  "welcomeTryOption": "Provo {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "Provo ose instalo",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Riparo instalimin",
+  "@tryOrInstallRepairOption": {},
+  "tryOption": "Provo {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Instalo {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Instalo {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

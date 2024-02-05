@@ -7,29 +7,29 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "Prøv {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Prøv {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Installer {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Installer {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Installer ${RELEASE} ved sida av (eller i staden for) systemet du har no. Dette tek som regel ikkje lang tid.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Installer ${RELEASE} ved sida av (eller i staden for) systemet du har no. Dette tek som regel ikkje lang tid.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "Du kan ha nytte av å lesa <a href=\"{url}\">utgjevingsmerknadane</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Du kan ha nytte av å lesa <a href=\"{url}\">utgjevingsmerknadane</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

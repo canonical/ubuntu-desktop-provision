@@ -273,53 +273,53 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Preparing {DISTRO}…'**
   String loadingHeader(Object DISTRO);
 
-  /// No description provided for @welcomePageTitle.
+  /// No description provided for @tryOrInstallPageTitle.
   ///
   /// In en, this message translates to:
   /// **'Try or install {DISTRO}'**
-  String welcomePageTitle(Object DISTRO);
+  String tryOrInstallPageTitle(Object DISTRO);
 
-  /// No description provided for @welcomeRepairOption.
+  /// No description provided for @tryOrInstallRepairOption.
   ///
   /// In en, this message translates to:
   /// **'Repair installation'**
-  String get welcomeRepairOption;
+  String get tryOrInstallRepairOption;
 
-  /// No description provided for @welcomeRepairDescription.
+  /// No description provided for @tryOrInstallRepairDescription.
   ///
   /// In en, this message translates to:
   /// **'Repairing will reinstall all installed software without touching documents or settings.'**
-  String get welcomeRepairDescription;
+  String get tryOrInstallRepairDescription;
 
-  /// No description provided for @welcomeTryOption.
+  /// No description provided for @tryOption.
   ///
   /// In en, this message translates to:
   /// **'Try {RELEASE}'**
-  String welcomeTryOption(Object RELEASE);
+  String tryOption(Object RELEASE);
 
-  /// No description provided for @welcomeTryDescription.
+  /// No description provided for @tryDescription.
   ///
   /// In en, this message translates to:
   /// **'You can try {RELEASE} without making any changes to your computer.'**
-  String welcomeTryDescription(Object RELEASE);
+  String tryDescription(Object RELEASE);
 
-  /// No description provided for @welcomeInstallOption.
+  /// No description provided for @installOption.
   ///
   /// In en, this message translates to:
   /// **'Install {RELEASE}'**
-  String welcomeInstallOption(Object RELEASE);
+  String installOption(Object RELEASE);
 
-  /// No description provided for @welcomeInstallDescription.
+  /// No description provided for @installDescription.
   ///
   /// In en, this message translates to:
   /// **'Install {RELEASE} alongside (or instead of) your current operating system. This shouldn\'t take too long.'**
-  String welcomeInstallDescription(Object RELEASE);
+  String installDescription(Object RELEASE);
 
-  /// No description provided for @welcomeReleaseNotesLabel.
+  /// No description provided for @tryOrInstallReleaseNotesLabel.
   ///
   /// In en, this message translates to:
   /// **'You may wish to read the <a href=\"{url}\">release notes</a>.'**
-  String welcomeReleaseNotesLabel(Object url);
+  String tryOrInstallReleaseNotesLabel(Object url);
 
   /// No description provided for @rstTitle.
   ///

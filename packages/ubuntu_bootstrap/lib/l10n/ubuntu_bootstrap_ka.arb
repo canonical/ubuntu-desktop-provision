@@ -4,8 +4,8 @@
   "@appTitle": {},
   "quitButtonText": "დაყენებიდან გასვლა",
   "@quitButtonText": {},
-  "welcomePageTitle": "სცადეთ ან დააყენეთ {DISTRO}",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "სცადეთ ან დააყენეთ {DISTRO}",
+  "@tryOrInstallPageTitle": {},
   "windowTitle": "{RELEASE}-ის დაყენება",
   "@windowTitle": {
     "type": "text",
@@ -15,19 +15,19 @@
   },
   "changeButtonText": "შეცვლა",
   "@changeButtonText": {},
-  "welcomeRepairOption": "დაყენებული ვერსიის შეკეთება",
-  "@welcomeRepairOption": {},
+  "tryOrInstallRepairOption": "დაყენებული ვერსიის შეკეთება",
+  "@tryOrInstallRepairOption": {},
   "welcome": "მოგესალმებით",
   "@welcome": {},
-  "welcomeTryOption": "{RELEASE}-ის ცდა",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE}-ის ცდა",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE}-ის დაყენება",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE}-ის დაყენება",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

@@ -129,7 +129,7 @@ void main() {
     expect(model.searchLanguage('none'), isNegative);
   });
 
-  test('play welcome sound', () async {
+  test('play try_or_install sound', () async {
     final locale = MockLocaleService();
     final sound = MockSoundService();
 

@@ -11,15 +11,15 @@
   "@appTitle": {},
   "welcome": "ආයුබෝවන්",
   "@welcome": {},
-  "welcomeTryOption": "{RELEASE} අත්හදා බලන්න",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} අත්හදා බලන්න",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} ස්ථාපනය කරන්න",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} ස්ථාපනය කරන්න",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -98,10 +98,10 @@
   "@partitionTypePrimary": {},
   "quitButtonText": "ස්ථාපනයෙන් ඉවතට",
   "@quitButtonText": {},
-  "welcomePageTitle": "බලන්න හෝ ස්ථාපනය කරන්න",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "ස්ථාපනය අලුත්වැඩියාව",
-  "@welcomeRepairOption": {},
+  "tryOrInstallPageTitle": "බලන්න හෝ ස්ථාපනය කරන්න",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "ස්ථාපනය අලුත්වැඩියාව",
+  "@tryOrInstallRepairOption": {},
   "rstTitle": "RST අක්‍රිය කරන්න",
   "@rstTitle": {},
   "configureSecureBootOption": "ආරක්‍ෂිත ඇරඹුම හැඩගසන්න",
@@ -216,24 +216,24 @@
   "@installationTypeTitle": {},
   "installationTypeManual": "වෙන යමක්",
   "@installationTypeManual": {},
-  "welcomeRepairDescription": "ලේඛන හෝ සැකසුම් ස්පර්ශ නොකර ස්ථාපිත සියළුම මෘදුකාංග යළි ස්ථාපනය අළුත්වැඩියාව මගින් සිදුවේ.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryDescription": "ඔබගේ පරිගණකයට කිසිදු වෙනසක් නොකර {RELEASE} බැලීමට හැකිය.",
-  "@welcomeTryDescription": {
+  "tryOrInstallRepairDescription": "ලේඛන හෝ සැකසුම් ස්පර්ශ නොකර ස්ථාපිත සියළුම මෘදුකාංග යළි ස්ථාපනය අළුත්වැඩියාව මගින් සිදුවේ.",
+  "@tryOrInstallRepairDescription": {},
+  "tryDescription": "ඔබගේ පරිගණකයට කිසිදු වෙනසක් නොකර {RELEASE} බැලීමට හැකිය.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "ඔබගේ වත්මන් මෙහෙයුම් පද්ධතිය සමඟ (හෝ ඒ වෙනුවට) {RELEASE} ස්ථාපනය කරන්න. මෙයට එතරම් කාලයක් ගත නොවේ.",
-  "@welcomeInstallDescription": {
+  "installDescription": "ඔබගේ වත්මන් මෙහෙයුම් පද්ධතිය සමඟ (හෝ ඒ වෙනුවට) {RELEASE} ස්ථාපනය කරන්න. මෙයට එතරම් කාලයක් ගත නොවේ.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "මෙතැනින් <a href=\"{url}\">නිකුතු සටහන්</a> කියවීමට හැකිය.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "මෙතැනින් <a href=\"{url}\">නිකුතු සටහන්</a> කියවීමට හැකිය.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

@@ -514,7 +514,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testWelcomePage(option: Option.welcomeInstallOption);
+    await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
     await tester.tapNext();
     await tester.pumpAndSettle();
 

@@ -9,15 +9,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "{RELEASE} ကို စမ်းသပ်သုံးစွဲမည်",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} ကို စမ်းသပ်သုံးစွဲမည်",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} ကို ထည့်သွင်းမည်",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} ကို ထည့်သွင်းမည်",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

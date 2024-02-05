@@ -1,14 +1,14 @@
 {
   "@@locale": "th",
-  "welcomeTryOption": "ทดลอง {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "ทดลอง {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "ติดตั้ง {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "ติดตั้ง {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -23,8 +23,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
