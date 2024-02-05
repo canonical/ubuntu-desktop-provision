@@ -21,8 +21,6 @@ class OptionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    // TODO: Move this to the theme
-    final unselectedTileBackground = Colors.grey.shade50;
 
     return Container(
       width: double.infinity,
@@ -30,7 +28,7 @@ class OptionButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: value == groupValue
             ? scheme.primary.withOpacity(0.1)
-            : unselectedTileBackground,
+            : scheme.primaryContainer,
         border: Border.all(
           color: value == groupValue ? scheme.primary : scheme.outline,
         ),
