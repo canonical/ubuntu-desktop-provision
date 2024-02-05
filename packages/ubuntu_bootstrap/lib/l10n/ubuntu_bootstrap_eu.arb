@@ -19,42 +19,42 @@
   },
   "quitButtonText": "Irten instalaziotik",
   "@quitButtonText": {},
-  "welcomePageTitle": "Probatu edo instalatu",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Konpondu instalazioa",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "{RELEASE} probatu",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "Probatu edo instalatu",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Konpondu instalazioa",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "{RELEASE} probatu",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "{RELEASE} probatu dezakezu zure ordenagailuan aldaketarik egin gabe.",
-  "@welcomeTryDescription": {
+  "tryDescription": "{RELEASE} probatu dezakezu zure ordenagailuan aldaketarik egin gabe.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} instalatu",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} instalatu",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "{RELEASE} instalatu zure sistemaren ondoan (edo ordez). Ez du asko iraungo.",
-  "@welcomeInstallDescription": {
+  "installDescription": "{RELEASE} instalatu zure sistemaren ondoan (edo ordez). Ez du asko iraungo.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "<a href=\"{url}\">kaleratze oharrak</a> irakurri ditzakezu.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">kaleratze oharrak</a> irakurri ditzakezu.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

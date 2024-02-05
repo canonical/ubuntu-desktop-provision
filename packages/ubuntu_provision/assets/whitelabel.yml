@@ -3,7 +3,7 @@ pages:
     image: "assets/mascot.png"
   accessibility:
     image: "assets/icons/accessibility.svg"
-  welcome:
+  try-or-install:
     visible: false
   rst:
     image: "assets/storage/rst.svg"

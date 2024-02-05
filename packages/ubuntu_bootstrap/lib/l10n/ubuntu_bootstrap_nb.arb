@@ -129,16 +129,16 @@
   "@selectGuidedStorageDropdownLabel": {},
   "appTitle": "Ubuntu Skrivebord Installering",
   "@appTitle": {},
-  "welcomeRepairOption": "Reparere installasjonen",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Reparasjon vil installere all installert programvare på nytt uten å berøre dokumenter eller innstillinger.",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairOption": "Reparere installasjonen",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Reparasjon vil installere all installert programvare på nytt uten å berøre dokumenter eller innstillinger.",
+  "@tryOrInstallRepairDescription": {},
   "changeButtonText": "Endre",
   "@changeButtonText": {},
   "welcome": "Velkommen",
   "@welcome": {},
-  "welcomePageTitle": "Prøv eller Installere",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "Prøv eller Installere",
+  "@tryOrInstallPageTitle": {},
   "rstTitle": "Slå av RST",
   "@rstTitle": {},
   "rstDescription": "Denne datamaskinen bruker Intel RST (Rapid Storage Technology). Du må slå av RST i Windows før du installerer Ubuntu.",
@@ -162,8 +162,8 @@
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Sikkerhetsnøkkel er krevet",
   "@configureSecureBootSecurityKeyRequired": {},
-  "welcomeReleaseNotesLabel": "Det kan være lurt å lese <a href=\"{url}\">versjonsnotatene</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Det kan være lurt å lese <a href=\"{url}\">versjonsnotatene</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -222,29 +222,29 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "Prøv {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Prøv {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "Du kan prøve {RELEASE} uten å gjøre noen endringer på datamaskinen.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Du kan prøve {RELEASE} uten å gjøre noen endringer på datamaskinen.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Installere {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Installere {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Installer {RELEASE} ved siden av (eller i stedet for) ditt nåværende operativsystem. Dette bør ikke ta for lang tid.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Installer {RELEASE} ved siden av (eller i stedet for) ditt nåværende operativsystem. Dette bør ikke ta for lang tid.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

@@ -7,4 +7,4 @@ export 'pages/secure_boot/secure_boot_page.dart';
 export 'pages/source/not_enough_disk_space/not_enough_disk_space_page.dart';
 export 'pages/source/source_page.dart';
 export 'pages/storage/storage_wizard.dart';
-export 'pages/welcome/welcome_page.dart';
+export 'pages/try_or_install/try_or_install_page.dart';

@@ -1,7 +1,7 @@
 {
   "@@locale": "mr",
-  "welcomeInstallOption": "{RELEASE} प्रतिष्ठापीत करा",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} प्रतिष्ठापीत करा",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -16,8 +16,8 @@
   },
   "welcome": "सुस्वागतम्",
   "@welcome": {},
-  "welcomeTryOption": "{RELEASE} वापरुन पहा",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} वापरुन पहा",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

@@ -9,15 +9,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} స్థాపించు",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} స్థాపించు",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "{RELEASE} ప్రయత్నించండి",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} ప్రయత్నించండి",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

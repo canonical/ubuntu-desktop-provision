@@ -64,8 +64,8 @@
   "@appTitle": {},
   "changeButtonText": "Canvia",
   "@changeButtonText": {},
-  "welcomePageTitle": "Prova o instal·la",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "Prova o instal·la",
+  "@tryOrInstallPageTitle": {},
   "chooseSecurityKey": "Trieu una clau de seguretat",
   "@chooseSecurityKey": {},
   "confirmSecurityKey": "Confirmeu la clau de seguretat",
@@ -125,40 +125,40 @@
       "RELEASE": {}
     }
   },
-  "welcomeRepairOption": "Repara la instal·lació",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "La reparació reinstal·larà tot el programari instal·lat sense tocar els documents ni la configuració.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "Prova el sistema {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallRepairOption": "Repara la instal·lació",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "La reparació reinstal·larà tot el programari instal·lat sense tocar els documents ni la configuració.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "Prova el sistema {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "Podeu provar {RELEASE} sense fer cap canvi al vostre ordinador.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Podeu provar {RELEASE} sense fer cap canvi al vostre ordinador.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Instal·la el sistema {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Instal·la el sistema {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Instal·lar {RELEASE} al costat (o en lloc de) del vostre sistema operatiu actual. Això no hauria de trigar massa.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Instal·lar {RELEASE} al costat (o en lloc de) del vostre sistema operatiu actual. Això no hauria de trigar massa.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "És possible que vulgueu llegir la <a href=\"{url}\"> nota de llançament</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "És possible que vulgueu llegir la <a href=\"{url}\"> nota de llançament</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

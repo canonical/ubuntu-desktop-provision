@@ -1,17 +1,17 @@
 {
   "@@locale": "sr",
-  "welcomePageTitle": "Испробајте или инсталирајте",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Поправи инсталацију",
-  "@welcomeRepairOption": {},
+  "tryOrInstallPageTitle": "Испробајте или инсталирајте",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Поправи инсталацију",
+  "@tryOrInstallRepairOption": {},
   "appTitle": "Убунту Десктоп Инсталација",
   "@appTitle": {},
   "changeButtonText": "Измени",
   "@changeButtonText": {},
   "welcome": "Добродошли",
   "@welcome": {},
-  "welcomeRepairDescription": "Поправка ће поново инсталирати све програме без дирања докумената или подешавања.",
-  "@welcomeRepairDescription": {},
+  "tryOrInstallRepairDescription": "Поправка ће поново инсталирати све програме без дирања докумената или подешавања.",
+  "@tryOrInstallRepairDescription": {},
   "windowTitle": "Инсталирај {RELEASE}",
   "@windowTitle": {
     "type": "text",
@@ -21,15 +21,15 @@
   },
   "quitButtonText": "Напусти инсталацију",
   "@quitButtonText": {},
-  "welcomeTryOption": "Испробај {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Испробај {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Инсталирај {RELEASE} поред (или уместо) вашег тренутног оперативног система. За ово неће требати пуно времена.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Инсталирај {RELEASE} поред (или уместо) вашег тренутног оперативног система. За ово неће требати пуно времена.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -44,15 +44,15 @@
   },
   "rstTitle": "Искључи RST",
   "@rstTitle": {},
-  "welcomeTryDescription": "Можете испробати {RELEASE} без прављења измена на вашем рачунару.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Можете испробати {RELEASE} без прављења измена на вашем рачунару.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Инсталирај {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Инсталирај {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

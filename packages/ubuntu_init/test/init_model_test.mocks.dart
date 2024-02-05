@@ -90,8 +90,8 @@ class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
       ) as Map<String, _i2.PageConfigEntry>);
 
   @override
-  bool get includeWelcome => (super.noSuchMethod(
-        Invocation.getter(#includeWelcome),
+  bool get includeTryOrInstall => (super.noSuchMethod(
+        Invocation.getter(#includeTryOrInstall),
         returnValue: false,
       ) as bool);
 

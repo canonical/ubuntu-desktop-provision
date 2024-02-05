@@ -11,15 +11,15 @@
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "{RELEASE} ব্যবহার করে দেখুন",
-  "@welcomeTryOption": {
+  "tryOption": "{RELEASE} ব্যবহার করে দেখুন",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "{RELEASE} ইনস্টল করুন",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} ইনস্টল করুন",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

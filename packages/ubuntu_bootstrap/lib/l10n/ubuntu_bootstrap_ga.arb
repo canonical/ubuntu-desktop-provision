@@ -9,22 +9,22 @@
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Suiteáil {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Suiteáil {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "B'fhéidir gur mhaith leat na <a href=\"{url}\">nótaí eisithe a léamh</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "B'fhéidir gur mhaith leat na <a href=\"{url}\">nótaí eisithe a léamh</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
     }
   },
-  "welcomeTryOption": "Bain triail as {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "Bain triail as {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

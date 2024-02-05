@@ -2,8 +2,8 @@
   "@@locale": "gu",
   "welcome": "સ્વગતમ",
   "@welcome": {},
-  "welcomeInstallOption": "{RELEASE} ને સ્થાપિત કરો",
-  "@welcomeInstallOption": {
+  "installOption": "{RELEASE} ને સ્થાપિત કરો",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

@@ -231,8 +231,8 @@
       "RELEASE": {}
     }
   },
-  "welcomeInstallOption": "Installera {RELEASE}",
-  "@welcomeInstallOption": {
+  "installOption": "Installera {RELEASE}",
+  "@installOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -277,14 +277,14 @@
   },
   "appTitle": "Ubuntu skrivbordsinstallatören",
   "@appTitle": {},
-  "welcomePageTitle": "Prova eller installera {DISTRO}",
-  "@welcomePageTitle": {},
-  "welcomeRepairOption": "Reparera installation",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "Reparation kommer att installera om all installerad programvara utan att röra dokument eller inställningar.",
-  "@welcomeRepairDescription": {},
-  "welcomeTryOption": "Prova {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOrInstallPageTitle": "Prova eller installera {DISTRO}",
+  "@tryOrInstallPageTitle": {},
+  "tryOrInstallRepairOption": "Reparera installation",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Reparation kommer att installera om all installerad programvara utan att röra dokument eller inställningar.",
+  "@tryOrInstallRepairDescription": {},
+  "tryOption": "Prova {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -302,15 +302,15 @@
   "@diskHeadersUsed": {},
   "restartIntoWindows": "Starta om till Windows",
   "@restartIntoWindows": {},
-  "welcomeTryDescription": "Du kan prova {RELEASE} utan att göra några ändringar till din dator.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Du kan prova {RELEASE} utan att göra några ändringar till din dator.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Installera {RELEASE} bredvid (eller istället för) ditt nuvarande operativsystem. Det här ska inte ta för lång tid.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Installera {RELEASE} bredvid (eller istället för) ditt nuvarande operativsystem. Det här ska inte ta för lång tid.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -326,8 +326,8 @@
       "os2": {}
     }
   },
-  "welcomeReleaseNotesLabel": "Du kanske vill läsa <a href=\"{url}\">kommentarer till utgåvan</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Du kanske vill läsa <a href=\"{url}\">kommentarer till utgåvan</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
