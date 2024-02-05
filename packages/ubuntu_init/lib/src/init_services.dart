@@ -52,7 +52,7 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<NetworkService>(NetworkService.new);
   tryRegisterService<PageConfigService>(() => PageConfigService(
         config: tryGetService<ConfigService>(),
-        includeWelcome: true,
+        includeTryOrInstall: true,
       ));
   tryRegisterService<PrivacyService>(GnomePrivacyService.new);
   tryRegisterService<ProductService>(ProductService.new);

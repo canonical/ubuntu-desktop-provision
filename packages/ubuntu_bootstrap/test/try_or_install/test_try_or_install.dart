@@ -13,7 +13,7 @@ export 'test_try_or_install.mocks.dart';
 const kTestReleastNoteUrl = 'https://wiki.ubuntu.com/foo/ReleaseNotes';
 
 @GenerateMocks([TryOrInstallModel])
-TryOrInstallModel buildWelcomeModel(
+TryOrInstallModel buildTryOrInstallModel(
     {bool? isConnected, TryOrInstallOption? option}) {
   final model = MockTryOrInstallModel();
   when(model.isConnected).thenReturn(isConnected ?? false);

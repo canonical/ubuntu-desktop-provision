@@ -57,8 +57,8 @@ void main() {
     final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));
     final localeModel = buildLocaleModel();
-    final welcomeModel =
-        buildWelcomeModel(option: TryOrInstallOption.tryUbuntu);
+    final tryOrInstallModel =
+        buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
 
     registerMockService<TelemetryService>(MockTelemetryService());
 
@@ -68,7 +68,7 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          tryOrInstallModelProvider.overrideWith((_) => welcomeModel),
+          tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
         child: tester.buildTestWizard(excludedPages: []),
       ),
@@ -88,7 +88,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(welcomeModel.init()).called(1);
+    verify(tryOrInstallModel.init()).called(1);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
@@ -102,8 +102,8 @@ void main() {
     final accessibilityModel = buildAccessibilityModel();
     final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
-    final welcomeModel =
-        buildWelcomeModel(option: TryOrInstallOption.installUbuntu);
+    final tryOrInstallModel =
+        buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
     final rstModel = buildRstModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -134,7 +134,7 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingModelProvider.overrideWith((_) => loadingModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          tryOrInstallModelProvider.overrideWith((_) => welcomeModel),
+          tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
           rstModelProvider.overrideWith((_) => rstModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -177,7 +177,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(welcomeModel.init()).called(1);
+    verify(tryOrInstallModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -369,7 +369,7 @@ void main() {
           installModelProvider.overrideWith((_) => installModel),
         ],
         child: tester.buildTestWizard(excludedPages: [
-          'welcome',
+          'try-or-install',
           'locale',
           'rst',
           'network',
@@ -446,7 +446,7 @@ void main() {
 
 extension on WidgetTester {
   Widget buildTestWizard({
-    List<String> excludedPages = const ['welcome'],
+    List<String> excludedPages = const ['try-or-install'],
   }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {

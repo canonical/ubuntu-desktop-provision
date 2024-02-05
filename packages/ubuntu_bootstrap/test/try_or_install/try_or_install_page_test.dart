@@ -13,7 +13,7 @@ void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
 
   testWidgets('release notes', (tester) async {
-    final model = buildWelcomeModel(isConnected: true);
+    final model = buildTryOrInstallModel(isConnected: true);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.byType(Html).hitTestable(), findsOneWidget);
@@ -28,14 +28,14 @@ void main() {
   });
 
   testWidgets('offline', (tester) async {
-    final model = buildWelcomeModel(isConnected: false);
+    final model = buildTryOrInstallModel(isConnected: false);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.byType(Html).hitTestable(), findsNothing);
   });
 
   testWidgets('select option', (tester) async {
-    final model = buildWelcomeModel(option: TryOrInstallOption.none);
+    final model = buildTryOrInstallModel(option: TryOrInstallOption.none);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isDisabled);
@@ -48,14 +48,15 @@ void main() {
   });
 
   testWidgets('install ubuntu', (tester) async {
-    final model = buildWelcomeModel(option: TryOrInstallOption.installUbuntu);
+    final model =
+        buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('try ubuntu', (tester) async {
-    final model = buildWelcomeModel(option: TryOrInstallOption.tryUbuntu);
+    final model = buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
     await tester.pumpApp((_) => buildWelcomePage(model));
 
     expect(find.button(find.nextLabel), isEnabled);

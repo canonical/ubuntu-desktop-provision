@@ -115,7 +115,7 @@ Future<void> runInstallerApp(
   tryRegisterService(
     () => PageConfigService(
       config: tryGetService<ConfigService>(),
-      includeWelcome: includeTryOrInstall,
+      includeTryOrInstall: includeTryOrInstall,
     ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
