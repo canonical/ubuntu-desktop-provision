@@ -4,7 +4,9 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 
+import '../test_utils.dart';
 import 'test_try_or_install.mocks.dart';
 
 export '../test_utils.dart';
@@ -22,10 +24,13 @@ TryOrInstallModel buildTryOrInstallModel(
   return model;
 }
 
+final pageImages = PageImages(MockPageConfigService());
+
 Widget buildWelcomePage(TryOrInstallModel model) {
   return ProviderScope(
     overrides: [
       tryOrInstallModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const TryOrInstallPage(),
   );
