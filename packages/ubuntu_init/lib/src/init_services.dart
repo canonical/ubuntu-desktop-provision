@@ -7,9 +7,9 @@ import 'package:ubuntu_init/src/services/privacy_service.dart';
 import 'package:ubuntu_init/src/services/provd_identity_service.dart';
 import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
 import 'package:ubuntu_init/src/services/provd_locale_service.dart';
+import 'package:ubuntu_init/src/services/provd_timezone_service.dart';
 import 'package:ubuntu_init/src/services/realmd_active_directory_service.dart';
 import 'package:ubuntu_init/src/services/xdg_session_service.dart';
-import 'package:ubuntu_init/src/services/xdg_timezone_service.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -23,9 +23,9 @@ export 'services/privacy_service.dart';
 export 'services/provd_identity_service.dart';
 export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';
+export 'services/provd_timezone_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_session_service.dart';
-export 'services/xdg_timezone_service.dart';
 
 Future<void> registerInitServices(List<String> args) {
   var options = tryGetService<ArgResults>();
@@ -57,7 +57,7 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<Sysmetrics>(Sysmetrics.new);
   tryRegisterService<ThemeVariantService>(
       () => ThemeVariantService(config: tryGetService<ConfigService>()));
-  tryRegisterService<TimezoneService>(XdgTimezoneService.new);
+  tryRegisterService<TimezoneService>(ProvdTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 

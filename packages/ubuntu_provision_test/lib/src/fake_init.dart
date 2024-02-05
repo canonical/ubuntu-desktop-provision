@@ -45,7 +45,8 @@ Future<void> registerFakeInitServices({
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
-  registerService<TimezoneService>(() => XdgTimezoneService(bus: client));
+  registerService<TimezoneService>(
+      () => ProvdTimezoneService(client: FakeProvdTimezoneClient()));
   registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);
 }
@@ -302,4 +303,13 @@ class FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
           ),
         ],
       );
+}
+
+class FakeProvdTimezoneClient implements provd.ProvdTimezoneClient {
+  String _timezone = 'Etc/UTC';
+  @override
+  Future<String> getTimezone() async => _timezone;
+
+  @override
+  Future<void> setTimezone(String timezone) async => _timezone = timezone;
 }
