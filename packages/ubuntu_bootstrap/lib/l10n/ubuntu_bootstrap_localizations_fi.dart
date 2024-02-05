@@ -29,8 +29,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String tryOrInstallPageTitle(Object DISTRO) {
+  String tryOrInstallTitle(Object DISTRO) {
     return 'Kokeile tai asenna ${DISTRO}a';
+  }
+
+  @override
+  String tryOrInstallHeader(Object DISTRO) {
+    return 'What do you want to do with $DISTRO?';
   }
 
   @override

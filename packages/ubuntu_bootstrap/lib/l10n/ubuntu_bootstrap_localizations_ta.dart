@@ -29,8 +29,13 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String tryOrInstallPageTitle(Object DISTRO) {
+  String tryOrInstallTitle(Object DISTRO) {
     return 'சோதி அல்லது நிறுவு';
+  }
+
+  @override
+  String tryOrInstallHeader(Object DISTRO) {
+    return 'What do you want to do with $DISTRO?';
   }
 
   @override

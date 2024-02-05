@@ -47,8 +47,8 @@
       "RELEASE": {}
     }
   },
-  "tryOrInstallPageTitle": "آزمودن یا نصب {DISTRO}",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "آزمودن یا نصب {DISTRO}",
+  "@tryOrInstallTitle": {},
   "tryDescription": "شما می‌توانید {RELEASE} را بدون ایجاد هیچ تغییری در رایانه خود امتحان کنید.",
   "@tryDescription": {
     "type": "text",

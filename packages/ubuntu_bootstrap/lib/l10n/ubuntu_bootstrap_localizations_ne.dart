@@ -29,8 +29,13 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String tryOrInstallPageTitle(Object DISTRO) {
+  String tryOrInstallTitle(Object DISTRO) {
     return 'प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्';
+  }
+
+  @override
+  String tryOrInstallHeader(Object DISTRO) {
+    return 'What do you want to do with $DISTRO?';
   }
 
   @override

@@ -27,8 +27,15 @@
       "DISTRO": {}
     }
   },
-  "tryOrInstallPageTitle": "Try or install {DISTRO}",
-  "@tryOrInstallPageTitle": {
+  "tryOrInstallTitle": "Try or install {DISTRO}",
+  "@tryOrInstallTitle": {
+    "type": "text",
+    "placeholders": {
+      "DISTRO": {}
+    }
+  },
+  "tryOrInstallHeader": "What do you want to do with {DISTRO}?",
+  "@tryOrInstallHeader": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}

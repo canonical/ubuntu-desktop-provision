@@ -4,8 +4,8 @@
   "@appTitle": {},
   "quitButtonText": "დაყენებიდან გასვლა",
   "@quitButtonText": {},
-  "tryOrInstallPageTitle": "სცადეთ ან დააყენეთ {DISTRO}",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "სცადეთ ან დააყენეთ {DISTRO}",
+  "@tryOrInstallTitle": {},
   "windowTitle": "{RELEASE}-ის დაყენება",
   "@windowTitle": {
     "type": "text",

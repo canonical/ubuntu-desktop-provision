@@ -13,8 +13,8 @@
   "@changeButtonText": {},
   "welcome": "欢迎",
   "@welcome": {},
-  "tryOrInstallPageTitle": "试用或安装{DISTRO}",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "试用或安装{DISTRO}",
+  "@tryOrInstallTitle": {},
   "installOption": "安装 {RELEASE}",
   "@installOption": {
     "type": "text",

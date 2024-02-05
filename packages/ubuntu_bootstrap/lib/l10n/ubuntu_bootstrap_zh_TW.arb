@@ -13,8 +13,8 @@
       "DISTRO": {}
     }
   },
-  "tryOrInstallPageTitle": "試用或安裝 {DISTRO}",
-  "@tryOrInstallPageTitle": {
+  "tryOrInstallTitle": "試用或安裝 {DISTRO}",
+  "@tryOrInstallTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}

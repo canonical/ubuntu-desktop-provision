@@ -19,7 +19,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     final context = element(find.byType(TryOrInstallPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.tryOrInstallPageTitle('Ubuntu')), findsOneWidget);
+    expect(find.titleBar(l10n.tryOrInstallTitle('Ubuntu')), findsOneWidget);
 
     if (option != null) {
       await tap(find.radio<TryOrInstallOption>(option));

@@ -346,8 +346,8 @@
   "@partitionMountPointLabel": {},
   "quitButtonText": "Opustiť inštaláciu",
   "@quitButtonText": {},
-  "tryOrInstallPageTitle": "Vyskúšať alebo nainštalovať {DISTRO}",
-  "@tryOrInstallPageTitle": {
+  "tryOrInstallTitle": "Vyskúšať alebo nainštalovať {DISTRO}",
+  "@tryOrInstallTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
