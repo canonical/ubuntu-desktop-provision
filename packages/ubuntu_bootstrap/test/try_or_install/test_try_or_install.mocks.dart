@@ -7,7 +7,6 @@ import 'dart:async' as _i3;
 import 'dart:ui' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i5;
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart'
     as _i2;
 
@@ -74,21 +73,6 @@ class MockTryOrInstallModel extends _i1.Mock implements _i2.TryOrInstallModel {
         ),
         returnValueForMissingStub: null,
       );
-
-  @override
-  String releaseNotesURL(_i4.Locale? locale) => (super.noSuchMethod(
-        Invocation.method(
-          #releaseNotesURL,
-          [locale],
-        ),
-        returnValue: _i5.dummyValue<String>(
-          this,
-          Invocation.method(
-            #releaseNotesURL,
-            [locale],
-          ),
-        ),
-      ) as String);
 
   @override
   void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(

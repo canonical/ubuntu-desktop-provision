@@ -273,11 +273,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Preparing {DISTRO}…'**
   String loadingHeader(Object DISTRO);
 
-  /// No description provided for @tryOrInstallPageTitle.
+  /// No description provided for @tryOrInstallTitle.
   ///
   /// In en, this message translates to:
   /// **'Try or install {DISTRO}'**
-  String tryOrInstallPageTitle(Object DISTRO);
+  String tryOrInstallTitle(Object DISTRO);
+
+  /// No description provided for @tryOrInstallHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you want to do with {DISTRO}?'**
+  String tryOrInstallHeader(Object DISTRO);
 
   /// No description provided for @tryOrInstallRepairOption.
   ///

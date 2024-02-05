@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'try_or_install_model.dart' show TryOrInstallOption;
@@ -29,18 +25,12 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(tryOrInstallModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    final brightness = Theme.of(context).brightness;
-    final locale = Localizations.localeOf(context);
 
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.tryOrInstallPageTitle(flavor.name)),
-      ),
+    return HorizontalPage(
+      windowTitle: lang.tryOrInstallTitle(flavor.name),
+      title: lang.tryOrInstallHeader(flavor.name),
       content: Column(
         children: [
-          const Spacer(),
-          SvgPicture.asset('assets/welcome/logo-${brightness.name}.svg'),
-          const Spacer(),
           OptionButton(
             value: TryOrInstallOption.installUbuntu,
             groupValue: model.option,
@@ -56,6 +46,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
             subtitle: Text(lang.tryDescription(flavor.name)),
             onChanged: (value) => model.selectOption(value!),
           ),
+          const SizedBox(height: kWizardSpacing / 2),
           // const SizedBox(height: kContentSpacing / 2),
           // OptionButton(
           //   value: Option.repairUbuntu,
@@ -64,24 +55,6 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
           //   subtitle: Text(lang.welcomeRepairDescription),
           //   onChanged: (value) => model.selectOption(value!),
           // ),
-          const Spacer(flex: 3),
-          Visibility(
-            visible: model.isConnected,
-            maintainSize: true,
-            maintainAnimation: true,
-            maintainState: true,
-            child: Html(
-              shrinkWrap: true,
-              data: lang.tryOrInstallReleaseNotesLabel(
-                model.releaseNotesURL(locale),
-              ),
-              style: {
-                'body': Style(margin: Margins.zero),
-                'a': Style(color: Theme.of(context).colorScheme.link),
-              },
-              onLinkTap: (url, _, __) => launchUrl(url!),
-            ),
-          ),
         ],
       ),
       bottomBar: WizardBar(

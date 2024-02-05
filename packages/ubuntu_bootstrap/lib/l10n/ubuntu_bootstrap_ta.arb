@@ -64,8 +64,8 @@
   },
   "welcome": "நல்வரவு",
   "@welcome": {},
-  "tryOrInstallPageTitle": "சோதி அல்லது நிறுவு",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "சோதி அல்லது நிறுவு",
+  "@tryOrInstallTitle": {},
   "tryOption": "சோதி {RELEASE}",
   "@tryOption": {
     "type": "text",

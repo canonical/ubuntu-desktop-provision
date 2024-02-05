@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -11,7 +10,6 @@ final _log = Logger('try_or_install');
 final tryOrInstallModelProvider = ChangeNotifierProvider(
   (_) => TryOrInstallModel(
     network: getService<NetworkService>(),
-    product: getService<ProductService>(),
   ),
 );
 
@@ -35,14 +33,11 @@ class TryOrInstallModel extends SafeChangeNotifier with PropertyStreamNotifier {
   /// Creates the model with the given client.
   TryOrInstallModel({
     required NetworkService network,
-    required ProductService product,
-  })  : _network = network,
-        _product = product {
+  }) : _network = network {
     addPropertyListener('Connectivity', notifyListeners);
   }
 
   final NetworkService _network;
-  final ProductService _product;
 
   Future<void> init() {
     return _network
@@ -65,9 +60,4 @@ class TryOrInstallModel extends SafeChangeNotifier with PropertyStreamNotifier {
 
   /// Returns true if there is a network connection.
   bool get isConnected => _network.isConnected;
-
-  /// Returns the URL of the release notes for the given [locale].
-  String releaseNotesURL(Locale locale) {
-    return _product.getReleaseNotesURL(locale.languageCode);
-  }
 }

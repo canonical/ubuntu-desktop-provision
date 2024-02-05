@@ -29,8 +29,13 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String tryOrInstallPageTitle(Object DISTRO) {
+  String tryOrInstallTitle(Object DISTRO) {
     return 'جرب او ثبت $DISTRO';
+  }
+
+  @override
+  String tryOrInstallHeader(Object DISTRO) {
+    return 'What do you want to do with $DISTRO?';
   }
 
   @override

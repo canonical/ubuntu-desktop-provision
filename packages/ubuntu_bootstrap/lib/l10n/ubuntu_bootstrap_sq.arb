@@ -101,8 +101,8 @@
       "path": {}
     }
   },
-  "tryOrInstallPageTitle": "Provo ose instalo",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "Provo ose instalo",
+  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Riparo instalimin",
   "@tryOrInstallRepairOption": {},
   "tryOption": "Provo {RELEASE}",

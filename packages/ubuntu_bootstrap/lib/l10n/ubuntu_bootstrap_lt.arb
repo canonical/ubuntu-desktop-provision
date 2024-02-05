@@ -90,8 +90,8 @@
       "os": {}
     }
   },
-  "tryOrInstallPageTitle": "Išbandykite arba įsidiekite {DISTRO}",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "Išbandykite arba įsidiekite {DISTRO}",
+  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Taisyti diegimą",
   "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.",

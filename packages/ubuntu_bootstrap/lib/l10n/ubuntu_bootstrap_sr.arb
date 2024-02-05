@@ -1,7 +1,7 @@
 {
   "@@locale": "sr",
-  "tryOrInstallPageTitle": "Испробајте или инсталирајте",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "Испробајте или инсталирајте",
+  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Поправи инсталацију",
   "@tryOrInstallRepairOption": {},
   "appTitle": "Убунту Десктоп Инсталација",

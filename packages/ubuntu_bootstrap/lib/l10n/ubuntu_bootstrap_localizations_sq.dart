@@ -29,8 +29,13 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String tryOrInstallPageTitle(Object DISTRO) {
+  String tryOrInstallTitle(Object DISTRO) {
     return 'Provo ose instalo';
+  }
+
+  @override
+  String tryOrInstallHeader(Object DISTRO) {
+    return 'What do you want to do with $DISTRO?';
   }
 
   @override

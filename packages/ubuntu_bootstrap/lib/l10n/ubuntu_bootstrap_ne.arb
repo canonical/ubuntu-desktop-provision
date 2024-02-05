@@ -11,8 +11,8 @@
   },
   "welcome": "स्वागत छ",
   "@welcome": {},
-  "tryOrInstallPageTitle": "प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्",
+  "@tryOrInstallTitle": {},
   "tryOrInstallReleaseNotesLabel": "तपाईंले <a href=\"{url}\">रिलिज नोटहरू</a> पढ्न आवश्यक हुन सक्छ।",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",

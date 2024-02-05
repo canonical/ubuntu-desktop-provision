@@ -21,13 +21,17 @@ class OptionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(maxWidth: 500),
       decoration: BoxDecoration(
-        color: value == groupValue ? scheme.primary.withOpacity(0.1) : null,
+        color: value == groupValue
+            ? scheme.primary.withOpacity(0.1)
+            : scheme.primaryContainer,
         border: Border.all(
-            color: value == groupValue ? scheme.primary : Colors.transparent),
+          color: value == groupValue ? scheme.primary : scheme.outline,
+        ),
         borderRadius: BorderRadius.circular(kYaruButtonRadius),
       ),
       child: YaruRadioButton<TryOrInstallOption>(

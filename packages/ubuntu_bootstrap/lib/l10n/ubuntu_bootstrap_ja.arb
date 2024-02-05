@@ -62,8 +62,8 @@
   "@tryOrInstallRepairOption": {},
   "welcome": "ようこそ",
   "@welcome": {},
-  "tryOrInstallPageTitle": "{DISTRO}を試してみるか、インストールします",
-  "@tryOrInstallPageTitle": {},
+  "tryOrInstallTitle": "{DISTRO}を試してみるか、インストールします",
+  "@tryOrInstallTitle": {},
   "rstInstructions": "手順は、別のデバイスでQRコードをスキャンするか、<a href=\"https://{url}\">{url}</a>をご確認ください。",
   "@rstInstructions": {
     "type": "text",

@@ -4,13 +4,13 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 
+import '../test_utils.dart';
 import 'test_try_or_install.mocks.dart';
 
 export '../test_utils.dart';
 export 'test_try_or_install.mocks.dart';
-
-const kTestReleastNoteUrl = 'https://wiki.ubuntu.com/foo/ReleaseNotes';
 
 @GenerateMocks([TryOrInstallModel])
 TryOrInstallModel buildTryOrInstallModel(
@@ -18,14 +18,16 @@ TryOrInstallModel buildTryOrInstallModel(
   final model = MockTryOrInstallModel();
   when(model.isConnected).thenReturn(isConnected ?? false);
   when(model.option).thenReturn(option ?? TryOrInstallOption.none);
-  when(model.releaseNotesURL(any)).thenReturn(kTestReleastNoteUrl);
   return model;
 }
 
-Widget buildWelcomePage(TryOrInstallModel model) {
+final pageImages = PageImages(MockPageConfigService());
+
+Widget buildTryOrInstallPage(TryOrInstallModel model) {
   return ProviderScope(
     overrides: [
       tryOrInstallModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const TryOrInstallPage(),
   );
