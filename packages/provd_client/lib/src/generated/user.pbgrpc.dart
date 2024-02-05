@@ -16,20 +16,20 @@ import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'google/protobuf/empty.pb.dart' as $0;
-import 'user.pb.dart' as $8;
+import 'user.pb.dart' as $9;
 
 export 'user.pb.dart';
 
 @$pb.GrpcServiceName('user.UserService')
 class UserServiceClient extends $grpc.Client {
-  static final _$createUser = $grpc.ClientMethod<$8.CreateUserRequest, $0.Empty>(
+  static final _$createUser = $grpc.ClientMethod<$9.CreateUserRequest, $0.Empty>(
       '/user.UserService/CreateUser',
-      ($8.CreateUserRequest value) => value.writeToBuffer(),
+      ($9.CreateUserRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$validateUsername = $grpc.ClientMethod<$8.ValidateUsernameRequest, $8.ValidateUsernameResponse>(
+  static final _$validateUsername = $grpc.ClientMethod<$9.ValidateUsernameRequest, $9.ValidateUsernameResponse>(
       '/user.UserService/ValidateUsername',
-      ($8.ValidateUsernameRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.ValidateUsernameResponse.fromBuffer(value));
+      ($9.ValidateUsernameRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $9.ValidateUsernameResponse.fromBuffer(value));
 
   UserServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -37,11 +37,11 @@ class UserServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.Empty> createUser($8.CreateUserRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> createUser($9.CreateUserRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createUser, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.ValidateUsernameResponse> validateUsername($8.ValidateUsernameRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$9.ValidateUsernameResponse> validateUsername($9.ValidateUsernameRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$validateUsername, request, options: options);
   }
 }
@@ -51,30 +51,30 @@ abstract class UserServiceBase extends $grpc.Service {
   $core.String get $name => 'user.UserService';
 
   UserServiceBase() {
-    $addMethod($grpc.ServiceMethod<$8.CreateUserRequest, $0.Empty>(
+    $addMethod($grpc.ServiceMethod<$9.CreateUserRequest, $0.Empty>(
         'CreateUser',
         createUser_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.CreateUserRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $9.CreateUserRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.ValidateUsernameRequest, $8.ValidateUsernameResponse>(
+    $addMethod($grpc.ServiceMethod<$9.ValidateUsernameRequest, $9.ValidateUsernameResponse>(
         'ValidateUsername',
         validateUsername_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.ValidateUsernameRequest.fromBuffer(value),
-        ($8.ValidateUsernameResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $9.ValidateUsernameRequest.fromBuffer(value),
+        ($9.ValidateUsernameResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> createUser_Pre($grpc.ServiceCall call, $async.Future<$8.CreateUserRequest> request) async {
+  $async.Future<$0.Empty> createUser_Pre($grpc.ServiceCall call, $async.Future<$9.CreateUserRequest> request) async {
     return createUser(call, await request);
   }
 
-  $async.Future<$8.ValidateUsernameResponse> validateUsername_Pre($grpc.ServiceCall call, $async.Future<$8.ValidateUsernameRequest> request) async {
+  $async.Future<$9.ValidateUsernameResponse> validateUsername_Pre($grpc.ServiceCall call, $async.Future<$9.ValidateUsernameRequest> request) async {
     return validateUsername(call, await request);
   }
 
-  $async.Future<$0.Empty> createUser($grpc.ServiceCall call, $8.CreateUserRequest request);
-  $async.Future<$8.ValidateUsernameResponse> validateUsername($grpc.ServiceCall call, $8.ValidateUsernameRequest request);
+  $async.Future<$0.Empty> createUser($grpc.ServiceCall call, $9.CreateUserRequest request);
+  $async.Future<$9.ValidateUsernameResponse> validateUsername($grpc.ServiceCall call, $9.ValidateUsernameRequest request);
 }
