@@ -7,7 +7,7 @@ pages:
     image: "assets/icons/try-or-install.svg"
     visible: false
   rst:
-    image: "assets/storage/rst.svg"
+    image: "assets/icons/rst.svg"
   keyboard:
     image: "assets/icons/keyboard.svg"
   network:
