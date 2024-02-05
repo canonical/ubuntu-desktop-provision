@@ -47,31 +47,31 @@
       "RELEASE": {}
     }
   },
-  "welcomePageTitle": "آزمودن یا نصب {DISTRO}",
-  "@welcomePageTitle": {},
-  "welcomeTryDescription": "شما می‌توانید {RELEASE} را بدون ایجاد هیچ تغییری در رایانه خود امتحان کنید.",
-  "@welcomeTryDescription": {
+  "tryOrInstallPageTitle": "آزمودن یا نصب {DISTRO}",
+  "@tryOrInstallPageTitle": {},
+  "tryDescription": "شما می‌توانید {RELEASE} را بدون ایجاد هیچ تغییری در رایانه خود امتحان کنید.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "{RELEASE} را در کنار (یا به جای) سیستم‌عامل کنونی شما نصب می‌کنید. این نباید خیلی طول بکشد.",
-  "@welcomeInstallDescription": {
+  "installDescription": "{RELEASE} را در کنار (یا به جای) سیستم‌عامل کنونی شما نصب می‌کنید. این نباید خیلی طول بکشد.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryOption": "آزمودن {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "آزمودن {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeReleaseNotesLabel": "ممکن است بخواهید <a href=\"{url}\">یادداشت‌های انتشار</a> را بخوانید.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "ممکن است بخواهید <a href=\"{url}\">یادداشت‌های انتشار</a> را بخوانید.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

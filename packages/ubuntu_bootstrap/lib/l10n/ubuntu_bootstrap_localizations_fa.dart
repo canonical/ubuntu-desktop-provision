@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallPageTitle(Object DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'آزمودن یا نصب $DISTRO';
   }
 
   @override
@@ -41,12 +41,12 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOption(Object RELEASE) {
-    return 'Try $RELEASE';
+    return 'آزمودن $RELEASE';
   }
 
   @override
   String tryDescription(Object RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'شما می‌توانید $RELEASE را بدون ایجاد هیچ تغییری در رایانه خود امتحان کنید.';
   }
 
   @override
@@ -56,12 +56,12 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(Object RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return '$RELEASE را در کنار (یا به جای) سیستم‌عامل کنونی شما نصب می‌کنید. این نباید خیلی طول بکشد.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(Object url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'ممکن است بخواهید <a href=\"$url\">یادداشت‌های انتشار</a> را بخوانید.';
   }
 
   @override

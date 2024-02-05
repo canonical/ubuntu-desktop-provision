@@ -7,8 +7,8 @@
       "url": {}
     }
   },
-  "welcomeReleaseNotesLabel": "ממליצים לך לקרוא את <a href=\"{url}\">הערות ההוצאה לאור</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "ממליצים לך לקרוא את <a href=\"{url}\">הערות ההוצאה לאור</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -24,8 +24,8 @@
   "@appTitle": {},
   "windowTitle": "להתקין את {RELEASE}",
   "@windowTitle": {},
-  "welcomeInstallDescription": "התקנת {RELEASE} לצד (או במקום) מערכת ההפעלה הנוכחית שלך. אמור להיות תהליך קצר.",
-  "@welcomeInstallDescription": {},
+  "installDescription": "התקנת {RELEASE} לצד (או במקום) מערכת ההפעלה הנוכחית שלך. אמור להיות תהליך קצר.",
+  "@installDescription": {},
   "tryOption": "להתנסות ב־{RELEASE}",
   "@tryOption": {},
   "installOption": "להתקין את {RELEASE}",
@@ -57,8 +57,8 @@
   "@updatesOtherSoftwarePageTitle": {},
   "welcome": "ברוך בואך",
   "@welcome": {},
-  "welcomePageTitle": "להתנסות או להתקין את {DISTRO}",
-  "@welcomePageTitle": {},
+  "tryOrInstallPageTitle": "להתנסות או להתקין את {DISTRO}",
+  "@tryOrInstallPageTitle": {},
   "tryOrInstallRepairOption": "תיקון התקנה",
   "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "תיקון יתקין את כל התכניות המותקנות מחדש מבלי לגעת במסמכים או בהגדרות.",

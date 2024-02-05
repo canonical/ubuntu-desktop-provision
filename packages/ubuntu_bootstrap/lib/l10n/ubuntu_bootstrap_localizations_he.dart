@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallPageTitle(Object DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'להתנסות או להתקין את $DISTRO';
   }
 
   @override
@@ -56,12 +56,12 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(Object RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'התקנת $RELEASE לצד (או במקום) מערכת ההפעלה הנוכחית שלך. אמור להיות תהליך קצר.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(Object url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'ממליצים לך לקרוא את <a href=\"$url\">הערות ההוצאה לאור</a>.';
   }
 
   @override

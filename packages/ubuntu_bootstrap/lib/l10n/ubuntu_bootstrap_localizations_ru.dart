@@ -37,16 +37,16 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Исправить установку';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'Исправление повторно устанавливает все установленные программы, не трогая документы и настройки.';
 
   @override
   String tryOption(Object RELEASE) {
-    return 'Try $RELEASE';
+    return 'Попробовать $RELEASE';
   }
 
   @override
   String tryDescription(Object RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Вы можете попробовать $RELEASE без каких-либо изменений на вашем компьютере.';
   }
 
   @override
@@ -56,12 +56,12 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(Object RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Установить $RELEASE рядом (или вместо) вашей текущей операционной системы. Это не займёт много времени.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(Object url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'Вы также можете прочитать <a href=\"$url\">заметки о выпуске</a>.';
   }
 
   @override

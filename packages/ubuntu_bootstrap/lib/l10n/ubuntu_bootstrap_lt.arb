@@ -91,13 +91,13 @@
     }
   },
   "tryOrInstallPageTitle": "Išbandykite arba įsidiekite {DISTRO}",
-  "@welcomePageTitle": {},
+  "@tryOrInstallPageTitle": {},
   "tryOrInstallRepairOption": "Taisyti diegimą",
   "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.",
   "@tryOrInstallRepairDescription": {},
-  "welcomeReleaseNotesLabel": "Galite pageidauti perskaityti <a href=\"{url}\">laidos informaciją</a>.",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "Galite pageidauti perskaityti <a href=\"{url}\">laidos informaciją</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}
@@ -176,15 +176,15 @@
       "os": {}
     }
   },
-  "welcomeTryDescription": "Galite išbandyti {RELEASE} neatlikdami kompiuteryje jokių pakeitimų.",
-  "@welcomeTryDescription": {
+  "tryDescription": "Galite išbandyti {RELEASE} neatlikdami kompiuteryje jokių pakeitimų.",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeInstallDescription": "Įsidiekite {RELEASE} šalia savo dabartinės operacinės sistemoje arba vietoje jos. Tai neturėtų ilgai užtrukti.",
-  "@welcomeInstallDescription": {
+  "installDescription": "Įsidiekite {RELEASE} šalia savo dabartinės operacinės sistemoje arba vietoje jos. Tai neturėtų ilgai užtrukti.",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}

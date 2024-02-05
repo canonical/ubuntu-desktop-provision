@@ -46,7 +46,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(Object RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Galite išbandyti $RELEASE neatlikdami kompiuteryje jokių pakeitimų.';
   }
 
   @override
@@ -56,12 +56,12 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(Object RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Įsidiekite $RELEASE šalia savo dabartinės operacinės sistemoje arba vietoje jos. Tai neturėtų ilgai užtrukti.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(Object url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'Galite pageidauti perskaityti <a href=\"$url\">laidos informaciją</a>.';
   }
 
   @override

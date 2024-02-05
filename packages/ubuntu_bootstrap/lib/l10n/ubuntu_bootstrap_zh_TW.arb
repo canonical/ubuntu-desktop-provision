@@ -14,18 +14,18 @@
     }
   },
   "tryOrInstallPageTitle": "試用或安裝 {DISTRO}",
-  "@welcomePageTitle": {
+  "@tryOrInstallPageTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "welcomeRepairOption": "修復系統",
-  "@welcomeRepairOption": {},
-  "welcomeRepairDescription": "修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。",
-  "@welcomeRepairDescription": {},
-  "welcomeInstallDescription": "安裝 {RELEASE} ，可與您目前的作業系統共存，或取代該系統，這不會耗費太多時間。",
-  "@welcomeInstallDescription": {
+  "tryOrInstallRepairOption": "修復系統",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。",
+  "@tryOrInstallRepairDescription": {},
+  "installDescription": "安裝 {RELEASE} ，可與您目前的作業系統共存，或取代該系統，這不會耗費太多時間。",
+  "@installDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -144,15 +144,15 @@
       "DISTRO": {}
     }
   },
-  "welcomeTryOption": "試用 {RELEASE}",
-  "@welcomeTryOption": {
+  "tryOption": "試用 {RELEASE}",
+  "@tryOption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "welcomeTryDescription": "您可以試用 {RELEASE}，而不會對您的電腦進行任何變動。",
-  "@welcomeTryDescription": {
+  "tryDescription": "您可以試用 {RELEASE}，而不會對您的電腦進行任何變動。",
+  "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -167,8 +167,8 @@
   },
   "updatesOtherSoftwarePageDescription": "你首先想安裝些什麼程式？",
   "@updatesOtherSoftwarePageDescription": {},
-  "welcomeReleaseNotesLabel": "您也可以閱覽<a href=\"{url}\">版本資訊</a>。",
-  "@welcomeReleaseNotesLabel": {
+  "tryOrInstallReleaseNotesLabel": "您也可以閱覽<a href=\"{url}\">版本資訊</a>。",
+  "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
       "url": {}

@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallPageTitle(Object DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'බලන්න හෝ ස්ථාපනය කරන්න';
   }
 
   @override
@@ -46,7 +46,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(Object RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'ඔබගේ පරිගණකයට කිසිදු වෙනසක් නොකර $RELEASE බැලීමට හැකිය.';
   }
 
   @override
@@ -56,12 +56,12 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(Object RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'ඔබගේ වත්මන් මෙහෙයුම් පද්ධතිය සමඟ (හෝ ඒ වෙනුවට) $RELEASE ස්ථාපනය කරන්න. මෙයට එතරම් කාලයක් ගත නොවේ.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(Object url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'මෙතැනින් <a href=\"$url\">නිකුතු සටහන්</a> කියවීමට හැකිය.';
   }
 
   @override
