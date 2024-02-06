@@ -128,9 +128,11 @@ class ConfigService {
     if (customConfig == null) return defaultConfig;
     final result = Map<String, dynamic>.from(defaultConfig);
     customConfig.forEach((key, value) {
-      if (value is Map<String, dynamic> &&
-          result[key] is Map<String, dynamic>) {
-        result[key] = mergeConfig(result[key] as Map<String, dynamic>, value);
+      if (value is Map && result[key] is Map) {
+        result[key] = mergeConfig(
+          Map<String, dynamic>.from(result[key] as Map),
+          Map<String, dynamic>.from(value),
+        );
       } else {
         result[key] = value;
       }

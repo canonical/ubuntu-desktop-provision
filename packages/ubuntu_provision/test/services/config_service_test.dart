@@ -16,6 +16,8 @@ pages:
   test:
     image: "mascot.png"
     visible: true
+  accessibility:
+    image: "accessibility.png"
     '''
       },
     );
@@ -99,6 +101,32 @@ test2:
     expect(result, isNotNull);
     expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);
+  });
+
+  test('Filesystem config files overrides defaults', () async {
+    final fs = MemoryFileSystem();
+    fs.file('/path/to/foo.yaml')
+      ..createSync(recursive: true)
+      ..writeAsStringSync('''
+theme:
+  accent-color: "#00ff00"
+  
+pages:
+  accessibility:
+    visible: false
+''');
+
+    final config = ConfigService(
+      assetBundle: assetBundle,
+      path: '/path/to/foo.yaml',
+      fs: fs,
+    );
+    expect(await config.get('accessibility', scope: 'pages'), {
+      'image': 'accessibility.png',
+      'visible': false,
+    });
+    expect(await config.get('test', scope: 'pages'), isNotNull);
+    expect(await config.get('theme'), isNotNull);
   });
 
   test('mergeConfig properly overrides default config', () async {
