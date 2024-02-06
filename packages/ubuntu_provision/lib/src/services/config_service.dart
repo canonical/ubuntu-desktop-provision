@@ -98,11 +98,8 @@ class ConfigService {
     return (loadYaml(assetData) as Map).cast();
   }
 
-  /// Looks up the config file path in the following order:
-  ///
-  /// - /etc/whitelabel.{yaml,yml} (admin)
-  /// - /usr/local/share/whitelabel.{yaml,yml} (oem)
-  /// - /usr/share/whitelabel.{yaml,yml} (distro)
+  /// Looks up the config file from:
+  /// - /usr/share/desktop-provision/whitelabel.{yaml,yml}
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     for (final ext in _extensions) {
