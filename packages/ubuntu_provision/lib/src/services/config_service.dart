@@ -48,7 +48,7 @@ class ConfigService {
     final file = path != null ? _fs.file(path) : null;
     final defaultConfig = await _loadFromAssets();
     Map<String, dynamic>? customConfig;
-    if (path != null && file != null && !file.existsSync()) {
+    if (path != null && file != null && file.existsSync()) {
       customConfig = await _loadFromFilesystem(path, file);
     }
 

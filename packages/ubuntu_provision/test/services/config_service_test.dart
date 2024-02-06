@@ -6,6 +6,22 @@ import 'package:yaml/yaml.dart';
 import '../test_utils.dart';
 
 void main() {
+  late FakeAssetBundle assetBundle;
+
+  setUpAll(() async {
+    assetBundle = FakeAssetBundle(
+      {
+        'packages/ubuntu_provision/assets/whitelabel.yaml': '''
+pages:
+  test:
+    image: "mascot.png"
+    visible: true
+    '''
+      },
+    );
+    TestWidgetsFlutterBinding.ensureInitialized();
+  });
+
   test('lookup path', () {
     final priority = [
       // admin
@@ -55,8 +71,12 @@ test2:
   foo: bar
 ''');
 
-      final config =
-          ConfigService(scope: 'test1', path: '/path/to/foo.$ext', fs: fs);
+      final config = ConfigService(
+        assetBundle: assetBundle,
+        scope: 'test1',
+        path: '/path/to/foo.$ext',
+        fs: fs,
+      );
       expect(await config.get('b'), isTrue);
       expect(await config.get('i'), 123);
       expect(await config.get('d'), 123.456);
@@ -74,23 +94,10 @@ test2:
   });
 
   test('load from assets', () async {
-    final assetBundle = FakeAssetBundle(
-      {
-        'packages/ubuntu_provision/assets/whitelabel.yaml': '''
-scope:
-  test:
-    title: "Welcome"
-    image: "mascot.png"
-    visible: true
-    '''
-      },
-    );
-    TestWidgetsFlutterBinding.ensureInitialized();
     final configService = ConfigService(assetBundle: assetBundle);
-    final result = await configService.get<YamlMap>('test', scope: 'scope');
+    final result = await configService.get<YamlMap>('test', scope: 'pages');
     expect(result, isNotNull);
-    expect(result!['title'], 'Welcome');
-    expect(result['image'], 'mascot.png');
+    expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);
   });
 
