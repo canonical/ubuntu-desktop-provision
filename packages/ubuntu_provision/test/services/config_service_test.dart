@@ -1,7 +1,6 @@
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
-import 'package:yaml/yaml.dart';
 
 import '../test_utils.dart';
 
@@ -97,7 +96,8 @@ test2:
 
   test('load from assets', () async {
     final configService = ConfigService(assetBundle: assetBundle);
-    final result = await configService.get<YamlMap>('test', scope: 'pages');
+    final result =
+        await configService.get<Map<String, dynamic>>('test', scope: 'pages');
     expect(result, isNotNull);
     expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);

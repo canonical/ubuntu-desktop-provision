@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
 
 part 'theme_variant_service.freezed.dart';
@@ -82,7 +81,8 @@ class ThemeVariantService {
 
   Future<void> load() async {
     final themeConfig = ThemeConfig.fromJson(
-        (await _config!.get<YamlMap>('theme'))?.value.cast() ?? {});
+      await _config!.get<Map<String, dynamic>>('theme') ?? <String, dynamic>{},
+    );
     themeVariant = ThemeVariant.fromThemeConfig(themeConfig);
   }
 }

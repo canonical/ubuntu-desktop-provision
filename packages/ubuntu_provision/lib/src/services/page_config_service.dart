@@ -27,9 +27,8 @@ class PageConfigService {
 
   Future<void> load() async {
     final pageConfig = PageConfig.fromJson({
-      'pages': Map<String, dynamic>.from(
-        (await _config!.get<YamlMap>('pages'))?.value.cast() ?? {},
-      )
+      'pages': await _config!.get<Map<String, dynamic>>('pages') ??
+          <String, dynamic>{},
     });
 
     if (includeTryOrInstall) {
@@ -74,6 +73,7 @@ class PageConfigEntryConverter
       } else if (entry.value is Map<String, dynamic>) {
         pages[entry.key] =
             PageConfigEntry.fromJson(entry.value as Map<String, dynamic>);
+        // TODO: Remove, YamlMap should only be within config service
       } else if (entry.value is YamlMap) {
         pages[entry.key] =
             PageConfigEntry.fromJson((entry.value as YamlMap).cast());

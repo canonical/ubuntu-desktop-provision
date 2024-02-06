@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
@@ -125,8 +126,8 @@ class ConfigService {
     Map<String, dynamic> defaultConfig,
     Map<String, dynamic>? customConfig,
   ) {
-    if (customConfig == null) return defaultConfig;
-    final result = Map<String, dynamic>.from(defaultConfig);
+    final result = defaultConfig.toMap();
+    if (customConfig == null) return result;
     customConfig.forEach((key, value) {
       if (value is Map && result[key] is Map) {
         result[key] = mergeConfig(
@@ -137,7 +138,7 @@ class ConfigService {
         result[key] = value;
       }
     });
-    return result;
+    return result.toMap();
   }
 }
 

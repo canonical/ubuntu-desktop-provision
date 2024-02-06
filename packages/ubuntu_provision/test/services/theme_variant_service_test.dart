@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/theme_variant.dart';
-import 'package:yaml/yaml.dart';
 
 import '../test_utils.dart';
 
@@ -47,7 +46,7 @@ void main() {
 MockConfigService createMockConfigService({Map<String, dynamic>? config}) {
   final mock = MockConfigService();
   when(mock.get('theme'))
-      .thenAnswer((_) async => YamlMap.wrap(config?.cast() ?? {}));
+      .thenAnswer((_) async => config ?? <String, dynamic>{});
   return mock;
 }
 
