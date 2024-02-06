@@ -46,17 +46,19 @@ class ConfigService {
   Future<Map<String, dynamic>?> load() async {
     final path = _path;
     final file = path != null ? _fs.file(path) : null;
-    final Map<String, dynamic>? data;
-    if (path == null || file == null || !file.existsSync()) {
-      data = await _loadFromAssets();
-    } else {
-      data = await _loadFromFilesystem(path, file);
+    final defaultConfig = await _loadFromAssets();
+    Map<String, dynamic>? customConfig;
+    if (path != null && file != null && !file.existsSync()) {
+      customConfig = await _loadFromFilesystem(path, file);
     }
 
-    if (data == null) {
-      _log.error('No config file found on path or in assets.');
+    if (defaultConfig == null) {
+      const errorMessage = 'No default config file found in assets.';
+      _log.error(errorMessage);
+      throw ConfigServiceException(errorMessage);
     }
-    return data;
+
+    return mergeConfig(defaultConfig, customConfig);
   }
 
   Future<Map<String, dynamic>?> _loadFromFilesystem(
@@ -117,4 +119,30 @@ class ConfigService {
     }
     return null;
   }
+
+  @visibleForTesting
+  static Map<String, dynamic> mergeConfig(
+    Map<String, dynamic> defaultConfig,
+    Map<String, dynamic>? customConfig,
+  ) {
+    if (customConfig == null) return defaultConfig;
+    final result = Map<String, dynamic>.from(defaultConfig);
+    customConfig.forEach((key, value) {
+      if (value is Map<String, dynamic> &&
+          result[key] is Map<String, dynamic>) {
+        result[key] = mergeConfig(result[key] as Map<String, dynamic>, value);
+      } else {
+        result[key] = value;
+      }
+    });
+    return result;
+  }
+}
+
+class ConfigServiceException implements Exception {
+  ConfigServiceException(this.message);
+  final String message;
+
+  @override
+  String toString() => 'ConfigServiceException: $message';
 }

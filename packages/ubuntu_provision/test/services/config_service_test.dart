@@ -93,4 +93,36 @@ scope:
     expect(result['image'], 'mascot.png');
     expect(result['visible'], isTrue);
   });
+
+  test('mergeConfig properly overrides default config', () async {
+    final defaultConfig = {
+      'test': {
+        'image': 'mascot.png',
+        'visible': true,
+      },
+      'test2': {
+        'image': 'mascot.png',
+        'visible': false,
+      },
+    };
+    final customConfig = {
+      'test': {
+        'visible': false,
+      }
+    };
+    final result = ConfigService.mergeConfig(defaultConfig, customConfig);
+    expect(
+      result,
+      {
+        'test': {
+          'image': 'mascot.png',
+          'visible': false,
+        },
+        'test2': {
+          'image': 'mascot.png',
+          'visible': false,
+        },
+      },
+    );
+  });
 }
