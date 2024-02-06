@@ -633,13 +633,14 @@ class MockConfigService extends _i1.Mock implements _i3.ConfigService {
       ) as _i12.Future<T?>);
 
   @override
-  _i12.Future<Map<String, dynamic>?> load() => (super.noSuchMethod(
+  _i12.Future<Map<String, dynamic>> load() => (super.noSuchMethod(
         Invocation.method(
           #load,
           [],
         ),
-        returnValue: _i12.Future<Map<String, dynamic>?>.value(),
-      ) as _i12.Future<Map<String, dynamic>?>);
+        returnValue:
+            _i12.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+      ) as _i12.Future<Map<String, dynamic>>);
 }
 
 /// A class which mocks [DesktopService].

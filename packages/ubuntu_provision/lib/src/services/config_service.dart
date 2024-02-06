@@ -4,14 +4,12 @@ import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
-import 'package:path/path.dart' as p;
+import 'package:path/path.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
 final _log = Logger('config');
-const whiteLabelDirectory = '/usr/share/desktop-provision/';
 
 class ConfigService {
   ConfigService({
@@ -29,6 +27,7 @@ class ConfigService {
 
   static const _extensions = ['yaml', 'yml'];
   static const _filename = 'whitelabel';
+  static const whiteLabelDirectory = '/usr/share/desktop-provision/';
 
   Future<T?> get<T>(String key, {String? scope}) async {
     _config ??= await load();
@@ -107,7 +106,7 @@ class ConfigService {
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     for (final ext in _extensions) {
-      final path = p.join(whiteLabelDirectory, '$_filename.$ext');
+      final path = join(whiteLabelDirectory, '$_filename.$ext');
       if (fs.file(path).existsSync()) return path;
     }
     return null;

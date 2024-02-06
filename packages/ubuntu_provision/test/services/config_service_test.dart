@@ -1,5 +1,6 @@
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path/path.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
 
 import '../test_utils.dart';
@@ -24,29 +25,17 @@ pages:
   });
 
   test('lookup path', () {
-    final priority = [
-      // admin
-      '/etc/whitelabel.yaml',
-      '/etc/whitelabel.yml',
-      // oem
-      '/usr/local/share/whitelabel.yaml',
-      '/usr/local/share/whitelabel.yml',
-      // distro
-      '/usr/share/whitelabel.yaml',
-      '/usr/share/whitelabel.yml',
-    ];
+    final path = join(ConfigService.whiteLabelDirectory, 'whitelabel.yaml');
 
     final fs = MemoryFileSystem();
-    for (final path in priority.reversed) {
-      fs.file(path).createSync(recursive: true);
-      expect(ConfigService.lookupPath(fs), path);
-    }
+    fs.file(path).createSync(recursive: true);
+    expect(ConfigService.lookupPath(fs), path);
   });
 
   test('yaml', () async {
     for (final ext in ['.yaml', '.yml']) {
       final fs = MemoryFileSystem();
-      fs.file('/path/to/foo.$ext')
+      fs.file('${ConfigService.whiteLabelDirectory}/whitelabel.$ext')
         ..createSync(recursive: true)
         ..writeAsStringSync('''
 test1:
