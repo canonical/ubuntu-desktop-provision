@@ -32,10 +32,11 @@ pages:
     expect(ConfigService.lookupPath(fs), path);
   });
 
-  test('yaml', () async {
-    for (final ext in ['.yaml', '.yml']) {
+  test('Can load yaml and yml from default whitelabel path', () async {
+    for (final ext in ['yaml', 'yml']) {
       final fs = MemoryFileSystem();
-      fs.file('${ConfigService.whiteLabelDirectory}/whitelabel.$ext')
+      final path = join(ConfigService.whiteLabelDirectory, 'whitelabel.$ext');
+      fs.file(path)
         ..createSync(recursive: true)
         ..writeAsStringSync('''
 test1:
