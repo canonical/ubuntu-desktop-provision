@@ -4,10 +4,10 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 
+import '../test_utils.dart';
 import 'test_rst.mocks.dart';
-export '../test_utils.dart';
-export 'test_rst.mocks.dart';
 
 @GenerateMocks([RstModel])
 RstModel buildRstModel({bool? hasRst}) {
@@ -16,10 +16,13 @@ RstModel buildRstModel({bool? hasRst}) {
   return model;
 }
 
+final pageImages = PageImages(MockPageConfigService());
+
 Widget buildRstPage(RstModel model) {
   return ProviderScope(
     overrides: [
       rstModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const RstPage(),
   );
