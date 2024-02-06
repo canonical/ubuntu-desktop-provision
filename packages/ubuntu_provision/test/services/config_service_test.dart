@@ -93,7 +93,7 @@ test2:
 
   test('Filesystem config files overrides defaults', () async {
     final fs = MemoryFileSystem();
-    fs.file('/path/to/foo.yaml')
+    fs.file('${ConfigService.whiteLabelDirectory}/whitelabel.yaml')
       ..createSync(recursive: true)
       ..writeAsStringSync('''
 theme:
@@ -106,7 +106,6 @@ pages:
 
     final config = ConfigService(
       assetBundle: assetBundle,
-      path: '/path/to/foo.yaml',
       fs: fs,
     );
     expect(await config.get('accessibility', scope: 'pages'), {
