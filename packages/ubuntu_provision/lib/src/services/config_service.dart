@@ -11,19 +11,17 @@ import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
 final _log = Logger('config');
+const whiteLabelDirectory = '/usr/share/desktop-provision/';
 
 class ConfigService {
   ConfigService({
-    String? path,
     String? scope,
     @visibleForTesting FileSystem fs = const LocalFileSystem(),
     @visibleForTesting AssetBundle? assetBundle,
   })  : _scope = scope,
-        _path = path ?? lookupPath(fs),
         _fs = fs,
         _assetBundle = assetBundle ?? rootBundle;
 
-  final String? _path;
   final String? _scope;
   final FileSystem _fs;
   final AssetBundle _assetBundle;
@@ -41,11 +39,12 @@ class ConfigService {
   }
 
   /// Loads the config file, if none are found on the filesystem by
-  /// [lookupPath], then it will try to load the default config file from the
-  /// assets. If no config file is found, it will return null.
+  /// [lookupPath], then it will load the default config file from the assets.
+  /// If no default config file is found, a [ConfigServiceException] will be
+  /// thrown.
   @visibleForTesting
-  Future<Map<String, dynamic>?> load() async {
-    final path = _path;
+  Future<Map<String, dynamic>> load() async {
+    final path = lookupPath(_fs);
     final file = path != null ? _fs.file(path) : null;
     final defaultConfig = await _loadFromAssets();
     Map<String, dynamic>? customConfig;
@@ -107,16 +106,9 @@ class ConfigService {
   /// - /usr/share/whitelabel.{yaml,yml} (distro)
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
-    final dirs = [
-      ...xdg.configDirs,
-      fs.directory('/etc'),
-      ...xdg.dataDirs,
-    ];
-    for (final dir in dirs) {
-      for (final ext in _extensions) {
-        final path = p.join(dir.path, '$_filename.$ext');
-        if (fs.file(path).existsSync()) return path;
-      }
+    for (final ext in _extensions) {
+      final path = p.join(whiteLabelDirectory, '$_filename.$ext');
+      if (fs.file(path).existsSync()) return path;
     }
     return null;
   }

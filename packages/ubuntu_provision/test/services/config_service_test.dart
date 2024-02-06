@@ -75,7 +75,6 @@ test2:
       final config = ConfigService(
         assetBundle: assetBundle,
         scope: 'test1',
-        path: '/path/to/foo.$ext',
         fs: fs,
       );
       expect(await config.get('b'), isTrue);

@@ -31,8 +31,6 @@ Future<void> registerInitServices(List<String> args) {
   var options = tryGetService<ArgResults>();
   if (options == null) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {
-      parser.addOption('config', valueHelp: 'path', help: 'Config file path');
-      parser.addOption('pages', hide: true);
       parser.addFlag(
         'welcome',
         help: 'Show welcome wizard',
@@ -42,8 +40,7 @@ Future<void> registerInitServices(List<String> args) {
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
-  tryRegisterService<ConfigService>(
-      () => ConfigService(path: options!['config'] as String?));
+  tryRegisterService<ConfigService>(ConfigService.new);
   tryRegisterService<GdmService>(GdmService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<IdentityService>(ProvdIdentityService.new);

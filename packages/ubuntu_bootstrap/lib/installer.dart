@@ -35,11 +35,6 @@ Future<void> runInstallerApp(
   Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final options = parseCommandLine(args, onPopulateOptions: (parser) {
-    parser.addOption(
-      'config',
-      valueHelp: 'path',
-      help: 'Path to a config file',
-    );
     parser.addFlag(
       'dry-run',
       defaultsTo: Platform.environment['LIVE_RUN'] != '1',
@@ -89,8 +84,7 @@ Future<void> runInstallerApp(
   tryRegisterService<ActiveDirectoryService>(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
   tryRegisterServiceInstance<ArgResults>(options);
-  tryRegisterService<ConfigService>(
-      () => ConfigService(path: options['config'] as String?));
+  tryRegisterService<ConfigService>(ConfigService.new);
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
