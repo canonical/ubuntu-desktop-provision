@@ -154,14 +154,16 @@ func TestEnableLocationSettings(t *testing.T) {
 
 func TestGetLocationSettings(t *testing.T) {
 	tests := map[string]struct {
-		emptyRequest bool
-		wantErr      bool
+		emptyRequest    bool
+		getBooleanError bool
+
+		wantErr bool
 	}{
 		// Success case
 		"Success on getting location settings": {},
 
 		// Error cases
-		"Error case returns false, no calls made": {wantErr: true},
+		"Error case returns false, no calls made": {getBooleanError: true},
 		"Error on empty request":                  {emptyRequest: true, wantErr: true},
 	}
 
@@ -171,7 +173,7 @@ func TestGetLocationSettings(t *testing.T) {
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
 			var opts []privacy.Option
-			if tc.wantErr {
+			if tc.getBooleanError {
 				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{GetBooleanError: true}))
 			} else {
 				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{}))
