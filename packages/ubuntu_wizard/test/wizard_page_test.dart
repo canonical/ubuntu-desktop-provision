@@ -230,6 +230,119 @@ void main() {
     );
   });
 
+  testWidgets('override hasPrevious and hasNext', (tester) async {
+    var wentBack = false;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        home: Wizard(routes: {
+          '/first': WizardRoute(builder: (_) {
+            return Builder(builder: (context) {
+              return const WizardPage(
+                content: Text('first'),
+                bottomBar: WizardBar(
+                  leading: PreviousWizardButton(),
+                  trailing: [NextWizardButton()],
+                ),
+              );
+            });
+          }),
+          '/second': WizardRoute(
+            builder: (_) {
+              return Builder(builder: (context) {
+                return WizardPage(
+                  content: const Text('second'),
+                  bottomBar: WizardBar(
+                    leading:
+                        PreviousWizardButton(onBack: () => wentBack = true),
+                    trailing: const [NextWizardButton()],
+                  ),
+                );
+              });
+            },
+            userData: const WizardRouteData(hasPrevious: false),
+          ),
+          '/last': WizardRoute(
+            builder: (_) {
+              return Builder(builder: (context) {
+                return WizardPage(
+                  content: const Text('last'),
+                  bottomBar: WizardBar(
+                    leading:
+                        PreviousWizardButton(onBack: () => wentBack = true),
+                    trailing: const [NextWizardButton()],
+                  ),
+                );
+              });
+            },
+            userData: const WizardRouteData(hasNext: false),
+          ),
+          '/unreachable': WizardRoute(
+            builder: (_) {
+              return Builder(builder: (context) {
+                return const WizardPage(
+                  bottomBar: WizardBar(
+                    leading: PreviousWizardButton(),
+                    trailing: [NextWizardButton()],
+                  ),
+                );
+              });
+            },
+          ),
+        }),
+      ),
+    );
+
+    final context = tester.element(find.byType(WizardPage));
+    final lang = UbuntuLocalizations.of(context);
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<FilledButton>(),
+      matching: find.text(lang.nextLabel),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('second'), findsOneWidget);
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<OutlinedButton>(),
+      matching: find.text(lang.previousLabel),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(wentBack, isFalse);
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<FilledButton>(),
+      matching: find.text(lang.nextLabel),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(find.text('last'), findsOneWidget);
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<OutlinedButton>(),
+      matching: find.text(lang.previousLabel),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(wentBack, isTrue);
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<FilledButton>(),
+      matching: find.text(lang.nextLabel),
+    ));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.descendant(
+      of: find.bySubtype<FilledButton>(),
+      matching: find.text(lang.doneLabel),
+    ));
+
+    expect(find.text('unreachable'), findsNothing);
+  });
+
   testWidgets('page indicator', (tester) async {
     final routes = <String, WizardRoute>{
       '/foo': WizardRoute(
