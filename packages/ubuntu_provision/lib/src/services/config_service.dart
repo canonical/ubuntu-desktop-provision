@@ -4,49 +4,45 @@ import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
-import 'package:path/path.dart' as p;
+import 'package:path/path.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
 final _log = Logger('config');
 
 class ConfigService {
   ConfigService({
-    String? path,
-    String? scope,
-    @visibleForTesting FileSystem fs = const LocalFileSystem(),
+    this.scope,
+    @visibleForTesting this.filesystem = const LocalFileSystem(),
     @visibleForTesting AssetBundle? assetBundle,
-  })  : _scope = scope,
-        _path = path ?? lookupPath(fs),
-        _fs = fs,
-        _assetBundle = assetBundle ?? rootBundle;
+  }) : _assetBundle = assetBundle ?? rootBundle;
 
-  final String? _path;
-  final String? _scope;
-  final FileSystem _fs;
+  final String? scope;
+  final FileSystem filesystem;
   final AssetBundle _assetBundle;
   Map<String, dynamic>? _config;
 
   static const _extensions = ['yaml', 'yml'];
   static const _filename = 'whitelabel';
+  static const whiteLabelDirectory = '/usr/share/desktop-provision/';
 
-  Future<T?> get<T>(String key, {String? scope}) async {
+  Future<T?> get<T>(String key, {String? scopeOverride}) async {
     _config ??= await load();
-    if (scope == null && _scope == null) {
+    if (scopeOverride == null && scope == null) {
       return _config?[key] as T?;
     }
-    return _config?[scope ?? _scope]?[key] as T?;
+    return _config?[scopeOverride ?? scope]?[key] as T?;
   }
 
   /// Loads the config file, if none are found on the filesystem by
-  /// [lookupPath], then it will try to load the default config file from the
-  /// assets. If no config file is found, it will return null.
+  /// [lookupPath], then it will load the default config file from the assets.
+  /// If no default config file is found, a [ConfigServiceException] will be
+  /// thrown.
   @visibleForTesting
-  Future<Map<String, dynamic>?> load() async {
-    final path = _path;
-    final file = path != null ? _fs.file(path) : null;
+  Future<Map<String, dynamic>> load() async {
+    final path = lookupPath(filesystem);
+    final file = path != null ? filesystem.file(path) : null;
     final defaultConfig = await _loadFromAssets();
     Map<String, dynamic>? customConfig;
     if (path != null && file != null && file.existsSync()) {
@@ -100,23 +96,13 @@ class ConfigService {
     return (loadYaml(assetData) as Map).cast();
   }
 
-  /// Looks up the config file path in the following order:
-  ///
-  /// - /etc/whitelabel.{yaml,yml} (admin)
-  /// - /usr/local/share/whitelabel.{yaml,yml} (oem)
-  /// - /usr/share/whitelabel.{yaml,yml} (distro)
+  /// Looks up the config file from:
+  /// - /usr/share/desktop-provision/whitelabel.{yaml,yml}
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
-    final dirs = [
-      ...xdg.configDirs,
-      fs.directory('/etc'),
-      ...xdg.dataDirs,
-    ];
-    for (final dir in dirs) {
-      for (final ext in _extensions) {
-        final path = p.join(dir.path, '$_filename.$ext');
-        if (fs.file(path).existsSync()) return path;
-      }
+    for (final ext in _extensions) {
+      final path = join(whiteLabelDirectory, '$_filename.$ext');
+      if (fs.file(path).existsSync()) return path;
     }
     return null;
   }

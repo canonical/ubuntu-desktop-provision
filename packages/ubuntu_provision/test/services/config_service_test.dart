@@ -1,5 +1,6 @@
 import 'package:file/memory.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path/path.dart';
 import 'package:ubuntu_provision/src/services/config_service.dart';
 
 import '../test_utils.dart';
@@ -24,29 +25,18 @@ pages:
   });
 
   test('lookup path', () {
-    final priority = [
-      // admin
-      '/etc/whitelabel.yaml',
-      '/etc/whitelabel.yml',
-      // oem
-      '/usr/local/share/whitelabel.yaml',
-      '/usr/local/share/whitelabel.yml',
-      // distro
-      '/usr/share/whitelabel.yaml',
-      '/usr/share/whitelabel.yml',
-    ];
+    final path = join(ConfigService.whiteLabelDirectory, 'whitelabel.yaml');
 
     final fs = MemoryFileSystem();
-    for (final path in priority.reversed) {
-      fs.file(path).createSync(recursive: true);
-      expect(ConfigService.lookupPath(fs), path);
-    }
+    fs.file(path).createSync(recursive: true);
+    expect(ConfigService.lookupPath(fs), path);
   });
 
-  test('yaml', () async {
-    for (final ext in ['.yaml', '.yml']) {
-      final fs = MemoryFileSystem();
-      fs.file('/path/to/foo.$ext')
+  test('Can load yaml and yml from default whitelabel path', () async {
+    for (final ext in ['yaml', 'yml']) {
+      final filesystem = MemoryFileSystem();
+      final path = join(ConfigService.whiteLabelDirectory, 'whitelabel.$ext');
+      filesystem.file(path)
         ..createSync(recursive: true)
         ..writeAsStringSync('''
 test1:
@@ -75,8 +65,7 @@ test2:
       final config = ConfigService(
         assetBundle: assetBundle,
         scope: 'test1',
-        path: '/path/to/foo.$ext',
-        fs: fs,
+        filesystem: filesystem,
       );
       expect(await config.get('b'), isTrue);
       expect(await config.get('i'), 123);
@@ -90,22 +79,22 @@ test2:
         's': 'foo',
         'l': [1, 2, 3],
       });
-      expect(await config.get('foo', scope: 'test2'), 'bar');
+      expect(await config.get('foo', scopeOverride: 'test2'), 'bar');
     }
   });
 
   test('load from assets', () async {
     final configService = ConfigService(assetBundle: assetBundle);
-    final result =
-        await configService.get<Map<String, dynamic>>('test', scope: 'pages');
+    final result = await configService.get<Map<String, dynamic>>('test',
+        scopeOverride: 'pages');
     expect(result, isNotNull);
     expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);
   });
 
   test('Filesystem config files overrides defaults', () async {
-    final fs = MemoryFileSystem();
-    fs.file('/path/to/foo.yaml')
+    final filesystem = MemoryFileSystem();
+    filesystem.file('${ConfigService.whiteLabelDirectory}/whitelabel.yaml')
       ..createSync(recursive: true)
       ..writeAsStringSync('''
 theme:
@@ -118,14 +107,13 @@ pages:
 
     final config = ConfigService(
       assetBundle: assetBundle,
-      path: '/path/to/foo.yaml',
-      fs: fs,
+      filesystem: filesystem,
     );
-    expect(await config.get('accessibility', scope: 'pages'), {
+    expect(await config.get('accessibility', scopeOverride: 'pages'), {
       'image': 'accessibility.png',
       'visible': false,
     });
-    expect(await config.get('test', scope: 'pages'), isNotNull);
+    expect(await config.get('test', scopeOverride: 'pages'), isNotNull);
     expect(await config.get('theme'), isNotNull);
   });
 
