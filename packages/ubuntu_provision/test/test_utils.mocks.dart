@@ -25,7 +25,7 @@ import 'package:timezone_map/src/location.dart' as _i15;
 import 'package:timezone_map/src/service.dart' as _i13;
 import 'package:timezone_map/src/source.dart' as _i14;
 import 'package:ubuntu_provision/services.dart' as _i3;
-import 'package:ubuntu_utils/src/url_launcher.dart' as _i20;
+import 'package:ubuntu_utils/ubuntu_utils.dart' as _i20;
 import 'package:vector_graphics/vector_graphics.dart' as _i11;
 
 // ignore_for_file: type=lint
