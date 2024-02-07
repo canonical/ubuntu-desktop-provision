@@ -13,15 +13,13 @@ final _log = Logger('config');
 
 class ConfigService {
   ConfigService({
-    String? scope,
-    @visibleForTesting FileSystem fs = const LocalFileSystem(),
+    this.scope,
+    @visibleForTesting this.filesystem = const LocalFileSystem(),
     @visibleForTesting AssetBundle? assetBundle,
-  })  : _scope = scope,
-        _fs = fs,
-        _assetBundle = assetBundle ?? rootBundle;
+  }) : _assetBundle = assetBundle ?? rootBundle;
 
-  final String? _scope;
-  final FileSystem _fs;
+  final String? scope;
+  final FileSystem filesystem;
   final AssetBundle _assetBundle;
   Map<String, dynamic>? _config;
 
@@ -29,12 +27,12 @@ class ConfigService {
   static const _filename = 'whitelabel';
   static const whiteLabelDirectory = '/usr/share/desktop-provision/';
 
-  Future<T?> get<T>(String key, {String? scope}) async {
+  Future<T?> get<T>(String key, {String? scopeOverride}) async {
     _config ??= await load();
-    if (scope == null && _scope == null) {
+    if (scopeOverride == null && scope == null) {
       return _config?[key] as T?;
     }
-    return _config?[scope ?? _scope]?[key] as T?;
+    return _config?[scopeOverride ?? scope]?[key] as T?;
   }
 
   /// Loads the config file, if none are found on the filesystem by
@@ -43,8 +41,8 @@ class ConfigService {
   /// thrown.
   @visibleForTesting
   Future<Map<String, dynamic>> load() async {
-    final path = lookupPath(_fs);
-    final file = path != null ? _fs.file(path) : null;
+    final path = lookupPath(filesystem);
+    final file = path != null ? filesystem.file(path) : null;
     final defaultConfig = await _loadFromAssets();
     Map<String, dynamic>? customConfig;
     if (path != null && file != null && file.existsSync()) {

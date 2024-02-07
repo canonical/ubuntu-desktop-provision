@@ -34,9 +34,9 @@ pages:
 
   test('Can load yaml and yml from default whitelabel path', () async {
     for (final ext in ['yaml', 'yml']) {
-      final fs = MemoryFileSystem();
+      final filesystem = MemoryFileSystem();
       final path = join(ConfigService.whiteLabelDirectory, 'whitelabel.$ext');
-      fs.file(path)
+      filesystem.file(path)
         ..createSync(recursive: true)
         ..writeAsStringSync('''
 test1:
@@ -65,7 +65,7 @@ test2:
       final config = ConfigService(
         assetBundle: assetBundle,
         scope: 'test1',
-        fs: fs,
+        filesystem: filesystem,
       );
       expect(await config.get('b'), isTrue);
       expect(await config.get('i'), 123);
@@ -79,22 +79,22 @@ test2:
         's': 'foo',
         'l': [1, 2, 3],
       });
-      expect(await config.get('foo', scope: 'test2'), 'bar');
+      expect(await config.get('foo', scopeOverride: 'test2'), 'bar');
     }
   });
 
   test('load from assets', () async {
     final configService = ConfigService(assetBundle: assetBundle);
-    final result =
-        await configService.get<Map<String, dynamic>>('test', scope: 'pages');
+    final result = await configService.get<Map<String, dynamic>>('test',
+        scopeOverride: 'pages');
     expect(result, isNotNull);
     expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);
   });
 
   test('Filesystem config files overrides defaults', () async {
-    final fs = MemoryFileSystem();
-    fs.file('${ConfigService.whiteLabelDirectory}/whitelabel.yaml')
+    final filesystem = MemoryFileSystem();
+    filesystem.file('${ConfigService.whiteLabelDirectory}/whitelabel.yaml')
       ..createSync(recursive: true)
       ..writeAsStringSync('''
 theme:
@@ -107,13 +107,13 @@ pages:
 
     final config = ConfigService(
       assetBundle: assetBundle,
-      fs: fs,
+      filesystem: filesystem,
     );
-    expect(await config.get('accessibility', scope: 'pages'), {
+    expect(await config.get('accessibility', scopeOverride: 'pages'), {
       'image': 'accessibility.png',
       'visible': false,
     });
-    expect(await config.get('test', scope: 'pages'), isNotNull);
+    expect(await config.get('test', scopeOverride: 'pages'), isNotNull);
     expect(await config.get('theme'), isNotNull);
   });
 
