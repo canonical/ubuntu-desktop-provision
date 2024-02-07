@@ -106,7 +106,6 @@ func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequ
 
 // GetKeyboard returns the current keyboard layout and available layouts.
 func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetKeyboardResponse, error) {
-
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -216,7 +215,7 @@ func getKeyboardLayouts(keyboardConfigPath string) ([]*pb.KeyboardLayout, error)
 		}
 		if variants, ok := layout["variant"]; ok && variants != "" {
 			for _, v := range strings.Split(variants, ",") {
-				l.Variants = append(l.Variants, &pb.KeybaordVariant{
+				l.Variants = append(l.Variants, &pb.KeyboardVariant{
 					Code: v,
 					Name: v,
 				})

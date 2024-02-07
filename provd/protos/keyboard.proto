@@ -37,10 +37,10 @@ message KeyboardSetup {
 message KeyboardLayout {
     string code = 1;
     string name = 2;
-    repeated KeybaordVariant variants = 3;
+    repeated KeyboardVariant variants = 3;
 }
 
-message KeybaordVariant {
+message KeyboardVariant {
     string code = 1;
     string name = 2;
 }

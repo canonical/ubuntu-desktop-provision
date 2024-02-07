@@ -279,7 +279,7 @@ type KeyboardLayout struct {
 
 	Code     string             `protobuf:"bytes,1,opt,name=code,proto3" json:"code,omitempty"`
 	Name     string             `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Variants []*KeybaordVariant `protobuf:"bytes,3,rep,name=variants,proto3" json:"variants,omitempty"`
+	Variants []*KeyboardVariant `protobuf:"bytes,3,rep,name=variants,proto3" json:"variants,omitempty"`
 }
 
 func (x *KeyboardLayout) Reset() {
@@ -328,14 +328,14 @@ func (x *KeyboardLayout) GetName() string {
 	return ""
 }
 
-func (x *KeyboardLayout) GetVariants() []*KeybaordVariant {
+func (x *KeyboardLayout) GetVariants() []*KeyboardVariant {
 	if x != nil {
 		return x.Variants
 	}
 	return nil
 }
 
-type KeybaordVariant struct {
+type KeyboardVariant struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -344,8 +344,8 @@ type KeybaordVariant struct {
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 }
 
-func (x *KeybaordVariant) Reset() {
-	*x = KeybaordVariant{}
+func (x *KeyboardVariant) Reset() {
+	*x = KeyboardVariant{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_protos_keyboard_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -353,13 +353,13 @@ func (x *KeybaordVariant) Reset() {
 	}
 }
 
-func (x *KeybaordVariant) String() string {
+func (x *KeyboardVariant) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*KeybaordVariant) ProtoMessage() {}
+func (*KeyboardVariant) ProtoMessage() {}
 
-func (x *KeybaordVariant) ProtoReflect() protoreflect.Message {
+func (x *KeyboardVariant) ProtoReflect() protoreflect.Message {
 	mi := &file_protos_keyboard_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -371,19 +371,19 @@ func (x *KeybaordVariant) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use KeybaordVariant.ProtoReflect.Descriptor instead.
-func (*KeybaordVariant) Descriptor() ([]byte, []int) {
+// Deprecated: Use KeyboardVariant.ProtoReflect.Descriptor instead.
+func (*KeyboardVariant) Descriptor() ([]byte, []int) {
 	return file_protos_keyboard_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *KeybaordVariant) GetCode() string {
+func (x *KeyboardVariant) GetCode() string {
 	if x != nil {
 		return x.Code
 	}
 	return ""
 }
 
-func (x *KeybaordVariant) GetName() string {
+func (x *KeyboardVariant) GetName() string {
 	if x != nil {
 		return x.Name
 	}
@@ -429,9 +429,9 @@ var file_protos_keyboard_proto_rawDesc = []byte{
 	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
 	0x12, 0x35, 0x0a, 0x08, 0x76, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x73, 0x18, 0x03, 0x20, 0x03,
 	0x28, 0x0b, 0x32, 0x19, 0x2e, 0x6b, 0x65, 0x79, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x2e, 0x4b, 0x65,
-	0x79, 0x62, 0x61, 0x6f, 0x72, 0x64, 0x56, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x52, 0x08, 0x76,
-	0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x73, 0x22, 0x39, 0x0a, 0x0f, 0x4b, 0x65, 0x79, 0x62, 0x61,
-	0x6f, 0x72, 0x64, 0x56, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f,
+	0x79, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x56, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x52, 0x08, 0x76,
+	0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x73, 0x22, 0x39, 0x0a, 0x0f, 0x4b, 0x65, 0x79, 0x62, 0x6f,
+	0x61, 0x72, 0x64, 0x56, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f,
 	0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x12,
 	0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61,
 	0x6d, 0x65, 0x32, 0xed, 0x01, 0x0a, 0x0f, 0x4b, 0x65, 0x79, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x53,
@@ -476,7 +476,7 @@ var file_protos_keyboard_proto_goTypes = []interface{}{
 	(*GetKeyboardResponse)(nil),   // 3: keyboard.GetKeyboardResponse
 	(*KeyboardSetup)(nil),         // 4: keyboard.KeyboardSetup
 	(*KeyboardLayout)(nil),        // 5: keyboard.KeyboardLayout
-	(*KeybaordVariant)(nil),       // 6: keyboard.KeybaordVariant
+	(*KeyboardVariant)(nil),       // 6: keyboard.KeyboardVariant
 	(*emptypb.Empty)(nil),         // 7: google.protobuf.Empty
 }
 var file_protos_keyboard_proto_depIdxs = []int32{
@@ -485,7 +485,7 @@ var file_protos_keyboard_proto_depIdxs = []int32{
 	4, // 2: keyboard.GetKeyboardResponse.setup:type_name -> keyboard.KeyboardSetup
 	0, // 3: keyboard.KeyboardSetup.settings:type_name -> keyboard.KeyboardSettings
 	5, // 4: keyboard.KeyboardSetup.layouts:type_name -> keyboard.KeyboardLayout
-	6, // 5: keyboard.KeyboardLayout.variants:type_name -> keyboard.KeybaordVariant
+	6, // 5: keyboard.KeyboardLayout.variants:type_name -> keyboard.KeyboardVariant
 	1, // 6: keyboard.KeyboardService.SetKeyboard:input_type -> keyboard.SetKeyboardRequest
 	2, // 7: keyboard.KeyboardService.SetInputSource:input_type -> keyboard.SetInputSourceRequest
 	7, // 8: keyboard.KeyboardService.GetKeyboard:input_type -> google.protobuf.Empty
@@ -578,7 +578,7 @@ func file_protos_keyboard_proto_init() {
 			}
 		}
 		file_protos_keyboard_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*KeybaordVariant); i {
+			switch v := v.(*KeyboardVariant); i {
 			case 0:
 				return &v.state
 			case 1:
