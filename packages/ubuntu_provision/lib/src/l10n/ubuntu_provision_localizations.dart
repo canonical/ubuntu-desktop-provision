@@ -309,6 +309,18 @@ abstract class UbuntuProvisionLocalizations {
   /// **'Visual alerts'**
   String get accessibilityVisualAlertsLabel;
 
+  /// No description provided for @errorPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get errorPageTitle;
+
+  /// No description provided for @errorPageUnexpected.
+  ///
+  /// In en, this message translates to:
+  /// **'An unexpected error has occurred'**
+  String get errorPageUnexpected;
+
   /// No description provided for @timezonePageTitle.
   ///
   /// In en, this message translates to:
