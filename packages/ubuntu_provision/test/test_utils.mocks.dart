@@ -750,7 +750,7 @@ class MockGeoService extends _i1.Mock implements _i14.GeoService {
 
   @override
   _i13.Future<Iterable<_i16.GeoLocation>> searchCoordinates(
-          dynamic coordinates) =>
+          _i16.LatLng? coordinates) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchCoordinates,
