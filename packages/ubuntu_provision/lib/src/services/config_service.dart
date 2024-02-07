@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:xdg_directories/xdg_directories.dart' as xdg;
 import 'package:yaml/yaml.dart';
 
@@ -46,17 +47,19 @@ class ConfigService {
   Future<Map<String, dynamic>?> load() async {
     final path = _path;
     final file = path != null ? _fs.file(path) : null;
-    final Map<String, dynamic>? data;
-    if (path == null || file == null || !file.existsSync()) {
-      data = await _loadFromAssets();
-    } else {
-      data = await _loadFromFilesystem(path, file);
+    final defaultConfig = await _loadFromAssets();
+    Map<String, dynamic>? customConfig;
+    if (path != null && file != null && file.existsSync()) {
+      customConfig = await _loadFromFilesystem(path, file);
     }
 
-    if (data == null) {
-      _log.error('No config file found on path or in assets.');
+    if (defaultConfig == null) {
+      const errorMessage = 'No default config file found in assets.';
+      _log.error(errorMessage);
+      throw ConfigServiceException(errorMessage);
     }
-    return data;
+
+    return mergeConfig(defaultConfig, customConfig);
   }
 
   Future<Map<String, dynamic>?> _loadFromFilesystem(
@@ -117,4 +120,32 @@ class ConfigService {
     }
     return null;
   }
+
+  @visibleForTesting
+  static Map<String, dynamic> mergeConfig(
+    Map<String, dynamic> defaultConfig,
+    Map<String, dynamic>? customConfig,
+  ) {
+    final result = defaultConfig.toMap();
+    if (customConfig == null) return result;
+    customConfig.forEach((key, value) {
+      if (value is Map && result[key] is Map) {
+        result[key] = mergeConfig(
+          Map<String, dynamic>.from(result[key] as Map),
+          Map<String, dynamic>.from(value),
+        );
+      } else {
+        result[key] = value;
+      }
+    });
+    return result.toMap();
+  }
+}
+
+class ConfigServiceException implements Exception {
+  ConfigServiceException(this.message);
+  final String message;
+
+  @override
+  String toString() => 'ConfigServiceException: $message';
 }

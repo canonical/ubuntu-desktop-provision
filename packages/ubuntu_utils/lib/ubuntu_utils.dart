@@ -5,3 +5,4 @@ export 'src/property_stream_notifier.dart';
 export 'src/proxy_asset_bundle.dart';
 export 'src/string.dart';
 export 'src/url_launcher.dart';
+export 'src/yaml_map_extension.dart';

@@ -1,6 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/services/page_config_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaml/yaml.dart';
 
 import '../test_utils.dart';
@@ -36,6 +38,8 @@ pages:
 MockConfigService createMockConfigService({String config = ''}) {
   final mock = MockConfigService();
   final yaml = loadYaml(config)?['pages'] as YamlMap?;
-  when(mock.get('pages')).thenAnswer((_) async => yaml);
+  when(mock.get('pages')).thenAnswer(
+    (_) async => config == '' ? null : yaml?.toMap(),
+  );
   return mock;
 }
