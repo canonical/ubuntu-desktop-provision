@@ -8,6 +8,7 @@ import (
 	"net"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
@@ -178,17 +179,18 @@ func TestGetKeyboard(t *testing.T) {
 				req = nil
 			}
 
-			got, err := client.GetKeyboard(context.Background(), req)
+			resp, err := client.GetKeyboard(context.Background(), req)
 
 			if tc.wantErr {
 				require.Error(t, err, "GetKeyboard should return an error")
-				require.Empty(t, got, "GetKeyboard should return a nil response")
+				require.Empty(t, resp, "GetKeyboard should return a nil response")
 				return
 			}
 			require.NoError(t, err, "GetKeyboard should not return an error")
 
-			want := testutils.LoadWithUpdateFromGolden(t, got.String())
-			require.Equal(t, want, got.String(), "returned an unexpected response")
+			got := strings.ReplaceAll(resp.String(), "  ", " ") // Normalize spaces
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
 }
