@@ -27,6 +27,7 @@ class InitWizard extends ConsumerWidget {
     final totalSteps = InitStep.values.length;
 
     return WizardBuilder(
+      errorRoute: Routes.error,
       routes: {
         Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
@@ -44,12 +45,25 @@ class InitWizard extends ConsumerWidget {
           userData: WizardRouteData(
             step: totalSteps - 1,
             hasPrevious: false,
+            hasNext: false,
           ),
           onLoad: (_) => const TelemetryPage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
             await ref.read(initModelProvider).launchDesktopSession();
+            await window.close();
+            return Routes.initial;
+          },
+        ),
+        Routes.error: WizardRoute(
+          builder: (_) => const ErrorPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
             await window.close();
             return Routes.initial;
           },
@@ -80,6 +94,7 @@ class WelcomeWizard extends ConsumerWidget {
     };
 
     return WizardBuilder(
+      errorRoute: Routes.error,
       routes: {
         Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
@@ -96,11 +111,24 @@ class WelcomeWizard extends ConsumerWidget {
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(
             step: routes.length - 1,
+            hasNext: false,
           ),
           onLoad: (_) => const WelcomePage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
+            await window.close();
+            return Routes.initial;
+          },
+        ),
+        Routes.error: WizardRoute(
+          builder: (_) => const ErrorPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
             await window.close();
             return Routes.initial;
           },

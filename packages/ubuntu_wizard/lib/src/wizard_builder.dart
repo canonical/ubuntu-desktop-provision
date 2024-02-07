@@ -8,12 +8,14 @@ class WizardBuilder extends StatefulWidget {
     required this.routes,
     super.key,
     this.initialRoute,
+    this.errorRoute,
     this.predicate,
     this.observers = const [],
     this.userData,
   });
 
   final String? initialRoute;
+  final String? errorRoute;
   final Map<String, WizardRoute> routes;
   final WizardPredicate? predicate;
   final List<NavigatorObserver> observers;
@@ -32,6 +34,7 @@ class _WizardBuilderState extends State<WizardBuilder> {
 
     _controller = WizardController(
       initialRoute: widget.initialRoute,
+      errorRoute: widget.errorRoute,
       routes: widget.routes.map((name, route) {
         return MapEntry(
           name,
