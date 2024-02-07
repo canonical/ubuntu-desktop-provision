@@ -5,13 +5,10 @@ package privacy;
 option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
 
 import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";;
 
 service PrivacyService {
-    rpc GetLocationServices(google.protobuf.Empty) returns (GetLocationServicesResponse) {}
+    rpc GetLocationServices(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableLocationServices(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableLocationServices(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-}
-
-message GetLocationServicesResponse {
-    bool enabled = 1;
 }

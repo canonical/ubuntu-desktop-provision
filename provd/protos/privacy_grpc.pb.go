@@ -12,6 +12,7 @@ import (
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
+	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -29,7 +30,7 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type PrivacyServiceClient interface {
-	GetLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*GetLocationServicesResponse, error)
+	GetLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
 	EnableLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	DisableLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
@@ -42,8 +43,8 @@ func NewPrivacyServiceClient(cc grpc.ClientConnInterface) PrivacyServiceClient {
 	return &privacyServiceClient{cc}
 }
 
-func (c *privacyServiceClient) GetLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*GetLocationServicesResponse, error) {
-	out := new(GetLocationServicesResponse)
+func (c *privacyServiceClient) GetLocationServices(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error) {
+	out := new(wrapperspb.BoolValue)
 	err := c.cc.Invoke(ctx, PrivacyService_GetLocationServices_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -73,7 +74,7 @@ func (c *privacyServiceClient) DisableLocationServices(ctx context.Context, in *
 // All implementations must embed UnimplementedPrivacyServiceServer
 // for forward compatibility
 type PrivacyServiceServer interface {
-	GetLocationServices(context.Context, *emptypb.Empty) (*GetLocationServicesResponse, error)
+	GetLocationServices(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
 	EnableLocationServices(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
 	DisableLocationServices(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
 	mustEmbedUnimplementedPrivacyServiceServer()
@@ -83,7 +84,7 @@ type PrivacyServiceServer interface {
 type UnimplementedPrivacyServiceServer struct {
 }
 
-func (UnimplementedPrivacyServiceServer) GetLocationServices(context.Context, *emptypb.Empty) (*GetLocationServicesResponse, error) {
+func (UnimplementedPrivacyServiceServer) GetLocationServices(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLocationServices not implemented")
 }
 func (UnimplementedPrivacyServiceServer) EnableLocationServices(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
