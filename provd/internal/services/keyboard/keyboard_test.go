@@ -16,6 +16,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 func TestGsettingsNotWritable(t *testing.T) {
@@ -116,6 +117,78 @@ func TestSetInputSources(t *testing.T) {
 				return
 			}
 			require.NoError(t, err, "SetInputSource should not return an error")
+		})
+	}
+}
+
+func TestGetKeyboard(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		locale1Path string
+
+		// Error flags
+		emptyRequest       bool
+		keyboardConfigPath string
+
+		wantErr bool
+	}{
+		// Success cases
+		"Success on retrieving keyboards": {},
+
+		// Error cases
+		"Error when request is empty":          {emptyRequest: true, wantErr: true},
+		"Error when can't find keyboard file":  {keyboardConfigPath: "invalid-path", wantErr: true},
+		"Error when can't parse keyboard file": {keyboardConfigPath: "unparsable", wantErr: true},
+
+		// Dbus errors
+		"Error when getting X11Layout":  {locale1Path: "x11layouterror", wantErr: true},
+		"Error when getting X11Variant": {locale1Path: "x11varianterror", wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			t.Cleanup(testutils.StartLocalSystemBus())
+
+			tempDir := t.TempDir()
+
+			if tc.keyboardConfigPath == "unparsable" {
+				tc.keyboardConfigPath = filepath.Join(tempDir, "supported")
+				err := os.WriteFile(tc.keyboardConfigPath, []byte("foo"), 0600)
+				require.NoError(t, err, "Setup: could not write to %s: %v", tc.keyboardConfigPath, err)
+			}
+
+			var opts []keyboard.Option
+			if tc.keyboardConfigPath != "" {
+				opts = append(opts, keyboard.WithKeyboardsConfigPath(tc.keyboardConfigPath))
+			}
+			if tc.locale1Path != "" {
+				opts = append(opts, keyboard.WithLocalePath(tc.locale1Path))
+			}
+
+			client, err := keyboard.New(testutils.NewDbusConn(t), opts...)
+			require.NoError(t, err, "Setup: could not create keyboard service")
+
+			var req *emptypb.Empty
+			if !tc.emptyRequest {
+				req = &emptypb.Empty{}
+			} else {
+				req = nil
+			}
+
+			got, err := client.GetKeyboard(context.Background(), req)
+
+			if tc.wantErr {
+				require.Error(t, err, "GetKeyboard should return an error")
+				require.Empty(t, got, "GetKeyboard should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetKeyboard should not return an error")
+
+			want := testutils.LoadWithUpdateFromGolden(t, got.String())
+			require.Equal(t, want, got.String(), "returned an unexpected response")
 		})
 	}
 }

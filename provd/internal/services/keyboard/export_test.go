@@ -33,6 +33,14 @@ func WithGSettingsSubset(g GSettingsSubset) Option {
 	}
 }
 
+// WithKeyboardsConfigPath is a functional option to set the path to the keyboard configuration file.
+func WithKeyboardsConfigPath(path string) Option {
+	return func(s *Service) error {
+		s.keyboardsConfigPath = path
+		return nil
+	}
+}
+
 type GSettingsSubsetMock struct {
 	IsWritableError bool
 }

@@ -4,6 +4,7 @@ package keyboard
 import (
 	"context"
 	"io/fs"
+	"sort"
 	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
@@ -29,9 +30,10 @@ type Option func(*Service) error
 // Service is the implementation of the Keyboard service.
 type Service struct {
 	pb.UnimplementedKeyboardServiceServer
-	conn      *dbus.Conn
-	locale    dbus.BusObject
-	gsettings GSettingsSubset
+	conn                *dbus.Conn
+	locale              dbus.BusObject
+	gsettings           GSettingsSubset
+	keyboardsConfigPath string
 }
 
 // New returns a new instance of the Keyboard service.
@@ -48,7 +50,11 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus locale1 object")
 	}
 
+	// Create GSettings object
 	s.gsettings = gio.NewSettings("org.gnome.desktop.input-sources")
+
+	// Set the path to the keyboard configuration file
+	s.keyboardsConfigPath = "keyboard-configuration.yaml"
 
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
@@ -98,8 +104,9 @@ func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequ
 	return &emptypb.Empty{}, nil
 }
 
-// GetInputSource returns the current keyboard layout and variant, as well as other available layouts and variants.
+// GetKeyboard returns the current keyboard layout and available layouts.
 func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetKeyboardResponse, error) {
+
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -110,24 +117,33 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get X11Layout: %v", err)
 	}
-
 	x11Variant, err := s.locale.GetProperty(consts.DbusLocalePrefix + ".X11Variant")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get X11Variant: %v", err)
 	}
 
-	// Get avaliable keyboard layouts
-	layouts, err := getKeyboardLayouts()
+	// Get available keyboard layouts
+	layouts, err := getKeyboardLayouts(s.keyboardsConfigPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get keyboard layouts: %v", err)
+	}
+
+	// Type assertions
+	layout, ok := x11Layout.Value().(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to parse X11Layout: %v", err)
+	}
+	variant, ok := x11Variant.Value().(string)
+	if !ok {
+		return nil, status.Errorf(codes.Internal, "failed to parse X11Variant: %v", err)
 	}
 
 	// Create response
 	resp := &pb.GetKeyboardResponse{
 		Setup: &pb.KeyboardSetup{
 			Settings: &pb.KeyboardSettings{
-				Layout:  x11Layout.Value().(string),
-				Variant: x11Variant.Value().(string),
+				Layout:  layout,
+				Variant: variant,
 			},
 			Layouts: layouts,
 		},
@@ -176,9 +192,9 @@ func (s *Service) SetKeyboard(ctx context.Context, req *pb.SetKeyboardRequest) (
 	return &emptypb.Empty{}, nil
 }
 
-func getKeyboardLayouts() ([]*pb.KeyboardLayout, error) {
+func getKeyboardLayouts(keyboardConfigPath string) ([]*pb.KeyboardLayout, error) {
 	// Read in keyboard layouts
-	k, err := fs.ReadFile(EmbeddedFiles, "keyboard-configuration.yaml")
+	k, err := fs.ReadFile(EmbeddedFiles, keyboardConfigPath)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to read keyboard layouts: %v", err)
 	}
@@ -208,5 +224,16 @@ func getKeyboardLayouts() ([]*pb.KeyboardLayout, error) {
 			layouts = append(layouts, l)
 		}
 	}
+
+	// Sort layouts by Code, then by Name if needed
+	sort.Slice(layouts, func(i, j int) bool {
+		if layouts[i].Code == layouts[j].Code {
+			// Secondary sort by Name if Codes are equal
+			return layouts[i].Name < layouts[j].Name
+		}
+		// Primary sort by Code
+		return layouts[i].Code < layouts[j].Code
+	})
+
 	return layouts, nil
 }
