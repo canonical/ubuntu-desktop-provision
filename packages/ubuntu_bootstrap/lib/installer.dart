@@ -93,7 +93,7 @@ Future<void> runInstallerApp(
   tryRegisterService<InstallerService>(
     () => InstallerService(
       getService<SubiquityClient>(),
-      pageConfig: tryGetService<PageConfigService>(),
+      pageConfig: getService<PageConfigService>(),
     ),
   );
   tryRegisterService(JournalService.new);

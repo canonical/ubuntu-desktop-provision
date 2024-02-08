@@ -5,13 +5,12 @@ import 'package:ubuntu_provision/services.dart';
 final _log = Logger('installer_service');
 
 class InstallerService {
-  InstallerService(this._client, {PageConfigService? pageConfig})
-      : _pageConfig = pageConfig;
+  InstallerService(this._client, {required this.pageConfig});
 
   final SubiquityClient _client;
-  final PageConfigService? _pageConfig;
-  Set<String>? _excludedPages;
-  Set<String>? _subiquityPages;
+  final PageConfigService pageConfig;
+  late final Set<String> _excludedPages;
+  late final Set<String>? _subiquityPages;
 
   Future<void> init() async {
     await _client.setVariant(Variant.DESKTOP);
@@ -33,14 +32,18 @@ class InstallerService {
   Future<void> load() async {
     await monitorStatus().firstWhere((s) => s?.isLoading == false);
     _subiquityPages = (await _client.getInteractiveSections())?.toSet();
-    _excludedPages = _pageConfig?.excludedPages.toSet();
+    final oemPages = {'eula'};
+    final requiredPages = _subiquityPages ?? (pageConfig.isOem ? oemPages : {});
 
-    final requiredExcludedPages =
-        _excludedPages?.intersection(_subiquityPages ?? {});
-    if (requiredExcludedPages?.isNotEmpty ?? false) {
-      _log.info(
-          '$requiredExcludedPages are required by subiquity and cannot be excluded!');
-      _excludedPages!.removeAll(requiredExcludedPages!);
+    _excludedPages = pageConfig.excludedPages.toSet();
+    if (pageConfig.isOem) {
+      _excludedPages.add('identity');
+    }
+
+    final excludedRequiredPages = _excludedPages.intersection(requiredPages);
+    if (excludedRequiredPages.isNotEmpty) {
+      _log.info('$excludedRequiredPages are required and cannot be excluded!');
+      _excludedPages.removeAll(excludedRequiredPages);
     }
   }
 
@@ -48,11 +51,14 @@ class InstallerService {
 
   Stream<ApplicationStatus?> monitorStatus() => _client.monitorStatus();
 
+  /// Gives back whether the [route] should be shown in the installer.
+  /// If subiquity gives back interactive pages then it will only show those
+  /// pages, otherwise it will show all pages according to the config.
   bool hasRoute(String route) {
     if (_subiquityPages?.isNotEmpty ?? false) {
       return _subiquityPages!.contains(route.replaceFirst('/', ''));
     }
-    return !(_excludedPages?.contains(route.replaceFirst('/', '')) ?? false);
+    return !_excludedPages.contains(route.replaceFirst('/', ''));
   }
 }
 

@@ -23,7 +23,10 @@ void main() {
       ]),
     );
 
-    final service = InstallerService(client);
+    final service = InstallerService(
+      client,
+      pageConfig: MockPageConfigService(),
+    );
     await service.init();
 
     verify(client.markConfigured(any)).called(1);
@@ -42,7 +45,10 @@ void main() {
       ]),
     );
 
-    final service = InstallerService(client);
+    final service = InstallerService(
+      client,
+      pageConfig: MockPageConfigService(),
+    );
     await service.init();
 
     verifyNever(client.getSource());
@@ -62,7 +68,10 @@ void main() {
       ]),
     );
 
-    final service = InstallerService(client);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(false);
+    when(pageConfig.excludedPages).thenReturn([]);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
     verify(client.monitorStatus()).called(1);
@@ -81,7 +90,10 @@ void main() {
       ]),
     );
 
-    final service = InstallerService(client);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(false);
+    when(pageConfig.excludedPages).thenReturn([]);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
     verify(client.monitorStatus()).called(1);
@@ -93,9 +105,11 @@ void main() {
     final client = MockSubiquityClient();
     when(client.monitorStatus()).thenAnswer((_) => controller.stream);
 
-    final service = InstallerService(client);
+    final service = InstallerService(
+      client,
+      pageConfig: MockPageConfigService(),
+    );
     controller.add(fakeApplicationStatus(ApplicationState.STARTING_UP));
-
     await expectLater(service.load(), doesNotComplete);
 
     verify(client.monitorStatus()).called(1);
@@ -110,7 +124,10 @@ void main() {
       ]),
     );
 
-    final service = InstallerService(client);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(false);
+    when(pageConfig.excludedPages).thenReturn([]);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
     verify(client.monitorStatus()).called(1);
@@ -122,7 +139,10 @@ void main() {
     when(client.monitorStatus()).thenAnswer(
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
-    final service = InstallerService(client);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(false);
+    when(pageConfig.excludedPages).thenReturn([]);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
 
     expect(service.hasRoute('a'), isTrue);
@@ -136,7 +156,10 @@ void main() {
     when(client.monitorStatus()).thenAnswer(
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
-    final service = InstallerService(client);
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(false);
+    when(pageConfig.excludedPages).thenReturn([]);
+    final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
 
     expect(service.hasRoute('a'), isTrue);
@@ -152,6 +175,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.excludedPages).thenReturn(['c']);
+    when(pageConfig.isOem).thenReturn(false);
 
     final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
@@ -165,9 +189,29 @@ void main() {
     final client = MockSubiquityClient();
     when(client.confirm('/dev/tty1')).thenAnswer((_) async {});
 
-    final service = InstallerService(client);
+    final service = InstallerService(
+      client,
+      pageConfig: MockPageConfigService(),
+    );
     await service.start();
 
     verify(client.confirm('/dev/tty1')).called(1);
+  });
+
+  test('Correct pages are shown when oem is true', () async {
+    final client = MockSubiquityClient();
+    when(client.getInteractiveSections()).thenAnswer((_) async => null);
+    when(client.monitorStatus()).thenAnswer(
+        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+
+    final pageConfig = MockPageConfigService();
+    when(pageConfig.isOem).thenReturn(true);
+    when(pageConfig.excludedPages).thenReturn(['eula']);
+
+    final service = InstallerService(client, pageConfig: pageConfig);
+    await service.load();
+
+    expect(service.hasRoute('eula'), isTrue);
+    expect(service.hasRoute('identity'), isFalse);
   });
 }

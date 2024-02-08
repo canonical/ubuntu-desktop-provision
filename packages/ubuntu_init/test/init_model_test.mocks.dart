@@ -96,6 +96,21 @@ class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
       ) as bool);
 
   @override
+  bool get isOem => (super.noSuchMethod(
+        Invocation.getter(#isOem),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set isOem(bool? _isOem) => super.noSuchMethod(
+        Invocation.setter(
+          #isOem,
+          _isOem,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   List<String> get excludedPages => (super.noSuchMethod(
         Invocation.getter(#excludedPages),
         returnValue: <String>[],

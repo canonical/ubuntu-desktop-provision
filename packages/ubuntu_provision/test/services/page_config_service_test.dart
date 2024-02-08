@@ -35,9 +35,13 @@ pages:
   });
 }
 
-MockConfigService createMockConfigService({String config = ''}) {
+MockConfigService createMockConfigService({
+  String config = '',
+  bool isOem = false,
+}) {
   final mock = MockConfigService();
   final yaml = loadYaml(config)?['pages'] as YamlMap?;
+  when(mock.get('oem')).thenAnswer((_) async => isOem);
   when(mock.get('pages')).thenAnswer(
     (_) async => config == '' ? null : yaml?.toMap(),
   );

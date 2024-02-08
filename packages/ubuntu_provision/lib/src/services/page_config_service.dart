@@ -17,6 +17,7 @@ class PageConfigService {
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
   final bool includeTryOrInstall;
+  late bool isOem;
 
   List<String> get excludedPages => pages.entries
       .whereNot((e) =>
@@ -30,6 +31,12 @@ class PageConfigService {
       'pages': await _config!.get<Map<String, dynamic>>('pages') ??
           <String, dynamic>{},
     });
+    isOem = await _config!.get<bool>('oem') ?? false;
+
+    if (isOem) {
+      pages['identity'] = const PageConfigEntry(visible: false);
+      pages['eula'] = const PageConfigEntry();
+    }
 
     if (includeTryOrInstall) {
       pages[_tryOrInstallName] =
