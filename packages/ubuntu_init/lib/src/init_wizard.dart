@@ -56,7 +56,7 @@ class InitWizard extends ConsumerWidget {
             await _onDone?.call();
             await ref.read(initModelProvider).launchDesktopSession();
             await window.close();
-            return Routes.initial;
+            return null;
           },
         ),
         Routes.error: WizardRoute(
@@ -72,7 +72,7 @@ class InitWizard extends ConsumerWidget {
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await window.close();
-            return Routes.initial;
+            return null;
           },
         ),
       },
@@ -125,7 +125,7 @@ class WelcomeWizard extends ConsumerWidget {
             final window = YaruWindow.of(context);
             await _onDone?.call();
             await window.close();
-            return Routes.initial;
+            return null;
           },
         ),
         Routes.error: WizardRoute(
