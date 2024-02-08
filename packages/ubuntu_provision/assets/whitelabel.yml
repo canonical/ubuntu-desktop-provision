@@ -2,23 +2,23 @@ pages:
   locale:
     image: "assets/mascot.png"
   accessibility:
-    image: "assets/icons/accessibility.svg"
+    image: "assets/images/accessibility.svg"
   try-or-install:
-    image: "assets/icons/try-or-install.svg"
+    image: "assets/images/try-or-install.svg"
     visible: false
   rst:
-    image: "assets/icons/rst.svg"
+    image: "assets/images/rst.svg"
   keyboard:
-    image: "assets/icons/keyboard.svg"
+    image: "assets/images/keyboard.svg"
   network:
-    image: "assets/icons/wifi.svg"
+    image: "assets/images/wifi.svg"
   refresh:
   source:
-    image: "assets/icons/mascot.svg"
+    image: "assets/images/mascot.svg"
   not-enough-disk-space:
   secure-boot:
   storage:
-    image: "assets/icons/disk.svg"
+    image: "assets/images/disk.svg"
   confirm:
   identity:
   ubuntu-pro:
