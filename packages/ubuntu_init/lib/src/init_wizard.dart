@@ -6,9 +6,12 @@ import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/routes.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
+
+final _log = Logger('init_wizard');
 
 class InitWizard extends ConsumerWidget {
   const InitWizard({
@@ -57,7 +60,11 @@ class InitWizard extends ConsumerWidget {
           },
         ),
         Routes.error: WizardRoute(
-          builder: (_) => const ErrorPage(),
+          builder: (context) {
+            final exception = ModalRoute.of(context)?.settings.arguments;
+            _log.error('Uncaught exception: $exception');
+            return const ErrorPage();
+          },
           userData: const WizardRouteData(
             hasPrevious: false,
             hasNext: false,
