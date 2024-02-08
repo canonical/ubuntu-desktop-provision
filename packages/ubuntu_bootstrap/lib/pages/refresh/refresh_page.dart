@@ -25,16 +25,19 @@ class RefreshPage extends ConsumerWidget with ProvisioningPage {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(l10n.refreshPageTitle),
+        isClosable: !model.state.busy,
       ),
       content: RefreshView(
         state: model.state,
         onRefresh: model.refresh,
       ),
-      bottomBar: RefreshBar(
-        state: model.state,
-        onSkip: Wizard.of(context).next,
-        onRestart: model.restart,
-      ),
+      bottomBar: model.state.busy
+          ? null
+          : RefreshBar(
+              state: model.state,
+              onSkip: Wizard.of(context).next,
+              onRestart: model.restart,
+            ),
     );
   }
 }
