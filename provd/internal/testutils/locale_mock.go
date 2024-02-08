@@ -37,6 +37,9 @@ func (l localebus) Get(interfaceName string, propertyName string) (interface{}, 
 	}
 	switch propertyName {
 	case "Locale":
+		if l.path == "jsonlexists" {
+			return "LANG=de_DE.UTF-8", nil
+		}
 		return "LANG=xh_ZA.UTF-8", nil
 	case "X11Model":
 		switch l.path {
@@ -121,6 +124,7 @@ func ExportLocaleMock(conn *dbus.Conn) error {
 		{path: "x11optionsparseerror"},
 		{path: "x11layouterror"},
 		{path: "x11varianterror"},
+		{path: "jsonlexists"},
 	} {
 		if err := conn.Export(l, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", l.path)), consts.DbusLocalePrefix); err != nil {
 			return fmt.Errorf("could not export Locale mock: %w", err)

@@ -135,16 +135,17 @@ func TestGetKeyboard(t *testing.T) {
 		wantErr bool
 	}{
 		// Success cases
-		"Success on retrieving keyboards": {},
+		"Success on retrieving keyboards when locale not in jsonl": {locale1Path: "jsonlexists"},
+		"Success on retrieving keyboards":                          {},
 
 		// // Error cases
-		// "Error when request is empty":          {emptyRequest: true, wantErr: true},
-		// "Error when can't find keyboard file":  {keyboardConfigPath: "invalid-path", wantErr: true},
-		// "Error when can't parse keyboard file": {keyboardConfigPath: "unparsable", wantErr: true},
+		"Error when request is empty":          {emptyRequest: true, wantErr: true},
+		"Error when can't find keyboard file":  {keyboardConfigPath: "invalid-path", wantErr: true},
+		"Error when can't parse keyboard file": {keyboardConfigPath: "unparsable", wantErr: true},
 
-		// // Dbus errors
-		// "Error when getting X11Layout":  {locale1Path: "x11layouterror", wantErr: true},
-		// "Error when getting X11Variant": {locale1Path: "x11varianterror", wantErr: true},
+		// Dbus errors
+		"Error when getting X11Layout":  {locale1Path: "x11layouterror", wantErr: true},
+		"Error when getting X11Variant": {locale1Path: "x11varianterror", wantErr: true},
 	}
 
 	for name, tc := range tests {

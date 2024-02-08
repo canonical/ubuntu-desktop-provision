@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io/fs"
 	"os"
+	"regexp"
 	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
@@ -105,6 +106,8 @@ func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequ
 	return &emptypb.Empty{}, nil
 }
 
+var localRegexp = regexp.MustCompile(`LANG=([a-z]+)_`)
+
 // GetKeyboard returns the current keyboard layout and available layouts.
 func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetKeyboardResponse, error) {
 	// Validate request
@@ -128,7 +131,11 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 	if err != nil {
 		lang = "C"
 	} else {
-		lang = l.String()
+		matches := localRegexp.FindStringSubmatch(l.String())
+		if len(matches) < 2 {
+			return nil, status.Errorf(codes.Internal, "unexpected locale format")
+		}
+		lang = matches[1]
 	}
 
 	// Check if locale has a jsonl file avalible
