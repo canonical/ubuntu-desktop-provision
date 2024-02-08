@@ -6,9 +6,12 @@ import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/routes.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
+
+final _log = Logger('init_wizard');
 
 class InitWizard extends ConsumerWidget {
   const InitWizard({
@@ -27,6 +30,7 @@ class InitWizard extends ConsumerWidget {
     final totalSteps = InitStep.values.length;
 
     return WizardBuilder(
+      errorRoute: Routes.error,
       routes: {
         Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
@@ -44,6 +48,7 @@ class InitWizard extends ConsumerWidget {
           userData: WizardRouteData(
             step: totalSteps - 1,
             hasPrevious: false,
+            hasNext: false,
           ),
           onLoad: (_) => const TelemetryPage().load(context, ref),
           onNext: (_) async {
@@ -51,7 +56,23 @@ class InitWizard extends ConsumerWidget {
             await _onDone?.call();
             await ref.read(initModelProvider).launchDesktopSession();
             await window.close();
-            return Routes.initial;
+            return null;
+          },
+        ),
+        Routes.error: WizardRoute(
+          builder: (context) {
+            final exception = ModalRoute.of(context)?.settings.arguments;
+            _log.error('Uncaught exception: $exception');
+            return const ErrorPage();
+          },
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
+            await window.close();
+            return null;
           },
         ),
       },
@@ -80,6 +101,7 @@ class WelcomeWizard extends ConsumerWidget {
     };
 
     return WizardBuilder(
+      errorRoute: Routes.error,
       routes: {
         Routes.initial: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
@@ -96,11 +118,24 @@ class WelcomeWizard extends ConsumerWidget {
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(
             step: routes.length - 1,
+            hasNext: false,
           ),
           onLoad: (_) => const WelcomePage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await _onDone?.call();
+            await window.close();
+            return null;
+          },
+        ),
+        Routes.error: WizardRoute(
+          builder: (_) => const ErrorPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onNext: (_) async {
+            final window = YaruWindow.of(context);
             await window.close();
             return Routes.initial;
           },

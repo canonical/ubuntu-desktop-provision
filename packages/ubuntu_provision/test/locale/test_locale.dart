@@ -8,9 +8,14 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import '../test_utils.dart';
 export '../test_utils.dart';
 
-LocaleModel buildLocaleModel() {
+LocaleModel buildLocaleModel({Exception? error}) {
   final locale = MockLocaleService();
-  when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
+
+  if (error != null) {
+    when(locale.getLocale()).thenThrow(error);
+  } else {
+    when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
+  }
 
   return LocaleModel(
     locale: locale,
