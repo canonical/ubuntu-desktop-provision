@@ -4,7 +4,9 @@ package keyboard
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io/fs"
+	"os"
 	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
@@ -120,6 +122,22 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 		return nil, status.Errorf(codes.Internal, "failed to get X11Variant: %v", err)
 	}
 
+	// Get the current language
+	var lang string
+	l, err := s.locale.GetProperty(consts.DbusLocalePrefix + ".Locale")
+	if err != nil {
+		lang = "C"
+	} else {
+		lang = l.String()
+	}
+
+	// Check if locale has a jsonl file avalible
+	filename := fmt.Sprintf("kbds/%s.jsonl", lang)
+	_, err = os.Stat(filename)
+	if err != nil {
+		lang = "C"
+	}
+
 	// Type assertions
 	layout, ok := x11Layout.Value().(string)
 	if !ok {
@@ -131,7 +149,7 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 	}
 
 	// Get available keyboard layouts
-	layouts, err := getKeyboardLayouts(s.keyboardl18nPath, layout)
+	layouts, err := getKeyboardLayouts(s.keyboardl18nPath, lang)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get keyboard layouts: %v", err)
 	}
