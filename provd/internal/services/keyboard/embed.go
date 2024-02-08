@@ -4,7 +4,7 @@ import (
 	"embed"
 )
 
-//go:embed keyboard-configuration.yaml
+//go:embed kbds/*
 
 // EmbeddedFiles is the embedded keyboard configuration file.
 var EmbeddedFiles embed.FS

@@ -61,7 +61,7 @@ func (l localebus) Get(interfaceName string, propertyName string) (interface{}, 
 		case "x11layouterror":
 			return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
 		default:
-			return "xh", nil
+			return "de", nil
 		}
 	case "X11Variant":
 		switch l.path {

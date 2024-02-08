@@ -3,8 +3,8 @@ package keyboard
 
 import (
 	"context"
+	"encoding/json"
 	"io/fs"
-	"sort"
 	"strings"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
@@ -15,7 +15,6 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
-	"gopkg.in/yaml.v3"
 )
 
 // GSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
@@ -30,10 +29,10 @@ type Option func(*Service) error
 // Service is the implementation of the Keyboard service.
 type Service struct {
 	pb.UnimplementedKeyboardServiceServer
-	conn                *dbus.Conn
-	locale              dbus.BusObject
-	gsettings           GSettingsSubset
-	keyboardsConfigPath string
+	conn             *dbus.Conn
+	locale           dbus.BusObject
+	gsettings        GSettingsSubset
+	keyboardl18nPath string
 }
 
 // New returns a new instance of the Keyboard service.
@@ -54,7 +53,7 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	s.gsettings = gio.NewSettings("org.gnome.desktop.input-sources")
 
 	// Set the path to the keyboard configuration file
-	s.keyboardsConfigPath = "keyboard-configuration.yaml"
+	s.keyboardl18nPath = "kbds/"
 
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
@@ -121,12 +120,6 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 		return nil, status.Errorf(codes.Internal, "failed to get X11Variant: %v", err)
 	}
 
-	// Get available keyboard layouts
-	layouts, err := getKeyboardLayouts(s.keyboardsConfigPath)
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to get keyboard layouts: %v", err)
-	}
-
 	// Type assertions
 	layout, ok := x11Layout.Value().(string)
 	if !ok {
@@ -135,6 +128,12 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 	variant, ok := x11Variant.Value().(string)
 	if !ok {
 		return nil, status.Errorf(codes.Internal, "failed to parse X11Variant: %v", err)
+	}
+
+	// Get available keyboard layouts
+	layouts, err := getKeyboardLayouts(s.keyboardl18nPath, layout)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to get keyboard layouts: %v", err)
 	}
 
 	// Create response
@@ -191,48 +190,73 @@ func (s *Service) SetKeyboard(ctx context.Context, req *pb.SetKeyboardRequest) (
 	return &emptypb.Empty{}, nil
 }
 
-func getKeyboardLayouts(keyboardConfigPath string) ([]*pb.KeyboardLayout, error) {
+func getKeyboardLayouts(keyboardl18nPath string, current string) ([]*pb.KeyboardLayout, error) {
 	// Read in keyboard layouts
-	k, err := fs.ReadFile(EmbeddedFiles, keyboardConfigPath)
+	k, err := fs.ReadFile(EmbeddedFiles, keyboardl18nPath+current+".jsonl")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to read keyboard layouts: %v", err)
 	}
 
-	var rawLayouts map[string]map[string]string
+	// Split the file into lines
+	l := strings.Split(string(k), "\n")
 
-	// Unmarshal keyboard layouts
-	err = yaml.Unmarshal(k, &rawLayouts)
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to unmarshal keyboard layouts: %v", err)
-	}
 	var layouts []*pb.KeyboardLayout
 
-	// Create keyboard layout pb structs
-	for code, layout := range rawLayouts {
+	// Loop through each line in the jsonl file
+	for i := 0; i < len(l); i++ {
+		line := strings.TrimSpace(l[i]) // Trim any leading/trailing whitespace
+		if line == "" {
+			continue // Skip any empty line
+		}
+
+		// Unmarshal line into a keyboard layout
+		var rawLayout []interface{}
+		err := json.Unmarshal([]byte(line), &rawLayout)
+		if err != nil {
+			return nil, status.Errorf(codes.Internal, "failed to unmarshal keyboard layout: %v", err)
+		}
+
+		// Get the layout code
+		c, ok := rawLayout[0].(string)
+		if !ok {
+			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout code: %v", err)
+		}
+
+		// Get the layout name
+		n, ok := rawLayout[1].(string)
+		if !ok {
+			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout name: %v", err)
+		}
+
 		l := &pb.KeyboardLayout{
-			Code: code,
-			Name: layout["layout"],
+			Code: c,
+			Name: n,
 		}
-		if variants, ok := layout["variant"]; ok && variants != "" {
-			for _, v := range strings.Split(variants, ",") {
-				l.Variants = append(l.Variants, &pb.KeyboardVariant{
-					Code: v,
-					Name: v,
-				})
+
+		// Get the layout variants
+		rawVariants, ok := rawLayout[2].([]interface{})
+		if !ok {
+			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant: %v", err)
+		}
+		for j := 0; j < len(rawVariants); j++ {
+			rawVariant, ok := rawVariants[j].([]interface{})
+			if !ok {
+				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant: %v", err)
 			}
-			layouts = append(layouts, l)
+			c, ok := rawVariant[0].(string)
+			if !ok {
+				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant code: %v", err)
+			}
+			n, ok := rawVariant[1].(string)
+			if !ok {
+				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant name: %v", err)
+			}
+			l.Variants = append(l.Variants, &pb.KeyboardVariant{
+				Code: c,
+				Name: n,
+			})
 		}
+		layouts = append(layouts, l)
 	}
-
-	// Sort layouts by Code, then by Name if needed
-	sort.Slice(layouts, func(i, j int) bool {
-		if layouts[i].Code == layouts[j].Code {
-			// Secondary sort by Name if Codes are equal
-			return layouts[i].Name < layouts[j].Name
-		}
-		// Primary sort by Code
-		return layouts[i].Code < layouts[j].Code
-	})
-
 	return layouts, nil
 }
