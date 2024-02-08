@@ -48,24 +48,28 @@ class PageImages {
   Future<void> preCache(BuildContext context) async {
     final loadFutures = <Future<void>>[];
     pageConfigService.pages.forEach((pageName, config) {
-      final imagePath = config.image;
-      if (imagePath == null) return;
+      final imageConfig = config.image;
+      if (imageConfig == null) return;
 
       try {
-        final isAsset = imagePath.startsWith('assets/');
-        final isAbsolutPath = imagePath.startsWith('/');
+        final isAsset = imageConfig.startsWith('assets/');
+        final isAbsolutPath = imageConfig.startsWith('/');
         if (isAsset) {
-          _loadAsset('packages/ubuntu_provision/$imagePath', pageName, context);
+          _loadAsset(
+            'packages/ubuntu_provision/$imageConfig',
+            pageName,
+            context,
+          );
         } else if (isAbsolutPath) {
-          loadFutures.add(_loadFile(imagePath, pageName, context));
+          loadFutures.add(_loadFile(imageConfig, pageName, context));
         } else {
           _log.error(
-            'Error loading image for $pageName from $imagePath since it is '
+            'Error loading image for $pageName from $imageConfig since it is '
             'neither an asset or absolute path.',
           );
         }
       } on Exception catch (e) {
-        _log.error('Error loading image for $pageName from $imagePath: $e');
+        _log.error('Error loading image for $pageName from $imageConfig: $e');
       }
     });
 
@@ -73,10 +77,11 @@ class PageImages {
   }
 
   Future<void> _loadFile(
-    String imagePath,
+    String imageName,
     String pageName,
     BuildContext context,
   ) async {
+    final imagePath = '${ConfigService.whiteLabelDirectory}images/$imageName';
     final file = File(imagePath);
     if (!await file.exists()) {
       _log.error(
@@ -84,10 +89,10 @@ class PageImages {
       );
       return;
     }
-    final extension = path.extension(imagePath);
+    final extension = path.extension(imageName);
     if (extension == '.svg') {
       await svg.cache.putIfAbsent(
-        imagePath,
+        imageName,
         () => svgFileLoader(file).loadBytes(context),
       );
       images[pageName] = SvgPicture.file(file);
