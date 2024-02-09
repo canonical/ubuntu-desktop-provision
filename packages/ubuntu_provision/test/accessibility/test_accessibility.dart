@@ -21,6 +21,7 @@ AccessibilityModel buildAccessibilityModel({
   final model = MockAccessibilityModel();
   when(model.activeOptions)
       .thenReturn(UnmodifiableListView(activeOptions ?? []));
+  when(model.init()).thenAnswer((_) async => true);
   return model;
 }
 

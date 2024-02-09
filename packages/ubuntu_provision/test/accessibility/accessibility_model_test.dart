@@ -7,6 +7,7 @@ import 'test_accessibility.dart';
 void main() {
   test('load accessibility settings', () async {
     final service = MockAccessibilityService();
+    when(service.isSupported()).thenAnswer((_) async => true);
     when(service.getHighContrast()).thenAnswer((_) async => true);
     when(service.getLargeText()).thenAnswer((_) async => false);
     when(service.getReduceAnimation()).thenAnswer((_) async => true);
@@ -32,6 +33,7 @@ void main() {
 
   test('toggle option', () async {
     final service = MockAccessibilityService();
+    when(service.isSupported()).thenAnswer((_) async => true);
     when(service.getHighContrast()).thenAnswer((_) async => false);
     when(service.getLargeText()).thenAnswer((_) async => false);
     when(service.getReduceAnimation()).thenAnswer((_) async => true);
