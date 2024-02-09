@@ -415,8 +415,10 @@ void main() {
     final wifiModel = buildWifiModel();
     final hiddenWifiModel = buildHiddenWifiModel();
     final refreshModel = buildRefreshModel(
-        state: const RefreshState.status(
-            RefreshStatus(availability: RefreshCheckState.AVAILABLE)));
+      state: const RefreshState.status(
+        RefreshStatus(availability: RefreshCheckState.AVAILABLE),
+      ),
+    );
 
     registerMockService<TelemetryService>(MockTelemetryService());
 

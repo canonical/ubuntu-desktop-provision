@@ -27,6 +27,9 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isDone = ref.watch(installModelProvider.select((m) => m.isDone));
+    final isInstalling =
+        ref.watch(installModelProvider.select((m) => m.isInstalling));
+    YaruWindow.setClosable(context, !isInstalling);
     return AnimatedSwitcher(
       duration: kThemeAnimationDuration,
       switchInCurve: Curves.easeInExpo,

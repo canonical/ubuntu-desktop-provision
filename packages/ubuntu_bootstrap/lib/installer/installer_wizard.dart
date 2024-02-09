@@ -8,7 +8,6 @@ import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 class InstallerWizard extends ConsumerStatefulWidget {
   const InstallerWizard({super.key});
@@ -24,14 +23,6 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
 
     final model = ref.read(installerModelProvider);
     model.init();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    final model = ref.read(installerModelProvider);
-    YaruWindow.setClosable(context, !model.isInstalling && !model.isRefreshing);
   }
 
   @override
