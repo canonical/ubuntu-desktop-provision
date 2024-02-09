@@ -408,7 +408,13 @@ func TestMain(m *testing.M) {
 
 	err = testutils.ExportLocaleMock(conn)
 	if err != nil {
-		slog.Error(fmt.Sprintf("Could not export Hostname mock: %v", err))
+		slog.Error(fmt.Sprintf("Could not export Locale mock: %v", err))
+		os.Exit(1)
+	}
+
+	err = testutils.ExportTimedateMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Timezone mock: %v", err))
 		os.Exit(1)
 	}
 

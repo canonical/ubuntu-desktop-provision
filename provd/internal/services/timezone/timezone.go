@@ -19,8 +19,11 @@ type Service struct {
 	timezone dbus.BusObject
 }
 
+// Option is a functional option to set the DBus objects in tests.
+type Option func(*Service) error
+
 // New returns a new instance of the Timezone service.
-func New(conn *dbus.Conn) (*Service, error) {
+func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	s := &Service{
 		conn: conn,
 	}
@@ -31,6 +34,13 @@ func New(conn *dbus.Conn) (*Service, error) {
 	err := s.timezone.Call(consts.DbusPeerPrefix+".Ping", 0).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Timezone object")
+	}
+
+	// Applying options, checking for errors in obtaining DBus objects
+	for _, opt := range opts {
+		if err := opt(s); err != nil {
+			return nil, err
+		}
 	}
 
 	return s, nil
@@ -44,7 +54,7 @@ func (s *Service) GetTimezone(ctx context.Context, req *emptypb.Empty) (*pb.GetT
 
 	// Get the timezone
 	var timezone string
-	property, err := s.timezone.GetProperty(consts.DbusTimezonePrefix + ".Timezone")
+	property, err := s.timezone.GetProperty(consts.DbusTimedatePrefix + ".Timezone")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to get current timezone: %v", err)
 	}
@@ -65,7 +75,7 @@ func (s *Service) SetTimezone(ctx context.Context, req *pb.SetTimezoneRequest) (
 
 	// Get the list of avalible timezones
 	var timezones []string
-	err := s.timezone.Call(consts.DbusTimezonePrefix+".ListTimezones", 0).Store(&timezones)
+	err := s.timezone.Call(consts.DbusTimedatePrefix+".ListTimezones", 0).Store(&timezones)
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to list timezones: %v", err)
 	}
@@ -83,7 +93,7 @@ func (s *Service) SetTimezone(ctx context.Context, req *pb.SetTimezoneRequest) (
 	}
 
 	// Set the timezone
-	err = s.timezone.Call(consts.DbusTimezonePrefix+".SetTimezone", 0, req.Timezone, false).Err
+	err = s.timezone.Call(consts.DbusTimedatePrefix+".SetTimezone", 0, req.Timezone, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set timezone: %v", err)
 	}
