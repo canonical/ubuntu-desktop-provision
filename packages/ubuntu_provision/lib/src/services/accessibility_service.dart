@@ -13,4 +13,6 @@ abstract class AccessibilityService {
 
   Future<bool> getVisualAlerts();
   Future<void> setVisualAlerts(bool value);
+
+  Future<bool> isSupported();
 }
