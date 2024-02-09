@@ -51,7 +51,7 @@ service AccessibilityService {
     rpc DisableMouseKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
     // Zoom
-    rpc GetDesktopZoon(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
-    rpc EnableDesktopZoon(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableDesktopZoon(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc GetDesktopZoom(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableDesktopZoom(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableDesktopZoom(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }

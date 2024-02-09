@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -21,12 +22,13 @@ import (
 
 // Manager mediates the whole business logic of the application.
 type Manager struct {
-	userService     user.Service
-	localeService   locale.Service
-	keyboardSerivce keyboard.Service
-	privacyService  privacy.Service
-	timezoneService timezone.Service
-	bus             *dbus.Conn
+	userService          user.Service
+	localeService        locale.Service
+	keyboardSerivce      keyboard.Service
+	privacyService       privacy.Service
+	timezoneService      timezone.Service
+	accessibilityService accessibility.Service
+	bus                  *dbus.Conn
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
@@ -66,13 +68,19 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 		return nil, status.Errorf(codes.Internal, "failed to create timezone service: %s", err)
 	}
 
+	accessibilityService, err := accessibility.New()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create accessibility service: %s", err)
+	}
+
 	return &Manager{
-		userService:     *userService,
-		localeService:   *localeService,
-		keyboardSerivce: *keyboardService,
-		privacyService:  *privacyService,
-		timezoneService: *timezoneService,
-		bus:             bus,
+		userService:          *userService,
+		localeService:        *localeService,
+		keyboardSerivce:      *keyboardService,
+		privacyService:       *privacyService,
+		timezoneService:      *timezoneService,
+		accessibilityService: *accessibilityService,
+		bus:                  bus,
 	}, nil
 }
 
@@ -87,6 +95,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterKeyboardServiceServer(grpcServer, &m.keyboardSerivce)
 	pb.RegisterPrivacyServiceServer(grpcServer, &m.privacyService)
 	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
+	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	return grpcServer
 }
 

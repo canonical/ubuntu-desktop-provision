@@ -48,9 +48,9 @@ const (
 	AccessibilityService_GetMouseKeys_FullMethodName          = "/accessibility.AccessibilityService/GetMouseKeys"
 	AccessibilityService_EnableMouseKeys_FullMethodName       = "/accessibility.AccessibilityService/EnableMouseKeys"
 	AccessibilityService_DisableMouseKeys_FullMethodName      = "/accessibility.AccessibilityService/DisableMouseKeys"
-	AccessibilityService_GetDesktopZoon_FullMethodName        = "/accessibility.AccessibilityService/GetDesktopZoon"
-	AccessibilityService_EnableDesktopZoon_FullMethodName     = "/accessibility.AccessibilityService/EnableDesktopZoon"
-	AccessibilityService_DisableDesktopZoon_FullMethodName    = "/accessibility.AccessibilityService/DisableDesktopZoon"
+	AccessibilityService_GetDesktopZoom_FullMethodName        = "/accessibility.AccessibilityService/GetDesktopZoom"
+	AccessibilityService_EnableDesktopZoom_FullMethodName     = "/accessibility.AccessibilityService/EnableDesktopZoom"
+	AccessibilityService_DisableDesktopZoom_FullMethodName    = "/accessibility.AccessibilityService/DisableDesktopZoom"
 )
 
 // AccessibilityServiceClient is the client API for AccessibilityService service.
@@ -89,9 +89,9 @@ type AccessibilityServiceClient interface {
 	EnableMouseKeys(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	DisableMouseKeys(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// Zoom
-	GetDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
-	EnableDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
-	DisableDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	GetDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
+	EnableDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DisableDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type accessibilityServiceClient struct {
@@ -345,27 +345,27 @@ func (c *accessibilityServiceClient) DisableMouseKeys(ctx context.Context, in *e
 	return out, nil
 }
 
-func (c *accessibilityServiceClient) GetDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error) {
+func (c *accessibilityServiceClient) GetDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error) {
 	out := new(wrapperspb.BoolValue)
-	err := c.cc.Invoke(ctx, AccessibilityService_GetDesktopZoon_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, AccessibilityService_GetDesktopZoom_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *accessibilityServiceClient) EnableDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *accessibilityServiceClient) EnableDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, AccessibilityService_EnableDesktopZoon_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, AccessibilityService_EnableDesktopZoom_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *accessibilityServiceClient) DisableDesktopZoon(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *accessibilityServiceClient) DisableDesktopZoom(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, AccessibilityService_DisableDesktopZoon_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, AccessibilityService_DisableDesktopZoom_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -408,9 +408,9 @@ type AccessibilityServiceServer interface {
 	EnableMouseKeys(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
 	DisableMouseKeys(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
 	// Zoom
-	GetDesktopZoon(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
-	EnableDesktopZoon(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
-	DisableDesktopZoon(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
+	GetDesktopZoom(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
+	EnableDesktopZoom(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
+	DisableDesktopZoom(context.Context, *emptypb.Empty) (*emptypb.Empty, error)
 	mustEmbedUnimplementedAccessibilityServiceServer()
 }
 
@@ -499,14 +499,14 @@ func (UnimplementedAccessibilityServiceServer) EnableMouseKeys(context.Context, 
 func (UnimplementedAccessibilityServiceServer) DisableMouseKeys(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DisableMouseKeys not implemented")
 }
-func (UnimplementedAccessibilityServiceServer) GetDesktopZoon(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDesktopZoon not implemented")
+func (UnimplementedAccessibilityServiceServer) GetDesktopZoom(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDesktopZoom not implemented")
 }
-func (UnimplementedAccessibilityServiceServer) EnableDesktopZoon(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method EnableDesktopZoon not implemented")
+func (UnimplementedAccessibilityServiceServer) EnableDesktopZoom(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method EnableDesktopZoom not implemented")
 }
-func (UnimplementedAccessibilityServiceServer) DisableDesktopZoon(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DisableDesktopZoon not implemented")
+func (UnimplementedAccessibilityServiceServer) DisableDesktopZoom(context.Context, *emptypb.Empty) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DisableDesktopZoom not implemented")
 }
 func (UnimplementedAccessibilityServiceServer) mustEmbedUnimplementedAccessibilityServiceServer() {}
 
@@ -1007,56 +1007,56 @@ func _AccessibilityService_DisableMouseKeys_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccessibilityService_GetDesktopZoon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AccessibilityService_GetDesktopZoom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AccessibilityServiceServer).GetDesktopZoon(ctx, in)
+		return srv.(AccessibilityServiceServer).GetDesktopZoom(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AccessibilityService_GetDesktopZoon_FullMethodName,
+		FullMethod: AccessibilityService_GetDesktopZoom_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessibilityServiceServer).GetDesktopZoon(ctx, req.(*emptypb.Empty))
+		return srv.(AccessibilityServiceServer).GetDesktopZoom(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccessibilityService_EnableDesktopZoon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AccessibilityService_EnableDesktopZoom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AccessibilityServiceServer).EnableDesktopZoon(ctx, in)
+		return srv.(AccessibilityServiceServer).EnableDesktopZoom(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AccessibilityService_EnableDesktopZoon_FullMethodName,
+		FullMethod: AccessibilityService_EnableDesktopZoom_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessibilityServiceServer).EnableDesktopZoon(ctx, req.(*emptypb.Empty))
+		return srv.(AccessibilityServiceServer).EnableDesktopZoom(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AccessibilityService_DisableDesktopZoon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AccessibilityService_DisableDesktopZoom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AccessibilityServiceServer).DisableDesktopZoon(ctx, in)
+		return srv.(AccessibilityServiceServer).DisableDesktopZoom(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AccessibilityService_DisableDesktopZoon_FullMethodName,
+		FullMethod: AccessibilityService_DisableDesktopZoom_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AccessibilityServiceServer).DisableDesktopZoon(ctx, req.(*emptypb.Empty))
+		return srv.(AccessibilityServiceServer).DisableDesktopZoom(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1177,16 +1177,16 @@ var AccessibilityService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _AccessibilityService_DisableMouseKeys_Handler,
 		},
 		{
-			MethodName: "GetDesktopZoon",
-			Handler:    _AccessibilityService_GetDesktopZoon_Handler,
+			MethodName: "GetDesktopZoom",
+			Handler:    _AccessibilityService_GetDesktopZoom_Handler,
 		},
 		{
-			MethodName: "EnableDesktopZoon",
-			Handler:    _AccessibilityService_EnableDesktopZoon_Handler,
+			MethodName: "EnableDesktopZoom",
+			Handler:    _AccessibilityService_EnableDesktopZoom_Handler,
 		},
 		{
-			MethodName: "DisableDesktopZoon",
-			Handler:    _AccessibilityService_DisableDesktopZoon_Handler,
+			MethodName: "DisableDesktopZoom",
+			Handler:    _AccessibilityService_DisableDesktopZoom_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
