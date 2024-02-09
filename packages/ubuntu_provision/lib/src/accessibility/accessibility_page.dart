@@ -15,9 +15,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.read(accessibilityModelProvider);
     // This will return false when it is not Gnome, since the model wont be able
     // to initialize with GSettings.
-    return model
-        .init()
-        .then((isSupported) => isSupported, onError: (_) => false);
+    return model.init().then((isSupported) => isSupported);
   }
 
   @override

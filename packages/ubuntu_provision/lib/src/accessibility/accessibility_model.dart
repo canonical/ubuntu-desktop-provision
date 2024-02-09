@@ -25,15 +25,18 @@ class AccessibilityModel extends SafeChangeNotifier
       UnmodifiableListView(_activeOptions);
 
   Future<bool> init() async {
-    var hasOptions = false;
+    final isSupported = await _service.isSupported();
+    if (!isSupported) {
+      return false;
+    }
+
     for (final option in AccessibilityOption.values) {
-      final value = await _service.getOption(option);
-      if (value ?? false) {
-        hasOptions = true;
+      final currentValue = await _service.getOption(option);
+      if (currentValue) {
         _activeOptions.add(option);
       }
     }
-    return hasOptions;
+    return true;
   }
 
   /// Toggles the given [option] and notifies listeners.
@@ -71,7 +74,7 @@ extension on AccessibilityService {
         AccessibilityOption.screenReader => setScreenReader(value),
         AccessibilityOption.visualAlerts => setVisualAlerts(value),
       };
-  Future<bool?> getOption(AccessibilityOption option) => switch (option) {
+  Future<bool> getOption(AccessibilityOption option) => switch (option) {
         AccessibilityOption.highContrast => getHighContrast(),
         AccessibilityOption.largeText => getLargeText(),
         AccessibilityOption.reduceAnimation => getReduceAnimation(),
