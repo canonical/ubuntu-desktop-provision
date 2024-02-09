@@ -56,6 +56,10 @@ class GnomeAccessibilityService implements AccessibilityService {
   }
 
   @override
+  Future<bool> isSupported() =>
+      _a11yInterfaceSettings.list().then((_) => true, onError: (_) => false);
+
+  @override
   Future<bool> getHighContrast() => _tryGet(
         _a11yInterfaceSettings,
         'high-contrast',
