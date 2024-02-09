@@ -92,9 +92,7 @@ class ThemeVariantService {
 
   Future<void> load() async {
     final lightThemeConfig = ThemeConfig.fromJson(
-      await _config!
-              .get<Map<String, dynamic>>('light', scopeOverride: 'theme') ??
-          <String, dynamic>{},
+      await _config!.get('light', scopeOverride: 'theme') ?? {},
     );
     final darkThemeConfig = ThemeConfig.fromJson(
       await _config!.get('dark', scopeOverride: 'theme') ?? {},
