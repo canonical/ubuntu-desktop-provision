@@ -2,7 +2,6 @@ import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:yaml/yaml.dart';
 
 part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';
@@ -35,12 +34,8 @@ class PageConfigService {
   late final ProvisioningMode mode;
   bool get isOem => mode == ProvisioningMode.oem;
 
-  List<String> get excludedPages => pages.entries
-      .whereNot((e) =>
-          e.value.visible ||
-          (includeTryOrInstall && e.key == _tryOrInstallName))
-      .map((e) => e.key)
-      .toList();
+  List<String> get excludedPages =>
+      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toList();
 
   Future<void> load() async {
     final pageConfig = PageConfig.fromJson({
@@ -48,6 +43,8 @@ class PageConfigService {
           <String, dynamic>{},
     });
     mode = ProvisioningMode.fromString(await _config!.get<String>('mode'));
+
+    pages.addAll(pageConfig.pages);
 
     if (isOem) {
       pages['identity'] = const PageConfigEntry(visible: false);
@@ -58,8 +55,9 @@ class PageConfigService {
       pages[_tryOrInstallName] =
           pageConfig.pages[_tryOrInstallName]?.copyWith(visible: true) ??
               const PageConfigEntry();
+    } else {
+      pages[_tryOrInstallName] = const PageConfigEntry(visible: false);
     }
-    pages.addAll(pageConfig.pages);
   }
 }
 
@@ -90,16 +88,11 @@ class PageConfigEntryConverter
   Map<String, PageConfigEntry> fromJson(Map<String, dynamic> json) {
     final pages = <String, PageConfigEntry>{};
     for (final entry in json.entries) {
-      // TODO: Remove boolean values directly after page name
-      if (entry.value is bool) {
-        pages[entry.key] = PageConfigEntry(visible: entry.value as bool);
-      } else if (entry.value is Map<String, dynamic>) {
+      if (entry.value is Map<String, dynamic>) {
         pages[entry.key] =
-            PageConfigEntry.fromJson(entry.value as Map<String, dynamic>);
-        // TODO: Remove, YamlMap should only be within config service
-      } else if (entry.value is YamlMap) {
-        pages[entry.key] =
-            PageConfigEntry.fromJson((entry.value as YamlMap).cast());
+            PageConfigEntry.fromJson(entry.value as Map<String, dynamic>)
+                // TODO: remove to re-enable the 'visible' setting in the config
+                .copyWith(visible: true);
       } else if (entry.value == null) {
         pages[entry.key] = const PageConfigEntry();
       } else {

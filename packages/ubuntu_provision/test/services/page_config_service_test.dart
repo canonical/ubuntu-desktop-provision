@@ -21,7 +21,8 @@ pages:
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);
-    expect(pages['welcome']?.visible, isFalse);
+    // revert once 'visible' setting is re-enabled
+    expect(pages['welcome']?.visible, isTrue);
     expect(pages['network']?.visible, isTrue);
     expect(pages['network']?.image, equals('/foo/bar/network.png'));
   });
@@ -31,7 +32,7 @@ pages:
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);
-    expect(pages, isEmpty);
+    expect(pages.keys, contains('try-or-install'));
   });
 }
 
