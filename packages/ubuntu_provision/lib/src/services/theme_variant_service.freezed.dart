@@ -23,7 +23,6 @@ mixin _$ThemeConfig {
   String? get accentColor => throw _privateConstructorUsedError;
   String? get elevatedButtonColor => throw _privateConstructorUsedError;
   String? get elevatedButtonTextColor => throw _privateConstructorUsedError;
-  String? get windowTitle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,8 +39,7 @@ abstract class $ThemeConfigCopyWith<$Res> {
   $Res call(
       {String? accentColor,
       String? elevatedButtonColor,
-      String? elevatedButtonTextColor,
-      String? windowTitle});
+      String? elevatedButtonTextColor});
 }
 
 /// @nodoc
@@ -60,7 +58,6 @@ class _$ThemeConfigCopyWithImpl<$Res, $Val extends ThemeConfig>
     Object? accentColor = freezed,
     Object? elevatedButtonColor = freezed,
     Object? elevatedButtonTextColor = freezed,
-    Object? windowTitle = freezed,
   }) {
     return _then(_value.copyWith(
       accentColor: freezed == accentColor
@@ -74,10 +71,6 @@ class _$ThemeConfigCopyWithImpl<$Res, $Val extends ThemeConfig>
       elevatedButtonTextColor: freezed == elevatedButtonTextColor
           ? _value.elevatedButtonTextColor
           : elevatedButtonTextColor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      windowTitle: freezed == windowTitle
-          ? _value.windowTitle
-          : windowTitle // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -94,8 +87,7 @@ abstract class _$$ThemeConfigImplCopyWith<$Res>
   $Res call(
       {String? accentColor,
       String? elevatedButtonColor,
-      String? elevatedButtonTextColor,
-      String? windowTitle});
+      String? elevatedButtonTextColor});
 }
 
 /// @nodoc
@@ -112,7 +104,6 @@ class __$$ThemeConfigImplCopyWithImpl<$Res>
     Object? accentColor = freezed,
     Object? elevatedButtonColor = freezed,
     Object? elevatedButtonTextColor = freezed,
-    Object? windowTitle = freezed,
   }) {
     return _then(_$ThemeConfigImpl(
       accentColor: freezed == accentColor
@@ -127,10 +118,6 @@ class __$$ThemeConfigImplCopyWithImpl<$Res>
           ? _value.elevatedButtonTextColor
           : elevatedButtonTextColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      windowTitle: freezed == windowTitle
-          ? _value.windowTitle
-          : windowTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -141,8 +128,7 @@ class _$ThemeConfigImpl implements _ThemeConfig {
   const _$ThemeConfigImpl(
       {this.accentColor,
       this.elevatedButtonColor,
-      this.elevatedButtonTextColor,
-      this.windowTitle});
+      this.elevatedButtonTextColor});
 
   factory _$ThemeConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$ThemeConfigImplFromJson(json);
@@ -153,12 +139,10 @@ class _$ThemeConfigImpl implements _ThemeConfig {
   final String? elevatedButtonColor;
   @override
   final String? elevatedButtonTextColor;
-  @override
-  final String? windowTitle;
 
   @override
   String toString() {
-    return 'ThemeConfig(accentColor: $accentColor, elevatedButtonColor: $elevatedButtonColor, elevatedButtonTextColor: $elevatedButtonTextColor, windowTitle: $windowTitle)';
+    return 'ThemeConfig(accentColor: $accentColor, elevatedButtonColor: $elevatedButtonColor, elevatedButtonTextColor: $elevatedButtonTextColor)';
   }
 
   @override
@@ -172,15 +156,13 @@ class _$ThemeConfigImpl implements _ThemeConfig {
                 other.elevatedButtonColor == elevatedButtonColor) &&
             (identical(
                     other.elevatedButtonTextColor, elevatedButtonTextColor) ||
-                other.elevatedButtonTextColor == elevatedButtonTextColor) &&
-            (identical(other.windowTitle, windowTitle) ||
-                other.windowTitle == windowTitle));
+                other.elevatedButtonTextColor == elevatedButtonTextColor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, accentColor, elevatedButtonColor,
-      elevatedButtonTextColor, windowTitle);
+  int get hashCode => Object.hash(
+      runtimeType, accentColor, elevatedButtonColor, elevatedButtonTextColor);
 
   @JsonKey(ignore: true)
   @override
@@ -200,8 +182,7 @@ abstract class _ThemeConfig implements ThemeConfig {
   const factory _ThemeConfig(
       {final String? accentColor,
       final String? elevatedButtonColor,
-      final String? elevatedButtonTextColor,
-      final String? windowTitle}) = _$ThemeConfigImpl;
+      final String? elevatedButtonTextColor}) = _$ThemeConfigImpl;
 
   factory _ThemeConfig.fromJson(Map<String, dynamic> json) =
       _$ThemeConfigImpl.fromJson;
@@ -212,8 +193,6 @@ abstract class _ThemeConfig implements ThemeConfig {
   String? get elevatedButtonColor;
   @override
   String? get elevatedButtonTextColor;
-  @override
-  String? get windowTitle;
   @override
   @JsonKey(ignore: true)
   _$$ThemeConfigImplCopyWith<_$ThemeConfigImpl> get copyWith =>

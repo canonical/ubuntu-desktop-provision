@@ -11,7 +11,6 @@ void main() {
       'accent-color': '#ff0000',
       'elevated-button-color': '#00ff00',
       'elevated-button-text-color': '#0000ff',
-      'window-title': 'Window Title',
     };
     final service =
         ThemeVariantService(config: createMockConfigService(config: config));
@@ -29,7 +28,6 @@ void main() {
         equals(const Color(0xff00ff00)));
     expect(themeVariant.darkTheme?.elevatedButtonTextColor,
         equals(const Color(0xff0000ff)));
-    expect(themeVariant.windowTitle, 'Window Title');
   });
 
   test('getThemeVariant with missing config', () async {
@@ -39,7 +37,6 @@ void main() {
     expect(variant, isNotNull);
     expect(variant!.theme, null);
     expect(variant.darkTheme, null);
-    expect(variant.windowTitle, null);
   });
 }
 

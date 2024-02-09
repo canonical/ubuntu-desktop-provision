@@ -15,7 +15,6 @@ class ThemeConfig with _$ThemeConfig {
     String? accentColor,
     String? elevatedButtonColor,
     String? elevatedButtonTextColor,
-    String? windowTitle,
   }) = _ThemeConfig;
   factory ThemeConfig.fromJson(Map<String, dynamic> json) =>
       _$ThemeConfigFromJson(json);
@@ -25,13 +24,12 @@ class ThemeVariant {
   const ThemeVariant({
     this.theme,
     this.darkTheme,
-    this.windowTitle,
   });
 
   factory ThemeVariant.fromThemeConfig(ThemeConfig themeConfig) {
     final accentColor = _parseColorString(themeConfig.accentColor);
     if (accentColor == null) {
-      return ThemeVariant(windowTitle: themeConfig.windowTitle);
+      return const ThemeVariant();
     }
 
     final elevatedButtonColor =
@@ -52,13 +50,11 @@ class ThemeVariant {
     return ThemeVariant(
       theme: theme,
       darkTheme: darkTheme,
-      windowTitle: themeConfig.windowTitle,
     );
   }
 
   final ThemeData? theme;
   final ThemeData? darkTheme;
-  final String? windowTitle;
 
   static Color? _parseColorString(String? colorString) {
     if (colorString == null) {

@@ -166,6 +166,10 @@ Future<void> runInstallerApp(
     final themeVariantService = getService<ThemeVariantService>();
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
+
+    final windowTitle =
+        await getService<ConfigService>().get<String>('app-name');
+
     final endpoint = await initialized;
     await _initInstallerApp(endpoint);
 
@@ -185,7 +189,6 @@ Future<void> runInstallerApp(
               darkTheme: darkTheme ?? themeVariant?.darkTheme,
               onGenerateTitle: onGenerateTitle ??
                   (context) {
-                    final windowTitle = themeVariant?.windowTitle;
                     if (windowTitle != null) return windowTitle;
 
                     final flavor = ref.watch(flavorProvider);
