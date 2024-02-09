@@ -26,27 +26,42 @@ class ThemeVariant {
     this.darkTheme,
   });
 
-  factory ThemeVariant.fromThemeConfig(ThemeConfig themeConfig) {
-    final accentColor = _parseColorString(themeConfig.accentColor);
-    if (accentColor == null) {
+  factory ThemeVariant.fromThemeConfig({
+    required ThemeConfig lightThemeConfig,
+    ThemeConfig? darkThemeconfig,
+  }) {
+    final lightAccentColor = _parseColorString(lightThemeConfig.accentColor);
+    if (lightAccentColor == null) {
       return const ThemeVariant();
     }
 
-    final elevatedButtonColor =
-        _parseColorString(themeConfig.elevatedButtonColor);
-    final elevatedButtonTextColor =
-        _parseColorString(themeConfig.elevatedButtonTextColor);
+    final lightElevatedButtonColor =
+        _parseColorString(lightThemeConfig.elevatedButtonColor);
+    final lightElevatedButtonTextColor =
+        _parseColorString(lightThemeConfig.elevatedButtonTextColor);
 
     final theme = createYaruLightTheme(
-      primaryColor: accentColor,
-      elevatedButtonColor: elevatedButtonColor,
-      elevatedButtonTextColor: elevatedButtonTextColor,
+      primaryColor: lightAccentColor,
+      elevatedButtonColor: lightElevatedButtonColor,
+      elevatedButtonTextColor: lightElevatedButtonTextColor,
     );
+
+    final darkAccentColor =
+        _parseColorString(darkThemeconfig?.accentColor) ?? lightAccentColor;
+
+    final darkElevatedButtonColor =
+        _parseColorString(darkThemeconfig?.elevatedButtonColor) ??
+            lightElevatedButtonColor;
+    final darkElevatedButtonTextColor =
+        _parseColorString(darkThemeconfig?.elevatedButtonTextColor) ??
+            lightElevatedButtonTextColor;
+
     final darkTheme = createYaruDarkTheme(
-      primaryColor: accentColor,
-      elevatedButtonColor: elevatedButtonColor,
-      elevatedButtonTextColor: elevatedButtonTextColor,
+      primaryColor: darkAccentColor,
+      elevatedButtonColor: darkElevatedButtonColor,
+      elevatedButtonTextColor: darkElevatedButtonTextColor,
     );
+
     return ThemeVariant(
       theme: theme,
       darkTheme: darkTheme,
@@ -76,9 +91,15 @@ class ThemeVariantService {
   ThemeVariant? themeVariant;
 
   Future<void> load() async {
-    final themeConfig = ThemeConfig.fromJson(
-      await _config!.get<Map<String, dynamic>>('theme') ?? <String, dynamic>{},
+    final lightThemeConfig = ThemeConfig.fromJson(
+      await _config!.get('light', scopeOverride: 'theme') ?? {},
     );
-    themeVariant = ThemeVariant.fromThemeConfig(themeConfig);
+    final darkThemeConfig = ThemeConfig.fromJson(
+      await _config!.get('dark', scopeOverride: 'theme') ?? {},
+    );
+    themeVariant = ThemeVariant.fromThemeConfig(
+      lightThemeConfig: lightThemeConfig,
+      darkThemeconfig: darkThemeConfig,
+    );
   }
 }
