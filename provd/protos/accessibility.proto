@@ -4,205 +4,53 @@ package accessibility;
 
 import "google/protobuf/empty.proto";
 
+
+import "google/protobuf/wrappers.proto";;
+ 
 service AccessibilityService {
+
     // Seeing
-    rpc GetHighContrast(google.protobuf.Empty) returns (GetHighContrastResponse) {}
+    rpc GetHighContrast(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableHighContrast(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableHighContrast(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetReducedMotion(google.protobuf.Empty) returns (GetReducedMotionResponse) {}
+    rpc GetReducedMotion(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableReducedMotion(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableReducedMotion(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetLargeText(google.protobuf.Empty) returns (GetLargeTextResponse) {}
+    rpc GetLargeText(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableLargeText(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableLargeText(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetCursorSize(google.protobuf.Empty) returns (GetCursorSizeResponse) {}
-    rpc SetCursorSize(SetCursorSizeRequest) returns (google.protobuf.Empty) {}
-
-    rpc GetSoundKeys(google.protobuf.Empty) returns (GetSoundKeysResponse) {}
-    rpc EnableSoundKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableSoundKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetOverlayScrollbars(google.protobuf.Empty) returns (GetOverlayScrollbarsResponse) {}
-    rpc EnableOverlayScrollbars(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableOverlayScrollbars(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetScreenReader(google.protobuf.Empty) returns (GetScreenReaderResponse) {}
+    rpc GetScreenReader(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableScreenReader(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableScreenReader(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
     // Hearing
-    rpc GetOveramplification(google.protobuf.Empty) returns (GetOveramplificationResponse) {}
-    rpc EnableOveramplification(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableOveramplification(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetVisualAlerts(google.protobuf.Empty) returns (GetVisualAlertsResponse) {}
-    rpc EnableVisualAlerts(EnableVisualAlertsRequest) returns (google.protobuf.Empty) {}
+    rpc GetVisualAlerts(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableVisualAlerts(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableVisualAlerts(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
     // Typing
-    rpc GetScreenKeyboard(google.protobuf.Empty) returns (GetScreenKeyboardResponse) {}
+    rpc GetScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetEnableByKeyboard(google.protobuf.Empty) returns (GetEnableByKeyboardResponse) {}
-    rpc EnableEnableByKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableEnableByKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetCursorBlinking(google.protobuf.Empty) returns (GetCursorBlinkingResponse) {}
-    rpc EnableCursorBlinking(EnableCursorBlinkingRequest) returns (google.protobuf.Empty) {}
-    rpc DisableCursorBlinking(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetRepeatedKeys(google.protobuf.Empty) returns (GetRepeatedKeysResponse) {}
-    rpc EnableRepeatedKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableRepeatedKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetStickyKeys(google.protobuf.Empty) returns (GetStickyKeysResponse) {}
+    rpc GetStickyKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableStickyKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableStickyKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetSlowKeys(google.protobuf.Empty) returns (GetSlowKeysResponse) {}
+    rpc GetSlowKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableSlowKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableSlowKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetBounceKeys(google.protobuf.Empty) returns (GetBounceKeysResponse) {}
-    rpc EnableBounceKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableBounceKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
     // Pointing & Clicking
-    rpc GetMouseKeys(google.protobuf.Empty) returns (GetMouseKeysResponse) {}
+    rpc GetMouseKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
     rpc EnableMouseKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
     rpc DisableMouseKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 
-    rpc GetLocationPointer(google.protobuf.Empty) returns (GetLocationPointerResponse) {}
-    rpc EnableLocationPointer(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableLocationPointer(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetDoubleClickDelay(google.protobuf.Empty) returns (GetDoubleClickDelayResponse) {}
-    rpc SetDoubleClickDelay(SetDoubleClickDelayRequest) returns (google.protobuf.Empty) {}
-
-    rpc GetSimulatedSecondaryClicks(google.protobuf.Empty) returns (GetSimulatedSecondaryClicksResponse) {}
-    rpc EnableSimulatedSecondaryClicks(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableSimulatedSecondaryClicks(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-    rpc GetHoverClicks(google.protobuf.Empty) returns (GetHoverClicksResponse) {}
-    rpc EnableHoverClicks(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-    rpc DisableHoverClicks(google.protobuf.Empty) returns (google.protobuf.Empty) {}
-
-}
-
-message GetDoubleClickDelayResponse {
-    float delay = 1;
-}
-
-message SetDoubleClickDelayRequest {
-    float delay = 1;
-}
-
-message GetCursorSizeResponse {
-    CursorSize size = 1;
-}
-
-message SetCursorSizeRequest {
-    CursorSize size = 1;
-}
-
-enum CursorSize {
-    DEFAULT = 0;
-    MEDIUM = 1;
-    LARGE = 2;
-    LARGER = 3;
-    LARGEST = 4;
-}
-
-message EnableVisualAlertsRequest {
-    FlashArea area = 1;
-}
-
-enum FlashArea {
-    ENTIRE_SCREEN = 0;
-    ENTIRE_WINDOW = 1;
-}
-
-message GetCursorBlinkingResponse {
-    bool enabled = 1;
-    float blinking_speed = 2;
-}
-
-message EnableCursorBlinkingRequest {
-    float blinking_speed = 1;
-}
-message GetHighContrastResponse {
-    bool enabled = 1;
-}
-
-message GetReducedMotionResponse {
-    bool enabled = 1;
-}
-
-message GetLargeTextResponse {
-    bool enabled = 1;
-}
-
-message GetSoundKeysResponse {
-    bool enabled = 1;
-}
-
-message GetOverlayScrollbarsResponse {
-    bool enabled = 1;
-}
-
-message GetScreenReaderResponse {
-    bool enabled = 1;
-}
-
-message GetOveramplificationResponse {
-    bool enabled = 1;
-}
-
-message GetVisualAlertsResponse {
-    bool enabled = 1;
-    FlashArea area = 2;
-}
-
-message GetScreenKeyboardResponse {
-    bool enabled = 1;
-}
-
-message GetEnableByKeyboardResponse {
-    bool enabled = 1;
-}
-
-message GetRepeatedKeysResponse {
-    bool enabled = 1;
-}
-
-message GetStickyKeysResponse {
-    bool enabled = 1;
-}
-
-message GetSlowKeysResponse {
-    bool enabled = 1;
-}
-
-message GetBounceKeysResponse {
-    bool enabled = 1;
-}
-
-message GetMouseKeysResponse {
-    bool enabled = 1;
-}
-
-message GetLocationPointerResponse {
-    bool enabled = 1;
-}
-
-message GetSimulatedSecondaryClicksResponse {
-    bool enabled = 1;
-}
-
-message GetHoverClicksResponse {
-    bool enabled = 1;
+    // Zoom
+    rpc GetDesktopZoon(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableDesktopZoon(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableDesktopZoon(google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }
