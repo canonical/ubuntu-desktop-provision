@@ -4,6 +4,7 @@ package accessibility;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
 
 import "google/protobuf/wrappers.proto";;
  
