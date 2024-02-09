@@ -40,6 +40,9 @@ Future<void> runInitApp(
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
 
+    final windowTitle =
+        await getService<ConfigService>().get<String>('app-name');
+
     log.debug('Loading page config');
     await getService<PageConfigService>().load();
 
@@ -57,8 +60,7 @@ Future<void> runInitApp(
             flavor: flavor,
             theme: theme ?? themeVariant?.theme,
             darkTheme: darkTheme ?? themeVariant?.darkTheme,
-            onGenerateTitle:
-                onGenerateTitle ?? (_) => themeVariant?.windowTitle ?? '',
+            onGenerateTitle: onGenerateTitle ?? (_) => windowTitle ?? '',
             locale: ref.watch(localeProvider),
             localizationsDelegates: [
               ...?localizationsDelegates,
