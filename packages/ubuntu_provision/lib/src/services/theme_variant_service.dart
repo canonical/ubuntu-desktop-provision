@@ -97,9 +97,7 @@ class ThemeVariantService {
           <String, dynamic>{},
     );
     final darkThemeConfig = ThemeConfig.fromJson(
-      await _config!
-              .get<Map<String, dynamic>>('dark', scopeOverride: 'theme') ??
-          <String, dynamic>{},
+      await _config!.get('dark', scopeOverride: 'theme') ?? {},
     );
     themeVariant = ThemeVariant.fromThemeConfig(
       lightThemeConfig: lightThemeConfig,
