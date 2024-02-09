@@ -5,7 +5,6 @@ pages:
     image: "assets/images/accessibility.svg"
   try-or-install:
     image: "assets/images/try-or-install.svg"
-    visible: false
   rst:
     image: "assets/images/rst.svg"
   keyboard:
