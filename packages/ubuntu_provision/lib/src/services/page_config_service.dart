@@ -10,6 +10,21 @@ part 'page_config_service.g.dart';
 final _log = Logger('page');
 const _tryOrInstallName = 'try-or-install';
 
+enum ProvisioningMode {
+  standard,
+  oem;
+
+  static ProvisioningMode fromString(String? value) {
+    final lower = value?.toLowerCase();
+    switch (lower) {
+      case 'oem':
+        return ProvisioningMode.oem;
+      default:
+        return ProvisioningMode.standard;
+    }
+  }
+}
+
 class PageConfigService {
   PageConfigService({ConfigService? config, this.includeTryOrInstall = false})
       : _config = config;
@@ -17,7 +32,8 @@ class PageConfigService {
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
   final bool includeTryOrInstall;
-  late bool isOem;
+  late final ProvisioningMode mode;
+  bool get isOem => mode == ProvisioningMode.oem;
 
   List<String> get excludedPages => pages.entries
       .whereNot((e) =>
@@ -31,7 +47,7 @@ class PageConfigService {
       'pages': await _config!.get<Map<String, dynamic>>('pages') ??
           <String, dynamic>{},
     });
-    isOem = await _config!.get<bool>('oem') ?? false;
+    mode = ProvisioningMode.fromString(await _config!.get<String>('mode'));
 
     if (isOem) {
       pages['identity'] = const PageConfigEntry(visible: false);

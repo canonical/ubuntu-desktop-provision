@@ -37,11 +37,11 @@ pages:
 
 MockConfigService createMockConfigService({
   String config = '',
-  bool isOem = false,
+  ProvisioningMode mode = ProvisioningMode.standard,
 }) {
   final mock = MockConfigService();
   final yaml = loadYaml(config)?['pages'] as YamlMap?;
-  when(mock.get('oem')).thenAnswer((_) async => isOem);
+  when(mock.get('mode')).thenAnswer((_) async => mode.name);
   when(mock.get('pages')).thenAnswer(
     (_) async => config == '' ? null : yaml?.toMap(),
   );
