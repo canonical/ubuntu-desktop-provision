@@ -43,6 +43,13 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Timezone object")
 	}
 
+	// Applying options, checking for errors in obtaining DBus objects
+	for _, opt := range opts {
+		if err := opt(s); err != nil {
+			return nil, err
+		}
+	}
+
 	return s, nil
 }
 
