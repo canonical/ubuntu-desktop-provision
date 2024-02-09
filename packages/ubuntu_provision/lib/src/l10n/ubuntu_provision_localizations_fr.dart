@@ -45,6 +45,12 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get accessibilityVisualAlertsLabel => 'Visual alerts';
 
   @override
+  String get errorPageTitle => 'Something went wrong';
+
+  @override
+  String get errorPageUnexpected => 'An unexpected error has occurred';
+
+  @override
   String get timezonePageTitle => 'Sélectionnez votre fuseau horaire';
 
   @override

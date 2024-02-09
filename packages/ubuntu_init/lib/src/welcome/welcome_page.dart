@@ -15,7 +15,8 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
   const WelcomePage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async => true;
+  Future<bool> load(BuildContext context, WidgetRef ref) =>
+      ref.read(welcomeModelProvider).init();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -11,9 +11,14 @@ export 'test_welcome.mocks.dart';
 WelcomeModel buildWelcomeModel({
   ProductInfo? productInfo,
   String? releaseNotesUrl,
+  Exception? error,
 }) {
   final model = MockWelcomeModel();
-  when(model.init()).thenAnswer((_) async => true);
+  if (error != null) {
+    when(model.init()).thenThrow(error);
+  } else {
+    when(model.init()).thenAnswer((_) async => true);
+  }
   when(model.productInfo)
       .thenReturn(productInfo ?? ProductInfo(name: 'Ubuntu'));
   when(model.releaseNotesURL(any))

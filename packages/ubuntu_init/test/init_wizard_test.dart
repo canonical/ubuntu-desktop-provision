@@ -192,6 +192,48 @@ void main() {
 
     await expectLater(windowClosed, completes);
   });
+
+  group('error page', () {
+    testWidgets('init wizard', (tester) async {
+      final initModel = buildInitModel(pages: [Routes.locale]);
+      final localeModel = buildLocaleModel(error: Exception());
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            initModelProvider.overrideWith((_) => initModel),
+            localeModelProvider.overrideWith((_) => localeModel),
+          ],
+          child: tester.buildTestWizard(),
+        ),
+      );
+      await tester.pump(const Duration(seconds: 1));
+
+      await tester.pumpAndSettle();
+      expect(find.byType(LocalePage), findsNothing);
+      expect(find.byType(ErrorPage), findsOneWidget);
+    });
+
+    testWidgets('welcome wizard', (tester) async {
+      final initModel = buildInitModel(pages: [Routes.welcome]);
+      final welcomeModel = buildWelcomeModel(error: Exception());
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            initModelProvider.overrideWith((_) => initModel),
+            welcomeModelProvider.overrideWith((_) => welcomeModel),
+          ],
+          child: tester.buildTestWizard(welcome: true),
+        ),
+      );
+      await tester.pump(const Duration(seconds: 1));
+
+      await tester.pumpAndSettle();
+      expect(find.byType(WelcomePage), findsNothing);
+      expect(find.byType(ErrorPage), findsOneWidget);
+    });
+  });
 }
 
 extension on WidgetTester {

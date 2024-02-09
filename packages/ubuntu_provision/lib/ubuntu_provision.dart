@@ -2,6 +2,7 @@ library ubuntu_provision;
 
 export 'accessibility.dart';
 export 'active_directory.dart';
+export 'error.dart';
 export 'identity.dart';
 export 'interfaces.dart';
 export 'keyboard.dart';
