@@ -57,8 +57,9 @@ Future<void> runInstallerApp(
       defaultsTo: 'examples/sources/desktop.yaml',
       help: 'Path of the source catalog (dry-run only)',
     );
-    // TODO: Remove in favor of using the whitelabel.yml config file.
-    parser.addFlag('welcome', aliases: ['try-or-install'], hide: true);
+    // This can't be handled by the whitelabel config since if a user clicks
+    // try, the next time it opens the installer the page shouldn't show.
+    parser.addFlag('try-or-install', aliases: ['welcome']);
   })!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
@@ -69,7 +70,7 @@ Future<void> runInstallerApp(
   final subiquityPath = await getSubiquityPath()
       .then((dir) => Directory(dir).existsSync() ? dir : null);
   final endpoint = await defaultEndpoint(serverMode);
-  final includeTryOrInstall = options['welcome'] as bool? ?? false;
+  final includeTryOrInstall = options['try-or-install'] as bool? ?? false;
   final process = liveRun
       ? null
       : SubiquityProcess.python(
