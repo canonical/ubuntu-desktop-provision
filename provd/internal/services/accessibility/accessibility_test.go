@@ -28,13 +28,17 @@ const (
 
 func TestGetHighContrast(t *testing.T) {
 	tests := map[string]struct {
+		// Error flags
 		emptyRequest    bool
 		getBooleanError bool
 
-		wantErr bool
+		// Wants
+		wantErr  bool
+		wantTrue bool
 	}{
 		// Success case
-		"Success getting state of high contrast": {},
+		"Success getting state of high contrast":              {},
+		"Success getting state of high contrast when enabled": {wantTrue: true},
 
 		// Error cases
 		"Error case returns false, no calls made": {getBooleanError: true},
@@ -46,9 +50,9 @@ func TestGetHighContrast(t *testing.T) {
 			// Prepare mocks
 			var opts []accessibility.Option
 			if tc.getBooleanError {
-				opts = append(opts, accessibility.WithA11ySettings(accessibility.GSettingsSubsetMock{GetBooleanError: true}))
+				opts = append(opts, accessibility.WithA11ySettings(accessibility.GSettingsSubsetMock{GetBooleanError: true, WantTrue: tc.wantTrue}))
 			} else {
-				opts = append(opts, accessibility.WithA11ySettings(accessibility.GSettingsSubsetMock{}))
+				opts = append(opts, accessibility.WithA11ySettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
 			}
 
 			// Setup test
@@ -180,10 +184,12 @@ func TestGetReducedMotion(t *testing.T) {
 		getBooleanError bool
 
 		// wants
-		wantErr bool
+		wantErr  bool
+		wantTrue bool
 	}{
 		// Success case
-		"Success getting state of reduced motion": {},
+		"Success getting state of reduced motion":               {},
+		"Success gettings state of reduced motion when enabled": {wantTrue: true},
 
 		// Error cases
 		"Error case returns false, no calls made": {getBooleanError: true},
@@ -195,9 +201,9 @@ func TestGetReducedMotion(t *testing.T) {
 			// Prepare mocks
 			var opts []accessibility.Option
 			if tc.getBooleanError {
-				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{GetBooleanError: true}))
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{GetBooleanError: true, WantTrue: tc.wantTrue}))
 			} else {
-				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{}))
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
 			}
 
 			// Setup test
@@ -318,6 +324,311 @@ func TestEnableReducedMotion(t *testing.T) {
 			}
 			require.NoError(t, err, "EnableReducedMotion should not return an error")
 			require.NotNil(t, resp, "EnableReducedMotion should return a non-nil response")
+		})
+	}
+}
+
+func TestGetLargeText(t *testing.T) {
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest   bool
+		getDoubleError bool
+
+		// wants
+		wantTrue bool
+		wantErr  bool
+	}{
+		// Success case
+		//"Success getting state of large text when disabled": {},
+		"Success getting state of large text when enabled": {wantTrue: true},
+
+		// Error cases
+		// "Error case returns false, no calls made": {getDoubleError: true},
+		// "Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.getDoubleError {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{GetDoubleError: true, WantTrue: tc.wantTrue}))
+			} else {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetLargeText(context.Background(), req)
+			got := fmt.Sprintf("%v", resp.GetValue())
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "GetLargeText should return an error")
+				require.Empty(t, resp, "GetLargeText should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetLargeText should not return an error")
+		})
+
+	}
+}
+func TestEnableLargeText(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest   bool
+		setDoubleError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable large text": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setDoubleError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setDoubleError {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{SetDoubleError: true}))
+			} else {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.EnableLargeText(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "EnableLargeText should return an error")
+				require.Empty(t, resp, "EnableLargeText should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableLargeText should not return an error")
+			require.NotNil(t, resp, "EnableLargeText should return a non-nil response")
+		})
+	}
+}
+
+func TestDisableLargeText(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest   bool
+		setDoubleError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable large text": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setDoubleError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setDoubleError {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{SetDoubleError: true}))
+			} else {
+				opts = append(opts, accessibility.WithInterfaceSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.DisableLargeText(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "DisableLargeText should return an error")
+				require.Empty(t, resp, "DisableLargeText should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableLargeText should not return an error")
+			require.NotNil(t, resp, "DisableLargeText should return a non-nil response")
+		})
+	}
+}
+
+func TestGetScreenReader(t *testing.T) {
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest    bool
+		getBooleanError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of screen reader":              {},
+		"Success getting state of screen reader when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {getBooleanError: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.getBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{GetBooleanError: true, WantTrue: tc.wantTrue}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetScreenReader(context.Background(), req)
+			got := fmt.Sprintf("%t", resp.GetValue())
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "GetScreenReader should return an error")
+				require.Empty(t, resp, "GetScreenReader should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetScreenReader should not return an error")
+		})
+	}
+}
+
+func TestEnableScreenReader(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable screen reader": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.EnableScreenReader(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "EnableScreenReader should return an error")
+				require.Empty(t, resp, "EnableScreenReader should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableScreenReader should not return an error")
+			require.NotNil(t, resp, "EnableScreenReader should return a non-nil response")
+		})
+	}
+}
+
+func TestDisableScreenReader(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable screen reader": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.DisableScreenReader(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "DisableScreenReader should return an error")
+				require.Empty(t, resp, "DisableScreenReader should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableScreenReader should not return an error")
+			require.NotNil(t, resp, "DisableScreenReader should return a non-nil response")
 		})
 	}
 }

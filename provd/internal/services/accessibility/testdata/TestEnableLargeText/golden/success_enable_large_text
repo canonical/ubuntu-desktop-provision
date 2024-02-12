@@ -1,0 +1,1 @@
+gsettings.SetDouble(key: text-scaling-factor, value: 1.25)

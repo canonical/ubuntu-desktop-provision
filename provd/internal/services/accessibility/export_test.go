@@ -43,6 +43,10 @@ func WithApplicationSettings(g GSettingsSubset) Option {
 }
 
 type GSettingsSubsetMock struct {
+
+	// Wants
+	WantTrue bool
+
 	// Error flags for each method
 	IsWritableError bool
 	SetBooleanError bool
@@ -64,11 +68,14 @@ func (g GSettingsSubsetMock) SetBoolean(key string, value bool) bool {
 }
 
 func (g GSettingsSubsetMock) GetBoolean(key string) bool {
-	return !g.GetBooleanError
+	if g.GetBooleanError {
+		return false
+	}
+	return g.WantTrue
 }
 
 func (g GSettingsSubsetMock) SetDouble(key string, value float64) bool {
-	if g.SetBooleanError {
+	if g.SetDoubleError {
 		return false
 	}
 	testutils.WriteActionToFile("gsettings.SetDouble(key: " + key + ", value: " + strconv.FormatFloat(value, 'f', -1, 64) + ")\n")
@@ -79,6 +86,8 @@ func (g GSettingsSubsetMock) GetDouble(key string) float64 {
 	if g.GetDoubleError {
 		return 0
 	}
-	testutils.WriteActionToFile("gsettings.GetDouble(key: " + key + ")\n")
-	return 1.25
+	if g.WantTrue {
+		return 1.25
+	}
+	return 1.0
 }
