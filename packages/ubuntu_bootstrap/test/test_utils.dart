@@ -63,6 +63,7 @@ class _Dummy {} // ignore: unused_element
 void setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
   List<String> excludedPages = const ['welcome'],
+  bool isOem = false,
 }) {
   final pages = overridePages ??
       Map.fromEntries(InstallationStep.values
@@ -71,6 +72,7 @@ void setupMockPageConfig({
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
   when(pageConfigService.excludedPages).thenReturn(excludedPages);
+  when(pageConfigService.isOem).thenReturn(isOem);
 }
 
 const keyboardSetup = KeyboardSetup(
