@@ -19,12 +19,8 @@ class PrivacyModel extends ChangeNotifier {
   bool _locationEnabled = false;
   bool get isLocationEnabled => _locationEnabled;
 
-  bool _reportingEnabled = false;
-  bool get isReportingEnabled => _reportingEnabled;
-
   Future<bool> init() async {
     _locationEnabled = await _service.isLocationEnabled();
-    _reportingEnabled = await _service.isReportingEnabled();
     return true;
   }
 
@@ -32,13 +28,6 @@ class PrivacyModel extends ChangeNotifier {
     if (_locationEnabled == value) return;
     await _service.setLocationEnabled(value);
     _locationEnabled = value;
-    notifyListeners();
-  }
-
-  Future<void> setReportingEnabled(bool value) async {
-    if (_reportingEnabled == value) return;
-    await _service.setReportingEnabled(value);
-    _reportingEnabled = value;
     notifyListeners();
   }
 }
