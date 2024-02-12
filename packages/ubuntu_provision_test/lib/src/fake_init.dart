@@ -43,6 +43,7 @@ Future<void> registerFakeInitServices({
   registerService<LocaleService>(
       () => ProvdLocaleService(client: FakeProvdLocaleClient()));
   registerService<NetworkService>(() => NetworkService(bus: client));
+  registerService<PrivacyService>(FakePrivacyService.new);
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
   registerService<TimezoneService>(
@@ -257,6 +258,7 @@ class _FakeUrlLauncher implements UrlLauncher {
   Future<bool> launchUrl(String url) async => true;
 }
 
+// TODO: make all fake services private for consistency
 class FakeProvdLocaleClient implements provd.ProvdLocaleClient {
   FakeProvdLocaleClient();
 
@@ -312,4 +314,12 @@ class FakeProvdTimezoneClient implements provd.ProvdTimezoneClient {
 
   @override
   Future<void> setTimezone(String timezone) async => _timezone = timezone;
+}
+
+class FakePrivacyService implements PrivacyService {
+  @override
+  Future<bool> isLocationEnabled() async => false;
+
+  @override
+  Future<void> setLocationEnabled(bool value) async {}
 }
