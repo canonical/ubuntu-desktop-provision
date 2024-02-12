@@ -1,0 +1,1 @@
+gsettings.SetBoolean(key: high-contrast, value: false)
