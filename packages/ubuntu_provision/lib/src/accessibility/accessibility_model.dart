@@ -63,6 +63,13 @@ enum AccessibilityOption {
   screenReader,
   // Hearing
   visualAlerts,
+  // Typing
+  stickyKeys,
+  slowKeys,
+  // Pointer
+  mouseKeys,
+  // Zoom
+  desktopZoom,
 }
 
 extension on AccessibilityService {
@@ -73,6 +80,10 @@ extension on AccessibilityService {
         AccessibilityOption.reduceAnimation => setReduceAnimation(value),
         AccessibilityOption.screenReader => setScreenReader(value),
         AccessibilityOption.visualAlerts => setVisualAlerts(value),
+        AccessibilityOption.stickyKeys => setStickyKeys(value),
+        AccessibilityOption.slowKeys => setSlowKeys(value),
+        AccessibilityOption.mouseKeys => setMouseKeys(value),
+        AccessibilityOption.desktopZoom => setDesktopZoom(value),
       };
   Future<bool> getOption(AccessibilityOption option) => switch (option) {
         AccessibilityOption.highContrast => getHighContrast(),
@@ -80,5 +91,9 @@ extension on AccessibilityService {
         AccessibilityOption.reduceAnimation => getReduceAnimation(),
         AccessibilityOption.screenReader => getScreenReader(),
         AccessibilityOption.visualAlerts => getVisualAlerts(),
+        AccessibilityOption.stickyKeys => getStickyKeys(),
+        AccessibilityOption.slowKeys => getSlowKeys(),
+        AccessibilityOption.mouseKeys => getMouseKeys(),
+        AccessibilityOption.desktopZoom => getDesktopZoom(),
       };
 }
