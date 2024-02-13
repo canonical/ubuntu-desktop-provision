@@ -12,6 +12,7 @@ class GnomeAccessibilityService implements AccessibilityService {
     @visibleForTesting GSettings? a11yInterfaceSettings,
     @visibleForTesting GSettings? applicationSettings,
     @visibleForTesting GSettings? interfaceSettings,
+    @visibleForTesting GSettings? keyboardSettings,
     @visibleForTesting GSettings? wmSettings,
   })  : _a11yInterfaceSettings = a11yInterfaceSettings ??
             createService<GSettings, String>(
@@ -25,6 +26,10 @@ class GnomeAccessibilityService implements AccessibilityService {
             createService<GSettings, String>(
               'org.gnome.desktop.interface',
             ),
+        _keyboardSettings = keyboardSettings ??
+            createService<GSettings, String>(
+              'org.gnome.desktop.a11y.keyboard',
+            ),
         _wmSettings = wmSettings ??
             createService<GSettings, String>(
               'org.gnome.desktop.wm.preferences',
@@ -33,6 +38,7 @@ class GnomeAccessibilityService implements AccessibilityService {
   final GSettings _a11yInterfaceSettings;
   final GSettings _applicationSettings;
   final GSettings _interfaceSettings;
+  final GSettings _keyboardSettings;
   final GSettings _wmSettings;
 
   static const _textScalingDefault = 1.0;
@@ -118,4 +124,56 @@ class GnomeAccessibilityService implements AccessibilityService {
   @override
   Future<void> setVisualAlerts(bool value) =>
       _trySet(_wmSettings, 'visual-bell', DBusBoolean(value));
+
+  @override
+  Future<bool> getStickyKeys() => _tryGet(
+        _keyboardSettings,
+        'stickykeys-enable',
+      ).then((value) => value?.asBoolean() ?? false);
+
+  @override
+  Future<void> setStickyKeys(bool value) => _trySet(
+        _keyboardSettings,
+        'stickykeys-enable',
+        DBusBoolean(value),
+      );
+
+  @override
+  Future<bool> getSlowKeys() => _tryGet(
+        _keyboardSettings,
+        'slowkeys-enable',
+      ).then((value) => value?.asBoolean() ?? false);
+
+  @override
+  Future<void> setSlowKeys(bool value) => _trySet(
+        _keyboardSettings,
+        'slowkeys-enable',
+        DBusBoolean(value),
+      );
+
+  @override
+  Future<bool> getMouseKeys() => _tryGet(
+        _keyboardSettings,
+        'mousekeys-enable',
+      ).then((value) => value?.asBoolean() ?? false);
+
+  @override
+  Future<void> setMouseKeys(bool value) => _trySet(
+        _keyboardSettings,
+        'mousekeys-enable',
+        DBusBoolean(value),
+      );
+
+  @override
+  Future<bool> getDesktopZoom() => _tryGet(
+        _applicationSettings,
+        'screen-magnifier-enabled',
+      ).then((value) => value?.asBoolean() ?? false);
+
+  @override
+  Future<void> setDesktopZoom(bool value) => _trySet(
+        _applicationSettings,
+        'screen-magnifier-enabled',
+        DBusBoolean(value),
+      );
 }

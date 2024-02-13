@@ -499,6 +499,82 @@ class MockAccessibilityService extends _i1.Mock
       ) as _i13.Future<void>);
 
   @override
+  _i13.Future<bool> getStickyKeys() => (super.noSuchMethod(
+        Invocation.method(
+          #getStickyKeys,
+          [],
+        ),
+        returnValue: _i13.Future<bool>.value(false),
+      ) as _i13.Future<bool>);
+
+  @override
+  _i13.Future<void> setStickyKeys(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setStickyKeys,
+          [value],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+
+  @override
+  _i13.Future<bool> getSlowKeys() => (super.noSuchMethod(
+        Invocation.method(
+          #getSlowKeys,
+          [],
+        ),
+        returnValue: _i13.Future<bool>.value(false),
+      ) as _i13.Future<bool>);
+
+  @override
+  _i13.Future<void> setSlowKeys(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setSlowKeys,
+          [value],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+
+  @override
+  _i13.Future<bool> getMouseKeys() => (super.noSuchMethod(
+        Invocation.method(
+          #getMouseKeys,
+          [],
+        ),
+        returnValue: _i13.Future<bool>.value(false),
+      ) as _i13.Future<bool>);
+
+  @override
+  _i13.Future<void> setMouseKeys(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setMouseKeys,
+          [value],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+
+  @override
+  _i13.Future<bool> getDesktopZoom() => (super.noSuchMethod(
+        Invocation.method(
+          #getDesktopZoom,
+          [],
+        ),
+        returnValue: _i13.Future<bool>.value(false),
+      ) as _i13.Future<bool>);
+
+  @override
+  _i13.Future<void> setDesktopZoom(bool? value) => (super.noSuchMethod(
+        Invocation.method(
+          #setDesktopZoom,
+          [value],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+
+  @override
   _i13.Future<bool> isSupported() => (super.noSuchMethod(
         Invocation.method(
           #isSupported,

@@ -13,6 +13,10 @@ void main() {
     when(service.getReduceAnimation()).thenAnswer((_) async => true);
     when(service.getScreenReader()).thenAnswer((_) async => false);
     when(service.getVisualAlerts()).thenAnswer((_) async => true);
+    when(service.getStickyKeys()).thenAnswer((_) async => false);
+    when(service.getSlowKeys()).thenAnswer((_) async => false);
+    when(service.getMouseKeys()).thenAnswer((_) async => false);
+    when(service.getDesktopZoom()).thenAnswer((_) async => false);
 
     final model = AccessibilityModel(service);
 
@@ -23,6 +27,10 @@ void main() {
     verify(service.getReduceAnimation()).called(1);
     verify(service.getScreenReader()).called(1);
     verify(service.getVisualAlerts()).called(1);
+    verify(service.getStickyKeys()).called(1);
+    verify(service.getSlowKeys()).called(1);
+    verify(service.getMouseKeys()).called(1);
+    verify(service.getDesktopZoom()).called(1);
 
     expect(model.activeOptions, [
       AccessibilityOption.highContrast,
@@ -39,6 +47,10 @@ void main() {
     when(service.getReduceAnimation()).thenAnswer((_) async => true);
     when(service.getScreenReader()).thenAnswer((_) async => true);
     when(service.getVisualAlerts()).thenAnswer((_) async => true);
+    when(service.getStickyKeys()).thenAnswer((_) async => false);
+    when(service.getSlowKeys()).thenAnswer((_) async => false);
+    when(service.getMouseKeys()).thenAnswer((_) async => false);
+    when(service.getDesktopZoom()).thenAnswer((_) async => false);
 
     final model = AccessibilityModel(service);
 
