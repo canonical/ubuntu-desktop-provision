@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:diacritic/diacritic.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_model.dart';
 
 import 'test_locale.dart';
@@ -135,6 +136,6 @@ void main() {
 
     final model = LocaleModel(locale: locale, sound: sound);
     await model.playWelcomeSound();
-    verify(sound.play('system-ready')).called(1);
+    verify(sound.play(SoundId.systemReady)).called(1);
   });
 }

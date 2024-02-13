@@ -1858,7 +1858,17 @@ class MockSoundService extends _i1.Mock implements _i4.SoundService {
   }
 
   @override
-  _i13.Future<void> play(String? id) => (super.noSuchMethod(
+  _i13.Future<void> load() => (super.noSuchMethod(
+        Invocation.method(
+          #load,
+          [],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+
+  @override
+  _i13.Future<void> play(_i4.SoundId? id) => (super.noSuchMethod(
         Invocation.method(
           #play,
           [id],
