@@ -12,6 +12,7 @@ void main() {
   late MockGSettings a11yInterfaceSettings;
   late MockGSettings applicationSettings;
   late MockGSettings interfaceSettings;
+  late MockGSettings keyboardSettings;
   late MockGSettings wmSettings;
 
   late GnomeAccessibilityService service;
@@ -20,17 +21,20 @@ void main() {
     a11yInterfaceSettings = MockGSettings();
     applicationSettings = MockGSettings();
     interfaceSettings = MockGSettings();
+    keyboardSettings = MockGSettings();
     wmSettings = MockGSettings();
 
     when(a11yInterfaceSettings.set(any, any)).thenAnswer((_) async {});
     when(applicationSettings.set(any, any)).thenAnswer((_) async {});
     when(interfaceSettings.set(any, any)).thenAnswer((_) async {});
+    when(keyboardSettings.set(any, any)).thenAnswer((_) async {});
     when(wmSettings.set(any, any)).thenAnswer((_) async {});
 
     service = GnomeAccessibilityService(
       a11yInterfaceSettings: a11yInterfaceSettings,
       applicationSettings: applicationSettings,
       interfaceSettings: interfaceSettings,
+      keyboardSettings: keyboardSettings,
       wmSettings: wmSettings,
     );
   });
@@ -64,6 +68,31 @@ void main() {
       await service.setVisualAlerts(true);
       verify(wmSettings.set('visual-bell', const DBusBoolean(true))).called(1);
     });
+
+    test('setStickyKeys', () async {
+      await service.setStickyKeys(true);
+      verify(keyboardSettings.set('stickykeys-enable', const DBusBoolean(true)))
+          .called(1);
+    });
+
+    test('setSlowKeys', () async {
+      await service.setSlowKeys(true);
+      verify(keyboardSettings.set('slowkeys-enable', const DBusBoolean(true)))
+          .called(1);
+    });
+
+    test('setMouseKeys', () async {
+      await service.setMouseKeys(true);
+      verify(keyboardSettings.set('mousekeys-enable', const DBusBoolean(true)))
+          .called(1);
+    });
+
+    test('setDesktopZoom', () async {
+      await service.setDesktopZoom(true);
+      verify(applicationSettings.set(
+              'screen-magnifier-enabled', const DBusBoolean(true)))
+          .called(1);
+    });
   });
 
   group('read settings', () {
@@ -91,6 +120,26 @@ void main() {
       when(wmSettings.get('visual-bell'))
           .thenAnswer((_) async => const DBusBoolean(true));
       expect(await service.getVisualAlerts(), isTrue);
+    });
+    test('getStickyKeys', () async {
+      when(keyboardSettings.get('stickykeys-enable'))
+          .thenAnswer((_) async => const DBusBoolean(true));
+      expect(await service.getStickyKeys(), isTrue);
+    });
+    test('getSlowKeys', () async {
+      when(keyboardSettings.get('slowkeys-enable'))
+          .thenAnswer((_) async => const DBusBoolean(true));
+      expect(await service.getSlowKeys(), isTrue);
+    });
+    test('getMouseKeys', () async {
+      when(keyboardSettings.get('mousekeys-enable'))
+          .thenAnswer((_) async => const DBusBoolean(true));
+      expect(await service.getMouseKeys(), isTrue);
+    });
+    test('getDesktopZoom', () async {
+      when(applicationSettings.get('screen-magnifier-enabled'))
+          .thenAnswer((_) async => const DBusBoolean(true));
+      expect(await service.getDesktopZoom(), isTrue);
     });
   });
 }

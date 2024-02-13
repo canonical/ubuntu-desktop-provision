@@ -45,6 +45,18 @@ class UbuntuProvisionLocalizationsTg extends UbuntuProvisionLocalizations {
   String get accessibilityVisualAlertsLabel => 'Visual alerts';
 
   @override
+  String get accessibilityStickKeysLabel => 'Sticky keys';
+
+  @override
+  String get accessibilitySlowKeysLabel => 'Slow keys';
+
+  @override
+  String get accessibilityMouseKeysLabel => 'Mouse keys';
+
+  @override
+  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+
+  @override
   String get errorPageTitle => 'Something went wrong';
 
   @override

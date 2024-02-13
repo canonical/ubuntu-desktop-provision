@@ -309,6 +309,30 @@ abstract class UbuntuProvisionLocalizations {
   /// **'Visual alerts'**
   String get accessibilityVisualAlertsLabel;
 
+  /// No description provided for @accessibilityStickKeysLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sticky keys'**
+  String get accessibilityStickKeysLabel;
+
+  /// No description provided for @accessibilitySlowKeysLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Slow keys'**
+  String get accessibilitySlowKeysLabel;
+
+  /// No description provided for @accessibilityMouseKeysLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Mouse keys'**
+  String get accessibilityMouseKeysLabel;
+
+  /// No description provided for @accessibilityDesktopZoomLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Desktop zoom'**
+  String get accessibilityDesktopZoomLabel;
+
   /// No description provided for @errorPageTitle.
   ///
   /// In en, this message translates to:

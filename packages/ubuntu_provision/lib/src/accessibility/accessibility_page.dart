@@ -96,24 +96,28 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
                       Column(
                         children: [
                           _AccessibilityListTile(
-                            id: AccessibilityOption.visualAlerts,
-                            title: lang.accessibilityVisualAlertsLabel,
+                            id: AccessibilityOption.stickyKeys,
+                            title: lang.accessibilityStickKeysLabel,
+                          ),
+                          _AccessibilityListTile(
+                            id: AccessibilityOption.slowKeys,
+                            title: lang.accessibilitySlowKeysLabel,
                           ),
                         ],
                       ),
                       Column(
                         children: [
                           _AccessibilityListTile(
-                            id: AccessibilityOption.visualAlerts,
-                            title: lang.accessibilityVisualAlertsLabel,
+                            id: AccessibilityOption.mouseKeys,
+                            title: lang.accessibilityMouseKeysLabel,
                           ),
                         ],
                       ),
                       Column(
                         children: [
                           _AccessibilityListTile(
-                            id: AccessibilityOption.visualAlerts,
-                            title: lang.accessibilityVisualAlertsLabel,
+                            id: AccessibilityOption.desktopZoom,
+                            title: lang.accessibilityDesktopZoomLabel,
                           ),
                         ],
                       ),
