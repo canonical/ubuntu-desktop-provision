@@ -28,7 +28,7 @@ class SlideView extends StatefulWidget {
   final ValueNotifier<int> controller;
 
   /// The list of slides to show.
-  final List<WidgetBuilder> slides;
+  final List<Widget> slides;
 
   /// The interval for automatic slide changes. Defaults to [kDefaultSlideInterval].
   final Duration interval;
@@ -127,7 +127,13 @@ class _SlideViewState extends State<SlideView> {
                     for (var i = 0; i <= value; ++i)
                       SlidePage(
                         key: ValueKey(i),
-                        child: widget.slides[i](context),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: widget.slides[i],
+                            ),
+                          ],
+                        ),
                       ),
                   ],
                   onPopPage: (route, result) => route.didPop(result),

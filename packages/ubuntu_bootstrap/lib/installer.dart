@@ -14,7 +14,6 @@ import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_bootstrap/slides.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -22,7 +21,6 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'installer/installer_wizard.dart';
-export 'slides.dart';
 
 Future<void> runInstallerApp(
   List<String> args, {
@@ -175,41 +173,38 @@ Future<void> runInstallerApp(
     await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
-      child: SlidesContext(
-        slides: slides ?? defaultSlides,
-        child: Consumer(
-          builder: (context, ref, child) {
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              ref.read(flavorProvider.notifier).state = flavor;
-            });
-            return WizardApp(
-              flavor: flavor,
-              theme: theme ?? themeVariant?.theme,
-              darkTheme: darkTheme ?? themeVariant?.darkTheme,
-              onGenerateTitle: onGenerateTitle ??
-                  (context) {
-                    if (windowTitle != null) return windowTitle;
+      child: Consumer(
+        builder: (context, ref, child) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            ref.read(flavorProvider.notifier).state = flavor;
+          });
+          return WizardApp(
+            flavor: flavor,
+            theme: theme ?? themeVariant?.theme,
+            darkTheme: darkTheme ?? themeVariant?.darkTheme,
+            onGenerateTitle: onGenerateTitle ??
+                (context) {
+                  if (windowTitle != null) return windowTitle;
 
-                    final flavor = ref.watch(flavorProvider);
-                    return UbuntuBootstrapLocalizations.of(context)
-                        .windowTitle(flavor.displayName);
-                  },
-              locale: ref.watch(localeProvider),
-              localizationsDelegates: [
-                ...?localizationsDelegates,
-                ...GlobalUbuntuBootstrapLocalizations.delegates,
-              ],
-              supportedLocales: supportedLocales,
-              home: DefaultAssetBundle(
-                bundle: ProxyAssetBundle(
-                  rootBundle,
-                  package: 'ubuntu_bootstrap',
-                ),
-                child: const InstallerWizard(),
+                  final flavor = ref.watch(flavorProvider);
+                  return UbuntuBootstrapLocalizations.of(context)
+                      .windowTitle(flavor.displayName);
+                },
+            locale: ref.watch(localeProvider),
+            localizationsDelegates: [
+              ...?localizationsDelegates,
+              ...GlobalUbuntuBootstrapLocalizations.delegates,
+            ],
+            supportedLocales: supportedLocales,
+            home: DefaultAssetBundle(
+              bundle: ProxyAssetBundle(
+                rootBundle,
+                package: 'ubuntu_bootstrap',
               ),
-            );
-          },
-        ),
+              child: const InstallerWizard(),
+            ),
+          );
+        },
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));

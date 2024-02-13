@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
+import 'package:ubuntu_bootstrap/slides/slide_html.dart';
+import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/services.dart';
 
 import 'test_install.mocks.dart';
@@ -42,10 +43,27 @@ InstallModel buildInstallModel({
 
 Widget buildPage(InstallModel model) {
   return ProviderScope(
-    overrides: [installModelProvider.overrideWith((_) => model)],
-    child: SlidesContext(slides: [
-      (context) => const SizedBox.expand(child: Text('slide1')),
-      (context) => const SizedBox.expand(child: Text('slide2')),
-    ], child: const InstallPage()),
+    overrides: [
+      installModelProvider.overrideWith((_) => model),
+      slidesProvider.overrideWith((_) => MockSlidesModel()),
+    ],
+    child: const InstallPage(),
   );
+}
+
+class MockSlidesModel extends Mock implements SlidesModel {
+  int slideCount = 2;
+
+  @override
+  Future<void> preCache() async {}
+
+  @override
+  late final slides = [
+    for (var i = 1; i <= slideCount; i++)
+      SlideHtml(
+        '<html><body>slide_$i</body></html>',
+        index: i,
+        locale: 'en_US',
+      ),
+  ];
 }

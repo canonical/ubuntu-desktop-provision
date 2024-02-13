@@ -9,12 +9,12 @@ import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'install/test_install.dart';
-import 'test_utils.dart';
 
 void main() {
   setUp(() {
@@ -47,8 +47,6 @@ void main() {
   });
 
   testWidgets('fully automated installation', (tester) async {
-    registerMockService<SessionService>(MockSessionService());
-    registerMockService<ConfigService>(MockConfigService());
     await tester.pumpWidget(
       tester.buildInstaller(
         state: ApplicationState.RUNNING,
@@ -132,6 +130,7 @@ extension on WidgetTester {
       (_) async => status.copyWith(state: ApplicationState.RUNNING),
     );
 
+    registerMockService<ConfigService>(MockConfigService());
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
     registerMockService<JournalService>(journal);
@@ -147,13 +146,13 @@ extension on WidgetTester {
     registerMockService<NetworkService>(MockNetworkService());
 
     return ProviderScope(
-      child: SlidesContext(
-        slides: [(_) => const SizedBox.shrink()],
-        child: WizardApp(
-          localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-          supportedLocales: supportedLocales,
-          home: const InstallerWizard(),
-        ),
+      overrides: [
+        slidesProvider.overrideWith((_) => MockSlidesModel()),
+      ],
+      child: WizardApp(
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+        supportedLocales: supportedLocales,
+        home: const InstallerWizard(),
       ),
     );
   }

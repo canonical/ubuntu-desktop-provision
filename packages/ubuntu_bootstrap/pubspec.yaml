@@ -16,7 +16,9 @@ dependencies:
   file: ">=6.1.4 <8.0.0"
   flutter:
     sdk: flutter
-  flutter_html: ^3.0.0-beta.1
+  flutter_html: ^3.0.0-beta.2
+  flutter_html_svg: ^3.0.0-beta.2
+  flutter_html_table: ^3.0.0-beta.2
   flutter_localizations:
     sdk: flutter
   flutter_markdown: ^0.6.18
@@ -27,6 +29,7 @@ dependencies:
   freezed_annotation: ^2.4.1
   gsettings: ^0.2.8
   handy_window: ^0.3.1
+  html: ^0.15.4
   intl: ^0.18.1
   meta: ^1.10.0
   nm: ^0.5.0
@@ -74,9 +77,14 @@ flutter:
     - assets/
     - assets/slides/
     - assets/slides/icons/
-    - assets/slides/icons/dark/
-    - assets/slides/screenshots/
-    - assets/slides/screenshots/dark/
-    - assets/slides/screenshots/light/
+    - assets/slides/1/
+    - assets/slides/2/
+    - assets/slides/3/
+    - assets/slides/4/
+    - assets/slides/5/
+    - assets/slides/6/
+    - assets/slides/7/
+    - assets/slides/8/
+    - assets/slides/9/
     - assets/storage/
     - assets/welcome/

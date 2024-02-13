@@ -4,9 +4,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
-import 'dart:ui' as _i6;
+import 'dart:ui' as _i5;
 
-import 'package:flutter/widgets.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart' as _i3;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
@@ -163,17 +162,6 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
       );
 
   @override
-  _i4.Future<void> precacheSlideImages(_i5.BuildContext? context) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #precacheSlideImages,
-          [context],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-
-  @override
   _i4.Future<void> reboot() => (super.noSuchMethod(
         Invocation.method(
           #reboot,
@@ -184,7 +172,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
       ) as _i4.Future<void>);
 
   @override
-  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -193,7 +181,7 @@ class MockInstallModel extends _i1.Mock implements _i3.InstallModel {
       );
 
   @override
-  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],
