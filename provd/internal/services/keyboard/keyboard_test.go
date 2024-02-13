@@ -14,6 +14,7 @@ import (
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
+	"github.com/linuxdeepin/go-gir/glib-2.0"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -24,46 +25,50 @@ func TestGsettingsNotWritable(t *testing.T) {
 	t.Parallel()
 
 	bus := testutils.NewDbusConn(t)
-	client, err := keyboard.New(bus, keyboard.WithGSettingsSubset(keyboard.GSettingsSubsetMock{IsWritableError: true}))
+	client, err := keyboard.New(bus, keyboard.WithGSettingsSubset(gSettingsSubsetMock{isWritableError: true, actionpath: t.TempDir()}))
 
 	require.Error(t, err, "SetInputSource should return an error")
 	require.Empty(t, client, "SetInputSource should return a nil response")
 }
 
 func TestSetInputSources(t *testing.T) {
+	t.Parallel()
+
 	tests := map[string]struct {
 		variant string
 		layout  string
 
 		// Empty flags
-		emptyRequest  bool
-		emptySettings bool
+		emptyRequest           bool
+		emptySettingsInRequest bool
 
-		wantErr bool
+		wantErr    bool
+		wantNoFile bool
 	}{
 		// Success cases
 		"Success on valid layout and variant":    {},
 		"Success on valid layout, empty variant": {variant: "-"},
 
 		// Error cases
-		"Error on empty layout":   {layout: "-", wantErr: true},
-		"Error on empty request":  {emptyRequest: true, wantErr: true},
-		"Error on empty settings": {emptySettings: true, wantErr: true},
+		"Error on empty layout":              {layout: "-", wantErr: true},
+		"Error on empty request":             {emptyRequest: true, wantErr: true},
+		"Error on empty settings in request": {emptySettingsInRequest: true, wantErr: true},
 
 		// GSettings errors
 		"Error when calling SetValue": {layout: "gsettingserror", wantErr: true},
 	}
 
-	originalDir, err := os.Getwd()
-	require.NoError(t, err, "Setup: could not get current working directory")
-
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			actionpath := t.TempDir()
+
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			opts := []keyboard.Option{
-				keyboard.WithGSettingsSubset(keyboard.GSettingsSubsetMock{}),
+				keyboard.WithGSettingsSubset(gSettingsSubsetMock{actionpath: actionpath}),
 			}
 
 			client := newKeyboardClient(t, opts...)
@@ -82,7 +87,7 @@ func TestSetInputSources(t *testing.T) {
 			var req *pb.SetInputSourceRequest
 			if tc.emptyRequest {
 				req = nil
-			} else if tc.emptySettings {
+			} else if tc.emptySettingsInRequest {
 				req = &pb.SetInputSourceRequest{}
 			} else {
 				req = &pb.SetInputSourceRequest{
@@ -93,31 +98,20 @@ func TestSetInputSources(t *testing.T) {
 				}
 			}
 
-			tempDir := t.TempDir()
-			err := os.Chdir(tempDir)
-			require.NoError(t, err, "Setup: failed to change directory")
-
-			err = os.WriteFile("actions", []byte(""), 0600)
-			require.NoError(t, err, "Setup: could not create actions file")
-
 			keyboardResp, reqErr := client.SetInputSource(context.Background(), req)
-
-			d, err := os.ReadFile("actions")
-			require.NoError(t, err, "Teardown: failed to read actions file ")
-			got := string(d)
-
-			err = os.Chdir(originalDir)
-			require.NoError(t, err, "Teardown: failed to change directory")
-
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
 
 			if tc.wantErr {
 				require.Error(t, reqErr, "SetInputSource should return an error")
 				require.Empty(t, keyboardResp, "SetInputSource should return a nil response")
 				return
 			}
-			require.NoError(t, err, "SetInputSource should not return an error")
+
+			got, err := testutils.ReadActionFromFile(tc.wantNoFile, testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+
+			require.NoError(t, reqErr, "SetInputSource should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -152,6 +146,7 @@ func TestGetKeyboard(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			tempDir := t.TempDir()
@@ -176,12 +171,9 @@ func TestGetKeyboard(t *testing.T) {
 			var req *emptypb.Empty
 			if !tc.emptyRequest {
 				req = &emptypb.Empty{}
-			} else {
-				req = nil
 			}
 
 			resp, err := client.GetKeyboard(context.Background(), req)
-
 			if tc.wantErr {
 				require.Error(t, err, "GetKeyboard should return an error")
 				require.Empty(t, resp, "GetKeyboard should return a nil response")
@@ -231,6 +223,7 @@ func TestSetKeyboard(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			var opts []keyboard.Option
@@ -273,6 +266,7 @@ func TestSetKeyboard(t *testing.T) {
 				return
 			}
 			require.NoError(t, err, "SetKeyboard should not return an error")
+			require.NotEmpty(t, keyboardResp, "SetKeyboard should return a nil response")
 		})
 	}
 }
@@ -280,6 +274,7 @@ func TestSetKeyboard(t *testing.T) {
 // newKeyboardClient creates a new keyboard client for testing, with a temp unix socket and mock Dbus connection.
 func newKeyboardClient(t *testing.T, opts ...keyboard.Option) pb.KeyboardServiceClient {
 	t.Helper()
+
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
 	require.NoError(t, err, "Setup: could not setup temporary socket dir path")
@@ -314,6 +309,24 @@ func newKeyboardClient(t *testing.T, opts ...keyboard.Option) pb.KeyboardService
 	t.Cleanup(func() { _ = conn.Close() })
 
 	return pb.NewKeyboardServiceClient(conn)
+}
+
+type gSettingsSubsetMock struct {
+	isWritableError bool
+
+	actionpath string
+}
+
+func (g gSettingsSubsetMock) IsWritable(key string) bool {
+	return !g.isWritableError
+}
+
+func (g gSettingsSubsetMock) SetValue(key string, variant *glib.Variant) bool {
+	if !strings.Contains(variant.Print(false), "gsettingserror") {
+		testutils.WriteActionToFile("gsettings.SetValue(key: "+key+", variant: "+variant.Print(true)+")", testutils.WithFilePath(g.actionpath))
+		return true
+	}
+	return false
 }
 
 func TestMain(m *testing.M) {

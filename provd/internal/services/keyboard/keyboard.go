@@ -2,10 +2,11 @@
 package keyboard
 
 import (
+	"bufio"
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/fs"
+	"log/slog"
 	"os"
 	"regexp"
 	"strings"
@@ -20,8 +21,8 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-// GSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
-type GSettingsSubset interface {
+// gSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
+type gSettingsSubset interface {
 	IsWritable(key string) bool
 	SetValue(key string, variant *glib.Variant) bool
 }
@@ -34,7 +35,7 @@ type Service struct {
 	pb.UnimplementedKeyboardServiceServer
 	conn             *dbus.Conn
 	locale           dbus.BusObject
-	gsettings        GSettingsSubset
+	gsettings        gSettingsSubset
 	keyboardl18nPath string
 }
 
@@ -76,6 +77,8 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 
 // SetInputSource sets the input source for the current user via gsettings.
 func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequest) (*emptypb.Empty, error) {
+	slog.Info(fmt.Sprintf("SetInputSource called with request: %v", req))
+
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -87,21 +90,22 @@ func (s *Service) SetInputSource(ctx context.Context, req *pb.SetInputSourceRequ
 		return nil, status.Errorf(codes.InvalidArgument, "received an empty layout")
 	}
 
-	var xkbString string
-	if req.Settings.Variant == "" {
-		xkbString = req.Settings.Layout
-	} else {
-		xkbString = req.Settings.Layout + "+" + req.Settings.Variant
+	var variant string
+	if req.Settings.Variant != "" {
+		variant = "+" + req.Settings.Variant
 	}
+	xkbString := req.Settings.Layout + variant
 
 	sources, err := glib.VariantParse(glib.NewVariantType("a(ss)"), "[('xkb', '"+xkbString+"')]", "", "")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to parse input source into GVariant: %v", err)
 	}
-	success := s.gsettings.SetValue("sources", sources)
-	if !success {
+
+	if success := s.gsettings.SetValue("sources", sources); !success {
 		return nil, status.Errorf(codes.Internal, "failed to set input source")
 	}
+
+	slog.Info("SetInputSource completed successfully")
 
 	return &emptypb.Empty{}, nil
 }
@@ -110,6 +114,8 @@ var localRegexp = regexp.MustCompile(`LANG=([a-z]+)_`)
 
 // GetKeyboard returns the current keyboard layout and available layouts.
 func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetKeyboardResponse, error) {
+	slog.Info(fmt.Sprintf("GetKeyboard called with request: %v", req))
+
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -171,11 +177,16 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 			Layouts: layouts,
 		},
 	}
+
+	slog.Info("GetKeyboard completed successfully")
+
 	return resp, nil
 }
 
 // SetKeyboard sets the keyboard layout for the current user via DBus.
 func (s *Service) SetKeyboard(ctx context.Context, req *pb.SetKeyboardRequest) (*emptypb.Empty, error) {
+	slog.Info(fmt.Sprintf("SetKeyboard called with request: %v", req))
+
 	// Validate request
 	if req == nil {
 		return nil, status.Errorf(codes.InvalidArgument, "received a nil request")
@@ -212,24 +223,31 @@ func (s *Service) SetKeyboard(ctx context.Context, req *pb.SetKeyboardRequest) (
 		return nil, status.Errorf(codes.Internal, "failed to set X11 keyboard: %v", err)
 	}
 
+	slog.Info("SetKeyboard completed successfully")
+
 	return &emptypb.Empty{}, nil
 }
 
 func getKeyboardLayouts(keyboardl18nPath string, current string) ([]*pb.KeyboardLayout, error) {
-	// Read in keyboard layouts
-	k, err := fs.ReadFile(EmbeddedFiles, keyboardl18nPath+current+".jsonl")
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to read keyboard layouts: %v", err)
-	}
-
-	// Split the file into lines
-	l := strings.Split(string(k), "\n")
-
 	var layouts []*pb.KeyboardLayout
 
+	// Read in keyboard layouts
+	f, err := EmbeddedFiles.Open(keyboardl18nPath + current + ".jsonl")
+	if err != nil {
+		return nil, fmt.Errorf("failed to read keyboard layouts: %v", err)
+	}
+	defer f.Close()
+
+	defer func() {
+		if err != nil {
+			slog.Error(fmt.Sprintf("Error occurred while processing file %s.jsonl: %v", current, err))
+		}
+	}()
+
+	s := bufio.NewScanner(f)
 	// Loop through each line in the jsonl file
-	for i := 0; i < len(l); i++ {
-		line := strings.TrimSpace(l[i]) // Trim any leading/trailing whitespace
+	for s.Scan() {
+		line := strings.TrimSpace(s.Text()) // Trim any leading/trailing whitespace
 		if line == "" {
 			continue // Skip any empty line
 		}
@@ -238,19 +256,19 @@ func getKeyboardLayouts(keyboardl18nPath string, current string) ([]*pb.Keyboard
 		var rawLayout []interface{}
 		err := json.Unmarshal([]byte(line), &rawLayout)
 		if err != nil {
-			return nil, status.Errorf(codes.Internal, "failed to unmarshal keyboard layout: %v", err)
+			return nil, fmt.Errorf("failed to unmarshal keyboard layout: %v", err)
 		}
 
 		// Get the layout code
 		c, ok := rawLayout[0].(string)
 		if !ok {
-			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout code: %v", err)
+			return nil, fmt.Errorf("failed to parse keyboard layout code: %v", err)
 		}
 
 		// Get the layout name
 		n, ok := rawLayout[1].(string)
 		if !ok {
-			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout name: %v", err)
+			return nil, fmt.Errorf("failed to parse keyboard layout name: %v", err)
 		}
 
 		l := &pb.KeyboardLayout{
@@ -261,20 +279,20 @@ func getKeyboardLayouts(keyboardl18nPath string, current string) ([]*pb.Keyboard
 		// Get the layout variants
 		rawVariants, ok := rawLayout[2].([]interface{})
 		if !ok {
-			return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant: %v", err)
+			return nil, fmt.Errorf("failed to parse keyboard layout variant: %v", err)
 		}
 		for j := 0; j < len(rawVariants); j++ {
 			rawVariant, ok := rawVariants[j].([]interface{})
 			if !ok {
-				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant: %v", err)
+				return nil, fmt.Errorf("failed to parse keyboard layout variant: %v", err)
 			}
 			c, ok := rawVariant[0].(string)
 			if !ok {
-				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant code: %v", err)
+				return nil, fmt.Errorf("failed to parse keyboard layout variant code: %v", err)
 			}
 			n, ok := rawVariant[1].(string)
 			if !ok {
-				return nil, status.Errorf(codes.Internal, "failed to parse keyboard layout variant name: %v", err)
+				return nil, fmt.Errorf("failed to parse keyboard layout variant name: %v", err)
 			}
 			l.Variants = append(l.Variants, &pb.KeyboardVariant{
 				Code: c,
@@ -283,5 +301,10 @@ func getKeyboardLayouts(keyboardl18nPath string, current string) ([]*pb.Keyboard
 		}
 		layouts = append(layouts, l)
 	}
+
+	if err := s.Err(); err != nil {
+		return nil, fmt.Errorf("error while scanning jsonl file: %v", err)
+	}
+
 	return layouts, nil
 }

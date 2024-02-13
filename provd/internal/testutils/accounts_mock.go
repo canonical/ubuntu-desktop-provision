@@ -23,7 +23,7 @@ func (a accountsdbus) FindUserByName(name string) (string, *dbus.Error) {
 	if strings.HasSuffix(name, "find-user-by-name-not-found") {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"Your name was: " + name})
 	}
-	action := fmt.Sprintf("Accounts.FindUserByName(name: %s)\n", name)
+	action := fmt.Sprintf("Accounts.FindUserByName(name: %s)", name)
 	WriteActionToFile(action)
 	return fmt.Sprintf("/org/freedesktop/Accounts/User%s", name), nil
 }
@@ -32,7 +32,7 @@ func (a accountsdbus) CreateUser(username string, realname string, accountType i
 	if strings.HasSuffix(username, "create-user-error") {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in CreateUserErrorUsername mocked method"})
 	}
-	action := fmt.Sprintf("Accounts.CreateUser(username: \"%s\", realname: \"%s\", accountType: %d)\n", username, realname, accountType)
+	action := fmt.Sprintf("Accounts.CreateUser(username: \"%s\", realname: \"%s\", accountType: %d)", username, realname, accountType)
 	WriteActionToFile(action)
 	return fmt.Sprintf("/org/freedesktop/Accounts/User%s", username), nil
 }
@@ -41,7 +41,7 @@ func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
 	if userID == uidUserDeletionFails {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in DeleteUser mocked method"})
 	}
-	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d)\n", userID)
+	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d)", userID)
 	WriteActionToFile(action)
 	return nil
 }
