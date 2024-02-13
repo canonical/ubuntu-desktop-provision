@@ -633,6 +633,309 @@ func TestDisableScreenReader(t *testing.T) {
 	}
 }
 
+func TestGetScreenKeyboard(t *testing.T) {
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest    bool
+		getBooleanError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of screen keyboard":              {},
+		"Success getting state of screen keyboard when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {getBooleanError: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.getBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{GetBooleanError: true, WantTrue: tc.wantTrue}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetScreenKeyboard(context.Background(), req)
+			got := fmt.Sprintf("%t", resp.GetValue())
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "GetScreenKeyboard should return an error")
+				require.Empty(t, resp, "GetScreenKeyboard should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetScreenKeyboard should not return an error")
+		})
+	}
+}
+
+func TestEnableScreenKeyboard(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable screen keyboard": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.EnableScreenKeyboard(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "EnableScreenKeyboard should return an error")
+				require.Empty(t, resp, "EnableScreenKeyboard should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableScreenKeyboard should not return an error")
+			require.NotNil(t, resp, "EnableScreenKeyboard should return a non-nil response")
+		})
+	}
+}
+
+func TestDisableScreenKeyboard(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable screen keyboard": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setBooleanError {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true}))
+			} else {
+				opts = append(opts, accessibility.WithApplicationSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.DisableScreenKeyboard(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "DisableScreenKeyboard should return an error")
+				require.Empty(t, resp, "DisableScreenKeyboard should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableScreenKeyboard should not return an error")
+			require.NotNil(t, resp, "DisableScreenKeyboard should return a non-nil response")
+		})
+	}
+}
+
+func TestGetStickyKeys(t *testing.T) {
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest    bool
+		getBooleanError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of sticky keys":              {},
+		"Success getting state of sticky keys when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {getBooleanError: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.getBooleanError {
+				opts = append(opts, accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{GetBooleanError: true, WantTrue: tc.wantTrue}))
+			} else {
+				opts = append(opts, accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{WantTrue: tc.wantTrue}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetStickyKeys(context.Background(), req)
+			got := fmt.Sprintf("%t", resp.GetValue())
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "GetStickyKeys should return an error")
+				require.Empty(t, resp, "GetStickyKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetStickyKeys should not return an error")
+		})
+	}
+}
+
+func TestEnableStickyKeys(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable sticky keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			var opts []accessibility.Option
+			if tc.setBooleanError {
+				opts = append(opts, accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true}))
+			} else {
+				opts = append(opts, accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{}))
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.EnableStickyKeys(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "EnableStickyKeys should return an error")
+				require.Empty(t, resp, "EnableStickyKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableStickyKeys should not return an error")
+			require.NotNil(t, resp, "EnableStickyKeys should return a non-nil response")
+		})
+	}
+}
+
+func TestDisableStickyKeys(t *testing.T) {
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable sticky keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			// Prepare mocks
+			gsettings := accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{})
+			if tc.setBooleanError {
+				gsettings = accessibility.WithKeyboardSettings(accessibility.GSettingsSubsetMock{SetBooleanError: true})
+			}
+			opts := []accessibility.Option{gsettings}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+			tempDirSetup(t)
+
+			// Get function under test output
+			resp, err := client.DisableStickyKeys(context.Background(), req)
+			got := tempDirTeardown(t, originalDir)
+
+			// Evaluate function under test output
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+			if tc.wantErr {
+				require.Error(t, err, "DisableStickyKeys should return an error")
+				require.Empty(t, resp, "DisableStickyKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableStickyKeys should not return an error")
+			require.NotNil(t, resp, "DisableStickyKeys should return a non-nil response")
+		})
+	}
+}
+
 func newEmptyRequest(emptyRequest bool) *emptypb.Empty {
 	var req *emptypb.Empty
 	if !emptyRequest {
@@ -645,6 +948,7 @@ func newEmptyRequest(emptyRequest bool) *emptypb.Empty {
 
 func tempDirSetup(t *testing.T) {
 	t.Helper()
+
 	tempDir := t.TempDir()
 	err := os.Chdir(tempDir)
 	require.NoError(t, err, "Setup: failed to change directory")
@@ -655,6 +959,7 @@ func tempDirSetup(t *testing.T) {
 
 func tempDirTeardown(t *testing.T, originalDir string) string {
 	t.Helper()
+
 	d, err := os.ReadFile("actions")
 	require.NoError(t, err, "Teardown: failed to read actions file ")
 	got := string(d)
@@ -667,6 +972,7 @@ func tempDirTeardown(t *testing.T, originalDir string) string {
 // newAccessibilityClient creates a new accessibility client fo			if tc.wantErr {r testing, with a temp unix socket.
 func newAccessibilityClient(t *testing.T, opts ...accessibility.Option) pb.AccessibilityServiceClient {
 	t.Helper()
+
 	// socket path is limited in length.
 	tmpDir, err := os.MkdirTemp("", "hello-socket-dir")
 	require.NoError(t, err, "Setup: could not setup temporary socket dir path")
