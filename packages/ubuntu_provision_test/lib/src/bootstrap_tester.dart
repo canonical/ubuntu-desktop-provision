@@ -32,26 +32,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testAccessibilityPage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(AccessibilityPage);
-
-    final context = element(find.byType(AccessibilityPage));
-    final l10n = UbuntuProvisionLocalizations.of(context);
-
-    expect(
-      find.titleBar(l10n.accessibilityPageTitle('Ubuntu')),
-      findsOneWidget,
-    );
-
-    await pumpAndSettle();
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-  }
-
   Future<void> testAutoinstallPage({
     String? screenshot,
   }) async {

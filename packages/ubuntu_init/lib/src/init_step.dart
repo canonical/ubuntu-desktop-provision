@@ -8,6 +8,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InitStep with RouteName {
   locale(LocalePage.new),
+  accessibility(AccessibilityPage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   identity(IdentityPage.new),
