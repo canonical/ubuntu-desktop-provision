@@ -12,10 +12,10 @@ keyboard.KeyboardService:
     metadata: protos/keyboard.proto
 locale.LocaleService:
     methods:
-        - name: GetLocale
+        - name: SetLocale
           isclientstream: false
           isserverstream: false
-        - name: SetLocale
+        - name: GetLocale
           isclientstream: false
           isserverstream: false
     metadata: protos/locale.proto
