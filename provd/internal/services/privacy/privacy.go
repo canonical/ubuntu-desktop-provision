@@ -12,8 +12,8 @@ import (
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
-// GSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
-type GSettingsSubset interface {
+// gSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
+type gSettingsSubset interface {
 	IsWritable(key string) bool
 	SetBoolean(key string, value bool) bool
 	GetBoolean(key string) bool
@@ -25,7 +25,7 @@ type Option func(*Service) error
 // Service is the implementation of the Keyboard service.
 type Service struct {
 	pb.UnimplementedPrivacyServiceServer
-	locationSettings GSettingsSubset
+	locationSettings gSettingsSubset
 }
 
 // New returns a new instance of the Privacy service.

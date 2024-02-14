@@ -3,9 +3,12 @@ package privacy_test
 import (
 	"context"
 	"flag"
+	"fmt"
 	"net"
 	"os"
 	"path/filepath"
+	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -20,13 +23,15 @@ import (
 func TestNotWritable(t *testing.T) {
 	t.Parallel()
 
-	client, err := privacy.New(privacy.WithLocationSettings(privacy.GSettingsSubsetMock{IsWritableError: true}))
+	client, err := privacy.New(privacy.WithLocationSettings(gSettingsSubsetMock{isWritableError: true}))
 
 	require.Error(t, err, "New should return an error")
 	require.Empty(t, client, "New should return a nil response")
 }
 
 func TestDisableLocationSettings(t *testing.T) {
+	t.Parallel()
+
 	tests := map[string]struct {
 		emptyRequest bool
 		wantErr      bool
@@ -39,16 +44,15 @@ func TestDisableLocationSettings(t *testing.T) {
 		"Error on empty request":                  {emptyRequest: true, wantErr: true},
 	}
 
-	originalDir, err := os.Getwd()
-	require.NoError(t, err, "Setup: could not get current working directory")
-
 	for name, tc := range tests {
+		tc := tc
 		t.Run(name, func(t *testing.T) {
-			var opts []privacy.Option
-			if tc.wantErr {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{SetBooleanError: true}))
-			} else {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{}))
+			t.Parallel()
+
+			actionpath := t.TempDir()
+
+			opts := []privacy.Option{
+				privacy.WithLocationSettings(gSettingsSubsetMock{setBooleanError: tc.wantErr, actionpath: actionpath}),
 			}
 
 			client := newPrivacyClient(t, opts...)
@@ -56,43 +60,31 @@ func TestDisableLocationSettings(t *testing.T) {
 			var req *emptypb.Empty
 			if !tc.emptyRequest {
 				req = &emptypb.Empty{}
-			} else {
-				req = nil
 			}
-
-			tempDir := t.TempDir()
-			err := os.Chdir(tempDir)
-			require.NoError(t, err, "Setup: failed to change directory")
-
-			err = os.WriteFile("actions", []byte(""), 0600)
-			require.NoError(t, err, "Setup: could not create actions file")
-
 			privacyResp, reqErr := client.DisableLocationServices(context.Background(), req)
-
-			d, err := os.ReadFile("actions")
-			require.NoError(t, err, "Teardown: failed to read actions file ")
-			got := string(d)
-
-			err = os.Chdir(originalDir)
-			require.NoError(t, err, "Teardown: failed to change directory")
-
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
 
 			if tc.wantErr {
 				require.Error(t, reqErr, "DisableLocationServices should return an error")
 				require.Empty(t, privacyResp, "DisableLocationServices should return a nil response")
 				return
 			}
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+
 			require.NoError(t, err, "DisableLocationSerivces should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
 }
 
 func TestEnableLocationSettings(t *testing.T) {
+	t.Parallel()
+
 	tests := map[string]struct {
 		emptyRequest bool
-		wantErr      bool
+
+		wantErr bool
 	}{
 		// Success case
 		"Successfully enables location settings": {},
@@ -102,16 +94,15 @@ func TestEnableLocationSettings(t *testing.T) {
 		"Error on empty request":                  {emptyRequest: true, wantErr: true},
 	}
 
-	originalDir, err := os.Getwd()
-	require.NoError(t, err, "Setup: could not get current working directory")
-
 	for name, tc := range tests {
+		tc := tc
 		t.Run(name, func(t *testing.T) {
-			var opts []privacy.Option
-			if tc.wantErr {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{SetBooleanError: true}))
-			} else {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{}))
+			t.Parallel()
+
+			actionpath := t.TempDir()
+
+			opts := []privacy.Option{
+				privacy.WithLocationSettings(gSettingsSubsetMock{setBooleanError: tc.wantErr, actionpath: actionpath}),
 			}
 
 			client := newPrivacyClient(t, opts...)
@@ -119,64 +110,51 @@ func TestEnableLocationSettings(t *testing.T) {
 			var req *emptypb.Empty
 			if !tc.emptyRequest {
 				req = &emptypb.Empty{}
-			} else {
-				req = nil
 			}
 
-			tempDir := t.TempDir()
-			err := os.Chdir(tempDir)
-			require.NoError(t, err, "Setup: failed to change directory")
-
-			err = os.WriteFile("actions", []byte(""), 0600)
-			require.NoError(t, err, "Setup: could not create actions file")
-
 			privacyResp, reqErr := client.EnableLocationServices(context.Background(), req)
-
-			d, err := os.ReadFile("actions")
-			require.NoError(t, err, "Teardown: failed to read actions file ")
-			got := string(d)
-
-			err = os.Chdir(originalDir)
-			require.NoError(t, err, "Teardown: failed to change directory")
-
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
 
 			if tc.wantErr {
 				require.Error(t, reqErr, "EnableLocationServices should return an error")
 				require.Empty(t, privacyResp, "EnableLocationServices should return a nil response")
 				return
 			}
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+
 			require.NoError(t, err, "EnableLocationSerivces should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
 }
 
 func TestGetLocationSettings(t *testing.T) {
+	t.Parallel()
+
 	tests := map[string]struct {
 		emptyRequest    bool
 		getBooleanError bool
 
-		wantErr bool
+		wantErr  bool
+		wantTrue bool
 	}{
 		// Success case
-		"Success on getting location settings": {},
+		"Success on getting location settings when false": {},
+		"Success on getting location settings when true":  {wantTrue: true},
 
 		// Error cases
 		"Error case returns false, no calls made": {getBooleanError: true},
 		"Error on empty request":                  {emptyRequest: true, wantErr: true},
 	}
 
-	originalDir, err := os.Getwd()
-	require.NoError(t, err, "Setup: could not get current working directory")
-
 	for name, tc := range tests {
+		tc := tc
 		t.Run(name, func(t *testing.T) {
-			var opts []privacy.Option
-			if tc.getBooleanError {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{GetBooleanError: true}))
-			} else {
-				opts = append(opts, privacy.WithLocationSettings(privacy.GSettingsSubsetMock{}))
+			t.Parallel()
+
+			opts := []privacy.Option{
+				privacy.WithLocationSettings(gSettingsSubsetMock{getBooleanError: tc.getBooleanError, wantTrue: tc.wantTrue}),
 			}
 
 			client := newPrivacyClient(t, opts...)
@@ -184,35 +162,20 @@ func TestGetLocationSettings(t *testing.T) {
 			var req *emptypb.Empty
 			if !tc.emptyRequest {
 				req = &emptypb.Empty{}
-			} else {
-				req = nil
 			}
 
-			tempDir := t.TempDir()
-			err := os.Chdir(tempDir)
-			require.NoError(t, err, "Setup: failed to change directory")
-
-			err = os.WriteFile("actions", []byte(""), 0600)
-			require.NoError(t, err, "Setup: could not create actions file")
-
-			privacyResp, reqErr := client.GetLocationServices(context.Background(), req)
-
-			d, err := os.ReadFile("actions")
-			require.NoError(t, err, "Teardown: failed to read actions file ")
-			got := string(d)
-
-			err = os.Chdir(originalDir)
-			require.NoError(t, err, "Teardown: failed to change directory")
-
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
+			privacyResp, err := client.GetLocationServices(context.Background(), req)
 
 			if tc.wantErr {
-				require.Error(t, reqErr, "GetLocationSerivces should return an error")
+				require.Error(t, err, "GetLocationSerivces should return an error")
 				require.Empty(t, privacyResp, "GetLocationSerivces should return a nil response")
 				return
 			}
+
+			got := fmt.Sprintf("%t", privacyResp.GetValue())
 			require.NoError(t, err, "GetLocationSerivces should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -252,6 +215,35 @@ func newPrivacyClient(t *testing.T, opts ...privacy.Option) pb.PrivacyServiceCli
 	t.Cleanup(func() { _ = conn.Close() })
 
 	return pb.NewPrivacyServiceClient(conn)
+}
+
+type gSettingsSubsetMock struct {
+	isWritableError bool
+	setBooleanError bool
+	getBooleanError bool
+
+	wantTrue bool
+
+	actionpath string
+}
+
+func (g gSettingsSubsetMock) IsWritable(key string) bool {
+	return !g.isWritableError
+}
+
+func (g gSettingsSubsetMock) SetBoolean(key string, value bool) bool {
+	if g.setBooleanError {
+		return false
+	}
+	testutils.WriteActionToFile("gsettings.SetBoolean(key: "+key+", value: "+strings.ToLower(strconv.FormatBool(value))+")", testutils.WithFilePath(g.actionpath))
+	return true
+}
+
+func (g gSettingsSubsetMock) GetBoolean(key string) bool {
+	if g.getBooleanError {
+		return false // GetBoolean either returns the boolean, or false if it fails, so its difficult to test
+	}
+	return g.wantTrue
 }
 
 func TestMain(m *testing.M) {

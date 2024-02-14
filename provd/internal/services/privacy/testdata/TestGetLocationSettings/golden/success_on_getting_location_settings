@@ -1,1 +1,0 @@
-gsettings.GetBoolean(key: enabled)
