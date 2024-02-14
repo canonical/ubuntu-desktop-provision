@@ -16,8 +16,12 @@ extension UbuntuProvisionPageTester on WidgetTester {
     final context = element(find.byType(LocalePage));
     final l10n = LocaleLocalizations.of(context);
 
-    final flavor = UbuntuFlavor.detect() ?? UbuntuFlavor.ubuntu;
-    expect(find.titleBar(l10n.localePageTitle(flavor.name)), findsOneWidget);
+    final detectedFlavor = UbuntuFlavor.detect();
+    final flavor = detectedFlavor != UbuntuFlavor.unknown
+        ? detectedFlavor
+        : UbuntuFlavor.ubuntu;
+    expect(find.titleBar(l10n.localePageTitle(flavor.displayName)),
+        findsOneWidget);
 
     if (language != null) {
       final tile = find.listTile(language, skipOffstage: false);

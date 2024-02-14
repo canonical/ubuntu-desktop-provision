@@ -39,7 +39,7 @@ command:
       split_view: ^3.2.1
       stdlibc: ^0.1.4
       synchronized: ^3.1.0
-      ubuntu_flavor: ^0.2.2
+      ubuntu_flavor: ^0.3.0
       ubuntu_localizations: ^0.3.5
       ubuntu_logger: ^0.1.1
       ubuntu_service: ^0.3.1

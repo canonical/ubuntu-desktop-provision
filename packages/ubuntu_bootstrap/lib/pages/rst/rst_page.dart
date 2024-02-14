@@ -51,7 +51,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
               final confirmed = await showConfirmationDialog(
                 context,
                 title: lang.restartIntoWindowsTitle,
-                message: lang.restartIntoWindowsDescription(flavor.name),
+                message: lang.restartIntoWindowsDescription(flavor.displayName),
                 okLabel: UbuntuLocalizations.of(context).restartLabel,
                 okElevated: true,
               );

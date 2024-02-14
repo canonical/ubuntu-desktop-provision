@@ -37,18 +37,18 @@ class TelemetryPage extends ConsumerWidget with ProvisioningPage {
               SvgPicture.asset('assets/telemetry.svg', package: 'ubuntu_init'),
               const SizedBox(height: kWizardSpacing),
               Text(
-                l10n.telemetryHeader(flavor.name),
+                l10n.telemetryHeader(flavor.displayName),
                 style: theme.textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: kWizardSpacing / 2),
               Text(
-                l10n.telemetryDescription(flavor.name),
+                l10n.telemetryDescription(flavor.displayName),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: kWizardSpacing),
               TelemetryButton(
-                title: Text(l10n.telemetryLabelOn(flavor.name)),
+                title: Text(l10n.telemetryLabelOn(flavor.displayName)),
                 value: true,
                 groupValue: model.enabled,
                 onChanged: (v) => model.enabled = v!,

@@ -31,7 +31,7 @@ Widget _buildWelcomeSlide(BuildContext context) {
       children: [
         Consumer(builder: (context, ref, child) {
           final flavor = ref.watch(flavorProvider);
-          return Text(lang.installationSlidesWelcomeHeader(flavor.name));
+          return Text(lang.installationSlidesWelcomeHeader(flavor.displayName));
         }),
         Text(lang.installationSlidesWelcomeBody(product.getProductInfo())),
       ],
@@ -49,7 +49,7 @@ Widget _buildSoftwareSlide(BuildContext context) {
     title: Text(lang.installationSlidesSoftwareTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesSoftwareBody(flavor.name));
+      return Text(lang.installationSlidesSoftwareBody(flavor.displayName));
     }),
     banner: Container(
       alignment: Alignment.center,
@@ -88,7 +88,7 @@ Widget _buildDevelopmentSlide(BuildContext context) {
     title: Text(lang.installationSlidesDevelopmentTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesDevelopmentBody(flavor.name));
+      return Text(lang.installationSlidesDevelopmentBody(flavor.displayName));
     }),
     image: const SlideScreenshot('vscode.png'),
     table: SlideTable(
@@ -123,7 +123,7 @@ Widget _buildCreativitySlide(BuildContext context) {
     title: Text(lang.installationSlidesCreativityTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesCreativityBody(flavor.name));
+      return Text(lang.installationSlidesCreativityBody(flavor.displayName));
     }),
     image: const SlideScreenshot('blender.png'),
     table: SlideTable(
@@ -158,7 +158,7 @@ Widget _buildGamingSlide(BuildContext context) {
     title: Text(lang.installationSlidesGamingTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesGamingBody(flavor.name));
+      return Text(lang.installationSlidesGamingBody(flavor.displayName));
     }),
     banner: const SlideScreenshot(
       'steam.png',
@@ -200,7 +200,7 @@ Widget _buildSecuritySlide(BuildContext context) {
     title: Text(lang.installationSlidesSecurityTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesSecurityBody(flavor.name));
+      return Text(lang.installationSlidesSecurityBody(flavor.displayName));
     }),
     // TODO: show installationSlidesSecurityLts in LTS releases
     image: const SlideScreenshot('bitwarden.png'),
@@ -239,7 +239,7 @@ Widget _buildProductivitySlide(BuildContext context) {
     title: Text(lang.installationSlidesProductivityTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesProductivityBody(flavor.name));
+      return Text(lang.installationSlidesProductivityBody(flavor.displayName));
     }),
     banner: const SlideScreenshot(
       'libreoffice.png',
@@ -281,7 +281,7 @@ Widget _buildAccessibilitySlide(BuildContext context) {
     title: Text(lang.installationSlidesAccessibilityTitle),
     body: Consumer(builder: (context, ref, child) {
       final flavor = ref.watch(flavorProvider);
-      return Text(lang.installationSlidesAccessibilityBody(flavor.name));
+      return Text(lang.installationSlidesAccessibilityBody(flavor.displayName));
     }),
     image: const SlideScreenshot('accessibility.png'),
     table: SlideTable(
@@ -317,7 +317,7 @@ Widget _buildSupportSlide(BuildContext context) {
       children: [
         Consumer(builder: (context, ref, child) {
           final flavor = ref.watch(flavorProvider);
-          return Text(lang.installationSlidesSupportHeader(flavor.name));
+          return Text(lang.installationSlidesSupportHeader(flavor.displayName));
         }),
         Text(lang.installationSlidesSupportCommunity),
         Text(lang.installationSlidesSupportEnterprise),

@@ -39,7 +39,7 @@ class GuidedReformatPage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(lang.selectGuidedStoragePageTitle(flavor.name)),
+        title: Text(lang.selectGuidedStoragePageTitle(flavor.displayName)),
       ),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +80,7 @@ class GuidedReformatPage extends ConsumerWidget {
                   ),
                   const SizedBox(height: kWizardSpacing / 2),
                   Text(
-                    flavor.name,
+                    flavor.displayName,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: kWizardSpacing / 2),

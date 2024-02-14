@@ -37,7 +37,7 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
                 color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
               ),
               const SizedBox(height: kWizardSpacing),
-              Text(lang.notEnoughDiskSpaceUbuntu(flavor.name),
+              Text(lang.notEnoughDiskSpaceUbuntu(flavor.displayName),
                   style: Theme.of(context).textTheme.headlineSmall),
               const SizedBox(height: kWizardSpacing),
               IntrinsicWidth(

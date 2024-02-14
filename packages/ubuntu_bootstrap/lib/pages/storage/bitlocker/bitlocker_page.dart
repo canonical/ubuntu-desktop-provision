@@ -53,7 +53,7 @@ class BitLockerPage extends ConsumerWidget {
                       style: Theme.of(context).textTheme.headlineSmall),
                   const SizedBox(height: kWizardSpacing),
                   Text(lang.bitlockerDescription(
-                      lang.installationTypeErase(flavor.name))),
+                      lang.installationTypeErase(flavor.displayName))),
                   const SizedBox(height: kWizardSpacing),
                   Html(
                     data:
@@ -71,8 +71,8 @@ class BitLockerPage extends ConsumerWidget {
                       final confirmed = await showConfirmationDialog(
                         context,
                         title: lang.bitlockerTitle,
-                        message:
-                            lang.restartIntoWindowsDescription(flavor.name),
+                        message: lang
+                            .restartIntoWindowsDescription(flavor.displayName),
                         okLabel: UbuntuLocalizations.of(context).restartLabel,
                         okElevated: true,
                       );

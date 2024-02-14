@@ -194,7 +194,7 @@ Future<void> runInstallerApp(
 
                     final flavor = ref.watch(flavorProvider);
                     return UbuntuBootstrapLocalizations.of(context)
-                        .windowTitle(flavor.name);
+                        .windowTitle(flavor.displayName);
                   },
               locale: ref.watch(localeProvider),
               localizationsDelegates: [

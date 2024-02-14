@@ -212,7 +212,7 @@ class _DonePage extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing * 1.5),
-                Text(lang.restartWarning(flavor.name)),
+                Text(lang.restartWarning(flavor.displayName)),
                 const SizedBox(height: kWizardSpacing * 1.5),
                 Row(
                   children: [
