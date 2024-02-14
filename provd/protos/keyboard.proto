@@ -2,11 +2,14 @@ syntax = "proto3";
 
 package keyboard;
 
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
 import "google/protobuf/empty.proto";
 
 service KeyboardService {
     rpc SetKeyboard(SetKeyboardRequest) returns (google.protobuf.Empty) {}
     rpc SetInputSource(SetInputSourceRequest) returns (google.protobuf.Empty) {}
+    rpc GetKeyboard(google.protobuf.Empty) returns (GetKeyboardResponse) {}
 }
 
 message KeyboardSettings {
@@ -20,4 +23,24 @@ message SetKeyboardRequest {
 
 message SetInputSourceRequest {
   KeyboardSettings settings = 1;
+}
+
+message GetKeyboardResponse {
+    KeyboardSetup setup = 1;
+}
+
+message KeyboardSetup {
+    KeyboardSettings settings = 1;
+    repeated KeyboardLayout layouts = 2;
+}
+
+message KeyboardLayout {
+    string code = 1;
+    string name = 2;
+    repeated KeyboardVariant variants = 3;
+}
+
+message KeyboardVariant {
+    string code = 1;
+    string name = 2;
 }

@@ -23,11 +23,60 @@ func (l localebus) SetLocale(locales []string, someBool bool) *dbus.Error {
 	return nil
 }
 
+func (l localebus) SetX11Keyboard(layout string, model string, variant string, options string, someBool bool, someOtherBool bool) *dbus.Error {
+	if layout == "x11keyboarderror" {
+		return dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in SetX11Keyboard mocked method"})
+	}
+	return nil
+}
+
 func (l localebus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
+	// switch based on interfaceName
 	if l.path == "localeerror" {
 		return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
 	}
-	return "LANG=xh_ZA.UTF-8", nil
+	switch propertyName {
+	case "Locale":
+		if l.path == "jsonlexists" {
+			return "LANG=de_DE.UTF-8", nil
+		}
+		return "LANG=xh_ZA.UTF-8", nil
+	case "X11Model":
+		switch l.path {
+		case "x11modelerror":
+			return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+		case "x11modelparseerror":
+			return map[string]int{"key": 1}, nil
+		default:
+			return "ok", nil
+		}
+	case "X11Options":
+		switch l.path {
+		case "x11optionserror":
+			return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+		case "x11optionsparseerror":
+			return map[string]int{"key": 1}, nil
+		default:
+			return "ok", nil
+		}
+	case "X11Layout":
+		switch l.path {
+		case "x11layouterror":
+			return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+		default:
+			return "de", nil
+		}
+	case "X11Variant":
+		switch l.path {
+		case "x11varianterror":
+			return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+		default:
+			return "workman", nil
+		}
+
+	default:
+		return "", dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in Get mocked method"})
+	}
 }
 
 // ExportLocaleMock exports the locale mock to the system bus.
@@ -46,6 +95,15 @@ func ExportLocaleMock(conn *dbus.Conn) error {
               <arg name="name" direction="in" type="as"/>
 			  <arg name="someBool" direction="in" type="b"/>
             </method>
+			<method name="SetX11Keyboard">
+				<arg name="model" direction="in" type="s"/>
+				<arg name="layout" direction="in" type="s"/>
+				<arg name="variant" direction="in" type="s"/>
+				<arg name="options" direction="in" type="s"/>
+				<arg name"someBool" direction="in" type="b"/>
+				<arg name"someOtherBool" direction="in" type="b"/>
+
+			</method>
         </interface>
 		<interface name="org.freedesktop.DBus.Properties">
 			<method name="Get">
@@ -59,6 +117,14 @@ func ExportLocaleMock(conn *dbus.Conn) error {
 	for _, l := range []localebus{
 		{path: "locale1"},
 		{path: "localeerror"},
+		{path: "x11modelerror"},
+		{path: "x11optionserror"},
+		{path: "x11keyboarderror"},
+		{path: "x11modelparseerror"},
+		{path: "x11optionsparseerror"},
+		{path: "x11layouterror"},
+		{path: "x11varianterror"},
+		{path: "jsonlexists"},
 	} {
 		if err := conn.Export(l, dbus.ObjectPath(fmt.Sprintf("/org/freedesktop/%s", l.path)), consts.DbusLocalePrefix); err != nil {
 			return fmt.Errorf("could not export Locale mock: %w", err)

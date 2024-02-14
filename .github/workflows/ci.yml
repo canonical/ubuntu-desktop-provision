@@ -153,6 +153,10 @@ jobs:
     name: "Go: Code sanity"
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install -y libgtk-3-dev  
       - uses: actions/checkout@v4
       - name: Go code sanity check
         uses: canonical/desktop-engineering/gh-actions/go/code-sanity@main
@@ -170,6 +174,11 @@ jobs:
     name: "Go: Tests"
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install -y libgtk-3-dev  
+
       - name: Checkout code
         uses: actions/checkout@v4
 

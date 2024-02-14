@@ -19,22 +19,22 @@ type userdbus struct {
 }
 
 func (u userdbus) SetPassword(password string, hint string) *dbus.Error {
-	action := "User.SetPassword\n"
-	writeActionToFile(action)
+	action := "User.SetPassword"
+	WriteActionToFile(action)
 	return nil
 }
 
 func (u userdbus) SetAutomaticLogin(autoLogin bool) *dbus.Error {
-	action := fmt.Sprintf("User.SetAutomaticLogin(autoLogin: %t)\n", autoLogin)
-	writeActionToFile(action)
+	action := fmt.Sprintf("User.SetAutomaticLogin(autoLogin: %t)", autoLogin)
+	WriteActionToFile(action)
 	return nil
 }
 func (u userdbus) Get(interfaceName string, propertyName string) (interface{}, *dbus.Error) {
 	if u.id == uidUserGetFails {
 		return "", dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in User.Get mocked method"})
 	}
-	action := fmt.Sprintf("User.Get(interfaceName: %s, propertyName: %s)\n", interfaceName, propertyName)
-	writeActionToFile(action)
+	action := fmt.Sprintf("User.Get(interfaceName: %s, propertyName: %s)", interfaceName, propertyName)
+	WriteActionToFile(action)
 	return u.id, nil
 }
 
