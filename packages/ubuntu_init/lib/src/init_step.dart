@@ -32,8 +32,6 @@ enum InitStep {
     );
   }
 
-  String get name => toString().split('.').last;
-
   static InitStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }

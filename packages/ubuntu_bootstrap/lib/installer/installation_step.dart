@@ -50,8 +50,6 @@ enum InstallationStep {
     return index - 1;
   }
 
-  String get name => toString().split('.').last;
-
   static InstallationStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
