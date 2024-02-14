@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -15,7 +14,6 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 Future<void> runInitApp(
   List<String> args, {
   String package = 'ubuntu_init',
-  UbuntuFlavor? flavor,
   ThemeData? theme,
   ThemeData? darkTheme,
   GenerateAppTitle? onGenerateTitle,
@@ -48,14 +46,14 @@ Future<void> runInitApp(
 
     final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
 
+    final flavor = await loadFlavor();
+
     runApp(ProviderScope(
       child: Consumer(
         builder: (context, ref, child) {
-          if (flavor != null) {
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              ref.read(flavorProvider.notifier).state = flavor;
-            });
-          }
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            ref.read(flavorProvider.notifier).state = flavor;
+          });
           return WizardApp(
             flavor: flavor,
             theme: theme ?? themeVariant?.theme,
