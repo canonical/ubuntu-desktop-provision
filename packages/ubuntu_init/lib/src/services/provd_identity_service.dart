@@ -4,14 +4,14 @@ import 'package:ubuntu_init/src/services/provd_address.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 class ProvdIdentityService with ProvdAddress implements IdentityService {
-  ProvdIdentityService({@visibleForTesting provd.ProvdUserClient? userClient})
-      : _userClient = userClient ??
+  ProvdIdentityService({@visibleForTesting provd.ProvdUserClient? client})
+      : _client = client ??
             provd.ProvdUserClient(
               ProvdAddress.socketAddress,
               ProvdAddress.port,
             );
 
-  final provd.ProvdUserClient _userClient;
+  final provd.ProvdUserClient _client;
   Identity _identity = const Identity();
 
   @override
@@ -21,12 +21,12 @@ class ProvdIdentityService with ProvdAddress implements IdentityService {
   Future<void> setIdentity(Identity identity) async {
     if (_identity == identity) return;
     _identity = identity;
-    return _userClient.createUser(identity.toProvdUser());
+    return _client.createUser(identity.toProvdUser());
   }
 
   @override
   Future<UsernameValidation> validateUsername(String username) =>
-      _userClient.validateUsername(username).then(
+      _client.validateUsername(username).then(
             (value) => value.fromProvd(),
           );
 }

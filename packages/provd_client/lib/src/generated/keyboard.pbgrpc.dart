@@ -30,6 +30,10 @@ class KeyboardServiceClient extends $grpc.Client {
       '/keyboard.KeyboardService/SetInputSource',
       ($3.SetInputSourceRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$getKeyboard = $grpc.ClientMethod<$0.Empty, $3.GetKeyboardResponse>(
+      '/keyboard.KeyboardService/GetKeyboard',
+      ($0.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.GetKeyboardResponse.fromBuffer(value));
 
   KeyboardServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -43,6 +47,10 @@ class KeyboardServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$0.Empty> setInputSource($3.SetInputSourceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setInputSource, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.GetKeyboardResponse> getKeyboard($0.Empty request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getKeyboard, request, options: options);
   }
 }
 
@@ -65,6 +73,13 @@ abstract class KeyboardServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $3.SetInputSourceRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Empty, $3.GetKeyboardResponse>(
+        'GetKeyboard',
+        getKeyboard_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($3.GetKeyboardResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Empty> setKeyboard_Pre($grpc.ServiceCall call, $async.Future<$3.SetKeyboardRequest> request) async {
@@ -75,6 +90,11 @@ abstract class KeyboardServiceBase extends $grpc.Service {
     return setInputSource(call, await request);
   }
 
+  $async.Future<$3.GetKeyboardResponse> getKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+    return getKeyboard(call, await request);
+  }
+
   $async.Future<$0.Empty> setKeyboard($grpc.ServiceCall call, $3.SetKeyboardRequest request);
   $async.Future<$0.Empty> setInputSource($grpc.ServiceCall call, $3.SetInputSourceRequest request);
+  $async.Future<$3.GetKeyboardResponse> getKeyboard($grpc.ServiceCall call, $0.Empty request);
 }

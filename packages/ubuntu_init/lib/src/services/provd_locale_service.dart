@@ -5,17 +5,17 @@ import 'package:ubuntu_provision/services.dart';
 
 class ProvdLocaleService with ProvdAddress implements LocaleService {
   ProvdLocaleService({@visibleForTesting provd.ProvdLocaleClient? client})
-      : _localeClient = client ??
+      : _client = client ??
             provd.ProvdLocaleClient(
               ProvdAddress.socketAddress,
               ProvdAddress.port,
             );
 
-  final provd.ProvdLocaleClient _localeClient;
+  final provd.ProvdLocaleClient _client;
 
   @override
-  Future<String> getLocale() => _localeClient.getLocale();
+  Future<String> getLocale() => _client.getLocale();
 
   @override
-  Future<void> setLocale(String locale) => _localeClient.setLocale(locale);
+  Future<void> setLocale(String locale) => _client.setLocale(locale);
 }

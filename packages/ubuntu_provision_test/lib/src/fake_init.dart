@@ -22,8 +22,6 @@ Future<void> registerFakeInitServices({
   addTearDown(() => tempDir.deleteSync(recursive: true));
 
   final server = FakeDBusServer(
-    locale: locale,
-    keyboard: keyboard,
     timezone: timezone,
   );
   addTearDown(server.close);
@@ -39,10 +37,11 @@ Future<void> registerFakeInitServices({
       (s) => GSettings(s, backend: keyfile));
 
   registerService<IdentityService>(
-      () => ProvdIdentityService(userClient: FakeProvdUserClient()));
-  registerService<KeyboardService>(() => XdgKeyboardService(bus: client));
+      () => ProvdIdentityService(client: FakeProvdUserClient()));
+  registerService<KeyboardService>(
+      () => ProvdKeyboardService(client: FakeProvdKeyboardClient()));
   registerService<LocaleService>(
-      () => ProvdLocaleService(client: FakeProvdLocaleClient(server)));
+      () => ProvdLocaleService(client: FakeProvdLocaleClient()));
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
@@ -53,12 +52,9 @@ Future<void> registerFakeInitServices({
 
 class FakeDBusServer extends DBusServer {
   FakeDBusServer({
-    required this.locale,
-    required this.keyboard,
     required this.timezone,
   }) {
     _dconf = _FakeDConfObject(this);
-    _locale = _FakeXdgLocaleObject(this);
     _network = _FakeXdgNetworkManagerObject(this);
     _timedate = _FakeXdgTimedateObject(this);
     _gdmSession = _FakeGdmSessionObject(this);
@@ -66,13 +62,10 @@ class FakeDBusServer extends DBusServer {
 
   late final DBusClient _client;
   late final _FakeDConfObject _dconf;
-  late final _FakeXdgLocaleObject _locale;
   late final _FakeXdgNetworkManagerObject _network;
   late final _FakeXdgTimedateObject _timedate;
   late final _FakeGdmSessionObject _gdmSession;
 
-  KeyboardSetting keyboard;
-  Iterable<String> locale;
   String timezone;
 
   Future<DBusAddress> start(Directory dir) async {
@@ -86,9 +79,6 @@ class FakeDBusServer extends DBusServer {
     await _client.requestName('org.freedesktop');
     await _client.registerObject(
         DBusObject(DBusObjectPath('/org/freedesktop'), isObjectManager: true));
-
-    await _client.requestName('org.freedesktop.locale1');
-    await _client.registerObject(_locale);
 
     await _client.requestName('org.freedesktop.NetworkManager');
     await _client.registerObject(_network);
@@ -122,67 +112,6 @@ class _FakeDConfObject extends DBusObject {
     switch (methodCall.name) {
       case 'Change':
         return DBusMethodSuccessResponse([const DBusString('tag')]);
-      default:
-        return DBusMethodErrorResponse.unknownMethod();
-    }
-  }
-}
-
-class _FakeXdgLocaleObject extends DBusObject {
-  _FakeXdgLocaleObject(this.server)
-      : super(DBusObjectPath('/org/freedesktop/locale1'));
-
-  final FakeDBusServer server;
-
-  @override
-  Future<DBusMethodResponse> getAllProperties(String interface) async {
-    assert(interface == 'org.freedesktop.locale1');
-    return DBusGetAllPropertiesResponse({
-      'Locale': DBusArray.string(server.locale),
-      'X11Layout': DBusString(server.keyboard.layout),
-      'X11Variant': DBusString(server.keyboard.variant),
-    });
-  }
-
-  @override
-  Future<DBusMethodResponse> getProperty(String interface, String name) async {
-    assert(interface == 'org.freedesktop.locale1');
-    switch (name) {
-      case 'Locale':
-        return DBusGetPropertyResponse(DBusArray.string(server.locale));
-      case 'X11Layout':
-        return DBusGetPropertyResponse(DBusString(server.keyboard.layout));
-      case 'X11Variant':
-        return DBusGetPropertyResponse(DBusString(server.keyboard.variant));
-      default:
-        return DBusMethodErrorResponse.unknownProperty();
-    }
-  }
-
-  @override
-  Future<DBusMethodResponse> handleMethodCall(DBusMethodCall methodCall) async {
-    assert(methodCall.interface == 'org.freedesktop.locale1');
-    switch (methodCall.name) {
-      case 'SetLocale':
-        server.locale = methodCall.values[0].asStringArray();
-        await emitPropertiesChanged(
-          'org.freedesktop.locale1',
-          changedProperties: {'Locale': DBusArray.string(server.locale)},
-        );
-        return DBusMethodSuccessResponse();
-      case 'SetX11Keyboard':
-        server.keyboard = KeyboardSetting(
-          layout: methodCall.values[0].asString(),
-          variant: methodCall.values[1].asString(),
-        );
-        await emitPropertiesChanged(
-          'org.freedesktop.locale1',
-          changedProperties: {
-            'X11Layout': DBusString(server.keyboard.layout),
-            'X11Variant': DBusString(server.keyboard.variant),
-          },
-        );
-        return DBusMethodSuccessResponse();
       default:
         return DBusMethodErrorResponse.unknownMethod();
     }
@@ -328,20 +257,14 @@ class _FakeUrlLauncher implements UrlLauncher {
 }
 
 class FakeProvdLocaleClient implements provd.ProvdLocaleClient {
-  FakeProvdLocaleClient(this.server);
-
-  // Only needed temporarily while the XdgKeyboardService still exists
-  final FakeDBusServer server;
+  FakeProvdLocaleClient();
 
   String _locale = 'en_US.UTF-8';
   @override
   Future<String> getLocale() async => _locale;
 
   @override
-  Future<void> setLocale(String locale) async {
-    _locale = locale;
-    server.locale = ['LANG=$locale'];
-  }
+  Future<void> setLocale(String locale) async => _locale = locale;
 }
 
 class FakeProvdUserClient implements provd.ProvdUserClient {
@@ -351,4 +274,32 @@ class FakeProvdUserClient implements provd.ProvdUserClient {
   @override
   Future<provd.UsernameValidation> validateUsername(String username) async =>
       provd.UsernameValidation.OK;
+}
+
+class FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
+  @override
+  Future<void> setInputSource(String layout, String variant) async {}
+
+  @override
+  Future<void> setKeyboard(String layout, String variant) async {}
+
+  @override
+  Future<provd.KeyboardSetup> getKeyboard() async => provd.KeyboardSetup(
+        settings: provd.KeyboardSettings(
+          layout: 'gb',
+          variant: '',
+        ),
+        layouts: [
+          provd.KeyboardLayout(
+            code: 'gb',
+            name: 'Englisch (Britisch)',
+            variants: [
+              provd.KeyboardVariant(
+                code: '',
+                name: 'English (Britisch)',
+              ),
+            ],
+          ),
+        ],
+      );
 }
