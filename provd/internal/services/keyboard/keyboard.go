@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"log/slog"
-	"os"
 	"regexp"
 	"strings"
 
@@ -146,9 +145,12 @@ func (s *Service) GetKeyboard(ctx context.Context, req *emptypb.Empty) (*pb.GetK
 
 	// Check if locale has a jsonl file avalible
 	filename := fmt.Sprintf("kbds/%s.jsonl", lang)
-	_, err = os.Stat(filename)
+	f, err := EmbeddedFiles.Open(filename)
+
 	if err != nil {
 		lang = "C"
+	} else {
+		f.Close()
 	}
 
 	// Type assertions
