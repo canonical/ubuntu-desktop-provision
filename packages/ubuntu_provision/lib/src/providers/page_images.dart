@@ -1,5 +1,5 @@
-import 'dart:io';
-
+import 'package:file/file.dart';
+import 'package:file/local.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,9 +16,11 @@ final _log = Logger('page_images');
 
 /// Pre-caches and holds images for all pages.
 class PageImages {
-  PageImages(this.pageConfigService);
+  PageImages(this.pageConfigService, {@visibleForTesting FileSystem? fs})
+      : _fs = fs ?? const LocalFileSystem();
 
   final PageConfigService pageConfigService;
+  final FileSystem _fs;
 
   @visibleForTesting
   SvgFileLoader Function(
@@ -53,20 +55,14 @@ class PageImages {
 
       try {
         final isAsset = imageConfig.startsWith('assets/');
-        final isAbsolutPath = imageConfig.startsWith('/');
         if (isAsset) {
           _loadAsset(
             'packages/ubuntu_provision/$imageConfig',
             pageName,
             context,
           );
-        } else if (isAbsolutPath) {
-          loadFutures.add(_loadFile(imageConfig, pageName, context));
         } else {
-          _log.error(
-            'Error loading image for $pageName from $imageConfig since it is '
-            'neither an asset or absolute path.',
-          );
+          loadFutures.add(_loadFile(imageConfig, pageName, context));
         }
       } on Exception catch (e) {
         _log.error('Error loading image for $pageName from $imageConfig: $e');
@@ -82,7 +78,7 @@ class PageImages {
     BuildContext context,
   ) async {
     final imagePath = '${ConfigService.whiteLabelDirectory}images/$imageName';
-    final file = File(imagePath);
+    final file = _fs.file(imagePath);
     if (!await file.exists()) {
       _log.error(
         'Error loading image for $pageName from $imagePath: File does not exist.',
