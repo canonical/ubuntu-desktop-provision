@@ -55,7 +55,8 @@ Future<void> showAdvancedFeaturesDialog(
                     YaruRadioButton<AdvancedFeature>(
                       title: Consumer(builder: (context, ref, child) {
                         final flavor = ref.watch(flavorProvider);
-                        return Text(lang.installationTypeLVM(flavor.name));
+                        return Text(
+                            lang.installationTypeLVM(flavor.displayName));
                       }),
                       value: AdvancedFeature.lvm,
                       groupValue: advancedFeature.value,
@@ -67,7 +68,7 @@ Future<void> showAdvancedFeaturesDialog(
                         title: Consumer(builder: (context, ref, child) {
                           final flavor = ref.watch(flavorProvider);
                           return Text(
-                              lang.installationTypeEncrypt(flavor.name));
+                              lang.installationTypeEncrypt(flavor.displayName));
                         }),
                         subtitle: Text(lang.installationTypeEncryptInfo),
                         value: encryption.value,

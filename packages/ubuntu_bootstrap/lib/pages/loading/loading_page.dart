@@ -28,7 +28,7 @@ class _LoadingPageState extends ConsumerState<LoadingPage> {
     final style = Theme.of(context).textTheme.headlineSmall!;
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(lang.loadingPageTitle(flavor.name)),
+        title: Text(lang.loadingPageTitle(flavor.displayName)),
       ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +38,7 @@ class _LoadingPageState extends ConsumerState<LoadingPage> {
             child: RepaintBoundary(child: YaruCircularProgressIndicator()),
           ),
           const SizedBox(height: kWizardSpacing * 2),
-          Text(lang.loadingHeader(flavor.name), style: style),
+          Text(lang.loadingHeader(flavor.displayName), style: style),
         ],
       ),
       bottomBar: const WizardBar(

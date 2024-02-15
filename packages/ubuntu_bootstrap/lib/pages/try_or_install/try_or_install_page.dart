@@ -27,23 +27,23 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
     final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
-      windowTitle: lang.tryOrInstallTitle(flavor.name),
-      title: lang.tryOrInstallHeader(flavor.name),
+      windowTitle: lang.tryOrInstallTitle(flavor.displayName),
+      title: lang.tryOrInstallHeader(flavor.displayName),
       content: Column(
         children: [
           OptionButton(
             value: TryOrInstallOption.installUbuntu,
             groupValue: model.option,
-            title: Text(lang.installOption(flavor.name)),
-            subtitle: Text(lang.installDescription(flavor.name)),
+            title: Text(lang.installOption(flavor.displayName)),
+            subtitle: Text(lang.installDescription(flavor.displayName)),
             onChanged: (value) => model.selectOption(value!),
           ),
           const SizedBox(height: kWizardSpacing / 2),
           OptionButton(
             value: TryOrInstallOption.tryUbuntu,
             groupValue: model.option,
-            title: Text(lang.tryOption(flavor.name)),
-            subtitle: Text(lang.tryDescription(flavor.name)),
+            title: Text(lang.tryOption(flavor.displayName)),
+            subtitle: Text(lang.tryDescription(flavor.displayName)),
             onChanged: (value) => model.selectOption(value!),
           ),
           const SizedBox(height: kWizardSpacing / 2),

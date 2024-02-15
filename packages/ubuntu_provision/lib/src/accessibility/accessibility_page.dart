@@ -26,8 +26,8 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
-      windowTitle: lang.accessibilityPageTitle(flavor.name),
-      title: lang.accessibilityPageTitle(flavor.name),
+      windowTitle: lang.accessibilityPageTitle(flavor.displayName),
+      title: lang.accessibilityPageTitle(flavor.displayName),
       expandContent: true,
       content: Center(
         child: Scrollbar(
@@ -39,7 +39,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
               padding: EdgeInsets.only(right: scrollBarPadding),
               child: Column(
                 children: [
-                  Text(lang.accessibilityPageBody(flavor.name)),
+                  Text(lang.accessibilityPageBody(flavor.displayName)),
                   const SizedBox(height: kWizardSpacing),
                   YaruExpansionPanel(
                     headers: [

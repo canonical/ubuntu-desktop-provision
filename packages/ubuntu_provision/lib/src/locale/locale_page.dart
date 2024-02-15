@@ -20,7 +20,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
 
     return HorizontalPage(
-      windowTitle: lang.localePageTitle(flavor.name),
+      windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
       onNext: () async {
         final locale = model.locale(model.selectedIndex);

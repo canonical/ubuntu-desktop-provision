@@ -30,7 +30,7 @@ class SecurityKeyPage extends ConsumerWidget {
       ),
       header: FractionallySizedBox(
         widthFactor: kWizardWidthFraction,
-        child: Text(lang.chooseSecurityKeyHeader(flavor.name)),
+        child: Text(lang.chooseSecurityKeyHeader(flavor.displayName)),
       ),
       content: LayoutBuilder(builder: (context, constraints) {
         final fieldWidth = constraints.maxWidth * kWizardWidthFraction;

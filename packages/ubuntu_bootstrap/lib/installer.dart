@@ -15,7 +15,6 @@ import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/slides.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -28,7 +27,6 @@ export 'slides.dart';
 Future<void> runInstallerApp(
   List<String> args, {
   List<WidgetBuilder>? slides,
-  UbuntuFlavor? flavor,
   ThemeData? theme,
   ThemeData? darkTheme,
   GenerateAppTitle? onGenerateTitle,
@@ -168,8 +166,10 @@ Future<void> runInstallerApp(
     await themeVariantService.load();
     final themeVariant = themeVariantService.themeVariant;
 
-    final windowTitle =
-        await getService<ConfigService>().get<String>('app-name');
+    final configService = getService<ConfigService>();
+    final windowTitle = await configService.get<String>('app-name');
+
+    final flavor = await loadFlavor();
 
     final endpoint = await initialized;
     await _initInstallerApp(endpoint);
@@ -179,11 +179,9 @@ Future<void> runInstallerApp(
         slides: slides ?? defaultSlides,
         child: Consumer(
           builder: (context, ref, child) {
-            if (flavor != null) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                ref.read(flavorProvider.notifier).state = flavor;
-              });
-            }
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              ref.read(flavorProvider.notifier).state = flavor;
+            });
             return WizardApp(
               flavor: flavor,
               theme: theme ?? themeVariant?.theme,
@@ -194,7 +192,7 @@ Future<void> runInstallerApp(
 
                     final flavor = ref.watch(flavorProvider);
                     return UbuntuBootstrapLocalizations.of(context)
-                        .windowTitle(flavor.name);
+                        .windowTitle(flavor.displayName);
                   },
               locale: ref.watch(localeProvider),
               localizationsDelegates: [

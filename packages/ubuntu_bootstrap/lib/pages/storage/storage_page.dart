@@ -87,7 +87,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             Padding(
               padding: const EdgeInsets.only(bottom: kWizardSpacing),
               child: YaruRadioButton<StorageType>(
-                title: Text(lang.installationTypeErase(flavor.name)),
+                title: Text(lang.installationTypeErase(flavor.displayName)),
                 subtitle: Html(
                   data: lang.installationTypeEraseWarning(
                       Theme.of(context).colorScheme.error.toHex()),
@@ -122,7 +122,8 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
           if (model.canManualPartition)
             YaruRadioButton<StorageType>(
               title: Text(lang.installationTypeManual),
-              subtitle: Text(lang.installationTypeManualInfo(flavor.name)),
+              subtitle:
+                  Text(lang.installationTypeManualInfo(flavor.displayName)),
               value: StorageType.manual,
               groupValue: model.type,
               onChanged: (v) => model.type = v,
