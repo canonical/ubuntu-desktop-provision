@@ -5,6 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
@@ -21,7 +22,6 @@ import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.d
 import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
-import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -282,7 +282,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(Routes.source);
+    await tester.jumpToWizardRoute(InstallationStep.source.name);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -316,7 +316,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(Routes.storage);
+    await tester.jumpToWizardRoute(InstallationStep.storage.name);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -344,7 +344,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(Routes.identity);
+    await tester.jumpToWizardRoute(InstallationStep.identity.name);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -369,17 +369,17 @@ void main() {
           installModelProvider.overrideWith((_) => installModel),
         ],
         child: tester.buildTestWizard(excludedPages: [
-          'try-or-install',
+          'tryOrInstall',
           'locale',
           'rst',
           'network',
           'refresh',
           'source',
-          'not-enough-disk-space',
-          'secure-boot',
+          'notEnoughDiskSpace',
+          'secureBoot',
           'storage',
           'identity',
-          'active-directory',
+          'activeDirectory',
           'timezone',
         ]),
       ),
@@ -437,7 +437,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(Routes.network);
+    await tester.jumpToWizardRoute(InstallationStep.network.name);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -448,7 +448,7 @@ void main() {
 
 extension on WidgetTester {
   Widget buildTestWizard({
-    List<String> excludedPages = const ['try-or-install'],
+    List<String> excludedPages = const ['tryOrInstall'],
   }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {

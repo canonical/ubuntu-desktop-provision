@@ -6,8 +6,8 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/l10n.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
+import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
-import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -142,10 +142,10 @@ void main() {
 
   testWidgets('pages', (tester) async {
     final initModel = buildInitModel(pages: [
-      Routes.locale,
-      Routes.keyboard,
-      Routes.identity,
-      Routes.telemetry,
+      InitStep.locale.name,
+      InitStep.keyboard.name,
+      InitStep.identity.name,
+      InitStep.telemetry.name,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
@@ -195,7 +195,7 @@ void main() {
 
   group('error page', () {
     testWidgets('init wizard', (tester) async {
-      final initModel = buildInitModel(pages: [Routes.locale]);
+      final initModel = buildInitModel(pages: [InitStep.locale.name]);
       final localeModel = buildLocaleModel(error: Exception());
 
       await tester.pumpWidget(
@@ -215,7 +215,7 @@ void main() {
     });
 
     testWidgets('welcome wizard', (tester) async {
-      final initModel = buildInitModel(pages: [Routes.welcome]);
+      final initModel = buildInitModel(pages: [WelcomeStep.welcome.name]);
       final welcomeModel = buildWelcomeModel(error: Exception());
 
       await tester.pumpWidget(

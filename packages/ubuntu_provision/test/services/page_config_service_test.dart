@@ -32,7 +32,7 @@ pages:
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);
-    expect(pages.keys, contains('try-or-install'));
+    expect(pages.keys, contains('tryOrInstall'));
   });
 }
 

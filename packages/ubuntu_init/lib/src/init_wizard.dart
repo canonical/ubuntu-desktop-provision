@@ -5,13 +5,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
-import 'package:ubuntu_init/src/routes.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 final _log = Logger('init_wizard');
+
+const _initialPageName = '/';
 
 class InitWizard extends ConsumerWidget {
   const InitWizard({
@@ -24,15 +25,15 @@ class InitWizard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final routes = <String, WizardRoute>{
-      for (final step in InitStep.values)
-        Routes.routeMap[step.name]!: step.toRoute(context, ref)
+      for (final step in InitStep.values) step.name: step.toRoute(context, ref)
     };
     final totalSteps = InitStep.values.length;
 
     return WizardBuilder(
-      errorRoute: Routes.error,
+      errorRoute: InitStep.error.name,
       routes: {
-        Routes.initial: WizardRoute(
+        // TODO(Lukas): Replace this with a loader page
+        _initialPageName: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache(context);
@@ -43,7 +44,7 @@ class InitWizard extends ConsumerWidget {
         // TODO: Replace with 'done' page
         // Currently the following entry explicitly overrides the telemetry page
         // entry from `routes` and makes it behave as the final page.
-        Routes.telemetry: WizardRoute(
+        InitStep.telemetry.name: WizardRoute(
           builder: (_) => const TelemetryPage(),
           userData: WizardRouteData(
             step: totalSteps - 1,
@@ -59,7 +60,7 @@ class InitWizard extends ConsumerWidget {
             return null;
           },
         ),
-        Routes.error: WizardRoute(
+        InitStep.error.name: WizardRoute(
           builder: (context) {
             final exception = ModalRoute.of(context)?.settings.arguments;
             _log.error('Uncaught exception: $exception');
@@ -77,7 +78,7 @@ class InitWizard extends ConsumerWidget {
         ),
       },
       userData: WizardData(totalSteps: totalSteps),
-      predicate: (route) => route == Routes.initial
+      predicate: (route) => route == _initialPageName
           ? true
           : ref.read(initModelProvider).hasRoute(route),
     );
@@ -96,14 +97,15 @@ class WelcomeWizard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final routes = <String, WizardRoute>{
       for (final step in WelcomeStep.values)
-        if (ref.read(initModelProvider).hasRoute(Routes.routeMap[step.name]!))
-          Routes.routeMap[step.name]!: step.toRoute(context, ref)
+        if (ref.read(initModelProvider).hasRoute(step.name))
+          step.name: step.toRoute(context, ref)
     };
 
     return WizardBuilder(
-      errorRoute: Routes.error,
+      errorRoute: InitStep.error.name,
       routes: {
-        Routes.initial: WizardRoute(
+        // TODO(Lukas): Replace this with a loader page
+        _initialPageName: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache(context);
@@ -114,7 +116,7 @@ class WelcomeWizard extends ConsumerWidget {
         // TODO: Replace with 'done' page
         // Currently the following entry explicitly overrides the telemetry page
         // entry from `routes` and makes it behave as the final page.
-        Routes.welcome: WizardRoute(
+        WelcomeStep.welcome.name: WizardRoute(
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(
             step: routes.length - 1,
@@ -128,7 +130,7 @@ class WelcomeWizard extends ConsumerWidget {
             return null;
           },
         ),
-        Routes.error: WizardRoute(
+        InitStep.error.name: WizardRoute(
           builder: (_) => const ErrorPage(),
           userData: const WizardRouteData(
             hasPrevious: false,
@@ -137,12 +139,12 @@ class WelcomeWizard extends ConsumerWidget {
           onNext: (_) async {
             final window = YaruWindow.of(context);
             await window.close();
-            return Routes.initial;
+            return _initialPageName;
           },
         ),
       },
       userData: WizardData(totalSteps: routes.length),
-      predicate: (route) => route == Routes.initial
+      predicate: (route) => route == _initialPageName
           ? true
           : ref.read(initModelProvider).hasRoute(route),
     );

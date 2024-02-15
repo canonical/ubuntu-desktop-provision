@@ -4,7 +4,6 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -43,32 +42,37 @@ class _InstallWizard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final preInstallRoutes = <String, WizardRoute>{
-      for (final step in InstallationStep.values)
-        Routes.routeMap[step.name]!: step.toRoute(context, ref)
+      for (final step in InstallationStep.wizardSteps)
+        step.name: step.toRoute(context, ref)
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;
 
     return WizardBuilder(
-      initialRoute: Routes.initial,
+      initialRoute: InstallationStep.loading.name,
       userData: WizardData(totalSteps: totalSteps),
       routes: {
-        Routes.loading: WizardRoute(
+        InstallationStep.loading.name: WizardRoute(
           builder: (_) => const LoadingPage(),
           userData: const WizardRouteData(
             hasPrevious: false,
             hasNext: false,
           ),
-          onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
+          onReplace: (_) =>
+              const LoadingPage().load(context, ref).then((_) => null),
         ),
         ...preInstallRoutes,
-        Routes.install: WizardRoute(
+        InstallationStep.install.name: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
       },
       predicate: (route) {
-        if ([Routes.loading, Routes.confirm, Routes.install].contains(route)) {
+        if ([
+          InstallationStep.loading.name,
+          InstallationStep.confirm.name,
+          InstallationStep.install.name,
+        ].contains(route)) {
           return true;
         } else {
           return ref.read(installerModelProvider).hasRoute(route);
@@ -101,19 +105,20 @@ class _AutoinstallWizard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return WizardBuilder(
       routes: <String, WizardRoute>{
-        Routes.loading: WizardRoute(
+        InstallationStep.loading.name: WizardRoute(
           builder: (_) => const LoadingPage(),
           userData: const WizardRouteData(
             hasPrevious: false,
             hasNext: false,
           ),
-          onReplace: (_) => LoadingPage.init(context, ref).then((_) => null),
+          onReplace: (_) =>
+              const LoadingPage().load(context, ref).then((_) => null),
         ),
-        Routes.confirm: WizardRoute(
+        InstallationStep.confirm.name: WizardRoute(
           builder: (_) => const ConfirmPage(),
           onLoad: (_) => status?.isInstalling != true,
         ),
-        Routes.install: WizardRoute(
+        InstallationStep.install.name: WizardRoute(
           builder: (_) => const InstallPage(),
         ),
       },
@@ -128,7 +133,7 @@ class _ErrorWizard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wizard(
       routes: <String, WizardRoute>{
-        Routes.install: WizardRoute(
+        InstallationStep.install.name: WizardRoute(
           builder: (_) => const InstallPage(),
         ),
       },
