@@ -2,8 +2,11 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+
+final _log = Logger('init_model');
 
 final initModelProvider = Provider(
   (_) => InitModel(
@@ -37,11 +40,15 @@ class InitModel {
     final identity = await _identityService?.getIdentity();
     if (identity == null) return;
 
-    await _gdmService?.init();
-    await _gdmService?.launchSession(
-      identity.username,
-      identity.password,
-    );
+    try {
+      await _gdmService?.init();
+      await _gdmService?.launchSession(
+        identity.username,
+        identity.password,
+      );
+    } on Exception catch (e) {
+      _log.error('Failed to launch desktop session', e);
+    }
   }
 
   bool hasRoute(String route) {
