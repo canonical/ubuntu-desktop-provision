@@ -1,0 +1,1 @@
+gsettings.SetBoolean(key: stickykeys-enable, value: true)
