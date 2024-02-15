@@ -1,0 +1,1 @@
+gsettings.SetBoolean(key: slowkeys-enable, value: false)

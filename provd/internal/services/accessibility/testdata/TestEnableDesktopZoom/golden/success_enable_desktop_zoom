@@ -1,0 +1,1 @@
+gsettings.SetBoolean(key: screen-magnifier-enabled, value: true)

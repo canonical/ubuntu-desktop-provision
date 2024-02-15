@@ -1,0 +1,1 @@
+gsettings.SetBoolean(key: mousekeys-enable, value: true)

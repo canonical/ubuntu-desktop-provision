@@ -972,6 +972,471 @@ func TestDisableStickyKeys(t *testing.T) {
 	}
 }
 
+func TestGetSlowKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest    bool
+		getBooleanError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of slow keys":              {},
+		"Success getting state of slow keys when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {getBooleanError: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Prepare mocks
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{getBooleanError: tc.getBooleanError, WantTrue: tc.wantTrue}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetSlowKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "GetSlowKeys should return an error")
+				require.Empty(t, resp, "GetSlowKeys should return a nil response")
+				return
+			}
+
+			require.NoError(t, err, "GetSlowKeys should not return an error")
+			got := fmt.Sprintf("%t", resp.GetValue())
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestEnableSlowKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable slow keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.EnableSlowKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "EnableSlowKeys should return an error")
+				require.Empty(t, resp, "EnableSlowKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableSlowKeys should not return an error")
+			require.NotNil(t, resp, "EnableSlowKeys should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestDisableSlowKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable slow keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.DisableSlowKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "DisableSlowKeys should return an error")
+				require.Empty(t, resp, "DisableSlowKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableSlowKeys should not return an error")
+			require.NotNil(t, resp, "DisableSlowKeys should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestGetMouseKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest    bool
+		getBooleanError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of mouse keys":              {},
+		"Success getting state of mouse keys when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {getBooleanError: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Prepare mocks
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{getBooleanError: tc.getBooleanError, WantTrue: tc.wantTrue}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetMouseKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "GetMouseKeys should return an error")
+				require.Empty(t, resp, "GetMouseKeys should return a nil response")
+				return
+			}
+
+			require.NoError(t, err, "GetMouseKeys should not return an error")
+			got := fmt.Sprintf("%t", resp.GetValue())
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestEnableMouseKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable mouse keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.EnableMouseKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "EnableMouseKeys should return an error")
+				require.Empty(t, resp, "EnableMouseKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableMouseKeys should not return an error")
+			require.NotNil(t, resp, "EnableMouseKeys should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestDisableMouseKeys(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable mouse keys": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithKeyboardSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.DisableMouseKeys(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "DisableMouseKeys should return an error")
+				require.Empty(t, resp, "DisableMouseKeys should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableMouseKeys should not return an error")
+			require.NotNil(t, resp, "DisableMouseKeys should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestGetDesktopZoom(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		// Error flags
+		emptyRequest   bool
+		getDoubleError bool
+
+		// Wants
+		wantErr  bool
+		wantTrue bool
+	}{
+		// Success case
+		"Success getting state of desktop zoom":              {},
+		"Success getting state of desktop zoom when enabled": {wantTrue: true},
+
+		// Error cases
+		"Error case returns 0, no calls made": {getDoubleError: true},
+		"Error on empty request":              {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Prepare mocks
+			opts := []accessibility.Option{
+				accessibility.WithApplicationSettings(gSettingsSubsetMock{getDoubleError: tc.getDoubleError, WantTrue: tc.wantTrue}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.GetDesktopZoom(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "GetDesktopZoom should return an error")
+				require.Empty(t, resp, "GetDesktopZoom should return a nil response")
+				return
+			}
+
+			require.NoError(t, err, "GetDesktopZoom should not return an error")
+			got := fmt.Sprintf("%t", resp.GetValue())
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestEnableDesktopZoom(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success enable desktop zoom": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithApplicationSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.EnableDesktopZoom(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "EnableDesktopZoom should return an error")
+				require.Empty(t, resp, "EnableDesktopZoom should return a nil response")
+				return
+			}
+			require.NoError(t, err, "EnableDesktopZoom should not return an error")
+			require.NotNil(t, resp, "EnableDesktopZoom should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestDisableDesktopZoom(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest    bool
+		setBooleanError bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success disable desktop zoom": {},
+
+		// Error cases
+		"Error case returns false, no calls made": {setBooleanError: true, wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			// Prepare mocks
+			actionpath := t.TempDir()
+			opts := []accessibility.Option{
+				accessibility.WithApplicationSettings(gSettingsSubsetMock{setBooleanError: tc.setBooleanError, actionpath: actionpath}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := newEmptyRequest(tc.emptyRequest)
+
+			// Get function under test output
+			resp, err := client.DisableDesktopZoom(context.Background(), req)
+
+			// Evaluate function under test output
+			if tc.wantErr {
+				require.Error(t, err, "DisableDesktopZoom should return an error")
+				require.Empty(t, resp, "DisableDesktopZoom should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableDesktopZoom should not return an error")
+			require.NotNil(t, resp, "DisableDesktopZoom should return a non-nil response")
+
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
+			require.NoError(t, err, "ReadActionFromFile should not return an error")
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
 func newEmptyRequest(emptyRequest bool) *emptypb.Empty {
 	var req *emptypb.Empty
 	if !emptyRequest {

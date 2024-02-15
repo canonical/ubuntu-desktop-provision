@@ -1,63 +1,21 @@
 accessibility.AccessibilityService:
     methods:
-        - name: GetScreenReader
-          isclientstream: false
-          isserverstream: false
-        - name: GetVisualAlerts
-          isclientstream: false
-          isserverstream: false
-        - name: EnableScreenKeyboard
-          isclientstream: false
-          isserverstream: false
-        - name: GetStickyKeys
-          isclientstream: false
-          isserverstream: false
-        - name: GetDesktopZoom
-          isclientstream: false
-          isserverstream: false
-        - name: EnableHighContrast
-          isclientstream: false
-          isserverstream: false
-        - name: EnableVisualAlerts
-          isclientstream: false
-          isserverstream: false
-        - name: GetMouseKeys
+        - name: GetHighContrast
           isclientstream: false
           isserverstream: false
         - name: DisableReducedMotion
           isclientstream: false
           isserverstream: false
-        - name: GetLargeText
-          isclientstream: false
-          isserverstream: false
-        - name: GetScreenKeyboard
-          isclientstream: false
-          isserverstream: false
-        - name: EnableSlowKeys
-          isclientstream: false
-          isserverstream: false
-        - name: DisableSlowKeys
-          isclientstream: false
-          isserverstream: false
-        - name: EnableReducedMotion
-          isclientstream: false
-          isserverstream: false
-        - name: EnableDesktopZoom
+        - name: DisableVisualAlerts
           isclientstream: false
           isserverstream: false
         - name: DisableScreenKeyboard
           isclientstream: false
           isserverstream: false
-        - name: EnableStickyKeys
-          isclientstream: false
-          isserverstream: false
-        - name: EnableMouseKeys
+        - name: DisableMouseKeys
           isclientstream: false
           isserverstream: false
         - name: DisableDesktopZoom
-          isclientstream: false
-          isserverstream: false
-        - name: GetHighContrast
           isclientstream: false
           isserverstream: false
         - name: GetReducedMotion
@@ -66,40 +24,82 @@ accessibility.AccessibilityService:
         - name: DisableScreenReader
           isclientstream: false
           isserverstream: false
-        - name: DisableHighContrast
+        - name: DisableStickyKeys
           isclientstream: false
           isserverstream: false
-        - name: GetSlowKeys
-          isclientstream: false
-          isserverstream: false
-        - name: DisableMouseKeys
-          isclientstream: false
-          isserverstream: false
-        - name: EnableLargeText
+        - name: GetDesktopZoom
           isclientstream: false
           isserverstream: false
         - name: DisableLargeText
           isclientstream: false
           isserverstream: false
+        - name: EnableSlowKeys
+          isclientstream: false
+          isserverstream: false
+        - name: DisableSlowKeys
+          isclientstream: false
+          isserverstream: false
+        - name: DisableHighContrast
+          isclientstream: false
+          isserverstream: false
+        - name: EnableVisualAlerts
+          isclientstream: false
+          isserverstream: false
+        - name: GetStickyKeys
+          isclientstream: false
+          isserverstream: false
+        - name: EnableStickyKeys
+          isclientstream: false
+          isserverstream: false
+        - name: GetSlowKeys
+          isclientstream: false
+          isserverstream: false
+        - name: EnableHighContrast
+          isclientstream: false
+          isserverstream: false
+        - name: GetLargeText
+          isclientstream: false
+          isserverstream: false
+        - name: EnableLargeText
+          isclientstream: false
+          isserverstream: false
+        - name: GetScreenKeyboard
+          isclientstream: false
+          isserverstream: false
+        - name: EnableReducedMotion
+          isclientstream: false
+          isserverstream: false
+        - name: EnableDesktopZoom
+          isclientstream: false
+          isserverstream: false
+        - name: GetMouseKeys
+          isclientstream: false
+          isserverstream: false
+        - name: EnableMouseKeys
+          isclientstream: false
+          isserverstream: false
+        - name: GetScreenReader
+          isclientstream: false
+          isserverstream: false
         - name: EnableScreenReader
           isclientstream: false
           isserverstream: false
-        - name: DisableVisualAlerts
+        - name: GetVisualAlerts
           isclientstream: false
           isserverstream: false
-        - name: DisableStickyKeys
+        - name: EnableScreenKeyboard
           isclientstream: false
           isserverstream: false
     metadata: protos/accessibility.proto
 keyboard.KeyboardService:
     methods:
+        - name: GetKeyboard
+          isclientstream: false
+          isserverstream: false
         - name: SetKeyboard
           isclientstream: false
           isserverstream: false
         - name: SetInputSource
-          isclientstream: false
-          isserverstream: false
-        - name: GetKeyboard
           isclientstream: false
           isserverstream: false
     metadata: protos/keyboard.proto
@@ -114,13 +114,13 @@ locale.LocaleService:
     metadata: protos/locale.proto
 privacy.PrivacyService:
     methods:
+        - name: DisableLocationServices
+          isclientstream: false
+          isserverstream: false
         - name: GetLocationServices
           isclientstream: false
           isserverstream: false
         - name: EnableLocationServices
-          isclientstream: false
-          isserverstream: false
-        - name: DisableLocationServices
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
