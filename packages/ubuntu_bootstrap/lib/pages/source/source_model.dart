@@ -7,7 +7,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-final _log = Logger('source');
+final _log = Logger('applicationsSelection');
 
 const kFullSourceId = 'ubuntu-desktop';
 const kMinimalSourceId = 'ubuntu-desktop-minimal';
@@ -22,15 +22,14 @@ final sourceModelProvider = ChangeNotifierProvider(
 );
 
 class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
-  // ignore: public_member_api_docs
-  SourceModel(
-      {required SubiquityClient client,
-      required PowerService power,
-      required NetworkService network,
-      required StorageService storage,
-      bool installDrivers = false,
-      bool installCodecs = false})
-      : _client = client,
+  SourceModel({
+    required SubiquityClient client,
+    required PowerService power,
+    required NetworkService network,
+    required StorageService storage,
+    bool installDrivers = false,
+    bool installCodecs = false,
+  })  : _client = client,
         _power = power,
         _network = network,
         _storage = storage,

@@ -128,10 +128,10 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.source.route);
+    await tester.jumpToPage(InstallationStep.applicationsSelection.route);
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage(
+    await tester.testApplicationsSelectionPage(
       screenshot: '$currentThemeName/06.source',
     );
   }, variant: themeVariant);
@@ -146,7 +146,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.source.route);
+    await tester.jumpToPage(InstallationStep.applicationsSelection.route);
     await tester.jumpToPage(InstallationStep.notEnoughDiskSpace.route);
     await tester.pumpAndSettle();
 
@@ -494,7 +494,7 @@ final themeVariant = YaruThemeVariant();
 extension on WidgetTester {
   Future<void> jumpToStorageWizard() async {
     // an installation source must be explicitly selected before calling storage APIs
-    await jumpToPage(InstallationStep.source.route);
+    await jumpToPage(InstallationStep.applicationsSelection.route);
     await tapNext();
     await pumpUntil(find.byType(StorageWizard));
   }

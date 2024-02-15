@@ -24,7 +24,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    expect(find.byType(SourcePage), findsOneWidget);
+    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
 
     // source -> last
     await tester.tapNext();
@@ -37,7 +37,7 @@ void main() {
     await tester.tapPrevious();
     await tester.pumpAndSettle();
 
-    expect(find.byType(SourcePage), findsOneWidget);
+    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
 
     // source -> first
     await tester.tapPrevious();
@@ -55,7 +55,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    expect(find.byType(SourcePage), findsOneWidget);
+    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
 
     // source -> not enough disk space
     await tester.tapNext();
@@ -68,7 +68,7 @@ void main() {
     await tester.tapPrevious();
     await tester.pumpAndSettle();
 
-    expect(find.byType(SourcePage), findsOneWidget);
+    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
 
     // source -> first
     await tester.tapPrevious();
@@ -126,11 +126,12 @@ extension on WidgetTester {
                       ),
                     ),
                   ),
-                  InstallationStep.source.name: WizardRoute(
-                    builder: (_) => SourcePage(),
-                    onLoad: (_) => SourcePage().load(context, ref),
+                  InstallationStep.applicationsSelection.route: WizardRoute(
+                    builder: (_) => ApplicationsSelectionPage(),
+                    onLoad: (_) =>
+                        ApplicationsSelectionPage().load(context, ref),
                   ),
-                  InstallationStep.notEnoughDiskSpace.name: WizardRoute(
+                  InstallationStep.notEnoughDiskSpace.route: WizardRoute(
                     builder: (_) => const NotEnoughDiskSpacePage(),
                     onLoad: (_) =>
                         const NotEnoughDiskSpacePage().load(context, ref),

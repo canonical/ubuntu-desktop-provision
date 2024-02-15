@@ -110,7 +110,7 @@ void main() {
       expect(await client.getVariant(), equals(Variant.DESKTOP));
     });
 
-    test('source', () async {
+    test('applicationsSelection', () async {
       await client.setVariant(Variant.DESKTOP);
 
       final sources = await client.getSource().then((s) => s.sources);

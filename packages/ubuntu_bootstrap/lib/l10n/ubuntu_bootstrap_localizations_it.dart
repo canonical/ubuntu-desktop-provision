@@ -120,13 +120,28 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Quali applicazioni installare?';
 
   @override
-  String get fullInstallationTitle => 'Full installation';
+  String get codecsAndDriversPageTitle => 'Optimise your computer';
+
+  @override
+  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+
+  @override
+  String get codecsAndDriversPageBody => 'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+
+  @override
+  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+
+  @override
+  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+
+  @override
+  String get fullInstallationTitle => 'Extended selection';
 
   @override
   String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
 
   @override
-  String get minimalInstallationTitle => 'Default installation';
+  String get minimalInstallationTitle => 'Default selection';
 
   @override
   String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';

@@ -191,7 +191,7 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(SourcePage), findsOneWidget);
+    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
     verify(refreshModel.init()).called(1); // skipped
     verify(sourceModel.init()).called(1);
 
@@ -282,7 +282,8 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.source.route);
+    await tester
+        .jumpToWizardRoute(InstallationStep.applicationsSelection.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -374,7 +375,7 @@ void main() {
           'rst',
           'network',
           'refresh',
-          'source',
+          'applicationsSelection',
           'notEnoughDiskSpace',
           'secureBoot',
           'storage',

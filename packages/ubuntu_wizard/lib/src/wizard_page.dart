@@ -21,6 +21,13 @@ const kWizardIndentedPadding =
 /// The recommended width of wizard dialogs.
 const kWizardDialogWidth = 600.0;
 
+const kWizardBorderRadius = BorderRadius.all(Radius.circular(4));
+
+const kWizardTilePadding = EdgeInsets.symmetric(
+  horizontal: kWizardSpacing,
+  vertical: kWizardSpacing / 2,
+);
+
 /// The base for wizard pages in the installer.
 ///
 /// Provides the appropriate layout and the common building blocks for

@@ -4,8 +4,8 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
+import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
-import 'package:ubuntu_bootstrap/pages/source/source_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
@@ -50,7 +50,7 @@ SourceModel buildSourceModel({
   return model;
 }
 
-Widget buildSourcePage(SourceModel model) {
+Widget buildApplicationsSelectionPage(SourceModel model) {
   registerMockService<SubiquityClient>(MockSubiquityClient());
   registerMockService<TelemetryService>(MockTelemetryService());
   final pageImages = PageImages(MockPageConfigService());
@@ -60,6 +60,20 @@ Widget buildSourcePage(SourceModel model) {
       sourceModelProvider.overrideWith((_) => model),
       pageImagesProvider.overrideWith((_) => pageImages),
     ],
-    child: SourcePage(),
+    child: ApplicationsSelectionPage(),
+  );
+}
+
+Widget buildCodecsAndDriversPage(SourceModel model) {
+  registerMockService<SubiquityClient>(MockSubiquityClient());
+  registerMockService<TelemetryService>(MockTelemetryService());
+  final pageImages = PageImages(MockPageConfigService());
+
+  return ProviderScope(
+    overrides: [
+      sourceModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
+    ],
+    child: CodecsAndDriversPage(),
   );
 }

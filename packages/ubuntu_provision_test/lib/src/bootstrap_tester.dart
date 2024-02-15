@@ -90,13 +90,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testSourcePage({
+  Future<void> testApplicationsSelectionPage({
     String? sourceId,
     String? screenshot,
   }) async {
-    await pumpUntilPage(SourcePage);
+    await pumpUntilPage(ApplicationsSelectionPage);
 
-    final context = element(find.byType(SourcePage));
+    final context = element(find.byType(ApplicationsSelectionPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.updatesOtherSoftwarePageTitle), findsOneWidget);

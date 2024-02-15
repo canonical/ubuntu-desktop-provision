@@ -12,8 +12,10 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
-  source:
+  applicationsSelection:
     image: "assets/images/mascot.svg"
+  codecsAndDrivers:
+    image: "assets/images/keyboard.svg"
   not-enough-disk-space:
   secure-boot:
   storage:
