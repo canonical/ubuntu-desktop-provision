@@ -80,7 +80,7 @@ theme:
 # - telemetry: Enable sending telemetry
 pages:
   <page-name>:
-  image: <image-name>
+    image: <image-name>
 ```
 
 ## Repository Structure
