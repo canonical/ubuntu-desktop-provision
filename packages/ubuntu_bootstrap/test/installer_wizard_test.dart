@@ -282,7 +282,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.source.name);
+    await tester.jumpToWizardRoute(InstallationStep.source.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

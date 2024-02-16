@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-enum InstallationStep {
+enum InstallationStep with RouteName {
   loading(LoadingPage.new, discreteStep: false, wizardStep: false),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new),

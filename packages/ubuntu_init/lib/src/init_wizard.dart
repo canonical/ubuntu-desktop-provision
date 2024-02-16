@@ -25,12 +25,12 @@ class InitWizard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final routes = <String, WizardRoute>{
-      for (final step in InitStep.values) step.name: step.toRoute(context, ref)
+      for (final step in InitStep.values) step.route: step.toRoute(context, ref)
     };
     final totalSteps = InitStep.values.length;
 
     return WizardBuilder(
-      errorRoute: InitStep.error.name,
+      errorRoute: InitStep.error.route,
       routes: {
         // TODO(Lukas): Replace this with a loader page
         _initialPageName: WizardRoute(
@@ -44,7 +44,7 @@ class InitWizard extends ConsumerWidget {
         // TODO: Replace with 'done' page
         // Currently the following entry explicitly overrides the telemetry page
         // entry from `routes` and makes it behave as the final page.
-        InitStep.telemetry.name: WizardRoute(
+        InitStep.telemetry.route: WizardRoute(
           builder: (_) => const TelemetryPage(),
           userData: WizardRouteData(
             step: totalSteps - 1,
@@ -60,7 +60,7 @@ class InitWizard extends ConsumerWidget {
             return null;
           },
         ),
-        InitStep.error.name: WizardRoute(
+        InitStep.error.route: WizardRoute(
           builder: (context) {
             final exception = ModalRoute.of(context)?.settings.arguments;
             _log.error('Uncaught exception: $exception');
@@ -97,12 +97,12 @@ class WelcomeWizard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final routes = <String, WizardRoute>{
       for (final step in WelcomeStep.values)
-        if (ref.read(initModelProvider).hasRoute(step.name))
-          step.name: step.toRoute(context, ref)
+        if (ref.read(initModelProvider).hasRoute(step.route))
+          step.route: step.toRoute(context, ref)
     };
 
     return WizardBuilder(
-      errorRoute: InitStep.error.name,
+      errorRoute: InitStep.error.route,
       routes: {
         // TODO(Lukas): Replace this with a loader page
         _initialPageName: WizardRoute(
@@ -116,7 +116,7 @@ class WelcomeWizard extends ConsumerWidget {
         // TODO: Replace with 'done' page
         // Currently the following entry explicitly overrides the telemetry page
         // entry from `routes` and makes it behave as the final page.
-        WelcomeStep.welcome.name: WizardRoute(
+        WelcomeStep.welcome.route: WizardRoute(
           builder: (_) => const WelcomePage(),
           userData: WizardRouteData(
             step: routes.length - 1,
@@ -130,7 +130,7 @@ class WelcomeWizard extends ConsumerWidget {
             return null;
           },
         ),
-        InitStep.error.name: WizardRoute(
+        InitStep.error.route: WizardRoute(
           builder: (_) => const ErrorPage(),
           userData: const WizardRouteData(
             hasPrevious: false,

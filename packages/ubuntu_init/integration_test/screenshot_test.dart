@@ -39,7 +39,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.keyboard.name);
+    await tester.jumpToPage(InitStep.keyboard.route);
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(

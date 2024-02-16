@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-enum InitStep {
+enum InitStep with RouteName {
   locale(LocalePage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
@@ -51,7 +52,7 @@ enum InitStep {
   }
 }
 
-enum WelcomeStep {
+enum WelcomeStep with RouteName {
   welcome(WelcomePage.new);
 
   const WelcomeStep(this.pageFactory);

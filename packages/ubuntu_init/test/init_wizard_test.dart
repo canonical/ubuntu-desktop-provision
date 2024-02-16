@@ -142,10 +142,10 @@ void main() {
 
   testWidgets('pages', (tester) async {
     final initModel = buildInitModel(pages: [
-      InitStep.locale.name,
-      InitStep.keyboard.name,
-      InitStep.identity.name,
-      InitStep.telemetry.name,
+      InitStep.locale.route,
+      InitStep.keyboard.route,
+      InitStep.identity.route,
+      InitStep.telemetry.route,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
@@ -195,7 +195,7 @@ void main() {
 
   group('error page', () {
     testWidgets('init wizard', (tester) async {
-      final initModel = buildInitModel(pages: [InitStep.locale.name]);
+      final initModel = buildInitModel(pages: [InitStep.locale.route]);
       final localeModel = buildLocaleModel(error: Exception());
 
       await tester.pumpWidget(
@@ -215,7 +215,7 @@ void main() {
     });
 
     testWidgets('welcome wizard', (tester) async {
-      final initModel = buildInitModel(pages: [WelcomeStep.welcome.name]);
+      final initModel = buildInitModel(pages: [WelcomeStep.welcome.route]);
       final welcomeModel = buildWelcomeModel(error: Exception());
 
       await tester.pumpWidget(

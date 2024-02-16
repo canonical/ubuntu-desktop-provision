@@ -51,7 +51,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.accessibility.name);
+    await tester.jumpToPage(InstallationStep.accessibility.route);
     await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage(
@@ -64,7 +64,7 @@ Future<void> main() async {
         .runApp(() => runInstallerApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.tryOrInstall.name);
+    await tester.jumpToPage(InstallationStep.tryOrInstall.route);
     await tester.pumpAndSettle();
 
     await tester.testTryOrInstallPage(
