@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package pro;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service ProEnrolmentService {
+    rpc ProMagicAttach(google.protobuf.Empty) returns (stream ProMagicAttachResponse);
+    rpc ProAttach(google.protobuf.StringValue) returns (google.protobuf.Empty);
+}
+
+enum MagicAttachResponseType {
+    USER_CODE = 0;
+    REFRESHED_USER_CODE = 1;
+    SUCCESS = 2;
+    NETWORK_ERROR = 3;
+    SUBSCRIPTION_LIMIT_REACHED = 4;
+    UNKOWN_ERROR = 5;
+}
+
+message ProMagicAttachResponse {
+    MagicAttachResponseType type = 1;
+    optional string userCode = 2;
+}
