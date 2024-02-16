@@ -44,14 +44,14 @@ flavour: <name>
 # (Optional) Sets the window's title (e.g. the text in alt|super + tab)
 app-name: <string>
 
-# (Optional) Overrides the theme's accent colors
+# (Optional) Overrides the theme's accent colors (remember the quotes)
 theme:
   light:
-    accent-color: <color-hex-code> # i.e. #ff0011
+    accent-color: <color-hex-code> # i.e. "#ff0011"
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
   dark:
-    accent-color: <color-hex-code> # i.e. #ff0011
+    accent-color: <color-hex-code> # i.e. "#ff0011"
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
 
