@@ -58,6 +58,7 @@ class LocaleModel extends SafeChangeNotifier {
     final languages = await loadLocalizedLanguages(supportedLocales);
     _languageList = List.of(languages);
     _log.info('Loaded ${_languageList.length} languages');
+    await _sound?.load();
     return _locale.getLocale().then((v) {
       selectLocale(parseLocale(v));
       notifyListeners();
@@ -80,7 +81,7 @@ class LocaleModel extends SafeChangeNotifier {
   /// Returns the name of the language at the given [index].
   String language(int index) => _languageList[index].name;
 
-  Future<void> playWelcomeSound() async => _sound?.play('system-ready');
+  Future<void> playWelcomeSound() async => _sound?.play(SoundId.systemReady);
 
   /// Searches for a language matching the given [query].
   ///
