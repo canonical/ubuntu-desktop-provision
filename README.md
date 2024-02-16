@@ -11,28 +11,78 @@ We use the GitHub issue tracker only for issues related to the development of Ub
 
 ## Configuration
 
-The Flutter UI can be configured using a [YAML](https://yaml.org/) file.
-  ```yaml
-  theme:
-    accent-color: "#ff0000"
-    elevated-button-color: "#00ff00"
-    elevated-button-text-color: "#0000ff"
-    window-title: "Custom Window Title"
+The full configuration guide can be read [here](https://docs.google.com/document/d/10R0YOj4e8BTv6XPw9OE_y7GDy72xPqA5XP5lu0M7VbE/edit?usp=sharing).
 
-  pages:
-    locale:
-      image: "/path/to/image.png"
-      visible: true
-    ...
-  ```
+But the basics are that the UI can be configured using a [YAML](https://yaml.org/) file that is read from here:
+`/usr/share/desktop-provision/whitelabel.yaml`
 
-`visible` defaults to true if not specified and the `image` defaults to an image in in `assets`
-directory, if there is one specified for the page.
+The configuration file has the following structure:
 
-Lookup order:
-- `/etc/whitelabel.{yaml,yml}` (admin)
-- `/usr/local/share/whitelabel.{yaml,yml}` (oem)
-- `/usr/share/whitelabel.{yaml,yml}` (distro)
+```yaml
+# (Optional) Drives overall behaviour for specific provisioners.
+#
+# Options:
+# - standard (default): the common provision flow for Ubuntu Desktop and Flavours
+# - oem: enables the eula page and disables the user creation page during bootstrap
+mode: standard | oem
+
+# (Optional) When set, the light and dark theme is inherited from ubuntu-flutter-plugins and the distro name is set.
+#
+# Options:
+# - budgie
+# - cinnamon
+# - edubuntu
+# - kubuntu
+# - kylin
+# - lubuntu
+# - mate
+# - studio
+# - unity
+# - xubuntu
+flavour: <name>
+
+# (Optional) Sets the window's title (e.g. the text in alt|super + tab)
+app-name: <string>
+
+# (Optional) Overrides the theme's accent colors
+theme:
+  light:
+    accent-color: <color-hex-code> # i.e. #ff0011
+    elevated-button-color: <color-hex-code>
+    elevated-button-text-color: <color-hex-code>
+  dark:
+    accent-color: <color-hex-code> # i.e. #ff0011
+    elevated-button-color: <color-hex-code>
+    elevated-button-text-color: <color-hex-code>
+
+# (Optional) Override a page's image asset.
+# Images expected in /usr/share/desktop-provision/images/<image-name>
+#
+# Bootstrap pages:
+# - locale: Select the interface language
+# - accessibility: Allow user to configure GNOME accessibility options
+# - rst: Identifies if the computer has Intel Rapid Storage Technology (rst) active
+# - keyboard: Set keyboard layout
+# - network: Connect to a network
+# - refresh: Expose installer's auto-update mechanism
+# - source: Install 3'rd party drivers and codecs
+# - not-enough-disk-space: Notifies if there is insufficient disk space
+# - secure-boot: Handles secure boot
+# - storage: Select target disk and partition
+# - identity: Create the first-user account (only displaed if mode = default)
+# - confirm: A summary of the installation and confirmation button to start the install
+#
+# Init pages (for oem only)
+# - identity: Create the first-user account 
+# - ubuntu-pro: Enable Ubuntu Pro
+# - privacy: Enable location services
+# - timezone: Set the timezone
+# - telemetry: Enable sending telemetry
+pages:
+  <page-name>:
+  image: <image-name>
+  visible: <bool>
+```
 
 ## Repository Structure
 
