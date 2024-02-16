@@ -316,7 +316,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.storage.name);
+    await tester.jumpToWizardRoute(InstallationStep.storage.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -344,7 +344,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.identity.name);
+    await tester.jumpToWizardRoute(InstallationStep.identity.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -437,7 +437,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.network.name);
+    await tester.jumpToWizardRoute(InstallationStep.network.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
