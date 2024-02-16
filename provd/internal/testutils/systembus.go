@@ -142,5 +142,6 @@ func GetSystemBusConnection() (*dbus.Conn, error) {
 
 // isRunning checks if the system bus mock is running.
 func isRunning() bool {
-	return strings.HasPrefix(os.Getenv("DBUS_SYSTEM_BUS_ADDRESS"), "unix:abstract=/tmp")
+	return strings.HasPrefix(os.Getenv("DBUS_SYSTEM_BUS_ADDRESS"), "unix:abstract=/tmp") ||
+		strings.HasPrefix(os.Getenv("DBUS_SYSTEM_BUS_ADDRESS"), "unix:path=/tmp")
 }
