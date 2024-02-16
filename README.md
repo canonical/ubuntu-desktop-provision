@@ -81,7 +81,6 @@ theme:
 pages:
   <page-name>:
   image: <image-name>
-  visible: <bool>
 ```
 
 ## Repository Structure
