@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meta/meta.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -10,9 +9,7 @@ final _log = Logger('flavor_provider');
 
 final flavorProvider = StateProvider((_) => UbuntuFlavor.ubuntu);
 
-Future<UbuntuFlavor> loadFlavor({
-  @visibleForTesting UbuntuFlavor? detectedFlavor,
-}) async {
+Future<UbuntuFlavor> loadFlavor() async {
   final configService = getService<ConfigService>();
   final configFlavorName = await configService.get<String>('flavor');
 
@@ -31,11 +28,6 @@ Future<UbuntuFlavor> loadFlavor({
     }
   }
 
-  detectedFlavor ??= UbuntuFlavor.detect();
-  if (detectedFlavor == UbuntuFlavor.unknown) {
-    _log.warning('Unknown flavor detected, defaulting to Ubuntu');
-    return UbuntuFlavor.ubuntu;
-  }
-  _log.info('Using detected flavor: $detectedFlavor');
-  return detectedFlavor;
+  _log.info('Using default flavor: ${UbuntuFlavor.ubuntu}');
+  return UbuntuFlavor.ubuntu;
 }

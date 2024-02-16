@@ -12,32 +12,17 @@ void main() {
       (
         name: 'valid config',
         configFlavorName: 'studio',
-        detectedFlavor: UbuntuFlavor.unknown,
         expectedFlavor: UbuntuFlavor.studio,
       ),
       (
-        name: 'unknown flavor in config and from detection',
+        name: 'unknown flavor in config',
         configFlavorName: 'kubuntux',
-        detectedFlavor: UbuntuFlavor.unknown,
         expectedFlavor: UbuntuFlavor.ubuntu,
-      ),
-      (
-        name: 'unknown flavor in config and valid detection',
-        configFlavorName: 'kubuntux',
-        detectedFlavor: UbuntuFlavor.kubuntu,
-        expectedFlavor: UbuntuFlavor.kubuntu,
       ),
       (
         name: 'empty config and unknown flavor from detection',
         configFlavorName: null,
-        detectedFlavor: UbuntuFlavor.unknown,
         expectedFlavor: UbuntuFlavor.ubuntu,
-      ),
-      (
-        name: 'empty config and valid flavor from detection',
-        configFlavorName: null,
-        detectedFlavor: UbuntuFlavor.mate,
-        expectedFlavor: UbuntuFlavor.mate,
       ),
     ];
 
@@ -50,8 +35,7 @@ void main() {
             .thenAnswer((_) async => testCase.configFlavorName);
         registerMockService<ConfigService>(configService);
 
-        final flavor =
-            await loadFlavor(detectedFlavor: testCase.detectedFlavor);
+        final flavor = await loadFlavor();
         expect(flavor, equals(testCase.expectedFlavor));
       });
     }
