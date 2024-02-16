@@ -9,7 +9,7 @@ class SoundService {
   Future<void> play(String id) async {
     try {
       await Process.run('canberra-gtk-play', ['--id=$id']);
-    } on ProcessException catch (e) {
+    } on ProcessException catch (_) {
       _log.error(
         'Error playing sound with id: $id (most likely missing canberra-gtk-play)',
       );
