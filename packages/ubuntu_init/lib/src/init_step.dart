@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-enum InitStep {
+enum InitStep with RouteName {
   locale(LocalePage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
@@ -13,12 +14,26 @@ enum InitStep {
   ubuntuPro(UbuntuProPage.new, hasPrevious: false),
   privacy(PrivacyPage.new, hasPrevious: false),
   timezone(TimezonePage.new, hasPrevious: false),
-  telemetry(TelemetryPage.new, hasPrevious: false);
+  telemetry(TelemetryPage.new, hasPrevious: false),
+  error(ErrorPage.new, wizardStep: false, discreteStep: false);
 
-  const InitStep(this.pageFactory, {this.hasPrevious = true});
+  const InitStep(
+    this.pageFactory, {
+    this.hasPrevious = true,
+    this.discreteStep = true,
+    this.wizardStep = true,
+  });
 
   final ProvisioningPage Function() pageFactory;
+
+  /// Whether the page can go back to a previous page.
   final bool hasPrevious;
+
+  /// If this is true the page is handled separately from the wizard steps.
+  final bool wizardStep;
+
+  /// If this is true the page has its own step in the wizard progress bar.
+  final bool discreteStep;
 
   WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();
@@ -37,7 +52,7 @@ enum InitStep {
   }
 }
 
-enum WelcomeStep {
+enum WelcomeStep with RouteName {
   welcome(WelcomePage.new);
 
   const WelcomeStep(this.pageFactory);
@@ -54,8 +69,6 @@ enum WelcomeStep {
       onLoad: (_) => page.load(context, ref),
     );
   }
-
-  String get name => toString().split('.').last;
 
   static WelcomeStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);

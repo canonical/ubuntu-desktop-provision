@@ -6,14 +6,16 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-class LoadingPage extends ConsumerStatefulWidget {
+class LoadingPage extends ConsumerStatefulWidget with ProvisioningPage {
   const LoadingPage({super.key});
 
-  static Future<void> init(BuildContext context, WidgetRef ref) async {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
     await Future.wait([
       ref.read(pageImagesProvider).preCache(context),
       ref.read(loadingModelProvider).init(),
     ]);
+    return true;
   }
 
   @override

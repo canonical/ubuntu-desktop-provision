@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-enum InstallationStep {
+enum InstallationStep with RouteName {
+  loading(LoadingPage.new, discreteStep: false, wizardStep: false),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new),
   tryOrInstall(TryOrInstallPage.new, discreteStep: false),
@@ -20,14 +22,26 @@ enum InstallationStep {
   identity(IdentityPage.new),
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
-  confirm(ConfirmPage.new);
+  confirm(ConfirmPage.new),
+  install(InstallPage.new, discreteStep: false, wizardStep: false);
 
-  const InstallationStep(this.pageFactory, {this.discreteStep = true});
+  const InstallationStep(
+    this.pageFactory, {
+    this.discreteStep = true,
+    this.wizardStep = true,
+  });
 
   final ProvisioningPage Function() pageFactory;
 
+  /// If this is true the page is handled separately from the wizard steps.
+  final bool wizardStep;
+
   /// If this is true the page has its own step in the wizard progress bar.
   final bool discreteStep;
+
+  /// Gets all the pages that should be handled by the wizard.
+  static Iterable<InstallationStep> get wizardSteps =>
+      values.where((e) => e.wizardStep);
 
   WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();

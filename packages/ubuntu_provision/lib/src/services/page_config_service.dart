@@ -2,12 +2,13 @@ import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 part 'page_config_service.freezed.dart';
 part 'page_config_service.g.dart';
 
 final _log = Logger('page');
-const _tryOrInstallName = 'try-or-install';
+const _tryOrInstallName = 'tryOrInstall';
 
 enum ProvisioningMode {
   standard,
@@ -88,13 +89,14 @@ class PageConfigEntryConverter
   Map<String, PageConfigEntry> fromJson(Map<String, dynamic> json) {
     final pages = <String, PageConfigEntry>{};
     for (final entry in json.entries) {
+      final camelCaseKey = entry.key.toCamelCase;
       if (entry.value is Map<String, dynamic>) {
-        pages[entry.key] =
+        pages[camelCaseKey] =
             PageConfigEntry.fromJson(entry.value as Map<String, dynamic>)
                 // TODO: remove to re-enable the 'visible' setting in the config
                 .copyWith(visible: true);
       } else if (entry.value == null) {
-        pages[entry.key] = const PageConfigEntry();
+        pages[camelCaseKey] = const PageConfigEntry();
       } else {
         _log.error(
             'Invalid page config entry for ${entry.key}: ${entry.value}');
@@ -109,10 +111,11 @@ class PageConfigEntryConverter
   Map<String, dynamic> toJson(Map<String, PageConfigEntry> pages) {
     final objects = <String, dynamic>{};
     for (final entry in pages.entries) {
+      final kebabCaseKey = entry.key.toKebabCase;
       if (entry.value.image != null) {
-        objects[entry.key] = entry.value.toJson();
+        objects[kebabCaseKey] = entry.value.toJson();
       } else {
-        objects[entry.key] = entry.value.visible;
+        objects[kebabCaseKey] = entry.value.visible;
       }
     }
     return objects;

@@ -38,6 +38,8 @@ class PageImages {
   bool Function(BuildContext context) isDarkMode =
       (context) => context.isDarkMode;
 
+  /// Gets the image for the given page name, remember that the [pageName]
+  /// should be on the enum format. for example 'tryOrInstall`.
   Widget? get(String pageName, BuildContext context) {
     final image = images[pageName];
     if (image == null) {

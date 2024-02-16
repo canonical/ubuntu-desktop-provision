@@ -19,4 +19,15 @@ extension StringOrIfEmpty on String {
     sanitized = sanitized.replaceAll(RegExp('-{2,}'), '-');
     return sanitized;
   }
+
+  /// Converts a string from kebab-case to camelCase.
+  String get toCamelCase =>
+      split('-').map((e) => e.capitalize).join().uncapitalize;
+
+  /// Converts a string from camelCase to kebab-case
+  String get toKebabCase => split(RegExp('(?=[A-Z])')).join('-').toLowerCase();
+
+  String get capitalize => '${this[0].toUpperCase()}${substring(1)}';
+
+  String get uncapitalize => '${this[0].toLowerCase()}${substring(1)}';
 }

@@ -28,7 +28,7 @@ void main() {
     expect(find.byType(LoadingPage), findsOneWidget);
     expect(ref, isNotNull);
 
-    final future = LoadingPage.init(MockBuildContext(), ref!);
+    final future = const LoadingPage().load(MockBuildContext(), ref!);
     await tester.pump(const Duration(seconds: 3));
     await expectLater(future, completes);
     verify(model.init()).called(1);

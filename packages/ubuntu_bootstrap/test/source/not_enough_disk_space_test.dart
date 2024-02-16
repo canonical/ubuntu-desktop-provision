@@ -4,9 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/routes.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -126,11 +126,11 @@ extension on WidgetTester {
                       ),
                     ),
                   ),
-                  Routes.source: WizardRoute(
+                  InstallationStep.source.name: WizardRoute(
                     builder: (_) => SourcePage(),
                     onLoad: (_) => SourcePage().load(context, ref),
                   ),
-                  Routes.notEnoughDiskSpace: WizardRoute(
+                  InstallationStep.notEnoughDiskSpace.name: WizardRoute(
                     builder: (_) => const NotEnoughDiskSpacePage(),
                     onLoad: (_) =>
                         const NotEnoughDiskSpacePage().load(context, ref),

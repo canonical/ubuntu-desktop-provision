@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:ubuntu_init/src/routes.dart';
+import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
@@ -39,7 +39,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.keyboard);
+    await tester.jumpToPage(InitStep.keyboard.route);
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
@@ -51,7 +51,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.network);
+    await tester.jumpToPage(InitStep.network.route);
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage(
@@ -64,7 +64,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.timezone);
+    await tester.jumpToPage(InitStep.timezone.route);
     await tester.pumpAndSettle();
 
     await tester.testTimezonePage(
@@ -76,7 +76,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.identity);
+    await tester.jumpToPage(InitStep.identity.route);
     await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
@@ -94,7 +94,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.telemetry);
+    await tester.jumpToPage(InitStep.telemetry.route);
     await tester.pumpAndSettle();
 
     await tester.testTelemetryPage(
@@ -106,7 +106,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.privacy);
+    await tester.jumpToPage(InitStep.privacy.route);
     await tester.pumpAndSettle();
 
     await tester.testPrivacyPage(
@@ -118,7 +118,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(Routes.ubuntuPro);
+    await tester.jumpToPage(InitStep.ubuntuPro.route);
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(
