@@ -51,7 +51,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.network.name);
+    await tester.jumpToPage(InitStep.network.route);
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage(
@@ -64,7 +64,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.timezone.name);
+    await tester.jumpToPage(InitStep.timezone.route);
     await tester.pumpAndSettle();
 
     await tester.testTimezonePage(
@@ -76,7 +76,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.identity.name);
+    await tester.jumpToPage(InitStep.identity.route);
     await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
@@ -94,7 +94,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.telemetry.name);
+    await tester.jumpToPage(InitStep.telemetry.route);
     await tester.pumpAndSettle();
 
     await tester.testTelemetryPage(
@@ -106,7 +106,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.privacy.name);
+    await tester.jumpToPage(InitStep.privacy.route);
     await tester.pumpAndSettle();
 
     await tester.testPrivacyPage(
@@ -118,7 +118,7 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.ubuntuPro.name);
+    await tester.jumpToPage(InitStep.ubuntuPro.route);
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(

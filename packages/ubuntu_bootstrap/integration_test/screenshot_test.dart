@@ -79,7 +79,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.rst.name);
+    await tester.jumpToPage(InstallationStep.rst.route);
     await tester.pumpAndSettle();
 
     await tester.testRstPage(
@@ -91,7 +91,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.keyboard.name);
+    await tester.jumpToPage(InstallationStep.keyboard.route);
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
@@ -103,7 +103,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.network.name);
+    await tester.jumpToPage(InstallationStep.network.route);
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage(
@@ -116,7 +116,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.refresh.name);
+    await tester.jumpToPage(InstallationStep.refresh.route);
     await tester.pumpAndSettle();
 
     await tester.testRefreshPage(
@@ -128,7 +128,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.source.name);
+    await tester.jumpToPage(InstallationStep.source.route);
     await tester.pumpAndSettle();
 
     await tester.testSourcePage(
@@ -146,8 +146,8 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.source.name);
-    await tester.jumpToPage(InstallationStep.notEnoughDiskSpace.name);
+    await tester.jumpToPage(InstallationStep.source.route);
+    await tester.jumpToPage(InstallationStep.notEnoughDiskSpace.route);
     await tester.pumpAndSettle();
 
     await tester.testNotEnoughDiskSpacePage(
@@ -349,7 +349,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.timezone.name);
+    await tester.jumpToPage(InstallationStep.timezone.route);
     await tester.pumpAndSettle();
 
     await tester.testTimezonePage(
@@ -361,7 +361,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.identity.name);
+    await tester.jumpToPage(InstallationStep.identity.route);
     await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
@@ -385,7 +385,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.activeDirectory.name);
+    await tester.jumpToPage(InstallationStep.activeDirectory.route);
     await tester.pumpAndSettle();
 
     await tester.testActiveDirectoryPage(
@@ -403,7 +403,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.install.name);
+    await tester.jumpToPage(InstallationStep.install.route);
     await tester.pump(kThemeAnimationDuration);
 
     for (var i = 0; i < defaultSlides.length; ++i) {
@@ -424,7 +424,7 @@ Future<void> main() async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InstallationStep.install.name);
+    await tester.jumpToPage(InstallationStep.install.route);
     await tester.pumpAndSettle();
 
     await tester.testInstallPage(
@@ -494,7 +494,7 @@ final themeVariant = YaruThemeVariant();
 extension on WidgetTester {
   Future<void> jumpToStorageWizard() async {
     // an installation source must be explicitly selected before calling storage APIs
-    await jumpToPage(InstallationStep.source.name);
+    await jumpToPage(InstallationStep.source.route);
     await tapNext();
     await pumpUntil(find.byType(StorageWizard));
   }
