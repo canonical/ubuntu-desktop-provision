@@ -1,0 +1,82 @@
+name: ubuntu-desktop-init
+version: git
+summary: Ubuntu Desktop Init
+description: |
+  Ubuntu Desktop Init description.
+grade: stable
+confinement: strict
+base: core22
+issues: https://github.com/canonical/ubuntu-desktop-provision/issues
+contact: https://github.com/canonical/ubuntu-desktop-provision/issues
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+
+apps:
+  ubuntu-desktop-init:
+    command: bin/ubuntu_init
+    extensions: [gnome]
+    desktop: usr/share/applications/ubuntu-desktop-init.desktop
+    environment:
+      LOG_LEVEL: debug
+    plugs:
+      - hardware-observe
+      - log-observe
+      - system-observe
+
+parts:
+  flutter-git:
+    source: .
+    override-pull: |
+      craftctl default
+      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+    plugin: nil
+    override-build: |
+      mkdir -p $CRAFT_PART_INSTALL/usr/bin
+      mkdir -p $CRAFT_PART_INSTALL/usr/libexec
+      cp -r $CRAFT_PART_SRC/flutter $CRAFT_PART_INSTALL/usr/libexec/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/flutter $CRAFT_PART_INSTALL/usr/bin/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/dart $CRAFT_PART_INSTALL/usr/bin/dart
+      $CRAFT_PART_INSTALL/usr/bin/flutter doctor
+    build-packages:
+      - clang
+      - cmake
+      - curl
+      - libgtk-3-dev
+      - ninja-build
+      - unzip
+      - xz-utils
+      - zip
+    override-prime: ""
+
+  ubuntu-desktop-init:
+    after: [flutter-git]
+    source: .
+    source-type: git
+    plugin: nil
+    override-build: |
+      set -eux
+      mkdir -p $CRAFT_PART_INSTALL/bin/lib
+      mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
+      cp snap/local/ubuntu-desktop-init.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      dart pub global activate melos
+      dart pub global run melos bootstrap
+      cd packages/ubuntu_init
+      flutter build linux --release -v
+      cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
+    stage-packages:
+      - libsysmetrics1
+      - pciutils
+      - util-linux
+
+lint:
+  ignore:
+    - library:
+        - usr/lib/**/libsysmetrics.so.1
+
+slots:
+  dbus-name:
+    interface: dbus
+    bus: session
+    name: com.canonical.ubuntu_init

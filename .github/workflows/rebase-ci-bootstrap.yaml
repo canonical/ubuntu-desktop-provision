@@ -1,0 +1,32 @@
+name: Rebase ci/bootstrap on main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebase:
+    runs-on: ubuntu-22.04
+    steps:
+
+    - uses: actions/checkout@v4
+      with:
+        ref: ci/bootstrap
+
+    - name: Configure repo for launchpad snap builder
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+        git fetch origin main:main
+        git rebase -X theirs main
+
+        mv snap snap.tmp
+        mv snap.tmp/bootstrap snap/
+        rm -rf snap.tmp
+        
+        COMMIT_MSG="ci(bootstrap): prep for launchpad snap builder"
+        git add -A
+        git commit --amend -m "$COMMIT_MSG" --author="GitHub Actions <github-actions@github.com>"
+        git push --force-with-lease
