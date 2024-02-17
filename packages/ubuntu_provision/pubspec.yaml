@@ -49,7 +49,7 @@ dependencies:
   yaml: ^3.1.2
   yaru: 1.2.1
   yaru_icons: ^2.4.0
-  yaru_widgets: 3.4.0
+  yaru_widgets: 3.6.0
   yaru_window: 0.2.0
 
 dev_dependencies:

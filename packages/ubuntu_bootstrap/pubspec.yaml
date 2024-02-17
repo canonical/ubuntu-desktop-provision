@@ -51,7 +51,7 @@ dependencies:
   ubuntu_wizard: ^0.1.0
   yaru: 1.2.1
   yaru_icons: ^2.4.0
-  yaru_widgets: 3.4.0
+  yaru_widgets: 3.6.0
 
 dev_dependencies:
   build_runner: ^2.4.8
