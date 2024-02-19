@@ -20,8 +20,8 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-// gSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
-type gSettingsSubset interface {
+// gSettingsValueSetter is a minimal subset of the GSettings interface to make for easier mocking.
+type gSettingsValueSetter interface {
 	IsWritable(key string) bool
 	SetValue(key string, variant *glib.Variant) bool
 }
@@ -34,7 +34,7 @@ type Service struct {
 	pb.UnimplementedKeyboardServiceServer
 	conn             *dbus.Conn
 	locale           dbus.BusObject
-	gsettings        gSettingsSubset
+	gsettings        gSettingsValueSetter
 	keyboardl18nPath string
 }
 
@@ -45,12 +45,6 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	}
 
 	s.locale = conn.Object("org.freedesktop.locale1", dbus.ObjectPath("/org/freedesktop/locale1"))
-
-	// Ping object to ensure it is reachable
-	err := s.locale.Call(consts.DbusPeerPrefix+".Ping", 0).Err
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to ping default DBus locale1 object")
-	}
 
 	// Create GSettings object
 	s.gsettings = gio.NewSettings("org.gnome.desktop.input-sources")
@@ -69,6 +63,12 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	isWritable := s.gsettings.IsWritable("sources")
 	if !isWritable {
 		return nil, status.Errorf(codes.Internal, "failed to connect to gsettings")
+	}
+
+	// Ping object to ensure it is reachable
+	err := s.locale.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus locale1 object")
 	}
 
 	return s, nil

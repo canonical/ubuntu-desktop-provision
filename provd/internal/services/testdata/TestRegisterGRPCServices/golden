@@ -31,12 +31,21 @@ privacy.PrivacyService:
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
-user.UserService:
+timezone.TimezoneService:
     methods:
-        - name: CreateUser
+        - name: SetTimezone
           isclientstream: false
           isserverstream: false
+        - name: GetTimezone
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/timezone.proto
+user.UserService:
+    methods:
         - name: ValidateUsername
+          isclientstream: false
+          isserverstream: false
+        - name: CreateUser
           isclientstream: false
           isserverstream: false
     metadata: protos/user.proto
