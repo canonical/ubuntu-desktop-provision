@@ -87,7 +87,7 @@ jobs:
       run: |
         set -ux
         set +e
-        sed 's|test.sock|provd/provd.sock|' provd/example.config.yaml  > provd/provd.yaml
+        mv provd/example.config.yaml provd/provd.yaml
         sudo mkdir -p /run/provd
         sudo chown $USER /run/provd
         sudo provd/provd &
