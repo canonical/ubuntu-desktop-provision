@@ -8,21 +8,17 @@ void main() {
   test('init', () async {
     final service = MockPrivacyService();
     when(service.isLocationEnabled()).thenAnswer((_) async => true);
-    when(service.isReportingEnabled()).thenAnswer((_) async => false);
 
     final model = PrivacyModel(service);
     await model.init();
 
     expect(model.isLocationEnabled, true);
-    expect(model.isReportingEnabled, false);
 
     when(service.isLocationEnabled()).thenAnswer((_) async => false);
-    when(service.isReportingEnabled()).thenAnswer((_) async => true);
 
     await model.init();
 
     expect(model.isLocationEnabled, false);
-    expect(model.isReportingEnabled, true);
   });
 
   test('location', () async {
@@ -34,16 +30,5 @@ void main() {
 
     await model.setLocationEnabled(false);
     verify(service.setLocationEnabled(false));
-  });
-
-  test('reporting', () async {
-    final service = MockPrivacyService();
-    final model = PrivacyModel(service);
-
-    await model.setReportingEnabled(true);
-    verify(service.setReportingEnabled(true));
-
-    await model.setReportingEnabled(false);
-    verify(service.setReportingEnabled(false));
   });
 }
