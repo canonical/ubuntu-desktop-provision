@@ -124,7 +124,7 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('06.source', (tester) async {
+  testWidgets('06.application-selection-page', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -132,7 +132,19 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testApplicationsSelectionPage(
-      screenshot: '$currentThemeName/06.source',
+      screenshot: '$currentThemeName/06.application-selection-page',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('06.codecs-and-drivers', (tester) async {
+    await tester.runApp(() => runInstallerApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InstallationStep.codecsAndDrivers.route);
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage(
+      screenshot: '$currentThemeName/06-1.codecs-and-drivers',
     );
   }, variant: themeVariant);
 
@@ -495,6 +507,8 @@ extension on WidgetTester {
   Future<void> jumpToStorageWizard() async {
     // an installation source must be explicitly selected before calling storage APIs
     await jumpToPage(InstallationStep.applicationsSelection.route);
+    await tapNext();
+    await pumpAndSettle();
     await tapNext();
     await pumpUntil(find.byType(StorageWizard));
   }

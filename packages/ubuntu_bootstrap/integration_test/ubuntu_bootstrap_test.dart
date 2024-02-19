@@ -69,6 +69,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(type: StorageType.erase);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -133,6 +137,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testApplicationsSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -207,6 +215,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.ZFS,
@@ -276,6 +288,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testApplicationsSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -354,6 +370,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(type: StorageType.manual);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -416,6 +436,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testApplicationsSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -487,6 +511,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testApplicationsSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

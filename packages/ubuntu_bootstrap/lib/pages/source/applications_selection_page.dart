@@ -26,19 +26,30 @@ class ApplicationsSelectionPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
+      expandContent: true,
       content: Center(
-        child: ListView(
-          shrinkWrap: true,
+        child: Scrollbar(
           controller: _scrollController,
-          children: [
-            ...model.sources
-                .map(_InstallationTypeListTile.new)
-                .withSpacing(kWizardSpacing / 2),
-          ],
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            controller: _scrollController,
+            child: Padding(
+              padding: EdgeInsets.only(right: scrollBarPadding),
+              child: Column(
+                children: [
+                  ...model.sources
+                      .map(_InstallationTypeListTile.new)
+                      .withSpacing(kWizardSpacing / 2),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
       snackBar: model.onBattery

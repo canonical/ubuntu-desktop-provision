@@ -111,6 +111,24 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> testCodecsAndDriversPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(CodecsAndDriversPage);
+
+    final context = element(find.byType(CodecsAndDriversPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.codecsAndDriversPageTitle), findsOneWidget);
+    //final checkbox = find.text(l10n.installDriversTitle);
+    //await tap(checkbox);
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testNotEnoughDiskSpacePage({
     String? screenshot,
   }) async {
