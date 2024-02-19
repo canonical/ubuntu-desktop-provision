@@ -12,8 +12,8 @@ import (
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
-// gSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
-type gSettingsSubset interface {
+// gSettingsBooleanSetter is a minimal subset of the GSettings interface to make for easier mocking.
+type gSettingsBooleanSetter interface {
 	IsWritable(key string) bool
 	SetBoolean(key string, value bool) bool
 	GetBoolean(key string) bool
@@ -25,7 +25,7 @@ type Option func(*Service) error
 // Service is the implementation of the Keyboard service.
 type Service struct {
 	pb.UnimplementedPrivacyServiceServer
-	locationSettings gSettingsSubset
+	locationSettings gSettingsBooleanSetter
 }
 
 // New returns a new instance of the Privacy service.
@@ -54,6 +54,7 @@ func New(opts ...Option) (*Service, error) {
 // GetLocationServices returns the status of the location services.
 func (s *Service) GetLocationServices(ctx context.Context, req *emptypb.Empty) (*wrapperspb.BoolValue, error) {
 	// Validate request
+	// TODO: should be a GRPC middleware.
 	if req == nil {
 		return nil, status.Error(codes.InvalidArgument, "empty request")
 	}
@@ -70,8 +71,8 @@ func (s *Service) EnableLocationServices(ctx context.Context, req *emptypb.Empty
 		return nil, status.Error(codes.InvalidArgument, "empty request")
 	}
 
-	success := s.locationSettings.SetBoolean("enabled", true)
-	if !success {
+	ok := s.locationSettings.SetBoolean("enabled", true)
+	if !ok {
 		return nil, status.Error(codes.Internal, "failed to enable location services")
 	}
 
@@ -85,8 +86,8 @@ func (s *Service) DisableLocationServices(ctx context.Context, req *emptypb.Empt
 		return nil, status.Error(codes.InvalidArgument, "empty request")
 	}
 
-	success := s.locationSettings.SetBoolean("enabled", false)
-	if !success {
+	ok := s.locationSettings.SetBoolean("enabled", false)
+	if !ok {
 		return nil, status.Error(codes.Internal, "failed to disable location services")
 	}
 

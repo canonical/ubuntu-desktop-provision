@@ -3,12 +3,9 @@ package privacy_test
 import (
 	"context"
 	"flag"
-	"fmt"
 	"net"
 	"os"
 	"path/filepath"
-	"strconv"
-	"strings"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -20,111 +17,35 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-func TestNotWritable(t *testing.T) {
-	t.Parallel()
-
-	client, err := privacy.New(privacy.WithLocationSettings(gSettingsSubsetMock{isWritableError: true}))
-
-	require.Error(t, err, "New should return an error")
-	require.Empty(t, client, "New should return a nil response")
-}
-
-func TestDisableLocationSettings(t *testing.T) {
+func TestNew(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		emptyRequest bool
-		wantErr      bool
-	}{
-		// Success case
-		"Successfully disables location settings": {},
-
-		// Error cases
-		"Error case returns false, no calls made": {wantErr: true},
-		"Error on empty request":                  {emptyRequest: true, wantErr: true},
-	}
-
-	for name, tc := range tests {
-		tc := tc
-		t.Run(name, func(t *testing.T) {
-			t.Parallel()
-
-			actionpath := t.TempDir()
-
-			opts := []privacy.Option{
-				privacy.WithLocationSettings(gSettingsSubsetMock{setBooleanError: tc.wantErr, actionpath: actionpath}),
-			}
-
-			client := newPrivacyClient(t, opts...)
-
-			var req *emptypb.Empty
-			if !tc.emptyRequest {
-				req = &emptypb.Empty{}
-			}
-			privacyResp, reqErr := client.DisableLocationServices(context.Background(), req)
-
-			if tc.wantErr {
-				require.Error(t, reqErr, "DisableLocationServices should return an error")
-				require.Empty(t, privacyResp, "DisableLocationServices should return a nil response")
-				return
-			}
-			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
-			require.NoError(t, err, "ReadActionFromFile should not return an error")
-
-			require.NoError(t, err, "DisableLocationSerivces should not return an error")
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
-		})
-	}
-}
-
-func TestEnableLocationSettings(t *testing.T) {
-	t.Parallel()
-
-	tests := map[string]struct {
-		emptyRequest bool
+		isWritableError bool
 
 		wantErr bool
 	}{
 		// Success case
-		"Successfully enables location settings": {},
+		"Success on creating a new privacy service": {},
 
 		// Error cases
-		"Error case returns false, no calls made": {wantErr: true},
-		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+		"Error when GSettings path is not writable": {isWritableError: true, wantErr: true},
 	}
-
 	for name, tc := range tests {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
-			actionpath := t.TempDir()
-
-			opts := []privacy.Option{
-				privacy.WithLocationSettings(gSettingsSubsetMock{setBooleanError: tc.wantErr, actionpath: actionpath}),
-			}
-
-			client := newPrivacyClient(t, opts...)
-
-			var req *emptypb.Empty
-			if !tc.emptyRequest {
-				req = &emptypb.Empty{}
-			}
-
-			privacyResp, reqErr := client.EnableLocationServices(context.Background(), req)
+			client, err := privacy.New(privacy.WithLocationSettings(&gSettingsSubsetMock{isWritableError: tc.isWritableError}))
 
 			if tc.wantErr {
-				require.Error(t, reqErr, "EnableLocationServices should return an error")
-				require.Empty(t, privacyResp, "EnableLocationServices should return a nil response")
+				require.Error(t, err, "New should return an error")
+				require.Empty(t, client, "New should return a nil response")
 				return
 			}
-			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
-			require.NoError(t, err, "ReadActionFromFile should not return an error")
 
-			require.NoError(t, err, "EnableLocationSerivces should not return an error")
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.NoError(t, err, "New should not return an error")
+			require.NotNil(t, client, "New should return a non-nil response")
 		})
 	}
 }
@@ -136,12 +57,14 @@ func TestGetLocationSettings(t *testing.T) {
 		emptyRequest    bool
 		getBooleanError bool
 
-		wantErr  bool
-		wantTrue bool
+		current bool
+
+		want    bool
+		wantErr bool
 	}{
 		// Success case
 		"Success on getting location settings when false": {},
-		"Success on getting location settings when true":  {wantTrue: true},
+		"Success on getting location settings when true":  {want: true, current: true},
 
 		// Error cases
 		"Error case returns false, no calls made": {getBooleanError: true},
@@ -154,7 +77,7 @@ func TestGetLocationSettings(t *testing.T) {
 			t.Parallel()
 
 			opts := []privacy.Option{
-				privacy.WithLocationSettings(gSettingsSubsetMock{getBooleanError: tc.getBooleanError, wantTrue: tc.wantTrue}),
+				privacy.WithLocationSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, current: tc.current}),
 			}
 
 			client := newPrivacyClient(t, opts...)
@@ -165,16 +88,118 @@ func TestGetLocationSettings(t *testing.T) {
 			}
 
 			privacyResp, err := client.GetLocationServices(context.Background(), req)
-
 			if tc.wantErr {
-				require.Error(t, err, "GetLocationSerivces should return an error")
-				require.Empty(t, privacyResp, "GetLocationSerivces should return a nil response")
+				require.Error(t, err, "GetLocationServices should return an error")
+				require.Empty(t, privacyResp, "GetLocationServices should return a nil response")
+				return
+			}
+			require.NoError(t, err, "GetLocationServices should not return an error")
+
+			got := privacyResp.GetValue()
+			want := tc.want
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestEnableLocationSettings(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest bool
+
+		want    bool
+		wantErr bool
+	}{
+		// Success case
+		"Successfully enables location settings": {want: true},
+
+		// Error cases
+		"Error case returns false, no calls made": {wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			opts := []privacy.Option{
+				privacy.WithLocationSettings(&gSettingsSubsetMock{setBooleanError: tc.wantErr, current: !tc.want}),
+			}
+
+			client := newPrivacyClient(t, opts...)
+
+			var req *emptypb.Empty
+			if !tc.emptyRequest {
+				req = &emptypb.Empty{}
+			}
+
+			privacyResp, err := client.EnableLocationServices(context.Background(), req)
+			if tc.wantErr {
+				require.Error(t, err, "EnableLocationServices should return an error")
+				require.Empty(t, privacyResp, "EnableLocationServices should return a nil response")
 				return
 			}
 
-			got := fmt.Sprintf("%t", privacyResp.GetValue())
-			require.NoError(t, err, "GetLocationSerivces should not return an error")
-			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.NoError(t, err, "EnableLocationServices should not return an error")
+
+			resp, err := client.GetLocationServices(context.Background(), &emptypb.Empty{})
+			require.NoError(t, err, "GetLocationServices should not return an error")
+
+			got := resp.Value
+			want := tc.want
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestDisableLocationSettings(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		emptyRequest bool
+
+		want    bool
+		wantErr bool
+	}{
+		// Success case
+		"Successfully disables location settings": {want: false},
+
+		// Error cases
+		"Error case returns false, no calls made": {wantErr: true},
+		"Error on empty request":                  {emptyRequest: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			opts := []privacy.Option{
+				privacy.WithLocationSettings(&gSettingsSubsetMock{setBooleanError: tc.wantErr, current: !tc.want}),
+			}
+
+			client := newPrivacyClient(t, opts...)
+
+			var req *emptypb.Empty
+			if !tc.emptyRequest {
+				req = &emptypb.Empty{}
+			}
+			privacyResp, err := client.DisableLocationServices(context.Background(), req)
+
+			if tc.wantErr {
+				require.Error(t, err, "DisableLocationServices should return an error")
+				require.Empty(t, privacyResp, "DisableLocationServices should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableLocationSerivces should not return an error")
+
+			resp, err := client.GetLocationServices(context.Background(), &emptypb.Empty{})
+			require.NoError(t, err, "GetLocationServices should not return an error")
+
+			got := resp.Value
+			want := tc.want
 			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
@@ -218,32 +243,30 @@ func newPrivacyClient(t *testing.T, opts ...privacy.Option) pb.PrivacyServiceCli
 }
 
 type gSettingsSubsetMock struct {
+	current bool
+
 	isWritableError bool
 	setBooleanError bool
 	getBooleanError bool
-
-	wantTrue bool
-
-	actionpath string
 }
 
-func (g gSettingsSubsetMock) IsWritable(key string) bool {
+func (g *gSettingsSubsetMock) IsWritable(key string) bool {
 	return !g.isWritableError
 }
 
-func (g gSettingsSubsetMock) SetBoolean(key string, value bool) bool {
+func (g *gSettingsSubsetMock) SetBoolean(key string, value bool) bool {
 	if g.setBooleanError {
 		return false
 	}
-	testutils.WriteActionToFile("gsettings.SetBoolean(key: "+key+", value: "+strings.ToLower(strconv.FormatBool(value))+")", testutils.WithFilePath(g.actionpath))
+	g.current = value
 	return true
 }
 
-func (g gSettingsSubsetMock) GetBoolean(key string) bool {
+func (g *gSettingsSubsetMock) GetBoolean(key string) bool {
 	if g.getBooleanError {
-		return false // GetBoolean either returns the boolean, or false if it fails, so its difficult to test
+		return false
 	}
-	return g.wantTrue
+	return g.current
 }
 
 func TestMain(m *testing.M) {
