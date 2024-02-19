@@ -1,2 +1,2 @@
 Paths:
-  Socket: "/run/test.sock"
+  Socket: "/run/provd/provd.sock"

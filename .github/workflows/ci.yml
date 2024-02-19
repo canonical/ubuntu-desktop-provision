@@ -66,6 +66,42 @@ jobs:
     - uses: bluefireteam/melos-action@v2
     - run: melos format
 
+  init-e2e:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - uses: asdf-vm/actions/install@v3
+    - uses: bluefireteam/melos-action@v2
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
+        sudo apt install -y gnome-initial-setup network-manager
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version-file: "./provd/go.mod"
+    - name: Build provd
+      run: go build ./cmd/provd
+      working-directory: provd
+    - name: Run provd
+      run: |
+        set -ux
+        set +e
+        mv provd/example.config.yaml provd/provd.yaml
+        sudo mkdir -p /run/provd
+        sudo chown $USER /run/provd
+        sudo provd/provd &
+        until [ -S /run/provd/provd.sock ]; do
+          sleep 1
+        done
+        sudo chmod go+rw /run/provd/provd.sock
+
+    - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/e2e_test.dart
+      working-directory: packages/ubuntu_init
+
   init:
     runs-on: ubuntu-22.04
     strategy:
