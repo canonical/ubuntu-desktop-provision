@@ -19,6 +19,18 @@ locale.LocaleService:
           isclientstream: false
           isserverstream: false
     metadata: protos/locale.proto
+privacy.PrivacyService:
+    methods:
+        - name: EnableLocationServices
+          isclientstream: false
+          isserverstream: false
+        - name: DisableLocationServices
+          isclientstream: false
+          isserverstream: false
+        - name: GetLocationServices
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/privacy.proto
 user.UserService:
     methods:
         - name: CreateUser

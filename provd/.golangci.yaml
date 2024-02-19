@@ -4,7 +4,6 @@
 linters:
   # linters to run in addition to default ones
   enable:
-    - dupl
     - durationcheck
     - errname
     - errorlint

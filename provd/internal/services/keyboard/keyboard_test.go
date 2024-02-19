@@ -42,8 +42,7 @@ func TestSetInputSources(t *testing.T) {
 		emptyRequest           bool
 		emptySettingsInRequest bool
 
-		wantErr    bool
-		wantNoFile bool
+		wantErr bool
 	}{
 		// Success cases
 		"Success on valid layout and variant":    {},
@@ -106,7 +105,7 @@ func TestSetInputSources(t *testing.T) {
 				return
 			}
 
-			got, err := testutils.ReadActionFromFile(tc.wantNoFile, testutils.WithFilePath(actionpath))
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
 			require.NoError(t, err, "ReadActionFromFile should not return an error")
 
 			require.NoError(t, reqErr, "SetInputSource should not return an error")

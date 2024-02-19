@@ -49,7 +49,7 @@ func WriteActionToFile(action string, opts ...Option) {
 }
 
 // ReadActionFromFile reads the action from a file, compared against goldenfiles to test the correct actions are being called.
-func ReadActionFromFile(wantNoFile bool, opts ...Option) (string, error) {
+func ReadActionFromFile(opts ...Option) (string, error) {
 	// Default option
 	o := &options{
 		filePath: "actions", // Default file path'
@@ -62,11 +62,8 @@ func ReadActionFromFile(wantNoFile bool, opts ...Option) (string, error) {
 
 	f, err := os.ReadFile(o.filePath)
 
-	if err != nil && !wantNoFile {
-		return "", fmt.Errorf("failed to read actions file: %v", err)
-	}
-	if err != nil && wantNoFile {
-		return "", nil
+	if err != nil {
+		return "", fmt.Errorf("failed to read file: %v", err)
 	}
 
 	return string(f), nil
