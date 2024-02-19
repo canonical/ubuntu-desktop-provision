@@ -276,6 +276,7 @@ void main() {
       'recovery_key': null,
       'sizing_policy': 'ALL',
       'reset_partition': false,
+      'reset_partition_size': null,
     };
     expect(choice.toJson(), equals(json));
     expect(GuidedChoiceV2.fromJson(json), choice);

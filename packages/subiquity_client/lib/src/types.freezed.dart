@@ -7775,6 +7775,7 @@ mixin _$GuidedChoiceV2 {
 // ignore: always_put_required_named_parameters_first
   SizingPolicy? get sizingPolicy => throw _privateConstructorUsedError;
   bool get resetPartition => throw _privateConstructorUsedError;
+  int? get resetPartitionSize => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -7794,7 +7795,8 @@ abstract class $GuidedChoiceV2CopyWith<$Res> {
       String? password,
       RecoveryKey? recoveryKey,
       SizingPolicy? sizingPolicy,
-      bool resetPartition});
+      bool resetPartition,
+      int? resetPartitionSize});
 
   $GuidedStorageTargetCopyWith<$Res> get target;
   $RecoveryKeyCopyWith<$Res>? get recoveryKey;
@@ -7819,6 +7821,7 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
     Object? recoveryKey = freezed,
     Object? sizingPolicy = freezed,
     Object? resetPartition = null,
+    Object? resetPartitionSize = freezed,
   }) {
     return _then(_value.copyWith(
       target: null == target
@@ -7845,6 +7848,10 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
           ? _value.resetPartition
           : resetPartition // ignore: cast_nullable_to_non_nullable
               as bool,
+      resetPartitionSize: freezed == resetPartitionSize
+          ? _value.resetPartitionSize
+          : resetPartitionSize // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 
@@ -7883,7 +7890,8 @@ abstract class _$$GuidedChoiceV2ImplCopyWith<$Res>
       String? password,
       RecoveryKey? recoveryKey,
       SizingPolicy? sizingPolicy,
-      bool resetPartition});
+      bool resetPartition,
+      int? resetPartitionSize});
 
   @override
   $GuidedStorageTargetCopyWith<$Res> get target;
@@ -7908,6 +7916,7 @@ class __$$GuidedChoiceV2ImplCopyWithImpl<$Res>
     Object? recoveryKey = freezed,
     Object? sizingPolicy = freezed,
     Object? resetPartition = null,
+    Object? resetPartitionSize = freezed,
   }) {
     return _then(_$GuidedChoiceV2Impl(
       target: null == target
@@ -7934,6 +7943,10 @@ class __$$GuidedChoiceV2ImplCopyWithImpl<$Res>
           ? _value.resetPartition
           : resetPartition // ignore: cast_nullable_to_non_nullable
               as bool,
+      resetPartitionSize: freezed == resetPartitionSize
+          ? _value.resetPartitionSize
+          : resetPartitionSize // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -7947,7 +7960,8 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
       this.password,
       this.recoveryKey,
       required this.sizingPolicy,
-      this.resetPartition = false});
+      this.resetPartition = false,
+      this.resetPartitionSize});
 
   factory _$GuidedChoiceV2Impl.fromJson(Map<String, dynamic> json) =>
       _$$GuidedChoiceV2ImplFromJson(json);
@@ -7968,10 +7982,12 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   @override
   @JsonKey()
   final bool resetPartition;
+  @override
+  final int? resetPartitionSize;
 
   @override
   String toString() {
-    return 'GuidedChoiceV2(target: $target, capability: $capability, password: $password, recoveryKey: $recoveryKey, sizingPolicy: $sizingPolicy, resetPartition: $resetPartition)';
+    return 'GuidedChoiceV2(target: $target, capability: $capability, password: $password, recoveryKey: $recoveryKey, sizingPolicy: $sizingPolicy, resetPartition: $resetPartition, resetPartitionSize: $resetPartitionSize)';
   }
 
   @override
@@ -7989,13 +8005,15 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
             (identical(other.sizingPolicy, sizingPolicy) ||
                 other.sizingPolicy == sizingPolicy) &&
             (identical(other.resetPartition, resetPartition) ||
-                other.resetPartition == resetPartition));
+                other.resetPartition == resetPartition) &&
+            (identical(other.resetPartitionSize, resetPartitionSize) ||
+                other.resetPartitionSize == resetPartitionSize));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, target, capability, password,
-      recoveryKey, sizingPolicy, resetPartition);
+      recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
 
   @JsonKey(ignore: true)
   @override
@@ -8019,7 +8037,8 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
       final String? password,
       final RecoveryKey? recoveryKey,
       required final SizingPolicy? sizingPolicy,
-      final bool resetPartition}) = _$GuidedChoiceV2Impl;
+      final bool resetPartition,
+      final int? resetPartitionSize}) = _$GuidedChoiceV2Impl;
 
   factory _GuidedChoiceV2.fromJson(Map<String, dynamic> json) =
       _$GuidedChoiceV2Impl.fromJson;
@@ -8038,6 +8057,8 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
   SizingPolicy? get sizingPolicy;
   @override
   bool get resetPartition;
+  @override
+  int? get resetPartitionSize;
   @override
   @JsonKey(ignore: true)
   _$$GuidedChoiceV2ImplCopyWith<_$GuidedChoiceV2Impl> get copyWith =>
@@ -11583,6 +11604,187 @@ abstract class _UbuntuProResponse implements UbuntuProResponse {
   @JsonKey(ignore: true)
   _$$UbuntuProResponseImplCopyWith<_$UbuntuProResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+UbuntuProGeneralInfo _$UbuntuProGeneralInfoFromJson(Map<String, dynamic> json) {
+  return _UbuntuProGeneralInfo.fromJson(json);
+}
+
+/// @nodoc
+mixin _$UbuntuProGeneralInfo {
+  int? get eolEsmYear => throw _privateConstructorUsedError;
+  int get universePackages => throw _privateConstructorUsedError;
+  int get mainPackages => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UbuntuProGeneralInfoCopyWith<UbuntuProGeneralInfo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UbuntuProGeneralInfoCopyWith<$Res> {
+  factory $UbuntuProGeneralInfoCopyWith(UbuntuProGeneralInfo value,
+          $Res Function(UbuntuProGeneralInfo) then) =
+      _$UbuntuProGeneralInfoCopyWithImpl<$Res, UbuntuProGeneralInfo>;
+  @useResult
+  $Res call({int? eolEsmYear, int universePackages, int mainPackages});
+}
+
+/// @nodoc
+class _$UbuntuProGeneralInfoCopyWithImpl<$Res,
+        $Val extends UbuntuProGeneralInfo>
+    implements $UbuntuProGeneralInfoCopyWith<$Res> {
+  _$UbuntuProGeneralInfoCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? eolEsmYear = freezed,
+    Object? universePackages = null,
+    Object? mainPackages = null,
+  }) {
+    return _then(_value.copyWith(
+      eolEsmYear: freezed == eolEsmYear
+          ? _value.eolEsmYear
+          : eolEsmYear // ignore: cast_nullable_to_non_nullable
+              as int?,
+      universePackages: null == universePackages
+          ? _value.universePackages
+          : universePackages // ignore: cast_nullable_to_non_nullable
+              as int,
+      mainPackages: null == mainPackages
+          ? _value.mainPackages
+          : mainPackages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$UbuntuProGeneralInfoImplCopyWith<$Res>
+    implements $UbuntuProGeneralInfoCopyWith<$Res> {
+  factory _$$UbuntuProGeneralInfoImplCopyWith(_$UbuntuProGeneralInfoImpl value,
+          $Res Function(_$UbuntuProGeneralInfoImpl) then) =
+      __$$UbuntuProGeneralInfoImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? eolEsmYear, int universePackages, int mainPackages});
+}
+
+/// @nodoc
+class __$$UbuntuProGeneralInfoImplCopyWithImpl<$Res>
+    extends _$UbuntuProGeneralInfoCopyWithImpl<$Res, _$UbuntuProGeneralInfoImpl>
+    implements _$$UbuntuProGeneralInfoImplCopyWith<$Res> {
+  __$$UbuntuProGeneralInfoImplCopyWithImpl(_$UbuntuProGeneralInfoImpl _value,
+      $Res Function(_$UbuntuProGeneralInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? eolEsmYear = freezed,
+    Object? universePackages = null,
+    Object? mainPackages = null,
+  }) {
+    return _then(_$UbuntuProGeneralInfoImpl(
+      eolEsmYear: freezed == eolEsmYear
+          ? _value.eolEsmYear
+          : eolEsmYear // ignore: cast_nullable_to_non_nullable
+              as int?,
+      universePackages: null == universePackages
+          ? _value.universePackages
+          : universePackages // ignore: cast_nullable_to_non_nullable
+              as int,
+      mainPackages: null == mainPackages
+          ? _value.mainPackages
+          : mainPackages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UbuntuProGeneralInfoImpl implements _UbuntuProGeneralInfo {
+  const _$UbuntuProGeneralInfoImpl(
+      {required this.eolEsmYear,
+      required this.universePackages,
+      required this.mainPackages});
+
+  factory _$UbuntuProGeneralInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UbuntuProGeneralInfoImplFromJson(json);
+
+  @override
+  final int? eolEsmYear;
+  @override
+  final int universePackages;
+  @override
+  final int mainPackages;
+
+  @override
+  String toString() {
+    return 'UbuntuProGeneralInfo(eolEsmYear: $eolEsmYear, universePackages: $universePackages, mainPackages: $mainPackages)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UbuntuProGeneralInfoImpl &&
+            (identical(other.eolEsmYear, eolEsmYear) ||
+                other.eolEsmYear == eolEsmYear) &&
+            (identical(other.universePackages, universePackages) ||
+                other.universePackages == universePackages) &&
+            (identical(other.mainPackages, mainPackages) ||
+                other.mainPackages == mainPackages));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, eolEsmYear, universePackages, mainPackages);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UbuntuProGeneralInfoImplCopyWith<_$UbuntuProGeneralInfoImpl>
+      get copyWith =>
+          __$$UbuntuProGeneralInfoImplCopyWithImpl<_$UbuntuProGeneralInfoImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UbuntuProGeneralInfoImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _UbuntuProGeneralInfo implements UbuntuProGeneralInfo {
+  const factory _UbuntuProGeneralInfo(
+      {required final int? eolEsmYear,
+      required final int universePackages,
+      required final int mainPackages}) = _$UbuntuProGeneralInfoImpl;
+
+  factory _UbuntuProGeneralInfo.fromJson(Map<String, dynamic> json) =
+      _$UbuntuProGeneralInfoImpl.fromJson;
+
+  @override
+  int? get eolEsmYear;
+  @override
+  int get universePackages;
+  @override
+  int get mainPackages;
+  @override
+  @JsonKey(ignore: true)
+  _$$UbuntuProGeneralInfoImplCopyWith<_$UbuntuProGeneralInfoImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 UPCSInitiateResponse _$UPCSInitiateResponseFromJson(Map<String, dynamic> json) {

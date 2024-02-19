@@ -407,6 +407,7 @@ enum GuidedCapability {
   LVM,
   LVM_LUKS,
   ZFS,
+  ZFS_LUKS,
   CORE_BOOT_ENCRYPTED,
   CORE_BOOT_UNENCRYPTED,
   CORE_BOOT_PREFER_ENCRYPTED,
@@ -544,6 +545,7 @@ class GuidedChoiceV2 with _$GuidedChoiceV2 {
     // ignore: always_put_required_named_parameters_first
     required SizingPolicy? sizingPolicy,
     @Default(false) bool resetPartition,
+    int? resetPartitionSize,
   }) = _GuidedChoiceV2;
 
   factory GuidedChoiceV2.fromJson(Map<String, dynamic> json) =>
@@ -804,6 +806,18 @@ enum UbuntuProCheckTokenStatus {
   INVALID_TOKEN,
   EXPIRED_TOKEN,
   UNKNOWN_ERROR,
+}
+
+@freezed
+class UbuntuProGeneralInfo with _$UbuntuProGeneralInfo {
+  const factory UbuntuProGeneralInfo({
+    required int? eolEsmYear,
+    required int universePackages,
+    required int mainPackages,
+  }) = _UbuntuProGeneralInfo;
+
+  factory UbuntuProGeneralInfo.fromJson(Map<String, dynamic> json) =>
+      _$UbuntuProGeneralInfoFromJson(json);
 }
 
 @freezed
