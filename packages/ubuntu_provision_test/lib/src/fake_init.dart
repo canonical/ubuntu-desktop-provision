@@ -39,15 +39,15 @@ Future<void> registerFakeInitServices({
   registerService<IdentityService>(
       () => ProvdIdentityService(client: FakeProvdUserClient()));
   registerService<KeyboardService>(
-      () => ProvdKeyboardService(client: FakeProvdKeyboardClient()));
+      () => ProvdKeyboardService(client: _FakeProvdKeyboardClient()));
   registerService<LocaleService>(
-      () => ProvdLocaleService(client: FakeProvdLocaleClient()));
+      () => ProvdLocaleService(client: _FakeProvdLocaleClient()));
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<PrivacyService>(FakePrivacyService.new);
   registerService<ProductService>(_FakeProductService.new);
   registerService<Sysmetrics>(_FakeSysmetrics.new);
   registerService<TimezoneService>(
-      () => ProvdTimezoneService(client: FakeProvdTimezoneClient()));
+      () => ProvdTimezoneService(client: _FakeProvdTimezoneClient()));
   registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);
 }
@@ -258,9 +258,8 @@ class _FakeUrlLauncher implements UrlLauncher {
   Future<bool> launchUrl(String url) async => true;
 }
 
-// TODO: make all fake services private for consistency
-class FakeProvdLocaleClient implements provd.ProvdLocaleClient {
-  FakeProvdLocaleClient();
+class _FakeProvdLocaleClient implements provd.ProvdLocaleClient {
+  _FakeProvdLocaleClient();
 
   String _locale = 'en_US.UTF-8';
   @override
@@ -279,7 +278,7 @@ class FakeProvdUserClient implements provd.ProvdUserClient {
       provd.UsernameValidation.OK;
 }
 
-class FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
+class _FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
   @override
   Future<void> setInputSource(String layout, String variant) async {}
 
@@ -307,7 +306,7 @@ class FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
       );
 }
 
-class FakeProvdTimezoneClient implements provd.ProvdTimezoneClient {
+class _FakeProvdTimezoneClient implements provd.ProvdTimezoneClient {
   String _timezone = 'Etc/UTC';
   @override
   Future<String> getTimezone() async => _timezone;
