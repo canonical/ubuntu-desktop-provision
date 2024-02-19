@@ -35,6 +35,7 @@ func (t timedatebus) SetTimezone(timezone string, someBool bool) *dbus.Error {
 	if strings.HasPrefix(timezone, "error") {
 		return dbus.NewError("org.freedesktop.locale1.Error.Failed", []interface{}{"error requested in SetTimezone mocked method"})
 	}
+	WriteActionToFile(fmt.Sprintf("timedate1.SetTimezone: %s", timezone))
 	return nil
 }
 

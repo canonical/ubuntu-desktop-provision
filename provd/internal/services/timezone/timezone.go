@@ -31,16 +31,16 @@ func New(conn *dbus.Conn, opts ...Option) (*Service, error) {
 	// Create timezone object
 	s.timezone = conn.Object("org.freedesktop.timedate1", "/org/freedesktop/timedate1")
 
-	err := s.timezone.Call(consts.DbusPeerPrefix+".Ping", 0).Err
-	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Timezone object")
-	}
-
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
 		if err := opt(s); err != nil {
 			return nil, err
 		}
+	}
+
+	err := s.timezone.Call(consts.DbusPeerPrefix+".Ping", 0).Err
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to ping default DBus Timezone object")
 	}
 
 	return s, nil

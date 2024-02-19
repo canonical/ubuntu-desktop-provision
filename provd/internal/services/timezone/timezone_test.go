@@ -19,6 +19,46 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+func TestNew(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		invalidTimedatePrefix bool
+
+		wantErr bool
+	}{
+		// Success case
+		"Success on creating a new timezone service": {},
+
+		// Error cases
+		"Error when timedate path is invalid": {invalidTimedatePrefix: true, wantErr: true},
+	}
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			var opts []timezone.Option
+			if tc.invalidTimedatePrefix {
+				opts = []timezone.Option{
+					timezone.WithTimedatePrefix("invalid"),
+				}
+			}
+
+			client, err := timezone.New(testutils.NewDbusConn(t), opts...)
+
+			if tc.wantErr {
+				require.Error(t, err, "New should return an error")
+				require.Empty(t, client, "New should return a nil response")
+				return
+			}
+
+			require.NoError(t, err, "New should not return an error")
+			require.NotNil(t, client, "New should return a non-nil response")
+		})
+	}
+}
+
 func TestGetTimezone(t *testing.T) {
 	t.Parallel()
 
@@ -57,22 +97,22 @@ func TestGetTimezone(t *testing.T) {
 			}
 
 			timezoneResp, err := client.GetTimezone(context.Background(), req)
-			got := timezoneResp.String()
-			want := testutils.LoadWithUpdateFromGolden(t, got)
-			require.Equal(t, want, got, "GetTimezone response does not match golden file")
 			if tc.wantErr {
 				require.Error(t, err, "GetTimezone should return an error")
 				require.Nil(t, timezoneResp, "GetTimezone should return a nil response when in error")
 				return
 			}
+
 			require.NoError(t, err, "GetTimezone should not return an error")
+
+			got := timezoneResp.String()
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "GetTimezone response does not match golden file")
 		})
 	}
 }
 
 func TestSetTimezone(t *testing.T) {
-	t.Parallel()
-
 	tests := map[string]struct {
 		timezone string
 
@@ -94,10 +134,12 @@ func TestSetTimezone(t *testing.T) {
 		"Error when fails to set timezone":        {timezone: "error", wantErr: true},
 	}
 
+	originalDir, err := os.Getwd()
+	require.NoError(t, err, "Setup: could not get current working directory")
+
 	for name, tc := range tests {
-		tc := tc // capture range variable
+		tc := tc
 		t.Run(name, func(t *testing.T) {
-			t.Parallel()
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			var opts []timezone.Option
@@ -116,18 +158,34 @@ func TestSetTimezone(t *testing.T) {
 			var req *pb.SetTimezoneRequest
 			if !tc.emptyRequest {
 				req = &pb.SetTimezoneRequest{Timezone: tc.timezone}
-			} else {
-				req = nil
 			}
 
-			timezoneResp, err := client.SetTimezone(context.Background(), req)
+			// TODO: Cleanup into util (same for user service)
+			tempDir := t.TempDir()
+			err = os.Chdir(tempDir)
+			require.NoError(t, err, "Setup: failed to change directory")
+
+			err := os.WriteFile("actions", []byte(""), 0600)
+			require.NoError(t, err, "Setup: could not create actions file")
+
+			timezoneResp, respErr := client.SetTimezone(context.Background(), req)
+
+			got, err := testutils.ReadActionFromFile()
+			require.NoError(t, err, "Teardown: failed to read actions file ")
+
+			err = os.Chdir(originalDir)
+			require.NoError(t, err, "Teardown: failed to change directory")
+
 			if tc.wantErr {
-				require.Error(t, err, "SetTimezone should return an error")
+				require.Error(t, respErr, "SetTimezone should return an error")
 				require.Nil(t, timezoneResp, "SetTimezone should return a nil response when in error")
 				return
 			}
-			require.NoError(t, err, "SetTimezone should not return an error")
+			require.NoError(t, respErr, "SetTimezone should not return an error")
 			require.NotNil(t, timezoneResp, "SetTimezone should return a non-nil response")
+
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "CreateUser returned an unexpected response")
 		})
 	}
 }
