@@ -31,4 +31,6 @@ const (
 	DbusPeerPrefix = "org.freedesktop.DBus.Peer"
 	// DbusLocalePrefix is the prefix for the Locale D-Bus interface.
 	DbusLocalePrefix = "org.freedesktop.locale1"
+	// DbusTimedatePrefix is the prefix for the Timezone D-Bus interface.
+	DbusTimedatePrefix = "org.freedesktop.timedate1"
 )

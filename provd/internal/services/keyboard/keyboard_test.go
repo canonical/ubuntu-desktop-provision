@@ -21,14 +21,50 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-func TestGsettingsNotWritable(t *testing.T) {
+func TestNew(t *testing.T) {
 	t.Parallel()
 
-	bus := testutils.NewDbusConn(t)
-	client, err := keyboard.New(bus, keyboard.WithGSettingsSubset(gSettingsSubsetMock{isWritableError: true, actionpath: t.TempDir()}))
+	tests := map[string]struct {
+		isWritableError     bool
+		invalidLocalePrefix bool
 
-	require.Error(t, err, "SetInputSource should return an error")
-	require.Empty(t, client, "SetInputSource should return a nil response")
+		wantErr bool
+	}{
+		// Success case
+		"Success on creating a new keyboard service": {},
+
+		// Error cases
+		"Error when GSettings path is not writable": {isWritableError: true, wantErr: true},
+		"Error when keyboard prefix is invalid":     {invalidLocalePrefix: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			var opts []keyboard.Option
+			if tc.isWritableError {
+				opts = []keyboard.Option{
+					keyboard.WithGSettingsSubset(gSettingsSubsetMock{isWritableError: true}),
+				}
+			}
+			if tc.invalidLocalePrefix {
+				opts = append(opts, keyboard.WithLocalePrefix("invalid"))
+			}
+
+			client, err := keyboard.New(testutils.NewDbusConn(t), opts...)
+
+			if tc.wantErr {
+				require.Error(t, err, "New should return an error")
+				require.Empty(t, client, "New should return a nil response")
+				return
+			}
+
+			require.NoError(t, err, "New should not return an error")
+			require.NotNil(t, client, "New should return a non-nil response")
+		})
+	}
 }
 
 func TestSetInputSources(t *testing.T) {
@@ -42,8 +78,7 @@ func TestSetInputSources(t *testing.T) {
 		emptyRequest           bool
 		emptySettingsInRequest bool
 
-		wantErr    bool
-		wantNoFile bool
+		wantErr bool
 	}{
 		// Success cases
 		"Success on valid layout and variant":    {},
@@ -63,10 +98,9 @@ func TestSetInputSources(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
-			actionpath := t.TempDir()
-
 			t.Cleanup(testutils.StartLocalSystemBus())
 
+			actionpath := t.TempDir()
 			opts := []keyboard.Option{
 				keyboard.WithGSettingsSubset(gSettingsSubsetMock{actionpath: actionpath}),
 			}
@@ -98,18 +132,17 @@ func TestSetInputSources(t *testing.T) {
 				}
 			}
 
-			keyboardResp, reqErr := client.SetInputSource(context.Background(), req)
-
+			keyboardResp, err := client.SetInputSource(context.Background(), req)
 			if tc.wantErr {
-				require.Error(t, reqErr, "SetInputSource should return an error")
+				require.Error(t, err, "SetInputSource should return an error")
 				require.Empty(t, keyboardResp, "SetInputSource should return a nil response")
 				return
 			}
+			require.NoError(t, err, "SetInputSource should not return an error")
 
-			got, err := testutils.ReadActionFromFile(tc.wantNoFile, testutils.WithFilePath(actionpath))
+			got, err := testutils.ReadActionFromFile(testutils.WithFilePath(actionpath))
 			require.NoError(t, err, "ReadActionFromFile should not return an error")
 
-			require.NoError(t, reqErr, "SetInputSource should not return an error")
 			want := testutils.LoadWithUpdateFromGolden(t, got)
 			require.Equal(t, want, got, "returned an unexpected response")
 		})
@@ -132,7 +165,7 @@ func TestGetKeyboard(t *testing.T) {
 		"Success on retrieving keyboards when locale not in jsonl": {locale1Path: "jsonlexists"},
 		"Success on retrieving keyboards":                          {},
 
-		// // Error cases
+		// Error cases
 		"Error when request is empty":          {emptyRequest: true, wantErr: true},
 		"Error when can't find keyboard file":  {keyboardConfigPath: "invalid-path", wantErr: true},
 		"Error when can't parse keyboard file": {keyboardConfigPath: "unparsable", wantErr: true},
@@ -149,10 +182,8 @@ func TestGetKeyboard(t *testing.T) {
 
 			t.Cleanup(testutils.StartLocalSystemBus())
 
-			tempDir := t.TempDir()
-
 			if tc.keyboardConfigPath == "unparsable" {
-				tc.keyboardConfigPath = filepath.Join(tempDir, "supported")
+				tc.keyboardConfigPath = filepath.Join(t.TempDir(), "supported")
 				err := os.WriteFile(tc.keyboardConfigPath, []byte("foo"), 0600)
 				require.NoError(t, err, "Setup: could not write to %s: %v", tc.keyboardConfigPath, err)
 			}
@@ -266,7 +297,8 @@ func TestSetKeyboard(t *testing.T) {
 				return
 			}
 			require.NoError(t, err, "SetKeyboard should not return an error")
-			require.NotEmpty(t, keyboardResp, "SetKeyboard should return a nil response")
+
+			require.NotEmpty(t, keyboardResp, "SetKeyboard should return some response")
 		})
 	}
 }

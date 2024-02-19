@@ -8,6 +8,8 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/timezone"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/godbus/dbus/v5"
@@ -22,6 +24,8 @@ type Manager struct {
 	userService     user.Service
 	localeService   locale.Service
 	keyboardSerivce keyboard.Service
+	privacyService  privacy.Service
+	timezoneService timezone.Service
 	bus             *dbus.Conn
 }
 
@@ -52,10 +56,22 @@ func NewManager(ctx context.Context) (m *Manager, err error) {
 		return nil, status.Errorf(codes.Internal, "failed to create keyboard service: %s", err)
 	}
 
+	privacyService, err := privacy.New()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create privacy service: %s", err)
+	}
+
+	timezoneService, err := timezone.New(bus)
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create timezone service: %s", err)
+	}
+
 	return &Manager{
 		userService:     *userService,
 		localeService:   *localeService,
 		keyboardSerivce: *keyboardService,
+		privacyService:  *privacyService,
+		timezoneService: *timezoneService,
 		bus:             bus,
 	}, nil
 }
@@ -69,6 +85,8 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterUserServiceServer(grpcServer, &m.userService)
 	pb.RegisterLocaleServiceServer(grpcServer, &m.localeService)
 	pb.RegisterKeyboardServiceServer(grpcServer, &m.keyboardSerivce)
+	pb.RegisterPrivacyServiceServer(grpcServer, &m.privacyService)
+	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
 	return grpcServer
 }
 

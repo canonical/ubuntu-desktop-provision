@@ -16,16 +16,16 @@ import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'google/protobuf/empty.pb.dart' as $0;
-import 'privacy.pb.dart' as $5;
+import 'google/protobuf/wrappers.pb.dart' as $5;
 
 export 'privacy.pb.dart';
 
 @$pb.GrpcServiceName('privacy.PrivacyService')
 class PrivacyServiceClient extends $grpc.Client {
-  static final _$getLocationServices = $grpc.ClientMethod<$0.Empty, $5.GetLocationServicesResponse>(
+  static final _$getLocationServices = $grpc.ClientMethod<$0.Empty, $5.BoolValue>(
       '/privacy.PrivacyService/GetLocationServices',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $5.GetLocationServicesResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $5.BoolValue.fromBuffer(value));
   static final _$enableLocationServices = $grpc.ClientMethod<$0.Empty, $0.Empty>(
       '/privacy.PrivacyService/EnableLocationServices',
       ($0.Empty value) => value.writeToBuffer(),
@@ -41,7 +41,7 @@ class PrivacyServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$5.GetLocationServicesResponse> getLocationServices($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$5.BoolValue> getLocationServices($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getLocationServices, request, options: options);
   }
 
@@ -59,13 +59,13 @@ abstract class PrivacyServiceBase extends $grpc.Service {
   $core.String get $name => 'privacy.PrivacyService';
 
   PrivacyServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.Empty, $5.GetLocationServicesResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $5.BoolValue>(
         'GetLocationServices',
         getLocationServices_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($5.GetLocationServicesResponse value) => value.writeToBuffer()));
+        ($5.BoolValue value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.Empty, $0.Empty>(
         'EnableLocationServices',
         enableLocationServices_Pre,
@@ -82,7 +82,7 @@ abstract class PrivacyServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$5.GetLocationServicesResponse> getLocationServices_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$5.BoolValue> getLocationServices_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getLocationServices(call, await request);
   }
 
@@ -94,7 +94,7 @@ abstract class PrivacyServiceBase extends $grpc.Service {
     return disableLocationServices(call, await request);
   }
 
-  $async.Future<$5.GetLocationServicesResponse> getLocationServices($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$5.BoolValue> getLocationServices($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> enableLocationServices($grpc.ServiceCall call, $0.Empty request);
   $async.Future<$0.Empty> disableLocationServices($grpc.ServiceCall call, $0.Empty request);
 }

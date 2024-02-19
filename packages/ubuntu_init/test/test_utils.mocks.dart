@@ -61,35 +61,6 @@ class MockPrivacyService extends _i1.Mock implements _i3.PrivacyService {
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
-
-  @override
-  _i4.Future<bool> isReportingEnabled() => (super.noSuchMethod(
-        Invocation.method(
-          #isReportingEnabled,
-          [],
-        ),
-        returnValue: _i4.Future<bool>.value(false),
-      ) as _i4.Future<bool>);
-
-  @override
-  _i4.Future<void> setReportingEnabled(bool? enabled) => (super.noSuchMethod(
-        Invocation.method(
-          #setReportingEnabled,
-          [enabled],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
-
-  @override
-  _i4.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
 }
 
 /// A class which mocks [ProductService].

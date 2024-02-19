@@ -22,10 +22,20 @@ func WithLocalePath(path string) Option {
 	}
 }
 
-type GSettingsSubset = gSettingsSubset
+func WithLocalePrefix(prefix string) Option {
+	return func(s *Service) error {
+		s.locale = s.conn.Object(prefix, dbus.ObjectPath("/org/freedesktop/locale1"))
+		if s.locale == nil {
+			return errors.New("invalid locale prefix")
+		}
+		return nil
+	}
+}
 
-// WithGSettingsSubset is a functional option to set the GSettingsSubset object for testing purposes.
-func WithGSettingsSubset(g gSettingsSubset) Option {
+type GSettingsValueSetter = gSettingsValueSetter
+
+// WithGSettingsSubset is a functional option to set the gSettingsValueSetter object for testing purposes.
+func WithGSettingsSubset(g gSettingsValueSetter) Option {
 	return func(s *Service) error {
 		s.gsettings = g
 		return nil

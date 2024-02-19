@@ -19,12 +19,33 @@ locale.LocaleService:
           isclientstream: false
           isserverstream: false
     metadata: protos/locale.proto
-user.UserService:
+privacy.PrivacyService:
     methods:
-        - name: CreateUser
+        - name: EnableLocationServices
           isclientstream: false
           isserverstream: false
+        - name: DisableLocationServices
+          isclientstream: false
+          isserverstream: false
+        - name: GetLocationServices
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/privacy.proto
+timezone.TimezoneService:
+    methods:
+        - name: SetTimezone
+          isclientstream: false
+          isserverstream: false
+        - name: GetTimezone
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/timezone.proto
+user.UserService:
+    methods:
         - name: ValidateUsername
+          isclientstream: false
+          isserverstream: false
+        - name: CreateUser
           isclientstream: false
           isserverstream: false
     metadata: protos/user.proto
