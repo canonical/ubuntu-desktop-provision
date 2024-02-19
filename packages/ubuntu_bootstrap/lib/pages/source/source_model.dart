@@ -7,7 +7,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-final _log = Logger('applicationsSelection');
+final _log = Logger('source');
 
 const kFullSourceId = 'ubuntu-desktop';
 const kMinimalSourceId = 'ubuntu-desktop-minimal';

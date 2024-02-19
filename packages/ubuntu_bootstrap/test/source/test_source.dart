@@ -4,7 +4,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
-import 'package:ubuntu_bootstrap/pages/source/applications_selection_page.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_selection_page.dart';
 import 'package:ubuntu_bootstrap/pages/source/codecs_and_drivers_page.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -51,7 +51,7 @@ SourceModel buildSourceModel({
   return model;
 }
 
-Widget buildApplicationsSelectionPage(SourceModel model) {
+Widget buildSourceSelectionPage(SourceModel model) {
   registerMockService<SubiquityClient>(MockSubiquityClient());
   registerMockService<TelemetryService>(MockTelemetryService());
   final pageImages = PageImages(MockPageConfigService());
@@ -61,7 +61,7 @@ Widget buildApplicationsSelectionPage(SourceModel model) {
       sourceModelProvider.overrideWith((_) => model),
       pageImagesProvider.overrideWith((_) => pageImages),
     ],
-    child: ApplicationsSelectionPage(),
+    child: SourceSelectionPage(),
   );
 }
 

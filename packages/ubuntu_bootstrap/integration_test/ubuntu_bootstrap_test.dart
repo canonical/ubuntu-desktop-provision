@@ -65,7 +65,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -136,7 +136,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -211,7 +211,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -287,7 +287,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -366,7 +366,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -435,7 +435,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -510,7 +510,7 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testApplicationsSelectionPage();
+    await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

@@ -4,7 +4,7 @@ export 'pages/loading/loading_page.dart';
 export 'pages/refresh/refresh_page.dart';
 export 'pages/rst/rst_page.dart';
 export 'pages/secure_boot/secure_boot_page.dart';
-export 'pages/source/applications_selection_page.dart';
+export 'pages/source/source_selection_page.dart';
 export 'pages/source/codecs_and_drivers_page.dart';
 export 'pages/source/not_enough_disk_space/not_enough_disk_space_page.dart';
 export 'pages/storage/storage_wizard.dart';

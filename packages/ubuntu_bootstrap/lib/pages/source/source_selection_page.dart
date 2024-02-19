@@ -15,8 +15,8 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 ///
 /// This uses the `source` API of the Subiquity client to get the available
 /// sources, and to set the selected source.
-class ApplicationsSelectionPage extends ConsumerWidget with ProvisioningPage {
-  ApplicationsSelectionPage({super.key});
+class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
+  SourceSelectionPage({super.key});
 
   final ScrollController _scrollController = ScrollController();
 

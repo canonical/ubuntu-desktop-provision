@@ -191,7 +191,7 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(ApplicationsSelectionPage), findsOneWidget);
+    expect(find.byType(SourceSelectionPage), findsOneWidget);
     verify(sourceModel.init()).called(1);
 
     await tester.tapNext();
@@ -379,7 +379,7 @@ void main() {
           'rst',
           'network',
           'refresh',
-          'applicationsSelection',
+          'sourceSelection',
           'codecsAndDrivers',
           'notEnoughDiskSpace',
           'secureBoot',
