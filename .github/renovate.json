@@ -3,6 +3,9 @@
   "extends": [
     "github>canonical/ubuntu-flutter-plugins"
   ],
+  "git-submodules": {
+    "enabled": true
+  },
   "enabledManagers": [
     "github-actions",
     "pub",
