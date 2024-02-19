@@ -12,6 +12,9 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 
 /// A page where the user can decide whether they want to do a full installation
 /// with all selected applications or a minimal installation.
+///
+/// This uses the `source` API of the Subiquity client to get the available
+/// sources, and to set the selected source.
 class ApplicationsSelectionPage extends ConsumerWidget with ProvisioningPage {
   ApplicationsSelectionPage({super.key});
 

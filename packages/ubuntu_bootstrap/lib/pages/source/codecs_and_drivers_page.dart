@@ -46,10 +46,13 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
                 children: [
                   Text(lang.codecsAndDriversPageBody),
                   const SizedBox(height: kWizardSpacing),
-                  _InfoBox(
-                    title: lang.codecsAndDriversNvidiaNote,
-                    subtitle: lang.codecsAndDriversNvidiaBody,
-                  ),
+                  // TODO(Lukas): Add a proper check when we know where to get this information.
+                  if (false)
+                    // ignore: dead_code
+                    _InfoBox(
+                      title: lang.codecsAndDriversNvidiaNote,
+                      subtitle: lang.codecsAndDriversNvidiaBody,
+                    ),
                   const SizedBox(height: kWizardSpacing),
                   Align(
                     alignment: AlignmentDirectional.centerStart,
