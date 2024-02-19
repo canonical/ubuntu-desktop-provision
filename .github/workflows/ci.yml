@@ -4,13 +4,16 @@ on:
   push:
     branches:
       - main
-      - archive/main
+
   pull_request:
     branches:
       - main
-      - archive/main
 
   workflow_dispatch:
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   flutter-analyze:

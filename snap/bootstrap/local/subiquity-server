@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# store current script directories
+SCRIPT_DIR=`dirname $0`
+
+# configure python environment
+export PYTHONIOENCODING=utf-8
+PYTHONPATH=$SNAP/usr/lib/python3/site-packages:$PYTHONPATH
+PYTHONPATH=$SNAP/usr/lib/python3/dist-packages:$PYTHONPATH
+PYTHONPATH=$SNAP/lib/python3.10/site-packages:$PYTHONPATH
+export PYTHONPATH
+export PYTHON=$SNAP/usr/bin/python3.10
+
+# ensure curtin points at PYTHON
+export PY3OR2_PYTHON=$PYTHON
+
+# set the PATH so subiquity finds curtin
+# sbin for bundled tools such as ntfsresize
+export PATH=$SNAP/bin:$SNAP/sbin:$PATH
+
+# allow subiquity to run setxkbmap
+export DISPLAY=:0
+
+# base directory for subiquity to locate resources
+export SUBIQUITY_ROOT=$SNAP/bin/subiquity
+
+# run subiquity server
+cd $SCRIPT_DIR/subiquity
+
+args=(--use-os-prober --storage-version=2 --postinst-hooks-dir=$SNAP/etc/subiquity/postinst.d)
+$PYTHON -m subiquity.cmd.server "${args[@]}"
