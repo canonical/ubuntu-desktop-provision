@@ -528,6 +528,7 @@ const _$GuidedCapabilityEnumMap = {
   GuidedCapability.LVM: 'LVM',
   GuidedCapability.LVM_LUKS: 'LVM_LUKS',
   GuidedCapability.ZFS: 'ZFS',
+  GuidedCapability.ZFS_LUKS: 'ZFS_LUKS',
   GuidedCapability.CORE_BOOT_ENCRYPTED: 'CORE_BOOT_ENCRYPTED',
   GuidedCapability.CORE_BOOT_UNENCRYPTED: 'CORE_BOOT_UNENCRYPTED',
   GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED: 'CORE_BOOT_PREFER_ENCRYPTED',
@@ -766,6 +767,7 @@ _$GuidedChoiceV2Impl _$$GuidedChoiceV2ImplFromJson(Map<String, dynamic> json) =>
       sizingPolicy:
           $enumDecodeNullable(_$SizingPolicyEnumMap, json['sizing_policy']),
       resetPartition: json['reset_partition'] as bool? ?? false,
+      resetPartitionSize: json['reset_partition_size'] as int?,
     );
 
 Map<String, dynamic> _$$GuidedChoiceV2ImplToJson(
@@ -777,6 +779,7 @@ Map<String, dynamic> _$$GuidedChoiceV2ImplToJson(
       'recovery_key': instance.recoveryKey?.toJson(),
       'sizing_policy': _$SizingPolicyEnumMap[instance.sizingPolicy],
       'reset_partition': instance.resetPartition,
+      'reset_partition_size': instance.resetPartitionSize,
     };
 
 const _$SizingPolicyEnumMap = {
@@ -1104,6 +1107,22 @@ Map<String, dynamic> _$$UbuntuProResponseImplToJson(
     <String, dynamic>{
       'token': instance.token,
       'has_network': instance.hasNetwork,
+    };
+
+_$UbuntuProGeneralInfoImpl _$$UbuntuProGeneralInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProGeneralInfoImpl(
+      eolEsmYear: json['eol_esm_year'] as int?,
+      universePackages: json['universe_packages'] as int,
+      mainPackages: json['main_packages'] as int,
+    );
+
+Map<String, dynamic> _$$UbuntuProGeneralInfoImplToJson(
+        _$UbuntuProGeneralInfoImpl instance) =>
+    <String, dynamic>{
+      'eol_esm_year': instance.eolEsmYear,
+      'universe_packages': instance.universePackages,
+      'main_packages': instance.mainPackages,
     };
 
 _$UPCSInitiateResponseImpl _$$UPCSInitiateResponseImplFromJson(
