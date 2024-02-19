@@ -13,7 +13,7 @@ dependencies:
   collection: ^1.17.0
   dbus: ^0.7.10
   diacritic: ^0.1.5
-  file: ^6.1.4
+  file: ">=6.1.4 <8.0.0"
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0-beta.1

@@ -65,7 +65,8 @@ theme:
 # - keyboard: Set keyboard layout
 # - network: Connect to a network
 # - refresh: Expose installer's auto-update mechanism
-# - source: Install 3'rd party drivers and codecs
+# - source-selection: Choose installation source, i.e. which applications that should be installed
+# - codecs-and-drivers: Choose if proprietary codecs and drivers should be installed
 # - not-enough-disk-space: Notifies if there is insufficient disk space
 # - secure-boot: Handles secure boot
 # - storage: Select target disk and partition

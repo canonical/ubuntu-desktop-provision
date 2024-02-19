@@ -90,13 +90,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testSourcePage({
+  Future<void> testSourceSelectionPage({
     String? sourceId,
     String? screenshot,
   }) async {
-    await pumpUntilPage(SourcePage);
+    await pumpUntilPage(SourceSelectionPage);
 
-    final context = element(find.byType(SourcePage));
+    final context = element(find.byType(SourceSelectionPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.updatesOtherSoftwarePageTitle), findsOneWidget);
@@ -104,6 +104,24 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (sourceId != null) {
       await tapRadio<String>(sourceId);
     }
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
+  Future<void> testCodecsAndDriversPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(CodecsAndDriversPage);
+
+    final context = element(find.byType(CodecsAndDriversPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.codecsAndDriversPageTitle), findsOneWidget);
+    //final checkbox = find.text(l10n.installDriversTitle);
+    //await tap(checkbox);
     await pumpAndSettle();
 
     if (screenshot != null) {

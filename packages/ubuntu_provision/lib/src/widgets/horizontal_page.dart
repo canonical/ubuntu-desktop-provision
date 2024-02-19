@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru_widgets/constants.dart';
 import 'package:yaru_widgets/widgets.dart';
 
 class HorizontalPage extends ConsumerWidget {
@@ -19,7 +20,7 @@ class HorizontalPage extends ConsumerWidget {
     this.expandContent = false,
     this.padding = const EdgeInsets.symmetric(
       horizontal: defaultContentPadding,
-      vertical: _minContentPadding,
+      vertical: kYaruPagePadding,
     ),
     this.bottomBar,
     this.snackBar,
@@ -63,7 +64,6 @@ class HorizontalPage extends ConsumerWidget {
 
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
-  static const _minContentPadding = 20.0;
   static const _contentSpacing = 60.0;
 
   @override
@@ -74,7 +74,7 @@ class HorizontalPage extends ConsumerWidget {
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
     final adjustedPadding =
-        isSmallWindow ? const EdgeInsets.all(_minContentPadding) : padding;
+        isSmallWindow ? const EdgeInsets.all(kYaruPagePadding) : padding;
 
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
@@ -88,7 +88,7 @@ class HorizontalPage extends ConsumerWidget {
                 child: icon,
               ),
               SizedBox(
-                width: isSmallWindow ? _minContentPadding : _contentSpacing,
+                width: isSmallWindow ? kYaruPagePadding : _contentSpacing,
               ),
             ],
             Expanded(

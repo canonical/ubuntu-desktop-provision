@@ -22,15 +22,14 @@ final sourceModelProvider = ChangeNotifierProvider(
 );
 
 class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
-  // ignore: public_member_api_docs
-  SourceModel(
-      {required SubiquityClient client,
-      required PowerService power,
-      required NetworkService network,
-      required StorageService storage,
-      bool installDrivers = false,
-      bool installCodecs = false})
-      : _client = client,
+  SourceModel({
+    required SubiquityClient client,
+    required PowerService power,
+    required NetworkService network,
+    required StorageService storage,
+    bool installDrivers = false,
+    bool installCodecs = false,
+  })  : _client = client,
         _power = power,
         _network = network,
         _storage = storage,

@@ -10,12 +10,13 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
-
-/// A page where the user can decide whether they want to install 3rd party
-/// drivers or codecs.
-class SourcePage extends ConsumerWidget with ProvisioningPage {
-  SourcePage({super.key});
+/// A page where the user can decide whether they want to do a full installation
+/// with all selected applications or a minimal installation.
+///
+/// This uses the `source` API of the Subiquity client to get the available
+/// sources, and to set the selected source.
+class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
+  SourceSelectionPage({super.key});
 
   final ScrollController _scrollController = ScrollController();
 
@@ -29,7 +30,7 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.updatesOtherSoftwarePageTitle,
@@ -37,58 +38,19 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
       expandContent: true,
       content: Center(
         child: Scrollbar(
-          thumbVisibility: true,
           controller: _scrollController,
-          child: Padding(
-            padding: EdgeInsets.only(right: scrollBarPadding),
-            child: ListView(
-              shrinkWrap: true,
-              controller: _scrollController,
-              children: [
-                ...model.sources
-                    .map((source) => Align(
-                          alignment: AlignmentDirectional.centerStart,
-                          child: Visibility(
-                            child: YaruRadioButton<String>(
-                              title: Text(source.localizeTitle(context)),
-                              subtitle: Text(source.localizeSubtitle(context)),
-                              contentPadding: kWizardPadding,
-                              value: source.id,
-                              groupValue: model.sourceId,
-                              onChanged: model.setSourceId,
-                            ),
-                          ),
-                        ))
-                    .withSpacing(kWizardSpacing),
-                Padding(
-                  padding: const EdgeInsets.all(kYaruPagePadding),
-                  child: Text(lang.otherOptions),
-                ),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: YaruCheckButton(
-                    title: Text(lang.installDriversTitle),
-                    subtitle: Text(lang.installDriversSubtitle),
-                    contentPadding: kWizardPadding,
-                    value: model.installDrivers,
-                    onChanged: model.setInstallDrivers,
-                  ),
-                ),
-                const SizedBox(height: kWizardSpacing),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Tooltip(
-                    message: !model.isOnline ? lang.offlineWarning : '',
-                    child: YaruCheckButton(
-                      title: Text(lang.installCodecsTitle),
-                      subtitle: Text(lang.installCodecsSubtitle),
-                      contentPadding: kWizardPadding,
-                      value: model.installCodecs && model.isOnline,
-                      onChanged: model.isOnline ? model.setInstallCodecs : null,
-                    ),
-                  ),
-                ),
-              ],
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            controller: _scrollController,
+            child: Padding(
+              padding: EdgeInsets.only(right: scrollBarPadding),
+              child: Column(
+                children: [
+                  ...model.sources
+                      .map(_InstallationTypeListTile.new)
+                      .withSpacing(kWizardSpacing / 2),
+                ],
+              ),
             ),
           ),
         ),
@@ -117,9 +79,7 @@ class SourcePage extends ConsumerWidget with ProvisioningPage {
         final telemetry = tryGetService<TelemetryService>();
         await telemetry?.addMetrics({
           'Minimal': model.sourceId?.contains('minimal') ?? false,
-          'RestrictedAddons': model.installCodecs,
         });
-        await model.save();
       },
     );
   }
@@ -134,21 +94,59 @@ extension on Iterable<Widget> {
   }
 }
 
-extension on SourceSelection {
-  String localizeTitle(BuildContext context) {
-    switch (id) {
+class _InstallationTypeListTile extends ConsumerWidget {
+  const _InstallationTypeListTile(this.source);
+
+  final SourceSelection source;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final model = ref.watch(sourceModelProvider);
+    final isSelected = source.id == model.sourceId;
+    return Align(
+      alignment: AlignmentDirectional.centerStart,
+      child: YaruBorderContainer(
+        color: isSelected
+            ? colorScheme.primary.withOpacity(0.2)
+            : colorScheme.primaryContainer,
+        border: Border.all(
+          color: isSelected ? colorScheme.primary : theme.dividerColor,
+        ),
+        borderRadius: kWizardBorderRadius,
+        child: YaruRadioListTile(
+          title: Text(
+            _localizeTitle(context),
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          subtitle: Text(_localizeSubtitle(context)),
+          contentPadding: kWizardTilePadding,
+          isThreeLine: true,
+          value: source.id,
+          groupValue: model.sourceId,
+          onChanged: model.setSourceId,
+        ),
+      ),
+    );
+  }
+
+  String _localizeTitle(BuildContext context) {
+    switch (source.id) {
       case kFullSourceId:
         return UbuntuBootstrapLocalizations.of(context).fullInstallationTitle;
       case kMinimalSourceId:
         return UbuntuBootstrapLocalizations.of(context)
             .minimalInstallationTitle;
       default:
-        return name;
+        return source.name;
     }
   }
 
-  String localizeSubtitle(BuildContext context) {
-    switch (id) {
+  String _localizeSubtitle(BuildContext context) {
+    switch (source.id) {
       case kFullSourceId:
         return UbuntuBootstrapLocalizations.of(context)
             .fullInstallationSubtitle;
@@ -156,7 +154,7 @@ extension on SourceSelection {
         return UbuntuBootstrapLocalizations.of(context)
             .minimalInstallationSubtitle;
       default:
-        return description;
+        return source.description;
     }
   }
 }

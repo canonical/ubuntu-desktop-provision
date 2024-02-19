@@ -65,7 +65,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -132,7 +136,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -203,7 +211,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -275,7 +287,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -350,7 +366,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -415,7 +435,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -486,7 +510,11 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
-    await tester.testSourcePage();
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

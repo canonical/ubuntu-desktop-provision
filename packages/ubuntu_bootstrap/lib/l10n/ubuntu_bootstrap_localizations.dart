@@ -414,7 +414,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @updatesOtherSoftwarePageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Applications and updates'**
+  /// **'Applications'**
   String get updatesOtherSoftwarePageTitle;
 
   /// No description provided for @updatesOtherSoftwarePageDescription.
@@ -423,10 +423,40 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'What apps would you like to install to start with?'**
   String get updatesOtherSoftwarePageDescription;
 
+  /// No description provided for @codecsAndDriversPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Optimise your computer'**
+  String get codecsAndDriversPageTitle;
+
+  /// No description provided for @codecsAndDriversPageDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Install recommended proprietary software?'**
+  String get codecsAndDriversPageDescription;
+
+  /// No description provided for @codecsAndDriversPageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.'**
+  String get codecsAndDriversPageBody;
+
+  /// No description provided for @codecsAndDriversNvidiaNote.
+  ///
+  /// In en, this message translates to:
+  /// **'NVIDIA graphics card detected'**
+  String get codecsAndDriversNvidiaNote;
+
+  /// No description provided for @codecsAndDriversNvidiaBody.
+  ///
+  /// In en, this message translates to:
+  /// **'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.'**
+  String get codecsAndDriversNvidiaBody;
+
   /// No description provided for @fullInstallationTitle.
   ///
   /// In en, this message translates to:
-  /// **'Full installation'**
+  /// **'Extended selection'**
   String get fullInstallationTitle;
 
   /// No description provided for @fullInstallationSubtitle.
@@ -438,7 +468,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @minimalInstallationTitle.
   ///
   /// In en, this message translates to:
-  /// **'Default installation'**
+  /// **'Default selection'**
   String get minimalInstallationTitle;
 
   /// No description provided for @minimalInstallationSubtitle.

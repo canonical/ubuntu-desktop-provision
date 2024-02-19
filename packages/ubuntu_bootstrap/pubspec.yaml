@@ -13,7 +13,7 @@ dependencies:
   collection: ^1.17.0
   crypt: ^4.3.1
   dbus: ^0.7.10
-  file: ^6.1.4
+  file: ">=6.1.4 <8.0.0"
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0-beta.1

@@ -191,9 +191,14 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(SourcePage), findsOneWidget);
-    verify(refreshModel.init()).called(1); // skipped
+    expect(find.byType(SourceSelectionPage), findsOneWidget);
     verify(sourceModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(CodecsAndDriversPage), findsOneWidget);
+
+    verify(refreshModel.init()).called(1); // skipped
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -282,7 +287,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.source.route);
+    await tester.jumpToWizardRoute(InstallationStep.codecsAndDrivers.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -374,7 +379,8 @@ void main() {
           'rst',
           'network',
           'refresh',
-          'source',
+          'sourceSelection',
+          'codecsAndDrivers',
           'notEnoughDiskSpace',
           'secureBoot',
           'storage',

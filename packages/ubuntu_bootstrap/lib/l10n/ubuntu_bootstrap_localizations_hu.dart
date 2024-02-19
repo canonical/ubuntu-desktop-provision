@@ -120,6 +120,21 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Milyen alkalmazásokat szeretne telepíteni a kezdéshez?';
 
   @override
+  String get codecsAndDriversPageTitle => 'Optimise your computer';
+
+  @override
+  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+
+  @override
+  String get codecsAndDriversPageBody => 'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+
+  @override
+  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+
+  @override
+  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+
+  @override
   String get fullInstallationTitle => 'Teljes telepítés';
 
   @override
