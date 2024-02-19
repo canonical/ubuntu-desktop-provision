@@ -21,13 +21,13 @@ locale.LocaleService:
     metadata: protos/locale.proto
 privacy.PrivacyService:
     methods:
-        - name: GetLocationServices
-          isclientstream: false
-          isserverstream: false
         - name: EnableLocationServices
           isclientstream: false
           isserverstream: false
         - name: DisableLocationServices
+          isclientstream: false
+          isserverstream: false
+        - name: GetLocationServices
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
