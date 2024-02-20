@@ -22,6 +22,7 @@ jobs:
 
         git fetch origin main:main
         git rebase -X theirs main
+        git submodule update --init --recursive
 
         mv snap snap.tmp
         mv snap.tmp/bootstrap snap/
