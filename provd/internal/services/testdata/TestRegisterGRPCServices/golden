@@ -90,6 +90,45 @@ accessibility.AccessibilityService:
         - name: GetVisualAlerts
           isclientstream: false
           isserverstream: false
+        - name: GetStickyKeys
+          isclientstream: false
+          isserverstream: false
+        - name: GetReducedMotion
+          isclientstream: false
+          isserverstream: false
+        - name: GetMouseKeys
+          isclientstream: false
+          isserverstream: false
+        - name: EnableDesktopZoom
+          isclientstream: false
+          isserverstream: false
+        - name: DisableHighContrast
+          isclientstream: false
+          isserverstream: false
+        - name: DisableLargeText
+          isclientstream: false
+          isserverstream: false
+        - name: EnableVisualAlerts
+          isclientstream: false
+          isserverstream: false
+        - name: EnableStickyKeys
+          isclientstream: false
+          isserverstream: false
+        - name: GetHighContrast
+          isclientstream: false
+          isserverstream: false
+        - name: EnableHighContrast
+          isclientstream: false
+          isserverstream: false
+        - name: DisableReducedMotion
+          isclientstream: false
+          isserverstream: false
+        - name: DisableScreenKeyboard
+          isclientstream: false
+          isserverstream: false
+        - name: DisableStickyKeys
+          isclientstream: false
+          isserverstream: false
     metadata: protos/accessibility.proto
 keyboard.KeyboardService:
     methods:
@@ -100,6 +139,9 @@ keyboard.KeyboardService:
           isclientstream: false
           isserverstream: false
         - name: SetKeyboard
+          isclientstream: false
+          isserverstream: false
+        - name: GetKeyboard
           isclientstream: false
           isserverstream: false
     metadata: protos/keyboard.proto
@@ -124,9 +166,12 @@ privacy.PrivacyService:
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
-timezone.TimezoneService:
+pro.ProService:
     methods:
         - name: GetTimezone
+          isclientstream: false
+          isserverstream: false
+        - name: SetTimezone
           isclientstream: false
           isserverstream: false
         - name: SetTimezone
