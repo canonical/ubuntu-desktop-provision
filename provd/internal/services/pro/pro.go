@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os/exec"
+	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
@@ -60,10 +61,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Initiate magic attach process
 	exe, args := "pro", []string{"api", "u.pro.attach.magic.initiate.v1"}
-	out, err := exec.CommandContext(stream.Context(), exe, args...).Output()
-	if err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to initiate magic attach process: %v", err))
-	}
+	out, exeErr := exec.CommandContext(stream.Context(), exe, args...).Output()
 
 	// Parse the response
 	var response proAPIResponse
@@ -71,9 +69,30 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 		return status.Errorf(codes.Internal, fmt.Sprintf("failed to parse response: %v", err))
 	}
 
-	// Check if the process was successful
-	if response.Result != "success" {
-		return status.Errorf(codes.Internal, "magic attach process was not successful")
+	if exeErr != nil {
+		// Check if it was a connectivity error
+		for _, e := range response.Errors {
+			if err, ok := e.(map[string]interface{}); ok {
+				if code, ok := err["code"].(string); ok && strings.Contains(code, "connectivity-error") {
+					resp := &pb.ProMagicAttachResponse{
+						Type: *pb.MagicAttachResponseType_NETWORK_ERROR.Enum(),
+					}
+					if err := stream.Send(resp); err != nil {
+						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
+					}
+					return nil
+				}
+			}
+		}
+
+		// If not a connectivity error, return unknown error
+		resp := &pb.ProMagicAttachResponse{
+			Type: *pb.MagicAttachResponseType_UNKOWN_ERROR.Enum(),
+		}
+		if err := stream.Send(resp); err != nil {
+			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+		}
+		return nil
 	}
 
 	// Return the user code
@@ -87,7 +106,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Wait for magic attach process to complete
 	exe, args = "pro", []string{"api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", response.Data.Attributes.Token)}
-	out, err = exec.CommandContext(stream.Context(), exe, args...).Output()
+	out, err := exec.CommandContext(stream.Context(), exe, args...).Output()
 	if err != nil {
 		return status.Errorf(codes.Internal, fmt.Sprintf("failed to wait for magic attach: %v", err))
 	}
