@@ -18,7 +18,7 @@ enum MagicAttachResponseType {
     SUCCESS = 2;
     NETWORK_ERROR = 3;
     SUBSCRIPTION_LIMIT_REACHED = 4;
-    UNKOWN_ERROR = 5;
+    UNKNOWN_ERROR = 5;
 }
 
 message ProMagicAttachResponse {

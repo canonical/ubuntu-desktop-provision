@@ -1,3 +1,4 @@
+// Package pro implements the Pro gRPC service.
 package pro
 
 import (
@@ -5,7 +6,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os/exec"
-	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
@@ -48,11 +48,27 @@ type proAPIResponse struct {
 			ContractToken *string `json:"contract_token,omitempty"`
 		} `json:"attributes"`
 	} `json:"data"`
-	Errors   []interface{} `json:"errors"`
+	Errors   proAPIErrors  `json:"errors"`
 	Version  string        `json:"version"`
 	Warnings []interface{} `json:"warnings"`
 }
 
+type proAPIError struct {
+	Code string `json:"code"`
+}
+
+type proAPIErrors []proAPIError
+
+func (e proAPIErrors) ContainsCode(code string) bool {
+	for _, err := range e {
+		if err.Code == code {
+			return true
+		}
+	}
+	return false
+}
+
+// ProMagicAttach streams a user code and waits on a contract token from the pro server to preform a magic attach.
 func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMagicAttachServer) error {
 	// Validate request
 	if req == nil {
@@ -60,41 +76,29 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	}
 
 	// Initiate magic attach process
-	exe, args := "pro", []string{"api", "u.pro.attach.magic.initiate.v1"}
-	out, exeErr := exec.CommandContext(stream.Context(), exe, args...).Output()
-
-	// Parse the response
-	var response proAPIResponse
-	if err := json.Unmarshal(out, &response); err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to parse response: %v", err))
-	}
+	response, exeErr := s.initiateMagicAttach(stream.Context())
 
 	if exeErr != nil {
 		// Check if it was a connectivity error
-		for _, e := range response.Errors {
-			if err, ok := e.(map[string]interface{}); ok {
-				if code, ok := err["code"].(string); ok && strings.Contains(code, "connectivity-error") {
-					resp := &pb.ProMagicAttachResponse{
-						Type: *pb.MagicAttachResponseType_NETWORK_ERROR.Enum(),
-					}
-					if err := stream.Send(resp); err != nil {
-						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
-					}
-					return nil
-				}
+		if response.Errors.ContainsCode("connectivity-error") {
+			resp := &pb.ProMagicAttachResponse{
+				Type: pb.MagicAttachResponseType_NETWORK_ERROR,
 			}
+			if err := stream.Send(resp); err != nil {
+				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
+			}
+			return nil
 		}
 
 		// If not a connectivity error, return unknown error
 		resp := &pb.ProMagicAttachResponse{
-			Type: *pb.MagicAttachResponseType_UNKOWN_ERROR.Enum(),
+			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
 		}
 		if err := stream.Send(resp); err != nil {
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
 		}
 		return nil
 	}
-
 	// Return the user code
 	userCodeResponse := &pb.ProMagicAttachResponse{
 		Type:     pb.MagicAttachResponseType_USER_CODE,
@@ -104,30 +108,95 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 		return status.Errorf(codes.Internal, fmt.Sprintf("failed to send user code response: %v", err))
 	}
 
-	// Wait for magic attach process to complete
-	exe, args = "pro", []string{"api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", response.Data.Attributes.Token)}
-	out, err := exec.CommandContext(stream.Context(), exe, args...).Output()
-	if err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to wait for magic attach: %v", err))
-	}
+	var contractToken *string
+	// Wait process may reset if token expires and a new one is generated
+	for {
+		// Wait for magic attach process to complete
+		exe, args := proExecutable("api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", response.Data.Attributes.Token))
+		//nolint:gosec // TODO: Double check in a review
+		out, exeErr := exec.CommandContext(stream.Context(), exe, args...).Output()
+		if err := json.Unmarshal(out, &response); err != nil {
+			return status.Errorf(codes.Internal, fmt.Sprintf("failed to parse wait response: %v", err))
+		}
 
-	if err := json.Unmarshal(out, &response); err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to parse wait response: %v", err))
-	}
+		if response.Result == "success" {
+			contractToken = response.Data.Attributes.ContractToken
+			break
+		}
 
-	if response.Result != "success" {
-		return status.Errorf(codes.Internal, "magic attach process was not successful")
+		if exeErr != nil {
+			// Check if the code has expired
+			if response.Errors.ContainsCode("magic-attach-token-error") {
+				// Initiate magic attach process
+				response, err := s.initiateMagicAttach(stream.Context())
+
+				if err != nil {
+					// Check if it was a connectivity error
+					if response.Errors.ContainsCode("connectivity-error") {
+						resp := &pb.ProMagicAttachResponse{
+							Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+						}
+						if err := stream.Send(resp); err != nil {
+							return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
+						}
+						return nil
+					}
+
+					// If not a connectivity error, return unknown error
+					resp := &pb.ProMagicAttachResponse{
+						Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+					}
+					if err := stream.Send(resp); err != nil {
+						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+					}
+					return nil
+				}
+				// Return the user code
+				userCodeRefreshResponse := &pb.ProMagicAttachResponse{
+					Type:     pb.MagicAttachResponseType_REFRESHED_USER_CODE,
+					UserCode: &response.Data.Attributes.UserCode,
+				}
+				if err := stream.Send(userCodeRefreshResponse); err != nil {
+					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send user code response: %v", err))
+				}
+				continue
+			}
+			// Check if it was a connectivity error
+			if response.Errors.ContainsCode("connectivity-error") {
+				resp := &pb.ProMagicAttachResponse{
+					Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+				}
+				if err := stream.Send(resp); err != nil {
+					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
+				}
+				return nil
+			}
+
+			// If not a connectivity error, return unknown error
+			resp := &pb.ProMagicAttachResponse{
+				Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+			}
+			if err := stream.Send(resp); err != nil {
+				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+			}
+			return nil
+		}
 	}
 
 	// Get the contract token
-	contractToken := response.Data.Attributes.ContractToken
 	if contractToken == nil {
 		return status.Errorf(codes.Internal, "contract token not found in response")
 	}
 
 	// Pro attach the token
 	if err := runProAttach(stream.Context(), *contractToken); err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to pro attach: %v", err))
+		resp := &pb.ProMagicAttachResponse{
+			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+		}
+		if err := stream.Send(resp); err != nil {
+			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+		}
+		return nil
 	}
 
 	// Send the final success response
@@ -140,9 +209,32 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Close the stream
 	return nil
-
 }
 
+func (s *Service) initiateMagicAttach(ctx context.Context) (*proAPIResponse, error) {
+	// Initiate magic attach process
+	exe, args := proExecutable("api", "u.pro.attach.magic.initiate.v1")
+	//nolint:gosec // TODO: Double check in a review
+	out, err := exec.CommandContext(ctx, exe, args...).Output()
+	if err != nil {
+		return nil, fmt.Errorf("failed to initiate magic attach: %v\nOutput: %s", err, string(out))
+	}
+
+	// Parse the response
+	var response proAPIResponse
+	if err := json.Unmarshal(out, &response); err != nil {
+		return nil, fmt.Errorf("failed to parse response: %v", err)
+	}
+
+	return &response, nil
+}
+
+// proExecutable returns the full command to run the pro executable with the provided arguments.
+func proExecutable(args ...string) (string, []string) {
+	return "pro", args
+}
+
+// ProAttach attaches a contract token to the system.
 func (s *Service) ProAttach(ctx context.Context, req *wrapperspb.StringValue) (*emptypb.Empty, error) {
 	// Validate request
 	if req == nil || req.Value == "" {
