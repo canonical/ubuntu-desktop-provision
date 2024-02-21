@@ -25,6 +25,7 @@ final storageModelProvider = ChangeNotifierProvider((_) => StorageModel(
       getService<StorageService>(),
       tryGetService<TelemetryService>(),
       getService<ProductService>(),
+      getService<ConfigService>(),
     ));
 
 /// View model for [StoragePage].
@@ -34,11 +35,13 @@ class StorageModel extends SafeChangeNotifier {
     this._storage,
     this._telemetry,
     this._product,
+    this._config,
   );
 
   final StorageService _storage;
   final TelemetryService? _telemetry;
   final ProductService _product;
+  final ConfigService _config;
 
   StorageType? _type;
   var _hasBitLocker = false;
@@ -116,8 +119,9 @@ class StorageModel extends SafeChangeNotifier {
   /// That is, whether a) an existing partition can be safely resized smaller to
   /// make room for the installation, or b) there is a large enough unused gap.
   bool get canInstallAlongside {
-    return _getTargets<GuidedStorageTargetResize>().isNotEmpty ||
-        _getTargets<GuidedStorageTargetUseGap>().isNotEmpty;
+    return (_getTargets<GuidedStorageTargetResize>().isNotEmpty ||
+            _getTargets<GuidedStorageTargetUseGap>().isNotEmpty) &&
+        !isCoreDesktop;
   }
 
   /// Whether erasing the disk is possible i.e. whether any guided reformat
@@ -127,14 +131,20 @@ class StorageModel extends SafeChangeNotifier {
   /// Whether manual partitioning is possible i.e. whether a manual partitioning
   /// target is allowed.
   bool get canManualPartition {
-    return _getTargets<GuidedStorageTargetManual>().isNotEmpty;
+    return _getTargets<GuidedStorageTargetManual>().isNotEmpty &&
+        !isCoreDesktop;
   }
 
   /// Whether any advanced features are available.
   bool get hasAdvancedFeatures => hasLvm || hasZfs || hasTpm;
 
+  ProvisioningMode? _provisioningMode;
+
+  bool get isCoreDesktop => _provisioningMode == ProvisioningMode.coreDesktop;
+
   /// Initializes the model.
   Future<void> init() async {
+    _provisioningMode = await _config.provisioningMode;
     await _storage.init();
     await _storage.getGuidedStorage().then((r) => _targets = r.targets);
     _type ??= canInstallAlongside
