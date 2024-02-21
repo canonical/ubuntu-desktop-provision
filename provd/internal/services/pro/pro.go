@@ -89,9 +89,13 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	}
 
 	// Initiate magic attach process
-	response, exeErr := s.proExecutable.Initiate(stream.Context())
+	response, err := s.proExecutable.Initiate(stream.Context())
 
-	if exeErr != nil {
+	if err != nil {
+		return status.Errorf(codes.Internal, fmt.Sprintf("failed to initiate magic attach: %v", err))
+	}
+
+	if response.Result != "success" {
 		// Check if it was a connectivity error
 		if response.Errors.ContainsCode("connectivity-error") {
 			resp := &pb.ProMagicAttachResponse{
@@ -126,68 +130,74 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	for {
 		// Wait for magic attach process to complete
 		response, err := s.proExecutable.Wait(stream.Context(), response.Data.Attributes.Token)
+		if err != nil {
+			return status.Errorf(codes.Internal, fmt.Sprintf("failed to wait on magic attach: %v", err))
+		}
+
 		if response.Result == "success" {
 			contractToken = response.Data.Attributes.ContractToken
 			break
 		}
 
-		if err != nil {
-			// Check if the code has expired
-			if response.Errors.ContainsCode("magic-attach-token-error") {
-				// Initiate magic attach process
-				response, err := s.proExecutable.Initiate(stream.Context())
+		// Check if the code has expired
+		if response.Errors.ContainsCode("magic-attach-token-error") {
+			// Initiate magic attach process
+			response, err := s.proExecutable.Initiate(stream.Context())
 
-				if err != nil {
-					// Check if it was a connectivity error
-					if response.Errors.ContainsCode("connectivity-error") {
-						resp := &pb.ProMagicAttachResponse{
-							Type: pb.MagicAttachResponseType_NETWORK_ERROR,
-						}
-						if err := stream.Send(resp); err != nil {
-							return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
-						}
-						return nil
-					}
+			if err != nil {
+				return status.Errorf(codes.Internal, fmt.Sprintf("failed to initiate magic attach: %v", err))
+			}
 
-					// If not a connectivity error, return unknown error
+			if response.Result != "success" {
+				// Check if it was a connectivity error
+				if response.Errors.ContainsCode("connectivity-error") {
 					resp := &pb.ProMagicAttachResponse{
-						Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+						Type: pb.MagicAttachResponseType_NETWORK_ERROR,
 					}
 					if err := stream.Send(resp); err != nil {
-						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
 					}
 					return nil
 				}
-				// Return the user code
-				userCodeRefreshResponse := &pb.ProMagicAttachResponse{
-					Type:     pb.MagicAttachResponseType_REFRESHED_USER_CODE,
-					UserCode: &response.Data.Attributes.UserCode,
-				}
-				if err := stream.Send(userCodeRefreshResponse); err != nil {
-					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send user code response: %v", err))
-				}
-				continue
-			}
-			// Check if it was a connectivity error
-			if response.Errors.ContainsCode("connectivity-error") {
+
+				// If not a connectivity error, return unknown error
 				resp := &pb.ProMagicAttachResponse{
-					Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+					Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
 				}
 				if err := stream.Send(resp); err != nil {
-					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
+					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
 				}
 				return nil
 			}
-
-			// If not a connectivity error, return unknown error
+			// Return the user code
+			userCodeRefreshResponse := &pb.ProMagicAttachResponse{
+				Type:     pb.MagicAttachResponseType_REFRESHED_USER_CODE,
+				UserCode: &response.Data.Attributes.UserCode,
+			}
+			if err := stream.Send(userCodeRefreshResponse); err != nil {
+				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send user code response: %v", err))
+			}
+			continue
+		}
+		// Check if it was a connectivity error
+		if response.Errors.ContainsCode("connectivity-error") {
 			resp := &pb.ProMagicAttachResponse{
-				Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+				Type: pb.MagicAttachResponseType_NETWORK_ERROR,
 			}
 			if err := stream.Send(resp); err != nil {
-				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
 			}
 			return nil
 		}
+
+		// If not a connectivity error, return unknown error
+		resp := &pb.ProMagicAttachResponse{
+			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+		}
+		if err := stream.Send(resp); err != nil {
+			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
+		}
+		return nil
 	}
 
 	// Get the contract token
