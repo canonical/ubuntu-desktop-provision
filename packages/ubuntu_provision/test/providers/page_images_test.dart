@@ -56,7 +56,7 @@ void main() {
         final pageImages = PageImages(mockService, fs: mockFs)
           ..svgFileLoader = (file, {colorMapper, theme}) => mockSvgFileLoader;
 
-        await pageImages.preCache(MockBuildContext());
+        await pageImages.preCache();
 
         expect(pageImages.images, isNotEmpty);
         expect(pageImages.images.keys, containsAll(pageNames));
