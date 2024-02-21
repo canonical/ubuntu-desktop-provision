@@ -252,16 +252,13 @@ func (s *Service) ProAttach(ctx context.Context, req *wrapperspb.StringValue) (*
 
 func runProAttach(ctx context.Context, contractToken string) error {
 	// Construct the full path to the pro-attach executable
-	proAttachPath := "/home/matt/dev/go/pro-attach/pro-attach"
+	proAttachPath := "/usr/local/share/sprovd"
 
 	// Run the pro attach command with the contract token
 	out, err := exec.CommandContext(ctx, proAttachPath, contractToken).Output()
 	if err != nil {
 		return fmt.Errorf("failed to run pro attach: %v\nOutput: %s", err, string(out))
 	}
-
-	// Process the output if needed
-	// For example, you might want to check for success or parse the output
 
 	return nil
 }
