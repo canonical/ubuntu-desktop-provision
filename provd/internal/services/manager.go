@@ -137,5 +137,6 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 func (m *Manager) Stop() error {
 	slog.Debug("Closing grpc manager and dbus connection")
 
+	m.gdmService.Close()
 	return m.bus.Close()
 }
