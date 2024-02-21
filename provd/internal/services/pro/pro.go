@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"os/exec"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -14,17 +15,29 @@ import (
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
+type iProExecutable interface {
+	Initiate(ctx context.Context) (*proAPIResponse, error)
+	Wait(ctx context.Context, token string) (*proAPIResponse, error)
+	Attach(ctx context.Context, token string) error
+}
+
+type proExecutable struct{}
+
 // Option is a functional option to set the DBus objects in tests.
 type Option func(*Service) error
 
 // Service is the implementation of the Pro service.
 type Service struct {
 	pb.UnimplementedProServiceServer
+	proExecutable iProExecutable
 }
 
 // New returns a new instance of the Pro service.
 func New(opts ...Option) (*Service, error) {
 	s := &Service{}
+
+	p := &proExecutable{}
+	s.proExecutable = p
 
 	// Applying options, checking for errors in obtaining DBus objects
 	for _, opt := range opts {
@@ -76,7 +89,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	}
 
 	// Initiate magic attach process
-	response, exeErr := s.initiateMagicAttach(stream.Context())
+	response, exeErr := s.proExecutable.Initiate(stream.Context())
 
 	if exeErr != nil {
 		// Check if it was a connectivity error
@@ -112,23 +125,17 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	// Wait process may reset if token expires and a new one is generated
 	for {
 		// Wait for magic attach process to complete
-		exe, args := proExecutable("api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", response.Data.Attributes.Token))
-		//nolint:gosec // TODO: Double check in a review
-		out, exeErr := exec.CommandContext(stream.Context(), exe, args...).Output()
-		if err := json.Unmarshal(out, &response); err != nil {
-			return status.Errorf(codes.Internal, fmt.Sprintf("failed to parse wait response: %v", err))
-		}
-
+		response, err := s.proExecutable.Wait(stream.Context(), response.Data.Attributes.Token)
 		if response.Result == "success" {
 			contractToken = response.Data.Attributes.ContractToken
 			break
 		}
 
-		if exeErr != nil {
+		if err != nil {
 			// Check if the code has expired
 			if response.Errors.ContainsCode("magic-attach-token-error") {
 				// Initiate magic attach process
-				response, err := s.initiateMagicAttach(stream.Context())
+				response, err := s.proExecutable.Initiate(stream.Context())
 
 				if err != nil {
 					// Check if it was a connectivity error
@@ -189,7 +196,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	}
 
 	// Pro attach the token
-	if err := runProAttach(stream.Context(), *contractToken); err != nil {
+	if err := s.proExecutable.Attach(stream.Context(), *contractToken); err != nil {
 		resp := &pb.ProMagicAttachResponse{
 			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
 		}
@@ -211,26 +218,62 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	return nil
 }
 
-func (s *Service) initiateMagicAttach(ctx context.Context) (*proAPIResponse, error) {
+func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
 	// Initiate magic attach process
-	exe, args := proExecutable("api", "u.pro.attach.magic.initiate.v1")
+	exe, args := proCmd("api", "u.pro.attach.magic.initiate.v1")
 	//nolint:gosec // TODO: Double check in a review
 	out, err := exec.CommandContext(ctx, exe, args...).Output()
 	if err != nil {
+		slog.Error(fmt.Sprintf("failed to initiate magic attach: %v\nOutput: %s", err, string(out)))
 		return nil, fmt.Errorf("failed to initiate magic attach: %v\nOutput: %s", err, string(out))
 	}
 
 	// Parse the response
 	var response proAPIResponse
 	if err := json.Unmarshal(out, &response); err != nil {
+		slog.Error(fmt.Sprintf("failed to parse response: %v", err))
 		return nil, fmt.Errorf("failed to parse response: %v", err)
 	}
 
 	return &response, nil
 }
 
-// proExecutable returns the full command to run the pro executable with the provided arguments.
-func proExecutable(args ...string) (string, []string) {
+func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse, error) {
+	// Initiate magic attach process
+	exe, args := proCmd("api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", token))
+	//nolint:gosec // TODO: Double check in a review
+	out, err := exec.CommandContext(ctx, exe, args...).Output()
+	if err != nil {
+		slog.Error(fmt.Sprintf("failed to wait on attach response: %v\nOutput: %s", err, string(out)))
+		return nil, fmt.Errorf("failed to wait on attach response: %v\nOutput: %s", err, string(out))
+	}
+
+	// Parse the response
+	var response proAPIResponse
+	if err := json.Unmarshal(out, &response); err != nil {
+		slog.Error(fmt.Sprintf("failed to parse response: %v", err))
+		return nil, fmt.Errorf("failed to parse response: %v", err)
+	}
+
+	return &response, nil
+}
+
+func (p *proExecutable) Attach(ctx context.Context, token string) error {
+	// Construct the full path to the pro-attach executable
+	proAttachPath := "/usr/local/share/sprovd"
+
+	// Run the pro attach command with the contract token
+	out, err := exec.CommandContext(ctx, proAttachPath, token).Output()
+	if err != nil {
+		slog.Error(fmt.Sprintf("failed to run pro attach: %v\nOutput: %s", err, string(out)))
+		return fmt.Errorf("failed to run pro attach: %v\nOutput: %s", err, string(out))
+	}
+
+	return nil
+}
+
+// proCmd returns the full command to run the pro executable with the provided arguments.
+func proCmd(args ...string) (string, []string) {
 	return "pro", args
 }
 
@@ -242,23 +285,10 @@ func (s *Service) ProAttach(ctx context.Context, req *wrapperspb.StringValue) (*
 	}
 
 	// Pro attach the token
-	if err := runProAttach(ctx, req.Value); err != nil {
+	if err := s.proExecutable.Attach(ctx, req.Value); err != nil {
 		return nil, status.Errorf(codes.Internal, fmt.Sprintf("failed to pro attach: %v", err))
 	}
 
 	// Return an empty response on success
 	return &emptypb.Empty{}, nil
-}
-
-func runProAttach(ctx context.Context, contractToken string) error {
-	// Construct the full path to the pro-attach executable
-	proAttachPath := "/usr/local/share/sprovd"
-
-	// Run the pro attach command with the contract token
-	out, err := exec.CommandContext(ctx, proAttachPath, contractToken).Output()
-	if err != nil {
-		return fmt.Errorf("failed to run pro attach: %v\nOutput: %s", err, string(out))
-	}
-
-	return nil
 }
