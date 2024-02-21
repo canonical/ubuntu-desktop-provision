@@ -136,7 +136,8 @@ class StorageModel extends SafeChangeNotifier {
   }
 
   /// Whether any advanced features are available.
-  bool get hasAdvancedFeatures => (hasLvm || hasZfs || hasTpm) && !isCoreDesktop;
+  bool get hasAdvancedFeatures =>
+      (hasLvm || hasZfs || hasTpm) && !isCoreDesktop;
 
   ProvisioningMode? _provisioningMode;
 
