@@ -26,6 +26,16 @@ jobs:
       - uses: bluefireteam/melos-action@v2
       - run: melos analyze
 
+  consistency-check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Check actual subiquity submodule sha matches expected
+        run: |
+          ci/subiquity_integration
+
   bootstrap:
     runs-on: ubuntu-22.04
     strategy:
