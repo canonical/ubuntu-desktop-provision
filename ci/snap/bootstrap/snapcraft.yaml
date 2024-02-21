@@ -8,8 +8,11 @@ grade: stable
 confinement: classic
 base: core22
 issues: https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug
-contact: https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug
-
+contact: https://github.com/canonical/ubuntu-desktop-provision/issues
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+  
 apps:
   subiquity-server:
     command: bin/subiquity-server
@@ -129,12 +132,17 @@ parts:
       - -lib/systemd/system/*
 
   flutter-git:
+    plugin: nil
     source: .
     override-pull: |
+      # necessary when reruns using the same container
+      if [ -d "flutter" ]; then
+        rm -rf "flutter"
+      fi
+
       craftctl default
       FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
       git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
-    plugin: nil
     override-build: |
       mkdir -p $CRAFT_PART_INSTALL/usr/bin
       mkdir -p $CRAFT_PART_INSTALL/usr/libexec
@@ -155,9 +163,8 @@ parts:
 
   ubuntu-bootstrap:
     after: [flutter-git]
-    source: .
-    source-type: git
     plugin: nil
+    source: .
     build-attributes: [enable-patchelf]
     override-build: |
       set -eux
@@ -169,6 +176,7 @@ parts:
       cp -r snap/local/postinst.d $CRAFT_PART_INSTALL/etc/subiquity
       mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
       cp snap/local/ubuntu-desktop-bootstrap.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      
       dart pub global activate melos
       dart pub global run melos bootstrap
       cd packages/ubuntu_bootstrap

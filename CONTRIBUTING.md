@@ -78,7 +78,27 @@ melos bootstrap
 
 ### Building and running the binaries
 
-TODO
+Both `ubuntu-desktop-bootstrap` and `ubuntu-desktop-init` are built as snaps using `source: .` for their flutter-based ui. This works well in a prestine pipeline because there are no aretfacts, but when running locally, host artefacts may taint the snapcraft builder. Let's walk through how to build locally and address these artefact:
+
+```bash
+git clone git@github.com:canonical/ubuntu-desktop-provision.git
+cd ubuntu-desktop-provision
+./ci/snap-build-setup.sh <bootstrap|init>
+snapcraft
+```
+
+If you then make local edits, subsequent runs of `snapcraft` may fail. Individual situations may differ, but generally you can clear host artefacts and rebuild with:
+
+```base
+flutter clean
+snapcraft clean
+rm -rf packages/subiquity_client/subiquity/.subiquity
+rm -rf snap
+./ci/snap-build-setup.sh <bootstrap|init>
+snapcraft
+```
+
+Finally, install the local build with `sudo snap install <snap-artefact-name> --devmode`.
 
 ### Code Generation
 

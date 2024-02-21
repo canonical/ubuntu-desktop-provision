@@ -6,7 +6,7 @@ description: |
 grade: stable
 confinement: strict
 base: core22
-issues: https://github.com/canonical/ubuntu-desktop-provision/issues
+issues: https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug
 contact: https://github.com/canonical/ubuntu-desktop-provision/issues
 architectures:
   - build-on: amd64
@@ -26,12 +26,17 @@ apps:
 
 parts:
   flutter-git:
+    plugin: nil
     source: .
     override-pull: |
+      # necessary when reruns using the same container
+      if [ -d "flutter" ]; then
+        rm -rf "flutter"
+      fi
+
       craftctl default
       FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
       git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
-    plugin: nil
     override-build: |
       mkdir -p $CRAFT_PART_INSTALL/usr/bin
       mkdir -p $CRAFT_PART_INSTALL/usr/libexec
@@ -52,9 +57,8 @@ parts:
 
   ubuntu-desktop-init:
     after: [flutter-git]
-    source: .
-    source-type: git
     plugin: nil
+    source: .
     override-build: |
       set -eux
       mkdir -p $CRAFT_PART_INSTALL/bin/lib
@@ -65,6 +69,7 @@ parts:
       cd packages/ubuntu_init
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
+      
     stage-packages:
       - libsysmetrics1
       - pciutils
