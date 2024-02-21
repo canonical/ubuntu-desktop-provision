@@ -10,7 +10,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
-import 'package:ubuntu_bootstrap/pages/loading/loading_model.dart';
+import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
@@ -39,7 +39,6 @@ import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
-import 'loading/test_loading.dart';
 import 'refresh/test_refresh.dart';
 import 'rst/test_rst.dart';
 import 'secure_boot/test_secure_boot.dart';
@@ -50,12 +49,12 @@ import 'try_or_install/test_try_or_install.dart';
 
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
+  const loadingTime = Duration(seconds: 1);
 
   setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
 
   testWidgets('try ubuntu', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
-    final loadingModel = buildLoadingModel(delay: const Duration(seconds: 1));
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
@@ -66,7 +65,8 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
-          loadingModelProvider.overrideWith((_) => loadingModel),
+          loadingProvider
+              .overrideWith((_) => Future<void>.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
@@ -74,9 +74,11 @@ void main() {
       ),
     );
 
-    expect(find.byType(LoadingPage), findsOneWidget);
+    final loadingPage = find.byType(LoadingPage);
+    expect(loadingPage, findsOneWidget);
+    final container = ProviderScope.containerOf(tester.element(loadingPage));
     await tester.pump(const Duration(seconds: 1));
-    verify(loadingModel.init()).called(1);
+    await expectLater(container.read(loadingProvider.future), completes);
 
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
@@ -100,7 +102,6 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
-    final loadingModel = buildLoadingModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
@@ -132,7 +133,7 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
-          loadingModelProvider.overrideWith((_) => loadingModel),
+          loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
           rstModelProvider.overrideWith((_) => rstModel),

@@ -15,6 +15,10 @@ final pageImagesProvider =
 final _log = Logger('page_images');
 
 /// Pre-caches and holds images for all pages.
+///
+/// Do note that images that aren't SVG won't be fully precached, since
+/// `precacheImage` requires the `BuildContext`, which we didn't want to pass
+/// in here.
 class PageImages {
   PageImages(this.pageConfigService, {@visibleForTesting FileSystem? fs})
       : _fs = fs ?? const LocalFileSystem();
@@ -49,7 +53,7 @@ class PageImages {
     return isDarkMode(context) ? images[pageName] : images[pageName];
   }
 
-  Future<void> preCache(BuildContext context) async {
+  Future<void> preCache() async {
     final loadFutures = <Future<void>>[];
     pageConfigService.pages.forEach((pageName, config) {
       final imageConfig = config.image;
@@ -61,10 +65,9 @@ class PageImages {
           _loadAsset(
             'packages/ubuntu_provision/$imageConfig',
             pageName,
-            context,
           );
         } else {
-          loadFutures.add(_loadFile(imageConfig, pageName, context));
+          loadFutures.add(_loadFile(imageConfig, pageName));
         }
       } on Exception catch (e) {
         _log.error('Error loading image for $pageName from $imageConfig: $e');
@@ -77,7 +80,6 @@ class PageImages {
   Future<void> _loadFile(
     String imageName,
     String pageName,
-    BuildContext context,
   ) async {
     final imagePath = '${ConfigService.whiteLabelDirectory}images/$imageName';
     final file = _fs.file(imagePath);
@@ -91,13 +93,10 @@ class PageImages {
     if (extension == '.svg') {
       await svg.cache.putIfAbsent(
         imageName,
-        () => svgFileLoader(file).loadBytes(context),
+        () => svgFileLoader(file, theme: const SvgTheme()).loadBytes(null),
       );
       images[pageName] = SvgPicture.file(file);
     } else {
-      if (context.mounted) {
-        await precacheImage(FileImage(file), context);
-      }
       images[pageName] = Image.file(file);
     }
   }
@@ -105,7 +104,6 @@ class PageImages {
   void _loadAsset(
     String imagePath,
     String pageName,
-    BuildContext context,
   ) {
     final packageRegExp = RegExp(r'packages\/(.*?)\/');
     final match = packageRegExp.firstMatch(imagePath);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/loading/loading_model.dart';
+import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
@@ -11,10 +11,7 @@ class LoadingPage extends ConsumerStatefulWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    await Future.wait([
-      ref.read(pageImagesProvider).preCache(context),
-      ref.read(loadingModelProvider).init(),
-    ]);
+    await ref.watch(loadingProvider.future);
     return true;
   }
 
