@@ -1,4 +1,4 @@
-name: Rebase ci/init on main
+name: Rebase ci/bootstrap on main
 
 on:
   push:
@@ -6,13 +6,16 @@ on:
       - main
 
 jobs:
-  rebase:
+  rebase: 
     runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        input: ['init', 'bootstrap']
     steps:
-
     - uses: actions/checkout@v4
       with:
-        ref: ci/init
+        ref: ci/${{ matrix.input }}
+        submodules: recursive
 
     - name: Configure repo for launchpad snap builder
       run: |
@@ -20,14 +23,10 @@ jobs:
         git config --global user.name "GitHub Actions"
 
         git fetch origin main:main
-        git rebase -X theirs main
-        git submodule update --init --recursive
+        git reset --hard main
 
-        mv snap snap.tmp
-        mv snap.tmp/init snap/
-        rm -rf snap.tmp
+        ./ci/snap-build-setup.sh ${{ matrix.input }}
         
-        COMMIT_MSG="ci(init): prep for launchpad snap builder"
         git add -A
-        git commit --amend -m "$COMMIT_MSG" --author="GitHub Actions <github-actions@github.com>"
+        git commit --amend --no-edit # keep original author but set committer to github-actions@github.com
         git push --force-with-lease
