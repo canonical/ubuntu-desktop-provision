@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -161,6 +162,18 @@ void main() {
     verify(model.reboot()).called(1);
 
     await expectLater(windowClosed, completes);
+  });
+
+  testWidgets('core desktop has no continue testing', (tester) async {
+    final model = buildInstallModel(
+        isDone: true, provisioningMode: ProvisioningMode.coreDesktop);
+    await tester.pumpApp((_) => buildPage(model));
+
+    final context = tester.element(find.byType(InstallPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    final continueTestingButton = find.button(l10n.continueTesting);
+    expect(continueTestingButton, findsNothing);
   });
 
   testWidgets('continue testing', (tester) async {

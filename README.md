@@ -24,7 +24,9 @@ The configuration file has the following structure:
 # Options:
 # - standard (default): the common provision flow for Ubuntu Desktop and Flavours
 # - oem: enables the eula page and disables the user creation page during bootstrap
-mode: standard | oem
+# - core-desktop: disables exiting the installer at the end (because there is no
+#   live session), and only allows to reboot
+mode: standard | oem | core-desktop
 
 # (Optional) When set, the light and dark theme is inherited from ubuntu-flutter-plugins and the distro name is set.
 #

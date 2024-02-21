@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_provision/src/services/page_config_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaml/yaml.dart';
 
@@ -38,13 +37,16 @@ pages:
 
 MockConfigService createMockConfigService({
   String config = '',
-  ProvisioningMode mode = ProvisioningMode.standard,
+  ProvisioningMode? mode,
 }) {
   final mock = MockConfigService();
   final yaml = loadYaml(config)?['pages'] as YamlMap?;
-  when(mock.get('mode')).thenAnswer((_) async => mode.name);
+  when(mock.get('mode')).thenAnswer(
+      (_) async => mode != null ? mode.name : ProvisioningMode.standard.name);
   when(mock.get('pages')).thenAnswer(
     (_) async => config == '' ? null : yaml?.toMap(),
   );
+  when(mock.provisioningMode)
+      .thenAnswer((_) async => mode ?? ProvisioningMode.standard);
   return mock;
 }

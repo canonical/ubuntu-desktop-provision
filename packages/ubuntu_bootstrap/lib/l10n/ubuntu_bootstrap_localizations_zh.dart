@@ -513,6 +513,11 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String rebootToConfigure(Object system) {
+    return '**$system** has been copied to the disk';
+  }
+
+  @override
   String restartInto(Object system) {
     return '重启进入 $system';
   }
@@ -521,6 +526,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String restartWarning(Object RELEASE) {
     return '您现在可以继续测试 $RELEASE，但在重新启动计算机之前，您所做的任何更改或保存的文档都不会被保留。';
   }
+
+  @override
+  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
 
   @override
   String get shutdown => '关机';

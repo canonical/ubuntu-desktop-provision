@@ -724,6 +724,13 @@ class MockConfigService extends _i1.Mock implements _i4.ConfigService {
       ) as _i3.FileSystem);
 
   @override
+  _i13.Future<_i4.ProvisioningMode> get provisioningMode => (super.noSuchMethod(
+        Invocation.getter(#provisioningMode),
+        returnValue: _i13.Future<_i4.ProvisioningMode>.value(
+            _i4.ProvisioningMode.standard),
+      ) as _i13.Future<_i4.ProvisioningMode>);
+
+  @override
   _i13.Future<T?> get<T>(
     String? key, {
     String? scopeOverride,

@@ -188,6 +188,9 @@ class _DonePage extends ConsumerWidget {
     final flavor = ref.watch(flavorProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
+    final isCoreDesktop =
+        model.provisioningMode == ProvisioningMode.coreDesktop;
+
     return WizardPage(
       headerPadding: EdgeInsets.zero,
       contentPadding: EdgeInsets.zero,
@@ -206,13 +209,17 @@ class _DonePage extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 MarkdownBody(
-                  data: lang.readyToUse(model.productInfo),
+                  data: isCoreDesktop
+                      ? lang.rebootToConfigure(model.productInfo)
+                      : lang.readyToUse(model.productInfo),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
                 const SizedBox(height: kWizardSpacing * 1.5),
-                Text(lang.restartWarning(flavor.displayName)),
+                Text(isCoreDesktop
+                    ? lang.rebootToConfigureWarning
+                    : lang.restartWarning(flavor.displayName)),
                 const SizedBox(height: kWizardSpacing * 1.5),
                 Row(
                   children: [
@@ -226,12 +233,13 @@ class _DonePage extends ConsumerWidget {
                       ),
                     ),
                     const SizedBox(width: kWizardSpacing),
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: YaruWindow.of(context).close,
-                        child: Text(lang.continueTesting),
+                    if (!isCoreDesktop)
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: YaruWindow.of(context).close,
+                          child: Text(lang.continueTesting),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ],

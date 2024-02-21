@@ -48,6 +48,7 @@ void main() {
 
   testWidgets('fully automated installation', (tester) async {
     registerMockService<SessionService>(MockSessionService());
+    registerMockService<ConfigService>(MockConfigService());
     await tester.pumpWidget(
       tester.buildInstaller(
         state: ApplicationState.RUNNING,

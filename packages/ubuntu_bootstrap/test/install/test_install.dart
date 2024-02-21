@@ -22,6 +22,7 @@ InstallModel buildInstallModel({
   bool? isLogVisible,
   bool? isPlaying,
   ProductInfo? productInfo,
+  ProvisioningMode? provisioningMode,
 }) {
   final model = MockInstallModel();
   when(model.state).thenReturn(state);
@@ -34,6 +35,8 @@ InstallModel buildInstallModel({
   when(model.isPlaying).thenReturn(isPlaying ?? false);
   when(model.productInfo)
       .thenReturn(productInfo ?? ProductInfo(name: 'Ubuntu'));
+  when(model.provisioningMode)
+      .thenReturn(provisioningMode ?? ProvisioningMode.standard);
   return model;
 }
 

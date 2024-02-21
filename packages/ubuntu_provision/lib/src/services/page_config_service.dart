@@ -10,21 +10,6 @@ part 'page_config_service.g.dart';
 final _log = Logger('page');
 const _tryOrInstallName = 'tryOrInstall';
 
-enum ProvisioningMode {
-  standard,
-  oem;
-
-  static ProvisioningMode fromString(String? value) {
-    final lower = value?.toLowerCase();
-    switch (lower) {
-      case 'oem':
-        return ProvisioningMode.oem;
-      default:
-        return ProvisioningMode.standard;
-    }
-  }
-}
-
 class PageConfigService {
   PageConfigService({ConfigService? config, this.includeTryOrInstall = false})
       : _config = config;
@@ -43,7 +28,7 @@ class PageConfigService {
       'pages': await _config!.get<Map<String, dynamic>>('pages') ??
           <String, dynamic>{},
     });
-    mode = ProvisioningMode.fromString(await _config!.get<String>('mode'));
+    mode = await _config!.provisioningMode;
 
     pages.addAll(pageConfig.pages);
 

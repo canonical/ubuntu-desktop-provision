@@ -11,6 +11,24 @@ import 'package:yaml/yaml.dart';
 
 final _log = Logger('config');
 
+enum ProvisioningMode {
+  standard,
+  oem,
+  coreDesktop;
+
+  static ProvisioningMode fromString(String? value) {
+    final lower = value?.toLowerCase();
+    switch (lower) {
+      case 'oem':
+        return ProvisioningMode.oem;
+      case 'core-desktop':
+        return ProvisioningMode.coreDesktop;
+      default:
+        return ProvisioningMode.standard;
+    }
+  }
+}
+
 class ConfigService {
   ConfigService({
     this.scope,
@@ -33,6 +51,10 @@ class ConfigService {
       return _config?[key] as T?;
     }
     return _config?[scopeOverride ?? scope]?[key] as T?;
+  }
+
+  Future<ProvisioningMode> get provisioningMode async {
+    return ProvisioningMode.fromString(await get<String>('mode'));
   }
 
   /// Loads the config file, if none are found on the filesystem by
