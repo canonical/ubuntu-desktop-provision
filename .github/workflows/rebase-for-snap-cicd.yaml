@@ -6,27 +6,27 @@ on:
       - main
 
 jobs:
-  rebase: 
+  rebase:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        input: ['init', 'bootstrap']
+        input: ["init", "bootstrap"]
     steps:
-    - uses: actions/checkout@v4
-      with:
-        ref: ci/${{ matrix.input }}
-        submodules: recursive
+      - uses: actions/checkout@v4
+        with:
+          ref: ci/${{ matrix.input }}
+          submodules: recursive
 
-    - name: Configure repo for launchpad snap builder
-      run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
+      - name: Configure repo for launchpad snap builder
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
 
-        git fetch origin main:main
-        git reset --hard main
+          git fetch origin main:main
+          git reset --hard main
 
-        ./ci/snap-build-setup.sh ${{ matrix.input }}
-        
-        git add -A
-        git commit --amend --no-edit # keep original author but set committer to github-actions@github.com
-        git push --force-with-lease
+          ./ci/snap-build-setup.sh ${{ matrix.input }}
+
+          git add -A
+          git commit --amend --no-edit # keep original author but set committer to github-actions@github.com
+          git push --force-with-lease

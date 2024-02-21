@@ -12,5 +12,3 @@ fi
 snapcraft_artifacts_path="ci/snap/${snap_name}"
 
 cp -r "${snapcraft_artifacts_path}" ./snap
-
-# inside subiquity client 

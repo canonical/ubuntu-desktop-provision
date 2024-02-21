@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# consistency checks between ubuntu-desktop-installer and subiquity
+# consistency checks between ubuntu-desktop-bootstrap and subiquity
 
 import unittest
 import yaml
