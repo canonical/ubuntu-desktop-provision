@@ -17,6 +17,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/emptypb"
+	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 func TestProMagicAttach(t *testing.T) {
@@ -89,6 +90,43 @@ func TestProMagicAttach(t *testing.T) {
 			want := testutils.LoadWithUpdateFromGolden(t, got)
 
 			require.Equal(t, want, got, "response from ProMagicAttach should match expected")
+		})
+	}
+}
+
+func TestProAttach(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		// Failure flags
+		failAttach bool
+	}{
+		// Success cases
+		"Successfully attach machine to pro subscription": {},
+
+		// Error cases
+		"Error when fail to call attach": {failAttach: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			opts := []pro.Option{
+				pro.WithProExecutable(&mockProExecutable{failAttach: tc.failAttach}),
+			}
+
+			client := newProClient(t, opts...)
+
+			_, err := client.ProAttach(context.Background(), &wrapperspb.StringValue{Value: "mock_token"})
+
+			if tc.failAttach {
+				require.Error(t, err, "ProAttach should return an error")
+				return
+			}
+
+			require.NoError(t, err, "ProAttach should not return an error")
 		})
 	}
 }
