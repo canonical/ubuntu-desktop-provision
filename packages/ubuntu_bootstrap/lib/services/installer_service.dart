@@ -32,7 +32,9 @@ class InstallerService {
 
   Future<void> load() async {
     if (_isLoaded) {
-      _log.warning('InstallerService tried to run load a second time');
+      _log.warning(
+        'InstallerService tried to run load a second time, this should not happen.',
+      );
       return;
     }
     _isLoaded = true;
