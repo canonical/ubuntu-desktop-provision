@@ -23,3 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v5
+
+  consistency-check:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Check actual subiquity submodule sha matches expected
+      run: |
+        ./ci/subiquity_integration
+
