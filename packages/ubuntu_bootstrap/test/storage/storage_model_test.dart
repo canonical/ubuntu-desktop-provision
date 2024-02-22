@@ -185,6 +185,40 @@ void main() {
     verify(storage.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
   });
 
+  test('Core Desktop only allows to erase disk, nothing else', () async {
+    final service = MockStorageService();
+    when(service.guidedCapability).thenReturn(null);
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
+
+    final configService = MockConfigService();
+    when(configService.provisioningMode)
+        .thenAnswer((_) async => ProvisioningMode.coreDesktop);
+
+    final model = StorageModel(
+      service,
+      MockTelemetryService(),
+      MockProductService(),
+      configService,
+    );
+
+    // none
+    when(service.getGuidedStorage())
+        .thenAnswer((_) async => fakeGuidedStorageResponse());
+    // reformat
+    const reformat = GuidedStorageTargetReformat(
+      diskId: '',
+      allowed: [GuidedCapability.LVM, GuidedCapability.DIRECT],
+    );
+    when(service.getGuidedStorage()).thenAnswer(
+        (_) async => fakeGuidedStorageResponse(targets: [reformat]));
+    await model.init();
+
+    expect(model.canInstallAlongside, isFalse);
+    expect(model.canEraseDisk, isTrue);
+    expect(model.canManualPartition, isFalse);
+    expect(model.hasAdvancedFeatures, isFalse);
+  });
+
   test('can install alongside, erase disk, manual partition', () async {
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);
