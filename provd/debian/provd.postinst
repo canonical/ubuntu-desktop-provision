@@ -10,6 +10,7 @@ case "$1" in
         fi
 
         chown root:gnome-initial-setup /usr/bin/sprovd
+        chown root:gnome-initial-setup /usr/bin/provd
         chmod u+s /usr/bin/sprovd
         ;;
 esac
