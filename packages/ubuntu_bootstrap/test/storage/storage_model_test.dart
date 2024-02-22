@@ -15,15 +15,10 @@ void main() {
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       service,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
     await model.init();
 
@@ -48,15 +43,10 @@ void main() {
     final service = MockStorageService();
     when(service.existingOS).thenReturn([ubuntu2110, ubuntu2204]);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       service,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
     expect(model.existingOS, equals([ubuntu2110, ubuntu2204]));
   });
@@ -65,15 +55,10 @@ void main() {
     final storage = MockStorageService();
     when(storage.guidedCapability).thenReturn(null);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       storage,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
 
     var wasNotified = false;
@@ -98,15 +83,10 @@ void main() {
     when(product.getProductInfo())
         .thenReturn(const ProductInfo(name: 'Ubuntu', version: '24.04 LTS'));
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       MockStorageService(),
       MockTelemetryService(),
       product,
-      configService,
     );
     expect(model.productInfo.name, 'Ubuntu');
     expect(model.productInfo.version, '24.04 LTS');
@@ -118,16 +98,10 @@ void main() {
     when(storage.guidedCapability).thenReturn(null);
 
     final telemetry = MockTelemetryService();
-
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       storage,
       telemetry,
       MockProductService(),
-      configService,
     );
     verifyNever(telemetry.addMetric('PartitionMethod', any));
 
@@ -167,15 +141,10 @@ void main() {
     when(storage.hasMultipleDisks).thenReturn(false);
     when(storage.guidedCapability).thenReturn(null);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       storage,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
 
     model.guidedCapability = GuidedCapability.LVM;
@@ -185,20 +154,15 @@ void main() {
     verify(storage.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
   });
 
-  test('Core Desktop only allows to erase disk, nothing else', () async {
+  test('DD images only allow to erase disk, nothing else', () async {
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
-
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.coreDesktop);
 
     final model = StorageModel(
       service,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
 
     // none
@@ -207,7 +171,7 @@ void main() {
     // reformat
     const reformat = GuidedStorageTargetReformat(
       diskId: '',
-      allowed: [GuidedCapability.LVM, GuidedCapability.DIRECT],
+      allowed: [GuidedCapability.DD, GuidedCapability.LVM],
     );
     when(service.getGuidedStorage()).thenAnswer(
         (_) async => fakeGuidedStorageResponse(targets: [reformat]));
@@ -224,15 +188,10 @@ void main() {
     when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       service,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
 
     // none
@@ -309,15 +268,10 @@ void main() {
     final service = MockStorageService();
     when(service.resetStorage()).thenAnswer((_) async => []);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       service,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
     await model.resetStorage();
     verify(service.resetStorage()).called(1);
@@ -333,15 +287,10 @@ void main() {
     });
     when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
-    final configService = MockConfigService();
-    when(configService.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-
     final model = StorageModel(
       storage,
       MockTelemetryService(),
       MockProductService(),
-      configService,
     );
 
     when(storage.getGuidedStorage())

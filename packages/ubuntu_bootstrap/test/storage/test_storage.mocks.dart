@@ -141,12 +141,6 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
-  bool get isCoreDesktop => (super.noSuchMethod(
-        Invocation.getter(#isCoreDesktop),
-        returnValue: false,
-      ) as bool);
-
-  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
