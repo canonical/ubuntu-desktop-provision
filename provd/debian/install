@@ -1,3 +1,4 @@
 lib/systemd/system/provd.service lib/systemd/system/
 lib/systemd/system/provd.socket lib/systemd/system/
-sbin/provd usr/sbin/
+usr/bin/provd usr/bin/
+usr/bin/sprovd usr/bin/
