@@ -171,7 +171,12 @@ void main() {
     // reformat
     const reformat = GuidedStorageTargetReformat(
       diskId: '',
-      allowed: [GuidedCapability.DD, GuidedCapability.LVM],
+      allowed: [
+        GuidedCapability.DD,
+        GuidedCapability.LVM,
+        GuidedCapability.CORE_BOOT_ENCRYPTED,
+        GuidedCapability.MANUAL
+      ],
     );
     when(service.getGuidedStorage()).thenAnswer(
         (_) async => fakeGuidedStorageResponse(targets: [reformat]));
