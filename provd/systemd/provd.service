@@ -5,7 +5,7 @@ Requires=provd.socket
 [Service]
 User=gnome-initial-setup
 Group=gnome-initial-setup
-ExecStart=/usr/sbin/provd
+ExecStart=/usr/bin/provd
 Restart=on-failure
 ProtectSystem=strict
 PrivateTmp=true
