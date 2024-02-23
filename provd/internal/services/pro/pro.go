@@ -99,7 +99,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 		// Check if it was a connectivity error
 		if response.Errors.ContainsCode("connectivity-error") {
 			resp := &pb.ProMagicAttachResponse{
-				Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+				Type: pb.ProMagicAttachResponseType_NETWORK_ERROR,
 			}
 			if err := stream.Send(resp); err != nil {
 				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
@@ -109,7 +109,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 		// If not a connectivity error, return unknown error
 		resp := &pb.ProMagicAttachResponse{
-			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+			Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
 		}
 		if err := stream.Send(resp); err != nil {
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
@@ -118,7 +118,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	}
 	// Return the user code
 	userCodeResponse := &pb.ProMagicAttachResponse{
-		Type:     pb.MagicAttachResponseType_USER_CODE,
+		Type:     pb.ProMagicAttachResponseType_USER_CODE,
 		UserCode: &response.Data.Attributes.UserCode,
 	}
 	if err := stream.Send(userCodeResponse); err != nil {
@@ -152,7 +152,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 				// Check if it was a connectivity error
 				if response.Errors.ContainsCode("connectivity-error") {
 					resp := &pb.ProMagicAttachResponse{
-						Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+						Type: pb.ProMagicAttachResponseType_NETWORK_ERROR,
 					}
 					if err := stream.Send(resp); err != nil {
 						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
@@ -162,7 +162,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 				// If not a connectivity error, return unknown error
 				resp := &pb.ProMagicAttachResponse{
-					Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+					Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
 				}
 				if err := stream.Send(resp); err != nil {
 					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
@@ -171,7 +171,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 			}
 			// Return the user code
 			userCodeRefreshResponse := &pb.ProMagicAttachResponse{
-				Type:     pb.MagicAttachResponseType_REFRESHED_USER_CODE,
+				Type:     pb.ProMagicAttachResponseType_REFRESHED_USER_CODE,
 				UserCode: &response.Data.Attributes.UserCode,
 			}
 			if err := stream.Send(userCodeRefreshResponse); err != nil {
@@ -182,7 +182,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 		// Check if it was a connectivity error
 		if response.Errors.ContainsCode("connectivity-error") {
 			resp := &pb.ProMagicAttachResponse{
-				Type: pb.MagicAttachResponseType_NETWORK_ERROR,
+				Type: pb.ProMagicAttachResponseType_NETWORK_ERROR,
 			}
 			if err := stream.Send(resp); err != nil {
 				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
@@ -192,7 +192,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 		// If not a connectivity error, return unknown error
 		resp := &pb.ProMagicAttachResponse{
-			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+			Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
 		}
 		if err := stream.Send(resp); err != nil {
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
@@ -208,7 +208,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 	// Pro attach the token
 	if err := s.proExecutable.Attach(stream.Context(), *contractToken); err != nil {
 		resp := &pb.ProMagicAttachResponse{
-			Type: pb.MagicAttachResponseType_UNKNOWN_ERROR,
+			Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
 		}
 		if err := stream.Send(resp); err != nil {
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
@@ -218,7 +218,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Send the final success response
 	successResponse := &pb.ProMagicAttachResponse{
-		Type: pb.MagicAttachResponseType_SUCCESS,
+		Type: pb.ProMagicAttachResponseType_SUCCESS,
 	}
 	if err := stream.Send(successResponse); err != nil {
 		return status.Errorf(codes.Internal, fmt.Sprintf("failed to send final success response: %v", err))
@@ -229,10 +229,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 }
 
 func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
-	// Initiate magic attach process
-	exe, args := proCmd("api", "u.pro.attach.magic.initiate.v1")
-	//nolint:gosec // TODO: Double check in a review
-	out, err := exec.CommandContext(ctx, exe, args...).Output()
+	out, err := exec.CommandContext(ctx, "pro", "api", "u.pro.attach.magic.initiate.v1").Output()
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to initiate magic attach: %v\nOutput: %s", err, string(out)))
 		return nil, fmt.Errorf("failed to initiate magic attach: %v\nOutput: %s", err, string(out))
@@ -250,9 +247,8 @@ func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
 
 func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse, error) {
 	// Initiate magic attach process
-	exe, args := proCmd("api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", token))
-	//nolint:gosec // TODO: Double check in a review
-	out, err := exec.CommandContext(ctx, exe, args...).Output()
+	// #nosec:G204 // We are in control of the token formatting and this is only the argument.
+	out, err := exec.CommandContext(ctx, "pro", "api", "u.pro.attach.magic.wait.v1", "--args", fmt.Sprintf("magic_token=%s", token)).Output()
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to wait on attach response: %v\nOutput: %s", err, string(out)))
 		return nil, fmt.Errorf("failed to wait on attach response: %v\nOutput: %s", err, string(out))
@@ -270,7 +266,7 @@ func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse
 
 func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	// Construct the full path to the pro-attach executable
-	proAttachPath := "/usr/local/share/sprovd"
+	proAttachPath := "/usr/libexec/provd/sprovd"
 
 	// Run the pro attach command with the contract token
 	out, err := exec.CommandContext(ctx, proAttachPath, token).Output()
@@ -280,11 +276,6 @@ func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	}
 
 	return nil
-}
-
-// proCmd returns the full command to run the pro executable with the provided arguments.
-func proCmd(args ...string) (string, []string) {
-	return "pro", args
 }
 
 // ProAttach attaches a contract token to the system.
