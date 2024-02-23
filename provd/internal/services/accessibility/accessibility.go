@@ -2,19 +2,38 @@
 package accessibility
 
 import (
+	"context"
+
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/linuxdeepin/go-gir/gio-2.0"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 // GSettingsSubset is a minimal subset of the GSettings interface to make for easier mocking.
 type GSettingsSubset interface {
 	IsWritable(key string) bool
-	SetBoolean(key string, value bool) bool
-	GetBoolean(key string) bool
-	SetDouble(key string, value float64) bool
-	GetDouble(key string) float64
+	booleanSetter
+	booleanGetter
+	doubleSetter
+	doubleGetter
+}
+
+type booleanSetter interface {
+	SetBoolean(string, bool) bool
+}
+
+type booleanGetter interface {
+	GetBoolean(string) bool
+}
+
+type doubleSetter interface {
+	SetDouble(string, float64) bool
+}
+
+type doubleGetter interface {
+	GetDouble(string) float64
 }
 
 // Service is the implementation of the Keyboard service.
@@ -75,4 +94,30 @@ func New(opts ...Option) (*Service, error) {
 	}
 
 	return s, nil
+}
+
+func setBooleanSettings(ctx context.Context, boolSettings booleanSetter, key string, enabled bool, errorFmt string) (*emptypb.Empty, error) {
+	success := boolSettings.SetBoolean(key, enabled)
+	if !success {
+		return nil, status.Errorf(codes.Internal, errorFmt, enabled)
+	}
+
+	return &emptypb.Empty{}, nil
+}
+
+func getBooleanSettings(boolSettings booleanGetter, key string) bool {
+	return boolSettings.GetBoolean(key)
+}
+
+func setDoubleSettings(ctx context.Context, doubleSettings doubleSetter, key string, value float64, errorFmt string) (*emptypb.Empty, error) {
+	success := doubleSettings.SetDouble(key, value)
+	if !success {
+		return nil, status.Errorf(codes.Internal, errorFmt, value)
+	}
+
+	return &emptypb.Empty{}, nil
+}
+
+func getDoubleSettings(doubleSettings doubleGetter, key string) float64 {
+	return doubleSettings.GetDouble(key)
 }
