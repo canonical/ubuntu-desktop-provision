@@ -38,6 +38,9 @@ func TestProMagicAttach(t *testing.T) {
 		// Network error flags
 		networkErrorInitiate bool
 		networkErrorWait     bool
+
+		// Already attached flag
+		alreadyAttached bool
 	}{
 		// Success cases
 		"Successfully attach machine to pro subscription":             {},
@@ -224,6 +227,8 @@ type mockProExecutable struct {
 
 	networkErrorWait     bool
 	networkErrorInitiate bool
+
+	alreadyAttached bool
 }
 
 func (m *mockProExecutable) Initiate(ctx context.Context) (*pro.ProAPIResponse, error) {
