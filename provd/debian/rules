@@ -24,9 +24,10 @@ override_dh_auto_install:
 	cp -a systemd/*.service debian/tmp/lib/systemd/system/
 	cp -a systemd/*.socket debian/tmp/lib/systemd/system/
 
+	# Manually copy 99-pro-attach file into tmp
+	mkdir -p debian/tmp/etc/sudoers.d
+	cp -a debian/etc/sudoers.d/99-pro-attach debian/tmp/etc/sudoers.d/
+
 	# Move provd binary to /usr/bin
 	mkdir -p debian/tmp/usr/bin
 	mv debian/provd/usr/bin/* debian/tmp/usr/bin/
-
-	# Compile and install sprovd manually
-	go build -o debian/tmp/usr/bin/sprovd ./sprovd/sprovd.go

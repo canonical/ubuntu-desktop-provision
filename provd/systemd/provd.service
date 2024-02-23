@@ -7,12 +7,4 @@ User=gnome-initial-setup
 Group=gnome-initial-setup
 ExecStart=/usr/bin/provd
 Restart=on-failure
-ProtectSystem=strict
-PrivateTmp=true
-PrivateDevices=true
-ProtectKernelTunables=true
-ProtectKernelModules=true
-ProtectControlGroups=true
-ProtectProc=invisible
-RestrictRealtime=true
-RestrictSUIDSGID=yes
+
