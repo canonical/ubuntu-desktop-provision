@@ -12,7 +12,7 @@ service ProService {
     rpc ProAttach(google.protobuf.StringValue) returns (google.protobuf.Empty);
 }
 
-enum MagicAttachResponseType {
+enum ProMagicAttachResponseType {
     USER_CODE = 0;
     REFRESHED_USER_CODE = 1;
     SUCCESS = 2;
@@ -22,6 +22,6 @@ enum MagicAttachResponseType {
 }
 
 message ProMagicAttachResponse {
-    MagicAttachResponseType type = 1;
+    ProMagicAttachResponseType type = 1;
     optional string userCode = 2;
 }
