@@ -7,8 +7,6 @@ import (
 	"fmt"
 	"log/slog"
 	"os/exec"
-	"regexp"
-	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
@@ -223,13 +221,8 @@ func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse
 var tokenPattern = regexp.MustCompile(`^[A-Za-z0-9]{29,32}$`)
 		
 func (p *proExecutable) Attach(ctx context.Context, token string) error {
-	// Validate the token against the pattern
-	if !tokenPattern.MatchString(token) {
-		return fmt.Errorf("invalid token format")
-	}
-
-	// Use proCmd to construct the command for "pro attach"
-	exe, args := sudoProCmd("attach", token)
+	// Construct the full path to the pro-attach executable
+	proAttachPath := "/usr/local/share/sprovd"
 
 	// Run the pro attach command with the contract token
 	out, err := exec.CommandContext(ctx, proAttachPath, token).CombinedOutput()

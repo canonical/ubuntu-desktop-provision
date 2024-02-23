@@ -38,9 +38,6 @@ func TestProMagicAttach(t *testing.T) {
 		// Network error flags
 		networkErrorInitiate bool
 		networkErrorWait     bool
-
-		// Already attached flag
-		alreadyAttached bool
 	}{
 		// Success cases
 		"Successfully attach machine to pro subscription":             {},
@@ -63,7 +60,7 @@ func TestProMagicAttach(t *testing.T) {
 
 			// Prepare mocks
 			opts := []pro.Option{
-				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate, alreadyAttached: tc.alreadyAttached}),
+				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate}),
 			}
 
 			// Setup test
@@ -227,8 +224,6 @@ type mockProExecutable struct {
 
 	networkErrorWait     bool
 	networkErrorInitiate bool
-
-	alreadyAttached bool
 }
 
 func (m *mockProExecutable) Initiate(ctx context.Context) (*pro.ProAPIResponse, error) {
@@ -326,9 +321,6 @@ func (m *mockProExecutable) Wait(ctx context.Context, token string) (*pro.ProAPI
 func (m *mockProExecutable) Attach(ctx context.Context, token string) error {
 	if m.failAttach {
 		return errors.New("attach failed")
-	}
-	if m.alreadyAttached {
-		return errors.New("already attached")
 	}
 	return nil
 }
