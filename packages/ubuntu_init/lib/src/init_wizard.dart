@@ -35,9 +35,9 @@ class InitWizard extends ConsumerWidget {
         // TODO(Lukas): Replace this with a loader page
         _initialPageName: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
-          onLoad: (_) async {
+          onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => true);
+            return ref.read(initModelProvider).init().then((_) => null);
           },
         ),
         ...routes,
@@ -107,9 +107,9 @@ class WelcomeWizard extends ConsumerWidget {
         // TODO(Lukas): Replace this with a loader page
         _initialPageName: WizardRoute(
           builder: (_) => const SizedBox.shrink(),
-          onLoad: (_) async {
+          onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => true);
+            return ref.read(initModelProvider).init().then((_) => null);
           },
         ),
         ...routes,
