@@ -2,13 +2,11 @@ name: ubuntu-desktop-bootstrap
 version: git
 summary: Ubuntu Desktop Bootstrap
 description: |
-  This project is a modern implementation of the Ubuntu Desktop installer,
-  using subiquity as a backend and Flutter for the UI.
+  A modern implementation of the Ubuntu Desktop installer.
+  It comprises a Flutter-based UI and uses subiquity as the backend.
 grade: stable
 confinement: classic
 base: core22
-issues: https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug
-contact: https://github.com/canonical/ubuntu-desktop-provision/issues
 architectures:
   - build-on: amd64
   - build-on: arm64

@@ -2,12 +2,11 @@ name: ubuntu-desktop-init
 version: git
 summary: Ubuntu Desktop Init
 description: |
-  Ubuntu Desktop Init description.
+  A first boot initialisation wizard for new Ubuntu and variants.
+  It comprises a Flutter-based UI and a go backend packaged separately as a deb.
 grade: stable
 confinement: strict
 base: core22
-issues: https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug
-contact: https://github.com/canonical/ubuntu-desktop-provision/issues
 architectures:
   - build-on: amd64
   - build-on: arm64
