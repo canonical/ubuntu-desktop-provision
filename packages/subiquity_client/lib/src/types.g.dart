@@ -528,7 +528,7 @@ const _$GuidedCapabilityEnumMap = {
   GuidedCapability.LVM: 'LVM',
   GuidedCapability.LVM_LUKS: 'LVM_LUKS',
   GuidedCapability.ZFS: 'ZFS',
-  GuidedCapability.ZFS_LUKS: 'ZFS_LUKS',
+  GuidedCapability.ZFS_LUKS_KEYSTORE: 'ZFS_LUKS_KEYSTORE',
   GuidedCapability.CORE_BOOT_ENCRYPTED: 'CORE_BOOT_ENCRYPTED',
   GuidedCapability.CORE_BOOT_UNENCRYPTED: 'CORE_BOOT_UNENCRYPTED',
   GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED: 'CORE_BOOT_PREFER_ENCRYPTED',
