@@ -1,1 +1,0 @@
-gnome-initial-setup ALL=(ALL) NOPASSWD: /usr/bin/pro attach *

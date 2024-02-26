@@ -9,15 +9,9 @@ case "$1" in
             addgroup --system gnome-initial-setup
         fi
 
-        # Ensure the gnome-initial-setup user is in the gnome-initial-setup group
-        if ! getent group gnome-initial-setup | grep -q "\bgnome-initial-setup\b"; then
-            adduser gnome-initial-setup gnome-initial-setup
-        fi
-
-        # Create the necessary directories with correct ownership and permissions
-        mkdir -p /run/gnome-initial-setup/.cache
-        chown -R gnome-initial-setup:gnome-initial-setup /run/gnome-initial-setup
-        chmod -R 755 /run/gnome-initial-setup
+        chown root:gnome-initial-setup /usr/bin/sprovd
+        chown root:gnome-initial-setup /usr/bin/provd
+        chmod u+s /usr/bin/sprovd
         ;;
 esac
 
