@@ -61,7 +61,6 @@ func TestEnableMouseKeys(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
@@ -109,7 +108,6 @@ func TestDisableMouseKeys(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
