@@ -322,6 +322,9 @@ func (m *mockProExecutable) Attach(ctx context.Context, token string) error {
 	if m.failAttach {
 		return errors.New("attach failed")
 	}
+	if m.alreadyAttached {
+		return errors.New("already attached")
+	}
 	return nil
 }
 

@@ -14,12 +14,12 @@ func (s *Service) GetScreenKeyboard(ctx context.Context, req *emptypb.Empty) (*w
 
 // EnableScreenKeyboard enables the screen keyboard.
 func (s *Service) EnableScreenKeyboard(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.applicationSettings, "screen-keyboard-enabled", true, "failed to enable screen keyboard: %v")
+	return setBooleanSettings(s.applicationSettings, "screen-keyboard-enabled", true, "failed to enable screen keyboard: %v")
 }
 
 // DisableScreenKeyboard disables the screen keyboard.
 func (s *Service) DisableScreenKeyboard(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.applicationSettings, "screen-keyboard-enabled", false, "failed to disable screen keyboard: %v")
+	return setBooleanSettings(s.applicationSettings, "screen-keyboard-enabled", false, "failed to disable screen keyboard: %v")
 }
 
 // GetStickyKeys returns the current state of sticky keys.
@@ -29,12 +29,12 @@ func (s *Service) GetStickyKeys(ctx context.Context, req *emptypb.Empty) (*wrapp
 
 // EnableStickyKeys enables sticky keys.
 func (s *Service) EnableStickyKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.keyboardSettings, "stickykeys-enable", true, "failed to enable sticky keys: %v")
+	return setBooleanSettings(s.keyboardSettings, "stickykeys-enable", true, "failed to enable sticky keys: %v")
 }
 
 // DisableStickyKeys disables sticky keys.
 func (s *Service) DisableStickyKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.keyboardSettings, "stickykeys-enable", false, "failed to disable sticky keys: %v")
+	return setBooleanSettings(s.keyboardSettings, "stickykeys-enable", false, "failed to disable sticky keys: %v")
 }
 
 // GetSlowKeys returns the current state of slow keys.
@@ -44,10 +44,10 @@ func (s *Service) GetSlowKeys(ctx context.Context, req *emptypb.Empty) (*wrapper
 
 // EnableSlowKeys enables slow keys.
 func (s *Service) EnableSlowKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.keyboardSettings, "slowkeys-enable", true, "failed to enable slow keys: %v")
+	return setBooleanSettings(s.keyboardSettings, "slowkeys-enable", true, "failed to enable slow keys: %v")
 }
 
 // DisableSlowKeys disables slow keys.
 func (s *Service) DisableSlowKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(ctx, s.keyboardSettings, "slowkeys-enable", false, "failed to disable slow keys: %v")
+	return setBooleanSettings(s.keyboardSettings, "slowkeys-enable", false, "failed to disable slow keys: %v")
 }

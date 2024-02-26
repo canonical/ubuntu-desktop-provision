@@ -9,9 +9,14 @@ case "$1" in
             addgroup --system gnome-initial-setup
         fi
 
-        chown root:gnome-initial-setup /usr/bin/sprovd
+        chown root:gnome-initial-setup /usr/libexec/sprovd
         chown root:gnome-initial-setup /usr/bin/provd
-        chmod u+s /usr/bin/sprovd
+        chmod u+s /usr/libexec/sprovd
+        
+        # Create the necessary directories with correct ownership and permissions
+        mkdir -p /run/gnome-initial-setup/.cache
+        chown -R gnome-initial-setup:gnome-initial-setup /run/gnome-initial-setup
+        chmod -R 755 /run/gnome-initial-setup
         ;;
 esac
 

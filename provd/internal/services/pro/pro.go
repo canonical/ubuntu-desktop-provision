@@ -222,7 +222,7 @@ var tokenPattern = regexp.MustCompile(`^[A-Za-z0-9]{29,32}$`)
 		
 func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	// Construct the full path to the pro-attach executable
-	proAttachPath := "/usr/local/share/sprovd"
+	proAttachPath := "/usr/libexec/sprovd"
 
 	// Run the pro attach command with the contract token
 	out, err := exec.CommandContext(ctx, proAttachPath, token).CombinedOutput()

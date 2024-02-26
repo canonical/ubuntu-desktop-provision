@@ -25,12 +25,12 @@ const (
 type ProMagicAttachResponseType int32
 
 const (
-	MagicAttachResponseType_USER_CODE                  MagicAttachResponseType = 0
-	MagicAttachResponseType_REFRESHED_USER_CODE        MagicAttachResponseType = 1
-	MagicAttachResponseType_SUCCESS                    MagicAttachResponseType = 2
-	MagicAttachResponseType_NETWORK_ERROR              MagicAttachResponseType = 3
-	MagicAttachResponseType_SUBSCRIPTION_LIMIT_REACHED MagicAttachResponseType = 4
-	MagicAttachResponseType_UNKNOWN_ERROR              MagicAttachResponseType = 5
+	ProMagicAttachResponseType_USER_CODE                  ProMagicAttachResponseType = 0
+	ProMagicAttachResponseType_REFRESHED_USER_CODE        ProMagicAttachResponseType = 1
+	ProMagicAttachResponseType_SUCCESS                    ProMagicAttachResponseType = 2
+	ProMagicAttachResponseType_NETWORK_ERROR              ProMagicAttachResponseType = 3
+	ProMagicAttachResponseType_SUBSCRIPTION_LIMIT_REACHED ProMagicAttachResponseType = 4
+	ProMagicAttachResponseType_UNKNOWN_ERROR              ProMagicAttachResponseType = 5
 )
 
 // Enum value maps for ProMagicAttachResponseType.
