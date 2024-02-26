@@ -9,11 +9,21 @@ accessibility.AccessibilityService:
         - name: DisableVisualAlerts
           isclientstream: false
           isserverstream: false
-        - name: DisableScreenKeyboard
+        - name: EnableSlowKeys
           isclientstream: false
           isserverstream: false
         - name: DisableMouseKeys
           isclientstream: false
+          isserverstream: false
+        - name: DisableLargeText
+          isclientstream: false
+          isserverstream: false
+        - name: EnableDesktopZoom
+          isclientstream: false
+          isserverstream: false
+        - name: GetMouseKeys
+          isclientstream: false
+
           isserverstream: false
         - name: DisableDesktopZoom
           isclientstream: false
@@ -87,7 +97,7 @@ accessibility.AccessibilityService:
         - name: GetVisualAlerts
           isclientstream: false
           isserverstream: false
-        - name: EnableScreenKeyboard
+        - name: DisableVisualAlerts
           isclientstream: false
           isserverstream: false
     metadata: protos/accessibility.proto
