@@ -161,7 +161,7 @@ func startPrivateDbusServer() (string, string, func()) {
 	if err != nil {
 		log.Fatalf("Setup: can't create dbus system directory: %v", err)
 	}
-	slog.Info(fmt.Sprintf("Created directory for private dbus: %s", privateBusDir))
+	slog.Debug(fmt.Sprintf("Created directory for private dbus: %s", privateBusDir))
 	config := filepath.Join(privateBusDir, "dbus.config")
 	err = os.WriteFile(config, []byte(`<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
@@ -206,7 +206,7 @@ func startPrivateDbusServer() (string, string, func()) {
 		if err := os.RemoveAll(filepath.Dir(config)); err != nil {
 			log.Fatalf("couldn't remove dbus configuration directory: %v", err)
 		}
-		slog.Info("Removed dbus configuration directory")
+		slog.Debug("Removed dbus configuration directory")
 	}
 }
 
@@ -218,6 +218,6 @@ func CleanupPrivateBuses() {
 		if err := os.RemoveAll(bus.tempDir); err != nil {
 			log.Fatalf("couldn't remove dbus configuration directory: %v", err)
 		}
-		slog.Info(fmt.Sprintf("Removed directory for private dbus: %s", bus.tempDir))
+		slog.Debug(fmt.Sprintf("Removed directory for private dbus: %s", bus.tempDir))
 	}
 }
