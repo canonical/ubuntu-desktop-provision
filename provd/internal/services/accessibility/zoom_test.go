@@ -21,8 +21,8 @@ func TestGetDesktopZoom(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return desktop zoom is disabled":              {},
-		"Return desktop zoom is enabled": {wantTrue: true},
+		"Return desktop zoom is disabled": {},
+		"Return desktop zoom is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unablet to get state of desktop zoom": {getBooleanError: true},

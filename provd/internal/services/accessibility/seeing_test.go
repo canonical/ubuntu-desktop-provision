@@ -21,8 +21,8 @@ func TestGetHighContrast(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return high contrast is disabled":              {},
-		"Return high contrast is enabled": {wantTrue: true},
+		"Return high contrast is disabled": {},
+		"Return high contrast is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when can't get state of high contrast": {getBooleanError: true},
@@ -40,7 +40,7 @@ func TestGetHighContrast(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, respErr := client.GetHighContrast(context.Background(), req)
@@ -86,7 +86,7 @@ func TestEnableHighContrast(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, respErr := client.EnableHighContrast(context.Background(), req)
@@ -136,7 +136,7 @@ func TestDisableHighContrast(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, respErr := client.DisableHighContrast(context.Background(), req)
@@ -159,7 +159,6 @@ func TestDisableHighContrast(t *testing.T) {
 	}
 }
 
-
 func TestGetReducedMotion(t *testing.T) {
 	t.Parallel()
 
@@ -172,8 +171,8 @@ func TestGetReducedMotion(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return reduced motion is disabled":               {},
-		"Return reduced motion is enabled": {wantTrue: true},
+		"Return reduced motion is disabled": {},
+		"Return reduced motion is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unable to get state of reduced motion": {getBooleanError: true, wantTrue: true},
@@ -191,7 +190,7 @@ func TestGetReducedMotion(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, respErr := client.GetReducedMotion(context.Background(), req)
@@ -206,56 +205,6 @@ func TestGetReducedMotion(t *testing.T) {
 
 			got := resp.GetValue()
 			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
-		})
-	}
-}
-
-func TestDisableReducedMotion(t *testing.T) {
-	t.Parallel()
-
-	tests := map[string]struct {
-		setBooleanError bool
-
-		want    bool
-		wantErr bool
-	}{
-		// Success case
-		"Disable reduced motion": {want: false},
-
-		// Error cases
-		"Error when unable to update state of reduced motion": {setBooleanError: true, wantErr: true},
-	}
-
-	for name, tc := range tests {
-		tc := tc
-		t.Run(name, func(t *testing.T) {
-			t.Parallel()
-
-			// Prepare mocks
-			opts := []accessibility.Option{
-				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
-			}
-
-			// Setup test
-			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
-
-			// Get function under test output
-			resp, err := client.DisableReducedMotion(context.Background(), req)
-
-			if tc.wantErr {
-				require.Error(t, err, "DisableReducedMotion should return an error")
-				require.Empty(t, resp, "DisableReducedMotion should return a nil response")
-				return
-			}
-			require.NoError(t, err, "DisableReducedMotion should not return an error")
-
-			r, err := client.GetReducedMotion(context.Background(), &emptypb.Empty{})
-			require.NoError(t, err, "GetReducedMotion should not return an error")
-
-			got := r.Value
-			want := tc.want
 			require.Equal(t, want, got, "returned an unexpected response")
 		})
 	}
@@ -289,7 +238,7 @@ func TestEnableReducedMotion(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, respErr := client.EnableReducedMotion(context.Background(), req)
@@ -301,6 +250,56 @@ func TestEnableReducedMotion(t *testing.T) {
 				return
 			}
 			require.NoError(t, respErr, "EnableReducedMotion should not return an error")
+
+			r, err := client.GetReducedMotion(context.Background(), &emptypb.Empty{})
+			require.NoError(t, err, "GetReducedMotion should not return an error")
+
+			got := r.Value
+			want := tc.want
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
+func TestDisableReducedMotion(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		setBooleanError bool
+
+		want    bool
+		wantErr bool
+	}{
+		// Success case
+		"Disable reduced motion": {want: false},
+
+		// Error cases
+		"Error when unable to update state of reduced motion": {setBooleanError: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Prepare mocks
+			opts := []accessibility.Option{
+				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := &emptypb.Empty{}
+
+			// Get function under test output
+			resp, err := client.DisableReducedMotion(context.Background(), req)
+
+			if tc.wantErr {
+				require.Error(t, err, "DisableReducedMotion should return an error")
+				require.Empty(t, resp, "DisableReducedMotion should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableReducedMotion should not return an error")
 
 			r, err := client.GetReducedMotion(context.Background(), &emptypb.Empty{})
 			require.NoError(t, err, "GetReducedMotion should not return an error")
@@ -324,8 +323,8 @@ func TestGetLargeText(t *testing.T) {
 		wantErr  bool
 	}{
 		// Success case
-		"Returns large text is disabled":     {},
-		"Returns large text is enabled": {wantTrue: true},
+		"Returns large text is disabled": {},
+		"Returns large text is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unable to get state of large text": {getDoubleError: true},
@@ -336,7 +335,7 @@ func TestGetLargeText(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
-			var wantedDouble float64 = 1.0
+			wantedDouble := 1.0
 			if tc.wantTrue {
 				wantedDouble = 1.25
 			}
@@ -348,7 +347,7 @@ func TestGetLargeText(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.GetLargeText(context.Background(), req)
@@ -395,7 +394,7 @@ func TestEnableLargeText(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.EnableLargeText(context.Background(), req)
@@ -446,7 +445,7 @@ func TestDisableLargeText(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.DisableLargeText(context.Background(), req)
@@ -481,8 +480,8 @@ func TestGetScreenReader(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return screen reader is disabled":              {},
-		"Return screen reader is enabled": {wantTrue: true},
+		"Return screen reader is disabled": {},
+		"Return screen reader is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unable to get state of screen reader": {getBooleanError: true},
@@ -500,7 +499,7 @@ func TestGetScreenReader(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.GetScreenReader(context.Background(), req)
@@ -548,7 +547,7 @@ func TestEnableScreenReader(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.EnableScreenReader(context.Background(), req)
@@ -599,7 +598,7 @@ func TestDisableScreenReader(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.DisableScreenReader(context.Background(), req)

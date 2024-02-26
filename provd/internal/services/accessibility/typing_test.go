@@ -21,8 +21,8 @@ func TestGetScreenKeyboard(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return screen keyboard is disabled":              {},
-		"Return screen keyboard is enabled": {wantTrue: true},
+		"Return screen keyboard is disabled": {},
+		"Return screen keyboard is enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error unable state of screen keyboard": {getBooleanError: true},
@@ -40,7 +40,7 @@ func TestGetScreenKeyboard(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.GetScreenKeyboard(context.Background(), req)
@@ -88,7 +88,7 @@ func TestEnableScreenKeyboard(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.EnableScreenKeyboard(context.Background(), req)
@@ -138,7 +138,7 @@ func TestDisableScreenKeyboard(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.DisableScreenKeyboard(context.Background(), req)
@@ -173,8 +173,8 @@ func TestGetStickyKeys(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return sticky keys are disabled":              {},
-		"Return sticky keys are enabled": {wantTrue: true},
+		"Return sticky keys are disabled": {},
+		"Return sticky keys are enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unable to get state of sticky keys": {getBooleanError: true},
@@ -192,7 +192,7 @@ func TestGetStickyKeys(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.GetStickyKeys(context.Background(), req)
@@ -239,8 +239,8 @@ func TestEnableStickyKeys(t *testing.T) {
 			}
 
 			// Setup test
-            client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			client := newAccessibilityClient(t, opts...)
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.EnableStickyKeys(context.Background(), req)
@@ -290,8 +290,8 @@ func TestDisableStickyKeys(t *testing.T) {
 			}
 
 			// Setup test
-            client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			client := newAccessibilityClient(t, opts...)
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.DisableStickyKeys(context.Background(), req)
@@ -326,8 +326,8 @@ func TestGetSlowKeys(t *testing.T) {
 		wantTrue bool
 	}{
 		// Success case
-		"Return slow keys are disabled":              {},
-		"Return slow keys are enabled": {wantTrue: true},
+		"Return slow keys are disabled": {},
+		"Return slow keys are enabled":  {wantTrue: true},
 
 		// Error cases
 		"Error when unablet to get state of slow keys": {getBooleanError: true},
@@ -345,7 +345,7 @@ func TestGetSlowKeys(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.GetSlowKeys(context.Background(), req)
@@ -392,7 +392,7 @@ func TestEnableSlowKeys(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.EnableSlowKeys(context.Background(), req)
@@ -442,7 +442,7 @@ func TestDisableSlowKeys(t *testing.T) {
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			// Get function under test output
 			resp, err := client.DisableSlowKeys(context.Background(), req)

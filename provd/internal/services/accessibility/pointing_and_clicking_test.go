@@ -14,7 +14,6 @@ func TestGetMouseKeys(t *testing.T) {
 
 	tests := map[string]struct {
 		// Error flags
-		emptyRequest    bool
 		getBooleanError bool
 
 		// Wants

@@ -2,8 +2,6 @@
 package accessibility
 
 import (
-	"context"
-
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/linuxdeepin/go-gir/gio-2.0"
 	"google.golang.org/grpc/codes"
@@ -96,7 +94,7 @@ func New(opts ...Option) (*Service, error) {
 	return s, nil
 }
 
-func setBooleanSettings(ctx context.Context, boolSettings booleanSetter, key string, enabled bool, errorFmt string) (*emptypb.Empty, error) {
+func setBooleanSettings(boolSettings booleanSetter, key string, enabled bool, errorFmt string) (*emptypb.Empty, error) {
 	success := boolSettings.SetBoolean(key, enabled)
 	if !success {
 		return nil, status.Errorf(codes.Internal, errorFmt, enabled)
@@ -109,7 +107,7 @@ func getBooleanSettings(boolSettings booleanGetter, key string) bool {
 	return boolSettings.GetBoolean(key)
 }
 
-func setDoubleSettings(ctx context.Context, doubleSettings doubleSetter, key string, value float64, errorFmt string) (*emptypb.Empty, error) {
+func setDoubleSettings(doubleSettings doubleSetter, key string, value float64, errorFmt string) (*emptypb.Empty, error) {
 	success := doubleSettings.SetDouble(key, value)
 	if !success {
 		return nil, status.Errorf(codes.Internal, errorFmt, value)
