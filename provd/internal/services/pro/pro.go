@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os/exec"
+	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"google.golang.org/grpc/codes"
@@ -207,8 +208,15 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Pro attach the token
 	if err := s.proExecutable.Attach(stream.Context(), *contractToken); err != nil {
-		resp := &pb.ProMagicAttachResponse{
-			Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
+		var resp *pb.ProMagicAttachResponse
+		if strings.Contains(err.Error(), "failed to run pro attach") {
+			resp = &pb.ProMagicAttachResponse{
+				Type: pb.ProMagicAttachResponseType_ALREADY_ATTACHED,
+			}
+		} else {
+			resp = &pb.ProMagicAttachResponse{
+				Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
+			}
 		}
 		if err := stream.Send(resp); err != nil {
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
@@ -218,6 +226,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 
 	// Send the final success response
 	successResponse := &pb.ProMagicAttachResponse{
+
 		Type: pb.ProMagicAttachResponseType_SUCCESS,
 	}
 	if err := stream.Send(successResponse); err != nil {
@@ -266,10 +275,10 @@ func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse
 
 func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	// Construct the full path to the pro-attach executable
-	proAttachPath := "/usr/libexec/provd/sprovd"
+	proAttachPath := "/usr/libexec/sprovd"
 
 	// Run the pro attach command with the contract token
-	out, err := exec.CommandContext(ctx, proAttachPath, token).Output()
+	out, err := exec.CommandContext(ctx, proAttachPath, token).CombinedOutput()
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to run pro attach: %v\nOutput: %s", err, string(out)))
 		return fmt.Errorf("failed to run pro attach: %v\nOutput: %s", err, string(out))

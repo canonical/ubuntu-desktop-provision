@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"flag"
 	"io"
 	"net"
 	"os"
@@ -29,9 +30,10 @@ func TestProMagicAttach(t *testing.T) {
 		userCodeRefresh bool
 
 		// Failure flags
-		failInitiate bool
-		failWait     bool
-		failAttach   bool
+		failInitiate    bool
+		failWait        bool
+		failAttach      bool
+		alreadyAttached bool
 
 		// Network error flags
 		networkErrorInitiate bool
@@ -47,6 +49,7 @@ func TestProMagicAttach(t *testing.T) {
 		"Error when fail to call attach":                  {failAttach: true},
 		"Error when network fails while waiting:":         {networkErrorWait: true},
 		"Error when network fails when calling initiate:": {networkErrorInitiate: true},
+		"Error when already attached":                     {alreadyAttached: true, failWait: true},
 	}
 
 	for name, tc := range tests {
@@ -55,7 +58,7 @@ func TestProMagicAttach(t *testing.T) {
 			t.Parallel()
 
 			opts := []pro.Option{
-				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate}),
+				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate, alreadyAttached: tc.alreadyAttached}),
 			}
 
 			client := newProClient(t, opts...)
@@ -169,12 +172,20 @@ func newProClient(t *testing.T, opts ...pro.Option) pb.ProServiceClient {
 	return pb.NewProServiceClient(conn)
 }
 
+func TestMain(m *testing.M) {
+	testutils.InstallUpdateFlag()
+	flag.Parse()
+
+	m.Run()
+}
+
 type mockProExecutable struct {
 	userCodeRefresh bool
 
-	failInitiate bool
-	failWait     bool
-	failAttach   bool
+	failInitiate    bool
+	failWait        bool
+	failAttach      bool
+	alreadyAttached bool
 
 	networkErrorWait     bool
 	networkErrorInitiate bool
@@ -275,6 +286,9 @@ func (m *mockProExecutable) Wait(ctx context.Context, token string) (*pro.ProAPI
 func (m *mockProExecutable) Attach(ctx context.Context, token string) error {
 	if m.failAttach {
 		return errors.New("attach failed")
+	}
+	if m.alreadyAttached {
+		return errors.New("already attached")
 	}
 	return nil
 }
