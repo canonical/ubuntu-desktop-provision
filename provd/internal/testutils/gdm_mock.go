@@ -71,12 +71,19 @@ func (g *gdmSessionBus) Ping() *dbus.Error {
 
 func (g *gdmSessionBus) BeginVerificationForUser(serviceName, username string, s dbus.Sender) (interface{}, *dbus.Error) {
 	// Save the username for later verification
+	if username == "begin-verification-fails" {
+		return "", dbus.NewError(consts.DbusGdmPrefix+".UserVerifier.BeginVerificationForUser.Error.Failed", []interface{}{"failed to begin verification"})
+	}
 	g.username = username
 	_ = emitSignal(g.conn, dbus.ObjectPath("/org/gnome/DisplayManager/Session"), string(s), consts.DbusGdmPrefix+".UserVerifier.SecretInfoQuery", "gdm-password", "foobar")
 	return "", nil
 }
 
 func (g *gdmSessionBus) AnswerQuery(serviceName, answer string, s dbus.Sender) *dbus.Error {
+	if answer == "answer-query-fails" {
+		slog.Info(fmt.Sprintf("Answer Query - username: %s, password: %s", g.username, answer))
+		return dbus.NewError(consts.DbusGdmPrefix+".UserVerifier.AnswerQuery.Error.Failed", []interface{}{"failed to answer query"})
+	}
 	if g.username != "myuser" || answer != "mypassword" {
 		_ = emitSignal(g.conn, dbus.ObjectPath("/org/gnome/DisplayManager/Session"), string(s), consts.DbusGdmPrefix+".UserVerifier.Problem", "gdm-password", "Invalid username or password")
 		return nil
@@ -86,6 +93,9 @@ func (g *gdmSessionBus) AnswerQuery(serviceName, answer string, s dbus.Sender) *
 }
 
 func (g *gdmSessionBus) StartSessionWhenReady(serviceName string, shouldStartSession bool) *dbus.Error {
+	if g.username == "start-session-fails" {
+		return dbus.NewError(consts.DbusGdmPrefix+".Greeter.StartSessionWhenReady.Error.Failed", []interface{}{"failed to start session"})
+	}
 	return nil
 }
 

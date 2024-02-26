@@ -68,9 +68,12 @@ func TestLaunchDesktopSession(t *testing.T) {
 		"Success on launching desktop session": {},
 
 		// Error cases
-		"Error on invalid credentials": {username: "foo", password: "bar", wantErr: true},
-		"Error on empty username":      {username: "-", wantErr: true},
-		"Error on cancelled request":   {cancelReq: true, wantErr: true},
+		"Error on invalid credentials":         {username: "foo", password: "bar", wantErr: true},
+		"Error on empty username":              {username: "-", wantErr: true},
+		"Error on cancelled request":           {cancelReq: true, wantErr: true},
+		"Error when 'begin verifcation' fails": {username: "begin-verification-fails", wantErr: true},
+		"Error when 'answer query' fails":      {password: "answer-query-fails", wantErr: true},
+		"Error when 'start session' fails":     {username: "start-session-fails", wantErr: true},
 	}
 
 	for name, tc := range tests {

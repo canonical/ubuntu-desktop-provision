@@ -97,7 +97,9 @@ func (s *Service) LaunchDesktopSession(ctx context.Context, req *pb.GdmServiceRe
 	defer s.privateConn.RemoveSignal(signals)
 
 	// Begin user verification
-	s.userVerifier.Call(consts.DbusGdmPrefix+".UserVerifier.BeginVerificationForUser", 0, "gdm-password", req.Username)
+	if err := s.userVerifier.Call(consts.DbusGdmPrefix+".UserVerifier.BeginVerificationForUser", 0, "gdm-password", req.Username).Err; err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to call BeginVerificationForUser: %v", err)
+	}
 
 	// Wait for signals
 	for {
@@ -118,7 +120,9 @@ func (s *Service) LaunchDesktopSession(ctx context.Context, req *pb.GdmServiceRe
 					return nil, status.Errorf(codes.Internal, "failed to get message from SecretInfoQuery signal")
 				}
 				// Reply with password
-				s.userVerifier.Call(consts.DbusGdmPrefix+".UserVerifier.AnswerQuery", 0, msg, req.Password)
+				if err := s.userVerifier.Call(consts.DbusGdmPrefix+".UserVerifier.AnswerQuery", 0, msg, req.Password).Err; err != nil {
+					return nil, status.Errorf(codes.Internal, "failed to call AnswerQuery: %v", err)
+				}
 			// SessionOpened signal
 			case consts.DbusGdmPrefix + ".Greeter.SessionOpened":
 				slog.Debug(fmt.Sprintf("SessionOpened signal received: %#v", signal))
@@ -127,7 +131,9 @@ func (s *Service) LaunchDesktopSession(ctx context.Context, req *pb.GdmServiceRe
 					return nil, status.Errorf(codes.Internal, "failed to get message from SessionOpened signal")
 				}
 				// Tell GDM to start the session and return
-				s.greeter.Call(consts.DbusGdmPrefix+".Greeter.StartSessionWhenReady", 0, msg, true)
+				if err := s.greeter.Call(consts.DbusGdmPrefix+".Greeter.StartSessionWhenReady", 0, msg, true).Err; err != nil {
+					return nil, status.Errorf(codes.Internal, "failed to call StartSessionWhenReady: %v", err)
+				}
 				return &emptypb.Empty{}, nil
 			default:
 				slog.Debug(fmt.Sprintf("Received signal: %#v", signal))
