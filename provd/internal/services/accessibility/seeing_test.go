@@ -168,6 +168,56 @@ func TestGetReducedMotion(t *testing.T) {
 	}
 }
 
+func TestDisableReducedMotion(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		setBooleanError bool
+
+		want    bool
+		wantErr bool
+	}{
+		// Success case
+		"Disable reduced motion": {want: false},
+
+		// Error cases
+		"Error when unable to update state of reduced motion": {setBooleanError: true, wantErr: true},
+	}
+
+	for name, tc := range tests {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			// Prepare mocks
+			opts := []accessibility.Option{
+				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
+			}
+
+			// Setup test
+			client := newAccessibilityClient(t, opts...)
+			req := &emptypb.Empty{}
+
+			// Get function under test output
+			resp, err := client.DisableReducedMotion(context.Background(), req)
+
+			if tc.wantErr {
+				require.Error(t, err, "DisableReducedMotion should return an error")
+				require.Empty(t, resp, "DisableReducedMotion should return a nil response")
+				return
+			}
+			require.NoError(t, err, "DisableReducedMotion should not return an error")
+
+			r, err := client.GetReducedMotion(context.Background(), &emptypb.Empty{})
+			require.NoError(t, err, "GetReducedMotion should not return an error")
+
+			got := r.Value
+			want := tc.want
+			require.Equal(t, want, got, "returned an unexpected response")
+		})
+	}
+}
+
 func TestEnableReducedMotion(t *testing.T) {
 	t.Parallel()
 

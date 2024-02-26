@@ -14,10 +14,10 @@ func (s *Service) GetMouseKeys(ctx context.Context, req *emptypb.Empty) (*wrappe
 
 // EnableMouseKeys enables mouse keys.
 func (s *Service) EnableMouseKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(s.keyboardSettings, "mousekeys-enable", true, "failed to enable mouse keys: %v")
+	return setBooleanSettings(ctx, s.keyboardSettings, "mousekeys-enable", true, "failed to enable mouse keys: %v")
 }
 
 // DisableMouseKeys disables mouse keys.
 func (s *Service) DisableMouseKeys(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(s.keyboardSettings, "mousekeys-enable", false, "failed to disable mouse keys: %v")
+	return setBooleanSettings(ctx, s.keyboardSettings, "mousekeys-enable", false, "failed to disable mouse keys: %v")
 }

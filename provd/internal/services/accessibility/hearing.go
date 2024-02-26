@@ -14,10 +14,10 @@ func (s *Service) GetVisualAlerts(ctx context.Context, req *emptypb.Empty) (*wra
 
 // EnableVisualAlerts enables visual alerts.
 func (s *Service) EnableVisualAlerts(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(s.wmSettings, "visual-bell", true, "failed to enable visual alerts %v")
+	return setBooleanSettings(ctx, s.wmSettings, "visual-bell", true, "failed to enable visual alerts %v")
 }
 
 // DisableVisualAlerts disables visual alerts.
 func (s *Service) DisableVisualAlerts(ctx context.Context, req *emptypb.Empty) (*emptypb.Empty, error) {
-	return setBooleanSettings(s.wmSettings, "visual-bell", false, "failed to disable visual alerts %v")
+	return setBooleanSettings(ctx, s.wmSettings, "visual-bell", false, "failed to disable visual alerts %v")
 }
