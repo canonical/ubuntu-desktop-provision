@@ -11,7 +11,7 @@ import (
 
 func TestGetVisualAlerts(t *testing.T) {
 	t.Parallel()
-
+	
 	tests := map[string]struct {
 		want bool
 	}{
