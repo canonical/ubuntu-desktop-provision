@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path/path.dart' as p;
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -20,7 +22,8 @@ Future<void> runInitApp(
   Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
   FutureOr<void> Function()? onDone,
 }) async {
-  final log = Logger.setup();
+  final exe = p.basename(Platform.resolvedExecutable);
+  final log = Logger.setup(path: '/var/log/installer/$exe.log');
 
   return runZonedGuarded(() async {
     FlutterError.onError = (error) {
