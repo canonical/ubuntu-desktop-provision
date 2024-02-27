@@ -163,6 +163,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
+    source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
       set -eux
