@@ -62,8 +62,16 @@ class GnomeAccessibilityService implements AccessibilityService {
   }
 
   @override
-  Future<bool> isSupported() =>
-      _a11yInterfaceSettings.list().then((_) => true, onError: (_) => false);
+  Future<bool> isSupported() => Future.wait(
+        [
+          _a11yInterfaceSettings,
+          _applicationSettings,
+          _interfaceSettings,
+          _keyboardSettings,
+          _wmSettings,
+        ].map((settings) => settings.list()),
+        eagerError: true,
+      ).then((_) => true, onError: (_) => false);
 
   @override
   Future<bool> getHighContrast() => _tryGet(

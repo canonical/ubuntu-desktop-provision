@@ -142,4 +142,26 @@ void main() {
       expect(await service.getDesktopZoom(), isTrue);
     });
   });
+
+  group('isSupported', () {
+    test('all interfaces available', () async {
+      when(a11yInterfaceSettings.list()).thenAnswer((_) async => []);
+      when(applicationSettings.list()).thenAnswer((_) async => []);
+      when(interfaceSettings.list()).thenAnswer((_) async => []);
+      when(keyboardSettings.list()).thenAnswer((_) async => []);
+      when(wmSettings.list()).thenAnswer((_) async => []);
+
+      expect(await service.isSupported(), isTrue);
+    });
+
+    test('some interfaces unavailable', () async {
+      when(a11yInterfaceSettings.list()).thenAnswer((_) async => []);
+      when(applicationSettings.list()).thenThrow(Exception());
+      when(interfaceSettings.list()).thenAnswer((_) async => []);
+      when(keyboardSettings.list()).thenAnswer((_) async => []);
+      when(wmSettings.list()).thenThrow(Exception());
+
+      expect(await service.isSupported(), isFalse);
+    });
+  });
 }
