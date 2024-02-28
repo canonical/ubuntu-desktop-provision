@@ -63,6 +63,7 @@ theme:
 # Bootstrap pages:
 # - locale: Select the interface language
 # - accessibility: Allow user to configure GNOME accessibility options
+# - try-or-install: Choose between trying the live session or installing (only shown when --try-or-install is passed)
 # - rst: Identifies if the computer has Intel Rapid Storage Technology (rst) active
 # - keyboard: Set keyboard layout
 # - network: Connect to a network
