@@ -23,6 +23,7 @@ apps:
       - run-provd-socket
       - network
       - network-manager
+      - tmp
       - var-log-installer
 
 parts:
@@ -71,6 +72,9 @@ parts:
       # patch config directory path
       sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/services/config_service.dart
 
+      # patch tmp directory path in gdm_service.dart
+      sed -i '/const tmpDirectory/{s|/tmp/|/var/lib/snapd/hostfs/tmp/|}' packages/ubuntu_init/lib/src/services/gdm_service.dart
+
       cd packages/ubuntu_init
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
@@ -92,6 +96,12 @@ plugs:
       - /run/provd/provd.sock
     write:
       - /run/provd/provd.sock
+  tmp:
+    interface: system-files
+    read:
+      - /var/lib/snapd/hostfs/tmp
+    write:
+      - /var/lib/snapd/hostfs/tmp
   usr-share-desktop-provision:
     interface: system-files
     read:

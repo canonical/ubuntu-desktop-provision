@@ -15,6 +15,8 @@ class GdmService {
   DBusClient? _sessionClient;
   final Map<String, DBusRemoteObjectSignalStream>? _signalStreams;
 
+  static const tmpDirectory = '/tmp/';
+
   Future<void> init() async {
     if (_sessionClient != null) return;
 
@@ -26,10 +28,14 @@ class GdmService {
     _sessionClient = await gdmObject
         .callMethod('org.gnome.DisplayManager.Manager', 'OpenSession', [],
             replySignature: DBusSignature.string)
-        .then((response) => DBusClient(
-              DBusAddress(response.values.first.asString()),
-              messageBus: false,
-            ));
+        .then((response) {
+      final socketPath =
+          response.values.first.asString().replaceFirst('/tmp/', tmpDirectory);
+      return DBusClient(
+        DBusAddress(socketPath),
+        messageBus: false,
+      );
+    });
   }
 
   Future<void> launchSession(String username, String password) async {
