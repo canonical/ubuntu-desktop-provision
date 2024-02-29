@@ -63,12 +63,12 @@ class RefreshBar extends StatelessWidget {
     required this.state,
     super.key,
     this.onSkip,
-    this.onRestart,
+    this.onQuit,
   });
 
   final RefreshState state;
   final VoidCallback? onSkip;
-  final VoidCallback? onRestart;
+  final VoidCallback? onQuit;
 
   @override
   Widget build(BuildContext context) {
@@ -78,9 +78,9 @@ class RefreshBar extends StatelessWidget {
     );
 
     final restart = WizardButton(
-      label: UbuntuLocalizations.of(context).restartLabel,
+      label: UbuntuLocalizations.of(context).quitLabel,
       highlighted: true,
-      onActivated: onRestart,
+      onActivated: onQuit,
     );
 
     return WizardBar(

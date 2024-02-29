@@ -730,7 +730,7 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Please restart the installer.';
+  String get refreshRestart => 'Please quit and relaunch the installer.';
 
   @override
   String refreshSnapPrerequisites(Object snap) {

@@ -38,7 +38,7 @@ class RefreshPage extends ConsumerWidget with ProvisioningPage {
           : RefreshBar(
               state: model.state,
               onSkip: Wizard.of(context).next,
-              onRestart: model.restart,
+              onQuit: model.quit,
             ),
     );
   }

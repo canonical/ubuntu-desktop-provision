@@ -722,7 +722,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Please restart the installer.",
+  "refreshRestart": "Please quit and relaunch the installer.",
   "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
   "@refreshSnapPrerequisites": {
     "type": "text",

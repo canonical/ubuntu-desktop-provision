@@ -1446,7 +1446,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @refreshRestart.
   ///
   /// In en, this message translates to:
-  /// **'Please restart the installer.'**
+  /// **'Please quit and relaunch the installer.'**
   String get refreshRestart;
 
   /// No description provided for @refreshSnapPrerequisites.

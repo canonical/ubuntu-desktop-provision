@@ -101,9 +101,9 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
       ) as _i4.Future<void>);
 
   @override
-  _i4.Future<void> restart() => (super.noSuchMethod(
+  _i4.Future<void> quit() => (super.noSuchMethod(
         Invocation.method(
-          #restart,
+          #quit,
           [],
         ),
         returnValue: _i4.Future<void>.value(),
