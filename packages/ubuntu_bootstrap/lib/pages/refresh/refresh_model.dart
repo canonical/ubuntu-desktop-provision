@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:stdlibc/stdlibc.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
 export 'package:subiquity_client/subiquity_client.dart' show RefreshCheckState;
@@ -35,7 +34,7 @@ class RefreshModel extends ChangeNotifier {
   Future<RefreshState> check() => _service.check();
   Future<void> refresh() => _service.refresh();
 
-  Future<void> restart() async {
-    execv(Platform.resolvedExecutable, []);
+  Future<void> quit() async {
+    exit(0);
   }
 }

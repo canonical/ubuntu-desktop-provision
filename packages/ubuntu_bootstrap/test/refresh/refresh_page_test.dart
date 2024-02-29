@@ -120,7 +120,7 @@ void main() {
     expect(progress.value, isZero);
 
     expect(
-      find.button(find.ul10n((l10n) => l10n.restartLabel)),
+      find.button(find.ul10n((l10n) => l10n.quitLabel)),
       findsOneWidget,
     );
   });
@@ -136,7 +136,7 @@ void main() {
     expect(progress.value, isZero);
 
     expect(
-      find.button(find.ul10n((l10n) => l10n.restartLabel)),
+      find.button(find.ul10n((l10n) => l10n.quitLabel)),
       findsOneWidget,
     );
   });
