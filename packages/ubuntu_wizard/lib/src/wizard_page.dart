@@ -116,7 +116,9 @@ class _WizardPageState extends State<WizardPage> {
             if (widget.header != null) SizedBox(height: widget.contentSpacing),
             Expanded(
               child: Padding(
-                  padding: widget.contentPadding, child: widget.content),
+                padding: widget.contentPadding,
+                child: widget.content,
+              ),
             ),
             SizedBox(height: widget.contentSpacing),
           ],

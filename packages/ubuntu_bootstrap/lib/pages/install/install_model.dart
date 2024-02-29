@@ -1,7 +1,5 @@
 import 'dart:async';
-import 'dart:convert';
 
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -182,22 +180,6 @@ class InstallModel extends SafeChangeNotifier {
     _events?.cancel();
     _statuses?.cancel();
     super.dispose();
-  }
-
-  /// Prefetches slide images into the image cache to avoid flicker while
-  /// loading larger screenshot images
-  Future<void> precacheSlideImages(BuildContext context) async {
-    final assets = await DefaultAssetBundle.of(context)
-        .loadString('AssetManifest.json')
-        .then((v) => (json.decode(v) as Map).keys.whereType<String>().where(
-              (asset) => asset.endsWith('.png') && asset.contains('/slides/'),
-            ));
-
-    if (context.mounted) {
-      for (final asset in assets) {
-        await precacheImage(AssetImage(asset), context);
-      }
-    }
   }
 
   Future<void> reboot() => _session.reboot();

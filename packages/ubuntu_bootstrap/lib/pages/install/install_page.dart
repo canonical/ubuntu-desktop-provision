@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
+import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -18,9 +18,10 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(installModelProvider);
+    final slides = ref.read(slidesProvider);
     return Future.wait([
       model.init(),
-      model.precacheSlideImages(context),
+      slides.preCache(),
     ]).then((_) => true);
   }
 
@@ -30,6 +31,7 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
     final isInstalling =
         ref.watch(installModelProvider.select((m) => m.isInstalling));
     YaruWindow.setClosable(context, !isInstalling);
+
     return AnimatedSwitcher(
       duration: kThemeAnimationDuration,
       switchInCurve: Curves.easeInExpo,
@@ -59,7 +61,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
-    final slides = SlidesContext.of(context);
+    final htmlSlides = ref.watch(slidesProvider).slides;
     return WizardPage(
       headerPadding: EdgeInsets.zero,
       contentPadding: EdgeInsets.zero,
@@ -71,7 +73,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
           SlideView(
             controller: _slideController,
             interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
-            slides: slides,
+            slides: htmlSlides,
           ),
           Positioned.fill(
             child: AnimatedOpacity(
@@ -138,7 +140,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 ),
                 const SizedBox(width: 10),
                 IconButton(
-                  onPressed: _slideController.value < slides.length - 1
+                  onPressed: _slideController.value < htmlSlides.length - 1
                       ? () => ++_slideController.value
                       : null,
                   icon: const Icon(YaruIcons.pan_end),

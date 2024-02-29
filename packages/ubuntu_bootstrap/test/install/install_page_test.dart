@@ -28,7 +28,7 @@ void main() {
 
     expect(find.byType(SlideView), findsOneWidget);
 
-    expect(findsSlide('slide1'), findsOneWidget);
+    expect(findsSlide('slide_1'), findsOneWidget);
   });
 
   testWidgets('navigate slides', (tester) async {
@@ -43,24 +43,24 @@ void main() {
     expect(nextButton, findsOneWidget);
 
     // initially at first slide
-    expect(findsSlide('slide1'), findsOneWidget);
-    expect(findsSlide('slide2'), findsNothing);
+    expect(findsSlide('slide_1'), findsOneWidget);
+    expect(findsSlide('slide_2'), findsNothing);
     expect(backButton, isDisabled);
     expect(nextButton, isEnabled);
 
     // go to second slide
     await tester.tap(nextButton);
     await tester.pumpAndSettle();
-    expect(findsSlide('slide1'), findsNothing);
-    expect(findsSlide('slide2'), findsOneWidget);
+    expect(findsSlide('slide_1'), findsNothing);
+    expect(findsSlide('slide_2'), findsOneWidget);
     expect(backButton, isEnabled);
     expect(nextButton, isDisabled);
 
     // back to first slide
     await tester.tap(backButton);
     await tester.pumpAndSettle();
-    expect(findsSlide('slide1'), findsOneWidget);
-    expect(findsSlide('slide2'), findsNothing);
+    expect(findsSlide('slide_1'), findsOneWidget);
+    expect(findsSlide('slide_2'), findsNothing);
     expect(backButton, isDisabled);
     expect(nextButton, isEnabled);
   });

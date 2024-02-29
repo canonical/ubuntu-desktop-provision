@@ -417,12 +417,13 @@ Future<void> main() async {
 
     await tester.jumpToPage(InstallationStep.install.route);
     await tester.pump(kThemeAnimationDuration);
+    const defaultSlidesCount = 10;
 
-    for (var i = 0; i < defaultSlides.length; ++i) {
+    for (var i = 0; i < defaultSlidesCount; ++i) {
       await tester.takeScreenshot(
         '$currentThemeName/15.install-$i',
       );
-      if (i < defaultSlides.length - 1) {
+      if (i < defaultSlidesCount - 1) {
         await tester.tap(find.iconButton(YaruIcons.pan_end));
         await tester.pump(kThemeAnimationDuration);
       }

@@ -87,6 +87,38 @@ pages:
     image: <image-name>
 ```
 
+### Custom Slides
+
+To customize the slides that are shown while the installation is underway you just need to add a slides directory in
+`/usr/share/desktop-provision/slides` and add numbered subdirectories with localized html-files and image files in
+there. The numbers determine in which order the slides should be. 
+
+An example structure could look like this:
+
+```
+/usr/share/desktop-provision
+└── slides
+   ├── 1
+   │   ├── animal.svg
+   │   ├── slide_de_DE.svg
+   │   ├── slide_en_US.svg
+   │   ├── slide_sv_FI.svg
+   │   └── slide_sv_SE.html
+   ├── 2
+   │   ├── slide_en_US.html
+   │   └── store.png
+   └── 3
+       ├── slide_en_US.html
+       └── vscode.png
+```
+
+If the locale that the user currently is using doesn't have a corresponding html file it will fall back to
+`slide_en_US.html`.
+
+Do note that the HTML supported in these “html” files is far from the full standard, so we recommend that you use one of
+the templates provided as the default slides:
+https://github.com/canonical/ubuntu-desktop-provision/tree/main/packages/ubuntu_bootstrap/assets/slides
+
 ## Repository Structure
 
 ### Frontend
