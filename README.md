@@ -41,7 +41,7 @@ mode: standard | oem | core-desktop
 # - studio
 # - unity
 # - xubuntu
-flavour: <name>
+flavor: <name>
 
 # (Optional) Sets the window's title (e.g. the text in alt|super + tab)
 app-name: <string>
