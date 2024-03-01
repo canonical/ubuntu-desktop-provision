@@ -45,8 +45,8 @@ Future<void> showCreatePartitionDialog(
             rows: [
               <Widget>[
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                AnimatedBuilder(
-                  animation: Listenable.merge([
+                ListenableBuilder(
+                  listenable: Listenable.merge([
                     partitionSize,
                     partitionUnit,
                   ]),
@@ -164,8 +164,8 @@ Future<void> showEditPartitionDialog(
             rows: [
               <Widget>[
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                AnimatedBuilder(
-                  animation: Listenable.merge([
+                ListenableBuilder(
+                  listenable: Listenable.merge([
                     partitionSize,
                     partitionUnit,
                   ]),
