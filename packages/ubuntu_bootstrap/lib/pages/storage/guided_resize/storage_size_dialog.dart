@@ -21,8 +21,8 @@ Future<int?> showStorageSizeDialog(
 
   return showDialog(
     context: context,
-    builder: (context) => AnimatedBuilder(
-      animation: Listenable.merge([size, unit]),
+    builder: (context) => ListenableBuilder(
+      listenable: Listenable.merge([size, unit]),
       builder: (context, child) => StorageSizeDialog(
         title: title,
         name: name,
@@ -101,7 +101,6 @@ class StorageSizeDialog extends StatelessWidget {
               ConstrainedBox(
                 constraints: const BoxConstraints(minWidth: 320),
                 child: StorageSizeBox(
-                  autofocus: true,
                   size: size,
                   unit: unit,
                   minimum: minimumSize,

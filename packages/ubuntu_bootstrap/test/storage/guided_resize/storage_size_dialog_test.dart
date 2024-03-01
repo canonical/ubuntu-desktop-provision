@@ -6,7 +6,6 @@ import 'package:ubuntu_bootstrap/widgets/storage_size_box.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
-import 'package:yaru_test/yaru_test.dart';
 
 import '../../test_utils.dart';
 
@@ -31,7 +30,6 @@ void main() {
 
     expect(find.byType(StorageSizeBox), findsOneWidget);
     expect(find.byType(EditableText), findsOneWidget);
-    expect(find.byType(EditableText), hasFocus);
 
     await tester.enterText(find.byType(StorageSizeBox), '150');
     await tester.pump();
@@ -57,14 +55,11 @@ void main() {
     final context = tester.element(find.byType(StorageSizeDialog));
 
     for (final unit in DataUnit.values) {
-      final menuButton = find.byType(MenuButtonBuilder<DataUnit>).last;
+      final menuButton = find.byType(MenuButtonBuilder<DataUnit>);
       expect(menuButton, findsOneWidget);
       await tester.pumpAndSettle();
       await tester.ensureVisible(menuButton);
       await tester.pumpAndSettle();
-      // TODO: This is needed to a bug in Flutter 3.16.0 where the focus still
-      // is on the text field within the SpinBox (only in tests).
-      FocusScope.of(context).unfocus();
       await tester.tap(menuButton);
       await tester.pumpAndSettle();
 

@@ -35,8 +35,8 @@ Future<void> showAdvancedFeaturesDialog(
         contentPadding: const EdgeInsets.all(kYaruPagePadding),
         actionsPadding: const EdgeInsets.all(kYaruPagePadding),
         buttonPadding: EdgeInsets.zero,
-        content: AnimatedBuilder(
-          animation: Listenable.merge([advancedFeature, encryption]),
+        content: ListenableBuilder(
+          listenable: Listenable.merge([advancedFeature, encryption]),
           builder: (context, child) {
             return SizedBox(
               width: kWizardDialogWidth,
