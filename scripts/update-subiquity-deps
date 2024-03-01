@@ -7,7 +7,7 @@ yaml.default_flow_style = False
 yaml.pure = True
 yaml.indent(mapping=2, sequence=2, offset=2)
 
-with open('snap/snapcraft.yaml', 'r') as fp:
+with open('ci/snap/bootstrap/snapcraft.yaml', 'r') as fp:
     udi_data = yaml.load(fp)
 
 with open('packages/subiquity_client/subiquity/snapcraft.yaml', 'r') as fp:
@@ -17,5 +17,5 @@ for part in ('probert', 'curtin'):
     udi_data['parts'][part]['source-commit'] = \
         subiquity_data['parts'][part]['source-commit']
 
-with open('snap/snapcraft.yaml', 'w') as fp:
+with open('ci/snap/bootstrap/snapcraft.yaml', 'w') as fp:
     yaml.dump(udi_data, fp)
