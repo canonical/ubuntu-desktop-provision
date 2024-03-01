@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
@@ -33,7 +32,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.radio(AdvancedFeature.zfs));
+    await tester.tap(find.radio(GuidedCapability.ZFS));
     await tester.pump();
 
     await tester.tapOk();
@@ -50,7 +49,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.radio(AdvancedFeature.lvm));
+    await tester.tap(find.radio(GuidedCapability.LVM));
     await tester.pump();
 
     await tester.tapOk();
@@ -63,17 +62,11 @@ void main() {
     final model = buildStorageModel();
     await tester.pumpWidget(buildPage(tester, model));
 
-    final context = tester.element(find.byType(StoragePage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
     final result = showAdvancedFeaturesDialog(
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.radio(AdvancedFeature.lvm));
-    await tester.pump();
-
-    await tester.tap(find.checkButton(l10n.installationTypeEncrypt('Ubuntu')));
+    await tester.tap(find.radio(GuidedCapability.LVM_LUKS));
     await tester.pump();
 
     await tester.tapOk();
@@ -97,12 +90,14 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    expect(find.radio(AdvancedFeature.none), findsNothing);
-    expect(find.radio(AdvancedFeature.lvm), findsNothing);
-    expect(find.radio(AdvancedFeature.zfs), findsNothing);
-    expect(find.radio(AdvancedFeature.tpm), findsOneWidget);
+    expect(find.radio(GuidedCapability.DIRECT), findsNothing);
+    expect(find.radio(GuidedCapability.LVM), findsNothing);
+    expect(find.radio(GuidedCapability.LVM_LUKS), findsNothing);
+    expect(find.radio(GuidedCapability.ZFS), findsNothing);
+    expect(find.radio(GuidedCapability.ZFS_LUKS_KEYSTORE), findsNothing);
+    expect(find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED), findsOneWidget);
 
-    final finder = find.radio(AdvancedFeature.tpm);
+    final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     await tester.tap(finder);
     await tester.pump();
     await tester.tapOk();
@@ -123,7 +118,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    final finder = find.radio(AdvancedFeature.tpm);
+    final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
 
@@ -145,7 +140,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    final finder = find.radio(AdvancedFeature.tpm);
+    final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
 
@@ -167,7 +162,7 @@ void main() {
         tester.element(find.byType(StoragePage)), model);
     await tester.pumpAndSettle();
 
-    final finder = find.radio(AdvancedFeature.tpm);
+    final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
 

@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM valittu';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Salaa uusi $RELEASE-asennus paremman tietoturvan vuoksi';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
 
   @override
   String get installationTypeEncryptInfo => 'Salausavain valitaan seuraavassa vaiheessa.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'KOKEELLINEN: Tyhjennä levy ja käytä ZFS:ää';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS valittu';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta';

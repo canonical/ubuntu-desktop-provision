@@ -91,8 +91,10 @@ class StorageModel extends SafeChangeNotifier {
       .any((c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS));
 
   /// Whether ZFS guided storage targets are available.
-  bool get hasZfs => _getTargets<GuidedStorageTargetReformat>()
-      .any((t) => t.allowed.contains(GuidedCapability.ZFS));
+  bool get hasZfs =>
+      _getTargets<GuidedStorageTargetReformat>().any((t) => t.allowed.any((c) =>
+          c == GuidedCapability.ZFS ||
+          c == GuidedCapability.ZFS_LUKS_KEYSTORE));
 
   /// Whether TPM is detected.
   bool get hasTpm =>

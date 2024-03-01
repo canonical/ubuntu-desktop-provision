@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'נבחר מנהל כרכים לוגי';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'להצפין את התקנת $RELEASE החדשה לשיפור האבטחה';
-  }
+  String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';
 
   @override
   String get installationTypeEncryptInfo => 'בשלב הבא ניתן לבחור מפתח אבטחה.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'ניסיוני: למחוק את הכונן ולהשתמש ב־ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'נבחר ZFS';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'ניסיוני: להפעיל הצפנת מלוא הכונן בגיבוי חומרה';

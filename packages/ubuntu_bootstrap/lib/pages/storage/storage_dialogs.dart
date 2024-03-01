@@ -12,15 +12,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
-enum AdvancedFeature { none, lvm, zfs, tpm }
-
 /// Shows a dialog to select advanced installation features.
 Future<void> showAdvancedFeaturesDialog(
     BuildContext context, StorageModel model) async {
-  final advancedFeature = ValueNotifier(
-      model.guidedCapability?.toAdvancedFeature() ?? AdvancedFeature.none);
-  final encryption =
-      ValueNotifier(model.guidedCapability == GuidedCapability.LVM_LUKS);
+  final guidedCapability =
+      ValueNotifier(model.guidedCapability ?? GuidedCapability.DIRECT);
 
   final result = await showDialog<bool>(
     context: context,
@@ -36,7 +32,7 @@ Future<void> showAdvancedFeaturesDialog(
         actionsPadding: const EdgeInsets.all(kYaruPagePadding),
         buttonPadding: EdgeInsets.zero,
         content: ListenableBuilder(
-          listenable: Listenable.merge([advancedFeature, encryption]),
+          listenable: guidedCapability,
           builder: (context, child) {
             return SizedBox(
               width: kWizardDialogWidth,
@@ -45,48 +41,52 @@ Future<void> showAdvancedFeaturesDialog(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   if (model.hasDirect)
-                    YaruRadioButton<AdvancedFeature>(
+                    YaruRadioButton<GuidedCapability>(
                       title: Text(lang.installationTypeNone),
-                      value: AdvancedFeature.none,
-                      groupValue: advancedFeature.value,
-                      onChanged: (v) => advancedFeature.value = v!,
+                      value: GuidedCapability.DIRECT,
+                      groupValue: guidedCapability.value,
+                      onChanged: (v) => guidedCapability.value = v!,
                     ),
                   if (model.hasLvm) ...[
-                    YaruRadioButton<AdvancedFeature>(
+                    YaruRadioButton<GuidedCapability>(
                       title: Consumer(builder: (context, ref, child) {
                         final flavor = ref.watch(flavorProvider);
                         return Text(
                             lang.installationTypeLVM(flavor.displayName));
                       }),
-                      value: AdvancedFeature.lvm,
-                      groupValue: advancedFeature.value,
-                      onChanged: (v) => advancedFeature.value = v!,
+                      value: GuidedCapability.LVM,
+                      groupValue: guidedCapability.value,
+                      onChanged: (v) => guidedCapability.value = v!,
                     ),
-                    Padding(
-                      padding: kWizardIndentation,
-                      child: YaruCheckButton(
-                        title: Consumer(builder: (context, ref, child) {
-                          final flavor = ref.watch(flavorProvider);
-                          return Text(
-                              lang.installationTypeEncrypt(flavor.displayName));
-                        }),
-                        subtitle: Text(lang.installationTypeEncryptInfo),
-                        value: encryption.value,
-                        onChanged: advancedFeature.value == AdvancedFeature.lvm
-                            ? (v) => encryption.value = v!
-                            : null,
-                      ),
+                    YaruRadioButton<GuidedCapability>(
+                      title: Consumer(builder: (context, ref, child) {
+                        final flavor = ref.watch(flavorProvider);
+                        return Text(lang
+                            .installationTypeLVMEncryption(flavor.displayName));
+                      }),
+                      subtitle: Text(lang.installationTypeEncryptInfo),
+                      value: GuidedCapability.LVM_LUKS,
+                      groupValue: guidedCapability.value,
+                      onChanged: (v) => guidedCapability.value = v!,
                     ),
                   ],
-                  if (model.hasZfs)
-                    YaruRadioButton<AdvancedFeature>(
+                  if (model.hasZfs) ...[
+                    YaruRadioButton<GuidedCapability>(
                       title: Text(lang.installationTypeZFS),
-                      value: AdvancedFeature.zfs,
-                      groupValue: advancedFeature.value,
-                      onChanged: (v) => advancedFeature.value = v!,
+                      value: GuidedCapability.ZFS,
+                      groupValue: guidedCapability.value,
+                      onChanged: (v) => guidedCapability.value = v!,
                     ),
+                    YaruRadioButton<GuidedCapability>(
+                      title: Text(lang.installationTypeZFSEncryption),
+                      subtitle: Text(lang.installationTypeEncryptInfo),
+                      value: GuidedCapability.ZFS_LUKS_KEYSTORE,
+                      groupValue: guidedCapability.value,
+                      onChanged: (v) => guidedCapability.value = v!,
+                    ),
+                  ],
                   TpmOption(
-                    advancedFeature: advancedFeature,
+                    guidedCapability: guidedCapability,
                     model: model,
                   ),
                 ].withSpacing(kWizardSpacing),
@@ -110,18 +110,17 @@ Future<void> showAdvancedFeaturesDialog(
   );
 
   if (result ?? false) {
-    model.guidedCapability =
-        advancedFeature.value.toGuidedCapability(encryption: encryption.value);
+    model.guidedCapability = guidedCapability.value.clean();
   }
 }
 
 class TpmOption extends StatelessWidget {
   const TpmOption({
-    required this.advancedFeature,
+    required this.guidedCapability,
     required this.model,
     super.key,
   });
-  final ValueNotifier<AdvancedFeature> advancedFeature;
+  final ValueNotifier<GuidedCapability> guidedCapability;
   final StorageModel model;
 
   @override
@@ -138,7 +137,7 @@ class TpmOption extends StatelessWidget {
       Theme.of(context).colorScheme.error.toHex(),
       model.getReleaseNotesURL(Localizations.localeOf(context)),
     );
-    Function(AdvancedFeature?)? onChanged = (v) => advancedFeature.value = v!;
+    Function(GuidedCapability?)? onChanged = (v) => guidedCapability.value = v!;
 
     if (target.disallowed.isNotEmpty) {
       final element = target.disallowed.first;
@@ -153,10 +152,10 @@ class TpmOption extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        YaruRadioButton<AdvancedFeature>(
+        YaruRadioButton<GuidedCapability>(
           title: Text(lang.installationTypeTPM),
-          value: AdvancedFeature.tpm,
-          groupValue: advancedFeature.value,
+          value: GuidedCapability.CORE_BOOT_ENCRYPTED,
+          groupValue: guidedCapability.value,
           onChanged: onChanged,
         ),
         Padding(
@@ -185,35 +184,11 @@ extension on Iterable<Widget> {
 }
 
 extension on GuidedCapability {
-  AdvancedFeature? toAdvancedFeature() {
-    switch (this) {
-      case GuidedCapability.LVM:
-      case GuidedCapability.LVM_LUKS:
-        return AdvancedFeature.lvm;
-      case GuidedCapability.ZFS:
-        return AdvancedFeature.zfs;
-      case GuidedCapability.CORE_BOOT_ENCRYPTED:
-      case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
-        return AdvancedFeature.tpm;
-      default:
-        return AdvancedFeature.none;
-    }
-  }
-}
-
-extension on AdvancedFeature {
-  GuidedCapability toGuidedCapability({bool? encryption}) {
-    switch (this) {
-      case AdvancedFeature.lvm:
-        return (encryption ?? false)
-            ? GuidedCapability.LVM_LUKS
-            : GuidedCapability.LVM;
-      case AdvancedFeature.zfs:
-        return GuidedCapability.ZFS;
-      case AdvancedFeature.tpm:
-        return GuidedCapability.CORE_BOOT_ENCRYPTED;
-      default:
-        return GuidedCapability.DIRECT;
-    }
-  }
+  GuidedCapability clean() => switch (this) {
+// We shouldn't send CORE_BOOT_PREFER_ENCRYPTED to the server
+// See https://github.com/canonical/subiquity/blob/f759d19336c5cc33545755095fcc2aced3ef6a9f/subiquity/common/types.py#L354-L356
+        GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED =>
+          GuidedCapability.CORE_BOOT_ENCRYPTED,
+        _ => this,
+      };
 }

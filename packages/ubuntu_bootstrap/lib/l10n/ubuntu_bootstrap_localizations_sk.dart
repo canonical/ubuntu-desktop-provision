@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'Vybrané LVM';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'Vybrané LVM a šifrovanie';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Zabezpečiť novú inštaláciu $RELEASE šifrovaním';
-  }
+  String get installationTypeLVMEncryptionSelected => 'Vybrané LVM a šifrovanie';
 
   @override
   String get installationTypeEncryptInfo => 'V nasledujúcom kroku si zvolíte bezpečnostný kľúč.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTÁLNE: Vymazať disk a použiť súborový systém ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'Vybrané ZFS';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTÁLNE: Povolenie hardvérového šifrovania celého disku';

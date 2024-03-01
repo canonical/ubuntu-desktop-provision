@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM обрано';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM та шифрування обрано';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Зашифрувати нову установку $RELEASE для безпеки';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM та шифрування обрано';
 
   @override
   String get installationTypeEncryptInfo => 'Ключ захисту можна буде вибрати на наступному кроці.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'ЕКСПЕРИМЕНТАЛЬНО: Витерти диск і скористатися ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'Обрано ZFS';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'ЕКСПЕРИМЕНТАЛЬНО: Увімкнути апаратне шифрування диска';

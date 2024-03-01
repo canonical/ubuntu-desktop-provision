@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM valt';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM och kryptering vald';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Kryptera den nya $RELEASE-installationen för säkerhet';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM och kryptering vald';
 
   @override
   String get installationTypeEncryptInfo => 'Du väljer en säkerhetsnyckel i nästa steg.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTELLT: Radera disk och använd ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS valt';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering';

@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => '已选择配置 LVM';
 
   @override
-  String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return '为安全起见，对新的 $RELEASE 安装进行加密';
-  }
+  String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
 
   @override
   String get installationTypeEncryptInfo => '您将在下一步中选择一个安全密钥。';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => '实验性功能：擦除磁盘并使用ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => '已选择 ZFS';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
@@ -1075,11 +1081,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';
-
-  @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return '加密新安裝的 $RELEASE 以確保資訊安全';
-  }
 
   @override
   String get installationTypeEncryptInfo => '在下一步中您需要輸入安全密鑰。';
