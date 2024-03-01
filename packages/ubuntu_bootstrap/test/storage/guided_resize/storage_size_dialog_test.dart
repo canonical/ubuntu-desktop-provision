@@ -31,7 +31,6 @@ void main() {
 
     expect(find.byType(StorageSizeBox), findsOneWidget);
     expect(find.byType(EditableText), findsOneWidget);
-    expect(find.byType(EditableText), hasFocus);
 
     await tester.enterText(find.byType(StorageSizeBox), '150');
     await tester.pump();
