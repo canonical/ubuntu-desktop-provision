@@ -19,10 +19,10 @@ But the basics are that the UI can be configured using a [YAML](https://yaml.org
 The configuration file has the following structure:
 
 ```yaml
-# (Optional) Drives overall behaviour for specific provisioners.
+# (Optional) Drives overall behavior for specific provisioners.
 #
 # Options:
-# - standard (default): the common provision flow for Ubuntu Desktop and Flavours
+# - standard (default): the common provision flow for Ubuntu Desktop and Flavors
 # - oem: enables the eula page and disables the user creation page during bootstrap
 # - core-desktop: disables exiting the installer at the end (because there is no
 #   live session), and only allows to reboot
