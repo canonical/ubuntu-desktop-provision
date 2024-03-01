@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
@@ -45,8 +47,8 @@ Future<void> showCreatePartitionDialog(
             rows: [
               <Widget>[
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                AnimatedBuilder(
-                  animation: Listenable.merge([
+                ListenableBuilder(
+                  listenable: Listenable.merge([
                     partitionSize,
                     partitionUnit,
                   ]),
@@ -164,8 +166,8 @@ Future<void> showEditPartitionDialog(
             rows: [
               <Widget>[
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                AnimatedBuilder(
-                  animation: Listenable.merge([
+                ListenableBuilder(
+                  listenable: Listenable.merge([
                     partitionSize,
                     partitionUnit,
                   ]),

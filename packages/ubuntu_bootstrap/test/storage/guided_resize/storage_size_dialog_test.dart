@@ -57,14 +57,11 @@ void main() {
     final context = tester.element(find.byType(StorageSizeDialog));
 
     for (final unit in DataUnit.values) {
-      final menuButton = find.byType(MenuButtonBuilder<DataUnit>).last;
+      final menuButton = find.byType(MenuButtonBuilder<DataUnit>);
       expect(menuButton, findsOneWidget);
       await tester.pumpAndSettle();
       await tester.ensureVisible(menuButton);
       await tester.pumpAndSettle();
-      // TODO: This is needed to a bug in Flutter 3.16.0 where the focus still
-      // is on the text field within the SpinBox (only in tests).
-      FocusScope.of(context).unfocus();
       await tester.tap(menuButton);
       await tester.pumpAndSettle();
 
