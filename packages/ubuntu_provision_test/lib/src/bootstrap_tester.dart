@@ -172,13 +172,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
           break;
         case GuidedCapability.LVM_LUKS:
-          await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
-          await pump();
-          await tap(find.text(l10n.installationTypeEncrypt('Ubuntu')));
+          await tap(find.text(l10n.installationTypeLVMEncryption('Ubuntu')));
           break;
         case GuidedCapability.ZFS:
           await tap(find.text(l10n.installationTypeZFS));
-          await pump();
+          break;
+        case GuidedCapability.ZFS_LUKS_KEYSTORE:
+          await tap(find.text(l10n.installationTypeZFSEncryption));
           break;
         default:
           break;

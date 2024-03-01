@@ -252,6 +252,81 @@ void main() {
     );
   });
 
+  testWidgets('ZFS encrypted', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(() => app.main(<String>[]));
+    await tester.pumpAndSettle();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testAccessibilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+      guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testSecurityKeyPage(securityKey: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallPage();
+    await tester.pumpAndSettle();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.ZFS_LUKS_KEYSTORE,
+    );
+  });
+
   testWidgets('tpm', (tester) async {
     const identity = Identity(
       realname: 'User',
@@ -651,6 +726,12 @@ Future<void> verifySubiquityConfig({
             isNotEmpty);
       case GuidedCapability.ZFS:
         expect(actualStorage.where((config) => config['type'] == 'zpool'),
+            isNotEmpty);
+        break;
+      case GuidedCapability.ZFS_LUKS_KEYSTORE:
+        expect(actualStorage.where((config) => config['type'] == 'zpool'),
+            isNotEmpty);
+        expect(actualStorage.where((config) => config['type'] == 'dm_crypt'),
             isNotEmpty);
         break;
       case GuidedCapability.CORE_BOOT_ENCRYPTED:
