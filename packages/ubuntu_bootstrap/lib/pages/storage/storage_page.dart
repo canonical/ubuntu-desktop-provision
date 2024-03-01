@@ -152,6 +152,8 @@ extension _GuidedCapabilityL10n on GuidedCapability {
         return lang.installationTypeLVMEncryptionSelected;
       case GuidedCapability.ZFS:
         return lang.installationTypeZFSSelected;
+      case GuidedCapability.ZFS_LUKS_KEYSTORE:
+        return lang.installationTypeZFSEncryptionSelected;
       case GuidedCapability.CORE_BOOT_ENCRYPTED:
       case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
         return lang.installationTypeTPMSelected;
