@@ -65,7 +65,12 @@ void main() {
     final context = tester.element(find.byType(EthernetView));
     final l10n = NetworkLocalizations.of(context);
 
-    expect(find.byType(YaruRadioButton<ConnectMode>), findsNothing);
+    final radioButtonFinder = find.byType(YaruRadioButton<ConnectMode>);
+    expect(radioButtonFinder, findsOneWidget);
+
+    final radioButton =
+        tester.widget<YaruRadioButton<ConnectMode>>(radioButtonFinder);
+    expect(radioButton.onChanged, isNull);
 
     expect(find.text(l10n.networkWiredOff), findsOneWidget);
     expect(find.text(l10n.networkWiredDisabled), findsOneWidget);
@@ -103,7 +108,13 @@ void main() {
     final l10n = NetworkLocalizations.of(context);
 
     expect(find.byType(OutlinedButton), findsNothing);
-    expect(find.byType(YaruRadioButton<ConnectMode>), findsNothing);
+
+    final radioButtonFinder = find.byType(YaruRadioButton<ConnectMode>);
+    expect(radioButtonFinder, findsOneWidget);
+
+    final radioButton =
+        tester.widget<YaruRadioButton<ConnectMode>>(radioButtonFinder);
+    expect(radioButton.onChanged, isNull);
     expect(find.text(l10n.networkWiredNone), findsOneWidget);
   });
 }
