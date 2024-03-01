@@ -297,50 +297,50 @@ class _FakeDirectory_21 extends _i1.SmartFake implements _i10.Directory {
         );
 }
 
-class _FakeDateTime_22 extends _i1.SmartFake implements DateTime {
-  _FakeDateTime_22(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeRandomAccessFile_23 extends _i1.SmartFake
-    implements _i10.RandomAccessFile {
-  _FakeRandomAccessFile_23(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeIOSink_24 extends _i1.SmartFake implements _i10.IOSink {
-  _FakeIOSink_24(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeFileStat_25 extends _i1.SmartFake implements _i10.FileStat {
-  _FakeFileStat_25(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeFileSystemEntity_26 extends _i1.SmartFake
+class _FakeFileSystemEntity_22 extends _i1.SmartFake
     implements _i10.FileSystemEntity {
-  _FakeFileSystemEntity_26(
+  _FakeFileSystemEntity_22(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeDateTime_23 extends _i1.SmartFake implements DateTime {
+  _FakeDateTime_23(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeRandomAccessFile_24 extends _i1.SmartFake
+    implements _i10.RandomAccessFile {
+  _FakeRandomAccessFile_24(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeIOSink_25 extends _i1.SmartFake implements _i10.IOSink {
+  _FakeIOSink_25(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeFileStat_26 extends _i1.SmartFake implements _i10.FileStat {
+  _FakeFileStat_26(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -2407,6 +2407,44 @@ class MockFile extends _i1.Mock implements _i10.File {
       ) as _i10.File);
 
   @override
+  _i13.Future<_i10.FileSystemEntity> delete({bool? recursive = false}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #delete,
+          [],
+          {#recursive: recursive},
+        ),
+        returnValue:
+            _i13.Future<_i10.FileSystemEntity>.value(_FakeFileSystemEntity_22(
+          this,
+          Invocation.method(
+            #delete,
+            [],
+            {#recursive: recursive},
+          ),
+        )),
+        returnValueForMissingStub:
+            _i13.Future<_i10.FileSystemEntity>.value(_FakeFileSystemEntity_22(
+          this,
+          Invocation.method(
+            #delete,
+            [],
+            {#recursive: recursive},
+          ),
+        )),
+      ) as _i13.Future<_i10.FileSystemEntity>);
+
+  @override
+  void deleteSync({bool? recursive = false}) => super.noSuchMethod(
+        Invocation.method(
+          #deleteSync,
+          [],
+          {#recursive: recursive},
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   _i13.Future<_i10.File> copy(String? newPath) => (super.noSuchMethod(
         Invocation.method(
           #copy,
@@ -2476,14 +2514,14 @@ class MockFile extends _i1.Mock implements _i10.File {
           #lastAccessed,
           [],
         ),
-        returnValue: _i13.Future<DateTime>.value(_FakeDateTime_22(
+        returnValue: _i13.Future<DateTime>.value(_FakeDateTime_23(
           this,
           Invocation.method(
             #lastAccessed,
             [],
           ),
         )),
-        returnValueForMissingStub: _i13.Future<DateTime>.value(_FakeDateTime_22(
+        returnValueForMissingStub: _i13.Future<DateTime>.value(_FakeDateTime_23(
           this,
           Invocation.method(
             #lastAccessed,
@@ -2498,14 +2536,14 @@ class MockFile extends _i1.Mock implements _i10.File {
           #lastAccessedSync,
           [],
         ),
-        returnValue: _FakeDateTime_22(
+        returnValue: _FakeDateTime_23(
           this,
           Invocation.method(
             #lastAccessedSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeDateTime_22(
+        returnValueForMissingStub: _FakeDateTime_23(
           this,
           Invocation.method(
             #lastAccessedSync,
@@ -2539,14 +2577,14 @@ class MockFile extends _i1.Mock implements _i10.File {
           #lastModified,
           [],
         ),
-        returnValue: _i13.Future<DateTime>.value(_FakeDateTime_22(
+        returnValue: _i13.Future<DateTime>.value(_FakeDateTime_23(
           this,
           Invocation.method(
             #lastModified,
             [],
           ),
         )),
-        returnValueForMissingStub: _i13.Future<DateTime>.value(_FakeDateTime_22(
+        returnValueForMissingStub: _i13.Future<DateTime>.value(_FakeDateTime_23(
           this,
           Invocation.method(
             #lastModified,
@@ -2561,14 +2599,14 @@ class MockFile extends _i1.Mock implements _i10.File {
           #lastModifiedSync,
           [],
         ),
-        returnValue: _FakeDateTime_22(
+        returnValue: _FakeDateTime_23(
           this,
           Invocation.method(
             #lastModifiedSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeDateTime_22(
+        returnValueForMissingStub: _FakeDateTime_23(
           this,
           Invocation.method(
             #lastModifiedSync,
@@ -2606,7 +2644,7 @@ class MockFile extends _i1.Mock implements _i10.File {
           {#mode: mode},
         ),
         returnValue:
-            _i13.Future<_i10.RandomAccessFile>.value(_FakeRandomAccessFile_23(
+            _i13.Future<_i10.RandomAccessFile>.value(_FakeRandomAccessFile_24(
           this,
           Invocation.method(
             #open,
@@ -2615,7 +2653,7 @@ class MockFile extends _i1.Mock implements _i10.File {
           ),
         )),
         returnValueForMissingStub:
-            _i13.Future<_i10.RandomAccessFile>.value(_FakeRandomAccessFile_23(
+            _i13.Future<_i10.RandomAccessFile>.value(_FakeRandomAccessFile_24(
           this,
           Invocation.method(
             #open,
@@ -2633,7 +2671,7 @@ class MockFile extends _i1.Mock implements _i10.File {
           [],
           {#mode: mode},
         ),
-        returnValue: _FakeRandomAccessFile_23(
+        returnValue: _FakeRandomAccessFile_24(
           this,
           Invocation.method(
             #openSync,
@@ -2641,7 +2679,7 @@ class MockFile extends _i1.Mock implements _i10.File {
             {#mode: mode},
           ),
         ),
-        returnValueForMissingStub: _FakeRandomAccessFile_23(
+        returnValueForMissingStub: _FakeRandomAccessFile_24(
           this,
           Invocation.method(
             #openSync,
@@ -2682,7 +2720,7 @@ class MockFile extends _i1.Mock implements _i10.File {
             #encoding: encoding,
           },
         ),
-        returnValue: _FakeIOSink_24(
+        returnValue: _FakeIOSink_25(
           this,
           Invocation.method(
             #openWrite,
@@ -2693,7 +2731,7 @@ class MockFile extends _i1.Mock implements _i10.File {
             },
           ),
         ),
-        returnValueForMissingStub: _FakeIOSink_24(
+        returnValueForMissingStub: _FakeIOSink_25(
           this,
           Invocation.method(
             #openWrite,
@@ -2998,7 +3036,7 @@ class MockFile extends _i1.Mock implements _i10.File {
           #stat,
           [],
         ),
-        returnValue: _i13.Future<_i10.FileStat>.value(_FakeFileStat_25(
+        returnValue: _i13.Future<_i10.FileStat>.value(_FakeFileStat_26(
           this,
           Invocation.method(
             #stat,
@@ -3006,7 +3044,7 @@ class MockFile extends _i1.Mock implements _i10.File {
           ),
         )),
         returnValueForMissingStub:
-            _i13.Future<_i10.FileStat>.value(_FakeFileStat_25(
+            _i13.Future<_i10.FileStat>.value(_FakeFileStat_26(
           this,
           Invocation.method(
             #stat,
@@ -3021,14 +3059,14 @@ class MockFile extends _i1.Mock implements _i10.File {
           #statSync,
           [],
         ),
-        returnValue: _FakeFileStat_25(
+        returnValue: _FakeFileStat_26(
           this,
           Invocation.method(
             #statSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _FakeFileStat_25(
+        returnValueForMissingStub: _FakeFileStat_26(
           this,
           Invocation.method(
             #statSync,
@@ -3036,44 +3074,6 @@ class MockFile extends _i1.Mock implements _i10.File {
           ),
         ),
       ) as _i10.FileStat);
-
-  @override
-  _i13.Future<_i10.FileSystemEntity> delete({bool? recursive = false}) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #delete,
-          [],
-          {#recursive: recursive},
-        ),
-        returnValue:
-            _i13.Future<_i10.FileSystemEntity>.value(_FakeFileSystemEntity_26(
-          this,
-          Invocation.method(
-            #delete,
-            [],
-            {#recursive: recursive},
-          ),
-        )),
-        returnValueForMissingStub:
-            _i13.Future<_i10.FileSystemEntity>.value(_FakeFileSystemEntity_26(
-          this,
-          Invocation.method(
-            #delete,
-            [],
-            {#recursive: recursive},
-          ),
-        )),
-      ) as _i13.Future<_i10.FileSystemEntity>);
-
-  @override
-  void deleteSync({bool? recursive = false}) => super.noSuchMethod(
-        Invocation.method(
-          #deleteSync,
-          [],
-          {#recursive: recursive},
-        ),
-        returnValueForMissingStub: null,
-      );
 
   @override
   _i13.Stream<_i10.FileSystemEvent> watch({
