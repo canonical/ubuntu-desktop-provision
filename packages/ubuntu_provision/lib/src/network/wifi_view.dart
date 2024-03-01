@@ -28,22 +28,18 @@ class WifiRadioButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(wifiModelProvider);
     final lang = NetworkLocalizations.of(context);
+    final isEnabled = model.isEnabled && model.devices.isNotEmpty;
+    final disabledTitle =
+        !model.isEnabled ? lang.networkWifiOff : lang.networkWifiNone;
+
     return Padding(
       padding: const EdgeInsets.only(top: 8),
-      child: !model.isEnabled || model.devices.isEmpty
-          ? NetworkTile(
-              leading: Icon(YaruIcons.window_close,
-                  color: Theme.of(context).colorScheme.error),
-              title: !model.isEnabled
-                  ? Text(lang.networkWifiOff)
-                  : Text(lang.networkWifiNone),
-            )
-          : YaruRadioButton<ConnectMode>(
-              title: Text(lang.networkWifiOption),
-              value: ConnectMode.wifi,
-              groupValue: value,
-              onChanged: onChanged,
-            ),
+      child: YaruRadioButton<ConnectMode>(
+        title: Text(isEnabled ? lang.networkWifiOption : disabledTitle),
+        value: ConnectMode.wifi,
+        groupValue: value,
+        onChanged: isEnabled ? onChanged : null,
+      ),
     );
   }
 }
