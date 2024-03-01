@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM 선택됨';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM및 암호화 선택됨';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return '보안을 위해 새 $RELEASE 설치 암호화';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM및 암호화 선택됨';
 
   @override
   String get installationTypeEncryptInfo => '다음 단계에서 보안 키를 선택합니다.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => '실험적 기능: 디스크 지우고 ZFS 사용';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS 선택됨';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
