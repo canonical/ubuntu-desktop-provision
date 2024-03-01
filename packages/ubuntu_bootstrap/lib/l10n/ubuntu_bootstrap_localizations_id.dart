@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM dipilih';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Enkripsi instalasi $RELEASE baru untuk keamanan';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
 
   @override
   String get installationTypeEncryptInfo => 'Anda akan memilih kunci keamanan di langkah berikutnya.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EKSPERIMENTAL: Hapus disk dan gunakan ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS dipilih';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';

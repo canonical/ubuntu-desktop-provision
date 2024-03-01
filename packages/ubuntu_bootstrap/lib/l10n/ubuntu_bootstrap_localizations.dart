@@ -651,17 +651,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'LVM selected'**
   String get installationTypeLVMSelected;
 
+  /// No description provided for @installationTypeLVMEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'Use LVM and encryption with the new {RELEASE} installation'**
+  String installationTypeLVMEncryption(Object RELEASE);
+
   /// No description provided for @installationTypeLVMEncryptionSelected.
   ///
   /// In en, this message translates to:
   /// **'LVM and encryption selected'**
   String get installationTypeLVMEncryptionSelected;
-
-  /// No description provided for @installationTypeEncrypt.
-  ///
-  /// In en, this message translates to:
-  /// **'Encrypt the new {RELEASE} installation for security'**
-  String installationTypeEncrypt(Object RELEASE);
 
   /// No description provided for @installationTypeEncryptInfo.
   ///
@@ -675,11 +675,23 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'EXPERIMENTAL: Erase disk and use ZFS'**
   String get installationTypeZFS;
 
+  /// No description provided for @installationTypeZFSEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'EXPERIMENTAL: Erase disk and use ZFS with encryption'**
+  String get installationTypeZFSEncryption;
+
   /// No description provided for @installationTypeZFSSelected.
   ///
   /// In en, this message translates to:
   /// **'ZFS selected'**
   String get installationTypeZFSSelected;
+
+  /// No description provided for @installationTypeZFSEncryptionSelected.
+  ///
+  /// In en, this message translates to:
+  /// **'ZFS and encryption selected'**
+  String get installationTypeZFSEncryptionSelected;
 
   /// No description provided for @installationTypeTPM.
   ///

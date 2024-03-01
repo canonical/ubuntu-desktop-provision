@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM kiválasztva';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM és titkosítás kiválasztva';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Az új $RELEASE telepítés titkosítása a biztonság érdekében';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM és titkosítás kiválasztva';
 
   @override
   String get installationTypeEncryptInfo => 'Biztonsági kulcsot a következő lépésben fog választani.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'KÍSÉRLETI: lemez törlése és ZFS használata';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS kiválasztva';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése';

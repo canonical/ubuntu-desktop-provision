@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM seçildi';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM ve şifreleme seçildi';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Güvenlik için yeni $RELEASE kurulumunu şifrele';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM ve şifreleme seçildi';
 
   @override
   String get installationTypeEncryptInfo => 'Bir sonraki adımda güvenlik anahtarı seçeceksiniz.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'DENEYSEL: Diski sil ve ZFS kullan';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS seçildi';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'DENEYSEL: Donanım destekli tam disk şifrelemeyi etkinleştir';

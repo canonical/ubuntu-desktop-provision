@@ -234,21 +234,25 @@
   },
   "installationTypeLVMSelected": "LVM selected",
   "@installationTypeLVMSelected": {},
-  "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
-  "@installationTypeLVMEncryptionSelected": {},
-  "installationTypeEncrypt": "Encrypt the new {RELEASE} installation for security",
-  "@installationTypeEncrypt": {
+  "installationTypeLVMEncryption": "Use LVM and encryption with the new {RELEASE} installation",
+  "@installationTypeLVMEncryption": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
+  "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
+  "@installationTypeLVMEncryptionSelected": {},
   "installationTypeEncryptInfo": "You will choose a security key in the next step.",
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "EXPERIMENTAL: Erase disk and use ZFS",
   "@installationTypeZFS": {},
+  "installationTypeZFSEncryption": "EXPERIMENTAL: Erase disk and use ZFS with encryption",
+  "@installationTypeZFSEncryption": {},
   "installationTypeZFSSelected": "ZFS selected",
   "@installationTypeZFSSelected": {},
+  "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
+  "@installationTypeZFSEncryptionSelected": {},
   "installationTypeTPM": "EXPERIMENTAL: Enable hardware-backed full disk encryption",
   "@installationTypeTPM": {},
   "installationTypeTPMWarning": "<font color=\"{color}\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"{url}\">release notes</a> before enabling.",

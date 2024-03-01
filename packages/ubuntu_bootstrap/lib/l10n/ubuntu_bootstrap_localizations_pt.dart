@@ -250,12 +250,12 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM selecionado';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM e encriptação selecionado';
+  String installationTypeLVMEncryption(Object RELEASE) {
+    return 'Use LVM and encryption with the new $RELEASE installation';
+  }
 
   @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Criptografar a nova instalação do $RELEASE para maior segurança';
-  }
+  String get installationTypeLVMEncryptionSelected => 'LVM e encriptação selecionado';
 
   @override
   String get installationTypeEncryptInfo => 'Deverá escolher uma chave de segurança no passo seguinte.';
@@ -264,7 +264,13 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTAL: Apagar o disco e usar ZFS';
 
   @override
+  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+
+  @override
   String get installationTypeZFSSelected => 'ZFS selecionado';
+
+  @override
+  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTAL: Ativar a criptografia completa de disco com suporte de hardware';
@@ -1075,11 +1081,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM e criptografia selecionados';
-
-  @override
-  String installationTypeEncrypt(Object RELEASE) {
-    return 'Criptografar a nova instalação do $RELEASE para maior segurança';
-  }
 
   @override
   String get installationTypeEncryptInfo => 'Você deverá escolher uma chave de segurança no próximo passo.';
