@@ -10,7 +10,7 @@ base: core22
 architectures:
   - build-on: amd64
   - build-on: arm64
-  
+
 apps:
   subiquity-server:
     command: bin/subiquity-server
@@ -47,7 +47,7 @@ parts:
     plugin: nil
     source: https://git.launchpad.net/curtin
     source-type: git
-    source-commit: 237053d9d18916dd72cf861280474d4df0e9fd24
+    source-commit: c3c4f42862b01e76ef6767e66b808707897aa558
     override-pull: |
       craftctl default
       PACKAGED_VERSION="$(git describe --long --abbrev=9 --match=[0-9][0-9]*)"
@@ -175,7 +175,7 @@ parts:
       cp -r snap/local/postinst.d $CRAFT_PART_INSTALL/etc/subiquity
       mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
       cp snap/local/ubuntu-desktop-bootstrap.desktop $CRAFT_PART_INSTALL/usr/share/applications/
-      
+
       dart pub global activate melos
       dart pub global run melos bootstrap
       cd packages/ubuntu_bootstrap
