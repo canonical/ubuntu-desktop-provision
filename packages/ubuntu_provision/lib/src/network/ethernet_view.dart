@@ -4,7 +4,6 @@ import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/ethernet_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_tile.dart';
-import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/yaru_widgets.dart';
 
 class EthernetRadioButton extends ConsumerWidget {
@@ -21,21 +20,15 @@ class EthernetRadioButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(ethernetModelProvider);
     final lang = NetworkLocalizations.of(context);
-    if (!model.isEnabled || model.devices.isEmpty) {
-      return NetworkTile(
-        leading: Icon(YaruIcons.window_close,
-            color: Theme.of(context).colorScheme.error),
-        title: model.devices.isEmpty
-            ? Text(lang.networkWiredNone)
-            : Text(lang.networkWiredOff),
-      );
-    }
+    final isEnabled = model.isEnabled && model.devices.isNotEmpty;
+    final disabledTitle =
+        model.devices.isEmpty ? lang.networkWiredNone : lang.networkWiredOff;
 
     return YaruRadioButton<ConnectMode>(
-      title: Text(lang.networkWiredOption),
+      title: Text(isEnabled ? lang.networkWiredOption : disabledTitle),
       value: ConnectMode.ethernet,
       groupValue: value,
-      onChanged: onChanged,
+      onChanged: isEnabled ? onChanged : null,
     );
   }
 }
