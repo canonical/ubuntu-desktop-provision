@@ -18,6 +18,8 @@ pages:
     image: "assets/images/keyboard.svg"
   not-enough-disk-space:
   secure-boot:
+  installation-type:
+    image: "assets/images/keyboard.svg"
   storage:
     image: "assets/images/disk.svg"
   confirm:

@@ -579,6 +579,48 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Type of installation'**
   String get installationTypeTitle;
 
+  /// No description provided for @installationTypeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'How do you want to install Ubuntu?'**
+  String get installationTypeDescription;
+
+  /// No description provided for @guidedInstallationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Guided installation'**
+  String get guidedInstallationTitle;
+
+  /// No description provided for @guidedInstallationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'For most people and straightforward setups.'**
+  String get guidedInstallationSubtitle;
+
+  /// No description provided for @manualInstallationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manual installation'**
+  String get manualInstallationTitle;
+
+  /// No description provided for @manualInstallationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'For advanced users seeking customized disk setups.'**
+  String get manualInstallationSubtitle;
+
+  /// No description provided for @automatedInstallationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated installation'**
+  String get automatedInstallationTitle;
+
+  /// No description provided for @automatedInstallationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.'**
+  String get automatedInstallationSubtitle;
+
   /// No description provided for @installationTypeOSDetected.
   ///
   /// In en, this message translates to:

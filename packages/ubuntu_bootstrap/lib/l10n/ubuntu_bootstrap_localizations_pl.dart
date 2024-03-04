@@ -204,6 +204,27 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Typ instalacji';
 
   @override
+  String get installationTypeDescription => 'How do you want to install Ubuntu?';
+
+  @override
+  String get guidedInstallationTitle => 'Guided installation';
+
+  @override
+  String get guidedInstallationSubtitle => 'For most people and straightforward setups.';
+
+  @override
+  String get manualInstallationTitle => 'Manual installation';
+
+  @override
+  String get manualInstallationSubtitle => 'For advanced users seeking customized disk setups.';
+
+  @override
+  String get automatedInstallationTitle => 'Automated installation';
+
+  @override
+  String get automatedInstallationSubtitle => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Na tym komputerze jest obecnie zainstalowany system $os. Co chcesz zrobić?';
   }

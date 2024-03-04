@@ -6,6 +6,8 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+import 'package:ubuntu_bootstrap/pages/installation_type/installation_type_page.dart';
+
 enum InstallationStep with RouteName {
   loading(LoadingPage.new, discreteStep: false, wizardStep: false),
   locale(LocalePage.new),
@@ -18,6 +20,7 @@ enum InstallationStep with RouteName {
   sourceSelection(SourceSelectionPage.new),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
+  installationType(InstallationTypePage.new),
   secureBoot(SecureBootPage.new),
   storage(StorageWizard.new, discreteStep: false),
   identity(IdentityPage.new),

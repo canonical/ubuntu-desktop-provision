@@ -204,6 +204,27 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'ഇൻസ്റ്റാളേഷന്റെ തരം';
 
   @override
+  String get installationTypeDescription => 'How do you want to install Ubuntu?';
+
+  @override
+  String get guidedInstallationTitle => 'Guided installation';
+
+  @override
+  String get guidedInstallationSubtitle => 'For most people and straightforward setups.';
+
+  @override
+  String get manualInstallationTitle => 'Manual installation';
+
+  @override
+  String get manualInstallationSubtitle => 'For advanced users seeking customized disk setups.';
+
+  @override
+  String get automatedInstallationTitle => 'Automated installation';
+
+  @override
+  String get automatedInstallationSubtitle => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'ഈ കമ്പ്യൂട്ടറിൽ നിലവിൽ $os ഉണ്ട്. നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നത്?';
   }
