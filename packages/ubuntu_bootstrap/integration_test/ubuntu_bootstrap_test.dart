@@ -73,6 +73,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testInstallationTypePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(type: StorageType.erase);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -141,6 +145,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallationTypePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -219,6 +227,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testInstallationTypePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.ZFS,
@@ -287,6 +299,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallationTypePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -370,6 +386,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testInstallationTypePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
@@ -449,6 +469,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testInstallationTypePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testStoragePage(type: StorageType.manual);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -515,6 +539,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallationTypePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -590,6 +618,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallationTypePage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

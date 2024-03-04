@@ -510,6 +510,10 @@ extension on WidgetTester {
     await jumpToPage(InstallationStep.sourceSelection.route);
     await tapNext();
     await pumpAndSettle();
+    // Jump past the codecs page
+    await tapNext();
+    await pumpAndSettle();
+    // Jump past the installation type page
     await tapNext();
     await pumpUntil(find.byType(StorageWizard));
   }

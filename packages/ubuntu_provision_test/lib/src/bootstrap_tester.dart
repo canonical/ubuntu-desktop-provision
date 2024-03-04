@@ -129,6 +129,25 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> testInstallationTypePage({
+    InstallationType installationType = InstallationType.guided,
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(InstallationTypePage);
+
+    final context = element(find.byType(InstallationTypePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.installationTypeTitle), findsOneWidget);
+
+    await tapRadio(installationType);
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testNotEnoughDiskSpacePage({
     String? screenshot,
   }) async {
