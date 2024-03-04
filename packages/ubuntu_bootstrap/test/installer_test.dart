@@ -51,6 +51,7 @@ void main() {
       tester.buildInstaller(
         state: ApplicationState.RUNNING,
         interactive: false,
+        proceedToDone: true,
       ),
     );
     await tester.pumpAndSettle();
@@ -97,7 +98,11 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildInstaller({required ApplicationState state, bool? interactive}) {
+  Widget buildInstaller({
+    required ApplicationState state,
+    bool? interactive,
+    bool proceedToDone = false,
+  }) {
     final status = ApplicationStatus(
       state: state,
       confirmingTty: '',
@@ -126,11 +131,18 @@ extension on WidgetTester {
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
 
     final subiquityClient = MockSubiquityClient();
-    when(subiquityClient.getStatus()).thenAnswer(
-      (_) async => status.copyWith(state: ApplicationState.RUNNING),
-    );
+    when(subiquityClient.getStatus()).thenAnswer((_) async => status);
+    when(subiquityClient.monitorStatus()).thenAnswer((_) =>
+        Stream.fromIterable([
+          status,
+          if (proceedToDone) fakeApplicationStatus(ApplicationState.DONE)
+        ]));
 
-    registerMockService<ConfigService>(MockConfigService());
+    final config = MockConfigService();
+    when(config.provisioningMode)
+        .thenAnswer((_) async => ProvisioningMode.standard);
+
+    registerMockService<ConfigService>(config);
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
     registerMockService<JournalService>(journal);
