@@ -204,6 +204,10 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(InstallationTypePage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(StoragePage), findsOneWidget);
     verify(storageModel.init()).called(1);
 
@@ -289,7 +293,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.jumpToWizardRoute(InstallationStep.codecsAndDrivers.route);
+    await tester.jumpToWizardRoute(InstallationStep.installationType.route);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -385,6 +389,7 @@ void main() {
           'sourceSelection',
           'codecsAndDrivers',
           'notEnoughDiskSpace',
+          'installationType',
           'secureBoot',
           'storage',
           'identity',
