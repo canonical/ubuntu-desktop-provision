@@ -120,6 +120,7 @@ class _AutoinstallWizard extends ConsumerWidget {
         ),
         InstallationStep.install.route: WizardRoute(
           builder: (_) => const InstallPage(),
+          onLoad: (_) => const InstallPage().load(context, ref),
         ),
       },
     );
