@@ -52,8 +52,7 @@ func New() *App {
 			// Set config defaults
 			a.config = daemonConfig{
 				Paths: systemPaths{
-					// Empty by default for socket activation
-					Socket: "",
+					Socket: "/run/desktop-provision/init.socket",
 				},
 			}
 

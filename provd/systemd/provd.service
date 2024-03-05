@@ -1,9 +1,0 @@
-[Unit]
-Description=Ubuntu Desktop Provisioning Daemon
-Requires=provd.socket
-
-[Service]
-User=gnome-initial-setup
-Group=gnome-initial-setup
-ExecStart=/usr/bin/provd
-Restart=on-failure
