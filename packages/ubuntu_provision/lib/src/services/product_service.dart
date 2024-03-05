@@ -8,7 +8,7 @@ const String hostPath = '/var/lib/snapd/hostfs/etc/os-release';
 
 /// A class which contains the system name and version
 class ProductInfo {
-  ProductInfo({required this.name, this.version});
+  const ProductInfo({required this.name, this.version});
 
   final String name;
   final String? version;
@@ -43,7 +43,7 @@ class ProductService {
       // ignore: empty_catches
     } on Exception {}
 
-    _cachedProductInfo ??= ProductInfo(name: 'Ubuntu');
+    _cachedProductInfo ??= const ProductInfo(name: 'Ubuntu');
 
     return _cachedProductInfo!;
   }

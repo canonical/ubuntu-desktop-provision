@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -32,87 +34,112 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeNoOSDetected),
+      find.text(l10n.installationTypeHeader),
       findsOneWidget,
     );
   });
 
   testWidgets('one existing OS', (tester) async {
-    final model = buildStorageModel(existingOS: [
-      const OsProber(long: 'Ubuntu 18.04 LTS', label: 'Ubuntu', type: 'ext4')
-    ]);
+    const osProber = OsProber(
+      long: 'Ubuntu 18.04 LTS',
+      label: 'Ubuntu',
+      type: 'ext4',
+    );
+    const productInfo = ProductInfo(name: 'Ubuntu');
+    final model = buildStorageModel(
+      existingOS: [osProber],
+      productInfo: productInfo,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeOSDetected('Ubuntu 18.04 LTS')),
+      find.text(
+        l10n.installationTypeAlongside(productInfo.name, osProber.long),
+      ),
       findsOneWidget,
     );
   });
 
   testWidgets('two existing OSes', (tester) async {
-    final model = buildStorageModel(existingOS: [
+    final osProbers = [
       const OsProber(long: 'Ubuntu 18.04 LTS', label: 'Ubuntu', type: 'ext4'),
       const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
-    ]);
+    ];
+    const productInfo = ProductInfo(name: 'Ubuntu');
+    final model = buildStorageModel(
+      existingOS: osProbers,
+      productInfo: productInfo,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeDualOSDetected(
-          'Ubuntu 18.04 LTS', 'Ubuntu 20.04 LTS')),
+      find.text(l10n.installationTypeAlongsideDual(
+        productInfo.name,
+        osProbers[0].long,
+        osProbers[1].long,
+      )),
       findsOneWidget,
     );
   });
 
   testWidgets('multiple existing OSes', (tester) async {
-    final model = buildStorageModel(existingOS: [
-      const OsProber(long: 'Windows 10', label: 'windows', type: 'ntfs'),
-      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
-      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
-    ]);
+    const productInfo = ProductInfo(name: 'Ubuntu');
+    final model = buildStorageModel(
+      existingOS: [
+        const OsProber(long: 'Windows 10', label: 'windows', type: 'ntfs'),
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
+      ],
+      productInfo: productInfo,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeMultiOSDetected),
+      find.text(l10n.installationTypeAlongsideMulti(productInfo.name)),
       findsOneWidget,
     );
   });
 
   testWidgets('duplicate existing OSes', (tester) async {
-    final model = buildStorageModel(existingOS: [
-      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
-      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
-    ]);
+    const productInfo = ProductInfo(name: 'Ubuntu');
+    final model = buildStorageModel(
+      existingOS: [
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
+      ],
+      productInfo: productInfo,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeMultiOSDetected),
+      find.text(l10n.installationTypeAlongsideMulti(productInfo.name)),
       findsOneWidget,
     );
   });
 
   testWidgets('alongside windows', (tester) async {
+    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
+    const osProber = OsProber(
+      long: 'Windows 10',
+      label: 'WIN10',
+      version: '10',
+      type: 'ntfs',
+    );
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
-      existingOS: [
-        const OsProber(
-          long: 'Windows 10',
-          label: 'WIN10',
-          version: '10',
-          type: 'ntfs',
-        ),
-      ],
+      productInfo: productInfo,
+      existingOS: [osProber],
       canInstallAlongside: true,
     );
     await tester.pumpApp((_) => buildPage(model));
@@ -120,24 +147,25 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongside('Ubuntu 22.10', 'Windows 10'));
+    final radio = find.text(
+      l10n.installationTypeAlongside(productInfo.name, osProber.long),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
   });
 
   testWidgets('alongside bitlocker', (tester) async {
+    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
+    const osProber = OsProber(
+      long: 'Windows 11',
+      label: 'WIN11',
+      version: '11',
+      type: 'BitLocker',
+    );
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
-      existingOS: [
-        const OsProber(
-          long: 'Windows 11',
-          label: 'WIN11',
-          version: '11',
-          type: 'BitLocker',
-        ),
-      ],
+      productInfo: productInfo,
+      existingOS: [osProber],
       canInstallAlongside: false,
       hasBitLocker: true,
     );
@@ -146,8 +174,9 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongside('Ubuntu 22.10', 'Windows 11'));
+    final radio = find.text(
+      l10n.installationTypeAlongside(productInfo.name, osProber.long),
+    );
     expect(radio, findsOneWidget);
 
     await tester.tap(radio);
@@ -155,16 +184,16 @@ void main() {
   });
 
   testWidgets('alongside ubuntu', (tester) async {
+    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
+    const osProber = OsProber(
+      long: 'Ubuntu 18.04 LTS',
+      label: 'Ubuntu',
+      version: '18.04 LTS',
+      type: 'ext4',
+    );
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
-      existingOS: [
-        const OsProber(
-          long: 'Ubuntu 18.04 LTS',
-          label: 'Ubuntu',
-          version: '18.04 LTS',
-          type: 'ext4',
-        ),
-      ],
+      productInfo: productInfo,
+      existingOS: [osProber],
       canInstallAlongside: true,
     );
     await tester.pumpApp((_) => buildPage(model));
@@ -172,8 +201,9 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongside('Ubuntu 22.10', 'Ubuntu 18.04 LTS'));
+    final radio = find.text(
+      l10n.installationTypeAlongside('Ubuntu 22.10', 'Ubuntu 18.04 LTS'),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
@@ -181,7 +211,7 @@ void main() {
 
   testWidgets('alongside unknown', (tester) async {
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
+      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       canInstallAlongside: true,
     );
     await tester.pumpApp((_) => buildPage(model));
@@ -189,8 +219,9 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongsideUnknown('Ubuntu 22.10'));
+    final radio = find.text(
+      l10n.installationTypeAlongsideUnknown('Ubuntu 22.10'),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
@@ -198,7 +229,7 @@ void main() {
 
   testWidgets('alongside dual os', (tester) async {
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
+      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Windows 10',
@@ -220,9 +251,13 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongsideDual(
-            'Ubuntu 22.10', 'Windows 10', 'Ubuntu 20.04 LTS'));
+    final radio = find.text(
+      l10n.installationTypeAlongsideDual(
+        'Ubuntu 22.10',
+        'Windows 10',
+        'Ubuntu 20.04 LTS',
+      ),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
@@ -230,7 +265,7 @@ void main() {
 
   testWidgets('alongside duplicate os', (tester) async {
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
+      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Ubuntu 20.04 LTS',
@@ -252,8 +287,9 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongsideMulti('Ubuntu 22.10'));
+    final radio = find.text(
+      l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
@@ -261,7 +297,7 @@ void main() {
 
   testWidgets('alongside multi os', (tester) async {
     final model = buildStorageModel(
-      productInfo: ProductInfo(name: 'Ubuntu 22.10'),
+      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Windows 10',
@@ -289,8 +325,9 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(
-        l10n.installationTypeAlongsideMulti('Ubuntu 22.10'));
+    final radio = find.text(
+      l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
+    );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.alongside).called(1);
@@ -303,8 +340,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio =
-        find.radioButton<StorageType>(l10n.installationTypeErase('Ubuntu'));
+    final radio = find.text(l10n.installationTypeErase('Ubuntu'));
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.erase).called(1);
@@ -317,8 +353,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio =
-        find.radioButton<StorageType>(l10n.installationTypeErase('Ubuntu'));
+    final radio = find.text(l10n.installationTypeErase('Ubuntu'));
     expect(radio, findsNothing);
   });
 
@@ -329,12 +364,12 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(l10n.installationTypeManual);
+    final radio = find.text(l10n.installationTypeManual);
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.manual).called(1);
 
-    expect(find.button(l10n.installationTypeAdvancedLabel), isDisabled);
+    expect(find.button(l10n.installationTypeAdvancedLabel), findsNothing);
   });
 
   testWidgets('cannot manual partition', (tester) async {
@@ -344,7 +379,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.radioButton<StorageType>(l10n.installationTypeManual);
+    final radio = find.text(l10n.installationTypeManual);
     expect(radio, findsNothing);
   });
 

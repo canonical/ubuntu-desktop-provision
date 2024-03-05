@@ -131,7 +131,6 @@ void main() {
 
   testWidgets('tpm not present', (tester) async {
     final model = buildStorageModel(
-      hasTpm: false,
       scenario: SecureBootScenarios.noTpm,
     );
     await tester.pumpWidget(buildPage(tester, model));
