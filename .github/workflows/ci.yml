@@ -226,7 +226,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt install -y libgtk-3-dev
+          sudo apt install -y libgtk-3-dev debhelper dh-golang
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -244,12 +244,25 @@ jobs:
           go test -coverpkg=./... -coverprofile=/tmp/coverage.out -covermode=set ./... -shuffle=on
       - name: Run tests (with race detector)
         run: |
-
           cd provd
           go test -race ./...
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           file: /tmp/coverage.out
           flags: provd
           token: ${{secrets.CODECOV_TOKEN}}
+
+      - name: Build Debian package
+        run: |
+          cd provd
+          dpkg-buildpackage -us -uc -b
+          mv ../provd_*.deb ../provd.deb
+
+
+      - name: Upload Debian package
+        uses: actions/upload-artifact@v3
+        with:
+          name: provd-deb-package
+          path: provd.deb
