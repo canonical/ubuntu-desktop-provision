@@ -22,13 +22,14 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
+      isScrollable: false,
       onNext: () async {
         final locale = model.locale(model.selectedIndex);
         await model.applyLocale(locale);
         await tryGetService<TelemetryService>()
             ?.addMetric('Language', locale.languageCode);
       },
-      expandContent: true,
+      contentFlex: 4,
       content: ListWidget.builder(
         selectedIndex: model.selectedIndex,
         itemCount: model.languageCount,

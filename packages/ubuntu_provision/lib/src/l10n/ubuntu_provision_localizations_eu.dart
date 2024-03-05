@@ -254,7 +254,10 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Konektatu internetera';
 
   @override
-  String get networkPageHeader => 'Connecting this computer to the internet will help Ubuntu install any extra software needed and help choose your time zone.\n\nConnect by Ethernet cable, or choose a Wi-Fi network';
+  String get networkPageHeader => 'Connect to the internet';
+
+  @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Erabili kable bidezko konexioa';

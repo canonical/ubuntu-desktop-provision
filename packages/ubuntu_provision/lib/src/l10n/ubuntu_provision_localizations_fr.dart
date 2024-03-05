@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connecter cet ordinateur à internet aidera Ubuntu à installer des logiciels supplémentaires et à déterminer votre fuseau horaire.\n\nConnectez un câble Ethernet, ou choisissez un réseau Wi-Fi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Utiliser une connexion câblée';
 
   @override

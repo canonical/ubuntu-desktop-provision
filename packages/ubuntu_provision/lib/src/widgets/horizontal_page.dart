@@ -8,7 +8,7 @@ import 'package:yaru_widgets/constants.dart';
 import 'package:yaru_widgets/widgets.dart';
 
 class HorizontalPage extends ConsumerWidget {
-  const HorizontalPage({
+  HorizontalPage({
     required this.windowTitle,
     required this.title,
     required this.content,
@@ -17,11 +17,12 @@ class HorizontalPage extends ConsumerWidget {
     this.nextArguments,
     this.trailingTitleWidget,
     this.isNextEnabled = true,
-    this.expandContent = false,
+    this.isScrollable = true,
     this.padding = const EdgeInsets.symmetric(
       horizontal: defaultContentPadding,
       vertical: kYaruPagePadding,
     ),
+    this.contentFlex = 6,
     this.bottomBar,
     this.snackBar,
     super.key,
@@ -50,11 +51,16 @@ class HorizontalPage extends ConsumerWidget {
   /// Whether the next button should be enabled or not.
   final bool isNextEnabled;
 
-  /// Whether the next button should be enabled or not.
-  final bool expandContent;
+  /// Whether the content should be scrollable. If you're for example using
+  /// a `ListBuilder` for the context you want to set this to false.
+  final bool isScrollable;
 
   /// The padding applied around the area storing the icon and the content.
   final EdgeInsets padding;
+
+  /// How much the content should flex compared to the expanded above and below
+  /// the content (which defaults to a flexing value of 1).
+  final int contentFlex;
 
   /// Override of the default bottom bar.
   final Widget? bottomBar;
@@ -66,6 +72,8 @@ class HorizontalPage extends ConsumerWidget {
   static const defaultContentPadding = 100.0;
   static const _contentSpacing = 60.0;
 
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
@@ -75,6 +83,8 @@ class HorizontalPage extends ConsumerWidget {
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
     final adjustedPadding =
         isSmallWindow ? const EdgeInsets.all(kYaruPagePadding) : padding;
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
@@ -96,6 +106,7 @@ class HorizontalPage extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Expanded(child: SizedBox()),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -111,7 +122,24 @@ class HorizontalPage extends ConsumerWidget {
                     ],
                   ),
                   const SizedBox(height: kWizardSpacing),
-                  expandContent ? Expanded(child: content) : content,
+                  Expanded(
+                    flex: contentFlex,
+                    child: isScrollable
+                        ? Scrollbar(
+                            controller: _scrollController,
+                            thumbVisibility: true,
+                            child: SingleChildScrollView(
+                              controller: _scrollController,
+                              child: Padding(
+                                padding:
+                                    EdgeInsets.only(right: scrollBarPadding),
+                                child: content,
+                              ),
+                            ),
+                          )
+                        : content,
+                  ),
+                  const Expanded(child: SizedBox()),
                 ],
               ),
             ),

@@ -46,90 +46,73 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     }
   }
 
-  final ScrollController _scrollController = ScrollController();
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
       title: lang.installationTypeHeader,
-      expandContent: true,
-      content: Scrollbar(
-        controller: _scrollController,
-        thumbVisibility: true,
-        child: SingleChildScrollView(
-          controller: _scrollController,
-          child: Padding(
-            padding: EdgeInsets.only(right: scrollBarPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (model.canInstallAlongside || model.hasBitLocker)
-                  _InstallationTypeTile(
-                    storageType: StorageType.alongside,
-                    title: Text(
-                      _formatAlongside(
-                        lang,
-                        model.productInfo,
-                        model.existingOS ?? [],
-                      ),
-                    ),
-                    subtitle: Text(lang.installationTypeAlongsideInfo),
-                  ),
-                if (model.canEraseDisk) ...[
-                  _InstallationTypeTile(
-                    storageType: StorageType.erase,
-                    title: Text(lang.installationTypeErase(flavor.displayName)),
-                    subtitle: Html(
-                      data: lang.installationTypeEraseWarning(
-                          Theme.of(context).colorScheme.error.toHex()),
-                      style: {'body': Style(margin: Margins.zero)},
-                    ),
-                    trailing: model.hasAdvancedFeatures
-                        ? Padding(
-                            padding: const EdgeInsets.only(top: kWizardSpacing),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                OutlinedButton(
-                                  onPressed: model.type == StorageType.erase
-                                      ? () => showAdvancedFeaturesDialog(
-                                          context, model)
-                                      : null,
-                                  child:
-                                      Text(lang.installationTypeAdvancedLabel),
-                                ),
-                                const SizedBox(width: kWizardSpacing),
-                                Flexible(
-                                  child: Text(
-                                    model.guidedCapability?.localize(lang) ??
-                                        '',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        : null,
-                  ),
-                  const SizedBox(height: kWizardSpacing),
-                ],
-                if (model.canManualPartition)
-                  _InstallationTypeTile(
-                    storageType: StorageType.manual,
-                    title: Text(lang.installationTypeManual),
-                    subtitle: Text(
-                        lang.installationTypeManualInfo(flavor.displayName)),
-                  ),
-              ],
+      content: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (model.canInstallAlongside || model.hasBitLocker)
+            _InstallationTypeTile(
+              storageType: StorageType.alongside,
+              title: Text(
+                _formatAlongside(
+                  lang,
+                  model.productInfo,
+                  model.existingOS ?? [],
+                ),
+              ),
+              subtitle: Text(lang.installationTypeAlongsideInfo),
             ),
-          ),
-        ),
+          if (model.canEraseDisk) ...[
+            _InstallationTypeTile(
+              storageType: StorageType.erase,
+              title: Text(lang.installationTypeErase(flavor.displayName)),
+              subtitle: Html(
+                data: lang.installationTypeEraseWarning(
+                    Theme.of(context).colorScheme.error.toHex()),
+                style: {'body': Style(margin: Margins.zero)},
+              ),
+              trailing: model.hasAdvancedFeatures
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: kWizardSpacing),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          OutlinedButton(
+                            onPressed: model.type == StorageType.erase
+                                ? () =>
+                                    showAdvancedFeaturesDialog(context, model)
+                                : null,
+                            child: Text(lang.installationTypeAdvancedLabel),
+                          ),
+                          const SizedBox(width: kWizardSpacing),
+                          Flexible(
+                            child: Text(
+                              model.guidedCapability?.localize(lang) ?? '',
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : null,
+            ),
+            const SizedBox(height: kWizardSpacing),
+          ],
+          if (model.canManualPartition)
+            _InstallationTypeTile(
+              storageType: StorageType.manual,
+              title: Text(lang.installationTypeManual),
+              subtitle:
+                  Text(lang.installationTypeManualInfo(flavor.displayName)),
+            ),
+        ],
       ),
       isNextEnabled: model.canEraseDisk ||
           model.canInstallAlongside ||
