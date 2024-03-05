@@ -52,6 +52,23 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
+  Future<void> testAutoinstallPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(AutoinstallPage);
+
+    final context = element(find.byType(AutoinstallPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.autoinstallTitle), findsOneWidget);
+
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
   Future<void> testRstPage({
     String? screenshot,
   }) async {
