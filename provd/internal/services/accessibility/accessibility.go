@@ -65,30 +65,32 @@ func New(opts ...Option) (*Service, error) {
 		}
 	}
 
+    var errs []error
+
 	// Check if is writable as a ping test for gsettings
 	isWritable := s.a11ySettings.IsWritable("high-contrast")
 	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to location settings")
+		errs = append(errs, status.Errorf(codes.Internal, "failed to connect to org.gnome.desktop.a11y.interface"))
 	}
 
 	isWritable = s.applicationSettings.IsWritable("screen-keyboard-enabled")
 	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to location settings")
+		errs = append(errs, status.Errorf(codes.Internal, "failed to connect to org.gnome.desktop.a11y.applications"))
 	}
 
 	isWritable = s.interfaceSettings.IsWritable("cursor-blink")
 	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to location settings")
+		errs = append(errs, status.Errorf(codes.Internal, "failed to connect to org.gnome.desktop.interface"))
 	}
 
 	isWritable = s.wmSettings.IsWritable("audible-bell")
 	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to location settings")
+		return nil, status.Errorf(codes.Internal, "failed to connect to org.gnome.desktop.wm.preferences")
 	}
 
 	isWritable = s.keyboardSettings.IsWritable("sticky-keys")
 	if !isWritable {
-		return nil, status.Errorf(codes.Internal, "failed to connect to location settings")
+		return nil, status.Errorf(codes.Internal, "failed to connect to org.gnome.desktop.a11y.keyboard")
 	}
 
 	return s, nil

@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
 package active_directory;
 
 import "google/protobuf/empty.proto";
