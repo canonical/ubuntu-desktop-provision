@@ -32,7 +32,7 @@ StorageModel buildStorageModel({
   bool hasLvm = true,
   bool hasZfs = true,
   bool hasTpm = false,
-  bool hasDd= false,
+  bool hasDd = false,
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
