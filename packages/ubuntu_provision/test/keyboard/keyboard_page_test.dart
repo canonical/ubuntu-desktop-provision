@@ -42,6 +42,12 @@ void main() {
     for (var i = 0; i < 3; ++i) {
       final layoutTile = find.listTile('Layout $i');
       expect(layoutTile, findsOneWidget);
+      await tester.scrollUntilVisible(
+        layoutTile,
+        -kMinInteractiveDimension / 2,
+        scrollable: find.byType(Scrollable).last,
+      );
+      await tester.pump();
       await tester.tap(layoutTile);
       verify(model.selectLayout(i)).called(1);
     }
