@@ -13,6 +13,27 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallTitle => 'Automated installation';
+
+  @override
+  String get autoinstallHeader => 'Do you want to perform an automated installation?';
+
+  @override
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+
+  @override
+  String get autoinstallInteractiveOption => 'Proceed with interactive installation';
+
+  @override
+  String get autoinstallInteractiveDescription => 'Continue filling in the installation options manually.';
+
+  @override
+  String get autoinstallAutomatedOption => 'Import an autoinstall.yaml';
+
+  @override
+  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
   String get changeButtonText => '更改';
 
   @override
@@ -862,6 +883,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(Object color) {
     return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
   }
+
+  @override
+  String get validate => 'Validate';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

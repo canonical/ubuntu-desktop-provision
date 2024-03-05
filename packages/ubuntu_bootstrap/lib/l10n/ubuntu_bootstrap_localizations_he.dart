@@ -13,6 +13,27 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallTitle => 'Automated installation';
+
+  @override
+  String get autoinstallHeader => 'Do you want to perform an automated installation?';
+
+  @override
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+
+  @override
+  String get autoinstallInteractiveOption => 'Proceed with interactive installation';
+
+  @override
+  String get autoinstallInteractiveDescription => 'Continue filling in the installation options manually.';
+
+  @override
+  String get autoinstallAutomatedOption => 'Import an autoinstall.yaml';
+
+  @override
+  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
   String get changeButtonText => 'שינוי';
 
   @override
@@ -862,4 +883,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(Object color) {
     return '<font color=\"$color\">אזהרה:</font> איבוד מפתח האבטחה יוביל לאיבוד הנתונים שלך. במידת הצורך, כדאי לכתוב את המפתח שלך על נייר ולשמור אותו במקום בטוח בנפרד.';
   }
+
+  @override
+  String get validate => 'Validate';
 }
