@@ -32,7 +32,8 @@ GuidedResizeModel buildGuidedResizeModel({
   when(model.selectedDisk).thenReturn(selectedDisk);
   when(model.selectedPartition).thenReturn(selectedPartition);
   when(model.selectedOS).thenReturn(selectedOS);
-  when(model.productInfo).thenReturn(productInfo ?? const ProductInfo(name: ''));
+  when(model.productInfo)
+      .thenReturn(productInfo ?? const ProductInfo(name: ''));
   when(model.existingOS).thenReturn(existingOs ?? []);
   when(model.getDisk(any))
       .thenAnswer((i) => allDisks?[i.positionalArguments.single as int]);
