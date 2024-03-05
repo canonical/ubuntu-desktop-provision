@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Tipus d\'instal·lació';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'L’ordinador actualment duu el sistema $os. Què voleu fer?';
   }
@@ -321,13 +324,16 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(Object DISTRO) {
-    return 'You can create or resize partitions yourself, or choose multiple partitions for $DISTRO';
+    return 'For advanced users seeking customized disk setups.';
   }
 
   @override
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Erase disk and install $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Seleccioneu la unitat:';

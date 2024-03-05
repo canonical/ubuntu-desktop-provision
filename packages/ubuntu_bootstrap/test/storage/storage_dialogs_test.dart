@@ -20,7 +20,7 @@ void main() {
         storageModelProvider.overrideWith((_) => model),
         pageImagesProvider.overrideWith((_) => pageImages),
       ],
-      child: tester.buildApp((_) => const StoragePage()),
+      child: tester.buildApp((_) => StoragePage()),
     );
   }
 

@@ -21,7 +21,7 @@ void main() {
         storageModelProvider.overrideWith((_) => model),
         pageImagesProvider.overrideWith((_) => pageImages),
       ],
-      child: const StoragePage(),
+      child: StoragePage(),
     );
   }
 

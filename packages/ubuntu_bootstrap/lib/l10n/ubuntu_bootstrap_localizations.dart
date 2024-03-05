@@ -579,6 +579,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Type of installation'**
   String get installationTypeTitle;
 
+  /// No description provided for @installationTypeHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'How do you want to install Ubuntu?'**
+  String get installationTypeHeader;
+
   /// No description provided for @installationTypeOSDetected.
   ///
   /// In en, this message translates to:
@@ -750,19 +756,19 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeAlongsideInfo.
   ///
   /// In en, this message translates to:
-  /// **'Documents, music, and other other personal files will be kept. You can choose which operating system you want each time the computer starts up.'**
+  /// **'You can choose your operating system during boot.'**
   String get installationTypeAlongsideInfo;
 
   /// No description provided for @installationTypeManual.
   ///
   /// In en, this message translates to:
-  /// **'Manual partitioning'**
+  /// **'Manual installation'**
   String get installationTypeManual;
 
   /// No description provided for @installationTypeManualInfo.
   ///
   /// In en, this message translates to:
-  /// **'You can create or resize partitions yourself, or choose multiple partitions for {DISTRO}'**
+  /// **'For advanced users seeking customized disk setups.'**
   String installationTypeManualInfo(Object DISTRO);
 
   /// No description provided for @selectGuidedStoragePageTitle.
@@ -770,6 +776,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Erase disk and install {DISTRO}'**
   String selectGuidedStoragePageTitle(Object DISTRO);
+
+  /// No description provided for @selectGuidedStorageInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Start from scratch on your selected disk.'**
+  String get selectGuidedStorageInfo;
 
   /// No description provided for @selectGuidedStorageDropdownLabel.
   ///
