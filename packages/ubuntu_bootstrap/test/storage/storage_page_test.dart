@@ -12,6 +12,7 @@ import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
+import 'package:yaru_widgets/widgets.dart';
 
 import 'test_storage.dart';
 
@@ -56,7 +57,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(
+      find.radioListTile(
         l10n.installationTypeAlongside(productInfo.name, osProber.long),
       ),
       findsOneWidget,
@@ -79,7 +80,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeAlongsideDual(
+      find.radioListTile(l10n.installationTypeAlongsideDual(
         productInfo.name,
         osProbers[0].long,
         osProbers[1].long,
@@ -104,7 +105,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeAlongsideMulti(productInfo.name)),
+      find.radioListTile(l10n.installationTypeAlongsideMulti(productInfo.name)),
       findsOneWidget,
     );
   });
@@ -124,7 +125,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeAlongsideMulti(productInfo.name)),
+      find.radioListTile(l10n.installationTypeAlongsideMulti(productInfo.name)),
       findsOneWidget,
     );
   });
@@ -147,7 +148,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongside(productInfo.name, osProber.long),
     );
     expect(radio, findsOneWidget);
@@ -174,7 +175,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongside(productInfo.name, osProber.long),
     );
     expect(radio, findsOneWidget);
@@ -201,7 +202,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongside('Ubuntu 22.10', 'Ubuntu 18.04 LTS'),
     );
     expect(radio, findsOneWidget);
@@ -219,7 +220,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongsideUnknown('Ubuntu 22.10'),
     );
     expect(radio, findsOneWidget);
@@ -251,7 +252,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongsideDual(
         'Ubuntu 22.10',
         'Windows 10',
@@ -287,7 +288,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
     );
     expect(radio, findsOneWidget);
@@ -325,7 +326,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(
+    final radio = find.radioListTile(
       l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
     );
     expect(radio, findsOneWidget);
@@ -340,7 +341,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(l10n.installationTypeErase('Ubuntu'));
+    final radio = find.radioListTile(l10n.installationTypeErase('Ubuntu'));
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.erase).called(1);
@@ -353,7 +354,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(l10n.installationTypeErase('Ubuntu'));
+    final radio = find.radioListTile(l10n.installationTypeErase('Ubuntu'));
     expect(radio, findsNothing);
   });
 
@@ -364,7 +365,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(l10n.installationTypeManual);
+    final radio = find.radioListTile(l10n.installationTypeManual);
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.manual).called(1);
@@ -379,7 +380,7 @@ void main() {
     final context = tester.element(find.byType(StoragePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final radio = find.text(l10n.installationTypeManual);
+    final radio = find.radioListTile(l10n.installationTypeManual);
     expect(radio, findsNothing);
   });
 
@@ -493,4 +494,13 @@ void main() {
     await tester.tapNext();
     verify(model.save()).called(1);
   });
+}
+
+extension on CommonFinders {
+  Finder radioListTile(String text) {
+    return widgetWithText(
+      YaruRadioListTile<StorageType>,
+      text,
+    );
+  }
 }
