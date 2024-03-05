@@ -372,7 +372,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @keyboardHeader.
   ///
   /// In en, this message translates to:
-  /// **'Choose your keyboard layout:'**
+  /// **'Select your keyboard layout'**
   String get keyboardHeader;
 
   /// No description provided for @keyboardTestHint.
@@ -720,14 +720,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @networkPageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Connect to a network'**
+  /// **'Internet connection'**
   String get networkPageTitle;
 
   /// No description provided for @networkPageHeader.
   ///
   /// In en, this message translates to:
-  /// **'Connecting this computer to the internet will help Ubuntu install any extra software needed and help choose your time zone.\n\nConnect by Ethernet cable, or choose a Wi-Fi network'**
+  /// **'Connect to the internet'**
   String get networkPageHeader;
+
+  /// No description provided for @networkPageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'An internet connection will improve your installation with compatibility check and extra software packages.'**
+  String get networkPageBody;
 
   /// No description provided for @networkWiredOption.
   ///

@@ -11,7 +11,6 @@ class ErrorPage extends StatelessWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.errorPageTitle,
       title: lang.errorPageTitle,
-      expandContent: true,
       content: Center(
         child: Text(
           ModalRoute.of(context)?.settings.arguments?.toString() ??

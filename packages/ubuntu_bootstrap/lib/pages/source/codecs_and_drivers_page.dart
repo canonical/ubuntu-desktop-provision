@@ -16,8 +16,6 @@ export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
   CodecsAndDriversPage({super.key});
 
-  final ScrollController _scrollController = ScrollController();
-
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(sourceModelProvider).init().then((_) => true);
@@ -27,63 +25,48 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.codecsAndDriversPageTitle,
       title: lang.codecsAndDriversPageDescription,
-      expandContent: true,
-      content: Center(
-        child: Scrollbar(
-          controller: _scrollController,
-          thumbVisibility: true,
-          child: SingleChildScrollView(
-            controller: _scrollController,
-            child: Padding(
-              padding: EdgeInsets.only(right: scrollBarPadding),
-              child: Column(
-                children: [
-                  Text(lang.codecsAndDriversPageBody),
-                  const SizedBox(height: kWizardSpacing),
-                  // TODO(Lukas): Add a proper check when we know where to get this information.
-                  if (false)
-                    // ignore: dead_code
-                    _InfoBox(
-                      title: lang.codecsAndDriversNvidiaNote,
-                      subtitle: lang.codecsAndDriversNvidiaBody,
-                    ),
-                  const SizedBox(height: kWizardSpacing),
-                  Align(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: YaruCheckButton(
-                      title: Text(lang.installDriversTitle),
-                      subtitle: Text(lang.installDriversSubtitle),
-                      contentPadding: kWizardPadding,
-                      value: model.installDrivers,
-                      onChanged: model.setInstallDrivers,
-                    ),
-                  ),
-                  const SizedBox(height: kWizardSpacing),
-                  Align(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: Tooltip(
-                      message: !model.isOnline ? lang.offlineWarning : '',
-                      child: YaruCheckButton(
-                        title: Text(lang.installCodecsTitle),
-                        subtitle: Text(lang.installCodecsSubtitle),
-                        contentPadding: kWizardPadding,
-                        value: model.installCodecs && model.isOnline,
-                        onChanged:
-                            model.isOnline ? model.setInstallCodecs : null,
-                      ),
-                    ),
-                  ),
-                ],
+      contentFlex: 3,
+      content: Column(
+        children: [
+          Text(lang.codecsAndDriversPageBody),
+          const SizedBox(height: kWizardSpacing),
+          // TODO(Lukas): Add a proper check when we know where to get this information.
+          if (false)
+            // ignore: dead_code
+            _InfoBox(
+              title: lang.codecsAndDriversNvidiaNote,
+              subtitle: lang.codecsAndDriversNvidiaBody,
+            ),
+          const SizedBox(height: kWizardSpacing),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: YaruCheckButton(
+              title: Text(lang.installDriversTitle),
+              subtitle: Text(lang.installDriversSubtitle),
+              contentPadding: kWizardPadding,
+              value: model.installDrivers,
+              onChanged: model.setInstallDrivers,
+            ),
+          ),
+          const SizedBox(height: kWizardSpacing),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Tooltip(
+              message: !model.isOnline ? lang.offlineWarning : '',
+              child: YaruCheckButton(
+                title: Text(lang.installCodecsTitle),
+                subtitle: Text(lang.installCodecsSubtitle),
+                contentPadding: kWizardPadding,
+                value: model.installCodecs && model.isOnline,
+                onChanged: model.isOnline ? model.setInstallCodecs : null,
               ),
             ),
           ),
-        ),
+        ],
       ),
       snackBar: model.onBattery
           ? SnackBar(

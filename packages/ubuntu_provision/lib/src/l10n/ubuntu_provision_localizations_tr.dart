@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Bu bilgisayarı internete bağlamak, Ubuntu\'nun ihtiyacı olan ek yazılımları kurmasına ve zaman diliminizi seçmenize yardımcı olur.\n\nEthernet kablosuyla bağlan veya bir Wi-Fi ağı seç';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Kablolu bağlantı kullan';
 
   @override

@@ -18,8 +18,6 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
   SourceSelectionPage({super.key});
 
-  final ScrollController _scrollController = ScrollController();
-
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(sourceModelProvider).init().then((_) => true);
@@ -29,31 +27,18 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
-      expandContent: true,
-      content: Center(
-        child: Scrollbar(
-          controller: _scrollController,
-          thumbVisibility: true,
-          child: SingleChildScrollView(
-            controller: _scrollController,
-            child: Padding(
-              padding: EdgeInsets.only(right: scrollBarPadding),
-              child: Column(
-                children: [
-                  ...model.sources
-                      .map(_SourceSelectionListTile.new)
-                      .withSpacing(kWizardSpacing / 2),
-                ],
-              ),
-            ),
-          ),
-        ),
+      contentFlex: 2,
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ...model.sources
+              .map(_SourceSelectionListTile.new)
+              .withSpacing(kWizardSpacing / 2),
+        ],
       ),
       snackBar: model.onBattery
           ? SnackBar(
