@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Prijungus šį kompiuterį prie interneto Ubuntu galės įdiegti reikalingą papildomą programinę įrangą ir galės padėti pasirinkti laiko juostą.\n\nPrisijunkite naudodami interneto laidą arba pasirinkite belaidį (Wi-Fi) tinklą';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Naudoti laidinį ryšį';
 
   @override

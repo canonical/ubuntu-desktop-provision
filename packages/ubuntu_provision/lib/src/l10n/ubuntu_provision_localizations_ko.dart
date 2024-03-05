@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkPageHeader => '이 컴퓨터를 인터넷에 연결하면 우분투에 필요한 추가 소프트웨어 설치나 시간대 선택에 도움이 됩니다.\n\n이더넷 케이블이나, Wi-Fi 네트워크를 선택하여 연결하십시오';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => '유선 연결 사용';
 
   @override

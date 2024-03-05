@@ -35,7 +35,8 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
               },
             )
           : null,
-      expandContent: true,
+      isScrollable: false,
+      contentFlex: 8,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

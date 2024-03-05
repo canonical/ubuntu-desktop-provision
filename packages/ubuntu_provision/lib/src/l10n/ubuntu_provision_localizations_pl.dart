@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Podłączenie tego komputera do Internetu pomoże systemowi Ubuntu zainstalować dodatkowe potrzebne oprogramowanie i pomoże wybrać strefę czasową.\n\nPołącz się za pomocą kabla Ethernetowego lub wybierz sieć Wi-Fi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Użyj połączenia przewodowego';
 
   @override
