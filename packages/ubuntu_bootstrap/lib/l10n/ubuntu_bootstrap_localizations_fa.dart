@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'گونهٔ نصب';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'این رایانه اکنون $os دارد. می‌خواهید چه کنید؟';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'پاک کردن دیسک و نصب $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'گزینش گرداننده:';

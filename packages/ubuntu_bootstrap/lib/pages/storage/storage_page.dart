@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,27 +15,11 @@ export 'storage_model.dart' show StorageType;
 
 /// Select between guided and manual partitioning.
 class StoragePage extends ConsumerWidget with ProvisioningPage {
-  const StoragePage({super.key});
+  StoragePage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     return ref.read(storageModelProvider.notifier).init().then((_) => true);
-  }
-
-  static String _formatHeader(BuildContext context, List<OsProber> os) {
-    final lang = UbuntuBootstrapLocalizations.of(context);
-    switch (os.length) {
-      case 0:
-        return lang.installationTypeNoOSDetected;
-      case 1:
-        return lang.installationTypeOSDetected(os.single.long);
-      case 2:
-        return os.hasDuplicates
-            ? lang.installationTypeMultiOSDetected
-            : lang.installationTypeDualOSDetected(os.first.long, os.last.long);
-      default:
-        return lang.installationTypeMultiOSDetected;
-    }
   }
 
   static String _formatAlongside(
@@ -55,80 +40,90 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     }
   }
 
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
+
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
-      title: _formatHeader(context, model.existingOS ?? []),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (model.canInstallAlongside || model.hasBitLocker)
-            Padding(
-              padding: const EdgeInsets.only(bottom: kWizardSpacing),
-              child: YaruRadioButton<StorageType>(
-                title: Text(
-                  _formatAlongside(
-                    lang,
-                    model.productInfo,
-                    model.existingOS ?? [],
+      title: lang.installationTypeHeader,
+      expandContent: true,
+      content: Scrollbar(
+        controller: _scrollController,
+        thumbVisibility: true,
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          child: Padding(
+            padding: EdgeInsets.only(right: scrollBarPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (model.canInstallAlongside || model.hasBitLocker)
+                  _InstallationTypeTile(
+                    storageType: StorageType.alongside,
+                    title: Text(
+                      _formatAlongside(
+                        lang,
+                        model.productInfo,
+                        model.existingOS ?? [],
+                      ),
+                    ),
+                    subtitle: Text(lang.installationTypeAlongsideInfo),
                   ),
-                ),
-                subtitle: Text(lang.installationTypeAlongsideInfo),
-                value: StorageType.alongside,
-                groupValue: model.type,
-                onChanged: (v) => model.type = v,
-              ),
-            ),
-          if (model.canEraseDisk) ...[
-            Padding(
-              padding: const EdgeInsets.only(bottom: kWizardSpacing),
-              child: YaruRadioButton<StorageType>(
-                title: Text(lang.installationTypeErase(flavor.displayName)),
-                subtitle: Html(
-                  data: lang.installationTypeEraseWarning(
-                      Theme.of(context).colorScheme.error.toHex()),
-                  style: {'body': Style(margin: Margins.zero)},
-                ),
-                value: StorageType.erase,
-                groupValue: model.type,
-                onChanged: (value) => model.type = value,
-              ),
-            ),
-            if (model.hasAdvancedFeatures)
-              Padding(
-                padding: kWizardIndentation,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    OutlinedButton(
-                      onPressed: model.type == StorageType.erase
-                          ? () => showAdvancedFeaturesDialog(context, model)
-                          : null,
-                      child: Text(lang.installationTypeAdvancedLabel),
+                if (model.canEraseDisk) ...[
+                  _InstallationTypeTile(
+                    storageType: StorageType.erase,
+                    title: Text(lang.installationTypeErase(flavor.displayName)),
+                    subtitle: Html(
+                      data: lang.installationTypeEraseWarning(
+                          Theme.of(context).colorScheme.error.toHex()),
+                      style: {'body': Style(margin: Margins.zero)},
                     ),
-                    const SizedBox(width: kWizardSpacing),
-                    Flexible(
-                      child: Text(model.guidedCapability?.localize(lang) ?? ''),
-                    ),
-                  ],
-                ),
-              ),
-            const SizedBox(height: kWizardSpacing),
-          ],
-          if (model.canManualPartition)
-            YaruRadioButton<StorageType>(
-              title: Text(lang.installationTypeManual),
-              subtitle:
-                  Text(lang.installationTypeManualInfo(flavor.displayName)),
-              value: StorageType.manual,
-              groupValue: model.type,
-              onChanged: (v) => model.type = v,
+                    trailing: model.hasAdvancedFeatures
+                        ? Padding(
+                            padding: const EdgeInsets.only(top: kWizardSpacing),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                OutlinedButton(
+                                  onPressed: model.type == StorageType.erase
+                                      ? () => showAdvancedFeaturesDialog(
+                                          context, model)
+                                      : null,
+                                  child:
+                                      Text(lang.installationTypeAdvancedLabel),
+                                ),
+                                const SizedBox(width: kWizardSpacing),
+                                Flexible(
+                                  child: Text(
+                                    model.guidedCapability?.localize(lang) ??
+                                        '',
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        : null,
+                  ),
+                  const SizedBox(height: kWizardSpacing),
+                ],
+                if (model.canManualPartition)
+                  _InstallationTypeTile(
+                    storageType: StorageType.manual,
+                    title: Text(lang.installationTypeManual),
+                    subtitle: Text(
+                        lang.installationTypeManualInfo(flavor.displayName)),
+                  ),
+              ],
             ),
-        ],
+          ),
+        ),
       ),
       isNextEnabled: model.canEraseDisk ||
           model.canInstallAlongside ||
@@ -167,4 +162,52 @@ extension _OsProberList on List<OsProber> {
   /// Whether the system has any OS installed multiple times.
   bool get hasDuplicates =>
       length > 1 && length != map((os) => os.long).toSet().length;
+}
+
+class _InstallationTypeTile extends ConsumerWidget {
+  const _InstallationTypeTile({
+    required this.storageType,
+    required this.title,
+    this.subtitle,
+    this.trailing,
+  });
+
+  final StorageType storageType;
+  final Widget title;
+  final Widget? subtitle;
+  final Widget? trailing;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final model = ref.watch(storageModelProvider);
+    final isSelected = storageType == model.type;
+
+    return Align(
+      alignment: AlignmentDirectional.centerStart,
+      child: YaruBorderContainer(
+        color: isSelected
+            ? colorScheme.primary.withOpacity(0.2)
+            : colorScheme.primaryContainer,
+        border: Border.all(
+          color: isSelected ? colorScheme.primary : theme.dividerColor,
+        ),
+        borderRadius: kWizardBorderRadius,
+        child: YaruRadioListTile(
+          title: title,
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:
+                [subtitle, if (isSelected) trailing].whereNotNull().toList(),
+          ),
+          contentPadding: kWizardTilePadding,
+          isThreeLine: true,
+          value: storageType,
+          groupValue: model.type,
+          onChanged: (value) => model.type = value,
+        ),
+      ),
+    );
+  }
 }

@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'ഇൻസ്റ്റാളേഷന്റെ തരം';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'ഈ കമ്പ്യൂട്ടറിൽ നിലവിൽ $os ഉണ്ട്. നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നത്?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'ഡിസ്ക് മായ്ച്ച് $DISTRO ഇൻസ്റ്റാൾ ചെയ്യുക';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'ഡ്രൈവ് തിരഞ്ഞെടുക്കുക:';

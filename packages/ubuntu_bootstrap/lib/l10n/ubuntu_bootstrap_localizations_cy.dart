@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Math o osodiad';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'This computer currently has $os on it. What would you like to do?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Dileu\'r ddisg a gosod $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Dewis gyriant:';

@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Installasjontype';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Denne datamaskinen har for øyeblikket $os på seg. Hva har du lyst til å gjøre?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Slett disk og installer $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Velg diskstasjon:';

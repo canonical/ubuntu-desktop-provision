@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Telepítés típusa';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Ezen a számítógépen jelenleg $os van. Mit szeretne tenni?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Lemez törlése és a(z) $DISTRO telepítése';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Meghajtó kiválasztása:';

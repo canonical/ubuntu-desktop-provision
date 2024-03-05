@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Kurulum türü';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Bu bilgisayarda şu anda $os var. Ne yapmak istersiniz?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Diski sil ve $DISTRO kur';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Sürücü seçin:';

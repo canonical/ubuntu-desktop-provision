@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Tipe instalasi';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Komputer ini saat ini memiliki $os di dalamnya. Apa yang ingin Anda lakukan?';
   }
@@ -328,6 +331,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Hapus disk dan pasang $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Pilih drive:';

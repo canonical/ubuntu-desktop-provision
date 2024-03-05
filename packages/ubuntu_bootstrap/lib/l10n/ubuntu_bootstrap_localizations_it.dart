@@ -204,6 +204,9 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Tipo d\'installazione';
 
   @override
+  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+
+  @override
   String installationTypeOSDetected(Object os) {
     return 'Questo computer ha installato $os. Come procedere?';
   }
@@ -314,20 +317,23 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Documents, music, and other other personal files will be kept. You can choose which operating system you want each time the computer starts up.';
+  String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
 
   @override
   String get installationTypeManual => 'Altro';
 
   @override
   String installationTypeManualInfo(Object DISTRO) {
-    return 'You can create or resize partitions yourself, or choose multiple partitions for $DISTRO';
+    return 'For advanced users seeking customized disk setups.';
   }
 
   @override
   String selectGuidedStoragePageTitle(Object DISTRO) {
     return 'Erase disk and install $DISTRO';
   }
+
+  @override
+  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get selectGuidedStorageDropdownLabel => 'Seleziona il disco:';
