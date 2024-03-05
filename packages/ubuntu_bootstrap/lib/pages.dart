@@ -1,3 +1,4 @@
+export 'pages/autoinstall/autoinstall_page.dart';
 export 'pages/confirm/confirm_page.dart';
 export 'pages/install/install_page.dart';
 export 'pages/loading/loading_page.dart';
