@@ -19,37 +19,37 @@ export 'test_storage.mocks.dart';
 StorageModel buildStorageModel({
   StorageType? type = StorageType.erase,
   GuidedCapability? guidedCapability = GuidedCapability.DIRECT,
-  ProductInfo? productInfo,
-  String? releaseNotesURL,
+  ProductInfo productInfo = const ProductInfo(name: ''),
+  String releaseNotesURL = '',
   List<OsProber>? existingOS,
   SecureBootScenarios? scenario,
-  bool? canInstallAlongside,
-  bool? canEraseDisk,
-  bool? canManualPartition,
-  bool? hasAdvancedFeatures,
-  bool? hasBitLocker,
-  bool? hasDirect,
-  bool? hasLvm,
-  bool? hasZfs,
-  bool? hasTpm,
-  bool? hasDd,
+  bool canInstallAlongside = true,
+  bool canEraseDisk = true,
+  bool canManualPartition = true,
+  bool hasAdvancedFeatures = true,
+  bool hasBitLocker = false,
+  bool hasDirect = true,
+  bool hasLvm = true,
+  bool hasZfs = true,
+  bool hasTpm = false,
+  bool hasDd = false,
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
   when(model.guidedCapability).thenReturn(guidedCapability);
-  when(model.productInfo).thenReturn(productInfo ?? ProductInfo(name: ''));
-  when(model.getReleaseNotesURL(any)).thenReturn(releaseNotesURL ?? '');
+  when(model.productInfo).thenReturn(productInfo);
+  when(model.getReleaseNotesURL(any)).thenReturn(releaseNotesURL);
   when(model.existingOS).thenReturn(existingOS);
-  when(model.canInstallAlongside).thenReturn(canInstallAlongside ?? false);
-  when(model.canEraseDisk).thenReturn(canEraseDisk ?? true);
-  when(model.canManualPartition).thenReturn(canManualPartition ?? true);
-  when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures ?? true);
-  when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
-  when(model.hasDirect).thenReturn(hasDirect ?? true);
-  when(model.hasLvm).thenReturn(hasLvm ?? true);
-  when(model.hasZfs).thenReturn(hasZfs ?? true);
-  when(model.hasTpm).thenReturn(hasTpm ?? false);
-  when(model.hasDd).thenReturn(hasDd ?? false);
+  when(model.canInstallAlongside).thenReturn(canInstallAlongside);
+  when(model.canEraseDisk).thenReturn(canEraseDisk);
+  when(model.canManualPartition).thenReturn(canManualPartition);
+  when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures);
+  when(model.hasBitLocker).thenReturn(hasBitLocker);
+  when(model.hasDirect).thenReturn(hasDirect);
+  when(model.hasLvm).thenReturn(hasLvm);
+  when(model.hasZfs).thenReturn(hasZfs);
+  when(model.hasTpm).thenReturn(hasTpm);
+  when(model.hasDd).thenReturn(hasDd);
   when(model.getAllTargets()).thenAnswer((_) => switch (scenario) {
         SecureBootScenarios.supported => [supported],
         SecureBootScenarios.noTpm => [noTpm],

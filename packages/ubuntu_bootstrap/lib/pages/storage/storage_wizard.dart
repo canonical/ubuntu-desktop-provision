@@ -27,7 +27,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
-    return const StoragePage().load(context, ref);
+    return StoragePage().load(context, ref);
   }
 
   @override
@@ -35,8 +35,8 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
     final type = ref.watch(storageModelProvider.select((m) => m.type));
 
     final routes = {
-      Navigator.defaultRouteName: WizardRoute(
-        builder: (_) => const StoragePage(),
+      InstallationStep.storage.route: WizardRoute(
+        builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
       ),
       if (type != StorageType.manual)

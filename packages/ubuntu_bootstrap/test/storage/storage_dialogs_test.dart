@@ -20,7 +20,7 @@ void main() {
         storageModelProvider.overrideWith((_) => model),
         pageImagesProvider.overrideWith((_) => pageImages),
       ],
-      child: tester.buildApp((_) => const StoragePage()),
+      child: tester.buildApp((_) => StoragePage()),
     );
   }
 
@@ -131,7 +131,6 @@ void main() {
 
   testWidgets('tpm not present', (tester) async {
     final model = buildStorageModel(
-      hasTpm: false,
       scenario: SecureBootScenarios.noTpm,
     );
     await tester.pumpWidget(buildPage(tester, model));

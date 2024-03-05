@@ -47,7 +47,7 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
               child: Column(
                 children: [
                   ...model.sources
-                      .map(_InstallationTypeListTile.new)
+                      .map(_SourceSelectionListTile.new)
                       .withSpacing(kWizardSpacing / 2),
                 ],
               ),
@@ -94,8 +94,8 @@ extension on Iterable<Widget> {
   }
 }
 
-class _InstallationTypeListTile extends ConsumerWidget {
-  const _InstallationTypeListTile(this.source);
+class _SourceSelectionListTile extends ConsumerWidget {
+  const _SourceSelectionListTile(this.source);
 
   final SourceSelection source;
 

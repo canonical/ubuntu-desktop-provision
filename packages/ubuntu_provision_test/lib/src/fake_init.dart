@@ -243,7 +243,8 @@ class _FakeSysmetrics implements Sysmetrics {
 
 class _FakeProductService implements ProductService {
   @override
-  ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.10');
+  ProductInfo getProductInfo() =>
+      const ProductInfo(name: 'Ubuntu', version: '23.10');
 
   @override
   String getReleaseNotesURL(String languageCode) =>
