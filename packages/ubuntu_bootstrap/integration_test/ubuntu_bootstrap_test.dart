@@ -65,6 +65,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -134,6 +138,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -188,6 +196,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -265,6 +277,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -334,6 +350,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -416,6 +436,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -495,6 +519,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -562,6 +590,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -637,6 +669,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();

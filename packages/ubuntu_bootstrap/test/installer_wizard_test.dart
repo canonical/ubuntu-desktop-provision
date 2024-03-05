@@ -8,6 +8,7 @@ import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
@@ -37,6 +38,7 @@ import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
+import 'autoinstall/test_autoinstall.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
 import 'refresh/test_refresh.dart';
@@ -102,6 +104,7 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
+    final autoinstallModel = buildAutoinstallModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
@@ -133,6 +136,7 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
+          autoinstallModelProvider.overrideWith((_) => autoinstallModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
@@ -189,6 +193,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(NetworkPage), findsOneWidget);
     verify(networkModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(AutoinstallPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -376,6 +384,7 @@ void main() {
           slidesProvider.overrideWith((_) => MockSlidesModel()),
         ],
         child: tester.buildTestWizard(excludedPages: [
+          'autoinstall',
           'tryOrInstall',
           'locale',
           'rst',
