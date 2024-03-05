@@ -180,4 +180,27 @@ class StorageModel extends SafeChangeNotifier {
   }
 
   Future<void> resetStorage() => _storage.resetStorage();
+
+  @override
+  String toString() {
+    return '''
+StorageModel(
+  type: $type,
+  guidedTarget: $guidedTarget,
+  guidedCapability: $guidedCapability,
+  productInfo: $productInfo,
+  existingOS: $existingOS,
+  hasBitLocker: $hasBitLocker,
+  hasDirect: $hasDirect,
+  hasLvm: $hasLvm,
+  hasZfs: $hasZfs,
+  hasTpm: $hasTpm,
+  hasDd: $hasDd,
+  canInstallAlongside: $canInstallAlongside,
+  canEraseDisk: $canEraseDisk,
+  canManualPartition: $canManualPartition,
+  hasAdvancedFeatures: $hasAdvancedFeatures,
+)
+''';
+  }
 }

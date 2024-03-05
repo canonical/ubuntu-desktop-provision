@@ -16,7 +16,7 @@ void main() {
 
   test('product info', () async {
     final service = MockProductService();
-    final product = ProductInfo(name: 'Ubuntu', version: '24.04 LTS');
+    const product = ProductInfo(name: 'Ubuntu', version: '24.04 LTS');
     when(service.getProductInfo()).thenReturn(product);
 
     final model = WelcomeModel(service);

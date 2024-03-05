@@ -463,7 +463,8 @@ class FakeDesktopService implements DesktopService {
 
 class FakeProductService implements ProductService {
   @override
-  ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.04');
+  ProductInfo getProductInfo() =>
+      const ProductInfo(name: 'Ubuntu', version: '23.04');
 
   @override
   String getReleaseNotesURL(String languageCode) =>

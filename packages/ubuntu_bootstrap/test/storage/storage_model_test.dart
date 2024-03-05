@@ -81,7 +81,7 @@ void main() {
   test('product info', () {
     final product = MockProductService();
     when(product.getProductInfo())
-        .thenReturn(ProductInfo(name: 'Ubuntu', version: '24.04 LTS'));
+        .thenReturn(const ProductInfo(name: 'Ubuntu', version: '24.04 LTS'));
 
     final model = StorageModel(
       MockStorageService(),

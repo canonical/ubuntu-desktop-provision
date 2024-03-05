@@ -23,7 +23,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
   }
 
   static String _formatAlongside(
-      UbuntuBootstrapLocalizations lang, ProductInfo info, List<OsProber> os) {
+    UbuntuBootstrapLocalizations lang,
+    ProductInfo info,
+    List<OsProber> os,
+  ) {
     final product = [info.name, info.version].whereType<String>().join(' ');
     switch (os.length) {
       case 0:
@@ -34,7 +37,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
         return os.hasDuplicates
             ? lang.installationTypeAlongsideMulti(product)
             : lang.installationTypeAlongsideDual(
-                product, os.first.long, os.last.long);
+                product,
+                os.first.long,
+                os.last.long,
+              );
       default:
         return lang.installationTypeAlongsideMulti(product);
     }
