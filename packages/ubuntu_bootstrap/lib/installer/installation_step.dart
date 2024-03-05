@@ -15,6 +15,7 @@ enum InstallationStep with RouteName {
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   refresh(RefreshPage.new),
+  autoinstall(AutoinstallPage.new),
   sourceSelection(SourceSelectionPage.new),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
