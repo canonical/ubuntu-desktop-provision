@@ -9,14 +9,17 @@ case "$1" in
             addgroup --system gnome-initial-setup
         fi
 
+        # Set ownership and permissions for launch-desktop-provision-init.sh
+        chown root:gnome-initial-setup /usr/bin/launch-desktop-provision-init.sh
+        chmod 750 /usr/bin/launch-desktop-provision-init.sh
+
+        # Set ownership and permissions for bin's
         chown root:gnome-initial-setup /usr/libexec/sprovd
         chown root:gnome-initial-setup /usr/bin/provd
         chmod u+s /usr/libexec/sprovd
         
-        # Create the necessary directories with correct ownership and permissions
-        mkdir -p /run/gnome-initial-setup/.cache
-        chown -R gnome-initial-setup:gnome-initial-setup /run/gnome-initial-setup
-        chmod -R 755 /run/gnome-initial-setup
+        # Set gnome-initial-setup to launch the init-script instead of the gnome-initial-setup bin
+        sed -i 's|Exec=.*|Exec=/usr/bin/launch-init.sh|' /usr/share/applications/gnome-initial-setup.desktop
         ;;
 esac
 
