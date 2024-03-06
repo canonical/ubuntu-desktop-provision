@@ -11,10 +11,14 @@ export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
 	dh $@ --buildsystem=golang --with=golang
 
 override_dh_auto_clean:
+ifeq ($(CI), true)
+	@echo "Skipping dh_auto_clean in CI"
+else
 	dh_auto_clean
 
 	# Create the vendor directory when building the source package
 	[ -d vendor/ ] || go mod vendor
+endif
 
 override_dh_auto_install:
 	dh_auto_install
@@ -30,3 +34,4 @@ override_dh_auto_install:
 
 	# Compile and install sprovd manually
 	go build -o debian/tmp/usr/bin/sprovd ./sprovd/sprovd.go
+
