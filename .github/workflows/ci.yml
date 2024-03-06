@@ -254,14 +254,14 @@ jobs:
           flags: provd
           token: ${{secrets.CODECOV_TOKEN}}
 
-      - name: Build Debian package
-        env:
-          CI: true
+      - name: Build Debian package in Ubuntu 24.04 Noble Docker container
         run: |
-          cd provd
-          dpkg-buildpackage -us -uc -b
-          mv ../provd_*.deb ../provd.deb
-
+          docker run --rm -v $(pwd):/workspace -w /workspace/provd ubuntu:noble bash -c "
+            apt-get update &&
+            apt-get install -y libgtk-3-dev debhelper dh-golang golang-go &&
+            dpkg-buildpackage -us -uc -b &&
+            mv ../provd_*.deb ../provd.deb
+          "
 
       - name: Upload Debian package
         uses: actions/upload-artifact@v3
