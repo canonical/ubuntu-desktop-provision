@@ -76,6 +76,10 @@ class StorageModel extends SafeChangeNotifier {
     return _product.getReleaseNotesURL(locale.languageCode);
   }
 
+  /// The TPM info URL.
+  final String tpmInfoUrl =
+      'https://ubuntu.com/blog/tpm-backed-full-disk-encryption-is-coming-to-ubuntu';
+
   /// A list of existing OS installations or null if not detected.
   List<OsProber>? get existingOS => _storage.existingOS;
 

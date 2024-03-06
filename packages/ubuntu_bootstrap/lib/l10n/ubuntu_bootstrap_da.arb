@@ -544,13 +544,6 @@
   "@shutdown": {},
   "confirmPartitionChanges": "De følgende partitionsændringer vil træde i kraft:",
   "@confirmPartitionChanges": {},
-  "installationTypeLVM": "Benyt LVM med den nye {RELEASE}-installation",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeLVMSelected": "LVM opfanget",
   "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryptionSelected": "LVM og kryptering valgt",

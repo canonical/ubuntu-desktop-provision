@@ -119,8 +119,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Keine ausgewählt",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "LVM bei der neuen {RELEASE} -Installation verwenden",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM ausgewählt",
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Die neue {RELEASE} -Installation zur Sicherheit verschlüsseln",

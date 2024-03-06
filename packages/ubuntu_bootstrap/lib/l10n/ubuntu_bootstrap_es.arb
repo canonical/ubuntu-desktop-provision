@@ -195,7 +195,7 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nada seleccionado",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Usar LVM con la nueva instalación de {RELEASE}",
+  "installationTypeLVM": "Usar LVM",
   "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM seleccionado",
   "@installationTypeLVMSelected": {},

@@ -106,13 +106,6 @@
       "os": {}
     }
   },
-  "installationTypeLVM": "Bruk LVM med nyeste {RELEASE} installasjon",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Advarsel:</font> Dette vil slette alle dine {os}-programmer, dokumenter, bilder, musikk og andre filer.",
   "@installationTypeReinstallWarning": {
     "type": "text",

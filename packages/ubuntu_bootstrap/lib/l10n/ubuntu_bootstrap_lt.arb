@@ -190,13 +190,6 @@
       "RELEASE": {}
     }
   },
-  "installationTypeLVM": "Naudoti LVM kartu su nauju {RELEASE} diegimu",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "Šifruoti naują {RELEASE} diegimą, kad būtų užtikrintas saugumas",
   "@installationTypeEncrypt": {
     "type": "text",

@@ -4,12 +4,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i8;
-import 'dart:ui' as _i6;
+import 'dart:ui' as _i7;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i7;
-import 'package:subiquity_client/subiquity_client.dart' as _i5;
-import 'package:ubuntu_bootstrap/pages.dart' as _i4;
+import 'package:mockito/src/dummies.dart' as _i4;
+import 'package:subiquity_client/subiquity_client.dart' as _i6;
+import 'package:ubuntu_bootstrap/pages.dart' as _i5;
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart' as _i3;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
 
@@ -45,7 +45,16 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
   }
 
   @override
-  set type(_i4.StorageType? type) => super.noSuchMethod(
+  String get tpmInfoUrl => (super.noSuchMethod(
+        Invocation.getter(#tpmInfoUrl),
+        returnValue: _i4.dummyValue<String>(
+          this,
+          Invocation.getter(#tpmInfoUrl),
+        ),
+      ) as String);
+
+  @override
+  set type(_i5.StorageType? type) => super.noSuchMethod(
         Invocation.setter(
           #type,
           type,
@@ -54,7 +63,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       );
 
   @override
-  set guidedCapability(_i5.GuidedCapability? capability) => super.noSuchMethod(
+  set guidedCapability(_i6.GuidedCapability? capability) => super.noSuchMethod(
         Invocation.setter(
           #guidedCapability,
           capability,
@@ -144,21 +153,21 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
-  List<_i5.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
+  List<_i6.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(
         Invocation.method(
           #getAllTargets,
           [],
         ),
-        returnValue: <_i5.GuidedStorageTarget>[],
-      ) as List<_i5.GuidedStorageTarget>);
+        returnValue: <_i6.GuidedStorageTarget>[],
+      ) as List<_i6.GuidedStorageTarget>);
 
   @override
-  String getReleaseNotesURL(_i6.Locale? locale) => (super.noSuchMethod(
+  String getReleaseNotesURL(_i7.Locale? locale) => (super.noSuchMethod(
         Invocation.method(
           #getReleaseNotesURL,
           [locale],
         ),
-        returnValue: _i7.dummyValue<String>(
+        returnValue: _i4.dummyValue<String>(
           this,
           Invocation.method(
             #getReleaseNotesURL,
@@ -198,7 +207,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as _i8.Future<void>);
 
   @override
-  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i7.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -207,7 +216,7 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       );
 
   @override
-  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i7.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

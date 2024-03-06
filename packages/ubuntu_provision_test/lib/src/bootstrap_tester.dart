@@ -169,10 +169,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           await tap(find.text(l10n.installationTypeNone));
           break;
         case GuidedCapability.LVM:
-          await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
+          await tap(find.text(l10n.installationTypeLVM));
           break;
         case GuidedCapability.LVM_LUKS:
-          await tap(find.text(l10n.installationTypeLVMEncryption('Ubuntu')));
+          await tap(find.text(l10n.installationTypeLVMEncryption));
           break;
         case GuidedCapability.ZFS:
           await tap(find.text(l10n.installationTypeZFS));

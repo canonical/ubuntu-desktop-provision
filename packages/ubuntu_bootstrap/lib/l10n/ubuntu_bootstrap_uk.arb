@@ -385,13 +385,6 @@
   },
   "confirmPartitionChanges": "Будуть застосовані наступні зміни розділів:",
   "@confirmPartitionChanges": {},
-  "installationTypeLVM": "Скористатися LVM для нової інсталяції {RELEASE}",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeLVMSelected": "LVM обрано",
   "@installationTypeLVMSelected": {},
   "newPartitionTableConfirmationMessage": "Ви вибрали весь пристрій для розбиття на розділи. Якщо ви продовжите створення нової таблиці розділів на ньому, всі поточні розділи будуть видалені.\n\nЗауважте, що ви зможете скасувати цю операцію пізніше, якщо захочете.",
