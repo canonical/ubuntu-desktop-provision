@@ -72,13 +72,6 @@
       "DISTRO": {}
     }
   },
-  "installationTypeLVM": "പുതിയ {RELEASE} ഇൻസ്റ്റാളേഷനോടൊപ്പം LVM ഉപയോഗിക്കുക",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "സുരക്ഷയ്ക്കായി പുതിയ {RELEASE} ഇൻസ്റ്റാളേഷൻ എൻക്രിപ്റ്റ് ചെയ്യുക",
   "@installationTypeEncrypt": {
     "type": "text",

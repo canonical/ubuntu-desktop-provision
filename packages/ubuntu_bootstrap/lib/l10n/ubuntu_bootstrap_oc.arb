@@ -203,8 +203,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Cap pas seleccionat",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Utilizar LVM amb l’installation de {RELEASE} novèla",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM seleccionat",
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Chifrar l’installacion de {RELEASE} novèla per la seguretat",

@@ -62,13 +62,6 @@
       "DISTRO": {}
     }
   },
-  "installationTypeLVM": "Defnyddio LVM gyda'r gosodiad {RELEASE} newydd",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeLVMSelected": "LVM wedi'i ddewis",
   "@installationTypeLVMSelected": {},
   "diskHeadersType": "Teip",

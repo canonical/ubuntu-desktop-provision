@@ -190,13 +190,6 @@
   "@installationTypeZFSSelected": {},
   "installationTypeNoneSelected": "Nincs kiválasztva",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "LVM használata az új {RELEASE} telepítéssel",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeReinstall": "A(z) {os} törlése és újratelepítés",
   "@installationTypeReinstall": {
     "type": "text",

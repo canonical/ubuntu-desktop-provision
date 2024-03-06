@@ -239,23 +239,22 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'İleri seviye özellikler';
 
   @override
+  String get installationTypeExperimental => 'Experimental';
+
+  @override
   String get installationTypeNone => 'Hiçbiri';
 
   @override
   String get installationTypeNoneSelected => 'Hiçbiri seçilmedi';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return 'Yeni $RELEASE kurulumuyla LVM kullan';
-  }
+  String get installationTypeLVM => 'Use LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM seçildi';
 
   @override
-  String installationTypeLVMEncryption(Object RELEASE) {
-    return 'Use LVM and encryption with the new $RELEASE installation';
-  }
+  String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ve şifreleme seçildi';
@@ -267,7 +266,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'DENEYSEL: Diski sil ve ZFS kullan';
 
   @override
-  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seçildi';
@@ -279,8 +278,8 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'DENEYSEL: Donanım destekli tam disk şifrelemeyi etkinleştir';
 
   @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Uyarı:</font> Bu özellik yalnızca belirli donanım yapılandırmalarında desteklenir ve gelecekteki Ubuntu sürümlerine yükseltmeyi desteklemeyebilir. Lütfen etkinleştirmeden önce <a href=\"$url\">sürüm notlarını</a> okuyun.';
+  String installationTypeTPMInfo(Object url) {
+    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override

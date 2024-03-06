@@ -239,23 +239,22 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Edistyneet asetukset';
 
   @override
+  String get installationTypeExperimental => 'Experimental';
+
+  @override
   String get installationTypeNone => 'Ei mitään';
 
   @override
   String get installationTypeNoneSelected => 'Ei valintoja';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return 'Käytä LVM:ää uudessa $RELEASE-asennuksessa';
-  }
+  String get installationTypeLVM => 'Use LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM valittu';
 
   @override
-  String installationTypeLVMEncryption(Object RELEASE) {
-    return 'Use LVM and encryption with the new $RELEASE installation';
-  }
+  String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
@@ -267,7 +266,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'KOKEELLINEN: Tyhjennä levy ja käytä ZFS:ää';
 
   @override
-  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valittu';
@@ -279,8 +278,8 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta';
 
   @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Varoitus:</font> Tämä ominaisuus on tuettu vain tietyillä laitteistokokoonpanoilla, eikä se välttämättä mahdollista päivitystä uudempiin Ubuntu-julkaisuisin. Lue <a href=\"$url\">julkaisutiedot</a>, ennen kuin otat tämän käyttöön.';
+  String installationTypeTPMInfo(Object url) {
+    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override

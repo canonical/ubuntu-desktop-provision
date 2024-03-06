@@ -239,23 +239,22 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => '高级功能';
 
   @override
+  String get installationTypeExperimental => 'Experimental';
+
+  @override
   String get installationTypeNone => '空';
 
   @override
   String get installationTypeNoneSelected => '尚未选择任何安装选项';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return '在新的 $RELEASE 安装中使用 LVM';
-  }
+  String get installationTypeLVM => 'Use LVM';
 
   @override
   String get installationTypeLVMSelected => '已选择配置 LVM';
 
   @override
-  String installationTypeLVMEncryption(Object RELEASE) {
-    return 'Use LVM and encryption with the new $RELEASE installation';
-  }
+  String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
@@ -267,7 +266,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => '实验性功能：擦除磁盘并使用ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
   String get installationTypeZFSSelected => '已选择 ZFS';
@@ -276,11 +275,11 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTAL: Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
 
   @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"$url\">release notes</a> before enabling.';
+  String installationTypeTPMInfo(Object url) {
+    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override
@@ -1078,11 +1077,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeNoneSelected => '未選擇';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return '在新的 $RELEASE 安裝中使用 LVM';
-  }
-
-  @override
   String get installationTypeLVMSelected => '已選用 LVM';
 
   @override
@@ -1099,11 +1093,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeTPM => '實驗功能：使用 TPM 支援的全硬碟加密';
-
-  @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">警告：</font>本功能僅支援特定硬體配置，且升級 Ubuntu 版本後有失去支援的可能。請在啟用本功能前詳讀<a href=\"$url\">版本資訊</a>。';
-  }
 
   @override
   String get installationTypeTPMSelected => '已選用 TPM 加密';

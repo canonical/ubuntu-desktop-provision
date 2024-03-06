@@ -304,13 +304,6 @@
   "@installationTypeAdvancedLabel": {},
   "partitionTypeLabel": "指定新分区的类型：",
   "@partitionTypeLabel": {},
-  "installationTypeLVM": "在新的 {RELEASE} 安装中使用 LVM",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "为安全起见，对新的 {RELEASE} 安装进行加密",
   "@installationTypeEncrypt": {
     "type": "text",

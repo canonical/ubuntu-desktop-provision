@@ -370,13 +370,6 @@
       "sysname": {}
     }
   },
-  "installationTypeLVM": "Yeni {RELEASE} kurulumuyla LVM kullan",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "Güvenlik için yeni {RELEASE} kurulumunu şifrele",
   "@installationTypeEncrypt": {
     "type": "text",

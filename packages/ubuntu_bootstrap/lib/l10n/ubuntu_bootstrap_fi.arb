@@ -67,8 +67,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Ei valintoja",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Käytä LVM:ää uudessa {RELEASE}-asennuksessa",
-  "@installationTypeLVM": {},
   "installationTypeManualInfo": "Voit luoda tai muuttaa osioiden kokoja itse, tai valita useita osioita {DISTRO}n käytettäväksi",
   "@installationTypeManualInfo": {},
   "installationTypeZFSSelected": "ZFS valittu",
