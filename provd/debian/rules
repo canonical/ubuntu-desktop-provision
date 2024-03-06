@@ -23,11 +23,6 @@ endif
 override_dh_auto_install:
 	dh_auto_install
 
-	# Manually copy .service and .socket files from the sibling systemd directory
-	mkdir -p debian/tmp/lib/systemd/system
-	cp -a systemd/*.service debian/tmp/lib/systemd/system/
-	cp -a systemd/*.socket debian/tmp/lib/systemd/system/
-
 	# Move provd binary to /usr/bin
 	mkdir -p debian/tmp/usr/bin
 	mv debian/provd/usr/bin/* debian/tmp/usr/bin/
