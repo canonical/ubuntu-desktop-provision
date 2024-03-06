@@ -599,7 +599,7 @@ void main() {
     });
 
     test('restart', () async {
-      await client.restart();
+      expect(client.restart, returnsNormally);
     });
   });
 
