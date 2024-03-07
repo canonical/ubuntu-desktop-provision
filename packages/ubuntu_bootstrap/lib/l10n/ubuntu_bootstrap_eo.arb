@@ -128,8 +128,6 @@
   "@installationTypeZFSSelected": {},
   "installationTypeLVMSelected": "LVM elektita",
   "@installationTypeLVMSelected": {},
-  "installationTypeLVM": "Uzi LVM por la nova instalaĵo de {RELEASE}",
-  "@installationTypeLVM": {},
   "installationTypeZFS": "EKSPERIMENTE: Forviŝi la diskon kaj uzi la dosiersistemon ZFS",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Instali {product} apud {os}",

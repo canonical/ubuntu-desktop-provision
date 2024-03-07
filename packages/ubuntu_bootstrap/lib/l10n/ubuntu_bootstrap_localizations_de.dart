@@ -239,23 +239,22 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Erweiterte Funktionen';
 
   @override
+  String get installationTypeExperimental => 'Experimental';
+
+  @override
   String get installationTypeNone => 'Keine';
 
   @override
   String get installationTypeNoneSelected => 'Keine ausgewählt';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return 'LVM bei der neuen $RELEASE -Installation verwenden';
-  }
+  String get installationTypeLVM => 'Use LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM ausgewählt';
 
   @override
-  String installationTypeLVMEncryption(Object RELEASE) {
-    return 'Use LVM and encryption with the new $RELEASE installation';
-  }
+  String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM und Verschlüsselung ausgewählt';
@@ -267,7 +266,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTELL: Festplatte löschen und ZFS verwenden';
 
   @override
-  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
   String get installationTypeZFSSelected => 'ZFS ausgewählt';
@@ -279,8 +278,8 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'EXPERIMENTELL: Hardwaregestützte vollständige Festplattenverschlüsselung aktivieren';
 
   @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Warnung:</font> Diese Funktion wird nur auf bestimmten Hardwarekonfigurationen unterstützt und unterstützt möglicherweise keine Aktualisierungen auf zukünftige Ubuntu-Versionen. Bitte lesen Sie die <a href=\"$url\">Veröffentlichungshinweise</a> vor dem Aktivieren.';
+  String installationTypeTPMInfo(Object url) {
+    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override

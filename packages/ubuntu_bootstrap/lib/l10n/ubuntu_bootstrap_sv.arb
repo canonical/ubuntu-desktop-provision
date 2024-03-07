@@ -261,13 +261,6 @@
       "RELEASE": {}
     }
   },
-  "installationTypeLVM": "Använd LVM med den nya {RELEASE}-installationen",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "Kryptera den nya {RELEASE}-installationen för säkerhet",
   "@installationTypeEncrypt": {
     "type": "text",

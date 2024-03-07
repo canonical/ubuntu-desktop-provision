@@ -286,13 +286,6 @@
       "DISTRO": {}
     }
   },
-  "installationTypeLVM": "Použít pro novou instalaci {RELEASE} LVM svazky",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "Zabezpečit novou instalaci {RELEASE} šifrováním",
   "@installationTypeEncrypt": {
     "type": "text",

@@ -177,13 +177,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nič nevybrané",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Použiť pre novú inštaláciu {RELEASE} LVM zväzky",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeLVMSelected": "Vybrané LVM",
   "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryptionSelected": "Vybrané LVM a šifrovanie",

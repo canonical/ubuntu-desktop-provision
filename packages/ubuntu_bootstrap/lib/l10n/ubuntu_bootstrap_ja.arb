@@ -257,13 +257,6 @@
       "DISTRO": {}
     }
   },
-  "installationTypeLVM": "新しい {RELEASE} のインストールに LVM を使用する",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "セキュリティのためディスクを暗号化し、 {RELEASE} をインストールする",
   "@installationTypeEncrypt": {
     "type": "text",

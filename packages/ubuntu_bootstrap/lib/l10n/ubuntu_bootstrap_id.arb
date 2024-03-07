@@ -175,8 +175,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Tidak ada yang dipilih",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Gunakan LVM dengan instalasi {RELEASE} baru",
-  "@installationTypeLVM": {},
   "installationTypeEncryptInfo": "Anda akan memilih kunci keamanan di langkah berikutnya.",
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "EKSPERIMENTAL: Hapus disk dan gunakan ZFS",

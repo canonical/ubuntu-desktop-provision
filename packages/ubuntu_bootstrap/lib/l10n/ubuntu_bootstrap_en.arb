@@ -223,45 +223,36 @@
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Advanced features",
   "@installationTypeAdvancedTitle": {},
+  "installationTypeExperimental": "Experimental",
+  "@installationTypeExperimental": {},
   "installationTypeNone": "None",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "None selected",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Use LVM with the new {RELEASE} installation",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
+  "installationTypeLVM": "Use LVM",
+  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM selected",
   "@installationTypeLVMSelected": {},
-  "installationTypeLVMEncryption": "Use LVM and encryption with the new {RELEASE} installation",
-  "@installationTypeLVMEncryption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
+  "installationTypeLVMEncryption": "Use LVM and encryption",
+  "@installationTypeLVMEncryption": {},
   "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
   "@installationTypeLVMEncryptionSelected": {},
   "installationTypeEncryptInfo": "You will choose a security key in the next step.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EXPERIMENTAL: Erase disk and use ZFS",
+  "installationTypeZFS": "Erase disk and use ZFS",
   "@installationTypeZFS": {},
-  "installationTypeZFSEncryption": "EXPERIMENTAL: Erase disk and use ZFS with encryption",
+  "installationTypeZFSEncryption": "Erase disk and use ZFS with encryption",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSSelected": "ZFS selected",
   "@installationTypeZFSSelected": {},
   "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPM": "EXPERIMENTAL: Enable hardware-backed full disk encryption",
+  "installationTypeTPM": "Enable hardware-backed full disk encryption",
   "@installationTypeTPM": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Warning:</font> This feature is only supported on certain hardware configurations and may not support upgrading to future Ubuntu releases. Please read the <a href=\"{url}\">release notes</a> before enabling.",
-  "@installationTypeTPMWarning": {
+  "installationTypeTPMInfo": "This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.",
+  "@installationTypeTPMInfo": {
     "type": "text",
     "placeholders": {
-      "color": {},
       "url": {}
     }
   },

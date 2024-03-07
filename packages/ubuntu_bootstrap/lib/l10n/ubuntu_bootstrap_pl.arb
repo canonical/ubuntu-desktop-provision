@@ -180,8 +180,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nie wybrano",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Użyj LVM z nową instalacją {RELEASE}",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "Wybrano LVM",
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Zaszyfruj nową instalację {RELEASE} dla bezpieczeństwa",

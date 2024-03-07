@@ -1,11 +1,11 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
+import 'package:ubuntu_bootstrap/widgets/info_box.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -17,6 +17,8 @@ Future<void> showAdvancedFeaturesDialog(
     BuildContext context, StorageModel model) async {
   final guidedCapability =
       ValueNotifier(model.guidedCapability ?? GuidedCapability.DIRECT);
+  final experimentalBadgeText =
+      UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
   final result = await showDialog<bool>(
     context: context,
@@ -49,22 +51,13 @@ Future<void> showAdvancedFeaturesDialog(
                     ),
                   if (model.hasLvm) ...[
                     YaruRadioButton<GuidedCapability>(
-                      title: Consumer(builder: (context, ref, child) {
-                        final flavor = ref.watch(flavorProvider);
-                        return Text(
-                            lang.installationTypeLVM(flavor.displayName));
-                      }),
+                      title: Text(lang.installationTypeLVM),
                       value: GuidedCapability.LVM,
                       groupValue: guidedCapability.value,
                       onChanged: (v) => guidedCapability.value = v!,
                     ),
                     YaruRadioButton<GuidedCapability>(
-                      title: Consumer(builder: (context, ref, child) {
-                        final flavor = ref.watch(flavorProvider);
-                        return Text(lang
-                            .installationTypeLVMEncryption(flavor.displayName));
-                      }),
-                      subtitle: Text(lang.installationTypeEncryptInfo),
+                      title: Text(lang.installationTypeLVMEncryption),
                       value: GuidedCapability.LVM_LUKS,
                       groupValue: guidedCapability.value,
                       onChanged: (v) => guidedCapability.value = v!,
@@ -72,14 +65,23 @@ Future<void> showAdvancedFeaturesDialog(
                   ],
                   if (model.hasZfs) ...[
                     YaruRadioButton<GuidedCapability>(
-                      title: Text(lang.installationTypeZFS),
+                      title: Wrap(
+                        children: [
+                          Text(lang.installationTypeZFS),
+                          InfoBadge(title: experimentalBadgeText),
+                        ],
+                      ),
                       value: GuidedCapability.ZFS,
                       groupValue: guidedCapability.value,
                       onChanged: (v) => guidedCapability.value = v!,
                     ),
                     YaruRadioButton<GuidedCapability>(
-                      title: Text(lang.installationTypeZFSEncryption),
-                      subtitle: Text(lang.installationTypeEncryptInfo),
+                      title: Wrap(
+                        children: [
+                          Text(lang.installationTypeZFSEncryption),
+                          InfoBadge(title: experimentalBadgeText),
+                        ],
+                      ),
                       value: GuidedCapability.ZFS_LUKS_KEYSTORE,
                       groupValue: guidedCapability.value,
                       onChanged: (v) => guidedCapability.value = v!,
@@ -133,20 +135,7 @@ class TpmOption extends StatelessWidget {
 
     if (target == null) return const SizedBox();
 
-    var data = lang.installationTypeTPMWarning(
-      Theme.of(context).colorScheme.error.toHex(),
-      model.getReleaseNotesURL(Localizations.localeOf(context)),
-    );
-    Function(GuidedCapability?)? onChanged = (v) => guidedCapability.value = v!;
-
-    if (target.disallowed.isNotEmpty) {
-      final element = target.disallowed.first;
-      final message = element.message ?? '';
-      onChanged = null;
-
-      final color = Theme.of(context).disabledColor.toHex();
-      data = '<span style="color: $color">$message</span>';
-    }
+    final tpmInfo = lang.installationTypeTPMInfo(model.tpmInfoUrl);
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -156,19 +145,23 @@ class TpmOption extends StatelessWidget {
           title: Text(lang.installationTypeTPM),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
           groupValue: guidedCapability.value,
-          onChanged: onChanged,
+          onChanged: target.disallowed.isEmpty
+              ? (v) => guidedCapability.value = v!
+              : null,
         ),
-        Padding(
-          padding: kWizardIndentation,
-          child: Html(
-            data: data,
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(color: Theme.of(context).colorScheme.link),
-            },
-            onLinkTap: (url, _, __) => launchUrl(url!),
+        if (guidedCapability.value == GuidedCapability.CORE_BOOT_ENCRYPTED) ...[
+          const SizedBox(height: kWizardSpacing),
+          InfoBox(
+            child: Html(
+              data: tpmInfo,
+              style: {
+                'body': Style(margin: Margins.zero),
+                'a': Style(color: Theme.of(context).colorScheme.link),
+              },
+              onLinkTap: (url, _, __) => launchUrl(url!),
+            ),
           ),
-        ),
+        ],
       ],
     );
   }

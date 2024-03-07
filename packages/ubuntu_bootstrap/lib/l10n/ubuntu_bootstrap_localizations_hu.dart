@@ -239,23 +239,22 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Speciális funkciók';
 
   @override
+  String get installationTypeExperimental => 'Experimental';
+
+  @override
   String get installationTypeNone => 'Nincs';
 
   @override
   String get installationTypeNoneSelected => 'Nincs kiválasztva';
 
   @override
-  String installationTypeLVM(Object RELEASE) {
-    return 'LVM használata az új $RELEASE telepítéssel';
-  }
+  String get installationTypeLVM => 'Use LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM kiválasztva';
 
   @override
-  String installationTypeLVMEncryption(Object RELEASE) {
-    return 'Use LVM and encryption with the new $RELEASE installation';
-  }
+  String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM és titkosítás kiválasztva';
@@ -267,7 +266,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'KÍSÉRLETI: lemez törlése és ZFS használata';
 
   @override
-  String get installationTypeZFSEncryption => 'EXPERIMENTAL: Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
   String get installationTypeZFSSelected => 'ZFS kiválasztva';
@@ -279,8 +278,8 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése';
 
   @override
-  String installationTypeTPMWarning(Object color, Object url) {
-    return '<font color=\"$color\">Figyelmeztetés:</font> ez a funkció csak bizonyos hardverkonfigurációkon támogatott, és lehet, hogy nem támogatja a jövőbeli Ubuntu kiadásokra való frissítést. Olvassa el a <a href=\"$url\">kiadási megjegyzéseket</a> az engedélyezés előtt.';
+  String installationTypeTPMInfo(Object url) {
+    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override

@@ -394,13 +394,6 @@
   "@installationTypeAdvancedTitle": {},
   "installationTypeNoneSelected": "未選擇",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "在新的 {RELEASE} 安裝中使用 LVM",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeLVMSelected": "已選用 LVM",
   "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryptionSelected": "已選用 LVM 及加密",
