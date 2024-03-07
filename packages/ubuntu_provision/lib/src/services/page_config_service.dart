@@ -33,7 +33,6 @@ class PageConfigService {
     pages.addAll(pageConfig.pages);
 
     if (isOem) {
-      pages['identity'] = const PageConfigEntry(visible: false);
       pages['eula'] = const PageConfigEntry();
     }
 
