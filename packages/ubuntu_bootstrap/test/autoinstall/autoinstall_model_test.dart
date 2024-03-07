@@ -18,6 +18,8 @@ void main() {
   const exampleUrl = 'http://example.com/autoinstall.yaml';
   test('valid yaml', () async {
     final subiquity = MockSubiquityClient();
+    final subiquityServer = MockSubiquityServer();
+    final resetUi = MockCallback();
     final fs = MemoryFileSystem.test();
     final httpClient = createMockHttpClient(
         responseStream: Stream.fromIterable(
@@ -48,9 +50,11 @@ void main() {
     ));
     final model = AutoinstallModel(
       subiquity,
+      subiquityServer,
+      resetUi.call,
       fs: fs,
       httpClient: httpClient,
-      runExternalCommands: false,
+      dryRun: true,
     );
 
     model.url = exampleUrl;
@@ -67,10 +71,14 @@ void main() {
     expect(loadYaml(content), isA<YamlMap>());
     verify(httpClient.getUrl(Uri.parse(exampleUrl))).called(1);
     verify(subiquity.restart()).called(1);
+    verify(subiquityServer.waitSubiquity()).called(1);
+    verify(resetUi.call()).called(1);
   });
 
   test('invalid yaml', () async {
     final subiquity = MockSubiquityClient();
+    final subiquityServer = MockSubiquityServer();
+    final resetUi = MockCallback();
     final fs = MemoryFileSystem.test();
     final httpClient = createMockHttpClient(
         responseStream: Stream.fromIterable(
@@ -78,9 +86,11 @@ void main() {
     ));
     final model = AutoinstallModel(
       subiquity,
+      subiquityServer,
+      resetUi.call,
       fs: fs,
       httpClient: httpClient,
-      runExternalCommands: false,
+      dryRun: true,
     );
 
     model.url = exampleUrl;
@@ -100,10 +110,14 @@ void main() {
 
     verify(httpClient.getUrl(Uri.parse(exampleUrl))).called(1);
     verifyNever(subiquity.restart());
+    verifyNever(subiquityServer.waitSubiquity());
+    verifyNever(resetUi.call());
   });
 
   test('network error', () async {
     final subiquity = MockSubiquityClient();
+    final subiquityServer = MockSubiquityServer();
+    final resetUi = MockCallback();
     final fs = MemoryFileSystem.test();
     final httpClient = createMockHttpClient(
       responseStream: Stream.error(
@@ -112,9 +126,11 @@ void main() {
     );
     final model = AutoinstallModel(
       subiquity,
+      subiquityServer,
+      resetUi.call,
       fs: fs,
       httpClient: httpClient,
-      runExternalCommands: false,
+      dryRun: true,
     );
 
     model.url = exampleUrl;
@@ -134,6 +150,8 @@ void main() {
 
     verify(httpClient.getUrl(Uri.parse(exampleUrl))).called(1);
     verifyNever(subiquity.restart());
+    verifyNever(subiquityServer.waitSubiquity());
+    verifyNever(resetUi.call());
   });
 }
 
@@ -149,3 +167,9 @@ HttpClient createMockHttpClient({
   when(response.transform(utf8.decoder)).thenAnswer((_) => responseStream);
   return client;
 }
+
+abstract class CallBack {
+  void call();
+}
+
+class MockCallback extends Mock implements CallBack {}

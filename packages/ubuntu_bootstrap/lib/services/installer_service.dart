@@ -9,9 +9,8 @@ class InstallerService {
 
   final SubiquityClient _client;
   final PageConfigService pageConfig;
-  late final Set<String> _excludedPages;
-  late final Set<String>? _subiquityPages;
-  bool _isLoaded = false;
+  late Set<String> _excludedPages;
+  Set<String>? _subiquityPages;
 
   Future<void> init() async {
     await _client.setVariant(Variant.DESKTOP);
@@ -31,13 +30,6 @@ class InstallerService {
   }
 
   Future<void> load() async {
-    if (_isLoaded) {
-      _log.warning(
-        'InstallerService tried to run load a second time, this should not happen.',
-      );
-      return;
-    }
-    _isLoaded = true;
     await monitorStatus().firstWhere((s) => s?.isLoading == false);
     _subiquityPages = (await _client.getInteractiveSections())?.toSet();
     final oemPages = {'eula'};
