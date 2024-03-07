@@ -93,9 +93,9 @@ plugs:
   run-provd-socket:
     interface: system-files
     read:
-      - /run/provd/provd.sock
+      - /run/gnome-initial-setup/desktop-provision/init.socket
     write:
-      - /run/provd/provd.sock
+      - /run/gnome-initial-setup/desktop-provision/init.socket
   tmp:
     interface: system-files
     read:

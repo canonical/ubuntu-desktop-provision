@@ -2,7 +2,7 @@ import 'dart:io';
 
 mixin ProvdAddress {
   static final socketAddress = InternetAddress(
-    '/run/provd/provd.sock',
+    '/run/gnome-initial-setup/desktop-provision/init.socket',
     type: InternetAddressType.unix,
   );
   static const port = 443;
