@@ -16,7 +16,7 @@ const (
 	DefaultLogLevel = slog.LevelWarn
 
 	// DefaultSocketPath is the default socket path.
-	DefaultSocketPath = "/run/provd.sock"
+	DefaultSocketPath = "/run/gnome-initial-setup/desktop-provision/init.socket"
 )
 
 // D-Bus constants.
