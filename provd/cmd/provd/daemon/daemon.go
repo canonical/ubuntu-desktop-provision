@@ -52,7 +52,7 @@ func New() *App {
 			// Set config defaults
 			a.config = daemonConfig{
 				Paths: systemPaths{
-					Socket: "/run/desktop-provision/init.socket",
+					Socket: "/run/gnome-initial-setup/desktop-provision/init.socket",
 				},
 			}
 
