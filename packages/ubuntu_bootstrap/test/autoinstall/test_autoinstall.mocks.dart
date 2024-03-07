@@ -3,12 +3,12 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i5;
-import 'dart:ui' as _i6;
+import 'dart:async' as _i6;
+import 'dart:ui' as _i4;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i4;
+import 'package:mockito/src/dummies.dart' as _i5;
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart'
     as _i3;
 
@@ -44,9 +44,15 @@ class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
   }
 
   @override
+  _i4.VoidCallback get resetUi => (super.noSuchMethod(
+        Invocation.getter(#resetUi),
+        returnValue: () {},
+      ) as _i4.VoidCallback);
+
+  @override
   String get url => (super.noSuchMethod(
         Invocation.getter(#url),
-        returnValue: _i4.dummyValue<String>(
+        returnValue: _i5.dummyValue<String>(
           this,
           Invocation.getter(#url),
         ),
@@ -92,17 +98,17 @@ class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
       ) as bool);
 
   @override
-  _i5.Future<void> apply() => (super.noSuchMethod(
+  _i6.Future<void> apply() => (super.noSuchMethod(
         Invocation.method(
           #apply,
           [],
         ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
 
   @override
-  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -111,7 +117,7 @@ class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
       );
 
   @override
-  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

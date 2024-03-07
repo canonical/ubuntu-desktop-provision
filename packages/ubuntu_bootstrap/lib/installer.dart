@@ -11,6 +11,7 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -201,7 +202,7 @@ Future<void> runInstallerApp(
                 rootBundle,
                 package: 'ubuntu_bootstrap',
               ),
-              child: const InstallerWizard(),
+              child: InstallerWizard(key: ValueKey(ref.watch(restartProvider))),
             ),
           );
         },
