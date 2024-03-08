@@ -46,6 +46,8 @@ class InstallerService {
     _excludedPages = pageConfig.excludedPages.toSet();
     if (pageConfig.isOem) {
       _excludedPages.add('identity');
+      _excludedPages.add('timezone');
+      await _client.markConfigured(['identity', 'timezone']);
     }
 
     final excludedRequiredPages = _excludedPages.intersection(requiredPages);
