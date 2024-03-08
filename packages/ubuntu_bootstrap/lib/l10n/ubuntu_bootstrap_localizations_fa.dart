@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'نمایش کلید امنیتی';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => 'برنامه‌ها و به‌روز رسانی‌ها';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'در حال حاضر برون‌خطید';
 
   @override
-  String get chooseSecurityKeyTitle => 'کلید امنیتی';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'رمزنگاری دیسک، از پرونده‌هایتان در صورت گم کردن رایانه‌تان حفاظت می‌کند. این کار نیازمند وارد کردن یک کلید امنیتی در هر بار روشن کردن رایانه است.\n\nهیچ پرونده‌ای بیرون $RELEASE رمزنگاری نخواهد شد.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'گزینش کلید امنیتی';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'تأیید کلید امنیتی';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'کلید امنیتی‌ای لازم است';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'کلیدهای امنیتی یکسان نیستند';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'گونهٔ نصب';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">هشدار:</font> این کار تمامی برنامه‌ها، سندها، نگاره‌ها، آهنگ‌ها و هر پروندهٔ دیگری را روی هر سیستم‌عاملی حذف خواهد کرد.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'ویژگی‌های پیش‌رفته…';

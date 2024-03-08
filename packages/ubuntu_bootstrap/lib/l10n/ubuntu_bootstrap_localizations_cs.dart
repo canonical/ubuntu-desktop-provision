@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Zobrazit klíč zabezpečení';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => 'Aplikace a aktualizace';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'V tu chvíli nejste připojení k Internetu';
 
   @override
-  String get chooseSecurityKeyTitle => 'Klíč zabezpečení';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'Šifrování disku ochrání vaše soubory v případě, že o počítač přijdete (ztráta, krádež, …). Vyžaduje zadání šifrovacího klíče při každém spuštění počítače z vypnutého stavu (nikoli z uspání).\n\nŠifrovány budou pouze soubory, nacházející se v rámci $RELEASE – ty nacházející se mimo nikoli.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'Zvolte si šifrovací klíč';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'Zopakujte zadání šifrovacího klíče (prevence překlepu)';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'Je třeba zadat šifrovací klíč';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'Do každé z kolonek pro šifrovací klíč jste napsali něco jiného';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">VAROVÁNÍ:</font> Pokud tento šifrovací klíč zapomenete, ke svým datům už se nedostanete. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'Typ instalace';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">VAROVÁNÍ:</font> Toto smaže veškeré případné aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory) ve všech operačních systémech.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'Pokročilé funkce…';

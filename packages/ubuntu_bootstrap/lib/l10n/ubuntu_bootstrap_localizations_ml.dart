@@ -111,7 +111,10 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'സുരക്ഷാ കീകൾ പൊരുത്തപ്പെടുന്നില്ല';
 
   @override
-  String get showSecurityKey => 'Show security key';
+  String get showSecurityKey => 'Show';
+
+  @override
+  String get hideSecurityKey => 'Hide';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'അപ്ഡേറ്റുകളും മറ്റ് സോഫ്റ്റ്വെയറുകളും';
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'You are currently offline';
 
   @override
-  String get chooseSecurityKeyTitle => 'ഒരു സുരക്ഷാ കീ തിരഞ്ഞെടുക്കുക';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'നിങ്ങളുടെ കമ്പ്യൂട്ടർ നഷ്‌ടപ്പെട്ടാൽ ഡിസ്‌ക് എൻക്രിപ്ഷൻ നിങ്ങളുടെ ഫയലുകളെ സംരക്ഷിക്കുന്നു. ഓരോ തവണ കമ്പ്യൂട്ടർ ഓണാകുമ്പോഴും നിങ്ങൾ ഒരു സുരക്ഷാ കീ നൽകേണ്ടതുണ്ട്.\n\n$RELEASE-ന് പുറത്തുള്ള ഫയലുകളൊന്നും എൻക്രിപ്റ്റ് ചെയ്യപ്പെടില്ല.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'ഒരു സുരക്ഷാ കീ തിരഞ്ഞെടുക്കുക';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'സുരക്ഷാ കീ സ്ഥിരീകരിക്കുക';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'ഒരു സുരക്ഷാ കീ ആവശ്യമാണ്';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'സുരക്ഷാ കീകൾ പൊരുത്തപ്പെടുന്നില്ല';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">മുന്നറിയിപ്പ്</font>: ഈ സുരക്ഷാ കീ നഷ്‌ടപ്പെടുകയാണെങ്കിൽ, എല്ലാ ഡാറ്റയും നഷ്‌ടമാകും. നിങ്ങൾക്ക് വേണമെങ്കിൽ, നിങ്ങളുടെ കീ എഴുതി മറ്റെവിടെയെങ്കിലും സുരക്ഷിതമായ സ്ഥലത്ത് സൂക്ഷിക്കുക.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'ഇൻസ്റ്റാളേഷന്റെ തരം';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">മുന്നറിയിപ്പ്:</font> ഇത് നിങ്ങളുടെ എല്ലാ പ്രോഗ്രാമുകളും ഡോക്യുമെന്റുകളും ഫോട്ടോകളും സംഗീതവും എല്ലാ ഓപ്പറേറ്റിംഗ് സിസ്റ്റങ്ങളിലുമുള്ള മറ്റേതെങ്കിലും ഫയലുകളും ഇല്ലാതാക്കും.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'വിപുലമായ സവിശേഷതകൾ…';

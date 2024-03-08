@@ -2,12 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+enum InfoBoxType {
+  info,
+  warning,
+  error;
+
+  Color get color {
+    switch (this) {
+      case InfoBoxType.info:
+        return YaruColors.blue;
+      case InfoBoxType.warning:
+        return YaruColors.orange;
+      case InfoBoxType.error:
+        return YaruColors.red;
+    }
+  }
+
+  IconData get icon {
+    switch (this) {
+      case InfoBoxType.info:
+        return YaruIcons.information;
+      case InfoBoxType.warning:
+        return YaruIcons.warning;
+      case InfoBoxType.error:
+        return YaruIcons.error;
+    }
+  }
+}
+
 class InfoBox extends StatelessWidget {
   const InfoBox({
     this.title,
     this.subtitle,
     this.child,
     this.isThreeLine = false,
+    this.type = InfoBoxType.info,
     super.key,
   }) : assert(
           (subtitle != null) ^ (child != null),
@@ -18,11 +47,12 @@ class InfoBox extends StatelessWidget {
   final String? subtitle;
   final Widget? child;
   final bool isThreeLine;
+  final InfoBoxType type;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    const baseColor = YaruColors.blue;
+    final baseColor = type.color;
 
     return Row(
       children: [
@@ -32,7 +62,7 @@ class InfoBox extends StatelessWidget {
             border: Border.all(color: baseColor),
             borderRadius: kWizardBorderRadius,
             child: ListTile(
-              leading: const Icon(Icons.info_outlined, size: 30),
+              leading: Icon(type.icon, size: 30),
               iconColor: baseColor,
               title: title != null
                   ? Text(

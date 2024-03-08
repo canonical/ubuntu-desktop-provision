@@ -56,7 +56,7 @@ class ConfirmModel extends SafeChangeNotifier {
 
   /// Starts the installation process.
   Future<void> startInstallation() async {
-    _storage.securityKey = null; // no longer needed
+    _storage.passphrase = null; // no longer needed
     await _installer.start();
   }
 

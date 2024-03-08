@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Sicherheitsschlüssel anzeigen';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => 'Anwendungen und Aktualisierungen';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Sie sind derzeit offline';
 
   @override
-  String get chooseSecurityKeyTitle => 'Sicherheitsschlüssel';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'Die Festplattenverschlüsselung schützt Ihre Dateien, falls Sie Ihren Computer verlieren. Bei jedem Start des Computers müssen Sie einen Sicherheitsschlüssel eingeben.\n\nAlle Dateien außerhalb von $RELEASE werden nicht verschlüsselt.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'Wählen Sie einen Sicherheitsschlüssel aus';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'Bestätigen Sie den Sicherheitsschlüssel';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'Ein Sicherheitsschlüssel ist erforderlich';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'Die Sicherheitsschlüssel stimmen nicht überein';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Warnung:</font> Falls Sie diesen Sicherheitsschlüssel verlieren, sind alle Daten verloren. Bei Bedarf können Sie sich den Schlüssel aufschreiben und ihn an einem sicheren Ort verwahren.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'Art der Installation';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">Warnung:</font> Dies wird alle Ihre Programme, Dokumente, Fotos, Musik und alle anderen Dateien in allen Betriebssystemen löschen.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'Erweiterte Funktionen ...';

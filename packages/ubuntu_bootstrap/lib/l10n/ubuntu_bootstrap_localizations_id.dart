@@ -111,7 +111,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Kunci keamanan tidak cocok';
 
   @override
-  String get showSecurityKey => 'Show security key';
+  String get showSecurityKey => 'Show';
+
+  @override
+  String get hideSecurityKey => 'Hide';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Pembaruan dan perangkat lunak lainnya';
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'You are currently offline';
 
   @override
-  String get chooseSecurityKeyTitle => 'Pilih kunci keamanan';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'Enkripsi disk melindungi berkas-berkas Anda jika Anda kehilangan komputer. Ini mengharuskan Anda memasukkan kunci keamanan setiap kali komputer dinyalakan.\n\nBerkas apa pun di luar $RELEASE tidak akan dienkripsi.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'Pilih kunci keamanan';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'Konfirmasi kunci keamanan';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'Diperlukan kunci keamanan';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'Kunci keamanan tidak cocok';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Peringatan</font>: Jika Anda kehilangan kunci keamanan ini, semua data akan hilang. Jika perlu, tuliskan kunci Anda dan simpan di tempat lain yang aman.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'Tipe instalasi';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">Peringatan:</font> Ini akan menghapus semua program, dokumen, foto, musik, dan berkas lain Anda di semua sistem operasi.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'Fitur Tingkat Lanjut...';

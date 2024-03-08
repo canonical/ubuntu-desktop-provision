@@ -166,15 +166,6 @@ class TpmOption extends StatelessWidget {
   }
 }
 
-extension on Iterable<Widget> {
-  List<Widget> withSpacing(double spacing) {
-    return expand((item) sync* {
-      yield SizedBox(height: spacing);
-      yield item;
-    }).skip(1).toList();
-  }
-}
-
 extension on GuidedCapability {
   GuidedCapability clean() => switch (this) {
 // We shouldn't send CORE_BOOT_PREFER_ENCRYPTED to the server

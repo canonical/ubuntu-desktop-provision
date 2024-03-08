@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Показати ключ безпеки';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => 'Оновлення та інше програмне забезпечення';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Ви зараз не в мережі';
 
   @override
-  String get chooseSecurityKeyTitle => 'Оберіть ключ безпеки';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'Шифрування диска захищає ваші файли на випадок втрати комп\'ютера. Воно вимагає введення ключа безпеки під час кожного запуску комп\'ютера.\n\nБудь-які файли за межами $RELEASE не будуть зашифровані.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'Оберіть ключ безпеки';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'Підтвердить ключ безпеки';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'Потрібен ключ безпеки';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'Не збігаються ключі безпеки';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Попередження</font>: якщо ви втратите цей ключ безпеки, всі дані будуть втрачені. У разі необхідності, запишіть свій ключ і зберігайте його в безпечному місці.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'Тип встановлення';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">Попередження:</font> Це призведе до видалення всіх ваших програм, документів, фотографій, музики та будь-яких інших файлів у всіх операційних системах.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'Додаткові можливості...';
