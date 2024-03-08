@@ -7,6 +7,13 @@ export GOFLAGS := --mod=vendor -buildmode=pie
 
 export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
 
+# Set GOARCH based on the architecture being built
+ifeq ($(DEB_HOST_ARCH),amd64)
+    export GOARCH := amd64
+else ifeq ($(DEB_HOST_ARCH),arm64)
+    export GOARCH := arm64
+endif
+
 %:
 	dh $@ --buildsystem=golang --with=golang
 
