@@ -334,24 +334,24 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testSecurityKeyPage({
-    required String securityKey,
+  Future<void> testPassphrasePage({
+    required String passphrase,
     String? screenshot,
   }) async {
-    await pumpUntilPage(SecurityKeyPage);
+    await pumpUntilPage(PassphrasePage);
 
-    final context = element(find.byType(SecurityKeyPage));
+    final context = element(find.byType(PassphrasePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.chooseSecurityKeyTitle), findsOneWidget);
+    expect(find.titleBar(l10n.choosePassphraseTitle), findsOneWidget);
 
     await enterText(
-      find.textField(l10n.chooseSecurityKey),
-      securityKey,
+      find.textField(l10n.choosePassphraseHint),
+      passphrase,
     );
     await enterText(
-      find.textField(l10n.confirmSecurityKey),
-      securityKey,
+      find.textField(l10n.confirmPassphrase),
+      passphrase,
     );
 
     await pumpAndSettle();

@@ -279,7 +279,7 @@ void main() {
     expect(service.guidedTarget, isNull);
   });
 
-  test('set security key', () async {
+  test('set passphrase', () async {
     final target = GuidedStorageTargetReformat(
         diskId: testDisks.first.id, allowed: [GuidedCapability.LVM_LUKS]);
     final choice = GuidedChoiceV2(
@@ -295,8 +295,8 @@ void main() {
     final service = StorageService(client);
     await service.init();
 
-    service.securityKey = 'foo123';
-    expect(service.securityKey, equals('foo123'));
+    service.passphrase = 'foo123';
+    expect(service.passphrase, equals('foo123'));
 
     service.guidedTarget = target;
     service.guidedCapability = GuidedCapability.LVM_LUKS;

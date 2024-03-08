@@ -6,6 +6,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -66,15 +67,6 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
         });
       },
     );
-  }
-}
-
-extension on Iterable<Widget> {
-  List<Widget> withSpacing(double spacing) {
-    return expand((item) sync* {
-      yield SizedBox(width: spacing, height: spacing);
-      yield item;
-    }).skip(1).toList();
   }
 }
 

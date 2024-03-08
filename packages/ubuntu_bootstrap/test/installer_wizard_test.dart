@@ -18,8 +18,8 @@ import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_d
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
-import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -118,7 +118,7 @@ void main() {
     final storageModel = buildStorageModel();
     final bitLockerModel = buildBitLockerModel();
     final guidedReformatModel = buildGuidedReformatModel();
-    final securityKeyModel = buildSecurityKeyModel(useSecurityKey: false);
+    final passphraseModel = buildPassphraseModel(usePassphrase: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
     final timezoneModel = buildTimezoneModel();
@@ -150,7 +150,7 @@ void main() {
           storageModelProvider.overrideWith((_) => storageModel),
           bitLockerModelProvider.overrideWith((_) => bitLockerModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
-          securityKeyModelProvider.overrideWith((_) => securityKeyModel),
+          passphraseModelProvider.overrideWith((_) => passphraseModel),
           recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
@@ -221,7 +221,7 @@ void main() {
     expect(find.byType(ConfirmPage), findsOneWidget);
     verify(bitLockerModel.init()).called(1); // skipped
     verify(guidedReformatModel.init()).called(1); // skipped
-    verify(securityKeyModel.init()).called(1); // skipped
+    verify(passphraseModel.init()).called(1); // skipped
     verify(recoveryKeyModel.init()).called(1); // skipped
     verify(confirmModel.init()).called(1);
 

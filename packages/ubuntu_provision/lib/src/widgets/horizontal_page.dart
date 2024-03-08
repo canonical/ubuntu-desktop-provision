@@ -77,7 +77,7 @@ class HorizontalPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
-    final icon = ref.watch(pageImagesProvider).get(name, context);
+    final image = ref.watch(pageImagesProvider).get(name, context);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
     final adjustedPadding =
@@ -91,10 +91,10 @@ class HorizontalPage extends ConsumerWidget {
         padding: adjustedPadding,
         child: Row(
           children: [
-            if (icon != null) ...[
+            if (image != null) ...[
               Expanded(
                 flex: 2,
-                child: icon,
+                child: image,
               ),
               SizedBox(
                 width: isSmallWindow ? kYaruPagePadding : _contentSpacing,
@@ -112,8 +112,9 @@ class HorizontalPage extends ConsumerWidget {
                       Expanded(
                         child: Text(
                           title,
-                          style: theme.textTheme.headlineSmall?.copyWith(
-                            fontSize: 20, // TODO: Move to theme
+                          style: theme.textTheme.headlineMedium?.copyWith(
+                            fontSize: 28, // TODO: Move to theme
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),

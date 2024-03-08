@@ -266,9 +266,9 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
       ) as bool);
 
   @override
-  set securityKey(String? securityKey) => super.noSuchMethod(
+  set passphrase(String? securityKey) => super.noSuchMethod(
         Invocation.setter(
-          #securityKey,
+          #passphrase,
           securityKey,
         ),
         returnValueForMissingStub: null,

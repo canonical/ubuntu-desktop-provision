@@ -20,6 +20,8 @@ pages:
   secure-boot:
   storage:
     image: "assets/images/disk.svg"
+  passphrase:
+    image: "assets/images/disk.svg"
   confirm:
   identity:
   ubuntu-pro:

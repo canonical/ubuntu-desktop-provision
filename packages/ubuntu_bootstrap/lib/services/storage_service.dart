@@ -30,7 +30,7 @@ class StorageService {
   List<OsProber>? _existingOS;
   GuidedStorageTarget? _guidedTarget;
   GuidedCapability? _guidedCapability;
-  String? _securityKey;
+  String? _passphrase;
 
   /// Whether the system has multiple disks available for guided partitioning.
   bool get hasMultipleDisks => _hasMultipleDisks ?? false;
@@ -44,14 +44,14 @@ class StorageService {
   /// Whether Secure Boot is enabled.
   Future<bool> hasSecureBoot() async => false; // TODO: add support for it
 
-  /// A security key for full disk encryption.
-  String? get securityKey => _securityKey;
-  set securityKey(String? securityKey) {
-    if (securityKey != null) {
-      final hiddenKey = '*' * securityKey.length;
-      _log.debug('set security key: $hiddenKey');
+  /// A passphrase for full disk encryption.
+  String? get passphrase => _passphrase;
+  set passphrase(String? passphrase) {
+    if (passphrase != null) {
+      final hiddenKey = '*' * passphrase.length;
+      _log.debug('set passphrase: $hiddenKey');
     }
-    _securityKey = securityKey;
+    _passphrase = passphrase;
   }
 
   /// A guided storage target.
@@ -90,7 +90,7 @@ class StorageService {
     await _client.setGuidedStorageV2(
       GuidedChoiceV2(
         target: guidedTarget!,
-        password: securityKey,
+        password: passphrase,
         capability: guidedCapability ?? guidedTarget!.allowed.first,
         sizingPolicy: SizingPolicy.ALL,
       ),

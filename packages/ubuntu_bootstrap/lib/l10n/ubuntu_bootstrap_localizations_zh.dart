@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => '显示安全密钥';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => '应用程序和更新';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '您当前处于离线状态';
 
   @override
-  String get chooseSecurityKeyTitle => '安全密钥';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return '磁盘加密会保护磁盘上的文件，以免因电脑丢失而蒙受损失。但是，每次在计算机启动时，它会要求您输入一个安全密钥。\n\n$RELEASE之外的任何文件都不会加密。';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => '选择一个安全密钥';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => '确认安全密钥';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => '需要一个安全密钥';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => '安全密钥不匹配';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">警告</font>：如果丢失此安全密钥，所有数据都将丢失。以防万一，您可以记下您的安全密钥并保存到安全的地方。';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => '安装类型';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">警告：</font>这将删除所有操作系统中的所有程序、文档、照片、音乐和任何其他文件。';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => '高级功能...';
@@ -1011,31 +1020,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get offlineWarning => '您目前已離線';
 
   @override
-  String get chooseSecurityKeyTitle => '安全密鑰';
-
-  @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return '硬碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全密鑰。\n\n在 $RELEASE 外的任何檔案將不會受到此加密保護。';
-  }
-
-  @override
-  String get chooseSecurityKeyHint => '選擇安全密鑰';
-
-  @override
-  String get chooseSecurityKeyConfirmHint => '確認安全密鑰';
-
-  @override
-  String get chooseSecurityKeyRequired => '安全密鑰為必填欄位';
-
-  @override
-  String get chooseSecurityKeyMismatch => '安全密鑰前後不符';
-
-  @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
-  }
-
-  @override
   String get installationTypeTitle => '安裝類型';
 
   @override
@@ -1057,11 +1041,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String installationTypeErase(Object DISTRO) {
     return '清除硬碟並安裝 $DISTRO';
-  }
-
-  @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">警告：</font>這將會刪除所有作業系統下的全部應用程式、文件、圖片、音樂等檔案。';
   }
 
   @override

@@ -366,6 +366,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(l10n.installationTypeManual);
+    await tester.ensureVisible(radio);
     expect(radio, findsOneWidget);
     await tester.tap(radio);
     verify(model.type = StorageType.manual).called(1);
