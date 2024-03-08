@@ -27,7 +27,7 @@ class ProvdUserClient {
 
   /// Creates a new user from [user].
   Future<void> createUser(User user) async {
-    final request = CreateUserRequest(user: user);
+    final request = CreateUserRequest(user: user, isAdmin: true);
     await _userClient.createUser(request);
   }
 
