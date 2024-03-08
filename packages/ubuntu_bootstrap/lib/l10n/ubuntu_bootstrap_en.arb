@@ -111,8 +111,10 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Security keys do not match",
   "@secureBootSecurityKeysDontMatch": {},
-  "showSecurityKey": "Show security key",
+  "showSecurityKey": "Show",
   "@showSecurityKey": {},
+  "hideSecurityKey": "Hide",
+  "@hideSecurityKey": {},
   "updatesOtherSoftwarePageTitle": "Applications",
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "What apps would you like to install to start with?",
@@ -158,30 +160,28 @@
   },
   "offlineWarning": "You are currently offline",
   "@offlineWarning": {},
-  "chooseSecurityKeyTitle": "Security key",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHeader": "Disk encryption protects your files in case you lose your computer. It requires you to enter a security key each time the computer starts up.\n\nAny files outside of {RELEASE} will not be encrypted.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "chooseSecurityKeyHint": "Choose a security key",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirm the security key",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "A security key is required",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "The security keys do not match",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
+  "choosePassphraseTitle": "Disk passphrase",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Create a passphrase",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Choose a passphrase",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Confirm the passphrase",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "A passphrase is required",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "The passphrases do not match",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Make sure you save your passphrase",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Create a passphrase",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Confirm the passphrase",
+  "@confirmPassphrase": {},
   "installationTypeTitle": "Type of installation",
   "@installationTypeTitle": {},
   "installationTypeHeader": "How do you want to install Ubuntu?",
@@ -212,13 +212,8 @@
       "DISTRO": {}
     }
   },
-  "installationTypeEraseWarning": "<font color=\"{color}\">Warning:</font> This will delete all your programs, documents, photos, music, and any other files in all operating systems.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
+  "installationTypeEraseInfo": "Start from scratch on your selected disk.",
+  "@installationTypeEraseInfo": {},
   "installationTypeAdvancedLabel": "Advanced features...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Advanced features",

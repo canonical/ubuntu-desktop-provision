@@ -298,7 +298,7 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('09.security-key', (tester) async {
+  testWidgets('09.passphrase', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
         ], theme: currentTheme));
@@ -314,9 +314,9 @@ Future<void> main() async {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(
-      securityKey: 'password',
-      screenshot: '$currentThemeName/09.security-key',
+    await tester.testPassphrasePage(
+      passphrase: 'password',
+      screenshot: '$currentThemeName/09.passphrase',
     );
   }, variant: themeVariant);
 

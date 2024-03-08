@@ -23,7 +23,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.accessibilityPageTitle(flavor.displayName),
       title: lang.accessibilityPageTitle(flavor.displayName),
-      contentFlex: 7,
+      contentFlex: 8,
       content: Column(
         children: [
           Text(lang.accessibilityPageBody(flavor.displayName)),

@@ -114,6 +114,9 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Mostrar chave de segurança';
 
   @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
   String get updatesOtherSoftwarePageTitle => 'Aplicações e atualizações';
 
   @override
@@ -176,29 +179,37 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'De momento está offline';
 
   @override
-  String get chooseSecurityKeyTitle => 'Chave de segurança';
+  String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'A encriptação de disco protege os seus ficheiros em caso de perda do seu computador. Isso requer que digite uma chave de segurança a cada vez que o computador ligar.\n\nQuaisquer ficheiros fora do $RELEASE não serão encriptados.';
-  }
+  String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
-  String get chooseSecurityKeyHint => 'Escolha uma chave de segurança';
+  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get chooseSecurityKeyConfirmHint => 'Confirme a chave de segurança';
+  String get choosePassphraseHint => 'Choose a passphrase';
 
   @override
-  String get chooseSecurityKeyRequired => 'Uma chave de segurança é necessária';
+  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
 
   @override
-  String get chooseSecurityKeyMismatch => 'As chaves de segurança não coincidem';
+  String get choosePassphraseRequired => 'A passphrase is required';
 
   @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Atenção:</font> Se perder esta chave de segurança, todos os dados serão perdidos. Se precisar, escreva a sua chave num papel e ponha num local seguro.';
-  }
+  String get choosePassphraseMismatch => 'The passphrases do not match';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+
+  @override
+  String get createPassphrase => 'Create a passphrase';
+
+  @override
+  String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
   String get installationTypeTitle => 'Tipo de instalação';
@@ -228,9 +239,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">Aviso:</font> Isso vai apagar todos os seus programas, documentos, fotos, músicas e quaisquer outros ficheiros em todos os sistemas operativos existentes.';
-  }
+  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
 
   @override
   String get installationTypeAdvancedLabel => 'Funcionalidades avançadas...';
@@ -1011,31 +1020,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get offlineWarning => 'Você está off-line no momento';
 
   @override
-  String get chooseSecurityKeyTitle => 'Chave de segurança';
-
-  @override
-  String chooseSecurityKeyHeader(Object RELEASE) {
-    return 'A criptografia de disco protege seus arquivos caso você perca seu computador. Ele exige que você insira uma chave de segurança toda vez que o computador for inicializado.\n\nQuaisquer arquivos fora de $RELEASE não serão criptografados.';
-  }
-
-  @override
-  String get chooseSecurityKeyHint => 'Escolha uma chave de segurança';
-
-  @override
-  String get chooseSecurityKeyConfirmHint => 'Confirme a chave de segurança';
-
-  @override
-  String get chooseSecurityKeyRequired => 'Uma chave de segurança é necessária';
-
-  @override
-  String get chooseSecurityKeyMismatch => 'As chaves de segurança não conferem';
-
-  @override
-  String chooseSecurityKeyWarning(Object color) {
-    return '<font color=\"$color\">Atenção:</font> Se você perder esta chave de segurança, todos os dados estarão perdidos. Se precisar, anote sua chave em um papel e coloque-a em um local seguro.';
-  }
-
-  @override
   String get installationTypeTitle => 'Tipo de instalação';
 
   @override
@@ -1057,11 +1041,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String installationTypeErase(Object DISTRO) {
     return 'Apagar o disco e instalar o $DISTRO';
-  }
-
-  @override
-  String installationTypeEraseWarning(Object color) {
-    return '<font color=\"$color\">Atenção:</font> Isso vai apagar todos os seus programas, documentos, fotos, músicas, e quaisquer outros arquivos em todos os sistemas operacionais existentes.';
   }
 
   @override

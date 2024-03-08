@@ -120,7 +120,7 @@ void main() {
     await model.startInstallation();
 
     verifyNever(storage.setStorage());
-    verify(storage.securityKey = null).called(1);
+    verify(storage.passphrase = null).called(1);
     verify(installer.start()).called(1);
   });
 

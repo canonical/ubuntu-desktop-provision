@@ -408,8 +408,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @showSecurityKey.
   ///
   /// In en, this message translates to:
-  /// **'Show security key'**
+  /// **'Show'**
   String get showSecurityKey;
+
+  /// No description provided for @hideSecurityKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide'**
+  String get hideSecurityKey;
 
   /// No description provided for @updatesOtherSoftwarePageTitle.
   ///
@@ -531,47 +537,71 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'You are currently offline'**
   String get offlineWarning;
 
-  /// No description provided for @chooseSecurityKeyTitle.
+  /// No description provided for @choosePassphraseTitle.
   ///
   /// In en, this message translates to:
-  /// **'Security key'**
-  String get chooseSecurityKeyTitle;
+  /// **'Disk passphrase'**
+  String get choosePassphraseTitle;
 
-  /// No description provided for @chooseSecurityKeyHeader.
+  /// No description provided for @choosePassphraseHeader.
   ///
   /// In en, this message translates to:
-  /// **'Disk encryption protects your files in case you lose your computer. It requires you to enter a security key each time the computer starts up.\n\nAny files outside of {RELEASE} will not be encrypted.'**
-  String chooseSecurityKeyHeader(Object RELEASE);
+  /// **'Create a passphrase'**
+  String get choosePassphraseHeader;
 
-  /// No description provided for @chooseSecurityKeyHint.
+  /// No description provided for @choosePassphraseBody.
   ///
   /// In en, this message translates to:
-  /// **'Choose a security key'**
-  String get chooseSecurityKeyHint;
+  /// **'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.'**
+  String get choosePassphraseBody;
 
-  /// No description provided for @chooseSecurityKeyConfirmHint.
+  /// No description provided for @choosePassphraseHint.
   ///
   /// In en, this message translates to:
-  /// **'Confirm the security key'**
-  String get chooseSecurityKeyConfirmHint;
+  /// **'Choose a passphrase'**
+  String get choosePassphraseHint;
 
-  /// No description provided for @chooseSecurityKeyRequired.
+  /// No description provided for @choosePassphraseConfirmHint.
   ///
   /// In en, this message translates to:
-  /// **'A security key is required'**
-  String get chooseSecurityKeyRequired;
+  /// **'Confirm the passphrase'**
+  String get choosePassphraseConfirmHint;
 
-  /// No description provided for @chooseSecurityKeyMismatch.
+  /// No description provided for @choosePassphraseRequired.
   ///
   /// In en, this message translates to:
-  /// **'The security keys do not match'**
-  String get chooseSecurityKeyMismatch;
+  /// **'A passphrase is required'**
+  String get choosePassphraseRequired;
 
-  /// No description provided for @chooseSecurityKeyWarning.
+  /// No description provided for @choosePassphraseMismatch.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
-  String chooseSecurityKeyWarning(Object color);
+  /// **'The passphrases do not match'**
+  String get choosePassphraseMismatch;
+
+  /// No description provided for @choosePassphraseInfoHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Make sure you save your passphrase'**
+  String get choosePassphraseInfoHeader;
+
+  /// No description provided for @choosePassphraseInfoBody.
+  ///
+  /// In en, this message translates to:
+  /// **'If you lose your passphrase, you will lose all of your data.'**
+  String get choosePassphraseInfoBody;
+
+  /// No description provided for @createPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a passphrase'**
+  String get createPassphrase;
+
+  /// No description provided for @confirmPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm the passphrase'**
+  String get confirmPassphrase;
 
   /// No description provided for @installationTypeTitle.
   ///
@@ -615,11 +645,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Erase disk and install {DISTRO}'**
   String installationTypeErase(Object DISTRO);
 
-  /// No description provided for @installationTypeEraseWarning.
+  /// No description provided for @installationTypeEraseInfo.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> This will delete all your programs, documents, photos, music, and any other files in all operating systems.'**
-  String installationTypeEraseWarning(Object color);
+  /// **'Start from scratch on your selected disk.'**
+  String get installationTypeEraseInfo;
 
   /// No description provided for @installationTypeAdvancedLabel.
   ///

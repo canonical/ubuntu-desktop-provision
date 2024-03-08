@@ -249,7 +249,7 @@ class ShowPasswordButton extends StatelessWidget {
                   rtl ? Radius.zero : const Radius.circular(kYaruButtonRadius),
             ),
           ),
-          // avoid increasing the size of the input fied
+          // avoid increasing the size of the input field
           minimumSize: Size.zero,
         ),
         onPressed: () => onChanged(!value),

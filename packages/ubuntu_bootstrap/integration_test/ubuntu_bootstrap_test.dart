@@ -151,7 +151,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(securityKey: 'password');
+    await tester.testPassphrasePage(passphrase: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -297,7 +297,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(securityKey: 'password');
+    await tester.testPassphrasePage(passphrase: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
 
