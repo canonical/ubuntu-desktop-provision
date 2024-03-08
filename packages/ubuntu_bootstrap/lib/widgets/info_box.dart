@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/widgets.dart';
 
 class InfoBox extends StatelessWidget {
   const InfoBox({

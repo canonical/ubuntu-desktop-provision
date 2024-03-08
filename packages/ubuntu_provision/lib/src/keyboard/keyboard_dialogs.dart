@@ -7,7 +7,7 @@ import 'package:ubuntu_provision/src/keyboard/keyboard_widgets.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 const _kDialogWidthFactor = 0.65;
 const _kDialogHeightFactor = 0.15;

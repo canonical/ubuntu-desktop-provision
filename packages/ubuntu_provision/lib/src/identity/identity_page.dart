@@ -5,7 +5,7 @@ import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_provision/src/identity/identity_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 // The horizontal indentation of the radio button.
 // const _kRadioButtonIndentation = 36.0;

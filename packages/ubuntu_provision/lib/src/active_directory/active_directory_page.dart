@@ -4,7 +4,7 @@ import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.d
 import 'package:ubuntu_provision/src/active_directory/active_directory_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class ActiveDirectoryPage extends ConsumerStatefulWidget with ProvisioningPage {
   const ActiveDirectoryPage({super.key});

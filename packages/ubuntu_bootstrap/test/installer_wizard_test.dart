@@ -29,7 +29,6 @@ import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 import '../../ubuntu_provision/test/accessibility/test_accessibility.dart';
 import '../../ubuntu_provision/test/active_directory/test_active_directory.dart';

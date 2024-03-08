@@ -8,7 +8,6 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 /// A page where the user can decide whether they want to do a full installation
 /// with all selected applications or a minimal installation.

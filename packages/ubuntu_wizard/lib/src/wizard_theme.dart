@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 extension WizardFlavorX on UbuntuFlavor {
   ThemeData? get theme => yaru?.theme;

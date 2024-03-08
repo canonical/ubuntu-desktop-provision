@@ -5,7 +5,7 @@ import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 Future<int?> showStorageSizeDialog(
   BuildContext context, {

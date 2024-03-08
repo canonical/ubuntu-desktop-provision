@@ -11,8 +11,8 @@ import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/widgets.dart';
 
 import 'test_storage.dart';
 
