@@ -24,6 +24,7 @@ pages:
     image: "assets/images/disk.svg"
   confirm:
   identity:
+    image: "assets/images/keyboard.svg"
   ubuntu-pro:
   privacy:
   timezone:

@@ -149,7 +149,7 @@ class UbuntuProvisionLocalizationsSq extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'The computer name is invalid';
 
   @override
-  String get identityUsernameLabel => 'Pick a username';
+  String get identityUsernameLabel => 'Your username';
 
   @override
   String get identityUsernameRequired => 'A username is required';
@@ -176,7 +176,7 @@ class UbuntuProvisionLocalizationsSq extends UbuntuProvisionLocalizations {
   String get identityPasswordRequired => 'A password is required';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm your password';
+  String get identityConfirmPasswordLabel => 'Confirm password';
 
   @override
   String get identityPasswordMismatch => 'The passwords do not match';

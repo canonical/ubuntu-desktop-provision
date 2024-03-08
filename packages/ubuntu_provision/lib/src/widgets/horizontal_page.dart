@@ -113,7 +113,7 @@ class HorizontalPage extends ConsumerWidget {
                         child: Text(
                           title,
                           style: theme.textTheme.headlineMedium?.copyWith(
-                            fontSize: 28, // TODO: Move to theme
+                            fontSize: 20, // TODO: Move to theme
                             fontWeight: FontWeight.w500,
                           ),
                         ),

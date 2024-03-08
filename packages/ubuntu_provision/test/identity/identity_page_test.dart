@@ -175,7 +175,7 @@ void main() {
     final context = tester.element(find.byType(IdentityPage));
     final l10n = IdentityLocalizations.of(context);
 
-    final requiredPasswordSwitch = find.switchButton(
+    final requiredPasswordSwitch = find.checkButton(
       l10n.identityRequirePassword,
     );
     expect(requiredPasswordSwitch, findsOneWidget);
