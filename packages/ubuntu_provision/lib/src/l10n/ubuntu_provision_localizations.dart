@@ -450,7 +450,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityPageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Set up your account'**
+  /// **'Create your account'**
   String get identityPageTitle;
 
   /// No description provided for @identityAutoLogin.
@@ -516,7 +516,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityUsernameLabel.
   ///
   /// In en, this message translates to:
-  /// **'Pick a username'**
+  /// **'Your username'**
   String get identityUsernameLabel;
 
   /// No description provided for @identityUsernameRequired.
@@ -558,7 +558,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityPasswordLabel.
   ///
   /// In en, this message translates to:
-  /// **'Choose a password'**
+  /// **'Password'**
   String get identityPasswordLabel;
 
   /// No description provided for @identityPasswordRequired.
@@ -570,7 +570,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityConfirmPasswordLabel.
   ///
   /// In en, this message translates to:
-  /// **'Confirm your password'**
+  /// **'Confirm password'**
   String get identityConfirmPasswordLabel;
 
   /// No description provided for @identityPasswordMismatch.
