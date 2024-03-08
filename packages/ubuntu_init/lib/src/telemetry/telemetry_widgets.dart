@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 // TODO: copied from ubuntu_bootstrap/welcome_widgets. either YaruRadioButton
 // background could be configurable, or this widget could be promoted to

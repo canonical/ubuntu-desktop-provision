@@ -6,7 +6,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// Install alongside other OSes.
 class GuidedResizePage extends ConsumerWidget {

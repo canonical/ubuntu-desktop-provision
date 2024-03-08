@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/constants.dart';
+import 'package:yaru/yaru.dart';
 
 /// The spacing between header, content, and footer.
 const kWizardSpacing = kYaruPagePadding;

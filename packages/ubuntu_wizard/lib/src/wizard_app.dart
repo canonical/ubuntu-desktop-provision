@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_wizard/src/wizard_theme.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 class WizardApp extends StatelessWidget {
   const WizardApp({

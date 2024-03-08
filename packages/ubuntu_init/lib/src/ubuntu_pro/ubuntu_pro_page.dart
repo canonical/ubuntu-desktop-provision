@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_l10n.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
   const UbuntuProPage({super.key});

@@ -4,7 +4,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
-import 'package:yaru_icons/yaru_icons.dart';
+import 'package:yaru/icons.dart';
 
 typedef DiskBuilder = Widget Function(BuildContext context, Disk disk);
 typedef GapBuilder = Widget Function(BuildContext context, Disk disk, Gap gap);
