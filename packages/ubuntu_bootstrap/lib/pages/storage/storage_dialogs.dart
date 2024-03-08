@@ -10,7 +10,6 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 /// Shows a dialog to select advanced installation features.
 Future<void> showAdvancedFeaturesDialog(

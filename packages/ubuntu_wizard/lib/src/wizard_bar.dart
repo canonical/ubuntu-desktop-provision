@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/src/wizard_data.dart';
 import 'package:wizard_router/wizard_router.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// The spacing between Continue and Back buttons.
 const kWizardBarSpacing = 8.0;

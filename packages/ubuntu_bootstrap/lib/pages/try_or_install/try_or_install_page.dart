@@ -5,7 +5,7 @@ import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart'
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 export 'try_or_install_model.dart' show TryOrInstallOption;
 

@@ -7,7 +7,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_m
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// Select a storage for guided reformatting.
 class GuidedReformatPage extends ConsumerWidget {

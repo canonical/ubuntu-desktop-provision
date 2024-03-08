@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_icons/yaru_icons.dart';
-import 'package:yaru_widgets/widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
   AccessibilityPage({super.key});

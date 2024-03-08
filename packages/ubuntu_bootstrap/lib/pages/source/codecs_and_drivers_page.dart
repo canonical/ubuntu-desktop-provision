@@ -8,7 +8,6 @@ import 'package:ubuntu_bootstrap/widgets/info_box.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 export 'source_model.dart' show kFullSourceId, kMinimalSourceId;
 

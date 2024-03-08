@@ -10,7 +10,7 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/storage_columns.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_table.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class PartitionBar extends ConsumerWidget {
   const PartitionBar({super.key});

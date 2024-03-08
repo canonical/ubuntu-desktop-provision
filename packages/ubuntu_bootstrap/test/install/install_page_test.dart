@@ -6,7 +6,7 @@ import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:yaru_icons/yaru_icons.dart';
+import 'package:yaru/icons.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'test_install.dart';

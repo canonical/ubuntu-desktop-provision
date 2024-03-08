@@ -6,8 +6,7 @@ import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_icons/yaru_icons.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class RealNameFormField extends ConsumerWidget {
   const RealNameFormField({required this.fieldWidth, super.key});

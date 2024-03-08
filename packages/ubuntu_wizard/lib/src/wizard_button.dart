@@ -5,7 +5,7 @@ import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/src/wizard_data.dart';
 import 'package:wizard_router/wizard_router.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// Wizard activation callback signature.
 typedef WizardCallback = FutureOr<void> Function();
