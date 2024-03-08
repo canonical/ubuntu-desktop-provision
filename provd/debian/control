@@ -6,6 +6,7 @@ Build-Depends: dbus,
                debhelper-compat (= 13),
                dh-golang,
                golang-go,
+               libglib2.0-dev,
 Standards-Version: 4.6.2.0
 XS-Go-Import-Path: github.com/canonical/ubuntu-desktop-provision/provd
 Homepage: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
