@@ -116,7 +116,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Choose your language:';
 
   @override
-  String get identityPageTitle => 'Set up your account';
+  String get identityPageTitle => 'Create your account';
 
   @override
   String get identityAutoLogin => 'Log in automatically';
@@ -149,7 +149,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'The computer name is invalid';
 
   @override
-  String get identityUsernameLabel => 'Pick a username';
+  String get identityUsernameLabel => 'Your username';
 
   @override
   String get identityUsernameRequired => 'A username is required';
@@ -170,13 +170,13 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'That name contains invalid characters.';
 
   @override
-  String get identityPasswordLabel => 'Choose a password';
+  String get identityPasswordLabel => 'Password';
 
   @override
   String get identityPasswordRequired => 'A password is required';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm your password';
+  String get identityConfirmPasswordLabel => 'Confirm password';
 
   @override
   String get identityPasswordMismatch => 'The passwords do not match';
