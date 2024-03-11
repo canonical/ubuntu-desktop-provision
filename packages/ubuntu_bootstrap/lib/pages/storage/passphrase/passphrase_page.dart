@@ -39,7 +39,7 @@ class PassphrasePage extends ConsumerWidget {
         ].withSpacing(kWizardSpacing),
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             enabled: ref.watch(

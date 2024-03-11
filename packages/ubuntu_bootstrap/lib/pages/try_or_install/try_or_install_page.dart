@@ -58,7 +58,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).nextLabel,

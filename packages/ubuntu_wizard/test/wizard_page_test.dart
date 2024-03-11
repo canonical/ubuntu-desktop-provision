@@ -150,7 +150,7 @@ void main() {
             return Builder(builder: (context) {
               return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [
                     NextWizardButton(),
                   ],
@@ -162,7 +162,7 @@ void main() {
             return Builder(builder: (context) {
               return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [
                     NextWizardButton(),
                   ],
@@ -242,7 +242,7 @@ void main() {
               return const WizardPage(
                 content: Text('first'),
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [NextWizardButton()],
                 ),
               );
@@ -254,8 +254,7 @@ void main() {
                 return WizardPage(
                   content: const Text('second'),
                   bottomBar: WizardBar(
-                    leading:
-                        PreviousWizardButton(onBack: () => wentBack = true),
+                    leading: BackWizardButton(onBack: () => wentBack = true),
                     trailing: const [NextWizardButton()],
                   ),
                 );
@@ -269,8 +268,7 @@ void main() {
                 return WizardPage(
                   content: const Text('last'),
                   bottomBar: WizardBar(
-                    leading:
-                        PreviousWizardButton(onBack: () => wentBack = true),
+                    leading: BackWizardButton(onBack: () => wentBack = true),
                     trailing: const [NextWizardButton()],
                   ),
                 );
@@ -283,7 +281,7 @@ void main() {
               return Builder(builder: (context) {
                 return const WizardPage(
                   bottomBar: WizardBar(
-                    leading: PreviousWizardButton(),
+                    leading: BackWizardButton(),
                     trailing: [NextWizardButton()],
                   ),
                 );

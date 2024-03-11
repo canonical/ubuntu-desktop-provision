@@ -9,7 +9,7 @@ void main() {
     return WizardPage(
       content: Text(title),
       bottomBar: const WizardBar(
-        leading: PreviousWizardButton(),
+        leading: BackWizardButton(),
         trailing: [NextWizardButton()],
       ),
     );

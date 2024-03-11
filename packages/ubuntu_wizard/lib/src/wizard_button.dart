@@ -17,7 +17,7 @@ final _noAnimation = Listenable.merge([]);
 ///
 /// See also:
 ///  * [NextWizardButton]
-///  * [PreviousWizardButton]
+///  * [BackWizardButton]
 class WizardButton extends StatefulWidget {
   /// Creates a wizard button.
   const WizardButton({
@@ -163,9 +163,9 @@ class _WizardButtonState extends State<WizardButton> {
   }
 }
 
-/// A _Previous_ button that returns back to the previous page.
-class PreviousWizardButton extends StatelessWidget {
-  const PreviousWizardButton({
+/// A _Back button that returns back to the previous page.
+class BackWizardButton extends StatelessWidget {
+  const BackWizardButton({
     super.key,
     this.visible = true,
     this.enabled,
@@ -192,7 +192,7 @@ class PreviousWizardButton extends StatelessWidget {
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
-          label: UbuntuLocalizations.of(context).previousLabel,
+          label: UbuntuLocalizations.of(context).backLabel,
           visible: visible,
           flat: true,
           enabled: !isLoading && (enabled ?? hasPrevious),

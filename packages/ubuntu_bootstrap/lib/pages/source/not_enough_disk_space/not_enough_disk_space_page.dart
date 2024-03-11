@@ -90,7 +90,7 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
           ),
         ),
         bottomBar: const WizardBar(
-          leading: PreviousWizardButton(),
+          leading: BackWizardButton(),
         ),
       ),
     );

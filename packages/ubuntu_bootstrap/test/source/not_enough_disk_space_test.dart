@@ -138,7 +138,7 @@ extension on WidgetTester {
                   '/last': WizardRoute(
                     builder: (context) => const WizardPage(
                       content: Text('last route'),
-                      bottomBar: WizardBar(leading: PreviousWizardButton()),
+                      bottomBar: WizardBar(leading: BackWizardButton()),
                     ),
                   ),
                 },

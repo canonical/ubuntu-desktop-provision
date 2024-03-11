@@ -53,7 +53,7 @@ class RecoveryKeyPage extends StatelessWidget {
         ],
       ),
       bottomBar: const WizardBar(
-        leading: PreviousWizardButton(),
+        leading: BackWizardButton(),
         trailing: [
           NextWizardButton(),
         ],

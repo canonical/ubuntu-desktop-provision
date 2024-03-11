@@ -149,7 +149,7 @@ class HorizontalPage extends ConsumerWidget {
       snackBar: snackBar,
       bottomBar: bottomBar ??
           WizardBar(
-            leading: const PreviousWizardButton(),
+            leading: const BackWizardButton(),
             trailing: [
               NextWizardButton(
                 onNext: onNext,
