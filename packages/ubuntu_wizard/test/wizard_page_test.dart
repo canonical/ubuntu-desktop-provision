@@ -180,7 +180,7 @@ void main() {
     expect(
       find.descendant(
         of: find.bySubtype<OutlinedButton>(),
-        matching: find.text(lang.previousLabel),
+        matching: find.text(lang.backLabel),
       ),
       findsOneWidget,
     );
@@ -208,7 +208,7 @@ void main() {
     expect(
       find.descendant(
         of: find.bySubtype<OutlinedButton>(),
-        matching: find.text(lang.previousLabel),
+        matching: find.text(lang.backLabel),
       ),
       findsOneWidget,
     );
@@ -305,7 +305,7 @@ void main() {
 
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.previousLabel),
+      matching: find.text(lang.backLabel),
     ));
     await tester.pumpAndSettle();
 
@@ -321,7 +321,7 @@ void main() {
 
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.previousLabel),
+      matching: find.text(lang.backLabel),
     ));
     await tester.pumpAndSettle();
 
