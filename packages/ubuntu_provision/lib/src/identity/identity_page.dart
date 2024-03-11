@@ -38,7 +38,7 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
         ].withSpacing(kWizardSpacing),
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             enabled: ref.watch(identityModelProvider.select((m) => m.isValid)),

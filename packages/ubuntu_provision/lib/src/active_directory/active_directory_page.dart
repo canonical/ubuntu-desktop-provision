@@ -52,7 +52,7 @@ class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
         );
       }),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             enabled: ref

@@ -9,7 +9,7 @@ void main() {
     return WizardPage(
       content: Text(title),
       bottomBar: const WizardBar(
-        leading: PreviousWizardButton(),
+        leading: BackWizardButton(),
         trailing: [NextWizardButton()],
       ),
     );
@@ -62,19 +62,19 @@ void main() {
     await tester.pumpAndSettle();
     expect(page3, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page2c, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page2b, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page2a, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page1, findsOneWidget);
   });
@@ -124,11 +124,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(page3, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page2a, findsOneWidget);
 
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
     expect(page1, findsOneWidget);
   });

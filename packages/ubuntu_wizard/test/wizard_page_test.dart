@@ -150,7 +150,7 @@ void main() {
             return Builder(builder: (context) {
               return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [
                     NextWizardButton(),
                   ],
@@ -162,7 +162,7 @@ void main() {
             return Builder(builder: (context) {
               return const WizardPage(
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [
                     NextWizardButton(),
                   ],
@@ -180,7 +180,7 @@ void main() {
     expect(
       find.descendant(
         of: find.bySubtype<OutlinedButton>(),
-        matching: find.text(lang.previousLabel),
+        matching: find.text(lang.backLabel),
       ),
       findsOneWidget,
     );
@@ -208,7 +208,7 @@ void main() {
     expect(
       find.descendant(
         of: find.bySubtype<OutlinedButton>(),
-        matching: find.text(lang.previousLabel),
+        matching: find.text(lang.backLabel),
       ),
       findsOneWidget,
     );
@@ -242,7 +242,7 @@ void main() {
               return const WizardPage(
                 content: Text('first'),
                 bottomBar: WizardBar(
-                  leading: PreviousWizardButton(),
+                  leading: BackWizardButton(),
                   trailing: [NextWizardButton()],
                 ),
               );
@@ -254,8 +254,7 @@ void main() {
                 return WizardPage(
                   content: const Text('second'),
                   bottomBar: WizardBar(
-                    leading:
-                        PreviousWizardButton(onBack: () => wentBack = true),
+                    leading: BackWizardButton(onBack: () => wentBack = true),
                     trailing: const [NextWizardButton()],
                   ),
                 );
@@ -269,8 +268,7 @@ void main() {
                 return WizardPage(
                   content: const Text('last'),
                   bottomBar: WizardBar(
-                    leading:
-                        PreviousWizardButton(onBack: () => wentBack = true),
+                    leading: BackWizardButton(onBack: () => wentBack = true),
                     trailing: const [NextWizardButton()],
                   ),
                 );
@@ -283,7 +281,7 @@ void main() {
               return Builder(builder: (context) {
                 return const WizardPage(
                   bottomBar: WizardBar(
-                    leading: PreviousWizardButton(),
+                    leading: BackWizardButton(),
                     trailing: [NextWizardButton()],
                   ),
                 );
@@ -307,7 +305,7 @@ void main() {
 
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.previousLabel),
+      matching: find.text(lang.backLabel),
     ));
     await tester.pumpAndSettle();
 
@@ -323,7 +321,7 @@ void main() {
 
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.previousLabel),
+      matching: find.text(lang.backLabel),
     ));
     await tester.pumpAndSettle();
 
