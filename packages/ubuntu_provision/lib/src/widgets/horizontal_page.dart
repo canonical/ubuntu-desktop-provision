@@ -84,6 +84,7 @@ class HorizontalPage extends ConsumerWidget {
         isSmallWindow ? const EdgeInsets.all(kYaruPagePadding) : padding;
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
+    const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
 
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
@@ -131,7 +132,7 @@ class HorizontalPage extends ConsumerWidget {
                             child: SingleChildScrollView(
                               controller: _scrollController,
                               child: Padding(
-                                padding:
+                                padding: hoverPadding +
                                     EdgeInsets.only(right: scrollBarPadding),
                                 child: content,
                               ),
