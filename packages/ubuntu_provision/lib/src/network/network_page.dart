@@ -36,7 +36,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.networkPageTitle,
       title: lang.networkPageHeader,
-      contentFlex: model.connectMode == ConnectMode.wifi ? 10 : 6,
+      contentFlex: model.connectMode == ConnectMode.wifi ? 100 : 6,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
