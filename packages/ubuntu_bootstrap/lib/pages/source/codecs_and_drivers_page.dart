@@ -46,7 +46,10 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: YaruCheckButton(
-              title: Text(lang.installDriversTitle),
+              title: Text(
+                lang.installDriversTitle,
+                maxLines: 2,
+              ),
               subtitle: Text(lang.installDriversSubtitle),
               contentPadding: kWizardPadding,
               value: model.installDrivers,
@@ -59,7 +62,10 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
             child: Tooltip(
               message: !model.isOnline ? lang.offlineWarning : '',
               child: YaruCheckButton(
-                title: Text(lang.installCodecsTitle),
+                title: Text(
+                  lang.installCodecsTitle,
+                  maxLines: 2,
+                ),
                 subtitle: Text(lang.installCodecsSubtitle),
                 contentPadding: kWizardPadding,
                 value: model.installCodecs && model.isOnline,
