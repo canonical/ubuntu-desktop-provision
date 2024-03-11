@@ -39,3 +39,6 @@ override_dh_auto_install:
 	# Compile and install sprovd manually
 	go build -o debian/tmp/usr/bin/sprovd ./sprovd/sprovd.go
 
+override_dh_auto_test:
+    TEST_ENV=gh dh_auto_test -- -v -mod=vendor ./...
+
