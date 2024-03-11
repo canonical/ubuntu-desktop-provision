@@ -31,7 +31,7 @@ void main() {
     expect(progress.value, isNull); // indeterminate
 
     expect(
-      find.button(find.ul10n((l10n) => l10n.previousLabel)),
+      find.button(find.ul10n((l10n) => l10n.backLabel)),
       findsOneWidget,
     );
     expect(
@@ -59,7 +59,7 @@ void main() {
     );
 
     expect(
-      find.button(find.ul10n((l10n) => l10n.previousLabel)),
+      find.button(find.ul10n((l10n) => l10n.backLabel)),
       findsOneWidget,
     );
     expect(
@@ -87,7 +87,7 @@ void main() {
     );
 
     expect(
-      find.button(find.ul10n((l10n) => l10n.previousLabel)),
+      find.button(find.ul10n((l10n) => l10n.backLabel)),
       findsOneWidget,
     );
     expect(

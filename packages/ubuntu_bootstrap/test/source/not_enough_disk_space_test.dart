@@ -34,13 +34,13 @@ void main() {
     expect(find.text('last route'), findsOneWidget);
 
     // last -> source
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
 
     expect(find.byType(SourceSelectionPage), findsOneWidget);
 
     // source -> first
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
 
     expect(find.text('first route'), findsOneWidget);
@@ -65,13 +65,13 @@ void main() {
     expect(find.text('last route'), findsNothing);
 
     // not enough disk space -> source
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
 
     expect(find.byType(SourceSelectionPage), findsOneWidget);
 
     // source -> first
-    await tester.tapPrevious();
+    await tester.tapBack();
     await tester.pumpAndSettle();
 
     expect(find.text('first route'), findsOneWidget);
