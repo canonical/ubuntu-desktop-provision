@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ubuntu_flavor: ^0.3.0
+  ubuntu_flavor: ^0.4.0
   ubuntu_localizations: ^0.3.5
   ubuntu_utils: ^0.1.0
   ubuntu_widgets: ^0.4.0
