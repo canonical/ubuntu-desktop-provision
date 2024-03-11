@@ -61,7 +61,7 @@ class _SecureBootPageState extends ConsumerState<SecureBootPage> {
         },
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(enabled: model.isFormValid),
         ],

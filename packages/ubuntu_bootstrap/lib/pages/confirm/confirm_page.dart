@@ -109,7 +109,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             highlighted: true,

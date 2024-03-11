@@ -81,7 +81,7 @@ class GuidedResizePage extends ConsumerWidget {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             onNext: model.selectedStorage != null ? model.save : null,

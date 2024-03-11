@@ -96,7 +96,7 @@ class GuidedReformatPage extends ConsumerWidget {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             onNext: model.saveGuidedStorage,
