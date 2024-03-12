@@ -17,7 +17,10 @@ AutoinstallModel buildAutoinstallModel({AsyncValue<void>? state, String? url}) {
   return model;
 }
 
-final pageImages = PageImages(MockPageConfigService());
+final pageImages = PageImages.internal(
+  MockPageConfigService(),
+  MockThemeVariantService(),
+);
 
 Widget buildAutoinstallPage(AutoinstallModel model) {
   return ProviderScope(
