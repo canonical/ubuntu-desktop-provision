@@ -707,11 +707,23 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
     await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testKeyboardPage();
+    await tester.testAutoinstallPage();
     await tester.pumpAndSettle();
   });
 
