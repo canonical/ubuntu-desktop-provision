@@ -211,8 +211,8 @@ class _DonePage extends ConsumerWidget {
               children: [
                 MarkdownBody(
                   data: isCoreDesktop
-                      ? lang.rebootToConfigure(model.productInfo)
-                      : lang.readyToUse(model.productInfo),
+                      ? lang.rebootToConfigure(model.productInfo.toString())
+                      : lang.readyToUse(model.productInfo.toString()),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),

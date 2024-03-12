@@ -269,7 +269,8 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
     final productInfo = getService<ProductService>().getProductInfo();
     expect(
-      find.titleBar(l10n.installationTypeAlongsideUnknown(productInfo)),
+      find.titleBar(
+          l10n.installationTypeAlongsideUnknown(productInfo.toString())),
       findsOneWidget,
     );
 
