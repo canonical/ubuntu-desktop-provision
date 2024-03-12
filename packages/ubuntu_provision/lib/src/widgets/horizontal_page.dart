@@ -17,9 +17,11 @@ class HorizontalPage extends ConsumerWidget {
     this.trailingTitleWidget,
     this.isNextEnabled = true,
     this.isScrollable = true,
-    this.padding = const EdgeInsets.symmetric(
-      horizontal: defaultContentPadding,
-      vertical: kYaruPagePadding,
+    this.padding = const EdgeInsets.fromLTRB(
+      kYaruPagePadding,
+      kYaruPagePadding,
+      3 * kYaruPagePadding,
+      kYaruPagePadding,
     ),
     this.contentFlex = 6,
     this.bottomBar,
@@ -67,10 +69,6 @@ class HorizontalPage extends ConsumerWidget {
   /// The snack bar to use (default is none).
   final SnackBar? snackBar;
 
-  // TODO(Lukas): Move these to a proper place.
-  static const defaultContentPadding = 100.0;
-  static const _contentSpacing = 60.0;
-
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -80,8 +78,8 @@ class HorizontalPage extends ConsumerWidget {
     final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
-    final adjustedPadding =
-        isSmallWindow ? const EdgeInsets.all(kYaruPagePadding) : padding;
+    final adjuestedPadding =
+        isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
     const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
@@ -89,20 +87,18 @@ class HorizontalPage extends ConsumerWidget {
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
       content: Padding(
-        padding: adjustedPadding,
+        padding: adjuestedPadding,
         child: Row(
           children: [
             if (image != null) ...[
               Expanded(
-                flex: 2,
+                flex: 6,
                 child: image,
               ),
-              SizedBox(
-                width: isSmallWindow ? kYaruPagePadding : _contentSpacing,
-              ),
+              const SizedBox(width: kWizardSpacing),
             ],
             Expanded(
-              flex: 5,
+              flex: 8,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
