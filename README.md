@@ -124,8 +124,8 @@ https://github.com/canonical/ubuntu-desktop-provision/tree/main/packages/ubuntu_
 ### Frontend
 
 The UI is written in [Flutter](https://flutter.dev/) and consists of multiple Dart/Flutter packages contained in `packages/`. The most important ones are:
-* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap built from the `bootstrap-snap` branch and replaces the `ubuntu-desktop-installer`.
-* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap built from the `init-snap` branch and serves as a replacement for `gnome-initial-setup`.
+* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap built from the `ci/bootstrap` branch and replaces the `ubuntu-desktop-installer`.
+* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap built from the `ci/init` branch and serves as a replacement for `gnome-initial-setup`.
 * `ubuntu_provision` - Flutter package that contains shared code and pages used by both `ubuntu_bootstrap` and `ubuntu_init`.
 * `ubuntu_wizard` - Flutter package that provides the common wizard-style UI framework.
 * `subiquity_client` and `provd_client` - Dart packages that provide a client library for the different backends.
