@@ -48,8 +48,7 @@ func TestGetVisualAlerts(t *testing.T) {
 			require.NoError(t, err, "GetVisualAlerts should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -83,8 +82,6 @@ func TestEnableVisualAlerts(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableVisualAlerts(context.Background(), req)
 
 			// Evaluate function under test output
@@ -99,8 +96,7 @@ func TestEnableVisualAlerts(t *testing.T) {
 			require.NoError(t, err, "GetVisualAlerts should not return an error")
 
 			got := r.GetValue()
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -134,8 +130,6 @@ func TestDisableVisualAlerts(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableVisualAlerts(context.Background(), req)
 
 			// Evaluate function under test output
@@ -150,8 +144,7 @@ func TestDisableVisualAlerts(t *testing.T) {
 			require.NoError(t, err, "GetVisualAlerts should not return an error")
 
 			got := r.GetValue()
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

@@ -41,9 +41,9 @@ func TestGetHighContrast(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, respErr := client.GetHighContrast(context.Background(), req)
+
+			// Evaluate function under test output
 			if tc.wantErr {
 				require.Error(t, respErr, "GetHighContrast should return an error")
 				require.Empty(t, resp, "GetHighContrast should return a nil response")
@@ -52,8 +52,7 @@ func TestGetHighContrast(t *testing.T) {
 			require.NoError(t, respErr, "GetHighcontrast should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -87,9 +86,8 @@ func TestEnableHighContrast(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, respErr := client.EnableHighContrast(context.Background(), req)
+
 
 			if tc.wantErr {
 				require.Error(t, respErr, "EnableHighContrast should return an error")
@@ -102,8 +100,7 @@ func TestEnableHighContrast(t *testing.T) {
 			require.NoError(t, err, "GetHighContrast should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -137,8 +134,6 @@ func TestDisableHighContrast(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, respErr := client.DisableHighContrast(context.Background(), req)
 
 			// Evaluate function under test output
@@ -153,8 +148,7 @@ func TestDisableHighContrast(t *testing.T) {
 			require.NoError(t, err, "GetHighContrast should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -191,8 +185,6 @@ func TestGetReducedMotion(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, respErr := client.GetReducedMotion(context.Background(), req)
 
 			// Evaluate function under test output
@@ -204,8 +196,7 @@ func TestGetReducedMotion(t *testing.T) {
 			require.NoError(t, respErr, "GetReducedMotion should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -239,8 +230,6 @@ func TestEnableReducedMotion(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, respErr := client.EnableReducedMotion(context.Background(), req)
 
 			// Evaluate function under test output
@@ -255,8 +244,7 @@ func TestEnableReducedMotion(t *testing.T) {
 			require.NoError(t, err, "GetReducedMotion should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -290,8 +278,6 @@ func TestDisableReducedMotion(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableReducedMotion(context.Background(), req)
 
 			if tc.wantErr {
@@ -305,8 +291,7 @@ func TestDisableReducedMotion(t *testing.T) {
 			require.NoError(t, err, "GetReducedMotion should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -348,8 +333,6 @@ func TestGetLargeText(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetLargeText(context.Background(), req)
 
 			// Evaluate function under test output
@@ -361,8 +344,7 @@ func TestGetLargeText(t *testing.T) {
 			require.NoError(t, err, "GetLargeText should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -395,8 +377,6 @@ func TestEnableLargeText(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableLargeText(context.Background(), req)
 
 			// Evaluate function under test output
@@ -411,8 +391,7 @@ func TestEnableLargeText(t *testing.T) {
 			require.NoError(t, err, "GetLargeText should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -446,8 +425,6 @@ func TestDisableLargeText(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableLargeText(context.Background(), req)
 
 			// Evaluate function under test output
@@ -462,8 +439,7 @@ func TestDisableLargeText(t *testing.T) {
 			require.NoError(t, err, "GetLargeText should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -500,8 +476,6 @@ func TestGetScreenReader(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetScreenReader(context.Background(), req)
 
 			// Evaluate function under test output
@@ -513,8 +487,7 @@ func TestGetScreenReader(t *testing.T) {
 			require.NoError(t, err, "GetScreenReader should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -548,8 +521,6 @@ func TestEnableScreenReader(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableScreenReader(context.Background(), req)
 
 			// Evaluate function under test output
@@ -564,8 +535,7 @@ func TestEnableScreenReader(t *testing.T) {
 			require.NoError(t, err, "GetScreenReader should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -599,8 +569,6 @@ func TestDisableScreenReader(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableScreenReader(context.Background(), req)
 
 			// Evaluate function under test output
@@ -615,8 +583,7 @@ func TestDisableScreenReader(t *testing.T) {
 			require.NoError(t, err, "GetScreenReader should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

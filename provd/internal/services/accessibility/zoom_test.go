@@ -41,8 +41,6 @@ func TestGetDesktopZoom(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetDesktopZoom(context.Background(), req)
 
 			// Evaluate function under test output
@@ -54,8 +52,7 @@ func TestGetDesktopZoom(t *testing.T) {
 			require.NoError(t, err, "GetDesktopZoom should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -89,8 +86,6 @@ func TestEnableDesktopZoom(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableDesktopZoom(context.Background(), req)
 
 			// Evaluate function under test output
@@ -105,8 +100,7 @@ func TestEnableDesktopZoom(t *testing.T) {
 			require.NoError(t, err, "GetDesktopZoom should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -140,8 +134,6 @@ func TestDisableDesktopZoom(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableDesktopZoom(context.Background(), req)
 
 			// Evaluate function under test output
@@ -156,8 +148,7 @@ func TestDisableDesktopZoom(t *testing.T) {
 			require.NoError(t, err, "GetDesktopZoom should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

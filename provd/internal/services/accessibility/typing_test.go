@@ -41,8 +41,6 @@ func TestGetScreenKeyboard(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetScreenKeyboard(context.Background(), req)
 
 			// Evaluate function under test output
@@ -55,8 +53,7 @@ func TestGetScreenKeyboard(t *testing.T) {
 			require.NoError(t, err, "GetScreenKeyboard should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -89,8 +86,6 @@ func TestEnableScreenKeyboard(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableScreenKeyboard(context.Background(), req)
 
 			// Evaluate function under test output
@@ -105,8 +100,7 @@ func TestEnableScreenKeyboard(t *testing.T) {
 			require.NoError(t, err, "GetScreenKeyboard should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -139,8 +133,6 @@ func TestDisableScreenKeyboard(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableScreenKeyboard(context.Background(), req)
 
 			// Evaluate function under test output
@@ -155,8 +147,7 @@ func TestDisableScreenKeyboard(t *testing.T) {
 			require.NoError(t, err, "GetScreenKeyboard should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -193,8 +184,6 @@ func TestGetStickyKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetStickyKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -206,8 +195,7 @@ func TestGetStickyKeys(t *testing.T) {
 			require.NoError(t, err, "GetStickyKeys should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -241,8 +229,6 @@ func TestEnableStickyKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableStickyKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -257,8 +243,7 @@ func TestEnableStickyKeys(t *testing.T) {
 			require.NoError(t, err, "GetStickyKeys should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -292,8 +277,6 @@ func TestDisableStickyKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableStickyKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -308,8 +291,7 @@ func TestDisableStickyKeys(t *testing.T) {
 			require.NoError(t, err, "GetStickyKeys should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -346,8 +328,6 @@ func TestGetSlowKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetSlowKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -359,8 +339,7 @@ func TestGetSlowKeys(t *testing.T) {
 			require.NoError(t, err, "GetSlowKeys should not return an error")
 
 			got := resp.GetValue()
-			want := tc.wantTrue
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
 		})
 	}
 }
@@ -393,8 +372,6 @@ func TestEnableSlowKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.EnableSlowKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -409,8 +386,7 @@ func TestEnableSlowKeys(t *testing.T) {
 			require.NoError(t, err, "GetSlowKeys should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -443,8 +419,6 @@ func TestDisableSlowKeys(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.DisableSlowKeys(context.Background(), req)
 
 			// Evaluate function under test output
@@ -459,8 +433,7 @@ func TestDisableSlowKeys(t *testing.T) {
 			require.NoError(t, err, "GetSlowKeys should not return an error")
 
 			got := r.Value
-			want := tc.want
-			require.Equal(t, want, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
