@@ -22,20 +22,22 @@ class GuidedResizePage extends ConsumerWidget {
 
     switch (model.existingOS.length) {
       case 0:
-        return lang.installationTypeAlongsideUnknown(model.productInfo);
+        return lang
+            .installationTypeAlongsideUnknown(model.productInfo.toString());
       case 1:
         return lang.installationTypeAlongside(
-          model.productInfo,
+          model.productInfo.toString(),
           model.existingOS.single.long,
         );
       case 2:
         return lang.installationTypeAlongsideDual(
-          model.productInfo,
+          model.productInfo.toString(),
           model.existingOS.first.long,
           model.existingOS.last.long,
         );
       default:
-        return lang.installationTypeAlongsideMulti(model.productInfo);
+        return lang
+            .installationTypeAlongsideMulti(model.productInfo.toString());
     }
   }
 

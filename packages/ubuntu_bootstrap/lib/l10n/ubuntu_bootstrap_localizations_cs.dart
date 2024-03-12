@@ -8,7 +8,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get appTitle => 'Instalátor Ubuntu pro osobní počítače';
 
   @override
-  String windowTitle(Object RELEASE) {
+  String windowTitle(String RELEASE) {
     return 'Nainstalovat $RELEASE';
   }
 
@@ -40,22 +40,22 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get quitButtonText => 'Opustit instalaci';
 
   @override
-  String loadingPageTitle(Object DISTRO) {
+  String loadingPageTitle(String DISTRO) {
     return 'Vítejte v $DISTRO';
   }
 
   @override
-  String loadingHeader(Object DISTRO) {
+  String loadingHeader(String DISTRO) {
     return 'Připravuje se $DISTRO…';
   }
 
   @override
-  String tryOrInstallTitle(Object DISTRO) {
+  String tryOrInstallTitle(String DISTRO) {
     return 'Vyzkoušet nebo nainstalovat $DISTRO';
   }
 
   @override
-  String tryOrInstallHeader(Object DISTRO) {
+  String tryOrInstallHeader(String DISTRO) {
     return 'What do you want to do with $DISTRO?';
   }
 
@@ -66,27 +66,27 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairDescription => 'Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.';
 
   @override
-  String tryOption(Object RELEASE) {
+  String tryOption(String RELEASE) {
     return 'Vyzkoušet $RELEASE';
   }
 
   @override
-  String tryDescription(Object RELEASE) {
+  String tryDescription(String RELEASE) {
     return 'Můžete si vyzkoušet $RELEASE aniž by se v počítači cokoli měnilo.';
   }
 
   @override
-  String installOption(Object RELEASE) {
+  String installOption(String RELEASE) {
     return 'Nainstalovat $RELEASE';
   }
 
   @override
-  String installDescription(Object RELEASE) {
+  String installDescription(String RELEASE) {
     return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.';
   }
 
   @override
-  String tryOrInstallReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(String url) {
     return 'Nejspíš si budete chtít přečíst <a href=\"$url\">poznámky k vydání</a>.';
   }
 
@@ -97,10 +97,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Aby bylo možné pokračovat, vypněte RST';
 
   @override
-  String get rstDescription => 'Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné Ubuntu nainstalovat, je třeba ve Windows funkci RST vypnout.';
+  String rstDescription(String DISTRO) {
+    return 'Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné Ubuntu nainstalovat, je třeba ve Windows funkci RST vypnout.';
+  }
 
   @override
-  String rstInstructions(Object url) {
+  String rstInstructions(String url) {
     return 'Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://$url\">$url</a>';
   }
 
@@ -150,7 +152,9 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
 
   @override
-  String get codecsAndDriversPageBody => 'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  String codecsAndDriversPageBody(String DISTRO) {
+    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  }
 
   @override
   String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
@@ -192,7 +196,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některé jsou proprietární.';
 
   @override
-  String onBatteryWarning(Object color) {
+  String onBatteryWarning(String color) {
     return '<font color=\"$color\">Upozornění:</font> Počítač není připojen k napájení ze zásuvky.';
   }
 
@@ -236,15 +240,17 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Typ instalace';
 
   @override
-  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+  String installationTypeHeader(String DISTRO) {
+    return 'How do you want to install $DISTRO?';
+  }
 
   @override
-  String installationTypeOSDetected(Object os) {
+  String installationTypeOSDetected(String os) {
     return 'Na tomto počítači se už nachází $os. Co si přejete udělat?';
   }
 
   @override
-  String installationTypeDualOSDetected(Object os1, Object os2) {
+  String installationTypeDualOSDetected(String os1, String os2) {
     return 'Na tomto počítači se už nacházejí $os1 a $os2. Co si přejete udělat?';
   }
 
@@ -255,7 +261,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeNoOSDetected => 'Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?';
 
   @override
-  String installationTypeErase(Object DISTRO) {
+  String installationTypeErase(String DISTRO) {
     return 'Vymazat disk a nainstalovat $DISTRO';
   }
 
@@ -308,40 +314,40 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'EXPERIMENTÁLNÍ: zapnout na hardware založené šifrování celého disku';
 
   @override
-  String installationTypeTPMInfo(Object url) {
-    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+  String installationTypeTPMInfo(String DISTRO, String url) {
+    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override
   String get installationTypeTPMSelected => 'TPM vybráno';
 
   @override
-  String installationTypeReinstall(Object os) {
+  String installationTypeReinstall(String os) {
     return 'Vymazat $os a přeinstalovat';
   }
 
   @override
-  String installationTypeReinstallWarning(Object color, Object os) {
+  String installationTypeReinstallWarning(String color, String os) {
     return '<font color=\"$color\">VAROVÁNÍ:</font> Toto smaže veškeré aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory), nacházející se v rámci $os.';
   }
 
   @override
-  String installationTypeAlongside(Object product, Object os) {
+  String installationTypeAlongside(String product, String os) {
     return 'Nainstalovat $product vedle $os';
   }
 
   @override
-  String installationTypeAlongsideDual(Object product, Object os1, Object os2) {
+  String installationTypeAlongsideDual(String product, String os1, String os2) {
     return 'Nainstalovat $product vedle $os1 a $os2';
   }
 
   @override
-  String installationTypeAlongsideMulti(Object product) {
+  String installationTypeAlongsideMulti(String product) {
     return 'Nainstalovat $product vedle nich';
   }
 
   @override
-  String installationTypeAlongsideUnknown(Object product) {
+  String installationTypeAlongsideUnknown(String product) {
     return 'Nainstalovat $product vedle ostatních oddílů';
   }
 
@@ -352,12 +358,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeManual => 'Ruční rozdělení na oddíly';
 
   @override
-  String installationTypeManualInfo(Object DISTRO) {
+  String installationTypeManualInfo(String DISTRO) {
     return 'Je možné ručně vytvořit nebo změnit velikost oddílů, nebo pro instalaci $DISTRO zvolit vícero oddílů';
   }
 
   @override
-  String selectGuidedStoragePageTitle(Object DISTRO) {
+  String selectGuidedStoragePageTitle(String DISTRO) {
     return 'Vymazat disk a nainstalovat $DISTRO';
   }
 
@@ -377,7 +383,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installAlongsideSpaceDivider => 'Přidělte prostor na jednotce posunutím dělítka níže:';
 
   @override
-  String installAlongsideHiddenPartitions(Object num, Object url) {
+  String installAlongsideHiddenPartitions(int num, String url) {
     return '$num menších oddílů skryto. Pokud potřebujete mít nad procesem více kontroly, použijte <a href=\"$url\">nástroj pro pokročilou správu oddílů</a>';
   }
 
@@ -484,7 +490,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get partitionFormatNone => 'Ponechat nenaformátované';
 
   @override
-  String partitionFormatKeep(Object format) {
+  String partitionFormatKeep(String format) {
     return 'Ponechat naformátované jako $format';
   }
 
@@ -510,7 +516,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmPartitionTables => 'Budou změněny tabulky rozdělení na oddíly následujících zařízení:';
 
   @override
-  String confirmPartitionTable(Object serial, Object path) {
+  String confirmPartitionTable(String serial, String path) {
     return '$serial ($path)';
   }
 
@@ -518,27 +524,27 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmPartitionChanges => 'Budou provedeny následující změny na oddílech:';
 
   @override
-  String confirmPartitionResize(Object sysname, Object oldsize, Object newsize) {
+  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
     return 'velikost oddílu <b>$sysname</b> změněna z <b>$oldsize</b> na <b>$newsize</b>';
   }
 
   @override
-  String confirmPartitionFormatMount(Object sysname, Object format, Object mount) {
+  String confirmPartitionFormatMount(String sysname, String format, String mount) {
     return 'oddíl <b>$sysname</b> naformátovaný jako <b>$format</b> použit pro <b>$mount</b>';
   }
 
   @override
-  String confirmPartitionFormat(Object sysname, Object format) {
+  String confirmPartitionFormat(String sysname, String format) {
     return 'oddíl <b>$sysname</b> naformátován jako <b>$format</b>';
   }
 
   @override
-  String confirmPartitionMount(Object sysname, Object mount) {
+  String confirmPartitionMount(String sysname, String mount) {
     return 'oddíl <b>$sysname</b> použit pro <b>$mount</b>';
   }
 
   @override
-  String confirmPartitionCreate(Object sysname) {
+  String confirmPartitionCreate(String sysname) {
     return 'oddíl <b>$sysname</b> vytvořen';
   }
 
@@ -549,22 +555,22 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationCompleteTitle => 'Instalace dokončena';
 
   @override
-  String readyToUse(Object system) {
+  String readyToUse(String system) {
     return '**$system** je nainstalované a připravené k použití';
   }
 
   @override
-  String rebootToConfigure(Object system) {
+  String rebootToConfigure(String system) {
     return '**$system** has been copied to the disk';
   }
 
   @override
-  String restartInto(Object system) {
+  String restartInto(String system) {
     return 'Restartovat do $system';
   }
 
   @override
-  String restartWarning(Object RELEASE) {
+  String restartWarning(String RELEASE) {
     return 'Nyní můžete pokračovat ve zkoušení $RELEASE, ale dokud počítač nerestartujete, veškeré provedené změny nebo vytvořené dokumenty nebudou zachovány.';
   }
 
@@ -587,12 +593,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get bitlockerHeader => 'Aby bylo možné pokračovat, vypněte BitLocker';
 
   @override
-  String bitlockerDescription(Object option) {
+  String bitlockerDescription(String option) {
     return 'Na tomto počítači je používáno šifrování nástrojem Windows BitLocker.\nAby bylo možné pokračovat, je třeba pomocí Windows udělat volné místo nebo zvolit \'$option\'.';
   }
 
   @override
-  String bitlockerInstructions(Object url) {
+  String bitlockerInstructions(String url) {
     return 'Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://$url\">$url</a>';
   }
 
@@ -603,12 +609,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get restartIntoWindowsTitle => 'Restartovat do Windows?';
 
   @override
-  String restartIntoWindowsDescription(Object DISTRO) {
+  String restartIntoWindowsDescription(String DISTRO) {
     return 'Opravdu chcete váš počítač restartovat? Pokud poté budete chtít dokončit instalaci $DISTRO, bude třeba znovu spustit instalaci $DISTRO.';
   }
 
   @override
-  String installationSlidesTitle(Object RELEASE) {
+  String installationSlidesTitle(String RELEASE) {
     return 'Vítejte v $RELEASE';
   }
 
@@ -622,12 +628,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesWelcomeTitle => 'Rychlé, svobodné a plné nových funkcí';
 
   @override
-  String installationSlidesWelcomeHeader(Object DISTRO) {
+  String installationSlidesWelcomeHeader(String DISTRO) {
     return 'Nejnovější verze $DISTRO usnadňuje používání počítače víc než kdy dříve.';
   }
 
   @override
-  String installationSlidesWelcomeBody(Object RELEASE) {
+  String installationSlidesWelcomeBody(String RELEASE) {
     return 'Ať už jste vývojáři, tvůrci, hráči či správci, naleznete zde nové nástroje zvyšující vaši produktivitu a vylepšující váš dojem z používání $RELEASE.';
   }
 
@@ -635,7 +641,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesSoftwareTitle => 'Všechny aplikace které potřebujete';
 
   @override
-  String installationSlidesSoftwareBody(Object DISTRO) {
+  String installationSlidesSoftwareBody(String DISTRO) {
     return 'Instalujte, spravujte a aktualizujte vámi používané aplikace v Ubuntu Software, obsahujícího tisíce aplikací jak ze Snap Store, tak z archivu balíčků $DISTRO.';
   }
 
@@ -643,7 +649,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => 'Vyvíjejte s nejlepším open source';
 
   @override
-  String installationSlidesDevelopmentBody(Object DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO) {
     return '$DISTRO je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci / strojové učení, stejně tak pro devops a správu systémů. Každé vydání $DISTRO obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí.';
   }
 
@@ -651,7 +657,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesCreativityTitle => 'Buďte tvořivější';
 
   @override
-  String installationSlidesCreativityBody(Object DISTRO) {
+  String installationSlidesCreativityBody(String DISTRO) {
     return 'Poku jste animátory, designéry, tvůrci videí či vývojáři her, je snadné přenést své pracovní postupy na $DISTRO díky podpoře software a aplikací, které patří k open source a oborovým standardům.';
   }
 
@@ -659,7 +665,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesGamingTitle => 'Skvělé pro hraní her';
 
   @override
-  String installationSlidesGamingBody(Object DISTRO) {
+  String installationSlidesGamingBody(String DISTRO) {
     return '$DISTRO podporuje nejnovější ovladače od NVIDIA (to stejné ty z Mesa), což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na $DISTRO prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.';
   }
 
@@ -667,12 +673,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesSecurityTitle => 'Soukromé a bezpečné';
 
   @override
-  String installationSlidesSecurityBody(Object DISTRO) {
+  String installationSlidesSecurityBody(String DISTRO) {
     return '$DISTRO poskytuje veškeré nástroje které jsou zapotřebí pro ochranu soukromí a bezpečné používání Internetu. Díky vestavěné bráně firewall, podpoře VPN a řadě aplikací zaměřených na ochranu soukromí máte svá data plně pod kontrolou.';
   }
 
   @override
-  String installationSlidesSecurityLts(Object DISTRO) {
+  String installationSlidesSecurityLts(String DISTRO) {
     return 'Všechna $DISTRO LTS vydání dostávají po dobu pěti let opravy zabezpečení s tím, že je možné prodloužit na deset let předplatným Ubuntu Pro.';
   }
 
@@ -680,7 +686,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesProductivityTitle => 'Zvyšte svou produktivitu';
 
   @override
-  String installationSlidesProductivityBody(Object DISTRO) {
+  String installationSlidesProductivityBody(String DISTRO) {
     return '$DISTRO Desktop obsahuje LibreOffice – sadu open source aplikaci, kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.';
   }
 
@@ -688,7 +694,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityTitle => 'Přístupnost pro každého';
 
   @override
-  String installationSlidesAccessibilityBody(Object DISTRO) {
+  String installationSlidesAccessibilityBody(String DISTRO) {
     return 'V srdci filozofie $DISTRO je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění hendikepovaným a možnosti změnit jazyk, barvy a velikost textu rozhraní, $DISTRO činí používání počítače snadné – ať už jste kdokoli a žijete kdekoli.';
   }
 
@@ -702,7 +708,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportTitle => 'Nápověda a podpora';
 
   @override
-  String installationSlidesSupportHeader(Object DISTRO) {
+  String installationSlidesSupportHeader(String DISTRO) {
     return 'Oficiální dokumentace k $DISTRO je k dispozici jak online, tak přes ikonu Nápověda na panelu.';
   }
 
@@ -737,7 +743,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceTitle => 'Nedostatek místa';
 
   @override
-  String notEnoughDiskSpaceUbuntu(Object DISTRO) {
+  String notEnoughDiskSpaceUbuntu(String DISTRO) {
     return 'Nedostatek místa na disku pro instalaci $DISTRO';
   }
 
@@ -751,22 +757,22 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Je k dispozici aktualizace';
 
   @override
-  String refreshCurrent(Object snap, Object version) {
+  String refreshCurrent(String snap, String version) {
     return 'Stávající verze $snap je $version.';
   }
 
   @override
-  String refreshInstall(Object version) {
+  String refreshInstall(String version) {
     return 'Aktualizovat na verzi $version';
   }
 
   @override
-  String refreshUpToDate(Object version) {
+  String refreshUpToDate(String version) {
     return 'Stávající verze $version je aktuální.';
   }
 
   @override
-  String refreshUpdating(Object snap) {
+  String refreshUpdating(String snap) {
     return 'Aktualizování $snap…';
   }
 
@@ -774,102 +780,102 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Instalátor ukončete a spusťte znovu kliknutím na Restartovat.';
 
   @override
-  String refreshSnapPrerequisites(Object snap) {
+  String refreshSnapPrerequisites(String snap) {
     return 'Zajišťování závislostí pro $snap…';
   }
 
   @override
-  String refreshSnapRefresh(Object snap) {
+  String refreshSnapRefresh(String snap) {
     return 'Znovunačítání $snap…';
   }
 
   @override
-  String refreshSnapCheckRerefresh(Object snap) {
+  String refreshSnapCheckRerefresh(String snap) {
     return 'Zjišťování opětovného znovunačítání $snap…';
   }
 
   @override
-  String refreshSnapPrepare(Object snap) {
+  String refreshSnapPrepare(String snap) {
     return 'Příprava $snap…';
   }
 
   @override
-  String refreshSnapDownload(Object snap) {
+  String refreshSnapDownload(String snap) {
     return 'Stahování $snap…';
   }
 
   @override
-  String refreshSnapValidate(Object snap) {
+  String refreshSnapValidate(String snap) {
     return 'Ověřování $snap…';
   }
 
   @override
-  String refreshSnapMount(Object snap) {
+  String refreshSnapMount(String snap) {
     return 'Připojování $snap…';
   }
 
   @override
-  String refreshSnapStopServices(Object snap) {
+  String refreshSnapStopServices(String snap) {
     return 'Zastavování služeb $snap…';
   }
 
   @override
-  String refreshSnapRemoveAliases(Object snap) {
+  String refreshSnapRemoveAliases(String snap) {
     return 'Odebírání alternativních názvů $snap…';
   }
 
   @override
-  String refreshSnapUnlink(Object snap) {
+  String refreshSnapUnlink(String snap) {
     return 'Rušení odkazování na $snap…';
   }
 
   @override
-  String refreshSnapUpdateAssets(Object snap) {
+  String refreshSnapUpdateAssets(String snap) {
     return 'Aktualizace dat $snap…';
   }
 
   @override
-  String refreshSnapUpdateKernelCommandLine(Object snap) {
+  String refreshSnapUpdateKernelCommandLine(String snap) {
     return 'Aktualizace parametrů pro spouštění jádra systému $snap…';
   }
 
   @override
-  String refreshSnapCopyData(Object snap) {
+  String refreshSnapCopyData(String snap) {
     return 'Kopírování dat $snap…';
   }
 
   @override
-  String refreshSnapSetupProfiles(Object snap) {
+  String refreshSnapSetupProfiles(String snap) {
     return 'Nastavování profilů zabezpečení $snap…';
   }
 
   @override
-  String refreshSnapLink(Object snap) {
+  String refreshSnapLink(String snap) {
     return 'Napojování $snap…';
   }
 
   @override
-  String refreshSnapAutoConnect(Object snap) {
+  String refreshSnapAutoConnect(String snap) {
     return 'Připojování rozhraní a slotů $snap…';
   }
 
   @override
-  String refreshSnapSetAutoAliases(Object snap) {
+  String refreshSnapSetAutoAliases(String snap) {
     return 'Nastavování automatických alternativních názvů pro $snap…';
   }
 
   @override
-  String refreshSnapSetupAliases(Object snap) {
+  String refreshSnapSetupAliases(String snap) {
     return 'Nastavování alternativních názvů pro $snap…';
   }
 
   @override
-  String refreshSnapStartServices(Object snap) {
+  String refreshSnapStartServices(String snap) {
     return 'Start služeb $snap…';
   }
 
   @override
-  String refreshSnapCleanup(Object snap) {
+  String refreshSnapCleanup(String snap) {
     return 'Úklid $snap…';
   }
 
@@ -880,7 +886,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyCommand => 'Po dokončení instalace je možné si nechat obnovovací klíč zobrazit pomocí následujícího příkazu:';
 
   @override
-  String recoveryKeyWarning(Object color) {
+  String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Varování:</font> Pokud klíč k zabezpečení ztratíte, budou veškerá data ztracena. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.';
   }
 

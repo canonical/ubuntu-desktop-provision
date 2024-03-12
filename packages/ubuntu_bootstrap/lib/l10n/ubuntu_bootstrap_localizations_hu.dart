@@ -8,7 +8,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get appTitle => 'Ubuntu asztali telepítő';
 
   @override
-  String windowTitle(Object RELEASE) {
+  String windowTitle(String RELEASE) {
     return 'A(z) $RELEASE telepítése';
   }
 
@@ -40,22 +40,22 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get quitButtonText => 'Kilépés a telepítésből';
 
   @override
-  String loadingPageTitle(Object DISTRO) {
+  String loadingPageTitle(String DISTRO) {
     return 'Üdvözli a(z) $DISTRO!';
   }
 
   @override
-  String loadingHeader(Object DISTRO) {
+  String loadingHeader(String DISTRO) {
     return 'A(z) $DISTRO előkészítése…';
   }
 
   @override
-  String tryOrInstallTitle(Object DISTRO) {
+  String tryOrInstallTitle(String DISTRO) {
     return 'A(z) $DISTRO kipróbálása vagy telepítése';
   }
 
   @override
-  String tryOrInstallHeader(Object DISTRO) {
+  String tryOrInstallHeader(String DISTRO) {
     return 'What do you want to do with $DISTRO?';
   }
 
@@ -66,27 +66,27 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairDescription => 'A javítás újratelepíti az összes telepített szoftvert, anélkül hogy a dokumentumokat vagy a beállításokat érintené.';
 
   @override
-  String tryOption(Object RELEASE) {
+  String tryOption(String RELEASE) {
     return 'A(z) $RELEASE kipróbálása';
   }
 
   @override
-  String tryDescription(Object RELEASE) {
+  String tryDescription(String RELEASE) {
     return 'A(z) $RELEASE kipróbálható anélkül, hogy bármilyen változtatást végezne a számítógépén.';
   }
 
   @override
-  String installOption(Object RELEASE) {
+  String installOption(String RELEASE) {
     return 'A(z) $RELEASE telepítése';
   }
 
   @override
-  String installDescription(Object RELEASE) {
+  String installDescription(String RELEASE) {
     return 'A(z) $RELEASE telepítése a jelenlegi operációs rendszere mellé (vagy helyett). Ez nem fog túl sokáig tartani.';
   }
 
   @override
-  String tryOrInstallReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(String url) {
     return 'Érdemes lehet elolvasni a <a href=\"$url\">kiadási megjegyzéseket</a>.';
   }
 
@@ -97,10 +97,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Az RST kikapcsolása a folytatáshoz';
 
   @override
-  String get rstDescription => 'Ez a számítógép Intel RST (Rapid Storage Technology) technológiát használ. Az RST-t ki kell kapcsolnia a Windowsban az Ubuntu telepítése előtt.';
+  String rstDescription(String DISTRO) {
+    return 'Ez a számítógép Intel RST (Rapid Storage Technology) technológiát használ. Az RST-t ki kell kapcsolnia a Windowsban az Ubuntu telepítése előtt.';
+  }
 
   @override
-  String rstInstructions(Object url) {
+  String rstInstructions(String url) {
     return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
   }
 
@@ -150,7 +152,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
 
   @override
-  String get codecsAndDriversPageBody => 'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  String codecsAndDriversPageBody(String DISTRO) {
+    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  }
 
   @override
   String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
@@ -192,7 +196,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Erre a szoftverre a dokumentációjában szereplő licencfeltételek vonatkoznak. Néhányuk kereskedelmi forgalomban kapható tulajdonosi szoftver.';
 
   @override
-  String onBatteryWarning(Object color) {
+  String onBatteryWarning(String color) {
     return '<font color=\"$color\">Figyelmeztetés:</font> a számítógép nincs csatlakoztatva az áramforráshoz.';
   }
 
@@ -236,15 +240,17 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Telepítés típusa';
 
   @override
-  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+  String installationTypeHeader(String DISTRO) {
+    return 'How do you want to install $DISTRO?';
+  }
 
   @override
-  String installationTypeOSDetected(Object os) {
+  String installationTypeOSDetected(String os) {
     return 'Ezen a számítógépen jelenleg $os van. Mit szeretne tenni?';
   }
 
   @override
-  String installationTypeDualOSDetected(Object os1, Object os2) {
+  String installationTypeDualOSDetected(String os1, String os2) {
     return 'Ezen a számítógépen jelenleg $os1 és $os2 van. Mit szeretne tenni?';
   }
 
@@ -255,7 +261,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeNoOSDetected => 'Ezen a számítógépen jelenleg nincs felismert operációs rendszer. Mit szeretne tenni?';
 
   @override
-  String installationTypeErase(Object DISTRO) {
+  String installationTypeErase(String DISTRO) {
     return 'Lemez törlése és a(z) $DISTRO telepítése';
   }
 
@@ -308,40 +314,40 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése';
 
   @override
-  String installationTypeTPMInfo(Object url) {
-    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+  String installationTypeTPMInfo(String DISTRO, String url) {
+    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override
   String get installationTypeTPMSelected => 'TPM kiválasztva';
 
   @override
-  String installationTypeReinstall(Object os) {
+  String installationTypeReinstall(String os) {
     return 'A(z) $os törlése és újratelepítés';
   }
 
   @override
-  String installationTypeReinstallWarning(Object color, Object os) {
+  String installationTypeReinstallWarning(String color, String os) {
     return '<font color=\"$color\">Figyelmeztetés:</font> ez törölni fogja az összes $os programot, dokumentumot, fényképet, zenét és minden más fájlt.';
   }
 
   @override
-  String installationTypeAlongside(Object product, Object os) {
+  String installationTypeAlongside(String product, String os) {
     return 'A(z) $product telepítése a(z) $os mellé';
   }
 
   @override
-  String installationTypeAlongsideDual(Object product, Object os1, Object os2) {
+  String installationTypeAlongsideDual(String product, String os1, String os2) {
     return 'A(z) $product telepítése a(z) $os1 és $os2 mellé';
   }
 
   @override
-  String installationTypeAlongsideMulti(Object product) {
+  String installationTypeAlongsideMulti(String product) {
     return 'A(z) $product telepítése melléjük';
   }
 
   @override
-  String installationTypeAlongsideUnknown(Object product) {
+  String installationTypeAlongsideUnknown(String product) {
     return 'A(z) $product telepítése más partíciók mellé';
   }
 
@@ -352,12 +358,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeManual => 'Kézi particionálás';
 
   @override
-  String installationTypeManualInfo(Object DISTRO) {
+  String installationTypeManualInfo(String DISTRO) {
     return 'Létrehozhat vagy átméretezhet partíciókat saját maga, vagy több partíciót is választhat a(z) $DISTRO telepítéséhez';
   }
 
   @override
-  String selectGuidedStoragePageTitle(Object DISTRO) {
+  String selectGuidedStoragePageTitle(String DISTRO) {
     return 'Lemez törlése és a(z) $DISTRO telepítése';
   }
 
@@ -377,7 +383,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installAlongsideSpaceDivider => 'Meghajtóterület lefoglalása az alábbi osztóvonal húzásával:';
 
   @override
-  String installAlongsideHiddenPartitions(Object num, Object url) {
+  String installAlongsideHiddenPartitions(int num, String url) {
     return '$num kisebb partíció el van rejtve, használja a <a href=\"$url\">speciális particionáló eszközt</a> a jobb szabályozáshoz';
   }
 
@@ -484,7 +490,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get partitionFormatNone => 'Formázatlanul hagyás';
 
   @override
-  String partitionFormatKeep(Object format) {
+  String partitionFormatKeep(String format) {
     return '$format formátumra formázva hagyás';
   }
 
@@ -510,7 +516,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get confirmPartitionTables => 'A következő eszközök partíciós táblái változnak meg:';
 
   @override
-  String confirmPartitionTable(Object serial, Object path) {
+  String confirmPartitionTable(String serial, String path) {
     return '$serial ($path)';
   }
 
@@ -518,27 +524,27 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get confirmPartitionChanges => 'A következő partícióváltoztatások kerülnek alkalmazásra:';
 
   @override
-  String confirmPartitionResize(Object sysname, Object oldsize, Object newsize) {
+  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
     return '<b>$sysname</b> partíció átméretezve <b>$oldsize</b> méretről <b>$newsize</b> méretre';
   }
 
   @override
-  String confirmPartitionFormatMount(Object sysname, Object format, Object mount) {
+  String confirmPartitionFormatMount(String sysname, String format, String mount) {
     return '<b>$sysname</b> partíció <b>$format</b> formátumra formázva, <b>$mount</b> helyre csatolva';
   }
 
   @override
-  String confirmPartitionFormat(Object sysname, Object format) {
+  String confirmPartitionFormat(String sysname, String format) {
     return '<b>$sysname</b> partíció <b>$format</b> formátumra formázva';
   }
 
   @override
-  String confirmPartitionMount(Object sysname, Object mount) {
+  String confirmPartitionMount(String sysname, String mount) {
     return '<b>$sysname</b> partíció <b>$mount</b> helyre csatolva';
   }
 
   @override
-  String confirmPartitionCreate(Object sysname) {
+  String confirmPartitionCreate(String sysname) {
     return '<b>$sysname</b> partíció létrehozva';
   }
 
@@ -549,22 +555,22 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationCompleteTitle => 'A telepítés befejeződött';
 
   @override
-  String readyToUse(Object system) {
+  String readyToUse(String system) {
     return 'A(z) **$system** telepítve van és használatra kész';
   }
 
   @override
-  String rebootToConfigure(Object system) {
+  String rebootToConfigure(String system) {
     return '**$system** has been copied to the disk';
   }
 
   @override
-  String restartInto(Object system) {
+  String restartInto(String system) {
     return 'Újraindítás és $system használata';
   }
 
   @override
-  String restartWarning(Object RELEASE) {
+  String restartWarning(String RELEASE) {
     return 'Most folytathatja a(z) $RELEASE kipróbálását, de amíg nem indítja újra a számítógépet, addig semmilyen elvégzett változtatás vagy elmentett dokumentum nem lesz megtartva.';
   }
 
@@ -587,12 +593,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get bitlockerHeader => 'A BitLocker kikapcsolása a folytatáshoz';
 
   @override
-  String bitlockerDescription(Object option) {
+  String bitlockerDescription(String option) {
     return 'Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy a(z) „$option” választása szükséges a folytatáshoz.';
   }
 
   @override
-  String bitlockerInstructions(Object url) {
+  String bitlockerInstructions(String url) {
     return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
   }
 
@@ -603,12 +609,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get restartIntoWindowsTitle => 'Újraindítja a számítógépet Windows használatával?';
 
   @override
-  String restartIntoWindowsDescription(Object DISTRO) {
+  String restartIntoWindowsDescription(String DISTRO) {
     return 'Biztosan újra szeretné indítani a számítógépet? Később újra kell majd indítania a(z) $DISTRO telepítését a(z) $DISTRO telepítésének befejezéséhez.';
   }
 
   @override
-  String installationSlidesTitle(Object RELEASE) {
+  String installationSlidesTitle(String RELEASE) {
     return 'Üdvözli a(z) $RELEASE!';
   }
 
@@ -622,12 +628,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesWelcomeTitle => 'Gyors, ingyenes és tele új funkciókkal';
 
   @override
-  String installationSlidesWelcomeHeader(Object DISTRO) {
+  String installationSlidesWelcomeHeader(String DISTRO) {
     return 'A(z) $DISTRO legújabb verziója minden eddiginél könnyebbé teszi a számítástechnikát.';
   }
 
   @override
-  String installationSlidesWelcomeBody(Object RELEASE) {
+  String installationSlidesWelcomeBody(String RELEASE) {
     return 'Legyen akár fejlesztő, alkotó, játékos vagy rendszergazda, a(z) $RELEASE új eszközöket nyújt Önnek a termelékenység és a felhasználói élmény javításához.';
   }
 
@@ -635,7 +641,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesSoftwareTitle => 'Minden alkalmazás, amire szüksége van';
 
   @override
-  String installationSlidesSoftwareBody(Object DISTRO) {
+  String installationSlidesSoftwareBody(String DISTRO) {
     return 'Telepítse, kezelje és frissítse az Ubuntu szoftverben található összes alkalmazást, beleértve a Snap alkalmazásboltból és a(z) $DISTRO archívumából származó több ezer alkalmazást is.';
   }
 
@@ -643,7 +649,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => 'Fejlesszen a nyílt forráskód legjobbjaival';
 
   @override
-  String installationSlidesDevelopmentBody(Object DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO) {
     return 'A(z) $DISTRO ideális munkaállomás az alkalmazás- vagy webfejlesztéshez, az adattudományhoz és a mesterséges intelligenciához vagy gépi tanuláshoz, valamint a fejlesztésekhez és az adminisztrációhoz. Minden $DISTRO kiadás a legújabb eszközláncokat tartalmazza, és támogatja az összes főbb integrált fejlesztőkörnyezetet.';
   }
 
@@ -651,7 +657,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesCreativityTitle => 'Növelje a kreativitását';
 
   @override
-  String installationSlidesCreativityBody(Object DISTRO) {
+  String installationSlidesCreativityBody(String DISTRO) {
     return 'Ha Ön animátor, tervező, videókészítő vagy játékfejlesztő, akkor könnyedén áthozhatja a munkafolyamatait a nyílt forráskódú és az iparági szabványokat használó szoftverek és alkalmazások támogatásával rendelkező $DISTRO rendszerbe.';
   }
 
@@ -659,7 +665,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesGamingTitle => 'Nagyszerű a játékokhoz';
 
   @override
-  String installationSlidesGamingBody(Object DISTRO) {
+  String installationSlidesGamingBody(String DISTRO) {
     return 'A(z) $DISTRO támogatja a legújabb NVIDIA és Mesa illesztőprogramokat a teljesítmény és a kompatibilitás javítása érdekében. A(z) $DISTRO további beállítások nélkül is remekül futtatja a Windowsra írt játékok ezreit az olyan alkalmazásokon keresztül, mint például a Steam.';
   }
 
@@ -667,12 +673,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesSecurityTitle => 'Személyes és biztonságos';
 
   @override
-  String installationSlidesSecurityBody(Object DISTRO) {
+  String installationSlidesSecurityBody(String DISTRO) {
     return 'A(z) $DISTRO minden olyan eszközt biztosít, amelyre szüksége van ahhoz, hogy tiszteletben tartsák a magánéletét és biztonságban legyen az interneten. Beépített tűzfallal és VPN-támogatással, valamint az adatvédelemre összpontosító rengeteg alkalmazással érkezik annak biztosításához, hogy az adatai felett teljes ellenőrzést gyakorolhasson.';
   }
 
   @override
-  String installationSlidesSecurityLts(Object DISTRO) {
+  String installationSlidesSecurityLts(String DISTRO) {
     return 'Az összes $DISTRO LTS kiadás öt évre szóló biztonsági javítást tartalmaz, ami Ubuntu Pro előfizetéssel tíz évre növelhető.';
   }
 
@@ -680,7 +686,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesProductivityTitle => 'Növelje a termelékenységét';
 
   @override
-  String installationSlidesProductivityBody(Object DISTRO) {
+  String installationSlidesProductivityBody(String DISTRO) {
     return 'A(z) $DISTRO asztali változatában megtalálható a LibreOffice, a Microsoft Office-szal kompatibilis, nyílt forráskódú alkalmazáscsomag dokumentumokhoz, táblázatokhoz és prezentációkhoz. Népszerű együttműködési eszközök is rendelkezésre állnak.';
   }
 
@@ -688,7 +694,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityTitle => 'Hozzáférés mindenkinek';
 
   @override
-  String installationSlidesAccessibilityBody(Object DISTRO) {
+  String installationSlidesAccessibilityBody(String DISTRO) {
     return 'A(z) $DISTRO filozófiájának középpontjában az a meggyőződés áll, hogy a számítástechnika mindenkié. A fejlett akadálymentesítési eszközökkel, valamint a nyelv, a színek és a szövegméret megváltoztatásának lehetőségeivel a(z) $DISTRO egyszerűvé teszi a számítástechnikát – bárki és bárhol is legyen.';
   }
 
@@ -702,7 +708,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportTitle => 'Súgó és támogatás';
 
   @override
-  String installationSlidesSupportHeader(Object DISTRO) {
+  String installationSlidesSupportHeader(String DISTRO) {
     return 'A hivatalos $DISTRO dokumentáció az interneten és az alkalmazásindítóban lévő Súgó ikonon keresztül is elérhető.';
   }
 
@@ -737,7 +743,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceTitle => 'Nincs elegendő hely';
 
   @override
-  String notEnoughDiskSpaceUbuntu(Object DISTRO) {
+  String notEnoughDiskSpaceUbuntu(String DISTRO) {
     return 'Nincs elegendő lemezterület a(z) $DISTRO telepítéséhez';
   }
 
@@ -751,22 +757,22 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Frissítés érhető el';
 
   @override
-  String refreshCurrent(Object snap, Object version) {
+  String refreshCurrent(String snap, String version) {
     return 'A jelenlegi $snap verzió $version.';
   }
 
   @override
-  String refreshInstall(Object version) {
+  String refreshInstall(String version) {
     return 'Frissítés a(z) $version verzióra';
   }
 
   @override
-  String refreshUpToDate(Object version) {
+  String refreshUpToDate(String version) {
     return 'A jelenlegi $version verzió naprakész.';
   }
 
   @override
-  String refreshUpdating(Object snap) {
+  String refreshUpdating(String snap) {
     return 'A(z) $snap frissítése…';
   }
 
@@ -774,102 +780,102 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Indítsa újra a telepítőt.';
 
   @override
-  String refreshSnapPrerequisites(Object snap) {
+  String refreshSnapPrerequisites(String snap) {
     return 'A(z) $snap előfeltételeinek biztosítása…';
   }
 
   @override
-  String refreshSnapRefresh(Object snap) {
+  String refreshSnapRefresh(String snap) {
     return 'A(z) $snap frissítése…';
   }
 
   @override
-  String refreshSnapCheckRerefresh(Object snap) {
+  String refreshSnapCheckRerefresh(String snap) {
     return 'A(z) $snap újrafrissítésének ellenőrzése…';
   }
 
   @override
-  String refreshSnapPrepare(Object snap) {
+  String refreshSnapPrepare(String snap) {
     return 'A(z) $snap előkészítése…';
   }
 
   @override
-  String refreshSnapDownload(Object snap) {
+  String refreshSnapDownload(String snap) {
     return 'A(z) $snap letöltése…';
   }
 
   @override
-  String refreshSnapValidate(Object snap) {
+  String refreshSnapValidate(String snap) {
     return 'A(z) $snap ellenőrzése…';
   }
 
   @override
-  String refreshSnapMount(Object snap) {
+  String refreshSnapMount(String snap) {
     return 'A(z) $snap csatolása…';
   }
 
   @override
-  String refreshSnapStopServices(Object snap) {
+  String refreshSnapStopServices(String snap) {
     return 'A(z) $snap szolgáltatásainak leállítása…';
   }
 
   @override
-  String refreshSnapRemoveAliases(Object snap) {
+  String refreshSnapRemoveAliases(String snap) {
     return 'A(z) $snap álnevek eltávolítása…';
   }
 
   @override
-  String refreshSnapUnlink(Object snap) {
+  String refreshSnapUnlink(String snap) {
     return 'A(z) $snap kapcsolatának megszüntetése…';
   }
 
   @override
-  String refreshSnapUpdateAssets(Object snap) {
+  String refreshSnapUpdateAssets(String snap) {
     return 'A(z) $snap eszközeinek frissítése…';
   }
 
   @override
-  String refreshSnapUpdateKernelCommandLine(Object snap) {
+  String refreshSnapUpdateKernelCommandLine(String snap) {
     return 'A(z) $snap rendszermag parancssorának frissítése…';
   }
 
   @override
-  String refreshSnapCopyData(Object snap) {
+  String refreshSnapCopyData(String snap) {
     return 'A(z) $snap adatainak másolása…';
   }
 
   @override
-  String refreshSnapSetupProfiles(Object snap) {
+  String refreshSnapSetupProfiles(String snap) {
     return 'A(z) $snap biztonsági profiljainak beállítása…';
   }
 
   @override
-  String refreshSnapLink(Object snap) {
+  String refreshSnapLink(String snap) {
     return 'A(z) $snap kapcsolása…';
   }
 
   @override
-  String refreshSnapAutoConnect(Object snap) {
+  String refreshSnapAutoConnect(String snap) {
     return 'A(z) $snap csatlakozóinak és foglalatainak kapcsolódása…';
   }
 
   @override
-  String refreshSnapSetAutoAliases(Object snap) {
+  String refreshSnapSetAutoAliases(String snap) {
     return 'Automatikus $snap álnevek beállítása…';
   }
 
   @override
-  String refreshSnapSetupAliases(Object snap) {
+  String refreshSnapSetupAliases(String snap) {
     return 'A(z) $snap álneveinek beállítása…';
   }
 
   @override
-  String refreshSnapStartServices(Object snap) {
+  String refreshSnapStartServices(String snap) {
     return 'A(z) $snap szolgáltatásainak indítása…';
   }
 
   @override
-  String refreshSnapCleanup(Object snap) {
+  String refreshSnapCleanup(String snap) {
     return 'A(z) $snap tisztítása…';
   }
 
@@ -880,7 +886,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyCommand => 'A helyreállítási kulcsot a telepítés után érheti el a következő paranccsal:';
 
   @override
-  String recoveryKeyWarning(Object color) {
+  String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.';
   }
 

@@ -33,7 +33,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(lang.rstDescription),
+          Text(lang.rstDescription(flavor.displayName)),
           const SizedBox(height: kWizardSpacing),
           Html(
             data: lang.rstInstructions('help.ubuntu.com/rst'),

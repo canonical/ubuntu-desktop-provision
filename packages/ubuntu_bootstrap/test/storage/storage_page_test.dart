@@ -35,7 +35,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeHeader),
+      find.text(l10n.installationTypeHeader('Ubuntu')),
       findsOneWidget,
     );
   });

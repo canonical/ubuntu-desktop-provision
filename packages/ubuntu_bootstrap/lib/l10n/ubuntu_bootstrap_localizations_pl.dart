@@ -8,7 +8,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get appTitle => 'Instalator Ubuntu Desktop';
 
   @override
-  String windowTitle(Object RELEASE) {
+  String windowTitle(String RELEASE) {
     return 'Zainstaluj $RELEASE';
   }
 
@@ -40,22 +40,22 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get quitButtonText => 'Zakończ instalację';
 
   @override
-  String loadingPageTitle(Object DISTRO) {
+  String loadingPageTitle(String DISTRO) {
     return 'Witaj w $DISTRO';
   }
 
   @override
-  String loadingHeader(Object DISTRO) {
+  String loadingHeader(String DISTRO) {
     return 'Przygotowywanie $DISTRO…';
   }
 
   @override
-  String tryOrInstallTitle(Object DISTRO) {
+  String tryOrInstallTitle(String DISTRO) {
     return 'Wypróbuj lub zainstaluj $DISTRO';
   }
 
   @override
-  String tryOrInstallHeader(Object DISTRO) {
+  String tryOrInstallHeader(String DISTRO) {
     return 'What do you want to do with $DISTRO?';
   }
 
@@ -66,27 +66,27 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairDescription => 'Naprawa spowoduje ponowną instalację całego zainstalowanego oprogramowania bez naruszania dokumentów lub ustawień.';
 
   @override
-  String tryOption(Object RELEASE) {
+  String tryOption(String RELEASE) {
     return 'Wypróbuj $RELEASE';
   }
 
   @override
-  String tryDescription(Object RELEASE) {
+  String tryDescription(String RELEASE) {
     return 'Możesz wypróbować $RELEASE bez wprowadzania jakichkolwiek zmian na swoim komputerze.';
   }
 
   @override
-  String installOption(Object RELEASE) {
+  String installOption(String RELEASE) {
     return 'Zainstaluj $RELEASE';
   }
 
   @override
-  String installDescription(Object RELEASE) {
+  String installDescription(String RELEASE) {
     return 'Zainstaluj $RELEASE obok (lub zamiast) obecnego systemu operacyjnego. Nie powinno to potrwać zbyt długo.';
   }
 
   @override
-  String tryOrInstallReleaseNotesLabel(Object url) {
+  String tryOrInstallReleaseNotesLabel(String url) {
     return 'Możesz chcieć przeczytać <a href=\"$url\">informacje o wydaniu</a>.';
   }
 
@@ -97,10 +97,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Wyłącz funkcję RST, aby kontynuować';
 
   @override
-  String get rstDescription => 'Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją Ubuntu.';
+  String rstDescription(String DISTRO) {
+    return 'Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją Ubuntu.';
+  }
 
   @override
-  String rstInstructions(Object url) {
+  String rstInstructions(String url) {
     return 'Aby uzyskać instrukcje, zeskanuj kod QR na innym urządzeniu lub odwiedź: <a href=\"https://$url\">$url</a>';
   }
 
@@ -150,7 +152,9 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
 
   @override
-  String get codecsAndDriversPageBody => 'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  String codecsAndDriversPageBody(String DISTRO) {
+    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  }
 
   @override
   String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
@@ -192,7 +196,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre jest własnościowe.';
 
   @override
-  String onBatteryWarning(Object color) {
+  String onBatteryWarning(String color) {
     return '<font color=\"$color\">Ostrzeżenie:</font> komputer nie jest podłączony do źródła zasilania.';
   }
 
@@ -236,15 +240,17 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeTitle => 'Typ instalacji';
 
   @override
-  String get installationTypeHeader => 'How do you want to install Ubuntu?';
+  String installationTypeHeader(String DISTRO) {
+    return 'How do you want to install $DISTRO?';
+  }
 
   @override
-  String installationTypeOSDetected(Object os) {
+  String installationTypeOSDetected(String os) {
     return 'Na tym komputerze jest obecnie zainstalowany system $os. Co chcesz zrobić?';
   }
 
   @override
-  String installationTypeDualOSDetected(Object os1, Object os2) {
+  String installationTypeDualOSDetected(String os1, String os2) {
     return 'Na tym komputerze są obecnie zainstalowane systemy $os1 i $os2. Co chcesz zrobić?';
   }
 
@@ -255,7 +261,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeNoOSDetected => 'Na tym komputerze nie ma obecnie wykrytych systemów operacyjnych. Co chcesz zrobić?';
 
   @override
-  String installationTypeErase(Object DISTRO) {
+  String installationTypeErase(String DISTRO) {
     return 'Wymaż dysk i zainstaluj $DISTRO';
   }
 
@@ -308,40 +314,40 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'EKSPERYMENTALNE: włącz sprzętowe szyfrowanie całego dysku';
 
   @override
-  String installationTypeTPMInfo(Object url) {
-    return 'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+  String installationTypeTPMInfo(String DISTRO, String url) {
+    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
   }
 
   @override
   String get installationTypeTPMSelected => 'Wybrano moduł TPM';
 
   @override
-  String installationTypeReinstall(Object os) {
+  String installationTypeReinstall(String os) {
     return 'Wymaż $os i zainstaluj ponownie';
   }
 
   @override
-  String installationTypeReinstallWarning(Object color, Object os) {
+  String installationTypeReinstallWarning(String color, String os) {
     return '<font color=\"$color\">Ostrzeżenie:</font> spowoduje to usunięcie wszystkich programów $os, dokumentów, zdjęć, muzyki i wszelkich innych plików.';
   }
 
   @override
-  String installationTypeAlongside(Object product, Object os) {
+  String installationTypeAlongside(String product, String os) {
     return 'Zainstaluj $product obok $os';
   }
 
   @override
-  String installationTypeAlongsideDual(Object product, Object os1, Object os2) {
+  String installationTypeAlongsideDual(String product, String os1, String os2) {
     return 'Zainstaluj $product obok $os1 i $os2';
   }
 
   @override
-  String installationTypeAlongsideMulti(Object product) {
+  String installationTypeAlongsideMulti(String product) {
     return 'Zainstaluj $product obok nich';
   }
 
   @override
-  String installationTypeAlongsideUnknown(Object product) {
+  String installationTypeAlongsideUnknown(String product) {
     return 'Zainstaluj $product obok innych partycji';
   }
 
@@ -352,12 +358,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeManual => 'Ręczne partycjonowanie';
 
   @override
-  String installationTypeManualInfo(Object DISTRO) {
+  String installationTypeManualInfo(String DISTRO) {
     return 'Możesz samodzielnie utworzyć lub zmienić rozmiar partycji lub wybrać wiele partycji dla $DISTRO';
   }
 
   @override
-  String selectGuidedStoragePageTitle(Object DISTRO) {
+  String selectGuidedStoragePageTitle(String DISTRO) {
     return 'Wymaż dysk i zainstaluj $DISTRO';
   }
 
@@ -377,7 +383,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installAlongsideSpaceDivider => 'Przydziel przestrzeń dyskową, przesuwając poniższą podziałkę:';
 
   @override
-  String installAlongsideHiddenPartitions(Object num, Object url) {
+  String installAlongsideHiddenPartitions(int num, String url) {
     return '$num mniejsze partycje są ukryte, użyj <a href=\"$url\">zaawansowanego narzędzia do partycjonowania</a>, aby uzyskać większą kontrolę';
   }
 
@@ -484,7 +490,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get partitionFormatNone => 'Pozostaw niesformatowaną';
 
   @override
-  String partitionFormatKeep(Object format) {
+  String partitionFormatKeep(String format) {
     return 'Pozostaw sformatowaną jako $format';
   }
 
@@ -510,7 +516,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get confirmPartitionTables => 'Zmieniane są tablice partycji następujących urządzeń:';
 
   @override
-  String confirmPartitionTable(Object serial, Object path) {
+  String confirmPartitionTable(String serial, String path) {
     return '$serial ($path)';
   }
 
@@ -518,27 +524,27 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get confirmPartitionChanges => 'Zostaną zastosowane następujące zmiany partycji:';
 
   @override
-  String confirmPartitionResize(Object sysname, Object oldsize, Object newsize) {
+  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
     return 'partycja <b>$sysname</b> zmieniła rozmiar z <b>$oldsize</b> na <b>$newsize</b>';
   }
 
   @override
-  String confirmPartitionFormatMount(Object sysname, Object format, Object mount) {
+  String confirmPartitionFormatMount(String sysname, String format, String mount) {
     return 'partycja <b>$sysname</b> sformatowana jako <b>$format</b> używana do <b>$mount</b>';
   }
 
   @override
-  String confirmPartitionFormat(Object sysname, Object format) {
+  String confirmPartitionFormat(String sysname, String format) {
     return 'partycja <b>$sysname</b> sformatowana jako <b>$format</b>';
   }
 
   @override
-  String confirmPartitionMount(Object sysname, Object mount) {
+  String confirmPartitionMount(String sysname, String mount) {
     return 'partycja <b>$sysname</b> używana do <b>$mount</b>';
   }
 
   @override
-  String confirmPartitionCreate(Object sysname) {
+  String confirmPartitionCreate(String sysname) {
     return 'utworzona partycja <b>$sysname</b>';
   }
 
@@ -549,22 +555,22 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationCompleteTitle => 'Instalacja zakończona';
 
   @override
-  String readyToUse(Object system) {
+  String readyToUse(String system) {
     return '**$system** został zainstalowany i jest gotowy do użycia';
   }
 
   @override
-  String rebootToConfigure(Object system) {
+  String rebootToConfigure(String system) {
     return '**$system** has been copied to the disk';
   }
 
   @override
-  String restartInto(Object system) {
+  String restartInto(String system) {
     return 'Uruchom ponownie do $system';
   }
 
   @override
-  String restartWarning(Object RELEASE) {
+  String restartWarning(String RELEASE) {
     return 'Możesz teraz kontynuować testowanie wersji $RELEASE, ale dopóki nie uruchomisz ponownie komputera, wszelkie wprowadzone zmiany lub zapisane dokumenty nie zostaną zachowane.';
   }
 
@@ -587,12 +593,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get bitlockerHeader => 'Wyłącz funkcję BitLocker, aby kontynuować';
 
   @override
-  String bitlockerDescription(Object option) {
+  String bitlockerDescription(String option) {
     return 'Ten komputer używa szyfrowania Windows BitLocker.\nNależy użyć systemu Windows do utworzenia wolnej przestrzeni lub wybrać \'$option\', aby kontynuować.';
   }
 
   @override
-  String bitlockerInstructions(Object url) {
+  String bitlockerInstructions(String url) {
     return 'Aby uzyskać instrukcje, zeskanuj kod QR na innym urządzeniu lub odwiedź: <a href=\"https://$url\">$url</a>';
   }
 
@@ -603,12 +609,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get restartIntoWindowsTitle => 'Uruchomić ponownie do Windows?';
 
   @override
-  String restartIntoWindowsDescription(Object DISTRO) {
+  String restartIntoWindowsDescription(String DISTRO) {
     return 'Czy na pewno chcesz ponownie uruchomić komputer? Później będziesz musieć ponownie uruchomić instalację $DISTRO, aby zakończyć instalowanie $DISTRO.';
   }
 
   @override
-  String installationSlidesTitle(Object RELEASE) {
+  String installationSlidesTitle(String RELEASE) {
     return 'Witaj w $RELEASE';
   }
 
@@ -622,12 +628,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesWelcomeTitle => 'Szybki, darmowy i pełen nowych funkcji';
 
   @override
-  String installationSlidesWelcomeHeader(Object DISTRO) {
+  String installationSlidesWelcomeHeader(String DISTRO) {
     return 'Najnowsza wersja $DISTRO sprawia, że korzystanie z komputera jest łatwiejsze niż kiedykolwiek.';
   }
 
   @override
-  String installationSlidesWelcomeBody(Object RELEASE) {
+  String installationSlidesWelcomeBody(String RELEASE) {
     return 'Niezależnie od tego, czy jesteś programistą, twórcą, graczem czy administratorem, w $RELEASE znajdziesz nowe narzędzia, które poprawią produktywność i wrażenia.';
   }
 
@@ -635,7 +641,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesSoftwareTitle => 'Wszystkie potrzebne aplikacje';
 
   @override
-  String installationSlidesSoftwareBody(Object DISTRO) {
+  String installationSlidesSoftwareBody(String DISTRO) {
     return 'Instaluj, zarządzaj i aktualizuj wszystkie aplikacje w Ubuntu Software, w tym tysiące aplikacji zarówno z Snap Store, jak i archiwum $DISTRO.';
   }
 
@@ -643,7 +649,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => 'Twórz z wykorzystaniem najlepszych rozwiązań open source';
 
   @override
-  String installationSlidesDevelopmentBody(Object DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO) {
     return '$DISTRO to idealna stacja robocza do tworzenia aplikacji lub stron internetowych, nauki o danych i sztucznej inteligencji/uczenia maszynowego, a także DevOps i administracji. Każda wersja $DISTRO zawiera najnowsze zestawy narzędzi i obsługuje wszystkie główne IDE.';
   }
 
@@ -651,7 +657,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesCreativityTitle => 'Zwiększ swoją kreatywność';
 
   @override
-  String installationSlidesCreativityBody(Object DISTRO) {
+  String installationSlidesCreativityBody(String DISTRO) {
     return 'Jeśli zajmujesz się animacją, projektowaniem, tworzeniem wideo lub gier, możesz łatwo przenieść swoje przepływy pracy do $DISTRO dzięki obsłudze oprogramowania i aplikacji będących standardem branżowym oraz open source.';
   }
 
@@ -659,7 +665,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesGamingTitle => 'Świetny do gier';
 
   @override
-  String installationSlidesGamingBody(Object DISTRO) {
+  String installationSlidesGamingBody(String DISTRO) {
     return '$DISTRO obsługuje najnowsze sterowniki NVIDIA i Mesa, aby poprawić wydajność i kompatybilność. Tysiące tytułów dla systemu Windows działa świetnie na $DISTRO za pośrednictwem aplikacji takich jak Steam bez dodatkowej konfiguracji.';
   }
 
@@ -667,12 +673,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesSecurityTitle => 'Prywatny i bezpieczny';
 
   @override
-  String installationSlidesSecurityBody(Object DISTRO) {
+  String installationSlidesSecurityBody(String DISTRO) {
     return '$DISTRO zapewnia wszystkie narzędzia potrzebne do zachowania prywatności i bezpieczeństwa w Internecie. Dzięki wbudowanej zaporze sieciowej, obsłudze VPN oraz wielu aplikacjom zorientowanym na prywatność, aby zapewnić pełną kontrolę nad danymi.';
   }
 
   @override
-  String installationSlidesSecurityLts(Object DISTRO) {
+  String installationSlidesSecurityLts(String DISTRO) {
     return 'Wszystkie wersje $DISTRO LTS są dostarczane z pięcioletnim łataniem zabezpieczeń, które można wydłużyć do dziesięciu lat za pomocą subskrypcji Ubuntu Pro.';
   }
 
@@ -680,7 +686,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesProductivityTitle => 'Zwiększ swoją produktywność';
 
   @override
-  String installationSlidesProductivityBody(Object DISTRO) {
+  String installationSlidesProductivityBody(String DISTRO) {
     return '$DISTRO Desktop zawiera LibreOffice, pakiet kompatybilnych z Microsoft Office aplikacji open source do dokumentów, arkuszy kalkulacyjnych i prezentacji. Dostępne są również popularne narzędzia do współpracy.';
   }
 
@@ -688,7 +694,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityTitle => 'Dostęp dla wszystkich';
 
   @override
-  String installationSlidesAccessibilityBody(Object DISTRO) {
+  String installationSlidesAccessibilityBody(String DISTRO) {
     return 'U podstaw filozofii $DISTRO leży przekonanie, że informatyka jest dla każdego. Dzięki zaawansowanym narzędziom ułatwień dostępu i opcjom zmiany języka, kolorów oraz rozmiaru tekstu $DISTRO sprawia, że korzystanie z komputera jest łatwe — kimkolwiek i gdziekolwiek jesteś.';
   }
 
@@ -702,7 +708,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportTitle => 'Pomoc i wsparcie';
 
   @override
-  String installationSlidesSupportHeader(Object DISTRO) {
+  String installationSlidesSupportHeader(String DISTRO) {
     return 'Oficjalna dokumentacja $DISTRO jest dostępna zarówno online, jak i za pośrednictwem ikony Pomoc umieszczonej w doku.';
   }
 
@@ -737,7 +743,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceTitle => 'Za mało przestrzeni';
 
   @override
-  String notEnoughDiskSpaceUbuntu(Object DISTRO) {
+  String notEnoughDiskSpaceUbuntu(String DISTRO) {
     return 'Za mało przestrzeni na dysku do zainstalowania $DISTRO';
   }
 
@@ -751,22 +757,22 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Dostępna aktualizacja';
 
   @override
-  String refreshCurrent(Object snap, Object version) {
+  String refreshCurrent(String snap, String version) {
     return 'Bieżąca wersja $snap to $version.';
   }
 
   @override
-  String refreshInstall(Object version) {
+  String refreshInstall(String version) {
     return 'Zaktualizuj do wersji $version';
   }
 
   @override
-  String refreshUpToDate(Object version) {
+  String refreshUpToDate(String version) {
     return 'Bieżąca wersja $version jest aktualna.';
   }
 
   @override
-  String refreshUpdating(Object snap) {
+  String refreshUpdating(String snap) {
     return 'Aktualizowanie $snap...';
   }
 
@@ -774,102 +780,102 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Uruchom ponownie instalator.';
 
   @override
-  String refreshSnapPrerequisites(Object snap) {
+  String refreshSnapPrerequisites(String snap) {
     return 'Sprawdzanie wymagań wstępnych $snap...';
   }
 
   @override
-  String refreshSnapRefresh(Object snap) {
+  String refreshSnapRefresh(String snap) {
     return 'Odświeżanie $snap...';
   }
 
   @override
-  String refreshSnapCheckRerefresh(Object snap) {
+  String refreshSnapCheckRerefresh(String snap) {
     return 'Sprawdzanie ponownego odświeżenia $snap...';
   }
 
   @override
-  String refreshSnapPrepare(Object snap) {
+  String refreshSnapPrepare(String snap) {
     return 'Przygotowywanie $snap...';
   }
 
   @override
-  String refreshSnapDownload(Object snap) {
+  String refreshSnapDownload(String snap) {
     return 'Pobieranie $snap...';
   }
 
   @override
-  String refreshSnapValidate(Object snap) {
+  String refreshSnapValidate(String snap) {
     return 'Sprawdzanie poprawności $snap...';
   }
 
   @override
-  String refreshSnapMount(Object snap) {
+  String refreshSnapMount(String snap) {
     return 'Montowanie $snap...';
   }
 
   @override
-  String refreshSnapStopServices(Object snap) {
+  String refreshSnapStopServices(String snap) {
     return 'Zatrzymywanie usług $snap...';
   }
 
   @override
-  String refreshSnapRemoveAliases(Object snap) {
+  String refreshSnapRemoveAliases(String snap) {
     return 'Usuwanie aliasów $snap...';
   }
 
   @override
-  String refreshSnapUnlink(Object snap) {
+  String refreshSnapUnlink(String snap) {
     return 'Odłączanie $snap...';
   }
 
   @override
-  String refreshSnapUpdateAssets(Object snap) {
+  String refreshSnapUpdateAssets(String snap) {
     return 'Aktualizowanie zasobów $snap...';
   }
 
   @override
-  String refreshSnapUpdateKernelCommandLine(Object snap) {
+  String refreshSnapUpdateKernelCommandLine(String snap) {
     return 'Aktualizowanie wiersza poleceń jądra $snap...';
   }
 
   @override
-  String refreshSnapCopyData(Object snap) {
+  String refreshSnapCopyData(String snap) {
     return 'Kopiowanie danych $snap...';
   }
 
   @override
-  String refreshSnapSetupProfiles(Object snap) {
+  String refreshSnapSetupProfiles(String snap) {
     return 'Konfigurowanie profili bezpieczeństwa $snap...';
   }
 
   @override
-  String refreshSnapLink(Object snap) {
+  String refreshSnapLink(String snap) {
     return 'Łączenie $snap...';
   }
 
   @override
-  String refreshSnapAutoConnect(Object snap) {
+  String refreshSnapAutoConnect(String snap) {
     return 'Łączenie wtyczek i gniazd $snap...';
   }
 
   @override
-  String refreshSnapSetAutoAliases(Object snap) {
+  String refreshSnapSetAutoAliases(String snap) {
     return 'Ustawianie automatycznych aliasów $snap...';
   }
 
   @override
-  String refreshSnapSetupAliases(Object snap) {
+  String refreshSnapSetupAliases(String snap) {
     return 'Konfigurowanie aliasów $snap...';
   }
 
   @override
-  String refreshSnapStartServices(Object snap) {
+  String refreshSnapStartServices(String snap) {
     return 'Uruchamianie usług $snap...';
   }
 
   @override
-  String refreshSnapCleanup(Object snap) {
+  String refreshSnapCleanup(String snap) {
     return 'Czyszczenie $snap...';
   }
 
@@ -880,7 +886,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyCommand => 'Możesz uzyskać dostęp do klucza odzyskiwania po instalacji za pomocą następującego polecenia:';
 
   @override
-  String recoveryKeyWarning(Object color) {
+  String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. W razie potrzeby zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.';
   }
 
