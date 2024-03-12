@@ -60,7 +60,6 @@ func TestNew(t *testing.T) {
 			if tc.keyboardSettingsError {
 				opts = append(opts, accessibility.WithKeyboardSettings(&gSettingsSubsetMock{isWritableError: true}))
 			}
-
 			client, err := accessibility.New(opts...)
 
 			if tc.wantErr {
@@ -68,14 +67,14 @@ func TestNew(t *testing.T) {
 				require.Empty(t, client, "New should return a nil response")
 				return
 			}
-
 			require.NoError(t, err, "New should not return an error")
+
 			require.NotNil(t, client, "New should return a non-nil response")
 		})
 	}
 }
 
-// newAccessibilityClient creates a new accessibility client fo			if tc.wantErr {r testing, with a temp unix socket.
+// newAccessibilityClient creates a new accessibility client for testing.
 func newAccessibilityClient(t *testing.T, opts ...accessibility.Option) pb.AccessibilityServiceClient {
 	t.Helper()
 
@@ -87,12 +86,8 @@ func newAccessibilityClient(t *testing.T, opts ...accessibility.Option) pb.Acces
 
 	lis, err := net.Listen("unix", socketPath)
 	require.NoError(t, err, "Setup: could not create unix socket")
-
 	service, err := accessibility.New(opts...)
-
-	if err != nil {
-		t.Fatalf("Setup: could not create a11y service: %v", err)
-	}
+    require.NoError(t, err, "Setup: could not create a11y service")
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterAccessibilityServiceServer(grpcServer, service)
