@@ -577,6 +577,21 @@ class SubiquityClient {
     return _receive('getActiveDirectoryJoinResult($wait)', request,
         AdJoinResult.values.byName);
   }
+
+  Future<void> restart() async {
+    final request = await _openUrl('POST', 'meta/restart');
+    try {
+      await request.close();
+    } on HttpException catch (e) {
+      if (e.message
+          .contains('Connection closed before full header was received')) {
+        _log.info(
+            'Subiquity closed the connection before the response was received. This is expected.');
+      } else {
+        rethrow;
+      }
+    }
+  }
 }
 
 extension on String {

@@ -1,10 +1,10 @@
 name: ubuntu_bootstrap
 description: Ubuntu Bootstrap
 version: 0.1.0
-publish_to: 'none'
+publish_to: "none"
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.19.2"
 
 dependencies:
@@ -52,6 +52,7 @@ dependencies:
   ubuntu_utils: ^0.1.0
   ubuntu_widgets: ^0.4.0
   ubuntu_wizard: ^0.1.0
+  yaml: ^3.1.2
   yaru: 4.0.0
 
 dev_dependencies:
@@ -66,7 +67,6 @@ dev_dependencies:
   ubuntu_lints: ^0.3.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-beta.8
-  yaml: ^3.1.0
   yaru_test: ^0.1.5
 
 flutter:

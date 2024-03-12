@@ -249,6 +249,48 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Install {RELEASE}'**
   String windowTitle(Object RELEASE);
 
+  /// No description provided for @autoinstallTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated installation'**
+  String get autoinstallTitle;
+
+  /// No description provided for @autoinstallHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to perform an automated installation?'**
+  String get autoinstallHeader;
+
+  /// No description provided for @autoinstallInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the autoinstall.yaml URL.'**
+  String get autoinstallInstructions;
+
+  /// No description provided for @autoinstallInteractiveOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed with interactive installation'**
+  String get autoinstallInteractiveOption;
+
+  /// No description provided for @autoinstallInteractiveDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue filling in the installation options manually.'**
+  String get autoinstallInteractiveDescription;
+
+  /// No description provided for @autoinstallAutomatedOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Import an autoinstall.yaml'**
+  String get autoinstallAutomatedOption;
+
+  /// No description provided for @autoinstallAutomatedDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.'**
+  String get autoinstallAutomatedDescription;
+
   /// No description provided for @changeButtonText.
   ///
   /// In en, this message translates to:
@@ -1646,6 +1688,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
   String recoveryKeyWarning(Object color);
+
+  /// No description provided for @validate.
+  ///
+  /// In en, this message translates to:
+  /// **'Validate'**
+  String get validate;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

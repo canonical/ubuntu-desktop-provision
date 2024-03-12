@@ -9,6 +9,20 @@
       "RELEASE": {}
     }
   },
+  "autoinstallTitle": "Automated installation",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Do you want to perform an automated installation?",
+  "@autoinstallHeader": {},
+  "autoinstallInstructions": "Enter the autoinstall.yaml URL.",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Proceed with interactive installation",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Continue filling in the installation options manually.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Import an autoinstall.yaml",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+  "@autoinstallAutomatedDescription": {},
   "changeButtonText": "Change",
   "@changeButtonText": {},
   "quitButtonText": "Quit installation",
@@ -867,5 +881,7 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "validate": "Validate",
+  "@validate": {}
 }

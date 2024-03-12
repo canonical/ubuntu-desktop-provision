@@ -13,6 +13,27 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallTitle => 'Automated installation';
+
+  @override
+  String get autoinstallHeader => 'Do you want to perform an automated installation?';
+
+  @override
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+
+  @override
+  String get autoinstallInteractiveOption => 'Proceed with interactive installation';
+
+  @override
+  String get autoinstallInteractiveDescription => 'Continue filling in the installation options manually.';
+
+  @override
+  String get autoinstallAutomatedOption => 'Import an autoinstall.yaml';
+
+  @override
+  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
   String get changeButtonText => 'Ŝanĝi';
 
   @override
@@ -862,4 +883,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(Object color) {
     return '<font color=\"$color\">Averto:</font> Se vi perdos ĉi tiun sekurigan ŝlosilon, vi perdos ĉiom da datenoj. Skribu vian ŝlosilon kaj konservu ĝin en sekura alia loko, se tio necesas.';
   }
+
+  @override
+  String get validate => 'Validate';
 }
