@@ -57,6 +57,12 @@ void main() {
 
   testWidgets('try ubuntu', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
+    final keyboardModel = buildKeyboardModel();
+    final networkModel = buildNetworkModel();
+    final ethernetModel = buildEthernetModel();
+    final wifiModel = buildWifiModel();
+    final hiddenWifiModel = buildHiddenWifiModel();
+    final refreshModel = buildRefreshModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
@@ -67,6 +73,12 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
+          keyboardModelProvider.overrideWith((_) => keyboardModel),
+          networkModelProvider.overrideWith((_) => networkModel),
+          ethernetModelProvider.overrideWith((_) => ethernetModel),
+          wifiModelProvider.overrideWith((_) => wifiModel),
+          hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
+          refreshModelProvider.overrideWith((_) => refreshModel),
           loadingProvider
               .overrideWith((_) => Future<void>.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
@@ -88,6 +100,16 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(AccessibilityPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(KeyboardPage), findsOneWidget);
+    verify(keyboardModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(NetworkPage), findsOneWidget);
+    verify(networkModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -181,11 +203,6 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(tryOrInstallModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     expect(find.byType(KeyboardPage), findsOneWidget);
     verify(keyboardModel.init()).called(1);
 
@@ -193,6 +210,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(NetworkPage), findsOneWidget);
     verify(networkModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(TryOrInstallPage), findsOneWidget);
+    verify(tryOrInstallModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
