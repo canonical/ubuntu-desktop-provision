@@ -3,6 +3,7 @@ package services
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log/slog"
 
@@ -32,45 +33,51 @@ type Manager struct {
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
-func NewManager(ctx context.Context) (m *Manager, err error) {
-	defer decorate.OnError(&err, "can't create provd object")
+func NewManager(ctx context.Context) (m *Manager, e error) {
+	defer decorate.OnError(&e, "can't create provd object")
 
-	bus, err := dbus.ConnectSystemBus(
+    var err error
+
+    bus, err := dbus.ConnectSystemBus(
 		dbus.WithIncomingInterceptor(func(msg *dbus.Message) {
 			slog.Debug(fmt.Sprintf("DBUS: %s", msg))
 		}))
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
+		 err = errors.Join(err, fmt.Errorf("failed to connect to system bus: %s", err))
 	}
 
 	userService, err := user.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
+		 err = errors.Join(err, fmt.Errorf("failed to create user service: %s", err))
 	}
 
 	localeService, err := locale.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create locale service: %s", err)
+		err = errors.Join(err, fmt.Errorf("failed to create locale service: %s", err))
 	}
 
 	keyboardService, err := keyboard.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create keyboard service: %s", err)
+		err = errors.Join(err, fmt.Errorf("failed to create keyboard service: %s", err))
 	}
 
 	privacyService, err := privacy.New()
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create privacy service: %s", err)
+		err = errors.Join(err, fmt.Errorf("failed to create privacy service: %s", err))
 	}
 
 	timezoneService, err := timezone.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create timezone service: %s", err)
+		err = errors.Join(err, fmt.Errorf("failed to create timezone service: %s", err))
 	}
 
 	accessibilityService, err := accessibility.New()
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create accessibility service: %s", err)
+		err = errors.Join(err, fmt.Errorf("failed to create accessibility service: %s", err))
+	}
+
+    if err != nil {
+		return nil, status.Errorf(codes.Internal, "%s", err)
 	}
 
 	return &Manager{
