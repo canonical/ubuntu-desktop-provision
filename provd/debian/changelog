@@ -1,5 +1,11 @@
-provd (0.1) UNRELEASED; urgency=low
+provd (0.20) noble; urgency=medium
 
-  * Initial release
+  * Adding build deps
 
- -- Matt <matt.hagemann@canonical.com>  Wed, 29 Nov 2023 17:06:13 +0200
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 12 Mar 2024 10:19:49 +0200
+
+provd (0.18) noble; urgency=low
+
+  * Reintroducing tests 
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Wed, 29 Nov 2023 17:06:13 +0200
