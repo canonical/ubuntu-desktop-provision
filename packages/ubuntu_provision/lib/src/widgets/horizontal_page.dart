@@ -77,7 +77,7 @@ class HorizontalPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
-    final image = ref.watch(pageImagesProvider).get(name, context);
+    final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
     final adjustedPadding =

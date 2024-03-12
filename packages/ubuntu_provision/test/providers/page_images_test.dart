@@ -15,13 +15,15 @@ void main() {
   group('PageImages', () {
     test('get returns correct widget for given page name', () {
       final mockService = MockPageConfigService();
-      final pageImages = PageImages(mockService);
+      final pageImages = PageImages.internal(
+        mockService,
+        MockThemeVariantService(),
+      );
       final image = MockImage();
 
       pageImages.images['testPage'] = image;
-      pageImages.isDarkMode = (_) => false;
 
-      final result = pageImages.get('testPage', MockBuildContext());
+      final result = pageImages.get('testPage');
 
       expect(result, isInstanceOf<Image>());
       expect(result, equals(image));
@@ -53,8 +55,11 @@ void main() {
           any,
         )).thenAnswer((_) => Future.value(ByteData(0)));
 
-        final pageImages = PageImages(mockService, fs: mockFs)
-          ..svgFileLoader = (file, {colorMapper, theme}) => mockSvgFileLoader;
+        final pageImages = PageImages.internal(
+          mockService,
+          MockThemeVariantService(),
+          filesystem: mockFs,
+        )..svgFileLoader = (file, {colorMapper, theme}) => mockSvgFileLoader;
 
         await pageImages.preCache();
 

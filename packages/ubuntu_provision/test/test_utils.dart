@@ -73,6 +73,7 @@ extension UbuntuProvisionTester on WidgetTester {
   SessionService,
   SoundService,
   TelemetryService,
+  ThemeVariantService,
   TimezoneService,
   UdevDeviceInfo,
   UdevService,

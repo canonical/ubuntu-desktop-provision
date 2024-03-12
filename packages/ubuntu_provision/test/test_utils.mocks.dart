@@ -12,11 +12,11 @@ import 'dart:ui' as _i18;
 import 'package:dbus/dbus.dart' as _i20;
 import 'package:file/file.dart' as _i3;
 import 'package:flutter/foundation.dart' as _i8;
+import 'package:flutter/material.dart' as _i17;
 import 'package:flutter/services.dart' as _i7;
 import 'package:flutter/src/widgets/basic.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
 import 'package:flutter/src/widgets/notification_listener.dart' as _i22;
-import 'package:flutter/widgets.dart' as _i17;
 import 'package:flutter_svg/svg.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i19;
@@ -1936,6 +1936,35 @@ class MockTelemetryService extends _i1.Mock implements _i4.TelemetryService {
         Invocation.method(
           #addMetrics,
           [entries],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+}
+
+/// A class which mocks [ThemeVariantService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockThemeVariantService extends _i1.Mock
+    implements _i4.ThemeVariantService {
+  MockThemeVariantService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  set themeVariant(_i4.ThemeVariant? _themeVariant) => super.noSuchMethod(
+        Invocation.setter(
+          #themeVariant,
+          _themeVariant,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i13.Future<void> load() => (super.noSuchMethod(
+        Invocation.method(
+          #load,
+          [],
         ),
         returnValue: _i13.Future<void>.value(),
         returnValueForMissingStub: _i13.Future<void>.value(),

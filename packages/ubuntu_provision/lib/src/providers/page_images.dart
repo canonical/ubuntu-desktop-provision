@@ -1,16 +1,18 @@
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:path/path.dart' as path;
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-final pageImagesProvider =
-    Provider((ref) => PageImages(getService<PageConfigService>()));
+final pageImagesProvider = Provider((ref) {
+  final brightness = ref.watch(brightnessProvider);
+  return PageImages(brightness: brightness);
+});
 
 final _log = Logger('page_images');
 
@@ -20,11 +22,31 @@ final _log = Logger('page_images');
 /// `precacheImage` requires the `BuildContext`, which we didn't want to pass
 /// in here.
 class PageImages {
-  PageImages(this.pageConfigService, {@visibleForTesting FileSystem? fs})
-      : _fs = fs ?? const LocalFileSystem();
+  factory PageImages({required Brightness brightness}) {
+    _instance._brightness = brightness;
+    return _instance;
+  }
+
+  @visibleForTesting
+  PageImages.internal(
+    this.pageConfigService,
+    this.themeVariantService, {
+    this.filesystem = const LocalFileSystem(),
+    Brightness brightness = Brightness.light,
+  }) : _brightness = brightness;
+
+  static final PageImages _instance = PageImages.internal(
+    getService<PageConfigService>(),
+    getService<ThemeVariantService>(),
+  );
 
   final PageConfigService pageConfigService;
-  final FileSystem _fs;
+  final ThemeVariantService themeVariantService;
+  final FileSystem filesystem;
+
+  Brightness _brightness;
+  bool get isDarkMode => _brightness == Brightness.dark;
+  final String _darkModePrefix = 'dark_';
 
   @visibleForTesting
   SvgFileLoader Function(
@@ -36,21 +58,16 @@ class PageImages {
   @visibleForTesting
   final Map<String, Widget> images = {};
 
-  /// Since extension methods can't be mocked this is a workaround to make
-  /// [isDarkMode] mockable.
-  @visibleForTesting
-  bool Function(BuildContext context) isDarkMode =
-      (context) => context.isDarkMode;
-
   /// Gets the image for the given page name, remember that the [pageName]
   /// should be on the enum format. for example 'tryOrInstall`.
-  Widget? get(String pageName, BuildContext context) {
+  Widget? get(String pageName) {
     final image = images[pageName];
     if (image == null) {
       return null;
     }
-    // TODO(Lukas): Add support for dark mode images
-    return isDarkMode(context) ? images[pageName] : images[pageName];
+    return isDarkMode
+        ? images['$_darkModePrefix$pageName'] ?? images[pageName]
+        : images[pageName];
   }
 
   Future<void> preCache() async {
@@ -62,9 +79,11 @@ class PageImages {
       try {
         final isAsset = imageConfig.startsWith('assets/');
         if (isAsset) {
-          _loadAsset(
-            'packages/ubuntu_provision/$imageConfig',
-            pageName,
+          loadFutures.add(
+            _loadAsset(
+              'packages/ubuntu_provision/$imageConfig',
+              pageName,
+            ),
           );
         } else {
           loadFutures.add(_loadFile(imageConfig, pageName));
@@ -82,7 +101,7 @@ class PageImages {
     String pageName,
   ) async {
     final imagePath = '${ConfigService.whiteLabelDirectory}images/$imageName';
-    final file = _fs.file(imagePath);
+    final file = filesystem.file(imagePath);
     if (!await file.exists()) {
       _log.error(
         'Error loading image for $pageName from $imagePath: File does not exist.',
@@ -91,29 +110,87 @@ class PageImages {
     }
     final extension = path.extension(imageName);
     if (extension == '.svg') {
-      await svg.cache.putIfAbsent(
-        imageName,
-        () => svgFileLoader(file, theme: const SvgTheme()).loadBytes(null),
-      );
-      images[pageName] = SvgPicture.file(file);
+      for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
+        final bytes = await _loadSvg(imageName, file, darkMode: darkMode);
+        images[darkMode ? '$_darkModePrefix$pageName' : pageName] =
+            SvgPicture.memory(bytes.buffer.asUint8List());
+      }
     } else {
       images[pageName] = Image.file(file);
     }
   }
 
-  void _loadAsset(
+  Future<void> _loadAsset(
     String imagePath,
     String pageName,
-  ) {
+  ) async {
     final packageRegExp = RegExp(r'packages\/(.*?)\/');
     final match = packageRegExp.firstMatch(imagePath);
     final packageName = match?.group(1);
 
     final extension = path.extension(imagePath);
     if (extension == '.svg') {
-      images[pageName] = SvgPicture.asset(imagePath, package: packageName);
+      final svgContent = await rootBundle.loadString(imagePath);
+      for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
+        images[darkMode ? '$_darkModePrefix$pageName' : pageName] = SvgPicture(
+          SvgStringLoader(
+            svgContent,
+            colorMapper: _AccentColorMapper(_accentColor(darkMode: darkMode)),
+          ),
+        );
+      }
     } else {
       images[pageName] = Image.asset(imagePath, package: packageName);
+    }
+  }
+
+  Future<ByteData> _loadSvg(
+    String imageName,
+    File file, {
+    bool darkMode = false,
+  }) {
+    final accentColor = _accentColor(darkMode: darkMode);
+    return svg.cache.putIfAbsent(
+      imageName,
+      () => svgFileLoader(
+        file,
+        colorMapper: _AccentColorMapper(accentColor),
+      ).loadBytes(null),
+    );
+  }
+
+  Color? _accentColor({bool darkMode = false}) => darkMode
+      ? themeVariantService.themeVariant?.darkTheme?.primaryColor ??
+          themeVariantService.themeVariant?.theme?.primaryColor
+      : themeVariantService.themeVariant?.theme?.primaryColor;
+
+  bool get _hasUniqueAccentColors =>
+      themeVariantService.themeVariant?.darkTheme?.primaryColor !=
+      themeVariantService.themeVariant?.theme?.primaryColor;
+}
+
+class _AccentColorMapper extends ColorMapper {
+  const _AccentColorMapper(this.accent);
+
+  final Color? accent;
+
+  final Color _baseColor = const Color(0xFFE95420);
+
+  @override
+  Color substitute(
+    String? id,
+    String elementName,
+    String attributeName,
+    Color color,
+  ) {
+    if (accent == null) {
+      return color;
+    }
+    final opacity = color.opacity;
+    if (color.withOpacity(1.0) == _baseColor) {
+      return accent!.withOpacity(opacity);
+    } else {
+      return color;
     }
   }
 }

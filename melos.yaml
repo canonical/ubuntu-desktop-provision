@@ -22,7 +22,7 @@ command:
       flutter_markdown: ^0.6.18
       flutter_riverpod: ^2.4.9
       flutter_spinbox: ^0.13.1
-      flutter_svg: ^2.0.9
+      flutter_svg: ^2.0.10
       form_field_validator: ^1.1.0
       freezed_annotation: ^2.4.1
       gsettings: ^0.2.8

@@ -21,7 +21,10 @@ TryOrInstallModel buildTryOrInstallModel(
   return model;
 }
 
-final pageImages = PageImages(MockPageConfigService());
+final pageImages = PageImages.internal(
+  MockPageConfigService(),
+  MockThemeVariantService(),
+);
 
 Widget buildTryOrInstallPage(TryOrInstallModel model) {
   return ProviderScope(
