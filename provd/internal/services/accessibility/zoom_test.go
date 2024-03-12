@@ -25,7 +25,7 @@ func TestGetDesktopZoom(t *testing.T) {
 		"Return desktop zoom is enabled":  {wantTrue: true},
 
 		// Error cases
-		"Error when unablet to get state of desktop zoom": {getBooleanError: true},
+		"Error when unable to get state of desktop zoom": {getBooleanError: true},
 	}
 
 	for name, tc := range tests {
