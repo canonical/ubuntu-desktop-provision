@@ -25,6 +25,7 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
       windowTitle: lang.codecsAndDriversPageTitle,
@@ -32,7 +33,7 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
       contentFlex: 3,
       content: Column(
         children: [
-          Text(lang.codecsAndDriversPageBody),
+          Text(lang.codecsAndDriversPageBody(flavor.displayName)),
           const SizedBox(height: kWizardSpacing),
           // TODO(Lukas): Add a proper check when we know where to get this information.
           if (false)

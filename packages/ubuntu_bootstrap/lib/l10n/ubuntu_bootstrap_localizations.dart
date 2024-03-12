@@ -247,7 +247,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Install {RELEASE}'**
-  String windowTitle(Object RELEASE);
+  String windowTitle(String RELEASE);
 
   /// No description provided for @autoinstallTitle.
   ///
@@ -307,25 +307,25 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Welcome to {DISTRO}'**
-  String loadingPageTitle(Object DISTRO);
+  String loadingPageTitle(String DISTRO);
 
   /// No description provided for @loadingHeader.
   ///
   /// In en, this message translates to:
   /// **'Preparing {DISTRO}…'**
-  String loadingHeader(Object DISTRO);
+  String loadingHeader(String DISTRO);
 
   /// No description provided for @tryOrInstallTitle.
   ///
   /// In en, this message translates to:
   /// **'Try or install {DISTRO}'**
-  String tryOrInstallTitle(Object DISTRO);
+  String tryOrInstallTitle(String DISTRO);
 
   /// No description provided for @tryOrInstallHeader.
   ///
   /// In en, this message translates to:
   /// **'What do you want to do with {DISTRO}?'**
-  String tryOrInstallHeader(Object DISTRO);
+  String tryOrInstallHeader(String DISTRO);
 
   /// No description provided for @tryOrInstallRepairOption.
   ///
@@ -343,31 +343,31 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Try {RELEASE}'**
-  String tryOption(Object RELEASE);
+  String tryOption(String RELEASE);
 
   /// No description provided for @tryDescription.
   ///
   /// In en, this message translates to:
   /// **'You can try {RELEASE} without making any changes to your computer.'**
-  String tryDescription(Object RELEASE);
+  String tryDescription(String RELEASE);
 
   /// No description provided for @installOption.
   ///
   /// In en, this message translates to:
   /// **'Install {RELEASE}'**
-  String installOption(Object RELEASE);
+  String installOption(String RELEASE);
 
   /// No description provided for @installDescription.
   ///
   /// In en, this message translates to:
   /// **'Install {RELEASE} alongside (or instead of) your current operating system. This shouldn\'t take too long.'**
-  String installDescription(Object RELEASE);
+  String installDescription(String RELEASE);
 
   /// No description provided for @tryOrInstallReleaseNotesLabel.
   ///
   /// In en, this message translates to:
   /// **'You may wish to read the <a href=\"{url}\">release notes</a>.'**
-  String tryOrInstallReleaseNotesLabel(Object url);
+  String tryOrInstallReleaseNotesLabel(String url);
 
   /// No description provided for @rstTitle.
   ///
@@ -384,14 +384,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing Ubuntu.'**
-  String get rstDescription;
+  /// **'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.'**
+  String rstDescription(String DISTRO);
 
   /// No description provided for @rstInstructions.
   ///
   /// In en, this message translates to:
   /// **'For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>'**
-  String rstInstructions(Object url);
+  String rstInstructions(String url);
 
   /// No description provided for @configureSecureBootTitle.
   ///
@@ -486,8 +486,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @codecsAndDriversPageBody.
   ///
   /// In en, this message translates to:
-  /// **'Ubuntu ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.'**
-  String get codecsAndDriversPageBody;
+  /// **'{DISTRO} ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.'**
+  String codecsAndDriversPageBody(String DISTRO);
 
   /// No description provided for @codecsAndDriversNvidiaNote.
   ///
@@ -571,7 +571,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.'**
-  String onBatteryWarning(Object color);
+  String onBatteryWarning(String color);
 
   /// No description provided for @offlineWarning.
   ///
@@ -654,20 +654,20 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeHeader.
   ///
   /// In en, this message translates to:
-  /// **'How do you want to install Ubuntu?'**
-  String get installationTypeHeader;
+  /// **'How do you want to install {DISTRO}?'**
+  String installationTypeHeader(String DISTRO);
 
   /// No description provided for @installationTypeOSDetected.
   ///
   /// In en, this message translates to:
   /// **'This computer currently has {os} on it. What would you like to do?'**
-  String installationTypeOSDetected(Object os);
+  String installationTypeOSDetected(String os);
 
   /// No description provided for @installationTypeDualOSDetected.
   ///
   /// In en, this message translates to:
   /// **'This computer currently has {os1} and {os2} on it. What would you like to do?'**
-  String installationTypeDualOSDetected(Object os1, Object os2);
+  String installationTypeDualOSDetected(String os1, String os2);
 
   /// No description provided for @installationTypeMultiOSDetected.
   ///
@@ -685,7 +685,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Erase disk and install {DISTRO}'**
-  String installationTypeErase(Object DISTRO);
+  String installationTypeErase(String DISTRO);
 
   /// No description provided for @installationTypeEraseInfo.
   ///
@@ -786,8 +786,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTPMInfo.
   ///
   /// In en, this message translates to:
-  /// **'This is an experimental feature. It may not work with your hardware of future Ubuntu releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.'**
-  String installationTypeTPMInfo(Object url);
+  /// **'This is an experimental feature. It may not work with your hardware of future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.'**
+  String installationTypeTPMInfo(String DISTRO, String url);
 
   /// No description provided for @installationTypeTPMSelected.
   ///
@@ -799,37 +799,37 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Erase {os} and reinstall'**
-  String installationTypeReinstall(Object os);
+  String installationTypeReinstall(String os);
 
   /// No description provided for @installationTypeReinstallWarning.
   ///
   /// In en, this message translates to:
   /// **'<font color=\"{color}\">Warning:</font> This will delete all your {os} programs, documents, photos, music, and any other files.'**
-  String installationTypeReinstallWarning(Object color, Object os);
+  String installationTypeReinstallWarning(String color, String os);
 
   /// No description provided for @installationTypeAlongside.
   ///
   /// In en, this message translates to:
   /// **'Install {product} alongside {os}'**
-  String installationTypeAlongside(Object product, Object os);
+  String installationTypeAlongside(String product, String os);
 
   /// No description provided for @installationTypeAlongsideDual.
   ///
   /// In en, this message translates to:
   /// **'Install {product} alongside {os1} and {os2}'**
-  String installationTypeAlongsideDual(Object product, Object os1, Object os2);
+  String installationTypeAlongsideDual(String product, String os1, String os2);
 
   /// No description provided for @installationTypeAlongsideMulti.
   ///
   /// In en, this message translates to:
   /// **'Install {product} alongside them'**
-  String installationTypeAlongsideMulti(Object product);
+  String installationTypeAlongsideMulti(String product);
 
   /// No description provided for @installationTypeAlongsideUnknown.
   ///
   /// In en, this message translates to:
   /// **'Install {product} alongside other partitions'**
-  String installationTypeAlongsideUnknown(Object product);
+  String installationTypeAlongsideUnknown(String product);
 
   /// No description provided for @installationTypeAlongsideInfo.
   ///
@@ -847,13 +847,13 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'For advanced users seeking customized disk setups.'**
-  String installationTypeManualInfo(Object DISTRO);
+  String installationTypeManualInfo(String DISTRO);
 
   /// No description provided for @selectGuidedStoragePageTitle.
   ///
   /// In en, this message translates to:
   /// **'Erase disk and install {DISTRO}'**
-  String selectGuidedStoragePageTitle(Object DISTRO);
+  String selectGuidedStoragePageTitle(String DISTRO);
 
   /// No description provided for @selectGuidedStorageInfo.
   ///
@@ -889,7 +889,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{num} smaller partitions are hidden, use the <a href=\"{url}\">advanced partitioning tool</a> for more control'**
-  String installAlongsideHiddenPartitions(Object num, Object url);
+  String installAlongsideHiddenPartitions(int num, String url);
 
   /// No description provided for @installAlongsideResizePartition.
   ///
@@ -1099,7 +1099,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Leave formatted as {format}'**
-  String partitionFormatKeep(Object format);
+  String partitionFormatKeep(String format);
 
   /// No description provided for @partitionErase.
   ///
@@ -1147,7 +1147,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{serial} ({path})'**
-  String confirmPartitionTable(Object serial, Object path);
+  String confirmPartitionTable(String serial, String path);
 
   /// No description provided for @confirmPartitionChanges.
   ///
@@ -1159,31 +1159,31 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> resized from <b>{oldsize}</b> to <b>{newsize}</b>'**
-  String confirmPartitionResize(Object sysname, Object oldsize, Object newsize);
+  String confirmPartitionResize(String sysname, String oldsize, String newsize);
 
   /// A formatted and mounted partition entry
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>'**
-  String confirmPartitionFormatMount(Object sysname, Object format, Object mount);
+  String confirmPartitionFormatMount(String sysname, String format, String mount);
 
   /// A formatted partition entry
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> formatted as <b>{format}</b>'**
-  String confirmPartitionFormat(Object sysname, Object format);
+  String confirmPartitionFormat(String sysname, String format);
 
   /// A mounted partition entry
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> used for <b>{mount}</b>'**
-  String confirmPartitionMount(Object sysname, Object mount);
+  String confirmPartitionMount(String sysname, String mount);
 
   /// A created partition entry
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> created'**
-  String confirmPartitionCreate(Object sysname);
+  String confirmPartitionCreate(String sysname);
 
   /// No description provided for @confirmInstallButton.
   ///
@@ -1201,25 +1201,25 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'**{system}** is installed and ready to use'**
-  String readyToUse(Object system);
+  String readyToUse(String system);
 
   /// No description provided for @rebootToConfigure.
   ///
   /// In en, this message translates to:
   /// **'**{system}** has been copied to the disk'**
-  String rebootToConfigure(Object system);
+  String rebootToConfigure(String system);
 
   /// No description provided for @restartInto.
   ///
   /// In en, this message translates to:
   /// **'Restart into {system}'**
-  String restartInto(Object system);
+  String restartInto(String system);
 
   /// No description provided for @restartWarning.
   ///
   /// In en, this message translates to:
   /// **'You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.'**
-  String restartWarning(Object RELEASE);
+  String restartWarning(String RELEASE);
 
   /// No description provided for @rebootToConfigureWarning.
   ///
@@ -1261,13 +1261,13 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'{option}\' to continue.'**
-  String bitlockerDescription(Object option);
+  String bitlockerDescription(String option);
 
   /// No description provided for @bitlockerInstructions.
   ///
   /// In en, this message translates to:
   /// **'For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>'**
-  String bitlockerInstructions(Object url);
+  String bitlockerInstructions(String url);
 
   /// No description provided for @restartIntoWindows.
   ///
@@ -1285,13 +1285,13 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Are you sure you want to restart your computer? You will need to restart the {DISTRO} installation later to finish installing {DISTRO}.'**
-  String restartIntoWindowsDescription(Object DISTRO);
+  String restartIntoWindowsDescription(String DISTRO);
 
   /// No description provided for @installationSlidesTitle.
   ///
   /// In en, this message translates to:
   /// **'Welcome to {RELEASE}'**
-  String installationSlidesTitle(Object RELEASE);
+  String installationSlidesTitle(String RELEASE);
 
   /// No description provided for @installationSlidesAvailable.
   ///
@@ -1315,13 +1315,13 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'The latest version of {DISTRO} makes computing easier than ever.'**
-  String installationSlidesWelcomeHeader(Object DISTRO);
+  String installationSlidesWelcomeHeader(String DISTRO);
 
   /// No description provided for @installationSlidesWelcomeBody.
   ///
   /// In en, this message translates to:
   /// **'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in {RELEASE}.'**
-  String installationSlidesWelcomeBody(Object RELEASE);
+  String installationSlidesWelcomeBody(String RELEASE);
 
   /// No description provided for @installationSlidesSoftwareTitle.
   ///
@@ -1333,7 +1333,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and {DISTRO} archive.'**
-  String installationSlidesSoftwareBody(Object DISTRO);
+  String installationSlidesSoftwareBody(String DISTRO);
 
   /// No description provided for @installationSlidesDevelopmentTitle.
   ///
@@ -1345,7 +1345,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.'**
-  String installationSlidesDevelopmentBody(Object DISTRO);
+  String installationSlidesDevelopmentBody(String DISTRO);
 
   /// No description provided for @installationSlidesCreativityTitle.
   ///
@@ -1357,7 +1357,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.'**
-  String installationSlidesCreativityBody(Object DISTRO);
+  String installationSlidesCreativityBody(String DISTRO);
 
   /// No description provided for @installationSlidesGamingTitle.
   ///
@@ -1369,7 +1369,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.'**
-  String installationSlidesGamingBody(Object DISTRO);
+  String installationSlidesGamingBody(String DISTRO);
 
   /// No description provided for @installationSlidesSecurityTitle.
   ///
@@ -1381,13 +1381,13 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.'**
-  String installationSlidesSecurityBody(Object DISTRO);
+  String installationSlidesSecurityBody(String DISTRO);
 
   /// No description provided for @installationSlidesSecurityLts.
   ///
   /// In en, this message translates to:
   /// **'All {DISTRO} LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.'**
-  String installationSlidesSecurityLts(Object DISTRO);
+  String installationSlidesSecurityLts(String DISTRO);
 
   /// No description provided for @installationSlidesProductivityTitle.
   ///
@@ -1399,7 +1399,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{DISTRO} Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.'**
-  String installationSlidesProductivityBody(Object DISTRO);
+  String installationSlidesProductivityBody(String DISTRO);
 
   /// No description provided for @installationSlidesAccessibilityTitle.
   ///
@@ -1411,7 +1411,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'At the heart of the {DISTRO} philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, {DISTRO} makes computing easy - whoever and wherever you are.'**
-  String installationSlidesAccessibilityBody(Object DISTRO);
+  String installationSlidesAccessibilityBody(String DISTRO);
 
   /// No description provided for @installationSlidesAccessibilityOrca.
   ///
@@ -1435,7 +1435,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'The official {DISTRO} documentation is available both online and via the Help icon in the dock.'**
-  String installationSlidesSupportHeader(Object DISTRO);
+  String installationSlidesSupportHeader(String DISTRO);
 
   /// No description provided for @installationSlidesSupportCommunity.
   ///
@@ -1501,7 +1501,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Not enough disk space to install {DISTRO}'**
-  String notEnoughDiskSpaceUbuntu(Object DISTRO);
+  String notEnoughDiskSpaceUbuntu(String DISTRO);
 
   /// No description provided for @notEnoughDiskSpaceAvailable.
   ///
@@ -1525,25 +1525,25 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'The current {snap} version is {version}.'**
-  String refreshCurrent(Object snap, Object version);
+  String refreshCurrent(String snap, String version);
 
   /// No description provided for @refreshInstall.
   ///
   /// In en, this message translates to:
   /// **'Update to version {version}'**
-  String refreshInstall(Object version);
+  String refreshInstall(String version);
 
   /// No description provided for @refreshUpToDate.
   ///
   /// In en, this message translates to:
   /// **'The current version {version} is up-to-date.'**
-  String refreshUpToDate(Object version);
+  String refreshUpToDate(String version);
 
   /// No description provided for @refreshUpdating.
   ///
   /// In en, this message translates to:
   /// **'Updating {snap}...'**
-  String refreshUpdating(Object snap);
+  String refreshUpdating(String snap);
 
   /// No description provided for @refreshRestart.
   ///
@@ -1555,121 +1555,121 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Ensuring {snap} prerequisites...'**
-  String refreshSnapPrerequisites(Object snap);
+  String refreshSnapPrerequisites(String snap);
 
   /// No description provided for @refreshSnapRefresh.
   ///
   /// In en, this message translates to:
   /// **'Refreshing {snap}...'**
-  String refreshSnapRefresh(Object snap);
+  String refreshSnapRefresh(String snap);
 
   /// No description provided for @refreshSnapCheckRerefresh.
   ///
   /// In en, this message translates to:
   /// **'Checking {snap} re-refresh...'**
-  String refreshSnapCheckRerefresh(Object snap);
+  String refreshSnapCheckRerefresh(String snap);
 
   /// No description provided for @refreshSnapPrepare.
   ///
   /// In en, this message translates to:
   /// **'Preparing {snap}...'**
-  String refreshSnapPrepare(Object snap);
+  String refreshSnapPrepare(String snap);
 
   /// No description provided for @refreshSnapDownload.
   ///
   /// In en, this message translates to:
   /// **'Downloading {snap}...'**
-  String refreshSnapDownload(Object snap);
+  String refreshSnapDownload(String snap);
 
   /// No description provided for @refreshSnapValidate.
   ///
   /// In en, this message translates to:
   /// **'Validating {snap}...'**
-  String refreshSnapValidate(Object snap);
+  String refreshSnapValidate(String snap);
 
   /// No description provided for @refreshSnapMount.
   ///
   /// In en, this message translates to:
   /// **'Mounting {snap}...'**
-  String refreshSnapMount(Object snap);
+  String refreshSnapMount(String snap);
 
   /// No description provided for @refreshSnapStopServices.
   ///
   /// In en, this message translates to:
   /// **'Stopping {snap} services...'**
-  String refreshSnapStopServices(Object snap);
+  String refreshSnapStopServices(String snap);
 
   /// No description provided for @refreshSnapRemoveAliases.
   ///
   /// In en, this message translates to:
   /// **'Removing {snap} aliases...'**
-  String refreshSnapRemoveAliases(Object snap);
+  String refreshSnapRemoveAliases(String snap);
 
   /// No description provided for @refreshSnapUnlink.
   ///
   /// In en, this message translates to:
   /// **'Unlinking {snap}...'**
-  String refreshSnapUnlink(Object snap);
+  String refreshSnapUnlink(String snap);
 
   /// No description provided for @refreshSnapUpdateAssets.
   ///
   /// In en, this message translates to:
   /// **'Updating {snap} assets...'**
-  String refreshSnapUpdateAssets(Object snap);
+  String refreshSnapUpdateAssets(String snap);
 
   /// No description provided for @refreshSnapUpdateKernelCommandLine.
   ///
   /// In en, this message translates to:
   /// **'Updating {snap} kernel command line...'**
-  String refreshSnapUpdateKernelCommandLine(Object snap);
+  String refreshSnapUpdateKernelCommandLine(String snap);
 
   /// No description provided for @refreshSnapCopyData.
   ///
   /// In en, this message translates to:
   /// **'Copying {snap} data...'**
-  String refreshSnapCopyData(Object snap);
+  String refreshSnapCopyData(String snap);
 
   /// No description provided for @refreshSnapSetupProfiles.
   ///
   /// In en, this message translates to:
   /// **'Setting up {snap} security profiles...'**
-  String refreshSnapSetupProfiles(Object snap);
+  String refreshSnapSetupProfiles(String snap);
 
   /// No description provided for @refreshSnapLink.
   ///
   /// In en, this message translates to:
   /// **'Linking {snap}...'**
-  String refreshSnapLink(Object snap);
+  String refreshSnapLink(String snap);
 
   /// No description provided for @refreshSnapAutoConnect.
   ///
   /// In en, this message translates to:
   /// **'Connecting {snap} plugs and slots...'**
-  String refreshSnapAutoConnect(Object snap);
+  String refreshSnapAutoConnect(String snap);
 
   /// No description provided for @refreshSnapSetAutoAliases.
   ///
   /// In en, this message translates to:
   /// **'Setting automatic {snap} aliases...'**
-  String refreshSnapSetAutoAliases(Object snap);
+  String refreshSnapSetAutoAliases(String snap);
 
   /// No description provided for @refreshSnapSetupAliases.
   ///
   /// In en, this message translates to:
   /// **'Setting up {snap} aliases...'**
-  String refreshSnapSetupAliases(Object snap);
+  String refreshSnapSetupAliases(String snap);
 
   /// No description provided for @refreshSnapStartServices.
   ///
   /// In en, this message translates to:
   /// **'Starting {snap} services...'**
-  String refreshSnapStartServices(Object snap);
+  String refreshSnapStartServices(String snap);
 
   /// No description provided for @refreshSnapCleanup.
   ///
   /// In en, this message translates to:
   /// **'Cleaning up {snap}...'**
-  String refreshSnapCleanup(Object snap);
+  String refreshSnapCleanup(String snap);
 
   /// No description provided for @recoveryKeyTitle.
   ///
@@ -1687,7 +1687,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
-  String recoveryKeyWarning(Object color);
+  String recoveryKeyWarning(String color);
 
   /// No description provided for @validate.
   ///

@@ -52,7 +52,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
 
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
-      title: lang.installationTypeHeader,
+      title: lang.installationTypeHeader(flavor.displayName),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
