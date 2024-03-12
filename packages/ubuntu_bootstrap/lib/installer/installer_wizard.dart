@@ -15,13 +15,21 @@ class InstallerWizard extends ConsumerStatefulWidget {
   ConsumerState<InstallerWizard> createState() => _InstallerWizardState();
 }
 
-class _InstallerWizardState extends ConsumerState<InstallerWizard> {
+class _InstallerWizardState extends ConsumerState<InstallerWizard>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
 
     final model = ref.read(installerModelProvider);
     model.init();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    final brightness = MediaQuery.platformBrightnessOf(context);
+    ref.read(brightnessProvider.notifier).state = brightness;
   }
 
   @override
