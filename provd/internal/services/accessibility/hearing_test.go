@@ -40,8 +40,6 @@ func TestGetVisualAlerts(t *testing.T) {
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
-
-			// Get function under test output
 			resp, err := client.GetVisualAlerts(context.Background(), req)
 
 			// Evaluate function under test output

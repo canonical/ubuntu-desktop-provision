@@ -49,7 +49,6 @@ func TestGetScreenKeyboard(t *testing.T) {
 				require.Empty(t, resp, "GetScreenKeyboard should return a nil response")
 				return
 			}
-
 			require.NoError(t, err, "GetScreenKeyboard should not return an error")
 
 			got := resp.GetValue()
@@ -78,6 +77,7 @@ func TestEnableScreenKeyboard(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithApplicationSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
@@ -125,6 +125,7 @@ func TestDisableScreenKeyboard(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithApplicationSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
@@ -364,6 +365,7 @@ func TestEnableSlowKeys(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),
@@ -411,6 +413,7 @@ func TestDisableSlowKeys(t *testing.T) {
 		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
+
 			// Prepare mocks
 			opts := []accessibility.Option{
 				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{setBooleanError: tc.setBooleanError, currentBool: !tc.want}),

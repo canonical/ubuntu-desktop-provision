@@ -67,36 +67,36 @@ func New(opts ...Option) (*Service, error) {
 		}
 	}
 
-	var err error
+	var errs error
 
 	// Check if is writable as a ping test for gsettings
 	isWritable := s.a11ySettings.IsWritable("high-contrast")
 	if !isWritable {
-		err = errors.Join(err, errors.New("failed to connect to org.gnome.desktop.a11y.interface"))
+		errs = errors.Join(errs, errors.New("failed to connect to org.gnome.desktop.a11y.interface"))
 	}
 
 	isWritable = s.applicationSettings.IsWritable("screen-keyboard-enabled")
 	if !isWritable {
-		err = errors.Join(err, errors.New("failed to connect to org.gnome.desktop.a11y.applications"))
+		errs = errors.Join(errs, errors.New("failed to connect to org.gnome.desktop.a11y.applications"))
 	}
 
 	isWritable = s.interfaceSettings.IsWritable("cursor-blink")
 	if !isWritable {
-		err = errors.Join(err, errors.New("failed to connect to org.gnome.desktop.interface"))
+		errs = errors.Join(errs, errors.New("failed to connect to org.gnome.desktop.interface"))
 	}
 
 	isWritable = s.wmSettings.IsWritable("audible-bell")
 	if !isWritable {
-		err = errors.Join(err, errors.New("failed to connect to org.gnome.desktop.wm.preferences"))
+		errs = errors.Join(errs, errors.New("failed to connect to org.gnome.desktop.wm.preferences"))
 	}
 
 	isWritable = s.keyboardSettings.IsWritable("sticky-keys")
 	if !isWritable {
-		err = errors.Join(err, errors.New("failed to connect to org.gnome.desktop.a11y.keyboard"))
+		errs = errors.Join(errs, errors.New("failed to connect to org.gnome.desktop.a11y.keyboard"))
 	}
 
-    if err != nil {
-		return nil, status.Errorf(codes.Internal, "%s", err)
+	if errs != nil {
+		return nil, status.Errorf(codes.Internal, "%s", errs)
 	}
 
 	return s, nil

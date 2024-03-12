@@ -88,7 +88,6 @@ func TestEnableHighContrast(t *testing.T) {
 			req := &emptypb.Empty{}
 			resp, respErr := client.EnableHighContrast(context.Background(), req)
 
-
 			if tc.wantErr {
 				require.Error(t, respErr, "EnableHighContrast should return an error")
 				require.Empty(t, resp, "EnableHighContrast should return a nil response")

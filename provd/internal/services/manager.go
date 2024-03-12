@@ -36,48 +36,48 @@ type Manager struct {
 func NewManager(ctx context.Context) (m *Manager, e error) {
 	defer decorate.OnError(&e, "can't create provd object")
 
-    var err error
+	var errs error
 
-    bus, err := dbus.ConnectSystemBus(
+	bus, err := dbus.ConnectSystemBus(
 		dbus.WithIncomingInterceptor(func(msg *dbus.Message) {
 			slog.Debug(fmt.Sprintf("DBUS: %s", msg))
 		}))
 	if err != nil {
-		 err = errors.Join(err, fmt.Errorf("failed to connect to system bus: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to connect to system bus: %s", err))
 	}
 
 	userService, err := user.New(bus)
 	if err != nil {
-		 err = errors.Join(err, fmt.Errorf("failed to create user service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create user service: %s", err))
 	}
 
 	localeService, err := locale.New(bus)
 	if err != nil {
-		err = errors.Join(err, fmt.Errorf("failed to create locale service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create locale service: %s", err))
 	}
 
 	keyboardService, err := keyboard.New(bus)
 	if err != nil {
-		err = errors.Join(err, fmt.Errorf("failed to create keyboard service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create keyboard service: %s", err))
 	}
 
 	privacyService, err := privacy.New()
 	if err != nil {
-		err = errors.Join(err, fmt.Errorf("failed to create privacy service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create privacy service: %s", err))
 	}
 
 	timezoneService, err := timezone.New(bus)
 	if err != nil {
-		err = errors.Join(err, fmt.Errorf("failed to create timezone service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create timezone service: %s", err))
 	}
 
 	accessibilityService, err := accessibility.New()
 	if err != nil {
-		err = errors.Join(err, fmt.Errorf("failed to create accessibility service: %s", err))
+		errs = errors.Join(errs, fmt.Errorf("failed to create accessibility service: %s", err))
 	}
 
-    if err != nil {
-		return nil, status.Errorf(codes.Internal, "%s", err)
+	if errs != nil {
+		return nil, status.Errorf(codes.Internal, "%s", errs)
 	}
 
 	return &Manager{

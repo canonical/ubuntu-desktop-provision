@@ -87,7 +87,7 @@ func newAccessibilityClient(t *testing.T, opts ...accessibility.Option) pb.Acces
 	lis, err := net.Listen("unix", socketPath)
 	require.NoError(t, err, "Setup: could not create unix socket")
 	service, err := accessibility.New(opts...)
-    require.NoError(t, err, "Setup: could not create a11y service")
+	require.NoError(t, err, "Setup: could not create a11y service")
 
 	grpcServer := grpc.NewServer()
 	pb.RegisterAccessibilityServiceServer(grpcServer, service)
