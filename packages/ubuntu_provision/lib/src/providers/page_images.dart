@@ -8,6 +8,7 @@ import 'package:path/path.dart' as path;
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:yaru/theme.dart';
 
 final pageImagesProvider = Provider((ref) {
   final brightness = ref.watch(brightnessProvider);
@@ -124,7 +125,7 @@ class PageImages {
     String imagePath,
     String pageName,
   ) async {
-    final packageRegExp = RegExp(r'packages\/(.*?)\/');
+    final packageRegExp = RegExp('packages/(.*?)/');
     final match = packageRegExp.firstMatch(imagePath);
     final packageName = match?.group(1);
 
@@ -174,7 +175,7 @@ class _AccentColorMapper extends ColorMapper {
 
   final Color? accent;
 
-  final Color _baseColor = const Color(0xFFE95420);
+  final Color _baseColor = YaruColors.orange;
 
   @override
   Color substitute(
