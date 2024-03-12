@@ -32,8 +32,11 @@ void main() {
     test(
       'preCache correctly loads images from assets and files',
       () async {
-        final mockService = MockPageConfigService();
+        final mockPageConfigService = MockPageConfigService();
         final pageNames = List.generate(4, (i) => 'testPage$i');
+
+        final mockThemeVariantService = MockThemeVariantService();
+        when(mockThemeVariantService.themeVariant).thenReturn(null);
 
         final mockFs = MemoryFileSystem.test();
         mockFs
@@ -43,7 +46,7 @@ void main() {
             .file('/usr/share/desktop-provision/images/test.svg')
             .createSync(recursive: true);
 
-        when(mockService.pages).thenReturn({
+        when(mockPageConfigService.pages).thenReturn({
           pageNames[0]: const PageConfigEntry(image: 'assets/test.png'),
           pageNames[1]: const PageConfigEntry(image: 'test.png'),
           pageNames[2]: const PageConfigEntry(image: 'assets/test.svg'),
@@ -56,10 +59,12 @@ void main() {
         )).thenAnswer((_) => Future.value(ByteData(0)));
 
         final pageImages = PageImages.internal(
-          mockService,
-          MockThemeVariantService(),
+          mockPageConfigService,
+          mockThemeVariantService,
           filesystem: mockFs,
-        )..svgFileLoader = (file, {colorMapper, theme}) => mockSvgFileLoader;
+        )
+          ..svgFileLoader = ((file, {colorMapper, theme}) => mockSvgFileLoader)
+          ..svgStringLoader = (path) => Future.value('');
 
         await pageImages.preCache();
 

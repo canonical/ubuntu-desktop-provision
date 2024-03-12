@@ -57,6 +57,10 @@ class PageImages {
   }) svgFileLoader = SvgFileLoader.new;
 
   @visibleForTesting
+  Future<String> Function(String imagePath) svgStringLoader =
+      rootBundle.loadString;
+
+  @visibleForTesting
   final Map<String, Widget> images = {};
 
   /// Gets the image for the given page name, remember that the [pageName]
@@ -131,7 +135,7 @@ class PageImages {
 
     final extension = path.extension(imagePath);
     if (extension == '.svg') {
-      final svgContent = await rootBundle.loadString(imagePath);
+      final svgContent = await svgStringLoader(imagePath);
       for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
         images[darkMode ? '$_darkModePrefix$pageName' : pageName] = SvgPicture(
           SvgStringLoader(

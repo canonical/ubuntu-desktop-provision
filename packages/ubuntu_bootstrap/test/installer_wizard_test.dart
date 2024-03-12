@@ -53,7 +53,11 @@ void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
   const loadingTime = Duration(seconds: 1);
 
-  setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
+  setUp(() {
+    YaruTestWindow.ensureInitialized(state: const YaruWindowState());
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
+    registerMockService<TelemetryService>(MockTelemetryService());
+  });
 
   testWidgets('try ubuntu', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
@@ -66,8 +70,6 @@ void main() {
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -152,7 +154,6 @@ void main() {
     final installModel = buildInstallModel(isDone: true);
 
     registerMockService<DesktopService>(MockDesktopService());
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -268,7 +269,6 @@ void main() {
 
     final subiquityClient = MockSubiquityClient();
     final productService = MockProductService();
-    registerMockService<TelemetryService>(MockTelemetryService());
     registerMockService<NetworkService>(
       SubiquityNetworkService(subiquityClient),
     );
@@ -301,8 +301,6 @@ void main() {
     final sourceModel = buildSourceModel();
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel(hasSecureBoot: true);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -338,7 +336,6 @@ void main() {
     registerMockService<SessionService>(MockSessionService());
     registerMockService<StorageService>(storage);
     registerMockService<SubiquityClient>(MockSubiquityClient());
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -366,8 +363,6 @@ void main() {
         buildIdentityModel(useActiveDirectory: true, isValid: true);
     final activeDirectoryModel = buildActiveDirectoryModel(isUsed: true);
 
-    registerMockService<TelemetryService>(MockTelemetryService());
-
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
@@ -393,8 +388,6 @@ void main() {
     final keyboardModel = buildKeyboardModel();
     final confirmModel = buildConfirmModel();
     final installModel = buildInstallModel(isDone: true);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -458,8 +451,6 @@ void main() {
         RefreshStatus(availability: RefreshCheckState.AVAILABLE),
       ),
     );
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(

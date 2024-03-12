@@ -8,6 +8,7 @@ import 'test_accessibility.dart';
 void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
   });
 
   testWidgets('active options', (tester) async {
