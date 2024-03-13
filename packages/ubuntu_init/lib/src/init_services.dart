@@ -7,6 +7,7 @@ import 'package:ubuntu_init/src/services/provd_identity_service.dart';
 import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
 import 'package:ubuntu_init/src/services/provd_locale_service.dart';
 import 'package:ubuntu_init/src/services/provd_privacy_service.dart';
+import 'package:ubuntu_init/src/services/provd_pro_service.dart';
 import 'package:ubuntu_init/src/services/provd_timezone_service.dart';
 import 'package:ubuntu_init/src/services/realmd_active_directory_service.dart';
 import 'package:ubuntu_init/src/services/xdg_session_service.dart';
@@ -23,6 +24,7 @@ export 'services/provd_identity_service.dart';
 export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';
 export 'services/provd_privacy_service.dart';
+export 'services/provd_pro_service.dart';
 export 'services/provd_timezone_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_session_service.dart';
@@ -52,6 +54,7 @@ Future<void> registerInitServices(List<String> args) {
         includeTryOrInstall: true,
       ));
   tryRegisterService<PrivacyService>(ProvdPrivacyService.new);
+  tryRegisterService<ProService>(ProvdProService.new);
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<Sysmetrics>(Sysmetrics.new);
