@@ -252,14 +252,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Automated installation'**
+  /// **'Installation type'**
   String get autoinstallTitle;
 
   /// No description provided for @autoinstallHeader.
   ///
   /// In en, this message translates to:
-  /// **'Do you want to perform an automated installation?'**
-  String get autoinstallHeader;
+  /// **'How would you like to install {DISTRO}?'**
+  String autoinstallHeader(String DISTRO);
 
   /// No description provided for @autoinstallInstructions.
   ///
@@ -270,19 +270,19 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallInteractiveOption.
   ///
   /// In en, this message translates to:
-  /// **'Proceed with interactive installation'**
+  /// **'Interactive installation'**
   String get autoinstallInteractiveOption;
 
   /// No description provided for @autoinstallInteractiveDescription.
   ///
   /// In en, this message translates to:
-  /// **'Continue filling in the installation options manually.'**
+  /// **'For users who want to be guided step by step through the installation.'**
   String get autoinstallInteractiveDescription;
 
   /// No description provided for @autoinstallAutomatedOption.
   ///
   /// In en, this message translates to:
-  /// **'Import an autoinstall.yaml'**
+  /// **'Automated installation'**
   String get autoinstallAutomatedOption;
 
   /// No description provided for @autoinstallAutomatedDescription.
@@ -648,7 +648,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTitle.
   ///
   /// In en, this message translates to:
-  /// **'Type of installation'**
+  /// **'Disk setup'**
   String get installationTypeTitle;
 
   /// No description provided for @installationTypeHeader.

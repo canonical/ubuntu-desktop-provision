@@ -9,12 +9,19 @@
       }
     }
   },
-  "autoinstallTitle": "Automated installation",
-  "autoinstallHeader": "Do you want to perform an automated installation?",
+  "autoinstallTitle": "Installation type",
+  "autoinstallHeader": "How would you like to install {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
   "autoinstallInstructions": "Enter the autoinstall.yaml URL.",
-  "autoinstallInteractiveOption": "Proceed with interactive installation",
-  "autoinstallInteractiveDescription": "Continue filling in the installation options manually.",
-  "autoinstallAutomatedOption": "Import an autoinstall.yaml",
+  "autoinstallInteractiveOption": "Interactive installation",
+  "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
+  "autoinstallAutomatedOption": "Automated installation",
   "autoinstallAutomatedDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
   "changeButtonText": "Change",
   "quitButtonText": "Quit installation",
@@ -166,7 +173,7 @@
   "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
   "createPassphrase": "Create a passphrase",
   "confirmPassphrase": "Confirm the passphrase",
-  "installationTypeTitle": "Type of installation",
+  "installationTypeTitle": "Disk setup",
   "installationTypeHeader": "How do you want to install {DISTRO}?",
   "@installationTypeHeader": {
     "placeholders": {
