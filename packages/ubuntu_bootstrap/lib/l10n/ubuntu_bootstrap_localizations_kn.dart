@@ -13,22 +13,24 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Automated installation';
+  String get autoinstallTitle => 'Installation type';
 
   @override
-  String get autoinstallHeader => 'Do you want to perform an automated installation?';
+  String autoinstallHeader(String DISTRO) {
+    return 'How would you like to install $DISTRO?';
+  }
 
   @override
   String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
 
   @override
-  String get autoinstallInteractiveOption => 'Proceed with interactive installation';
+  String get autoinstallInteractiveOption => 'Interactive installation';
 
   @override
-  String get autoinstallInteractiveDescription => 'Continue filling in the installation options manually.';
+  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
 
   @override
-  String get autoinstallAutomatedOption => 'Import an autoinstall.yaml';
+  String get autoinstallAutomatedOption => 'Automated installation';
 
   @override
   String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
@@ -237,7 +239,7 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
-  String get installationTypeTitle => 'Type of installation';
+  String get installationTypeTitle => 'Disk setup';
 
   @override
   String installationTypeHeader(String DISTRO) {
