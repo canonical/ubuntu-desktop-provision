@@ -28,6 +28,7 @@ pages:
   identity:
     image: "assets/images/keyboard.svg"
   ubuntu-pro:
+    image: "assets/images/ubuntu_pro.svg"
   privacy:
   timezone:
   telemetry:
