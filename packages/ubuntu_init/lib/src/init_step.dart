@@ -22,6 +22,8 @@ enum InitStep with RouteName {
     this.hasPrevious = true,
     this.discreteStep = true,
     this.wizardStep = true,
+    // ignore: unused_element
+    this.allowedToHide = false,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -34,6 +36,9 @@ enum InitStep with RouteName {
 
   /// If this is true the page has its own step in the wizard progress bar.
   final bool discreteStep;
+
+  /// Whether the page can be hidden.
+  final bool allowedToHide;
 
   WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();

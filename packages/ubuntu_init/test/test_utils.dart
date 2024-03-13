@@ -47,7 +47,7 @@ void setupMockPageConfig({Map<String, PageConfigEntry>? overridePages}) {
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
-  when(pageConfigService.excludedPages).thenReturn([]);
+  when(pageConfigService.excludedPages).thenReturn({});
 }
 
 @GenerateMocks([InitModel])

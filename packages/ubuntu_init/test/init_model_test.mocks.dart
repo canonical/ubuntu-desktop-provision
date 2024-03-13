@@ -96,6 +96,12 @@ class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
       ) as bool);
 
   @override
+  Iterable<String> get allowedToHide => (super.noSuchMethod(
+        Invocation.getter(#allowedToHide),
+        returnValue: <String>[],
+      ) as Iterable<String>);
+
+  @override
   _i2.ProvisioningMode get mode => (super.noSuchMethod(
         Invocation.getter(#mode),
         returnValue: _i2.ProvisioningMode.standard,
@@ -117,10 +123,10 @@ class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
       ) as bool);
 
   @override
-  List<String> get excludedPages => (super.noSuchMethod(
+  Set<String> get excludedPages => (super.noSuchMethod(
         Invocation.getter(#excludedPages),
-        returnValue: <String>[],
-      ) as List<String>);
+        returnValue: <String>{},
+      ) as Set<String>);
 
   @override
   _i4.Future<void> load() => (super.noSuchMethod(

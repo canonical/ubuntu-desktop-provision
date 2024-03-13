@@ -35,7 +35,7 @@ class InstallerService {
     final oemPages = {'eula'};
     final requiredPages = _subiquityPages ?? (pageConfig.isOem ? oemPages : {});
 
-    _excludedPages = pageConfig.excludedPages.toSet();
+    _excludedPages = pageConfig.excludedPages;
     if (pageConfig.isOem) {
       _excludedPages.add('identity');
       _excludedPages.add('timezone');
@@ -44,7 +44,9 @@ class InstallerService {
 
     final excludedRequiredPages = _excludedPages.intersection(requiredPages);
     if (excludedRequiredPages.isNotEmpty) {
-      _log.info('$excludedRequiredPages are required and cannot be excluded!');
+      _log.warning(
+        '$excludedRequiredPages are required and cannot be excluded!',
+      );
       _excludedPages.removeAll(excludedRequiredPages);
     }
   }

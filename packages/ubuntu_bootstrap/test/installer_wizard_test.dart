@@ -84,7 +84,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -185,7 +185,7 @@ void main() {
               .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -405,7 +405,7 @@ void main() {
           installModelProvider.overrideWith((_) => installModel),
           slidesProvider.overrideWith((_) => MockSlidesModel()),
         ],
-        child: tester.buildTestWizard(excludedPages: [
+        child: tester.buildTestWizard(excludedPages: {
           'autoinstall',
           'tryOrInstall',
           'locale',
@@ -420,7 +420,7 @@ void main() {
           'identity',
           'activeDirectory',
           'timezone',
-        ]),
+        }),
       ),
     );
 
@@ -487,7 +487,7 @@ void main() {
 
 extension on WidgetTester {
   Widget buildTestWizard({
-    List<String> excludedPages = const ['tryOrInstall'],
+    Set<String> excludedPages = const {'tryOrInstall'},
   }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {

@@ -70,7 +70,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(false);
-    when(pageConfig.excludedPages).thenReturn([]);
+    when(pageConfig.excludedPages).thenReturn({});
     final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
@@ -92,7 +92,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(false);
-    when(pageConfig.excludedPages).thenReturn([]);
+    when(pageConfig.excludedPages).thenReturn({});
     final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
@@ -126,7 +126,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(false);
-    when(pageConfig.excludedPages).thenReturn([]);
+    when(pageConfig.excludedPages).thenReturn({});
     final service = InstallerService(client, pageConfig: pageConfig);
     await expectLater(service.load(), completes);
 
@@ -141,7 +141,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(false);
-    when(pageConfig.excludedPages).thenReturn([]);
+    when(pageConfig.excludedPages).thenReturn({});
     final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
 
@@ -158,7 +158,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(false);
-    when(pageConfig.excludedPages).thenReturn([]);
+    when(pageConfig.excludedPages).thenReturn({});
     final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();
 
@@ -174,7 +174,7 @@ void main() {
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
     final pageConfig = MockPageConfigService();
-    when(pageConfig.excludedPages).thenReturn(['c']);
+    when(pageConfig.excludedPages).thenReturn({'c'});
     when(pageConfig.isOem).thenReturn(false);
 
     final service = InstallerService(client, pageConfig: pageConfig);
@@ -206,7 +206,7 @@ void main() {
 
     final pageConfig = MockPageConfigService();
     when(pageConfig.isOem).thenReturn(true);
-    when(pageConfig.excludedPages).thenReturn(['eula']);
+    when(pageConfig.excludedPages).thenReturn({'eula'});
 
     final service = InstallerService(client, pageConfig: pageConfig);
     await service.load();

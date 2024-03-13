@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -11,17 +10,27 @@ final _log = Logger('page');
 const _tryOrInstallName = 'tryOrInstall';
 
 class PageConfigService {
-  PageConfigService({ConfigService? config, this.includeTryOrInstall = false})
-      : _config = config;
+  PageConfigService({
+    ConfigService? config,
+    this.includeTryOrInstall = false,
+    this.allowedToHide = const [],
+  }) : _config = config;
 
   final ConfigService? _config;
   final Map<String, PageConfigEntry> pages = {};
   final bool includeTryOrInstall;
+  final Iterable<String> allowedToHide;
   late final ProvisioningMode mode;
   bool get isOem => mode == ProvisioningMode.oem;
 
-  List<String> get excludedPages =>
-      pages.entries.whereNot((e) => e.value.visible).map((e) => e.key).toList();
+  Set<String> get excludedPages => _excludedPages(pages);
+
+  Set<String> _excludedPages(Map<String, PageConfigEntry> pages) {
+    return pages.entries
+        .where((e) => !e.value.visible && allowedToHide.contains(e.key))
+        .map((e) => e.key)
+        .toSet();
+  }
 
   Future<void> load() async {
     final pageConfig = PageConfig.fromJson({
@@ -29,20 +38,28 @@ class PageConfigService {
           <String, dynamic>{},
     });
     mode = await _config!.provisioningMode;
+    final configuredPages = Map.of(pageConfig.pages);
 
-    pages.addAll(pageConfig.pages);
+    final excludedPages = _excludedPages(configuredPages);
+    for (final page in configuredPages.keys) {
+      if (!excludedPages.contains(page)) {
+        configuredPages[page] = configuredPages[page]!.copyWith(visible: true);
+      }
+    }
 
     if (isOem) {
-      pages['eula'] = const PageConfigEntry();
+      configuredPages['eula'] = const PageConfigEntry();
     }
 
     if (includeTryOrInstall) {
-      pages[_tryOrInstallName] =
-          pageConfig.pages[_tryOrInstallName]?.copyWith(visible: true) ??
+      configuredPages[_tryOrInstallName] =
+          configuredPages[_tryOrInstallName]?.copyWith(visible: true) ??
               const PageConfigEntry();
     } else {
-      pages[_tryOrInstallName] = const PageConfigEntry(visible: false);
+      configuredPages[_tryOrInstallName] =
+          const PageConfigEntry(visible: false);
     }
+    pages.addAll(configuredPages);
   }
 }
 
@@ -76,14 +93,13 @@ class PageConfigEntryConverter
       final camelCaseKey = entry.key.toCamelCase;
       if (entry.value is Map<String, dynamic>) {
         pages[camelCaseKey] =
-            PageConfigEntry.fromJson(entry.value as Map<String, dynamic>)
-                // TODO: remove to re-enable the 'visible' setting in the config
-                .copyWith(visible: true);
+            PageConfigEntry.fromJson(entry.value as Map<String, dynamic>);
       } else if (entry.value == null) {
         pages[camelCaseKey] = const PageConfigEntry();
       } else {
         _log.error(
-            'Invalid page config entry for ${entry.key}: ${entry.value}');
+          'Invalid page config entry for ${entry.key}: ${entry.value}',
+        );
         continue;
       }
     }

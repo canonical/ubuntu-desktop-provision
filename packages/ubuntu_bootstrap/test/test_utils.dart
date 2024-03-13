@@ -62,7 +62,7 @@ class _Dummy {} // ignore: unused_element
 /// returned by default.
 void setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
-  List<String> excludedPages = const ['welcome'],
+  Set<String> excludedPages = const {'welcome'},
   bool isOem = false,
 }) {
   final pages = overridePages ??

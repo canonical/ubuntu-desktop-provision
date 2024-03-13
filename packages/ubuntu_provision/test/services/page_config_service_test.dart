@@ -26,6 +26,30 @@ pages:
     expect(pages['network']?.image, equals('/foo/bar/network.png'));
   });
 
+  test('allowed pages can be hidden', () async {
+    const config = '''
+pages:
+  welcome:
+    visible: false
+    image: "/foo/bar/welcome.png"
+  network:
+    visible: false
+    image: "network.png"
+''';
+    final service = PageConfigService(
+      config: createMockConfigService(config: config),
+      allowedToHide: ['welcome'],
+    );
+    await service.load();
+    final pages = service.pages;
+    expect(pages, isNotNull);
+    expect(pages['welcome']?.visible, isFalse);
+    expect(pages['network']?.visible, isTrue);
+    expect(pages['welcome']?.image, equals('/foo/bar/welcome.png'));
+    expect(pages['network']?.image, equals('network.png'));
+    expect(service.excludedPages, {'welcome'});
+  });
+
   test('pages without config', () async {
     final service = PageConfigService(config: createMockConfigService());
     await service.load();

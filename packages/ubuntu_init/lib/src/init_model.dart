@@ -30,7 +30,7 @@ class InitModel {
   final PageConfigService? _pageConfig;
   final IdentityService? _identityService;
   final GdmService? _gdmService;
-  List<String>? _excludedPages;
+  Set<String>? _excludedPages;
 
   Future<void> init() async {
     _excludedPages = _pageConfig?.excludedPages;
