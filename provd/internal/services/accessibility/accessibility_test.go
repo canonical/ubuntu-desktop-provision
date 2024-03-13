@@ -120,9 +120,7 @@ type gSettingsSubsetMock struct {
 	// Error flags for each method
 	isWritableError bool
 	setBooleanError bool
-	getBooleanError bool
 	setDoubleError  bool
-	getDoubleError  bool
 
 	// Current values
 	currentBool   bool
@@ -142,9 +140,6 @@ func (g *gSettingsSubsetMock) SetBoolean(key string, value bool) bool {
 }
 
 func (g gSettingsSubsetMock) GetBoolean(key string) bool {
-	if g.getBooleanError {
-		return false
-	}
 	return g.currentBool
 }
 
@@ -157,8 +152,5 @@ func (g *gSettingsSubsetMock) SetDouble(key string, value float64) bool {
 }
 
 func (g gSettingsSubsetMock) GetDouble(key string) float64 {
-	if g.getDoubleError {
-		return 0
-	}
 	return g.currentDouble
 }

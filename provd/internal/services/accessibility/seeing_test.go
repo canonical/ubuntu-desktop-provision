@@ -13,19 +13,10 @@ func TestGetHighContrast(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return high contrast is disabled": {},
-		"Return high contrast is enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when can't get state of high contrast": {getBooleanError: true},
+		"Return high contrast is enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -35,24 +26,17 @@ func TestGetHighContrast(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithA11ySettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithA11ySettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, respErr := client.GetHighContrast(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, respErr, "GetHighContrast should return an error")
-				require.Empty(t, resp, "GetHighContrast should return a nil response")
-				return
-			}
 			require.NoError(t, respErr, "GetHighcontrast should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -156,19 +140,10 @@ func TestGetReducedMotion(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return reduced motion is disabled": {},
-		"Return reduced motion is enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when unable to get state of reduced motion": {getBooleanError: true, wantTrue: true},
+		"Return reduced motion is enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -178,24 +153,17 @@ func TestGetReducedMotion(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: !tc.wantTrue}),
+				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{currentBool: !tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, respErr := client.GetReducedMotion(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, respErr, "GetReducedMotion should return an error")
-				require.Empty(t, resp, "GetReducedMotion should return a nil response")
-				return
-			}
 			require.NoError(t, respErr, "GetReducedMotion should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -299,19 +267,15 @@ func TestGetLargeText(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getDoubleError bool
-
-		// wants
-		wantTrue bool
-		wantErr  bool
+		want        bool
+		wantDefault bool
 	}{
-		// Success case
+		// Success cases
 		"Returns large text is disabled": {},
-		"Returns large text is enabled":  {wantTrue: true},
+		"Returns large text is enabled":  {want: true},
 
-		// Error cases
-		"Error when unable to get state of large text": {getDoubleError: true},
+		// Special case
+		"Returns large text is disabled when default double is returned": {wantDefault: true},
 	}
 
 	for name, tc := range tests {
@@ -320,30 +284,26 @@ func TestGetLargeText(t *testing.T) {
 			t.Parallel()
 
 			wantedDouble := 1.0
-			if tc.wantTrue {
+			if tc.want {
 				wantedDouble = 1.25
+			}
+			if tc.wantDefault {
+				wantedDouble = 0
 			}
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{getDoubleError: tc.getDoubleError, currentDouble: wantedDouble}),
+				accessibility.WithInterfaceSettings(&gSettingsSubsetMock{currentDouble: wantedDouble}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetLargeText(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetLargeText should return an error")
-				require.Empty(t, resp, "GetLargeText should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetLargeText should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -447,19 +407,10 @@ func TestGetScreenReader(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return screen reader is disabled": {},
-		"Return screen reader is enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when unable to get state of screen reader": {getBooleanError: true},
+		"Return screen reader is enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -469,24 +420,17 @@ func TestGetScreenReader(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithApplicationSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithApplicationSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetScreenReader(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetScreenReader should return an error")
-				require.Empty(t, resp, "GetScreenReader should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetScreenReader should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

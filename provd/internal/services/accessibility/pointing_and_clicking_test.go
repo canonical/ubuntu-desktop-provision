@@ -13,19 +13,10 @@ func TestGetMouseKeys(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return mouse keys are disabled": {},
-		"Return mouse keys are enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when can't get state of mouse keys": {getBooleanError: true},
+		"Return mouse keys are enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -35,24 +26,17 @@ func TestGetMouseKeys(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetMouseKeys(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetMouseKeys should return an error")
-				require.Empty(t, resp, "GetMouseKeys should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetMouseKeys should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

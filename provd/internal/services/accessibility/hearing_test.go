@@ -13,18 +13,10 @@ func TestGetVisualAlerts(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return visual alerts are disabled": {},
-		"Return visual alerts are enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when can't get state of visual alerts": {getBooleanError: true},
+		"Return visual alerts are enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -34,19 +26,17 @@ func TestGetVisualAlerts(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithWMSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithWMSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetVisualAlerts(context.Background(), req)
-
-			// Evaluate function under test output
 			require.NoError(t, err, "GetVisualAlerts should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

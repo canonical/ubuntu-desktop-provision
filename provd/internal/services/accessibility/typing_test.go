@@ -13,19 +13,10 @@ func TestGetScreenKeyboard(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return screen keyboard is disabled": {},
-		"Return screen keyboard is enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error unable state of screen keyboard": {getBooleanError: true},
+		"Return screen keyboard is enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -35,24 +26,17 @@ func TestGetScreenKeyboard(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithApplicationSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithApplicationSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetScreenKeyboard(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetScreenKeyboard should return an error")
-				require.Empty(t, resp, "GetScreenKeyboard should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetScreenKeyboard should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -157,19 +141,10 @@ func TestGetStickyKeys(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return sticky keys are disabled": {},
-		"Return sticky keys are enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when unable to get state of sticky keys": {getBooleanError: true},
+		"Return sticky keys are enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -179,24 +154,17 @@ func TestGetStickyKeys(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetStickyKeys(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetStickyKeys should return an error")
-				require.Empty(t, resp, "GetStickyKeys should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetStickyKeys should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
@@ -301,19 +269,10 @@ func TestGetSlowKeys(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return slow keys are disabled": {},
-		"Return slow keys are enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when unablet to get state of slow keys": {getBooleanError: true},
+		"Return slow keys are enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -323,24 +282,17 @@ func TestGetSlowKeys(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithKeyboardSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetSlowKeys(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetSlowKeys should return an error")
-				require.Empty(t, resp, "GetSlowKeys should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetSlowKeys should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }

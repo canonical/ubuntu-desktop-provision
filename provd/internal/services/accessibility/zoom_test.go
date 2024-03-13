@@ -13,19 +13,10 @@ func TestGetDesktopZoom(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		// Error flags
-		getBooleanError bool
-
-		// Wants
-		wantErr  bool
-		wantTrue bool
+		want bool
 	}{
-		// Success case
 		"Return desktop zoom is disabled": {},
-		"Return desktop zoom is enabled":  {wantTrue: true},
-
-		// Error cases
-		"Error when unable to get state of desktop zoom": {getBooleanError: true},
+		"Return desktop zoom is enabled":  {want: true},
 	}
 
 	for name, tc := range tests {
@@ -35,24 +26,17 @@ func TestGetDesktopZoom(t *testing.T) {
 
 			// Prepare mocks
 			opts := []accessibility.Option{
-				accessibility.WithApplicationSettings(&gSettingsSubsetMock{getBooleanError: tc.getBooleanError, currentBool: tc.wantTrue}),
+				accessibility.WithApplicationSettings(&gSettingsSubsetMock{currentBool: tc.want}),
 			}
 
 			// Setup test
 			client := newAccessibilityClient(t, opts...)
 			req := &emptypb.Empty{}
 			resp, err := client.GetDesktopZoom(context.Background(), req)
-
-			// Evaluate function under test output
-			if tc.wantErr {
-				require.Error(t, err, "GetDesktopZoom should return an error")
-				require.Empty(t, resp, "GetDesktopZoom should return a nil response")
-				return
-			}
 			require.NoError(t, err, "GetDesktopZoom should not return an error")
 
 			got := resp.GetValue()
-			require.Equal(t, tc.wantTrue, got, "returned an unexpected response")
+			require.Equal(t, tc.want, got, "returned an unexpected response")
 		})
 	}
 }
