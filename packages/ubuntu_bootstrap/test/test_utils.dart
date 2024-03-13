@@ -60,22 +60,27 @@ class _Dummy {} // ignore: unused_element
 /// The [overridePages] argument will override the pages that are returned
 /// if provided. All pages defined in [InstallationStep] except `try-or-install`
 /// are returned by default.
-void setupMockPageConfig({
+MockPageConfigService setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
-  Set<String> excludedPages = const {'try-or-install'},
+  Iterable<String>? overridePageKeys,
   bool isOem = false,
+  bool includeTryOrInstall = false,
 }) {
+  final simpleOverrides =
+      overridePageKeys?.map((key) => MapEntry(key, const PageConfigEntry()));
   final pages = overridePages ??
       Map.fromEntries(
-        InstallationStep.values.map(
-          (step) => MapEntry(step.name, const PageConfigEntry()),
-        ),
+        simpleOverrides ??
+            InstallationStep.values.map(
+              (step) => MapEntry(step.name, const PageConfigEntry()),
+            ),
       );
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
-  when(pageConfigService.excludedPages).thenReturn(excludedPages);
   when(pageConfigService.isOem).thenReturn(isOem);
+  when(pageConfigService.includeTryOrInstall).thenReturn(includeTryOrInstall);
+  return pageConfigService;
 }
 
 const keyboardSetup = KeyboardSetup(

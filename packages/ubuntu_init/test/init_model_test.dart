@@ -11,7 +11,9 @@ import 'init_model_test.mocks.dart';
 void main() {
   test('configured page array', () async {
     final config = MockPageConfigService();
-    when(config.excludedPages).thenReturn({'c'});
+    when(config.pages).thenReturn(
+      {'a': const PageConfigEntry(), 'b': const PageConfigEntry()},
+    );
 
     final model = InitModel(pageConfig: config);
 
@@ -27,7 +29,6 @@ void main() {
 
   test('launch desktop session', () async {
     final config = MockPageConfigService();
-    when(config.excludedPages).thenReturn({});
 
     final identity = MockIdentityService();
     when(identity.getIdentity()).thenAnswer(

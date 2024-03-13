@@ -123,12 +123,6 @@ class MockPageConfigService extends _i1.Mock implements _i2.PageConfigService {
       ) as bool);
 
   @override
-  Set<String> get excludedPages => (super.noSuchMethod(
-        Invocation.getter(#excludedPages),
-        returnValue: <String>{},
-      ) as Set<String>);
-
-  @override
   _i4.Future<void> load() => (super.noSuchMethod(
         Invocation.method(
           #load,

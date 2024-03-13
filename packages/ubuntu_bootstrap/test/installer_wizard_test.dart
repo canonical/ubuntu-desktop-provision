@@ -486,9 +486,9 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({
-    Set<String> excludedPages = const {'tryOrInstall'},
-  }) {
+  Widget buildTestWizard(
+      {Set<String> excludedPages = const {'tryOrInstall'},
+      bool includeTryOrInstall = false}) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return !excludedPages.contains(
@@ -497,7 +497,7 @@ extension on WidgetTester {
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
 
-    setupMockPageConfig(excludedPages: excludedPages);
+    setupMockPageConfig(includeTryOrInstall: includeTryOrInstall);
     final subiquityClient = MockSubiquityClient();
     when(subiquityClient.hasRst()).thenAnswer((_) async => false);
     registerMockService<SubiquityClient>(subiquityClient);

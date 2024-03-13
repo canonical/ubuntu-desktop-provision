@@ -39,6 +39,13 @@ class PageConfigService {
     final configuredPages = Map.of(pageConfig.pages);
     final excludedPages = _excludedPages(configuredPages);
     configuredPages.removeWhere((key, value) => excludedPages.contains(key));
+    for (final key in configuredPages.keys) {
+      final page = configuredPages[key]!;
+      if (!page.visible) {
+        _log.warning('Page $key is not allowed to be hidden');
+        configuredPages[key] = page.copyWith(visible: true);
+      }
+    }
 
     if (isOem) {
       configuredPages['eula'] = const PageConfigEntry();
@@ -51,7 +58,6 @@ class PageConfigService {
     } else {
       configuredPages.remove(_tryOrInstallName);
     }
-    print(configuredPages);
     pages.addAll(configuredPages);
   }
 }
