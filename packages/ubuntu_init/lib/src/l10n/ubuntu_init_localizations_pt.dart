@@ -84,7 +84,15 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Privacidade da Informação';
 
   @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Attach this machine';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

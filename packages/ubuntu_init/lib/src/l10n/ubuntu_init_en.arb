@@ -64,6 +64,15 @@
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Data Privacy",
   "@privacyPolicyLink": {},
+  "ubuntuProMagicAttachInstructions": "Magic attach with this code at <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProHeader": "Attach this machine",
+  "@ubuntuProHeader": {}
 }
