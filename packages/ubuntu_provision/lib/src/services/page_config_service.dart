@@ -23,8 +23,6 @@ class PageConfigService {
   late final ProvisioningMode mode;
   bool get isOem => mode == ProvisioningMode.oem;
 
-  Set<String> get excludedPages => _excludedPages(pages);
-
   Set<String> _excludedPages(Map<String, PageConfigEntry> pages) {
     return pages.entries
         .where((e) => !e.value.visible && allowedToHide.contains(e.key))
@@ -39,13 +37,8 @@ class PageConfigService {
     });
     mode = await _config!.provisioningMode;
     final configuredPages = Map.of(pageConfig.pages);
-
     final excludedPages = _excludedPages(configuredPages);
-    for (final page in configuredPages.keys) {
-      if (!excludedPages.contains(page)) {
-        configuredPages[page] = configuredPages[page]!.copyWith(visible: true);
-      }
-    }
+    configuredPages.removeWhere((key, value) => excludedPages.contains(key));
 
     if (isOem) {
       configuredPages['eula'] = const PageConfigEntry();
@@ -56,9 +49,9 @@ class PageConfigService {
           configuredPages[_tryOrInstallName]?.copyWith(visible: true) ??
               const PageConfigEntry();
     } else {
-      configuredPages[_tryOrInstallName] =
-          const PageConfigEntry(visible: false);
+      configuredPages.remove(_tryOrInstallName);
     }
+    print(configuredPages);
     pages.addAll(configuredPages);
   }
 }

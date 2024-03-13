@@ -14,7 +14,7 @@ enum InstallationStep with RouteName {
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   refresh(RefreshPage.new, allowedToHide: true),
-  tryOrInstall(TryOrInstallPage.new, discreteStep: false),
+  tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
   autoinstall(AutoinstallPage.new),
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),

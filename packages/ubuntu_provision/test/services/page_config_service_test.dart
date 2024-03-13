@@ -47,7 +47,8 @@ pages:
     expect(pages['network']?.visible, isTrue);
     expect(pages['welcome']?.image, equals('/foo/bar/welcome.png'));
     expect(pages['network']?.image, equals('network.png'));
-    expect(service.excludedPages, {'welcome'});
+    expect(service.pages.containsKey('network'), isTrue);
+    expect(service.pages.containsKey('welcome'), isFalse);
   });
 
   test('pages without config', () async {

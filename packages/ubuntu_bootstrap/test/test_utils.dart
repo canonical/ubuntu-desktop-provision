@@ -58,16 +58,19 @@ class _Dummy {} // ignore: unused_element
 /// Registers a mock [PageConfigService].
 ///
 /// The [overridePages] argument will override the pages that are returned
-/// if provided. All pages defined in [InstallationStep] except `try_or_install` are
-/// returned by default.
+/// if provided. All pages defined in [InstallationStep] except `try-or-install`
+/// are returned by default.
 void setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
-  Set<String> excludedPages = const {'welcome'},
+  Set<String> excludedPages = const {'try-or-install'},
   bool isOem = false,
 }) {
   final pages = overridePages ??
-      Map.fromEntries(InstallationStep.values
-          .map((step) => MapEntry(step.name, const PageConfigEntry())));
+      Map.fromEntries(
+        InstallationStep.values.map(
+          (step) => MapEntry(step.name, const PageConfigEntry()),
+        ),
+      );
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);

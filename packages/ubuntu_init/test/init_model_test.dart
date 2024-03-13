@@ -14,7 +14,6 @@ void main() {
     when(config.excludedPages).thenReturn({'c'});
 
     final model = InitModel(pageConfig: config);
-    await model.init();
 
     expect(model.hasRoute('a'), isTrue);
     expect(model.hasRoute('/a'), isTrue);
@@ -45,7 +44,6 @@ void main() {
       identityService: identity,
       gdmService: gdm,
     );
-    await model.init();
     await model.launchDesktopSession();
 
     verify(gdm.init()).called(1);

@@ -30,11 +30,6 @@ class InitModel {
   final PageConfigService? _pageConfig;
   final IdentityService? _identityService;
   final GdmService? _gdmService;
-  Set<String>? _excludedPages;
-
-  Future<void> init() async {
-    _excludedPages = _pageConfig?.excludedPages;
-  }
 
   Future<void> launchDesktopSession() async {
     final identity = await _identityService?.getIdentity();
@@ -52,6 +47,6 @@ class InitModel {
   }
 
   bool hasRoute(String route) {
-    return !(_excludedPages?.contains(route.replaceFirst('/', '')) ?? false);
+    return _pageConfig?.pages.containsKey(route.replaceFirst('/', '')) ?? false;
   }
 }
