@@ -27,9 +27,10 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(autoinstallModelProvider);
+    final flavor = ref.watch(flavorProvider);
     return HorizontalPage(
       windowTitle: lang.autoinstallTitle,
-      title: lang.autoinstallHeader,
+      title: lang.autoinstallHeader(flavor.displayName),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
