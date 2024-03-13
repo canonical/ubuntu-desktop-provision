@@ -375,11 +375,23 @@ abstract class UbuntuInitLocalizations {
   /// **'Data Privacy'**
   String get privacyPolicyLink;
 
+  /// No description provided for @ubuntuProMagicAttachInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
+  String ubuntuProMagicAttachInstructions(Object url);
+
   /// No description provided for @ubuntuProPageTitle.
   ///
   /// In en, this message translates to:
   /// **'Ubuntu Pro'**
   String get ubuntuProPageTitle;
+
+  /// No description provided for @ubuntuProHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach this machine'**
+  String get ubuntuProHeader;
 }
 
 class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {

@@ -84,5 +84,13 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Datenschutz';
 
   @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Attach this machine';
 }
