@@ -27,7 +27,9 @@ pages:
   confirm:
   identity:
     image: "assets/images/keyboard.svg"
+  active-directory:
   ubuntu-pro:
   privacy:
   timezone:
   telemetry:
+  welcome:

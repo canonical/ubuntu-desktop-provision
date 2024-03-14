@@ -9,7 +9,7 @@ class InstallerService {
 
   final SubiquityClient _client;
   final PageConfigService pageConfig;
-  late Set<String> _excludedPages;
+  late Set<String> _pages;
   Set<String>? _subiquityPages;
 
   Future<void> init() async {
@@ -35,17 +35,19 @@ class InstallerService {
     final oemPages = {'eula'};
     final requiredPages = _subiquityPages ?? (pageConfig.isOem ? oemPages : {});
 
-    _excludedPages = pageConfig.excludedPages.toSet();
+    _pages = pageConfig.pages.keys.toSet();
     if (pageConfig.isOem) {
-      _excludedPages.add('identity');
-      _excludedPages.add('timezone');
+      _pages.remove('identity');
+      _pages.remove('timezone');
       await _client.markConfigured(['identity', 'timezone']);
     }
 
-    final excludedRequiredPages = _excludedPages.intersection(requiredPages);
+    final excludedRequiredPages = requiredPages.toSet()..removeAll(_pages);
     if (excludedRequiredPages.isNotEmpty) {
-      _log.info('$excludedRequiredPages are required and cannot be excluded!');
-      _excludedPages.removeAll(excludedRequiredPages);
+      _log.warning(
+        '$excludedRequiredPages are required and cannot be excluded!',
+      );
+      _pages.addAll(excludedRequiredPages);
     }
   }
 
@@ -60,7 +62,7 @@ class InstallerService {
     if (_subiquityPages?.isNotEmpty ?? false) {
       return _subiquityPages!.contains(route.replaceFirst('/', ''));
     }
-    return !_excludedPages.contains(route.replaceFirst('/', ''));
+    return _pages.contains(route.replaceFirst('/', ''));
   }
 }
 

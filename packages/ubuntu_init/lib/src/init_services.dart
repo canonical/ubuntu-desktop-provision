@@ -2,6 +2,7 @@ import 'package:args/args.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:sysmetrics/sysmetrics.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/services/gdm_service.dart';
 import 'package:ubuntu_init/src/services/provd_identity_service.dart';
 import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
@@ -47,10 +48,13 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<KeyboardService>(ProvdKeyboardService.new);
   tryRegisterService<LocaleService>(ProvdLocaleService.new);
   tryRegisterService<NetworkService>(NetworkService.new);
-  tryRegisterService<PageConfigService>(() => PageConfigService(
-        config: tryGetService<ConfigService>(),
-        includeTryOrInstall: true,
-      ));
+  tryRegisterService<PageConfigService>(
+    () => PageConfigService(
+      config: tryGetService<ConfigService>(),
+      includeTryOrInstall: true,
+      allowedToHide: InitStep.allowedToHideKeys,
+    ),
+  );
   tryRegisterService<PrivacyService>(ProvdPrivacyService.new);
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);

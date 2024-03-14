@@ -11,6 +11,7 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -108,6 +109,7 @@ Future<void> runInstallerApp(
     () => PageConfigService(
       config: tryGetService<ConfigService>(),
       includeTryOrInstall: includeTryOrInstall,
+      allowedToHide: InstallationStep.allowedToHideKeys,
     ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));

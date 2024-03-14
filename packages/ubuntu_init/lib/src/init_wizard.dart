@@ -37,7 +37,7 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => null);
+            return null;
           },
         ),
         ...routes,
@@ -109,7 +109,7 @@ class WelcomeWizard extends ConsumerWidget {
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => null);
+            return null;
           },
         ),
         ...routes,
