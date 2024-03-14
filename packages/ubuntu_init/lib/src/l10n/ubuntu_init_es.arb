@@ -64,5 +64,7 @@
   "telemetryLegalLabel": "Información Legal",
   "@telemetryLegalLabel": {},
   "privacyPolicyLink": "Protección de los datos",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }
