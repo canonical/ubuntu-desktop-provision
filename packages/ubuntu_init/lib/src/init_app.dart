@@ -26,7 +26,6 @@ Future<void> runInitApp(
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
-    final providerContainer = ProviderContainer();
 
     log.debug('Initializing YaruWindowTitleBar');
     await YaruWindowTitleBar.ensureInitialized();
@@ -53,7 +52,6 @@ Future<void> runInitApp(
     tryRegisterService<FlavorService>(() => flavorService);
 
     runApp(ProviderScope(
-      parent: providerContainer,
       child: _InitApp(
         theme: theme,
         darkTheme: darkTheme,

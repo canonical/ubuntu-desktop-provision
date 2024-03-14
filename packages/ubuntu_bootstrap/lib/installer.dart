@@ -157,7 +157,6 @@ Future<void> runInstallerApp(
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
-    final providerContainer = ProviderContainer();
 
     final window = await YaruWindow.ensureInitialized();
     await window.onClose(_closeInstallerApp);
@@ -178,7 +177,6 @@ Future<void> runInstallerApp(
     await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
-      parent: providerContainer,
       child: _InstallerApp(
         theme: theme,
         darkTheme: darkTheme,
