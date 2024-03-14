@@ -88,10 +88,11 @@ Future<void> showAdvancedFeaturesDialog(
                       onChanged: (v) => guidedCapability.value = v!,
                     ),
                   ],
-                  TpmOption(
-                    guidedCapability: guidedCapability,
-                    model: model,
-                  ),
+                  if (model.hasTpm)
+                    TpmOption(
+                      guidedCapability: guidedCapability,
+                      model: model,
+                    ),
                 ].withSpacing(kWizardSpacing),
               ),
             );
