@@ -74,7 +74,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v2
-      - run: melos format
+      - run: melos format:exclude
 
   init-e2e:
     runs-on: ubuntu-22.04

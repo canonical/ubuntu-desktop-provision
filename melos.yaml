@@ -70,11 +70,6 @@ command:
       yaru_test: ^0.1.5
 
 scripts:
-  # analyze all packages
-  analyze: >
-    melos exec -c 1 -- \
-      flutter analyze .
-
   # collect coverage information for all packages
   coverage: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
@@ -91,8 +86,8 @@ scripts:
         '**/*.pb*.dart' \
         -o coverage/lcov.info
 
-  # format all packages
-  format: >
+  # format all packages' files except for generated files
+  format:exclude: >
     melos exec -c 1 -- \
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
           ! -name '*.freezed.dart' \
