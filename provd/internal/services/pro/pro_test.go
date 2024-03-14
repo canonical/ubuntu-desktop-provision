@@ -57,41 +57,33 @@ func TestProMagicAttach(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
+            // Test setup
 			opts := []pro.Option{
 				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate, alreadyAttached: tc.alreadyAttached}),
 			}
-
 			client := newProClient(t, opts...)
-
 			stream, err := client.ProMagicAttach(context.Background(), &emptypb.Empty{})
-
-			// Errors will only be returned here if initial stream setup or network errors occur
 			require.NoError(t, err, "calling ProMagicAttach should not fail")
 
 			// Collect all responses from the stream
 			var responses []string
 			for {
 				resp, err := stream.Recv()
-
 				if err != nil {
 					if !errors.Is(err, io.EOF) {
 						responses = append(responses, err.Error())
 					}
 					break
 				}
-
 				respBytes, err := json.Marshal(resp)
 				require.NoError(t, err, "marshaling response to JSON should not fail")
 				responses = append(responses, string(respBytes))
 			}
-
-			// Marshal the collected responses to JSON
 			gotBytes, err := json.Marshal(responses)
 			require.NoError(t, err, "marshaling responses to JSON should not fail")
+
 			got := string(gotBytes)
-
 			want := testutils.LoadWithUpdateFromGolden(t, got)
-
 			require.Equal(t, want, got, "response from ProMagicAttach should match expected")
 		})
 	}
@@ -121,14 +113,12 @@ func TestProAttach(t *testing.T) {
 			}
 
 			client := newProClient(t, opts...)
-
 			_, err := client.ProAttach(context.Background(), &wrapperspb.StringValue{Value: "mock_token"})
 
 			if tc.failAttach {
 				require.Error(t, err, "ProAttach should return an error")
 				return
 			}
-
 			require.NoError(t, err, "ProAttach should not return an error")
 		})
 	}
