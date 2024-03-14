@@ -1122,14 +1122,80 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @confirmHeader.
   ///
   /// In en, this message translates to:
-  /// **'If you continue, the changes listed below will be written to the disks. You will be able to make further changes manually.'**
+  /// **'Review your choices'**
   String get confirmHeader;
+
+  /// No description provided for @confirmDiskEncryptionLVM.
+  ///
+  /// In en, this message translates to:
+  /// **'LUKS (LVM)'**
+  String get confirmDiskEncryptionLVM;
+
+  /// No description provided for @confirmDiskEncryptionZFS.
+  ///
+  /// In en, this message translates to:
+  /// **'LUKS (ZFS)'**
+  String get confirmDiskEncryptionZFS;
+
+  /// No description provided for @confirmDiskEncryptionTPM.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM'**
+  String get confirmDiskEncryptionTPM;
+
+  /// No description provided for @confirmDiskEncryptionNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None'**
+  String get confirmDiskEncryptionNone;
 
   /// No description provided for @confirmDevicesTitle.
   ///
   /// In en, this message translates to:
   /// **'Devices'**
   String get confirmDevicesTitle;
+
+  /// No description provided for @confirmEntryApplications.
+  ///
+  /// In en, this message translates to:
+  /// **'Applications'**
+  String get confirmEntryApplications;
+
+  /// No description provided for @confirmEntryDiskSetup.
+  ///
+  /// In en, this message translates to:
+  /// **'Disk setup'**
+  String get confirmEntryDiskSetup;
+
+  /// No description provided for @confirmEntryDiskEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'Disk encryption'**
+  String get confirmEntryDiskEncryption;
+
+  /// No description provided for @confirmEntryInstallationDisk.
+  ///
+  /// In en, this message translates to:
+  /// **'Installation disk'**
+  String get confirmEntryInstallationDisk;
+
+  /// No description provided for @confirmEntryProprietarySoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Proprietary software'**
+  String get confirmEntryProprietarySoftware;
+
+  /// No description provided for @confirmSectionGeneralTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get confirmSectionGeneralTitle;
+
+  /// No description provided for @confirmSectionSecurityAndMoreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Security & more'**
+  String get confirmSectionSecurityAndMoreTitle;
 
   /// No description provided for @confirmPartitionsTitle.
   ///
@@ -1184,6 +1250,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> created'**
   String confirmPartitionCreate(String sysname);
+
+  /// No description provided for @confirmProprietarySoftwareCodecs.
+  ///
+  /// In en, this message translates to:
+  /// **'Codecs'**
+  String get confirmProprietarySoftwareCodecs;
+
+  /// No description provided for @confirmProprietarySoftwareCodecsDrivers.
+  ///
+  /// In en, this message translates to:
+  /// **'Codecs & drivers'**
+  String get confirmProprietarySoftwareCodecsDrivers;
+
+  /// No description provided for @confirmProprietarySoftwareDrivers.
+  ///
+  /// In en, this message translates to:
+  /// **'Drivers'**
+  String get confirmProprietarySoftwareDrivers;
 
   /// No description provided for @confirmInstallButton.
   ///
