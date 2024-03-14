@@ -833,5 +833,118 @@
   "minimalInstallationSubtitle": "Bara de viktigaste, webbläsare och grundläggande verktyg.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Fullständig installation",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallTitle": "Installationstyp",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Hur vill du installera {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Ange autoinstall.yaml URL.",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Interaktiv installation",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "För användare som vill bli guidade steg för steg genom installationen.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automatisk installation",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "För avancerade användare som har en autoinstall.yaml för konsekventa och repeterbara systemkonfigurationer.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Vad vill du göra med {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageTitle": "Optimera din dator",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Installera rekommenderad proprietär programvara?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA grafikkort har upptäckts",
+  "@codecsAndDriversNvidiaNote": {},
+  "choosePassphraseTitle": "Disk lösenfras",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseConfirmHint": "Bekräfta lösenfrasen",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "En lösenfras krävs",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Lösenfraserna matchar inte",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Se till att du sparar din lösenfras",
+  "@choosePassphraseInfoHeader": {},
+  "confirmPassphrase": "Bekräfta lösenfrasen",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Hur vill du installera {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Börja från början på den valda disken.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeLVMEncryption": "Använd LVM och kryptering",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS och kryptering vald",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara i framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Börja från början på den valda disken.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** har kopierats till disken",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Du måste starta om datorn för att fortsätta installationsprocessen.",
+  "@rebootToConfigureWarning": {},
+  "validate": "Validera",
+  "@validate": {},
+  "hideSecurityKey": "Dölj",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageBody": "{DISTRO} levereras som standard utan proprietär programvara. Att installera ytterligare programvara kan förbättra din dators prestanda.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "För bästa prestanda för NVIDIA grafikkort rekommenderas starkt att du installerar ytterligare drivrutiner.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHeader": "Skapa en lösenfras",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Välj en lösenfras",
+  "@choosePassphraseHint": {},
+  "choosePassphraseInfoBody": "Om du tappar bort din lösenfras kommer du att förlora all din data.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Skapa en lösenfras",
+  "@createPassphrase": {},
+  "installationTypeExperimental": "Experimentell",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Använd LVM",
+  "@installationTypeLVM": {},
+  "installationTypeZFSEncryption": "Radera disk och använd ZFS med kryptering",
+  "@installationTypeZFSEncryption": {}
 }
