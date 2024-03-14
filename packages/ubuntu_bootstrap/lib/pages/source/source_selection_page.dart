@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -81,6 +82,8 @@ class _SourceSelectionListTile extends ConsumerWidget {
     final colorScheme = theme.colorScheme;
     final model = ref.watch(sourceModelProvider);
     final isSelected = source.id == model.sourceId;
+    final lang = UbuntuBootstrapLocalizations.of(context);
+
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: YaruBorderContainer(
@@ -93,12 +96,12 @@ class _SourceSelectionListTile extends ConsumerWidget {
         borderRadius: kWizardBorderRadius,
         child: YaruRadioListTile(
           title: Text(
-            _localizeTitle(context),
+            source.localizedTitle(lang),
             style: theme.textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
-          subtitle: Text(_localizeSubtitle(context)),
+          subtitle: Text(source.localizedSubtitle(lang)),
           contentPadding: kWizardTilePadding,
           isThreeLine: true,
           value: source.id,
@@ -107,30 +110,5 @@ class _SourceSelectionListTile extends ConsumerWidget {
         ),
       ),
     );
-  }
-
-  String _localizeTitle(BuildContext context) {
-    switch (source.id) {
-      case kFullSourceId:
-        return UbuntuBootstrapLocalizations.of(context).fullInstallationTitle;
-      case kMinimalSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .minimalInstallationTitle;
-      default:
-        return source.name;
-    }
-  }
-
-  String _localizeSubtitle(BuildContext context) {
-    switch (source.id) {
-      case kFullSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .fullInstallationSubtitle;
-      case kMinimalSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .minimalInstallationSubtitle;
-      default:
-        return source.description;
-    }
   }
 }
