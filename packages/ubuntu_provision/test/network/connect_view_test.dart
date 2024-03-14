@@ -4,8 +4,8 @@ import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/connect_view.dart';
 import 'package:ubuntu_provision/src/network/ethernet_model.dart';
 import 'package:ubuntu_provision/src/network/wifi_model.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'test_network.dart';
 

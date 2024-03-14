@@ -15,8 +15,6 @@ export 'connect_model.dart' show ConnectMode;
 class NetworkPage extends ConsumerWidget with ProvisioningPage {
   NetworkPage({super.key});
 
-  final ScrollController _scrollController = ScrollController();
-
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
     final model = ref.read(networkModelProvider);
@@ -34,64 +32,48 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(networkModelProvider);
     final lang = NetworkLocalizations.of(context);
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 2;
 
     return HorizontalPage(
       windowTitle: lang.networkPageTitle,
-      title: 'Connect to the Internet?', // TODO(Lukas): Add to localization
-      expandContent: true,
-      content: Scrollbar(
-        controller: _scrollController,
-        thumbVisibility: true,
-        child: SingleChildScrollView(
-          controller: _scrollController,
-          child: Padding(
-            padding: EdgeInsets.only(right: scrollBarPadding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(lang.networkPageHeader),
-                const SizedBox(height: kWizardSpacing),
-                EthernetRadioButton(
-                  value: model.connectMode,
-                  onChanged: (_) =>
-                      model.selectConnectMode(ConnectMode.ethernet),
-                ),
-                EthernetView(
-                  expanded: model.connectMode == ConnectMode.ethernet,
-                  onEnabled: () =>
-                      model.selectConnectMode(ConnectMode.ethernet),
-                ),
-                WifiRadioButton(
-                  value: model.connectMode,
-                  onChanged: (_) => model.selectConnectMode(ConnectMode.wifi),
-                ),
-                WifiView(
-                  expanded: model.connectMode == ConnectMode.wifi,
-                  onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
-                  onSelected: (_, __) =>
-                      model.selectConnectMode(ConnectMode.wifi),
-                ),
-                HiddenWifiRadioButton(
-                  value: model.connectMode,
-                  onChanged: (_) =>
-                      model.selectConnectMode(ConnectMode.hiddenWifi),
-                ),
-                HiddenWifiView(
-                  expanded: model.connectMode == ConnectMode.hiddenWifi,
-                ),
-                NoConnectView(
-                  value: model.connectMode,
-                  onChanged: (_) => model.selectConnectMode(ConnectMode.none),
-                ),
-              ],
-            ),
+      title: lang.networkPageHeader,
+      contentFlex: model.connectMode == ConnectMode.wifi ? 100 : 6,
+      content: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(lang.networkPageBody),
+          const SizedBox(height: kWizardSpacing),
+          EthernetRadioButton(
+            value: model.connectMode,
+            onChanged: (_) => model.selectConnectMode(ConnectMode.ethernet),
           ),
-        ),
+          EthernetView(
+            expanded: model.connectMode == ConnectMode.ethernet,
+            onEnabled: () => model.selectConnectMode(ConnectMode.ethernet),
+          ),
+          WifiRadioButton(
+            value: model.connectMode,
+            onChanged: (_) => model.selectConnectMode(ConnectMode.wifi),
+          ),
+          WifiView(
+            expanded: model.connectMode == ConnectMode.wifi,
+            onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
+            onSelected: (_, __) => model.selectConnectMode(ConnectMode.wifi),
+          ),
+          HiddenWifiRadioButton(
+            value: model.connectMode,
+            onChanged: (_) => model.selectConnectMode(ConnectMode.hiddenWifi),
+          ),
+          HiddenWifiView(
+            expanded: model.connectMode == ConnectMode.hiddenWifi,
+          ),
+          NoConnectView(
+            value: model.connectMode,
+            onChanged: (_) => model.selectConnectMode(ConnectMode.none),
+          ),
+        ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).connectLabel,

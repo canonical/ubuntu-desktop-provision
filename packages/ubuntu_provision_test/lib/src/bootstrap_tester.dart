@@ -32,18 +32,15 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testAccessibilityPage({
+  Future<void> testAutoinstallPage({
     String? screenshot,
   }) async {
-    await pumpUntilPage(AccessibilityPage);
+    await pumpUntilPage(AutoinstallPage);
 
-    final context = element(find.byType(AccessibilityPage));
-    final l10n = UbuntuProvisionLocalizations.of(context);
+    final context = element(find.byType(AutoinstallPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(
-      find.titleBar(l10n.accessibilityPageTitle('Ubuntu')),
-      findsOneWidget,
-    );
+    expect(find.titleBar(l10n.autoinstallTitle), findsOneWidget);
 
     await pumpAndSettle();
 
@@ -169,10 +166,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           await tap(find.text(l10n.installationTypeNone));
           break;
         case GuidedCapability.LVM:
-          await tap(find.text(l10n.installationTypeLVM('Ubuntu')));
+          await tap(find.text(l10n.installationTypeLVM));
           break;
         case GuidedCapability.LVM_LUKS:
-          await tap(find.text(l10n.installationTypeLVMEncryption('Ubuntu')));
+          await tap(find.text(l10n.installationTypeLVMEncryption));
           break;
         case GuidedCapability.ZFS:
           await tap(find.text(l10n.installationTypeZFS));
@@ -252,7 +249,8 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
     final productInfo = getService<ProductService>().getProductInfo();
     expect(
-      find.titleBar(l10n.installationTypeAlongsideUnknown(productInfo)),
+      find.titleBar(
+          l10n.installationTypeAlongsideUnknown(productInfo.toString())),
       findsOneWidget,
     );
 
@@ -334,24 +332,24 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testSecurityKeyPage({
-    required String securityKey,
+  Future<void> testPassphrasePage({
+    required String passphrase,
     String? screenshot,
   }) async {
-    await pumpUntilPage(SecurityKeyPage);
+    await pumpUntilPage(PassphrasePage);
 
-    final context = element(find.byType(SecurityKeyPage));
+    final context = element(find.byType(PassphrasePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.chooseSecurityKeyTitle), findsOneWidget);
+    expect(find.titleBar(l10n.choosePassphraseTitle), findsOneWidget);
 
     await enterText(
-      find.textField(l10n.chooseSecurityKey),
-      securityKey,
+      find.textField(l10n.choosePassphraseHint),
+      passphrase,
     );
     await enterText(
-      find.textField(l10n.confirmSecurityKey),
-      securityKey,
+      find.textField(l10n.confirmPassphrase),
+      passphrase,
     );
 
     await pumpAndSettle();

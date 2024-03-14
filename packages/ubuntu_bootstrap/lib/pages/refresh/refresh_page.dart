@@ -5,7 +5,7 @@ import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_widgets.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// A page to let the user know that the installer has a newer version
 /// available that can be installed.

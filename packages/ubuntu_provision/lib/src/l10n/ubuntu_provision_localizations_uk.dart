@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Підключення цього комп\'ютера до Інтернету допоможе Ubuntu встановити необхідне додаткове програмне забезпечення та вибрати часовий пояс.\n\nПідключіться за допомогою кабелю Ethernet або виберіть Wi-Fi мережу';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Використовувати дротове підключення';
 
   @override

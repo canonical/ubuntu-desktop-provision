@@ -38,10 +38,10 @@ class SubiquityServer {
       await process!.start(additionalArgs: args, additionalEnv: environment);
     }
 
-    return _waitSubiquity(endpoint).then((_) => endpoint);
+    return waitSubiquity().then((_) => endpoint);
   }
 
-  static Future<void> _waitSubiquity(Endpoint endpoint) async {
+  Future<void> waitSubiquity() async {
     final client = HttpClient();
     client.connectionFactory = (uri, proxyHost, proxyPort) async {
       return Socket.startConnect(endpoint.address, endpoint.port);

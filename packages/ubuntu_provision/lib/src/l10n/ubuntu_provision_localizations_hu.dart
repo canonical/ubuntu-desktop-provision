@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'A számítógép internethez való kapcsolódása segít az Ubuntunak telepíteni a szükséges további szoftvereket, és segít kiválasztani az időzónát.\n\nKapcsolódás Ethernet-kábellel vagy Wi-Fi-hálózat kiválasztása';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Vezetékes kapcsolat használata';
 
   @override

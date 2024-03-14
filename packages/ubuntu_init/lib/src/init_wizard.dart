@@ -8,7 +8,7 @@ import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 final _log = Logger('init_wizard');
 
@@ -37,7 +37,7 @@ class InitWizard extends ConsumerWidget {
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => null);
+            return null;
           },
         ),
         ...routes,
@@ -109,7 +109,7 @@ class WelcomeWizard extends ConsumerWidget {
           builder: (_) => const SizedBox.shrink(),
           onReplace: (_) async {
             await ref.read(pageImagesProvider).preCache();
-            return ref.read(initModelProvider).init().then((_) => null);
+            return null;
           },
         ),
         ...routes,

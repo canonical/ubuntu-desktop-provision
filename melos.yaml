@@ -44,7 +44,7 @@ command:
       ubuntu_logger: ^0.1.1
       ubuntu_service: ^0.3.1
       ubuntu_session: ^0.0.4
-      ubuntu_widgets: ^0.3.3
+      ubuntu_widgets: ^0.4.0
       udev: ^0.0.3
       upower: ^0.7.0
       url_launcher: ^6.2.4
@@ -52,10 +52,8 @@ command:
       xdg_directories: ^1.0.4
       xdg_locale: ^0.0.1
       yaml: ^3.1.2
-      yaru: 1.2.1
-      yaru_icons: ^2.4.0
-      yaru_widgets: 3.4.0
-      yaru_window: 0.2.0
+      yaru: 4.0.0
+      yaru_window: 0.2.1
 
     dev_dependencies:
       build_runner: ^2.4.8
@@ -72,11 +70,6 @@ command:
       yaru_test: ^0.1.5
 
 scripts:
-  # analyze all packages
-  analyze: >
-    melos exec -c 1 -- \
-      flutter analyze .
-
   # collect coverage information for all packages
   coverage: >
     melos exec -c 1 --fail-fast --dir-exists=test -- \
@@ -93,8 +86,8 @@ scripts:
         '**/*.pb*.dart' \
         -o coverage/lcov.info
 
-  # format all packages
-  format: >
+  # format all packages' files except for generated files
+  format:exclude: >
     melos exec -c 1 -- \
       "find $MELOS_PACKAGE_PATH -name '*.dart' \
           ! -name '*.freezed.dart' \

@@ -372,7 +372,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @keyboardHeader.
   ///
   /// In en, this message translates to:
-  /// **'Choose your keyboard layout:'**
+  /// **'Select your keyboard layout'**
   String get keyboardHeader;
 
   /// No description provided for @keyboardTestHint.
@@ -450,7 +450,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityPageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Set up your account'**
+  /// **'Create your account'**
   String get identityPageTitle;
 
   /// No description provided for @identityAutoLogin.
@@ -516,7 +516,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityUsernameLabel.
   ///
   /// In en, this message translates to:
-  /// **'Pick a username'**
+  /// **'Your username'**
   String get identityUsernameLabel;
 
   /// No description provided for @identityUsernameRequired.
@@ -558,7 +558,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityPasswordLabel.
   ///
   /// In en, this message translates to:
-  /// **'Choose a password'**
+  /// **'Password'**
   String get identityPasswordLabel;
 
   /// No description provided for @identityPasswordRequired.
@@ -570,7 +570,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityConfirmPasswordLabel.
   ///
   /// In en, this message translates to:
-  /// **'Confirm your password'**
+  /// **'Confirm password'**
   String get identityConfirmPasswordLabel;
 
   /// No description provided for @identityPasswordMismatch.
@@ -720,14 +720,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @networkPageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Connect to a network'**
+  /// **'Internet connection'**
   String get networkPageTitle;
 
   /// No description provided for @networkPageHeader.
   ///
   /// In en, this message translates to:
-  /// **'Connecting this computer to the internet will help Ubuntu install any extra software needed and help choose your time zone.\n\nConnect by Ethernet cable, or choose a Wi-Fi network'**
+  /// **'Connect to the internet'**
   String get networkPageHeader;
+
+  /// No description provided for @networkPageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'An internet connection will improve your installation with compatibility check and extra software packages.'**
+  String get networkPageBody;
 
   /// No description provided for @networkWiredOption.
   ///

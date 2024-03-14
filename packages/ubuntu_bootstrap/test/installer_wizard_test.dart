@@ -8,6 +8,7 @@ import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
@@ -18,8 +19,8 @@ import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_d
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
-import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -29,7 +30,6 @@ import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 import '../../ubuntu_provision/test/accessibility/test_accessibility.dart';
 import '../../ubuntu_provision/test/active_directory/test_active_directory.dart';
@@ -38,6 +38,7 @@ import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
 import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
+import 'autoinstall/test_autoinstall.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
 import 'refresh/test_refresh.dart';
@@ -56,6 +57,12 @@ void main() {
 
   testWidgets('try ubuntu', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
+    final keyboardModel = buildKeyboardModel();
+    final networkModel = buildNetworkModel();
+    final ethernetModel = buildEthernetModel();
+    final wifiModel = buildWifiModel();
+    final hiddenWifiModel = buildHiddenWifiModel();
+    final refreshModel = buildRefreshModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
@@ -66,12 +73,18 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
+          keyboardModelProvider.overrideWith((_) => keyboardModel),
+          networkModelProvider.overrideWith((_) => networkModel),
+          ethernetModelProvider.overrideWith((_) => ethernetModel),
+          wifiModelProvider.overrideWith((_) => wifiModel),
+          hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
+          refreshModelProvider.overrideWith((_) => refreshModel),
           loadingProvider
               .overrideWith((_) => Future<void>.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -90,6 +103,16 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(KeyboardPage), findsOneWidget);
+    verify(keyboardModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(NetworkPage), findsOneWidget);
+    verify(networkModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(TryOrInstallPage), findsOneWidget);
     verify(tryOrInstallModel.init()).called(1);
 
@@ -103,6 +126,7 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
+    final autoinstallModel = buildAutoinstallModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
@@ -119,7 +143,7 @@ void main() {
     final storageModel = buildStorageModel();
     final bitLockerModel = buildBitLockerModel();
     final guidedReformatModel = buildGuidedReformatModel();
-    final securityKeyModel = buildSecurityKeyModel(useSecurityKey: false);
+    final passphraseModel = buildPassphraseModel(usePassphrase: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
     final timezoneModel = buildTimezoneModel();
@@ -134,6 +158,7 @@ void main() {
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
+          autoinstallModelProvider.overrideWith((_) => autoinstallModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
@@ -151,7 +176,7 @@ void main() {
           storageModelProvider.overrideWith((_) => storageModel),
           bitLockerModelProvider.overrideWith((_) => bitLockerModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
-          securityKeyModelProvider.overrideWith((_) => securityKeyModel),
+          passphraseModelProvider.overrideWith((_) => passphraseModel),
           recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
@@ -160,7 +185,7 @@ void main() {
               .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -178,11 +203,6 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(tryOrInstallModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     expect(find.byType(KeyboardPage), findsOneWidget);
     verify(keyboardModel.init()).called(1);
 
@@ -190,6 +210,15 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(NetworkPage), findsOneWidget);
     verify(networkModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(TryOrInstallPage), findsOneWidget);
+    verify(tryOrInstallModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(AutoinstallPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -222,7 +251,7 @@ void main() {
     expect(find.byType(ConfirmPage), findsOneWidget);
     verify(bitLockerModel.init()).called(1); // skipped
     verify(guidedReformatModel.init()).called(1); // skipped
-    verify(securityKeyModel.init()).called(1); // skipped
+    verify(passphraseModel.init()).called(1); // skipped
     verify(recoveryKeyModel.init()).called(1); // skipped
     verify(confirmModel.init()).called(1);
 
@@ -376,7 +405,8 @@ void main() {
           installModelProvider.overrideWith((_) => installModel),
           slidesProvider.overrideWith((_) => MockSlidesModel()),
         ],
-        child: tester.buildTestWizard(excludedPages: [
+        child: tester.buildTestWizard(excludedPages: {
+          'autoinstall',
           'tryOrInstall',
           'locale',
           'rst',
@@ -390,7 +420,7 @@ void main() {
           'identity',
           'activeDirectory',
           'timezone',
-        ]),
+        }),
       ),
     );
 
@@ -456,9 +486,9 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({
-    List<String> excludedPages = const ['tryOrInstall'],
-  }) {
+  Widget buildTestWizard(
+      {Set<String> excludedPages = const {'tryOrInstall'},
+      bool includeTryOrInstall = false}) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return !excludedPages.contains(
@@ -467,7 +497,7 @@ extension on WidgetTester {
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
 
-    setupMockPageConfig(excludedPages: excludedPages);
+    setupMockPageConfig(includeTryOrInstall: includeTryOrInstall);
     final subiquityClient = MockSubiquityClient();
     when(subiquityClient.hasRst()).thenAnswer((_) async => false);
     registerMockService<SubiquityClient>(subiquityClient);
@@ -477,6 +507,8 @@ extension on WidgetTester {
     final keyboardService = SubiquityKeyboardService(subiquityClient);
     registerMockService<KeyboardService>(keyboardService);
     when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
+
+    registerMockService<PowerService>(MockPowerService());
 
     final refresh = MockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.status(

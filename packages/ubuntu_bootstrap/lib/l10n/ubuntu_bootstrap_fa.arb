@@ -426,13 +426,6 @@
   },
   "partitionTypeLabel": "گونهٔ افراز جدید:",
   "@partitionTypeLabel": {},
-  "installationTypeLVM": "استفاده از LVM برای نصب {RELEASE} جدید",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installDriversTitle": "نصب نرم‌افزارهای سوم‌شخص برای سخت‌افزارهای وای‌فای و گرافیک",
   "@installDriversTitle": {},
   "bitlockerInstructions": "برای دستورالعمل‌ها، رمز پاس را روی افزاره‌ای دیگر پوییده یا ببینید: <a href=\"https://{url}\">{url}</a>",

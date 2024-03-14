@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Menyambungkan komputer ini ke internet akan membantu Ubuntu memasang perangkat lunak tambahan yang diperlukan dan membantu memilih zona waktu Anda.\n\nSambungkan memakai kabel Ethernet, atau pilih suatu jaringan Wi-Fi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Gunakan sambungan kabel';
 
   @override

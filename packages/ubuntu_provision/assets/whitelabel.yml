@@ -12,6 +12,8 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
+  autoinstall:
+    image: "assets/images/disk.svg"
   source-selection:
     image: "assets/images/mascot.svg"
   codecs-and-drivers:
@@ -22,9 +24,14 @@ pages:
     image: "assets/images/disk.svg"
   eula:
     image: "assets/images/keyboard.svg"
+  passphrase:
+    image: "assets/images/disk.svg"
   confirm:
   identity:
+    image: "assets/images/keyboard.svg"
+  active-directory:
   ubuntu-pro:
   privacy:
   timezone:
   telemetry:
+  welcome:

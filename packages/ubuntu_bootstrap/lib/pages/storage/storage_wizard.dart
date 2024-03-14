@@ -5,8 +5,8 @@ import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
-import 'package:ubuntu_bootstrap/pages/storage/security_key/security_key_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
@@ -17,8 +17,8 @@ export 'bitlocker/bitlocker_page.dart';
 export 'guided_reformat/guided_reformat_page.dart';
 export 'guided_resize/guided_resize_page.dart';
 export 'manual/manual_storage_page.dart';
+export 'passphrase/passphrase_page.dart';
 export 'recovery_key/recovery_key_page.dart';
-export 'security_key/security_key_page.dart';
 export 'storage_page.dart';
 export 'storage_routes.dart';
 
@@ -27,7 +27,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
-    return const StoragePage().load(context, ref);
+    return StoragePage().load(context, ref);
   }
 
   @override
@@ -35,8 +35,8 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
     final type = ref.watch(storageModelProvider.select((m) => m.type));
 
     final routes = {
-      Navigator.defaultRouteName: WizardRoute(
-        builder: (_) => const StoragePage(),
+      InstallationStep.storage.route: WizardRoute(
+        builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
       ),
       if (type != StorageType.manual)
@@ -65,10 +65,10 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
           onLoad: (_) => ManualStoragePage.load(ref),
         ),
       if (type != StorageType.manual)
-        StorageRoutes.securityKey: WizardRoute(
-          builder: (_) => const SecurityKeyPage(),
+        StorageRoutes.passphrase: WizardRoute(
+          builder: (_) => const PassphrasePage(),
           userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => SecurityKeyPage.load(ref),
+          onLoad: (_) => PassphrasePage.load(ref),
         ),
       if (type != StorageType.manual)
         StorageRoutes.recoveryKey: WizardRoute(

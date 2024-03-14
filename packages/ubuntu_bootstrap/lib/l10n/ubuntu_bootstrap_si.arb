@@ -324,13 +324,6 @@
   },
   "installationTypeMultiOSDetected": "මෙම පරිගණකයෙහි දැනට මෙහෙයුම් පද්ධති කිහිපයක් තිබේ. ඔබ කිරීමට කැමති කුමක්ද?",
   "@installationTypeMultiOSDetected": {},
-  "installationTypeLVM": "නව {RELEASE} ස්ථාපනය සමඟ LVM භාවිතා කරන්න",
-  "@installationTypeLVM": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeReinstallWarning": "<font color=\"{color}\">අවවාදයයි:</font> මෙය ඔබගේ සියළුම {os} වැඩසටහන්, ලේඛන, ඡායාරූප, ගීත සහ අනෙකුත් ගොනු මකා දමයි.",
   "@installationTypeReinstallWarning": {
     "type": "text",

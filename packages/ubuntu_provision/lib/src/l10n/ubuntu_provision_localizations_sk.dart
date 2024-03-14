@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom alebo si vyberte Wi-Fi sieť';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Použiť káblové pripojenie';
 
   @override

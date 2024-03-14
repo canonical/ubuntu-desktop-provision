@@ -43,6 +43,12 @@ void main() {
 
     when(model.installCodecs).thenReturn(false);
 
+    await tester.scrollUntilVisible(
+      checkbox,
+      -kMinInteractiveDimension / 2,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.pump();
     await tester.tap(checkbox);
 
     verify(model.setInstallCodecs(false)).called(1);
@@ -84,6 +90,13 @@ void main() {
     final checkbox = find.checkButton(l10n.installCodecsTitle);
     expect(checkbox, findsOneWidget);
     expect(checkbox, isDisabled);
+
+    await tester.scrollUntilVisible(
+      checkbox,
+      -kMinInteractiveDimension / 2,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.pump();
 
     final gesture = await tester.createGesture(kind: PointerDeviceKind.mouse);
     await gesture.addPointer();

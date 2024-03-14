@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Å koble denne datamaskinen til internett vil hjelpe Ubuntu med å installere all ekstra programvare som trengs og hjelpe deg med å velge tidssone.\n\nKoble til med Ethernet-kabel, eller velg et Wi-Fi-nettverk';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Bruk kablet nettverktilkobling';
 
   @override

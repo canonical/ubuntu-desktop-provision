@@ -4,7 +4,7 @@ import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/ethernet_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_tile.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class EthernetRadioButton extends ConsumerWidget {
   const EthernetRadioButton({

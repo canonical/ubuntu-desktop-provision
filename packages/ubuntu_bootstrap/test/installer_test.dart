@@ -156,6 +156,7 @@ extension on WidgetTester {
     registerMockService<SubiquityClient>(subiquityClient);
     registerMockService<TelemetryService>(MockTelemetryService());
     registerMockService<NetworkService>(MockNetworkService());
+    registerMockService<PowerService>(MockPowerService());
 
     return ProviderScope(
       overrides: [

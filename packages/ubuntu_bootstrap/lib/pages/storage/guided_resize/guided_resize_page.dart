@@ -6,7 +6,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// Install alongside other OSes.
 class GuidedResizePage extends ConsumerWidget {
@@ -22,20 +22,22 @@ class GuidedResizePage extends ConsumerWidget {
 
     switch (model.existingOS.length) {
       case 0:
-        return lang.installationTypeAlongsideUnknown(model.productInfo);
+        return lang
+            .installationTypeAlongsideUnknown(model.productInfo.toString());
       case 1:
         return lang.installationTypeAlongside(
-          model.productInfo,
+          model.productInfo.toString(),
           model.existingOS.single.long,
         );
       case 2:
         return lang.installationTypeAlongsideDual(
-          model.productInfo,
+          model.productInfo.toString(),
           model.existingOS.first.long,
           model.existingOS.last.long,
         );
       default:
-        return lang.installationTypeAlongsideMulti(model.productInfo);
+        return lang
+            .installationTypeAlongsideMulti(model.productInfo.toString());
     }
   }
 
@@ -81,7 +83,7 @@ class GuidedResizePage extends ConsumerWidget {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             onNext: model.selectedStorage != null ? model.save : null,

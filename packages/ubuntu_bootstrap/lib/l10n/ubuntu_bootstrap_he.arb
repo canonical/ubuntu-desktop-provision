@@ -168,8 +168,6 @@
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "לא נבחרו",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "להשתמש במנהל כרכים לוגי עם התקנת {RELEASE} החדשה",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "נבחר מנהל כרכים לוגי",
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "להצפין את התקנת {RELEASE} החדשה לשיפור האבטחה",

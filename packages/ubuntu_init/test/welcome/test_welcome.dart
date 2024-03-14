@@ -20,7 +20,7 @@ WelcomeModel buildWelcomeModel({
     when(model.init()).thenAnswer((_) async => true);
   }
   when(model.productInfo)
-      .thenReturn(productInfo ?? ProductInfo(name: 'Ubuntu'));
+      .thenReturn(productInfo ?? const ProductInfo(name: 'Ubuntu'));
   when(model.releaseNotesURL(any))
       .thenReturn(releaseNotesUrl ?? 'https://ubuntu.com/download/desktop');
   return model;

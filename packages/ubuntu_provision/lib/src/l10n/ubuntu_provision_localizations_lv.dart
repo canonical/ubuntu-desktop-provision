@@ -75,7 +75,7 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Keyboard layout';
 
   @override
-  String get keyboardHeader => 'Choose your keyboard layout:';
+  String get keyboardHeader => 'Select your keyboard layout';
 
   @override
   String get keyboardTestHint => 'Type here to test your keyboard';
@@ -116,7 +116,7 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Choose your language:';
 
   @override
-  String get identityPageTitle => 'Set up your account';
+  String get identityPageTitle => 'Create your account';
 
   @override
   String get identityAutoLogin => 'Log in automatically';
@@ -149,7 +149,7 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'The computer name is invalid';
 
   @override
-  String get identityUsernameLabel => 'Pick a username';
+  String get identityUsernameLabel => 'Your username';
 
   @override
   String get identityUsernameRequired => 'A username is required';
@@ -170,13 +170,13 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'That name contains invalid characters.';
 
   @override
-  String get identityPasswordLabel => 'Choose a password';
+  String get identityPasswordLabel => 'Password';
 
   @override
   String get identityPasswordRequired => 'A password is required';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm your password';
+  String get identityConfirmPasswordLabel => 'Confirm password';
 
   @override
   String get identityPasswordMismatch => 'The passwords do not match';
@@ -251,10 +251,13 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Connect to a network';
+  String get networkPageTitle => 'Internet connection';
 
   @override
-  String get networkPageHeader => 'Connecting this computer to the internet will help Ubuntu install any extra software needed and help choose your time zone.\n\nConnect by Ethernet cable, or choose a Wi-Fi network';
+  String get networkPageHeader => 'Connect to the internet';
+
+  @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Use wired connection';

@@ -4,11 +4,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 /// A page where the user can decide whether they want to do a full installation
 /// with all selected applications or a minimal installation.
@@ -17,8 +18,6 @@ import 'package:yaru_widgets/yaru_widgets.dart';
 /// sources, and to set the selected source.
 class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
   SourceSelectionPage({super.key});
-
-  final ScrollController _scrollController = ScrollController();
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
@@ -29,31 +28,18 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
 
     return HorizontalPage(
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
-      expandContent: true,
-      content: Center(
-        child: Scrollbar(
-          controller: _scrollController,
-          thumbVisibility: true,
-          child: SingleChildScrollView(
-            controller: _scrollController,
-            child: Padding(
-              padding: EdgeInsets.only(right: scrollBarPadding),
-              child: Column(
-                children: [
-                  ...model.sources
-                      .map(_InstallationTypeListTile.new)
-                      .withSpacing(kWizardSpacing / 2),
-                ],
-              ),
-            ),
-          ),
-        ),
+      contentFlex: 2,
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ...model.sources
+              .map(_SourceSelectionListTile.new)
+              .withSpacing(kWizardSpacing / 2),
+        ],
       ),
       snackBar: model.onBattery
           ? SnackBar(
@@ -85,17 +71,8 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
-extension on Iterable<Widget> {
-  List<Widget> withSpacing(double spacing) {
-    return expand((item) sync* {
-      yield SizedBox(width: spacing, height: spacing);
-      yield item;
-    }).skip(1).toList();
-  }
-}
-
-class _InstallationTypeListTile extends ConsumerWidget {
-  const _InstallationTypeListTile(this.source);
+class _SourceSelectionListTile extends ConsumerWidget {
+  const _SourceSelectionListTile(this.source);
 
   final SourceSelection source;
 
@@ -105,6 +82,8 @@ class _InstallationTypeListTile extends ConsumerWidget {
     final colorScheme = theme.colorScheme;
     final model = ref.watch(sourceModelProvider);
     final isSelected = source.id == model.sourceId;
+    final lang = UbuntuBootstrapLocalizations.of(context);
+
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: YaruBorderContainer(
@@ -117,12 +96,12 @@ class _InstallationTypeListTile extends ConsumerWidget {
         borderRadius: kWizardBorderRadius,
         child: YaruRadioListTile(
           title: Text(
-            _localizeTitle(context),
+            source.localizedTitle(lang),
             style: theme.textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
-          subtitle: Text(_localizeSubtitle(context)),
+          subtitle: Text(source.localizedSubtitle(lang)),
           contentPadding: kWizardTilePadding,
           isThreeLine: true,
           value: source.id,
@@ -131,30 +110,5 @@ class _InstallationTypeListTile extends ConsumerWidget {
         ),
       ),
     );
-  }
-
-  String _localizeTitle(BuildContext context) {
-    switch (source.id) {
-      case kFullSourceId:
-        return UbuntuBootstrapLocalizations.of(context).fullInstallationTitle;
-      case kMinimalSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .minimalInstallationTitle;
-      default:
-        return source.name;
-    }
-  }
-
-  String _localizeSubtitle(BuildContext context) {
-    switch (source.id) {
-      case kFullSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .fullInstallationSubtitle;
-      case kMinimalSourceId:
-        return UbuntuBootstrapLocalizations.of(context)
-            .minimalInstallationSubtitle;
-      default:
-        return source.description;
-    }
   }
 }

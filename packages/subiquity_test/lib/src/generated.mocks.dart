@@ -1098,6 +1098,16 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
         ),
         returnValue: _i5.Future<_i2.AdJoinResult>.value(_i2.AdJoinResult.OK),
       ) as _i5.Future<_i2.AdJoinResult>);
+
+  @override
+  _i5.Future<void> restart() => (super.noSuchMethod(
+        Invocation.method(
+          #restart,
+          [],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 }
 
 /// A class which mocks [SubiquityServer].
@@ -1152,6 +1162,16 @@ class MockSubiquityServer extends _i1.Mock implements _i7.SubiquityServer {
           ),
         )),
       ) as _i5.Future<_i3.Endpoint>);
+
+  @override
+  _i5.Future<void> waitSubiquity() => (super.noSuchMethod(
+        Invocation.method(
+          #waitSubiquity,
+          [],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
   _i5.Future<void> stop() => (super.noSuchMethod(

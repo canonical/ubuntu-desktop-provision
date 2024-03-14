@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Ao ligar este computador à Internet irá ajudar o Ubuntu a instalar qualquer software extra necessário e ajudá-lo com o seu fuso horário.\n\nLigar por cabo de rede, ou escolha uma rede Wi-Fi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Usar uma ligação por cabo de rede';
 
   @override

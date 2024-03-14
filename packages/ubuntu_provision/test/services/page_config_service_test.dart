@@ -15,19 +15,48 @@ pages:
   network:
     image: "/foo/bar/network.png"
 ''';
-    final service =
-        PageConfigService(config: createMockConfigService(config: config));
+    final service = PageConfigService(
+      config: createMockConfigService(config: config),
+      allowedToHide: ['welcome'],
+    );
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);
-    // revert once 'visible' setting is re-enabled
-    expect(pages['welcome']?.visible, isTrue);
+    expect(pages['welcome']?.visible, isNull);
     expect(pages['network']?.visible, isTrue);
     expect(pages['network']?.image, equals('/foo/bar/network.png'));
   });
 
+  test('allowed pages can be hidden', () async {
+    const config = '''
+pages:
+  welcome:
+    visible: false
+    image: "/foo/bar/welcome.png"
+  network:
+    visible: false
+    image: "network.png"
+''';
+    final service = PageConfigService(
+      config: createMockConfigService(config: config),
+      allowedToHide: ['welcome'],
+    );
+    await service.load();
+    final pages = service.pages;
+    expect(pages, isNotNull);
+    expect(pages['welcome']?.visible, isNull);
+    expect(pages['network']?.visible, isTrue);
+    expect(pages['welcome']?.image, isNull);
+    expect(pages['network']?.image, equals('network.png'));
+    expect(service.pages.containsKey('network'), isTrue);
+    expect(service.pages.containsKey('welcome'), isFalse);
+  });
+
   test('pages without config', () async {
-    final service = PageConfigService(config: createMockConfigService());
+    final service = PageConfigService(
+      config: createMockConfigService(),
+      includeTryOrInstall: true,
+    );
     await service.load();
     final pages = service.pages;
     expect(pages, isNotNull);

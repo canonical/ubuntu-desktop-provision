@@ -9,8 +9,7 @@ import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_icons/yaru_icons.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class InstallPage extends ConsumerWidget with ProvisioningPage {
   const InstallPage({super.key});
@@ -212,8 +211,8 @@ class _DonePage extends ConsumerWidget {
               children: [
                 MarkdownBody(
                   data: isCoreDesktop
-                      ? lang.rebootToConfigure(model.productInfo)
-                      : lang.readyToUse(model.productInfo),
+                      ? lang.rebootToConfigure(model.productInfo.toString())
+                      : lang.readyToUse(model.productInfo.toString()),
                   styleSheet: MarkdownStyleSheet(
                     p: Theme.of(context).textTheme.titleLarge,
                   ),

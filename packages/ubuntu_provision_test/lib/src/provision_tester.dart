@@ -3,8 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 extension UbuntuProvisionPageTester on WidgetTester {
   Future<void> testLocalePage({
@@ -26,6 +26,26 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await tap(tile);
       await pump();
     }
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
+  Future<void> testAccessibilityPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(AccessibilityPage);
+
+    final context = element(find.byType(AccessibilityPage));
+    final l10n = UbuntuProvisionLocalizations.of(context);
+
+    expect(
+      find.titleBar(l10n.accessibilityPageTitle('Ubuntu')),
+      findsOneWidget,
+    );
+
     await pumpAndSettle();
 
     if (screenshot != null) {

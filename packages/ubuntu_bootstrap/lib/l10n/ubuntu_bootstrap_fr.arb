@@ -126,8 +126,6 @@
   "@chooseSecurityKeyHint": {},
   "chooseSecurityKeyConfirmHint": "Confirmer le code de sécurité",
   "@chooseSecurityKeyConfirmHint": {},
-  "installationTypeLVM": "Utiliser LVM pour la nouvelle installation d’{RELEASE}",
-  "@installationTypeLVM": {},
   "installationTypeReinstall": "Supprimer {os} et réinstaller",
   "@installationTypeReinstall": {
     "type": "text",

@@ -57,7 +57,7 @@ theme:
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
 
-# (Optional) Override a page's image asset.
+# (Optional) Override a page's image asset and whether they should be shown or not.
 # Images expected in /usr/share/desktop-provision/images/<image-name>
 #
 # Bootstrap pages:
@@ -73,7 +73,7 @@ theme:
 # - not-enough-disk-space: Notifies if there is insufficient disk space
 # - secure-boot: Handles secure boot
 # - storage: Select target disk and partition
-# - identity: Create the first-user account (only displaed if mode = default)
+# - identity: Create the first-user account (only displayed if mode = default)
 # - confirm: A summary of the installation and confirmation button to start the install
 #
 # Init pages (for oem only)
@@ -82,9 +82,12 @@ theme:
 # - privacy: Enable location services
 # - timezone: Set the timezone
 # - telemetry: Enable sending telemetry
+#
+# Do note that currently only accessibility, try-or-install, refresh and source-selection can be hidden.
 pages:
   <page-name>:
     image: <image-name>
+    visible: <bool>
 ```
 
 ### Custom Slides
@@ -124,8 +127,8 @@ https://github.com/canonical/ubuntu-desktop-provision/tree/main/packages/ubuntu_
 ### Frontend
 
 The UI is written in [Flutter](https://flutter.dev/) and consists of multiple Dart/Flutter packages contained in `packages/`. The most important ones are:
-* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap built from the `bootstrap-snap` branch and replaces the `ubuntu-desktop-installer`.
-* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap built from the `init-snap` branch and serves as a replacement for `gnome-initial-setup`.
+* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap built from the `ci/bootstrap` branch and replaces the `ubuntu-desktop-installer`.
+* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap built from the `ci/init` branch and serves as a replacement for `gnome-initial-setup`.
 * `ubuntu_provision` - Flutter package that contains shared code and pages used by both `ubuntu_bootstrap` and `ubuntu_init`.
 * `ubuntu_wizard` - Flutter package that provides the common wizard-style UI framework.
 * `subiquity_client` and `provd_client` - Dart packages that provide a client library for the different backends.

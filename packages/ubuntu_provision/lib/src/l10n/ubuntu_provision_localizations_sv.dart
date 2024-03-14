@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Att ansluta den här datorn till internet hjälper Ubuntu att installera all extra programvara som behövs och hjälpa dig att välja din tidszon.\n\nAnslut med Ethernet-kabel eller välj ett Wi-Fi-nätverk';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Använd trådbunden anslutning';
 
   @override

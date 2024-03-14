@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 import 'test_accessibility.dart';
 

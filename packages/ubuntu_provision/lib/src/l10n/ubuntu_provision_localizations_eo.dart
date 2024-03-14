@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Konektado de ĉi tiu komputilo al Interreto helpos Ubuntu instali ajnajn kromajn programojn bezonatajn kaj helpos vin elekti vian horzonon.\n\nKonektu per Eterreta kablo, aŭ elektu sendratan reton.';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Uzi dratan konekton';
 
   @override

@@ -6,7 +6,7 @@ import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/timezone/timezone_l10n.dart';
 import 'package:ubuntu_provision/src/timezone/timezone_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/38
 class TimezonePage extends ConsumerWidget with ProvisioningPage {
@@ -113,7 +113,7 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(onNext: ref.read(timezoneModelProvider).save),
         ],

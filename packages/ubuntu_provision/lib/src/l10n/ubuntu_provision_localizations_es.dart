@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Conectar este equipo a Internet ayudará a Ubuntu a instalar cualquier software adicional necesario y ayudará a elegir su zona horaria.\n\nConectar por cable Ethernet, o elegir una red Wi-Fi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Utilizar conexión por cable';
 
   @override

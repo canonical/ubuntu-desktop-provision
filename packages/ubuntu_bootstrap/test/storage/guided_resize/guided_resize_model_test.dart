@@ -121,7 +121,7 @@ void main() {
 
   test('product info', () {
     final service = MockProductService();
-    when(service.getProductInfo()).thenReturn(ProductInfo(name: 'Foo'));
+    when(service.getProductInfo()).thenReturn(const ProductInfo(name: 'Foo'));
 
     final model = GuidedResizeModel(MockStorageService(), service);
     expect(model.productInfo.name, 'Foo');

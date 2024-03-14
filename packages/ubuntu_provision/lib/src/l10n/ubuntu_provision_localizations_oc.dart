@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connectar aqueste ordenador a internet permetrà a Ubuntu d’installar de logicials suplementaris e de definir vòstre fus orari.\n\nConnectatz un cable Ethernet, o causissètz un ret Wifi';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Utilizar una connexion filara';
 
   @override

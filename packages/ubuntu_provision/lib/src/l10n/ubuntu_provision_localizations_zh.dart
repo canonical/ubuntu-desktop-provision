@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get networkPageHeader => '将这台电脑连接到互联网有助于 Ubuntu 安装所需的任何额外软件并选择您的时区。\n\n通过以太网电缆连接，或选择 Wi-Fi 网络';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => '使用有线连接';
 
   @override

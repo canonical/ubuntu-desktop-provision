@@ -597,6 +597,10 @@ void main() {
         AdJoinResult.UNKNOWN,
       );
     });
+
+    test('restart', () async {
+      expect(client.restart, returnsNormally);
+    });
   });
 
   group('wsl', () {

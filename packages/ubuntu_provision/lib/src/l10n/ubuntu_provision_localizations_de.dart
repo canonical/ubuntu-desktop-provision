@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Die Verbindung des Computers mit dem Internet hilft Ubuntu bei der Installation zusätzlicher Software und bei der Auswahl der Zeitzone.\n\nPer Ethernet-Kabel verbinden oder ein WLAN-Netzwerk auswählen';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => 'Kabelgebundene Verbindung verwenden';
 
   @override

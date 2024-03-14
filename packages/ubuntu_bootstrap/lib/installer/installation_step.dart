@@ -9,13 +9,14 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 enum InstallationStep with RouteName {
   loading(LoadingPage.new, discreteStep: false, wizardStep: false),
   locale(LocalePage.new),
-  accessibility(AccessibilityPage.new),
-  tryOrInstall(TryOrInstallPage.new, discreteStep: false),
+  accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
-  refresh(RefreshPage.new),
-  sourceSelection(SourceSelectionPage.new),
+  refresh(RefreshPage.new, allowedToHide: true),
+  tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
+  autoinstall(AutoinstallPage.new),
+  sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
   secureBoot(SecureBootPage.new),
@@ -30,6 +31,7 @@ enum InstallationStep with RouteName {
     this.pageFactory, {
     this.discreteStep = true,
     this.wizardStep = true,
+    this.allowedToHide = false,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -39,6 +41,9 @@ enum InstallationStep with RouteName {
 
   /// If this is true the page has its own step in the wizard progress bar.
   final bool discreteStep;
+
+  /// Whether the page can be hidden.
+  final bool allowedToHide;
 
   /// Gets all the pages that should be handled by the wizard.
   static Iterable<InstallationStep> get wizardSteps =>
@@ -68,4 +73,7 @@ enum InstallationStep with RouteName {
   static InstallationStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+
+  static Iterable<String> get allowedToHideKeys =>
+      values.where((e) => e.allowedToHide).map((e) => e.name);
 }

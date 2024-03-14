@@ -74,7 +74,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v2
-      - run: melos format
+      - run: melos format:exclude
 
   init-e2e:
     runs-on: ubuntu-22.04
@@ -101,13 +101,13 @@ jobs:
           set -ux
           set +e
           mv provd/example.config.yaml provd/provd.yaml
-          sudo mkdir -p /run/provd
-          sudo chown $USER /run/provd
+          sudo mkdir -p /run/gnome-initial-setup/desktop-provision
+          sudo chown $USER /run/gnome-initial-setup/desktop-provision
           sudo provd/provd &
-          until [ -S /run/provd/provd.sock ]; do
+          until [ -S /run/gnome-initial-setup/desktop-provision/init.socket ]; do
             sleep 1
           done
-          sudo chmod go+rw /run/provd/provd.sock
+          sudo chmod go+rw /run/gnome-initial-setup/desktop-provision/init.socket
 
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/e2e_test.dart
         working-directory: packages/ubuntu_init

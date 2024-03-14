@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"sort"
 	"testing"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services"
@@ -45,8 +46,25 @@ func TestRegisterGRPCServices(t *testing.T) {
 	defer require.NoError(t, err, "Teardown: Stop should not have returned an error, but did")
 
 	got := m.RegisterGRPCServices(context.Background()).GetServiceInfo()
-	want := testutils.LoadWithUpdateFromGoldenYAML(t, got)
-	requireEqualServices(t, want, got)
+
+	// Sort the 'got' map alphabetically by service names and their methods
+	var sortedKeys []string
+	for k := range got {
+		sortedKeys = append(sortedKeys, k)
+	}
+	sort.Strings(sortedKeys)
+	sortedGot := make(map[string]grpc.ServiceInfo)
+	for _, k := range sortedKeys {
+		serviceInfo := got[k]
+		// Sort the methods for each service
+		sort.Slice(serviceInfo.Methods, func(i, j int) bool {
+			return serviceInfo.Methods[i].Name < serviceInfo.Methods[j].Name
+		})
+		sortedGot[k] = serviceInfo
+	}
+
+	want := testutils.LoadWithUpdateFromGoldenYAML(t, sortedGot)
+	requireEqualServices(t, want, sortedGot)
 }
 
 // requireEqualServices asserts that the grpc services were registered as expected.

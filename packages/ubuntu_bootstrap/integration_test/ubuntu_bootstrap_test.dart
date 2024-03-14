@@ -65,6 +65,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -106,6 +110,64 @@ void main() {
     );
   });
 
+  testWidgets('OEM', (tester) async {
+    registerMockService<ConfigService>(
+      FakeConfigService(mode: ProvisioningMode.oem),
+    );
+
+    await tester.runApp(() => app.main(<String>[]));
+    await tester.pumpAndSettle();
+
+    await tester.testLocalePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testAccessibilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testSourceSelectionPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testCodecsAndDriversPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.tapConfirm();
+    await tester.pumpAndSettle();
+
+    await tester.testInstallPage();
+    await tester.pumpAndSettle();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(identity: const Identity());
+  });
+
   testWidgets('LVM Encrypted', (tester) async {
     const identity = Identity(
       realname: 'User',
@@ -136,6 +198,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -151,7 +217,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(securityKey: 'password');
+    await tester.testPassphrasePage(passphrase: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -209,6 +275,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -282,6 +352,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -297,7 +371,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(securityKey: 'password');
+    await tester.testPassphrasePage(passphrase: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -360,6 +434,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -441,6 +519,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -508,6 +590,10 @@ void main() {
 
     await tester.testRefreshPage();
     await tester.tapSkip();
+    await tester.pumpAndSettle();
+
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
@@ -585,6 +671,10 @@ void main() {
     await tester.tapSkip();
     await tester.pumpAndSettle();
 
+    await tester.testAutoinstallPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testSourceSelectionPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -617,11 +707,23 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testKeyboardPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testRefreshPage();
+    await tester.tapSkip();
+    await tester.pumpAndSettle();
+
     await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testKeyboardPage();
+    await tester.testAutoinstallPage();
     await tester.pumpAndSettle();
   });
 
@@ -662,7 +764,10 @@ Future<void> verifySubiquityConfig({
 
   final yaml = loadYaml(File(path).readAsStringSync());
 
-  if (identity != null) {
+  if (identity == const Identity()) {
+    // OEM case: no idendity should be configured
+    expect(yaml['autoinstall']['identity'], isNull);
+  } else if (identity != null) {
     final actualIdentity = yaml['autoinstall']['identity'];
     expect(actualIdentity['hostname'], equals(identity.hostname));
     expect(actualIdentity['realname'], equals(identity.realname));
@@ -756,4 +861,12 @@ class FakeDesktopService implements DesktopService {
 
   @override
   Future<void> close() async {}
+}
+
+class FakeConfigService extends ConfigService {
+  FakeConfigService({this.mode = ProvisioningMode.standard});
+  final ProvisioningMode mode;
+
+  @override
+  Future<ProvisioningMode> get provisioningMode async => mode;
 }

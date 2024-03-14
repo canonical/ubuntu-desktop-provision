@@ -11,10 +11,11 @@ import 'init_model_test.mocks.dart';
 void main() {
   test('configured page array', () async {
     final config = MockPageConfigService();
-    when(config.excludedPages).thenReturn(['c']);
+    when(config.pages).thenReturn(
+      {'a': const PageConfigEntry(), 'b': const PageConfigEntry()},
+    );
 
     final model = InitModel(pageConfig: config);
-    await model.init();
 
     expect(model.hasRoute('a'), isTrue);
     expect(model.hasRoute('/a'), isTrue);
@@ -28,7 +29,6 @@ void main() {
 
   test('launch desktop session', () async {
     final config = MockPageConfigService();
-    when(config.excludedPages).thenReturn([]);
 
     final identity = MockIdentityService();
     when(identity.getIdentity()).thenAnswer(
@@ -45,7 +45,6 @@ void main() {
       identityService: identity,
       gdmService: gdm,
     );
-    await model.init();
     await model.launchDesktopSession();
 
     verify(gdm.init()).called(1);

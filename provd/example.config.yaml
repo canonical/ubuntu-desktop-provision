@@ -1,2 +1,2 @@
 Paths:
-  Socket: "/run/provd/provd.sock"
+  Socket: "/run/gnome-initial-setup/desktop-provision/init.socket"

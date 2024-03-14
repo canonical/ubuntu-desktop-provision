@@ -11,6 +11,8 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
+import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -18,7 +20,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 export 'installer/installer_wizard.dart';
 
@@ -107,6 +109,7 @@ Future<void> runInstallerApp(
     () => PageConfigService(
       config: tryGetService<ConfigService>(),
       includeTryOrInstall: includeTryOrInstall,
+      allowedToHide: InstallationStep.allowedToHideKeys,
     ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
@@ -201,7 +204,7 @@ Future<void> runInstallerApp(
                 rootBundle,
                 package: 'ubuntu_bootstrap',
               ),
-              child: const InstallerWizard(),
+              child: InstallerWizard(key: ValueKey(ref.watch(restartProvider))),
             ),
           );
         },

@@ -10,9 +10,8 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-import 'package:yaru_icons/yaru_icons.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -299,7 +298,7 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('09.security-key', (tester) async {
+  testWidgets('09.passphrase', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
         ], theme: currentTheme));
@@ -315,9 +314,9 @@ Future<void> main() async {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testSecurityKeyPage(
-      securityKey: 'password',
-      screenshot: '$currentThemeName/09.security-key',
+    await tester.testPassphrasePage(
+      passphrase: 'password',
+      screenshot: '$currentThemeName/09.passphrase',
     );
   }, variant: themeVariant);
 
@@ -463,7 +462,8 @@ class FakeDesktopService implements DesktopService {
 
 class FakeProductService implements ProductService {
   @override
-  ProductInfo getProductInfo() => ProductInfo(name: 'Ubuntu', version: '23.04');
+  ProductInfo getProductInfo() =>
+      const ProductInfo(name: 'Ubuntu', version: '23.04');
 
   @override
   String getReleaseNotesURL(String languageCode) =>

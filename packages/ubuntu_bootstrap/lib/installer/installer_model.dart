@@ -5,6 +5,8 @@ import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
+final restartProvider = StateProvider((_) => 0);
+
 final installerModelProvider = ChangeNotifierProvider.autoDispose(
   (_) => InstallerModel(
     getService<InstallerService>(),

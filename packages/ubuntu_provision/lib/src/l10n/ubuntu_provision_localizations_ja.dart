@@ -257,6 +257,9 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'このコンピューターをインターネットに接続すると、必要な追加ソフトウェアのインストールし、タイムゾーンを選択するのを手助けします。\n\nイーサネットケーブルを接続するか、Wi-Fi ネットワークを選択してください';
 
   @override
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+
+  @override
   String get networkWiredOption => '有線接続を使用';
 
   @override

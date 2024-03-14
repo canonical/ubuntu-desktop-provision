@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
-import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_widgets.dart';
+import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 export 'try_or_install_model.dart' show TryOrInstallOption;
 
@@ -58,7 +58,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const PreviousWizardButton(),
+        leading: const BackWizardButton(),
         trailing: [
           WizardButton(
             label: UbuntuLocalizations.of(context).nextLabel,

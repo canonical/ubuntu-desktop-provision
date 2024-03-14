@@ -6,13 +6,10 @@ import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru_icons/yaru_icons.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class RealNameFormField extends ConsumerWidget {
-  const RealNameFormField({required this.fieldWidth, super.key});
-
-  final double? fieldWidth;
+  const RealNameFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +19,6 @@ class RealNameFormField extends ConsumerWidget {
 
     return ValidatedFormField(
       autofocus: true,
-      fieldWidth: fieldWidth,
       labelText: lang.identityRealNameLabel,
       successWidget: const SuccessIcon(),
       initialValue: realName,
@@ -45,9 +41,7 @@ class RealNameFormField extends ConsumerWidget {
 }
 
 class HostnameFormField extends ConsumerWidget {
-  const HostnameFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const HostnameFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -56,9 +50,7 @@ class HostnameFormField extends ConsumerWidget {
         ref.watch(identityModelProvider.select((model) => model.hostname));
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
       labelText: lang.identityHostnameLabel,
-      helperText: lang.identityHostnameInfo,
       successWidget: const SuccessIcon(),
       initialValue: hostname,
       validator: MultiValidator([
@@ -103,9 +95,7 @@ extension UsernameValidationL10n on UsernameValidation {
 }
 
 class UsernameFormField extends ConsumerWidget {
-  const UsernameFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const UsernameFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -117,7 +107,6 @@ class UsernameFormField extends ConsumerWidget {
     final model = ref.read(identityModelProvider);
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
       labelText: lang.identityUsernameLabel,
       successWidget: const SuccessIcon(),
       initialValue: username,
@@ -144,9 +133,7 @@ class UsernameFormField extends ConsumerWidget {
 }
 
 class PasswordFormField extends ConsumerWidget {
-  const PasswordFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const PasswordFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -159,7 +146,6 @@ class PasswordFormField extends ConsumerWidget {
         ref.watch(identityModelProvider.select((model) => model.showPassword));
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
       labelText: lang.identityPasswordLabel,
       obscureText: !showPassword,
       successWidget: PasswordStrengthLabel(strength: passwordStrength),
@@ -181,9 +167,7 @@ class PasswordFormField extends ConsumerWidget {
 }
 
 class ConfirmPasswordFormField extends ConsumerWidget {
-  const ConfirmPasswordFormField({required this.fieldWidth, super.key});
-
-  final double? fieldWidth;
+  const ConfirmPasswordFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -197,9 +181,9 @@ class ConfirmPasswordFormField extends ConsumerWidget {
 
     return ValidatedFormField(
       obscureText: !showPassword,
-      fieldWidth: fieldWidth,
       labelText: lang.identityConfirmPasswordLabel,
-      successWidget: password.isNotEmpty ? const SuccessIcon() : null,
+      successWidget:
+          password.isNotEmpty ? const SuccessIcon() : const SizedBox(),
       initialValue: confirmedPassword,
       autovalidateMode: AutovalidateMode.always,
       validator: EqualValidator(
@@ -250,7 +234,7 @@ class ShowPasswordButton extends StatelessWidget {
                   rtl ? Radius.zero : const Radius.circular(kYaruButtonRadius),
             ),
           ),
-          // avoid increasing the size of the input fied
+          // avoid increasing the size of the input field
           minimumSize: Size.zero,
         ),
         onPressed: () => onChanged(!value),
@@ -286,37 +270,30 @@ class UseActiveDirectoryCheckButton extends ConsumerWidget {
       child: YaruCheckButton(
         value: useActiveDirectory,
         title: Text(lang.identityActiveDirectoryOption),
+        contentPadding: kWizardPadding,
         onChanged: isConnected && (hasActiveDirectorySupport ?? false)
             ? (v) => ref.read(identityModelProvider).useActiveDirectory = v!
             : null,
-        subtitle: Text(
-          lang.identityActiveDirectoryInfo,
-          style: Theme.of(context)
-              .textTheme
-              .bodySmall!
-              .copyWith(color: Theme.of(context).hintColor),
-        ),
       ),
     );
   }
 }
 
-class AutoLoginSwitch extends ConsumerWidget {
-  const AutoLoginSwitch({super.key});
+class AutoLoginCheckButton extends ConsumerWidget {
+  const AutoLoginCheckButton({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = IdentityLocalizations.of(context);
     final autoLogin =
         ref.watch(identityModelProvider.select((model) => model.autoLogin));
-
-    return YaruSwitchButton(
+    return YaruCheckButton(
       title: Text(lang.identityRequirePassword),
       contentPadding: kWizardPadding,
       value: !autoLogin,
       onChanged: (value) {
         final model = ref.read(identityModelProvider);
-        model.autoLogin = !value;
+        model.autoLogin = !(value ?? true);
       },
     );
   }

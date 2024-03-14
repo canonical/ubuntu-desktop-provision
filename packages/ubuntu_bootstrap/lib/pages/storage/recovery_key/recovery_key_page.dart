@@ -5,7 +5,6 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 class RecoveryKeyPage extends StatelessWidget {
   const RecoveryKeyPage({super.key});
@@ -54,7 +53,7 @@ class RecoveryKeyPage extends StatelessWidget {
         ],
       ),
       bottomBar: const WizardBar(
-        leading: PreviousWizardButton(),
+        leading: BackWizardButton(),
         trailing: [
           NextWizardButton(),
         ],

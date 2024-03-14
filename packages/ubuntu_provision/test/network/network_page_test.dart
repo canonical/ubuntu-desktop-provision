@@ -8,8 +8,8 @@ import 'package:ubuntu_provision/src/network/network_page.dart';
 import 'package:ubuntu_provision/src/network/wifi_view.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
 
 import 'test_network.dart';
 
