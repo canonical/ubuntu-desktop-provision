@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
@@ -9,6 +10,7 @@ import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -99,7 +101,11 @@ class _InitAppState extends ConsumerState<_InitApp> {
       locale: ref.watch(localeProvider),
       localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
       supportedLocales: supportedLocales,
-      home: widget.welcome ? const WelcomeWizard() : const InitWizard(),
+      home: DefaultAssetBundle(
+        // TODO(Lukas): Remove this once all the assets are in the ubuntu_provision package.
+        bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
+        child: widget.welcome ? const WelcomeWizard() : const InitWizard(),
+      ),
     );
   }
 }
