@@ -438,7 +438,6 @@
   "@partitionEditTitle": {},
   "partitionSizeLabel": "Розмір:",
   "@partitionSizeLabel": {},
-  "@partitionUnitMB": {},
   "loadingHeader": "Підготовка {DISTRO}…",
   "@loadingHeader": {
     "type": "text",
