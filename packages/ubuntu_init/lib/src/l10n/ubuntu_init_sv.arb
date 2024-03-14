@@ -64,5 +64,7 @@
   "telemetryReportTitle": "Rapporteringsdetaljer",
   "@telemetryReportTitle": {},
   "privacyPolicyLink": "Dataintegritet",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }
