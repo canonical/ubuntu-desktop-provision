@@ -7,6 +7,7 @@ import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_model.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -21,7 +22,7 @@ class TelemetryPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = ref.watch(flavorProvider);
+    final flavor = getService<FlavorService>().flavor;
     final l10n = TelemetryLocalizations.of(context);
     final model = ref.watch(telemetryModelProvider);
     final theme = Theme.of(context);

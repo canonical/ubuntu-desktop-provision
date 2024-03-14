@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -46,8 +47,10 @@ Future<void> runInitApp(
 
     final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
 
-    final flavor = await loadFlavor();
-    providerContainer.read(flavorProvider.notifier).state = flavor;
+    // This needs to be done out of order since it depends on the asset bundle
+    // to be populated.
+    final flavorService = await FlavorService.load();
+    tryRegisterService<FlavorService>(() => flavorService);
 
     runApp(ProviderScope(
       parent: providerContainer,
@@ -57,6 +60,7 @@ Future<void> runInitApp(
         themeVariant: themeVariant,
         windowTitle: windowTitle,
         welcome: welcome,
+        flavor: flavorService.flavor,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
@@ -69,6 +73,7 @@ class _InitApp extends ConsumerWidget {
     required this.themeVariant,
     required this.windowTitle,
     required this.welcome,
+    required this.flavor,
   });
 
   final ThemeData? theme;
@@ -76,11 +81,12 @@ class _InitApp extends ConsumerWidget {
   final ThemeVariant? themeVariant;
   final String? windowTitle;
   final bool welcome;
+  final UbuntuFlavor flavor;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return WizardApp(
-      flavor: ref.read(flavorProvider),
+      flavor: flavor,
       theme: theme ?? themeVariant?.theme,
       darkTheme: darkTheme ?? themeVariant?.darkTheme,
       onGenerateTitle: (_) => windowTitle ?? '',

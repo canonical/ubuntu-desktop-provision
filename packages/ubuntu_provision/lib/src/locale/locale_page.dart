@@ -15,7 +15,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = ref.watch(flavorProvider);
+    final flavor = getService<FlavorService>().flavor;
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
 

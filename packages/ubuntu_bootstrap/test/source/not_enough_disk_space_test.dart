@@ -15,6 +15,8 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'test_source.dart';
 
 void main() {
+  setUpAll(registerFlavorMock);
+
   testWidgets('enough disk space', (tester) async {
     await tester.buildSourceWizard(hasEnoughDiskSpace: true);
 

@@ -12,6 +12,8 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_source.dart';
 
 void main() {
+  setUpAll(registerFlavorMock);
+
   testWidgets('install drivers', (tester) async {
     final model = buildSourceModel(installDrivers: true);
     await tester.pumpApp((_) => buildCodecsAndDriversPage(model));

@@ -25,6 +25,7 @@ import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
+import 'test_utils.dart' as test_utils;
 import 'welcome/test_welcome.dart';
 
 void main() {
@@ -32,6 +33,7 @@ void main() {
 
   setUp(() {
     YaruTestWindow.ensureInitialized(state: const YaruWindowState());
+    test_utils.registerFlavorMock();
     setupMockPageConfig();
     registerMockService<ThemeVariantService>(MockThemeVariantService());
   });

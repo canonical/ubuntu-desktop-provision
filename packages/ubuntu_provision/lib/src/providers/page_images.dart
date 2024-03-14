@@ -14,7 +14,7 @@ import 'package:yaru/theme.dart';
 
 final pageImagesProvider = Provider((ref) {
   final brightness = ref.watch(brightnessProvider);
-  final flavor = ref.watch(flavorProvider);
+  final flavor = getService<FlavorService>().flavor;
   return PageImages(brightness: brightness, flavor: flavor);
 });
 

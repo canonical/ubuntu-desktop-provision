@@ -47,6 +47,7 @@ import 'secure_boot/test_secure_boot.dart';
 import 'source/not_enough_disk_space/test_not_enough_disk_space.dart';
 import 'source/test_source.dart';
 import 'storage/test_storage.dart';
+import 'test_utils.dart' as test_utils;
 import 'try_or_install/test_try_or_install.dart';
 
 void main() {
@@ -57,6 +58,7 @@ void main() {
     YaruTestWindow.ensureInitialized(state: const YaruWindowState());
     registerMockService<ThemeVariantService>(MockThemeVariantService());
     registerMockService<TelemetryService>(MockTelemetryService());
+    test_utils.registerFlavorMock();
   });
 
   testWidgets('try ubuntu', (tester) async {

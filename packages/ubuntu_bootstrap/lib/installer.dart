@@ -16,6 +16,7 @@ import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -77,11 +78,11 @@ Future<void> runInstallerApp(
   final baseName = p.basename(Platform.resolvedExecutable);
 
   // conditional registration if not already registered by flavors or tests
+  tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<ActiveDirectoryService>(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(ConfigService.new);
-  tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<IdentityService>(() => SubiquityIdentityService(
@@ -168,7 +169,10 @@ Future<void> runInstallerApp(
     final configService = getService<ConfigService>();
     final windowTitle = await configService.get<String>('app-name');
 
-    providerContainer.read(flavorProvider.notifier).state = await loadFlavor();
+    // This needs to be done out of order since it depends on the asset bundle
+    // to be populated.
+    final flavorService = await FlavorService.load();
+    tryRegisterService<FlavorService>(() => flavorService);
 
     final endpoint = await initialized;
     await _initInstallerApp(endpoint);
@@ -180,6 +184,7 @@ Future<void> runInstallerApp(
         darkTheme: darkTheme,
         themeVariant: themeVariant,
         windowTitle: windowTitle,
+        flavor: flavorService.flavor,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
@@ -191,23 +196,23 @@ class _InstallerApp extends ConsumerWidget {
     required this.darkTheme,
     required this.themeVariant,
     required this.windowTitle,
+    required this.flavor,
   });
 
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final ThemeVariant? themeVariant;
   final String? windowTitle;
+  final UbuntuFlavor flavor;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return WizardApp(
-      flavor: ref.watch(flavorProvider),
+      flavor: flavor,
       theme: theme ?? themeVariant?.theme,
       darkTheme: darkTheme ?? themeVariant?.darkTheme,
       onGenerateTitle: (context) {
         if (windowTitle != null) return windowTitle!;
-
-        final flavor = ref.watch(flavorProvider);
         return UbuntuBootstrapLocalizations.of(context)
             .windowTitle(flavor.displayName);
       },

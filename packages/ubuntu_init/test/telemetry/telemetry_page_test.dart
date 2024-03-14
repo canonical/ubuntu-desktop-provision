@@ -14,6 +14,8 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_telemetry.dart';
 
 void main() {
+  setUpAll(registerFlavorMock);
+
   Widget buildPage(TelemetryModel model) {
     return ProviderScope(
       overrides: [

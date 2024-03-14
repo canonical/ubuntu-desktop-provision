@@ -13,6 +13,7 @@ import 'test_locale.dart';
 void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
+    registerFlavorMock();
   });
 
   testWidgets('should display a list of languages', (tester) async {

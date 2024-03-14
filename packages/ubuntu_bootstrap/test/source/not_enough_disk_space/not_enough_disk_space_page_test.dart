@@ -9,7 +9,10 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_not_enough_disk_space.dart';
 
 void main() {
-  setUpAll(YaruTestWindow.ensureInitialized);
+  setUpAll(() {
+    YaruTestWindow.ensureInitialized();
+    registerFlavorMock();
+  });
 
   Widget buildPage(NotEnoughDiskSpaceModel model) {
     return ProviderScope(
