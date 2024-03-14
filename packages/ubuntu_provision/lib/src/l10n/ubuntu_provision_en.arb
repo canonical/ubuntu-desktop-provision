@@ -205,5 +205,13 @@
   "networkHiddenWifiNameRequired": "A network name is required",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "I don't want to connect to the internet just now",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "eulaPageTitle": "License agreement",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Review the license terms",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the license agreement terms.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "I have read and accept these terms",
+  "@eulaAcceptTerms": {}
 }

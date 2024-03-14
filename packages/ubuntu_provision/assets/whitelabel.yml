@@ -20,6 +20,8 @@ pages:
   secure-boot:
   storage:
     image: "assets/images/disk.svg"
+  eula:
+    image: "assets/images/keyboard.svg"
   confirm:
   identity:
   ubuntu-pro:
