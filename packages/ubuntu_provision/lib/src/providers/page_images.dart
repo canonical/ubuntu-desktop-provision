@@ -5,14 +5,17 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:path/path.dart' as path;
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/theme.dart';
 
 final pageImagesProvider = Provider((ref) {
   final brightness = ref.watch(brightnessProvider);
-  return PageImages(brightness: brightness);
+  final flavor = ref.watch(flavorProvider);
+  return PageImages(brightness: brightness, flavor: flavor);
 });
 
 final _log = Logger('page_images');
@@ -23,8 +26,13 @@ final _log = Logger('page_images');
 /// `precacheImage` requires the `BuildContext`, which we didn't want to pass
 /// in here.
 class PageImages {
-  factory PageImages({required Brightness brightness}) {
-    _instance._brightness = brightness;
+  factory PageImages({
+    required Brightness brightness,
+    required UbuntuFlavor flavor,
+  }) {
+    _instance
+      .._brightness = brightness
+      .._flavor = flavor;
     return _instance;
   }
 
@@ -34,7 +42,9 @@ class PageImages {
     this.themeVariantService, {
     this.filesystem = const LocalFileSystem(),
     Brightness brightness = Brightness.light,
-  }) : _brightness = brightness;
+    UbuntuFlavor flavor = UbuntuFlavor.ubuntu,
+  })  : _brightness = brightness,
+        _flavor = flavor;
 
   static final PageImages _instance = PageImages.internal(
     getService<PageConfigService>(),
@@ -48,6 +58,7 @@ class PageImages {
   Brightness _brightness;
   bool get isDarkMode => _brightness == Brightness.dark;
   final String _darkModePrefix = 'dark_';
+  UbuntuFlavor _flavor;
 
   @visibleForTesting
   SvgFileLoader Function(
@@ -166,8 +177,11 @@ class PageImages {
 
   Color? _accentColor({bool darkMode = false}) => darkMode
       ? themeVariantService.themeVariant?.darkTheme?.primaryColor ??
-          themeVariantService.themeVariant?.theme?.primaryColor
-      : themeVariantService.themeVariant?.theme?.primaryColor;
+          themeVariantService.themeVariant?.theme?.primaryColor ??
+          _flavor.darkTheme?.primaryColor ??
+          _flavor.theme?.primaryColor
+      : themeVariantService.themeVariant?.theme?.primaryColor ??
+          _flavor.theme?.primaryColor;
 
   bool get _hasUniqueAccentColors =>
       themeVariantService.themeVariant?.darkTheme?.primaryColor !=
