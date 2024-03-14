@@ -36,6 +36,8 @@ Future<void> registerFakeInitServices({
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
+  registerService<AccessibilityService>(
+      () => ProvdAccessibilityService(client: _FakeProvdAccessibilityClient()));
   registerService<IdentityService>(
       () => ProvdIdentityService(client: FakeProvdUserClient()));
   registerService<KeyboardService>(
@@ -322,4 +324,96 @@ class FakePrivacyService implements PrivacyService {
 
   @override
   Future<void> setLocationEnabled(bool value) async {}
+}
+
+class _FakeProvdAccessibilityClient implements provd.ProvdAccessibilityClient {
+  @override
+  Future<bool> getHighContrast() async => false;
+
+  @override
+  Future<void> enableHighContrast() async {}
+
+  @override
+  Future<void> disableHighContrast() async {}
+
+  @override
+  Future<bool> getLargeText() async => false;
+
+  @override
+  Future<void> enableLargeText() async {}
+
+  @override
+  Future<void> disableLargeText() async {}
+
+  @override
+  Future<bool> getScreenReader() async => false;
+
+  @override
+  Future<void> enableScreenReader() async {}
+
+  @override
+  Future<void> disableScreenReader() async {}
+
+  @override
+  Future<bool> getVisualAlerts() async => false;
+
+  @override
+  Future<void> enableVisualAlerts() async {}
+
+  @override
+  Future<void> disableVisualAlerts() async {}
+
+  @override
+  Future<bool> getReducedMotion() async => false;
+
+  @override
+  Future<void> enableReducedMotion() async {}
+
+  @override
+  Future<void> disableReducedMotion() async {}
+
+  @override
+  Future<bool> getScreenKeyboard() async => false;
+
+  @override
+  Future<void> enableScreenKeyboard() async {}
+
+  @override
+  Future<void> disableScreenKeyboard() async {}
+
+  @override
+  Future<bool> getStickyKeys() async => false;
+
+  @override
+  Future<void> enableStickyKeys() async {}
+
+  @override
+  Future<void> disableStickyKeys() async {}
+
+  @override
+  Future<bool> getSlowKeys() async => false;
+
+  @override
+  Future<void> enableSlowKeys() async {}
+
+  @override
+  Future<void> disableSlowKeys() async {}
+
+  @override
+  Future<bool> getMouseKeys() async => false;
+
+  @override
+  Future<void> enableMouseKeys() async {}
+
+  @override
+  Future<void> disableMouseKeys() async {}
+
+  @override
+  Future<bool> getDesktopZoom() async => false;
+
+  @override
+  Future<void> enableDesktopZoom() async {}
+
+  @override
+  Future<void> disableDesktopZoom() async {}
 }

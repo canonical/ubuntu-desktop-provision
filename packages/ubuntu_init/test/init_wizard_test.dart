@@ -16,6 +16,7 @@ import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 // TODO: move to shared packages
+import '../../ubuntu_provision/test/accessibility/test_accessibility.dart';
 import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
@@ -36,6 +37,7 @@ void main() {
   testWidgets('init', (tester) async {
     final initModel = buildInitModel();
     final localeModel = buildLocaleModel();
+    final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
     final ethernetModel = buildEthernetModel();
@@ -51,6 +53,7 @@ void main() {
         overrides: [
           initModelProvider.overrideWith((_) => initModel),
           localeModelProvider.overrideWith((_) => localeModel),
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
           ethernetModelProvider.overrideWith((_) => ethernetModel),
@@ -71,6 +74,11 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(AccessibilityPage), findsOneWidget);
+    verify(accessibilityModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

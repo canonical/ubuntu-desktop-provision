@@ -4,6 +4,7 @@ import 'package:sysmetrics/sysmetrics.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/services/gdm_service.dart';
+import 'package:ubuntu_init/src/services/provd_accessibility_service.dart';
 import 'package:ubuntu_init/src/services/provd_identity_service.dart';
 import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
 import 'package:ubuntu_init/src/services/provd_locale_service.dart';
@@ -20,6 +21,7 @@ export 'package:sysmetrics/sysmetrics.dart' show Sysmetrics;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
 
 export 'services/gdm_service.dart';
+export 'services/provd_accessibility_service.dart';
 export 'services/provd_identity_service.dart';
 export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';
@@ -41,6 +43,7 @@ Future<void> registerInitServices(List<String> args) {
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
+  tryRegisterService<AccessibilityService>(ProvdAccessibilityService.new);
   tryRegisterService<ConfigService>(ConfigService.new);
   tryRegisterService<GdmService>(GdmService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
