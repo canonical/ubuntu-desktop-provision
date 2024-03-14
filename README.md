@@ -83,7 +83,7 @@ theme:
 # - timezone: Set the timezone
 # - telemetry: Enable sending telemetry
 #
-# Do note that only some non-mandatory pages offer the possibility to be hidden.
+# Do note that currently only accessibility, try-or-install, refresh and source-selection can be hidden.
 pages:
   <page-name>:
     image: <image-name>
