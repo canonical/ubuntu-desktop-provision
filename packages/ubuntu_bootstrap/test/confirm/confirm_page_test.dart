@@ -3,11 +3,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
+import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+import '../source/test_source.dart';
+import '../storage/test_storage.dart';
 import 'test_confirm.dart';
 
 final testDisks = <Disk>[
@@ -75,12 +77,29 @@ final testDisks = <Disk>[
 ];
 
 void main() {
-  testWidgets('list of disks and partitions', (tester) async {
-    final model = buildConfirmModel(disks: testDisks, partitions: {
+  setUp(() {
+    registerMockService<PageConfigService>(MockPageConfigService());
+  });
+
+  testWidgets('general summary', (tester) async {
+    final confirm = buildConfirmModel(disks: testDisks, partitions: {
       testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
       testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
     });
-    await tester.pumpApp((_) => buildConfirmPage(model));
+    final storage = buildStorageModel();
+    final source = buildSourceModel();
+    await tester.pumpApp(
+      (_) => buildConfirmPage(
+        confirm: confirm,
+        storage: storage,
+        source: source,
+      ),
+    );
+
+    final context = tester.element(find.byType(ConfirmPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.text(l10n.installationTypeErase('Ubuntu')), findsOneWidget);
 
     for (final disk in testDisks) {
       expect(find.byKey(ValueKey(disk)), findsOneWidget);
@@ -89,16 +108,46 @@ void main() {
         expect(find.byKey(ValueKey(partition)), findsOneWidget);
       }
     }
+
+    expect(find.text(l10n.fullInstallationTitle), findsOneWidget);
+  });
+
+  testWidgets('security and more summary', (tester) async {
+    final confirm =
+        buildConfirmModel(guidedCapability: GuidedCapability.LVM_LUKS);
+    final storage = buildStorageModel();
+    final source = buildSourceModel(installDrivers: true);
+    await tester.pumpApp(
+      (_) => buildConfirmPage(
+        confirm: confirm,
+        storage: storage,
+        source: source,
+      ),
+    );
+
+    final context = tester.element(find.byType(ConfirmPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.text(l10n.confirmDiskEncryptionLVM), findsOneWidget);
+    expect(find.text(l10n.confirmProprietarySoftwareDrivers), findsOneWidget);
   });
 
   testWidgets('partition change summary', (tester) async {
-    final model = buildConfirmModel(disks: testDisks, partitions: {
+    final confirm = buildConfirmModel(disks: testDisks, partitions: {
       testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
       testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
     }, originals: {
       'sdb': [const Partition(number: 6, size: 123)],
     });
-    await tester.pumpApp((_) => buildConfirmPage(model));
+    final storage = buildStorageModel();
+    final source = buildSourceModel();
+    await tester.pumpApp(
+      (_) => buildConfirmPage(
+        confirm: confirm,
+        storage: storage,
+        source: source,
+      ),
+    );
 
     final context = tester.element(find.byType(ConfirmPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -116,8 +165,16 @@ void main() {
   });
 
   testWidgets('starts installation', (tester) async {
-    final model = buildConfirmModel();
-    await tester.pumpApp((_) => buildConfirmPage(model));
+    final confirm = buildConfirmModel();
+    final storage = buildStorageModel();
+    final source = buildSourceModel();
+    await tester.pumpApp(
+      (_) => buildConfirmPage(
+        confirm: confirm,
+        storage: storage,
+        source: source,
+      ),
+    );
 
     final context = tester.element(find.byType(ConfirmPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -126,10 +183,10 @@ void main() {
     expect(installButton, findsOneWidget);
 
     await tester.tap(installButton);
-    verifyNever(model.startInstallation());
+    verifyNever(confirm.startInstallation());
 
     await tester.pumpAndSettle(kThemeAnimationDuration);
-    verify(model.markNetworkConfigured()).called(1);
-    verify(model.startInstallation()).called(1);
+    verify(confirm.markNetworkConfigured()).called(1);
+    verify(confirm.startInstallation()).called(1);
   });
 }
