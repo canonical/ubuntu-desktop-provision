@@ -9,6 +9,7 @@ import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import '../source/test_source.dart';
+import '../storage/bitlocker/test_bitlocker.dart';
 import '../storage/test_storage.dart';
 import 'test_confirm.dart';
 
@@ -79,6 +80,7 @@ final testDisks = <Disk>[
 void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
   });
 
   testWidgets('general summary', (tester) async {
