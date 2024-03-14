@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -26,6 +25,7 @@ Future<void> runInitApp(
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
+    final providerContainer = ProviderContainer();
 
     log.debug('Initializing YaruWindowTitleBar');
     await YaruWindowTitleBar.ensureInitialized();
@@ -47,27 +47,27 @@ Future<void> runInitApp(
     final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
 
     final flavor = await loadFlavor();
+    providerContainer.read(flavorProvider.notifier).state = flavor;
 
     runApp(ProviderScope(
+      parent: providerContainer,
       child: _InitApp(
         theme: theme,
         darkTheme: darkTheme,
         themeVariant: themeVariant,
         windowTitle: windowTitle,
-        flavor: flavor,
         welcome: welcome,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
 }
 
-class _InitApp extends ConsumerStatefulWidget {
+class _InitApp extends ConsumerWidget {
   const _InitApp({
     required this.theme,
     required this.darkTheme,
     required this.themeVariant,
     required this.windowTitle,
-    required this.flavor,
     required this.welcome,
   });
 
@@ -75,36 +75,22 @@ class _InitApp extends ConsumerStatefulWidget {
   final ThemeData? darkTheme;
   final ThemeVariant? themeVariant;
   final String? windowTitle;
-  final UbuntuFlavor flavor;
   final bool welcome;
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() {
-    return _InitAppState();
-  }
-}
-
-class _InitAppState extends ConsumerState<_InitApp> {
-  @override
-  void initState() {
-    super.initState();
-    ref.read(flavorProvider.notifier).state = widget.flavor;
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return WizardApp(
-      flavor: widget.flavor,
-      theme: widget.theme ?? widget.themeVariant?.theme,
-      darkTheme: widget.darkTheme ?? widget.themeVariant?.darkTheme,
-      onGenerateTitle: (_) => widget.windowTitle ?? '',
+      flavor: ref.read(flavorProvider),
+      theme: theme ?? themeVariant?.theme,
+      darkTheme: darkTheme ?? themeVariant?.darkTheme,
+      onGenerateTitle: (_) => windowTitle ?? '',
       locale: ref.watch(localeProvider),
       localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
       supportedLocales: supportedLocales,
       home: DefaultAssetBundle(
         // TODO(Lukas): Remove this once all the assets are in the ubuntu_provision package.
         bundle: ProxyAssetBundle(rootBundle, package: 'ubuntu_init'),
-        child: widget.welcome ? const WelcomeWizard() : const InitWizard(),
+        child: welcome ? const WelcomeWizard() : const InitWizard(),
       ),
     );
   }

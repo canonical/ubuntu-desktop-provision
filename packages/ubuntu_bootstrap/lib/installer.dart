@@ -16,7 +16,6 @@ import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -157,6 +156,7 @@ Future<void> runInstallerApp(
     FlutterError.onError = (error) {
       log.error('Unhandled exception', error.exception, error.stack);
     };
+    final providerContainer = ProviderContainer();
 
     final window = await YaruWindow.ensureInitialized();
     await window.onClose(_closeInstallerApp);
@@ -168,57 +168,44 @@ Future<void> runInstallerApp(
     final configService = getService<ConfigService>();
     final windowTitle = await configService.get<String>('app-name');
 
-    final flavor = await loadFlavor();
+    providerContainer.read(flavorProvider.notifier).state = await loadFlavor();
 
     final endpoint = await initialized;
     await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
+      parent: providerContainer,
       child: _InstallerApp(
         theme: theme,
         darkTheme: darkTheme,
         themeVariant: themeVariant,
         windowTitle: windowTitle,
-        flavor: flavor,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
 }
 
-class _InstallerApp extends ConsumerStatefulWidget {
+class _InstallerApp extends ConsumerWidget {
   const _InstallerApp({
     required this.theme,
     required this.darkTheme,
     required this.themeVariant,
     required this.windowTitle,
-    required this.flavor,
   });
 
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final ThemeVariant? themeVariant;
   final String? windowTitle;
-  final UbuntuFlavor flavor;
 
   @override
-  _InstallerAppState createState() => _InstallerAppState();
-}
-
-class _InstallerAppState extends ConsumerState<_InstallerApp> {
-  @override
-  void initState() {
-    super.initState();
-    ref.read(flavorProvider.notifier).state = widget.flavor;
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return WizardApp(
-      flavor: widget.flavor,
-      theme: widget.theme ?? widget.themeVariant?.theme,
-      darkTheme: widget.darkTheme ?? widget.themeVariant?.darkTheme,
+      flavor: ref.watch(flavorProvider),
+      theme: theme ?? themeVariant?.theme,
+      darkTheme: darkTheme ?? themeVariant?.darkTheme,
       onGenerateTitle: (context) {
-        if (widget.windowTitle != null) return widget.windowTitle!;
+        if (windowTitle != null) return windowTitle!;
 
         final flavor = ref.watch(flavorProvider);
         return UbuntuBootstrapLocalizations.of(context)
