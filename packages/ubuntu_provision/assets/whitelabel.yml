@@ -30,6 +30,7 @@ pages:
     image: "assets/images/summary.svg"
   identity:
     image: "assets/images/identity.svg"
+  active-directory:
   ubuntu-pro:
   privacy:
   timezone:
