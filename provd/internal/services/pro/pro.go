@@ -84,34 +84,28 @@ func (e proAPIErrors) ContainsCode(code string) bool {
 
 // ProMagicAttach streams a user code and waits on a contract token from the pro server to preform a magic attach.
 func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMagicAttachServer) error {
-	// Validate request
-	if req == nil {
-		return status.Errorf(codes.InvalidArgument, "request is nil")
-	}
 
 	// Initiate magic attach process
 	response, err := s.proExecutable.Initiate(stream.Context())
-
 	if err != nil {
 		return status.Errorf(codes.Internal, fmt.Sprintf("failed to initiate magic attach: %v", err))
 	}
-
-    if response.Result != "success" {
+	if response.Result != "success" {
 		if response.Errors.ContainsCode("connectivity-error") {
-			return s.sendInitiateResponse(stream, pb.ProMagicAttachResponseType_NETWORK_ERROR, nil)
+			return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_NETWORK_ERROR, nil)
 		}
-		return s.sendInitiateResponse(stream, pb.ProMagicAttachResponseType_UNKNOWN_ERROR, nil)
+		return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_UNKNOWN_ERROR, nil)
 	}
 
 	// Send the user code
-	err = s.sendInitiateResponse(stream, pb.ProMagicAttachResponseType_USER_CODE, &response.Data.Attributes.UserCode)
+	err = s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_USER_CODE, &response.Data.Attributes.UserCode)
 	if err != nil {
 		return err
 	}
 
+	// Wait for user to enter User Code on ubuntu.com/pro/attach
 	var contractToken *string
 	magicToken := &response.Data.Attributes.Token
-	// Wait process may reset if token expires and a new one is generated
 	for {
 		// Wait for magic attach process to complete
 		response, err := s.proExecutable.Wait(stream.Context(), *magicToken)
@@ -119,107 +113,54 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to wait on magic attach: %v", err))
 		}
 
+        // Successfully got the Contract Token
 		if response.Result == "success" {
 			contractToken = response.Data.Attributes.ContractToken
 			break
 		}
 
-		// Check if the code has expired
+		// Failed to get Contract Token
 		if response.Errors.ContainsCode("magic-attach-token-error") {
-			// Initiate magic attach process
+			// Code exparation reached, generate a new user code
 			response, err := s.proExecutable.Initiate(stream.Context())
-
 			if err != nil {
 				return status.Errorf(codes.Internal, fmt.Sprintf("failed to initiate magic attach: %v", err))
 			}
-
 			if response.Result != "success" {
-				// Check if it was a connectivity error
 				if response.Errors.ContainsCode("connectivity-error") {
-					resp := &pb.ProMagicAttachResponse{
-						Type: pb.ProMagicAttachResponseType_NETWORK_ERROR,
-					}
-					if err := stream.Send(resp); err != nil {
-						return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
-					}
-					return nil
+					return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_NETWORK_ERROR, nil)
 				}
-
-				// If not a connectivity error, return unknown error
-				resp := &pb.ProMagicAttachResponse{
-					Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
-				}
-				if err := stream.Send(resp); err != nil {
-					return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
-				}
-				return nil
+				return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_UNKNOWN_ERROR, nil)
 			}
-			// Return the user code
-			userCodeRefreshResponse := &pb.ProMagicAttachResponse{
-				Type:     pb.ProMagicAttachResponseType_REFRESHED_USER_CODE,
-				UserCode: &response.Data.Attributes.UserCode,
-			}
-			if err := stream.Send(userCodeRefreshResponse); err != nil {
-				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send user code response: %v", err))
+			// Send the newly generated user code
+			err = s.sendSteamResponse(stream, *pb.ProMagicAttachResponseType_REFRESHED_USER_CODE.Enum(), &response.Data.Attributes.UserCode)
+			if err != nil {
+				return err
 			}
 			magicToken = &response.Data.Attributes.Token
 			continue
 		}
-		// Check if it was a connectivity error
-		if response.Errors.ContainsCode("connectivity-error") {
-			resp := &pb.ProMagicAttachResponse{
-				Type: pb.ProMagicAttachResponseType_NETWORK_ERROR,
-			}
-			if err := stream.Send(resp); err != nil {
-				return status.Errorf(codes.Internal, fmt.Sprintf("failed to send connectivity error response: %v", err))
-			}
-			return nil
-		}
 
-		// If not a connectivity error, return unknown error
-		resp := &pb.ProMagicAttachResponse{
-			Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
+        // Handle other error cases
+		if response.Errors.ContainsCode("connectivity-error") {
+			return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_NETWORK_ERROR, nil)
 		}
-		if err := stream.Send(resp); err != nil {
-			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
-		}
-		return nil
+		return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_UNKNOWN_ERROR, nil)
 	}
 
-	// Get the contract token
+	// Pro attach the returned Contract Token
 	if contractToken == nil {
 		return status.Errorf(codes.Internal, "contract token not found in response")
 	}
-
-	// Pro attach the token
 	if err := s.proExecutable.Attach(stream.Context(), *contractToken); err != nil {
-		var resp *pb.ProMagicAttachResponse
 		if strings.Contains(err.Error(), "failed to run pro attach") {
-			resp = &pb.ProMagicAttachResponse{
-				Type: pb.ProMagicAttachResponseType_ALREADY_ATTACHED,
-			}
-		} else {
-			resp = &pb.ProMagicAttachResponse{
-				Type: pb.ProMagicAttachResponseType_UNKNOWN_ERROR,
-			}
+			return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_ALREADY_ATTACHED, nil)
 		}
-		if err := stream.Send(resp); err != nil {
-			return status.Errorf(codes.Internal, fmt.Sprintf("failed to send unknown error response: %v", err))
-		}
-		return nil
+		return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_UNKNOWN_ERROR, nil)
 	}
 
 	// Send the final success response
-	successResponse := &pb.ProMagicAttachResponse{
-
-		Type: pb.ProMagicAttachResponseType_SUCCESS,
-	}
-	if err := stream.Send(successResponse); err != nil {
-		return status.Errorf(codes.Internal, fmt.Sprintf("failed to send final success response: %v", err))
-	}
-
-	// Close the stream
-	return nil
+	return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_SUCCESS, nil)
 }
 
 func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
@@ -275,7 +216,7 @@ func (p *proExecutable) Attach(ctx context.Context, token string) error {
 }
 
 // Helper function to send an initiate response and handle errors.
-func (s *Service) sendInitiateResponse(stream pb.ProService_ProMagicAttachServer, respType pb.ProMagicAttachResponseType, userCode *string) error {
+func (s *Service) sendSteamResponse(stream pb.ProService_ProMagicAttachServer, respType pb.ProMagicAttachResponseType, userCode *string) error {
 	resp := &pb.ProMagicAttachResponse{
 		Type: respType,
 	}
