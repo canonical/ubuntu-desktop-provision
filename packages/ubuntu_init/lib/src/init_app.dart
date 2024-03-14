@@ -2,25 +2,20 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 Future<void> runInitApp(
   List<String> args, {
-  String package = 'ubuntu_init',
   ThemeData? theme,
   ThemeData? darkTheme,
-  GenerateAppTitle? onGenerateTitle,
-  Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
-  FutureOr<void> Function()? onDone,
 }) async {
   final exe = p.basename(Platform.resolvedExecutable);
   final log = Logger.setup(path: '/var/log/installer/$exe.log');
@@ -52,31 +47,59 @@ Future<void> runInitApp(
     final flavor = await loadFlavor();
 
     runApp(ProviderScope(
-      child: Consumer(
-        builder: (context, ref, child) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            ref.read(flavorProvider.notifier).state = flavor;
-          });
-          return WizardApp(
-            flavor: flavor,
-            theme: theme ?? themeVariant?.theme,
-            darkTheme: darkTheme ?? themeVariant?.darkTheme,
-            onGenerateTitle: onGenerateTitle ?? (_) => windowTitle ?? '',
-            locale: ref.watch(localeProvider),
-            localizationsDelegates: [
-              ...?localizationsDelegates,
-              ...GlobalUbuntuInitLocalizations.delegates,
-            ],
-            supportedLocales: supportedLocales,
-            home: DefaultAssetBundle(
-              bundle: ProxyAssetBundle(rootBundle, package: package),
-              child: welcome
-                  ? WelcomeWizard(onDone: onDone)
-                  : InitWizard(onDone: onDone),
-            ),
-          );
-        },
+      child: _InitApp(
+        theme: theme,
+        darkTheme: darkTheme,
+        themeVariant: themeVariant,
+        windowTitle: windowTitle,
+        flavor: flavor,
+        welcome: welcome,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
+}
+
+class _InitApp extends ConsumerStatefulWidget {
+  const _InitApp({
+    required this.theme,
+    required this.darkTheme,
+    required this.themeVariant,
+    required this.windowTitle,
+    required this.flavor,
+    required this.welcome,
+  });
+
+  final ThemeData? theme;
+  final ThemeData? darkTheme;
+  final ThemeVariant? themeVariant;
+  final String? windowTitle;
+  final UbuntuFlavor flavor;
+  final bool welcome;
+
+  @override
+  ConsumerState<ConsumerStatefulWidget> createState() {
+    return _InitAppState();
+  }
+}
+
+class _InitAppState extends ConsumerState<_InitApp> {
+  @override
+  void initState() {
+    super.initState();
+    ref.read(flavorProvider.notifier).state = widget.flavor;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return WizardApp(
+      flavor: widget.flavor,
+      theme: widget.theme ?? widget.themeVariant?.theme,
+      darkTheme: widget.darkTheme ?? widget.themeVariant?.darkTheme,
+      onGenerateTitle: (_) => widget.windowTitle ?? '',
+      locale: ref.watch(localeProvider),
+      localizationsDelegates: GlobalUbuntuInitLocalizations.delegates,
+      supportedLocales: supportedLocales,
+      home: widget.welcome ? const WelcomeWizard() : const InitWizard(),
+    );
+  }
 }

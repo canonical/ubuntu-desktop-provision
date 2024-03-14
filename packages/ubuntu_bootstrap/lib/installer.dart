@@ -16,6 +16,7 @@ import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -26,11 +27,8 @@ export 'installer/installer_wizard.dart';
 
 Future<void> runInstallerApp(
   List<String> args, {
-  List<WidgetBuilder>? slides,
   ThemeData? theme,
   ThemeData? darkTheme,
-  GenerateAppTitle? onGenerateTitle,
-  Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates,
 }) async {
   final options = parseCommandLine(args, onPopulateOptions: (parser) {
     parser.addFlag(
@@ -176,41 +174,68 @@ Future<void> runInstallerApp(
     await _initInstallerApp(endpoint);
 
     runApp(ProviderScope(
-      child: Consumer(
-        builder: (context, ref, child) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            ref.read(flavorProvider.notifier).state = flavor;
-          });
-          return WizardApp(
-            flavor: flavor,
-            theme: theme ?? themeVariant?.theme,
-            darkTheme: darkTheme ?? themeVariant?.darkTheme,
-            onGenerateTitle: onGenerateTitle ??
-                (context) {
-                  if (windowTitle != null) return windowTitle;
-
-                  final flavor = ref.watch(flavorProvider);
-                  return UbuntuBootstrapLocalizations.of(context)
-                      .windowTitle(flavor.displayName);
-                },
-            locale: ref.watch(localeProvider),
-            localizationsDelegates: [
-              ...?localizationsDelegates,
-              ...GlobalUbuntuBootstrapLocalizations.delegates,
-            ],
-            supportedLocales: supportedLocales,
-            home: DefaultAssetBundle(
-              bundle: ProxyAssetBundle(
-                rootBundle,
-                package: 'ubuntu_bootstrap',
-              ),
-              child: InstallerWizard(key: ValueKey(ref.watch(restartProvider))),
-            ),
-          );
-        },
+      child: _InstallerApp(
+        theme: theme,
+        darkTheme: darkTheme,
+        themeVariant: themeVariant,
+        windowTitle: windowTitle,
+        flavor: flavor,
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
+}
+
+class _InstallerApp extends ConsumerStatefulWidget {
+  const _InstallerApp({
+    required this.theme,
+    required this.darkTheme,
+    required this.themeVariant,
+    required this.windowTitle,
+    required this.flavor,
+  });
+
+  final ThemeData? theme;
+  final ThemeData? darkTheme;
+  final ThemeVariant? themeVariant;
+  final String? windowTitle;
+  final UbuntuFlavor flavor;
+
+  @override
+  _InstallerAppState createState() => _InstallerAppState();
+}
+
+class _InstallerAppState extends ConsumerState<_InstallerApp> {
+  @override
+  void initState() {
+    super.initState();
+    ref.read(flavorProvider.notifier).state = widget.flavor;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return WizardApp(
+      flavor: widget.flavor,
+      theme: widget.theme ?? widget.themeVariant?.theme,
+      darkTheme: widget.darkTheme ?? widget.themeVariant?.darkTheme,
+      onGenerateTitle: (context) {
+        if (widget.windowTitle != null) return widget.windowTitle!;
+
+        final flavor = ref.watch(flavorProvider);
+        return UbuntuBootstrapLocalizations.of(context)
+            .windowTitle(flavor.displayName);
+      },
+      locale: ref.watch(localeProvider),
+      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+      supportedLocales: supportedLocales,
+      home: DefaultAssetBundle(
+        bundle: ProxyAssetBundle(
+          rootBundle,
+          package: 'ubuntu_bootstrap',
+        ),
+        child: InstallerWizard(key: ValueKey(ref.watch(restartProvider))),
+      ),
+    );
+  }
 }
 
 Future<void> _initInstallerApp(Endpoint endpoint) async {
