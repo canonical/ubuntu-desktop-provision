@@ -57,7 +57,7 @@ func TestProMagicAttach(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
-            // Test setup
+			// Test setup
 			opts := []pro.Option{
 				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate, alreadyAttached: tc.alreadyAttached}),
 			}

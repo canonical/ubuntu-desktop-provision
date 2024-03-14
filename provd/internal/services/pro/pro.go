@@ -84,7 +84,6 @@ func (e proAPIErrors) ContainsCode(code string) bool {
 
 // ProMagicAttach streams a user code and waits on a contract token from the pro server to preform a magic attach.
 func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMagicAttachServer) error {
-
 	// Initiate magic attach process
 	response, err := s.proExecutable.Initiate(stream.Context())
 	if err != nil {
@@ -113,7 +112,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 			return status.Errorf(codes.Internal, fmt.Sprintf("failed to wait on magic attach: %v", err))
 		}
 
-        // Successfully got the Contract Token
+		// Successfully got the Contract Token
 		if response.Result == "success" {
 			contractToken = response.Data.Attributes.ContractToken
 			break
@@ -141,7 +140,7 @@ func (s *Service) ProMagicAttach(req *emptypb.Empty, stream pb.ProService_ProMag
 			continue
 		}
 
-        // Handle other error cases
+		// Handle other error cases
 		if response.Errors.ContainsCode("connectivity-error") {
 			return s.sendSteamResponse(stream, pb.ProMagicAttachResponseType_NETWORK_ERROR, nil)
 		}
