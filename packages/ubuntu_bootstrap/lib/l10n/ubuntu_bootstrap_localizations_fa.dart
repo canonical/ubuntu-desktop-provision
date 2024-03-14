@@ -506,10 +506,43 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'آمادهٔ نصب';
 
   @override
-  String get confirmHeader => 'If you continue, the changes listed below will be written to the disks. You will be able to make further changes manually.';
+  String get confirmHeader => 'Review your choices';
+
+  @override
+  String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
+
+  @override
+  String get confirmDiskEncryptionZFS => 'LUKS (ZFS)';
+
+  @override
+  String get confirmDiskEncryptionTPM => 'TPM';
+
+  @override
+  String get confirmDiskEncryptionNone => 'None';
 
   @override
   String get confirmDevicesTitle => 'افزاره‌ها';
+
+  @override
+  String get confirmEntryApplications => 'Applications';
+
+  @override
+  String get confirmEntryDiskSetup => 'Disk setup';
+
+  @override
+  String get confirmEntryDiskEncryption => 'Disk encryption';
+
+  @override
+  String get confirmEntryInstallationDisk => 'Installation disk';
+
+  @override
+  String get confirmEntryProprietarySoftware => 'Proprietary software';
+
+  @override
+  String get confirmSectionGeneralTitle => 'General';
+
+  @override
+  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
 
   @override
   String get confirmPartitionsTitle => 'افزارها';
@@ -549,6 +582,15 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String confirmPartitionCreate(String sysname) {
     return 'افراز <b>$sysname</b> ایجاد شد';
   }
+
+  @override
+  String get confirmProprietarySoftwareCodecs => 'Codecs';
+
+  @override
+  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+
+  @override
+  String get confirmProprietarySoftwareDrivers => 'Drivers';
 
   @override
   String get confirmInstallButton => 'نصب';

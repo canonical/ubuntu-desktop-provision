@@ -1,10 +1,15 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
-import 'package:ubuntu_provision/interfaces.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
+import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -16,97 +21,60 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
     return ref.read(confirmModelProvider).init().then((_) => true);
   }
 
-  String prettyFormatDisk(Disk disk) {
-    final fullName = <String?>[
-      disk.model,
-      disk.vendor,
-    ].where((p) => p?.isNotEmpty ?? false).join(' ');
-    return '$fullName <b>${disk.sysname}</b>';
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(confirmModelProvider);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.confirmPageTitle),
-      ),
-      header: Text(lang.confirmHeader),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                lang.confirmDevicesTitle,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: kWizardSpacing / 2),
-              Text(lang.confirmPartitionTables)
-            ],
-          ),
-          const SizedBox(height: kWizardSpacing / 2),
-          Flexible(
-            child: YaruBorderContainer(
-              color: Theme.of(context).colorScheme.surface,
-              padding: EdgeInsets.symmetric(
-                horizontal: kWizardPadding.left,
-                vertical: 10,
-              ),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    for (final disk in model.disks)
-                      Html(
-                        data: prettyFormatDisk(disk),
-                        style: {'body': Style(margin: Margins.zero)},
-                        key: ValueKey(disk),
-                      ),
-                  ],
-                ),
-              ),
+    return HorizontalPage(
+      windowTitle: lang.confirmPageTitle,
+      title: lang.confirmHeader,
+      content: YaruBorderContainer(
+        padding: kWizardTilePadding,
+        borderRadius: kWizardBorderRadius,
+        color: Theme.of(context).colorScheme.primaryContainer,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _SummarySection(
+              title: lang.confirmSectionGeneralTitle,
+              entries: {
+                lang.confirmEntryDiskSetup: _DiskSetup(),
+                lang.confirmEntryInstallationDisk: _InstallationDisk(),
+                lang.confirmEntryApplications: _Applications()
+              },
             ),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                lang.confirmPartitionsTitle,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: kWizardSpacing / 2),
-              Text(lang.confirmPartitionChanges),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Flexible(
-            child: YaruBorderContainer(
-              color: Theme.of(context).colorScheme.surface,
-              padding: EdgeInsets.symmetric(
-                  horizontal: kWizardPadding.left, vertical: 10),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    for (final entry in model.partitions.entries)
-                      for (final partition in entry.value)
-                        _PartitionLabel(
-                          entry.key,
-                          partition,
-                          model.getOriginalPartition(
-                              entry.key, partition.number ?? -1),
-                        ),
-                  ],
+            const SizedBox(height: kWizardSpacing),
+            _SummarySection(
+              title: lang.confirmSectionSecurityAndMoreTitle,
+              entries: {
+                lang.confirmEntryDiskEncryption: _DiskEncryption(),
+                lang.confirmEntryProprietarySoftware: Consumer(
+                  builder: (_, ref, __) => _ProprietarySoftware(),
                 ),
-              ),
+              },
             ),
-          ),
-        ],
+            const SizedBox(height: kWizardSpacing),
+            Text(
+              lang.confirmPartitionsTitle,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(height: kWizardSpacing / 2),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (final entry in model.partitions.entries)
+                  for (final partition in entry.value)
+                    _PartitionLabel(
+                      entry.key,
+                      partition,
+                      model.getOriginalPartition(
+                          entry.key, partition.number ?? -1),
+                    ),
+              ],
+            ),
+          ],
+        ),
       ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
@@ -173,6 +141,146 @@ class _PartitionLabel extends StatelessWidget {
     return Html(
       data: formatPartition(context),
       style: {'body': Style(margin: Margins.zero)},
+    );
+  }
+}
+
+class _SummarySection extends StatelessWidget {
+  const _SummarySection({required this.title, required this.entries});
+  final String title;
+  final Map<String, Widget> entries;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        const SizedBox(height: kWizardSpacing / 2),
+        for (final entry in entries.entries)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(entry.key),
+              const Spacer(),
+              Flexible(
+                flex: 2,
+                child: entry.value,
+              ),
+            ],
+          ),
+      ],
+    );
+  }
+}
+
+class _DiskSetup extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    final confirmModel = ref.watch(confirmModelProvider);
+    return Text(
+      switch (ref.watch(storageModelProvider.select((s) => s.type))) {
+        StorageType.alongside => StoragePage.formatAlongside(
+            lang,
+            confirmModel.productInfo,
+            confirmModel.existingOS ?? [],
+          ),
+        StorageType.erase =>
+          lang.installationTypeErase(ref.watch(flavorProvider).displayName),
+        StorageType.manual => lang.installationTypeManual,
+        _ => '',
+      },
+      textAlign: TextAlign.end,
+    );
+  }
+}
+
+class _InstallationDisk extends ConsumerWidget {
+  static String _prettyFormatDisk(Disk disk) {
+    final fullName = <String?>[
+      disk.model,
+      disk.vendor,
+    ].where((p) => p?.isNotEmpty ?? false).join(' ');
+    return '$fullName <b>${disk.sysname}</b>';
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final model = ref.watch(confirmModelProvider);
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        for (final disk in model.disks)
+          Html(
+            data: _prettyFormatDisk(disk),
+            style: {
+              'body': Style(
+                margin: Margins.zero,
+                textAlign: TextAlign.end,
+              )
+            },
+            key: ValueKey(disk),
+          ),
+      ],
+    );
+  }
+}
+
+class _Applications extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    return Text(
+      ref.watch(
+        sourceModelProvider.select((model) =>
+            model.sources
+                .singleWhereOrNull((source) => source.id == model.sourceId)
+                ?.localizedTitle(lang) ??
+            ''),
+      ),
+    );
+  }
+}
+
+class _DiskEncryption extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    final model = ref.watch(confirmModelProvider);
+    return Text(
+      switch (model.guidedCapability) {
+        GuidedCapability.LVM_LUKS => lang.confirmDiskEncryptionLVM,
+        GuidedCapability.ZFS_LUKS_KEYSTORE => lang.confirmDiskEncryptionZFS,
+        GuidedCapability.CORE_BOOT_ENCRYPTED => lang.confirmDiskEncryptionTPM,
+        _ => lang.confirmDiskEncryptionNone,
+      },
+    );
+  }
+}
+
+class _ProprietarySoftware extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    return Text(
+      switch (ref.watch(
+        sourceModelProvider.select((model) => (
+              codecs: model.installCodecs,
+              drivers: model.installDrivers,
+            )),
+      )) {
+        (codecs: true, drivers: true) =>
+          lang.confirmProprietarySoftwareCodecsDrivers,
+        (codecs: true, drivers: false) => lang.confirmProprietarySoftwareCodecs,
+        (codecs: false, drivers: true) =>
+          lang.confirmProprietarySoftwareDrivers,
+        _ => 'None',
+      },
     );
   }
 }

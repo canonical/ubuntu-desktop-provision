@@ -508,6 +508,8 @@ extension on WidgetTester {
     registerMockService<KeyboardService>(keyboardService);
     when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
 
+    registerMockService<PowerService>(MockPowerService());
+
     final refresh = MockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.status(
         RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));

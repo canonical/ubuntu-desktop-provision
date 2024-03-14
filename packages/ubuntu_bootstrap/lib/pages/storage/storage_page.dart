@@ -20,7 +20,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     return ref.read(storageModelProvider.notifier).init().then((_) => true);
   }
 
-  static String _formatAlongside(
+  static String formatAlongside(
     UbuntuBootstrapLocalizations lang,
     ProductInfo info,
     List<OsProber> os,
@@ -60,7 +60,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             _InstallationTypeTile(
               storageType: StorageType.alongside,
               title: Text(
-                _formatAlongside(
+                formatAlongside(
                   lang,
                   model.productInfo,
                   model.existingOS ?? [],

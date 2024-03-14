@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -10,17 +11,24 @@ final confirmModelProvider = ChangeNotifierProvider(
     getService<InstallerService>(),
     getService<StorageService>(),
     getService<NetworkService>(),
+    getService<ProductService>(),
   ),
 );
 
 /// View model for [ConfirmPage].
 class ConfirmModel extends SafeChangeNotifier {
   /// Creates a model with the given installer and storage services.
-  ConfirmModel(this._installer, this._storage, this._network);
+  ConfirmModel(
+    this._installer,
+    this._storage,
+    this._network,
+    this._product,
+  );
 
   final InstallerService _installer;
   final StorageService _storage;
   final NetworkService _network;
+  final ProductService _product;
   List<Disk>? _disks;
   Map<String, List<Partition>>? _partitions;
   Map<String, List<Partition>>? _originals;
@@ -36,6 +44,18 @@ class ConfirmModel extends SafeChangeNotifier {
   Partition? getOriginalPartition(String sysname, int number) {
     return _originals?[sysname]?.firstWhereOrNull((p) => p.number == number);
   }
+
+  /// The selected guided storage target.
+  GuidedStorageTarget? get guidedTarget => _storage.guidedTarget;
+
+  /// The selected guided capability.
+  GuidedCapability? get guidedCapability => _storage.guidedCapability;
+
+  /// The version of the OS.
+  ProductInfo get productInfo => _product.getProductInfo();
+
+  /// A list of existing OS installations or null if not detected.
+  List<OsProber>? get existingOS => _storage.existingOS;
 
   /// Initializes the model.
   Future<void> init() async {
