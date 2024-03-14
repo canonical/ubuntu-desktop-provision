@@ -50,10 +50,10 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<NetworkService>(NetworkService.new);
   tryRegisterService<PageConfigService>(
     () => PageConfigService(
-        config: tryGetService<ConfigService>(),
-        includeTryOrInstall: true,
-        allowedToHide:
-            InitStep.values.where((e) => e.allowedToHide).map((e) => e.route)),
+      config: tryGetService<ConfigService>(),
+      includeTryOrInstall: true,
+      allowedToHide: InitStep.allowedToHideKeys,
+    ),
   );
   tryRegisterService<PrivacyService>(ProvdPrivacyService.new);
   tryRegisterService<ProductService>(ProductService.new);

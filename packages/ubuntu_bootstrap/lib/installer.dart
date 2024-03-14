@@ -109,9 +109,7 @@ Future<void> runInstallerApp(
     () => PageConfigService(
       config: tryGetService<ConfigService>(),
       includeTryOrInstall: includeTryOrInstall,
-      allowedToHide: InstallationStep.values
-          .where((e) => e.allowedToHide)
-          .map((e) => e.route),
+      allowedToHide: InstallationStep.allowedToHideKeys,
     ),
   );
   tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));

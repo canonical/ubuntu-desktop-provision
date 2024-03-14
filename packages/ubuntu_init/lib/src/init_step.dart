@@ -55,6 +55,9 @@ enum InitStep with RouteName {
   static InitStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+
+  static Iterable<String> get allowedToHideKeys =>
+      values.where((e) => e.allowedToHide).map((e) => e.name);
 }
 
 enum WelcomeStep with RouteName {
