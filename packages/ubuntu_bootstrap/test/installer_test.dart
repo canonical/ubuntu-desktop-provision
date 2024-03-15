@@ -20,7 +20,6 @@ void main() {
   setUp(() {
     YaruTestWindow.ensureInitialized();
     setupMockPageConfig();
-    registerFlavorMock();
   });
 
   tearDown(resetAllServices);

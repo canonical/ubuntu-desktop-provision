@@ -9,7 +9,6 @@ void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
     registerMockService<ThemeVariantService>(MockThemeVariantService());
-    registerFlavorMock();
   });
 
   testWidgets('active options', (tester) async {

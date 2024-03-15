@@ -12,10 +12,7 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_install.dart';
 
 void main() {
-  setUpAll(() {
-    YaruTestWindow.ensureInitialized();
-    registerFlavorMock();
-  });
+  setUpAll(YaruTestWindow.ensureInitialized);
 
   Finder findsSlide(String text) {
     return find.descendant(

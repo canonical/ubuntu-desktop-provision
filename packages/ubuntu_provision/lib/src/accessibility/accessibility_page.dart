@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -18,7 +17,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     final lang = UbuntuProvisionLocalizations.of(context);
 
     return HorizontalPage(

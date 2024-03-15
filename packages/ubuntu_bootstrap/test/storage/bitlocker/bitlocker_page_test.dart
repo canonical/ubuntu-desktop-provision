@@ -13,10 +13,7 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_bitlocker.dart';
 
 void main() {
-  setUpAll(() {
-    YaruTestWindow.ensureInitialized();
-    registerFlavorMock();
-  });
+  setUpAll(YaruTestWindow.ensureInitialized);
 
   testWidgets('restart', (tester) async {
     final model = buildBitLockerModel();

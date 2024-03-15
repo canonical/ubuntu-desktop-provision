@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -28,7 +27,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(autoinstallModelProvider);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     return HorizontalPage(
       windowTitle: lang.autoinstallTitle,
       title: lang.autoinstallHeader(flavor.displayName),

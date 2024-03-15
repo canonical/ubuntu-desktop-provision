@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -21,7 +20,7 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(notEnoughDiskSpaceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     return Scaffold(
       body: WizardPage(
         title: YaruWindowTitleBar(

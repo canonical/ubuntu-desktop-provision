@@ -13,8 +13,6 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_storage.dart';
 
 void main() {
-  setUpAll(registerFlavorMock);
-
   Widget buildPage(WidgetTester tester, StorageModel model) {
     final pageImages = PageImages.internal(
       MockPageConfigService(),

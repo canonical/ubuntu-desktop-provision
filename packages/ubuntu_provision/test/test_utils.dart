@@ -7,11 +7,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:timezone_map/timezone_map.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/l10n.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -118,10 +116,4 @@ class FakeAssetBundle extends CachingAssetBundle {
     }
     return ByteData.view(bytes.buffer);
   }
-}
-
-void registerFlavorMock() {
-  return registerMockService<FlavorService>(
-    const FlavorService(UbuntuFlavor.ubuntu),
-  );
 }

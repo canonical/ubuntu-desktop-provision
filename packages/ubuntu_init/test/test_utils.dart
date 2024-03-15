@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -70,9 +69,3 @@ InitModel buildInitModel({List<String>? pages}) {
   UrlLauncher,
 ])
 class _Dummy {} // ignore: unused_element
-
-void registerFlavorMock() {
-  return registerMockService<FlavorService>(
-    const FlavorService(UbuntuFlavor.ubuntu),
-  );
-}

@@ -5,7 +5,6 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -110,9 +109,3 @@ const keyboardSetup = KeyboardSetup(
 );
 
 class MockBuildContext extends Mock implements BuildContext {}
-
-void registerFlavorMock() {
-  return registerMockService<FlavorService>(
-    const FlavorService(UbuntuFlavor.ubuntu),
-  );
-}

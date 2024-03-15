@@ -5,7 +5,6 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -49,7 +48,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,

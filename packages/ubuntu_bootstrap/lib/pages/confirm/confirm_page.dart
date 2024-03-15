@@ -9,7 +9,6 @@ import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -190,8 +189,8 @@ class _DiskSetup extends ConsumerWidget {
             confirmModel.productInfo,
             confirmModel.existingOS ?? [],
           ),
-        StorageType.erase => lang.installationTypeErase(
-            getService<FlavorService>().flavor.displayName),
+        StorageType.erase =>
+          lang.installationTypeErase(ref.watch(flavorProvider).displayName),
         StorageType.manual => lang.installationTypeManual,
         _ => '',
       },

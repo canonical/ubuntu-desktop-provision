@@ -5,10 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_bootstrap/widgets/info_box.dart';
-import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -130,7 +129,7 @@ class TpmOption extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
 
     final target = model
         .getAllTargets()

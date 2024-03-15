@@ -25,7 +25,7 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(sourceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
       windowTitle: lang.codecsAndDriversPageTitle,

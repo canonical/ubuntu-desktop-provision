@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -23,7 +22,7 @@ class LoadingPage extends ConsumerStatefulWidget with ProvisioningPage {
 class _LoadingPageState extends ConsumerState<LoadingPage> {
   @override
   Widget build(BuildContext context) {
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final style = Theme.of(context).textTheme.headlineSmall!;
     return WizardPage(

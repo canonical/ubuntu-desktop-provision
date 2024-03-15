@@ -3,7 +3,6 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -24,7 +23,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     final model = ref.watch(rstModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     return HorizontalPage(

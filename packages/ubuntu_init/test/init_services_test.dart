@@ -4,13 +4,8 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
-import 'test_utils.dart';
-
 void main() {
-  setUpAll(() {
-    TestWidgetsFlutterBinding.ensureInitialized();
-    registerFlavorMock();
-  });
+  setUpAll(TestWidgetsFlutterBinding.ensureInitialized);
 
   tearDown(resetAllServices);
 

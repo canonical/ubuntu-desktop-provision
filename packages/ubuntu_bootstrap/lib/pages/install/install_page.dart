@@ -5,7 +5,6 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -187,7 +186,7 @@ class _DonePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
     final isCoreDesktop =

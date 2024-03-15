@@ -36,7 +36,7 @@ class GuidedReformatPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(guidedReformatModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = getService<FlavorService>().flavor;
+    final flavor = ref.watch(flavorProvider);
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.selectGuidedStoragePageTitle(flavor.displayName)),

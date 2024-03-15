@@ -11,8 +11,6 @@ import '../test_utils.dart';
 import 'test_autoinstall.dart';
 
 void main() {
-  setUpAll(registerFlavorMock);
-
   testWidgets('interactive installation', (tester) async {
     final model = buildAutoinstallModel();
     await tester.pumpApp((_) => buildAutoinstallPage(model));

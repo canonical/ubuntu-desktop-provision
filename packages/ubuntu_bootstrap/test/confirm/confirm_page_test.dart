@@ -80,7 +80,6 @@ void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
     registerMockService<ThemeVariantService>(MockThemeVariantService());
-    registerFlavorMock();
   });
 
   testWidgets('general summary', (tester) async {

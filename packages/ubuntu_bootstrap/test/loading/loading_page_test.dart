@@ -8,8 +8,6 @@ import 'package:ubuntu_provision/services.dart';
 import '../test_utils.dart';
 
 void main() {
-  setUpAll(registerFlavorMock);
-
   testWidgets('init', (tester) async {
     WidgetRef? ref;
 

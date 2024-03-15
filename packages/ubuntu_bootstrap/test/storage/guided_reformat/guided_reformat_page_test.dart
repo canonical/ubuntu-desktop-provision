@@ -13,8 +13,6 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'test_guided_reformat.dart';
 
 void main() {
-  setUpAll(registerFlavorMock);
-
   final testDisks = <Disk>[
     fakeDisk(path: '/dev/sda', size: 12, model: 'SDA', vendor: 'ATA'),
     fakeDisk(path: '/dev/sdb', size: 23, model: 'SDB', vendor: 'ATA'),

@@ -12,10 +12,7 @@ import '../test_utils.dart';
 import 'test_rst.dart';
 
 void main() {
-  setUpAll(() {
-    YaruTestWindow.ensureInitialized();
-    registerFlavorMock();
-  });
+  setUpAll(YaruTestWindow.ensureInitialized);
 
   testWidgets('restart', (tester) async {
     final model = buildRstModel();

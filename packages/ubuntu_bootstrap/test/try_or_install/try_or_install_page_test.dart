@@ -8,10 +8,7 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_try_or_install.dart';
 
 void main() {
-  setUpAll(() {
-    YaruTestWindow.ensureInitialized();
-    registerFlavorMock();
-  });
+  setUpAll(YaruTestWindow.ensureInitialized);
 
   testWidgets('offline', (tester) async {
     final model = buildTryOrInstallModel(isConnected: false);
