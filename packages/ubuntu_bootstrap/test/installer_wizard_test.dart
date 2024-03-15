@@ -120,7 +120,7 @@ void main() {
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.tapNext();
+    await tester.tapClose();
     await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);
