@@ -20,6 +20,7 @@ enum ProMagicAttachResponseType {
     NETWORK_ERROR = 3;
     SUBSCRIPTION_LIMIT_REACHED = 4;
     UNKNOWN_ERROR = 5;
+    ALREADY_ATTACHED = 6;
 }
 
 message ProMagicAttachResponse {

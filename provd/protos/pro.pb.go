@@ -31,6 +31,7 @@ const (
 	ProMagicAttachResponseType_NETWORK_ERROR              ProMagicAttachResponseType = 3
 	ProMagicAttachResponseType_SUBSCRIPTION_LIMIT_REACHED ProMagicAttachResponseType = 4
 	ProMagicAttachResponseType_UNKNOWN_ERROR              ProMagicAttachResponseType = 5
+	ProMagicAttachResponseType_ALREADY_ATTACHED           ProMagicAttachResponseType = 6
 )
 
 // Enum value maps for ProMagicAttachResponseType.
@@ -42,6 +43,7 @@ var (
 		3: "NETWORK_ERROR",
 		4: "SUBSCRIPTION_LIMIT_REACHED",
 		5: "UNKNOWN_ERROR",
+		6: "ALREADY_ATTACHED",
 	}
 	ProMagicAttachResponseType_value = map[string]int32{
 		"USER_CODE":                  0,
@@ -50,6 +52,7 @@ var (
 		"NETWORK_ERROR":              3,
 		"SUBSCRIPTION_LIMIT_REACHED": 4,
 		"UNKNOWN_ERROR":              5,
+		"ALREADY_ATTACHED":           6,
 	}
 )
 
