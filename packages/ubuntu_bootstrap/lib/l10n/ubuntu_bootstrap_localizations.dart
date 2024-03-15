@@ -552,7 +552,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installDriversSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'These drivers are subject to license terms included with their documentation. They are proprietary.'**
+  /// **'Including but not limited to NVIDIA drivers and similar'**
   String get installDriversSubtitle;
 
   /// No description provided for @installCodecsTitle.
@@ -564,7 +564,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installCodecsSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'This software is subject to license terms included with its documentation. Some are proprietary.'**
+  /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
   /// No description provided for @onBatteryWarning.

@@ -189,13 +189,13 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
 
   @override
-  String get installDriversSubtitle => 'These drivers are subject to license terms included with their documentation. They are proprietary.';
+  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
 
   @override
   String get installCodecsTitle => 'Download and install support for additional media formats';
 
   @override
-  String get installCodecsSubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
 
   @override
   String onBatteryWarning(String color) {
