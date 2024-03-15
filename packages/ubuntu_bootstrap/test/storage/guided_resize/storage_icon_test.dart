@@ -1,6 +1,14 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
+import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/providers.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+
+import '../bitlocker/test_bitlocker.dart';
 
 void main() {
   testWidgets('Windows 10', (tester) async {
@@ -29,7 +37,30 @@ void main() {
   });
 
   testWidgets('None', (tester) async {
-    await tester.pumpWidget(const StorageIcon(name: null));
+    await tester.pumpWidget(const StorageIcon());
     expect(find.svg('folder.svg'), findsOneWidget);
+  });
+
+  testWidgets('Custom icon', (tester) async {
+    final mockPageConfigService = MockPageConfigService();
+    when(mockPageConfigService.pages).thenReturn({
+      StorageSteps.guidedResize.name:
+          const PageConfigEntry(image: 'assets/images/ubuntu_storage_icon.svg'),
+    });
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          pageImagesProvider.overrideWithValue(
+            PageImages.internal(
+              mockPageConfigService,
+              MockThemeVariantService(),
+            ),
+          ),
+        ],
+        child: const StorageIcon(useCustomIcon: true),
+      ),
+    );
+    expect(find.svg('ubuntu_storage_icon.svg'), findsOneWidget);
   });
 }
