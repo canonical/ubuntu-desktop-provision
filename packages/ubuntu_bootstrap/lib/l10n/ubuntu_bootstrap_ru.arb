@@ -24,13 +24,13 @@
   "@tryOrInstallReleaseNotesLabel": {},
   "rstTitle": "RST включён",
   "@rstTitle": {},
-  "rstDescription": "Двнный компьютер использует Intel RST (Rapid Storage Technology). Перед тем, как продолжить установку Ubuntu, необходимо отключить RST в Windows.",
+  "rstDescription": "Данный компьютер использует Intel RST (Rapid Storage Technology). Перед тем, как продолжить установку {DISTRO}, необходимо отключить RST в Windows.",
   "@rstDescription": {},
   "rstInstructions": "Для получения справки отсканируйте QR-код на другом устройстве или посетите: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {},
   "changeButtonText": "Изменить",
   "@changeButtonText": {},
-  "configureSecureBootTitle": "Настроить Secure Boot",
+  "configureSecureBootTitle": "Настройте Secure Boot",
   "@configureSecureBootTitle": {},
   "installationTypeOSDetected": "На этом компьютере установлена операционная система {os}. Что вы хотите сделать?",
   "@installationTypeOSDetected": {
@@ -69,7 +69,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "ЭКСПЕРИМЕНТАЛЬНОЕ: Стереть диск и использовать ZFS",
+  "installationTypeZFS": "ЭКСПЕРИМЕНТАЛЬНО: Стереть диск и использовать ZFS",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Установить {product} вместе с {os}",
   "@installationTypeAlongside": {
@@ -81,7 +81,7 @@
   },
   "installationTypeAlongsideInfo": "Документы, музыка и другие личные файлы будут сохранены. Вы сможете выбрать нужную операционную систему для загрузки при каждом запуске компьютера.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManualInfo": "Вы можете создать или изменить разделы самостоятельно, или выбрать для {DISTRO} несколько разделов",
+  "installationTypeManualInfo": "Для опытных пользователей, которым требуется особая настройка дисков.",
   "@installationTypeManualInfo": {},
   "diskHeadersSize": "Размер",
   "@diskHeadersSize": {},
@@ -219,7 +219,7 @@
       "RELEASE": {}
     }
   },
-  "confirmHeader": "Если вы продолжите, перечисленные ниже изменения будут записаны на диски. Дальнейшие изменения вы сможете внести вручную.",
+  "confirmHeader": "Просмотрите свой выбор",
   "@confirmHeader": {},
   "installationTypeMultiOSDetected": "На этом компьютере установлено несколько операционных систем. Что вы хотите сделать?",
   "@installationTypeMultiOSDetected": {},
@@ -251,7 +251,7 @@
   "@secureBootSecurityKeysDontMatch": {},
   "configureSecureBootSecurityKeyRequired": "Требуется ключ безопасности",
   "@configureSecureBootSecurityKeyRequired": {},
-  "updatesOtherSoftwarePageTitle": "Приложения и обновления",
+  "updatesOtherSoftwarePageTitle": "Приложения",
   "@updatesOtherSoftwarePageTitle": {},
   "installationTypeLVMSelected": "Выбран LVM",
   "@installationTypeLVMSelected": {},
@@ -266,7 +266,7 @@
   "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "Выбрана ZFS",
   "@installationTypeZFSSelected": {},
-  "installationTypeManual": "Создание разделов вручную",
+  "installationTypeManual": "Ручная установка",
   "@installationTypeManual": {},
   "installationTypeNone": "Ничего",
   "@installationTypeNone": {},
@@ -290,7 +290,7 @@
   "@installAlongsidePartition": {},
   "installAlongsideAllocateSpace": "Выделить место",
   "@installAlongsideAllocateSpace": {},
-  "installationTypeAlongsideUnknown": "Установите {product} рядом с другими разделами",
+  "installationTypeAlongsideUnknown": "Установить {product} рядом с другими разделами",
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
@@ -378,7 +378,7 @@
   },
   "installationTypeLVMEncryptionSelected": "LVM и шифрование выбраны",
   "@installationTypeLVMEncryptionSelected": {},
-  "showSecurityKey": "Показать ключ безопасности",
+  "showSecurityKey": "Показать",
   "@showSecurityKey": {},
   "installCodecsTitle": "Загрузить и установить поддержку дополнительных медиаформатов",
   "@installCodecsTitle": {},
@@ -436,7 +436,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesAccessibilityTitle": "Доступно для каждого",
+  "installationSlidesAccessibilityTitle": "Доступна для каждого",
   "@installationSlidesAccessibilityTitle": {},
   "notEnoughDiskSpaceUbuntu": "Недостаточно места на диске для установки {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
@@ -480,7 +480,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityLts": "Все выпуски {DISTRO} LTS предоставляют исправления безопасности в течение пяти лет, которые могут быть продлены до десяти лет при подписке на Ubuntu Pro.",
+  "installationSlidesSecurityLts": "Все выпуски {DISTRO} LTS предоставляют исправления безопасности в течение пяти лет, которые могут быть продлены до десяти лет с подпиской Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
@@ -536,7 +536,7 @@
   "@installationSlidesProductivityTitle": {},
   "installationSlidesSupportEnterprise": "Для корпоративных пользователей Canonical предоставляет коммерческую поддержку, чтобы упростить внедрение и безопасное управление Ubuntu на рабочем месте.",
   "@installationSlidesSupportEnterprise": {},
-  "installationSlidesWelcomeTitle": "Быстрый, бесплатный и полный новых возможностей",
+  "installationSlidesWelcomeTitle": "Быстрая, свободная и полная новых возможностей",
   "@installationSlidesWelcomeTitle": {},
   "installationSlidesDevelopmentTitle": "Разрабатывайте с использованием лучшего из открытого исходного кода",
   "@installationSlidesDevelopmentTitle": {},
@@ -778,10 +778,151 @@
   },
   "fullInstallationSubtitle": "Удобный для работы в автономном режиме набор офисных инструментов, утилит, веб-браузера и игр.",
   "@fullInstallationSubtitle": {},
-  "minimalInstallationTitle": "Минимальная установка",
+  "minimalInstallationTitle": "Стандартная установка",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Только самое необходимое, веб-браузер и базовые утилиты.",
+  "minimalInstallationSubtitle": "Только некоторые инструменты, веб-браузер и базовые утилиты.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationTitle": "Полная установка",
-  "@fullInstallationTitle": {}
+  "fullInstallationTitle": "Расширенная установка",
+  "@fullInstallationTitle": {},
+  "choosePassphraseInfoBody": "Если Вы потеряете парольную фразу, Вы потеряете все свои данные.",
+  "@choosePassphraseInfoBody": {},
+  "confirmEntryDiskEncryption": "Шифрование дисков",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Установочный диск",
+  "@confirmEntryInstallationDisk": {},
+  "confirmSectionGeneralTitle": "Общие",
+  "@confirmSectionGeneralTitle": {},
+  "confirmProprietarySoftwareDrivers": "Драйверы",
+  "@confirmProprietarySoftwareDrivers": {},
+  "validate": "Подтвердить",
+  "@validate": {},
+  "rebootToConfigureWarning": "Чтобы продолжить процесс установки, необходимо перезагрузить компьютер.",
+  "@rebootToConfigureWarning": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Нет",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Приложения",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Настройка дисков",
+  "@confirmEntryDiskSetup": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmEntryProprietarySoftware": "Проприетарное ПО",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionSecurityAndMoreTitle": "Безопасность и др.",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Кодеки",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Кодеки и драйверы",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "autoinstallTitle": "Тип установки",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Как вы хотите установить {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Введите URL-адрес autoinstall.yaml.",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Интерактивная установка",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Для пользователей, которые хотят получить пошаговое руководство по установке.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Автоматическая установка",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Что вы хотите сделать с {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Скрыть",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Оптимизируйте свой компьютер",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Установить рекомендованное проприетарное ПО?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "По умолчанию {DISTRO} поставляется без проприетарного программного обеспечения. Установка дополнительного ПО может повысить производительность компьютера.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Обнаружена видеокарта NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Для достижения максимальной производительности графических карт NVIDIA настоятельно рекомендуется установить доп. драйверы.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseTitle": "Парольная фраза диска",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Создание парольной фразы",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Для шифрования файлов необходима парольная фраза. При каждом включении компьютера Вам будет предложено ввести её.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Выберите парольную фразу",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Подтвердите парольную фразу",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Требуется парольная фраза",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Парольные фразы не совпадают",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Обязательно сохраните парольную фразу",
+  "@choosePassphraseInfoHeader": {},
+  "createPassphrase": "Создать парольную фразу",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Подтвердить парольную фразу",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Как вы хотите установить {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Начните с нуля на выбранном диске.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Экспериментально",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Использовать LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Использовать LVM и шифрование",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Стереть диск и использовать ZFS с шифрованием",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "Выбраны ZFS и шифрование",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Это экспериментальная функция. Она может не работать с вашим оборудованием в будущих выпусках {DISTRO}. <a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Начните с нуля на выбранном диске.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** была скопирована на диск",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  }
 }
