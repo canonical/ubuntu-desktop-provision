@@ -143,7 +143,7 @@
   "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
   "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
   "fullInstallationTitle": "Extended selection",
-  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities, web browser and games.",
+  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
   "minimalInstallationTitle": "Default selection",
   "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
   "otherOptions": "Other options",

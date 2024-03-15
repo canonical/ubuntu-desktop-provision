@@ -510,7 +510,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @fullInstallationSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'An offline-friendly selection of office tools, utilities, web browser and games.'**
+  /// **'An offline-friendly selection of office tools, utilities and web browser.'**
   String get fullInstallationSubtitle;
 
   /// No description provided for @minimalInstallationTitle.
