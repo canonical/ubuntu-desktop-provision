@@ -49,11 +49,11 @@ app-name: <string>
 # (Optional) Overrides the theme's accent colors (remember the quotes)
 theme:
   light:
-    accent-color: <color-hex-code> # i.e. "#ff0011"
+    accent-color: <color-hex-code> # i.e. "ff0011"
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
   dark:
-    accent-color: <color-hex-code> # i.e. "#ff0011"
+    accent-color: <color-hex-code> # i.e. "ff0011"
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
 
