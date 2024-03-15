@@ -668,6 +668,10 @@
   "notEnoughDiskSpaceAvailable": "Available:",
   "notEnoughDiskSpaceRequired": "Required:",
   "refreshPageTitle": "Update available",
+  "refreshHeader": "An update is available for the installer",
+  "refreshUpdateNow": "Update now",
+  "refreshInfo": "Update to the latest version for improved reliability and more features.",
+  "refreshReady": "Update ready",
   "refreshCurrent": "The current {snap} version is {version}.",
   "@refreshCurrent": {
     "placeholders": {
@@ -703,7 +707,8 @@
       }
     }
   },
-  "refreshRestart": "Please quit and relaunch the installer.",
+  "refreshRestart": "Please close the installer and relaunch to continue",
+  "refreshCloseLabel": "Close installer",
   "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
   "@refreshSnapPrerequisites": {
     "placeholders": {

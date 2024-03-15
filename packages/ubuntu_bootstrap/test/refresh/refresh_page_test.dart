@@ -52,9 +52,8 @@ void main() {
 
     final context = tester.element(find.byType(RefreshPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    expect(find.textContaining('1.2.3'), findsOneWidget);
     expect(
-      find.button(l10n.refreshInstall('1.2.4')),
+      find.button(l10n.refreshUpdateNow),
       findsOneWidget,
     );
 
@@ -119,8 +118,11 @@ void main() {
     expect(progress, isNotNull);
     expect(progress.value, isZero);
 
+    final context = tester.element(find.byType(RefreshPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
     expect(
-      find.button(find.ul10n((l10n) => l10n.quitLabel)),
+      find.button(l10n.refreshCloseLabel),
       findsOneWidget,
     );
   });
@@ -135,8 +137,11 @@ void main() {
     expect(progress, isNotNull);
     expect(progress.value, isZero);
 
+    final context = tester.element(find.byType(RefreshPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
     expect(
-      find.button(find.ul10n((l10n) => l10n.quitLabel)),
+      find.button(l10n.refreshCloseLabel),
       findsOneWidget,
     );
   });
