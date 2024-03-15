@@ -53,7 +53,6 @@ func TestProMagicAttach(t *testing.T) {
 	}
 
 	for name, tc := range tests {
-		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
@@ -89,6 +88,43 @@ func TestProMagicAttach(t *testing.T) {
 	}
 }
 
+func TestProStatus(t *testing.T) {
+	t.Parallel()
+
+	tests := map[string]struct {
+		// Failure flags
+		failStatus bool
+
+		alreadyAttached bool
+	}{
+		"False returned when the system is not attached":   {},
+		"True returned when the system is aleady attached": {alreadyAttached: true},
+
+		"Error when fails to get a response from status call": {failStatus: true},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			opts := []pro.Option{
+				pro.WithProExecutable(&mockProExecutable{failStatus: tc.failStatus, alreadyAttached: tc.alreadyAttached}),
+			}
+
+			client := newProClient(t, opts...)
+			resp, err := client.ProStatus(context.Background(), &emptypb.Empty{})
+
+			if tc.failStatus {
+				require.Error(t, err, "ProStatus should return an error")
+				return
+			}
+
+			require.NoError(t, err, "ProStatus should not return an error")
+			require.Equal(t, tc.alreadyAttached, resp.Value, "ProStatus returned an unexpected response")
+		})
+	}
+}
+
 func TestProAttach(t *testing.T) {
 	t.Parallel()
 
@@ -104,7 +140,6 @@ func TestProAttach(t *testing.T) {
 	}
 
 	for name, tc := range tests {
-		tc := tc
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
@@ -172,9 +207,11 @@ func TestMain(m *testing.M) {
 type mockProExecutable struct {
 	userCodeRefresh bool
 
-	failInitiate    bool
-	failWait        bool
-	failAttach      bool
+	failInitiate bool
+	failWait     bool
+	failAttach   bool
+	failStatus   bool
+
 	alreadyAttached bool
 
 	networkErrorWait     bool
@@ -281,4 +318,11 @@ func (m *mockProExecutable) Attach(ctx context.Context, token string) error {
 		return errors.New("already attached")
 	}
 	return nil
+}
+
+func (m *mockProExecutable) Status(ctx context.Context) (*bool, error) {
+	if m.failStatus {
+		return nil, errors.New("failed status")
+	}
+	return &m.alreadyAttached, nil
 }

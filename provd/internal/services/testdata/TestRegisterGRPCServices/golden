@@ -132,6 +132,9 @@ pro.ProService:
         - name: ProMagicAttach
           isclientstream: false
           isserverstream: true
+        - name: ProStatus
+          isclientstream: false
+          isserverstream: false
     metadata: protos/pro.proto
 timezone.TimezoneService:
     methods:

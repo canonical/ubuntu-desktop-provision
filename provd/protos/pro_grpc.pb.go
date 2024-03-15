@@ -23,6 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 const (
 	ProService_ProMagicAttach_FullMethodName = "/pro.ProService/ProMagicAttach"
 	ProService_ProAttach_FullMethodName      = "/pro.ProService/ProAttach"
+	ProService_ProStatus_FullMethodName      = "/pro.ProService/ProStatus"
 )
 
 // ProServiceClient is the client API for ProService service.
@@ -31,6 +32,7 @@ const (
 type ProServiceClient interface {
 	ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProService_ProMagicAttachClient, error)
 	ProAttach(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	ProStatus(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
 }
 
 type proServiceClient struct {
@@ -82,12 +84,22 @@ func (c *proServiceClient) ProAttach(ctx context.Context, in *wrapperspb.StringV
 	return out, nil
 }
 
+func (c *proServiceClient) ProStatus(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error) {
+	out := new(wrapperspb.BoolValue)
+	err := c.cc.Invoke(ctx, ProService_ProStatus_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ProServiceServer is the server API for ProService service.
 // All implementations must embed UnimplementedProServiceServer
 // for forward compatibility
 type ProServiceServer interface {
 	ProMagicAttach(*emptypb.Empty, ProService_ProMagicAttachServer) error
 	ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error)
+	ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
 	mustEmbedUnimplementedProServiceServer()
 }
 
@@ -100,6 +112,9 @@ func (UnimplementedProServiceServer) ProMagicAttach(*emptypb.Empty, ProService_P
 }
 func (UnimplementedProServiceServer) ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProAttach not implemented")
+}
+func (UnimplementedProServiceServer) ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProStatus not implemented")
 }
 func (UnimplementedProServiceServer) mustEmbedUnimplementedProServiceServer() {}
 
@@ -153,6 +168,24 @@ func _ProService_ProAttach_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ProService_ProStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(emptypb.Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProServiceServer).ProStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProService_ProStatus_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProServiceServer).ProStatus(ctx, req.(*emptypb.Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ProService_ServiceDesc is the grpc.ServiceDesc for ProService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -163,6 +196,10 @@ var ProService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ProAttach",
 			Handler:    _ProService_ProAttach_Handler,
+		},
+		{
+			MethodName: "ProStatus",
+			Handler:    _ProService_ProStatus_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{

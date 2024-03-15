@@ -20,6 +20,7 @@ type iProExecutable interface {
 	Initiate(ctx context.Context) (*proAPIResponse, error)
 	Wait(ctx context.Context, token string) (*proAPIResponse, error)
 	Attach(ctx context.Context, token string) error
+	Status(ctx context.Context) (*bool, error)
 }
 
 type proExecutable struct{}
@@ -180,6 +181,23 @@ func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
 	return &response, nil
 }
 
+func (p *proExecutable) Status(ctx context.Context) (*bool, error) {
+	// Execute the pro status command
+	out, err := exec.CommandContext(ctx, "pro", "status").Output()
+	if err != nil {
+		slog.Error(fmt.Sprintf("failed to execute pro status: %v\nOutput: %s", err, string(out)))
+		return nil, fmt.Errorf("failed to execute pro status: %v\nOutput: %s", err, string(out))
+	}
+
+	// Check if the output contains "not attached"
+	if strings.Contains(string(out), "not attached") {
+		v := false
+		return &v, nil
+	}
+	v := true
+	return &v, nil
+}
+
 func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse, error) {
 	// Initiate magic attach process
 	// #nosec:G204 // We are in control of the token formatting and this is only the argument.
@@ -230,16 +248,18 @@ func (s *Service) sendSteamResponse(stream pb.ProService_ProMagicAttachServer, r
 
 // ProAttach attaches a contract token to the system.
 func (s *Service) ProAttach(ctx context.Context, req *wrapperspb.StringValue) (*emptypb.Empty, error) {
-	// Validate request
-	if req == nil || req.Value == "" {
-		return nil, status.Errorf(codes.InvalidArgument, "contract token is required")
-	}
-
-	// Pro attach the token
 	if err := s.proExecutable.Attach(ctx, req.Value); err != nil {
 		return nil, status.Errorf(codes.Internal, fmt.Sprintf("failed to pro attach: %v", err))
 	}
-
-	// Return an empty response on success
 	return &emptypb.Empty{}, nil
+}
+
+// ProStatus returns if the machine is currently pro attached.
+func (s *Service) ProStatus(ctx context.Context, _ *emptypb.Empty) (*wrapperspb.BoolValue, error) {
+	attached, err := s.proExecutable.Status(ctx)
+
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, fmt.Sprintf("failed to pro attach: %v", err))
+	}
+	return &wrapperspb.BoolValue{Value: *attached}, nil
 }
