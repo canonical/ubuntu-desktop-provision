@@ -8,6 +8,7 @@ import 'package:ubuntu_provision/src/network/hidden_wifi_view.dart';
 import 'package:ubuntu_provision/src/network/wifi_view.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/constants.dart';
 
 export 'connect_model.dart' show ConnectMode;
 
@@ -37,6 +38,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.networkPageTitle,
       title: lang.networkPageHeader,
       contentFlex: model.connectMode == ConnectMode.wifi ? 100 : 6,
+      padding: const EdgeInsets.all(kYaruPagePadding),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

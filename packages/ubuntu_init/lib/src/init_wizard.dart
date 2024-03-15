@@ -14,7 +14,7 @@ final _log = Logger('init_wizard');
 
 const _initialPageName = '/';
 
-class InitWizard extends ConsumerWidget {
+class InitWizard extends ConsumerStatefulWidget {
   const InitWizard({
     super.key,
     FutureOr<void> Function()? onDone,
@@ -23,7 +23,25 @@ class InitWizard extends ConsumerWidget {
   final FutureOr<void> Function()? _onDone;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _InitWizardState();
+}
+
+class _InitWizardState extends ConsumerState<InitWizard>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    final brightness = MediaQuery.platformBrightnessOf(context);
+    ref.read(brightnessProvider.notifier).state = brightness;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final routes = <String, WizardRoute>{
       for (final step in InitStep.values) step.route: step.toRoute(context, ref)
     };
@@ -54,7 +72,7 @@ class InitWizard extends ConsumerWidget {
           onLoad: (_) => const TelemetryPage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
-            await _onDone?.call();
+            await widget._onDone?.call();
             await ref.read(initModelProvider).launchDesktopSession();
             await window.close();
             return null;
@@ -85,7 +103,7 @@ class InitWizard extends ConsumerWidget {
   }
 }
 
-class WelcomeWizard extends ConsumerWidget {
+class WelcomeWizard extends ConsumerStatefulWidget {
   const WelcomeWizard({
     super.key,
     FutureOr<void> Function()? onDone,
@@ -94,7 +112,25 @@ class WelcomeWizard extends ConsumerWidget {
   final FutureOr<void> Function()? _onDone;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _WelcomeWizardState();
+}
+
+class _WelcomeWizardState extends ConsumerState<WelcomeWizard>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    final brightness = MediaQuery.platformBrightnessOf(context);
+    ref.read(brightnessProvider.notifier).state = brightness;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final routes = <String, WizardRoute>{
       for (final step in WelcomeStep.values)
         if (ref.read(initModelProvider).hasRoute(step.route))
@@ -125,7 +161,7 @@ class WelcomeWizard extends ConsumerWidget {
           onLoad: (_) => const WelcomePage().load(context, ref),
           onNext: (_) async {
             final window = YaruWindow.of(context);
-            await _onDone?.call();
+            await widget._onDone?.call();
             await window.close();
             return null;
           },

@@ -25,7 +25,10 @@ LocaleModel buildLocaleModel({Exception? error}) {
 
 Widget buildLocalePage(LocaleModel model) {
   registerMockService<TelemetryService>(MockTelemetryService());
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
 
   return ProviderScope(
     overrides: [

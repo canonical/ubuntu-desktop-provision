@@ -12,6 +12,7 @@ void main() {
     WidgetRef? ref;
 
     final pageConfig = MockPageConfigService();
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
     registerMockService<PageConfigService>(pageConfig);
     when(pageConfig.pages).thenReturn({});
 

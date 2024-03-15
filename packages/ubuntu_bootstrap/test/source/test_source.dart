@@ -55,7 +55,10 @@ SourceModel buildSourceModel({
 Widget buildSourceSelectionPage(SourceModel model) {
   registerMockService<SubiquityClient>(MockSubiquityClient());
   registerMockService<TelemetryService>(MockTelemetryService());
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
 
   return ProviderScope(
     overrides: [
@@ -69,7 +72,10 @@ Widget buildSourceSelectionPage(SourceModel model) {
 Widget buildCodecsAndDriversPage(SourceModel model) {
   registerMockService<SubiquityClient>(MockSubiquityClient());
   registerMockService<TelemetryService>(MockTelemetryService());
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
 
   return ProviderScope(
     overrides: [

@@ -16,7 +16,10 @@ RstModel buildRstModel({bool? hasRst}) {
   return model;
 }
 
-final pageImages = PageImages(MockPageConfigService());
+final pageImages = PageImages.internal(
+  MockPageConfigService(),
+  MockThemeVariantService(),
+);
 
 Widget buildRstPage(RstModel model) {
   return ProviderScope(
