@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get themeLight => '明るい';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '$DISTROへ、ようこそ。';
   }
 

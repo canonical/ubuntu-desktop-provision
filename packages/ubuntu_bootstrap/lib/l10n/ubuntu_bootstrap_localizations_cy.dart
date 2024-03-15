@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Type of installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -168,7 +168,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String get fullInstallationTitle => 'Extended selection';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
 
   @override
   String get minimalInstallationTitle => 'Default selection';
@@ -189,7 +189,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
 
   @override
-  String get installDriversSubtitle => 'These drivers are subject to license terms included with their documentation. They are proprietary.';
+  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
 
   @override
   String get installCodecsTitle => 'Download and install support for additional media formats';
@@ -638,7 +638,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'$option\' to continue.';
+    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'$option\' to continue.';
   }
 
   @override

@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -87,7 +90,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Detect';
 
   @override
-  String get keyboardVariantLabel => 'Keyboard variant:';
+  String get keyboardVariantLabel => 'Select your keyboard variant:';
 
   @override
   String get keyboardPressKeyLabel => 'Please press one of the following keys:';
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get themeLight => 'Light';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Welcome to $DISTRO';
   }
 
@@ -299,5 +302,5 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'A network name is required';
 
   @override
-  String get networkNoneOption => 'I don\'t want to connect to the internet just now';
+  String get networkNoneOption => 'Do not connect to the internet';
 }

@@ -240,14 +240,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @accessibilityPageTitle.
   ///
   /// In en, this message translates to:
+  /// **'Accessibility'**
+  String get accessibilityPageTitle;
+
+  /// No description provided for @accessibilityPageHeader.
+  ///
+  /// In en, this message translates to:
   /// **'Accessibility in {DISTRO}'**
-  String accessibilityPageTitle(Object DISTRO);
+  String accessibilityPageHeader(String DISTRO);
 
   /// No description provided for @accessibilityPageBody.
   ///
   /// In en, this message translates to:
   /// **'Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.'**
-  String accessibilityPageBody(Object DISTRO);
+  String accessibilityPageBody(String DISTRO);
 
   /// No description provided for @accessibilitySeeingLabel.
   ///
@@ -396,7 +402,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @keyboardVariantLabel.
   ///
   /// In en, this message translates to:
-  /// **'Keyboard variant:'**
+  /// **'Select your keyboard variant:'**
   String get keyboardVariantLabel;
 
   /// No description provided for @keyboardPressKeyLabel.
@@ -439,7 +445,7 @@ abstract class UbuntuProvisionLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Welcome to {DISTRO}'**
-  String localePageTitle(Object DISTRO);
+  String localePageTitle(String DISTRO);
 
   /// No description provided for @localeHeader.
   ///
@@ -816,7 +822,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @networkNoneOption.
   ///
   /// In en, this message translates to:
-  /// **'I don\'t want to connect to the internet just now'**
+  /// **'Do not connect to the internet'**
   String get networkNoneOption;
 }
 

@@ -252,7 +252,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Installation type'**
+  /// **'Type of installation'**
   String get autoinstallTitle;
 
   /// No description provided for @autoinstallHeader.
@@ -372,7 +372,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstTitle.
   ///
   /// In en, this message translates to:
-  /// **'RST is enabled'**
+  /// **'RST detected'**
   String get rstTitle;
 
   /// No description provided for @rstHeader.
@@ -510,7 +510,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @fullInstallationSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'An offline-friendly selection of office tools, utilities, web browser and games.'**
+  /// **'An offline-friendly selection of office tools, utilities and web browser.'**
   String get fullInstallationSubtitle;
 
   /// No description provided for @minimalInstallationTitle.
@@ -552,7 +552,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installDriversSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'These drivers are subject to license terms included with their documentation. They are proprietary.'**
+  /// **'Including but not limited to NVIDIA drivers and similar'**
   String get installDriversSubtitle;
 
   /// No description provided for @installCodecsTitle.
@@ -564,7 +564,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installCodecsSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'This software is subject to license terms included with its documentation. Some are proprietary.'**
+  /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
   /// No description provided for @onBatteryWarning.
@@ -1344,7 +1344,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @bitlockerDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'{option}\' to continue.'**
+  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'{option}\' to continue.'**
   String bitlockerDescription(String option);
 
   /// No description provided for @bitlockerInstructions.

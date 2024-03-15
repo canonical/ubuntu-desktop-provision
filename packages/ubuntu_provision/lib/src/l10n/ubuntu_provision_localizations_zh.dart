@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get themeLight => '浅色';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '欢迎来到 $DISTRO';
   }
 
@@ -352,7 +355,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get themeLight => '亮色';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '歡迎使用 $DISTRO';
   }
 
