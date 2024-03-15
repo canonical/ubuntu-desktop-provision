@@ -44,7 +44,7 @@ Future<void> runInstallerApp(
     parser.addOption(
       'machine-config',
       valueHelp: 'path',
-      defaultsTo: 'examples/machines/win10-along-ubuntu.json',
+      defaultsTo: 'examples/machines/simple.json',
       help: 'Path of the machine config (dry-run only)',
     );
     parser.addOption(
