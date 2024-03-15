@@ -252,7 +252,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Installation type'**
+  /// **'Type of installation'**
   String get autoinstallTitle;
 
   /// No description provided for @autoinstallHeader.

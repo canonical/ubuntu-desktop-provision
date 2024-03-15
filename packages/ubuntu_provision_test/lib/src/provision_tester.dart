@@ -42,7 +42,7 @@ extension UbuntuProvisionPageTester on WidgetTester {
     final l10n = UbuntuProvisionLocalizations.of(context);
 
     expect(
-      find.titleBar(l10n.accessibilityPageTitle('Ubuntu')),
+      find.titleBar(l10n.accessibilityPageTitle),
       findsOneWidget,
     );
 

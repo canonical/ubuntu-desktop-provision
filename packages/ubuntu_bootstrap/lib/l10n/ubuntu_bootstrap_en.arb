@@ -9,7 +9,7 @@
       }
     }
   },
-  "autoinstallTitle": "Installation type",
+  "autoinstallTitle": "Type of installation",
   "autoinstallHeader": "How would you like to install {DISTRO}?",
   "@autoinstallHeader": {
     "placeholders": {

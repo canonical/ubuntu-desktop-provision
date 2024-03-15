@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsKm extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Type of installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
