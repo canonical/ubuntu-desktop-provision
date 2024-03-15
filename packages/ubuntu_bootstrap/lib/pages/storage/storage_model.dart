@@ -116,8 +116,9 @@ class StorageModel extends SafeChangeNotifier {
   /// That is, whether a) an existing partition can be safely resized smaller to
   /// make room for the installation, or b) there is a large enough unused gap.
   bool get canInstallAlongside {
-    return _getTargets<GuidedStorageTargetResize>().isNotEmpty ||
-        _getTargets<GuidedStorageTargetUseGap>().isNotEmpty;
+    return (_getTargets<GuidedStorageTargetResize>().isNotEmpty ||
+            _getTargets<GuidedStorageTargetUseGap>().isNotEmpty) &&
+        !hasDd;
   }
 
   /// Whether erasing the disk is possible i.e. whether any guided reformat
@@ -127,11 +128,11 @@ class StorageModel extends SafeChangeNotifier {
   /// Whether manual partitioning is possible i.e. whether a manual partitioning
   /// target is allowed.
   bool get canManualPartition {
-    return _getTargets<GuidedStorageTargetManual>().isNotEmpty;
+    return _getTargets<GuidedStorageTargetManual>().isNotEmpty && !hasDd;
   }
 
   /// Whether any advanced features are available.
-  bool get hasAdvancedFeatures => hasLvm || hasZfs || hasTpm;
+  bool get hasAdvancedFeatures => (hasLvm || hasZfs || hasTpm) && !hasDd;
 
   /// Initializes the model.
   Future<void> init() async {
