@@ -21,8 +21,8 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuProvisionLocalizations.of(context);
 
     return HorizontalPage(
-      windowTitle: lang.accessibilityPageTitle(flavor.displayName),
-      title: lang.accessibilityPageTitle(flavor.displayName),
+      windowTitle: lang.accessibilityPageTitle,
+      title: lang.accessibilityPageHeader(flavor.displayName),
       contentFlex: 8,
       content: Column(
         children: [

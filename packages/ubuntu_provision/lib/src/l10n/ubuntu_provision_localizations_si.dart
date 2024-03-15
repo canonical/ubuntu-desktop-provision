@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -87,7 +90,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Detect';
 
   @override
-  String get keyboardVariantLabel => 'Keyboard variant:';
+  String get keyboardVariantLabel => 'Select your keyboard variant:';
 
   @override
   String get keyboardPressKeyLabel => 'පහත යතුරු වලින් එකක් ඔබන්න:';
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get themeLight => 'දීප්ත';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Welcome to $DISTRO';
   }
 
