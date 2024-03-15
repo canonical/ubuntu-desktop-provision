@@ -93,7 +93,7 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST is enabled';
+  String get rstTitle => 'RST detected';
 
   @override
   String get rstHeader => 'Turn off RST to continue';
@@ -638,7 +638,7 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'$option\' to continue.';
+    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'$option\' to continue.';
   }
 
   @override

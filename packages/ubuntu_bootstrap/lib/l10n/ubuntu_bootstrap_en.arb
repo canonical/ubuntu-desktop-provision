@@ -99,7 +99,7 @@
       }
     }
   },
-  "rstTitle": "RST is enabled",
+  "rstTitle": "RST detected",
   "rstHeader": "Turn off RST to continue",
   "rstDescription": "This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.",
   "@rstDescription": {
@@ -512,7 +512,7 @@
   "continueTesting": "Continue testing",
   "bitlockerTitle": "BitLocker is enabled",
   "bitlockerHeader": "Turn off BitLocker to continue",
-  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose '{option}' to continue.",
+  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose '{option}' to continue.",
   "@bitlockerDescription": {
     "placeholders": {
       "option": {

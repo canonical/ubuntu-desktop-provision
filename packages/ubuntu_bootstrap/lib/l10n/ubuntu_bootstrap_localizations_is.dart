@@ -638,7 +638,7 @@ class UbuntuBootstrapLocalizationsIs extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'$option\' to continue.';
+    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'$option\' to continue.';
   }
 
   @override

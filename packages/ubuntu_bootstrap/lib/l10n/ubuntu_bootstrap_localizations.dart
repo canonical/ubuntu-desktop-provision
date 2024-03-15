@@ -372,7 +372,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstTitle.
   ///
   /// In en, this message translates to:
-  /// **'RST is enabled'**
+  /// **'RST detected'**
   String get rstTitle;
 
   /// No description provided for @rstHeader.
@@ -1344,7 +1344,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @bitlockerDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'{option}\' to continue.'**
+  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'{option}\' to continue.'**
   String bitlockerDescription(String option);
 
   /// No description provided for @bitlockerInstructions.
