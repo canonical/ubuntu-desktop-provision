@@ -61,15 +61,18 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
         leading: const BackWizardButton(),
         trailing: [
           WizardButton(
-            label: UbuntuLocalizations.of(context).nextLabel,
-            visible: model.option == TryOrInstallOption.tryUbuntu,
-            execute: YaruWindow.of(context).close,
-          ),
-          NextWizardButton(
-            visible: model.option != TryOrInstallOption.tryUbuntu,
-            enabled: model.option != TryOrInstallOption.none,
-            arguments: model.option,
-          ),
+            label: switch (model.option) {
+              TryOrInstallOption.installUbuntu =>
+                UbuntuLocalizations.of(context).nextLabel,
+              TryOrInstallOption.tryUbuntu =>
+                UbuntuLocalizations.of(context).closeLabel,
+            },
+            execute: switch (model.option) {
+              TryOrInstallOption.installUbuntu => Wizard.of(context).next,
+              TryOrInstallOption.tryUbuntu => YaruWindow.of(context).close,
+            },
+            highlighted: model.option == TryOrInstallOption.tryUbuntu,
+          )
         ],
       ),
     );

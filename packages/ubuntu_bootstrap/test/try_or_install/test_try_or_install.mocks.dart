@@ -34,7 +34,7 @@ class MockTryOrInstallModel extends _i1.Mock implements _i2.TryOrInstallModel {
   @override
   _i2.TryOrInstallOption get option => (super.noSuchMethod(
         Invocation.getter(#option),
-        returnValue: _i2.TryOrInstallOption.none,
+        returnValue: _i2.TryOrInstallOption.tryUbuntu,
       ) as _i2.TryOrInstallOption);
 
   @override
