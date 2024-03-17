@@ -10,7 +10,7 @@
   "@installationCompleteTitle": {},
   "otherOptions": "Aliaj opcioj",
   "@otherOptions": {},
-  "installationTypeAdvancedTitle": "Altnivelaj trajtoj",
+  "installationTypeAdvancedTitle": "Funkcioj por spertuloj",
   "@installationTypeAdvancedTitle": {},
   "selectGuidedStorageInstallNow": "Ekinstali",
   "@selectGuidedStorageInstallNow": {},
@@ -27,11 +27,11 @@
       "system": {}
     }
   },
-  "installationTypeAdvancedLabel": "Altnivelaj trajtoj…",
+  "installationTypeAdvancedLabel": "Funkcioj por spertuloj…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeNoneSelected": "Nenio elektita",
   "@installationTypeNoneSelected": {},
-  "installationTypeTitle": "Speco de instalado",
+  "installationTypeTitle": "Agordado de disko",
   "@installationTypeTitle": {},
   "freeDiskSpace": "Disponebla spaco",
   "@freeDiskSpace": {},
@@ -58,7 +58,7 @@
   "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageTitle": "Programoj kaj ĝisdatigoj",
   "@updatesOtherSoftwarePageTitle": {},
-  "rstTitle": "Rapid-Konserveja Tekniko (RST) estas ŝaltita",
+  "rstTitle": "Rapid-Konserveja Tekniko (RST) troviĝis",
   "@rstTitle": {},
   "tryOrInstallReleaseNotesLabel": "Vi eble volas legi la <a href=\"{url}\">liverajn notojn</a>.",
   "@tryOrInstallReleaseNotesLabel": {
@@ -101,7 +101,7 @@
   "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Vi povas instali ilin poste per Programaroj kaj Ĝisdatigoj.",
   "@dontInstallDriverSoftwareNowDescription": {},
-  "rstDescription": "Ĉi tiu komputilo uzas Intel RST (Rapid-Konservejan Teknikon). Vi devas malŝalti RST en Windows antaŭ ol instali Ubuntu.",
+  "rstDescription": "Ĉi tiu komputilo uzas Intel RST (Rapid-Konservejan Teknikon). Vi devas malŝalti RST en Windows antaŭ ol instali {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "Por instrukcioj, skanu la QR-kodon per alia aparato, aŭ vizitu la jenon: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -185,7 +185,7 @@
   "@diskHeadersSystem": {},
   "selectGuidedStorageDropdownLabel": "Elektu diskon:",
   "@selectGuidedStorageDropdownLabel": {},
-  "installationTypeManual": "Neaŭtomata dispartigo",
+  "installationTypeManual": "Neaŭtomata instalado",
   "@installationTypeManual": {},
   "selectGuidedStoragePageTitle": "Forviŝi la diskon kaj instali {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -215,7 +215,7 @@
   "@bootLoaderDevice": {},
   "allocateDiskSpace": "Neaŭtomata dispartigo",
   "@allocateDiskSpace": {},
-  "installationTypeManualInfo": "Vi povas mem krei subdiskojn aŭ ŝanĝi iliajn grandojn, aŭ elekti plurajn subdiskojn por {DISTRO}",
+  "installationTypeManualInfo": "Por tiuj spertaj uzantoj, kiuj volas agordi siajn diskojn.",
   "@installationTypeManualInfo": {},
   "confirmPartitionTable": "{serial} ({path})",
   "@confirmPartitionTable": {
@@ -235,7 +235,7 @@
   "@partitionErase": {},
   "confirmPartitionTables": "La subdiskotabeloj de la jenaj aparatoj estas ŝanĝotaj:",
   "@confirmPartitionTables": {},
-  "confirmHeader": "Se vi daŭrigos, la ĉi-subaj ŝanĝoj estos skribitaj sur la diskojn. Vi povos permane fari pliajn ŝanĝojn.",
+  "confirmHeader": "Reviziu viajn elektojn",
   "@confirmHeader": {},
   "readyToUse": "**{system}** estas instalita kaj preta por uzo",
   "@readyToUse": {
@@ -248,7 +248,7 @@
   "@shutdown": {},
   "restartIntoWindows": "Restartigi al Windows",
   "@restartIntoWindows": {},
-  "bitlockerDescription": "Ĉi tiun komputilon ĉifras Windows BitLocker.\nLiberigu diskospacon per Windows, aŭ elektu «{option}» por daŭrigi.",
+  "bitlockerDescription": "Ĉi tiun komputilon ĉifras Windows BitLocker.\nLiberigu diskospacon per Windows, aŭ reiru kaj elektu «{option}» por daŭrigi.",
   "@bitlockerDescription": {},
   "bitlockerInstructions": "Por instrukcioj, skanu la QR-kodon per alia aparato, aŭ vizitu la jenon: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
@@ -380,13 +380,13 @@
   "@showSecurityKey": {},
   "installationTypeLVMEncryptionSelected": "LVM kaj ĉifrado elektitaj",
   "@installationTypeLVMEncryptionSelected": {},
-  "installDriversSubtitle": "Tiuj programoj estas disponeblaj laŭ permesiloj inkluzivitaj en siaj dokumentaroj. Ili estas neliberaj.",
+  "installDriversSubtitle": "Inkluzive de sed ne limigita al zorgiloj de Nvidia",
   "@installDriversSubtitle": {},
   "installDriversTitle": "Instali triapartiajn programojn por grafiko kaj sendrataj retaj aparatoj",
   "@installDriversTitle": {},
   "installCodecsTitle": "Elŝuti kaj instali programojn por kromaj videaj dosierformoj",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Tiuj programoj estas disponeblaj laŭ permesiloj inkluzivitaj en siaj dokumentaroj. Kelkaj el ili estas neliberaj.",
+  "installCodecsSubtitle": "Inkluzive de sed ne limigita al .mp3, .mp4, .mov ktp.",
   "@installCodecsSubtitle": {},
   "tooManyPrimaryPartitions": "Tro da unuagradaj subdiskoj",
   "@tooManyPrimaryPartitions": {},
@@ -776,12 +776,153 @@
       "snap": {}
     }
   },
-  "fullInstallationSubtitle": "Senrete uzebla kolekto da laborprogramoj, utilaĵoj, TTT-legilo kaj ludoj.",
+  "fullInstallationSubtitle": "Senrete uzebla kolekto da laborprogramoj, utilaĵoj kaj TTT-legilo.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Implicita instalo",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Nur la esencaĵoj: TTT-legilo kaj bazaj ilaĵoj.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Plena instalo",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "codecsAndDriversPageTitle": "Optimumigi vian komputilon",
+  "@codecsAndDriversPageTitle": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionNone": "Nenio",
+  "@confirmDiskEncryptionNone": {},
+  "confirmSectionGeneralTitle": "Ĝenerala",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Sekureco kaj pli",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmEntryApplications": "Programoj",
+  "@confirmEntryApplications": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmEntryDiskEncryption": "Diska ĉifrado",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Instala disko",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryDiskSetup": "Agordado de disko",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryProprietarySoftware": "Neliberaj programoj",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Aŭdvidaj kodiloj kaj zorgiloj",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Zorgiloj",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** estas kopiita sur la diskon",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Validigi",
+  "@validate": {},
+  "confirmProprietarySoftwareCodecs": "Aŭdvidaj kodiloj",
+  "@confirmProprietarySoftwareCodecs": {},
+  "installationTypeZFSEncryptionSelected": "ZFS kaj ĉifrado elektitaj",
+  "@installationTypeZFSEncryptionSelected": {},
+  "rebootToConfigureWarning": "Vi devas restartigi la komputilon por daŭrigi la instaladon.",
+  "@rebootToConfigureWarning": {},
+  "autoinstallAutomatedOption": "Aŭtomata instalado",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallInteractiveOption": "Interaga instalado",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallTitle": "Speco de instalado",
+  "@autoinstallTitle": {},
+  "autoinstallInstructions": "Tajpu la retadreson de la dosiero «autoinstall.yaml».",
+  "@autoinstallInstructions": {},
+  "autoinstallHeader": "Kiel instali {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallAutomatedDescription": "Por tiuj spertaj uzantoj, kiuj havas la dosieron «autoinstall.yaml» por kohere kaj ripeteble agordi la sistemon.",
+  "@autoinstallAutomatedDescription": {},
+  "autoinstallInteractiveDescription": "Por tiuj uzantoj, kiuj volas esti gvidataj paŝon post paŝo tra la instalado.",
+  "@autoinstallInteractiveDescription": {},
+  "hideSecurityKey": "Kaŝi",
+  "@hideSecurityKey": {},
+  "codecsAndDriversNvidiaNote": "Vidkarto de Nvidia troviĝis",
+  "@codecsAndDriversNvidiaNote": {},
+  "tryOrInstallHeader": "Kion fari per {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageDescription": "Ĉu instali rekomendatajn neliberajn programojn?",
+  "@codecsAndDriversPageDescription": {},
+  "choosePassphraseTitle": "Diska pasfrazo",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Krei pasfrazon",
+  "@choosePassphraseHeader": {},
+  "createPassphrase": "Krei pasfrazon",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Konfirmi pasfrazon",
+  "@confirmPassphrase": {},
+  "choosePassphraseHint": "Elektu pasfrazon",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Konfirmu la pasfrazon",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Pasfrazo necesas",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "La pasfrazoj ne kongruas",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Certigu, ke vi konservas vian pasfrazon",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Se vi forgesos vian pasfrazon, vi perdos ĉiom da viaj datenoj.",
+  "@choosePassphraseInfoBody": {},
+  "installationTypeHeader": "Kiel instali {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "Por la optimuma rendimento de vidkartoj de Nvidia, estas rekomendate instali kromajn zorgilojn.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseBody": "Vi devas havi pasfrazon por ĉifri viajn dosierojn. Vi devos tajpi vian pasfrazon ĉiujn fojojn, kiam via komputilo startos.",
+  "@choosePassphraseBody": {},
+  "installationTypeExperimental": "Eksperimenta",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Uzi LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Uzi LVM kaj ĉifradon",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Forviŝi la diskon kaj uzi ZFS kun ĉifrado",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeEraseInfo": "Komencu denule forviŝinte vian elektitan diskon.",
+  "@installationTypeEraseInfo": {},
+  "selectGuidedStorageInfo": "Komencu denule forviŝinte vian elektitan diskon.",
+  "@selectGuidedStorageInfo": {},
+  "installationTypeTPMInfo": "Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo por estontaj versioj de {DISTRO}. <a href=\"{url}\">Legu pri TPM-ĉifrado </a> antaŭ ol vi elektas ĉi tiun opcion.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageBody": "Apriore, je {DISTRO} mankas neliberaj programoj. Instalado de kromaj programoj eble plibonigos la rendimenton de via komputilo.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
