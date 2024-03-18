@@ -200,6 +200,14 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Active Directory\'yi Yapılandır';
 
   @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
+
+  @override
   String get activeDirectoryTestConnection => 'Etki alanı bağlantısını sına';
 
   @override

@@ -200,6 +200,14 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => '配置活动目录';
 
   @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
+
+  @override
   String get activeDirectoryTestConnection => '测试域连接';
 
   @override

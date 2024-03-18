@@ -197,7 +197,15 @@ class UbuntuProvisionLocalizationsGu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
-  String get activeDirectoryTitle => 'Configure Active Directory';
+  String get activeDirectoryTitle => 'Log into Active Directory';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => 'Test domain connectivity';
