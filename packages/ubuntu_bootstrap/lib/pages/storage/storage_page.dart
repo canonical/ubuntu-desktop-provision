@@ -96,7 +96,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                     )
                   : null,
             ),
-            const SizedBox(height: kWizardSpacing),
           ],
           if (model.canManualPartition)
             _InstallationTypeTile(
