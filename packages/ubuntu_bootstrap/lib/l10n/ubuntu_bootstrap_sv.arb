@@ -974,5 +974,13 @@
   "confirmEntryProprietarySoftware": "Proprietär programvara",
   "@confirmEntryProprietarySoftware": {},
   "confirmProprietarySoftwareDrivers": "Drivrutiner",
-  "@confirmProprietarySoftwareDrivers": {}
+  "@confirmProprietarySoftwareDrivers": {},
+  "refreshHeader": "En uppdatering är tillgänglig för installationsprogrammet",
+  "@refreshHeader": {},
+  "refreshInfo": "Uppdatera till den senaste versionen för förbättrad tillförlitlighet och fler funktioner.",
+  "@refreshInfo": {},
+  "refreshReady": "Uppdatering redo",
+  "@refreshReady": {},
+  "refreshUpdateNow": "Uppdatera nu",
+  "@refreshUpdateNow": {}
 }
