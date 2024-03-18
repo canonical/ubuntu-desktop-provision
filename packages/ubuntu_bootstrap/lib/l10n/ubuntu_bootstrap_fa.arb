@@ -270,12 +270,6 @@
   "@diskHeadersUsed": {},
   "confirmPageTitle": "آمادهٔ نصب",
   "@confirmPageTitle": {},
-  "chooseSecurityKeyTitle": "کلید امنیتی",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "گزینش کلید امنیتی",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyRequired": "کلید امنیتی‌ای لازم است",
-  "@chooseSecurityKeyRequired": {},
   "offlineWarning": "در حال حاضر برون‌خطید",
   "@offlineWarning": {},
   "restartIntoWindows": "آغاز دوباره به ویندوز",
@@ -389,8 +383,6 @@
       "os2": {}
     }
   },
-  "chooseSecurityKeyMismatch": "کلیدهای امنیتی یکسان نیستند",
-  "@chooseSecurityKeyMismatch": {},
   "partitionLocationLabel": "مکان افراز جدید:",
   "@partitionLocationLabel": {},
   "installationTypeAlongsideMulti": "نصب {product} کنارشان",
@@ -417,13 +409,6 @@
   },
   "installationTypeMultiOSDetected": "این رایانه هم‌اکنون دارای چندین سیستم‌عامل است. می‌خواهید چه کنید؟",
   "@installationTypeMultiOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">هشدار:</font> این کار تمامی برنامه‌ها، سندها، نگاره‌ها، آهنگ‌ها و هر پروندهٔ دیگری را روی هر سیستم‌عاملی حذف خواهد کرد.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "partitionTypeLabel": "گونهٔ افراز جدید:",
   "@partitionTypeLabel": {},
   "installDriversTitle": "نصب نرم‌افزارهای سوم‌شخص برای سخت‌افزارهای وای‌فای و گرافیک",
@@ -435,21 +420,12 @@
       "url": {}
     }
   },
-  "chooseSecurityKeyHeader": "رمزنگاری دیسک، از پرونده‌هایتان در صورت گم کردن رایانه‌تان حفاظت می‌کند. این کار نیازمند وارد کردن یک کلید امنیتی در هر بار روشن کردن رایانه است.\n\nهیچ پرونده‌ای بیرون {RELEASE} رمزنگاری نخواهد شد.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "showSecurityKey": "نمایش کلید امنیتی",
   "@showSecurityKey": {},
   "diskHeadersDevice": "افزاره",
   "@diskHeadersDevice": {},
   "installationTypeTitle": "گونهٔ نصب",
   "@installationTypeTitle": {},
-  "chooseSecurityKeyConfirmHint": "تأیید کلید امنیتی",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeDualOSDetected": "این رایانه اکنون {os1} و {os2} را دارد. می‌خواهید چه کنید؟",
   "@installationTypeDualOSDetected": {
     "type": "text",

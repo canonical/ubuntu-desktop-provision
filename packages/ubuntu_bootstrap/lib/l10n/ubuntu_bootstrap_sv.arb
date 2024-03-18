@@ -99,13 +99,6 @@
   "@updatesOtherSoftwarePageTitle": {},
   "installationTypeNoOSDetected": "Den här datorn har för närvarande inga upptäckta operativsystem. Vad skulle du vilja göra?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Varning:</font> Detta kommer att radera alla dina program, dokument, foton, musik och alla andra filer i alla operativsystem.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "updatesOtherSoftwarePageDescription": "Vilka program skulle du vilja installera till att börja med?",
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Andra alternativ",
@@ -114,23 +107,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Denna programvara är föremål för licensvillkor som ingår i dess dokumentation. Vissa är proprietära.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "Säkerhetsnyckel",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Välj en säkerhetsnyckel",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Bekräfta säkerhetsnyckeln",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "En säkerhetsnyckel krävs",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Säkerhetsnycklarna stämmer inte överens",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Varning:</font> Om du tappar den här säkerhetsnyckeln kommer all data att gå förlorad. Om du behöver, skriv ner din nyckel och förvara den på ett säkert ställe någon annanstans.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeTitle": "Typ av installation",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Den här datorn har för närvarande {os} på sig. Vad skulle du vilja göra?",
@@ -252,13 +228,6 @@
     "type": "text",
     "placeholders": {
       "system": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "Diskkryptering skyddar dina filer om du tappar bort din dator. Det kräver att du anger en säkerhetsnyckel varje gång datorn startar.\n\nAlla filer utanför {RELEASE} kommer inte att krypteras.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
     }
   },
   "installationTypeEncrypt": "Kryptera den nya {RELEASE}-installationen för säkerhet",
@@ -744,14 +713,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Varning:</font> Denna funktion stöds endast på vissa hårdvarukonfigurationer och kanske inte stöder uppgradering till framtida Ubuntu-utgåvor. Läs <a href=\"{url}\">versionsinformationen</a> innan du aktiverar.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "refreshInstall": "Uppdatera till version {version}",

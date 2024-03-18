@@ -109,11 +109,11 @@ scripts:
     melos exec -c 1 --fail-fast --file-exists="lib/l10n.dart" -- \
      flutter gen-l10n
 
-  # remove unused translations in all packages
-  clean-l10n:
-    exec: find . -name "*.arb" -exec sh -c 'jq . --indent 2 {} > temp.json && mv temp.json {}' \;
-    packageFilters:
-      dependsOn: translations_cleaner
+  # remove unused translations in all packages, you have to have jq installed.
+  clean-l10n: >
+    melos exec --depends-on="translations_cleaner" -c 1 -- \
+      dart run translations_cleaner clean-translations && \
+      find . -name "*.arb" -exec sh -c 'jq . --indent 2 {} > temp.json && mv temp.json {}' \;
 
   # run integration tests in all packages
   integration_test: >
@@ -136,4 +136,3 @@ scripts:
       rm -rf ./packages/provd_client/lib/src/generated/* &&
       protoc --dart_out=grpc:./packages/provd_client/lib/src/generated \
         -I./provd/protos ./provd/protos/*.proto google/protobuf/empty.proto google/protobuf/wrappers.proto
-      

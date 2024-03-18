@@ -6,13 +6,6 @@
   "@windowTitle": {},
   "welcome": "Tervetuloa",
   "@welcome": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Varoitus:</font> Jos tämä salausavain katoaa tai unohdat sen, kaikki tiedot menetetään. Kirjoita tarvittaessa salausavain muistiin ja säilytä sitä turvallisessa paikassa, ei tietokoneen lähettyvillä.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "partitionMountPointLabel": "Liitoskohta:",
   "@partitionMountPointLabel": {},
   "tryOrInstallRepairDescription": "Korjaus asentaa kaikki ohjelmat uudelleen, asiakirjat ja asetukset säilytetään.",
@@ -52,13 +45,6 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Tyhjennä levy ja asenna {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Varoitus:</font> Tämä poistaa kaikkien käyttöjärjestelmien kaikki sovellukset, asiakirjat, valokuvat, musiikit ja muut tiedostot.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Edistyneet asetukset...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Edistyneet asetukset",
@@ -214,16 +200,6 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Asenna kolmannen osapuolen ohjelmistot näytönohjainta ja wifi-laitteistoa sekä eri mediamuotoja varten",
   "@installThirdPartyTitle": {},
-  "chooseSecurityKeyTitle": "Salausavain",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Valitse salausavain",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Vahvista salausavain",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Salausavain vaaditaan",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Salausavaimet eivät täsmää",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeLVMSelected": "LVM valittu",
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Salaa uusi {RELEASE}-asennus paremman tietoturvan vuoksi",
@@ -253,8 +229,6 @@
   "@restartIntoWindows": {},
   "partitionFormatLabel": "Tiedostojärjestelmä:",
   "@partitionFormatLabel": {},
-  "chooseSecurityKeyHeader": "Kiintolevyn salaus suojaa tiedostoja jos tietokone katoaa tai se varastetaan. Suojaus edellyttää salausavaimen syöttämistä jokaisella tietokoneen käynnistyskerralla.\n\n{RELEASE}-asennuksen ulkopuolisia tiedostoja ei salata.",
-  "@chooseSecurityKeyHeader": {},
   "confirmInstallButton": "Asenna",
   "@confirmInstallButton": {},
   "newPartitionTableConfirmationMessage": "Uuden osiotaulun luominen koko laitteelle poistaa kaikki laitteen nykyiset levyosiot. Voit perua tämän toimenpiteen, jos haluat.",
@@ -668,14 +642,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Varoitus:</font> Tämä ominaisuus on tuettu vain tietyillä laitteistokokoonpanoilla, eikä se välttämättä mahdollista päivitystä uudempiin Ubuntu-julkaisuisin. Lue <a href=\"{url}\">julkaisutiedot</a>, ennen kuin otat tämän käyttöön.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "refreshSnapLink": "Linkitetään {snap}...",

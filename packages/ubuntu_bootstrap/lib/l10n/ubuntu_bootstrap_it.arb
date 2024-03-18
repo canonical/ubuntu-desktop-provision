@@ -30,19 +30,10 @@
   "@rstInstructions": {},
   "changeButtonText": "Modifica",
   "@changeButtonText": {},
-  "chooseSecurityKeyTitle": "Scegli una chiave di sicurezza",
-  "@chooseSecurityKeyTitle": {},
   "configureSecureBootDescription": "Hai scelto di installare driver software di terze parti. Questo richiede lo spegnimento dell'Avvio Sicuro.\nPer farlo, devi scegliere una chiave di sicurezza, e digitarla al riavvio del sistema.",
   "@configureSecureBootDescription": {},
   "configureSecureBootTitle": "Configura Avvio Sicuro",
   "@configureSecureBootTitle": {},
-  "chooseSecurityKeyHeader": "La crittografia del disco protegge i tuoi file in caso di perdita del computer. Ad ogni avvio del computer sarà necessario inserire la chiave di sicurezza.\n\nQualsiasi file esterno a {RELEASE} non verrà criptato.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "onBatteryWarning": "<font color=\"{color}\">Attenzione</font>: Il computer non è connesso a una fonte di alimentazione.",
   "@onBatteryWarning": {
     "type": "text",
@@ -70,10 +61,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Questo software è soggetto ai termini di licenza inclusi nella documentazione. Alcuni sono proprietari.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyHint": "Scegli una chiave di sicurezza",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Conferma la chiave di sicurezza",
-  "@chooseSecurityKeyConfirmHint": {},
   "updatesOtherSoftwarePageDescription": "Quali applicazioni installare?",
   "@updatesOtherSoftwarePageDescription": {},
   "notEnoughDiskSpaceTitle": "Spiacenti",
