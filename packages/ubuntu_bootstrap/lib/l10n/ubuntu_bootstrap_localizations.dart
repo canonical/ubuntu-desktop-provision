@@ -1299,11 +1299,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Restart into {system}'**
   String restartInto(String system);
 
-  /// No description provided for @restartWarning.
+  /// No description provided for @restartWarning2.
   ///
   /// In en, this message translates to:
   /// **'Restart to complete the installation or continue testing.\nAny changes you make not be saved.'**
-  String restartWarning(Object RELEASE);
+  String get restartWarning2;
 
   /// No description provided for @rebootToConfigureWarning.
   ///

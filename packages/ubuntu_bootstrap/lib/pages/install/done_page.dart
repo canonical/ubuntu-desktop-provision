@@ -23,7 +23,7 @@ class DonePage extends ConsumerWidget {
       title: YaruWindowTitleBar(title: Text(lang.installationCompleteTitle)),
       content: Row(
         children: [
-          const Expanded(child: SizedBox()),
+          const Spacer(),
           Expanded(
             flex: 3,
             child: Column(
@@ -55,8 +55,6 @@ class DonePage extends ConsumerWidget {
                           child: OutlinedButton(
                             onPressed: YaruWindow.of(context).close,
                             child: Text(lang.continueTesting),
-                            //child: Text(
-                            //    "Продолжить тестирование"), //;lang.continueTesting),
                           ),
                         ),
                         const SizedBox(width: kWizardSpacing),
@@ -76,7 +74,7 @@ class DonePage extends ConsumerWidget {
               ],
             ),
           ),
-          const Expanded(child: SizedBox()),
+          const Spacer(),
         ],
       ),
     );

@@ -498,7 +498,7 @@
       }
     }
   },
-  "restartWarning": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
+  "restartWarning2": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
   "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
   "shutdown": "Shut Down",
   "restartNow": "Restart now",
