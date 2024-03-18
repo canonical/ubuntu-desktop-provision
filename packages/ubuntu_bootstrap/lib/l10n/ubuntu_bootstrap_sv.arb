@@ -728,7 +728,7 @@
       "color": {}
     }
   },
-  "refreshRestart": "Starta om installationsprogrammet.",
+  "refreshRestart": "Vänligen stäng installationsprogrammet och starta om för att fortsätta",
   "@refreshRestart": {},
   "installationTypeTPM": "EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering",
   "@installationTypeTPM": {},
@@ -982,5 +982,7 @@
   "refreshReady": "Uppdatering redo",
   "@refreshReady": {},
   "refreshUpdateNow": "Uppdatera nu",
-  "@refreshUpdateNow": {}
+  "@refreshUpdateNow": {},
+  "refreshCloseLabel": "Stäng installationsprogrammet",
+  "@refreshCloseLabel": {}
 }
