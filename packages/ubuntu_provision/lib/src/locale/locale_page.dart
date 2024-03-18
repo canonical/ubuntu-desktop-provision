@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
@@ -23,12 +24,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
       isScrollable: false,
-      onNext: () async {
-        final locale = model.locale(model.selectedIndex);
-        await model.applyLocale(locale);
-        await tryGetService<TelemetryService>()
-            ?.addMetric('Language', locale.languageCode);
-      },
       contentFlex: 4,
       content: ListWidget.builder(
         selectedIndex: model.selectedIndex,
@@ -45,6 +40,18 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
             model.selectLanguage(index);
           }
         },
+      ),
+      bottomBar: WizardBar(
+        trailing: [
+          NextWizardButton(
+            onNext: () async {
+              final locale = model.locale(model.selectedIndex);
+              await model.applyLocale(locale);
+              await tryGetService<TelemetryService>()
+                  ?.addMetric('Language', locale.languageCode);
+            },
+          )
+        ],
       ),
     );
   }
