@@ -376,13 +376,6 @@
     "@tooManyPrimaryPartitions": {},
     "partitionLimitReached": "Grenze erreicht",
     "@partitionLimitReached": {},
-    "restartWarning": "Sie können {RELEASE} jetzt weiter ausprobieren, aber alle Änderungen, die Sie bis zu einem Neustart des Systems durchführen, werden nicht gespeichert.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "partitionFormatNone": "Unformatiert lassen",
     "@partitionFormatNone": {},
     "loadingHeader": "{DISTRO} wird vorbereitet …",

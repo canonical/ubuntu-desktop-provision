@@ -407,13 +407,6 @@
     "@installDriversSubtitle": {},
     "installCodecsSubtitle": "Denna programvara är föremål för licensvillkor som ingår i dess dokumentation. Vissa är proprietära.",
     "@installCodecsSubtitle": {},
-    "restartWarning": "Du kan fortsätta att testa {RELEASE} nu, men tills du startar om datorn kommer alla ändringar du gör eller dokument du sparar inte att bevaras.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "restartNow": "Starta om nu",
     "@restartNow": {},
     "continueTesting": "Fortsätt att testa",

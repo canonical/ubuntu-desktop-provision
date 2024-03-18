@@ -407,13 +407,6 @@
     "@quitButtonText": {},
     "notEnoughDiskSpaceTitle": "Beklager",
     "@notEnoughDiskSpaceTitle": {},
-    "restartWarning": "Du kan fortsette å teste {RELEASE}, men før du starter datamaskinen på ny vil ingen endringer du gjør eller dokumenter du lagrer bevares.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "partitionFormatNone": "Levn uformatert",
     "@partitionFormatNone": {},
     "restartNow": "Utfør omstart nå",

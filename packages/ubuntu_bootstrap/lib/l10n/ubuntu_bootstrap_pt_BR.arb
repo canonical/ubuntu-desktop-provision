@@ -366,13 +366,6 @@
     "@restartNow": {},
     "continueTesting": "Continuar testando",
     "@continueTesting": {},
-    "restartWarning": "Você pode continuar testando o {RELEASE} agora, mas ao reiniciar o computador, todas as alterações feitas ou documentos armazenados não serão preservados.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "offlineWarning": "Você está off-line no momento",
     "@offlineWarning": {},
     "partitionLimitReached": "Limite atingido",

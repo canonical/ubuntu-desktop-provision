@@ -204,13 +204,6 @@
             "system": {}
         }
     },
-    "restartWarning": "Galite toliau bandyti {RELEASE}, tačiau, kol nepaleisite kompiuterio iš naujo, tol jokie atlikti pakeitimai bei sukurti ar atsiųsti dokumentai (failai) nebus išsaugoti.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "bitlockerDescription": "Šis kompiuteris naudoja „Windows BitLocker“ šifravimą.\nNorėdami tęsti, turite pasinaudoti „Windows“ ir sukurti laisvą vietą arba pasirinkti variantą '{option}'.",
     "@bitlockerDescription": {},
     "newPartitionTableConfirmationMessage": "Sukūrus naują skirsnių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skirsniai. Kol kas šią operaciją galima atšaukti, jei reikės.",

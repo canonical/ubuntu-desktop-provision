@@ -308,13 +308,6 @@
     "@installAlongsideAvailable": {},
     "partitionFormatNone": "Jätä alustamatta",
     "@partitionFormatNone": {},
-    "restartWarning": "Voit jatkaa julkaisun {RELEASE} testaamista nyt, mutta mitkään tekemäsi muutokset tai tallentamasi asiakirjat eivät säily, ennen kuin käynnistät tietokoneen uudelleen.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "installingSystem": "Asennetaan järjestelmää…",
     "@installingSystem": {},
     "configuringSystem": "Määritetään järjestelmää…",

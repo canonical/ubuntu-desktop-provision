@@ -496,13 +496,6 @@
     "@diskHeadersFormat": {},
     "partitionTypeLabel": "Zadajte typ pre nový oddiel:",
     "@partitionTypeLabel": {},
-    "restartWarning": "Teraz môžete pokračovať v skúšaní {RELEASE}, ale pokiaľ počítač nereštartujete, všetky vykonané zmeny alebo vytvorené dokumenty nebudú zachované.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "continueTesting": "Pokračovať v skúšaní",
     "@continueTesting": {},
     "restartIntoWindows": "Reštartovať do Windows",

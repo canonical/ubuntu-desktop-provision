@@ -368,13 +368,6 @@
     "@restartNow": {},
     "continueTesting": "Continuar probando",
     "@continueTesting": {},
-    "restartWarning": "Puede continuar probando {RELEASE} ahora, pero hasta que reinicie el equipo, los cambios que realice o los documentos que guarde no se conservarán.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "tooManyPrimaryPartitions": "Demasiadas particiones primarias",
     "@tooManyPrimaryPartitions": {},
     "partitionLimitReached": "Límite alcanzado",

@@ -372,13 +372,6 @@
             "mount": {}
         }
     },
-    "restartWarning": "Du kan fortsat afprøve {RELEASE} nu, men indtil du genstarter computeren, vil ingen ændringer du foretager, eller dokumenter du gemmer, blive bevaret.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "restartNow": "Genstart nu",
     "@restartNow": {},
     "restartIntoWindows": "Genstart i Windows",

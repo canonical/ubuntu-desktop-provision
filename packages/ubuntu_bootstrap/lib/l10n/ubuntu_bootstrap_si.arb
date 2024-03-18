@@ -322,13 +322,6 @@
     "@partitionLocationBeginning": {},
     "partitionLocationEnd": "මෙම ඉඩෙහි අවසානය",
     "@partitionLocationEnd": {},
-    "restartWarning": "ඔබට දැන් දිගටම {RELEASE} අත්හදා බැලීමට හැකිය, නමුත් පරිගණකය යළි ආරම්භ කරන තුරු ඔබ සුරකින ලේඛන හෝ සිදුකරන වෙනස්කම් රැඳෙන්නේ නැත.",
-    "@restartWarning": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
     "partitionMountPointLabel": "සවිවන ස්ථානය:",
     "@partitionMountPointLabel": {},
     "installAlongsideResizePartition": "පංගුව යළි ප්‍රමාණනය",
