@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'このまま $RELEASE の試用を続けることもできますが、コンピューターを再起動するまでは、なにか変更を行ったり文書を保存してもデータは残りません。';
   }
 

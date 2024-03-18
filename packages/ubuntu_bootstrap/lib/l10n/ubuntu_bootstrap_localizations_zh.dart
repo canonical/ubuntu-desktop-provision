@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return '您现在可以继续测试 $RELEASE，但在重新启动计算机之前，您所做的任何更改或保存的文档都不会被保留。';
   }
 
@@ -1408,7 +1408,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return '您現在可以繼續試用 $RELEASE，但直到電腦重啟前，在此系統上進行的變更與儲存的文件將不會被保存。';
   }
 

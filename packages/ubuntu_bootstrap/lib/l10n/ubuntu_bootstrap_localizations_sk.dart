@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Teraz môžete pokračovať v skúšaní $RELEASE, ale pokiaľ počítač nereštartujete, všetky vykonané zmeny alebo vytvorené dokumenty nebudú zachované.';
   }
 

@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'ඔබට දැන් දිගටම $RELEASE අත්හදා බැලීමට හැකිය, නමුත් පරිගණකය යළි ආරම්භ කරන තුරු ඔබ සුරකින ලේඛන හෝ සිදුකරන වෙනස්කම් රැඳෙන්නේ නැත.';
   }
 

@@ -600,7 +600,7 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** is installed and ready to use';
+    return '$system is installed and ready to use';
   }
 
   @override
@@ -614,8 +614,8 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'You can continue testing $RELEASE now, but until you restart the computer, any changes you make or documents you save will not be preserved.';
+  String restartWarning(Object RELEASE) {
+    return 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
   }
 
   @override

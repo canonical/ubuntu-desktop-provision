@@ -1284,7 +1284,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @readyToUse.
   ///
   /// In en, this message translates to:
-  /// **'**{system}** is installed and ready to use'**
+  /// **'{system} is installed and ready to use'**
   String readyToUse(String system);
 
   /// No description provided for @rebootToConfigure.
@@ -1302,8 +1302,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @restartWarning.
   ///
   /// In en, this message translates to:
-  /// **'You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.'**
-  String restartWarning(String RELEASE);
+  /// **'Restart to complete the installation or continue testing.\nAny changes you make not be saved.'**
+  String restartWarning(Object RELEASE);
 
   /// No description provided for @rebootToConfigureWarning.
   ///

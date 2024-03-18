@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Most folytathatja a(z) $RELEASE kipróbálását, de amíg nem indítja újra a számítógépet, addig semmilyen elvégzett változtatás vagy elmentett dokumentum nem lesz megtartva.';
   }
 

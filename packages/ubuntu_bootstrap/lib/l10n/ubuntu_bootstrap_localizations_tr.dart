@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Şimdi $RELEASE test etmeye devam edebilirsiniz, ancak bilgisayarı yeniden başlatana kadar yaptığınız değişiklikler ya da kaydettiğiniz belgeler korunmayacaktır.';
   }
 

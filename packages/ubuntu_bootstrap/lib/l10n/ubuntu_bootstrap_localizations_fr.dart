@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Vous pouvez maintenant continuer à tester $RELEASE, mais tant que vous n’aurez pas redémarré votre ordinateur, les changements effectués ou les documents créés ne seront pas préservés.';
   }
 

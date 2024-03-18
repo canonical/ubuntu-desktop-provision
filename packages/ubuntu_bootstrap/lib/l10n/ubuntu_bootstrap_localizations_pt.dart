@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Pode continuar a testar o $RELEASE agora, mas até reiniciar o computador, quaisquer alterações que faça ou documentos que guarde não serão preservados.';
   }
 
@@ -1408,7 +1408,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Você pode continuar testando o $RELEASE agora, mas ao reiniciar o computador, todas as alterações feitas ou documentos armazenados não serão preservados.';
   }
 

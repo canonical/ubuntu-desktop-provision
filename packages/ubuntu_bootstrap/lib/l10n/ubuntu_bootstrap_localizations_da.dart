@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
+  String restartWarning(Object RELEASE) {
     return 'Du kan fortsat afprøve $RELEASE nu, men indtil du genstarter computeren, vil ingen ændringer du foretager, eller dokumenter du gemmer, blive bevaret.';
   }
 
