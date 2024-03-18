@@ -56,10 +56,12 @@ func TestProMagicAttach(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
-			// Test setup
+			// Prepare mocks
 			opts := []pro.Option{
 				pro.WithProExecutable(&mockProExecutable{failInitiate: tc.failInitiate, failWait: tc.failWait, failAttach: tc.failAttach, userCodeRefresh: tc.userCodeRefresh, networkErrorWait: tc.networkErrorWait, networkErrorInitiate: tc.networkErrorInitiate, alreadyAttached: tc.alreadyAttached}),
 			}
+
+			// Setup test
 			client := newProClient(t, opts...)
 			stream, err := client.ProMagicAttach(context.Background(), &emptypb.Empty{})
 			require.NoError(t, err, "calling ProMagicAttach should not fail")
@@ -107,19 +109,23 @@ func TestProStatus(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
+			// Prepare mocks
 			opts := []pro.Option{
 				pro.WithProExecutable(&mockProExecutable{failStatus: tc.failStatus, alreadyAttached: tc.alreadyAttached}),
 			}
 
+			// Setup test
 			client := newProClient(t, opts...)
 			resp, err := client.ProStatus(context.Background(), &emptypb.Empty{})
 
+			// Error cases
 			if tc.failStatus {
 				require.Error(t, err, "ProStatus should return an error")
 				return
 			}
-
 			require.NoError(t, err, "ProStatus should not return an error")
+
+			// Success cases
 			require.Equal(t, tc.alreadyAttached, resp.Value, "ProStatus returned an unexpected response")
 		})
 	}
@@ -143,10 +149,10 @@ func TestProAttach(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
 
+			// Prepare mocks
 			opts := []pro.Option{
 				pro.WithProExecutable(&mockProExecutable{failAttach: tc.failAttach}),
 			}
-
 			client := newProClient(t, opts...)
 			_, err := client.ProAttach(context.Background(), &wrapperspb.StringValue{Value: "mock_token"})
 
