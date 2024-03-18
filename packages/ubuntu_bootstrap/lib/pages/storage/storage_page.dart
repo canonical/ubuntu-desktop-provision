@@ -22,10 +22,9 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
 
   static String formatAlongside(
     UbuntuBootstrapLocalizations lang,
-    ProductInfo info,
+    String product,
     List<OsProber> os,
   ) {
-    final product = [info.name, info.version].whereType<String>().join(' ');
     switch (os.length) {
       case 0:
         return lang.installationTypeAlongsideUnknown(product);
@@ -62,7 +61,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
               title: Text(
                 formatAlongside(
                   lang,
-                  model.productInfo,
+                  ref.watch(flavorProvider).displayName,
                   model.existingOS ?? [],
                 ),
               ),
