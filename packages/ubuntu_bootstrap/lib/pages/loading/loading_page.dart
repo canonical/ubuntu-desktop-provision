@@ -40,10 +40,7 @@ class _LoadingPageState extends ConsumerState<LoadingPage> {
           Text(lang.loadingHeader(flavor.displayName), style: style),
         ],
       ),
-      bottomBar: const WizardBar(
-        leading: BackWizardButton(enabled: false),
-        trailing: [NextWizardButton(enabled: false)],
-      ),
+      bottomBar: const WizardBar(),
     );
   }
 }
