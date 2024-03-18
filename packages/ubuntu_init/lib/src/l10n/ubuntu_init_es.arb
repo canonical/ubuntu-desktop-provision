@@ -3,15 +3,15 @@
   "@welcomeStoreTitle": {},
   "telemetryReportLabel": "Detalles del informe",
   "@telemetryReportLabel": {},
-  "welcomePageTitle": "Bienvenido",
+  "welcomePageTitle": "Le damos la bienvenida",
   "@welcomePageTitle": {},
-  "welcomeStartSubtitle": "Apoya una experiencia de configuración más limpia.",
+  "welcomeStartSubtitle": "A favor de una experiencia de puesta en marcha más prolija.",
   "@welcomeStartSubtitle": {},
   "welcomeStartTitle": "Un comienzo simplificado",
   "@welcomeStartTitle": {},
-  "welcomeStoreSubtitle": "Nunca ha sido tan fácil encontrar tu software favorito.",
+  "welcomeStoreSubtitle": "Nunca ha sido tan fácil encontrar sus programas favoritos.",
   "@welcomeStoreSubtitle": {},
-  "welcomePageHeader": "Bienvenido a {distro}",
+  "welcomePageHeader": "Le damos la bienvenida a {distro}",
   "@welcomePageHeader": {},
   "welcomeSecurityTitle": "Mayor seguridad",
   "@welcomeSecurityTitle": {},
@@ -23,7 +23,7 @@
   "@welcomeSecuritySubtitle": {},
   "telemetryReportTitle": "Detalles del informe",
   "@telemetryReportTitle": {},
-  "privacyLocationTitle": "¿Habilitar los servicios de ubicación?",
+  "privacyLocationTitle": "¿Quiere activar los servicios de ubicación?",
   "@privacyLocationTitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Ver registro de cambios</a>",
   "@welcomeChangelogLabel": {
@@ -34,9 +34,9 @@
   },
   "telemetryPageTitle": "Telemetría",
   "@telemetryPageTitle": {},
-  "privacyLocationSubtitle": "Permite que las aplicaciones conozcan tu ubicación geográfica.\nPuedes cambiar esto en cualquier momento en los Ajustes del sistema.",
+  "privacyLocationSubtitle": "Permita que las aplicaciones conozcan su ubicación geográfica.\nPuede cambiar esto en cualquier momento en la Configuración del sistema.",
   "@privacyLocationSubtitle": {},
-  "telemetryHeader": "Ayuda a mejorar {distro}",
+  "telemetryHeader": "Ayude a mejorar {distro}",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
@@ -45,14 +45,14 @@
   },
   "privacyLocationEnable": "Servicios de ubicación",
   "@privacyLocationEnable": {},
-  "telemetryDescription": "Comparte datos de forma anónima con {distro} para que podamos mejorar tu experiencia.",
+  "telemetryDescription": "Comparta datos de forma anónima con {distro} para que podamos mejorar su experiencia.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryLabelOn": "Sí, comparte los datos del sistema con el equipo {distro}",
+  "telemetryLabelOn": "Sí, compartir datos del sistema con el equipo de {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
@@ -61,7 +61,7 @@
   },
   "telemetryLabelOff": "No, no compartir datos del sistema",
   "@telemetryLabelOff": {},
-  "telemetryLegalLabel": "Información Legal",
+  "telemetryLegalLabel": "Información legal",
   "@telemetryLegalLabel": {},
   "privacyPolicyLink": "Protección de los datos",
   "@privacyPolicyLink": {},
