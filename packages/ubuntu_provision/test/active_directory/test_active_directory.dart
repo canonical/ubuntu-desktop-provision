@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
-import 'package:ubuntu_provision/src/active_directory/active_directory_page.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 
+import '../test_utils.mocks.dart';
 import 'test_active_directory.mocks.dart';
+
 export '../test_utils.dart';
 export 'test_active_directory.mocks.dart';
 
@@ -21,6 +21,7 @@ ActiveDirectoryModel buildActiveDirectoryModel({
   AdAdminNameValidation? adminNameValidation,
   AdPasswordValidation? passwordValidation,
   AdJoinResult? joinResult,
+  bool? showPassword,
 }) {
   final model = MockActiveDirectoryModel();
   when(model.init()).thenAnswer((_) async => isUsed ?? false);
@@ -36,12 +37,18 @@ ActiveDirectoryModel buildActiveDirectoryModel({
       .thenReturn(passwordValidation ?? AdPasswordValidation.OK);
   when(model.getJoinResult())
       .thenAnswer((_) async => joinResult ?? AdJoinResult.OK);
+  when(model.showPassword).thenReturn(showPassword ?? false);
   return model;
 }
 
 Widget buildActiveDirectoryPage(ActiveDirectoryModel model) {
+  final pageImages =
+      PageImages.internal(MockPageConfigService(), MockThemeVariantService());
   return ProviderScope(
-    overrides: [activeDirectoryModelProvider.overrideWith((_) => model)],
+    overrides: [
+      activeDirectoryModelProvider.overrideWith((_) => model),
+      pageImagesProvider.overrideWith((_) => pageImages),
+    ],
     child: const ActiveDirectoryPage(),
   );
 }

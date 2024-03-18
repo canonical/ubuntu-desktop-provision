@@ -4,12 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
+import 'package:ubuntu_provision/src/identity/identity_widgets.dart'
+    show ShowPasswordButton;
+// TODO: Generalize password button widget
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 class DomainNameFormField extends ConsumerWidget {
-  const DomainNameFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const DomainNameFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -21,7 +22,6 @@ class DomainNameFormField extends ConsumerWidget {
 
     return ValidatedFormField(
       autofocus: true,
-      fieldWidth: fieldWidth,
       labelText: lang.activeDirectoryDomainLabel,
       initialValue: domainName,
       successWidget: const SuccessIcon(),
@@ -39,9 +39,7 @@ class DomainNameFormField extends ConsumerWidget {
 }
 
 class AdminNameFormField extends ConsumerWidget {
-  const AdminNameFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const AdminNameFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -52,7 +50,6 @@ class AdminNameFormField extends ConsumerWidget {
         activeDirectoryModelProvider.select((m) => m.adminNameValidation));
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
       labelText: lang.activeDirectoryAdminLabel,
       initialValue: adminName,
       successWidget: const SuccessIcon(),
@@ -66,9 +63,7 @@ class AdminNameFormField extends ConsumerWidget {
 }
 
 class PasswordFormField extends ConsumerWidget {
-  const PasswordFormField({super.key, this.fieldWidth});
-
-  final double? fieldWidth;
+  const PasswordFormField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -77,12 +72,20 @@ class PasswordFormField extends ConsumerWidget {
         ref.watch(activeDirectoryModelProvider.select((m) => m.password));
     final validation = ref.watch(
         activeDirectoryModelProvider.select((m) => m.passwordValidation));
+    final showPassword =
+        ref.watch(activeDirectoryModelProvider.select((m) => m.showPassword));
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
       labelText: lang.activeDirectoryPasswordLabel,
-      obscureText: true,
+      obscureText: !showPassword,
+      successWidget:
+          password.isNotEmpty ? const SuccessIcon() : const SizedBox(),
       initialValue: password,
+      suffixIcon: ShowPasswordButton(
+        value: showPassword,
+        onChanged: (value) =>
+            ref.read(activeDirectoryModelProvider).showPassword = value,
+      ),
       validator: CallbackValidator(
         (_) => validation == AdPasswordValidation.OK,
         errorText: validation?.localize(context) ?? '',
