@@ -1,5 +1,3 @@
-flavor: kubuntu
-
 pages:
   locale:
     image: "assets/images/logo-light.svg"
