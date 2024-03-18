@@ -61,17 +61,6 @@ class PageImages {
   UbuntuFlavor _flavor;
 
   @visibleForTesting
-  SvgFileLoader Function(
-    File file, {
-    SvgTheme? theme,
-    ColorMapper? colorMapper,
-  }) svgFileLoader = SvgFileLoader.new;
-
-  @visibleForTesting
-  Future<String> Function(String imagePath) svgStringLoader =
-      rootBundle.loadString;
-
-  @visibleForTesting
   final Map<String, Widget> images = {};
 
   /// Gets the image for the given page name, remember that the [pageName]
@@ -99,12 +88,17 @@ class PageImages {
             _loadAsset(
               'packages/ubuntu_provision/$imageConfig',
               pageName,
-            ),
+            ).catchError((_) {
+              throw _PageImageNotFoundException(
+                'Could not read from $imageConfig',
+              );
+            }),
           );
         } else {
           loadFutures.add(_loadFile(imageConfig, pageName));
         }
-      } on Exception catch (e) {
+        // ignore: avoid_catches_without_on_clauses
+      } catch (e) {
         _log.error('Error loading image for $pageName from $imageConfig: $e');
       }
     });
@@ -126,11 +120,8 @@ class PageImages {
     }
     final extension = path.extension(imageName);
     if (extension == '.svg') {
-      for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
-        final bytes = await _loadSvg(imageName, file, darkMode: darkMode);
-        images[darkMode ? '$_darkModePrefix$pageName' : pageName] =
-            SvgPicture.memory(bytes.buffer.asUint8List());
-      }
+      final svgContent = await file.readAsString();
+      _loadSvgFromString(svgContent, pageName);
     } else {
       images[pageName] = Image.file(file);
     }
@@ -146,33 +137,25 @@ class PageImages {
 
     final extension = path.extension(imagePath);
     if (extension == '.svg') {
-      final svgContent = await svgStringLoader(imagePath);
-      for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
-        images[darkMode ? '$_darkModePrefix$pageName' : pageName] = SvgPicture(
-          SvgStringLoader(
-            svgContent,
-            colorMapper: _AccentColorMapper(_accentColor(darkMode: darkMode)),
-          ),
-        );
-      }
+      final svgContent = await rootBundle.loadString(imagePath);
+      _loadSvgFromString(svgContent, pageName);
     } else {
       images[pageName] = Image.asset(imagePath, package: packageName);
     }
   }
 
-  Future<ByteData> _loadSvg(
-    String imageName,
-    File file, {
-    bool darkMode = false,
-  }) {
-    final accentColor = _accentColor(darkMode: darkMode);
-    return svg.cache.putIfAbsent(
-      imageName,
-      () => svgFileLoader(
-        file,
-        colorMapper: _AccentColorMapper(accentColor),
-      ).loadBytes(null),
-    );
+  void _loadSvgFromString(String svgContent, String pageName) {
+    for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
+      final accentColor = _accentColor(darkMode: darkMode);
+      final image = SvgPicture(
+        SvgStringLoader(
+          svgContent,
+          colorMapper: _AccentColorMapper(accentColor),
+        ),
+      );
+
+      images[darkMode ? '$_darkModePrefix$pageName' : pageName] = image;
+    }
   }
 
   Color? _accentColor({bool darkMode = false}) => darkMode
@@ -212,4 +195,13 @@ class _AccentColorMapper extends ColorMapper {
       return color;
     }
   }
+}
+
+class _PageImageNotFoundException implements Exception {
+  _PageImageNotFoundException(this.message);
+
+  final String message;
+
+  @override
+  String toString() => 'PageImageNotFoundException: $message';
 }
