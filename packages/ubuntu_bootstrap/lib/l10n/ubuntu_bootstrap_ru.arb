@@ -612,7 +612,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Пожалуйста перезапустите установщик.",
+  "refreshRestart": "Закройте и перезапустите установщик, чтобы продолжить",
   "@refreshRestart": {},
   "refreshSnapPrerequisites": "Обеспечение предварительных условий {snap}...",
   "@refreshSnapPrerequisites": {
@@ -820,7 +820,7 @@
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "autoinstallTitle": "Тип установки",
   "@autoinstallTitle": {},
-  "autoinstallHeader": "Как вы хотите установить {DISTRO}?",
+  "autoinstallHeader": "Как Вы хотели бы установить {DISTRO}?",
   "@autoinstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -884,7 +884,7 @@
   "@createPassphrase": {},
   "confirmPassphrase": "Подтвердить парольную фразу",
   "@confirmPassphrase": {},
-  "installationTypeHeader": "Как вы хотите установить {DISTRO}?",
+  "installationTypeHeader": "Как Вы хотите установить {DISTRO}?",
   "@installationTypeHeader": {
     "placeholders": {
       "DISTRO": {
@@ -924,5 +924,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "refreshInfo": "Выполните обновление, чтобы повысить надёжность и расширить возможности.",
+  "@refreshInfo": {},
+  "refreshCloseLabel": "Закрыть установщик",
+  "@refreshCloseLabel": {},
+  "refreshReady": "Обновление готово",
+  "@refreshReady": {},
+  "refreshHeader": "Доступно обновление для программы установки",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "Обновить сейчас",
+  "@refreshUpdateNow": {}
 }
