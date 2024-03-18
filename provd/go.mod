@@ -9,7 +9,7 @@ require (
 	github.com/linuxdeepin/go-gir v0.0.0-20230710064042-bd15f0549c87
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.17.0
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a
 	google.golang.org/grpc v1.60.1
 	google.golang.org/protobuf v1.33.0
