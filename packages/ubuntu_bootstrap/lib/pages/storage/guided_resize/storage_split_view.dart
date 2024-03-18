@@ -120,6 +120,7 @@ class _StorageSplitViewState extends State<StorageSplitView> {
           name: widget.productInfo.toString(),
           size: widget.totalSize - widget.currentSize,
           format: 'ext4', // FIXME
+          newOS: true,
           onPressed: () async {
             final size = await showStorageSizeDialog(
               context,

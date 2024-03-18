@@ -1,7 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
+import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
@@ -13,7 +15,7 @@ String get snapName =>
     Platform.environment['SNAP_NAME'] ??
     p.basename(Platform.resolvedExecutable);
 
-class RefreshView extends StatelessWidget {
+class RefreshView extends ConsumerWidget {
   const RefreshView({
     required this.state,
     super.key,
@@ -26,11 +28,15 @@ class RefreshView extends StatelessWidget {
   final VoidCallback? onQuit;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final pageImages = ref.watch(pageImagesProvider);
     final l10n = UbuntuBootstrapLocalizations.of(context);
     return Column(children: [
       const Spacer(),
-      MascotAvatar(progress: state.progress),
+      MascotAvatar(
+        image: pageImages.get(InstallationStep.refresh.name),
+        progress: state.progress,
+      ),
       const Spacer(),
       Text(
         state.whenOrNull(

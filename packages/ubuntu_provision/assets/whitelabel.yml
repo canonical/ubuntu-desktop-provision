@@ -12,6 +12,7 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
+    image: "assets/mascot.png"
   autoinstall:
     image: "assets/images/disk.svg"
   source-selection:
@@ -24,6 +25,8 @@ pages:
     image: "assets/images/encryption.svg"
   storage:
     image: "assets/images/disk.svg"
+  guided-resize:
+    image: "assets/images/ubuntu_storage_icon.svg"
   passphrase:
     image: "assets/images/passphrase.svg"
   confirm:

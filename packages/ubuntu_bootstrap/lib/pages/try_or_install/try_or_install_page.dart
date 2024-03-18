@@ -14,10 +14,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
-    return Future.wait([
-      ref.read(tryOrInstallModelProvider).init(),
-      MascotAvatar.precacheAsset(context),
-    ]).then((_) => true);
+    return ref.read(tryOrInstallModelProvider).init().then((_) => true);
   }
 
   @override
