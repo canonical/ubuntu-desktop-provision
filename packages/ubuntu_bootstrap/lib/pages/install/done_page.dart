@@ -11,7 +11,6 @@ class DonePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = ref.watch(flavorProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
     final theme = Theme.of(context);
