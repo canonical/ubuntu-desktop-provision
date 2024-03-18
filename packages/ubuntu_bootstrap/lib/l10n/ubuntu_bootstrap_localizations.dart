@@ -1605,6 +1605,30 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Update available'**
   String get refreshPageTitle;
 
+  /// No description provided for @refreshHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'An update is available for the installer'**
+  String get refreshHeader;
+
+  /// No description provided for @refreshUpdateNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Update now'**
+  String get refreshUpdateNow;
+
+  /// No description provided for @refreshInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Update to the latest version for improved reliability and more features.'**
+  String get refreshInfo;
+
+  /// No description provided for @refreshReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Update ready'**
+  String get refreshReady;
+
   /// No description provided for @refreshCurrent.
   ///
   /// In en, this message translates to:
@@ -1632,8 +1656,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @refreshRestart.
   ///
   /// In en, this message translates to:
-  /// **'Please quit and relaunch the installer.'**
+  /// **'Please close the installer and relaunch to continue'**
   String get refreshRestart;
+
+  /// No description provided for @refreshCloseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Close installer'**
+  String get refreshCloseLabel;
 
   /// No description provided for @refreshSnapPrerequisites.
   ///

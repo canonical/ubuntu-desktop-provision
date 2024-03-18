@@ -801,6 +801,18 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Güncelleme var';
 
   @override
+  String get refreshHeader => 'An update is available for the installer';
+
+  @override
+  String get refreshUpdateNow => 'Update now';
+
+  @override
+  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+
+  @override
+  String get refreshReady => 'Update ready';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return 'Geçerli $snap sürümü: $version.';
   }
@@ -822,6 +834,9 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshRestart => 'Kurucuyu yeniden başlatın.';
+
+  @override
+  String get refreshCloseLabel => 'Close installer';
 
   @override
   String refreshSnapPrerequisites(String snap) {
