@@ -364,7 +364,7 @@ void main() {
     await tester.tap(radio);
     verify(model.type = StorageType.manual).called(1);
 
-    expect(find.button(l10n.installationTypeAdvancedLabel), findsNothing);
+    expect(find.button(l10n.installationTypeAdvancedLabel), isDisabled);
   });
 
   testWidgets('cannot manual partition', (tester) async {
