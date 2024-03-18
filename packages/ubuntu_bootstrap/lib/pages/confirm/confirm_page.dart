@@ -56,7 +56,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
             const SizedBox(height: kWizardSpacing),
             Text(
               lang.confirmPartitionsTitle,
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: kWizardSpacing / 2),
             Column(
@@ -157,7 +157,7 @@ class _SummarySection extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         const SizedBox(height: kWizardSpacing / 2),
         for (final entry in entries.entries)
