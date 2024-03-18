@@ -1,86 +1,86 @@
 {
-  "@@locale": "ta",
-  "changeButtonText": "மாற்று",
-  "@changeButtonText": {},
-  "tryOrInstallRepairOption": "நிறுவலை பழுதுபார்",
-  "@tryOrInstallRepairOption": {},
-  "installationTypeTitle": "நிறுவல் வகை",
-  "@installationTypeTitle": {},
-  "installationTypeNoOSDetected": "இந்த கணினியில் தற்போது எந்த இயங்கு தளங்களும் கண்டறியப்படவில்லை.என்ன செய்ய விரும்புகிறீர்கள்?",
-  "@installationTypeNoOSDetected": {},
-  "installationTypeAdvancedLabel": "மேம்பட்ட அம்சங்கள்...",
-  "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "மேம்பட்ட அம்சங்கள்",
-  "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "எதுவும் இல்லை",
-  "@installationTypeNone": {},
-  "installationTypeNoneSelected": "எதுவும் தேர்வாகவில்லை",
-  "@installationTypeNoneSelected": {},
-  "selectGuidedStorageInstallNow": "இப்போது நிறுவு",
-  "@selectGuidedStorageInstallNow": {},
-  "diskHeadersType": "வகை",
-  "@diskHeadersType": {},
-  "partitionCreateTitle": "பகிர்வை உருவாக்கு",
-  "@partitionCreateTitle": {},
-  "partitionEditTitle": "பகிர்வைத் திருத்து",
-  "@partitionEditTitle": {},
-  "partitionSizeLabel": "அளவு:",
-  "@partitionSizeLabel": {},
-  "diskHeadersSize": "அளவு",
-  "@diskHeadersSize": {},
-  "diskHeadersUsed": "பயன்படுத்தப்பட்ட அளவு",
-  "@diskHeadersUsed": {},
-  "diskHeadersSystem": "கணினி",
-  "@diskHeadersSystem": {},
-  "freeDiskSpace": "காலி இடம்",
-  "@freeDiskSpace": {},
-  "newPartitionTable": "புதிய பகிர்வு அட்டவணை",
-  "@newPartitionTable": {},
-  "partitionTypePrimary": "முதன்மை",
-  "@partitionTypePrimary": {},
-  "partitionLocationLabel": "புதிய பகிர்வுக்கான இடம்:",
-  "@partitionLocationLabel": {},
-  "partitionLocationBeginning": "இந்த இடத்தின் தொடக்கத்திலிருந்து",
-  "@partitionLocationBeginning": {},
-  "partitionLocationEnd": "இந்த இடத்தின் முடிவில்",
-  "@partitionLocationEnd": {},
-  "partitionFormatLabel": "பயன்படுத்தப்பட்ட அளவு:",
-  "@partitionFormatLabel": {},
-  "installationCompleteTitle": "நிறுவல் முடிவுற்றது",
-  "@installationCompleteTitle": {},
-  "windowTitle": "நிறுவு{RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "tryDescription": "உங்கள் கணினியில் எந்த மாற்றமும் செய்யாமல் {RELEASE}ஐ சோதிக்கலாம்.",
-  "@tryDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "welcome": "நல்வரவு",
-  "@welcome": {},
-  "tryOrInstallTitle": "சோதி அல்லது நிறுவு",
-  "@tryOrInstallTitle": {},
-  "tryOption": "சோதி {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "நிறுவு{RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "rstTitle": "RSTயை முடக்கு",
-  "@rstTitle": {},
-  "@keyboardKeyPresentLabel": {}
+    "@@locale": "ta",
+    "changeButtonText": "மாற்று",
+    "@changeButtonText": {},
+    "tryOrInstallRepairOption": "நிறுவலை பழுதுபார்",
+    "@tryOrInstallRepairOption": {},
+    "installationTypeTitle": "நிறுவல் வகை",
+    "@installationTypeTitle": {},
+    "installationTypeNoOSDetected": "இந்த கணினியில் தற்போது எந்த இயங்கு தளங்களும் கண்டறியப்படவில்லை.என்ன செய்ய விரும்புகிறீர்கள்?",
+    "@installationTypeNoOSDetected": {},
+    "installationTypeAdvancedLabel": "மேம்பட்ட அம்சங்கள்...",
+    "@installationTypeAdvancedLabel": {},
+    "installationTypeAdvancedTitle": "மேம்பட்ட அம்சங்கள்",
+    "@installationTypeAdvancedTitle": {},
+    "installationTypeNone": "எதுவும் இல்லை",
+    "@installationTypeNone": {},
+    "installationTypeNoneSelected": "எதுவும் தேர்வாகவில்லை",
+    "@installationTypeNoneSelected": {},
+    "selectGuidedStorageInstallNow": "இப்போது நிறுவு",
+    "@selectGuidedStorageInstallNow": {},
+    "diskHeadersType": "வகை",
+    "@diskHeadersType": {},
+    "partitionCreateTitle": "பகிர்வை உருவாக்கு",
+    "@partitionCreateTitle": {},
+    "partitionEditTitle": "பகிர்வைத் திருத்து",
+    "@partitionEditTitle": {},
+    "partitionSizeLabel": "அளவு:",
+    "@partitionSizeLabel": {},
+    "diskHeadersSize": "அளவு",
+    "@diskHeadersSize": {},
+    "diskHeadersUsed": "பயன்படுத்தப்பட்ட அளவு",
+    "@diskHeadersUsed": {},
+    "diskHeadersSystem": "கணினி",
+    "@diskHeadersSystem": {},
+    "freeDiskSpace": "காலி இடம்",
+    "@freeDiskSpace": {},
+    "newPartitionTable": "புதிய பகிர்வு அட்டவணை",
+    "@newPartitionTable": {},
+    "partitionTypePrimary": "முதன்மை",
+    "@partitionTypePrimary": {},
+    "partitionLocationLabel": "புதிய பகிர்வுக்கான இடம்:",
+    "@partitionLocationLabel": {},
+    "partitionLocationBeginning": "இந்த இடத்தின் தொடக்கத்திலிருந்து",
+    "@partitionLocationBeginning": {},
+    "partitionLocationEnd": "இந்த இடத்தின் முடிவில்",
+    "@partitionLocationEnd": {},
+    "partitionFormatLabel": "பயன்படுத்தப்பட்ட அளவு:",
+    "@partitionFormatLabel": {},
+    "installationCompleteTitle": "நிறுவல் முடிவுற்றது",
+    "@installationCompleteTitle": {},
+    "windowTitle": "நிறுவு{RELEASE}",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryDescription": "உங்கள் கணினியில் எந்த மாற்றமும் செய்யாமல் {RELEASE}ஐ சோதிக்கலாம்.",
+    "@tryDescription": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "welcome": "நல்வரவு",
+    "@welcome": {},
+    "tryOrInstallTitle": "சோதி அல்லது நிறுவு",
+    "@tryOrInstallTitle": {},
+    "tryOption": "சோதி {RELEASE}",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "நிறுவு{RELEASE}",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "rstTitle": "RSTயை முடக்கு",
+    "@rstTitle": {},
+    "@keyboardKeyPresentLabel": {}
 }

@@ -1,5 +1,5 @@
 {
-  "@@locale": "ro",
-  "changeButtonText": "Schimbă",
-  "@changeButtonText": {}
+    "@@locale": "ro",
+    "changeButtonText": "Schimbă",
+    "@changeButtonText": {}
 }

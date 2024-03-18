@@ -41,7 +41,7 @@ class DonePage extends ConsumerWidget {
                 Text(
                   isCoreDesktop
                       ? lang.rebootToConfigureWarning
-                      : lang.restartWarning(flavor.displayName),
+                      : lang.restartWarningBody,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: kWizardSpacing),

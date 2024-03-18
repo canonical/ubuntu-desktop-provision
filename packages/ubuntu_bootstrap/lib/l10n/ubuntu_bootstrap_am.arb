@@ -1,28 +1,28 @@
 {
-  "@@locale": "am",
-  "welcome": "እንኳን ደህና መጡ",
-  "@welcome": {},
-  "windowTitle": "መግጠም {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "tryOption": "ይሞክሩ {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "መግጠም {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "changeButtonText": "ለውጥ",
-  "@changeButtonText": {}
+    "@@locale": "am",
+    "welcome": "እንኳን ደህና መጡ",
+    "@welcome": {},
+    "windowTitle": "መግጠም {RELEASE}",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryOption": "ይሞክሩ {RELEASE}",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "መግጠም {RELEASE}",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "changeButtonText": "ለውጥ",
+    "@changeButtonText": {}
 }

@@ -1,26 +1,26 @@
 {
-  "@@locale": "my",
-  "welcome": "ကြိုဆိုပါတယ်",
-  "@welcome": {},
-  "windowTitle": "{RELEASE} ကို ထည့်သွင်းမည်",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
+    "@@locale": "my",
+    "welcome": "ကြိုဆိုပါတယ်",
+    "@welcome": {},
+    "windowTitle": "{RELEASE} ကို ထည့်သွင်းမည်",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryOption": "{RELEASE} ကို စမ်းသပ်သုံးစွဲမည်",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "{RELEASE} ကို ထည့်သွင်းမည်",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
     }
-  },
-  "tryOption": "{RELEASE} ကို စမ်းသပ်သုံးစွဲမည်",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "{RELEASE} ကို ထည့်သွင်းမည်",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  }
 }

@@ -1,8 +1,8 @@
 {
-  "@@locale": "vi",
-  "welcome": "Chào mừng",
-  "@welcome": {},
-  "changeButtonText": "Thay đổi",
-  "@changeButtonText": {},
-  "@keyboardHeader": {}
+    "@@locale": "vi",
+    "welcome": "Chào mừng",
+    "@welcome": {},
+    "changeButtonText": "Thay đổi",
+    "@changeButtonText": {},
+    "@keyboardHeader": {}
 }

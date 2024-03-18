@@ -1,34 +1,34 @@
 {
-  "@@locale": "ga",
-  "welcome": "Fáilte",
-  "@welcome": {},
-  "windowTitle": "Suiteáil {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "Suiteáil {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "tryOrInstallReleaseNotesLabel": "B'fhéidir gur mhaith leat na <a href=\"{url}\">nótaí eisithe a léamh</a>.",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
-  "tryOption": "Bain triail as {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "@keyboardTestHint": {}
+    "@@locale": "ga",
+    "welcome": "Fáilte",
+    "@welcome": {},
+    "windowTitle": "Suiteáil {RELEASE}",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "Suiteáil {RELEASE}",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "B'fhéidir gur mhaith leat na <a href=\"{url}\">nótaí eisithe a léamh</a>.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "type": "text",
+        "placeholders": {
+            "url": {}
+        }
+    },
+    "tryOption": "Bain triail as {RELEASE}",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "@keyboardTestHint": {}
 }

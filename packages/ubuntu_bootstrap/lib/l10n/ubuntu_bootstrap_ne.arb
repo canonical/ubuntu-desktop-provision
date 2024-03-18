@@ -1,53 +1,53 @@
 {
-  "@@locale": "ne",
-  "changeButtonText": "बदल्नुहोस्",
-  "@changeButtonText": {},
-  "windowTitle": "{RELEASE} इन्सटल गर्नुहोस्",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
+    "@@locale": "ne",
+    "changeButtonText": "बदल्नुहोस्",
+    "@changeButtonText": {},
+    "windowTitle": "{RELEASE} इन्सटल गर्नुहोस्",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "welcome": "स्वागत छ",
+    "@welcome": {},
+    "tryOrInstallTitle": "प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्",
+    "@tryOrInstallTitle": {},
+    "tryOrInstallReleaseNotesLabel": "तपाईंले <a href=\"{url}\">रिलिज नोटहरू</a> पढ्न आवश्यक हुन सक्छ।",
+    "@tryOrInstallReleaseNotesLabel": {
+        "type": "text",
+        "placeholders": {
+            "url": {}
+        }
+    },
+    "rstTitle": "RST बन्द गर्नुहोस्",
+    "@rstTitle": {},
+    "tryOption": "{RELEASE} प्रयास गर्नुहोस्",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryDescription": "तपाईंले आफ्नो कम्प्युटरमा कुनै परिवर्तन नगरी {RELEASE} प्रयोग गर्न सक्नुहुन्छ।",
+    "@tryDescription": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "{RELEASE} स्थापना गर्नुहोस्",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installDescription": "आफ्नो अन्य अपरेटिङ सिस्टम संगै {RELEASE} स्थापना गर्नुहोस्। यो छिटो हुनेछ।",
+    "@installDescription": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
     }
-  },
-  "welcome": "स्वागत छ",
-  "@welcome": {},
-  "tryOrInstallTitle": "प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्",
-  "@tryOrInstallTitle": {},
-  "tryOrInstallReleaseNotesLabel": "तपाईंले <a href=\"{url}\">रिलिज नोटहरू</a> पढ्न आवश्यक हुन सक्छ।",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
-  "rstTitle": "RST बन्द गर्नुहोस्",
-  "@rstTitle": {},
-  "tryOption": "{RELEASE} प्रयास गर्नुहोस्",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "tryDescription": "तपाईंले आफ्नो कम्प्युटरमा कुनै परिवर्तन नगरी {RELEASE} प्रयोग गर्न सक्नुहुन्छ।",
-  "@tryDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "{RELEASE} स्थापना गर्नुहोस्",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installDescription": "आफ्नो अन्य अपरेटिङ सिस्टम संगै {RELEASE} स्थापना गर्नुहोस्। यो छिटो हुनेछ।",
-  "@installDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  }
 }

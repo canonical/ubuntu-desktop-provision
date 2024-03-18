@@ -1,94 +1,94 @@
 {
-  "@@locale": "ka",
-  "appTitle": "Ubuntu Desktop Installer",
-  "@appTitle": {},
-  "quitButtonText": "დაყენებიდან გასვლა",
-  "@quitButtonText": {},
-  "tryOrInstallTitle": "სცადეთ ან დააყენეთ {DISTRO}",
-  "@tryOrInstallTitle": {},
-  "windowTitle": "{RELEASE}-ის დაყენება",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "changeButtonText": "შეცვლა",
-  "@changeButtonText": {},
-  "tryOrInstallRepairOption": "დაყენებული ვერსიის შეკეთება",
-  "@tryOrInstallRepairOption": {},
-  "welcome": "მოგესალმებით",
-  "@welcome": {},
-  "tryOption": "{RELEASE}-ის ცდა",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "{RELEASE}-ის დაყენება",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "rstTitle": "RST ჩართულია",
-  "@rstTitle": {},
-  "loadingPageTitle": "მოგესალმებათ {DISTRO}",
-  "@loadingPageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
-  "loadingHeader": "{DISTRO}-ის მომზადება…",
-  "@loadingHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
-  "installAlongsideAvailable": "ხელმისაწვდომი:",
-  "@installAlongsideAvailable": {},
-  "installAlongsidePartition": "დანაყოფი:",
-  "@installAlongsidePartition": {},
-  "installAlongsideSize": "ზომა:",
-  "@installAlongsideSize": {},
-  "diskHeadersDevice": "მოწყობილობა",
-  "@diskHeadersDevice": {},
-  "diskHeadersType": "ტიპი",
-  "@diskHeadersType": {},
-  "diskHeadersSize": "ზომა",
-  "@diskHeadersSize": {},
-  "diskHeadersUsed": "გამოყენებულია",
-  "@diskHeadersUsed": {},
-  "diskHeadersSystem": "სისტემა",
-  "@diskHeadersSystem": {},
-  "diskHeadersFormat": "ფორმატი",
-  "@diskHeadersFormat": {},
-  "partitionTypePrimary": "ძირითადი",
-  "@partitionTypePrimary": {},
-  "partitionTypeLogical": "ლოგიკური",
-  "@partitionTypeLogical": {},
-  "confirmPartitionsTitle": "დანაყოფები",
-  "@confirmPartitionsTitle": {},
-  "installationSlidesAvailable": "ხელმისაწვდომია:",
-  "@installationSlidesAvailable": {},
-  "installationSlidesIncluded": "ჩასმულია:",
-  "@installationSlidesIncluded": {},
-  "notEnoughDiskSpaceAvailable": "ხელმისაწვდომია:",
-  "@notEnoughDiskSpaceAvailable": {},
-  "notEnoughDiskSpaceRequired": "აუცილებელია:",
-  "@notEnoughDiskSpaceRequired": {},
-  "installationTypeNone": "არც-ერთი",
-  "@installationTypeNone": {},
-  "installAlongsideFiles": "ფაილები",
-  "@installAlongsideFiles": {},
-  "partitionSizeLabel": "ზომა:",
-  "@partitionSizeLabel": {},
-  "confirmDevicesTitle": "მოწყობილობები",
-  "@confirmDevicesTitle": {},
-  "confirmInstallButton": "დაყენება",
-  "@confirmInstallButton": {}
+    "@@locale": "ka",
+    "appTitle": "Ubuntu Desktop Installer",
+    "@appTitle": {},
+    "quitButtonText": "დაყენებიდან გასვლა",
+    "@quitButtonText": {},
+    "tryOrInstallTitle": "სცადეთ ან დააყენეთ {DISTRO}",
+    "@tryOrInstallTitle": {},
+    "windowTitle": "{RELEASE}-ის დაყენება",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "changeButtonText": "შეცვლა",
+    "@changeButtonText": {},
+    "tryOrInstallRepairOption": "დაყენებული ვერსიის შეკეთება",
+    "@tryOrInstallRepairOption": {},
+    "welcome": "მოგესალმებით",
+    "@welcome": {},
+    "tryOption": "{RELEASE}-ის ცდა",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "{RELEASE}-ის დაყენება",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "rstTitle": "RST ჩართულია",
+    "@rstTitle": {},
+    "loadingPageTitle": "მოგესალმებათ {DISTRO}",
+    "@loadingPageTitle": {
+        "type": "text",
+        "placeholders": {
+            "DISTRO": {}
+        }
+    },
+    "loadingHeader": "{DISTRO}-ის მომზადება…",
+    "@loadingHeader": {
+        "type": "text",
+        "placeholders": {
+            "DISTRO": {}
+        }
+    },
+    "installAlongsideAvailable": "ხელმისაწვდომი:",
+    "@installAlongsideAvailable": {},
+    "installAlongsidePartition": "დანაყოფი:",
+    "@installAlongsidePartition": {},
+    "installAlongsideSize": "ზომა:",
+    "@installAlongsideSize": {},
+    "diskHeadersDevice": "მოწყობილობა",
+    "@diskHeadersDevice": {},
+    "diskHeadersType": "ტიპი",
+    "@diskHeadersType": {},
+    "diskHeadersSize": "ზომა",
+    "@diskHeadersSize": {},
+    "diskHeadersUsed": "გამოყენებულია",
+    "@diskHeadersUsed": {},
+    "diskHeadersSystem": "სისტემა",
+    "@diskHeadersSystem": {},
+    "diskHeadersFormat": "ფორმატი",
+    "@diskHeadersFormat": {},
+    "partitionTypePrimary": "ძირითადი",
+    "@partitionTypePrimary": {},
+    "partitionTypeLogical": "ლოგიკური",
+    "@partitionTypeLogical": {},
+    "confirmPartitionsTitle": "დანაყოფები",
+    "@confirmPartitionsTitle": {},
+    "installationSlidesAvailable": "ხელმისაწვდომია:",
+    "@installationSlidesAvailable": {},
+    "installationSlidesIncluded": "ჩასმულია:",
+    "@installationSlidesIncluded": {},
+    "notEnoughDiskSpaceAvailable": "ხელმისაწვდომია:",
+    "@notEnoughDiskSpaceAvailable": {},
+    "notEnoughDiskSpaceRequired": "აუცილებელია:",
+    "@notEnoughDiskSpaceRequired": {},
+    "installationTypeNone": "არც-ერთი",
+    "@installationTypeNone": {},
+    "installAlongsideFiles": "ფაილები",
+    "@installAlongsideFiles": {},
+    "partitionSizeLabel": "ზომა:",
+    "@partitionSizeLabel": {},
+    "confirmDevicesTitle": "მოწყობილობები",
+    "@confirmDevicesTitle": {},
+    "confirmInstallButton": "დაყენება",
+    "@confirmInstallButton": {}
 }

@@ -1,34 +1,34 @@
 {
-  "@@locale": "th",
-  "tryOption": "ทดลอง {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "installOption": "ติดตั้ง {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "welcome": "ยินดีต้อนรับ",
-  "@welcome": {},
-  "windowTitle": "ติดตั้ง {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "tryOrInstallReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
-  "@keyboardDetectTitle": {}
+    "@@locale": "th",
+    "tryOption": "ทดลอง {RELEASE}",
+    "@tryOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "installOption": "ติดตั้ง {RELEASE}",
+    "@installOption": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "welcome": "ยินดีต้อนรับ",
+    "@welcome": {},
+    "windowTitle": "ติดตั้ง {RELEASE}",
+    "@windowTitle": {
+        "type": "text",
+        "placeholders": {
+            "RELEASE": {}
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
+    "@tryOrInstallReleaseNotesLabel": {
+        "type": "text",
+        "placeholders": {
+            "url": {}
+        }
+    },
+    "@keyboardDetectTitle": {}
 }
