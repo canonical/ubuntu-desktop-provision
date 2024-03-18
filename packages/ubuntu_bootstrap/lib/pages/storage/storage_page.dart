@@ -22,10 +22,9 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
 
   static String formatAlongside(
     UbuntuBootstrapLocalizations lang,
-    ProductInfo info,
+    String product,
     List<OsProber> os,
   ) {
-    final product = [info.name, info.version].whereType<String>().join(' ');
     switch (os.length) {
       case 0:
         return lang.installationTypeAlongsideUnknown(product);
@@ -62,7 +61,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
               title: Text(
                 formatAlongside(
                   lang,
-                  model.productInfo,
+                  ref.watch(flavorProvider).displayName,
                   model.existingOS ?? [],
                 ),
               ),
@@ -162,34 +161,21 @@ class _InstallationTypeTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
     final model = ref.watch(storageModelProvider);
-    final isSelected = storageType == model.type;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withOpacity(0.2)
-            : colorScheme.primaryContainer,
-        border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
+      child: YaruRadioListTile(
+        title: title,
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [subtitle, trailing].whereNotNull().toList(),
         ),
-        borderRadius: kWizardBorderRadius,
-        child: YaruRadioListTile(
-          title: title,
-          subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-                [subtitle, if (isSelected) trailing].whereNotNull().toList(),
-          ),
-          contentPadding: kWizardTilePadding,
-          isThreeLine: true,
-          value: storageType,
-          groupValue: model.type,
-          onChanged: (value) => model.type = value,
-        ),
+        contentPadding: kWizardTilePadding,
+        isThreeLine: true,
+        value: storageType,
+        groupValue: model.type,
+        onChanged: (value) => model.type = value,
       ),
     );
   }

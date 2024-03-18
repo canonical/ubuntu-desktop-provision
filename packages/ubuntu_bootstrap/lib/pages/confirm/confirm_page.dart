@@ -186,7 +186,7 @@ class _DiskSetup extends ConsumerWidget {
       switch (ref.watch(storageModelProvider.select((s) => s.type))) {
         StorageType.alongside => StoragePage.formatAlongside(
             lang,
-            confirmModel.productInfo,
+            ref.watch(flavorProvider).displayName,
             confirmModel.existingOS ?? [],
           ),
         StorageType.erase =>
