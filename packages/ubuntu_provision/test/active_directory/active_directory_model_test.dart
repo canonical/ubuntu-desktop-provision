@@ -35,6 +35,7 @@ void main() {
     expect(model.adminName, info.adminName);
     expect(model.domainName, info.domainName);
     expect(model.password, info.password);
+    expect(model.showPassword, isFalse);
   });
 
   test('not used', () async {

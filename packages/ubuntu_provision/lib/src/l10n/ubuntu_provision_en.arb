@@ -83,7 +83,16 @@
   "identityPasswordHide": "Hide",
   "identityActiveDirectoryOption": "Use Active Directory",
   "identityActiveDirectoryInfo": "You'll enter domain and other details in the next step.",
-  "activeDirectoryTitle": "Configure Active Directory",
+  "activeDirectoryTitle": "Log into Active Directory",
+  "activeDirectoryHeader": "Log into Active Directory?",
+  "activeDirectoryInfo": "{DISTRO} is designed to integrate seamlessly with Active Directory for easier administration.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
   "activeDirectoryTestConnection": "Test domain connectivity",
   "activeDirectoryDomainLabel": "Domain",
   "activeDirectoryDomainEmpty": "Required",

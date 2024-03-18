@@ -612,8 +612,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @activeDirectoryTitle.
   ///
   /// In en, this message translates to:
-  /// **'Configure Active Directory'**
+  /// **'Log into Active Directory'**
   String get activeDirectoryTitle;
+
+  /// No description provided for @activeDirectoryHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Log into Active Directory?'**
+  String get activeDirectoryHeader;
+
+  /// No description provided for @activeDirectoryInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'{DISTRO} is designed to integrate seamlessly with Active Directory for easier administration.'**
+  String activeDirectoryInfo(String DISTRO);
 
   /// No description provided for @activeDirectoryTestConnection.
   ///

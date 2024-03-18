@@ -200,6 +200,14 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Konfigūruoti „Active Directory“';
 
   @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
+
+  @override
   String get activeDirectoryTestConnection => 'Išbandyti jungiamumą su domenu';
 
   @override

@@ -200,6 +200,14 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => '액티브 디렉토리 구성';
 
   @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
+
+  @override
   String get activeDirectoryTestConnection => '도메인 연결 테스트';
 
   @override
