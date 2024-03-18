@@ -1,36 +1,36 @@
 {
-    "@@locale": "is",
-    "appTitle": "Skjáborðsuppsetningarforrit Ubuntu",
-    "@appTitle": {},
-    "windowTitle": "Uppsetja {RELEASE}",
-    "@windowTitle": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "changeButtonText": "Breyta",
-    "@changeButtonText": {},
-    "welcome": "Velkomin(n)",
-    "@welcome": {},
-    "tryOrInstallTitle": "Prófa eða uppsetja",
-    "@tryOrInstallTitle": {},
-    "tryOrInstallRepairOption": "Viðgera uppsetningu",
-    "@tryOrInstallRepairOption": {},
-    "tryOption": "Prófa {RELEASE}",
-    "@tryOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "rstTitle": "Slökkva á RST",
-    "@rstTitle": {},
-    "installOption": "Uppsetja {RELEASE}",
-    "@installOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
+  "@@locale": "is",
+  "appTitle": "Skjáborðsuppsetningarforrit Ubuntu",
+  "@appTitle": {},
+  "windowTitle": "Uppsetja {RELEASE}",
+  "@windowTitle": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
     }
+  },
+  "changeButtonText": "Breyta",
+  "@changeButtonText": {},
+  "welcome": "Velkomin(n)",
+  "@welcome": {},
+  "tryOrInstallTitle": "Prófa eða uppsetja",
+  "@tryOrInstallTitle": {},
+  "tryOrInstallRepairOption": "Viðgera uppsetningu",
+  "@tryOrInstallRepairOption": {},
+  "tryOption": "Prófa {RELEASE}",
+  "@tryOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "rstTitle": "Slökkva á RST",
+  "@rstTitle": {},
+  "installOption": "Uppsetja {RELEASE}",
+  "@installOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  }
 }

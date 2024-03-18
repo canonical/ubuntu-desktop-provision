@@ -1,19 +1,19 @@
 {
-    "@@locale": "ug",
-    "tryOption": "‏{RELEASE} نى سىناپ كۆرىمەن",
-    "@tryOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "installOption": "‏{RELEASE} نى ئورنىتىمەن",
-    "@installOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "welcome": "مەرھابا",
-    "@welcome": {}
+  "@@locale": "ug",
+  "tryOption": "‏{RELEASE} نى سىناپ كۆرىمەن",
+  "@tryOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installOption": "‏{RELEASE} نى ئورنىتىمەن",
+  "@installOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "welcome": "مەرھابا",
+  "@welcome": {}
 }

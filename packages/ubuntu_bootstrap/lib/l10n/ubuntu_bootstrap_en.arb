@@ -1,876 +1,876 @@
 {
-    "@@locale": "en",
-    "appTitle": "Ubuntu Desktop Installer",
-    "windowTitle": "Install {RELEASE}",
-    "@windowTitle": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "autoinstallTitle": "Type of installation",
-    "autoinstallHeader": "How would you like to install {DISTRO}?",
-    "@autoinstallHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "autoinstallInstructions": "Enter the autoinstall.yaml URL.",
-    "autoinstallInteractiveOption": "Interactive installation",
-    "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
-    "autoinstallAutomatedOption": "Automated installation",
-    "autoinstallAutomatedDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
-    "changeButtonText": "Change",
-    "quitButtonText": "Quit installation",
-    "loadingPageTitle": "Welcome to {DISTRO}",
-    "@loadingPageTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "loadingHeader": "Preparing {DISTRO}…",
-    "@loadingHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "tryOrInstallTitle": "Try or install {DISTRO}",
-    "@tryOrInstallTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "tryOrInstallHeader": "What do you want to do with {DISTRO}?",
-    "@tryOrInstallHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "tryOrInstallRepairOption": "Repair installation",
-    "tryOrInstallRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
-    "tryOption": "Try {RELEASE}",
-    "@tryOption": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "tryDescription": "You can try {RELEASE} without making any changes to your computer.",
-    "@tryDescription": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installOption": "Install {RELEASE}",
-    "@installOption": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
-    "@installDescription": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "tryOrInstallReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
-    "@tryOrInstallReleaseNotesLabel": {
-        "placeholders": {
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "rstTitle": "RST detected",
-    "rstHeader": "Turn off RST to continue",
-    "rstDescription": "This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.",
-    "@rstDescription": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "rstInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
-    "@rstInstructions": {
-        "placeholders": {
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "configureSecureBootTitle": "Configure Secure Boot",
-    "configureSecureBootDescription": "You've chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.",
-    "configureSecureBootOption": "Configure Secure Boot",
-    "chooseSecurityKey": "Choose a security key",
-    "confirmSecurityKey": "Confirm the security key",
-    "dontInstallDriverSoftwareNow": "Don't install the driver software for now",
-    "dontInstallDriverSoftwareNowDescription": "You can install it later from Software & Updates.",
-    "configureSecureBootSecurityKeyRequired": "Security key is required",
-    "secureBootSecurityKeysDontMatch": "Security keys do not match",
-    "showSecurityKey": "Show",
-    "hideSecurityKey": "Hide",
-    "updatesOtherSoftwarePageTitle": "Applications",
-    "updatesOtherSoftwarePageDescription": "What apps would you like to install to start with?",
-    "codecsAndDriversPageTitle": "Optimise your computer",
-    "codecsAndDriversPageDescription": "Install recommended proprietary software?",
-    "codecsAndDriversPageBody": "{DISTRO} ships with no proprietary software by default. Installing additional software may improve your computer's performance.",
-    "@codecsAndDriversPageBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
-    "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
-    "fullInstallationTitle": "Extended selection",
-    "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
-    "minimalInstallationTitle": "Default selection",
-    "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
-    "otherOptions": "Other options",
-    "installThirdPartyTitle": "Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats",
-    "installThirdPartySubtitle": "This software is subject to license terms included with its documentation. Some are proprietary.",
-    "installDriversTitle": "Install third-party software for graphics and Wi-Fi hardware",
-    "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
-    "installCodecsTitle": "Download and install support for additional media formats",
-    "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
-    "onBatteryWarning": "<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.",
-    "@onBatteryWarning": {
-        "placeholders": {
-            "color": {
-                "type": "String"
-            }
-        }
-    },
-    "offlineWarning": "You are currently offline",
-    "choosePassphraseTitle": "Disk passphrase",
-    "choosePassphraseHeader": "Create a passphrase",
-    "choosePassphraseBody": "You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.",
-    "choosePassphraseHint": "Choose a passphrase",
-    "choosePassphraseConfirmHint": "Confirm the passphrase",
-    "choosePassphraseRequired": "A passphrase is required",
-    "choosePassphraseMismatch": "The passphrases do not match",
-    "choosePassphraseInfoHeader": "Make sure you save your passphrase",
-    "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
-    "createPassphrase": "Create a passphrase",
-    "confirmPassphrase": "Confirm the passphrase",
-    "installationTypeTitle": "Disk setup",
-    "installationTypeHeader": "How do you want to install {DISTRO}?",
-    "@installationTypeHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeOSDetected": "This computer currently has {os} on it. What would you like to do?",
-    "@installationTypeOSDetected": {
-        "placeholders": {
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeDualOSDetected": "This computer currently has {os1} and {os2} on it. What would you like to do?",
-    "@installationTypeDualOSDetected": {
-        "placeholders": {
-            "os1": {
-                "type": "String"
-            },
-            "os2": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeMultiOSDetected": "This computer currently has multiple operating systems on it. What would you like to do?",
-    "installationTypeNoOSDetected": "This computer currently has no detected operating systems. What would you like to do?",
-    "installationTypeErase": "Erase disk and install {DISTRO}",
-    "@installationTypeErase": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeEraseInfo": "Start from scratch on your selected disk.",
-    "installationTypeAdvancedLabel": "Advanced features...",
-    "installationTypeAdvancedTitle": "Advanced features",
-    "installationTypeExperimental": "Experimental",
-    "installationTypeNone": "None",
-    "installationTypeNoneSelected": "None selected",
-    "installationTypeLVM": "Use LVM",
-    "installationTypeLVMSelected": "LVM selected",
-    "installationTypeLVMEncryption": "Use LVM and encryption",
-    "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
-    "installationTypeEncryptInfo": "You will choose a security key in the next step.",
-    "installationTypeZFS": "Erase disk and use ZFS",
-    "installationTypeZFSEncryption": "Erase disk and use ZFS with encryption",
-    "installationTypeZFSSelected": "ZFS selected",
-    "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
-    "installationTypeTPM": "Enable hardware-backed full disk encryption",
-    "installationTypeTPMInfo": "This is an experimental feature. It may not work with your hardware of future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.",
-    "@installationTypeTPMInfo": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            },
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeTPMSelected": "TPM selected",
-    "installationTypeReinstall": "Erase {os} and reinstall",
-    "@installationTypeReinstall": {
-        "placeholders": {
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeReinstallWarning": "<font color=\"{color}\">Warning:</font> This will delete all your {os} programs, documents, photos, music, and any other files.",
-    "@installationTypeReinstallWarning": {
-        "placeholders": {
-            "color": {
-                "type": "String"
-            },
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongside": "Install {product} alongside {os}",
-    "@installationTypeAlongside": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            },
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideDual": "Install {product} alongside {os1} and {os2}",
-    "@installationTypeAlongsideDual": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            },
-            "os1": {
-                "type": "String"
-            },
-            "os2": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideMulti": "Install {product} alongside them",
-    "@installationTypeAlongsideMulti": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideUnknown": "Install {product} alongside other partitions",
-    "@installationTypeAlongsideUnknown": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideInfo": "You can choose your operating system during boot.",
-    "installationTypeManual": "Manual installation",
-    "installationTypeManualInfo": "For advanced users seeking customized disk setups.",
-    "@installationTypeManualInfo": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "selectGuidedStoragePageTitle": "Erase disk and install {DISTRO}",
-    "@selectGuidedStoragePageTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "selectGuidedStorageInfo": "Start from scratch on your selected disk.",
-    "selectGuidedStorageDropdownLabel": "Select drive:",
-    "selectGuidedStorageInfoLabel": "The entire disk will be used:",
-    "selectGuidedStorageInstallNow": "Install now",
-    "installAlongsideSpaceDivider": "Allocate drive space by dragging the divider below:",
-    "installAlongsideHiddenPartitions": "{num} smaller partitions are hidden, use the <a href=\"{url}\">advanced partitioning tool</a> for more control",
-    "@installAlongsideHiddenPartitions": {
-        "placeholders": {
-            "num": {
-                "type": "int"
-            },
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "installAlongsideResizePartition": "Resize partition",
-    "installAlongsideAllocateSpace": "Allocate space",
-    "installAlongsideFiles": "Files",
-    "installAlongsidePartition": "Partition:",
-    "installAlongsideSize": "Size:",
-    "installAlongsideAvailable": "Available:",
-    "allocateDiskSpace": "Manual partitioning",
-    "allocateDiskSpaceInvalidMountPointSlash": "Mount points must start with \"/\"",
-    "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
-    "diskHeadersDevice": "Device",
-    "diskHeadersType": "Type",
-    "diskHeadersMountPoint": "Mount point",
-    "diskHeadersSize": "Size",
-    "diskHeadersUsed": "Used",
-    "diskHeadersSystem": "System",
-    "diskHeadersFormat": "Format",
-    "freeDiskSpace": "Free space",
-    "newPartitionTable": "New partition table",
-    "newPartitionTableConfirmationTitle": "New empty partition",
-    "newPartitionTableConfirmationMessage": "Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.",
-    "tooManyPrimaryPartitions": "Too many primary partitions",
-    "partitionLimitReached": "Limit reached",
-    "bootLoaderDevice": "Device for boot loader installation",
-    "partitionCreateTitle": "Create partition",
-    "partitionEditTitle": "Edit partition",
-    "partitionSizeLabel": "Size:",
-    "partitionTypeLabel": "Type for the new partition:",
-    "partitionTypePrimary": "Primary",
-    "partitionTypeLogical": "Logical",
-    "partitionLocationLabel": "Location for the new partition:",
-    "partitionLocationBeginning": "Beginning of this space",
-    "partitionLocationEnd": "End of this space",
-    "partitionFormatLabel": "Used as:",
-    "partitionFormatNone": "Leave unformatted",
-    "partitionFormatKeep": "Leave formatted as {format}",
-    "@partitionFormatKeep": {
-        "placeholders": {
-            "format": {
-                "type": "String"
-            }
-        }
-    },
-    "partitionErase": "Format the partition",
-    "partitionMountPointLabel": "Mount point:",
-    "confirmPageTitle": "Ready to install",
-    "confirmHeader": "Review your choices",
-    "confirmDiskEncryptionLVM": "LUKS (LVM)",
-    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-    "confirmDiskEncryptionTPM": "TPM",
-    "confirmDiskEncryptionNone": "None",
-    "confirmDevicesTitle": "Devices",
-    "confirmEntryApplications": "Applications",
-    "confirmEntryDiskSetup": "Disk setup",
-    "confirmEntryDiskEncryption": "Disk encryption",
-    "confirmEntryInstallationDisk": "Installation disk",
-    "confirmEntryProprietarySoftware": "Proprietary software",
-    "confirmSectionGeneralTitle": "General",
-    "confirmSectionSecurityAndMoreTitle": "Security & more",
-    "confirmPartitionsTitle": "Partitions",
-    "confirmPartitionTables": "The partition tables of the following devices are changed:",
-    "confirmPartitionTable": "{serial} ({path})",
-    "@confirmPartitionTable": {
-        "description": "An entry for a disk whose partition table is being changed",
-        "placeholders": {
-            "serial": {
-                "type": "String"
-            },
-            "path": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPartitionChanges": "The following partition changes are going to be applied:",
-    "confirmPartitionResize": "partition <b>{sysname}</b> resized from <b>{oldsize}</b> to <b>{newsize}</b>",
-    "@confirmPartitionResize": {
-        "description": "A resized partition entry",
-        "placeholders": {
-            "sysname": {
-                "type": "String"
-            },
-            "oldsize": {
-                "type": "String"
-            },
-            "newsize": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPartitionFormatMount": "partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>",
-    "@confirmPartitionFormatMount": {
-        "description": "A formatted and mounted partition entry",
-        "placeholders": {
-            "sysname": {
-                "type": "String"
-            },
-            "format": {
-                "type": "String"
-            },
-            "mount": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPartitionFormat": "partition <b>{sysname}</b> formatted as <b>{format}</b>",
-    "@confirmPartitionFormat": {
-        "description": "A formatted partition entry",
-        "placeholders": {
-            "sysname": {
-                "type": "String"
-            },
-            "format": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPartitionMount": "partition <b>{sysname}</b> used for <b>{mount}</b>",
-    "@confirmPartitionMount": {
-        "description": "A mounted partition entry",
-        "placeholders": {
-            "sysname": {
-                "type": "String"
-            },
-            "mount": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPartitionCreate": "partition <b>{sysname}</b> created",
-    "@confirmPartitionCreate": {
-        "description": "A created partition entry",
-        "placeholders": {
-            "sysname": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmProprietarySoftwareCodecs": "Codecs",
-    "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
-    "confirmProprietarySoftwareDrivers": "Drivers",
-    "confirmInstallButton": "Install",
-    "installationCompleteTitle": "Installation complete",
-    "readyToUse": "{system} is installed and ready to use",
-    "@readyToUse": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "rebootToConfigure": "**{system}** has been copied to the disk",
-    "@rebootToConfigure": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "restartInto": "Restart into {system}",
-    "@restartInto": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "restartWarningBody": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
-    "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
-    "shutdown": "Shut Down",
-    "restartNow": "Restart now",
-    "continueTesting": "Continue testing",
-    "bitlockerTitle": "BitLocker is enabled",
-    "bitlockerHeader": "Turn off BitLocker to continue",
-    "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose '{option}' to continue.",
-    "@bitlockerDescription": {
-        "placeholders": {
-            "option": {
-                "type": "String"
-            }
-        }
-    },
-    "bitlockerInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
-    "@bitlockerInstructions": {
-        "placeholders": {
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "restartIntoWindows": "Restart into Windows",
-    "restartIntoWindowsTitle": "Restart into Windows?",
-    "restartIntoWindowsDescription": "Are you sure you want to restart your computer? You will need to restart the {DISTRO} installation later to finish installing {DISTRO}.",
-    "@restartIntoWindowsDescription": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesTitle": "Welcome to {RELEASE}",
-    "@installationSlidesTitle": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAvailable": "Available:",
-    "installationSlidesIncluded": "Included:",
-    "installationSlidesWelcomeTitle": "Fast, free and full of new features",
-    "installationSlidesWelcomeHeader": "The latest version of {DISTRO} makes computing easier than ever.",
-    "@installationSlidesWelcomeHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesWelcomeBody": "Whether you're a developer, creator, gamer or administrator you'll find new tools to improve your productivity and enhance your experience in {RELEASE}.",
-    "@installationSlidesWelcomeBody": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSoftwareTitle": "All the applications you need",
-    "installationSlidesSoftwareBody": "Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and {DISTRO} archive.",
-    "@installationSlidesSoftwareBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesDevelopmentTitle": "Develop with the best of open source",
-    "installationSlidesDevelopmentBody": "{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.",
-    "@installationSlidesDevelopmentBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesCreativityTitle": "Enhance your creativity",
-    "installationSlidesCreativityBody": "If you're an animator, designer, video creator or game developer it's easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.",
-    "@installationSlidesCreativityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesGamingTitle": "Great for gaming",
-    "installationSlidesGamingBody": "{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.",
-    "@installationSlidesGamingBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSecurityTitle": "Private and secure",
-    "installationSlidesSecurityBody": "{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.",
-    "@installationSlidesSecurityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSecurityLts": "All {DISTRO} LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.",
-    "@installationSlidesSecurityLts": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesProductivityTitle": "Power up your productivity",
-    "installationSlidesProductivityBody": "{DISTRO} Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.",
-    "@installationSlidesProductivityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAccessibilityTitle": "Access for everyone",
-    "installationSlidesAccessibilityBody": "At the heart of the {DISTRO} philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, {DISTRO} makes computing easy - whoever and wherever you are.",
-    "@installationSlidesAccessibilityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAccessibilityOrca": "Orca Screen Reader",
-    "installationSlidesAccessibilityLanguages": "Language support",
-    "installationSlidesSupportTitle": "Help and support",
-    "installationSlidesSupportHeader": "The official {DISTRO} documentation is available both online and via the Help icon in the dock.",
-    "@installationSlidesSupportHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSupportCommunity": "Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.",
-    "installationSlidesSupportEnterprise": "For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.",
-    "installationSlidesSupportResources": "Helpful resources:",
-    "installationSlidesSupportDocumentation": "Official documentation",
-    "installationSlidesSupportUbuntuPro": "Enterprise-grade 24/7 support with Ubuntu Pro",
-    "copyingFiles": "Copying files…",
-    "installingSystem": "Installing the system…",
-    "configuringSystem": "Setting up the system…",
-    "installationFailed": "Installation failed",
-    "notEnoughDiskSpaceTitle": "Not enough space",
-    "notEnoughDiskSpaceUbuntu": "Not enough disk space to install {DISTRO}",
-    "@notEnoughDiskSpaceUbuntu": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "notEnoughDiskSpaceAvailable": "Available:",
-    "notEnoughDiskSpaceRequired": "Required:",
-    "refreshPageTitle": "Update available",
-    "refreshHeader": "An update is available for the installer",
-    "refreshUpdateNow": "Update now",
-    "refreshInfo": "Update to the latest version for improved reliability and more features.",
-    "refreshReady": "Update ready",
-    "refreshCurrent": "The current {snap} version is {version}.",
-    "@refreshCurrent": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            },
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshInstall": "Update to version {version}",
-    "@refreshInstall": {
-        "placeholders": {
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshUpToDate": "The current version {version} is up-to-date.",
-    "@refreshUpToDate": {
-        "placeholders": {
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshUpdating": "Updating {snap}...",
-    "@refreshUpdating": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshRestart": "Please close the installer and relaunch to continue",
-    "refreshCloseLabel": "Close installer",
-    "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
-    "@refreshSnapPrerequisites": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapRefresh": "Refreshing {snap}...",
-    "@refreshSnapRefresh": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCheckRerefresh": "Checking {snap} re-refresh...",
-    "@refreshSnapCheckRerefresh": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapPrepare": "Preparing {snap}...",
-    "@refreshSnapPrepare": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapDownload": "Downloading {snap}...",
-    "@refreshSnapDownload": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapValidate": "Validating {snap}...",
-    "@refreshSnapValidate": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapMount": "Mounting {snap}...",
-    "@refreshSnapMount": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapStopServices": "Stopping {snap} services...",
-    "@refreshSnapStopServices": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapRemoveAliases": "Removing {snap} aliases...",
-    "@refreshSnapRemoveAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUnlink": "Unlinking {snap}...",
-    "@refreshSnapUnlink": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUpdateAssets": "Updating {snap} assets...",
-    "@refreshSnapUpdateAssets": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUpdateKernelCommandLine": "Updating {snap} kernel command line...",
-    "@refreshSnapUpdateKernelCommandLine": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCopyData": "Copying {snap} data...",
-    "@refreshSnapCopyData": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetupProfiles": "Setting up {snap} security profiles...",
-    "@refreshSnapSetupProfiles": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapLink": "Linking {snap}...",
-    "@refreshSnapLink": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapAutoConnect": "Connecting {snap} plugs and slots...",
-    "@refreshSnapAutoConnect": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetAutoAliases": "Setting automatic {snap} aliases...",
-    "@refreshSnapSetAutoAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetupAliases": "Setting up {snap} aliases...",
-    "@refreshSnapSetupAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapStartServices": "Starting {snap} services...",
-    "@refreshSnapStartServices": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCleanup": "Cleaning up {snap}...",
-    "@refreshSnapCleanup": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "recoveryKeyTitle": "TPM recovery key",
-    "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
-    "recoveryKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
-    "@recoveryKeyWarning": {
-        "placeholders": {
-            "color": {
-                "type": "String"
-            }
-        }
-    },
-    "validate": "Validate"
+  "@@locale": "en",
+  "appTitle": "Ubuntu Desktop Installer",
+  "windowTitle": "Install {RELEASE}",
+  "@windowTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallTitle": "Type of installation",
+  "autoinstallHeader": "How would you like to install {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Enter the autoinstall.yaml URL.",
+  "autoinstallInteractiveOption": "Interactive installation",
+  "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
+  "autoinstallAutomatedOption": "Automated installation",
+  "autoinstallAutomatedDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+  "changeButtonText": "Change",
+  "quitButtonText": "Quit installation",
+  "loadingPageTitle": "Welcome to {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "Preparing {DISTRO}…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallTitle": "Try or install {DISTRO}",
+  "@tryOrInstallTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallHeader": "What do you want to do with {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallRepairOption": "Repair installation",
+  "tryOrInstallRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
+  "tryOption": "Try {RELEASE}",
+  "@tryOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "tryDescription": "You can try {RELEASE} without making any changes to your computer.",
+  "@tryDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installOption": "Install {RELEASE}",
+  "@installOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
+  "@installDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "rstTitle": "RST detected",
+  "rstHeader": "Turn off RST to continue",
+  "rstDescription": "This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.",
+  "@rstDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rstInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
+  "@rstInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "configureSecureBootTitle": "Configure Secure Boot",
+  "configureSecureBootDescription": "You've chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.",
+  "configureSecureBootOption": "Configure Secure Boot",
+  "chooseSecurityKey": "Choose a security key",
+  "confirmSecurityKey": "Confirm the security key",
+  "dontInstallDriverSoftwareNow": "Don't install the driver software for now",
+  "dontInstallDriverSoftwareNowDescription": "You can install it later from Software & Updates.",
+  "configureSecureBootSecurityKeyRequired": "Security key is required",
+  "secureBootSecurityKeysDontMatch": "Security keys do not match",
+  "showSecurityKey": "Show",
+  "hideSecurityKey": "Hide",
+  "updatesOtherSoftwarePageTitle": "Applications",
+  "updatesOtherSoftwarePageDescription": "What apps would you like to install to start with?",
+  "codecsAndDriversPageTitle": "Optimise your computer",
+  "codecsAndDriversPageDescription": "Install recommended proprietary software?",
+  "codecsAndDriversPageBody": "{DISTRO} ships with no proprietary software by default. Installing additional software may improve your computer's performance.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
+  "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
+  "fullInstallationTitle": "Extended selection",
+  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
+  "minimalInstallationTitle": "Default selection",
+  "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
+  "otherOptions": "Other options",
+  "installThirdPartyTitle": "Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats",
+  "installThirdPartySubtitle": "This software is subject to license terms included with its documentation. Some are proprietary.",
+  "installDriversTitle": "Install third-party software for graphics and Wi-Fi hardware",
+  "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
+  "installCodecsTitle": "Download and install support for additional media formats",
+  "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
+  "onBatteryWarning": "<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.",
+  "@onBatteryWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "offlineWarning": "You are currently offline",
+  "choosePassphraseTitle": "Disk passphrase",
+  "choosePassphraseHeader": "Create a passphrase",
+  "choosePassphraseBody": "You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.",
+  "choosePassphraseHint": "Choose a passphrase",
+  "choosePassphraseConfirmHint": "Confirm the passphrase",
+  "choosePassphraseRequired": "A passphrase is required",
+  "choosePassphraseMismatch": "The passphrases do not match",
+  "choosePassphraseInfoHeader": "Make sure you save your passphrase",
+  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
+  "createPassphrase": "Create a passphrase",
+  "confirmPassphrase": "Confirm the passphrase",
+  "installationTypeTitle": "Disk setup",
+  "installationTypeHeader": "How do you want to install {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeOSDetected": "This computer currently has {os} on it. What would you like to do?",
+  "@installationTypeOSDetected": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeDualOSDetected": "This computer currently has {os1} and {os2} on it. What would you like to do?",
+  "@installationTypeDualOSDetected": {
+    "placeholders": {
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeMultiOSDetected": "This computer currently has multiple operating systems on it. What would you like to do?",
+  "installationTypeNoOSDetected": "This computer currently has no detected operating systems. What would you like to do?",
+  "installationTypeErase": "Erase disk and install {DISTRO}",
+  "@installationTypeErase": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Start from scratch on your selected disk.",
+  "installationTypeAdvancedLabel": "Advanced features...",
+  "installationTypeAdvancedTitle": "Advanced features",
+  "installationTypeExperimental": "Experimental",
+  "installationTypeNone": "None",
+  "installationTypeNoneSelected": "None selected",
+  "installationTypeLVM": "Use LVM",
+  "installationTypeLVMSelected": "LVM selected",
+  "installationTypeLVMEncryption": "Use LVM and encryption",
+  "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
+  "installationTypeEncryptInfo": "You will choose a security key in the next step.",
+  "installationTypeZFS": "Erase disk and use ZFS",
+  "installationTypeZFSEncryption": "Erase disk and use ZFS with encryption",
+  "installationTypeZFSSelected": "ZFS selected",
+  "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
+  "installationTypeTPM": "Enable hardware-backed full disk encryption",
+  "installationTypeTPMInfo": "This is an experimental feature. It may not work with your hardware of future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMSelected": "TPM selected",
+  "installationTypeReinstall": "Erase {os} and reinstall",
+  "@installationTypeReinstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Warning:</font> This will delete all your {os} programs, documents, photos, music, and any other files.",
+  "@installationTypeReinstallWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongside": "Install {product} alongside {os}",
+  "@installationTypeAlongside": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideDual": "Install {product} alongside {os1} and {os2}",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideMulti": "Install {product} alongside them",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "Install {product} alongside other partitions",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideInfo": "You can choose your operating system during boot.",
+  "installationTypeManual": "Manual installation",
+  "installationTypeManualInfo": "For advanced users seeking customized disk setups.",
+  "@installationTypeManualInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePageTitle": "Erase disk and install {DISTRO}",
+  "@selectGuidedStoragePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Start from scratch on your selected disk.",
+  "selectGuidedStorageDropdownLabel": "Select drive:",
+  "selectGuidedStorageInfoLabel": "The entire disk will be used:",
+  "selectGuidedStorageInstallNow": "Install now",
+  "installAlongsideSpaceDivider": "Allocate drive space by dragging the divider below:",
+  "installAlongsideHiddenPartitions": "{num} smaller partitions are hidden, use the <a href=\"{url}\">advanced partitioning tool</a> for more control",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideResizePartition": "Resize partition",
+  "installAlongsideAllocateSpace": "Allocate space",
+  "installAlongsideFiles": "Files",
+  "installAlongsidePartition": "Partition:",
+  "installAlongsideSize": "Size:",
+  "installAlongsideAvailable": "Available:",
+  "allocateDiskSpace": "Manual partitioning",
+  "allocateDiskSpaceInvalidMountPointSlash": "Mount points must start with \"/\"",
+  "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
+  "diskHeadersDevice": "Device",
+  "diskHeadersType": "Type",
+  "diskHeadersMountPoint": "Mount point",
+  "diskHeadersSize": "Size",
+  "diskHeadersUsed": "Used",
+  "diskHeadersSystem": "System",
+  "diskHeadersFormat": "Format",
+  "freeDiskSpace": "Free space",
+  "newPartitionTable": "New partition table",
+  "newPartitionTableConfirmationTitle": "New empty partition",
+  "newPartitionTableConfirmationMessage": "Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.",
+  "tooManyPrimaryPartitions": "Too many primary partitions",
+  "partitionLimitReached": "Limit reached",
+  "bootLoaderDevice": "Device for boot loader installation",
+  "partitionCreateTitle": "Create partition",
+  "partitionEditTitle": "Edit partition",
+  "partitionSizeLabel": "Size:",
+  "partitionTypeLabel": "Type for the new partition:",
+  "partitionTypePrimary": "Primary",
+  "partitionTypeLogical": "Logical",
+  "partitionLocationLabel": "Location for the new partition:",
+  "partitionLocationBeginning": "Beginning of this space",
+  "partitionLocationEnd": "End of this space",
+  "partitionFormatLabel": "Used as:",
+  "partitionFormatNone": "Leave unformatted",
+  "partitionFormatKeep": "Leave formatted as {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "partitionErase": "Format the partition",
+  "partitionMountPointLabel": "Mount point:",
+  "confirmPageTitle": "Ready to install",
+  "confirmHeader": "Review your choices",
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "confirmDiskEncryptionTPM": "TPM",
+  "confirmDiskEncryptionNone": "None",
+  "confirmDevicesTitle": "Devices",
+  "confirmEntryApplications": "Applications",
+  "confirmEntryDiskSetup": "Disk setup",
+  "confirmEntryDiskEncryption": "Disk encryption",
+  "confirmEntryInstallationDisk": "Installation disk",
+  "confirmEntryProprietarySoftware": "Proprietary software",
+  "confirmSectionGeneralTitle": "General",
+  "confirmSectionSecurityAndMoreTitle": "Security & more",
+  "confirmPartitionsTitle": "Partitions",
+  "confirmPartitionTables": "The partition tables of the following devices are changed:",
+  "confirmPartitionTable": "{serial} ({path})",
+  "@confirmPartitionTable": {
+    "description": "An entry for a disk whose partition table is being changed",
+    "placeholders": {
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionChanges": "The following partition changes are going to be applied:",
+  "confirmPartitionResize": "partition <b>{sysname}</b> resized from <b>{oldsize}</b> to <b>{newsize}</b>",
+  "@confirmPartitionResize": {
+    "description": "A resized partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionFormatMount": "partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>",
+  "@confirmPartitionFormatMount": {
+    "description": "A formatted and mounted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionFormat": "partition <b>{sysname}</b> formatted as <b>{format}</b>",
+  "@confirmPartitionFormat": {
+    "description": "A formatted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionMount": "partition <b>{sysname}</b> used for <b>{mount}</b>",
+  "@confirmPartitionMount": {
+    "description": "A mounted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionCreate": "partition <b>{sysname}</b> created",
+  "@confirmPartitionCreate": {
+    "description": "A created partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
+  "confirmProprietarySoftwareDrivers": "Drivers",
+  "confirmInstallButton": "Install",
+  "installationCompleteTitle": "Installation complete",
+  "readyToUse": "{system} is installed and ready to use",
+  "@readyToUse": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigure": "**{system}** has been copied to the disk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartInto": "Restart into {system}",
+  "@restartInto": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
+  "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
+  "shutdown": "Shut Down",
+  "restartNow": "Restart now",
+  "continueTesting": "Continue testing",
+  "bitlockerTitle": "BitLocker is enabled",
+  "bitlockerHeader": "Turn off BitLocker to continue",
+  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose '{option}' to continue.",
+  "@bitlockerDescription": {
+    "placeholders": {
+      "option": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
+  "@bitlockerInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "restartIntoWindows": "Restart into Windows",
+  "restartIntoWindowsTitle": "Restart into Windows?",
+  "restartIntoWindowsDescription": "Are you sure you want to restart your computer? You will need to restart the {DISTRO} installation later to finish installing {DISTRO}.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesTitle": "Welcome to {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Available:",
+  "installationSlidesIncluded": "Included:",
+  "installationSlidesWelcomeTitle": "Fast, free and full of new features",
+  "installationSlidesWelcomeHeader": "The latest version of {DISTRO} makes computing easier than ever.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeBody": "Whether you're a developer, creator, gamer or administrator you'll find new tools to improve your productivity and enhance your experience in {RELEASE}.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "All the applications you need",
+  "installationSlidesSoftwareBody": "Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and {DISTRO} archive.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Develop with the best of open source",
+  "installationSlidesDevelopmentBody": "{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityTitle": "Enhance your creativity",
+  "installationSlidesCreativityBody": "If you're an animator, designer, video creator or game developer it's easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Great for gaming",
+  "installationSlidesGamingBody": "{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityTitle": "Private and secure",
+  "installationSlidesSecurityBody": "{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "All {DISTRO} LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityTitle": "Power up your productivity",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Access for everyone",
+  "installationSlidesAccessibilityBody": "At the heart of the {DISTRO} philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, {DISTRO} makes computing easy - whoever and wherever you are.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityOrca": "Orca Screen Reader",
+  "installationSlidesAccessibilityLanguages": "Language support",
+  "installationSlidesSupportTitle": "Help and support",
+  "installationSlidesSupportHeader": "The official {DISTRO} documentation is available both online and via the Help icon in the dock.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.",
+  "installationSlidesSupportEnterprise": "For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.",
+  "installationSlidesSupportResources": "Helpful resources:",
+  "installationSlidesSupportDocumentation": "Official documentation",
+  "installationSlidesSupportUbuntuPro": "Enterprise-grade 24/7 support with Ubuntu Pro",
+  "copyingFiles": "Copying files…",
+  "installingSystem": "Installing the system…",
+  "configuringSystem": "Setting up the system…",
+  "installationFailed": "Installation failed",
+  "notEnoughDiskSpaceTitle": "Not enough space",
+  "notEnoughDiskSpaceUbuntu": "Not enough disk space to install {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceAvailable": "Available:",
+  "notEnoughDiskSpaceRequired": "Required:",
+  "refreshPageTitle": "Update available",
+  "refreshHeader": "An update is available for the installer",
+  "refreshUpdateNow": "Update now",
+  "refreshInfo": "Update to the latest version for improved reliability and more features.",
+  "refreshReady": "Update ready",
+  "refreshCurrent": "The current {snap} version is {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Update to version {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "The current version {version} is up-to-date.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "Updating {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Please close the installer and relaunch to continue",
+  "refreshCloseLabel": "Close installer",
+  "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "Refreshing {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Checking {snap} re-refresh...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "Preparing {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Downloading {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Validating {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Mounting {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Stopping {snap} services...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Removing {snap} aliases...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Unlinking {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Updating {snap} assets...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Updating {snap} kernel command line...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Copying {snap} data...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Setting up {snap} security profiles...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Linking {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connecting {snap} plugs and slots...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Setting automatic {snap} aliases...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Setting up {snap} aliases...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Starting {snap} services...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Cleaning up {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "TPM recovery key",
+  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
+  "recoveryKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Validate"
 }

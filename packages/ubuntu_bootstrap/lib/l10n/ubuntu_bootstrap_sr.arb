@@ -1,62 +1,62 @@
 {
-    "@@locale": "sr",
-    "tryOrInstallTitle": "Испробајте или инсталирајте",
-    "@tryOrInstallTitle": {},
-    "tryOrInstallRepairOption": "Поправи инсталацију",
-    "@tryOrInstallRepairOption": {},
-    "appTitle": "Убунту Десктоп Инсталација",
-    "@appTitle": {},
-    "changeButtonText": "Измени",
-    "@changeButtonText": {},
-    "welcome": "Добродошли",
-    "@welcome": {},
-    "tryOrInstallRepairDescription": "Поправка ће поново инсталирати све програме без дирања докумената или подешавања.",
-    "@tryOrInstallRepairDescription": {},
-    "windowTitle": "Инсталирај {RELEASE}",
-    "@windowTitle": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "quitButtonText": "Напусти инсталацију",
-    "@quitButtonText": {},
-    "tryOption": "Испробај {RELEASE}",
-    "@tryOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "installDescription": "Инсталирај {RELEASE} поред (или уместо) вашег тренутног оперативног система. За ово неће требати пуно времена.",
-    "@installDescription": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "rstInstructions": "За инструкције, отворите ову страницу на телефону или другом уређају: <a href=\"https://{url}\"></a>",
-    "@rstInstructions": {
-        "type": "text",
-        "placeholders": {
-            "url": {}
-        }
-    },
-    "rstTitle": "Искључи RST",
-    "@rstTitle": {},
-    "tryDescription": "Можете испробати {RELEASE} без прављења измена на вашем рачунару.",
-    "@tryDescription": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "installOption": "Инсталирај {RELEASE}",
-    "@installOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "@keyboardTitle": {}
+  "@@locale": "sr",
+  "tryOrInstallTitle": "Испробајте или инсталирајте",
+  "@tryOrInstallTitle": {},
+  "tryOrInstallRepairOption": "Поправи инсталацију",
+  "@tryOrInstallRepairOption": {},
+  "appTitle": "Убунту Десктоп Инсталација",
+  "@appTitle": {},
+  "changeButtonText": "Измени",
+  "@changeButtonText": {},
+  "welcome": "Добродошли",
+  "@welcome": {},
+  "tryOrInstallRepairDescription": "Поправка ће поново инсталирати све програме без дирања докумената или подешавања.",
+  "@tryOrInstallRepairDescription": {},
+  "windowTitle": "Инсталирај {RELEASE}",
+  "@windowTitle": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "quitButtonText": "Напусти инсталацију",
+  "@quitButtonText": {},
+  "tryOption": "Испробај {RELEASE}",
+  "@tryOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installDescription": "Инсталирај {RELEASE} поред (или уместо) вашег тренутног оперативног система. За ово неће требати пуно времена.",
+  "@installDescription": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "rstInstructions": "За инструкције, отворите ову страницу на телефону или другом уређају: <a href=\"https://{url}\"></a>",
+  "@rstInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "rstTitle": "Искључи RST",
+  "@rstTitle": {},
+  "tryDescription": "Можете испробати {RELEASE} без прављења измена на вашем рачунару.",
+  "@tryDescription": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "installOption": "Инсталирај {RELEASE}",
+  "@installOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "@keyboardTitle": {}
 }

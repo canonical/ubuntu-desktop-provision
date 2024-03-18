@@ -1,27 +1,27 @@
 {
-    "@@locale": "mr",
-    "installOption": "{RELEASE} प्रतिष्ठापीत करा",
-    "@installOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "windowTitle": "{RELEASE} प्रतिष्ठापीत करा",
-    "@windowTitle": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "welcome": "सुस्वागतम्",
-    "@welcome": {},
-    "tryOption": "{RELEASE} वापरुन पहा",
-    "@tryOption": {
-        "type": "text",
-        "placeholders": {
-            "RELEASE": {}
-        }
-    },
-    "@keyboardKeyPresentLabel": {}
+  "@@locale": "mr",
+  "installOption": "{RELEASE} प्रतिष्ठापीत करा",
+  "@installOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "windowTitle": "{RELEASE} प्रतिष्ठापीत करा",
+  "@windowTitle": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "welcome": "सुस्वागतम्",
+  "@welcome": {},
+  "tryOption": "{RELEASE} वापरुन पहा",
+  "@tryOption": {
+    "type": "text",
+    "placeholders": {
+      "RELEASE": {}
+    }
+  },
+  "@keyboardKeyPresentLabel": {}
 }
