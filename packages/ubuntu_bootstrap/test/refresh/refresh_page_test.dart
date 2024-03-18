@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_page.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -12,9 +13,15 @@ import 'test_refresh.dart';
 
 void main() {
   Widget buildPage(RefreshModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
+
     return ProviderScope(
       overrides: [
         refreshModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
       ],
       child: const RefreshPage(),
     );

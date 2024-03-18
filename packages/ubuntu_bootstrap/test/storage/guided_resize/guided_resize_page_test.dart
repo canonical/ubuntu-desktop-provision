@@ -9,6 +9,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -18,8 +19,16 @@ import 'test_guided_resize.dart';
 
 void main() {
   Widget buildPage(GuidedResizeModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
+
     return ProviderScope(
-      overrides: [guidedResizeModelProvider.overrideWith((_) => model)],
+      overrides: [
+        guidedResizeModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
       child: const GuidedResizePage(),
     );
   }
