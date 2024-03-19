@@ -374,13 +374,6 @@
   "@restartNow": {},
   "continueTesting": "להמשיך לבחון",
   "@continueTesting": {},
-  "restartWarning": "אפשר להמשיך לבחון את {RELEASE} כעת אבל רק עד הפעלת המחשב מחדש, השינויים שייערכו למסמכים לא יישמרו.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "offlineWarning": "החיבור שלך מנותק",
   "@offlineWarning": {},
   "partitionFormatNone": "להשאיר בלי פרמוט",

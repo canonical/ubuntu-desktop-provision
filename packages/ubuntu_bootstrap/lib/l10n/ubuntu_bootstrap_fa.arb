@@ -95,13 +95,6 @@
   "@installThirdPartyTitle": {},
   "partitionSizeLabel": "اندازه:",
   "@partitionSizeLabel": {},
-  "restartWarning": "اکنون می‌توانید به آزمودن {RELEASE} ادامه دهید؛ ولی تا زمانی که رایانه را دوباره آغاز کنید، هر تغییری یا سندی که ایجاد کنید حفظ نخواهد شد.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "shutdown": "خاموش کردن",
   "@shutdown": {},
   "restartNow": "اکنون دوباره آغاز شود",

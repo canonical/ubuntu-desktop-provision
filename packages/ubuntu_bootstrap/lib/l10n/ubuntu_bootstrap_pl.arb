@@ -368,13 +368,6 @@
   "@partitionLimitReached": {},
   "restartNow": "Uruchom ponownie teraz",
   "@restartNow": {},
-  "restartWarning": "Możesz teraz kontynuować testowanie wersji {RELEASE}, ale dopóki nie uruchomisz ponownie komputera, wszelkie wprowadzone zmiany lub zapisane dokumenty nie zostaną zachowane.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "Kontynuuj testowanie",
   "@continueTesting": {},
   "offlineWarning": "Jesteś obecnie offline",

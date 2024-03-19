@@ -407,13 +407,6 @@
   "@installCodecsSubtitle": {},
   "installDriversSubtitle": "Tyto ovladače jsou předmětem licenčních ujednání obsažených v dokumentaci k nim. Jsou proprietárními.",
   "@installDriversSubtitle": {},
-  "restartWarning": "Nyní můžete pokračovat ve zkoušení {RELEASE}, ale dokud počítač nerestartujete, veškeré provedené změny nebo vytvořené dokumenty nebudou zachovány.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "offlineWarning": "V tu chvíli nejste připojení k Internetu",
   "@offlineWarning": {},
   "restartNow": "Restartovat nyní",

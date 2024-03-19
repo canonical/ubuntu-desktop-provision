@@ -600,7 +600,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** is installed and ready to use';
+    return '$system is installed and ready to use';
   }
 
   @override
@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'You can continue testing $RELEASE now, but until you restart the computer, any changes you make or documents you save will not be preserved.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';

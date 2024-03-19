@@ -359,13 +359,6 @@
   "@installDriversSubtitle": {},
   "restartNow": "Перезагрузить",
   "@restartNow": {},
-  "restartWarning": "Можете продолжить тестирование {RELEASE}, но при перезагрузке компьютера все внесённые вами изменения или сохранённые документы будут потеряны.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "Продолжить тестирование",
   "@continueTesting": {},
   "tooManyPrimaryPartitions": "Слишком много первичных разделов",

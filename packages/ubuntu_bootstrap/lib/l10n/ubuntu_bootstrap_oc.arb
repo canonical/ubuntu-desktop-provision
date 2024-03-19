@@ -368,13 +368,6 @@
   "@restartNow": {},
   "continueTesting": "Contunhar d’ensajar",
   "@continueTesting": {},
-  "restartWarning": "Podètz téner d’ensajar {RELEASE} ara, mas fins que reavietz l’ordenador, tota modificacion o document que creatz serà pas servat.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Tròp de particions primàrias",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Limit atenh",

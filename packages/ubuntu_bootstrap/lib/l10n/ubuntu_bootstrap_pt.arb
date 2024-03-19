@@ -367,13 +367,6 @@
   "@configuringSystem": {},
   "installationFailed": "Falha ao instalar",
   "@installationFailed": {},
-  "restartWarning": "Pode continuar a testar o {RELEASE} agora, mas até reiniciar o computador, quaisquer alterações que faça ou documentos que guarde não serão preservados.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartNow": "Reiniciar agora",
   "@restartNow": {},
   "continueTesting": "Continuar a testar",

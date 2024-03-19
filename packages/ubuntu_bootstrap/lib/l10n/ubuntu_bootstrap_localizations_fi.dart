@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Voit jatkaa julkaisun $RELEASE testaamista nyt, mutta mitkään tekemäsi muutokset tai tallentamasi asiakirjat eivät säily, ennen kuin käynnistät tietokoneen uudelleen.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';

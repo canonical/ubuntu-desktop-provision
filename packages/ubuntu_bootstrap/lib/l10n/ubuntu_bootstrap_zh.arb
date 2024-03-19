@@ -407,13 +407,6 @@
   "@installCodecsSubtitle": {},
   "installationTypeLVMEncryptionSelected": "已选择配置加密的 LVM",
   "@installationTypeLVMEncryptionSelected": {},
-  "restartWarning": "您现在可以继续测试 {RELEASE}，但在重新启动计算机之前，您所做的任何更改或保存的文档都不会被保留。",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "继续试用",
   "@continueTesting": {},
   "offlineWarning": "您当前处于离线状态",

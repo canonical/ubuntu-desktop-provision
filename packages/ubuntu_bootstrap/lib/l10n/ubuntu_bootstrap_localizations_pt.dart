@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Pode continuar a testar o $RELEASE agora, mas até reiniciar o computador, quaisquer alterações que faça ou documentos que guarde não serão preservados.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
@@ -1405,11 +1403,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String restartInto(String system) {
     return 'Reiniciar no $system';
-  }
-
-  @override
-  String restartWarning(String RELEASE) {
-    return 'Você pode continuar testando o $RELEASE agora, mas ao reiniciar o computador, todas as alterações feitas ou documentos armazenados não serão preservados.';
   }
 
   @override

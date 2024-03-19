@@ -395,13 +395,6 @@
       "mount": {}
     }
   },
-  "restartWarning": "このまま {RELEASE} の試用を続けることもできますが、コンピューターを再起動するまでは、なにか変更を行ったり文書を保存してもデータは残りません。",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "confirmPartitionResize": "パーティション<b>{sysname}</b>のサイズが<b>{oldsize}</b>から<b>{newsize}</b>に変更されます。",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",

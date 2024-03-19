@@ -41,3 +41,5 @@ pages:
   telemetry:
     image: "assets/images/telemetry.svg"
   welcome:
+  done:
+    image: "assets/mascot.png"

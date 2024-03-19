@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return '$RELEASE을(를) 계속 사용할 수 있습니다. 하지만 컴퓨터를 다시 시작하지 않으면 바뀐 내용이나 저장한 문서를 잃게 됩니다.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';

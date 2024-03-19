@@ -403,13 +403,6 @@
   "@restartNow": {},
   "installDriversTitle": "Harmadik féltől származó szoftverek telepítése grafikus és Wi-Fi-hardverekhez",
   "@installDriversTitle": {},
-  "restartWarning": "Most folytathatja a(z) {RELEASE} kipróbálását, de amíg nem indítja újra a számítógépet, addig semmilyen elvégzett változtatás vagy elmentett dokumentum nem lesz megtartva.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartIntoWindowsDescription": "Biztosan újra szeretné indítani a számítógépet? Később újra kell majd indítania a(z) {DISTRO} telepítését a(z) {DISTRO} telepítésének befejezéséhez.",
   "@restartIntoWindowsDescription": {
     "type": "text",

@@ -627,13 +627,6 @@
       "system": {}
     }
   },
-  "restartWarning": "您現在可以繼續試用 {RELEASE}，但直到電腦重啟前，在此系統上進行的變更與儲存的文件將不會被保存。",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartNow": "立即重新啟動",
   "@restartNow": {},
   "continueTesting": "繼續試用",

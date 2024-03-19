@@ -75,6 +75,7 @@ theme:
 # - storage: Select target disk and partition
 # - identity: Create the first-user account (only displayed if mode = default)
 # - confirm: A summary of the installation and confirmation button to start the install
+# - done: Choose whether to restart or continue testing in the live session
 #
 # Init pages (for oem only)
 # - identity: Create the first-user account 

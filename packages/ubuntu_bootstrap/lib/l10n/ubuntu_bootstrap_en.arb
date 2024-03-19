@@ -474,7 +474,7 @@
   "confirmProprietarySoftwareDrivers": "Drivers",
   "confirmInstallButton": "Install",
   "installationCompleteTitle": "Installation complete",
-  "readyToUse": "**{system}** is installed and ready to use",
+  "readyToUse": "{system} is installed and ready to use",
   "@readyToUse": {
     "placeholders": {
       "system": {
@@ -498,14 +498,7 @@
       }
     }
   },
-  "restartWarning": "You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.",
-  "@restartWarning": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
+  "restartWarningBody": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
   "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
   "shutdown": "Shut Down",
   "restartNow": "Restart now",
