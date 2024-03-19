@@ -52,60 +52,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
       title: lang.installationTypeHeader(flavor.displayName),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (model.canInstallAlongside || model.hasBitLocker)
-            _InstallationTypeTile(
-              storageType: StorageType.alongside,
-              title: Text(
-                formatAlongside(
-                  lang,
-                  ref.watch(flavorProvider).displayName,
-                  model.existingOS ?? [],
-                ),
-              ),
-              subtitle: Text(lang.installationTypeAlongsideInfo),
-            ),
-          if (model.canEraseDisk) ...[
-            _InstallationTypeTile(
-              storageType: StorageType.erase,
-              title: Text(lang.installationTypeErase(flavor.displayName)),
-              subtitle: Text(lang.installationTypeEraseInfo),
-              trailing: model.hasAdvancedFeatures
-                  ? Padding(
-                      padding: const EdgeInsets.only(top: kWizardSpacing),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          OutlinedButton(
-                            onPressed: model.type == StorageType.erase
-                                ? () =>
-                                    showAdvancedFeaturesDialog(context, model)
-                                : null,
-                            child: Text(lang.installationTypeAdvancedLabel),
-                          ),
-                          const SizedBox(width: kWizardSpacing),
-                          Flexible(
-                            child: Text(
-                              model.guidedCapability?.localize(lang) ?? '',
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : null,
-            ),
-          ],
-          if (model.canManualPartition)
-            _InstallationTypeTile(
-              storageType: StorageType.manual,
-              title: Text(lang.installationTypeManual),
-              subtitle:
-                  Text(lang.installationTypeManualInfo(flavor.displayName)),
-            ),
-        ],
-      ),
       isNextEnabled: model.canEraseDisk ||
           model.canInstallAlongside ||
           model.canManualPartition,
@@ -115,6 +61,55 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
       // previously configured storage must be reset to make all guided
       // partitioning targets available.
       onBack: model.resetStorage,
+      children: [
+        if (model.canInstallAlongside || model.hasBitLocker)
+          _InstallationTypeTile(
+            storageType: StorageType.alongside,
+            title: Text(
+              formatAlongside(
+                lang,
+                ref.watch(flavorProvider).displayName,
+                model.existingOS ?? [],
+              ),
+            ),
+            subtitle: Text(lang.installationTypeAlongsideInfo),
+          ),
+        if (model.canEraseDisk) ...[
+          _InstallationTypeTile(
+            storageType: StorageType.erase,
+            title: Text(lang.installationTypeErase(flavor.displayName)),
+            subtitle: Text(lang.installationTypeEraseInfo),
+            trailing: model.hasAdvancedFeatures
+                ? Padding(
+                    padding: const EdgeInsets.only(top: kWizardSpacing),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        OutlinedButton(
+                          onPressed: model.type == StorageType.erase
+                              ? () => showAdvancedFeaturesDialog(context, model)
+                              : null,
+                          child: Text(lang.installationTypeAdvancedLabel),
+                        ),
+                        const SizedBox(width: kWizardSpacing),
+                        Flexible(
+                          child: Text(
+                            model.guidedCapability?.localize(lang) ?? '',
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : null,
+          ),
+        ],
+        if (model.canManualPartition)
+          _InstallationTypeTile(
+            storageType: StorageType.manual,
+            title: Text(lang.installationTypeManual),
+            subtitle: Text(lang.installationTypeManualInfo(flavor.displayName)),
+          ),
+      ],
     );
   }
 }

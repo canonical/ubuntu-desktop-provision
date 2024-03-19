@@ -33,14 +33,6 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.updatesOtherSoftwarePageTitle,
       title: lang.updatesOtherSoftwarePageDescription,
       contentFlex: 2,
-      content: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ...model.sources
-              .map(_SourceSelectionListTile.new)
-              .withSpacing(kWizardSpacing / 2),
-        ],
-      ),
       snackBar: model.onBattery
           ? SnackBar(
               width: 500,
@@ -67,6 +59,11 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
           'Minimal': model.sourceId?.contains('minimal') ?? false,
         });
       },
+      children: [
+        ...model.sources
+            .map(_SourceSelectionListTile.new)
+            .withSpacing(kWizardSpacing / 2),
+      ],
     );
   }
 }

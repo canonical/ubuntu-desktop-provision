@@ -23,24 +23,8 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
-      isScrollable: false,
+      managedScrolling: false,
       contentFlex: 4,
-      content: ListWidget.builder(
-        selectedIndex: model.selectedIndex,
-        itemCount: model.languageCount,
-        itemBuilder: (context, index) => ListTile(
-          key: ValueKey(index),
-          title: Text(model.language(index)),
-          selected: index == model.selectedIndex,
-          onTap: () => model.selectLanguage(index),
-        ),
-        onKeySearch: (value) {
-          final index = model.searchLanguage(value);
-          if (index != -1) {
-            model.selectLanguage(index);
-          }
-        },
-      ),
       bottomBar: WizardBar(
         trailing: [
           NextWizardButton(
@@ -53,6 +37,26 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
           )
         ],
       ),
+      children: [
+        Expanded(
+          child: ListWidget.builder(
+            selectedIndex: model.selectedIndex,
+            itemCount: model.languageCount,
+            itemBuilder: (context, index) => ListTile(
+              key: ValueKey(index),
+              title: Text(model.language(index)),
+              selected: index == model.selectedIndex,
+              onTap: () => model.selectLanguage(index),
+            ),
+            onKeySearch: (value) {
+              final index = model.searchLanguage(value);
+              if (index != -1) {
+                model.selectLanguage(index);
+              }
+            },
+          ),
+        ),
+      ],
     );
   }
 }

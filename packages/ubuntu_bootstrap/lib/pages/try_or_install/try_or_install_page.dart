@@ -26,34 +26,6 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.tryOrInstallTitle(flavor.displayName),
       title: lang.tryOrInstallHeader(flavor.displayName),
-      content: Column(
-        children: [
-          OptionButton(
-            value: TryOrInstallOption.installUbuntu,
-            groupValue: model.option,
-            title: Text(lang.installOption(flavor.displayName)),
-            subtitle: Text(lang.installDescription(flavor.displayName)),
-            onChanged: (value) => model.selectOption(value!),
-          ),
-          const SizedBox(height: kWizardSpacing / 2),
-          OptionButton(
-            value: TryOrInstallOption.tryUbuntu,
-            groupValue: model.option,
-            title: Text(lang.tryOption(flavor.displayName)),
-            subtitle: Text(lang.tryDescription(flavor.displayName)),
-            onChanged: (value) => model.selectOption(value!),
-          ),
-          const SizedBox(height: kWizardSpacing / 2),
-          // const SizedBox(height: kContentSpacing / 2),
-          // OptionButton(
-          //   value: Option.repairUbuntu,
-          //   groupValue: model.option,
-          //   title: Text(lang.welcomeRepairOption),
-          //   subtitle: Text(lang.welcomeRepairDescription),
-          //   onChanged: (value) => model.selectOption(value!),
-          // ),
-        ],
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -72,6 +44,32 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
           )
         ],
       ),
+      children: [
+        OptionButton(
+          value: TryOrInstallOption.installUbuntu,
+          groupValue: model.option,
+          title: Text(lang.installOption(flavor.displayName)),
+          subtitle: Text(lang.installDescription(flavor.displayName)),
+          onChanged: (value) => model.selectOption(value!),
+        ),
+        const SizedBox(height: kWizardSpacing / 2),
+        OptionButton(
+          value: TryOrInstallOption.tryUbuntu,
+          groupValue: model.option,
+          title: Text(lang.tryOption(flavor.displayName)),
+          subtitle: Text(lang.tryDescription(flavor.displayName)),
+          onChanged: (value) => model.selectOption(value!),
+        ),
+        const SizedBox(height: kWizardSpacing / 2),
+        // const SizedBox(height: kContentSpacing / 2),
+        // OptionButton(
+        //   value: Option.repairUbuntu,
+        //   groupValue: model.option,
+        //   title: Text(lang.welcomeRepairOption),
+        //   subtitle: Text(lang.welcomeRepairDescription),
+        //   onChanged: (value) => model.selectOption(value!),
+        // ),
+      ],
     );
   }
 }

@@ -29,44 +29,40 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.rstTitle,
       title: lang.rstHeader,
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(lang.rstDescription(flavor.displayName)),
-          const SizedBox(height: kWizardSpacing),
-          Html(
-            data: lang.rstInstructions('help.ubuntu.com/rst'),
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(color: Theme.of(context).colorScheme.link),
-            },
-            onLinkTap: (url, _, __) => launchUrl(url!),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          ElevatedButton(
-            onPressed: () async {
-              final window = YaruWindow.of(context);
-              final confirmed = await showConfirmationDialog(
-                context,
-                title: lang.restartIntoWindowsTitle,
-                message: lang.restartIntoWindowsDescription(flavor.displayName),
-                okLabel: UbuntuLocalizations.of(context).restartLabel,
-                okElevated: true,
-              );
-              if (confirmed) {
-                await model.reboot().then((_) => window.close());
-              }
-            },
-            child: Text(
-              lang.restartIntoWindows,
-            ),
-          )
-        ],
-      ),
       bottomBar: const WizardBar(
         leading: BackWizardButton(),
       ),
+      children: [
+        Text(lang.rstDescription(flavor.displayName)),
+        const SizedBox(height: kWizardSpacing),
+        Html(
+          data: lang.rstInstructions('help.ubuntu.com/rst'),
+          style: {
+            'body': Style(margin: Margins.zero),
+            'a': Style(color: Theme.of(context).colorScheme.link),
+          },
+          onLinkTap: (url, _, __) => launchUrl(url!),
+        ),
+        const SizedBox(height: kWizardSpacing),
+        ElevatedButton(
+          onPressed: () async {
+            final window = YaruWindow.of(context);
+            final confirmed = await showConfirmationDialog(
+              context,
+              title: lang.restartIntoWindowsTitle,
+              message: lang.restartIntoWindowsDescription(flavor.displayName),
+              okLabel: UbuntuLocalizations.of(context).restartLabel,
+              okElevated: true,
+            );
+            if (confirmed) {
+              await model.reboot().then((_) => window.close());
+            }
+          },
+          child: Text(
+            lang.restartIntoWindows,
+          ),
+        )
+      ],
     );
   }
 }

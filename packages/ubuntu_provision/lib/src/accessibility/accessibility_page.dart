@@ -24,98 +24,96 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.accessibilityPageTitle,
       title: lang.accessibilityPageHeader(flavor.displayName),
       contentFlex: 8,
-      content: Column(
-        children: [
-          Text(lang.accessibilityPageBody(flavor.displayName)),
-          const SizedBox(height: kWizardSpacing),
-          YaruExpansionPanel(
-            headers: [
-              YaruTile(
-                leading: const Icon(YaruIcons.eye),
-                title: Text(lang.accessibilitySeeingLabel),
-              ),
-              YaruTile(
-                leading: const Icon(YaruIcons.headphones),
-                title: Text(lang.accessibilityHearingLabel),
-              ),
-              YaruTile(
-                leading: const Icon(YaruIcons.keyboard),
-                title: Text(lang.accessibilityTypingLabel),
-              ),
-              YaruTile(
-                leading: const Icon(YaruIcons.mouse),
-                title: Text(lang.accessibilityPointingLabel),
-              ),
-              YaruTile(
-                leading: const Icon(YaruIcons.magnifying_glass),
-                title: Text(lang.accessibilityZoomLabel),
-              ),
-            ],
-            children: [
-              Column(
-                children: [
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.highContrast,
-                    title: lang.accessibilityHighContrastLabel,
-                  ),
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.largeText,
-                    title: lang.accessibilityLargeTextLabel,
-                  ),
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.reduceAnimation,
-                    title: lang.accessibilityReduceAnimationLabel,
-                  ),
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.screenReader,
-                    title: lang.accessibilityScreenReaderLabel,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.visualAlerts,
-                    title: lang.accessibilityVisualAlertsLabel,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.stickyKeys,
-                    title: lang.accessibilityStickKeysLabel,
-                  ),
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.slowKeys,
-                    title: lang.accessibilitySlowKeysLabel,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.mouseKeys,
-                    title: lang.accessibilityMouseKeysLabel,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  _AccessibilityListTile(
-                    id: AccessibilityOption.desktopZoom,
-                    title: lang.accessibilityDesktopZoomLabel,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
-      ),
       bottomBar: const WizardBar(
         leading: BackWizardButton(),
         trailing: [NextWizardButton()],
       ),
+      children: [
+        Text(lang.accessibilityPageBody(flavor.displayName)),
+        const SizedBox(height: kWizardSpacing),
+        YaruExpansionPanel(
+          headers: [
+            YaruTile(
+              leading: const Icon(YaruIcons.eye),
+              title: Text(lang.accessibilitySeeingLabel),
+            ),
+            YaruTile(
+              leading: const Icon(YaruIcons.headphones),
+              title: Text(lang.accessibilityHearingLabel),
+            ),
+            YaruTile(
+              leading: const Icon(YaruIcons.keyboard),
+              title: Text(lang.accessibilityTypingLabel),
+            ),
+            YaruTile(
+              leading: const Icon(YaruIcons.mouse),
+              title: Text(lang.accessibilityPointingLabel),
+            ),
+            YaruTile(
+              leading: const Icon(YaruIcons.magnifying_glass),
+              title: Text(lang.accessibilityZoomLabel),
+            ),
+          ],
+          children: [
+            Column(
+              children: [
+                _AccessibilityListTile(
+                  id: AccessibilityOption.highContrast,
+                  title: lang.accessibilityHighContrastLabel,
+                ),
+                _AccessibilityListTile(
+                  id: AccessibilityOption.largeText,
+                  title: lang.accessibilityLargeTextLabel,
+                ),
+                _AccessibilityListTile(
+                  id: AccessibilityOption.reduceAnimation,
+                  title: lang.accessibilityReduceAnimationLabel,
+                ),
+                _AccessibilityListTile(
+                  id: AccessibilityOption.screenReader,
+                  title: lang.accessibilityScreenReaderLabel,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                _AccessibilityListTile(
+                  id: AccessibilityOption.visualAlerts,
+                  title: lang.accessibilityVisualAlertsLabel,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                _AccessibilityListTile(
+                  id: AccessibilityOption.stickyKeys,
+                  title: lang.accessibilityStickKeysLabel,
+                ),
+                _AccessibilityListTile(
+                  id: AccessibilityOption.slowKeys,
+                  title: lang.accessibilitySlowKeysLabel,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                _AccessibilityListTile(
+                  id: AccessibilityOption.mouseKeys,
+                  title: lang.accessibilityMouseKeysLabel,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                _AccessibilityListTile(
+                  id: AccessibilityOption.desktopZoom,
+                  title: lang.accessibilityDesktopZoomLabel,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
