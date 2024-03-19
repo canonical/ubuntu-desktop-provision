@@ -109,6 +109,12 @@ scripts:
     melos exec -c 1 --fail-fast --file-exists="lib/l10n.dart" -- \
      flutter gen-l10n
 
+  # remove unused translations in all packages, you have to have jq installed.
+  clean-l10n: >
+    melos exec --depends-on="translations_cleaner" -c 1 -- \
+      dart run translations_cleaner clean-translations && \
+      find . -name "*.arb" -exec sh -c 'jq . --indent 2 {} > temp.json && mv temp.json {}' \;
+
   # run integration tests in all packages
   integration_test: >
     melos exec -c 1 --fail-fast --dir-exists=integration_test -- \

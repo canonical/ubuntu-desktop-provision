@@ -70,12 +70,6 @@
   "@chooseSecurityKey": {},
   "confirmSecurityKey": "Confirmeu la clau de seguretat",
   "@confirmSecurityKey": {},
-  "chooseSecurityKeyTitle": "Trieu una clau de seguretat",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Trieu una clau de seguretat",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirmeu la clau de seguretat",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeAdvancedLabel": "Característiques avançades…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Característiques avançades",
@@ -98,17 +92,6 @@
   "@shutdown": {},
   "installationCompleteTitle": "S'ha completat la instal·lació",
   "@installationCompleteTitle": {},
-  "chooseSecurityKeyRequired": "Cal una clau de seguretat",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Les claus de seguretat no coincideixen",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyHeader": "El xifratge de discs protegeix els fitxers en cas que perdeu l'ordinador. Us caldrà escriure una clau de seguretat cada cop que s'iniciï l'ordinador.\n\nQualssevol fitxers que no siguin dins el sistema {RELEASE} no es xifraran.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeOSDetected": "L’ordinador actualment duu el sistema {os}. Què voleu fer?",
   "@installationTypeOSDetected": {
     "type": "text",

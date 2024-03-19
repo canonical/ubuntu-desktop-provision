@@ -1,12 +1,5 @@
 {
   "@@locale": "hu",
-  "chooseSecurityKeyHeader": "A lemez titkosítása megvédi fájljait, ha elveszíti a számítógépét. A számítógép minden egyes indításakor meg kell adnia egy biztonsági kulcsot.\n\nA(z) {RELEASE} kezelésén kívüli fájlok nem lesznek titkosítva.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeTitle": "Telepítés típusa",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Ezen a számítógépen jelenleg {os} van. Mit szeretne tenni?",
@@ -37,13 +30,6 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "installationTypeEraseWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ez törölni fogja az összes programot, dokumentumot, fényképet, zenét és minden más fájlt az összes operációs rendszeren.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
     }
   },
   "selectGuidedStoragePageTitle": "Lemez törlése és a(z) {DISTRO} telepítése",
@@ -120,23 +106,6 @@
   },
   "rstTitle": "Az RST engedélyezve van",
   "@rstTitle": {},
-  "chooseSecurityKeyTitle": "Biztonsági kulcs",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Biztonsági kulcs választása",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "A biztonsági kulcs megerősítése",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Biztonsági kulcs szükséges",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "A biztonsági kulcsok nem egyeznek",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "dontInstallDriverSoftwareNow": "Egyelőre ne telepítse az illesztőprogramot",
   "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Később a Szoftver és frissítések menüpontból telepítheti.",
@@ -717,14 +686,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ez a funkció csak bizonyos hardverkonfigurációkon támogatott, és lehet, hogy nem támogatja a jövőbeli Ubuntu kiadásokra való frissítést. Olvassa el a <a href=\"{url}\">kiadási megjegyzéseket</a> az engedélyezés előtt.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "installationTypeTPMSelected": "TPM kiválasztva",

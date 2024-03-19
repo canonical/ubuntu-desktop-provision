@@ -130,12 +130,6 @@
       "color": {}
     }
   },
-  "chooseSecurityKeyConfirmHint": "Zopakujte zadanie bezpečnostného kľúča",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Je potrebné zadať bezpečnostný kľúč",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Do každej z kolónok pre bezpečnostný kľúč ste napísali niečo iné",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeTitle": "Typ inštalácie",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Na tomto počítači sa už nachádza {os}. Čo si prajete urobiť?",
@@ -160,13 +154,6 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "installationTypeEraseWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Týmto zmažete všetky prípadné aplikácie, dokumenty, fotky, hudbu a všetky ostatné súbory vo všetkých operačných systémoch.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
     }
   },
   "installationTypeAdvancedLabel": "Pokročilé funkcie…",
@@ -437,15 +424,6 @@
   },
   "offlineWarning": "V tejto chvíli nie ste pripojení na Internet",
   "@offlineWarning": {},
-  "chooseSecurityKeyTitle": "Kľúč zabezpečenia",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHeader": "Šifrovanie disku chráni vaše súbory v prípade straty počítača. Vyžaduje, aby ste pri každom spustení počítača zadali bezpečnostný kľúč.\n\nŽiadne súbory mimo {RELEASE} nebudú zašifrované.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeZFSSelected": "Vybrané ZFS",
   "@installationTypeZFSSelected": {},
   "installationTypeReinstall": "Vymazať {os} a preinštalovať",
@@ -531,13 +509,6 @@
   "@restartIntoWindows": {},
   "installingSystem": "Inštalácia systému…",
   "@installingSystem": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim dátam sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "partitionFormatNone": "Ponechať nenaformátované",
   "@partitionFormatNone": {},
   "partitionErase": "Naformátovať oddiel",
@@ -559,8 +530,6 @@
   "@installCodecsTitle": {},
   "installCodecsSubtitle": "Tento softvér je predmetom licenčných dojednaní obsiahnutých v dokumentácii k nemu. Niektoré sú proprietárne.",
   "@installCodecsSubtitle": {},
-  "chooseSecurityKeyHint": "Vyberte si bezpečnostný kľúč",
-  "@chooseSecurityKeyHint": {},
   "installationTypeAlongsideInfo": "Dokumenty, hudba a ostatné osobné súbory zostanú zachované. Zakaždým, keď počítač spustíte z vypnutého stavu, budete si môcť zvoliť ktorý operačný systém spustiť.",
   "@installationTypeAlongsideInfo": {},
   "installAlongsideHiddenPartitions": "{num} menších oddielov je skrytých. Pokiaľ potrebujete mať nad procesom viac kontroly, použite <a href=\"{url}\">nástroj pre pokročilú správu oddielov</a>",
@@ -782,14 +751,6 @@
   },
   "refreshPageTitle": "K dispozícii je aktualizácia",
   "@refreshPageTitle": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Upozornenie:</font> Táto funkcia je podporovaná iba v určitých hardvérových konfiguráciách a nemusí podporovať inováciu na budúce vydania Ubuntu. Prečítajte si <a href=\"{url}\">poznámky k vydaniu</a> pred povolením.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "refreshUpToDate": "Aktuálna verzia {version} je najnovšia.",
   "@refreshUpToDate": {
     "type": "text",

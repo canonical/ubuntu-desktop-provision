@@ -81,13 +81,6 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Apagar o disco e instalar o {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Atenção:</font> Isso vai apagar todos os seus programas, documentos, fotos, músicas, e quaisquer outros arquivos em todos os sistemas operacionais existentes.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Recursos avançados...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Recursos avançados",
@@ -238,30 +231,6 @@
   },
   "restartIntoWindows": "Reiniciar no Windows",
   "@restartIntoWindows": {},
-  "chooseSecurityKeyTitle": "Chave de segurança",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Escolha uma chave de segurança",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirme a chave de segurança",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Uma chave de segurança é necessária",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "As chaves de segurança não conferem",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Atenção:</font> Se você perder esta chave de segurança, todos os dados estarão perdidos. Se precisar, anote sua chave em um papel e coloque-a em um local seguro.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "A criptografia de disco protege seus arquivos caso você perca seu computador. Ele exige que você insira uma chave de segurança toda vez que o computador for inicializado.\n\nQuaisquer arquivos fora de {RELEASE} não serão criptografados.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "onBatteryWarning": "<font color=\"{color}\">Atenção:</font> O computador não está conectado a uma fonte de energia.",
   "@onBatteryWarning": {
     "type": "text",
@@ -711,14 +680,6 @@
     "type": "text",
     "placeholders": {
       "color": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Atenção:</font> Esta funcionalidade só é compatível com determinadas configurações de hardware e pode não suportar atualizações para versões futuras do Ubuntu. Por favor leia as <a href=\"{url}\">notas de versão</a> antes de habilitar.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "refreshSnapRemoveAliases": "Removendo aliases de {snap}...",

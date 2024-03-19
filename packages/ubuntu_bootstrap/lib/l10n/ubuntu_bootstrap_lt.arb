@@ -40,20 +40,11 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Įdiegti trečiųjų šalių programinę įrangą, skirtą grafikos ir belaidžio (Wi-Fi) ryšio aparatinei įrangai, o taip pat papildomus medijos formatus",
   "@installThirdPartyTitle": {},
-  "chooseSecurityKeyTitle": "Saugumo raktas",
-  "@chooseSecurityKeyTitle": {},
   "installationTypeErase": "Ištrinti duomenis diske ir įdiegti {DISTRO}",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "Diskų šifravimas apsaugo failus tuo atveju, jei prarasite savo kompiuterį. Tai reikalauja įvesti saugumo raktą kiekvieną kartą paleidus kompiuterį.\n\nVisi failai už {RELEASE} ribų nebus šifruoti.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
     }
   },
   "installThirdPartySubtitle": "Šiai programinei įrangai taikomos licencijos sąlygos, kurias rasite jos dokumentacijoje. Kai kuri programinė įranga yra nuosavybinė.",
@@ -114,21 +105,6 @@
   },
   "configureSecureBootTitle": "Konfigūruoti saugųjį paleidimą",
   "@configureSecureBootTitle": {},
-  "chooseSecurityKeyHint": "Pasirinkite saugumo raktą",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Patvirtinkite saugumo raktą",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Reikia nurodyti saugumo raktą",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Saugumo raktai nesutampa",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Įspėjimas:</font> Jei prarasite šį saugumo raktą, visi duomenys bus prarasti. Jei reikia, užsirašykite raktą ir laikykite jį atokiai saugioje vietoje.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeTitle": "Įdiegimo tipas",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Šiuo metu šiame kompiuteryje yra įdiegta {os}. Ką norėtumėte daryti?",
@@ -140,13 +116,6 @@
   },
   "installationTypeNoOSDetected": "Šiuo metu šiame kompiuteryje nėra įdiegtų operacinių sistemų. Ką norėtumėte daryti?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Įspėjimas:</font> Tai ištrins visas jūsų programas, dokumentus, nuotraukas, muziką bei visus failus, esančius kitose operacinėse sistemose.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Išplėstinės ypatybės...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Išplėstinės ypatybės",
