@@ -78,7 +78,7 @@ class HorizontalPage extends ConsumerWidget {
     final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
-    final adjuestedPadding =
+    final adjustedPadding =
         isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
@@ -87,7 +87,7 @@ class HorizontalPage extends ConsumerWidget {
     return WizardPage(
       title: YaruWindowTitleBar(title: Text(windowTitle)),
       content: Padding(
-        padding: adjuestedPadding,
+        padding: adjustedPadding,
         child: Row(
           children: [
             if (image != null) ...[
@@ -102,7 +102,7 @@ class HorizontalPage extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Expanded(child: SizedBox()),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -136,7 +136,7 @@ class HorizontalPage extends ConsumerWidget {
                           )
                         : content,
                   ),
-                  const Expanded(child: SizedBox()),
+                  const Spacer(),
                 ],
               ),
             ),
