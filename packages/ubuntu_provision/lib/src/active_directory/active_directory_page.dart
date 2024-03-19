@@ -19,26 +19,6 @@ class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.activeDirectoryTitle,
       title: lang.activeDirectoryHeader,
-      content: Column(
-        children: [
-          Text(lang.activeDirectoryInfo(ref.watch(flavorProvider).displayName)),
-          const SizedBox(height: kWizardSpacing),
-          const DomainNameFormField(),
-          const SizedBox(height: kWizardSpacing),
-          Align(
-            alignment: AlignmentDirectional.centerStart,
-            child: FilledButton(
-              onPressed:
-                  ref.read(activeDirectoryModelProvider).pingDomainController,
-              child: Text(lang.activeDirectoryTestConnection),
-            ),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          const AdminNameFormField(),
-          const SizedBox(height: kWizardSpacing),
-          const PasswordFormField(),
-        ],
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -59,6 +39,24 @@ class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
+      children: [
+        Text(lang.activeDirectoryInfo(ref.watch(flavorProvider).displayName)),
+        const SizedBox(height: kWizardSpacing),
+        const DomainNameFormField(),
+        const SizedBox(height: kWizardSpacing),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: FilledButton(
+            onPressed:
+                ref.read(activeDirectoryModelProvider).pingDomainController,
+            child: Text(lang.activeDirectoryTestConnection),
+          ),
+        ),
+        const SizedBox(height: kWizardSpacing),
+        const AdminNameFormField(),
+        const SizedBox(height: kWizardSpacing),
+        const PasswordFormField(),
+      ],
     );
   }
 }

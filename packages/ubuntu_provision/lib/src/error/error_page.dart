@@ -11,12 +11,12 @@ class ErrorPage extends StatelessWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.errorPageTitle,
       title: lang.errorPageTitle,
-      content: Center(
-        child: Text(
+      children: [
+        Text(
           ModalRoute.of(context)?.settings.arguments?.toString() ??
               lang.errorPageUnexpected,
         ),
-      ),
+      ],
     );
   }
 }

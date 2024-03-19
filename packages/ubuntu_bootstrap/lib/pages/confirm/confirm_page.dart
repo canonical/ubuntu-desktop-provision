@@ -28,54 +28,6 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.confirmPageTitle,
       title: lang.confirmHeader,
-      content: YaruBorderContainer(
-        padding: kWizardTilePadding,
-        borderRadius: kWizardBorderRadius,
-        color: Theme.of(context).colorScheme.primaryContainer,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _SummarySection(
-              title: lang.confirmSectionGeneralTitle,
-              entries: {
-                lang.confirmEntryDiskSetup: _DiskSetup(),
-                lang.confirmEntryInstallationDisk: _InstallationDisk(),
-                lang.confirmEntryApplications: _Applications()
-              },
-            ),
-            const SizedBox(height: kWizardSpacing),
-            _SummarySection(
-              title: lang.confirmSectionSecurityAndMoreTitle,
-              entries: {
-                lang.confirmEntryDiskEncryption: _DiskEncryption(),
-                lang.confirmEntryProprietarySoftware: Consumer(
-                  builder: (_, ref, __) => _ProprietarySoftware(),
-                ),
-              },
-            ),
-            const SizedBox(height: kWizardSpacing),
-            Text(
-              lang.confirmPartitionsTitle,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: kWizardSpacing / 2),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (final entry in model.partitions.entries)
-                  for (final partition in entry.value)
-                    _PartitionLabel(
-                      entry.key,
-                      partition,
-                      model.getOriginalPartition(
-                          entry.key, partition.number ?? -1),
-                    ),
-              ],
-            ),
-          ],
-        ),
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -92,6 +44,56 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
+      children: [
+        YaruBorderContainer(
+          padding: kWizardTilePadding,
+          borderRadius: kWizardBorderRadius,
+          color: Theme.of(context).colorScheme.primaryContainer,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _SummarySection(
+                title: lang.confirmSectionGeneralTitle,
+                entries: {
+                  lang.confirmEntryDiskSetup: _DiskSetup(),
+                  lang.confirmEntryInstallationDisk: _InstallationDisk(),
+                  lang.confirmEntryApplications: _Applications()
+                },
+              ),
+              const SizedBox(height: kWizardSpacing),
+              _SummarySection(
+                title: lang.confirmSectionSecurityAndMoreTitle,
+                entries: {
+                  lang.confirmEntryDiskEncryption: _DiskEncryption(),
+                  lang.confirmEntryProprietarySoftware: Consumer(
+                    builder: (_, ref, __) => _ProprietarySoftware(),
+                  ),
+                },
+              ),
+              const SizedBox(height: kWizardSpacing),
+              Text(
+                lang.confirmPartitionsTitle,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: kWizardSpacing / 2),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (final entry in model.partitions.entries)
+                    for (final partition in entry.value)
+                      _PartitionLabel(
+                        entry.key,
+                        partition,
+                        model.getOriginalPartition(
+                            entry.key, partition.number ?? -1),
+                      ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

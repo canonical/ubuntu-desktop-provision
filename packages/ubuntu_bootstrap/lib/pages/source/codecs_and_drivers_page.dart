@@ -31,51 +31,6 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.codecsAndDriversPageTitle,
       title: lang.codecsAndDriversPageDescription,
       contentFlex: 3,
-      content: Column(
-        children: [
-          Text(lang.codecsAndDriversPageBody(flavor.displayName)),
-          const SizedBox(height: kWizardSpacing),
-          // TODO(Lukas): Add a proper check when we know where to get this information.
-          if (false)
-            // ignore: dead_code
-            InfoBox(
-              title: lang.codecsAndDriversNvidiaNote,
-              subtitle: lang.codecsAndDriversNvidiaBody,
-              isThreeLine: true,
-            ),
-          const SizedBox(height: kWizardSpacing),
-          Align(
-            alignment: AlignmentDirectional.centerStart,
-            child: YaruCheckButton(
-              title: Text(
-                lang.installDriversTitle,
-                maxLines: 2,
-              ),
-              subtitle: Text(lang.installDriversSubtitle),
-              contentPadding: kWizardPadding,
-              value: model.installDrivers,
-              onChanged: model.setInstallDrivers,
-            ),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          Align(
-            alignment: AlignmentDirectional.centerStart,
-            child: Tooltip(
-              message: !model.isOnline ? lang.offlineWarning : '',
-              child: YaruCheckButton(
-                title: Text(
-                  lang.installCodecsTitle,
-                  maxLines: 2,
-                ),
-                subtitle: Text(lang.installCodecsSubtitle),
-                contentPadding: kWizardPadding,
-                value: model.installCodecs && model.isOnline,
-                onChanged: model.isOnline ? model.setInstallCodecs : null,
-              ),
-            ),
-          ),
-        ],
-      ),
       snackBar: model.onBattery
           ? SnackBar(
               width: 500,
@@ -103,6 +58,49 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
         });
         await model.save();
       },
+      children: [
+        Text(lang.codecsAndDriversPageBody(flavor.displayName)),
+        const SizedBox(height: kWizardSpacing),
+        // TODO(Lukas): Add a proper check when we know where to get this information.
+        if (false)
+          // ignore: dead_code
+          InfoBox(
+            title: lang.codecsAndDriversNvidiaNote,
+            subtitle: lang.codecsAndDriversNvidiaBody,
+            isThreeLine: true,
+          ),
+        const SizedBox(height: kWizardSpacing),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: YaruCheckButton(
+            title: Text(
+              lang.installDriversTitle,
+              maxLines: 2,
+            ),
+            subtitle: Text(lang.installDriversSubtitle),
+            contentPadding: kWizardPadding,
+            value: model.installDrivers,
+            onChanged: model.setInstallDrivers,
+          ),
+        ),
+        const SizedBox(height: kWizardSpacing),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: Tooltip(
+            message: !model.isOnline ? lang.offlineWarning : '',
+            child: YaruCheckButton(
+              title: Text(
+                lang.installCodecsTitle,
+                maxLines: 2,
+              ),
+              subtitle: Text(lang.installCodecsSubtitle),
+              contentPadding: kWizardPadding,
+              value: model.installCodecs && model.isOnline,
+              onChanged: model.isOnline ? model.setInstallCodecs : null,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
