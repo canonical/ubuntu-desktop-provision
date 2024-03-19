@@ -34,7 +34,6 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
       contentFlex: 0,
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
         children: [
           OptionButton(
             title: Text(lang.autoinstallInteractiveOption),

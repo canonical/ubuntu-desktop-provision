@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_bootstrap/widgets/option_button.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -37,7 +37,15 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ...model.sources
-              .map(_SourceSelectionListTile.new)
+              .map(
+                (source) => OptionButton<String?>(
+                  value: source.id,
+                  groupValue: model.sourceId,
+                  title: Text(source.localizedTitle(lang)),
+                  subtitle: Text(source.localizedSubtitle(lang)),
+                  onChanged: model.setSourceId,
+                ),
+              )
               .withSpacing(kWizardSpacing / 2),
         ],
       ),
@@ -67,48 +75,6 @@ class SourceSelectionPage extends ConsumerWidget with ProvisioningPage {
           'Minimal': model.sourceId?.contains('minimal') ?? false,
         });
       },
-    );
-  }
-}
-
-class _SourceSelectionListTile extends ConsumerWidget {
-  const _SourceSelectionListTile(this.source);
-
-  final SourceSelection source;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
-    final model = ref.watch(sourceModelProvider);
-    final isSelected = source.id == model.sourceId;
-    final lang = UbuntuBootstrapLocalizations.of(context);
-
-    return Align(
-      alignment: AlignmentDirectional.centerStart,
-      child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withOpacity(0.2)
-            : colorScheme.primaryContainer,
-        border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
-        ),
-        borderRadius: kWizardBorderRadius,
-        child: YaruRadioListTile(
-          title: Text(
-            source.localizedTitle(lang),
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          subtitle: Text(source.localizedSubtitle(lang)),
-          contentPadding: kWizardTilePadding,
-          isThreeLine: true,
-          value: source.id,
-          groupValue: model.sourceId,
-          onChanged: model.setSourceId,
-        ),
-      ),
     );
   }
 }
