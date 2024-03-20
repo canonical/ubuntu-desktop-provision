@@ -121,6 +121,22 @@ extension UbuntuProvisionPageTester on WidgetTester {
     }
   }
 
+  Future<void> testEULAPage() async {
+    await pumpUntilPage(EULAPage);
+
+    final context = element(find.byType(EULAPage));
+    final l10n = EULALocalizations.of(context);
+
+    expect(find.titleBar(l10n.eulaPageTitle), findsOneWidget);
+
+    final tile = find.text(l10n.eulaAcceptTerms);
+
+    if (tile.evaluate().isNotEmpty) {
+      await tap(tile);
+    }
+    await pumpAndSettle();
+  }
+
   Future<void> testTimezonePage({
     String? location,
     String? timezone,
