@@ -137,6 +137,7 @@ class PageImages {
     final imageName = imagePath.split('/').last;
     final excludedFromColorMapping = [
       'mascot.svg',
+      'try-or-install.svg',
       'logo-light.svg',
       'logo-dark.svg',
     ];
