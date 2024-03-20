@@ -213,5 +213,25 @@
   "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the license agreement terms.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "I have read and accept these terms",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "setupMachinePageTitle": "Set up your machine",
+  "@setupMachinePageTitle": {},
+  "setupMachinePageHeader": "How would you like to set up?",
+  "@setupMachinePageHeader": {},
+  "setupMachinePageHeaderDesc": "Lorem ipsum dolor sit amet consectetur",
+  "@setupMachinePageHeaderDesc": {},
+  "setupMachinePersonal": "Personal",
+  "@setupMachinePersonal": {},
+  "setupMachinePersonalDesc": "Tempus luctus eget scelerisque dictumst integer dui eleifend elementum eget. Nulla nulla rhoncus tortor diam rhoncus.",
+  "@setupMachinePersonalDesc": {},
+  "setupMachineManaged": "Managed",
+  "@setupMachineManaged": {},
+  "setupMachineManagedDesc": "Porta mauris duis pretium mattis pulvinar. Fermentum mauris morbi tempus aenean amet. Nisl aliquam aliquet consequat amet.",
+  "@setupMachineManagedDesc": {}
+
+
+
+
+
+
 }

@@ -836,6 +836,48 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'I have read and accept these terms'**
   String get eulaAcceptTerms;
+
+  /// No description provided for @setupMachinePageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up your machine'**
+  String get setupMachinePageTitle;
+
+  /// No description provided for @setupMachinePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'How would you like to set up?'**
+  String get setupMachinePageHeader;
+
+  /// No description provided for @setupMachinePageHeaderDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Lorem ipsum dolor sit amet consectetur'**
+  String get setupMachinePageHeaderDesc;
+
+  /// No description provided for @setupMachinePersonal.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal'**
+  String get setupMachinePersonal;
+
+  /// No description provided for @setupMachinePersonalDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Tempus luctus eget scelerisque dictumst integer dui eleifend elementum eget. Nulla nulla rhoncus tortor diam rhoncus.'**
+  String get setupMachinePersonalDesc;
+
+  /// No description provided for @setupMachineManaged.
+  ///
+  /// In en, this message translates to:
+  /// **'Managed'**
+  String get setupMachineManaged;
+
+  /// No description provided for @setupMachineManagedDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Porta mauris duis pretium mattis pulvinar. Fermentum mauris morbi tempus aenean amet. Nisl aliquam aliquet consequat amet.'**
+  String get setupMachineManagedDesc;
 }
 
 class _UbuntuProvisionLocalizationsDelegate extends LocalizationsDelegate<UbuntuProvisionLocalizations> {

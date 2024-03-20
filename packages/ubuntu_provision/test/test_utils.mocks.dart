@@ -4,9 +4,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i13;
-import 'dart:convert' as _i23;
+import 'dart:convert' as _i24;
 import 'dart:io' as _i10;
-import 'dart:typed_data' as _i24;
+import 'dart:typed_data' as _i25;
 import 'dart:ui' as _i18;
 
 import 'package:dbus/dbus.dart' as _i20;
@@ -15,7 +15,7 @@ import 'package:flutter/foundation.dart' as _i8;
 import 'package:flutter/services.dart' as _i7;
 import 'package:flutter/src/widgets/basic.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
-import 'package:flutter/src/widgets/notification_listener.dart' as _i22;
+import 'package:flutter/src/widgets/notification_listener.dart' as _i23;
 import 'package:flutter/widgets.dart' as _i17;
 import 'package:flutter_svg/svg.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
@@ -26,7 +26,9 @@ import 'package:timezone_map/src/location.dart' as _i16;
 import 'package:timezone_map/src/service.dart' as _i14;
 import 'package:timezone_map/src/source.dart' as _i15;
 import 'package:ubuntu_provision/services.dart' as _i4;
-import 'package:ubuntu_utils/ubuntu_utils.dart' as _i21;
+import 'package:ubuntu_provision/src/setup_machine/setup_machine_model.dart'
+    as _i21;
+import 'package:ubuntu_utils/ubuntu_utils.dart' as _i22;
 import 'package:vector_graphics/vector_graphics.dart' as _i12;
 
 // ignore_for_file: type=lint
@@ -1942,6 +1944,27 @@ class MockTelemetryService extends _i1.Mock implements _i4.TelemetryService {
       ) as _i13.Future<void>);
 }
 
+/// A class which mocks [SetupMachineService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSetupMachineService extends _i1.Mock
+    implements _i4.SetupMachineService {
+  MockSetupMachineService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i13.Future<void> setMachineType(_i21.MachineType? type) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setMachineType,
+          [type],
+        ),
+        returnValue: _i13.Future<void>.value(),
+        returnValueForMissingStub: _i13.Future<void>.value(),
+      ) as _i13.Future<void>);
+}
+
 /// A class which mocks [TimezoneService].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -2036,7 +2059,7 @@ class MockUdevService extends _i1.Mock implements _i4.UdevService {
 /// A class which mocks [UrlLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUrlLauncher extends _i1.Mock implements _i21.UrlLauncher {
+class MockUrlLauncher extends _i1.Mock implements _i22.UrlLauncher {
   MockUrlLauncher() {
     _i1.throwOnMissingStub(this);
   }
@@ -2140,7 +2163,7 @@ class MockBuildContext extends _i1.Mock implements _i6.BuildContext {
       );
 
   @override
-  void dispatchNotification(_i22.Notification? notification) =>
+  void dispatchNotification(_i23.Notification? notification) =>
       super.noSuchMethod(
         Invocation.method(
           #dispatchNotification,
@@ -2709,7 +2732,7 @@ class MockFile extends _i1.Mock implements _i10.File {
   @override
   _i10.IOSink openWrite({
     _i10.FileMode? mode = _i10.FileMode.write,
-    _i23.Encoding? encoding = const _i23.Utf8Codec(),
+    _i24.Encoding? encoding = const _i24.Utf8Codec(),
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -2745,29 +2768,29 @@ class MockFile extends _i1.Mock implements _i10.File {
       ) as _i10.IOSink);
 
   @override
-  _i13.Future<_i24.Uint8List> readAsBytes() => (super.noSuchMethod(
+  _i13.Future<_i25.Uint8List> readAsBytes() => (super.noSuchMethod(
         Invocation.method(
           #readAsBytes,
           [],
         ),
-        returnValue: _i13.Future<_i24.Uint8List>.value(_i24.Uint8List(0)),
+        returnValue: _i13.Future<_i25.Uint8List>.value(_i25.Uint8List(0)),
         returnValueForMissingStub:
-            _i13.Future<_i24.Uint8List>.value(_i24.Uint8List(0)),
-      ) as _i13.Future<_i24.Uint8List>);
+            _i13.Future<_i25.Uint8List>.value(_i25.Uint8List(0)),
+      ) as _i13.Future<_i25.Uint8List>);
 
   @override
-  _i24.Uint8List readAsBytesSync() => (super.noSuchMethod(
+  _i25.Uint8List readAsBytesSync() => (super.noSuchMethod(
         Invocation.method(
           #readAsBytesSync,
           [],
         ),
-        returnValue: _i24.Uint8List(0),
-        returnValueForMissingStub: _i24.Uint8List(0),
-      ) as _i24.Uint8List);
+        returnValue: _i25.Uint8List(0),
+        returnValueForMissingStub: _i25.Uint8List(0),
+      ) as _i25.Uint8List);
 
   @override
   _i13.Future<String> readAsString(
-          {_i23.Encoding? encoding = const _i23.Utf8Codec()}) =>
+          {_i24.Encoding? encoding = const _i24.Utf8Codec()}) =>
       (super.noSuchMethod(
         Invocation.method(
           #readAsString,
@@ -2794,7 +2817,7 @@ class MockFile extends _i1.Mock implements _i10.File {
       ) as _i13.Future<String>);
 
   @override
-  String readAsStringSync({_i23.Encoding? encoding = const _i23.Utf8Codec()}) =>
+  String readAsStringSync({_i24.Encoding? encoding = const _i24.Utf8Codec()}) =>
       (super.noSuchMethod(
         Invocation.method(
           #readAsStringSync,
@@ -2821,7 +2844,7 @@ class MockFile extends _i1.Mock implements _i10.File {
 
   @override
   _i13.Future<List<String>> readAsLines(
-          {_i23.Encoding? encoding = const _i23.Utf8Codec()}) =>
+          {_i24.Encoding? encoding = const _i24.Utf8Codec()}) =>
       (super.noSuchMethod(
         Invocation.method(
           #readAsLines,
@@ -2834,7 +2857,7 @@ class MockFile extends _i1.Mock implements _i10.File {
 
   @override
   List<String> readAsLinesSync(
-          {_i23.Encoding? encoding = const _i23.Utf8Codec()}) =>
+          {_i24.Encoding? encoding = const _i24.Utf8Codec()}) =>
       (super.noSuchMethod(
         Invocation.method(
           #readAsLinesSync,
@@ -2906,7 +2929,7 @@ class MockFile extends _i1.Mock implements _i10.File {
   _i13.Future<_i10.File> writeAsString(
     String? contents, {
     _i10.FileMode? mode = _i10.FileMode.write,
-    _i23.Encoding? encoding = const _i23.Utf8Codec(),
+    _i24.Encoding? encoding = const _i24.Utf8Codec(),
     bool? flush = false,
   }) =>
       (super.noSuchMethod(
@@ -2949,7 +2972,7 @@ class MockFile extends _i1.Mock implements _i10.File {
   void writeAsStringSync(
     String? contents, {
     _i10.FileMode? mode = _i10.FileMode.write,
-    _i23.Encoding? encoding = const _i23.Utf8Codec(),
+    _i24.Encoding? encoding = const _i24.Utf8Codec(),
     bool? flush = false,
   }) =>
       super.noSuchMethod(
@@ -3167,16 +3190,16 @@ class MockSvgFileLoader extends _i1.Mock implements _i11.SvgFileLoader {
       ) as _i11.SvgTheme);
 
   @override
-  _i13.Future<_i24.ByteData> loadBytes(_i6.BuildContext? context) =>
+  _i13.Future<_i25.ByteData> loadBytes(_i6.BuildContext? context) =>
       (super.noSuchMethod(
         Invocation.method(
           #loadBytes,
           [context],
         ),
-        returnValue: _i13.Future<_i24.ByteData>.value(_i24.ByteData(0)),
+        returnValue: _i13.Future<_i25.ByteData>.value(_i25.ByteData(0)),
         returnValueForMissingStub:
-            _i13.Future<_i24.ByteData>.value(_i24.ByteData(0)),
-      ) as _i13.Future<_i24.ByteData>);
+            _i13.Future<_i25.ByteData>.value(_i25.ByteData(0)),
+      ) as _i13.Future<_i25.ByteData>);
 
   @override
   _i11.SvgCacheKey cacheKey(_i6.BuildContext? context) => (super.noSuchMethod(

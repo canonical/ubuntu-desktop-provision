@@ -11,6 +11,7 @@ export 'src/services/page_config_service.dart';
 export 'src/services/power_service.dart';
 export 'src/services/product_service.dart';
 export 'src/services/session_service.dart';
+export 'src/services/setup_machine_service.dart';
 export 'src/services/sound_service.dart';
 export 'src/services/telemetry_service.dart';
 export 'src/services/theme_variant_service.dart';

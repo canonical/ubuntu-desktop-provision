@@ -11,6 +11,7 @@ export 'l10n.dart';
 export 'network.dart';
 export 'providers.dart';
 export 'services.dart';
+export 'setup_machine.dart';
 export 'theme_variant.dart';
 export 'timezone.dart';
 export 'widgets.dart';

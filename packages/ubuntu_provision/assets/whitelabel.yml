@@ -22,6 +22,8 @@ pages:
     image: "assets/images/disk.svg"
   eula:
     image: "assets/images/keyboard.svg"
+  setup-machine:
+    image: "assets/images/setup-machine.svg"
   confirm:
   identity:
   ubuntu-pro:

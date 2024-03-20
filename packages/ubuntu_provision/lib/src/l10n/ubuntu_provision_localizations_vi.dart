@@ -309,4 +309,25 @@ class UbuntuProvisionLocalizationsVi extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';
+
+  @override
+  String get setupMachinePageTitle => 'Set up your machine';
+
+  @override
+  String get setupMachinePageHeader => 'How would you like to set up?';
+
+  @override
+  String get setupMachinePageHeaderDesc => 'Lorem ipsum dolor sit amet consectetur';
+
+  @override
+  String get setupMachinePersonal => 'Personal';
+
+  @override
+  String get setupMachinePersonalDesc => 'Tempus luctus eget scelerisque dictumst integer dui eleifend elementum eget. Nulla nulla rhoncus tortor diam rhoncus.';
+
+  @override
+  String get setupMachineManaged => 'Managed';
+
+  @override
+  String get setupMachineManagedDesc => 'Porta mauris duis pretium mattis pulvinar. Fermentum mauris morbi tempus aenean amet. Nisl aliquam aliquet consequat amet.';
 }
