@@ -78,12 +78,10 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'விசைப்பலகை அமைப்பு';
 
   @override
-  String get keyboardHeader =>
-      'உங்களின் விசைப்பலகை அமைப்பைத் தேர்வு செய்யவும்:';
+  String get keyboardHeader => 'உங்களின் விசைப்பலகை அமைப்பைத் தேர்வு செய்யவும்:';
 
   @override
-  String get keyboardTestHint =>
-      'உங்கள் விசைப்பலகையை சோதிக்க இங்கு தட்டச்சு செய்யவும்';
+  String get keyboardTestHint => 'உங்கள் விசைப்பலகையை சோதிக்க இங்கு தட்டச்சு செய்யவும்';
 
   @override
   String get keyboardDetectTitle => 'விசைப்பலகையின் அமைப்பைக் கண்டறியவும்';
@@ -98,15 +96,13 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'பின்வரும் விசைகளில் ஒன்றை அழுத்துங்கள்:';
 
   @override
-  String get keyboardKeyPresentLabel =>
-      'பின்வரும் விசை உங்களுடைய தட்டச்சு பலகையில் இருக்கிறதா?';
+  String get keyboardKeyPresentLabel => 'பின்வரும் விசை உங்களுடைய தட்டச்சு பலகையில் இருக்கிறதா?';
 
   @override
   String get themePageTitle => 'உங்கள் தோற்றத்தை தேர்வு செய்யவும்';
 
   @override
-  String get themePageHeader =>
-      'தோற்ற அமைப்புகளில் இதை எப்போது வேண்டுமானாலும் மாற்றலாம்.';
+  String get themePageHeader => 'தோற்ற அமைப்புகளில் இதை எப்போது வேண்டுமானாலும் மாற்றலாம்.';
 
   @override
   String get themeDark => 'கருமை';
@@ -144,8 +140,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'உங்கள் கணினியின் பெயர்';
 
   @override
-  String get identityHostnameInfo =>
-      'மற்ற கணினிகளுடன் பேசும்போது அது பயன்படுத்தும் பெயர்.';
+  String get identityHostnameInfo => 'மற்ற கணினிகளுடன் பேசும்போது அது பயன்படுத்தும் பெயர்.';
 
   @override
   String get identityHostnameRequired => 'கணினி பெயர் தேவை';
@@ -169,15 +164,13 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'That user name already exists.';
 
   @override
-  String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
 
   @override
   String get identityUsernameTooLong => 'That name is too long.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
 
   @override
   String get identityPasswordLabel => 'கடவுச்சொல்லை தேர்வு செய்யவும்';
@@ -186,8 +179,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityPasswordRequired => 'கடவுச்சொல் தேவை';
 
   @override
-  String get identityConfirmPasswordLabel =>
-      'உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்';
+  String get identityConfirmPasswordLabel => 'உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்';
 
   @override
   String get identityPasswordMismatch => 'கடவுச்சொற்கள் பொருந்தவில்லை';
@@ -202,8 +194,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -244,8 +235,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -266,12 +256,10 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'Internet connection';
@@ -280,8 +268,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connect to the internet';
 
   @override
-  String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Use wired connection';
@@ -293,8 +280,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Wired connection is turned off';
 
   @override
-  String get networkWiredDisabled =>
-      'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
 
   @override
   String get networkWiredEnable => 'Enable wired';
@@ -309,8 +295,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'No Wi-Fi devices detected';
 
   @override
-  String get networkWifiDisabled =>
-      'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
 
   @override
   String get networkWifiEnable => 'Enable Wi-Fi';
@@ -334,8 +319,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

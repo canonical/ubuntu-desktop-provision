@@ -96,15 +96,13 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Bonvolu premi unu el la jenaj klavoj:';
 
   @override
-  String get keyboardKeyPresentLabel =>
-      'Ĉu la jena klavo troviĝas en via klavaro?';
+  String get keyboardKeyPresentLabel => 'Ĉu la jena klavo troviĝas en via klavaro?';
 
   @override
   String get themePageTitle => 'Elektu vian etoson';
 
   @override
-  String get themePageHeader =>
-      'Vi povas ŝanĝi tion poste per la agordoj pri Aspekto.';
+  String get themePageHeader => 'Vi povas ŝanĝi tion poste per la agordoj pri Aspekto.';
 
   @override
   String get themeDark => 'Malhela';
@@ -142,8 +140,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Nomo de via komputilo';
 
   @override
-  String get identityHostnameInfo =>
-      'La nomo, kiun ĝi uzas por alparoli aliajn komputilojn.';
+  String get identityHostnameInfo => 'La nomo, kiun ĝi uzas por alparoli aliajn komputilojn.';
 
   @override
   String get identityHostnameRequired => 'Nomo de komputilo bezoniĝas';
@@ -167,15 +164,13 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Tiu salutnomo jam ekzistas.';
 
   @override
-  String get identityUsernameSystemReserved =>
-      'Tiu salutnomo estas rezervita por sistema uzado.';
+  String get identityUsernameSystemReserved => 'Tiu salutnomo estas rezervita por sistema uzado.';
 
   @override
   String get identityUsernameTooLong => 'Tiu salutnomo estas tro longa.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'Tiu salutnomo enhavas nevalidajn signojn.';
+  String get identityUsernameInvalidChars => 'Tiu salutnomo enhavas nevalidajn signojn.';
 
   @override
   String get identityPasswordLabel => 'Elektu pasvorton';
@@ -199,8 +194,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Uzi Aktivan Dosierujon';
 
   @override
-  String get identityActiveDirectoryInfo =>
-      'Vi tajpos la domanion kaj aliajn detalojn dum la sekva paŝo.';
+  String get identityActiveDirectoryInfo => 'Vi tajpos la domanion kaj aliajn detalojn dum la sekva paŝo.';
 
   @override
   String get activeDirectoryTitle => 'Agordi Aktivan Dosierujon';
@@ -235,15 +229,13 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Finiĝas per punkto (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen =>
-      'Komenciĝas per dividstreko (-)';
+  String get activeDirectoryDomainStartHyphen => 'Komenciĝas per dividstreko (-)';
 
   @override
   String get activeDirectoryDomainEndHyphen => 'Finiĝas per dividstreko (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots =>
-      'Enhavas plurajn sinsekvajn punktojn (..)';
+  String get activeDirectoryDomainMultipleDots => 'Enhavas plurajn sinsekvajn punktojn (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domanio ne troviĝis';
@@ -264,23 +256,19 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Deviga';
 
   @override
-  String get activeDirectoryErrorTitle =>
-      'Eraro agordante konekton al Aktiva Dosierujo';
+  String get activeDirectoryErrorTitle => 'Eraro agordante konekton al Aktiva Dosierujo';
 
   @override
-  String get activeDirectoryErrorMessage =>
-      'Pardonu, Aktiva Dosierujo ne estas agordebla nuntempe. Post kiam via sistemo funkcias, vizitu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> por helpo.';
+  String get activeDirectoryErrorMessage => 'Pardonu, Aktiva Dosierujo ne estas agordebla nuntempe. Post kiam via sistemo funkcias, vizitu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> por helpo.';
 
   @override
   String get networkPageTitle => 'Konekti al reto';
 
   @override
-  String get networkPageHeader =>
-      'Konektado de ĉi tiu komputilo al Interreto helpos Ubuntu instali ajnajn kromajn programojn bezonatajn kaj helpos vin elekti vian horzonon.\n\nKonektu per Eterreta kablo, aŭ elektu sendratan reton.';
+  String get networkPageHeader => 'Konektado de ĉi tiu komputilo al Interreto helpos Ubuntu instali ajnajn kromajn programojn bezonatajn kaj helpos vin elekti vian horzonon.\n\nKonektu per Eterreta kablo, aŭ elektu sendratan reton.';
 
   @override
-  String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Uzi dratan konekton';
@@ -292,8 +280,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Drataj retoj estas malŝaltitaj';
 
   @override
-  String get networkWiredDisabled =>
-      'Por uzi Eterreton kun ĉi tiu komputilo, vi devas ebligi dratajn retojn';
+  String get networkWiredDisabled => 'Por uzi Eterreton kun ĉi tiu komputilo, vi devas ebligi dratajn retojn';
 
   @override
   String get networkWiredEnable => 'Ebligi dratajn retojn';
@@ -308,8 +295,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Neniu sendratreta aparato troviĝis';
 
   @override
-  String get networkWifiDisabled =>
-      'Por uzi sendratajn retojn kun ĉi tiu komputilo, vi devas ebligi sendratajn retojn';
+  String get networkWifiDisabled => 'Por uzi sendratajn retojn kun ĉi tiu komputilo, vi devas ebligi sendratajn retojn';
 
   @override
   String get networkWifiEnable => 'Ebligi sendratajn retojn';
@@ -333,8 +319,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

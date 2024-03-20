@@ -93,19 +93,16 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Select your keyboard variant:';
 
   @override
-  String get keyboardPressKeyLabel =>
-      'Mesedez, sakatu hurrengo tekletariko bat:';
+  String get keyboardPressKeyLabel => 'Mesedez, sakatu hurrengo tekletariko bat:';
 
   @override
-  String get keyboardKeyPresentLabel =>
-      'Hurrengo tekla zure teklatuan al dago?';
+  String get keyboardKeyPresentLabel => 'Hurrengo tekla zure teklatuan al dago?';
 
   @override
   String get themePageTitle => 'Choose your theme';
 
   @override
-  String get themePageHeader =>
-      'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'You can always change this later in the appearance settings.';
 
   @override
   String get themeDark => 'Dark';
@@ -143,8 +140,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Your computer\'s name';
 
   @override
-  String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
 
   @override
   String get identityHostnameRequired => 'A computer name is required';
@@ -168,15 +164,13 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'That user name already exists.';
 
   @override
-  String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
 
   @override
   String get identityUsernameTooLong => 'That name is too long.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
 
   @override
   String get identityPasswordLabel => 'Password';
@@ -200,8 +194,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -242,8 +235,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -264,12 +256,10 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'Konektatu internetera';
@@ -278,8 +268,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connect to the internet';
 
   @override
-  String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Erabili kable bidezko konexioa';
@@ -291,8 +280,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Kable bidezko konexioa desaktibatuta dago';
 
   @override
-  String get networkWiredDisabled =>
-      'Ordenagailu honetan Ethernet erabiltzeko, kable bidezko konexioa gaitu behar da';
+  String get networkWiredDisabled => 'Ordenagailu honetan Ethernet erabiltzeko, kable bidezko konexioa gaitu behar da';
 
   @override
   String get networkWiredEnable => 'Gaitu kable bidezko konexioa';
@@ -307,8 +295,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Ez da Wi-Fi gailurik hauteman';
 
   @override
-  String get networkWifiDisabled =>
-      'Ordenagailu honetan Wi-Fia erabiltzeko, haririk gabeko sareak gaitu behar dira';
+  String get networkWifiDisabled => 'Ordenagailu honetan Wi-Fia erabiltzeko, haririk gabeko sareak gaitu behar dira';
 
   @override
   String get networkWifiEnable => 'Gaitu Wi-Fia';
@@ -332,8 +319,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

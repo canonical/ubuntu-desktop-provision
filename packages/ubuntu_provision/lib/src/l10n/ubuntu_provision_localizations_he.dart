@@ -102,8 +102,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'נא לבחור את ערכת העיצוב שלך';
 
   @override
-  String get themePageHeader =>
-      'תמיד ניתן לשנות את זה מאוחר יותר בהגדרות המראה.';
+  String get themePageHeader => 'תמיד ניתן לשנות את זה מאוחר יותר בהגדרות המראה.';
 
   @override
   String get themeDark => 'כהה';
@@ -141,8 +140,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'שם המחשב שלך';
 
   @override
-  String get identityHostnameInfo =>
-      'השם שישמש את המחשב בעת תקשורת מול מחשבים אחרים.';
+  String get identityHostnameInfo => 'השם שישמש את המחשב בעת תקשורת מול מחשבים אחרים.';
 
   @override
   String get identityHostnameRequired => 'דרוש שם מחשב';
@@ -196,8 +194,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'להשתמש ב־Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo =>
-      'אפשר למלא את פרטי שם התחום (דומיין) ופרטים נוספים בצעד הבא.';
+  String get identityActiveDirectoryInfo => 'אפשר למלא את פרטי שם התחום (דומיין) ופרטים נוספים בצעד הבא.';
 
   @override
   String get activeDirectoryTitle => 'הגדרת Active Directory';
@@ -259,23 +256,19 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'חובה';
 
   @override
-  String get activeDirectoryErrorTitle =>
-      'שגיאה בהגדרת החיבור ל־Active Directory';
+  String get activeDirectoryErrorTitle => 'שגיאה בהגדרת החיבור ל־Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage =>
-      'אי אפשר להגדיר חיבור ל־Active Directory כרגע, עמך הסליחה. לאחר סיום התקנת המערכת, יש לבקר בכתובת <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> לקבלת עזרה.';
+  String get activeDirectoryErrorMessage => 'אי אפשר להגדיר חיבור ל־Active Directory כרגע, עמך הסליחה. לאחר סיום התקנת המערכת, יש לבקר בכתובת <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> לקבלת עזרה.';
 
   @override
   String get networkPageTitle => 'התחברות לרשת';
 
   @override
-  String get networkPageHeader =>
-      'חיבור המחשב הזה לאינטרנט יסייע לאובונטו להתקין תכניות נוספות חיוניות ויסייע בבחירת אזור הזמן שלך.\n\nאפשר להתחבר בכבל רשת או לבחור רשת אלחוטית';
+  String get networkPageHeader => 'חיבור המחשב הזה לאינטרנט יסייע לאובונטו להתקין תכניות נוספות חיוניות ויסייע בבחירת אזור הזמן שלך.\n\nאפשר להתחבר בכבל רשת או לבחור רשת אלחוטית';
 
   @override
-  String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'להשתמש בחיבור קווי';
@@ -287,8 +280,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'החיבור הקווי מושבת';
 
   @override
-  String get networkWiredDisabled =>
-      'כדי להשתמש בכבל רשת במחשב הזה יש להפעיל את החיבור הקווי';
+  String get networkWiredDisabled => 'כדי להשתמש בכבל רשת במחשב הזה יש להפעיל את החיבור הקווי';
 
   @override
   String get networkWiredEnable => 'להפעיל חיבור קווי';
@@ -303,8 +295,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'לא זוהו התקני רשת אלחוטית';
 
   @override
-  String get networkWifiDisabled =>
-      'כדי להשתמש ברשת אלחוטית במחשב הזה, יש להפעיל את התקשורת האלחוטית';
+  String get networkWifiDisabled => 'כדי להשתמש ברשת אלחוטית במחשב הזה, יש להפעיל את התקשורת האלחוטית';
 
   @override
   String get networkWifiEnable => 'הפעלת רשת אלחוטית';
@@ -328,8 +319,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

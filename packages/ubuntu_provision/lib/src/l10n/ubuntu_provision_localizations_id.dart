@@ -93,19 +93,16 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Select your keyboard variant:';
 
   @override
-  String get keyboardPressKeyLabel =>
-      'Silakan tekan salah satu tombol berikut:';
+  String get keyboardPressKeyLabel => 'Silakan tekan salah satu tombol berikut:';
 
   @override
-  String get keyboardKeyPresentLabel =>
-      'Apakah tombol berikut ada di papan ketik Anda?';
+  String get keyboardKeyPresentLabel => 'Apakah tombol berikut ada di papan ketik Anda?';
 
   @override
   String get themePageTitle => 'Pilih penampilan Anda';
 
   @override
-  String get themePageHeader =>
-      'Anda selalu dapat mengubahnya nanti di pengaturan tampilan.';
+  String get themePageHeader => 'Anda selalu dapat mengubahnya nanti di pengaturan tampilan.';
 
   @override
   String get themeDark => 'Gelap';
@@ -143,8 +140,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Nama komputer Anda';
 
   @override
-  String get identityHostnameInfo =>
-      'Nama yang digunakannya saat berbicara dengan komputer lain.';
+  String get identityHostnameInfo => 'Nama yang digunakannya saat berbicara dengan komputer lain.';
 
   @override
   String get identityHostnameRequired => 'Sebuah nama komputer diperlukan';
@@ -168,15 +164,13 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'That user name already exists.';
 
   @override
-  String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
 
   @override
   String get identityUsernameTooLong => 'That name is too long.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
 
   @override
   String get identityPasswordLabel => 'Pilih sebuah kata sandi';
@@ -200,8 +194,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -242,8 +235,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -264,23 +256,19 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'Menyambung ke internet';
 
   @override
-  String get networkPageHeader =>
-      'Menyambungkan komputer ini ke internet akan membantu Ubuntu memasang perangkat lunak tambahan yang diperlukan dan membantu memilih zona waktu Anda.\n\nSambungkan memakai kabel Ethernet, atau pilih suatu jaringan Wi-Fi';
+  String get networkPageHeader => 'Menyambungkan komputer ini ke internet akan membantu Ubuntu memasang perangkat lunak tambahan yang diperlukan dan membantu memilih zona waktu Anda.\n\nSambungkan memakai kabel Ethernet, atau pilih suatu jaringan Wi-Fi';
 
   @override
-  String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Gunakan sambungan kabel';
@@ -292,8 +280,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Koneksi lewat kabel dimatikan';
 
   @override
-  String get networkWiredDisabled =>
-      'Untuk memakai Ethernet pada komputer ini, suatu koneksi lewat kabel mesti difungsikan';
+  String get networkWiredDisabled => 'Untuk memakai Ethernet pada komputer ini, suatu koneksi lewat kabel mesti difungsikan';
 
   @override
   String get networkWiredEnable => 'Fungsikan lewat kabel';
@@ -308,8 +295,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Tidak ada peranti Wi-Fi yang terdeteksi';
 
   @override
-  String get networkWifiDisabled =>
-      'Untuk memakai Wi-Fi pada komputer ini, jaringan nirkabel mesti difungsikan';
+  String get networkWifiDisabled => 'Untuk memakai Wi-Fi pada komputer ini, jaringan nirkabel mesti difungsikan';
 
   @override
   String get networkWifiEnable => 'Fungsikan Wi-Fi';
@@ -324,8 +310,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'A network name is required';
 
   @override
-  String get networkNoneOption =>
-      'Saya tidak ingin tersambung ke internet saat ini';
+  String get networkNoneOption => 'Saya tidak ingin tersambung ke internet saat ini';
 
   @override
   String get eulaPageTitle => 'License agreement';
@@ -334,8 +319,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';
