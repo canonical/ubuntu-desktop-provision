@@ -561,7 +561,23 @@ void main() {
     await tester.tapContinueTesting();
     await expectLater(windowClosed, completes);
 
-    await verifySubiquityConfig(storage: storage);
+    await verifySubiquityConfig(
+      storage: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(
+              size: mibiAlign(toBytes(6, DataUnit.gigabytes)),
+              mount: '/',
+            ),
+            Partition(
+              size: mibiAlign(toBytes(2, DataUnit.gigabytes)),
+              mount: '/mnt/test',
+            ),
+          ],
+        ),
+      ],
+    );
   });
 
   testWidgets('alongside windows', (tester) async {
@@ -634,12 +650,19 @@ void main() {
     await tester.tapContinueTesting();
     await expectLater(windowClosed, completes);
 
+    const totalSize =
+        512 * 166486126; // total size of sda3 from the machine config
+    final newPartitionSize = mibiAlign(toBytes(40000, DataUnit.megabytes));
+
     await verifySubiquityConfig(storage: [
       fakeDisk(
         path: '/dev/sda',
         partitions: [
-          Partition(number: 3, size: toBytes(40000, DataUnit.megabytes)),
-          const Partition(number: 6, size: 43298848768, mount: '/'),
+          Partition(number: 3, size: newPartitionSize),
+          Partition(
+              number: 6,
+              size: mibiAlign(totalSize - newPartitionSize, totalSize),
+              mount: '/'),
         ],
       ),
     ]);
