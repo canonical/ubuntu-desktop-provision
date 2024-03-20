@@ -37,7 +37,6 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.networkPageTitle,
       title: lang.networkPageHeader,
-      contentFlex: model.connectMode == ConnectMode.wifi ? 100 : 6,
       padding: const EdgeInsets.all(kYaruPagePadding),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
@@ -61,6 +60,8 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       ),
       children: <Widget>[
         Text(lang.networkPageBody),
+        const SizedBox(height: kWizardSpacing),
+        const Divider(),
         const SizedBox(height: kWizardSpacing),
         EthernetRadioButton(
           value: model.connectMode,

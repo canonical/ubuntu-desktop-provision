@@ -78,7 +78,7 @@ class HorizontalPage extends ConsumerWidget {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
-    final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
+    final isSmallWindow = windowSize.width < 700 || windowSize.height < 500;
     final adjustedPadding =
         isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
     final scrollBarPadding =
