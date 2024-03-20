@@ -64,7 +64,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
             duration: const Duration(milliseconds: 500),
             opacity: autoinstall ? 1 : 0,
             child: SizedBox(
-              height: autoinstall ? 150 : 0,
+              height: autoinstall ? 160 : 0,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,

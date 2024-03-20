@@ -16,12 +16,12 @@ void main() {
     final model = buildSourceModel(sourceId: kFullSourceId);
     await tester.pumpApp((_) => buildSourceSelectionPage(model));
 
-    expect(find.radio(kFullSourceId), isChecked);
-    expect(find.radio(kMinimalSourceId), isNotChecked);
+    expect(find.radio<String?>(kFullSourceId), isChecked);
+    expect(find.radio<String?>(kMinimalSourceId), isNotChecked);
 
     when(model.sourceId).thenReturn('ubuntu-desktop-minimal');
 
-    await tester.tap(find.radio(kMinimalSourceId));
+    await tester.tap(find.radio<String?>(kMinimalSourceId));
 
     verify(model.setSourceId('ubuntu-desktop-minimal')).called(1);
   });
