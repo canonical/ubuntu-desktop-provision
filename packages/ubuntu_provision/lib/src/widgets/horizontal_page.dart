@@ -23,11 +23,15 @@ class HorizontalPage extends ConsumerWidget {
       3 * kYaruPagePadding,
       kYaruPagePadding,
     ),
-    this.contentFlex = 6,
     this.bottomBar,
     this.snackBar,
+    int? contentFlex,
     super.key,
-  });
+  })  : assert(
+          !managedScrolling || contentFlex == null,
+          'contentFlex has no effect unless managedScrolling is set to false.',
+        ),
+        _contentFlex = contentFlex ?? 1;
 
   /// The title for the title bar.
   final String windowTitle;
@@ -63,7 +67,7 @@ class HorizontalPage extends ConsumerWidget {
   /// How much the content should flex compared to the expanded above and below
   /// the content (which defaults to a flexing value of 1).
   /// If [managedScrolling] is set to false, this value is ignored.
-  final int contentFlex;
+  final int _contentFlex;
 
   /// Override of the default bottom bar.
   final Widget? bottomBar;
@@ -111,7 +115,7 @@ class HorizontalPage extends ConsumerWidget {
                     ),
                   ],
                   Expanded(
-                    flex: managedScrolling ? 1 : contentFlex,
+                    flex: managedScrolling ? 1 : _contentFlex,
                     child: managedScrolling
                         ? Center(
                             child: Scrollbar(
