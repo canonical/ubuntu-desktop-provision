@@ -24,7 +24,6 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.identityPageTitle,
       title: lang.identityPageTitle,
-      contentFlex: 100,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
