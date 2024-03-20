@@ -259,16 +259,19 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => '配置活动目录时出错';
 
   @override
-  String get activeDirectoryErrorMessage => '抱歉，活动目录目前无法设置。系统启动并运行后，请访问 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 寻求帮助。';
+  String get activeDirectoryErrorMessage =>
+      '抱歉，活动目录目前无法设置。系统启动并运行后，请访问 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 寻求帮助。';
 
   @override
   String get networkPageTitle => '连接到互联网';
 
   @override
-  String get networkPageHeader => '将这台电脑连接到互联网有助于 Ubuntu 安装所需的任何额外软件并选择您的时区。\n\n通过以太网电缆连接，或选择 Wi-Fi 网络';
+  String get networkPageHeader =>
+      '将这台电脑连接到互联网有助于 Ubuntu 安装所需的任何额外软件并选择您的时区。\n\n通过以太网电缆连接，或选择 Wi-Fi 网络';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => '使用有线连接';
@@ -319,7 +322,8 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';
@@ -327,7 +331,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
-  UbuntuProvisionLocalizationsZhTw(): super('zh_TW');
+  UbuntuProvisionLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get timezonePageTitle => '請選擇您的時區';
@@ -515,13 +519,15 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get activeDirectoryErrorTitle => '在配置 Active Directory 連線時發生錯誤';
 
   @override
-  String get activeDirectoryErrorMessage => '抱歉，無法立即設定 Active Directory。當您的系統安裝完成時，請造訪 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 以取得協助。';
+  String get activeDirectoryErrorMessage =>
+      '抱歉，無法立即設定 Active Directory。當您的系統安裝完成時，請造訪 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 以取得協助。';
 
   @override
   String get networkPageTitle => '連接到網際網路';
 
   @override
-  String get networkPageHeader => '將這台電腦連接到網際網路，可以讓 Ubuntu 安裝任何所需要的額外軟體，以及自動選擇您所在的時區。\n\n可透過有線網路或選擇 Wi-Fi 網路來連接';
+  String get networkPageHeader =>
+      '將這台電腦連接到網際網路，可以讓 Ubuntu 安裝任何所需要的額外軟體，以及自動選擇您所在的時區。\n\n可透過有線網路或選擇 Wi-Fi 網路來連接';
 
   @override
   String get networkWiredOption => '使用有線網路';

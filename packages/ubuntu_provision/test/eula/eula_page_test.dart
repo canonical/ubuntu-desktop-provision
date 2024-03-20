@@ -8,8 +8,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import '../test_utils.dart';
 
 void main() {
-  testWidgets('find EULA title', (tester) async {
-    final pageImages = PageImages(MockPageConfigService());
+  testWidgets('check EULA checkbox', (tester) async {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     await tester.pumpApp(
       (_) => ProviderScope(
         overrides: [

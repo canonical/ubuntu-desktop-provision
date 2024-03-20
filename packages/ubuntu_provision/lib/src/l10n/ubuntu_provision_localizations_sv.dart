@@ -93,16 +93,19 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Tangentbordsvariant:';
 
   @override
-  String get keyboardPressKeyLabel => 'Vänligen tryck på en av följande tangenter:';
+  String get keyboardPressKeyLabel =>
+      'Vänligen tryck på en av följande tangenter:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Finns följande tangent på ditt tangentbord?';
+  String get keyboardKeyPresentLabel =>
+      'Finns följande tangent på ditt tangentbord?';
 
   @override
   String get themePageTitle => 'Välj ditt tema';
 
   @override
-  String get themePageHeader => 'Du kan alltid ändra detta senare i utseendeinställningarna.';
+  String get themePageHeader =>
+      'Du kan alltid ändra detta senare i utseendeinställningarna.';
 
   @override
   String get themeDark => 'Mörk';
@@ -140,7 +143,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Din dators namn';
 
   @override
-  String get identityHostnameInfo => 'Namnet den använder när den pratar med andra datorer.';
+  String get identityHostnameInfo =>
+      'Namnet den använder när den pratar med andra datorer.';
 
   @override
   String get identityHostnameRequired => 'Ett datornamn krävs';
@@ -164,13 +168,15 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Det användarnamnet existerar redan.';
 
   @override
-  String get identityUsernameSystemReserved => 'Det namnet är reserverat för systemanvändning.';
+  String get identityUsernameSystemReserved =>
+      'Det namnet är reserverat för systemanvändning.';
 
   @override
   String get identityUsernameTooLong => 'Det namnet är för långt.';
 
   @override
-  String get identityUsernameInvalidChars => 'Det namnet innehåller ogiltiga tecken.';
+  String get identityUsernameInvalidChars =>
+      'Det namnet innehåller ogiltiga tecken.';
 
   @override
   String get identityPasswordLabel => 'Välj ett lösenord';
@@ -194,7 +200,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Använd Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Du anger domän och andra detaljer i nästa steg.';
+  String get identityActiveDirectoryInfo =>
+      'Du anger domän och andra detaljer i nästa steg.';
 
   @override
   String get activeDirectoryTitle => 'Konfigurera Active Directory';
@@ -229,13 +236,15 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Slutar med en punkt (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Börjar med ett bindestreck (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Börjar med ett bindestreck (-)';
 
   @override
   String get activeDirectoryDomainEndHyphen => 'Slutar med ett bindestreck (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Innehåller flera sekvenserade punkter (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Innehåller flera sekvenserade punkter (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domän hittades inte';
@@ -256,19 +265,23 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Krävs';
 
   @override
-  String get activeDirectoryErrorTitle => 'Fel vid konfiguration av anslutning till Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Fel vid konfiguration av anslutning till Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Tyvärr, Active Directory kan inte ställas in just nu. när ditt system är igång, besök <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> för hjälp.';
+  String get activeDirectoryErrorMessage =>
+      'Tyvärr, Active Directory kan inte ställas in just nu. när ditt system är igång, besök <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> för hjälp.';
 
   @override
   String get networkPageTitle => 'Anslut till ett nätverk';
 
   @override
-  String get networkPageHeader => 'Att ansluta den här datorn till internet hjälper Ubuntu att installera all extra programvara som behövs och hjälpa dig att välja din tidszon.\n\nAnslut med Ethernet-kabel eller välj ett Wi-Fi-nätverk';
+  String get networkPageHeader =>
+      'Att ansluta den här datorn till internet hjälper Ubuntu att installera all extra programvara som behövs och hjälpa dig att välja din tidszon.\n\nAnslut med Ethernet-kabel eller välj ett Wi-Fi-nätverk';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Använd trådbunden anslutning';
@@ -280,7 +293,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Den trådbundna anslutningen är avstängd';
 
   @override
-  String get networkWiredDisabled => 'För att använda Ethernet på den här datorn måste en trådbunden anslutning vara aktiverad';
+  String get networkWiredDisabled =>
+      'För att använda Ethernet på den här datorn måste en trådbunden anslutning vara aktiverad';
 
   @override
   String get networkWiredEnable => 'Aktivera trådbunden';
@@ -295,7 +309,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Inga Wi-Fi-enheter upptäcktes';
 
   @override
-  String get networkWifiDisabled => 'För att kunna använda Wi-Fi på den här datorn måste trådlöst nätverk vara aktiverat';
+  String get networkWifiDisabled =>
+      'För att kunna använda Wi-Fi på den här datorn måste trådlöst nätverk vara aktiverat';
 
   @override
   String get networkWifiEnable => 'Aktivera Wi-Fi';
@@ -319,7 +334,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

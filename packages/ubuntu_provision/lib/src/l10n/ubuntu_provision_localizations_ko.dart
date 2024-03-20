@@ -259,16 +259,19 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'Active Directory 연결 구성 오류';
 
   @override
-  String get activeDirectoryErrorMessage => '죄송합니다, 현재 Active Directory를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
+  String get activeDirectoryErrorMessage =>
+      '죄송합니다, 현재 Active Directory를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
 
   @override
   String get networkPageTitle => '네트워크에 연결하기';
 
   @override
-  String get networkPageHeader => '이 컴퓨터를 인터넷에 연결하면 우분투에 필요한 추가 소프트웨어 설치나 시간대 선택에 도움이 됩니다.\n\n이더넷 케이블이나, Wi-Fi 네트워크를 선택하여 연결하십시오';
+  String get networkPageHeader =>
+      '이 컴퓨터를 인터넷에 연결하면 우분투에 필요한 추가 소프트웨어 설치나 시간대 선택에 도움이 됩니다.\n\n이더넷 케이블이나, Wi-Fi 네트워크를 선택하여 연결하십시오';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => '유선 연결 사용';
@@ -280,7 +283,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkWiredOff => '유선 연결이 꺼져 있음';
 
   @override
-  String get networkWiredDisabled => '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화 되어야 합니다';
+  String get networkWiredDisabled =>
+      '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화 되어야 합니다';
 
   @override
   String get networkWiredEnable => '유선 연결 활성화';
@@ -295,7 +299,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkWifiNone => '감지된 Wi-Fi 장치가 없음';
 
   @override
-  String get networkWifiDisabled => '이 컴퓨터에서 Wi-Fi를 사용하려면, 무선 네트워킹이 반드시 활성화 되어야 합니다';
+  String get networkWifiDisabled =>
+      '이 컴퓨터에서 Wi-Fi를 사용하려면, 무선 네트워킹이 반드시 활성화 되어야 합니다';
 
   @override
   String get networkWifiEnable => 'Wi-Fi 활성화';
@@ -319,7 +324,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

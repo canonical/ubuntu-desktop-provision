@@ -96,13 +96,15 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'დააწექით ერთ-ერთ შემდეგ ღილაკს:';
 
   @override
-  String get keyboardKeyPresentLabel => 'აქვს თქვენს კლავიატურას შემდეგი ღილაკი?';
+  String get keyboardKeyPresentLabel =>
+      'აქვს თქვენს კლავიატურას შემდეგი ღილაკი?';
 
   @override
   String get themePageTitle => 'აირჩიეთ თქვენი თემა';
 
   @override
-  String get themePageHeader => 'ამისი შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
+  String get themePageHeader =>
+      'ამისი შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
 
   @override
   String get themeDark => 'მუქი';
@@ -140,7 +142,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
 
   @override
-  String get identityHostnameInfo => 'სახელი, რომელსაც ის იყენებს, როცა სხვა კომპიუტერებს ელაპარაკება.';
+  String get identityHostnameInfo =>
+      'სახელი, რომელსაც ის იყენებს, როცა სხვა კომპიუტერებს ელაპარაკება.';
 
   @override
   String get identityHostnameRequired => 'კომპიუტერის სახელი აუცილებელია';
@@ -164,13 +167,15 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'ეს მომხმარებლის სახელი უკვე არსებობს.';
 
   @override
-  String get identityUsernameSystemReserved => 'სახელი დაცულია სისტემური გამოყენებისთვის.';
+  String get identityUsernameSystemReserved =>
+      'სახელი დაცულია სისტემური გამოყენებისთვის.';
 
   @override
   String get identityUsernameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
-  String get identityUsernameInvalidChars => 'სახელი არასწორ სიმბოლოებს შეიცავს.';
+  String get identityUsernameInvalidChars =>
+      'სახელი არასწორ სიმბოლოებს შეიცავს.';
 
   @override
   String get identityPasswordLabel => 'აირჩიეთ პაროლი';
@@ -194,7 +199,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Active Directory-ის გამოყენება';
 
   @override
-  String get identityActiveDirectoryInfo => 'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
+  String get identityActiveDirectoryInfo =>
+      'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
 
   @override
   String get activeDirectoryTitle => 'Active Directory-ის მორგება';
@@ -235,7 +241,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'სრულდება ტირეთი (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'შეიცავს ერთზე მეტ მიმდევრობით წერტილს (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'შეიცავს ერთზე მეტ მიმდევრობით წერტილს (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'დომენი ვერ ვიპოვე';
@@ -256,10 +263,12 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'აუცილებელია';
 
   @override
-  String get activeDirectoryErrorTitle => 'Active Directory-სთან კავშირის დამყარების შეცდომა';
+  String get activeDirectoryErrorTitle =>
+      'Active Directory-სთან კავშირის დამყარების შეცდომა';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'ქსელთან მიერთება';
@@ -268,7 +277,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connect to the internet';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'მავთულიანი მიერთების გამოყენება';
@@ -280,7 +290,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'მავთულიანი მიერთება გაითიშა';
 
   @override
-  String get networkWiredDisabled => 'ამ კომპიუტერზე Ethernet-ის გამოსაყენებლად, აუცილებელია სადენიანი ქსელი ჩართოთ';
+  String get networkWiredDisabled =>
+      'ამ კომპიუტერზე Ethernet-ის გამოსაყენებლად, აუცილებელია სადენიანი ქსელი ჩართოთ';
 
   @override
   String get networkWiredEnable => 'მავთულიანი მიერთების ჩართვა';
@@ -295,7 +306,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi მოწყობილობები აღმოჩენილი არაა';
 
   @override
-  String get networkWifiDisabled => 'ამ კომპიუტერზე Wi-Fi-ის გამოსაყენებლად უსადენო ქსელის ჩართვა აუცილებელია';
+  String get networkWifiDisabled =>
+      'ამ კომპიუტერზე Wi-Fi-ის გამოსაყენებლად უსადენო ქსელის ჩართვა აუცილებელია';
 
   @override
   String get networkWifiEnable => 'Wi-Fi-ის ჩართვა';
@@ -319,7 +331,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

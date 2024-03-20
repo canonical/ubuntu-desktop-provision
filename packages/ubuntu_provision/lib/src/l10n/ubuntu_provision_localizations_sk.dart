@@ -81,7 +81,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Vyberte si rozloženie klávesnice:';
 
   @override
-  String get keyboardTestHint => 'Správne fungovanie rozloženia si môžete vyskúšať tu';
+  String get keyboardTestHint =>
+      'Správne fungovanie rozloženia si môžete vyskúšať tu';
 
   @override
   String get keyboardDetectTitle => 'Zistiť rozloženie klávesnice';
@@ -93,16 +94,19 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Variant klávesnice:';
 
   @override
-  String get keyboardPressKeyLabel => 'Stlačte niektorú z nasledujúcich kláves:';
+  String get keyboardPressKeyLabel =>
+      'Stlačte niektorú z nasledujúcich kláves:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Máte na klávesnici nasledujúci kláves?';
+  String get keyboardKeyPresentLabel =>
+      'Máte na klávesnici nasledujúci kláves?';
 
   @override
   String get themePageTitle => 'Vyberte si motív vzhľadu';
 
   @override
-  String get themePageHeader => 'Môžete ho neskôr kedykoľvek zmeniť v nastaveniach vzhľadu.';
+  String get themePageHeader =>
+      'Môžete ho neskôr kedykoľvek zmeniť v nastaveniach vzhľadu.';
 
   @override
   String get themeDark => 'Tmavý';
@@ -140,7 +144,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Názov pre váš počítač';
 
   @override
-  String get identityHostnameInfo => 'Tento názov slúži pri komunikácii s ostatnými počítačmi.';
+  String get identityHostnameInfo =>
+      'Tento názov slúži pri komunikácii s ostatnými počítačmi.';
 
   @override
   String get identityHostnameRequired => 'Je potrebné zadať názov pre počítač';
@@ -149,7 +154,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityHostnameTooLong => 'Takýto názov počítača je príliš dlhý.';
 
   @override
-  String get identityInvalidHostname => 'Zadaný názov pre počítač nie je možné použiť';
+  String get identityInvalidHostname =>
+      'Zadaný názov pre počítač nie je možné použiť';
 
   @override
   String get identityUsernameLabel => 'Vyberte si používateľské meno';
@@ -158,19 +164,22 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Je potrebné zadať používateľské meno';
 
   @override
-  String get identityInvalidUsername => 'Zadané používateľské meno nie je možné použiť';
+  String get identityInvalidUsername =>
+      'Zadané používateľské meno nie je možné použiť';
 
   @override
   String get identityUsernameInUse => 'Také používateľské meno už existuje.';
 
   @override
-  String get identityUsernameSystemReserved => 'Také meno je rezervované pre využitie systémom.';
+  String get identityUsernameSystemReserved =>
+      'Také meno je rezervované pre využitie systémom.';
 
   @override
   String get identityUsernameTooLong => 'Také meno je príliš dlhé.';
 
   @override
-  String get identityUsernameInvalidChars => 'Také meno obsahuje neplatné znaky.';
+  String get identityUsernameInvalidChars =>
+      'Také meno obsahuje neplatné znaky.';
 
   @override
   String get identityPasswordLabel => 'Vyberte si heslo';
@@ -182,7 +191,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityConfirmPasswordLabel => 'Zopakujte zadanie hesla';
 
   @override
-  String get identityPasswordMismatch => 'Do každej z kolónok pre heslo ste napísali niečo iné';
+  String get identityPasswordMismatch =>
+      'Do každej z kolónok pre heslo ste napísali niečo iné';
 
   @override
   String get identityPasswordShow => 'Zobraziť';
@@ -194,7 +204,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Použiť Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'V ďalšom kroku zadáte doménu a ďalšie podrobnosti.';
+  String get identityActiveDirectoryInfo =>
+      'V ďalšom kroku zadáte doménu a ďalšie podrobnosti.';
 
   @override
   String get activeDirectoryTitle => 'Konfigurácia služby Active Directory';
@@ -229,19 +240,22 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Končí na bodku (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Začína na spojovník/pomlčku (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Začína na spojovník/pomlčku (-)';
 
   @override
   String get activeDirectoryDomainEndHyphen => 'Končí na spojovník/pomlčku (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Obsahuje niekoľko bodiek za sebou (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Obsahuje niekoľko bodiek za sebou (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Doména nenájdená';
 
   @override
-  String get activeDirectoryAdminLabel => 'Používateľ s oprávnením pre pridanie do domény';
+  String get activeDirectoryAdminLabel =>
+      'Používateľ s oprávnením pre pridanie do domény';
 
   @override
   String get activeDirectoryAdminEmpty => 'Vyžadované';
@@ -256,19 +270,23 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Vyžadované';
 
   @override
-  String get activeDirectoryErrorTitle => 'Chyba pri konfigurácii pripojenia k Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Chyba pri konfigurácii pripojenia k Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Je nám ľúto, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.';
+  String get activeDirectoryErrorMessage =>
+      'Je nám ľúto, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.';
 
   @override
   String get networkPageTitle => 'Pripojiť sa k sieti';
 
   @override
-  String get networkPageHeader => 'Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom alebo si vyberte Wi-Fi sieť';
+  String get networkPageHeader =>
+      'Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom alebo si vyberte Wi-Fi sieť';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Použiť káblové pripojenie';
@@ -280,7 +298,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Káblové pripojenie je vypnuté';
 
   @override
-  String get networkWiredDisabled => 'Aby na tomto počítači bolo možné použiť rozhranie Ethernet, je potrebné zapnúť káblové pripojenie';
+  String get networkWiredDisabled =>
+      'Aby na tomto počítači bolo možné použiť rozhranie Ethernet, je potrebné zapnúť káblové pripojenie';
 
   @override
   String get networkWiredEnable => 'Zapnúť káblové';
@@ -295,7 +314,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Nezistili sa žiadne zariadenia Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'Aby na tomto počítači bolo možné použiť rozhranie Wi-Fi, je potrebné zapnúť bezdrôtové pripojenie';
+  String get networkWifiDisabled =>
+      'Aby na tomto počítači bolo možné použiť rozhranie Wi-Fi, je potrebné zapnúť bezdrôtové pripojenie';
 
   @override
   String get networkWifiEnable => 'Zapnúť Wi-Fi';
@@ -310,7 +330,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Vyžaduje sa názov siete';
 
   @override
-  String get networkNoneOption => 'V tejto chvíli sa nechcem pripájať na Internet';
+  String get networkNoneOption =>
+      'V tejto chvíli sa nechcem pripájať na Internet';
 
   @override
   String get eulaPageTitle => 'License agreement';
@@ -319,7 +340,8 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

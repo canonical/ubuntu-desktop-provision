@@ -93,16 +93,19 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Billentyűzetváltozat:';
 
   @override
-  String get keyboardPressKeyLabel => 'Nyomja meg a következő billentyűk egyikét:';
+  String get keyboardPressKeyLabel =>
+      'Nyomja meg a következő billentyűk egyikét:';
 
   @override
-  String get keyboardKeyPresentLabel => 'A következő billentyű rajta van a billentyűzetén?';
+  String get keyboardKeyPresentLabel =>
+      'A következő billentyű rajta van a billentyűzetén?';
 
   @override
   String get themePageTitle => 'Téma kiválasztása';
 
   @override
-  String get themePageHeader => 'Ezt később bármikor megváltoztathatja a megjelenési beállításokban.';
+  String get themePageHeader =>
+      'Ezt később bármikor megváltoztathatja a megjelenési beállításokban.';
 
   @override
   String get themeDark => 'Sötét';
@@ -140,10 +143,12 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Az Ön számítógépének neve';
 
   @override
-  String get identityHostnameInfo => 'A más számítógépekkel való kommunikáció során használt név.';
+  String get identityHostnameInfo =>
+      'A más számítógépekkel való kommunikáció során használt név.';
 
   @override
-  String get identityHostnameRequired => 'A számítógép nevének megadása kötelező';
+  String get identityHostnameRequired =>
+      'A számítógép nevének megadása kötelező';
 
   @override
   String get identityHostnameTooLong => 'Ez a számítógépnév túl hosszú.';
@@ -164,13 +169,15 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Ez a felhasználónév már létezik.';
 
   @override
-  String get identityUsernameSystemReserved => 'Ez a név a rendszer számára van fenntartva.';
+  String get identityUsernameSystemReserved =>
+      'Ez a név a rendszer számára van fenntartva.';
 
   @override
   String get identityUsernameTooLong => 'Ez a név túl hosszú.';
 
   @override
-  String get identityUsernameInvalidChars => 'Ez a név érvénytelen karaktereket tartalmaz.';
+  String get identityUsernameInvalidChars =>
+      'Ez a név érvénytelen karaktereket tartalmaz.';
 
   @override
   String get identityPasswordLabel => 'Jelszó választása';
@@ -194,7 +201,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Active Directory használata';
 
   @override
-  String get identityActiveDirectoryInfo => 'A tartományt és egyéb részleteket a következő lépésben fogja megadni.';
+  String get identityActiveDirectoryInfo =>
+      'A tartományt és egyéb részleteket a következő lépésben fogja megadni.';
 
   @override
   String get activeDirectoryTitle => 'Active Directory beállítása';
@@ -208,7 +216,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Tartomány összekapcsolhatóságának kipróbálása';
+  String get activeDirectoryTestConnection =>
+      'Tartomány összekapcsolhatóságának kipróbálása';
 
   @override
   String get activeDirectoryDomainLabel => 'Tartomány';
@@ -235,13 +244,15 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Kötőjellel (-) végződik';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Több egymás utáni pontot (..) tartalmaz';
+  String get activeDirectoryDomainMultipleDots =>
+      'Több egymás utáni pontot (..) tartalmaz';
 
   @override
   String get activeDirectoryDomainNotFound => 'A tartomány nem található';
 
   @override
-  String get activeDirectoryAdminLabel => 'A tartomány csatlakozási felhasználója';
+  String get activeDirectoryAdminLabel =>
+      'A tartomány csatlakozási felhasználója';
 
   @override
   String get activeDirectoryAdminEmpty => 'Kötelező';
@@ -256,19 +267,23 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Kötelező';
 
   @override
-  String get activeDirectoryErrorTitle => 'Hiba az Active Directory kapcsolatának beállításakor';
+  String get activeDirectoryErrorTitle =>
+      'Hiba az Active Directory kapcsolatának beállításakor';
 
   @override
-  String get activeDirectoryErrorMessage => 'Elnézést, az Active Directory jelenleg nem állítható be. Amint a rendszere elkészült és működik, látogasson el a <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> oldalra a segítségért.';
+  String get activeDirectoryErrorMessage =>
+      'Elnézést, az Active Directory jelenleg nem állítható be. Amint a rendszere elkészült és működik, látogasson el a <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> oldalra a segítségért.';
 
   @override
   String get networkPageTitle => 'Kapcsolódás hálózathoz';
 
   @override
-  String get networkPageHeader => 'A számítógép internethez való kapcsolódása segít az Ubuntunak telepíteni a szükséges további szoftvereket, és segít kiválasztani az időzónát.\n\nKapcsolódás Ethernet-kábellel vagy Wi-Fi-hálózat kiválasztása';
+  String get networkPageHeader =>
+      'A számítógép internethez való kapcsolódása segít az Ubuntunak telepíteni a szükséges további szoftvereket, és segít kiválasztani az időzónát.\n\nKapcsolódás Ethernet-kábellel vagy Wi-Fi-hálózat kiválasztása';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Vezetékes kapcsolat használata';
@@ -280,7 +295,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'A vezetékes kapcsolat ki van kapcsolva';
 
   @override
-  String get networkWiredDisabled => 'Az ezen a számítógépen történő Ethernet használatához egy vezetékes kapcsolatnak engedélyezve kell lennie';
+  String get networkWiredDisabled =>
+      'Az ezen a számítógépen történő Ethernet használatához egy vezetékes kapcsolatnak engedélyezve kell lennie';
 
   @override
   String get networkWiredEnable => 'Vezetékes engedélyezése';
@@ -295,7 +311,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Nincsenek felismert Wi-Fi-eszközök';
 
   @override
-  String get networkWifiDisabled => 'Az ezen a számítógépen történő Wi-Fi használatához a vezeték nélküli hálózatkezelésnek engedélyezve kell lennie';
+  String get networkWifiDisabled =>
+      'Az ezen a számítógépen történő Wi-Fi használatához a vezeték nélküli hálózatkezelésnek engedélyezve kell lennie';
 
   @override
   String get networkWifiEnable => 'Wi-Fi engedélyezése';
@@ -310,7 +327,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'A hálózat neve szükséges';
 
   @override
-  String get networkNoneOption => 'Most nem szeretnék kapcsolódni az internethez';
+  String get networkNoneOption =>
+      'Most nem szeretnék kapcsolódni az internethez';
 
   @override
   String get eulaPageTitle => 'License agreement';
@@ -319,7 +337,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

@@ -96,13 +96,15 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'لطفاً یکی از کلیدهای زیر را فشار دهید:';
 
   @override
-  String get keyboardKeyPresentLabel => 'آیا این کلید در صفحه‌کلیدتان وجود دارد؟';
+  String get keyboardKeyPresentLabel =>
+      'آیا این کلید در صفحه‌کلیدتان وجود دارد؟';
 
   @override
   String get themePageTitle => 'گزینش زمینه‌تان';
 
   @override
-  String get themePageHeader => 'بعدها همواره می‌توانید این مورد را در تنظیمات ظاهر تغییر دهید.';
+  String get themePageHeader =>
+      'بعدها همواره می‌توانید این مورد را در تنظیمات ظاهر تغییر دهید.';
 
   @override
   String get themeDark => 'تیره';
@@ -140,7 +142,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'نام رایانه‌تان';
 
   @override
-  String get identityHostnameInfo => 'نامی که هنگام صحبت با دیگر رایانه‌ها استفاده می‌کند.';
+  String get identityHostnameInfo =>
+      'نامی که هنگام صحبت با دیگر رایانه‌ها استفاده می‌کند.';
 
   @override
   String get identityHostnameRequired => 'نام رایانه‌ای لازم است';
@@ -164,7 +167,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'این نام کاربری از پیش وجود دارد.';
 
   @override
-  String get identityUsernameSystemReserved => 'این نام برای استفادهٔ سامانه کنار گذاشته شده.';
+  String get identityUsernameSystemReserved =>
+      'این نام برای استفادهٔ سامانه کنار گذاشته شده.';
 
   @override
   String get identityUsernameTooLong => 'نام بیش از حد طولانی است.';
@@ -194,7 +198,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'استفاده از شاخهٔ فعّال';
 
   @override
-  String get identityActiveDirectoryInfo => 'در گام بعدی دامنه و دیگر حزییات را وارد خواهید کرد.';
+  String get identityActiveDirectoryInfo =>
+      'در گام بعدی دامنه و دیگر حزییات را وارد خواهید کرد.';
 
   @override
   String get activeDirectoryTitle => 'پیکربندی شاخهٔ فعّال';
@@ -235,7 +240,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'با خط تیره(-) پایان می‌پذیرد';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'دارای جندین دنباله از نقطه‌هاست (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'دارای جندین دنباله از نقطه‌هاست (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'دامنه پیدا نشد';
@@ -256,19 +262,23 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'لازم';
 
   @override
-  String get activeDirectoryErrorTitle => 'خطا در پیکربندی وصل شدن به شاخهٔ فعّال';
+  String get activeDirectoryErrorTitle =>
+      'خطا در پیکربندی وصل شدن به شاخهٔ فعّال';
 
   @override
-  String get activeDirectoryErrorMessage => 'شوربختانه در حال حاضر اکتیو دایرکتوری نمی‌تواند برپا شود. پس از به راه افتادن سامانه <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> را برای کمک ببینید.';
+  String get activeDirectoryErrorMessage =>
+      'شوربختانه در حال حاضر اکتیو دایرکتوری نمی‌تواند برپا شود. پس از به راه افتادن سامانه <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> را برای کمک ببینید.';
 
   @override
   String get networkPageTitle => 'وصل شدن به شبکه';
 
   @override
-  String get networkPageHeader => 'وصل کردن این رایانه به اینترنت می‌گذارد اوبونتو هر نرم‌افزار اضافی مورد نیازی را نصب کرده و به گزینش ناحیهٔ زمانیتان کمک می‌کند.\n\nبا کابل اترنت وصل شده یا شبکهٔ وای‌فای‌ای را برگزینید';
+  String get networkPageHeader =>
+      'وصل کردن این رایانه به اینترنت می‌گذارد اوبونتو هر نرم‌افزار اضافی مورد نیازی را نصب کرده و به گزینش ناحیهٔ زمانیتان کمک می‌کند.\n\nبا کابل اترنت وصل شده یا شبکهٔ وای‌فای‌ای را برگزینید';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'استفاده از اتّصال سیمی';
@@ -280,7 +290,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'اتّصال سیمی خاموش است';
 
   @override
-  String get networkWiredDisabled => 'برای استفاده از اترنت روی این رایانه، باید یک اتّصال سیمی به کار افتد';
+  String get networkWiredDisabled =>
+      'برای استفاده از اترنت روی این رایانه، باید یک اتّصال سیمی به کار افتد';
 
   @override
   String get networkWiredEnable => 'به کار انداختن اتّصال سیمی';
@@ -295,7 +306,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'هیچ افزارهٔ وای‌فای شناسایی نشد';
 
   @override
-  String get networkWifiDisabled => 'برای استفاده از وای‌فای در این رایانه، شبکهٔ بی‌سیم باید به کار انداخته شود';
+  String get networkWifiDisabled =>
+      'برای استفاده از وای‌فای در این رایانه، شبکهٔ بی‌سیم باید به کار انداخته شود';
 
   @override
   String get networkWifiEnable => 'به کار انداختن وای‌فای';
@@ -319,7 +331,8 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

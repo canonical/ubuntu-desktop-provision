@@ -102,7 +102,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'ඔබගේ පෙනුම තෝරන්න';
 
   @override
-  String get themePageHeader => 'මෙය පසුව පෙනුම සැකසුම් හරහා වෙනස් කිරීමට හැකිය.';
+  String get themePageHeader =>
+      'මෙය පසුව පෙනුම සැකසුම් හරහා වෙනස් කිරීමට හැකිය.';
 
   @override
   String get themeDark => 'අඳුරු';
@@ -164,7 +165,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'පරිශ්‍රීලක නාමය දැනටමත් පවතී.';
 
   @override
-  String get identityUsernameSystemReserved => 'එම නම පද්ධතියේ භාවිතයට වෙන් කර ඇත.';
+  String get identityUsernameSystemReserved =>
+      'එම නම පද්ධතියේ භාවිතයට වෙන් කර ඇත.';
 
   @override
   String get identityUsernameTooLong => 'නම ඉතා දිගයි.';
@@ -194,7 +196,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo =>
+      'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -235,7 +238,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -256,19 +260,23 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'අන්තර්ජාලයට සබඳින්න';
 
   @override
-  String get networkPageHeader => 'මෙම පරිගණකය අන්තර්ජාලයට සම්බන්ධ කිරීමෙන් උබුන්ටු සඳහා අවශ්‍ය ඕනෑම අමතර මෘදුකාංගයක් ස්ථාපනයට මෙන්ම ඔබගේ වේලා කලාපය තෝරා ගැනීමට හැකිය.\n\nඊතර්නෙට් රැහැන සම්බන්ධ කරන්න හෝ වයි-ෆයි ජාලයක් තෝරන්න';
+  String get networkPageHeader =>
+      'මෙම පරිගණකය අන්තර්ජාලයට සම්බන්ධ කිරීමෙන් උබුන්ටු සඳහා අවශ්‍ය ඕනෑම අමතර මෘදුකාංගයක් ස්ථාපනයට මෙන්ම ඔබගේ වේලා කලාපය තෝරා ගැනීමට හැකිය.\n\nඊතර්නෙට් රැහැන සම්බන්ධ කරන්න හෝ වයි-ෆයි ජාලයක් තෝරන්න';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'රැහැන් සම්බන්ධතාවය යොදාගන්න';
@@ -280,7 +288,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'රැහැන් සම්බන්ධතාවය අක්‍රියයි';
 
   @override
-  String get networkWiredDisabled => 'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට, රැහැන්ගත සම්බන්ධතාවයක් සබල කළ යුතුය';
+  String get networkWiredDisabled =>
+      'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට, රැහැන්ගත සම්බන්ධතාවයක් සබල කළ යුතුය';
 
   @override
   String get networkWiredEnable => 'රැහැන්ගත සබල කරන්න';
@@ -295,7 +304,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'කිසිදු වයි-ෆයි උපාංගයක් අනාවරණය වී නැත';
 
   @override
-  String get networkWifiDisabled => 'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට, රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
+  String get networkWifiDisabled =>
+      'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට, රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
 
   @override
   String get networkWifiEnable => 'වයි-ෆයි සබල කරන්න';
@@ -319,7 +329,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

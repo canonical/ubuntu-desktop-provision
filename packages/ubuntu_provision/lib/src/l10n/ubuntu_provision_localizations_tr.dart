@@ -93,16 +93,19 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Klavye yerleşimi:';
 
   @override
-  String get keyboardPressKeyLabel => 'Lütfen aşağıdaki tuşlardan birine basın:';
+  String get keyboardPressKeyLabel =>
+      'Lütfen aşağıdaki tuşlardan birine basın:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Aşağıdaki tuş klavyenizde bulunuyor mu?';
+  String get keyboardKeyPresentLabel =>
+      'Aşağıdaki tuş klavyenizde bulunuyor mu?';
 
   @override
   String get themePageTitle => 'Temanızı seçin';
 
   @override
-  String get themePageHeader => 'Görünüm ayarlarında bunu daha sonra değiştirebilirsiniz.';
+  String get themePageHeader =>
+      'Görünüm ayarlarında bunu daha sonra değiştirebilirsiniz.';
 
   @override
   String get themeDark => 'Koyu';
@@ -140,7 +143,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Bilgisayar adı';
 
   @override
-  String get identityHostnameInfo => 'Bu ad, diğer bilgisayarlarla kurulan iletişim esnasında kullanılır.';
+  String get identityHostnameInfo =>
+      'Bu ad, diğer bilgisayarlarla kurulan iletişim esnasında kullanılır.';
 
   @override
   String get identityHostnameRequired => 'Bilgisayar adı gereklidir';
@@ -164,13 +168,15 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Bu kullanıcı adı zaten var.';
 
   @override
-  String get identityUsernameSystemReserved => 'Bu ad sistem kullanımı için ayrılmış.';
+  String get identityUsernameSystemReserved =>
+      'Bu ad sistem kullanımı için ayrılmış.';
 
   @override
   String get identityUsernameTooLong => 'Bu ad çok uzun.';
 
   @override
-  String get identityUsernameInvalidChars => 'Bu ad geçersiz karakter içeriyor.';
+  String get identityUsernameInvalidChars =>
+      'Bu ad geçersiz karakter içeriyor.';
 
   @override
   String get identityPasswordLabel => 'Parola seç';
@@ -194,7 +200,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Active Directory kullan';
 
   @override
-  String get identityActiveDirectoryInfo => 'Bir sonraki adımda alan adı ve diğer ayrıntıları gireceksiniz.';
+  String get identityActiveDirectoryInfo =>
+      'Bir sonraki adımda alan adı ve diğer ayrıntıları gireceksiniz.';
 
   @override
   String get activeDirectoryTitle => 'Active Directory\'yi Yapılandır';
@@ -235,7 +242,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Kısa çizgi (-) ile biter';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Birden fazla sıralı nokta içerir (...)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Birden fazla sıralı nokta içerir (...)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Etki alanı bulunamadı';
@@ -256,19 +264,23 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Gerekli';
 
   @override
-  String get activeDirectoryErrorTitle => 'Active Directory bağlantısı yapılandırılamadı';
+  String get activeDirectoryErrorTitle =>
+      'Active Directory bağlantısı yapılandırılamadı';
 
   @override
-  String get activeDirectoryErrorMessage => 'Üzgünüz, Active Directory şu anda kurulamıyor. Sisteminiz kurulup çalışmaya başladığında, yardım için <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> adresini ziyaret edin.';
+  String get activeDirectoryErrorMessage =>
+      'Üzgünüz, Active Directory şu anda kurulamıyor. Sisteminiz kurulup çalışmaya başladığında, yardım için <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> adresini ziyaret edin.';
 
   @override
   String get networkPageTitle => 'Bir ağa bağlan';
 
   @override
-  String get networkPageHeader => 'Bu bilgisayarı internete bağlamak, Ubuntu\'nun ihtiyacı olan ek yazılımları kurmasına ve zaman diliminizi seçmenize yardımcı olur.\n\nEthernet kablosuyla bağlan veya bir Wi-Fi ağı seç';
+  String get networkPageHeader =>
+      'Bu bilgisayarı internete bağlamak, Ubuntu\'nun ihtiyacı olan ek yazılımları kurmasına ve zaman diliminizi seçmenize yardımcı olur.\n\nEthernet kablosuyla bağlan veya bir Wi-Fi ağı seç';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Kablolu bağlantı kullan';
@@ -280,7 +292,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Kablolu bağlantı kapalı';
 
   @override
-  String get networkWiredDisabled => 'Bilgisayarda Etherneti kullanabilrmek için kablolu bağlantı aktif hale getirilmelidir';
+  String get networkWiredDisabled =>
+      'Bilgisayarda Etherneti kullanabilrmek için kablolu bağlantı aktif hale getirilmelidir';
 
   @override
   String get networkWiredEnable => 'Kablolu bağlantıyı etkinleştir';
@@ -295,7 +308,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi cihazı algılanmadı';
 
   @override
-  String get networkWifiDisabled => 'Bu bilgisayarda Wi-Fi kullanmak için, kablosuz ağın etkinleştirilmiş olması gerekir';
+  String get networkWifiDisabled =>
+      'Bu bilgisayarda Wi-Fi kullanmak için, kablosuz ağın etkinleştirilmiş olması gerekir';
 
   @override
   String get networkWifiEnable => 'Wi-Fi\'yi etkinleştir';
@@ -319,7 +333,8 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';
