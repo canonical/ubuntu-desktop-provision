@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:file/memory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,18 +8,20 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import '../test_utils.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
+  setUpAll(TestWidgetsFlutterBinding.ensureInitialized);
 
   group('PageImages', () {
     test('get returns correct widget for given page name', () {
       final mockService = MockPageConfigService();
-      final pageImages = PageImages(mockService);
+      final pageImages = PageImages.internal(
+        mockService,
+        MockThemeVariantService(),
+      );
       final image = MockImage();
 
       pageImages.images['testPage'] = image;
-      pageImages.isDarkMode = (_) => false;
 
-      final result = pageImages.get('testPage', MockBuildContext());
+      final result = pageImages.get('testPage');
 
       expect(result, isInstanceOf<Image>());
       expect(result, equals(image));
@@ -30,31 +30,32 @@ void main() {
     test(
       'preCache correctly loads images from assets and files',
       () async {
-        final mockService = MockPageConfigService();
+        final mockPageConfigService = MockPageConfigService();
         final pageNames = List.generate(4, (i) => 'testPage$i');
+
+        final mockThemeVariantService = MockThemeVariantService();
+        when(mockThemeVariantService.themeVariant).thenReturn(null);
 
         final mockFs = MemoryFileSystem.test();
         mockFs
-            .file('/usr/share/desktop-provision/images/test.png')
+            .file('/usr/share/desktop-provision/images/disk.png')
             .createSync(recursive: true);
         mockFs
-            .file('/usr/share/desktop-provision/images/test.svg')
+            .file('/usr/share/desktop-provision/images/disk.svg')
             .createSync(recursive: true);
 
-        when(mockService.pages).thenReturn({
-          pageNames[0]: const PageConfigEntry(image: 'assets/test.png'),
-          pageNames[1]: const PageConfigEntry(image: 'test.png'),
-          pageNames[2]: const PageConfigEntry(image: 'assets/test.svg'),
-          pageNames[3]: const PageConfigEntry(image: 'test.svg'),
+        when(mockPageConfigService.pages).thenReturn({
+          pageNames[0]: const PageConfigEntry(image: 'assets/disk.png'),
+          pageNames[1]: const PageConfigEntry(image: 'disk.png'),
+          pageNames[2]: const PageConfigEntry(image: 'assets/images/disk.svg'),
+          pageNames[3]: const PageConfigEntry(image: 'disk.svg'),
         });
 
-        final mockSvgFileLoader = MockSvgFileLoader();
-        when(mockSvgFileLoader.loadBytes(
-          any,
-        )).thenAnswer((_) => Future.value(ByteData(0)));
-
-        final pageImages = PageImages(mockService, fs: mockFs)
-          ..svgFileLoader = (file, {colorMapper, theme}) => mockSvgFileLoader;
+        final pageImages = PageImages.internal(
+          mockPageConfigService,
+          mockThemeVariantService,
+          filesystem: mockFs,
+        );
 
         await pageImages.preCache();
 

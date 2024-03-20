@@ -14,7 +14,10 @@ import 'test_passphrase.dart';
 
 void main() {
   Widget buildPage(PassphraseModel model) {
-    final pageImages = PageImages(MockPageConfigService());
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
       overrides: [
         passphraseModelProvider.overrideWith((_) => model),

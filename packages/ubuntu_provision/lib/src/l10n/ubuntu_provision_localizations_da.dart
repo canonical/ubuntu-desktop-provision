@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get themeLight => 'Lyst';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Velkommen til $DISTRO';
   }
 
@@ -195,6 +198,14 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryTitle => 'Konfigurér Aktiv Sti';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => 'Afprøv domæneforbindelse';

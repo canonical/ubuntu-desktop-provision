@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Type of installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -168,7 +168,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get fullInstallationTitle => 'Extended selection';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
 
   @override
   String get minimalInstallationTitle => 'Default selection';
@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Du kan fortsette å teste $RELEASE, men før du starter datamaskinen på ny vil ingen endringer du gjør eller dokumenter du lagrer bevares.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
@@ -801,6 +799,18 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Update available';
 
   @override
+  String get refreshHeader => 'An update is available for the installer';
+
+  @override
+  String get refreshUpdateNow => 'Update now';
+
+  @override
+  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+
+  @override
+  String get refreshReady => 'Update ready';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return 'The current $snap version is $version.';
   }
@@ -821,7 +831,10 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Please quit and relaunch the installer.';
+  String get refreshRestart => 'Please close the installer and relaunch to continue';
+
+  @override
+  String get refreshCloseLabel => 'Close installer';
 
   @override
   String refreshSnapPrerequisites(String snap) {

@@ -25,18 +25,6 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.identityPageTitle,
       title: lang.identityPageTitle,
       contentFlex: 100,
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const RealNameFormField(),
-          const HostnameFormField(),
-          const UsernameFormField(),
-          const PasswordFormField(),
-          const ConfirmPasswordFormField(),
-          const AutoLoginCheckButton(),
-          const UseActiveDirectoryCheckButton(),
-        ].withSpacing(kWizardSpacing),
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -46,6 +34,15 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
+      children: [
+        const RealNameFormField(),
+        const HostnameFormField(),
+        const UsernameFormField(),
+        const PasswordFormField(),
+        const ConfirmPasswordFormField(),
+        const AutoLoginCheckButton(),
+        const UseActiveDirectoryCheckButton(),
+      ].withSpacing(kWizardSpacing),
     );
   }
 }

@@ -64,7 +64,7 @@ class BitLockerPage extends ConsumerWidget {
                     onLinkTap: (url, _, __) => launchUrl(url!),
                   ),
                   const SizedBox(height: kWizardSpacing),
-                  FilledButton(
+                  ElevatedButton(
                     onPressed: () async {
                       final window = YaruWindow.of(context);
                       final confirmed = await showConfirmationDialog(

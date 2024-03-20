@@ -35,13 +35,13 @@ void main() {
     var wasNotified = false;
     model.addListener(() => wasNotified = true);
 
-    expect(model.option, equals(TryOrInstallOption.none));
-    model.selectOption(TryOrInstallOption.none);
-    expect(model.option, equals(TryOrInstallOption.none));
-    expect(wasNotified, isFalse);
-
+    expect(model.option, equals(TryOrInstallOption.installUbuntu));
     model.selectOption(TryOrInstallOption.installUbuntu);
     expect(model.option, equals(TryOrInstallOption.installUbuntu));
+    expect(wasNotified, isFalse);
+
+    model.selectOption(TryOrInstallOption.tryUbuntu);
+    expect(model.option, equals(TryOrInstallOption.tryUbuntu));
     expect(wasNotified, isTrue);
   });
 }

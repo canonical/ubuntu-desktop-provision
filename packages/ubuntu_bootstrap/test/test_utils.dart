@@ -52,6 +52,7 @@ extension WidgetTesterX on WidgetTester {
   PostInstallService,
   RefreshService,
   StorageService,
+  PageImages,
 ])
 class _Dummy {} // ignore: unused_element
 

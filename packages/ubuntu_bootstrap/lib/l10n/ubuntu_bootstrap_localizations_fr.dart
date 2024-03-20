@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Type of installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Vous pouvez maintenant continuer à tester $RELEASE, mais tant que vous n’aurez pas redémarré votre ordinateur, les changements effectués ou les documents créés ne seront pas préservés.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
@@ -801,6 +799,18 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Mise à jour disponible';
 
   @override
+  String get refreshHeader => 'An update is available for the installer';
+
+  @override
+  String get refreshUpdateNow => 'Update now';
+
+  @override
+  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+
+  @override
+  String get refreshReady => 'Update ready';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return 'La version actuelle du $snap est $version.';
   }
@@ -822,6 +832,9 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshRestart => 'Veuillez redémarrer l\'installateur.';
+
+  @override
+  String get refreshCloseLabel => 'Close installer';
 
   @override
   String refreshSnapPrerequisites(String snap) {

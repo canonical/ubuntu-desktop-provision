@@ -46,8 +46,6 @@
       "os": {}
     }
   },
-  "chooseSecurityKeyMismatch": "La sekurigaj ŝlosiloj ne kongruas",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeEncryptInfo": "Vi elektos sekurigan ŝlosilon dum la sekva paŝo.",
   "@installationTypeEncryptInfo": {},
   "installationTypeEncrypt": "Ĉifri la novan instalaĵon de {RELEASE} por sekurigi ĝin",
@@ -73,8 +71,6 @@
   "@installThirdPartyTitle": {},
   "configureSecureBootDescription": "Vi elektis instali triapartiajn zorgilojn. Tio postulas malŝalti Sekuran Praŝargon.\nPor tio, vi devas elekti sekurigan ŝlosilon nun kaj tajpu ĝin, kiam la sistemo restartas.",
   "@configureSecureBootDescription": {},
-  "chooseSecurityKeyHeader": "Ĉifrado de la disko protektos viajn dosierojn, se vi perdos vian komputilon. Ĝi postulas, ke vi ĉiufoje tajpu sekurigan ŝlosilon por startigi vian komputilon.\n\nAjna dosieroj ekster {RELEASE} restos neĉifritaj.",
-  "@chooseSecurityKeyHeader": {},
   "welcome": "Bonvenon",
   "@welcome": {},
   "tryOrInstallTitle": "Provi aŭ instali {DISTRO}",
@@ -118,8 +114,6 @@
   "@configureSecureBootOption": {},
   "installThirdPartySubtitle": "Tiuj programoj estas disponeblaj laŭ permesiloj inkluzivitaj en siaj dokumentaroj. Kelkaj el ili estas neliberaj.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "Sekuriga ŝlosilo",
-  "@chooseSecurityKeyTitle": {},
   "installationTypeNone": "Nenio",
   "@installationTypeNone": {},
   "installationTypeErase": "Forviŝi la diskon kaj instali {DISTRO}",
@@ -138,12 +132,6 @@
       "os": {}
     }
   },
-  "chooseSecurityKeyHint": "Elektu sekurigan ŝlosilon",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Konfirmu la sekurigan ŝlosilon",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Sekuriga ŝlosilo bezoniĝas",
-  "@chooseSecurityKeyRequired": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Avertio:</font> Tio forviŝos ĉiujn programojn de {os}, dokumentojn, fotojn, muzikon kaj ĉiajn aliajn dosierojn.",
   "@installationTypeReinstallWarning": {
     "type": "text",
@@ -161,20 +149,6 @@
   },
   "installationTypeNoOSDetected": "Ĉi tiu komputilo aktuale portas neniun troveblan instalaĵon de mastruma sistemo. Kion vi volas?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Averto:</font> Tio forviŝos ĉiujn viajn programojn, dokumentojn, fotojn, muzikon kaj ĉiajn aliajn dosierojn en ĉiuj mastrumaj sistemoj.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Averto:</font> Se vi perdos ĉi tiun sekurigan ŝlosilon, vi perdos ĉiom da datenoj. Skribu vian ŝlosilon kaj konservu ĝin en sekura alia loko, se tio necesas.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "partitionFormatLabel": "Uzata kiel:",
   "@partitionFormatLabel": {},
   "partitionSizeLabel": "Grando:",
@@ -396,13 +370,6 @@
   "@restartNow": {},
   "continueTesting": "Daŭre elprovi",
   "@continueTesting": {},
-  "restartWarning": "Vi povas daŭre elprovi {RELEASE}, sed kiam la komputilo restartos, forĵetiĝos ĉiuj ŝanĝoj farotaj de vi kaj dokumentoj konservotaj de vi.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "offlineWarning": "Vi estas aktuale ne konektita al Interreto",
   "@offlineWarning": {},
   "partitionFormatNone": "Lasi nestrukturita",
@@ -761,14 +728,6 @@
   "@recoveryKeyCommand": {},
   "installationTypeTPM": "EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon",
   "@installationTypeTPM": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Averto:</font> Ĉi tiu funkcio estas nur subtenata sur kelkaj aparataj agordoj kaj eble ne estos ĝisdatigebla al estontaj versioj de Ubuntu. Bonvolu legi la <a href=\"{url}\">notojn pri la versio</a> antaŭ ol ŝalti la funkcion.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "refreshSnapStopServices": "Haltigante servojn de {snap}…",
   "@refreshSnapStopServices": {
     "type": "text",

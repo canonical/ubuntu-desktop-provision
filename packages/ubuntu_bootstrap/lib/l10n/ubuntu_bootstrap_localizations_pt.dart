@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Type of installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -168,7 +168,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get fullInstallationTitle => 'Extended selection';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities, web browser and games.';
+  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
 
   @override
   String get minimalInstallationTitle => 'Default selection';
@@ -614,9 +614,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Pode continuar a testar o $RELEASE agora, mas até reiniciar o computador, quaisquer alterações que faça ou documentos que guarde não serão preservados.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
@@ -801,6 +799,18 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Atualização disponível';
 
   @override
+  String get refreshHeader => 'An update is available for the installer';
+
+  @override
+  String get refreshUpdateNow => 'Update now';
+
+  @override
+  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+
+  @override
+  String get refreshReady => 'Update ready';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return 'A versão atual de $snap é $version.';
   }
@@ -822,6 +832,9 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshRestart => 'Por favor reinicie o instalador.';
+
+  @override
+  String get refreshCloseLabel => 'Close installer';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -1390,11 +1403,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String restartInto(String system) {
     return 'Reiniciar no $system';
-  }
-
-  @override
-  String restartWarning(String RELEASE) {
-    return 'Você pode continuar testando o $RELEASE agora, mas ao reiniciar o computador, todas as alterações feitas ou documentos armazenados não serão preservados.';
   }
 
   @override

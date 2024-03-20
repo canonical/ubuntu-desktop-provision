@@ -154,6 +154,40 @@ void main() {
     verify(storage.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
   });
 
+  test('DD images only allow to erase disk, nothing else', () async {
+    final service = MockStorageService();
+    when(service.guidedCapability).thenReturn(null);
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
+
+    final model = StorageModel(
+      service,
+      MockTelemetryService(),
+      MockProductService(),
+    );
+
+    // none
+    when(service.getGuidedStorage())
+        .thenAnswer((_) async => fakeGuidedStorageResponse());
+    // reformat
+    const reformat = GuidedStorageTargetReformat(
+      diskId: '',
+      allowed: [
+        GuidedCapability.DD,
+        GuidedCapability.LVM,
+        GuidedCapability.CORE_BOOT_ENCRYPTED,
+        GuidedCapability.MANUAL
+      ],
+    );
+    when(service.getGuidedStorage()).thenAnswer(
+        (_) async => fakeGuidedStorageResponse(targets: [reformat]));
+    await model.init();
+
+    expect(model.canInstallAlongside, isFalse);
+    expect(model.canEraseDisk, isTrue);
+    expect(model.canManualPartition, isFalse);
+    expect(model.hasAdvancedFeatures, isFalse);
+  });
+
   test('can install alongside, erase disk, manual partition', () async {
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);

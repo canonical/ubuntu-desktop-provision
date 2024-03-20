@@ -72,13 +72,6 @@
   "@diskHeadersMountPoint": {},
   "confirmSecurityKey": "Cadarnhewch yr allwedd diogelwch",
   "@confirmSecurityKey": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Rhybudd:</font> Bydd hyn yn dileu eich holl raglenni, dogfennau, lluniau, cerddoriaeth, ac unrhyw ffeiliau eraill ar bob system weithredu.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedTitle": "Nodweddion uwch",
   "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "Dim",

@@ -50,6 +50,21 @@ class MockActiveDirectoryModel extends _i1.Mock
       ) as bool);
 
   @override
+  bool get showPassword => (super.noSuchMethod(
+        Invocation.getter(#showPassword),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set showPassword(bool? value) => super.noSuchMethod(
+        Invocation.setter(
+          #showPassword,
+          value,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   String get adminName => (super.noSuchMethod(
         Invocation.getter(#adminName),
         returnValue: _i3.dummyValue<String>(

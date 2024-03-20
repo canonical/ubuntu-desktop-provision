@@ -1,8 +1,10 @@
-sealed class StorageRoutes {
-  static const bitlocker = '/bitlocker';
-  static const guidedReformat = '/guidedReformat';
-  static const guidedResize = '/guidedResize';
-  static const manual = '/manual';
-  static const passphrase = '/passphrase';
-  static const recoveryKey = '/recoveryKey';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
+
+enum StorageSteps with RouteName {
+  bitlocker,
+  guidedReformat,
+  guidedResize,
+  manual,
+  passphrase,
+  recoveryKey;
 }

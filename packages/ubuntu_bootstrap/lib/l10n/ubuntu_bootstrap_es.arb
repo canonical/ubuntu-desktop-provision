@@ -82,35 +82,16 @@
   },
   "confirmPartitionChanges": "Se aplicarán los cambios siguientes a las particiones:",
   "@confirmPartitionChanges": {},
-  "chooseSecurityKeyHint": "Elija una clave de seguridad",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirmar la clave de seguridad",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Se requiere una clave de seguridad",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Las claves de seguridad no coinciden",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Advertencia:</font> Si pierde esta clave de seguridad, se perderán todos los datos. Si lo necesita, anote su clave y guárdela en un lugar seguro en algún otro sitio.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "shutdown": "Apagar",
   "@shutdown": {},
   "bitlockerTitle": "BitLocker está activado",
   "@bitlockerTitle": {},
   "restartIntoWindows": "Reiniciar en Windows",
   "@restartIntoWindows": {},
-  "chooseSecurityKeyHeader": "El cifrado de disco protege sus archivos en caso de que pierda el equipo. Requiere que introduzca una clave de seguridad cada vez que se inicie el equipo.\n\nLos archivos que estén fuera de {RELEASE} no se cifrarán.",
-  "@chooseSecurityKeyHeader": {},
   "confirmSecurityKey": "Confirme la clave de seguridad",
   "@confirmSecurityKey": {},
   "configureSecureBootSecurityKeyRequired": "Se debe ingresar una clave de seguridad",
   "@configureSecureBootSecurityKeyRequired": {},
-  "chooseSecurityKeyTitle": "Clave de seguridad",
-  "@chooseSecurityKeyTitle": {},
   "partitionCreateTitle": "Crear partición",
   "@partitionCreateTitle": {},
   "bootLoaderDevice": "Dispositivo donde instalar el cargador de arranque",
@@ -180,13 +161,6 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Borrar disco e instalar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Advertencia:</font> Esto eliminará todos sus programas, documentos, fotos, música y cualquier otro archivo en todos los sistemas operativos.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Funciones avanzadas...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Características avanzadas",
@@ -394,13 +368,6 @@
   "@restartNow": {},
   "continueTesting": "Continuar probando",
   "@continueTesting": {},
-  "restartWarning": "Puede continuar probando {RELEASE} ahora, pero hasta que reinicie el equipo, los cambios que realice o los documentos que guarde no se conservarán.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Demasiadas particiones primarias",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Límite alcanzado",
@@ -623,14 +590,6 @@
   "@refreshPageTitle": {},
   "installationTypeTPMSelected": "TPM seleccionado",
   "@installationTypeTPMSelected": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Advertencia:</font> Esta característica solo es compatible con ciertas configuraciones de hardware y es posible que no admita la actualización a futuras versiones de Ubuntu. Lea las <a href=\"{url}\">notas de la versión</a> antes de activarlo.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "refreshCurrent": "La versión actual de {snap} es {version}.",
   "@refreshCurrent": {
     "type": "text",
@@ -782,10 +741,6 @@
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Sólo lo esencial, el navegador web y las utilidades básicas.",
   "@minimalInstallationSubtitle": {},
-  "expandedInstallationSubtitle": "Una selección de herramientas de oficina, utilidades, navegador web y juegos compatibles sin conexión.",
-  "@expandedInstallationSubtitle": {},
-  "expandedInstallationTitle": "Instalación ampliada",
-  "@expandedInstallationTitle": {},
   "fullInstallationSubtitle": "Una selección de herramientas ofimáticas, utilidades, navegador web y juegos sin conexión.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Instalación completa",

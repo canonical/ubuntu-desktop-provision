@@ -49,7 +49,8 @@ IdentityModel buildIdentityModel({
 }
 
 Widget buildIdentityPage(IdentityModel model) {
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages =
+      PageImages.internal(MockPageConfigService(), MockThemeVariantService());
   return ProviderScope(
     overrides: [
       identityModelProvider.overrideWith((_) => model),

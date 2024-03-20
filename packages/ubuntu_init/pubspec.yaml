@@ -18,7 +18,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.4.9
-  flutter_svg: ^2.0.9
+  flutter_svg: ^2.0.10
   gsettings: ^0.2.8
   handy_window: ^0.3.1
   meta: ^1.10.0
@@ -50,6 +50,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mockito: 5.4.4
+  translations_cleaner: ^0.0.5
   ubuntu_lints: ^0.3.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-beta.8

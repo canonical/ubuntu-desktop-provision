@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get themeLight => 'Light';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'مرحبا بك في $DISTRO';
   }
 
@@ -194,7 +197,15 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
-  String get activeDirectoryTitle => 'Configure Active Directory';
+  String get activeDirectoryTitle => 'Log into Active Directory';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => 'Test domain connectivity';
@@ -299,7 +310,7 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'A network name is required';
 
   @override
-  String get networkNoneOption => 'I don\'t want to connect to the internet just now';
+  String get networkNoneOption => 'Do not connect to the internet';
 
   @override
   String get eulaPageTitle => 'License agreement';

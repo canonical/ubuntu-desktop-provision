@@ -8,12 +8,14 @@ class StorageButton extends StatelessWidget {
     required this.name,
     required this.size,
     super.key,
+    this.newOS = false,
     this.sysname,
     this.format,
     this.onPressed,
   });
 
   final String name;
+  final bool newOS;
   final String? sysname;
   final String? format;
   final int size;
@@ -29,7 +31,7 @@ class StorageButton extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          StorageIcon(name: name),
+          StorageIcon(name: name, useCustomIcon: newOS),
           const SizedBox(height: kWizardSpacing / 2),
           Text(
             name,

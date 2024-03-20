@@ -35,8 +35,6 @@
       "color": {}
     }
   },
-  "chooseSecurityKeyConfirmHint": "确认安全密钥",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeOSDetected": "这台电脑上当前安装了{os}。您准备怎么做？",
   "@installationTypeOSDetected": {
     "type": "text",
@@ -123,13 +121,6 @@
       "RELEASE": {}
     }
   },
-  "installationTypeEraseWarning": "<font color=\"{color}\">警告：</font>这将删除所有操作系统中的所有程序、文档、照片、音乐和任何其他文件。",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "configureSecureBootDescription": "您已选择安装第三方驱动。这需要关闭安全启动。\n为此，您需要立即选择一个安全密钥，并在系统重新启动时输入。",
   "@configureSecureBootDescription": {},
   "rstDescription": "这台电脑使用了英特尔RST（快速存储技术）。在安装Ubuntu之前，您需要在Windows中关闭RST。",
@@ -140,19 +131,6 @@
   "@tryOrInstallRepairDescription": {},
   "bitlockerDescription": "这台电脑使用了 Windows BitLocker 进行加密。\n在安装 Ubuntu 之前，您需要关闭 Windows 的 BitLocker 功能。",
   "@bitlockerDescription": {},
-  "chooseSecurityKeyTitle": "安全密钥",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "选择一个安全密钥",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyRequired": "需要一个安全密钥",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">警告</font>：如果丢失此安全密钥，所有数据都将丢失。以防万一，您可以记下您的安全密钥并保存到安全的地方。",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedTitle": "高级功能",
   "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "空",
@@ -235,8 +213,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "这些软件受其文档中包含的许可条款约束。其中部分软件是专有软件。",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyMismatch": "安全密钥不匹配",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeTitle": "安装类型",
   "@installationTypeTitle": {},
   "selectGuidedStoragePageTitle": "擦除磁盘并安装 {DISTRO}",
@@ -306,13 +282,6 @@
   "@partitionTypeLabel": {},
   "installationTypeEncrypt": "为安全起见，对新的 {RELEASE} 安装进行加密",
   "@installationTypeEncrypt": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "磁盘加密会保护磁盘上的文件，以免因电脑丢失而蒙受损失。但是，每次在计算机启动时，它会要求您输入一个安全密钥。\n\n{RELEASE}之外的任何文件都不会加密。",
-  "@chooseSecurityKeyHeader": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
@@ -438,13 +407,6 @@
   "@installCodecsSubtitle": {},
   "installationTypeLVMEncryptionSelected": "已选择配置加密的 LVM",
   "@installationTypeLVMEncryptionSelected": {},
-  "restartWarning": "您现在可以继续测试 {RELEASE}，但在重新启动计算机之前，您所做的任何更改或保存的文档都不会被保留。",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "继续试用",
   "@continueTesting": {},
   "offlineWarning": "您当前处于离线状态",

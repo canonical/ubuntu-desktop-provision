@@ -55,14 +55,6 @@
   "@installCodecsSubtitle": {},
   "offlineWarning": "您目前已離線",
   "@offlineWarning": {},
-  "chooseSecurityKeyTitle": "安全密鑰",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "選擇安全密鑰",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "確認安全密鑰",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyMismatch": "安全密鑰前後不符",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeTitle": "安裝類型",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "本電腦目前已安裝 {os}，請問您想要做什麼？",
@@ -213,22 +205,6 @@
   "@installDriversSubtitle": {},
   "installCodecsTitle": "安裝第三方軟體以提供額外的媒體格式支援",
   "@installCodecsTitle": {},
-  "chooseSecurityKeyHeader": "硬碟加密可在您遺失電腦時保護您的檔案，每當您電腦啟動時它皆會要求您輸入安全密鑰。\n\n在 {RELEASE} 外的任何檔案將不會受到此加密保護。",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "chooseSecurityKeyRequired": "安全密鑰為必填欄位",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "本電腦目前已安裝 {os1} 與 {os2}，請問您想要做什麼？",
   "@installationTypeDualOSDetected": {
     "type": "text",
@@ -383,13 +359,6 @@
       "color": {}
     }
   },
-  "installationTypeEraseWarning": "<font color=\"{color}\">警告：</font>這將會刪除所有作業系統下的全部應用程式、文件、圖片、音樂等檔案。",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedTitle": "進階功能",
   "@installationTypeAdvancedTitle": {},
   "installationTypeNoneSelected": "未選擇",
@@ -418,14 +387,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">警告：</font>本功能僅支援特定硬體配置，且升級 Ubuntu 版本後有失去支援的可能。請在啟用本功能前詳讀<a href=\"{url}\">版本資訊</a>。",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "installationTypeTPMSelected": "已選用 TPM 加密",
@@ -664,13 +625,6 @@
     "type": "text",
     "placeholders": {
       "system": {}
-    }
-  },
-  "restartWarning": "您現在可以繼續試用 {RELEASE}，但直到電腦重啟前，在此系統上進行的變更與儲存的文件將不會被保存。",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
     }
   },
   "restartNow": "立即重新啟動",

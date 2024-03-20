@@ -8,8 +8,10 @@ import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
 import 'package:ubuntu_bootstrap/slides/slide_html.dart';
 import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 
+import '../storage/bitlocker/test_bitlocker.dart';
 import 'test_install.mocks.dart';
 export '../test_utils.dart';
 export 'test_install.mocks.dart';
@@ -44,10 +46,15 @@ InstallModel buildInstallModel({
 }
 
 Widget buildPage(InstallModel model) {
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
   return ProviderScope(
     overrides: [
       installModelProvider.overrideWith((_) => model),
       slidesProvider.overrideWith((_) => MockSlidesModel()),
+      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const InstallPage(),
   );

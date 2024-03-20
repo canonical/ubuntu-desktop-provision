@@ -5,6 +5,7 @@ packages:
 
 command:
   bootstrap:
+    runPubGetInParallel: false
     environment:
       sdk: ">=3.0.0 <4.0.0"
       flutter: '>=3.19.2'
@@ -22,7 +23,7 @@ command:
       flutter_markdown: ^0.6.18
       flutter_riverpod: ^2.4.9
       flutter_spinbox: ^0.13.1
-      flutter_svg: ^2.0.9
+      flutter_svg: ^2.0.10
       form_field_validator: ^1.1.0
       freezed_annotation: ^2.4.1
       gsettings: ^0.2.8
@@ -107,6 +108,12 @@ scripts:
   gen-l10n: >
     melos exec -c 1 --fail-fast --file-exists="lib/l10n.dart" -- \
      flutter gen-l10n
+
+  # remove unused translations in all packages, you have to have jq installed.
+  clean-l10n: >
+    melos exec --depends-on="translations_cleaner" -c 1 -- \
+      dart run translations_cleaner clean-translations && \
+      find . -name "*.arb" -exec sh -c 'jq . --indent 2 {} > temp.json && mv temp.json {}' \;
 
   # run integration tests in all packages
   integration_test: >

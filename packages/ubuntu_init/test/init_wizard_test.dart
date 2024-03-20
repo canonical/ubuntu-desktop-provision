@@ -9,6 +9,7 @@ import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -32,6 +33,7 @@ void main() {
   setUp(() {
     YaruTestWindow.ensureInitialized(state: const YaruWindowState());
     setupMockPageConfig();
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
   });
 
   testWidgets('init', (tester) async {

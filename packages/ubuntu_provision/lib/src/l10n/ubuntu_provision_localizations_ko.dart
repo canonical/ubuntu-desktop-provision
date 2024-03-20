@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get themeLight => '밝음';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '$DISTRO사용을 환영합니다';
   }
 
@@ -195,6 +198,14 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryTitle => '액티브 디렉토리 구성';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => '도메인 연결 테스트';

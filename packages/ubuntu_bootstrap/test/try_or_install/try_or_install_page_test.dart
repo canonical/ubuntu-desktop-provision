@@ -18,10 +18,10 @@ void main() {
   });
 
   testWidgets('select option', (tester) async {
-    final model = buildTryOrInstallModel(option: TryOrInstallOption.none);
+    final model = buildTryOrInstallModel();
     await tester.pumpApp((_) => buildTryOrInstallPage(model));
 
-    expect(find.button(find.nextLabel), isDisabled);
+    expect(find.button(find.nextLabel), findsOneWidget);
 
     await tester.tap(find.radio(TryOrInstallOption.installUbuntu));
     verify(model.selectOption(TryOrInstallOption.installUbuntu)).called(1);
@@ -46,7 +46,7 @@ void main() {
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.tapNext();
+    await tester.tapClose();
     await tester.pump();
 
     await expectLater(windowClosed, completes);

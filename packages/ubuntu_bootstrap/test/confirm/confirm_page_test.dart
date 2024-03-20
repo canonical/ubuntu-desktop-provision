@@ -79,6 +79,7 @@ final testDisks = <Disk>[
 void main() {
   setUp(() {
     registerMockService<PageConfigService>(MockPageConfigService());
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
   });
 
   testWidgets('general summary', (tester) async {

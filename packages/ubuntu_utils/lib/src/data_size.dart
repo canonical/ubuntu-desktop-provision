@@ -24,7 +24,7 @@ enum DataUnit {
   }
 }
 
-int toBytes(double size, DataUnit unit) {
+int toBytes(num size, DataUnit unit) {
   return (size * math.pow(1024, unit.index)).round();
 }
 

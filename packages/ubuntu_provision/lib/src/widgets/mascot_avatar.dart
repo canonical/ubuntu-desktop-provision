@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
 
-const _kMascotAsset = AssetImage(
-  'assets/mascot.png',
-  package: 'ubuntu_provision',
-);
-
 class MascotAvatar extends StatelessWidget {
   const MascotAvatar({
     super.key,
-    this.image = _kMascotAsset,
+    this.image,
     this.size = const Size.square(160),
     this.progress = 0,
   });
 
-  final ImageProvider<Object> image;
+  final Widget? image;
   final Size size;
   final double? progress;
-
-  /// Requests the mascot asset to be pre-cached.
-  static Future<void> precacheAsset(BuildContext context) async {
-    return precacheImage(_kMascotAsset, context);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +23,7 @@ class MascotAvatar extends StatelessWidget {
             shape: BoxShape.circle,
             color: Theme.of(context).colorScheme.outline,
           ),
-          child: Image(
-            image: image,
-            gaplessPlayback: true,
-            height: size.height,
-            width: size.width,
-          ),
+          child: image,
         ),
         if (progress != null && progress! > 0 && progress! < 1)
           Positioned(

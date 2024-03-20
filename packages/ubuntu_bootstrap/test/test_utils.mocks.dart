@@ -3,15 +3,18 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i6;
+import 'dart:async' as _i7;
 
+import 'package:file/file.dart' as _i5;
+import 'package:flutter/material.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:subiquity_client/subiquity_client.dart' as _i4;
-import 'package:ubuntu_bootstrap/services/installer_service.dart' as _i5;
-import 'package:ubuntu_bootstrap/services/post_install_service.dart' as _i7;
+import 'package:ubuntu_bootstrap/services/installer_service.dart' as _i6;
+import 'package:ubuntu_bootstrap/services/post_install_service.dart' as _i8;
 import 'package:ubuntu_bootstrap/services/refresh_service.dart' as _i3;
-import 'package:ubuntu_bootstrap/services/storage_service.dart' as _i8;
+import 'package:ubuntu_bootstrap/services/storage_service.dart' as _i9;
 import 'package:ubuntu_provision/services.dart' as _i2;
+import 'package:ubuntu_provision/ubuntu_provision.dart' as _i10;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -58,10 +61,31 @@ class _FakeGuidedStorageResponseV2_2 extends _i1.SmartFake
         );
 }
 
+class _FakeThemeVariantService_3 extends _i1.SmartFake
+    implements _i2.ThemeVariantService {
+  _FakeThemeVariantService_3(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeFileSystem_4 extends _i1.SmartFake implements _i5.FileSystem {
+  _FakeFileSystem_4(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [InstallerService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockInstallerService extends _i1.Mock implements _i5.InstallerService {
+class MockInstallerService extends _i1.Mock implements _i6.InstallerService {
   MockInstallerService() {
     _i1.throwOnMissingStub(this);
   }
@@ -76,43 +100,43 @@ class MockInstallerService extends _i1.Mock implements _i5.InstallerService {
       ) as _i2.PageConfigService);
 
   @override
-  _i6.Future<void> init() => (super.noSuchMethod(
+  _i7.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<void> load() => (super.noSuchMethod(
+  _i7.Future<void> load() => (super.noSuchMethod(
         Invocation.method(
           #load,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<void> start() => (super.noSuchMethod(
+  _i7.Future<void> start() => (super.noSuchMethod(
         Invocation.method(
           #start,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Stream<_i4.ApplicationStatus?> monitorStatus() => (super.noSuchMethod(
+  _i7.Stream<_i4.ApplicationStatus?> monitorStatus() => (super.noSuchMethod(
         Invocation.method(
           #monitorStatus,
           [],
         ),
-        returnValue: _i6.Stream<_i4.ApplicationStatus?>.empty(),
-      ) as _i6.Stream<_i4.ApplicationStatus?>);
+        returnValue: _i7.Stream<_i4.ApplicationStatus?>.empty(),
+      ) as _i7.Stream<_i4.ApplicationStatus?>);
 
   @override
   bool hasRoute(String? route) => (super.noSuchMethod(
@@ -128,22 +152,22 @@ class MockInstallerService extends _i1.Mock implements _i5.InstallerService {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockPostInstallService extends _i1.Mock
-    implements _i7.PostInstallService {
+    implements _i8.PostInstallService {
   MockPostInstallService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<String?> get(String? key) => (super.noSuchMethod(
+  _i7.Future<String?> get(String? key) => (super.noSuchMethod(
         Invocation.method(
           #get,
           [key],
         ),
-        returnValue: _i6.Future<String?>.value(),
-      ) as _i6.Future<String?>);
+        returnValue: _i7.Future<String?>.value(),
+      ) as _i7.Future<String?>);
 
   @override
-  _i6.Future<void> set(
+  _i7.Future<void> set(
     String? key,
     String? value,
   ) =>
@@ -155,29 +179,29 @@ class MockPostInstallService extends _i1.Mock
             value,
           ],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<Map<String, String?>> load() => (super.noSuchMethod(
+  _i7.Future<Map<String, String?>> load() => (super.noSuchMethod(
         Invocation.method(
           #load,
           [],
         ),
         returnValue:
-            _i6.Future<Map<String, String?>>.value(<String, String?>{}),
-      ) as _i6.Future<Map<String, String?>>);
+            _i7.Future<Map<String, String?>>.value(<String, String?>{}),
+      ) as _i7.Future<Map<String, String?>>);
 
   @override
-  _i6.Future<void> save(Map<String, String?>? config) => (super.noSuchMethod(
+  _i7.Future<void> save(Map<String, String?>? config) => (super.noSuchMethod(
         Invocation.method(
           #save,
           [config],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 }
 
 /// A class which mocks [RefreshService].
@@ -198,51 +222,51 @@ class MockRefreshService extends _i1.Mock implements _i3.RefreshService {
       ) as _i3.RefreshState);
 
   @override
-  _i6.Stream<_i3.RefreshState> get stateChanged => (super.noSuchMethod(
+  _i7.Stream<_i3.RefreshState> get stateChanged => (super.noSuchMethod(
         Invocation.getter(#stateChanged),
-        returnValue: _i6.Stream<_i3.RefreshState>.empty(),
-      ) as _i6.Stream<_i3.RefreshState>);
+        returnValue: _i7.Stream<_i3.RefreshState>.empty(),
+      ) as _i7.Stream<_i3.RefreshState>);
 
   @override
-  _i6.Future<_i3.RefreshState> check() => (super.noSuchMethod(
+  _i7.Future<_i3.RefreshState> check() => (super.noSuchMethod(
         Invocation.method(
           #check,
           [],
         ),
-        returnValue: _i6.Future<_i3.RefreshState>.value(_FakeRefreshState_1(
+        returnValue: _i7.Future<_i3.RefreshState>.value(_FakeRefreshState_1(
           this,
           Invocation.method(
             #check,
             [],
           ),
         )),
-      ) as _i6.Future<_i3.RefreshState>);
+      ) as _i7.Future<_i3.RefreshState>);
 
   @override
-  _i6.Future<void> refresh() => (super.noSuchMethod(
+  _i7.Future<void> refresh() => (super.noSuchMethod(
         Invocation.method(
           #refresh,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<void> close() => (super.noSuchMethod(
+  _i7.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
           #close,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 }
 
 /// A class which mocks [StorageService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockStorageService extends _i1.Mock implements _i8.StorageService {
+class MockStorageService extends _i1.Mock implements _i9.StorageService {
   MockStorageService() {
     _i1.throwOnMissingStub(this);
   }
@@ -305,41 +329,41 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
       ) as int);
 
   @override
-  _i6.Future<void> init() => (super.noSuchMethod(
+  _i7.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<bool> hasSecureBoot() => (super.noSuchMethod(
+  _i7.Future<bool> hasSecureBoot() => (super.noSuchMethod(
         Invocation.method(
           #hasSecureBoot,
           [],
         ),
-        returnValue: _i6.Future<bool>.value(false),
-      ) as _i6.Future<bool>);
+        returnValue: _i7.Future<bool>.value(false),
+      ) as _i7.Future<bool>);
 
   @override
-  _i6.Future<bool> hasBitLocker() => (super.noSuchMethod(
+  _i7.Future<bool> hasBitLocker() => (super.noSuchMethod(
         Invocation.method(
           #hasBitLocker,
           [],
         ),
-        returnValue: _i6.Future<bool>.value(false),
-      ) as _i6.Future<bool>);
+        returnValue: _i7.Future<bool>.value(false),
+      ) as _i7.Future<bool>);
 
   @override
-  _i6.Future<_i4.GuidedStorageResponseV2> getGuidedStorage() =>
+  _i7.Future<_i4.GuidedStorageResponseV2> getGuidedStorage() =>
       (super.noSuchMethod(
         Invocation.method(
           #getGuidedStorage,
           [],
         ),
-        returnValue: _i6.Future<_i4.GuidedStorageResponseV2>.value(
+        returnValue: _i7.Future<_i4.GuidedStorageResponseV2>.value(
             _FakeGuidedStorageResponseV2_2(
           this,
           Invocation.method(
@@ -347,38 +371,38 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
             [],
           ),
         )),
-      ) as _i6.Future<_i4.GuidedStorageResponseV2>);
+      ) as _i7.Future<_i4.GuidedStorageResponseV2>);
 
   @override
-  _i6.Future<void> setGuidedStorage() => (super.noSuchMethod(
+  _i7.Future<void> setGuidedStorage() => (super.noSuchMethod(
         Invocation.method(
           #setGuidedStorage,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 
   @override
-  _i6.Future<List<_i4.Disk>> getStorage() => (super.noSuchMethod(
+  _i7.Future<List<_i4.Disk>> getStorage() => (super.noSuchMethod(
         Invocation.method(
           #getStorage,
           [],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> getOriginalStorage() => (super.noSuchMethod(
+  _i7.Future<List<_i4.Disk>> getOriginalStorage() => (super.noSuchMethod(
         Invocation.method(
           #getOriginalStorage,
           [],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> addPartition(
+  _i7.Future<List<_i4.Disk>> addPartition(
     _i4.Disk? disk,
     _i4.Gap? gap,
     _i4.Partition? partition,
@@ -392,11 +416,11 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
             partition,
           ],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> editPartition(
+  _i7.Future<List<_i4.Disk>> editPartition(
     _i4.Disk? disk,
     _i4.Partition? partition,
   ) =>
@@ -408,11 +432,11 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
             partition,
           ],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> deletePartition(
+  _i7.Future<List<_i4.Disk>> deletePartition(
     _i4.Disk? disk,
     _i4.Partition? partition,
   ) =>
@@ -424,44 +448,108 @@ class MockStorageService extends _i1.Mock implements _i8.StorageService {
             partition,
           ],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> setStorage() => (super.noSuchMethod(
+  _i7.Future<List<_i4.Disk>> setStorage() => (super.noSuchMethod(
         Invocation.method(
           #setStorage,
           [],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> resetStorage() => (super.noSuchMethod(
+  _i7.Future<List<_i4.Disk>> resetStorage() => (super.noSuchMethod(
         Invocation.method(
           #resetStorage,
           [],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> addBootPartition(_i4.Disk? disk) =>
+  _i7.Future<List<_i4.Disk>> addBootPartition(_i4.Disk? disk) =>
       (super.noSuchMethod(
         Invocation.method(
           #addBootPartition,
           [disk],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
 
   @override
-  _i6.Future<List<_i4.Disk>> reformatDisk(_i4.Disk? disk) =>
+  _i7.Future<List<_i4.Disk>> reformatDisk(_i4.Disk? disk) =>
       (super.noSuchMethod(
         Invocation.method(
           #reformatDisk,
           [disk],
         ),
-        returnValue: _i6.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
-      ) as _i6.Future<List<_i4.Disk>>);
+        returnValue: _i7.Future<List<_i4.Disk>>.value(<_i4.Disk>[]),
+      ) as _i7.Future<List<_i4.Disk>>);
+}
+
+/// A class which mocks [PageImages].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockPageImages extends _i1.Mock implements _i10.PageImages {
+  MockPageImages() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.PageConfigService get pageConfigService => (super.noSuchMethod(
+        Invocation.getter(#pageConfigService),
+        returnValue: _FakePageConfigService_0(
+          this,
+          Invocation.getter(#pageConfigService),
+        ),
+      ) as _i2.PageConfigService);
+
+  @override
+  _i2.ThemeVariantService get themeVariantService => (super.noSuchMethod(
+        Invocation.getter(#themeVariantService),
+        returnValue: _FakeThemeVariantService_3(
+          this,
+          Invocation.getter(#themeVariantService),
+        ),
+      ) as _i2.ThemeVariantService);
+
+  @override
+  _i5.FileSystem get filesystem => (super.noSuchMethod(
+        Invocation.getter(#filesystem),
+        returnValue: _FakeFileSystem_4(
+          this,
+          Invocation.getter(#filesystem),
+        ),
+      ) as _i5.FileSystem);
+
+  @override
+  Map<String, _i11.Widget> get images => (super.noSuchMethod(
+        Invocation.getter(#images),
+        returnValue: <String, _i11.Widget>{},
+      ) as Map<String, _i11.Widget>);
+
+  @override
+  bool get isDarkMode => (super.noSuchMethod(
+        Invocation.getter(#isDarkMode),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  _i11.Widget? get(String? pageName) => (super.noSuchMethod(Invocation.method(
+        #get,
+        [pageName],
+      )) as _i11.Widget?);
+
+  @override
+  _i7.Future<void> preCache() => (super.noSuchMethod(
+        Invocation.method(
+          #preCache,
+          [],
+        ),
+        returnValue: _i7.Future<void>.value(),
+        returnValueForMissingStub: _i7.Future<void>.value(),
+      ) as _i7.Future<void>);
 }

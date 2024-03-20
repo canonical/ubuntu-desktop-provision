@@ -18,7 +18,10 @@ import 'test_storage.dart';
 
 void main() {
   Widget buildPage(StorageModel model) {
-    final pageImages = PageImages(MockPageConfigService());
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
       overrides: [
         storageModelProvider.overrideWith((_) => model),
@@ -131,7 +134,6 @@ void main() {
   });
 
   testWidgets('alongside windows', (tester) async {
-    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
     const osProber = OsProber(
       long: 'Windows 10',
       label: 'WIN10',
@@ -139,7 +141,6 @@ void main() {
       type: 'ntfs',
     );
     final model = buildStorageModel(
-      productInfo: productInfo,
       existingOS: [osProber],
       canInstallAlongside: true,
     );
@@ -149,7 +150,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongside(productInfo.name, osProber.long),
+      l10n.installationTypeAlongside('Ubuntu', osProber.long),
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
@@ -157,7 +158,6 @@ void main() {
   });
 
   testWidgets('alongside bitlocker', (tester) async {
-    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
     const osProber = OsProber(
       long: 'Windows 11',
       label: 'WIN11',
@@ -165,7 +165,6 @@ void main() {
       type: 'BitLocker',
     );
     final model = buildStorageModel(
-      productInfo: productInfo,
       existingOS: [osProber],
       canInstallAlongside: false,
       hasBitLocker: true,
@@ -176,7 +175,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongside(productInfo.name, osProber.long),
+      l10n.installationTypeAlongside('Ubuntu', osProber.long),
     );
     expect(radio, findsOneWidget);
 
@@ -185,7 +184,6 @@ void main() {
   });
 
   testWidgets('alongside ubuntu', (tester) async {
-    const productInfo = ProductInfo(name: 'Ubuntu 22.10');
     const osProber = OsProber(
       long: 'Ubuntu 18.04 LTS',
       label: 'Ubuntu',
@@ -193,7 +191,6 @@ void main() {
       type: 'ext4',
     );
     final model = buildStorageModel(
-      productInfo: productInfo,
       existingOS: [osProber],
       canInstallAlongside: true,
     );
@@ -203,7 +200,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongside('Ubuntu 22.10', 'Ubuntu 18.04 LTS'),
+      l10n.installationTypeAlongside('Ubuntu', 'Ubuntu 18.04 LTS'),
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
@@ -212,7 +209,6 @@ void main() {
 
   testWidgets('alongside unknown', (tester) async {
     final model = buildStorageModel(
-      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       canInstallAlongside: true,
     );
     await tester.pumpApp((_) => buildPage(model));
@@ -221,7 +217,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongsideUnknown('Ubuntu 22.10'),
+      l10n.installationTypeAlongsideUnknown('Ubuntu'),
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
@@ -230,7 +226,6 @@ void main() {
 
   testWidgets('alongside dual os', (tester) async {
     final model = buildStorageModel(
-      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Windows 10',
@@ -254,7 +249,7 @@ void main() {
 
     final radio = find.radioListTile(
       l10n.installationTypeAlongsideDual(
-        'Ubuntu 22.10',
+        'Ubuntu',
         'Windows 10',
         'Ubuntu 20.04 LTS',
       ),
@@ -266,7 +261,6 @@ void main() {
 
   testWidgets('alongside duplicate os', (tester) async {
     final model = buildStorageModel(
-      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Ubuntu 20.04 LTS',
@@ -289,7 +283,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
+      l10n.installationTypeAlongsideMulti('Ubuntu'),
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
@@ -298,7 +292,6 @@ void main() {
 
   testWidgets('alongside multi os', (tester) async {
     final model = buildStorageModel(
-      productInfo: const ProductInfo(name: 'Ubuntu 22.10'),
       existingOS: [
         const OsProber(
           long: 'Windows 10',
@@ -327,7 +320,7 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     final radio = find.radioListTile(
-      l10n.installationTypeAlongsideMulti('Ubuntu 22.10'),
+      l10n.installationTypeAlongsideMulti('Ubuntu'),
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
@@ -371,7 +364,7 @@ void main() {
     await tester.tap(radio);
     verify(model.type = StorageType.manual).called(1);
 
-    expect(find.button(l10n.installationTypeAdvancedLabel), findsNothing);
+    expect(find.button(l10n.installationTypeAdvancedLabel), isDisabled);
   });
 
   testWidgets('cannot manual partition', (tester) async {

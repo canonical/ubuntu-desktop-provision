@@ -21,7 +21,10 @@ Widget buildKeyboardPage(KeyboardModel model) {
   when(service.getKeyboardStep(any)).thenAnswer(
       (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []));
   registerMockService<KeyboardService>(service);
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
 
   return ProviderScope(
     overrides: [

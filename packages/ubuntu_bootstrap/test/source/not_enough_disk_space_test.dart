@@ -107,7 +107,10 @@ extension on WidgetTester {
 
     final telemetry = MockTelemetryService();
     registerMockService<TelemetryService>(telemetry);
-    final pageImages = PageImages(MockPageConfigService());
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
 
     return pumpWidget(
       ProviderScope(

@@ -14,7 +14,10 @@ import 'test_storage.dart';
 
 void main() {
   Widget buildPage(WidgetTester tester, StorageModel model) {
-    final pageImages = PageImages(MockPageConfigService());
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
       overrides: [
         storageModelProvider.overrideWith((_) => model),

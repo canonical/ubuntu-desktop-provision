@@ -99,10 +99,6 @@
   },
   "shutdown": "כיבוי",
   "@shutdown": {},
-  "chooseSecurityKeyRequired": "נדרש מפתח אבטחה",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "מפתחות האבטחה סותרים זה את זה",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeAdvancedLabel": "יכולות מתקדמות…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "יכולות מתקדמות",
@@ -131,21 +127,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "התכניות האלו כפופות לתנאי אישוי שנכללים בתיעוד שלהן. חלקן קנייניות.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "מפתח אבטחה",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHeader": "הצפנת הכונן מגנה על הקבצים שלך במקרה של אובדן המחשב. התכונה דורשת ממך להזין מפתח אבטחה עם כל הפעלה של המחשב.\n\nקבצים שמחוץ ל־{RELEASE} לא יוצפנו.",
-  "@chooseSecurityKeyHeader": {},
-  "chooseSecurityKeyHint": "נא לבחור מפתח אבטחה",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "אישור מפתח האבטחה",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">אזהרה:</font> אובדן מפתח האבטחה עשוי להוביל לאובדן כל הנתונים. במקרה הצורך, מומלץ לכתוב את המפתח על פתק ולאחסן אותו במקום בטוח.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeTitle": "סוג ההתקנה",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "במחשב זה מותקנת כרגע {os}. מה לעשות?",
@@ -157,13 +138,6 @@
   },
   "installationTypeNoOSDetected": "לא זוהו מערכות הפעלה כלשהן במחשב זה. מה לעשות?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">אזהרה:</font> פעולה זו תמחק את כל התכניות, המסמכים, התמונות, המוזיקה וכל סוגי הקבצים שהם בכל מערכות ההפעלה.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeNone": "אין",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "לא נבחרו",
@@ -400,13 +374,6 @@
   "@restartNow": {},
   "continueTesting": "להמשיך לבחון",
   "@continueTesting": {},
-  "restartWarning": "אפשר להמשיך לבחון את {RELEASE} כעת אבל רק עד הפעלת המחשב מחדש, השינויים שייערכו למסמכים לא יישמרו.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "offlineWarning": "החיבור שלך מנותק",
   "@offlineWarning": {},
   "partitionFormatNone": "להשאיר בלי פרמוט",
@@ -597,14 +564,6 @@
       "snap": {}
     }
   },
-  "installationTypeTPMWarning": "<font color=\"{color}\">אזהרה:</font> יכולת זאת נתמכת רק בהגדרות חומרה מסוימות ועלולה שלא לתמוך בשדרוג לגרסאות עתידיות של אובונטו. נא לקרוא את <a href=\"{url}\">הערות המהדורה</a> טרם ההפעלה.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "refreshPageTitle": "קיים עדכון",
   "@refreshPageTitle": {},
   "refreshSnapRemoveAliases": "הכינויים של {snap} נמחקים…",
@@ -780,10 +739,6 @@
   },
   "recoveryKeyCommand": "הגישה למפתח השחזור שלך לאחר ההתקנה אפשרית באמצעות הפקודה:",
   "@recoveryKeyCommand": {},
-  "expandedInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים שלאו דווקא דורשת אינטרנט.",
-  "@expandedInstallationSubtitle": {},
-  "expandedInstallationTitle": "התקנה מורחבת",
-  "@expandedInstallationTitle": {},
   "fullInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים ללא צורך בחיבור לאינטרנט.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "התקנה מלאה",

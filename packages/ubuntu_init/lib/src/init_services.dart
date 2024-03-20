@@ -30,7 +30,7 @@ export 'services/provd_timezone_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_session_service.dart';
 
-Future<void> registerInitServices(List<String> args) {
+Future<void> registerInitServices(List<String> args) async {
   var options = tryGetService<ArgResults>();
   if (options == null) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {

@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -108,7 +111,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get themeLight => 'Claro';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Bem-vindo ao $DISTRO';
   }
 
@@ -195,6 +198,14 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryTitle => 'Configurar o Active Directory';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => 'Testar ligação de domínio';
@@ -364,7 +375,7 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get themeLight => 'Claro';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Boas-vindas ao $DISTRO';
   }
 

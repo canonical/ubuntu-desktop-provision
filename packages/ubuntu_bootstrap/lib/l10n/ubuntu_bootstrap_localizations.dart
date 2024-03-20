@@ -252,7 +252,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Installation type'**
+  /// **'Type of installation'**
   String get autoinstallTitle;
 
   /// No description provided for @autoinstallHeader.
@@ -372,7 +372,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstTitle.
   ///
   /// In en, this message translates to:
-  /// **'RST is enabled'**
+  /// **'RST detected'**
   String get rstTitle;
 
   /// No description provided for @rstHeader.
@@ -510,7 +510,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @fullInstallationSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'An offline-friendly selection of office tools, utilities, web browser and games.'**
+  /// **'An offline-friendly selection of office tools, utilities and web browser.'**
   String get fullInstallationSubtitle;
 
   /// No description provided for @minimalInstallationTitle.
@@ -552,7 +552,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installDriversSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'These drivers are subject to license terms included with their documentation. They are proprietary.'**
+  /// **'Including but not limited to NVIDIA drivers and similar'**
   String get installDriversSubtitle;
 
   /// No description provided for @installCodecsTitle.
@@ -564,7 +564,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installCodecsSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'This software is subject to license terms included with its documentation. Some are proprietary.'**
+  /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
   /// No description provided for @onBatteryWarning.
@@ -1284,7 +1284,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @readyToUse.
   ///
   /// In en, this message translates to:
-  /// **'**{system}** is installed and ready to use'**
+  /// **'{system} is installed and ready to use'**
   String readyToUse(String system);
 
   /// No description provided for @rebootToConfigure.
@@ -1299,11 +1299,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Restart into {system}'**
   String restartInto(String system);
 
-  /// No description provided for @restartWarning.
+  /// No description provided for @restartWarningBody.
   ///
   /// In en, this message translates to:
-  /// **'You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.'**
-  String restartWarning(String RELEASE);
+  /// **'Restart to complete the installation or continue testing.\nAny changes you make not be saved.'**
+  String get restartWarningBody;
 
   /// No description provided for @rebootToConfigureWarning.
   ///
@@ -1344,7 +1344,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @bitlockerDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'{option}\' to continue.'**
+  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'{option}\' to continue.'**
   String bitlockerDescription(String option);
 
   /// No description provided for @bitlockerInstructions.
@@ -1605,6 +1605,30 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Update available'**
   String get refreshPageTitle;
 
+  /// No description provided for @refreshHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'An update is available for the installer'**
+  String get refreshHeader;
+
+  /// No description provided for @refreshUpdateNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Update now'**
+  String get refreshUpdateNow;
+
+  /// No description provided for @refreshInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Update to the latest version for improved reliability and more features.'**
+  String get refreshInfo;
+
+  /// No description provided for @refreshReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Update ready'**
+  String get refreshReady;
+
   /// No description provided for @refreshCurrent.
   ///
   /// In en, this message translates to:
@@ -1632,8 +1656,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @refreshRestart.
   ///
   /// In en, this message translates to:
-  /// **'Please quit and relaunch the installer.'**
+  /// **'Please close the installer and relaunch to continue'**
   String get refreshRestart;
+
+  /// No description provided for @refreshCloseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Close installer'**
+  String get refreshCloseLabel;
 
   /// No description provided for @refreshSnapPrerequisites.
   ///

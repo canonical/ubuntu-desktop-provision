@@ -145,6 +145,7 @@ extension on WidgetTester {
     registerMockService<ConfigService>(config);
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
     registerMockService<JournalService>(journal);
     registerMockService<LocaleService>(locale);
     registerMockService<ProductService>(ProductService());

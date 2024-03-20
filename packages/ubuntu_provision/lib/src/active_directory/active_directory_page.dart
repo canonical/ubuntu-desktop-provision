@@ -4,9 +4,8 @@ import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.d
 import 'package:ubuntu_provision/src/active_directory/active_directory_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 
-class ActiveDirectoryPage extends ConsumerStatefulWidget with ProvisioningPage {
+class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
   const ActiveDirectoryPage({super.key});
 
   @override
@@ -15,42 +14,11 @@ class ActiveDirectoryPage extends ConsumerStatefulWidget with ProvisioningPage {
   }
 
   @override
-  ConsumerState<ActiveDirectoryPage> createState() =>
-      _ActiveDirectoryPageState();
-}
-
-class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final lang = ActiveDirectoryLocalizations.of(context);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.activeDirectoryTitle),
-      ),
-      contentPadding: EdgeInsets.zero,
-      content: LayoutBuilder(builder: (context, constraints) {
-        final fieldWidth = (constraints.maxWidth - kWizardPadding.horizontal) *
-            kWizardWidthFraction;
-        return ListView(
-          padding: kWizardPadding,
-          children: [
-            DomainNameFormField(fieldWidth: fieldWidth),
-            const SizedBox(height: kWizardSpacing),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: OutlinedButton(
-                onPressed:
-                    ref.read(activeDirectoryModelProvider).pingDomainController,
-                child: Text(lang.activeDirectoryTestConnection),
-              ),
-            ),
-            const SizedBox(height: kWizardSpacing),
-            AdminNameFormField(fieldWidth: fieldWidth),
-            const SizedBox(height: kWizardSpacing),
-            PasswordFormField(fieldWidth: fieldWidth),
-          ],
-        );
-      }),
+    return HorizontalPage(
+      windowTitle: lang.activeDirectoryTitle,
+      title: lang.activeDirectoryHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -61,7 +29,7 @@ class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
               final model = ref.read(activeDirectoryModelProvider);
               await model.save();
               await model.getJoinResult().then((result) {
-                if (mounted &&
+                if (context.mounted &&
                     (result == AdJoinResult.JOIN_ERROR ||
                         result == AdJoinResult.PAM_ERROR)) {
                   showActiveDirectoryErrorDialog(context);
@@ -71,6 +39,24 @@ class _ActiveDirectoryPageState extends ConsumerState<ActiveDirectoryPage> {
           ),
         ],
       ),
+      children: [
+        Text(lang.activeDirectoryInfo(ref.watch(flavorProvider).displayName)),
+        const SizedBox(height: kWizardSpacing),
+        const DomainNameFormField(),
+        const SizedBox(height: kWizardSpacing),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: FilledButton(
+            onPressed:
+                ref.read(activeDirectoryModelProvider).pingDomainController,
+            child: Text(lang.activeDirectoryTestConnection),
+          ),
+        ),
+        const SizedBox(height: kWizardSpacing),
+        const AdminNameFormField(),
+        const SizedBox(height: kWizardSpacing),
+        const PasswordFormField(),
+      ],
     );
   }
 }

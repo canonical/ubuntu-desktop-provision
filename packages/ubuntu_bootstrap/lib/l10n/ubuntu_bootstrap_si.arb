@@ -74,16 +74,6 @@
   "@updatesOtherSoftwarePageTitle": {},
   "otherOptions": "වෙනත් විකල්ප",
   "@otherOptions": {},
-  "chooseSecurityKeyTitle": "ආරක්‍ෂණ යතුරක් තෝරන්න",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "ආරක්‍ෂණ යතුරක් තෝරන්න",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "ආරක්‍ෂණ යතුර තහවුරු කරන්න",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "ආරක්‍ෂණ යතුරක් වුවමනාය",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "ආරක්‍ෂණ යතුරු නොගැළපේ",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeAdvancedTitle": "වැඩිදුර විශේෂාංග",
   "@installationTypeAdvancedTitle": {},
   "installationTypeAdvancedLabel": "වැඩිදුර විශේෂාංග...",
@@ -259,13 +249,6 @@
   "@installCodecsTitle": {},
   "offlineWarning": "ඔබ දැනට මාර්ගඅපගතයි",
   "@offlineWarning": {},
-  "chooseSecurityKeyHeader": "ඔබගේ පරිගණකය නැති වුවහොත් තැටි සංකේතනය මඟින් ඔබගේ ගොනු රැකදෙයි. පරිගණකය අරඹන සැමවිට ආරක්‍ෂණ යතුරක් ඇතුල් කිරීමට සිදුවනු ඇත.\n\n{RELEASE} න් පිටත කිසිදු ගොනුවක් සංකේතනය නොකෙරේ.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "අත්හදා බැලීම දිගටම",
   "@continueTesting": {},
   "partitionFormatLabel": "භාවිතය:",
@@ -287,22 +270,8 @@
   "@installAlongsideSpaceDivider": {},
   "diskHeadersFormat": "පවිත්‍ර",
   "@diskHeadersFormat": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">අවවාදයයි</font>: මෙම ආරක්‍ෂණ යතුර නැති වුවහොත්, සියළුම දත්ත නැති වනු ඇත. ඔබට අවශ්‍ය නම්, ඔබගේ යතුර වෙනත් තැනක ලියා ආරක්‍ෂිතව තබන්න.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeNoOSDetected": "මෙම පරිගණකයෙහි කිසිදු මෙහෙයුම් පද්ධතියක් අනාවරණය වී නැත. ඔබ කිරීමට කැමති කුමක්ද?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">අවවාදයයි:</font> මෙය ඔබගේ සියළුම වැඩසටහන්, ලේඛන, ඡායාරූප, ගීත සහ මෙහෙයුම් පද්ධතිවල තිබෙන වෙනත් ගොනු සියල්ල මකා දමයි.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeZFS": "පරීක්‍ෂාත්මක: තැටිය මකාදමා ZFS භාවිතා කරන්න",
   "@installationTypeZFS": {},
   "installationTypeAlongsideInfo": "ලේඛන, ගීත සහ අනෙකුත් පෞද්. ගොනු රඳවා ගැනෙයි. පරිගණකය ආරම්භ වන සැමවිට අවශ්‍ය මෙහෙයුම් පද්ධතිය තේරීමට හැකිය.",
@@ -353,13 +322,6 @@
   "@partitionLocationBeginning": {},
   "partitionLocationEnd": "මෙම ඉඩෙහි අවසානය",
   "@partitionLocationEnd": {},
-  "restartWarning": "ඔබට දැන් දිගටම {RELEASE} අත්හදා බැලීමට හැකිය, නමුත් පරිගණකය යළි ආරම්භ කරන තුරු ඔබ සුරකින ලේඛන හෝ සිදුකරන වෙනස්කම් රැඳෙන්නේ නැත.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "partitionMountPointLabel": "සවිවන ස්ථානය:",
   "@partitionMountPointLabel": {},
   "installAlongsideResizePartition": "පංගුව යළි ප්‍රමාණනය",

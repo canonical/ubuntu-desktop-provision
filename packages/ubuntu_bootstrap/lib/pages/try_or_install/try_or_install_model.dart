@@ -15,12 +15,6 @@ final tryOrInstallModelProvider = ChangeNotifierProvider(
 
 /// The available options on the Try or Install page.
 enum TryOrInstallOption {
-  /// No option is selected.
-  none,
-
-  /// The user wants to repair Ubuntu.
-  repairUbuntu,
-
   /// The user wants to try Ubuntu.
   tryUbuntu,
 
@@ -48,7 +42,7 @@ class TryOrInstallModel extends SafeChangeNotifier with PropertyStreamNotifier {
 
   /// The currently selected option.
   TryOrInstallOption get option => _option;
-  TryOrInstallOption _option = TryOrInstallOption.none;
+  TryOrInstallOption _option = TryOrInstallOption.installUbuntu;
 
   /// Selects the given [option].
   void selectOption(TryOrInstallOption option) {

@@ -18,7 +18,7 @@ dependencies:
     sdk: flutter
   flutter_html: ^3.0.0-beta.2
   flutter_riverpod: ^2.4.9
-  flutter_svg: ^2.0.9
+  flutter_svg: ^2.0.10
   form_field_validator: ^1.1.0
   freezed_annotation: ^2.4.1
   gsettings: ^0.2.8
@@ -58,6 +58,7 @@ dev_dependencies:
   freezed: ^2.4.6
   json_serializable: ^6.7.1
   mockito: 5.4.4
+  translations_cleaner: ^0.0.5
   ubuntu_lints: ^0.3.0
   ubuntu_test: ^0.1.0-beta.8
   yaru_test: ^0.1.5

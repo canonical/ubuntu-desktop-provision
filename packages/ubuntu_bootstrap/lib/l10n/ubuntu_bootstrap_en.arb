@@ -9,7 +9,7 @@
       }
     }
   },
-  "autoinstallTitle": "Installation type",
+  "autoinstallTitle": "Type of installation",
   "autoinstallHeader": "How would you like to install {DISTRO}?",
   "@autoinstallHeader": {
     "placeholders": {
@@ -99,7 +99,7 @@
       }
     }
   },
-  "rstTitle": "RST is enabled",
+  "rstTitle": "RST detected",
   "rstHeader": "Turn off RST to continue",
   "rstDescription": "This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.",
   "@rstDescription": {
@@ -143,16 +143,16 @@
   "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
   "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
   "fullInstallationTitle": "Extended selection",
-  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities, web browser and games.",
+  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
   "minimalInstallationTitle": "Default selection",
   "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
   "otherOptions": "Other options",
   "installThirdPartyTitle": "Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats",
   "installThirdPartySubtitle": "This software is subject to license terms included with its documentation. Some are proprietary.",
   "installDriversTitle": "Install third-party software for graphics and Wi-Fi hardware",
-  "installDriversSubtitle": "These drivers are subject to license terms included with their documentation. They are proprietary.",
+  "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
   "installCodecsTitle": "Download and install support for additional media formats",
-  "installCodecsSubtitle": "This software is subject to license terms included with its documentation. Some are proprietary.",
+  "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
   "onBatteryWarning": "<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.",
   "@onBatteryWarning": {
     "placeholders": {
@@ -474,7 +474,7 @@
   "confirmProprietarySoftwareDrivers": "Drivers",
   "confirmInstallButton": "Install",
   "installationCompleteTitle": "Installation complete",
-  "readyToUse": "**{system}** is installed and ready to use",
+  "readyToUse": "{system} is installed and ready to use",
   "@readyToUse": {
     "placeholders": {
       "system": {
@@ -498,21 +498,14 @@
       }
     }
   },
-  "restartWarning": "You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.",
-  "@restartWarning": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
+  "restartWarningBody": "Restart to complete the installation or continue testing.\nAny changes you make not be saved.",
   "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
   "shutdown": "Shut Down",
   "restartNow": "Restart now",
   "continueTesting": "Continue testing",
   "bitlockerTitle": "BitLocker is enabled",
   "bitlockerHeader": "Turn off BitLocker to continue",
-  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose '{option}' to continue.",
+  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose '{option}' to continue.",
   "@bitlockerDescription": {
     "placeholders": {
       "option": {
@@ -668,6 +661,10 @@
   "notEnoughDiskSpaceAvailable": "Available:",
   "notEnoughDiskSpaceRequired": "Required:",
   "refreshPageTitle": "Update available",
+  "refreshHeader": "An update is available for the installer",
+  "refreshUpdateNow": "Update now",
+  "refreshInfo": "Update to the latest version for improved reliability and more features.",
+  "refreshReady": "Update ready",
   "refreshCurrent": "The current {snap} version is {version}.",
   "@refreshCurrent": {
     "placeholders": {
@@ -703,7 +700,8 @@
       }
     }
   },
-  "refreshRestart": "Please quit and relaunch the installer.",
+  "refreshRestart": "Please close the installer and relaunch to continue",
+  "refreshCloseLabel": "Close installer",
   "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
   "@refreshSnapPrerequisites": {
     "placeholders": {
