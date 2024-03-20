@@ -25,9 +25,9 @@ enum DataUnit {
 }
 
 int toBytes(num size, DataUnit unit) {
-  return (size * math.pow(1024, unit.index)).round();
+  return (size * math.pow(1000, unit.index)).round();
 }
 
 double fromBytes(int size, DataUnit unit) {
-  return size / math.pow(1024, unit.index).toInt();
+  return size / math.pow(1000, unit.index).toInt();
 }
