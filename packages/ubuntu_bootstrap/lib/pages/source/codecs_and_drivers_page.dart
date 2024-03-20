@@ -30,7 +30,6 @@ class CodecsAndDriversPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.codecsAndDriversPageTitle,
       title: lang.codecsAndDriversPageDescription,
-      contentFlex: 3,
       snackBar: model.onBattery
           ? SnackBar(
               width: 500,

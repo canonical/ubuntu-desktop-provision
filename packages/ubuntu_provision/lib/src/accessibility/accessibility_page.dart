@@ -23,7 +23,6 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.accessibilityPageTitle,
       title: lang.accessibilityPageHeader(flavor.displayName),
-      contentFlex: 8,
       bottomBar: const WizardBar(
         leading: BackWizardButton(),
         trailing: [NextWizardButton()],
