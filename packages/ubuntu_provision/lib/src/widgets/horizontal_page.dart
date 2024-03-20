@@ -114,23 +114,21 @@ class HorizontalPage extends ConsumerWidget {
                     flex: managedScrolling ? 1 : contentFlex,
                     child: managedScrolling
                         ? Center(
-                            child: Padding(
-                              padding: hoverPadding +
-                                  EdgeInsets.only(right: scrollBarPadding),
-                              child: Scrollbar(
+                            child: Scrollbar(
+                              controller: _scrollController,
+                              thumbVisibility: true,
+                              child: ListView(
+                                padding: hoverPadding +
+                                    EdgeInsets.only(right: scrollBarPadding),
+                                shrinkWrap: true,
                                 controller: _scrollController,
-                                thumbVisibility: true,
-                                child: ListView(
-                                  shrinkWrap: true,
-                                  controller: _scrollController,
-                                  children: [
-                                    _Headline(
-                                      title: title,
-                                      trailingTitleWidget: trailingTitleWidget,
-                                    ),
-                                    ...children,
-                                  ],
-                                ),
+                                children: [
+                                  _Headline(
+                                    title: title,
+                                    trailingTitleWidget: trailingTitleWidget,
+                                  ),
+                                  ...children,
+                                ],
                               ),
                             ),
                           )
