@@ -18,6 +18,7 @@ class MascotAvatar extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Container(
+          constraints: BoxConstraints.tight(size),
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
