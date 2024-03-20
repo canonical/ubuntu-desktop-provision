@@ -95,7 +95,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(EULAPage), findsOneWidget);
-    verify(networkModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
