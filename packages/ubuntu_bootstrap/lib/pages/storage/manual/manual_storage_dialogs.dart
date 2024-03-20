@@ -110,7 +110,10 @@ Future<void> showCreatePartitionDialog(
                             model.addPartition(
                               disk,
                               gap,
-                              size: partitionSize.value,
+                              size: mibiAlign(
+                                partitionSize.value,
+                                gap.size,
+                              ),
                               format: partitionFormat.value,
                               mount: partitionMount.value,
                             );

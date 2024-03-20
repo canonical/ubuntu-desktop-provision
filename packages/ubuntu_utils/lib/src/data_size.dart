@@ -25,9 +25,22 @@ enum DataUnit {
 }
 
 int toBytes(num size, DataUnit unit) {
-  return (size * math.pow(1024, unit.index)).round();
+  return (size * math.pow(1000, unit.index)).round();
 }
 
 double fromBytes(int size, DataUnit unit) {
-  return size / math.pow(1024, unit.index).toInt();
+  return size / math.pow(1000, unit.index).toInt();
+}
+
+/// Aligns the given size to the next MiB boundary. If [maxSize] is given, the
+/// alignment is limited to that size and the next smaller MiB boundary is
+/// returned if the next alignment would exceed the maximum size.
+int mibiAlign(int size, [int? maxSize]) {
+  assert(maxSize == null || size <= maxSize);
+  const mibiByte = 1024 * 1024;
+  final nextAlignment = (size + mibiByte - 1) ~/ mibiByte * mibiByte;
+  if (maxSize == null || nextAlignment <= maxSize) {
+    return nextAlignment;
+  }
+  return size ~/ mibiByte * mibiByte;
 }
