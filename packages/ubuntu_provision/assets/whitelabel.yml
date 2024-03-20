@@ -12,7 +12,7 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
-    image: "assets/mascot.png"
+    image: "assets/images/mascot.svg"
   autoinstall:
     image: "assets/images/disk.svg"
   source-selection:
@@ -42,4 +42,4 @@ pages:
     image: "assets/images/telemetry.svg"
   welcome:
   done:
-    image: "assets/mascot.png"
+    image: "assets/images/mascot.svg"
