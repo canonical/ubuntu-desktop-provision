@@ -373,13 +373,21 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'Selecione a unidade:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'O disco inteiro será utilizado:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Instalar agora';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => 'Alocar espaço no disco ao arrastar o divisor abaixo:';
@@ -1210,9 +1218,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String selectGuidedStoragePageTitle(String DISTRO) {
     return 'Apagar o disco e instalar o $DISTRO';
   }
-
-  @override
-  String get selectGuidedStorageDropdownLabel => 'Selecione o disco:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'O disco inteiro será utilizado:';

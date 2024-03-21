@@ -373,13 +373,21 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'ドライブを選択してください。';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'ディスク全体が使用されます。';
 
   @override
   String get selectGuidedStorageInstallNow => 'インストール';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => '境界をドラッグしてディスク領域を割り当てます。';
