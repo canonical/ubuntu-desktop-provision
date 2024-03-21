@@ -47,3 +47,5 @@ pages:
     image: "assets/images/mascot.svg"
   storage-icon:
     image: "assets/images/ubuntu_storage_icon.svg"
+  error:
+    image: "assets/images/error.svg"
