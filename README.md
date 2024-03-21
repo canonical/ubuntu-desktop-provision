@@ -73,9 +73,11 @@ theme:
 # - not-enough-disk-space: Notifies if there is insufficient disk space
 # - secure-boot: Handles secure boot
 # - storage: Select target disk and partition
+# - storage-icon: Not a separate page, but sets the distribution icon on the storage page
 # - identity: Create the first-user account (only displayed if mode = default)
 # - confirm: A summary of the installation and confirmation button to start the install
 # - done: Choose whether to restart or continue testing in the live session
+# - error: The page that shows when something goes wrong
 #
 # Init pages (for oem only)
 # - identity: Create the first-user account 
