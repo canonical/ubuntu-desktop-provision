@@ -1,5 +1,6 @@
 export 'src/provd_accessibility_client.dart';
 export 'src/provd_chown_client.dart';
+export 'src/provd_gdm_client.dart';
 export 'src/provd_keyboard_client.dart';
 export 'src/provd_locale_client.dart';
 export 'src/provd_privacy_client.dart';
