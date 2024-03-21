@@ -27,6 +27,8 @@ pages:
     image: "assets/images/disk.svg"
   guided-resize:
     image: "assets/images/ubuntu_storage_icon.svg"
+  guided-reformat:
+    image: "assets/images/disk.svg"
   passphrase:
     image: "assets/images/passphrase.svg"
   confirm:
