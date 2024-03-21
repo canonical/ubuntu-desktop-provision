@@ -35,6 +35,7 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.errorPageTitle,
       title: lang.errorPageTitle,
+      managedScrolling: false,
       bottomBar: WizardBar(
         trailing: [
           WizardButton(
@@ -82,11 +83,13 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
               isLogVisible: isExpanded,
             );
           },
-          child: Container(
+          child: ColoredBox(
             color: Theme.of(context).colorScheme.background,
-            height: 250,
-            child: SingleChildScrollView(
-              child: JournalView(journal: model.logStream),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxHeight: 250),
+              child: SingleChildScrollView(
+                child: JournalView(journal: model.logStream),
+              ),
             ),
           ),
         ),
