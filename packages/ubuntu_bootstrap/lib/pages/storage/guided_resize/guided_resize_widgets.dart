@@ -39,7 +39,7 @@ class StorageSelector extends ConsumerWidget {
     final lang = UbuntuBootstrapLocalizations.of(context);
     return Row(
       children: <Widget>[
-        Text(lang.selectGuidedStorageDropdownLabel),
+        Text(lang.selectGuidedStoragePartitionDropdownLabel),
         const SizedBox(width: kWizardSpacing),
         Expanded(
           child: MenuButtonBuilder<int>(

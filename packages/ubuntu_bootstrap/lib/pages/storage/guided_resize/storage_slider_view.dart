@@ -8,7 +8,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class StorageSliderView extends StatelessWidget {
+class StorageSliderView extends StatefulWidget {
   const StorageSliderView({
     required this.currentSize,
     required this.minimumSize,
@@ -31,6 +31,13 @@ class StorageSliderView extends StatelessWidget {
   final ValueChanged<int> onResize;
 
   @override
+  State<StorageSliderView> createState() => _StorageSliderViewState();
+}
+
+class _StorageSliderViewState extends State<StorageSliderView> {
+  DataUnit unit = DataUnit.gigabytes;
+
+  @override
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     return Column(
@@ -39,26 +46,27 @@ class StorageSliderView extends StatelessWidget {
           children: [
             Text(
               context.formatByteSize(
-                totalSize - maximumSize,
+                widget.totalSize - widget.maximumSize,
                 precision: 1,
               ),
             ),
             Expanded(
               child: Slider(
                 divisions: 9,
-                min: (totalSize - maximumSize).toDouble(),
-                max: (totalSize - minimumSize).toDouble(),
-                value: (totalSize - currentSize).toDouble(),
-                onChanged: (value) => onResize(totalSize - value.toInt()),
+                min: (widget.totalSize - widget.maximumSize).toDouble(),
+                max: (widget.totalSize - widget.minimumSize).toDouble(),
+                value: (widget.totalSize - widget.currentSize).toDouble(),
+                onChanged: (value) =>
+                    widget.onResize(widget.totalSize - value.toInt()),
                 label: context.formatByteSize(
-                  totalSize - currentSize,
+                  widget.totalSize - widget.currentSize,
                   precision: 1,
                 ),
               ),
             ),
             Text(
               context.formatByteSize(
-                totalSize - minimumSize,
+                widget.totalSize - widget.minimumSize,
                 precision: 1,
               ),
             ),
@@ -76,26 +84,29 @@ class StorageSliderView extends StatelessWidget {
                   SizedBox.square(
                     dimension: 32,
                     child: StorageIcon(
-                      name: productInfo.toString(),
+                      name: widget.productInfo.toString(),
                       useCustomIcon: true,
                     ),
                   ),
                   const SizedBox(width: kWizardBarSpacing),
                   Text(
-                    productInfo.toString(),
+                    widget.productInfo.toString(),
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(width: kWizardSpacing / 2),
                   const Spacer(),
                   IntrinsicWidth(
                     child: StorageTextBox(
-                      key: ValueKey(currentSize),
-                      minimum: totalSize - maximumSize,
-                      maximum: totalSize - minimumSize,
-                      size: totalSize - currentSize,
-                      onSizeChanged: (size) => onResize(totalSize - size),
-                      unit: DataUnit.gigabytes,
-                      onUnitSelected: (_) {},
+                      key: ValueKey((widget.currentSize, unit)),
+                      minimum: widget.totalSize - widget.maximumSize,
+                      maximum: widget.totalSize - widget.minimumSize,
+                      size: widget.totalSize - widget.currentSize,
+                      onSizeChanged: (size) =>
+                          widget.onResize(widget.totalSize - size),
+                      unit: unit,
+                      onUnitSelected: (newUnit) {
+                        setState(() => unit = newUnit);
+                      },
                     ),
                   ),
                 ],
@@ -106,18 +117,24 @@ class StorageSliderView extends StatelessWidget {
                   SizedBox.square(
                     dimension: 32,
                     child: StorageIcon(
-                      name: existingOS?.long ?? lang.installAlongsideFiles,
+                      name:
+                          widget.existingOS?.long ?? lang.installAlongsideFiles,
                     ),
                   ),
                   const SizedBox(width: kWizardBarSpacing),
                   Text(
-                    existingOS?.long ?? lang.installAlongsideFiles,
+                    widget.existingOS?.long ?? lang.installAlongsideFiles,
                     style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox(width: kWizardSpacing),
+                  Chip(
+                    label: Text(widget.partition.sysname),
+                    shape: const StadiumBorder(),
                   ),
                   const Spacer(),
                   Text(
                     context.formatByteSize(
-                      currentSize,
+                      widget.currentSize,
                       precision: 1,
                     ),
                   ),

@@ -119,7 +119,7 @@ class StorageTextBox extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: 70,
+          width: 85,
           child: TextFormField(
             initialValue: fromBytes(size, unit).toStringAsFixed(1),
             onFieldSubmitted: (value) =>
@@ -132,7 +132,7 @@ class StorageTextBox extends StatelessWidget {
             style: OutlinedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             ),
-            values: DataUnit.values,
+            values: const [DataUnit.megabytes, DataUnit.gigabytes],
             selected: unit,
             onSelected: onUnitSelected,
             itemBuilder: (context, unit, _) {
