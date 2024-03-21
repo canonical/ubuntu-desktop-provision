@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return 'Ruošiama $DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Ši programinė įranga yra platinama pagal licencijas, nurodytas jos dokumentacijoje. Kai kuri programinė įranga yra nuosavybinė.';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">Įspėjimas:</font> Šis kompiuteris daugiau nebėra prijungtas prie elektros maitinimo šaltinio.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'Šiuo metu nesate prisijungę prie interneto';

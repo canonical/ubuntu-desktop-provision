@@ -264,7 +264,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Enter the autoinstall.yaml URL.'**
+  /// **'Enter the autoinstall.yaml URL:'**
   String get autoinstallInstructions;
 
   /// No description provided for @autoinstallInteractiveOption.
@@ -314,6 +314,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Preparing {DISTRO}…'**
   String loadingHeader(String DISTRO);
+
+  /// No description provided for @warningLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning:'**
+  String get warningLabel;
 
   /// No description provided for @tryOrInstallTitle.
   ///
@@ -567,11 +573,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
-  /// No description provided for @onBatteryWarning.
+  /// No description provided for @batteryWarning.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.'**
-  String onBatteryWarning(String color);
+  /// **'The computer is not plugged in to a power source.'**
+  String get batteryWarning;
 
   /// No description provided for @offlineWarning.
   ///

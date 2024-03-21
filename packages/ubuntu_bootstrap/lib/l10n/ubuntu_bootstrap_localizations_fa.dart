@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return 'آماده‌سازی $DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">هشدار:</font> رایانه به برق وصل نیست.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'در حال حاضر برون‌خطید';

@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return 'Préparation d’$DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Ce logiciel est soumis à des termes de licence inclus dans sa documentation. Certains sont propriétaires.';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\"> Avertissement :</font> L’ordinateur n’est pas branché à une source d’alimentation.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'Vous êtes actuellement hors ligne';

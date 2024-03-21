@@ -18,7 +18,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Enter the autoinstall.yaml URL.",
+  "autoinstallInstructions": "Enter the autoinstall.yaml URL:",
   "autoinstallInteractiveOption": "Interactive installation",
   "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
   "autoinstallAutomatedOption": "Automated installation",
@@ -41,6 +41,7 @@
       }
     }
   },
+  "warningLabel": "Warning:",
   "tryOrInstallTitle": "Try or install {DISTRO}",
   "@tryOrInstallTitle": {
     "placeholders": {
@@ -153,14 +154,7 @@
   "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
   "installCodecsTitle": "Download and install support for additional media formats",
   "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
-  "onBatteryWarning": "<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.",
-  "@onBatteryWarning": {
-    "placeholders": {
-      "color": {
-        "type": "String"
-      }
-    }
-  },
+  "batteryWarning": "The computer is not plugged in to a power source.",
   "offlineWarning": "You are currently offline",
   "choosePassphraseTitle": "Disk passphrase",
   "choosePassphraseHeader": "Create a passphrase",
