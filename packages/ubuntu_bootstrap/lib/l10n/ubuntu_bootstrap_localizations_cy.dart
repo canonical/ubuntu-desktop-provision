@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return 'Preparing $DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Mae\'r feddalwedd hwn yn destun amodau trwyddedu sydd ynghlwm yn y ddogfennaeth. Mae peth yn fasnachol.';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> The computer is not plugged in to a power source.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'You are currently offline';

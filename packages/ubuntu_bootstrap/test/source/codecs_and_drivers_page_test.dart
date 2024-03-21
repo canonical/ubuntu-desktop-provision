@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/source/on_battery_snackbar.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -59,23 +60,19 @@ void main() {
     await tester.pumpApp((_) => buildCodecsAndDriversPage(model));
     await tester.pumpAndSettle();
 
-    final context = tester.element(find.byType(CodecsAndDriversPage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
-    final warning = find.byType(Html);
-    final theme = Theme.of(tester.element(find.byType(Scaffold)));
-    expect(warning, findsOneWidget);
-    expect(
-      tester.widget<Html>(warning).data,
-      equals(l10n.onBatteryWarning(theme.colorScheme.error.toHex())),
-    );
+    // TODO: Should either find a OnBatterySnackBar or find the text when it is
+    // possible.
+    // https: //github.com/flutter/flutter/issues/124859
+    final warningSnackBar = find.byType(SnackBar);
+    expect(warningSnackBar, findsOneWidget);
   });
 
   testWidgets('not on battery', (tester) async {
     final model = buildSourceModel(onBattery: false);
     await tester.pumpApp((_) => buildCodecsAndDriversPage(model));
+    await tester.pumpAndSettle();
 
-    expect(find.byType(Html), findsNothing);
+    expect(find.byType(OnBatterySnackBar), findsNothing);
   });
 
   testWidgets('offline', (tester) async {
