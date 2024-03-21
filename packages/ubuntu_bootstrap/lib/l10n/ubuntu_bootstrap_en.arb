@@ -312,9 +312,18 @@
     }
   },
   "selectGuidedStorageInfo": "Start from scratch on your selected disk.",
-  "selectGuidedStorageDropdownLabel": "Select drive:",
+  "selectGuidedStorageDriveDropdownLabel": "Select drive:",
+  "selectGuidedStoragePartitionDropdownLabel": "Select partition:",
   "selectGuidedStorageInfoLabel": "The entire disk will be used:",
   "selectGuidedStorageInstallNow": "Install now",
+  "guidedStoragePageHeader": "Choose where to install {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
   "installAlongsideSpaceDivider": "Allocate drive space by dragging the divider below:",
   "installAlongsideHiddenPartitions": "{num} smaller partitions are hidden, use the <a href=\"{url}\">advanced partitioning tool</a> for more control",
   "@installAlongsideHiddenPartitions": {

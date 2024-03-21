@@ -257,7 +257,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testGuidedResizePage(
-      sizes: {'ext4': 32768},
+      size: 30,
       screenshot: '$currentThemeName/08.storage-guided-resize',
     );
   }, variant: themeVariant);

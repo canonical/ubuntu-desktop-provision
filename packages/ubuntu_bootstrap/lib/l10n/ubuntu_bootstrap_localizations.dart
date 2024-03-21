@@ -867,11 +867,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Start from scratch on your selected disk.'**
   String get selectGuidedStorageInfo;
 
-  /// No description provided for @selectGuidedStorageDropdownLabel.
+  /// No description provided for @selectGuidedStorageDriveDropdownLabel.
   ///
   /// In en, this message translates to:
   /// **'Select drive:'**
-  String get selectGuidedStorageDropdownLabel;
+  String get selectGuidedStorageDriveDropdownLabel;
+
+  /// No description provided for @selectGuidedStoragePartitionDropdownLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Select partition:'**
+  String get selectGuidedStoragePartitionDropdownLabel;
 
   /// No description provided for @selectGuidedStorageInfoLabel.
   ///
@@ -884,6 +890,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Install now'**
   String get selectGuidedStorageInstallNow;
+
+  /// No description provided for @guidedStoragePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose where to install {DISTRO}'**
+  String guidedStoragePageHeader(String DISTRO);
 
   /// No description provided for @installAlongsideSpaceDivider.
   ///

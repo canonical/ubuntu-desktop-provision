@@ -374,13 +374,21 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'اختر القرص:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'سيُستخدم القرص بأكمله:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Install now';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => 'خصّص مساحة القرص بسحب الفاصل أدناه:';

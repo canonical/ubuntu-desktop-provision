@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -42,7 +41,7 @@ void main() {
 
   testWidgets('Custom icon', (tester) async {
     final mockPageImages = MockPageImages();
-    when(mockPageImages.get(StorageSteps.guidedResize.name))
+    when(mockPageImages.get('storageIcon'))
         .thenReturn(Container(key: const ValueKey('Custom image')));
 
     await tester.pumpWidget(
