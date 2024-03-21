@@ -7,6 +7,7 @@ import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
@@ -22,8 +23,15 @@ void main() {
       .toList();
 
   Widget buildPage(GuidedReformatModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
-      overrides: [guidedReformatModelProvider.overrideWith((_) => model)],
+      overrides: [
+        guidedReformatModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
       child: const GuidedReformatPage(),
     );
   }
@@ -83,7 +91,9 @@ void main() {
     expect(find.text(selectedDisk.sysname), findsOneWidget);
     final context = tester.element(find.byType(GuidedReformatPage));
     expect(
-        find.text(context.formatByteSize(selectedDisk.size)), findsOneWidget);
+      find.text(context.formatByteSize(selectedDisk.size, precision: 1)),
+      findsOneWidget,
+    );
   });
 
   testWidgets('saves guided storage', (tester) async {

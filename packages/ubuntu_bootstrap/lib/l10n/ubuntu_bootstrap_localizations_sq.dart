@@ -373,13 +373,21 @@ class UbuntuBootstrapLocalizationsSq extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'Zgjidh draivin:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Do të përdoret i gjithë disku:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Instalo tani';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => 'Krijo hapësirë duke zvarritur ndarësin këtu poshtë:';

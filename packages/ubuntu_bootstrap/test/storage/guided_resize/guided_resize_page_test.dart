@@ -4,14 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:split_view/split_view.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 import 'guided_resize_model_test.dart';
@@ -86,37 +84,11 @@ void main() {
     );
     await tester.pumpApp((_) => buildPage(model));
 
-    expect(find.byType(SplitView), findsOneWidget);
-    final controller =
-        tester.widget<SplitView>(find.byType(SplitView)).controller;
-    expect(controller, isNotNull);
+    final slider = find.byType(Slider);
+    expect(slider, findsOneWidget);
 
-    controller!.weights = [0.5, 0.5];
+    tester.widget<Slider>(slider).onChanged!(50);
     verify(model.resizeStorage(50)).called(1);
-  });
-
-  testWidgets('hidden partitions', (tester) async {
-    final model = buildGuidedResizeModel(
-      selectedIndex: 1,
-      allPartitions: {
-        1: const [
-          Partition(number: 1),
-          Partition(number: 2),
-          Partition(number: 3),
-          Partition(number: 4),
-          Partition(number: 5),
-        ],
-      },
-    );
-    await tester.pumpApp((_) => buildPage(model));
-
-    final context = tester.element(find.byType(GuidedResizePage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
-    expect(
-      find.html(l10n.installAlongsideHiddenPartitions(4, '')),
-      findsOneWidget,
-    );
   });
 
   testWidgets('alongside none', (tester) async {

@@ -71,7 +71,14 @@ extension WizardThemeDataX on ThemeData {
         style: outlinedButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
       ),
       popupMenuTheme: popupMenuTheme.copyWith(mouseCursor: mouseCursor),
-      sliderTheme: sliderTheme.copyWith(mouseCursor: mouseCursor),
+      sliderTheme: sliderTheme.copyWith(
+        mouseCursor: mouseCursor,
+        valueIndicatorColor: colorScheme.inverseSurface,
+        valueIndicatorStrokeColor: colorScheme.onInverseSurface,
+        valueIndicatorTextStyle:
+            textTheme.bodyMedium!.copyWith(color: colorScheme.onInverseSurface),
+        valueIndicatorShape: const RectangularSliderValueIndicatorShape(),
+      ),
       textButtonTheme: TextButtonThemeData(
         style: textButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
       ),

@@ -624,7 +624,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testGuidedResizePage(sizes: {'sda3 (ntfs)': 40000});
+    await tester.testGuidedResizePage(size: 30);
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -652,17 +652,17 @@ void main() {
 
     const totalSize =
         512 * 166486126; // total size of sda3 from the machine config
-    final newPartitionSize = mibiAlign(toBytes(40000, DataUnit.megabytes));
+    final newPartitionSize = mibiAlign(toBytes(30, DataUnit.gigabytes));
 
     await verifySubiquityConfig(storage: [
       fakeDisk(
         path: '/dev/sda',
         partitions: [
-          Partition(number: 3, size: newPartitionSize),
           Partition(
-              number: 6,
-              size: mibiAlign(totalSize - newPartitionSize, totalSize),
-              mount: '/'),
+            number: 3,
+            size: mibiAlign(totalSize - newPartitionSize, totalSize),
+          ),
+          Partition(number: 6, size: newPartitionSize, mount: '/'),
         ],
       ),
     ]);
