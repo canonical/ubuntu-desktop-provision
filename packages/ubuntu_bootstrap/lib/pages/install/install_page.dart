@@ -7,7 +7,6 @@ import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -90,7 +89,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                     left: kWizardSpacing,
                     right: kWizardSpacing,
                   ),
-                  child: _JournalView(journal: model.log),
+                  child: JournalView(journal: model.log),
                 ),
               ),
             ),
@@ -149,34 +148,6 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
           );
         },
       ),
-    );
-  }
-}
-
-class _JournalView extends StatelessWidget {
-  const _JournalView({required this.journal});
-
-  final Stream<String> journal;
-
-  @override
-  Widget build(BuildContext context) {
-    return LogView(
-      log: journal,
-      padding: const EdgeInsets.symmetric(horizontal: kWizardSpacing),
-      style: TextStyle(
-        inherit: false,
-        fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
-        fontFamily: 'Ubuntu Mono',
-        textBaseline: TextBaseline.alphabetic,
-      ),
-      decoration: const InputDecoration(
-        border: InputBorder.none,
-        enabledBorder: InputBorder.none,
-        focusedBorder: InputBorder.none,
-        fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.symmetric(vertical: kWizardSpacing / 2),
-      ),
-      background: BoxDecoration(color: Theme.of(context).shadowColor),
     );
   }
 }

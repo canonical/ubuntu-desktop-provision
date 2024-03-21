@@ -59,6 +59,7 @@ class _InstallWizard extends ConsumerWidget {
     return WizardBuilder(
       initialRoute: InstallationStep.loading.route,
       userData: WizardData(totalSteps: totalSteps),
+      errorRoute: InstallationStep.error.route,
       routes: {
         InstallationStep.loading.route: WizardRoute(
           builder: (_) => const LoadingPage(),
@@ -73,6 +74,9 @@ class _InstallWizard extends ConsumerWidget {
         InstallationStep.install.route: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
+        ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
         ),
       },
       predicate: (route) {
@@ -112,6 +116,7 @@ class _AutoinstallWizard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return WizardBuilder(
+      errorRoute: InstallationStep.error.route,
       routes: <String, WizardRoute>{
         InstallationStep.loading.route: WizardRoute(
           builder: (_) => const LoadingPage(),
@@ -130,6 +135,9 @@ class _AutoinstallWizard extends ConsumerWidget {
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
+        ),
       },
     );
   }
@@ -142,8 +150,8 @@ class _ErrorWizard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wizard(
       routes: <String, WizardRoute>{
-        InstallationStep.install.route: WizardRoute(
-          builder: (_) => const InstallPage(),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
         ),
       },
     );

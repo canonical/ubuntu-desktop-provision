@@ -348,8 +348,32 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @errorPageUnexpected.
   ///
   /// In en, this message translates to:
-  /// **'An unexpected error has occurred'**
+  /// **'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.'**
   String get errorPageUnexpected;
+
+  /// No description provided for @errorPageShowLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Show log'**
+  String get errorPageShowLog;
+
+  /// No description provided for @errorPageHideLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide log'**
+  String get errorPageHideLog;
+
+  /// No description provided for @restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get restart;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
 
   /// No description provided for @timezonePageTitle.
   ///
