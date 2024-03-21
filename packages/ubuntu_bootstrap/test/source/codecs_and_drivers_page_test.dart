@@ -1,13 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/source/on_battery_snackbar.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
-import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'test_source.dart';
