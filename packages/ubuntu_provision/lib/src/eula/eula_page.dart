@@ -25,7 +25,6 @@ class _EULAPageState extends State<EULAPage> {
       windowTitle: lang.eulaPageTitle,
       title: lang.eulaReviewTerms,
       isNextEnabled: false,
-      managedScrolling: false,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -37,7 +36,8 @@ class _EULAPageState extends State<EULAPage> {
       children: [
         Text(lang.eulaReadAndAcceptTerms),
         const SizedBox(height: kWizardSpacing),
-        Expanded(
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxHeight: 250),
           child: YaruBorderContainer(
             padding: const EdgeInsets.all(kWizardSpacing),
             borderRadius: BorderRadius.circular(0),
@@ -80,25 +80,13 @@ class _EULAPageState extends State<EULAPage> {
           ),
         ),
         const SizedBox(height: kWizardSpacing),
-        CheckboxListTile(
-          fillColor: MaterialStateProperty.resolveWith<Color?>((states) {
-            if (states.contains(MaterialState.selected)) {
-              return Theme.of(context).colorScheme.primary;
-            }
-            return Theme.of(context).colorScheme.background;
-          }),
-          controlAffinity: ListTileControlAffinity.leading,
+        YaruCheckButton(
           title: Text(
             lang.eulaAcceptTerms,
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
           ),
           value: _hasAcceptedTerms,
           onChanged: (value) => setState(
-            () {
-              _hasAcceptedTerms = !_hasAcceptedTerms;
-            },
+            () => _hasAcceptedTerms = !_hasAcceptedTerms,
           ),
         ),
       ],
