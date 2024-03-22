@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
@@ -129,12 +131,22 @@ extension UbuntuProvisionPageTester on WidgetTester {
 
     expect(find.titleBar(l10n.eulaPageTitle), findsOneWidget);
 
-    final tile = find.text(l10n.eulaAcceptTerms);
+    final text = find.text(l10n.eulaAcceptTerms);
+    expect(text, findsOneWidget);
 
-    if (tile.evaluate().isNotEmpty) {
-      await tap(tile);
-    }
+    final checkboxTileFinder = find.byType(CheckboxListTile);
+    expect(checkboxTileFinder, findsOneWidget);
+    final checkboxFinder = find.descendant(
+      of: checkboxTileFinder,
+      matching: find.byType(Checkbox),
+    );
+    expect(checkboxFinder, findsOneWidget);
+    final checkboxBefore = checkboxFinder.evaluate().first.widget as Checkbox;
+    expect(checkboxBefore.value, isFalse);
+    await tap(checkboxFinder);
     await pumpAndSettle();
+    final checkboxAfter = checkboxFinder.evaluate().first.widget as Checkbox;
+    expect(checkboxAfter.value, isTrue);
   }
 
   Future<void> testTimezonePage({
