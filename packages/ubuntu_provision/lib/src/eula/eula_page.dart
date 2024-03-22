@@ -25,6 +25,8 @@ class _EULAPageState extends State<EULAPage> {
       windowTitle: lang.eulaPageTitle,
       title: lang.eulaReviewTerms,
       isNextEnabled: false,
+      managedScrolling: false,
+      contentFlex: 100,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -36,8 +38,7 @@ class _EULAPageState extends State<EULAPage> {
       children: [
         Text(lang.eulaReadAndAcceptTerms),
         const SizedBox(height: kWizardSpacing),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxHeight: 250),
+        Expanded(
           child: YaruBorderContainer(
             padding: const EdgeInsets.all(kWizardSpacing),
             borderRadius: BorderRadius.circular(0),
