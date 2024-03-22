@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package copy; 
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service CopyService {
+    rpc CopySettings(CopySettingsRequest) returns (google.protobuf.Empty);
+}
+
+message CopySettingsRequest{
+    string username = 1;
+}
+
