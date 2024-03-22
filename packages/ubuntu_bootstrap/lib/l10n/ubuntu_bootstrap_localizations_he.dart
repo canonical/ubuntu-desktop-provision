@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return 'המערכת **$system** מותקנת ומוכנה לשימוש';
+    return 'המערכת $system מותקנת ומוכנה לשימוש';
   }
 
   @override

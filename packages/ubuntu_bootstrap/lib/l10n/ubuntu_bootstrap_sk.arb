@@ -552,7 +552,7 @@
       "sysname": {}
     }
   },
-  "readyToUse": "**{system}** je nainštalované a pripravené na použitie",
+  "readyToUse": "{system} je nainštalované a pripravené na použitie",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

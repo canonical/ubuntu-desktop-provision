@@ -225,7 +225,7 @@
   "@restartIntoWindows": {},
   "installationCompleteTitle": "ഇൻസ്റ്റലേഷൻ പൂർത്തിയായി",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** ഇൻസ്റ്റാൾ ചെയ്‌ത് ഉപയോഗിക്കാൻ തയ്യാറാണ്.",
+  "readyToUse": "{system} ഇൻസ്റ്റാൾ ചെയ്‌ത് ഉപയോഗിക്കാൻ തയ്യാറാണ്.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

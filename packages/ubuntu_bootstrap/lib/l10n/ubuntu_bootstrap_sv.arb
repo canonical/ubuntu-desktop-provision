@@ -26,7 +26,7 @@
   "@partitionMountPointLabel": {},
   "partitionTypePrimary": "Primär",
   "@partitionTypePrimary": {},
-  "readyToUse": "**{system}** är installerat och redo att användas",
+  "readyToUse": "{system} är installerat och redo att användas",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** のインストールは完了し、使い始める準備が整いました';
+    return '$system のインストールは完了し、使い始める準備が整いました';
   }
 
   @override

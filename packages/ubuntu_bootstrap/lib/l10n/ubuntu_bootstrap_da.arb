@@ -427,7 +427,7 @@
   },
   "installationSlidesCreativityTitle": "Berig din kreativitet",
   "@installationSlidesCreativityTitle": {},
-  "readyToUse": "**{system}** er installeret og klar til brug",
+  "readyToUse": "{system} er installeret og klar til brug",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

@@ -217,7 +217,7 @@
   "@installationTypeManual": {},
   "selectGuidedStorageInstallNow": "اکنون نصب شود",
   "@selectGuidedStorageInstallNow": {},
-  "readyToUse": "**{system}** نصب شده و آمادهٔ استفاده است",
+  "readyToUse": "{system} نصب شده و آمادهٔ استفاده است",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

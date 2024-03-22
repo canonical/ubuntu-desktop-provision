@@ -42,7 +42,7 @@
   "@updatesOtherSoftwarePageDescription": {},
   "bitlockerDescription": "המחשב הזה משתמש בהצפנת BitLocker של Windows.\nיש להשתמש ב־Windows כדי לפנות מקום או לבחור ב‚{option}’ כדי להמשיך.",
   "@bitlockerDescription": {},
-  "readyToUse": "המערכת **{system}** מותקנת ומוכנה לשימוש",
+  "readyToUse": "המערכת {system} מותקנת ומוכנה לשימוש",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

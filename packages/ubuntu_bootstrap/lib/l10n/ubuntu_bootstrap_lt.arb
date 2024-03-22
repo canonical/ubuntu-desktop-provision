@@ -398,7 +398,7 @@
   "@freeDiskSpace": {},
   "tooManyPrimaryPartitions": "Per daug pirminių skirsnių",
   "@tooManyPrimaryPartitions": {},
-  "readyToUse": "**{system}** įdiegta ir paruošta naudoti",
+  "readyToUse": "{system} įdiegta ir paruošta naudoti",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

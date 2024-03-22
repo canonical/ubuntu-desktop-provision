@@ -136,7 +136,7 @@
   "@confirmPageTitle": {},
   "installationCompleteTitle": "Установка завершена",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** установлена и готова к использованию",
+  "readyToUse": "{system} установлена и готова к использованию",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
