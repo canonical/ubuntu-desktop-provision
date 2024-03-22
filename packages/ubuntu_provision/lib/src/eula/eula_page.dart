@@ -83,6 +83,9 @@ class _EULAPageState extends State<EULAPage> {
         YaruCheckButton(
           title: Text(
             lang.eulaAcceptTerms,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
           ),
           value: _hasAcceptedTerms,
           onChanged: (value) => setState(
