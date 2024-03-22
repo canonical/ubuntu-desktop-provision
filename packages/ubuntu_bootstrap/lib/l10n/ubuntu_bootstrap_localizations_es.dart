@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** está instalado y listo para usarse';
+    return '$system está instalado y listo para usarse';
   }
 
   @override

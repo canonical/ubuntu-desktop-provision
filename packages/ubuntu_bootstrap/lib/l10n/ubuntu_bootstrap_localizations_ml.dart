@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsMl extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** ഇൻസ്റ്റാൾ ചെയ്‌ത് ഉപയോഗിക്കാൻ തയ്യാറാണ്.';
+    return '$system ഇൻസ്റ്റാൾ ചെയ്‌ത് ഉപയോഗിക്കാൻ തയ്യാറാണ്.';
   }
 
   @override

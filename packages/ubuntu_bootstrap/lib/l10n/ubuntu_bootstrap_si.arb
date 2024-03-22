@@ -145,7 +145,7 @@
   "@shutdown": {},
   "bitlockerTitle": "බිට්ලොකර් අක්‍රිය කරන්න",
   "@bitlockerTitle": {},
-  "readyToUse": "**{system}** ස්ථාපිත බැවින් භාවිතයට සූදානම්.",
+  "readyToUse": "{system} ස්ථාපිත බැවින් භාවිතයට සූදානම්.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

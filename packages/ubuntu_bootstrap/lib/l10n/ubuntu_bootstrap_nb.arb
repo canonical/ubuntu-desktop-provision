@@ -248,7 +248,7 @@
   "@confirmPageTitle": {},
   "installationCompleteTitle": "Installasjon fullført",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** er installert og klart til bruk.",
+  "readyToUse": "{system} er installert og klart til bruk.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

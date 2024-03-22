@@ -85,7 +85,7 @@
   "@partitionErase": {},
   "installationCompleteTitle": "安装完成",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** 已经安装并准备好使用了",
+  "readyToUse": "{system} 已经安装并准备好使用了",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

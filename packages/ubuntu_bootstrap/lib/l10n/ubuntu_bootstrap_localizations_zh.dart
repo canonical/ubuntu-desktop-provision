@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** 已经安装并准备好使用了';
+    return '$system 已经安装并准备好使用了';
   }
 
   @override
@@ -1398,7 +1398,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String readyToUse(String system) {
-    return '**$system** 安裝完成，可以開始使用';
+    return '$system 安裝完成，可以開始使用';
   }
 
   @override

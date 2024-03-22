@@ -81,7 +81,7 @@
   },
   "dontInstallDriverSoftwareNowDescription": "Ви можете встановити його пізніше з розділу \"Програми та оновлення\".",
   "@dontInstallDriverSoftwareNowDescription": {},
-  "readyToUse": "**{system}** встановлена та готова до використання.",
+  "readyToUse": "{system} встановлена та готова до використання.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

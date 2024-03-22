@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** está instalado e pronto a usar';
+    return '$system está instalado e pronto a usar';
   }
 
   @override
@@ -1398,7 +1398,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String readyToUse(String system) {
-    return '**$system** está instalado e pronto pra uso';
+    return '$system está instalado e pronto pra uso';
   }
 
   @override

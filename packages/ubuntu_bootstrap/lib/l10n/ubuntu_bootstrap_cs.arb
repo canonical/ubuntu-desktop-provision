@@ -196,7 +196,7 @@
       "system": {}
     }
   },
-  "readyToUse": "**{system}** je nainstalované a připravené k použití",
+  "readyToUse": "{system} je nainstalované a připravené k použití",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** je nainštalované a pripravené na použitie';
+    return '$system je nainštalované a pripravené na použitie';
   }
 
   @override

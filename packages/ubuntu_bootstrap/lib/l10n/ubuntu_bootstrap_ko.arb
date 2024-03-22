@@ -236,7 +236,7 @@
   "@shutdown": {},
   "installationCompleteTitle": "설치 완료",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** 설치가 완료 되었으며 사용할 준비가 되었습니다",
+  "readyToUse": "{system} 설치가 완료 되었으며 사용할 준비가 되었습니다",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

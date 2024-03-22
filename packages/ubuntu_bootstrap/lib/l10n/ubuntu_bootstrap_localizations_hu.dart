@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return 'A(z) **$system** telepítve van és használatra kész';
+    return 'A(z) $system telepítve van és használatra kész';
   }
 
   @override

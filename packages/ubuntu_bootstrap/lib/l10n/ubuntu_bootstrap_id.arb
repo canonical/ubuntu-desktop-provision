@@ -202,7 +202,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Instalasi selesai",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** telah terpasang dan siap digunakan.",
+  "readyToUse": "{system} telah terpasang dan siap digunakan.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

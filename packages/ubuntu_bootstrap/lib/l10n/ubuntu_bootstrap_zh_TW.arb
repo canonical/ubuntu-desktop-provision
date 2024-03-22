@@ -613,7 +613,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "安裝完成",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** 安裝完成，可以開始使用",
+  "readyToUse": "{system} 安裝完成，可以開始使用",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

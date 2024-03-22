@@ -198,7 +198,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Instalação concluída",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** está instalado e pronto a usar",
+  "readyToUse": "{system} está instalado e pronto a usar",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
