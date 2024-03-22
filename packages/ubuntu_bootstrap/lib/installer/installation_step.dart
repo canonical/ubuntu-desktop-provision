@@ -25,7 +25,8 @@ enum InstallationStep with RouteName {
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
   confirm(ConfirmPage.new),
-  install(InstallPage.new, discreteStep: false, wizardStep: false);
+  install(InstallPage.new, discreteStep: false, wizardStep: false),
+  error(_errorPageFactory, discreteStep: false, wizardStep: false);
 
   const InstallationStep(
     this.pageFactory, {
@@ -76,4 +77,8 @@ enum InstallationStep with RouteName {
 
   static Iterable<String> get allowedToHideKeys =>
       values.where((e) => e.allowedToHide).map((e) => e.name);
+}
+
+ProvisioningPage _errorPageFactory() {
+  return const ErrorPage(allowRestart: true);
 }

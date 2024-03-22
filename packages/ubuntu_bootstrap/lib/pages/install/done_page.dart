@@ -24,7 +24,7 @@ class DonePage extends ConsumerWidget {
         children: [
           const Spacer(),
           Expanded(
-            flex: 3,
+            flex: 7,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -35,6 +35,7 @@ class DonePage extends ConsumerWidget {
                       ? lang.rebootToConfigure(model.productInfo.toString())
                       : lang.readyToUse(model.productInfo.toString()),
                   style: theme.textTheme.headlineSmall,
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: kWizardSpacing),
                 Text(

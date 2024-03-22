@@ -264,7 +264,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Enter the autoinstall.yaml URL.'**
+  /// **'Enter the autoinstall.yaml URL:'**
   String get autoinstallInstructions;
 
   /// No description provided for @autoinstallInteractiveOption.
@@ -314,6 +314,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Preparing {DISTRO}…'**
   String loadingHeader(String DISTRO);
+
+  /// No description provided for @warningLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning:'**
+  String get warningLabel;
 
   /// No description provided for @tryOrInstallTitle.
   ///
@@ -567,11 +573,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
-  /// No description provided for @onBatteryWarning.
+  /// No description provided for @batteryWarning.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.'**
-  String onBatteryWarning(String color);
+  /// **'The computer is not plugged in to a power source.'**
+  String get batteryWarning;
 
   /// No description provided for @offlineWarning.
   ///
@@ -861,11 +867,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Start from scratch on your selected disk.'**
   String get selectGuidedStorageInfo;
 
-  /// No description provided for @selectGuidedStorageDropdownLabel.
+  /// No description provided for @selectGuidedStorageDriveDropdownLabel.
   ///
   /// In en, this message translates to:
   /// **'Select drive:'**
-  String get selectGuidedStorageDropdownLabel;
+  String get selectGuidedStorageDriveDropdownLabel;
+
+  /// No description provided for @selectGuidedStoragePartitionDropdownLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Select partition:'**
+  String get selectGuidedStoragePartitionDropdownLabel;
 
   /// No description provided for @selectGuidedStorageInfoLabel.
   ///
@@ -878,6 +890,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Install now'**
   String get selectGuidedStorageInstallNow;
+
+  /// No description provided for @guidedStoragePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose where to install {DISTRO}'**
+  String guidedStoragePageHeader(String DISTRO);
 
   /// No description provided for @installAlongsideSpaceDivider.
   ///

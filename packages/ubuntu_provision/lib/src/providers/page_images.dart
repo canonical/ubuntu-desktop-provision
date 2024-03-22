@@ -134,23 +134,38 @@ class PageImages {
     final packageRegExp = RegExp('packages/(.*?)/');
     final match = packageRegExp.firstMatch(imagePath);
     final packageName = match?.group(1);
+    final imageName = imagePath.split('/').last;
+    final excludedFromColorMapping = [
+      'mascot.svg',
+      'try-or-install.svg',
+      'logo-light.svg',
+      'logo-dark.svg',
+    ];
 
     final extension = path.extension(imagePath);
     if (extension == '.svg') {
       final svgContent = await rootBundle.loadString(imagePath);
-      _loadSvgFromString(svgContent, pageName);
+      _loadSvgFromString(
+        svgContent,
+        pageName,
+        !excludedFromColorMapping.contains(imageName),
+      );
     } else {
       images[pageName] = Image.asset(imagePath, package: packageName);
     }
   }
 
-  void _loadSvgFromString(String svgContent, String pageName) {
+  void _loadSvgFromString(
+    String svgContent,
+    String pageName, [
+    bool mapColors = true,
+  ]) {
     for (final darkMode in [false, if (_hasUniqueAccentColors) true]) {
       final accentColor = _accentColor(darkMode: darkMode);
       final image = SvgPicture(
         SvgStringLoader(
           svgContent,
-          colorMapper: _AccentColorMapper(accentColor),
+          colorMapper: mapColors ? _AccentColorMapper(accentColor) : null,
         ),
       );
 

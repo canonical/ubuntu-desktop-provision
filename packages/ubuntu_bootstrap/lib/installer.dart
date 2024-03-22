@@ -63,8 +63,6 @@ Future<void> runInstallerApp(
       Logger.setup(path: liveRun ? '/var/log/installer/$exe.log' : null);
 
   final serverMode = liveRun ? ServerMode.LIVE : ServerMode.DRY_RUN;
-  final subiquityPath = await getSubiquityPath()
-      .then((dir) => Directory(dir).existsSync() ? dir : null);
   final endpoint = await defaultEndpoint(serverMode);
   final includeTryOrInstall = options['try-or-install'] as bool? ?? false;
   final process = liveRun
@@ -72,7 +70,8 @@ Future<void> runInstallerApp(
       : SubiquityProcess.python(
           'subiquity.cmd.server',
           serverMode: ServerMode.DRY_RUN,
-          subiquityPath: subiquityPath,
+          subiquityPath: await getSubiquityPath()
+              .then((dir) => Directory(dir).existsSync() ? dir : null),
         );
 
   final baseName = p.basename(Platform.resolvedExecutable);

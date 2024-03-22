@@ -23,11 +23,15 @@ class HorizontalPage extends ConsumerWidget {
       3 * kYaruPagePadding,
       kYaruPagePadding,
     ),
-    this.contentFlex = 6,
     this.bottomBar,
     this.snackBar,
+    int? contentFlex,
     super.key,
-  });
+  })  : assert(
+          !managedScrolling || contentFlex == null,
+          'contentFlex has no effect unless managedScrolling is set to false.',
+        ),
+        _contentFlex = contentFlex ?? 1;
 
   /// The title for the title bar.
   final String windowTitle;
@@ -63,7 +67,7 @@ class HorizontalPage extends ConsumerWidget {
   /// How much the content should flex compared to the expanded above and below
   /// the content (which defaults to a flexing value of 1).
   /// If [managedScrolling] is set to false, this value is ignored.
-  final int contentFlex;
+  final int _contentFlex;
 
   /// Override of the default bottom bar.
   final Widget? bottomBar;
@@ -78,7 +82,7 @@ class HorizontalPage extends ConsumerWidget {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
-    final isSmallWindow = windowSize.width < 960 || windowSize.height < 680;
+    final isSmallWindow = windowSize.width < 700 || windowSize.height < 500;
     final adjustedPadding =
         isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
     final scrollBarPadding =
@@ -111,26 +115,24 @@ class HorizontalPage extends ConsumerWidget {
                     ),
                   ],
                   Expanded(
-                    flex: managedScrolling ? 1 : contentFlex,
+                    flex: managedScrolling ? 1 : _contentFlex,
                     child: managedScrolling
                         ? Center(
-                            child: Padding(
-                              padding: hoverPadding +
-                                  EdgeInsets.only(right: scrollBarPadding),
-                              child: Scrollbar(
+                            child: Scrollbar(
+                              controller: _scrollController,
+                              thumbVisibility: true,
+                              child: ListView(
+                                padding: hoverPadding +
+                                    EdgeInsets.only(right: scrollBarPadding),
+                                shrinkWrap: true,
                                 controller: _scrollController,
-                                thumbVisibility: true,
-                                child: ListView(
-                                  shrinkWrap: true,
-                                  controller: _scrollController,
-                                  children: [
-                                    _Headline(
-                                      title: title,
-                                      trailingTitleWidget: trailingTitleWidget,
-                                    ),
-                                    ...children,
-                                  ],
-                                ),
+                                children: [
+                                  _Headline(
+                                    title: title,
+                                    trailingTitleWidget: trailingTitleWidget,
+                                  ),
+                                  ...children,
+                                ],
                               ),
                             ),
                           )

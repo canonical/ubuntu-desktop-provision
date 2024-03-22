@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return 'Preparing $DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">Peringatan</font>: Komputer tidak tertancam ke suatu sumber listrik.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'You are currently offline';
@@ -373,13 +374,21 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'Pilih drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Seluruh disk akan digunakan:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Pasang Sekarang';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_provision/providers.dart';
 
@@ -28,9 +26,8 @@ class StorageIcon extends ConsumerWidget {
       asset = 'block-device';
     }
 
-    final overrideIcon = useCustomIcon
-        ? ref.watch(pageImagesProvider).get(StorageSteps.guidedResize.name)
-        : null;
+    final overrideIcon =
+        useCustomIcon ? ref.watch(pageImagesProvider).get('storageIcon') : null;
 
     return SizedBox.square(
       dimension: 48,

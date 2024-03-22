@@ -12,7 +12,7 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
-    image: "assets/mascot.png"
+    image: "assets/images/mascot.svg"
   autoinstall:
     image: "assets/images/disk.svg"
   source-selection:
@@ -28,7 +28,9 @@ pages:
   eula:
     image: "assets/images/keyboard.svg"
   guided-resize:
-    image: "assets/images/ubuntu_storage_icon.svg"
+    image: "assets/images/disk.svg"
+  guided-reformat:
+    image: "assets/images/disk.svg"
   passphrase:
     image: "assets/images/passphrase.svg"
   confirm:
@@ -44,4 +46,8 @@ pages:
     image: "assets/images/telemetry.svg"
   welcome:
   done:
-    image: "assets/mascot.png"
+    image: "assets/images/mascot.svg"
+  storage-icon:
+    image: "assets/images/ubuntu_storage_icon.svg"
+  error:
+    image: "assets/images/error.svg"

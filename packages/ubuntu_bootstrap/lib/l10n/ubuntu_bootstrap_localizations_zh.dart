@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
   String get autoinstallInteractiveOption => 'Interactive installation';
@@ -50,6 +50,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String loadingHeader(String DISTRO) {
     return '正在准备 $DISTRO…';
   }
+
+  @override
+  String get warningLabel => 'Warning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -198,9 +201,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => '这些软件受其文档中包含的许可条款约束。其中部分软件是专有软件。';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">警告</font>：电脑未接入电源适配器。';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => '您当前处于离线状态';
@@ -373,13 +374,21 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => '选择磁盘：';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => '将使用整块磁盘：';
 
   @override
   String get selectGuidedStorageInstallNow => '立即安装';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => '拖曳下面的分隔符分配磁盘空间：';
@@ -1101,11 +1110,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installCodecsSubtitle => '這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">警告：</font>本電腦沒有外部電源供應。';
-  }
-
-  @override
   String get offlineWarning => '您目前已離線';
 
   @override
@@ -1210,9 +1214,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String selectGuidedStoragePageTitle(String DISTRO) {
     return '清除硬碟並安裝 $DISTRO';
   }
-
-  @override
-  String get selectGuidedStorageDropdownLabel => '選取硬碟：';
 
   @override
   String get selectGuidedStorageInfoLabel => '會使用整部硬碟：';

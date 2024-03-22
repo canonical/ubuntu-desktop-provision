@@ -32,7 +32,7 @@ class WifiRadioButton extends ConsumerWidget {
         !model.isEnabled ? lang.networkWifiOff : lang.networkWifiNone;
 
     return Padding(
-      padding: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: YaruRadioButton<ConnectMode>(
         title: Text(isEnabled ? lang.networkWifiOption : disabledTitle),
         value: ConnectMode.wifi,
@@ -95,7 +95,7 @@ class _WifiViewState extends ConsumerState<WifiView> {
     return AnimatedExpanded(
       expanded: widget.expanded,
       child: Padding(
-        padding: kWizardIndentedPadding,
+        padding: kWizardIndentation,
         child: WifiListView(onSelected: widget.onSelected),
       ),
     );

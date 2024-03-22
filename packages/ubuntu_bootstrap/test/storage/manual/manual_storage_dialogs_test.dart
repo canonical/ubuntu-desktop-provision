@@ -23,7 +23,7 @@ import 'test_manual_storage.dart';
 void main() {
   testWidgets('create partition', (tester) async {
     final disk = fakeDisk();
-    const gap = Gap(offset: 0, size: 1000000, usable: GapUsable.YES);
+    const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
     final model = buildManualStorageModel(selectedDisk: disk);
 
     registerMockService<UdevService>(MockUdevService());
@@ -45,7 +45,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey(DataUnit.bytes)).last);
     await tester.pump();
 
-    await tester.enterText(find.byType(SpinBox), '123');
+    await tester.enterText(find.byType(SpinBox), '12345678');
     await tester.pump();
 
     await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
@@ -63,7 +63,7 @@ void main() {
     verify(model.addPartition(
       disk,
       gap,
-      size: 123,
+      size: mibiAlign(12345678, gap.size),
       format: PartitionFormat.btrfs,
       mount: '/tst',
     )).called(1);

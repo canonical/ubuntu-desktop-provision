@@ -17,7 +17,7 @@ enum InitStep with RouteName {
   privacy(PrivacyPage.new, hasPrevious: false),
   timezone(TimezonePage.new, hasPrevious: false),
   telemetry(TelemetryPage.new, hasPrevious: false),
-  error(ErrorPage.new, wizardStep: false, discreteStep: false);
+  error(_errorPageFactory, wizardStep: false, discreteStep: false);
 
   const InitStep(
     this.pageFactory, {
@@ -83,4 +83,8 @@ enum WelcomeStep with RouteName {
   static WelcomeStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+}
+
+ProvisioningPage _errorPageFactory() {
+  return const ErrorPage(allowRestart: false);
 }

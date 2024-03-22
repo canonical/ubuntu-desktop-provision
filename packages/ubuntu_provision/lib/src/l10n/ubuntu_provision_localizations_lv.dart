@@ -63,7 +63,19 @@ class UbuntuProvisionLocalizationsLv extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Something went wrong';
 
   @override
-  String get errorPageUnexpected => 'An unexpected error has occurred';
+  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+
+  @override
+  String get errorPageShowLog => 'Show log';
+
+  @override
+  String get errorPageHideLog => 'Hide log';
+
+  @override
+  String get restart => 'Restart';
+
+  @override
+  String get close => 'Close';
 
   @override
   String get timezonePageTitle => 'Select your timezone';
