@@ -17,9 +17,6 @@ case "$1" in
         chown root:gnome-initial-setup /usr/libexec/sprovd
         chown root:gnome-initial-setup /usr/bin/provd
         chmod u+s /usr/libexec/sprovd
-        
-        # Set gnome-initial-setup to launch the init-script instead of the gnome-initial-setup bin
-        sed -i 's|Exec=.*|Exec=/usr/bin/launch-desktop-provision-init.sh|' /usr/share/applications/gnome-initial-setup.desktop
         ;;
 esac
 
