@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/eula.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru_test/yaru_test.dart';
 
 import '../test_utils.dart';
 
@@ -22,24 +22,20 @@ void main() {
       ),
     );
 
-    final eulaCheckboxFinder = find.byType(CheckboxListTile);
-    expect(eulaCheckboxFinder, findsOneWidget);
-
-    final eulaCheckbox = tester.widget(eulaCheckboxFinder) as CheckboxListTile;
-    expect(eulaCheckbox.value, false);
-
     final nextButtonFinder = find.byType(NextWizardButton);
     expect(nextButtonFinder, findsOneWidget);
 
     final nextButton = tester.widget(nextButtonFinder) as NextWizardButton;
     expect(nextButton.enabled, false);
 
-    await tester.tap(eulaCheckboxFinder);
+    final eulaPage = find.byType(EULAPage);
+    final l10n = EULALocalizations.of(tester.element(eulaPage));
+    final checkbox = find.checkButton(l10n.eulaAcceptTerms);
+    expect(checkbox, findsOneWidget);
+    expect(checkbox, isNotChecked);
+    await tester.tap(checkbox);
     await tester.pumpAndSettle();
-
-    final eulaCheckboxPostTap =
-        tester.widget(eulaCheckboxFinder) as CheckboxListTile;
-    expect(eulaCheckboxPostTap.value, true);
+    expect(checkbox, isChecked);
 
     final nextButtonPostTap =
         tester.widget(nextButtonFinder) as NextWizardButton;
