@@ -33,4 +33,6 @@ const (
 	DbusLocalePrefix = "org.freedesktop.locale1"
 	// DbusTimedatePrefix is the prefix for the Timezone D-Bus interface.
 	DbusTimedatePrefix = "org.freedesktop.timedate1"
+	// DbusGdmPrefix is the prefix for the GDM D-Bus interface.
+	DbusGdmPrefix = "org.gnome.DisplayManager"
 )

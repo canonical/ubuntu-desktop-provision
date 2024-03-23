@@ -90,6 +90,7 @@ func TestMain(m *testing.M) {
 	flag.Parse()
 
 	defer testutils.StartLocalSystemBus()()
+	defer testutils.CleanupPrivateBuses()
 
 	conn, err := testutils.GetSystemBusConnection()
 
@@ -118,6 +119,12 @@ func TestMain(m *testing.M) {
 	err = testutils.ExportTimedateMock(conn)
 	if err != nil {
 		slog.Error(fmt.Sprintf("Could not export Timezone mock: %v", err))
+		os.Exit(1)
+	}
+
+	err = testutils.ExportGdmMock(conn)
+	if err != nil {
+		slog.Error(fmt.Sprintf("Could not export Desktop mock: %v", err))
 		os.Exit(1)
 	}
 

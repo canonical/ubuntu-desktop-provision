@@ -8,6 +8,7 @@ import (
 	"log/slog"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/gdm"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -29,6 +30,7 @@ type Manager struct {
 	privacyService       privacy.Service
 	timezoneService      timezone.Service
 	accessibilityService accessibility.Service
+	gdmService           gdm.Service
 	bus                  *dbus.Conn
 }
 
@@ -76,6 +78,11 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		errs = errors.Join(errs, fmt.Errorf("failed to create accessibility service: %s", err))
 	}
 
+	gdmService, err := gdm.New(bus)
+	if err != nil {
+		errs = errors.Join(errs, fmt.Errorf("failed to create gdm service: %s", err))
+	}
+
 	if errs != nil {
 		return nil, status.Errorf(codes.Internal, "%s", errs)
 	}
@@ -87,6 +94,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		privacyService:       *privacyService,
 		timezoneService:      *timezoneService,
 		accessibilityService: *accessibilityService,
+		gdmService:           *gdmService,
 		bus:                  bus,
 	}, nil
 }
@@ -103,6 +111,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterPrivacyServiceServer(grpcServer, &m.privacyService)
 	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
+	pb.RegisterGdmServiceServer(grpcServer, &m.gdmService)
 	return grpcServer
 }
 
@@ -110,5 +119,6 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 func (m *Manager) Stop() error {
 	slog.Debug("Closing grpc manager and dbus connection")
 
+	m.gdmService.Close()
 	return m.bus.Close()
 }

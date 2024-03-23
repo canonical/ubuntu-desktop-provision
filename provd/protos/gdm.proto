@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package gdm;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service GdmService {
+  rpc LaunchDesktopSession(GdmServiceRequest) returns (google.protobuf.Empty) {}
+}
+
+message GdmServiceRequest {
+  string username = 1;
+  string password = 2;
+}
