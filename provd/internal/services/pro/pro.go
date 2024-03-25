@@ -223,7 +223,7 @@ func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	proAttachPath := "/usr/libexec/sprovd"
 
 	// Run the pro attach command with the contract token
-	out, err := exec.CommandContext(ctx, proAttachPath, token).CombinedOutput()
+	out, err := exec.CommandContext(ctx, proAttachPath, "--token", token).CombinedOutput()
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to run pro attach: %v\nOutput: %s", err, string(out)))
 		return fmt.Errorf("failed to run pro attach: %v\nOutput: %s", err, string(out))
