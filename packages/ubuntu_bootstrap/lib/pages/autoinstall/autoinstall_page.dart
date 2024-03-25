@@ -10,21 +10,14 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
 
-class AutoinstallPage extends ConsumerStatefulWidget with ProvisioningPage {
+class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
   const AutoinstallPage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async => true;
 
   @override
-  ConsumerState<AutoinstallPage> createState() => _AutoinstallPageState();
-}
-
-class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
-  bool autoinstall = false;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(autoinstallModelProvider);
     final flavor = ref.watch(flavorProvider);
@@ -35,7 +28,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
         leading: const BackWizardButton(),
         trailing: [
           WizardButton(
-            visible: !autoinstall,
+            visible: !model.autoinstall,
             label: UbuntuLocalizations.of(context).nextLabel,
             onActivated: Wizard.of(context).next,
           )
@@ -46,25 +39,27 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
           title: Text(lang.autoinstallInteractiveOption),
           subtitle: Text(lang.autoinstallInteractiveDescription),
           value: false,
-          groupValue: autoinstall,
-          onChanged: (value) => setState(() => autoinstall = value ?? false),
+          groupValue: model.autoinstall,
+          onChanged: (value) =>
+              ref.read(autoinstallModelProvider).autoinstall = value ?? false,
         ),
         const SizedBox(height: kWizardSpacing / 2),
         OptionButton(
           title: Text(lang.autoinstallAutomatedOption),
           subtitle: Text(lang.autoinstallAutomatedDescription),
           value: true,
-          groupValue: autoinstall,
-          onChanged: (value) => setState(() => autoinstall = value ?? false),
+          groupValue: model.autoinstall,
+          onChanged: (value) =>
+              ref.read(autoinstallModelProvider).autoinstall = value ?? false,
         ),
         const SizedBox(height: kWizardSpacing),
         AnimatedSize(
           duration: const Duration(milliseconds: 300),
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 500),
-            opacity: autoinstall ? 1 : 0,
+            opacity: model.autoinstall ? 1 : 0,
             child: SizedBox(
-              height: autoinstall ? 160 : 0,
+              height: model.autoinstall ? 160 : 0,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
