@@ -353,7 +353,7 @@ void main() {
     testValid('real', 'host', 'user', 'passwd', 'mismatch', isFalse);
 
     // real name validation
-    testValid('', 'host', 'user', 'passwd', 'passwd', isTrue);
+    testValid('', 'host', 'user', 'passwd', 'passwd', isFalse);
     testValid(
         'these are slightly more than the allowed one hundred and sixty characters for the extraordinarily lengthy name of the user who is currently running the installer',
         'host',
