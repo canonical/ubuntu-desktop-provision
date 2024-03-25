@@ -91,6 +91,12 @@ accessibility.AccessibilityService:
           isclientstream: false
           isserverstream: false
     metadata: protos/accessibility.proto
+copy.CopyService:
+    methods:
+        - name: CopySettings
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/copy.proto
 keyboard.KeyboardService:
     methods:
         - name: GetKeyboard
