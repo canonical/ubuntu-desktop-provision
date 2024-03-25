@@ -6,7 +6,9 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"os/user"
 	"regexp"
+	"strconv"
 	"syscall"
 )
 
@@ -64,11 +66,33 @@ func copyConfigFiles(username string) {
 		".local/share/keyrings/login.keyring",
 	}
 
+	usr, err := user.Lookup(username)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error looking up user %s: %s\n", username, err)
+		os.Exit(1)
+	}
+
+	uid, err := strconv.Atoi(usr.Uid)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error converting UID to int: %s\n", err)
+		os.Exit(1)
+	}
+
+	gid, err := strconv.Atoi(usr.Gid)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error converting GID to int: %s\n", err)
+		os.Exit(1)
+	}
+
 	for _, file := range files {
 		src := "/run/gnome-initial-setup/" + file
 		dst := "/home/" + username + "/" + file
 		if err := copyFile(src, dst); err != nil {
 			fmt.Fprintf(os.Stderr, "Error copying file %s to %s: %s\n", src, dst, err)
+			os.Exit(1)
+		}
+		if err := os.Chown(dst, uid, gid); err != nil {
+			fmt.Fprintf(os.Stderr, "Error changing ownership of file %s: %s\n", dst, err)
 			os.Exit(1)
 		}
 	}
