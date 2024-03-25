@@ -47,7 +47,6 @@ void main() {
     );
     await model.launchDesktopSession();
 
-    verify(gdm.init()).called(1);
     verify(gdm.launchSession('username', 'password')).called(1);
   });
 }

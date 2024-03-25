@@ -32,7 +32,8 @@ Future<void> registerFakeInitServices({
 
   final keyfile =
       GSettingsKeyfileBackend(file: File('${tempDir.path}/gsettings.ini'));
-  registerService<GdmService>(() => GdmService(bus: client));
+  registerService<GdmService>(
+      () => ProvdGdmService(client: _FakeProvdGdmClient()));
   registerServiceFactory<GSettings, String>(
       (s) => GSettings(s, backend: keyfile));
 
@@ -416,4 +417,9 @@ class _FakeProvdAccessibilityClient implements provd.ProvdAccessibilityClient {
 
   @override
   Future<void> disableDesktopZoom() async {}
+}
+
+class _FakeProvdGdmClient implements provd.ProvdGdmClient {
+  @override
+  Future<void> launchDesktopSession(String username, String password) async {}
 }

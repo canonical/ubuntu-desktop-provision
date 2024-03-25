@@ -36,7 +36,6 @@ class InitModel {
     if (identity == null) return;
 
     try {
-      await _gdmService?.init();
       await _gdmService?.launchSession(
         identity.username,
         identity.password,

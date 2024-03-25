@@ -7,7 +7,7 @@ import 'dart:async' as _i4;
 
 import 'package:args/src/arg_results.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_init/src/services/gdm_service.dart' as _i5;
+import 'package:ubuntu_init/src/services/provd_gdm_service.dart' as _i5;
 import 'package:ubuntu_provision/services.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -185,16 +185,6 @@ class MockGdmService extends _i1.Mock implements _i5.GdmService {
   MockGdmService() {
     _i1.throwOnMissingStub(this);
   }
-
-  @override
-  _i4.Future<void> init() => (super.noSuchMethod(
-        Invocation.method(
-          #init,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
 
   @override
   _i4.Future<void> launchSession(
