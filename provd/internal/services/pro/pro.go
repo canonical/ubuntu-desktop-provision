@@ -219,8 +219,6 @@ func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse
 	return &response, nil
 }
 
-var tokenPattern = regexp.MustCompile(`^[A-Za-z0-9]{29,32}$`)
-		
 func (p *proExecutable) Attach(ctx context.Context, token string) error {
 	// Construct the full path to the pro-attach executable
 	proAttachPath := "/usr/libexec/sprovd"
