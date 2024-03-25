@@ -25,7 +25,7 @@ void main() {
   });
 
   testWidgets('automatic installation', (tester) async {
-    final model = buildAutoinstallModel(url: 'url');
+    final model = buildAutoinstallModel(url: 'url', autoinstall: true);
     await tester.pumpApp((_) => buildAutoinstallPage(model));
 
     final context = tester.element(find.byType(AutoinstallPage));

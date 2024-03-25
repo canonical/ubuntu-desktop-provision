@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -14,7 +16,8 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
   const InstallPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
+  FutureOr<bool> load(BuildContext context, WidgetRef ref) {
+    if (!ref.context.mounted) return false;
     final model = ref.read(installModelProvider);
     final slides = ref.read(slidesProvider);
     return Future.wait([
