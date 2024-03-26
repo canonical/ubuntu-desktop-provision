@@ -49,6 +49,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testEULAPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     const identity = Identity(
       realname: 'Test User',
       username: 'testuser',
