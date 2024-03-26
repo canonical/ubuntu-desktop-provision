@@ -198,14 +198,14 @@ class PartitionButtonRow extends ConsumerWidget {
     final lang = UbuntuBootstrapLocalizations.of(context);
 
     return Row(
-      children: <Widget>[
+      children: [
         YaruBorderContainer(
           borderRadius: BorderRadius.circular(kYaruButtonRadius),
           clipBehavior: Clip.antiAlias,
           child: IntrinsicHeight(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
+              children: [
                 Tooltip(
                   message:
                       (model.selectedGap?.tooManyPrimaryPartitions ?? false)
@@ -243,11 +243,12 @@ class PartitionButtonRow extends ConsumerWidget {
                   ),
                   onPressed: model.canEditPartition
                       ? () => showEditPartitionDialog(
-                          context,
-                          model.selectedDisk!,
-                          model.selectedPartition!,
-                          model.selectedConfig,
-                          model.trailingGap)
+                            context,
+                            model.selectedDisk!,
+                            model.selectedPartition!,
+                            model.selectedConfig,
+                            model.trailingGap,
+                          )
                       : null,
                   child: Text(lang.changeButtonText),
                 ),
