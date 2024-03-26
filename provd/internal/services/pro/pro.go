@@ -183,7 +183,7 @@ func (p *proExecutable) Initiate(ctx context.Context) (*proAPIResponse, error) {
 
 func (p *proExecutable) Status(ctx context.Context) (*bool, error) {
 	// Execute the pro status command
-	out, err := exec.CommandContext(ctx, "pro", "status").Output()
+	out, err := exec.CommandContext(ctx, "pro", "status", "--format=json").Output()
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to execute pro status: %v\nOutput: %s", err, string(out)))
 		return nil, fmt.Errorf("failed to execute pro status: %v\nOutput: %s", err, string(out))
