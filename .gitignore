@@ -3,7 +3,7 @@ coverage/
 *.iml
 .vscode/
 pubspec.lock
-pubspec_overrides.yaml
+**/pubspec_overrides.yaml
 /*.snap
 **/build/
 **/.dart_tool/
