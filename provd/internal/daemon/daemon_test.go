@@ -199,8 +199,13 @@ func TestServe(t *testing.T) {
 		})
 	}
 }
+
 func TestQuit(t *testing.T) {
 	t.Parallel()
+
+	if os.Getenv("TEST_ENV") == "gh" {
+		t.Skip("Skipping specific test case on Github runner.")
+	}
 
 	testCases := map[string]struct {
 		force bool

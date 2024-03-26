@@ -138,13 +138,17 @@ func TestProAttach(t *testing.T) {
 
 	tests := map[string]struct {
 		// Failure flags
-		failAttach bool
+		failAttach      bool
+		alreadyAttached bool
 	}{
 		// Success cases
 		"Successfully attach machine to pro subscription": {},
 
 		// Error cases
 		"Error code returned when fail to call attach": {failAttach: true},
+
+		// Special return case
+		"AlreadyAttachedError returned when already attached": {alreadyAttached: true},
 	}
 
 	for name, tc := range tests {
@@ -153,12 +157,12 @@ func TestProAttach(t *testing.T) {
 
 			// Prepare mocks
 			opts := []pro.Option{
-				pro.WithProExecutable(&mockProExecutable{failAttach: tc.failAttach}),
+				pro.WithProExecutable(&mockProExecutable{failAttach: tc.failAttach, alreadyAttached: tc.alreadyAttached}),
 			}
 			client := newProClient(t, opts...)
 			_, err := client.ProAttach(context.Background(), &wrapperspb.StringValue{Value: "mock_token"})
 
-			if tc.failAttach {
+			if tc.failAttach || tc.alreadyAttached {
 				require.Error(t, err, "ProAttach should return an error")
 				return
 			}
@@ -323,7 +327,7 @@ func (m *mockProExecutable) Attach(ctx context.Context, token string) error {
 		return errors.New("attach failed")
 	}
 	if m.alreadyAttached {
-		return errors.New("already attached")
+		return errors.New("failed to run pro attach")
 	}
 	return nil
 }
