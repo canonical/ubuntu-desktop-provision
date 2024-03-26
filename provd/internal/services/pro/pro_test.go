@@ -44,12 +44,12 @@ func TestProMagicAttach(t *testing.T) {
 		"Successfully attach machine after, single user code refresh": {userCodeRefresh: true},
 
 		// Error cases
-		"Error when fail to call initiate":                {failInitiate: true},
-		"Error when fail to call wait":                    {failWait: true},
-		"Error when fail to call attach":                  {failAttach: true},
-		"Error when network fails while waiting:":         {networkErrorWait: true},
-		"Error when network fails when calling initiate:": {networkErrorInitiate: true},
-		"Error when already attached":                     {alreadyAttached: true, failWait: true},
+		"Error code returned when fail to call initiate":                {failInitiate: true},
+		"Error code returned when fail to call wait":                    {failWait: true},
+		"Error code returned when fail to call attach":                  {failAttach: true},
+		"Error code returned when network fails while waiting:":         {networkErrorWait: true},
+		"Error code returned when network fails when calling initiate:": {networkErrorInitiate: true},
+		"Error code returned when already attached":                     {alreadyAttached: true, failWait: true},
 	}
 
 	for name, tc := range tests {
@@ -142,7 +142,7 @@ func TestProAttach(t *testing.T) {
 		"Successfully attach machine to pro subscription": {},
 
 		// Error cases
-		"Error when fail to call attach": {failAttach: true},
+		"Error code returned when fail to call attach": {failAttach: true},
 	}
 
 	for name, tc := range tests {
