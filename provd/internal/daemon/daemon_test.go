@@ -308,7 +308,6 @@ func createClientConnection(t *testing.T, socketPath string) (success bool, disc
 	}
 
 	ctx, disconnect := context.WithCancel(context.Background())
-
 	client := grpctestservice.NewTestServiceClient(conn)
 	go func() { _, _ = client.Blocking(ctx, &grpctestservice.Empty{}) }()
 	time.Sleep(10 * time.Millisecond)
