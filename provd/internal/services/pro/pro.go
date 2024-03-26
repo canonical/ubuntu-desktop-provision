@@ -189,13 +189,14 @@ func (p *proExecutable) Status(ctx context.Context) (*bool, error) {
 		return nil, fmt.Errorf("failed to execute pro status: %v\nOutput: %s", err, string(out))
 	}
 
-	// Check if the output contains "not attached"
-	if strings.Contains(string(out), "not attached") {
-		v := false
-		return &v, nil
+	var attachedStatus struct {
+		Attached bool
 	}
-	v := true
-	return &v, nil
+	if err = json.Unmarshal(out, &attachedStatus); err != nil {
+		return nil, fmt.Errorf("could not parse output: %v. Output: %s", err, string(out))
+	}
+
+	return &attachedStatus.Attached, nil
 }
 
 func (p *proExecutable) Wait(ctx context.Context, token string) (*proAPIResponse, error) {
