@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package chown;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service ChownService {
+    rpc ChownSettings(ChownRequest) returns (google.protobuf.Empty);
+}
+
+message ChownRequest {
+    string username = 1;
+}
