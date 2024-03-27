@@ -751,7 +751,7 @@
       "version": {}
     }
   },
-  "refreshRestart": "Prosím, ukončite a znovu spustite inštalátor.",
+  "refreshRestart": "Ak chcete pokračovať, zatvorte prosím inštalátor a znova ho spustite",
   "@refreshRestart": {},
   "refreshSnapStopServices": "Zastavujú sa služby {snap}...",
   "@refreshSnapStopServices": {
@@ -936,5 +936,15 @@
   "hideSecurityKey": "Skryť",
   "@hideSecurityKey": {},
   "codecsAndDriversPageTitle": "Optimalizujte svoj počítač",
-  "@codecsAndDriversPageTitle": {}
+  "@codecsAndDriversPageTitle": {},
+  "refreshInfo": "Aktualizujte na najnovšiu verziu pre vyššiu spoľahlivosť a viac funkcií.",
+  "@refreshInfo": {},
+  "refreshHeader": "Pre inštalátor je k dispozícii aktualizácia",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "Aktualizovať teraz",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Aktualizácia pripravená",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Zatvoriť inštalátor",
+  "@refreshCloseLabel": {}
 }
