@@ -43,7 +43,7 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Стереть диск и установить {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeTitle": "Тип установки",
+  "installationTypeTitle": "Настройка диска",
   "@installationTypeTitle": {},
   "installationTypeNoneSelected": "Ничего не выбрано",
   "@installationTypeNoneSelected": {},
@@ -62,7 +62,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "ЭКСПЕРИМЕНТАЛЬНО: Стереть диск и использовать ZFS",
+  "installationTypeZFS": "Стереть диск и использовать ZFS",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Установить {product} вместе с {os}",
   "@installationTypeAlongside": {
@@ -72,7 +72,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Документы, музыка и другие личные файлы будут сохранены. Вы сможете выбрать нужную операционную систему для загрузки при каждом запуске компьютера.",
+  "installationTypeAlongsideInfo": "Вы сможете выбирать операционную систему во время загрузки.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManualInfo": "Для опытных пользователей, которым требуется особая настройка дисков.",
   "@installationTypeManualInfo": {},
@@ -175,7 +175,7 @@
   },
   "restartIntoWindows": "Перезагрузить в Windows",
   "@restartIntoWindows": {},
-  "shutdown": "Отключить",
+  "shutdown": "Выключить",
   "@shutdown": {},
   "installationFailed": "Ошибка установки",
   "@installationFailed": {},
@@ -390,7 +390,7 @@
   "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Языковая поддержка",
   "@installationSlidesAccessibilityLanguages": {},
-  "installationSlidesSupportHeader": "Официальная поддержка {DISTRO} доступна как в Интернете, так и через значок справки в док-панели.",
+  "installationSlidesSupportHeader": "Официальная документация {DISTRO} доступна как в Интернете, так и через значок справки в док-панели.",
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
@@ -534,7 +534,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "ЭКСПЕРИМЕНТАЛЬНО: Включить аппаратное шифрование диска",
+  "installationTypeTPM": "Включить аппаратное шифрование диска",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM выбран",
   "@installationTypeTPMSelected": {},
