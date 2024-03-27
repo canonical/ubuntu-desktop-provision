@@ -3,7 +3,7 @@
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "CO NOWEGO?",
   "@welcomeWhatsNew": {},
-  "welcomeStoreTitle": "Nowy wygląd sklepu z aplikacjami",
+  "welcomeStoreTitle": "Nowy wygląd Centrum oprogramowania",
   "@welcomeStoreTitle": {},
   "welcomeSecuritySubtitle": "Nowe opcje szyfrowania sprzętowego lub ZFS.",
   "@welcomeSecuritySubtitle": {},
@@ -59,10 +59,12 @@
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Włączyć usługi lokalizacyjne?",
   "@privacyLocationTitle": {},
-  "privacyLocationSubtitle": "Informuj aplikacje o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
+  "privacyLocationSubtitle": "Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
   "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Usługi lokalizacyjne",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Prywatność danych",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }
