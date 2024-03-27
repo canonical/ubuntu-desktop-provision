@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Typ av installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Hur vill du installera $DISTRO?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'Ange autoinstall.yaml URL.';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interaktiv installation';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'För användare som vill bli guidade steg för steg genom installationen.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Automatisk installation';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'För avancerade användare som har en autoinstall.yaml för konsekventa och repeterbara systemkonfigurationer.';
 
   @override
   String get changeButtonText => 'Ändra';
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Vad vill du göra med $DISTRO?';
   }
 
   @override
@@ -96,7 +96,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST är aktiverat';
+  String get rstTitle => 'RST upptäckt';
 
   @override
   String get rstHeader => 'Slå av RST för att fortsätta';
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Visa säkerhetsnyckel';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Dölj';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Program och uppdateringar';
@@ -151,27 +151,27 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Vilka program skulle du vilja installera till att börja med?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimera din dator';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Installera rekommenderad proprietär programvara?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO levereras som standard utan proprietär programvara. Att installera ytterligare programvara kan förbättra din dators prestanda.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA grafikkort har upptäckts';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'För bästa prestanda för NVIDIA grafikkort rekommenderas starkt att du installerar ytterligare drivrutiner.';
 
   @override
   String get fullInstallationTitle => 'Fullständig installation';
 
   @override
-  String get fullInstallationSubtitle => 'Ett offline-vänligt urval av kontorsverktyg, verktyg, webbläsare och spel.';
+  String get fullInstallationSubtitle => 'Ett offline-vänligt urval av kontorsverktyg, verktyg och webbläsare.';
 
   @override
   String get minimalInstallationTitle => 'Standard installation';
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Installera programvara från tredje part för grafik och Wi-Fi-hårdvara';
 
   @override
-  String get installDriversSubtitle => 'Dessa drivrutiner är föremål för licensvillkor som ingår i deras dokumentation. De är proprietära.';
+  String get installDriversSubtitle => 'Inkluderar men inte begränsat till NVIDIA-drivrutiner och liknande';
 
   @override
   String get installCodecsTitle => 'Ladda ner och installera stöd för ytterligare medieformat';
 
   @override
-  String get installCodecsSubtitle => 'Denna programvara är föremål för licensvillkor som ingår i dess dokumentation. Vissa är proprietära.';
+  String get installCodecsSubtitle => 'Inkluderar men inte begränsat till MP3, MP4, MOV och liknande';
 
   @override
   String get batteryWarning => 'The computer is not plugged in to a power source.';
@@ -207,44 +207,44 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Du är för närvarande offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Disk lösenfras';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Skapa en lösenfras';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Välj en lösenfras';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Bekräfta lösenfrasen';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'En lösenfras krävs';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Lösenfraserna matchar inte';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Se till att du sparar din lösenfras';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Om du tappar bort din lösenfras kommer du att förlora all din data.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Skapa en lösenfras';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Bekräfta lösenfrasen';
 
   @override
   String get installationTypeTitle => 'Typ av installation';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Hur vill du installera $DISTRO?';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Börja från början på den valda disken.';
 
   @override
   String get installationTypeAdvancedLabel => 'Avancerade funktioner...';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Avancerade funktioner';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Experimentell';
 
   @override
   String get installationTypeNone => 'Inga';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Inga valda';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Använd LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM valt';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Använd LVM och kryptering';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM och kryptering vald';
@@ -305,20 +305,20 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTELLT: Radera disk och använd ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Radera disk och använd ZFS med kryptering';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valt';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS och kryptering vald';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara i framtida $DISTRO släpp. <a href=\"$url\">Läs om TPM kryptering</a> innan du väljer detta alternativ.';
   }
 
   @override
@@ -371,7 +371,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Börja från början på den valda disken.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Redo att installera';
 
   @override
-  String get confirmHeader => 'Om du fortsätter kommer ändringarna nedan att skrivas till diskarna. Du kommer att kunna göra ytterligare ändringar manuellt.';
+  String get confirmHeader => 'Se över dina val';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Ingen';
 
   @override
   String get confirmDevicesTitle => 'Enheter';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Program';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Diskinställningar';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Disk kryptering';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Installationsdisk';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Proprietär programvara';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Allmän';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Säkerhet & mer';
 
   @override
   String get confirmPartitionsTitle => 'Partitioner';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Kodekar';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Kodekar & drivrutiner';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Drivrutiner';
 
   @override
   String get confirmInstallButton => 'Installera';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** har kopierats till disken';
   }
 
   @override
@@ -626,7 +626,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Du måste starta om datorn för att fortsätta installationsprocessen.';
 
   @override
   String get shutdown => 'Stäng av';
@@ -645,7 +645,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'Den här datorn använder Windows BitLocker-kryptering.\nDu behöver använda Windows för att skapa fritt utrymme eller välja \'$option\' för att fortsätta.';
+    return 'Den här datorn använder Windows BitLocker-kryptering.\nDu behöver använda Windows för att skapa fritt utrymme eller gå tillbaka och välja \'$option\' för att fortsätta.';
   }
 
   @override
@@ -808,16 +808,16 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Uppdatering tillgänglig';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'En uppdatering är tillgänglig för installationsprogrammet';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Uppdatera nu';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Uppdatera till den senaste versionen för förbättrad tillförlitlighet och fler funktioner.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Uppdatering redo';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -840,10 +840,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Starta om installationsprogrammet.';
+  String get refreshRestart => 'Vänligen stäng installationsprogrammet och starta om för att fortsätta';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Stäng installationsprogrammet';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Validera';
 }
