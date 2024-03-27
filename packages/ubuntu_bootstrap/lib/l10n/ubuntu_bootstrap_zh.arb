@@ -123,7 +123,7 @@
   },
   "configureSecureBootDescription": "您已选择安装第三方驱动。这需要关闭安全启动。\n为此，您需要立即选择一个安全密钥，并在系统重新启动时输入。",
   "@configureSecureBootDescription": {},
-  "rstDescription": "这台电脑使用了英特尔RST（快速存储技术）。在安装Ubuntu之前，您需要在Windows中关闭RST。",
+  "rstDescription": "此计算机使用了英特尔 RST（快速存储技术）。在安装 {DISTRO} 之前，您需要在 Windows 中关闭 RST。",
   "@rstDescription": {},
   "installationTypeAlongsideInfo": "将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。",
   "@installationTypeAlongsideInfo": {},
@@ -154,7 +154,7 @@
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "手动分区",
   "@installationTypeManual": {},
-  "installationTypeManualInfo": "您可以创建分区或调整分区大小，或者为{DISTRO}选择多个分区",
+  "installationTypeManualInfo": "适用于希望自定义磁盘配置的高级用户。",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -681,7 +681,7 @@
       }
     }
   },
-  "refreshRestart": "请退出并重新运行安装程序。",
+  "refreshRestart": "请关闭并重新运行安装程序以继续",
   "@refreshRestart": {},
   "recoveryKeyWarning": "<font color=\"{color}\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。",
   "@recoveryKeyWarning": {
@@ -956,5 +956,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "refreshHeader": "安装程序有可用更新",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "现在更新",
+  "@refreshUpdateNow": {},
+  "refreshInfo": "升级到最新版本，以改善可靠性、获得更多功能。",
+  "@refreshInfo": {},
+  "refreshReady": "更新准备就绪",
+  "@refreshReady": {},
+  "refreshCloseLabel": "关闭安装程序",
+  "@refreshCloseLabel": {}
 }
