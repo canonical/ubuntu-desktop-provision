@@ -8,6 +8,7 @@ import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
+
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -23,6 +24,8 @@ import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
+import 'ubuntu_pro/test_ubuntu_pro.dart';
+import 'ubuntu_pro/test_ubuntu_pro_onboarding.dart';
 import 'welcome/test_welcome.dart';
 
 void main() {
@@ -145,11 +148,15 @@ void main() {
       InitStep.locale.route,
       InitStep.keyboard.route,
       InitStep.identity.route,
+      InitStep.ubuntuProOnboarding.route,
+      InitStep.ubuntuPro.route,
       InitStep.telemetry.route,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final identityModel = buildIdentityModel(isValid: true);
+    final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
+    final ubuntuProModel = buildUbuntuProModel();
     final telemetryModel = buildTelemetryModel();
 
     await tester.pumpWidget(
@@ -159,6 +166,9 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           identityModelProvider.overrideWith((_) => identityModel),
+          ubuntuProOnboardingModelProvider
+              .overrideWith((_) => ubuntuProOnboardingModel),
+          ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
         ],
         child: tester.buildTestWizard(),
@@ -179,6 +189,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
+    verify(ubuntuProOnboardingModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

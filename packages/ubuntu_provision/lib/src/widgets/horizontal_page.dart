@@ -10,7 +10,7 @@ class HorizontalPage extends ConsumerWidget {
   HorizontalPage({
     required this.windowTitle,
     required this.title,
-    required this.content,
+    this.content,
     this.onNext,
     this.onBack,
     this.nextArguments,
@@ -22,8 +22,10 @@ class HorizontalPage extends ConsumerWidget {
       vertical: kYaruPagePadding,
     ),
     this.contentFlex = 6,
+    this.imageFlex = 2,
     this.bottomBar,
     this.snackBar,
+    this.imageBottomContent,
     super.key,
   });
 
@@ -37,7 +39,7 @@ class HorizontalPage extends ConsumerWidget {
   final Widget? trailingTitleWidget;
 
   /// The right, larger, column with the content that should be focus on.
-  final Widget content;
+  final Widget? content;
 
   /// A callback for when the user presses the "Next" button.
   final FutureOr<void> Function()? onNext;
@@ -67,6 +69,12 @@ class HorizontalPage extends ConsumerWidget {
   /// The snack bar to use (default is none).
   final SnackBar? snackBar;
 
+  /// The content under the image.
+  final Widget? imageBottomContent;
+
+  /// Flex value for the image column (default is 2)
+  final int imageFlex;
+
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
   static const _contentSpacing = 60.0;
@@ -94,56 +102,66 @@ class HorizontalPage extends ConsumerWidget {
           children: [
             if (image != null) ...[
               Expanded(
-                flex: 2,
-                child: image,
+                flex: imageFlex,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    image,
+                    if (imageBottomContent != null) ...[
+                      const SizedBox(height: kWizardSpacing),
+                      imageBottomContent!,
+                    ],
+                  ],
+                ),
               ),
               SizedBox(
                 width: isSmallWindow ? kYaruPagePadding : _contentSpacing,
               ),
             ],
-            Expanded(
-              flex: 5,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Expanded(child: SizedBox()),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          title,
-                          style: theme.textTheme.headlineMedium?.copyWith(
-                            fontSize: 20, // TODO: Move to theme
-                            fontWeight: FontWeight.w500,
+            if (content != null)
+              Expanded(
+                flex: 5,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Expanded(child: SizedBox()),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            title,
+                            style: theme.textTheme.headlineMedium?.copyWith(
+                              fontSize: 20, // TODO: Move to theme
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
-                      ),
-                      if (trailingTitleWidget != null) trailingTitleWidget!,
-                    ],
-                  ),
-                  const SizedBox(height: kWizardSpacing),
-                  Expanded(
-                    flex: contentFlex,
-                    child: isScrollable
-                        ? Scrollbar(
-                            controller: _scrollController,
-                            thumbVisibility: true,
-                            child: SingleChildScrollView(
+                        if (trailingTitleWidget != null) trailingTitleWidget!,
+                      ],
+                    ),
+                    const SizedBox(height: kWizardSpacing),
+                    Expanded(
+                      flex: contentFlex,
+                      child: isScrollable
+                          ? Scrollbar(
                               controller: _scrollController,
-                              child: Padding(
-                                padding: hoverPadding +
-                                    EdgeInsets.only(right: scrollBarPadding),
-                                child: content,
+                              thumbVisibility: true,
+                              child: SingleChildScrollView(
+                                controller: _scrollController,
+                                child: Padding(
+                                  padding: hoverPadding +
+                                      EdgeInsets.only(right: scrollBarPadding),
+                                  child: content,
+                                ),
                               ),
-                            ),
-                          )
-                        : content,
-                  ),
-                  const Expanded(child: SizedBox()),
-                ],
+                            )
+                          : content!,
+                    ),
+                    const Expanded(child: SizedBox()),
+                  ],
+                ),
               ),
-            ),
           ],
         ),
       ),
