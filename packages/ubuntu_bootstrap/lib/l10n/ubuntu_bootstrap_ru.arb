@@ -22,7 +22,7 @@
   "@installDescription": {},
   "tryOrInstallReleaseNotesLabel": "Вы также можете прочитать <a href=\"{url}\">заметки о выпуске</a>.",
   "@tryOrInstallReleaseNotesLabel": {},
-  "rstTitle": "RST включён",
+  "rstTitle": "Обнаружен RST",
   "@rstTitle": {},
   "rstDescription": "Данный компьютер использует Intel RST (Rapid Storage Technology). Перед тем, как продолжить установку {DISTRO}, необходимо отключить RST в Windows.",
   "@rstDescription": {},
@@ -164,7 +164,7 @@
   },
   "bitlockerTitle": "BitLocker включён",
   "@bitlockerTitle": {},
-  "bitlockerDescription": "Этот компьютер использует шифрование с помощью Windows BitLocker.\nВам необходимо использовать Windows для создания свободного места или выбрать '{option}' для продолжения.",
+  "bitlockerDescription": "На этом компьютере используется шифрование Windows BitLocker.\nВам нужно использовать Windows для создания свободного пространства или вернуться назад и выбрать '{option}', чтобы продолжить.",
   "@bitlockerDescription": {},
   "bitlockerInstructions": "Чтобы получить инструкции, отсканируйте QR-код на другом устройстве или посетите: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
@@ -352,9 +352,9 @@
   "@installCodecsTitle": {},
   "installDriversTitle": "Установка программного обеспечения сторонних производителей для графики и Wi-Fi оборудования",
   "@installDriversTitle": {},
-  "installCodecsSubtitle": "На это программное обеспечение распространяются лицензионные условия, прилагаемые к его документации. Некоторые из них являются проприетарными.",
+  "installCodecsSubtitle": "Включая, но не ограничиваясь, MP3, MP4, MOV и подобными им",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "На эти драйверы распространяются лицензионные условия, прилагаемые к их документации. Они являются проприетарными.",
+  "installDriversSubtitle": "Включая, но не ограничиваясь драйверами NVIDIA и другими подобными устройствами",
   "@installDriversSubtitle": {},
   "restartNow": "Перезагрузить",
   "@restartNow": {},
@@ -729,7 +729,7 @@
       "snap": {}
     }
   },
-  "fullInstallationSubtitle": "Удобный для работы в автономном режиме набор офисных инструментов, утилит, веб-браузера и игр.",
+  "fullInstallationSubtitle": "Удобный для работы в автономном режиме набор офисных инструментов, утилит и веб-браузер.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Стандартная установка",
   "@minimalInstallationTitle": {},
