@@ -4,7 +4,7 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií",
   "@installThirdPartyTitle": {},
-  "installThirdPartySubtitle": "Tento softvér je predmetom licenčných dojednaní, obsiahnutých v dokumentácii k nemu. Niektorý je proprietárny.",
+  "installThirdPartySubtitle": "Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú poprietárne.",
   "@installThirdPartySubtitle": {},
   "rstInstructions": "Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -17,7 +17,7 @@
   "@configureSecureBootDescription": {},
   "partitionTypeLogical": "Logický",
   "@partitionTypeLogical": {},
-  "partitionEditTitle": "Upraviť oddiel",
+  "partitionEditTitle": "Upravenie oddielov",
   "@partitionEditTitle": {},
   "installAlongsideSpaceDivider": "Prideľte miesto na disku potiahnutím rozdeľovača nižšie:",
   "@installAlongsideSpaceDivider": {},
@@ -100,7 +100,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeMultiOSDetected": "Na tomto počítači sa v súčasnosti nachádza viacero operačných systémov. Čo si prajete urobiť?",
+  "installationTypeMultiOSDetected": "Na tomto počítači sa v súčasnosti nachádza viacero operačných systémov. Čo chcete urobiť?",
   "@installationTypeMultiOSDetected": {},
   "installDriversTitle": "Nainštalovať ovládače od tretích strán pre grafické čipy a Wi-Fi sieťové rozhrania",
   "@installDriversTitle": {},
@@ -113,11 +113,11 @@
   },
   "updatesOtherSoftwarePageTitle": "Aplikácie",
   "@updatesOtherSoftwarePageTitle": {},
-  "updatesOtherSoftwarePageDescription": "Aké aplikácie by ste si chceli na začiatok nainštalovať?",
+  "updatesOtherSoftwarePageDescription": "Aké aplikácie by ste chceli teraz nainštalovať?",
   "@updatesOtherSoftwarePageDescription": {},
   "diskHeadersMountPoint": "Prípojný bod",
   "@diskHeadersMountPoint": {},
-  "newPartitionTable": "Nová tabuľka rozdelenia na oddiely",
+  "newPartitionTable": "Nová tabuľka oddielov",
   "@newPartitionTable": {},
   "rstHeader": "Aby bolo možné pokračovať, vypnite RST",
   "@rstHeader": {},
@@ -132,14 +132,14 @@
   },
   "installationTypeTitle": "Nastavenie disku",
   "@installationTypeTitle": {},
-  "installationTypeOSDetected": "Na tomto počítači sa už nachádza {os}. Čo si prajete urobiť?",
+  "installationTypeOSDetected": "Na tomto počítači sa už nachádza {os}. Čo chcete urobiť?",
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
       "os": {}
     }
   },
-  "installationTypeDualOSDetected": "Na tomto počítači sa už nachádzajú {os1} a {os2}. Čo si prajete urobiť?",
+  "installationTypeDualOSDetected": "Na tomto počítači sa už nachádzajú {os1} a {os2}. Čo chcete urobiť?",
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
@@ -147,7 +147,7 @@
       "os2": {}
     }
   },
-  "installationTypeNoOSDetected": "Na tomto počítači sa teraz nezistil žiadny operačný systém. Čo si prajete urobiť?",
+  "installationTypeNoOSDetected": "Na tomto počítači sa teraz nezistil žiadny operačný systém. Čo chcete urobiť?",
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Vymazať disk a nainštalovať {DISTRO}",
   "@installationTypeErase": {
@@ -211,7 +211,7 @@
   "@newPartitionTableConfirmationMessage": {},
   "bootLoaderDevice": "Zariadenie na ktoré nainštalovať zavádzač systému",
   "@bootLoaderDevice": {},
-  "partitionCreateTitle": "Vytvoriť oddiel",
+  "partitionCreateTitle": "Vytvorenie oddielov",
   "@partitionCreateTitle": {},
   "partitionSizeLabel": "Veľkosť:",
   "@partitionSizeLabel": {},
@@ -250,7 +250,7 @@
       "DISTRO": {}
     }
   },
-  "appTitle": "Inštalátor Ubuntu Desktop",
+  "appTitle": "Inštalátor plochy Ubuntu",
   "@appTitle": {},
   "changeButtonText": "Zmeniť",
   "@changeButtonText": {},
@@ -258,7 +258,7 @@
   "@configureSecureBootTitle": {},
   "configureSecureBootOption": "Nastaviť Secure Boot",
   "@configureSecureBootOption": {},
-  "chooseSecurityKey": "Vyberte si bezpečnostný kľúč",
+  "chooseSecurityKey": "Vyberte bezpečnostný kľúč",
   "@chooseSecurityKey": {},
   "copyingFiles": "Kopírovanie súborov…",
   "@copyingFiles": {},
@@ -356,7 +356,7 @@
       "RELEASE": {}
     }
   },
-  "rstTitle": "RST zistené",
+  "rstTitle": "Zistené RST",
   "@rstTitle": {},
   "rstDescription": "Tento počítač používa technológiu Intel RST (Rapid Storage Technology). Pred inštaláciou {DISTRO} musíte vo Windowse vypnúť RST.",
   "@rstDescription": {},
@@ -367,7 +367,7 @@
       "RELEASE": {}
     }
   },
-  "tryOrInstallReleaseNotesLabel": "Mohli by ste mať záujem o prečítanie si <a href=\"{url}\">poznámok k vydaniu</a>.",
+  "tryOrInstallReleaseNotesLabel": "Možno si budete chcieť prečítať <a href=\"{url}\"> poznámky k vydaniu </a> .",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
@@ -378,13 +378,13 @@
   "@tryOrInstallRepairDescription": {},
   "dontInstallDriverSoftwareNow": "Zatiaľ neinštalujte softvér ovládača",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Je ho možné nainštalovať kedykoľvek neskôr pomocou nástroja „Softvér a aktualizácie“.",
+  "dontInstallDriverSoftwareNowDescription": "Je ho možné nainštalovať kedykoľvek neskôr pomocou nástroja Softvér a aktualizácie.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "confirmSecurityKey": "Zopakujte zadanie bezpečnostného kľúča",
   "@confirmSecurityKey": {},
   "configureSecureBootSecurityKeyRequired": "Je potrebné zadať kľúč zabezpečenia",
   "@configureSecureBootSecurityKeyRequired": {},
-  "secureBootSecurityKeysDontMatch": "Do každej z kolónok pre kľúč zabezpečenia ste napísali niečo iné",
+  "secureBootSecurityKeysDontMatch": "Bezpečnostné kľúče sa nezhodujú",
   "@secureBootSecurityKeysDontMatch": {},
   "selectGuidedStorageInstallNow": "Nainštalovať teraz",
   "@selectGuidedStorageInstallNow": {},
@@ -422,7 +422,7 @@
       "format": {}
     }
   },
-  "offlineWarning": "V tejto chvíli nie ste pripojení na Internet",
+  "offlineWarning": "V tejto chvíli nie ste pripojení",
   "@offlineWarning": {},
   "installationTypeZFSSelected": "Vybrané ZFS",
   "@installationTypeZFSSelected": {},
@@ -433,7 +433,7 @@
       "os": {}
     }
   },
-  "installationTypeReinstallWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Týmto zmažete všetky aplikácie, dokumenty, fotky, hudbu a všetky ostatné súbory, nachádzajúce sa v rámci {os}.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Týmto odstránite všetky aplikácie, dokumenty, fotky, hudbu a všetky ostatné súbory, nachádzajúce sa v rámci {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -798,7 +798,7 @@
   "@fullInstallationTitle": {},
   "validate": "Overiť",
   "@validate": {},
-  "autoinstallInstructions": "Zadajte autoinstall.yaml URL adresu.",
+  "autoinstallInstructions": "Zadajte autoinstall.yaml URL:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Interaktívna inštalácia",
   "@autoinstallInteractiveOption": {},
@@ -808,11 +808,11 @@
   "@codecsAndDriversPageDescription": {},
   "codecsAndDriversNvidiaBody": "Pre najlepší výkon grafických kariet NVIDIA sa dôrazne odporúča nainštalovať ďalšie ovládače.",
   "@codecsAndDriversNvidiaBody": {},
-  "choosePassphraseHint": "Vyberte si prístupovú frázu",
+  "choosePassphraseHint": "Vyberte prístupovú frázu",
   "@choosePassphraseHint": {},
   "choosePassphraseHeader": "Vytvorenie prístupovej frázy",
   "@choosePassphraseHeader": {},
-  "choosePassphraseMismatch": "Do každej z kolónok pre prístupovú frázu ste napísali niečo iné",
+  "choosePassphraseMismatch": "Prístupové frázy sa nezhodujú",
   "@choosePassphraseMismatch": {},
   "choosePassphraseInfoHeader": "Uistite sa, že ste si uložili svoju prístupovú frázu",
   "@choosePassphraseInfoHeader": {},
@@ -946,5 +946,23 @@
   "refreshReady": "Aktualizácia pripravená",
   "@refreshReady": {},
   "refreshCloseLabel": "Zatvoriť inštalátor",
-  "@refreshCloseLabel": {}
+  "@refreshCloseLabel": {},
+  "batteryWarning": "Počítač nie je pripojený k zdroju napájania.",
+  "@batteryWarning": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Vybrať oddiel:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "restartWarningBody": "Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nAkékoľvek vykonané zmeny sa neuložia.",
+  "@restartWarningBody": {},
+  "warningLabel": "Upozornenie:",
+  "@warningLabel": {},
+  "selectGuidedStorageDriveDropdownLabel": "Vybrať jednotku:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "guidedStoragePageHeader": "Vyberte, kde sa má nainštalovať {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
