@@ -159,5 +159,45 @@
   "networkHiddenWifiNameRequired": "Se requiere un nombre de red",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "No quiero conectarme a internet ahora mismo",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "Accesibilidad",
+  "@accessibilityPageTitle": {},
+  "accessibilitySeeingLabel": "Ver",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Audición",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Mecanografía",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Señalar y hacer clic",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Alto contraste",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Texto grande",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Reducir la animación",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityVisualAlertsLabel": "Advertencias visuales",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Mensaje de teclas especiales (Sticky keys)",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilityPageHeader": "Accesibilidad en {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Personaliza {DISTRO} según tus necesidades antes de configurarlo. Puedes cambiarlos más tarde en Ajustes del sistema.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityScreenReaderLabel": "Lector de pantalla",
+  "@accessibilityScreenReaderLabel": {}
 }
