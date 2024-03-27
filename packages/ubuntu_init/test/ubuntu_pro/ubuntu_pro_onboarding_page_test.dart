@@ -4,18 +4,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_widgets.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
-import 'package:ubuntu_provision/providers.dart';
-
-import '../init_model_test.mocks.dart';
 import 'test_ubuntu_pro_onboarding.dart';
 
 void main() {
   Widget buildPage(UbuntuProOnBoardingModel model) {
-    final pageImages = PageImages(MockPageConfigService());
     return ProviderScope(
       overrides: [
         ubuntuProOnboardingModelProvider.overrideWith((_) => model),
-        pageImagesProvider.overrideWith((_) => pageImages),
       ],
       child: const UbuntuProOnboardingPage(),
     );

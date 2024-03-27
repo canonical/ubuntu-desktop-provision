@@ -9,8 +9,8 @@ import 'package:yaru/yaru.dart';
 class HorizontalPage extends ConsumerWidget {
   HorizontalPage({
     required this.windowTitle,
-    required this.title,
-    required this.children,
+    this.children,
+    this.title,
     this.onNext,
     this.onBack,
     this.nextArguments,
@@ -23,7 +23,7 @@ class HorizontalPage extends ConsumerWidget {
       3 * kYaruPagePadding,
       kYaruPagePadding,
     ),
-    this.imageFlex = 2,
+    this.imageFlex = 6,
     this.bottomBar,
     this.snackBar,
     this.imageBottomContent,
@@ -39,13 +39,13 @@ class HorizontalPage extends ConsumerWidget {
   final String windowTitle;
 
   /// The title that is displayed on top of the content column.
-  final String title;
+  final String? title;
 
   /// A widget shown after the [title].
   final Widget? trailingTitleWidget;
 
   /// The right, larger, column with the content that should be focus on.
-  final List<Widget> children;
+  final List<Widget>? children;
 
   /// A callback for when the user presses the "Next" button.
   final FutureOr<void> Function()? onNext;
@@ -121,96 +121,52 @@ class HorizontalPage extends ConsumerWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: kWizardSpacing),
-
-              /*
-
-    if (content != null)
-              Expanded(
-                flex: 5,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Expanded(child: SizedBox()),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            title,
-                            style: theme.textTheme.headlineMedium?.copyWith(
-                              fontSize: 20, // TODO: Move to theme
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
+              if (children != null) ...[
+                const SizedBox(width: kWizardSpacing),
+                Expanded(
+                  flex: 8,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (!managedScrolling && title != null) ...[
+                        const Spacer(),
+                        _Headline(
+                          title: title!,
+                          trailingTitleWidget: trailingTitleWidget,
                         ),
-                        if (trailingTitleWidget != null) trailingTitleWidget!,
                       ],
-                    ),
-                    const SizedBox(height: kWizardSpacing),
-                    Expanded(
-                      flex: contentFlex,
-                      child: isScrollable
-                          ? Scrollbar(
-                              controller: _scrollController,
-                              thumbVisibility: true,
-                              child: SingleChildScrollView(
-                                controller: _scrollController,
-                                child: Padding(
-                                  padding: hoverPadding +
-                                      EdgeInsets.only(right: scrollBarPadding),
-                                  child: content,
-                                ),
-                              ),
-                            )
-                          : content!,
-                    ),
-                    const Expanded(child: SizedBox()),
-                  ],
-                ),
-
-
-            */
-              Expanded(
-                flex: 8,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (!managedScrolling) ...[
-                      const Spacer(),
-                      _Headline(
-                        title: title,
-                        trailingTitleWidget: trailingTitleWidget,
-                      ),
-                    ],
-                    Expanded(
-                      flex: managedScrolling ? 1 : _contentFlex,
-                      child: managedScrolling
-                          ? Center(
-                              child: Scrollbar(
-                                controller: _scrollController,
-                                thumbVisibility: true,
-                                child: ListView(
-                                  padding: hoverPadding +
-                                      EdgeInsets.only(right: scrollBarPadding),
-                                  shrinkWrap: true,
+                      Expanded(
+                        flex: managedScrolling ? 1 : _contentFlex,
+                        child: managedScrolling
+                            ? Center(
+                                child: Scrollbar(
                                   controller: _scrollController,
-                                  children: [
-                                    _Headline(
-                                      title: title,
-                                      trailingTitleWidget: trailingTitleWidget,
-                                    ),
-                                    ...children,
-                                  ],
+                                  thumbVisibility: true,
+                                  child: ListView(
+                                    padding: hoverPadding +
+                                        EdgeInsets.only(
+                                            right: scrollBarPadding),
+                                    shrinkWrap: true,
+                                    controller: _scrollController,
+                                    children: [
+                                      if (title != null)
+                                        _Headline(
+                                          title: title!,
+                                          trailingTitleWidget:
+                                              trailingTitleWidget,
+                                        ),
+                                      ...children!,
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            )
-                          : Column(children: children),
-                    ),
-                    if (!managedScrolling) const Spacer(),
-                  ],
+                              )
+                            : Column(children: children!),
+                      ),
+                      if (!managedScrolling) const Spacer(),
+                    ],
+                  ),
                 ),
-              ),
+              ]
             ],
           ],
         ),

@@ -19,7 +19,6 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,
       title: '',
-      imageFlex: 4,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -54,22 +53,19 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ProOnboardingSelectionTile(
-            label: l10n.ubuntuProOnBoardingSkipForNow,
-            subtitle: l10n.ubuntuProOnBoardingSkipForNowDescription,
-            selection: UbuntuProOnboardingPageSelection.skipForNow,
-          ),
-          const SizedBox(height: kWizardSpacing / 2),
-          ProOnboardingSelectionTile(
-            label: l10n.ubuntuProOnBoardingEnableUbuntuPro,
-            subtitle: l10n.ubuntuProOnBoardingEnableUbuntuProDescription,
-            selection: UbuntuProOnboardingPageSelection.enableUbuntuPro,
-          ),
-        ],
-      ),
+      children: [
+        ProOnboardingSelectionTile(
+          label: l10n.ubuntuProOnBoardingSkipForNow,
+          subtitle: l10n.ubuntuProOnBoardingSkipForNowDescription,
+          selection: UbuntuProOnboardingPageSelection.skipForNow,
+        ),
+        const SizedBox(height: kWizardSpacing / 2),
+        ProOnboardingSelectionTile(
+          label: l10n.ubuntuProOnBoardingEnableUbuntuPro,
+          subtitle: l10n.ubuntuProOnBoardingEnableUbuntuProDescription,
+          selection: UbuntuProOnboardingPageSelection.enableUbuntuPro,
+        ),
+      ],
     );
   }
 }

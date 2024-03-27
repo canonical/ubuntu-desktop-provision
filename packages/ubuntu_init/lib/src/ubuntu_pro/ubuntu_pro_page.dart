@@ -29,7 +29,6 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,
       title: l10n.ubuntuProHeader,
-      imageFlex: 4,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -77,84 +76,88 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Html(
-            data: l10n.ubuntuProMagicAttachInstructions(
-              kMagicAttachUrl.replaceFirst('https://', ''),
-            ),
-            style: {
-              'body': Style(margin: Margins.zero, fontWeight: FontWeight.w500),
-              'a': Style(
-                color: Theme.of(context).colorScheme.link,
-                fontWeight: FontWeight.w500,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Html(
+              data: l10n.ubuntuProMagicAttachInstructions(
+                kMagicAttachUrl.replaceFirst('https://', ''),
               ),
-            },
-            onLinkTap: (url, _, __) => launchUrl(url!),
-          ),
-          model.userCode.isEmpty
-              ? const Padding(
-                  padding: EdgeInsets.all(kWizardBarSpacing * 2),
-                  child: CircularProgressIndicator(),
-                )
-              : Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        BarcodeWidget(
-                          margin: const EdgeInsets.symmetric(
-                              vertical: kWizardSpacing),
-                          color: Theme.of(context).colorScheme.onSurface,
-                          barcode: Barcode.qrCode(),
-                          data:
-                              '$kMagicAttachUrl?magic-attach-code=${model.userCode}',
-                          width: 100,
-                          height: 100,
-                        ),
-                        const SizedBox(width: kWizardSpacing),
-                        SelectableText(
-                          model.userCode,
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        const SizedBox(width: kWizardSpacing / 2),
-                        if (model.isAttached &&
-                            model.isAttachedThroughMagicAttach)
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const SuccessIcon(),
-                              const SizedBox(width: kWizardSpacing / 4),
-                              Text(
-                                l10n.ubuntuProTokenAttachSucess,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyMedium
-                                    ?.copyWith(
-                                      color:
-                                          Theme.of(context).colorScheme.success,
-                                    ),
-                              ),
-                            ],
-                          )
-                      ],
-                    ),
-                  ],
+              style: {
+                'body':
+                    Style(margin: Margins.zero, fontWeight: FontWeight.w500),
+                'a': Style(
+                  color: Theme.of(context).colorScheme.link,
+                  fontWeight: FontWeight.w500,
                 ),
-          const SizedBox(height: kWizardSpacing),
-          Text(
-            l10n.ubuntuProOrAddTokenManually,
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium
-                ?.copyWith(fontWeight: FontWeight.w500),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          const TokenTextField(),
-        ],
-      ),
+              },
+              onLinkTap: (url, _, __) => launchUrl(url!),
+            ),
+            model.userCode.isEmpty
+                ? const Padding(
+                    padding: EdgeInsets.all(kWizardBarSpacing * 2),
+                    child: CircularProgressIndicator(),
+                  )
+                : Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          BarcodeWidget(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: kWizardSpacing),
+                            color: Theme.of(context).colorScheme.onSurface,
+                            barcode: Barcode.qrCode(),
+                            data:
+                                '$kMagicAttachUrl?magic-attach-code=${model.userCode}',
+                            width: 100,
+                            height: 100,
+                          ),
+                          const SizedBox(width: kWizardSpacing),
+                          SelectableText(
+                            model.userCode,
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          const SizedBox(width: kWizardSpacing / 2),
+                          if (model.isAttached &&
+                              model.isAttachedThroughMagicAttach)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const SuccessIcon(),
+                                const SizedBox(width: kWizardSpacing / 4),
+                                Text(
+                                  l10n.ubuntuProTokenAttachSucess,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .success,
+                                      ),
+                                ),
+                              ],
+                            )
+                        ],
+                      ),
+                    ],
+                  ),
+            const SizedBox(height: kWizardSpacing),
+            Text(
+              l10n.ubuntuProOrAddTokenManually,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium
+                  ?.copyWith(fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(height: kWizardSpacing),
+            const TokenTextField(),
+          ],
+        ),
+      ],
     );
   }
 }

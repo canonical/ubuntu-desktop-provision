@@ -14,7 +14,6 @@ class UbuntuProSuccessAttachPage extends StatelessWidget with ProvisioningPage {
 
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,
-      title: '',
       imageBottomContent: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

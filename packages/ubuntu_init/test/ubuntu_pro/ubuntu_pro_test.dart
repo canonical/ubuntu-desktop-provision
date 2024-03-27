@@ -2,21 +2,15 @@ import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
-import 'package:ubuntu_provision/providers.dart';
-
-import '../init_model_test.mocks.dart';
 import 'test_ubuntu_pro.dart';
 
 void main() {
   Widget buildPage(UbuntuProModel model) {
-    final pageImages = PageImages(MockPageConfigService());
     return ProviderScope(
       overrides: [
         ubuntuProModelProvider.overrideWith((_) => model),
-        pageImagesProvider.overrideWith((_) => pageImages),
       ],
       child: const UbuntuProPage(),
     );
