@@ -18,7 +18,6 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/types/known/emptypb"
-	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 func TestProMagicAttach(t *testing.T) {
@@ -144,11 +143,9 @@ func TestProAttach(t *testing.T) {
 		// Success cases
 		"Successfully attach machine to pro subscription": {},
 
-		// Error cases
-		"Error code returned when fail to call attach": {failAttach: true},
-
 		// Special return case
 		"AlreadyAttachedError returned when already attached": {alreadyAttached: true},
+		"UnknownError code returned when fail to call attach": {failAttach: true},
 	}
 
 	for name, tc := range tests {
@@ -160,13 +157,12 @@ func TestProAttach(t *testing.T) {
 				pro.WithProExecutable(&mockProExecutable{failAttach: tc.failAttach, alreadyAttached: tc.alreadyAttached}),
 			}
 			client := newProClient(t, opts...)
-			_, err := client.ProAttach(context.Background(), &wrapperspb.StringValue{Value: "mock_token"})
-
-			if tc.failAttach || tc.alreadyAttached {
-				require.Error(t, err, "ProAttach should return an error")
-				return
-			}
+			resp, err := client.ProAttach(context.Background(), &pb.ProAttachRequest{Token: "mock_token"})
 			require.NoError(t, err, "ProAttach should not return an error")
+
+			got := resp.String()
+			want := testutils.LoadWithUpdateFromGolden(t, got)
+			require.Equal(t, want, got, "response from ProAttach should match expected")
 		})
 	}
 }

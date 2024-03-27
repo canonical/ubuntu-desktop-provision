@@ -23,7 +23,6 @@ enum ProMagicAttachResponseType {
     ALREADY_ATTACHED = 6;
 }
 
-
 message ProAttachRequest {
     string token = 1;
 }
