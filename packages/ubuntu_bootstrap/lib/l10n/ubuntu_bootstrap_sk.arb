@@ -29,7 +29,7 @@
   "@confirmPartitionTables": {},
   "confirmPartitionChanges": "Budú vykonané nasledujúce zmeny na oddieloch:",
   "@confirmPartitionChanges": {},
-  "bitlockerDescription": "Na tomto počítači je používané šifrovanie nástrojom Windows BitLocker.\nAby bolo možné pokračovať, je potrebné pomocou Windows urobiť voľné miesto alebo zvoliť '{option}'.",
+  "bitlockerDescription": "Na tomto počítači je používané šifrovanie nástrojom Windows BitLocker.\nNa vytvorenie voľného miesta musíte použiť systém Windows alebo sa vráťte späť a pokračujte výberom možnosti '{option}'.",
   "@bitlockerDescription": {
     "type": "text",
     "placeholders": {
@@ -356,7 +356,7 @@
       "RELEASE": {}
     }
   },
-  "rstTitle": "RST je zapnuté",
+  "rstTitle": "RST zistené",
   "@rstTitle": {},
   "rstDescription": "Tento počítač používa technológiu Intel RST (Rapid Storage Technology). Pred inštaláciou {DISTRO} musíte vo Windowse vypnúť RST.",
   "@rstDescription": {},
@@ -517,11 +517,11 @@
   },
   "installationTypeManual": "Manuálna inštalácia",
   "@installationTypeManual": {},
-  "installDriversSubtitle": "Tieto ovládače sú predmetom licenčných dojednaní obsiahnutých v dokumentácii k nim. Sú proprietárne.",
+  "installDriversSubtitle": "Vrátane ovládačov NVIDIA a ďalších ostatných",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Stiahnuť a nainštalovať podporu pre ďalšie formáty médií",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Tento softvér je predmetom licenčných dojednaní obsiahnutých v dokumentácii k nemu. Niektoré sú proprietárne.",
+  "installCodecsSubtitle": "Vrátane MP3, MP4, MOV a ďalších ostatných",
   "@installCodecsSubtitle": {},
   "installationTypeAlongsideInfo": "Počas zavádzania si môžete vybrať operačný systém.",
   "@installationTypeAlongsideInfo": {},
@@ -788,7 +788,7 @@
       "snap": {}
     }
   },
-  "fullInstallationSubtitle": "Výber vhodný pre režim off-line kancelárske nástroje, pomôcky, webový prehliadač a hry.",
+  "fullInstallationSubtitle": "Výber vhodný pre režim off-line kancelárske nástroje, pomôcky a webový prehliadač.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Predvolený výber",
   "@minimalInstallationTitle": {},
@@ -893,7 +893,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Aplikácie",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Nastaviť disk",
+  "confirmEntryDiskSetup": "Nastavenie disku",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Šifrovanie disku",
   "@confirmEntryDiskEncryption": {},
