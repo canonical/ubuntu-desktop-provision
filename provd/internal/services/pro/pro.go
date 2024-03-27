@@ -248,11 +248,15 @@ func (s *Service) sendSteamResponse(stream pb.ProService_ProMagicAttachServer, r
 }
 
 // ProAttach attaches a contract token to the system.
-func (s *Service) ProAttach(ctx context.Context, req *wrapperspb.StringValue) (*emptypb.Empty, error) {
-	if err := s.proExecutable.Attach(ctx, req.Value); err != nil {
-		return nil, status.Errorf(codes.Internal, fmt.Sprintf("failed to pro attach: %v", err))
+func (s *Service) ProAttach(ctx context.Context, req *pb.ProAttachRequest) (*pb.ProAttachResponse, error) {
+	if err := s.proExecutable.Attach(ctx, req.Token); err != nil {
+		if strings.Contains(err.Error(), "failed to run pro attach") {
+			return &pb.ProAttachResponse{Type: pb.ProAttachResponse_ALREADY_ATTACHED}, nil
+		}
+		return &pb.ProAttachResponse{Type: pb.ProAttachResponse_UNKNOWN_ERROR}, nil
 	}
-	return &emptypb.Empty{}, nil
+
+	return &pb.ProAttachResponse{Type: pb.ProAttachResponse_SUCCESS}, nil
 }
 
 // ProStatus returns if the machine is currently pro attached.

@@ -31,7 +31,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ProServiceClient interface {
 	ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProService_ProMagicAttachClient, error)
-	ProAttach(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	ProAttach(ctx context.Context, in *ProAttachRequest, opts ...grpc.CallOption) (*ProAttachResponse, error)
 	ProStatus(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
 }
 
@@ -75,8 +75,8 @@ func (x *proServiceProMagicAttachClient) Recv() (*ProMagicAttachResponse, error)
 	return m, nil
 }
 
-func (c *proServiceClient) ProAttach(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
+func (c *proServiceClient) ProAttach(ctx context.Context, in *ProAttachRequest, opts ...grpc.CallOption) (*ProAttachResponse, error) {
+	out := new(ProAttachResponse)
 	err := c.cc.Invoke(ctx, ProService_ProAttach_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -98,7 +98,7 @@ func (c *proServiceClient) ProStatus(ctx context.Context, in *emptypb.Empty, opt
 // for forward compatibility
 type ProServiceServer interface {
 	ProMagicAttach(*emptypb.Empty, ProService_ProMagicAttachServer) error
-	ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error)
+	ProAttach(context.Context, *ProAttachRequest) (*ProAttachResponse, error)
 	ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
 	mustEmbedUnimplementedProServiceServer()
 }
@@ -110,7 +110,7 @@ type UnimplementedProServiceServer struct {
 func (UnimplementedProServiceServer) ProMagicAttach(*emptypb.Empty, ProService_ProMagicAttachServer) error {
 	return status.Errorf(codes.Unimplemented, "method ProMagicAttach not implemented")
 }
-func (UnimplementedProServiceServer) ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
+func (UnimplementedProServiceServer) ProAttach(context.Context, *ProAttachRequest) (*ProAttachResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProAttach not implemented")
 }
 func (UnimplementedProServiceServer) ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
@@ -151,7 +151,7 @@ func (x *proServiceProMagicAttachServer) Send(m *ProMagicAttachResponse) error {
 }
 
 func _ProService_ProAttach_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(wrapperspb.StringValue)
+	in := new(ProAttachRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -163,7 +163,7 @@ func _ProService_ProAttach_Handler(srv interface{}, ctx context.Context, dec fun
 		FullMethod: ProService_ProAttach_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProServiceServer).ProAttach(ctx, req.(*wrapperspb.StringValue))
+		return srv.(ProServiceServer).ProAttach(ctx, req.(*ProAttachRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
