@@ -64,5 +64,7 @@
   "privacyPolicyLink": "פרטיות נתונים",
   "@privacyPolicyLink": {},
   "privacyLocationEnable": "שירותי מיקום",
-  "@privacyLocationEnable": {}
+  "@privacyLocationEnable": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }
