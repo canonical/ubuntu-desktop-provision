@@ -202,6 +202,8 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
 const kDMIProductNameFile = '/sys/devices/virtual/dmi/id/product_name';
 @visibleForTesting
 const kDMIProductVersionFile = '/sys/devices/virtual/dmi/id/product_version';
+@visibleForTesting
+const kDMIVendorFile = '/sys/devices/virtual/dmi/id/sys_vendor';
 
 Future<String> _readDmiFile(String path) {
   return File(path)
@@ -211,11 +213,18 @@ Future<String> _readDmiFile(String path) {
 }
 
 Future<String> _readProductName() async {
-  /// Lenovo uses product_version as product name
-  /// and it's empty on HP and DELL
-  var productName = await _readDmiFile(kDMIProductVersionFile);
-  if (productName.isEmpty) {
+  String productName;
+  final vendor = await _readDmiFile(kDMIVendorFile);
+  if (vendor == 'IBM' || vendor == 'LENOVO') {
+    productName = await _readDmiFile(kDMIProductVersionFile);
+    if (productName.isEmpty) {
+      productName = await _readDmiFile(kDMIProductNameFile);
+    }
+  } else {
     productName = await _readDmiFile(kDMIProductNameFile);
+    if (productName.isEmpty) {
+      productName = await _readDmiFile(kDMIProductVersionFile);
+    }
   }
   return productName;
 }

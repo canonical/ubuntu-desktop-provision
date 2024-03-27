@@ -25,13 +25,15 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Nový vzhľad centra s aplikáciami';
 
   @override
-  String get welcomeStoreSubtitle => 'Nájsť svoj obľúbený softvér nebolo nikdy jednoduchšie.';
+  String get welcomeStoreSubtitle =>
+      'Nájsť svoj obľúbený softvér nebolo nikdy jednoduchšie.';
 
   @override
   String get welcomeSecurityTitle => 'Vylepšené zabezpečenie';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nové možnosti pre hardvérové šifrovanie alebo ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Nové možnosti pre hardvérové šifrovanie alebo ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -75,7 +77,8 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Povoliť služby umiestnenia?';
 
   @override
-  String get privacyLocationSubtitle => 'Poskytnite aplikáciám údaje o svojej geografickej polohe.\nToto môžete kedykoľvek zmeniť v nastaveniach systému.';
+  String get privacyLocationSubtitle =>
+      'Poskytnite aplikáciám údaje o svojej geografickej polohe.\nToto môžete kedykoľvek zmeniť v nastaveniach systému.';
 
   @override
   String get privacyLocationEnable => 'Služby umiestnenia';
@@ -101,7 +104,8 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription =>
+      'Get the most comprehensive subscription for open-source software security';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
@@ -124,17 +128,21 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro is now enabled in this machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription =>
+      'You can manage your Pro services in the Software & Updates application.';
 }
