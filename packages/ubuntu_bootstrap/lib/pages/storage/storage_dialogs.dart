@@ -130,6 +130,8 @@ class TpmOption extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final experimentalBadgeText =
+        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
     final target = model
         .getAllTargets()
@@ -145,7 +147,12 @@ class TpmOption extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         YaruRadioButton<GuidedCapability>(
-          title: Text(lang.installationTypeTPM),
+          title: Wrap(
+            children: [
+              Text(lang.installationTypeTPM),
+              InfoBadge(title: experimentalBadgeText),
+            ],
+          ),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
           groupValue: guidedCapability.value,
           onChanged: target.disallowed.isEmpty

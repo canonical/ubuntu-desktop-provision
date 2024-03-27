@@ -32,26 +32,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
   }
 
-  Future<void> testAccessibilityPage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(AccessibilityPage);
-
-    final context = element(find.byType(AccessibilityPage));
-    final l10n = UbuntuProvisionLocalizations.of(context);
-
-    expect(
-      find.titleBar(l10n.accessibilityPageTitle('Ubuntu')),
-      findsOneWidget,
-    );
-
-    await pumpAndSettle();
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-  }
-
   Future<void> testAutoinstallPage({
     String? screenshot,
   }) async {
@@ -259,7 +239,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   }
 
   Future<void> testGuidedResizePage({
-    Map<String, int> sizes = const {},
+    int? size,
     String? screenshot,
   }) async {
     await pumpUntilPage(GuidedResizePage);
@@ -274,22 +254,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       findsOneWidget,
     );
 
-    for (final entry in sizes.entries) {
-      await tap(find.ancestor(
-        of: find.textContaining(entry.key),
-        matching: find.byType(OutlinedButton),
-      ));
-      await pumpAndSettle();
-
-      await enterText(find.byType(SpinBox), entry.value.toString());
+    if (size != null) {
+      await enterText(find.byType(TextFormField), size.toString());
+      await testTextInput.receiveAction(TextInputAction.done);
       await pump();
-
-      if (screenshot != null) {
-        await takeScreenshot('$screenshot-${entry.key.split(' ').first}');
-      }
-
-      await tapOk();
-      await pumpAndSettle();
     }
 
     if (screenshot != null) {

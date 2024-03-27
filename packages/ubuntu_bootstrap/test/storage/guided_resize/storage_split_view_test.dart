@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:split_view/split_view.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -7,6 +8,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_button.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
 import 'package:ubuntu_bootstrap/widgets/storage_size_box.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
@@ -17,14 +19,7 @@ void main() {
     int? size;
 
     await tester.pumpApp(
-      (_) => StorageSplitView(
-        currentSize: 50,
-        minimumSize: 20,
-        maximumSize: 75,
-        totalSize: 100,
-        partition: const Partition(),
-        existingOS: const OsProber(long: 'Windows', label: '', type: ''),
-        productInfo: const ProductInfo(name: 'Ubuntu', version: '22.10'),
+      (_) => buildStorageSplitViewPage(
         onResize: (v) => size = v,
       ),
     );
@@ -49,14 +44,8 @@ void main() {
     int? size;
 
     await tester.pumpApp(
-      (_) => StorageSplitView(
-        currentSize: toBytes(50, DataUnit.megabytes),
-        minimumSize: toBytes(20, DataUnit.megabytes),
-        maximumSize: toBytes(75, DataUnit.megabytes),
-        totalSize: toBytes(100, DataUnit.megabytes),
-        partition: const Partition(),
-        existingOS: const OsProber(long: 'Windows', label: '', type: ''),
-        productInfo: const ProductInfo(name: 'Ubuntu', version: '22.10'),
+      (_) => buildStorageSplitViewPage(
+        dataUnit: DataUnit.megabytes,
         onResize: (v) => size = v,
       ),
     );
@@ -84,14 +73,8 @@ void main() {
     int? size;
 
     await tester.pumpApp(
-      (_) => StorageSplitView(
-        currentSize: toBytes(50, DataUnit.megabytes),
-        minimumSize: toBytes(20, DataUnit.megabytes),
-        maximumSize: toBytes(75, DataUnit.megabytes),
-        totalSize: toBytes(100, DataUnit.megabytes),
-        partition: const Partition(),
-        existingOS: const OsProber(long: 'Windows', label: '', type: ''),
-        productInfo: const ProductInfo(name: 'Ubuntu'),
+      (_) => buildStorageSplitViewPage(
+        dataUnit: DataUnit.megabytes,
         onResize: (v) => size = v,
       ),
     );
@@ -119,20 +102,10 @@ void main() {
     int? size;
 
     await tester.pumpWidget(
-      MaterialApp(
-        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-        home: Scaffold(
-          body: StorageSplitView(
-            currentSize: 55,
-            minimumSize: 20,
-            maximumSize: 75,
-            totalSize: 100,
-            partition: const Partition(number: 1),
-            existingOS: const OsProber(long: 'Windows', label: '', type: ''),
-            productInfo: const ProductInfo(name: 'Ubuntu'),
-            onResize: (v) => size = v,
-          ),
-        ),
+      buildStorageSplitViewPage(
+        currentSize: 55,
+        partition: const Partition(number: 1),
+        onResize: (v) => size = v,
       ),
     );
     await tester.pumpAndSettle();
@@ -160,20 +133,13 @@ void main() {
 
     // rebuild with different size and limits
     await tester.pumpWidget(
-      MaterialApp(
-        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-        home: Scaffold(
-          body: StorageSplitView(
-            currentSize: 35,
-            minimumSize: 30,
-            maximumSize: 50,
-            totalSize: 60,
-            partition: const Partition(number: 2),
-            existingOS: const OsProber(long: 'Windows', label: '', type: ''),
-            productInfo: const ProductInfo(name: 'Ubuntu'),
-            onResize: (v) => size = v,
-          ),
-        ),
+      buildStorageSplitViewPage(
+        currentSize: 35,
+        minimumSize: 30,
+        maximumSize: 50,
+        totalSize: 60,
+        partition: const Partition(number: 2),
+        onResize: (v) => size = v,
       ),
     );
     await tester.pumpAndSettle();
@@ -192,4 +158,42 @@ void main() {
     await tester.drag(indicator, Offset(-windowWidth, 0));
     expect(size, 30);
   });
+}
+
+Widget buildStorageSplitViewPage({
+  required void Function(int) onResize,
+  int currentSize = 50,
+  int minimumSize = 20,
+  int maximumSize = 75,
+  int totalSize = 100,
+  DataUnit dataUnit = DataUnit.bytes,
+  Partition partition = const Partition(),
+  String existingLabel = 'Windows',
+  String productName = 'Ubuntu',
+}) {
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
+
+  return MaterialApp(
+    localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+    home: Scaffold(
+      body: ProviderScope(
+        overrides: [
+          pageImagesProvider.overrideWith((_) => pageImages),
+        ],
+        child: StorageSplitView(
+          currentSize: toBytes(currentSize, dataUnit),
+          minimumSize: toBytes(minimumSize, dataUnit),
+          maximumSize: toBytes(maximumSize, dataUnit),
+          totalSize: toBytes(totalSize, dataUnit),
+          partition: partition,
+          existingOS: OsProber(long: existingLabel, label: '', type: ''),
+          productInfo: ProductInfo(name: productName),
+          onResize: onResize,
+        ),
+      ),
+    ),
+  );
 }

@@ -35,7 +35,7 @@ void main() {
             .thenAnswer((_) async => testCase.configFlavorName);
         registerMockService<ConfigService>(configService);
 
-        final flavor = await loadFlavor();
+        final flavor = (await FlavorService.load()).flavor;
         expect(flavor, equals(testCase.expectedFlavor));
       });
     }

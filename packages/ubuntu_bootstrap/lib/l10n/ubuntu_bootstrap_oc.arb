@@ -118,7 +118,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Installacion acabada",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** es installat e prèst a utilizar",
+  "readyToUse": "{system} es installat e prèst a utilizar",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -160,13 +160,6 @@
     "type": "text",
     "placeholders": {
       "os": {}
-    }
-  },
-  "installationTypeEraseWarning": "<font color=\"{color}\">Avertiment :</font> aquò suprimirà totes vòstres programas, documents, fòtos e autres fichièrs de totes lo sistèmas operatius.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
     }
   },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Avertiment :</font> aquò suprimirà totes vòstres programas {os}, documents, fòtos e autres fichièrs.",
@@ -238,25 +231,6 @@
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Installar ara",
   "@selectGuidedStorageInstallNow": {},
-  "chooseSecurityKeyHeader": "Lo chiframent del disc permet de protegir vòstres fichièrs se per cas perdètz vòstre ordenador. Requerís de picar una clau de seguretat cada còp que l’ordenador s’amòda.\n\nTotes los fichièrs en defòra de {RELEASE} seràn pas chifrats.",
-  "@chooseSecurityKeyHeader": {},
-  "chooseSecurityKeyMismatch": "Las doas claus correspondon pas",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Avertiment :</font> se perdètz aquesta clau de seguretat, totas las donadas seràn perdudas. Se cal, escrivètz vòstra clau e gardatz-la dins un endrech dins un lòc segur.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
-  "chooseSecurityKeyHint": "Causissètz una clau de seguretat",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirmatz la clau de seguretat",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyTitle": "Clau de seguretat",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyRequired": "Una clau de seguretat es requerida",
-  "@chooseSecurityKeyRequired": {},
   "selectGuidedStorageDropdownLabel": "Seleccionatz lo disc :",
   "@selectGuidedStorageDropdownLabel": {},
   "newPartitionTableConfirmationTitle": "Particion novèla voida",
@@ -394,13 +368,6 @@
   "@restartNow": {},
   "continueTesting": "Contunhar d’ensajar",
   "@continueTesting": {},
-  "restartWarning": "Podètz téner d’ensajar {RELEASE} ara, mas fins que reavietz l’ordenador, tota modificacion o document que creatz serà pas servat.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Tròp de particions primàrias",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Limit atenh",

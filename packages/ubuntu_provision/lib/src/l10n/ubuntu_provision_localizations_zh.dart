@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -60,7 +63,19 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Something went wrong';
 
   @override
-  String get errorPageUnexpected => 'An unexpected error has occurred';
+  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+
+  @override
+  String get errorPageShowLog => 'Show log';
+
+  @override
+  String get errorPageHideLog => 'Hide log';
+
+  @override
+  String get restart => 'Restart';
+
+  @override
+  String get close => 'Close';
 
   @override
   String get timezonePageTitle => '选择您的时区';
@@ -108,7 +123,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get themeLight => '浅色';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '欢迎来到 $DISTRO';
   }
 
@@ -195,6 +210,14 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryTitle => '配置活动目录';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => '测试域连接';
@@ -352,7 +375,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get themeLight => '亮色';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return '歡迎使用 $DISTRO';
   }
 

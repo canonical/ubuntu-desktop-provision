@@ -2,8 +2,6 @@
   "@@locale": "da",
   "installThirdPartyTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware, såvel som yderligere medieformater",
   "@installThirdPartyTitle": {},
-  "chooseSecurityKeyRequired": "En sikkerhedsnøgle er påkrævet",
-  "@chooseSecurityKeyRequired": {},
   "installDriversTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware",
   "@installDriversTitle": {},
   "installDriversSubtitle": "Disse chauffører er underlagt de licensvilkår, som er inkluderet i deres dokumentation. De er proprietære.",
@@ -19,16 +17,10 @@
       "color": {}
     }
   },
-  "chooseSecurityKeyHint": "Vælg en sikkerhedsnøgle",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Bekræft sikkerhedsnøglen",
-  "@chooseSecurityKeyConfirmHint": {},
   "showSecurityKey": "Vis sikkerhedsnøgle",
   "@showSecurityKey": {},
   "otherOptions": "Andre muligheder",
   "@otherOptions": {},
-  "chooseSecurityKeyTitle": "Sikkerhedsnøgle",
-  "@chooseSecurityKeyTitle": {},
   "appTitle": "Ubuntu Skrivebordsinstallatør",
   "@appTitle": {},
   "installOption": "Installér {RELEASE}",
@@ -72,8 +64,6 @@
   "@secureBootSecurityKeysDontMatch": {},
   "offlineWarning": "Du er i øjeblikket offline",
   "@offlineWarning": {},
-  "chooseSecurityKeyMismatch": "Sikkerhedsnøglerne stemmer ikke overens",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeTitle": "installationstype",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Din computer har aktuelt {os} installeret. Hvad kunne du tænke dig at gøre?",
@@ -133,20 +123,6 @@
   "@installThirdPartySubtitle": {},
   "configureSecureBootDescription": "Du har valgt at installere tredjeparts driver-software. Dette kræver at man slår Sikker Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.",
   "@configureSecureBootDescription": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Advarsel:</font> Hvis du mister denne sikkerhedsnøgle, vil alle data gå tabt. Hvis du har verug for det, så skriv din nøgle ned og opbevare den et andet sikkert sted.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "Diskkryptering beskytter dine filer, i tilfælde af at du mister din computer. Det kræver at du indtaster en sikkerhedsnøgle, hver gang computeren starter op.\n\nEnhver fil uden for {RELEASE} vil ikke blive krypteret.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "bitlockerTitle": "BitLocker er aktiveret",
   "@bitlockerTitle": {},
   "confirmInstallButton": "Installér",
@@ -227,13 +203,6 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "installationTypeEraseWarning": "<font color=\"{color}\">Advarsel:</font> Dette vil slette alle dine programmer, dokumenter, fotografier, musik, og enhver anden fil, i alle operativsystemer.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
     }
   },
   "installationTypeNoneSelected": "Ingen valgt",
@@ -403,13 +372,6 @@
       "mount": {}
     }
   },
-  "restartWarning": "Du kan fortsat afprøve {RELEASE} nu, men indtil du genstarter computeren, vil ingen ændringer du foretager, eller dokumenter du gemmer, blive bevaret.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartNow": "Genstart nu",
   "@restartNow": {},
   "restartIntoWindows": "Genstart i Windows",
@@ -465,7 +427,7 @@
   },
   "installationSlidesCreativityTitle": "Berig din kreativitet",
   "@installationSlidesCreativityTitle": {},
-  "readyToUse": "**{system}** er installeret og klar til brug",
+  "readyToUse": "{system} er installeret og klar til brug",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -626,14 +588,6 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Advarsel:</font> Denne funktion understøttes kun på visse hardwarekonfigurationer og understøtter muligvis ikke opgraderinger til fremtidige Ubuntu-versioner. Læs venligst <a href=\"{url}\">Udgivelsesbemærkningerne</a>, før du aktiverer.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "installationTypeTPM": "EKSPERIMENTEL: Hardware-assisteret fuld diskkrypterings aktivering",

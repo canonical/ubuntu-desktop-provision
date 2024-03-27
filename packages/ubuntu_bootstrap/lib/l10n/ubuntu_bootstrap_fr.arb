@@ -68,30 +68,14 @@
   "@confirmPartitionChanges": {},
   "changeButtonText": "Changer",
   "@changeButtonText": {},
-  "chooseSecurityKeyHeader": "Le chiffrement du disque protège vos fichiers au cas où vous perdriez votre ordinateur. Il exige que vous saisissiez une clef de sécurité à chaque fois que l’ordinateur démarre.\n\nTous les fichiers en dehors d’{RELEASE} ne seront pas chiffrés.",
-  "@chooseSecurityKeyHeader": {},
   "installationTypeEncryptInfo": "Vous allez choisir une clé de sécurité à l’étape suivante.",
   "@installationTypeEncryptInfo": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Attention :</font> Si vous oubliez la clé de sécurité, toutes les données seront perdues. Il est recommandé de noter cette clé puis de la stocker dans en lieu sûr.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeZFSSelected": "ZFS sélectionné",
   "@installationTypeZFSSelected": {},
   "installationTypeTitle": "Type d’installation",
   "@installationTypeTitle": {},
   "installationTypeNoOSDetected": "Aucun système d’exploitation n’a été détecté sur cet ordinateur. Que voulez-vous faire ?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Attention :</font> Cela va supprimer tous vos programmes, documents, photos, musiques, et tous les autres fichiers sur tous les systèmes d’exploitation.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeNone": "Aucune",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Aucune sélectionnée",
@@ -122,10 +106,6 @@
   "@installationTypeLVMSelected": {},
   "bitlockerTitle": "BitLocker est activé",
   "@bitlockerTitle": {},
-  "chooseSecurityKeyHint": "Choisir un code de sécurité",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirmer le code de sécurité",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeReinstall": "Supprimer {os} et réinstaller",
   "@installationTypeReinstall": {
     "type": "text",
@@ -133,18 +113,12 @@
       "os": {}
     }
   },
-  "chooseSecurityKeyTitle": "Code de sécurité",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyMismatch": "Les codes de sécurité ne correspondent pas",
-  "@chooseSecurityKeyMismatch": {},
   "configureSecureBootTitle": "Configurer Secure Boot",
   "@configureSecureBootTitle": {},
   "chooseSecurityKey": "Choisir un code de sécurité",
   "@chooseSecurityKey": {},
   "confirmSecurityKey": "Confirmer le code de sécurité",
   "@confirmSecurityKey": {},
-  "chooseSecurityKeyRequired": "Un code de sécurité est requis",
-  "@chooseSecurityKeyRequired": {},
   "installationTypeZFS": "EXPERIMENTAL : Effacer le disque et utiliser ZFS",
   "@installationTypeZFS": {},
   "dontInstallDriverSoftwareNow": "Ne pas installer le pilote maintenant",
@@ -223,7 +197,7 @@
   "@partitionErase": {},
   "partitionMountPointLabel": "Point de montage :",
   "@partitionMountPointLabel": {},
-  "readyToUse": "**{system}** est installé et prêt à être utilisé",
+  "readyToUse": "{system} est installé et prêt à être utilisé",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -376,13 +350,6 @@
   "@continueTesting": {},
   "restartNow": "Redémarrer maintenant",
   "@restartNow": {},
-  "restartWarning": "Vous pouvez maintenant continuer à tester {RELEASE}, mais tant que vous n’aurez pas redémarré votre ordinateur, les changements effectués ou les documents créés ne seront pas préservés.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Trop de partitions primaires",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Limite atteinte",

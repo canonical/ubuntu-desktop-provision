@@ -18,6 +18,7 @@ class ActiveDirectoryModel extends SafeChangeNotifier {
       _domainNameValidation,
       _adminNameValidation,
       _passwordValidation,
+      _showPassword,
     ]).addListener(notifyListeners);
   }
 
@@ -29,12 +30,16 @@ class ActiveDirectoryModel extends SafeChangeNotifier {
       ValueNotifier<List<AdDomainNameValidation>?>(null);
   final _adminNameValidation = ValueNotifier<AdAdminNameValidation?>(null);
   final _passwordValidation = ValueNotifier<AdPasswordValidation?>(null);
+  final _showPassword = ValueNotifier<bool>(false);
 
   String get domainName => _domainName.value ?? '';
   bool get isDomainNameValid =>
       _domainNameValidation.value?.singleOrNull == AdDomainNameValidation.OK;
   List<AdDomainNameValidation>? get domainNameValidation =>
       _domainNameValidation.value;
+
+  bool get showPassword => _showPassword.value;
+  set showPassword(bool value) => _showPassword.value = value;
 
   Future<void> setDomainName(String value) {
     _domainName.value = value;

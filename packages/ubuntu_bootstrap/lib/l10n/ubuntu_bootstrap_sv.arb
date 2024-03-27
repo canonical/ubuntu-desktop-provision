@@ -8,7 +8,7 @@
   "@shutdown": {},
   "bitlockerTitle": "Bitlocker är aktiverat",
   "@bitlockerTitle": {},
-  "bitlockerDescription": "Den här datorn använder Windows BitLocker-kryptering.\nDu behöver använda Windows för att skapa fritt utrymme eller välja '{option}' för att fortsätta.",
+  "bitlockerDescription": "Den här datorn använder Windows BitLocker-kryptering.\nDu behöver använda Windows för att skapa fritt utrymme eller gå tillbaka och välja '{option}' för att fortsätta.",
   "@bitlockerDescription": {},
   "newPartitionTableConfirmationTitle": "Skapa en ny tom partition",
   "@newPartitionTableConfirmationTitle": {},
@@ -26,7 +26,7 @@
   "@partitionMountPointLabel": {},
   "partitionTypePrimary": "Primär",
   "@partitionTypePrimary": {},
-  "readyToUse": "**{system}** är installerat och redo att användas",
+  "readyToUse": "{system} är installerat och redo att användas",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -74,7 +74,7 @@
   "@changeButtonText": {},
   "welcome": "Välkommen",
   "@welcome": {},
-  "rstTitle": "RST är aktiverat",
+  "rstTitle": "RST upptäckt",
   "@rstTitle": {},
   "rstDescription": "Den här datorn använder Intel RST (Rapid Storage Technology). Du måste stänga av RST i Windows innan du installerar Ubuntu.",
   "@rstDescription": {},
@@ -99,13 +99,6 @@
   "@updatesOtherSoftwarePageTitle": {},
   "installationTypeNoOSDetected": "Den här datorn har för närvarande inga upptäckta operativsystem. Vad skulle du vilja göra?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Varning:</font> Detta kommer att radera alla dina program, dokument, foton, musik och alla andra filer i alla operativsystem.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "updatesOtherSoftwarePageDescription": "Vilka program skulle du vilja installera till att börja med?",
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Andra alternativ",
@@ -114,23 +107,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Denna programvara är föremål för licensvillkor som ingår i dess dokumentation. Vissa är proprietära.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "Säkerhetsnyckel",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Välj en säkerhetsnyckel",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Bekräfta säkerhetsnyckeln",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "En säkerhetsnyckel krävs",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Säkerhetsnycklarna stämmer inte överens",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Varning:</font> Om du tappar den här säkerhetsnyckeln kommer all data att gå förlorad. Om du behöver, skriv ner din nyckel och förvara den på ett säkert ställe någon annanstans.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeTitle": "Typ av installation",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Den här datorn har för närvarande {os} på sig. Vad skulle du vilja göra?",
@@ -205,7 +181,7 @@
   "@partitionFormatLabel": {},
   "confirmPageTitle": "Redo att installera",
   "@confirmPageTitle": {},
-  "confirmHeader": "Om du fortsätter kommer ändringarna nedan att skrivas till diskarna. Du kommer att kunna göra ytterligare ändringar manuellt.",
+  "confirmHeader": "Se över dina val",
   "@confirmHeader": {},
   "confirmPartitionTable": "{serial} ({path})",
   "@confirmPartitionTable": {
@@ -252,13 +228,6 @@
     "type": "text",
     "placeholders": {
       "system": {}
-    }
-  },
-  "chooseSecurityKeyHeader": "Diskkryptering skyddar dina filer om du tappar bort din dator. Det kräver att du anger en säkerhetsnyckel varje gång datorn startar.\n\nAlla filer utanför {RELEASE} kommer inte att krypteras.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
     }
   },
   "installationTypeEncrypt": "Kryptera den nya {RELEASE}-installationen för säkerhet",
@@ -434,17 +403,10 @@
   "@installDriversTitle": {},
   "installCodecsTitle": "Ladda ner och installera stöd för ytterligare medieformat",
   "@installCodecsTitle": {},
-  "installDriversSubtitle": "Dessa drivrutiner är föremål för licensvillkor som ingår i deras dokumentation. De är proprietära.",
+  "installDriversSubtitle": "Inkluderar men inte begränsat till NVIDIA-drivrutiner och liknande",
   "@installDriversSubtitle": {},
-  "installCodecsSubtitle": "Denna programvara är föremål för licensvillkor som ingår i dess dokumentation. Vissa är proprietära.",
+  "installCodecsSubtitle": "Inkluderar men inte begränsat till MP3, MP4, MOV och liknande",
   "@installCodecsSubtitle": {},
-  "restartWarning": "Du kan fortsätta att testa {RELEASE} nu, men tills du startar om datorn kommer alla ändringar du gör eller dokument du sparar inte att bevaras.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartNow": "Starta om nu",
   "@restartNow": {},
   "continueTesting": "Fortsätt att testa",
@@ -728,7 +690,7 @@
       "color": {}
     }
   },
-  "refreshRestart": "Starta om installationsprogrammet.",
+  "refreshRestart": "Vänligen stäng installationsprogrammet och starta om för att fortsätta",
   "@refreshRestart": {},
   "installationTypeTPM": "EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering",
   "@installationTypeTPM": {},
@@ -744,14 +706,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Varning:</font> Denna funktion stöds endast på vissa hårdvarukonfigurationer och kanske inte stöder uppgradering till framtida Ubuntu-utgåvor. Läs <a href=\"{url}\">versionsinformationen</a> innan du aktiverar.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "refreshInstall": "Uppdatera till version {version}",
@@ -826,12 +780,163 @@
   },
   "recoveryKeyCommand": "Du kan komma åt din återställningsnyckel efter installationen med följande kommando:",
   "@recoveryKeyCommand": {},
-  "fullInstallationSubtitle": "Ett offline-vänligt urval av kontorsverktyg, verktyg, webbläsare och spel.",
+  "fullInstallationSubtitle": "Ett offline-vänligt urval av kontorsverktyg, verktyg och webbläsare.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Standard installation",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Bara de viktigaste, webbläsare och grundläggande verktyg.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Fullständig installation",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallTitle": "Typ av installation",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Hur vill du installera {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Ange autoinstall.yaml URL.",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Interaktiv installation",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "För användare som vill bli guidade steg för steg genom installationen.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automatisk installation",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "För avancerade användare som har en autoinstall.yaml för konsekventa och repeterbara systemkonfigurationer.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Vad vill du göra med {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageTitle": "Optimera din dator",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Installera rekommenderad proprietär programvara?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA grafikkort har upptäckts",
+  "@codecsAndDriversNvidiaNote": {},
+  "choosePassphraseTitle": "Disk lösenfras",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseConfirmHint": "Bekräfta lösenfrasen",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "En lösenfras krävs",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Lösenfraserna matchar inte",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Se till att du sparar din lösenfras",
+  "@choosePassphraseInfoHeader": {},
+  "confirmPassphrase": "Bekräfta lösenfrasen",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Hur vill du installera {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Börja från början på den valda disken.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeLVMEncryption": "Använd LVM och kryptering",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS och kryptering vald",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara i framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Börja från början på den valda disken.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** har kopierats till disken",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Du måste starta om datorn för att fortsätta installationsprocessen.",
+  "@rebootToConfigureWarning": {},
+  "validate": "Validera",
+  "@validate": {},
+  "hideSecurityKey": "Dölj",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageBody": "{DISTRO} levereras som standard utan proprietär programvara. Att installera ytterligare programvara kan förbättra din dators prestanda.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "För bästa prestanda för NVIDIA grafikkort rekommenderas starkt att du installerar ytterligare drivrutiner.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHeader": "Skapa en lösenfras",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Välj en lösenfras",
+  "@choosePassphraseHint": {},
+  "choosePassphraseInfoBody": "Om du tappar bort din lösenfras kommer du att förlora all din data.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Skapa en lösenfras",
+  "@createPassphrase": {},
+  "installationTypeExperimental": "Experimentell",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Använd LVM",
+  "@installationTypeLVM": {},
+  "installationTypeZFSEncryption": "Radera disk och använd ZFS med kryptering",
+  "@installationTypeZFSEncryption": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Ingen",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Program",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Diskinställningar",
+  "@confirmEntryDiskSetup": {},
+  "confirmSectionSecurityAndMoreTitle": "Säkerhet & mer",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmSectionGeneralTitle": "Allmän",
+  "@confirmSectionGeneralTitle": {},
+  "confirmEntryDiskEncryption": "Disk kryptering",
+  "@confirmEntryDiskEncryption": {},
+  "confirmProprietarySoftwareCodecs": "Kodekar",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodekar & drivrutiner",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmEntryInstallationDisk": "Installationsdisk",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Proprietär programvara",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmProprietarySoftwareDrivers": "Drivrutiner",
+  "@confirmProprietarySoftwareDrivers": {},
+  "refreshHeader": "En uppdatering är tillgänglig för installationsprogrammet",
+  "@refreshHeader": {},
+  "refreshInfo": "Uppdatera till den senaste versionen för förbättrad tillförlitlighet och fler funktioner.",
+  "@refreshInfo": {},
+  "refreshReady": "Uppdatering redo",
+  "@refreshReady": {},
+  "refreshUpdateNow": "Uppdatera nu",
+  "@refreshUpdateNow": {},
+  "refreshCloseLabel": "Stäng installationsprogrammet",
+  "@refreshCloseLabel": {}
 }

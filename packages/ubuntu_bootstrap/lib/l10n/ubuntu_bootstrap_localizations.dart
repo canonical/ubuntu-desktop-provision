@@ -252,7 +252,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Installation type'**
+  /// **'Type of installation'**
   String get autoinstallTitle;
 
   /// No description provided for @autoinstallHeader.
@@ -264,7 +264,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Enter the autoinstall.yaml URL.'**
+  /// **'Enter the autoinstall.yaml URL:'**
   String get autoinstallInstructions;
 
   /// No description provided for @autoinstallInteractiveOption.
@@ -314,6 +314,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Preparing {DISTRO}…'**
   String loadingHeader(String DISTRO);
+
+  /// No description provided for @warningLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning:'**
+  String get warningLabel;
 
   /// No description provided for @tryOrInstallTitle.
   ///
@@ -372,7 +378,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstTitle.
   ///
   /// In en, this message translates to:
-  /// **'RST is enabled'**
+  /// **'RST detected'**
   String get rstTitle;
 
   /// No description provided for @rstHeader.
@@ -510,7 +516,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @fullInstallationSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'An offline-friendly selection of office tools, utilities, web browser and games.'**
+  /// **'An offline-friendly selection of office tools, utilities and web browser.'**
   String get fullInstallationSubtitle;
 
   /// No description provided for @minimalInstallationTitle.
@@ -552,7 +558,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installDriversSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'These drivers are subject to license terms included with their documentation. They are proprietary.'**
+  /// **'Including but not limited to NVIDIA drivers and similar'**
   String get installDriversSubtitle;
 
   /// No description provided for @installCodecsTitle.
@@ -564,14 +570,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installCodecsSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'This software is subject to license terms included with its documentation. Some are proprietary.'**
+  /// **'Including but not limited to MP3, MP4, MOV and similar'**
   String get installCodecsSubtitle;
 
-  /// No description provided for @onBatteryWarning.
+  /// No description provided for @batteryWarning.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> The computer is not plugged in to a power source.'**
-  String onBatteryWarning(String color);
+  /// **'The computer is not plugged in to a power source.'**
+  String get batteryWarning;
 
   /// No description provided for @offlineWarning.
   ///
@@ -861,11 +867,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Start from scratch on your selected disk.'**
   String get selectGuidedStorageInfo;
 
-  /// No description provided for @selectGuidedStorageDropdownLabel.
+  /// No description provided for @selectGuidedStorageDriveDropdownLabel.
   ///
   /// In en, this message translates to:
   /// **'Select drive:'**
-  String get selectGuidedStorageDropdownLabel;
+  String get selectGuidedStorageDriveDropdownLabel;
+
+  /// No description provided for @selectGuidedStoragePartitionDropdownLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Select partition:'**
+  String get selectGuidedStoragePartitionDropdownLabel;
 
   /// No description provided for @selectGuidedStorageInfoLabel.
   ///
@@ -878,6 +890,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Install now'**
   String get selectGuidedStorageInstallNow;
+
+  /// No description provided for @guidedStoragePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose where to install {DISTRO}'**
+  String guidedStoragePageHeader(String DISTRO);
 
   /// No description provided for @installAlongsideSpaceDivider.
   ///
@@ -1122,14 +1140,80 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @confirmHeader.
   ///
   /// In en, this message translates to:
-  /// **'If you continue, the changes listed below will be written to the disks. You will be able to make further changes manually.'**
+  /// **'Review your choices'**
   String get confirmHeader;
+
+  /// No description provided for @confirmDiskEncryptionLVM.
+  ///
+  /// In en, this message translates to:
+  /// **'LUKS (LVM)'**
+  String get confirmDiskEncryptionLVM;
+
+  /// No description provided for @confirmDiskEncryptionZFS.
+  ///
+  /// In en, this message translates to:
+  /// **'LUKS (ZFS)'**
+  String get confirmDiskEncryptionZFS;
+
+  /// No description provided for @confirmDiskEncryptionTPM.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM'**
+  String get confirmDiskEncryptionTPM;
+
+  /// No description provided for @confirmDiskEncryptionNone.
+  ///
+  /// In en, this message translates to:
+  /// **'None'**
+  String get confirmDiskEncryptionNone;
 
   /// No description provided for @confirmDevicesTitle.
   ///
   /// In en, this message translates to:
   /// **'Devices'**
   String get confirmDevicesTitle;
+
+  /// No description provided for @confirmEntryApplications.
+  ///
+  /// In en, this message translates to:
+  /// **'Applications'**
+  String get confirmEntryApplications;
+
+  /// No description provided for @confirmEntryDiskSetup.
+  ///
+  /// In en, this message translates to:
+  /// **'Disk setup'**
+  String get confirmEntryDiskSetup;
+
+  /// No description provided for @confirmEntryDiskEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'Disk encryption'**
+  String get confirmEntryDiskEncryption;
+
+  /// No description provided for @confirmEntryInstallationDisk.
+  ///
+  /// In en, this message translates to:
+  /// **'Installation disk'**
+  String get confirmEntryInstallationDisk;
+
+  /// No description provided for @confirmEntryProprietarySoftware.
+  ///
+  /// In en, this message translates to:
+  /// **'Proprietary software'**
+  String get confirmEntryProprietarySoftware;
+
+  /// No description provided for @confirmSectionGeneralTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get confirmSectionGeneralTitle;
+
+  /// No description provided for @confirmSectionSecurityAndMoreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Security & more'**
+  String get confirmSectionSecurityAndMoreTitle;
 
   /// No description provided for @confirmPartitionsTitle.
   ///
@@ -1185,6 +1269,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'partition <b>{sysname}</b> created'**
   String confirmPartitionCreate(String sysname);
 
+  /// No description provided for @confirmProprietarySoftwareCodecs.
+  ///
+  /// In en, this message translates to:
+  /// **'Codecs'**
+  String get confirmProprietarySoftwareCodecs;
+
+  /// No description provided for @confirmProprietarySoftwareCodecsDrivers.
+  ///
+  /// In en, this message translates to:
+  /// **'Codecs & drivers'**
+  String get confirmProprietarySoftwareCodecsDrivers;
+
+  /// No description provided for @confirmProprietarySoftwareDrivers.
+  ///
+  /// In en, this message translates to:
+  /// **'Drivers'**
+  String get confirmProprietarySoftwareDrivers;
+
   /// No description provided for @confirmInstallButton.
   ///
   /// In en, this message translates to:
@@ -1200,7 +1302,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @readyToUse.
   ///
   /// In en, this message translates to:
-  /// **'**{system}** is installed and ready to use'**
+  /// **'{system} is installed and ready to use'**
   String readyToUse(String system);
 
   /// No description provided for @rebootToConfigure.
@@ -1215,11 +1317,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Restart into {system}'**
   String restartInto(String system);
 
-  /// No description provided for @restartWarning.
+  /// No description provided for @restartWarningBody.
   ///
   /// In en, this message translates to:
-  /// **'You can continue testing {RELEASE} now, but until you restart the computer, any changes you make or documents you save will not be preserved.'**
-  String restartWarning(String RELEASE);
+  /// **'Restart to complete the installation or continue testing.\nAny changes you make not be saved.'**
+  String get restartWarningBody;
 
   /// No description provided for @rebootToConfigureWarning.
   ///
@@ -1260,7 +1362,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @bitlockerDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or choose \'{option}\' to continue.'**
+  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'{option}\' to continue.'**
   String bitlockerDescription(String option);
 
   /// No description provided for @bitlockerInstructions.
@@ -1521,6 +1623,30 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Update available'**
   String get refreshPageTitle;
 
+  /// No description provided for @refreshHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'An update is available for the installer'**
+  String get refreshHeader;
+
+  /// No description provided for @refreshUpdateNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Update now'**
+  String get refreshUpdateNow;
+
+  /// No description provided for @refreshInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Update to the latest version for improved reliability and more features.'**
+  String get refreshInfo;
+
+  /// No description provided for @refreshReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Update ready'**
+  String get refreshReady;
+
   /// No description provided for @refreshCurrent.
   ///
   /// In en, this message translates to:
@@ -1548,8 +1674,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @refreshRestart.
   ///
   /// In en, this message translates to:
-  /// **'Please quit and relaunch the installer.'**
+  /// **'Please close the installer and relaunch to continue'**
   String get refreshRestart;
+
+  /// No description provided for @refreshCloseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Close installer'**
+  String get refreshCloseLabel;
 
   /// No description provided for @refreshSnapPrerequisites.
   ///

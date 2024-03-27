@@ -8,12 +8,14 @@ import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+import 'autoinstall/test_autoinstall.dart';
 import 'install/test_install.dart';
 
 void main() {
@@ -145,6 +147,7 @@ extension on WidgetTester {
     registerMockService<ConfigService>(config);
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
     registerMockService<JournalService>(journal);
     registerMockService<LocaleService>(locale);
     registerMockService<ProductService>(ProductService());
@@ -154,12 +157,17 @@ extension on WidgetTester {
     );
     registerMockService<StorageService>(StorageService(subiquityClient));
     registerMockService<SubiquityClient>(subiquityClient);
+    registerMockService<SubiquityServer>(MockSubiquityServer());
     registerMockService<TelemetryService>(MockTelemetryService());
     registerMockService<NetworkService>(MockNetworkService());
+    registerMockService<PowerService>(MockPowerService());
+
+    final mockAutoInstallModel = buildAutoinstallModel();
 
     return ProviderScope(
       overrides: [
         slidesProvider.overrideWith((_) => MockSlidesModel()),
+        autoinstallModelProvider.overrideWith((_) => mockAutoInstallModel),
       ],
       child: WizardApp(
         localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,

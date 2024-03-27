@@ -29,6 +29,11 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testAccessibilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    // TODO: Test accessibility settings
+
     await tester.testKeyboardPage(layout: 'Englisch (Britisch)');
     await tester.tapNext();
     await tester.pumpAndSettle();

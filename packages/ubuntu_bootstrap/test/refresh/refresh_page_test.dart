@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_page.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -12,9 +13,15 @@ import 'test_refresh.dart';
 
 void main() {
   Widget buildPage(RefreshModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
+
     return ProviderScope(
       overrides: [
         refreshModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
       ],
       child: const RefreshPage(),
     );
@@ -52,9 +59,8 @@ void main() {
 
     final context = tester.element(find.byType(RefreshPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    expect(find.textContaining('1.2.3'), findsOneWidget);
     expect(
-      find.button(l10n.refreshInstall('1.2.4')),
+      find.button(l10n.refreshUpdateNow),
       findsOneWidget,
     );
 
@@ -119,8 +125,11 @@ void main() {
     expect(progress, isNotNull);
     expect(progress.value, isZero);
 
+    final context = tester.element(find.byType(RefreshPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
     expect(
-      find.button(find.ul10n((l10n) => l10n.quitLabel)),
+      find.button(l10n.refreshCloseLabel),
       findsOneWidget,
     );
   });
@@ -135,8 +144,11 @@ void main() {
     expect(progress, isNotNull);
     expect(progress.value, isZero);
 
+    final context = tester.element(find.byType(RefreshPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
     expect(
-      find.button(find.ul10n((l10n) => l10n.quitLabel)),
+      find.button(l10n.refreshCloseLabel),
       findsOneWidget,
     );
   });

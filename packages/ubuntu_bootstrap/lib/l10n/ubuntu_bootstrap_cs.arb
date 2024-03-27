@@ -21,13 +21,6 @@
       "RELEASE": {}
     }
   },
-  "chooseSecurityKeyHeader": "Šifrování disku ochrání vaše soubory v případě, že o počítač přijdete (ztráta, krádež, …). Vyžaduje zadání šifrovacího klíče při každém spuštění počítače z vypnutého stavu (nikoli z uspání).\n\nŠifrovány budou pouze soubory, nacházející se v rámci {RELEASE} – ty nacházející se mimo nikoli.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "appTitle": "Instalátor Ubuntu pro osobní počítače",
   "@appTitle": {},
   "changeButtonText": "Změnit",
@@ -86,25 +79,8 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání, obsažených v dokumentaci k němu. Některý je proprietární.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "Klíč zabezpečení",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHint": "Zvolte si šifrovací klíč",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Zopakujte zadání šifrovacího klíče (prevence překlepu)",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Je třeba zadat šifrovací klíč",
-  "@chooseSecurityKeyRequired": {},
   "installationTypeTitle": "Typ instalace",
   "@installationTypeTitle": {},
-  "chooseSecurityKeyMismatch": "Do každé z kolonek pro šifrovací klíč jste napsali něco jiného",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">VAROVÁNÍ:</font> Pokud tento šifrovací klíč zapomenete, ke svým datům už se nedostanete. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeOSDetected": "Na tomto počítači se už nachází {os}. Co si přejete udělat?",
   "@installationTypeOSDetected": {
     "type": "text",
@@ -114,13 +90,6 @@
   },
   "installationTypeNoOSDetected": "Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">VAROVÁNÍ:</font> Toto smaže veškeré případné aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory) ve všech operačních systémech.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Pokročilé funkce…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Pokročilé funkce",
@@ -227,7 +196,7 @@
       "system": {}
     }
   },
-  "readyToUse": "**{system}** je nainstalované a připravené k použití",
+  "readyToUse": "{system} je nainstalované a připravené k použití",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -438,13 +407,6 @@
   "@installCodecsSubtitle": {},
   "installDriversSubtitle": "Tyto ovladače jsou předmětem licenčních ujednání obsažených v dokumentaci k nim. Jsou proprietárními.",
   "@installDriversSubtitle": {},
-  "restartWarning": "Nyní můžete pokračovat ve zkoušení {RELEASE}, ale dokud počítač nerestartujete, veškeré provedené změny nebo vytvořené dokumenty nebudou zachovány.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "offlineWarning": "V tu chvíli nejste připojení k Internetu",
   "@offlineWarning": {},
   "restartNow": "Restartovat nyní",
@@ -653,14 +615,6 @@
   },
   "installationTypeTPM": "EXPERIMENTÁLNÍ: zapnout na hardware založené šifrování celého disku",
   "@installationTypeTPM": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Varování:</font> Tato funkce je podporovaná pouze na určitých kombinacích hardware a může se stát, že nebude podporován přechod na budoucí vydání Ubuntu. Před zapnutím si přečtětě <a href=\"{url}\">poznámky k vydání</a>.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "installationTypeTPMSelected": "TPM vybráno",
   "@installationTypeTPMSelected": {},
   "refreshPageTitle": "Je k dispozici aktualizace",

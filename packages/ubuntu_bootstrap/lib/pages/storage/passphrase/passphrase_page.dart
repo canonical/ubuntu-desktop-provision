@@ -25,19 +25,6 @@ class PassphrasePage extends ConsumerWidget {
     return HorizontalPage(
       windowTitle: lang.choosePassphraseTitle,
       title: lang.choosePassphraseHeader,
-      content: Column(
-        children: <Widget>[
-          Text(lang.choosePassphraseBody),
-          const PassphraseFormField(),
-          const ConfirmPassphraseFormField(),
-          InfoBox(
-            title: lang.choosePassphraseInfoHeader,
-            subtitle: lang.choosePassphraseInfoBody,
-            type: InfoBoxType.warning,
-            isThreeLine: true,
-          ),
-        ].withSpacing(kWizardSpacing),
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -49,6 +36,17 @@ class PassphrasePage extends ConsumerWidget {
           ),
         ],
       ),
+      children: <Widget>[
+        Text(lang.choosePassphraseBody),
+        const PassphraseFormField(),
+        const ConfirmPassphraseFormField(),
+        InfoBox(
+          title: lang.choosePassphraseInfoHeader,
+          subtitle: lang.choosePassphraseInfoBody,
+          type: InfoBoxType.warning,
+          isThreeLine: true,
+        ),
+      ].withSpacing(kWizardSpacing),
     );
   }
 }

@@ -9,14 +9,14 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 enum InstallationStep with RouteName {
   loading(LoadingPage.new, discreteStep: false, wizardStep: false),
   locale(LocalePage.new),
-  accessibility(AccessibilityPage.new),
+  accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
-  refresh(RefreshPage.new),
-  tryOrInstall(TryOrInstallPage.new, discreteStep: false),
-  autoinstall(AutoinstallPage.new),
-  sourceSelection(SourceSelectionPage.new),
+  refresh(RefreshPage.new, allowedToHide: true),
+  tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
+  autoinstall(AutoinstallPage.new, allowedToHide: true),
+  sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
   secureBoot(SecureBootPage.new),
@@ -25,12 +25,14 @@ enum InstallationStep with RouteName {
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
   confirm(ConfirmPage.new),
-  install(InstallPage.new, discreteStep: false, wizardStep: false);
+  install(InstallPage.new, discreteStep: false, wizardStep: false),
+  error(_errorPageFactory, discreteStep: false, wizardStep: false);
 
   const InstallationStep(
     this.pageFactory, {
     this.discreteStep = true,
     this.wizardStep = true,
+    this.allowedToHide = false,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -41,6 +43,9 @@ enum InstallationStep with RouteName {
   /// If this is true the page has its own step in the wizard progress bar.
   final bool discreteStep;
 
+  /// Whether the page can be hidden.
+  final bool allowedToHide;
+
   /// Gets all the pages that should be handled by the wizard.
   static Iterable<InstallationStep> get wizardSteps =>
       values.where((e) => e.wizardStep);
@@ -50,7 +55,12 @@ enum InstallationStep with RouteName {
     return WizardRoute(
       builder: (_) => page,
       userData: WizardRouteData(step: pageIndex),
-      onLoad: (_) => page.load(context, ref),
+      onLoad: (_) {
+        if (ref.context.mounted) {
+          return page.load(context, ref);
+        }
+        return false;
+      },
     );
   }
 
@@ -69,4 +79,11 @@ enum InstallationStep with RouteName {
   static InstallationStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+
+  static Iterable<String> get allowedToHideKeys =>
+      values.where((e) => e.allowedToHide).map((e) => e.name);
+}
+
+ProvisioningPage _errorPageFactory() {
+  return const ErrorPage(allowRestart: true);
 }

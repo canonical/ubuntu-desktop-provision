@@ -5,83 +5,87 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Us donem la benvinguda';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Us donem la benvinguda a $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'NOVETATS';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Un inici àgil';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle =>
+      'Afavoreix una experiència d’instal·lació més senzilla.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Botiga d’aplicacions amb un aspecte nou';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle =>
+      'Mai no ha estat més fàcil trobar el vostre programari preferit.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Seguretat millorada';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle =>
+      'Opcions noves per al xifrat per maquinari o mitjançant el ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Vegeu el registre de canvis</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetria';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Ajudeu perquè l’$distro sigui millor';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Compartiu dades anònimament amb l’$distro perquè puguem millorar la vostra experiència.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Sí, vull compartir dades del sistema amb l’equip de l’$distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'No, no comparteixis dades del sistema';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Detalls de l’informe';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Detalls de l’informe';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Informació legal';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Serveis d’ubicació';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Voleu activar els serveis d’ubicació?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle =>
+      'Permeteu que les aplicacions coneguin la vostra ubicació geogràfica.\nPodeu canviar-ho en qualsevol moment als Paràmetres del sistema.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Serveis d’ubicació';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Privadesa de les dades';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
@@ -101,7 +105,8 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription =>
+      'Get the most comprehensive subscription for open-source software security';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
@@ -124,17 +129,21 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro is now enabled in this machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription =>
+      'You can manage your Pro services in the Software & Updates application.';
 }

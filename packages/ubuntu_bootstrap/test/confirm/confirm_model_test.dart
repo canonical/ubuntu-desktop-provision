@@ -57,11 +57,12 @@ void main() {
     final installer = MockInstallerService();
     final storage = MockStorageService();
     final network = MockNetworkService();
+    final product = MockProductService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
 
-    final model = ConfirmModel(installer, storage, network);
+    final model = ConfirmModel(installer, storage, network, product);
     await model.init();
     verifyInOrder([
       storage.getStorage(),
@@ -95,13 +96,14 @@ void main() {
     final installer = MockInstallerService();
     final storage = MockStorageService();
     final network = MockNetworkService();
+    final product = MockProductService();
     when(storage.guidedTarget).thenReturn(target);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
 
-    final model = ConfirmModel(installer, storage, network);
+    final model = ConfirmModel(installer, storage, network, product);
     await model.init();
     verify(storage.setGuidedStorage()).called(1);
   });
@@ -110,12 +112,13 @@ void main() {
     final installer = MockInstallerService();
     final storage = MockStorageService();
     final network = MockNetworkService();
+    final product = MockProductService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
 
-    final model = ConfirmModel(installer, storage, network);
+    final model = ConfirmModel(installer, storage, network, product);
     await model.init();
     await model.startInstallation();
 
@@ -128,12 +131,13 @@ void main() {
     final installer = MockInstallerService();
     final storage = MockStorageService();
     final network = MockNetworkService();
+    final product = MockProductService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
 
-    final model = ConfirmModel(installer, storage, network);
+    final model = ConfirmModel(installer, storage, network, product);
     await model.init();
     await model.markNetworkConfigured();
 

@@ -4,12 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/l10n.dart';
+import 'package:ubuntu_init/src/error_page.dart';
 import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
-
-import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart' hide ErrorPage;
+import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -17,6 +18,7 @@ import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 // TODO: move to shared packages
+import '../../ubuntu_provision/test/accessibility/test_accessibility.dart';
 import '../../ubuntu_provision/test/identity/test_identity.dart';
 import '../../ubuntu_provision/test/keyboard/test_keyboard.dart';
 import '../../ubuntu_provision/test/locale/test_locale.dart';
@@ -34,11 +36,13 @@ void main() {
   setUp(() {
     YaruTestWindow.ensureInitialized(state: const YaruWindowState());
     setupMockPageConfig();
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
   });
 
   testWidgets('init', (tester) async {
     final initModel = buildInitModel();
     final localeModel = buildLocaleModel();
+    final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
     final ethernetModel = buildEthernetModel();
@@ -54,6 +58,7 @@ void main() {
         overrides: [
           initModelProvider.overrideWith((_) => initModel),
           localeModelProvider.overrideWith((_) => localeModel),
+          accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
           ethernetModelProvider.overrideWith((_) => ethernetModel),
@@ -74,6 +79,11 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(AccessibilityPage), findsOneWidget);
+    verify(accessibilityModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

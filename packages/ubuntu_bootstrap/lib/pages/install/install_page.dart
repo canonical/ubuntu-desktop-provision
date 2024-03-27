@@ -1,13 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
+import 'package:ubuntu_bootstrap/pages/install/done_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -15,7 +16,8 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
   const InstallPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
+  FutureOr<bool> load(BuildContext context, WidgetRef ref) {
+    if (!ref.context.mounted) return false;
     final model = ref.read(installModelProvider);
     final slides = ref.read(slidesProvider);
     return Future.wait([
@@ -35,7 +37,7 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
       duration: kThemeAnimationDuration,
       switchInCurve: Curves.easeInExpo,
       switchOutCurve: Curves.easeOutExpo,
-      child: isDone ? const _DonePage() : const _SlidePage(),
+      child: isDone ? const DonePage() : const _SlidePage(),
     );
   }
 }
@@ -90,7 +92,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                     left: kWizardSpacing,
                     right: kWizardSpacing,
                   ),
-                  child: _JournalView(journal: model.log),
+                  child: JournalView(journal: model.log),
                 ),
               ),
             ),
@@ -148,106 +150,6 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class _JournalView extends StatelessWidget {
-  const _JournalView({required this.journal});
-
-  final Stream<String> journal;
-
-  @override
-  Widget build(BuildContext context) {
-    return LogView(
-      log: journal,
-      padding: const EdgeInsets.symmetric(horizontal: kWizardSpacing),
-      style: TextStyle(
-        inherit: false,
-        fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
-        fontFamily: 'Ubuntu Mono',
-        textBaseline: TextBaseline.alphabetic,
-      ),
-      decoration: const InputDecoration(
-        border: InputBorder.none,
-        enabledBorder: InputBorder.none,
-        focusedBorder: InputBorder.none,
-        fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.symmetric(vertical: kWizardSpacing / 2),
-      ),
-      background: BoxDecoration(color: Theme.of(context).shadowColor),
-    );
-  }
-}
-
-class _DonePage extends ConsumerWidget {
-  const _DonePage();
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final flavor = ref.watch(flavorProvider);
-    final lang = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(installModelProvider);
-    final isCoreDesktop =
-        model.provisioningMode == ProvisioningMode.coreDesktop;
-
-    return WizardPage(
-      headerPadding: EdgeInsets.zero,
-      contentPadding: EdgeInsets.zero,
-      title: YaruWindowTitleBar(
-        title: Text(lang.installationCompleteTitle),
-      ),
-      content: Row(
-        children: [
-          const Spacer(flex: 2),
-          const MascotAvatar(),
-          const Spacer(),
-          Expanded(
-            flex: 8,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                MarkdownBody(
-                  data: isCoreDesktop
-                      ? lang.rebootToConfigure(model.productInfo.toString())
-                      : lang.readyToUse(model.productInfo.toString()),
-                  styleSheet: MarkdownStyleSheet(
-                    p: Theme.of(context).textTheme.titleLarge,
-                  ),
-                ),
-                const SizedBox(height: kWizardSpacing * 1.5),
-                Text(isCoreDesktop
-                    ? lang.rebootToConfigureWarning
-                    : lang.restartWarning(flavor.displayName)),
-                const SizedBox(height: kWizardSpacing * 1.5),
-                Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () async {
-                          final window = YaruWindow.of(context);
-                          await model.reboot().then((_) => window.close());
-                        },
-                        child: Text(lang.restartNow),
-                      ),
-                    ),
-                    const SizedBox(width: kWizardSpacing),
-                    if (!isCoreDesktop)
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed: YaruWindow.of(context).close,
-                          child: Text(lang.continueTesting),
-                        ),
-                      ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const Spacer(flex: 2),
-        ],
       ),
     );
   }

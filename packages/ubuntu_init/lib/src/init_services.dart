@@ -2,7 +2,9 @@ import 'package:args/args.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:sysmetrics/sysmetrics.dart';
 import 'package:timezone_map/timezone_map.dart';
+import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/services/gdm_service.dart';
+import 'package:ubuntu_init/src/services/provd_accessibility_service.dart';
 import 'package:ubuntu_init/src/services/provd_identity_service.dart';
 import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
 import 'package:ubuntu_init/src/services/provd_locale_service.dart';
@@ -20,6 +22,7 @@ export 'package:sysmetrics/sysmetrics.dart' show Sysmetrics;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
 
 export 'services/gdm_service.dart';
+export 'services/provd_accessibility_service.dart';
 export 'services/provd_identity_service.dart';
 export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';
@@ -29,7 +32,7 @@ export 'services/provd_timezone_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_session_service.dart';
 
-Future<void> registerInitServices(List<String> args) {
+Future<void> registerInitServices(List<String> args) async {
   var options = tryGetService<ArgResults>();
   if (options == null) {
     options = parseCommandLine(args, onPopulateOptions: (parser) {
@@ -42,6 +45,7 @@ Future<void> registerInitServices(List<String> args) {
   }
 
   tryRegisterService<ActiveDirectoryService>(RealmdActiveDirectoryService.new);
+  tryRegisterService<AccessibilityService>(ProvdAccessibilityService.new);
   tryRegisterService<ConfigService>(ConfigService.new);
   tryRegisterService<GdmService>(GdmService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
@@ -49,10 +53,13 @@ Future<void> registerInitServices(List<String> args) {
   tryRegisterService<KeyboardService>(ProvdKeyboardService.new);
   tryRegisterService<LocaleService>(ProvdLocaleService.new);
   tryRegisterService<NetworkService>(NetworkService.new);
-  tryRegisterService<PageConfigService>(() => PageConfigService(
-        config: tryGetService<ConfigService>(),
-        includeTryOrInstall: true,
-      ));
+  tryRegisterService<PageConfigService>(
+    () => PageConfigService(
+      config: tryGetService<ConfigService>(),
+      includeTryOrInstall: true,
+      allowedToHide: InitStep.allowedToHideKeys,
+    ),
+  );
   tryRegisterService<PrivacyService>(ProvdPrivacyService.new);
   tryRegisterService<ProService>(ProvdProService.new);
   tryRegisterService<ProductService>(ProductService.new);

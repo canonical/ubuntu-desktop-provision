@@ -81,7 +81,7 @@
   },
   "dontInstallDriverSoftwareNowDescription": "Ви можете встановити його пізніше з розділу \"Програми та оновлення\".",
   "@dontInstallDriverSoftwareNowDescription": {},
-  "readyToUse": "**{system}** встановлена та готова до використання.",
+  "readyToUse": "{system} встановлена та готова до використання.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -168,13 +168,6 @@
   "@installDriversTitle": {},
   "installDriversSubtitle": "Ці драйвери підпадають під дію ліцензійних умов, включених до їх документації. Вони є пропрієтарними..",
   "@installDriversSubtitle": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Попередження</font>: якщо ви втратите цей ключ безпеки, всі дані будуть втрачені. У разі необхідності, запишіть свій ключ і зберігайте його в безпечному місці.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "На цьому комп'ютері зараз знаходяться {os1} та {os2}. Що ви хочете зробити?",
   "@installationTypeDualOSDetected": {
     "type": "text",
@@ -190,13 +183,6 @@
     "type": "text",
     "placeholders": {
       "DISTRO": {}
-    }
-  },
-  "installationTypeEraseWarning": "<font color=\"{color}\">Попередження:</font> Це призведе до видалення всіх ваших програм, документів, фотографій, музики та будь-яких інших файлів у всіх операційних системах.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
     }
   },
   "installationTypeNoneSelected": "Нічого не вибрано",
@@ -244,21 +230,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "На це програмне забезпечення поширюються ліцензійні умови, що додаються до його документації. Деякі з них є запатентованими.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyHeader": "Шифрування диска захищає ваші файли на випадок втрати комп'ютера. Воно вимагає введення ключа безпеки під час кожного запуску комп'ютера.\n\nБудь-які файли за межами {RELEASE} не будуть зашифровані.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "chooseSecurityKeyHint": "Оберіть ключ безпеки",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Підтвердить ключ безпеки",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Потрібен ключ безпеки",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Не збігаються ключі безпеки",
-  "@chooseSecurityKeyMismatch": {},
   "installationTypeTitle": "Тип встановлення",
   "@installationTypeTitle": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Попередження:</font> це призведе до видалення всіх ваших {os} програм, документів, фотографій, музики та будь-яких інших файлів.",
@@ -399,8 +370,6 @@
   "@installCodecsTitle": {},
   "installCodecsSubtitle": "На це програмне забезпечення поширюються ліцензійні умови, що додаються до його документації. Деякі з них є пропрієтарними.",
   "@installCodecsSubtitle": {},
-  "chooseSecurityKeyTitle": "Оберіть ключ безпеки",
-  "@chooseSecurityKeyTitle": {},
   "installationTypeAdvancedTitle": "Додаткові можливості",
   "@installationTypeAdvancedTitle": {},
   "installationTypeReinstall": "Видалити {os} і встановити заново",
@@ -438,7 +407,6 @@
   "@partitionEditTitle": {},
   "partitionSizeLabel": "Розмір:",
   "@partitionSizeLabel": {},
-  "@partitionUnitMB": {},
   "loadingHeader": "Підготовка {DISTRO}…",
   "@loadingHeader": {
     "type": "text",
@@ -461,14 +429,6 @@
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Тільки найнеобхідніше, веб-браузер та базові утиліти.",
   "@minimalInstallationSubtitle": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Увага:</font> Ця функція підтримується лише на певних конфігураціях обладнання та може не підтримувати оновлення до майбутніх випусків Ubuntu. Будь ласка, прочитайте <a href=\"{url}\">примітки до випуску</a> перед увімкненням.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "installationTypeTPMSelected": "TPM обрано",
   "@installationTypeTPMSelected": {},
   "installationTypeTPM": "ЕКСПЕРИМЕНТАЛЬНО: Увімкнути апаратне шифрування диска",

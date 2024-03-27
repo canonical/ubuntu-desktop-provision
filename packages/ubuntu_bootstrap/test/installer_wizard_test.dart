@@ -53,7 +53,11 @@ void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
   const loadingTime = Duration(seconds: 1);
 
-  setUp(() => YaruTestWindow.ensureInitialized(state: const YaruWindowState()));
+  setUp(() {
+    YaruTestWindow.ensureInitialized(state: const YaruWindowState());
+    registerMockService<ThemeVariantService>(MockThemeVariantService());
+    registerMockService<TelemetryService>(MockTelemetryService());
+  });
 
   testWidgets('try ubuntu', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
@@ -66,8 +70,6 @@ void main() {
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -84,7 +86,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -118,7 +120,7 @@ void main() {
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.tapNext();
+    await tester.tapClose();
     await tester.pumpAndSettle();
 
     await expectLater(windowClosed, completes);
@@ -152,7 +154,6 @@ void main() {
     final installModel = buildInstallModel(isDone: true);
 
     registerMockService<DesktopService>(MockDesktopService());
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -185,7 +186,7 @@ void main() {
               .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
         ],
-        child: tester.buildTestWizard(excludedPages: []),
+        child: tester.buildTestWizard(excludedPages: {}),
       ),
     );
 
@@ -268,7 +269,6 @@ void main() {
 
     final subiquityClient = MockSubiquityClient();
     final productService = MockProductService();
-    registerMockService<TelemetryService>(MockTelemetryService());
     registerMockService<NetworkService>(
       SubiquityNetworkService(subiquityClient),
     );
@@ -301,8 +301,6 @@ void main() {
     final sourceModel = buildSourceModel();
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel(hasSecureBoot: true);
-
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -338,7 +336,6 @@ void main() {
     registerMockService<SessionService>(MockSessionService());
     registerMockService<StorageService>(storage);
     registerMockService<SubiquityClient>(MockSubiquityClient());
-    registerMockService<TelemetryService>(MockTelemetryService());
 
     await tester.pumpWidget(
       ProviderScope(
@@ -366,8 +363,6 @@ void main() {
         buildIdentityModel(useActiveDirectory: true, isValid: true);
     final activeDirectoryModel = buildActiveDirectoryModel(isUsed: true);
 
-    registerMockService<TelemetryService>(MockTelemetryService());
-
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
@@ -394,18 +389,17 @@ void main() {
     final confirmModel = buildConfirmModel();
     final installModel = buildInstallModel(isDone: true);
 
-    registerMockService<TelemetryService>(MockTelemetryService());
-
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
           slidesProvider.overrideWith((_) => MockSlidesModel()),
         ],
-        child: tester.buildTestWizard(excludedPages: [
+        child: tester.buildTestWizard(excludedPages: {
           'autoinstall',
           'tryOrInstall',
           'locale',
@@ -420,7 +414,7 @@ void main() {
           'identity',
           'activeDirectory',
           'timezone',
-        ]),
+        }),
       ),
     );
 
@@ -459,8 +453,6 @@ void main() {
       ),
     );
 
-    registerMockService<TelemetryService>(MockTelemetryService());
-
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
@@ -486,9 +478,9 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard({
-    List<String> excludedPages = const ['tryOrInstall'],
-  }) {
+  Widget buildTestWizard(
+      {Set<String> excludedPages = const {'tryOrInstall'},
+      bool includeTryOrInstall = false}) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return !excludedPages.contains(
@@ -497,7 +489,7 @@ extension on WidgetTester {
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
 
-    setupMockPageConfig(excludedPages: excludedPages);
+    setupMockPageConfig(includeTryOrInstall: includeTryOrInstall);
     final subiquityClient = MockSubiquityClient();
     when(subiquityClient.hasRst()).thenAnswer((_) async => false);
     registerMockService<SubiquityClient>(subiquityClient);
@@ -507,6 +499,8 @@ extension on WidgetTester {
     final keyboardService = SubiquityKeyboardService(subiquityClient);
     registerMockService<KeyboardService>(keyboardService);
     when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
+
+    registerMockService<PowerService>(MockPowerService());
 
     final refresh = MockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.status(

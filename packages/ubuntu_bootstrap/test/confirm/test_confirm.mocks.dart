@@ -3,12 +3,13 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart' as _i2;
-import 'package:ubuntu_bootstrap/services.dart' as _i3;
+import 'package:subiquity_client/subiquity_client.dart' as _i4;
+import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart' as _i3;
+import 'package:ubuntu_provision/services.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -23,25 +24,44 @@ import 'package:ubuntu_bootstrap/services.dart' as _i3;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeProductInfo_0 extends _i1.SmartFake implements _i2.ProductInfo {
+  _FakeProductInfo_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [ConfirmModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
+class MockConfirmModel extends _i1.Mock implements _i3.ConfirmModel {
   MockConfirmModel() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  List<_i3.Disk> get disks => (super.noSuchMethod(
+  List<_i4.Disk> get disks => (super.noSuchMethod(
         Invocation.getter(#disks),
-        returnValue: <_i3.Disk>[],
-      ) as List<_i3.Disk>);
+        returnValue: <_i4.Disk>[],
+      ) as List<_i4.Disk>);
 
   @override
-  Map<String, List<_i3.Partition>> get partitions => (super.noSuchMethod(
+  Map<String, List<_i4.Partition>> get partitions => (super.noSuchMethod(
         Invocation.getter(#partitions),
-        returnValue: <String, List<_i3.Partition>>{},
-      ) as Map<String, List<_i3.Partition>>);
+        returnValue: <String, List<_i4.Partition>>{},
+      ) as Map<String, List<_i4.Partition>>);
+
+  @override
+  _i2.ProductInfo get productInfo => (super.noSuchMethod(
+        Invocation.getter(#productInfo),
+        returnValue: _FakeProductInfo_0(
+          this,
+          Invocation.getter(#productInfo),
+        ),
+      ) as _i2.ProductInfo);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -56,7 +76,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
       ) as bool);
 
   @override
-  _i3.Partition? getOriginalPartition(
+  _i4.Partition? getOriginalPartition(
     String? sysname,
     int? number,
   ) =>
@@ -66,40 +86,40 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
           sysname,
           number,
         ],
-      )) as _i3.Partition?);
+      )) as _i4.Partition?);
 
   @override
-  _i4.Future<void> init() => (super.noSuchMethod(
+  _i5.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<void> startInstallation() => (super.noSuchMethod(
+  _i5.Future<void> startInstallation() => (super.noSuchMethod(
         Invocation.method(
           #startInstallation,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<void> markNetworkConfigured() => (super.noSuchMethod(
+  _i5.Future<void> markNetworkConfigured() => (super.noSuchMethod(
         Invocation.method(
           #markNetworkConfigured,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -108,7 +128,7 @@ class MockConfirmModel extends _i1.Mock implements _i2.ConfirmModel {
       );
 
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

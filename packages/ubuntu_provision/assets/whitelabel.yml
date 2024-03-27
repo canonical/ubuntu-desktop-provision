@@ -1,6 +1,6 @@
 pages:
   locale:
-    image: "assets/mascot.png"
+    image: "assets/images/logo-light.svg"
   accessibility:
     image: "assets/images/accessibility.svg"
   try-or-install:
@@ -12,21 +12,31 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
+    image: "assets/images/mascot.svg"
   autoinstall:
     image: "assets/images/disk.svg"
   source-selection:
-    image: "assets/images/mascot.svg"
+    image: "assets/images/applications.svg"
   codecs-and-drivers:
-    image: "assets/images/keyboard.svg"
+    image: "assets/images/optimize.svg"
   not-enough-disk-space:
+    image: "assets/images/no_space.svg"
   secure-boot:
+    image: "assets/images/encryption.svg"
   storage:
     image: "assets/images/disk.svg"
-  passphrase:
+  guided-resize:
     image: "assets/images/disk.svg"
+  guided-reformat:
+    image: "assets/images/disk.svg"
+  passphrase:
+    image: "assets/images/passphrase.svg"
   confirm:
+    image: "assets/images/summary.svg"
   identity:
-    image: "assets/images/keyboard.svg"
+    image: "assets/images/identity.svg"
+  active-directory:
+    image: "assets/images/online_accounts.svg"
   ubuntu-pro-onboarding:
     image: "assets/images/ubuntu_pro.svg"
   ubuntu-pro:
@@ -36,3 +46,11 @@ pages:
   privacy:
   timezone:
   telemetry:
+    image: "assets/images/telemetry.svg"
+  welcome:
+  done:
+    image: "assets/images/mascot.svg"
+  storage-icon:
+    image: "assets/images/ubuntu_storage_icon.svg"
+  error:
+    image: "assets/images/error.svg"

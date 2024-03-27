@@ -50,6 +50,21 @@ class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
       ) as _i4.VoidCallback);
 
   @override
+  bool get autoinstall => (super.noSuchMethod(
+        Invocation.getter(#autoinstall),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set autoinstall(bool? value) => super.noSuchMethod(
+        Invocation.setter(
+          #autoinstall,
+          value,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   String get url => (super.noSuchMethod(
         Invocation.getter(#url),
         returnValue: _i5.dummyValue<String>(
@@ -96,6 +111,21 @@ class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
+  @override
+  _i6.Future<String> getFileContent() => (super.noSuchMethod(
+        Invocation.method(
+          #getFileContent,
+          [],
+        ),
+        returnValue: _i6.Future<String>.value(_i5.dummyValue<String>(
+          this,
+          Invocation.method(
+            #getFileContent,
+            [],
+          ),
+        )),
+      ) as _i6.Future<String>);
 
   @override
   _i6.Future<void> apply() => (super.noSuchMethod(

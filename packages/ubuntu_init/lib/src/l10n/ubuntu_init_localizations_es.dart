@@ -5,11 +5,11 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Bienvenido';
+  String get welcomePageTitle => 'Le damos la bienvenida';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Bienvenido a $distro';
+    return 'Le damos la bienvenida a $distro';
   }
 
   @override
@@ -19,13 +19,13 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Un comienzo simplificado';
 
   @override
-  String get welcomeStartSubtitle => 'Apoya una experiencia de configuración más limpia.';
+  String get welcomeStartSubtitle => 'A favor de una experiencia de puesta en marcha más prolija.';
 
   @override
   String get welcomeStoreTitle => 'Un nuevo aspecto para la Tienda de Aplicaciones';
 
   @override
-  String get welcomeStoreSubtitle => 'Nunca ha sido tan fácil encontrar tu software favorito.';
+  String get welcomeStoreSubtitle => 'Nunca ha sido tan fácil encontrar sus programas favoritos.';
 
   @override
   String get welcomeSecurityTitle => 'Mayor seguridad';
@@ -43,17 +43,17 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Ayuda a mejorar $distro';
+    return 'Ayude a mejorar $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Comparte datos de forma anónima con $distro para que podamos mejorar tu experiencia.';
+    return 'Comparta datos de forma anónima con $distro para que podamos mejorar su experiencia.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Sí, comparte los datos del sistema con el equipo $distro';
+    return 'Sí, compartir datos del sistema con el equipo de $distro';
   }
 
   @override
@@ -66,16 +66,16 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get telemetryReportTitle => 'Detalles del informe';
 
   @override
-  String get telemetryLegalLabel => 'Información Legal';
+  String get telemetryLegalLabel => 'Información legal';
 
   @override
   String get privacyPageTitle => 'Servicios de ubicación';
 
   @override
-  String get privacyLocationTitle => '¿Habilitar los servicios de ubicación?';
+  String get privacyLocationTitle => '¿Quiere activar los servicios de ubicación?';
 
   @override
-  String get privacyLocationSubtitle => 'Permite que las aplicaciones conozcan tu ubicación geográfica.\nPuedes cambiar esto en cualquier momento en los Ajustes del sistema.';
+  String get privacyLocationSubtitle => 'Permita que las aplicaciones conozcan su ubicación geográfica.\nPuede cambiar esto en cualquier momento en la Configuración del sistema.';
 
   @override
   String get privacyLocationEnable => 'Servicios de ubicación';

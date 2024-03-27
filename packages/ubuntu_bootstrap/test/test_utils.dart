@@ -52,27 +52,36 @@ extension WidgetTesterX on WidgetTester {
   PostInstallService,
   RefreshService,
   StorageService,
+  PageImages,
 ])
 class _Dummy {} // ignore: unused_element
 
 /// Registers a mock [PageConfigService].
 ///
 /// The [overridePages] argument will override the pages that are returned
-/// if provided. All pages defined in [InstallationStep] except `try_or_install` are
-/// returned by default.
-void setupMockPageConfig({
+/// if provided. All pages defined in [InstallationStep] except `try-or-install`
+/// are returned by default.
+MockPageConfigService setupMockPageConfig({
   Map<String, PageConfigEntry>? overridePages,
-  List<String> excludedPages = const ['welcome'],
+  Iterable<String>? overridePageKeys,
   bool isOem = false,
+  bool includeTryOrInstall = false,
 }) {
+  final simpleOverrides =
+      overridePageKeys?.map((key) => MapEntry(key, const PageConfigEntry()));
   final pages = overridePages ??
-      Map.fromEntries(InstallationStep.values
-          .map((step) => MapEntry(step.name, const PageConfigEntry())));
+      Map.fromEntries(
+        simpleOverrides ??
+            InstallationStep.values.map(
+              (step) => MapEntry(step.name, const PageConfigEntry()),
+            ),
+      );
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
-  when(pageConfigService.excludedPages).thenReturn(excludedPages);
   when(pageConfigService.isOem).thenReturn(isOem);
+  when(pageConfigService.includeTryOrInstall).thenReturn(includeTryOrInstall);
+  return pageConfigService;
 }
 
 const keyboardSetup = KeyboardSetup(

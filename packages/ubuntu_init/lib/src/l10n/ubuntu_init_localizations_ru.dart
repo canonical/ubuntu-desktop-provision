@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Длитесь данными $distro анонимно, чтобы мы могли улучшить ваш опыт.';
+    return 'Делитесь данными $distro анонимно, чтобы мы могли улучшить ваш опыт.';
   }
 
   @override

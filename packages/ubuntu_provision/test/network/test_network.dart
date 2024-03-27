@@ -88,7 +88,10 @@ Widget buildNetworkPage({
   when(hiddenWifiModel.onAvailabilityChanged)
       .thenAnswer((_) => const Stream.empty());
 
-  final pageImages = PageImages(MockPageConfigService());
+  final pageImages = PageImages.internal(
+    MockPageConfigService(),
+    MockThemeVariantService(),
+  );
 
   return ProviderScope(
     overrides: [

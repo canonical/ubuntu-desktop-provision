@@ -4,26 +4,32 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_page.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 import '../test_utils.dart';
 import 'test_autoinstall.mocks.dart';
 
 @GenerateMocks([AutoinstallModel])
-AutoinstallModel buildAutoinstallModel({AsyncValue<void>? state, String? url}) {
+AutoinstallModel buildAutoinstallModel({
+  AsyncValue<void>? state,
+  String? url,
+  bool autoinstall = false,
+}) {
   final model = MockAutoinstallModel();
   when(model.state).thenReturn(state ?? const AsyncValue<void>.data(null));
   when(model.url).thenReturn(url ?? '');
+  when(model.autoinstall).thenReturn(autoinstall);
+  when(model.getFileContent()).thenAnswer((_) async => '');
   return model;
 }
 
-final pageImages = PageImages(MockPageConfigService());
-
 Widget buildAutoinstallPage(AutoinstallModel model) {
+  registerMockService<ThemeVariantService>(MockThemeVariantService());
+  registerMockService<PageConfigService>(MockPageConfigService());
   return ProviderScope(
     overrides: [
       autoinstallModelProvider.overrideWith((_) => model),
-      pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const AutoinstallPage(),
   );

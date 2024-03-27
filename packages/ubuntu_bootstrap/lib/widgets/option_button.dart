@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class OptionButton<T> extends StatelessWidget {
@@ -19,33 +20,35 @@ class OptionButton<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final isSelected = value == groupValue;
 
-    return Container(
-      width: double.infinity,
-      constraints: const BoxConstraints(maxWidth: 500),
-      decoration: BoxDecoration(
-        color: value == groupValue
-            ? scheme.primary.withOpacity(0.1)
-            : scheme.primaryContainer,
+    return Align(
+      alignment: AlignmentDirectional.centerStart,
+      child: YaruBorderContainer(
+        color: isSelected
+            ? colorScheme.primary.withOpacity(0.2)
+            : colorScheme.primaryContainer,
         border: Border.all(
-          color: value == groupValue ? scheme.primary : scheme.outline,
+          color: isSelected ? colorScheme.primary : theme.dividerColor,
         ),
-        borderRadius: BorderRadius.circular(kYaruButtonRadius),
-      ),
-      child: YaruRadioButton<T>(
-        contentPadding: const EdgeInsetsDirectional.fromSTEB(15, 10, 60, 10),
-        title: DefaultTextStyle(
-          style: Theme.of(context)
-              .textTheme
-              .titleSmall!
-              .copyWith(fontWeight: FontWeight.bold),
-          child: title,
+        borderRadius: kWizardBorderRadius,
+        child: YaruRadioListTile<T>(
+          title: DefaultTextStyle(
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .copyWith(fontWeight: FontWeight.bold),
+            child: title,
+          ),
+          subtitle: subtitle,
+          contentPadding: kWizardTilePadding,
+          isThreeLine: true,
+          value: value,
+          groupValue: groupValue,
+          onChanged: onChanged,
         ),
-        subtitle: subtitle,
-        value: value,
-        groupValue: groupValue,
-        onChanged: onChanged,
       ),
     );
   }

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
-import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_split_view.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_slider_view.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 
 /// Install alongside other OSes.
 class GuidedResizePage extends ConsumerWidget {
@@ -45,43 +44,10 @@ class GuidedResizePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(guidedResizeModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(_formatTitle(context, ref)),
-      ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          StorageSelector(
-            count: model.storageCount,
-            selectedIndex: model.selectedIndex,
-            onSelected: model.selectStorage,
-          ),
-          const SizedBox(height: kWizardSpacing),
-          Text(lang.installAlongsideSpaceDivider),
-          const SizedBox(height: kWizardSpacing / 2),
-          if (model.selectedPartition != null)
-            SizedBox(
-              height: 200,
-              child: StorageSplitView(
-                currentSize: model.currentSize,
-                minimumSize: model.minimumSize,
-                maximumSize: model.maximumSize,
-                totalSize: model.totalSize,
-                partition: model.selectedPartition!,
-                existingOS: model.selectedOS,
-                productInfo: model.productInfo,
-                onResize: model.resizeStorage,
-              ),
-            ),
-          const SizedBox(height: kWizardSpacing / 2),
-          HiddenPartitionLabel(
-            partitions: model.getAllPartitions(model.selectedIndex ?? -1) ?? [],
-            onTap: () =>
-                Wizard.of(context).replace(arguments: StorageType.manual),
-          ),
-        ],
-      ),
+    return HorizontalPage(
+      windowTitle: _formatTitle(context, ref),
+      title:
+          lang.guidedStoragePageHeader(ref.watch(flavorProvider).displayName),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -91,6 +57,28 @@ class GuidedResizePage extends ConsumerWidget {
           ),
         ],
       ),
+      children: <Widget>[
+        StorageSelector(
+          count: model.storageCount,
+          selectedIndex: model.selectedIndex,
+          onSelected: model.selectStorage,
+        ),
+        const SizedBox(height: 3 * kWizardSpacing),
+        if (model.selectedPartition != null)
+          SizedBox(
+            height: 200,
+            child: StorageSliderView(
+              currentSize: model.currentSize,
+              minimumSize: model.minimumSize,
+              maximumSize: model.maximumSize,
+              totalSize: model.totalSize,
+              partition: model.selectedPartition!,
+              existingOS: model.selectedOS,
+              productInfo: model.productInfo,
+              onResize: model.resizeStorage,
+            ),
+          ),
+      ],
     );
   }
 }

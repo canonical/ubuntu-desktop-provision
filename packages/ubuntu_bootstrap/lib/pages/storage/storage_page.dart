@@ -20,12 +20,11 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     return ref.read(storageModelProvider.notifier).init().then((_) => true);
   }
 
-  static String _formatAlongside(
+  static String formatAlongside(
     UbuntuBootstrapLocalizations lang,
-    ProductInfo info,
+    String product,
     List<OsProber> os,
   ) {
-    final product = [info.name, info.version].whereType<String>().join(' ');
     switch (os.length) {
       case 0:
         return lang.installationTypeAlongsideUnknown(product);
@@ -53,61 +52,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
       title: lang.installationTypeHeader(flavor.displayName),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (model.canInstallAlongside || model.hasBitLocker)
-            _InstallationTypeTile(
-              storageType: StorageType.alongside,
-              title: Text(
-                _formatAlongside(
-                  lang,
-                  model.productInfo,
-                  model.existingOS ?? [],
-                ),
-              ),
-              subtitle: Text(lang.installationTypeAlongsideInfo),
-            ),
-          if (model.canEraseDisk) ...[
-            _InstallationTypeTile(
-              storageType: StorageType.erase,
-              title: Text(lang.installationTypeErase(flavor.displayName)),
-              subtitle: Text(lang.installationTypeEraseInfo),
-              trailing: model.hasAdvancedFeatures
-                  ? Padding(
-                      padding: const EdgeInsets.only(top: kWizardSpacing),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          OutlinedButton(
-                            onPressed: model.type == StorageType.erase
-                                ? () =>
-                                    showAdvancedFeaturesDialog(context, model)
-                                : null,
-                            child: Text(lang.installationTypeAdvancedLabel),
-                          ),
-                          const SizedBox(width: kWizardSpacing),
-                          Flexible(
-                            child: Text(
-                              model.guidedCapability?.localize(lang) ?? '',
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : null,
-            ),
-            const SizedBox(height: kWizardSpacing),
-          ],
-          if (model.canManualPartition)
-            _InstallationTypeTile(
-              storageType: StorageType.manual,
-              title: Text(lang.installationTypeManual),
-              subtitle:
-                  Text(lang.installationTypeManualInfo(flavor.displayName)),
-            ),
-        ],
-      ),
       isNextEnabled: model.canEraseDisk ||
           model.canInstallAlongside ||
           model.canManualPartition,
@@ -117,6 +61,55 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
       // previously configured storage must be reset to make all guided
       // partitioning targets available.
       onBack: model.resetStorage,
+      children: [
+        if (model.canInstallAlongside || model.hasBitLocker)
+          _InstallationTypeTile(
+            storageType: StorageType.alongside,
+            title: Text(
+              formatAlongside(
+                lang,
+                ref.watch(flavorProvider).displayName,
+                model.existingOS ?? [],
+              ),
+            ),
+            subtitle: Text(lang.installationTypeAlongsideInfo),
+          ),
+        if (model.canEraseDisk) ...[
+          _InstallationTypeTile(
+            storageType: StorageType.erase,
+            title: Text(lang.installationTypeErase(flavor.displayName)),
+            subtitle: Text(lang.installationTypeEraseInfo),
+            trailing: model.hasAdvancedFeatures
+                ? Padding(
+                    padding: const EdgeInsets.only(top: kWizardSpacing),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        OutlinedButton(
+                          onPressed: model.type == StorageType.erase
+                              ? () => showAdvancedFeaturesDialog(context, model)
+                              : null,
+                          child: Text(lang.installationTypeAdvancedLabel),
+                        ),
+                        const SizedBox(width: kWizardSpacing),
+                        Flexible(
+                          child: Text(
+                            model.guidedCapability?.localize(lang) ?? '',
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : null,
+          ),
+        ],
+        if (model.canManualPartition)
+          _InstallationTypeTile(
+            storageType: StorageType.manual,
+            title: Text(lang.installationTypeManual),
+            subtitle: Text(lang.installationTypeManualInfo(flavor.displayName)),
+          ),
+      ],
     );
   }
 }
@@ -162,34 +155,21 @@ class _InstallationTypeTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
     final model = ref.watch(storageModelProvider);
-    final isSelected = storageType == model.type;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withOpacity(0.2)
-            : colorScheme.primaryContainer,
-        border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
+      child: YaruRadioListTile(
+        title: title,
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [subtitle, trailing].whereNotNull().toList(),
         ),
-        borderRadius: kWizardBorderRadius,
-        child: YaruRadioListTile(
-          title: title,
-          subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-                [subtitle, if (isSelected) trailing].whereNotNull().toList(),
-          ),
-          contentPadding: kWizardTilePadding,
-          isThreeLine: true,
-          value: storageType,
-          groupValue: model.type,
-          onChanged: (value) => model.type = value,
-        ),
+        contentPadding: kWizardTilePadding,
+        isThreeLine: true,
+        value: storageType,
+        groupValue: model.type,
+        onChanged: (value) => model.type = value,
       ),
     );
   }

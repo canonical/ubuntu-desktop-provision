@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -37,64 +37,10 @@ class GuidedReformatPage extends ConsumerWidget {
     final model = ref.watch(guidedReformatModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(lang.selectGuidedStoragePageTitle(flavor.displayName)),
-      ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text(lang.selectGuidedStorageDropdownLabel),
-              const SizedBox(width: kWizardSpacing),
-              Expanded(
-                child: MenuButtonBuilder<int>(
-                  values: List.generate(model.storages.length, (i) => i),
-                  selected: model.selectedIndex,
-                  onSelected: model.selectStorage,
-                  itemBuilder: (context, index, child) {
-                    final disk = model.getDisk(index);
-                    return disk != null
-                        ? Text(prettyFormatDisk(context, disk),
-                            key: ValueKey(index))
-                        : const SizedBox.shrink();
-                  },
-                ),
-              )
-            ],
-          ),
-          const SizedBox(height: kWizardSpacing),
-          if (model.selectedStorage != null)
-            Text(lang.selectGuidedStorageInfoLabel),
-          const SizedBox(height: kWizardSpacing * 2),
-          if (model.selectedDisk != null)
-            Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  SvgPicture.asset(
-                    'assets/storage/ubuntu.svg',
-                    width: 48,
-                    height: 48,
-                  ),
-                  const SizedBox(height: kWizardSpacing / 2),
-                  Text(
-                    flavor.displayName,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: kWizardSpacing / 2),
-                  Text(model.selectedDisk?.sysname ?? ''),
-                  const SizedBox(height: kWizardSpacing / 2),
-                  Text(
-                    context.formatByteSize(model.selectedDisk?.size ?? 0),
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                ],
-              ),
-            ),
-        ],
-      ),
+    return HorizontalPage(
+      windowTitle: lang.selectGuidedStoragePageTitle(flavor.displayName),
+      title:
+          lang.guidedStoragePageHeader(ref.watch(flavorProvider).displayName),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -107,6 +53,67 @@ class GuidedReformatPage extends ConsumerWidget {
           ),
         ],
       ),
+      children: <Widget>[
+        Row(
+          children: <Widget>[
+            Text(lang.selectGuidedStorageDriveDropdownLabel),
+            const SizedBox(width: kWizardSpacing),
+            Expanded(
+              child: MenuButtonBuilder<int>(
+                values: List.generate(model.storages.length, (i) => i),
+                selected: model.selectedIndex,
+                onSelected: model.selectStorage,
+                itemBuilder: (context, index, child) {
+                  final disk = model.getDisk(index);
+                  return disk != null
+                      ? Text(prettyFormatDisk(context, disk),
+                          key: ValueKey(index))
+                      : const SizedBox.shrink();
+                },
+              ),
+            )
+          ],
+        ),
+        const SizedBox(height: kWizardSpacing * 2),
+        if (model.selectedDisk != null)
+          YaruBorderContainer(
+            padding: kWizardTilePadding,
+            borderRadius: kWizardBorderRadius,
+            color: Theme.of(context).colorScheme.primaryContainer,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox.square(
+                      dimension: 32,
+                      child: StorageIcon(
+                        name: flavor.displayName,
+                        useCustomIcon: true,
+                      ),
+                    ),
+                    const SizedBox(width: kWizardBarSpacing),
+                    Text(
+                      flavor.displayName,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(width: kWizardSpacing),
+                    Chip(
+                      label: Text(model.selectedDisk!.sysname),
+                      shape: const StadiumBorder(),
+                    ),
+                    const Spacer(),
+                    Text(
+                      context.formatByteSize(
+                        model.selectedDisk?.size ?? 0,
+                        precision: 1,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+      ],
     );
   }
 }

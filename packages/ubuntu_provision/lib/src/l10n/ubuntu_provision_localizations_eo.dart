@@ -5,12 +5,15 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
-  String accessibilityPageTitle(Object DISTRO) {
+  String get accessibilityPageTitle => 'Accessibility';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
     return 'Accessibility in $DISTRO';
   }
 
   @override
-  String accessibilityPageBody(Object DISTRO) {
+  String accessibilityPageBody(String DISTRO) {
     return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
@@ -60,7 +63,19 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Something went wrong';
 
   @override
-  String get errorPageUnexpected => 'An unexpected error has occurred';
+  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+
+  @override
+  String get errorPageShowLog => 'Show log';
+
+  @override
+  String get errorPageHideLog => 'Hide log';
+
+  @override
+  String get restart => 'Restart';
+
+  @override
+  String get close => 'Close';
 
   @override
   String get timezonePageTitle => 'Elektu vian horzonon';
@@ -108,7 +123,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get themeLight => 'Hela';
 
   @override
-  String localePageTitle(Object DISTRO) {
+  String localePageTitle(String DISTRO) {
     return 'Bonvenon al $DISTRO';
   }
 
@@ -195,6 +210,14 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryTitle => 'Agordi Aktivan Dosierujon';
+
+  @override
+  String get activeDirectoryHeader => 'Log into Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+  }
 
   @override
   String get activeDirectoryTestConnection => 'Provi konekton al la domanio';

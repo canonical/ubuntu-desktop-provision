@@ -1,0 +1,22 @@
+Source: provd
+Section: admin
+Priority: optional
+Maintainer: Matt <matt.hagemann@canonical.com>
+Build-Depends: dbus,
+               debhelper-compat (= 13),
+               dh-golang,
+               golang-go,
+               libglib2.0-dev,
+               libgtk-3-dev,
+Standards-Version: 4.6.2.0
+XS-Go-Import-Path: github.com/canonical/ubuntu-desktop-provision/provd
+Homepage: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
+Rules-Requires-Root: no
+
+Package: provd
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: Ubuntu init backend
+ Backend service used by Ubuntu init to
+ perform different system setup activities.

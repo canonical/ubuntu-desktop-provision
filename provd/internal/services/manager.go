@@ -3,12 +3,15 @@ package services
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log/slog"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/pro"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/timezone"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -21,58 +24,78 @@ import (
 
 // Manager mediates the whole business logic of the application.
 type Manager struct {
-	userService     user.Service
-	localeService   locale.Service
-	keyboardSerivce keyboard.Service
-	privacyService  privacy.Service
-	timezoneService timezone.Service
-	bus             *dbus.Conn
+	userService          user.Service
+	localeService        locale.Service
+	keyboardSerivce      keyboard.Service
+	privacyService       privacy.Service
+	timezoneService      timezone.Service
+	accessibilityService accessibility.Service
+	proService           pro.Service
+	bus                  *dbus.Conn
 }
 
 // NewManager returns a new manager after creating all necessary items for our business logic.
-func NewManager(ctx context.Context) (m *Manager, err error) {
-	defer decorate.OnError(&err, "can't create provd object")
+func NewManager(ctx context.Context) (m *Manager, e error) {
+	defer decorate.OnError(&e, "can't create provd object")
+
+	var errs error
 
 	bus, err := dbus.ConnectSystemBus(
 		dbus.WithIncomingInterceptor(func(msg *dbus.Message) {
 			slog.Debug(fmt.Sprintf("DBUS: %s", msg))
 		}))
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "Failed to connect to system bus: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to connect to system bus: %s", err))
 	}
 
 	userService, err := user.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create user service: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to create user service: %s", err))
 	}
 
 	localeService, err := locale.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create locale service: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to create locale service: %s", err))
 	}
 
 	keyboardService, err := keyboard.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create keyboard service: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to create keyboard service: %s", err))
 	}
 
 	privacyService, err := privacy.New()
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create privacy service: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to create privacy service: %s", err))
 	}
 
 	timezoneService, err := timezone.New(bus)
 	if err != nil {
-		return nil, status.Errorf(codes.Internal, "failed to create timezone service: %s", err)
+		errs = errors.Join(errs, fmt.Errorf("failed to create timezone service: %s", err))
+	}
+
+	accessibilityService, err := accessibility.New()
+	if err != nil {
+		errs = errors.Join(errs, fmt.Errorf("failed to create accessibility service: %s", err))
+	}
+
+	if errs != nil {
+		return nil, status.Errorf(codes.Internal, "%s", errs)
+	}
+
+	proService, err := pro.New()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create pro service: %s", err)
 	}
 
 	return &Manager{
-		userService:     *userService,
-		localeService:   *localeService,
-		keyboardSerivce: *keyboardService,
-		privacyService:  *privacyService,
-		timezoneService: *timezoneService,
-		bus:             bus,
+		userService:          *userService,
+		localeService:        *localeService,
+		keyboardSerivce:      *keyboardService,
+		privacyService:       *privacyService,
+		timezoneService:      *timezoneService,
+		accessibilityService: *accessibilityService,
+		proService:           *proService,
+		bus:                  bus,
 	}, nil
 }
 
@@ -87,6 +110,8 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterKeyboardServiceServer(grpcServer, &m.keyboardSerivce)
 	pb.RegisterPrivacyServiceServer(grpcServer, &m.privacyService)
 	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
+	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
+	pb.RegisterProServiceServer(grpcServer, &m.proService)
 	return grpcServer
 }
 

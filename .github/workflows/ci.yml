@@ -74,7 +74,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v2
-      - run: melos format
+      - run: melos format:exclude
 
   init-e2e:
     runs-on: ubuntu-22.04
@@ -226,7 +226,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt install -y libgtk-3-dev
+          sudo apt install -y libgtk-3-dev debhelper dh-golang golang-go
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -244,12 +244,55 @@ jobs:
           go test -coverpkg=./... -coverprofile=/tmp/coverage.out -covermode=set ./... -shuffle=on
       - name: Run tests (with race detector)
         run: |
-
           cd provd
           go test -race ./...
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
           file: /tmp/coverage.out
           flags: provd
           token: ${{secrets.CODECOV_TOKEN}}
+
+  build-and-upload:
+    needs: go-tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [x86_64, arm64]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        if: matrix.platform == 'arm64'
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        if: matrix.platform == 'arm64'
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Debian package in Ubuntu Docker container
+        run: |
+          if [ "${{ matrix.platform }}" == "x86_64" ]; then
+            docker run --rm -v $(pwd):/workspace -w /workspace/provd ubuntu:noble bash -c "
+              apt-get update &&
+              apt-get install -y libgtk-3-dev debhelper dh-golang golang-go &&
+              dpkg-buildpackage -us -uc -b &&
+              mv ../provd_*.deb ../provd-${{ matrix.platform }}.deb
+            "
+          else
+            docker run --rm --platform linux/arm64 -v $(pwd):/workspace -w /workspace/provd ubuntu:noble bash -c "
+              apt-get update &&
+              apt-get install -y libgtk-3-dev libglib2.0-dev debhelper dh-golang golang-go &&
+              export C_INCLUDE_PATH=/usr/lib/aarch64-linux-gnu/glib-2.0/include/:$C_INCLUDE_PATH &&
+              dpkg-buildpackage -us -uc -b &&
+              mv ../provd_*.deb ../provd-${{ matrix.platform }}.deb
+            "
+          fi
+      - name: Upload Debian package
+        uses: actions/upload-artifact@v3
+        with:
+          name: provd-deb-package-${{ matrix.platform }}
+          path: provd-${{ matrix.platform }}.deb
+

@@ -72,25 +72,6 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Diese Software unterliegt den Lizenzbedingungen, die in der Dokumentation enthalten sind. Ein Teil davon ist proprietär.",
   "@installThirdPartySubtitle": {},
-  "chooseSecurityKeyTitle": "Sicherheitsschlüssel",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyHeader": "Die Festplattenverschlüsselung schützt Ihre Dateien, falls Sie Ihren Computer verlieren. Bei jedem Start des Computers müssen Sie einen Sicherheitsschlüssel eingeben.\n\nAlle Dateien außerhalb von {RELEASE} werden nicht verschlüsselt.",
-  "@chooseSecurityKeyHeader": {},
-  "chooseSecurityKeyHint": "Wählen Sie einen Sicherheitsschlüssel aus",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Bestätigen Sie den Sicherheitsschlüssel",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Ein Sicherheitsschlüssel ist erforderlich",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Die Sicherheitsschlüssel stimmen nicht überein",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Warnung:</font> Falls Sie diesen Sicherheitsschlüssel verlieren, sind alle Daten verloren. Bei Bedarf können Sie sich den Schlüssel aufschreiben und ihn an einem sicheren Ort verwahren.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeTitle": "Art der Installation",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Auf diesem Computer befindet sich momentan {os}. Wie möchten Sie vorgehen?",
@@ -104,13 +85,6 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Festplatte löschen und {DISTRO} installieren",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Warnung:</font> Dies wird alle Ihre Programme, Dokumente, Fotos, Musik und alle anderen Dateien in allen Betriebssystemen löschen.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Erweiterte Funktionen ...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Erweiterte Funktionen",
@@ -232,7 +206,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Installation abgeschlossen",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** ist installiert und einsatzbereit",
+  "readyToUse": "{system} ist installiert und einsatzbereit",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -402,13 +376,6 @@
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Grenze erreicht",
   "@partitionLimitReached": {},
-  "restartWarning": "Sie können {RELEASE} jetzt weiter ausprobieren, aber alle Änderungen, die Sie bis zu einem Neustart des Systems durchführen, werden nicht gespeichert.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "partitionFormatNone": "Unformatiert lassen",
   "@partitionFormatNone": {},
   "loadingHeader": "{DISTRO} wird vorbereitet …",
@@ -742,14 +709,6 @@
     "type": "text",
     "placeholders": {
       "color": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Warnung:</font> Diese Funktion wird nur auf bestimmten Hardwarekonfigurationen unterstützt und unterstützt möglicherweise keine Aktualisierungen auf zukünftige Ubuntu-Versionen. Bitte lesen Sie die <a href=\"{url}\">Veröffentlichungshinweise</a> vor dem Aktivieren.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "refreshSnapUpdateAssets": "{snap}-Güter werden aktualisiert...",

@@ -33,19 +33,8 @@
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Wybierz klucz bezpieczeństwa",
   "@chooseSecurityKey": {},
-  "chooseSecurityKeyTitle": "Klucz bezpieczeństwa",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyConfirmHint": "Potwierdź klucz bezpieczeństwa",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeErase": "Wymaż dysk i zainstaluj {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Ostrzeżenie:</font> spowoduje to usunięcie wszystkich programów, dokumentów, zdjęć, muzyki i wszelkich innych plików we wszystkich systemach operacyjnych.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "updatesOtherSoftwarePageDescription": "Jakie programy chcesz zainstalować na początek?",
   "@updatesOtherSoftwarePageDescription": {},
   "installationTypeTitle": "Typ instalacji",
@@ -69,8 +58,6 @@
   },
   "diskHeadersFormat": "Formatowanie",
   "@diskHeadersFormat": {},
-  "chooseSecurityKeyHeader": "Szyfrowanie dysku chroni pliki w przypadku utraty komputera. Wymaga ono podania klucza bezpieczeństwa przy każdym uruchomieniu komputera.\n\nWszelkie pliki spoza {RELEASE} nie zostaną zaszyfrowane.",
-  "@chooseSecurityKeyHeader": {},
   "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "EKSPERYMENTALNE: wymaż dysk i użyj ZFS",
@@ -152,17 +139,6 @@
   "@otherOptions": {},
   "secureBootSecurityKeysDontMatch": "Klucze bezpieczeństwa nie są zgodne",
   "@secureBootSecurityKeysDontMatch": {},
-  "chooseSecurityKeyHint": "Wybierz klucz bezpieczeństwa",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyRequired": "Wymagany jest klucz bezpieczeństwa",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. Jeżeli potrzebujesz, zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeOSDetected": "Na tym komputerze jest obecnie zainstalowany system {os}. Co chcesz zrobić?",
   "@installationTypeOSDetected": {
     "type": "text",
@@ -188,8 +164,6 @@
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ręczne partycjonowanie",
   "@installationTypeManual": {},
-  "chooseSecurityKeyMismatch": "Klucze bezpieczeństwa nie są zgodne",
-  "@chooseSecurityKeyMismatch": {},
   "bootLoaderDevice": "Urządzenie do instalacji programu rozruchowego",
   "@bootLoaderDevice": {},
   "partitionCreateTitle": "Utwórz partycję",
@@ -228,7 +202,7 @@
   },
   "installationCompleteTitle": "Instalacja zakończona",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** został zainstalowany i jest gotowy do użycia",
+  "readyToUse": "{system} został zainstalowany i jest gotowy do użycia",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -394,13 +368,6 @@
   "@partitionLimitReached": {},
   "restartNow": "Uruchom ponownie teraz",
   "@restartNow": {},
-  "restartWarning": "Możesz teraz kontynuować testowanie wersji {RELEASE}, ale dopóki nie uruchomisz ponownie komputera, wszelkie wprowadzone zmiany lub zapisane dokumenty nie zostaną zachowane.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "continueTesting": "Kontynuuj testowanie",
   "@continueTesting": {},
   "offlineWarning": "Jesteś obecnie offline",
@@ -768,22 +735,10 @@
       "color": {}
     }
   },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Ostrzeżenie:</font> ta funkcja jest obsługiwana tylko w niektórych konfiguracjach sprzętowych i może nie obsługiwać aktualizacji do przyszłych wersji Ubuntu. Przed włączeniem przeczytaj <a href=\"{url}\">informacje o wydaniu</a>.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "minimalInstallationTitle": "Instalacja domyślna",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
   "@minimalInstallationSubtitle": {},
-  "expandedInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
-  "@expandedInstallationSubtitle": {},
-  "expandedInstallationTitle": "Instalacja rozszerzona",
-  "@expandedInstallationTitle": {},
   "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Instalacja pełna",

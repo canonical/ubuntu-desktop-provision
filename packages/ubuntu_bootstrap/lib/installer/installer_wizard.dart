@@ -15,13 +15,21 @@ class InstallerWizard extends ConsumerStatefulWidget {
   ConsumerState<InstallerWizard> createState() => _InstallerWizardState();
 }
 
-class _InstallerWizardState extends ConsumerState<InstallerWizard> {
+class _InstallerWizardState extends ConsumerState<InstallerWizard>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
 
     final model = ref.read(installerModelProvider);
     model.init();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    final brightness = MediaQuery.platformBrightnessOf(context);
+    ref.read(brightnessProvider.notifier).state = brightness;
   }
 
   @override
@@ -30,9 +38,9 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard> {
     if (status?.state == ApplicationState.ERROR) {
       return const _ErrorWizard();
     }
-    return status?.interactive == false
-        ? _AutoinstallWizard(status: status)
-        : const _InstallWizard();
+    return (status?.interactive ?? true)
+        ? const _InstallWizard()
+        : _AutoinstallWizard(status: status);
   }
 }
 
@@ -47,10 +55,12 @@ class _InstallWizard extends ConsumerWidget {
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;
+    final hasRoute = ref.read(installerModelProvider).hasRoute;
 
     return WizardBuilder(
       initialRoute: InstallationStep.loading.route,
       userData: WizardData(totalSteps: totalSteps),
+      errorRoute: InstallationStep.error.route,
       routes: {
         InstallationStep.loading.route: WizardRoute(
           builder: (_) => const LoadingPage(),
@@ -66,6 +76,9 @@ class _InstallWizard extends ConsumerWidget {
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
+        ),
       },
       predicate: (route) {
         if ([
@@ -75,7 +88,7 @@ class _InstallWizard extends ConsumerWidget {
         ].contains(route)) {
           return true;
         } else {
-          return ref.read(installerModelProvider).hasRoute(route);
+          return hasRoute(route);
         }
       },
       observers: [_InstallerObserver(getService<TelemetryService>())],
@@ -104,6 +117,7 @@ class _AutoinstallWizard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return WizardBuilder(
+      errorRoute: InstallationStep.error.route,
       routes: <String, WizardRoute>{
         InstallationStep.loading.route: WizardRoute(
           builder: (_) => const LoadingPage(),
@@ -122,6 +136,9 @@ class _AutoinstallWizard extends ConsumerWidget {
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
+        ),
       },
     );
   }
@@ -134,8 +151,8 @@ class _ErrorWizard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wizard(
       routes: <String, WizardRoute>{
-        InstallationStep.install.route: WizardRoute(
-          builder: (_) => const InstallPage(),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
         ),
       },
     );

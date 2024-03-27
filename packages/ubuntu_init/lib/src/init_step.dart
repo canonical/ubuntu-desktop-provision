@@ -8,6 +8,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InitStep with RouteName {
   locale(LocalePage.new),
+  accessibility(AccessibilityPage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   identity(IdentityPage.new),
@@ -17,13 +18,15 @@ enum InitStep with RouteName {
   privacy(PrivacyPage.new, hasPrevious: false),
   timezone(TimezonePage.new, hasPrevious: false),
   telemetry(TelemetryPage.new, hasPrevious: false),
-  error(ErrorPage.new, wizardStep: false, discreteStep: false);
+  error(_errorPageFactory, wizardStep: false, discreteStep: false);
 
   const InitStep(
     this.pageFactory, {
     this.hasPrevious = true,
     this.discreteStep = true,
     this.wizardStep = true,
+    // ignore: unused_element
+    this.allowedToHide = false,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -36,6 +39,9 @@ enum InitStep with RouteName {
 
   /// If this is true the page has its own step in the wizard progress bar.
   final bool discreteStep;
+
+  /// Whether the page can be hidden.
+  final bool allowedToHide;
 
   WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();
@@ -52,6 +58,9 @@ enum InitStep with RouteName {
   static InitStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+
+  static Iterable<String> get allowedToHideKeys =>
+      values.where((e) => e.allowedToHide).map((e) => e.name);
 }
 
 enum WelcomeStep with RouteName {
@@ -75,4 +84,8 @@ enum WelcomeStep with RouteName {
   static WelcomeStep? fromName(String name) {
     return values.firstWhereOrNull((e) => e.name == name);
   }
+}
+
+ProvisioningPage _errorPageFactory() {
+  return const ErrorPage(allowRestart: false);
 }

@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Installation type';
+  String get autoinstallTitle => 'Тип установки';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Как Вы хотели бы установить $DISTRO?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Введите URL-адрес autoinstall.yaml.';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Интерактивная установка';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Для пользователей, которые хотят получить пошаговое руководство по установке.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Автоматическая установка';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.';
 
   @override
   String get changeButtonText => 'Изменить';
@@ -52,13 +52,16 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get warningLabel => 'Warning:';
+
+  @override
   String tryOrInstallTitle(String DISTRO) {
     return 'Попробовать или установить $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Что вы хотите сделать с $DISTRO?';
   }
 
   @override
@@ -93,14 +96,14 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST включён';
+  String get rstTitle => 'Обнаружен RST';
 
   @override
   String get rstHeader => 'Для продолжения отключите RST';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Двнный компьютер использует Intel RST (Rapid Storage Technology). Перед тем, как продолжить установку Ubuntu, необходимо отключить RST в Windows.';
+    return 'Данный компьютер использует Intel RST (Rapid Storage Technology). Перед тем, как продолжить установку $DISTRO, необходимо отключить RST в Windows.';
   }
 
   @override
@@ -109,7 +112,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get configureSecureBootTitle => 'Настроить Secure Boot';
+  String get configureSecureBootTitle => 'Настройте Secure Boot';
 
   @override
   String get configureSecureBootDescription => 'Вы выбрали установку стороннего драйвера. Для этого необходимо отключить Secure Boot.\nДля этого вам нужно сейчас выбрать ключ безопасности и ввести его при перезагрузке системы.';
@@ -136,45 +139,45 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Ключи безопасности не совпадают';
 
   @override
-  String get showSecurityKey => 'Показать ключ безопасности';
+  String get showSecurityKey => 'Показать';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Скрыть';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Приложения и обновления';
+  String get updatesOtherSoftwarePageTitle => 'Приложения';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'Какие приложения вы хотели бы установить для начала?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Оптимизируйте свой компьютер';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Установить рекомендованное проприетарное ПО?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'По умолчанию $DISTRO поставляется без проприетарного программного обеспечения. Установка дополнительного ПО может повысить производительность компьютера.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Обнаружена видеокарта NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Для достижения максимальной производительности графических карт NVIDIA настоятельно рекомендуется установить доп. драйверы.';
 
   @override
-  String get fullInstallationTitle => 'Полная установка';
+  String get fullInstallationTitle => 'Расширенная установка';
 
   @override
-  String get fullInstallationSubtitle => 'Удобный для работы в автономном режиме набор офисных инструментов, утилит, веб-браузера и игр.';
+  String get fullInstallationSubtitle => 'Удобный для работы в автономном режиме набор офисных инструментов, утилит и веб-браузер.';
 
   @override
-  String get minimalInstallationTitle => 'Минимальная установка';
+  String get minimalInstallationTitle => 'Стандартная установка';
 
   @override
-  String get minimalInstallationSubtitle => 'Только самое необходимое, веб-браузер и базовые утилиты.';
+  String get minimalInstallationSubtitle => 'Только некоторые инструменты, веб-браузер и базовые утилиты.';
 
   @override
   String get otherOptions => 'Другие опции';
@@ -189,61 +192,59 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Установка программного обеспечения сторонних производителей для графики и Wi-Fi оборудования';
 
   @override
-  String get installDriversSubtitle => 'На эти драйверы распространяются лицензионные условия, прилагаемые к их документации. Они являются проприетарными.';
+  String get installDriversSubtitle => 'Включая, но не ограничиваясь драйверами NVIDIA и другими подобными устройствами';
 
   @override
   String get installCodecsTitle => 'Загрузить и установить поддержку дополнительных медиаформатов';
 
   @override
-  String get installCodecsSubtitle => 'На это программное обеспечение распространяются лицензионные условия, прилагаемые к его документации. Некоторые из них являются проприетарными.';
+  String get installCodecsSubtitle => 'Включая, но не ограничиваясь, MP3, MP4, MOV и подобными им';
 
   @override
-  String onBatteryWarning(String color) {
-    return '<font color=\"$color\">Внимание:</font> Компьютер не подключен к источнику питания.';
-  }
+  String get batteryWarning => 'The computer is not plugged in to a power source.';
 
   @override
   String get offlineWarning => 'Вы сейчас не в сети';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Парольная фраза диска';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Создание парольной фразы';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Для шифрования файлов необходима парольная фраза. При каждом включении компьютера Вам будет предложено ввести её.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Выберите парольную фразу';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Подтвердите парольную фразу';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Требуется парольная фраза';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Парольные фразы не совпадают';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Обязательно сохраните парольную фразу';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Если Вы потеряете парольную фразу, Вы потеряете все свои данные.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Создать парольную фразу';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Подтвердить парольную фразу';
 
   @override
-  String get installationTypeTitle => 'Тип установки';
+  String get installationTypeTitle => 'Настройка диска';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Как Вы хотите установить $DISTRO?';
   }
 
   @override
@@ -268,7 +269,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Начните с нуля на выбранном диске.';
 
   @override
   String get installationTypeAdvancedLabel => 'Дополнительные возможности...';
@@ -277,7 +278,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Дополнительные возможности';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Экспериментально';
 
   @override
   String get installationTypeNone => 'Ничего';
@@ -286,13 +287,13 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Ничего не выбрано';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Использовать LVM';
 
   @override
   String get installationTypeLVMSelected => 'Выбран LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Использовать LVM и шифрование';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM и шифрование выбраны';
@@ -301,23 +302,23 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'На следующем шаге выберите ключ безопасности.';
 
   @override
-  String get installationTypeZFS => 'ЭКСПЕРИМЕНТАЛЬНОЕ: Стереть диск и использовать ZFS';
+  String get installationTypeZFS => 'Стереть диск и использовать ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Стереть диск и использовать ZFS с шифрованием';
 
   @override
   String get installationTypeZFSSelected => 'Выбрана ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'Выбраны ZFS и шифрование';
 
   @override
-  String get installationTypeTPM => 'ЭКСПЕРИМЕНТАЛЬНО: Включить аппаратное шифрование диска';
+  String get installationTypeTPM => 'Включить аппаратное шифрование диска';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Это экспериментальная функция. Она может не работать с вашим оборудованием в будущих выпусках $DISTRO. <a href=\"$url\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.';
   }
 
   @override
@@ -350,18 +351,18 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Установите $product рядом с другими разделами';
+    return 'Установить $product рядом с другими разделами';
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Документы, музыка и другие личные файлы будут сохранены. Вы сможете выбрать нужную операционную систему для загрузки при каждом запуске компьютера.';
+  String get installationTypeAlongsideInfo => 'Вы сможете выбирать операционную систему во время загрузки.';
 
   @override
-  String get installationTypeManual => 'Создание разделов вручную';
+  String get installationTypeManual => 'Ручная установка';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Вы можете создать или изменить разделы самостоятельно, или выбрать для $DISTRO несколько разделов';
+    return 'Для опытных пользователей, которым требуется особая настройка дисков.';
   }
 
   @override
@@ -370,16 +371,24 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Начните с нуля на выбранном диске.';
 
   @override
-  String get selectGuidedStorageDropdownLabel => 'Выберите диск:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Диск будет использован целиком:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Установить сейчас';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return 'Choose where to install $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => 'Выделите место на диске, переместив разделитель:';
@@ -506,10 +515,43 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Готово к установке';
 
   @override
-  String get confirmHeader => 'Если вы продолжите, перечисленные ниже изменения будут записаны на диски. Дальнейшие изменения вы сможете внести вручную.';
+  String get confirmHeader => 'Просмотрите свой выбор';
+
+  @override
+  String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
+
+  @override
+  String get confirmDiskEncryptionZFS => 'LUKS (ZFS)';
+
+  @override
+  String get confirmDiskEncryptionTPM => 'TPM';
+
+  @override
+  String get confirmDiskEncryptionNone => 'Нет';
 
   @override
   String get confirmDevicesTitle => 'Устройства';
+
+  @override
+  String get confirmEntryApplications => 'Приложения';
+
+  @override
+  String get confirmEntryDiskSetup => 'Настройка дисков';
+
+  @override
+  String get confirmEntryDiskEncryption => 'Шифрование дисков';
+
+  @override
+  String get confirmEntryInstallationDisk => 'Установочный диск';
+
+  @override
+  String get confirmEntryProprietarySoftware => 'Проприетарное ПО';
+
+  @override
+  String get confirmSectionGeneralTitle => 'Общие';
+
+  @override
+  String get confirmSectionSecurityAndMoreTitle => 'Безопасность и др.';
 
   @override
   String get confirmPartitionsTitle => 'Разделы';
@@ -551,6 +593,15 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get confirmProprietarySoftwareCodecs => 'Кодеки';
+
+  @override
+  String get confirmProprietarySoftwareCodecsDrivers => 'Кодеки и драйверы';
+
+  @override
+  String get confirmProprietarySoftwareDrivers => 'Драйверы';
+
+  @override
   String get confirmInstallButton => 'Установить';
 
   @override
@@ -558,12 +609,12 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** установлена и готова к использованию';
+    return '$system установлена и готова к использованию';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** была скопирована на диск';
   }
 
   @override
@@ -572,15 +623,13 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String restartWarning(String RELEASE) {
-    return 'Можете продолжить тестирование $RELEASE, но при перезагрузке компьютера все внесённые вами изменения или сохранённые документы будут потеряны.';
-  }
+  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Чтобы продолжить процесс установки, необходимо перезагрузить компьютер.';
 
   @override
-  String get shutdown => 'Отключить';
+  String get shutdown => 'Выключить';
 
   @override
   String get restartNow => 'Перезагрузить';
@@ -596,7 +645,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'Этот компьютер использует шифрование с помощью Windows BitLocker.\nВам необходимо использовать Windows для создания свободного места или выбрать \'$option\' для продолжения.';
+    return 'На этом компьютере используется шифрование Windows BitLocker.\nВам нужно использовать Windows для создания свободного пространства или вернуться назад и выбрать \'$option\', чтобы продолжить.';
   }
 
   @override
@@ -627,7 +676,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Включено:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Быстрый, бесплатный и полный новых возможностей';
+  String get installationSlidesWelcomeTitle => 'Быстрая, свободная и полная новых возможностей';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -681,7 +730,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'Все выпуски $DISTRO LTS предоставляют исправления безопасности в течение пяти лет, которые могут быть продлены до десяти лет при подписке на Ubuntu Pro.';
+    return 'Все выпуски $DISTRO LTS предоставляют исправления безопасности в течение пяти лет, которые могут быть продлены до десяти лет с подпиской Ubuntu Pro.';
   }
 
   @override
@@ -693,7 +742,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Доступно для каждого';
+  String get installationSlidesAccessibilityTitle => 'Доступна для каждого';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
@@ -711,7 +760,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Официальная поддержка $DISTRO доступна как в Интернете, так и через значок справки в док-панели.';
+    return 'Официальная документация $DISTRO доступна как в Интернете, так и через значок справки в док-панели.';
   }
 
   @override
@@ -759,6 +808,18 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Доступно обновление';
 
   @override
+  String get refreshHeader => 'Доступно обновление для программы установки';
+
+  @override
+  String get refreshUpdateNow => 'Обновить сейчас';
+
+  @override
+  String get refreshInfo => 'Выполните обновление, чтобы повысить надёжность и расширить возможности.';
+
+  @override
+  String get refreshReady => 'Обновление готово';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return 'Текущей версией $snap является $version.';
   }
@@ -779,7 +840,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Пожалуйста перезапустите установщик.';
+  String get refreshRestart => 'Закройте и перезапустите установщик, чтобы продолжить';
+
+  @override
+  String get refreshCloseLabel => 'Закрыть установщик';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -893,5 +957,5 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Подтвердить';
 }

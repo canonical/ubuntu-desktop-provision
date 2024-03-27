@@ -27,9 +27,9 @@
       "url": {}
     }
   },
-  "rstTitle": "RST está activado",
+  "rstTitle": "RST detectado",
   "@rstTitle": {},
-  "rstDescription": "Este equipo utiliza Intel RST (Rapid Storage Technology). Es necesario desactivar RST en Windows antes de instalar Ubuntu.",
+  "rstDescription": "Este ordenador utiliza la tecnología Intel RST (Rapid Storage Technology). Es necesario desactivar RST en Windows antes de instalar {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "Para obtener instrucciones, escanee el código QR en otro dispositivo o visite: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -68,7 +68,7 @@
   "@diskHeadersFormat": {},
   "confirmPageTitle": "Listo para instalar",
   "@confirmPageTitle": {},
-  "confirmHeader": "Si continúa, los cambios enumerados más abajo se escribirán en los discos. Podrá efectuar más cambios manualmente.",
+  "confirmHeader": "Revise sus elecciones",
   "@confirmHeader": {},
   "confirmPartitionTables": "Las tablas de partición de los siguientes dispositivos se modifican:",
   "@confirmPartitionTables": {},
@@ -82,35 +82,16 @@
   },
   "confirmPartitionChanges": "Se aplicarán los cambios siguientes a las particiones:",
   "@confirmPartitionChanges": {},
-  "chooseSecurityKeyHint": "Elija una clave de seguridad",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Confirmar la clave de seguridad",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "Se requiere una clave de seguridad",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Las claves de seguridad no coinciden",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Advertencia:</font> Si pierde esta clave de seguridad, se perderán todos los datos. Si lo necesita, anote su clave y guárdela en un lugar seguro en algún otro sitio.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "shutdown": "Apagar",
   "@shutdown": {},
   "bitlockerTitle": "BitLocker está activado",
   "@bitlockerTitle": {},
   "restartIntoWindows": "Reiniciar en Windows",
   "@restartIntoWindows": {},
-  "chooseSecurityKeyHeader": "El cifrado de disco protege sus archivos en caso de que pierda el equipo. Requiere que introduzca una clave de seguridad cada vez que se inicie el equipo.\n\nLos archivos que estén fuera de {RELEASE} no se cifrarán.",
-  "@chooseSecurityKeyHeader": {},
   "confirmSecurityKey": "Confirme la clave de seguridad",
   "@confirmSecurityKey": {},
   "configureSecureBootSecurityKeyRequired": "Se debe ingresar una clave de seguridad",
   "@configureSecureBootSecurityKeyRequired": {},
-  "chooseSecurityKeyTitle": "Clave de seguridad",
-  "@chooseSecurityKeyTitle": {},
   "partitionCreateTitle": "Crear partición",
   "@partitionCreateTitle": {},
   "bootLoaderDevice": "Dispositivo donde instalar el cargador de arranque",
@@ -144,7 +125,7 @@
   "@dontInstallDriverSoftwareNowDescription": {},
   "secureBootSecurityKeysDontMatch": "Las claves de seguridad no coinciden",
   "@secureBootSecurityKeysDontMatch": {},
-  "installationTypeTitle": "Tipo de instalación",
+  "installationTypeTitle": "Configuración del disco",
   "@installationTypeTitle": {},
   "installationTypeZFSSelected": "ZFS seleccionado",
   "@installationTypeZFSSelected": {},
@@ -180,13 +161,6 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Borrar disco e instalar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Advertencia:</font> Esto eliminará todos sus programas, documentos, fotos, música y cualquier otro archivo en todos los sistemas operativos.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAdvancedLabel": "Funciones avanzadas...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Características avanzadas",
@@ -209,7 +183,7 @@
   "@selectGuidedStorageInstallNow": {},
   "installationTypeManual": "Partición manual",
   "@installationTypeManual": {},
-  "installationTypeManualInfo": "Puede crear o cambiar el tamaño de las particiones manualmente, o elegir varias particiones para {DISTRO}",
+  "installationTypeManualInfo": "Para usuarios avanzados que buscan configuraciones de disco personalizadas.",
   "@installationTypeManualInfo": {},
   "installationTypeAlongside": "Instalar {product} junto a {os}",
   "@installationTypeAlongside": {
@@ -250,7 +224,7 @@
       "system": {}
     }
   },
-  "readyToUse": "**{system}** está instalado y listo para usarse",
+  "readyToUse": "{system} está instalado y listo para usarse",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -278,7 +252,7 @@
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "La creación de una nueva tabla de particiones en un dispositivo completo eliminará todas sus particiones actuales. Esta operación puede deshacerse si es necesario.",
   "@newPartitionTableConfirmationMessage": {},
-  "bitlockerDescription": "Este ordenador utiliza el cifrado BitLocker de Windows.\nDebe utilizar Windows para crear espacio libre o elegir '{option}' para continuar.",
+  "bitlockerDescription": "Este ordenador utiliza el cifrado BitLocker de Windows.\nDebe utilizar Windows para crear espacio libre o volver atrás y elegir '{option}' para continuar.",
   "@bitlockerDescription": {},
   "copyingFiles": "Copiando archivos…",
   "@copyingFiles": {},
@@ -384,9 +358,9 @@
   "@installationTypeLVMEncryptionSelected": {},
   "installDriversTitle": "Instalar software de terceros para gráficos y dispositivos de Wi-Fi",
   "@installDriversTitle": {},
-  "installCodecsSubtitle": "Este software está sujeto a los términos de licencia incluidos en su documentación. Algunos son privativos.",
+  "installCodecsSubtitle": "Incluidos, entre otros, MP3, MP4, MOV y similares",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Estos controladores están sujetos a los términos de licencia incluidos en su documentación. Son privativos.",
+  "installDriversSubtitle": "Incluidos, entre otros, los controladores NVIDIA y similares.",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Descarga e instala un soporte para formatos multimedia adicionales",
   "@installCodecsTitle": {},
@@ -394,13 +368,6 @@
   "@restartNow": {},
   "continueTesting": "Continuar probando",
   "@continueTesting": {},
-  "restartWarning": "Puede continuar probando {RELEASE} ahora, pero hasta que reinicie el equipo, los cambios que realice o los documentos que guarde no se conservarán.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Demasiadas particiones primarias",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Límite alcanzado",
@@ -623,14 +590,6 @@
   "@refreshPageTitle": {},
   "installationTypeTPMSelected": "TPM seleccionado",
   "@installationTypeTPMSelected": {},
-  "installationTypeTPMWarning": "<font color=\"{color}\">Advertencia:</font> Esta característica solo es compatible con ciertas configuraciones de hardware y es posible que no admita la actualización a futuras versiones de Ubuntu. Lea las <a href=\"{url}\">notas de la versión</a> antes de activarlo.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
-    }
-  },
   "refreshCurrent": "La versión actual de {snap} es {version}.",
   "@refreshCurrent": {
     "type": "text",
@@ -782,12 +741,147 @@
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Sólo lo esencial, el navegador web y las utilidades básicas.",
   "@minimalInstallationSubtitle": {},
-  "expandedInstallationSubtitle": "Una selección de herramientas de oficina, utilidades, navegador web y juegos compatibles sin conexión.",
-  "@expandedInstallationSubtitle": {},
-  "expandedInstallationTitle": "Instalación ampliada",
-  "@expandedInstallationTitle": {},
-  "fullInstallationSubtitle": "Una selección de herramientas ofimáticas, utilidades, navegador web y juegos sin conexión.",
+  "fullInstallationSubtitle": "Una selección de herramientas de oficina, utilidades y navegador web compatibles sin conexión.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Instalación completa",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "validate": "Validar",
+  "@validate": {},
+  "autoinstallTitle": "Tipo de instalación",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "¿Cómo te gustaría instalar {DISTRO} ?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Instalación interactiva",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Para usuarios que quieran ser guiados paso a paso durante la instalación.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Instalación automatizada",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Para usuarios avanzados que tienen un archivo autoinstall.yaml para configuraciones del sistema consistentes y repetibles.",
+  "@autoinstallAutomatedDescription": {},
+  "autoinstallInstructions": "Introduzca la URL de autoinstall.yaml",
+  "@autoinstallInstructions": {},
+  "tryOrInstallHeader": "¿Qué quieres hacer con {DISTRO} ?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Ocultar",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Optimizar tú ordenador",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "¿Instalar el software propietario recomendado?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} no tiene software propietario de forma predeterminada. La instalación de software adicional puede mejorar el rendimiento de su ordenador.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Tarjeta gráfica NVIDIA detectada",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Para obtener el mejor rendimiento de las tarjetas gráficas NVIDIA, se recomienda encarecidamente instalar controladores adicionales.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHint": "Elige una contraseña",
+  "@choosePassphraseHint": {},
+  "choosePassphraseBody": "Necesita una contraseña para cifrar sus archivos. Se le solicitará su contraseña cada vez que encienda su ordenador.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHeader": "Crear una contraseña",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseTitle": "Contraseña del disco",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseInfoHeader": "Asegúrate de guardar tu contraseña",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Si pierde su contraseña, perderá todos sus datos.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Crear una contraseña",
+  "@createPassphrase": {},
+  "choosePassphraseMismatch": "Las contraseña no coinciden",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseRequired": "Se requiere una contraseña",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseConfirmHint": "Verificar la contraseña",
+  "@choosePassphraseConfirmHint": {},
+  "confirmPassphrase": "Confirmar la contraseña",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "¿Cómo quieres instalar {DISTRO} ?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Comience desde cero en el disco seleccionado.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Experimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVMEncryption": "Utilice LVM y el cifrado",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Borrar el disco y usar ZFS con cifrado",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Esta es una característica experimental. Es posible que no funcione con el hardware de futuras versiones de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado TPM</a> antes de elegir esta opción.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Empieza desde cero en el disco seleccionado.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** se ha copiado en el disco",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Debe reiniciar el ordenador para continuar con el proceso de instalación.",
+  "@rebootToConfigureWarning": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionNone": "Ninguna",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryDiskSetup": "Configuración del disco",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryApplications": "Aplicaciones",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskEncryption": "Cifrado del disco",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Disco de instalación",
+  "@confirmEntryInstallationDisk": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Códecs y controladores",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareCodecs": "Códecs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmSectionGeneralTitle": "General",
+  "@confirmSectionGeneralTitle": {},
+  "confirmEntryProprietarySoftware": "Software propietario",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionSecurityAndMoreTitle": "Seguridad y más",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareDrivers": "Controladores",
+  "@confirmProprietarySoftwareDrivers": {}
 }

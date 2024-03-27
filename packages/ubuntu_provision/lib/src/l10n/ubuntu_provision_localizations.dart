@@ -240,14 +240,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @accessibilityPageTitle.
   ///
   /// In en, this message translates to:
+  /// **'Accessibility'**
+  String get accessibilityPageTitle;
+
+  /// No description provided for @accessibilityPageHeader.
+  ///
+  /// In en, this message translates to:
   /// **'Accessibility in {DISTRO}'**
-  String accessibilityPageTitle(Object DISTRO);
+  String accessibilityPageHeader(String DISTRO);
 
   /// No description provided for @accessibilityPageBody.
   ///
   /// In en, this message translates to:
   /// **'Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.'**
-  String accessibilityPageBody(Object DISTRO);
+  String accessibilityPageBody(String DISTRO);
 
   /// No description provided for @accessibilitySeeingLabel.
   ///
@@ -342,8 +348,32 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @errorPageUnexpected.
   ///
   /// In en, this message translates to:
-  /// **'An unexpected error has occurred'**
+  /// **'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.'**
   String get errorPageUnexpected;
+
+  /// No description provided for @errorPageShowLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Show log'**
+  String get errorPageShowLog;
+
+  /// No description provided for @errorPageHideLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide log'**
+  String get errorPageHideLog;
+
+  /// No description provided for @restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get restart;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
 
   /// No description provided for @timezonePageTitle.
   ///
@@ -396,7 +426,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @keyboardVariantLabel.
   ///
   /// In en, this message translates to:
-  /// **'Keyboard variant:'**
+  /// **'Select your keyboard variant:'**
   String get keyboardVariantLabel;
 
   /// No description provided for @keyboardPressKeyLabel.
@@ -439,7 +469,7 @@ abstract class UbuntuProvisionLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Welcome to {DISTRO}'**
-  String localePageTitle(Object DISTRO);
+  String localePageTitle(String DISTRO);
 
   /// No description provided for @localeHeader.
   ///
@@ -606,8 +636,20 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @activeDirectoryTitle.
   ///
   /// In en, this message translates to:
-  /// **'Configure Active Directory'**
+  /// **'Log into Active Directory'**
   String get activeDirectoryTitle;
+
+  /// No description provided for @activeDirectoryHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Log into Active Directory?'**
+  String get activeDirectoryHeader;
+
+  /// No description provided for @activeDirectoryInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'{DISTRO} is designed to integrate seamlessly with Active Directory for easier administration.'**
+  String activeDirectoryInfo(String DISTRO);
 
   /// No description provided for @activeDirectoryTestConnection.
   ///
@@ -816,7 +858,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @networkNoneOption.
   ///
   /// In en, this message translates to:
-  /// **'I don\'t want to connect to the internet just now'**
+  /// **'Do not connect to the internet'**
   String get networkNoneOption;
 }
 

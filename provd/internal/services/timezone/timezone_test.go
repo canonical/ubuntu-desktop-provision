@@ -102,7 +102,6 @@ func TestGetTimezone(t *testing.T) {
 				require.Nil(t, timezoneResp, "GetTimezone should return a nil response when in error")
 				return
 			}
-
 			require.NoError(t, err, "GetTimezone should not return an error")
 
 			got := timezoneResp.String()

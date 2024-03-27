@@ -57,7 +57,7 @@ theme:
     elevated-button-color: <color-hex-code>
     elevated-button-text-color: <color-hex-code>
 
-# (Optional) Override a page's image asset.
+# (Optional) Override a page's image asset and whether they should be shown or not.
 # Images expected in /usr/share/desktop-provision/images/<image-name>
 #
 # Bootstrap pages:
@@ -73,8 +73,11 @@ theme:
 # - not-enough-disk-space: Notifies if there is insufficient disk space
 # - secure-boot: Handles secure boot
 # - storage: Select target disk and partition
-# - identity: Create the first-user account (only displaed if mode = default)
+# - storage-icon: Not a separate page, but sets the distribution icon on the storage page
+# - identity: Create the first-user account (only displayed if mode = default)
 # - confirm: A summary of the installation and confirmation button to start the install
+# - done: Choose whether to restart or continue testing in the live session
+# - error: The page that shows when something goes wrong
 #
 # Init pages (for oem only)
 # - identity: Create the first-user account 
@@ -82,9 +85,12 @@ theme:
 # - privacy: Enable location services
 # - timezone: Set the timezone
 # - telemetry: Enable sending telemetry
+#
+# Do note that currently only accessibility, try-or-install, refresh and source-selection can be hidden.
 pages:
   <page-name>:
     image: <image-name>
+    visible: <bool>
 ```
 
 ### Custom Slides

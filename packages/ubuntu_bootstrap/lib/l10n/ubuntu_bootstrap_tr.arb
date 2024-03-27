@@ -74,24 +74,14 @@
       "color": {}
     }
   },
-  "chooseSecurityKeyTitle": "Güvenlik anahtarı",
-  "@chooseSecurityKeyTitle": {},
-  "chooseSecurityKeyMismatch": "Güvenlik anahtarları eşleşmiyor",
-  "@chooseSecurityKeyMismatch": {},
   "selectGuidedStorageInstallNow": "Şimdi kur",
   "@selectGuidedStorageInstallNow": {},
   "diskHeadersSize": "Boyut",
   "@diskHeadersSize": {},
   "partitionEditTitle": "Bölüm düzenle",
   "@partitionEditTitle": {},
-  "chooseSecurityKeyConfirmHint": "Güvenlik anahtarını onayla",
-  "@chooseSecurityKeyConfirmHint": {},
   "installationTypeTitle": "Kurulum türü",
   "@installationTypeTitle": {},
-  "chooseSecurityKeyHint": "Güvenlik anahtarı seç",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyRequired": "Güvenlik anahtarı gereklidir",
-  "@chooseSecurityKeyRequired": {},
   "diskHeadersDevice": "Cihaz",
   "@diskHeadersDevice": {},
   "allocateDiskSpace": "Elle biçimlendirme",
@@ -195,7 +185,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Kurulum tamamlandı",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** kuruldu ve kullanıma hazır",
+  "readyToUse": "{system} kuruldu ve kullanıma hazır",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -208,13 +198,6 @@
   "@bitlockerTitle": {},
   "restartIntoWindows": "Windows'a yeniden başlat",
   "@restartIntoWindows": {},
-  "chooseSecurityKeyHeader": "Disk şifreleme bilgisayarınızı kaybetme ihtimaline karşı dosyalarınızı korumaktadır. Bilgisayar her başladığında bir güvenlik anahtarı girmenizi gerektirmektedir.\n\n{RELEASE} haricindeki dosyalar şifrelenmeyecektir.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeErase": "Diski sil ve {DISTRO} kur",
   "@installationTypeErase": {
     "type": "text",
@@ -291,13 +274,6 @@
   },
   "installAlongsidePartition": "Bölüm:",
   "@installAlongsidePartition": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Uyarı:</font> Bu, tüm işletim sistemlerindeki tüm programları, belgeleri, fotoğrafları, müzikleri ve diğer dosyaları siler.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeAlongsideInfo": "Belgeler, müzik ve diğer kişisel dosyalar korunacak. Bilgisayar her başlatıldığında hangi işletim sistemini istediğinizi seçebilirsiniz.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeDualOSDetected": "Bu bilgisayarda şu anda {os1} ve {os2} var. Ne yapmak istersiniz?",
@@ -397,13 +373,6 @@
   },
   "bitlockerDescription": "Bu bilgisayar Windows BitLocker şifreleme kullanmaktadır.\nBoş alan oluşturmak için Windows'u kullanmanız ya da devam etmek için '{option}'i seçmeniz gerekir.",
   "@bitlockerDescription": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Uyarı:</font> Bu güvenlik anahtarını kaybederseniz tüm veriler kaybolur. Gerekirse, anahtarınızı bir yere yazın ve güvenli başka bir yerde saklayın.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "notEnoughDiskSpaceTitle": "Yeterli alan yok",
   "@notEnoughDiskSpaceTitle": {},
   "showSecurityKey": "Güvenlik anahtarını göster",
@@ -422,13 +391,6 @@
   "@restartNow": {},
   "continueTesting": "Test etmeye devam et",
   "@continueTesting": {},
-  "restartWarning": "Şimdi {RELEASE} test etmeye devam edebilirsiniz, ancak bilgisayarı yeniden başlatana kadar yaptığınız değişiklikler ya da kaydettiğiniz belgeler korunmayacaktır.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tooManyPrimaryPartitions": "Çok fazla birincil bölüm",
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Sınıra ulaşıldı",
@@ -796,14 +758,6 @@
     "type": "text",
     "placeholders": {
       "snap": {}
-    }
-  },
-  "installationTypeTPMWarning": "<font color=\"{color}\">Uyarı:</font> Bu özellik yalnızca belirli donanım yapılandırmalarında desteklenir ve gelecekteki Ubuntu sürümlerine yükseltmeyi desteklemeyebilir. Lütfen etkinleştirmeden önce <a href=\"{url}\">sürüm notlarını</a> okuyun.",
-  "@installationTypeTPMWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "url": {}
     }
   },
   "fullInstallationSubtitle": "Ofis araçları, yardımcı araçlar, web tarayıcısı ve oyunlardan oluşan çevrimdışı dostu bir seçim.",

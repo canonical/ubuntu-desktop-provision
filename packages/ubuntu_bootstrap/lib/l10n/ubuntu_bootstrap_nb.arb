@@ -11,8 +11,6 @@
       "color": {}
     }
   },
-  "chooseSecurityKeyTitle": "Velg en sikkerhetsnøkkel",
-  "@chooseSecurityKeyTitle": {},
   "installationTypeManualInfo": "Du kan opprette eller endre størrelse på partisjoner selv, eller velge flere partisjoner for {DISTRO}",
   "@installationTypeManualInfo": {
     "type": "text",
@@ -39,21 +37,6 @@
   "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Størrelse",
   "@diskHeadersSize": {},
-  "chooseSecurityKeyHint": "Velg en sikkerhetsnøkkel",
-  "@chooseSecurityKeyHint": {},
-  "chooseSecurityKeyConfirmHint": "Bekreft sikkerhetsnøkkel",
-  "@chooseSecurityKeyConfirmHint": {},
-  "chooseSecurityKeyRequired": "En sikkerhetsnøkkel er nødvendig",
-  "@chooseSecurityKeyRequired": {},
-  "chooseSecurityKeyMismatch": "Sikkerhetsnøkkelen stemmer ikke",
-  "@chooseSecurityKeyMismatch": {},
-  "chooseSecurityKeyWarning": "<font color=\"{color}\">Advarsel</font>: Hvis du mister denne sikkerhetsnøkkelen, vil alle data gå tapt. Hvis du trenger det, skriv ned nøkkelen og oppbevar den på et trygt sted et annet sted.",
-  "@chooseSecurityKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "Denne datamaskinen har for øyeblikket {os1} og {os2}. Hva har du lyst til å gjøre?",
   "@installationTypeDualOSDetected": {
     "type": "text",
@@ -90,13 +73,6 @@
   },
   "configureSecureBootDescription": "Du har valgt å installere tredjeparts driverprogramvare. Dette krever at du slår av sikker oppstart.\nFor å gjøre dette, må du velge en sikkerhetsnøkkel nå, og angi den når systemet starter på nytt.",
   "@configureSecureBootDescription": {},
-  "chooseSecurityKeyHeader": "Diskkryptering beskytter filene dine i tilfelle du mister datamaskinen. Det krever at du oppgir en sikkerhetsnøkkel hver gang datamaskinen starter opp.\n\nEventuelle filer utenfor {RELEASE} blir ikke kryptert.",
-  "@chooseSecurityKeyHeader": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeTitle": "Installasjontype",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Denne datamaskinen har for øyeblikket {os} på seg. Hva har du lyst til å gjøre?",
@@ -168,13 +144,6 @@
   "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageTitle": "Oppdateringer og annet programvare",
   "@updatesOtherSoftwarePageTitle": {},
-  "installationTypeEraseWarning": "<font color=\"{color}\">Advarsel:</font> Dette vil slette alle dine programmer, dokumenter, bilder, musikk og andre filer i alle operativsystemer.",
-  "@installationTypeEraseWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeZFS": "EKSPERIMENTELL: Slett disk og bruk ZFS",
   "@installationTypeZFS": {},
   "installationTypeAdvancedLabel": "Avansert funksjoner...",
@@ -279,7 +248,7 @@
   "@confirmPageTitle": {},
   "installationCompleteTitle": "Installasjon fullført",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** er installert og klart til bruk.",
+  "readyToUse": "{system} er installert og klart til bruk.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -438,13 +407,6 @@
   "@quitButtonText": {},
   "notEnoughDiskSpaceTitle": "Beklager",
   "@notEnoughDiskSpaceTitle": {},
-  "restartWarning": "Du kan fortsette å teste {RELEASE}, men før du starter datamaskinen på ny vil ingen endringer du gjør eller dokumenter du lagrer bevares.",
-  "@restartWarning": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "partitionFormatNone": "Levn uformatert",
   "@partitionFormatNone": {},
   "restartNow": "Utfør omstart nå",

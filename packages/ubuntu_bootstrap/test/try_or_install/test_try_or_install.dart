@@ -17,11 +17,14 @@ TryOrInstallModel buildTryOrInstallModel(
     {bool? isConnected, TryOrInstallOption? option}) {
   final model = MockTryOrInstallModel();
   when(model.isConnected).thenReturn(isConnected ?? false);
-  when(model.option).thenReturn(option ?? TryOrInstallOption.none);
+  when(model.option).thenReturn(option ?? TryOrInstallOption.installUbuntu);
   return model;
 }
 
-final pageImages = PageImages(MockPageConfigService());
+final pageImages = PageImages.internal(
+  MockPageConfigService(),
+  MockThemeVariantService(),
+);
 
 Widget buildTryOrInstallPage(TryOrInstallModel model) {
   return ProviderScope(
