@@ -241,11 +241,5 @@
   "newPartitionTableConfirmationTitle": "Buat suatu tabel partisi baru yang kosong pada peranti ini?",
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.",
-  "@newPartitionTableConfirmationMessage": {},
-  "@welcomeSlideDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  }
+  "@newPartitionTableConfirmationMessage": {}
 }
