@@ -678,7 +678,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Bonvolu relanĉi la instalilon.",
+  "refreshRestart": "Por daŭrigi, bonvolu fermi kaj relanĉi la instalilon",
   "@refreshRestart": {},
   "refreshSnapCheckRerefresh": "Kontrolante, ĉu {snap} refreŝiĝu…",
   "@refreshSnapCheckRerefresh": {
@@ -883,5 +883,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "refreshReady": "Ĝisdatigo pretas",
+  "@refreshReady": {},
+  "refreshInfo": "Ĝisdatigu al la plej nova versio por pliaj fidindeco kaj funkcioj.",
+  "@refreshInfo": {},
+  "refreshCloseLabel": "Fermi instalilon",
+  "@refreshCloseLabel": {},
+  "refreshUpdateNow": "Ĝisdatigi nun",
+  "@refreshUpdateNow": {},
+  "refreshHeader": "Ĝisdatigo pretas por la instalilo",
+  "@refreshHeader": {}
 }
