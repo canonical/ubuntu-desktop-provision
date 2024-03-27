@@ -34,6 +34,45 @@ final $typed_data.Uint8List proMagicAttachResponseTypeDescriptor = $convert.base
     'UFRJT05fTElNSVRfUkVBQ0hFRBAEEhEKDVVOS05PV05fRVJST1IQBRIUChBBTFJFQURZX0FUVE'
     'FDSEVEEAY=');
 
+@$core.Deprecated('Use proAttachRequestDescriptor instead')
+const ProAttachRequest$json = {
+  '1': 'ProAttachRequest',
+  '2': [
+    {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `ProAttachRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List proAttachRequestDescriptor = $convert.base64Decode(
+    'ChBQcm9BdHRhY2hSZXF1ZXN0EhQKBXRva2VuGAEgASgJUgV0b2tlbg==');
+
+@$core.Deprecated('Use proAttachResponseDescriptor instead')
+const ProAttachResponse$json = {
+  '1': 'ProAttachResponse',
+  '2': [
+    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.pro.ProAttachResponse.ProAttachResponseType', '10': 'type'},
+  ],
+  '4': [ProAttachResponse_ProAttachResponseType$json],
+};
+
+@$core.Deprecated('Use proAttachResponseDescriptor instead')
+const ProAttachResponse_ProAttachResponseType$json = {
+  '1': 'ProAttachResponseType',
+  '2': [
+    {'1': 'SUCCESS', '2': 0},
+    {'1': 'NETWORK_ERROR', '2': 1},
+    {'1': 'UNKNOWN_ERROR', '2': 2},
+    {'1': 'ALREADY_ATTACHED', '2': 3},
+  ],
+};
+
+/// Descriptor for `ProAttachResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List proAttachResponseDescriptor = $convert.base64Decode(
+    'ChFQcm9BdHRhY2hSZXNwb25zZRJACgR0eXBlGAEgASgOMiwucHJvLlByb0F0dGFjaFJlc3Bvbn'
+    'NlLlByb0F0dGFjaFJlc3BvbnNlVHlwZVIEdHlwZSJgChVQcm9BdHRhY2hSZXNwb25zZVR5cGUS'
+    'CwoHU1VDQ0VTUxAAEhEKDU5FVFdPUktfRVJST1IQARIRCg1VTktOT1dOX0VSUk9SEAISFAoQQU'
+    'xSRUFEWV9BVFRBQ0hFRBAD');
+
 @$core.Deprecated('Use proMagicAttachResponseDescriptor instead')
 const ProMagicAttachResponse$json = {
   '1': 'ProMagicAttachResponse',

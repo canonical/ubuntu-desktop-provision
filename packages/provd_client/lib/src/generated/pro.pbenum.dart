@@ -38,5 +38,24 @@ class ProMagicAttachResponseType extends $pb.ProtobufEnum {
   const ProMagicAttachResponseType._($core.int v, $core.String n) : super(v, n);
 }
 
+class ProAttachResponse_ProAttachResponseType extends $pb.ProtobufEnum {
+  static const ProAttachResponse_ProAttachResponseType SUCCESS = ProAttachResponse_ProAttachResponseType._(0, _omitEnumNames ? '' : 'SUCCESS');
+  static const ProAttachResponse_ProAttachResponseType NETWORK_ERROR = ProAttachResponse_ProAttachResponseType._(1, _omitEnumNames ? '' : 'NETWORK_ERROR');
+  static const ProAttachResponse_ProAttachResponseType UNKNOWN_ERROR = ProAttachResponse_ProAttachResponseType._(2, _omitEnumNames ? '' : 'UNKNOWN_ERROR');
+  static const ProAttachResponse_ProAttachResponseType ALREADY_ATTACHED = ProAttachResponse_ProAttachResponseType._(3, _omitEnumNames ? '' : 'ALREADY_ATTACHED');
+
+  static const $core.List<ProAttachResponse_ProAttachResponseType> values = <ProAttachResponse_ProAttachResponseType> [
+    SUCCESS,
+    NETWORK_ERROR,
+    UNKNOWN_ERROR,
+    ALREADY_ATTACHED,
+  ];
+
+  static final $core.Map<$core.int, ProAttachResponse_ProAttachResponseType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ProAttachResponse_ProAttachResponseType? valueOf($core.int value) => _byValue[value];
+
+  const ProAttachResponse_ProAttachResponseType._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

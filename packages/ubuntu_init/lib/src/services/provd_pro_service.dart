@@ -3,13 +3,14 @@ import 'package:ubuntu_init/src/services/provd_address.dart';
 
 abstract class ProService {
   Stream<ProResponse> proMagicAttach();
-  Future<void> proAttach(String token);
+  Future<ProResponse> proAttach(String token);
 }
 
 sealed class ProResponse {
   const ProResponse();
 
-  factory ProResponse.fromProvd(provd.ProMagicAttachResponse response) =>
+  factory ProResponse.magicAttachFromProvd(
+          provd.ProMagicAttachResponse response) =>
       switch (response.type) {
         provd.ProMagicAttachResponseType.USER_CODE =>
           ProResponseUserCode(response.userCode),
@@ -23,6 +24,19 @@ sealed class ProResponse {
         provd.ProMagicAttachResponseType.UNKNOWN_ERROR =>
           ProResponseUnknownError(),
         provd.ProMagicAttachResponseType.ALREADY_ATTACHED =>
+          ProResponseAlreadyAttached(),
+        _ => ProResponseUnknown(),
+      };
+
+  factory ProResponse.manualAttachFromProvd(provd.ProAttachResponse response) =>
+      switch (response.type) {
+        provd.ProAttachResponse_ProAttachResponseType.SUCCESS =>
+          ProResponseSuccess(),
+        provd.ProAttachResponse_ProAttachResponseType.NETWORK_ERROR =>
+          ProResponseNetworkError(),
+        provd.ProAttachResponse_ProAttachResponseType.UNKNOWN_ERROR =>
+          ProResponseUnknownError(),
+        provd.ProAttachResponse_ProAttachResponseType.ALREADY_ATTACHED =>
           ProResponseAlreadyAttached(),
         _ => ProResponseUnknown(),
       };
@@ -59,8 +73,9 @@ class ProvdProService with ProvdAddress implements ProService {
 
   @override
   Stream<ProResponse> proMagicAttach() =>
-      _client.proMagicAttach().map(ProResponse.fromProvd);
+      _client.proMagicAttach().map(ProResponse.magicAttachFromProvd);
 
   @override
-  Future<void> proAttach(String token) => _client.proAttach(token);
+  Future<ProResponse> proAttach(String token) =>
+      _client.proAttach(token).then(ProResponse.manualAttachFromProvd);
 }

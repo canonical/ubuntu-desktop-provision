@@ -58,8 +58,19 @@ class UbuntuProModel extends ChangeNotifier {
 
   Future<void> attachManuallyToken() async {
     await _subscription?.cancel();
-    await _proService.proAttach(token);
-    //_proService.
+    final response = await _proService.proAttach(token);
+    _handleManualAttachResponse(response);
+    notifyListeners();
+  }
+
+  void _handleManualAttachResponse(ProResponse response) {
+    if (response is ProResponseSuccess ||
+        response is ProResponseAlreadyAttached) {
+      _isAttachedThroughManualAttach = true;
+      _isAttached = true;
+    } else {
+      _hasNoErrorWhenAttachingManually = false;
+    }
     notifyListeners();
   }
 

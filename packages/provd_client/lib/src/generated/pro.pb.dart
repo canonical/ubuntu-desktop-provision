@@ -17,6 +17,106 @@ import 'pro.pbenum.dart';
 
 export 'pro.pbenum.dart';
 
+class ProAttachRequest extends $pb.GeneratedMessage {
+  factory ProAttachRequest({
+    $core.String? token,
+  }) {
+    final $result = create();
+    if (token != null) {
+      $result.token = token;
+    }
+    return $result;
+  }
+  ProAttachRequest._() : super();
+  factory ProAttachRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProAttachRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProAttachRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'pro'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ProAttachRequest clone() => ProAttachRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ProAttachRequest copyWith(void Function(ProAttachRequest) updates) => super.copyWith((message) => updates(message as ProAttachRequest)) as ProAttachRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ProAttachRequest create() => ProAttachRequest._();
+  ProAttachRequest createEmptyInstance() => create();
+  static $pb.PbList<ProAttachRequest> createRepeated() => $pb.PbList<ProAttachRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ProAttachRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProAttachRequest>(create);
+  static ProAttachRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get token => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set token($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearToken() => clearField(1);
+}
+
+class ProAttachResponse extends $pb.GeneratedMessage {
+  factory ProAttachResponse({
+    ProAttachResponse_ProAttachResponseType? type,
+  }) {
+    final $result = create();
+    if (type != null) {
+      $result.type = type;
+    }
+    return $result;
+  }
+  ProAttachResponse._() : super();
+  factory ProAttachResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ProAttachResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProAttachResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'pro'), createEmptyInstance: create)
+    ..e<ProAttachResponse_ProAttachResponseType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ProAttachResponse_ProAttachResponseType.SUCCESS, valueOf: ProAttachResponse_ProAttachResponseType.valueOf, enumValues: ProAttachResponse_ProAttachResponseType.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ProAttachResponse clone() => ProAttachResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ProAttachResponse copyWith(void Function(ProAttachResponse) updates) => super.copyWith((message) => updates(message as ProAttachResponse)) as ProAttachResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ProAttachResponse create() => ProAttachResponse._();
+  ProAttachResponse createEmptyInstance() => create();
+  static $pb.PbList<ProAttachResponse> createRepeated() => $pb.PbList<ProAttachResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ProAttachResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProAttachResponse>(create);
+  static ProAttachResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ProAttachResponse_ProAttachResponseType get type => $_getN(0);
+  @$pb.TagNumber(1)
+  set type(ProAttachResponse_ProAttachResponseType v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearType() => clearField(1);
+}
+
 class ProMagicAttachResponse extends $pb.GeneratedMessage {
   factory ProMagicAttachResponse({
     ProMagicAttachResponseType? type,
