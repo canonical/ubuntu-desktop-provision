@@ -11,8 +11,9 @@ UbuntuProModel buildUbuntuProModel({
   Stream<String>? collect,
 }) {
   final model = MockUbuntuProModel();
-
-  // Change the value of the getter `isAttached`
+  when(model.isAttachedThroughMagicAttach).thenReturn(true);
+  when(model.isAttachedThroughManualAttach).thenReturn(true);
+  when(model.hasNoErrorWhenAttachingManually).thenReturn(true);
   when(model.token).thenReturn('token');
   when(model.userCode).thenReturn('1234');
   when(model.isAttached).thenReturn(true);

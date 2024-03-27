@@ -3,11 +3,11 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:provd_client/src/generated/pro.pbgrpc.dart' as _i4;
-import 'package:provd_client/src/provd_pro_client.dart' as _i2;
+import 'package:provd_client/src/generated/pro.pbgrpc.dart' as _i2;
+import 'package:provd_client/src/provd_pro_client.dart' as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -22,31 +22,49 @@ import 'package:provd_client/src/provd_pro_client.dart' as _i2;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
+class _FakeProAttachResponse_0 extends _i1.SmartFake
+    implements _i2.ProAttachResponse {
+  _FakeProAttachResponse_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [ProvdProClient].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockProvdProClient extends _i1.Mock implements _i2.ProvdProClient {
+class MockProvdProClient extends _i1.Mock implements _i3.ProvdProClient {
   MockProvdProClient() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Stream<_i4.ProMagicAttachResponse> proMagicAttach() =>
+  _i4.Stream<_i2.ProMagicAttachResponse> proMagicAttach() =>
       (super.noSuchMethod(
         Invocation.method(
           #proMagicAttach,
           [],
         ),
-        returnValue: _i3.Stream<_i4.ProMagicAttachResponse>.empty(),
-      ) as _i3.Stream<_i4.ProMagicAttachResponse>);
+        returnValue: _i4.Stream<_i2.ProMagicAttachResponse>.empty(),
+      ) as _i4.Stream<_i2.ProMagicAttachResponse>);
 
   @override
-  _i3.Future<void> proAttach(String? token) => (super.noSuchMethod(
+  _i4.Future<_i2.ProAttachResponse> proAttach(String? token) =>
+      (super.noSuchMethod(
         Invocation.method(
           #proAttach,
           [token],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue:
+            _i4.Future<_i2.ProAttachResponse>.value(_FakeProAttachResponse_0(
+          this,
+          Invocation.method(
+            #proAttach,
+            [token],
+          ),
+        )),
+      ) as _i4.Future<_i2.ProAttachResponse>);
 }

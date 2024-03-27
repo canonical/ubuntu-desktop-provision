@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
+import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_widgets.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'test_ubuntu_pro.dart';
 
@@ -36,7 +37,8 @@ void main() {
   testWidgets('ubuntu pro - manually attach', (tester) async {
     final model = buildUbuntuProModel(enabled: true);
     await tester.pumpApp((_) => buildPage(model));
-
+    final tokenTextField = find.byType(UbuntuProPage);
+    expect(tokenTextField, findsOneWidget);
     await model.attachManuallyToken();
     expect(model.isAttached, isTrue);
   });

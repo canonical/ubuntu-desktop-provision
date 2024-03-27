@@ -91,8 +91,8 @@ class MockProServiceClient extends _i1.Mock implements _i4.ProServiceClient {
       ) as _i2.ResponseStream<_i5.ProMagicAttachResponse>);
 
   @override
-  _i2.ResponseFuture<_i6.Empty> proAttach(
-    _i7.StringValue? request, {
+  _i2.ResponseFuture<_i5.ProAttachResponse> proAttach(
+    _i5.ProAttachRequest? request, {
     _i2.CallOptions? options,
   }) =>
       (super.noSuchMethod(
@@ -101,7 +101,7 @@ class MockProServiceClient extends _i1.Mock implements _i4.ProServiceClient {
           [request],
           {#options: options},
         ),
-        returnValue: _FakeResponseFuture_1<_i6.Empty>(
+        returnValue: _FakeResponseFuture_1<_i5.ProAttachResponse>(
           this,
           Invocation.method(
             #proAttach,
@@ -109,7 +109,28 @@ class MockProServiceClient extends _i1.Mock implements _i4.ProServiceClient {
             {#options: options},
           ),
         ),
-      ) as _i2.ResponseFuture<_i6.Empty>);
+      ) as _i2.ResponseFuture<_i5.ProAttachResponse>);
+
+  @override
+  _i2.ResponseFuture<_i7.BoolValue> proStatus(
+    _i6.Empty? request, {
+    _i2.CallOptions? options,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #proStatus,
+          [request],
+          {#options: options},
+        ),
+        returnValue: _FakeResponseFuture_1<_i7.BoolValue>(
+          this,
+          Invocation.method(
+            #proStatus,
+            [request],
+            {#options: options},
+          ),
+        ),
+      ) as _i2.ResponseFuture<_i7.BoolValue>);
 
   @override
   _i3.ClientCall<Q, R> $createCall<Q, R>(

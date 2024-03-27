@@ -41,8 +41,26 @@ class MockUbuntuProModel extends _i1.Mock implements _i2.UbuntuProModel {
       ) as String);
 
   @override
+  bool get isAttachedThroughMagicAttach => (super.noSuchMethod(
+        Invocation.getter(#isAttachedThroughMagicAttach),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get isAttached => (super.noSuchMethod(
         Invocation.getter(#isAttached),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  bool get isAttachedThroughManualAttach => (super.noSuchMethod(
+        Invocation.getter(#isAttachedThroughManualAttach),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  bool get hasNoErrorWhenAttachingManually => (super.noSuchMethod(
+        Invocation.getter(#hasNoErrorWhenAttachingManually),
         returnValue: false,
       ) as bool);
 
