@@ -742,5 +742,41 @@
   "fullInstallationSubtitle": "בחירה של כלי הפקה, עזרים, דפדפן ומשחקים ללא צורך בחיבור לאינטרנט.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "התקנה מלאה",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallAutomatedOption": "התקנה אוטומטית",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallTitle": "סוג ההתקנה",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "איך להתקין את {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "נא למלא את כתובת ה־autoinstall.yaml:",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "ההתקנה אינטראקטיבית",
+  "@autoinstallInteractiveOption": {},
+  "warningLabel": "אזהרה:",
+  "@warningLabel": {},
+  "autoinstallInteractiveDescription": "למשתמשים שצריכים הדרכה שלב אחר שלב במהלך ההתקנה.",
+  "@autoinstallInteractiveDescription": {},
+  "codecsAndDriversPageDescription": "להתקין תוכנה קניינית מומלצת?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "זוהה כרטיס מסך של NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "tryOrInstallHeader": "מה מעניין אותך לעשות עם {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "הסתרה",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "מיטוב המחשב שלך",
+  "@codecsAndDriversPageTitle": {}
 }
