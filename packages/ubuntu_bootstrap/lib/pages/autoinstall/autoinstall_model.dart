@@ -54,6 +54,14 @@ class AutoinstallModel extends SafeChangeNotifier {
   final HttpClient _httpClient;
   final bool _dryRun;
 
+  bool _autoinstall = false;
+  bool get autoinstall => _autoinstall;
+  set autoinstall(bool value) {
+    if (value == _autoinstall) return;
+    _autoinstall = value;
+    notifyListeners();
+  }
+
   final _url = ValueNotifier('');
   String get url => _url.value;
   set url(String value) {
@@ -91,13 +99,20 @@ class AutoinstallModel extends SafeChangeNotifier {
     }
 
     final result =
-        await Process.run('sudo', ['mv', file.absolute.path, targetDir]);
+        await Process.run('sudo', ['cp', file.absolute.path, targetDir]);
     if (result.exitCode != 0) {
       _log.error(
           'Failed to move ${file.absolute.path} to $targetDir: ${result.stderr}');
       return;
     }
     _log.debug('Moved ${file.absolute.path} to $targetDir');
+  }
+
+  Future<String> getFileContent() async {
+    final directory =
+        _dryRun ? p.join(await getSubiquityPath(), '.subiquity') : targetDir;
+    final file = _fs.file(p.join(directory, filename));
+    return file.readAsString();
   }
 
   Future<void> _restart() async {

@@ -124,6 +124,18 @@ privacy.PrivacyService:
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
+pro.ProService:
+    methods:
+        - name: ProAttach
+          isclientstream: false
+          isserverstream: false
+        - name: ProMagicAttach
+          isclientstream: false
+          isserverstream: true
+        - name: ProStatus
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/pro.proto
 timezone.TimezoneService:
     methods:
         - name: GetTimezone

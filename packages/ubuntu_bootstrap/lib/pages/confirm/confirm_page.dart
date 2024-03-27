@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
@@ -25,6 +27,9 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(confirmModelProvider);
+    final autoinstallModel = ref.watch(autoinstallModelProvider);
+    final status = ref.watch(installerModelProvider.select((m) => m.status));
+
     return HorizontalPage(
       windowTitle: lang.confirmPageTitle,
       title: lang.confirmHeader,
@@ -49,49 +54,62 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           padding: kWizardTilePadding,
           borderRadius: kWizardBorderRadius,
           color: Theme.of(context).colorScheme.primaryContainer,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _SummarySection(
-                title: lang.confirmSectionGeneralTitle,
-                entries: {
-                  lang.confirmEntryDiskSetup: _DiskSetup(),
-                  lang.confirmEntryInstallationDisk: _InstallationDisk(),
-                  lang.confirmEntryApplications: _Applications()
-                },
-              ),
-              const SizedBox(height: kWizardSpacing),
-              _SummarySection(
-                title: lang.confirmSectionSecurityAndMoreTitle,
-                entries: {
-                  lang.confirmEntryDiskEncryption: _DiskEncryption(),
-                  lang.confirmEntryProprietarySoftware: Consumer(
-                    builder: (_, ref, __) => _ProprietarySoftware(),
-                  ),
-                },
-              ),
-              const SizedBox(height: kWizardSpacing),
-              Text(
-                lang.confirmPartitionsTitle,
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              const SizedBox(height: kWizardSpacing / 2),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  for (final entry in model.partitions.entries)
-                    for (final partition in entry.value)
-                      _PartitionLabel(
-                        entry.key,
-                        partition,
-                        model.getOriginalPartition(
-                            entry.key, partition.number ?? -1),
-                      ),
-                ],
-              ),
-            ],
-          ),
+          child: status?.interactive == false
+              ? FutureBuilder(
+                  future: autoinstallModel.getFileContent(),
+                  builder: (_, fileContentSnapShot) {
+                    if (fileContentSnapShot.hasData) {
+                      return Text(fileContentSnapShot.data ?? '');
+                    } else if (fileContentSnapShot.hasError) {
+                      return Text(fileContentSnapShot.error.toString());
+                    } else {
+                      return const YaruCircularProgressIndicator();
+                    }
+                  },
+                )
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _SummarySection(
+                      title: lang.confirmSectionGeneralTitle,
+                      entries: {
+                        lang.confirmEntryDiskSetup: _DiskSetup(),
+                        lang.confirmEntryInstallationDisk: _InstallationDisk(),
+                        lang.confirmEntryApplications: _Applications()
+                      },
+                    ),
+                    const SizedBox(height: kWizardSpacing),
+                    _SummarySection(
+                      title: lang.confirmSectionSecurityAndMoreTitle,
+                      entries: {
+                        lang.confirmEntryDiskEncryption: _DiskEncryption(),
+                        lang.confirmEntryProprietarySoftware: Consumer(
+                          builder: (_, ref, __) => _ProprietarySoftware(),
+                        ),
+                      },
+                    ),
+                    const SizedBox(height: kWizardSpacing),
+                    Text(
+                      lang.confirmPartitionsTitle,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: kWizardSpacing / 2),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        for (final entry in model.partitions.entries)
+                          for (final partition in entry.value)
+                            _PartitionLabel(
+                              entry.key,
+                              partition,
+                              model.getOriginalPartition(
+                                  entry.key, partition.number ?? -1),
+                            ),
+                      ],
+                    ),
+                  ],
+                ),
         ),
       ],
     );

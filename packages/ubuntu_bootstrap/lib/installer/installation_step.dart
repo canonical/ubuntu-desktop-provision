@@ -55,7 +55,12 @@ enum InstallationStep with RouteName {
     return WizardRoute(
       builder: (_) => page,
       userData: WizardRouteData(step: pageIndex),
-      onLoad: (_) => page.load(context, ref),
+      onLoad: (_) {
+        if (ref.context.mounted) {
+          return page.load(context, ref);
+        }
+        return false;
+      },
     );
   }
 
