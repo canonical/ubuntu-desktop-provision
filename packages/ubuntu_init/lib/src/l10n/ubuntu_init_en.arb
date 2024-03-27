@@ -74,5 +74,38 @@
   "ubuntuProPageTitle": "Ubuntu Pro",
   "@ubuntuProPageTitle": {},
   "ubuntuProHeader": "Attach this machine",
-  "@ubuntuProHeader": {}
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "or add a token manually",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Get the most comprehensive subscription for open-source software security",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Attach",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Invalid token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Valid token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Invalid token, retry",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Skip for now",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "You can always enable Ubuntu Pro later via the Software & Updates application.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Enable Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro is now enabled in this machine",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "You can manage your Pro services in the Software & Updates application.",
+  "@ubuntuProSucessAttachDescription": {}
 }
