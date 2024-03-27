@@ -85,7 +85,6 @@ class HorizontalPage extends ConsumerWidget {
 
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
-  static const _contentSpacing = 60.0;
 
   final ScrollController _scrollController = ScrollController();
 
