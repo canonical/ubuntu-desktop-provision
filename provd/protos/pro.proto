@@ -9,7 +9,7 @@ import "google/protobuf/wrappers.proto";
 
 service ProService {
     rpc ProMagicAttach(google.protobuf.Empty) returns (stream ProMagicAttachResponse);
-    rpc ProAttach(google.protobuf.StringValue) returns (google.protobuf.Empty);
+    rpc ProAttach(ProAttachRequest) returns (ProAttachResponse);
     rpc ProStatus(google.protobuf.Empty) returns (google.protobuf.BoolValue);
 }
 
@@ -21,6 +21,21 @@ enum ProMagicAttachResponseType {
     SUBSCRIPTION_LIMIT_REACHED = 4;
     UNKNOWN_ERROR = 5;
     ALREADY_ATTACHED = 6;
+}
+
+
+message ProAttachRequest {
+    string token = 1;
+}
+
+message ProAttachResponse {
+    enum ProAttachResponseType {
+        SUCCESS = 0;
+        NETWORK_ERROR = 1;
+        UNKNOWN_ERROR = 2;
+        ALREADY_ATTACHED = 3;
+    }
+    ProAttachResponseType type = 1;
 }
 
 message ProMagicAttachResponse {
