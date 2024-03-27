@@ -20,6 +20,7 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^2.4.9
   flutter_svg: ^2.0.9
+  form_field_validator: ^1.1.0
   gsettings: ^0.2.8
   handy_window: ^0.3.1
   meta: ^1.10.0
@@ -40,6 +41,7 @@ dependencies:
   ubuntu_service: ^0.3.1
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
+  ubuntu_widgets: ^0.4.0
   ubuntu_wizard: ^0.1.0
   xdg_locale: ^0.0.1
   yaru: 4.0.0
