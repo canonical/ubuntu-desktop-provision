@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Раскладка клавиатуры",
   "@keyboardTitle": {},
-  "keyboardHeader": "Выберите раскладку клавиатуры:",
+  "keyboardHeader": "Выберите раскладку клавиатуры",
   "@keyboardHeader": {},
   "keyboardTestHint": "Напечатайте здесь, чтобы проверить свою клавиатуру",
   "@keyboardTestHint": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Подключение к сети",
   "@networkPageTitle": {},
-  "networkPageHeader": "Соединение данного компьютера с интернетом позволит Ubuntu установить дополнительное программное обеспечение и поможет выбрать ваш часовой пояс.\n\nПрисоедините кабель сети интернет или выберите сеть Wi-Fi",
+  "networkPageHeader": "Подключиться к Интернету",
   "@networkPageHeader": {},
   "networkWiredOption": "Использовать проводное подключение",
   "@networkWiredOption": {},
@@ -159,5 +159,73 @@
   "networkHiddenWifiNameRequired": "Укажите название сети",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Прямо сейчас я не хочу подключаться к Интернету",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "Специальные возможности",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Специальные возможности в {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Настройте {DISTRO} перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в системных настройках.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Зрение",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Слух",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Ввод текста",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Наведение и нажатие",
+  "@accessibilityPointingLabel": {},
+  "accessibilityHighContrastLabel": "Высокая контрастность",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityZoomLabel": "Масштабирование",
+  "@accessibilityZoomLabel": {},
+  "accessibilityLargeTextLabel": "Крупный текст",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityMouseKeysLabel": "Клавиши мыши",
+  "@accessibilityMouseKeysLabel": {},
+  "close": "Закрыть",
+  "@close": {},
+  "errorPageTitle": "Что-то пошло не так",
+  "@errorPageTitle": {},
+  "restart": "Перезагрузить",
+  "@restart": {},
+  "errorPageHideLog": "Скрыть журнал",
+  "@errorPageHideLog": {},
+  "errorPageShowLog": "Показать журнал",
+  "@errorPageShowLog": {},
+  "accessibilityStickKeysLabel": "Залипающие клавиши",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Медленные клавиши",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityReduceAnimationLabel": "Уменьшение анимации",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Чтение с экрана",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Визуальные уведомления",
+  "@accessibilityVisualAlertsLabel": {},
+  "errorPageUnexpected": "Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также вы можете создать <a>сообщение о проблеме</a>.",
+  "@errorPageUnexpected": {},
+  "networkPageBody": "Подключение к Интернету улучшит процесс установки благодаря проверке совместимости и доступу к дополнительным пакетам программного обеспечения.",
+  "@networkPageBody": {},
+  "activeDirectoryHeader": "Войти в Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} разработан для бесшовной интеграции с Active Directory с целью упрощения администрирования.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
