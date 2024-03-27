@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Układ klawiatury",
   "@keyboardTitle": {},
-  "keyboardHeader": "Wybierz układ klawiatury:",
+  "keyboardHeader": "Wybierz układ klawiatury",
   "@keyboardHeader": {},
   "keyboardTestHint": "Tutaj można wpisywać znaki, aby przetestować klawiaturę",
   "@keyboardTestHint": {},
@@ -74,7 +74,7 @@
   "@identityUsernameTooLong": {},
   "identityUsernameInvalidChars": "Ta nazwa zawiera nieprawidłowe znaki.",
   "@identityUsernameInvalidChars": {},
-  "identityPasswordLabel": "Wybierz hasło",
+  "identityPasswordLabel": "Hasło",
   "@identityPasswordLabel": {},
   "identityPasswordRequired": "Wymagane jest podanie hasła",
   "@identityPasswordRequired": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Połącz się z siecią",
   "@networkPageTitle": {},
-  "networkPageHeader": "Podłączenie tego komputera do Internetu pomoże systemowi Ubuntu zainstalować dodatkowe potrzebne oprogramowanie i pomoże wybrać strefę czasową.\n\nPołącz się za pomocą kabla Ethernetowego lub wybierz sieć Wi-Fi",
+  "networkPageHeader": "Połącz się z Internetem",
   "@networkPageHeader": {},
   "networkWiredOption": "Użyj połączenia przewodowego",
   "@networkWiredOption": {},
@@ -158,6 +158,76 @@
   "@networkHiddenWifiNameLabel": {},
   "networkHiddenWifiNameRequired": "Wymagana jest nazwa sieci",
   "@networkHiddenWifiNameRequired": {},
-  "networkNoneOption": "Nie chcę teraz łączyć się z Internetem",
-  "@networkNoneOption": {}
+  "networkNoneOption": "Nie łącz się z Internetem",
+  "@networkNoneOption": {},
+  "accessibilityHearingLabel": "Słuch",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Pisanie",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Wskazywanie i klikanie",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Powiększanie",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Wysoki kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityReduceAnimationLabel": "Ograniczenie animacji",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Czytnik ekranu",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Powiadomienia wizualne",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Lepkie klawisze",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Powolne klawisze",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityPageBody": "Dostosuj {DISTRO} do swoich potrzeb przed konfiguracją. Możesz później zmienić dostosowanie w ustawieniach systemu.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityDesktopZoomLabel": "Powiększanie pulpitu",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Coś poszło źle",
+  "@errorPageTitle": {},
+  "errorPageShowLog": "Pokaż dziennik",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Ukryj dziennik",
+  "@errorPageHideLog": {},
+  "restart": "Uruchom ponownie",
+  "@restart": {},
+  "close": "Zamknij",
+  "@close": {},
+  "activeDirectoryHeader": "Zalogować się do Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} zaprojektowano do bezproblemowej integracji z Active Directory w celu łatwiejszej administracji.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Połączenie internetowe usprawni instalację dzięki sprawdzeniu zgodności i dodatkowym pakietom oprogramowania.",
+  "@networkPageBody": {},
+  "accessibilityPageTitle": "Ułatwienia dostępu",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Ułatwienia dostępu w {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Wzrok",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityLargeTextLabel": "Duży tekst",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityMouseKeysLabel": "Klawisze myszy",
+  "@accessibilityMouseKeysLabel": {},
+  "errorPageUnexpected": "Przepraszamy, ale nie jesteśmy pewni, na czym polega błąd. Możesz spróbować ponownie uruchomić komputer i jeszcze raz rozpocząć proces instalacji. Możesz także <a>zgłosić problem</a>.",
+  "@errorPageUnexpected": {}
 }
