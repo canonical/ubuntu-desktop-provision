@@ -9,18 +9,31 @@ environment:
 dependencies:
   args: ^2.4.2
   async: ^2.11.0
+  collection: ^1.17.0
   dbus: ^0.7.10
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.5.1
+  flutter_svg: ^2.0.10
+  handy_window: ^0.4.0
   intl: ^0.18.1
   retry: ^3.1.2
   ubuntu_localizations: ^0.3.5
+  ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
   yaml: ^3.1.2
-  yaru: 4.0.0
+  yaru:
+    git:
+      url: https://github.com/ubuntu/yaru.dart.git
+      ref: main
+
+dependency_overrides:
+  yaru:
+    git:
+      url: https://github.com/ubuntu/yaru.dart.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
@@ -29,3 +42,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+

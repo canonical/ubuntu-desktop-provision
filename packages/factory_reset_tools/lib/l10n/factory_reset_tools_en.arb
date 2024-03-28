@@ -1,0 +1,10 @@
+{
+  "appTitle": "Factory Reset Tools",
+  "windowTitle": "Factory Reset Tools",
+  "createUsbTitle": "Create a USB reset media",
+  "createUsbBody": "Create a USB reset media to restore the system, as well as customising your Ubuntu installations.",
+  "createUsbListExplanation": "Select a USB flash drive. The drive must have at least 16GB of space",
+  "createUsbWarning": "The flash drive will be reformatted and all data on the drive will be lost.",
+  "resetMediaTitle": "USB reset media",
+  "warning": "Warning"
+}
