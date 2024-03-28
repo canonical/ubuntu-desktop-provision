@@ -21,18 +21,10 @@ class StorageSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String prettyFormatStorage(Disk storage) {
-      final fullName = <String?>[
-        storage.model,
-        storage.vendor,
-      ].where((p) => p?.isNotEmpty ?? false).join(' ');
-      return '${storage.sysname} $fullName (${context.formatByteSize(storage.size)})';
-    }
-
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
+      children: [
         MenuButtonBuilder<int>(
           entries: List.generate(
             storages.length,
@@ -45,7 +37,7 @@ class StorageSelector extends StatelessWidget {
           onSelected: onSelected,
           itemBuilder: (context, index, _) {
             return Text(
-              prettyFormatStorage(storages[index]),
+              _prettyFormatStorage(storages[index], context),
               key: ValueKey(index),
             );
           },
@@ -53,5 +45,13 @@ class StorageSelector extends StatelessWidget {
         )
       ],
     );
+  }
+
+  String _prettyFormatStorage(Disk storage, BuildContext context) {
+    final fullName = [
+      storage.model,
+      storage.vendor,
+    ].where((p) => p?.isNotEmpty ?? false).join(' ');
+    return '${storage.sysname} $fullName (${context.formatByteSize(storage.size)})';
   }
 }

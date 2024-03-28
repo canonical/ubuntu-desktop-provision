@@ -9,17 +9,29 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
 /// The default mount points for auto-completion.
-const kDefaultMountPoints = <String>[
-  '/',
-  '/boot',
-  '/home',
-  '/tmp',
-  '/usr',
-  '/var',
-  '/srv',
-  '/opt',
-  '/usr/local',
-];
+enum DefaultMountPoint {
+  none(''),
+  root('/'),
+  boot('/boot'),
+  home('/home'),
+  tmp('/tmp'),
+  usr('/usr'),
+  variableFiles('/var'),
+  srv('/srv'),
+  opt('/opt'),
+  useLocal('/usr/local');
+
+  const DefaultMountPoint(this.path);
+
+  final String path;
+
+  static DefaultMountPoint fromPath(String path) => values.firstWhere(
+        (e) => e.path == path,
+        orElse: () => root,
+      );
+
+  static Iterable<String> paths() => values.map((e) => e.path);
+}
 
 /// The location of the partition within to the available space around.
 enum PartitionLocation {
@@ -32,7 +44,8 @@ enum PartitionLocation {
 
 /// Provider for [ManualStorageModel].
 final manualStorageModelProvider = ChangeNotifierProvider(
-    (_) => ManualStorageModel(getService<StorageService>()));
+  (_) => ManualStorageModel(getService<StorageService>()),
+);
 
 /// View model for [ManualStoragePage].
 class ManualStorageModel extends SafeChangeNotifier {
@@ -222,9 +235,11 @@ class ManualStorageModel extends SafeChangeNotifier {
   }
 
   void _updateOriginalConfigs(List<Disk> disks) {
-    _originalConfigs = Map.fromEntries(disks
-        .expand((d) => d.partitions.whereType<Partition>())
-        .map((p) => MapEntry(p.sysname, p)));
+    _originalConfigs = Map.fromEntries(
+      disks
+          .expand((d) => d.partitions.whereType<Partition>())
+          .map((p) => MapEntry(p.sysname, p)),
+    );
   }
 
   Future<void> init() async {
