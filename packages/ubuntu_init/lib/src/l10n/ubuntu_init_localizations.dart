@@ -375,11 +375,107 @@ abstract class UbuntuInitLocalizations {
   /// **'Data Privacy'**
   String get privacyPolicyLink;
 
+  /// No description provided for @ubuntuProMagicAttachInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
+  String ubuntuProMagicAttachInstructions(Object url);
+
   /// No description provided for @ubuntuProPageTitle.
   ///
   /// In en, this message translates to:
   /// **'Ubuntu Pro'**
   String get ubuntuProPageTitle;
+
+  /// No description provided for @ubuntuProHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach this machine'**
+  String get ubuntuProHeader;
+
+  /// No description provided for @ubuntuProOrAddTokenManually.
+  ///
+  /// In en, this message translates to:
+  /// **'or add a token manually'**
+  String get ubuntuProOrAddTokenManually;
+
+  /// No description provided for @ubuntuProTokenTextfieldHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Token'**
+  String get ubuntuProTokenTextfieldHint;
+
+  /// No description provided for @ubuntuProSubscriptionDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Get the most comprehensive subscription for open-source software security'**
+  String get ubuntuProSubscriptionDescription;
+
+  /// No description provided for @ubuntuProSubscriptionFreeForPersonalUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>'**
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url);
+
+  /// No description provided for @ubuntuProTokenAttachButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach'**
+  String get ubuntuProTokenAttachButton;
+
+  /// No description provided for @ubuntuProTokenAttachError.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid token'**
+  String get ubuntuProTokenAttachError;
+
+  /// No description provided for @ubuntuProTokenAttachSucess.
+  ///
+  /// In en, this message translates to:
+  /// **'Valid token'**
+  String get ubuntuProTokenAttachSucess;
+
+  /// No description provided for @ubuntuProTokenAttachErrorVariant.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid token, retry'**
+  String get ubuntuProTokenAttachErrorVariant;
+
+  /// No description provided for @ubuntuProOnBoardingSkipForNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip for now'**
+  String get ubuntuProOnBoardingSkipForNow;
+
+  /// No description provided for @ubuntuProOnBoardingSkipForNowDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can always enable Ubuntu Pro later via the Software & Updates application.'**
+  String get ubuntuProOnBoardingSkipForNowDescription;
+
+  /// No description provided for @ubuntuProOnBoardingEnableUbuntuPro.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Ubuntu Pro'**
+  String get ubuntuProOnBoardingEnableUbuntuPro;
+
+  /// No description provided for @ubuntuProOnBoardingEnableUbuntuProDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.'**
+  String get ubuntuProOnBoardingEnableUbuntuProDescription;
+
+  /// No description provided for @ubuntuProSucessAttachHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu Pro is now enabled in this machine'**
+  String get ubuntuProSucessAttachHeader;
+
+  /// No description provided for @ubuntuProSucessAttachDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can manage your Pro services in the Software & Updates application.'**
+  String get ubuntuProSucessAttachDescription;
 }
 
 class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {

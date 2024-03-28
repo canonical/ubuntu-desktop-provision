@@ -19,19 +19,22 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Un inici àgil';
 
   @override
-  String get welcomeStartSubtitle => 'Afavoreix una experiència d’instal·lació més senzilla.';
+  String get welcomeStartSubtitle =>
+      'Afavoreix una experiència d’instal·lació més senzilla.';
 
   @override
   String get welcomeStoreTitle => 'Botiga d’aplicacions amb un aspecte nou';
 
   @override
-  String get welcomeStoreSubtitle => 'Mai no ha estat més fàcil trobar el vostre programari preferit.';
+  String get welcomeStoreSubtitle =>
+      'Mai no ha estat més fàcil trobar el vostre programari preferit.';
 
   @override
   String get welcomeSecurityTitle => 'Seguretat millorada';
 
   @override
-  String get welcomeSecuritySubtitle => 'Opcions noves per al xifrat per maquinari o mitjançant el ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Opcions noves per al xifrat per maquinari o mitjançant el ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -75,7 +78,8 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Voleu activar els serveis d’ubicació?';
 
   @override
-  String get privacyLocationSubtitle => 'Permeteu que les aplicacions coneguin la vostra ubicació geogràfica.\nPodeu canviar-ho en qualsevol moment als Paràmetres del sistema.';
+  String get privacyLocationSubtitle =>
+      'Permeteu que les aplicacions coneguin la vostra ubicació geogràfica.\nPodeu canviar-ho en qualsevol moment als Paràmetres del sistema.';
 
   @override
   String get privacyLocationEnable => 'Serveis d’ubicació';
@@ -84,5 +88,62 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Privadesa de les dades';
 
   @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Attach this machine';
+
+  @override
+  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => 'Token';
+
+  @override
+  String get ubuntuProSubscriptionDescription =>
+      'Get the most comprehensive subscription for open-source software security';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => 'Attach';
+
+  @override
+  String get ubuntuProTokenAttachError => 'Invalid token';
+
+  @override
+  String get ubuntuProTokenAttachSucess => 'Valid token';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+
+  @override
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro is now enabled in this machine';
+
+  @override
+  String get ubuntuProSucessAttachDescription =>
+      'You can manage your Pro services in the Software & Updates application.';
 }

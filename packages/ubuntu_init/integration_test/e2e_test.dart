@@ -73,7 +73,15 @@ void main() {
     ]);
     await expectUser(identity, 'password');
 
+    await tester.testUbunutuProOnboardingPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testUbuntuProPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testUbuntuProSuccessAttachProPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

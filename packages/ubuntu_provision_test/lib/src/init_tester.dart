@@ -69,4 +69,34 @@ extension UbuntuInitPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
   }
+
+  Future<void> testUbunutuProOnboardingPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(UbuntuProOnboardingPage);
+
+    final context = element(find.byType(UbuntuProOnboardingPage));
+    final l10n = PrivacyLocalizations.of(context);
+
+    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
+  Future<void> testUbuntuProSuccessAttachProPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(UbuntuProSuccessAttachPage);
+
+    final context = element(find.byType(UbuntuProSuccessAttachPage));
+    final l10n = PrivacyLocalizations.of(context);
+
+    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
 }
