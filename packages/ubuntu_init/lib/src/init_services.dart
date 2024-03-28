@@ -22,8 +22,8 @@ export 'package:sysmetrics/sysmetrics.dart' show Sysmetrics;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
 
 export 'services/gdm_service.dart';
-export 'services/provd_chown_service.dart';
 export 'services/provd_accessibility_service.dart';
+export 'services/provd_chown_service.dart';
 export 'services/provd_identity_service.dart';
 export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';

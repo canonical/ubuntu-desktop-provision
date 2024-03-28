@@ -10,13 +10,14 @@ abstract class ChownService {
 class ProvdChownService with ProvdAddress implements ChownService {
   ProvdChownService({@visibleForTesting provd.ProvdChownClient? client})
       : _client = client ??
-          provd.ProvdChownClient(
-            ProvdAddress.socketAddress,
-            ProvdAddress.port,
-          );
+            provd.ProvdChownClient(
+              ProvdAddress.socketAddress,
+              ProvdAddress.port,
+            );
 
   final provd.ProvdChownClient _client;
 
   @override
-  Future<bool> chownSettings(String username) => _client.chownSettings(username);
+  Future<bool> chownSettings(String username) =>
+      _client.chownSettings(username);
 }
