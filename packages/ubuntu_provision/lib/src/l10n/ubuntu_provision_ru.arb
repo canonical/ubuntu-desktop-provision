@@ -227,5 +227,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "accessibilityDesktopZoomLabel": "Масштабирование рабочего стола",
+  "@accessibilityDesktopZoomLabel": {}
 }
