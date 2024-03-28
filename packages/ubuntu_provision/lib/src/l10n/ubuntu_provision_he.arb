@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "פריסת מקלדת",
   "@keyboardTitle": {},
-  "keyboardHeader": "נא לבחור את פריסת המקלדת שלך:",
+  "keyboardHeader": "נא לבחור את פריסת המקלדת שלך",
   "@keyboardHeader": {},
   "keyboardTestHint": "ניתן להקליד כאן כדי לבדוק את המקלדת שלך",
   "@keyboardTestHint": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "התחברות לרשת",
   "@networkPageTitle": {},
-  "networkPageHeader": "חיבור המחשב הזה לאינטרנט יסייע לאובונטו להתקין תכניות נוספות חיוניות ויסייע בבחירת אזור הזמן שלך.\n\nאפשר להתחבר בכבל רשת או לבחור רשת אלחוטית",
+  "networkPageHeader": "נא להתחבר לאינטרנט",
   "@networkPageHeader": {},
   "networkWiredOption": "להשתמש בחיבור קווי",
   "@networkWiredOption": {},
@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "שם הרשת נחוץ",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "לא רוצה להתחבר לאינטרנט כרגע",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageBody": "התאמת {DISTRO} לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר בהגדרות המערכת.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "ראיה",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityZoomLabel": "תקריב",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "ניגודיות גבוהה",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "טקסט גדול",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "הפחתת הנפשות",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "מקריא מסך",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "התראות חזותיות",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "מקשים דביקים",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "מקשים איטיים",
+  "@accessibilitySlowKeysLabel": {},
+  "errorPageTitle": "משהו השתבש",
+  "@errorPageTitle": {},
+  "errorPageHideLog": "הסתרת היומן",
+  "@errorPageHideLog": {},
+  "errorPageShowLog": "הצגת היומן",
+  "@errorPageShowLog": {},
+  "restart": "הפעלה מחדש",
+  "@restart": {},
+  "close": "סגירה",
+  "@close": {},
+  "errorPageUnexpected": "אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר גם <a>לדווח על התקלה</a>.",
+  "@errorPageUnexpected": {},
+  "accessibilityPageTitle": "נגישות",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "נגישות ב־{DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHearingLabel": "שמיעה",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "הקלדה",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "הצבעה ולחיצה",
+  "@accessibilityPointingLabel": {},
+  "accessibilityMouseKeysLabel": "מקשי עכבר",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "תקריב שולחן עבודה",
+  "@accessibilityDesktopZoomLabel": {},
+  "activeDirectoryHeader": "להיכנס ל־Active Directory?",
+  "@activeDirectoryHeader": {},
+  "networkPageBody": "חיבור לאינטרנט ישפר את ההתקנה שלך בעזרת בדיקות תאימות וחבילות תוכנה נוספות.",
+  "@networkPageBody": {},
+  "activeDirectoryInfo": "מערכת {DISTRO} תוכננה להשתלב בצורה חלקה עם Active Directory כדי להקל על הניהול.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

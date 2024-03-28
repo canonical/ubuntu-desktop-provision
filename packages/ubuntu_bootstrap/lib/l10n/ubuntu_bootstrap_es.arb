@@ -360,7 +360,7 @@
   "@installDriversTitle": {},
   "installCodecsSubtitle": "Incluidos, entre otros, MP3, MP4, MOV y similares",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Incluidos, entre otros, los controladores NVIDIA y similares.",
+  "installDriversSubtitle": "Incluidos, entre otros, los controladores NVIDIA y similares",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Descarga e instala un soporte para formatos multimedia adicionales",
   "@installCodecsTitle": {},
@@ -689,7 +689,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Por favor, reinicie el instalador.",
+  "refreshRestart": "Por favor, cierre el instalador y vuelva a iniciarlo para continuar",
   "@refreshRestart": {},
   "recoveryKeyTitle": "Clave de recuperación para el TPM",
   "@recoveryKeyTitle": {},
@@ -765,7 +765,7 @@
   "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "Para usuarios avanzados que tienen un archivo autoinstall.yaml para configuraciones del sistema consistentes y repetibles.",
   "@autoinstallAutomatedDescription": {},
-  "autoinstallInstructions": "Introduzca la URL de autoinstall.yaml",
+  "autoinstallInstructions": "Introduzca la URL de autoinstall.yaml:",
   "@autoinstallInstructions": {},
   "tryOrInstallHeader": "¿Qué quieres hacer con {DISTRO} ?",
   "@tryOrInstallHeader": {
@@ -883,5 +883,33 @@
   "confirmSectionSecurityAndMoreTitle": "Seguridad y más",
   "@confirmSectionSecurityAndMoreTitle": {},
   "confirmProprietarySoftwareDrivers": "Controladores",
-  "@confirmProprietarySoftwareDrivers": {}
+  "@confirmProprietarySoftwareDrivers": {},
+  "warningLabel": "Advertencia:",
+  "@warningLabel": {},
+  "selectGuidedStorageDriveDropdownLabel": "Selecciona la unidad:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Selecciona la partición:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Elige dónde instalar {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Reinicie para completar la instalación o continuar las pruebas.\nLos cambios que realice no se guardarán.",
+  "@restartWarningBody": {},
+  "refreshUpdateNow": "Actualizar ahora",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Actualización preparada",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Cerrar el instalador",
+  "@refreshCloseLabel": {},
+  "batteryWarning": "El ordenador no está conectado a una fuente de alimentación.",
+  "@batteryWarning": {},
+  "refreshHeader": "Existe una actualización disponible para el instalador",
+  "@refreshHeader": {},
+  "refreshInfo": "Actualice a la última versión para mejorar la fiabilidad y obtener más funciones.",
+  "@refreshInfo": {}
 }
