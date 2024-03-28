@@ -4,16 +4,15 @@ import 'package:provd_client/src/generated/chown.pbgrpc.dart';
 
 class ProvdChownClient {
   ProvdChownClient(Object host, int port)
-    :_chownClient = ChownServiceClient(
-         ClientChannel(
+      : _chownClient = ChownServiceClient(
+          ClientChannel(
             host,
             port: port,
             options: const ChannelOptions(
               credentials: ChannelCredentials.insecure(),
             ),
           ),
-    );
-
+        );
 
   @visibleForTesting
   ProvdChownClient.withClient(this._chownClient);
@@ -28,6 +27,5 @@ class ProvdChownClient {
       return true;
     }
     return false;
-  } 
-
+  }
 }

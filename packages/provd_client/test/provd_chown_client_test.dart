@@ -1,5 +1,3 @@
-
-
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provd_client/provd_client.dart';
