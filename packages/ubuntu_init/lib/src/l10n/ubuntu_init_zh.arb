@@ -1,1 +1,70 @@
-{}
+{
+  "welcomeWhatsNew": "有什么新功能？",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "顺畅起步",
+  "@welcomeStartTitle": {},
+  "telemetryPageTitle": "数据收集",
+  "@telemetryPageTitle": {},
+  "telemetryReportLabel": "报告细节",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "报告细节",
+  "@telemetryReportTitle": {},
+  "privacyLocationEnable": "位置信息服务",
+  "@privacyLocationEnable": {},
+  "welcomeStartSubtitle": "支持更简洁的安装体验。",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "应用商店新外观",
+  "@welcomeStoreTitle": {},
+  "welcomePageHeader": "欢迎使用 {distro}",
+  "@welcomePageHeader": {},
+  "welcomePageTitle": "欢迎",
+  "@welcomePageTitle": {},
+  "privacyLocationSubtitle": "让应用程序获取您的地理位置信息。\n您可以随时在“系统设置”中更改此设置。",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "数据隐私政策",
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "welcomeStoreSubtitle": "找到您喜欢的软件从未如此简单。",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "增强安全",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">查看更新日志</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "welcomeSecuritySubtitle": "新的硬件支持加密或 ZFS 加密选项。",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryHeader": "帮助改善 {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "不，不要分享系统数据",
+  "@telemetryLabelOff": {},
+  "telemetryDescription": "向 {distro} 匿名发送数据，让我们改善您的体验。",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "是的，与 {distro} 团队分享系统数据",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLegalLabel": "法律信息",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "位置信息服务",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "启用位置信息服务吗？",
+  "@privacyLocationTitle": {}
+}

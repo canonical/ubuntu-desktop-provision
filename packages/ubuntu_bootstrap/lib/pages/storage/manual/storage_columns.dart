@@ -97,7 +97,11 @@ class StorageTypeColumn extends StorageColumn {
             return const SizedBox.shrink();
           },
           partitionBuilder: (context, disk, partition) {
-            return Text(partition.format ?? '');
+            return Text(
+              PartitionFormat.fromPartition(partition)?.displayName ??
+                  partition.format ??
+                  '',
+            );
           },
         );
 }

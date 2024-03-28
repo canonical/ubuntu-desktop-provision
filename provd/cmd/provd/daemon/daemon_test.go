@@ -286,7 +286,7 @@ func TestNoConfigSetDefaults(t *testing.T) {
 	err := a.Run()
 	require.NoError(t, err, "Run should not return an error")
 
-	require.Equal(t, "", a.Config().Paths.Socket, "No socket address as default")
+	require.Equal(t, "/run/gnome-initial-setup/desktop-provision/init.socket", a.Config().Paths.Socket, "No socket address as default")
 }
 
 func TestBadConfigFile(t *testing.T) {

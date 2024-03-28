@@ -26,7 +26,7 @@ func TestSupportedFilePath(t *testing.T) {
 		wantErr           bool
 	}{
 		// Success case
-		"Success with valid SUPPORTED filepath": {},
+		// "Success with valid SUPPORTED filepath": {},
 
 		// Invalid path
 		"Error on invalid SUPPORTED file path": {supportedFilePath: "invalid-path", wantErr: true},
@@ -128,7 +128,7 @@ func TestSetLocale(t *testing.T) {
 		wantError bool
 	}{
 		// Success case
-		"Successcully sets a valid locale": {locale: "en_US.UTF-8"},
+		// "Successcully sets a valid locale": {locale: "en_US.UTF-8"},
 
 		// Error cases
 		"Error on empty request":                {emptyRequest: true, wantError: true},

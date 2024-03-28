@@ -5,83 +5,83 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => '欢迎';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return '欢迎使用 $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => '有什么新功能？';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => '顺畅起步';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => '支持更简洁的安装体验。';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => '应用商店新外观';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => '找到您喜欢的软件从未如此简单。';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => '增强安全';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => '新的硬件支持加密或 ZFS 加密选项。';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">查看更新日志</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => '数据收集';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return '帮助改善 $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return '向 $distro 匿名发送数据，让我们改善您的体验。';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return '是的，与 $distro 团队分享系统数据';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => '不，不要分享系统数据';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => '报告细节';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => '报告细节';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => '法律信息';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => '位置信息服务';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => '启用位置信息服务吗？';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => '让应用程序获取您的地理位置信息。\n您可以随时在“系统设置”中更改此设置。';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => '位置信息服务';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => '数据隐私政策';
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';

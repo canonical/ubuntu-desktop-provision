@@ -19,7 +19,7 @@
   "@partitionTypeLogical": {},
   "partitionEditTitle": "Upraviť oddiel",
   "@partitionEditTitle": {},
-  "installAlongsideSpaceDivider": "Prideľte priestor na jednotke posunutím delítka nižšie:",
+  "installAlongsideSpaceDivider": "Prideľte miesto na disku potiahnutím rozdeľovača nižšie:",
   "@installAlongsideSpaceDivider": {},
   "partitionLocationBeginning": "Začiatok tohto priestoru",
   "@partitionLocationBeginning": {},
@@ -29,7 +29,7 @@
   "@confirmPartitionTables": {},
   "confirmPartitionChanges": "Budú vykonané nasledujúce zmeny na oddieloch:",
   "@confirmPartitionChanges": {},
-  "bitlockerDescription": "Na tomto počítači je používané šifrovanie nástrojom Windows BitLocker.\nAby bolo možné pokračovať, je potrebné pomocou Windows urobiť voľné miesto alebo zvoliť '{option}'.",
+  "bitlockerDescription": "Na tomto počítači je používané šifrovanie nástrojom Windows BitLocker.\nNa vytvorenie voľného miesta musíte použiť systém Windows alebo sa vráťte späť a pokračujte výberom možnosti '{option}'.",
   "@bitlockerDescription": {
     "type": "text",
     "placeholders": {
@@ -111,9 +111,9 @@
       "url": {}
     }
   },
-  "updatesOtherSoftwarePageTitle": "Aplikácie a aktualizácie",
+  "updatesOtherSoftwarePageTitle": "Aplikácie",
   "@updatesOtherSoftwarePageTitle": {},
-  "updatesOtherSoftwarePageDescription": "Ktoré aplikácie chcete mať ihneď od začiatku nainštalované?",
+  "updatesOtherSoftwarePageDescription": "Aké aplikácie by ste si chceli na začiatok nainštalovať?",
   "@updatesOtherSoftwarePageDescription": {},
   "diskHeadersMountPoint": "Prípojný bod",
   "@diskHeadersMountPoint": {},
@@ -121,7 +121,7 @@
   "@newPartitionTable": {},
   "rstHeader": "Aby bolo možné pokračovať, vypnite RST",
   "@rstHeader": {},
-  "showSecurityKey": "Zobraziť kľúč zabezpečenia",
+  "showSecurityKey": "Zobraziť",
   "@showSecurityKey": {},
   "onBatteryWarning": "<font color=\"{color}\">Upozornenie:</font> Počítač nie je pripojený k napájaniu zo zásuvky.",
   "@onBatteryWarning": {
@@ -130,7 +130,7 @@
       "color": {}
     }
   },
-  "installationTypeTitle": "Typ inštalácie",
+  "installationTypeTitle": "Nastavenie disku",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Na tomto počítači sa už nachádza {os}. Čo si prajete urobiť?",
   "@installationTypeOSDetected": {
@@ -215,7 +215,7 @@
   "@partitionCreateTitle": {},
   "partitionSizeLabel": "Veľkosť:",
   "@partitionSizeLabel": {},
-  "confirmHeader": "Ak budete pokračovať, nižšie uvedené zmeny budú zapísané na disky. Ďalšie zmeny potom môžete urobiť ručne.",
+  "confirmHeader": "Skontrolujte svoje voľby",
   "@confirmHeader": {},
   "installationCompleteTitle": "Inštalácia dokončená",
   "@installationCompleteTitle": {},
@@ -324,7 +324,7 @@
   },
   "partitionMountPointLabel": "Prípojný bod:",
   "@partitionMountPointLabel": {},
-  "quitButtonText": "Opustiť inštaláciu",
+  "quitButtonText": "Ukončiť inštaláciu",
   "@quitButtonText": {},
   "tryOrInstallTitle": "Vyskúšať alebo nainštalovať {DISTRO}",
   "@tryOrInstallTitle": {
@@ -356,9 +356,9 @@
       "RELEASE": {}
     }
   },
-  "rstTitle": "RST je zapnuté",
+  "rstTitle": "RST zistené",
   "@rstTitle": {},
-  "rstDescription": "Na tomto počítači je zapnutá technológia Intel RST (Rapid Storage Technology). Aby bolo možné Ubuntu nainštalovať, je potrebné vo Windows funkciu RST vypnúť.",
+  "rstDescription": "Tento počítač používa technológiu Intel RST (Rapid Storage Technology). Pred inštaláciou {DISTRO} musíte vo Windowse vypnúť RST.",
   "@rstDescription": {},
   "installDescription": "Nainštalujte {RELEASE} spoločne z (alebo namiesto) vášho operačného systému. Nemalo by to trvať dlho.",
   "@installDescription": {
@@ -450,7 +450,7 @@
   },
   "installationTypeEncryptInfo": "V nasledujúcom kroku si zvolíte bezpečnostný kľúč.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EXPERIMENTÁLNE: Vymazať disk a použiť súborový systém ZFS",
+  "installationTypeZFS": "Vymazať disk a použiť ZFS",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Nainštalovať {product} vedľa {os}",
   "@installationTypeAlongside": {
@@ -464,7 +464,7 @@
   "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Bude použitý celý disk:",
   "@selectGuidedStorageInfoLabel": {},
-  "installationTypeManualInfo": "Je možné ručne vytvoriť alebo zmeniť veľkosť oddielov, alebo pre inštaláciu {DISTRO} zvoliť viacero oddielov",
+  "installationTypeManualInfo": "Pre pokročilých používateľov, ktorí hľadajú prispôsobené nastavenia disku.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -480,7 +480,7 @@
   },
   "installAlongsideAvailable": "K dispozícii:",
   "@installAlongsideAvailable": {},
-  "allocateDiskSpace": "Ručné rozdelenie",
+  "allocateDiskSpace": "Manuálne rozdelenie",
   "@allocateDiskSpace": {},
   "diskHeadersDevice": "Zariadenie",
   "@diskHeadersDevice": {},
@@ -515,15 +515,15 @@
       "DISTRO": {}
     }
   },
-  "installationTypeManual": "Ručné rozdelenie na oddiely",
+  "installationTypeManual": "Manuálna inštalácia",
   "@installationTypeManual": {},
-  "installDriversSubtitle": "Tieto ovládače sú predmetom licenčných dojednaní obsiahnutých v dokumentácii k nim. Sú proprietárne.",
+  "installDriversSubtitle": "Vrátane ovládačov NVIDIA a ďalších ostatných",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Stiahnuť a nainštalovať podporu pre ďalšie formáty médií",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Tento softvér je predmetom licenčných dojednaní obsiahnutých v dokumentácii k nemu. Niektoré sú proprietárne.",
+  "installCodecsSubtitle": "Vrátane MP3, MP4, MOV a ďalších ostatných",
   "@installCodecsSubtitle": {},
-  "installationTypeAlongsideInfo": "Dokumenty, hudba a ostatné osobné súbory zostanú zachované. Zakaždým, keď počítač spustíte z vypnutého stavu, budete si môcť zvoliť ktorý operačný systém spustiť.",
+  "installationTypeAlongsideInfo": "Počas zavádzania si môžete vybrať operačný systém.",
   "@installationTypeAlongsideInfo": {},
   "installAlongsideHiddenPartitions": "{num} menších oddielov je skrytých. Pokiaľ potrebujete mať nad procesom viac kontroly, použite <a href=\"{url}\">nástroj pre pokročilú správu oddielov</a>",
   "@installAlongsideHiddenPartitions": {
@@ -600,11 +600,11 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "EXPERIMENTÁLNE: Povolenie hardvérového šifrovania celého disku",
+  "installationTypeTPM": "Zapnúť hardvérovo zálohované šifrovanie celého disku",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Vybrané TPM",
   "@installationTypeTPMSelected": {},
-  "refreshCurrent": "Aktuálna verzia {snap} je {version}.",
+  "refreshCurrent": "Aktuálne používaná verzia {snap} je {version}.",
   "@refreshCurrent": {
     "type": "text",
     "placeholders": {
@@ -744,14 +744,14 @@
   },
   "refreshPageTitle": "K dispozícii je aktualizácia",
   "@refreshPageTitle": {},
-  "refreshUpToDate": "Aktuálna verzia {version} je najnovšia.",
+  "refreshUpToDate": "Aktuálne používaná verzia {version} je najnovšia.",
   "@refreshUpToDate": {
     "type": "text",
     "placeholders": {
       "version": {}
     }
   },
-  "refreshRestart": "Prosím reštartujte inštalátor.",
+  "refreshRestart": "Ak chcete pokračovať, zatvorte prosím inštalátor a znova ho spustite",
   "@refreshRestart": {},
   "refreshSnapStopServices": "Zastavujú sa služby {snap}...",
   "@refreshSnapStopServices": {
@@ -788,12 +788,163 @@
       "snap": {}
     }
   },
-  "fullInstallationSubtitle": "Výber vhodný pre režim off-line kancelárske nástroje, pomôcky, webový prehliadač a hry.",
+  "fullInstallationSubtitle": "Výber vhodný pre režim off-line kancelárske nástroje, pomôcky a webový prehliadač.",
   "@fullInstallationSubtitle": {},
-  "minimalInstallationTitle": "Predvolená inštalácia",
+  "minimalInstallationTitle": "Predvolený výber",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Len to najnutnejšie, webový prehliadač a základné nástroje.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationTitle": "Úplná inštalácia",
-  "@fullInstallationTitle": {}
+  "fullInstallationTitle": "Rozšírený výber",
+  "@fullInstallationTitle": {},
+  "validate": "Overiť",
+  "@validate": {},
+  "autoinstallInstructions": "Zadajte autoinstall.yaml URL adresu.",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Interaktívna inštalácia",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "Automatizovaná inštalácia",
+  "@autoinstallAutomatedOption": {},
+  "codecsAndDriversPageDescription": "Nainštalovať odporúčaný proprietárny softvér?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaBody": "Pre najlepší výkon grafických kariet NVIDIA sa dôrazne odporúča nainštalovať ďalšie ovládače.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHint": "Vyberte si prístupovú frázu",
+  "@choosePassphraseHint": {},
+  "choosePassphraseHeader": "Vytvorenie prístupovej frázy",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseMismatch": "Do každej z kolónok pre prístupovú frázu ste napísali niečo iné",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Uistite sa, že ste si uložili svoju prístupovú frázu",
+  "@choosePassphraseInfoHeader": {},
+  "installationTypeHeader": "Ako chcete nainštalovať {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPassphrase": "Zopakujte zadanie prístupovej frázy",
+  "@confirmPassphrase": {},
+  "createPassphrase": "Vytvoriť prístupovú frázu",
+  "@createPassphrase": {},
+  "installationTypeLVMEncryption": "Použiť LVM a šifrovanie",
+  "@installationTypeLVMEncryption": {},
+  "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia dodatočného softvéru môže zlepšiť výkon vášho počítača.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Zistila sa grafická karta NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "choosePassphraseTitle": "Prístupová fráza disku",
+  "@choosePassphraseTitle": {},
+  "installationTypeEraseInfo": "Začnite od začiatku na vybranom disku.",
+  "@installationTypeEraseInfo": {},
+  "choosePassphraseBody": "Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseConfirmHint": "Zopakujte zadanie prístupovej frázy",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Je potrebné zadať prístupovú frázu",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseInfoBody": "Ak stratíte prístupovú frázu, stratíte všetky svoje údaje.",
+  "@choosePassphraseInfoBody": {},
+  "installationTypeExperimental": "Experimentálne",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Použiť LVM",
+  "@installationTypeLVM": {},
+  "installationTypeZFSEncryption": "Vymazať disk a použiť ZFS so šifrovaním",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "Vybrané ZFS a šifrovanie",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom pri budúcich vydaniach {DISTRO}. <a href=\"{url}\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Začnite od začiatku na vybranom disku.",
+  "@selectGuidedStorageInfo": {},
+  "confirmProprietarySoftwareDrivers": "Ovládače",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** bolo skopírované na disk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Žiadne",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Aplikácie",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Nastavenie disku",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Šifrovanie disku",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Inštalačný disk",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Proprietárny softvér",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Všeobecné",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Zabezpečenie a ďalšie",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Kodeky",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodeky a ovládače",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "rebootToConfigureWarning": "Ak chcete pokračovať v procese inštalácie, musíte reštartovať počítač.",
+  "@rebootToConfigureWarning": {},
+  "autoinstallTitle": "Typ inštalácie",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Ako by ste chceli nainštalovať {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveDescription": "Pre používateľov, ktorí chcú byť prevedení inštaláciou krok za krokom.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedDescription": "Pre pokročilých používateľov, ktorí majú súbor autoinstall.yaml pre konzistentné a opakovateľné nastavenia systému.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Čo chcete urobiť s {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Skryť",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Optimalizujte svoj počítač",
+  "@codecsAndDriversPageTitle": {},
+  "refreshInfo": "Aktualizujte na najnovšiu verziu pre vyššiu spoľahlivosť a viac funkcií.",
+  "@refreshInfo": {},
+  "refreshHeader": "Pre inštalátor je k dispozícii aktualizácia",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "Aktualizovať teraz",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Aktualizácia pripravená",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Zatvoriť inštalátor",
+  "@refreshCloseLabel": {}
 }

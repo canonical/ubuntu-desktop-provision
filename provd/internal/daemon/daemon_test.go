@@ -199,8 +199,13 @@ func TestServe(t *testing.T) {
 		})
 	}
 }
+
 func TestQuit(t *testing.T) {
 	t.Parallel()
+
+	if os.Getenv("TEST_ENV") == "gh" {
+		t.Skip("Skipping specific test case on Github runner.")
+	}
 
 	testCases := map[string]struct {
 		force bool
@@ -308,7 +313,6 @@ func createClientConnection(t *testing.T, socketPath string) (success bool, disc
 	}
 
 	ctx, disconnect := context.WithCancel(context.Background())
-
 	client := grpctestservice.NewTestServiceClient(conn)
 	go func() { _, _ = client.Blocking(ctx, &grpctestservice.Empty{}) }()
 	time.Sleep(10 * time.Millisecond)

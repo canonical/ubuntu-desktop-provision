@@ -21,32 +21,34 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	ProEnrolmentService_ProMagicAttach_FullMethodName = "/pro.ProEnrolmentService/ProMagicAttach"
-	ProEnrolmentService_ProAttach_FullMethodName      = "/pro.ProEnrolmentService/ProAttach"
+	ProService_ProMagicAttach_FullMethodName = "/pro.ProService/ProMagicAttach"
+	ProService_ProAttach_FullMethodName      = "/pro.ProService/ProAttach"
+	ProService_ProStatus_FullMethodName      = "/pro.ProService/ProStatus"
 )
 
-// ProEnrolmentServiceClient is the client API for ProEnrolmentService service.
+// ProServiceClient is the client API for ProService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type ProEnrolmentServiceClient interface {
-	ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProEnrolmentService_ProMagicAttachClient, error)
-	ProAttach(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error)
+type ProServiceClient interface {
+	ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProService_ProMagicAttachClient, error)
+	ProAttach(ctx context.Context, in *ProAttachRequest, opts ...grpc.CallOption) (*ProAttachResponse, error)
+	ProStatus(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error)
 }
 
-type proEnrolmentServiceClient struct {
+type proServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewProEnrolmentServiceClient(cc grpc.ClientConnInterface) ProEnrolmentServiceClient {
-	return &proEnrolmentServiceClient{cc}
+func NewProServiceClient(cc grpc.ClientConnInterface) ProServiceClient {
+	return &proServiceClient{cc}
 }
 
-func (c *proEnrolmentServiceClient) ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProEnrolmentService_ProMagicAttachClient, error) {
-	stream, err := c.cc.NewStream(ctx, &ProEnrolmentService_ServiceDesc.Streams[0], ProEnrolmentService_ProMagicAttach_FullMethodName, opts...)
+func (c *proServiceClient) ProMagicAttach(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (ProService_ProMagicAttachClient, error) {
+	stream, err := c.cc.NewStream(ctx, &ProService_ServiceDesc.Streams[0], ProService_ProMagicAttach_FullMethodName, opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &proEnrolmentServiceProMagicAttachClient{stream}
+	x := &proServiceProMagicAttachClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -56,16 +58,16 @@ func (c *proEnrolmentServiceClient) ProMagicAttach(ctx context.Context, in *empt
 	return x, nil
 }
 
-type ProEnrolmentService_ProMagicAttachClient interface {
+type ProService_ProMagicAttachClient interface {
 	Recv() (*ProMagicAttachResponse, error)
 	grpc.ClientStream
 }
 
-type proEnrolmentServiceProMagicAttachClient struct {
+type proServiceProMagicAttachClient struct {
 	grpc.ClientStream
 }
 
-func (x *proEnrolmentServiceProMagicAttachClient) Recv() (*ProMagicAttachResponse, error) {
+func (x *proServiceProMagicAttachClient) Recv() (*ProMagicAttachResponse, error) {
 	m := new(ProMagicAttachResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -73,102 +75,137 @@ func (x *proEnrolmentServiceProMagicAttachClient) Recv() (*ProMagicAttachRespons
 	return m, nil
 }
 
-func (c *proEnrolmentServiceClient) ProAttach(ctx context.Context, in *wrapperspb.StringValue, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, ProEnrolmentService_ProAttach_FullMethodName, in, out, opts...)
+func (c *proServiceClient) ProAttach(ctx context.Context, in *ProAttachRequest, opts ...grpc.CallOption) (*ProAttachResponse, error) {
+	out := new(ProAttachResponse)
+	err := c.cc.Invoke(ctx, ProService_ProAttach_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ProEnrolmentServiceServer is the server API for ProEnrolmentService service.
-// All implementations must embed UnimplementedProEnrolmentServiceServer
+func (c *proServiceClient) ProStatus(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.BoolValue, error) {
+	out := new(wrapperspb.BoolValue)
+	err := c.cc.Invoke(ctx, ProService_ProStatus_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// ProServiceServer is the server API for ProService service.
+// All implementations must embed UnimplementedProServiceServer
 // for forward compatibility
-type ProEnrolmentServiceServer interface {
-	ProMagicAttach(*emptypb.Empty, ProEnrolmentService_ProMagicAttachServer) error
-	ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error)
-	mustEmbedUnimplementedProEnrolmentServiceServer()
+type ProServiceServer interface {
+	ProMagicAttach(*emptypb.Empty, ProService_ProMagicAttachServer) error
+	ProAttach(context.Context, *ProAttachRequest) (*ProAttachResponse, error)
+	ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error)
+	mustEmbedUnimplementedProServiceServer()
 }
 
-// UnimplementedProEnrolmentServiceServer must be embedded to have forward compatible implementations.
-type UnimplementedProEnrolmentServiceServer struct {
+// UnimplementedProServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedProServiceServer struct {
 }
 
-func (UnimplementedProEnrolmentServiceServer) ProMagicAttach(*emptypb.Empty, ProEnrolmentService_ProMagicAttachServer) error {
+func (UnimplementedProServiceServer) ProMagicAttach(*emptypb.Empty, ProService_ProMagicAttachServer) error {
 	return status.Errorf(codes.Unimplemented, "method ProMagicAttach not implemented")
 }
-func (UnimplementedProEnrolmentServiceServer) ProAttach(context.Context, *wrapperspb.StringValue) (*emptypb.Empty, error) {
+func (UnimplementedProServiceServer) ProAttach(context.Context, *ProAttachRequest) (*ProAttachResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProAttach not implemented")
 }
-func (UnimplementedProEnrolmentServiceServer) mustEmbedUnimplementedProEnrolmentServiceServer() {}
+func (UnimplementedProServiceServer) ProStatus(context.Context, *emptypb.Empty) (*wrapperspb.BoolValue, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ProStatus not implemented")
+}
+func (UnimplementedProServiceServer) mustEmbedUnimplementedProServiceServer() {}
 
-// UnsafeProEnrolmentServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ProEnrolmentServiceServer will
+// UnsafeProServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to ProServiceServer will
 // result in compilation errors.
-type UnsafeProEnrolmentServiceServer interface {
-	mustEmbedUnimplementedProEnrolmentServiceServer()
+type UnsafeProServiceServer interface {
+	mustEmbedUnimplementedProServiceServer()
 }
 
-func RegisterProEnrolmentServiceServer(s grpc.ServiceRegistrar, srv ProEnrolmentServiceServer) {
-	s.RegisterService(&ProEnrolmentService_ServiceDesc, srv)
+func RegisterProServiceServer(s grpc.ServiceRegistrar, srv ProServiceServer) {
+	s.RegisterService(&ProService_ServiceDesc, srv)
 }
 
-func _ProEnrolmentService_ProMagicAttach_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _ProService_ProMagicAttach_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(emptypb.Empty)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(ProEnrolmentServiceServer).ProMagicAttach(m, &proEnrolmentServiceProMagicAttachServer{stream})
+	return srv.(ProServiceServer).ProMagicAttach(m, &proServiceProMagicAttachServer{stream})
 }
 
-type ProEnrolmentService_ProMagicAttachServer interface {
+type ProService_ProMagicAttachServer interface {
 	Send(*ProMagicAttachResponse) error
 	grpc.ServerStream
 }
 
-type proEnrolmentServiceProMagicAttachServer struct {
+type proServiceProMagicAttachServer struct {
 	grpc.ServerStream
 }
 
-func (x *proEnrolmentServiceProMagicAttachServer) Send(m *ProMagicAttachResponse) error {
+func (x *proServiceProMagicAttachServer) Send(m *ProMagicAttachResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _ProEnrolmentService_ProAttach_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(wrapperspb.StringValue)
+func _ProService_ProAttach_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProAttachRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ProEnrolmentServiceServer).ProAttach(ctx, in)
+		return srv.(ProServiceServer).ProAttach(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: ProEnrolmentService_ProAttach_FullMethodName,
+		FullMethod: ProService_ProAttach_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProEnrolmentServiceServer).ProAttach(ctx, req.(*wrapperspb.StringValue))
+		return srv.(ProServiceServer).ProAttach(ctx, req.(*ProAttachRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// ProEnrolmentService_ServiceDesc is the grpc.ServiceDesc for ProEnrolmentService service.
+func _ProService_ProStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(emptypb.Empty)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ProServiceServer).ProStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ProService_ProStatus_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ProServiceServer).ProStatus(ctx, req.(*emptypb.Empty))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// ProService_ServiceDesc is the grpc.ServiceDesc for ProService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var ProEnrolmentService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "pro.ProEnrolmentService",
-	HandlerType: (*ProEnrolmentServiceServer)(nil),
+var ProService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "pro.ProService",
+	HandlerType: (*ProServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "ProAttach",
-			Handler:    _ProEnrolmentService_ProAttach_Handler,
+			Handler:    _ProService_ProAttach_Handler,
+		},
+		{
+			MethodName: "ProStatus",
+			Handler:    _ProService_ProStatus_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "ProMagicAttach",
-			Handler:       _ProEnrolmentService_ProMagicAttach_Handler,
+			Handler:       _ProService_ProMagicAttach_Handler,
 			ServerStreams: true,
 		},
 	},
