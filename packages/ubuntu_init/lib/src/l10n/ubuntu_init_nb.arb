@@ -10,5 +10,16 @@
   "welcomeWhatsNew": "Hva er nytt?",
   "@welcomeWhatsNew": {},
   "telemetryLabelOff": "Nei, ikke del systemdata",
-  "@telemetryLabelOff": {}
+  "@telemetryLabelOff": {},
+  "telemetryHeader": "Hjelp til å forbedre {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLegalLabel": "Juridisk",
+  "@telemetryLegalLabel": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }
