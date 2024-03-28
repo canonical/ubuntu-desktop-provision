@@ -38,11 +38,11 @@ pages:
   active-directory:
     image: "assets/images/online_accounts.svg"
   ubuntu-pro-onboarding:
-    image: "assets/images/ubuntu_pro.png"
+    image: "assets/images/ubuntu_pro.svg"
   ubuntu-pro:
-    image: "assets/images/ubuntu_pro.png"
+    image: "assets/images/ubuntu_pro.svg"
   ubuntu-pro-success:
-    image: "assets/images/ubuntu_pro.png"
+    image: "assets/images/ubuntu_pro.svg"
   privacy:
   timezone:
   telemetry:

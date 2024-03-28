@@ -1,7 +1,5 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:provd_client/src/generated/google/protobuf/empty.pb.dart';
-import 'package:provd_client/src/generated/google/protobuf/wrappers.pb.dart';
 import 'package:provd_client/src/generated/pro.pbgrpc.dart';
 import 'package:provd_client/src/provd_pro_client.dart';
 import 'package:test/test.dart';
@@ -49,11 +47,15 @@ void main() {
 
   test('attach with token', () async {
     when(mockProServiceClient.proAttach(any)).thenAnswer((_) {
-      return MockResponseFuture<Empty>(Empty());
+      return MockResponseFuture<ProAttachResponse>(
+        ProAttachResponse(
+          type: ProAttachResponse_ProAttachResponseType.SUCCESS,
+        ),
+      );
     });
 
     await proClient.proAttach('token');
-    verify(mockProServiceClient.proAttach(StringValue(value: 'token')))
+    verify(mockProServiceClient.proAttach(ProAttachRequest(token: 'token')))
         .called(1);
   });
 }
