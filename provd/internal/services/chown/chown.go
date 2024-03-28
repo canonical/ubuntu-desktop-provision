@@ -63,7 +63,7 @@ func (s *Service) ChownSettings(ctx context.Context, req *pb.ChownRequest) (*pb.
 	// This is only a temporary workaround, and somthing we don't want to be fatal, nor surface to the user if it fails.
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to change ownership of /run/gnome-initial-setup, not all settings will be correctly moved to new user: %v", err))
-        return &pb.ChownResponse{Code: pb.ChownResponse_UNKNOWN_ERROR}, nil
+		return &pb.ChownResponse{Code: pb.ChownResponse_UNKNOWN_ERROR}, nil
 	}
 
 	return &pb.ChownResponse{Code: pb.ChownResponse_SUCCESS}, nil
