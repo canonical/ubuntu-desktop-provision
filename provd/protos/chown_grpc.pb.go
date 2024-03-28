@@ -11,7 +11,6 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -27,7 +26,7 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ChownServiceClient interface {
-	ChownSettings(ctx context.Context, in *ChownRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	ChownSettings(ctx context.Context, in *ChownRequest, opts ...grpc.CallOption) (*ChownResponse, error)
 }
 
 type chownServiceClient struct {
@@ -38,8 +37,8 @@ func NewChownServiceClient(cc grpc.ClientConnInterface) ChownServiceClient {
 	return &chownServiceClient{cc}
 }
 
-func (c *chownServiceClient) ChownSettings(ctx context.Context, in *ChownRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
+func (c *chownServiceClient) ChownSettings(ctx context.Context, in *ChownRequest, opts ...grpc.CallOption) (*ChownResponse, error) {
+	out := new(ChownResponse)
 	err := c.cc.Invoke(ctx, ChownService_ChownSettings_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -51,7 +50,7 @@ func (c *chownServiceClient) ChownSettings(ctx context.Context, in *ChownRequest
 // All implementations must embed UnimplementedChownServiceServer
 // for forward compatibility
 type ChownServiceServer interface {
-	ChownSettings(context.Context, *ChownRequest) (*emptypb.Empty, error)
+	ChownSettings(context.Context, *ChownRequest) (*ChownResponse, error)
 	mustEmbedUnimplementedChownServiceServer()
 }
 
@@ -59,7 +58,7 @@ type ChownServiceServer interface {
 type UnimplementedChownServiceServer struct {
 }
 
-func (UnimplementedChownServiceServer) ChownSettings(context.Context, *ChownRequest) (*emptypb.Empty, error) {
+func (UnimplementedChownServiceServer) ChownSettings(context.Context, *ChownRequest) (*ChownResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ChownSettings not implemented")
 }
 func (UnimplementedChownServiceServer) mustEmbedUnimplementedChownServiceServer() {}

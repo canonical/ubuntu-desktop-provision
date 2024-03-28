@@ -4,12 +4,18 @@ package chown;
 
 option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
 
-import "google/protobuf/empty.proto";
-
 service ChownService {
-    rpc ChownSettings(ChownRequest) returns (google.protobuf.Empty);
+    rpc ChownSettings(ChownRequest) returns (ChownResponse);
 }
 
 message ChownRequest {
     string username = 1;
+}
+
+message ChownResponse {
+    enum ChownResponseCode {
+        SUCCESS = 0;
+        UNKNOWN_ERROR = 1;
+    }
+    ChownResponseCode code = 1;
 }
