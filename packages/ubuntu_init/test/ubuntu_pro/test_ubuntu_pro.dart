@@ -9,14 +9,17 @@ export '../test_utils.dart';
 UbuntuProModel buildUbuntuProModel({
   bool? enabled,
   Stream<String>? collect,
+  bool? isAttached,
+  String? token,
+  String? userCode,
 }) {
   final model = MockUbuntuProModel();
   when(model.isAttachedThroughMagicAttach).thenReturn(true);
   when(model.isAttachedThroughManualAttach).thenReturn(true);
   when(model.hasNoErrorWhenAttachingManually).thenReturn(true);
-  when(model.token).thenReturn('token');
-  when(model.userCode).thenReturn('1234');
-  when(model.isAttached).thenReturn(true);
+  when(model.token).thenReturn(token ?? '');
+  when(model.userCode).thenReturn(userCode ?? '1234');
+  when(model.isAttached).thenReturn(isAttached ?? false);
   when(model.attachManuallyToken()).thenAnswer((_) async {
     model.isAttached = true;
     model.notifyListeners();

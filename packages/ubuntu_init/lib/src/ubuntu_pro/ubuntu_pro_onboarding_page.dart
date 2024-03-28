@@ -31,7 +31,7 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
           )
         ],
       ),
-      imageBottomContent: Column(
+      imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(

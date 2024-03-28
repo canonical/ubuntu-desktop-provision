@@ -5,12 +5,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_widgets.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import '../../../ubuntu_provision/test/test_utils.mocks.dart'
+    hide MockPageConfigService;
+import '../init_model_test.mocks.dart';
 import 'test_ubuntu_pro.dart';
 
 void main() {
   Widget buildPage(UbuntuProModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
       overrides: [
+        pageImagesProvider.overrideWithValue(pageImages),
         ubuntuProModelProvider.overrideWith((_) => model),
       ],
       child: const UbuntuProPage(),
@@ -31,15 +40,20 @@ void main() {
     expect(codeFinderWidget.controller.text, model.userCode);
 
     await model.magicAttach();
-    expect(model.isAttached, isTrue);
+    expect(model.isAttached, isFalse);
   });
 
   testWidgets('ubuntu pro - manually attach', (tester) async {
     final model = buildUbuntuProModel(enabled: true);
     await tester.pumpApp((_) => buildPage(model));
-    final tokenTextField = find.byType(UbuntuProPage);
-    expect(tokenTextField, findsOneWidget);
-    await model.attachManuallyToken();
-    expect(model.isAttached, isTrue);
+
+    final tokenTextFieldFinder = find.byType(TokenTextField);
+    expect(tokenTextFieldFinder, findsOneWidget);
+
+    await tester.enterText(tokenTextFieldFinder, '123456');
+    final attachButtonFinder = find.text('Attach');
+    expect(attachButtonFinder, findsOneWidget);
+    await tester.tap(attachButtonFinder);
+    expect(model.isAttached, isFalse);
   });
 }

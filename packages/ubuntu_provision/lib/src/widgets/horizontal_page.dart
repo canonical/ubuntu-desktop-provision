@@ -9,7 +9,7 @@ import 'package:yaru/yaru.dart';
 class HorizontalPage extends ConsumerWidget {
   HorizontalPage({
     required this.windowTitle,
-    this.children,
+    required this.children,
     this.title,
     this.onNext,
     this.onBack,
@@ -23,10 +23,9 @@ class HorizontalPage extends ConsumerWidget {
       3 * kYaruPagePadding,
       kYaruPagePadding,
     ),
-    this.imageFlex = 6,
     this.bottomBar,
     this.snackBar,
-    this.imageBottomContent,
+    this.imageTitleWidget,
     int? contentFlex,
     super.key,
   })  : assert(
@@ -78,10 +77,7 @@ class HorizontalPage extends ConsumerWidget {
   final SnackBar? snackBar;
 
   /// The content under the image.
-  final Widget? imageBottomContent;
-
-  /// Flex value for the image column (default is 2)
-  final int imageFlex;
+  final Widget? imageTitleWidget;
 
   // TODO(Lukas): Move these to a proper place.
   static const defaultContentPadding = 100.0;
@@ -106,67 +102,64 @@ class HorizontalPage extends ConsumerWidget {
         padding: adjustedPadding,
         child: Row(
           children: [
-            if (image != null) ...[
+            Expanded(
+              flex: 6,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (image != null) image,
+                  if (imageTitleWidget != null) ...[
+                    const SizedBox(height: kWizardSpacing),
+                    imageTitleWidget!,
+                  ],
+                ],
+              ),
+            ),
+            if (children != null) ...[
+              const SizedBox(width: kWizardSpacing),
               Expanded(
-                flex: imageFlex,
+                flex: 8,
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    image,
-                    if (imageBottomContent != null) ...[
-                      const SizedBox(height: kWizardSpacing),
-                      imageBottomContent!,
+                    if (!managedScrolling && title != null) ...[
+                      const Spacer(),
+                      _Headline(
+                        title: title!,
+                        trailingTitleWidget: trailingTitleWidget,
+                      ),
                     ],
+                    Expanded(
+                      flex: managedScrolling ? 1 : _contentFlex,
+                      child: managedScrolling
+                          ? Center(
+                              child: Scrollbar(
+                                controller: _scrollController,
+                                thumbVisibility: true,
+                                child: ListView(
+                                  padding: hoverPadding +
+                                      EdgeInsets.only(right: scrollBarPadding),
+                                  shrinkWrap: true,
+                                  controller: _scrollController,
+                                  children: [
+                                    if (title != null)
+                                      _Headline(
+                                        title: title!,
+                                        trailingTitleWidget:
+                                            trailingTitleWidget,
+                                      ),
+                                    ...children!,
+                                  ],
+                                ),
+                              ),
+                            )
+                          : Column(children: children!),
+                    ),
+                    if (!managedScrolling) const Spacer(),
                   ],
                 ),
               ),
-              if (children != null) ...[
-                const SizedBox(width: kWizardSpacing),
-                Expanded(
-                  flex: 8,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      if (!managedScrolling && title != null) ...[
-                        const Spacer(),
-                        _Headline(
-                          title: title!,
-                          trailingTitleWidget: trailingTitleWidget,
-                        ),
-                      ],
-                      Expanded(
-                        flex: managedScrolling ? 1 : _contentFlex,
-                        child: managedScrolling
-                            ? Center(
-                                child: Scrollbar(
-                                  controller: _scrollController,
-                                  thumbVisibility: true,
-                                  child: ListView(
-                                    padding: hoverPadding +
-                                        EdgeInsets.only(
-                                            right: scrollBarPadding),
-                                    shrinkWrap: true,
-                                    controller: _scrollController,
-                                    children: [
-                                      if (title != null)
-                                        _Headline(
-                                          title: title!,
-                                          trailingTitleWidget:
-                                              trailingTitleWidget,
-                                        ),
-                                      ...children!,
-                                    ],
-                                  ),
-                                ),
-                              )
-                            : Column(children: children!),
-                      ),
-                      if (!managedScrolling) const Spacer(),
-                    ],
-                  ),
-                ),
-              ]
-            ],
+            ]
           ],
         ),
       ),

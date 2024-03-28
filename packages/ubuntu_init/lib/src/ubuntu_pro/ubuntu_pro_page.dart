@@ -32,6 +32,10 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
+          WizardButton(
+            label: UbuntuLocalizations.of(context).nextLabel,
+            onActivated: Wizard.of(context).next,
+          ),
           model.isAttached
               ? WizardButton(
                   label: UbuntuLocalizations.of(context).nextLabel,
@@ -54,7 +58,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                 )
         ],
       ),
-      imageBottomContent: Column(
+      imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
@@ -116,30 +120,36 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                             height: 100,
                           ),
                           const SizedBox(width: kWizardSpacing),
-                          SelectableText(
-                            model.userCode,
-                            style: Theme.of(context).textTheme.headlineMedium,
+                          Expanded(
+                            child: SelectableText(
+                              model.userCode,
+                              style: Theme.of(context).textTheme.headlineMedium,
+                            ),
                           ),
                           const SizedBox(width: kWizardSpacing / 2),
                           if (model.isAttached &&
                               model.isAttachedThroughMagicAttach)
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                const SuccessIcon(),
-                                const SizedBox(width: kWizardSpacing / 4),
-                                Text(
-                                  l10n.ubuntuProTokenAttachSucess,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyMedium
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .success,
-                                      ),
-                                ),
-                              ],
+                            Expanded(
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const SuccessIcon(),
+                                  const SizedBox(width: kWizardSpacing / 4),
+                                  Expanded(
+                                    child: Text(
+                                      l10n.ubuntuProTokenAttachSucess,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .success,
+                                          ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             )
                         ],
                       ),

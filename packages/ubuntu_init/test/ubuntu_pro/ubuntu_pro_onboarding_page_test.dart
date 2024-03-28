@@ -5,8 +5,6 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_widgets.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
-
-import '../../../ubuntu_bootstrap/test/test_utils.mocks.dart';
 import '../../../ubuntu_provision/test/test_utils.mocks.dart'
     hide MockPageConfigService;
 import '../init_model_test.mocks.dart';
@@ -36,12 +34,10 @@ void main() {
     final tileFinder = find.byType(ProOnboardingSelectionTile);
     expect(tileFinder, findsExactly(2));
 
-    //debugDumpApp();
+    await tester.tap(tileFinder.first);
 
-    // await tester.tap(tileFinder.first);
-
-    // verify(model.selection = UbuntuProOnboardingPageSelection.skipForNow)
-    //     .called(1);
+    verify(model.selection = UbuntuProOnboardingPageSelection.skipForNow)
+        .called(1);
   });
 
   testWidgets('ubuntu pro - enable ubuntu pro', (tester) async {
