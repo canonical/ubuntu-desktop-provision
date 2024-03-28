@@ -159,5 +159,23 @@
   "networkHiddenWifiNameRequired": "En nettverksnavn er påkrevd",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Jeg ønsker ikke å koble til internett nå",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityHighContrastLabel": "Høykontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Stor tekst",
+  "@accessibilityLargeTextLabel": {},
+  "close": "Lukk",
+  "@close": {},
+  "accessibilityScreenReaderLabel": "Skjermleser",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityPageTitle": "Tilgjengelighet",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Tilgjengelighet i {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
