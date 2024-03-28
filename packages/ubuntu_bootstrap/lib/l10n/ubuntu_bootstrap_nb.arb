@@ -471,5 +471,9 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "hideSecurityKey": "Skjul",
+  "@hideSecurityKey": {},
+  "autoinstallTitle": "Installasjonstype",
+  "@autoinstallTitle": {}
 }
