@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Layout do teclado",
   "@keyboardTitle": {},
-  "keyboardHeader": "Escolha o layout do seu teclado:",
+  "keyboardHeader": "Escolha o layout do seu teclado",
   "@keyboardHeader": {},
   "keyboardTestHint": "Digite aqui para testar seu teclado",
   "@keyboardTestHint": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Conecte-se a uma rede",
   "@networkPageTitle": {},
-  "networkPageHeader": "Ao conectar este computador à internet você facilitará ao Ubuntu instalação de qualquer software extra necessário e ajudará a determinar seu fuso horário.\n\nConecte-se via cabo Ethernet ou escolha uma rede Wi-Fi",
+  "networkPageHeader": "Conecte-se a internet",
   "@networkPageHeader": {},
   "networkWiredOption": "Usar conexão via cabo",
   "@networkWiredOption": {},
@@ -159,5 +159,65 @@
   "networkHiddenWifiNameRequired": "É necessário um nome de rede",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Não quero conectar à internet neste momento",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageHeader": "Acessibilidade para {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageTitle": "Acessibilidade",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageBody": "Personalize {DISTRO} para suas necessidades antes de se estabelecer. Você pode mudá-las nas configurações do sistema posteriormente.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Visualização",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityTypingLabel": "Digitando",
+  "@accessibilityTypingLabel": {},
+  "accessibilityReduceAnimationLabel": "Reduzir a animação",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityPointingLabel": "Apontar e clicar",
+  "@accessibilityPointingLabel": {},
+  "accessibilityHighContrastLabel": "Alto contraste",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Texto grande",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityScreenReaderLabel": "Leitor de tela",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Alertas visuais",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Teclas persistentes",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Teclas lentas",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Botões do mouse",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Ampliar a área de trabalho",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Algo deu errado",
+  "@errorPageTitle": {},
+  "errorPageHideLog": "Ocultar o log",
+  "@errorPageHideLog": {},
+  "restart": "Reiniciar",
+  "@restart": {},
+  "networkPageBody": "Uma conexão com a internet irá melhorar sua instalação com a checagem de compatibilidade e pacotes extras de software.",
+  "@networkPageBody": {},
+  "accessibilityHearingLabel": "Ouvir",
+  "@accessibilityHearingLabel": {},
+  "accessibilityZoomLabel": "Ampliação",
+  "@accessibilityZoomLabel": {},
+  "errorPageUnexpected": "Pedimos desculpas, mas não temos certeza qual é o erro. Você pode tentar reiniciar seu computador e iniciar o processo de instalação novamente. Você também pode <a>reportar o problema</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageShowLog": "Exibir o log",
+  "@errorPageShowLog": {},
+  "close": "Fechar",
+  "@close": {}
 }
