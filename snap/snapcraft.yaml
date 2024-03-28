@@ -1,0 +1,138 @@
+name: factory-reset-tools
+version: '1.0'
+summary: Factory Reset Tools
+description: |
+  A tool to create reset media and reboot into the factory reset menu, for Ubuntu-preinstalled systems.
+
+base: core22
+confinement: strict
+grade: stable
+
+# for now, only build for amd64, since PC OEM does not have other architectures at the moment...
+architectures:
+- build-on: [amd64]
+
+apps:
+  factory-reset-tools:
+    command: factory-reset-tools
+    extensions: [gnome]
+    plugs:
+      - shutdown
+      - removable-media
+      - block-devices
+      - reset-partition-fsuuid
+      - reset-yaml
+      - udisks2
+      - hardware-observe
+      - mount-observe
+      - dbus-client
+  cli:
+    command: factory-reset-tools-cli
+    plugs:
+      - shutdown
+      - removable-media
+      - block-devices
+      - reset-partition-fsuuid
+      - reset-yaml
+      - udisks2
+      - hardware-observe
+      - mount-observe
+      - dbus-client
+  dbus-daemon:
+    command: factory-reset-tools-cli dbus
+    daemon: simple
+    activates-on: [dbus-service]
+    plugs:
+      - shutdown
+      - boot-grub
+      - reset-yaml
+
+parts:
+  flutter-git:
+    plugin: nil
+    source: .
+    override-pull: |
+      # necessary when reruns using the same container
+      if [ -d "flutter" ]; then
+        rm -rf "flutter"
+      fi
+
+      craftctl default
+      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+    override-build: |
+      mkdir -p $CRAFT_PART_INSTALL/usr/bin
+      mkdir -p $CRAFT_PART_INSTALL/usr/libexec
+      cp -r $CRAFT_PART_SRC/flutter $CRAFT_PART_INSTALL/usr/libexec/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/flutter $CRAFT_PART_INSTALL/usr/bin/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/dart $CRAFT_PART_INSTALL/usr/bin/dart
+      $CRAFT_PART_INSTALL/usr/bin/flutter doctor
+    build-packages:
+      - clang
+      - cmake
+      - curl
+      - libgtk-3-dev
+      - ninja-build
+      - unzip
+      - xz-utils
+      - zip
+    override-prime: ""
+
+  factory-reset-tools:
+    after: [flutter-git]
+    plugin: nil
+    source: .
+    source-type: git
+    build-attributes: [enable-patchelf]
+    override-build: |
+      set -eux
+      mkdir -p $CRAFT_PART_INSTALL/bin/lib
+      cp snap/local/launcher $CRAFT_PART_INSTALL/bin/
+      mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
+      cp snap/local/factory-reset-tools.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      
+      dart pub global activate melos
+      dart pub global run melos bootstrap
+      cd packages/factory_reset_tools
+      flutter build linux --release -v
+      cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
+
+  factory-reset-tools-cli:
+    after: [flutter-git]
+    source: .
+    plugin: nil
+    flutter-target: lib/main.dart
+    override-build: |
+      cd packages/factory_reset_tools
+      snapcraftctl build
+      dart compile exe -o factory-reset-tools-cli lib/cmdline.dart
+      cp factory-reset-tools-cli $CRAFT_PART_INSTALL/
+    stage-packages:
+      - rsync
+      - grub2-common
+    build-packages:
+      - curl
+
+slots:
+  dbus-service:
+    interface: dbus
+    bus: system
+    name: com.canonical.oem.FactoryResetTools
+
+plugs:
+  boot-grub:
+    interface: system-files
+    write:
+    - /var/lib/snapd/hostfs/boot/grub
+  reset-partition-fsuuid:
+    interface: system-files
+    read:
+    - /etc/reset_partition_fsuuid
+  reset-yaml:
+    interface: system-files
+    read:
+    - /usr/share/desktop-provision/reset.yaml
+  dbus-client:
+    interface: dbus
+    bus: system
+    name: com.canonical.oem.FactoryResetTools
