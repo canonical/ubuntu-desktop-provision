@@ -207,5 +207,27 @@
   "accessibilityDesktopZoomLabel": "Ampliaciòn de escritorio",
   "@accessibilityDesktopZoomLabel": {},
   "errorPageTitle": "Algo saliò mal",
-  "@errorPageTitle": {}
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "Lo sentimos, pero no estamos seguros de cuál es el error. Puede intentar reiniciar su computadora y comenzar el proceso de instalación nuevamente. También puede <a>informar del problema</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageShowLog": "Mostrar registro",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Ocultar registro",
+  "@errorPageHideLog": {},
+  "restart": "Reanudar",
+  "@restart": {},
+  "close": "Cerrar",
+  "@close": {},
+  "activeDirectoryHeader": "¿Iniciar sesión en Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} está diseñado para integrarse sin problemas con Active Directory para facilitar la administración.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Una conexión a Internet mejorará su instalación con la comprobación de la compatibilidad y los paquetes de software adicionales.",
+  "@networkPageBody": {}
 }
