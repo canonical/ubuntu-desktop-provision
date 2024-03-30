@@ -199,5 +199,13 @@
     }
   },
   "accessibilityScreenReaderLabel": "Lector de pantalla",
-  "@accessibilityScreenReaderLabel": {}
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilitySlowKeysLabel": "Teclas lentas",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Teclas de ratòn",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Ampliaciòn de escritorio",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Algo saliò mal",
+  "@errorPageTitle": {}
 }
