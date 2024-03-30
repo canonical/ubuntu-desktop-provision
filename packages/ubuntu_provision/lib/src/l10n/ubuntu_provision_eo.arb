@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Klavaranĝo",
   "@keyboardTitle": {},
-  "keyboardHeader": "Elektu vian klavaranĝon:",
+  "keyboardHeader": "Elektu vian klavaranĝon",
   "@keyboardHeader": {},
   "keyboardTestHint": "Tajpu ĉi tie por provi vian klavaron",
   "@keyboardTestHint": {},
@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "Nomo de reto estas postulata",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Mi ne volas konekti al Interreto nun",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilitySeeingLabel": "Vidado",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Aŭdado",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Tajpado",
+  "@accessibilityTypingLabel": {},
+  "accessibilityZoomLabel": "Zomo",
+  "@accessibilityZoomLabel": {},
+  "restart": "Restartigi",
+  "@restart": {},
+  "close": "Fermi",
+  "@close": {},
+  "accessibilityLargeTextLabel": "Granda teksto",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityMouseKeysLabel": "Musklavoj",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Malrapidaj klavoj",
+  "@accessibilitySlowKeysLabel": {},
+  "errorPageShowLog": "Montri protokolon",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Kaŝi protokolon",
+  "@errorPageHideLog": {},
+  "accessibilityDesktopZoomLabel": "Labortabla zomo",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Io fiaskis",
+  "@errorPageTitle": {},
+  "accessibilityScreenReaderLabel": "Ekranlegilo",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityPageTitle": "Alirebleco",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Alirebleco en {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHighContrastLabel": "Alta kontrasto",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityReduceAnimationLabel": "Malpliigi movadon",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityVisualAlertsLabel": "Videblaj avertoj",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Persistaj klavoj",
+  "@accessibilityStickKeysLabel": {},
+  "errorPageUnexpected": "Bedaŭrinde, ni ne konas la eraron. Vi povas provi restartigi vian komputilon kaj rekomenci la instalon. Vi ankaŭ povas <a>raporti la problemon</a>.",
+  "@errorPageUnexpected": {},
+  "accessibilityPointingLabel": "Montrado kaj alklakado",
+  "@accessibilityPointingLabel": {},
+  "accessibilityPageBody": "Adaptu {DISTRO} al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per Sistemaj Agordoj.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Interreta konekto plibonigos vian instalon per kontrolado de kongrueco kaj pliaj programoj.",
+  "@networkPageBody": {},
+  "activeDirectoryHeader": "Ĉu saluti en Aktivan Dosierujon?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} plene integriĝas kun Aktiva Dosierujo por facila administrado.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
