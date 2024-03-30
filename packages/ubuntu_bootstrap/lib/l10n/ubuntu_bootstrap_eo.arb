@@ -893,5 +893,23 @@
   "refreshUpdateNow": "Ĝisdatigi nun",
   "@refreshUpdateNow": {},
   "refreshHeader": "Ĝisdatigo pretas por la instalilo",
-  "@refreshHeader": {}
+  "@refreshHeader": {},
+  "warningLabel": "Averto:",
+  "@warningLabel": {},
+  "restartWarningBody": "Restartigu por kompletigi la instalon, aŭ daŭrigu la provadon.\nAjnaj ŝanĝoj faritaj de vi ne estos konservitaj.",
+  "@restartWarningBody": {},
+  "guidedStoragePageHeader": "Elektu la lokon, kien {DISTRO} estas instalota",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryWarning": "Ĉi tiu komputilo ne estas konektita al energifonto.",
+  "@batteryWarning": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Elektu subdiskon:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "selectGuidedStorageDriveDropdownLabel": "Elektu diskon:",
+  "@selectGuidedStorageDriveDropdownLabel": {}
 }
