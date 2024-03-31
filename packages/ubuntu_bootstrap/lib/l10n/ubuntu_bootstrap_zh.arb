@@ -966,5 +966,23 @@
   "refreshReady": "更新准备就绪",
   "@refreshReady": {},
   "refreshCloseLabel": "关闭安装程序",
-  "@refreshCloseLabel": {}
+  "@refreshCloseLabel": {},
+  "warningLabel": "警告：",
+  "@warningLabel": {},
+  "batteryWarning": "计算机未连接到外部电源。",
+  "@batteryWarning": {},
+  "selectGuidedStorageDriveDropdownLabel": "选择驱动器：",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "选择分区：",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "选择安装 {DISTRO} 的位置",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会保存。",
+  "@restartWarningBody": {}
 }
