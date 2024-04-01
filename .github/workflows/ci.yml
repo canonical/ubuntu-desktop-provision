@@ -291,7 +291,7 @@ jobs:
             "
           fi
       - name: Upload Debian package
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: provd-deb-package-${{ matrix.platform }}
           path: provd-${{ matrix.platform }}.deb
