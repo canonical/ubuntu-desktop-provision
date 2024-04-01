@@ -2,7 +2,6 @@ import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_widgets.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -32,10 +31,6 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          WizardButton(
-            label: UbuntuLocalizations.of(context).nextLabel,
-            onActivated: Wizard.of(context).next,
-          ),
           model.isAttached
               ? WizardButton(
                   label: UbuntuLocalizations.of(context).nextLabel,

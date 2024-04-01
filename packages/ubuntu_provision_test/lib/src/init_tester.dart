@@ -80,6 +80,13 @@ extension UbuntuInitPageTester on WidgetTester {
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
+    final tileFinder = find.byType(ProOnboardingSelectionTile);
+    expect(tileFinder, findsExactly(2));
+
+    await tap(tileFinder.last);
+
+    await pumpAndSettle();
+
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }

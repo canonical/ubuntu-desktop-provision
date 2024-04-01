@@ -90,31 +90,19 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('08.telemetry', (tester) async {
+  testWidgets('06.ubuntu-pro-onboarding', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.telemetry.route);
+    await tester.jumpToPage(InitStep.ubuntuProOnboarding.route);
     await tester.pumpAndSettle();
 
-    await tester.testTelemetryPage(
-      screenshot: '$currentThemeName/08.telemetry',
+    await tester.testUbunutuProOnboardingPage(
+      screenshot: '$currentThemeName/06.ubuntu-pro-onboarding',
     );
   }, variant: themeVariant);
 
-  testWidgets('09.privacy', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(InitStep.privacy.route);
-    await tester.pumpAndSettle();
-
-    await tester.testPrivacyPage(
-      screenshot: '$currentThemeName/09.privacy',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('12.ubuntu-pro', (tester) async {
+  testWidgets('07.ubuntu-pro', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -122,7 +110,43 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(
-      screenshot: '$currentThemeName/10.ubuntu-pro',
+      screenshot: '$currentThemeName/07.ubuntu-pro',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('08.ubuntu-pro-success', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.ubuntuProSuccess.route);
+    await tester.pumpAndSettle();
+
+    await tester.testUbuntuProSuccessAttachProPage(
+      screenshot: '$currentThemeName/08.ubuntu-pro-success',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('09.telemetry', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.telemetry.route);
+    await tester.pumpAndSettle();
+
+    await tester.testTelemetryPage(
+      screenshot: '$currentThemeName/09.telemetry',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('10.privacy', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.privacy.route);
+    await tester.pumpAndSettle();
+
+    await tester.testPrivacyPage(
+      screenshot: '$currentThemeName/10.privacy',
     );
   }, variant: themeVariant);
 }
