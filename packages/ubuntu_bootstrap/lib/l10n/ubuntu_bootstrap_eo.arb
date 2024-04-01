@@ -793,7 +793,7 @@
   "@autoinstallInteractiveOption": {},
   "autoinstallTitle": "Speco de instalado",
   "@autoinstallTitle": {},
-  "autoinstallInstructions": "Tajpu la retadreson de la dosiero «autoinstall.yaml».",
+  "autoinstallInstructions": "Tajpu la retadreson de la dosiero «autoinstall.yaml»:",
   "@autoinstallInstructions": {},
   "autoinstallHeader": "Kiel instali {DISTRO}?",
   "@autoinstallHeader": {
