@@ -8,6 +8,7 @@ import (
 	"log/slog"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/chown"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -31,6 +32,7 @@ type Manager struct {
 	timezoneService      timezone.Service
 	accessibilityService accessibility.Service
 	proService           pro.Service
+	chownService         chown.Service
 	bus                  *dbus.Conn
 }
 
@@ -87,6 +89,11 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		return nil, status.Errorf(codes.Internal, "failed to create pro service: %s", err)
 	}
 
+	chownService, err := chown.New()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create chown service: %s", err)
+	}
+
 	return &Manager{
 		userService:          *userService,
 		localeService:        *localeService,
@@ -95,6 +102,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		timezoneService:      *timezoneService,
 		accessibilityService: *accessibilityService,
 		proService:           *proService,
+		chownService:         *chownService,
 		bus:                  bus,
 	}, nil
 }
@@ -112,6 +120,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	pb.RegisterProServiceServer(grpcServer, &m.proService)
+	pb.RegisterChownServiceServer(grpcServer, &m.chownService)
 	return grpcServer
 }
 

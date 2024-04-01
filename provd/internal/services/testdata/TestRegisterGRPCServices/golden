@@ -91,6 +91,12 @@ accessibility.AccessibilityService:
           isclientstream: false
           isserverstream: false
     metadata: protos/accessibility.proto
+chown.ChownService:
+    methods:
+        - name: ChownSettings
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/chown.proto
 keyboard.KeyboardService:
     methods:
         - name: GetKeyboard
