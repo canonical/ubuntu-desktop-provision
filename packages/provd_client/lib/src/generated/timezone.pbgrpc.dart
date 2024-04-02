@@ -16,20 +16,20 @@ import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'google/protobuf/empty.pb.dart' as $0;
-import 'timezone.pb.dart' as $8;
+import 'timezone.pb.dart' as $9;
 
 export 'timezone.pb.dart';
 
 @$pb.GrpcServiceName('timezone.TimezoneService')
 class TimezoneServiceClient extends $grpc.Client {
-  static final _$setTimezone = $grpc.ClientMethod<$8.SetTimezoneRequest, $0.Empty>(
+  static final _$setTimezone = $grpc.ClientMethod<$9.SetTimezoneRequest, $0.Empty>(
       '/timezone.TimezoneService/SetTimezone',
-      ($8.SetTimezoneRequest value) => value.writeToBuffer(),
+      ($9.SetTimezoneRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
-  static final _$getTimezone = $grpc.ClientMethod<$0.Empty, $8.GetTimezoneResponse>(
+  static final _$getTimezone = $grpc.ClientMethod<$0.Empty, $9.GetTimezoneResponse>(
       '/timezone.TimezoneService/GetTimezone',
       ($0.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.GetTimezoneResponse.fromBuffer(value));
+      ($core.List<$core.int> value) => $9.GetTimezoneResponse.fromBuffer(value));
 
   TimezoneServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -37,11 +37,11 @@ class TimezoneServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$0.Empty> setTimezone($8.SetTimezoneRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> setTimezone($9.SetTimezoneRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setTimezone, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.GetTimezoneResponse> getTimezone($0.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$9.GetTimezoneResponse> getTimezone($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getTimezone, request, options: options);
   }
 }
@@ -51,30 +51,30 @@ abstract class TimezoneServiceBase extends $grpc.Service {
   $core.String get $name => 'timezone.TimezoneService';
 
   TimezoneServiceBase() {
-    $addMethod($grpc.ServiceMethod<$8.SetTimezoneRequest, $0.Empty>(
+    $addMethod($grpc.ServiceMethod<$9.SetTimezoneRequest, $0.Empty>(
         'SetTimezone',
         setTimezone_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.SetTimezoneRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $9.SetTimezoneRequest.fromBuffer(value),
         ($0.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.Empty, $8.GetTimezoneResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $9.GetTimezoneResponse>(
         'GetTimezone',
         getTimezone_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
-        ($8.GetTimezoneResponse value) => value.writeToBuffer()));
+        ($9.GetTimezoneResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> setTimezone_Pre($grpc.ServiceCall call, $async.Future<$8.SetTimezoneRequest> request) async {
+  $async.Future<$0.Empty> setTimezone_Pre($grpc.ServiceCall call, $async.Future<$9.SetTimezoneRequest> request) async {
     return setTimezone(call, await request);
   }
 
-  $async.Future<$8.GetTimezoneResponse> getTimezone_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+  $async.Future<$9.GetTimezoneResponse> getTimezone_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return getTimezone(call, await request);
   }
 
-  $async.Future<$0.Empty> setTimezone($grpc.ServiceCall call, $8.SetTimezoneRequest request);
-  $async.Future<$8.GetTimezoneResponse> getTimezone($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$0.Empty> setTimezone($grpc.ServiceCall call, $9.SetTimezoneRequest request);
+  $async.Future<$9.GetTimezoneResponse> getTimezone($grpc.ServiceCall call, $0.Empty request);
 }
