@@ -34,7 +34,7 @@ type Manager struct {
 	accessibilityService accessibility.Service
 	proService           pro.Service
 	chownService         chown.Service
-	gdmService           gdm.Service
+	gdmService           *gdm.Service
 	bus                  *dbus.Conn
 }
 
@@ -84,7 +84,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 
 	gdmService, err := gdm.New(bus)
 	if err != nil {
-		errs = errors.Join(errs, fmt.Errorf("failed to create gdm service: %s", err))
+		slog.Warn(fmt.Sprintf("GDM service failed to initiate: %s", err))
 	}
 
 	if errs != nil {
@@ -110,7 +110,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		accessibilityService: *accessibilityService,
 		proService:           *proService,
 		chownService:         *chownService,
-		gdmService:           *gdmService,
+		gdmService:           gdmService,
 		bus:                  bus,
 	}, nil
 }
@@ -129,7 +129,11 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	pb.RegisterProServiceServer(grpcServer, &m.proService)
 	pb.RegisterChownServiceServer(grpcServer, &m.chownService)
-	pb.RegisterGdmServiceServer(grpcServer, &m.gdmService)
+
+	if m.gdmService != nil {
+		pb.RegisterGdmServiceServer(grpcServer, m.gdmService)
+	}
+
 	return grpcServer
 }
 
@@ -137,6 +141,8 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 func (m *Manager) Stop() error {
 	slog.Debug("Closing grpc manager and dbus connection")
 
-	m.gdmService.Close()
+	if m.gdmService != nil {
+		m.gdmService.Close()
+	}
 	return m.bus.Close()
 }
