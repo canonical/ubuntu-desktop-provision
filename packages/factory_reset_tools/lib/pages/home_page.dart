@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     final lang = FactoryResetToolsLocalizations.of(context);
     return HorizontalPage(
       windowTitle: lang.windowTitle,
-      title: 'What would you like to do?',
+      title: lang.homeTitle,
       image: SvgPicture.asset('assets/images/laptop.svg'),
       bottomBar: const SizedBox(),
       children: [
@@ -23,12 +23,12 @@ class HomePage extends StatelessWidget {
             FilledButton(
               onPressed: () =>
                   Wizard.of(context).jump(ResetToolsRoutes.mediaSelector.name),
-              child: const Text('Create Reset Media'),
+              child: Text(lang.createResetMedia),
             ),
             FilledButton(
               onPressed: () =>
                   Wizard.of(context).jump(ResetToolsRoutes.factoryReset.name),
-              child: const Text('Start Factory Reset'),
+              child: Text(lang.startFactoryReset),
             ),
           ].withSpacing(kWizardSpacing),
         ),

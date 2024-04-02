@@ -79,7 +79,7 @@ class RebootCommand extends Command<void> {
       final options = getResetOptions();
       stdout.writeln('List of available options:\n');
       for (final option in options) {
-        stdout.writeln('${option.key}: ${option.title}');
+        stdout.writeln('${option.type}: ${option.title}');
         if (option.description != null) {
           stdout.writeln('  ${option.description}');
         }
@@ -87,7 +87,7 @@ class RebootCommand extends Command<void> {
       }
       return;
     }
-    await startCommandViaDbus(argResults.rest[0]);
+    await startCommandViaDbus(ResetOptionType.fromString(argResults.rest[0]));
     exit(0);
   }
 }

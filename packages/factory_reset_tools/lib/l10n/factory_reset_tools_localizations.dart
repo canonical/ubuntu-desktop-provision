@@ -103,6 +103,24 @@ abstract class FactoryResetToolsLocalizations {
   /// **'Factory Reset Tools'**
   String get windowTitle;
 
+  /// No description provided for @homeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'What would you like to do?'**
+  String get homeTitle;
+
+  /// No description provided for @createResetMedia.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Reset Media'**
+  String get createResetMedia;
+
+  /// No description provided for @startFactoryReset.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Factory Reset'**
+  String get startFactoryReset;
+
   /// No description provided for @createUsbTitle.
   ///
   /// In en, this message translates to:
@@ -133,11 +151,77 @@ abstract class FactoryResetToolsLocalizations {
   /// **'USB reset media'**
   String get resetMediaTitle;
 
+  /// No description provided for @noMediaDetected.
+  ///
+  /// In en, this message translates to:
+  /// **'No removable storage is detected'**
+  String get noMediaDetected;
+
+  /// No description provided for @noMediaDetectedSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You need a USB storage to create a Factory Reset Media.'**
+  String get noMediaDetectedSubtitle;
+
+  /// No description provided for @factoryResetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select an option to start factory reset'**
+  String get factoryResetTitle;
+
+  /// No description provided for @loadingDrives.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait while we fetch the drives.'**
+  String get loadingDrives;
+
+  /// No description provided for @errorLoadingDrives.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred while fetching the drives.'**
+  String get errorLoadingDrives;
+
+  /// No description provided for @error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
+
+  /// No description provided for @loading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading...'**
+  String get loading;
+
   /// No description provided for @warning.
   ///
   /// In en, this message translates to:
   /// **'Warning'**
   String get warning;
+
+  /// No description provided for @restore.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore'**
+  String get restore;
+
+  /// No description provided for @reboot.
+  ///
+  /// In en, this message translates to:
+  /// **'Reboot'**
+  String get reboot;
+
+  /// No description provided for @failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to run command'**
+  String get failed;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
 }
 
 class _FactoryResetToolsLocalizationsDelegate extends LocalizationsDelegate<FactoryResetToolsLocalizations> {

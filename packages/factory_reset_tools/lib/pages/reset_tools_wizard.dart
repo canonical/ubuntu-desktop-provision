@@ -1,6 +1,6 @@
+import 'package:factory_reset_tools/pages/creation_progress_page.dart';
 import 'package:factory_reset_tools/pages/factory_reset_page.dart';
 import 'package:factory_reset_tools/pages/home_page.dart';
-import 'package:factory_reset_tools/pages/creation_progress_page.dart';
 import 'package:factory_reset_tools/pages/media_selector_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';

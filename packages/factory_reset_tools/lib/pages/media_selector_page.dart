@@ -23,11 +23,9 @@ class MediaSelectorPage extends ConsumerWidget {
       data: (drives) {
         if (drives.isEmpty) {
           return [
-            const YaruTile(
-              title: Text('No removable storage is detected'),
-              subtitle: Text(
-                'You need a USB storage to create a Factory Reset Media.',
-              ),
+            YaruTile(
+              title: Text(lang.noMediaDetected),
+              subtitle: Text(lang.noMediaDetectedSubtitle),
             ),
           ];
         } else {
@@ -46,15 +44,15 @@ class MediaSelectorPage extends ConsumerWidget {
         }
       },
       error: (error, stackTrace) => [
-        const YaruTile(
-          title: Text('Error'),
-          subtitle: Text('An error occurred while fetching the drives.'),
+        YaruTile(
+          title: Text(lang.error),
+          subtitle: Text(lang.errorLoadingDrives),
         ),
       ],
       loading: () => [
-        const YaruTile(
-          title: Text('Loading...'),
-          subtitle: Text('Please wait while fetching the drives.'),
+        YaruTile(
+          title: Text(lang.loading),
+          subtitle: Text(lang.loadingDrives),
         ),
       ],
     );

@@ -11,6 +11,15 @@ class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
   String get windowTitle => 'Factory Reset Tools';
 
   @override
+  String get homeTitle => 'What would you like to do?';
+
+  @override
+  String get createResetMedia => 'Create Reset Media';
+
+  @override
+  String get startFactoryReset => 'Start Factory Reset';
+
+  @override
   String get createUsbTitle => 'Create a USB reset media';
 
   @override
@@ -26,5 +35,38 @@ class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
   String get resetMediaTitle => 'USB reset media';
 
   @override
+  String get noMediaDetected => 'No removable storage is detected';
+
+  @override
+  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+
+  @override
+  String get factoryResetTitle => 'Select an option to start factory reset';
+
+  @override
+  String get loadingDrives => 'Please wait while we fetch the drives.';
+
+  @override
+  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+
+  @override
+  String get error => 'Error';
+
+  @override
+  String get loading => 'Loading...';
+
+  @override
   String get warning => 'Warning';
+
+  @override
+  String get restore => 'Restore';
+
+  @override
+  String get reboot => 'Reboot';
+
+  @override
+  String get failed => 'Failed to run command';
+
+  @override
+  String get ok => 'OK';
 }

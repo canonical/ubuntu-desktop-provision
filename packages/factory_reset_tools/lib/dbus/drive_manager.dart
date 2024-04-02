@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:dbus/dbus.dart';
-import 'package:factory_reset_tools/dbus/reset_media.dart';
 import 'package:factory_reset_tools/dbus/drive_data.dart';
+import 'package:factory_reset_tools/dbus/reset_media.dart';
 
 const int minimumRequiredDiskSize = 12 << 30;
 

@@ -10,7 +10,7 @@ class FactoryResetToolsObject extends ComCanonicalOemFactoryResetTools {
 
   @override
   Future<DBusMethodResponse> doReboot(String rebootOption) async {
-    await startCommand(rebootOption);
+    await startCommand(ResetOptionType.fromString(rebootOption));
     return DBusMethodSuccessResponse();
   }
 }
