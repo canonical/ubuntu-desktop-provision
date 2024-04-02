@@ -99,19 +99,20 @@ class HorizontalPage extends ConsumerWidget {
         padding: adjustedPadding,
         child: Row(
           children: [
-            Expanded(
-              flex: 6,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (image != null) image,
-                  if (imageTitleWidget != null) ...[
-                    const SizedBox(height: kWizardSpacing),
-                    imageTitleWidget!,
+            if (image != null || imageTitleWidget != null)
+              Expanded(
+                flex: 6,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (image != null) image,
+                    if (imageTitleWidget != null) ...[
+                      const SizedBox(height: kWizardSpacing),
+                      imageTitleWidget!,
+                    ],
                   ],
-                ],
+                ),
               ),
-            ),
             const SizedBox(width: kWizardSpacing),
             Expanded(
               flex: 8,
