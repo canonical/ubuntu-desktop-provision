@@ -9,6 +9,7 @@ import 'package:ubuntu_init/src/init_model.dart';
 import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/init_wizard.dart';
+import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart' hide ErrorPage;
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -50,6 +51,7 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
+    final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
     final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
 
@@ -66,6 +68,8 @@ void main() {
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
+          ubuntuProOnboardingModelProvider
+              .overrideWith((ref) => ubuntuProOnboardingModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
         ],
@@ -99,6 +103,13 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
+    ubuntuProOnboardingModel.selection =
+        UbuntuProOnboardingPageSelection.enableUbuntuPro;
+    await tester.pumpAndSettle();
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -160,6 +171,7 @@ void main() {
       InitStep.identity.route,
       InitStep.ubuntuProOnboarding.route,
       InitStep.ubuntuPro.route,
+      InitStep.ubuntuProSuccess.route,
       InitStep.telemetry.route,
     ]);
     final localeModel = buildLocaleModel();
@@ -204,6 +216,15 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
     verify(ubuntuProOnboardingModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProPage), findsOneWidget);
+    verify(ubuntuProModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

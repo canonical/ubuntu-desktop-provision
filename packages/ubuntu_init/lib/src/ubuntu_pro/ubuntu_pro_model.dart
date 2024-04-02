@@ -84,4 +84,6 @@ class UbuntuProModel extends ChangeNotifier {
       notifyListeners();
     }
   }
+
+  Future<bool> init() async => true;
 }
