@@ -89,10 +89,22 @@ func chown(username string) error {
 	}
 
 	// #nosec:G204 // We are in control of the username and validate we can find it on the system before executing.
-	cmd := exec.Command("chown", "-R", fmt.Sprintf("%s:nogroup", username), "/run/gnome-initial-setup")
+	cmd := exec.Command("chown", fmt.Sprintf("%s:nogroup", username), "/run/gnome-initial-setup")
 	_, err = cmd.CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("executing chown command: %w", err)
 	}
+
+	// Change ownership of specific subdirectories and files
+	subdirs := []string{".config", ".local"}
+	for _, subdir := range subdirs {
+		// #nosec:G204 // We are in control of the username and validate we can find it on the system before executing.
+		cmd = exec.Command("chown", "-R", fmt.Sprintf("%s:nogroup", username), fmt.Sprintf("/run/gnome-initial-setup/%s", subdir))
+		_, err = cmd.CombinedOutput()
+		if err != nil {
+			return fmt.Errorf("executing chown command for %s: %w", subdir, err)
+		}
+	}
+
 	return nil
 }
