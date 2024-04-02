@@ -31,6 +31,7 @@ func TestChownSettings(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
+			tc := tc
 			t.Parallel()
 
 			// Prepare mocks
