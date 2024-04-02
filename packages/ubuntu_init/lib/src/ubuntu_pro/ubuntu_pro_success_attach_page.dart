@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -38,21 +39,24 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
                 children: [
                   const SuccessIcon(),
                   const SizedBox(width: kWizardSpacing / 2),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        l10n.ubuntuProSucessAttachHeader,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(fontWeight: FontWeight.w500),
-                      ),
-                      Text(
-                        l10n.ubuntuProSucessAttachDescription,
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
-                    ],
+                  Flexible(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.ubuntuProSucessAttachHeader,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
+                              ?.copyWith(fontWeight: FontWeight.w500),
+                        ),
+                        Text(
+                          l10n.ubuntuProSucessAttachDescription,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
