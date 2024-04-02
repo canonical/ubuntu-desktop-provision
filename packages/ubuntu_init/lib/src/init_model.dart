@@ -14,28 +14,33 @@ final initModelProvider = Provider(
     args: tryGetService<ArgResults>(),
     identityService: tryGetService<IdentityService>(),
     gdmService: tryGetService<GdmService>(),
+    chownService: tryGetService<ChownService>(),
   ),
 );
 
 class InitModel {
-  InitModel({
-    PageConfigService? pageConfig,
-    ArgResults? args,
-    IdentityService? identityService,
-    GdmService? gdmService,
-  })  : _gdmService = gdmService,
+  InitModel(
+      {PageConfigService? pageConfig,
+      ArgResults? args,
+      IdentityService? identityService,
+      GdmService? gdmService,
+      ChownService? chownService})
+      : _gdmService = gdmService,
         _identityService = identityService,
-        _pageConfig = pageConfig;
+        _pageConfig = pageConfig,
+        _chownService = chownService;
 
   final PageConfigService? _pageConfig;
   final IdentityService? _identityService;
   final GdmService? _gdmService;
+  final ChownService? _chownService;
 
   Future<void> launchDesktopSession() async {
     final identity = await _identityService?.getIdentity();
     if (identity == null) return;
 
     try {
+      await _chownService?.chownSettings(identity.username);
       await _gdmService?.init();
       await _gdmService?.launchSession(
         identity.username,
