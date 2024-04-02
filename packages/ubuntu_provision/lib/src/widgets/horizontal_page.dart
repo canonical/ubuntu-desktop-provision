@@ -100,7 +100,7 @@ class HorizontalPage extends ConsumerWidget {
         child: Row(
           children: [
             Expanded(
-              flex: 8,
+              flex: 6,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
