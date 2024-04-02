@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:args/command_runner.dart';
-import 'package:factory_reset_tools/dbus_daemon.dart';
-import 'package:factory_reset_tools/reboot.dart';
-import 'package:factory_reset_tools/reset_media.dart';
+import 'package:factory_reset_tools/dbus/dbus_daemon.dart';
+import 'package:factory_reset_tools/dbus/factory_reset.dart';
+import 'package:factory_reset_tools/dbus/reset_media.dart';
 
 /// Command line entrypoint of factory-reset-tools
 class CreateResetMediaCommand extends Command<void> {

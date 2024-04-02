@@ -1,17 +1,8 @@
 import 'dart:async';
 
-import 'package:async/async.dart';
-import 'package:collection/collection.dart';
 import 'package:dbus/dbus.dart';
-import 'package:factory_reset_tools/horizontal_page.dart';
-import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
-import 'package:factory_reset_tools/pages/reset_media/drive_data.dart';
-import 'package:factory_reset_tools/reset_media.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
-import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
+import 'package:factory_reset_tools/dbus/reset_media.dart';
+import 'package:factory_reset_tools/dbus/drive_data.dart';
 
 const int minimumRequiredDiskSize = 12 << 30;
 
@@ -189,7 +180,10 @@ class DriveManager {
 
     for (var i = 0.0; i < 1.0; i += 0.01) {
       yield ResetMediaCreationProgress(
-          ResetMediaCreationStatus.copying, i, null);
+        ResetMediaCreationStatus.copying,
+        i,
+        null,
+      );
       await Future.delayed(const Duration(milliseconds: 100));
     }
 
@@ -201,6 +195,9 @@ class DriveManager {
     await Future.delayed(const Duration(seconds: 3));
 
     yield ResetMediaCreationProgress(
-        ResetMediaCreationStatus.finished, 1, null);
+      ResetMediaCreationStatus.finished,
+      1,
+      null,
+    );
   }
 }

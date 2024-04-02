@@ -1,7 +1,7 @@
-import 'package:factory_reset_tools/pages/home.dart';
-import 'package:factory_reset_tools/pages/reboot.dart';
-import 'package:factory_reset_tools/pages/reset_media/creation_progress_page.dart';
-import 'package:factory_reset_tools/pages/reset_media/media_selector.dart';
+import 'package:factory_reset_tools/pages/factory_reset_page.dart';
+import 'package:factory_reset_tools/pages/home_page.dart';
+import 'package:factory_reset_tools/pages/creation_progress_page.dart';
+import 'package:factory_reset_tools/pages/media_selector_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -23,7 +23,7 @@ class ResetToolsWizard extends StatelessWidget {
         // TODO: Remove once the wizard doesn't skip the first route
         '': WizardRoute(builder: (context) => const SizedBox()),
         ResetToolsRoutes.home.name: WizardRoute(
-          builder: (context) => const Home(),
+          builder: (context) => const HomePage(),
           onNext: (_) => ResetToolsRoutes.mediaSelector.name,
         ),
         ResetToolsRoutes.mediaSelector.name: WizardRoute(
@@ -35,10 +35,10 @@ class ResetToolsWizard extends StatelessWidget {
           builder: (context) => const CreationProgressPage(),
         ),
         ResetToolsRoutes.done.name: WizardRoute(
-          builder: (context) => const Home(),
+          builder: (context) => const HomePage(),
         ),
         ResetToolsRoutes.factoryReset.name: WizardRoute(
-          builder: (context) => const FactoryReset(),
+          builder: (context) => const FactoryResetPage(),
         ),
       },
     );

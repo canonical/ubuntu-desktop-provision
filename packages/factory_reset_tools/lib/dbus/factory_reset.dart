@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:dbus/dbus.dart';
-import 'package:factory_reset_tools/dbus_remote_object.dart';
+import 'package:factory_reset_tools/dbus/dbus_remote_object.dart';
 import 'package:retry/retry.dart';
 import 'package:yaml/yaml.dart';
 

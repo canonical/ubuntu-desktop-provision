@@ -1,7 +1,6 @@
-import 'package:factory_reset_tools/horizontal_page.dart';
+import 'package:factory_reset_tools/dbus/reset_media.dart';
 import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
-import 'package:factory_reset_tools/pages/reset_media/providers/selected_media_provider.dart';
-import 'package:factory_reset_tools/reset_media.dart';
+import 'package:factory_reset_tools/providers/selected_media_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -34,7 +33,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   void initState() {
     super.initState();
     createResetMediaAsyncStream ??= createResetMedia(
-      ref.read(selectedMediaProvider.notifier).state!.devicePath,
+      ref.read(selectedMediaProvider)!.devicePath,
     );
     createResetMediaAsyncStream!.listen(onStatusChanged);
   }
