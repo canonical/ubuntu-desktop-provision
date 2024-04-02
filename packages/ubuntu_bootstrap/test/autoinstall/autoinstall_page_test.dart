@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_page.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import '../test_utils.dart';
