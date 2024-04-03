@@ -173,7 +173,7 @@ class DriveManager {
     return drives;
   }
 
-  static Stream<ResetMediaCreationProgress> dummyCreateResetMedia(
+  static Stream<ResetMediaCreationProgress> createFakeResetMedia(
     String targetDevicePath,
   ) async* {
     await Future.delayed(const Duration(seconds: 3));
