@@ -159,5 +159,7 @@
   "networkHiddenWifiNameRequired": "ネットワーク名が必要です",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "今はインターネットに接続しない",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "アクセシビリティ",
+  "@accessibilityPageTitle": {}
 }
