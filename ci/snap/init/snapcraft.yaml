@@ -72,9 +72,6 @@ parts:
       # patch config directory path
       sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/services/config_service.dart
 
-      # patch tmp directory path in gdm_service.dart
-      sed -i '/const tmpDirectory/{s|/tmp/|/var/lib/snapd/hostfs/tmp/|}' packages/ubuntu_init/lib/src/services/gdm_service.dart
-
       cd packages/ubuntu_init
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
