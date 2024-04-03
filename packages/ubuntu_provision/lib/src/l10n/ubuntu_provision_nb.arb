@@ -177,5 +177,57 @@
         "type": "String"
       }
     }
-  }
+  },
+  "accessibilityDesktopZoomLabel": "Skrivebordsforstørrelse",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Noe gikk galt",
+  "@errorPageTitle": {},
+  "accessibilityPageBody": "Tilpass {DISTRO} til dine behov før oppsett. Du kan endre dette senere i systeminnstillingene.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHearingLabel": "Hørsel",
+  "@accessibilityHearingLabel": {},
+  "errorPageUnexpected": "Beklager. Finner ikke ut hva feilen er. Etter en omstart kan du starte installasjonsprosessen igjen. Du kan også <a>rapportere en feil</a>.",
+  "@errorPageUnexpected": {},
+  "networkPageBody": "Tilkobling til Internett forbedrer installasjonen med kompatibilitetssjekk og ekstra programvarepakker.",
+  "@networkPageBody": {},
+  "accessibilityZoomLabel": "Forstørrelse",
+  "@accessibilityZoomLabel": {},
+  "accessibilitySlowKeysLabel": "Trege taster",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityStickKeysLabel": "Faste valgtaster",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Musetaster",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityPointingLabel": "Peking og klikking",
+  "@accessibilityPointingLabel": {},
+  "accessibilityTypingLabel": "Skriving",
+  "@accessibilityTypingLabel": {},
+  "accessibilitySeeingLabel": "Syn",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityReduceAnimationLabel": "Reduser animasjon",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuelle varsler",
+  "@accessibilityVisualAlertsLabel": {},
+  "errorPageShowLog": "Vis logg",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Skjul logg",
+  "@errorPageHideLog": {},
+  "restart": "Omstart",
+  "@restart": {},
+  "activeDirectoryInfo": "{DISTRO} er designet for sømløs integrasjon med Active Directory for enklere administrasjon.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryHeader": "Logg inn i Active Directory?",
+  "@activeDirectoryHeader": {}
 }
