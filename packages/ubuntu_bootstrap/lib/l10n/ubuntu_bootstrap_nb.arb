@@ -619,5 +619,37 @@
   "installationSlidesSecurityTitle": "Privat og sikkert",
   "@installationSlidesSecurityTitle": {},
   "installationSlidesAccessibilityTitle": "Tilgang for alle",
-  "@installationSlidesAccessibilityTitle": {}
+  "@installationSlidesAccessibilityTitle": {},
+  "choosePassphraseRequired": "Et passord er påkrevd",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Passordene samsvarer ikke",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Forsikre deg om at du lagrer passordet",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Mister du passordet mister du også all dataen din.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Opprett et passord",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Bekreft passordet",
+  "@confirmPassphrase": {},
+  "installationTypeEraseInfo": "Start fra blanke ark på din valgte disk.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeTPM": "Skru på maskinvarebasert kryptering av hele disken.",
+  "@installationTypeTPM": {},
+  "selectGuidedStorageInfo": "Start fra blanke ark på valgt disk.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Valgt disk:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "confirmSectionSecurityAndMoreTitle": "Sikkerhet og mer",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "rebootToConfigure": "**{system}** har blitt kopiert til disken",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Passer for spilling",
+  "@installationSlidesGamingTitle": {}
 }
