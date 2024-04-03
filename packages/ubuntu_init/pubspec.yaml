@@ -1,10 +1,10 @@
 name: ubuntu_init
 description: Ubuntu Init
 version: 0.1.0
-publish_to: 'none'
+publish_to: "none"
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.19.2"
 
 dependencies:
@@ -28,7 +28,6 @@ dependencies:
   pdfrx: ^1.0.52
   provd_client: ^0.1.0
   stdlibc: ^0.1.4
-  sysmetrics: ^0.1.0
   timezone_map:
     git:
       url: https://github.com/canonical/ubuntu-flutter-plugins.git

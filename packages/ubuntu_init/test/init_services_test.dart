@@ -21,9 +21,9 @@ void main() {
     expect(tryGetService<LocaleService>(), isNotNull);
     expect(tryGetService<NetworkService>(), isNotNull);
     expect(tryGetService<PrivacyService>(), isNotNull);
+    expect(tryGetService<ProvdTelemetryService>(), isNotNull);
     expect(tryGetService<ProductService>(), isNotNull);
     expect(tryGetService<SessionService>(), isNotNull);
-    expect(tryGetService<Sysmetrics>(), isNotNull);
     expect(tryGetService<TimezoneService>(), isNotNull);
     expect(tryGetService<UdevService>(), isNotNull);
     expect(tryGetService<UrlLauncher>(), isNotNull);

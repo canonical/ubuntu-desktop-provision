@@ -6,7 +6,6 @@ import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:provd_client/provd_client.dart' as provd;
-import 'package:sysmetrics/sysmetrics.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -48,7 +47,8 @@ Future<void> registerFakeInitServices({
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<PrivacyService>(FakePrivacyService.new);
   registerService<ProductService>(_FakeProductService.new);
-  registerService<Sysmetrics>(_FakeSysmetrics.new);
+  registerService<ProvdTelemetryService>(
+      () => ProvdTelemetryService(client: _FakeProvdTelemetryClient()));
   registerService<TimezoneService>(
       () => ProvdTimezoneService(client: _FakeProvdTimezoneClient()));
   registerService<ProService>(
@@ -218,34 +218,6 @@ class _FakeGdmSessionObject extends DBusObject {
   }
 }
 
-class _FakeSysmetrics implements Sysmetrics {
-  @override
-  Future<String?> collect() async => null;
-
-  @override
-  Future<String?> collectAndSend(
-    ReportType type, {
-    bool alwaysReport = false,
-    String baseUrl = '',
-  }) async =>
-      null;
-
-  @override
-  Future<String?> sendDecline({
-    bool alwaysReport = false,
-    String baseUrl = '',
-  }) async =>
-      null;
-
-  @override
-  Future<String?> sendReport(
-    String data, {
-    bool alwaysReport = false,
-    String baseUrl = '',
-  }) async =>
-      null;
-}
-
 class _FakeProductService implements ProductService {
   @override
   ProductInfo getProductInfo() =>
@@ -310,6 +282,19 @@ class _FakeProvdKeyboardClient implements provd.ProvdKeyboardClient {
           ),
         ],
       );
+}
+
+class _FakeProvdTelemetryClient implements provd.ProvdTelemetryClient {
+  @override
+  Future<String> collect() async => '';
+
+  @override
+  Future<provd.SendResponseType> collectAndSend() async =>
+      provd.SendResponseType.SUCCESS;
+
+  @override
+  Future<provd.SendResponseType> sendDecline() async =>
+      provd.SendResponseType.SUCCESS;
 }
 
 class _FakeProvdTimezoneClient implements provd.ProvdTimezoneClient {

@@ -7,10 +7,9 @@ import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i5;
-import 'package:sysmetrics/src/sysmetrics.dart' as _i6;
 import 'package:ubuntu_init/ubuntu_init.dart' as _i3;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
-import 'package:ubuntu_utils/src/url_launcher.dart' as _i7;
+import 'package:ubuntu_utils/src/url_launcher.dart' as _i6;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -102,81 +101,55 @@ class MockProductService extends _i1.Mock implements _i2.ProductService {
       ) as String);
 }
 
-/// A class which mocks [Sysmetrics].
+/// A class which mocks [ProvdTelemetryService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSysmetrics extends _i1.Mock implements _i3.Sysmetrics {
-  MockSysmetrics() {
+class MockProvdTelemetryService extends _i1.Mock
+    implements _i3.ProvdTelemetryService {
+  MockProvdTelemetryService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.Future<String?> collect() => (super.noSuchMethod(
+  _i4.Future<String> collect() => (super.noSuchMethod(
         Invocation.method(
           #collect,
           [],
         ),
-        returnValue: _i4.Future<String?>.value(),
-      ) as _i4.Future<String?>);
+        returnValue: _i4.Future<String>.value(_i5.dummyValue<String>(
+          this,
+          Invocation.method(
+            #collect,
+            [],
+          ),
+        )),
+      ) as _i4.Future<String>);
 
   @override
-  _i4.Future<String?> sendReport(
-    String? data, {
-    bool? alwaysReport = false,
-    String? baseUrl = r'',
-  }) =>
-      (super.noSuchMethod(
+  _i4.Future<void> collectAndSend() => (super.noSuchMethod(
         Invocation.method(
-          #sendReport,
-          [data],
-          {
-            #alwaysReport: alwaysReport,
-            #baseUrl: baseUrl,
-          },
+          #collectAndSend,
+          [],
         ),
-        returnValue: _i4.Future<String?>.value(),
-      ) as _i4.Future<String?>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 
   @override
-  _i4.Future<String?> sendDecline({
-    bool? alwaysReport = false,
-    String? baseUrl = r'',
-  }) =>
-      (super.noSuchMethod(
+  _i4.Future<void> sendDecline() => (super.noSuchMethod(
         Invocation.method(
           #sendDecline,
           [],
-          {
-            #alwaysReport: alwaysReport,
-            #baseUrl: baseUrl,
-          },
         ),
-        returnValue: _i4.Future<String?>.value(),
-      ) as _i4.Future<String?>);
-
-  @override
-  _i4.Future<String?> collectAndSend(
-    _i6.ReportType? type, {
-    bool? alwaysReport = false,
-    String? baseUrl = r'',
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #collectAndSend,
-          [type],
-          {
-            #alwaysReport: alwaysReport,
-            #baseUrl: baseUrl,
-          },
-        ),
-        returnValue: _i4.Future<String?>.value(),
-      ) as _i4.Future<String?>);
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }
 
 /// A class which mocks [UrlLauncher].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUrlLauncher extends _i1.Mock implements _i7.UrlLauncher {
+class MockUrlLauncher extends _i1.Mock implements _i6.UrlLauncher {
   MockUrlLauncher() {
     _i1.throwOnMissingStub(this);
   }
