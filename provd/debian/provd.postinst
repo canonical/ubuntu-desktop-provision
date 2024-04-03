@@ -8,6 +8,7 @@ case "$1" in
         if ! getent group gnome-initial-setup >/dev/null; then
             addgroup --system gnome-initial-setup
         fi
+        usermod -a -G gnome-initial-setup gnome-initial-setup
 
         # Set ownership and permissions for launch-desktop-provision-init.sh
         chown gnome-initial-setup:gnome-initial-setup /usr/bin/launch-desktop-provision-init.sh

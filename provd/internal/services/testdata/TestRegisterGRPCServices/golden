@@ -97,6 +97,12 @@ chown.ChownService:
           isclientstream: false
           isserverstream: false
     metadata: protos/chown.proto
+gdm.GdmService:
+    methods:
+        - name: LaunchDesktopSession
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/gdm.proto
 keyboard.KeyboardService:
     methods:
         - name: GetKeyboard
