@@ -4,7 +4,7 @@ import 'package:dbus/dbus.dart';
 import 'package:factory_reset_tools/dbus/drive_data.dart';
 import 'package:factory_reset_tools/dbus/reset_media.dart';
 
-const int minimumRequiredDiskSize = 12 << 30;
+const int minimumRequiredDiskSize = 4 << 30;
 
 class DriveManager {
   DriveManager(this._dbusClient);
@@ -24,7 +24,7 @@ class DriveManager {
 
     // iterate through block devices, to find out devices that
     // 1. has a Drive backing it
-    // 2. has enough Size (we assume 16G)
+    // 2. has enough Size (we assume 4G)
     // 3. its HintPartitionable is true
     for (final node in introspect.children) {
       final blockDeviceObjectPath =
