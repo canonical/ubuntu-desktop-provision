@@ -580,5 +580,118 @@
     "placeholders": {
       "DISTRO": {}
     }
-  }
+  },
+  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアが将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TMP暗号化</a> をよく読んでください。",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryWarning": "このコンピューターには電源ケーブルが接続されていません。",
+  "@batteryWarning": {},
+  "choosePassphraseBody": "ファイルを暗号化するパスフレーズが必要です。コンピューターの電源を入れるたびに毎回パスフレーズの入力が必要です。",
+  "@choosePassphraseBody": {},
+  "autoinstallTitle": "インストールの種類",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "{DISTRO} をインストールしますか？",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "autoinstall.yamlのURLを入力:",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "対話式インストール",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "インストール中ガイドに従ってインストールしたいユーザー向けです。",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "自動インストール",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "autoinstall.yamlを用いて一貫性と反復性のあるシステムセットアップを行う高度なユーザー向けです。",
+  "@autoinstallAutomatedDescription": {},
+  "warningLabel": "警告:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "{DISTRO} で何をしますか？",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "非表示",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "コンピューターを最適化",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "おすすめのプロプライエタリなソフトウェアをインストールしますか？",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} は既定ではプロプライエタリなソフトウェアは含みません。追加のソフトウェアをインストールすると、コンピューターのパフォーマンスが改善するかもしれません。",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "NVIDIAグラフィックカードを検出",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "NVIDIAグラフィックカードのパフォーマンスを引き出すために、追加のドライバーをインストールすることを強く推奨します。",
+  "@codecsAndDriversNvidiaBody": {},
+  "fullInstallationTitle": "拡張選択",
+  "@fullInstallationTitle": {},
+  "fullInstallationSubtitle": "オフィスツール、ユーティリティにWebブラウザーを含み、オフラインに優しい選択です。",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "既定の選択",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "最小限のWebブラウザーと基本的なユーティリティのみです。",
+  "@minimalInstallationSubtitle": {},
+  "choosePassphraseTitle": "ディスクのパスフレーズ",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "パスフレーズを作成",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseHint": "パスフレーズの選択",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "パスフレーズの確認",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "パスフレーズが必要です",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "パスフレーズが一致しません",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "確実にパスフレーズを保存してください",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "もしパスフレーズを失うと、すべてのデータが消失します。",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "パスフレーズの作成",
+  "@createPassphrase": {},
+  "confirmPassphrase": "パスフレーズの確認",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "どうやって {DISTRO} をインストールしますか？",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeExperimental": "実験的",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "LVMを使用",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "LVMと暗号化を使用",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "ディスクを消去してZFSを暗号化",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFSと暗号化を選択しました",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPM": "ハードウェアベースのディスク全体暗号化",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPMを選択しました",
+  "@installationTypeTPMSelected": {}
 }
