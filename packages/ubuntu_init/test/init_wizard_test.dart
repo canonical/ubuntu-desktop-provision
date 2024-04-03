@@ -52,6 +52,7 @@ void main() {
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
     final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
+    final ubuntuProModel = buildUbuntuProModel(isAttached: true);
     final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
 
@@ -70,6 +71,7 @@ void main() {
           identityModelProvider.overrideWith((_) => identityModel),
           ubuntuProOnboardingModelProvider
               .overrideWith((ref) => ubuntuProOnboardingModel),
+          ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
         ],
@@ -114,6 +116,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
