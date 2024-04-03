@@ -693,5 +693,67 @@
   "installationTypeTPM": "ハードウェアベースのディスク全体暗号化",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPMを選択しました",
-  "@installationTypeTPMSelected": {}
+  "@installationTypeTPMSelected": {},
+  "selectGuidedStorageDriveDropdownLabel": "ドライブの選択:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "パーティションの選択:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "どこに {DISTRO} をインストールするか選択",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSlash": "マウントポイントは必ず\"/\"から開始してください",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "マウントポイントにスペースを入れることはできません",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "partitionFormatKeep": "フォーマットを {format} のままにする",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "なし",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "アプリケーション",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "インストール方法を選択",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "ディスクの暗号化",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "インストールするディスク",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "プロプライエタリなソフトウェア",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "一般",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "セキュリティなど",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "コーデック",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "コーデックとドライバー",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "ドライバー",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** がディスクからコピーされました",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "インストールを完了するために再起動するか、試用を続けてください。\nいかなる変更点も保存されません。",
+  "@restartWarningBody": {}
 }
