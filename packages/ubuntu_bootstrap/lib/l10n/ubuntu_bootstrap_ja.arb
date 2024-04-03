@@ -136,7 +136,7 @@
   "@partitionTypeLabel": {},
   "partitionMountPointLabel": "マウントポイント：",
   "@partitionMountPointLabel": {},
-  "partitionEditTitle": "パーティションを編集する",
+  "partitionEditTitle": "パーティションを編集",
   "@partitionEditTitle": {},
   "partitionTypePrimary": "基本パーティション",
   "@partitionTypePrimary": {},
@@ -180,7 +180,7 @@
   },
   "shutdown": "シャットダウン",
   "@shutdown": {},
-  "bitlockerTitle": "BitLockerが有効になっています。",
+  "bitlockerTitle": "BitLockerが有効になっています",
   "@bitlockerTitle": {},
   "installationTypeMultiOSDetected": "コンピューターには複数の OS がインストールされています。インストール方法を選択してください。",
   "@installationTypeMultiOSDetected": {},
@@ -215,11 +215,11 @@
   "@newPartitionTableConfirmationMessage": {},
   "partitionLocationLabel": "新しいパーティションの場所を選択してください。",
   "@partitionLocationLabel": {},
-  "confirmHeader": "続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます。",
+  "confirmHeader": "続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます",
   "@confirmHeader": {},
   "bitlockerDescription": "このコンピューターはWindows BitLockerで暗号化されています。\nWindowsを使って空き領域を作るか、'{option}'を選択してください。",
   "@bitlockerDescription": {},
-  "bitlockerInstructions": "手順については、別のデバイスでこのQRコードを読み取るか、次のURLへアクセスしてください：<a href=\"https://{url}\">{url}</a>",
+  "bitlockerInstructions": "手順は、別のデバイスでQRコードをスキャンするか、<a href=\"https://{url}\">{url}</a>をご確認ください",
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
@@ -242,7 +242,7 @@
   },
   "installationTypeAlongsideInfo": "ファイルは削除されません。コンピュータを起動する際に、どのOSで起動するか選択できます。",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManualInfo": "自分で {DISTRO} をインストールするパーティションの作成やサイズ変更を行ったり、インストールに複数のパーティションを選択することもできます",
+  "installationTypeManualInfo": "自分で {DISTRO} をインストールするパーティションの作成やサイズ変更を行ったり、インストールに複数のパーティションを選択することもできます。",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -295,7 +295,7 @@
   "@freeDiskSpace": {},
   "newPartitionTable": "新しいパーティションテーブルを作成する",
   "@newPartitionTable": {},
-  "partitionCreateTitle": "パーティションを作成する",
+  "partitionCreateTitle": "パーティションを作成",
   "@partitionCreateTitle": {},
   "copyingFiles": "ファイルをコピーしています…",
   "@copyingFiles": {},
@@ -368,9 +368,9 @@
   "@installationTypeLVMEncryptionSelected": {},
   "continueTesting": "試用を続ける",
   "@continueTesting": {},
-  "restartNow": "今すぐ再起動する",
+  "restartNow": "今すぐ再起動",
   "@restartNow": {},
-  "confirmPartitionFormat": "パーティション<b>{sysname}</b>は<b>{format}</b>としてフォーマットされます。",
+  "confirmPartitionFormat": "パーティション<b>{sysname}</b>は<b>{format}</b>としてフォーマットされます",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
@@ -378,7 +378,7 @@
       "format": {}
     }
   },
-  "confirmPartitionMount": "パーティション<b>{sysname}</b>は<b>{mount}</b>として使用されます。",
+  "confirmPartitionMount": "パーティション<b>{sysname}</b>は<b>{mount}</b>として使用されます",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
@@ -386,7 +386,7 @@
       "mount": {}
     }
   },
-  "confirmPartitionFormatMount": "パーティション<b>{sysname}</b>は<b>{format}</b>としてフォーマットされ、<b>{mount}</b>として使用されます。",
+  "confirmPartitionFormatMount": "パーティション<b>{sysname}</b>は<b>{format}</b>としてフォーマットされ、<b>{mount}</b>として使用されます",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
@@ -395,7 +395,7 @@
       "mount": {}
     }
   },
-  "confirmPartitionResize": "パーティション<b>{sysname}</b>のサイズが<b>{oldsize}</b>から<b>{newsize}</b>に変更されます。",
+  "confirmPartitionResize": "パーティション<b>{sysname}</b>のサイズが<b>{oldsize}</b>から<b>{newsize}</b>に変更されます",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
@@ -404,7 +404,7 @@
       "newsize": {}
     }
   },
-  "confirmPartitionCreate": "パーティション<b>{sysname}</b>が作成されました。",
+  "confirmPartitionCreate": "パーティション<b>{sysname}</b>が作成されました",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
@@ -456,7 +456,7 @@
   },
   "installationSlidesAvailable": "インストール可能：",
   "@installationSlidesAvailable": {},
-  "installationSlidesIncluded": "含まれるソフト：",
+  "installationSlidesIncluded": "含まれるアプリ：",
   "@installationSlidesIncluded": {},
   "notEnoughDiskSpaceUbuntu": "{DISTRO}をインストールするのに十分なストレージ容量がありません",
   "@notEnoughDiskSpaceUbuntu": {
@@ -487,7 +487,7 @@
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Windowsに再起動しますか？",
   "@restartIntoWindowsTitle": {},
-  "bitlockerHeader": "続行するにはBitLockerをオフにしてください。",
+  "bitlockerHeader": "続行するにはBitLockerをオフにしてください",
   "@bitlockerHeader": {},
   "installationSlidesWelcomeHeader": "最新版の{DISTRO}では、これまで以上にコンピューティングが容易になります。",
   "@installationSlidesWelcomeHeader": {
@@ -514,7 +514,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO}は最新のNVIDIAはMesaのドライバーをサポートし、パフォーマンスや互換性が向上しています。Steamのようなアプリケーションを利用することで、数多くのWindowsゲームを{DISTRO}上で特別な設定なくプレイできます。",
+  "installationSlidesGamingBody": "{DISTRO}は最新のNVIDIとMesaのドライバーをサポートし、パフォーマンスや互換性が向上しています。Steamのようなアプリケーションを利用することで、数多くのWindowsゲームを{DISTRO}上で特別な設定なくプレイできます。",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
@@ -542,7 +542,7 @@
       "DISTRO": {}
     }
   },
-  "restartIntoWindowsDescription": "本当にコンピュータを再起動しますか？ {DISTRO}のインストールを完了するためには、後で再起動する必要があります。",
+  "restartIntoWindowsDescription": "本当にコンピュータを再起動しますか？ {DISTRO}のインストールを完了するためには、あとで再起動する必要があります。",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
@@ -570,7 +570,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Ask Ubuntuでは様々な質問と回答をカバーし、Ubuntu Discourseは新規ユーザーと経験豊富なユーザーのためのガイドと議論の場を提供します。",
+  "installationSlidesSupportCommunity": "Ask Ubuntuではさまざまな質問と回答をカバーし、Ubuntu Discourseは新規ユーザーと経験豊富なユーザーのためのガイドと議論の場を提供します。",
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Canonicalは、企業ユーザー向けに職場でUbuntuを安全に導入・管理するための商用サポートを提供しています。",
   "@installationSlidesSupportEnterprise": {},
@@ -694,9 +694,9 @@
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPMを選択",
   "@installationTypeTPMSelected": {},
-  "selectGuidedStorageDriveDropdownLabel": "ドライブの選択:",
+  "selectGuidedStorageDriveDropdownLabel": "ドライブを選択:",
   "@selectGuidedStorageDriveDropdownLabel": {},
-  "selectGuidedStoragePartitionDropdownLabel": "パーティションの選択:",
+  "selectGuidedStoragePartitionDropdownLabel": "パーティションを選択:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
   "guidedStoragePageHeader": "どこに {DISTRO} をインストールするか選択",
   "@guidedStoragePageHeader": {
@@ -728,7 +728,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "アプリケーション",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "インストール方法を選択",
+  "confirmEntryDiskSetup": "ディスクのセットアップ",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "ディスクの暗号化",
   "@confirmEntryDiskEncryption": {},
@@ -746,7 +746,7 @@
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "ドライバー",
   "@confirmProprietarySoftwareDrivers": {},
-  "rebootToConfigure": "**{system}** がディスクからコピーされました",
+  "rebootToConfigure": "**{system}** がディスクへコピーされました",
   "@rebootToConfigure": {
     "placeholders": {
       "system": {
@@ -764,7 +764,7 @@
       }
     }
   },
-  "rebootToConfigureWarning": "インストール処理を続けるのでコンピューターを再起動してください。",
+  "rebootToConfigureWarning": "インストール処理の継続のためコンピューターを再起動してください。",
   "@rebootToConfigureWarning": {},
   "refreshPageTitle": "アップデートがあります",
   "@refreshPageTitle": {},
@@ -774,7 +774,7 @@
   "@refreshUpdateNow": {},
   "refreshReady": "アップデートの準備完了",
   "@refreshReady": {},
-  "refreshInfo": "最新バージョンにアップデートすると信頼性が改善し、機能が増えます。",
+  "refreshInfo": "最新バージョンにアップデートすると、信頼性が改善し機能が増えます。",
   "@refreshInfo": {},
   "refreshCurrent": "現在の {snap} バージョンは {version}です。",
   "@refreshCurrent": {
@@ -795,7 +795,7 @@
       }
     }
   },
-  "refreshUpToDate": "現在のバージョン {version} はアップデート済です。",
+  "refreshUpToDate": "現在のバージョン {version} は最新です。",
   "@refreshUpToDate": {
     "placeholders": {
       "version": {
@@ -887,7 +887,7 @@
       }
     }
   },
-  "refreshSnapUnlink": "{snap} のリンク削除中...",
+  "refreshSnapUnlink": "{snap} のリンクを削除中...",
   "@refreshSnapUnlink": {
     "placeholders": {
       "snap": {
@@ -975,12 +975,14 @@
       }
     }
   },
-  "recoveryKeyTitle": "TMPリカバリーキー",
+  "recoveryKeyTitle": "TPMリカバリーキー",
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "インストール後、次のコマンドでリカバリーキーがわかります:",
   "@recoveryKeyCommand": {},
   "validate": "確認",
   "@validate": {},
   "installationTypeEraseInfo": "選択したディスクにクリーンな状態でインストールします。",
-  "@installationTypeEraseInfo": {}
+  "@installationTypeEraseInfo": {},
+  "selectGuidedStorageInfo": "選択したディスクにクリーンな状態でインストールします。",
+  "@selectGuidedStorageInfo": {}
 }
