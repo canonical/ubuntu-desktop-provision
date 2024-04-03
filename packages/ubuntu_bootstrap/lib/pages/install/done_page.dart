@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -28,8 +29,12 @@ class DonePage extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MascotAvatar(image: mascot),
-                const SizedBox(height: 2 * kWizardSpacing),
+                if (mascot != null)
+                  ConstrainedBox(
+                    constraints: const BoxConstraints.tightFor(height: 250),
+                    child: mascot,
+                  ),
+                const SizedBox(),
                 Text(
                   isCoreDesktop
                       ? lang.rebootToConfigure(model.productInfo.toString())
@@ -37,14 +42,12 @@ class DonePage extends ConsumerWidget {
                   style: theme.textTheme.headlineSmall,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: kWizardSpacing),
                 Text(
                   isCoreDesktop
                       ? lang.rebootToConfigureWarning
                       : lang.restartWarningBody,
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: kWizardSpacing),
                 IntrinsicWidth(
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -71,7 +74,7 @@ class DonePage extends ConsumerWidget {
                     ],
                   ),
                 ),
-              ],
+              ].withSpacing(kWizardSpacing),
             ),
           ),
           const Spacer(),
