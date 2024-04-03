@@ -475,5 +475,149 @@
   "hideSecurityKey": "Skjul",
   "@hideSecurityKey": {},
   "autoinstallTitle": "Installasjonstype",
-  "@autoinstallTitle": {}
+  "@autoinstallTitle": {},
+  "confirmDiskEncryptionNone": "Ingen",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Programmer",
+  "@confirmEntryApplications": {},
+  "refreshSnapPrepare": "Forbereder {snap} …",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Laster ned {snap} …",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseHint": "Velg et passord",
+  "@choosePassphraseHint": {},
+  "autoinstallHeader": "Hvordan vil du installere {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Skriv inn autoinstall.yaml-nettadresse:",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Interaktiv installasjon",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "For brukere som vil bli veiledet steg for steg gjennom installasjonen.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automatisert installasjon",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "For avanserte brukere som har en autoinstall.yaml for konsistente og reproduserbare systemoppsett.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Hva vil du gjøre med {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Advarsel:",
+  "@warningLabel": {},
+  "codecsAndDriversNvidiaNote": "Grafikk-kort fra Nvidia oppdaget",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversPageDescription": "Installer anbefalt ufri programvare?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageTitle": "Optimaliser din datamaskin",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageBody": "{DISTRO} leveres som forvalg uten ufri programvare. Dette kan medføre redusert ytelse.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "For best mulig ytelse på grafikk-kort fra Nvidia anbefales ufrie drivere.",
+  "@codecsAndDriversNvidiaBody": {},
+  "fullInstallationTitle": "Utvidet utvalg",
+  "@fullInstallationTitle": {},
+  "minimalInstallationTitle": "Forvalgt utvalg",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Kun det grunnleggende, nettleser og enkle verktøy.",
+  "@minimalInstallationSubtitle": {},
+  "installationTypeHeader": "Hvordan vil du installere {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseTitle": "Disk-passord",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Opprett et passord",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseConfirmHint": "Bekreft passordet",
+  "@choosePassphraseConfirmHint": {},
+  "installationTypeExperimental": "Eksperimentelt",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Bruk LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Bruk LVM og kryptering",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Slett disken og bruk ZFS med kryptering",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS og kryptering valgt",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMSelected": "TPM valgt",
+  "@installationTypeTPMSelected": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Velg partisjon:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Velg hvor du vil installere {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmEntryDiskSetup": "Diskoppsett",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Diskkryptering",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Installasjonsdisk",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Ufri programvare",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Generelt",
+  "@confirmSectionGeneralTitle": {},
+  "confirmProprietarySoftwareCodecs": "Kodek",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodek og drivere",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Drivere",
+  "@confirmProprietarySoftwareDrivers": {},
+  "installationSlidesTitle": "Velkommen til {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeTitle": "Raskt, fritt, og fult av nye funksjoner",
+  "@installationSlidesWelcomeTitle": {},
+  "installationSlidesSecurityTitle": "Privat og sikkert",
+  "@installationSlidesSecurityTitle": {},
+  "installationSlidesAccessibilityTitle": "Tilgang for alle",
+  "@installationSlidesAccessibilityTitle": {}
 }
