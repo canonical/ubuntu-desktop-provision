@@ -1,8 +1,8 @@
 {
   "@@locale": "ja",
-  "updatesOtherSoftwarePageTitle": "アプリケーションとアップデート",
+  "updatesOtherSoftwarePageTitle": "アプリケーション",
   "@updatesOtherSoftwarePageTitle": {},
-  "updatesOtherSoftwarePageDescription": "あらかじめいくつかのアプリケーションをインストールします。選択してください。",
+  "updatesOtherSoftwarePageDescription": "開始時にどのアプリをインストールしますか？",
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "その他のオプション",
   "@otherOptions": {},
@@ -15,7 +15,7 @@
       "url": {}
     }
   },
-  "rstTitle": "RSTが有効になっています。",
+  "rstTitle": "RSTを検出",
   "@rstTitle": {},
   "rstDescription": "このコンピューターは Intel RST (Rapid Storage Technology) を使用しています。Ubuntu をインストールする前に Windows で RST を無効にする必要があります。",
   "@rstDescription": {},
@@ -30,7 +30,7 @@
       "color": {}
     }
   },
-  "tryOrInstallRepairDescription": "修復すると、ドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。",
+  "tryOrInstallRepairDescription": "修復はドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。",
   "@tryOrInstallRepairDescription": {},
   "configureSecureBootSecurityKeyRequired": "セキュリティキーが必要です",
   "@configureSecureBootSecurityKeyRequired": {},
@@ -44,7 +44,7 @@
   "@tryOrInstallRepairOption": {},
   "welcome": "ようこそ",
   "@welcome": {},
-  "tryOrInstallTitle": "{DISTRO}を試してみるか、インストールします",
+  "tryOrInstallTitle": "{DISTRO}を試用またはインストール",
   "@tryOrInstallTitle": {},
   "rstInstructions": "手順は、別のデバイスでQRコードをスキャンするか、<a href=\"https://{url}\">{url}</a>をご確認ください。",
   "@rstInstructions": {
@@ -55,7 +55,7 @@
   },
   "configureSecureBootTitle": "セキュアブートの設定",
   "@configureSecureBootTitle": {},
-  "chooseSecurityKey": "セキュリティキーを決めてください。",
+  "chooseSecurityKey": "セキュリティキーを決めてください",
   "@chooseSecurityKey": {},
   "configureSecureBootOption": "セキュアブートを設定",
   "@configureSecureBootOption": {},
@@ -63,7 +63,7 @@
   "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "今はドライバーソフトウェアをインストールしない",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "「ソフトウェアとアップデート」で後でインストールできます。",
+  "dontInstallDriverSoftwareNowDescription": "あとで「ソフトウェアとアップデート」でインストールできます。",
   "@dontInstallDriverSoftwareNowDescription": {},
   "installationTypeTitle": "インストール方法を選択",
   "@installationTypeTitle": {},
@@ -95,7 +95,7 @@
       "RELEASE": {}
     }
   },
-  "installDescription": "現在の OS と一緒に (または代わりに) {RELEASE} をインストールします。これはあまり時間がかからないはずです。",
+  "installDescription": "現在の OS と一緒に (または代わりに) {RELEASE} をインストールします。あまり時間がかからないはずです。",
   "@installDescription": {
     "type": "text",
     "placeholders": {
@@ -354,9 +354,9 @@
       "product": {}
     }
   },
-  "showSecurityKey": "セキュリティキーを表示します",
+  "showSecurityKey": "表示",
   "@showSecurityKey": {},
-  "installDriversSubtitle": "これらのドライバーは自身のドキュメントに含まれるライセンス条項に従い、プロプライエタリです。",
+  "installDriversSubtitle": "NVIDIAドライバーなどを含みますが、それに限定しません",
   "@installDriversSubtitle": {},
   "installDriversTitle": "グラフィックスとWi-Fi 機器用のサードパーティ製ソフトウェアをインストールする",
   "@installDriversTitle": {},
@@ -483,7 +483,7 @@
   "@installationSlidesGamingTitle": {},
   "installationSlidesSupportDocumentation": "公式ドキュメント",
   "@installationSlidesSupportDocumentation": {},
-  "rstHeader": "続行するにはRSTをオフにしてください。",
+  "rstHeader": "続行するにはRSTをオフにしてください",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Windowsに再起動しますか？",
   "@restartIntoWindowsTitle": {},
@@ -574,7 +574,7 @@
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Canonicalは、企業ユーザー向けに職場でUbuntuを安全に導入・管理するための商用サポートを提供しています。",
   "@installationSlidesSupportEnterprise": {},
-  "loadingPageTitle": "{DISTRO}へ、ようこそ。",
+  "loadingPageTitle": "{DISTRO} へようこそ",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
@@ -614,7 +614,7 @@
   "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "自動インストール",
   "@autoinstallAutomatedOption": {},
-  "autoinstallAutomatedDescription": "autoinstall.yamlを用いて一貫性と反復性のあるシステムセットアップを行う高度なユーザー向けです。",
+  "autoinstallAutomatedDescription": "autoinstall.yamlを用いて一貫性と反復性のあるシステムセットアップを行いたい高度なユーザー向けです。",
   "@autoinstallAutomatedDescription": {},
   "warningLabel": "警告:",
   "@warningLabel": {},
@@ -630,7 +630,7 @@
   "@hideSecurityKey": {},
   "codecsAndDriversPageTitle": "コンピューターを最適化",
   "@codecsAndDriversPageTitle": {},
-  "codecsAndDriversPageDescription": "おすすめのプロプライエタリなソフトウェアをインストールしますか？",
+  "codecsAndDriversPageDescription": "推奨するプロプライエタリなソフトウェアをインストールしますか？",
   "@codecsAndDriversPageDescription": {},
   "codecsAndDriversPageBody": "{DISTRO} は既定ではプロプライエタリなソフトウェアは含みません。追加のソフトウェアをインストールすると、コンピューターのパフォーマンスが改善するかもしれません。",
   "@codecsAndDriversPageBody": {
@@ -755,5 +755,230 @@
     }
   },
   "restartWarningBody": "インストールを完了するために再起動するか、試用を続けてください。\nいかなる変更点も保存されません。",
-  "@restartWarningBody": {}
+  "@restartWarningBody": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">警告:</font> セキュリティキーを紛失すると、すべてのデータを失います。必要であればキーを書き出し、安全な場所に保管してください。",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "インストール処理を続けるのでコンピューターを再起動してください。",
+  "@rebootToConfigureWarning": {},
+  "refreshPageTitle": "アップデートがあります",
+  "@refreshPageTitle": {},
+  "refreshHeader": "インストーラーのアップデートが適用できます",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "今すぐアップデート",
+  "@refreshUpdateNow": {},
+  "refreshReady": "アップデートの準備完了",
+  "@refreshReady": {},
+  "refreshInfo": "最新バージョンにアップデートすると信頼性が改善し、機能が増えます。",
+  "@refreshInfo": {},
+  "refreshCurrent": "現在の {snap} バージョンは {version}です。",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "バージョン {version} にアップデート",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "現在のバージョン {version} はアップデート済です。",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "{snap} のアップデート中...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCloseLabel": "インストーラーを閉じる",
+  "@refreshCloseLabel": {},
+  "refreshRestart": "続けるには、一旦閉じてもう一度インストーラーを起動してください",
+  "@refreshRestart": {},
+  "refreshSnapPrerequisites": "{snap} に必要な前処理中...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "{snap} のリフレッシュ中...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "{snap} の再リフレッシュを確認中...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "{snap} の準備中...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "{snap} のダウンロード中...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "{snap} の確認中...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "{snap} のマウント中...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "{snap} サービスを停止中...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "{snap} のエイリアスを削除中...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "{snap} のリンク削除中...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "{snap} 関連のアップデート中...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "{snap} のカーネルコマンドラインをアップデート中...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "{snap} のデータをコピー中...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "{snap} のセキュリティプロファイルを設定中...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "{snap} のプラグとスロットに接続中...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "自動 {snap} エイリアスを設定中...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "{snap} エイリアスのセットアップ中...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "{snap} のリンク中...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "{snap} サービスを開始中...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "{snap} のクリーンアップ中...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "TMPリカバリーキー",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "インストール後、次のコマンドでリカバリーキーがわかります:",
+  "@recoveryKeyCommand": {},
+  "validate": "確認",
+  "@validate": {}
 }
