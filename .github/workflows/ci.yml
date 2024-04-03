@@ -255,6 +255,7 @@ jobs:
           token: ${{secrets.CODECOV_TOKEN}}
 
   build-and-upload:
+    if: github.event_name == 'push'
     needs: go-tests
     runs-on: ubuntu-latest
     strategy:
