@@ -13,5 +13,6 @@ UbuntuProOnBoardingModel buildUbuntuProOnboardingModel({
   final model = MockUbuntuProOnBoardingModel();
   when(model.selection)
       .thenReturn(UbuntuProOnboardingPageSelection.enableUbuntuPro);
+  when(model.init()).thenAnswer((_) async => true);
   return model;
 }

@@ -12,6 +12,11 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
   const UbuntuProOnboardingPage({super.key});
 
   @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
+    return ref.read(ubuntuProOnboardingModelProvider).init().then((_) => true);
+  }
+
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuProLocalizations.of(context);
     final model = ref.watch(ubuntuProOnboardingModelProvider);

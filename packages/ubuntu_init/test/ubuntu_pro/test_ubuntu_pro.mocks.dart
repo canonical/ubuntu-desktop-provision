@@ -118,6 +118,15 @@ class MockUbuntuProModel extends _i1.Mock implements _i2.UbuntuProModel {
       ) as _i4.Future<void>);
 
   @override
+  _i4.Future<bool> init() => (super.noSuchMethod(
+        Invocation.method(
+          #init,
+          [],
+        ),
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
+
+  @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,

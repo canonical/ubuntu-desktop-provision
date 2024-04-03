@@ -178,7 +178,7 @@ void main() {
     final keyboardModel = buildKeyboardModel();
     final identityModel = buildIdentityModel(isValid: true);
     final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
-    final ubuntuProModel = buildUbuntuProModel();
+    final ubuntuProModel = buildUbuntuProModel(isAttached: true);
     final telemetryModel = buildTelemetryModel();
 
     await tester.pumpWidget(
@@ -220,7 +220,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProPage), findsOneWidget);
-    verify(ubuntuProModel.init()).called(1);
+    verify(ubuntuProModel.magicAttach()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

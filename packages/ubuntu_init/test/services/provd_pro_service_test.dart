@@ -82,6 +82,12 @@ void main() {
     final client = MockProvdProClient();
     final service = ProvdProService(client: client);
 
+    when(client.proAttach(any)).thenAnswer((_) async {
+      return provd.ProAttachResponse(
+        type: provd.ProAttachResponse_ProAttachResponseType.SUCCESS,
+      );
+    });
+
     await service.proAttach('token');
     verify(client.proAttach('token')).called(1);
   });
