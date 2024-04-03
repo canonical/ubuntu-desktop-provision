@@ -101,7 +101,6 @@ parts:
     after: [flutter-git]
     source: .
     plugin: nil
-    flutter-target: lib/main.dart
     override-build: |
       cd packages/factory_reset_tools
       snapcraftctl build
