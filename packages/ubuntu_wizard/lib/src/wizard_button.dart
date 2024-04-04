@@ -218,7 +218,7 @@ class NextWizardButton extends StatelessWidget {
     this.highlighted = false,
     this.arguments,
     this.onNext,
-    this.onExecute,
+    this.onReturn,
   });
 
   final String? label;
@@ -228,7 +228,10 @@ class NextWizardButton extends StatelessWidget {
   final bool highlighted;
   final Object? arguments;
   final WizardCallback? onNext;
-  final WizardCallback? onExecute;
+
+  /// Called when returning to the current route after navigating to the next one.
+  /// (e.g. when pressing the back button on the next page)
+  final WizardCallback? onReturn;
 
   @override
   Widget build(BuildContext context) {
@@ -267,7 +270,7 @@ class NextWizardButton extends StatelessWidget {
               await rootWizard?.next(arguments: arguments);
             }
           }
-          onExecute?.call();
+          onReturn?.call();
         },
       ),
     );

@@ -53,7 +53,7 @@ class GuidedResizePage extends ConsumerWidget {
         trailing: [
           NextWizardButton(
             onNext: model.selectedStorage != null ? model.save : null,
-            onExecute: model.reset,
+            onReturn: model.reset,
           ),
         ],
       ),
