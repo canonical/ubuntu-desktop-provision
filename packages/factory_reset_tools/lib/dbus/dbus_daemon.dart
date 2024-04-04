@@ -1,6 +1,6 @@
 import 'package:dbus/dbus.dart';
-import 'package:factory_reset_tools/dbus_local_object.dart';
-import 'package:factory_reset_tools/reboot.dart';
+import 'package:factory_reset_tools/dbus/dbus_local_object.dart';
+import 'package:factory_reset_tools/dbus/factory_reset.dart';
 
 class FactoryResetToolsObject extends ComCanonicalOemFactoryResetTools {
   @override
@@ -10,7 +10,7 @@ class FactoryResetToolsObject extends ComCanonicalOemFactoryResetTools {
 
   @override
   Future<DBusMethodResponse> doReboot(String rebootOption) async {
-    await startCommand(rebootOption);
+    await startCommand(ResetOptionType.fromString(rebootOption));
     return DBusMethodSuccessResponse();
   }
 }

@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:args/command_runner.dart';
-import 'package:factory_reset_tools/dbus_daemon.dart';
-import 'package:factory_reset_tools/reboot.dart';
-import 'package:factory_reset_tools/reset_media.dart';
+import 'package:factory_reset_tools/dbus/dbus_daemon.dart';
+import 'package:factory_reset_tools/dbus/factory_reset.dart';
+import 'package:factory_reset_tools/dbus/reset_media.dart';
 
 /// Command line entrypoint of factory-reset-tools
 class CreateResetMediaCommand extends Command<void> {
@@ -79,7 +79,7 @@ class RebootCommand extends Command<void> {
       final options = getResetOptions();
       stdout.writeln('List of available options:\n');
       for (final option in options) {
-        stdout.writeln('${option.key}: ${option.title}');
+        stdout.writeln('${option.type}: ${option.title}');
         if (option.description != null) {
           stdout.writeln('  ${option.description}');
         }
@@ -87,7 +87,7 @@ class RebootCommand extends Command<void> {
       }
       return;
     }
-    await startCommandViaDbus(argResults.rest[0]);
+    await startCommandViaDbus(ResetOptionType.fromString(argResults.rest[0]));
     exit(0);
   }
 }

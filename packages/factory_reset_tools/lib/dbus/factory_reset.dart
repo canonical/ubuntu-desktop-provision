@@ -2,15 +2,34 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:dbus/dbus.dart';
-import 'package:factory_reset_tools/dbus_remote_object.dart';
+import 'package:factory_reset_tools/dbus/dbus_remote_object.dart';
 import 'package:retry/retry.dart';
 import 'package:yaml/yaml.dart';
 
 const defaultFilePath = '/usr/share/desktop-provision/reset.yaml';
 
+enum ResetOptionType {
+  factoryReset('factory-reset'),
+  fwSetup('fwsetup');
+
+  const ResetOptionType(this.value);
+  final String value;
+
+  static ResetOptionType fromString(String value) {
+    switch (value) {
+      case 'factory-reset':
+        return factoryReset;
+      case 'fwsetup':
+        return fwSetup;
+      default:
+        throw ArgumentError('Invalid value: $value');
+    }
+  }
+}
+
 sealed class BootOption {
-  BootOption(this.key, this.title, this.description);
-  final String key;
+  BootOption(this.type, this.title, this.description);
+  final ResetOptionType type;
   final String title;
   final String? description;
 
@@ -66,13 +85,13 @@ class RunCommandBootOption extends BootOption {
 
 final List<BootOption> defaultBootOption = [
   GrubBootOption(
-    'factory-reset',
+    ResetOptionType.factoryReset,
     'Restore Ubuntu to factory state',
     'This option will restore Ubuntu to factory default, removing all files stored in this system during the process.',
     'Restore Ubuntu to factory state',
   ),
   GrubBootOption(
-    'fwsetup',
+    ResetOptionType.fwSetup,
     'UEFI Firmware Settings',
     'Reboot into UEFI Firmware (BIOS) Settings menu',
     'UEFI Firmware Settings',
@@ -92,7 +111,7 @@ List<BootOption> getResetOptions({String path = defaultFilePath}) {
       if (item.containsKey('grub_option')) {
         bootOptions.add(
           GrubBootOption(
-            item['key'] as String,
+            ResetOptionType.fromString(item['key'] as String),
             item['title'] as String,
             item['description'] as String?,
             item['grub_option'] as String,
@@ -109,7 +128,7 @@ List<BootOption> getResetOptions({String path = defaultFilePath}) {
 
         bootOptions.add(
           RunCommandBootOption(
-            item['key'] as String,
+            ResetOptionType.fromString(item['key'] as String),
             item['title'] as String,
             item['description'] as String?,
             command,
@@ -127,12 +146,15 @@ List<BootOption> getResetOptions({String path = defaultFilePath}) {
   }
 }
 
-Future<void> startCommand(String key, {String path = defaultFilePath}) {
+Future<void> startCommand(
+  ResetOptionType type, {
+  String path = defaultFilePath,
+}) {
   BootOption option;
   final options = getResetOptions(path: path);
 
   try {
-    option = options.firstWhere((option) => option.key == key);
+    option = options.firstWhere((option) => option.type == type);
   } on StateError {
     throw StateError('option not found');
   }
@@ -141,7 +163,7 @@ Future<void> startCommand(String key, {String path = defaultFilePath}) {
 }
 
 Future<void> startCommandViaDbus(
-  String key, {
+  ResetOptionType type, {
   String path = defaultFilePath,
 }) async {
   final dbusClient = DBusClient.system();
@@ -154,7 +176,7 @@ Future<void> startCommandViaDbus(
   // error
   const retryRunner = RetryOptions(maxAttempts: 5);
   await retryRunner.retry(
-    () => object.callReboot(key),
+    () => object.callReboot(type.value),
     retryIf: (e) =>
         e is DBusMethodResponseException &&
         e.errorName == 'org.freedesktop.DBus.Error.UnknownObject',
