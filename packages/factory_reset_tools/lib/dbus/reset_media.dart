@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:async/async.dart';
 import 'package:dbus/dbus.dart';
+import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:retry/retry.dart';
 
 const fsuuidFilePathDefault = '/etc/reset_partition_fsuuid';
@@ -10,7 +11,22 @@ enum ResetMediaCreationStatus {
   copying,
   finalizing,
   finished,
-  failed
+  failed;
+
+  String displayName(FactoryResetToolsLocalizations lang) {
+    switch (this) {
+      case ResetMediaCreationStatus.initializing:
+        return lang.resetMediaInitializing;
+      case ResetMediaCreationStatus.copying:
+        return lang.resetMediaCopying;
+      case ResetMediaCreationStatus.finalizing:
+        return lang.resetMediaFinalizing;
+      case ResetMediaCreationStatus.finished:
+        return lang.resetMediaFinished;
+      case ResetMediaCreationStatus.failed:
+        return lang.resetMediaFailed;
+    }
+  }
 }
 
 class ResetMediaCreationProgress {

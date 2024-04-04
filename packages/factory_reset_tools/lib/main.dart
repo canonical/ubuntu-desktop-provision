@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:factory_reset_tools/l10n.dart';
 import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:factory_reset_tools/pages/reset_tools_wizard.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class FactoryResetTools extends StatelessWidget {
           FactoryResetToolsLocalizations.delegate,
           UbuntuLocalizations.delegate,
         ],
-        supportedLocales: FactoryResetToolsLocalizations.supportedLocales,
+        supportedLocales: supportedLocales,
         home: const ResetToolsWizard(),
       ),
     );

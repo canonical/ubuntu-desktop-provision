@@ -56,6 +56,21 @@ class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
 
   @override
+  String get resetMediaInitializing => 'Initializing';
+
+  @override
+  String get resetMediaCopying => 'Copying';
+
+  @override
+  String get resetMediaFinalizing => 'Finalizing';
+
+  @override
+  String get resetMediaFinished => 'Finished';
+
+  @override
+  String get resetMediaFailed => 'Failed';
+
+  @override
   String get error => 'Error';
 
   @override

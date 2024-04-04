@@ -193,6 +193,36 @@ abstract class FactoryResetToolsLocalizations {
   /// **'An error occurred while fetching the drives.'**
   String get errorLoadingDrives;
 
+  /// No description provided for @resetMediaInitializing.
+  ///
+  /// In en, this message translates to:
+  /// **'Initializing'**
+  String get resetMediaInitializing;
+
+  /// No description provided for @resetMediaCopying.
+  ///
+  /// In en, this message translates to:
+  /// **'Copying'**
+  String get resetMediaCopying;
+
+  /// No description provided for @resetMediaFinalizing.
+  ///
+  /// In en, this message translates to:
+  /// **'Finalizing'**
+  String get resetMediaFinalizing;
+
+  /// No description provided for @resetMediaFinished.
+  ///
+  /// In en, this message translates to:
+  /// **'Finished'**
+  String get resetMediaFinished;
+
+  /// No description provided for @resetMediaFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get resetMediaFailed;
+
   /// No description provided for @error.
   ///
   /// In en, this message translates to:

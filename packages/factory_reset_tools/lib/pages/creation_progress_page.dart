@@ -37,7 +37,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   @override
   void initState() {
     super.initState();
-    createResetMediaAsyncStream ??= createFakeResetMedia(
+    createResetMediaAsyncStream ??= createResetMedia(
       ref.read(selectedMediaProvider)!.devicePath,
     );
     createResetMediaAsyncStream!.listen(onStatusChanged);
@@ -48,7 +48,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
     final lang = FactoryResetToolsLocalizations.of(context);
     final theme = Theme.of(context);
 
-    var msgText = _progress.status.name.capitalize;
+    var msgText = _progress.status.displayName(lang);
     if (_progress.percent != null) {
       msgText = '$msgText ${((_progress.percent ?? 0.0) * 100).round()}%';
     }
