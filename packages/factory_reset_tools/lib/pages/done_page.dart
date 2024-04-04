@@ -42,7 +42,7 @@ class DonePage extends ConsumerWidget {
                 ),
                 SizedBox(
                   width: 100,
-                  child: FilledButton(
+                  child: ElevatedButton(
                     onPressed: () async {
                       await YaruWindow.of(context).close();
                     },

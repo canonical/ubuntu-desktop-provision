@@ -14,18 +14,13 @@ enum ResetMediaCreationStatus {
   failed;
 
   String displayName(FactoryResetToolsLocalizations lang) {
-    switch (this) {
-      case ResetMediaCreationStatus.initializing:
-        return lang.resetMediaInitializing;
-      case ResetMediaCreationStatus.copying:
-        return lang.resetMediaCopying;
-      case ResetMediaCreationStatus.finalizing:
-        return lang.resetMediaFinalizing;
-      case ResetMediaCreationStatus.finished:
-        return lang.resetMediaFinished;
-      case ResetMediaCreationStatus.failed:
-        return lang.resetMediaFailed;
-    }
+    return switch (this) {
+      ResetMediaCreationStatus.initializing => lang.resetMediaInitializing,
+      ResetMediaCreationStatus.copying => lang.resetMediaCopying,
+      ResetMediaCreationStatus.finalizing => lang.resetMediaFinalizing,
+      ResetMediaCreationStatus.finished => lang.resetMediaFinished,
+      ResetMediaCreationStatus.failed => lang.resetMediaFailed
+    };
   }
 }
 
