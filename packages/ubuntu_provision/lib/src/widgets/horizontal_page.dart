@@ -12,7 +12,6 @@ class HorizontalPage extends ConsumerWidget {
     required this.title,
     required this.children,
     this.onNext,
-    this.onBack,
     this.nextArguments,
     this.trailingTitleWidget,
     this.isNextEnabled = true,
@@ -31,6 +30,12 @@ class HorizontalPage extends ConsumerWidget {
           !managedScrolling || contentFlex == null,
           'contentFlex has no effect unless managedScrolling is set to false.',
         ),
+        assert(
+            (bottomBar == null) ||
+                (onNext == null &&
+                    nextArguments == null &&
+                    isNextEnabled == true),
+            'either provide a custom `bottomBar` or use the `onNext`, `nextArguments`, and `isNextEnabled` properties.'),
         _contentFlex = contentFlex ?? 1;
 
   /// The title for the title bar.
@@ -47,9 +52,6 @@ class HorizontalPage extends ConsumerWidget {
 
   /// A callback for when the user presses the "Next" button.
   final FutureOr<void> Function()? onNext;
-
-  /// A callback for when the user presses the "Back" button.
-  final FutureOr<void> Function()? onBack;
 
   /// Arguments passed along to the [NextWizardButton].
   final Object? nextArguments;

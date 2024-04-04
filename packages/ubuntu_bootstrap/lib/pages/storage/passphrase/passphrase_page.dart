@@ -32,7 +32,7 @@ class PassphrasePage extends ConsumerWidget {
             enabled: ref.watch(
                 passphraseModelProvider.select((model) => model.isValid)),
             onNext: ref.read(passphraseModelProvider).savePassphrase,
-            onExecute: ref.read(passphraseModelProvider).loadPassphrase,
+            onReturn: ref.read(passphraseModelProvider).loadPassphrase,
           ),
         ],
       ),

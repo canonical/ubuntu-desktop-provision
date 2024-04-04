@@ -39,7 +39,12 @@ extension WidgetTesterX on WidgetTester {
             onNext: (settings) => '/next',
           ),
           '/next': WizardRoute(
-            builder: (_) => const Text('Next page'),
+            builder: (_) => const Row(
+              children: [
+                Text('Next page'),
+                BackWizardButton(),
+              ],
+            ),
           ),
         },
       ),
