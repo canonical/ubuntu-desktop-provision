@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=factory-reset-tools
+Name=Factory Reset Tools
+Type=Application
+Icon=${SNAP}/meta/local/factory-reset-tools.png
