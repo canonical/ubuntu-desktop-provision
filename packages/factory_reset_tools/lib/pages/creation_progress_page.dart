@@ -24,6 +24,11 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   );
 
   void onStatusChanged(ResetMediaCreationProgress progress) {
+    if (progress.status == ResetMediaCreationStatus.finished) {
+      Future.delayed(const Duration(seconds: 2), () {
+        Wizard.of(context).next();
+      });
+    }
     setState(() {
       _progress = progress;
     });
@@ -32,7 +37,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   @override
   void initState() {
     super.initState();
-    createResetMediaAsyncStream ??= createResetMedia(
+    createResetMediaAsyncStream ??= createFakeResetMedia(
       ref.read(selectedMediaProvider)!.devicePath,
     );
     createResetMediaAsyncStream!.listen(onStatusChanged);
@@ -43,10 +48,9 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
     final lang = FactoryResetToolsLocalizations.of(context);
     final theme = Theme.of(context);
 
-    var msgText = _progress.status.name;
+    var msgText = _progress.status.name.capitalize;
     if (_progress.percent != null) {
-      msgText =
-          '${((_progress.percent ?? 0.0) * 100).toStringAsFixed(2)}% $msgText';
+      msgText = '$msgText ${((_progress.percent ?? 0.0) * 100).round()}%';
     }
     if (_progress.errMsg != null) {
       msgText = '${_progress.status.name} ${_progress.errMsg}';

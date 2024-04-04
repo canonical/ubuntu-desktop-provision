@@ -394,3 +394,31 @@ Stream<ResetMediaCreationProgress> createResetMedia(
     }
   }
 }
+
+Stream<ResetMediaCreationProgress> createFakeResetMedia(
+  String targetDevicePath,
+) async* {
+  await Future.delayed(const Duration(seconds: 3));
+
+  for (var i = 0.0; i < 1.0; i += 0.01) {
+    yield ResetMediaCreationProgress(
+      ResetMediaCreationStatus.copying,
+      i,
+      null,
+    );
+    await Future.delayed(const Duration(milliseconds: 100));
+  }
+
+  yield ResetMediaCreationProgress(
+    ResetMediaCreationStatus.finalizing,
+    1,
+    null,
+  );
+  await Future.delayed(const Duration(seconds: 3));
+
+  yield ResetMediaCreationProgress(
+    ResetMediaCreationStatus.finished,
+    1,
+    null,
+  );
+}
