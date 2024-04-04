@@ -90,7 +90,10 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
         ],
       ),
       bottomBar: WizardBar(
-        leading: const BackWizardButton(),
+        // If the user returns back to select another disk or another method,
+        // the previously configured guided storage must be reset to avoid
+        // multiple disks being configured for guided partitioning.
+        leading: BackWizardButton(onBack: model.resetStorage),
         trailing: [
           NextWizardButton(
             enabled: model.isValid,

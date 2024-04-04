@@ -12,6 +12,7 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/icons.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -322,5 +323,16 @@ void main() {
       ),
       findsOneWidget,
     );
+  });
+
+  testWidgets('reset when going back', (tester) async {
+    final model = buildManualStorageModel();
+    await tester.pumpApp((_) => buildPage(model));
+
+    final backButton = find.byType(BackWizardButton);
+    expect(backButton, findsOneWidget);
+    await tester.widget<BackWizardButton>(backButton).onBack!();
+
+    verify(model.resetStorage()).called(1);
   });
 }

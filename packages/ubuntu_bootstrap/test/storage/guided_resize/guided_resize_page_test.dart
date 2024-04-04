@@ -11,6 +11,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 import 'guided_resize_model_test.dart';
 import 'test_guided_resize.dart';
@@ -154,5 +155,16 @@ void main() {
       find.text(l10n.installationTypeAlongsideMulti('Ubuntu 22.10')),
       findsOneWidget,
     );
+  });
+
+  testWidgets('reset when going back', (tester) async {
+    final model = buildGuidedResizeModel();
+    await tester.pumpApp((_) => buildPage(model));
+
+    final backButton = find.byType(BackWizardButton);
+    expect(backButton, findsOneWidget);
+    await tester.widget<BackWizardButton>(backButton).onBack!();
+
+    verify(model.reset()).called(1);
   });
 }

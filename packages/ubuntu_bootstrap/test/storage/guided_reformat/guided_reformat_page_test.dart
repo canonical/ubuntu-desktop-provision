@@ -10,6 +10,7 @@ import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 import 'test_guided_reformat.dart';
 
@@ -106,5 +107,16 @@ void main() {
 
     await tester.tapNext();
     verify(model.saveGuidedStorage()).called(1);
+  });
+
+  testWidgets('reset when going back', (tester) async {
+    final model = buildGuidedReformatModel();
+    await tester.pumpApp((_) => buildPage(model));
+
+    final backButton = find.byType(BackWizardButton);
+    expect(backButton, findsOneWidget);
+    await tester.widget<BackWizardButton>(backButton).onBack!();
+
+    verify(model.resetGuidedStorage()).called(1);
   });
 }

@@ -49,11 +49,13 @@ class GuidedResizePage extends ConsumerWidget {
       title:
           lang.guidedStoragePageHeader(ref.watch(flavorProvider).displayName),
       bottomBar: WizardBar(
-        leading: const BackWizardButton(),
+        // If the user returns back to select another disk or another method,
+        // the previously configured guided storage must be reset to avoid
+        // multiple disks being configured for guided partitioning.
+        leading: BackWizardButton(onBack: model.reset),
         trailing: [
           NextWizardButton(
             onNext: model.selectedStorage != null ? model.save : null,
-            onExecute: model.reset,
           ),
         ],
       ),
