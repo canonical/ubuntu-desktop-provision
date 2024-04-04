@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/foundation.dart';
 import 'package:yaru/widgets.dart';
 
 class CreationProgressPage extends ConsumerStatefulWidget {
@@ -47,6 +48,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   Widget build(BuildContext context) {
     final lang = FactoryResetToolsLocalizations.of(context);
     final theme = Theme.of(context);
+    final isFailed = _progress.status == ResetMediaCreationStatus.failed;
 
     var msgText = _progress.status.displayName(lang);
     if (_progress.percent != null) {
@@ -67,7 +69,9 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(msgText, style: theme.textTheme.titleLarge),
-                LinearProgressIndicator(value: _progress.percent),
+                if (!isFailed) ...[
+                  LinearProgressIndicator(value: _progress.percent),
+                ],
                 SizedBox(height: theme.textTheme.titleLarge?.height ?? 0),
               ].withSpacing(kWizardSpacing),
             ),
@@ -75,6 +79,19 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
           const Spacer(),
         ],
       ),
+      bottomBar: isFailed
+          ? WizardBar(
+              leading: const BackWizardButton(),
+              trailing: [
+                WizardButton(
+                  label: lang.close,
+                  onActivated: () async {
+                    await YaruWindow.of(context).close();
+                  },
+                ),
+              ],
+            )
+          : null,
     );
   }
 }

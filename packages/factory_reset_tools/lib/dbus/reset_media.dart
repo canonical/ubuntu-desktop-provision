@@ -363,15 +363,23 @@ Stream<ResetMediaCreationProgress> createResetMedia(
 
   tmpDir.deleteSync();
 
-  final resetPartition = await getResetPartition(fsuuid: fsuuid);
+  Partition? resetPartition;
   String rpPath;
   var rpUnmount = true;
   try {
+    resetPartition = await getResetPartition(fsuuid: fsuuid);
     rpPath = await resetPartition.mount();
+  } on PathNotFoundException catch (e) {
+    yield ResetMediaCreationProgress(
+      ResetMediaCreationStatus.failed,
+      null,
+      'Reset partition not found: $e',
+    );
+    rethrow;
   } on DBusMethodResponseException catch (e) {
     if (e.errorName == 'org.freedesktop.UDisks2.Error.AlreadyMounted') {
       rpUnmount = false;
-      rpPath = await resetPartition.getMountPoint();
+      rpPath = await resetPartition!.getMountPoint();
     } else {
       rethrow;
     }
