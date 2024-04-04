@@ -488,6 +488,17 @@ void main() {
     await tester.tapNext();
     verify(model.save()).called(1);
   });
+
+  testWidgets('reset storage on return', (tester) async {
+    final model = buildStorageModel();
+    await tester.pumpApp((_) => buildPage(model));
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    await tester.tapBack();
+    await tester.pumpAndSettle();
+    verify(model.resetStorage()).called(1);
+  });
 }
 
 extension on CommonFinders {
