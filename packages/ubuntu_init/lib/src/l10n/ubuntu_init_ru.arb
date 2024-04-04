@@ -31,7 +31,7 @@
   "@privacyLocationTitle": {},
   "privacyPolicyLink": "Конфиденциальность данных",
   "@privacyPolicyLink": {},
-  "telemetryHeader": "Помочь улучшить {distro}",
+  "telemetryHeader": "Помогите улучшить {distro}",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
