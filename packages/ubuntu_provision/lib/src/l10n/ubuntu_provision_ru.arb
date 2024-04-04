@@ -90,7 +90,7 @@
   "@identityActiveDirectoryOption": {},
   "identityActiveDirectoryInfo": "Вы введёте домен и другие данные на следующем шаге.",
   "@identityActiveDirectoryInfo": {},
-  "activeDirectoryTitle": "Настроить Active Directory",
+  "activeDirectoryTitle": "Войти в Active Directory",
   "@activeDirectoryTitle": {},
   "activeDirectoryTestConnection": "Проверка подключения к домену",
   "@activeDirectoryTestConnection": {},
@@ -138,7 +138,7 @@
   "@networkWiredNone": {},
   "networkWiredOff": "Проводное подключение отключено",
   "@networkWiredOff": {},
-  "networkWiredDisabled": "Чтобы воспользоваться сетью интернет на этом компьютере, должно быть включено проводное соединение",
+  "networkWiredDisabled": "Чтобы воспользоваться сетью Интернет на этом компьютере, должно быть включено проводное соединение",
   "@networkWiredDisabled": {},
   "networkWiredEnable": "Включить проводное подключение",
   "@networkWiredEnable": {},
@@ -170,7 +170,7 @@
       }
     }
   },
-  "accessibilityPageBody": "Настройте {DISTRO} перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в системных настройках.",
+  "accessibilityPageBody": "Настройте {DISTRO} перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в Настройках.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -220,7 +220,7 @@
   "@networkPageBody": {},
   "activeDirectoryHeader": "Войти в Active Directory?",
   "@activeDirectoryHeader": {},
-  "activeDirectoryInfo": "{DISTRO} разработан для бесшовной интеграции с Active Directory с целью упрощения администрирования.",
+  "activeDirectoryInfo": "Система {DISTRO} разработана для бесшовной интеграции с Active Directory с целью упрощения администрирования.",
   "@activeDirectoryInfo": {
     "placeholders": {
       "DISTRO": {
