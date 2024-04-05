@@ -174,6 +174,7 @@ abstract class FactoryResetToolsLocalizations {
     Locale('de'),
     Locale('dz'),
     Locale('el'),
+    Locale('en'),
     Locale('eo'),
     Locale('es'),
     Locale('et'),
@@ -228,7 +229,6 @@ abstract class FactoryResetToolsLocalizations {
     Locale('tg'),
     Locale('th'),
     Locale('tl'),
-    Locale('en'),
     Locale('tr'),
     Locale('ug'),
     Locale('uk'),
@@ -427,7 +427,7 @@ class _FactoryResetToolsLocalizationsDelegate extends LocalizationsDelegate<Fact
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'en', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_FactoryResetToolsLocalizationsDelegate old) => false;
@@ -467,6 +467,7 @@ FactoryResetToolsLocalizations lookupFactoryResetToolsLocalizations(Locale local
     case 'de': return FactoryResetToolsLocalizationsDe();
     case 'dz': return FactoryResetToolsLocalizationsDz();
     case 'el': return FactoryResetToolsLocalizationsEl();
+    case 'en': return FactoryResetToolsLocalizationsEn();
     case 'eo': return FactoryResetToolsLocalizationsEo();
     case 'es': return FactoryResetToolsLocalizationsEs();
     case 'et': return FactoryResetToolsLocalizationsEt();
@@ -520,7 +521,6 @@ FactoryResetToolsLocalizations lookupFactoryResetToolsLocalizations(Locale local
     case 'tg': return FactoryResetToolsLocalizationsTg();
     case 'th': return FactoryResetToolsLocalizationsTh();
     case 'tl': return FactoryResetToolsLocalizationsTl();
-    case 'en': return FactoryResetToolsLocalizationsEn();
     case 'tr': return FactoryResetToolsLocalizationsTr();
     case 'ug': return FactoryResetToolsLocalizationsUg();
     case 'uk': return FactoryResetToolsLocalizationsUk();
