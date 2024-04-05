@@ -28,9 +28,12 @@ class LoadingPage extends ConsumerWidget with ProvisioningPage {
       content: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox.square(
-            dimension: 72,
-            child: RepaintBoundary(child: YaruCircularProgressIndicator()),
+          const Hero(
+            tag: 'loading',
+            child: SizedBox.square(
+              dimension: 72,
+              child: RepaintBoundary(child: YaruCircularProgressIndicator()),
+            ),
           ),
           const SizedBox(height: kWizardSpacing * 2),
           Text(lang.loadingHeader(flavor.displayName), style: style),
