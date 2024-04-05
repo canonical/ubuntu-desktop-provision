@@ -7,7 +7,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class HorizontalPage extends ConsumerWidget {
-  HorizontalPage({
+  const HorizontalPage({
     required this.windowTitle,
     required this.title,
     required this.children,
@@ -77,8 +77,6 @@ class HorizontalPage extends ConsumerWidget {
   /// The snack bar to use (default is none).
   final SnackBar? snackBar;
 
-  final ScrollController _scrollController = ScrollController();
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
@@ -120,14 +118,11 @@ class HorizontalPage extends ConsumerWidget {
                     flex: managedScrolling ? 1 : _contentFlex,
                     child: managedScrolling
                         ? Center(
-                            child: Scrollbar(
-                              controller: _scrollController,
-                              thumbVisibility: true,
-                              child: ListView(
-                                padding: hoverPadding +
-                                    EdgeInsets.only(right: scrollBarPadding),
-                                shrinkWrap: true,
-                                controller: _scrollController,
+                            child: SingleChildScrollView(
+                              padding: hoverPadding +
+                                  EdgeInsets.only(right: scrollBarPadding),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   _Headline(
                                     title: title,
