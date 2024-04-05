@@ -254,7 +254,6 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
   final services = [
     getService<InstallerService>().init(),
     tryGetService<DesktopService>()?.inhibit() ?? Future.value(),
-    getService<RefreshService>().check(),
     getService<PageConfigService>().load(),
     geo.init(),
     telemetry.init({
