@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:dbus/dbus.dart';
 import 'package:factory_reset_tools/dbus/drive_data.dart';
-import 'package:factory_reset_tools/dbus/reset_media.dart';
 
 const int minimumRequiredDiskSize = 16 << 30;
 
@@ -171,33 +170,5 @@ class DriveManager {
     }
     drives.sort((a, b) => a.id.compareTo(b.id));
     return drives;
-  }
-
-  static Stream<ResetMediaCreationProgress> createFakeResetMedia(
-    String targetDevicePath,
-  ) async* {
-    await Future.delayed(const Duration(seconds: 3));
-
-    for (var i = 0.0; i < 1.0; i += 0.01) {
-      yield ResetMediaCreationProgress(
-        ResetMediaCreationStatus.copying,
-        i,
-        null,
-      );
-      await Future.delayed(const Duration(milliseconds: 100));
-    }
-
-    yield ResetMediaCreationProgress(
-      ResetMediaCreationStatus.finalizing,
-      1,
-      null,
-    );
-    await Future.delayed(const Duration(seconds: 3));
-
-    yield ResetMediaCreationProgress(
-      ResetMediaCreationStatus.finished,
-      1,
-      null,
-    );
   }
 }

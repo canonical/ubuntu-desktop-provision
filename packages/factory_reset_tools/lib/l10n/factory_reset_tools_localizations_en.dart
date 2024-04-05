@@ -47,7 +47,28 @@ class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
   String get loadingDrives => 'Please wait while we fetch the drives.';
 
   @override
+  String get resetMediaReadyTitle => 'USB reset media is ready';
+
+  @override
+  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+
+  @override
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+
+  @override
+  String get resetMediaInitializing => 'Initializing';
+
+  @override
+  String get resetMediaCopying => 'Copying';
+
+  @override
+  String get resetMediaFinalizing => 'Finalizing';
+
+  @override
+  String get resetMediaFinished => 'Finished';
+
+  @override
+  String get resetMediaFailed => 'Failed';
 
   @override
   String get error => 'Error';
@@ -66,6 +87,9 @@ class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
 
   @override
   String get failed => 'Failed to run command';
+
+  @override
+  String get close => 'Close';
 
   @override
   String get ok => 'OK';

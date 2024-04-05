@@ -37,8 +37,10 @@ class CreateResetMediaCommand extends Command<void> {
       printUsage();
       throw Exception('missing disk path');
     }
-    await for (final progress
-        in createResetMedia(argResults.rest[0], fsuuid: fsuuid)) {
+    await for (final progress in createResetMedia(
+      argResults.rest[0],
+      fsuuid: fsuuid,
+    )) {
       stdout.write(
         "${((progress.percent ?? 0.0) * 100).toStringAsFixed(2)}% ${progress.status.name} ${progress.errMsg ?? ""}"
             .padRight(75),

@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:async/async.dart';
 import 'package:dbus/dbus.dart';
+import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:retry/retry.dart';
 
 const fsuuidFilePathDefault = '/etc/reset_partition_fsuuid';
@@ -10,7 +11,17 @@ enum ResetMediaCreationStatus {
   copying,
   finalizing,
   finished,
-  failed
+  failed;
+
+  String displayName(FactoryResetToolsLocalizations lang) {
+    return switch (this) {
+      ResetMediaCreationStatus.initializing => lang.resetMediaInitializing,
+      ResetMediaCreationStatus.copying => lang.resetMediaCopying,
+      ResetMediaCreationStatus.finalizing => lang.resetMediaFinalizing,
+      ResetMediaCreationStatus.finished => lang.resetMediaFinished,
+      ResetMediaCreationStatus.failed => lang.resetMediaFailed
+    };
+  }
 }
 
 class ResetMediaCreationProgress {
@@ -347,15 +358,23 @@ Stream<ResetMediaCreationProgress> createResetMedia(
 
   tmpDir.deleteSync();
 
-  final resetPartition = await getResetPartition(fsuuid: fsuuid);
+  Partition? resetPartition;
   String rpPath;
   var rpUnmount = true;
   try {
+    resetPartition = await getResetPartition(fsuuid: fsuuid);
     rpPath = await resetPartition.mount();
+  } on PathNotFoundException catch (e) {
+    yield ResetMediaCreationProgress(
+      ResetMediaCreationStatus.failed,
+      null,
+      'Reset partition not found: $e',
+    );
+    rethrow;
   } on DBusMethodResponseException catch (e) {
     if (e.errorName == 'org.freedesktop.UDisks2.Error.AlreadyMounted') {
       rpUnmount = false;
-      rpPath = await resetPartition.getMountPoint();
+      rpPath = await resetPartition!.getMountPoint();
     } else {
       rethrow;
     }
@@ -393,4 +412,32 @@ Stream<ResetMediaCreationProgress> createResetMedia(
       }
     }
   }
+}
+
+Stream<ResetMediaCreationProgress> createFakeResetMedia(
+  String targetDevicePath,
+) async* {
+  await Future.delayed(const Duration(seconds: 3));
+
+  for (var i = 0.0; i < 1.0; i += 0.01) {
+    yield ResetMediaCreationProgress(
+      ResetMediaCreationStatus.copying,
+      i,
+      null,
+    );
+    await Future.delayed(const Duration(milliseconds: 100));
+  }
+
+  yield ResetMediaCreationProgress(
+    ResetMediaCreationStatus.finalizing,
+    1,
+    null,
+  );
+  await Future.delayed(const Duration(seconds: 3));
+
+  yield ResetMediaCreationProgress(
+    ResetMediaCreationStatus.finished,
+    1,
+    null,
+  );
 }

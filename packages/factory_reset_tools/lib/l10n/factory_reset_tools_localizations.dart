@@ -175,11 +175,53 @@ abstract class FactoryResetToolsLocalizations {
   /// **'Please wait while we fetch the drives.'**
   String get loadingDrives;
 
+  /// No description provided for @resetMediaReadyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'USB reset media is ready'**
+  String get resetMediaReadyTitle;
+
+  /// No description provided for @resetMediaReadyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.'**
+  String get resetMediaReadyBody;
+
   /// No description provided for @errorLoadingDrives.
   ///
   /// In en, this message translates to:
   /// **'An error occurred while fetching the drives.'**
   String get errorLoadingDrives;
+
+  /// No description provided for @resetMediaInitializing.
+  ///
+  /// In en, this message translates to:
+  /// **'Initializing'**
+  String get resetMediaInitializing;
+
+  /// No description provided for @resetMediaCopying.
+  ///
+  /// In en, this message translates to:
+  /// **'Copying'**
+  String get resetMediaCopying;
+
+  /// No description provided for @resetMediaFinalizing.
+  ///
+  /// In en, this message translates to:
+  /// **'Finalizing'**
+  String get resetMediaFinalizing;
+
+  /// No description provided for @resetMediaFinished.
+  ///
+  /// In en, this message translates to:
+  /// **'Finished'**
+  String get resetMediaFinished;
+
+  /// No description provided for @resetMediaFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get resetMediaFailed;
 
   /// No description provided for @error.
   ///
@@ -216,6 +258,12 @@ abstract class FactoryResetToolsLocalizations {
   /// In en, this message translates to:
   /// **'Failed to run command'**
   String get failed;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
 
   /// No description provided for @ok.
   ///

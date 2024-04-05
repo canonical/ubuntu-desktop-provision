@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/foundation.dart';
 import 'package:yaru/widgets.dart';
 
 class CreationProgressPage extends ConsumerStatefulWidget {
@@ -24,6 +25,11 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   );
 
   void onStatusChanged(ResetMediaCreationProgress progress) {
+    if (progress.status == ResetMediaCreationStatus.finished) {
+      Future.delayed(const Duration(seconds: 2), () {
+        Wizard.of(context).next();
+      });
+    }
     setState(() {
       _progress = progress;
     });
@@ -32,7 +38,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   @override
   void initState() {
     super.initState();
-    createResetMediaAsyncStream ??= createResetMedia(
+    createResetMediaAsyncStream ??= createFakeResetMedia(
       ref.read(selectedMediaProvider)!.devicePath,
     );
     createResetMediaAsyncStream!.listen(onStatusChanged);
@@ -42,11 +48,11 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   Widget build(BuildContext context) {
     final lang = FactoryResetToolsLocalizations.of(context);
     final theme = Theme.of(context);
+    final isFailed = _progress.status == ResetMediaCreationStatus.failed;
 
-    var msgText = _progress.status.name;
+    var msgText = _progress.status.displayName(lang);
     if (_progress.percent != null) {
-      msgText =
-          '${((_progress.percent ?? 0.0) * 100).toStringAsFixed(2)}% $msgText';
+      msgText = '$msgText ${((_progress.percent ?? 0.0) * 100).round()}%';
     }
     if (_progress.errMsg != null) {
       msgText = '${_progress.status.name} ${_progress.errMsg}';
@@ -63,7 +69,9 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(msgText, style: theme.textTheme.titleLarge),
-                LinearProgressIndicator(value: _progress.percent),
+                if (!isFailed) ...[
+                  LinearProgressIndicator(value: _progress.percent),
+                ],
                 SizedBox(height: theme.textTheme.titleLarge?.height ?? 0),
               ].withSpacing(kWizardSpacing),
             ),
@@ -71,6 +79,19 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
           const Spacer(),
         ],
       ),
+      bottomBar: isFailed
+          ? WizardBar(
+              leading: const BackWizardButton(),
+              trailing: [
+                WizardButton(
+                  label: lang.close,
+                  onActivated: () async {
+                    await YaruWindow.of(context).close();
+                  },
+                ),
+              ],
+            )
+          : null,
     );
   }
 }

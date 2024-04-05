@@ -1,4 +1,5 @@
 import 'package:factory_reset_tools/pages/creation_progress_page.dart';
+import 'package:factory_reset_tools/pages/done_page.dart';
 import 'package:factory_reset_tools/pages/factory_reset_page.dart';
 import 'package:factory_reset_tools/pages/home_page.dart';
 import 'package:factory_reset_tools/pages/media_selector_page.dart';
@@ -35,7 +36,7 @@ class ResetToolsWizard extends StatelessWidget {
           builder: (context) => const CreationProgressPage(),
         ),
         ResetToolsRoutes.done.name: WizardRoute(
-          builder: (context) => const HomePage(),
+          builder: (context) => const DonePage(),
         ),
         ResetToolsRoutes.factoryReset.name: WizardRoute(
           builder: (context) => const FactoryResetPage(),
