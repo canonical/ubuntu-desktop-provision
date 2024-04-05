@@ -647,5 +647,23 @@
     }
   },
   "refreshRestart": "Mercés de reaviar l’installador.",
-  "@refreshRestart": {}
+  "@refreshRestart": {},
+  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml :",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Installacion interactiva",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "Installacion automatizada",
+  "@autoinstallAutomatedOption": {},
+  "warningLabel": "Avertiment :",
+  "@warningLabel": {},
+  "autoinstallTitle": "Tipe d’installacion",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Cossí volriatz installar {DISTRO} ?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
