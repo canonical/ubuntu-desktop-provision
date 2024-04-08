@@ -1,3 +1,7 @@
 {
-  "@@locale": "cs"
+  "@@locale": "cs",
+  "ok": "Budiž",
+  "@ok": {},
+  "close": "Zavřít",
+  "@close": {}
 }
