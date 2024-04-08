@@ -113,7 +113,7 @@ class _ValidateButton extends StatelessWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: MaterialStateProperty.all(kPushButtonSize),
       ),
-      onPressed: model.apply,
+      onPressed: model.url.isNotEmpty ? model.apply : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
