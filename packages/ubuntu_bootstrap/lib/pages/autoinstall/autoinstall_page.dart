@@ -6,6 +6,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
+import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
@@ -21,17 +22,19 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(autoinstallModelProvider);
     final flavor = ref.watch(flavorProvider);
+
     return HorizontalPage(
       windowTitle: lang.autoinstallTitle,
       title: lang.autoinstallHeader(flavor.displayName),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          WizardButton(
-            visible: !model.autoinstall,
-            label: UbuntuLocalizations.of(context).nextLabel,
-            onActivated: Wizard.of(context).next,
-          )
+          model.autoinstall
+              ? _ValidateButton(model: model)
+              : WizardButton(
+                  label: UbuntuLocalizations.of(context).nextLabel,
+                  onActivated: Wizard.of(context).next,
+                ),
         ],
       ),
       children: [
@@ -86,32 +89,47 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
                       orElse: () => null,
                     ),
                   ),
-                  const SizedBox(height: kWizardSpacing),
-                  ElevatedButton(
-                    onPressed: model.apply,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (model.state.isLoading) ...[
-                          SizedBox.square(
-                            dimension: 16.0,
-                            child: YaruCircularProgressIndicator(
-                              color: Theme.of(context).colorScheme.onPrimary,
-                              strokeWidth: 2,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                        ],
-                        Text(lang.validate),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ),
           ),
         ),
       ],
+    );
+  }
+}
+
+class _ValidateButton extends StatelessWidget {
+  const _ValidateButton({required this.model});
+
+  final AutoinstallModel model;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final lang = UbuntuBootstrapLocalizations.of(context);
+
+    return ElevatedButton(
+      style: theme.elevatedButtonTheme.style?.copyWith(
+        minimumSize: MaterialStateProperty.all(kPushButtonSize),
+      ),
+      onPressed: model.url.isNotEmpty ? model.apply : null,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (model.state.isLoading) ...[
+            SizedBox.square(
+              dimension: 16.0,
+              child: YaruCircularProgressIndicator(
+                color: Theme.of(context).colorScheme.onPrimary,
+                strokeWidth: 2,
+              ),
+            ),
+            const SizedBox(width: 8),
+          ],
+          Text(lang.validate),
+        ],
+      ),
     );
   }
 }
