@@ -140,10 +140,6 @@ The UI is written in [Flutter](https://flutter.dev/) and consists of multiple Da
 
 TODO
 
-## Translations
-
-TODO
-
 ## Contributing
 
 See our [contributor guidelines](CONTRIBUTING.md).
