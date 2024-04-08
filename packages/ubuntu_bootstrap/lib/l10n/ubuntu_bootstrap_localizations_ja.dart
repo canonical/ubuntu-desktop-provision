@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'インストールの種類';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '$DISTRO をインストールしますか？';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'autoinstall.yamlのURLを入力:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => '対話式インストール';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'インストール中ガイドに従ってインストールしたいユーザー向けです。';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => '自動インストール';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'autoinstall.yamlを用いて一貫性と反復性のあるシステムセットアップを行いたい高度なユーザー向けです。';
 
   @override
   String get changeButtonText => '変更';
@@ -43,7 +43,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return '$DISTROへ、ようこそ。';
+    return '$DISTRO へようこそ';
   }
 
   @override
@@ -52,23 +52,23 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => '警告:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return '$DISTROを試してみるか、インストールします';
+    return '$DISTROを試用またはインストール';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO で何をしますか？';
   }
 
   @override
   String get tryOrInstallRepairOption => '修復インストール';
 
   @override
-  String get tryOrInstallRepairDescription => '修復すると、ドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。';
+  String get tryOrInstallRepairDescription => '修復はドキュメントや設定はそのままにして、インストールされているすべてのソフトウェアを再インストールします。';
 
   @override
   String tryOption(String RELEASE) {
@@ -87,7 +87,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return '現在の OS と一緒に (または代わりに) $RELEASE をインストールします。これはあまり時間がかからないはずです。';
+    return '現在の OS と一緒に (または代わりに) $RELEASE をインストールします。あまり時間がかからないはずです。';
   }
 
   @override
@@ -96,10 +96,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RSTが有効になっています。';
+  String get rstTitle => 'RSTを検出';
 
   @override
-  String get rstHeader => '続行するにはRSTをオフにしてください。';
+  String get rstHeader => '続行するにはRSTをオフにしてください';
 
   @override
   String rstDescription(String DISTRO) {
@@ -121,7 +121,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get configureSecureBootOption => 'セキュアブートを設定';
 
   @override
-  String get chooseSecurityKey => 'セキュリティキーを決めてください。';
+  String get chooseSecurityKey => 'セキュリティキーを決めてください';
 
   @override
   String get confirmSecurityKey => 'セキュリティキーをもう一度入力';
@@ -130,7 +130,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get dontInstallDriverSoftwareNow => '今はドライバーソフトウェアをインストールしない';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => '「ソフトウェアとアップデート」で後でインストールできます。';
+  String get dontInstallDriverSoftwareNowDescription => 'あとで「ソフトウェアとアップデート」でインストールできます。';
 
   @override
   String get configureSecureBootSecurityKeyRequired => 'セキュリティキーが必要です';
@@ -139,45 +139,45 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'セキュリティキーが一致しません';
 
   @override
-  String get showSecurityKey => 'セキュリティキーを表示します';
+  String get showSecurityKey => '表示';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => '非表示';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'アプリケーションとアップデート';
+  String get updatesOtherSoftwarePageTitle => 'アプリケーション';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'あらかじめいくつかのアプリケーションをインストールします。選択してください。';
+  String get updatesOtherSoftwarePageDescription => '開始時にどのアプリをインストールしますか？';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'コンピューターを最適化';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => '推奨するプロプライエタリなソフトウェアをインストールしますか？';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO は既定ではプロプライエタリなソフトウェアは含みません。追加のソフトウェアをインストールすると、コンピューターのパフォーマンスが改善するかもしれません。';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIAグラフィックカードを検出';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'NVIDIAグラフィックカードのパフォーマンスを引き出すために、追加のドライバーをインストールすることを強く推奨します。';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => '拡張選択';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'オフィスツール、ユーティリティにWebブラウザーを含み、オフラインに優しい選択です。';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => '既定の選択';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => '最小限のWebブラウザーと基本的なユーティリティのみです。';
 
   @override
   String get otherOptions => 'その他のオプション';
@@ -192,59 +192,59 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'グラフィックスとWi-Fi 機器用のサードパーティ製ソフトウェアをインストールする';
 
   @override
-  String get installDriversSubtitle => 'これらのドライバーは自身のドキュメントに含まれるライセンス条項に従い、プロプライエタリです。';
+  String get installDriversSubtitle => 'NVIDIAドライバーなどを含みますが、それに限定しません';
 
   @override
   String get installCodecsTitle => '追加のメディアフォーマット用のサポートをダウンロードしてインストールする';
 
   @override
-  String get installCodecsSubtitle => 'このソフトウェアはそのドキュメントに含まれるライセンス条項に従います。いくつかはプロプライエタリです。';
+  String get installCodecsSubtitle => 'MP4、MOV対応などを含みますが、それに限定しません';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'このコンピューターには電源ケーブルが接続されていません。';
 
   @override
   String get offlineWarning => '現在オフラインです';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'ディスクのパスフレーズ';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'パスフレーズを作成';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'ファイルを暗号化するパスフレーズが必要です。コンピューターの電源を入れるたびに毎回パスフレーズを入力します。';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'パスフレーズを入力';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'パスフレーズを確認';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'パスフレーズが必要です';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'パスフレーズが一致しません';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => '確実にパスフレーズを保存してください';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'もしパスフレーズを失うと、すべてのデータが消失します。';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'パスフレーズを作成';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'パスフレーズを確認';
 
   @override
-  String get installationTypeTitle => 'インストール方法を選択';
+  String get installationTypeTitle => 'ディスクのセットアップ';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'どうやって $DISTRO をインストールしますか？';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => '選択したディスクにクリーンな状態でインストールします。';
 
   @override
   String get installationTypeAdvancedLabel => '高度な機能…';
@@ -278,51 +278,51 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => '高度な機能';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => '実験的';
 
   @override
   String get installationTypeNone => 'なし';
 
   @override
-  String get installationTypeNoneSelected => '何も選択されていません';
+  String get installationTypeNoneSelected => '何も選択していません';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'LVMを使用';
 
   @override
-  String get installationTypeLVMSelected => 'LVM を選択しました';
+  String get installationTypeLVMSelected => 'LVM を選択';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'LVMと暗号化を使用';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択しました';
+  String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択';
 
   @override
   String get installationTypeEncryptInfo => 'セキュリティキーは次のステップで選択します。';
 
   @override
-  String get installationTypeZFS => '試験的： ディスクを消去して ZFS を使用する';
+  String get installationTypeZFS => 'ディスクを消去して ZFS を使用';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'ディスクを消去してZFSを暗号化';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS を選択しました';
+  String get installationTypeZFSSelected => 'ZFS を選択';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFSと暗号化を選択';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'ハードウェアベースのディスク全体暗号化';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'これは実験的な機能です。 このハードウェアが将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TMP暗号化</a> をよく読んでください。';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPMを選択';
 
   @override
   String installationTypeReinstall(String os) {
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return '自分で $DISTRO をインストールするパーティションの作成やサイズ変更を行ったり、インストールに複数のパーティションを選択することもできます';
+    return '自分で $DISTRO をインストールするパーティションの作成やサイズ変更を行ったり、インストールに複数のパーティションを選択することもできます。';
   }
 
   @override
@@ -371,13 +371,13 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => '選択したディスクにクリーンな状態でインストールします。';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'ドライブを選択:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'パーティションを選択:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'ディスク全体が使用されます。';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'どこに $DISTRO をインストールするか選択';
   }
 
   @override
@@ -420,10 +420,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => '手動パーティショニング';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'マウントポイントは必ず\"/\"から開始してください';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'マウントポイントにスペースを入れることはできません';
 
   @override
   String get diskHeadersDevice => 'デバイス';
@@ -468,10 +468,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get bootLoaderDevice => 'ブートローダーをインストールするデバイスを選択してください';
 
   @override
-  String get partitionCreateTitle => 'パーティションを作成する';
+  String get partitionCreateTitle => 'パーティションを作成';
 
   @override
-  String get partitionEditTitle => 'パーティションを編集する';
+  String get partitionEditTitle => 'パーティションを編集';
 
   @override
   String get partitionSizeLabel => 'サイズ：';
@@ -502,7 +502,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'フォーマットを $format のままにする';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'インストールの準備完了';
 
   @override
-  String get confirmHeader => '続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます。';
+  String get confirmHeader => '続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'なし';
 
   @override
   String get confirmDevicesTitle => 'デバイス';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'アプリケーション';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'ディスクのセットアップ';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'ディスクの暗号化';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'インストールするディスク';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'プロプライエタリなソフトウェア';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => '一般';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'セキュリティなど';
 
   @override
   String get confirmPartitionsTitle => 'パーティション';
@@ -569,37 +569,37 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'パーティション<b>$sysname</b>のサイズが<b>$oldsize</b>から<b>$newsize</b>に変更されます。';
+    return 'パーティション<b>$sysname</b>のサイズが<b>$oldsize</b>から<b>$newsize</b>に変更されます';
   }
 
   @override
   String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされ、<b>$mount</b>として使用されます。';
+    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされ、<b>$mount</b>として使用されます';
   }
 
   @override
   String confirmPartitionFormat(String sysname, String format) {
-    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされます。';
+    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされます';
   }
 
   @override
   String confirmPartitionMount(String sysname, String mount) {
-    return 'パーティション<b>$sysname</b>は<b>$mount</b>として使用されます。';
+    return 'パーティション<b>$sysname</b>は<b>$mount</b>として使用されます';
   }
 
   @override
   String confirmPartitionCreate(String sysname) {
-    return 'パーティション<b>$sysname</b>が作成されました。';
+    return 'パーティション<b>$sysname</b>が作成されました';
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'コーデック';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'コーデックとドライバー';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'ドライバー';
 
   @override
   String get confirmInstallButton => 'インストール';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** がディスクへコピーされました';
   }
 
   @override
@@ -623,25 +623,25 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'インストールを完了するために再起動するか、試用を続けてください。\nいかなる変更点も保存されません。';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'インストール処理の継続のためコンピューターを再起動してください。';
 
   @override
   String get shutdown => 'シャットダウン';
 
   @override
-  String get restartNow => '今すぐ再起動する';
+  String get restartNow => '今すぐ再起動';
 
   @override
   String get continueTesting => '試用を続ける';
 
   @override
-  String get bitlockerTitle => 'BitLockerが有効になっています。';
+  String get bitlockerTitle => 'BitLockerが有効になっています';
 
   @override
-  String get bitlockerHeader => '続行するにはBitLockerをオフにしてください。';
+  String get bitlockerHeader => '続行するにはBitLockerをオフにしてください';
 
   @override
   String bitlockerDescription(String option) {
@@ -650,7 +650,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerInstructions(String url) {
-    return '手順については、別のデバイスでこのQRコードを読み取るか、次のURLへアクセスしてください：<a href=\"https://$url\">$url</a>';
+    return '手順は、別のデバイスでQRコードをスキャンするか、<a href=\"https://$url\">$url</a>をご確認ください';
   }
 
   @override
@@ -661,7 +661,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return '本当にコンピュータを再起動しますか？ $DISTROのインストールを完了するためには、後で再起動する必要があります。';
+    return '本当にコンピュータを再起動しますか？ $DISTROのインストールを完了するためには、あとで再起動する必要があります。';
   }
 
   @override
@@ -673,7 +673,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationSlidesAvailable => 'インストール可能：';
 
   @override
-  String get installationSlidesIncluded => '含まれるソフト：';
+  String get installationSlidesIncluded => '含まれるアプリ：';
 
   @override
   String get installationSlidesWelcomeTitle => '高速で無料で、新機能が満載';
@@ -717,7 +717,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTROは最新のNVIDIAはMesaのドライバーをサポートし、パフォーマンスや互換性が向上しています。Steamのようなアプリケーションを利用することで、数多くのWindowsゲームを$DISTRO上で特別な設定なくプレイできます。';
+    return '$DISTROは最新のNVIDIとMesaのドライバーをサポートし、パフォーマンスや互換性が向上しています。Steamのようなアプリケーションを利用することで、数多くのWindowsゲームを$DISTRO上で特別な設定なくプレイできます。';
   }
 
   @override
@@ -764,7 +764,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntuでは様々な質問と回答をカバーし、Ubuntu Discourseは新規ユーザーと経験豊富なユーザーのためのガイドと議論の場を提供します。';
+  String get installationSlidesSupportCommunity => 'Ask Ubuntuではさまざまな質問と回答をカバーし、Ubuntu Discourseは新規ユーザーと経験豊富なユーザーのためのガイドと議論の場を提供します。';
 
   @override
   String get installationSlidesSupportEnterprise => 'Canonicalは、企業ユーザー向けに職場でUbuntuを安全に導入・管理するための商用サポートを提供しています。';
@@ -805,157 +805,157 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => '必要：';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'アップデートがあります';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'インストーラーのアップデートが適用できます';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => '今すぐアップデート';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => '最新バージョンにアップデートすると、信頼性が改善し機能が増えます。';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'アップデートの準備完了';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return '現在の $snap バージョンは $versionです。';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'バージョン $version にアップデート';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return '現在のバージョン $version は最新です。';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap のアップデート中...';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => '続けるには、一旦閉じてもう一度インストーラーを起動してください';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'インストーラーを閉じる';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap に必要な前処理中...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap のリフレッシュ中...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap の再リフレッシュを確認中...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap の準備中...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap のダウンロード中...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap の確認中...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap のマウント中...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap サービスを停止中...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap のエイリアスを削除中...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap のリンクを削除中...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap 関連のアップデート中...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap のカーネルコマンドラインをアップデート中...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap のデータをコピー中...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap のセキュリティプロファイルを設定中...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap のリンク中...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap のプラグとスロットに接続中...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return '自動 $snap エイリアスを設定中...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap エイリアスのセットアップ中...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap サービスを開始中...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap のクリーンアップ中...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPMリカバリーキー';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'インストール後、次のコマンドでリカバリーキーがわかります:';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">警告:</font> セキュリティキーを紛失すると、すべてのデータを失います。必要であればキーを書き出し、安全な場所に保管してください。';
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => '確認';
 }

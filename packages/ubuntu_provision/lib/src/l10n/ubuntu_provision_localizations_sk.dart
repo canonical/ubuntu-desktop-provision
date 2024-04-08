@@ -5,80 +5,80 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Prístupnosť';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Dostupnosť v $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Pred nastavením si prispôsobte $DISTRO svojim potrebám. Neskôr ich môžete zmeniť v nastaveniach systému.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Zrak';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Sluch';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Písanie';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Ukazovanie a klikanie';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Lupa';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Vysoký kontrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Veľký text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Redukcia animácie';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Čítačka obrazovky';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Vizuálne varovania';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Lepkavé klávesy';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Pomalé klávesy';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Myš klávesmi';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Priblíženie plochy';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Niečo sa pokazilo';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Ospravedlňujeme sa , ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie . Môžete tiež <a> nahlásiť problém </a> .';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Zobraziť denník';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Skryť denník';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reštartovať';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zavrieť';
 
   @override
-  String get timezonePageTitle => 'Vyberte si svoje časové pásmo';
+  String get timezonePageTitle => 'Vyberte časové pásmo';
 
   @override
   String get timezoneLocationLabel => 'Umiestnenie';
@@ -90,10 +90,10 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Rozloženie klávesnice';
 
   @override
-  String get keyboardHeader => 'Vyberte si rozloženie klávesnice:';
+  String get keyboardHeader => 'Vyberte rozloženie klávesnice';
 
   @override
-  String get keyboardTestHint => 'Správne fungovanie rozloženia si môžete vyskúšať tu';
+  String get keyboardTestHint => 'Správne fungovanie rozloženia môžete vyskúšať tu';
 
   @override
   String get keyboardDetectTitle => 'Zistiť rozloženie klávesnice';
@@ -102,16 +102,16 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Zistiť';
 
   @override
-  String get keyboardVariantLabel => 'Variant klávesnice:';
+  String get keyboardVariantLabel => 'Vyberte variant klávesnice:';
 
   @override
-  String get keyboardPressKeyLabel => 'Stlačte niektorú z nasledujúcich kláves:';
+  String get keyboardPressKeyLabel => 'Prosím, stlačte niektorú z nasledujúcich kláves:';
 
   @override
   String get keyboardKeyPresentLabel => 'Máte na klávesnici nasledujúci kláves?';
 
   @override
-  String get themePageTitle => 'Vyberte si motív vzhľadu';
+  String get themePageTitle => 'Vyberte motív vzhľadu';
 
   @override
   String get themePageHeader => 'Môžete ho neskôr kedykoľvek zmeniť v nastaveniach vzhľadu.';
@@ -128,10 +128,10 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get localeHeader => 'Vyberte si svoj jazyk:';
+  String get localeHeader => 'Vyberte svoj jazyk:';
 
   @override
-  String get identityPageTitle => 'Nastavenie vášho účtu';
+  String get identityPageTitle => 'Vytvorenie vášho účtu';
 
   @override
   String get identityAutoLogin => 'Prihlásiť sa automaticky';
@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'Zadaný názov pre počítač nie je možné použiť';
 
   @override
-  String get identityUsernameLabel => 'Vyberte si používateľské meno';
+  String get identityUsernameLabel => 'Vaše používateľské meno';
 
   @override
   String get identityUsernameRequired => 'Je potrebné zadať používateľské meno';
@@ -185,7 +185,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Také meno obsahuje neplatné znaky.';
 
   @override
-  String get identityPasswordLabel => 'Vyberte si heslo';
+  String get identityPasswordLabel => 'Heslo';
 
   @override
   String get identityPasswordRequired => 'Je potrebné zadať heslo';
@@ -194,7 +194,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityConfirmPasswordLabel => 'Zopakujte zadanie hesla';
 
   @override
-  String get identityPasswordMismatch => 'Do každej z kolónok pre heslo ste napísali niečo iné';
+  String get identityPasswordMismatch => 'Heslá sa nezhodujú';
 
   @override
   String get identityPasswordShow => 'Zobraziť';
@@ -209,14 +209,14 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'V ďalšom kroku zadáte doménu a ďalšie podrobnosti.';
 
   @override
-  String get activeDirectoryTitle => 'Konfigurácia služby Active Directory';
+  String get activeDirectoryTitle => 'Prihlásenie do Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Prihlásiť sa do Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO je navrhnuté tak, aby sa bezproblémovo integrovalo s Active Directory pre jednoduchšiu správu.';
   }
 
   @override
@@ -274,13 +274,13 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Je nám ľúto, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.';
 
   @override
-  String get networkPageTitle => 'Pripojiť sa k sieti';
+  String get networkPageTitle => 'Pripojenie k internetu';
 
   @override
-  String get networkPageHeader => 'Pripojenie počítača na Internet pomôže Ubuntu nainštalovať akýkoľvek potrebný dodatočný softvér a pomôže vybrať vaše časové pásmo.\n\nPripojte sa Ethernetovým káblom alebo si vyberte Wi-Fi sieť';
+  String get networkPageHeader => 'Pripojte sa na internet';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Internetové pripojenie vylepší vašu inštaláciu pomocou kontroly kompatibility a extra softvérových balíkov.';
 
   @override
   String get networkWiredOption => 'Použiť káblové pripojenie';

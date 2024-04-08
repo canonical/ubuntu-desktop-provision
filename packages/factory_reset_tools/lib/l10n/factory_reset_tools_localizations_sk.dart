@@ -5,49 +5,49 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsSk([String locale = 'sk']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Obnova výrobných nastavení';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Nástroje na obnovenie výrobných nastavení';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Čo by ste chceli urobiť?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Vytvoriť obnovovacie médium';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Spustiť obnovenie výrobných nastavení';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Vytvoriť USB obnovovacie médium';
 
   @override
   String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Vyberte USB pamäťovú jednotku. Na disku musí byť aspoň 16 GB voľného miesta';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Pamäťová jednotka bude preformátovaná a všetky údaje na jednotke sa stratia.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB obnovovacie médium';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nenašla sa žiadna vymeniteľná jednotka';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Na vytvorenie obnovovacieho média výrobných nastavení je potrebná USB jednotka.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Výber možností spustenia obnovenia výrobných nastavení';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Prosím, počkajte, načítavajú sa jednotky.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Obnovovacie médium USB je pripravené';
 
   @override
   String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
@@ -56,40 +56,40 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Inicializuje sa';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopíruje sa';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Dokončuje sa';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Dokončené';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Nepodarilo sa';
 
   @override
-  String get error => 'Error';
+  String get error => 'Chyba';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Načítava sa...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Upozornenie';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Obnoviť';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Reštartovať';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Spustenie príkazu zlyhalo';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zavrieť';
 
   @override
   String get ok => 'OK';

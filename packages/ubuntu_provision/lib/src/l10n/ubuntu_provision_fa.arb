@@ -159,5 +159,75 @@
   "activeDirectoryAdminLabel": "کاربرپیسته به دامنه",
   "@activeDirectoryAdminLabel": {},
   "activeDirectoryErrorMessage": "شوربختانه در حال حاضر اکتیو دایرکتوری نمی‌تواند برپا شود. پس از به راه افتادن سامانه <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> را برای کمک ببینید.",
-  "@activeDirectoryErrorMessage": {}
+  "@activeDirectoryErrorMessage": {},
+  "accessibilityPointingLabel": "اشاره و کلیک",
+  "@accessibilityPointingLabel": {},
+  "accessibilityPageBody": "سفارشی‌سازی {DISTRO} برای نیازهایتان پیش از برپایی. می‌توانید بعدها در تنظیمات سامانه تغییرشان دهید.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityDesktopZoomLabel": "بزرگ‌نمایی میزکار",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageShowLog": "نمایش گزارش‌ها",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "نهفتن گزارش‌ها",
+  "@errorPageHideLog": {},
+  "errorPageTitle": "چیزی اشتباه پیش رفت",
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "متأسفانه مطمئن نیستیم که خطا از کجاست. می‌توانید رایانه‌تان را دوباره راه انداخته و فرایند نصب را آغاز کنید. همچنین می‌توانید <a>مشکل را گزارش کنید</a>.",
+  "@errorPageUnexpected": {},
+  "accessibilityPageTitle": "دسترس‌پذیری",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "دسترس‌پذیری در {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "دیدن",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "شنیدن",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "نوشتن",
+  "@accessibilityTypingLabel": {},
+  "accessibilityZoomLabel": "بزرگ‌نمایی",
+  "@accessibilityZoomLabel": {},
+  "restart": "آغاز دوباره",
+  "@restart": {},
+  "close": "بستن",
+  "@close": {},
+  "accessibilityHighContrastLabel": "سایه‌روشن زیاد",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityReduceAnimationLabel": "کاهش پویانمایی",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityLargeTextLabel": "متن بزرگ",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityScreenReaderLabel": "صفحه‌خوان",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "هشدارهای دیداری",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "کلیدهای چسبان",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilityMouseKeysLabel": "کلیدهای موشی",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilitySlowKeysLabel": "نمایش کلیدها",
+  "@accessibilitySlowKeysLabel": {},
+  "activeDirectoryHeader": "ورود به شاخهٔ فعّال؟",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "به منظور مدیریت آسان‌تر {DISTRO} برای یکپارچگی با شاخهٔ فعّال طرّاحی شده.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "اتّصال اینترنتی نصبتان را با بررسی سازگاری و بسته‌های نرم‌افزاری اضافی بهبود خواهد داد.",
+  "@networkPageBody": {}
 }

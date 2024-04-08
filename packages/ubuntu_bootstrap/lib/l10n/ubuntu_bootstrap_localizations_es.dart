@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Introduzca la URL de autoinstall.yaml';
+  String get autoinstallInstructions => 'Introduzca la URL de autoinstall.yaml:';
 
   @override
   String get autoinstallInteractiveOption => 'Instalación interactiva';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Advertencia:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -192,7 +192,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Instalar software de terceros para gráficos y dispositivos de Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Incluidos, entre otros, los controladores NVIDIA y similares.';
+  String get installDriversSubtitle => 'Incluidos, entre otros, los controladores NVIDIA y similares';
 
   @override
   String get installCodecsTitle => 'Descarga e instala un soporte para formatos multimedia adicionales';
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Incluidos, entre otros, MP3, MP4, MOV y similares';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'El ordenador no está conectado a una fuente de alimentación.';
 
   @override
   String get offlineWarning => 'Actualmente no está conectado';
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Empieza desde cero en el disco seleccionado.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Selecciona la unidad:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Selecciona la partición:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Se utilizará todo el disco:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Elige dónde instalar $DISTRO';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Reinicie para completar la instalación o continuar las pruebas.\nLos cambios que realice no se guardarán.';
 
   @override
   String get rebootToConfigureWarning => 'Debe reiniciar el ordenador para continuar con el proceso de instalación.';
@@ -808,16 +808,16 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Actualización disponible';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Existe una actualización disponible para el instalador';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Actualizar ahora';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Actualice a la última versión para mejorar la fiabilidad y obtener más funciones.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Actualización preparada';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -840,10 +840,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Por favor, reinicie el instalador.';
+  String get refreshRestart => 'Por favor, cierre el instalador y vuelva a iniciarlo para continuar';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Cerrar el instalador';
 
   @override
   String refreshSnapPrerequisites(String snap) {

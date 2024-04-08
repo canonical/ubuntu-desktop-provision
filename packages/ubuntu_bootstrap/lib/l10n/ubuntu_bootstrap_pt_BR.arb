@@ -742,5 +742,21 @@
   "minimalInstallationSubtitle": "Apenas o essencial, navegador da web e utilitários básicos.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Instalação completa",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallTitle": "Tipo de instalação",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Como você gostaria de instalar a {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Instalação interativa",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInstructions": "Entre a URL para o autoinstall.yaml:",
+  "@autoinstallInstructions": {},
+  "refreshReady": "Atualização pronta",
+  "@refreshReady": {}
 }

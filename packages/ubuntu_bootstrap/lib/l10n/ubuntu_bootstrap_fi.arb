@@ -735,5 +735,170 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "tryOrInstallHeader": "Mitä haluat tehdä {DISTRO}lla?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageBody": "{DISTRO} ei sisällä oletuksena omisteisia ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Aloita tyhjästä valitsemallasi levyllä.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeTPMInfo": "Tämä on kokeellinen ominaisuus. Se ei välttämättä toimi laitteistollasi tai tulevissa {DISTRO}-jakeluissa. <a href=\"{url}\">Lue TPM-salauksesta</a>, ennen kuin valitset tämän.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Käynnistä uudelleen viimeistelläksesi asennuksen tai jatka testaamista.\nTekemiäsi muutoksia ei tallenneta.",
+  "@restartWarningBody": {},
+  "autoinstallHeader": "Miten haluat, että {DISTRO} asennetaan?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Vuorovaikutteinen asennus",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Käyttäjille, jotka haluvat vaiheittaisesti opastetun asennuksen.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automaattinen asennus",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Edistyneille käyttäjille, joilla on autoinstall-yaml-tiedosto, joka takaa yhtenäisen ja toistettavan asennuksen.",
+  "@autoinstallAutomatedDescription": {},
+  "hideSecurityKey": "Piilota",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageDescription": "Asennetaanko suositellut omisteiset ohjelmistot?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA:n näytönohjain havaittu",
+  "@codecsAndDriversNvidiaNote": {},
+  "batteryWarning": "Tämä tietokone ei ole liitetty virtalähteeseen.",
+  "@batteryWarning": {},
+  "choosePassphraseHint": "Valitse tunnuslause",
+  "@choosePassphraseHint": {},
+  "choosePassphraseTitle": "Levyn tunnuslause",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseRequired": "Tunnuslause on pakollinen",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseHeader": "Luo tunnuslause",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseConfirmHint": "Vahvista tunnuslause",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseMismatch": "Tunnuslauseet eivät vastaa toisiaan",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Varmista, että talletat tunnuslauseen",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Jos unohdat tai kadotat tunnuslauseen, menetät pääsyn dataan.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Luo tunnuslause",
+  "@createPassphrase": {},
+  "installationTypeExperimental": "Kokeellinen",
+  "@installationTypeExperimental": {},
+  "confirmPassphrase": "Vahvista tunnuslause",
+  "@confirmPassphrase": {},
+  "installationTypeLVM": "Käytä LVM:ää",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Käytä LVM:ää ja salausta",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Tyhjennä levy ja käytä ZFS:ää sekä salausta",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS ja salaus valittu",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageDriveDropdownLabel": "Valitse asema:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Valitse osio:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "refreshHeader": "Asennusohjelmaan on saatavilla päivitys",
+  "@refreshHeader": {},
+  "confirmDiskEncryptionNone": "Ei mitään",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryDiskEncryption": "Levyn salaus",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryApplications": "Sovellukset",
+  "@confirmEntryApplications": {},
+  "confirmProprietarySoftwareCodecs": "Koodekit",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Koodekit ja ajurit",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "rebootToConfigure": "**{system}** on kopioitu levylle",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdateNow": "Päivitä nyt",
+  "@refreshUpdateNow": {},
+  "refreshInfo": "Päivitä uusimpaan versioon entistä paremman luotettavuuden ja lisäominaisuuksien vuoksi.",
+  "@refreshInfo": {},
+  "refreshReady": "Päivitys valmistui",
+  "@refreshReady": {},
+  "autoinstallTitle": "Asennuksen tyyppi",
+  "@autoinstallTitle": {},
+  "autoinstallInstructions": "Kirjoita autoinstall.yaml-tiedoston verkko-osoite:",
+  "@autoinstallInstructions": {},
+  "warningLabel": "Varoitus:",
+  "@warningLabel": {},
+  "codecsAndDriversPageTitle": "Optimoi tietokoneesi",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversNvidiaBody": "Lisäajureiden asentamista suositellaan, jotta NVIDIA:n näytönohjaimesta saadaan paras mahdollinen suorituskyky.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseBody": "Tarvitset tunnuslauseen salataksesi tiedostosi. Tunnuslause tulee kirjoittaa joka kerta, kun tietokone käynnistetään.",
+  "@choosePassphraseBody": {},
+  "installationTypeHeader": "Miten haluat asentaa {DISTRO}n?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Aloita tyhjästä valitsemallasi levyllä.",
+  "@selectGuidedStorageInfo": {},
+  "guidedStoragePageHeader": "Valitse mihin {DISTRO} asennetaan",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmEntryDiskSetup": "Levymääritys",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryInstallationDisk": "Asennuslevy",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Omisteinen ohjelmisto",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Yleiset",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Tietoturva ja muu",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareDrivers": "Ajurit",
+  "@confirmProprietarySoftwareDrivers": {},
+  "refreshCloseLabel": "Sulje asennusohjelma",
+  "@refreshCloseLabel": {}
 }

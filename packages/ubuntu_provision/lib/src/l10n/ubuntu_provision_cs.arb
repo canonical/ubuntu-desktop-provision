@@ -159,5 +159,7 @@
   "networkHiddenWifiNameRequired": "Je vyžadován název sítě",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "V tuto chvíli se nechci připojovat k Internetu",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "Zavřít",
+  "@close": {}
 }

@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "键盘布局",
   "@keyboardTitle": {},
-  "keyboardHeader": "选择您的键盘布局：",
+  "keyboardHeader": "选择您的键盘布局",
   "@keyboardHeader": {},
   "keyboardTestHint": "在此键入以测试您的键盘",
   "@keyboardTestHint": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "连接到互联网",
   "@networkPageTitle": {},
-  "networkPageHeader": "将这台电脑连接到互联网有助于 Ubuntu 安装所需的任何额外软件并选择您的时区。\n\n通过以太网电缆连接，或选择 Wi-Fi 网络",
+  "networkPageHeader": "连接到互联网",
   "@networkPageHeader": {},
   "networkWiredOption": "使用有线连接",
   "@networkWiredOption": {},
@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "需要网络名称",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "我现在不想连接到互联网",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "可访问性",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "{DISTRO} 中的可访问性",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "在您安装之前，按您的需要自定义 {DISTRO}。您之后可以在“系统设置”中更改它们。",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "视觉",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "听觉",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "打字",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "指向与点击",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "放大",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "高对比度",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "大号文本",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "减少动画",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "屏幕阅读器",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "视觉警报",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "粘滞键",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "慢速键",
+  "@accessibilitySlowKeysLabel": {},
+  "errorPageTitle": "出问题了",
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "很抱歉，但我们不确定问题所在。您可以尝试重新启动计算机，并再次启动安装进程。您也可以<a>报告问题</a>。",
+  "@errorPageUnexpected": {},
+  "errorPageShowLog": "显示日志",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "隐藏日志",
+  "@errorPageHideLog": {},
+  "restart": "重新启动",
+  "@restart": {},
+  "close": "关闭",
+  "@close": {},
+  "activeDirectoryHeader": "登录 Active Directory 吗？",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} 被设计为与 Active Directory 无缝集成，使管理更轻松。",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "连接网络后，兼容性检查与附加软件包可以改善您的安装。",
+  "@networkPageBody": {},
+  "accessibilityMouseKeysLabel": "鼠标键",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "桌面缩放",
+  "@accessibilityDesktopZoomLabel": {}
 }

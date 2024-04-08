@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Ułatwienia dostępu';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Ułatwienia dostępu w $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Dostosuj $DISTRO do swoich potrzeb przed konfiguracją. Możesz później zmienić dostosowanie w ustawieniach systemu.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Wzrok';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Słuch';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Pisanie';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Wskazywanie i klikanie';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Powiększanie';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Wysoki kontrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Duży tekst';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Ograniczenie animacji';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Czytnik ekranu';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Powiadomienia wizualne';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Lepkie klawisze';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Powolne klawisze';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Klawisze myszy';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Powiększanie pulpitu';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Coś poszło źle';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Przepraszamy, ale nie jesteśmy pewni, na czym polega błąd. Możesz spróbować ponownie uruchomić komputer i jeszcze raz rozpocząć proces instalacji. Możesz także <a>zgłosić problem</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Pokaż dziennik';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Ukryj dziennik';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Uruchom ponownie';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zamknij';
 
   @override
   String get timezonePageTitle => 'Wybierz swoją strefę czasową';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Układ klawiatury';
 
   @override
-  String get keyboardHeader => 'Wybierz układ klawiatury:';
+  String get keyboardHeader => 'Wybierz układ klawiatury';
 
   @override
   String get keyboardTestHint => 'Tutaj można wpisywać znaki, aby przetestować klawiaturę';
@@ -185,7 +185,7 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Ta nazwa zawiera nieprawidłowe znaki.';
 
   @override
-  String get identityPasswordLabel => 'Wybierz hasło';
+  String get identityPasswordLabel => 'Hasło';
 
   @override
   String get identityPasswordRequired => 'Wymagane jest podanie hasła';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Konfigurowanie Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Zalogować się do Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO zaprojektowano do bezproblemowej integracji z Active Directory w celu łatwiejszej administracji.';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Połącz się z siecią';
 
   @override
-  String get networkPageHeader => 'Podłączenie tego komputera do Internetu pomoże systemowi Ubuntu zainstalować dodatkowe potrzebne oprogramowanie i pomoże wybrać strefę czasową.\n\nPołącz się za pomocą kabla Ethernetowego lub wybierz sieć Wi-Fi';
+  String get networkPageHeader => 'Połącz się z Internetem';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Połączenie internetowe usprawni instalację dzięki sprawdzeniu zgodności i dodatkowym pakietom oprogramowania.';
 
   @override
   String get networkWiredOption => 'Użyj połączenia przewodowego';
@@ -322,5 +322,5 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Wymagana jest nazwa sieci';
 
   @override
-  String get networkNoneOption => 'Nie chcę teraz łączyć się z Internetem';
+  String get networkNoneOption => 'Nie łącz się z Internetem';
 }

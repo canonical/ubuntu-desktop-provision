@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Varning:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Inkluderar men inte begränsat till MP3, MP4, MOV och liknande';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Datorn är inte ansluten till en strömkälla.';
 
   @override
   String get offlineWarning => 'Du är för närvarande offline';
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Börja från början på den valda disken.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Välj disk:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Välj partition:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Hela disken kommer att användas:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Välj var du vill installera $DISTRO';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör sparas inte.';
 
   @override
   String get rebootToConfigureWarning => 'Du måste starta om datorn för att fortsätta installationsprocessen.';

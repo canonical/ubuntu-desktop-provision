@@ -5,73 +5,73 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Инструменты сброса';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Инструменты сброса';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Что вы хотите сделать?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Создать носитель для сброса';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Начать сброс';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Создать USB-носитель для сброса';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Создайте USB-носитель для сброса, чтобы восстановить систему, а также настроить установку Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Выберите флэш-накопитель USB. На накопителе должно быть не менее 16 Гб места';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Флеш-накопитель будет переформатирован, а все данные на нём будут потеряны.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-носитель для сброса';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Съемный носитель не обнаружен';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Для создания носителя для сброса необходим USB-накопитель.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Выберите опцию, чтобы начать сброс';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Пожалуйста, подождите, пока мы получим диски.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-носитель для сброса готов';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'Когда захотите им воспользоваться, вставьте этот USB-накопитель в компьютер, который хотите сбросить, и перезагрузите его.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'При получении дисков произошла ошибка.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Инициализация';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Копирование';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Завершение';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Выполнено';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Неудача';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ошибка';
 
   @override
   String get loading => 'Loading...';

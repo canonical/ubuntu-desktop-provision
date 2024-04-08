@@ -19,66 +19,66 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'En strømlinjeformet start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Tilbyr renere oppsettsflyt.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Programbutikk med nytt utseende';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Det har aldri vært enklere å finne dine favorittprogrammer.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Økt sikkerhet';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Nye alternativer for maskinvarebasert- eller ZFS-kryptering.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Vis endringslogg</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetri';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Hjelp til å forbedre $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Del data anonymt med $distro slik at opplevelsen kan forbedres.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Ja, del systemdata med $distro-laget';
   }
 
   @override
   String get telemetryLabelOff => 'Nei, ikke del systemdata';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Innrapporteringsdetaljer';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Innrapporteringsdetaljer';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Juridisk';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Posisjoneringstjenester';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Skru på posisjoneringstjenester?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'La programmer få tilgang til din geografiske plassering.\nDu kan endre dette når som helst i systeminnstillingene.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Posisjoneringstjenster';
 
   @override
   String get privacyPolicyLink => 'Databeskyttelse';
