@@ -973,6 +973,20 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   }
 
   @override
+  String get autoinstallTitle => 'Tipo de instalação';
+
+  @override
+  String autoinstallHeader(String DISTRO) {
+    return 'Como você gostaria de instalar a $DISTRO?';
+  }
+
+  @override
+  String get autoinstallInstructions => 'Entre a URL para o autoinstall.yaml:';
+
+  @override
+  String get autoinstallInteractiveOption => 'Instalação interativa';
+
+  @override
   String get changeButtonText => 'Alterar';
 
   @override
@@ -1584,6 +1598,9 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get refreshPageTitle => 'Atualização disponível';
+
+  @override
+  String get refreshReady => 'Atualização pronta';
 
   @override
   String refreshCurrent(String snap, String version) {

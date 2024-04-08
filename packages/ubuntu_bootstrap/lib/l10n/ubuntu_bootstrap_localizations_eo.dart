@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Tajpu la retadreson de la dosiero «autoinstall.yaml».';
+  String get autoinstallInstructions => 'Tajpu la retadreson de la dosiero «autoinstall.yaml»:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaga instalado';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Averto:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Inkluzive de sed ne limigita al .mp3, .mp4, .mov ktp.';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Ĉi tiu komputilo ne estas konektita al energifonto.';
 
   @override
   String get offlineWarning => 'Vi estas aktuale ne konektita al Interreto';
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Komencu denule forviŝinte vian elektitan diskon.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Elektu diskon:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Elektu subdiskon:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'La tuta disko estas uzota:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Elektu la lokon, kien $DISTRO estas instalota';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Restartigu por kompletigi la instalon, aŭ daŭrigu la provadon.\nAjnaj ŝanĝoj faritaj de vi ne estos konservitaj.';
 
   @override
   String get rebootToConfigureWarning => 'Vi devas restartigi la komputilon por daŭrigi la instaladon.';

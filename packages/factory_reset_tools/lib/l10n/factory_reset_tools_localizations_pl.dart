@@ -5,91 +5,91 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Narzędzia przywracania ustawień fabrycznych';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Narzędzia przywracania ustawień fabrycznych';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Co chcesz zrobić?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Utwórz nośnik przywracania';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Rozpocznij przywracanie ustawień fabrycznych';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Utwórz nośnik USB przywracania';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Utwórz nośnik USB przywracania, aby przywrócić system, a także dostosować instalacje Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Wybierz dysk flash USB. Dysk musi mieć co najmniej 16 GB miejsca';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Dysk flash zostanie ponownie sformatowany, a wszystkie zapisane na nim dane zostaną utracone.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Nośnik USB przywracania';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nie wykryto nośnika wymiennego';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Aby utworzyć nośnik przywracania ustawień fabrycznych, potrzebujesz pamięci USB.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Wybierz opcję, aby rozpocząć przywracanie ustawień fabrycznych';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Poczekaj, aż wykryjemy dyski.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Nośnik USB przywracania jest gotowy';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'Jeśli chcesz z niego skorzystać, włóż dysk USB do komputera, który chcesz przywrócić, i uruchom go ponownie.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Wystąpił błąd podczas wykrywania dysków.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Inicjowanie';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopiowanie';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Kończenie';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Zakończono';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Niepowodzenie';
 
   @override
-  String get error => 'Error';
+  String get error => 'Błąd';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ładowanie...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Ostrzeżenie';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Przywróć';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Uruchom ponownie';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Nie udało się uruchomić polecenia';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zamknij';
 
   @override
   String get ok => 'OK';

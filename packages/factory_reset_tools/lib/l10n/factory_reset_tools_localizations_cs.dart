@@ -5,92 +5,92 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Nástroje pro obnovení továrního nastavení';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Nástroje pro obnovení továrního nastavení';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Co si přejete dělat?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Vytvořit médium pro resetování';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Spustit obnovení továrního nastavení';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Vytvořit USB médium pro resetování';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Vytvořte USB médium pro obnovení systému a také přizpůsobení instalací Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Vyberte USB flash disk. Na disku musí být alespoň 16 GB místa';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Flash disk bude přeformátován a všechna data na disku budou ztracena.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB médium pro resetování';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nezjištěno žádné vyměnitelné úložiště';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'K vytvoření média pro obnovení továrního nastavení potřebujete úložiště USB.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Vyberte možnost pro zahájení obnovy továrního nastavení';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Počkejte prosím, než načteme disky.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB médium pro resetování je připraveno';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'Pokud jej chcete použít, vložte USB disk do počítače, který chcete obnovit, a restartujte jej.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Při načítání disků došlo k chybě.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Inicializace';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopírování';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Dokončování';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Hotovo';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Selhalo';
 
   @override
-  String get error => 'Error';
+  String get error => 'Chyba';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Načítání...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Varování';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Obnovit';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Restartovat';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Nepodařilo se spustit příkaz';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zavřít';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Budiž';
 }

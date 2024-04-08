@@ -84,5 +84,5 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'محرمانگی داده‌ها';
 
   @override
-  String get ubuntuProPageTitle => 'Ubuntu Pro';
+  String get ubuntuProPageTitle => 'اوبونتوی حرفه‌ای';
 }

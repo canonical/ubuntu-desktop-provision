@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Rodzaj instalacji';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Jak chcesz zainstalować $DISTRO?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'Wpisz adres URL pliku autoinstall.yaml:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Instalacja interaktywna';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Dla użytkowników, którzy chcą być prowadzeni krok po kroku przez instalację.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Instalacja zautomatyzowana';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.';
 
   @override
   String get changeButtonText => 'Zmień';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Ostrzeżenie:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Co chcesz zrobić z $DISTRO?';
   }
 
   @override
@@ -96,14 +96,14 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'Funkcja RST jest włączona';
+  String get rstTitle => 'Wykryto RST';
 
   @override
   String get rstHeader => 'Wyłącz funkcję RST, aby kontynuować';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją Ubuntu.';
+    return 'Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją $DISTRO.';
   }
 
   @override
@@ -142,39 +142,39 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Pokaż klucz bezpieczeństwa';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Ukryj';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Aplikacje i aktualizacje';
+  String get updatesOtherSoftwarePageTitle => 'Programy';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'Jakie programy chcesz zainstalować na początek?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Zoptymalizuj swój komputer';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Zainstalować zalecane oprogramowanie własnościowe?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'Domyślnie $DISTRO nie dostarcza żadnego oprogramowania własnościowego. Zainstalowanie dodatkowego oprogramowania może poprawić wydajność komputera.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Wykryto kartę graficzną NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Aby uzyskać najlepszą wydajność kart graficznych NVIDIA, zdecydowanie zaleca się zainstalowanie dodatkowych sterowników.';
 
   @override
-  String get fullInstallationTitle => 'Instalacja pełna';
+  String get fullInstallationTitle => 'Rozszerzony wybór';
 
   @override
-  String get fullInstallationSubtitle => 'Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.';
+  String get fullInstallationSubtitle => 'Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych oraz przeglądarka internetowa.';
 
   @override
-  String get minimalInstallationTitle => 'Instalacja domyślna';
+  String get minimalInstallationTitle => 'Domyślny wybór';
 
   @override
   String get minimalInstallationSubtitle => 'Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.';
@@ -192,59 +192,59 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Zainstaluj oprogramowanie innego dostawcy do sprzętu graficznego i Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Sterowniki te podlegają warunkom licencyjnym dołączonym do ich dokumentacji. Są one własnościowe.';
+  String get installDriversSubtitle => 'W tym między innymi sterowniki NVIDIA i podobne';
 
   @override
   String get installCodecsTitle => 'Pobierz i zainstaluj obsługę dodatkowych formatów multimediów';
 
   @override
-  String get installCodecsSubtitle => 'Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre jest własnościowe.';
+  String get installCodecsSubtitle => 'W tym między innymi MP3, MP4, MOV i podobne';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Komputer nie jest podłączony do źródła zasilania.';
 
   @override
   String get offlineWarning => 'Jesteś obecnie offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Hasło dysku';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Utwórz hasło';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Aby zaszyfrować pliki, potrzebujesz hasła. Przy każdym włączeniu komputera będzie wymagane podanie hasła.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Wybierz hasło';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Potwierdź hasło';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Wymagane jest hasło';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Hasła nie pasują do siebie';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Pamiętaj, aby zapisać swoje hasło';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Jeśli zgubisz hasło, utracisz wszystkie swoje dane.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Utwórz hasło';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Potwierdź hasło';
 
   @override
-  String get installationTypeTitle => 'Typ instalacji';
+  String get installationTypeTitle => 'Konfiguracja dysku';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'W jaki sposób chcesz zainstalować $DISTRO?';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Zacznij od zera na wybranym dysku.';
 
   @override
   String get installationTypeAdvancedLabel => 'Zaawansowane funkcje…';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Zaawansowane funkcje';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Eksperymentalne';
 
   @override
   String get installationTypeNone => 'Brak';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Nie wybrano';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Użyj LVM';
 
   @override
   String get installationTypeLVMSelected => 'Wybrano LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Użyj LVM i szyfrowania';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Wybrano LVM i szyfrowanie';
@@ -302,23 +302,23 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Klucz bezpieczeństwa zostanie wybrany w następnym kroku.';
 
   @override
-  String get installationTypeZFS => 'EKSPERYMENTALNE: wymaż dysk i użyj ZFS';
+  String get installationTypeZFS => 'Wyczyść dysk i użyj ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Wyczyść dysk i użyj ZFS z szyfrowaniem';
 
   @override
   String get installationTypeZFSSelected => 'Wybrano ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'Wybrano ZFS i szyfrowanie';
 
   @override
   String get installationTypeTPM => 'EKSPERYMENTALNE: włącz sprzętowe szyfrowanie całego dysku';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Jest to funkcja eksperymentalna. Może nie działać ze sprzętem w przyszłych wersjach $DISTRO. <a href=\"$url\">Przeczytaj o szyfrowaniu TPM</a>, zanim wybierzesz tę opcję.';
   }
 
   @override
@@ -362,22 +362,22 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Możesz samodzielnie utworzyć lub zmienić rozmiar partycji lub wybrać wiele partycji dla $DISTRO';
+    return 'Dla zaawansowanych użytkowników preferujących niestandardowe konfiguracje dysków.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Wymaż dysk i zainstaluj $DISTRO';
+    return 'Wyczyść dysk i zainstaluj $DISTRO';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Zacznij od zera na wybranym dysku.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Wybierz dysk:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Wybierz partycję:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Zostanie użyta cała powierzchnia dysku:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Wybierz miejsce instalacji $DISTRO';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Gotów do instalacji';
 
   @override
-  String get confirmHeader => 'Jeśli będziesz kontynuować, zmiany wymienione poniżej zostaną zapisane na dyskach. Będzie można wprowadzać dalsze zmiany ręcznie.';
+  String get confirmHeader => 'Przejrzyj swoje wybory';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Brak';
 
   @override
   String get confirmDevicesTitle => 'Urządzenia';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Programy';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Konfiguracja dysku';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Szyfrowanie dysku';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Dysk instalacyjny';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Oprogramowanie własnościowe';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Ogólne';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Bezpieczeństwo i nie tylko';
 
   @override
   String get confirmPartitionsTitle => 'Partycje';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Kodeki';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Kodeki i sterowniki';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Sterowniki';
 
   @override
   String get confirmInstallButton => 'Instaluj';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** skopiowano na dysk';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Uruchom ponownie w celu dokończenia instalacji lub kontynuuj testowanie.\nWszelkie wprowadzone zmiany nie zostaną zapisane.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Musisz ponownie uruchomić komputer, aby kontynuować proces instalacji.';
 
   @override
   String get shutdown => 'Zamknij';
@@ -808,16 +808,16 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Dostępna aktualizacja';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Dostępna jest aktualizacja instalatora';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Zaktualizuj teraz';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Zaktualizuj do najnowszej wersji, aby zwiększyć niezawodność i uzyskać więcej funkcji.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Aktualizacja przygotowana';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -840,10 +840,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Uruchom ponownie instalator.';
+  String get refreshRestart => 'Zamknij instalator i uruchom go ponownie, aby kontynuować';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Zamknij instalator';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Sprawdź';
 }

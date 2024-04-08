@@ -43,7 +43,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Помочь улучшить $distro';
+    return 'Помогите улучшить $distro';
   }
 
   @override

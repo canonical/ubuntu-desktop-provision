@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'კლავიატური განლაგება';
 
   @override
-  String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება:';
+  String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება';
 
   @override
   String get keyboardTestHint => 'კლავიატურის დასატესტად აქ აკრიფეთ';
