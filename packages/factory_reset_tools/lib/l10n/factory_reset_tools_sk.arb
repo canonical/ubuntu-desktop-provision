@@ -53,5 +53,11 @@
   "failed": "Spustenie príkazu zlyhalo",
   "@failed": {},
   "windowTitle": "Nástroje na obnovenie výrobných nastavení",
-  "@windowTitle": {}
+  "@windowTitle": {},
+  "createUsbBody": "Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.",
+  "@createUsbBody": {},
+  "errorLoadingDrives": "Pri načítavaní jednotiek sa vyskytla chyba.",
+  "@errorLoadingDrives": {},
+  "resetMediaReadyBody": "Keď ho chcete použiť, prosím vložte USB disk do počítača, ktorí chcete obnoviť a reštartujte ho.",
+  "@resetMediaReadyBody": {}
 }
