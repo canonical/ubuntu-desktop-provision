@@ -267,11 +267,11 @@ jobs:
 
       - name: Set up QEMU
         if: matrix.platform == 'arm64'
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         if: matrix.platform == 'arm64'
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       - name: Build Debian package in Ubuntu Docker container
         run: |
