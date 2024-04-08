@@ -1,5 +1,5 @@
 {
-  "welcomePageHeader": "Witamy w {distro}",
+  "welcomePageHeader": "Witaj w {distro}",
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "CO NOWEGO?",
   "@welcomeWhatsNew": {},
