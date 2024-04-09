@@ -161,5 +161,73 @@
   "networkNoneOption": "V tuto chvíli se nechci připojovat k Internetu",
   "@networkNoneOption": {},
   "close": "Zavřít",
-  "@close": {}
+  "@close": {},
+  "activeDirectoryHeader": "Přihlásit se do Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} je navrženo tak, aby se hladce integrovalo se službou Active Directory pro snadnější správu.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Připojení k internetu zlepší vaši instalaci pomocí kontroly kompatibility a dalších softwarových balíčků.",
+  "@networkPageBody": {},
+  "accessibilityScreenReaderLabel": "Čtečka obrazovky",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Vizuální upozornění",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityPageHeader": "Přístupnost v {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Před nastavením si {DISTRO} přizpůsobte svým potřebám. Vaše volby můžete později změnit v Nastavení systému.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageTitle": "Přístupnost",
+  "@accessibilityPageTitle": {},
+  "accessibilitySeeingLabel": "Zrak",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Sluch",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Psaní",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Ukazování a klikání",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Přiblížení",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Vysoký kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Velký text",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Snížení animací",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityStickKeysLabel": "Lepicí klávesy",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Pomalé klávesy",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Klávesy myší",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Přiblížení plochy",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Něco se pokazilo",
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "Je nám líto, ale nejsme si jisti, v čem je chyba. Můžete zkusit restartovat počítač a spustit proces instalace znovu. Můžete také <a>problém nahlásit</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageShowLog": "Zobrazit záznam",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Skrýt záznam",
+  "@errorPageHideLog": {},
+  "restart": "Restartovat",
+  "@restart": {}
 }
