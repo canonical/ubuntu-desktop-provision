@@ -4,9 +4,6 @@ set -e
 
 case "$1" in
     configure)
-        # Add gnome-initial-setup to the gnome-initial-setup group
-        usermod -a -G gnome-initial-setup gnome-initial-setup
-
         # Set ownership and permissions for launch-desktop-provision-init.sh
         chown gnome-initial-setup:gnome-initial-setup /usr/libexec/launch-desktop-provision-init
         chmod 750 /usr/libexec/launch-desktop-provision-init
