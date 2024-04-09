@@ -4,12 +4,8 @@ set -e
 
 case "$1" in
     purge)
+        # Remove gnome-initial-setup from the gnome-initial-setup group
         usermod -a -G gnome-initial-setup nogroup
-
-        # Remove the gnome-initial-setup group if it exists
-        if getent group gnome-initial-setup >/dev/null; then
-            delgroup --system gnome-initial-setup
-        fi
         ;;
 esac
 

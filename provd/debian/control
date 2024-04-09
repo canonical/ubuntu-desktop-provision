@@ -16,9 +16,9 @@ Rules-Requires-Root: no
 
 Package: provd
 Architecture: any
+Pre-Depends: gnome-initial-setup
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         gnome-initial-setup,
 Description: Ubuntu init backend
  Backend service used by Ubuntu init to
  perform different system setup activities.
