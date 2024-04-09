@@ -8,12 +8,12 @@ case "$1" in
         usermod -a -G gnome-initial-setup gnome-initial-setup
 
         # Set ownership and permissions for launch-desktop-provision-init.sh
-        chown gnome-initial-setup:gnome-initial-setup /usr/bin/launch-desktop-provision-init.sh
-        chmod 750 /usr/bin/launch-desktop-provision-init.sh
+        chown gnome-initial-setup:gnome-initial-setup /usr/libexec/launch-desktop-provision-init
+        chmod 750 /usr/libexec/launch-desktop-provision-init
 
         # Set ownership and permissions for bin's
         chown root:gnome-initial-setup /usr/libexec/sprovd
-        chown root:gnome-initial-setup /usr/bin/provd
+        chown root:gnome-initial-setup /usr/libexec/provd
         chmod u+s /usr/libexec/sprovd
         ;;
 esac
