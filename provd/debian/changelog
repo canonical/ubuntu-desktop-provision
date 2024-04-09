@@ -1,6 +1,9 @@
 provd (0.1.1) noble; urgency=medium
 
+  * provd now pre-depends on gnome-initial-setup for gnome-initial-setup group.
   * Fixed non-amd64 builds failing from missing header file.
+  * Fixed outdated paths to point at libexec.
+  * Fixed usermod command in postint to correctly set user to nogroup.
 
  -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 09 Apr 2024 11:30:05 +0200
 
