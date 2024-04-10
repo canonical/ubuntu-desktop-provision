@@ -142,7 +142,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Asennus on valmis",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** on asennettu ja on valmis käytettäväksi.",
+  "readyToUse": "{system} on asennettu ja on valmis käytettäväksi.",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

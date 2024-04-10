@@ -134,7 +134,8 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
 
   /// Whether the current input is valid.
   bool get isValid {
-    return realName.length <= kMaxRealNameLength &&
+    return realName.isNotEmpty &&
+        realName.length <= kMaxRealNameLength &&
         hostname.isNotEmpty &&
         hostname.length <= kMaxHostnameLength &&
         username.isNotEmpty &&

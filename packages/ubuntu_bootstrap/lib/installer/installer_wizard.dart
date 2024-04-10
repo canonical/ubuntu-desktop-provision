@@ -38,9 +38,9 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
     if (status?.state == ApplicationState.ERROR) {
       return const _ErrorWizard();
     }
-    return status?.interactive == false
-        ? _AutoinstallWizard(status: status)
-        : const _InstallWizard();
+    return (status?.interactive ?? true)
+        ? const _InstallWizard()
+        : _AutoinstallWizard(status: status);
   }
 }
 
@@ -55,6 +55,7 @@ class _InstallWizard extends ConsumerWidget {
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;
+    final hasRoute = ref.read(installerModelProvider).hasRoute;
 
     return WizardBuilder(
       initialRoute: InstallationStep.loading.route,
@@ -87,7 +88,7 @@ class _InstallWizard extends ConsumerWidget {
         ].contains(route)) {
           return true;
         } else {
-          return ref.read(installerModelProvider).hasRoute(route);
+          return hasRoute(route);
         }
       },
       observers: [_InstallerObserver(getService<TelemetryService>())],

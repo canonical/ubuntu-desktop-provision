@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
@@ -11,6 +12,7 @@ import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 
+import '../autoinstall/test_autoinstall.dart';
 import '../test_utils.dart';
 import 'test_confirm.mocks.dart';
 
@@ -61,6 +63,7 @@ Widget buildConfirmPage({
 
   return ProviderScope(
     overrides: [
+      autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
       confirmModelProvider.overrideWith((_) => confirm),
       storageModelProvider.overrideWith((_) => storage),
       sourceModelProvider.overrideWith((_) => source),

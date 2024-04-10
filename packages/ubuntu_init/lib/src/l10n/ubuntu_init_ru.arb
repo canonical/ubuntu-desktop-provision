@@ -38,7 +38,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Длитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
+  "telemetryDescription": "Делитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -64,5 +64,7 @@
   "welcomeStartSubtitle": "Поддержка более чистой настройки.",
   "@welcomeStartSubtitle": {},
   "telemetryLegalLabel": "Правовая информация",
-  "@telemetryLegalLabel": {}
+  "@telemetryLegalLabel": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

@@ -392,6 +392,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           confirmModelProvider.overrideWith((_) => confirmModel),

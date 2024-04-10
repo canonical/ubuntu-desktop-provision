@@ -16,7 +16,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'ČO JE NOVÉ?';
 
   @override
-  String get welcomeStartTitle => 'Zjednodušený štart';
+  String get welcomeStartTitle => 'Zjednodušený začiatok';
 
   @override
   String get welcomeStartSubtitle => 'Podpora jednoduchšieho nastavenia.';
@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Anonymné zdieľanie údajov s $distro, aby sme mohli zlepšiť váš dojem z používania.';
+    return 'Anonymné zdieľanie údajov s $distro, aby sme mohli zlepšiť váš zážitok.';
   }
 
   @override
@@ -75,13 +75,13 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Povoliť služby umiestnenia?';
 
   @override
-  String get privacyLocationSubtitle => 'Poskytnite aplikáciám údaje o svojej geografickej polohe.\nMôžete to kedykoľvek zmeniť v systémových nastaveniach.';
+  String get privacyLocationSubtitle => 'Poskytnite aplikáciám údaje o svojej geografickej polohe.\nToto môžete kedykoľvek zmeniť v nastaveniach systému.';
 
   @override
   String get privacyLocationEnable => 'Služby umiestnenia';
 
   @override
-  String get privacyPolicyLink => 'Súkromie údajov';
+  String get privacyPolicyLink => 'Ochrana údajov';
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';

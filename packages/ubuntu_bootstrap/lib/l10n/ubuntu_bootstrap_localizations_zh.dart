@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => '安装类型';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '您想如何安装 $DISTRO？';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => '输入 autoinstall.yaml 的 URL。';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => '交互安装';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => '适用于希望在逐步引导下完成安装的用户。';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => '自动安装';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => '适用于使用 autoinstall.yaml 文件进行一致重复系统配置的高级用户。';
 
   @override
   String get changeButtonText => '更改';
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '您想对 $DISTRO 做什么？';
   }
 
   @override
@@ -96,14 +96,14 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST 已启用';
+  String get rstTitle => '检测到 RST';
 
   @override
   String get rstHeader => '关闭 RST 以继续';
 
   @override
   String rstDescription(String DISTRO) {
-    return '这台电脑使用了英特尔RST（快速存储技术）。在安装Ubuntu之前，您需要在Windows中关闭RST。';
+    return '此计算机使用了英特尔 RST（快速存储技术）。在安装 $DISTRO 之前，您需要在 Windows 中关闭 RST。';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => '显示安全密钥';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => '隐藏';
 
   @override
   String get updatesOtherSoftwarePageTitle => '应用程序和更新';
@@ -151,33 +151,33 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => '您想先安装哪些应用？';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => '优化您的计算机';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => '安装推荐的专有软件吗？';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO 默认情况下不自带专有软件。安装额外软件可能会改善计算机的性能。';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => '检测到 NVIDIA 显卡';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => '为使 NVIDIA 显卡发挥最佳性能，强烈推荐安装附加驱动。';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => '扩展集合';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => '一批对离线用户友好的办公应用、工具与网络浏览器。';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => '默认集合';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => '只安装必要软件、网络浏览器与基本工具。';
 
   @override
   String get otherOptions => '其他选项';
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => '为图形和 Wi-Fi 硬件安装第三方软件';
 
   @override
-  String get installDriversSubtitle => '这些驱动受它们文档中的许可条款约束。它们是专有软件。';
+  String get installDriversSubtitle => '包括但不限于 NVIDIA 驱动与类似软件';
 
   @override
   String get installCodecsTitle => '下载并安装对其他媒体格式的支持';
 
   @override
-  String get installCodecsSubtitle => '这些软件受其文档中包含的许可条款约束。其中部分软件是专有软件。';
+  String get installCodecsSubtitle => '包括但不限于 MP3、MP4、MOV 及类似格式的编解码器';
 
   @override
   String get batteryWarning => 'The computer is not plugged in to a power source.';
@@ -207,54 +207,54 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '您当前处于离线状态';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => '磁盘密码';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => '创建密码';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => '您需要密码来加密文件。在每次启动计算机时都会提示您输入此密码。';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => '选择密码';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => '确认密码';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => '需要密码';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => '密码不匹配';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => '确保您已记下密码';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => '创建密码';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => '确认密码';
 
   @override
   String get installationTypeTitle => '安装类型';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return '您想如何安装 $DISTRO？';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return '这台电脑上当前安装了$os。您准备怎么做？';
+    return '目前此计算机上已安装了 $os。您准备怎么做？';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return '这台计算机已安装有$os1与$os2了。您准备怎么做？';
+    return '目前此计算机已安装了 $os1 与 $os2。您准备怎么做？';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => '用所选磁盘从头开始安装。';
 
   @override
   String get installationTypeAdvancedLabel => '高级功能...';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => '高级功能';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => '实验性';
 
   @override
   String get installationTypeNone => '空';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => '尚未选择任何安装选项';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => '使用 LVM（逻辑卷管理）';
 
   @override
   String get installationTypeLVMSelected => '已选择配置 LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => '使用 LVM（逻辑卷管理）与加密';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
@@ -305,24 +305,24 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => '实验性功能：擦除磁盘并使用ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => '擦除硬盘，并使用加密的 ZFS';
 
   @override
   String get installationTypeZFSSelected => '已选择 ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => '已选择使用加密 ZFS';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => '启用硬件支持的全盘加密';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return '这是一个实验性功能。在未来的 $DISTRO 发行版中，您的硬件可能无法使用此功能。在选择此选项前，请先<a href=\"$url\">了解 TPM 加密</a>。';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => '已选择 TPM';
 
   @override
   String installationTypeReinstall(String os) {
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return '您可以创建分区或调整分区大小，或者为$DISTRO选择多个分区';
+    return '适用于希望自定义磁盘配置的高级用户。';
   }
 
   @override
@@ -371,7 +371,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => '从头开始使用所选磁盘。';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
@@ -420,10 +420,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => '手动分区';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => '挂载点必须以“/”开头';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => '挂载点不可带有空格';
 
   @override
   String get diskHeadersDevice => '设备';
@@ -502,7 +502,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return '保持 $format 格式';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => '准备安装';
 
   @override
-  String get confirmHeader => '如果继续，下面列出的更改将会写入磁盘。您可以手动进行进一步的更改。';
+  String get confirmHeader => '回顾您的选择';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => '无';
 
   @override
   String get confirmDevicesTitle => '设备';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => '应用程序';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => '磁盘配置';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => '磁盘加密';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => '安装磁盘';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => '专有软件';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => '一般';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => '安全及其他';
 
   @override
   String get confirmPartitionsTitle => '分区';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => '编解码器';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => '编解码器与驱动程序';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => '驱动程序';
 
   @override
   String get confirmInstallButton => '安装';
@@ -609,12 +609,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** 已经安装并准备好使用了';
+    return '$system 已经安装并准备好使用了';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '已将 **$system** 复制到磁盘';
   }
 
   @override
@@ -626,7 +626,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => '您需要重新启动计算机，以继续完成安装。';
 
   @override
   String get shutdown => '关机';
@@ -645,7 +645,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return '这台电脑使用了 Windows BitLocker 进行加密。\n在安装 Ubuntu 之前，您需要关闭 Windows 的 BitLocker 功能。';
+    return '这台电脑使用了 Windows BitLocker 进行加密。\n您需要用 Windows 创建空闲空间，或者返回选择\'$option\'以继续。';
   }
 
   @override
@@ -805,159 +805,159 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => '必填：';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => '更新可用';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => '安装程序有可用更新';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => '现在更新';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => '升级到最新版本，以改善可靠性、获得更多功能。';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => '更新准备就绪';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return '目前 $snap 的版本是 $version。';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return '更新到版本 $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return '当前版本 $version 是最新的。';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '正在更新 $snap…';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => '请关闭并重新运行安装程序以继续';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => '关闭安装程序';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '确保 $snap 的先决条件…';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '正在刷新 $snap…';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '正在检查 $snap 的再次刷新…';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '正在准备 $snap…';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '正在下载 $snap…';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '正在验证 $snap…';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '正在挂载 $snap…';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '正在停止 $snap 服务…';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '正在移除 $snap 别名…';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '正在解除 $snap 链接…';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '正在更新 $snap 资产…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '正在更新 $snap 内核命令行…';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '正在复制 $snap 数据…';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '正在配置 $snap 安全档案…';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '正在链接 $snap…';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '正在连接 $snap 插头与插槽…';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return '正在设置 $snap 自动别名…';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '正在配置 $snap 别名…';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '正在启动 $snap 服务…';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '正在清理 $snap…';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM 恢复密钥';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => '在安装完成后，您可以使用如下命令获取恢复密钥：';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。';
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => '验证';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1398,7 +1398,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String readyToUse(String system) {
-    return '**$system** 安裝完成，可以開始使用';
+    return '$system 安裝完成，可以開始使用';
   }
 
   @override

@@ -11,10 +11,16 @@ import '../test_utils.dart';
 import 'test_autoinstall.mocks.dart';
 
 @GenerateMocks([AutoinstallModel])
-AutoinstallModel buildAutoinstallModel({AsyncValue<void>? state, String? url}) {
+AutoinstallModel buildAutoinstallModel({
+  AsyncValue<void>? state,
+  String? url,
+  bool autoinstall = false,
+}) {
   final model = MockAutoinstallModel();
   when(model.state).thenReturn(state ?? const AsyncValue<void>.data(null));
   when(model.url).thenReturn(url ?? '');
+  when(model.autoinstall).thenReturn(autoinstall);
+  when(model.getFileContent()).thenAnswer((_) async => '');
   return model;
 }
 

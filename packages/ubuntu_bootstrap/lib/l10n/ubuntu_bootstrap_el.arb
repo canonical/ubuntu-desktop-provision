@@ -31,6 +31,5 @@
     }
   },
   "welcome": "Καλωσορίσατε",
-  "@welcome": {},
-  "@keyboardDetectTitle": {}
+  "@welcome": {}
 }

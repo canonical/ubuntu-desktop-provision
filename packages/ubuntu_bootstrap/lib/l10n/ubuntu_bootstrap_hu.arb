@@ -218,7 +218,7 @@
   "@partitionMountPointLabel": {},
   "installationCompleteTitle": "A telepítés befejeződött",
   "@installationCompleteTitle": {},
-  "readyToUse": "A(z) **{system}** telepítve van és használatra kész",
+  "readyToUse": "A(z) {system} telepítve van és használatra kész",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

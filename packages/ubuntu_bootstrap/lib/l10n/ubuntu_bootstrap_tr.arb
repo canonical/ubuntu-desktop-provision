@@ -185,7 +185,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Kurulum tamamlandı",
   "@installationCompleteTitle": {},
-  "readyToUse": "**{system}** kuruldu ve kullanıma hazır",
+  "readyToUse": "{system} kuruldu ve kullanıma hazır",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

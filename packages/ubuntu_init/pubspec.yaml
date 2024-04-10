@@ -10,22 +10,21 @@ environment:
 dependencies:
   args: ^2.4.2
   collection: ^1.17.0
-  crypt: ^4.3.1
   dbus: ^0.7.10
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0-beta.2
   flutter_localizations:
     sdk: flutter
-  flutter_riverpod: ^2.4.9
+  flutter_riverpod: ^2.5.1
   flutter_svg: ^2.0.10
   gsettings: ^0.2.8
-  handy_window: ^0.3.1
-  meta: ^1.10.0
+  handy_window: ^0.4.0
+  intl: ^0.18.1
+  meta: ^1.11.0
   path: ^1.8.3
   pdfrx: ^1.0.52
-  provd_client:
-    path: ../provd_client
+  provd_client: ^0.1.0
   stdlibc: ^0.1.4
   sysmetrics: ^0.1.0
   timezone_map:
@@ -33,7 +32,7 @@ dependencies:
       url: https://github.com/canonical/ubuntu-flutter-plugins.git
       path: packages/timezone_map
       ref: 5af6896c75b5ab8f78b93f7f358836a8c4c7857f
-  ubuntu_flavor: ^0.3.0
+  ubuntu_flavor: ^0.4.0
   ubuntu_localizations: ^0.3.5
   ubuntu_logger: ^0.1.1
   ubuntu_provision: ^0.1.0
@@ -41,7 +40,6 @@ dependencies:
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
-  xdg_locale: ^0.0.1
   yaru: 4.0.0
 
 dev_dependencies:
@@ -55,7 +53,7 @@ dev_dependencies:
   ubuntu_lints: ^0.3.0
   ubuntu_provision_test: ^0.1.0
   ubuntu_test: ^0.1.0-beta.8
-  yaru_test: ^0.1.5
+  yaru_test: ^0.1.6
 
 flutter:
   uses-material-design: true

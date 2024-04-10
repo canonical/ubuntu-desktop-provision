@@ -64,5 +64,7 @@
   "telemetryLabelOff": "Ne, sendu neniom da sistemaj datenoj",
   "@telemetryLabelOff": {},
   "privacyLocationSubtitle": "Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.",
-  "@privacyLocationSubtitle": {}
+  "@privacyLocationSubtitle": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

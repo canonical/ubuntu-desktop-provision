@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '**$system** 설치가 완료 되었으며 사용할 준비가 되었습니다';
+    return '$system 설치가 완료 되었으며 사용할 준비가 되었습니다';
   }
 
   @override

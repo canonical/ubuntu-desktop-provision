@@ -197,7 +197,7 @@
   "@partitionErase": {},
   "partitionMountPointLabel": "Point de montage :",
   "@partitionMountPointLabel": {},
-  "readyToUse": "**{system}** est installé et prêt à être utilisé",
+  "readyToUse": "{system} est installé et prêt à être utilisé",
   "@readyToUse": {
     "type": "text",
     "placeholders": {

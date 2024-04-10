@@ -1,0 +1,4 @@
+usr/bin/provd usr/bin/
+usr/bin/sprovd /usr/libexec/
+usr/bin/launch-desktop-provision-init.sh /usr/bin/
+
