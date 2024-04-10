@@ -11,7 +11,7 @@ class JournalView extends StatelessWidget {
   Widget build(BuildContext context) {
     return LogView(
       log: journal,
-      padding: const EdgeInsets.symmetric(horizontal: kWizardSpacing),
+      padding: const EdgeInsets.all(kWizardSpacing),
       style: TextStyle(
         inherit: false,
         fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
@@ -23,7 +23,6 @@ class JournalView extends StatelessWidget {
         enabledBorder: InputBorder.none,
         focusedBorder: InputBorder.none,
         fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.symmetric(vertical: kWizardSpacing / 2),
       ),
       background: BoxDecoration(color: Theme.of(context).shadowColor),
     );
