@@ -26,7 +26,6 @@ pages:
   storage:
     image: "assets/images/disk.svg"
   eula:
-    image: "assets/images/keyboard.svg"
   guided-resize:
     image: "assets/images/disk.svg"
   guided-reformat:

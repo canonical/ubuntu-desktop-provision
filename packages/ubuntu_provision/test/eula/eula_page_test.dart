@@ -5,7 +5,7 @@ import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru_test/yaru_test.dart';
 
-import '../test_utils.dart';
+import '../locale/test_locale.dart';
 
 void main() {
   testWidgets('check EULA checkbox', (tester) async {
@@ -13,9 +13,11 @@ void main() {
       MockPageConfigService(),
       MockThemeVariantService(),
     );
+    final localeModel = buildLocaleModel();
     await tester.pumpApp(
       (_) => ProviderScope(
         overrides: [
+          localeModelProvider.overrideWith((ref) => localeModel),
           pageImagesProvider.overrideWithValue(pageImages),
         ],
         child: const EULAPage(),

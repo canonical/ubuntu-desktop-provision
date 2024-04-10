@@ -1,32 +1,90 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pdfrx/pdfrx.dart';
 import 'package:ubuntu_provision/interfaces.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/src/eula/eula_l10n.dart';
-import 'package:ubuntu_provision/widgets.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class EULAPage extends StatefulWidget with ProvisioningPage {
+class EULAPage extends ConsumerStatefulWidget with ProvisioningPage {
   const EULAPage({super.key});
 
   @override
-  State<EULAPage> createState() => _EULAPageState();
+  ConsumerState<EULAPage> createState() => _EULAPageState();
 }
 
-class _EULAPageState extends State<EULAPage> {
+class _EULAPageState extends ConsumerState<EULAPage> {
   bool _hasAcceptedTerms = false;
 
   @override
   Widget build(BuildContext context) {
+    final localeModel = ref.read(localeModelProvider);
     final lang = EULALocalizations.of(context);
+    final eulaFile = File(
+        '/usr/share/desktop-provision/eula/EULA_${localeModel.selectedLocale?.languageCode}.pdf');
 
-    return HorizontalPage(
-      windowTitle: lang.eulaPageTitle,
-      title: lang.eulaReviewTerms,
-      isNextEnabled: false,
-      managedScrolling: false,
-      contentFlex: 100,
+    return WizardPage(
+      title: YaruWindowTitleBar(
+        title: Text(lang.eulaPageTitle),
+      ),
+      content: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(lang.eulaReviewTerms,
+                style: Theme.of(context).textTheme.titleLarge),
+            Text(lang.eulaReadAndAcceptTerms),
+            const SizedBox(height: kWizardSpacing),
+            Expanded(
+              child: PdfViewer.file(
+                eulaFile.existsSync()
+                    ? eulaFile.path
+                    : '/usr/share/desktop-provision/eula/EULA.pdf',
+                params: PdfViewerParams(
+                  errorBannerBuilder:
+                      (context, error, stackTrace, documentRef) => Center(
+                    child: Text(
+                      error.toString(),
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  linkWidgetBuilder: (context, link, size) => MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        UrlLauncher().launchUrl(link.url.toString());
+                      },
+                      child: Container(
+                        width: size.width,
+                        height: size.height,
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: kWizardSpacing),
+            Center(
+              child: YaruCheckButton(
+                title: Text(
+                  lang.eulaAcceptTerms,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+                value: _hasAcceptedTerms,
+                onChanged: (value) => setState(
+                  () => _hasAcceptedTerms = !_hasAcceptedTerms,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -35,65 +93,6 @@ class _EULAPageState extends State<EULAPage> {
           ),
         ],
       ),
-      children: [
-        Text(lang.eulaReadAndAcceptTerms),
-        const SizedBox(height: kWizardSpacing),
-        Expanded(
-          child: YaruBorderContainer(
-            padding: const EdgeInsets.all(kWizardSpacing),
-            borderRadius: BorderRadius.circular(0),
-            color: Theme.of(context).colorScheme.background,
-            child: SingleChildScrollView(
-              child: Html(
-                data:
-                    'Lorem ipsum dolor sit amet consectetur. Iaculis varius eget fames mauris tristique magna pellentesque tristique. Lorem ipsum dolor sit amet consectetur. Iaculis varius eget fames mauris tristique magna pellentesque tristique. Lorem ipsum dolor sit amet consectetur. Iaculis varius eget fames mauris tristique magna pellentesque tristique. Lorem ipsum dolor sit amet consectetur. Iaculis varius eget fames mauris tristique magna pellentesque tristique. Lorem ipsum dolor sit amet consectetur. Iaculis varius eget fames mauris tristique magna pellentesque tristique. Magna mattis congue mus magna pellentesque amet augue cursus et. Massa nulla faucibus orci scelerisque mattis. Neque nulla sem eu id sit non massa faucibus sapien. Tincidunt suspendisse ornare cras orci quis lorem. Massa lobortis phasellus leo phasellus. Tortor eu orci nec ipsum sed. Adipiscing euismod in leo feugiat nulla senectus maecenas pharetra. Lectus integer mollis dolor molestie ipsum egestas eget. Augue aliquam scelerisque feugiat elementum purus ut. Tempus eu neque imperdiet aliquam elementum amet. Diam nec velit eu vel mi ipsum mi quam pharetra. Vulputate non nascetur consequat justo pharetra. Sit volutpat lorem enim pellentesque. Semper mauris nulla pretium semper gravida ullamcorper dictum arcu. Accumsan ornare tempus aenean dolor faucibus. Sed nullam sodales feugiat arcu facilisi pretium sed. Parturient gravida cursus scelerisque fermentum nec aliquet.',
-                extensions: [
-                  TagExtension(
-                    tagsToExtend: {'p'},
-                    builder: (extensionContext) {
-                      final style = extensionContext.style;
-                      final textStyle = style?.generateTextStyle();
-                      final padding = style?.padding;
-                      final context = extensionContext.buildContext;
-                      final direction = context == null
-                          ? TextDirection.ltr
-                          : Directionality.of(context);
-                      return Container(
-                        padding: padding?.resolve(direction),
-                        child: Text(
-                          extensionContext.element!.text,
-                          style: textStyle,
-                        ),
-                      );
-                    },
-                  ),
-                ],
-                onLinkTap: (url, _, __) {
-                  if (url != null) {
-                    launchUrl(url);
-                  }
-                },
-                style: {
-                  'body': Style(margin: Margins.all(0)),
-                },
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(height: kWizardSpacing),
-        YaruCheckButton(
-          title: Text(
-            lang.eulaAcceptTerms,
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          value: _hasAcceptedTerms,
-          onChanged: (value) => setState(
-            () => _hasAcceptedTerms = !_hasAcceptedTerms,
-          ),
-        ),
-      ],
     );
   }
 }
