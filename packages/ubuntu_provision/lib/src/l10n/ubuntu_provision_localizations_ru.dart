@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Специальные возможности';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Специальные возможности в $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Настройте $DISTRO перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в Настройках.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Зрение';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Слух';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Ввод текста';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Наведение и нажатие';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Масштабирование';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Высокая контрастность';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Крупный текст';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Уменьшение анимации';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Чтение с экрана';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Визуальные уведомления';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Залипающие клавиши';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Медленные клавиши';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Клавиши мыши';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Масштабирование рабочего стола';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Что-то пошло не так';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также вы можете создать <a>сообщение о проблеме</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Показать журнал';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Скрыть журнал';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Перезагрузить';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрыть';
 
   @override
   String get timezonePageTitle => 'Выберите свой часовой пояс';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Раскладка клавиатуры';
 
   @override
-  String get keyboardHeader => 'Выберите раскладку клавиатуры:';
+  String get keyboardHeader => 'Выберите раскладку клавиатуры';
 
   @override
   String get keyboardTestHint => 'Напечатайте здесь, чтобы проверить свою клавиатуру';
@@ -209,14 +209,14 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'Вы введёте домен и другие данные на следующем шаге.';
 
   @override
-  String get activeDirectoryTitle => 'Настроить Active Directory';
+  String get activeDirectoryTitle => 'Войти в Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Войти в Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'Система $DISTRO разработана для бесшовной интеграции с Active Directory с целью упрощения администрирования.';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Подключение к сети';
 
   @override
-  String get networkPageHeader => 'Соединение данного компьютера с интернетом позволит Ubuntu установить дополнительное программное обеспечение и поможет выбрать ваш часовой пояс.\n\nПрисоедините кабель сети интернет или выберите сеть Wi-Fi';
+  String get networkPageHeader => 'Подключиться к Интернету';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Подключение к Интернету улучшит процесс установки благодаря проверке совместимости и доступу к дополнительным пакетам программного обеспечения.';
 
   @override
   String get networkWiredOption => 'Использовать проводное подключение';
@@ -292,7 +292,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Проводное подключение отключено';
 
   @override
-  String get networkWiredDisabled => 'Чтобы воспользоваться сетью интернет на этом компьютере, должно быть включено проводное соединение';
+  String get networkWiredDisabled => 'Чтобы воспользоваться сетью Интернет на этом компьютере, должно быть включено проводное соединение';
 
   @override
   String get networkWiredEnable => 'Включить проводное подключение';

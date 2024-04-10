@@ -67,7 +67,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
       ),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        children: [
           const PartitionBar(),
           const SizedBox(height: kWizardSpacing / 4),
           const PartitionLegend(),
@@ -95,6 +95,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
           NextWizardButton(
             enabled: model.isValid,
             onNext: model.setStorage,
+            onReturn: model.resetStorage,
           ),
         ],
       ),

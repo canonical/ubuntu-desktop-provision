@@ -16,22 +16,22 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'MITÄ UUTTA?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Suoraviivaistettu aloitus';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Aiempaa siistimpi asennuskokemus.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Sovelluskeskuksen uusi ulkoasu';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Suosikkisovellusten löytäminen ei ole koskaan ollut yhtä helppoa.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Kohennettu tietoturva';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Uusia asetuksia laitteistopohjaiselle salaukselle ja ZFS-salaukselle.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ei, älä jaa järjestelmän tietoja';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Ilmoitettavat tiedot';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Ilmoitettavat tiedot';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Lainopillinen';
 
   @override
   String get privacyPageTitle => 'Sijaintipalvelut';
@@ -75,13 +75,13 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Otetaanko sijaintipalvelut käyttöön?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Salli sovellusten paikantaa sijaintisi.\nVoit muuttaa asetusta koska tahansa järjestelmän asetuksista.';
 
   @override
   String get privacyLocationEnable => 'Sijaintipalvelut';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Tietosuoja';
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';

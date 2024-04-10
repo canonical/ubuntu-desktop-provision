@@ -7,12 +7,11 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class HorizontalPage extends ConsumerWidget {
-  HorizontalPage({
+  const HorizontalPage({
     required this.windowTitle,
     required this.title,
     required this.children,
     this.onNext,
-    this.onBack,
     this.nextArguments,
     this.trailingTitleWidget,
     this.isNextEnabled = true,
@@ -31,6 +30,12 @@ class HorizontalPage extends ConsumerWidget {
           !managedScrolling || contentFlex == null,
           'contentFlex has no effect unless managedScrolling is set to false.',
         ),
+        assert(
+            (bottomBar == null) ||
+                (onNext == null &&
+                    nextArguments == null &&
+                    isNextEnabled == true),
+            'either provide a custom `bottomBar` or use the `onNext`, `nextArguments`, and `isNextEnabled` properties.'),
         _contentFlex = contentFlex ?? 1;
 
   /// The title for the title bar.
@@ -47,9 +52,6 @@ class HorizontalPage extends ConsumerWidget {
 
   /// A callback for when the user presses the "Next" button.
   final FutureOr<void> Function()? onNext;
-
-  /// A callback for when the user presses the "Back" button.
-  final FutureOr<void> Function()? onBack;
 
   /// Arguments passed along to the [NextWizardButton].
   final Object? nextArguments;
@@ -74,8 +76,6 @@ class HorizontalPage extends ConsumerWidget {
 
   /// The snack bar to use (default is none).
   final SnackBar? snackBar;
-
-  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -119,20 +119,21 @@ class HorizontalPage extends ConsumerWidget {
                     child: managedScrolling
                         ? Center(
                             child: Scrollbar(
-                              controller: _scrollController,
                               thumbVisibility: true,
-                              child: ListView(
+                              child: SingleChildScrollView(
+                                primary: true,
                                 padding: hoverPadding +
                                     EdgeInsets.only(right: scrollBarPadding),
-                                shrinkWrap: true,
-                                controller: _scrollController,
-                                children: [
-                                  _Headline(
-                                    title: title,
-                                    trailingTitleWidget: trailingTitleWidget,
-                                  ),
-                                  ...children,
-                                ],
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    _Headline(
+                                      title: title,
+                                      trailingTitleWidget: trailingTitleWidget,
+                                    ),
+                                    ...children,
+                                  ],
+                                ),
                               ),
                             ),
                           )

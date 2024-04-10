@@ -75,6 +75,7 @@ class AutoinstallModel extends SafeChangeNotifier {
 
   Future<void> _fetch() async {
     final uri = Uri.parse(url);
+    _httpClient.connectionTimeout = const Duration(seconds: 10);
 
     final response = await _httpClient
         .getUrl(uri)

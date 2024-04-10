@@ -938,5 +938,23 @@
   "refreshUpdateNow": "Uppdatera nu",
   "@refreshUpdateNow": {},
   "refreshCloseLabel": "Stäng installationsprogrammet",
-  "@refreshCloseLabel": {}
+  "@refreshCloseLabel": {},
+  "selectGuidedStorageDriveDropdownLabel": "Välj disk:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Välj partition:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Välj var du vill installera {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Varning:",
+  "@warningLabel": {},
+  "batteryWarning": "Datorn är inte ansluten till en strömkälla.",
+  "@batteryWarning": {},
+  "restartWarningBody": "Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör sparas inte.",
+  "@restartWarningBody": {}
 }

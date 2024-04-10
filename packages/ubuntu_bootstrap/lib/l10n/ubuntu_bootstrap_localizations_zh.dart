@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => '警告：';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => '包括但不限于 MP3、MP4、MOV 及类似格式的编解码器';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => '计算机未连接到外部电源。';
 
   @override
   String get offlineWarning => '您当前处于离线状态';
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => '从头开始使用所选磁盘。';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => '选择驱动器：';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => '选择分区：';
 
   @override
   String get selectGuidedStorageInfoLabel => '将使用整块磁盘：';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '选择安装 $DISTRO 的位置';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => '重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会保存。';
 
   @override
   String get rebootToConfigureWarning => '您需要重新启动计算机，以继续完成安装。';

@@ -8,6 +8,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_selector.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -84,7 +85,10 @@ void main() {
       expect(find.text(context.formatByteSize(disk.size)), findsOneWidget);
 
       for (final partition in disk.partitions.whereType<Partition>()) {
-        expect(find.text(partition.format!), findsOneWidget);
+        expect(
+          find.text(PartitionFormat.fromPartition(partition)!.displayName!),
+          findsOneWidget,
+        );
         expect(find.text(partition.mount!), findsOneWidget);
         expect(
             find.text(context.formatByteSize(partition.size!)), findsOneWidget);

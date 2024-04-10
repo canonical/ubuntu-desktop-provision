@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Näppäimistön asettelu",
   "@keyboardTitle": {},
-  "keyboardHeader": "Valitse näppäimistön asettelu:",
+  "keyboardHeader": "Valitse näppäimistön asettelu",
   "@keyboardHeader": {},
   "keyboardTestHint": "Kokeile näppäimistön asetuksia kirjoittamalla tähän",
   "@keyboardTestHint": {},
@@ -90,11 +90,11 @@
   "@identityActiveDirectoryOption": {},
   "identityActiveDirectoryInfo": "Kirjoitat domainin ja muut tiedot seuraavassa vaiheessa.",
   "@identityActiveDirectoryInfo": {},
-  "activeDirectoryTitle": "Määritä Active Directory",
+  "activeDirectoryTitle": "Kirjaudu Active Directoryyn",
   "@activeDirectoryTitle": {},
   "activeDirectoryTestConnection": "Testaa domain-yhdistettävyyttä",
   "@activeDirectoryTestConnection": {},
-  "activeDirectoryDomainLabel": "Domain",
+  "activeDirectoryDomainLabel": "Toimialue",
   "@activeDirectoryDomainLabel": {},
   "activeDirectoryDomainEmpty": "Vaadittu",
   "@activeDirectoryDomainEmpty": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Yhdistä verkkoon",
   "@networkPageTitle": {},
-  "networkPageHeader": "Tietokoneen liittäminen internetiin auttaa Ubuntua asentamaan tarvittavat lisäohjelmistot ja valitsemaan aikavyöhykkeen.\n\nYhdistä Ethernet-kaapelilla tai valitse Wi-Fi-verkko",
+  "networkPageHeader": "Yhdistä internetiin",
   "@networkPageHeader": {},
   "networkWiredOption": "Käytä langallista yhteyttä",
   "@networkWiredOption": {},
@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "Verkon nimi vaaditaan",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "En halua muodostaa yhteyttä internetiin juuri nyt",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageBody": "Mukauta {DISTRO}a vastaamaan tarpeitasi ennen asentamista. Voit muuttaa asetuksia myöhemmin järjestelmän asetuksista.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Internetyhteys parantaa asennuskokemusta tarkistamalla yhteensopivuuden ja lisäohjelmistopaketit.",
+  "@networkPageBody": {},
+  "accessibilitySeeingLabel": "Näkeminen",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityScreenReaderLabel": "Näytönlukija",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityDesktopZoomLabel": "Työpöydän suurennus",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Jokin meni pieleen",
+  "@errorPageTitle": {},
+  "errorPageHideLog": "Piilota loki",
+  "@errorPageHideLog": {},
+  "errorPageShowLog": "Näytä loki",
+  "@errorPageShowLog": {},
+  "restart": "Käynnistä uudelleen",
+  "@restart": {},
+  "close": "Sulje",
+  "@close": {},
+  "activeDirectoryHeader": "Haluatko kirjautua Active Directoryyn?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} on suunniteltu integroitavaksi Active Directoryyn ylläpidon helpottamiseksi.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageTitle": "Esteettömyys",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Esteettömyys ja {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHearingLabel": "Kuuleminen",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Kirjoittaminen",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Osoittaminen ja napsauttaminen",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Suurentaminen",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Suuri kontrasti",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Suuri teksti",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Vähennä animaatiota",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuaaliset hälytykset",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityMouseKeysLabel": "Hiirinäppäimet",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityStickKeysLabel": "Pohjaan jäävät näppäimet",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Hitaat näppäimet",
+  "@accessibilitySlowKeysLabel": {},
+  "errorPageUnexpected": "Valitettavasti emme ole varmoja, mikä aiheutti ongelman. Voit käynnistää tietokoneen uudelleen ja käynnistää asennuksen uudelleen. Voit myös <a>ilmoittaa kohtaamastasi ongelmasta</a>.",
+  "@errorPageUnexpected": {}
 }

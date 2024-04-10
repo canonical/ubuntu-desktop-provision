@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'נגישות';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'נגישות ב־$DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'התאמת $DISTRO לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר בהגדרות המערכת.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'ראיה';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'שמיעה';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'הקלדה';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'הצבעה ולחיצה';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'תקריב';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'ניגודיות גבוהה';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'טקסט גדול';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'הפחתת הנפשות';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'מקריא מסך';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'התראות חזותיות';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'מקשים דביקים';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'מקשים איטיים';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'מקשי עכבר';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'תקריב שולחן עבודה';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'משהו השתבש';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר גם <a>לדווח על התקלה</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'הצגת היומן';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'הסתרת היומן';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'הפעלה מחדש';
 
   @override
-  String get close => 'Close';
+  String get close => 'סגירה';
 
   @override
   String get timezonePageTitle => 'נא לבחור את אזור הזמן שלך';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'פריסת מקלדת';
 
   @override
-  String get keyboardHeader => 'נא לבחור את פריסת המקלדת שלך:';
+  String get keyboardHeader => 'נא לבחור את פריסת המקלדת שלך';
 
   @override
   String get keyboardTestHint => 'ניתן להקליד כאן כדי לבדוק את המקלדת שלך';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'הגדרת Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'להיכנס ל־Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'מערכת $DISTRO תוכננה להשתלב בצורה חלקה עם Active Directory כדי להקל על הניהול.';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'התחברות לרשת';
 
   @override
-  String get networkPageHeader => 'חיבור המחשב הזה לאינטרנט יסייע לאובונטו להתקין תכניות נוספות חיוניות ויסייע בבחירת אזור הזמן שלך.\n\nאפשר להתחבר בכבל רשת או לבחור רשת אלחוטית';
+  String get networkPageHeader => 'נא להתחבר לאינטרנט';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'חיבור לאינטרנט ישפר את ההתקנה שלך בעזרת בדיקות תאימות וחבילות תוכנה נוספות.';
 
   @override
   String get networkWiredOption => 'להשתמש בחיבור קווי';

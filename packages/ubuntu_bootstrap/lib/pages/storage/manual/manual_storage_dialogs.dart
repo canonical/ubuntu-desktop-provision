@@ -9,8 +9,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const _kInputFieldWidth = 400.0;
-const _kValidMountPointPattern = r'^(/\S*|)$';
+const _inputFieldWidth = 400.0;
+const _validMountPointPattern = r'^(/\S*|)$';
 
 /// Shows a dialog for creating a new partition for the given [disk].
 Future<void> showCreatePartitionDialog(
@@ -43,7 +43,7 @@ Future<void> showCreatePartitionDialog(
             rowSpacing: kWizardSpacing,
             columnSpacing: kWizardSpacing,
             rows: [
-              <Widget>[
+              [
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
                 ListenableBuilder(
                   listenable: Listenable.merge([
@@ -61,7 +61,7 @@ Future<void> showCreatePartitionDialog(
                   },
                 )
               ],
-              <Widget>[
+              [
                 Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
                 ValueListenableBuilder(
                   valueListenable: partitionFormat,
@@ -78,14 +78,14 @@ Future<void> showCreatePartitionDialog(
                       selected: partitionFormat.value,
                       onSelected: (format) => partitionFormat.value = format,
                       itemBuilder: (context, format, child) => Text(
-                        format?.name ?? lang.partitionFormatNone,
+                        format?.displayName ?? lang.partitionFormatNone,
                         key: ValueKey(format?.type),
                       ),
                     );
                   },
                 ),
               ],
-              <Widget>[
+              [
                 Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
                 _PartitionMountField(
                   partitionFormat: partitionFormat,
@@ -104,7 +104,7 @@ Future<void> showCreatePartitionDialog(
                 valueListenable: partitionMount,
                 builder: (context, value, child) {
                   return PushButton.filled(
-                    onPressed: RegExp(_kValidMountPointPattern)
+                    onPressed: RegExp(_validMountPointPattern)
                             .hasMatch(partitionMount.value ?? '')
                         ? () {
                             model.addPartition(
@@ -135,7 +135,7 @@ Future<void> showEditPartitionDialog(
   BuildContext context,
   Disk disk,
   Partition partition,
-  Partition? originalConfig,
+  Partition? originalPartition,
   Gap? gap,
 ) {
   return showDialog(
@@ -144,9 +144,10 @@ Future<void> showEditPartitionDialog(
       final partitionSize = ValueNotifier(partition.size ?? 0);
       final partitionUnit = ValueNotifier(DataUnit.megabytes);
       final partitionFormat = ValueNotifier<PartitionFormat?>(
-          (partition.preserve ?? false) && !partition.isWiped
-              ? null
-              : PartitionFormat.fromPartition(partition));
+        (partition.preserve ?? false) && !partition.isWiped
+            ? null
+            : PartitionFormat.fromPartition(partition),
+      );
       final partitionMount = ValueNotifier(partition.mount);
 
       final lang = UbuntuBootstrapLocalizations.of(context);
@@ -165,7 +166,7 @@ Future<void> showEditPartitionDialog(
             rowSpacing: kWizardSpacing,
             columnSpacing: kWizardSpacing,
             rows: [
-              <Widget>[
+              [
                 Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
                 ListenableBuilder(
                   listenable: Listenable.merge([
@@ -184,17 +185,20 @@ Future<void> showEditPartitionDialog(
                   },
                 )
               ],
-              <Widget>[
+              [
                 Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
-                ValueListenableBuilder(
-                  valueListenable: partitionFormat,
-                  builder: (context, value, child) {
-                    final configFormat = originalConfig != null
-                        ? PartitionFormat.fromPartition(originalConfig)
+                AnimatedBuilder(
+                  animation:
+                      Listenable.merge([partitionFormat, partitionMount]),
+                  builder: (context, child) {
+                    final configFormat = originalPartition != null
+                        ? PartitionFormat.fromPartition(originalPartition)
                         : null;
                     return MenuButtonBuilder<PartitionFormat?>(
                       entries: [
-                        if (partition.preserve ?? false) ...[
+                        if (partitionMount.value ==
+                                DefaultMountPoint.home.path &&
+                            (partition.preserve ?? false)) ...[
                           const MenuButtonEntry(value: null),
                           const MenuButtonEntry(value: null, isDivider: true),
                         ],
@@ -210,28 +214,35 @@ Future<void> showEditPartitionDialog(
                       selected: partitionFormat.value,
                       onSelected: (format) => partitionFormat.value = format,
                       itemBuilder: (context, format, child) => Text(
-                        format?.name ??
-                            (configFormat?.name != null
-                                ? lang.partitionFormatKeep(configFormat!.name!)
+                        format?.displayName ??
+                            (configFormat?.displayName != null
+                                ? lang.partitionFormatKeep(
+                                    configFormat!.displayName!,
+                                  )
                                 : lang.partitionFormatNone),
                         key: ValueKey(format?.type),
                       ),
                       child: Text(
-                        partitionFormat.value?.name ??
-                            (configFormat?.name != null
-                                ? lang.partitionFormatKeep(configFormat!.name!)
+                        partitionFormat.value?.displayName ??
+                            (configFormat?.displayName != null
+                                ? lang.partitionFormatKeep(
+                                    configFormat!.displayName!,
+                                  )
                                 : lang.partitionFormatNone),
-                        key: ValueKey(partitionFormat.value?.type),
+                        key: ValueKey(
+                          partitionFormat.value?.type,
+                        ),
                       ),
                     );
                   },
                 ),
               ],
-              <Widget>[
+              [
                 Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
                 _PartitionMountField(
                   initialMount: partition.mount,
                   partitionFormat: partitionFormat,
+                  originalPartition: originalPartition,
                   partitionMount: partitionMount,
                 ),
               ],
@@ -247,7 +258,7 @@ Future<void> showEditPartitionDialog(
                 valueListenable: partitionMount,
                 builder: (context, value, child) {
                   return PushButton.filled(
-                    onPressed: RegExp(_kValidMountPointPattern)
+                    onPressed: RegExp(_validMountPointPattern)
                             .hasMatch(partitionMount.value ?? '')
                         ? () {
                             model.editPartition(
@@ -276,18 +287,20 @@ class _PartitionMountField extends StatelessWidget {
   const _PartitionMountField({
     required this.partitionFormat,
     required this.partitionMount,
+    this.originalPartition,
     this.initialMount,
   });
 
   final String? initialMount;
   final ValueNotifier<PartitionFormat?> partitionFormat;
   final ValueNotifier<String?> partitionMount;
+  final Partition? originalPartition;
 
   @override
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     return SizedBox(
-      width: _kInputFieldWidth,
+      width: _inputFieldWidth,
       child: ValueListenableBuilder<PartitionFormat?>(
         valueListenable: partitionFormat,
         builder: (context, format, child) {
@@ -295,9 +308,17 @@ class _PartitionMountField extends StatelessWidget {
             initialValue: initialMount != null
                 ? TextEditingValue(text: initialMount!)
                 : null,
-            optionsBuilder: (value) => kDefaultMountPoints
-                .where((option) => option.startsWith(value.text)),
-            onSelected: (option) => partitionMount.value = option,
+            optionsBuilder: (value) => DefaultMountPoint.paths()
+                .where((path) => path.startsWith(value.text)),
+            onSelected: (option) {
+              if (option != DefaultMountPoint.home.path) {
+                partitionFormat.value = partitionFormat.value ??
+                    (originalPartition != null
+                        ? PartitionFormat.fromPartition(originalPartition!)
+                        : null);
+              }
+              partitionMount.value = option;
+            },
             fieldViewBuilder:
                 (context, textEditingController, focusNode, onFieldSubmitted) {
               return TextFormField(

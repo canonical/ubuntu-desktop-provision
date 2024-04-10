@@ -13,6 +13,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
   - [Code of Conduct](#code-of-conduct)
   - [Getting Started](#getting-started)
     - [Pull Requests](#pull-requests)
+  - [Translations](#translations)
   - [Contributing to the code](#contributing-to-the-code)
     - [Required dependencies](#required-dependencies)
     - [Building and running the binaries](#building-and-running-the-binaries)
@@ -48,6 +49,10 @@ In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susa
 1. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
 
 PRs will trigger unit and integration tests with and without race detection, linting and formatting validations, static and security checks, freshness of generated files verification. All the tests must pass before merging in main branch.
+
+## Translations
+
+Translations are managed using [Weblate](https://hosted.weblate.org/projects/ubuntu-desktop-translations/)
 
 ## Contributing to the code
 

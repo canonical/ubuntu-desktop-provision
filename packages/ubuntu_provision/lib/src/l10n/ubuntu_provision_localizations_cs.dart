@@ -75,7 +75,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zavřít';
 
   @override
   String get timezonePageTitle => 'Vyberte své časové pásmo';

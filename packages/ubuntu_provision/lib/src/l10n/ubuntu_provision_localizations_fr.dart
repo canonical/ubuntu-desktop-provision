@@ -75,7 +75,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Fermer';
 
   @override
   String get timezonePageTitle => 'Sélectionnez votre fuseau horaire';

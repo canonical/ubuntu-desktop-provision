@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 
 export 'package:subiquity_client/subiquity_client.dart'
@@ -20,68 +21,43 @@ extension PartitionExtension on Partition {
 }
 
 /// Available partition formats.
-class PartitionFormat {
-  const PartitionFormat._(this.type, this.name);
+enum PartitionFormat {
+  none('', null),
+  btrfs('btrfs', 'Btrfs'),
+  ext2('ext2', 'Ext2'),
+  ext3('ext3', 'Ext3'),
+  ext4('ext4', 'Ext4'),
+  fat('fat', 'FAT'),
+  fat12('fat12', 'FAT12'),
+  fat16('fat16', 'FAT16'),
+  fat32('fat32', 'FAT32'),
+  iso9660('iso9660', 'ISO9660'),
+  vfat('vfat', 'VFAT'),
+  jfs('jfs', 'JFS'),
+  ntfs('ntfs', 'NTFS'),
+  reiserfs('reiserfs', 'ReiserFS'),
+  swap('swap', 'Swap'),
+  xfs('xfs', 'XFS'),
+  zfsroot('zfsroot', 'ZFS root');
+
+  const PartitionFormat(this.type, this.displayName);
 
   /// The type of the partition format (e.g. 'ext4').
   final String type;
 
   /// The display name of the partition format (e.g. 'Ext4').
-  final String? name;
+  final String? displayName;
 
   /// Whether a partition with this format can be wiped.
   bool get canWipe => type != 'swap';
 
-  @override
-  String toString() => type;
-
-  static const none = PartitionFormat._('', null);
-  static const btrfs = PartitionFormat._('btrfs', 'Btrfs');
-  static const ext2 = PartitionFormat._('ext2', 'Ext2');
-  static const ext3 = PartitionFormat._('ext3', 'Ext3');
-  static const ext4 = PartitionFormat._('ext4', 'Ext4');
-  static const fat = PartitionFormat._('fat', 'FAT');
-  static const fat12 = PartitionFormat._('fat12', 'FAT12');
-  static const fat16 = PartitionFormat._('fat16', 'FAT16');
-  static const fat32 = PartitionFormat._('fat32', 'FAT32');
-  static const iso9660 = PartitionFormat._('iso9660', 'ISO9660');
-  static const vfat = PartitionFormat._('vfat', 'VFAT');
-  static const jfs = PartitionFormat._('jfs', 'JFS');
-  static const ntfs = PartitionFormat._('ntfs', 'NTFS');
-  static const reiserfs = PartitionFormat._('reiserfs', 'ReiserFS');
-  static const swap = PartitionFormat._('swap', 'Swap');
-  static const xfs = PartitionFormat._('xfs', 'XFS');
-  static const zfsroot = PartitionFormat._('zfsroot', 'ZFS root');
-
   /// The default partition format.
-  static PartitionFormat get defaultValue => _formats['ext4']!;
+  static PartitionFormat get defaultValue => PartitionFormat.ext4;
 
   /// Converts a Partition object to a PartitionFormat enum value.
   static PartitionFormat? fromPartition(Partition partition) =>
-      _formats[partition.format];
-
-  /// All available partition formats.
-  static List<PartitionFormat> get values => _formats.values.toList();
+      values.firstWhereOrNull((e) => e.type == partition.format);
 
   /// Partition formats supported for new partitions.
-  static List<PartitionFormat> get supported => [ext4, xfs, btrfs];
-
-  static const _formats = <String, PartitionFormat>{
-    'btrfs': btrfs,
-    'ext2': ext2,
-    'ext3': ext3,
-    'ext4': ext4,
-    'fat': fat,
-    'fat12': fat12,
-    'fat16': fat16,
-    'fat32': fat32,
-    'iso9660': iso9660,
-    'vfat': vfat,
-    'jfs': jfs,
-    'ntfs': ntfs,
-    'reiserfs': reiserfs,
-    'swap': swap,
-    'xfs': xfs,
-    'zfsroot': zfsroot,
-  };
+  static List<PartitionFormat> get supported => [ext4, xfs, btrfs, vfat];
 }

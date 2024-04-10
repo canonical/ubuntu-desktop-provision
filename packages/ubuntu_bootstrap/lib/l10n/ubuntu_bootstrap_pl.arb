@@ -37,7 +37,7 @@
   "@installationTypeErase": {},
   "updatesOtherSoftwarePageDescription": "Jakie programy chcesz zainstalować na początek?",
   "@updatesOtherSoftwarePageDescription": {},
-  "installationTypeTitle": "Typ instalacji",
+  "installationTypeTitle": "Konfiguracja dysku",
   "@installationTypeTitle": {},
   "installThirdPartyTitle": "Zainstaluj oprogramowanie innych dostawców do obsługi sprzętu graficznego i Wi-Fi, a także dodatkowe formaty multimedialne",
   "@installThirdPartyTitle": {},
@@ -60,15 +60,15 @@
   "@diskHeadersFormat": {},
   "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EKSPERYMENTALNE: wymaż dysk i użyj ZFS",
+  "installationTypeZFS": "Wyczyść dysk i użyj ZFS",
   "@installationTypeZFS": {},
-  "installationTypeManualInfo": "Możesz samodzielnie utworzyć lub zmienić rozmiar partycji lub wybrać wiele partycji dla {DISTRO}",
+  "installationTypeManualInfo": "Dla zaawansowanych użytkowników preferujących niestandardowe konfiguracje dysków.",
   "@installationTypeManualInfo": {},
   "partitionLocationLabel": "Położenie nowej partycji:",
   "@partitionLocationLabel": {},
   "installationTypeZFSSelected": "Wybrano ZFS",
   "@installationTypeZFSSelected": {},
-  "selectGuidedStoragePageTitle": "Wymaż dysk i zainstaluj {DISTRO}",
+  "selectGuidedStoragePageTitle": "Wyczyść dysk i zainstaluj {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
   "allocateDiskSpace": "Ręczne partycjonowanie",
   "@allocateDiskSpace": {},
@@ -117,9 +117,9 @@
       "url": {}
     }
   },
-  "rstTitle": "Funkcja RST jest włączona",
+  "rstTitle": "Wykryto RST",
   "@rstTitle": {},
-  "rstDescription": "Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją Ubuntu.",
+  "rstDescription": "Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją {DISTRO}.",
   "@rstDescription": {},
   "configureSecureBootTitle": "Skonfiguruj bezpieczny rozruch (Secure Boot)",
   "@configureSecureBootTitle": {},
@@ -133,7 +133,7 @@
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Wymagany jest klucz bezpieczeństwa",
   "@configureSecureBootSecurityKeyRequired": {},
-  "updatesOtherSoftwarePageTitle": "Aplikacje i aktualizacje",
+  "updatesOtherSoftwarePageTitle": "Programy",
   "@updatesOtherSoftwarePageTitle": {},
   "otherOptions": "Pozostałe opcje",
   "@otherOptions": {},
@@ -188,7 +188,7 @@
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Gotów do instalacji",
   "@confirmPageTitle": {},
-  "confirmHeader": "Jeśli będziesz kontynuować, zmiany wymienione poniżej zostaną zapisane na dyskach. Będzie można wprowadzać dalsze zmiany ręcznie.",
+  "confirmHeader": "Przejrzyj swoje wybory",
   "@confirmHeader": {},
   "confirmPartitionTables": "Zmieniane są tablice partycji następujących urządzeń:",
   "@confirmPartitionTables": {},
@@ -358,9 +358,9 @@
   "@installDriversTitle": {},
   "installCodecsTitle": "Pobierz i zainstaluj obsługę dodatkowych formatów multimediów",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre jest własnościowe.",
+  "installCodecsSubtitle": "W tym między innymi MP3, MP4, MOV i podobne",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Sterowniki te podlegają warunkom licencyjnym dołączonym do ich dokumentacji. Są one własnościowe.",
+  "installDriversSubtitle": "W tym między innymi sterowniki NVIDIA i podobne",
   "@installDriversSubtitle": {},
   "tooManyPrimaryPartitions": "Zbyt wiele partycji podstawowych",
   "@tooManyPrimaryPartitions": {},
@@ -635,7 +635,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Uruchom ponownie instalator.",
+  "refreshRestart": "Zamknij instalator i uruchom go ponownie, aby kontynuować",
   "@refreshRestart": {},
   "refreshSnapPrerequisites": "Sprawdzanie wymagań wstępnych {snap}...",
   "@refreshSnapPrerequisites": {
@@ -735,12 +735,181 @@
       "color": {}
     }
   },
-  "minimalInstallationTitle": "Instalacja domyślna",
+  "minimalInstallationTitle": "Domyślny wybór",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych, przeglądarki internetowej i gier.",
+  "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych oraz przeglądarka internetowa.",
   "@fullInstallationSubtitle": {},
-  "fullInstallationTitle": "Instalacja pełna",
-  "@fullInstallationTitle": {}
+  "fullInstallationTitle": "Rozszerzony wybór",
+  "@fullInstallationTitle": {},
+  "autoinstallInstructions": "Wpisz adres URL pliku autoinstall.yaml:",
+  "@autoinstallInstructions": {},
+  "warningLabel": "Ostrzeżenie:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Co chcesz zrobić z {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageDescription": "Zainstalować zalecane oprogramowanie własnościowe?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "Wykryto kartę graficzną NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "batteryWarning": "Komputer nie jest podłączony do źródła zasilania.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Hasło dysku",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Utwórz hasło",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Aby zaszyfrować pliki, potrzebujesz hasła. Przy każdym włączeniu komputera będzie wymagane podanie hasła.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Wybierz hasło",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Potwierdź hasło",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Wymagane jest hasło",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Hasła nie pasują do siebie",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Pamiętaj, aby zapisać swoje hasło",
+  "@choosePassphraseInfoHeader": {},
+  "createPassphrase": "Utwórz hasło",
+  "@createPassphrase": {},
+  "installationTypeHeader": "W jaki sposób chcesz zainstalować {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeExperimental": "Eksperymentalne",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Użyj LVM",
+  "@installationTypeLVM": {},
+  "installationTypeEraseInfo": "Zacznij od zera na wybranym dysku.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Wyczyść dysk i użyj ZFS z szyfrowaniem",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "Wybrano ZFS i szyfrowanie",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageInfo": "Zacznij od zera na wybranym dysku.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Wybierz dysk:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Wybierz partycję:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Wybierz miejsce instalacji {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmEntryDiskSetup": "Konfiguracja dysku",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Szyfrowanie dysku",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Dysk instalacyjny",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Oprogramowanie własnościowe",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Ogólne",
+  "@confirmSectionGeneralTitle": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Brak",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Programy",
+  "@confirmEntryApplications": {},
+  "confirmProprietarySoftwareCodecs": "Kodeki",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodeki i sterowniki",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Sterowniki",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** skopiowano na dysk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Uruchom ponownie w celu dokończenia instalacji lub kontynuuj testowanie.\nWszelkie wprowadzone zmiany nie zostaną zapisane.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "Musisz ponownie uruchomić komputer, aby kontynuować proces instalacji.",
+  "@rebootToConfigureWarning": {},
+  "refreshUpdateNow": "Zaktualizuj teraz",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Aktualizacja przygotowana",
+  "@refreshReady": {},
+  "autoinstallTitle": "Rodzaj instalacji",
+  "@autoinstallTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Bezpieczeństwo i nie tylko",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "autoinstallHeader": "Jak chcesz zainstalować {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Instalacja interaktywna",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Dla użytkowników, którzy chcą być prowadzeni krok po kroku przez instalację.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Instalacja zautomatyzowana",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.",
+  "@autoinstallAutomatedDescription": {},
+  "hideSecurityKey": "Ukryj",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Zoptymalizuj swój komputer",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageBody": "Domyślnie {DISTRO} nie dostarcza żadnego oprogramowania własnościowego. Zainstalowanie dodatkowego oprogramowania może poprawić wydajność komputera.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "Aby uzyskać najlepszą wydajność kart graficznych NVIDIA, zdecydowanie zaleca się zainstalowanie dodatkowych sterowników.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseInfoBody": "Jeśli zgubisz hasło, utracisz wszystkie swoje dane.",
+  "@choosePassphraseInfoBody": {},
+  "confirmPassphrase": "Potwierdź hasło",
+  "@confirmPassphrase": {},
+  "installationTypeTPMInfo": "Jest to funkcja eksperymentalna. Może nie działać ze sprzętem w przyszłych wersjach {DISTRO}. <a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a>, zanim wybierzesz tę opcję.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Dostępna jest aktualizacja instalatora",
+  "@refreshHeader": {},
+  "refreshInfo": "Zaktualizuj do najnowszej wersji, aby zwiększyć niezawodność i uzyskać więcej funkcji.",
+  "@refreshInfo": {},
+  "refreshCloseLabel": "Zamknij instalator",
+  "@refreshCloseLabel": {},
+  "validate": "Sprawdź",
+  "@validate": {}
 }

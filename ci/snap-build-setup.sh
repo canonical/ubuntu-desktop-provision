@@ -4,8 +4,8 @@ set -euxo pipefail
 
 snap_name=$1
 
-if [[ $snap_name != "init" && $snap_name != "bootstrap" ]]; then
-    echo "Expected argument to be 'init' or 'bootstrap'"
+if [[ $snap_name != "init" && $snap_name != "bootstrap" && $snap_name != "reset-tools" ]]; then
+    echo "Expected argument to be 'init', 'bootstrap' or 'reset-tools', but got '$snap_name'"
     exit 1
 fi
 

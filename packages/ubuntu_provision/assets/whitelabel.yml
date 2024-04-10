@@ -45,7 +45,7 @@ pages:
     image: "assets/images/telemetry.svg"
   welcome:
   done:
-    image: "assets/images/mascot.svg"
+    image: "assets/images/mascot_no_background.svg"
   storage-icon:
     image: "assets/images/ubuntu_storage_icon.svg"
   error:

@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => '可访问性';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO 中的可访问性';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return '在您安装之前，按您的需要自定义 $DISTRO。您之后可以在“系统设置”中更改它们。';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => '视觉';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => '听觉';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => '打字';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => '指向与点击';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => '放大';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => '高对比度';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => '大号文本';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => '减少动画';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => '屏幕阅读器';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => '视觉警报';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => '粘滞键';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => '慢速键';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => '鼠标键';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => '桌面缩放';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => '出问题了';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => '很抱歉，但我们不确定问题所在。您可以尝试重新启动计算机，并再次启动安装进程。您也可以<a>报告问题</a>。';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => '显示日志';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => '隐藏日志';
 
   @override
-  String get restart => 'Restart';
+  String get restart => '重新启动';
 
   @override
-  String get close => 'Close';
+  String get close => '关闭';
 
   @override
   String get timezonePageTitle => '选择您的时区';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get keyboardTitle => '键盘布局';
 
   @override
-  String get keyboardHeader => '选择您的键盘布局：';
+  String get keyboardHeader => '选择您的键盘布局';
 
   @override
   String get keyboardTestHint => '在此键入以测试您的键盘';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => '配置活动目录';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => '登录 Active Directory 吗？';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO 被设计为与 Active Directory 无缝集成，使管理更轻松。';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get networkPageTitle => '连接到互联网';
 
   @override
-  String get networkPageHeader => '将这台电脑连接到互联网有助于 Ubuntu 安装所需的任何额外软件并选择您的时区。\n\n通过以太网电缆连接，或选择 Wi-Fi 网络';
+  String get networkPageHeader => '连接到互联网';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => '连接网络后，兼容性检查与附加软件包可以改善您的安装。';
 
   @override
   String get networkWiredOption => '使用有线连接';
