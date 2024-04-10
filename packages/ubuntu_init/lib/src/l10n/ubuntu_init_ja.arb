@@ -64,5 +64,7 @@
   "privacyLocationEnable": "位置情報サービス",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "データプライバシー",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "welcomePageHeader": "{distro} にようこそ",
+  "@welcomePageHeader": {}
 }
