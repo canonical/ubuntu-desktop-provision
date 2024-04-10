@@ -230,7 +230,7 @@ class _InstallerApp extends ConsumerWidget {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const LoadingPage();
               } else if (snapshot.hasError) {
-                return const ErrorPage(allowRestart: true);
+                return const ErrorPage(allowRestart: false);
               }
               return InstallerWizard(key: ValueKey(ref.watch(restartProvider)));
             }),

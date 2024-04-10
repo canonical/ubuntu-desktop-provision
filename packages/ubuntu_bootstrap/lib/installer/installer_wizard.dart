@@ -77,7 +77,7 @@ class _InstallWizard extends ConsumerWidget {
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: true),
+          builder: (_) => const ErrorPage(allowRestart: false),
         ),
       },
       predicate: (route) {
@@ -137,7 +137,7 @@ class _AutoinstallWizard extends ConsumerWidget {
           onLoad: (_) => const InstallPage().load(context, ref),
         ),
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: true),
+          builder: (_) => const ErrorPage(allowRestart: false),
         ),
       },
     );
@@ -152,7 +152,7 @@ class _ErrorWizard extends StatelessWidget {
     return Wizard(
       routes: <String, WizardRoute>{
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: true),
+          builder: (_) => const ErrorPage(allowRestart: false),
         ),
       },
     );
