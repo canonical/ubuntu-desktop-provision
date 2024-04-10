@@ -128,7 +128,7 @@
   "@diskHeadersMountPoint": {},
   "partitionErase": "パーティションをフォーマット",
   "@partitionErase": {},
-  "bootLoaderDevice": "ブートローダーをインストールするデバイスを選択してください",
+  "bootLoaderDevice": "ブートローダーをインストールするデバイスを選択",
   "@bootLoaderDevice": {},
   "partitionSizeLabel": "サイズ：",
   "@partitionSizeLabel": {},
@@ -215,7 +215,7 @@
   "@newPartitionTableConfirmationMessage": {},
   "partitionLocationLabel": "新しいパーティションの場所を選択してください。",
   "@partitionLocationLabel": {},
-  "confirmHeader": "続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます",
+  "confirmHeader": "これまでの選択を確認してください",
   "@confirmHeader": {},
   "bitlockerDescription": "このコンピューターはWindows BitLockerで暗号化されています。\nWindowsを使って空き領域を作るか、'{option}'を選択してください。",
   "@bitlockerDescription": {},
@@ -581,7 +581,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアが将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TMP暗号化</a> をよく読んでください。",
+  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアが将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TPM暗号化</a> をよく読んでください。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
