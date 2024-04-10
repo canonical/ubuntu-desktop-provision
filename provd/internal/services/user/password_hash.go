@@ -2,7 +2,7 @@
 package user
 
 /*
-#cgo CFLAGS: -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+#cgo pkg-config: glib-2.0
 #cgo LDFLAGS: -lcrypt -lglib-2.0
 #include "password_hash.h"
 */

@@ -187,15 +187,18 @@ Future<void> showEditPartitionDialog(
               ],
               [
                 Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
-                ValueListenableBuilder(
-                  valueListenable: partitionFormat,
-                  builder: (context, value, child) {
+                AnimatedBuilder(
+                  animation:
+                      Listenable.merge([partitionFormat, partitionMount]),
+                  builder: (context, child) {
                     final configFormat = originalPartition != null
                         ? PartitionFormat.fromPartition(originalPartition)
                         : null;
                     return MenuButtonBuilder<PartitionFormat?>(
                       entries: [
-                        if (partition.preserve ?? false) ...[
+                        if (partitionMount.value ==
+                                DefaultMountPoint.home.path &&
+                            (partition.preserve ?? false)) ...[
                           const MenuButtonEntry(value: null),
                           const MenuButtonEntry(value: null, isDivider: true),
                         ],

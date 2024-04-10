@@ -166,5 +166,29 @@
   "confirmSecurityKey": "تأكيد مفتاح الأمان",
   "@confirmSecurityKey": {},
   "chooseSecurityKey": "اختيار مفتاح أمان",
-  "@chooseSecurityKey": {}
+  "@chooseSecurityKey": {},
+  "autoinstallTitle": "نوع التثبيت",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "كيف تريد تنصيب {DISTRO}؟",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "تنصيب تفاعلي",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "تنصيب آلي",
+  "@autoinstallAutomatedOption": {},
+  "warningLabel": "تحذير:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "ما الذي تريد فِعلَه بـ {DISTRO}؟",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

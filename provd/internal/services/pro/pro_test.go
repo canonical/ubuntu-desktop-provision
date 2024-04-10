@@ -55,6 +55,7 @@ func TestProMagicAttach(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
+			tc := tc
 			t.Parallel()
 
 			// Prepare mocks
@@ -108,6 +109,7 @@ func TestProStatus(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
+			tc := tc
 			t.Parallel()
 
 			// Prepare mocks
@@ -150,6 +152,7 @@ func TestProAttach(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
+			tc := tc
 			t.Parallel()
 
 			// Prepare mocks

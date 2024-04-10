@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "Ett nätverksnamn krävs",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Jag vill inte ansluta till internet just nu",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "Tillgänglighet",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageBody": "Anpassa {DISTRO} för att passa dina behov innan du installerar. Du kan ändra dem senare i Systeminställningar.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Seende",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Hörsel",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Skrivning",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Peka och klicka",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Hög kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityReduceAnimationLabel": "Minska animation",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityStickKeysLabel": "Tröga tangenter",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Långsamma tangenter",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Mus tangenter",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Skrivbordszoom",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageUnexpected": "Vi är ledsna, men vi är inte säkra på vad felet är. Du kan prova att starta om datorn och starta installationsprocessen igen. Du kan också <a>rapportera problemet</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageShowLog": "Visa logg",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Dölj logg",
+  "@errorPageHideLog": {},
+  "restart": "Starta om",
+  "@restart": {},
+  "close": "Stäng",
+  "@close": {},
+  "networkPageBody": "En internetanslutning kommer att förbättra din installation med kompatibilitetskontroll och extra paket för programvara.",
+  "@networkPageBody": {},
+  "accessibilityPageHeader": "Tillgänglighet i {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityLargeTextLabel": "Stor text",
+  "@accessibilityLargeTextLabel": {},
+  "errorPageTitle": "Något gick fel",
+  "@errorPageTitle": {},
+  "accessibilityScreenReaderLabel": "Skärmläsare",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuella larm",
+  "@accessibilityVisualAlertsLabel": {},
+  "activeDirectoryHeader": "Logga in med Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} är designad för att integreras sömlöst med Active Directory för enklare administration.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

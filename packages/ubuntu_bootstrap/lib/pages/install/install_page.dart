@@ -85,15 +85,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 curve: Curves.easeIn,
                 duration: const Duration(milliseconds: 150),
                 offset: Offset(0, model.isLogVisible ? 0 : 1),
-                child: Container(
-                  color: Theme.of(context).colorScheme.background,
-                  padding: const EdgeInsets.only(
-                    top: kWizardSpacing,
-                    left: kWizardSpacing,
-                    right: kWizardSpacing,
-                  ),
-                  child: JournalView(journal: model.log),
-                ),
+                child: JournalView(journal: model.log),
               ),
             ),
           )
@@ -118,10 +110,11 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
               ),
             ),
             trailing: IconButton(
-              icon: Icon(YaruIcons.terminal,
-                  color: model.isLogVisible
-                      ? Theme.of(context).primaryColor
-                      : null),
+              icon: Icon(
+                YaruIcons.terminal,
+                color:
+                    model.isLogVisible ? Theme.of(context).primaryColor : null,
+              ),
               onPressed: model.toggleLogVisibility,
             ),
             leading: Row(

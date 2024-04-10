@@ -15,6 +15,7 @@ import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/installer/installer_model.dart';
 import 'package:ubuntu_bootstrap/installer/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/loading/loading_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -140,7 +141,7 @@ Future<void> runInstallerApp(
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
-  final initialized = getService<SubiquityServer>().start(args: [
+  final subiquityArgs = [
     if (options['dry-run-config'] != null)
       '--dry-run-config=${options['dry-run-config']}',
     if (options['machine-config'] != null)
@@ -150,7 +151,7 @@ Future<void> runInstallerApp(
     '--storage-version=2',
     '--dry-run-config=examples/dry-run-configs/tpm.yaml',
     ...options.rest,
-  ]);
+  ];
 
   await runZonedGuarded(() async {
     FlutterError.onError = (error) {
@@ -172,9 +173,6 @@ Future<void> runInstallerApp(
     final flavorService = await FlavorService.load();
     tryRegisterService<FlavorService>(() => flavorService);
 
-    final endpoint = await initialized;
-    await _initInstallerApp(endpoint);
-
     runApp(ProviderScope(
       child: _InstallerApp(
         theme: theme,
@@ -182,6 +180,9 @@ Future<void> runInstallerApp(
         themeVariant: themeVariant,
         windowTitle: windowTitle,
         flavor: flavorService.flavor,
+        init: getService<SubiquityServer>()
+            .start(args: subiquityArgs)
+            .then(_initInstallerApp),
       ),
     ));
   }, (error, stack) => log.error('Unhandled exception', error, stack));
@@ -194,6 +195,7 @@ class _InstallerApp extends ConsumerWidget {
     required this.themeVariant,
     required this.windowTitle,
     required this.flavor,
+    required this.init,
   });
 
   final ThemeData? theme;
@@ -201,6 +203,7 @@ class _InstallerApp extends ConsumerWidget {
   final ThemeVariant? themeVariant;
   final String? windowTitle;
   final UbuntuFlavor flavor;
+  final Future<void> init;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -221,7 +224,16 @@ class _InstallerApp extends ConsumerWidget {
           rootBundle,
           package: 'ubuntu_bootstrap',
         ),
-        child: InstallerWizard(key: ValueKey(ref.watch(restartProvider))),
+        child: FutureBuilder<void>(
+            future: init,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const LoadingPage();
+              } else if (snapshot.hasError) {
+                return const ErrorPage(allowRestart: true);
+              }
+              return InstallerWizard(key: ValueKey(ref.watch(restartProvider)));
+            }),
       ),
     );
   }
@@ -242,7 +254,6 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
   final services = [
     getService<InstallerService>().init(),
     tryGetService<DesktopService>()?.inhibit() ?? Future.value(),
-    getService<RefreshService>().check(),
     getService<PageConfigService>().load(),
     geo.init(),
     telemetry.init({

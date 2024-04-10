@@ -189,6 +189,7 @@
     }
   },
   "confirmHeader": "Просмотрите свой выбор",
+  "@confirmHeader": {},
   "installationTypeMultiOSDetected": "На этом компьютере установлено несколько операционных систем. Что вы хотите сделать?",
   "@installationTypeMultiOSDetected": {},
   "installationTypeDualOSDetected": "На этом компьютере установлены {os1} и {os2}. Что вы хотите сделать?",
@@ -765,7 +766,7 @@
   "@confirmDiskEncryptionZFS": {},
   "confirmEntryProprietarySoftware": "Проприетарное ПО",
   "@confirmEntryProprietarySoftware": {},
-  "confirmSectionSecurityAndMoreTitle": "Безопасность и др.",
+  "confirmSectionSecurityAndMoreTitle": "Безопасность и многое другое",
   "@confirmSectionSecurityAndMoreTitle": {},
   "confirmProprietarySoftwareCodecs": "Кодеки",
   "@confirmProprietarySoftwareCodecs": {},
@@ -781,7 +782,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Введите URL-адрес autoinstall.yaml.",
+  "autoinstallInstructions": "Введите URL autoinstall.yaml:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Интерактивная установка",
   "@autoinstallInteractiveOption": {},
@@ -887,5 +888,23 @@
   "refreshHeader": "Доступно обновление для программы установки",
   "@refreshHeader": {},
   "refreshUpdateNow": "Обновить сейчас",
-  "@refreshUpdateNow": {}
+  "@refreshUpdateNow": {},
+  "warningLabel": "Предупреждение:",
+  "@warningLabel": {},
+  "batteryWarning": "Компьютер не подключён к источнику питания.",
+  "@batteryWarning": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Выберите раздел:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "selectGuidedStorageDriveDropdownLabel": "Выберите диск:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "guidedStoragePageHeader": "Выберите, куда установить {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Перезагрузитесь, чтобы завершить установку или продолжить тестирование.\nЛюбые внесенные вами изменения не будут сохранены.",
+  "@restartWarningBody": {}
 }

@@ -9,7 +9,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Witamy w $distro';
+    return 'Witaj w $distro';
   }
 
   @override
@@ -22,7 +22,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Obsługiwanie przejrzystszej konfiguracji.';
 
   @override
-  String get welcomeStoreTitle => 'Nowy wygląd sklepu z aplikacjami';
+  String get welcomeStoreTitle => 'Nowy wygląd Centrum oprogramowania';
 
   @override
   String get welcomeStoreSubtitle => 'Znalezienie ulubionego oprogramowania nigdy nie było łatwiejsze.';
@@ -75,7 +75,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Włączyć usługi lokalizacyjne?';
 
   @override
-  String get privacyLocationSubtitle => 'Informuj aplikacje o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.';
+  String get privacyLocationSubtitle => 'Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.';
 
   @override
   String get privacyLocationEnable => 'Usługi lokalizacyjne';

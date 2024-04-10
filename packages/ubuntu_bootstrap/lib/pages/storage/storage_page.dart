@@ -52,15 +52,22 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
       title: lang.installationTypeHeader(flavor.displayName),
-      isNextEnabled: model.canEraseDisk ||
-          model.canInstallAlongside ||
-          model.canManualPartition,
-      nextArguments: model.type,
-      onNext: model.save,
-      // If the user returns back to select another installation type, the
-      // previously configured storage must be reset to make all guided
-      // partitioning targets available.
-      onBack: model.resetStorage,
+      bottomBar: WizardBar(
+        leading: const BackWizardButton(),
+        trailing: [
+          NextWizardButton(
+            onNext: model.save,
+            enabled: model.canEraseDisk ||
+                model.canInstallAlongside ||
+                model.canManualPartition,
+            arguments: model.type,
+            // If the user returns back to select another installation type, the
+            // previously configured storage must be reset to make all guided
+            // partitioning targets available.
+            onReturn: model.resetStorage,
+          ),
+        ],
+      ),
       children: [
         if (model.canInstallAlongside || model.hasBitLocker)
           _InstallationTypeTile(

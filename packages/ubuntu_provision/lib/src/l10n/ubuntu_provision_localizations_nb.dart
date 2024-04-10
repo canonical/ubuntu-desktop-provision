@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsNb([String locale = 'nb']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Tilgjengelighet';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Tilgjengelighet i $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Tilpass $DISTRO til dine behov før oppsett. Du kan endre dette senere i systeminnstillingene.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Syn';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Hørsel';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Skriving';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Peking og klikking';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Forstørrelse';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Høykontrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Stor tekst';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Reduser animasjon';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Skjermleser';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Visuelle varsler';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Faste valgtaster';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Trege taster';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Musetaster';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Skrivebordsforstørrelse';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Noe gikk galt';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Beklager. Finner ikke ut hva feilen er. Etter en omstart kan du starte installasjonsprosessen igjen. Du kan også <a>rapportere en feil</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Vis logg';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Skjul logg';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Omstart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Lukk';
 
   @override
   String get timezonePageTitle => 'Hvem er du?';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Sett opp Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Logg inn i Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO er designet for sømløs integrasjon med Active Directory for enklere administrasjon.';
   }
 
   @override
@@ -280,7 +280,7 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Å koble denne datamaskinen til internett vil hjelpe Ubuntu med å installere all ekstra programvare som trengs og hjelpe deg med å velge tidssone.\n\nKoble til med Ethernet-kabel, eller velg et Wi-Fi-nettverk';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Tilkobling til Internett forbedrer installasjonen med kompatibilitetssjekk og ekstra programvarepakker.';
 
   @override
   String get networkWiredOption => 'Bruk kablet nettverktilkobling';
