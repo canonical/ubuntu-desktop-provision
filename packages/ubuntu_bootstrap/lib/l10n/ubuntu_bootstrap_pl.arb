@@ -433,7 +433,7 @@
   "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityOrca": "Czytnik ekranu Orca",
   "@installationSlidesAccessibilityOrca": {},
-  "installationSlidesSupportTitle": "Pomoc i wsparcie",
+  "installationSlidesSupportTitle": "Pomoc i wsparcie",
   "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "Oficjalna dokumentacja {DISTRO} jest dostępna zarówno online, jak i za pośrednictwem ikony Pomoc umieszczonej w doku.",
   "@installationSlidesSupportHeader": {
@@ -442,9 +442,9 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Serwis Ask Ubuntu obejmuje szereg pytań i odpowiedzi, a Ubuntu Discourse zawiera przewodniki i dyskusje dla nowych i doświadczonych użytkowników.",
+  "installationSlidesSupportCommunity": "Serwis Ask Ubuntu obejmuje szereg pytań i odpowiedzi, a Ubuntu Discourse zawiera przewodniki i dyskusje dla nowych i doświadczonych użytkowników.",
   "@installationSlidesSupportCommunity": {},
-  "installationSlidesSupportEnterprise": "Dla użytkowników korporacyjnych Canonical zapewnia komercyjne wsparcie, aby ułatwić wdrożenie i bezpieczne zarządzanie systemem Ubuntu w miejscu pracy.",
+  "installationSlidesSupportEnterprise": "Dla użytkowników korporacyjnych Canonical zapewnia komercyjne wsparcie, aby ułatwić wdrożenie i bezpieczne zarządzanie systemem Ubuntu w miejscu pracy.",
   "@installationSlidesSupportEnterprise": {},
   "installationSlidesCreativityBody": "Jeśli zajmujesz się animacją, projektowaniem, tworzeniem wideo lub gier, możesz łatwo przenieść swoje przepływy pracy do {DISTRO} dzięki obsłudze oprogramowania i aplikacji będących standardem branżowym oraz open source.",
   "@installationSlidesCreativityBody": {
