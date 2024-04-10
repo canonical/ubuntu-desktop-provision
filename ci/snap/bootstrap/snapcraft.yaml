@@ -17,6 +17,7 @@ apps:
     daemon: simple
     restart-condition: always
     environment:
+      GIO_MODULE_DIR: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gio/modules
       PATH_ORIG: $PATH
       PYTHONPATH_ORIG: $PYTHONPATH
       LD_LIBRARY_PATH_ORIG: $LD_LIBRARY_PATH
