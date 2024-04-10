@@ -1,1 +1,68 @@
-{}
+{
+  "telemetryReportTitle": "報告内容の詳細",
+  "@telemetryReportTitle": {},
+  "privacyLocationTitle": "位置情報サービスを有効にしますか？",
+  "@privacyLocationTitle": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "telemetryLegalLabel": "法律上の通知",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "位置情報サービス",
+  "@privacyPageTitle": {},
+  "welcomePageTitle": "ようこそ",
+  "@welcomePageTitle": {},
+  "welcomeWhatsNew": "新機能は？",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "洗練されたセットアップ",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "セットアップのユーザー体験をよりエレガントにしました。",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "アプリストアの新しい見た目",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "お好みのソフトウェアがより簡単に見つかるようになりました。",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "セキュリティの拡張",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "ハードウェベースとZFS暗号化に関する新しいオプションを追加しました。",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">変更点を確認する</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryHeader": "{distro} の改善を手助けする",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryPageTitle": "情報収集",
+  "@telemetryPageTitle": {},
+  "telemetryDescription": "{distro} の匿名化したデータを共有すると、あなたの経験を改善できます。",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "{distro} チームへシステムデータを共有する",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "システムデータを共有しません",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "報告内容の詳細",
+  "@telemetryReportLabel": {},
+  "privacyLocationSubtitle": "アプリケーションに地理的な位置を知らせるようになります。\n設定でいつでも変更できます。",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "位置情報サービス",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "データプライバシー",
+  "@privacyPolicyLink": {}
+}
