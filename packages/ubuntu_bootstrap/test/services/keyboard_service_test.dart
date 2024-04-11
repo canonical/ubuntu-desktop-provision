@@ -1,16 +1,12 @@
 import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gsettings/gsettings.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/services/keyboard_service.dart';
 
 import '../test_utils.dart';
-import 'gnome_accessibility_service_test.mocks.dart';
 
-@GenerateMocks([GSettings])
 void main() {
   late MockGSettings inputSourceSettings;
 
