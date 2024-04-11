@@ -9,6 +9,7 @@ Build-Depends: debhelper-compat (= 13),
                libgtk-3-dev,
                dbus,
                gsettings-desktop-schemas,
+               ca-certificates,
 Standards-Version: 4.6.2.0
 XS-Go-Import-Path: github.com/canonical/ubuntu-desktop-provision/provd
 Homepage: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd

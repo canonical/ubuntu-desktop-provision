@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Tämä tietokone käyttää Intel RST:tä (Rapid Storage Technology). Sinun tulee sammuttaa RST, ennen kuin asennat Ubuntun.';
+    return 'Tämä tietokone käyttää Intel RST:tä (Rapid Storage Technology). Sinun tulee sammuttaa RST Windowsissa, ennen kuin asennat ${DISTRO}n.';
   }
 
   @override
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Asenna kolmannen osapuolen ohjelmistot näytönohjainta ja wifi-laitteistoa varten';
 
   @override
-  String get installDriversSubtitle => 'Näihin ajureihin pätee niiden dokumentaation mukana tulevat lisenssiehdot. Nämä ajurit ovat omisteellisia.';
+  String get installDriversSubtitle => 'Sisältäen mutta ei rajoittuen NVIDIA-ajurit ja vastaavat';
 
   @override
   String get installCodecsTitle => 'Lataa ja asenna tuki eri mediamuotoja varten';
 
   @override
-  String get installCodecsSubtitle => 'Tähän ohjelmistoon pätee sen dokumentaation mukana tulevat lisenssiehdot. Jotkin ohjelmistot ovat omisteellisia.';
+  String get installCodecsSubtitle => 'Sisältäen mutta ei rajoittuen MP3, MP4, MOV ja vastaavat';
 
   @override
   String get batteryWarning => 'Tämä tietokone ei ole liitetty virtalähteeseen.';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Voit luoda tai muuttaa osioiden kokoja itse, tai valita useita osioita ${DISTRO}n käytettäväksi';
+    return 'Edistyneille käyttäjille, jotka haluavat mukauttaa levymäärityksiä.';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Valmis asennukseen';
 
   @override
-  String get confirmHeader => 'Jos jatkat, alla luetellut muutokset kirjoitetaan levyille. Muussa tapauksessa voit tehdä itse lisää muutoksia.';
+  String get confirmHeader => 'Katselmoi valintasi';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -609,7 +609,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '$system on asennettu ja on valmis käytettäväksi.';
+    return '$system on asennettu ja valmis käytettäväksi';
   }
 
   @override
@@ -626,7 +626,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get restartWarningBody => 'Käynnistä uudelleen viimeistelläksesi asennuksen tai jatka testaamista.\nTekemiäsi muutoksia ei tallenneta.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Tietokone tulee käynnistää uudelleen, jotta asennusta voidaan jatkaa.';
 
   @override
   String get shutdown => 'Sammuta';
@@ -840,7 +840,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Käynnistä asennusohjelma uudelleen.';
+  String get refreshRestart => 'Sulje asennusohjelma ja käynnistä uudelleen jatkaaksesi';
 
   @override
   String get refreshCloseLabel => 'Sulje asennusohjelma';
@@ -922,7 +922,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Yhdistetään snapin $snap pistokkeet ja liittimet...';
   }
 
   @override
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Vahvista';
 }

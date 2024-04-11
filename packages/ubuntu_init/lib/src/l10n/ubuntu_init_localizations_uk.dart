@@ -5,7 +5,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Ласкаво просимо!';
+  String get welcomePageTitle => 'Ласкаво просимо';
 
   @override
   String welcomePageHeader(Object distro) {

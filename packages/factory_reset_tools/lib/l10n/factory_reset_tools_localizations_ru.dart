@@ -5,10 +5,10 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Инструменты сброса';
+  String get appTitle => 'Инструменты восстановления';
 
   @override
-  String get windowTitle => 'Инструменты сброса';
+  String get windowTitle => 'Инструменты восстановления';
 
   @override
   String get homeTitle => 'Что вы хотите сделать?';
@@ -74,23 +74,23 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get error => 'Ошибка';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Загрузка…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Предупреждение';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Сброс';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Перезагрузить';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Не удалось выполнить команду';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрыть';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ОК';
 }

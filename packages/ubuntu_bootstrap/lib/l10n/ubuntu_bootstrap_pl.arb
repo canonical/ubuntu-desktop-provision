@@ -10,7 +10,7 @@
   "@tryOrInstallRepairDescription": {},
   "appTitle": "Instalator Ubuntu Desktop",
   "@appTitle": {},
-  "installThirdPartySubtitle": "Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre z nich są własnościowe.",
+  "installThirdPartySubtitle": "Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre z nich są własnościowe.",
   "@installThirdPartySubtitle": {},
   "changeButtonText": "Zmień",
   "@changeButtonText": {},
@@ -33,22 +33,22 @@
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Wybierz klucz bezpieczeństwa",
   "@chooseSecurityKey": {},
-  "installationTypeErase": "Wymaż dysk i zainstaluj {DISTRO}",
+  "installationTypeErase": "Wymaż dysk i zainstaluj {DISTRO}",
   "@installationTypeErase": {},
   "updatesOtherSoftwarePageDescription": "Jakie programy chcesz zainstalować na początek?",
   "@updatesOtherSoftwarePageDescription": {},
   "installationTypeTitle": "Konfiguracja dysku",
   "@installationTypeTitle": {},
-  "installThirdPartyTitle": "Zainstaluj oprogramowanie innych dostawców do obsługi sprzętu graficznego i Wi-Fi, a także dodatkowe formaty multimedialne",
+  "installThirdPartyTitle": "Zainstaluj oprogramowanie innych dostawców do obsługi sprzętu graficznego i Wi-Fi, a także dodatkowe formaty multimedialne",
   "@installThirdPartyTitle": {},
-  "installationTypeReinstall": "Wymaż {os} i zainstaluj ponownie",
+  "installationTypeReinstall": "Wymaż {os} i zainstaluj ponownie",
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
       "os": {}
     }
   },
-  "installationTypeReinstallWarning": "<font color=\"{color}\">Ostrzeżenie:</font> spowoduje to usunięcie wszystkich programów {os}, dokumentów, zdjęć, muzyki i wszelkich innych plików.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Ostrzeżenie:</font> spowoduje to usunięcie wszystkich programów {os}, dokumentów, zdjęć, muzyki i wszelkich innych plików.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -60,7 +60,7 @@
   "@diskHeadersFormat": {},
   "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Wyczyść dysk i użyj ZFS",
+  "installationTypeZFS": "Wymaż dysk i użyj ZFS",
   "@installationTypeZFS": {},
   "installationTypeManualInfo": "Dla zaawansowanych użytkowników preferujących niestandardowe konfiguracje dysków.",
   "@installationTypeManualInfo": {},
@@ -68,7 +68,7 @@
   "@partitionLocationLabel": {},
   "installationTypeZFSSelected": "Wybrano ZFS",
   "@installationTypeZFSSelected": {},
-  "selectGuidedStoragePageTitle": "Wyczyść dysk i zainstaluj {DISTRO}",
+  "selectGuidedStoragePageTitle": "Wymaż dysk i zainstaluj {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
   "allocateDiskSpace": "Ręczne partycjonowanie",
   "@allocateDiskSpace": {},
@@ -110,7 +110,7 @@
   "@welcome": {},
   "installOption": "Zainstaluj {RELEASE}",
   "@installOption": {},
-  "tryOrInstallReleaseNotesLabel": "Możesz chcieć przeczytać <a href=\"{url}\">informacje o wydaniu</a>.",
+  "tryOrInstallReleaseNotesLabel": "Możesz chcieć przeczytać <a href=\"{url}\">informacje o wydaniu</a>.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
@@ -119,17 +119,17 @@
   },
   "rstTitle": "Wykryto RST",
   "@rstTitle": {},
-  "rstDescription": "Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją {DISTRO}.",
+  "rstDescription": "Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją {DISTRO}.",
   "@rstDescription": {},
   "configureSecureBootTitle": "Skonfiguruj bezpieczny rozruch (Secure Boot)",
   "@configureSecureBootTitle": {},
-  "configureSecureBootDescription": "Wybrano instalację oprogramowania sterownika innego dostawcy. Wymaga to wyłączenia bezpiecznego rozruchu (Secure Boot).\nAby to zrobić, musisz teraz wybrać klucz bezpieczeństwa i podać go po ponownym uruchomieniu systemu.",
+  "configureSecureBootDescription": "Wybrano instalację oprogramowania sterownika innego dostawcy. Wymaga to wyłączenia bezpiecznego rozruchu (Secure Boot).\nAby to zrobić, musisz teraz wybrać klucz bezpieczeństwa i podać go po ponownym uruchomieniu systemu.",
   "@configureSecureBootDescription": {},
   "confirmSecurityKey": "Potwierdź klucz bezpieczeństwa",
   "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Na razie nie instaluj oprogramowania sterownika",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Możesz zainstalować je później za pomocą aplikacji Oprogramowanie i aktualizacje.",
+  "dontInstallDriverSoftwareNowDescription": "Możesz zainstalować je później za pomocą aplikacji Oprogramowanie i aktualizacje.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Wymagany jest klucz bezpieczeństwa",
   "@configureSecureBootSecurityKeyRequired": {},
@@ -160,7 +160,7 @@
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Zaszyfruj nową instalację {RELEASE} dla bezpieczeństwa",
   "@installationTypeEncrypt": {},
-  "installationTypeAlongsideInfo": "Dokumenty, muzyka i inne pliki osobiste zostaną zachowane. Przy każdym uruchomieniu komputera można wybrać system operacyjny, który ma być używany.",
+  "installationTypeAlongsideInfo": "Dokumenty, muzyka i inne pliki osobiste zostaną zachowane. Przy każdym uruchomieniu komputera można wybrać system operacyjny, który ma być używany.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ręczne partycjonowanie",
   "@installationTypeManual": {},
@@ -202,7 +202,7 @@
   },
   "installationCompleteTitle": "Instalacja zakończona",
   "@installationCompleteTitle": {},
-  "readyToUse": "{system} został zainstalowany i jest gotowy do użycia",
+  "readyToUse": "{system} został zainstalowany i jest gotowy do użycia",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -233,7 +233,7 @@
   "@restartIntoWindows": {},
   "newPartitionTableConfirmationTitle": "Nowa pusta partycja",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "Utworzenie nowej tabeli partycji na całym urządzeniu spowoduje usunięcie wszystkich jego bieżących partycji. Operację tę można cofnąć w razie potrzeby.",
+  "newPartitionTableConfirmationMessage": "Utworzenie nowej tabeli partycji na całym urządzeniu spowoduje usunięcie wszystkich jego bieżących partycji. Operację tę można cofnąć w razie potrzeby.",
   "@newPartitionTableConfirmationMessage": {},
   "onBatteryWarning": "<font color=\"{color}\">Ostrzeżenie:</font> komputer nie jest podłączony do źródła zasilania.",
   "@onBatteryWarning": {
@@ -242,7 +242,7 @@
       "color": {}
     }
   },
-  "installationTypeDualOSDetected": "Na tym komputerze są obecnie zainstalowane systemy {os1} i {os2}. Co chcesz zrobić?",
+  "installationTypeDualOSDetected": "Na tym komputerze są obecnie zainstalowane systemy {os1} i {os2}. Co chcesz zrobić?",
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
@@ -275,7 +275,7 @@
   "@installAlongsidePartition": {},
   "installAlongsideAvailable": "Dostępne:",
   "@installAlongsideAvailable": {},
-  "installationTypeAlongsideDual": "Zainstaluj {product} obok {os1} i {os2}",
+  "installationTypeAlongsideDual": "Zainstaluj {product} obok {os1} i {os2}",
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
@@ -322,7 +322,7 @@
       "mount": {}
     }
   },
-  "confirmPartitionResize": "partycja <b>{sysname}</b> zmieniła rozmiar z <b>{oldsize}</b> na <b>{newsize}</b>",
+  "confirmPartitionResize": "partycja <b>{sysname}</b> zmieniła rozmiar z <b>{oldsize}</b> na <b>{newsize}</b>",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
@@ -352,15 +352,15 @@
   "@installingSystem": {},
   "showSecurityKey": "Pokaż klucz bezpieczeństwa",
   "@showSecurityKey": {},
-  "installationTypeLVMEncryptionSelected": "Wybrano LVM i szyfrowanie",
+  "installationTypeLVMEncryptionSelected": "Wybrano LVM i szyfrowanie",
   "@installationTypeLVMEncryptionSelected": {},
-  "installDriversTitle": "Zainstaluj oprogramowanie innego dostawcy do sprzętu graficznego i Wi-Fi",
+  "installDriversTitle": "Zainstaluj oprogramowanie innego dostawcy do sprzętu graficznego i Wi-Fi",
   "@installDriversTitle": {},
-  "installCodecsTitle": "Pobierz i zainstaluj obsługę dodatkowych formatów multimediów",
+  "installCodecsTitle": "Pobierz i zainstaluj obsługę dodatkowych formatów multimediów",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "W tym między innymi MP3, MP4, MOV i podobne",
+  "installCodecsSubtitle": "W tym między innymi MP3, MP4, MOV i podobne",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "W tym między innymi sterowniki NVIDIA i podobne",
+  "installDriversSubtitle": "W tym między innymi sterowniki NVIDIA i podobne",
   "@installDriversSubtitle": {},
   "tooManyPrimaryPartitions": "Zbyt wiele partycji podstawowych",
   "@tooManyPrimaryPartitions": {},
@@ -385,7 +385,7 @@
   "@confirmDevicesTitle": {},
   "confirmPartitionsTitle": "Partycje",
   "@confirmPartitionsTitle": {},
-  "installationSlidesTitle": "Witaj w {RELEASE}",
+  "installationSlidesTitle": "Witaj w {RELEASE}",
   "@installationSlidesTitle": {
     "type": "text",
     "placeholders": {
@@ -394,9 +394,9 @@
   },
   "installationSlidesIncluded": "Dołączone:",
   "@installationSlidesIncluded": {},
-  "installationSlidesWelcomeTitle": "Szybki, darmowy i pełen nowych funkcji",
+  "installationSlidesWelcomeTitle": "Szybki, darmowy i pełen nowych funkcji",
   "@installationSlidesWelcomeTitle": {},
-  "installationSlidesWelcomeBody": "Niezależnie od tego, czy jesteś programistą, twórcą, graczem czy administratorem, w {RELEASE} znajdziesz nowe narzędzia, które poprawią produktywność i wrażenia.",
+  "installationSlidesWelcomeBody": "Niezależnie od tego, czy jesteś programistą, twórcą, graczem czy administratorem, w {RELEASE} znajdziesz nowe narzędzia, które poprawią produktywność i wrażenia.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
@@ -405,24 +405,24 @@
   },
   "installationSlidesSoftwareTitle": "Wszystkie potrzebne aplikacje",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesDevelopmentTitle": "Twórz z wykorzystaniem najlepszych rozwiązań open source",
+  "installationSlidesDevelopmentTitle": "Twórz z wykorzystaniem najlepszych rozwiązań open source",
   "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityTitle": "Zwiększ swoją kreatywność",
   "@installationSlidesCreativityTitle": {},
   "installationSlidesGamingTitle": "Świetny do gier",
   "@installationSlidesGamingTitle": {},
-  "installationSlidesGamingBody": "{DISTRO} obsługuje najnowsze sterowniki NVIDIA i Mesa, aby poprawić wydajność i kompatybilność. Tysiące tytułów dla systemu Windows działa świetnie na {DISTRO} za pośrednictwem aplikacji takich jak Steam bez dodatkowej konfiguracji.",
+  "installationSlidesGamingBody": "{DISTRO} obsługuje najnowsze sterowniki NVIDIA i Mesa, aby poprawić wydajność i kompatybilność. Tysiące tytułów dla systemu Windows działają świetnie na {DISTRO} za pośrednictwem aplikacji takich jak Steam, bez dodatkowej konfiguracji.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityTitle": "Prywatny i bezpieczny",
+  "installationSlidesSecurityTitle": "Prywatny i bezpieczny",
   "@installationSlidesSecurityTitle": {},
   "installationSlidesProductivityTitle": "Zwiększ swoją produktywność",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesProductivityBody": "{DISTRO} Desktop zawiera LibreOffice, pakiet kompatybilnych z Microsoft Office aplikacji open source do dokumentów, arkuszy kalkulacyjnych i prezentacji. Dostępne są również popularne narzędzia do współpracy.",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop zawiera LibreOffice, pakiet kompatybilnych z Microsoft Office aplikacji open source do dokumentów, arkuszy kalkulacyjnych i prezentacji. Dostępne są również popularne narzędzia do współpracy.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
@@ -433,20 +433,20 @@
   "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityOrca": "Czytnik ekranu Orca",
   "@installationSlidesAccessibilityOrca": {},
-  "installationSlidesSupportTitle": "Pomoc i wsparcie",
+  "installationSlidesSupportTitle": "Pomoc i wsparcie",
   "@installationSlidesSupportTitle": {},
-  "installationSlidesSupportHeader": "Oficjalna dokumentacja {DISTRO} jest dostępna zarówno online, jak i za pośrednictwem ikony Pomoc umieszczonej w doku.",
+  "installationSlidesSupportHeader": "Oficjalna dokumentacja {DISTRO} jest dostępna zarówno online, jak i poprzez ikonę Pomoc w doku.",
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Serwis Ask Ubuntu obejmuje szereg pytań i odpowiedzi, a Ubuntu Discourse zawiera przewodniki i dyskusje dla nowych i doświadczonych użytkowników.",
+  "installationSlidesSupportCommunity": "Serwis Ask Ubuntu obejmuje szereg pytań i odpowiedzi, a Ubuntu Discourse zawiera przewodniki i dyskusje dla nowych i doświadczonych użytkowników.",
   "@installationSlidesSupportCommunity": {},
-  "installationSlidesSupportEnterprise": "Dla użytkowników korporacyjnych Canonical zapewnia komercyjne wsparcie, aby ułatwić wdrożenie i bezpieczne zarządzanie systemem Ubuntu w miejscu pracy.",
+  "installationSlidesSupportEnterprise": "Dla użytkowników korporacyjnych Canonical zapewnia komercyjne wsparcie, aby ułatwić wdrożenie i bezpieczne zarządzanie systemem Ubuntu w miejscu pracy.",
   "@installationSlidesSupportEnterprise": {},
-  "installationSlidesCreativityBody": "Jeśli zajmujesz się animacją, projektowaniem, tworzeniem wideo lub gier, możesz łatwo przenieść swoje przepływy pracy do {DISTRO} dzięki obsłudze oprogramowania i aplikacji będących standardem branżowym oraz open source.",
+  "installationSlidesCreativityBody": "Jeśli zajmujesz się animacją, projektowaniem, tworzeniem wideo lub gier, możesz łatwo przenieść swoje przepływy pracy do {DISTRO} dzięki obsłudze oprogramowania i aplikacji będących standardem branżowym oraz open source.",
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
@@ -464,42 +464,42 @@
   "@installationSlidesSupportUbuntuPro": {},
   "installationSlidesAvailable": "Dostępne:",
   "@installationSlidesAvailable": {},
-  "installationSlidesWelcomeHeader": "Najnowsza wersja {DISTRO} sprawia, że korzystanie z komputera jest łatwiejsze niż kiedykolwiek.",
+  "installationSlidesWelcomeHeader": "Najnowsza wersja {DISTRO} sprawia, że korzystanie z komputera jest łatwiejsze niż kiedykolwiek.",
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesDevelopmentBody": "{DISTRO} to idealna stacja robocza do tworzenia aplikacji lub stron internetowych, nauki o danych i sztucznej inteligencji/uczenia maszynowego, a także DevOps i administracji. Każda wersja {DISTRO} zawiera najnowsze zestawy narzędzi i obsługuje wszystkie główne IDE.",
+  "installationSlidesDevelopmentBody": "{DISTRO} to idealna stacja robocza do tworzenia aplikacji lub stron internetowych, nauki o danych i sztucznej inteligencji/uczenia maszynowego, a także DevOps i administracji. Każda wersja {DISTRO} zawiera najnowsze zestawy narzędzi i obsługuje wszystkie główne IDE.",
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityLts": "Wszystkie wersje {DISTRO} LTS są dostarczane z pięcioletnim łataniem zabezpieczeń, które można wydłużyć do dziesięciu lat za pomocą subskrypcji Ubuntu Pro.",
+  "installationSlidesSecurityLts": "Wszystkie wersje {DISTRO} LTS są dostarczane z pięcioletnim łataniem zabezpieczeń, które można wydłużyć do dziesięciu lat za pomocą subskrypcji Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSoftwareBody": "Instaluj, zarządzaj i aktualizuj wszystkie aplikacje w Ubuntu Software, w tym tysiące aplikacji zarówno z Snap Store, jak i archiwum {DISTRO}.",
+  "installationSlidesSoftwareBody": "Instaluj, zarządzaj i aktualizuj wszystkie aplikacje w Ubuntu Software, w tym tysiące aplikacji zarówno ze Snap Store, jak i archiwum {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} zapewnia wszystkie narzędzia potrzebne do zachowania prywatności i bezpieczeństwa w Internecie. Dzięki wbudowanej zaporze sieciowej, obsłudze VPN oraz wielu aplikacjom zorientowanym na prywatność, aby zapewnić pełną kontrolę nad danymi.",
+  "installationSlidesSecurityBody": "{DISTRO} zapewnia wszystkie narzędzia potrzebne do zachowania prywatności i bezpieczeństwa w Internecie. Dzięki wbudowanej zaporze sieciowej, obsłudze VPN oraz wielu aplikacjom zorientowanym na prywatność umożliwia pełną kontrolę nad danymi.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesAccessibilityBody": "U podstaw filozofii {DISTRO} leży przekonanie, że informatyka jest dla każdego. Dzięki zaawansowanym narzędziom ułatwień dostępu i opcjom zmiany języka, kolorów oraz rozmiaru tekstu {DISTRO} sprawia, że korzystanie z komputera jest łatwe — kimkolwiek i gdziekolwiek jesteś.",
+  "installationSlidesAccessibilityBody": "U podstaw filozofii {DISTRO} leży przekonanie, że informatyka jest dla każdego. Dzięki zaawansowanym narzędziom ułatwień dostępu i opcjom zmiany języka, kolorów oraz rozmiaru tekstu {DISTRO} sprawia, że korzystanie z komputera jest łatwe — kimkolwiek i gdziekolwiek jesteś.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
@@ -518,7 +518,7 @@
   "@notEnoughDiskSpaceRequired": {},
   "rstHeader": "Wyłącz funkcję RST, aby kontynuować",
   "@rstHeader": {},
-  "restartIntoWindowsDescription": "Czy na pewno chcesz ponownie uruchomić komputer? Później będziesz musieć ponownie uruchomić instalację {DISTRO}, aby zakończyć instalowanie {DISTRO}.",
+  "restartIntoWindowsDescription": "Czy na pewno chcesz ponownie uruchomić komputer? Później należy ponownie uruchomić instalację {DISTRO}, aby zakończyć instalowanie {DISTRO}.",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
@@ -540,7 +540,7 @@
       "format": {}
     }
   },
-  "loadingPageTitle": "Witaj w {DISTRO}",
+  "loadingPageTitle": "Witaj w {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
@@ -635,7 +635,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Zamknij instalator i uruchom go ponownie, aby kontynuować",
+  "refreshRestart": "Zamknij instalator i uruchom go ponownie, aby kontynuować",
   "@refreshRestart": {},
   "refreshSnapPrerequisites": "Sprawdzanie wymagań wstępnych {snap}...",
   "@refreshSnapPrerequisites": {
@@ -714,7 +714,7 @@
       "snap": {}
     }
   },
-  "refreshSnapAutoConnect": "Łączenie wtyczek i gniazd {snap}...",
+  "refreshSnapAutoConnect": "Łączenie wtyczek i gniazd {snap}...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
@@ -728,7 +728,7 @@
       "snap": {}
     }
   },
-  "recoveryKeyWarning": "<font color=\"{color}\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. W razie potrzeby zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.",
+  "recoveryKeyWarning": "<font color=\"{color}\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. W razie potrzeby zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.",
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
@@ -737,7 +737,7 @@
   },
   "minimalInstallationTitle": "Domyślny wybór",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
+  "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych oraz przeglądarka internetowa.",
   "@fullInstallationSubtitle": {},
@@ -747,7 +747,7 @@
   "@autoinstallInstructions": {},
   "warningLabel": "Ostrzeżenie:",
   "@warningLabel": {},
-  "tryOrInstallHeader": "Co chcesz zrobić z {DISTRO}?",
+  "tryOrInstallHeader": "Co chcesz zrobić z {DISTRO}?",
   "@tryOrInstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -793,11 +793,11 @@
   "@installationTypeLVM": {},
   "installationTypeEraseInfo": "Zacznij od zera na wybranym dysku.",
   "@installationTypeEraseInfo": {},
-  "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
+  "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Wyczyść dysk i użyj ZFS z szyfrowaniem",
+  "installationTypeZFSEncryption": "Wymaż dysk i użyj ZFS z szyfrowaniem",
   "@installationTypeZFSEncryption": {},
-  "installationTypeZFSEncryptionSelected": "Wybrano ZFS i szyfrowanie",
+  "installationTypeZFSEncryptionSelected": "Wybrano ZFS i szyfrowanie",
   "@installationTypeZFSEncryptionSelected": {},
   "selectGuidedStorageInfo": "Zacznij od zera na wybranym dysku.",
   "@selectGuidedStorageInfo": {},
@@ -835,7 +835,7 @@
   "@confirmEntryApplications": {},
   "confirmProprietarySoftwareCodecs": "Kodeki",
   "@confirmProprietarySoftwareCodecs": {},
-  "confirmProprietarySoftwareCodecsDrivers": "Kodeki i sterowniki",
+  "confirmProprietarySoftwareCodecsDrivers": "Kodeki i sterowniki",
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Sterowniki",
   "@confirmProprietarySoftwareDrivers": {},
@@ -847,7 +847,7 @@
       }
     }
   },
-  "restartWarningBody": "Uruchom ponownie w celu dokończenia instalacji lub kontynuuj testowanie.\nWszelkie wprowadzone zmiany nie zostaną zapisane.",
+  "restartWarningBody": "Uruchom ponownie w celu dokończenia instalacji lub kontynuuj testowanie.\nWszelkie wprowadzone zmiany nie zostaną zapisane.",
   "@restartWarningBody": {},
   "rebootToConfigureWarning": "Musisz ponownie uruchomić komputer, aby kontynuować proces instalacji.",
   "@rebootToConfigureWarning": {},
@@ -857,7 +857,7 @@
   "@refreshReady": {},
   "autoinstallTitle": "Rodzaj instalacji",
   "@autoinstallTitle": {},
-  "confirmSectionSecurityAndMoreTitle": "Bezpieczeństwo i nie tylko",
+  "confirmSectionSecurityAndMoreTitle": "Bezpieczeństwo i nie tylko",
   "@confirmSectionSecurityAndMoreTitle": {},
   "autoinstallHeader": "Jak chcesz zainstalować {DISTRO}?",
   "@autoinstallHeader": {
@@ -873,7 +873,7 @@
   "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "Instalacja zautomatyzowana",
   "@autoinstallAutomatedOption": {},
-  "autoinstallAutomatedDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.",
+  "autoinstallAutomatedDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.",
   "@autoinstallAutomatedDescription": {},
   "hideSecurityKey": "Ukryj",
   "@hideSecurityKey": {},
@@ -893,7 +893,7 @@
   "@choosePassphraseInfoBody": {},
   "confirmPassphrase": "Potwierdź hasło",
   "@confirmPassphrase": {},
-  "installationTypeTPMInfo": "Jest to funkcja eksperymentalna. Może nie działać ze sprzętem w przyszłych wersjach {DISTRO}. <a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a>, zanim wybierzesz tę opcję.",
+  "installationTypeTPMInfo": "Jest to funkcja eksperymentalna. Może nie działać ze sprzętem w przyszłych wersjach {DISTRO}. <a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a>, zanim wybierzesz tę opcję.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -906,7 +906,7 @@
   },
   "refreshHeader": "Dostępna jest aktualizacja instalatora",
   "@refreshHeader": {},
-  "refreshInfo": "Zaktualizuj do najnowszej wersji, aby zwiększyć niezawodność i uzyskać więcej funkcji.",
+  "refreshInfo": "Zaktualizuj do najnowszej wersji, aby zwiększyć niezawodność i uzyskać więcej funkcji.",
   "@refreshInfo": {},
   "refreshCloseLabel": "Zamknij instalator",
   "@refreshCloseLabel": {},

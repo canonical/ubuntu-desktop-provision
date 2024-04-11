@@ -5,92 +5,92 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'ابزارهای بازنشانی کارخانه';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'ابزارهای بازنشانی کارخانه';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'می‌خواهید چه کنید؟';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'ایجاد رسانهٔ بازنشانی';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'آغاز بازنشانی کارخانه';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'ایجاد رسانهٔ بازنشانی یواس‌بی';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'ایجاد رسانهٔ بازنشانی یواس‌بی برای بازگردانی سامانه به همراه سفارشی سازی نصب‌های اوبونتو.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید کمینه ۱۶ گ‌ب فضا داشته باشد';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'گردانندهٔ فلش باید دوباره قالب‌بندی شده که همهٔ داده‌های رویش از دست خواهند رفت.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'رسانهٔ بازنشانی یواس‌بی';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'رسانهٔ برداشتنی تشخیص داده نشد';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'برای ایجاد رسانهٔ بازنشانی کارخانه نیاز به ذخیره‌ساز یواس‌بی دارید.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'گزینش گزینه‌ای برای آغاز بازنشانی کارخانه';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'لطفاً تا واکشی راه‌اندازها شکیبا باشید.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'رسانهٔ بازنشانی یواس‌بی آماده است';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره راه‌اندازیش کنید.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'هنگام واکشی راه‌اندازها خطایی رخ داد.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'در حال آغاز';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'رونوشت کردن';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'پایان دادن';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'پایان یافته';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'شکست خورده';
 
   @override
-  String get error => 'Error';
+  String get error => 'خطا';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'بار کردن…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'هشدار';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'بازگردانی';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'راه‌اندازی دوباره';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'شکست در اجرای فرمان';
 
   @override
-  String get close => 'Close';
+  String get close => 'بستن';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'قبول';
 }

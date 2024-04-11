@@ -1,5 +1,5 @@
 {
-  "welcomePageHeader": "Witaj w {distro}",
+  "welcomePageHeader": "Witaj w {distro}",
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "CO NOWEGO?",
   "@welcomeWhatsNew": {},
@@ -59,7 +59,7 @@
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Włączyć usługi lokalizacyjne?",
   "@privacyLocationTitle": {},
-  "privacyLocationSubtitle": "Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
+  "privacyLocationSubtitle": "Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
   "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Usługi lokalizacyjne",
   "@privacyLocationEnable": {},

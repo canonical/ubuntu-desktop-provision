@@ -112,14 +112,17 @@ class _SlideViewState extends State<SlideView> {
         const SingleActivator(LogicalKeyboardKey.arrowLeft): previousSlide,
         const SingleActivator(LogicalKeyboardKey.arrowRight): nextSlide,
       },
-      child: Focus(
-        autofocus: widget.autofocus,
-        focusNode: widget.focusNode,
-        child: Theme(
-          data: Theme.of(context).copyWith(
-            pageTransitionsTheme: const SlideTransitionsTheme(),
-          ),
-          child: ValueListenableBuilder<int>(
+      child: MediaQuery(
+        data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+        child: Focus(
+          autofocus: widget.autofocus,
+          focusNode: widget.focusNode,
+          child: Theme(
+            data: Theme.of(context).copyWith(
+              pageTransitionsTheme: const SlideTransitionsTheme(),
+              textTheme: Theme.of(context).textTheme.apply(fontSizeFactor: 1.5),
+            ),
+            child: ValueListenableBuilder<int>(
               valueListenable: widget.controller,
               builder: (context, value, child) {
                 return Navigator(
@@ -138,7 +141,9 @@ class _SlideViewState extends State<SlideView> {
                   ],
                   onPopPage: (route, result) => route.didPop(result),
                 );
-              }),
+              },
+            ),
+          ),
         ),
       ),
     );

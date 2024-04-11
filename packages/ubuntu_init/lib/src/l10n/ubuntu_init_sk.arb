@@ -56,7 +56,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Anonymné zdieľanie údajov s {distro}, aby sme mohli zlepšiť váš zážitok.",
+  "telemetryDescription": "Anonymné zdieľanie údajov s {distro}, aby sme mohli zlepšiť váš dojem.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {

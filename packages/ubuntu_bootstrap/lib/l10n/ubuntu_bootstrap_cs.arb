@@ -787,5 +787,174 @@
   "minimalInstallationSubtitle": "Pouze nezbytné, webový prohlížeč a základní nástroje.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Plná instalace",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallTitle": "Typ instalace",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Jak chcete nainstalovat {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Interaktivní instalace",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "Automatická instalace",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallInstructions": "Zadejte adresu URL autoinstall.yaml:",
+  "@autoinstallInstructions": {},
+  "autoinstallAutomatedDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
+  "@autoinstallAutomatedDescription": {},
+  "warningLabel": "Varování:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Co chcete dělat s {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Skrýt",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Optimalizovat váš počítač",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Instalovat doporučený proprietární software?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} se standardně dodává bez proprietárního softwaru. Instalace dalšího softwaru může zlepšit výkon vašeho počítače.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Byla zjištěna grafická karta NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Pro nejlepší výkon grafických karet NVIDIA se důrazně doporučuje nainstalovat dodatečné ovladače.",
+  "@codecsAndDriversNvidiaBody": {},
+  "batteryWarning": "Počítač není připojen ke zdroji napájení.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Přístupové heslo disku",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Vytvořit přístupové heslo",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí počítače budete vyzváni k zadání tohoto hesla.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Vybrat přístupové heslo",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Potvrdit přístupové heslo",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Je vyžadováno přístupové heslo",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Přístupová hesla se neshodují",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Ujistěte se, že jste si uložili své přístupové heslo",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte všechna svá data.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Vytvořit přístupové heslo",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Potvrdit přístupové heslo",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Jak chcete nainstalovat {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Začít od začátku na zvoleném disku.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Experimentální",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Použít LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Použít LVM a šifrování",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Vymazat disk a použít ZFS se šifrováním",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "Vybráno ZFS a šifrování",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPMInfo": "Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem na budoucích vydáních {DISTRO}. Než zvolíte tuto možnost, <a href=\"{url}\">přečtěte si o šifrování TPM</a>.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Začněte od začátku na zvoleném disku.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Vyberte disk:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Vyberte oddíl:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Vyberte, kam nainstalovat {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Žádné",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Aplikace",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Nastavení disku",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Šifrování disku",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Instalační disk",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Proprietární software",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Obecné",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Bezpečnost a další",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Kodeky",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodeky a ovladače",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Ovladače",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** byl zkopírován na disk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Restartujte pro dokončení instalace nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.",
+  "@rebootToConfigureWarning": {},
+  "refreshHeader": "Pro instalační program je k dispozici aktualizace",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "Aktualizovat nyní",
+  "@refreshUpdateNow": {},
+  "refreshInfo": "Aktualizujte na nejnovější verzi pro lepší spolehlivost a více funkcí.",
+  "@refreshInfo": {},
+  "refreshReady": "Aktualizace je připravena",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Zavřít instalační program",
+  "@refreshCloseLabel": {},
+  "validate": "Ověřit",
+  "@validate": {}
 }

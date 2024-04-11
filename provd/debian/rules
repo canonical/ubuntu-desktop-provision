@@ -11,11 +11,17 @@ export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
 # as long as it matches the go.mod go stenza which is the language requirement.
 export GOTOOLCHAIN := local
 
+# Set GOCACHE and GOMODCACHE in the build dir instead of home directory, which
+# may not be writable in sbuild.
+export GOCACHE=$(CURDIR)/.gocache
+export GOMODCACHE=$(CURDIR)/.gomodcache
+
 %:
 	dh $@ --buildsystem=golang --with=golang
 
 execute_after_dh_auto_clean:
 	# Create the vendor directory when building the source package
+	rm -rf $(GOCACHE) $(GOMODCACHE)
 	[ -d vendor/ ] || go mod vendor
 
 override_dh_auto_install:

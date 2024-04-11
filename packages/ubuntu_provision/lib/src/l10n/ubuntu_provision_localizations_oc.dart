@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Personalizatz $DISTRO coma vos fa mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.';
   }
 
   @override
@@ -63,7 +63,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Quicòm a trucat';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.';
 
   @override
   String get errorPageShowLog => 'Afichar lo jornal';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Agençament del clavièr';
 
   @override
-  String get keyboardHeader => 'Indicatz l’agençament del clavièr :';
+  String get keyboardHeader => 'Seleccionatz vòstre agençament de clavièr';
 
   @override
   String get keyboardTestHint => 'Picatz de tèxt aquí per ensajar lo clavièr';
@@ -216,7 +216,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO es concebut per s’integrar sens de manièra transparenta a Active Directory per una administracion mai facila.';
   }
 
   @override

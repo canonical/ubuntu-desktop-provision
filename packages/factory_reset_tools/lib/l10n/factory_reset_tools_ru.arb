@@ -1,6 +1,6 @@
 {
   "@@locale": "ru",
-  "windowTitle": "Инструменты сброса",
+  "windowTitle": "Инструменты восстановления",
   "@windowTitle": {},
   "homeTitle": "Что вы хотите сделать?",
   "@homeTitle": {},
@@ -24,7 +24,7 @@
   "@resetMediaFinished": {},
   "error": "Ошибка",
   "@error": {},
-  "appTitle": "Инструменты сброса",
+  "appTitle": "Инструменты восстановления",
   "@appTitle": {},
   "createResetMedia": "Создать носитель для сброса",
   "@createResetMedia": {},
@@ -45,5 +45,19 @@
   "resetMediaReadyBody": "Когда захотите им воспользоваться, вставьте этот USB-накопитель в компьютер, который хотите сбросить, и перезагрузите его.",
   "@resetMediaReadyBody": {},
   "resetMediaFailed": "Неудача",
-  "@resetMediaFailed": {}
+  "@resetMediaFailed": {},
+  "warning": "Предупреждение",
+  "@warning": {},
+  "reboot": "Перезагрузить",
+  "@reboot": {},
+  "failed": "Не удалось выполнить команду",
+  "@failed": {},
+  "close": "Закрыть",
+  "@close": {},
+  "restore": "Сброс",
+  "@restore": {},
+  "loading": "Загрузка…",
+  "@loading": {},
+  "ok": "ОК",
+  "@ok": {}
 }
