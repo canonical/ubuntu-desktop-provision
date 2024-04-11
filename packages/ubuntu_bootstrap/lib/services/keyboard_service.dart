@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:dbus/dbus.dart';
@@ -34,7 +35,7 @@ class SubiquityKeyboardService implements KeyboardService {
 
   @override
   Future<void> setInputSource(KeyboardSetting setting, {String? user}) async {
-    await _setXkbInputSource(setting);
+    unawaited(_setXkbInputSource(setting));
     await _setGsettingsInputSource(setting);
     return _subiquity.setInputSource(setting, user: user);
   }
