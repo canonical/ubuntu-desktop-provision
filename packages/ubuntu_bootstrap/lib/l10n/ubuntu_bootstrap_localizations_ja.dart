@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'これは実験的な機能です。 このハードウェアが将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TMP暗号化</a> をよく読んでください。';
+    return 'これは実験的な機能です。 このハードウェアが将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。';
   }
 
   @override
@@ -465,7 +465,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get partitionLimitReached => '制限に達しました';
 
   @override
-  String get bootLoaderDevice => 'ブートローダーをインストールするデバイスを選択してください';
+  String get bootLoaderDevice => 'ブートローダーをインストールするデバイスを選択';
 
   @override
   String get partitionCreateTitle => 'パーティションを作成';
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'インストールの準備完了';
 
   @override
-  String get confirmHeader => '続行すると、以下の変更がディスクに書き込まれます。さらに手動で変更を加えることもできます';
+  String get confirmHeader => 'これまでの選択を確認してください';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';

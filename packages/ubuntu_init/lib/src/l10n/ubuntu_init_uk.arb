@@ -38,7 +38,7 @@
   "@telemetryReportTitle": {},
   "privacyLocationSubtitle": "Дозволити додаткам отримувати інформацію про ваше географічне місцезнаходження.\nВи можете змінити це будь-який час в налаштуваннях системи.",
   "@privacyLocationSubtitle": {},
-  "welcomePageTitle": "Ласкаво просимо!",
+  "welcomePageTitle": "Ласкаво просимо",
   "@welcomePageTitle": {},
   "welcomePageHeader": "Ласкаво просимо в {distro}",
   "@welcomePageHeader": {},
@@ -64,5 +64,7 @@
   "privacyPolicyLink": "Конфіденційність даних",
   "@privacyPolicyLink": {},
   "privacyLocationEnable": "Сервіси визначення місцезнаходження",
-  "@privacyLocationEnable": {}
+  "@privacyLocationEnable": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

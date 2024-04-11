@@ -23,7 +23,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Vytvoriť USB obnovovacie médium';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.';
 
   @override
   String get createUsbListExplanation => 'Vyberte USB pamäťovú jednotku. Na disku musí byť aspoň 16 GB voľného miesta';
@@ -50,10 +50,10 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Obnovovacie médium USB je pripravené';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'Keď ho chcete použiť, prosím vložte USB disk do počítača, ktorí chcete obnoviť a reštartujte ho.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Pri načítavaní jednotiek sa vyskytla chyba.';
 
   @override
   String get resetMediaInitializing => 'Inicializuje sa';

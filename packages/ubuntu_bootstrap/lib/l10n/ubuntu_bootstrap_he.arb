@@ -826,5 +826,90 @@
   "installationTypeZFSEncryption": "למחוק את הכונן ולהשתמש ב־ZFS עם הצפנה",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "נבחרו ZFS והצפנה",
-  "@installationTypeZFSEncryptionSelected": {}
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStoragePartitionDropdownLabel": "בחירת מחיצה:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "confirmEntryDiskEncryption": "הצפנת הכונן",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "אמצעי ההתקנה",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "תוכנה קניינית",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "כללי",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "אבטחה ועוד",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "מפענחים",
+  "@confirmProprietarySoftwareCodecs": {},
+  "validate": "תיקוף",
+  "@validate": {},
+  "codecsAndDriversPageBody": "ל־{DISTRO} לא מצורפת תוכנה קניינית כברירת מחדל. התקנת תוכנות נוספות עשויה לשפר את ביצועי המחשב שלך.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMInfo": "זאת יכולת ניסיונית. יכול להיות עם החומרה שלך בגרסאות עתידיות של {DISTRO}. <a href=\"{url}\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "התחלה מאפס על הכונן שבחרת.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "בחירת כונן:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "guidedStoragePageHeader": "נא לבחור איפה להתקין את {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "בלי",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "יישומים",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "הכנת הכונן",
+  "@confirmEntryDiskSetup": {},
+  "confirmProprietarySoftwareCodecsDrivers": "מפענחים ומנהלי התקנים",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "מנהלי התקנים",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** הועתקה לכונן",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "אפשר להפעיל מחדש כדי להשלים את ההתקנה או להמשיך לחקור. \nהשינויים שנערכים כאן לא נשמרים.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "יש להפעיל את המחשב מחדש כדי להמשיך את תהליך ההתקנה.",
+  "@rebootToConfigureWarning": {},
+  "refreshUpdateNow": "לעדכן עכשיו",
+  "@refreshUpdateNow": {},
+  "refreshInfo": "עדכון לגרסה העדכנית ביותר ישפר את האמינות ויביא איתו יכולות נוספות.",
+  "@refreshInfo": {},
+  "refreshReady": "העדכון מוכן",
+  "@refreshReady": {},
+  "refreshHeader": "יש עדכון לתוכנית ההתקנה",
+  "@refreshHeader": {},
+  "refreshCloseLabel": "סגירת תוכנית ההתקנה",
+  "@refreshCloseLabel": {}
 }
