@@ -12,17 +12,12 @@ import 'package:ubuntu_bootstrap/slides/slide_html.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
-final slidesProvider = Provider(
-  (ref) => SlidesModel(flavorName: ref.watch(flavorProvider).displayName),
-);
+final slidesProvider = Provider((ref) => SlidesModel());
 
 final _log = Logger('slides');
 
 /// Pre-caches and holds the HTML slides.
 class SlidesModel {
-  SlidesModel({required this.flavorName});
-
-  final String flavorName;
   final List<SlideHtml> slides = [];
 
   SlideHtml? get(int index) => slides[index];
@@ -85,11 +80,8 @@ class SlidesModel {
         content = await file.readAsString();
       }
 
-      final flavorSpecificContent =
-          content.replaceAll('{{ DISTRO }}', flavorName);
-
       final bundledHtml = await _replaceImages(
-        flavorSpecificContent,
+        content,
         index,
         fromAssets: fromAssets,
       );
