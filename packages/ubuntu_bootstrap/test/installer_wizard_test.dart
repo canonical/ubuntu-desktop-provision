@@ -496,7 +496,12 @@ extension on WidgetTester {
     registerMockService<SessionService>(
       SubiquitySessionService(subiquityClient),
     );
-    final keyboardService = SubiquityKeyboardService(subiquityClient);
+    final inputSettings = MockGSettings();
+    when(inputSettings.set(any, any)).thenAnswer((_) async {});
+    final keyboardService = SubiquityKeyboardService(
+      subiquityClient,
+      inputSourceSettings: inputSettings,
+    );
     registerMockService<KeyboardService>(keyboardService);
     when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
 
