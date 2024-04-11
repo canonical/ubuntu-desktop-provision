@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pdfrx/pdfrx.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/src/eula/eula_l10n.dart';
@@ -25,6 +26,8 @@ class _EULAPageState extends ConsumerState<EULAPage> {
     final lang = EULALocalizations.of(context);
     final eulaFile = File(
         '/usr/share/desktop-provision/eula/EULA_${localeModel.selectedLocale?.languageCode}.pdf');
+
+    Logger('eula').debug('EULA file: ${eulaFile.path}');
 
     return WizardPage(
       title: YaruWindowTitleBar(
