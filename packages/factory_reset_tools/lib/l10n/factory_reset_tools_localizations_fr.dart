@@ -5,22 +5,22 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Outils de réinitialisation usine';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Outils de réinitialisation usine';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Que voulez-vous faire ?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Créer un média de réinitialisation';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Commencer la réinitialisation usine';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Créer un support USB de réinitialisation';
 
   @override
   String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
@@ -41,13 +41,13 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Sélectionnez une option pour démarrer la réinitialisation usine';
 
   @override
   String get loadingDrives => 'Please wait while we fetch the drives.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Support USB de réinitialisation est prêt';
 
   @override
   String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
@@ -56,40 +56,40 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Initialisation';
 
   @override
   String get resetMediaCopying => 'Copying';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Finalisation';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Terminé';
 
   @override
   String get resetMediaFailed => 'Failed';
 
   @override
-  String get error => 'Error';
+  String get error => 'Erreur';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Chargement …';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Avertissement';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Restaurer';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Redémarrer';
 
   @override
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Fermer';
 
   @override
   String get ok => 'OK';

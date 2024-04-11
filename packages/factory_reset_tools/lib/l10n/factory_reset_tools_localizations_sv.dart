@@ -5,91 +5,91 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'Fabriksåterställningsverktyg';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'Fabriksåterställningsverktyg';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Vad vill du göra?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'Skapa återställningsmedia';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'Starta fabriksåterställning';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Skapa ett USB återställningsmedia';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Skapa ett USB återställningsmedia för att återställa systemet samt anpassa dina Ubuntu installationer.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Välj en USB flashenhet. Enheten måste ha minst 16 GB utrymme';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Flashenheten kommer att omformateras och all data på enheten går förlorad.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB återställningsmedia';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Ingen borttagbar lagring har upptäckts';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Du behöver USB lagring för att skapa ett fabriksåterställnings media.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Välj ett alternativ för att starta fabriksåterställningen';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Vänta medan vi hämtar enheterna.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB återställningsmedia är redo';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'När du vill använda det, sätt in USB enheten i den dator du vill återställa och starta om den.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Ett fel inträffade vid hämtning av enheterna.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Initialisering';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopierar';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Slutför';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Slutfört';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Misslyckades';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fel';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laddar...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Varning';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Återställ';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'Starta om';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Misslyckades att köra kommando';
 
   @override
-  String get close => 'Close';
+  String get close => 'Stäng';
 
   @override
   String get ok => 'OK';

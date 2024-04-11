@@ -5,94 +5,94 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => '系统重置工具';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => '系统重置工具';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => '君欲何为？';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => '创建重置盘';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => '恢复出厂设置';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => '创建 USB 重置盘';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => '创建可用于恢复系统的 USB 恢复介质，您还可以自定义 Ubuntu 安装配置。';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => '请选择 USB 闪存盘。闪存盘必须至少有 16GB 的空间';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'U 盘将会被格式化，上面所有的数据都会被删除。';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB 重置盘';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => '未检测到任何可移动存储设备';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => '需要 U 盘才能创建重置盘。';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => '请选择一个选项以启动出厂重置';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => '正在加载设备列表，请稍等…';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB 重置盘已就绪';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => '当您想使用该重置盘时，请将它插到您想重置的设备上并重启该设备。';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => '无法获取设备列表。';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => '正在初始化';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => '正在复制';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => '正在完成';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => '已完成';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => '失败';
 
   @override
-  String get error => 'Error';
+  String get error => '错误';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => '正在加载…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => '警告';
 
   @override
-  String get restore => 'Restore';
+  String get restore => '恢复';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => '重启';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => '无法运行命令';
 
   @override
-  String get close => 'Close';
+  String get close => '关闭';
 
   @override
-  String get ok => 'OK';
+  String get ok => '确定';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

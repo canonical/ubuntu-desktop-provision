@@ -9,7 +9,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Witaj w $distro';
+    return 'Witaj w $distro';
   }
 
   @override
@@ -75,7 +75,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Włączyć usługi lokalizacyjne?';
 
   @override
-  String get privacyLocationSubtitle => 'Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.';
+  String get privacyLocationSubtitle => 'Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.';
 
   @override
   String get privacyLocationEnable => 'Usługi lokalizacyjne';
