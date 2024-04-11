@@ -89,7 +89,7 @@ func chown(username string) error {
 	}
 
 	// #nosec:G204 // We are in control of the username and validate we can find it on the system before executing.
-	cmd := exec.Command("chown", fmt.Sprintf("%s:gnome-initial-setup", username), "/run/gnome-initial-setup")
+	cmd := exec.Command("chown", fmt.Sprintf("%s:provd", username), "/run/gnome-initial-setup")
 	_, err = cmd.CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("executing chown command: %w", err)
