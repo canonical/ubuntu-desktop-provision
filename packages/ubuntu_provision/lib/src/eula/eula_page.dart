@@ -50,7 +50,7 @@ class _EULAPageState extends ConsumerState<EULAPage> {
                   errorBannerBuilder:
                       (context, error, stackTrace, documentRef) => Center(
                     child: Text(
-                      error.toString(),
+                      stackTrace.toString(),
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
