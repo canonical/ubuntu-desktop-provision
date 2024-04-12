@@ -665,5 +665,79 @@
         "type": "String"
       }
     }
+  },
+  "hideSecurityKey": "Amagar",
+  "@hideSecurityKey": {},
+  "installationTypeHeader": "Cossí volètz installar {DISTRO} ?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryWarning": "L’ordenador es pas branca a una font d’alimentacion.",
+  "@batteryWarning": {},
+  "selectGuidedStorageDriveDropdownLabel": "Seleccionatz le disc :",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Cap",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryDiskEncryption": "Chiframent del disc",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Disc d’installacion",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Logicial proprietari",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmProprietarySoftwareDrivers": "Pilòts",
+  "@confirmProprietarySoftwareDrivers": {},
+  "refreshReady": "Mesa a jorn prèsta",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Tampar l’installador",
+  "@refreshCloseLabel": {},
+  "refreshSnapCleanup": "Netejatge de {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallHeader": "De qué volètz far amb {DISTRO} ?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageTitle": "Optimizatz vòstre ordenador",
+  "@codecsAndDriversPageTitle": {},
+  "choosePassphraseHeader": "Crear un senhal",
+  "@choosePassphraseHeader": {},
+  "confirmEntryApplications": "Aplicacions",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Configuracion del disc",
+  "@confirmEntryDiskSetup": {},
+  "confirmSectionGeneralTitle": "General",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Seguretat e mai",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "refreshUpdateNow": "Actualizar ara",
+  "@refreshUpdateNow": {},
+  "validate": "Validar",
+  "@validate": {},
+  "refreshSnapStartServices": "Lançament dels servicis {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
   }
 }
