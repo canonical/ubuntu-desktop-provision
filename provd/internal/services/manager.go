@@ -9,6 +9,7 @@ import (
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/chown"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/gdm"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
@@ -33,6 +34,7 @@ type Manager struct {
 	accessibilityService accessibility.Service
 	proService           pro.Service
 	chownService         chown.Service
+	gdmService           *gdm.Service
 	bus                  *dbus.Conn
 }
 
@@ -80,6 +82,11 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		errs = errors.Join(errs, fmt.Errorf("failed to create accessibility service: %s", err))
 	}
 
+	gdmService, err := gdm.New(bus)
+	if err != nil {
+		slog.Warn(fmt.Sprintf("GDM service failed to initiate: %s", err))
+	}
+
 	if errs != nil {
 		return nil, status.Errorf(codes.Internal, "%s", errs)
 	}
@@ -103,6 +110,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		accessibilityService: *accessibilityService,
 		proService:           *proService,
 		chownService:         *chownService,
+		gdmService:           gdmService,
 		bus:                  bus,
 	}, nil
 }
@@ -121,6 +129,11 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	pb.RegisterProServiceServer(grpcServer, &m.proService)
 	pb.RegisterChownServiceServer(grpcServer, &m.chownService)
+
+	if m.gdmService != nil {
+		pb.RegisterGdmServiceServer(grpcServer, m.gdmService)
+	}
+
 	return grpcServer
 }
 
@@ -128,5 +141,8 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 func (m *Manager) Stop() error {
 	slog.Debug("Closing grpc manager and dbus connection")
 
+	if m.gdmService != nil {
+		m.gdmService.Close()
+	}
 	return m.bus.Close()
 }

@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Esteettömyys';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Esteettömyys ja $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Mukauta ${DISTRO}a vastaamaan tarpeitasi ennen asentamista. Voit muuttaa asetuksia myöhemmin järjestelmän asetuksista.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Näkeminen';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Kuuleminen';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Kirjoittaminen';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Osoittaminen ja napsauttaminen';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Suurentaminen';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Suuri kontrasti';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Suuri teksti';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Vähennä animaatiota';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Näytönlukija';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Visuaaliset hälytykset';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Pohjaan jäävät näppäimet';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Hitaat näppäimet';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Hiirinäppäimet';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Työpöydän suurennus';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Jokin meni pieleen';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Valitettavasti emme ole varmoja, mikä aiheutti ongelman. Voit käynnistää tietokoneen uudelleen ja käynnistää asennuksen uudelleen. Voit myös <a>ilmoittaa kohtaamastasi ongelmasta</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Näytä loki';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Piilota loki';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Käynnistä uudelleen';
 
   @override
-  String get close => 'Close';
+  String get close => 'Sulje';
 
   @override
   String get timezonePageTitle => 'Valitse aikavyöhyke';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Näppäimistön asettelu';
 
   @override
-  String get keyboardHeader => 'Valitse näppäimistön asettelu:';
+  String get keyboardHeader => 'Valitse näppäimistön asettelu';
 
   @override
   String get keyboardTestHint => 'Kokeile näppäimistön asetuksia kirjoittamalla tähän';
@@ -209,21 +209,21 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'Kirjoitat domainin ja muut tiedot seuraavassa vaiheessa.';
 
   @override
-  String get activeDirectoryTitle => 'Määritä Active Directory';
+  String get activeDirectoryTitle => 'Kirjaudu Active Directoryyn';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Haluatko kirjautua Active Directoryyn?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO on suunniteltu integroitavaksi Active Directoryyn ylläpidon helpottamiseksi.';
   }
 
   @override
   String get activeDirectoryTestConnection => 'Testaa domain-yhdistettävyyttä';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Toimialue';
 
   @override
   String get activeDirectoryDomainEmpty => 'Vaadittu';
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Yhdistä verkkoon';
 
   @override
-  String get networkPageHeader => 'Tietokoneen liittäminen internetiin auttaa Ubuntua asentamaan tarvittavat lisäohjelmistot ja valitsemaan aikavyöhykkeen.\n\nYhdistä Ethernet-kaapelilla tai valitse Wi-Fi-verkko';
+  String get networkPageHeader => 'Yhdistä internetiin';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Internetyhteys parantaa asennuskokemusta tarkistamalla yhteensopivuuden ja lisäohjelmistopaketit.';
 
   @override
   String get networkWiredOption => 'Käytä langallista yhteyttä';
@@ -323,4 +323,16 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'En halua muodostaa yhteyttä internetiin juuri nyt';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }

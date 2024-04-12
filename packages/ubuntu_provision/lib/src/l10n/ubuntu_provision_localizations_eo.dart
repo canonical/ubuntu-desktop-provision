@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEo([String locale = 'eo']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Alirebleco';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Alirebleco en $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Adaptu $DISTRO al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per Sistemaj Agordoj.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Vidado';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Aŭdado';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Tajpado';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Montrado kaj alklakado';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Zomo';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Alta kontrasto';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Granda teksto';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Malpliigi movadon';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Ekranlegilo';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Videblaj avertoj';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Persistaj klavoj';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Malrapidaj klavoj';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Musklavoj';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Labortabla zomo';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Io fiaskis';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Bedaŭrinde, ni ne konas la eraron. Vi povas provi restartigi vian komputilon kaj rekomenci la instalon. Vi ankaŭ povas <a>raporti la problemon</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Montri protokolon';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Kaŝi protokolon';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Restartigi';
 
   @override
-  String get close => 'Close';
+  String get close => 'Fermi';
 
   @override
   String get timezonePageTitle => 'Elektu vian horzonon';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Klavaranĝo';
 
   @override
-  String get keyboardHeader => 'Elektu vian klavaranĝon:';
+  String get keyboardHeader => 'Elektu vian klavaranĝon';
 
   @override
   String get keyboardTestHint => 'Tajpu ĉi tie por provi vian klavaron';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Agordi Aktivan Dosierujon';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Ĉu saluti en Aktivan Dosierujon?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO plene integriĝas kun Aktiva Dosierujo por facila administrado.';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Konekti al reto';
 
   @override
-  String get networkPageHeader => 'Konektado de ĉi tiu komputilo al Interreto helpos Ubuntu instali ajnajn kromajn programojn bezonatajn kaj helpos vin elekti vian horzonon.\n\nKonektu per Eterreta kablo, aŭ elektu sendratan reton.';
+  String get networkPageHeader => 'Konekti al Interreto';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Interreta konekto plibonigos vian instalon per kontrolado de kongrueco kaj pliaj programoj.';
 
   @override
   String get networkWiredOption => 'Uzi dratan konekton';
@@ -323,4 +323,16 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'Mi ne volas konekti al Interreto nun';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }

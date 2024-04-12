@@ -13,24 +13,24 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'نوع التثبيت';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'كيف تريد تنصيب $DISTRO؟';
   }
 
   @override
   String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'تنصيب تفاعلي';
 
   @override
   String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'تنصيب آلي';
 
   @override
   String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'تحذير:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'ما الذي تريد فِعلَه بـ $DISTRO؟';
   }
 
   @override

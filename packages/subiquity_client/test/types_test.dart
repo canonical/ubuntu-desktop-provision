@@ -92,6 +92,11 @@ void main() {
         seen: true,
         oopsId: '123',
       ),
+      nonreportableError: NonReportableError(
+        cause: 'cause',
+        message: 'message',
+        details: 'details',
+      ),
       cloudInitOk: true,
       interactive: false,
       echoSyslogId: '123',
@@ -107,6 +112,11 @@ void main() {
         'kind': 'UNKNOWN',
         'seen': true,
         'oops_id': '123'
+      },
+      'nonreportable_error': <String, dynamic>{
+        'cause': 'cause',
+        'message': 'message',
+        'details': 'details',
       },
       'cloud_init_ok': true,
       'interactive': false,

@@ -26,6 +26,7 @@ dependencies:
   meta: ^1.11.0
   nm: ^0.5.0
   path: ^1.8.3
+  pdfrx: ^1.0.52
   platform: ^3.1.2
   safe_change_notifier: ^0.3.2
   stdlibc: ^0.1.4
@@ -41,13 +42,13 @@ dependencies:
   ubuntu_service: ^0.3.1
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
-  ubuntu_widgets: ^0.4.0
+  ubuntu_widgets: ^0.5.1
   ubuntu_wizard: ^0.1.0
   udev: ^0.0.3
   upower: ^0.7.0
   url_launcher: ^6.2.5
   yaml: ^3.1.2
-  yaru: 4.0.0
+  yaru: 4.1.0
 
 dev_dependencies:
   build_runner: ^2.4.8

@@ -95,6 +95,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
           NextWizardButton(
             enabled: model.isValid,
             onNext: model.setStorage,
+            onReturn: model.resetStorage,
           ),
         ],
       ),

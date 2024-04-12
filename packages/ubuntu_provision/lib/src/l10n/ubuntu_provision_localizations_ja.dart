@@ -5,80 +5,80 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'アクセシビリティ';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO のアクセシビリティ';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'セットアップの前に、必要に応じて $DISTRO をカスタマイズしてください。あとでシステム設定で変更もできます。';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => '視力';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => '聴力';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'キー入力';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'ポイントとクリック';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => '拡大表示';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'ハイコントラスト';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => '文字を大きく';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => '動きを減らす';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'スクリーンリーダー';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => '視覚的通知';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'ステッキーキー';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'スローキー';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'マウスキー';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'デスクトップの拡大表示';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => '何かがおかしいです';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'ログを表示';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'ログを非表示';
 
   @override
-  String get restart => 'Restart';
+  String get restart => '再起動';
 
   @override
-  String get close => 'Close';
+  String get close => '閉じる';
 
   @override
-  String get timezonePageTitle => 'タイムゾーンを選択してください。';
+  String get timezonePageTitle => 'タイムゾーンを選択してください';
 
   @override
   String get timezoneLocationLabel => '現在地';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'キーボードレイアウト';
 
   @override
-  String get keyboardHeader => 'キーボードレイアウトを選択してください。';
+  String get keyboardHeader => 'キーボードレイアウトを選択してください';
 
   @override
   String get keyboardTestHint => 'ここに入力して、キーボードをテストできます';
@@ -102,7 +102,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => '検出';
 
   @override
-  String get keyboardVariantLabel => 'キーボードバリアント：';
+  String get keyboardVariantLabel => 'キーボードバリアントを選択：';
 
   @override
   String get keyboardPressKeyLabel => '以下のキーのうち 1 つを押してください。';
@@ -111,7 +111,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get keyboardKeyPresentLabel => '以下のキーはこのキーボードにありますか？';
 
   @override
-  String get themePageTitle => 'テーマを選択してください。';
+  String get themePageTitle => 'テーマを選択してください';
 
   @override
   String get themePageHeader => 'これは、外観設定でいつでも変更できます。';
@@ -124,11 +124,11 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return '$DISTROへ、ようこそ。';
+    return '$DISTROへ、ようこそ';
   }
 
   @override
-  String get localeHeader => '使用する言語を選択してください。';
+  String get localeHeader => '使用する言語を選択してください:';
 
   @override
   String get identityPageTitle => 'アカウントの設定';
@@ -185,10 +185,10 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'その名前には無効な文字が含まれています。';
 
   @override
-  String get identityPasswordLabel => 'パスワードを決めてください。';
+  String get identityPasswordLabel => 'パスワードを決めてください';
 
   @override
-  String get identityPasswordRequired => 'パスワードを入力してください';
+  String get identityPasswordRequired => 'パスワードを入力';
 
   @override
   String get identityConfirmPasswordLabel => 'パスワードをもう一度入力';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'アクティブディレクトリの設定';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'アクティブディレクトリにログインしますか？';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO は簡単な操作でシームレスにアクティブディレクトリに統合するよう設計されています。';
   }
 
   @override
@@ -232,22 +232,22 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainTooLong => '長すぎます';
 
   @override
-  String get activeDirectoryDomainInvalidChars => '無効な文字が含まれています。';
+  String get activeDirectoryDomainInvalidChars => '無効な文字が含まれています';
 
   @override
-  String get activeDirectoryDomainStartDot => 'ピリオド「.」で始まります。';
+  String get activeDirectoryDomainStartDot => 'ピリオド「.」で始めてください';
 
   @override
-  String get activeDirectoryDomainEndDot => 'ピリオド「.」で終わります。';
+  String get activeDirectoryDomainEndDot => 'ピリオド「.」で終わらせてください';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'ハイフン「-」で始まります。';
+  String get activeDirectoryDomainStartHyphen => 'ハイフン「-」で始めてください';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'ハイフン「-」で終わります。';
+  String get activeDirectoryDomainEndHyphen => 'ハイフン「-」で終わらせてください';
 
   @override
-  String get activeDirectoryDomainMultipleDots => '二つのピリオド「..」を含んでいます。';
+  String get activeDirectoryDomainMultipleDots => '二つのピリオド「..」を含んでいます';
 
   @override
   String get activeDirectoryDomainNotFound => 'ドメインが見つかりません';
@@ -259,7 +259,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminEmpty => '必須';
 
   @override
-  String get activeDirectoryAdminInvalidChars => '無効な文字が含まれています。';
+  String get activeDirectoryAdminInvalidChars => '無効な文字が含まれています';
 
   @override
   String get activeDirectoryPasswordLabel => 'パスワード';
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'ネットワークに接続';
 
   @override
-  String get networkPageHeader => 'このコンピューターをインターネットに接続すると、必要な追加ソフトウェアのインストールし、タイムゾーンを選択するのを手助けします。\n\nイーサネットケーブルを接続するか、Wi-Fi ネットワークを選択してください';
+  String get networkPageHeader => 'インターネットの接続方法を選択してください';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'インターネット接続を行うとインストールの際の互換性チェックと、さまざまなソフトウェアパッケージの取得を改善します。';
 
   @override
   String get networkWiredOption => '有線接続を使用';
@@ -307,7 +307,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi デバイスが見つかりません';
 
   @override
-  String get networkWifiDisabled => 'このコンピューターで Wi-Fi を使用するには。無線ネットワークを有効にする必要があります';
+  String get networkWifiDisabled => 'このコンピューターで Wi-Fi を使用するには、無線ネットワークを有効にする必要があります';
 
   @override
   String get networkWifiEnable => 'Wi-Fi を有効にする';
@@ -323,4 +323,16 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => '今はインターネットに接続しない';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }

@@ -323,11 +323,96 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'Não pretendo ligar à Internet por agora';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
 class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   UbuntuProvisionLocalizationsPtBr(): super('pt_BR');
+
+  @override
+  String get accessibilityPageTitle => 'Acessibilidade';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
+    return 'Acessibilidade para $DISTRO';
+  }
+
+  @override
+  String accessibilityPageBody(String DISTRO) {
+    return 'Personalize $DISTRO para suas necessidades antes de se estabelecer. Você pode mudá-las nas configurações do sistema posteriormente.';
+  }
+
+  @override
+  String get accessibilitySeeingLabel => 'Visualização';
+
+  @override
+  String get accessibilityHearingLabel => 'Ouvir';
+
+  @override
+  String get accessibilityTypingLabel => 'Digitando';
+
+  @override
+  String get accessibilityPointingLabel => 'Apontar e clicar';
+
+  @override
+  String get accessibilityZoomLabel => 'Ampliação';
+
+  @override
+  String get accessibilityHighContrastLabel => 'Alto contraste';
+
+  @override
+  String get accessibilityLargeTextLabel => 'Texto grande';
+
+  @override
+  String get accessibilityReduceAnimationLabel => 'Reduzir a animação';
+
+  @override
+  String get accessibilityScreenReaderLabel => 'Leitor de tela';
+
+  @override
+  String get accessibilityVisualAlertsLabel => 'Alertas visuais';
+
+  @override
+  String get accessibilityStickKeysLabel => 'Teclas persistentes';
+
+  @override
+  String get accessibilitySlowKeysLabel => 'Teclas lentas';
+
+  @override
+  String get accessibilityMouseKeysLabel => 'Botões do mouse';
+
+  @override
+  String get accessibilityDesktopZoomLabel => 'Ampliar a área de trabalho';
+
+  @override
+  String get errorPageTitle => 'Algo deu errado';
+
+  @override
+  String get errorPageUnexpected => 'Pedimos desculpas, mas não temos certeza qual é o erro. Você pode tentar reiniciar seu computador e iniciar o processo de instalação novamente. Você também pode <a>reportar o problema</a>.';
+
+  @override
+  String get errorPageShowLog => 'Exibir o log';
+
+  @override
+  String get errorPageHideLog => 'Ocultar o log';
+
+  @override
+  String get restart => 'Reiniciar';
+
+  @override
+  String get close => 'Fechar';
 
   @override
   String get timezonePageTitle => 'Selecione seu fuso horário';
@@ -342,7 +427,7 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get keyboardTitle => 'Layout do teclado';
 
   @override
-  String get keyboardHeader => 'Escolha o layout do seu teclado:';
+  String get keyboardHeader => 'Escolha o layout do seu teclado';
 
   @override
   String get keyboardTestHint => 'Digite aqui para testar seu teclado';
@@ -521,7 +606,10 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get networkPageTitle => 'Conecte-se a uma rede';
 
   @override
-  String get networkPageHeader => 'Ao conectar este computador à internet você facilitará ao Ubuntu instalação de qualquer software extra necessário e ajudará a determinar seu fuso horário.\n\nConecte-se via cabo Ethernet ou escolha uma rede Wi-Fi';
+  String get networkPageHeader => 'Conecte-se a internet';
+
+  @override
+  String get networkPageBody => 'Uma conexão com a internet irá melhorar sua instalação com a checagem de compatibilidade e pacotes extras de software.';
 
   @override
   String get networkWiredOption => 'Usar conexão via cabo';

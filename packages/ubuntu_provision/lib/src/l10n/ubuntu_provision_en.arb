@@ -131,5 +131,9 @@
   "networkHiddenWifiOption": "Connect to a hidden Wi-Fi network",
   "networkHiddenWifiNameLabel": "Network name",
   "networkHiddenWifiNameRequired": "A network name is required",
-  "networkNoneOption": "Do not connect to the internet"
+  "networkNoneOption": "Do not connect to the internet",
+  "eulaPageTitle": "License agreement",
+  "eulaReviewTerms": "Review the license terms",
+  "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the license agreement terms.",
+  "eulaAcceptTerms": "I have read and accept these terms"
 }

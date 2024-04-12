@@ -1,11 +1,21 @@
-provd (0.20) noble; urgency=medium
+provd (0.1.2) noble; urgency=medium
 
-  * Adding build deps
+  * provd to use provd group, not gnome-initial-setup group.
+  * Fixed issues preventing use of sbuild.
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 11 Apr 2024 07:48:45 +0200
+
+provd (0.1.1) noble; urgency=medium
+
+  * provd now pre-depends on gnome-initial-setup for gnome-initial-setup group.
+  * Fixed non-amd64 builds failing from missing header file.
+  * Fixed outdated paths to point at libexec.
+  * Fixed usermod command in postint to correctly set user to nogroup.
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 09 Apr 2024 11:30:05 +0200
+
+provd (0.1.0) noble; urgency=medium
+
+  * Initial release.
 
  -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 12 Mar 2024 10:19:49 +0200
-
-provd (0.18) noble; urgency=low
-
-  * Reintroducing tests 
-
- -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Wed, 29 Nov 2023 17:06:13 +0200

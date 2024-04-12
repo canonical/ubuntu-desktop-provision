@@ -54,7 +54,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
             // suspend network activity when proceeding on the next page
             onNext: model.cleanup,
             // resume network activity if/when returning back to this page
-            onExecute: model.init,
+            onReturn: model.init,
           ),
         ],
       ),

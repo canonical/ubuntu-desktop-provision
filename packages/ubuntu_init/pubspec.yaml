@@ -25,7 +25,9 @@ dependencies:
   intl: ^0.18.1
   meta: ^1.11.0
   path: ^1.8.3
+  pdfrx: ^1.0.52
   provd_client: ^0.1.0
+  stdlibc: ^0.1.4
   sysmetrics: ^0.1.0
   timezone_map:
     git:
@@ -41,7 +43,7 @@ dependencies:
   ubuntu_utils: ^0.1.0
   ubuntu_widgets: ^0.4.0
   ubuntu_wizard: ^0.1.0
-  yaru: 4.0.0
+  yaru: 4.1.0
 
 dev_dependencies:
   build_runner: ^2.4.8

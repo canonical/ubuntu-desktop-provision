@@ -41,7 +41,6 @@ class InitModel {
 
     try {
       await _chownService?.chownSettings(identity.username);
-      await _gdmService?.init();
       await _gdmService?.launchSession(
         identity.username,
         identity.password,

@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'دسترس‌پذیری';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'دسترس‌پذیری در $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'سفارشی‌سازی $DISTRO برای نیازهایتان پیش از برپایی. می‌توانید بعدها در تنظیمات سامانه تغییرشان دهید.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'دیدن';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'شنیدن';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'نوشتن';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'اشاره و کلیک';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'بزرگ‌نمایی';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'سایه‌روشن زیاد';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'متن بزرگ';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'کاهش پویانمایی';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'صفحه‌خوان';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'هشدارهای دیداری';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'کلیدهای چسبان';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'نمایش کلیدها';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'کلیدهای موشی';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'بزرگ‌نمایی میزکار';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'چیزی اشتباه پیش رفت';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'متأسفانه مطمئن نیستیم که خطا از کجاست. می‌توانید رایانه‌تان را دوباره راه انداخته و فرایند نصب را آغاز کنید. همچنین می‌توانید <a>مشکل را گزارش کنید</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'نمایش گزارش‌ها';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'نهفتن گزارش‌ها';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'آغاز دوباره';
 
   @override
-  String get close => 'Close';
+  String get close => 'بستن';
 
   @override
   String get timezonePageTitle => 'گزینش ناحیهٔ زمانیتان';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'پیکربندی شاخهٔ فعّال';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'ورود به شاخهٔ فعّال؟';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'به منظور مدیریت آسان‌تر $DISTRO برای یکپارچگی با شاخهٔ فعّال طرّاحی شده.';
   }
 
   @override
@@ -280,7 +280,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'وصل کردن این رایانه به اینترنت می‌گذارد اوبونتو هر نرم‌افزار اضافی مورد نیازی را نصب کرده و به گزینش ناحیهٔ زمانیتان کمک می‌کند.\n\nبا کابل اترنت وصل شده یا شبکهٔ وای‌فای‌ای را برگزینید';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'اتّصال اینترنتی نصبتان را با بررسی سازگاری و بسته‌های نرم‌افزاری اضافی بهبود خواهد داد.';
 
   @override
   String get networkWiredOption => 'استفاده از اتّصال سیمی';
@@ -323,4 +323,16 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'من نمی‌خواهم همین حالا به اینترنت متّصل شوم';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }

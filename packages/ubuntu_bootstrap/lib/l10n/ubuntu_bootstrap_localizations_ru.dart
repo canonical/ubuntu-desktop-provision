@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Введите URL-адрес autoinstall.yaml.';
+  String get autoinstallInstructions => 'Введите URL autoinstall.yaml:';
 
   @override
   String get autoinstallInteractiveOption => 'Интерактивная установка';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Предупреждение:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Включая, но не ограничиваясь, MP3, MP4, MOV и подобными им';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Компьютер не подключён к источнику питания.';
 
   @override
   String get offlineWarning => 'Вы сейчас не в сети';
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Начните с нуля на выбранном диске.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Выберите диск:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Выберите раздел:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Диск будет использован целиком:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Выберите, куда установить $DISTRO';
   }
 
   @override
@@ -551,7 +551,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get confirmSectionGeneralTitle => 'Общие';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Безопасность и др.';
+  String get confirmSectionSecurityAndMoreTitle => 'Безопасность и многое другое';
 
   @override
   String get confirmPartitionsTitle => 'Разделы';
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Перезагрузитесь, чтобы завершить установку или продолжить тестирование.\nЛюбые внесенные вами изменения не будут сохранены.';
 
   @override
   String get rebootToConfigureWarning => 'Чтобы продолжить процесс установки, необходимо перезагрузить компьютер.';

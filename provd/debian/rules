@@ -1,44 +1,32 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE = 1
 
-export GO111MODULE=on
-export GOCACHE := $(shell mktemp -d /tmp/gocache-XXXX)
 export GOFLAGS := --mod=vendor -buildmode=pie
 
+# We are getting an issue for embedding in GOPATH mode which don’t copy none .go file.
+export GO111MODULE := on
 export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
 
-# Set GOARCH based on the architecture being built
-ifeq ($(DEB_HOST_ARCH),amd64)
-    export GOARCH := amd64
-else ifeq ($(DEB_HOST_ARCH),arm64)
-    export GOARCH := arm64
-endif
+# We want to take whatever ubuntu propose to us (as it won’t download a newer version),
+# as long as it matches the go.mod go stenza which is the language requirement.
+export GOTOOLCHAIN := local
 
+# Set GOCACHE and GOMODCACHE in the build dir instead of home directory, which
+# may not be writable in sbuild.
+export GOCACHE=$(CURDIR)/.gocache
+export GOMODCACHE=$(CURDIR)/.gomodcache
 
 %:
 	dh $@ --buildsystem=golang --with=golang
 
-override_dh_auto_clean:
-ifeq ($(CI), true)
-	@echo "Skipping dh_auto_clean in CI"
-else
-	dh_auto_clean
-
+execute_after_dh_auto_clean:
 	# Create the vendor directory when building the source package
+	rm -rf $(GOCACHE) $(GOMODCACHE)
 	[ -d vendor/ ] || go mod vendor
-endif
 
 override_dh_auto_install:
-	dh_auto_install
-
-	# Move provd binary to /usr/bin
-	mkdir -p debian/tmp/usr/bin
-	mv debian/provd/usr/bin/* debian/tmp/usr/bin/
-	cp debian/usr/bin/* debian/tmp/usr/bin/
-
-	# Compile and install sprovd manually
-	go build -o debian/tmp/usr/bin/sprovd ./sprovd/sprovd.go
+	# Drop this in debhelper 15 compat mode. Check for no-source still.
+	dh_auto_install --destdir=debian/tmp -- --no-source
 
 override_dh_auto_test:
-    TEST_ENV=gh dh_auto_test -- -v -mod=vendor ./...
-
+	dh_auto_test -- -v $(GOFLAGS) ./...

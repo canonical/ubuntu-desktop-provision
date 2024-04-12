@@ -82,12 +82,9 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
               isLogVisible: isExpanded,
             );
           },
-          child: Container(
-            color: Theme.of(context).colorScheme.background,
-            height: 250,
-            child: SingleChildScrollView(
-              child: JournalView(journal: model.logStream),
-            ),
+          child: SizedBox(
+            height: 300,
+            child: JournalView(journal: model.logStream),
           ),
         ),
       ],

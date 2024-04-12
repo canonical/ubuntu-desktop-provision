@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -496,7 +498,13 @@ extension on WidgetTester {
     registerMockService<SessionService>(
       SubiquitySessionService(subiquityClient),
     );
-    final keyboardService = SubiquityKeyboardService(subiquityClient);
+    final inputSettings = MockGSettings();
+    when(inputSettings.set(any, any)).thenAnswer((_) async {});
+    final keyboardService = SubiquityKeyboardService(
+      subiquityClient,
+      inputSourceSettings: inputSettings,
+      runProcess: (_, __) async => ProcessResult(0, 0, '', ''),
+    );
     registerMockService<KeyboardService>(keyboardService);
     when(keyboardService.getKeyboard()).thenAnswer((_) async => keyboardSetup);
 

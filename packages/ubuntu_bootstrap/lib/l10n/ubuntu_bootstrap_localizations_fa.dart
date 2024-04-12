@@ -13,24 +13,24 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'گونهٔ نصب';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'می‌خواهید $DISTRO را چگونه نصب کنید؟';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => '‫ورود نشانی ‏autoinstall.yaml‬:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'نصب تعاملی';
 
   @override
   String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'نصب خودکار';
 
   @override
   String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'هشدار:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'می‌خواهید با $DISTRO چه کنید؟';
   }
 
   @override
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'این کامپیوتر از Intel RST (فناوری ذخیره‌سازی سریع) استفاده می‌کند. قبل از نصب اوبونتو باید RST را در ویندوز خاموش کنید.';
+    return 'این رایانه از RST (فناوری ذخیره‌سازی سریع) اینتل استفاده می‌کند. باید پیش از نصب $DISTRO در ویندوز خاموشش کنید.';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'نمایش کلید امنیتی';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'نهفتن';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'برنامه‌ها و به‌روز رسانی‌ها';
@@ -151,10 +151,10 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'برای شروع چه برنامه‌هایی را می‌خواهید نصب کنید؟';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'بهینه سازی رایانه‌تان';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'نصب نرم‌افزارهای مالکیتی پیشنهادی؟';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -168,13 +168,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'گسترش گزینش';
 
   @override
   String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'گزینش پیش‌فرض';
 
   @override
   String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
@@ -207,19 +207,19 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'در حال حاضر برون‌خطید';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'عبارت عبور دیسک';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'ایجاد عبارت عبور';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'گزینش عبارت عبور';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'تأیید عبارت عبور';
 
   @override
   String get choosePassphraseRequired => 'A passphrase is required';
@@ -234,10 +234,10 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'ایجاد عبارت عبور';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'تأیید عبارت عبور';
 
   @override
   String get installationTypeTitle => 'گونهٔ نصب';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'ویژگی‌های پیش‌رفته';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'آزمایشی';
 
   @override
   String get installationTypeNone => 'هیچ‌کدام';
@@ -287,7 +287,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'هیچ‌کدام گزیده نشدند';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'استفاده از LVM';
 
   @override
   String get installationTypeLVMSelected => 'استفاده از LVM گزیده شد';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'می‌توانید خودتان افرازها را ایحاد و تغییر اندازه داده یا چندین افراز را برای $DISTRO برگزینید';
+    return 'برای کاربران حرفه‌ای در جویش برپایی دیسم شخص شده.';
   }
 
   @override
@@ -374,10 +374,10 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'گزینش گرداننده:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'گزینش افراز:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'تمام دیسک استفاده خواهد شد:';
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'آمادهٔ نصب';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'بازبینی انتخاب‌هایتان';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'هیچ‌کدام';
 
   @override
   String get confirmDevicesTitle => 'افزاره‌ها';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'برنامه‌ها';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'برپایی دیسک';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'رمزنگاری دیسک';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'دیسک نصب';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'نرم‌افزار مالکیتی';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'عمومی';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'امنیت و بیش‌تر';
 
   @override
   String get confirmPartitionsTitle => 'افزارها';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'رمزینه‌ها';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'رمزینه‌ها و راه‌اندازها';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'راه‌اندازها';
 
   @override
   String get confirmInstallButton => 'نصب';
@@ -811,13 +811,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get refreshHeader => 'An update is available for the installer';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'اکنون به‌روز شود';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'به‌روز رسانی آماده';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -843,7 +843,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Please close the installer and relaunch to continue';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'بستن نصب کننده';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -946,7 +946,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'کلید بازیابی TPM';
 
   @override
   String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'اعتبارسنجی';
 }

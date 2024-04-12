@@ -74,6 +74,18 @@ class ErrorReportRef with _$ErrorReportRef {
       _$ErrorReportRefFromJson(json);
 }
 
+@freezed
+class NonReportableError with _$NonReportableError {
+  const factory NonReportableError({
+    required String cause,
+    required String message,
+    required String? details,
+  }) = _NonReportableError;
+
+  factory NonReportableError.fromJson(Map<String, dynamic> json) =>
+      _$NonReportableErrorFromJson(json);
+}
+
 enum ApplicationState {
   STARTING_UP,
   CLOUD_INIT_WAIT,
@@ -94,6 +106,7 @@ class ApplicationStatus with _$ApplicationStatus {
     required ApplicationState state,
     required String confirmingTty,
     required ErrorReportRef? error,
+    required NonReportableError? nonreportableError,
     required bool? cloudInitOk,
     required bool? interactive,
     required String echoSyslogId,

@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Agençament del clavièr",
   "@keyboardTitle": {},
-  "keyboardHeader": "Indicatz l’agençament del clavièr :",
+  "keyboardHeader": "Seleccionatz vòstre agençament de clavièr",
   "@keyboardHeader": {},
   "keyboardTestHint": "Picatz de tèxt aquí per ensajar lo clavièr",
   "@keyboardTestHint": {},
@@ -159,5 +159,75 @@
   "networkHiddenWifiNameRequired": "Un nom de ret es requerit",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Vòli pas me connectar a internet pel moment",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "Accessibilitat",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "L’accessibilitat dins {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Vista",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Ausida",
+  "@accessibilityHearingLabel": {},
+  "accessibilityPointingLabel": "Ponchar e clicar",
+  "@accessibilityPointingLabel": {},
+  "accessibilityTypingLabel": "Picatge",
+  "@accessibilityTypingLabel": {},
+  "accessibilityZoomLabel": "Agrandiment",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Constraste naut",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Tèxte grand",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Redusir l’animacion",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Lector d’ecran",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Alèrtas visualas",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Tòcas remanentas",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Tòcas lentas",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Tòcas de la mirga",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Agrandiment del buèu",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Quicòm a trucat",
+  "@errorPageTitle": {},
+  "errorPageShowLog": "Afichar lo jornal",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Amagar lo jornal",
+  "@errorPageHideLog": {},
+  "restart": "Reaviar",
+  "@restart": {},
+  "close": "Tampar",
+  "@close": {},
+  "activeDirectoryHeader": "Volètz accedir a Active Directory ?",
+  "@activeDirectoryHeader": {},
+  "networkPageBody": "Una connexion Internet melhorarà l’installacion amb la verificacion de compatibilitat e los paquets logicials addicionals.",
+  "@networkPageBody": {},
+  "accessibilityPageBody": "Personalizatz {DISTRO} coma vos fa mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageUnexpected": "O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.",
+  "@errorPageUnexpected": {},
+  "activeDirectoryInfo": "{DISTRO} es concebut per s’integrar sens de manièra transparenta a Active Directory per una administracion mai facila.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

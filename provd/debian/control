@@ -1,13 +1,15 @@
 Source: provd
 Section: admin
 Priority: optional
-Maintainer: Matt <matt.hagemann@canonical.com>
-Build-Depends: dbus,
-               debhelper-compat (= 13),
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper-compat (= 13),
                dh-golang,
-               golang-go,
+               golang-go (>= 2:1.22~),
                libglib2.0-dev,
                libgtk-3-dev,
+               dbus,
+               gsettings-desktop-schemas,
+               ca-certificates,
 Standards-Version: 4.6.2.0
 XS-Go-Import-Path: github.com/canonical/ubuntu-desktop-provision/provd
 Homepage: https://github.com/canonical/ubuntu-desktop-provision/tree/main/provd
@@ -15,6 +17,7 @@ Rules-Requires-Root: no
 
 Package: provd
 Architecture: any
+Pre-Depends: gnome-initial-setup
 Depends: ${misc:Depends},
          ${shlibs:Depends},
 Description: Ubuntu init backend

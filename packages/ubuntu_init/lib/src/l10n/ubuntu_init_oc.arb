@@ -64,5 +64,7 @@
   "telemetryLabelOff": "Non, partejar pas cap de donadas sistèma",
   "@telemetryLabelOff": {},
   "welcomeStartSubtitle": "Encoratja a una experiéncia de configuracion mai neta.",
-  "@welcomeStartSubtitle": {}
+  "@welcomeStartSubtitle": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

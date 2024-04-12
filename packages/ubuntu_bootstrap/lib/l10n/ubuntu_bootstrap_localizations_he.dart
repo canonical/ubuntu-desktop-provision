@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'סוג ההתקנה';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'איך להתקין את $DISTRO?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'נא למלא את כתובת ה־autoinstall.yaml:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'ההתקנה אינטראקטיבית';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'למשתמשים שצריכים הדרכה שלב אחר שלב במהלך ההתקנה.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'התקנה אוטומטית';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'למשתמשים מתקדמים שיש להם autoinstall.yaml להתקנות אחידות ובכמויות גדולות.';
 
   @override
   String get changeButtonText => 'שינוי';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'אזהרה:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'מה מעניין אותך לעשות עם $DISTRO?';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'הצגת מפתח אבטחה';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'הסתרה';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'יישומים ועדכונים';
@@ -151,21 +151,21 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'אילו יישומים להתקין בתור התחלה?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'מיטוב המחשב שלך';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'להתקין תוכנה קניינית מומלצת?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'ל־$DISTRO לא מצורפת תוכנה קניינית כברירת מחדל. התקנת תוכנות נוספות עשויה לשפר את ביצועי המחשב שלך.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'זוהה כרטיס מסך של NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'לביצועים מיטביים עם כרטיסי NVIDIA, מומלץ בחום להתקין מנהלי התקנים נוספים.';
 
   @override
   String get fullInstallationTitle => 'התקנה מלאה';
@@ -201,50 +201,50 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'תוכנה זו כפופה לתנאי הרישיון שנכללים בתיעוד שלה. חלקם קנייניים.';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'המחשב לא מחובר למקור חשמל.';
 
   @override
   String get offlineWarning => 'החיבור שלך מנותק';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'מילת צופן של הכונן';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'יצירת מילת צופן';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'צריך מילת צופן כדי להצפין את הקבצים שלך. תופיע בקשה למילוי מילת הצופן עם כל הפעלה של המחשב.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'נא לבחור מילת צופן';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'אישור מילת הצופן';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'דרושה מילת צופן';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'מילות הצופן לא תואמות';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'נא לוודא ששמרת לך את מילת הצופן במקום בטוח';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'אובדן מילת הצופן יוביל לאובדן המידע שלך.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'יצירת מילת צופן';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'אישור מילת הצופן';
 
   @override
   String get installationTypeTitle => 'סוג ההתקנה';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'איך להתקין את $DISTRO?';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'התחלה מאפס בכונן לבחירתך.';
 
   @override
   String get installationTypeAdvancedLabel => 'יכולות מתקדמות…';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'יכולות מתקדמות';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'ניסיוני';
 
   @override
   String get installationTypeNone => 'אין';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'לא נבחרו';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'להשתמש ב־LVM';
 
   @override
   String get installationTypeLVMSelected => 'נבחר מנהל כרכים לוגי';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'להשתמש ב־LVM והצפנה';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';
@@ -305,20 +305,20 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'ניסיוני: למחוק את הכונן ולהשתמש ב־ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'למחוק את הכונן ולהשתמש ב־ZFS עם הצפנה';
 
   @override
   String get installationTypeZFSSelected => 'נבחר ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'נבחרו ZFS והצפנה';
 
   @override
   String get installationTypeTPM => 'ניסיוני: להפעיל הצפנת מלוא הכונן בגיבוי חומרה';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'זאת יכולת ניסיונית. יכול להיות עם החומרה שלך בגרסאות עתידיות של $DISTRO. <a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.';
   }
 
   @override
@@ -371,13 +371,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'התחלה מאפס על הכונן שבחרת.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'בחירת כונן:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'בחירת מחיצה:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'ייעשה שימוש בכונן כולו:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'נא לבחור איפה להתקין את $DISTRO';
   }
 
   @override
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'בלי';
 
   @override
   String get confirmDevicesTitle => 'התקנים';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'יישומים';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'הכנת הכונן';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'הצפנת הכונן';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'אמצעי ההתקנה';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'תוכנה קניינית';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'כללי';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'אבטחה ועוד';
 
   @override
   String get confirmPartitionsTitle => 'מחיצות';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'מפענחים';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'מפענחים ומנהלי התקנים';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'מנהלי התקנים';
 
   @override
   String get confirmInstallButton => 'התקנה';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** הועתקה לכונן';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'אפשר להפעיל מחדש כדי להשלים את ההתקנה או להמשיך לחקור. \nהשינויים שנערכים כאן לא נשמרים.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'יש להפעיל את המחשב מחדש כדי להמשיך את תהליך ההתקנה.';
 
   @override
   String get shutdown => 'כיבוי';
@@ -808,16 +808,16 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'קיים עדכון';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'יש עדכון לתוכנית ההתקנה';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'לעדכן עכשיו';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'עדכון לגרסה העדכנית ביותר ישפר את האמינות ויביא איתו יכולות נוספות.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'העדכון מוכן';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -843,7 +843,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'נא להפעיל את תוכנית ההתקנה מחדש.';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'סגירת תוכנית ההתקנה';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'תיקוף';
 }

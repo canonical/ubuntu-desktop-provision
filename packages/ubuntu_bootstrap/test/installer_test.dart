@@ -109,6 +109,7 @@ extension on WidgetTester {
       state: state,
       confirmingTty: '',
       error: null,
+      nonreportableError: null,
       cloudInitOk: null,
       interactive: interactive,
       echoSyslogId: '',

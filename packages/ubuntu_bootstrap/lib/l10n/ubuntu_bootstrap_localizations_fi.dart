@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Asennuksen tyyppi';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Miten haluat, että $DISTRO asennetaan?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'Kirjoita autoinstall.yaml-tiedoston verkko-osoite:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Vuorovaikutteinen asennus';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Käyttäjille, jotka haluvat vaiheittaisesti opastetun asennuksen.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Automaattinen asennus';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Edistyneille käyttäjille, joilla on autoinstall-yaml-tiedosto, joka takaa yhtenäisen ja toistettavan asennuksen.';
 
   @override
   String get changeButtonText => 'Muuta';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Varoitus:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Mitä haluat tehdä ${DISTRO}lla?';
   }
 
   @override
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Tämä tietokone käyttää Intel RST:tä (Rapid Storage Technology). Sinun tulee sammuttaa RST, ennen kuin asennat Ubuntun.';
+    return 'Tämä tietokone käyttää Intel RST:tä (Rapid Storage Technology). Sinun tulee sammuttaa RST Windowsissa, ennen kuin asennat ${DISTRO}n.';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Näytä salausavain';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Piilota';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Sovellukset ja päivitykset';
@@ -151,21 +151,21 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Millä sovelluksin haluat aloittaa?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimoi tietokoneesi';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Asennetaanko suositellut omisteiset ohjelmistot?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO ei sisällä oletuksena omisteisia ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA:n näytönohjain havaittu';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Lisäajureiden asentamista suositellaan, jotta NVIDIA:n näytönohjaimesta saadaan paras mahdollinen suorituskyky.';
 
   @override
   String get fullInstallationTitle => 'Täysi asennus';
@@ -192,59 +192,59 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Asenna kolmannen osapuolen ohjelmistot näytönohjainta ja wifi-laitteistoa varten';
 
   @override
-  String get installDriversSubtitle => 'Näihin ajureihin pätee niiden dokumentaation mukana tulevat lisenssiehdot. Nämä ajurit ovat omisteellisia.';
+  String get installDriversSubtitle => 'Sisältäen mutta ei rajoittuen NVIDIA-ajurit ja vastaavat';
 
   @override
   String get installCodecsTitle => 'Lataa ja asenna tuki eri mediamuotoja varten';
 
   @override
-  String get installCodecsSubtitle => 'Tähän ohjelmistoon pätee sen dokumentaation mukana tulevat lisenssiehdot. Jotkin ohjelmistot ovat omisteellisia.';
+  String get installCodecsSubtitle => 'Sisältäen mutta ei rajoittuen MP3, MP4, MOV ja vastaavat';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Tämä tietokone ei ole liitetty virtalähteeseen.';
 
   @override
   String get offlineWarning => 'Et ole yhteydessä verkkoon';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Levyn tunnuslause';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Luo tunnuslause';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Tarvitset tunnuslauseen salataksesi tiedostosi. Tunnuslause tulee kirjoittaa joka kerta, kun tietokone käynnistetään.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Valitse tunnuslause';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Vahvista tunnuslause';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Tunnuslause on pakollinen';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Tunnuslauseet eivät vastaa toisiaan';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Varmista, että talletat tunnuslauseen';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Jos unohdat tai kadotat tunnuslauseen, menetät pääsyn dataan.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Luo tunnuslause';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Vahvista tunnuslause';
 
   @override
   String get installationTypeTitle => 'Asennustyyppi';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Miten haluat asentaa ${DISTRO}n?';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Aloita tyhjästä valitsemallasi levyllä.';
 
   @override
   String get installationTypeAdvancedLabel => 'Edistyneet asetukset...';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Edistyneet asetukset';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Kokeellinen';
 
   @override
   String get installationTypeNone => 'Ei mitään';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Ei valintoja';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Käytä LVM:ää';
 
   @override
   String get installationTypeLVMSelected => 'LVM valittu';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Käytä LVM:ää ja salausta';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
@@ -305,20 +305,20 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'KOKEELLINEN: Tyhjennä levy ja käytä ZFS:ää';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Tyhjennä levy ja käytä ZFS:ää sekä salausta';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valittu';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS ja salaus valittu';
 
   @override
   String get installationTypeTPM => 'KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware of future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Tämä on kokeellinen ominaisuus. Se ei välttämättä toimi laitteistollasi tai tulevissa $DISTRO-jakeluissa. <a href=\"$url\">Lue TPM-salauksesta</a>, ennen kuin valitset tämän.';
   }
 
   @override
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Voit luoda tai muuttaa osioiden kokoja itse, tai valita useita osioita ${DISTRO}n käytettäväksi';
+    return 'Edistyneille käyttäjille, jotka haluavat mukauttaa levymäärityksiä.';
   }
 
   @override
@@ -371,13 +371,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Aloita tyhjästä valitsemallasi levyllä.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Valitse asema:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Valitse osio:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Koko levy käytetään:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Valitse mihin $DISTRO asennetaan';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Valmis asennukseen';
 
   @override
-  String get confirmHeader => 'Jos jatkat, alla luetellut muutokset kirjoitetaan levyille. Muussa tapauksessa voit tehdä itse lisää muutoksia.';
+  String get confirmHeader => 'Katselmoi valintasi';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Ei mitään';
 
   @override
   String get confirmDevicesTitle => 'Laitteet';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Sovellukset';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Levymääritys';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Levyn salaus';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Asennuslevy';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Omisteinen ohjelmisto';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Yleiset';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Tietoturva ja muu';
 
   @override
   String get confirmPartitionsTitle => 'Osiot';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Koodekit';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Koodekit ja ajurit';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Ajurit';
 
   @override
   String get confirmInstallButton => 'Asenna';
@@ -609,12 +609,12 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '$system on asennettu ja on valmis käytettäväksi.';
+    return '$system on asennettu ja valmis käytettäväksi';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** on kopioitu levylle';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make not be saved.';
+  String get restartWarningBody => 'Käynnistä uudelleen viimeistelläksesi asennuksen tai jatka testaamista.\nTekemiäsi muutoksia ei tallenneta.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Tietokone tulee käynnistää uudelleen, jotta asennusta voidaan jatkaa.';
 
   @override
   String get shutdown => 'Sammuta';
@@ -808,16 +808,16 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Päivitys saatavilla';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Asennusohjelmaan on saatavilla päivitys';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Päivitä nyt';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Päivitä uusimpaan versioon entistä paremman luotettavuuden ja lisäominaisuuksien vuoksi.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Päivitys valmistui';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -840,10 +840,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Käynnistä asennusohjelma uudelleen.';
+  String get refreshRestart => 'Sulje asennusohjelma ja käynnistä uudelleen jatkaaksesi';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Sulje asennusohjelma';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -922,7 +922,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Yhdistetään snapin $snap pistokkeet ja liittimet...';
   }
 
   @override
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Vahvista';
 }

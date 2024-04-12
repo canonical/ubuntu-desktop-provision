@@ -99,6 +99,17 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    final eulaPage = find.byType(EULAPage);
+    expect(eulaPage, findsOneWidget);
+    final l10n = EULALocalizations.of(tester.element(eulaPage));
+    final checkbox = find.checkButton(l10n.eulaAcceptTerms);
+    expect(checkbox, findsOneWidget);
+    expect(checkbox, isNotChecked);
+    await tester.tap(checkbox);
+    await tester.pumpAndSettle();
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
 

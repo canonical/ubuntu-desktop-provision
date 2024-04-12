@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gsettings/gsettings.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
@@ -39,7 +40,12 @@ extension WidgetTesterX on WidgetTester {
             onNext: (settings) => '/next',
           ),
           '/next': WizardRoute(
-            builder: (_) => const Text('Next page'),
+            builder: (_) => const Row(
+              children: [
+                Text('Next page'),
+                BackWizardButton(),
+              ],
+            ),
           ),
         },
       ),
@@ -48,6 +54,7 @@ extension WidgetTesterX on WidgetTester {
 }
 
 @GenerateMocks([
+  GSettings,
   InstallerService,
   PostInstallService,
   RefreshService,

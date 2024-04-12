@@ -72,7 +72,7 @@
   "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "ZFS sélectionné",
   "@installationTypeZFSSelected": {},
-  "installationTypeTitle": "Type d’installation",
+  "installationTypeTitle": "Configuration du disque",
   "@installationTypeTitle": {},
   "installationTypeNoOSDetected": "Aucun système d’exploitation n’a été détecté sur cet ordinateur. Que voulez-vous faire ?",
   "@installationTypeNoOSDetected": {},
@@ -160,7 +160,7 @@
   },
   "installationTypeAlongsideInfo": "Les documents, musiques et autres fichiers personnels seront conservés. Vous pouvez choisir le système d’exploitation à lancer au moment du démarrage de l’ordinateur.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManualInfo": "Vous pouvez créer ou redimensionner les partitions vous-même, ou choisir plusieurs partitions pour {DISTRO}",
+  "installationTypeManualInfo": "",
   "@installationTypeManualInfo": {},
   "selectGuidedStoragePageTitle": "Effacer le disque et installer {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -624,5 +624,101 @@
     }
   },
   "refreshRestart": "Veuillez redémarrer l'installateur.",
-  "@refreshRestart": {}
+  "@refreshRestart": {},
+  "codecsAndDriversPageTitle": "Optimisez votre ordinateur",
+  "@codecsAndDriversPageTitle": {},
+  "batteryWarning": "L'ordinateur n'est pas branché à une source d'alimentation.",
+  "@batteryWarning": {},
+  "installationTypeHeader": "Comment souhaitez-vous installer {DISTRO} ?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Commencez à partir de zéro sur votre disque sélectionné.",
+  "@installationTypeEraseInfo": {},
+  "autoinstallTitle": "Type d’installation",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Comment souhaitez-vous installer {DISTRO} ?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Entrez l'URL du autoinstall.yaml :",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveDescription": "Pour les utilisateurs qui veulent être guidés étape par étape à travers l'installation.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Installation automatisée",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallInteractiveOption": "Installation interactive",
+  "@autoinstallInteractiveOption": {},
+  "warningLabel": "Attention :",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Que voulez-vous faire avec {DISTRO} ?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Masquer",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageDescription": "Installer les logiciels propriétaires recommandés ?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "Carte graphique NVIDIA détectée",
+  "@codecsAndDriversNvidiaNote": {},
+  "installationTypeExperimental": "Expérimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Utiliser LVM",
+  "@installationTypeLVM": {},
+  "selectGuidedStorageDriveDropdownLabel": "Sélectionnez le disque :",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Sélectionnez la partition :",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Choisissez où installer {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionNone": "Aucune",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Applications",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Configuration du disque",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Chiffrement du disque",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryProprietarySoftware": "Logiciel propriétaire",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionSecurityAndMoreTitle": "Sécurité & plus",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & pilotes",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Pilotes",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** a été copié sur le disque",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdateNow": "Mettre à jour maintenant",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Mise à jour prête",
+  "@refreshReady": {},
+  "validate": "Valider",
+  "@validate": {}
 }

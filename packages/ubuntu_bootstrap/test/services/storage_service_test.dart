@@ -26,6 +26,7 @@ void main() {
         confirmingTty: '',
         echoSyslogId: '',
         error: null,
+        nonreportableError: null,
         eventSyslogId: '',
         interactive: null,
         logSyslogId: '',

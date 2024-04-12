@@ -1,13 +1,10 @@
 import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gsettings/gsettings.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
-import 'gnome_accessibility_service_test.mocks.dart';
+import '../test_utils.dart';
 
-@GenerateMocks([GSettings])
 void main() {
   late MockGSettings a11yInterfaceSettings;
   late MockGSettings applicationSettings;

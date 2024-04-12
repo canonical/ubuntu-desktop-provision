@@ -64,5 +64,7 @@
   "privacyLocationSubtitle": "Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.",
   "@privacyLocationSubtitle": {},
   "privacyPolicyLink": "Soukromí údajů",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

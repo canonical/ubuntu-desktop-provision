@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'კლავიატური განლაგება';
 
   @override
-  String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება:';
+  String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება';
 
   @override
   String get keyboardTestHint => 'კლავიატურის დასატესტად აქ აკრიფეთ';
@@ -323,4 +323,16 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String get networkNoneOption => 'ინტერნეტთან მიერთება ჯერ არ მინდა';
+
+  @override
+  String get eulaPageTitle => 'License agreement';
+
+  @override
+  String get eulaReviewTerms => 'Review the license terms';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+
+  @override
+  String get eulaAcceptTerms => 'I have read and accept these terms';
 }

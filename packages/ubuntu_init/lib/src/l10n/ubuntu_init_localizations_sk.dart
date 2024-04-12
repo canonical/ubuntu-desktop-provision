@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Anonymné zdieľanie údajov s $distro, aby sme mohli zlepšiť váš zážitok.';
+    return 'Anonymné zdieľanie údajov s $distro, aby sme mohli zlepšiť váš dojem.';
   }
 
   @override
