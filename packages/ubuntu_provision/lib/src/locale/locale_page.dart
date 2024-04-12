@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -9,9 +11,11 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
     final model = ref.read(localeModelProvider);
-    return model.init().then((_) => model.playWelcomeSound()).then((_) => true);
+    await model.init();
+    unawaited(model.playWelcomeSound());
+    return true;
   }
 
   @override
