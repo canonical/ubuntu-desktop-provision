@@ -113,7 +113,8 @@ class _ValidateButton extends StatelessWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: MaterialStateProperty.all(kPushButtonSize),
       ),
-      onPressed: _isValidUrl(model.url) ? model.apply : null,
+      onPressed:
+          !model.state.hasError && model.url.isNotEmpty ? model.apply : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -131,15 +132,5 @@ class _ValidateButton extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  bool _isValidUrl(String url) {
-    final parsedUrl = Uri.tryParse(url);
-    if (parsedUrl == null) {
-      return false;
-    }
-    return parsedUrl.hasAbsolutePath &&
-        !parsedUrl.hasEmptyPath &&
-        parsedUrl.pathSegments.isNotEmpty;
   }
 }
