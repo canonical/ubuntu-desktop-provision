@@ -23,7 +23,6 @@ apps:
       - run-provd-socket
       - network
       - network-manager
-      - tmp
       - var-log-installer
 
 parts:
@@ -93,12 +92,6 @@ plugs:
       - /run/gnome-initial-setup/desktop-provision/init.socket
     write:
       - /run/gnome-initial-setup/desktop-provision/init.socket
-  tmp:
-    interface: system-files
-    read:
-      - /var/lib/snapd/hostfs/tmp
-    write:
-      - /var/lib/snapd/hostfs/tmp
   usr-share-desktop-provision:
     interface: system-files
     read:
