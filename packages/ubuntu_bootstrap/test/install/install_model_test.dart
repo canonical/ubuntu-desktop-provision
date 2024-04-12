@@ -249,6 +249,7 @@ ApplicationStatus testStatus(ApplicationState state) {
     confirmingTty: '',
     echoSyslogId: '',
     error: null,
+    nonreportableError: null,
     eventSyslogId: 'event',
     interactive: null,
     logSyslogId: 'log',
