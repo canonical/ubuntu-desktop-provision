@@ -7,10 +7,11 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InstallationStep with RouteName {
-  loading(LoadingPage.new, discreteStep: false, wizardStep: false),
+  loading(LoadingPage.new,
+      discreteStep: false, wizardStep: false, required: true),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new, allowedToHide: true),
-  rst(RstPage.new, discreteStep: false),
+  rst(RstPage.new, discreteStep: false, required: true),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   refresh(RefreshPage.new, allowedToHide: true),
@@ -19,20 +20,23 @@ enum InstallationStep with RouteName {
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
-  secureBoot(SecureBootPage.new),
+  secureBoot(SecureBootPage.new, discreteStep: false, required: true),
   storage(StorageWizard.new, discreteStep: false),
   identity(IdentityPage.new),
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
-  confirm(ConfirmPage.new),
-  install(InstallPage.new, discreteStep: false, wizardStep: false),
-  error(_errorPageFactory, discreteStep: false, wizardStep: false);
+  confirm(ConfirmPage.new, required: true),
+  install(InstallPage.new,
+      discreteStep: false, wizardStep: false, required: true),
+  error(_errorPageFactory,
+      discreteStep: false, wizardStep: false, required: true);
 
   const InstallationStep(
     this.pageFactory, {
     this.discreteStep = true,
     this.wizardStep = true,
     this.allowedToHide = false,
+    this.required = false,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -46,9 +50,15 @@ enum InstallationStep with RouteName {
   /// Whether the page can be hidden.
   final bool allowedToHide;
 
+  /// Whether the page is required.
+  final bool required;
+
   /// Gets all the pages that should be handled by the wizard.
   static Iterable<InstallationStep> get wizardSteps =>
       values.where((e) => e.wizardStep);
+
+  static Iterable<String> get requiredRoutes =>
+      values.where((e) => e.required).map((e) => e.route);
 
   WizardRoute toRoute(BuildContext context, WidgetRef ref) {
     final page = pageFactory();

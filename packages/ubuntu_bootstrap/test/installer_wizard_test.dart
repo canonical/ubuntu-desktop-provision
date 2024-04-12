@@ -390,6 +390,7 @@ void main() {
   testWidgets('exclude pages', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
+    final secureBootModel = buildSecureBootModel();
     final sourceModel = buildSourceModel();
     final storageModel = buildStorageModel();
     final confirmModel = buildConfirmModel();
@@ -401,6 +402,7 @@ void main() {
           autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
+          secureBootModelProvider.overrideWith((_) => secureBootModel),
           sourceModelProvider.overrideWith((_) => sourceModel),
           storageModelProvider.overrideWith((_) => storageModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
