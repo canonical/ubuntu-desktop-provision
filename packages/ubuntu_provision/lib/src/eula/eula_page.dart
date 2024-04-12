@@ -25,7 +25,7 @@ class _EULAPageState extends ConsumerState<EULAPage> {
     final localeModel = ref.read(localeModelProvider);
     final lang = EULALocalizations.of(context);
     final eulaFile = File(
-        '/run/gnome-initial-setup/desktop-provision/EULA_${localeModel.selectedLocale?.languageCode}.pdf');
+        '/usr/share/desktop-provision/eula/EULA_${localeModel.selectedLocale?.languageCode}.pdf');
 
     Logger('eula').debug('EULA file: ${eulaFile.path}');
 
