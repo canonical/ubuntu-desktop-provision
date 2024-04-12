@@ -44,6 +44,22 @@ const _$ErrorReportKindEnumMap = {
   ErrorReportKind.UNKNOWN: 'UNKNOWN',
 };
 
+_$NonReportableErrorImpl _$$NonReportableErrorImplFromJson(
+        Map<String, dynamic> json) =>
+    _$NonReportableErrorImpl(
+      cause: json['cause'] as String,
+      message: json['message'] as String,
+      details: json['details'] as String?,
+    );
+
+Map<String, dynamic> _$$NonReportableErrorImplToJson(
+        _$NonReportableErrorImpl instance) =>
+    <String, dynamic>{
+      'cause': instance.cause,
+      'message': instance.message,
+      'details': instance.details,
+    };
+
 _$ApplicationStatusImpl _$$ApplicationStatusImplFromJson(
         Map<String, dynamic> json) =>
     _$ApplicationStatusImpl(
@@ -52,6 +68,10 @@ _$ApplicationStatusImpl _$$ApplicationStatusImplFromJson(
       error: json['error'] == null
           ? null
           : ErrorReportRef.fromJson(json['error'] as Map<String, dynamic>),
+      nonreportableError: json['nonreportable_error'] == null
+          ? null
+          : NonReportableError.fromJson(
+              json['nonreportable_error'] as Map<String, dynamic>),
       cloudInitOk: json['cloud_init_ok'] as bool?,
       interactive: json['interactive'] as bool?,
       echoSyslogId: json['echo_syslog_id'] as String,
@@ -65,6 +85,7 @@ Map<String, dynamic> _$$ApplicationStatusImplToJson(
       'state': _$ApplicationStateEnumMap[instance.state]!,
       'confirming_tty': instance.confirmingTty,
       'error': instance.error?.toJson(),
+      'nonreportable_error': instance.nonreportableError?.toJson(),
       'cloud_init_ok': instance.cloudInitOk,
       'interactive': instance.interactive,
       'echo_syslog_id': instance.echoSyslogId,
