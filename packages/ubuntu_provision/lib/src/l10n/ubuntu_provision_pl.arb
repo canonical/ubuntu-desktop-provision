@@ -229,5 +229,13 @@
   "accessibilityMouseKeysLabel": "Klawisze myszy",
   "@accessibilityMouseKeysLabel": {},
   "errorPageUnexpected": "Przepraszamy, ale nie jesteśmy pewni, na czym polega błąd. Możesz spróbować ponownie uruchomić komputer i jeszcze raz rozpocząć proces instalacji. Możesz także <a>zgłosić problem</a>.",
-  "@errorPageUnexpected": {}
+  "@errorPageUnexpected": {},
+  "eulaAcceptTerms": "Akceptuję niniejsze warunki po ich przeczytaniu",
+  "@eulaAcceptTerms": {},
+  "eulaReviewTerms": "Przejrzyj warunki licencyjne",
+  "@eulaReviewTerms": {},
+  "eulaPageTitle": "Umowa licencyjna",
+  "@eulaPageTitle": {},
+  "eulaReadAndAcceptTerms": "Aby kontynuować konfigurowanie tego urządzenia, musisz przeczytać i zaakceptować warunki umowy licencyjnej.",
+  "@eulaReadAndAcceptTerms": {}
 }
