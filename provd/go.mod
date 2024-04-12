@@ -17,6 +17,11 @@ require (
 )
 
 require (
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac // indirect
+)
+
+require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0

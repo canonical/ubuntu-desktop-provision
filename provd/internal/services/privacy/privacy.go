@@ -22,7 +22,7 @@ type gSettingsBooleanSetter interface {
 // Option is a functional option to set the DBus objects in tests.
 type Option func(*Service) error
 
-// Service is the implementation of the Keyboard service.
+// Service is the implementation of the privacy service.
 type Service struct {
 	pb.UnimplementedPrivacyServiceServer
 	locationSettings gSettingsBooleanSetter
