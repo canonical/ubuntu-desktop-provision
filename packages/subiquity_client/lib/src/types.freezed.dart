@@ -235,6 +235,179 @@ abstract class _ErrorReportRef implements ErrorReportRef {
       throw _privateConstructorUsedError;
 }
 
+NonReportableError _$NonReportableErrorFromJson(Map<String, dynamic> json) {
+  return _NonReportableError.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NonReportableError {
+  String get cause => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
+  String? get details => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NonReportableErrorCopyWith<NonReportableError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NonReportableErrorCopyWith<$Res> {
+  factory $NonReportableErrorCopyWith(
+          NonReportableError value, $Res Function(NonReportableError) then) =
+      _$NonReportableErrorCopyWithImpl<$Res, NonReportableError>;
+  @useResult
+  $Res call({String cause, String message, String? details});
+}
+
+/// @nodoc
+class _$NonReportableErrorCopyWithImpl<$Res, $Val extends NonReportableError>
+    implements $NonReportableErrorCopyWith<$Res> {
+  _$NonReportableErrorCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cause = null,
+    Object? message = null,
+    Object? details = freezed,
+  }) {
+    return _then(_value.copyWith(
+      cause: null == cause
+          ? _value.cause
+          : cause // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      details: freezed == details
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NonReportableErrorImplCopyWith<$Res>
+    implements $NonReportableErrorCopyWith<$Res> {
+  factory _$$NonReportableErrorImplCopyWith(_$NonReportableErrorImpl value,
+          $Res Function(_$NonReportableErrorImpl) then) =
+      __$$NonReportableErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String cause, String message, String? details});
+}
+
+/// @nodoc
+class __$$NonReportableErrorImplCopyWithImpl<$Res>
+    extends _$NonReportableErrorCopyWithImpl<$Res, _$NonReportableErrorImpl>
+    implements _$$NonReportableErrorImplCopyWith<$Res> {
+  __$$NonReportableErrorImplCopyWithImpl(_$NonReportableErrorImpl _value,
+      $Res Function(_$NonReportableErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cause = null,
+    Object? message = null,
+    Object? details = freezed,
+  }) {
+    return _then(_$NonReportableErrorImpl(
+      cause: null == cause
+          ? _value.cause
+          : cause // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      details: freezed == details
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NonReportableErrorImpl implements _NonReportableError {
+  const _$NonReportableErrorImpl(
+      {required this.cause, required this.message, required this.details});
+
+  factory _$NonReportableErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NonReportableErrorImplFromJson(json);
+
+  @override
+  final String cause;
+  @override
+  final String message;
+  @override
+  final String? details;
+
+  @override
+  String toString() {
+    return 'NonReportableError(cause: $cause, message: $message, details: $details)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NonReportableErrorImpl &&
+            (identical(other.cause, cause) || other.cause == cause) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.details, details) || other.details == details));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, cause, message, details);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NonReportableErrorImplCopyWith<_$NonReportableErrorImpl> get copyWith =>
+      __$$NonReportableErrorImplCopyWithImpl<_$NonReportableErrorImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NonReportableErrorImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NonReportableError implements NonReportableError {
+  const factory _NonReportableError(
+      {required final String cause,
+      required final String message,
+      required final String? details}) = _$NonReportableErrorImpl;
+
+  factory _NonReportableError.fromJson(Map<String, dynamic> json) =
+      _$NonReportableErrorImpl.fromJson;
+
+  @override
+  String get cause;
+  @override
+  String get message;
+  @override
+  String? get details;
+  @override
+  @JsonKey(ignore: true)
+  _$$NonReportableErrorImplCopyWith<_$NonReportableErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ApplicationStatus _$ApplicationStatusFromJson(Map<String, dynamic> json) {
   return _ApplicationStatus.fromJson(json);
 }
@@ -244,6 +417,8 @@ mixin _$ApplicationStatus {
   ApplicationState get state => throw _privateConstructorUsedError;
   String get confirmingTty => throw _privateConstructorUsedError;
   ErrorReportRef? get error => throw _privateConstructorUsedError;
+  NonReportableError? get nonreportableError =>
+      throw _privateConstructorUsedError;
   bool? get cloudInitOk => throw _privateConstructorUsedError;
   bool? get interactive => throw _privateConstructorUsedError;
   String get echoSyslogId => throw _privateConstructorUsedError;
@@ -266,6 +441,7 @@ abstract class $ApplicationStatusCopyWith<$Res> {
       {ApplicationState state,
       String confirmingTty,
       ErrorReportRef? error,
+      NonReportableError? nonreportableError,
       bool? cloudInitOk,
       bool? interactive,
       String echoSyslogId,
@@ -273,6 +449,7 @@ abstract class $ApplicationStatusCopyWith<$Res> {
       String eventSyslogId});
 
   $ErrorReportRefCopyWith<$Res>? get error;
+  $NonReportableErrorCopyWith<$Res>? get nonreportableError;
 }
 
 /// @nodoc
@@ -291,6 +468,7 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
     Object? state = null,
     Object? confirmingTty = null,
     Object? error = freezed,
+    Object? nonreportableError = freezed,
     Object? cloudInitOk = freezed,
     Object? interactive = freezed,
     Object? echoSyslogId = null,
@@ -310,6 +488,10 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as ErrorReportRef?,
+      nonreportableError: freezed == nonreportableError
+          ? _value.nonreportableError
+          : nonreportableError // ignore: cast_nullable_to_non_nullable
+              as NonReportableError?,
       cloudInitOk: freezed == cloudInitOk
           ? _value.cloudInitOk
           : cloudInitOk // ignore: cast_nullable_to_non_nullable
@@ -344,6 +526,19 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
       return _then(_value.copyWith(error: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NonReportableErrorCopyWith<$Res>? get nonreportableError {
+    if (_value.nonreportableError == null) {
+      return null;
+    }
+
+    return $NonReportableErrorCopyWith<$Res>(_value.nonreportableError!,
+        (value) {
+      return _then(_value.copyWith(nonreportableError: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -358,6 +553,7 @@ abstract class _$$ApplicationStatusImplCopyWith<$Res>
       {ApplicationState state,
       String confirmingTty,
       ErrorReportRef? error,
+      NonReportableError? nonreportableError,
       bool? cloudInitOk,
       bool? interactive,
       String echoSyslogId,
@@ -366,6 +562,8 @@ abstract class _$$ApplicationStatusImplCopyWith<$Res>
 
   @override
   $ErrorReportRefCopyWith<$Res>? get error;
+  @override
+  $NonReportableErrorCopyWith<$Res>? get nonreportableError;
 }
 
 /// @nodoc
@@ -382,6 +580,7 @@ class __$$ApplicationStatusImplCopyWithImpl<$Res>
     Object? state = null,
     Object? confirmingTty = null,
     Object? error = freezed,
+    Object? nonreportableError = freezed,
     Object? cloudInitOk = freezed,
     Object? interactive = freezed,
     Object? echoSyslogId = null,
@@ -401,6 +600,10 @@ class __$$ApplicationStatusImplCopyWithImpl<$Res>
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as ErrorReportRef?,
+      nonreportableError: freezed == nonreportableError
+          ? _value.nonreportableError
+          : nonreportableError // ignore: cast_nullable_to_non_nullable
+              as NonReportableError?,
       cloudInitOk: freezed == cloudInitOk
           ? _value.cloudInitOk
           : cloudInitOk // ignore: cast_nullable_to_non_nullable
@@ -432,6 +635,7 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
       {required this.state,
       required this.confirmingTty,
       required this.error,
+      required this.nonreportableError,
       required this.cloudInitOk,
       required this.interactive,
       required this.echoSyslogId,
@@ -448,6 +652,8 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
   @override
   final ErrorReportRef? error;
   @override
+  final NonReportableError? nonreportableError;
+  @override
   final bool? cloudInitOk;
   @override
   final bool? interactive;
@@ -460,7 +666,7 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
 
   @override
   String toString() {
-    return 'ApplicationStatus(state: $state, confirmingTty: $confirmingTty, error: $error, cloudInitOk: $cloudInitOk, interactive: $interactive, echoSyslogId: $echoSyslogId, logSyslogId: $logSyslogId, eventSyslogId: $eventSyslogId)';
+    return 'ApplicationStatus(state: $state, confirmingTty: $confirmingTty, error: $error, nonreportableError: $nonreportableError, cloudInitOk: $cloudInitOk, interactive: $interactive, echoSyslogId: $echoSyslogId, logSyslogId: $logSyslogId, eventSyslogId: $eventSyslogId)';
   }
 
   @override
@@ -472,6 +678,8 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
             (identical(other.confirmingTty, confirmingTty) ||
                 other.confirmingTty == confirmingTty) &&
             (identical(other.error, error) || other.error == error) &&
+            (identical(other.nonreportableError, nonreportableError) ||
+                other.nonreportableError == nonreportableError) &&
             (identical(other.cloudInitOk, cloudInitOk) ||
                 other.cloudInitOk == cloudInitOk) &&
             (identical(other.interactive, interactive) ||
@@ -486,8 +694,17 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, state, confirmingTty, error,
-      cloudInitOk, interactive, echoSyslogId, logSyslogId, eventSyslogId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      state,
+      confirmingTty,
+      error,
+      nonreportableError,
+      cloudInitOk,
+      interactive,
+      echoSyslogId,
+      logSyslogId,
+      eventSyslogId);
 
   @JsonKey(ignore: true)
   @override
@@ -509,6 +726,7 @@ abstract class _ApplicationStatus implements ApplicationStatus {
       {required final ApplicationState state,
       required final String confirmingTty,
       required final ErrorReportRef? error,
+      required final NonReportableError? nonreportableError,
       required final bool? cloudInitOk,
       required final bool? interactive,
       required final String echoSyslogId,
@@ -524,6 +742,8 @@ abstract class _ApplicationStatus implements ApplicationStatus {
   String get confirmingTty;
   @override
   ErrorReportRef? get error;
+  @override
+  NonReportableError? get nonreportableError;
   @override
   bool? get cloudInitOk;
   @override

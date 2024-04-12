@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    purge)
+        # Revert gnome-initial-setup to nogroup
+        usermod -G nogroup gnome-initial-setup
+        
+        # Remove provd group
+        groupdel provd
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

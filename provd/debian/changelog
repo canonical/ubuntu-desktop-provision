@@ -1,3 +1,10 @@
+provd (0.1.2) noble; urgency=medium
+
+  * provd to use provd group, not gnome-initial-setup group.
+  * Fixed issues preventing use of sbuild.
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Tue, 11 Apr 2024 07:48:45 +0200
+
 provd (0.1.1) noble; urgency=medium
 
   * provd now pre-depends on gnome-initial-setup for gnome-initial-setup group.

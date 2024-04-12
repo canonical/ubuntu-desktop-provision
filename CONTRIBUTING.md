@@ -13,6 +13,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
   - [Code of Conduct](#code-of-conduct)
   - [Getting Started](#getting-started)
     - [Pull Requests](#pull-requests)
+  - [Bugs](#bugs)
   - [Translations](#translations)
   - [Contributing to the code](#contributing-to-the-code)
     - [Required dependencies](#required-dependencies)
@@ -49,6 +50,11 @@ In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susa
 1. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
 
 PRs will trigger unit and integration tests with and without race detection, linting and formatting validations, static and security checks, freshness of generated files verification. All the tests must pass before merging in main branch.
+
+## Bugs
+
+Please report any bugs related to Ubuntu Desktop Provision on [Launchpad](https://bugs.launchpad.net/ubuntu-desktop-provision).
+We use the GitHub issue tracker only for issues related to the development of Ubuntu Desktop Provision itself.
 
 ## Translations
 

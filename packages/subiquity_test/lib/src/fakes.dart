@@ -4,6 +4,7 @@ ApplicationStatus fakeApplicationStatus(
   ApplicationState state, {
   String confirmingTty = '',
   ErrorReportRef? error,
+  NonReportableError? nonReportableError,
   bool? cloudInitOk,
   bool? interactive,
   String echoSyslogId = '',
@@ -14,6 +15,7 @@ ApplicationStatus fakeApplicationStatus(
     state: state,
     confirmingTty: confirmingTty,
     error: error,
+    nonreportableError: nonReportableError,
     cloudInitOk: cloudInitOk,
     interactive: interactive,
     echoSyslogId: echoSyslogId,
