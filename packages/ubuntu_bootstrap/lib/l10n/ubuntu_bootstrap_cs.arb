@@ -269,7 +269,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeManualInfo": "Je možné ručně vytvořit nebo změnit velikost oddílů, nebo pro instalaci {DISTRO} zvolit vícero oddílů.",
+  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
