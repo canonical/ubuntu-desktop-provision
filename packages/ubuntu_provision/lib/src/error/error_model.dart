@@ -22,6 +22,10 @@ final logStreamProvider = Provider<Stream<String>>((ref) {
   final journal = getService<JournalService>();
   final logController = StreamController<String>();
   client.getStatus().then((status) {
+    if (status.nonreportableError != null) {
+      logController.add(status.nonreportableError!.message);
+      logController.add(status.nonreportableError!.cause);
+    }
     journal.start([status.logSyslogId, status.eventSyslogId]).listen(
       logController.add,
     );
