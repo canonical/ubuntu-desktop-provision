@@ -66,6 +66,30 @@ class MockArgResults extends _i1.Mock implements _i3.ArgResults {
       ));
 
   @override
+  bool flag(String? name) => (super.noSuchMethod(
+        Invocation.method(
+          #flag,
+          [name],
+        ),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  String? option(String? name) => (super.noSuchMethod(Invocation.method(
+        #option,
+        [name],
+      )) as String?);
+
+  @override
+  List<String> multiOption(String? name) => (super.noSuchMethod(
+        Invocation.method(
+          #multiOption,
+          [name],
+        ),
+        returnValue: <String>[],
+      ) as List<String>);
+
+  @override
   bool wasParsed(String? name) => (super.noSuchMethod(
         Invocation.method(
           #wasParsed,

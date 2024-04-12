@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dbus/dbus.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -9,10 +11,15 @@ import '../test_utils.dart';
 
 void main() {
   late MockGSettings inputSourceSettings;
+  late MockProcess mockProcess;
 
   setUp(() {
     inputSourceSettings = MockGSettings();
     when(inputSourceSettings.set(any, any)).thenAnswer((_) async {});
+
+    mockProcess = MockProcess();
+    when(mockProcess.run(any, any))
+        .thenAnswer((_) async => ProcessResult(0, 0, '', ''));
   });
 
   test('get keyboard', () async {
@@ -22,6 +29,7 @@ void main() {
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
+      runProcess: mockProcess.run,
     );
     expect(await service.getKeyboard(), equals(keyboardSetup));
 
@@ -35,6 +43,7 @@ void main() {
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
+      runProcess: mockProcess.run,
     );
     await service.setKeyboard(keyboardSetup.setting);
 
@@ -49,6 +58,7 @@ void main() {
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
+      runProcess: mockProcess.run,
     );
     await service.setInputSource(keyboardSetup.setting, user: 'ubuntu');
 
@@ -67,6 +77,11 @@ void main() {
         ],
       ),
     )).called(1);
+
+    verify(mockProcess.run(
+      'setxkbmap',
+      ['-layout', 'us', '-variant', 'altgr-intl'],
+    )).called(1);
   });
 
   test('get keyboard step', () async {
@@ -77,9 +92,23 @@ void main() {
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
+      runProcess: mockProcess.run,
     );
     await service.getKeyboardStep('1');
 
     verify(client.getKeyboardStep('1')).called(1);
   });
+}
+
+abstract class _Process {
+  Future<ProcessResult> run(String? executable, List<String>? arguments);
+}
+
+class MockProcess extends Mock implements _Process {
+  @override
+  Future<ProcessResult> run(String? executable, List<String>? arguments) =>
+      super.noSuchMethod(
+        Invocation.method(#run, [executable, arguments]),
+        returnValue: Future.value(ProcessResult(0, 0, '', '')),
+      ) as Future<ProcessResult>;
 }
