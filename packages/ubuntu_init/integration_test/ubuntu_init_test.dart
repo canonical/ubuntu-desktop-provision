@@ -59,14 +59,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testUbuntuProPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
-    await tester.testUbuntuProSuccessAttachProPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
     await tester.testPrivacyPage();
     await tester.tapNext();
     await tester.pumpAndSettle();

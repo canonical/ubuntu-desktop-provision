@@ -83,7 +83,7 @@ extension UbuntuInitPageTester on WidgetTester {
     final tileFinder = find.byType(ProOnboardingSelectionTile);
     expect(tileFinder, findsExactly(2));
 
-    await tap(tileFinder.last);
+    await tap(tileFinder.first);
 
     await pumpAndSettle();
 

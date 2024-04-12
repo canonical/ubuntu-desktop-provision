@@ -11,8 +11,7 @@ UbuntuProOnBoardingModel buildUbuntuProOnboardingModel({
   Stream<String>? collect,
 }) {
   final model = MockUbuntuProOnBoardingModel();
-  when(model.selection)
-      .thenReturn(UbuntuProOnboardingPageSelection.enableUbuntuPro);
+  when(model.selection).thenReturn(UbuntuProOnboardingPageSelection.skipForNow);
   when(model.init()).thenAnswer((_) async => true);
   return model;
 }

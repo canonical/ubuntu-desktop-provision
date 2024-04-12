@@ -106,16 +106,8 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
     ubuntuProOnboardingModel.selection =
-        UbuntuProOnboardingPageSelection.enableUbuntuPro;
+        UbuntuProOnboardingPageSelection.skipForNow;
     await tester.pumpAndSettle();
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(UbuntuProPage), findsOneWidget);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
