@@ -860,6 +860,30 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Do not connect to the internet'**
   String get networkNoneOption;
+
+  /// No description provided for @eulaPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'License agreement'**
+  String get eulaPageTitle;
+
+  /// No description provided for @eulaReviewTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'Review the license terms'**
+  String get eulaReviewTerms;
+
+  /// No description provided for @eulaReadAndAcceptTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'To continue setting up this machine, you must read and accept the license agreement terms.'**
+  String get eulaReadAndAcceptTerms;
+
+  /// No description provided for @eulaAcceptTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'I have read and accept these terms'**
+  String get eulaAcceptTerms;
 }
 
 class _UbuntuProvisionLocalizationsDelegate extends LocalizationsDelegate<UbuntuProvisionLocalizations> {

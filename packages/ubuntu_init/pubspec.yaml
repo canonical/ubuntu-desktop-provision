@@ -23,7 +23,9 @@ dependencies:
   intl: ^0.18.1
   meta: ^1.11.0
   path: ^1.8.3
+  pdfrx: ^1.0.52
   provd_client: ^0.1.0
+  stdlibc: ^0.1.4
   sysmetrics: ^0.1.0
   timezone_map:
     git:

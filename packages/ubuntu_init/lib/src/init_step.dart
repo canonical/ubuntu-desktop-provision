@@ -11,6 +11,7 @@ enum InitStep with RouteName {
   accessibility(AccessibilityPage.new),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
+  eula(EULAPage.new),
   identity(IdentityPage.new),
   ubuntuPro(UbuntuProPage.new, hasPrevious: false),
   privacy(PrivacyPage.new, hasPrevious: false),
