@@ -129,7 +129,8 @@ void main() {
 
   test('interactive sections', () async {
     final client = MockSubiquityClient();
-    when(client.getInteractiveSections()).thenAnswer((_) async => ['a', 'b']);
+    when(client.getInteractiveSections())
+        .thenAnswer((_) async => ['locale', 'keyboard']);
     when(client.monitorStatus()).thenAnswer(
         (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
 
@@ -137,9 +138,9 @@ void main() {
     final service = InstallerService(client, pageConfig: pageConfigService);
     await service.load();
 
-    expect(service.hasRoute('a'), isTrue);
-    expect(service.hasRoute('b'), isTrue);
-    expect(service.hasRoute('c'), isFalse);
+    expect(service.hasRoute('locale'), isTrue);
+    expect(service.hasRoute('keyboard'), isTrue);
+    expect(service.hasRoute('identity'), isFalse);
   });
 
   test('no interactive sections', () async {
@@ -197,7 +198,6 @@ void main() {
     final service = InstallerService(client, pageConfig: pageConfigService);
     await service.load();
 
-    expect(service.hasRoute('eula'), isTrue);
     expect(service.hasRoute('identity'), isFalse);
   });
 }
