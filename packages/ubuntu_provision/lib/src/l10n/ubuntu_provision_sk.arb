@@ -229,5 +229,13 @@
     }
   },
   "networkPageBody": "Internetové pripojenie vylepší vašu inštaláciu pomocou kontroly kompatibility a extra softvérových balíkov.",
-  "@networkPageBody": {}
+  "@networkPageBody": {},
+  "eulaReviewTerms": "Prečítajte si licenčné podmienky",
+  "@eulaReviewTerms": {},
+  "eulaAcceptTerms": "Prečítal som si tieto podmienky a súhlasím s nimi",
+  "@eulaAcceptTerms": {},
+  "eulaPageTitle": "Licenčná zmluva",
+  "@eulaPageTitle": {},
+  "eulaReadAndAcceptTerms": "Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.",
+  "@eulaReadAndAcceptTerms": {}
 }
