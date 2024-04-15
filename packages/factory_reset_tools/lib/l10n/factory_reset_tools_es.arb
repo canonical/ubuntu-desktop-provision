@@ -41,5 +41,7 @@
   "loading": "Cargando…",
   "@loading": {},
   "warning": "Atención",
-  "@warning": {}
+  "@warning": {},
+  "ok": "Ok",
+  "@ok": {}
 }
