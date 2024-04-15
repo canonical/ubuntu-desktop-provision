@@ -898,7 +898,7 @@
       }
     }
   },
-  "restartWarningBody": "Reinicie para completar la instalación o continuar las pruebas.\nLos cambios que realice no se guardarán.",
+  "restartWarningBody": "Reinicie para completar la instalación o continuar las pruebas.\nCualquier cambio que usted realice no se guardará.",
   "@restartWarningBody": {},
   "refreshUpdateNow": "Actualizar ahora",
   "@refreshUpdateNow": {},
