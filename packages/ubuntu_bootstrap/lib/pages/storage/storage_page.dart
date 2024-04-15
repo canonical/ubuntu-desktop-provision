@@ -60,7 +60,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             enabled: model.canEraseDisk ||
                 model.canInstallAlongside ||
                 model.canManualPartition,
-            arguments: model.type,
             // If the user returns back to select another installation type, the
             // previously configured storage must be reset to make all guided
             // partitioning targets available.
