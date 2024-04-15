@@ -1,3 +1,5 @@
 {
-  "@@locale": "lt"
+  "@@locale": "lt",
+  "close": "Užverti",
+  "@close": {}
 }
