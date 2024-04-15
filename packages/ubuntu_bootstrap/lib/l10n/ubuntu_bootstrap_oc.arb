@@ -739,5 +739,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "codecsAndDriversPageDescription": "Installar los logicials proprietaris recomandats ?",
+  "@codecsAndDriversPageDescription": {},
+  "autoinstallInteractiveDescription": "Pels utilizaires que vòlon una guida estapa per tapa pendent l'installacion.",
+  "@autoinstallInteractiveDescription": {}
 }
