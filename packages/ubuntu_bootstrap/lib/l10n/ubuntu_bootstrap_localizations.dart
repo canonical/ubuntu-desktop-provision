@@ -1320,7 +1320,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @restartWarningBody.
   ///
   /// In en, this message translates to:
-  /// **'Restart to complete the installation or continue testing.\nAny changes you make not be saved.'**
+  /// **'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.'**
   String get restartWarningBody;
 
   /// No description provided for @rebootToConfigureWarning.
