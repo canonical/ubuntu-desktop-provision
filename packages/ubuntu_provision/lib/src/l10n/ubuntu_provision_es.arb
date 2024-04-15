@@ -214,7 +214,7 @@
   "@errorPageShowLog": {},
   "errorPageHideLog": "Ocultar registro",
   "@errorPageHideLog": {},
-  "restart": "Reanudar",
+  "restart": "Reiniciar",
   "@restart": {},
   "close": "Cerrar",
   "@close": {},
