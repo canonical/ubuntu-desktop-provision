@@ -229,5 +229,13 @@
   "restart": "再起動",
   "@restart": {},
   "close": "閉じる",
-  "@close": {}
+  "@close": {},
+  "eulaPageTitle": "ライセンスの同意",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "許諾書条件を表示",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "よく読んで許諾書条件に同意しました",
+  "@eulaAcceptTerms": {}
 }

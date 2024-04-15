@@ -367,7 +367,7 @@
       "RELEASE": {}
     }
   },
-  "tryOrInstallReleaseNotesLabel": "Možno si budete chcieť prečítať <a href=\"{url}\"> poznámky k vydaniu </a> .",
+  "tryOrInstallReleaseNotesLabel": "Možno si budete chcieť prečítať <a href=\"{url}\">poznámky k vydaniu</a>.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {

@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'En halua muodostaa yhteyttä internetiin juuri nyt';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Lisenssin hyväksyntä';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Lue lisenssiehdot';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Sinun täytyy lukea ja hyväksyä lisenssiehdot jatkaaksesi tämän koneen määritystä.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Olen lukenut lisenssiehdot ja hyväksyn ne';
 }

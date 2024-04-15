@@ -79,7 +79,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání, obsažených v dokumentaci k němu. Některý je proprietární.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "Typ instalace",
+  "installationTypeTitle": "Nastavení disku",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Na tomto počítači se už nachází {os}. Co si přejete udělat?",
   "@installationTypeOSDetected": {
@@ -269,7 +269,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeManualInfo": "Je možné ručně vytvořit nebo změnit velikost oddílů, nebo pro instalaci {DISTRO} zvolit vícero oddílů",
+  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {

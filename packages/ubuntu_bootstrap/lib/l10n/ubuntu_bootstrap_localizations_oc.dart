@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'De qué volètz far amb $DISTRO ?';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Mostrar la clau de seguretat';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Amagar';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Aplicacions e mesas a jorn';
@@ -151,7 +151,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Quinas aplicacions volètz installar per començar ?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimizatz vòstre ordenador';
 
   @override
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Aqueste logicial es somés a de tèrmes de licéncia incluses dins sa documentacion. Certans son proprietaris.';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'L’ordenador es pas branca a una font d’alimentacion.';
 
   @override
   String get offlineWarning => 'Sètz fòra linha';
@@ -210,7 +210,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Crear un senhal';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
@@ -244,7 +244,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Cossí volètz installar $DISTRO ?';
   }
 
   @override
@@ -374,7 +374,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Seleccionatz le disc :';
 
   @override
   String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Cap';
 
   @override
   String get confirmDevicesTitle => 'Periferics';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Aplicacions';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Configuracion del disc';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Chiframent del disc';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Disc d’installacion';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Logicial proprietari';
 
   @override
   String get confirmSectionGeneralTitle => 'General';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Seguretat e mai';
 
   @override
   String get confirmPartitionsTitle => 'Particions';
@@ -599,7 +599,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Pilòts';
 
   @override
   String get confirmInstallButton => 'Installar';
@@ -811,13 +811,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get refreshHeader => 'An update is available for the installer';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Actualizar ara';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Mesa a jorn prèsta';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -843,7 +843,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Mercés de reaviar l’installador.';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Tampar l’installador';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -937,12 +937,12 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Lançament dels servicis $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Netejatge de $snap...';
   }
 
   @override
@@ -957,5 +957,5 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Validar';
 }

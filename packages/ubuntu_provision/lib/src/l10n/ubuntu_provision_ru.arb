@@ -74,7 +74,7 @@
   "@identityUsernameTooLong": {},
   "identityUsernameInvalidChars": "Это имя содержит недопустимые символы.",
   "@identityUsernameInvalidChars": {},
-  "identityPasswordLabel": "Выберите пароль",
+  "identityPasswordLabel": "Пароль",
   "@identityPasswordLabel": {},
   "identityPasswordRequired": "Требуется пароль",
   "@identityPasswordRequired": {},
@@ -214,7 +214,7 @@
   "@accessibilityScreenReaderLabel": {},
   "accessibilityVisualAlertsLabel": "Визуальные уведомления",
   "@accessibilityVisualAlertsLabel": {},
-  "errorPageUnexpected": "Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также вы можете создать <a>сообщение о проблеме</a>.",
+  "errorPageUnexpected": "Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также Вы можете создать <a>сообщение о проблеме</a>.",
   "@errorPageUnexpected": {},
   "networkPageBody": "Подключение к Интернету улучшит процесс установки благодаря проверке совместимости и доступу к дополнительным пакетам программного обеспечения.",
   "@networkPageBody": {},
@@ -229,5 +229,13 @@
     }
   },
   "accessibilityDesktopZoomLabel": "Масштабирование рабочего стола",
-  "@accessibilityDesktopZoomLabel": {}
+  "@accessibilityDesktopZoomLabel": {},
+  "eulaAcceptTerms": "Я прочитал(а) эти условия и принимаю их",
+  "@eulaAcceptTerms": {},
+  "eulaPageTitle": "Лицензионное соглашение",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Ознакомьтесь с условиями лицензии",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.",
+  "@eulaReadAndAcceptTerms": {}
 }

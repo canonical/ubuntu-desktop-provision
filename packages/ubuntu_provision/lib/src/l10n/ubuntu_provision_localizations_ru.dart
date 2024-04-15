@@ -63,7 +63,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Что-то пошло не так';
 
   @override
-  String get errorPageUnexpected => 'Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также вы можете создать <a>сообщение о проблеме</a>.';
+  String get errorPageUnexpected => 'Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также Вы можете создать <a>сообщение о проблеме</a>.';
 
   @override
   String get errorPageShowLog => 'Показать журнал';
@@ -185,7 +185,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Это имя содержит недопустимые символы.';
 
   @override
-  String get identityPasswordLabel => 'Выберите пароль';
+  String get identityPasswordLabel => 'Пароль';
 
   @override
   String get identityPasswordRequired => 'Требуется пароль';
@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Прямо сейчас я не хочу подключаться к Интернету';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Лицензионное соглашение';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Ознакомьтесь с условиями лицензии';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Я прочитал(а) эти условия и принимаю их';
 }
