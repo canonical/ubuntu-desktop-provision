@@ -233,5 +233,9 @@
   "eulaPageTitle": "Acuerdo de Licencia",
   "@eulaPageTitle": {},
   "eulaReviewTerms": "Revisar los terminos de licencia",
-  "@eulaReviewTerms": {}
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Para continuar configurando esta maquina, usted debe leer y aceptar los terminos del acuerdo de licencia.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "He leído y acepto estos terminos",
+  "@eulaAcceptTerms": {}
 }
