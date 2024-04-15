@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsJa extends FactoryResetToolsLocalizations {
   String get restore => 'リストア';
 
   @override
-  String get reboot => '再起動';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'コマンドの実行に失敗';

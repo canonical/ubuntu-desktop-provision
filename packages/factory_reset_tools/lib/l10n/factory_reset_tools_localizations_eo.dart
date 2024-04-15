@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get restore => 'Restaŭri';
 
   @override
-  String get reboot => 'Restartigi';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Malsukcesis ruli komandon';

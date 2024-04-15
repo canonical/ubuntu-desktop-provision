@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get restore => 'Obnoviť';
 
   @override
-  String get reboot => 'Reštartovať';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Spustenie príkazu zlyhalo';

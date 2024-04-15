@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   String get restore => '恢复';
 
   @override
-  String get reboot => '重启';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => '无法运行命令';

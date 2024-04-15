@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get restore => 'Сброс';
 
   @override
-  String get reboot => 'Перезагрузить';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Не удалось выполнить команду';

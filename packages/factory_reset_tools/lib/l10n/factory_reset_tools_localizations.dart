@@ -240,13 +240,13 @@ abstract class FactoryResetToolsLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Factory Reset Tools'**
+  /// **'Factory reset tools'**
   String get appTitle;
 
   /// No description provided for @windowTitle.
   ///
   /// In en, this message translates to:
-  /// **'Factory Reset Tools'**
+  /// **'Factory reset tools'**
   String get windowTitle;
 
   /// No description provided for @homeTitle.
@@ -258,13 +258,13 @@ abstract class FactoryResetToolsLocalizations {
   /// No description provided for @createResetMedia.
   ///
   /// In en, this message translates to:
-  /// **'Create Reset Media'**
+  /// **'Create reset media'**
   String get createResetMedia;
 
   /// No description provided for @startFactoryReset.
   ///
   /// In en, this message translates to:
-  /// **'Start Factory Reset'**
+  /// **'Start factory reset'**
   String get startFactoryReset;
 
   /// No description provided for @createUsbTitle.
@@ -282,7 +282,7 @@ abstract class FactoryResetToolsLocalizations {
   /// No description provided for @createUsbListExplanation.
   ///
   /// In en, this message translates to:
-  /// **'Select a USB flash drive. The drive must have at least 16GB of space'**
+  /// **'Select a USB flash drive. The drive must have **at least 16GB of space.**'**
   String get createUsbListExplanation;
 
   /// No description provided for @createUsbWarning.
@@ -393,11 +393,17 @@ abstract class FactoryResetToolsLocalizations {
   /// **'Restore'**
   String get restore;
 
-  /// No description provided for @reboot.
+  /// No description provided for @restart.
   ///
   /// In en, this message translates to:
-  /// **'Reboot'**
-  String get reboot;
+  /// **'Restart'**
+  String get restart;
+
+  /// No description provided for @reformat.
+  ///
+  /// In en, this message translates to:
+  /// **'Reformat'**
+  String get reformat;
 
   /// No description provided for @failed.
   ///

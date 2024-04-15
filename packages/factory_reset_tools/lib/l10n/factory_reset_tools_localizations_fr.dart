@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
 
   @override
   String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   String get restore => 'Restaurer';
 
   @override
-  String get reboot => 'Redémarrer';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Failed to run command';

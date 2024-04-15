@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get restore => 'Obnovit';
 
   @override
-  String get reboot => 'Restartovat';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Nepodařilo se spustit příkaz';

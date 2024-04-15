@@ -8,14 +8,18 @@ class OptionButton<T> extends StatelessWidget {
     required this.value,
     required this.groupValue,
     required this.onChanged,
-    super.key,
+    this.isThreeLines = true,
+    this.trailing,
     this.subtitle,
+    super.key,
   });
 
   final Widget title;
+  final Widget? trailing;
   final Widget? subtitle;
   final T value;
   final T groupValue;
+  final bool isThreeLines;
   final ValueChanged<T?>? onChanged;
 
   @override
@@ -40,11 +44,19 @@ class OptionButton<T> extends StatelessWidget {
                 .textTheme
                 .titleMedium!
                 .copyWith(fontWeight: FontWeight.bold),
-            child: title,
+            child: Wrap(
+              alignment: WrapAlignment.spaceBetween,
+              children: [
+                title,
+                if (trailing != null) ...[
+                  trailing!,
+                ],
+              ],
+            ),
           ),
           subtitle: subtitle,
           contentPadding: kWizardTilePadding,
-          isThreeLine: true,
+          isThreeLine: isThreeLines,
           value: value,
           groupValue: groupValue,
           onChanged: onChanged,
