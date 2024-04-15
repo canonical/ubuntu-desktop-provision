@@ -229,5 +229,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "eulaPageTitle": "הסכם רישוי",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "סקירת תנאי הרישיון",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "קראתי והתנאים האלה מקובלים עליי",
+  "@eulaAcceptTerms": {}
 }
