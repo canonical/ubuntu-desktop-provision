@@ -216,7 +216,6 @@ class NextWizardButton extends StatelessWidget {
     this.enabled = true,
     this.flat = false,
     this.highlighted = false,
-    this.arguments,
     this.onNext,
     this.onReturn,
   });
@@ -226,7 +225,6 @@ class NextWizardButton extends StatelessWidget {
   final bool enabled;
   final bool flat;
   final bool highlighted;
-  final Object? arguments;
   final WizardCallback? onNext;
 
   /// Called when returning to the current route after navigating to the next one.
@@ -264,10 +262,10 @@ class NextWizardButton extends StatelessWidget {
           final effectiveWizard =
               (wizard?.hasNext ?? false) ? wizard : rootWizard;
           try {
-            await effectiveWizard?.next(arguments: arguments);
+            await effectiveWizard?.next();
           } on WizardException catch (_) {
             if (effectiveWizard != rootWizard) {
-              await rootWizard?.next(arguments: arguments);
+              await rootWizard?.next();
             }
           }
           onReturn?.call();

@@ -12,7 +12,6 @@ class HorizontalPage extends StatelessWidget {
     this.image,
     this.onNext,
     this.onBack,
-    this.nextArguments,
     this.trailingTitleWidget,
     this.isNextEnabled = true,
     this.managedScrolling = true,
@@ -52,9 +51,6 @@ class HorizontalPage extends StatelessWidget {
 
   /// A callback for when the user presses the "Back" button.
   final FutureOr<void> Function()? onBack;
-
-  /// Arguments passed along to the [NextWizardButton].
-  final Object? nextArguments;
 
   /// Whether the next button should be enabled or not.
   final bool isNextEnabled;
@@ -153,7 +149,6 @@ class HorizontalPage extends StatelessWidget {
               NextWizardButton(
                 onNext: onNext,
                 enabled: isNextEnabled,
-                arguments: nextArguments,
               ),
             ],
           ),
