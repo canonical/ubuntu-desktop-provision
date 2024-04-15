@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get restore => 'Återställ';
 
   @override
-  String get reboot => 'Starta om';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Misslyckades att köra kommando';

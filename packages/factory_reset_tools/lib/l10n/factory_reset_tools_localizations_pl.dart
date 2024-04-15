@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   String get restore => 'Przywróć';
 
   @override
-  String get reboot => 'Uruchom ponownie';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'Nie udało się uruchomić polecenia';

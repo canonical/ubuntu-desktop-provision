@@ -67,7 +67,7 @@ class FactoryResetPage extends ConsumerWidget {
 
     final buttonLabel = switch (selectedOption) {
       ResetOptionType.factoryReset => lang.restore,
-      ResetOptionType.fwSetup => lang.reboot,
+      ResetOptionType.fwSetup => lang.restart,
     };
 
     return HorizontalPage(

@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get restore => 'שחזור';
 
   @override
-  String get reboot => 'הפעלה מחדש';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'הרצת הפקודה נכשלה';
