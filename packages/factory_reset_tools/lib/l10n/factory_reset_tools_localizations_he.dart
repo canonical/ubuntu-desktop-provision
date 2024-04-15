@@ -5,88 +5,88 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get appTitle => 'Factory Reset Tools';
+  String get appTitle => 'כלי איפוס יצרן';
 
   @override
-  String get windowTitle => 'Factory Reset Tools';
+  String get windowTitle => 'כלי איפוס יצרן';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'מה מעניין אותך לבצע?';
 
   @override
-  String get createResetMedia => 'Create Reset Media';
+  String get createResetMedia => 'ליצור מדיה לאיפוס';
 
   @override
-  String get startFactoryReset => 'Start Factory Reset';
+  String get startFactoryReset => 'להתחיל איפוס להגדרות יצרן';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'ליצור אמצעי USB לאיפוס';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'ליצור אמצעי איפוס ב־USB לשחזור המערכת, לרבות התאמת התקנות האובונטו שלך.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have at least 16GB of space';
+  String get createUsbListExplanation => 'נא לבחור כונן USB נתיק. בכונן חייבים להיות לפחות 16 ג״ב של מקום';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'הכונן הנתיק יפורמט וכל הנתונים שעליו יאבדו.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'אמצעי איפוס ב־USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'לא זוהו אמצעי אחסון נתיקים';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'צריך אחסון USB כדי ליצור אמצעי איפוס יצרן.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'נא לבחור אפשרות כדי להתחיל באיפוס להגדרות יצרן';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'נא להמתין בעת משיכת הכוננים.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'אמצעי האיפוס ב־USB מוכן';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'בעת הצורך, נא להכניס את כונן ה־USB למחשב המועמד לאיפוס ולהפעיל את אותו המחשב מחדש.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'אירעה שגיאה במשיכת הכוננים.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'מתחילים';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'מתבצעת העתקה';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'לקראת סיום';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'הסתיים';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'נכשל';
 
   @override
-  String get error => 'Error';
+  String get error => 'שגיאה';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'בטעינה…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'אזהרה';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'שחזור';
 
   @override
-  String get reboot => 'Reboot';
+  String get reboot => 'הפעלה מחדש';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'הרצת הפקודה נכשלה';
 
   @override
   String get close => 'סגירה';

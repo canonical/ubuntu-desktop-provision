@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Mi ne volas konekti al Interreto nun';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Konsento pri licenco';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Reviziu la licencajn kondiĉojn';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Por agordi ĉi tiun komputilon, vi devas legi kaj akcepti la licencajn kondiĉojn.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Mi legis kaj akceptas la jenajn kondiĉojn';
 }

@@ -11,7 +11,7 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get windowTitle => 'Инструменты восстановления';
 
   @override
-  String get homeTitle => 'Что вы хотите сделать?';
+  String get homeTitle => 'Что Вы хотите сделать?';
 
   @override
   String get createResetMedia => 'Создать носитель для сброса';

@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkNoneOption => '今はインターネットに接続しない';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'ライセンスの同意';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => '許諾書条件を表示';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'よく読んで許諾書条件に同意しました';
 }
