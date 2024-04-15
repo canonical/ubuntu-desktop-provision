@@ -951,7 +951,7 @@
   "@batteryWarning": {},
   "selectGuidedStoragePartitionDropdownLabel": "Vybrať oddiel:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "restartWarningBody": "Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nAkékoľvek vykonané zmeny sa neuložia.",
+  "restartWarningBody": "Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nZmeny, ktoré vykonáte, sa neuložia.",
   "@restartWarningBody": {},
   "warningLabel": "Upozornenie:",
   "@warningLabel": {},
