@@ -229,5 +229,9 @@
     }
   },
   "networkPageBody": "Una conexión a Internet mejorará su instalación con la comprobación de la compatibilidad y los paquetes de software adicionales.",
-  "@networkPageBody": {}
+  "@networkPageBody": {},
+  "eulaPageTitle": "Acuerdo de Licencia",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Revisar los terminos de licencia",
+  "@eulaReviewTerms": {}
 }
