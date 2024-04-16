@@ -229,5 +229,13 @@
   "accessibilitySlowKeysLabel": "Hitaat näppäimet",
   "@accessibilitySlowKeysLabel": {},
   "errorPageUnexpected": "Valitettavasti emme ole varmoja, mikä aiheutti ongelman. Voit käynnistää tietokoneen uudelleen ja käynnistää asennuksen uudelleen. Voit myös <a>ilmoittaa kohtaamastasi ongelmasta</a>.",
-  "@errorPageUnexpected": {}
+  "@errorPageUnexpected": {},
+  "eulaAcceptTerms": "Olen lukenut lisenssiehdot ja hyväksyn ne",
+  "@eulaAcceptTerms": {},
+  "eulaPageTitle": "Lisenssin hyväksyntä",
+  "@eulaPageTitle": {},
+  "eulaReadAndAcceptTerms": "Sinun täytyy lukea ja hyväksyä lisenssiehdot jatkaaksesi tämän koneen määritystä.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaReviewTerms": "Lue lisenssiehdot",
+  "@eulaReviewTerms": {}
 }

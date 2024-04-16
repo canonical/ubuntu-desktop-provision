@@ -92,7 +92,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'Možno si budete chcieť prečítať <a href=\"$url\"> poznámky k vydaniu </a> .';
+    return 'Možno si budete chcieť prečítať <a href=\"$url\">poznámky k vydaniu</a>.';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nAkékoľvek vykonané zmeny sa neuložia.';
+  String get restartWarningBody => 'Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nZmeny, ktoré vykonáte, sa neuložia.';
 
   @override
   String get rebootToConfigureWarning => 'Ak chcete pokračovať v procese inštalácie, musíte reštartovať počítač.';

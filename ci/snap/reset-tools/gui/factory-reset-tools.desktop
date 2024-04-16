@@ -2,4 +2,4 @@
 Exec=factory-reset-tools
 Name=Factory Reset Tools
 Type=Application
-Icon=${SNAP}/meta/local/factory-reset-tools.png
+Icon=${SNAP}/meta/gui/factory-reset-tools.png

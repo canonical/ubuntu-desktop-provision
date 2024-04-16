@@ -766,7 +766,7 @@
   "@confirmDiskEncryptionZFS": {},
   "confirmEntryProprietarySoftware": "Проприетарное ПО",
   "@confirmEntryProprietarySoftware": {},
-  "confirmSectionSecurityAndMoreTitle": "Безопасность и многое другое",
+  "confirmSectionSecurityAndMoreTitle": "Безопасность и другое",
   "@confirmSectionSecurityAndMoreTitle": {},
   "confirmProprietarySoftwareCodecs": "Кодеки",
   "@confirmProprietarySoftwareCodecs": {},

@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'אפשר להפעיל מחדש כדי להשלים את ההתקנה או להמשיך לחקור. \nהשינויים שנערכים כאן לא נשמרים.';
+  String get restartWarningBody => 'אפשר להפעיל מחדש כדי להשלים את ההתקנה או להמשיך לחקור. \nהשינויים שנערכים כאן לא יישמרו.';
 
   @override
   String get rebootToConfigureWarning => 'יש להפעיל את המחשב מחדש כדי להמשיך את תהליך ההתקנה.';

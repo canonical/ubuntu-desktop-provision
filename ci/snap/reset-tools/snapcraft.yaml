@@ -14,7 +14,7 @@ architectures:
 
 apps:
   factory-reset-tools:
-    command: factory-reset-tools
+    command: bin/factory-reset-tools
     extensions: [gnome]
     plugs:
       - shutdown
@@ -27,7 +27,7 @@ apps:
       - mount-observe
       - dbus-client
   cli:
-    command: factory-reset-tools-cli
+    command: bin/factory-reset-tools-cli
     plugs:
       - shutdown
       - removable-media
@@ -39,7 +39,7 @@ apps:
       - mount-observe
       - dbus-client
   dbus-daemon:
-    command: factory-reset-tools-cli dbus
+    command: bin/factory-reset-tools-cli dbus
     daemon: simple
     activates-on: [dbus-service]
     plugs:
@@ -86,10 +86,9 @@ parts:
     build-attributes: [enable-patchelf]
     override-build: |
       set -eux
-      mkdir -p $CRAFT_PART_INSTALL/bin/lib
-      cp snap/local/launcher $CRAFT_PART_INSTALL/bin/
-      mkdir -p $CRAFT_PART_INSTALL/usr/share/applications
-      cp snap/local/factory-reset-tools.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      mkdir -p $CRAFT_PART_INSTALL/bin/lib -p $CRAFT_PART_INSTALL/usr/share/applications $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256
+      cp ci/snap/reset-tools/local/factory-reset-tools.desktop $CRAFT_PART_INSTALL/usr/share/applications/
+      cp ci/snap/reset-tools/local/factory-reset-tools.png $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256/
       
       dart pub global activate melos
       dart pub global run melos bootstrap
@@ -102,10 +101,13 @@ parts:
     source: .
     plugin: nil
     override-build: |
+      set -eux
+      mkdir -p $CRAFT_PART_INSTALL/bin
+      dart pub global activate melos
+      dart pub global run melos bootstrap
       cd packages/factory_reset_tools
-      snapcraftctl build
-      dart compile exe -o factory-reset-tools-cli lib/cmdline.dart
-      cp factory-reset-tools-cli $CRAFT_PART_INSTALL/
+      dart compile exe -o factory-reset-tools-cli lib/dbus/cmdline.dart
+      cp factory-reset-tools-cli $CRAFT_PART_INSTALL/bin/
     stage-packages:
       - rsync
       - grub2-common

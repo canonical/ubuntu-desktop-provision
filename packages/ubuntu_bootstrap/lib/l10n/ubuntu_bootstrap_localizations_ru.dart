@@ -551,7 +551,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get confirmSectionGeneralTitle => 'Общие';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Безопасность и многое другое';
+  String get confirmSectionSecurityAndMoreTitle => 'Безопасность и другое';
 
   @override
   String get confirmPartitionsTitle => 'Разделы';

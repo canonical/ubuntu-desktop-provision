@@ -75,7 +75,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Užverti';
 
   @override
   String get timezonePageTitle => 'Pasirinkite laiko juostą';

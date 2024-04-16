@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get restore => 'بازگردانی';
 
   @override
-  String get reboot => 'راه‌اندازی دوباره';
+  String get restart => 'Restart';
+
+  @override
+  String get reformat => 'Reformat';
 
   @override
   String get failed => 'شکست در اجرای فرمان';

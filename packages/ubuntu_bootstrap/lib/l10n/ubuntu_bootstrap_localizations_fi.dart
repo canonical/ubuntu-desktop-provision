@@ -17,7 +17,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'Miten haluat, että $DISTRO asennetaan?';
+    return 'Miten haluat asentaa ${DISTRO}n?';
   }
 
   @override
@@ -33,7 +33,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get autoinstallAutomatedOption => 'Automaattinen asennus';
 
   @override
-  String get autoinstallAutomatedDescription => 'Edistyneille käyttäjille, joilla on autoinstall-yaml-tiedosto, joka takaa yhtenäisen ja toistettavan asennuksen.';
+  String get autoinstallAutomatedDescription => 'Edistyneille käyttäjille, joilla on yhtenäisen ja toistettavan asennuksen takaava autoinstall.yaml-tiedosto.';
 
   @override
   String get changeButtonText => 'Muuta';
@@ -77,7 +77,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Voit kokeilla ${RELEASE}a tekemättä muutoksia tietokoneellesi.';
+    return 'Voit kokeilla ${RELEASE}a tekemättä muutoksia tietokoneeseen.';
   }
 
   @override
@@ -87,7 +87,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Asenna $RELEASE nykyisen käyttöjärjestelmäsi rinnalle tai tilalle. Asentaminen ei kestä kauan.';
+    return 'Asenna $RELEASE nykyisen käyttöjärjestelmän rinnalle tai tilalle. Asentaminen ei kestä kauan.';
   }
 
   @override
@@ -685,7 +685,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Oletpa sitten kehittäjä, taiteilija, pelaaja tai ylläpitäjä, $RELEASE:n uudet työkalut parantavat tuottavuuttasi ja kokemustasi.';
+    return 'Oletpa sitten kehittäjä, sisällöntuottaja, pelaaja tai ylläpitäjä, $RELEASE:n uudet työkalut parantavat tuottavuuttasi ja kokemustasi.';
   }
 
   @override

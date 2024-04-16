@@ -93,7 +93,7 @@ final List<BootOption> defaultBootOption = [
   GrubBootOption(
     ResetOptionType.fwSetup,
     'UEFI Firmware Settings',
-    'Reboot into UEFI Firmware (BIOS) Settings menu',
+    'Reboot into UEFI Firmware (BIOS) Settings menu.',
     'UEFI Firmware Settings',
   ),
 ];

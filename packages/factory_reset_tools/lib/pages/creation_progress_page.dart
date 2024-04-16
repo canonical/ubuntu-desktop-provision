@@ -8,6 +8,18 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/foundation.dart';
 import 'package:yaru/widgets.dart';
 
+extension on ResetMediaCreationStatus {
+  String displayName(FactoryResetToolsLocalizations lang) {
+    return switch (this) {
+      ResetMediaCreationStatus.initializing => lang.resetMediaInitializing,
+      ResetMediaCreationStatus.copying => lang.resetMediaCopying,
+      ResetMediaCreationStatus.finalizing => lang.resetMediaFinalizing,
+      ResetMediaCreationStatus.finished => lang.resetMediaFinished,
+      ResetMediaCreationStatus.failed => lang.resetMediaFailed
+    };
+  }
+}
+
 class CreationProgressPage extends ConsumerStatefulWidget {
   const CreationProgressPage({super.key});
 

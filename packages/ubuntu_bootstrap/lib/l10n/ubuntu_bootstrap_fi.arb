@@ -175,9 +175,9 @@
   },
   "changeButtonText": "Muuta",
   "@changeButtonText": {},
-  "tryDescription": "Voit kokeilla {RELEASE}a tekemättä muutoksia tietokoneellesi.",
+  "tryDescription": "Voit kokeilla {RELEASE}a tekemättä muutoksia tietokoneeseen.",
   "@tryDescription": {},
-  "installDescription": "Asenna {RELEASE} nykyisen käyttöjärjestelmäsi rinnalle tai tilalle. Asentaminen ei kestä kauan.",
+  "installDescription": "Asenna {RELEASE} nykyisen käyttöjärjestelmän rinnalle tai tilalle. Asentaminen ei kestä kauan.",
   "@installDescription": {},
   "rstDescription": "Tämä tietokone käyttää Intel RST:tä (Rapid Storage Technology). Sinun tulee sammuttaa RST Windowsissa, ennen kuin asennat {DISTRO}n.",
   "@rstDescription": {},
@@ -443,7 +443,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesWelcomeBody": "Oletpa sitten kehittäjä, taiteilija, pelaaja tai ylläpitäjä, {RELEASE}:n uudet työkalut parantavat tuottavuuttasi ja kokemustasi.",
+  "installationSlidesWelcomeBody": "Oletpa sitten kehittäjä, sisällöntuottaja, pelaaja tai ylläpitäjä, {RELEASE}:n uudet työkalut parantavat tuottavuuttasi ja kokemustasi.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
@@ -767,7 +767,7 @@
   },
   "restartWarningBody": "Käynnistä uudelleen viimeistelläksesi asennuksen tai jatka testaamista.\nTekemiäsi muutoksia ei tallenneta.",
   "@restartWarningBody": {},
-  "autoinstallHeader": "Miten haluat, että {DISTRO} asennetaan?",
+  "autoinstallHeader": "Miten haluat asentaa {DISTRO}n?",
   "@autoinstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -781,7 +781,7 @@
   "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "Automaattinen asennus",
   "@autoinstallAutomatedOption": {},
-  "autoinstallAutomatedDescription": "Edistyneille käyttäjille, joilla on autoinstall-yaml-tiedosto, joka takaa yhtenäisen ja toistettavan asennuksen.",
+  "autoinstallAutomatedDescription": "Edistyneille käyttäjille, joilla on yhtenäisen ja toistettavan asennuksen takaava autoinstall.yaml-tiedosto.",
   "@autoinstallAutomatedDescription": {},
   "hideSecurityKey": "Piilota",
   "@hideSecurityKey": {},

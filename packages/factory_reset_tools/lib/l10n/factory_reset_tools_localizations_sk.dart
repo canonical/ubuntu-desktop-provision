@@ -8,7 +8,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get appTitle => 'Obnova výrobných nastavení';
 
   @override
-  String get windowTitle => 'Nástroje na obnovenie výrobných nastavení';
+  String get windowTitle => 'Obnovenie výrobných nastavení';
 
   @override
   String get homeTitle => 'Čo by ste chceli urobiť?';
@@ -17,7 +17,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get createResetMedia => 'Vytvoriť obnovovacie médium';
 
   @override
-  String get startFactoryReset => 'Spustiť obnovenie výrobných nastavení';
+  String get startFactoryReset => 'Spustiť obnovenie nastavení';
 
   @override
   String get createUsbTitle => 'Vytvoriť USB obnovovacie médium';
@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Vyberte USB pamäťovú jednotku. Na disku musí byť aspoň 16 GB voľného miesta';
+  String get createUsbListExplanation => 'Vyberte USB pamäťovú jednotku. Na disku musí byť **aspoň 16 GB voľného miesta.**';
 
   @override
   String get createUsbWarning => 'Pamäťová jednotka bude preformátovaná a všetky údaje na jednotke sa stratia.';
@@ -38,10 +38,10 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nenašla sa žiadna vymeniteľná jednotka';
 
   @override
-  String get noMediaDetectedSubtitle => 'Na vytvorenie obnovovacieho média výrobných nastavení je potrebná USB jednotka.';
+  String get noMediaDetectedSubtitle => 'Na vytvorenie obnovovacieho média je potrebná USB jednotka.';
 
   @override
-  String get factoryResetTitle => 'Výber možností spustenia obnovenia výrobných nastavení';
+  String get factoryResetTitle => 'Výber možností spustenia obnovenia nastavení';
 
   @override
   String get loadingDrives => 'Prosím, počkajte, načítavajú sa jednotky.';
@@ -83,7 +83,10 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get restore => 'Obnoviť';
 
   @override
-  String get reboot => 'Reštartovať';
+  String get restart => 'Reštartovať';
+
+  @override
+  String get reformat => 'Preformátovať';
 
   @override
   String get failed => 'Spustenie príkazu zlyhalo';

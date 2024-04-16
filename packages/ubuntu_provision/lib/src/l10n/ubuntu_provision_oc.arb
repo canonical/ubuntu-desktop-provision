@@ -229,5 +229,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "eulaPageTitle": "Acòrd de licéncia",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Repassar los tèrmes de licéncia",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Per contunhar la configuracion d’aquesta maquina, devètz legir e acceptar los tèrmes de l’acòrd de la licéncia.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Ai legit e accèpti aqueste tèrmes",
+  "@eulaAcceptTerms": {}
 }

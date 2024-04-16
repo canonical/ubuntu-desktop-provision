@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'V tejto chvíli sa nechcem pripájať na Internet';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Licenčná zmluva';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Prečítajte si licenčné podmienky';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Prečítal som si tieto podmienky a súhlasím s nimi';
 }

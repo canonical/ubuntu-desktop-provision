@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Vòli pas me connectar a internet pel moment';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Acòrd de licéncia';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Repassar los tèrmes de licéncia';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Per contunhar la configuracion d’aquesta maquina, devètz legir e acceptar los tèrmes de l’acòrd de la licéncia.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Ai legit e accèpti aqueste tèrmes';
 }

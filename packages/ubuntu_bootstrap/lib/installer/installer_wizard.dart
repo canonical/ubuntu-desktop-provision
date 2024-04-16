@@ -81,11 +81,7 @@ class _InstallWizard extends ConsumerWidget {
         ),
       },
       predicate: (route) {
-        if ([
-          InstallationStep.loading.route,
-          InstallationStep.confirm.route,
-          InstallationStep.install.route,
-        ].contains(route)) {
+        if (InstallationStep.requiredRoutes.contains(route)) {
           return true;
         } else {
           return hasRoute(route);

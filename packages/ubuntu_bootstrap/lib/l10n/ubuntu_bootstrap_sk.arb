@@ -367,7 +367,7 @@
       "RELEASE": {}
     }
   },
-  "tryOrInstallReleaseNotesLabel": "Možno si budete chcieť prečítať <a href=\"{url}\"> poznámky k vydaniu </a> .",
+  "tryOrInstallReleaseNotesLabel": "Možno si budete chcieť prečítať <a href=\"{url}\">poznámky k vydaniu</a>.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
@@ -951,7 +951,7 @@
   "@batteryWarning": {},
   "selectGuidedStoragePartitionDropdownLabel": "Vybrať oddiel:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "restartWarningBody": "Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nAkékoľvek vykonané zmeny sa neuložia.",
+  "restartWarningBody": "Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nZmeny, ktoré vykonáte, sa neuložia.",
   "@restartWarningBody": {},
   "warningLabel": "Upozornenie:",
   "@warningLabel": {},

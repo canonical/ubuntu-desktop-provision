@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Potvrdit přístupové heslo';
 
   @override
-  String get installationTypeTitle => 'Typ instalace';
+  String get installationTypeTitle => 'Nastavení disku';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Je možné ručně vytvořit nebo změnit velikost oddílů, nebo pro instalaci $DISTRO zvolit vícero oddílů';
+    return 'Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.';
   }
 
   @override

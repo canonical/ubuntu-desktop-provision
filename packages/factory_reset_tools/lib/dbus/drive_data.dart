@@ -1,5 +1,5 @@
 import 'package:dbus/dbus.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:meta/meta.dart';
 
 @immutable
 class DriveData {

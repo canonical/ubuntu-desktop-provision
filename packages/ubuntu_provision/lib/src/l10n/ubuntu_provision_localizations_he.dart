@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'לא רוצה להתחבר לאינטרנט כרגע';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'הסכם רישוי';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'סקירת תנאי הרישיון';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'קראתי והתנאים האלה מקובלים עליי';
 }

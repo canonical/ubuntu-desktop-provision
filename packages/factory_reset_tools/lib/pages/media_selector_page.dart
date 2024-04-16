@@ -3,8 +3,10 @@ import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart'
 import 'package:factory_reset_tools/providers/available_media_provider.dart';
 import 'package:factory_reset_tools/providers/selected_media_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -30,11 +32,15 @@ class MediaSelectorPage extends ConsumerWidget {
           ];
         } else {
           return drives.map((drive) {
-            final sizeInGiB = drive.size.toDouble() / (1 << 30).toDouble();
-            final sizeString = '${sizeInGiB.toStringAsFixed(1)} GiB';
+            final sizeString = context.formatByteSize(drive.size, precision: 1);
+            final device = drive.devicePath.split('/').last;
             return OptionButton(
-              title: Text(drive.name),
-              subtitle: Text('${drive.devicePath} $sizeString'),
+              title: Text(
+                '$device | ${drive.name}',
+                overflow: TextOverflow.ellipsis,
+              ),
+              trailing: Text(sizeString),
+              isThreeLines: false,
               value: drive.id,
               groupValue: selectedMedia?.id,
               onChanged: (value) =>
@@ -61,10 +67,23 @@ class MediaSelectorPage extends ConsumerWidget {
       windowTitle: lang.windowTitle,
       title: lang.createUsbTitle,
       image: SvgPicture.asset('assets/images/cogwheel.svg'),
-      isNextEnabled: selectedMedia != null,
+      bottomBar: WizardBar(
+        leading: const BackWizardButton(),
+        trailing: [
+          NextWizardButton(
+            enabled: selectedMedia != null,
+            highlighted: true,
+            label: lang.reformat,
+          ),
+        ],
+      ),
       children: [
         Text(lang.createUsbBody),
-        Text(lang.createUsbListExplanation),
+        Markdown(
+          data: lang.createUsbListExplanation,
+          shrinkWrap: true,
+          padding: EdgeInsets.zero,
+        ),
         ...driveWidgets,
         const SizedBox(height: kWizardSpacing / 2),
         YaruInfoBox(
