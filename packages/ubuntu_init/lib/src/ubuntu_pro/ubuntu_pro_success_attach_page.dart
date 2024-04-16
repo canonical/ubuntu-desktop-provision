@@ -10,6 +10,11 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
   const UbuntuProSuccessAttachPage({super.key});
 
   @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    return !ref.watch(ubuntuProModelProvider).skipPro;
+  }
+
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuProLocalizations.of(context);
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');

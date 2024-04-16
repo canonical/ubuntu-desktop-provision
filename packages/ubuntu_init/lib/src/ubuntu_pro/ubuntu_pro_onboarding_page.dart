@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -12,30 +11,11 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
   const UbuntuProOnboardingPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
-    return ref.read(ubuntuProOnboardingModelProvider).init().then((_) => true);
-  }
-
-  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuProLocalizations.of(context);
-    final model = ref.watch(ubuntuProOnboardingModelProvider);
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,
       title: '',
-      bottomBar: WizardBar(
-        leading: const BackWizardButton(),
-        trailing: [
-          WizardButton(
-            label: UbuntuLocalizations.of(context).nextLabel,
-            onActivated:
-                model.selection == UbuntuProOnboardingPageSelection.skipForNow
-                    ? () => Wizard.of(context).jump(InitStep.privacy.route)
-                    : Wizard.of(context).next,
-            // TODO: Handle page skipping in load methods
-          )
-        ],
-      ),
       imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -62,13 +42,13 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
         ProOnboardingSelectionTile(
           label: l10n.ubuntuProOnBoardingSkipForNow,
           subtitle: l10n.ubuntuProOnBoardingSkipForNowDescription,
-          selection: UbuntuProOnboardingPageSelection.skipForNow,
+          skipPro: true,
         ),
         const SizedBox(height: kWizardSpacing / 2),
         ProOnboardingSelectionTile(
           label: l10n.ubuntuProOnBoardingEnableUbuntuPro,
           subtitle: l10n.ubuntuProOnBoardingEnableUbuntuProDescription,
-          selection: UbuntuProOnboardingPageSelection.enableUbuntuPro,
+          skipPro: false,
         ),
       ],
     );

@@ -106,6 +106,16 @@ Future<void> main() async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
+    await tester.jumpToPage(InitStep.ubuntuProOnboarding.route);
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(UbuntuProOnboardingPage));
+    final l10n = UbuntuProLocalizations.of(context);
+
+    final option = find.text(l10n.ubuntuProOnBoardingEnableUbuntuPro);
+    await tester.tap(option);
+    await tester.pumpAndSettle();
+
     await tester.jumpToPage(InitStep.ubuntuPro.route);
     await tester.pumpAndSettle();
 
@@ -116,6 +126,16 @@ Future<void> main() async {
 
   testWidgets('08.ubuntu-pro-success', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.ubuntuProOnboarding.route);
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(UbuntuProOnboardingPage));
+    final l10n = UbuntuProLocalizations.of(context);
+
+    final option = find.text(l10n.ubuntuProOnBoardingEnableUbuntuPro);
+    await tester.tap(option);
     await tester.pumpAndSettle();
 
     await tester.jumpToPage(InitStep.ubuntuProSuccess.route);

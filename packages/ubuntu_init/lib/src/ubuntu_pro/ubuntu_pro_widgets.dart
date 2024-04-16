@@ -51,13 +51,13 @@ class TokenTextField extends ConsumerWidget {
 
 class ProOnboardingSelectionTile extends ConsumerWidget {
   const ProOnboardingSelectionTile({
-    required this.selection,
+    required this.skipPro,
     required this.label,
     required this.subtitle,
     super.key,
   });
 
-  final UbuntuProOnboardingPageSelection selection;
+  final bool skipPro;
   final String label;
   final String subtitle;
 
@@ -65,8 +65,8 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final model = ref.watch(ubuntuProOnboardingModelProvider);
-    final isSelected = selection.name == model.selection.name;
+    final model = ref.watch(ubuntuProModelProvider);
+    final isSelected = skipPro == model.skipPro;
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: YaruBorderContainer(
@@ -86,9 +86,9 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
           ),
           subtitle: Text(subtitle),
           contentPadding: kWizardTilePadding,
-          value: selection,
-          groupValue: model.selection,
-          onChanged: (value) => model.selection = value,
+          value: skipPro,
+          groupValue: model.skipPro,
+          onChanged: (value) => model.skipPro = value ?? false,
         ),
       ),
     );

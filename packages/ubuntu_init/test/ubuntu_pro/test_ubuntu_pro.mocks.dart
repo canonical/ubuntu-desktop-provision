@@ -65,6 +65,21 @@ class MockUbuntuProModel extends _i1.Mock implements _i2.UbuntuProModel {
       ) as bool);
 
   @override
+  bool get skipPro => (super.noSuchMethod(
+        Invocation.getter(#skipPro),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set skipPro(bool? value) => super.noSuchMethod(
+        Invocation.setter(
+          #skipPro,
+          value,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   set isAttached(bool? value) => super.noSuchMethod(
         Invocation.setter(
           #isAttached,

@@ -32,6 +32,14 @@ class UbuntuProModel extends ChangeNotifier {
   bool get hasNoErrorWhenAttachingManually => _hasNoErrorWhenAttachingManually;
   bool _hasNoErrorWhenAttachingManually = true;
 
+  bool get skipPro => _skipPro;
+  bool _skipPro = true;
+
+  set skipPro(bool value) {
+    _skipPro = value;
+    notifyListeners();
+  }
+
   set isAttached(bool value) {
     _isAttached = value;
     notifyListeners();
@@ -84,6 +92,4 @@ class UbuntuProModel extends ChangeNotifier {
       notifyListeners();
     }
   }
-
-  Future<bool> init() async => true;
 }
