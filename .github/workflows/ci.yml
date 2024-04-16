@@ -296,3 +296,26 @@ jobs:
           name: provd-deb-package-${{ matrix.platform }}
           path: provd-${{ matrix.platform }}.deb
 
+  weblate-l10n:
+    runs-on: ubuntu-22.04
+    if: contains(github.event.pull_request.title, 'Hosted Weblate')
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: asdf-vm/actions/install@v3
+      - uses: bluefireteam/melos-action@v2
+      - run: melos gen-l10n
+      - name: Commit and push generated language files if they changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update localization files"
+            git push
+          fi
+
