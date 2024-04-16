@@ -39,6 +39,8 @@ class RefreshService {
   RefreshState get state => _state;
   Stream<RefreshState> get stateChanged => _controller.stream;
 
+  Future<String>? _refreshId;
+
   void _setState(RefreshState state) {
     if (_state == state) return;
     _log.debug(state);
@@ -65,10 +67,11 @@ class RefreshService {
   }
 
   Future<void> refresh() async {
-    final id = await _client.startRefresh();
+    if (_refreshId != null) return;
+    _refreshId = _client.startRefresh();
     await Future.doWhile(() async {
       try {
-        _setProgress(await _client.getRefreshProgress(id));
+        _setProgress(await _client.getRefreshProgress(await _refreshId!));
         if (_state.ready) {
           _setState(const RefreshState.done());
         }
@@ -80,6 +83,7 @@ class RefreshService {
       await Future.delayed(const Duration(seconds: 1));
       return !_state.ready;
     });
+    _refreshId = null;
   }
 
   Future<void> close() => _controller.close();

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -85,6 +87,23 @@ void main() {
       );
       await service.refresh();
       expect(service.state, equals(const RefreshState.done()));
+    });
+
+    test('call subiquity only once', () async {
+      final client = MockSubiquityClient();
+      when(client.startRefresh()).thenAnswer((_) async => changeId);
+      when(client.getRefreshProgress(changeId)).thenAnswer(
+        (_) async {
+          when(client.getRefreshProgress(changeId))
+              .thenAnswer((_) async => ready);
+          return notReady;
+        },
+      );
+
+      final service = RefreshService(client);
+      unawaited(service.refresh());
+      await service.refresh();
+      verify(client.startRefresh()).called(1);
     });
   });
 
