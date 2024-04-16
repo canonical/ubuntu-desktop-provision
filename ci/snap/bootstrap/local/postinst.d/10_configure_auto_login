@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-installer_conf=/tmp/ubuntu_desktop_installer.conf
+installer_conf=/tmp/bootstrap-postinst.conf
 
 if ! source $installer_conf 2>/dev/null || [ -z "$AutoLoginUser" ]; then
     exit
