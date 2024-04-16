@@ -96,7 +96,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
             model.userCode.isEmpty
                 ? const Padding(
                     padding: EdgeInsets.all(kWizardBarSpacing * 2),
-                    child: CircularProgressIndicator(),
+                    child: YaruCircularProgressIndicator(),
                   )
                 : Column(
                     mainAxisSize: MainAxisSize.min,
