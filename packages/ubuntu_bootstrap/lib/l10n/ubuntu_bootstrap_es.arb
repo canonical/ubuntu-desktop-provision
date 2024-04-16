@@ -6,7 +6,7 @@
   "@windowTitle": {},
   "welcome": "Le damos la bienvenida",
   "@welcome": {},
-  "tryOrInstallTitle": "Prueba o instala {DISTRO}",
+  "tryOrInstallTitle": "Probar o instalar {DISTRO}",
   "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Reparar instalación",
   "@tryOrInstallRepairOption": {},
@@ -14,7 +14,7 @@
   "@tryOrInstallRepairDescription": {},
   "tryOption": "Probar {RELEASE}",
   "@tryOption": {},
-  "tryDescription": "Puede probar {RELEASE} sin efectuar ningún cambio en su equipo.",
+  "tryDescription": "Puede probar {RELEASE} sin efectuar ningún cambio en el equipo.",
   "@tryDescription": {},
   "installOption": "Instalar {RELEASE}",
   "@installOption": {},
@@ -29,7 +29,7 @@
   },
   "rstTitle": "RST detectado",
   "@rstTitle": {},
-  "rstDescription": "Este ordenador utiliza la tecnología Intel RST (Rapid Storage Technology). Es necesario desactivar RST en Windows antes de instalar {DISTRO}.",
+  "rstDescription": "Este equipo utiliza la tecnología Intel RST (Rapid Storage Technology). Es necesario desactivar RST en Windows antes de instalar {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "Para obtener instrucciones, escanee el código QR en otro dispositivo o visite: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -38,7 +38,7 @@
       "url": {}
     }
   },
-  "updatesOtherSoftwarePageTitle": "Aplicaciones y actualizaciones",
+  "updatesOtherSoftwarePageTitle": "Aplicaciones",
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "¿Qué aplicaciones le gustaría instalar para comenzar?",
   "@updatesOtherSoftwarePageDescription": {},
@@ -90,7 +90,7 @@
   "@restartIntoWindows": {},
   "confirmSecurityKey": "Confirme la clave de seguridad",
   "@confirmSecurityKey": {},
-  "configureSecureBootSecurityKeyRequired": "Se debe ingresar una clave de seguridad",
+  "configureSecureBootSecurityKeyRequired": "Se necesita una clave de seguridad",
   "@configureSecureBootSecurityKeyRequired": {},
   "partitionCreateTitle": "Crear partición",
   "@partitionCreateTitle": {},
@@ -119,9 +119,9 @@
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Elija una clave de seguridad",
   "@chooseSecurityKey": {},
-  "dontInstallDriverSoftwareNow": "No instalar el software de controladores por ahora",
+  "dontInstallDriverSoftwareNow": "No instalar controladores en este momento",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Puede instalarlo más tarde desde Software y Actualizaciones.",
+  "dontInstallDriverSoftwareNowDescription": "Puede instalarlo más tarde en Programas y actualizaciones.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "secureBootSecurityKeysDontMatch": "Las claves de seguridad no coinciden",
   "@secureBootSecurityKeysDontMatch": {},
@@ -140,9 +140,9 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "EXPERIMENTAL: Borrar disco y usar ZFS",
+  "installationTypeZFS": "Borrar disco y usar ZFS",
   "@installationTypeZFS": {},
-  "installationTypeReinstallWarning": "<font color=\"{color}\">Advertencia:</font> Esto eliminará todos sus programas , documentos, fotos, música y cualquier otro archivo de {os}.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Atención:</font> esto eliminará todos sus programas, documentos, fotos, música y cualquier otro archivo de {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -161,9 +161,9 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Borrar disco e instalar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeAdvancedLabel": "Funciones avanzadas...",
+  "installationTypeAdvancedLabel": "Funcionalidades avanzadas…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Características avanzadas",
+  "installationTypeAdvancedTitle": "Funcionalidades avanzadas",
   "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "Ninguno",
   "@installationTypeNone": {},
@@ -181,7 +181,7 @@
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Instalar ahora",
   "@selectGuidedStorageInstallNow": {},
-  "installationTypeManual": "Partición manual",
+  "installationTypeManual": "Instalación manual",
   "@installationTypeManual": {},
   "installationTypeManualInfo": "Para usuarios avanzados que buscan configuraciones de disco personalizadas.",
   "@installationTypeManualInfo": {},
@@ -193,7 +193,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Se conservarán los documentos, la música y otros archivos personales. Puede elegir qué sistema operativo quiere iniciar cada vez que arranque el equipo.",
+  "installationTypeAlongsideInfo": "Podrá elegir qué sistema operativo quiere iniciar en cada arranque.",
   "@installationTypeAlongsideInfo": {},
   "partitionEditTitle": "Editar partición",
   "@partitionEditTitle": {},
@@ -252,7 +252,7 @@
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "La creación de una nueva tabla de particiones en un dispositivo completo eliminará todas sus particiones actuales. Esta operación puede deshacerse si es necesario.",
   "@newPartitionTableConfirmationMessage": {},
-  "bitlockerDescription": "Este ordenador utiliza el cifrado BitLocker de Windows.\nDebe utilizar Windows para crear espacio libre o volver atrás y elegir '{option}' para continuar.",
+  "bitlockerDescription": "Este equipo utiliza el cifrado BitLocker de Windows.\nDebe utilizar Windows para crear espacio libre o volver atrás y elegir «{option}» para continuar.",
   "@bitlockerDescription": {},
   "copyingFiles": "Copiando archivos…",
   "@copyingFiles": {},
@@ -269,7 +269,7 @@
       "os2": {}
     }
   },
-  "installAlongsideHiddenPartitions": "{num} particiones más pequeñas están ocultas, use la <a href=\"{url}\">herramienta de partición avanzada</a> para un mayor control",
+  "installAlongsideHiddenPartitions": "Hay {num} particiones más pequeñas ocultas. Use la <a href=\"{url}\">herramienta de partición avanzada</a> para un mayor control",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -286,7 +286,7 @@
   },
   "installAlongsideSize": "Tamaño:",
   "@installAlongsideSize": {},
-  "installAlongsideSpaceDivider": "Asignar el espacio de la unidad arrastrando el divisor de abajo:",
+  "installAlongsideSpaceDivider": "Asigne el espacio en disco arrastrando el divisor siguiente:",
   "@installAlongsideSpaceDivider": {},
   "installAlongsideResizePartition": "Redimensionar partición",
   "@installAlongsideResizePartition": {},
@@ -352,7 +352,7 @@
       "sysname": {}
     }
   },
-  "showSecurityKey": "Mostrar la clave de seguridad",
+  "showSecurityKey": "Mostrar",
   "@showSecurityKey": {},
   "installationTypeLVMEncryptionSelected": "LVM y cifrado seleccionado",
   "@installationTypeLVMEncryptionSelected": {},
@@ -376,7 +376,7 @@
   "@offlineWarning": {},
   "partitionFormatNone": "Dejar sin formatear",
   "@partitionFormatNone": {},
-  "loadingHeader": "Preparando la {DISTRO}…",
+  "loadingHeader": "Preparando {DISTRO}…",
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
@@ -520,9 +520,9 @@
   "@installationSlidesSupportEnterprise": {},
   "rstHeader": "Desactive RST para continuar",
   "@rstHeader": {},
-  "restartIntoWindowsTitle": "¿Reiniciar en Windows?",
+  "restartIntoWindowsTitle": "¿Quiere reiniciar en Windows?",
   "@restartIntoWindowsTitle": {},
-  "restartIntoWindowsDescription": "¿Está seguro de que quieres reiniciar tú ordenador? Necesitas reiniciar la instalación de {DISTRO} más tarde para finalizar la instalación de {DISTRO}.",
+  "restartIntoWindowsDescription": "¿Confirma que quiere reiniciar el equipo? Deberá retomar el instalador de {DISTRO} posteriormente para que {DISTRO} termine de instalarse.",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
@@ -542,14 +542,14 @@
       "format": {}
     }
   },
-  "loadingPageTitle": "Bienvenido a {DISTRO}",
+  "loadingPageTitle": "Le damos la bienvenida a {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "EXPERIMENTAL: Activar el cifrado del disco completo por hardware",
+  "installationTypeTPM": "Activar cifrado por hárdwer de todo el disco",
   "@installationTypeTPM": {},
   "refreshSnapCopyData": "Copiando los datos {snap}...",
   "@refreshSnapCopyData": {
@@ -689,7 +689,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Por favor, cierre el instalador y vuelva a iniciarlo para continuar",
+  "refreshRestart": "Cierre el instalador y vuelva a iniciarlo para continuar",
   "@refreshRestart": {},
   "recoveryKeyTitle": "Clave de recuperación para el TPM",
   "@recoveryKeyTitle": {},
@@ -709,7 +709,7 @@
   },
   "recoveryKeyCommand": "Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:",
   "@recoveryKeyCommand": {},
-  "refreshSnapPrerequisites": "Asegurando {snap} los requisitos previos...",
+  "refreshSnapPrerequisites": "Comprobando cumplimento de prerrequisitos de {snap}…",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
@@ -737,19 +737,19 @@
       "snap": {}
     }
   },
-  "minimalInstallationTitle": "Instalación predeterminada",
+  "minimalInstallationTitle": "Selección predeterminada",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Sólo lo esencial, el navegador web y las utilidades básicas.",
+  "minimalInstallationSubtitle": "Solo lo esencial, el navegador web y las utilidades básicas.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationSubtitle": "Una selección de herramientas de oficina, utilidades y navegador web compatibles sin conexión.",
   "@fullInstallationSubtitle": {},
-  "fullInstallationTitle": "Instalación completa",
+  "fullInstallationTitle": "Selección ampliada",
   "@fullInstallationTitle": {},
   "validate": "Validar",
   "@validate": {},
   "autoinstallTitle": "Tipo de instalación",
   "@autoinstallTitle": {},
-  "autoinstallHeader": "¿Cómo te gustaría instalar {DISTRO} ?",
+  "autoinstallHeader": "¿Cómo le gustaría instalar {DISTRO}?",
   "@autoinstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -765,9 +765,9 @@
   "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "Para usuarios avanzados que tienen un archivo autoinstall.yaml para configuraciones del sistema consistentes y repetibles.",
   "@autoinstallAutomatedDescription": {},
-  "autoinstallInstructions": "Introduzca la URL de autoinstall.yaml:",
+  "autoinstallInstructions": "Introduzca el URL de autoinstall.yaml:",
   "@autoinstallInstructions": {},
-  "tryOrInstallHeader": "¿Qué quieres hacer con {DISTRO} ?",
+  "tryOrInstallHeader": "¿Qué quiere hacer con {DISTRO} ?",
   "@tryOrInstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -777,11 +777,11 @@
   },
   "hideSecurityKey": "Ocultar",
   "@hideSecurityKey": {},
-  "codecsAndDriversPageTitle": "Optimizar tú ordenador",
+  "codecsAndDriversPageTitle": "Optimice el equipo",
   "@codecsAndDriversPageTitle": {},
-  "codecsAndDriversPageDescription": "¿Instalar el software propietario recomendado?",
+  "codecsAndDriversPageDescription": "¿Quiere instalar los programas privativos recomendados?",
   "@codecsAndDriversPageDescription": {},
-  "codecsAndDriversPageBody": "{DISTRO} no tiene software propietario de forma predeterminada. La instalación de software adicional puede mejorar el rendimiento de su ordenador.",
+  "codecsAndDriversPageBody": "{DISTRO} no incluye programas privativos de forma predeterminada. La instalación de programas adicionales puede mejorar el desempeño del equipo.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -827,13 +827,13 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimental",
   "@installationTypeExperimental": {},
-  "installationTypeLVMEncryption": "Utilice LVM y el cifrado",
+  "installationTypeLVMEncryption": "Usar LVM y cifrado",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Borrar el disco y usar ZFS con cifrado",
+  "installationTypeZFSEncryption": "Borrar disco y usar ZFS con cifrado",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Esta es una característica experimental. Es posible que no funcione con el hardware de futuras versiones de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado TPM</a> antes de elegir esta opción.",
+  "installationTypeTPMInfo": "Esta funcionalidad es experimental. Es posible que no funcione con el equipo en versiones futuras de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado TPM</a> antes de elegir esta opción.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -844,7 +844,7 @@
       }
     }
   },
-  "selectGuidedStorageInfo": "Empieza desde cero en el disco seleccionado.",
+  "selectGuidedStorageInfo": "Empiece desde cero en el disco seleccionado.",
   "@selectGuidedStorageInfo": {},
   "rebootToConfigure": "**{system}** se ha copiado en el disco",
   "@rebootToConfigure": {
@@ -884,13 +884,13 @@
   "@confirmSectionSecurityAndMoreTitle": {},
   "confirmProprietarySoftwareDrivers": "Controladores",
   "@confirmProprietarySoftwareDrivers": {},
-  "warningLabel": "Advertencia:",
+  "warningLabel": "Atención:",
   "@warningLabel": {},
-  "selectGuidedStorageDriveDropdownLabel": "Selecciona la unidad:",
+  "selectGuidedStorageDriveDropdownLabel": "Seleccione la unidad:",
   "@selectGuidedStorageDriveDropdownLabel": {},
-  "selectGuidedStoragePartitionDropdownLabel": "Selecciona la partición:",
+  "selectGuidedStoragePartitionDropdownLabel": "Seleccione la partición:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "guidedStoragePageHeader": "Elige dónde instalar {DISTRO}",
+  "guidedStoragePageHeader": "Elija dónde instalar {DISTRO}",
   "@guidedStoragePageHeader": {
     "placeholders": {
       "DISTRO": {
@@ -904,9 +904,9 @@
   "@refreshUpdateNow": {},
   "refreshReady": "Actualización preparada",
   "@refreshReady": {},
-  "refreshCloseLabel": "Cerrar el instalador",
+  "refreshCloseLabel": "Cerrar instalador",
   "@refreshCloseLabel": {},
-  "batteryWarning": "El ordenador no está conectado a una fuente de alimentación.",
+  "batteryWarning": "El equipo no está enchufado a una fuente de alimentación.",
   "@batteryWarning": {},
   "refreshHeader": "Existe una actualización disponible para el instalador",
   "@refreshHeader": {},

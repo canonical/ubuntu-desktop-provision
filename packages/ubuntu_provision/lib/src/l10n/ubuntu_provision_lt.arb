@@ -159,5 +159,7 @@
   "networkHiddenWifiNameRequired": "Reikia nurodyti tinklo pavadinimą",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Aš kol kas nenoriu jungtis prie interneto",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "Užverti",
+  "@close": {}
 }
