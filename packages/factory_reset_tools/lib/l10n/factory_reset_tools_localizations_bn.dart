@@ -50,7 +50,7 @@ class FactoryResetToolsLocalizationsBn extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB reset media is ready';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.';
+  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
 
   @override
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
