@@ -32,6 +32,7 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
                 model.selection == UbuntuProOnboardingPageSelection.skipForNow
                     ? () => Wizard.of(context).jump(InitStep.privacy.route)
                     : Wizard.of(context).next,
+            // TODO: Handle page skipping in load methods
           )
         ],
       ),
