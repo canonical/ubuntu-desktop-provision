@@ -51,6 +51,8 @@ Future<void> registerFakeInitServices({
   registerService<Sysmetrics>(_FakeSysmetrics.new);
   registerService<TimezoneService>(
       () => ProvdTimezoneService(client: _FakeProvdTimezoneClient()));
+  registerService<ProService>(
+      () => ProvdProService(client: _FakeProvdProClient()));
   registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);
 }
@@ -422,4 +424,20 @@ class _FakeProvdAccessibilityClient implements provd.ProvdAccessibilityClient {
 class _FakeProvdGdmClient implements provd.ProvdGdmClient {
   @override
   Future<void> launchDesktopSession(String username, String password) async {}
+}
+
+class _FakeProvdProClient implements provd.ProvdProClient {
+  _FakeProvdProClient();
+
+  @override
+  Stream<provd.ProMagicAttachResponse> proMagicAttach() {
+    return Stream.value(provd.ProMagicAttachResponse(
+        type: provd.ProMagicAttachResponseType.SUCCESS));
+  }
+
+  @override
+  Future<provd.ProAttachResponse> proAttach(String token) {
+    return Future.value(provd.ProAttachResponse(
+        type: provd.ProAttachResponse_ProAttachResponseType.SUCCESS));
+  }
 }
