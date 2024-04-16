@@ -24,7 +24,6 @@ import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
 import 'ubuntu_pro/test_ubuntu_pro.dart';
-import 'ubuntu_pro/test_ubuntu_pro_onboarding.dart';
 import 'welcome/test_welcome.dart';
 
 void main() {
@@ -47,8 +46,8 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
-    final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
-    final ubuntuProModel = buildUbuntuProModel(isAttached: true);
+    final ubuntuProModel =
+        buildUbuntuProModel(skipPro: false, isAttached: true);
     final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
 
@@ -65,8 +64,6 @@ void main() {
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
-          ubuntuProOnboardingModelProvider
-              .overrideWith((ref) => ubuntuProOnboardingModel),
           ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
@@ -116,9 +113,14 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
-    ubuntuProOnboardingModel.selection =
-        UbuntuProOnboardingPageSelection.skipForNow;
+
+    await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -174,16 +176,11 @@ void main() {
       InitStep.locale.route,
       InitStep.keyboard.route,
       InitStep.identity.route,
-      InitStep.ubuntuProOnboarding.route,
-      InitStep.ubuntuPro.route,
-      InitStep.ubuntuProSuccess.route,
       InitStep.telemetry.route,
     ]);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final identityModel = buildIdentityModel(isValid: true);
-    final ubuntuProOnboardingModel = buildUbuntuProOnboardingModel();
-    final ubuntuProModel = buildUbuntuProModel(isAttached: true);
     final telemetryModel = buildTelemetryModel();
 
     await tester.pumpWidget(
@@ -193,9 +190,6 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           identityModelProvider.overrideWith((_) => identityModel),
-          ubuntuProOnboardingModelProvider
-              .overrideWith((_) => ubuntuProOnboardingModel),
-          ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
         ],
         child: tester.buildTestWizard(),
@@ -216,20 +210,6 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(IdentityPage), findsOneWidget);
     verify(identityModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
-    verify(ubuntuProOnboardingModel.init()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(UbuntuProPage), findsOneWidget);
-    verify(ubuntuProModel.magicAttach()).called(1);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

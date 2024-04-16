@@ -12,6 +12,7 @@ UbuntuProModel buildUbuntuProModel({
   bool? isAttached,
   String? token,
   String? userCode,
+  bool? skipPro,
 }) {
   final model = MockUbuntuProModel();
   when(model.isAttachedThroughMagicAttach).thenReturn(true);
@@ -28,5 +29,6 @@ UbuntuProModel buildUbuntuProModel({
     model.isAttached = true;
     model.notifyListeners();
   });
+  when(model.skipPro).thenReturn(skipPro ?? true);
   return model;
 }

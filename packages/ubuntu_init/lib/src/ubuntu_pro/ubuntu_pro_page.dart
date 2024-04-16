@@ -17,7 +17,10 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    await ref.read(ubuntuProModelProvider).magicAttach();
+    final model = ref.watch(ubuntuProModelProvider);
+    if (model.skipPro) return false;
+
+    await model.magicAttach();
     return true;
   }
 

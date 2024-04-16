@@ -7,10 +7,10 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import '../../../ubuntu_provision/test/test_utils.mocks.dart'
     hide MockPageConfigService;
 import '../init_model_test.mocks.dart';
-import 'test_ubuntu_pro_onboarding.dart';
+import 'test_ubuntu_pro.dart';
 
 void main() {
-  Widget buildPage(UbuntuProOnBoardingModel model) {
+  Widget buildPage(UbuntuProModel model) {
     final pageImages = PageImages.internal(
       MockPageConfigService(),
       MockThemeVariantService(),
@@ -18,14 +18,14 @@ void main() {
     return ProviderScope(
       overrides: [
         pageImagesProvider.overrideWithValue(pageImages),
-        ubuntuProOnboardingModelProvider.overrideWith((_) => model),
+        ubuntuProModelProvider.overrideWith((_) => model),
       ],
       child: const UbuntuProOnboardingPage(),
     );
   }
 
   testWidgets('ubuntu pro - skip for now', (tester) async {
-    final model = buildUbuntuProOnboardingModel(enabled: true);
+    final model = buildUbuntuProModel(enabled: true);
     await tester.pumpApp((_) => buildPage(model));
 
     await tester.pumpAndSettle();
@@ -35,12 +35,11 @@ void main() {
 
     await tester.tap(tileFinder.first);
 
-    verify(model.selection = UbuntuProOnboardingPageSelection.skipForNow)
-        .called(1);
+    verify(model.skipPro = true).called(1);
   });
 
   testWidgets('ubuntu pro - enable ubuntu pro', (tester) async {
-    final model = buildUbuntuProOnboardingModel(enabled: true);
+    final model = buildUbuntuProModel(enabled: true);
     await tester.pumpApp((_) => buildPage(model));
 
     final tileFinder = find.byType(ProOnboardingSelectionTile);
@@ -48,7 +47,6 @@ void main() {
 
     await tester.tap(tileFinder.last);
 
-    verify(model.selection = UbuntuProOnboardingPageSelection.enableUbuntuPro)
-        .called(1);
+    verify(model.skipPro = false).called(1);
   });
 }
