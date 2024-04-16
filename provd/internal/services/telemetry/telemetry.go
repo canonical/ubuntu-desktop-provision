@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
+	"strings"
 
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/ubuntu/ubuntu-report/pkg/sysmetrics"
@@ -77,6 +78,13 @@ func (s *Service) CollectAndSend(ctx context.Context, _ *emptypb.Empty) (*pb.Sen
 
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to collect and send metrics: %v", err))
+
+		if strings.Contains(err.Error(), "dial tcp: lookup metrics.ubuntu.com: no such host") {
+			return &pb.SendResponse{
+				Type: pb.SendResponse_NETWORK_ERROR,
+			}, nil
+		}
+
 		return &pb.SendResponse{
 			Type: pb.SendResponse_UNKNOWN_ERROR,
 		}, nil
@@ -93,6 +101,13 @@ func (s *Service) SendDecline(ctx context.Context, _ *emptypb.Empty) (*pb.SendRe
 
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to send decline: %v", err))
+
+		if strings.Contains(err.Error(), "dial tcp: lookup metrics.ubuntu.com: no such host") {
+			return &pb.SendResponse{
+				Type: pb.SendResponse_NETWORK_ERROR,
+			}, nil
+		}
+
 		return &pb.SendResponse{
 			Type: pb.SendResponse_UNKNOWN_ERROR,
 		}, nil

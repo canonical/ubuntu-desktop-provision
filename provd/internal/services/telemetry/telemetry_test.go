@@ -74,7 +74,8 @@ func TestCollectAndSend(t *testing.T) {
 		"Metrics are collected and sent successfully": {},
 
 		// Error cases
-		"Error when fail to collect and send metrics from the system": {unknownError: true},
+		"Return unknown error when fail to collect and send metrics from the system": {unknownError: true},
+		"Return network error when internet is not available":                        {networkError: true},
 	}
 
 	for name, tc := range tests {
@@ -113,7 +114,8 @@ func TestSendDecline(t *testing.T) {
 		"Message sent declining metrics collection": {},
 
 		// Error cases
-		"Error when fail to send metrics collection decline message": {unknownError: true},
+		"Return unknown error when fail to send metrics collection decline message": {unknownError: true},
+		"Return network error when internet is not available":                       {networkError: true},
 	}
 
 	for name, tc := range tests {
@@ -150,7 +152,6 @@ func (s *sysmetricsMock) Collect() ([]byte, error) {
 	if s.unknownError {
 		return nil, errors.New("mock requested unknown error")
 	}
-
 	resp := []byte("some static data")
 	return resp, nil
 }
@@ -159,12 +160,18 @@ func (s *sysmetricsMock) CollectAndSend(r sysmetrics.ReportType, alwaysReport bo
 	if s.unknownError {
 		return errors.New("mock requested unknown error")
 	}
+	if s.networkError {
+		return errors.New("mock requested network error: dial tcp: lookup metrics.ubuntu.com: no such host")
+	}
 	return nil
 }
 
 func (s *sysmetricsMock) SendDecline(alwaysReport bool, baseURL string) error {
 	if s.unknownError {
 		return errors.New("mock requested unknown error")
+	}
+	if s.networkError {
+		return errors.New("mock requested network error: dial tcp: lookup metrics.ubuntu.com: no such host")
 	}
 	return nil
 }
