@@ -71,6 +71,9 @@ parts:
       # patch config directory path
       sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/services/config_service.dart
 
+      # patch EULA directory path
+      sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/eula/eula_page.dart
+
       cd packages/ubuntu_init
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
