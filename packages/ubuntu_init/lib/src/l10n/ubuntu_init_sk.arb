@@ -16,7 +16,7 @@
   },
   "telemetryPageTitle": "Telemetria",
   "@telemetryPageTitle": {},
-  "welcomeStoreTitle": "Nový vzhľad centra s aplikáciami",
+  "welcomeStoreTitle": "Nový vzhľad obchodu s aplikáciami",
   "@welcomeStoreTitle": {},
   "welcomeSecuritySubtitle": "Nové možnosti pre hardvérové šifrovanie alebo ZFS.",
   "@welcomeSecuritySubtitle": {},
@@ -66,5 +66,47 @@
   "privacyPolicyLink": "Ochrana údajov",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Vždy zadarmo na osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://{url}\">Viac informácií</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProHeader": "Pripojiť tento počítač",
+  "@ubuntuProHeader": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Získajte najkomplexnejšie predplatné pre bezpečnosť softvéru s otvoreným zdrojovým kódom",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachButton": "Pripojiť",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Neplatný token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Platný token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Neplatný token, skúste to znova",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Zatiaľ preskočiť",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pro môžete povoliť kedykoľvek neskôr prostredníctvom aplikácie Softvér a aktualizácie.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Povoliť Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro je teraz v tomto počítači povolený",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProMagicAttachInstructions": "Pripojiť sa s týmto kódom na <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOrAddTokenManually": "alebo pridať token ručne",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Pripojte tento počítač k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
 }
