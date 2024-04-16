@@ -1596,7 +1596,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @notEnoughDiskSpaceTitle.
   ///
   /// In en, this message translates to:
-  /// **'Not enough space'**
+  /// **'Not enough disk space'**
   String get notEnoughDiskSpaceTitle;
 
   /// No description provided for @notEnoughDiskSpaceUbuntu.
@@ -1604,6 +1604,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Not enough disk space to install {DISTRO}'**
   String notEnoughDiskSpaceUbuntu(String DISTRO);
+
+  /// No description provided for @notEnoughDiskSpaceBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The selected disk does not have enough disk space to install {DISTRO}. Quit the installer to make space available or select another disk.'**
+  String notEnoughDiskSpaceBody(String DISTRO);
 
   /// No description provided for @notEnoughDiskSpaceAvailable.
   ///

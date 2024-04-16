@@ -652,7 +652,7 @@
   "installingSystem": "Installing the system…",
   "configuringSystem": "Setting up the system…",
   "installationFailed": "Installation failed",
-  "notEnoughDiskSpaceTitle": "Not enough space",
+  "notEnoughDiskSpaceTitle": "Not enough disk space",
   "notEnoughDiskSpaceUbuntu": "Not enough disk space to install {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "placeholders": {
@@ -661,7 +661,14 @@
       }
     }
   },
-  "notEnoughDiskSpaceAvailable": "Available:",
+  "notEnoughDiskSpaceBody": "The selected disk does not have enough disk space to install {DISTRO}. Quit the installer to make space available or select another disk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },  "notEnoughDiskSpaceAvailable": "Available:",
   "notEnoughDiskSpaceRequired": "Required:",
   "refreshPageTitle": "Update available",
   "refreshHeader": "An update is available for the installer",

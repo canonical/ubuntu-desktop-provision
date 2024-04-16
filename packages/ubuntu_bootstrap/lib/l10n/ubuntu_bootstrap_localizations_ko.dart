@@ -799,6 +799,11 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String notEnoughDiskSpaceBody(String DISTRO) {
+    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+  }
+
+  @override
   String get notEnoughDiskSpaceAvailable => '사용 가능:';
 
   @override
