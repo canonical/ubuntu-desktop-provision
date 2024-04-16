@@ -28,11 +28,11 @@
   "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Älä asenna ajureita toistaiseksi",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Voit asentaa ne myöhemmin Päivitykset ja muut ohjelmistot -ohjelmassa.",
+  "dontInstallDriverSoftwareNowDescription": "Voit asentaa ne myöhemmin Ohjelmistot ja päivitykset -sovelluksessa.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "installThirdPartySubtitle": "Näihin ohjelmistoihin kohdistuvat dokumentaation mukana olevat lisenssiehdot. Jotkin voivat olla suljetun lähdekoodin ohjelmistoja.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "Asennustyyppi",
+  "installationTypeTitle": "Levyasetukset",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Tässä tietokoneessa on tällä hetkellä asennettuna käyttöjärjestelmä \"{os}\". Mitä haluat tehdä?",
   "@installationTypeOSDetected": {
@@ -80,9 +80,9 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Asiakirjat, musiikki ja muut henkilökohtaiset tiedostot säilytetään. Jokaisella tietokoneen käynnistyskerralla voit valita, mikä käyttöjärjestelmä käynnistetään.",
+  "installationTypeAlongsideInfo": "Voit valita käyttöjärjestelmän käynnistettäessä.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Manuaalinen osiointi",
+  "installationTypeManual": "Manuaalinen asennus",
   "@installationTypeManual": {},
   "selectGuidedStoragePageTitle": "Tyhjennä levy ja asenna {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -192,9 +192,9 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Salausavaimet eivät täsmää",
   "@secureBootSecurityKeysDontMatch": {},
-  "updatesOtherSoftwarePageTitle": "Sovellukset ja päivitykset",
+  "updatesOtherSoftwarePageTitle": "Sovellukset",
   "@updatesOtherSoftwarePageTitle": {},
-  "updatesOtherSoftwarePageDescription": "Millä sovelluksin haluat aloittaa?",
+  "updatesOtherSoftwarePageDescription": "Millä sovelluksilla haluat aloittaa?",
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Muut valinnat",
   "@otherOptions": {},
@@ -214,7 +214,7 @@
   "@partitionLocationEnd": {},
   "partitionErase": "Alusta osio",
   "@partitionErase": {},
-  "confirmHeader": "Katselmoi valintasi",
+  "confirmHeader": "Tarkista valintasi",
   "@confirmHeader": {},
   "bitlockerInstructions": "Lue ohjeet skannaamalla QR-koodi tai käy jollain toisella laitteella: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
@@ -227,7 +227,7 @@
   "@allocateDiskSpace": {},
   "restartIntoWindows": "Uudelleenkäynnistä Windowsiin",
   "@restartIntoWindows": {},
-  "partitionFormatLabel": "Tiedostojärjestelmä:",
+  "partitionFormatLabel": "Käytetään kohteena:",
   "@partitionFormatLabel": {},
   "confirmInstallButton": "Asenna",
   "@confirmInstallButton": {},
@@ -252,7 +252,7 @@
   },
   "installationTypeMultiOSDetected": "Tässä tietokoneessa on jo useita käyttöjärjestelmiä. Mitä haluat tehdä?",
   "@installationTypeMultiOSDetected": {},
-  "showSecurityKey": "Näytä salausavain",
+  "showSecurityKey": "Näytä",
   "@showSecurityKey": {},
   "restartNow": "Käynnistä uudelleen nyt",
   "@restartNow": {},
@@ -718,7 +718,7 @@
       "version": {}
     }
   },
-  "fullInstallationTitle": "Täysi asennus",
+  "fullInstallationTitle": "Laajennettu valikoima",
   "@fullInstallationTitle": {},
   "refreshSnapRemoveAliases": "Poistetaan {snap}-aliakset...",
   "@refreshSnapRemoveAliases": {
@@ -744,7 +744,7 @@
       }
     }
   },
-  "codecsAndDriversPageBody": "{DISTRO} ei sisällä oletuksena omisteisia ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.",
+  "codecsAndDriversPageBody": "{DISTRO} ei sisällä oletuksena suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -785,7 +785,7 @@
   "@autoinstallAutomatedDescription": {},
   "hideSecurityKey": "Piilota",
   "@hideSecurityKey": {},
-  "codecsAndDriversPageDescription": "Asennetaanko suositellut omisteiset ohjelmistot?",
+  "codecsAndDriversPageDescription": "Asennetaanko suositellut suljetun lähdekoodin ohjelmistot?",
   "@codecsAndDriversPageDescription": {},
   "codecsAndDriversNvidiaNote": "NVIDIA:n näytönohjain havaittu",
   "@codecsAndDriversNvidiaNote": {},
@@ -891,7 +891,7 @@
   "@confirmEntryDiskSetup": {},
   "confirmEntryInstallationDisk": "Asennuslevy",
   "@confirmEntryInstallationDisk": {},
-  "confirmEntryProprietarySoftware": "Omisteinen ohjelmisto",
+  "confirmEntryProprietarySoftware": "Suljetun lähdekoodin ohjelmistot",
   "@confirmEntryProprietarySoftware": {},
   "confirmSectionGeneralTitle": "Yleiset",
   "@confirmSectionGeneralTitle": {},
