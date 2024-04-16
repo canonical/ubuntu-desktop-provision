@@ -159,5 +159,7 @@
   "networkHiddenWifiNameRequired": "Um nome de rede é necessário",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Não pretendo ligar à Internet por agora",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "Fechar",
+  "@close": {}
 }
