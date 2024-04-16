@@ -23,6 +23,7 @@ class HorizontalPage extends ConsumerWidget {
     ),
     this.bottomBar,
     this.snackBar,
+    this.imageTitleWidget,
     int? contentFlex,
     super.key,
   })  : assert(
@@ -69,6 +70,9 @@ class HorizontalPage extends ConsumerWidget {
   /// The snack bar to use (default is none).
   final SnackBar? snackBar;
 
+  /// The content under the image.
+  final Widget? imageTitleWidget;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
@@ -87,13 +91,21 @@ class HorizontalPage extends ConsumerWidget {
         padding: adjustedPadding,
         child: Row(
           children: [
-            if (image != null) ...[
+            if (image != null || imageTitleWidget != null)
               Expanded(
                 flex: 6,
-                child: image,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (image != null) image,
+                    if (imageTitleWidget != null) ...[
+                      const SizedBox(height: kWizardSpacing),
+                      imageTitleWidget!,
+                    ],
+                  ],
+                ),
               ),
-              const SizedBox(width: kWizardSpacing),
-            ],
+            const SizedBox(width: kWizardSpacing),
             Expanded(
               flex: 8,
               child: Column(

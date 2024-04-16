@@ -3,12 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_init/l10n.dart';
 import 'package:ubuntu_init/src/error_page.dart';
-import 'package:ubuntu_init/src/init_model.dart';
-import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/src/init_step.dart';
-import 'package:ubuntu_init/src/init_wizard.dart';
+import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart' hide ErrorPage;
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -26,6 +23,7 @@ import '../../ubuntu_provision/test/network/test_network.dart';
 import '../../ubuntu_provision/test/timezone/test_timezone.dart';
 import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
+import 'ubuntu_pro/test_ubuntu_pro.dart';
 import 'welcome/test_welcome.dart';
 
 void main() {
@@ -48,6 +46,8 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel();
     final identityModel = buildIdentityModel(isValid: true);
+    final ubuntuProModel =
+        buildUbuntuProModel(skipPro: false, isAttached: true);
     final telemetryModel = buildTelemetryModel();
     final privacyModel = buildPrivacyModel();
 
@@ -64,6 +64,7 @@ void main() {
           hiddenWifiModelProvider.overrideWith((_) => hiddenWifiModel),
           timezoneModelProvider.overrideWith((_) => timezoneModel),
           identityModelProvider.overrideWith((_) => identityModel),
+          ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
           privacyModelProvider.overrideWith((_) => privacyModel),
         ],
@@ -111,7 +112,15 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProOnboardingPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(UbuntuProPage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

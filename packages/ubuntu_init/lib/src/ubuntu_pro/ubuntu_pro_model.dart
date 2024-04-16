@@ -1,7 +1,95 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:async';
 
-final ubuntuProModelProvider = Provider(
-  (ref) => UbuntuProModel(),
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
+
+final ubuntuProModelProvider = ChangeNotifierProvider(
+  (ref) => UbuntuProModel(
+    proService: getService<ProService>(),
+  ),
 );
 
-class UbuntuProModel {}
+class UbuntuProModel extends ChangeNotifier {
+  UbuntuProModel({
+    required ProService proService,
+  }) : _proService = proService;
+  final ProService _proService;
+
+  String get userCode => _userCode;
+  String _userCode = '';
+
+  bool get isAttachedThroughMagicAttach => _isAttachedThroughMagicAttach;
+  bool _isAttachedThroughMagicAttach = false;
+
+  bool get isAttached => _isAttached;
+  bool _isAttached = false;
+
+  bool get isAttachedThroughManualAttach => _isAttachedThroughManualAttach;
+  bool _isAttachedThroughManualAttach = false;
+
+  bool get hasNoErrorWhenAttachingManually => _hasNoErrorWhenAttachingManually;
+  bool _hasNoErrorWhenAttachingManually = true;
+
+  bool get skipPro => _skipPro;
+  bool _skipPro = true;
+
+  set skipPro(bool value) {
+    _skipPro = value;
+    notifyListeners();
+  }
+
+  set isAttached(bool value) {
+    _isAttached = value;
+    notifyListeners();
+  }
+
+  final _token = ValueNotifier<String?>(null);
+
+  /// The token input from the user
+  String get token => _token.value ?? '';
+
+  void setToken(String value) {
+    _token.value = value;
+    notifyListeners();
+  }
+
+  StreamSubscription<ProResponse>? _subscription;
+
+  Future<void> magicAttach() async {
+    await _subscription?.cancel();
+    _userCode = '';
+    _subscription = _proService.proMagicAttach().listen(_handleResponse);
+    notifyListeners();
+  }
+
+  Future<void> attachManuallyToken() async {
+    await _subscription?.cancel();
+    final response = await _proService.proAttach(token);
+    _handleManualAttachResponse(response);
+    notifyListeners();
+  }
+
+  void _handleManualAttachResponse(ProResponse response) {
+    if (response is ProResponseSuccess ||
+        response is ProResponseAlreadyAttached) {
+      _isAttachedThroughManualAttach = true;
+      _isAttached = true;
+    } else {
+      _hasNoErrorWhenAttachingManually = false;
+    }
+    notifyListeners();
+  }
+
+  void _handleResponse(ProResponse response) {
+    if (response is ProResponseUserCode) {
+      _userCode = response.userCode;
+      notifyListeners();
+    } else if (response is ProResponseSuccess) {
+      _isAttachedThroughMagicAttach = true;
+      _isAttached = true;
+      notifyListeners();
+    }
+  }
+}

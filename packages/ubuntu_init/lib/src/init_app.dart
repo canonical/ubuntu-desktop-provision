@@ -18,6 +18,7 @@ Future<void> runInitApp(
   List<String> args, {
   ThemeData? theme,
   ThemeData? darkTheme,
+  @visibleForTesting List<Override>? overrides,
 }) async {
   final exe = p.basename(Platform.resolvedExecutable);
   final log = Logger.setup(path: '/var/log/installer/$exe.log');

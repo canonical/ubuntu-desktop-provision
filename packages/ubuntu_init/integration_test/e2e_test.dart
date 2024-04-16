@@ -10,6 +10,8 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+import '../test/ubuntu_pro/test_ubuntu_pro.dart';
+
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -23,7 +25,15 @@ void main() {
   testWidgets('init wizard', (tester) async {
     final windowClosed = YaruTestWindow.waitForClosed();
 
-    await tester.runApp(() => runInitApp([]));
+    final ubuntuProModel = buildUbuntuProModel(enabled: true);
+    await tester.runApp(
+      () => runInitApp(
+        [],
+        overrides: [
+          ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
+        ],
+      ),
+    );
 
     await tester.testLocalePage(language: 'Deutsch');
     await tester.tapNext();
@@ -77,7 +87,7 @@ void main() {
     ]);
     await expectUser(identity, 'password');
 
-    await tester.testUbuntuProPage();
+    await tester.testUbunutuProOnboardingPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

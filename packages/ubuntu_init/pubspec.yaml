@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   args: ^2.4.2
+  barcode_widget: ^2.0.4
   collection: ^1.17.0
   dbus: ^0.7.10
   flutter:
@@ -18,6 +19,7 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^2.5.1
   flutter_svg: ^2.0.10
+  form_field_validator: ^1.1.0
   gsettings: ^0.2.8
   handy_window: ^0.4.0
   intl: ^0.18.1
@@ -39,6 +41,7 @@ dependencies:
   ubuntu_service: ^0.3.1
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
+  ubuntu_widgets: ^0.5.1
   ubuntu_wizard: ^0.1.0
   yaru: 4.1.0
 
