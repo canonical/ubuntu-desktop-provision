@@ -162,7 +162,7 @@
   "@confirmPageTitle": {},
   "shutdown": "Вимкнути",
   "@shutdown": {},
-  "restartIntoWindows": "Перезавантажити в Windows",
+  "restartIntoWindows": "Перезапустити у Windows",
   "@restartIntoWindows": {},
   "installDriversTitle": "Встановити стороннє програмне забезпечення для графіки та обладнання Wi-Fi",
   "@installDriversTitle": {},
@@ -436,5 +436,25 @@
   "fullInstallationTitle": "Повна установка",
   "@fullInstallationTitle": {},
   "rstHeader": "Вимкніть RST для продовженя",
-  "@rstHeader": {}
+  "@rstHeader": {},
+  "installationSlidesWelcomeTitle": "Швидка, вільна та повна нових функцій",
+  "@installationSlidesWelcomeTitle": {},
+  "installationSlidesWelcomeHeader": "Найновіша версія {DISTRO} робить обчислення простішими, ніж будь-коли.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeBody": "Незалежно від того, чи ви розробник, творець, геймер або адміністратор, у {RELEASE} ви знайдете нові інструменти для поліпшення продуктивності та зручності роботи.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "Усі необхідні застосунки",
+  "@installationSlidesSoftwareTitle": {}
 }
