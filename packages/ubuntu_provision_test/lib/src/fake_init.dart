@@ -431,8 +431,16 @@ class _FakeProvdProClient implements provd.ProvdProClient {
 
   @override
   Stream<provd.ProMagicAttachResponse> proMagicAttach() {
-    return Stream.value(provd.ProMagicAttachResponse(
-        type: provd.ProMagicAttachResponseType.SUCCESS));
+    return Stream.fromIterable(
+      [
+        provd.ProMagicAttachResponse(
+            type: provd.ProMagicAttachResponseType.USER_CODE,
+            userCode: '123456'),
+        provd.ProMagicAttachResponse(
+          type: provd.ProMagicAttachResponseType.SUCCESS,
+        ),
+      ],
+    );
   }
 
   @override
