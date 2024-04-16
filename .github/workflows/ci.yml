@@ -301,9 +301,6 @@ jobs:
     if: contains(github.event.pull_request.title, 'Hosted Weblate')
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v2
       - run: melos gen-l10n
