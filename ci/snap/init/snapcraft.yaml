@@ -19,11 +19,10 @@ apps:
     environment:
       LOG_LEVEL: debug
     plugs:
-      - usr-share-desktop-provision
+      - hostfs-usr-share-desktop-provision
       - run-provd-socket
       - network
       - network-manager
-      - tmp
       - var-log-installer
 
 parts:
@@ -72,6 +71,9 @@ parts:
       # patch config directory path
       sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/services/config_service.dart
 
+      # patch EULA directory path
+      sed -i 's|/usr/share|/var/lib/snapd/hostfs/usr/share|'  packages/ubuntu_provision/lib/src/eula/eula_page.dart
+
       cd packages/ubuntu_init
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
@@ -89,17 +91,9 @@ lint:
 plugs:
   run-provd-socket:
     interface: system-files
-    read:
-      - /run/gnome-initial-setup/desktop-provision/init.socket
     write:
       - /run/gnome-initial-setup/desktop-provision/init.socket
-  tmp:
-    interface: system-files
-    read:
-      - /var/lib/snapd/hostfs/tmp
-    write:
-      - /var/lib/snapd/hostfs/tmp
-  usr-share-desktop-provision:
+  hostfs-usr-share-desktop-provision:
     interface: system-files
     read:
       - /var/lib/snapd/hostfs/usr/share/desktop-provision
