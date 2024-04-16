@@ -29,7 +29,7 @@
   },
   "rstTitle": "A RST está ativa",
   "@rstTitle": {},
-  "rstDescription": "Este computador usa Intel RST (Rapid Storage Technology). Precisa de desligar a RST no Windows antes de instalar o Ubuntu.",
+  "rstDescription": "Este computador usa Intel RST (Rapid Storage Technology). Precisa de desligar a RST no Windows antes de instalar o {DISTRO}..",
   "@rstDescription": {},
   "rstInstructions": "Para obter instruções, digitalize o código QR noutro dispositivo ou visite: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -182,7 +182,7 @@
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Pronto a instalar",
   "@confirmPageTitle": {},
-  "confirmHeader": "Se continuar, as alterações listadas abaixo serão gravadas nos discos. Será capaz de realizar alterações posteriores manualmente.",
+  "confirmHeader": "Reveja as suas escolhas",
   "@confirmHeader": {},
   "confirmPartitionTables": "As tabelas de partições dos seguintes dispositivos foram alteradas:",
   "@confirmPartitionTables": {},
@@ -227,7 +227,7 @@
   "@restartIntoWindows": {},
   "windowTitle": "Instalar o {RELEASE}",
   "@windowTitle": {},
-  "installationTypeManualInfo": "Pode criar ou redimensionar partições manualmente ou escolher múltiplas partições para o {DISTRO}",
+  "installationTypeManualInfo": "Para utilizadores avançados que procuram configurações de disco personalizadas.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -351,11 +351,11 @@
   "@installationTypeLVMEncryptionSelected": {},
   "installDriversTitle": "Instalar software de terceiros para placas gráficas e Wi-Fi",
   "@installDriversTitle": {},
-  "installDriversSubtitle": "Estes controladores estão sujeitos aos termos de licença incluídos com sua documentação. São proprietários.",
+  "installDriversSubtitle": "Incluindo, mas não se limitando a controladores NVIDIA e semelhantes",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Transferir e instalar suporte para formatos de multimédia adicionais",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Este software está sujeito aos termos de licença incluídos com a sua documentação. Alguns são proprietários.",
+  "installCodecsSubtitle": "Incluindo, mas não se limitando a MP3, MP4, MOV e semelhantes",
   "@installCodecsSubtitle": {},
   "installingSystem": "A instalar o sistema…",
   "@installingSystem": {},
@@ -731,7 +731,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Por favor reinicie o instalador.",
+  "refreshRestart": "Feche o instalador e reinicie-o para continuar",
   "@refreshRestart": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Aviso:</font> Se você perder esta chave de segurança, todos os dados serão perdidos. Se precisar, anote a sua chave e guarde-a num local seguro noutro lugar.",
   "@recoveryKeyWarning": {
