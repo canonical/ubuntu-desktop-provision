@@ -11,6 +11,7 @@ enum InstallationStep with RouteName {
       discreteStep: false, wizardStep: false, required: true),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new, allowedToHide: true),
+  bitlocker(BitLockerPage.new, discreteStep: false, required: true),
   rst(RstPage.new, discreteStep: false, required: true),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),

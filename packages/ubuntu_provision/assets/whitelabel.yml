@@ -23,6 +23,8 @@ pages:
     image: "assets/images/no_space.svg"
   secure-boot:
     image: "assets/images/encryption.svg"
+  bitlocker:
+    image: "assets/images/bitlocker.svg"
   storage:
     image: "assets/images/disk.svg"
   eula:
