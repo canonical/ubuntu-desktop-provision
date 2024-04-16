@@ -35,7 +35,7 @@ type Manager struct {
 	accessibilityService accessibility.Service
 	proService           pro.Service
 	chownService         chown.Service
-    telemetryService     telemetry.Service
+	telemetryService     telemetry.Service
 	gdmService           *gdm.Service
 	bus                  *dbus.Conn
 }
@@ -103,10 +103,10 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		return nil, status.Errorf(codes.Internal, "failed to create chown service: %s", err)
 	}
 
-    telemetryService, err := telemetry.New()
-    if err != nil {
+	telemetryService, err := telemetry.New()
+	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to create telemetry service: %s", err)
-    }
+	}
 
 	return &Manager{
 		userService:          *userService,
@@ -117,7 +117,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		accessibilityService: *accessibilityService,
 		proService:           *proService,
 		chownService:         *chownService,
-        telemetryService:       *telemetryService,
+		telemetryService:     *telemetryService,
 		gdmService:           gdmService,
 		bus:                  bus,
 	}, nil
@@ -137,7 +137,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	pb.RegisterProServiceServer(grpcServer, &m.proService)
 	pb.RegisterChownServiceServer(grpcServer, &m.chownService)
-    pb.RegisterTelemetryServiceServer(grpcServer, &m.telemetryService)
+	pb.RegisterTelemetryServiceServer(grpcServer, &m.telemetryService)
 
 	if m.gdmService != nil {
 		pb.RegisterGdmServiceServer(grpcServer, m.gdmService)
