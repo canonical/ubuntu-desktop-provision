@@ -10,7 +10,7 @@
   "@createUsbListExplanation": {},
   "noMediaDetectedSubtitle": "Na vytvorenie obnovovacieho média je potrebná USB jednotka.",
   "@noMediaDetectedSubtitle": {},
-  "factoryResetTitle": "Výber možností spustenia obnovenia nastavení",
+  "factoryResetTitle": "Vyberte možnosť spustenia obnovenia nastavení",
   "@factoryResetTitle": {},
   "loadingDrives": "Prosím, počkajte, načítavajú sa jednotky.",
   "@loadingDrives": {},
