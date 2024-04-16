@@ -1,1 +1,18 @@
-{}
+{
+  "welcomePageTitle": "Selamat Datang",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Selamat datang di {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "APA YANG BARU?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "Awal yang dirampingkan",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Mendukung pengalaman penyiapan yang lebih bersih.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Tampilan baru App Store",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Tidak pernah lebih mudah untuk menemukan perangkat lunak favorit Anda.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Keamanan yang ditingkatkan",
+  "@welcomeSecurityTitle": {}
+}
