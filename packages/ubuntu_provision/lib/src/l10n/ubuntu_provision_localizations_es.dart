@@ -72,7 +72,7 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Ocultar registro';
 
   @override
-  String get restart => 'Reanudar';
+  String get restart => 'Reiniciar';
 
   @override
   String get close => 'Cerrar';
@@ -87,16 +87,16 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get timezoneTimezoneLabel => 'Huso horario';
 
   @override
-  String get keyboardTitle => 'Distribución del teclado';
+  String get keyboardTitle => 'Disposición del teclado';
 
   @override
-  String get keyboardHeader => 'Elija la distribución del teclado:';
+  String get keyboardHeader => 'Elija la disposición del teclado';
 
   @override
   String get keyboardTestHint => 'Escriba aquí para probar el teclado';
 
   @override
-  String get keyboardDetectTitle => 'Detectar la distribución del teclado';
+  String get keyboardDetectTitle => 'Detectar disposición de teclado';
 
   @override
   String get keyboardDetectButton => 'Detectar';
@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'No quiero conectarme a internet ahora mismo';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Acuerdo de licencia';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Revisar los términos de licencia';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Para continuar configurando el equipo, debe leer y aceptar los términos del acuerdo de licencia.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'He leído y acepto estos términos';
 }

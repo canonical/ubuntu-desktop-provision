@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'ליצור אמצעי איפוס ב־USB לשחזור המערכת, לרבות התאמת התקנות האובונטו שלך.';
 
   @override
-  String get createUsbListExplanation => 'נא לבחור כונן USB נתיק. בכונן חייבים להיות לפחות 16 ג״ב של מקום';
+  String get createUsbListExplanation => 'נא לבחור כונן USB נתיק. בכונן חייבים להיות **לפחות 16 ג״ב של מקום.**';
 
   @override
   String get createUsbWarning => 'הכונן הנתיק יפורמט וכל הנתונים שעליו יאבדו.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get restore => 'שחזור';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'הפעלה מחדש';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'פרמוט מחדש';
 
   @override
   String get failed => 'הרצת הפקודה נכשלה';

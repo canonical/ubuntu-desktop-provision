@@ -5,30 +5,30 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Selamat Datang';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Selamat datang di $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'APA YANG BARU?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Awal yang dirampingkan';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Mendukung pengalaman penyiapan yang lebih bersih.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Tampilan baru App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Tidak pernah lebih mudah untuk menemukan perangkat lunak favorit Anda.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Keamanan yang ditingkatkan';
 
   @override
   String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';

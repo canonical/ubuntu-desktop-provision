@@ -27,7 +27,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveOption => 'Installacion interactiva';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Pels utilizaires que vòlon una guida estapa per tapa pendent l\'installacion.';
 
   @override
   String get autoinstallAutomatedOption => 'Installacion automatizada';
@@ -154,7 +154,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageTitle => 'Optimizatz vòstre ordenador';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Installar los logicials proprietaris recomandats ?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
