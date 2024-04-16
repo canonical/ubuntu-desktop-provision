@@ -59,7 +59,7 @@ class RebootCommand extends Command<void> {
 
   @override
   final description =
-      'Reboot into reset partition, or any other preconfigured options.\n'
+      'Reset into reset partition, or any other preconfigured options.\n'
       'If no option is given, a list of available options will be listed.';
 
   @override

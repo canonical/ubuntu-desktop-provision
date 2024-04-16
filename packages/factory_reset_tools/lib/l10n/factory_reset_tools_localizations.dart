@@ -330,7 +330,7 @@ abstract class FactoryResetToolsLocalizations {
   /// No description provided for @resetMediaReadyBody.
   ///
   /// In en, this message translates to:
-  /// **'When you want to use it, please insert the USB drive into the computer you want to reset and reboot it.'**
+  /// **'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.'**
   String get resetMediaReadyBody;
 
   /// No description provided for @errorLoadingDrives.
