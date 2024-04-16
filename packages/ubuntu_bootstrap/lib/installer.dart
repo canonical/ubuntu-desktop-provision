@@ -75,8 +75,6 @@ Future<void> runInstallerApp(
               .then((dir) => Directory(dir).existsSync() ? dir : null),
         );
 
-  final baseName = p.basename(Platform.resolvedExecutable);
-
   // conditional registration if not already registered by flavors or tests
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<ActiveDirectoryService>(
@@ -110,7 +108,7 @@ Future<void> runInstallerApp(
       allowedToHide: InstallationStep.allowedToHideKeys,
     ),
   );
-  tryRegisterService(() => PostInstallService('/tmp/$baseName.conf'));
+  tryRegisterService(() => PostInstallService('/tmp/bootstrap-postinst.conf'));
   tryRegisterService(PowerService.new);
   tryRegisterService(ProductService.new);
   tryRegisterService(() => RefreshService(getService<SubiquityClient>()));
