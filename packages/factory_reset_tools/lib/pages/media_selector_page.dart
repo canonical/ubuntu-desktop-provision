@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -31,8 +32,7 @@ class MediaSelectorPage extends ConsumerWidget {
           ];
         } else {
           return drives.map((drive) {
-            final sizeInGiB = drive.size.toDouble() / (1 << 30).toDouble();
-            final sizeString = '${sizeInGiB.toStringAsFixed(1)} GiB';
+            final sizeString = context.formatByteSize(drive.size, precision: 1);
             final device = drive.devicePath.split('/').last;
             return OptionButton(
               title: Text(
