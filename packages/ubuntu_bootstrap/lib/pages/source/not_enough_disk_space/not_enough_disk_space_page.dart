@@ -33,7 +33,10 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
         leading: BackWizardButton(),
       ),
       children: [
-        Text(lang.notEnoughDiskSpaceBody(flavor.displayName)),
+        // TODO(Lukas): Enable once we should release 24.04.1
+        if (false)
+          // ignore: dead_code
+          Text(lang.notEnoughDiskSpaceBody(flavor.displayName)),
         Table(
           defaultColumnWidth: const IntrinsicColumnWidth(),
           defaultVerticalAlignment: TableCellVerticalAlignment.middle,
