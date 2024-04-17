@@ -66,5 +66,47 @@
   "welcomeStartSubtitle": "Apoiando uma experiência de configuração mais limpa.",
   "@welcomeStartSubtitle": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProHeader": "Anexar esta máquina",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "ou adicionar um token manualmente",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Obtenha a subscrição mais abrangente para segurança de software de código aberto",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Sempre gratuito para utilização pessoal. 30 dias de teste para empresas. <a href=\"https://{url}\">Saiba mais</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Anexar",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Token inválido",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Token válido",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Token inválido. Tente novamente",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Ignorar por agora",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Pode sempre ativar o Ubuntu Pro mais tarde através da aplicação Software e Atualizações.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ativar o Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Anexe esta máquina a uma subscrição Ubuntu Pro para obter atualizações de segurança numa gama mais vasta de pacotes, até 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "O Ubuntu Pro está agora ativado nesta máquina",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Pode gerir os seus serviços Pro na aplicação Software e Atualizações.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProMagicAttachInstructions": "Anexação mágica com este código em <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
 }
