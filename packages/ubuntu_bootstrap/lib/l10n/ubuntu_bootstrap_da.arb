@@ -304,7 +304,7 @@
   "@installationSlidesGamingTitle": {},
   "installationSlidesSecurityTitle": "Privat og sikkert",
   "@installationSlidesSecurityTitle": {},
-  "installationSlidesSecurityLts": "Alle {DISTRO} LTS-udgivelser kommer med fem års sikkerhedsrettelser inkluderet, som kan udvides helt op til ti år, med et Ubuntu Pro-abonnement.",
+  "installationSlidesSecurityLts": "Alle {DISTRO} LTS-udgivelser understøttes i fem år med sikkerhedsrettelser, hvilket kan forlænges helt op til ti år med et Ubuntu Pro-abonnement.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
@@ -378,7 +378,7 @@
   "@restartIntoWindows": {},
   "continueTesting": "Fortsæt afprøvning",
   "@continueTesting": {},
-  "notEnoughDiskSpaceTitle": "Ikke nok plads",
+  "notEnoughDiskSpaceTitle": "Utilstrækkelig diskplads",
   "@notEnoughDiskSpaceTitle": {},
   "partitionCreateTitle": "Opret partition",
   "@partitionCreateTitle": {},
@@ -394,25 +394,25 @@
   "@partitionLocationLabel": {},
   "confirmPartitionsTitle": "Partitioner",
   "@confirmPartitionsTitle": {},
-  "installationSlidesCreativityBody": "Hvadenten du er animator, designer, videoskaber, eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO}, med understøttelse af åben kildekode og industriel standard-programvare samt -applikationer.",
+  "installationSlidesCreativityBody": "Hvadenten du er animator, designer eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO} med understøttelse af industristandarder og open source software.",
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityBody": "{DISTRO} Desktop inkluderer LibreOffice, en pakke Microsoft Office-kompatible applikationer med åben kildekode, til dokumenter, regneark og præsentationer. Populære kollaborationsværktøjer er også tilgængelige.",
+  "installationSlidesProductivityBody": "{DISTRO} Skrivebord inkluderer LibreOffice, en pakke Microsoft Office-kompatible programmer med åben kildekode, til dokumenter, regneark og præsentationer. Populære kollaborationsværktøjer er også tilgængelige.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportTitle": "Hjælp & Støtte",
+  "installationSlidesSupportTitle": "Hjælp og støtte",
   "@installationSlidesSupportTitle": {},
-  "configuringSystem": "Opsætter systemet…",
+  "configuringSystem": "Opsætter systemet …",
   "@configuringSystem": {},
-  "installationFailed": "Installation slog fejl",
+  "installationFailed": "Installationen mislykkedes",
   "@installationFailed": {},
   "partitionErase": "Formatér partition",
   "@partitionErase": {},
@@ -449,14 +449,14 @@
   "@installationSlidesAccessibilityTitle": {},
   "partitionMountPointLabel": "Monteringspunkt:",
   "@partitionMountPointLabel": {},
-  "installationSlidesGamingBody": "{DISTRO} understøtter de seneste NVIDIA- og Mesa-drivere, for at forbedre ydeevne og kompatibilitet. Tusindvis af Windows-titler kører glimrende på {DISTRO}, via applikationer som Stram, uden nogen yderligere konfiguration.",
+  "installationSlidesGamingBody": "{DISTRO} understøtter de seneste NVIDIA- og Mesa-drivere, som forbedrer ydeevne og kompatibilitet. Tusindvis af Windows-titler kører glimrende på {DISTRO}, via programmer som Steam uden nogen yderligere konfiguration.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} tilbyder alle de værktøjer, du har brug for, til at forblive privat og sikker på linjen. Med indbygget firewall og VPN-understøttelse, samt en mængde privatlivsorienterede applikationer, til at sikre at du har fuld kontrol over dine data.",
+  "installationSlidesSecurityBody": "{DISTRO} tilbyder alle de værktøjer, du har brug for, til at beskytte dit privatliv og din sikkerhed på nettet. Med indbygget firewall og VPN-understøttelse samt en mængde privatlivsorienterede programmer har du fuld kontrol over dine data.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -478,14 +478,14 @@
   "@installationSlidesAvailable": {},
   "installationCompleteTitle": "Installation gennemført",
   "@installationCompleteTitle": {},
-  "installationSlidesAccessibilityBody": "I centrum for {DISTRO}-filosofien er troen på, at computere er for alle. Med avancerede tilgængelighedsværktøjer og muligheder af, at ændre sprog, farver, og tekst størrelse, gør {DISTRO} det nemt at bruge computeren - hvem end og hvor end du er.",
+  "installationSlidesAccessibilityBody": "I centrum for {DISTRO}-filosofien er troen på, at computere er for alle. Med avancerede tilgængelighedsværktøjer og muligheder for at ændre sprog, farver og tekststørrelse, gør {DISTRO} det nemt at bruge computeren – hvem end og hvor end du er.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesAccessibilityOrca": "Orca Skærmoplæser",
+  "installationSlidesAccessibilityOrca": "Skærmoplæseren Orca",
   "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Sprogunderstøttelse",
   "@installationSlidesAccessibilityLanguages": {},
@@ -549,7 +549,7 @@
   },
   "copyingFiles": "Kopierer filer…",
   "@copyingFiles": {},
-  "installingSystem": "Installerer systemet…",
+  "installingSystem": "Installerer systemet …",
   "@installingSystem": {},
   "tooManyPrimaryPartitions": "For mange primære partitioner",
   "@tooManyPrimaryPartitions": {},
@@ -566,17 +566,17 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Spørg Ubuntu dækker en bred vifte af spørgsmål og svar, og Ubuntu Discourse tilbyder vejledninger og diskussioner, for nye og erfarne brugere.",
+  "installationSlidesSupportCommunity": "Spørg Ubuntu dækker en bred vifte af spørgsmål og svar, og Ubuntu Discourse tilbyder vejledninger og diskussioner for både nye og erfarne brugere.",
   "@installationSlidesSupportCommunity": {},
-  "installationSlidesSupportEnterprise": "For entreprise-brugere tilbyder Canonical kommerciel støtte, for at gøre det nemt at onboarde og administrere Ubuntu sikkert på arbejdspladsen.",
+  "installationSlidesSupportEnterprise": "For entreprise-brugere tilbyder Canonical kommerciel støtte for at gøre det nemt at onboarde og administrere Ubuntu sikkert på arbejdspladsen.",
   "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "Nyttige ressourcer:",
   "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Officiel dokumentation",
   "@installationSlidesSupportDocumentation": {},
-  "installationSlidesSupportUbuntuPro": "24/7 støtte på entreprise-niveau, med Ubuntu Pro",
+  "installationSlidesSupportUbuntuPro": "24/7 støtte på entreprise-niveau med Ubuntu Pro",
   "@installationSlidesSupportUbuntuPro": {},
-  "notEnoughDiskSpaceUbuntu": "Ikke nok diskplads, til at installere {DISTRO}",
+  "notEnoughDiskSpaceUbuntu": "Der er ikke nok diskplads til at installere {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
@@ -766,5 +766,236 @@
   "confirmSectionGeneralTitle": "Generelt",
   "@confirmSectionGeneralTitle": {},
   "restartWarningBody": "Genstart for at fuldføre installationen eller fortsæt med at afprøve.\nEventuelle ændringer, du foretager, gemmes ikke.",
-  "@restartWarningBody": {}
+  "@restartWarningBody": {},
+  "refreshPageTitle": "Opdatering tilgængelig",
+  "@refreshPageTitle": {},
+  "refreshHeader": "En opdatering er tilgængelig til installationsprogrammet",
+  "@refreshHeader": {},
+  "refreshUpdateNow": "Opdatér nu",
+  "@refreshUpdateNow": {},
+  "refreshSnapPrerequisites": "Sikrer forudsætninger for {snap} …",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCloseLabel": "Luk installationsprogram",
+  "@refreshCloseLabel": {},
+  "refreshSnapRefresh": "Opdaterer {snap} …",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "Opdaterer {snap} …",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Luk venligst installationsprogrammet og kør igen for at fortsætte",
+  "@refreshRestart": {},
+  "refreshSnapPrepare": "Forbereder {snap} …",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Henter {snap} …",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Validerer {snap} …",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Kontrollerer genopfriskning af {snap} …",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Monterer {snap} …",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Stopper {snap}-tjenester …",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "TPM-genoprettelsesnøgle",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Advarsel:</font> Hvis du mister denne sikkerhedsnøgle, tabes alle data. Hvis du har brug for det, så skriv din nøgle ned og gem den på et andet, sikkert sted.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyCommand": "Du kan tilgå din genoprettelsesnøgle efter installation med følgende kommando:",
+  "@recoveryKeyCommand": {},
+  "validate": "Validér",
+  "@validate": {},
+  "refreshInfo": "Opdatér til sidste version for at få forbedret stabilitet og flere funktioner.",
+  "@refreshInfo": {},
+  "refreshReady": "Opdatering klar",
+  "@refreshReady": {},
+  "refreshCurrent": "Nuværende version af {snap} er {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "Nuværende version {version} er opdateret.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Aflinker {snap} …",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Opdaterer ressourcer for {snap} …",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Kopierer {snap}-data …",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Linker {snap} …",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Opdatér til version {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Den valgte disk har ikke nok plads til at installere {DISTRO}. Afslut installationsprogrammet og frigør plads eller vælg en anden disk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Fjerner {snap}-aliasser …",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Opdaterer {snap}-kernekommandolinje …",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Opsætter {snap}-sikkerhedsprofiler …",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "For binder plugs og slots for {snap} …",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Angiver automatiske aliasser for {snap} …",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Konfigurerer {snap}-aliasser …",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Starter {snap}-tjenester …",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Renser {snap} …",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  }
 }
