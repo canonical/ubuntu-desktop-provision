@@ -40,7 +40,7 @@
   "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageDescription": "אילו יישומים להתקין בתור התחלה?",
   "@updatesOtherSoftwarePageDescription": {},
-  "bitlockerDescription": "המחשב הזה משתמש בהצפנת BitLocker של Windows.\nיש להשתמש ב־Windows כדי לפנות מקום או לבחור ב‚{option}’ כדי להמשיך.",
+  "bitlockerDescription": "המחשב הזה משתמש בהצפנת BitLocker של Windows.\nיש להשתמש ב־Windows כדי לפנות מקום או לחזור ולבחור ב‚{option}’ כדי להמשיך.",
   "@bitlockerDescription": {},
   "readyToUse": "המערכת {system} מותקנת ומוכנה לשימוש",
   "@readyToUse": {
@@ -63,7 +63,7 @@
   "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "תיקון יתקין את כל התכניות המותקנות מחדש מבלי לגעת במסמכים או בהגדרות.",
   "@tryOrInstallRepairDescription": {},
-  "rstDescription": "המחשב הזה משתמש ב־RST‏ (Rapid Storage Technology) מבית אינטל. יש לכבות את RST דרך Windows בטרם התקנת אובונטו.",
+  "rstDescription": "המחשב הזה משתמש ב־RST‏ (Rapid Storage Technology) מבית אינטל. יש לכבות את RST דרך Windows בטרם התקנת {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "לקבלת הנחיות, יש לסרוק את קוד ה־QR הזה במכשיר אחר או לבקר באתר: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -113,7 +113,7 @@
       "os": {}
     }
   },
-  "installationTypeManualInfo": "אפשר ליצור או לשנות גודל של מחיצות באופן עצמאי או לבחור מגוון מחיצות עבור {DISTRO}",
+  "installationTypeManualInfo": "למשתמשים מתקדמים שמחפשים תצורות כוננים מיוחדות.",
   "@installationTypeManualInfo": {},
   "selectGuidedStorageDropdownLabel": "בחירת כונן:",
   "@selectGuidedStorageDropdownLabel": {},
@@ -221,7 +221,7 @@
   "@partitionErase": {},
   "confirmPageTitle": "סיימנו להתכונן להתקנה",
   "@confirmPageTitle": {},
-  "confirmHeader": "בחירה להמשיך בתהליך תוביל לכך שהשינויים שמופיעים להלן ייכתבו לכונן. אפשר לערוך שינויים נוספים ידנית בהמשך.",
+  "confirmHeader": "סקירת הבחירות שלך",
   "@confirmHeader": {},
   "confirmPartitionTables": "טבלאות המחיצות של ההתקנים הבאים נערכו:",
   "@confirmPartitionTables": {},
@@ -362,9 +362,9 @@
   "@installCodecsTitle": {},
   "installDriversTitle": "התקנת תוכנת צד־שלישי לחומרת גרפיקה ותקשורת אלחוטית",
   "@installDriversTitle": {},
-  "installDriversSubtitle": "מנהלי התקנים אלה כפופים לתנאי הרישיון שנכללים בתיעוד שלהם. הם קנייניים.",
+  "installDriversSubtitle": "מנהלי התקנים אלה כפופים לתנאי הרישיון שנכללים בתיעוד שלהם. הם קנייניים",
   "@installDriversSubtitle": {},
-  "installCodecsSubtitle": "תוכנה זו כפופה לתנאי הרישיון שנכללים בתיעוד שלה. חלקם קנייניים.",
+  "installCodecsSubtitle": "תוכנה זו כפופה לתנאי הרישיון שנכללים בתיעוד שלה. חלקם קנייניים",
   "@installCodecsSubtitle": {},
   "tooManyPrimaryPartitions": "יותר מדי מחיצות ראשיות",
   "@tooManyPrimaryPartitions": {},
@@ -555,7 +555,7 @@
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM נבחר",
   "@installationTypeTPMSelected": {},
-  "refreshRestart": "נא להפעיל את תוכנית ההתקנה מחדש.",
+  "refreshRestart": "נא לסגור את תוכנית ההתקנה ולהפעיל אותה מחדש כדי להמשיך",
   "@refreshRestart": {},
   "refreshSnapPrerequisites": "התלויות של {snap} נבדקות…",
   "@refreshSnapPrerequisites": {
