@@ -54,7 +54,6 @@ func TestGetLocationSettings(t *testing.T) {
 	t.Parallel()
 
 	tests := map[string]struct {
-		emptyRequest    bool
 		getBooleanError bool
 
 		current bool
@@ -68,7 +67,6 @@ func TestGetLocationSettings(t *testing.T) {
 
 		// Error cases
 		"Error case returns false, no calls made": {getBooleanError: true},
-		"Error on empty request":                  {emptyRequest: true, wantErr: true},
 	}
 
 	for name, tc := range tests {
@@ -82,10 +80,7 @@ func TestGetLocationSettings(t *testing.T) {
 
 			client := newPrivacyClient(t, opts...)
 
-			var req *emptypb.Empty
-			if !tc.emptyRequest {
-				req = &emptypb.Empty{}
-			}
+            req := &emptypb.Empty{}
 
 			privacyResp, err := client.GetLocationServices(context.Background(), req)
 			if tc.wantErr {

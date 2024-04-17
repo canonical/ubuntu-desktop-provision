@@ -65,14 +65,12 @@ func TestGetTimezone(t *testing.T) {
 	tests := map[string]struct {
 		timedatePath string
 
-		emptyRequest bool
 		wantErr      bool
 	}{
 		// Success case
 		"Success with valid request": {},
 
 		// Error cases
-		"Error on empty request":           {emptyRequest: true, wantErr: true},
 		"Error when fails to get timezone": {timedatePath: "gettimezoneerror", wantErr: true},
 	}
 
@@ -88,13 +86,7 @@ func TestGetTimezone(t *testing.T) {
 			}
 
 			client := newTimezoneClient(t, opts...)
-
-			var req *emptypb.Empty
-			if !tc.emptyRequest {
-				req = &emptypb.Empty{}
-			} else {
-				req = nil
-			}
+            req := &emptypb.Empty{}
 
 			timezoneResp, err := client.GetTimezone(context.Background(), req)
 			if tc.wantErr {

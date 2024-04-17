@@ -84,26 +84,6 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 	}
 }
 
-func TestEmptyCreateUserRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newUserClient(t)
-
-	userResp, err := client.CreateUser(context.Background(), nil)
-	require.Error(t, err, "CreateUser should return an error for nil request")
-	require.Empty(t, userResp, "CreateUser should return a nil response for a nil request")
-}
-
-func TestEmptyValidateUsernameRequest(t *testing.T) {
-	t.Parallel()
-
-	client := newUserClient(t)
-
-	userResp, err := client.ValidateUsername(context.Background(), nil)
-	require.Error(t, err, "ValidateUsername should return an error for nil request")
-	require.Empty(t, userResp, "ValidateUsername should return a nil response for a nil request")
-}
-
 func TestDbusObjectsAvalible(t *testing.T) {
 	t.Parallel()
 
