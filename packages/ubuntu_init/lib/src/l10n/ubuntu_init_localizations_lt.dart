@@ -16,26 +16,26 @@ class UbuntuInitLocalizationsLt extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'Kas naujo?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Modernizuotas paleidimas';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Tvarkingesnio sąrankos patyrimo palaikymas.';
 
   @override
   String get welcomeStoreTitle => 'New look App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Mėgstamos programinės įrangos paieška dar niekada nebuvo tokia lengva.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Sustiprintas saugumas';
 
   @override
   String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Rodyti keitinių žurnalą</a>';
   }
 
   @override
@@ -43,21 +43,21 @@ class UbuntuInitLocalizationsLt extends UbuntuInitLocalizations {
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Padėkite tobulinti $distro';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Share data anonymously with $distro so we can improve your experience.';
+    return 'Bendrinkite anoniminius duomenis su $distro, kad galėtume gerinti jūsų patyrimą.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Taip, bendrinti sisteminius duomenis su $distro komanda';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Ne, nebendrinti sisteminių duomenų';
 
   @override
   String get telemetryReportLabel => 'Reporting details';
@@ -81,7 +81,7 @@ class UbuntuInitLocalizationsLt extends UbuntuInitLocalizations {
   String get privacyLocationEnable => 'Location services';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Duomenų privatumas';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {

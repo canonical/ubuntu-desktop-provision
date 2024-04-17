@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Перезагрузитесь, чтобы завершить установку или продолжить тестирование.\nЛюбые внесенные вами изменения не будут сохранены.';
+  String get restartWarningBody => 'Перезагрузите устройство, чтобы завершить установку, или продолжайте тестирование.\nЛюбые внесенные вами изменения не будут сохранены.';
 
   @override
   String get rebootToConfigureWarning => 'Чтобы продолжить процесс установки, необходимо перезагрузить компьютер.';

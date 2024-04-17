@@ -130,7 +130,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get dontInstallDriverSoftwareNow => 'Älä asenna ajureita toistaiseksi';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Voit asentaa ne myöhemmin Päivitykset ja muut ohjelmistot -ohjelmassa.';
+  String get dontInstallDriverSoftwareNowDescription => 'Voit asentaa ne myöhemmin Ohjelmistot ja päivitykset -sovelluksessa.';
 
   @override
   String get configureSecureBootSecurityKeyRequired => 'Salausavain vaaditaan';
@@ -139,26 +139,26 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Salausavaimet eivät täsmää';
 
   @override
-  String get showSecurityKey => 'Näytä salausavain';
+  String get showSecurityKey => 'Näytä';
 
   @override
   String get hideSecurityKey => 'Piilota';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Sovellukset ja päivitykset';
+  String get updatesOtherSoftwarePageTitle => 'Sovellukset';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Millä sovelluksin haluat aloittaa?';
+  String get updatesOtherSoftwarePageDescription => 'Millä sovelluksilla haluat aloittaa?';
 
   @override
   String get codecsAndDriversPageTitle => 'Optimoi tietokoneesi';
 
   @override
-  String get codecsAndDriversPageDescription => 'Asennetaanko suositellut omisteiset ohjelmistot?';
+  String get codecsAndDriversPageDescription => 'Asennetaanko suositellut suljetun lähdekoodin ohjelmistot?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ei sisällä oletuksena omisteisia ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.';
+    return '$DISTRO ei sisällä oletuksena suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.';
   }
 
   @override
@@ -168,7 +168,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaBody => 'Lisäajureiden asentamista suositellaan, jotta NVIDIA:n näytönohjaimesta saadaan paras mahdollinen suorituskyky.';
 
   @override
-  String get fullInstallationTitle => 'Täysi asennus';
+  String get fullInstallationTitle => 'Laajennettu valikoima';
 
   @override
   String get fullInstallationSubtitle => 'Yhteydettömään tilaan soveltuva kokoelma toimisto-ohjelmistoja, työkaluja, verkkoselain ja pelejä.';
@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Vahvista tunnuslause';
 
   @override
-  String get installationTypeTitle => 'Asennustyyppi';
+  String get installationTypeTitle => 'Levyasetukset';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -302,7 +302,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Salausavain valitaan seuraavassa vaiheessa.';
 
   @override
-  String get installationTypeZFS => 'KOKEELLINEN: Tyhjennä levy ja käytä ZFS:ää';
+  String get installationTypeZFS => 'Tyhjennä levy ja käytä ZFS:ää';
 
   @override
   String get installationTypeZFSEncryption => 'Tyhjennä levy ja käytä ZFS:ää sekä salausta';
@@ -314,7 +314,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS ja salaus valittu';
 
   @override
-  String get installationTypeTPM => 'KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta';
+  String get installationTypeTPM => 'Käytä laitteistopohjaista koko levyn salausta';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
@@ -355,10 +355,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Asiakirjat, musiikki ja muut henkilökohtaiset tiedostot säilytetään. Jokaisella tietokoneen käynnistyskerralla voit valita, mikä käyttöjärjestelmä käynnistetään.';
+  String get installationTypeAlongsideInfo => 'Voit valita käyttöjärjestelmän käynnistettäessä.';
 
   @override
-  String get installationTypeManual => 'Manuaalinen osiointi';
+  String get installationTypeManual => 'Manuaalinen asennus';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
@@ -495,7 +495,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get partitionLocationEnd => 'Tilan loppu';
 
   @override
-  String get partitionFormatLabel => 'Tiedostojärjestelmä:';
+  String get partitionFormatLabel => 'Käytetään kohteena:';
 
   @override
   String get partitionFormatNone => 'Jätä alustamatta';
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Valmis asennukseen';
 
   @override
-  String get confirmHeader => 'Katselmoi valintasi';
+  String get confirmHeader => 'Tarkista valintasi';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -545,7 +545,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmEntryInstallationDisk => 'Asennuslevy';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Omisteinen ohjelmisto';
+  String get confirmEntryProprietarySoftware => 'Suljetun lähdekoodin ohjelmistot';
 
   @override
   String get confirmSectionGeneralTitle => 'Yleiset';

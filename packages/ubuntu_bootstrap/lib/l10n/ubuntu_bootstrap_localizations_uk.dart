@@ -654,7 +654,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartIntoWindows => 'Перезавантажити в Windows';
+  String get restartIntoWindows => 'Перезапустити у Windows';
 
   @override
   String get restartIntoWindowsTitle => 'Restart into Windows?';
@@ -676,20 +676,20 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Included:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'Швидка, вільна та повна нових функцій';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'Найновіша версія $DISTRO робить обчислення простішими, ніж будь-коли.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Незалежно від того, чи ви розробник, творець, геймер або адміністратор, у $RELEASE ви знайдете нові інструменти для поліпшення продуктивності та зручності роботи.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Усі необхідні застосунки';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {

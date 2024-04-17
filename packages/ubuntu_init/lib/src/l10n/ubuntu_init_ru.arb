@@ -66,5 +66,47 @@
   "telemetryLegalLabel": "Правовая информация",
   "@telemetryLegalLabel": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenTextfieldHint": "Токен",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Всегда бесплатно для личного использования. 30-дневный пробный период для коммерческих целей. <a href=\"https://{url}\">Узнать больше</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachSucess": "Действительный токен",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Недействительный токен, повторите попытку",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Включить Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachDescription": "Вы можете управлять услугами Pro в приложении «Программы и обновления».",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProSucessAttachHeader": "Подписка Ubuntu Pro теперь задействована на этой машине",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProHeader": "Подключите это устройство",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "или добавьте токен вручную",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProSubscriptionDescription": "Получите самую полную подписку по безопасности программного обеспечения с открытым исходным кодом",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachButton": "Подключить",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Недействительный токен",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProOnBoardingSkipForNow": "Пока пропустить",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Вы всегда можете включить Ubuntu Pro позже через приложение «Программы и обновления».",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Подключите это устройство к подписке Ubuntu Pro, чтобы получать обновления безопасности для широкого списка пакетов до 2032 года.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProMagicAttachInstructions": "Быстрое подключение с помощью этого кода на <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
 }

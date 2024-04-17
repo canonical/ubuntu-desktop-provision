@@ -185,7 +185,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Kyseinen nimi sisältää virheellisiä merkkejä.';
 
   @override
-  String get identityPasswordLabel => 'Valitse salasana';
+  String get identityPasswordLabel => 'Salasana';
 
   @override
   String get identityPasswordRequired => 'Salasana vaaditaan';
@@ -206,7 +206,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Käytä Active Directorya';
 
   @override
-  String get identityActiveDirectoryInfo => 'Kirjoitat domainin ja muut tiedot seuraavassa vaiheessa.';
+  String get identityActiveDirectoryInfo => 'Kirjoita toimialue ja muut tiedot seuraavassa vaiheessa.';
 
   @override
   String get activeDirectoryTitle => 'Kirjaudu Active Directoryyn';
@@ -220,7 +220,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Testaa domain-yhdistettävyyttä';
+  String get activeDirectoryTestConnection => 'Testaa toimialueen yhdistettävyyttä';
 
   @override
   String get activeDirectoryDomainLabel => 'Toimialue';
@@ -250,10 +250,10 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainMultipleDots => 'Sisältää lukuisia peräkkäisiä pisteitä (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domainia ei löydy';
+  String get activeDirectoryDomainNotFound => 'Toimialuetta ei löydy';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domainiin liittävä käyttäjä';
+  String get activeDirectoryAdminLabel => 'Toimialueeseen liittävä käyttäjä';
 
   @override
   String get activeDirectoryAdminEmpty => 'Vaadittu';

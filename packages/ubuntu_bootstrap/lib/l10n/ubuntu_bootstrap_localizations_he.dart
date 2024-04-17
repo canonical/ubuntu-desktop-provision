@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'המחשב הזה משתמש ב־RST‏ (Rapid Storage Technology) מבית אינטל. יש לכבות את RST דרך Windows בטרם התקנת אובונטו.';
+    return 'המחשב הזה משתמש ב־RST‏ (Rapid Storage Technology) מבית אינטל. יש לכבות את RST דרך Windows בטרם התקנת $DISTRO.';
   }
 
   @override
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'התקנת תוכנת צד־שלישי לחומרת גרפיקה ותקשורת אלחוטית';
 
   @override
-  String get installDriversSubtitle => 'מנהלי התקנים אלה כפופים לתנאי הרישיון שנכללים בתיעוד שלהם. הם קנייניים.';
+  String get installDriversSubtitle => 'מנהלי התקנים אלה כפופים לתנאי הרישיון שנכללים בתיעוד שלהם. הם קנייניים';
 
   @override
   String get installCodecsTitle => 'הורדה והתקנה של תמיכה בתצורות מדיה נוספות';
 
   @override
-  String get installCodecsSubtitle => 'תוכנה זו כפופה לתנאי הרישיון שנכללים בתיעוד שלה. חלקם קנייניים.';
+  String get installCodecsSubtitle => 'תוכנה זו כפופה לתנאי הרישיון שנכללים בתיעוד שלה. חלקם קנייניים';
 
   @override
   String get batteryWarning => 'המחשב לא מחובר למקור חשמל.';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'אפשר ליצור או לשנות גודל של מחיצות באופן עצמאי או לבחור מגוון מחיצות עבור $DISTRO';
+    return 'למשתמשים מתקדמים שמחפשים תצורות כוננים מיוחדות.';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'סיימנו להתכונן להתקנה';
 
   @override
-  String get confirmHeader => 'בחירה להמשיך בתהליך תוביל לכך שהשינויים שמופיעים להלן ייכתבו לכונן. אפשר לערוך שינויים נוספים ידנית בהמשך.';
+  String get confirmHeader => 'סקירת הבחירות שלך';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -645,7 +645,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'המחשב הזה משתמש בהצפנת BitLocker של Windows.\nיש להשתמש ב־Windows כדי לפנות מקום או לבחור ב‚$option’ כדי להמשיך.';
+    return 'המחשב הזה משתמש בהצפנת BitLocker של Windows.\nיש להשתמש ב־Windows כדי לפנות מקום או לחזור ולבחור ב‚$option’ כדי להמשיך.';
   }
 
   @override
@@ -845,7 +845,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'נא להפעיל את תוכנית ההתקנה מחדש.';
+  String get refreshRestart => 'נא לסגור את תוכנית ההתקנה ולהפעיל אותה מחדש כדי להמשיך';
 
   @override
   String get refreshCloseLabel => 'סגירת תוכנית ההתקנה';

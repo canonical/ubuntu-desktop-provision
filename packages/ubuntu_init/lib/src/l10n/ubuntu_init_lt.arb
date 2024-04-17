@@ -4,5 +4,47 @@
   "welcomePageHeader": "Išbandykite ar įdiekite {distro} sistemą",
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "Kas naujo?",
-  "@welcomeWhatsNew": {}
+  "@welcomeWhatsNew": {},
+  "welcomeSecurityTitle": "Sustiprintas saugumas",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Rodyti keitinių žurnalą</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryHeader": "Padėkite tobulinti {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Bendrinkite anoniminius duomenis su {distro}, kad galėtume gerinti jūsų patyrimą.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Taip, bendrinti sisteminius duomenis su {distro} komanda",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "privacyPolicyLink": "Duomenų privatumas",
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "telemetryLabelOff": "Ne, nebendrinti sisteminių duomenų",
+  "@telemetryLabelOff": {},
+  "welcomeStartTitle": "Modernizuotas paleidimas",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Tvarkingesnio sąrankos patyrimo palaikymas.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "Mėgstamos programinės įrangos paieška dar niekada nebuvo tokia lengva.",
+  "@welcomeStoreSubtitle": {}
 }

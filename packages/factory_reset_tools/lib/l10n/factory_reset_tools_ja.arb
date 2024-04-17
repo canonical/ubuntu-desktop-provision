@@ -56,8 +56,12 @@
   "@resetMediaCopying": {},
   "createUsbBody": "Ubuntuインストールをカスタマイズするように、システムのリストアのためにUSBリセットメディアを作成します。",
   "@createUsbBody": {},
-  "createUsbListExplanation": "USBメモリーを選択してください。少なくとも16GBのUSBメモリーが必要です",
+  "createUsbListExplanation": "USBメモリーを選択してください。**少なくとも16GB**のUSBメモリーが必要です",
   "@createUsbListExplanation": {},
   "noMediaDetected": "リムーバブルストレージが見つかりません",
-  "@noMediaDetected": {}
+  "@noMediaDetected": {},
+  "restart": "再起動",
+  "@restart": {},
+  "reformat": "再フォーマット",
+  "@reformat": {}
 }

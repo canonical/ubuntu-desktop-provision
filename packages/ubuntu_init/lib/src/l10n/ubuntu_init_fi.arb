@@ -66,5 +66,47 @@
   "ubuntuProPageTitle": "Ubuntu Pro",
   "@ubuntuProPageTitle": {},
   "privacyPolicyLink": "Tietosuoja",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProHeader": "Liitä tämä kone",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "tai lisää koodi (token) käsin",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenAttachError": "Virheellinen koodi",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ota Ubuntu Pro käyttöön",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Liitä tämä kone Ubuntu Pro -tilaukseen saadaksesi tietoturvapäivityksiä laajalle valikoimalle paketteja vuoteen 2032 asti.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProMagicAttachInstructions": "Liitä tämä erityisellä koodilla osoitteessa <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSubscriptionDescription": "Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachSucess": "Virheellinen koodi",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Henkilökohtaiseen käyttöön ilmainen, 30 päivän kokeilujakso yrityksille. <a href=\"https://{url}\">Lue lisää</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Liitä",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenTextfieldHint": "Koodi",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Voit aina ottaa käyttöön Ubuntu Pron Ohjelmistot ja päivitykset -sovelluksessa.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProTokenAttachErrorVariant": "Virheellinen koodi, yritä uudelleen",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Ohita toistaiseksi",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro on nyt käytössä tälle tietokoneelle",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.",
+  "@ubuntuProSucessAttachDescription": {}
 }

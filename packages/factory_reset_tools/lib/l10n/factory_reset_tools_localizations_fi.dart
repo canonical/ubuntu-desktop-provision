@@ -5,91 +5,91 @@ class FactoryResetToolsLocalizationsFi extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Tehdasetuksiin palautuksen työkalut';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Tehdasetuksiin palautuksen työkalut';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Mitä haluaisit tehdä?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Luo palautusmedia';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Käynnistä tehdasasetuksiin palauttaminen';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Luo USB-palautusmedia';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Luo USB-palautusmedia palauttaaksesi järjestelmän tehdasasetuksiin, sekä mukauttaaksesi Ubuntu-asennuksiasi.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Valitse USB-tallennuslaite. Laitteella tulee olla **vähintään 16Gt tilaa.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Tallennuslaite alustetaan uudelleen ja kaikki laitteella jo oleva tieto hävitetään.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-palautusmedia';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Irrotettavaa tallennuslaitetta ei havaita';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Tarvitset USB-tallennusvälineen luodaksesi tehdasasetuksien palautusmedian.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Tee valinta käynnistääksesi tehdasasetuksiin palauttamisen';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Odota kun laitteita tutkitaan.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-palautusmedia valmis';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Kun haluat käyttää sitä, liitä USB-tallennuslaite tietokoneeseen jonka haluat palauttaa ja käynnistä kone uudelleen.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Tutkittaessa laitteita tapahtui virhe.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Aloitetaan';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopioidaan';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Viimeistellään';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Valmis';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Epäonnistui';
 
   @override
-  String get error => 'Error';
+  String get error => 'Virhe';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ladataan...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Varoitus';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Palauta';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Käynnistä uudelleen';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Alusta uudelleen';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Komennon suorittaminen epäonnistui';
 
   @override
   String get close => 'Sulje';

@@ -66,5 +66,47 @@
   "privacyPolicyLink": "Prywatność danych",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Zawsze bezpłatnie do użytku osobistego. 30-dniowy okres próbny dla przedsiębiorstw. <a href=\"https://{url}\">Dowiedz się więcej</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachErrorVariant": "Token nieprawidłowy, ponów",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Pomiń na razie",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProSucessAttachDescription": "Usługami Pro możesz zarządzać w aplikacji Oprogramowanie i aktualizacje.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro włączono teraz w tym urządzeniu",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProHeader": "Podłącz to urządzenie",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "lub dodaj token ręcznie",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProSubscriptionDescription": "Uzyskaj najbardziej kompleksową subskrypcję zabezpieczeń oprogramowania typu open source",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachButton": "Podłącz",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Token nieprawidłowy",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Token prawidłowy",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Zawsze możesz włączyć Ubuntu Pro później za pomocą aplikacji Oprogramowanie i aktualizacje.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Włącz Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Podłącz to urządzenie do subskrypcji Ubuntu Pro, aby otrzymywać aktualizacje zabezpieczeń w szerszej gamie pakietów do 2032 roku.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProMagicAttachInstructions": "Podłącz szybko z tym kodem pod adresem <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
 }

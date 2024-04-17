@@ -311,7 +311,7 @@
   "@configuringSystem": {},
   "installationFailed": "Inštalácia sa nepodarila",
   "@installationFailed": {},
-  "notEnoughDiskSpaceTitle": "Nedostatok miesta",
+  "notEnoughDiskSpaceTitle": "Nedostatočný priestor na disku",
   "@notEnoughDiskSpaceTitle": {},
   "notEnoughDiskSpaceAvailable": "K dispozícii:",
   "@notEnoughDiskSpaceAvailable": {},
@@ -959,6 +959,14 @@
   "@selectGuidedStorageDriveDropdownLabel": {},
   "guidedStoragePageHeader": "Vyberte, kde sa má nainštalovať {DISTRO}",
   "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Vybratý disk nemá dostatok miesta na inštaláciu {DISTRO}. Ukončite inštalátor, aby ste uvoľnili miesto alebo vyberte iný disk.",
+  "@notEnoughDiskSpaceBody": {
     "placeholders": {
       "DISTRO": {
         "type": "String"

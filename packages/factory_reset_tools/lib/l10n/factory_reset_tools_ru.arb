@@ -6,7 +6,7 @@
   "@homeTitle": {},
   "startFactoryReset": "Начать сброс",
   "@startFactoryReset": {},
-  "createUsbListExplanation": "Выберите флэш-накопитель USB. На накопителе должно быть не менее 16 Гб места",
+  "createUsbListExplanation": "Выберите флэш-накопитель USB. На накопителе должно быть **не менее 16 Гб места.**",
   "@createUsbListExplanation": {},
   "resetMediaTitle": "USB-носитель для сброса",
   "@resetMediaTitle": {},
@@ -59,5 +59,9 @@
   "loading": "Загрузка…",
   "@loading": {},
   "ok": "ОК",
-  "@ok": {}
+  "@ok": {},
+  "restart": "Перезагрузить",
+  "@restart": {},
+  "reformat": "Переформатировать",
+  "@reformat": {}
 }

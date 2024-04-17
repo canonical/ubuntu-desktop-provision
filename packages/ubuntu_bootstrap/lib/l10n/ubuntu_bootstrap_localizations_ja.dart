@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'インストールを完了するために再起動するか、試用を続けてください。\nいかなる変更点も保存されません。';
+  String get restartWarningBody => 'インストール完了のため再起動するか、試用を継続するかを選択してください。\nいかなる変更点も保存しないのでご注意ください。';
 
   @override
   String get rebootToConfigureWarning => 'インストール処理の継続のためコンピューターを再起動してください。';

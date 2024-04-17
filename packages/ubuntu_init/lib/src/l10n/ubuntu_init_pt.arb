@@ -64,5 +64,7 @@
   "telemetryLabelOff": "Não, não partilhe os dados do sistema",
   "@telemetryLabelOff": {},
   "welcomeStartSubtitle": "Apoiando uma experiência de configuração mais limpa.",
-  "@welcomeStartSubtitle": {}
+  "@welcomeStartSubtitle": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

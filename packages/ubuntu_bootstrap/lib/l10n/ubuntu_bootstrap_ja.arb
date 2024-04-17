@@ -754,7 +754,7 @@
       }
     }
   },
-  "restartWarningBody": "インストールを完了するために再起動するか、試用を続けてください。\nいかなる変更点も保存されません。",
+  "restartWarningBody": "インストール完了のため再起動するか、試用を継続するかを選択してください。\nいかなる変更点も保存しないのでご注意ください。",
   "@restartWarningBody": {},
   "recoveryKeyWarning": "<font color=\"{color}\">警告:</font> セキュリティキーを紛失すると、すべてのデータを失います。必要であればキーを書き出し、安全な場所に保管してください。",
   "@recoveryKeyWarning": {
