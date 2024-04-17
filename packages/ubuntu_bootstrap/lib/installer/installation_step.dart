@@ -20,8 +20,6 @@ enum InstallationStep with RouteName {
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
-  bitlocker(BitLockerPage.new,
-      wizardStep: false, discreteStep: false, required: true),
   secureBoot(SecureBootPage.new, discreteStep: false, required: true),
   storage(StorageWizard.new, discreteStep: false),
   identity(IdentityPage.new),
