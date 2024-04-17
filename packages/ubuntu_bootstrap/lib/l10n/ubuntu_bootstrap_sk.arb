@@ -710,7 +710,7 @@
       "snap": {}
     }
   },
-  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap} ...",
+  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap}...",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
