@@ -310,7 +310,7 @@
       "mount": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "Za mało przestrzeni",
+  "notEnoughDiskSpaceTitle": "Za mało przestrzeni dyskowej",
   "@notEnoughDiskSpaceTitle": {},
   "quitButtonText": "Zakończ instalację",
   "@quitButtonText": {},
@@ -453,7 +453,7 @@
       "DISTRO": {}
     }
   },
-  "notEnoughDiskSpaceUbuntu": "Za mało przestrzeni na dysku do zainstalowania {DISTRO}",
+  "notEnoughDiskSpaceUbuntu": "Za mało przestrzeni dyskowej do zainstalowania {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
@@ -911,5 +911,13 @@
   "refreshCloseLabel": "Zamknij instalator",
   "@refreshCloseLabel": {},
   "validate": "Sprawdź",
-  "@validate": {}
+  "@validate": {},
+  "notEnoughDiskSpaceBody": "Na wybranym dysku nie ma wystarczającej ilości przestrzeni dyskowej, aby zainstalować {DISTRO}. Zakończ instalator, aby zwolnić przestrzeń, lub wybierz inny dysk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
