@@ -319,7 +319,7 @@
   "@installingSystem": {},
   "configuringSystem": "Настройка системы…",
   "@configuringSystem": {},
-  "notEnoughDiskSpaceTitle": "Недостаточно места",
+  "notEnoughDiskSpaceTitle": "Недостаточно места на диске",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionFormatMount": "раздел <b>{sysname}</b> отформатирован как <b>{format}</b> и использован для <b>{mount}</b>",
   "@confirmPartitionFormatMount": {
@@ -906,5 +906,13 @@
     }
   },
   "restartWarningBody": "Перезагрузите устройство, чтобы завершить установку, или продолжайте тестирование.\nЛюбые внесенные вами изменения не будут сохранены.",
-  "@restartWarningBody": {}
+  "@restartWarningBody": {},
+  "notEnoughDiskSpaceBody": "На выбранном диске недостаточно места для установки {DISTRO}. Выйдите из программы установки и освободите место, или выберите другой диск.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
