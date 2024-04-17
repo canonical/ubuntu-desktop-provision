@@ -14,7 +14,7 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-// Option is a functional options for tests.
+// Option is a functional option for tests.
 type Option func(*Service) error
 
 type sysmetricer interface {
