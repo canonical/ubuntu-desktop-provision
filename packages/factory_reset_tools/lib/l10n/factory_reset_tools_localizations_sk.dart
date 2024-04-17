@@ -41,7 +41,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get noMediaDetectedSubtitle => 'Na vytvorenie obnovovacieho média je potrebná USB jednotka.';
 
   @override
-  String get factoryResetTitle => 'Výber možností spustenia obnovenia nastavení';
+  String get factoryResetTitle => 'Vyberte možnosť spustenia obnovenia nastavení';
 
   @override
   String get loadingDrives => 'Prosím, počkajte, načítavajú sa jednotky.';

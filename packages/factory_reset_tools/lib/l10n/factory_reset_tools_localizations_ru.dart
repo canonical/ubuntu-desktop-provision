@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Создайте USB-носитель для сброса, чтобы восстановить систему, а также настроить установку Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Выберите флэш-накопитель USB. На накопителе должно быть не менее 16 Гб места';
+  String get createUsbListExplanation => 'Выберите флэш-накопитель USB. На накопителе должно быть **не менее 16 Гб места.**';
 
   @override
   String get createUsbWarning => 'Флеш-накопитель будет переформатирован, а все данные на нём будут потеряны.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get restore => 'Сброс';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Перезагрузить';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Переформатировать';
 
   @override
   String get failed => 'Не удалось выполнить команду';

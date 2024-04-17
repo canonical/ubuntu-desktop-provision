@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsJa extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Ubuntuインストールをカスタマイズするように、システムのリストアのためにUSBリセットメディアを作成します。';
 
   @override
-  String get createUsbListExplanation => 'USBメモリーを選択してください。少なくとも16GBのUSBメモリーが必要です';
+  String get createUsbListExplanation => 'USBメモリーを選択してください。**少なくとも16GB**のUSBメモリーが必要です';
 
   @override
   String get createUsbWarning => 'USBメモリーはフォーマットされ、すべてのデータは失われます。';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsJa extends FactoryResetToolsLocalizations {
   String get restore => 'リストア';
 
   @override
-  String get restart => 'Restart';
+  String get restart => '再起動';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => '再フォーマット';
 
   @override
   String get failed => 'コマンドの実行に失敗';
