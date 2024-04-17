@@ -1,3 +1,9 @@
+provd (0.1.3) noble; urgency=medium
+
+  * Fixed a flaky test that failed occasionally on arm64.
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Wed, 17 Apr 2024 20:58:43 +0200
+
 provd (0.1.2) noble; urgency=medium
 
   * provd to use provd group, not gnome-initial-setup group.
