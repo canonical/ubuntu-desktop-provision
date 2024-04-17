@@ -65,7 +65,7 @@ func TestGetTimezone(t *testing.T) {
 	tests := map[string]struct {
 		timedatePath string
 
-		wantErr      bool
+		wantErr bool
 	}{
 		// Success case
 		"Success with valid request": {},
@@ -86,7 +86,7 @@ func TestGetTimezone(t *testing.T) {
 			}
 
 			client := newTimezoneClient(t, opts...)
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			timezoneResp, err := client.GetTimezone(context.Background(), req)
 			if tc.wantErr {

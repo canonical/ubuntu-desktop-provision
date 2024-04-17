@@ -80,7 +80,7 @@ func TestGetLocationSettings(t *testing.T) {
 
 			client := newPrivacyClient(t, opts...)
 
-            req := &emptypb.Empty{}
+			req := &emptypb.Empty{}
 
 			privacyResp, err := client.GetLocationServices(context.Background(), req)
 			if tc.wantErr {
