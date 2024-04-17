@@ -206,7 +206,7 @@
   "@installationTypeEncrypt": {},
   "installationTypeEncryptInfo": "Salausavain valitaan seuraavassa vaiheessa.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "KOKEELLINEN: Tyhjennä levy ja käytä ZFS:ää",
+  "installationTypeZFS": "Tyhjennä levy ja käytä ZFS:ää",
   "@installationTypeZFS": {},
   "selectGuidedStorageInstallNow": "Asenna nyt",
   "@selectGuidedStorageInstallNow": {},
@@ -665,7 +665,7 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "KOKEELLINEN: Käytä laitteistopohjaista koko levyn salausta",
+  "installationTypeTPM": "Käytä laitteistopohjaista koko levyn salausta",
   "@installationTypeTPM": {},
   "refreshSnapDownload": "Ladataan {snap}...",
   "@refreshSnapDownload": {
