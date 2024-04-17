@@ -735,5 +735,61 @@
   "fullInstallationSubtitle": "Eine offline-freundliche Auswahl an Office-Programmen, Dienstprogrammen, Webbrowsern und Spielen.",
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Vollständige Installation",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "autoinstallTitle": "Art der Installation",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Wie möchten Sie {DISTRO} installieren?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Interaktive Installation",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Für Benutzer, die Schritt für Schritt durch die Installation geführt werden möchten.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automatisierte Installation",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Für fortgeschrittene Benutzer, die eine autoinstall.yaml für konsistente und wiederholbare Systemeinrichtungen haben.",
+  "@autoinstallAutomatedDescription": {},
+  "warningLabel": "Warnung:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Was möchten Sie mit {DISTRO} machen?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Ausblenden",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Optimieren Sie Ihren Computer",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Empfohlene proprietäre Software installieren?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA-Grafikkarte erkannt",
+  "@codecsAndDriversNvidiaNote": {},
+  "choosePassphraseTitle": "Festplatten-Passphrase",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Passphrase erstellen",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseConfirmHint": "Passphrase bestätigen",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Eine Passphrase ist erforderlich",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Die Passphrasen stimmen nicht überein",
+  "@choosePassphraseMismatch": {},
+  "codecsAndDriversNvidiaBody": "Um die beste Leistung von NVIDIA-Grafikkarten zu erzielen, wird die Installation zusätzlicher Treiber dringend empfohlen.",
+  "@codecsAndDriversNvidiaBody": {},
+  "batteryWarning": "Der Computer ist nicht an eine Stromquelle angeschlossen.",
+  "@batteryWarning": {},
+  "choosePassphraseInfoBody": "Wenn Sie Ihre Passphrase verlieren, verlieren Sie alle Ihre Daten.",
+  "@choosePassphraseInfoBody": {},
+  "choosePassphraseInfoHeader": "Stellen Sie sicher, dass Sie Ihre Passphrase speichern",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseHint": "Passphrase auswählen",
+  "@choosePassphraseHint": {}
 }
