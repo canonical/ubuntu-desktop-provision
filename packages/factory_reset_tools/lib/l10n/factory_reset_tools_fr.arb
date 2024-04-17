@@ -35,5 +35,7 @@
   "homeTitle": "Que voulez-vous faire ?",
   "@homeTitle": {},
   "factoryResetTitle": "Sélectionnez une option pour démarrer la réinitialisation usine",
-  "@factoryResetTitle": {}
+  "@factoryResetTitle": {},
+  "restart": "Redémarrer",
+  "@restart": {}
 }
