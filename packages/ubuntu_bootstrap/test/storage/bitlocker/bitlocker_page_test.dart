@@ -5,6 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_page.dart';
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -13,7 +14,13 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_bitlocker.dart';
 
 void main() {
-  setUpAll(YaruTestWindow.ensureInitialized);
+  setUpAll(
+    () {
+      YaruTestWindow.ensureInitialized();
+      registerMockService<ThemeVariantService>(MockThemeVariantService());
+      registerMockService<PageConfigService>(MockPageConfigService());
+    },
+  );
 
   testWidgets('restart', (tester) async {
     final model = buildBitLockerModel();
