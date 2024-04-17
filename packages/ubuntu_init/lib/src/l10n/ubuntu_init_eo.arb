@@ -66,5 +66,47 @@
   "privacyLocationSubtitle": "Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.",
   "@privacyLocationSubtitle": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenTextfieldHint": "Ĵetono",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProMagicAttachInstructions": "Aŭtomate alkroĉu per la jena kodo ĉe <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProHeader": "Alkroĉi ĉi tiun komputilon",
+  "@ubuntuProHeader": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Ĉiam senkosta por persona uzo, 30 tagoj da provperiodo por entreprenoj. <a href=\"https://{url}\">Lernu pli</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro estas nun ŝaltita sur ĉi tiu komputilo",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProOnBoardingSkipForNow": "Preterpasi portempe",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProSucessAttachDescription": "Vi povas administri viajn servojn de Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Vi povas ŝalti Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Alkroĉu ĉi tiun komputilon al abono de Ubuntu Pro por sekurigaj ĝisdatigoj pri vasta gamo da pakoj ĝis 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSubscriptionDescription": "Abonu la plej ampleksan protekton pri malfermitkodaj programoj",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachError": "Nevalida ĵetono",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Valida ĵetono",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Nevalida ĵetono, reprovu",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOrAddTokenManually": "aŭ aldonu ĵetonon neaŭtomate",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenAttachButton": "Alkroĉi",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ŝalti Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {}
 }
