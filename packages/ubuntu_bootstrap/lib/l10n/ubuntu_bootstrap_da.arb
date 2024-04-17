@@ -1,14 +1,14 @@
 {
   "@@locale": "da",
-  "installThirdPartyTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware, såvel som yderligere medieformater",
+  "installThirdPartyTitle": "Installér tredjepartssoftware til grafik- og Wi-Fi hardware samt yderligere medieformater",
   "@installThirdPartyTitle": {},
-  "installDriversTitle": "Installér tredjeparts software til grafik og Wi-Fi hardware",
+  "installDriversTitle": "Installér tredjepartssoftware til grafik- og Wi-Fi-hardware",
   "@installDriversTitle": {},
-  "installDriversSubtitle": "Disse chauffører er underlagt de licensvilkår, som er inkluderet i deres dokumentation. De er proprietære.",
+  "installDriversSubtitle": "Inkluderer men er ikke begrænset til NVIDIA-drivere og lignende",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Hent og installér understøttelse af yderligere medieformater",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Denne software er underlagt licensbetingelserne, som er inkluderet i dens dokumentation. Nogle er proprietære.",
+  "installCodecsSubtitle": "Inkluderer men er ikke begrænset til MP3, MP$, MOV og lignende",
   "@installCodecsSubtitle": {},
   "onBatteryWarning": "<font color=\"{color}\">Advarsel:</font> Computeren er ikke sluttet til en strømkilde.",
   "@onBatteryWarning": {
@@ -17,11 +17,11 @@
       "color": {}
     }
   },
-  "showSecurityKey": "Vis sikkerhedsnøgle",
+  "showSecurityKey": "Vis",
   "@showSecurityKey": {},
   "otherOptions": "Andre muligheder",
   "@otherOptions": {},
-  "appTitle": "Ubuntu Skrivebordsinstallatør",
+  "appTitle": "Ubuntu Skrivebordsinstallation",
   "@appTitle": {},
   "installOption": "Installér {RELEASE}",
   "@installOption": {
@@ -30,7 +30,7 @@
       "RELEASE": {}
     }
   },
-  "installDescription": "Installér {RELEASE}, ved siden af (eller i stedet for) dit nuværende operativsystem. Dette burde ikke tage lang tid.",
+  "installDescription": "Installér {RELEASE} ved siden af (eller i stedet for) dit nuværende operativsystem. Dette burde ikke tage lang tid.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
@@ -56,31 +56,31 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "confirmSecurityKey": "Bekræft sikkerhedsnøglen",
   "@confirmSecurityKey": {},
-  "dontInstallDriverSoftwareNow": "Installér ikke driver-softwaren lige nu",
+  "dontInstallDriverSoftwareNow": "Installér ikke driversoftwaren lige nu",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Du kan installere det senere fra Software & Opdateringer.",
+  "dontInstallDriverSoftwareNowDescription": "Du kan installere den senere fra Software & opdateringer.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "secureBootSecurityKeysDontMatch": "Sikkerhedsnøgler stemmer ikke overens",
   "@secureBootSecurityKeysDontMatch": {},
   "offlineWarning": "Du er i øjeblikket offline",
   "@offlineWarning": {},
-  "installationTypeTitle": "installationstype",
+  "installationTypeTitle": "Diskopsætning",
   "@installationTypeTitle": {},
-  "installationTypeOSDetected": "Din computer har aktuelt {os} installeret. Hvad kunne du tænke dig at gøre?",
+  "installationTypeOSDetected": "Denne computer har i øjeblikket {os} installeret. Hvad kunne du tænke dig at gøre?",
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
       "os": {}
     }
   },
-  "windowTitle": "Installation {RELEASE}",
+  "windowTitle": "Installér {RELEASE}",
   "@windowTitle": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "changeButtonText": "Ændre",
+  "changeButtonText": "Ændr",
   "@changeButtonText": {},
   "tryOrInstallRepairDescription": "Reparation geninstallerer al installeret software uden at røre ved dokumenter eller indstillinger.",
   "@tryOrInstallRepairDescription": {},
@@ -91,45 +91,45 @@
       "RELEASE": {}
     }
   },
-  "tryDescription": "Du kan prøve {RELEASE}, uden at foretage nogen ændringer, på din computer.",
+  "tryDescription": "Du kan prøve {RELEASE} uden at foretage nogen ændringer på din computer.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "rstTitle": "RST er aktiveret",
+  "rstTitle": "RST detekteret",
   "@rstTitle": {},
-  "rstDescription": "Denne computer bruger Intel RST (Rapid Storage Technology). Før installation af Ubuntu, skal du slå RST fra i Windows.",
+  "rstDescription": "Denne computer bruger Intel RST (Rapid Storage Technology). Før installation af {DISTRO} skal du slå RST fra i Windows.",
   "@rstDescription": {},
-  "rstInstructions": "For instruktioner, skan QR-koden på en anden enhed, eller besøg: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Få vejledning ved at skanne QR-koden på en anden enhed, eller besøg: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
       "url": {}
     }
   },
-  "configureSecureBootTitle": "Konfigurér Sikker Start",
+  "configureSecureBootTitle": "Konfigurér Secure Boot",
   "@configureSecureBootTitle": {},
-  "configureSecureBootOption": "Konfigurér Sikker Start",
+  "configureSecureBootOption": "Konfigurér Secure Boot",
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Vælg sikkerhedsnøgle",
   "@chooseSecurityKey": {},
-  "updatesOtherSoftwarePageTitle": "Applikationer og opdateringer",
+  "updatesOtherSoftwarePageTitle": "Programmer",
   "@updatesOtherSoftwarePageTitle": {},
-  "updatesOtherSoftwarePageDescription": "Hvilke apps vil du installere, til at starte med?",
+  "updatesOtherSoftwarePageDescription": "Hvilke programmer vil du installere til at begynde med?",
   "@updatesOtherSoftwarePageDescription": {},
   "installThirdPartySubtitle": "Denne software er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.",
   "@installThirdPartySubtitle": {},
-  "configureSecureBootDescription": "Du har valgt at installere tredjeparts driver-software. Dette kræver at man slår Sikker Start fra.\nFor at gøre dette, skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.",
+  "configureSecureBootDescription": "Du har valgt at installere tredjeparts-driversoftware. Dette kræver, at man slår Secure Boot fra.\nFor at gøre dette skal du nu vælge en sikkerhedsnøgle og indtaste den, når systemet genstarter.",
   "@configureSecureBootDescription": {},
   "bitlockerTitle": "BitLocker er aktiveret",
   "@bitlockerTitle": {},
   "confirmInstallButton": "Installér",
   "@confirmInstallButton": {},
-  "newPartitionTableConfirmationMessage": "Oprettelse af ny partitionstabel, på en hel enhed, vil fjerne alle dens nuværende partitioner. Denne operation kan fortrydes, hvis det er nødvendigt.",
+  "newPartitionTableConfirmationMessage": "Oprettelse af ny partitionstabel på en hel enhed vil fjerne alle dens nuværende partitioner. Denne operation kan fortrydes, hvis det er nødvendigt.",
   "@newPartitionTableConfirmationMessage": {},
-  "installationTypeDualOSDetected": "Denne computer har aktuelt {os1} og {os2} installeret. Hvad kunne du tænke dig at gøre?",
+  "installationTypeDualOSDetected": "Denne computer har i øjeblikket {os1} og {os2} installeret. Hvad kunne du tænke dig at gøre?",
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
@@ -137,9 +137,9 @@
       "os2": {}
     }
   },
-  "installationTypeNoOSDetected": "Denne computer har aktuelt ingen opfangede operativsystemer. Hvad kunne du tænke dig at gøre?",
+  "installationTypeNoOSDetected": "Der blev ikke fundet nogen operativsystemer på denne computer. Hvad kunne du tænke dig at gøre?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeAlongside": "Installér {product}, ved siden af {os}",
+  "installationTypeAlongside": "Installér {product} ved siden af {os}",
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
@@ -147,7 +147,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideDual": "Installér {product}, ved siden af {os1} og {os2}",
+  "installationTypeAlongsideDual": "Installér {product} ved siden af {os1} og {os2}",
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
@@ -156,7 +156,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Installér {product}, ved siden af dem",
+  "installationTypeAlongsideMulti": "Installér {product} ved siden af dem",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -169,7 +169,7 @@
   "@allocateDiskSpace": {},
   "diskHeadersSize": "Størrelse",
   "@diskHeadersSize": {},
-  "installAlongsideHiddenPartitions": "{num} mindre partitioner er skjulte; brug det <a href=\"{url}\">avancerede partitionsværktøj</a> for mere kontrol",
+  "installAlongsideHiddenPartitions": "{num} mindre partitioner er skjulte; brug det <a href=\"{url}\">avancerede partitionsværktøj</a> for at få mere kontrol",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -181,7 +181,7 @@
   "@diskHeadersFormat": {},
   "diskHeadersMountPoint": "Monteringspunkt",
   "@diskHeadersMountPoint": {},
-  "bitlockerInstructions": "For instruktioner, skan QR-koden, på en anden enhed eller besøg:<a href=\"https://{url}\">{url}</a>",
+  "bitlockerInstructions": "Få vejledning ved at skanne QR-koden på en anden enhed, eller besøg: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
@@ -194,11 +194,11 @@
   "@notEnoughDiskSpaceRequired": {},
   "diskHeadersType": "Type",
   "@diskHeadersType": {},
-  "rstHeader": "Slå RST fra, for at fortsætte",
+  "rstHeader": "Slå RST fra for at fortsætte",
   "@rstHeader": {},
-  "installationTypeMultiOSDetected": "Denne computer har aktuelt flere forskellige operativsystemer installeret. Hvad kunne du tænke dig at gøre?",
+  "installationTypeMultiOSDetected": "Denne computer har i øjeblikket flere forskellige operativsystemer installeret. Hvad kunne du tænke dig at gøre?",
   "@installationTypeMultiOSDetected": {},
-  "installationTypeErase": "Udslet disk og installér {DISTRO}",
+  "installationTypeErase": "Slet disk og installér {DISTRO}",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
@@ -207,7 +207,7 @@
   },
   "installationTypeNoneSelected": "Ingen valgt",
   "@installationTypeNoneSelected": {},
-  "installationTypeReinstallWarning": "<font color=\"{color}\">Advarsel:</font> Dette vil slette alle dine {os} programmer, dokumenter, fotografier, musik, og enhver anden fil.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Advarsel:</font> Dette vil slette alle dine programmer, dokumenter, fotografier, musik, og enhver anden fil i {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -215,14 +215,14 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideUnknown": "Installér {product}, ved siden af andre partitioner",
+  "installationTypeAlongsideUnknown": "Installér {product} ved siden af andre partitioner",
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
       "product": {}
     }
   },
-  "installationTypeManualInfo": "Du kan selv oprette eller ændre størrelse på partitioner, eller vælge flere partitioner til {DISTRO}",
+  "installationTypeManualInfo": "For avancerede brugere, som ønsker brugertilpasset diskopsætning.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -243,17 +243,17 @@
   "@diskHeadersDevice": {},
   "newPartitionTable": "Ny partitionstabel",
   "@newPartitionTable": {},
-  "bootLoaderDevice": "Enhed til installation af opstartslæser",
+  "bootLoaderDevice": "Enhed til installation af opstartsindlæser",
   "@bootLoaderDevice": {},
   "freeDiskSpace": "Fri plads",
   "@freeDiskSpace": {},
   "newPartitionTableConfirmationTitle": "Ny tom partition",
   "@newPartitionTableConfirmationTitle": {},
-  "partitionLocationEnd": "Ende på denne plads",
+  "partitionLocationEnd": "Slutning af dette område",
   "@partitionLocationEnd": {},
-  "partitionFormatLabel": "Brugt som:",
+  "partitionFormatLabel": "I brug som:",
   "@partitionFormatLabel": {},
-  "partitionLocationBeginning": "Begyndelse på denne plads",
+  "partitionLocationBeginning": "Begyndelse på dette område",
   "@partitionLocationBeginning": {},
   "restartInto": "Genstart i {system}",
   "@restartInto": {
@@ -262,43 +262,43 @@
       "system": {}
     }
   },
-  "installationSlidesDevelopmentBody": "{DISTRO} er den idéelle arbejdsstation til app- eller netudvikling, data-videnskab og kunstig intelligens/maskinlærling, så vel som devops og administration. Hver {DISTRO}-udgivelse inkluderer de seneste værktøjskæder og understøtter alle større IDEer.",
+  "installationSlidesDevelopmentBody": "{DISTRO} er den ideelle platform til program- eller webudvikling, datavidenskab og AI/ML samt devops og administration. Hver {DISTRO}-udgivelse inkluderer de seneste toolchains og understøtter alle større IDE'er.",
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Avancerede funktioner...",
+  "installationTypeAdvancedLabel": "Avancerede funktioner …",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Avancerede funktioner",
   "@installationTypeAdvancedTitle": {},
   "restartIntoWindowsTitle": "Genstart i Windows?",
   "@restartIntoWindowsTitle": {},
-  "restartIntoWindowsDescription": "Er du sikker på, at du vil genstarte din computer? Du vil skulle genstarte {DISTRO}-installationen senere, for at færdiggøre installationen af {DISTRO}.",
+  "restartIntoWindowsDescription": "Er du sikker på, at du vil genstarte din computer? Du vil skulle genstarte {DISTRO}-installationen senere for at færdiggøre installationen af {DISTRO}.",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesWelcomeTitle": "Hurtigt, gratis og fyldt med nye funktioner",
+  "installationSlidesWelcomeTitle": "Hurtig, fri og fyldt med nye funktioner",
   "@installationSlidesWelcomeTitle": {},
-  "installationSlidesWelcomeHeader": "Den seneste udgave af {DISTRO} gøre computer-arbejde nemmere end nogensinde.",
+  "installationSlidesWelcomeHeader": "Den seneste udgave af {DISTRO} gør computerarbejde nemmere end nogensinde.",
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesWelcomeBody": "Om du er udvikler, skaber, gamer, eller administrator, vil du finde nye værktøjer til at forbedre din produktivitet og berige din oplevelse med {RELEASE}.",
+  "installationSlidesWelcomeBody": "Hvadenten du er udvikler, forfatter, gamer, eller administrator, vil du finde nye værktøjer, som forbedrer din produktivitet og beriger din oplevelse med {RELEASE}.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "installationSlidesDevelopmentTitle": "Udvikl det bedste indenfor åben kilde",
+  "installationSlidesDevelopmentTitle": "Udvikling med de bedste open source-værktøjer",
   "@installationSlidesDevelopmentTitle": {},
   "installationSlidesGamingTitle": "Super til gaming",
   "@installationSlidesGamingTitle": {},
@@ -313,7 +313,7 @@
   },
   "installationSlidesProductivityTitle": "Send din produktivitet til himmels",
   "@installationSlidesProductivityTitle": {},
-  "selectGuidedStoragePageTitle": "Udslet disk og installér {DISTRO}",
+  "selectGuidedStoragePageTitle": "Slet disk og installér {DISTRO}",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
@@ -322,13 +322,13 @@
   },
   "selectGuidedStorageDropdownLabel": "Vælg drev:",
   "@selectGuidedStorageDropdownLabel": {},
-  "installationTypeAlongsideInfo": "Dokumenter, musik, og andre personlige filer vil blive bevaret. Du kan vælge hvilket operativsystem du vil bruge, hver gang computeren starter op.",
+  "installationTypeAlongsideInfo": "Du kan vælge dit operativsystem under systemopstart.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Manuel partitionering",
+  "installationTypeManual": "Manuel installation",
   "@installationTypeManual": {},
   "selectGuidedStorageInfoLabel": "Hele disken vil blive brugt:",
   "@selectGuidedStorageInfoLabel": {},
-  "installAlongsideSpaceDivider": "Allokér drevplads, ved at trække skellet herunder:",
+  "installAlongsideSpaceDivider": "Allokér diskplads ved at trække skellet herunder:",
   "@installAlongsideSpaceDivider": {},
   "partitionTypeLogical": "Logisk",
   "@partitionTypeLogical": {},
@@ -336,9 +336,9 @@
   "@confirmPageTitle": {},
   "installAlongsideResizePartition": "Ændr størrelse på partition",
   "@installAlongsideResizePartition": {},
-  "partitionFormatNone": "Efterlad uformateret",
+  "partitionFormatNone": "Lad være uformateret",
   "@partitionFormatNone": {},
-  "confirmPartitionResize": "partition <b>{sysname}</b> ændres fra <b>{oldsize}</b> til <b>{newsize}</b>",
+  "confirmPartitionResize": "partitionen <b>{sysname}</b> ændrer størrelse fra <b>{oldsize}</b> til <b>{newsize}</b>",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
@@ -347,7 +347,7 @@
       "newsize": {}
     }
   },
-  "confirmPartitionFormatMount": "partition <b>{sysname}</b> formateret som <b>{format}</b> brugt til <b>{mount}</b>",
+  "confirmPartitionFormatMount": "partitionen <b>{sysname}</b> formateres som <b>{format}</b> og bruges til <b>{mount}</b>",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
@@ -356,7 +356,7 @@
       "mount": {}
     }
   },
-  "confirmPartitionFormat": "partition <b>{sysname}</b> formateret som <b>{format}</b>",
+  "confirmPartitionFormat": "partitionen <b>{sysname}</b> formateres som <b>{format}</b>",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
@@ -364,7 +364,7 @@
       "format": {}
     }
   },
-  "confirmPartitionMount": "partition <b>{sysname}</b> brugt til <b>{mount}</b>",
+  "confirmPartitionMount": "partitionen <b>{sysname}</b> bruges til <b>{mount}</b>",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
@@ -382,7 +382,7 @@
   "@notEnoughDiskSpaceTitle": {},
   "partitionCreateTitle": "Opret partition",
   "@partitionCreateTitle": {},
-  "allocateDiskSpaceInvalidMountPointSlash": "Monteringspunkter skal starte med \"/\"",
+  "allocateDiskSpaceInvalidMountPointSlash": "Monteringspunkter skal starte med “/”",
   "@allocateDiskSpaceInvalidMountPointSlash": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Monteringspunkter må ikke indeholde mellemrum",
   "@allocateDiskSpaceInvalidMountPointSpace": {},
@@ -394,7 +394,7 @@
   "@partitionLocationLabel": {},
   "confirmPartitionsTitle": "Partitioner",
   "@confirmPartitionsTitle": {},
-  "installationSlidesCreativityBody": "Hvis du er animator, designer, videnskaber, eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO}, med understøttelse af åben kildekode og industriel standard-programvare samt -applikationer.",
+  "installationSlidesCreativityBody": "Hvadenten du er animator, designer, videoskaber, eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO}, med understøttelse af åben kildekode og industriel standard-programvare samt -applikationer.",
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
@@ -418,7 +418,7 @@
   "@partitionErase": {},
   "confirmPartitionTables": "Partitionstabellen på de følgende enheder er ændret:",
   "@confirmPartitionTables": {},
-  "confirmPartitionCreate": "partition <b>{sysname}</b> oprettet",
+  "confirmPartitionCreate": "partitionen <b>{sysname}</b> oprettes",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
@@ -436,9 +436,9 @@
   },
   "installationSlidesIncluded": "Inkluderet:",
   "@installationSlidesIncluded": {},
-  "installationSlidesSoftwareTitle": "Alle de applikationer du har brug for",
+  "installationSlidesSoftwareTitle": "Alle de programmer, du behøver",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "Installér, administrér og opdatér alle dine apps i Ubuntu Varehus, inklusiv tusindvis af applikationer, fra både Snap Butikken og {DISTRO}s arkiv.",
+  "installationSlidesSoftwareBody": "Installér, administrér og opdatér alle dine programmer i Ubuntu Software inklusive tusindvis af programmer fra både Snap Store og {DISTRO}s arkiv.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
@@ -465,7 +465,7 @@
   },
   "confirmDevicesTitle": "Enheder",
   "@confirmDevicesTitle": {},
-  "bitlockerHeader": "Slå BitLocker fra, for at fortsætte",
+  "bitlockerHeader": "Slå BitLocker fra for at fortsætte",
   "@bitlockerHeader": {},
   "installationSlidesTitle": "Velkommen til {RELEASE}",
   "@installationSlidesTitle": {
@@ -489,7 +489,7 @@
   "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Sprogunderstøttelse",
   "@installationSlidesAccessibilityLanguages": {},
-  "loadingHeader": "Forbereder {DISTRO}…",
+  "loadingHeader": "Forbereder {DISTRO} …",
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
@@ -502,11 +502,11 @@
   "@installAlongsideFiles": {},
   "selectGuidedStorageInstallNow": "Installér nu",
   "@selectGuidedStorageInstallNow": {},
-  "shutdown": "Luk Ned",
+  "shutdown": "Sluk",
   "@shutdown": {},
-  "confirmPartitionChanges": "De følgende partitionsændringer vil træde i kraft:",
+  "confirmPartitionChanges": "Følgende partitionsændringer vil blive udført:",
   "@confirmPartitionChanges": {},
-  "installationTypeLVMSelected": "LVM opfanget",
+  "installationTypeLVMSelected": "LVM fundet",
   "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryptionSelected": "LVM og kryptering valgt",
   "@installationTypeLVMEncryptionSelected": {},
@@ -517,20 +517,20 @@
       "RELEASE": {}
     }
   },
-  "installationTypeEncryptInfo": "Du vil vælge en sikkerhedsnøgle, i næste trin.",
+  "installationTypeEncryptInfo": "I næste trin vælger du en sikkerhedsnøgle.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EKSPERIMENTEL: Udslet disk og benyt ZFS",
+  "installationTypeZFS": "Slet disk og benyt ZFS",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS valgt",
   "@installationTypeZFSSelected": {},
-  "installationTypeReinstall": "Udslet {os} og geninstallér",
+  "installationTypeReinstall": "Slet {os} og geninstallér",
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
       "os": {}
     }
   },
-  "confirmHeader": "Hvis du fortsætter, vil ændringerne på listen nedenfor blive skrevet til disken(e). Du vil kunne foretage yderligere ændringer manuelt.",
+  "confirmHeader": "Gennemgå dine valg",
   "@confirmHeader": {},
   "confirmPartitionTable": "{serial} ({path})",
   "@confirmPartitionTable": {
@@ -540,7 +540,7 @@
       "path": {}
     }
   },
-  "bitlockerDescription": "Denne computer benytter Windows BitLocker kryptering.\nDu bliver nødt til at bruge Windows til, at frigøre plads, eller vælge '{option}\", for at fortsætte.",
+  "bitlockerDescription": "Denne computer benytter kryptering med Windows BitLocker.\nDu bliver nødt til at bruge Windows til at frigøre plads eller gå tilbage og vælge “{option}” for at fortsætte.",
   "@bitlockerDescription": {
     "type": "text",
     "placeholders": {
@@ -590,8 +590,181 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "EKSPERIMENTEL: Hardware-assisteret fuld diskkrypterings aktivering",
+  "installationTypeTPM": "Aktivér fuld diskkryptering i hardware",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM Valgt",
-  "@installationTypeTPMSelected": {}
+  "@installationTypeTPMSelected": {},
+  "autoinstallTitle": "Installationstype",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Hvordan vil du installere {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Indtast autoinstall.yaml-URL:",
+  "@autoinstallInstructions": {},
+  "warningLabel": "Advarsel:",
+  "@warningLabel": {},
+  "hideSecurityKey": "Skjul",
+  "@hideSecurityKey": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA-grafikkort fundet",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Det anbefales stærkt at installere yderligere drivere for at få den bedste ydelse med NVIDIA-grafikkort.",
+  "@codecsAndDriversNvidiaBody": {},
+  "fullInstallationSubtitle": "Et offlinevenligt udvalg af kontorsoftware, værktøjer og webbrowser.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "Standardudvalg",
+  "@minimalInstallationTitle": {},
+  "fullInstallationTitle": "Udvidet udvalg",
+  "@fullInstallationTitle": {},
+  "minimalInstallationSubtitle": "Kun det vigtigste – webbrowser og basisværktøjer.",
+  "@minimalInstallationSubtitle": {},
+  "batteryWarning": "Denne computer er ikke tilsluttet ekstern strømforsyning.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Diskadgangskode",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Opret en adgangskode",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Du skal bruge en adgangskode for at kryptere dine filer. Du vil blive bedt om din adgangskode hver gang, du tænder computeren.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Vælg en adgangskode",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Bekræft adgangskoden",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Adgangskode påkrævet",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Adgangskoderne stemmer ikke",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Sørg for at gemme din adgangskode",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Hvis du mister din adgangskode, går alle dine data tabt.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Opret en adgangskode",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Bekræft adgangskoden",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Hvordan vil du installere {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Start forfra på din valgte disk.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Eksperimentel",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Brug LVM",
+  "@installationTypeLVM": {},
+  "installationTypeZFSEncryption": "Slet disk og benyt ZFS med kryptering",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS og kryptering valgt",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageInfo": "Start forfra på din valgte disk.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Vælg drev:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Vælg partition:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Vælg, hvor du vil installere {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmEntryProprietarySoftware": "Proprietær software",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmProprietarySoftwareCodecs": "Codec",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codec og drivere",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Drivere",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** er blevet kopieret til disken",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Du skal genstarte computeren for at fortsætte installationsprocessen.",
+  "@rebootToConfigureWarning": {},
+  "autoinstallInteractiveOption": "Interaktiv installation",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "Automatisk installation",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallInteractiveDescription": "Til brugere som vil guides gennem installationen et trin ad gangen.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedDescription": "Til avancerede brugere som have en autoinstall.yaml til konsistent og reproducérbar systemopsætning.",
+  "@autoinstallAutomatedDescription": {},
+  "tryOrInstallHeader": "Hvad vil du gøre med {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageBody": "Som standard følger der ingen proprietær software med {DISTRO}. Installation af yderligere software kan forbedre din computers ydelse.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageDescription": "Installér anbefalet proprietær software?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageTitle": "Optimér din computer",
+  "@codecsAndDriversPageTitle": {},
+  "installationTypeLVMEncryption": "Brug LVM og kryptering",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeTPMInfo": "Denne funktion er eksperimentel. Den fungerer måske ikke med din hardware i fremtidige udgaver af {DISTRO}. <a href=\"{url}\">Læs om TPM-kryptering</a>, før du vælger denne mulighed.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "partitionFormatKeep": "Forbliv formateret som {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Ingen",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Programmer",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Diskopsætning",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Diskkryptering",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Installationsdisk",
+  "@confirmEntryInstallationDisk": {},
+  "confirmSectionSecurityAndMoreTitle": "Sikkerhed med mere",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmSectionGeneralTitle": "Generelt",
+  "@confirmSectionGeneralTitle": {},
+  "restartWarningBody": "Genstart for at fuldføre installationen eller fortsæt med at afprøve.\nEventuelle ændringer, du foretager, gemmes ikke.",
+  "@restartWarningBody": {}
 }
