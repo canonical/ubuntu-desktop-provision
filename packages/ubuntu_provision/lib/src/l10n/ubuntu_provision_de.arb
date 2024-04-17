@@ -159,5 +159,45 @@
   "networkHiddenWifiNameRequired": "Der Netzwerkname wird benötigt",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Ich will gerade keine Verbindung zum Internet herstellen",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "Schließen",
+  "@close": {},
+  "accessibilityTypingLabel": "Tippen",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Zeigen und Klicken",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Hoher Kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Großer Text",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Animationen reduzieren",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuelle Warnhinweise",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilitySlowKeysLabel": "Langsame Tasten",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Maustasten",
+  "@accessibilityMouseKeysLabel": {},
+  "errorPageTitle": "Etwas ist schiefgelaufen",
+  "@errorPageTitle": {},
+  "errorPageHideLog": "Protokoll ausblenden",
+  "@errorPageHideLog": {},
+  "restart": "Neustart",
+  "@restart": {},
+  "accessibilityPageTitle": "Barrierefreiheit",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Barrierefreiheit in {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageShowLog": "Protokoll anzeigen",
+  "@errorPageShowLog": {},
+  "activeDirectoryHeader": "Bei Active Directory anmelden?",
+  "@activeDirectoryHeader": {}
 }
