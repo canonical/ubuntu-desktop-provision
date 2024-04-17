@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package telemetry;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service TelemetryService {
+  rpc Collect(google.protobuf.Empty) returns (CollectResponse);
+  rpc CollectAndSend(google.protobuf.Empty) returns (SendResponse);
+  rpc SendDecline(google.protobuf.Empty) returns (SendResponse);
+}
+
+message CollectResponse {
+  string metrics = 1;
+}
+
+message SendResponse {
+  enum SendResponseType {
+    SUCCESS = 0;
+    NETWORK_ERROR = 1;
+    UNKNOWN_ERROR = 2;
+  }
+  SendResponseType type = 1;
+}
+

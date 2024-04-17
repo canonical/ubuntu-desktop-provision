@@ -148,6 +148,18 @@ pro.ProService:
           isclientstream: false
           isserverstream: false
     metadata: protos/pro.proto
+telemetry.TelemetryService:
+    methods:
+        - name: Collect
+          isclientstream: false
+          isserverstream: false
+        - name: CollectAndSend
+          isclientstream: false
+          isserverstream: false
+        - name: SendDecline
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/telemetry.proto
 timezone.TimezoneService:
     methods:
         - name: GetTimezone

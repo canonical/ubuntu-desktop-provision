@@ -11,10 +11,13 @@ require (
 	github.com/spf13/viper v1.17.0
 	github.com/stretchr/testify v1.8.4
 	github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a
+	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
 	google.golang.org/grpc v1.60.1
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/yaml.v3 v3.0.1
 )
+
+require github.com/pkg/errors v0.9.1 // indirect
 
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
