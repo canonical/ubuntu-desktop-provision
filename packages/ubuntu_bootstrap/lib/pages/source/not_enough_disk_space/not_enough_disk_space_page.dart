@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -21,78 +20,77 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(notEnoughDiskSpaceModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    return Scaffold(
-      body: WizardPage(
-        title: YaruWindowTitleBar(
-          title: Text(lang.notEnoughDiskSpaceTitle),
-        ),
-        content: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                YaruIcons.drive_harddisk_warning,
-                size: min(128.00, MediaQuery.of(context).size.height * 0.2),
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
-              ),
-              const SizedBox(height: kWizardSpacing),
-              Text(lang.notEnoughDiskSpaceUbuntu(flavor.displayName),
-                  style: Theme.of(context).textTheme.headlineSmall),
-              const SizedBox(height: kWizardSpacing),
-              IntrinsicWidth(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          lang.notEnoughDiskSpaceRequired,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          context.formatByteSize(model.installMinimumSize),
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          lang.notEnoughDiskSpaceAvailable,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          context.formatByteSize(model.largestDiskSize),
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: kWizardSpacing),
-              FilledButton(
-                  onPressed: () async {
-                    await YaruWindow.of(context).close();
-                    // TODO: tell subiquity to quit?
-                  },
-                  child: Text(lang.quitButtonText)),
-            ],
-          ),
-        ),
-        bottomBar: const WizardBar(
-          leading: BackWizardButton(),
-        ),
+    final theme = Theme.of(context);
+    final boldTextTheme = Theme.of(context)
+        .textTheme
+        .bodyLarge!
+        .copyWith(fontWeight: FontWeight.bold);
+
+    return HorizontalPage(
+      windowTitle: lang.notEnoughDiskSpaceTitle,
+      title: lang.notEnoughDiskSpaceUbuntu(flavor.displayName),
+      bottomBar: const WizardBar(
+        leading: BackWizardButton(),
       ),
+      children: [
+        Text(lang.notEnoughDiskSpaceBody(flavor.displayName)),
+        Table(
+          defaultColumnWidth: const IntrinsicColumnWidth(),
+          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+          children: [
+            TableRow(
+              children: [
+                const SizedBox(),
+                TableCell(
+                  child: Text(
+                    lang.notEnoughDiskSpaceRequired,
+                    style: boldTextTheme,
+                  ),
+                ),
+                TableCell(
+                  child: Text(
+                    context.formatByteSize(model.installMinimumSize),
+                    style: boldTextTheme,
+                  ),
+                ),
+              ].withSpacing(kWizardSpacing / 2),
+            ),
+            TableRow(
+              children: [
+                TableCell(
+                  child: Icon(
+                    YaruIcons.warning_filled,
+                    color: theme.colorScheme.error,
+                  ),
+                ),
+                TableCell(
+                  child: Text(
+                    lang.notEnoughDiskSpaceAvailable,
+                    style: boldTextTheme.copyWith(
+                      color: theme.colorScheme.error,
+                    ),
+                  ),
+                ),
+                TableCell(
+                  child: Text(
+                    context.formatByteSize(model.largestDiskSize),
+                    style: boldTextTheme.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ].withSpacing(kWizardSpacing / 2),
+            ),
+          ],
+        ),
+        ElevatedButton(
+          onPressed: () async {
+            await YaruWindow.of(context).close();
+            // TODO: tell subiquity to quit?
+          },
+          child: Text(lang.quitButtonText),
+        ),
+      ].withSpacing(kWizardSpacing),
     );
   }
 }

@@ -791,11 +791,16 @@ class UbuntuBootstrapLocalizationsMk extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Installation failed';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough space';
+  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
     return 'Not enough disk space to install $DISTRO';
+  }
+
+  @override
+  String notEnoughDiskSpaceBody(String DISTRO) {
+    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
   }
 
   @override

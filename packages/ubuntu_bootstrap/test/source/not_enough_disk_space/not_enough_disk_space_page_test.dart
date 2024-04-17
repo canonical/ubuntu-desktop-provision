@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_page.dart';
+import 'package:ubuntu_provision/providers.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import 'test_not_enough_disk_space.dart';
@@ -12,8 +14,13 @@ void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
 
   Widget buildPage(NotEnoughDiskSpaceModel model) {
+    final mockPageImages = MockPageImages();
+    when(mockPageImages.get(''))
+        .thenReturn(Container(key: const ValueKey('Custom image')));
+
     return ProviderScope(
       overrides: [
+        pageImagesProvider.overrideWith((_) => mockPageImages),
         notEnoughDiskSpaceModelProvider.overrideWith((_) => model),
       ],
       child: const NotEnoughDiskSpacePage(),
