@@ -66,5 +66,12 @@
   "privacyPolicyLink": "Protección de los datos",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProMagicAttachInstructions": "Adjunte magia con este código en<a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
 }
