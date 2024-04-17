@@ -1,6 +1,5 @@
 import 'package:args/args.dart';
 import 'package:gsettings/gsettings.dart';
-import 'package:sysmetrics/sysmetrics.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/src/services/provd_accessibility_service.dart';
@@ -11,6 +10,7 @@ import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
 import 'package:ubuntu_init/src/services/provd_locale_service.dart';
 import 'package:ubuntu_init/src/services/provd_privacy_service.dart';
 import 'package:ubuntu_init/src/services/provd_pro_service.dart';
+import 'package:ubuntu_init/src/services/provd_telemetry_service.dart';
 import 'package:ubuntu_init/src/services/provd_timezone_service.dart';
 import 'package:ubuntu_init/src/services/realmd_active_directory_service.dart';
 import 'package:ubuntu_init/src/services/xdg_session_service.dart';
@@ -19,7 +19,6 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 export 'package:args/args.dart' show ArgResults;
-export 'package:sysmetrics/sysmetrics.dart' show Sysmetrics;
 export 'package:timezone_map/timezone_map.dart' show GeoService;
 
 export 'services/provd_accessibility_service.dart';
@@ -30,6 +29,7 @@ export 'services/provd_keyboard_service.dart';
 export 'services/provd_locale_service.dart';
 export 'services/provd_privacy_service.dart';
 export 'services/provd_pro_service.dart';
+export 'services/provd_telemetry_service.dart';
 export 'services/provd_timezone_service.dart';
 export 'services/realmd_active_directory_service.dart';
 export 'services/xdg_session_service.dart';
@@ -65,9 +65,9 @@ Future<void> registerInitServices(List<String> args) async {
   );
   tryRegisterService<PrivacyService>(ProvdPrivacyService.new);
   tryRegisterService<ProService>(ProvdProService.new);
+  tryRegisterService<ProvdTelemetryService>(ProvdTelemetryService.new);
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
-  tryRegisterService<Sysmetrics>(Sysmetrics.new);
   tryRegisterService<ThemeVariantService>(
       () => ThemeVariantService(config: tryGetService<ConfigService>()));
   tryRegisterService<TimezoneService>(ProvdTimezoneService.new);

@@ -2,20 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:sysmetrics/sysmetrics.dart';
+import 'package:ubuntu_init/src/init_services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 const kTelemetryLegalUrl =
     'https://ubuntu.com/legal/systems-information-notice';
 
 final telemetryModelProvider = ChangeNotifierProvider(
-  (ref) => TelemetryModel(getService<Sysmetrics>()),
+  (ref) => TelemetryModel(getService<ProvdTelemetryService>()),
 );
 
 class TelemetryModel extends ChangeNotifier {
-  TelemetryModel(this._sysmetrics);
+  TelemetryModel(this._telemetry);
 
-  final Sysmetrics _sysmetrics;
+  final ProvdTelemetryService _telemetry;
 
   bool get enabled => _enabled;
   bool _enabled = true;
@@ -29,14 +29,14 @@ class TelemetryModel extends ChangeNotifier {
 
   Stream<String> collect() {
     // TODO: report error
-    return _sysmetrics.collect().then((value) => value ?? '').asStream();
+    return _telemetry.collect().asStream();
   }
 
   Future<void> save() async {
     if (_enabled) {
-      await _sysmetrics.collectAndSend(ReportType.auto);
+      await _telemetry.collectAndSend();
     } else {
-      await _sysmetrics.sendDecline();
+      await _telemetry.sendDecline();
     }
   }
 }
