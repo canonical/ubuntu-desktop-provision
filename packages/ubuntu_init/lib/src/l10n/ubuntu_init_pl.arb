@@ -102,7 +102,7 @@
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Podłącz to urządzenie do subskrypcji Ubuntu Pro, aby otrzymywać aktualizacje zabezpieczeń w szerszej gamie pakietów do 2032 roku.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
-  "ubuntuProMagicAttachInstructions": "Magic Attach z tym kodem pod adresem <a href=\"https://{url}\">{url}</a>",
+  "ubuntuProMagicAttachInstructions": "Podłącz szybko z tym kodem pod adresem <a href=\"https://{url}\">{url}</a>",
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
