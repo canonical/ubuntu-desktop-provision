@@ -218,7 +218,7 @@
   },
   "accessibilityHearingLabel": "Sluch",
   "@accessibilityHearingLabel": {},
-  "errorPageUnexpected": "Ospravedlňujeme sa , ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie . Môžete tiež <a>nahlásiť problém</a>.",
+  "errorPageUnexpected": "Ospravedlňujeme sa, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.",
   "@errorPageUnexpected": {},
   "activeDirectoryInfo": "{DISTRO} je navrhnuté tak, aby sa bezproblémovo integrovalo s Active Directory pre jednoduchšiu správu.",
   "@activeDirectoryInfo": {
