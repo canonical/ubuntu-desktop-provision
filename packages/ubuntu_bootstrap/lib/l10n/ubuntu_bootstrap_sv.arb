@@ -367,7 +367,7 @@
       "sysname": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "Inte tillräckligt med utrymme",
+  "notEnoughDiskSpaceTitle": "Inte tillräckligt med diskutrymme",
   "@notEnoughDiskSpaceTitle": {},
   "quitButtonText": "Avbryt installation",
   "@quitButtonText": {},
@@ -955,6 +955,14 @@
   "@warningLabel": {},
   "batteryWarning": "Datorn är inte ansluten till en strömkälla.",
   "@batteryWarning": {},
-  "restartWarningBody": "Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör sparas inte.",
-  "@restartWarningBody": {}
+  "restartWarningBody": "Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör kommer inte att sparas.",
+  "@restartWarningBody": {},
+  "notEnoughDiskSpaceBody": "Den valda disken har inte tillräckligt med utrymme att installera {DISTRO}. Avsluta installationsprogrammet för att göra utrymme tillgängligt eller välj en annan disk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
