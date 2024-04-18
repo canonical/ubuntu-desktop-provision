@@ -227,5 +227,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "eulaPageTitle": "Licensaftale",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Gennemse licensbetingelserne",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "For at fortsætte med opsætning af denne maskine, skal du læse og acceptere betingelserne i licensaftalen.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Jeg har læst og accepterer disse betingelser",
+  "@eulaAcceptTerms": {},
+  "networkPageBody": "En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.",
+  "@networkPageBody": {}
 }
