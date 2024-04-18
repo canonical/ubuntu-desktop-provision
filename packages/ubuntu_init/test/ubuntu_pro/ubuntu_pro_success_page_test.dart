@@ -5,8 +5,6 @@ import 'package:ubuntu_init/src/init_pages.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
-import '../../../ubuntu_provision/test/test_utils.mocks.dart'
-    hide MockPageConfigService;
 import '../init_model_test.mocks.dart';
 import 'test_ubuntu_pro.dart';
 

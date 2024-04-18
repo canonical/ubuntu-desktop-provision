@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsLt extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ne, nebendrinti sisteminių duomenų';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Show the first report';
 
   @override
   String get telemetryReportTitle => 'Reporting details';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Legal notice';
 
   @override
   String get privacyPageTitle => 'Location services';

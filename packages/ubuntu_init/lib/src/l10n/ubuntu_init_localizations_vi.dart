@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Không, không chia sẻ dữ liệu gì hết';
 
   @override
-  String get telemetryReportLabel => 'Reporting details';
+  String get telemetryReportLabel => 'Show the first report';
 
   @override
   String get telemetryReportTitle => 'Reporting details';

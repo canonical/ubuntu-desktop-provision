@@ -65,6 +65,7 @@ InitModel buildInitModel({List<String>? pages}) {
 @GenerateMocks([
   PrivacyService,
   ProductService,
+  ThemeVariantService,
   ProvdTelemetryService,
   UrlLauncher,
 ])
