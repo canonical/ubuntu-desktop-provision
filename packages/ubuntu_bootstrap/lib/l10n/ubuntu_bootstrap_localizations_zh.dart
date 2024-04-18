@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => '输入 autoinstall.yaml 的 URL。';
+  String get autoinstallInstructions => '输入 autoinstall.yaml 的 URL：';
 
   @override
   String get autoinstallInteractiveOption => '交互安装';
@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '这是一个实验性功能。在未来的 $DISTRO 发行版中，您的硬件可能无法使用此功能。在选择此选项前，请先<a href=\"$url\">了解 TPM 加密</a>。';
+    return '这是一个实验性功能。您的硬件可能无法使用此功能，未来的 $DISTRO 发行版也可能不支持。在选择此选项前，请先<a href=\"$url\">了解 TPM 加密</a>。';
   }
 
   @override
@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => '重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会保存。';
+  String get restartWarningBody => '重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会被保存。';
 
   @override
   String get rebootToConfigureWarning => '您需要重新启动计算机，以继续完成安装。';
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationFailed => '安装失败';
 
   @override
-  String get notEnoughDiskSpaceTitle => '空间不足';
+  String get notEnoughDiskSpaceTitle => '磁盘空间不足';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return '所选磁盘没有足够空间可供安装 $DISTRO。请退出安装程序以腾出可用空间，或者选择其他磁盘。';
   }
 
   @override

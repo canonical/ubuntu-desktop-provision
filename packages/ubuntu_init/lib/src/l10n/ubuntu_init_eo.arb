@@ -35,7 +35,7 @@
   },
   "welcomeSecuritySubtitle": "Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.",
   "@welcomeSecuritySubtitle": {},
-  "telemetryLegalLabel": "Juraĵoj",
+  "telemetryLegalLabel": "Jura avizo",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Lokado-servo",
   "@privacyPageTitle": {},
@@ -43,7 +43,7 @@
   "@privacyLocationTitle": {},
   "privacyLocationEnable": "Lokado-servo",
   "@privacyLocationEnable": {},
-  "telemetryReportLabel": "Raportotaj detaloj",
+  "telemetryReportLabel": "Montri la unuan raporton",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Raportotaj detaloj",
   "@telemetryReportTitle": {},
@@ -54,7 +54,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Sendi datenojn anonime al {distro} por plibonigi vian sperton.",
+  "telemetryDescription": "Helpu nin plibonigi {distro} sendante viajn sistemajn datenojn al ni. Tio inkluzivas interalie la modelon de via maŝino, instalitajn programojn kaj tiun lokon, kiun vi elektis por via horzono.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -66,5 +66,47 @@
   "privacyLocationSubtitle": "Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.",
   "@privacyLocationSubtitle": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenTextfieldHint": "Ĵetono",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProMagicAttachInstructions": "Aŭtomate alkroĉu per la jena kodo ĉe <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProHeader": "Alkroĉi ĉi tiun komputilon",
+  "@ubuntuProHeader": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Ĉiam senkosta por persona uzo, 30 tagoj da provperiodo por entreprenoj. <a href=\"https://{url}\">Lernu pli</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro estas nun ŝaltita sur ĉi tiu komputilo",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProOnBoardingSkipForNow": "Preterpasi portempe",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProSucessAttachDescription": "Vi povas administri viajn servojn de Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Vi povas ŝalti Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Alkroĉu ĉi tiun komputilon al abono de Ubuntu Pro por sekurigaj ĝisdatigoj pri vasta gamo da pakoj ĝis 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSubscriptionDescription": "Abonu la plej ampleksan protekton pri malfermitkodaj programoj",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachError": "Nevalida ĵetono",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Valida ĵetono",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Nevalida ĵetono, reprovu",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOrAddTokenManually": "aŭ aldonu ĵetonon neaŭtomate",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenAttachButton": "Alkroĉi",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ŝalti Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {}
 }

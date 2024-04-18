@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return '$distro の匿名化したデータを共有すると、あなたの経験を改善できます。';
+    return 'システムデータを共有してもらえると、$distro の改善に役立てます。マシンのモデル、インストールしたソフトウェアとタイムゾーンから取得した場所が含まれます。';
   }
 
   @override
@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'システムデータを共有しません';
 
   @override
-  String get telemetryReportLabel => '報告内容の詳細';
+  String get telemetryReportLabel => '最初のレポートを表示';
 
   @override
   String get telemetryReportTitle => '報告内容の詳細';
@@ -85,56 +85,56 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return '<a href=\"https://$url\">$url</a>のコードでアタッチ';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'このマシンをアタッチ';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'またはトークンを手動で追加';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'トークン';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'オープンソースソフトウェアのセキュリティのための最も包括的なサブスクリプション';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return '個人用途は常に無料です。エンタープライズ向けは30日間無料体験です。<a href=\"https://$url\">詳細</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'アタッチ';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => '無効なトークン';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => '有効なトークン';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => '無効なトークンです。再度入力してください';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => '今はスキップ';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => '「ソフトウェアとアップデート」からいつでもUbuntu Proを有効にできます。';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Proを有効化';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => '2023年まで幅広いパッケージのセキュリティアップデートを取得できるUbuntu Proサブスクリプションにアタッチします。';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'このマシンでUbuntu Proを有効にしました';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => '「ソフトウェアとアップデート」アプリでProサービスを設定できます。';
 }

@@ -623,7 +623,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör sparas inte.';
+  String get restartWarningBody => 'Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör kommer inte att sparas.';
 
   @override
   String get rebootToConfigureWarning => 'Du måste starta om datorn för att fortsätta installationsprocessen.';
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Installationen misslyckades';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Inte tillräckligt med utrymme';
+  String get notEnoughDiskSpaceTitle => 'Inte tillräckligt med diskutrymme';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Den valda disken har inte tillräckligt med utrymme att installera $DISTRO. Avsluta installationsprogrammet för att göra utrymme tillgängligt eller välj en annan disk.';
   }
 
   @override

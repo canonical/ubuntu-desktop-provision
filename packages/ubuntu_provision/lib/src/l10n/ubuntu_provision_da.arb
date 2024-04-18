@@ -7,7 +7,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Tastaturopsætning",
   "@keyboardTitle": {},
-  "keyboardHeader": "Vælg din tastaturopsætning:",
+  "keyboardHeader": "Vælg din tastaturopsætning",
   "@keyboardHeader": {},
   "keyboardTestHint": "Tast her, for at afprøve dit tastatur",
   "@keyboardTestHint": {},
@@ -130,7 +130,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Opret forbindelse til et netværk",
   "@networkPageTitle": {},
-  "networkPageHeader": "Tilslutning af denne computer til internettet, vil hjælpe Ubuntu, med at installere enhver ekstra nødvendig programvare og vælge din tidszone.\n\nOpret forbindelse via Ethernet-kabel, eller vælg et WiFi-netværk",
+  "networkPageHeader": "Forbind til internet",
   "@networkPageHeader": {},
   "networkWiredOption": "Brug kablet forbindelse",
   "@networkWiredOption": {},
@@ -159,5 +159,83 @@
   "networkHiddenWifiNameRequired": "Et netværksnavn er påkrævet",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Jeg vil ikke oprette forbindelse til internettet lige nu",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "restart": "Genstart",
+  "@restart": {},
+  "close": "Luk",
+  "@close": {},
+  "accessibilityPageHeader": "Tilgængelighed i {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Syn",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Hørelse",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Indtastning",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Peg og klik",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Høj kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Stor tekst",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Reducér animation",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Skærmoplæser",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuelle påmindelser",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilitySlowKeysLabel": "Langsomme taster",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Musetaster",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Skrivebordszoom",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Noget gik galt",
+  "@errorPageTitle": {},
+  "errorPageShowLog": "Vis log",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Skjul log",
+  "@errorPageHideLog": {},
+  "activeDirectoryHeader": "Log ind i Active Directory?",
+  "@activeDirectoryHeader": {},
+  "accessibilityStickKeysLabel": "Klæbetaster",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilityPageTitle": "Tilgængelighed",
+  "@accessibilityPageTitle": {},
+  "errorPageUnexpected": "Vi beklager, men vi ved ikke helt, hvad fejlen er. Du kan genstarte computeren og starte installationsproceduren igen. Du kan også <a>indrapportere problemet</a>.",
+  "@errorPageUnexpected": {},
+  "accessibilityPageBody": "Tilpas {DISTRO} til dine behov før opsætning. Du kan ændre dem senere i Systemindstillinger.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryInfo": "{DISTRO} er designet til sømløs integrering med Active Directory for at lette administration.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "eulaPageTitle": "Licensaftale",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Gennemse licensbetingelserne",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "For at fortsætte med opsætning af denne maskine, skal du læse og acceptere betingelserne i licensaftalen.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Jeg har læst og accepterer disse betingelser",
+  "@eulaAcceptTerms": {},
+  "networkPageBody": "En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.",
+  "@networkPageBody": {}
 }

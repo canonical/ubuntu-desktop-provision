@@ -160,7 +160,7 @@
   },
   "installationTypeAlongsideInfo": "Les documents, musiques et autres fichiers personnels seront conservés. Vous pouvez choisir le système d’exploitation à lancer au moment du démarrage de l’ordinateur.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManualInfo": "",
+  "installationTypeManualInfo": "Pour les utilisateurs avancés recherchant des configurations de disque personnalisées.",
   "@installationTypeManualInfo": {},
   "selectGuidedStoragePageTitle": "Effacer le disque et installer {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -302,7 +302,7 @@
   },
   "quitButtonText": "Quitter l’installation",
   "@quitButtonText": {},
-  "notEnoughDiskSpaceTitle": "Pas assez d’espace",
+  "notEnoughDiskSpaceTitle": "Pas assez d'espace disque",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionResize": "la partition <b>{sysname}</b> redimensionnée de <b>{oldsize}</b> à <b>{newsize}</b>",
   "@confirmPartitionResize": {
@@ -720,5 +720,202 @@
   "refreshReady": "Mise à jour prête",
   "@refreshReady": {},
   "validate": "Valider",
-  "@validate": {}
+  "@validate": {},
+  "autoinstallAutomatedDescription": "Pour les utilisateurs avancés qui ont un autoinstall. yaml pour des configurations système cohérentes et répétables.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} est fourni sans logiciel propriétaire par défaut. L'installation de logiciels supplémentaires peut améliorer la performance de votre ordinateur.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "Pour une performance optimale des cartes graphiques NVIDIA, l'installation de pilotes supplémentaires est fortement recommandée.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseTitle": "Phrase secrète du disque",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Créer une phrase secrète",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseHint": "Choisissez une phrase secrète",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Confirmer la phrase secrète",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Une phrase secrète est nécessaire",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Les phrases secrètes ne correspondent pas",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Assurez-vous de sauvegarder votre phrase secrète",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Si vous perdez votre phrase secrète, vous perdrez toutes vos données.",
+  "@choosePassphraseInfoBody": {},
+  "confirmPassphrase": "Confirmer la phrase secrète",
+  "@confirmPassphrase": {},
+  "installationTypeLVMEncryption": "Utiliser LVM et le chiffrement",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Effacer le disque et utiliser ZFS avec chiffrement",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS et chiffrement sélectionnés",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPM": "Activer le chiffrement matériel complet du disque",
+  "@installationTypeTPM": {},
+  "selectGuidedStorageInfo": "Commencez à partir de zéro sur votre disque sélectionné.",
+  "@selectGuidedStorageInfo": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmEntryInstallationDisk": "Disque d'installation",
+  "@confirmEntryInstallationDisk": {},
+  "confirmSectionGeneralTitle": "Général",
+  "@confirmSectionGeneralTitle": {},
+  "rebootToConfigureWarning": "Vous devez redémarrer l'ordinateur pour continuer le processus d'installation.",
+  "@rebootToConfigureWarning": {},
+  "restartWarningBody": "Redémarrez pour terminer l'installation ou continuez à tester.\nLes changements effectués ne seront pas préservés.",
+  "@restartWarningBody": {},
+  "choosePassphraseBody": "Vous avez besoin d'une phrase secrète pour chiffrer vos fichiers. Votre phrase secrète vous sera demandée à chaque fois que vous allumez sur votre ordinateur.",
+  "@choosePassphraseBody": {},
+  "createPassphrase": "Créer une phrase secrète",
+  "@createPassphrase": {},
+  "installationTypeTPMInfo": "C'est une fonctionnalité expérimentale. Elle peut ne pas fonctionner avec votre matériel ou de futures versions de {DISTRO}. <a href=\"{url}\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Une mise à jour est disponible pour l'installateur",
+  "@refreshHeader": {},
+  "refreshInfo": "Mettre à jour vers la dernière version pour une fiabilité améliorée et d'avantage de fonctionnalités.",
+  "@refreshInfo": {},
+  "refreshSnapCopyData": "Copie des données de {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Configuration des profils de sécurité de {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Édition de liens de {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Mise à jour de la ligne de commande noyau de {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Nettoyage de {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Configuration des alias automatique de {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Configuration des alias de {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Attention :</font> Si vous oubliez cette clé de sécurité, toutes les données seront perdues. Si vous avez besoin, notez votre clé et conservez-la dans un endroit sûr.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Le disque sélectionné n'a pas assez d'espace disque pour installer {DISTRO}. Arrêtez l'installateur pour libérer de l'espace ou sélectionnez un autre disque.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCloseLabel": "Fermer l'installateur",
+  "@refreshCloseLabel": {},
+  "refreshSnapCheckRerefresh": "Vérification {snap} re-refresh...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Délier {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Mise à jour des actifs de {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Assurer les prérequis de {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connexion des connecteurs et prises de {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Démarrage des services de {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyCommand": "Vous pouvez accéder à votre clé de récupération après l'installation avec la commande suivante :",
+  "@recoveryKeyCommand": {}
 }

@@ -83,7 +83,7 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   String get restore => 'Restaurer';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Redémarrer';
 
   @override
   String get reformat => 'Reformat';

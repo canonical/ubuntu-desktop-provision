@@ -5,94 +5,94 @@ class FactoryResetToolsLocalizationsDa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Værktøjer til systemgendannelse';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Værktøjer til systemgendannelse';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Hvad vil du gøre?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Opret gendannelsesmedie';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Påbegynd systemgendannelse';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Opret USB-gendannelsesmedie';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Opret et USB-medie, som gendanner systemet og tilpasser dine Ubuntu-installationer.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Vælg et USB-flashdrev. Drevet skal have **mindst 16 GB plads.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Flashdrevet vil blive omformateret, og alle data på drevet går tabt.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-gendannelsesmedie';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Der er ikke fundet noget flytbart lager';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Du skal bruge et USB-lager for at oprette et systemgendannelsesmedie.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Vælg en mulighed for at påbegynde systemgendannelse';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Vent venligst, mens vi henter drevene.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-gendannelsesmedie er klart';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Når du vil bruge det, så indsæt venligst USB-drevet i den computer, du vil gendanne, og genstart den.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Der opstod en fejl ved indhentning af drev.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Klargør';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopierer';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Færdiggør';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Fuldført';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Mislykkedes';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fejl';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Indlæser …';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Advarsel';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Gendan';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Genstart';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Genformatér';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Kunne ikke køre kommando';
 
   @override
-  String get close => 'Close';
+  String get close => 'Luk';
 
   @override
   String get ok => 'OK';

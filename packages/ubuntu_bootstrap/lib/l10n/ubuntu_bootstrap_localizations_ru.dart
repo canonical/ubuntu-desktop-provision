@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Ошибка установки';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Недостаточно места';
+  String get notEnoughDiskSpaceTitle => 'Недостаточно места на диске';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'На выбранном диске недостаточно места для установки $DISTRO. Выйдите из программы установки и освободите место, или выберите другой диск.';
   }
 
   @override

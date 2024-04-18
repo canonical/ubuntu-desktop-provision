@@ -1,7 +1,7 @@
 {
   "welcomeStoreTitle": "Un nuevo aspecto para la Tienda de Aplicaciones",
   "@welcomeStoreTitle": {},
-  "telemetryReportLabel": "Detalles del informe",
+  "telemetryReportLabel": "Mostrar el primer informe",
   "@telemetryReportLabel": {},
   "welcomePageTitle": "Le damos la bienvenida",
   "@welcomePageTitle": {},
@@ -45,7 +45,7 @@
   },
   "privacyLocationEnable": "Servicios de ubicación",
   "@privacyLocationEnable": {},
-  "telemetryDescription": "Comparta datos de forma anónima con {distro} para que podamos mejorar su experiencia.",
+  "telemetryDescription": "Ayúdenos a mejorar {distro} compartiendo los datos de su sistema con nosotros. Esto incluye cosas como el modelo de su máquina, el software instalado y la ubicación que eligió para su zona horaria.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -61,10 +61,52 @@
   },
   "telemetryLabelOff": "No, no compartir datos del sistema",
   "@telemetryLabelOff": {},
-  "telemetryLegalLabel": "Información legal",
+  "telemetryLegalLabel": "Aviso Legal",
   "@telemetryLegalLabel": {},
   "privacyPolicyLink": "Protección de los datos",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProMagicAttachInstructions": "Adjunte magia con este código en<a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSucessAttachDescription": "Puedes gestionar tus servicios Pro en la aplicación Software y Actualizaciones.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProHeader": "Conecte esta máquina",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "o agregar un token manualmente",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Consiga la suscripción más completa para la seguridad del software de código abierto",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Siempre gratuito para uso personal. 30 días de prueba para empresas. <a href=\"https://{url}\">Más información</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Adjuntar",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Token no válido",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Token válido",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Token no válido, reintentar",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Omitir por ahora",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Siempre puedes activar Ubuntu Pro más adelante a través de la aplicación Software y actualizaciones.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Conecte esta máquina a una suscripción de Ubuntu Pro para obtener actualizaciones de seguridad en una gama más amplia de paquetes, hasta 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro ya está activado en esta máquina",
+  "@ubuntuProSucessAttachHeader": {}
 }

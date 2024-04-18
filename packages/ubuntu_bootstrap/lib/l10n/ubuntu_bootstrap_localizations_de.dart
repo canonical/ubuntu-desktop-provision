@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Art der Installation';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Wie möchten Sie $DISTRO installieren?';
   }
 
   @override
   String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interaktive Installation';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Für Benutzer, die Schritt für Schritt durch die Installation geführt werden möchten.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Automatisierte Installation';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Für fortgeschrittene Benutzer, die eine autoinstall.yaml für konsistente und wiederholbare Systemeinrichtungen haben.';
 
   @override
   String get changeButtonText => 'Ändern';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Warnung:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Was möchten Sie mit $DISTRO machen?';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Sicherheitsschlüssel anzeigen';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Ausblenden';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Anwendungen und Aktualisierungen';
@@ -151,10 +151,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Welche Anwendungen möchten Sie am Anfang installieren?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimieren Sie Ihren Computer';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Empfohlene proprietäre Software installieren?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -162,10 +162,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA-Grafikkarte erkannt';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Um die beste Leistung von NVIDIA-Grafikkarten zu erzielen, wird die Installation zusätzlicher Treiber dringend empfohlen.';
 
   @override
   String get fullInstallationTitle => 'Vollständige Installation';
@@ -201,37 +201,37 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'Diese Software unterliegt den Lizenzbedingungen, die in ihrer Dokumentation enthalten sind. Einige sind proprietär.';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Der Computer ist nicht an eine Stromquelle angeschlossen.';
 
   @override
   String get offlineWarning => 'Sie sind derzeit offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Festplatten-Passphrase';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Passphrase erstellen';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Passphrase auswählen';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Passphrase bestätigen';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Eine Passphrase ist erforderlich';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Die Passphrasen stimmen nicht überein';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Stellen Sie sicher, dass Sie Ihre Passphrase speichern';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Wenn Sie Ihre Passphrase verlieren, verlieren Sie alle Ihre Daten.';
 
   @override
   String get createPassphrase => 'Create a passphrase';

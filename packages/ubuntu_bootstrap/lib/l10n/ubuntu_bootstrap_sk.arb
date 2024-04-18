@@ -710,7 +710,7 @@
       "snap": {}
     }
   },
-  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap} ...",
+  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap}...",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
@@ -860,7 +860,7 @@
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybrané ZFS a šifrovanie",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom pri budúcich vydaniach {DISTRO}. <a href=\"{url}\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.",
+  "installationTypeTPMInfo": "Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom alebo budúcimi vydaniami {DISTRO}. <a href=\"{url}\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {

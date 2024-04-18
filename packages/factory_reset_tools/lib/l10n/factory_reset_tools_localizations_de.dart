@@ -29,13 +29,13 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Das Flash-Laufwerk wird neu formatiert und alle Daten auf dem Laufwerk gehen verloren.';
 
   @override
   String get resetMediaTitle => 'USB reset media';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Kein Wechseldatenträger erkannt';
 
   @override
   String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
@@ -44,7 +44,7 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get factoryResetTitle => 'Select an option to start factory reset';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Bitte warten Sie, während wir die Laufwerke abrufen.';
 
   @override
   String get resetMediaReadyTitle => 'USB reset media is ready';
@@ -53,37 +53,37 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Beim Abrufen der Laufwerke ist ein Fehler aufgetreten.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Wird initialisiert';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Wird kopiert';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Wird fertiggestellt';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Fertiggestellt';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Fehlgeschlagen';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fehler';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Wird geladen...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Warnung';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Wiederherstellen';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Neustart';
 
   @override
   String get reformat => 'Reformat';
@@ -92,7 +92,7 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Schließen';
 
   @override
   String get ok => 'OK';

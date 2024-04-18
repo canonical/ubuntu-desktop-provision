@@ -66,5 +66,47 @@
   "privacyPolicyLink": "Dataintegritet",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProHeader": "Anslut den här maskinen",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "eller lägg till en token manuellt",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Få den mest omfattande prenumerationen för säkerhet med öppen källkod",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Alltid gratis för personligt bruk. 30 dagars provperiod för företag. <a href=\"https://{url}\">Läs mer</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Anslut",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Ogiltig token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Giltig token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Ogiltig token, försök igen",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Lägg till denna maskin till en Ubuntu Pro prenumeration för säkerhetsuppdateringar på ett bredare utbud av paket, fram till 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro är nu aktiverat på den här maskinen",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProMagicAttachInstructions": "Magisk anslut med koden på <a href=\"https://{url}\"></a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOnBoardingSkipForNow": "Hoppa över för nu",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Aktivera Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachDescription": "Du kan hantera dina Pro-tjänster med programmet Programvara och uppdateringar.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Du kan alltid aktivera Ubuntu Pro senare via programmet Programvara och uppdateringar.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {}
 }

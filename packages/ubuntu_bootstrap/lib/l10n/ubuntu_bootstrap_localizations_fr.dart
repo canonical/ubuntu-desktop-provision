@@ -33,7 +33,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get autoinstallAutomatedOption => 'Installation automatisée';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Pour les utilisateurs avancés qui ont un autoinstall. yaml pour des configurations système cohérentes et répétables.';
 
   @override
   String get changeButtonText => 'Changer';
@@ -158,14 +158,14 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO est fourni sans logiciel propriétaire par défaut. L\'installation de logiciels supplémentaires peut améliorer la performance de votre ordinateur.';
   }
 
   @override
   String get codecsAndDriversNvidiaNote => 'Carte graphique NVIDIA détectée';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Pour une performance optimale des cartes graphiques NVIDIA, l\'installation de pilotes supplémentaires est fortement recommandée.';
 
   @override
   String get fullInstallationTitle => 'Installation complète';
@@ -207,37 +207,37 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Vous êtes actuellement hors ligne';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Phrase secrète du disque';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Créer une phrase secrète';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Vous avez besoin d\'une phrase secrète pour chiffrer vos fichiers. Votre phrase secrète vous sera demandée à chaque fois que vous allumez sur votre ordinateur.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Choisissez une phrase secrète';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Confirmer la phrase secrète';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Une phrase secrète est nécessaire';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Les phrases secrètes ne correspondent pas';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Assurez-vous de sauvegarder votre phrase secrète';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Si vous perdez votre phrase secrète, vous perdrez toutes vos données.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Créer une phrase secrète';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Confirmer la phrase secrète';
 
   @override
   String get installationTypeTitle => 'Configuration du disque';
@@ -293,7 +293,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => 'LVM sélectionné';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Utiliser LVM et le chiffrement';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM et chiffrement sélectionnés';
@@ -305,20 +305,20 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTAL : Effacer le disque et utiliser ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Effacer le disque et utiliser ZFS avec chiffrement';
 
   @override
   String get installationTypeZFSSelected => 'ZFS sélectionné';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS et chiffrement sélectionnés';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Activer le chiffrement matériel complet du disque';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'C\'est une fonctionnalité expérimentale. Elle peut ne pas fonctionner avec votre matériel ou de futures versions de $DISTRO. <a href=\"$url\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option.';
   }
 
   @override
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return '';
+    return 'Pour les utilisateurs avancés recherchant des configurations de disque personnalisées.';
   }
 
   @override
@@ -371,7 +371,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Commencez à partir de zéro sur votre disque sélectionné.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Sélectionnez le disque :';
@@ -542,13 +542,13 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get confirmEntryDiskEncryption => 'Chiffrement du disque';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Disque d\'installation';
 
   @override
   String get confirmEntryProprietarySoftware => 'Logiciel propriétaire';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Général';
 
   @override
   String get confirmSectionSecurityAndMoreTitle => 'Sécurité & plus';
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Redémarrez pour terminer l\'installation ou continuez à tester.\nLes changements effectués ne seront pas préservés.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Vous devez redémarrer l\'ordinateur pour continuer le processus d\'installation.';
 
   @override
   String get shutdown => 'Éteindre';
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Échec de l’installation';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Pas assez d’espace';
+  String get notEnoughDiskSpaceTitle => 'Pas assez d\'espace disque';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Le disque sélectionné n\'a pas assez d\'espace disque pour installer $DISTRO. Arrêtez l\'installateur pour libérer de l\'espace ou sélectionnez un autre disque.';
   }
 
   @override
@@ -813,13 +813,13 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Mise à jour disponible';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Une mise à jour est disponible pour l\'installateur';
 
   @override
   String get refreshUpdateNow => 'Mettre à jour maintenant';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Mettre à jour vers la dernière version pour une fiabilité améliorée et d\'avantage de fonctionnalités.';
 
   @override
   String get refreshReady => 'Mise à jour prête';
@@ -848,11 +848,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Veuillez redémarrer l\'installateur.';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Fermer l\'installateur';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Assurer les prérequis de $snap...';
   }
 
   @override
@@ -862,7 +862,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Vérification $snap re-refresh...';
   }
 
   @override
@@ -897,68 +897,68 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Délier $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Mise à jour des actifs de $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Mise à jour de la ligne de commande noyau de $snap...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'Copie des données de $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Configuration des profils de sécurité de $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Édition de liens de $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Connexion des connecteurs et prises de $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Configuration des alias automatique de $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Configuration des alias de $snap...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Démarrage des services de $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Nettoyage de $snap...';
   }
 
   @override
   String get recoveryKeyTitle => 'Clé de récupération du TPM';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Vous pouvez accéder à votre clé de récupération après l\'installation avec la commande suivante :';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Attention :</font> Si vous oubliez cette clé de sécurité, toutes les données seront perdues. Si vous avez besoin, notez votre clé et conservez-la dans un endroit sûr.';
   }
 
   @override

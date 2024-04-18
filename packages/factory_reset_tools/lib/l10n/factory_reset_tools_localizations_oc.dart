@@ -11,7 +11,7 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get windowTitle => 'Factory reset tools';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'De qué volètz far ?';
 
   @override
   String get createResetMedia => 'Create reset media';
@@ -59,31 +59,31 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get resetMediaInitializing => 'Initializing';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Còpia';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Finalizacion';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Acabat';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Fracàs';
 
   @override
   String get error => 'Error';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Cargament…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Avertiment';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Restaurar';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reaviar';
 
   @override
   String get reformat => 'Reformat';
@@ -92,8 +92,8 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tampar';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Validar';
 }

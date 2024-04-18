@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom pri budúcich vydaniach $DISTRO. <a href=\"$url\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.';
+    return 'Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom alebo budúcimi vydaniami $DISTRO. <a href=\"$url\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.';
   }
 
   @override
@@ -937,7 +937,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Nastavujú sa aliasy $snap ...';
+    return 'Nastavujú sa aliasy $snap...';
   }
 
   @override

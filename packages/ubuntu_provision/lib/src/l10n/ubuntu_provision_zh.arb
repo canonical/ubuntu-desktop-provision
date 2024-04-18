@@ -229,5 +229,13 @@
   "accessibilityMouseKeysLabel": "鼠标键",
   "@accessibilityMouseKeysLabel": {},
   "accessibilityDesktopZoomLabel": "桌面缩放",
-  "@accessibilityDesktopZoomLabel": {}
+  "@accessibilityDesktopZoomLabel": {},
+  "eulaPageTitle": "许可协议",
+  "@eulaPageTitle": {},
+  "eulaReadAndAcceptTerms": "要继续配置此计算机，您必须阅读并同意许可协议条款。",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaReviewTerms": "查看许可条款",
+  "@eulaReviewTerms": {},
+  "eulaAcceptTerms": "我已阅读并同意这些条款",
+  "@eulaAcceptTerms": {}
 }

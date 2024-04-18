@@ -138,7 +138,7 @@
   "@installingSystem": {},
   "configuringSystem": "Налаштування системи…",
   "@configuringSystem": {},
-  "notEnoughDiskSpaceTitle": "Вибачте",
+  "notEnoughDiskSpaceTitle": "Недостатньо простору на диску",
   "@notEnoughDiskSpaceTitle": {},
   "installationTypeOSDetected": "На цьому комп'ютері зараз встановлено {os}. Що б ви хотіли зробити?",
   "@installationTypeOSDetected": {
@@ -456,5 +456,27 @@
     }
   },
   "installationSlidesSoftwareTitle": "Усі необхідні застосунки",
-  "@installationSlidesSoftwareTitle": {}
+  "@installationSlidesSoftwareTitle": {},
+  "restartIntoWindowsTitle": "Перезапустити у Windows?",
+  "@restartIntoWindowsTitle": {},
+  "bitlockerHeader": "Вимкніть BitLocker, щоб продовжити",
+  "@bitlockerHeader": {},
+  "continueTesting": "Продовжити ознайомлення",
+  "@continueTesting": {},
+  "notEnoughDiskSpaceUbuntu": "Недостатньо простору на диску, щоб установити {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceAvailable": "Доступно:",
+  "@notEnoughDiskSpaceAvailable": {},
+  "refreshPageTitle": "Доступне оновлення",
+  "@refreshPageTitle": {},
+  "notEnoughDiskSpaceRequired": "Потрібно:",
+  "@notEnoughDiskSpaceRequired": {},
+  "restartNow": "Перезапустити зараз",
+  "@restartNow": {}
 }

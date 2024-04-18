@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Esta funcionalidad es experimental. Es posible que no funcione con el equipo en versiones futuras de $DISTRO. <a href=\"$url\">Lea sobre el cifrado TPM</a> antes de elegir esta opción.';
+    return 'Se trata de una función experimental. Es posible que no funcione con tu hardware o con futuras versiones de $DISTRO. <a href=\"$url\">Infórmate sobre el cifrado TPM</a> antes de elegir esta opción.';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Falló la instalación';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Espacio insuficiente';
+  String get notEnoughDiskSpaceTitle => 'No hay suficiente espacio en el disco';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'El disco seleccionado no tiene suficiente espacio en disco para instalar $DISTRO. Salga del instalador para liberar espacio o seleccione otro disco.';
   }
 
   @override

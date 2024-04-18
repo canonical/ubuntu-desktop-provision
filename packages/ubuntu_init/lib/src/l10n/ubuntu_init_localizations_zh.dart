@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return '向 $distro 匿名发送数据，让我们改善您的体验。';
+    return '通过与我们分享您的系统数据，帮助我们改善 $distro。这包括您的计算机型号、安装的软件与时区选择的位置。';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get telemetryLabelOff => '不，不要分享系统数据';
 
   @override
-  String get telemetryReportLabel => '报告细节';
+  String get telemetryReportLabel => '显示第一份报告';
 
   @override
   String get telemetryReportTitle => '报告细节';
 
   @override
-  String get telemetryLegalLabel => '法律信息';
+  String get telemetryLegalLabel => '法律通知';
 
   @override
   String get privacyPageTitle => '位置信息服务';

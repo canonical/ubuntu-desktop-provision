@@ -323,7 +323,7 @@
       "mount": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "Ne sufiĉas spaco",
+  "notEnoughDiskSpaceTitle": "Ne sufiĉas diska spaco",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionResize": "ŝanĝi la grandon de la subdisko <b>{sysname}</b> de <b>{oldsize}</b> al <b>{newsize}</b>",
   "@confirmPartitionResize": {
@@ -911,5 +911,13 @@
   "selectGuidedStoragePartitionDropdownLabel": "Elektu subdiskon:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
   "selectGuidedStorageDriveDropdownLabel": "Elektu diskon:",
-  "@selectGuidedStorageDriveDropdownLabel": {}
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "notEnoughDiskSpaceBody": "La elektita disko ne havas sufiĉon da diska spaco por instali {DISTRO}. Forlasu la instalilon por provizi pli da spaco, aŭ elektu alian diskon.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

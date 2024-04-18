@@ -359,7 +359,7 @@
   "@installCodecsSubtitle": {},
   "installingSystem": "A instalar o sistema…",
   "@installingSystem": {},
-  "notEnoughDiskSpaceTitle": "Espaço insuficiente",
+  "notEnoughDiskSpaceTitle": "Espaço insuficiente no disco",
   "@notEnoughDiskSpaceTitle": {},
   "copyingFiles": "A copiar ficheiros…",
   "@copyingFiles": {},
@@ -916,5 +916,13 @@
     }
   },
   "confirmProprietarySoftwareDrivers": "Controladores",
-  "@confirmProprietarySoftwareDrivers": {}
+  "@confirmProprietarySoftwareDrivers": {},
+  "notEnoughDiskSpaceBody": "O disco selecionado não dispõe de espaço suficiente para instalar o {DISTRO}. Saia do instalador para disponibilizar espaço ou selecione outro disco.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

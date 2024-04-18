@@ -1,3 +1,27 @@
 {
-  "@@locale": "oc"
+  "@@locale": "oc",
+  "homeTitle": "De qué volètz far ?",
+  "@homeTitle": {},
+  "resetMediaCopying": "Còpia",
+  "@resetMediaCopying": {},
+  "resetMediaFinalizing": "Finalizacion",
+  "@resetMediaFinalizing": {},
+  "resetMediaFinished": "Acabat",
+  "@resetMediaFinished": {},
+  "resetMediaFailed": "Fracàs",
+  "@resetMediaFailed": {},
+  "warning": "Avertiment",
+  "@warning": {},
+  "restore": "Restaurar",
+  "@restore": {},
+  "close": "Tampar",
+  "@close": {},
+  "ok": "Validar",
+  "@ok": {},
+  "error": "Error",
+  "@error": {},
+  "loading": "Cargament…",
+  "@loading": {},
+  "restart": "Reaviar",
+  "@restart": {}
 }

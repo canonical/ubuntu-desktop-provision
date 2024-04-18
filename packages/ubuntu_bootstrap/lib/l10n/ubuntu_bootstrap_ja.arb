@@ -318,7 +318,7 @@
       "product": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "空き容量が足りません",
+  "notEnoughDiskSpaceTitle": "ディスクの空き容量が足りません",
   "@notEnoughDiskSpaceTitle": {},
   "installationTypeAlongsideDual": "{os1}と{os2}と並んで{product}をインストールする",
   "@installationTypeAlongsideDual": {
@@ -581,7 +581,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアが将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TPM暗号化</a> をよく読んでください。",
+  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアまたは将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TPM暗号化</a> をよく読んでください。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -984,5 +984,13 @@
   "installationTypeEraseInfo": "選択したディスクにクリーンな状態でインストールします。",
   "@installationTypeEraseInfo": {},
   "selectGuidedStorageInfo": "選択したディスクにクリーンな状態でインストールします。",
-  "@selectGuidedStorageInfo": {}
+  "@selectGuidedStorageInfo": {},
+  "notEnoughDiskSpaceBody": "選択したディスクは、{DISTRO} をインストールするだけの空き容量が足りません。インストーラーを終了して空きスペースを増やすか、ほかのディスクを選択してください。",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

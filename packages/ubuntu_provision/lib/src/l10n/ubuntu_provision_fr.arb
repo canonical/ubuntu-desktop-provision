@@ -1,13 +1,13 @@
 {
   "timezonePageTitle": "Sélectionnez votre fuseau horaire",
   "@timezonePageTitle": {},
-  "timezoneLocationLabel": "Localisation",
+  "timezoneLocationLabel": "Emplacement",
   "@timezoneLocationLabel": {},
   "timezoneTimezoneLabel": "Fuseau horaire",
   "@timezoneTimezoneLabel": {},
   "keyboardTitle": "Disposition du clavier",
   "@keyboardTitle": {},
-  "keyboardHeader": "Indiquez la disposition de votre clavier :",
+  "keyboardHeader": "Choisir la disposition de votre clavier :",
   "@keyboardHeader": {},
   "keyboardTestHint": "Saisissez du texte ici pour tester votre clavier",
   "@keyboardTestHint": {},
@@ -15,13 +15,13 @@
   "@keyboardDetectTitle": {},
   "keyboardDetectButton": "Détecter",
   "@keyboardDetectButton": {},
-  "keyboardVariantLabel": "Variante du clavier :",
+  "keyboardVariantLabel": "Choisir votre variante du clavier :",
   "@keyboardVariantLabel": {},
-  "keyboardPressKeyLabel": "Veuillez appuyer sur l’une des touches suivantes :",
+  "keyboardPressKeyLabel": "Veuillez appuyer sur l’une des touches suivantes :",
   "@keyboardPressKeyLabel": {},
-  "keyboardKeyPresentLabel": "Cette touche est-elle présente sur votre clavier ?",
+  "keyboardKeyPresentLabel": "Cette touche est-elle présente sur votre clavier ?",
   "@keyboardKeyPresentLabel": {},
-  "themePageTitle": "Choisissez l’apparence",
+  "themePageTitle": "Choisissez votre thème",
   "@themePageTitle": {},
   "themePageHeader": "Vous pourrez la changer ultérieurement dans les préférences d’apparence.",
   "@themePageHeader": {},
@@ -36,9 +36,9 @@
       "DISTRO": {}
     }
   },
-  "localeHeader": "Choisissez votre langue :",
+  "localeHeader": "Choisissez votre langue :",
   "@localeHeader": {},
-  "identityPageTitle": "Configurez votre compte",
+  "identityPageTitle": "Créer votre compte",
   "@identityPageTitle": {},
   "identityAutoLogin": "Ouvrir la session automatiquement",
   "@identityAutoLogin": {},
@@ -161,5 +161,81 @@
   "networkNoneOption": "Je ne souhaite pas me connecter à internet pour l’instant",
   "@networkNoneOption": {},
   "close": "Fermer",
-  "@close": {}
+  "@close": {},
+  "eulaPageTitle": "Contrat de Licence",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Examiner les conditions de licence",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Pour continuer de configurer cette machine, vous devez lire et accepter les termes de l'accord de licence.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "J'ai lu et accepté ces termes",
+  "@eulaAcceptTerms": {},
+  "accessibilityPageTitle": "Accessibilité",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Accessibilité dans {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Personnalisez {DISTRO} à vos besoins avant de le configurer. Vous pouvez les changer plus tard dans les paramètres système.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Vision",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Audition",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Saisie",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Pointage et clic de souris",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Contraste élevé",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Grand texte",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Réduire l’animation",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Lecteur d’écran",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Alertes visuelles",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Touches rémanentes",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Touches lentes",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Touches de la souris",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Zoom du bureau",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Quelque chose s’est mal passé",
+  "@errorPageTitle": {},
+  "errorPageShowLog": "Afficher le journal",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Masquer le journal",
+  "@errorPageHideLog": {},
+  "restart": "Redémarrer",
+  "@restart": {},
+  "errorPageUnexpected": "Nous sommes désolés, mais nous ne sommes pas sûrs de l'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d'installation. Vous pouvez également <a> signaler le problème</a>.",
+  "@errorPageUnexpected": {},
+  "activeDirectoryHeader": "Se connecter à Active Directory ?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO} est conçu pour s'intégrer de façon transparente avec Active Directory pour faciliter l'administration.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.",
+  "@networkPageBody": {}
 }

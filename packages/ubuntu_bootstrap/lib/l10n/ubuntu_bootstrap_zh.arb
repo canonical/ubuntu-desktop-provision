@@ -371,7 +371,7 @@
       "sysname": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "空间不足",
+  "notEnoughDiskSpaceTitle": "磁盘空间不足",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionResize": "分区<b>{sysname}</b> 从<b>{oldsize}</b> 调整为<b>{newsize}</b>",
   "@confirmPartitionResize": {
@@ -591,7 +591,7 @@
       }
     }
   },
-  "autoinstallInstructions": "输入 autoinstall.yaml 的 URL。",
+  "autoinstallInstructions": "输入 autoinstall.yaml 的 URL：",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "交互安装",
   "@autoinstallInteractiveOption": {},
@@ -946,7 +946,7 @@
   "@rebootToConfigureWarning": {},
   "installationTypeLVM": "使用 LVM（逻辑卷管理）",
   "@installationTypeLVM": {},
-  "installationTypeTPMInfo": "这是一个实验性功能。在未来的 {DISTRO} 发行版中，您的硬件可能无法使用此功能。在选择此选项前，请先<a href=\"{url}\">了解 TPM 加密</a>。",
+  "installationTypeTPMInfo": "这是一个实验性功能。您的硬件可能无法使用此功能，未来的 {DISTRO} 发行版也可能不支持。在选择此选项前，请先<a href=\"{url}\">了解 TPM 加密</a>。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -983,6 +983,14 @@
       }
     }
   },
-  "restartWarningBody": "重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会保存。",
-  "@restartWarningBody": {}
+  "restartWarningBody": "重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会被保存。",
+  "@restartWarningBody": {},
+  "notEnoughDiskSpaceBody": "所选磁盘没有足够空间可供安装 {DISTRO}。请退出安装程序以腾出可用空间，或者选择其他磁盘。",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

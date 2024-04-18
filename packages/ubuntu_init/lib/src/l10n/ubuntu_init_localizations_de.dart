@@ -92,7 +92,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Diese Maschine anbinden';
 
   @override
   String get ubuntuProOrAddTokenManually => 'or add a token manually';
@@ -109,32 +109,32 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Anbinden';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Ungültiges Token';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Gültiges Token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Ungültiges Token, erneut versuchen';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Vorerst überspringen';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro aktivieren';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ist jetzt auf dieser Maschine aktiviert';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.';
 }

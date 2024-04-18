@@ -25,7 +25,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Udostępniaj anonimowo dane {distro}, abyśmy mogli poprawić Twoje wrażenia.",
+  "telemetryDescription": "Pomóż nam ulepszyć {distro}, udostępniając nam swoje dane systemowe. Obejmuje to takie elementy jak model urządzenia, zainstalowane oprogramowanie i lokalizację wybraną dla strefy czasowej.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -41,7 +41,7 @@
   },
   "telemetryLabelOff": "Nie, nie udostępniaj danych systemowych",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "Szczegóły raportowania",
+  "telemetryReportLabel": "Pokaż pierwszy raport",
   "@telemetryReportLabel": {},
   "telemetryLegalLabel": "Informacje prawne",
   "@telemetryLegalLabel": {},

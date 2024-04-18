@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Skapa ett USB återställningsmedia för att återställa systemet samt anpassa dina Ubuntu installationer.';
 
   @override
-  String get createUsbListExplanation => 'Välj en USB flashenhet. Enheten måste ha minst 16 GB utrymme';
+  String get createUsbListExplanation => 'Välj en USB flashenhet. Enheten måste ha minst **16 GB utrymme.**';
 
   @override
   String get createUsbWarning => 'Flashenheten kommer att omformateras och all data på enheten går förlorad.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get restore => 'Återställ';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Starta om';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Formatera om';
 
   @override
   String get failed => 'Misslyckades att köra kommando';
