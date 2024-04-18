@@ -41,7 +41,7 @@
   },
   "telemetryPageTitle": "情報収集",
   "@telemetryPageTitle": {},
-  "telemetryDescription": "{distro} の匿名化したデータを共有すると、あなたの経験を改善できます。",
+  "telemetryDescription": "システムデータを共有してもらえると、{distro} の改善に役立てます。マシンのモデル、インストールしたソフトウェアとタイムゾーンから取得した場所が含まれます。",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -57,7 +57,7 @@
   },
   "telemetryLabelOff": "システムデータを共有しません",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "報告内容の詳細",
+  "telemetryReportLabel": "最初のレポートを表示",
   "@telemetryReportLabel": {},
   "privacyLocationSubtitle": "アプリケーションに地理的な位置を知らせるようになります。\n設定でいつでも変更できます。",
   "@privacyLocationSubtitle": {},
@@ -66,5 +66,47 @@
   "privacyPolicyLink": "データプライバシー",
   "@privacyPolicyLink": {},
   "welcomePageHeader": "{distro} にようこそ",
-  "@welcomePageHeader": {}
+  "@welcomePageHeader": {},
+  "ubuntuProOrAddTokenManually": "またはトークンを手動で追加",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenAttachErrorVariant": "無効なトークンです。再度入力してください",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "個人用途は常に無料です。エンタープライズ向けは30日間無料体験です。<a href=\"https://{url}\">詳細</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "アタッチ",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "無効なトークン",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "有効なトークン",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProOnBoardingSkipForNow": "今はスキップ",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "「ソフトウェアとアップデート」からいつでもUbuntu Proを有効にできます。",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Proを有効化",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "2023年まで幅広いパッケージのセキュリティアップデートを取得できるUbuntu Proサブスクリプションにアタッチします。",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProHeader": "このマシンをアタッチ",
+  "@ubuntuProHeader": {},
+  "ubuntuProTokenTextfieldHint": "トークン",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "オープンソースソフトウェアのセキュリティのための最も包括的なサブスクリプション",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProMagicAttachInstructions": "<a href=\"https://{url}\">{url}</a>のコードでアタッチ",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSucessAttachHeader": "このマシンでUbuntu Proを有効にしました",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "「ソフトウェアとアップデート」アプリでProサービスを設定できます。",
+  "@ubuntuProSucessAttachDescription": {}
 }
