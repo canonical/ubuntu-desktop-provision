@@ -581,7 +581,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアが将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TPM暗号化</a> をよく読んでください。",
+  "installationTypeTPMInfo": "これは実験的な機能です。 このハードウェアまたは将来の {DISTRO} リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"{url}\">TPM暗号化</a> をよく読んでください。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
