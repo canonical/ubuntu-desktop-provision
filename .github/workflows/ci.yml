@@ -299,6 +299,8 @@ jobs:
   weblate-l10n:
     runs-on: ubuntu-22.04
     if: contains(github.event.pull_request.title, 'Hosted Weblate')
+    permissions:
+      contents: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
