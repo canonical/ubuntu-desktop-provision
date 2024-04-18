@@ -449,7 +449,7 @@
   "@installationSlidesAccessibilityTitle": {},
   "partitionMountPointLabel": "Monteringspunkt:",
   "@partitionMountPointLabel": {},
-  "installationSlidesGamingBody": "{DISTRO} understøtter de seneste NVIDIA- og Mesa-drivere, som forbedrer ydeevne og kompatibilitet. Tusindvis af Windows-titler kører glimrende på {DISTRO}, via programmer som Steam uden nogen yderligere konfiguration.",
+  "installationSlidesGamingBody": "{DISTRO} understøtter de seneste NVIDIA- og Mesa-drivere, som forbedrer ydeevne og kompatibilitet. Tusindvis af Windows-titler kører glimrende på {DISTRO} via programmer som Steam uden nogen yderligere konfiguration.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
