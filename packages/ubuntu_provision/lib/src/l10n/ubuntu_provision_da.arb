@@ -159,5 +159,9 @@
   "networkHiddenWifiNameRequired": "Et netværksnavn er påkrævet",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Jeg vil ikke oprette forbindelse til internettet lige nu",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "restart": "Genstart",
+  "@restart": {},
+  "close": "Luk",
+  "@close": {}
 }
