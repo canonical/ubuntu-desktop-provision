@@ -720,5 +720,17 @@
   "refreshReady": "Mise à jour prête",
   "@refreshReady": {},
   "validate": "Valider",
-  "@validate": {}
+  "@validate": {},
+  "autoinstallAutomatedDescription": "Pour les utilisateurs avancés qui ont un autoinstall. yaml pour des configurations système cohérentes et répétables.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} est fourni sans logiciel propriétaire par défaut. L'installation de logiciels supplémentaires peut améliorer la performance de votre ordinateur.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "Pour une performance optimale des cartes graphiques NVIDIA, l'installation de pilotes supplémentaires est fortement recommandée.",
+  "@codecsAndDriversNvidiaBody": {}
 }
