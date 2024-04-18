@@ -229,5 +229,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "eulaPageTitle": "Licensavtal",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Läs licensvillkoren",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "För att fortsätta konfigurera den här maskinen måste du läsa och acceptera villkoren för licensavtalet.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Jag har läst och accepterar dessa villkor",
+  "@eulaAcceptTerms": {}
 }
