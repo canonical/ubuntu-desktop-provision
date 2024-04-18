@@ -35,7 +35,7 @@
   },
   "welcomeSecuritySubtitle": "Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.",
   "@welcomeSecuritySubtitle": {},
-  "telemetryLegalLabel": "Juraĵoj",
+  "telemetryLegalLabel": "Jura avizo",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Lokado-servo",
   "@privacyPageTitle": {},
@@ -43,7 +43,7 @@
   "@privacyLocationTitle": {},
   "privacyLocationEnable": "Lokado-servo",
   "@privacyLocationEnable": {},
-  "telemetryReportLabel": "Raportotaj detaloj",
+  "telemetryReportLabel": "Montri la unuan raporton",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Raportotaj detaloj",
   "@telemetryReportTitle": {},
@@ -54,7 +54,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Sendi datenojn anonime al {distro} por plibonigi vian sperton.",
+  "telemetryDescription": "Helpu nin plibonigi {distro} sendante viajn sistemajn datenojn al ni. Tio inkluzivas interalie la modelon de via maŝino, instalitajn programojn kaj tiun lokon, kiun vi elektis por via horzono.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
