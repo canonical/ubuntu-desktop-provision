@@ -305,7 +305,7 @@
   },
   "quitButtonText": "Salir de la instalación",
   "@quitButtonText": {},
-  "notEnoughDiskSpaceTitle": "Espacio insuficiente",
+  "notEnoughDiskSpaceTitle": "No hay suficiente espacio en el disco",
   "@notEnoughDiskSpaceTitle": {},
   "installingSystem": "Instalando el sistema…",
   "@installingSystem": {},
@@ -833,7 +833,7 @@
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Esta funcionalidad es experimental. Es posible que no funcione con el equipo en versiones futuras de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado TPM</a> antes de elegir esta opción.",
+  "installationTypeTPMInfo": "Se trata de una función experimental. Es posible que no funcione con tu hardware o con futuras versiones de {DISTRO}. <a href=\"{url}\">Infórmate sobre el cifrado TPM</a> antes de elegir esta opción.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -911,5 +911,13 @@
   "refreshHeader": "Existe una actualización disponible para el instalador",
   "@refreshHeader": {},
   "refreshInfo": "Actualice a la última versión para mejorar la fiabilidad y obtener más funciones.",
-  "@refreshInfo": {}
+  "@refreshInfo": {},
+  "notEnoughDiskSpaceBody": "El disco seleccionado no tiene suficiente espacio en disco para instalar {DISTRO}. Salga del instalador para liberar espacio o seleccione otro disco.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
