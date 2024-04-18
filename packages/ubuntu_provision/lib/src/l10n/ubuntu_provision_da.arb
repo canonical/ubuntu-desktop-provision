@@ -163,5 +163,69 @@
   "restart": "Genstart",
   "@restart": {},
   "close": "Luk",
-  "@close": {}
+  "@close": {},
+  "accessibilityPageHeader": "Tilgængelighed i {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Syn",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Hørelse",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Indtastning",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Peg og klik",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Zoom",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Høj kontrast",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Stor tekst",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Reducér animation",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Skærmoplæser",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuelle påmindelser",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilitySlowKeysLabel": "Langsomme taster",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Musetaster",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Skrivebordszoom",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Noget gik galt",
+  "@errorPageTitle": {},
+  "errorPageShowLog": "Vis log",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Skjul log",
+  "@errorPageHideLog": {},
+  "activeDirectoryHeader": "Log ind i Active Directory?",
+  "@activeDirectoryHeader": {},
+  "accessibilityStickKeysLabel": "Klæbetaster",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilityPageTitle": "Tilgængelighed",
+  "@accessibilityPageTitle": {},
+  "errorPageUnexpected": "Vi beklager, men vi ved ikke helt, hvad fejlen er. Du kan genstarte computeren og starte installationsproceduren igen. Du kan også <a>indrapportere problemet</a>.",
+  "@errorPageUnexpected": {},
+  "accessibilityPageBody": "Tilpas {DISTRO} til dine behov før opsætning. Du kan ændre dem senere i Systemindstillinger.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryInfo": "{DISTRO} er designet til sømløs integrering med Active Directory for at lette administration.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
