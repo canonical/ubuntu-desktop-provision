@@ -63,7 +63,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Niečo sa pokazilo';
 
   @override
-  String get errorPageUnexpected => 'Ospravedlňujeme sa , ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie . Môžete tiež <a>nahlásiť problém</a>.';
+  String get errorPageUnexpected => 'Ospravedlňujeme sa, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.';
 
   @override
   String get errorPageShowLog => 'Zobraziť denník';

@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Krei restaŭran USB-diskon por restaŭri la sistemon kaj agordi viajn instalojn de Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Elektu USB-diskon, kiu devas havi almenaŭ 16 gigabajtojn da spaco';
+  String get createUsbListExplanation => 'Elektu USB-diskon, kiu devas havi **almenaŭ 16 gigabajtojn da spaco**.';
 
   @override
   String get createUsbWarning => 'La USB-disko estas restrukturota, kaj ĉiaj datenoj sur la disko estas perdotaj.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get restore => 'Restaŭri';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Restartigi';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Restrukturi';
 
   @override
   String get failed => 'Malsukcesis ruli komandon';

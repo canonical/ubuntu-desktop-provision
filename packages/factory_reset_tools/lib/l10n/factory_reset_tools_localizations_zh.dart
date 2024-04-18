@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   String get createUsbBody => '创建可用于恢复系统的 USB 恢复介质，您还可以自定义 Ubuntu 安装配置。';
 
   @override
-  String get createUsbListExplanation => '请选择 USB 闪存盘。闪存盘必须至少有 16GB 的空间';
+  String get createUsbListExplanation => '请选择 USB 闪存盘。闪存盘必须**至少有 16GB 的空间**';
 
   @override
   String get createUsbWarning => 'U 盘将会被格式化，上面所有的数据都会被删除。';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   String get restore => '恢复';
 
   @override
-  String get restart => 'Restart';
+  String get restart => '重新启动';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => '重新格式化';
 
   @override
   String get failed => '无法运行命令';

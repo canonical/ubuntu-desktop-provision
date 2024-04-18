@@ -5,11 +5,11 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Barrierefreiheit';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Barrierefreiheit in $DISTRO';
   }
 
   @override
@@ -24,58 +24,58 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get accessibilityHearingLabel => 'Hearing';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Tippen';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Zeigen und Klicken';
 
   @override
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Hoher Kontrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Großer Text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Animationen reduzieren';
 
   @override
   String get accessibilityScreenReaderLabel => 'Screen reader';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Visuelle Warnhinweise';
 
   @override
   String get accessibilityStickKeysLabel => 'Sticky keys';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Langsame Tasten';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Maustasten';
 
   @override
   String get accessibilityDesktopZoomLabel => 'Desktop zoom';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Etwas ist schiefgelaufen';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Protokoll anzeigen';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Protokoll ausblenden';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Neustart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Schließen';
 
   @override
   String get timezonePageTitle => 'Wählen Sie Ihre Zeitzone aus';
@@ -212,7 +212,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Active Directory konfigurieren';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Bei Active Directory anmelden?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {

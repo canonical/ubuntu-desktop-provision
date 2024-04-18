@@ -325,16 +325,16 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get networkNoneOption => '我现在不想连接到互联网';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => '许可协议';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => '查看许可条款';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => '要继续配置此计算机，您必须阅读并同意许可协议条款。';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => '我已阅读并同意这些条款';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

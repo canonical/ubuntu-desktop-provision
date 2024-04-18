@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Anonymné zdieľanie údajov s $distro, aby sme mohli zlepšiť váš dojem.';
+    return 'Pomôžte nám zlepšiť $distro zdieľaním svojich systémových údajov s nami. To zahŕňa aj veci, ako je model vášho počítača, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.';
   }
 
   @override
@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Nie, nezdieľať systémové údaje';
 
   @override
-  String get telemetryReportLabel => 'Podrobnosti hlásenia';
+  String get telemetryReportLabel => 'Zobraziť prvé hlásenie';
 
   @override
   String get telemetryReportTitle => 'Podrobnosti hlásenia';

@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'これは実験的な機能です。 このハードウェアが将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。';
+    return 'これは実験的な機能です。 このハードウェアまたは将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'インストールに失敗しました';
 
   @override
-  String get notEnoughDiskSpaceTitle => '空き容量が足りません';
+  String get notEnoughDiskSpaceTitle => 'ディスクの空き容量が足りません';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return '選択したディスクは、$DISTRO をインストールするだけの空き容量が足りません。インストーラーを終了して空きスペースを増やすか、ほかのディスクを選択してください。';
   }
 
   @override

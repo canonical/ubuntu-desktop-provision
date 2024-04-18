@@ -632,16 +632,16 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get shutdown => 'Вимкнути';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Перезапустити зараз';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Продовжити ознайомлення';
 
   @override
   String get bitlockerTitle => 'Вимкнути BitLocker';
 
   @override
-  String get bitlockerHeader => 'Turn off BitLocker to continue';
+  String get bitlockerHeader => 'Вимкніть BitLocker, щоб продовжити';
 
   @override
   String bitlockerDescription(String option) {
@@ -657,7 +657,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get restartIntoWindows => 'Перезапустити у Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Перезапустити у Windows?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
@@ -791,11 +791,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Встановлення не вдалося';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Вибачте';
+  String get notEnoughDiskSpaceTitle => 'Недостатньо простору на диску';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Недостатньо простору на диску, щоб установити $DISTRO';
   }
 
   @override
@@ -804,13 +804,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Доступно:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Потрібно:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Доступне оновлення';
 
   @override
   String get refreshHeader => 'An update is available for the installer';

@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Instalado fiaskis';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Ne sufiĉas spaco';
+  String get notEnoughDiskSpaceTitle => 'Ne sufiĉas diska spaco';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'La elektita disko ne havas sufiĉon da diska spaco por instali $DISTRO. Forlasu la instalilon por provizi pli da spaco, aŭ elektu alian diskon.';
   }
 
   @override

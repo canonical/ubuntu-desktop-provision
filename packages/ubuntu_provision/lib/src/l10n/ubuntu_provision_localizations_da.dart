@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Tilgængelighed';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Tilgængelighed i $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Tilpas $DISTRO til dine behov før opsætning. Du kan ændre dem senere i Systemindstillinger.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Syn';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Hørelse';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Indtastning';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Peg og klik';
 
   @override
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Høj kontrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Stor tekst';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Reducér animation';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Skærmoplæser';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Visuelle påmindelser';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Klæbetaster';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Langsomme taster';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Musetaster';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Skrivebordszoom';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Noget gik galt';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Vi beklager, men vi ved ikke helt, hvad fejlen er. Du kan genstarte computeren og starte installationsproceduren igen. Du kan også <a>indrapportere problemet</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Vis log';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Skjul log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Genstart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Luk';
 
   @override
   String get timezonePageTitle => 'Vælg din tidszone';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Tastaturopsætning';
 
   @override
-  String get keyboardHeader => 'Vælg din tastaturopsætning:';
+  String get keyboardHeader => 'Vælg din tastaturopsætning';
 
   @override
   String get keyboardTestHint => 'Tast her, for at afprøve dit tastatur';
@@ -212,11 +212,11 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Konfigurér Aktiv Sti';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Log ind i Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO er designet til sømløs integrering med Active Directory for at lette administration.';
   }
 
   @override
@@ -277,10 +277,10 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Opret forbindelse til et netværk';
 
   @override
-  String get networkPageHeader => 'Tilslutning af denne computer til internettet, vil hjælpe Ubuntu, med at installere enhver ekstra nødvendig programvare og vælge din tidszone.\n\nOpret forbindelse via Ethernet-kabel, eller vælg et WiFi-netværk';
+  String get networkPageHeader => 'Forbind til internet';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.';
 
   @override
   String get networkWiredOption => 'Brug kablet forbindelse';
@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Jeg vil ikke oprette forbindelse til internettet lige nu';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Licensaftale';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Gennemse licensbetingelserne';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'For at fortsætte med opsætning af denne maskine, skal du læse og acceptere betingelserne i licensaftalen.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Jeg har læst og accepterer disse betingelser';
 }

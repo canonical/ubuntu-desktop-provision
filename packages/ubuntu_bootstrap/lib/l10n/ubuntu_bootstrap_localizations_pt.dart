@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Falha ao instalar';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Espaço insuficiente';
+  String get notEnoughDiskSpaceTitle => 'Espaço insuficiente no disco';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'O disco selecionado não dispõe de espaço suficiente para instalar o $DISTRO. Saia do instalador para disponibilizar espaço ou selecione outro disco.';
   }
 
   @override
