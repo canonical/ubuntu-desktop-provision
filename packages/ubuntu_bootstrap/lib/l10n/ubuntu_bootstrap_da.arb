@@ -401,7 +401,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityBody": "{DISTRO} Skrivebord inkluderer LibreOffice, en pakke Microsoft Office-kompatible programmer med åben kildekode, til dokumenter, regneark og præsentationer. Populære kollaborationsværktøjer er også tilgængelige.",
+  "installationSlidesProductivityBody": "{DISTRO} Skrivebord inkluderer LibreOffice, en pakke Microsoft Office-kompatible programmer med åben kildekode til dokumenter, regneark og præsentationer. Populære kollaborationsværktøjer er også tilgængelige.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
