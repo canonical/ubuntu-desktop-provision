@@ -20,8 +20,8 @@ apps:
       - shutdown
       - removable-media
       - block-devices
-      - reset-partition-fsuuid
-      - reset-yaml
+      - etc-reset-partition-fsuuid
+      - usr-share-desktop-provision-reset-yaml
       - udisks2
       - hardware-observe
       - mount-observe
@@ -32,8 +32,8 @@ apps:
       - shutdown
       - removable-media
       - block-devices
-      - reset-partition-fsuuid
-      - reset-yaml
+      - etc-reset-partition-fsuuid
+      - usr-share-desktop-provision-reset-yaml
       - udisks2
       - hardware-observe
       - mount-observe
@@ -44,8 +44,8 @@ apps:
     activates-on: [dbus-service]
     plugs:
       - shutdown
-      - boot-grub
-      - reset-yaml
+      - hostfs-boot-grub
+      - usr-share-desktop-provision-reset-yaml
 
 parts:
   flutter-git:
@@ -86,9 +86,7 @@ parts:
     build-attributes: [enable-patchelf]
     override-build: |
       set -eux
-      mkdir -p $CRAFT_PART_INSTALL/bin/lib -p $CRAFT_PART_INSTALL/usr/share/applications $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256
-      cp ci/snap/reset-tools/local/factory-reset-tools.desktop $CRAFT_PART_INSTALL/usr/share/applications/
-      cp ci/snap/reset-tools/local/factory-reset-tools.png $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256/
+      mkdir -p $CRAFT_PART_INSTALL/bin
       
       dart pub global activate melos
       dart pub global run melos bootstrap
@@ -121,15 +119,15 @@ slots:
     name: com.canonical.oem.FactoryResetTools
 
 plugs:
-  boot-grub:
+  hostfs-boot-grub:
     interface: system-files
     write:
     - /var/lib/snapd/hostfs/boot/grub
-  reset-partition-fsuuid:
+  etc-reset-partition-fsuuid:
     interface: system-files
     read:
     - /etc/reset_partition_fsuuid
-  reset-yaml:
+  usr-share-desktop-provision-reset-yaml:
     interface: system-files
     read:
     - /usr/share/desktop-provision/reset.yaml
