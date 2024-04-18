@@ -7,6 +7,12 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+final _nextFocusNodeProvider = Provider.autoDispose<FocusNode>((ref) {
+  final focusNode = FocusNode();
+  ref.onDispose(focusNode.dispose);
+  return focusNode;
+});
+
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
@@ -23,15 +29,18 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final flavor = ref.watch(flavorProvider);
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
+    final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
       managedScrolling: false,
       contentFlex: 4,
+      nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
           NextWizardButton(
+            focusNode: nextFocusNode,
             onNext: () async {
               final locale = model.locale(model.selectedIndex);
               await model.applyLocale(locale);
@@ -52,6 +61,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
               selected: index == model.selectedIndex,
               onTap: () => model.selectLanguage(index),
             ),
+            tabFocusNode: nextFocusNode,
             onKeySearch: (value) {
               final index = model.searchLanguage(value);
               if (index != -1) {

@@ -4,6 +4,12 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+final _nextFocusNodeProvider = Provider.autoDispose<FocusNode>((ref) {
+  final focusNode = FocusNode();
+  ref.onDispose(focusNode.dispose);
+  return focusNode;
+});
+
 class KeyboardPage extends ConsumerWidget with ProvisioningPage {
   const KeyboardPage({super.key});
 
@@ -20,6 +26,8 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(keyboardModelProvider);
     final lang = KeyboardLocalizations.of(context);
+    final nextFocusNode = ref.watch(_nextFocusNodeProvider);
+
     return HorizontalPage(
       windowTitle: lang.keyboardTitle,
       title: lang.keyboardHeader,
@@ -39,11 +47,13 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
       contentFlex: 8,
       onNext: model.save,
       isNextEnabled: model.isValid,
+      nextFocusNode: nextFocusNode,
       children: <Widget>[
         Expanded(
           child: ListWidget.builder(
             selectedIndex: model.selectedLayoutIndex,
             itemCount: model.layoutCount,
+            tabFocusNode: nextFocusNode,
             itemBuilder: (context, index) => ListTile(
               key: ValueKey(index),
               title: Text(model.layoutName(index)),
