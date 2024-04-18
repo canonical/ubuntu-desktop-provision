@@ -726,7 +726,7 @@
   "@codecsAndDriversPageTitle": {},
   "installationTypeLVMEncryption": "Brug LVM og kryptering",
   "@installationTypeLVMEncryption": {},
-  "installationTypeTPMInfo": "Denne funktion er eksperimentel. Den fungerer måske ikke med din hardware i fremtidige udgaver af {DISTRO}. <a href=\"{url}\">Læs om TPM-kryptering</a>, før du vælger denne mulighed.",
+  "installationTypeTPMInfo": "Denne funktion er eksperimentel. Den fungerer måske ikke med din hardware eller i fremtidige udgaver af {DISTRO}. <a href=\"{url}\">Læs om TPM-kryptering</a>, før du vælger denne mulighed.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
