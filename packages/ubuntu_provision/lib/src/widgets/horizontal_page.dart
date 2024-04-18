@@ -25,6 +25,7 @@ class HorizontalPage extends ConsumerWidget {
     this.snackBar,
     this.imageTitleWidget,
     int? contentFlex,
+    this.nextFocusNode,
     super.key,
   })  : assert(
           !managedScrolling || contentFlex == null,
@@ -72,6 +73,9 @@ class HorizontalPage extends ConsumerWidget {
 
   /// The content under the image.
   final Widget? imageTitleWidget;
+
+  /// The focus node for the next button.
+  final FocusNode? nextFocusNode;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -156,6 +160,7 @@ class HorizontalPage extends ConsumerWidget {
             leading: const BackWizardButton(),
             trailing: [
               NextWizardButton(
+                focusNode: nextFocusNode,
                 onNext: onNext,
                 enabled: isNextEnabled,
               ),

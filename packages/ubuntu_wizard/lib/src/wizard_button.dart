@@ -30,6 +30,7 @@ class WizardButton extends StatefulWidget {
     this.loading = false,
     this.onActivated,
     this.execute,
+    this.focusNode,
   });
 
   /// Text label of the button.
@@ -71,6 +72,9 @@ class WizardButton extends StatefulWidget {
   ///
   /// See also [enabled].
   final FutureOr<void> Function()? execute;
+
+  /// The focus node for the button.
+  final FocusNode? focusNode;
 
   @override
   State<WizardButton> createState() => _WizardButtonState();
@@ -120,6 +124,7 @@ class _WizardButtonState extends State<WizardButton> {
     final PushButton Function({
       required Widget child,
       required VoidCallback? onPressed,
+      FocusNode? focusNode,
       Key? key,
     }) buttonFactory;
 
@@ -133,6 +138,7 @@ class _WizardButtonState extends State<WizardButton> {
 
     return buttonFactory(
       onPressed: maybeActivate,
+      focusNode: widget.focusNode,
       child: showSpinner
           ? SizedBox.square(
               dimension: IconTheme.of(context).size,
@@ -218,6 +224,7 @@ class NextWizardButton extends StatelessWidget {
     this.highlighted = false,
     this.onNext,
     this.onReturn,
+    this.focusNode,
   });
 
   final String? label;
@@ -226,6 +233,7 @@ class NextWizardButton extends StatelessWidget {
   final bool flat;
   final bool highlighted;
   final WizardCallback? onNext;
+  final FocusNode? focusNode;
 
   /// Called when returning to the current route after navigating to the next one.
   /// (e.g. when pressing the back button on the next page)
@@ -257,6 +265,7 @@ class NextWizardButton extends StatelessWidget {
         flat: flat,
         highlighted: highlighted,
         onActivated: onNext,
+        focusNode: focusNode,
         execute: () async {
           // navigate the root wizard at the end of a nested wizard
           final effectiveWizard =
