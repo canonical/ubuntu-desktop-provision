@@ -12,5 +12,11 @@
     "gomod",
     "git-submodules"
   ],
-  "schedule": ["after 9am and before 2pm every monday"]
+  "schedule": ["after 9am and before 2pm every monday"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["packages/subiquity_client/subiquity"],
+      "schedule": ["at any time"]
+    }
+  ]
 }
