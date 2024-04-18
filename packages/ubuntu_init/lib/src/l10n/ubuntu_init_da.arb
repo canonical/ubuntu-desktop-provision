@@ -1,1 +1,12 @@
-{}
+{
+  "welcomePageTitle": "Velkommen",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Velkommen til {distro}",
+  "@welcomePageHeader": {},
+  "welcomeStartTitle": "En strømlinet start",
+  "@welcomeStartTitle": {},
+  "welcomeStoreSubtitle": "Det har aldrig været nemmere at finde din yndlingssoftware.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Forbedret sikkerhed",
+  "@welcomeSecurityTitle": {}
+}
