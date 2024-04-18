@@ -789,5 +789,133 @@
         "type": "String"
       }
     }
-  }
+  },
+  "refreshHeader": "Une mise à jour est disponible pour l'installateur",
+  "@refreshHeader": {},
+  "refreshInfo": "Mettre à jour vers la dernière version pour une fiabilité améliorée et d'avantage de fonctionnalités.",
+  "@refreshInfo": {},
+  "refreshSnapCopyData": "Copie des données de {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Configuration des profils de sécurité de {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Édition de liens de {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Mise à jour de la ligne de commande noyau de {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Nettoyage de {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Configuration des alias automatique de {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Configuration des alias de {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Attention :</font> Si vous oubliez cette clé de sécurité, toutes les données seront perdues. Si vous avez besoin, notez votre clé et conservez-la dans un endroit sûr.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Le disque sélectionné n'a pas assez d'espace disque pour installer {DISTRO}. Arrêtez l'installateur pour libérer de l'espace ou sélectionnez un autre disque.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCloseLabel": "Fermer l'installateur",
+  "@refreshCloseLabel": {},
+  "refreshSnapCheckRerefresh": "Vérification {snap} re-refresh...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Délier {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Mise à jour des actifs de {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Assurer les prérequis de {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connexion des connecteurs et prises de {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Démarrage des services de {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyCommand": "Vous pouvez accéder à votre clé de récupération après l'installation avec la commande suivante :",
+  "@recoveryKeyCommand": {}
 }
