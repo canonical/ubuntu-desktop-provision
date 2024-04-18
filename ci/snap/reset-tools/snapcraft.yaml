@@ -86,9 +86,7 @@ parts:
     build-attributes: [enable-patchelf]
     override-build: |
       set -eux
-      mkdir -p $CRAFT_PART_INSTALL/bin/lib -p $CRAFT_PART_INSTALL/usr/share/applications $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256
-      cp ci/snap/reset-tools/local/factory-reset-tools.desktop $CRAFT_PART_INSTALL/usr/share/applications/
-      cp ci/snap/reset-tools/local/factory-reset-tools.png $CRAFT_PART_INSTALL/usr/share/icons/hicolor/256x256/
+      mkdir -p $CRAFT_PART_INSTALL/bin
       
       dart pub global activate melos
       dart pub global run melos bootstrap
