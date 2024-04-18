@@ -33,7 +33,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Share data anonymously with {distro} so we can improve your experience.",
+  "telemetryDescription": "Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -49,10 +49,10 @@
   },
   "telemetryLabelOff": "No, don't share system data",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "Reporting details",
+  "telemetryReportLabel": "Show the first report",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Reporting details",
-  "telemetryLegalLabel": "Legal",
+  "telemetryLegalLabel": "Legal notice",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Location services",
   "@privacyPageTitle": {},

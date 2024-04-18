@@ -6,17 +6,23 @@ import 'package:ubuntu_init/src/telemetry/telemetry_dialogs.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_model.dart';
 import 'package:ubuntu_init/src/telemetry/telemetry_page.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
-
+import '../init_model_test.mocks.dart';
 import 'test_telemetry.dart';
 
 void main() {
   Widget buildPage(TelemetryModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
     return ProviderScope(
       overrides: [
+        pageImagesProvider.overrideWithValue(pageImages),
         telemetryModelProvider.overrideWith((_) => model),
       ],
       child: const TelemetryPage(),

@@ -8,7 +8,7 @@ import 'dart:async' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i5;
 import 'package:ubuntu_init/ubuntu_init.dart' as _i3;
-import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
+import 'package:ubuntu_provision/services.dart' as _i2;
 import 'package:ubuntu_utils/src/url_launcher.dart' as _i6;
 
 // ignore_for_file: type=lint
@@ -99,6 +99,35 @@ class MockProductService extends _i1.Mock implements _i2.ProductService {
           ),
         ),
       ) as String);
+}
+
+/// A class which mocks [ThemeVariantService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockThemeVariantService extends _i1.Mock
+    implements _i2.ThemeVariantService {
+  MockThemeVariantService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  set themeVariant(_i2.ThemeVariant? _themeVariant) => super.noSuchMethod(
+        Invocation.setter(
+          #themeVariant,
+          _themeVariant,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i4.Future<void> load() => (super.noSuchMethod(
+        Invocation.method(
+          #load,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }
 
 /// A class which mocks [ProvdTelemetryService].

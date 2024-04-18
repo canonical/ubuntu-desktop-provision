@@ -312,7 +312,7 @@ abstract class UbuntuInitLocalizations {
   /// No description provided for @telemetryDescription.
   ///
   /// In en, this message translates to:
-  /// **'Share data anonymously with {distro} so we can improve your experience.'**
+  /// **'Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.'**
   String telemetryDescription(Object distro);
 
   /// No description provided for @telemetryLabelOn.
@@ -330,7 +330,7 @@ abstract class UbuntuInitLocalizations {
   /// No description provided for @telemetryReportLabel.
   ///
   /// In en, this message translates to:
-  /// **'Reporting details'**
+  /// **'Show the first report'**
   String get telemetryReportLabel;
 
   /// No description provided for @telemetryReportTitle.
@@ -342,7 +342,7 @@ abstract class UbuntuInitLocalizations {
   /// No description provided for @telemetryLegalLabel.
   ///
   /// In en, this message translates to:
-  /// **'Legal'**
+  /// **'Legal notice'**
   String get telemetryLegalLabel;
 
   /// No description provided for @privacyPageTitle.
