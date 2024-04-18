@@ -160,7 +160,7 @@
   },
   "installationTypeAlongsideInfo": "Les documents, musiques et autres fichiers personnels seront conservés. Vous pouvez choisir le système d’exploitation à lancer au moment du démarrage de l’ordinateur.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManualInfo": "",
+  "installationTypeManualInfo": "Pour les utilisateurs avancés recherchant des configurations de disque personnalisées.",
   "@installationTypeManualInfo": {},
   "selectGuidedStoragePageTitle": "Effacer le disque et installer {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -302,7 +302,7 @@
   },
   "quitButtonText": "Quitter l’installation",
   "@quitButtonText": {},
-  "notEnoughDiskSpaceTitle": "Pas assez d’espace",
+  "notEnoughDiskSpaceTitle": "Pas assez d'espace disque",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionResize": "la partition <b>{sysname}</b> redimensionnée de <b>{oldsize}</b> à <b>{newsize}</b>",
   "@confirmPartitionResize": {
@@ -732,5 +732,62 @@
     }
   },
   "codecsAndDriversNvidiaBody": "Pour une performance optimale des cartes graphiques NVIDIA, l'installation de pilotes supplémentaires est fortement recommandée.",
-  "@codecsAndDriversNvidiaBody": {}
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseTitle": "Phrase secrète du disque",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Créer une phrase secrète",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseHint": "Choisissez une phrase secrète",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Confirmer la phrase secrète",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Une phrase secrète est nécessaire",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Les phrases secrètes ne correspondent pas",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Assurez-vous de sauvegarder votre phrase secrète",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Si vous perdez votre phrase secrète, vous perdrez toutes vos données.",
+  "@choosePassphraseInfoBody": {},
+  "confirmPassphrase": "Confirmer la phrase secrète",
+  "@confirmPassphrase": {},
+  "installationTypeLVMEncryption": "Utiliser LVM et le chiffrement",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Effacer le disque et utiliser ZFS avec chiffrement",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS et chiffrement sélectionnés",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPM": "Activer le chiffrement matériel complet du disque",
+  "@installationTypeTPM": {},
+  "selectGuidedStorageInfo": "Commencez à partir de zéro sur votre disque sélectionné.",
+  "@selectGuidedStorageInfo": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmEntryInstallationDisk": "Disque d'installation",
+  "@confirmEntryInstallationDisk": {},
+  "confirmSectionGeneralTitle": "Général",
+  "@confirmSectionGeneralTitle": {},
+  "rebootToConfigureWarning": "Vous devez redémarrer l'ordinateur pour continuer le processus d'installation.",
+  "@rebootToConfigureWarning": {},
+  "restartWarningBody": "Redémarrez pour terminer l'installation ou continuez à tester.\nLes changements effectués ne seront pas préservés.",
+  "@restartWarningBody": {},
+  "choosePassphraseBody": "Vous avez besoin d'une phrase secrète pour chiffrer vos fichiers. Votre phrase secrète vous sera demandée à chaque fois que vous allumez sur votre ordinateur.",
+  "@choosePassphraseBody": {},
+  "createPassphrase": "Créer une phrase secrète",
+  "@createPassphrase": {},
+  "installationTypeTPMInfo": "C'est une fonctionnalité expérimentale. Elle peut ne pas fonctionner avec votre matériel ou de futures versions de {DISTRO}. <a href=\"{url}\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  }
 }
