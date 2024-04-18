@@ -313,6 +313,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update localization files"
-            git push
+            git push origin ${{ github.head_ref }}
           fi
 
