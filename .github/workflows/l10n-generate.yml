@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  pull_request_target:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate-l10n:
+    runs-on: ubuntu-22.04
+    if: contains(github.event.pull_request.title, 'Hosted Weblate')
+    permissions:
+      contents: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: asdf-vm/actions/install@v3
+      - uses: bluefireteam/melos-action@v2
+      - run: melos gen-l10n
+      - name: Commit and push generated language files if they changed
+        run: |
+          gh pr checkout ${{ github.event.pull_request.number }}
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update localization files"
+            git push
+          fi
