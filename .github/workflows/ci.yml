@@ -302,6 +302,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v2
       - run: melos gen-l10n
