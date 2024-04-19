@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
+import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_bootstrap/installer.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -152,7 +153,8 @@ void main() {
     final passphraseModel = buildPassphraseModel(usePassphrase: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
-    final timezoneModel = buildTimezoneModel();
+    final timezoneModel = buildTimezoneModel(
+        selectedLocation: const GeoLocation(timezone: 'UTC'));
     final identityModel = buildIdentityModel(isValid: true);
     final activeDirectoryModel = buildActiveDirectoryModel();
     final installModel = buildInstallModel(isDone: true);

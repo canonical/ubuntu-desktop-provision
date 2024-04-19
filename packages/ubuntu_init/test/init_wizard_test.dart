@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_init/src/error_page.dart';
 import 'package:ubuntu_init/src/init_step.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
@@ -50,7 +51,8 @@ void main() {
     final ethernetModel = buildEthernetModel();
     final wifiModel = buildWifiModel();
     final hiddenWifiModel = buildHiddenWifiModel();
-    final timezoneModel = buildTimezoneModel();
+    final timezoneModel = buildTimezoneModel(
+        selectedLocation: const GeoLocation(timezone: 'UTC'));
     final identityModel = buildIdentityModel(isValid: true);
     final ubuntuProModel =
         buildUbuntuProModel(skipPro: false, isAttached: true);

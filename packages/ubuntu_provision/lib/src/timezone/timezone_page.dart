@@ -115,7 +115,10 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          NextWizardButton(onNext: ref.read(timezoneModelProvider).save),
+          NextWizardButton(
+            onNext: ref.read(timezoneModelProvider).save,
+            enabled: model.selectedLocation?.timezone != null,
+          ),
         ],
       ),
     );

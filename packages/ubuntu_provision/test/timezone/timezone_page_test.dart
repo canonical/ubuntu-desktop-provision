@@ -5,6 +5,8 @@ import 'package:mockito/mockito.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_provision/timezone.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru_test/yaru_test.dart';
 
 import 'test_timezone.dart';
 
@@ -19,7 +21,8 @@ Widget buildTimezonePage(TimezoneModel model) {
 
 void main() {
   testWidgets('saves the location', (tester) async {
-    final model = buildTimezoneModel();
+    final model = buildTimezoneModel(
+        selectedLocation: const GeoLocation(timezone: 'UTC'));
     when(model.init()).thenAnswer((_) async => '');
     await tester.pumpApp((_) => buildTimezonePage(model));
 
@@ -200,5 +203,29 @@ void main() {
       TimezonePage.formatTimezone(timezone),
       'America/New York',
     );
+  });
+
+  group('require timezone to continue', () {
+    testWidgets('no timezone selected', (tester) async {
+      final model = buildTimezoneModel();
+      await tester.pumpApp((_) => buildTimezonePage(model));
+
+      final nextButton = find.byType(NextWizardButton);
+      expect(nextButton, isDisabled);
+    });
+    testWidgets('timezone selected', (tester) async {
+      final model = buildTimezoneModel(
+        selectedLocation: const GeoLocation(
+          name: 'Timezone A',
+          admin: '',
+          country: '',
+          timezone: 'Timezone/A',
+        ),
+      );
+      await tester.pumpApp((_) => buildTimezonePage(model));
+
+      final nextButton = find.byType(NextWizardButton);
+      expect(nextButton, isEnabled);
+    });
   });
 }
