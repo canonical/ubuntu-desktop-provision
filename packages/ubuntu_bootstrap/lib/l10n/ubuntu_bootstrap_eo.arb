@@ -865,7 +865,7 @@
   "@installationTypeEraseInfo": {},
   "selectGuidedStorageInfo": "Komencu denule forviŝinte vian elektitan diskon.",
   "@selectGuidedStorageInfo": {},
-  "installationTypeTPMInfo": "Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo aŭ estontaj versioj de {DISTRO}. <a href=\"{url}\">Legu pri TPM-ĉifrado </a> antaŭ ol vi elektas ĉi tiun opcion.",
+  "installationTypeTPMInfo": "Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo aŭ estontaj versioj de {DISTRO}. <a href=\"{url}\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
