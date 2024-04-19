@@ -848,7 +848,7 @@
   "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS och kryptering vald",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara i framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ.",
+  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara eller med framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
