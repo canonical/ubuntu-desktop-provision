@@ -19,29 +19,30 @@ apps:
     plugs:
       - shutdown
       - removable-media
-      - block-devices
       - etc-reset-partition-fsuuid
       - usr-share-desktop-provision-reset-yaml
       - udisks2
       - hardware-observe
       - mount-observe
-      - dbus-client
+      - dbus-system-com-canonical-oem-factory-reset-tools-client
+    slots:
+      - dbus-session-com-canonical-oem-factory-reset-tools-service
   cli:
     command: bin/factory-reset-tools-cli
     plugs:
       - shutdown
       - removable-media
-      - block-devices
       - etc-reset-partition-fsuuid
       - usr-share-desktop-provision-reset-yaml
       - udisks2
       - hardware-observe
       - mount-observe
-      - dbus-client
+      - dbus-system-com-canonical-oem-factory-reset-tools-client
   dbus-daemon:
     command: bin/factory-reset-tools-cli dbus
     daemon: simple
-    activates-on: [dbus-service]
+    activates-on:
+      - dbus-system-com-canonical-oem-factory-reset-tools-service
     plugs:
       - shutdown
       - hostfs-boot-grub
@@ -114,7 +115,13 @@ parts:
       - curl
 
 slots:
-  dbus-service:
+  dbus-session-com-canonical-oem-factory-reset-tools-service:
+    interface: dbus
+    bus: session
+    # for the naming, it seems flutter is always trying to use this name,
+    # instead of .FactoryResetTools
+    name: com.canonical.oem.factory-reset-tools
+  dbus-system-com-canonical-oem-factory-reset-tools-service:
     interface: dbus
     bus: system
     name: com.canonical.oem.FactoryResetTools
@@ -132,7 +139,7 @@ plugs:
     interface: system-files
     read:
     - /usr/share/desktop-provision/reset.yaml
-  dbus-client:
+  dbus-system-com-canonical-oem-factory-reset-tools-client:
     interface: dbus
     bus: system
     name: com.canonical.oem.FactoryResetTools
