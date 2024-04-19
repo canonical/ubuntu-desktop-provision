@@ -1,5 +1,5 @@
 {
-  "telemetryDescription": "Partilhar os dados anonimamente com o {distro} para que possamos melhorar a sua experiência.",
+  "telemetryDescription": "Ajude-nos a melhorar o {distro} partilhando connosco os dados do seu sistema. Isto inclui coisas como o modelo da sua máquina, o software instalado e a localização que escolheu para o seu fuso horário.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -21,7 +21,7 @@
       "url": {}
     }
   },
-  "telemetryLegalLabel": "Jurídico",
+  "telemetryLegalLabel": "Aviso legal",
   "@telemetryLegalLabel": {},
   "welcomeSecuritySubtitle": "Novas opções para a criptografia baseada em hardware ou ZFS.",
   "@welcomeSecuritySubtitle": {},
@@ -42,7 +42,7 @@
   "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "Segurança melhorada",
   "@welcomeSecurityTitle": {},
-  "telemetryReportLabel": "Detalhes do relatório",
+  "telemetryReportLabel": "Mostrar o primeiro relatório",
   "@telemetryReportLabel": {},
   "telemetryLabelOn": "Sim, partilhe os dados do sistema com a equipa do {distro}",
   "@telemetryLabelOn": {
