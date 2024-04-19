@@ -62,6 +62,9 @@ class SlidesModel {
       final String content;
       if (fromAssets) {
         final slidePath = 'assets/slides/$index/slide_$locale.html';
+        if (!await rootBundle.exists(slidePath)) {
+          continue;
+        }
         try {
           content = await rootBundle.loadString(slidePath);
         } on FlutterError catch (e) {
@@ -144,5 +147,13 @@ class SlidesModel {
       img.attributes['src'] = 'data:image/$mimeType;base64,$base64Image';
     }
     return document.outerHtml;
+  }
+}
+
+extension on AssetBundle {
+  Future<bool> exists(String assetName) async {
+    final manifestContent = await rootBundle.loadString('AssetManifest.json');
+    final manifestMap = json.decode(manifestContent) as Map<String, dynamic>;
+    return manifestMap.containsKey(assetName);
   }
 }
