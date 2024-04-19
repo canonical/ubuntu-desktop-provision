@@ -429,9 +429,9 @@
   "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Compatibilidad lingüística",
   "@installationSlidesAccessibilityLanguages": {},
-  "installationSlidesSupportTitle": "Ayuda y soporte",
+  "installationSlidesSupportTitle": "Ayuda y asistencia",
   "@installationSlidesSupportTitle": {},
-  "installationSlidesSupportCommunity": "Ask Ubuntu cubre una gama de preguntas y respuestas. Ubuntu Discourse proporciona guías y discusiones para usuarios nuevos y experimentados.",
+  "installationSlidesSupportCommunity": "En Ask Ubuntu encontrará preguntas y respuestas sobre varios aspectos del sistema, y Ubuntu Discourse contiene guías y espacios de debate para usuarios nuevos y experimentados.",
   "@installationSlidesSupportCommunity": {},
   "notEnoughDiskSpaceRequired": "Requerido:",
   "@notEnoughDiskSpaceRequired": {},
@@ -514,7 +514,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityTitle": "Aumenta tu productividad",
+  "installationSlidesProductivityTitle": "Aumente su productividad",
   "@installationSlidesProductivityTitle": {},
   "installationSlidesSupportEnterprise": "Para los usuarios de empresa, Canonical ofrece soporte comercial para facilitar la incorporación y gestión segura de Ubuntu en el lugar de trabajo.",
   "@installationSlidesSupportEnterprise": {},
