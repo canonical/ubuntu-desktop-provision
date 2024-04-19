@@ -4,12 +4,6 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-final _nextFocusNodeProvider = Provider.autoDispose<FocusNode>((ref) {
-  final focusNode = FocusNode();
-  ref.onDispose(focusNode.dispose);
-  return focusNode;
-});
-
 class KeyboardPage extends ConsumerWidget with ProvisioningPage {
   const KeyboardPage({super.key});
 
@@ -99,3 +93,5 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
     );
   }
 }
+
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();

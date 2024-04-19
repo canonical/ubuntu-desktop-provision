@@ -7,12 +7,6 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
-final _nextFocusNodeProvider = Provider.autoDispose<FocusNode>((ref) {
-  final focusNode = FocusNode();
-  ref.onDispose(focusNode.dispose);
-  return focusNode;
-});
-
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
@@ -74,3 +68,5 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     );
   }
 }
+
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();

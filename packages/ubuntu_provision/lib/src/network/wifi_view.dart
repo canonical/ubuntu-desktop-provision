@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
@@ -48,12 +49,14 @@ class WifiView extends ConsumerStatefulWidget {
     required this.expanded,
     required this.onEnabled,
     required this.onSelected,
+    this.tabFocusNode,
     super.key,
   });
 
   final bool expanded;
   final VoidCallback onEnabled;
   final OnWifiSelected onSelected;
+  final FocusNode? tabFocusNode;
 
   @override
   ConsumerState<WifiView> createState() => _WifiViewState();
@@ -96,7 +99,10 @@ class _WifiViewState extends ConsumerState<WifiView> {
       expanded: widget.expanded,
       child: Padding(
         padding: kWizardIndentation,
-        child: WifiListView(onSelected: widget.onSelected),
+        child: WifiListView(
+          onSelected: widget.onSelected,
+          tabFocusNode: widget.tabFocusNode,
+        ),
       ),
     );
   }
@@ -105,6 +111,7 @@ class _WifiViewState extends ConsumerState<WifiView> {
 class WifiListView extends ConsumerWidget {
   const WifiListView({
     required this.onSelected,
+    this.tabFocusNode,
     super.key,
   });
 
