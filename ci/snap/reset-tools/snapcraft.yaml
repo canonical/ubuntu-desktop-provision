@@ -109,6 +109,7 @@ parts:
     stage-packages:
       - rsync
       - grub2-common
+      - uuid-runtime
     build-packages:
       - curl
 
