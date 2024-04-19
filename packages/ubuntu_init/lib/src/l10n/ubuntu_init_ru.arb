@@ -38,14 +38,14 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Делитесь данными {distro} анонимно, чтобы мы могли улучшить ваш опыт.",
+  "telemetryDescription": "Помогите нам улучшить {distro}, поделившись с нами данными о системе. Сюда входят такие данные, как модель вашего компьютера, установленное программное обеспечение и выбранный часовой пояс.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryReportLabel": "Детали отчёта",
+  "telemetryReportLabel": "Показать первый отчет",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Детали отчёта",
   "@telemetryReportTitle": {},
