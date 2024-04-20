@@ -36,7 +36,7 @@
       "option": {}
     }
   },
-  "bitlockerHeader": "Aby bolo možné pokračovať, vypnite BitLocker",
+  "bitlockerHeader": "Ak chcete pokračovať, vypnite BitLocker",
   "@bitlockerHeader": {},
   "restartIntoWindowsDescription": "Naozaj chcete váš počítač reštartovať? Ak potom budete chcieť dokončiť inštaláciu {DISTRO}, bude potrebné znova spustiť inštaláciu {DISTRO}.",
   "@restartIntoWindowsDescription": {
@@ -119,7 +119,7 @@
   "@diskHeadersMountPoint": {},
   "newPartitionTable": "Nová tabuľka oddielov",
   "@newPartitionTable": {},
-  "rstHeader": "Aby bolo možné pokračovať, vypnite RST",
+  "rstHeader": "Ak chcete pokračovať, vypnite RST",
   "@rstHeader": {},
   "showSecurityKey": "Zobraziť",
   "@showSecurityKey": {},
@@ -217,7 +217,7 @@
   "@partitionSizeLabel": {},
   "confirmHeader": "Skontrolujte svoje voľby",
   "@confirmHeader": {},
-  "installationCompleteTitle": "Inštalácia dokončená",
+  "installationCompleteTitle": "Inštalácia je dokončená",
   "@installationCompleteTitle": {},
   "shutdown": "Vypnúť",
   "@shutdown": {},
@@ -943,7 +943,7 @@
   "@refreshHeader": {},
   "refreshUpdateNow": "Aktualizovať teraz",
   "@refreshUpdateNow": {},
-  "refreshReady": "Aktualizácia pripravená",
+  "refreshReady": "Aktualizácia je pripravená",
   "@refreshReady": {},
   "refreshCloseLabel": "Zatvoriť inštalátor",
   "@refreshCloseLabel": {},
