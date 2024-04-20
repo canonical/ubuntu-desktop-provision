@@ -11,7 +11,7 @@
   "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "חנות יישומים במראה חדש",
   "@welcomeStoreTitle": {},
-  "telemetryReportLabel": "פרטי דיווח",
+  "telemetryReportLabel": "הצגת הדוח הראשון",
   "@telemetryReportLabel": {},
   "welcomeStoreSubtitle": "מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.",
   "@welcomeStoreSubtitle": {},
@@ -35,7 +35,7 @@
   },
   "telemetryPageTitle": "מדדים",
   "@telemetryPageTitle": {},
-  "telemetryDescription": "אפשר לשתף נתונים עם {distro} בצורה אלמונית כדי לאפשר לנו לשפר את החוויה שלך.",
+  "telemetryDescription": "אפשר לסייע לנו לשפר את {distro} על ידי שיתוף נתוני המערכת שלך איתנו. לרבות פרטים כגון דגם המחשב שלך, התוכנות המותקנות והמקום שבחרת לאזור הזמן שלך.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -53,7 +53,7 @@
   "@telemetryLabelOff": {},
   "telemetryReportTitle": "פרטי דיווח",
   "@telemetryReportTitle": {},
-  "telemetryLegalLabel": "משפטי",
+  "telemetryLegalLabel": "הצהרה משפטית",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "שירותי מיקום",
   "@privacyPageTitle": {},
