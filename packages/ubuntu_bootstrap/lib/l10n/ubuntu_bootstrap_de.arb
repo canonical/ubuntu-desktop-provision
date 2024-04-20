@@ -348,7 +348,7 @@
       "mount": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "Nicht genug Platz",
+  "notEnoughDiskSpaceTitle": "Nicht genug Festplattenplatz",
   "@notEnoughDiskSpaceTitle": {},
   "installingSystem": "System wird installiert …",
   "@installingSystem": {},
@@ -791,5 +791,126 @@
   "choosePassphraseInfoHeader": "Stellen Sie sicher, dass Sie Ihre Passphrase speichern",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseHint": "Passphrase auswählen",
-  "@choosePassphraseHint": {}
+  "@choosePassphraseHint": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmSectionSecurityAndMoreTitle": "Sicherheit & mehr",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareDrivers": "Treiber",
+  "@confirmProprietarySoftwareDrivers": {},
+  "refreshHeader": "Für das Installationsprogramm ist eine Aktualisierung verfügbar",
+  "@refreshHeader": {},
+  "refreshInfo": "Aktualisieren Sie auf die neueste Version, um eine verbesserte Zuverlässigkeit und mehr Funktionen zu erhalten.",
+  "@refreshInfo": {},
+  "autoinstallInstructions": "Geben Sie die URL der autoinstall.yaml ein:",
+  "@autoinstallInstructions": {},
+  "codecsAndDriversPageBody": "Im Lieferumfang von {DISTRO} ist standardmäßig keine proprietäre Software enthalten. Die Installation von zusätzlicher Software kann die Leistung Ihres Computers verbessern.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseBody": "Sie benötigen eine Passphrase, um Ihre Dateien zu verschlüsseln. Sie werden jedes Mal, wenn Sie Ihren Computer einschalten, zur Eingabe Ihrer Passphrase aufgefordert.",
+  "@choosePassphraseBody": {},
+  "createPassphrase": "Passphrase erstellen",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Passphrase bestätigen",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Wie möchten Sie {DISTRO} installieren?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeExperimental": "Experimentell",
+  "@installationTypeExperimental": {},
+  "installationTypeEraseInfo": "Auf der von Ihnen ausgewählten Festplatte von vorne beginnen.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeLVM": "LVM verwenden",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "LVM und Verschlüsselung verwenden",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Festplatte löschen und ZFS mit Verschlüsselung verwenden",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS und Verschlüsselung ausgewählt",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageDriveDropdownLabel": "Laufwerk auswählen:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Partition auswählen:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "selectGuidedStorageInfo": "Auf der von Ihnen ausgewählten Festplatte von vorne beginnen.",
+  "@selectGuidedStorageInfo": {},
+  "guidedStoragePageHeader": "Wählen Sie aus, wo {DISTRO} installiert werden soll",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionNone": "Keine",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Anwendungen",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Festplatteneinrichtung",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Festplattenverschlüsselung",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryProprietarySoftware": "Proprietäre Software",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Allgemein",
+  "@confirmSectionGeneralTitle": {},
+  "confirmEntryInstallationDisk": "Installationsfestplatte",
+  "@confirmEntryInstallationDisk": {},
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & Treiber",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "rebootToConfigure": "**{system}** wurde auf die Festplatte kopiert",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Sie müssen den Computer neu starten, um den Installationsprozess fortzusetzen.",
+  "@rebootToConfigureWarning": {},
+  "refreshCloseLabel": "Installationsprogramm schließen",
+  "@refreshCloseLabel": {},
+  "restartWarningBody": "Starten Sie neu, um die Installation abzuschließen oder die Tests fortzusetzen.\nAlle Änderungen, die Sie vornehmen, werden nicht gespeichert.",
+  "@restartWarningBody": {},
+  "notEnoughDiskSpaceBody": "Auf der ausgewählten Festplatte ist nicht genügend Speicherplatz für die Installation von {DISTRO} vorhanden. Beenden Sie das Installationsprogramm, um Platz zu schaffen, oder wählen Sie ein anderes Laufwerk aus.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdateNow": "Jetzt aktualisieren",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Aktualisierung bereit",
+  "@refreshReady": {},
+  "validate": "Validieren",
+  "@validate": {},
+  "installationTypeTPMInfo": "Dies ist eine experimentelle Funktion. Sie funktioniert möglicherweise nicht mit Ihrer Hardware oder zukünftigen Versionen von {DISTRO}. <a href=\"{url}\">Informieren Sie sich über TPM-Verschlüsselung</a>, bevor Sie diese Option auswählen.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  }
 }
