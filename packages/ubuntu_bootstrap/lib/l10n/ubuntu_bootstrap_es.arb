@@ -833,7 +833,7 @@
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Se trata de una función experimental. Es posible que no funcione con tu hardware o con futuras versiones de {DISTRO}. <a href=\"{url}\">Infórmate sobre el cifrado TPM</a> antes de elegir esta opción.",
+  "installationTypeTPMInfo": "Se trata de una función experimental. Es posible que no funcione con su equipo o con versiones futuras de {DISTRO}. <a href=\"{url}\">Infórmese sobre el cifrado TPM</a> antes de elegir esta opción.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
