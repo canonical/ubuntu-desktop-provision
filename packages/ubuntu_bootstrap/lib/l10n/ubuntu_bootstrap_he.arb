@@ -314,7 +314,7 @@
       "mount": {}
     }
   },
-  "notEnoughDiskSpaceTitle": "אין מספיק מקום",
+  "notEnoughDiskSpaceTitle": "אין מספיק מקום בכונן",
   "@notEnoughDiskSpaceTitle": {},
   "confirmPartitionResize": "הגודל של מחיצה <b>{sysname}</b> ישתנה מ־<b>{oldsize}</b> ל־<b>{newsize}</b>",
   "@confirmPartitionResize": {
@@ -851,7 +851,7 @@
       }
     }
   },
-  "installationTypeTPMInfo": "זאת יכולת ניסיונית. יכול להיות עם החומרה שלך בגרסאות עתידיות של {DISTRO}. <a href=\"{url}\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.",
+  "installationTypeTPMInfo": "זאת יכולת ניסיונית. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של {DISTRO}. <a href=\"{url}\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -911,5 +911,13 @@
   "refreshHeader": "יש עדכון לתוכנית ההתקנה",
   "@refreshHeader": {},
   "refreshCloseLabel": "סגירת תוכנית ההתקנה",
-  "@refreshCloseLabel": {}
+  "@refreshCloseLabel": {},
+  "notEnoughDiskSpaceBody": "בכונן הנבחר אין מספיק מקום כדי להתקין את {DISTRO}. נא לצאת מתוכנית ההתקנה כדי לפנות מקום או לבחור בכונן אחר.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
