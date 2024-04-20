@@ -93,7 +93,7 @@
   "@timezoneTimezoneLabel": {},
   "keyboardTestHint": "在這裡輸入以測試您的鍵盤",
   "@keyboardTestHint": {},
-  "keyboardHeader": "請選擇您的鍵盤配置：",
+  "keyboardHeader": "請選擇您的鍵盤配置",
   "@keyboardHeader": {},
   "themeDark": "暗色",
   "@themeDark": {},
@@ -140,7 +140,7 @@
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "連接到網際網路",
   "@networkPageTitle": {},
-  "networkPageHeader": "將這台電腦連接到網際網路，可以讓 Ubuntu 安裝任何所需要的額外軟體，以及自動選擇您所在的時區。\n\n可透過有線網路或選擇 Wi-Fi 網路來連接",
+  "networkPageHeader": "連接到網際網路",
   "@networkPageHeader": {},
   "networkWiredDisabled": "為了在本電腦上使用有線網路，必須啟用有線網路連接",
   "@networkWiredDisabled": {},
@@ -163,5 +163,79 @@
   "close": "關閉",
   "@close": {},
   "restart": "重新啟動",
-  "@restart": {}
+  "@restart": {},
+  "accessibilityPageBody": "在您完成安裝之前根據您的需求自訂 {DISTRO}。您亦可以於安裝後在「系統設定」中變更這些設定。",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageUnexpected": "很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。",
+  "@errorPageUnexpected": {},
+  "activeDirectoryInfo": "為管理方便，{DISTRO} 被設計成可以無縫整合至 Active Directory。",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "eulaPageTitle": "授權協議",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "審閱授權協議內容",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "要完成這部機器的設定，您必須審閱並同意下列授權協議內容。",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "我以審閱並同意這些條款",
+  "@eulaAcceptTerms": {},
+  "accessibilityPageTitle": "無障礙功能",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "{DISTRO} 中的無障礙功能",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "視覺",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "聽覺",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "文字輸入",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "指向與點擊",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "放大",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "高對比",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "大文字",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "減少動畫效果",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "螢幕閱讀器",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityStickKeysLabel": "相黏鍵",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "慢速按鍵",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityVisualAlertsLabel": "使用視覺效果取代警示音",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityDesktopZoomLabel": "桌面放大",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "發生錯誤",
+  "@errorPageTitle": {},
+  "accessibilityMouseKeysLabel": "滑鼠鍵",
+  "@accessibilityMouseKeysLabel": {},
+  "errorPageShowLog": "顯示運行紀錄",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "隱藏運行紀錄",
+  "@errorPageHideLog": {},
+  "activeDirectoryHeader": "是否要進行 Active Directory 設定？",
+  "@activeDirectoryHeader": {},
+  "networkPageBody": "有效的網際網路連線可以透過硬體相容性檢查與安裝額外的軟體包來改進您的安裝體驗。",
+  "@networkPageBody": {}
 }
