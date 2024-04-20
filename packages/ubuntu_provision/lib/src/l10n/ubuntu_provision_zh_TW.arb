@@ -159,5 +159,9 @@
   "networkHiddenWifiNameLabel": "網路名稱",
   "@networkHiddenWifiNameLabel": {},
   "networkHiddenWifiNameRequired": "網路名稱為必填欄位",
-  "@networkHiddenWifiNameRequired": {}
+  "@networkHiddenWifiNameRequired": {},
+  "close": "關閉",
+  "@close": {},
+  "restart": "重新啟動",
+  "@restart": {}
 }
