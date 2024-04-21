@@ -6,6 +6,7 @@ toolchain go1.22.2
 
 require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
+	github.com/coreos/go-systemd/v22 v22.5.0
 	github.com/linuxdeepin/go-gir v0.0.0-20230710064042-bd15f0549c87
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
