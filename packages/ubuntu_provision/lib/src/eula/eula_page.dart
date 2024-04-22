@@ -4,11 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
 import 'package:path/path.dart' as p;
-import 'package:pdfrx/pdfrx.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/eula/eula_l10n.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
+import 'package:ubuntu_provision/src/eula/eula_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -37,13 +36,13 @@ class _EULAPageState extends ConsumerState<EULAPage> {
   Widget build(BuildContext context) {
     final lang = EULALocalizations.of(context);
     final eulaWidget = ref.watch(eulaPageProvider).when(
-        data: (eulaFile) => pdfViewerWidgetBuilder(eulaFile.path),
+        data: (eulaFile) => EULAPdfViewer(path: eulaFile.path),
         loading: () => const YaruCircularProgressIndicator(),
         error: (error, stackTrace) {
           Logger('eula')
               .error('Error loading EULA file: $error', error, stackTrace);
-          return pdfViewerWidgetBuilder(
-              File('/usr/share/desktop-provision/eula/EULA.pdf').path);
+          return EULAPdfViewer(
+              path: File('/usr/share/desktop-provision/eula/EULA.pdf').path);
         });
 
     return WizardPage(
@@ -86,33 +85,6 @@ class _EULAPageState extends ConsumerState<EULAPage> {
             enabled: _hasAcceptedTerms,
           ),
         ],
-      ),
-    );
-  }
-
-  Widget pdfViewerWidgetBuilder(String path) {
-    return PdfViewer.file(
-      path,
-      params: PdfViewerParams(
-        errorBannerBuilder: (context, error, stackTrace, documentRef) => Center(
-          child: Text(
-            stackTrace.toString(),
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-        ),
-        linkWidgetBuilder: (context, link, size) => MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {
-              UrlLauncher().launchUrl(link.url.toString());
-            },
-            child: Container(
-              width: size.width,
-              height: size.height,
-              color: Colors.transparent,
-            ),
-          ),
-        ),
       ),
     );
   }
