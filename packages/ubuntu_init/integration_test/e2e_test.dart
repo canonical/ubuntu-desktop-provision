@@ -59,7 +59,7 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testEULAPage();
+    await tester.testEulaPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

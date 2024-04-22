@@ -1,33 +1,50 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/intl_standalone.dart';
+import 'package:path/path.dart' as p;
 import 'package:pdfrx/pdfrx.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/interfaces.dart';
-import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/src/eula/eula_l10n.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class EULAPage extends ConsumerStatefulWidget with ProvisioningPage {
-  const EULAPage({super.key});
+final eulaPageProvider = FutureProvider<File>((ref) async {
+  final locale = Intl.defaultLocale ?? await findSystemLocale();
+  const directory = '/usr/share/desktop-provision/eula';
+  final localizedEula = File(p.join(directory, 'EULA_$locale.pdf'));
+  late final fallbackEula = File(p.join(directory, 'EULA.pdf'));
+  final eulaFile = localizedEula.existsSync() ? localizedEula : fallbackEula;
+  Logger('eula').debug('EULA file: ${eulaFile.path}');
+
+  return eulaFile;
+});
+
+class EulaPage extends ConsumerStatefulWidget with ProvisioningPage {
+  const EulaPage({super.key});
 
   @override
-  ConsumerState<EULAPage> createState() => _EULAPageState();
+  ConsumerState<EulaPage> createState() => _EulaPageState();
 }
 
-class _EULAPageState extends ConsumerState<EULAPage> {
+class _EulaPageState extends ConsumerState<EulaPage> {
   bool _hasAcceptedTerms = false;
 
   @override
   Widget build(BuildContext context) {
-    final localeModel = ref.read(localeModelProvider);
-    final lang = EULALocalizations.of(context);
-    final eulaFile = File(
-        '/usr/share/desktop-provision/eula/EULA_${localeModel.selectedLocale?.languageCode}.pdf');
-
-    Logger('eula').debug('EULA file: ${eulaFile.path}');
+    final lang = EulaLocalizations.of(context);
+    final eulaWidget = ref.watch(eulaPageProvider).when(
+        data: (eulaFile) => _EulaPdfViewer(path: eulaFile.path),
+        loading: () => const YaruCircularProgressIndicator(),
+        error: (error, stackTrace) {
+          Logger('eula')
+              .error('Error loading EULA file: $error', error, stackTrace);
+          return _EulaPdfViewer(
+              path: File('/usr/share/desktop-provision/eula/EULA.pdf').path);
+        });
 
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -42,33 +59,7 @@ class _EULAPageState extends ConsumerState<EULAPage> {
             Text(lang.eulaReadAndAcceptTerms),
             const SizedBox(height: kWizardSpacing),
             Expanded(
-              child: PdfViewer.file(
-                eulaFile.existsSync()
-                    ? eulaFile.path
-                    : '/usr/share/desktop-provision/eula/EULA.pdf',
-                params: PdfViewerParams(
-                  errorBannerBuilder:
-                      (context, error, stackTrace, documentRef) => Center(
-                    child: Text(
-                      stackTrace.toString(),
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                  ),
-                  linkWidgetBuilder: (context, link, size) => MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        UrlLauncher().launchUrl(link.url.toString());
-                      },
-                      child: Container(
-                        width: size.width,
-                        height: size.height,
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              child: eulaWidget,
             ),
             const SizedBox(height: kWizardSpacing),
             Center(
@@ -95,6 +86,40 @@ class _EULAPageState extends ConsumerState<EULAPage> {
             enabled: _hasAcceptedTerms,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _EulaPdfViewer extends StatelessWidget {
+  const _EulaPdfViewer({required this.path});
+
+  final String path;
+
+  @override
+  Widget build(BuildContext context) {
+    return PdfViewer.file(
+      path,
+      params: PdfViewerParams(
+        errorBannerBuilder: (context, error, stackTrace, documentRef) => Center(
+          child: Text(
+            stackTrace.toString(),
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
+        ),
+        linkWidgetBuilder: (context, link, size) => MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () {
+              UrlLauncher().launchUrl(link.url.toString());
+            },
+            child: Container(
+              width: size.width,
+              height: size.height,
+              color: Colors.transparent,
+            ),
+          ),
+        ),
       ),
     );
   }

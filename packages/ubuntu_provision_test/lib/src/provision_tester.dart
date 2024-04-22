@@ -121,13 +121,13 @@ extension UbuntuProvisionPageTester on WidgetTester {
     }
   }
 
-  Future<void> testEULAPage({
+  Future<void> testEulaPage({
     String? screenshot,
   }) async {
-    await pumpUntilPage(EULAPage);
+    await pumpUntilPage(EulaPage);
 
-    final context = element(find.byType(EULAPage));
-    final l10n = EULALocalizations.of(context);
+    final context = element(find.byType(EulaPage));
+    final l10n = EulaLocalizations.of(context);
 
     expect(find.titleBar(l10n.eulaPageTitle), findsOneWidget);
 
