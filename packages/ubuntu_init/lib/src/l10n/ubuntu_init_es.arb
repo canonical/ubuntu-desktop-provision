@@ -74,7 +74,7 @@
       "url": {}
     }
   },
-  "ubuntuProSucessAttachDescription": "Puedes gestionar tus servicios Pro en la aplicación Software y Actualizaciones.",
+  "ubuntuProSucessAttachDescription": "Puede gestionar sus servicios Pro en la aplicación Programas y actualizaciones.",
   "@ubuntuProSucessAttachDescription": {},
   "ubuntuProHeader": "Conecte esta máquina",
   "@ubuntuProHeader": {},
@@ -101,7 +101,7 @@
   "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Omitir por ahora",
   "@ubuntuProOnBoardingSkipForNow": {},
-  "ubuntuProOnBoardingSkipForNowDescription": "Siempre puedes activar Ubuntu Pro más adelante a través de la aplicación Software y actualizaciones.",
+  "ubuntuProOnBoardingSkipForNowDescription": "Siempre puede activar Ubuntu Pro más adelante a través de la aplicación Programas y actualizaciones.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
