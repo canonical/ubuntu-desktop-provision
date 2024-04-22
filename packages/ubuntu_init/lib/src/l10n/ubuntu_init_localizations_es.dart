@@ -124,7 +124,7 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Omitir por ahora';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Siempre puedes activar Ubuntu Pro más adelante a través de la aplicación Software y actualizaciones.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Siempre puede activar Ubuntu Pro más adelante a través de la aplicación Programas y actualizaciones.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Activar Ubuntu Pro';
@@ -136,5 +136,5 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ya está activado en esta máquina';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Puedes gestionar tus servicios Pro en la aplicación Software y Actualizaciones.';
+  String get ubuntuProSucessAttachDescription => 'Puede gestionar sus servicios Pro en la aplicación Programas y actualizaciones.';
 }

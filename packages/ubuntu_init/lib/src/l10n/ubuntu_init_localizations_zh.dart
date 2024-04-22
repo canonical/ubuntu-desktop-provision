@@ -152,7 +152,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   }
 
   @override
-  String get welcomeWhatsNew => '新功能介紹';
+  String get welcomeWhatsNew => '有什麼新玩意兒？';
 
   @override
   String get welcomeStartTitle => '流暢的開局';
@@ -187,7 +187,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
 
   @override
   String telemetryDescription(Object distro) {
-    return '將您的資料匿名分享予 $distro 以改善您的體驗。';
+    return '將您的系統資料分享給我們以協助我們改善 $distro 。這包含了像是您的機器型號、已安裝的軟體以及您選擇的時區地理位置資料。';
   }
 
   @override
@@ -199,13 +199,13 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get telemetryLabelOff => '否，不要分享系統資料';
 
   @override
-  String get telemetryReportLabel => '回報資料細節';
+  String get telemetryReportLabel => '查閱第一份報告的細節';
 
   @override
   String get telemetryReportTitle => '回報資料細節';
 
   @override
-  String get telemetryLegalLabel => '法律條款';
+  String get telemetryLegalLabel => '法律聲明';
 
   @override
   String get privacyPageTitle => '地理位置服務';
@@ -221,4 +221,59 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
 
   @override
   String get privacyPolicyLink => '隱私條款';
+
+  @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return '使用 <a href=\"https://$url\">$url</a> 連結來自動將系統綁定至 Ubuntu Pro';
+  }
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => '綁定主機到支援服務';
+
+  @override
+  String get ubuntuProOrAddTokenManually => '或是手動添加一個驗證碼';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => '驗證碼';
+
+  @override
+  String get ubuntuProSubscriptionDescription => '取得最廣泛覆蓋的開放來源碼軟體安全訂閱方案';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+    return '個人使用永遠免費。企業使用免費 30 天試用期。<a href=\"https://$url\">了解更多</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => '綁定';
+
+  @override
+  String get ubuntuProTokenAttachError => '無效的驗證碼';
+
+  @override
+  String get ubuntuProTokenAttachSucess => '有效的驗證碼';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => '無效的驗證碼，請再試一次';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => '先暫時跳過';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription => '您可以稍後隨時於「軟體與更新」應用軟體啟用 Ubuntu Pro。';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => '啟用 Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => '將此機器綁定到 Ubuntu Pro 訂閱以獲得直至 2032 年之更廣範圍軟體包的安全更新。';
+
+  @override
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro 現已於此機器啟用';
+
+  @override
+  String get ubuntuProSucessAttachDescription => '您可以於「軟體與更新」應用軟體中管理您的 Ubuntu Pro 支援服務。';
 }

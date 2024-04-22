@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Vytvořte USB médium pro obnovení systému a také přizpůsobení instalací Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Vyberte USB flash disk. Na disku musí být alespoň 16 GB místa';
+  String get createUsbListExplanation => 'Vyberte USB flash disk. Na disku musí být **alespoň 16 GB místa.**';
 
   @override
   String get createUsbWarning => 'Flash disk bude přeformátován a všechna data na disku budou ztracena.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get restore => 'Obnovit';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Restartovat';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Přeformátovat';
 
   @override
   String get failed => 'Nepodařilo se spustit příkaz';

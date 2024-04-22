@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Partilhar os dados anonimamente com o $distro para que possamos melhorar a sua experiência.';
+    return 'Ajude-nos a melhorar o $distro partilhando connosco os dados do seu sistema. Isto inclui coisas como o modelo da sua máquina, o software instalado e a localização que escolheu para o seu fuso horário.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Não, não partilhe os dados do sistema';
 
   @override
-  String get telemetryReportLabel => 'Detalhes do relatório';
+  String get telemetryReportLabel => 'Mostrar o primeiro relatório';
 
   @override
   String get telemetryReportTitle => 'Detalhes do relatório';
 
   @override
-  String get telemetryLegalLabel => 'Jurídico';
+  String get telemetryLegalLabel => 'Aviso legal';
 
   @override
   String get privacyPageTitle => 'Serviço de localização';

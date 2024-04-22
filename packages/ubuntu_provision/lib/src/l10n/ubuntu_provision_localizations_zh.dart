@@ -342,6 +342,79 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   UbuntuProvisionLocalizationsZhTw(): super('zh_TW');
 
   @override
+  String get accessibilityPageTitle => '無障礙功能';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
+    return '$DISTRO 中的無障礙功能';
+  }
+
+  @override
+  String accessibilityPageBody(String DISTRO) {
+    return '在您完成安裝之前根據您的需求自訂 $DISTRO。您亦可以於安裝後在「系統設定」中變更這些設定。';
+  }
+
+  @override
+  String get accessibilitySeeingLabel => '視覺';
+
+  @override
+  String get accessibilityHearingLabel => '聽覺';
+
+  @override
+  String get accessibilityTypingLabel => '文字輸入';
+
+  @override
+  String get accessibilityPointingLabel => '指向與點擊';
+
+  @override
+  String get accessibilityZoomLabel => '放大';
+
+  @override
+  String get accessibilityHighContrastLabel => '高對比';
+
+  @override
+  String get accessibilityLargeTextLabel => '大文字';
+
+  @override
+  String get accessibilityReduceAnimationLabel => '減少動畫效果';
+
+  @override
+  String get accessibilityScreenReaderLabel => '螢幕閱讀器';
+
+  @override
+  String get accessibilityVisualAlertsLabel => '使用視覺效果取代警示音';
+
+  @override
+  String get accessibilityStickKeysLabel => '相黏鍵';
+
+  @override
+  String get accessibilitySlowKeysLabel => '慢速按鍵';
+
+  @override
+  String get accessibilityMouseKeysLabel => '滑鼠鍵';
+
+  @override
+  String get accessibilityDesktopZoomLabel => '桌面放大';
+
+  @override
+  String get errorPageTitle => '發生錯誤';
+
+  @override
+  String get errorPageUnexpected => '很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。';
+
+  @override
+  String get errorPageShowLog => '顯示運行紀錄';
+
+  @override
+  String get errorPageHideLog => '隱藏運行紀錄';
+
+  @override
+  String get restart => '重新啟動';
+
+  @override
+  String get close => '關閉';
+
+  @override
   String get timezonePageTitle => '請選擇您的時區';
 
   @override
@@ -354,7 +427,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get keyboardTitle => '鍵盤配置';
 
   @override
-  String get keyboardHeader => '請選擇您的鍵盤配置：';
+  String get keyboardHeader => '請選擇您的鍵盤配置';
 
   @override
   String get keyboardTestHint => '在這裡輸入以測試您的鍵盤';
@@ -476,6 +549,14 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get activeDirectoryTitle => '設定 Active Directory';
 
   @override
+  String get activeDirectoryHeader => '是否要進行 Active Directory 設定？';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return '為管理方便，$DISTRO 被設計成可以無縫整合至 Active Directory。';
+  }
+
+  @override
   String get activeDirectoryTestConnection => '測試網域連接';
 
   @override
@@ -533,7 +614,10 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get networkPageTitle => '連接到網際網路';
 
   @override
-  String get networkPageHeader => '將這台電腦連接到網際網路，可以讓 Ubuntu 安裝任何所需要的額外軟體，以及自動選擇您所在的時區。\n\n可透過有線網路或選擇 Wi-Fi 網路來連接';
+  String get networkPageHeader => '連接到網際網路';
+
+  @override
+  String get networkPageBody => '有效的網際網路連線可以透過硬體相容性檢查與安裝額外的軟體包來改進您的安裝體驗。';
 
   @override
   String get networkWiredOption => '使用有線網路';
@@ -576,4 +660,16 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get networkNoneOption => '我現在不想要連接網路';
+
+  @override
+  String get eulaPageTitle => '授權協議';
+
+  @override
+  String get eulaReviewTerms => '審閱授權協議內容';
+
+  @override
+  String get eulaReadAndAcceptTerms => '要完成這部機器的設定，您必須審閱並同意下列授權協議內容。';
+
+  @override
+  String get eulaAcceptTerms => '我以審閱並同意這些條款';
 }

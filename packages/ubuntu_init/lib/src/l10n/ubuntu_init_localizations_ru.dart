@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Делитесь данными $distro анонимно, чтобы мы могли улучшить ваш опыт.';
+    return 'Помогите нам улучшить $distro, поделившись с нами данными о системе. Сюда входят такие данные, как модель вашего компьютера, установленное программное обеспечение и выбранный часовой пояс.';
   }
 
   @override
@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Нет, не делиться системными данными';
 
   @override
-  String get telemetryReportLabel => 'Детали отчёта';
+  String get telemetryReportLabel => 'Показать первый отчет';
 
   @override
   String get telemetryReportTitle => 'Детали отчёта';

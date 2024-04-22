@@ -99,7 +99,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Zistené RST';
 
   @override
-  String get rstHeader => 'Aby bolo možné pokračovať, vypnite RST';
+  String get rstHeader => 'Ak chcete pokračovať, vypnite RST';
 
   @override
   String rstDescription(String DISTRO) {
@@ -605,7 +605,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Inštalácia';
 
   @override
-  String get installationCompleteTitle => 'Inštalácia dokončená';
+  String get installationCompleteTitle => 'Inštalácia je dokončená';
 
   @override
   String readyToUse(String system) {
@@ -641,7 +641,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get bitlockerTitle => 'BitLocker je zapnutý';
 
   @override
-  String get bitlockerHeader => 'Aby bolo možné pokračovať, vypnite BitLocker';
+  String get bitlockerHeader => 'Ak chcete pokračovať, vypnite BitLocker';
 
   @override
   String bitlockerDescription(String option) {
@@ -822,7 +822,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get refreshInfo => 'Aktualizujte na najnovšiu verziu pre vyššiu spoľahlivosť a viac funkcií.';
 
   @override
-  String get refreshReady => 'Aktualizácia pripravená';
+  String get refreshReady => 'Aktualizácia je pripravená';
 
   @override
   String refreshCurrent(String snap, String version) {

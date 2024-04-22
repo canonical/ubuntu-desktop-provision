@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'אפשר לשתף נתונים עם $distro בצורה אלמונית כדי לאפשר לנו לשפר את החוויה שלך.';
+    return 'אפשר לסייע לנו לשפר את $distro על ידי שיתוף נתוני המערכת שלך איתנו. לרבות פרטים כגון דגם המחשב שלך, התוכנות המותקנות והמקום שבחרת לאזור הזמן שלך.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'לא, לא לשתף את נתוני המערכת שלי';
 
   @override
-  String get telemetryReportLabel => 'פרטי דיווח';
+  String get telemetryReportLabel => 'הצגת הדוח הראשון';
 
   @override
   String get telemetryReportTitle => 'פרטי דיווח';
 
   @override
-  String get telemetryLegalLabel => 'משפטי';
+  String get telemetryLegalLabel => 'הצהרה משפטית';
 
   @override
   String get privacyPageTitle => 'שירותי מיקום';

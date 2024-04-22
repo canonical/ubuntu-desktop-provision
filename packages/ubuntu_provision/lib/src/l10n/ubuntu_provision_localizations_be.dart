@@ -5,71 +5,71 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Спецыяльныя магчымасці';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Спецыяльныя магчымасці ў $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Наладзьце $DISTRO у адпаведнасці з вашымі патрабаваннямі. Вы зможаце змяніць іх пазней у сістэмных наладах.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Зрок';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Слых';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Набор тэксту';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Навядзенне і націск';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Маштабаванне';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Высокая кантраснасць';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Буйны тэкст';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Памяншэнне анімацыі';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Чытанне экрана';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Візуальныя абвесткі';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Ліпкія клавішы';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Павольныя клавішы';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Клавішы мышы';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Маштабаванне працоўнага стала';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Нешта пайшло не так';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Нам вельмі шкада, але мы не ўпэўненыя, якая памылка дакладна адбылася. Вы можаце перазапусціць камп\'ютар і пачаць працэс усталявання яшчэ раз. Вы таксама можаце <a>паведаміць аб праблеме</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Паказаць журнал';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Схаваць журнал';
 
   @override
   String get restart => 'Перазапусціць';
@@ -78,261 +78,261 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get close => 'Закрыць';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'Выбраць ваш часавы пояс';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'Месцазнаходжанне';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'Часавы пояс';
 
   @override
-  String get keyboardTitle => 'Keyboard layout';
+  String get keyboardTitle => 'Раскладка клавіятуры';
 
   @override
-  String get keyboardHeader => 'Select your keyboard layout';
+  String get keyboardHeader => 'Выберыце раскладку клавіятуры';
 
   @override
-  String get keyboardTestHint => 'Type here to test your keyboard';
+  String get keyboardTestHint => 'Увядзіце тэкст тут, каб пратэсціраваць сваю клавіятуру';
 
   @override
-  String get keyboardDetectTitle => 'Detect keyboard layout';
+  String get keyboardDetectTitle => 'Выявіць раскладку клавіятуры';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Выявіць';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Выберыце свой варыянт клавіятуры:';
 
   @override
-  String get keyboardPressKeyLabel => 'Please press one of the following keys:';
+  String get keyboardPressKeyLabel => 'Націсніце адну з наступных клавіш:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Is the following key present on your keyboard?';
+  String get keyboardKeyPresentLabel => 'Гэта клавіша прысутнічае на вашай клавіятуры?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'Выберыце сваю тэму';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'Вы заўсёды можаце змяніць гэта пазней у наладах вонкавага выгляду.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Цёмная';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Светлая';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Вітаем у $DISTRO';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'Выберыце сваю мову:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'Стварыце свой уліковы запіс';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'Уваходзіць у сістэму аўтаматычна';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'Патрабаваць пароль для ўваходу ў сістэму';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Ваша імя';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'Патрабуецца імя';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Гэта імя занадта доўгае.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'Імя вашага камп\'ютара';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'Гэта імя будзе выкарыстоўвацца для сувязі з іншымі камп\'ютарамі.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'Патрабуецца імя камп\'ютара';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Гэта імя для камп\'ютара занадта доўгае.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'Памылковае імя камп\'ютара';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'Ваша імя карыстальніка';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'Патрабуецца імя карыстальніка';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'Памылковае імя карыстальніка';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'Гэтае імя карыстальніка ўжо існуе.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'Гэта імя зарэзервавана для выкарыстання сістэмай.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'Гэта імя занадта доўгае.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'Гэта імя змяшчае памылковыя сімвалы.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'Пароль';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'Патрабуецца пароль';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'Пацвердзіце пароль';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Паролі не супадаюць';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Паказаць';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Схаваць';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Выкарыстоўваць Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'На наступным кроку вам прапануюць увесці дамен і іншыя падрабязнасці.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Увайсці ў Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Увайсці ў Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO распрацаваны для бясшвовай інтэграцыі з Active Directory з мэтай спрашчэння адміністравання.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'Праверка магчымасці падключэння да дамена';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Дамен';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Патрабуецца';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Занадта доўгае';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Памылковыя сімвалы';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Пачынаецца з кропкі (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Заканчваецца кропкай (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Пачынаецца з дэфіса (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Заканчваецца дэфісам (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Змяшчае некалькі паслядоўных кропак (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Дамен не знойдзены';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Карыстальнік далучыўся да дамена';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Патрабуецца';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Памылковыя сімвалы';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Пароль';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Патрабуецца';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Памылка канфігурацыі злучэння з Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'На жаль, актыўны каталог не можа быць наладжаны ў дадзены момант. Пасля запуску сістэмы наведайце <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> для таго, каб атрымаць даведку.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'Падключэнне да інтэрнэту';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'Падключыцца да інтэрнэту';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Падключэнне да інтэрнэту ўдасканаліць працэс усталявання дзякуючы праверцы сумяшчальнасці і дадатковым пакетам праграмнага забеспячэння.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'Выкарыстоўваць правадное злучэнне';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'Правадное злучэнне не выяўлена';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'Правадное злучэнне выключана';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'Правадное злучэнне павінна быць уключана, каб выкарыстоўваць Ethernet на гэтым камп\'ютары';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'Уключыць правадное злучэнне';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Падключыцца да сеткі Wi-Fi';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'Бесправадная сетка адключана';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'Прылады Wi-Fi не выяўлены';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'Бесправадная сетка павінна быць абавязкова ўключана, каб выкарыстоўваць Wi-Fi на гэтым камп\'ютары';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Уключыць Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'Падключыцца да схаванай сеткі Wi-Fi';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'Назва сеткі';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'Патрабуецца назва сеткі';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'Не падключацца да інтэрнэту';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Ліцэнзійнае пагадненне';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Азнаёмцеся з ліцэнзійным пагадненнем';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Вы павінны прачытаць і прыняць умовы ліцэнзійнага пагаднення, каб працягнуць наладжванне гэтага камп\'ютара.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Я прачытаў і прымаю гэтыя ўмовы';
 }

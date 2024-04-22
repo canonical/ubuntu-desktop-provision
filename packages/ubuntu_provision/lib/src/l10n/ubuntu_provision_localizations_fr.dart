@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personnalisez $DISTRO à vos besoins avant de le configurer. Vous pouvez les changer plus tard dans les paramètres système.';
+    return 'Personnalisez $DISTRO selon vos besoins avant de l\'installer. Vous pouvez fait des changements plus tard dans les paramètres système.';
   }
 
   @override
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Disposition du clavier';
 
   @override
-  String get keyboardHeader => 'Choisir la disposition de votre clavier :';
+  String get keyboardHeader => 'Sélectionnez la disposition de votre clavier';
 
   @override
   String get keyboardTestHint => 'Saisissez du texte ici pour tester votre clavier';
@@ -102,7 +102,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Détecter';
 
   @override
-  String get keyboardVariantLabel => 'Choisir votre variante du clavier :';
+  String get keyboardVariantLabel => 'Sélectionnez votre variante du clavier :';
 
   @override
   String get keyboardPressKeyLabel => 'Veuillez appuyer sur l’une des touches suivantes :';
@@ -124,7 +124,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Bienvenue à $DISTRO';
+    return 'Bienvenue sur $DISTRO';
   }
 
   @override
@@ -158,13 +158,13 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'Un nom pour l’ordinateur est requis';
 
   @override
-  String get identityHostnameTooLong => 'Ce nom est trop long.';
+  String get identityHostnameTooLong => 'Ce nom d\'ordinateur est trop long.';
 
   @override
   String get identityInvalidHostname => 'Ce nom d’ordinateur est invalide';
 
   @override
-  String get identityUsernameLabel => 'Choisir un nom d’utilisateur';
+  String get identityUsernameLabel => 'Votre nom d’utilisateur';
 
   @override
   String get identityUsernameRequired => 'Un nom d’utilisateur est requis';
@@ -185,13 +185,13 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Ce nom contient des caractères invalides.';
 
   @override
-  String get identityPasswordLabel => 'Choisir un mot de passe';
+  String get identityPasswordLabel => 'Mot de passe';
 
   @override
   String get identityPasswordRequired => 'Un mot de passe est requis';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirmez votre mot de passe';
+  String get identityConfirmPasswordLabel => 'Confirmez le mot de passe';
 
   @override
   String get identityPasswordMismatch => 'Les mots de passe ne correspondent pas';
@@ -209,7 +209,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'Vous saisirez le domaine et d’autres détails à l’étape suivante.';
 
   @override
-  String get activeDirectoryTitle => 'Configurer Active Directory';
+  String get activeDirectoryTitle => 'Se connecter à Active Directory';
 
   @override
   String get activeDirectoryHeader => 'Se connecter à Active Directory ?';
@@ -274,10 +274,10 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Désolé, Active Directory ne peut pas être configuré pour le moment. Une fois que votre système est opérationnel, consultez <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> pour obtenir de l’aide.';
 
   @override
-  String get networkPageTitle => 'Se connecter à un réseau';
+  String get networkPageTitle => 'Connexion Internet';
 
   @override
-  String get networkPageHeader => 'Connecter cet ordinateur à internet aidera Ubuntu à installer des logiciels supplémentaires et à déterminer votre fuseau horaire.\n\nConnectez un câble Ethernet, ou choisissez un réseau Wi-Fi';
+  String get networkPageHeader => 'Connecter à Internet';
 
   @override
   String get networkPageBody => 'Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.';
@@ -307,7 +307,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Aucun périphérique Wi-Fi détecté';
 
   @override
-  String get networkWifiDisabled => 'Pour utiliser le Wi-Fi sur cet ordinateur, cette fonctionnalité doit être activée';
+  String get networkWifiDisabled => 'Pour utiliser le Wi-Fi sur cet ordinateur, le réseau sans fil doit être activé';
 
   @override
   String get networkWifiEnable => 'Activer le Wi-Fi';

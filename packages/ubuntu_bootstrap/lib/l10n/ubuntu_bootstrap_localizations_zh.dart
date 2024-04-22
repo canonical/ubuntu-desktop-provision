@@ -970,12 +970,35 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   UbuntuBootstrapLocalizationsZhTw(): super('zh_TW');
 
   @override
-  String get appTitle => 'Ubuntu 桌面安裝程式';
+  String get appTitle => 'Ubuntu 桌面版安裝程式';
 
   @override
   String windowTitle(String RELEASE) {
     return '安裝 $RELEASE';
   }
+
+  @override
+  String get autoinstallTitle => '安裝類型';
+
+  @override
+  String autoinstallHeader(String DISTRO) {
+    return '您要如何安裝 $DISTRO？';
+  }
+
+  @override
+  String get autoinstallInstructions => '輸入 autoinstall.yaml 的網址：';
+
+  @override
+  String get autoinstallInteractiveOption => '互動式安裝';
+
+  @override
+  String get autoinstallInteractiveDescription => '適用於想要在引導下一步一步地完成安裝的使用者。';
+
+  @override
+  String get autoinstallAutomatedOption => '自動化安裝';
+
+  @override
+  String get autoinstallAutomatedDescription => '適用於備有 autoinstall.yaml 檔案以進行一致且可重現之系統安裝的進階使用者。';
 
   @override
   String get changeButtonText => '變更';
@@ -994,15 +1017,23 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
+  String get warningLabel => '警告：';
+
+  @override
   String tryOrInstallTitle(String DISTRO) {
     return '試用或安裝 $DISTRO';
   }
 
   @override
-  String get tryOrInstallRepairOption => '修復系統';
+  String tryOrInstallHeader(String DISTRO) {
+    return '您要如何使用 $DISTRO？';
+  }
 
   @override
-  String get tryOrInstallRepairDescription => '修復系統會重新安裝已安裝的軟體，而不會動到文件或是設定。';
+  String get tryOrInstallRepairOption => '修復既有的系統安裝';
+
+  @override
+  String get tryOrInstallRepairDescription => '修復系統會重新安裝已安裝的軟體，而不會動到您的文件或是設定。';
 
   @override
   String tryOption(String RELEASE) {
@@ -1026,7 +1057,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return '您也可以閱覽<a href=\"$url\">版本資訊</a>。';
+    return '您也可以閱覽<a href=\"$url\">產品發布說明</a>。';
   }
 
   @override
@@ -1037,7 +1068,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String rstDescription(String DISTRO) {
-    return '本電腦已啟用 Intel 快速儲存技術 (Rapid Storage Technology)，為了繼續安裝 Ubuntu，請先在 Windows 下關閉該功能。';
+    return '本電腦正在使用 Intel 快速儲存技術 (Rapid Storage Technology)，在安裝 $DISTRO 之前您需要先在 Windows 下關閉該功能。';
   }
 
   @override
@@ -1073,7 +1104,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get secureBootSecurityKeysDontMatch => '安全密鑰前後不符';
 
   @override
-  String get showSecurityKey => '顯示安全密鑰';
+  String get showSecurityKey => '顯示';
+
+  @override
+  String get hideSecurityKey => '隱藏';
 
   @override
   String get updatesOtherSoftwarePageTitle => '應用程式與更新';
@@ -1082,70 +1116,134 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get updatesOtherSoftwarePageDescription => '你首先想安裝些什麼程式？';
 
   @override
+  String get codecsAndDriversPageTitle => '最佳化您的電腦';
+
+  @override
+  String get codecsAndDriversPageDescription => '是否要安裝推薦的專有軟體？';
+
+  @override
+  String codecsAndDriversPageBody(String DISTRO) {
+    return '$DISTRO 預設沒有自帶專有軟體。安裝額外的專有軟體可能會改進您電腦的效能。';
+  }
+
+  @override
+  String get codecsAndDriversNvidiaNote => '偵測到 NVIDIA 顯示界面';
+
+  @override
+  String get codecsAndDriversNvidiaBody => '強烈建議安裝額外的驅動程式以在 NVIDIA 顯示界面上實現最佳效能。';
+
+  @override
   String get fullInstallationTitle => '完整安裝';
 
   @override
-  String get fullInstallationSubtitle => '可離線使用的辦公室套件、公用程式、網頁瀏覽器與遊戲。';
+  String get fullInstallationSubtitle => '可離線使用的辦公室套件、公用程式、網頁瀏覽器軟體集合。';
 
   @override
   String get minimalInstallationTitle => '預設安裝';
 
   @override
-  String get minimalInstallationSubtitle => '僅安裝必要功能、網頁瀏覽器與公用程式。';
+  String get minimalInstallationSubtitle => '僅安裝網頁瀏覽器和基本公用程式的必要功能。';
 
   @override
   String get otherOptions => '其它選項';
 
   @override
-  String get installThirdPartyTitle => '安裝第三方軟體以使用顯示卡、無線網路等硬體，並提供額外的媒體格式支援';
+  String get installThirdPartyTitle => '安裝用於顯示與 Wi-Fi 網路硬體的第三方軟體，以及額外的媒體格式播放支援';
 
   @override
-  String get installThirdPartySubtitle => '這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。';
+  String get installThirdPartySubtitle => '這些軟體受到所付文件描述之授權條款約束。其部份為專有軟體。';
 
   @override
   String get installDriversTitle => '安裝第三方軟體以使用顯示卡、無線網路等硬體';
 
   @override
-  String get installDriversSubtitle => '這些驅動程式受到所付文件描述之授權條款約束，均為專有軟體。';
+  String get installDriversSubtitle => '包含但不限於 NVIDIA 顯示驅動程式與類似之軟體';
 
   @override
   String get installCodecsTitle => '安裝第三方軟體以提供額外的媒體格式支援';
 
   @override
-  String get installCodecsSubtitle => '這些軟體受到所付文件描述之授權條款約束，有部份為專有軟體。';
+  String get installCodecsSubtitle => '包含但不限於 MP3、MP4、MOV 以及其他的媒體類型';
 
   @override
-  String get offlineWarning => '您目前已離線';
+  String get batteryWarning => '這台電腦並沒有連接電源。';
 
   @override
-  String get installationTypeTitle => '安裝類型';
+  String get offlineWarning => '您目前處於離線狀態';
+
+  @override
+  String get choosePassphraseTitle => '磁碟解密密語';
+
+  @override
+  String get choosePassphraseHeader => '創建一個密語';
+
+  @override
+  String get choosePassphraseBody => '您需要一個密語來加密您的檔案。您會於每次啟動您的電腦時被要求輸入您的解密密語。';
+
+  @override
+  String get choosePassphraseHint => '選擇一個密語';
+
+  @override
+  String get choosePassphraseConfirmHint => '確認您所輸入的密語是否正確';
+
+  @override
+  String get choosePassphraseRequired => '需要一個密語';
+
+  @override
+  String get choosePassphraseMismatch => '您輸入之密語並不吻合';
+
+  @override
+  String get choosePassphraseInfoHeader => '確保您妥善保存您的密語';
+
+  @override
+  String get choosePassphraseInfoBody => '如果您遺失了您的密語，您將會丟失您所有的資料。';
+
+  @override
+  String get createPassphrase => '創建一個密語';
+
+  @override
+  String get confirmPassphrase => '確認您的密語輸入正確';
+
+  @override
+  String get installationTypeTitle => '安裝磁碟設定';
+
+  @override
+  String installationTypeHeader(String DISTRO) {
+    return '您要如何安裝 $DISTRO？';
+  }
 
   @override
   String installationTypeOSDetected(String os) {
-    return '本電腦目前已安裝 $os，請問您想要做什麼？';
+    return '本電腦目前已安裝了 $os，請問您想要怎麼處理？';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return '本電腦目前已安裝 $os1 與 $os2，請問您想要做什麼？';
+    return '本電腦目前已安裝 $os1 與 $os2，請問您想要怎麼處理？';
   }
 
   @override
-  String get installationTypeMultiOSDetected => '本電腦目前已安裝多個作業系統，請問您想要做什麼？';
+  String get installationTypeMultiOSDetected => '本電腦目前已安裝多個作業系統，請問您想要怎麼處理？';
 
   @override
-  String get installationTypeNoOSDetected => '本電腦目前沒有被檢測到的作業系統。請問您想要做什麼？';
+  String get installationTypeNoOSDetected => '本電腦目前沒有被偵測到的作業系統。請問您想要怎麼處理？';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return '清除硬碟並安裝 $DISTRO';
+    return '清除磁碟並安裝 $DISTRO';
   }
 
   @override
-  String get installationTypeAdvancedLabel => '進階功能…';
+  String get installationTypeEraseInfo => '在您選擇的磁碟上從零開始。';
+
+  @override
+  String get installationTypeAdvancedLabel => '進階功能……';
 
   @override
   String get installationTypeAdvancedTitle => '進階功能';
+
+  @override
+  String get installationTypeExperimental => '實驗性功能';
 
   @override
   String get installationTypeNone => '無';
@@ -1154,7 +1252,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeNoneSelected => '未選擇';
 
   @override
+  String get installationTypeLVM => '使用 LVM 磁碟配置';
+
+  @override
   String get installationTypeLVMSelected => '已選用 LVM';
+
+  @override
+  String get installationTypeLVMEncryption => '使用 LVM 磁碟配置與磁碟加密';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';
@@ -1166,10 +1270,21 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeZFS => '實驗功能：清除硬碟並使用 ZFS';
 
   @override
+  String get installationTypeZFSEncryption => '清除磁碟並使用帶加密的 ZFS 儲存系統';
+
+  @override
   String get installationTypeZFSSelected => '已選用 ZFS';
 
   @override
+  String get installationTypeZFSEncryptionSelected => '已選擇 ZFS 以及加密設定';
+
+  @override
   String get installationTypeTPM => '實驗功能：使用 TPM 支援的全硬碟加密';
+
+  @override
+  String installationTypeTPMInfo(String DISTRO, String url) {
+    return '這是一個實驗性的功能。它可能無法跟您的硬體或是未來的 $DISTRO 版本上正常運作。在您選擇這個選項前<a href=\"$url\">請先詳閱 TPM 加密的相關細節</a>。';
+  }
 
   @override
   String get installationTypeTPMSelected => '已選用 TPM 加密';
@@ -1212,7 +1327,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return '您可以手動建立與調整分割區，或是在 $DISTRO 上使用多個分割區';
+    return '適用於需要客製磁碟分區配置的進階使用者。';
   }
 
   @override
@@ -1221,10 +1336,24 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get selectGuidedStorageInfoLabel => '會使用整部硬碟：';
+  String get selectGuidedStorageInfo => '在您選擇的磁碟上從零開始。';
+
+  @override
+  String get selectGuidedStorageDriveDropdownLabel => '選擇磁碟機：';
+
+  @override
+  String get selectGuidedStoragePartitionDropdownLabel => '選擇磁碟分區：';
+
+  @override
+  String get selectGuidedStorageInfoLabel => '會使用整個磁碟：';
 
   @override
   String get selectGuidedStorageInstallNow => '立即安裝';
+
+  @override
+  String guidedStoragePageHeader(String DISTRO) {
+    return '選擇要在何處安裝 $DISTRO';
+  }
 
   @override
   String get installAlongsideSpaceDivider => '請拖曳下方的分隔棒來分配硬碟空間：';
@@ -1351,10 +1480,43 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmPageTitle => '準備開始安裝';
 
   @override
-  String get confirmHeader => '若要繼續，下列修改將會寫入硬碟，您之後可以手動進行調整。';
+  String get confirmHeader => '審閱您的選擇';
+
+  @override
+  String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
+
+  @override
+  String get confirmDiskEncryptionZFS => 'LUKS (ZFS)';
+
+  @override
+  String get confirmDiskEncryptionTPM => 'TPM';
+
+  @override
+  String get confirmDiskEncryptionNone => '無';
 
   @override
   String get confirmDevicesTitle => '裝置';
+
+  @override
+  String get confirmEntryApplications => '應用軟體';
+
+  @override
+  String get confirmEntryDiskSetup => '磁碟設定';
+
+  @override
+  String get confirmEntryDiskEncryption => '磁碟加密';
+
+  @override
+  String get confirmEntryInstallationDisk => '安裝磁碟';
+
+  @override
+  String get confirmEntryProprietarySoftware => '專有軟體';
+
+  @override
+  String get confirmSectionGeneralTitle => '一般';
+
+  @override
+  String get confirmSectionSecurityAndMoreTitle => '安全與更多設定';
 
   @override
   String get confirmPartitionsTitle => '分割區';
@@ -1396,6 +1558,15 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
+  String get confirmProprietarySoftwareCodecs => '影音編解碼器';
+
+  @override
+  String get confirmProprietarySoftwareCodecsDrivers => '影音編解碼器及驅動程式';
+
+  @override
+  String get confirmProprietarySoftwareDrivers => '驅動程式';
+
+  @override
   String get confirmInstallButton => '開始安裝';
 
   @override
@@ -1403,13 +1574,24 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String readyToUse(String system) {
-    return '$system 安裝完成，可以開始使用';
+    return '$system 已完成安裝，且可以開始使用';
+  }
+
+  @override
+  String rebootToConfigure(String system) {
+    return '**$system** 已經被複製進磁碟中';
   }
 
   @override
   String restartInto(String system) {
     return '重新開機進入 $system';
   }
+
+  @override
+  String get restartWarningBody => '重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所作的變更將不會被保存。';
+
+  @override
+  String get rebootToConfigureWarning => '您必須重新啟動電腦以繼續您的安裝流程。';
 
   @override
   String get shutdown => '關機';
@@ -1428,7 +1610,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String bitlockerDescription(String option) {
-    return '本電腦已啟用 Windows BitLocker 加密技術，\n您必須使用 Windows 來建立磁區空間，或選擇「$option」以繼續。';
+    return '本電腦正在使用 Windows 的 BitLocker 儲存空間加密。\n您必須使用 Windows 以挪出可用空間，或是回到上一步並選擇「$option」選項繼續。';
   }
 
   @override
@@ -1476,7 +1658,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return '在 Ubuntu 軟體中心安裝、管理和更新所有應用程式，包括來自 Snap Store 和 $DISTRO 套件庫中的上千個應用程式。';
+    return '在 Ubuntu 軟體中心安裝、管理和更新您的所有應用軟體，包括來自 Snap Store 和 $DISTRO 軟體庫的上千個應用軟體。';
   }
 
   @override
@@ -1556,7 +1738,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationSlidesSupportResources => '有用資源：';
 
   @override
-  String get installationSlidesSupportDocumentation => '官方文件';
+  String get installationSlidesSupportDocumentation => '官方說明文件';
 
   @override
   String get installationSlidesSupportUbuntuPro => 'Ubuntu Pro 的 24/7 全天候企業級支援';
@@ -1574,11 +1756,16 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationFailed => '安裝失敗';
 
   @override
-  String get notEnoughDiskSpaceTitle => '可用空間不足';
+  String get notEnoughDiskSpaceTitle => '可用磁碟空間不足';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
     return '硬碟可用空間不足，無法安裝 $DISTRO';
+  }
+
+  @override
+  String notEnoughDiskSpaceBody(String DISTRO) {
+    return '您選擇的磁碟沒有足夠空間安裝 $DISTRO。結束安裝程式以挪出更多空間或是選擇另一個磁碟進行安裝。';
   }
 
   @override
@@ -1591,126 +1778,141 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get refreshPageTitle => '有可用的更新';
 
   @override
+  String get refreshHeader => '安裝程式有可用更新';
+
+  @override
+  String get refreshUpdateNow => '現在進行更新';
+
+  @override
+  String get refreshInfo => '更新到最新版本以得到改善的可靠性與更多功能。';
+
+  @override
+  String get refreshReady => '更新已就緒';
+
+  @override
   String refreshCurrent(String snap, String version) {
     return '目前 $snap 的版本是 $version。';
   }
 
   @override
   String refreshInstall(String version) {
-    return '更新到版本 $version';
+    return '更新到 $version 版本';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return '目前的版本 $version 為最新版本。';
+    return '目前的 $version 版本為最新版本。';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return '正在更新 $snap…';
+    return '正在更新 $snap……';
   }
 
   @override
-  String get refreshRestart => '請重新啟動安裝程式。';
+  String get refreshRestart => '請關閉並重新啟動安裝程式以繼續安裝';
+
+  @override
+  String get refreshCloseLabel => '關閉安裝程式';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return '正在確保 $snap 的相依需求…';
+    return '正在確保 $snap 的前備條件已被滿足……';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return '正在更新 $snap…';
+    return '正在更新 $snap……';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return '正在檢查 $snap 是否需要再次更新…';
+    return '正在檢查 $snap re-refresh 狀態……';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return '正在準備 $snap…';
+    return '正在準備 $snap……';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return '正在下載 $snap…';
+    return '正在下載 $snap……';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return '正在驗證 $snap…';
+    return '正在驗證 $snap……';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return '正在掛載 $snap…';
+    return '正在掛載 $snap……';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return '正在停止 $snap 的服務…';
+    return '正在停止 $snap 的服務……';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return '正在移除 $snap 的指令別名…';
+    return '正在移除 $snap 的命令別名……';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return '正在解除 $snap 的連結…';
+    return '正在解除 $snap 的連結……';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return '正在更新 $snap 的附加檔案 (assets)…';
+    return '正在更新 $snap 的附加檔案 (assets)……';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return '正在更新 $snap 的核心指令 (kernel command line)…';
+    return '正在更新 $snap 的核心指令 (kernel command line)……';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return '正在複製 $snap 的資料…';
+    return '正在複製 $snap 的資料……';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return '正在設定 $snap 的安全設定檔…';
+    return '正在設定 $snap 的安全設定檔……';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return '正在連結 $snap…';
+    return '正在連結 $snap……';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return '正在連接 $snap 的介面插頭 (plugs) 與插座 (slots)…';
+    return '正在連接 $snap 的權限限縮介面插頭(plug)與插槽(slot)……';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return '正在設定 $snap 的自動指令別名…';
+    return '正在設定 $snap 的自動命令別名……';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return '正在設定 $snap 的指令別名…';
+    return '正在設定 $snap 的命令別名……';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return '正在啟動 $snap 的服務…';
+    return '正在啟動 $snap 的服務……';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return '正在清理 $snap…';
+    return '正在清理 $snap 的資料……';
   }
 
   @override
@@ -1723,4 +1925,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
   }
+
+  @override
+  String get validate => '驗證';
 }

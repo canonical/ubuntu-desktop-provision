@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara i framtida $DISTRO släpp. <a href=\"$url\">Läs om TPM kryptering</a> innan du väljer detta alternativ.';
+    return 'Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara eller med framtida $DISTRO släpp. <a href=\"$url\">Läs om TPM kryptering</a> innan du väljer detta alternativ.';
   }
 
   @override

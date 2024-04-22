@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'זאת יכולת ניסיונית. יכול להיות עם החומרה שלך בגרסאות עתידיות של $DISTRO. <a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.';
+    return 'זאת יכולת ניסיונית. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של $DISTRO. <a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'ההתקנה נכשלה';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'אין מספיק מקום';
+  String get notEnoughDiskSpaceTitle => 'אין מספיק מקום בכונן';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'בכונן הנבחר אין מספיק מקום כדי להתקין את $DISTRO. נא לצאת מתוכנית ההתקנה כדי לפנות מקום או לבחור בכונן אחר.';
   }
 
   @override
