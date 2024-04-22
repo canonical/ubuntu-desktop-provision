@@ -55,6 +55,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
             onNext: model.cleanup,
             // resume network activity if/when returning back to this page
             onReturn: model.init,
+            focusNode: ref.watch(_nextFocusNodeProvider),
           ),
         ],
       ),
@@ -79,6 +80,7 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
           expanded: model.connectMode == ConnectMode.wifi,
           onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
           onSelected: (_, __) => model.selectConnectMode(ConnectMode.wifi),
+          tabFocusNode: ref.watch(_nextFocusNodeProvider),
         ),
         HiddenWifiRadioButton(
           value: model.connectMode,
@@ -95,3 +97,5 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
     );
   }
 }
+
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();

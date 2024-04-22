@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
@@ -48,12 +49,14 @@ class WifiView extends ConsumerStatefulWidget {
     required this.expanded,
     required this.onEnabled,
     required this.onSelected,
+    this.tabFocusNode,
     super.key,
   });
 
   final bool expanded;
   final VoidCallback onEnabled;
   final OnWifiSelected onSelected;
+  final FocusNode? tabFocusNode;
 
   @override
   ConsumerState<WifiView> createState() => _WifiViewState();
@@ -96,21 +99,28 @@ class _WifiViewState extends ConsumerState<WifiView> {
       expanded: widget.expanded,
       child: Padding(
         padding: kWizardIndentation,
-        child: WifiListView(onSelected: widget.onSelected),
+        child: WifiListView(
+          onSelected: widget.onSelected,
+          tabFocusNode: widget.tabFocusNode,
+        ),
       ),
     );
   }
 }
 
+final wifiDeviceProvider = Provider.family<WifiDevice, int>(
+  (ref, index) => ref.watch(wifiModelProvider).devices[index],
+);
+
 class WifiListView extends ConsumerWidget {
   const WifiListView({
     required this.onSelected,
+    this.tabFocusNode,
     super.key,
   });
 
   final OnWifiSelected onSelected;
-  static final wifiDeviceProvider =
-      Provider<WifiDevice>((_) => throw UnimplementedError());
+  final FocusNode? tabFocusNode;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -122,25 +132,26 @@ class WifiListView extends ConsumerWidget {
         clipBehavior: Clip.antiAlias,
         child: OverrideMouseCursor(
           cursor: SystemMouseCursors.basic,
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: model.devices.length,
-            itemBuilder: (context, index) {
-              return ProviderScope(
-                overrides: [
-                  wifiDeviceProvider.overrideWithValue(model.devices[index]),
-                ],
-                child: WifiListTile(
+          child: CallbackShortcuts(
+            bindings: {
+              const SingleActivator(LogicalKeyboardKey.tab): () =>
+                  tabFocusNode?.requestFocus(),
+            },
+            child: ListView.builder(
+              itemCount: model.devices.length,
+              itemBuilder: (context, index) {
+                return WifiListTile(
                   key: ValueKey(index),
                   selected: model.isSelectedDevice(model.devices[index]),
                   showDevice: model.devices.length > 1,
+                  deviceIndex: index,
                   onSelected: (device, accessPoint) {
                     model.selectDevice(device);
                     onSelected(device, accessPoint);
                   },
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ),
       ),
@@ -152,6 +163,7 @@ class WifiListTile extends ConsumerWidget {
   const WifiListTile({
     required this.selected,
     required this.onSelected,
+    required this.deviceIndex,
     this.showDevice = true,
     super.key,
   });
@@ -159,9 +171,7 @@ class WifiListTile extends ConsumerWidget {
   final bool selected;
   final OnWifiSelected onSelected;
   final bool showDevice;
-
-  static final accessPointProvider =
-      Provider<AccessPoint>((_) => throw UnimplementedError());
+  final int deviceIndex;
 
   Widget _leadingIcon(
     AccessPoint accessPoint,
@@ -185,29 +195,26 @@ class WifiListTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final device = ref.watch(WifiListView.wifiDeviceProvider);
+    final device = ref.watch(wifiDeviceProvider(deviceIndex));
     final textColor = Theme.of(context).textTheme.titleMedium!.color;
     final iconSize = IconTheme.of(context).size;
 
     final accessPoints = <Widget>[
       for (final accessPoint in device.accessPoints)
-        ProviderScope(
-          overrides: [accessPointProvider.overrideWithValue(accessPoint)],
-          child: ListTile(
-            key: ValueKey(accessPoint.name),
-            title: Text(accessPoint.name),
-            leading: _leadingIcon(accessPoint, device, iconSize),
-            selected: selected && device.isSelectedAccessPoint(accessPoint),
-            trailing: SizedBox(
-              width: iconSize,
-              height: iconSize,
-              child: Icon(_wifiIcon(accessPoint)),
-            ),
-            onTap: () {
-              device.selectAccessPoint(accessPoint);
-              onSelected(device, accessPoint);
-            },
+        ListTile(
+          key: ValueKey(accessPoint.name),
+          title: Text(accessPoint.name),
+          leading: _leadingIcon(accessPoint, device, iconSize),
+          selected: selected && device.isSelectedAccessPoint(accessPoint),
+          trailing: SizedBox(
+            width: iconSize,
+            height: iconSize,
+            child: Icon(_wifiIcon(accessPoint)),
           ),
+          onTap: () {
+            device.selectAccessPoint(accessPoint);
+            onSelected(device, accessPoint);
+          },
         ),
     ];
 
