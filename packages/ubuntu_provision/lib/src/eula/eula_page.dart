@@ -92,7 +92,7 @@ class _EulaPageState extends ConsumerState<EulaPage> {
 }
 
 class _EulaPdfViewer extends StatelessWidget {
-  const _EulaPdfViewer({required this.path, super.key});
+  const _EulaPdfViewer({required this.path});
 
   final String path;
 
