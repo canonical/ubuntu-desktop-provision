@@ -110,7 +110,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbunutuProOnboardingPage(
-      screenshot: '$currentThemeName/06.ubuntu-pro-onboarding',
+      screenshot: '$currentThemeName/ubuntu-pro-onboarding',
     );
   }, variant: themeVariant);
 
@@ -132,7 +132,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(
-      screenshot: '$currentThemeName/07.ubuntu-pro',
+      screenshot: '$currentThemeName/ubuntu-pro',
     );
   }, variant: themeVariant);
 
@@ -154,7 +154,7 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProSuccessAttachProPage(
-      screenshot: '$currentThemeName/08.ubuntu-pro-success',
+      screenshot: '$currentThemeName/ubuntu-pro-success',
     );
   }, variant: themeVariant);
 

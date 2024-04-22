@@ -332,42 +332,6 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('confirm', (tester) async {
-    await tester.runApp(() => runInstallerApp([
-          '--',
-          '--bootloader=uefi',
-        ], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToStorageWizard();
-    await tester.pumpAndSettle();
-
-    await tester.testStoragePage(
-      type: StorageType.erase,
-    );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
-    await tester.testIdentityPage(
-      identity: const Identity(
-        realname: 'Ubuntu User',
-        hostname: 'ubuntu',
-        username: 'user',
-      ),
-      password: 'password',
-    );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
-    await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-
-    await tester.testConfirmPage(
-      screenshot: '$currentThemeName/confirm',
-    );
-  }, variant: themeVariant);
-
   testWidgets('identity', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
@@ -415,6 +379,42 @@ Future<void> main() async {
 
     await tester.testTimezonePage(
       screenshot: '$currentThemeName/timezone',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('confirm', (tester) async {
+    await tester.runApp(() => runInstallerApp([
+          '--',
+          '--bootloader=uefi',
+        ], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToStorageWizard();
+    await tester.pumpAndSettle();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(
+      identity: const Identity(
+        realname: 'Ubuntu User',
+        hostname: 'ubuntu',
+        username: 'user',
+      ),
+      password: 'password',
+    );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage(
+      screenshot: '$currentThemeName/confirm',
     );
   }, variant: themeVariant);
 
