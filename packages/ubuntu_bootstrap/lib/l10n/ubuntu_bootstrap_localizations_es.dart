@@ -195,7 +195,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installDriversSubtitle => 'Incluidos, entre otros, los controladores NVIDIA y similares';
 
   @override
-  String get installCodecsTitle => 'Descarga e instala un soporte para formatos multimedia adicionales';
+  String get installCodecsTitle => 'Descargar e instalar compatibilidad para más formatos multimedia';
 
   @override
   String get installCodecsSubtitle => 'Incluidos, entre otros, MP3, MP4, MOV y similares';
@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Se trata de una función experimental. Es posible que no funcione con tu hardware o con futuras versiones de $DISTRO. <a href=\"$url\">Infórmate sobre el cifrado TPM</a> antes de elegir esta opción.';
+    return 'Se trata de una función experimental. Es posible que no funcione con su equipo o con versiones futuras de $DISTRO. <a href=\"$url\">Infórmese sobre el cifrado TPM</a> antes de elegir esta opción.';
   }
 
   @override
@@ -734,7 +734,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Aumenta tu productividad';
+  String get installationSlidesProductivityTitle => 'Aumente su productividad';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -756,7 +756,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityLanguages => 'Compatibilidad lingüística';
 
   @override
-  String get installationSlidesSupportTitle => 'Ayuda y soporte';
+  String get installationSlidesSupportTitle => 'Ayuda y asistencia';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
@@ -764,10 +764,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu cubre una gama de preguntas y respuestas. Ubuntu Discourse proporciona guías y discusiones para usuarios nuevos y experimentados.';
+  String get installationSlidesSupportCommunity => 'En Ask Ubuntu encontrará preguntas y respuestas sobre varios aspectos del sistema, y Ubuntu Discourse contiene guías y espacios de debate para usuarios nuevos y experimentados.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'Para los usuarios de empresa, Canonical ofrece soporte comercial para facilitar la incorporación y gestión segura de Ubuntu en el lugar de trabajo.';
+  String get installationSlidesSupportEnterprise => 'Para entornos empresariales, Canonical ofrece asistencia comercial para facilitar la instalación y gestión segura de Ubuntu en su lugar de trabajo.';
 
   @override
   String get installationSlidesSupportResources => 'Recursos útiles:';
@@ -776,7 +776,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => 'Documentación oficial';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Soporte 24/7 de nivel empresarial con Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'Asistencia 24/7 de nivel empresarial con Ubuntu Pro';
 
   @override
   String get copyingFiles => 'Copiando archivos…';

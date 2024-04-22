@@ -5,15 +5,15 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Вітаем';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Вітаем у $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'ШТО НОВАГА?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
@@ -22,28 +22,28 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Новы выгляд App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Ніколі не было так проста знайсці ваша ўлюблёнае праграмнае забеспячэнне.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Павышэнне бяспекі';
 
   @override
   String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Гісторыя змен</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Тэлеметрыя';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Дапамажыце палепшыць $distro';
   }
 
   @override
@@ -53,35 +53,35 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Так, абагуліць сістэмныя даныя з камандай $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Не, не абагуліць сістэмныя даныя';
 
   @override
   String get telemetryReportLabel => 'Show the first report';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Падрабязнасці справаздачы';
 
   @override
   String get telemetryLegalLabel => 'Legal notice';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Службы месцазнаходжання';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Уключыць службы месцазнаходжання?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Даць магчымасць праграмам ведаць ваша геаграфічнае месцазнаходжанне. Вы можаце змяніць гэта ў любы час у Наладах сістэмы.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Служба месцазнаходжання';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Прыватнасць даных';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {

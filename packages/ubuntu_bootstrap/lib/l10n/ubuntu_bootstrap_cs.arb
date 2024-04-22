@@ -320,7 +320,7 @@
   "@installAlongsideSpaceDivider": {},
   "installAlongsideAvailable": "K dispozici:",
   "@installAlongsideAvailable": {},
-  "notEnoughDiskSpaceTitle": "Nedostatek místa",
+  "notEnoughDiskSpaceTitle": "Nedostatek místa na disku",
   "@notEnoughDiskSpaceTitle": {},
   "installationTypeLVMEncryptionSelected": "Vybráno LVM a šifrování",
   "@installationTypeLVMEncryptionSelected": {},
@@ -880,7 +880,7 @@
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybráno ZFS a šifrování",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem na budoucích vydáních {DISTRO}. Než zvolíte tuto možnost, <a href=\"{url}\">přečtěte si o šifrování TPM</a>.",
+  "installationTypeTPMInfo": "Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních {DISTRO}. Než zvolíte tuto možnost, <a href=\"{url}\">přečtěte si o šifrování TPM</a>.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -956,5 +956,13 @@
   "refreshCloseLabel": "Zavřít instalační program",
   "@refreshCloseLabel": {},
   "validate": "Ověřit",
-  "@validate": {}
+  "@validate": {},
+  "notEnoughDiskSpaceBody": "Vybraný disk nemá dostatek místa pro instalaci {DISTRO}. Ukončete instalační program, abyste uvolnili místo, nebo vyberte jiný disk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

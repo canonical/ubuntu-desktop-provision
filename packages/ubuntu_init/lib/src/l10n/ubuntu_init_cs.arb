@@ -25,7 +25,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Sdílet anonymní data s {distro}, na základě kterých můžeme vylepšit dojem z používání.",
+  "telemetryDescription": "Pomozte nám zlepšit {distro} tím, že s námi budete sdílet svá systémová data. To zahrnuje věci, jako je model vašeho počítače, nainstalovaný software a umístění, které jste vybrali pro své časové pásmo.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -40,7 +40,7 @@
   "@welcomeStartTitle": {},
   "welcomeStoreSubtitle": "Najít vámi oblíbený software nikdy nebylo snazší.",
   "@welcomeStoreSubtitle": {},
-  "welcomeSecuritySubtitle": "Nové předvolby pro šifrování s pomocí hardware nebo na ZFS.",
+  "welcomeSecuritySubtitle": "Nové předvolby pro šifrování s pomocí hardwaru nebo na ZFS.",
   "@welcomeSecuritySubtitle": {},
   "telemetryLabelOn": "Ano, sdílet údaje o systému s týmem {distro}",
   "@telemetryLabelOn": {
@@ -49,11 +49,11 @@
       "distro": {}
     }
   },
-  "telemetryReportLabel": "Podrobnosti hlášení",
+  "telemetryReportLabel": "Zobrazit první hlášení",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Podrobnosti hlášení",
   "@telemetryReportTitle": {},
-  "telemetryLegalLabel": "Právní informace",
+  "telemetryLegalLabel": "Právní ustanovení",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Služby určování polohy",
   "@privacyPageTitle": {},
@@ -66,5 +66,47 @@
   "privacyPolicyLink": "Soukromí údajů",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProHeader": "Připojte tento počítač",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "nebo přidejte token ručně",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProSubscriptionDescription": "Získejte nejkomplexnější předplatné pro zabezpečení open-source softwaru",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Vždy zdarma pro osobní použití. 30denní zkušební verze pro podniky. <a href=\"https://{url}\">Více informací</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachError": "Neplatný token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Platný token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Neplatný token, zkuste to znovu",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProMagicAttachInstructions": "Magicky připojte s tímto kódem na <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOnBoardingEnableUbuntuPro": "Povolit Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší řadě balíčků do roku 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro je nyní na tomto počítači povoleno",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Své služby Pro můžete spravovat v aplikaci Software a aktualizace.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProTokenAttachButton": "Připojit",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProOnBoardingSkipForNow": "Prozatím přeskočit",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pro můžete kdykoli povolit později prostřednictvím aplikace Software a aktualizace.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {}
 }

@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Jaa tietoja anonyymisti ${distro}n kanssa, jotta voimme parantaa kokemustasi.';
+    return 'Jaa järjestelmän tietoja, jotta voimme parantaa ${distro}a. Tiedot sisältävät laitemallin, asennetut ohjelmistot ja valitun aikavyöhykesijainnin.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ei, älä jaa järjestelmän tietoja';
 
   @override
-  String get telemetryReportLabel => 'Ilmoitettavat tiedot';
+  String get telemetryReportLabel => 'Näytä ensimmäinen raportti';
 
   @override
   String get telemetryReportTitle => 'Ilmoitettavat tiedot';
 
   @override
-  String get telemetryLegalLabel => 'Lainopillinen';
+  String get telemetryLegalLabel => 'Lainopillinen huomautus';
 
   @override
   String get privacyPageTitle => 'Sijaintipalvelut';

@@ -1,7 +1,7 @@
 {
   "welcomePageTitle": "Tervetuloa",
   "@welcomePageTitle": {},
-  "telemetryDescription": "Jaa tietoja anonyymisti {distro}n kanssa, jotta voimme parantaa kokemustasi.",
+  "telemetryDescription": "Jaa järjestelmän tietoja, jotta voimme parantaa {distro}a. Tiedot sisältävät laitemallin, asennetut ohjelmistot ja valitun aikavyöhykesijainnin.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -55,11 +55,11 @@
   "@welcomeStoreSubtitle": {},
   "welcomeSecuritySubtitle": "Uusia asetuksia laitteistopohjaiselle salaukselle ja ZFS-salaukselle.",
   "@welcomeSecuritySubtitle": {},
-  "telemetryReportLabel": "Ilmoitettavat tiedot",
+  "telemetryReportLabel": "Näytä ensimmäinen raportti",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Ilmoitettavat tiedot",
   "@telemetryReportTitle": {},
-  "telemetryLegalLabel": "Lainopillinen",
+  "telemetryLegalLabel": "Lainopillinen huomautus",
   "@telemetryLegalLabel": {},
   "privacyLocationSubtitle": "Salli sovellusten paikantaa sijaintisi.\nVoit muuttaa asetusta koska tahansa järjestelmän asetuksista.",
   "@privacyLocationSubtitle": {},

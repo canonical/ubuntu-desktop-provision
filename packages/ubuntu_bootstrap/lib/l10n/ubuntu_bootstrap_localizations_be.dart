@@ -5,517 +5,517 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsBe([String locale = 'be']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Сродак усталявання Ubuntu Desktop';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Усталяваць $RELEASE';
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Тып усталёўкі';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Як бы вы хацелі ўсталяваць $DISTRO?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'Увядзіце URL-адрас autoinstall.yaml:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Інтэрактыўнае ўсталяванне';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Для карыстальнікаў, якія хочуць атрымаць дэтальную дапамогу з усталяваннем.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Аўтаматычнае ўсталяванне';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Для дасведчаных карыстальнікаў, у якіх ёсць у наяўнасці autoinstall.yaml для паслядоўнага і паўтаральнага наладжвання сістэмы.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'Змяніць';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Выйсці з усталявання';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Вітаем у $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return 'Падрыхтоўка $DISTRO…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Папярэджанне:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'Паспрабаваць або ўсталяваць $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Што вы хочаце зрабіць з $DISTRO?';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'Аднавіць усталяванне';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'Выпраўленне паўторна ўсталёўвае ўсе ўсталяванае праграмнае забеспячэнне і пры гэтым не змяняе дакументацыю або налады.';
 
   @override
   String tryOption(String RELEASE) {
-    return 'Try $RELEASE';
+    return 'Паспрабаваць $RELEASE';
   }
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Вы можаце паспрабаваць $RELEASE без уплыву на налады вашага камп\'ютара.';
   }
 
   @override
   String installOption(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Усталяваць $RELEASE';
   }
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Усталяваць $RELEASE побач (або замест) вашай бягучай аперацыйнай сістэмы. Гэта не зойме шмат часу.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'Можаце пачытаць <a href=\"$url\">нататкі да выпуску</a>.';
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'Выяўлены RST';
 
   @override
-  String get rstHeader => 'Turn off RST to continue';
+  String get rstHeader => 'Выключыць RST для працягу';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing $DISTRO.';
+    return 'Гэты камп\'ютар выкарыстоўвае Intel RST (Rapid Storage Technology). Вам неабходна яе выключыць у Windows перад тым як усталёўваць $DISTRO.';
   }
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Для атрымання даведкі адсканіруйце QR-код на іншай прыладзе або наведайце: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Сканфігурыраваць Secure Boot';
 
   @override
-  String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+  String get configureSecureBootDescription => 'Для ўсталявання вы выбралі драйвер ад старонняга пастаўшчыка праграмнага забеспячэння. Для гэтага вам неабходна адключыць Secure Boot. Пасля гэтага, вам неабходна будзе выбраць ключ бяспекі, а потым увесці яго пры перазапуску сістэмы.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Сканфігурыраваць Secure Boot';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'Выберыце ключ бяспекі';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'Падцвердзіце ключ бяспекі';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';
+  String get dontInstallDriverSoftwareNow => 'Пакуль не ўсталёўваць драйвер праграмнага забеспячэння';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'You can install it later from Software & Updates.';
+  String get dontInstallDriverSoftwareNowDescription => 'Вы можаце ўсталяваць яго пазней у раздзеле «Праграмнае забеспячэнне і абнаўленні».';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'Патрабуецца ключ бяспекі';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'Ключы бяспекі не супадаюць';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Паказаць';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Схаваць';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'Праграмы';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
+  String get updatesOtherSoftwarePageDescription => 'Якія праграмы вы б хацелі ўсталяваць спачатку?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Аптымізуйце свой камп\'ютар';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Усталяваць рэкамендаванае прапрыетарнае праграмнае забеспячэнне?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'Прадвызначана $DISTRO пастаўляецца без прапрыетарнага праграмнага забеспячэння. Усталяванне дадатковага праграмнага забеспячэння можа павысіць прадукцыйнасць вашага камп\'ютара.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Выяўлена відэакарта NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Вельмі рэкамендуецца ўсталяваць дадатковыя драйверы для найлепшай прадукцыйнасці відэакарт ад NVIDIA.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Поўнае ўсталяванне';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'Зручны для працы ў пазасеткавым рэжыме набор офісных інструментаў, утыліт і вэб-браўзер.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Прадвызначанае ўсталяванне';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Толькі вэб-браўзер з асноўнымі інструментамі і ўтылітамі.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'Іншыя параметры';
 
   @override
-  String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+  String get installThirdPartyTitle => 'Устаноўка старонняга праграмнага забеспячэння для графікі і абсталявання Wi-Fi, а таксама дадатковыя фарматы мультымедыя';
 
   @override
-  String get installThirdPartySubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installThirdPartySubtitle => 'На гэта праграмнае забеспячэнне распаўсюджваюцца ліцэнзійныя ўмовы, якія ўключаны ў яго дакументацыю. Некаторыя з іх маюць прапрыетарны характар.';
 
   @override
-  String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
+  String get installDriversTitle => 'Усталюйце старонняе праграмнае забеспячэнне для графікі і абсталявання Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'Уключана, але не абмяжоўваецца драйверамі NVIDIA і падобным праграмным забеспячэннем';
 
   @override
-  String get installCodecsTitle => 'Download and install support for additional media formats';
+  String get installCodecsTitle => 'Спампаваць і ўсталяваць падтрымку дадатковых медыяфарматаў';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'Уключана, але не абмяжоўваецца фарматамі MP3, MP4, MOV і іншымі падобнымі файламі';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Камп\'ютар не падключаны да крыніцы электрасілкавання.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Вы зараз па-за сеткай';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Парольная фраза для дыска';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Стварыць парольную фразу';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Для шыфравання файлаў неабходна парольная фраза. Вам неабходна будзе ўводзіць яе пры кожным уключэнні камп\'ютара.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Выберыце парольную фразу';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Пацвердзіць парольную фразу';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Патрабуецца парольная фраза';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Парольныя фразы не супадаюць';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Не забудзьце захаваць парольную фразу';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Калі будзе страчана парольная фраза, будуць страчаны і ўсе вашы даныя.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Стварыць парольную фразу';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Пацвердзіце парольную фразу';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Наладжванне дыска';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Як вы хочаце ўсталяваць $DISTRO?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'На гэтым камп\'ютары ўсталявана сістэма $os. Што вы хочаце зрабіць?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'На гэтым камп\'ютары ўсталяваны $os1 і $os2. Што вы хочаце зрабіць?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'This computer currently has multiple operating systems on it. What would you like to do?';
+  String get installationTypeMultiOSDetected => 'На гэтым камп\'ютары ўсталявана некалькі аперацыйных сістэм. Што вы хочаце зрабіць?';
 
   @override
-  String get installationTypeNoOSDetected => 'This computer currently has no detected operating systems. What would you like to do?';
+  String get installationTypeNoOSDetected => 'На гэтым камп\'ютары не ўсталявана ніводнай аперацыйнай сістэмы. Што вы хочаце зрабіць?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Сцерці дыск і ўсталяваць $DISTRO';
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Пачаць з нуля на выбраным дыску.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced features...';
+  String get installationTypeAdvancedLabel => 'Дадатковыя магчымасці...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Advanced features';
+  String get installationTypeAdvancedTitle => 'Дадатковыя магчымасці';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Эксперыментальна';
 
   @override
-  String get installationTypeNone => 'None';
+  String get installationTypeNone => 'Няма';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Нічога не выбрана';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Выкарыстоўваць LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'Выбрана LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Выкарыстоўваць LVM і шыфраванне';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String get installationTypeLVMEncryptionSelected => 'Выбрана LVM і шыфраванне';
 
   @override
-  String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
+  String get installationTypeEncryptInfo => 'На наступным кроку можна выбраць ключ бяспекі.';
 
   @override
-  String get installationTypeZFS => 'Erase disk and use ZFS';
+  String get installationTypeZFS => 'Сцерці дыск і выкарыстоўваць ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Сцерці дыск і выкарыстоўваць ZFS з шыфраваннем';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'Выбрана ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'Выбрана ZFS і шыфраванне';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Уключыць поўнае апаратнае шыфраванне дыска';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Гэта эксперыментальная магчымасць. Яна можа не працаваць з вашым абсталяваннем у будучых выпусках $DISTRO.<a href=\"$url\">Прачытайце аб шыфраванні TPM</a> перад тым, як выбраць гэты параметр.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'Выбрана TPM';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Сцерці $os і ўсталяваць паўторна';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Папярэджанне.</font> Будуць выдалены ўсе вашы праграмы, дакументы, фотаздымкі, музыка і іншыя файлы з $os.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Усталяваць $product побач з $os';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Усталяваць $product побач з $os1 і $os2';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside them';
+    return 'Усталяваць $product побач з імі';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Усталяваць $product побач з іншымі раздзеламі';
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
+  String get installationTypeAlongsideInfo => 'Вы можаце выбіраць аперацыйную сістэму падчас загрузкі.';
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Усталяванне ўручную';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Для дасведчаных карыстальнікаў, якім патрабуецца адмысловае наладжванне дыска.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Сцерці дыск і ўсталяваць $DISTRO';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Пачаць з нуля на выбраным дыску.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Выберыце дыск:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Выберыце раздзел:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'Будзе выкарыстаны ўвесь дыск:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Усталяваць';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Выберыце месца для ўсталявання $DISTRO';
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';
+  String get installAlongsideSpaceDivider => 'Вылучыце прастору на дыску, перацягваючы раздзяляльнік ніжэй:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num невялікіх раздзелаў схаваны, выкарыстоўвайце <a href=\"$url\">інструмент пашыранай разметкі</a> для большага кантролю';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Змяніць памер раздзела';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Вылучыць прастору';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Файлы';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Раздзел:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Памер:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Даступна:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Разметка ўручную';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Пункт падключэння павінен пачынацца з «/»';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Пункты падключэння не могуць змяшчаць прабелы';
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Прылада';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'Тып';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Пункт падключэння';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Памер';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Выкарыстана';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Сістэма';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Фармат';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Вольная прастора';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Новая табліца раздзела';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Новы пусты раздзел';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+  String get newPartitionTableConfirmationMessage => 'Стварэнне новай табліцы раздзелаў на гэтай прыладзе прывядзе да выдалення бягучых раздзелаў. Гэту аперацыю немагчыма будзе адрабіць пры неабходнасці.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Занадта шмат першасных раздзелаў';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Дасягнута абмежаванне';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'Прылада для ўсталявання загрузчыка';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Стварыць раздзел';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Рэдагаваць раздзел';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Памер:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Тып новага раздзела:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Першасны';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Лагічны';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Размяшчэнне новага раздзела:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Пачатак гэтай прасторы';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Канец гэтай прасторы';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Выкарыстоўваецца як:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Пакінуць нефарматаваным';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Пакінуць фарматаваным у $format';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'Фарматаваць раздзел';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Пункт падключэння:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Гатова да ўсталявання';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Пераглядзець выбранае';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,37 +527,37 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Няма';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Прылады';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Праграмы';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Наладжванне дыска';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Шыфраванне дыска';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Усталявальны дыск';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Прапрыетарнае ПЗ';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Агульныя';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Бяспека і іншыя параметры';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Раздзелы';
 
   @override
-  String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
+  String get confirmPartitionTables => 'Табліцы раздзелаў бягучай прылады зменены:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -565,155 +565,155 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'The following partition changes are going to be applied:';
+  String get confirmPartitionChanges => 'Будуць ужыты наступныя змены раздзелаў:';
 
   @override
   String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'partition <b>$sysname</b> resized from <b>$oldsize</b> to <b>$newsize</b>';
+    return 'памер раздзела <b>$sysname</b> зменены з <b>$oldsize</b> на <b>$newsize</b>';
   }
 
   @override
   String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'partition <b>$sysname</b> formatted as <b>$format</b> used for <b>$mount</b>';
+    return 'раздзел <b>$sysname</b> адфарматаваны як <b>$format</b> і выкарыстаны для <b>$mount</b>';
   }
 
   @override
   String confirmPartitionFormat(String sysname, String format) {
-    return 'partition <b>$sysname</b> formatted as <b>$format</b>';
+    return 'раздзел <b>$sysname</b> адфарматаваны як <b>$format</b>';
   }
 
   @override
   String confirmPartitionMount(String sysname, String mount) {
-    return 'partition <b>$sysname</b> used for <b>$mount</b>';
+    return 'раздзел <b>$sysname</b> выкарыстаны для <b>$mount</b>';
   }
 
   @override
   String confirmPartitionCreate(String sysname) {
-    return 'partition <b>$sysname</b> created';
+    return 'раздзел <b>$sysname</b> створаны';
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Кодэкі';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Кодэкі і драйверы';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Драйверы';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Усталяваць';
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Усталяванне завершана';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system усталявана і гатова да выкарыстання';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system была скапіявана на дыск';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Перазапусціць у $system';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Перазапусціць для завяршэння ўсталявання або працягнуць тэсціраванне.\nЛюбыя змены, якія вы зрабілі захаваны не будуць.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Вы перазапусцілі камп\'ютар, каб працягнуць працэс усталявання.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'Выключыць';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Перазапусціць';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Працягнуць знаёмства';
 
   @override
-  String get bitlockerTitle => 'BitLocker is enabled';
+  String get bitlockerTitle => 'BitLocker уключаны';
 
   @override
-  String get bitlockerHeader => 'Turn off BitLocker to continue';
+  String get bitlockerHeader => 'Выключыце BitLocker, каб працягнуць';
 
   @override
   String bitlockerDescription(String option) {
-    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'$option\' to continue.';
+    return 'На гэтым камп\'ютары выкарыстоўваецца шыфраванне BitLocker.\nСкарыстайцеся Windows для стварэння свабоднай прасторы або вярніцеся і выберыце \'$option\', каб працягнуць.';
   }
 
   @override
   String bitlockerInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Для атрымання даведкі адсканіруйце QR-код на іншай прыладзе або наведайце: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Перазапусціць у Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Перазапусціць у Windows?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Перазапусціць камп\'ютар? Каб завяршыць усталяванне $DISTRO, пазней вам спатрэбіцца перазапусціць $DISTRO.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Вітаем у $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Даступна:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Уключаюць:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'Хуткая, свабодная і поўная новых функцый';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'Апошняя версія $DISTRO дазваляе яшчэ больш спрасціць выкарыстанне вашага камп\'ютара.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Ці вы распрацоўшчык, стваральнік, гулец ці адміністратар - вы знойдзеце новыя інструменты для павышэння вашай прадукцыйнасці і паляпшэння ўражання ў $RELEASE.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Усе праграмы, якія вам патрэбны';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Усталёўвайце, кіруйце і абнаўляйце ўсе вашы праграмы ў Ubuntu Software, уключаючы тысячы праграм як з Snap Store, так і з архіву $DISTRO.';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Develop with the best of open source';
+  String get installationSlidesDevelopmentTitle => 'Распрацоўвайце праграмы з найлепшым адкрытым праграмным забеспячэннем';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return '$DISTRO — гэта ідэальная працоўная станцыя для распрацоўвання праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск $DISTRO уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Павялічыце вашы стваральныя здольнасці';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Калі вы аніматар, дызайнер, стваральнік відэа ці распрацоўшчык гульняў, то вам проста перанесці арганізацыю працы ў $DISTRO з падтрымкай для свабоднага праграмнага забеспячэння і прамысловых стандартаў праграмнага забеспячэння і праграм.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Выдатна для гульняў';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
@@ -721,11 +721,11 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Прыватнасць і бяспека';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '$DISTRO дае вам усё неабходнае, каб захаваць прыватнасць і бяспеку анлайн. Уключае ўбудаваны міжсеткавы экран, падтрымку VPN і мноства праграм, арыентаваных на прыватнасць, каб забяспечыць поўны кантроль над вашымі данымі.';
   }
 
   @override
@@ -734,7 +734,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Power up your productivity';
+  String get installationSlidesProductivityTitle => 'Дайце энергію вашай прадукцыйнасці';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -742,25 +742,25 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Даступнасць для ўсіх';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return 'У аснове філасофіі $DISTRO палягае перакананне даступнасці камп\'ютара для кожнага. З пашыранымі спецыяльнымі магчымасцямі і параметрамі для замены мовы, колеру і памеру тэксту, $DISTRO робіць працу на камп\'ютары простай для кожнага - кім бы вы ні былі і дзе б вы ні знаходзіліся.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'Чытанне з экрана Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Падтрымка моў';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Даведка і падтрымка';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'Афіцыйная дакументацыя $DISTRO даступна анлайн і праз значок даведкі на док-панэлі.';
   }
 
   @override
@@ -770,32 +770,32 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Карысныя рэсурсы:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Афіцыйная дакументацыя';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'Падтрымка карпаратыўных карыстальнікаў 24/7 з Ubuntu Pro';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Капіяванне файлаў…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'Усталяванне сістэмы…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'Наладка сістэмы…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Збой усталявання';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Недастаткова месца на дыску';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Недастаткова месца на дыску для ўсталявання $DISTRO';
   }
 
   @override
@@ -804,51 +804,51 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Даступна:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Патрабуецца:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Даступна абнаўленне';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Абнаўленне даступна для ўсталёўшчыка праграм';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Абнавіць зараз';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Абнавіце да апошняй версіі каб палепшыць надзейнасць і атрымаць больш функцый.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Абнаўленне гатова';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'Бягучай версіяй $snap з\'яўляецца $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Абнавіць да версіі $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'Бягучая версія $version з\'яўляецца апошняй.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'Абнаўленне $snap...';
   }
 
   @override
   String get refreshRestart => 'Please close the installer and relaunch to continue';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Закрыць усталёўшчык праграм';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -857,7 +857,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'Абнаўленне $snap...';
   }
 
   @override
@@ -867,22 +867,22 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return 'Падрыхтоўка $snap...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'Ідзе спампоўванне $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'Праверыць $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'Падключыць $snap...';
   }
 
   @override

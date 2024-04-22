@@ -229,5 +229,13 @@
   "errorPageHideLog": "Skrýt záznam",
   "@errorPageHideLog": {},
   "restart": "Restartovat",
-  "@restart": {}
+  "@restart": {},
+  "eulaAcceptTerms": "Přečetl(a) jsem si tyto podmínky a souhlasím s nimi",
+  "@eulaAcceptTerms": {},
+  "eulaPageTitle": "Licenční smlouva",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Přečtěte si licenční podmínky",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.",
+  "@eulaReadAndAcceptTerms": {}
 }

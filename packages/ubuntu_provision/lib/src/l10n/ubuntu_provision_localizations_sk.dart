@@ -226,7 +226,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainLabel => 'Doména';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Vyžadované';
+  String get activeDirectoryDomainEmpty => 'Vyžaduje sa';
 
   @override
   String get activeDirectoryDomainTooLong => 'Príliš dlhé';
@@ -241,10 +241,10 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Končí na bodku (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Začína na spojovník/pomlčku (-)';
+  String get activeDirectoryDomainStartHyphen => 'Začína na pomlčku (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Končí na spojovník/pomlčku (-)';
+  String get activeDirectoryDomainEndHyphen => 'Končí na pomlčku (-)';
 
   @override
   String get activeDirectoryDomainMultipleDots => 'Obsahuje niekoľko bodiek za sebou (..)';
@@ -256,7 +256,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminLabel => 'Používateľ s oprávnením pre pridanie do domény';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Vyžadované';
+  String get activeDirectoryAdminEmpty => 'Vyžaduje sa';
 
   @override
   String get activeDirectoryAdminInvalidChars => 'Neplatné znaky';
@@ -265,7 +265,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordLabel => 'Heslo';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Vyžadované';
+  String get activeDirectoryPasswordEmpty => 'Vyžaduje sa';
 
   @override
   String get activeDirectoryErrorTitle => 'Chyba pri konfigurácii pripojenia k Active Directory';
@@ -292,7 +292,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Káblové pripojenie je vypnuté';
 
   @override
-  String get networkWiredDisabled => 'Aby na tomto počítači bolo možné použiť rozhranie Ethernet, je potrebné zapnúť káblové pripojenie';
+  String get networkWiredDisabled => 'Ak chcete na tomto počítači používať Ethernet, je potrebné zapnúť káblové pripojenie';
 
   @override
   String get networkWiredEnable => 'Zapnúť káblové';
@@ -307,7 +307,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Nezistili sa žiadne zariadenia Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'Aby na tomto počítači bolo možné použiť rozhranie Wi-Fi, je potrebné zapnúť bezdrôtové pripojenie';
+  String get networkWifiDisabled => 'Ak chcete na tomto počítači používať Wi-Fi, je potrebné zapnúť bezdrôtové pripojenie';
 
   @override
   String get networkWifiEnable => 'Zapnúť Wi-Fi';
@@ -334,5 +334,5 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get eulaReadAndAcceptTerms => 'Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.';
 
   @override
-  String get eulaAcceptTerms => 'Prečítal som si tieto podmienky a súhlasím s nimi';
+  String get eulaAcceptTerms => 'Prečítal(a) som si tieto podmienky a súhlasím s nimi';
 }

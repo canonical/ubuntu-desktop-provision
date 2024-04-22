@@ -11,7 +11,7 @@
   "@welcomeSecuritySubtitle": {},
   "telemetryPageTitle": "Telemetrie",
   "@telemetryPageTitle": {},
-  "telemetryLegalLabel": "Rechtliches",
+  "telemetryLegalLabel": "Rechtlicher Hinweis",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Standortbezogene Dienste",
   "@privacyPageTitle": {},
@@ -37,7 +37,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Teilen Sie Ihre Daten anonym mit {distro}, damit wir Ihr Erlebnis verbessern können.",
+  "telemetryDescription": "Helfen Sie uns, {distro} zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Computermodell, installierte Software und der Ort, den Sie für Ihre Zeitzone gewählt haben.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -61,7 +61,7 @@
   "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Neues Aussehen des App Store",
   "@welcomeStoreTitle": {},
-  "telemetryReportLabel": "Einzelheiten der Berichterstattung",
+  "telemetryReportLabel": "Ersten Bericht anzeigen",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Einzelheiten der Berichterstattung",
   "@telemetryReportTitle": {},
@@ -86,5 +86,20 @@
   "ubuntuProTokenTextfieldHint": "Token",
   "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProSucessAttachDescription": "Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.",
-  "@ubuntuProSucessAttachDescription": {}
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProOrAddTokenManually": "oder fügen Sie manuell ein Token hinzu",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProSubscriptionDescription": "Holen Sie sich das umfassendste Abonnement für die Sicherheit von quelloffener Software",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Immer kostenlos für den persönlichen Gebrauch. 30-Tage-Testversion für Unternehmen. <a href=\"https://{url}\">Mehr erfahren</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOnBoardingSkipForNowDescription": "Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Binden Sie diesen Rechner an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
 }

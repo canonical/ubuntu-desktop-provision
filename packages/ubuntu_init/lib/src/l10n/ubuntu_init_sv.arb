@@ -18,7 +18,7 @@
   },
   "telemetryPageTitle": "Telemetri",
   "@telemetryPageTitle": {},
-  "telemetryDescription": "Dela data anonymt med {distro} så att vi kan förbättra din upplevelse.",
+  "telemetryDescription": "Hjälp oss att förbättra {distro} genom att dela din systemdata med oss. Detta inkluderar saker som din maskinmodell, installerad programvara och den plats du valde för din tidszon.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -32,7 +32,7 @@
       "distro": {}
     }
   },
-  "telemetryLegalLabel": "Juridisk information",
+  "telemetryLegalLabel": "Juridisk meddelande",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "Platstjänster",
   "@privacyPageTitle": {},
@@ -57,7 +57,7 @@
   },
   "telemetryLabelOff": "Nej, dela inte systemdata",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "Rapporteringsdetaljer",
+  "telemetryReportLabel": "Visa den första rapporten",
   "@telemetryReportLabel": {},
   "privacyLocationEnable": "Platstjänster",
   "@privacyLocationEnable": {},

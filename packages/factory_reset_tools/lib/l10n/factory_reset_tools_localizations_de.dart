@@ -5,52 +5,52 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Werkzeuge zum Zurücksetzen auf die Werkseinstellungen';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Werkzeuge zum Zurücksetzen auf die Werkseinstellungen';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Was würden Sie gerne machen?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Rücksetzmedium erstellen';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Zurücksetzen auf Werkseinstellungen starten';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Erstellen eines USB-Rücksetzmediums';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Erstellen Sie ein USB-Rücksetzmedium, um das System wiederherzustellen und Ihre Ubuntu-Installationen anzupassen.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Wählen Sie ein USB-Flash-Laufwerk aus. Das Laufwerk muss **mindestens 16 GB Speicherplatz** haben.';
 
   @override
   String get createUsbWarning => 'Das Flash-Laufwerk wird neu formatiert und alle Daten auf dem Laufwerk gehen verloren.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-Rücksetzmedium';
 
   @override
   String get noMediaDetected => 'Kein Wechseldatenträger erkannt';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Sie benötigen einen USB-Speicher, um ein Medium für das Zurücksetzen auf die Werkseinstellungen zu erstellen.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Wählen Sie eine Option zum Starten des Zurücksetzens auf die Werkseinstellungen';
 
   @override
   String get loadingDrives => 'Bitte warten Sie, während wir die Laufwerke abrufen.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-Rücksetzmedium ist bereit';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Wenn Sie es verwenden möchten, schließen Sie bitte das USB-Laufwerk an den Computer an, den Sie zurücksetzen möchten, und starten Sie ihn neu.';
 
   @override
   String get errorLoadingDrives => 'Beim Abrufen der Laufwerke ist ein Fehler aufgetreten.';
@@ -86,10 +86,10 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get restart => 'Neustart';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Neu formatieren';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Befehl konnte nicht ausgeführt werden';
 
   @override
   String get close => 'Schließen';

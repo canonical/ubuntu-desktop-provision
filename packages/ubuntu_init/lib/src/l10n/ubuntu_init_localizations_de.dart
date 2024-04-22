@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Teilen Sie Ihre Daten anonym mit $distro, damit wir Ihr Erlebnis verbessern können.';
+    return 'Helfen Sie uns, $distro zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Computermodell, installierte Software und der Ort, den Sie für Ihre Zeitzone gewählt haben.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Nein, keine Systemdaten teilen';
 
   @override
-  String get telemetryReportLabel => 'Einzelheiten der Berichterstattung';
+  String get telemetryReportLabel => 'Ersten Bericht anzeigen';
 
   @override
   String get telemetryReportTitle => 'Einzelheiten der Berichterstattung';
 
   @override
-  String get telemetryLegalLabel => 'Rechtliches';
+  String get telemetryLegalLabel => 'Rechtlicher Hinweis';
 
   @override
   String get privacyPageTitle => 'Standortbezogene Dienste';
@@ -95,17 +95,17 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Diese Maschine anbinden';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'oder fügen Sie manuell ein Token hinzu';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Holen Sie sich das umfassendste Abonnement für die Sicherheit von quelloffener Software';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Immer kostenlos für den persönlichen Gebrauch. 30-Tage-Testversion für Unternehmen. <a href=\"https://$url\">Mehr erfahren</a>';
   }
 
   @override
@@ -124,13 +124,13 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Vorerst überspringen';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro aktivieren';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Binden Sie diesen Rechner an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ist jetzt auf dieser Maschine aktiviert';

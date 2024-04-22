@@ -127,7 +127,7 @@ scripts:
       flutter test
 
   # run pub upgrade in all packages
-  upgrade: melos exec flutter pub upgrade
+  upgrade: melos exec -c 1 flutter pub upgrade
 
   protoc:
     run: |

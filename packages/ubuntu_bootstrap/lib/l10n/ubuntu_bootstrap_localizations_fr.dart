@@ -121,7 +121,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get configureSecureBootOption => 'Configurer Secure Boot';
 
   @override
-  String get chooseSecurityKey => 'Choisir un code de sécurité';
+  String get chooseSecurityKey => 'Choisissez une clé de sécurité';
 
   @override
   String get confirmSecurityKey => 'Confirmer le code de sécurité';
@@ -210,7 +210,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get choosePassphraseTitle => 'Phrase secrète du disque';
 
   @override
-  String get choosePassphraseHeader => 'Créer une phrase secrète';
+  String get choosePassphraseHeader => 'Créez une phrase secrète';
 
   @override
   String get choosePassphraseBody => 'Vous avez besoin d\'une phrase secrète pour chiffrer vos fichiers. Votre phrase secrète vous sera demandée à chaque fois que vous allumez sur votre ordinateur.';
@@ -219,7 +219,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHint => 'Choisissez une phrase secrète';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirmer la phrase secrète';
+  String get choosePassphraseConfirmHint => 'Confirmez la phrase secrète';
 
   @override
   String get choosePassphraseRequired => 'Une phrase secrète est nécessaire';
@@ -355,7 +355,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Les documents, musiques et autres fichiers personnels seront conservés. Vous pouvez choisir le système d’exploitation à lancer au moment du démarrage de l’ordinateur.';
+  String get installationTypeAlongsideInfo => 'Vous pouvez choisir votre système d\'exploitation pendant le démarrage.';
 
   @override
   String get installationTypeManual => 'Partitionnement manuel';

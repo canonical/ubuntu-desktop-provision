@@ -1,1 +1,53 @@
-{}
+{
+  "welcomeStoreTitle": "Новы выгляд App Store",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Ніколі не было так проста знайсці ваша ўлюблёнае праграмнае забеспячэнне.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Павышэнне бяспекі",
+  "@welcomeSecurityTitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Гісторыя змен</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Тэлеметрыя",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Дапамажыце палепшыць {distro}",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Так, абагуліць сістэмныя даныя з камандай {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Не, не абагуліць сістэмныя даныя",
+  "@telemetryLabelOff": {},
+  "telemetryReportTitle": "Падрабязнасці справаздачы",
+  "@telemetryReportTitle": {},
+  "privacyPageTitle": "Службы месцазнаходжання",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Уключыць службы месцазнаходжання?",
+  "@privacyLocationTitle": {},
+  "privacyLocationEnable": "Служба месцазнаходжання",
+  "@privacyLocationEnable": {},
+  "welcomePageTitle": "Вітаем",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Вітаем у {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "ШТО НОВАГА?",
+  "@welcomeWhatsNew": {},
+  "privacyLocationSubtitle": "Даць магчымасць праграмам ведаць ваша геаграфічнае месцазнаходжанне. Вы можаце змяніць гэта ў любы час у Наладах сістэмы.",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "Прыватнасць даных",
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
+}

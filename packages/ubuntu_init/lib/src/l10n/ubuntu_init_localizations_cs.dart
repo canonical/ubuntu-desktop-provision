@@ -31,7 +31,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get welcomeSecurityTitle => 'Vylepšené zabezpečení';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nové předvolby pro šifrování s pomocí hardware nebo na ZFS.';
+  String get welcomeSecuritySubtitle => 'Nové předvolby pro šifrování s pomocí hardwaru nebo na ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Sdílet anonymní data s $distro, na základě kterých můžeme vylepšit dojem z používání.';
+    return 'Pomozte nám zlepšit $distro tím, že s námi budete sdílet svá systémová data. To zahrnuje věci, jako je model vašeho počítače, nainstalovaný software a umístění, které jste vybrali pro své časové pásmo.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ne, nesdílet systémové informace';
 
   @override
-  String get telemetryReportLabel => 'Podrobnosti hlášení';
+  String get telemetryReportLabel => 'Zobrazit první hlášení';
 
   @override
   String get telemetryReportTitle => 'Podrobnosti hlášení';
 
   @override
-  String get telemetryLegalLabel => 'Právní informace';
+  String get telemetryLegalLabel => 'Právní ustanovení';
 
   @override
   String get privacyPageTitle => 'Služby určování polohy';
@@ -85,56 +85,56 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Magicky připojte s tímto kódem na <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Připojte tento počítač';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'nebo přidejte token ručně';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Získejte nejkomplexnější předplatné pro zabezpečení open-source softwaru';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Vždy zdarma pro osobní použití. 30denní zkušební verze pro podniky. <a href=\"https://$url\">Více informací</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Připojit';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Neplatný token';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Platný token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Neplatný token, zkuste to znovu';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Prozatím přeskočit';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Ubuntu Pro můžete kdykoli povolit později prostřednictvím aplikace Software a aktualizace.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Povolit Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší řadě balíčků do roku 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro je nyní na tomto počítači povoleno';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Své služby Pro můžete spravovat v aplikaci Software a aktualizace.';
 }

@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem na budoucích vydáních $DISTRO. Než zvolíte tuto možnost, <a href=\"$url\">přečtěte si o šifrování TPM</a>.';
+    return 'Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních $DISTRO. Než zvolíte tuto možnost, <a href=\"$url\">přečtěte si o šifrování TPM</a>.';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Instalace se nezdařila';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Nedostatek místa';
+  String get notEnoughDiskSpaceTitle => 'Nedostatek místa na disku';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Vybraný disk nemá dostatek místa pro instalaci $DISTRO. Ukončete instalační program, abyste uvolnili místo, nebo vyberte jiný disk.';
   }
 
   @override

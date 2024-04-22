@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Asennus epäonnistui';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Tilaa ei ole riittävästi';
+  String get notEnoughDiskSpaceTitle => 'Levytilaa ei ole riittävästi';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Valitula levylla ei ole riittävästi tilaa ${DISTRO}n asentamiseen. Poistu asennusohjelmasta ja vapauta tilaa, tai valitse toinen levy.';
   }
 
   @override

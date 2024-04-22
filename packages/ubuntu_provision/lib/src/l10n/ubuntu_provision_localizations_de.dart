@@ -14,14 +14,14 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Passen Sie $DISTRO an Ihre Bedürfnisse an, bevor Sie es einrichten. Sie können sie später in den Systemeinstellungen ändern.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Sehen';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Hören';
 
   @override
   String get accessibilityTypingLabel => 'Tippen';
@@ -42,13 +42,13 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get accessibilityReduceAnimationLabel => 'Animationen reduzieren';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Bildschirmleser';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Visuelle Warnhinweise';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Haftbare Tasten';
 
   @override
   String get accessibilitySlowKeysLabel => 'Langsame Tasten';
@@ -63,7 +63,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Etwas ist schiefgelaufen';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Sie können auch das <a>Problem melden</a>.';
 
   @override
   String get errorPageShowLog => 'Protokoll anzeigen';
@@ -216,7 +216,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO ist so konzipiert, dass es sich zur einfacheren Administration nahtlos in Active Directory integrieren lässt.';
   }
 
   @override
@@ -280,7 +280,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Die Verbindung des Computers mit dem Internet hilft Ubuntu bei der Installation zusätzlicher Software und bei der Auswahl der Zeitzone.\n\nPer Ethernet-Kabel verbinden oder ein WLAN-Netzwerk auswählen';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Eine Internetverbindung verbessert Ihre Installation mit Kompatibilitätsprüfung und zusätzlichen Softwarepaketen.';
 
   @override
   String get networkWiredOption => 'Kabelgebundene Verbindung verwenden';
@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Ich will gerade keine Verbindung zum Internet herstellen';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Lizenzvereinbarung';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Prüfen Sie die Lizenzbedingungen';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Um mit der Einrichtung des Geräts fortzufahren, müssen Sie die Lizenzvereinbarung lesen und akzeptieren.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Ich habe diese Bedingungen gelesen und akzeptiere sie';
 }

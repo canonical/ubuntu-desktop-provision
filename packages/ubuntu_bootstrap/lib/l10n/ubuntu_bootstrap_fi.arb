@@ -314,7 +314,7 @@
   "@configuringSystem": {},
   "installationFailed": "Asennus epäonnistui",
   "@installationFailed": {},
-  "notEnoughDiskSpaceTitle": "Tilaa ei ole riittävästi",
+  "notEnoughDiskSpaceTitle": "Levytilaa ei ole riittävästi",
   "@notEnoughDiskSpaceTitle": {},
   "installDriversTitle": "Asenna kolmannen osapuolen ohjelmistot näytönohjainta ja wifi-laitteistoa varten",
   "@installDriversTitle": {},
@@ -912,5 +912,13 @@
   "rebootToConfigureWarning": "Tietokone tulee käynnistää uudelleen, jotta asennusta voidaan jatkaa.",
   "@rebootToConfigureWarning": {},
   "validate": "Vahvista",
-  "@validate": {}
+  "@validate": {},
+  "notEnoughDiskSpaceBody": "Valitula levylla ei ole riittävästi tilaa {DISTRO}n asentamiseen. Poistu asennusohjelmasta ja vapauta tilaa, tai valitse toinen levy.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

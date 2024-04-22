@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo por estontaj versioj de $DISTRO. <a href=\"$url\">Legu pri TPM-ĉifrado </a> antaŭ ol vi elektas ĉi tiun opcion.';
+    return 'Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo aŭ estontaj versioj de $DISTRO. <a href=\"$url\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion.';
   }
 
   @override
