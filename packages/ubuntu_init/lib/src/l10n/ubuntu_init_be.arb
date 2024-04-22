@@ -28,7 +28,7 @@
       "distro": {}
     }
   },
-  "telemetryLabelOff": "Не, не абагуліць сістэмныя даныя",
+  "telemetryLabelOff": "Не, не абагуляць сістэмныя даныя",
   "@telemetryLabelOff": {},
   "telemetryReportTitle": "Падрабязнасці справаздачы",
   "@telemetryReportTitle": {},
@@ -49,5 +49,64 @@
   "privacyPolicyLink": "Прыватнасць даных",
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "ubuntuProMagicAttachInstructions": "Магічнае далучэнне з гэтым кодам на <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOrAddTokenManually": "або дадайце токен уручную",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Токен",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Атрымайце найбольш усёабдымную падпіску для бяспекі праграмнага забеспячэння з адкрытым зыходным кодам",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Заўсёды бясплатна для некамерцыйнага выкарыстання і бясплатны выпрабавальны перыяд на працягу 30 дзён для прадпрыемстваў. <a href=\"https://{url}\">Даведацца больш</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Далучыць",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Памылковы токен",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Сапраўдны токен",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Памылковы токен, паўтарыць",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Пакуль прапусціць",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Вы заўсёды зможаце ўключыць Ubuntu Pro пазней праз праграму «Праграмнае забеспячэнне і абнаўленні».",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Уключыць Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Далучыць гэты камп'ютар да падпіскі Ubuntu Pro, якая забяспечвае абнаўленні бяспекі і шырокі дыяпазон пакетаў. Падпіска дзейнічае да 2032 года.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Цяпер гэты камп'ютар уключае падпіску Ubuntu Pro",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Вы заўсёды можаце кіраваць сваімі службамі Ubuntu Pro у праграме «Праграмнае забеспячэнне і абнаўленні».",
+  "@ubuntuProSucessAttachDescription": {},
+  "welcomeStartTitle": "Спрошчаны старт",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Прасцейшы працэс наладжвання.",
+  "@welcomeStartSubtitle": {},
+  "welcomeSecuritySubtitle": "Новыя параметры для апаратнага забеспячэння або шыфраванне ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryReportLabel": "Паказаць першую справаздачу",
+  "@telemetryReportLabel": {},
+  "ubuntuProHeader": "Далучыць гэтую прыладу",
+  "@ubuntuProHeader": {},
+  "telemetryDescription": "Дапамажыце нам палепшыць {distro} абагульваючы свае сістэмныя даныя з намі. Гэта ўключае наступныя звесткі: мадэль камп'ютара, месцазнаходжанне і часавы пояс.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLegalLabel": "Юрыдычныя папярэджанні",
+  "@telemetryLegalLabel": {}
 }
