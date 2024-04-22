@@ -79,7 +79,7 @@ Future<void> main() async {
     await tester.jumpToPage(InitStep.eula.route);
     await tester.pumpAndSettle();
 
-    await tester.testEULAPage(
+    await tester.testEulaPage(
       screenshot: '$currentThemeName/eula',
     );
   }, variant: themeVariant);

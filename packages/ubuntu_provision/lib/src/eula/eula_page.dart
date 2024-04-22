@@ -23,26 +23,26 @@ final eulaPageProvider = FutureProvider<File>((ref) async {
   return eulaFile;
 });
 
-class EULAPage extends ConsumerStatefulWidget with ProvisioningPage {
-  const EULAPage({super.key});
+class EulaPage extends ConsumerStatefulWidget with ProvisioningPage {
+  const EulaPage({super.key});
 
   @override
-  ConsumerState<EULAPage> createState() => _EULAPageState();
+  ConsumerState<EulaPage> createState() => _EulaPageState();
 }
 
-class _EULAPageState extends ConsumerState<EULAPage> {
+class _EulaPageState extends ConsumerState<EulaPage> {
   bool _hasAcceptedTerms = false;
 
   @override
   Widget build(BuildContext context) {
-    final lang = EULALocalizations.of(context);
+    final lang = EulaLocalizations.of(context);
     final eulaWidget = ref.watch(eulaPageProvider).when(
-        data: (eulaFile) => _EULAPdfViewer(path: eulaFile.path),
+        data: (eulaFile) => _EulaPdfViewer(path: eulaFile.path),
         loading: () => const YaruCircularProgressIndicator(),
         error: (error, stackTrace) {
           Logger('eula')
               .error('Error loading EULA file: $error', error, stackTrace);
-          return _EULAPdfViewer(
+          return _EulaPdfViewer(
               path: File('/usr/share/desktop-provision/eula/EULA.pdf').path);
         });
 
@@ -91,8 +91,8 @@ class _EULAPageState extends ConsumerState<EULAPage> {
   }
 }
 
-class _EULAPdfViewer extends StatelessWidget {
-  const _EULAPdfViewer({required this.path, super.key});
+class _EulaPdfViewer extends StatelessWidget {
+  const _EulaPdfViewer({required this.path, super.key});
 
   final String path;
 

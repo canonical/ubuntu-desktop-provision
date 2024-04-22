@@ -104,9 +104,9 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    final eulaPage = find.byType(EULAPage);
-    expect(eulaPage, findsOneWidget);
-    final l10n = EULALocalizations.of(tester.element(eulaPage));
+    final eulaPage = find.byType(EulaPage);
+    expect(EulaPage, findsOneWidget);
+    final l10n = EulaLocalizations.of(tester.element(eulaPage));
     final checkbox = find.checkButton(l10n.eulaAcceptTerms);
     expect(checkbox, findsOneWidget);
     expect(checkbox, isNotChecked);
