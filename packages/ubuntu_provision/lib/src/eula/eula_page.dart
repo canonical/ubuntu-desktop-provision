@@ -43,13 +43,14 @@ class _EULAPageState extends ConsumerState<EULAPage> {
   @override
   Widget build(BuildContext context) {
     final lang = EULALocalizations.of(context);
-    final eulaFile = ref.watch(eulaPageProvider).when(
-        data: (eulaFile) => eulaFile.path,
-        loading: () => File('/usr/share/desktop-provision/eula/EULA.pdf').path,
+    final eulaWidget = ref.watch(eulaPageProvider).when(
+        data: (eulaFile) => pdfViewerWidgetBuilder(eulaFile.path),
+        loading: () => const YaruCircularProgressIndicator(),
         error: (error, stackTrace) {
           Logger('eula')
               .error('Error loading EULA file: $error', error, stackTrace);
-          return File('/usr/share/desktop-provision/eula/EULA.pdf').path;
+          return pdfViewerWidgetBuilder(
+              File('/usr/share/desktop-provision/eula/EULA.pdf').path);
         });
 
     return WizardPage(
@@ -65,31 +66,7 @@ class _EULAPageState extends ConsumerState<EULAPage> {
             Text(lang.eulaReadAndAcceptTerms),
             const SizedBox(height: kWizardSpacing),
             Expanded(
-              child: PdfViewer.file(
-                eulaFile,
-                params: PdfViewerParams(
-                  errorBannerBuilder:
-                      (context, error, stackTrace, documentRef) => Center(
-                    child: Text(
-                      stackTrace.toString(),
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                  ),
-                  linkWidgetBuilder: (context, link, size) => MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        UrlLauncher().launchUrl(link.url.toString());
-                      },
-                      child: Container(
-                        width: size.width,
-                        height: size.height,
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              child: eulaWidget,
             ),
             const SizedBox(height: kWizardSpacing),
             Center(
@@ -116,6 +93,33 @@ class _EULAPageState extends ConsumerState<EULAPage> {
             enabled: _hasAcceptedTerms,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget pdfViewerWidgetBuilder(String path) {
+    return PdfViewer.file(
+      path,
+      params: PdfViewerParams(
+        errorBannerBuilder: (context, error, stackTrace, documentRef) => Center(
+          child: Text(
+            stackTrace.toString(),
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
+        ),
+        linkWidgetBuilder: (context, link, size) => MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () {
+              UrlLauncher().launchUrl(link.url.toString());
+            },
+            child: Container(
+              width: size.width,
+              height: size.height,
+              color: Colors.transparent,
+            ),
+          ),
+        ),
       ),
     );
   }
