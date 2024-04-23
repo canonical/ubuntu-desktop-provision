@@ -1,5 +1,5 @@
 name: factory-reset-tools
-version: '1.0'
+version: git
 summary: Factory Reset Tools
 description: |
   A tool to create reset media and reboot into the factory reset menu, for Ubuntu-preinstalled systems.
