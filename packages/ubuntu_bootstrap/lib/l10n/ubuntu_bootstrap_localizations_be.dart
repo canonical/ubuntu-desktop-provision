@@ -17,7 +17,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'Як бы вы хацелі ўсталяваць $DISTRO?';
+    return 'Як вы хочаце ўсталяваць $DISTRO?';
   }
 
   @override
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Гэты камп\'ютар выкарыстоўвае Intel RST (Rapid Storage Technology). Вам неабходна яе выключыць у Windows перад тым як усталёўваць $DISTRO.';
+    return 'Гэты камп\'ютар выкарыстоўвае Intel RST (Rapid Storage Technology). Вам неабходна выключыць яго ў Windows перад усталяваннем $DISTRO.';
   }
 
   @override
@@ -124,7 +124,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get chooseSecurityKey => 'Выберыце ключ бяспекі';
 
   @override
-  String get confirmSecurityKey => 'Падцвердзіце ключ бяспекі';
+  String get confirmSecurityKey => 'Пацвердзіце ключ бяспекі';
 
   @override
   String get dontInstallDriverSoftwareNow => 'Пакуль не ўсталёўваць драйвер праграмнага забеспячэння';
@@ -183,7 +183,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get otherOptions => 'Іншыя параметры';
 
   @override
-  String get installThirdPartyTitle => 'Устаноўка старонняга праграмнага забеспячэння для графікі і абсталявання Wi-Fi, а таксама дадатковыя фарматы мультымедыя';
+  String get installThirdPartyTitle => 'Усталяванне старонняга праграмнага забеспячэння для графікі і абсталявання Wi-Fi, а таксама дадатковыя фарматы мультымедыя';
 
   @override
   String get installThirdPartySubtitle => 'На гэта праграмнае забеспячэнне распаўсюджваюцца ліцэнзійныя ўмовы, якія ўключаны ў яго дакументацыю. Некаторыя з іх маюць прапрыетарны характар.';
@@ -383,7 +383,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfoLabel => 'Будзе выкарыстаны ўвесь дыск:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Усталяваць';
+  String get selectGuidedStorageInstallNow => 'Усталяваць зараз';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
@@ -557,7 +557,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Раздзелы';
 
   @override
-  String get confirmPartitionTables => 'Табліцы раздзелаў бягучай прылады зменены:';
+  String get confirmPartitionTables => 'Табліцы раздзелаў на наступных прыладах зменены:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -632,10 +632,10 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get shutdown => 'Выключыць';
 
   @override
-  String get restartNow => 'Перазапусціць';
+  String get restartNow => 'Перазапусціць зараз';
 
   @override
-  String get continueTesting => 'Працягнуць знаёмства';
+  String get continueTesting => 'Працягнуць тэсціраванне';
 
   @override
   String get bitlockerTitle => 'BitLocker уключаны';
@@ -685,7 +685,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Ці вы распрацоўшчык, стваральнік, гулец ці адміністратар - вы знойдзеце новыя інструменты для павышэння вашай прадукцыйнасці і паляпшэння ўражання ў $RELEASE.';
+    return 'Незалежна ад таго, з\'яўляецеся вы распрацоўшчыкам, аматарам відэагульняў або адміністратарам, $RELEASE прапануе вам новыя інструменты для паляпшэння прадукцыйнасці і падвышэння досведу.';
   }
 
   @override
@@ -693,7 +693,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Усталёўвайце, кіруйце і абнаўляйце ўсе вашы праграмы ў Ubuntu Software, уключаючы тысячы праграм як з Snap Store, так і з архіву $DISTRO.';
+    return 'Усталёўвайце, кіруйце і абнаўляйце ўсе вашы праграмы ў Ubuntu Software, уключаючы тысячы праграм з Snap Store і архіва $DISTRO.';
   }
 
   @override
@@ -701,23 +701,23 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO — гэта ідэальная працоўная станцыя для распрацоўвання праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск $DISTRO уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.';
+    return '$DISTRO — гэта ідэальная працоўная станцыя для распрацоўкі праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск $DISTRO уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Павялічыце вашы стваральныя здольнасці';
+  String get installationSlidesCreativityTitle => 'Палепшыце свае творчыя здольнасці';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Калі вы аніматар, дызайнер, стваральнік відэа ці распрацоўшчык гульняў, то вам проста перанесці арганізацыю працы ў $DISTRO з падтрымкай для свабоднага праграмнага забеспячэння і прамысловых стандартаў праграмнага забеспячэння і праграм.';
+    return 'Калі вы аніматар, дызайнер, стваральнік відэа або распрацоўшчык гульняў, то вам будзе проста перанесці свой працоўны працэс у $DISTRO з падтрымкай для свабоднага праграмнага забеспячэння і галіновых стандартаў праграмнага забеспячэння і праграм.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Выдатна для гульняў';
+  String get installationSlidesGamingTitle => 'Выдатна пасуе для аматараў гульняў';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return '$DISTRO падтрымлівае апошнія драйверы NVIDIA і Mesa drivers для паляпшэння прадукцыйнасці і сумяшчальнасці. Тысячы найменняў гульняў Windows цудоўна запускаюцца ў $DISTRO праз такія праграмы, як Steam без дадатковай канфігурацыі.';
   }
 
   @override
@@ -725,49 +725,49 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO дае вам усё неабходнае, каб захаваць прыватнасць і бяспеку анлайн. Уключае ўбудаваны міжсеткавы экран, падтрымку VPN і мноства праграм, арыентаваных на прыватнасць, каб забяспечыць поўны кантроль над вашымі данымі.';
+    return '$DISTRO забяспечвае вас усім неабходным, каб захаваць прыватнасць і бяспеку ў інтэрнэце. Уключае ўбудаваны міжсеткавы экран, падтрымку VPN і мноства праграм, якія арыентаваныя на прыватнасць. Усё гэта дазваляе ажыццяўляць поўны кантроль над вашымі данымі.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Усе выпускі $DISTRO LTS пастаўляюцца з абнаўленнямі бяспекі на працягу пяці гадоў, а пры падпісцы Ubuntu Pro працягласць абнаўленняў пашыраецца да дзесяці гадоў.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Дайце энергію вашай прадукцыйнасці';
+  String get installationSlidesProductivityTitle => 'Павялічце сваю прадукцыйнасць';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return 'Асяроддзе $DISTRO уключае офісны пакет LibreOffice, які мае набор сумяшчальных з Microsoft Office праграм з адкрытым зыходным кодам для дакументаў, электронных табліц і прэзентацый. Таксама даступны папулярныя інструменты для сумеснай працы.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Даступнасць для ўсіх';
+  String get installationSlidesAccessibilityTitle => 'Даступна для кожнага';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'У аснове філасофіі $DISTRO палягае перакананне даступнасці камп\'ютара для кожнага. З пашыранымі спецыяльнымі магчымасцямі і параметрамі для замены мовы, колеру і памеру тэксту, $DISTRO робіць працу на камп\'ютары простай для кожнага - кім бы вы ні былі і дзе б вы ні знаходзіліся.';
+    return 'Асновай філасофіі $DISTRO з\'яўляецца перакананне даступнасці камп\'ютара для кожнага чалавека. З інструментамі, якія забяспечваюць пашыраныя спецыяльныя магчымасці, выбарам мовы, колеру і памеру тэксту, $DISTRO робіць працу на камп\'ютары простай незалежна ад вашых здольнасцей і месцазнаходжання.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Чытанне з экрана Orca';
+  String get installationSlidesAccessibilityOrca => 'Праграма чытання з экрана Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Падтрымка моў';
+  String get installationSlidesAccessibilityLanguages => 'Моўная падтрымка';
 
   @override
   String get installationSlidesSupportTitle => 'Даведка і падтрымка';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Афіцыйная дакументацыя $DISTRO даступна анлайн і праз значок даведкі на док-панэлі.';
+    return 'Афіцыйная дакументацыя $DISTRO даступна ў інтэрнэце і праз значок даведкі на док-панэлі.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+  String get installationSlidesSupportCommunity => 'База ведаў сайта Ask Ubuntu ахоплівае шэраг пытанняў і адказаў, а Ubuntu Discourse забяспечвае дапаможнікамі і абмеркаваннямі новых і дасведчаных карыстальнікаў.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+  String get installationSlidesSupportEnterprise => 'Для карпаратыўных карыстальнікаў кампанія Canonical прапануе камерцыйную падтрымку, што дае магчымасць лёгка ўключыцца ў працу і бяспечна кіраваць Ubuntu на працоўным месцы.';
 
   @override
   String get installationSlidesSupportResources => 'Карысныя рэсурсы:';
@@ -785,7 +785,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get installingSystem => 'Усталяванне сістэмы…';
 
   @override
-  String get configuringSystem => 'Наладка сістэмы…';
+  String get configuringSystem => 'Наладжванне сістэмы…';
 
   @override
   String get installationFailed => 'Збой усталявання';
@@ -795,7 +795,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Недастаткова месца на дыску для ўсталявання $DISTRO';
+    return 'Недастаткова дыскавай прасторы для ўсталявання $DISTRO';
   }
 
   @override
@@ -819,7 +819,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => 'Абнавіць зараз';
 
   @override
-  String get refreshInfo => 'Абнавіце да апошняй версіі каб палепшыць надзейнасць і атрымаць больш функцый.';
+  String get refreshInfo => 'Абнавіце да апошняй версіі, каб палепшыць надзейнасць і атрымаць больш функцый.';
 
   @override
   String get refreshReady => 'Абнаўленне гатова';
@@ -836,7 +836,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpToDate(String version) {
-    return 'Бягучая версія $version з\'яўляецца апошняй.';
+    return 'Бягучая версія $version з\'яўляецца самай апошняй.';
   }
 
   @override
@@ -845,14 +845,14 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'Закрыйце ўсталёўшчык праграм і перазапусціце яго, каб працягнуць';
 
   @override
   String get refreshCloseLabel => 'Закрыць усталёўшчык праграм';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Забеспячэнне неабходных умоў $snap...';
   }
 
   @override
@@ -862,7 +862,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Праверка абнаўлення даных $snap...';
   }
 
   @override
@@ -872,95 +872,95 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Ідзе спампоўванне $snap...';
+    return 'Спампоўванне $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Праверыць $snap...';
+    return 'Праверка $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Падключыць $snap...';
+    return 'Падключэнне $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'Спыненне службаў $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'Выдаленне псеўданімаў $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Выдаленне сувязі $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Абнаўленне рэсурсаў $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Абнаўленне каманднага радка ядра $snap...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'Капіяванне даных $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Наладжванне профіляў бяспекі $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Злучэнне $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Падключэнне вілак і гнёздаў $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Наладжванне аўтаматычных псеўданімаў $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Наладжванне псеўданімаў $snap...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Запуск службаў $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Ачыстка $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Ключ аднаўлення TPM';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Вы можаце атрымаць доступ да ключа аднаўлення пасля ўсталявання з дапамогай наступнай каманды:';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Папярэджанне:</font> калі вы страціце гэты ключ бяспекі, то разам з ім вы згубіце ўсе даныя. Пры неабходнасці запішыце і захоўвайце яго ў надзейным месцы.';
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Праверыць';
 }

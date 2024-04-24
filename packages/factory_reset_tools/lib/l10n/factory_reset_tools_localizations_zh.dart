@@ -103,10 +103,10 @@ class FactoryResetToolsLocalizationsZhTw extends FactoryResetToolsLocalizationsZ
   FactoryResetToolsLocalizationsZhTw(): super('zh_TW');
 
   @override
-  String get appTitle => '還原出廠設定工具';
+  String get appTitle => '出廠設定還原工具';
 
   @override
-  String get windowTitle => '還原出廠設定工具';
+  String get windowTitle => '出廠設定還原工具';
 
   @override
   String get homeTitle => '您想要進行什麼操作？';

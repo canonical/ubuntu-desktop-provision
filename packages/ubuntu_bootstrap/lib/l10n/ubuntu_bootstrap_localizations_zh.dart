@@ -1610,7 +1610,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String bitlockerDescription(String option) {
-    return '本電腦正在使用 Windows 的 BitLocker 儲存空間加密。\n您必須使用 Windows 以挪出可用空間，或是回到上一步並選擇「$option」選項繼續。';
+    return '本電腦正在使用 Windows 的 BitLocker 儲存空間加密。\n您必須使用 Windows 來挪出可用空間，或是回到上一步並選擇「option」選項繼續。';
   }
 
   @override
