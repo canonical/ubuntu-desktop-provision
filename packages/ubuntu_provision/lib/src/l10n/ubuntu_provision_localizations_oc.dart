@@ -322,7 +322,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Un nom de ret es requerit';
 
   @override
-  String get networkNoneOption => 'Vòli pas me connectar a internet pel moment';
+  String get networkNoneOption => 'Me vòli pas connectar a internet pel moment';
 
   @override
   String get eulaPageTitle => 'Acòrd de licéncia';

@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Наладзьце $DISTRO у адпаведнасці з вашымі патрабаваннямі. Вы зможаце змяніць іх пазней у сістэмных наладах.';
+    return 'Наладжвайце $DISTRO у адпаведнасці з вашымі патрабаваннямі. Вы зможаце змяніць іх пазней у сістэмных наладах.';
   }
 
   @override
@@ -33,10 +33,10 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get accessibilityZoomLabel => 'Маштабаванне';
 
   @override
-  String get accessibilityHighContrastLabel => 'Высокая кантраснасць';
+  String get accessibilityHighContrastLabel => 'Высокі кантраст';
 
   @override
-  String get accessibilityLargeTextLabel => 'Буйны тэкст';
+  String get accessibilityLargeTextLabel => 'Вялікі тэкст';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Памяншэнне анімацыі';
@@ -78,7 +78,7 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get close => 'Закрыць';
 
   @override
-  String get timezonePageTitle => 'Выбраць ваш часавы пояс';
+  String get timezonePageTitle => 'Выбраць свой часавы пояс';
 
   @override
   String get timezoneLocationLabel => 'Месцазнаходжанне';
@@ -307,7 +307,7 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Прылады Wi-Fi не выяўлены';
 
   @override
-  String get networkWifiDisabled => 'Бесправадная сетка павінна быць абавязкова ўключана, каб выкарыстоўваць Wi-Fi на гэтым камп\'ютары';
+  String get networkWifiDisabled => 'Бесправадная з павінна быць уключана, каб выкарыстоўваць Wi-Fi на гэтым камп\'ютары';
 
   @override
   String get networkWifiEnable => 'Уключыць Wi-Fi';

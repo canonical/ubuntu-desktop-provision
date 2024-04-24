@@ -5,55 +5,55 @@ class FactoryResetToolsLocalizationsTr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Sıfırlama araçları';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Sıfırlama Araçları';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Ne yapmak istersiniz?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Sıfırlama medyası oluşturun';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Sıfırlamayı başlat';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'USB Sıfırlama medyası oluşturun';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Sistemi eski haline getirmek ve Ubuntu kurulumlarınızı özelleştirmek için bir USB sıfırlama medyası oluşturun.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Bir USB flaş belleği seçin. Bu bellekte en az **16 GB** depolama alanı olmalıdır.';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Flaş belleği sıfırlanacak ve içerisindeki bütün veriler kaybolacaktır.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB sıfırlama medyası';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Çıkarılabilir bir depolama cihazı bulunamadı';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Sıfırlama medyası oluşturmak için bir USB depolama cihazına ihtiyacınız var.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Sıfırlamak için bir seçeneği seçin';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Lütfen depolama cihazlarını algılayana kadar bekleyin.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB sıfırlama cihazı hazır';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Kullanmak istediğinizde, sıfırlayacağınız bilgisayara USB flaş belleği takın ve yeniden başlatın.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Depolama cihazlarını algılarken bir hata oluştu.';
 
   @override
   String get resetMediaInitializing => 'Initializing';

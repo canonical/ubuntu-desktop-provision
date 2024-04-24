@@ -16,10 +16,10 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'ШТО НОВАГА?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Спрошчаны старт';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Прасцейшы працэс наладжвання.';
 
   @override
   String get welcomeStoreTitle => 'Новы выгляд App Store';
@@ -31,7 +31,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeSecurityTitle => 'Павышэнне бяспекі';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Новыя параметры для апаратнага забеспячэння або шыфраванне ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'Дапамажыце нам палепшыць $distro абагульваючы свае сістэмныя даныя з намі. Гэта ўключае наступныя звесткі: мадэль камп\'ютара, месцазнаходжанне і часавы пояс.';
   }
 
   @override
@@ -57,16 +57,16 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   }
 
   @override
-  String get telemetryLabelOff => 'Не, не абагуліць сістэмныя даныя';
+  String get telemetryLabelOff => 'Не, не абагуляць сістэмныя даныя';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'Паказаць першую справаздачу';
 
   @override
   String get telemetryReportTitle => 'Падрабязнасці справаздачы';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Юрыдычныя папярэджанні';
 
   @override
   String get privacyPageTitle => 'Службы месцазнаходжання';
@@ -85,56 +85,56 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Магічнае далучэнне з гэтым кодам на <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Далучыць гэтую прыладу';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'або дадайце токен уручную';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Токен';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Атрымайце найбольш усёабдымную падпіску для бяспекі праграмнага забеспячэння з адкрытым зыходным кодам';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Заўсёды бясплатна для некамерцыйнага выкарыстання і бясплатны выпрабавальны перыяд на працягу 30 дзён для прадпрыемстваў. <a href=\"https://$url\">Даведацца больш</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Далучыць';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Памылковы токен';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Сапраўдны токен';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Памылковы токен, паўтарыць';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Пакуль прапусціць';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Вы заўсёды зможаце ўключыць Ubuntu Pro пазней праз праграму «Праграмнае забеспячэнне і абнаўленні».';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Уключыць Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Далучыць гэты камп\'ютар да падпіскі Ubuntu Pro, якая забяспечвае абнаўленні бяспекі і шырокі дыяпазон пакетаў. Падпіска дзейнічае да 2032 года.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Цяпер гэты камп\'ютар уключае падпіску Ubuntu Pro';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Вы заўсёды можаце кіраваць сваімі службамі Ubuntu Pro у праграме «Праграмнае забеспячэнне і абнаўленні».';
 }
