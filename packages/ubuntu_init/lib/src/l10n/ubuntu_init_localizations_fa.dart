@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'حقوقی';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'خدمات مکانی';
 
   @override

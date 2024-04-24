@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Jura avizo';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Lokado-servo';
 
   @override

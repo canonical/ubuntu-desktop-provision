@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Informacions legalas';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Servicis de localizacion';
 
   @override

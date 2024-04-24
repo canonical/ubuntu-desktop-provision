@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Jogi nyilatkozat';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Helymeghatározó szolgáltatások';
 
   @override

@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Hợp pháp';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Dịch vụ định vị';
 
   @override

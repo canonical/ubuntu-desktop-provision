@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:yaru/yaru.dart';
+
+final _log = Logger('telemetry_widgets');
 
 // TODO: copied from ubuntu_bootstrap/welcome_widgets. either YaruRadioButton
 // background could be configurable, or this widget could be promoted to
@@ -60,18 +64,23 @@ class TelemetryView extends StatelessWidget {
       stream: data,
       builder: (context, snapshot) {
         final theme = Theme.of(context);
-        return snapshot.hasData
-            ? SelectableText(
-                snapshot.data!,
-                style: TextStyle(
-                  inherit: false,
-                  color: theme.colorScheme.onBackground,
-                  fontFamily: 'Ubuntu Mono',
-                  fontSize: theme.textTheme.bodyLarge!.fontSize,
-                  textBaseline: TextBaseline.alphabetic,
-                ),
-              )
-            : const Center(child: YaruCircularProgressIndicator());
+        final l10n = TelemetryLocalizations.of(context);
+        if (snapshot.hasData) {
+          return SelectableText(
+            snapshot.data!,
+            style: TextStyle(
+              inherit: false,
+              color: theme.colorScheme.onBackground,
+              fontFamily: 'Ubuntu Mono',
+              fontSize: theme.textTheme.bodyLarge!.fontSize,
+              textBaseline: TextBaseline.alphabetic,
+            ),
+          );
+        } else if (snapshot.hasError) {
+          _log.error('Error loading telemetry data', snapshot.error);
+          return Text(l10n.telemetryCollectError);
+        }
+        return const Center(child: YaruCircularProgressIndicator());
       },
     );
   }

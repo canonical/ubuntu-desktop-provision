@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Юрыдычныя папярэджанні';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Службы месцазнаходжання';
 
   @override

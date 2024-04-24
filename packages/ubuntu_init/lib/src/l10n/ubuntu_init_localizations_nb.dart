@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Juridisk';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Posisjoneringstjenester';
 
   @override

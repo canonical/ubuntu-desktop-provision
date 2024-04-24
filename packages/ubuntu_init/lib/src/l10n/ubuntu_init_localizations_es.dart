@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Aviso Legal';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Servicios de ubicación';
 
   @override
