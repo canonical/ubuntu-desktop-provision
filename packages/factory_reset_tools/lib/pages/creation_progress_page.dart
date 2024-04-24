@@ -50,7 +50,7 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   @override
   void initState() {
     super.initState();
-    createResetMediaAsyncStream ??= createFakeResetMedia(
+    createResetMediaAsyncStream ??= createResetMedia(
       ref.read(selectedMediaProvider)!.devicePath,
     );
     createResetMediaAsyncStream!.listen(onStatusChanged);

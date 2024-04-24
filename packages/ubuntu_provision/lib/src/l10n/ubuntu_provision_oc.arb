@@ -158,7 +158,7 @@
   "@networkHiddenWifiNameLabel": {},
   "networkHiddenWifiNameRequired": "Un nom de ret es requerit",
   "@networkHiddenWifiNameRequired": {},
-  "networkNoneOption": "Vòli pas me connectar a internet pel moment",
+  "networkNoneOption": "Me vòli pas connectar a internet pel moment",
   "@networkNoneOption": {},
   "accessibilityPageTitle": "Accessibilitat",
   "@accessibilityPageTitle": {},

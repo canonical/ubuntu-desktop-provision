@@ -34,7 +34,7 @@
   },
   "rstTitle": "Выяўлены RST",
   "@rstTitle": {},
-  "rstDescription": "Гэты камп'ютар выкарыстоўвае Intel RST (Rapid Storage Technology). Вам неабходна яе выключыць у Windows перад тым як усталёўваць {DISTRO}.",
+  "rstDescription": "Гэты камп'ютар выкарыстоўвае Intel RST (Rapid Storage Technology). Вам неабходна выключыць яго ў Windows перад усталяваннем {DISTRO}.",
   "@rstDescription": {
     "placeholders": {
       "DISTRO": {
@@ -56,7 +56,7 @@
   "@configureSecureBootDescription": {},
   "chooseSecurityKey": "Выберыце ключ бяспекі",
   "@chooseSecurityKey": {},
-  "confirmSecurityKey": "Падцвердзіце ключ бяспекі",
+  "confirmSecurityKey": "Пацвердзіце ключ бяспекі",
   "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Пакуль не ўсталёўваць драйвер праграмнага забеспячэння",
   "@dontInstallDriverSoftwareNow": {},
@@ -96,7 +96,7 @@
   "@minimalInstallationSubtitle": {},
   "otherOptions": "Іншыя параметры",
   "@otherOptions": {},
-  "installThirdPartyTitle": "Устаноўка старонняга праграмнага забеспячэння для графікі і абсталявання Wi-Fi, а таксама дадатковыя фарматы мультымедыя",
+  "installThirdPartyTitle": "Усталяванне старонняга праграмнага забеспячэння для графікі і абсталявання Wi-Fi, а таксама дадатковыя фарматы мультымедыя",
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "На гэта праграмнае забеспячэнне распаўсюджваюцца ліцэнзійныя ўмовы, якія ўключаны ў яго дакументацыю. Некаторыя з іх маюць прапрыетарны характар.",
   "@installThirdPartySubtitle": {},
@@ -269,7 +269,7 @@
   },
   "selectGuidedStoragePartitionDropdownLabel": "Выберыце раздзел:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "selectGuidedStorageInstallNow": "Усталяваць",
+  "selectGuidedStorageInstallNow": "Усталяваць зараз",
   "@selectGuidedStorageInstallNow": {},
   "guidedStoragePageHeader": "Выберыце месца для ўсталявання {DISTRO}",
   "@guidedStoragePageHeader": {
@@ -483,9 +483,9 @@
   "@rebootToConfigureWarning": {},
   "shutdown": "Выключыць",
   "@shutdown": {},
-  "restartNow": "Перазапусціць",
+  "restartNow": "Перазапусціць зараз",
   "@restartNow": {},
-  "continueTesting": "Працягнуць знаёмства",
+  "continueTesting": "Працягнуць тэсціраванне",
   "@continueTesting": {},
   "bitlockerTitle": "BitLocker уключаны",
   "@bitlockerTitle": {},
@@ -531,7 +531,7 @@
       }
     }
   },
-  "installationSlidesWelcomeBody": "Ці вы распрацоўшчык, стваральнік, гулец ці адміністратар - вы знойдзеце новыя інструменты для павышэння вашай прадукцыйнасці і паляпшэння ўражання ў {RELEASE}.",
+  "installationSlidesWelcomeBody": "Незалежна ад таго, з'яўляецеся вы распрацоўшчыкам, аматарам відэагульняў або адміністратарам, {RELEASE} прапануе вам новыя інструменты для паляпшэння прадукцыйнасці і падвышэння досведу.",
   "@installationSlidesWelcomeBody": {
     "placeholders": {
       "RELEASE": {
@@ -541,7 +541,7 @@
   },
   "installationSlidesSoftwareTitle": "Усе праграмы, якія вам патрэбны",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "Усталёўвайце, кіруйце і абнаўляйце ўсе вашы праграмы ў Ubuntu Software, уключаючы тысячы праграм як з Snap Store, так і з архіву {DISTRO}.",
+  "installationSlidesSoftwareBody": "Усталёўвайце, кіруйце і абнаўляйце ўсе вашы праграмы ў Ubuntu Software, уключаючы тысячы праграм з Snap Store і архіва {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "placeholders": {
       "DISTRO": {
@@ -551,7 +551,7 @@
   },
   "installationSlidesDevelopmentTitle": "Распрацоўвайце праграмы з найлепшым адкрытым праграмным забеспячэннем",
   "@installationSlidesDevelopmentTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} — гэта ідэальная працоўная станцыя для распрацоўвання праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск {DISTRO} уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.",
+  "installationSlidesDevelopmentBody": "{DISTRO} — гэта ідэальная працоўная станцыя для распрацоўкі праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск {DISTRO} уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.",
   "@installationSlidesDevelopmentBody": {
     "placeholders": {
       "DISTRO": {
@@ -559,9 +559,9 @@
       }
     }
   },
-  "installationSlidesCreativityTitle": "Павялічыце вашы стваральныя здольнасці",
+  "installationSlidesCreativityTitle": "Палепшыце свае творчыя здольнасці",
   "@installationSlidesCreativityTitle": {},
-  "installationSlidesCreativityBody": "Калі вы аніматар, дызайнер, стваральнік відэа ці распрацоўшчык гульняў, то вам проста перанесці арганізацыю працы ў {DISTRO} з падтрымкай для свабоднага праграмнага забеспячэння і прамысловых стандартаў праграмнага забеспячэння і праграм.",
+  "installationSlidesCreativityBody": "Калі вы аніматар, дызайнер, стваральнік відэа або распрацоўшчык гульняў, то вам будзе проста перанесці свой працоўны працэс у {DISTRO} з падтрымкай для свабоднага праграмнага забеспячэння і галіновых стандартаў праграмнага забеспячэння і праграм.",
   "@installationSlidesCreativityBody": {
     "placeholders": {
       "DISTRO": {
@@ -569,11 +569,11 @@
       }
     }
   },
-  "installationSlidesGamingTitle": "Выдатна для гульняў",
+  "installationSlidesGamingTitle": "Выдатна пасуе для аматараў гульняў",
   "@installationSlidesGamingTitle": {},
   "installationSlidesSecurityTitle": "Прыватнасць і бяспека",
   "@installationSlidesSecurityTitle": {},
-  "installationSlidesSecurityBody": "{DISTRO} дае вам усё неабходнае, каб захаваць прыватнасць і бяспеку анлайн. Уключае ўбудаваны міжсеткавы экран, падтрымку VPN і мноства праграм, арыентаваных на прыватнасць, каб забяспечыць поўны кантроль над вашымі данымі.",
+  "installationSlidesSecurityBody": "{DISTRO} забяспечвае вас усім неабходным, каб захаваць прыватнасць і бяспеку ў інтэрнэце. Уключае ўбудаваны міжсеткавы экран, падтрымку VPN і мноства праграм, якія арыентаваныя на прыватнасць. Усё гэта дазваляе ажыццяўляць поўны кантроль над вашымі данымі.",
   "@installationSlidesSecurityBody": {
     "placeholders": {
       "DISTRO": {
@@ -581,11 +581,11 @@
       }
     }
   },
-  "installationSlidesProductivityTitle": "Дайце энергію вашай прадукцыйнасці",
+  "installationSlidesProductivityTitle": "Павялічце сваю прадукцыйнасць",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesAccessibilityTitle": "Даступнасць для ўсіх",
+  "installationSlidesAccessibilityTitle": "Даступна для кожнага",
   "@installationSlidesAccessibilityTitle": {},
-  "installationSlidesAccessibilityBody": "У аснове філасофіі {DISTRO} палягае перакананне даступнасці камп'ютара для кожнага. З пашыранымі спецыяльнымі магчымасцямі і параметрамі для замены мовы, колеру і памеру тэксту, {DISTRO} робіць працу на камп'ютары простай для кожнага - кім бы вы ні былі і дзе б вы ні знаходзіліся.",
+  "installationSlidesAccessibilityBody": "Асновай філасофіі {DISTRO} з'яўляецца перакананне даступнасці камп'ютара для кожнага чалавека. З інструментамі, якія забяспечваюць пашыраныя спецыяльныя магчымасці, выбарам мовы, колеру і памеру тэксту, {DISTRO} робіць працу на камп'ютары простай незалежна ад вашых здольнасцей і месцазнаходжання.",
   "@installationSlidesAccessibilityBody": {
     "placeholders": {
       "DISTRO": {
@@ -595,7 +595,7 @@
   },
   "installationSlidesSupportTitle": "Даведка і падтрымка",
   "@installationSlidesSupportTitle": {},
-  "installationSlidesSupportHeader": "Афіцыйная дакументацыя {DISTRO} даступна анлайн і праз значок даведкі на док-панэлі.",
+  "installationSlidesSupportHeader": "Афіцыйная дакументацыя {DISTRO} даступна ў інтэрнэце і праз значок даведкі на док-панэлі.",
   "@installationSlidesSupportHeader": {
     "placeholders": {
       "DISTRO": {
@@ -611,7 +611,7 @@
   "@copyingFiles": {},
   "installingSystem": "Усталяванне сістэмы…",
   "@installingSystem": {},
-  "configuringSystem": "Наладка сістэмы…",
+  "configuringSystem": "Наладжванне сістэмы…",
   "@configuringSystem": {},
   "installationFailed": "Збой усталявання",
   "@installationFailed": {},
@@ -619,7 +619,7 @@
   "@refreshPageTitle": {},
   "refreshHeader": "Абнаўленне даступна для ўсталёўшчыка праграм",
   "@refreshHeader": {},
-  "refreshInfo": "Абнавіце да апошняй версіі каб палепшыць надзейнасць і атрымаць больш функцый.",
+  "refreshInfo": "Абнавіце да апошняй версіі, каб палепшыць надзейнасць і атрымаць больш функцый.",
   "@refreshInfo": {},
   "refreshReady": "Абнаўленне гатова",
   "@refreshReady": {},
@@ -634,7 +634,7 @@
       }
     }
   },
-  "refreshUpToDate": "Бягучая версія {version} з'яўляецца апошняй.",
+  "refreshUpToDate": "Бягучая версія {version} з'яўляецца самай апошняй.",
   "@refreshUpToDate": {
     "placeholders": {
       "version": {
@@ -668,7 +668,7 @@
       }
     }
   },
-  "refreshSnapDownload": "Ідзе спампоўванне {snap}...",
+  "refreshSnapDownload": "Спампоўванне {snap}...",
   "@refreshSnapDownload": {
     "placeholders": {
       "snap": {
@@ -676,7 +676,7 @@
       }
     }
   },
-  "refreshSnapValidate": "Праверыць {snap}...",
+  "refreshSnapValidate": "Праверка {snap}...",
   "@refreshSnapValidate": {
     "placeholders": {
       "snap": {
@@ -684,7 +684,7 @@
       }
     }
   },
-  "refreshSnapMount": "Падключыць {snap}...",
+  "refreshSnapMount": "Падключэнне {snap}...",
   "@refreshSnapMount": {
     "placeholders": {
       "snap": {
@@ -716,7 +716,7 @@
       }
     }
   },
-  "autoinstallHeader": "Як бы вы хацелі ўсталяваць {DISTRO}?",
+  "autoinstallHeader": "Як вы хочаце ўсталяваць {DISTRO}?",
   "@autoinstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -776,13 +776,13 @@
   },
   "installationSlidesAvailable": "Даступна:",
   "@installationSlidesAvailable": {},
-  "installationSlidesAccessibilityOrca": "Чытанне з экрана Orca",
+  "installationSlidesAccessibilityOrca": "Праграма чытання з экрана Orca",
   "@installationSlidesAccessibilityOrca": {},
-  "installationSlidesAccessibilityLanguages": "Падтрымка моў",
+  "installationSlidesAccessibilityLanguages": "Моўная падтрымка",
   "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportResources": "Карысныя рэсурсы:",
   "@installationSlidesSupportResources": {},
-  "notEnoughDiskSpaceUbuntu": "Недастаткова месца на дыску для ўсталявання {DISTRO}",
+  "notEnoughDiskSpaceUbuntu": "Недастаткова дыскавай прасторы для ўсталявання {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "placeholders": {
       "DISTRO": {
@@ -872,7 +872,7 @@
   "@confirmEntryProprietarySoftware": {},
   "confirmPartitionsTitle": "Раздзелы",
   "@confirmPartitionsTitle": {},
-  "confirmPartitionTables": "Табліцы раздзелаў бягучай прылады зменены:",
+  "confirmPartitionTables": "Табліцы раздзелаў на наступных прыладах зменены:",
   "@confirmPartitionTables": {},
   "restartWarningBody": "Перазапусціць для завяршэння ўсталявання або працягнуць тэсціраванне.\nЛюбыя змены, якія вы зрабілі захаваны не будуць.",
   "@restartWarningBody": {},
@@ -896,5 +896,169 @@
         "type": "String"
       }
     }
-  }
+  },
+  "installationSlidesProductivityBody": "Асяроддзе {DISTRO} уключае офісны пакет LibreOffice, які мае набор сумяшчальных з Microsoft Office праграм з адкрытым зыходным кодам для дакументаў, электронных табліц і прэзентацый. Таксама даступны папулярныя інструменты для сумеснай працы.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Абнаўленне рэсурсаў {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Абнаўленне каманднага радка ядра {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Капіяванне даных {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Наладжванне профіляў бяспекі {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Злучэнне {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Падключэнне вілак і гнёздаў {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Наладжванне аўтаматычных псеўданімаў {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingBody": "{DISTRO} падтрымлівае апошнія драйверы NVIDIA і Mesa drivers для паляпшэння прадукцыйнасці і сумяшчальнасці. Тысячы найменняў гульняў Windows цудоўна запускаюцца ў {DISTRO} праз такія праграмы, як Steam без дадатковай канфігурацыі.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "Усе выпускі {DISTRO} LTS пастаўляюцца з абнаўленнямі бяспекі на працягу пяці гадоў, а пры падпісцы Ubuntu Pro працягласць абнаўленняў пашыраецца да дзесяці гадоў.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "База ведаў сайта Ask Ubuntu ахоплівае шэраг пытанняў і адказаў, а Ubuntu Discourse забяспечвае дапаможнікамі і абмеркаваннямі новых і дасведчаных карыстальнікаў.",
+  "@installationSlidesSupportCommunity": {},
+  "installationSlidesSupportEnterprise": "Для карпаратыўных карыстальнікаў кампанія Canonical прапануе камерцыйную падтрымку, што дае магчымасць лёгка ўключыцца ў працу і бяспечна кіраваць Ubuntu на працоўным месцы.",
+  "@installationSlidesSupportEnterprise": {},
+  "refreshRestart": "Закрыйце ўсталёўшчык праграм і перазапусціце яго, каб працягнуць",
+  "@refreshRestart": {},
+  "refreshSnapPrerequisites": "Забеспячэнне неабходных умоў {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Праверка абнаўлення даных {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Спыненне службаў {snap}...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Выдаленне псеўданімаў {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Выдаленне сувязі {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Наладжванне псеўданімаў {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Запуск службаў {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Ачыстка {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "Ключ аднаўлення TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Вы можаце атрымаць доступ да ключа аднаўлення пасля ўсталявання з дапамогай наступнай каманды:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Папярэджанне:</font> калі вы страціце гэты ключ бяспекі, то разам з ім вы згубіце ўсе даныя. Пры неабходнасці запішыце і захоўвайце яго ў надзейным месцы.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Праверыць",
+  "@validate": {}
 }

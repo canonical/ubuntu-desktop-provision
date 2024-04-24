@@ -20,7 +20,7 @@ void main() {
           localeModelProvider.overrideWith((ref) => localeModel),
           pageImagesProvider.overrideWithValue(pageImages),
         ],
-        child: const EULAPage(),
+        child: const EulaPage(),
       ),
     );
 
@@ -30,8 +30,8 @@ void main() {
     final nextButton = tester.widget(nextButtonFinder) as NextWizardButton;
     expect(nextButton.enabled, false);
 
-    final eulaPage = find.byType(EULAPage);
-    final l10n = EULALocalizations.of(tester.element(eulaPage));
+    final eulaPage = find.byType(EulaPage);
+    final l10n = EulaLocalizations.of(tester.element(eulaPage));
     final checkbox = find.checkButton(l10n.eulaAcceptTerms);
     expect(checkbox, findsOneWidget);
     expect(checkbox, isNotChecked);

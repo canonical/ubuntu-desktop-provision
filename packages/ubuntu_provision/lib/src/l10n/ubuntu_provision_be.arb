@@ -13,7 +13,7 @@
       }
     }
   },
-  "accessibilityPageBody": "Наладзьце {DISTRO} у адпаведнасці з вашымі патрабаваннямі. Вы зможаце змяніць іх пазней у сістэмных наладах.",
+  "accessibilityPageBody": "Наладжвайце {DISTRO} у адпаведнасці з вашымі патрабаваннямі. Вы зможаце змяніць іх пазней у сістэмных наладах.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -29,9 +29,9 @@
   "@accessibilityPointingLabel": {},
   "accessibilityZoomLabel": "Маштабаванне",
   "@accessibilityZoomLabel": {},
-  "accessibilityHighContrastLabel": "Высокая кантраснасць",
+  "accessibilityHighContrastLabel": "Высокі кантраст",
   "@accessibilityHighContrastLabel": {},
-  "accessibilityLargeTextLabel": "Буйны тэкст",
+  "accessibilityLargeTextLabel": "Вялікі тэкст",
   "@accessibilityLargeTextLabel": {},
   "accessibilityReduceAnimationLabel": "Памяншэнне анімацыі",
   "@accessibilityReduceAnimationLabel": {},
@@ -49,7 +49,7 @@
   "@accessibilityDesktopZoomLabel": {},
   "errorPageTitle": "Нешта пайшло не так",
   "@errorPageTitle": {},
-  "timezonePageTitle": "Выбраць ваш часавы пояс",
+  "timezonePageTitle": "Выбраць свой часавы пояс",
   "@timezonePageTitle": {},
   "timezoneLocationLabel": "Месцазнаходжанне",
   "@timezoneLocationLabel": {},
@@ -195,7 +195,7 @@
   "@networkWifiOff": {},
   "networkWifiNone": "Прылады Wi-Fi не выяўлены",
   "@networkWifiNone": {},
-  "networkWifiDisabled": "Бесправадная сетка павінна быць абавязкова ўключана, каб выкарыстоўваць Wi-Fi на гэтым камп'ютары",
+  "networkWifiDisabled": "Бесправадная з павінна быць уключана, каб выкарыстоўваць Wi-Fi на гэтым камп'ютары",
   "@networkWifiDisabled": {},
   "networkWifiEnable": "Уключыць Wi-Fi",
   "@networkWifiEnable": {},

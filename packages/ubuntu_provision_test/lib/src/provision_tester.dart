@@ -121,11 +121,13 @@ extension UbuntuProvisionPageTester on WidgetTester {
     }
   }
 
-  Future<void> testEULAPage() async {
-    await pumpUntilPage(EULAPage);
+  Future<void> testEulaPage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(EulaPage);
 
-    final context = element(find.byType(EULAPage));
-    final l10n = EULALocalizations.of(context);
+    final context = element(find.byType(EulaPage));
+    final l10n = EulaLocalizations.of(context);
 
     expect(find.titleBar(l10n.eulaPageTitle), findsOneWidget);
 
@@ -135,6 +137,10 @@ extension UbuntuProvisionPageTester on WidgetTester {
     await tap(checkbox);
     await pumpAndSettle();
     expect(checkbox, isChecked);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
   }
 
   Future<void> testTimezonePage({

@@ -17,25 +17,37 @@ Future<void> main() async {
 
   tearDown(rootBundle.clear);
 
-  testWidgets('00.welcome', (tester) async {
+  testWidgets('welcome', (tester) async {
     await tester.runApp(() => runInitApp(['--welcome'], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.testWelcomeInitPage(
-      screenshot: '$currentThemeName/00.welcome',
+      screenshot: '$currentThemeName/welcome',
     );
   }, variant: themeVariant);
 
-  testWidgets('01.locale', (tester) async {
+  testWidgets('locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(
-      screenshot: '$currentThemeName/01.locale',
+      screenshot: '$currentThemeName/locale',
     );
   }, variant: themeVariant);
 
-  testWidgets('02.keyboard', (tester) async {
+  testWidgets('accessibility', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.accessibility.route);
+    await tester.pumpAndSettle();
+
+    await tester.testAccessibilityPage(
+      screenshot: '$currentThemeName/accessibility',
+    );
+  });
+
+  testWidgets('keyboard', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -43,11 +55,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(
-      screenshot: '$currentThemeName/02.keyboard',
+      screenshot: '$currentThemeName/keyboard',
     );
   }, variant: themeVariant);
 
-  testWidgets('03.network', (tester) async {
+  testWidgets('network', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -56,23 +68,23 @@ Future<void> main() async {
 
     await tester.testNetworkPage(
       mode: ConnectMode.none,
-      screenshot: '$currentThemeName/03.network',
+      screenshot: '$currentThemeName/network',
     );
   }, variant: themeVariant);
 
-  testWidgets('04.timezone', (tester) async {
+  testWidgets('eula', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
-    await tester.jumpToPage(InitStep.timezone.route);
+    await tester.jumpToPage(InitStep.eula.route);
     await tester.pumpAndSettle();
 
-    await tester.testTimezonePage(
-      screenshot: '$currentThemeName/04.timezone',
+    await tester.testEulaPage(
+      screenshot: '$currentThemeName/eula',
     );
   }, variant: themeVariant);
 
-  testWidgets('05.identity', (tester) async {
+  testWidgets('identity', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -86,11 +98,11 @@ Future<void> main() async {
         username: 'user',
       ),
       password: 'password',
-      screenshot: '$currentThemeName/05.identity',
+      screenshot: '$currentThemeName/identity',
     );
   }, variant: themeVariant);
 
-  testWidgets('06.ubuntu-pro-onboarding', (tester) async {
+  testWidgets('ubuntu-pro-onboarding', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -98,11 +110,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbunutuProOnboardingPage(
-      screenshot: '$currentThemeName/06.ubuntu-pro-onboarding',
+      screenshot: '$currentThemeName/ubuntu-pro-onboarding',
     );
   }, variant: themeVariant);
 
-  testWidgets('07.ubuntu-pro', (tester) async {
+  testWidgets('ubuntu-pro', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -120,11 +132,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProPage(
-      screenshot: '$currentThemeName/07.ubuntu-pro',
+      screenshot: '$currentThemeName/ubuntu-pro',
     );
   }, variant: themeVariant);
 
-  testWidgets('08.ubuntu-pro-success', (tester) async {
+  testWidgets('ubuntu-pro-success', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -142,23 +154,11 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testUbuntuProSuccessAttachProPage(
-      screenshot: '$currentThemeName/08.ubuntu-pro-success',
+      screenshot: '$currentThemeName/ubuntu-pro-success',
     );
   }, variant: themeVariant);
 
-  testWidgets('09.telemetry', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(InitStep.telemetry.route);
-    await tester.pumpAndSettle();
-
-    await tester.testTelemetryPage(
-      screenshot: '$currentThemeName/09.telemetry',
-    );
-  }, variant: themeVariant);
-
-  testWidgets('10.privacy', (tester) async {
+  testWidgets('privacy', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();
 
@@ -166,7 +166,31 @@ Future<void> main() async {
     await tester.pumpAndSettle();
 
     await tester.testPrivacyPage(
-      screenshot: '$currentThemeName/10.privacy',
+      screenshot: '$currentThemeName/privacy',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('timezone', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.timezone.route);
+    await tester.pumpAndSettle();
+
+    await tester.testTimezonePage(
+      screenshot: '$currentThemeName/timezone',
+    );
+  }, variant: themeVariant);
+
+  testWidgets('telemetry', (tester) async {
+    await tester.runApp(() => runInitApp([], theme: currentTheme));
+    await tester.pumpAndSettle();
+
+    await tester.jumpToPage(InitStep.telemetry.route);
+    await tester.pumpAndSettle();
+
+    await tester.testTelemetryPage(
+      screenshot: '$currentThemeName/telemetry',
     );
   }, variant: themeVariant);
 }
