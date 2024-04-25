@@ -108,5 +108,7 @@
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Conecte esta máquina a una suscripción de Ubuntu Pro para obtener actualizaciones de seguridad en una gama más amplia de paquetes, hasta 2032.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro ya está activado en esta máquina",
-  "@ubuntuProSucessAttachHeader": {}
+  "@ubuntuProSucessAttachHeader": {},
+  "telemetryCollectError": "No se pudieron recopilar datos de telemetría",
+  "@telemetryCollectError": {}
 }
