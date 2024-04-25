@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
+import 'package:intl/locale.dart' as intl_locale;
 import 'package:path/path.dart' as p;
 import 'package:pdfrx/pdfrx.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -12,11 +13,47 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+extension LocaleExt on Locale {
+  static Locale? tryParse(String localeIdentifier) {
+    final parsed = intl_locale.Locale.tryParse(localeIdentifier);
+    if (parsed == null) {
+      return null;
+    }
+    return Locale.fromSubtags(
+        languageCode: parsed.languageCode,
+        scriptCode: parsed.scriptCode,
+        countryCode: parsed.countryCode);
+  }
+}
+
 final eulaPageProvider = FutureProvider<File>((ref) async {
-  final locale = Intl.defaultLocale ?? await findSystemLocale();
-  const directory = '/usr/share/desktop-provision/eula';
-  final localizedEula = File(p.join(directory, 'EULA_$locale.pdf'));
-  late final fallbackEula = File(p.join(directory, 'EULA.pdf'));
+  final locale =
+      LocaleExt.tryParse(Intl.defaultLocale ?? await findSystemLocale())!;
+  final eulaDir = Directory('/usr/share/desktop-provision/eula');
+  final fileList = eulaDir.listSync();
+  final exp = RegExp(r'EULA_([a-zA-Z0-9\-]+)\.');
+
+  // get list of EULA_[locales].pdf files, then list the available locales
+  final supportedLocales = fileList
+      .map((entry) => p.basename(entry.path))
+      .where(exp.hasMatch)
+      .map((entry) => LocaleExt.tryParse(exp.firstMatch(entry)!.group(1)!))
+      .whereType<Locale>()
+      .toList();
+
+  Logger('eula').debug(
+      'Available EULA locales: ${supportedLocales.map((entry) => entry.toLanguageTag()).join(', ')}');
+  Logger('eula').debug('Preferred locale: ${locale.toLanguageTag()}');
+
+  // find preferred locale with resolution algorithm in flutter, use
+  // Locale('und') to mark that there's no available file for the preferred
+  // language
+  final eulaLocale = basicLocaleListResolution(
+      [locale], [const Locale('und'), ...supportedLocales]);
+
+  final localizedEula =
+      File(p.join(eulaDir.path, 'EULA_${eulaLocale.toLanguageTag()}.pdf'));
+  late final fallbackEula = File(p.join(eulaDir.path, 'EULA.pdf'));
   final eulaFile = localizedEula.existsSync() ? localizedEula : fallbackEula;
   Logger('eula').debug('EULA file: ${eulaFile.path}');
 
