@@ -108,5 +108,7 @@
     "placeholders": {
       "url": {}
     }
-  }
+  },
+  "telemetryCollectError": "Nie udało się zebrać danych telemetrycznych",
+  "@telemetryCollectError": {}
 }
