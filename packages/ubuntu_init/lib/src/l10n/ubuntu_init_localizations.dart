@@ -345,6 +345,12 @@ abstract class UbuntuInitLocalizations {
   /// **'Legal notice'**
   String get telemetryLegalLabel;
 
+  /// No description provided for @telemetryCollectError.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to collect telemetry data'**
+  String get telemetryCollectError;
+
   /// No description provided for @privacyPageTitle.
   ///
   /// In en, this message translates to:

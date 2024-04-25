@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Lainopillinen huomautus';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Sijaintipalvelut';
 
   @override

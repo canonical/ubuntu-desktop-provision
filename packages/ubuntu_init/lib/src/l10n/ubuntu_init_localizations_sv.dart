@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Juridisk meddelande';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Platstjänster';
 
   @override

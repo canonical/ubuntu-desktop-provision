@@ -69,6 +69,9 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Yasal';
 
   @override
+  String get telemetryCollectError => 'Failed to collect telemetry data';
+
+  @override
   String get privacyPageTitle => 'Konum hizmetleri';
 
   @override

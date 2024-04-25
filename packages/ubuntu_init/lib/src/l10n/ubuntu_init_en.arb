@@ -54,6 +54,8 @@
   "telemetryReportTitle": "Reporting details",
   "telemetryLegalLabel": "Legal notice",
   "@telemetryLegalLabel": {},
+  "telemetryCollectError": "Failed to collect telemetry data",
+  "@telemetryCollectError": {},
   "privacyPageTitle": "Location services",
   "@privacyPageTitle": {},
   "privacyLocationTitle": "Enable location services?",
