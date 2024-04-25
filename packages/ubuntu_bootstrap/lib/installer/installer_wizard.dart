@@ -21,9 +21,6 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-
-    final model = ref.read(installerModelProvider);
-    model.init();
   }
 
   @override
@@ -34,7 +31,7 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
 
   @override
   Widget build(BuildContext context) {
-    final status = ref.watch(installerModelProvider.select((m) => m.status));
+    final status = ref.watch(applicationStatusProvider).value;
     if (status?.state == ApplicationState.ERROR) {
       return const _ErrorWizard();
     }
@@ -55,7 +52,7 @@ class _InstallWizard extends ConsumerWidget {
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;
-    final hasRoute = ref.read(installerModelProvider).hasRoute;
+    bool hasRoute(String route) => ref.read(hasRouteProvider(route));
 
     return WizardBuilder(
       initialRoute: InstallationStep.loading.route,
