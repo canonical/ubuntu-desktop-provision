@@ -290,7 +290,7 @@ _$SourceSelectionImpl _$$SourceSelectionImplFromJson(
       name: json['name'] as String,
       description: json['description'] as String,
       id: json['id'] as String,
-      size: json['size'] as int,
+      size: (json['size'] as num).toInt(),
       variant: json['variant'] as String,
       isDefault: json['default'] as bool,
     );
@@ -392,8 +392,8 @@ Map<String, dynamic> _$$OsProberImplToJson(_$OsProberImpl instance) =>
 
 _$PartitionImpl _$$PartitionImplFromJson(Map<String, dynamic> json) =>
     _$PartitionImpl(
-      size: json['size'] as int?,
-      number: json['number'] as int?,
+      size: (json['size'] as num?)?.toInt(),
+      number: (json['number'] as num?)?.toInt(),
       preserve: json['preserve'] as bool?,
       wipe: json['wipe'] as String?,
       annotations: (json['annotations'] as List<dynamic>?)
@@ -407,8 +407,8 @@ _$PartitionImpl _$$PartitionImplFromJson(Map<String, dynamic> json) =>
       os: json['os'] == null
           ? null
           : OsProber.fromJson(json['os'] as Map<String, dynamic>),
-      offset: json['offset'] as int?,
-      estimatedMinSize: json['estimated_min_size'] as int? ?? -1,
+      offset: (json['offset'] as num?)?.toInt(),
+      estimatedMinSize: (json['estimated_min_size'] as num?)?.toInt() ?? -1,
       resize: json['resize'] as bool?,
       path: json['path'] as String?,
       isInUse: json['is_in_use'] as bool? ?? false,
@@ -436,8 +436,8 @@ Map<String, dynamic> _$$PartitionImplToJson(_$PartitionImpl instance) =>
     };
 
 _$GapImpl _$$GapImplFromJson(Map<String, dynamic> json) => _$GapImpl(
-      offset: json['offset'] as int,
-      size: json['size'] as int,
+      offset: (json['offset'] as num).toInt(),
+      size: (json['size'] as num).toInt(),
       usable: $enumDecode(_$GapUsableEnumMap, json['usable']),
       $type: json[r'$type'] as String?,
     );
@@ -489,7 +489,7 @@ _$DiskImpl _$$DiskImplFromJson(Map<String, dynamic> json) => _$DiskImpl(
       id: json['id'] as String,
       label: json['label'] as String,
       type: json['type'] as String,
-      size: json['size'] as int,
+      size: (json['size'] as num).toInt(),
       usageLabels: (json['usage_labels'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
@@ -577,7 +577,7 @@ _$StorageResponseImpl _$$StorageResponseImplFromJson(
       origConfig: json['orig_config'] as List<dynamic>?,
       config: json['config'] as List<dynamic>?,
       dasd: json['dasd'] as Map<String, dynamic>?,
-      storageVersion: json['storage_version'] as int? ?? 1,
+      storageVersion: (json['storage_version'] as num?)?.toInt() ?? 1,
     );
 
 Map<String, dynamic> _$$StorageResponseImplToJson(
@@ -619,7 +619,7 @@ _$StorageResponseV2Impl _$$StorageResponseV2ImplFromJson(
           const [],
       needRoot: json['need_root'] as bool?,
       needBoot: json['need_boot'] as bool?,
-      installMinimumSize: json['install_minimum_size'] as int?,
+      installMinimumSize: (json['install_minimum_size'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$StorageResponseV2ImplToJson(
@@ -636,10 +636,10 @@ Map<String, dynamic> _$$StorageResponseV2ImplToJson(
 _$GuidedResizeValuesImpl _$$GuidedResizeValuesImplFromJson(
         Map<String, dynamic> json) =>
     _$GuidedResizeValuesImpl(
-      installMax: json['install_max'] as int,
-      minimum: json['minimum'] as int,
-      recommended: json['recommended'] as int,
-      maximum: json['maximum'] as int,
+      installMax: (json['install_max'] as num).toInt(),
+      minimum: (json['minimum'] as num).toInt(),
+      recommended: (json['recommended'] as num).toInt(),
+      maximum: (json['maximum'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$GuidedResizeValuesImplToJson(
@@ -681,11 +681,11 @@ _$GuidedStorageTargetResizeImpl _$$GuidedStorageTargetResizeImplFromJson(
         Map<String, dynamic> json) =>
     _$GuidedStorageTargetResizeImpl(
       diskId: json['disk_id'] as String,
-      partitionNumber: json['partition_number'] as int,
-      newSize: json['new_size'] as int,
-      minimum: json['minimum'] as int?,
-      recommended: json['recommended'] as int?,
-      maximum: json['maximum'] as int?,
+      partitionNumber: (json['partition_number'] as num).toInt(),
+      newSize: (json['new_size'] as num).toInt(),
+      minimum: (json['minimum'] as num?)?.toInt(),
+      recommended: (json['recommended'] as num?)?.toInt(),
+      maximum: (json['maximum'] as num?)?.toInt(),
       allowed: (json['allowed'] as List<dynamic>?)
               ?.map((e) => $enumDecode(_$GuidedCapabilityEnumMap, e))
               .toList() ??
@@ -788,7 +788,7 @@ _$GuidedChoiceV2Impl _$$GuidedChoiceV2ImplFromJson(Map<String, dynamic> json) =>
       sizingPolicy:
           $enumDecodeNullable(_$SizingPolicyEnumMap, json['sizing_policy']),
       resetPartition: json['reset_partition'] as bool? ?? false,
-      resetPartitionSize: json['reset_partition_size'] as int?,
+      resetPartitionSize: (json['reset_partition_size'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GuidedChoiceV2ImplToJson(
@@ -956,7 +956,7 @@ _$ChannelSnapInfoImpl _$$ChannelSnapInfoImplFromJson(
       revision: json['revision'] as String,
       confinement: json['confinement'] as String,
       version: json['version'] as String,
-      size: json['size'] as int,
+      size: (json['size'] as num).toInt(),
       releasedAt: DateTime.parse(json['released_at'] as String),
     );
 
@@ -1133,9 +1133,9 @@ Map<String, dynamic> _$$UbuntuProResponseImplToJson(
 _$UbuntuProGeneralInfoImpl _$$UbuntuProGeneralInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$UbuntuProGeneralInfoImpl(
-      eolEsmYear: json['eol_esm_year'] as int?,
-      universePackages: json['universe_packages'] as int,
-      mainPackages: json['main_packages'] as int,
+      eolEsmYear: (json['eol_esm_year'] as num?)?.toInt(),
+      universePackages: (json['universe_packages'] as num).toInt(),
+      mainPackages: (json['main_packages'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$UbuntuProGeneralInfoImplToJson(
@@ -1150,7 +1150,7 @@ _$UPCSInitiateResponseImpl _$$UPCSInitiateResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$UPCSInitiateResponseImpl(
       userCode: json['user_code'] as String,
-      validitySeconds: json['validity_seconds'] as int,
+      validitySeconds: (json['validity_seconds'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$UPCSInitiateResponseImplToJson(
@@ -1296,8 +1296,8 @@ Map<String, dynamic> _$$WSLSetupOptionsImplToJson(
 _$TaskProgressImpl _$$TaskProgressImplFromJson(Map<String, dynamic> json) =>
     _$TaskProgressImpl(
       label: json['label'] as String? ?? '',
-      done: json['done'] as int? ?? 0,
-      total: json['total'] as int? ?? 0,
+      done: (json['done'] as num?)?.toInt() ?? 0,
+      total: (json['total'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$TaskProgressImplToJson(_$TaskProgressImpl instance) =>
