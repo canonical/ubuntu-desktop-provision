@@ -81,7 +81,7 @@ class RebootCommand extends Command<void> {
       final options = getResetOptions();
       stdout.writeln('List of available options:\n');
       for (final option in options) {
-        stdout.writeln('${option.type}: ${option.title}');
+        stdout.writeln('${option.type.value}: ${option.title}');
         if (option.description != null) {
           stdout.writeln('  ${option.description}');
         }
