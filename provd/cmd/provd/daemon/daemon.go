@@ -5,7 +5,6 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
-	"os/exec"
 	"runtime"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/daemon"
@@ -20,7 +19,7 @@ const cmdName = "provd"
 // App encapsulate commands and options of the daemon, which can be controlled by env variables and config files.
 type App struct {
 	rootCmd    cobra.Command
-	keyringCmd exec.Cmd
+	keyringCmd keyringCommand
 	viper      *viper.Viper
 	config     daemonConfig
 
@@ -37,6 +36,11 @@ type systemPaths struct {
 // daemonConfig defines configuration parameters of the daemon.
 type daemonConfig struct {
 	Paths systemPaths
+}
+
+// keyringCommand is a command to unlock the login keyring.
+type keyringCommand struct {
+	Start func() error
 }
 
 // New registers commands and return a new App.
@@ -82,7 +86,7 @@ func New() *App {
 
 	installConfigFlag(&a.rootCmd)
 
-	a.keyringCmd = *getKeyringCmd()
+	a.keyringCmd = keyringCommand{getKeyringCmd().Start}
 
 	// subcommands
 	a.installVersion()
