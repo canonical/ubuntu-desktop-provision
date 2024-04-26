@@ -108,5 +108,7 @@
   "ubuntuProTokenAttachButton": "Alkroĉi",
   "@ubuntuProTokenAttachButton": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Ŝalti Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {}
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "telemetryCollectError": "Malsukcesis kolekti telemetriajn datenojn",
+  "@telemetryCollectError": {}
 }
