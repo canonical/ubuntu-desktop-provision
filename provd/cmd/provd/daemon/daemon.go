@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
+	"os/exec"
 	"runtime"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/daemon"
@@ -18,9 +19,10 @@ const cmdName = "provd"
 
 // App encapsulate commands and options of the daemon, which can be controlled by env variables and config files.
 type App struct {
-	rootCmd cobra.Command
-	viper   *viper.Viper
-	config  daemonConfig
+	rootCmd    cobra.Command
+	keyringCmd exec.Cmd
+	viper      *viper.Viper
+	config     daemonConfig
 
 	daemon *daemon.Daemon
 
@@ -80,6 +82,8 @@ func New() *App {
 
 	installConfigFlag(&a.rootCmd)
 
+	a.keyringCmd = *getKeyringCmd()
+
 	// subcommands
 	a.installVersion()
 
@@ -118,6 +122,11 @@ func (a *App) serve(config daemonConfig) error {
 
 // Run executes the command and associated process. It returns an error on syntax/usage error.
 func (a *App) Run() error {
+	err := a.keyringCmd.Start()
+	if err != nil {
+		slog.Error(fmt.Sprintf("failed to start gnome-keyring-daemon: %v", err))
+		return err
+	}
 	return a.rootCmd.Execute()
 }
 
