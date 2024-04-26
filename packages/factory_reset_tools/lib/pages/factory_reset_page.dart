@@ -8,10 +8,10 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const defaultOptionKey = ResetOptionType.factoryReset;
+const defaultOptionKey = 'factory-reset';
 
 final _selectedResetOptionProvider =
-    StateProvider<ResetOptionType>((ref) => defaultOptionKey);
+    StateProvider<String>((ref) => defaultOptionKey);
 final _resetOptionsProvider =
     Provider<List<BootOption>>((ref) => getResetOptions());
 
@@ -20,7 +20,7 @@ class FactoryResetPage extends ConsumerWidget {
 
   Future<void> doExecute(
     BuildContext context,
-    ResetOptionType selectedOption,
+    String selectedOption,
   ) async {
     try {
       await startCommandViaDbus(selectedOption);
@@ -55,20 +55,15 @@ class FactoryResetPage extends ConsumerWidget {
     final optionsWidgets = options.map((option) {
       return OptionButton(
         title: Text(option.title),
-        value: option.type,
+        value: option.key,
         groupValue: selectedOption,
         onChanged: (value) => ref
             .read(_selectedResetOptionProvider.notifier)
-            .state = value ?? options.first.type,
+            .state = value ?? options.first.key,
         subtitle:
             option.description != null ? Text(option.description ?? '') : null,
       );
     }).withSpacing(kWizardSpacing / 2);
-
-    final buttonLabel = switch (selectedOption) {
-      ResetOptionType.factoryReset => lang.restore,
-      ResetOptionType.fwSetup => lang.restart,
-    };
 
     return HorizontalPage(
       windowTitle: lang.windowTitle,
@@ -78,7 +73,7 @@ class FactoryResetPage extends ConsumerWidget {
         leading: const BackWizardButton(),
         trailing: [
           WizardButton(
-            label: buttonLabel,
+            label: lang.restart,
             highlighted: true,
             onActivated: () => doExecute(context, selectedOption),
           ),
