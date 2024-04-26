@@ -3,10 +3,13 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_init/src/init_services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 const kTelemetryLegalUrl =
     'https://ubuntu.com/legal/systems-information-notice';
+
+final _log = Logger('telemetry');
 
 final telemetryModelProvider = ChangeNotifierProvider(
   (ref) => TelemetryModel(getService<ProvdTelemetryService>()),
@@ -33,10 +36,14 @@ class TelemetryModel extends ChangeNotifier {
   }
 
   Future<void> save() async {
-    if (_enabled) {
-      await _telemetry.collectAndSend();
-    } else {
-      await _telemetry.sendDecline();
+    try {
+      if (_enabled) {
+        await _telemetry.collectAndSend();
+      } else {
+        await _telemetry.sendDecline();
+      }
+    } on Exception catch (e) {
+      _log.error('Failed to send telemetry: $e');
     }
   }
 }
