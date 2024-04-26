@@ -343,13 +343,26 @@ func TestUnlockKeyring(t *testing.T) {
 			}
 
 			a := daemon.NewForTests(t, nil, keyringCmd)
-			err := a.Run()
 
-			if tc.wantErr {
-				require.Error(t, err, "Run should return an error")
-				return
+			wg := sync.WaitGroup{}
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				err := a.Run()
+
+				if tc.wantErr {
+					require.Error(t, err, "Run should return an error")
+					return
+				}
+				require.NoError(t, err, "Run should not return an error")
+			}()
+
+			if !tc.wantErr {
+				a.WaitReady()
+				time.Sleep(50 * time.Millisecond)
+				a.Quit()
 			}
-			require.NoError(t, err, "Run should not return an error")
+			wg.Wait()
 		})
 	}
 }
