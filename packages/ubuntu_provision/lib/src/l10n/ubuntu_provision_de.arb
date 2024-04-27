@@ -235,5 +235,7 @@
   "accessibilityStickKeysLabel": "Haftbare Tasten",
   "@accessibilityStickKeysLabel": {},
   "errorPageUnexpected": "Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Sie können auch das <a>Problem melden</a>.",
-  "@errorPageUnexpected": {}
+  "@errorPageUnexpected": {},
+  "accessibilityDesktopZoomLabel": "Schreibtisch-Zoom",
+  "@accessibilityDesktopZoomLabel": {}
 }
