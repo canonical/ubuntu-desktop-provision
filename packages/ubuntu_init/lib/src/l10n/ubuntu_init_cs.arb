@@ -108,5 +108,7 @@
   "ubuntuProOnBoardingSkipForNow": "Prozatím přeskočit",
   "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pro můžete kdykoli povolit později prostřednictvím aplikace Software a aktualizace.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {}
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "telemetryCollectError": "Nepodařilo se shromáždit telemetrická data",
+  "@telemetryCollectError": {}
 }
