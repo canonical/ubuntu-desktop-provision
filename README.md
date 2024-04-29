@@ -82,6 +82,7 @@ theme:
 # Init pages (for oem only)
 # - identity: Create the first-user account 
 # - ubuntu-pro: Enable Ubuntu Pro
+# - eula: Accept the OEM provided EULA
 # - privacy: Enable location services
 # - timezone: Set the timezone
 # - telemetry: Enable sending telemetry
@@ -119,11 +120,26 @@ An example structure could look like this:
 ```
 
 If the locale that the user currently is using doesn't have a corresponding html file it will fall back to
-`slide_en_US.html`.
+`slide_en_US.html`. See the [Language code format section](#language-code-format) for further details about the language
+code format.
 
 Do note that the HTML supported in these “html” files is far from the full standard, so we recommend that you use one of
 the templates provided as the default slides:
 https://github.com/canonical/ubuntu-desktop-provision/tree/main/packages/ubuntu_bootstrap/assets/slides
+
+### EULA
+
+EULA assets are expected to reside in `/usr/share/desktop-provision/eula/` with the file name including the language
+code: EULA_<langcode>.pdf. If the <langcode> is not available, the default file EULA.pdf will be used.
+The language code format is the same as is used for slides, for example: EULA_en_US.pdf, see the [Language code format
+section](#language-code-format) for further details,
+
+### Language code format
+
+The language code format that is used is the two-letter language code followed by a two-letter country code
+(see the ISO 639-1 and ISO 3166-1 standards). The language code represents the primary language, while the country code
+specifies the regional or national variant of that language. For example en_US represents American English and pt_BR
+represents Brazilian Portuguese.
 
 ## Repository Structure
 
