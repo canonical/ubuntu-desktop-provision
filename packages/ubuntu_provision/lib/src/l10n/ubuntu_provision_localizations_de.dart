@@ -57,7 +57,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get accessibilityMouseKeysLabel => 'Maustasten';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Schreibtisch-Zoom';
 
   @override
   String get errorPageTitle => 'Etwas ist schiefgelaufen';

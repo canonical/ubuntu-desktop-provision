@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Правовая информация';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Не удалось собрать данные телеметрии';
 
   @override
   String get privacyPageTitle => 'Сервисы определения местоположения';
