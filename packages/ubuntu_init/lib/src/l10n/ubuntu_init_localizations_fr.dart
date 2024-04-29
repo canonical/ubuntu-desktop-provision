@@ -19,23 +19,23 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Un démarrage simplifié';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Favoriser une installation plus simple.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'App Store revisité';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Ça n\'a jamais été aussi facile de trouver votre logiciel préféré.';
 
   @override
   String get welcomeSecurityTitle => 'Sécurité renforcée';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Nouvelles options de chiffrement matériel, ou via ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Voir la liste des changements</a>';
   }
 
   @override
@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'Aidez nous à améliorer $distro en partageant avec nous vos informations de système. Cela inclut votre modèle de machine, vos logiciels installés, votre position géographique, ou votre fuseau horaire.';
   }
 
   @override
@@ -60,13 +60,13 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Non, ne pas partager les données du système';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'Voir le premier rapport';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Détails du rapport';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Mentions légales';
 
   @override
   String get telemetryCollectError => 'Failed to collect telemetry data';
@@ -75,10 +75,10 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   String get privacyPageTitle => 'Services de localisation';
 
   @override
-  String get privacyLocationTitle => 'Activer les services de localisation ?';
+  String get privacyLocationTitle => 'Activer les services de localisation ?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Laisser les applications accéder à votre localisation.\nVous pouvez changer ça à tout moment dans les paramètres du système.';
 
   @override
   String get privacyLocationEnable => 'Services de localisation';
@@ -88,56 +88,56 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Rattachement automagique avec le code à cette adresse <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Rattacher cette machine';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'ou ajouter un jeton manuellement';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Jeton';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Abonnez vous à la meilleure des sécurités pour les logiciels libres';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Toujours gratuit pour un usage personnel. 30 jours d\'essai pour les entreprises. <a href=\"https://$url\">En savoir plus</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Attacher';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Jeton invalide';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Jeton valide';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Jeton invalide, réessayer';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Passer pour l\'instant';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Vous pouvez toujours activer Ubuntu Pro plus tard dans l\'application Logiciels & Mises à jour.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Activer Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Rattachez cette machine à un abonnement Ubuntu Pro for recevoir des mises à jour de sécurité pour un grand nombre de paquets, jusqu\'en 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro est maintenant activé sur cette machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Vous pouvez gérer vos services Pro dans l\'application Logiciels & Mises à jour.';
 }

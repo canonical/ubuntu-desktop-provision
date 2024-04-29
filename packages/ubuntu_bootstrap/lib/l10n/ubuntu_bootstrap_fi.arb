@@ -744,7 +744,7 @@
       }
     }
   },
-  "codecsAndDriversPageBody": "{DISTRO} ei sisällä oletuksena suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.",
+  "codecsAndDriversPageBody": "{DISTRO} ei sisällä oletuksena rajoitettuja tai suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -785,7 +785,7 @@
   "@autoinstallAutomatedDescription": {},
   "hideSecurityKey": "Piilota",
   "@hideSecurityKey": {},
-  "codecsAndDriversPageDescription": "Asennetaanko suositellut suljetun lähdekoodin ohjelmistot?",
+  "codecsAndDriversPageDescription": "Asennetaanko suositellut käytöltään rajoitetut ohjelmistot?",
   "@codecsAndDriversPageDescription": {},
   "codecsAndDriversNvidiaNote": "NVIDIA:n näytönohjain havaittu",
   "@codecsAndDriversNvidiaNote": {},

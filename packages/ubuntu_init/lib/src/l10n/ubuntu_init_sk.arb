@@ -108,5 +108,7 @@
   "ubuntuProOrAddTokenManually": "alebo pridať token ručne",
   "@ubuntuProOrAddTokenManually": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Pripojte tento počítač k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "telemetryCollectError": "Zhromažďovanie telemetrických údajov zlyhalo",
+  "@telemetryCollectError": {}
 }

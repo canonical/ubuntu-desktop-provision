@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return '¿Qué quiere hacer con $DISTRO ?';
+    return '¿Qué quiere hacer con $DISTRO?';
   }
 
   @override
@@ -204,7 +204,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get batteryWarning => 'El equipo no está enchufado a una fuente de alimentación.';
 
   @override
-  String get offlineWarning => 'Actualmente no está conectado';
+  String get offlineWarning => 'Actualmente no hay conexión';
 
   @override
   String get choosePassphraseTitle => 'Contraseña del disco';

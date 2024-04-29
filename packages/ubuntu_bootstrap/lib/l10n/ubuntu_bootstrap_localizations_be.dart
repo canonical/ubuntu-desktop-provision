@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Выбраны дыск не мае дастаткова месца на дыску каб усталяваць $DISTRO. Выйсці з усталёўшчыка праграм каб зрабіць больш месца ці выбраць іншы дыск.';
   }
 
   @override

@@ -5,10 +5,10 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Инструменты восстановления';
+  String get appTitle => 'Инструменты для сброса настроек';
 
   @override
-  String get windowTitle => 'Инструменты восстановления';
+  String get windowTitle => 'Инструменты для сброса настроек';
 
   @override
   String get homeTitle => 'Что Вы хотите сделать?';

@@ -862,7 +862,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Erneute $snap-Auffrischung wird überprüft...';
   }
 
   @override

@@ -1060,5 +1060,13 @@
     }
   },
   "validate": "Праверыць",
-  "@validate": {}
+  "@validate": {},
+  "notEnoughDiskSpaceBody": "Выбраны дыск не мае дастаткова месца на дыску каб усталяваць {DISTRO}. Выйсці з усталёўшчыка праграм каб зрабіць больш месца ці выбраць іншы дыск.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Rechtlicher Hinweis';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Fehler bei der Erfassung von Telemetriedaten';
 
   @override
   String get privacyPageTitle => 'Standortbezogene Dienste';
@@ -88,7 +88,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Magisches Anbinden mit diesem Code unter <a href=\"https://$url\">$url</a>';
   }
 
   @override

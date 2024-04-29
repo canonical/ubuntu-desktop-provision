@@ -108,5 +108,7 @@
   "ubuntuProSucessAttachHeader": "Ubuntu Pro on nyt käytössä tälle tietokoneelle",
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.",
-  "@ubuntuProSucessAttachDescription": {}
+  "@ubuntuProSucessAttachDescription": {},
+  "telemetryCollectError": "Telemetriatietojen keräys epäonnistui",
+  "@telemetryCollectError": {}
 }
