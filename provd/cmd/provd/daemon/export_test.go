@@ -10,19 +10,38 @@ import (
 )
 
 type (
-	DaemonConfig = daemonConfig
-	SystemPaths  = systemPaths
+	DaemonConfig   = daemonConfig
+	SystemPaths    = systemPaths
+	KeyringCommand = keyringCommand
 )
 
-func NewForTests(t *testing.T, conf *DaemonConfig, args ...string) *App {
+func NewForTestsWithConfig(t *testing.T, conf *DaemonConfig, keyringCmd *keyringCommand, args ...string) *App {
 	t.Helper()
 
 	p := GenerateTestConfig(t, conf)
 	argsWithConf := []string{"--config", p}
 	argsWithConf = append(argsWithConf, args...)
 
-	a := New()
+	a := NewForTests(t, keyringCmd, args...)
 	a.rootCmd.SetArgs(argsWithConf)
+
+	return a
+}
+
+func NewForTests(t *testing.T, keyringCmd *keyringCommand, args ...string) *App {
+	t.Helper()
+
+	a := New()
+
+	if keyringCmd != nil {
+		a.keyringCmd = *keyringCmd
+	} else {
+		a.keyringCmd = keyringCommand{
+			Start: func() error {
+				return nil
+			},
+		}
+	}
 	return a
 }
 
