@@ -222,6 +222,14 @@ extension UbuntuProvisionPageTester on WidgetTester {
         password,
       );
     }
+    if (identity?.realname != null ||
+        identity?.hostname != null ||
+        identity?.username != null ||
+        password != null) {
+      await pump();
+      await testTextInput.receiveAction(TextInputAction.done);
+      await pump();
+    }
     await pumpAndSettle();
 
     if (screenshot != null) {
