@@ -114,7 +114,7 @@
   "@activeDirectoryDomainMultipleDots": {},
   "activeDirectoryDomainNotFound": "שם התחום לא נמצא",
   "@activeDirectoryDomainNotFound": {},
-  "activeDirectoryAdminLabel": "צירוף משתמש לתחום",
+  "activeDirectoryAdminLabel": "משתמש צירוף לתחום",
   "@activeDirectoryAdminLabel": {},
   "activeDirectoryAdminEmpty": "חובה",
   "@activeDirectoryAdminEmpty": {},
