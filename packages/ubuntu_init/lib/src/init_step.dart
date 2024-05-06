@@ -17,7 +17,6 @@ enum InitStep with RouteName {
   ubuntuPro(UbuntuProPage.new, discreteStep: false),
   ubuntuProSuccess(UbuntuProSuccessAttachPage.new,
       hasPrevious: false, discreteStep: false),
-  privacy(PrivacyPage.new, hasPrevious: false),
   timezone(TimezonePage.new, hasPrevious: false),
   telemetry(TelemetryPage.new, hasPrevious: false),
   error(_errorPageFactory, wizardStep: false, discreteStep: false);

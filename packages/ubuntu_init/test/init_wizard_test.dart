@@ -28,7 +28,6 @@ import '../../ubuntu_provision/test/network/test_network.dart'
     hide MockThemeVariantService;
 import '../../ubuntu_provision/test/timezone/test_timezone.dart'
     hide MockThemeVariantService;
-import 'privacy/test_privacy.dart';
 import 'telemetry/test_telemetry.dart';
 import 'ubuntu_pro/test_ubuntu_pro.dart';
 import 'welcome/test_welcome.dart';
@@ -57,7 +56,6 @@ void main() {
     final ubuntuProModel =
         buildUbuntuProModel(skipPro: false, isAttached: true);
     final telemetryModel = buildTelemetryModel();
-    final privacyModel = buildPrivacyModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -74,7 +72,6 @@ void main() {
           identityModelProvider.overrideWith((_) => identityModel),
           ubuntuProModelProvider.overrideWith((_) => ubuntuProModel),
           telemetryModelProvider.overrideWith((_) => telemetryModel),
-          privacyModelProvider.overrideWith((_) => privacyModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -129,11 +126,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(UbuntuProSuccessAttachPage), findsOneWidget);
-
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    expect(find.byType(PrivacyPage), findsOneWidget);
-    verify(privacyModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpUntil(find.byType(TimezonePage));
