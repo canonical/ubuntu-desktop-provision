@@ -158,18 +158,6 @@ Future<void> main() async {
     );
   }, variant: themeVariant);
 
-  testWidgets('privacy', (tester) async {
-    await tester.runApp(() => runInitApp([], theme: currentTheme));
-    await tester.pumpAndSettle();
-
-    await tester.jumpToPage(InitStep.privacy.route);
-    await tester.pumpAndSettle();
-
-    await tester.testPrivacyPage(
-      screenshot: '$currentThemeName/privacy',
-    );
-  }, variant: themeVariant);
-
   testWidgets('timezone', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
     await tester.pumpAndSettle();

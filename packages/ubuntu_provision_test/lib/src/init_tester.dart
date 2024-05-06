@@ -40,28 +40,13 @@ extension UbuntuInitPageTester on WidgetTester {
     }
   }
 
-  Future<void> testPrivacyPage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(PrivacyPage);
-
-    final context = element(find.byType(PrivacyPage));
-    final l10n = PrivacyLocalizations.of(context);
-
-    expect(find.titleBar(l10n.privacyPageTitle), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-  }
-
   Future<void> testUbuntuProPage({
     String? screenshot,
   }) async {
     await pumpUntilPage(UbuntuProPage);
 
     final context = element(find.byType(UbuntuProPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
@@ -76,7 +61,7 @@ extension UbuntuInitPageTester on WidgetTester {
     await pumpUntilPage(UbuntuProOnboardingPage);
 
     final context = element(find.byType(UbuntuProOnboardingPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
@@ -98,7 +83,7 @@ extension UbuntuInitPageTester on WidgetTester {
     await pumpUntilPage(UbuntuProSuccessAttachPage);
 
     final context = element(find.byType(UbuntuProSuccessAttachPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 

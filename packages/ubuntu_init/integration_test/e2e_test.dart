@@ -91,11 +91,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testPrivacyPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
-    // TODO: Test privacy settings
-
     await tester.testTimezonePage(timezone: 'Europe/Berlin');
     await tester.tapNext();
     await tester.pumpAndSettle();
