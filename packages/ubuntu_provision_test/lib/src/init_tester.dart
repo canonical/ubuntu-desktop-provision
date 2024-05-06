@@ -61,7 +61,7 @@ extension UbuntuInitPageTester on WidgetTester {
     await pumpUntilPage(UbuntuProPage);
 
     final context = element(find.byType(UbuntuProPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
@@ -76,7 +76,7 @@ extension UbuntuInitPageTester on WidgetTester {
     await pumpUntilPage(UbuntuProOnboardingPage);
 
     final context = element(find.byType(UbuntuProOnboardingPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
@@ -98,7 +98,7 @@ extension UbuntuInitPageTester on WidgetTester {
     await pumpUntilPage(UbuntuProSuccessAttachPage);
 
     final context = element(find.byType(UbuntuProSuccessAttachPage));
-    final l10n = PrivacyLocalizations.of(context);
+    final l10n = UbuntuProLocalizations.of(context);
 
     expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
 
