@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Provisioning Daemon
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=preferences-system
+Exec=@LIBEXECDIR@/provd
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;System;
+OnlyShowIn=GNOME;
+NoDisplay=true
+X-GNOME-HiddenUnderSystemd=@systemd_hidden@
+StartupWMClass=org.gnome.InitialSetup
+

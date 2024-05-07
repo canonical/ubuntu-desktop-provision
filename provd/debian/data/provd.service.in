@@ -1,0 +1,14 @@
+[Unit]
+Description=Provisioning Daemon
+RefuseManualStart=true
+RefuseManualStop=true
+
+BindsTo=gnome-session.target
+After=gnome-session.target
+
+[Service]
+Type=simple
+ExecStart=@libexecdir@/provd
+ExecStopPost=-@libexecdir@/gnome-session-ctl --shutdown
+Restart=no
+

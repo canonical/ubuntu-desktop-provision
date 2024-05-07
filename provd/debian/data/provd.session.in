@@ -1,0 +1,5 @@
+[GNOME Session]
+Name=Provisioning Daemon
+# Must be in sync with gnome-session@@this_component@.target.d/session.conf drop-in
+RequiredComponents=@gnome_session_required_components@;
+
