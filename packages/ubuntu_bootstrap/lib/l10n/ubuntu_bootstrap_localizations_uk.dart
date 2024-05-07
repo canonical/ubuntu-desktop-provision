@@ -705,7 +705,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Розширте творчі можливості';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {

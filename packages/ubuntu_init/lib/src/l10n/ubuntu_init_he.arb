@@ -108,5 +108,7 @@
   "ubuntuProTokenAttachButton": "צירוף",
   "@ubuntuProTokenAttachButton": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "אפשר לצרף את המכונה הזאת למינוי Ubuntu Pro לקבלת עדכוני אבטחה ומגוון רחב יותר של חבילות עד 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "telemetryCollectError": "איסוף המדדים נכשל",
+  "@telemetryCollectError": {}
 }

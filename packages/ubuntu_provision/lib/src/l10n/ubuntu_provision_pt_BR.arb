@@ -180,7 +180,7 @@
   },
   "accessibilitySeeingLabel": "Visualização",
   "@accessibilitySeeingLabel": {},
-  "accessibilityTypingLabel": "Digitando",
+  "accessibilityTypingLabel": "Digitação",
   "@accessibilityTypingLabel": {},
   "accessibilityReduceAnimationLabel": "Reduzir a animação",
   "@accessibilityReduceAnimationLabel": {},
@@ -210,7 +210,7 @@
   "@restart": {},
   "networkPageBody": "Uma conexão com a internet irá melhorar sua instalação com a checagem de compatibilidade e pacotes extras de software.",
   "@networkPageBody": {},
-  "accessibilityHearingLabel": "Ouvir",
+  "accessibilityHearingLabel": "Audição",
   "@accessibilityHearingLabel": {},
   "accessibilityZoomLabel": "Ampliação",
   "@accessibilityZoomLabel": {},
@@ -219,5 +219,23 @@
   "errorPageShowLog": "Exibir o log",
   "@errorPageShowLog": {},
   "close": "Fechar",
-  "@close": {}
+  "@close": {},
+  "activeDirectoryHeader": "Fazer login no Active Directory?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "O {DISTRO} foi projetado para integrar-se perfeitamente com o Active Directory para facilitar a administração.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "eulaPageTitle": "Contrato de Licença",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Revise os termos de licença",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Li e aceito estes termos",
+  "@eulaAcceptTerms": {}
 }

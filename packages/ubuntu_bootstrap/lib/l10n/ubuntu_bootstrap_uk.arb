@@ -478,5 +478,7 @@
   "notEnoughDiskSpaceRequired": "Потрібно:",
   "@notEnoughDiskSpaceRequired": {},
   "restartNow": "Перезапустити зараз",
-  "@restartNow": {}
+  "@restartNow": {},
+  "installationSlidesCreativityTitle": "Розширте творчі можливості",
+  "@installationSlidesCreativityTitle": {}
 }

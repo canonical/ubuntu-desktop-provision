@@ -358,10 +358,10 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get accessibilitySeeingLabel => 'Visualização';
 
   @override
-  String get accessibilityHearingLabel => 'Ouvir';
+  String get accessibilityHearingLabel => 'Audição';
 
   @override
-  String get accessibilityTypingLabel => 'Digitando';
+  String get accessibilityTypingLabel => 'Digitação';
 
   @override
   String get accessibilityPointingLabel => 'Apontar e clicar';
@@ -549,6 +549,14 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get activeDirectoryTitle => 'Configurar o Active Directory';
 
   @override
+  String get activeDirectoryHeader => 'Fazer login no Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return 'O $DISTRO foi projetado para integrar-se perfeitamente com o Active Directory para facilitar a administração.';
+  }
+
+  @override
   String get activeDirectoryTestConnection => 'Testar conectividade ao domínio';
 
   @override
@@ -652,4 +660,16 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
 
   @override
   String get networkNoneOption => 'Não quero conectar à internet neste momento';
+
+  @override
+  String get eulaPageTitle => 'Contrato de Licença';
+
+  @override
+  String get eulaReviewTerms => 'Revise os termos de licença';
+
+  @override
+  String get eulaReadAndAcceptTerms => 'Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.';
+
+  @override
+  String get eulaAcceptTerms => 'Li e aceito estes termos';
 }
