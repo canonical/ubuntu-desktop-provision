@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Installer des logiciels tiers pour le support du matériel graphique et Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Ces pilotes sont soumis à des termes de licence inclus dans leurs documentations. Ils sont propriétaires.';
+  String get installDriversSubtitle => 'Cela inclut mais ne se limite pas aux pilotes NVIDIA et assimilés';
 
   @override
   String get installCodecsTitle => 'Télécharger et installer la prise en charge de formats de multimédias supplémentaires';
 
   @override
-  String get installCodecsSubtitle => 'Ce logiciel est soumis à des termes de licence inclus dans sa documentation. Certains sont propriétaires.';
+  String get installCodecsSubtitle => 'Cela inclut mais ne se limite pas aux MP3, MP4, MOV et assimilés';
 
   @override
   String get batteryWarning => 'L\'ordinateur n\'est pas branché à une source d\'alimentation.';
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Prêt à installer';
 
   @override
-  String get confirmHeader => 'Si vous continuez, les changements ci-dessous seront écrits sur les disques. Vous pourrez faire des changements ultérieurs manuellement.';
+  String get confirmHeader => 'Vérifiez vos choix';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -845,7 +845,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Veuillez redémarrer l\'installateur.';
+  String get refreshRestart => 'Veuillez redémarrer l\'installateur pour continuer';
 
   @override
   String get refreshCloseLabel => 'Fermer l\'installateur';

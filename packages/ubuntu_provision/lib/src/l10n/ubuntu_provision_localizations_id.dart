@@ -5,77 +5,77 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Aksesibilitas';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Aksesibilitas dalam $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Sesuaikan $DISTRO untuk kebutuhan Anda sebelum Anda menyiapkan. Anda dapat mengubahnya nanti dalam Pengaturan Sistem.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Penglihatan';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Pendengaran';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Mengetik';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Menunjuk dan mengklik';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Zum';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Kontras tinggi';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Teks besar';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Kurangi animasi';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Pembaca layar';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Peringatan visual';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Tombol lengket';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Tombol lambat';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Tombol tetikus';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Zum desktop';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Ada yang salah';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Kami minta maaf, tetapi kami tidak yakin apa kesalahannya. Anda dapat mencoba menjalankan ulang komputer Anda dan memulai proses instalasi lagi. Anda juga dapat <a>melaporkan masalah</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Tampilkan log';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Sembunyikan log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Jalankan Ulang';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tutup';
 
   @override
   String get timezonePageTitle => 'Di manakah Anda?';
@@ -99,10 +99,10 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'Deteksi Tata Letak Papan Ketik';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Deteksi';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Pilih varian papan ketik Anda:';
 
   @override
   String get keyboardPressKeyLabel => 'Silakan tekan salah satu tombol berikut:';
@@ -124,7 +124,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Selamat datang di $DISTRO';
   }
 
   @override
@@ -146,7 +146,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityRealNameRequired => 'Sebuah nama diperlukan';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Nama itu terlalu panjang.';
 
   @override
   String get identityHostnameLabel => 'Nama komputer Anda';
@@ -158,7 +158,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'Sebuah nama komputer diperlukan';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Nama komputer itu terlalu panjang.';
 
   @override
   String get identityInvalidHostname => 'Nama komputer tidak valid';
@@ -173,16 +173,16 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityInvalidUsername => 'Nama pengguna tidak valid';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'Nama pengguna sudah ada.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'Nama itu dicadangkan untuk penggunaan sistem.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'Nama itu terlalu panjang.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'Nama itu mengandung karakter yang tidak valid.';
 
   @override
   String get identityPasswordLabel => 'Pilih sebuah kata sandi';
@@ -197,81 +197,81 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityPasswordMismatch => 'Kata sandi tidak cocok';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Tampilkan';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Sembunyikan';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Gunakan Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'Anda akan memasukkan domain dan rincian lain dalam langkah berikutnya.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Log masuk ke Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Log masuk ke Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO dirancang untuk berintegrasi secara mulus dengan Active Directory untuk administrasi yang lebih mudah.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'Uji konektivitas domain';
 
   @override
   String get activeDirectoryDomainLabel => 'Domain';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Dibutuhkan';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Terlalu panjang';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Karakter tidak valid';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Mulai dengan titik (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Berakhir dengan titik (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Mulai dengan tanda sambung (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Berakhir dengan tanda sambung (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Mengandung beberapa titik berurutan (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Domain tidak ditemukan';
 
   @override
   String get activeDirectoryAdminLabel => 'Domain join user';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Dibutuhkan';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Karakter tidak valid';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Kata sandi';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Dibutuhkan';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Galat saat mengonfigurasi koneksi ke Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Maaf, Active Directory tidak dapat disiapkan saat ini. Setelah sistem Anda hidup dan berjalan, kunjungi <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory </a> untuk bantuan.';
 
   @override
   String get networkPageTitle => 'Menyambung ke internet';
@@ -280,7 +280,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Menyambungkan komputer ini ke internet akan membantu Ubuntu memasang perangkat lunak tambahan yang diperlukan dan membantu memilih zona waktu Anda.\n\nSambungkan memakai kabel Ethernet, atau pilih suatu jaringan Wi-Fi';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Suatu koneksi internet akan memperbaiki instalasi Anda dengan pemeriksaan kompatibilitas dan paket perangkat lunak ekstra.';
 
   @override
   String get networkWiredOption => 'Gunakan sambungan kabel';
@@ -313,26 +313,26 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkWifiEnable => 'Fungsikan Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'Menyambung ke jaringan Wi-Fi tersembunyi';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'Nama jaringan';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'Nama jaringan diperlukan';
 
   @override
   String get networkNoneOption => 'Saya tidak ingin tersambung ke internet saat ini';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Persetujuan lisensi';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Tinjau persyaratan lisensi';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Untuk melanjutkan penyiapan mesin ini, Anda harus membaca dan menerima persyaratan perjanjian lisensi.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Saya telah membaca dan menerima syarat-syarat ini';
 }
