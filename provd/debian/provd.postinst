@@ -4,12 +4,22 @@ set -e
 
 case "$1" in
     configure)
-        # Create the provd group and add gnome-initial-setup to it.
-        addgroup --system provd
-        usermod -G provd gnome-initial-setup
+        # Check if the provd user exists, and create if not
+        if ! getent passwd provd >/dev/null; then
+            adduser --system --force-badname --quiet \
+                --home /run/home/provd/ --no-create-home \
+                --shell /bin/false \
+                provd
+        fi
+
+        # Create the provd group and add provd to it if not already there
+        if ! getent group provd >/dev/null; then
+            addgroup --system provd
+        fi
+        usermod -G provd provd
 
         # Set ownership and permissions for launch-desktop-provision-init.sh
-        chown gnome-initial-setup:provd /usr/libexec/launch-desktop-provision-init
+        chown provd:provd /usr/libexec/launch-desktop-provision-init
         chmod 750 /usr/libexec/launch-desktop-provision-init
 
         # Set ownership and permissions for bin's
