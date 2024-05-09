@@ -1,3 +1,19 @@
 {
-  "@@locale": "it"
+  "@@locale": "it",
+  "appTitle": "Strumenti per il ripristino delle impostazioni di fabbrica",
+  "@appTitle": {},
+  "windowTitle": "Strumenti per il ripristino delle impostazioni di fabbrica",
+  "@windowTitle": {},
+  "homeTitle": "Cosa ti piacerebbe fare?",
+  "@homeTitle": {},
+  "createResetMedia": "Creare supporto di ripristino",
+  "@createResetMedia": {},
+  "startFactoryReset": "Avvia il ripristino delle impostazioni di fabbrica",
+  "@startFactoryReset": {},
+  "createUsbTitle": "Creare un supporto di ripristino USB",
+  "@createUsbTitle": {},
+  "createUsbBody": "Crea un supporto di ripristino USB per ripristinare il sistema e personalizzare le tue installazioni di Ubuntu.",
+  "@createUsbBody": {},
+  "createUsbListExplanation": "Seleziona un'unità flash USB. L'unità deve avere **almeno 16 GB di spazio.**",
+  "@createUsbListExplanation": {}
 }
