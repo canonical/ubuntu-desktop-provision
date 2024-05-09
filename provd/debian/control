@@ -18,7 +18,6 @@ Rules-Requires-Root: no
 
 Package: provd
 Architecture: any
-Pre-Depends: gnome-initial-setup
 Depends: ${misc:Depends},
          ${shlibs:Depends},
 Description: Ubuntu init backend
