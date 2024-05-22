@@ -8,7 +8,7 @@
       }
     }
   },
-  "tryDescription": "Вы можаце паспрабаваць {RELEASE} без уплыву на налады вашага камп'ютара.",
+  "tryDescription": "Вы можаце паспрабаваць {RELEASE} без аніякіх змен на вашым камп'ютары.",
   "@tryDescription": {
     "placeholders": {
       "RELEASE": {
@@ -281,7 +281,7 @@
   },
   "installAlongsideSpaceDivider": "Вылучыце прастору на дыску, перацягваючы раздзяляльнік ніжэй:",
   "@installAlongsideSpaceDivider": {},
-  "installAlongsideHiddenPartitions": "{num} невялікіх раздзелаў схаваны, выкарыстоўвайце <a href=\"{url}\">інструмент пашыранай разметкі</a> для большага кантролю",
+  "installAlongsideHiddenPartitions": "{num} меншых раздзелаў схаваны, выкарыстоўвайце <a href=\"{url}\">інструмент пашыранай разметкі</a> для большага кантролю",
   "@installAlongsideHiddenPartitions": {
     "placeholders": {
       "num": {
@@ -762,7 +762,7 @@
       }
     }
   },
-  "tryOrInstallRepairDescription": "Выпраўленне паўторна ўсталёўвае ўсе ўсталяванае праграмнае забеспячэнне і пры гэтым не змяняе дакументацыю або налады.",
+  "tryOrInstallRepairDescription": "Падчас выпраўлення будзе пераўсталявана ўсё праграмнае забеспячэнне. Дакументы і налады закрануты не будуць.",
   "@tryOrInstallRepairDescription": {},
   "confirmInstallButton": "Усталяваць",
   "@confirmInstallButton": {},
@@ -808,7 +808,7 @@
       }
     }
   },
-  "tryOrInstallRepairOption": "Аднавіць усталяванне",
+  "tryOrInstallRepairOption": "Выправіць усталёўку",
   "@tryOrInstallRepairOption": {},
   "rstHeader": "Выключыць RST для працягу",
   "@rstHeader": {},
@@ -886,7 +886,7 @@
       }
     }
   },
-  "installationTypeTPMInfo": "Гэта эксперыментальная магчымасць. Яна можа не працаваць з вашым абсталяваннем у будучых выпусках {DISTRO}.<a href=\"{url}\">Прачытайце аб шыфраванні TPM</a> перад тым, як выбраць гэты параметр.",
+  "installationTypeTPMInfo": "Гэта эксперыментальная магчымасць. Яна можа не працаваць з вашым абсталяваннем або ў будучых выпусках {DISTRO}.<a href=\"{url}\">Прачытайце аб шыфраванні TPM</a> перад тым, як выбраць гэты параметр.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1061,7 +1061,7 @@
   },
   "validate": "Праверыць",
   "@validate": {},
-  "notEnoughDiskSpaceBody": "Выбраны дыск не мае дастаткова месца на дыску каб усталяваць {DISTRO}. Выйсці з усталёўшчыка праграм каб зрабіць больш месца ці выбраць іншы дыск.",
+  "notEnoughDiskSpaceBody": "На выбраным дыску не стае месца, каб усталяваць {DISTRO}. Выйдзіце з усталёўшчыка, каб вызваліць месца або выбраць іншы дыск.",
   "@notEnoughDiskSpaceBody": {
     "placeholders": {
       "DISTRO": {
