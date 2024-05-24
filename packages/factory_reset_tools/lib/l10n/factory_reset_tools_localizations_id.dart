@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsId extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Alat reset pabrik';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Alat reset pabrik';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Apa yang ingin Anda lakukan?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Membuat media reset';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Mulai reset pabrik';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Membuat suatu media reset USB';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Membuat suatu media reset USB untuk memulihkan sistem, maupun untuk menyesuaikan instalasi Ubuntu Anda.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Pilih sebuah flash drive USB. Drive harus memiliki **setidaknya ruang 16GB.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Flash drive akan diformat ulang dan semua data di drive akan hilang.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Media reset USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Tidak ada penyimpanan lepasan yang terdeteksi';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Anda perlu suatu penyimpanan USB untuk membuat sebuah Media Reset Pabrik.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Pilih suatu opsi untuk memulai reset pabrik';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Harap tunggu ketika kami mengambil drive.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Media reset USB siap';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Ketika Anda ingin menggunakannya, tancapkan USB drive ke komputer yang ingin Anda reset dan jalankan ulang itu.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Kesalahan terjadi saat mengambil drive.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Menginisialisasi';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Menyalin';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Memfinalisasi';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Selesai';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Gagal';
 
   @override
-  String get error => 'Error';
+  String get error => 'Galat';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Memuat...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Peringatan';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Pulihkan';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Jalankan Ulang';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Format Ulang';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Gagal menjalankan perintah';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tutup';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ok';
 }

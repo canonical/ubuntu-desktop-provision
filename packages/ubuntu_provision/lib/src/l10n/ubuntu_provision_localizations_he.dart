@@ -253,7 +253,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainNotFound => 'שם התחום לא נמצא';
 
   @override
-  String get activeDirectoryAdminLabel => 'צירוף משתמש לתחום';
+  String get activeDirectoryAdminLabel => 'משתמש צירוף לתחום';
 
   @override
   String get activeDirectoryAdminEmpty => 'חובה';

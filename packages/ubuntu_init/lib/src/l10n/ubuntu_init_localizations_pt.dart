@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Aviso legal';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Falha na recolha de dados de telemetria';
 
   @override
   String get privacyPageTitle => 'Serviço de localização';
@@ -190,7 +190,7 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Compartilhe dados anonimamente com o $distro para que possamos melhorar sua experiência.';
+    return 'Ajude-nos a melhorar o $distro compartilhando seus dados do sistema conosco. Isso inclui itens como o modelo da máquina, o software instalado e o local escolhido para o fuso horário.';
   }
 
   @override
@@ -202,13 +202,16 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
   String get telemetryLabelOff => 'Não, não compartilhe dados do sistema';
 
   @override
-  String get telemetryReportLabel => 'Detalhes do relatório';
+  String get telemetryReportLabel => 'Mostrar o primeiro relatório';
 
   @override
   String get telemetryReportTitle => 'Detalhes do relatório';
 
   @override
-  String get telemetryLegalLabel => 'Legal';
+  String get telemetryLegalLabel => 'Advertência jurídica';
+
+  @override
+  String get telemetryCollectError => 'Falha ao coletar dados de telemetria';
 
   @override
   String get privacyPageTitle => 'Serviços de localização';
@@ -224,4 +227,59 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
 
   @override
   String get privacyPolicyLink => 'Privacidade de Dados';
+
+  @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Use o Magic attach com este código em <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Anexe esta máquina';
+
+  @override
+  String get ubuntuProOrAddTokenManually => 'ou adicione um token manualmente';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => 'Token';
+
+  @override
+  String get ubuntuProSubscriptionDescription => 'Obtenha a assinatura mais abrangente para segurança de software de código aberto';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+    return 'Sempre gratuita para uso pessoal. 30 dias de teste para empresas. <a href=\"https://$url\">Saiba mais</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => 'Anexar';
+
+  @override
+  String get ubuntuProTokenAttachError => 'Token inválido';
+
+  @override
+  String get ubuntuProTokenAttachSucess => 'Token válido';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => 'Token inválido, tente novamente';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => 'Pular por enquanto';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Você sempre pode ativar o Ubuntu Pro posteriormente por meio do aplicativo Software & Atualizações.';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ativar Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Anexe esta máquina a uma assinatura do Ubuntu Pro para atualizações de segurança em uma ampla variedade de pacotes, até 2032.';
+
+  @override
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro agora está habilitado nesta máquina';
+
+  @override
+  String get ubuntuProSucessAttachDescription => 'Você pode gerenciar seus serviços Pro no aplicativo Software & Atualizações.';
 }

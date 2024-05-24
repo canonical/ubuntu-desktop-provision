@@ -19,7 +19,7 @@ import (
 )
 
 func TestHelp(t *testing.T) {
-	a := daemon.NewForTests(t, nil, "--help")
+	a := daemon.NewForTestsWithConfig(t, nil, nil, "--help")
 
 	getStdout := captureStdout(t)
 
@@ -28,7 +28,7 @@ func TestHelp(t *testing.T) {
 }
 
 func TestCompletion(t *testing.T) {
-	a := daemon.NewForTests(t, nil, "completion", "bash")
+	a := daemon.NewForTestsWithConfig(t, nil, nil, "completion", "bash")
 
 	getStdout := captureStdout(t)
 
@@ -37,7 +37,7 @@ func TestCompletion(t *testing.T) {
 }
 
 func TestVersion(t *testing.T) {
-	a := daemon.NewForTests(t, nil, "version")
+	a := daemon.NewForTestsWithConfig(t, nil, nil, "version")
 
 	getStdout := captureStdout(t)
 
@@ -56,7 +56,7 @@ func TestVersion(t *testing.T) {
 }
 
 func TestNoUsageError(t *testing.T) {
-	a := daemon.NewForTests(t, nil, "completion", "bash")
+	a := daemon.NewForTestsWithConfig(t, nil, nil, "completion", "bash")
 
 	getStdout := captureStdout(t)
 	err := a.Run()
@@ -69,7 +69,7 @@ func TestNoUsageError(t *testing.T) {
 func TestUsageError(t *testing.T) {
 	t.Parallel()
 
-	a := daemon.NewForTests(t, nil, "doesnotexist")
+	a := daemon.NewForTestsWithConfig(t, nil, nil, "doesnotexist")
 
 	err := a.Run()
 	require.Error(t, err, "Run should return an error, stdout: %v")
@@ -102,7 +102,7 @@ func TestAppCanQuitWithoutExecute(t *testing.T) {
 
 	t.Parallel()
 
-	a := daemon.NewForTests(t, nil)
+	a := daemon.NewForTestsWithConfig(t, nil, nil)
 
 	requireGoroutineStarted(t, a.Quit)
 	err := a.Run()
@@ -153,7 +153,7 @@ func TestAppRunFailsOnComponentsCreationAndQuit(t *testing.T) {
 			default:
 				config.Paths.Socket = filepath.Join(shortTmp, "mysocket")
 			}
-			a := daemon.NewForTests(t, &config)
+			a := daemon.NewForTestsWithConfig(t, &config, nil)
 			err = a.Run()
 			require.Error(t, err, "Run should exit with an error")
 			a.Quit()
@@ -210,7 +210,7 @@ func TestAppCanSigHupWithoutExecute(t *testing.T) {
 	r, w, err := os.Pipe()
 	require.NoError(t, err, "Setup: pipe shouldn't fail")
 
-	a := daemon.NewForTests(t, nil)
+	a := daemon.NewForTestsWithConfig(t, nil, nil)
 
 	orig := os.Stdout
 	os.Stdout = w
@@ -229,7 +229,7 @@ func TestAppCanSigHupWithoutExecute(t *testing.T) {
 func TestAppGetRootCmd(t *testing.T) {
 	t.Parallel()
 
-	a := daemon.NewForTests(t, nil)
+	a := daemon.NewForTestsWithConfig(t, nil, nil)
 	require.NotNil(t, a.RootCmd(), "Returns root command")
 }
 
@@ -259,7 +259,7 @@ func TestAutoDetectConfig(t *testing.T) {
 	// Remove configuration next binary for other tests to not pick it up.
 	defer os.Remove(configNextToBinaryPath)
 
-	a := daemon.New()
+	a := daemon.NewForTests(t, nil)
 
 	wg := sync.WaitGroup{}
 	wg.Add(1)
@@ -279,7 +279,7 @@ func TestAutoDetectConfig(t *testing.T) {
 }
 
 func TestNoConfigSetDefaults(t *testing.T) {
-	a := daemon.New()
+	a := daemon.NewForTests(t, nil)
 	// Use version to still run preExec to load no config but without running server
 	a.SetArgs("version")
 
@@ -297,7 +297,7 @@ func TestBadConfigFile(t *testing.T) {
 	err := os.WriteFile(configPath, []byte("foo"), 0600)
 	require.NoError(t, err, "Failed to create config file with 'blah'")
 
-	a := daemon.New()
+	a := daemon.NewForTests(t, nil)
 	a.SetArgs("version", "--config", configPath)
 
 	err = a.Run()
@@ -305,12 +305,66 @@ func TestBadConfigFile(t *testing.T) {
 }
 
 func TestMissingConfigReturnsError(t *testing.T) {
-	a := daemon.New()
+	a := daemon.NewForTests(t, nil)
 	// Use version to still run preExec to load no config but without running server
 	a.SetArgs("version", "--config", "/does/not/exist.yaml")
 
 	err := a.Run()
 	require.Error(t, err, "Run should return an error on config file")
+}
+
+func TestUnlockKeyring(t *testing.T) {
+	t.Parallel()
+
+	testCases := map[string]struct {
+		commandError bool
+
+		wantErr bool
+	}{
+		"Successfully unlocks the keyring": {},
+
+		"Error unlocking the keyring": {commandError: true, wantErr: true},
+	}
+
+	for name, tc := range testCases {
+		tc := tc
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+
+			var keyringCmd *daemon.KeyringCommand
+			if tc.commandError {
+				keyringCmd = &daemon.KeyringCommand{
+					Start: func() error {
+						return fmt.Errorf("error unlocking keyring")
+					},
+				}
+			} else {
+				keyringCmd = nil
+			}
+
+			a := daemon.NewForTestsWithConfig(t, nil, keyringCmd)
+
+			wg := sync.WaitGroup{}
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				err := a.Run()
+
+				if tc.wantErr {
+					require.Error(t, err, "Run should return an error")
+					return
+				}
+				require.NoError(t, err, "Run should not return an error")
+			}()
+
+			if !tc.wantErr {
+				a.WaitReady()
+				time.Sleep(50 * time.Millisecond)
+				a.Quit()
+			}
+			wg.Wait()
+		})
+	}
 }
 
 // requireGoroutineStarted starts a goroutine and blocks until it has been launched.
@@ -333,7 +387,7 @@ func startDaemon(t *testing.T, conf *daemon.DaemonConfig) (app *daemon.App, done
 	t.Helper()
 	t.Cleanup(testutils.StartLocalSystemBus())
 
-	a := daemon.NewForTests(t, conf)
+	a := daemon.NewForTestsWithConfig(t, conf, nil)
 
 	wg := sync.WaitGroup{}
 	wg.Add(1)

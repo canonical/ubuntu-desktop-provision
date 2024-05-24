@@ -101,5 +101,14 @@
   "ubuntuProOnBoardingSkipForNowDescription": "Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Binden Sie diesen Rechner an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "telemetryCollectError": "Fehler bei der Erfassung von Telemetriedaten",
+  "@telemetryCollectError": {},
+  "ubuntuProMagicAttachInstructions": "Magisches Anbinden mit diesem Code unter <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
 }

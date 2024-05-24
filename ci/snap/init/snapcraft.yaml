@@ -19,6 +19,7 @@ apps:
     environment:
       LOG_LEVEL: debug
     plugs:
+      - hardware-observe
       - hostfs-usr-share-desktop-provision
       - run-provd-socket
       - network

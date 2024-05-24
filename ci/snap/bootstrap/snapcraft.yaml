@@ -4,6 +4,8 @@ summary: Ubuntu Desktop Bootstrap
 description: |
   A modern implementation of the Ubuntu Desktop installer.
   It comprises a Flutter-based UI and uses subiquity as the backend.
+contact: https://bugs.launchpad.net/ubuntu-desktop-provision
+issues: https://bugs.launchpad.net/ubuntu-desktop-provision
 grade: stable
 confinement: classic
 base: core22

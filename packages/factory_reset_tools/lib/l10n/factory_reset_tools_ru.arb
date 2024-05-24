@@ -1,6 +1,6 @@
 {
   "@@locale": "ru",
-  "windowTitle": "Инструменты восстановления",
+  "windowTitle": "Инструменты для сброса настроек",
   "@windowTitle": {},
   "homeTitle": "Что Вы хотите сделать?",
   "@homeTitle": {},
@@ -24,7 +24,7 @@
   "@resetMediaFinished": {},
   "error": "Ошибка",
   "@error": {},
-  "appTitle": "Инструменты восстановления",
+  "appTitle": "Инструменты для сброса настроек",
   "@appTitle": {},
   "createResetMedia": "Создать носитель для сброса",
   "@createResetMedia": {},

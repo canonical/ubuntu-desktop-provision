@@ -372,7 +372,7 @@
   "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Límite alcanzado",
   "@partitionLimitReached": {},
-  "offlineWarning": "Actualmente no está conectado",
+  "offlineWarning": "Actualmente no hay conexión",
   "@offlineWarning": {},
   "partitionFormatNone": "Dejar sin formatear",
   "@partitionFormatNone": {},
@@ -767,7 +767,7 @@
   "@autoinstallAutomatedDescription": {},
   "autoinstallInstructions": "Introduzca el URL de autoinstall.yaml:",
   "@autoinstallInstructions": {},
-  "tryOrInstallHeader": "¿Qué quiere hacer con {DISTRO} ?",
+  "tryOrInstallHeader": "¿Qué quiere hacer con {DISTRO}?",
   "@tryOrInstallHeader": {
     "placeholders": {
       "DISTRO": {

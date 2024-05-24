@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Právne informácie';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Zhromažďovanie telemetrických údajov zlyhalo';
 
   @override
   String get privacyPageTitle => 'Služby umiestnenia';

@@ -912,5 +912,13 @@
         "type": "String"
       }
     }
+  },
+  "refreshSnapCheckRerefresh": "Erneute {snap}-Auffrischung wird überprüft...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
   }
 }

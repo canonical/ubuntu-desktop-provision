@@ -31,7 +31,7 @@
   },
   "rstTitle": "O RST está habilitado",
   "@rstTitle": {},
-  "rstDescription": "Este computador usa Intel RST (Rapid Storage Technology). Você precisa desligar a RST no Windows antes de instalar o Ubuntu.",
+  "rstDescription": "Este computador usa Intel RST (Rapid Storage Technology). Você precisa desligar a RST no Windows antes de instalar o {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "Para instruções, escaneie o código QR em outro dispositivo ou visite: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -126,7 +126,7 @@
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Particionamento manual",
   "@installationTypeManual": {},
-  "installationTypeManualInfo": "Você pode criar ou redimensionar partições manualmente ou escolher múltiplas partições para o {DISTRO}",
+  "installationTypeManualInfo": "Para usuários avançados que buscam configurações de disco personalizadas.",
   "@installationTypeManualInfo": {},
   "selectGuidedStoragePageTitle": "Apagar o disco e instalar o {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -186,7 +186,7 @@
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Pronto para instalar",
   "@confirmPageTitle": {},
-  "confirmHeader": "Se você continuar, as mudanças listadas abaixo serão escritas nos discos. Você será capaz de realizar alterações posteriores manualmente.",
+  "confirmHeader": "Revise suas escolhas",
   "@confirmHeader": {},
   "confirmPartitionTables": "As tabelas de partições dos seguintes dispositivos foram alteradas:",
   "@confirmPartitionTables": {},
@@ -301,7 +301,7 @@
   "@installAlongsideAvailable": {},
   "installCodecsTitle": "Baixar e instalar suporte para formatos de mídia adicionais",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Este software está sujeito aos termos de licença incluídos em sua documentação. Alguns são proprietários.",
+  "installCodecsSubtitle": "Incluindo, mas não limitado a MP3, MP4, MOV e similares",
   "@installCodecsSubtitle": {},
   "confirmPartitionCreate": "partição <b>{sysname}</b> criada",
   "@confirmPartitionCreate": {
@@ -348,9 +348,9 @@
   "@installDriversTitle": {},
   "installingSystem": "Instalando o sistema…",
   "@installingSystem": {},
-  "installDriversSubtitle": "Esses drivers estão sujeitos aos termos de licença incluídos em suas documentações. Eles são proprietários.",
+  "installDriversSubtitle": "Incluindo, mas não limitado a, drivers NVIDIA e similares",
   "@installDriversSubtitle": {},
-  "notEnoughDiskSpaceTitle": "Espaço insuficiente",
+  "notEnoughDiskSpaceTitle": "Não há espaço em disco suficiente",
   "@notEnoughDiskSpaceTitle": {},
   "configuringSystem": "Iniciando o sistema…",
   "@configuringSystem": {},
@@ -554,7 +554,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Por favor reinicie o instalador.",
+  "refreshRestart": "Por favor, feche o instalador e reinicie para continuar",
   "@refreshRestart": {},
   "refreshPageTitle": "Atualização disponível",
   "@refreshPageTitle": {},
@@ -758,5 +758,166 @@
   "autoinstallInstructions": "Entre a URL para o autoinstall.yaml:",
   "@autoinstallInstructions": {},
   "refreshReady": "Atualização pronta",
-  "@refreshReady": {}
+  "@refreshReady": {},
+  "selectGuidedStorageInfo": "Comece do zero no disco selecionado.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** foi copiado para o disco",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmEntryApplications": "Aplicativos",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Configuração do disco",
+  "@confirmEntryDiskSetup": {},
+  "notEnoughDiskSpaceBody": "O disco selecionado não tem espaço em disco suficiente para instalar o {DISTRO}. Feche o instalador para disponibilizar espaço ou selecione outro disco.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMInfo": "Este é um recurso experimental. Pode não funcionar com o seu hardware ou versões futuras do {DISTRO}. <a href=\"{url}\">Leia sobre a criptografia TPM</a> antes de escolher esta opção.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeExperimental": "Experimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Use LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Use LVM e criptografia",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Apague o disco e use ZFS com criptografia",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS e criptografia selecionados",
+  "@installationTypeZFSEncryptionSelected": {},
+  "autoinstallInteractiveDescription": "Para usuários que desejam ser guiados passo a passo durante a instalação.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Instalação automatizada",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Para usuários avançados que têm um autoinstall.yaml para configurações de sistema consistentes e repetíveis.",
+  "@autoinstallAutomatedDescription": {},
+  "warningLabel": "Aviso:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "O que você quer fazer com o {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Esconder",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Otimize seu computador",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Instalar software proprietário recomendado?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "O {DISTRO} não vem com software proprietário por padrão. A instalação de software adicional pode melhorar o desempenho do seu computador.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Placa gráfica NVIDIA detectada",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Para obter o melhor desempenho das placas gráficas NVIDIA, é altamente recomendável instalar drivers adicionais.",
+  "@codecsAndDriversNvidiaBody": {},
+  "batteryWarning": "O computador não está conectado a uma fonte de energia.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Senha do disco",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Criar uma senha",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Você precisa de uma senha para criptografar seus arquivos. Você será solicitado a fornecer sua senha toda vez que ligar o computador.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Escolha uma senha",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Confirme a senha",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Uma senha é necessária",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "As senhas não correspondem",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Certifique-se de salvar sua senha",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Se você perder sua senha, perderá todos os seus dados.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Crie uma senha",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Confirme a senha",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Como você deseja instalar o {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Comece do zero no disco selecionado.",
+  "@installationTypeEraseInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Selecione a unidade:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Selecione a partição:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Escolha onde instalar o {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Nenhuma",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryDiskEncryption": "Criptografia de disco",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Disco de instalação",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Software proprietário",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Em geral",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Segurança & mais",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Drivers",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigureWarning": "Você precisa reiniciar o computador para continuar o processo de instalação.",
+  "@rebootToConfigureWarning": {},
+  "validate": "Validar",
+  "@validate": {},
+  "restartWarningBody": "Reinicie para concluir a instalação ou continue testando.\nQuaisquer alterações feitas não serão salvas.",
+  "@restartWarningBody": {},
+  "refreshHeader": "Uma atualização está disponível para o instalador",
+  "@refreshHeader": {},
+  "refreshInfo": "Atualize para a versão mais recente para maior confiabilidade e mais recursos.",
+  "@refreshInfo": {},
+  "refreshUpdateNow": "Atualizar agora",
+  "@refreshUpdateNow": {},
+  "refreshCloseLabel": "Fechar instalador",
+  "@refreshCloseLabel": {}
 }

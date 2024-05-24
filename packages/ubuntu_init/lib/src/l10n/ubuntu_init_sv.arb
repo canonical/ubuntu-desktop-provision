@@ -108,5 +108,7 @@
   "ubuntuProSucessAttachDescription": "Du kan hantera dina Pro-tjänster med programmet Programvara och uppdateringar.",
   "@ubuntuProSucessAttachDescription": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Du kan alltid aktivera Ubuntu Pro senare via programmet Programvara och uppdateringar.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {}
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "telemetryCollectError": "Misslyckades att samla in telemetri data",
+  "@telemetryCollectError": {}
 }

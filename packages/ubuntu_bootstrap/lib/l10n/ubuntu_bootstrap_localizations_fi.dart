@@ -154,11 +154,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageTitle => 'Optimoi tietokoneesi';
 
   @override
-  String get codecsAndDriversPageDescription => 'Asennetaanko suositellut suljetun lähdekoodin ohjelmistot?';
+  String get codecsAndDriversPageDescription => 'Asennetaanko suositellut käytöltään rajoitetut ohjelmistot?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ei sisällä oletuksena suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.';
+    return '$DISTRO ei sisällä oletuksena rajoitettuja tai suljetun lähdekoodin ohjelmistoja. Lisäohjelmistojen asentaminen saattaa parantaa tietokoneen suorituskykyä.';
   }
 
   @override

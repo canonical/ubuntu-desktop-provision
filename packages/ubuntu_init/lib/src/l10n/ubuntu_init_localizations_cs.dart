@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Právní ustanovení';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Nepodařilo se shromáždit telemetrická data';
 
   @override
   String get privacyPageTitle => 'Služby určování polohy';
