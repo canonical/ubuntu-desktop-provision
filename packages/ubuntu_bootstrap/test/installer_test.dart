@@ -88,10 +88,10 @@ void main() {
     await tester
         .runAsync(() => runInstallerApp(['--dry-run', '--', '--foo', 'bar']));
     verify(server.start(args: [
+      '--dry-run-config=examples/dry-run-configs/tpm.yaml',
       '--machine-config=examples/machines/simple.json',
       '--source-catalog=examples/sources/desktop.yaml',
       '--storage-version=2',
-      '--dry-run-config=examples/dry-run-configs/tpm.yaml',
       '--foo',
       'bar',
     ])).called(1);

@@ -79,10 +79,10 @@ const noTpm = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
   disallowed: [
     GuidedDisallowedCapability(
-        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        reason:
-            GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
-        message: 'tpm required')
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      reason: GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+      message: 'tpm required',
+    )
   ],
 );
 
@@ -90,9 +90,10 @@ const bios = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
   disallowed: [
     GuidedDisallowedCapability(
-        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        reason: GuidedDisallowedCapabilityReason.NOT_UEFI,
-        message: 'uefi & secure boot required')
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      reason: GuidedDisallowedCapabilityReason.NOT_UEFI,
+      message: 'uefi & secure boot required',
+    )
   ],
 );
 
@@ -100,8 +101,9 @@ const thirdPartyDrivers = GuidedStorageTargetReformat(
   diskId: 'disk-vda',
   disallowed: [
     GuidedDisallowedCapability(
-        capability: GuidedCapability.CORE_BOOT_UNENCRYPTED,
-        reason: GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS,
-        message: 'third party drivers incompatible')
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      reason: GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS,
+      message: 'third party drivers incompatible',
+    )
   ],
 );

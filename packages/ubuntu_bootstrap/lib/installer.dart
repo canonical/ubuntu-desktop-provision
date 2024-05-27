@@ -41,6 +41,7 @@ Future<void> runInstallerApp(
       'dry-run-config',
       valueHelp: 'path',
       help: 'Path of the dry-run config file',
+      defaultsTo: 'examples/dry-run-configs/tpm.yaml',
     );
     parser.addOption(
       'machine-config',
@@ -150,7 +151,6 @@ Future<void> runInstallerApp(
     if (options['source-catalog'] != null)
       '--source-catalog=${options['source-catalog']}',
     '--storage-version=2',
-    '--dry-run-config=examples/dry-run-configs/tpm.yaml',
     ...options.rest,
   ];
 
