@@ -93,7 +93,10 @@ Future<void> runInstallerApp(
   );
   tryRegisterService(JournalService.new);
   tryRegisterService<KeyboardService>(
-    () => SubiquityKeyboardService(getService<SubiquityClient>()),
+    () => SubiquityKeyboardService(
+      getService<SubiquityClient>(),
+      liveRun: liveRun,
+    ),
   );
   tryRegisterService<LocaleService>(
     () => SubiquityLocaleService(getService<SubiquityClient>()),

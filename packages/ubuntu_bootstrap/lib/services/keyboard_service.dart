@@ -14,6 +14,7 @@ final _log = Logger('keyboard_service');
 class SubiquityKeyboardService implements KeyboardService {
   SubiquityKeyboardService(
     this._subiquity, {
+    this.liveRun = false,
     @visibleForTesting GSettings? inputSourceSettings,
     @visibleForTesting
     Future<ProcessResult> Function(String, List<String>)? runProcess,
@@ -24,6 +25,7 @@ class SubiquityKeyboardService implements KeyboardService {
   final SubiquityClient _subiquity;
   final GSettings _inputSourceSettings;
   final Future<ProcessResult> Function(String, List<String>) _runProcess;
+  final bool liveRun;
 
   @override
   Future<KeyboardSetup> getKeyboard() => _subiquity.getKeyboard();
@@ -35,8 +37,10 @@ class SubiquityKeyboardService implements KeyboardService {
 
   @override
   Future<void> setInputSource(KeyboardSetting setting, {String? user}) async {
-    unawaited(_setXkbInputSource(setting));
-    await _setGsettingsInputSource(setting);
+    if (liveRun) {
+      unawaited(_setXkbInputSource(setting));
+      await _setGsettingsInputSource(setting);
+    }
     return _subiquity.setInputSource(setting, user: user);
   }
 
