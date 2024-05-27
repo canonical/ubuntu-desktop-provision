@@ -307,7 +307,7 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Прылады Wi-Fi не выяўлены';
 
   @override
-  String get networkWifiDisabled => 'Бесправадная з павінна быць уключана, каб выкарыстоўваць Wi-Fi на гэтым камп\'ютары';
+  String get networkWifiDisabled => 'Бесправадная сетка павінна быць уключана, каб выкарыстоўваць Wi-Fi на гэтым камп\'ютары';
 
   @override
   String get networkWifiEnable => 'Уключыць Wi-Fi';
@@ -334,5 +334,5 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get eulaReadAndAcceptTerms => 'Вы павінны прачытаць і прыняць умовы ліцэнзійнага пагаднення, каб працягнуць наладжванне гэтага камп\'ютара.';
 
   @override
-  String get eulaAcceptTerms => 'Я прачытаў і прымаю гэтыя ўмовы';
+  String get eulaAcceptTerms => 'Я прачытаў(-ла) і прымаю гэтыя ўмовы';
 }

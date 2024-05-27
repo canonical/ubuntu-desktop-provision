@@ -845,7 +845,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Bitte starten Sie das Installationsprogramm neu.';
+  String get refreshRestart => 'Bitte schließen Sie das Installationsprogramm und starten Sie es erneut, um fortzufahren';
 
   @override
   String get refreshCloseLabel => 'Installationsprogramm schließen';

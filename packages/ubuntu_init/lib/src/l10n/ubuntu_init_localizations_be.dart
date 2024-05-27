@@ -16,10 +16,10 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'ШТО НОВАГА?';
 
   @override
-  String get welcomeStartTitle => 'Спрошчаны старт';
+  String get welcomeStartTitle => 'Спрошчаны пачатак';
 
   @override
-  String get welcomeStartSubtitle => 'Прасцейшы працэс наладжвання.';
+  String get welcomeStartSubtitle => 'Падтрымка працэсу спрошчанага наладжвання.';
 
   @override
   String get welcomeStoreTitle => 'Новы выгляд App Store';
@@ -31,11 +31,11 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeSecurityTitle => 'Павышэнне бяспекі';
 
   @override
-  String get welcomeSecuritySubtitle => 'Новыя параметры для апаратнага забеспячэння або шыфраванне ZFS.';
+  String get welcomeSecuritySubtitle => 'Новыя параметры для апаратнага забеспячэння або шыфравання ZFS.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">Гісторыя змен</a>';
+    return '<a href=\"$url\">Паглядзець журнал змен</a>';
   }
 
   @override
@@ -78,7 +78,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Уключыць службы месцазнаходжання?';
 
   @override
-  String get privacyLocationSubtitle => 'Даць магчымасць праграмам ведаць ваша геаграфічнае месцазнаходжанне. Вы можаце змяніць гэта ў любы час у Наладах сістэмы.';
+  String get privacyLocationSubtitle => 'Дазволіць праграмам атрымліваць доступ да вашага геаграфічнае месцазнаходжанне. Вы ў любы час можаце змяніць гэта праз сістэмныя налады.';
 
   @override
   String get privacyLocationEnable => 'Служба месцазнаходжання';
@@ -95,7 +95,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Далучыць гэтую прыладу';
+  String get ubuntuProHeader => 'Далучыць гэты камп\'ютар';
 
   @override
   String get ubuntuProOrAddTokenManually => 'або дадайце токен уручную';

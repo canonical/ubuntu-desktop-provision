@@ -75,7 +75,7 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tanca';
 
   @override
   String get timezonePageTitle => 'On sou?';
