@@ -59,6 +59,7 @@ void main() {
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      liveRun: true,
     );
     await service.setInputSource(keyboardSetup.setting, user: 'ubuntu');
 
