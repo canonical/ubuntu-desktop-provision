@@ -66,5 +66,9 @@
   "timezonePageTitle": "Seleziona il tuo fuso orario",
   "@timezonePageTitle": {},
   "timezoneLocationLabel": "Posizione",
-  "@timezoneLocationLabel": {}
+  "@timezoneLocationLabel": {},
+  "restart": "Riavvia",
+  "@restart": {},
+  "close": "Chiudi",
+  "@close": {}
 }

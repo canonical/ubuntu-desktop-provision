@@ -72,10 +72,10 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Riavvia';
 
   @override
-  String get close => 'Close';
+  String get close => 'Chiudi';
 
   @override
   String get timezonePageTitle => 'Seleziona il tuo fuso orario';

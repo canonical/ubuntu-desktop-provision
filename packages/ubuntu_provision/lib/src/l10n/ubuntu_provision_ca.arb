@@ -74,5 +74,7 @@
   "networkHiddenWifiNameRequired": "Cal un nom de xarxa",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Ara mateix no vull connectar-me a Internet",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "Tanca",
+  "@close": {}
 }

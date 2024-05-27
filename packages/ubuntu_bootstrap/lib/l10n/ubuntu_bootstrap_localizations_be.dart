@@ -65,10 +65,10 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Аднавіць усталяванне';
+  String get tryOrInstallRepairOption => 'Выправіць усталёўку';
 
   @override
-  String get tryOrInstallRepairDescription => 'Выпраўленне паўторна ўсталёўвае ўсе ўсталяванае праграмнае забеспячэнне і пры гэтым не змяняе дакументацыю або налады.';
+  String get tryOrInstallRepairDescription => 'Падчас выпраўлення будзе пераўсталявана ўсё праграмнае забеспячэнне. Дакументы і налады закрануты не будуць.';
 
   @override
   String tryOption(String RELEASE) {
@@ -77,7 +77,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Вы можаце паспрабаваць $RELEASE без уплыву на налады вашага камп\'ютара.';
+    return 'Вы можаце паспрабаваць $RELEASE без аніякіх змен на вашым камп\'ютары.';
   }
 
   @override
@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Гэта эксперыментальная магчымасць. Яна можа не працаваць з вашым абсталяваннем у будучых выпусках $DISTRO.<a href=\"$url\">Прачытайце аб шыфраванні TPM</a> перад тым, як выбраць гэты параметр.';
+    return 'Гэта эксперыментальная магчымасць. Яна можа не працаваць з вашым абсталяваннем або ў будучых выпусках $DISTRO.<a href=\"$url\">Прачытайце аб шыфраванні TPM</a> перад тым, як выбраць гэты параметр.';
   }
 
   @override
@@ -395,7 +395,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num невялікіх раздзелаў схаваны, выкарыстоўвайце <a href=\"$url\">інструмент пашыранай разметкі</a> для большага кантролю';
+    return '$num меншых раздзелаў схаваны, выкарыстоўвайце <a href=\"$url\">інструмент пашыранай разметкі</a> для большага кантролю';
   }
 
   @override
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'Выбраны дыск не мае дастаткова месца на дыску каб усталяваць $DISTRO. Выйсці з усталёўшчыка праграм каб зрабіць больш месца ці выбраць іншы дыск.';
+    return 'На выбраным дыску не стае месца, каб усталяваць $DISTRO. Выйдзіце з усталёўшчыка, каб вызваліць месца або выбраць іншы дыск.';
   }
 
   @override

@@ -635,7 +635,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get restartNow => '今すぐ再起動';
 
   @override
-  String get continueTesting => '試用を続ける';
+  String get continueTesting => '試用を継続する';
 
   @override
   String get bitlockerTitle => 'BitLockerが有効になっています';

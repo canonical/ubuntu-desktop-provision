@@ -572,7 +572,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Bitte starten Sie das Installationsprogramm neu.",
+  "refreshRestart": "Bitte schließen Sie das Installationsprogramm und starten Sie es erneut, um fortzufahren",
   "@refreshRestart": {},
   "installationTypeTPM": "EXPERIMENTELL: Hardwaregestützte vollständige Festplattenverschlüsselung aktivieren",
   "@installationTypeTPM": {},

@@ -366,7 +366,7 @@
   "@installCodecsSubtitle": {},
   "installationTypeLVMEncryptionSelected": "LVMと暗号化を選択",
   "@installationTypeLVMEncryptionSelected": {},
-  "continueTesting": "試用を続ける",
+  "continueTesting": "試用を継続する",
   "@continueTesting": {},
   "restartNow": "今すぐ再起動",
   "@restartNow": {},
