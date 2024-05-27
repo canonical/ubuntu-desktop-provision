@@ -112,7 +112,6 @@ void main() {
 
   testWidgets('tpm requires uefi and secure boot', (tester) async {
     final model = buildStorageModel(
-      hasTpm: true,
       scenario: SecureBootScenarios.bios,
     );
     await tester.pumpWidget(buildPage(tester, model));
@@ -124,6 +123,8 @@ void main() {
     final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
+
+    expect(find.text('uefi & secure boot required'), findsOneWidget);
 
     await tester.pump();
     await tester.tapCancel();
@@ -146,6 +147,8 @@ void main() {
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
 
+    expect(find.text('tpm required'), findsOneWidget);
+
     await tester.pump();
     await tester.tapCancel();
 
@@ -155,7 +158,6 @@ void main() {
 
   testWidgets('tpm incompatible with third party drivers', (tester) async {
     final model = buildStorageModel(
-      hasTpm: true,
       scenario: SecureBootScenarios.thirdPartyDrivers,
     );
     await tester.pumpWidget(buildPage(tester, model));
@@ -167,6 +169,8 @@ void main() {
     final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(finder, findsOneWidget);
     expect(finder, isDisabled);
+
+    expect(find.text('third party drivers incompatible'), findsOneWidget);
 
     await tester.pump();
     await tester.tapCancel();

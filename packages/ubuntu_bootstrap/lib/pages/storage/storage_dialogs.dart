@@ -141,6 +141,9 @@ class TpmOption extends ConsumerWidget {
 
     final tpmInfo =
         lang.installationTypeTPMInfo(flavor.displayName, model.tpmInfoUrl);
+    final disallowedCapability = target.disallowed.firstWhereOrNull((e) =>
+        e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+        e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED);
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -153,11 +156,12 @@ class TpmOption extends ConsumerWidget {
               InfoBadge(title: experimentalBadgeText),
             ],
           ),
+          subtitle: disallowedCapability?.message == null
+              ? null
+              : Text(disallowedCapability!.message!),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
           groupValue: guidedCapability.value,
-          onChanged: target.disallowed.isEmpty
-              ? (v) => guidedCapability.value = v!
-              : null,
+          onChanged: model.hasTpm ? (v) => guidedCapability.value = v! : null,
         ),
         if (guidedCapability.value == GuidedCapability.CORE_BOOT_ENCRYPTED) ...[
           const SizedBox(height: kWizardSpacing),
