@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  json_annotation: ^4.9.0
   meta: ^1.11.0
   package_config: ^2.1.0
   path: ^1.8.3

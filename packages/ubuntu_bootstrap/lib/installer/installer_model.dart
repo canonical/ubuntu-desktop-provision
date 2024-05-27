@@ -1,42 +1,12 @@
-import 'dart:async';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:safe_change_notifier/safe_change_notifier.dart';
-import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
 final restartProvider = StateProvider((_) => 0);
 
-final installerModelProvider = ChangeNotifierProvider.autoDispose(
-  (_) => InstallerModel(
-    getService<InstallerService>(),
-  ),
+final applicationStatusProvider = StreamProvider(
+  (ref) => getService<InstallerService>().monitorStatus(),
 );
 
-class InstallerModel extends SafeChangeNotifier {
-  InstallerModel(this._installer);
-
-  final InstallerService _installer;
-
-  ApplicationStatus? _status;
-  StreamSubscription<ApplicationStatus?>? _statusChange;
-
-  ApplicationStatus? get status => _status;
-  bool get isInstalling => status?.isInstalling ?? false;
-
-  Future<void> init() async {
-    _statusChange = _installer.monitorStatus().listen((status) {
-      _status = status;
-      notifyListeners();
-    });
-  }
-
-  bool hasRoute(String route) => _installer.hasRoute(route);
-
-  @override
-  Future<void> dispose() async {
-    await _statusChange?.cancel();
-    _statusChange = null;
-    super.dispose();
-  }
-}
+final hasRouteProvider = Provider.family<bool, String>(
+  (ref, route) => getService<InstallerService>().hasRoute(route),
+);

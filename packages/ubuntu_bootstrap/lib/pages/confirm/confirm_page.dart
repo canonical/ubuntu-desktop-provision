@@ -28,7 +28,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(confirmModelProvider);
     final autoinstallModel = ref.watch(autoinstallModelProvider);
-    final status = ref.watch(installerModelProvider.select((m) => m.status));
+    final status = ref.watch(applicationStatusProvider).value;
 
     return HorizontalPage(
       windowTitle: lang.confirmPageTitle,
