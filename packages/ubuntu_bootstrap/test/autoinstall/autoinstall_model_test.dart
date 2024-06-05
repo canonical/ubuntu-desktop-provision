@@ -16,7 +16,8 @@ import 'autoinstall_model_test.mocks.dart';
 @GenerateMocks([HttpClient, HttpClientRequest, HttpClientResponse])
 void main() {
   const exampleUrl = 'http://example.com/autoinstall.yaml';
-  test('valid yaml', () async {
+  const exampleLocalUri = 'file:///path/to/autoinstall.yaml';
+  test('valid yaml from remote URL', () async {
     final subiquity = MockSubiquityClient();
     final subiquityServer = MockSubiquityServer();
     final resetUi = MockCallback();
@@ -70,6 +71,43 @@ void main() {
     expect(content, isNotEmpty);
     expect(loadYaml(content), isA<YamlMap>());
     verify(httpClient.getUrl(Uri.parse(exampleUrl))).called(1);
+    verify(subiquity.restart()).called(1);
+    verify(subiquityServer.waitSubiquity()).called(1);
+    verify(resetUi.call()).called(1);
+  });
+
+  test('valid yaml from local fs', () async {
+    final subiquity = MockSubiquityClient();
+    final subiquityServer = MockSubiquityServer();
+    final resetUi = MockCallback();
+    final fs = MemoryFileSystem.test();
+    final httpClient = createMockHttpClient();
+    final model = AutoinstallModel(
+      subiquity,
+      subiquityServer,
+      resetUi.call,
+      fs: fs,
+      httpClient: httpClient,
+      dryRun: true,
+    );
+
+    final localFile = fs.file(Uri.parse(exampleLocalUri).toFilePath());
+    localFile.absolute.parent.createSync(recursive: true);
+    localFile.writeAsStringSync('autoinstall:\n  version: 1\n');
+
+    model.url = exampleLocalUri;
+    await model.apply();
+
+    expect(model.state.hasValue, isTrue);
+    final content = fs
+        .file(p.join(
+          fs.systemTempDirectory.absolute.path,
+          'autoinstall.yaml',
+        ))
+        .readAsStringSync();
+    expect(content, isNotEmpty);
+    expect(loadYaml(content), isA<YamlMap>());
+    verifyNever(httpClient.getUrl(Uri.parse(exampleLocalUri)));
     verify(subiquity.restart()).called(1);
     verify(subiquityServer.waitSubiquity()).called(1);
     verify(resetUi.call()).called(1);

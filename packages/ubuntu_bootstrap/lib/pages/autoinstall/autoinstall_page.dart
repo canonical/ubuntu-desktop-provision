@@ -83,6 +83,8 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
                           final ArgumentError e => 'Invalid URL: ${e.message}',
                           final FormatException e =>
                             'Invalid Format: ${e.message}',
+                          final FileSystemException e =>
+                            'File system error: ${e.message}',
                           _ => 'Unknown Error',
                         };
                       },

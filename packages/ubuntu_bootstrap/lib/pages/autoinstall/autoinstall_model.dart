@@ -75,20 +75,26 @@ class AutoinstallModel extends SafeChangeNotifier {
 
   Future<void> _fetch() async {
     final uri = Uri.parse(url);
-    _httpClient.connectionTimeout = const Duration(seconds: 10);
 
-    final response = await _httpClient
-        .getUrl(uri)
-        .then((request) => request.close())
-        .then((httpResponse) => httpResponse.transform(utf8.decoder).join());
+    final String content;
 
-    loadYaml(response);
+    if (uri.scheme == 'file') {
+      content = await _fs.file(uri.toFilePath()).readAsString();
+    } else {
+      _httpClient.connectionTimeout = const Duration(seconds: 10);
+      content = await _httpClient
+          .getUrl(uri)
+          .then((request) => request.close())
+          .then((httpResponse) => httpResponse.transform(utf8.decoder).join());
+    }
+
+    loadYaml(content);
 
     final file = _fs.file(p.join(
       _fs.systemTempDirectory.absolute.path,
       filename,
     ));
-    await file.writeAsString(response);
+    await file.writeAsString(content);
     _log.debug('Downloaded $uri to ${file.absolute.path}');
 
     if (_dryRun) {
