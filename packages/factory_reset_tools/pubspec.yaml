@@ -5,6 +5,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.19.2"
 
 dependencies:
   args: ^2.4.2
@@ -27,12 +28,6 @@ dependencies:
   ubuntu_wizard: ^0.1.0
   yaml: ^3.1.2
   yaru: 4.1.0
-
-dependency_overrides:
-  yaru:
-    git:
-      url: https://github.com/ubuntu/yaru.dart.git
-      ref: main
 
 dev_dependencies:
   flutter_test:
