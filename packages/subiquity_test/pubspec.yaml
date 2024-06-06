@@ -8,9 +8,9 @@ environment:
 dependencies:
   build_runner: ^2.4.8
   mockito: 5.4.4
-  path: ^1.8.3
+  path: ^1.9.0
   subiquity_client: ^0.1.0
 
 dev_dependencies:
   test: any
-  ubuntu_lints: ^0.3.0
+  ubuntu_lints: ^0.3.1

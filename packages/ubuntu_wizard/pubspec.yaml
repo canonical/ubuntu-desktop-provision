@@ -5,14 +5,14 @@ publish_to: 'none'
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.19.2"
+  flutter: ">=3.22.1"
 
 dependencies:
   flutter:
     sdk: flutter
   ubuntu_flavor: ^0.4.0
-  ubuntu_localizations: ^0.3.5
-  ubuntu_widgets: ^0.5.5
+  ubuntu_localizations: ^0.4.0
+  ubuntu_widgets: ^0.6.0
   wizard_router: ^1.2.0
   yaru: 4.1.0
 
@@ -20,6 +20,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ubuntu_lints: ^0.3.0
-  ubuntu_test: ^0.1.0-beta.8
+  ubuntu_lints: ^0.3.1
+  ubuntu_test: ^0.1.0-beta.10
   yaru_test: ^0.1.6
