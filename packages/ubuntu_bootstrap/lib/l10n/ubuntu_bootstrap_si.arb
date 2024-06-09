@@ -169,7 +169,7 @@
   "@copyingFiles": {},
   "installationFailed": "ස්ථාපනයට අසමත් විය",
   "@installationFailed": {},
-  "notEnoughDiskSpaceTitle": "කණගාටුයි",
+  "notEnoughDiskSpaceTitle": "තැටියේ ඉඩ මදියි",
   "@notEnoughDiskSpaceTitle": {},
   "bitlockerInstructions": "උපදෙස් සඳහා, දුරකථනයක හෝ වෙනත් උපාංගයක මෙම පිටුව අරින්න: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
@@ -202,7 +202,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "මෙම මෘදුකාංගය එහි ප්‍රලේඛනයෙහි ඇතුළත් බලපත්‍ර නියම වලට යටත් වේ. ඇතැම් දෑ ස්වාම්‍යයි.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "ස්ථාපන වර්ගය",
+  "installationTypeTitle": "තැටිය පිහිටුවීම",
   "@installationTypeTitle": {},
   "installationTypeManual": "වෙන යමක්",
   "@installationTypeManual": {},
@@ -418,5 +418,31 @@
       "oldsize": {},
       "newsize": {}
     }
-  }
+  },
+  "refreshSnapCleanup": "{snap} ශුද්ධ කරමින්...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportDocumentation": "නිල ප්‍රලේඛනය",
+  "@installationSlidesSupportDocumentation": {},
+  "validate": "වලංගුකරණය",
+  "@validate": {},
+  "recoveryKeyTitle": "TPM ප්‍රතිසාධන කේතය",
+  "@recoveryKeyTitle": {},
+  "refreshSnapStartServices": "{snap} සේවා අරඹමින්...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallTitle": "ස්ථාපන වර්ගය",
+  "@autoinstallTitle": {},
+  "confirmEntryDiskSetup": "තැටිය පිහිටුවීම",
+  "@confirmEntryDiskSetup": {}
 }
