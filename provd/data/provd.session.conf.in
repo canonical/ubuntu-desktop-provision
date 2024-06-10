@@ -1,0 +1,9 @@
+[Unit]
+# Must be in sync with @this_component@.session
+@wants_required_components@
+
+Requires=@requires_component@.target
+
+# Only difference to a standard GNOME session is the @this_component@ service
+Requires=@this_component@.service
+

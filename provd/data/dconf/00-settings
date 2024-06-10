@@ -1,0 +1,15 @@
+# This file is part of the provd package and should not be changed.
+#
+# Instead create your own file next to it with a higher numbered prefix,
+# and run
+#    dconf update
+#
+
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=true
+
+[org/gnome/desktop/lockdown]
+disable-lock-screen=true
+disable-log-out=true
+disable-user-switching=true
+
