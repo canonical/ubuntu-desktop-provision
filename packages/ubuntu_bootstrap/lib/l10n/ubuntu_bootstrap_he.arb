@@ -755,7 +755,7 @@
       }
     }
   },
-  "autoinstallInstructions": "נא למלא את כתובת ה־autoinstall.yaml:",
+  "autoinstallInstructions": "נא למלא את כתובת ה־autoinstall.yaml או נתיב מקומי:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "ההתקנה אינטראקטיבית",
   "@autoinstallInteractiveOption": {},
