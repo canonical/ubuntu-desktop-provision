@@ -33,5 +33,9 @@
   "resetMediaReadyBody": "Kullanmak istediğinizde, sıfırlayacağınız bilgisayara USB flaş belleği takın ve yeniden başlatın.",
   "@resetMediaReadyBody": {},
   "noMediaDetected": "Çıkarılabilir bir depolama cihazı bulunamadı",
-  "@noMediaDetected": {}
+  "@noMediaDetected": {},
+  "close": "Kapat",
+  "@close": {},
+  "restart": "Yeniden Başlat",
+  "@restart": {}
 }
