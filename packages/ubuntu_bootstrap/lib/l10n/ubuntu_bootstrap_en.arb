@@ -18,7 +18,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Enter the autoinstall.yaml URL:",
+  "autoinstallInstructions": "Enter the autoinstall.yaml URL or local file path:",
   "autoinstallInteractiveOption": "Interactive installation",
   "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
   "autoinstallAutomatedOption": "Automated installation",
