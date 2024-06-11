@@ -264,7 +264,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Enter the autoinstall.yaml URL:'**
+  /// **'Enter the autoinstall.yaml URL or local file path:'**
   String get autoinstallInstructions;
 
   /// No description provided for @autoinstallInteractiveOption.
