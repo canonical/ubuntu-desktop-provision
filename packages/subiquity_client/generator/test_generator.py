@@ -157,7 +157,7 @@ class BazQux:
 TestUnion = Union[Foo, Bar, BazQux]
 """)
         self.assertEqual(generator.to_dart(), """
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+@Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
 class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('Foo')
@@ -193,7 +193,7 @@ class TestClass:
     foo: Union[Foo, BarBaz]
 """)
         self.assertEqual(generator.to_dart(), """
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+@Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
 class FooOrBarBaz with _$FooOrBarBaz {
 
   @FreezedUnionValue('Foo')
@@ -232,7 +232,7 @@ class TestClass:
     foo: Union[TestUnionFoo, TestUnionBarBaz]
 """)
         self.assertEqual(generator.to_dart(), """
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+@Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
 class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('TestUnionFoo')
@@ -307,7 +307,7 @@ class Bar:
 TestUnion = Union[Foo, Bar]
 """)
         self.assertEqual(generator.to_dart(), """
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+@Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
 class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('Foo')
