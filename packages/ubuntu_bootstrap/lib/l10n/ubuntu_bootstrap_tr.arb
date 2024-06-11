@@ -767,5 +767,7 @@
   "minimalInstallationSubtitle": "Yalnızca gerekli olanlar, web tarayıcısı ve temel yardımcı araçlar.",
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Tam kurulum",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "warningLabel": "Uyarı:",
+  "@warningLabel": {}
 }
