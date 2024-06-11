@@ -159,5 +159,13 @@
   "networkHiddenWifiNameRequired": "Ağ adı gereklidir",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "Şu anda internete bağlanmak istemiyorum",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "accessibilityPageTitle": "Erişilebilirlik",
+  "@accessibilityPageTitle": {},
+  "accessibilityZoomLabel": "Yakınlaştırma",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Yüksek karşıtlık",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityScreenReaderLabel": "Ekran okuyucusu",
+  "@accessibilityScreenReaderLabel": {}
 }
