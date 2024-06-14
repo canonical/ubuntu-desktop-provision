@@ -782,7 +782,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Введите URL autoinstall.yaml:",
+  "autoinstallInstructions": "Введите URL-адрес autoinstall.yaml или путь к локальному файлу:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Интерактивная установка",
   "@autoinstallInteractiveOption": {},

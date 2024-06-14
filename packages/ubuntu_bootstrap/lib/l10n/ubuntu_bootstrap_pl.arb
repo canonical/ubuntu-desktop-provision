@@ -743,7 +743,7 @@
   "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Rozszerzony wybór",
   "@fullInstallationTitle": {},
-  "autoinstallInstructions": "Wpisz adres URL pliku autoinstall.yaml:",
+  "autoinstallInstructions": "Wpisz adres URL pliku autoinstall.yaml lub ścieżkę pliku lokalnego:",
   "@autoinstallInstructions": {},
   "warningLabel": "Ostrzeżenie:",
   "@warningLabel": {},

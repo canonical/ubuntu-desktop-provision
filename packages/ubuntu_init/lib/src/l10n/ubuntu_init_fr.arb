@@ -108,5 +108,7 @@
   "ubuntuProOnBoardingSkipForNowDescription": "Vous pouvez toujours activer Ubuntu Pro plus tard dans l'application Logiciels & Mises à jour.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "telemetryReportLabel": "Voir le premier rapport",
-  "@telemetryReportLabel": {}
+  "@telemetryReportLabel": {},
+  "telemetryCollectError": "Échec de la collecte des données de télémétrie",
+  "@telemetryCollectError": {}
 }

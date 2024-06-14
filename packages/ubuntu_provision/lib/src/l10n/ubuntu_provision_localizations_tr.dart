@@ -5,7 +5,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Erişim Kolaylıkları';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
@@ -30,10 +30,10 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get accessibilityPointingLabel => 'Pointing and clicking';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Yakınlaştırma';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Yüksek karşıtlık';
 
   @override
   String get accessibilityLargeTextLabel => 'Large text';
@@ -42,40 +42,40 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get accessibilityReduceAnimationLabel => 'Reduce animation';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Ekran okuyucusu';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Visual alerts';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Yapışkan tuşlar';
 
   @override
   String get accessibilitySlowKeysLabel => 'Slow keys';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Fare tuşları';
 
   @override
   String get accessibilityDesktopZoomLabel => 'Desktop zoom';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Bir sorun oluştu';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Günlüğü görüntüle';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Günlüğü gizle';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Yeniden Başlat';
 
   @override
-  String get close => 'Close';
+  String get close => 'Kapat';
 
   @override
   String get timezonePageTitle => 'Saat diliminizi seçin';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Klavye düzeni';
 
   @override
-  String get keyboardHeader => 'Klavye düzeninizi seçin:';
+  String get keyboardHeader => 'Klavye düzeninizi seçin';
 
   @override
   String get keyboardTestHint => 'Klavyenizi test etmek için buraya yazın';
@@ -277,7 +277,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Bir ağa bağlan';
 
   @override
-  String get networkPageHeader => 'Bu bilgisayarı internete bağlamak, Ubuntu\'nun ihtiyacı olan ek yazılımları kurmasına ve zaman diliminizi seçmenize yardımcı olur.\n\nEthernet kablosuyla bağlan veya bir Wi-Fi ağı seç';
+  String get networkPageHeader => 'İnternete bağlan';
 
   @override
   String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
@@ -325,14 +325,14 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Şu anda internete bağlanmak istemiyorum';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Lisans sözleşmesi';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Lisans koşullarını gözden geçirin';
 
   @override
   String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Koşulları okudum ve kabul ediyorum';
 }

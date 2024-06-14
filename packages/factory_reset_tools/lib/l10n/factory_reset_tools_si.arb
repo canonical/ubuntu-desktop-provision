@@ -1,3 +1,7 @@
 {
-  "@@locale": "si"
+  "@@locale": "si",
+  "close": "වසන්න",
+  "@close": {},
+  "restart": "යළි අරඹන්න",
+  "@restart": {}
 }

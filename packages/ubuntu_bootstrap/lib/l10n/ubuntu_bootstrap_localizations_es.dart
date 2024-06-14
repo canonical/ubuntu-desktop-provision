@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Introduzca el URL de autoinstall.yaml:';
+  String get autoinstallInstructions => 'Ingresa la URL de autoinstall.yaml o la ruta del archivo local:';
 
   @override
   String get autoinstallInteractiveOption => 'Instalación interactiva';

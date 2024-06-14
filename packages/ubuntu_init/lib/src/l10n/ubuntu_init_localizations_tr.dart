@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Hayır, sistem verilerini paylaşma';
 
   @override
-  String get telemetryReportLabel => 'Raporlama ayrıntıları';
+  String get telemetryReportLabel => 'İlk raporu göster';
 
   @override
   String get telemetryReportTitle => 'Raporlama ayrıntıları';

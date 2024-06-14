@@ -765,7 +765,7 @@
   "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "Para usuarios avanzados que tienen un archivo autoinstall.yaml para configuraciones del sistema consistentes y repetibles.",
   "@autoinstallAutomatedDescription": {},
-  "autoinstallInstructions": "Introduzca el URL de autoinstall.yaml:",
+  "autoinstallInstructions": "Ingresa la URL de autoinstall.yaml o la ruta del archivo local:",
   "@autoinstallInstructions": {},
   "tryOrInstallHeader": "¿Qué quiere hacer con {DISTRO}?",
   "@tryOrInstallHeader": {

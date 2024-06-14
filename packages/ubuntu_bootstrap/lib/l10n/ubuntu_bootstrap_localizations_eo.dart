@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Tajpu la retadreson de la dosiero «autoinstall.yaml»:';
+  String get autoinstallInstructions => 'Tajpu la retadreson aŭ lokan dosierindikon de la dosiero «autoinstall.yaml»:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaga instalado';

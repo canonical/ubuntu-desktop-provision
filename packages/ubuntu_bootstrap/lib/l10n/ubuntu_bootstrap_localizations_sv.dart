@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Ange autoinstall.yaml URL.';
+  String get autoinstallInstructions => 'Ange autoinstall.yaml URL eller lokal filsökväg:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktiv installation';

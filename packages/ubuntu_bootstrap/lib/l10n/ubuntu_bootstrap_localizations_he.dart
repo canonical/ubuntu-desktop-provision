@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'נא למלא את כתובת ה־autoinstall.yaml:';
+  String get autoinstallInstructions => 'נא למלא את כתובת ה־autoinstall.yaml או נתיב מקומי:';
 
   @override
   String get autoinstallInteractiveOption => 'ההתקנה אינטראקטיבית';

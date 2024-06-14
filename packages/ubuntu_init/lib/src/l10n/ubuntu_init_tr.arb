@@ -49,7 +49,7 @@
   },
   "telemetryLabelOff": "Hayır, sistem verilerini paylaşma",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "Raporlama ayrıntıları",
+  "telemetryReportLabel": "İlk raporu göster",
   "@telemetryReportLabel": {},
   "telemetryReportTitle": "Raporlama ayrıntıları",
   "@telemetryReportTitle": {},
@@ -64,5 +64,7 @@
   "privacyLocationEnable": "Konum hizmetleri",
   "@privacyLocationEnable": {},
   "privacyPolicyLink": "Veri Gizliliği",
-  "@privacyPolicyLink": {}
+  "@privacyPolicyLink": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {}
 }

@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'ස්ථාපන වර්ගය';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
-  String get installationTypeTitle => 'ස්ථාපන වර්ගය';
+  String get installationTypeTitle => 'තැටිය පිහිටුවීම';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -536,7 +536,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Applications';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'තැටිය පිහිටුවීම';
 
   @override
   String get confirmEntryDiskEncryption => 'Disk encryption';
@@ -773,7 +773,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportResources => 'Helpful resources:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'නිල ප්‍රලේඛනය';
 
   @override
   String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'ස්ථාපනයට අසමත් විය';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'කණගාටුයි';
+  String get notEnoughDiskSpaceTitle => 'තැටියේ ඉඩ මදියි';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -942,16 +942,16 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap සේවා අරඹමින්...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap ශුද්ධ කරමින්...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM ප්‍රතිසාධන කේතය';
 
   @override
   String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
@@ -962,5 +962,5 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'වලංගුකරණය';
 }
