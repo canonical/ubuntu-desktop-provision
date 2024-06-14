@@ -36,6 +36,8 @@ final logStreamProvider = Provider<Stream<String>>((ref) {
   return logController.stream;
 });
 
+final apportProvider = Provider((ref) => tryGetService<ApportService>());
+
 @immutable
 class ErrorModel {
   const ErrorModel({
