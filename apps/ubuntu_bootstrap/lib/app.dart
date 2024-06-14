@@ -115,6 +115,7 @@ Future<void> runInstallerApp(
   tryRegisterService<ActiveDirectoryService>(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );
+  tryRegisterService<ApportService>(() => ApportService(liveRun: liveRun));
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<AutoinstallService>(
     () => AutoinstallService(
