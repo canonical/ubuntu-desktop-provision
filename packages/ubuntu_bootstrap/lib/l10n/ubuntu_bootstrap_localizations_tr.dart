@@ -5,15 +5,15 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Masaüstü Kurucu';
+  String get appTitle => 'Ubuntu Desktop Yükleyici';
 
   @override
   String windowTitle(String RELEASE) {
-    return '$RELEASE Kur';
+    return '$RELEASE Yükle';
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Yükleme türü';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Otomatik yükleme';
 
   @override
   String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Uyarı:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Güvenlik anahtarını göster';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Gizle';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Uygulamalar ve güncellemeler';
@@ -151,7 +151,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Başlangıç olarak hangi uygulamaları kurmak istersiniz?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Bilgisayarınızı optimize edin';
 
   @override
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
@@ -162,10 +162,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA grafik kartı tespit edildi';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'NVIDIA grafik kartlarının en iyi performansı için ek sürücülerin yüklenmesi tavsiye edilir.';
 
   @override
   String get fullInstallationTitle => 'Tam kurulum';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Hiçbiri';
 
   @override
   String get confirmDevicesTitle => 'Aygıtlar';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Uygulamalar';
 
   @override
   String get confirmEntryDiskSetup => 'Disk setup';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Disk şifreleme';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Kurulum diski';
 
   @override
   String get confirmEntryProprietarySoftware => 'Proprietary software';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Genel';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Güvenlik ve daha fazlası';
 
   @override
   String get confirmPartitionsTitle => 'Disk bölümleri';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Kod çözücüler';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Kod çözücüler & sürücüler';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Sürücüler';
 
   @override
   String get confirmInstallButton => 'Kur';
@@ -816,13 +816,13 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get refreshHeader => 'An update is available for the installer';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Şimdi güncelle';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Güncelleme hazır';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -848,7 +848,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get refreshRestart => 'Kurucuyu yeniden başlatın.';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Yükleyiciyi kapat';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -962,5 +962,5 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Onayla';
 }

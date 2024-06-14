@@ -5,11 +5,11 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'ප්‍රවේශ්‍යතාව';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO ප්‍රවේශ්‍යතාව';
   }
 
   @override
@@ -18,31 +18,31 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'දැකීම';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'ඇසීම';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'ලිවීම';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'දැක්වීම හා එබීම';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'විශාලනය';
 
   @override
   String get accessibilityHighContrastLabel => 'High contrast';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'විශාල පෙළ';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Reduce animation';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'තිරය කියවනය';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Visual alerts';
@@ -54,28 +54,28 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get accessibilitySlowKeysLabel => 'Slow keys';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'මූසික යතුරු';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'වැඩතලය විශාලනය';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'යමක් වැරදී ඇත';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'සටහන් පෙන්වන්න';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'සටහන් සඟවන්න';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'යළි අරඹන්න';
 
   @override
-  String get close => 'Close';
+  String get close => 'වසන්න';
 
   @override
   String get timezonePageTitle => 'ඔබ කොහිද?';
@@ -99,10 +99,10 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'යතුරුපුවරුවේ පිරිසැලසුම අනාවරණය';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'අනාවරණය';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'යතුරුපුවරු ප්‍රහේදය තෝරන්න:';
 
   @override
   String get keyboardPressKeyLabel => 'පහත යතුරු වලින් එකක් ඔබන්න:';
@@ -124,7 +124,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO වෙත පිළිගනිමු';
   }
 
   @override
@@ -146,7 +146,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityRealNameRequired => 'නමක් වුවමනාය';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'මෙම නම දිග වැඩියි.';
 
   @override
   String get identityHostnameLabel => 'ඔබගේ පරිගණකයේ නම';
@@ -158,7 +158,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'පරිගණකයට නමක් වුවමනාය';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'පරිගණකයේ නම දිග වැඩියි.';
 
   @override
   String get identityInvalidHostname => 'පරිගණකයේ නම වැරදිය';
@@ -203,16 +203,16 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => 'සඟවන්න';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'සක්‍රිය නමාවලිය භාවිතා කරන්න';
 
   @override
   String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'සක්‍රිය නාමාවලියට පිවිසෙන්න';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'සක්‍රිය නාමාවලියට පිවිසෙන්න ද?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
@@ -220,52 +220,52 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'වසමට සබැඳුම අත්හදා බලන්න';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'වසම';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'වුවමනාය';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'දිග වැඩියි';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'අකුරු වලංගු නොවේ';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'තිතකින් (.) ඇරඹෙයි';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'තිතකින් (.) නිමාවෙයි';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'ඉරකින් (-) ඇරඹෙයි';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'ඉරකින් (-) නිමාවෙයි';
 
   @override
   String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'වසම හමු නොවිණි';
 
   @override
   String get activeDirectoryAdminLabel => 'Domain join user';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'වුවමනාය';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'අකුරු වලංගු නොවේ';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'මුරපදය';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'වුවමනාය';
 
   @override
   String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';

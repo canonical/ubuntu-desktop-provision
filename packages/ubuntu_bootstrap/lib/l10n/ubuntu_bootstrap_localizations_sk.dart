@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Zadajte autoinstall.yaml URL:';
+  String get autoinstallInstructions => 'Zadajte autoinstall.yaml URL alebo cestu k lokálnemu súboru:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktívna inštalácia';
