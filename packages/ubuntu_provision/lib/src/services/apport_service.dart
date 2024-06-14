@@ -28,7 +28,10 @@ class ApportService {
     }
     if (liveRun) {
       _log.info('Running apport for $snapName');
-      await runProcess(apport, [snapName]);
+      final result = await runProcess(apport, [snapName]);
+      if (result.exitCode != 0) {
+        _log.error('Failed to run apport for $snapName: ${result.stderr}');
+      }
     } else {
       _log.info('Dry-run: Running apport for $snapName');
     }
