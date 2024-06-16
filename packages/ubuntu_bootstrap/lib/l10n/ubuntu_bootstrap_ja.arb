@@ -17,7 +17,7 @@
   },
   "rstTitle": "RSTを検出",
   "@rstTitle": {},
-  "rstDescription": "このコンピューターは Intel RST (Rapid Storage Technology) を使用しています。Ubuntu をインストールする前に Windows で RST を無効にする必要があります。",
+  "rstDescription": "このコンピューターは Intel RST (Rapid Storage Technology) を使用しています。{DISTRO} をインストールする前に Windows で RST を無効にする必要があります。",
   "@rstDescription": {},
   "configureSecureBootDescription": "サードパーティのドライバーソフトウェアのインストールを選択しました。セキュアブートの無効化が必要です。\nここでセキュリティキーを設定し、システム再起動時にそのキーを入力してください。",
   "@configureSecureBootDescription": {},
@@ -606,7 +606,7 @@
       }
     }
   },
-  "autoinstallInstructions": "autoinstall.yamlのURLを入力:",
+  "autoinstallInstructions": "autoinstall.yamlのURLもしくはローカルファイルパスを入力:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "対話式インストール",
   "@autoinstallInteractiveOption": {},
