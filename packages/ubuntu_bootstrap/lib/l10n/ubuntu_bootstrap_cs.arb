@@ -662,7 +662,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Instalátor ukončete a spusťte znovu kliknutím na Restartovat.",
+  "refreshRestart": "Pro pokračování prosím instalátor ukončete a znovu spusťte",
   "@refreshRestart": {},
   "refreshSnapDownload": "Stahování {snap}…",
   "@refreshSnapDownload": {
@@ -804,7 +804,7 @@
   "@autoinstallInteractiveOption": {},
   "autoinstallAutomatedOption": "Automatická instalace",
   "@autoinstallAutomatedOption": {},
-  "autoinstallInstructions": "Zadejte adresu URL autoinstall.yaml:",
+  "autoinstallInstructions": "Zadejte adresu URL autoinstall.yaml nebo cestu k místnímu souboru:",
   "@autoinstallInstructions": {},
   "autoinstallAutomatedDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
   "@autoinstallAutomatedDescription": {},
