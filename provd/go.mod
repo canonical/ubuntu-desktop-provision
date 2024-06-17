@@ -7,7 +7,7 @@ toolchain go1.22.4
 require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
 	github.com/linuxdeepin/go-gir v0.0.0-20230710064042-bd15f0549c87
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.18.2
 	github.com/stretchr/testify v1.9.0
 	github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a
