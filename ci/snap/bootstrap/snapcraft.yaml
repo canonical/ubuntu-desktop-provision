@@ -198,6 +198,7 @@ parts:
       - libgl1
       - libglib2.0-0
       - libglib2.0-dev
+      - libgirepository-1.0-1
       - libgtk-3-0
       - libpango-1.0-0
       - libpangocairo-1.0-0
@@ -215,6 +216,7 @@ parts:
       - shared-mime-info
       - libglib2.0-bin
       - libibus-1.0-5
+      - python3-gi
     prime:
       - usr/lib/*/libEGL*.so.*
       - usr/lib/*/libGL*.so.*
@@ -242,6 +244,7 @@ parts:
       - usr/lib/*/libpciaccess*.so.*
       - usr/lib/*/libsensors*.so.*
       - usr/lib/*/libvulkan*.so.*
+      - usr/lib/python3/dist-packages/gi
       - usr/share/glvnd/egl_vendor.d
       - usr/lib/*/gdk-pixbuf-2.0
       - usr/lib/*/
