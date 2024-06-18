@@ -15,6 +15,23 @@ void main() {
     await service.launch();
     verify(mockProcess.run('ubuntu-bug', ['snap-name'])).called(1);
   });
+
+  test('pre commands', () async {
+    final mockProcess = MockProcess();
+    when(mockProcess.run(any, any))
+        .thenAnswer((_) async => ProcessResult(0, 0, '', ''));
+    final mockEnv = <String, String>{'SNAP_NAME': 'snap-name'};
+    final service = ApportService(
+      runProcess: mockProcess.run,
+      env: mockEnv,
+      preCommands: [
+        (cmd: 'echo', args: ['foo']),
+      ],
+    );
+
+    await service.launch();
+    verify(mockProcess.run('echo', ['foo'])).called(1);
+  });
 }
 
 abstract class _Process {
