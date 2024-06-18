@@ -42,7 +42,7 @@
   },
   "rstTitle": "RST je zapnuté",
   "@rstTitle": {},
-  "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné Ubuntu nainstalovat, je třeba ve Windows funkci RST vypnout.",
+  "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné {DISTRO} nainstalovat, je třeba ve Windows funkci RST vypnout.",
   "@rstDescription": {},
   "rstInstructions": "Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -104,7 +104,7 @@
   "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "Vybráno ZFS",
   "@installationTypeZFSSelected": {},
-  "installationTypeZFS": "EXPERIMENTÁLNÍ: Vymazat disk a použít souborový systém ZFS",
+  "installationTypeZFS": "Vymazat disk a použít souborový systém ZFS",
   "@installationTypeZFS": {},
   "installationTypeReinstall": "Vymazat {os} a přeinstalovat",
   "@installationTypeReinstall": {
@@ -209,7 +209,7 @@
   "@confirmPartitionChanges": {},
   "confirmPartitionTables": "Budou změněny tabulky rozdělení na oddíly následujících zařízení:",
   "@confirmPartitionTables": {},
-  "confirmHeader": "Pokud budete pokračovat, níže uvedené změny budou zapsány na disky. Další změny pak můžete udělat ručně.",
+  "confirmHeader": "Zkontrolujte své volby",
   "@confirmHeader": {},
   "confirmPageTitle": "Připraveno k instalaci",
   "@confirmPageTitle": {},
@@ -403,9 +403,9 @@
   "@installDriversTitle": {},
   "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další formáty médií",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některé jsou proprietární.",
+  "installCodecsSubtitle": "Včetně, ale nejen MP3, MP4, MOV a podobné",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Tyto ovladače jsou předmětem licenčních ujednání obsažených v dokumentaci k nim. Jsou proprietárními.",
+  "installDriversSubtitle": "Včetně, ale nejen, ovladačů NVIDIA a podobných",
   "@installDriversSubtitle": {},
   "offlineWarning": "V tu chvíli nejste připojení k Internetu",
   "@offlineWarning": {},
@@ -613,7 +613,7 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "EXPERIMENTÁLNÍ: zapnout na hardware založené šifrování celého disku",
+  "installationTypeTPM": "Zapnout na hardware založené šifrování celého disku",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM vybráno",
   "@installationTypeTPMSelected": {},
@@ -780,7 +780,7 @@
       "color": {}
     }
   },
-  "fullInstallationSubtitle": "Výběr kancelářských a jiných nástrojů, webový prohlížeč a hry.",
+  "fullInstallationSubtitle": "Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Výchozí instalace",
   "@minimalInstallationTitle": {},
