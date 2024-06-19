@@ -14,6 +14,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
   Future<bool> load(BuildContext context, WidgetRef ref) async {
     final model = ref.read(localeModelProvider);
     await model.init();
+    throw Exception('Test Error');
     unawaited(model.playWelcomeSound());
     return true;
   }

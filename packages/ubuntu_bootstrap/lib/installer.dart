@@ -80,6 +80,13 @@ Future<void> runInstallerApp(
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<ActiveDirectoryService>(
       () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
+  tryRegisterService<ApportService>(() => ApportService(
+        liveRun: liveRun,
+        preCommands: [
+          // Make sure the log files are readable by the live session user.
+          (cmd: 'sudo', args: ['sh', '-c', 'chmod a+r /var/log/installer/*']),
+        ],
+      ));
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(ConfigService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
