@@ -12,9 +12,14 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+const defaultFilePath = '/usr/share/desktop-provision';
+
 final eulaPageProvider = FutureProvider<File>((ref) async {
   final locale = Intl.defaultLocale ?? await findSystemLocale();
-  const directory = '/usr/share/desktop-provision/eula';
+  final directory = p.join(
+    Platform.environment['DESKTOP_PROVISION_PATH'] ?? defaultFilePath,
+    'eula',
+  );
   final localizedEula = File(p.join(directory, 'EULA_$locale.pdf'));
   late final fallbackEula = File(p.join(directory, 'EULA.pdf'));
   final eulaFile = localizedEula.existsSync() ? localizedEula : fallbackEula;
@@ -43,7 +48,14 @@ class _EulaPageState extends ConsumerState<EulaPage> {
           Logger('eula')
               .error('Error loading EULA file: $error', error, stackTrace);
           return _EulaPdfViewer(
-              path: File('/usr/share/desktop-provision/eula/EULA.pdf').path);
+            path: File(
+              p.join(
+                Platform.environment['DESKTOP_PROVISION_PATH'] ??
+                    defaultFilePath,
+                'eula/EULA.pdf',
+              ),
+            ).path,
+          );
         });
 
     return WizardPage(
