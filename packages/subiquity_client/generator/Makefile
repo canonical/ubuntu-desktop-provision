@@ -1,4 +1,5 @@
-types_py = ../subiquity/subiquity/common/types.py
+types_py = ../subiquity/subiquity/common/types/__init__.py \
+	   ../subiquity/subiquity/common/types/storage.py
 types_dart = ../lib/src/types.dart
 
 generate:
