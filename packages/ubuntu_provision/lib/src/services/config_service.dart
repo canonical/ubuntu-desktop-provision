@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_catches_without_on_clauses
 
+import 'dart:io';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/services.dart';
@@ -123,7 +124,10 @@ class ConfigService {
   @visibleForTesting
   static String? lookupPath(FileSystem fs) {
     for (final ext in _extensions) {
-      final path = join(whiteLabelDirectory, '$_filename.$ext');
+      final path = join(
+        Platform.environment['DESKTOP_PROVISION_PATH'] ?? whiteLabelDirectory,
+        '$_filename.$ext',
+      );
       if (fs.file(path).existsSync()) return path;
     }
     return null;

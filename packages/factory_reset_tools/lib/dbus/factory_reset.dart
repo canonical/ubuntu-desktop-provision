@@ -3,10 +3,12 @@ import 'dart:io';
 
 import 'package:dbus/dbus.dart';
 import 'package:factory_reset_tools/dbus/dbus_remote_object.dart';
+import 'package:path/path.dart' as p;
 import 'package:retry/retry.dart';
 import 'package:yaml/yaml.dart';
 
-const defaultFilePath = '/usr/share/desktop-provision/reset.yaml';
+const defaultFilePath = '/usr/share/desktop-provision';
+const defaultFileName = 'reset.yaml';
 
 enum ResetOptionType {
   factoryReset('factory-reset'),
@@ -98,10 +100,19 @@ final List<BootOption> defaultBootOption = [
   ),
 ];
 
-List<BootOption> getResetOptions({String path = defaultFilePath}) {
+String _expandPathIfNull(String? path) {
+  return path ??
+      p.join(
+        Platform.environment['DESKTOP_PROVISION_PATH'] ?? defaultFilePath,
+        defaultFileName,
+      );
+}
+
+List<BootOption> getResetOptions({String? path}) {
   try {
-    final rawConfig = File(path).readAsStringSync();
-    final config = loadYaml(rawConfig, sourceUrl: Uri.file(path));
+    final rawConfig = File(_expandPathIfNull(path)).readAsStringSync();
+    final config =
+        loadYaml(rawConfig, sourceUrl: Uri.file(_expandPathIfNull(path)));
     final options = config['reset_tool_options'] as YamlList;
     final bootOptions = <BootOption>[];
     for (final item in options) {
@@ -148,9 +159,11 @@ List<BootOption> getResetOptions({String path = defaultFilePath}) {
 
 Future<void> startCommand(
   ResetOptionType type, {
-  String path = defaultFilePath,
+  String? path,
 }) {
   BootOption option;
+  // Don't have to call _expandPathIfNull() because it's
+  // already called in getResetOptions
   final options = getResetOptions(path: path);
 
   try {
@@ -164,7 +177,7 @@ Future<void> startCommand(
 
 Future<void> startCommandViaDbus(
   ResetOptionType type, {
-  String path = defaultFilePath,
+  String? path,
 }) async {
   final dbusClient = DBusClient.system();
   final object = ComCanonicalOemFactoryResetTools(
