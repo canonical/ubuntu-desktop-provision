@@ -241,5 +241,762 @@
   "newPartitionTableConfirmationTitle": "Buat suatu tabel partisi baru yang kosong pada peranti ini?",
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.",
-  "@newPartitionTableConfirmationMessage": {}
+  "@newPartitionTableConfirmationMessage": {},
+  "installationTypeTPMInfo": "Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis {DISTRO} berikutnya. <a href=\"{url}\">Baca tentang enkripsi TPM</a> sebelum memilih opsi ini.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallTitle": "Tipe instalasi",
+  "@autoinstallTitle": {},
+  "autoinstallInteractiveOption": "Pemasangan Interaktif",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Untuk pengguna yang ingin melalui pemasangan terpandu langkah demi langkah.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Pemasang Otomatis",
+  "@autoinstallAutomatedOption": {},
+  "quitButtonText": "Keluar dari pemasangan",
+  "@quitButtonText": {},
+  "loadingPageTitle": "Selamat datang di {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "Menyiapkan {DISTRO}…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Peringatan:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Apa yang Anda ingin lakukan dengan {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rstHeader": "Nonaktifkan RST untuk melanjutkan",
+  "@rstHeader": {},
+  "showSecurityKey": "Tampilkan kunci keamanan",
+  "@showSecurityKey": {},
+  "hideSecurityKey": "Sembunyikan",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageTitle": "Optimalkan komputer Anda",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversNvidiaNote": "Kartu grafis NVIDIA terdeteksi",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Untuk performa kartu grafis NVIDIA terbaik, memasang driver tambahan sangat direkomendasikan.",
+  "@codecsAndDriversNvidiaBody": {},
+  "fullInstallationTitle": "Pemilihan luas",
+  "@fullInstallationTitle": {},
+  "fullInstallationSubtitle": "Pilihan yang ramah luring alat kerja kantor, alat dan browser.",
+  "@fullInstallationSubtitle": {},
+  "minimalInstallationTitle": "PIlihan default",
+  "@minimalInstallationTitle": {},
+  "minimalInstallationSubtitle": "Hanya yang penting, browser web dan utilitas dasar.",
+  "@minimalInstallationSubtitle": {},
+  "installDriversTitle": "Pasang perangkat lunak ketiga untuk grafis dan perangkat keras Wi-Fi",
+  "@installDriversTitle": {},
+  "installDriversSubtitle": "Termasuk tetapi tidak terbatas pada driver NVIDIA atau yang sejenisnya",
+  "@installDriversSubtitle": {},
+  "installCodecsTitle": "Unduh dan pasang dukungan untuk format media tambahan",
+  "@installCodecsTitle": {},
+  "installCodecsSubtitle": "Termasuk tetapi tidak terbatas pada MP3, MP4, MOV, dan sejenisnya",
+  "@installCodecsSubtitle": {},
+  "batteryWarning": "Komputer ini tidak terhubung pada sumber daya.",
+  "@batteryWarning": {},
+  "offlineWarning": "Anda sekarang sedang luring",
+  "@offlineWarning": {},
+  "choosePassphraseTitle": "Frasa sandi disk",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Buat frasa sandi",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Anda perlu frasa sandi untuk mengenkripsi berkas Anda. Anda akan diminta untuk frasa sandi Anda setiap kali Anda menyalakan komputer Anda.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Pilih frasa sandi",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Konfirmasikan frasa sandi",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Frasa sandi diperlukan",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Frasa sandi tidak cocok",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Pastikan Anda menyimpan frasa sandi Anda",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Buat frasa sandi",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Konfirmasikan frasa sandi",
+  "@confirmPassphrase": {},
+  "installationTypeMultiOSDetected": "Komputer ini memiliki beberapa sistem operasi di dalamnya. Apa yang ingin Anda lakukan?",
+  "@installationTypeMultiOSDetected": {},
+  "installationTypeEraseInfo": "Mulai dari awal pada disk terpilih.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Eksperimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Gunakan LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Gunakan LVM dan enkripsi",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeLVMEncryptionSelected": "LVM dan enkripsi terpilih",
+  "@installationTypeLVMEncryptionSelected": {},
+  "installationTypeZFSEncryption": "Hapus disk dan gunakan ZFS dengan enkripsi",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS dan enkripsi terpilih",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeTPM": "Aktifkan enkripsi disk penuh yang didukung perangkat keras",
+  "@installationTypeTPM": {},
+  "installationTypeTPMSelected": "TPM dipilih",
+  "@installationTypeTPMSelected": {},
+  "selectGuidedStorageInfo": "Mulai dari awal pada disk terpilih.",
+  "@selectGuidedStorageInfo": {},
+  "installAlongsideAllocateSpace": "Alokasikan ruang",
+  "@installAlongsideAllocateSpace": {},
+  "installAlongsideFiles": "Berkas",
+  "@installAlongsideFiles": {},
+  "installAlongsidePartition": "Partisi:",
+  "@installAlongsidePartition": {},
+  "installAlongsideSize": "Ukuran:",
+  "@installAlongsideSize": {},
+  "installAlongsideAvailable": "Tersedia:",
+  "@installAlongsideAvailable": {},
+  "allocateDiskSpaceInvalidMountPointSlash": "Titik pasang harus dimulai dengan \"/\"",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "Titik pemasangan tidak dapat mengandung spasi",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "guidedStoragePageHeader": "Pilih di mana {DISTRO} dipasang",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideSpaceDivider": "Alokasi ruang drive dengan menyeret pemisah di bawah:",
+  "@installAlongsideSpaceDivider": {},
+  "installAlongsideResizePartition": "Ubah ukuran partisi",
+  "@installAlongsideResizePartition": {},
+  "tooManyPrimaryPartitions": "Terlalu banyak partisi utama",
+  "@tooManyPrimaryPartitions": {},
+  "partitionLimitReached": "Batas tercapai",
+  "@partitionLimitReached": {},
+  "partitionFormatNone": "Biarkan tidak terformat",
+  "@partitionFormatNone": {},
+  "partitionFormatKeep": "Biarkan terformat sebagai {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Tidak ada",
+  "@confirmDiskEncryptionNone": {},
+  "confirmDevicesTitle": "Perangkat",
+  "@confirmDevicesTitle": {},
+  "confirmEntryApplications": "Aplikasi",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Penyiapan Disk",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryInstallationDisk": "Disk instalasi",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Perangkat lunak berpemilik",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Umum",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Keamanan & lainnya",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmPartitionsTitle": "Partisi",
+  "@confirmPartitionsTitle": {},
+  "confirmPartitionFormatMount": "Partisi <b>{sysname}</b> diformat sebagai <b>{format}</b> digunakan untuk <b>{mount}</b>",
+  "@confirmPartitionFormatMount": {
+    "description": "A formatted and mounted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionFormat": "Partisi <b>{sysname}</b> diformat sebagai <b>{format}</b>",
+  "@confirmPartitionFormat": {
+    "description": "A formatted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionMount": "Partisi <b>{sysname}</b> digunakan sebagai <b>{mount}</b>",
+  "@confirmPartitionMount": {
+    "description": "A mounted partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPartitionCreate": "Partisi <b>{sysname}</b> dibuat",
+  "@confirmPartitionCreate": {
+    "description": "A created partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Kodek",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodek & driver",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmProprietarySoftwareDrivers": "Driver",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** telah disalin ke disk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartNow": "Mulai ulang sekarang",
+  "@restartNow": {},
+  "continueTesting": "Lanjutkan mencoba",
+  "@continueTesting": {},
+  "bitlockerHeader": "Nonaktifkan BitLocker untuk melanjutkan",
+  "@bitlockerHeader": {},
+  "restartIntoWindowsTitle": "Mulai ulang ke Windows?",
+  "@restartIntoWindowsTitle": {},
+  "installationSlidesTitle": "Selamat datang di {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeHeader": "Versi terbaru {DISTRO} membuat komputasi lebih cepat daripada sebelumnya.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "Semua aplikasi yang Anda butuhkan",
+  "@installationSlidesSoftwareTitle": {},
+  "installationSlidesDevelopmentBody": "{DISTRO} adalah stasiun kerja yang ideal untuk pengembangan aplikasi dan web, data science dan AI/ML serta DevOps dan administrasi. Setiap rilis {DISTRO} berisi alat terbaru dan dukungan untuk semua IDE utama.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityTitle": "Tingkatkan kreativitas Anda",
+  "@installationSlidesCreativityTitle": {},
+  "installationSlidesCreativityBody": "Jika Anda seorang animator, desainer, kreator video atau pengembang game sangat mudah untuk membawa alur kerja Anda ke {DISTRO} dengan dukungan untuk sumber terbuka dan standar industri perangkat lunak dan aplikasi.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Bagus untuk gaming",
+  "@installationSlidesGamingTitle": {},
+  "installationSlidesGamingBody": "{DISTRO} mendukung driver terbaru NVIDIA dan Mesa untuk meningkatkan performa dan kompatibilitas. Ribuan judul Windows dapat dimainkan dengan baik pada {DISTRO} melalui aplikasi seperti Stream tanpa konfigurasi tambahan.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityBody": "{DISTRO} menyediakan semua alat yang Anda butuhkan untuk online secara pribadi dan aman. Dengan firewall dan dukungan VPN bawaan serta sejumlah aplikasi yang berfokus pada privasi Anda untuk memastikan Anda tetap mendapatkan dukungan penuh terhadap data Anda.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Akses untuk semua orang",
+  "@installationSlidesAccessibilityTitle": {},
+  "installationSlidesSupportEnterprise": "Untuk pengguna perusahaan, Canonical menyediakan dukungan komersial untuk memudahkan untuk melakukan onboarding dan mengelola Ubuntu dengan aman dalam tempat kerja.",
+  "@installationSlidesSupportEnterprise": {},
+  "installationSlidesSupportResources": "Sumber daya berguna:",
+  "@installationSlidesSupportResources": {},
+  "installationSlidesSupportDocumentation": "Dokumentasi resmi",
+  "@installationSlidesSupportDocumentation": {},
+  "installationSlidesSupportUbuntuPro": "Dukungan tingkat perusahaan 24/7 dengan Ubuntu Pro",
+  "@installationSlidesSupportUbuntuPro": {},
+  "copyingFiles": "Menyalin berkas…",
+  "@copyingFiles": {},
+  "installingSystem": "Memasang sistem…",
+  "@installingSystem": {},
+  "configuringSystem": "Menyiapkan sistem…",
+  "@configuringSystem": {},
+  "installationFailed": "Pemasangan gagal",
+  "@installationFailed": {},
+  "notEnoughDiskSpaceUbuntu": "Tidak cukup ruang disk untuk memasang {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Pembaruan tersedia untuk pemasang",
+  "@refreshHeader": {},
+  "refreshPageTitle": "Pembaruan tersedia",
+  "@refreshPageTitle": {},
+  "refreshUpdateNow": "Perbarui sekarang",
+  "@refreshUpdateNow": {},
+  "refreshSnapLink": "Menautkan {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Mengatur alias otomatis {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Mulai ulang untuk menyelesaikan instalasi atau lanjutkan percobaan.\nPerubahan apapun yang Anda buat tidak akan disimpan.",
+  "@restartWarningBody": {},
+  "autoinstallInstructions": "Masukkan URL atau jalur berkas lokal autoinstall.yaml:",
+  "@autoinstallInstructions": {},
+  "notEnoughDiskSpaceAvailable": "Tersedia:",
+  "@notEnoughDiskSpaceAvailable": {},
+  "notEnoughDiskSpaceRequired": "Diperlukan:",
+  "@notEnoughDiskSpaceRequired": {},
+  "refreshInfo": "Perbarui ke versi terbaru untuk keandalan yang ditingkatkan dan fitur yang lebih banyak.",
+  "@refreshInfo": {},
+  "refreshReady": "Pembaruan siap",
+  "@refreshReady": {},
+  "refreshCurrent": "Versi {snap} saat ini adalah {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Perbarui ke versi {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Tutup pemasang dan jalankan ulang untuk melanjutkan",
+  "@refreshRestart": {},
+  "refreshCloseLabel": "Tutup pemasang",
+  "@refreshCloseLabel": {},
+  "refreshSnapPrerequisites": "Memastikan prasyarat {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "Menyegarkan ulang {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Memeriksa penyegaran ulang {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "Menyiapkan {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Mengunduh {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Memvalidasi {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Memasang {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Menghentikan layanan {snap}...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Menghapus alias {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Melepas tautan {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Memperbarui aset {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Memperbarui baris perintah kernel {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Menyalin data {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Menyiapkan profil keamanan {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Menyiapkan alias {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Memulai layanan {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Membersihkan {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Menghubungkan plug dan slot {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Validasi",
+  "@validate": {},
+  "autoinstallHeader": "Bagaimana Anda ingin memasang {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallAutomatedDescription": "Untuk pengguna lanjutan yang memiliki autoinstall.yaml untuk pemasangan yang konsisten dan dapat diulang.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversPageDescription": "Pasang perangkat lunak berpemilik yang direkomendasikan?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} dikirimkan tanpa perangkat lunak berpemilik sebagai default. Memasang perangkat lunak tambahan dapat meningkatkan performa komputer Anda.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmEntryDiskEncryption": "Enkripsi disk",
+  "@confirmEntryDiskEncryption": {},
+  "installationSlidesAvailable": "Tersedia:",
+  "@installationSlidesAvailable": {},
+  "installationSlidesIncluded": "Termasuk:",
+  "@installationSlidesIncluded": {},
+  "installationSlidesWelcomeTitle": "Cepat, gratis dan penuh fitur baru",
+  "@installationSlidesWelcomeTitle": {},
+  "confirmPartitionResize": "Partisi <b>{sysname}</b> diubah ukurannya dari <b>{oldsize}</b> menjadi <b>{newsize}</b>",
+  "@confirmPartitionResize": {
+    "description": "A resized partition entry",
+    "placeholders": {
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Anda harus memulai ulang komputer untuk melanjutkan proses instalasi.",
+  "@rebootToConfigureWarning": {},
+  "restartIntoWindowsDescription": "Apakah Anda yakin ingin memulai ulang komputer? Anda perlu memulai ulang instalasi {DISTRO} nanti untuk menyelesaikan instalasi {DISTRO}.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Kembangkan dengan open-source terbaik",
+  "@installationSlidesDevelopmentTitle": {},
+  "installationSlidesWelcomeBody": "Baik Anda seorang pengembang, kreator, gamer atau administrator Anda dapat selalu menemukan alat baru untuk meningkatkan produktivitas Anda dan meningkatkan pengalaman {RELEASE} Anda.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareBody": "Pasang, kelola dan perbarui semua aplikasi Anda di Ubuntu Software, termasuk ribuan aplikasi dari Snap Store dan arsip {DISTRO}.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityTitle": "Privat dan aman",
+  "@installationSlidesSecurityTitle": {},
+  "installationSlidesSecurityLts": "Semua rilis LTS {DISTRO} dilengkapi dengan tambalan keamanan selama 5 tahun, diperpanjang hingga 10 tahun dengan langganan Ubuntu Pro.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityBody": "{DISTRO} Desktop dilengkapi dengan LibreOffice, sebuah aplikasi sumber terbuka yang kompatibel dengan Microsoft Office untuk dokumen, spreadsheet, dan presentasi. Alat kolaborasi popular juga tersedia.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityTitle": "Tingkatkan produktivitas Anda",
+  "@installationSlidesProductivityTitle": {},
+  "installationSlidesAccessibilityBody": "Inti dari filosofi {DISTRO} adalah percaya bahwa komputasi untuk semua orang. Dengan alat aksesibilitas lanjutan dan opsi untuk mengubah bahasa, warna dan ukuran teks, {DISTRO} membuat komputasi menjadi lebih mudah - siapa pun dan di mana pun Anda berada.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityOrca": "Pembaca Layar Orca",
+  "@installationSlidesAccessibilityOrca": {},
+  "installationSlidesAccessibilityLanguages": "Dukungan bahasa",
+  "@installationSlidesAccessibilityLanguages": {},
+  "installationSlidesSupportTitle": "Bantuan dan Dukungan",
+  "@installationSlidesSupportTitle": {},
+  "installationSlidesSupportHeader": "Dokumentasi resmi {DISTRO} tersedia secara online dan melalui ikon Bantuan pada dok.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu memiliki sejumlah pertanyaan dan bantuan dan Ubuntu Discourse menyediakan panduan dan diskusi untuk pengguna baru dan lanjutan.",
+  "@installationSlidesSupportCommunity": {},
+  "notEnoughDiskSpaceBody": "Disk terpilih tidak memiliki ruang yang cukup untuk memasang {DISTRO}. Keluar dari pemasang untuk menyediakan ruang dan pilih disk lain.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceTitle": "Ruang disk tidak cukup",
+  "@notEnoughDiskSpaceTitle": {},
+  "installationTypeAlongsideMulti": "Pasang {product} bersamaan dengan yang lain",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideHiddenPartitions": "{num} partisi yang lebih kecil disembunyikan, gunakan <a href=\"{url}\">alat partisi lanjutan</a> untuk kontrol lebih banyak",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "Versi saat ini {version} sudah terbaru.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeHeader": "Bagaimana Anda ingin memasang {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideDual": "Pasang {product} bersama dengan {os1} dan {os2}",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "Memperbarui {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeDualOSDetected": "Komputer ini sudah memiliki {os1} dan {os2} di dalamnya. Apa yang ingin Anda lakukan?",
+  "@installationTypeDualOSDetected": {
+    "placeholders": {
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "Pasang {product} bersamaan dengan partisi lain",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageDriveDropdownLabel": "Pilih drive:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Pilih partisi:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "recoveryKeyTitle": "Kunci pemulihan TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Anda dapat mengakses kunci keamanan setelah instalasi dengan perintah berikut:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Peringatan:</font> Jika Anda kehilangan kunci keamanan, semua data akan hilang. Jika perlu, tuliskan kunci Anda dan simpan di tempat yang aman.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  }
 }
