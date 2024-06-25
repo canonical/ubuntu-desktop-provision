@@ -8,12 +8,12 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InitStep with RouteName {
   locale(LocalePage.new),
-  accessibility(AccessibilityPage.new),
+  accessibility(AccessibilityPage.new, allowedToHide: true),
   keyboard(KeyboardPage.new),
   network(NetworkPage.new),
   eula(EulaPage.new, allowedToHide: true),
   identity(IdentityPage.new),
-  ubuntuProOnboarding(UbuntuProOnboardingPage.new),
+  ubuntuProOnboarding(UbuntuProOnboardingPage.new, allowedToHide: true),
   ubuntuPro(UbuntuProPage.new, discreteStep: false),
   ubuntuProSuccess(UbuntuProSuccessAttachPage.new,
       hasPrevious: false, discreteStep: false),
