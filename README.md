@@ -80,14 +80,14 @@ theme:
 # - error: The page that shows when something goes wrong
 #
 # Init pages (for oem only)
-# - identity: Create the first-user account 
-# - ubuntu-pro: Enable Ubuntu Pro
+# - identity: Create the first-user account
+# - ubuntu-pro-onboarding: Enable Ubuntu Pro
 # - eula: Accept the OEM provided EULA
 # - privacy: Enable location services
 # - timezone: Set the timezone
 # - telemetry: Enable sending telemetry
 #
-# Do note that currently only accessibility, try-or-install, refresh and source-selection can be hidden.
+# Do note that currently only ubuntu-pro-onboarding, eula, accessibility, try-or-install, refresh and source-selection can be hidden.
 pages:
   <page-name>:
     image: <image-name>
