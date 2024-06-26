@@ -134,6 +134,12 @@ code: EULA_<langcode>.pdf. If the <langcode> is not available, the default file 
 The language code format is the same as is used for slides, for example: EULA_en_US.pdf, see the [Language code format
 section](#language-code-format) for further details,
 
+### Gnome Initial Setup
+
+To help support installation flows where user account setup is a seperate flow from system installation, we have included
+[this guide](GIS.md) on how to invoke Gnome Initial Setup as part of the installation flow, either via an `autoinstall.yaml` or a 
+`whitelabel.yaml`.
+
 ### Language code format
 
 The language code format that is used is the two-letter language code followed by a two-letter country code
