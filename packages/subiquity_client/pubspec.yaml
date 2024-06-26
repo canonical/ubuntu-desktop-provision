@@ -22,4 +22,4 @@ dev_dependencies:
   json_serializable: ^6.7.1
   mockito: 5.4.4
   test: any
-  ubuntu_lints: ^0.4.0
+  ubuntu_lints: ^0.3.0
