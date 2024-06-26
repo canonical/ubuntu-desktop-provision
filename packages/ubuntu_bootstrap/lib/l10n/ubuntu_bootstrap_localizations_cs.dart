@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Zadejte adresu URL autoinstall.yaml:';
+  String get autoinstallInstructions => 'Zadejte adresu URL autoinstall.yaml nebo cestu k místnímu souboru:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktivní instalace';
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné Ubuntu nainstalovat, je třeba ve Windows funkci RST vypnout.';
+    return 'Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné $DISTRO nainstalovat, je třeba ve Windows funkci RST vypnout.';
   }
 
   @override
@@ -171,7 +171,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get fullInstallationTitle => 'Plná instalace';
 
   @override
-  String get fullInstallationSubtitle => 'Výběr kancelářských a jiných nástrojů, webový prohlížeč a hry.';
+  String get fullInstallationSubtitle => 'Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.';
 
   @override
   String get minimalInstallationTitle => 'Výchozí instalace';
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Nainstalovat ovladače od třetích stran pro grafické čipy a Wi-Fi síťová rozhraní';
 
   @override
-  String get installDriversSubtitle => 'Tyto ovladače jsou předmětem licenčních ujednání obsažených v dokumentaci k nim. Jsou proprietárními.';
+  String get installDriversSubtitle => 'Včetně, ale nejen, ovladačů NVIDIA a podobných';
 
   @override
   String get installCodecsTitle => 'Stáhnout a nainstalovat podporu pro další formáty médií';
 
   @override
-  String get installCodecsSubtitle => 'Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některé jsou proprietární.';
+  String get installCodecsSubtitle => 'Včetně, ale nejen MP3, MP4, MOV a podobné';
 
   @override
   String get batteryWarning => 'Počítač není připojen ke zdroji napájení.';
@@ -302,7 +302,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'V následujícím kroku si zvolíte šifrovací klíč.';
 
   @override
-  String get installationTypeZFS => 'EXPERIMENTÁLNÍ: Vymazat disk a použít souborový systém ZFS';
+  String get installationTypeZFS => 'Vymazat disk a použít souborový systém ZFS';
 
   @override
   String get installationTypeZFSEncryption => 'Vymazat disk a použít ZFS se šifrováním';
@@ -314,7 +314,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Vybráno ZFS a šifrování';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTÁLNÍ: zapnout na hardware založené šifrování celého disku';
+  String get installationTypeTPM => 'Zapnout na hardware založené šifrování celého disku';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Připraveno k instalaci';
 
   @override
-  String get confirmHeader => 'Pokud budete pokračovat, níže uvedené změny budou zapsány na disky. Další změny pak můžete udělat ručně.';
+  String get confirmHeader => 'Zkontrolujte své volby';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -845,7 +845,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Instalátor ukončete a spusťte znovu kliknutím na Restartovat.';
+  String get refreshRestart => 'Pro pokračování prosím instalátor ukončete a znovu spusťte';
 
   @override
   String get refreshCloseLabel => 'Zavřít instalační program';

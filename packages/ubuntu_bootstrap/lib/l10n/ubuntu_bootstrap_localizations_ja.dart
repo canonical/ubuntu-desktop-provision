@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'autoinstall.yamlのURLを入力:';
+  String get autoinstallInstructions => 'autoinstall.yamlのURLもしくはローカルファイルパスを入力:';
 
   @override
   String get autoinstallInteractiveOption => '対話式インストール';
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'このコンピューターは Intel RST (Rapid Storage Technology) を使用しています。Ubuntu をインストールする前に Windows で RST を無効にする必要があります。';
+    return 'このコンピューターは Intel RST (Rapid Storage Technology) を使用しています。$DISTRO をインストールする前に Windows で RST を無効にする必要があります。';
   }
 
   @override

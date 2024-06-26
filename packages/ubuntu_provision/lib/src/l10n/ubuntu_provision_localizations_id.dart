@@ -78,7 +78,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get close => 'Tutup';
 
   @override
-  String get timezonePageTitle => 'Di manakah Anda?';
+  String get timezonePageTitle => 'Pilih zona waktu Anda';
 
   @override
   String get timezoneLocationLabel => 'Lokasi';
@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Tata letak papan ketik';
 
   @override
-  String get keyboardHeader => 'Pilih tata letak papan ketik Anda:';
+  String get keyboardHeader => 'Pilih tata letak papan ketik Anda';
 
   @override
   String get keyboardTestHint => 'Ketik di sini untuk menguji papan ketik Anda';
@@ -131,7 +131,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Pilih bahasa Anda:';
 
   @override
-  String get identityPageTitle => 'Siapa kamu?';
+  String get identityPageTitle => 'Buat akun Anda';
 
   @override
   String get identityAutoLogin => 'Masuk secara otomatis';
@@ -253,7 +253,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainNotFound => 'Domain tidak ditemukan';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Pengguna untuk bergabung ke domain';
 
   @override
   String get activeDirectoryAdminEmpty => 'Dibutuhkan';
@@ -277,7 +277,7 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Menyambung ke internet';
 
   @override
-  String get networkPageHeader => 'Menyambungkan komputer ini ke internet akan membantu Ubuntu memasang perangkat lunak tambahan yang diperlukan dan membantu memilih zona waktu Anda.\n\nSambungkan memakai kabel Ethernet, atau pilih suatu jaringan Wi-Fi';
+  String get networkPageHeader => 'Hubungkan ke internet';
 
   @override
   String get networkPageBody => 'Suatu koneksi internet akan memperbaiki instalasi Anda dengan pemeriksaan kompatibilitas dan paket perangkat lunak ekstra.';
