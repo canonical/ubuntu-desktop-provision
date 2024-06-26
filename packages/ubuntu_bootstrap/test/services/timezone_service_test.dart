@@ -8,8 +8,10 @@ void main() {
   group('subiquity', () {
     test('get timezone', () async {
       final client = MockSubiquityClient();
-      when(client.getTimezone()).thenAnswer((_) async =>
-          const TimeZoneInfo(timezone: 'Europe/Stockholm', fromGeoip: false),);
+      when(client.getTimezone()).thenAnswer(
+        (_) async =>
+            const TimeZoneInfo(timezone: 'Europe/Stockholm', fromGeoip: false),
+      );
 
       final service = SubiquityTimezoneService(client);
 

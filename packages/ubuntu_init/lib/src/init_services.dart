@@ -37,12 +37,15 @@ export 'services/xdg_session_service.dart';
 Future<void> registerInitServices(List<String> args) async {
   var options = tryGetService<ArgResults>();
   if (options == null) {
-    options = parseCommandLine(args, onPopulateOptions: (parser) {
-      parser.addFlag(
-        'welcome',
-        help: 'Show welcome wizard',
-      );
-    },);
+    options = parseCommandLine(
+      args,
+      onPopulateOptions: (parser) {
+        parser.addFlag(
+          'welcome',
+          help: 'Show welcome wizard',
+        );
+      },
+    );
     registerServiceInstance<ArgResults>(options!);
   }
 
@@ -69,7 +72,8 @@ Future<void> registerInitServices(List<String> args) async {
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<ThemeVariantService>(
-      () => ThemeVariantService(config: tryGetService<ConfigService>()),);
+    () => ThemeVariantService(config: tryGetService<ConfigService>()),
+  );
   tryRegisterService<TimezoneService>(ProvdTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);

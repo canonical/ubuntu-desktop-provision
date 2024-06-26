@@ -46,8 +46,10 @@ void main() {
 
     final validateButton = find.button(l10n.validate);
     await tester.scrollUntilVisible(
-        validateButton, -kMinInteractiveDimension / 2,
-        scrollable: find.byType(Scrollable).last,);
+      validateButton,
+      -kMinInteractiveDimension / 2,
+      scrollable: find.byType(Scrollable).last,
+    );
     await tester.pump();
     expect(validateButton, findsOneWidget);
     await tester.tap(validateButton);

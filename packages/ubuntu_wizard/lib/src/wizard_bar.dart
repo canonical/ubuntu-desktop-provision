@@ -13,7 +13,11 @@ class WizardBar extends StatefulWidget {
     this.leading,
     this.trailing,
     this.padding = const EdgeInsets.fromLTRB(
-        kYaruPagePadding, 0, kYaruPagePadding, kYaruPagePadding,),
+      kYaruPagePadding,
+      0,
+      kYaruPagePadding,
+      kYaruPagePadding,
+    ),
   });
 
   final Widget? leading;

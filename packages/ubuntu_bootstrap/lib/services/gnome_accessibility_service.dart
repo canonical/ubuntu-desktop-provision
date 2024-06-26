@@ -87,8 +87,10 @@ class GnomeAccessibilityService implements AccessibilityService {
   Future<bool> getLargeText() => _tryGet(
         _interfaceSettings,
         'text-scaling-factor',
-      ).then((value) =>
-          (value?.asDouble() ?? _textScalingDefault) >= _textScalingLarge,);
+      ).then(
+        (value) =>
+            (value?.asDouble() ?? _textScalingDefault) >= _textScalingLarge,
+      );
 
   @override
   Future<void> setLargeText(bool value) => _trySet(

@@ -179,7 +179,8 @@ void main() {
       ],
     );
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [reformat]),);
+      (_) async => fakeGuidedStorageResponse(targets: [reformat]),
+    );
     await model.init();
 
     expect(model.canInstallAlongside, isFalse);
@@ -213,7 +214,8 @@ void main() {
       allowed: [GuidedCapability.LVM],
     );
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [reformat]),);
+      (_) async => fakeGuidedStorageResponse(targets: [reformat]),
+    );
     await model.init();
     expect(model.canInstallAlongside, isFalse);
     expect(model.canEraseDisk, isTrue);
@@ -261,8 +263,10 @@ void main() {
     expect(model.canManualPartition, isTrue);
 
     // all
-    when(service.getGuidedStorage()).thenAnswer((_) async =>
-        fakeGuidedStorageResponse(targets: [reformat, resize, gap, manual]),);
+    when(service.getGuidedStorage()).thenAnswer(
+      (_) async =>
+          fakeGuidedStorageResponse(targets: [reformat, resize, gap, manual]),
+    );
     await model.init();
     expect(model.canInstallAlongside, isTrue);
     expect(model.canEraseDisk, isTrue);
@@ -307,15 +311,20 @@ void main() {
     expect(model.hasZfs, isFalse);
     expect(model.hasTpm, isFalse);
 
-    when(storage.getGuidedStorage())
-        .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [
-              fakeGuidedStorageTargetReformat(allowed: [
-                GuidedCapability.DIRECT,
-                GuidedCapability.LVM,
-                GuidedCapability.LVM_LUKS,
-                GuidedCapability.ZFS,
-              ],),
-            ],),);
+    when(storage.getGuidedStorage()).thenAnswer(
+      (_) async => fakeGuidedStorageResponse(
+        targets: [
+          fakeGuidedStorageTargetReformat(
+            allowed: [
+              GuidedCapability.DIRECT,
+              GuidedCapability.LVM,
+              GuidedCapability.LVM_LUKS,
+              GuidedCapability.ZFS,
+            ],
+          ),
+        ],
+      ),
+    );
     await model.init();
     expect(capability, GuidedCapability.DIRECT);
     expect(model.hasDirect, isTrue);
@@ -323,12 +332,17 @@ void main() {
     expect(model.hasZfs, isTrue);
     expect(model.hasTpm, isFalse);
 
-    when(storage.getGuidedStorage())
-        .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [
-              fakeGuidedStorageTargetReformat(allowed: [
-                GuidedCapability.CORE_BOOT_ENCRYPTED,
-              ],),
-            ],),);
+    when(storage.getGuidedStorage()).thenAnswer(
+      (_) async => fakeGuidedStorageResponse(
+        targets: [
+          fakeGuidedStorageTargetReformat(
+            allowed: [
+              GuidedCapability.CORE_BOOT_ENCRYPTED,
+            ],
+          ),
+        ],
+      ),
+    );
     await model.init();
     expect(capability, GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(model.hasDirect, isFalse);

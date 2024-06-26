@@ -6,8 +6,10 @@ import 'package:ubuntu_provision/src/network/network_device.dart';
 import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-final hiddenWifiModelProvider = ChangeNotifierProvider((_) =>
-    HiddenWifiModel(getService<NetworkService>(), getService<UdevService>()),);
+final hiddenWifiModelProvider = ChangeNotifierProvider(
+  (_) =>
+      HiddenWifiModel(getService<NetworkService>(), getService<UdevService>()),
+);
 
 class HiddenWifiModel extends NetworkDeviceModel<WifiDevice> {
   HiddenWifiModel(super.service, [super.udev]);

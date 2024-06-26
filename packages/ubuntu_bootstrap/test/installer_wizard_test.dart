@@ -154,7 +154,8 @@ void main() {
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
     final timezoneModel = buildTimezoneModel(
-        selectedLocation: const GeoLocation(timezone: 'UTC'),);
+      selectedLocation: const GeoLocation(timezone: 'UTC'),
+    );
     final identityModel = buildIdentityModel(isValid: true);
     final activeDirectoryModel = buildActiveDirectoryModel();
     final installModel = buildInstallModel(isDone: true);
@@ -411,22 +412,24 @@ void main() {
           installModelProvider.overrideWith((_) => installModel),
           slidesProvider.overrideWith((_) => MockSlidesModel()),
         ],
-        child: tester.buildTestWizard(excludedPages: {
-          'autoinstall',
-          'tryOrInstall',
-          'locale',
-          'rst',
-          'network',
-          'refresh',
-          'sourceSelection',
-          'codecsAndDrivers',
-          'notEnoughDiskSpace',
-          'secureBoot',
-          'storage',
-          'identity',
-          'activeDirectory',
-          'timezone',
-        },),
+        child: tester.buildTestWizard(
+          excludedPages: {
+            'autoinstall',
+            'tryOrInstall',
+            'locale',
+            'rst',
+            'network',
+            'refresh',
+            'sourceSelection',
+            'codecsAndDrivers',
+            'notEnoughDiskSpace',
+            'secureBoot',
+            'storage',
+            'identity',
+            'activeDirectory',
+            'timezone',
+          },
+        ),
       ),
     );
 
@@ -490,13 +493,15 @@ void main() {
 }
 
 extension on WidgetTester {
-  Widget buildTestWizard(
-      {Set<String> excludedPages = const {'tryOrInstall'},
-      bool includeTryOrInstall = false,}) {
+  Widget buildTestWizard({
+    Set<String> excludedPages = const {'tryOrInstall'},
+    bool includeTryOrInstall = false,
+  }) {
     final installer = MockInstallerService();
     when(installer.hasRoute(any)).thenAnswer((i) {
       return !excludedPages.contains(
-          (i.positionalArguments.first as String).replaceFirst('/', ''),);
+        (i.positionalArguments.first as String).replaceFirst('/', ''),
+      );
     });
     when(installer.monitorStatus()).thenAnswer((_) => const Stream.empty());
     registerMockService<InstallerService>(installer);
@@ -521,8 +526,11 @@ extension on WidgetTester {
     registerMockService<PowerService>(MockPowerService());
 
     final refresh = MockRefreshService();
-    when(refresh.state).thenReturn(const RefreshState.status(
-        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),),);
+    when(refresh.state).thenReturn(
+      const RefreshState.status(
+        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),
+      ),
+    );
     when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
     registerMockService<RefreshService>(refresh);
 

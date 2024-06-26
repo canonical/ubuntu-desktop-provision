@@ -6,11 +6,13 @@ import 'package:yaru/yaru.dart';
 
 void main() {
   testWidgets('app structure', (tester) async {
-    await tester.pumpWidget(const WizardApp(
-      localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-      supportedLocales: UbuntuLocalizations.supportedLocales,
-      home: Text('home'),
-    ),);
+    await tester.pumpWidget(
+      const WizardApp(
+        localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
+        supportedLocales: UbuntuLocalizations.supportedLocales,
+        home: Text('home'),
+      ),
+    );
 
     expect(find.byType(YaruTheme), findsOneWidget);
     expect(find.byType(MaterialApp), findsOneWidget);

@@ -85,10 +85,13 @@ void main() {
   });
 
   testWidgets('general summary', (tester) async {
-    final confirm = buildConfirmModel(disks: testDisks, partitions: {
-      testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
-      testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
-    },);
+    final confirm = buildConfirmModel(
+      disks: testDisks,
+      partitions: {
+        testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
+        testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
+      },
+    );
     final storage = buildStorageModel();
     final source = buildSourceModel();
     await tester.pumpApp(
@@ -136,12 +139,16 @@ void main() {
   });
 
   testWidgets('partition change summary', (tester) async {
-    final confirm = buildConfirmModel(disks: testDisks, partitions: {
-      testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
-      testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
-    }, originals: {
-      'sdb': [const Partition(number: 6, size: 123)],
-    },);
+    final confirm = buildConfirmModel(
+      disks: testDisks,
+      partitions: {
+        testDisks.first.sysname: testDisks.first.partitions.cast<Partition>(),
+        testDisks.last.sysname: testDisks.last.partitions.cast<Partition>(),
+      },
+      originals: {
+        'sdb': [const Partition(number: 6, size: 123)],
+      },
+    );
     final storage = buildStorageModel();
     final source = buildSourceModel();
     await tester.pumpApp(
@@ -156,14 +163,21 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-        find.html(l10n.confirmPartitionFormatMount('sdb3', 'ext3', '/mnt/3')),
-        findsOneWidget,);
+      find.html(l10n.confirmPartitionFormatMount('sdb3', 'ext3', '/mnt/3')),
+      findsOneWidget,
+    );
     expect(
-        find.html(l10n.confirmPartitionFormat('sdb4', 'ext4')), findsOneWidget,);
-    expect(find.html(l10n.confirmPartitionMount('sdb5', '/mnt/5')),
-        findsOneWidget,);
-    expect(find.html(l10n.confirmPartitionResize('sdb6', '123 B', '66 B')),
-        findsOneWidget,);
+      find.html(l10n.confirmPartitionFormat('sdb4', 'ext4')),
+      findsOneWidget,
+    );
+    expect(
+      find.html(l10n.confirmPartitionMount('sdb5', '/mnt/5')),
+      findsOneWidget,
+    );
+    expect(
+      find.html(l10n.confirmPartitionResize('sdb6', '123 B', '66 B')),
+      findsOneWidget,
+    );
     expect(find.html(l10n.confirmPartitionCreate('sdb7')), findsOneWidget);
   });
 

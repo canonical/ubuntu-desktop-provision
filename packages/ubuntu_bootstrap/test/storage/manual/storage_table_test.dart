@@ -116,12 +116,14 @@ void main() {
   testWidgets('disk selection', (tester) async {
     int? selectedDisk;
 
-    await tester.pumpWidget(buildTable(
-      [pathColumn, sizeColumn],
-      canSelect: (disk, [partition = -1]) => disk == 1, // sdb
-      isSelected: (disk, [partition = -1]) => disk == 2, // sdc
-      onSelected: (disk, [partition = -1]) => selectedDisk = disk,
-    ),);
+    await tester.pumpWidget(
+      buildTable(
+        [pathColumn, sizeColumn],
+        canSelect: (disk, [partition = -1]) => disk == 1, // sdb
+        isSelected: (disk, [partition = -1]) => disk == 2, // sdc
+        onSelected: (disk, [partition = -1]) => selectedDisk = disk,
+      ),
+    );
 
     // cannot select
     await tester.tap(find.text('/dev/sda'));
@@ -150,16 +152,18 @@ void main() {
     int? selectedDisk;
     int? selectedPartition;
 
-    await tester.pumpWidget(buildTable(
-      [pathColumn, sizeColumn],
-      canSelect: (disk, [partition = -1]) =>
-          disk == 1 || partition == 1, // sdb1, sdc2, sdd2
-      isSelected: (disk, [partition = -1]) => partition == 2, // sdd3
-      onSelected: (disk, [partition = -1]) {
-        selectedDisk = disk;
-        selectedPartition = partition;
-      },
-    ),);
+    await tester.pumpWidget(
+      buildTable(
+        [pathColumn, sizeColumn],
+        canSelect: (disk, [partition = -1]) =>
+            disk == 1 || partition == 1, // sdb1, sdc2, sdd2
+        isSelected: (disk, [partition = -1]) => partition == 2, // sdd3
+        onSelected: (disk, [partition = -1]) {
+          selectedDisk = disk;
+          selectedPartition = partition;
+        },
+      ),
+    );
 
     // can select
     await tester.ensureVisible(find.text('/dev/sdb1'));

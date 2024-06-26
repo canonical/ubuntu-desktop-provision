@@ -77,7 +77,8 @@ void main() {
 
     final service = ProvdKeyboardService(client: client);
     await service.setKeyboard(
-        const KeyboardSetting(layout: 'us', variant: 'altgr-intl'),);
+      const KeyboardSetting(layout: 'us', variant: 'altgr-intl'),
+    );
 
     verify(client.setKeyboard('us', 'altgr-intl')).called(1);
   });
@@ -87,7 +88,8 @@ void main() {
 
     final service = ProvdKeyboardService(client: client);
     await service.setInputSource(
-        const KeyboardSetting(layout: 'us', variant: 'altgr-intl'),);
+      const KeyboardSetting(layout: 'us', variant: 'altgr-intl'),
+    );
 
     verify(client.setInputSource('us', 'altgr-intl')).called(1);
   });

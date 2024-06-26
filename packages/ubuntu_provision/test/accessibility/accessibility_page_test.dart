@@ -34,7 +34,10 @@ void main() {
     expectListTile(tester, tester.lang.accessibilityHighContrastLabel, isTrue);
     expectListTile(tester, tester.lang.accessibilityLargeTextLabel, isFalse);
     expectListTile(
-        tester, tester.lang.accessibilityReduceAnimationLabel, isTrue,);
+      tester,
+      tester.lang.accessibilityReduceAnimationLabel,
+      isTrue,
+    );
     expectListTile(tester, tester.lang.accessibilityScreenReaderLabel, isFalse);
   });
 }

@@ -92,9 +92,12 @@ extension UbuntuProvisionPageTester on WidgetTester {
 
         await takeScreenshot('$screenshot-detect');
 
-        await tap(find.descendant(
+        await tap(
+          find.descendant(
             of: find.byType(AlertDialog),
-            matching: find.byType(YaruWindowControl),),);
+            matching: find.byType(YaruWindowControl),
+          ),
+        );
         await pumpAndSettle();
       }
     }

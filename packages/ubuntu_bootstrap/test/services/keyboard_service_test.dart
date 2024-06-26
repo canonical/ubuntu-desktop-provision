@@ -66,29 +66,34 @@ void main() {
     verify(client.setInputSource(keyboardSetup.setting, user: 'ubuntu'))
         .called(1);
 
-    verify(inputSourceSettings.set(
-      'sources',
-      DBusArray(
-        DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
-        [
-          DBusStruct([
-            const DBusString('xkb'),
-            const DBusString('us+altgr-intl'),
-          ]),
-        ],
+    verify(
+      inputSourceSettings.set(
+        'sources',
+        DBusArray(
+          DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
+          [
+            DBusStruct([
+              const DBusString('xkb'),
+              const DBusString('us+altgr-intl'),
+            ]),
+          ],
+        ),
       ),
-    ),).called(1);
+    ).called(1);
 
-    verify(mockProcess.run(
-      'setxkbmap',
-      ['-layout', 'us', '-variant', 'altgr-intl'],
-    ),).called(1);
+    verify(
+      mockProcess.run(
+        'setxkbmap',
+        ['-layout', 'us', '-variant', 'altgr-intl'],
+      ),
+    ).called(1);
   });
 
   test('get keyboard step', () async {
     final client = MockSubiquityClient();
     when(client.getKeyboardStep(any)).thenAnswer(
-        (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []),);
+      (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []),
+    );
 
     final service = SubiquityKeyboardService(
       client,

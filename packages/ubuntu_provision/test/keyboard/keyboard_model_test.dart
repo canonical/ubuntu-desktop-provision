@@ -59,8 +59,11 @@ void main() {
 
     test('variants=[] and variant=unknown', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
-        return testSetup(testLayouts,
-            layout: 'empty-variants', variant: 'unknown',);
+        return testSetup(
+          testLayouts,
+          layout: 'empty-variants',
+          variant: 'unknown',
+        );
       });
 
       await model.init();
@@ -70,8 +73,11 @@ void main() {
 
     test('variant=unknown', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
-        return testSetup(testLayouts,
-            layout: 'with-variants', variant: 'unknown',);
+        return testSetup(
+          testLayouts,
+          layout: 'with-variants',
+          variant: 'unknown',
+        );
       });
 
       await model.init();
@@ -81,8 +87,11 @@ void main() {
 
     test('all ok', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
-        return testSetup(testLayouts,
-            layout: 'with-variants', variant: 'variant2',);
+        return testSetup(
+          testLayouts,
+          layout: 'with-variants',
+          variant: 'variant2',
+        );
       });
 
       await model.init();
@@ -98,17 +107,27 @@ void main() {
     setUp(() async {
       service = MockKeyboardService();
       when(service.getKeyboard()).thenAnswer((_) async {
-        return testSetup([
-          const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
-          const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
-            KeyboardVariant(code: 'baz', name: 'Baz'),
-            KeyboardVariant(code: 'qux', name: 'Qux'),
-          ],),
-        ], layout: '', variant: '',);
+        return testSetup(
+          [
+            const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
+            const KeyboardLayout(
+              code: 'foo',
+              name: 'Foo',
+              variants: [
+                KeyboardVariant(code: 'baz', name: 'Baz'),
+                KeyboardVariant(code: 'qux', name: 'Qux'),
+              ],
+            ),
+          ],
+          layout: '',
+          variant: '',
+        );
       });
 
-      model = KeyboardModel(service,
-          platform: FakePlatform(environment: {'USERNAME': 'usr'}),);
+      model = KeyboardModel(
+        service,
+        platform: FakePlatform(environment: {'USERNAME': 'usr'}),
+      );
       await model.init();
     });
 
@@ -167,31 +186,42 @@ void main() {
 
     test('selection updates input source', () async {
       await model.selectLayout(0);
-      verify(service.setInputSource(const KeyboardSetting(layout: 'bar'),
-              user: 'usr',),)
-          .called(1);
+      verify(
+        service.setInputSource(
+          const KeyboardSetting(layout: 'bar'),
+          user: 'usr',
+        ),
+      ).called(1);
 
       await model.selectLayout(1);
-      verify(service.setInputSource(
-              const KeyboardSetting(layout: 'foo', variant: 'baz'),
-              user: 'usr',),)
-          .called(1);
+      verify(
+        service.setInputSource(
+          const KeyboardSetting(layout: 'foo', variant: 'baz'),
+          user: 'usr',
+        ),
+      ).called(1);
 
       await model.selectVariant(1);
-      verify(service.setInputSource(
-              const KeyboardSetting(layout: 'foo', variant: 'qux'),
-              user: 'usr',),)
-          .called(1);
+      verify(
+        service.setInputSource(
+          const KeyboardSetting(layout: 'foo', variant: 'qux'),
+          user: 'usr',
+        ),
+      ).called(1);
     });
 
     test('invalid selection throws', () {
       expect(() async => model.selectLayout(-1), throwsAssertionError);
-      expect(() async => model.selectLayout(model.layoutCount),
-          throwsAssertionError,);
+      expect(
+        () async => model.selectLayout(model.layoutCount),
+        throwsAssertionError,
+      );
 
       expect(() async => model.selectVariant(-1), throwsAssertionError);
-      expect(() async => model.selectVariant(model.variantCount),
-          throwsAssertionError,);
+      expect(
+        () async => model.selectVariant(model.variantCount),
+        throwsAssertionError,
+      );
     });
 
     test('selection is valid', () async {
@@ -220,13 +250,21 @@ void main() {
   test('apply the system settings', () async {
     final service = MockKeyboardService();
     when(service.getKeyboard()).thenAnswer((_) async {
-      return testSetup([
-        const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
-        const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
-          KeyboardVariant(code: 'baz', name: 'Baz'),
-          KeyboardVariant(code: 'qux', name: 'Qux'),
-        ],),
-      ], layout: '', variant: '',);
+      return testSetup(
+        [
+          const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
+          const KeyboardLayout(
+            code: 'foo',
+            name: 'Foo',
+            variants: [
+              KeyboardVariant(code: 'baz', name: 'Baz'),
+              KeyboardVariant(code: 'qux', name: 'Qux'),
+            ],
+          ),
+        ],
+        layout: '',
+        variant: '',
+      );
     });
 
     final model = KeyboardModel(service);
@@ -237,19 +275,23 @@ void main() {
     reset(service);
 
     await model.save();
-    verify(service
-            .setKeyboard(const KeyboardSetting(layout: 'foo', variant: 'qux')),)
-        .called(1);
+    verify(
+      service.setKeyboard(const KeyboardSetting(layout: 'foo', variant: 'qux')),
+    ).called(1);
   });
 
   test('sort layouts', () async {
     final service = MockKeyboardService();
     when(service.getKeyboard()).thenAnswer((_) async {
-      return testSetup([
-        const KeyboardLayout(code: 'bbb', name: 'BBB', variants: []),
-        const KeyboardLayout(code: 'aaa', name: 'AAA', variants: []),
-        const KeyboardLayout(code: 'äää', name: 'ÄÄÄ', variants: []),
-      ], layout: '', variant: '',);
+      return testSetup(
+        [
+          const KeyboardLayout(code: 'bbb', name: 'BBB', variants: []),
+          const KeyboardLayout(code: 'aaa', name: 'AAA', variants: []),
+          const KeyboardLayout(code: 'äää', name: 'ÄÄÄ', variants: []),
+        ],
+        layout: '',
+        variant: '',
+      );
     });
 
     final model = KeyboardModel(service);
@@ -264,13 +306,21 @@ void main() {
   test('search layout', () async {
     final service = MockKeyboardService();
     when(service.getKeyboard()).thenAnswer((_) async {
-      return testSetup([
-        const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
-        const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
-          KeyboardVariant(code: 'baz', name: 'Baz'),
-          KeyboardVariant(code: 'qux', name: 'Qux'),
-        ],),
-      ], layout: '', variant: '',);
+      return testSetup(
+        [
+          const KeyboardLayout(code: 'bar', name: 'Bar', variants: []),
+          const KeyboardLayout(
+            code: 'foo',
+            name: 'Foo',
+            variants: [
+              KeyboardVariant(code: 'baz', name: 'Baz'),
+              KeyboardVariant(code: 'qux', name: 'Qux'),
+            ],
+          ),
+        ],
+        layout: '',
+        variant: '',
+      );
     });
 
     final model = KeyboardModel(service);

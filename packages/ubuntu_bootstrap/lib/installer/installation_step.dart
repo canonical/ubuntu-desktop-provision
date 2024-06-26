@@ -7,8 +7,12 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InstallationStep with RouteName {
-  loading(LoadingPage.new,
-      discreteStep: false, wizardStep: false, required: true,),
+  loading(
+    LoadingPage.new,
+    discreteStep: false,
+    wizardStep: false,
+    required: true,
+  ),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false, required: true),
@@ -26,10 +30,18 @@ enum InstallationStep with RouteName {
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
   confirm(ConfirmPage.new, required: true),
-  install(InstallPage.new,
-      discreteStep: false, wizardStep: false, required: true,),
-  error(_errorPageFactory,
-      discreteStep: false, wizardStep: false, required: true,);
+  install(
+    InstallPage.new,
+    discreteStep: false,
+    wizardStep: false,
+    required: true,
+  ),
+  error(
+    _errorPageFactory,
+    discreteStep: false,
+    wizardStep: false,
+    required: true,
+  );
 
   const InstallationStep(
     this.pageFactory, {

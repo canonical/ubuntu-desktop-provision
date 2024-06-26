@@ -50,13 +50,15 @@ StorageModel buildStorageModel({
   when(model.hasZfs).thenReturn(hasZfs);
   when(model.hasTpm).thenReturn(hasTpm);
   when(model.hasDd).thenReturn(hasDd);
-  when(model.getAllTargets()).thenAnswer((_) => switch (scenario) {
-        SecureBootScenarios.supported => [supported],
-        SecureBootScenarios.noTpm => [noTpm],
-        SecureBootScenarios.bios => [bios],
-        SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
-        _ => [],
-      },);
+  when(model.getAllTargets()).thenAnswer(
+    (_) => switch (scenario) {
+      SecureBootScenarios.supported => [supported],
+      SecureBootScenarios.noTpm => [noTpm],
+      SecureBootScenarios.bios => [bios],
+      SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
+      _ => [],
+    },
+  );
   return model;
 }
 

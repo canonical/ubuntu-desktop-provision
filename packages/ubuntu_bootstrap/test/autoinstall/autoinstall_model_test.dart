@@ -23,32 +23,33 @@ void main() {
     final resetUi = MockCallback();
     final fs = MemoryFileSystem.test();
     final httpClient = createMockHttpClient(
-        responseStream: Stream.fromIterable(
-      [
-        'autoinstall:',
-        '  version: 1',
-        '  identity:',
-        '    hostname: foobar',
-        '    username: ubuntu',
-        '    password: password',
-        '  storage:',
-        '    layout:',
-        '      name: lvm',
-        '      match:',
-        '        serial: disk1',
-        '      overwrite: true',
-        '  network:',
-        '    network:',
-        '      version: 2',
-        '      ethernets:',
-        '        eth0:',
-        '          dhcp4: true',
-        '  ssh:',
-        '    install-server: true',
-        '  late-commands:',
-        '    - echo "Hello, World!"',
-      ].map((e) => '$e\n').toList(),
-    ),);
+      responseStream: Stream.fromIterable(
+        [
+          'autoinstall:',
+          '  version: 1',
+          '  identity:',
+          '    hostname: foobar',
+          '    username: ubuntu',
+          '    password: password',
+          '  storage:',
+          '    layout:',
+          '      name: lvm',
+          '      match:',
+          '        serial: disk1',
+          '      overwrite: true',
+          '  network:',
+          '    network:',
+          '      version: 2',
+          '      ethernets:',
+          '        eth0:',
+          '          dhcp4: true',
+          '  ssh:',
+          '    install-server: true',
+          '  late-commands:',
+          '    - echo "Hello, World!"',
+        ].map((e) => '$e\n').toList(),
+      ),
+    );
     final model = AutoinstallModel(
       subiquity,
       subiquityServer,
@@ -63,10 +64,12 @@ void main() {
 
     expect(model.state.hasValue, isTrue);
     final content = fs
-        .file(p.join(
-          fs.systemTempDirectory.absolute.path,
-          'autoinstall.yaml',
-        ),)
+        .file(
+          p.join(
+            fs.systemTempDirectory.absolute.path,
+            'autoinstall.yaml',
+          ),
+        )
         .readAsStringSync();
     expect(content, isNotEmpty);
     expect(loadYaml(content), isA<YamlMap>());
@@ -100,10 +103,12 @@ void main() {
 
     expect(model.state.hasValue, isTrue);
     final content = fs
-        .file(p.join(
-          fs.systemTempDirectory.absolute.path,
-          'autoinstall.yaml',
-        ),)
+        .file(
+          p.join(
+            fs.systemTempDirectory.absolute.path,
+            'autoinstall.yaml',
+          ),
+        )
         .readAsStringSync();
     expect(content, isNotEmpty);
     expect(loadYaml(content), isA<YamlMap>());
@@ -119,9 +124,10 @@ void main() {
     final resetUi = MockCallback();
     final fs = MemoryFileSystem.test();
     final httpClient = createMockHttpClient(
-        responseStream: Stream.fromIterable(
-      ['<this>', '-is-', '#not#', '*yaml*'].map((e) => '$e\n').toList(),
-    ),);
+      responseStream: Stream.fromIterable(
+        ['<this>', '-is-', '#not#', '*yaml*'].map((e) => '$e\n').toList(),
+      ),
+    );
     final model = AutoinstallModel(
       subiquity,
       subiquityServer,
@@ -138,10 +144,12 @@ void main() {
     expect(model.state.error, isA<YamlException>());
     expect(
       fs
-          .file(p.join(
-            fs.systemTempDirectory.absolute.path,
-            'autoinstall.yaml',
-          ),)
+          .file(
+            p.join(
+              fs.systemTempDirectory.absolute.path,
+              'autoinstall.yaml',
+            ),
+          )
           .existsSync(),
       isFalse,
     );
@@ -178,10 +186,12 @@ void main() {
     expect(model.state.error, isA<SocketException>());
     expect(
       fs
-          .file(p.join(
-            fs.systemTempDirectory.absolute.path,
-            'autoinstall.yaml',
-          ),)
+          .file(
+            p.join(
+              fs.systemTempDirectory.absolute.path,
+              'autoinstall.yaml',
+            ),
+          )
           .existsSync(),
       isFalse,
     );

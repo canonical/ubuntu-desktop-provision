@@ -38,11 +38,14 @@ GuidedResizeModel buildGuidedResizeModel({
   when(model.getDisk(any))
       .thenAnswer((i) => allDisks?[i.positionalArguments.single as int]);
   when(model.getPartition(any)).thenAnswer(
-      (i) => allPartitions?[i.positionalArguments.single as int]?.firstOrNull,);
+    (i) => allPartitions?[i.positionalArguments.single as int]?.firstOrNull,
+  );
   when(model.getAllPartitions(any))
       .thenAnswer((i) => allPartitions?[i.positionalArguments.single as int]);
-  when(model.getOS(any)).thenAnswer((i) =>
-      allPartitions?[i.positionalArguments.single as int]?.singleOrNull?.os,);
+  when(model.getOS(any)).thenAnswer(
+    (i) =>
+        allPartitions?[i.positionalArguments.single as int]?.singleOrNull?.os,
+  );
   when(model.currentSize).thenReturn(currentSize ?? 0);
   when(model.minimumSize).thenReturn(minimumSize ?? 0);
   when(model.maximumSize).thenReturn(maximumSize ?? 1);

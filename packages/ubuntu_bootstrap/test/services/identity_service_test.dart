@@ -22,13 +22,16 @@ void main() {
         .thenAnswer((_) async => testIdentity.username);
     final service = SubiquityIdentityService(client, postInstall);
     expect(
-        await service.getIdentity(),
-        equals(Identity(
+      await service.getIdentity(),
+      equals(
+        Identity(
           realname: testIdentity.realname,
           username: testIdentity.username,
           hostname: testIdentity.hostname,
           autoLogin: true,
-        ),),);
+        ),
+      ),
+    );
 
     verify(client.getIdentity()).called(1);
     verify(postInstall.get(SubiquityIdentityService.kAutoLoginUser)).called(1);
@@ -38,23 +41,36 @@ void main() {
     final client = MockSubiquityClient();
     final postInstall = MockPostInstallService();
     final service = SubiquityIdentityService(client, postInstall);
-    await service.setIdentity(Identity(
-      realname: testIdentity.realname,
-      username: testIdentity.username,
-      hostname: testIdentity.hostname,
-      password: 'password',
-      autoLogin: true,
-    ),);
+    await service.setIdentity(
+      Identity(
+        realname: testIdentity.realname,
+        username: testIdentity.username,
+        hostname: testIdentity.hostname,
+        password: 'password',
+        autoLogin: true,
+      ),
+    );
 
-    verify(client.setIdentity(argThat(isA<IdentityData>()
-            .having((i) => i.realname, 'realname', testIdentity.realname)
-            .having((i) => i.username, 'username', testIdentity.username)
-            .having((i) => i.hostname, 'hostname', testIdentity.hostname)
-            .having((i) => i.cryptedPassword, 'cryptedPassword',
-                hasLength(greaterThan(8)),),),),)
-        .called(1);
-    verify(postInstall.set(
-            SubiquityIdentityService.kAutoLoginUser, testIdentity.username,),)
-        .called(1);
+    verify(
+      client.setIdentity(
+        argThat(
+          isA<IdentityData>()
+              .having((i) => i.realname, 'realname', testIdentity.realname)
+              .having((i) => i.username, 'username', testIdentity.username)
+              .having((i) => i.hostname, 'hostname', testIdentity.hostname)
+              .having(
+                (i) => i.cryptedPassword,
+                'cryptedPassword',
+                hasLength(greaterThan(8)),
+              ),
+        ),
+      ),
+    ).called(1);
+    verify(
+      postInstall.set(
+        SubiquityIdentityService.kAutoLoginUser,
+        testIdentity.username,
+      ),
+    ).called(1);
   });
 }

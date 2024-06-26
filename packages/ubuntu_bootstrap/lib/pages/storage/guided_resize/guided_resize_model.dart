@@ -7,9 +7,12 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 
 /// Provider for [GuidedResizeModel].
-final guidedResizeModelProvider = ChangeNotifierProvider((_) =>
-    GuidedResizeModel(
-        getService<StorageService>(), getService<ProductService>(),),);
+final guidedResizeModelProvider = ChangeNotifierProvider(
+  (_) => GuidedResizeModel(
+    getService<StorageService>(),
+    getService<ProductService>(),
+  ),
+);
 
 /// View model for [GuidedResizePage].
 class GuidedResizeModel extends SafeChangeNotifier {

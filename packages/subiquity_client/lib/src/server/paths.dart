@@ -39,9 +39,10 @@ Future<String> _findSubiquityPath() async {
       .firstWhere((package) => package.name == 'subiquity_client');
   if (package == null) {
     log.warning(
-        'Unable to find the subiquity_client package. '
-        'Falling back to the current working dir: ${Directory.current.path}',
-        error,);
+      'Unable to find the subiquity_client package. '
+      'Falling back to the current working dir: ${Directory.current.path}',
+      error,
+    );
   } else {
     log.debug('Found subiquity_client in ${package.root.path}');
   }

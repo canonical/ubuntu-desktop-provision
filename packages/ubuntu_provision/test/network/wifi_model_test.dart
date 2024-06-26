@@ -215,11 +215,13 @@ void main() {
 
     final connection = MockNetworkManagerSettingsConnection();
     when(device.availableConnections).thenReturn([connection]);
-    when(service.addAndActivateConnection(
-      device: wifi.device,
-      connection: {},
-      accessPoint: ap,
-    ),).thenAnswer((_) async => MockNetworkManagerActiveConnection());
+    when(
+      service.addAndActivateConnection(
+        device: wifi.device,
+        connection: {},
+        accessPoint: ap,
+      ),
+    ).thenAnswer((_) async => MockNetworkManagerActiveConnection());
 
     final settings = <String, Map<String, DBusValue>>{
       '802-11-wireless': <String, DBusValue>{
@@ -231,20 +233,24 @@ void main() {
     // open
     when(ap.flags).thenReturn([]);
     await model.connect();
-    verify(service.addAndActivateConnection(
-      device: wifi.device,
-      connection: {},
-      accessPoint: ap,
-    ),);
+    verify(
+      service.addAndActivateConnection(
+        device: wifi.device,
+        connection: {},
+        accessPoint: ap,
+      ),
+    );
 
     // closed
     when(ap.flags).thenReturn([NetworkManagerWifiAccessPointFlag.privacy]);
     await model.connect();
-    verify(service.addAndActivateConnection(
-      device: wifi.device,
-      connection: {},
-      accessPoint: ap,
-    ),);
+    verify(
+      service.addAndActivateConnection(
+        device: wifi.device,
+        connection: {},
+        accessPoint: ap,
+      ),
+    );
   });
 
   test('periodic scanning', () async {
@@ -279,20 +285,22 @@ void main() {
 
     final ssid = String.fromCharCodes(kTestSsid);
 
-    unawaited(fakeAsync((async) async {
-      final timeout = model.requestScan(ssid: ssid);
-      expect(model.devices.first.lastScan, -1);
-      expect(model.devices.first.scanning, isTrue);
-      verify(wireless.lastScan).called(1);
-      verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
+    unawaited(
+      fakeAsync((async) async {
+        final timeout = model.requestScan(ssid: ssid);
+        expect(model.devices.first.lastScan, -1);
+        expect(model.devices.first.scanning, isTrue);
+        verify(wireless.lastScan).called(1);
+        verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
 
-      async.elapse(kWifiScanTimeout);
-      await timeout;
-      expect(model.devices.first.lastScan, -1);
-      expect(model.devices.first.scanning, isFalse);
-      verify(wireless.lastScan).called(1);
-      verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
-    }),);
+        async.elapse(kWifiScanTimeout);
+        await timeout;
+        expect(model.devices.first.lastScan, -1);
+        expect(model.devices.first.scanning, isFalse);
+        verify(wireless.lastScan).called(1);
+        verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
+      }),
+    );
 
     final scan = model.requestScan(ssid: ssid);
     wirelessChanged.add(['LastScan']);

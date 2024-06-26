@@ -8,9 +8,12 @@ import 'test_manual_storage.dart';
 
 void main() {
   final testDisks = <Disk>[
-    fakeDisk(id: 'a', partitions: [
-      const Partition(number: 1),
-    ],),
+    fakeDisk(
+      id: 'a',
+      partitions: [
+        const Partition(number: 1),
+      ],
+    ),
     fakeDisk(
       id: 'b',
       bootDevice: true,
@@ -171,15 +174,20 @@ void main() {
   test('partition formats', () {
     expect(PartitionFormat.defaultValue, equals(PartitionFormat.ext4));
     expect(PartitionFormat.values.contains(PartitionFormat.ext4), isTrue);
-    expect(PartitionFormat.fromPartition(const Partition(format: 'ext4')),
-        equals(PartitionFormat.ext4),);
-    expect(PartitionFormat.fromPartition(const Partition(format: 'unknown')),
-        isNull,);
+    expect(
+      PartitionFormat.fromPartition(const Partition(format: 'ext4')),
+      equals(PartitionFormat.ext4),
+    );
+    expect(
+      PartitionFormat.fromPartition(const Partition(format: 'unknown')),
+      isNull,
+    );
   });
 
   test('can add/remove/edit/wipe/reformat', () async {
     final emptyDisk = fakeDisk(
-        partitions: [const Gap(offset: 0, size: 1, usable: GapUsable.YES)],);
+      partitions: [const Gap(offset: 0, size: 1, usable: GapUsable.YES)],
+    );
     final fullDisk = fakeDisk();
     final normalDisk = emptyDisk.copyWith(partitions: [const Partition()]);
     final formattedPartition =
@@ -288,8 +296,13 @@ void main() {
         .thenAnswer((_) async => changedDisks);
 
     final model = ManualStorageModel(service);
-    await model.addPartition(fakeDisk(), gap,
-        size: 123, format: PartitionFormat.ext3, mount: '/tst',);
+    await model.addPartition(
+      fakeDisk(),
+      gap,
+      size: 123,
+      format: PartitionFormat.ext3,
+      mount: '/tst',
+    );
     expect(model.disks, equals(changedDisks));
     verify(service.addPartition(fakeDisk(), gap, partition)).called(1);
   });
@@ -298,15 +311,25 @@ void main() {
     const partition =
         Partition(number: 1, size: 123, format: 'ext3', mount: '/tst');
     final edited = partition.copyWith(
-        size: 456, wipe: 'superblock', format: 'ext2', mount: '/tmp',);
+      size: 456,
+      wipe: 'superblock',
+      format: 'ext2',
+      mount: '/tmp',
+    );
 
     final service = MockStorageService();
     when(service.editPartition(fakeDisk(), edited))
         .thenAnswer((_) async => changedDisks);
 
     final model = ManualStorageModel(service);
-    await model.editPartition(fakeDisk(), partition,
-        size: 456, wipe: true, format: PartitionFormat.ext2, mount: '/tmp',);
+    await model.editPartition(
+      fakeDisk(),
+      partition,
+      size: 456,
+      wipe: true,
+      format: PartitionFormat.ext2,
+      mount: '/tmp',
+    );
     expect(model.disks, equals(changedDisks));
     verify(service.editPartition(fakeDisk(), edited)).called(1);
   });
@@ -331,15 +354,25 @@ void main() {
     expect(model.selectedObjectIndex, equals(-1));
 
     // add partition -> select added partition
-    when(service.addPartition(
-            testPartitions(2),
-            const Gap(offset: 123, size: 456, usable: GapUsable.YES),
-            const Partition(
-                size: 123, format: 'ext4', mount: '/tst', wipe: 'superblock',),),)
-        .thenAnswer((_) async => [testPartitions(2)]);
-    await model.addPartition(model.selectedDisk!,
+    when(
+      service.addPartition(
+        testPartitions(2),
         const Gap(offset: 123, size: 456, usable: GapUsable.YES),
-        size: 123, format: PartitionFormat.ext4, mount: '/tst',);
+        const Partition(
+          size: 123,
+          format: 'ext4',
+          mount: '/tst',
+          wipe: 'superblock',
+        ),
+      ),
+    ).thenAnswer((_) async => [testPartitions(2)]);
+    await model.addPartition(
+      model.selectedDisk!,
+      const Gap(offset: 123, size: 456, usable: GapUsable.YES),
+      size: 123,
+      format: PartitionFormat.ext4,
+      mount: '/tst',
+    );
     expect(model.selectedDiskIndex, equals(0));
     expect(model.selectedObjectIndex, equals(1));
   });
@@ -396,13 +429,16 @@ void main() {
   });
 
   test('trailing gap', () async {
-    final disk = fakeDisk(id: 'a', partitions: [
-      const Partition(number: 11, size: 1),
-      const Gap(offset: 1, size: 1, usable: GapUsable.YES),
-      const Partition(number: 2, size: 22),
-      const Gap(offset: 2, size: 2, usable: GapUsable.TOO_MANY_PRIMARY_PARTS),
-      const Partition(number: 3, size: 33),
-    ],);
+    final disk = fakeDisk(
+      id: 'a',
+      partitions: [
+        const Partition(number: 11, size: 1),
+        const Gap(offset: 1, size: 1, usable: GapUsable.YES),
+        const Partition(number: 2, size: 22),
+        const Gap(offset: 2, size: 2, usable: GapUsable.TOO_MANY_PRIMARY_PARTS),
+        const Partition(number: 3, size: 33),
+      ],
+    );
 
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [disk]);

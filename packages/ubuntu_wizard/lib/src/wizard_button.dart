@@ -198,17 +198,18 @@ class BackWizardButton extends StatelessWidget {
     return AnimatedBuilder(
       animation: wizard?.controller ?? _noAnimation,
       builder: (context, child) => WizardButton(
-          label: UbuntuLocalizations.of(context).backLabel,
-          visible: visible,
-          flat: true,
-          enabled: !isLoading && (enabled ?? hasPrevious),
-          onActivated: onBack,
-          execute: () {
-            // navigate the root wizard at the end of a nested wizard
-            final effectiveWizard =
-                (wizard?.hasPrevious ?? false) ? wizard : rootWizard;
-            return effectiveWizard?.back();
-          },),
+        label: UbuntuLocalizations.of(context).backLabel,
+        visible: visible,
+        flat: true,
+        enabled: !isLoading && (enabled ?? hasPrevious),
+        onActivated: onBack,
+        execute: () {
+          // navigate the root wizard at the end of a nested wizard
+          final effectiveWizard =
+              (wizard?.hasPrevious ?? false) ? wizard : rootWizard;
+          return effectiveWizard?.back();
+        },
+      ),
     );
   }
 }

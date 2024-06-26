@@ -44,7 +44,8 @@ class _InitWizardState extends ConsumerState<InitWizard>
   @override
   Widget build(BuildContext context) {
     final routes = <String, WizardRoute>{
-      for (final step in InitStep.values) step.route: step.toRoute(context, ref),
+      for (final step in InitStep.values)
+        step.route: step.toRoute(context, ref),
     };
     final totalSteps = InitStep.values.length;
 

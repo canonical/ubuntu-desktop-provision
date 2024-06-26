@@ -43,15 +43,18 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                   onPressed:
                       model.token.isEmpty ? null : model.attachManuallyToken,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Theme.of(context)
-                        .colorScheme
-                        .success
-                        .withOpacity(model.token.isEmpty ? 0.5 : 1),),
+                    backgroundColor: MaterialStateProperty.all(
+                      Theme.of(context)
+                          .colorScheme
+                          .success
+                          .withOpacity(model.token.isEmpty ? 0.5 : 1),
+                    ),
                   ),
                   child: Text(
                     l10n.ubuntuProTokenAttachButton,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onPrimary,),
+                          color: Theme.of(context).colorScheme.onPrimary,
+                        ),
                   ),
                 ),
         ],
@@ -109,7 +112,8 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                         children: [
                           BarcodeWidget(
                             margin: const EdgeInsets.symmetric(
-                                vertical: kWizardSpacing,),
+                              vertical: kWizardSpacing,
+                            ),
                             color: Theme.of(context).colorScheme.onSurface,
                             barcode: Barcode.qrCode(),
                             data:

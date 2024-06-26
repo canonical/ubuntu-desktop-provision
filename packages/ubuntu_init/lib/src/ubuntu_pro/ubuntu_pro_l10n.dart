@@ -6,6 +6,8 @@ abstract class UbuntuProLocalizations extends UbuntuInitLocalizations {
 
   static UbuntuInitLocalizations of(BuildContext context) {
     return Localizations.of<UbuntuInitLocalizations>(
-        context, UbuntuInitLocalizations,)!;
+      context,
+      UbuntuInitLocalizations,
+    )!;
   }
 }

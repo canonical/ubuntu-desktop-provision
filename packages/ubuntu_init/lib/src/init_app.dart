@@ -23,46 +23,51 @@ Future<void> runInitApp(
   final exe = p.basename(Platform.resolvedExecutable);
   final log = Logger.setup(path: '/var/log/installer/$exe.log');
 
-  return runZonedGuarded(() async {
-    FlutterError.onError = (error) {
-      log.error('Unhandled exception', error.exception, error.stack);
-    };
+  return runZonedGuarded(
+    () async {
+      FlutterError.onError = (error) {
+        log.error('Unhandled exception', error.exception, error.stack);
+      };
 
-    log.debug('Initializing YaruWindowTitleBar');
-    await YaruWindowTitleBar.ensureInitialized();
+      log.debug('Initializing YaruWindowTitleBar');
+      await YaruWindowTitleBar.ensureInitialized();
 
-    log.debug('Initializing services');
-    await registerInitServices(args);
+      log.debug('Initializing services');
+      await registerInitServices(args);
 
-    log.debug('Loading theme config');
-    final themeVariantService = getService<ThemeVariantService>();
-    await themeVariantService.load();
-    final themeVariant = themeVariantService.themeVariant;
+      log.debug('Loading theme config');
+      final themeVariantService = getService<ThemeVariantService>();
+      await themeVariantService.load();
+      final themeVariant = themeVariantService.themeVariant;
 
-    final windowTitle =
-        await getService<ConfigService>().get<String>('app-name');
+      final windowTitle =
+          await getService<ConfigService>().get<String>('app-name');
 
-    log.debug('Loading page config');
-    await getService<PageConfigService>().load();
+      log.debug('Loading page config');
+      await getService<PageConfigService>().load();
 
-    final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
+      final welcome = tryGetService<ArgResults>()?['welcome'] as bool? ?? false;
 
-    // This needs to be done out of order since it depends on the asset bundle
-    // to be populated.
-    final flavorService = await FlavorService.load();
-    tryRegisterService<FlavorService>(() => flavorService);
+      // This needs to be done out of order since it depends on the asset bundle
+      // to be populated.
+      final flavorService = await FlavorService.load();
+      tryRegisterService<FlavorService>(() => flavorService);
 
-    runApp(ProviderScope(
-      child: _InitApp(
-        theme: theme,
-        darkTheme: darkTheme,
-        themeVariant: themeVariant,
-        windowTitle: windowTitle,
-        welcome: welcome,
-        flavor: flavorService.flavor,
-      ),
-    ),);
-  }, (error, stack) => log.error('Unhandled exception', error, stack),);
+      runApp(
+        ProviderScope(
+          child: _InitApp(
+            theme: theme,
+            darkTheme: darkTheme,
+            themeVariant: themeVariant,
+            windowTitle: windowTitle,
+            welcome: welcome,
+            flavor: flavorService.flavor,
+          ),
+        ),
+      );
+    },
+    (error, stack) => log.error('Unhandled exception', error, stack),
+  );
 }
 
 class _InitApp extends ConsumerWidget {

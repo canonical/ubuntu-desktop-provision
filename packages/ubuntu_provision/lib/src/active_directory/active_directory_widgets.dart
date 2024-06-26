@@ -18,7 +18,8 @@ class DomainNameFormField extends ConsumerWidget {
     final domainName =
         ref.watch(activeDirectoryModelProvider.select((m) => m.domainName));
     final validation = ref.watch(
-        activeDirectoryModelProvider.select((m) => m.domainNameValidation),);
+      activeDirectoryModelProvider.select((m) => m.domainNameValidation),
+    );
 
     return ValidatedFormField(
       autofocus: true,
@@ -47,7 +48,8 @@ class AdminNameFormField extends ConsumerWidget {
     final adminName =
         ref.read(activeDirectoryModelProvider.select((m) => m.adminName));
     final validation = ref.watch(
-        activeDirectoryModelProvider.select((m) => m.adminNameValidation),);
+      activeDirectoryModelProvider.select((m) => m.adminNameValidation),
+    );
 
     return ValidatedFormField(
       labelText: lang.activeDirectoryAdminLabel,
@@ -71,7 +73,8 @@ class PasswordFormField extends ConsumerWidget {
     final password =
         ref.watch(activeDirectoryModelProvider.select((m) => m.password));
     final validation = ref.watch(
-        activeDirectoryModelProvider.select((m) => m.passwordValidation),);
+      activeDirectoryModelProvider.select((m) => m.passwordValidation),
+    );
     final showPassword =
         ref.watch(activeDirectoryModelProvider.select((m) => m.showPassword));
 

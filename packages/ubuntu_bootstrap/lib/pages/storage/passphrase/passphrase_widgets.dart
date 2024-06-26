@@ -50,7 +50,8 @@ class ConfirmPassphraseFormField extends ConsumerWidget {
     final securityKey =
         ref.watch(passphraseModelProvider.select((model) => model.passphrase));
     final confirmedSecurityKey = ref.watch(
-        passphraseModelProvider.select((model) => model.confirmedPassphrase),);
+      passphraseModelProvider.select((model) => model.confirmedPassphrase),
+    );
     final showSecurityKey = ref
         .watch(passphraseModelProvider.select((model) => model.showPassphrase));
 

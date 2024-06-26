@@ -6,7 +6,8 @@ import 'package:ubuntu_bootstrap/services.dart';
 
 /// Provider for [GuidedReformatModel].
 final guidedReformatModelProvider = ChangeNotifierProvider(
-    (_) => GuidedReformatModel(getService<StorageService>()),);
+  (_) => GuidedReformatModel(getService<StorageService>()),
+);
 
 /// View model for [GuidedReformatPage].
 class GuidedReformatModel extends SafeChangeNotifier {

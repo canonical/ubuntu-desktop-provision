@@ -19,13 +19,13 @@ final initModelProvider = Provider(
 );
 
 class InitModel {
-  InitModel(
-      {PageConfigService? pageConfig,
-      ArgResults? args,
-      IdentityService? identityService,
-      GdmService? gdmService,
-      ChownService? chownService,})
-      : _gdmService = gdmService,
+  InitModel({
+    PageConfigService? pageConfig,
+    ArgResults? args,
+    IdentityService? identityService,
+    GdmService? gdmService,
+    ChownService? chownService,
+  })  : _gdmService = gdmService,
         _identityService = identityService,
         _pageConfig = pageConfig,
         _chownService = chownService;

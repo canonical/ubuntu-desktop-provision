@@ -26,47 +26,48 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
       ),
       content: Center(
         child: SingleChildScrollView(
-            child: Column(
-          children: [
-            if (image != null) image,
-            const SizedBox(height: kWizardSpacing),
-            YaruBorderContainer(
-              padding: const EdgeInsets.all(kWizardSpacing),
-              border: Border.all(
-                color: Theme.of(context).colorScheme.success,
-                width: 2,
-              ),
-              color: Theme.of(context).colorScheme.success.withOpacity(0.1),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SuccessIcon(),
-                  const SizedBox(width: kWizardSpacing / 2),
-                  Flexible(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.ubuntuProSucessAttachHeader,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          l10n.ubuntuProSucessAttachDescription,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                      ],
+          child: Column(
+            children: [
+              if (image != null) image,
+              const SizedBox(height: kWizardSpacing),
+              YaruBorderContainer(
+                padding: const EdgeInsets.all(kWizardSpacing),
+                border: Border.all(
+                  color: Theme.of(context).colorScheme.success,
+                  width: 2,
+                ),
+                color: Theme.of(context).colorScheme.success.withOpacity(0.1),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SuccessIcon(),
+                    const SizedBox(width: kWizardSpacing / 2),
+                    Flexible(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            l10n.ubuntuProSucessAttachHeader,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge
+                                ?.copyWith(fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            l10n.ubuntuProSucessAttachDescription,
+                            style: Theme.of(context).textTheme.bodyLarge,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),),
+            ],
+          ),
+        ),
       ),
       bottomBar: const WizardBar(
         leading: BackWizardButton(),

@@ -33,7 +33,8 @@ class TelemetryButton extends StatelessWidget {
             ? scheme.primary.withOpacity(0.1)
             : scheme.primaryContainer,
         border: Border.all(
-            color: value == groupValue ? scheme.primary : scheme.outline,),
+          color: value == groupValue ? scheme.primary : scheme.outline,
+        ),
         borderRadius: BorderRadius.circular(kYaruButtonRadius),
       ),
       child: YaruRadioButton<bool>(

@@ -22,8 +22,9 @@ Future<bool> showConfirmationDialog(
         actionsPadding: const EdgeInsets.all(kYaruPagePadding),
         buttonPadding: EdgeInsets.zero,
         content: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 420),
-            child: Text(message),),
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Text(message),
+        ),
         actions: <Widget>[
           PushButton.outlined(
             child: Text(lang.cancelLabel),

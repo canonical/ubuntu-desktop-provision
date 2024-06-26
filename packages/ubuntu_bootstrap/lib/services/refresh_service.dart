@@ -21,11 +21,15 @@ class RefreshState with _$RefreshState {
   const factory RefreshState.error([Object? error]) = _RefreshError;
 
   bool get available => maybeWhen(
-      status: (s) => s.availability == RefreshCheckState.AVAILABLE,
-      orElse: () => false,);
+        status: (s) => s.availability == RefreshCheckState.AVAILABLE,
+        orElse: () => false,
+      );
   bool get busy => maybeWhen(progress: (c) => !c.ready, orElse: () => false);
   bool get ready => maybeWhen(
-      progress: (c) => c.ready, done: () => true, orElse: () => false,);
+        progress: (c) => c.ready,
+        done: () => true,
+        orElse: () => false,
+      );
 }
 
 class RefreshService {

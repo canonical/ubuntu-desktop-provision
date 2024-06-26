@@ -208,7 +208,8 @@ class SubiquityProcess {
       return process;
     });
     log.info(
-        'Starting server (PID: ${_serverProcess!.pid}) with args: $allArgs',);
+      'Starting server (PID: ${_serverProcess!.pid}) with args: $allArgs',
+    );
 
     await onProcessStart?.call();
     await writePidFile(_serverProcess!.pid);

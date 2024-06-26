@@ -139,42 +139,46 @@ class StorageTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
-      child: LayoutBuilder(builder: (context, constraints) {
-        final theme = Theme.of(context);
-        final rowHeight = kMinInteractiveDimension +
-            theme.visualDensity.baseSizeAdjustment.dy;
-        return OverrideMouseCursor(
-          cursor: SystemMouseCursors.basic,
-          child: OverflowBox(
-            maxWidth: double.infinity,
-            alignment: Alignment.topLeft,
-            child: ConstrainedBox(
-              constraints: BoxConstraints(minWidth: constraints.minWidth),
-              child: SingleChildScrollView(
-                controller: controller,
-                child: DataTable(
-                  dataRowMinHeight: rowHeight,
-                  dataRowMaxHeight: rowHeight,
-                  headingRowHeight: rowHeight,
-                  showCheckboxColumn: false,
-                  headingTextStyle: theme.textTheme.titleSmall,
-                  dataTextStyle: theme.textTheme.bodyMedium,
-                  columns: columns
-                      .map((column) =>
-                          DataColumn(label: column.titleBuilder(context)),)
-                      .toList(),
-                  rows: List.generate(storages.length, (index) {
-                    return _buildDataRows(context, diskIndex: index);
-                  }).fold<List<DataRow>>([], (allRows, diskRows) {
-                    allRows.addAll(diskRows);
-                    return allRows;
-                  }).toList(),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final theme = Theme.of(context);
+          final rowHeight = kMinInteractiveDimension +
+              theme.visualDensity.baseSizeAdjustment.dy;
+          return OverrideMouseCursor(
+            cursor: SystemMouseCursors.basic,
+            child: OverflowBox(
+              maxWidth: double.infinity,
+              alignment: Alignment.topLeft,
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minWidth: constraints.minWidth),
+                child: SingleChildScrollView(
+                  controller: controller,
+                  child: DataTable(
+                    dataRowMinHeight: rowHeight,
+                    dataRowMaxHeight: rowHeight,
+                    headingRowHeight: rowHeight,
+                    showCheckboxColumn: false,
+                    headingTextStyle: theme.textTheme.titleSmall,
+                    dataTextStyle: theme.textTheme.bodyMedium,
+                    columns: columns
+                        .map(
+                          (column) =>
+                              DataColumn(label: column.titleBuilder(context)),
+                        )
+                        .toList(),
+                    rows: List.generate(storages.length, (index) {
+                      return _buildDataRows(context, diskIndex: index);
+                    }).fold<List<DataRow>>([], (allRows, diskRows) {
+                      allRows.addAll(diskRows);
+                      return allRows;
+                    }).toList(),
+                  ),
                 ),
               ),
             ),
-          ),
-        );
-      },),
+          );
+        },
+      ),
     );
   }
 }

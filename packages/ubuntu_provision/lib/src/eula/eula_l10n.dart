@@ -6,6 +6,8 @@ abstract class EulaLocalizations extends UbuntuProvisionLocalizations {
 
   static UbuntuProvisionLocalizations of(BuildContext context) {
     return Localizations.of<UbuntuProvisionLocalizations>(
-        context, UbuntuProvisionLocalizations,)!;
+      context,
+      UbuntuProvisionLocalizations,
+    )!;
   }
 }

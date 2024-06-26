@@ -10,7 +10,8 @@ sealed class ProResponse {
   const ProResponse();
 
   factory ProResponse.magicAttachFromProvd(
-          provd.ProMagicAttachResponse response,) =>
+    provd.ProMagicAttachResponse response,
+  ) =>
       switch (response.type) {
         provd.ProMagicAttachResponseType.USER_CODE =>
           ProResponseUserCode(response.userCode),

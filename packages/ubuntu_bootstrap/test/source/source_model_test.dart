@@ -71,11 +71,21 @@ void main() {
 
   test('init the installation options', () async {
     final client = MockSubiquityClient();
-    when(client.getSource()).thenAnswer((_) async =>
-        const SourceSelectionAndSetting(
-            sources: [], currentId: kFullSourceId, searchDrivers: false,),);
-    when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
-        install: true, drivers: [], localOnly: false, searchDrivers: false,),);
+    when(client.getSource()).thenAnswer(
+      (_) async => const SourceSelectionAndSetting(
+        sources: [],
+        currentId: kFullSourceId,
+        searchDrivers: false,
+      ),
+    );
+    when(client.getDrivers()).thenAnswer(
+      (_) async => const DriversResponse(
+        install: true,
+        drivers: [],
+        localOnly: false,
+        searchDrivers: false,
+      ),
+    );
     when(client.getCodecs())
         .thenAnswer((_) async => const CodecsData(install: true));
 
@@ -105,9 +115,13 @@ void main() {
 
   test('save the installation options', () async {
     final client = MockSubiquityClient();
-    when(client.getSource()).thenAnswer((_) async =>
-        const SourceSelectionAndSetting(
-            sources: [], currentId: kFullSourceId, searchDrivers: false,),);
+    when(client.getSource()).thenAnswer(
+      (_) async => const SourceSelectionAndSetting(
+        sources: [],
+        currentId: kFullSourceId,
+        searchDrivers: false,
+      ),
+    );
 
     final network = MockNetworkService();
     when(network.isConnected).thenReturn(true);
@@ -158,11 +172,21 @@ void main() {
     when(network.propertiesChanged).thenAnswer((_) => const Stream.empty());
 
     final client = MockSubiquityClient();
-    when(client.getSource()).thenAnswer((_) async =>
-        const SourceSelectionAndSetting(
-            sources: [], currentId: kFullSourceId, searchDrivers: false,),);
-    when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
-        install: true, drivers: [], localOnly: false, searchDrivers: false,),);
+    when(client.getSource()).thenAnswer(
+      (_) async => const SourceSelectionAndSetting(
+        sources: [],
+        currentId: kFullSourceId,
+        searchDrivers: false,
+      ),
+    );
+    when(client.getDrivers()).thenAnswer(
+      (_) async => const DriversResponse(
+        install: true,
+        drivers: [],
+        localOnly: false,
+        searchDrivers: false,
+      ),
+    );
     when(client.getCodecs())
         .thenAnswer((_) async => const CodecsData(install: true));
 
@@ -203,11 +227,21 @@ void main() {
     when(power.propertiesChanged).thenAnswer((_) => const Stream.empty());
 
     final client = MockSubiquityClient();
-    when(client.getSource()).thenAnswer((_) async =>
-        const SourceSelectionAndSetting(
-            sources: [], currentId: kFullSourceId, searchDrivers: false,),);
-    when(client.getDrivers()).thenAnswer((_) async => const DriversResponse(
-        install: true, drivers: [], localOnly: false, searchDrivers: false,),);
+    when(client.getSource()).thenAnswer(
+      (_) async => const SourceSelectionAndSetting(
+        sources: [],
+        currentId: kFullSourceId,
+        searchDrivers: false,
+      ),
+    );
+    when(client.getDrivers()).thenAnswer(
+      (_) async => const DriversResponse(
+        install: true,
+        drivers: [],
+        localOnly: false,
+        searchDrivers: false,
+      ),
+    );
     when(client.getCodecs())
         .thenAnswer((_) async => const CodecsData(install: true));
 

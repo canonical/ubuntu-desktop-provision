@@ -14,16 +14,20 @@ void main() {
         home: WizardPage(
           bottomBar: WizardBar(
             leading: WizardButton(
-                label: 'action', onActivated: () => activated = true,),
+              label: 'action',
+              onActivated: () => activated = true,
+            ),
           ),
         ),
       ),
     );
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text('action'),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text('action'),
+      ),
+    );
     expect(activated, isTrue);
   });
 
@@ -71,7 +75,9 @@ void main() {
     expect(tester.getCenter(header).dy, lessThan(tester.getCenter(content).dy));
     expect(tester.getCenter(back).dx, lessThan(tester.getCenter(content).dx));
     expect(
-        tester.getCenter(next).dx, greaterThan(tester.getCenter(content).dx),);
+      tester.getCenter(next).dx,
+      greaterThan(tester.getCenter(content).dx),
+    );
   });
 
   testWidgets('normal/flat/highlighted action', (tester) async {
@@ -112,10 +118,12 @@ void main() {
       ),
     );
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text('action'),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text('action'),
+      ),
+    );
     expect(activated, isFalse);
   });
 
@@ -145,32 +153,42 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-        home: Wizard(routes: {
-          '/': WizardRoute(builder: (_) {
-            return Builder(builder: (context) {
-              return const WizardPage(
-                bottomBar: WizardBar(
-                  leading: BackWizardButton(),
-                  trailing: [
-                    NextWizardButton(),
-                  ],
-                ),
-              );
-            },);
-          },),
-          '/last': WizardRoute(builder: (_) {
-            return Builder(builder: (context) {
-              return const WizardPage(
-                bottomBar: WizardBar(
-                  leading: BackWizardButton(),
-                  trailing: [
-                    NextWizardButton(),
-                  ],
-                ),
-              );
-            },);
-          },),
-        },),
+        home: Wizard(
+          routes: {
+            '/': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return const WizardPage(
+                      bottomBar: WizardBar(
+                        leading: BackWizardButton(),
+                        trailing: [
+                          NextWizardButton(),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+            '/last': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return const WizardPage(
+                      bottomBar: WizardBar(
+                        leading: BackWizardButton(),
+                        trailing: [
+                          NextWizardButton(),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          },
+        ),
       ),
     );
 
@@ -236,107 +254,133 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
-        home: Wizard(routes: {
-          '/first': WizardRoute(builder: (_) {
-            return Builder(builder: (context) {
-              return const WizardPage(
-                content: Text('first'),
-                bottomBar: WizardBar(
-                  leading: BackWizardButton(),
-                  trailing: [NextWizardButton()],
-                ),
-              );
-            },);
-          },),
-          '/second': WizardRoute(
-            builder: (_) {
-              return Builder(builder: (context) {
-                return WizardPage(
-                  content: const Text('second'),
-                  bottomBar: WizardBar(
-                    leading: BackWizardButton(onBack: () => wentBack = true),
-                    trailing: const [NextWizardButton()],
-                  ),
+        home: Wizard(
+          routes: {
+            '/first': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return const WizardPage(
+                      content: Text('first'),
+                      bottomBar: WizardBar(
+                        leading: BackWizardButton(),
+                        trailing: [NextWizardButton()],
+                      ),
+                    );
+                  },
                 );
-              },);
-            },
-            userData: const WizardRouteData(hasPrevious: false),
-          ),
-          '/last': WizardRoute(
-            builder: (_) {
-              return Builder(builder: (context) {
-                return WizardPage(
-                  content: const Text('last'),
-                  bottomBar: WizardBar(
-                    leading: BackWizardButton(onBack: () => wentBack = true),
-                    trailing: const [NextWizardButton()],
-                  ),
+              },
+            ),
+            '/second': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return WizardPage(
+                      content: const Text('second'),
+                      bottomBar: WizardBar(
+                        leading:
+                            BackWizardButton(onBack: () => wentBack = true),
+                        trailing: const [NextWizardButton()],
+                      ),
+                    );
+                  },
                 );
-              },);
-            },
-            userData: const WizardRouteData(hasNext: false),
-          ),
-          '/unreachable': WizardRoute(
-            builder: (_) {
-              return Builder(builder: (context) {
-                return const WizardPage(
-                  bottomBar: WizardBar(
-                    leading: BackWizardButton(),
-                    trailing: [NextWizardButton()],
-                  ),
+              },
+              userData: const WizardRouteData(hasPrevious: false),
+            ),
+            '/last': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return WizardPage(
+                      content: const Text('last'),
+                      bottomBar: WizardBar(
+                        leading:
+                            BackWizardButton(onBack: () => wentBack = true),
+                        trailing: const [NextWizardButton()],
+                      ),
+                    );
+                  },
                 );
-              },);
-            },
-          ),
-        },),
+              },
+              userData: const WizardRouteData(hasNext: false),
+            ),
+            '/unreachable': WizardRoute(
+              builder: (_) {
+                return Builder(
+                  builder: (context) {
+                    return const WizardPage(
+                      bottomBar: WizardBar(
+                        leading: BackWizardButton(),
+                        trailing: [NextWizardButton()],
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          },
+        ),
       ),
     );
 
     final context = tester.element(find.byType(WizardPage));
     final lang = UbuntuLocalizations.of(context);
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text(lang.nextLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text(lang.nextLabel),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('second'), findsOneWidget);
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.backLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<OutlinedButton>(),
+        matching: find.text(lang.backLabel),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(wentBack, isFalse);
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text(lang.nextLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text(lang.nextLabel),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('last'), findsOneWidget);
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<OutlinedButton>(),
-      matching: find.text(lang.backLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<OutlinedButton>(),
+        matching: find.text(lang.backLabel),
+      ),
+    );
     await tester.pumpAndSettle();
 
     expect(wentBack, isTrue);
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text(lang.nextLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text(lang.nextLabel),
+      ),
+    );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.descendant(
-      of: find.bySubtype<FilledButton>(),
-      matching: find.text(lang.doneLabel),
-    ),);
+    await tester.tap(
+      find.descendant(
+        of: find.bySubtype<FilledButton>(),
+        matching: find.text(lang.doneLabel),
+      ),
+    );
 
     expect(find.text('unreachable'), findsNothing);
   });
@@ -365,8 +409,10 @@ void main() {
     final indicatorFinder = find.byType(YaruPageIndicator);
     expect(indicatorFinder, findsOneWidget);
     expect(find.text('Page 4 of 7'), findsOneWidget);
-    expect((indicatorFinder.evaluate().first.widget as YaruPageIndicator).page,
-        equals(3),);
+    expect(
+      (indicatorFinder.evaluate().first.widget as YaruPageIndicator).page,
+      equals(3),
+    );
   });
 
   testWidgets('loading indicator', (tester) async {

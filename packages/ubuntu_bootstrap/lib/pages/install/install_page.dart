@@ -100,9 +100,10 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                   ? lang.installationFailed
                   : model.event.action.localize(lang),
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: model.hasError
-                      ? Theme.of(context).colorScheme.error
-                      : null,),
+                    color: model.hasError
+                        ? Theme.of(context).colorScheme.error
+                        : null,
+                  ),
             ),
             subtitle: RepaintBoundary(
               child: YaruLinearProgressIndicator(
