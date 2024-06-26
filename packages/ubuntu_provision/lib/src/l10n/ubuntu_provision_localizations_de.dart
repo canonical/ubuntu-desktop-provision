@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Tastaturbelegung';
 
   @override
-  String get keyboardHeader => 'Wählen Sie Ihre Tastaturbelegung aus:';
+  String get keyboardHeader => 'Wählen Sie Ihre Tastaturbelegung aus';
 
   @override
   String get keyboardTestHint => 'Geben Sie hier etwas ein, um Ihre Tastaturbelegung zu überprüfen';
@@ -277,7 +277,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Mit einem Netzwerk verbinden';
 
   @override
-  String get networkPageHeader => 'Die Verbindung des Computers mit dem Internet hilft Ubuntu bei der Installation zusätzlicher Software und bei der Auswahl der Zeitzone.\n\nPer Ethernet-Kabel verbinden oder ein WLAN-Netzwerk auswählen';
+  String get networkPageHeader => 'Mit dem Internet verbinden';
 
   @override
   String get networkPageBody => 'Eine Internetverbindung verbessert Ihre Installation mit Kompatibilitätsprüfung und zusätzlichen Softwarepaketen.';

@@ -90,7 +90,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Rozvržení klávesnice';
 
   @override
-  String get keyboardHeader => 'Zvolte si rozvržení klávesnice:';
+  String get keyboardHeader => 'Zvolte si rozvržení klávesnice';
 
   @override
   String get keyboardTestHint => 'Správné fungování rozvržení si můžete vyzkoušet zde';
@@ -277,7 +277,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Připojit k síti';
 
   @override
-  String get networkPageHeader => 'Připojení tohoto počítač k Internetu pomůže Ubuntu nainstalovat jakýkoli potřebný dodatečný software a pomůže zvolit vaše časové pásmo.\n\nPřipojte se Ethernetovým kabelem, nebo zvolte Wi-Fi síť';
+  String get networkPageHeader => 'Připojit k internetu';
 
   @override
   String get networkPageBody => 'Připojení k internetu zlepší vaši instalaci pomocí kontroly kompatibility a dalších softwarových balíčků.';

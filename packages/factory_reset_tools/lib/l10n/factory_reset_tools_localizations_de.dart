@@ -74,7 +74,7 @@ class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   String get error => 'Fehler';
 
   @override
-  String get loading => 'Wird geladen...';
+  String get loading => 'Wird geladen ...';
 
   @override
   String get warning => 'Warnung';

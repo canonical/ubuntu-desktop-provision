@@ -31,7 +31,7 @@
   },
   "rstTitle": "RST ist aktiviert",
   "@rstTitle": {},
-  "rstDescription": "Dieser Computer verwendet Intel RST (Rapid Storage Technology). Vor der Installation von Ubuntu muss RST in Windows ausgeschaltet werden.",
+  "rstDescription": "Dieser Computer verwendet Intel RST (Rapid Storage Technology). Vor der Installation von {DISTRO} muss RST in Windows ausgeschaltet werden.",
   "@rstDescription": {},
   "rstInstructions": "Um Anweisungen zu erhalten, scannen Sie den QR-Code mit einem anderen Gerät oder besuchen Sie: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -128,9 +128,9 @@
   },
   "installationTypeAlongsideInfo": "Dokumente, Musik und andere persönliche Dateien bleiben erhalten. Sie können bei jedem Start des Computers auswählen, welches Betriebssystem Sie verwenden möchten.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Manuelle Partitionierung",
+  "installationTypeManual": "Manuelle Installation",
   "@installationTypeManual": {},
-  "installationTypeManualInfo": "Sie können selbst Partitionen erstellen, deren Größe ändern oder mehrere Partitionen für {DISTRO} auswählen",
+  "installationTypeManualInfo": "Für fortgeschrittene Benutzer, die individuelle Festplattenkonfigurationen wünschen.",
   "@installationTypeManualInfo": {},
   "selectGuidedStoragePageTitle": "Festplatte löschen und {DISTRO} installieren",
   "@selectGuidedStoragePageTitle": {},
@@ -190,7 +190,7 @@
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Bereit zur Installation",
   "@confirmPageTitle": {},
-  "confirmHeader": "Wenn Sie fortfahren, werden die unten aufgeführten Änderungen auf die Festplatten geschrieben. Sie haben die Möglichkeit, weitere Änderungen manuell vorzunehmen.",
+  "confirmHeader": "Überprüfen Sie Ihre Auswahl",
   "@confirmHeader": {},
   "confirmPartitionTables": "Die Partitionstabellen der folgenden Laufwerke werden geändert:",
   "@confirmPartitionTables": {},
@@ -360,11 +360,11 @@
   "@installationTypeLVMEncryptionSelected": {},
   "installCodecsTitle": "Unterstützung für zusätzliche Medienformate herunterladen und installieren",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Diese Software unterliegt den Lizenzbedingungen, die in ihrer Dokumentation enthalten sind. Einige sind proprietär.",
+  "installCodecsSubtitle": "Einschließlich, aber nicht beschränkt auf MP3, MP4, MOV und ähnliche Formate",
   "@installCodecsSubtitle": {},
   "installDriversTitle": "Software von Drittanbietern für Grafik- und WLAN-Hardware installieren",
   "@installDriversTitle": {},
-  "installDriversSubtitle": "Diese Treiber unterliegen den Lizenzbedingungen, die in ihrer Dokumentation enthalten sind. Sie sind proprietär.",
+  "installDriversSubtitle": "Einschließlich, aber nicht beschränkt auf NVIDIA-Treiber und ähnliche",
   "@installDriversSubtitle": {},
   "continueTesting": "Testen fortsetzen",
   "@continueTesting": {},
@@ -565,7 +565,7 @@
       "version": {}
     }
   },
-  "refreshUpdating": "{snap} wird aktualisiert...",
+  "refreshUpdating": "{snap} wird aktualisiert ...",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
@@ -588,112 +588,112 @@
       "version": {}
     }
   },
-  "refreshSnapPrerequisites": "Voraussetzungen für {snap} werden sichergestellt...",
+  "refreshSnapPrerequisites": "Voraussetzungen für {snap} werden sichergestellt ...",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapRefresh": "{snap} wird aufgefrischt...",
+  "refreshSnapRefresh": "{snap} wird aufgefrischt ...",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapPrepare": "{snap} wird vorbereitet...",
+  "refreshSnapPrepare": "{snap} wird vorbereitet ...",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapDownload": "{snap} wird heruntergeladen...",
+  "refreshSnapDownload": "{snap} wird heruntergeladen ...",
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapValidate": "{snap} wird validiert...",
+  "refreshSnapValidate": "{snap} wird validiert ...",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapMount": "{snap} wird eingehängt...",
+  "refreshSnapMount": "{snap} wird eingehängt ...",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapStopServices": "{snap}-Dienste werden gestoppt...",
+  "refreshSnapStopServices": "{snap}-Dienste werden gestoppt ...",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapRemoveAliases": "{snap}-Aliase werden entfernt...",
+  "refreshSnapRemoveAliases": "{snap}-Aliase werden entfernt ...",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapUnlink": "Verknüpfung zu {snap} wird aufgehoben...",
+  "refreshSnapUnlink": "Verknüpfung zu {snap} wird aufgehoben ...",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapCopyData": "{snap}-Daten werden kopiert...",
+  "refreshSnapCopyData": "{snap}-Daten werden kopiert ...",
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapSetupProfiles": "{snap}-Sicherheitsprofile werden eingerichtet...",
+  "refreshSnapSetupProfiles": "{snap}-Sicherheitsprofile werden eingerichtet ...",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapLink": "{snap} wird verknüpft...",
+  "refreshSnapLink": "{snap} wird verknüpft ...",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapSetAutoAliases": "Automatische {snap}-Aliase werden festgelegt...",
+  "refreshSnapSetAutoAliases": "Automatische {snap}-Aliase werden festgelegt ...",
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapSetupAliases": "{snap}-Aliase werden eingerichtet...",
+  "refreshSnapSetupAliases": "{snap}-Aliase werden eingerichtet ...",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapStartServices": "{snap}-Dienste werden gestartet...",
+  "refreshSnapStartServices": "{snap}-Dienste werden gestartet ...",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapCleanup": "{snap} wird bereinigt...",
+  "refreshSnapCleanup": "{snap} wird bereinigt ...",
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
@@ -711,21 +711,21 @@
       "color": {}
     }
   },
-  "refreshSnapUpdateAssets": "{snap}-Güter werden aktualisiert...",
+  "refreshSnapUpdateAssets": "{snap}-Güter werden aktualisiert ...",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapUpdateKernelCommandLine": "{snap}-Kernel-Befehlszeile wird aktualisiert...",
+  "refreshSnapUpdateKernelCommandLine": "{snap}-Kernel-Befehlszeile wird aktualisiert ...",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapAutoConnect": "{snap}-Stecker und -Steckplätze werden verbunden...",
+  "refreshSnapAutoConnect": "{snap}-Stecker und -Steckplätze werden verbunden ...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
@@ -804,7 +804,7 @@
   "@refreshHeader": {},
   "refreshInfo": "Aktualisieren Sie auf die neueste Version, um eine verbesserte Zuverlässigkeit und mehr Funktionen zu erhalten.",
   "@refreshInfo": {},
-  "autoinstallInstructions": "Geben Sie die URL der autoinstall.yaml ein:",
+  "autoinstallInstructions": "Geben Sie die URL der autoinstall.yaml oder den lokalen Dateipfad ein:",
   "@autoinstallInstructions": {},
   "codecsAndDriversPageBody": "Im Lieferumfang von {DISTRO} ist standardmäßig keine proprietäre Software enthalten. Die Installation von zusätzlicher Software kann die Leistung Ihres Computers verbessern.",
   "@codecsAndDriversPageBody": {
@@ -913,7 +913,7 @@
       }
     }
   },
-  "refreshSnapCheckRerefresh": "Erneute {snap}-Auffrischung wird überprüft...",
+  "refreshSnapCheckRerefresh": "Erneute {snap}-Auffrischung wird überprüft ...",
   "@refreshSnapCheckRerefresh": {
     "placeholders": {
       "snap": {

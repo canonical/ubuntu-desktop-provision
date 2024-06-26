@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Geben Sie die URL der autoinstall.yaml ein:';
+  String get autoinstallInstructions => 'Geben Sie die URL der autoinstall.yaml oder den lokalen Dateipfad ein:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktive Installation';
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Dieser Computer verwendet Intel RST (Rapid Storage Technology). Vor der Installation von Ubuntu muss RST in Windows ausgeschaltet werden.';
+    return 'Dieser Computer verwendet Intel RST (Rapid Storage Technology). Vor der Installation von $DISTRO muss RST in Windows ausgeschaltet werden.';
   }
 
   @override
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Software von Drittanbietern für Grafik- und WLAN-Hardware installieren';
 
   @override
-  String get installDriversSubtitle => 'Diese Treiber unterliegen den Lizenzbedingungen, die in ihrer Dokumentation enthalten sind. Sie sind proprietär.';
+  String get installDriversSubtitle => 'Einschließlich, aber nicht beschränkt auf NVIDIA-Treiber und ähnliche';
 
   @override
   String get installCodecsTitle => 'Unterstützung für zusätzliche Medienformate herunterladen und installieren';
 
   @override
-  String get installCodecsSubtitle => 'Diese Software unterliegt den Lizenzbedingungen, die in ihrer Dokumentation enthalten sind. Einige sind proprietär.';
+  String get installCodecsSubtitle => 'Einschließlich, aber nicht beschränkt auf MP3, MP4, MOV und ähnliche Formate';
 
   @override
   String get batteryWarning => 'Der Computer ist nicht an eine Stromquelle angeschlossen.';
@@ -358,11 +358,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'Dokumente, Musik und andere persönliche Dateien bleiben erhalten. Sie können bei jedem Start des Computers auswählen, welches Betriebssystem Sie verwenden möchten.';
 
   @override
-  String get installationTypeManual => 'Manuelle Partitionierung';
+  String get installationTypeManual => 'Manuelle Installation';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Sie können selbst Partitionen erstellen, deren Größe ändern oder mehrere Partitionen für $DISTRO auswählen';
+    return 'Für fortgeschrittene Benutzer, die individuelle Festplattenkonfigurationen wünschen.';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Bereit zur Installation';
 
   @override
-  String get confirmHeader => 'Wenn Sie fortfahren, werden die unten aufgeführten Änderungen auf die Festplatten geschrieben. Sie haben die Möglichkeit, weitere Änderungen manuell vorzunehmen.';
+  String get confirmHeader => 'Überprüfen Sie Ihre Auswahl';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -841,7 +841,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return '$snap wird aktualisiert...';
+    return '$snap wird aktualisiert ...';
   }
 
   @override
@@ -852,102 +852,102 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Voraussetzungen für $snap werden sichergestellt...';
+    return 'Voraussetzungen für $snap werden sichergestellt ...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return '$snap wird aufgefrischt...';
+    return '$snap wird aufgefrischt ...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Erneute $snap-Auffrischung wird überprüft...';
+    return 'Erneute $snap-Auffrischung wird überprüft ...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return '$snap wird vorbereitet...';
+    return '$snap wird vorbereitet ...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return '$snap wird heruntergeladen...';
+    return '$snap wird heruntergeladen ...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return '$snap wird validiert...';
+    return '$snap wird validiert ...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return '$snap wird eingehängt...';
+    return '$snap wird eingehängt ...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return '$snap-Dienste werden gestoppt...';
+    return '$snap-Dienste werden gestoppt ...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return '$snap-Aliase werden entfernt...';
+    return '$snap-Aliase werden entfernt ...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Verknüpfung zu $snap wird aufgehoben...';
+    return 'Verknüpfung zu $snap wird aufgehoben ...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return '$snap-Güter werden aktualisiert...';
+    return '$snap-Güter werden aktualisiert ...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return '$snap-Kernel-Befehlszeile wird aktualisiert...';
+    return '$snap-Kernel-Befehlszeile wird aktualisiert ...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return '$snap-Daten werden kopiert...';
+    return '$snap-Daten werden kopiert ...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return '$snap-Sicherheitsprofile werden eingerichtet...';
+    return '$snap-Sicherheitsprofile werden eingerichtet ...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return '$snap wird verknüpft...';
+    return '$snap wird verknüpft ...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return '$snap-Stecker und -Steckplätze werden verbunden...';
+    return '$snap-Stecker und -Steckplätze werden verbunden ...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Automatische $snap-Aliase werden festgelegt...';
+    return 'Automatische $snap-Aliase werden festgelegt ...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return '$snap-Aliase werden eingerichtet...';
+    return '$snap-Aliase werden eingerichtet ...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return '$snap-Dienste werden gestartet...';
+    return '$snap-Dienste werden gestartet ...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return '$snap wird bereinigt...';
+    return '$snap wird bereinigt ...';
   }
 
   @override

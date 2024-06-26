@@ -433,7 +433,7 @@
       "os": {}
     }
   },
-  "installationTypeReinstallWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Týmto odstránite všetky aplikácie, dokumenty, fotky, hudbu a všetky ostatné súbory, nachádzajúce sa v rámci {os}.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">UPOZORNENIE:</font> Týmto vymažete všetky aplikácie, dokumenty, fotky, hudbu a všetky ostatné súbory, nachádzajúce sa v rámci {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
