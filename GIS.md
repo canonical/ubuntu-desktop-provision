@@ -16,21 +16,21 @@ The new [Ubuntu Desktop Bootstrap](https://github.com/canonical/ubuntu-desktop-p
 given a `whitelabel.yaml` file to customize its appearance and behavior. One thing you can configure is the `mode` you 
 would like to run the installer in. 
 
-The `oem` skips user creation during installation, meaning that user creation will be handled by Gnome Initial Setup 
-post installation.
+The `oem` mode skips user creation and time zone setup during installation, leaving them to be handled by Gnome Initial 
+Setup post installation.
 
-The following `whitelable.yaml` placed in `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
+The following `whitelabel.yaml` placed in `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
 to skip user creation during installation, provided you are using the new Ubuntu Desktop Bootstrap installer:
 
 ```
 mode: oem
 ```
 
-A comprehensive guild to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
+A comprehensive guide to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
 
 ## Triggering Gnome-Initial-Setup without modifying the LiveCD
 
-Its possible to test the Gnome Initial Setup user creation flow via the Ubuntu Desktop Bootstrap installer without first 
+It's possible to test the Gnome Initial Setup user creation flow via the Ubuntu Desktop Bootstrap installer without first 
 editing your LiveCD, provided Gnome Initial Setup is already present on your ISO.
 
 ### Install ubuntu-desktop-bootstrap
@@ -56,6 +56,7 @@ installer finishes
 ```
 /snap/bin/ubuntu-desktop-bootstrap --try-or-install
 ```
+
 # Triggering Gnome-Initial-Setup via an autoinstall.yaml
 
 These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html), updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO
@@ -74,7 +75,7 @@ sudo mount -r ~/Downloads/ubuntu-<version-number>-amd64.iso /mnt
 ```
 
 ### Write your autoinstall configuration
-Create your clout-init configuration, making sure to leave the identity section out so that no user is created during 
+Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
 installation:
 
 ```
@@ -97,7 +98,7 @@ python3 -m http.server 3003
 
 ### Create a target disk
 
-Create the target VM disk for the installation. 25G is the minimum recommended storage allocation for Ubuntu Desktop:
+Create the target VM disk for the installation. 25GB is the minimum recommended storage allocation for Ubuntu Desktop:
 ```
 truncate -s 25G image.img
 ```
