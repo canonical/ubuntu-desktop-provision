@@ -9,7 +9,8 @@ detect any user accounts. Instead of taking you to the login screen, a special G
 started.
 
 (Note: this is a special integration built into GDM. If you are using a different display manager, you may need to
-integrate the [Gnome Initial Setup session](https://salsa.debian.org/gnome-team/gnome-initial-setup/-/blob/ubuntu/latest/data/gnome-initial-setup.session.in?ref_type=heads) being invoked by the display manager yourself.)
+integrate the [Gnome Initial Setup session](https://salsa.debian.org/gnome-team/gnome-initial-setup/-/blob/ubuntu/latest/data/gnome-initial-setup.session.in?ref_type=heads)
+being invoked by the display manager yourself.)
 
 This guide aims to highlight some of the ways a system can be provisioned such that Ubuntu is installed, but no user 
 account is created, allowing user account creation to be passed off to Gnome-Initial-Setup.
@@ -63,7 +64,8 @@ installer finishes
 
 # Triggering Gnome-Initial-Setup via an autoinstall.yaml
 
-These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html), updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO
+These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html),
+updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO
 
 ## Using an autoinstall provided over the network
 
