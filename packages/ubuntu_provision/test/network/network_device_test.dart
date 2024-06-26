@@ -74,12 +74,18 @@ void main() {
       when(mock.state).thenReturn(state);
       expect(device.isActive, state == NetworkManagerDeviceState.activated);
       expect(device.isConnecting, connectingStates.contains(state));
-      expect(device.isAvailable,
-          equals(state != NetworkManagerDeviceState.unavailable));
-      expect(device.isDisconnected,
-          equals(state == NetworkManagerDeviceState.disconnected));
-      expect(device.isUnmanaged,
-          equals(state == NetworkManagerDeviceState.unmanaged));
+      expect(
+        device.isAvailable,
+        equals(state != NetworkManagerDeviceState.unavailable),
+      );
+      expect(
+        device.isDisconnected,
+        equals(state == NetworkManagerDeviceState.disconnected),
+      );
+      expect(
+        device.isUnmanaged,
+        equals(state == NetworkManagerDeviceState.unmanaged),
+      );
     }
 
     bool? wasNotified;

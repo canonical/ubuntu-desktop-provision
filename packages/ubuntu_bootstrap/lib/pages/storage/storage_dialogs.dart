@@ -15,7 +15,9 @@ import 'package:yaru/yaru.dart';
 
 /// Shows a dialog to select advanced installation features.
 Future<void> showAdvancedFeaturesDialog(
-    BuildContext context, StorageModel model) async {
+  BuildContext context,
+  StorageModel model,
+) async {
   final guidedCapability =
       ValueNotifier(model.guidedCapability ?? GuidedCapability.DIRECT);
   final experimentalBadgeText =
@@ -141,9 +143,11 @@ class TpmOption extends ConsumerWidget {
 
     final tpmInfo =
         lang.installationTypeTPMInfo(flavor.displayName, model.tpmInfoUrl);
-    final disallowedCapability = target.disallowed.firstWhereOrNull((e) =>
-        e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-        e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED);
+    final disallowedCapability = target.disallowed.firstWhereOrNull(
+      (e) =>
+          e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+          e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+    );
 
     return Column(
       mainAxisSize: MainAxisSize.min,

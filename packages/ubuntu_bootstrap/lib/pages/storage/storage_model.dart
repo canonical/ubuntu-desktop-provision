@@ -21,11 +21,13 @@ enum StorageType {
 }
 
 /// Provider for [StorageModel].
-final storageModelProvider = ChangeNotifierProvider((_) => StorageModel(
-      getService<StorageService>(),
-      tryGetService<TelemetryService>(),
-      getService<ProductService>(),
-    ));
+final storageModelProvider = ChangeNotifierProvider(
+  (_) => StorageModel(
+    getService<StorageService>(),
+    tryGetService<TelemetryService>(),
+    getService<ProductService>(),
+  ),
+);
 
 /// View model for [StoragePage].
 class StorageModel extends SafeChangeNotifier {
@@ -91,21 +93,28 @@ class StorageModel extends SafeChangeNotifier {
       .any((t) => t.allowed.contains(GuidedCapability.DIRECT));
 
   /// Whether LVM guided storage targets are available.
-  bool get hasLvm => _getTargets<GuidedStorageTargetReformat>().any((t) => t
-      .allowed
-      .any((c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS));
+  bool get hasLvm => _getTargets<GuidedStorageTargetReformat>().any(
+        (t) => t.allowed.any(
+            (c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS),
+      );
 
   /// Whether ZFS guided storage targets are available.
-  bool get hasZfs =>
-      _getTargets<GuidedStorageTargetReformat>().any((t) => t.allowed.any((c) =>
-          c == GuidedCapability.ZFS ||
-          c == GuidedCapability.ZFS_LUKS_KEYSTORE));
+  bool get hasZfs => _getTargets<GuidedStorageTargetReformat>().any(
+        (t) => t.allowed.any(
+          (c) =>
+              c == GuidedCapability.ZFS ||
+              c == GuidedCapability.ZFS_LUKS_KEYSTORE,
+        ),
+      );
 
   /// Whether TPM is detected.
-  bool get hasTpm =>
-      _getTargets<GuidedStorageTargetReformat>().any((t) => t.allowed.any((c) =>
-          c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-          c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED));
+  bool get hasTpm => _getTargets<GuidedStorageTargetReformat>().any(
+        (t) => t.allowed.any(
+          (c) =>
+              c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+              c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+        ),
+      );
 
   /// Whether DD guided storage targets are available.
   bool get hasDd => _getTargets<GuidedStorageTargetReformat>()

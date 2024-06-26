@@ -106,10 +106,12 @@ class StorageService {
     _installMinimumSize = response.installMinimumSize;
     _largestDiskSize = response.disks.map((d) => d.size).fold<int>(0, math.max);
     _existingOS = response.disks
-        .expand((d) => d.partitions
-            .whereType<Partition>()
-            .map((p) => p.os)
-            .whereType<OsProber>())
+        .expand(
+          (d) => d.partitions
+              .whereType<Partition>()
+              .map((p) => p.os)
+              .whereType<OsProber>(),
+        )
         .toList();
     return response.disks;
   }

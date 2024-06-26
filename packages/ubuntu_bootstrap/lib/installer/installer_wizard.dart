@@ -51,7 +51,7 @@ class _InstallWizard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final preInstallRoutes = <String, WizardRoute>{
       for (final step in InstallationStep.wizardSteps)
-        step.route: step.toRoute(context, ref)
+        step.route: step.toRoute(context, ref),
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;

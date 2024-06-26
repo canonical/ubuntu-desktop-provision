@@ -40,7 +40,11 @@ class WizardPage extends StatefulWidget {
     this.title,
     this.header,
     this.headerPadding = const EdgeInsets.fromLTRB(
-        kYaruPagePadding, kYaruPagePadding, kYaruPagePadding, 0),
+      kYaruPagePadding,
+      kYaruPagePadding,
+      kYaruPagePadding,
+      0,
+    ),
     this.content,
     this.contentPadding = kWizardPadding,
     this.contentSpacing = kWizardSpacing,

@@ -15,7 +15,8 @@ void main() {
   setUp(() {
     client = MockSubiquityClient();
     when(client.getGuidedStorageV2()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: testTargets));
+      (_) async => fakeGuidedStorageResponse(targets: testTargets),
+    );
     when(client.getStorageV2())
         .thenAnswer((_) async => fakeStorageResponse(disks: testDisks));
     when(client.hasRst()).thenAnswer((_) async => false);
@@ -37,14 +38,18 @@ void main() {
 
   test('get guided storage', () async {
     final service = StorageService(client);
-    expect(await service.getGuidedStorage(),
-        equals(fakeGuidedStorageResponse(targets: testTargets)));
+    expect(
+      await service.getGuidedStorage(),
+      equals(fakeGuidedStorageResponse(targets: testTargets)),
+    );
     verify(client.getGuidedStorageV2()).called(1);
   });
 
   test('set guided storage', () async {
     final target = GuidedStorageTargetReformat(
-        diskId: testDisks.last.id, allowed: [GuidedCapability.DIRECT]);
+      diskId: testDisks.last.id,
+      allowed: [GuidedCapability.DIRECT],
+    );
     final choice = GuidedChoiceV2(
       target: target,
       capability: GuidedCapability.DIRECT,
@@ -63,7 +68,9 @@ void main() {
 
   test('use LVM', () async {
     final target = GuidedStorageTargetReformat(
-        diskId: testDisks.last.id, allowed: [GuidedCapability.LVM]);
+      diskId: testDisks.last.id,
+      allowed: [GuidedCapability.LVM],
+    );
     final choice = GuidedChoiceV2(
       target: target,
       capability: GuidedCapability.LVM,
@@ -101,7 +108,8 @@ void main() {
     when(client.getStorageV2())
         .thenAnswer((_) async => fakeStorageResponse(disks: testDisks));
     when(client.getOriginalStorageV2()).thenAnswer(
-        (_) async => fakeStorageResponse(disks: testDisks.reversed.toList()));
+      (_) async => fakeStorageResponse(disks: testDisks.reversed.toList()),
+    );
 
     final service = StorageService(client);
     await service.init();
@@ -143,7 +151,8 @@ void main() {
     expect(service.needBoot, isFalse);
 
     when(client.resetStorageV2()).thenAnswer(
-        (_) async => fakeStorageResponse(needBoot: true, disks: []));
+      (_) async => fakeStorageResponse(needBoot: true, disks: []),
+    );
 
     await service.resetStorage();
 
@@ -164,10 +173,13 @@ void main() {
     verify(client.addPartitionV2(disk, gap, partition)).called(1);
 
     when(client.editPartitionV2(disk, partition)).thenAnswer(
-        (_) async => fakeStorageResponse(disks: testDisks.reversed.toList()));
+      (_) async => fakeStorageResponse(disks: testDisks.reversed.toList()),
+    );
 
-    expect(await service.editPartition(disk, partition),
-        equals(testDisks.reversed.toList()));
+    expect(
+      await service.editPartition(disk, partition),
+      equals(testDisks.reversed.toList()),
+    );
     verify(client.editPartitionV2(disk, partition)).called(1);
 
     when(client.deletePartitionV2(disk, partition))
@@ -257,7 +269,9 @@ void main() {
 
   test('guided target', () async {
     final target = GuidedStorageTargetReformat(
-        diskId: testDisks.last.id, allowed: [GuidedCapability.DIRECT]);
+      diskId: testDisks.last.id,
+      allowed: [GuidedCapability.DIRECT],
+    );
     final choice = GuidedChoiceV2(
       target: target,
       capability: GuidedCapability.DIRECT,
@@ -282,7 +296,9 @@ void main() {
 
   test('set passphrase', () async {
     final target = GuidedStorageTargetReformat(
-        diskId: testDisks.first.id, allowed: [GuidedCapability.LVM_LUKS]);
+      diskId: testDisks.first.id,
+      allowed: [GuidedCapability.LVM_LUKS],
+    );
     final choice = GuidedChoiceV2(
       target: target,
       password: 'foo123',

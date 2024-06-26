@@ -29,7 +29,9 @@ void main() {
 
   testWidgets('not enough disk space', (tester) async {
     final model = buildNotEnoughDiskSpaceModel(
-        largestDiskSize: 123456, installMinimumSize: 654321);
+      largestDiskSize: 123456,
+      installMinimumSize: 654321,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(NotEnoughDiskSpacePage));

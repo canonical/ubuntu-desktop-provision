@@ -42,21 +42,22 @@ class _EulaPageState extends ConsumerState<EulaPage> {
   Widget build(BuildContext context) {
     final lang = EulaLocalizations.of(context);
     final eulaWidget = ref.watch(eulaPageProvider).when(
-        data: (eulaFile) => _EulaPdfViewer(path: eulaFile.path),
-        loading: () => const YaruCircularProgressIndicator(),
-        error: (error, stackTrace) {
-          Logger('eula')
-              .error('Error loading EULA file: $error', error, stackTrace);
-          return _EulaPdfViewer(
-            path: File(
-              p.join(
-                Platform.environment['DESKTOP_PROVISION_PATH'] ??
-                    defaultFilePath,
-                'eula/EULA.pdf',
-              ),
-            ).path,
-          );
-        });
+          data: (eulaFile) => _EulaPdfViewer(path: eulaFile.path),
+          loading: () => const YaruCircularProgressIndicator(),
+          error: (error, stackTrace) {
+            Logger('eula')
+                .error('Error loading EULA file: $error', error, stackTrace);
+            return _EulaPdfViewer(
+              path: File(
+                p.join(
+                  Platform.environment['DESKTOP_PROVISION_PATH'] ??
+                      defaultFilePath,
+                  'eula/EULA.pdf',
+                ),
+              ).path,
+            );
+          },
+        );
 
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -66,8 +67,10 @@ class _EulaPageState extends ConsumerState<EulaPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(lang.eulaReviewTerms,
-                style: Theme.of(context).textTheme.titleLarge),
+            Text(
+              lang.eulaReviewTerms,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
             Text(lang.eulaReadAndAcceptTerms),
             const SizedBox(height: kWizardSpacing),
             Expanded(

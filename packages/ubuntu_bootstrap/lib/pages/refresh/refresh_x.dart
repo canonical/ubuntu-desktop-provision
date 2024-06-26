@@ -5,9 +5,10 @@ import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 
 extension RefreshStateX on RefreshState {
   double? get progress => maybeWhen(
-      progress: (change) => change.progress,
-      checking: () => null,
-      orElse: () => 0);
+        progress: (change) => change.progress,
+        checking: () => null,
+        orElse: () => 0,
+      );
 }
 
 extension ChangeX on Change {

@@ -408,12 +408,14 @@ void main() {
       username: 'user',
     );
 
-    await tester.runApp(() => app.main([
-          '--source-catalog=examples/sources/tpm.yaml',
-          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
-          '--',
-          '--bootloader=uefi',
-        ]));
+    await tester.runApp(
+      () => app.main([
+        '--source-catalog=examples/sources/tpm.yaml',
+        '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
@@ -581,11 +583,13 @@ void main() {
   });
 
   testWidgets('alongside windows', (tester) async {
-    await tester.runApp(() => app.main(<String>[
-          '--machine-config=examples/machines/win10-along-ubuntu.json',
-          '--',
-          '--bootloader=uefi',
-        ]));
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win10-along-ubuntu.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
@@ -654,24 +658,28 @@ void main() {
         512 * 166486126; // total size of sda3 from the machine config
     final newPartitionSize = mibiAlign(toBytes(30, DataUnit.gigabytes));
 
-    await verifySubiquityConfig(storage: [
-      fakeDisk(
-        path: '/dev/sda',
-        partitions: [
-          Partition(
-            number: 3,
-            size: mibiAlign(totalSize - newPartitionSize, totalSize),
-          ),
-          Partition(number: 6, size: newPartitionSize, mount: '/'),
-        ],
-      ),
-    ]);
+    await verifySubiquityConfig(
+      storage: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(
+              number: 3,
+              size: mibiAlign(totalSize - newPartitionSize, totalSize),
+            ),
+            Partition(number: 6, size: newPartitionSize, mount: '/'),
+          ],
+        ),
+      ],
+    );
   });
 
   testWidgets('turn off bitlocker', (tester) async {
-    await tester.runApp(() => app.main(<String>[
-          '--machine-config=examples/machines/win10.json',
-        ]));
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win10.json',
+      ]),
+    );
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
@@ -751,10 +759,12 @@ void main() {
   });
 
   testWidgets('semi-automated autoinstall', (tester) async {
-    await tester.runApp(() => app.main(<String>[
-          '--',
-          '--autoinstall=examples/autoinstall/interactive.yaml',
-        ]));
+    await tester.runApp(
+      () => app.main(<String>[
+        '--',
+        '--autoinstall=examples/autoinstall/interactive.yaml',
+      ]),
+    );
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage();
@@ -822,17 +832,20 @@ Future<void> verifySubiquityConfig({
   if (storage != null) {
     for (final disk in storage) {
       final actualDisk = actualStorage.firstWhereOrNull(
-          (d) => d['type'] == 'disk' && d['path'] == disk.path);
+        (d) => d['type'] == 'disk' && d['path'] == disk.path,
+      );
       expect(actualDisk, isNotNull);
 
       for (final partition in disk.partitions.whereType<Partition>()) {
         final actualPartition = actualStorage.firstWhereOrNull(
-            (d) => d['type'] == 'partition' && d['size'] == partition.size);
+          (d) => d['type'] == 'partition' && d['size'] == partition.size,
+        );
         expect(actualPartition, isNotNull);
 
         if (partition.mount != null) {
           final actualMount = actualStorage.firstWhereOrNull(
-              (d) => d['type'] == 'mount' && d['path'] == partition.mount);
+            (d) => d['type'] == 'mount' && d['path'] == partition.mount,
+          );
           expect(actualMount, isNotNull);
         }
       }
@@ -843,34 +856,46 @@ Future<void> verifySubiquityConfig({
     switch (capability) {
       case GuidedCapability.LVM:
         expect(
-            actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
-            isNotEmpty);
+          actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
+          isNotEmpty,
+        );
         break;
       case GuidedCapability.LVM_LUKS:
         expect(
-            actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
-            isNotEmpty);
-        expect(actualStorage.where((config) => config['type'] == 'dm_crypt'),
-            isNotEmpty);
+          actualStorage.where((config) => config['type'] == 'lvm_volgroup'),
+          isNotEmpty,
+        );
+        expect(
+          actualStorage.where((config) => config['type'] == 'dm_crypt'),
+          isNotEmpty,
+        );
       case GuidedCapability.ZFS:
-        expect(actualStorage.where((config) => config['type'] == 'zpool'),
-            isNotEmpty);
+        expect(
+          actualStorage.where((config) => config['type'] == 'zpool'),
+          isNotEmpty,
+        );
         break;
       case GuidedCapability.ZFS_LUKS_KEYSTORE:
-        expect(actualStorage.where((config) => config['type'] == 'zpool'),
-            isNotEmpty);
-        expect(actualStorage.where((config) => config['type'] == 'dm_crypt'),
-            isNotEmpty);
+        expect(
+          actualStorage.where((config) => config['type'] == 'zpool'),
+          isNotEmpty,
+        );
+        expect(
+          actualStorage.where((config) => config['type'] == 'dm_crypt'),
+          isNotEmpty,
+        );
         break;
       case GuidedCapability.CORE_BOOT_ENCRYPTED:
         expect(
-            actualStorage
-                .where((config) => config['path'] == '/dev/mapper/ubuntu-data'),
-            isNotEmpty);
+          actualStorage
+              .where((config) => config['path'] == '/dev/mapper/ubuntu-data'),
+          isNotEmpty,
+        );
         expect(
-            actualStorage
-                .where((config) => config['path'] == '/dev/mapper/ubuntu-save'),
-            isNotEmpty);
+          actualStorage
+              .where((config) => config['path'] == '/dev/mapper/ubuntu-save'),
+          isNotEmpty,
+        );
         break;
       default:
         break;

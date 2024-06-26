@@ -22,11 +22,13 @@ void main() {
 
     await tester.pumpApp(
       (_) => ProviderScope(
-        child: Consumer(builder: (context, aref, child) {
-          ref = aref;
-          future = const LoadingPage().load(context, ref!);
-          return const LoadingPage();
-        }),
+        child: Consumer(
+          builder: (context, aref, child) {
+            ref = aref;
+            future = const LoadingPage().load(context, ref!);
+            return const LoadingPage();
+          },
+        ),
       ),
     );
     expect(find.byType(LoadingPage), findsOneWidget);

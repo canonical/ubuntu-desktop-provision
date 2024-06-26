@@ -55,7 +55,7 @@ class StorageSelector extends ConsumerWidget {
               key: ValueKey(index),
             ),
           ),
-        )
+        ),
       ],
     );
   }

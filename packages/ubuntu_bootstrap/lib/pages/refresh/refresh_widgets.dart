@@ -31,58 +31,61 @@ class RefreshView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pageImages = ref.watch(pageImagesProvider);
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    return Column(children: [
-      const Spacer(),
-      MascotAvatar(
-        image: pageImages.get(InstallationStep.refresh.name),
-        progress: state.progress,
-      ),
-      const Spacer(),
-      Text(
-        state.whenOrNull(
-              status: (_) => l10n.refreshHeader,
-              done: () => l10n.refreshReady,
-            ) ??
-            '',
-        style: Theme.of(context).textTheme.titleLarge,
-      ),
-      const SizedBox(height: kWizardSpacing / 2),
-      Text(
-        state.when(
-          checking: () => '',
-          status: (status) => status.availability == RefreshCheckState.AVAILABLE
-              ? l10n.refreshInfo
-              : l10n.refreshUpToDate(status.currentSnapVersion),
-          progress: (change) =>
-              change.doing?.localize(context, snapName) ??
-              l10n.refreshUpdating(snapName),
-          done: () => l10n.refreshRestart,
-          error: (error) => error.toString(),
+    return Column(
+      children: [
+        const Spacer(),
+        MascotAvatar(
+          image: pageImages.get(InstallationStep.refresh.name),
+          progress: state.progress,
         ),
-      ),
-      const SizedBox(height: kWizardSpacing),
-      Visibility(
-        maintainSize: true,
-        maintainState: true,
-        maintainAnimation: true,
-        visible: state.available || state.ready,
-        child: ElevatedButton(
-          onPressed: state.maybeMap(
-            status: (_) => onRefresh,
-            done: (_) => onQuit,
-            error: (_) => onQuit,
-            orElse: () => null,
-          ),
-          child: state.maybeMap(
-            status: (s) => Text(l10n.refreshUpdateNow),
-            done: (_) => Text(l10n.refreshCloseLabel),
-            error: (_) => Text(l10n.refreshCloseLabel),
-            orElse: () => const SizedBox.shrink(),
+        const Spacer(),
+        Text(
+          state.whenOrNull(
+                status: (_) => l10n.refreshHeader,
+                done: () => l10n.refreshReady,
+              ) ??
+              '',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        const SizedBox(height: kWizardSpacing / 2),
+        Text(
+          state.when(
+            checking: () => '',
+            status: (status) =>
+                status.availability == RefreshCheckState.AVAILABLE
+                    ? l10n.refreshInfo
+                    : l10n.refreshUpToDate(status.currentSnapVersion),
+            progress: (change) =>
+                change.doing?.localize(context, snapName) ??
+                l10n.refreshUpdating(snapName),
+            done: () => l10n.refreshRestart,
+            error: (error) => error.toString(),
           ),
         ),
-      ),
-      const Spacer(flex: 2),
-    ]);
+        const SizedBox(height: kWizardSpacing),
+        Visibility(
+          maintainSize: true,
+          maintainState: true,
+          maintainAnimation: true,
+          visible: state.available || state.ready,
+          child: ElevatedButton(
+            onPressed: state.maybeMap(
+              status: (_) => onRefresh,
+              done: (_) => onQuit,
+              error: (_) => onQuit,
+              orElse: () => null,
+            ),
+            child: state.maybeMap(
+              status: (s) => Text(l10n.refreshUpdateNow),
+              done: (_) => Text(l10n.refreshCloseLabel),
+              error: (_) => Text(l10n.refreshCloseLabel),
+              orElse: () => const SizedBox.shrink(),
+            ),
+          ),
+        ),
+        const Spacer(flex: 2),
+      ],
+    );
   }
 }
 

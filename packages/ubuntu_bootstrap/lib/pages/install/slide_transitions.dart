@@ -30,10 +30,12 @@ class _SlideRoute<T> extends PageRoute<T> with MaterialRouteTransitionMixin<T> {
 
 class SlideTransitionsTheme extends PageTransitionsTheme {
   const SlideTransitionsTheme()
-      : super(builders: const {
-          TargetPlatform.linux: _SlideTransitionsBuilder(),
-          TargetPlatform.windows: _SlideTransitionsBuilder(),
-        });
+      : super(
+          builders: const {
+            TargetPlatform.linux: _SlideTransitionsBuilder(),
+            TargetPlatform.windows: _SlideTransitionsBuilder(),
+          },
+        );
 }
 
 class _SlideTransitionsBuilder extends PageTransitionsBuilder {

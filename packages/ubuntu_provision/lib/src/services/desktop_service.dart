@@ -86,23 +86,44 @@ class GnomeService implements DesktopService {
   Future<void> inhibit() async {
     _log.debug('Disabling automounting');
     await _trySetAndRestore(
-        _mediaHandlingSettings, 'automount', const DBusBoolean(false));
+      _mediaHandlingSettings,
+      'automount',
+      const DBusBoolean(false),
+    );
     await _trySetAndRestore(
-        _mediaHandlingSettings, 'automount-open', const DBusBoolean(false));
+      _mediaHandlingSettings,
+      'automount-open',
+      const DBusBoolean(false),
+    );
     await _trySetAndRestore(
-        _mediaHandlingSettings, 'autorun-never', const DBusBoolean(true));
+      _mediaHandlingSettings,
+      'autorun-never',
+      const DBusBoolean(true),
+    );
     await _trySetAndRestore(
-        _dingSettings, 'show-volumes', const DBusBoolean(false));
+      _dingSettings,
+      'show-volumes',
+      const DBusBoolean(false),
+    );
     await _trySetAndRestore(
-        _dingSettings, 'show-network-volumes', const DBusBoolean(false));
+      _dingSettings,
+      'show-network-volumes',
+      const DBusBoolean(false),
+    );
 
     _log.debug('Disabling screen blanking');
     await _trySetAndRestore(
-        _sessionSettings, 'idle-delay', const DBusUint32(0));
+      _sessionSettings,
+      'idle-delay',
+      const DBusUint32(0),
+    );
 
     _log.debug('Disabling screensaver');
-    await _trySetAndRestore(_screensaverSettings, 'idle-activation-enabled',
-        const DBusBoolean(false));
+    await _trySetAndRestore(
+      _screensaverSettings,
+      'idle-activation-enabled',
+      const DBusBoolean(false),
+    );
 
     _log.debug('Inhibiting Gnome session');
     await _tryInhibitGnomeSession();

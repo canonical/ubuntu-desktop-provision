@@ -132,7 +132,8 @@ void main() {
     when(client.getInteractiveSections())
         .thenAnswer((_) async => ['locale', 'keyboard']);
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)),
+    );
 
     final pageConfigService = setupMockPageConfig();
     final service = InstallerService(client, pageConfig: pageConfigService);
@@ -147,7 +148,8 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)),
+    );
 
     final pageConfigService = setupMockPageConfig(
       overridePageKeys: ['a', 'b', 'c'],
@@ -164,7 +166,8 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)),
+    );
 
     final pageConfigService = setupMockPageConfig(overridePageKeys: ['a', 'b']);
     final service = InstallerService(client, pageConfig: pageConfigService);
@@ -192,7 +195,8 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)));
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)),
+    );
 
     final pageConfigService = setupMockPageConfig(isOem: true);
     final service = InstallerService(client, pageConfig: pageConfigService);

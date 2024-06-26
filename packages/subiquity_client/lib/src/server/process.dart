@@ -137,7 +137,7 @@ class SubiquityProcess {
       // WSL interoperability has its environment variable sharing mechanism.
       if (wslenv != null) ...{
         'WSLENV': '${Platform.environment['WSLENV']}:$wslenv',
-      }
+      },
     };
 
     final arguments = [
@@ -208,7 +208,8 @@ class SubiquityProcess {
       return process;
     });
     log.info(
-        'Starting server (PID: ${_serverProcess!.pid}) with args: $allArgs');
+      'Starting server (PID: ${_serverProcess!.pid}) with args: $allArgs',
+    );
 
     await onProcessStart?.call();
     await writePidFile(_serverProcess!.pid);

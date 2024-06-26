@@ -34,9 +34,11 @@ void main() {
     await tester.tap(hiddenWifiTile);
     expect(model.connectMode, ConnectMode.hiddenWifi);
 
-    final noConnectTile = find.byWidgetPredicate((widget) =>
-        widget is YaruRadioButton<ConnectMode> &&
-        widget.value == ConnectMode.none);
+    final noConnectTile = find.byWidgetPredicate(
+      (widget) =>
+          widget is YaruRadioButton<ConnectMode> &&
+          widget.value == ConnectMode.none,
+    );
     expect(noConnectTile, findsOneWidget);
     await tester.ensureVisible(noConnectTile);
     await tester.tap(noConnectTile);

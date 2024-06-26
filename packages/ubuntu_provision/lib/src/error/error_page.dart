@@ -128,7 +128,7 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                 await window.close();
               }
             },
-          )
+          ),
         ],
       ),
     );

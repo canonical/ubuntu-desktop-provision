@@ -45,7 +45,8 @@ void main() async {
     when(client.getStatus())
         .thenAnswer((_) async => testStatus(ApplicationState.values.first));
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.fromIterable(ApplicationState.values.map(testStatus)));
+      (_) => Stream.fromIterable(ApplicationState.values.map(testStatus)),
+    );
 
     final stateChanges = StreamController<ApplicationState?>();
     model.addListener(() => stateChanges.add(model.state));
@@ -66,8 +67,11 @@ void main() async {
     final client = MockSubiquityClient();
     when(client.getStatus())
         .thenAnswer((_) async => testStatus(ApplicationState.values.first));
-    when(client.monitorStatus()).thenAnswer((_) => Stream.fromIterable(
-        [...ApplicationState.values.map(testStatus), null]));
+    when(client.monitorStatus()).thenAnswer(
+      (_) => Stream.fromIterable(
+        [...ApplicationState.values.map(testStatus), null],
+      ),
+    );
 
     final journal = MockJournalService();
     when(journal.start(['log', 'event']))
@@ -236,7 +240,8 @@ void main() async {
     expect(model.event.description, isNull);
 
     events.add(
-        '    subiquity/Install/install/curtin_install/run: executing curtin install initial step');
+      '    subiquity/Install/install/curtin_install/run: executing curtin install initial step',
+    );
     expect(model.event.action, InstallationAction.installingSystem);
     expect(model.event.description, 'executing curtin install initial step');
   });

@@ -30,7 +30,7 @@ class JournalService {
         '--no-pager',
         '--no-tail',
         for (final id in ids) '--identifier=$id',
-        '--output=${output.name}'
+        '--output=${output.name}',
       ],
       environment: {'SYSTEMD_COLORS': '0'},
     ).then(

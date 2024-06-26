@@ -19,7 +19,8 @@ const kWifiScanInterval = Duration(seconds: 15);
 const kWifiScanTimeout = Duration(seconds: 3);
 
 final wifiModelProvider = ChangeNotifierProvider(
-    (_) => WifiModel(getService<NetworkService>(), getService<UdevService>()));
+  (_) => WifiModel(getService<NetworkService>(), getService<UdevService>()),
+);
 
 /// "Connect to Wi-Fi network"
 class WifiModel extends NetworkDeviceModel<WifiDevice> {

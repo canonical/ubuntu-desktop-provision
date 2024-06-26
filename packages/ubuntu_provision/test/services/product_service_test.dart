@@ -12,7 +12,8 @@ void main() {
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
       final info = ProductService(fileSystem).getProductInfo();
 
@@ -60,7 +61,8 @@ UBUNTU_CODENAME=hirsute
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu 20.04.2.0 LTS "Focal Fossa" - Release amd64 (20210209.1)');
+          'Ubuntu 20.04.2.0 LTS "Focal Fossa" - Release amd64 (20210209.1)',
+        );
       });
       final info = ProductService(fileSystem).getProductInfo();
 
@@ -114,7 +116,8 @@ PRETTY_NAME="Ubuntu 23.10"
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Kubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Kubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
       final info = ProductService(fileSystem).getProductInfo();
 
@@ -127,7 +130,8 @@ PRETTY_NAME="Ubuntu 23.10"
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
       final info = ProductService(fileSystem).getProductInfo();
 
@@ -140,14 +144,16 @@ PRETTY_NAME="Ubuntu 23.10"
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
       final service = ProductService(fileSystem);
       var info = service.getProductInfo();
 
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
 
       info = service.getProductInfo();
@@ -161,13 +167,15 @@ PRETTY_NAME="Ubuntu 23.10"
       final fileSystem = MemoryFileSystem();
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
       var info = ProductService(fileSystem).getProductInfo();
 
       await fileSystem.file(isoPath).create(recursive: true).then((f) {
         f.writeAsString(
-            'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)');
+          'Ubuntu-MATE 21.04 "Hirsute Hippo" - Release amd64 (20210420)',
+        );
       });
 
       info = ProductService(fileSystem).getProductInfo();

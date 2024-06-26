@@ -66,14 +66,18 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.RUNNING)));
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.RUNNING)),
+    );
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     registerMockService<SubiquityClient>(client);
 
     final server = MockSubiquityServer();
-    when(server.start(
-            args: anyNamed('args'), environment: anyNamed('environment')))
-        .thenAnswer((_) async => endpoint);
+    when(
+      server.start(
+        args: anyNamed('args'),
+        environment: anyNamed('environment'),
+      ),
+    ).thenAnswer((_) async => endpoint);
     registerMockService<SubiquityServer>(server);
 
     final refresh = MockRefreshService();
@@ -87,14 +91,18 @@ void main() {
 
     await tester
         .runAsync(() => runInstallerApp(['--dry-run', '--', '--foo', 'bar']));
-    verify(server.start(args: [
-      '--dry-run-config=examples/dry-run-configs/tpm.yaml',
-      '--machine-config=examples/machines/simple.json',
-      '--source-catalog=examples/sources/desktop.yaml',
-      '--storage-version=2',
-      '--foo',
-      'bar',
-    ])).called(1);
+    verify(
+      server.start(
+        args: [
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          '--machine-config=examples/machines/simple.json',
+          '--source-catalog=examples/sources/desktop.yaml',
+          '--storage-version=2',
+          '--foo',
+          'bar',
+        ],
+      ),
+    ).called(1);
     verify(client.open(endpoint)).called(1);
   });
 }
@@ -122,8 +130,11 @@ extension on WidgetTester {
     when(installer.monitorStatus()).thenAnswer((_) => Stream.value(status));
 
     final refresh = MockRefreshService();
-    when(refresh.state).thenReturn(const RefreshState.status(
-        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
+    when(refresh.state).thenReturn(
+      const RefreshState.status(
+        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),
+      ),
+    );
     when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
 
     final journal = MockJournalService();
@@ -135,11 +146,12 @@ extension on WidgetTester {
 
     final subiquityClient = MockSubiquityClient();
     when(subiquityClient.getStatus()).thenAnswer((_) async => status);
-    when(subiquityClient.monitorStatus()).thenAnswer((_) =>
-        Stream.fromIterable([
-          status,
-          if (proceedToDone) fakeApplicationStatus(ApplicationState.DONE)
-        ]));
+    when(subiquityClient.monitorStatus()).thenAnswer(
+      (_) => Stream.fromIterable([
+        status,
+        if (proceedToDone) fakeApplicationStatus(ApplicationState.DONE),
+      ]),
+    );
 
     final config = MockConfigService();
     when(config.provisioningMode)

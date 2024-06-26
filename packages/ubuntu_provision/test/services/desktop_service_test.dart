@@ -27,12 +27,14 @@ void main() {
     when(screensaverSettings.set(any, any)).thenAnswer((_) async {});
 
     gnomeSessionManager = MockGnomeSessionManager();
-    when(gnomeSessionManager.inhibit(
-      appId: anyNamed('appId'),
-      topLevelXId: anyNamed('topLevelXId'),
-      reason: anyNamed('reason'),
-      flags: anyNamed('flags'),
-    )).thenAnswer((_) async => 42);
+    when(
+      gnomeSessionManager.inhibit(
+        appId: anyNamed('appId'),
+        topLevelXId: anyNamed('topLevelXId'),
+        reason: anyNamed('reason'),
+        flags: anyNamed('flags'),
+      ),
+    ).thenAnswer((_) async => 42);
 
     service = GnomeService(
       dingSettings: dingSettings,
@@ -67,7 +69,9 @@ void main() {
       dingSettings.set('show-network-volumes', const DBusBoolean(false)),
       sessionSettings.set('idle-delay', const DBusUint32(0)),
       screensaverSettings.set(
-          'idle-activation-enabled', const DBusBoolean(false)),
+        'idle-activation-enabled',
+        const DBusBoolean(false),
+      ),
       gnomeSessionManager.inhibit(
         appId: 'com.canonical.ubuntu_bootstrap',
         topLevelXId: 0,
@@ -79,7 +83,7 @@ void main() {
           GnomeInhibitionFlag.suspend,
           GnomeInhibitionFlag.switchUser,
         },
-      )
+      ),
     ]);
     await service.close();
     verifyInOrder([
@@ -90,9 +94,12 @@ void main() {
       dingSettings.set('show-network-volumes', const DBusBoolean(true)),
     ]);
     verify(sessionSettings.set('idle-delay', const DBusUint32(600))).called(1);
-    verify(screensaverSettings.set(
-            'idle-activation-enabled', const DBusBoolean(true)))
-        .called(1);
+    verify(
+      screensaverSettings.set(
+        'idle-activation-enabled',
+        const DBusBoolean(true),
+      ),
+    ).called(1);
     verify(gnomeSessionManager.uninhibit(42)).called(1);
   });
 }

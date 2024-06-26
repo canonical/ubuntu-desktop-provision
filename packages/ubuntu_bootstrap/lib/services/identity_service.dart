@@ -33,12 +33,14 @@ class SubiquityIdentityService implements IdentityService {
       await _postInstall.set(kAutoLoginUser, null);
     }
 
-    return _subiquity.setIdentity(IdentityData(
-      realname: identity.realname,
-      username: identity.username,
-      cryptedPassword: Crypt.sha512(identity.password).toString(),
-      hostname: identity.hostname,
-    ));
+    return _subiquity.setIdentity(
+      IdentityData(
+        realname: identity.realname,
+        username: identity.username,
+        cryptedPassword: Crypt.sha512(identity.password).toString(),
+        hostname: identity.hostname,
+      ),
+    );
   }
 
   @override

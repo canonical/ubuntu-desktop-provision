@@ -23,12 +23,14 @@ void main() {
       endpoint: endpoint,
     );
     client = SubiquityClient();
-    final socketPath = await testServer.start(args: [
-      '--machine-config=examples/machines/simple.json',
-      '--source-catalog=examples/sources/mixed.yaml',
-      '--storage-version=2',
-      '--bootloader=uefi',
-    ]);
+    final socketPath = await testServer.start(
+      args: [
+        '--machine-config=examples/machines/simple.json',
+        '--source-catalog=examples/sources/mixed.yaml',
+        '--storage-version=2',
+        '--bootloader=uefi',
+      ],
+    );
     final future = client.getStatus();
     client.open(socketPath);
     await expectLater(future, completes);
@@ -62,8 +64,11 @@ void main() {
     test('defer launch', () async {
       final fut = Future.delayed(const Duration(milliseconds: 50));
       var futAwaited = false;
-      final process = SubiquityProcess('bash', ['-c', 'exit 0'],
-          deferStart: fut.then((_) => futAwaited = true));
+      final process = SubiquityProcess(
+        'bash',
+        ['-c', 'exit 0'],
+        deferStart: fut.then((_) => futAwaited = true),
+      );
       await process.start();
       addTearDown(process.stop);
       expect(futAwaited, isTrue);
@@ -84,12 +89,14 @@ void main() {
         endpoint: endpoint,
       );
       client = SubiquityClient();
-      final socketPath = await testServer.start(args: [
-        '--machine-config=examples/machines/simple.json',
-        '--source-catalog=examples/sources/mixed.yaml',
-        '--storage-version=2',
-        '--bootloader=uefi',
-      ]);
+      final socketPath = await testServer.start(
+        args: [
+          '--machine-config=examples/machines/simple.json',
+          '--source-catalog=examples/sources/mixed.yaml',
+          '--storage-version=2',
+          '--bootloader=uefi',
+        ],
+      );
       client.open(socketPath);
     });
 
@@ -119,12 +126,18 @@ void main() {
         containsAll([
           isA<SourceSelection>()
               .having((s) => s.id, 'id', 'ubuntu-server')
-              .having((s) => s.variant, 'variant',
-                  Variant.SERVER.toVariantString()),
+              .having(
+                (s) => s.variant,
+                'variant',
+                Variant.SERVER.toVariantString(),
+              ),
           isA<SourceSelection>()
               .having((s) => s.id, 'id', 'ubuntu-desktop')
-              .having((s) => s.variant, 'variant',
-                  Variant.DESKTOP.toVariantString())
+              .having(
+                (s) => s.variant,
+                'variant',
+                Variant.DESKTOP.toVariantString(),
+              )
               .having((s) => s.isDefault, 'default', isTrue),
         ]),
       );
@@ -351,8 +364,10 @@ void main() {
     });
 
     test('mirror', () async {
-      expect(await client.setMirror(const MirrorPost(elected: 'test')),
-          MirrorPostResponse.OK);
+      expect(
+        await client.setMirror(const MirrorPost(elected: 'test')),
+        MirrorPostResponse.OK,
+      );
       final test = await client.getMirror();
       expect(test.elected, endsWith('test'));
       expect(test.candidates, isNotEmpty);
@@ -391,9 +406,12 @@ void main() {
       newId = const IdentityData();
 
       // Server now throws exception if invalid username is POST'ed.
-      expect(() async {
-        await client.setIdentity(newId);
-      }, throwsException);
+      expect(
+        () async {
+          await client.setIdentity(newId);
+        },
+        throwsException,
+      );
     });
 
     test('identity/validate_username', () async {
@@ -737,10 +755,12 @@ void main() {
         endpoint: endpoint,
       );
       client = SubiquityClient();
-      final socketPath = await testServer.start(args: [
-        '--autoinstall=examples/autoinstall/interactive.yaml',
-        '--machine-config=examples/machines/simple.json',
-      ]);
+      final socketPath = await testServer.start(
+        args: [
+          '--autoinstall=examples/autoinstall/interactive.yaml',
+          '--machine-config=examples/machines/simple.json',
+        ],
+      );
       client.open(socketPath);
     });
 

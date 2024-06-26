@@ -112,11 +112,13 @@ class ActiveDirectoryModel extends SafeChangeNotifier {
   }
 
   Future<void> save() {
-    return _service.setConnectionInfo(AdConnectionInfo(
-      domainName: domainName,
-      adminName: adminName,
-      password: password,
-    ));
+    return _service.setConnectionInfo(
+      AdConnectionInfo(
+        domainName: domainName,
+        adminName: adminName,
+        password: password,
+      ),
+    );
   }
 
   Future<AdJoinResult> getJoinResult() {

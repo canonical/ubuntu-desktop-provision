@@ -50,7 +50,9 @@ void main() {
 
       // then listen
       await expectLater(
-          monitor.onStatusChanged, emitsInOrder([isRunning, isDone]));
+        monitor.onStatusChanged,
+        emitsInOrder([isRunning, isDone]),
+      );
       verify(client.openUrl('GET', wasWaiting)).called(1);
       verify(client.openUrl('GET', wasRunning)).called(1);
     });
@@ -69,7 +71,9 @@ void main() {
       verify(client.openUrl('GET', noStatus)).called(1);
 
       await expectLater(
-          monitor.onStatusChanged, emitsInOrder([isRunning, isDone]));
+        monitor.onStatusChanged,
+        emitsInOrder([isRunning, isDone]),
+      );
       verify(client.openUrl('GET', wasWaiting)).called(1);
       verify(client.openUrl('GET', wasRunning)).called(1);
       expect(statuses, equals([isWaiting, isRunning, isDone]));
@@ -108,7 +112,9 @@ void main() {
     await monitor.start(addr);
     expect(monitor.status, equals(isWaiting));
     await expectLater(
-        monitor.onStatusChanged, emitsInOrder([isRunning, isDone]));
+      monitor.onStatusChanged,
+      emitsInOrder([isRunning, isDone]),
+    );
     await expectLater(monitor.onStatusChanged, neverEmits(isCancelling));
   });
 
@@ -126,7 +132,9 @@ void main() {
     await monitor.start(addr);
     expect(monitor.status, equals(isWaiting));
     await expectLater(
-        monitor.onStatusChanged, emitsInOrder([isRunning, isNull]));
+      monitor.onStatusChanged,
+      emitsInOrder([isRunning, isNull]),
+    );
   });
 
   test('exception', () async {
@@ -143,7 +151,9 @@ void main() {
     await monitor.start(addr);
     expect(monitor.status, equals(isWaiting));
     await expectLater(
-        monitor.onStatusChanged, emitsInOrder([isRunning, isNull]));
+      monitor.onStatusChanged,
+      emitsInOrder([isRunning, isNull]),
+    );
   });
 }
 

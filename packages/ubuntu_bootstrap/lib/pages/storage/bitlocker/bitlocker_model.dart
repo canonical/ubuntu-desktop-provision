@@ -8,8 +8,10 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 final _log = Logger('bitlocker');
 
 /// Provider for [BitLockerModel].
-final bitLockerModelProvider = ChangeNotifierProvider((_) =>
-    BitLockerModel(getService<SessionService>(), getService<StorageService>()));
+final bitLockerModelProvider = ChangeNotifierProvider(
+  (_) => BitLockerModel(
+      getService<SessionService>(), getService<StorageService>()),
+);
 
 /// View model for [BitLockerPage].
 class BitLockerModel extends SafeChangeNotifier {

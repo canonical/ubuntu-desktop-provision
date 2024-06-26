@@ -50,13 +50,15 @@ StorageModel buildStorageModel({
   when(model.hasZfs).thenReturn(hasZfs);
   when(model.hasTpm).thenReturn(hasTpm);
   when(model.hasDd).thenReturn(hasDd);
-  when(model.getAllTargets()).thenAnswer((_) => switch (scenario) {
-        SecureBootScenarios.supported => [supported],
-        SecureBootScenarios.noTpm => [noTpm],
-        SecureBootScenarios.bios => [bios],
-        SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
-        _ => [],
-      });
+  when(model.getAllTargets()).thenAnswer(
+    (_) => switch (scenario) {
+      SecureBootScenarios.supported => [supported],
+      SecureBootScenarios.noTpm => [noTpm],
+      SecureBootScenarios.bios => [bios],
+      SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
+      _ => [],
+    },
+  );
   return model;
 }
 
@@ -82,7 +84,7 @@ const noTpm = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
       message: 'tpm required',
-    )
+    ),
   ],
 );
 
@@ -93,7 +95,7 @@ const bios = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.NOT_UEFI,
       message: 'uefi & secure boot required',
-    )
+    ),
   ],
 );
 
@@ -104,6 +106,6 @@ const thirdPartyDrivers = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS,
       message: 'third party drivers incompatible',
-    )
+    ),
   ],
 );

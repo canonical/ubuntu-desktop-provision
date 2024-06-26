@@ -41,7 +41,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
               TryOrInstallOption.tryUbuntu => YaruWindow.of(context).close,
             },
             highlighted: model.option == TryOrInstallOption.tryUbuntu,
-          )
+          ),
         ],
       ),
       children: [

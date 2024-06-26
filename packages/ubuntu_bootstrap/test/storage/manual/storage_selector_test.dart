@@ -7,22 +7,24 @@ import 'package:yaru_test/yaru_test.dart';
 
 void main() {
   testWidgets('initial selection', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: GlobalUbuntuLocalizations.delegates,
-      home: Scaffold(
-        body: Center(
-          child: StorageSelector(
-            title: '',
-            storages: [
-              for (var i = 0; i < 3; i++)
-                fakeDisk(model: 'model$i', vendor: 'vendor$i'),
-            ],
-            selected: 1,
-            onSelected: (_) {},
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: GlobalUbuntuLocalizations.delegates,
+        home: Scaffold(
+          body: Center(
+            child: StorageSelector(
+              title: '',
+              storages: [
+                for (var i = 0; i < 3; i++)
+                  fakeDisk(model: 'model$i', vendor: 'vendor$i'),
+              ],
+              selected: 1,
+              onSelected: (_) {},
+            ),
           ),
         ),
       ),
-    ));
+    );
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey(1)), findsOneWidget);
@@ -31,21 +33,23 @@ void main() {
   testWidgets('selection', (tester) async {
     int? selected;
 
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: GlobalUbuntuLocalizations.delegates,
-      home: Scaffold(
-        body: Center(
-          child: StorageSelector(
-            title: '',
-            storages: [
-              for (var i = 0; i < 3; i++)
-                fakeDisk(model: 'model$i', vendor: 'vendor$i'),
-            ],
-            onSelected: (v) => selected = v,
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: GlobalUbuntuLocalizations.delegates,
+        home: Scaffold(
+          body: Center(
+            child: StorageSelector(
+              title: '',
+              storages: [
+                for (var i = 0; i < 3; i++)
+                  fakeDisk(model: 'model$i', vendor: 'vendor$i'),
+              ],
+              onSelected: (v) => selected = v,
+            ),
           ),
         ),
       ),
-    ));
+    );
 
     await tester.tap(find.byType(StorageSelector));
     await tester.pumpAndSettle();
@@ -62,22 +66,24 @@ void main() {
   });
 
   testWidgets('disabled item', (tester) async {
-    await tester.pumpWidget(MaterialApp(
-      localizationsDelegates: GlobalUbuntuLocalizations.delegates,
-      home: Scaffold(
-        body: Center(
-          child: StorageSelector(
-            title: '',
-            storages: [
-              for (var i = 0; i < 3; i++)
-                fakeDisk(model: 'model$i', vendor: 'vendor$i'),
-            ],
-            enabled: (disk) => disk.model != 'model1',
-            onSelected: (_) {},
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: GlobalUbuntuLocalizations.delegates,
+        home: Scaffold(
+          body: Center(
+            child: StorageSelector(
+              title: '',
+              storages: [
+                for (var i = 0; i < 3; i++)
+                  fakeDisk(model: 'model$i', vendor: 'vendor$i'),
+              ],
+              enabled: (disk) => disk.model != 'model1',
+              onSelected: (_) {},
+            ),
           ),
         ),
       ),
-    ));
+    );
 
     await tester.tap(find.byType(StorageSelector));
     await tester.pumpAndSettle();

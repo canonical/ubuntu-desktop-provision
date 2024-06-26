@@ -15,22 +15,28 @@ final bundlePath = p.join(appPath, 'data', 'flutter_assets');
 final appAssetPath = p.join(bundlePath, assetName);
 final pkgAssetPath = p.join(bundlePath, 'packages', 'qux', assetName);
 
-@GenerateMocks([], customMocks: [
-  MockSpec<AssetBundle>(
-    as: #MockAssetBundle,
-    fallbackGenerators: {#loadStructuredData: loadMockData},
-  ),
-])
+@GenerateMocks(
+  [],
+  customMocks: [
+    MockSpec<AssetBundle>(
+      as: #MockAssetBundle,
+      fallbackGenerators: {#loadStructuredData: loadMockData},
+    ),
+  ],
+)
 void main() {
   test('app asset', () async {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(bundle.load(appAssetPath))
-          .thenAnswer((_) async => 'bar'.toByteData());
-      expect(await proxy.loadString(assetName), equals('bar'));
-    }, createFile: MockFileCreator({appAssetPath}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(bundle.load(appAssetPath))
+            .thenAnswer((_) async => 'bar'.toByteData());
+        expect(await proxy.loadString(assetName), equals('bar'));
+      },
+      createFile: MockFileCreator({appAssetPath}).call,
+    );
 
     verify(bundle.load(appAssetPath)).called(1);
     verifyNever(bundle.load(pkgAssetPath));
@@ -41,13 +47,18 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(
-        bundle.loadStructuredData<String>(appAssetPath, parseMockData),
-      ).thenAnswer((_) async => 'baz');
-      expect(await proxy.loadStructuredData<String>(assetName, parseMockData),
-          equals('baz'));
-    }, createFile: MockFileCreator({appAssetPath}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(
+          bundle.loadStructuredData<String>(appAssetPath, parseMockData),
+        ).thenAnswer((_) async => 'baz');
+        expect(
+          await proxy.loadStructuredData<String>(assetName, parseMockData),
+          equals('baz'),
+        );
+      },
+      createFile: MockFileCreator({appAssetPath}).call,
+    );
 
     verify(bundle.loadStructuredData<String>(appAssetPath, parseMockData))
         .called(1);
@@ -59,11 +70,14 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(bundle.load(pkgAssetPath))
-          .thenAnswer((_) async => 'bar'.toByteData());
-      expect(await proxy.loadString(assetName), equals('bar'));
-    }, createFile: MockFileCreator({pkgAssetPath}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(bundle.load(pkgAssetPath))
+            .thenAnswer((_) async => 'bar'.toByteData());
+        expect(await proxy.loadString(assetName), equals('bar'));
+      },
+      createFile: MockFileCreator({pkgAssetPath}).call,
+    );
 
     verifyNever(bundle.load(appAssetPath));
     verify(bundle.load(pkgAssetPath)).called(1);
@@ -74,11 +88,15 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(bundle.load(pkgAssetPath))
-          .thenAnswer((_) async => 'bar'.toByteData());
-      expect(await proxy.loadString('packages/qux/$assetName'), equals('bar'));
-    }, createFile: MockFileCreator({pkgAssetPath}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(bundle.load(pkgAssetPath))
+            .thenAnswer((_) async => 'bar'.toByteData());
+        expect(
+            await proxy.loadString('packages/qux/$assetName'), equals('bar'));
+      },
+      createFile: MockFileCreator({pkgAssetPath}).call,
+    );
 
     verifyNever(bundle.load(appAssetPath));
     verify(bundle.load(pkgAssetPath)).called(1);
@@ -89,13 +107,18 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(
-        bundle.loadStructuredData<String>(pkgAssetPath, parseMockData),
-      ).thenAnswer((_) async => 'baz');
-      expect(await proxy.loadStructuredData<String>(assetName, parseMockData),
-          equals('baz'));
-    }, createFile: MockFileCreator({pkgAssetPath}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(
+          bundle.loadStructuredData<String>(pkgAssetPath, parseMockData),
+        ).thenAnswer((_) async => 'baz');
+        expect(
+          await proxy.loadStructuredData<String>(assetName, parseMockData),
+          equals('baz'),
+        );
+      },
+      createFile: MockFileCreator({pkgAssetPath}).call,
+    );
 
     verifyNever(bundle.loadStructuredData<String>(appAssetPath, parseMockData));
     verify(bundle.loadStructuredData<String>(pkgAssetPath, parseMockData))
@@ -107,10 +130,14 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(bundle.load(assetName)).thenAnswer((_) async => 'bar'.toByteData());
-      expect(await proxy.loadString(assetName), equals('bar'));
-    }, createFile: MockFileCreator({}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(bundle.load(assetName))
+            .thenAnswer((_) async => 'bar'.toByteData());
+        expect(await proxy.loadString(assetName), equals('bar'));
+      },
+      createFile: MockFileCreator({}).call,
+    );
 
     verifyNever(bundle.load(appAssetPath));
     verifyNever(bundle.load(pkgAssetPath));
@@ -121,13 +148,18 @@ void main() {
     final bundle = MockAssetBundle();
     final proxy = ProxyAssetBundle(bundle, package: 'qux');
 
-    await IOOverrides.runZoned(() async {
-      when(
-        bundle.loadStructuredData<String>(assetName, parseMockData),
-      ).thenAnswer((_) async => 'baz');
-      expect(await proxy.loadStructuredData<String>(assetName, parseMockData),
-          equals('baz'));
-    }, createFile: MockFileCreator({}).call);
+    await IOOverrides.runZoned(
+      () async {
+        when(
+          bundle.loadStructuredData<String>(assetName, parseMockData),
+        ).thenAnswer((_) async => 'baz');
+        expect(
+          await proxy.loadStructuredData<String>(assetName, parseMockData),
+          equals('baz'),
+        );
+      },
+      createFile: MockFileCreator({}).call,
+    );
 
     verifyNever(bundle.loadStructuredData<String>(appAssetPath, parseMockData));
     verifyNever(bundle.loadStructuredData<String>(pkgAssetPath, parseMockData));

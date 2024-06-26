@@ -21,9 +21,11 @@ GuidedReformatModel buildGuidedReformatModel({
   when(model.selectedDisk).thenReturn(selectedDisk);
   when(model.selectedStorage).thenReturn(selectedStorage);
   when(model.getDisk(any)).thenAnswer(
-      (i) => disks?.elementAtOrNull(i.positionalArguments.first as int));
+    (i) => disks?.elementAtOrNull(i.positionalArguments.first as int),
+  );
   when(model.getStorage(any)).thenAnswer(
-      (i) => storages?.elementAtOrNull(i.positionalArguments.first as int));
+    (i) => storages?.elementAtOrNull(i.positionalArguments.first as int),
+  );
   when(model.init()).thenAnswer((_) async => (storages?.length ?? 0) > 1);
   return model;
 }

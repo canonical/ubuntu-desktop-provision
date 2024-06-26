@@ -57,10 +57,13 @@ void main() {
     final lastLocale = model.locale(model.languageCount - 1);
     expect(firstLocale, isNot(equals(lastLocale)));
 
-    await model.selectLocale(Locale.fromSubtags(
+    await model.selectLocale(
+      Locale.fromSubtags(
         languageCode: lastLocale.languageCode,
         countryCode: lastLocale.countryCode,
-        scriptCode: 'bar'));
+        scriptCode: 'bar',
+      ),
+    );
     expect(model.selectedIndex, equals(model.languageCount - 1));
   });
 

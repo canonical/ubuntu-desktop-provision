@@ -61,7 +61,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
           child: Text(
             lang.restartIntoWindows,
           ),
-        )
+        ),
       ],
     );
   }

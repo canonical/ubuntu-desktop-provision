@@ -60,24 +60,26 @@ class InstallerService {
 
   Future<Set<String>> _getSubiquityPages() async =>
       (await _client.getInteractiveSections())
-          ?.map((section) => switch (section) {
-                // Sections that match the page names
-                final page
-                    when [
-                      'locale',
-                      'keyboard',
-                      'network',
-                      'storage',
-                      'identity',
-                      'timezone',
-                    ].contains(page) =>
-                  page,
-                // Sections that don't match the page names
-                'refresh-installer' => InstallationStep.refresh.name,
-                'source' => InstallationStep.sourceSelection.name,
-                'codecs' || 'drivers' => InstallationStep.codecsAndDrivers.name,
-                _ => 'unknown',
-              })
+          ?.map(
+            (section) => switch (section) {
+              // Sections that match the page names
+              final page
+                  when [
+                    'locale',
+                    'keyboard',
+                    'network',
+                    'storage',
+                    'identity',
+                    'timezone',
+                  ].contains(page) =>
+                page,
+              // Sections that don't match the page names
+              'refresh-installer' => InstallationStep.refresh.name,
+              'source' => InstallationStep.sourceSelection.name,
+              'codecs' || 'drivers' => InstallationStep.codecsAndDrivers.name,
+              _ => 'unknown',
+            },
+          )
           .whereNot((page) => page == 'unknown')
           .toSet() ??
       {};

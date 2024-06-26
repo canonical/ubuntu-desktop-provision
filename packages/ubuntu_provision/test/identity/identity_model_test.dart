@@ -45,9 +45,12 @@ void main() {
       telemetry: telemetry,
     );
 
-    await IOOverrides.runZoned(() async {
-      await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    await IOOverrides.runZoned(
+      () async {
+        await model.init();
+      },
+      createFile: (path) => MockProductNameFile('impish'),
+    );
     verify(service.getIdentity()).called(1);
 
     expect(model.realName, equals(identity.realname));
@@ -80,9 +83,12 @@ void main() {
       telemetry: telemetry,
     );
 
-    await IOOverrides.runZoned(() async {
-      await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    await IOOverrides.runZoned(
+      () async {
+        await model.init();
+      },
+      createFile: (path) => MockProductNameFile('impish'),
+    );
 
     expect(model.autoLogin, true);
   });
@@ -108,9 +114,12 @@ void main() {
       network: network,
       telemetry: telemetry,
     );
-    await IOOverrides.runZoned(() async {
-      await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    await IOOverrides.runZoned(
+      () async {
+        await model.init();
+      },
+      createFile: (path) => MockProductNameFile('impish'),
+    );
     verify(service.getIdentity()).called(1);
 
     expect(model.hostname, equals('ubuntu-impish'));
@@ -137,9 +146,12 @@ void main() {
       network: network,
       telemetry: telemetry,
     );
-    await IOOverrides.runZoned(() async {
-      await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    await IOOverrides.runZoned(
+      () async {
+        await model.init();
+      },
+      createFile: (path) => MockProductNameFile('impish'),
+    );
 
     expect(model.hostname, equals('user-impish'));
   });
@@ -203,18 +215,26 @@ void main() {
 
     model.autoLogin = true;
     await model.save();
-    verify(service.setIdentity(const Identity(
-      username: 'someone',
-      password: 'not-empty',
-      autoLogin: true,
-    ))).called(1);
+    verify(
+      service.setIdentity(
+        const Identity(
+          username: 'someone',
+          password: 'not-empty',
+          autoLogin: true,
+        ),
+      ),
+    ).called(1);
 
     model.autoLogin = false;
     await model.save();
-    verify(service.setIdentity(const Identity(
-      username: 'someone',
-      password: 'not-empty',
-    ))).called(1);
+    verify(
+      service.setIdentity(
+        const Identity(
+          username: 'someone',
+          password: 'not-empty',
+        ),
+      ),
+    ).called(1);
   });
 
   test('password strength', () {
@@ -332,8 +352,14 @@ void main() {
     testValid('real', 'host', '123', 'passwd', 'passwd', isFalse);
     testValid('real', 'host', 'UBUNTU', 'passwd', 'passwd', isFalse);
     testValid('real', 'host', 'inv@lid', 'passwd', 'passwd', isFalse);
-    testValid('real', 'host', 'thisusernameislongerthanitshouldbe', 'passwd',
-        'passwd', isFalse);
+    testValid(
+      'real',
+      'host',
+      'thisusernameislongerthanitshouldbe',
+      'passwd',
+      'passwd',
+      isFalse,
+    );
 
     // host name validation
     testValid('real', 'ubuntu-21.10', 'user', 'passwd', 'passwd', isTrue);
@@ -341,12 +367,13 @@ void main() {
     testValid('real', 'ubuntu-', 'user', 'passwd', 'passwd', isFalse);
     testValid('real', 'inv@lid', 'user', 'passwd', 'passwd', isFalse);
     testValid(
-        'real',
-        'thishostnameiswaytoolongandyoureallyshoulduseashorteroneimeanitduh',
-        'user',
-        'passwd',
-        'passwd',
-        isFalse);
+      'real',
+      'thishostnameiswaytoolongandyoureallyshoulduseashorteroneimeanitduh',
+      'user',
+      'passwd',
+      'passwd',
+      isFalse,
+    );
 
     // password matching
     testValid('real', 'host', 'user', 'passwd', 'passwd', isTrue);
@@ -355,12 +382,13 @@ void main() {
     // real name validation
     testValid('', 'host', 'user', 'passwd', 'passwd', isFalse);
     testValid(
-        'these are slightly more than the allowed one hundred and sixty characters for the extraordinarily lengthy name of the user who is currently running the installer',
-        'host',
-        'user',
-        'passwd',
-        'passwd',
-        isFalse);
+      'these are slightly more than the allowed one hundred and sixty characters for the extraordinarily lengthy name of the user who is currently running the installer',
+      'host',
+      'user',
+      'passwd',
+      'passwd',
+      isFalse,
+    );
   });
 
   test('server validation', () async {
@@ -438,9 +466,12 @@ void main() {
     model.username = 'user';
     model.hostname = 'ubuntu';
 
-    await IOOverrides.runZoned(() async {
-      await model.init();
-    }, createFile: (path) => MockProductNameFile(''));
+    await IOOverrides.runZoned(
+      () async {
+        await model.init();
+      },
+      createFile: (path) => MockProductNameFile(''),
+    );
     verify(service.getIdentity()).called(1);
 
     expect(model.realName, equals('User'));

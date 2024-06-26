@@ -33,18 +33,19 @@ void main() {
 
   testWidgets('storage formatting', (tester) async {
     final model = buildGuidedResizeModel(
-        storageCount: 5,
-        selectedIndex: 1,
-        allPartitions: {
-          1: const [
-            Partition(
-              number: 1,
-              size: 123,
-              path: '/dev/sda1',
-              os: OsProber(long: 'Ubuntu 22.04 LTS', label: '', type: ''),
-            ),
-          ],
-        });
+      storageCount: 5,
+      selectedIndex: 1,
+      allPartitions: {
+        1: const [
+          Partition(
+            number: 1,
+            size: 123,
+            path: '/dev/sda1',
+            os: OsProber(long: 'Ubuntu 22.04 LTS', label: '', type: ''),
+          ),
+        ],
+      },
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     expect(
@@ -134,8 +135,13 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.text(l10n.installationTypeAlongsideDual(
-          'Ubuntu 22.10', 'Ubuntu 21.10', 'Ubuntu 22.04 LTS')),
+      find.text(
+        l10n.installationTypeAlongsideDual(
+          'Ubuntu 22.10',
+          'Ubuntu 21.10',
+          'Ubuntu 22.04 LTS',
+        ),
+      ),
       findsOneWidget,
     );
   });

@@ -9,9 +9,11 @@ import 'package:yaru_test/yaru_test.dart';
 
 extension UbuntuWizardTester on WidgetTester {
   Future<void> tapConfirm() {
-    return tapButton(find.l10n<UbuntuBootstrapLocalizations>(
-      (l10n) => l10n.confirmInstallButton,
-    ));
+    return tapButton(
+      find.l10n<UbuntuBootstrapLocalizations>(
+        (l10n) => l10n.confirmInstallButton,
+      ),
+    );
   }
 
   Future<void> tapContinueTesting() {
@@ -42,9 +44,11 @@ extension UbuntuWizardTester on WidgetTester {
   Future<void> jumpToPage(String route) async {
     final context = element(find.byType(WizardPage));
     unawaited(Wizard.of(context).jump(route));
-    await pumpUntil(find.byElementPredicate((element) {
-      return Wizard.maybeOf(element)?.controller.currentRoute == route;
-    }));
+    await pumpUntil(
+      find.byElementPredicate((element) {
+        return Wizard.maybeOf(element)?.controller.currentRoute == route;
+      }),
+    );
     await pumpAndSettle();
   }
 

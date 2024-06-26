@@ -29,7 +29,9 @@ void main() {
         .thenAnswer((i) => 'https://wiki.ubuntu.com/Release/de');
 
     final model = WelcomeModel(service);
-    expect(model.releaseNotesURL(const Locale('de')),
-        'https://wiki.ubuntu.com/Release/de');
+    expect(
+      model.releaseNotesURL(const Locale('de')),
+      'https://wiki.ubuntu.com/Release/de',
+    );
   });
 }

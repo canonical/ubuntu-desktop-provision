@@ -28,79 +28,80 @@ Future<void> showCreatePartitionDialog(
       final partitionMount = ValueNotifier<String?>(null);
 
       final lang = UbuntuBootstrapLocalizations.of(context);
-      return Consumer(builder: (context, ref, child) {
-        final model = ref.read(manualStorageModelProvider);
-        return AlertDialog(
-          title: YaruDialogTitleBar(
-            title: Text(lang.partitionCreateTitle),
-          ),
-          titlePadding: EdgeInsets.zero,
-          contentPadding: const EdgeInsets.all(kYaruPagePadding),
-          actionsPadding: const EdgeInsets.all(kYaruPagePadding),
-          buttonPadding: EdgeInsets.zero,
-          scrollable: true,
-          content: FormLayout(
-            rowSpacing: kWizardSpacing,
-            columnSpacing: kWizardSpacing,
-            rows: [
-              [
-                Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                ListenableBuilder(
-                  listenable: Listenable.merge([
-                    partitionSize,
-                    partitionUnit,
-                  ]),
-                  builder: (context, child) {
-                    return StorageSizeBox(
-                      size: partitionSize.value,
-                      unit: partitionUnit.value,
-                      maximum: gap.size,
-                      onSizeChanged: (v) => partitionSize.value = v,
-                      onUnitSelected: (v) => partitionUnit.value = v,
-                    );
-                  },
-                )
-              ],
-              [
-                Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
-                ValueListenableBuilder(
-                  valueListenable: partitionFormat,
-                  builder: (context, value, child) {
-                    return MenuButtonBuilder<PartitionFormat?>(
-                      entries: [
-                        ...PartitionFormat.supported
-                            .map((f) => MenuButtonEntry(value: f)),
-                        const MenuButtonEntry(value: null, isDivider: true),
-                        const MenuButtonEntry(value: PartitionFormat.swap),
-                        const MenuButtonEntry(value: null, isDivider: true),
-                        const MenuButtonEntry(value: PartitionFormat.none),
-                      ],
-                      selected: partitionFormat.value,
-                      onSelected: (format) => partitionFormat.value = format,
-                      itemBuilder: (context, format, child) => Text(
-                        format?.displayName ?? lang.partitionFormatNone,
-                        key: ValueKey(format?.type),
-                      ),
-                    );
-                  },
-                ),
-              ],
-              [
-                Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
-                _PartitionMountField(
-                  partitionFormat: partitionFormat,
-                  partitionMount: partitionMount,
-                ),
-              ],
-            ],
-          ),
-          actions: [
-            PushButton.outlined(
-              onPressed: Navigator.of(context).pop,
-              child: Text(UbuntuLocalizations.of(context).cancelLabel),
+      return Consumer(
+        builder: (context, ref, child) {
+          final model = ref.read(manualStorageModelProvider);
+          return AlertDialog(
+            title: YaruDialogTitleBar(
+              title: Text(lang.partitionCreateTitle),
             ),
-            const SizedBox(width: kWizardBarSpacing),
-            ValueListenableBuilder(
+            titlePadding: EdgeInsets.zero,
+            contentPadding: const EdgeInsets.all(kYaruPagePadding),
+            actionsPadding: const EdgeInsets.all(kYaruPagePadding),
+            buttonPadding: EdgeInsets.zero,
+            scrollable: true,
+            content: FormLayout(
+              rowSpacing: kWizardSpacing,
+              columnSpacing: kWizardSpacing,
+              rows: [
+                [
+                  Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
+                  ListenableBuilder(
+                    listenable: Listenable.merge([
+                      partitionSize,
+                      partitionUnit,
+                    ]),
+                    builder: (context, child) {
+                      return StorageSizeBox(
+                        size: partitionSize.value,
+                        unit: partitionUnit.value,
+                        maximum: gap.size,
+                        onSizeChanged: (v) => partitionSize.value = v,
+                        onUnitSelected: (v) => partitionUnit.value = v,
+                      );
+                    },
+                  ),
+                ],
+                [
+                  Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
+                  ValueListenableBuilder(
+                    valueListenable: partitionFormat,
+                    builder: (context, value, child) {
+                      return MenuButtonBuilder<PartitionFormat?>(
+                        entries: [
+                          ...PartitionFormat.supported
+                              .map((f) => MenuButtonEntry(value: f)),
+                          const MenuButtonEntry(value: null, isDivider: true),
+                          const MenuButtonEntry(value: PartitionFormat.swap),
+                          const MenuButtonEntry(value: null, isDivider: true),
+                          const MenuButtonEntry(value: PartitionFormat.none),
+                        ],
+                        selected: partitionFormat.value,
+                        onSelected: (format) => partitionFormat.value = format,
+                        itemBuilder: (context, format, child) => Text(
+                          format?.displayName ?? lang.partitionFormatNone,
+                          key: ValueKey(format?.type),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+                [
+                  Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
+                  _PartitionMountField(
+                    partitionFormat: partitionFormat,
+                    partitionMount: partitionMount,
+                  ),
+                ],
+              ],
+            ),
+            actions: [
+              PushButton.outlined(
+                onPressed: Navigator.of(context).pop,
+                child: Text(UbuntuLocalizations.of(context).cancelLabel),
+              ),
+              const SizedBox(width: kWizardBarSpacing),
+              ValueListenableBuilder(
                 valueListenable: partitionMount,
                 builder: (context, value, child) {
                   return PushButton.filled(
@@ -122,10 +123,12 @@ Future<void> showCreatePartitionDialog(
                         : null,
                     child: Text(UbuntuLocalizations.of(context).okLabel),
                   );
-                }),
-          ],
-        );
-      });
+                },
+              ),
+            ],
+          );
+        },
+      );
     },
   );
 }
@@ -151,110 +154,111 @@ Future<void> showEditPartitionDialog(
       final partitionMount = ValueNotifier(partition.mount);
 
       final lang = UbuntuBootstrapLocalizations.of(context);
-      return Consumer(builder: (context, ref, child) {
-        final model = ref.read(manualStorageModelProvider);
-        return AlertDialog(
-          title: YaruDialogTitleBar(
-            title: Text(lang.partitionEditTitle),
-          ),
-          titlePadding: EdgeInsets.zero,
-          contentPadding: const EdgeInsets.all(kYaruPagePadding),
-          actionsPadding: const EdgeInsets.all(kYaruPagePadding),
-          buttonPadding: EdgeInsets.zero,
-          scrollable: true,
-          content: FormLayout(
-            rowSpacing: kWizardSpacing,
-            columnSpacing: kWizardSpacing,
-            rows: [
-              [
-                Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                ListenableBuilder(
-                  listenable: Listenable.merge([
-                    partitionSize,
-                    partitionUnit,
-                  ]),
-                  builder: (context, child) {
-                    return StorageSizeBox(
-                      size: partitionSize.value,
-                      unit: partitionUnit.value,
-                      minimum: partition.estimatedMinSize ?? 0,
-                      maximum: (partition.size ?? 0) + (gap?.size ?? 0),
-                      onSizeChanged: (v) => partitionSize.value = v,
-                      onUnitSelected: (v) => partitionUnit.value = v,
-                    );
-                  },
-                )
-              ],
-              [
-                Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
-                AnimatedBuilder(
-                  animation:
-                      Listenable.merge([partitionFormat, partitionMount]),
-                  builder: (context, child) {
-                    final configFormat = originalPartition != null
-                        ? PartitionFormat.fromPartition(originalPartition)
-                        : null;
-                    return MenuButtonBuilder<PartitionFormat?>(
-                      entries: [
-                        if (partitionMount.value ==
-                                DefaultMountPoint.home.path &&
-                            (partition.preserve ?? false)) ...[
-                          const MenuButtonEntry(value: null),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                        ],
-                        ...PartitionFormat.supported
-                            .map((f) => MenuButtonEntry(value: f)),
-                        const MenuButtonEntry(value: null, isDivider: true),
-                        const MenuButtonEntry(value: PartitionFormat.swap),
-                        if ((partition.preserve ?? false) != true) ...[
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.none),
-                        ],
-                      ],
-                      selected: partitionFormat.value,
-                      onSelected: (format) => partitionFormat.value = format,
-                      itemBuilder: (context, format, child) => Text(
-                        format?.displayName ??
-                            (configFormat?.displayName != null
-                                ? lang.partitionFormatKeep(
-                                    configFormat!.displayName!,
-                                  )
-                                : lang.partitionFormatNone),
-                        key: ValueKey(format?.type),
-                      ),
-                      child: Text(
-                        partitionFormat.value?.displayName ??
-                            (configFormat?.displayName != null
-                                ? lang.partitionFormatKeep(
-                                    configFormat!.displayName!,
-                                  )
-                                : lang.partitionFormatNone),
-                        key: ValueKey(
-                          partitionFormat.value?.type,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ],
-              [
-                Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
-                _PartitionMountField(
-                  initialMount: partition.mount,
-                  partitionFormat: partitionFormat,
-                  originalPartition: originalPartition,
-                  partitionMount: partitionMount,
-                ),
-              ],
-            ],
-          ),
-          actions: [
-            PushButton.outlined(
-              onPressed: Navigator.of(context).pop,
-              child: Text(UbuntuLocalizations.of(context).cancelLabel),
+      return Consumer(
+        builder: (context, ref, child) {
+          final model = ref.read(manualStorageModelProvider);
+          return AlertDialog(
+            title: YaruDialogTitleBar(
+              title: Text(lang.partitionEditTitle),
             ),
-            const SizedBox(width: kWizardBarSpacing),
-            ValueListenableBuilder(
+            titlePadding: EdgeInsets.zero,
+            contentPadding: const EdgeInsets.all(kYaruPagePadding),
+            actionsPadding: const EdgeInsets.all(kYaruPagePadding),
+            buttonPadding: EdgeInsets.zero,
+            scrollable: true,
+            content: FormLayout(
+              rowSpacing: kWizardSpacing,
+              columnSpacing: kWizardSpacing,
+              rows: [
+                [
+                  Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
+                  ListenableBuilder(
+                    listenable: Listenable.merge([
+                      partitionSize,
+                      partitionUnit,
+                    ]),
+                    builder: (context, child) {
+                      return StorageSizeBox(
+                        size: partitionSize.value,
+                        unit: partitionUnit.value,
+                        minimum: partition.estimatedMinSize ?? 0,
+                        maximum: (partition.size ?? 0) + (gap?.size ?? 0),
+                        onSizeChanged: (v) => partitionSize.value = v,
+                        onUnitSelected: (v) => partitionUnit.value = v,
+                      );
+                    },
+                  ),
+                ],
+                [
+                  Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
+                  AnimatedBuilder(
+                    animation:
+                        Listenable.merge([partitionFormat, partitionMount]),
+                    builder: (context, child) {
+                      final configFormat = originalPartition != null
+                          ? PartitionFormat.fromPartition(originalPartition)
+                          : null;
+                      return MenuButtonBuilder<PartitionFormat?>(
+                        entries: [
+                          if (partitionMount.value ==
+                                  DefaultMountPoint.home.path &&
+                              (partition.preserve ?? false)) ...[
+                            const MenuButtonEntry(value: null),
+                            const MenuButtonEntry(value: null, isDivider: true),
+                          ],
+                          ...PartitionFormat.supported
+                              .map((f) => MenuButtonEntry(value: f)),
+                          const MenuButtonEntry(value: null, isDivider: true),
+                          const MenuButtonEntry(value: PartitionFormat.swap),
+                          if ((partition.preserve ?? false) != true) ...[
+                            const MenuButtonEntry(value: null, isDivider: true),
+                            const MenuButtonEntry(value: PartitionFormat.none),
+                          ],
+                        ],
+                        selected: partitionFormat.value,
+                        onSelected: (format) => partitionFormat.value = format,
+                        itemBuilder: (context, format, child) => Text(
+                          format?.displayName ??
+                              (configFormat?.displayName != null
+                                  ? lang.partitionFormatKeep(
+                                      configFormat!.displayName!,
+                                    )
+                                  : lang.partitionFormatNone),
+                          key: ValueKey(format?.type),
+                        ),
+                        child: Text(
+                          partitionFormat.value?.displayName ??
+                              (configFormat?.displayName != null
+                                  ? lang.partitionFormatKeep(
+                                      configFormat!.displayName!,
+                                    )
+                                  : lang.partitionFormatNone),
+                          key: ValueKey(
+                            partitionFormat.value?.type,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+                [
+                  Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
+                  _PartitionMountField(
+                    initialMount: partition.mount,
+                    partitionFormat: partitionFormat,
+                    originalPartition: originalPartition,
+                    partitionMount: partitionMount,
+                  ),
+                ],
+              ],
+            ),
+            actions: [
+              PushButton.outlined(
+                onPressed: Navigator.of(context).pop,
+                child: Text(UbuntuLocalizations.of(context).cancelLabel),
+              ),
+              const SizedBox(width: kWizardBarSpacing),
+              ValueListenableBuilder(
                 valueListenable: partitionMount,
                 builder: (context, value, child) {
                   return PushButton.filled(
@@ -275,10 +279,12 @@ Future<void> showEditPartitionDialog(
                         : null,
                     child: Text(UbuntuLocalizations.of(context).okLabel),
                   );
-                }),
-          ],
-        );
-      });
+                },
+              ),
+            ],
+          );
+        },
+      );
     },
   );
 }

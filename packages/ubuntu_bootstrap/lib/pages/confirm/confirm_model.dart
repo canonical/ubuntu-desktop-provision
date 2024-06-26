@@ -64,12 +64,14 @@ class ConfirmModel extends SafeChangeNotifier {
     }
     await _storage.getStorage().then(_updateDisks);
     _originals = await _storage.getOriginalStorage().then(
-          (disks) => Map.fromEntries(disks.map(
-            (d) => MapEntry(
-              d.sysname,
-              d.partitions.whereType<Partition>().toList(),
+          (disks) => Map.fromEntries(
+            disks.map(
+              (d) => MapEntry(
+                d.sysname,
+                d.partitions.whereType<Partition>().toList(),
+              ),
             ),
-          )),
+          ),
         );
     notifyListeners();
   }
@@ -91,9 +93,11 @@ class ConfirmModel extends SafeChangeNotifier {
     }
 
     _disks = disks
-        .where((d) =>
-            d.preserve == false ||
-            d.partitions.whereType<Partition>().any(isPartitionModified))
+        .where(
+          (d) =>
+              d.preserve == false ||
+              d.partitions.whereType<Partition>().any(isPartitionModified),
+        )
         .toList();
     _partitions = Map.fromEntries(
       disks.map((disk) {

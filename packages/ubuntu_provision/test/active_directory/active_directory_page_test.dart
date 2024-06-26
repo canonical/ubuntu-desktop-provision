@@ -12,8 +12,9 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_active_directory.dart';
 
 final domainNameValidationVariant = ValueVariant(
-    AdDomainNameValidation.values.toSet()
-      ..remove(AdDomainNameValidation.REALM_NOT_FOUND));
+  AdDomainNameValidation.values.toSet()
+    ..remove(AdDomainNameValidation.REALM_NOT_FOUND),
+);
 final adminNameValidationVariant =
     ValueVariant(AdAdminNameValidation.values.toSet());
 final passwordValidationVariant =
@@ -33,75 +34,91 @@ void main() {
     expect(find.textField('password'), findsOneWidget);
   });
 
-  testWidgets('domain name input', (tester) async {
-    final validation = domainNameValidationVariant.currentValue!;
-    final model = buildActiveDirectoryModel(
-      domainName: 'ubuntu.com',
-      domainNameValidation: [validation],
-    );
+  testWidgets(
+    'domain name input',
+    (tester) async {
+      final validation = domainNameValidationVariant.currentValue!;
+      final model = buildActiveDirectoryModel(
+        domainName: 'ubuntu.com',
+        domainNameValidation: [validation],
+      );
 
-    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
-    final context = tester.element(find.byType(ActiveDirectoryPage));
-    final error = validation.localize(context);
-    if (error.isNotEmpty) {
-      expect(find.text(error), findsNothing);
-    }
+      await tester.pumpApp((_) => buildActiveDirectoryPage(model));
+      final context = tester.element(find.byType(ActiveDirectoryPage));
+      final error = validation.localize(context);
+      if (error.isNotEmpty) {
+        expect(find.text(error), findsNothing);
+      }
 
-    final textField = find.textField('ubuntu.com');
-    expect(textField, findsOneWidget);
+      final textField = find.textField('ubuntu.com');
+      expect(textField, findsOneWidget);
 
-    await tester.enterText(textField, '...');
-    verify(model.setDomainName('...')).called(1);
+      await tester.enterText(textField, '...');
+      verify(model.setDomainName('...')).called(1);
 
-    await tester.pump();
-    if (error.isNotEmpty) {
-      expect(find.text(error), findsOneWidget);
-    }
-  }, variant: domainNameValidationVariant);
+      await tester.pump();
+      if (error.isNotEmpty) {
+        expect(find.text(error), findsOneWidget);
+      }
+    },
+    variant: domainNameValidationVariant,
+  );
 
-  testWidgets('admin name input', (tester) async {
-    final validation = adminNameValidationVariant.currentValue!;
-    final model = buildActiveDirectoryModel(
-        adminName: 'admin', adminNameValidation: validation);
+  testWidgets(
+    'admin name input',
+    (tester) async {
+      final validation = adminNameValidationVariant.currentValue!;
+      final model = buildActiveDirectoryModel(
+        adminName: 'admin',
+        adminNameValidation: validation,
+      );
 
-    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
-    final context = tester.element(find.byType(ActiveDirectoryPage));
-    final error = validation.localize(context);
-    if (error.isNotEmpty) {
-      expect(find.text(validation.localize(context)), findsNothing);
-    }
+      await tester.pumpApp((_) => buildActiveDirectoryPage(model));
+      final context = tester.element(find.byType(ActiveDirectoryPage));
+      final error = validation.localize(context);
+      if (error.isNotEmpty) {
+        expect(find.text(validation.localize(context)), findsNothing);
+      }
 
-    final textField = find.textField('admin');
-    expect(textField, findsOneWidget);
-    await tester.enterText(textField, 'ubuntu');
-    verify(model.setAdminName('ubuntu')).called(1);
+      final textField = find.textField('admin');
+      expect(textField, findsOneWidget);
+      await tester.enterText(textField, 'ubuntu');
+      verify(model.setAdminName('ubuntu')).called(1);
 
-    await tester.pump();
-    if (error.isNotEmpty) {
-      expect(find.text(error), findsOneWidget);
-    }
-  }, variant: adminNameValidationVariant);
+      await tester.pump();
+      if (error.isNotEmpty) {
+        expect(find.text(error), findsOneWidget);
+      }
+    },
+    variant: adminNameValidationVariant,
+  );
 
-  testWidgets('password input', (tester) async {
-    final validation = passwordValidationVariant.currentValue!;
-    final model = buildActiveDirectoryModel(
-        password: 'password', passwordValidation: validation);
+  testWidgets(
+    'password input',
+    (tester) async {
+      final validation = passwordValidationVariant.currentValue!;
+      final model = buildActiveDirectoryModel(
+        password: 'password',
+        passwordValidation: validation,
+      );
 
-    await tester.pumpApp((_) => buildActiveDirectoryPage(model));
-    final context = tester.element(find.byType(ActiveDirectoryPage));
-    final error = validation.localize(context);
-    if (error.isNotEmpty) {
-      expect(find.text(error), findsNothing);
-    }
+      await tester.pumpApp((_) => buildActiveDirectoryPage(model));
+      final context = tester.element(find.byType(ActiveDirectoryPage));
+      final error = validation.localize(context);
+      if (error.isNotEmpty) {
+        expect(find.text(error), findsNothing);
+      }
 
-    await tester.enterText(find.textField('password'), 'ubuntu');
-    verify(model.setPassword('ubuntu')).called(1);
+      await tester.enterText(find.textField('password'), 'ubuntu');
+      verify(model.setPassword('ubuntu')).called(1);
 
-    await tester.pump();
-    if (error.isNotEmpty) {
-      expect(find.text(error), findsOneWidget);
-    }
-  }, variant: passwordValidationVariant);
+      await tester.pump();
+      if (error.isNotEmpty) {
+        expect(find.text(error), findsOneWidget);
+      }
+    },
+    variant: passwordValidationVariant,
+  );
 
   testWidgets('valid input', (tester) async {
     final model = buildActiveDirectoryModel(isValid: true);
@@ -131,7 +148,9 @@ void main() {
 
   testWidgets('AD join error', (tester) async {
     final model = buildActiveDirectoryModel(
-        isValid: true, joinResult: AdJoinResult.JOIN_ERROR);
+      isValid: true,
+      joinResult: AdJoinResult.JOIN_ERROR,
+    );
     await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     await tester.tapNext();

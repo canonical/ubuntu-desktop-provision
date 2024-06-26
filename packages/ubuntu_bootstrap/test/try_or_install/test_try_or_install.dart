@@ -13,8 +13,10 @@ export '../test_utils.dart';
 export 'test_try_or_install.mocks.dart';
 
 @GenerateMocks([TryOrInstallModel])
-TryOrInstallModel buildTryOrInstallModel(
-    {bool? isConnected, TryOrInstallOption? option}) {
+TryOrInstallModel buildTryOrInstallModel({
+  bool? isConnected,
+  TryOrInstallOption? option,
+}) {
   final model = MockTryOrInstallModel();
   when(model.isConnected).thenReturn(isConnected ?? false);
   when(model.option).thenReturn(option ?? TryOrInstallOption.installUbuntu);

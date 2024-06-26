@@ -19,7 +19,8 @@ import 'test_keyboard.dart';
 Widget buildKeyboardPage(KeyboardModel model) {
   final service = MockKeyboardService();
   when(service.getKeyboardStep(any)).thenAnswer(
-      (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []));
+    (_) async => const AnyStep.stepPressKey(keycodes: {}, symbols: []),
+  );
   registerMockService<KeyboardService>(service);
   final pageImages = PageImages.internal(
     MockPageConfigService(),

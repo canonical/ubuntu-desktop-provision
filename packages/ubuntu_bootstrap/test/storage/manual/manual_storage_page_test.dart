@@ -34,7 +34,7 @@ final testDisks = <Disk>[
         size: 22,
         mount: '/mnt/2',
         format: 'ext2',
-      )
+      ),
     ],
   ),
   fakeDisk(
@@ -53,7 +53,7 @@ final testDisks = <Disk>[
         size: 44,
         mount: '/mnt/4',
         format: 'ext4',
-      )
+      ),
     ],
   ),
 ];
@@ -91,7 +91,9 @@ void main() {
         );
         expect(find.text(partition.mount!), findsOneWidget);
         expect(
-            find.text(context.formatByteSize(partition.size!)), findsOneWidget);
+          find.text(context.formatByteSize(partition.size!)),
+          findsOneWidget,
+        );
       }
     }
   });
@@ -110,8 +112,9 @@ void main() {
 
     verify(model.selectStorage(1)).called(1);
 
-    await tester.tap(find
-        .text(testDisks.first.partitions.whereType<Partition>().last.mount!));
+    await tester.tap(
+      find.text(testDisks.first.partitions.whereType<Partition>().last.mount!),
+    );
     await tester.pumpAndSettle();
 
     verify(model.selectStorage(0, 1)).called(1);
@@ -119,11 +122,12 @@ void main() {
 
   testWidgets('cannot add/edit/remove/reformat', (tester) async {
     final model = buildManualStorageModel(
-        disks: testDisks,
-        canAddPartition: false,
-        canEditPartition: false,
-        canRemovePartition: false,
-        canReformatDisk: false);
+      disks: testDisks,
+      canAddPartition: false,
+      canEditPartition: false,
+      canRemovePartition: false,
+      canReformatDisk: false,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
@@ -316,9 +320,11 @@ void main() {
     expect(
       find.ancestor(
         of: addButton,
-        matching: find.byWidgetPredicate((widget) =>
-            widget is Tooltip &&
-            widget.message == l10n.tooManyPrimaryPartitions),
+        matching: find.byWidgetPredicate(
+          (widget) =>
+              widget is Tooltip &&
+              widget.message == l10n.tooManyPrimaryPartitions,
+        ),
       ),
       findsOneWidget,
     );
