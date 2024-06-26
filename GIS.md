@@ -5,7 +5,11 @@ be handled later, perhaps even by a different user.
 
 To accommodate this workflow Ubuntu ships with Gnome Initial Setup, a program that can safely handle user account 
 creation and configuration. Gnome Initial Setup is started by default when a system is booted and GDM is unable to
-detect any user accounts. Instead of taking you to the login screen, a special Gnome Initial Setup user session is started.
+detect any user accounts. Instead of taking you to the login screen, a special Gnome Initial Setup user session is 
+started.
+
+(Note: this is a special integration built into GDM. If you are using a different display manager, you may need to
+integrate the [Gnome Initial Setup session](https://salsa.debian.org/gnome-team/gnome-initial-setup/-/blob/ubuntu/latest/data/gnome-initial-setup.session.in?ref_type=heads) being invoked by the display manager yourself.)
 
 This guide aims to highlight some of the ways a system can be provisioned such that Ubuntu is installed, but no user 
 account is created, allowing user account creation to be passed off to Gnome-Initial-Setup.
@@ -64,7 +68,7 @@ These sections are adapted from the subiquity [documentation](https://canonical-
 ## Using an autoinstall provided over the network
 
 ### Getting an ISO
-You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop). (Currently the latest is Ubuntu 24.04 LTS)
+You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop).
 
 ### Mount the ISO
 Once downloaded, you can mount the ISO to make it accessible via from a local directory. Change `<version-number>` in 
@@ -132,10 +136,10 @@ user creation.
 Use this method to create an installation medium to plug into a computer to have it be installed.
 
 ### Getting an ISO
-You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop). (Currently the latest is Ubuntu 24.04 LTS)
+You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop).
 
 ### Write your autoinstall configuration
-Create your clout-init configuration, making sure to leave the identity section out so that no user is created during 
+Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
 installation:
 
 ```
