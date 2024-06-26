@@ -94,7 +94,7 @@ extension UbuntuProvisionPageTester on WidgetTester {
 
         await tap(find.descendant(
             of: find.byType(AlertDialog),
-            matching: find.byType(YaruWindowControl)));
+            matching: find.byType(YaruWindowControl),),);
         await pumpAndSettle();
       }
     }

@@ -56,7 +56,7 @@ StorageModel buildStorageModel({
         SecureBootScenarios.bios => [bios],
         SecureBootScenarios.thirdPartyDrivers => [thirdPartyDrivers],
         _ => [],
-      });
+      },);
   return model;
 }
 
@@ -82,7 +82,7 @@ const noTpm = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
       message: 'tpm required',
-    )
+    ),
   ],
 );
 
@@ -93,7 +93,7 @@ const bios = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.NOT_UEFI,
       message: 'uefi & secure boot required',
-    )
+    ),
   ],
 );
 
@@ -104,6 +104,6 @@ const thirdPartyDrivers = GuidedStorageTargetReformat(
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       reason: GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS,
       message: 'third party drivers incompatible',
-    )
+    ),
   ],
 );

@@ -30,7 +30,7 @@ class PassphrasePage extends ConsumerWidget {
         trailing: [
           NextWizardButton(
             enabled: ref.watch(
-                passphraseModelProvider.select((model) => model.isValid)),
+                passphraseModelProvider.select((model) => model.isValid),),
             onNext: ref.read(passphraseModelProvider).savePassphrase,
             onReturn: ref.read(passphraseModelProvider).loadPassphrase,
           ),

@@ -66,13 +66,13 @@ void main() {
     final client = MockSubiquityClient();
     when(client.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     when(client.monitorStatus()).thenAnswer(
-        (_) => Stream.value(fakeApplicationStatus(ApplicationState.RUNNING)));
+        (_) => Stream.value(fakeApplicationStatus(ApplicationState.RUNNING)),);
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
     registerMockService<SubiquityClient>(client);
 
     final server = MockSubiquityServer();
     when(server.start(
-            args: anyNamed('args'), environment: anyNamed('environment')))
+            args: anyNamed('args'), environment: anyNamed('environment'),),)
         .thenAnswer((_) async => endpoint);
     registerMockService<SubiquityServer>(server);
 
@@ -94,7 +94,7 @@ void main() {
       '--storage-version=2',
       '--foo',
       'bar',
-    ])).called(1);
+    ],),).called(1);
     verify(client.open(endpoint)).called(1);
   });
 }
@@ -123,7 +123,7 @@ extension on WidgetTester {
 
     final refresh = MockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.status(
-        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
+        RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),),);
     when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
 
     final journal = MockJournalService();
@@ -138,8 +138,8 @@ extension on WidgetTester {
     when(subiquityClient.monitorStatus()).thenAnswer((_) =>
         Stream.fromIterable([
           status,
-          if (proceedToDone) fakeApplicationStatus(ApplicationState.DONE)
-        ]));
+          if (proceedToDone) fakeApplicationStatus(ApplicationState.DONE),
+        ]),);
 
     final config = MockConfigService();
     when(config.provisioningMode)

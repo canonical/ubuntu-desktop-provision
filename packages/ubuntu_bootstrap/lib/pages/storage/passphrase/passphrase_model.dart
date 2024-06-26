@@ -7,7 +7,7 @@ import 'package:ubuntu_bootstrap/services.dart';
 
 /// Provider for [PassphraseModel].
 final passphraseModelProvider = ChangeNotifierProvider(
-    (_) => PassphraseModel(getService<StorageService>()));
+    (_) => PassphraseModel(getService<StorageService>()),);
 
 /// View model for [PassphrasePage].
 class PassphraseModel extends SafeChangeNotifier {

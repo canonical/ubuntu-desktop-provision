@@ -48,7 +48,7 @@ class InstallationEvent {
   final String? description;
 
   InstallationEvent copyWith(
-      {InstallationAction? action, String? description}) {
+      {InstallationAction? action, String? description,}) {
     return InstallationEvent(
       action ?? this.action,
       description: description ?? this.description,
@@ -169,7 +169,7 @@ class InstallModel extends SafeChangeNotifier {
     final status = await _client.getStatus();
     _log = _journal.start([status.logSyslogId, status.eventSyslogId]);
     _events = _journal.start([status.eventSyslogId],
-        output: JournalOutput.cat).listen(_processEvent);
+        output: JournalOutput.cat,).listen(_processEvent);
     _statuses = _client.monitorStatus().listen(_updateStatus);
     _updateStatus(status);
     _provisioningMode = await _config.provisioningMode;

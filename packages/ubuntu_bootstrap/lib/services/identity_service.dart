@@ -38,7 +38,7 @@ class SubiquityIdentityService implements IdentityService {
       username: identity.username,
       cryptedPassword: Crypt.sha512(identity.password).toString(),
       hostname: identity.hostname,
-    ));
+    ),);
   }
 
   @override

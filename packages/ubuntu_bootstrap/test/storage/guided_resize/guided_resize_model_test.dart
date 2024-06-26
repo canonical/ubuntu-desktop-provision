@@ -47,13 +47,13 @@ void main() {
 
     // multiple gaps
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [gap2, gap3, gap1]));
+        (_) async => fakeGuidedStorageResponse(targets: [gap2, gap3, gap1]),);
     expect(await model.init(), isFalse);
     verify(service.guidedTarget = gap3).called(1);
 
     // resize
     when(service.getGuidedStorage()).thenAnswer((_) async =>
-        fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]));
+        fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]),);
     expect(await model.init(), isTrue);
     verifyNever(service.guidedTarget = any);
   });
@@ -62,7 +62,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [fakeDisk()]);
     when(service.getGuidedStorage()).thenAnswer((_) async =>
-        fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]));
+        fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]),);
 
     final model = GuidedResizeModel(service, MockProductService());
     expect(model.selectedIndex, isNull);
@@ -81,12 +81,12 @@ void main() {
     final resize1 =
         fakeGuidedStorageTargetResize(diskId: disk.id, partitionNumber: 1);
     final resize2 = fakeGuidedStorageTargetResize(
-        diskId: disk.id, partitionNumber: 2, maximum: 200);
+        diskId: disk.id, partitionNumber: 2, maximum: 200,);
 
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [disk]);
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [resize1, resize2]));
+        (_) async => fakeGuidedStorageResponse(targets: [resize1, resize2]),);
 
     final model = GuidedResizeModel(service, MockProductService());
     await model.init();
@@ -143,7 +143,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [sda, sdb]);
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]));
+        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),);
 
     final model = GuidedResizeModel(service, MockProductService());
     expect(model.storageCount, isZero);
@@ -184,7 +184,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [sda, sdb]);
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]));
+        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),);
 
     final model = GuidedResizeModel(service, MockProductService());
     expect(model.storageCount, isZero);
@@ -252,7 +252,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [disk]);
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]));
+        (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),);
 
     final model = GuidedResizeModel(service, MockProductService());
     await model.init();

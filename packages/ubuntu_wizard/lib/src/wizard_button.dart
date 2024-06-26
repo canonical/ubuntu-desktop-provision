@@ -208,7 +208,7 @@ class BackWizardButton extends StatelessWidget {
             final effectiveWizard =
                 (wizard?.hasPrevious ?? false) ? wizard : rootWizard;
             return effectiveWizard?.back();
-          }),
+          },),
     );
   }
 }

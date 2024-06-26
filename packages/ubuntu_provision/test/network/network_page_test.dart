@@ -36,7 +36,7 @@ void main() {
 
     final noConnectTile = find.byWidgetPredicate((widget) =>
         widget is YaruRadioButton<ConnectMode> &&
-        widget.value == ConnectMode.none);
+        widget.value == ConnectMode.none,);
     expect(noConnectTile, findsOneWidget);
     await tester.ensureVisible(noConnectTile);
     await tester.tap(noConnectTile);

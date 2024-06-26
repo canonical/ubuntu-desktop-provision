@@ -31,7 +31,7 @@ void main() {
     });
 
     expect(await telemetryClient.collectAndSend(),
-        equals(SendResponseType.SUCCESS));
+        equals(SendResponseType.SUCCESS),);
   });
 
   test('sendDecline', () async {
@@ -42,6 +42,6 @@ void main() {
     });
 
     expect(
-        await telemetryClient.sendDecline(), equals(SendResponseType.SUCCESS));
+        await telemetryClient.sendDecline(), equals(SendResponseType.SUCCESS),);
   });
 }

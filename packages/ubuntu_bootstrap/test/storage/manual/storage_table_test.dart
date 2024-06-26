@@ -121,7 +121,7 @@ void main() {
       canSelect: (disk, [partition = -1]) => disk == 1, // sdb
       isSelected: (disk, [partition = -1]) => disk == 2, // sdc
       onSelected: (disk, [partition = -1]) => selectedDisk = disk,
-    ));
+    ),);
 
     // cannot select
     await tester.tap(find.text('/dev/sda'));
@@ -159,7 +159,7 @@ void main() {
         selectedDisk = disk;
         selectedPartition = partition;
       },
-    ));
+    ),);
 
     // can select
     await tester.ensureVisible(find.text('/dev/sdb1'));

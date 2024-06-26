@@ -34,7 +34,7 @@ void main() {
 
     final dialogButton = find.descendant(
         of: find.byType(AlertDialog),
-        matching: find.ul10n((l10n) => l10n.restartLabel));
+        matching: find.ul10n((l10n) => l10n.restartLabel),);
 
     await tester.tap(dialogButton);
     await tester.pumpAndSettle();

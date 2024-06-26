@@ -67,11 +67,11 @@ class GuidedReformatPage extends ConsumerWidget {
                   final disk = model.getDisk(index);
                   return disk != null
                       ? Text(prettyFormatDisk(context, disk),
-                          key: ValueKey(index))
+                          key: ValueKey(index),)
                       : const SizedBox.shrink();
                 },
               ),
-            )
+            ),
           ],
         ),
         const SizedBox(height: kWizardSpacing * 2),

@@ -105,7 +105,7 @@ class PartitionLegend extends ConsumerWidget {
                       borderColor: Theme.of(context).dividerColor,
                     ),
                   ),
-                ))
+                ),)
             .toList(),
       ),
     );
@@ -218,7 +218,7 @@ class PartitionButtonRow extends ConsumerWidget {
                     ),
                     onPressed: model.canAddPartition
                         ? () => showCreatePartitionDialog(
-                            context, model.selectedDisk!, model.selectedGap!)
+                            context, model.selectedDisk!, model.selectedGap!,)
                         : null,
                     child: const Icon(Icons.add),
                   ),
@@ -231,7 +231,7 @@ class PartitionButtonRow extends ConsumerWidget {
                   ),
                   onPressed: model.canRemovePartition
                       ? () => model.deletePartition(
-                          model.selectedDisk!, model.selectedPartition!)
+                          model.selectedDisk!, model.selectedPartition!,)
                       : null,
                   child: const Icon(Icons.remove),
                 ),

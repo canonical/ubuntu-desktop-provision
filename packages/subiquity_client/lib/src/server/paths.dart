@@ -41,7 +41,7 @@ Future<String> _findSubiquityPath() async {
     log.warning(
         'Unable to find the subiquity_client package. '
         'Falling back to the current working dir: ${Directory.current.path}',
-        error);
+        error,);
   } else {
     log.debug('Found subiquity_client in ${package.root.path}');
   }

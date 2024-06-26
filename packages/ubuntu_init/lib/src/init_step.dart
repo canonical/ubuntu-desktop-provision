@@ -16,7 +16,7 @@ enum InitStep with RouteName {
   ubuntuProOnboarding(UbuntuProOnboardingPage.new, allowedToHide: true),
   ubuntuPro(UbuntuProPage.new, discreteStep: false),
   ubuntuProSuccess(UbuntuProSuccessAttachPage.new,
-      hasPrevious: false, discreteStep: false),
+      hasPrevious: false, discreteStep: false,),
   timezone(TimezonePage.new, hasPrevious: false),
   telemetry(TelemetryPage.new, hasPrevious: false),
   error(_errorPageFactory, wizardStep: false, discreteStep: false);

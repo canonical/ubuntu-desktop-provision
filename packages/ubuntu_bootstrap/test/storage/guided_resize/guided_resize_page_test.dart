@@ -44,7 +44,7 @@ void main() {
               os: OsProber(long: 'Ubuntu 22.04 LTS', label: '', type: ''),
             ),
           ],
-        });
+        },);
     await tester.pumpApp((_) => buildPage(model));
 
     expect(
@@ -135,7 +135,7 @@ void main() {
 
     expect(
       find.text(l10n.installationTypeAlongsideDual(
-          'Ubuntu 22.10', 'Ubuntu 21.10', 'Ubuntu 22.04 LTS')),
+          'Ubuntu 22.10', 'Ubuntu 21.10', 'Ubuntu 22.04 LTS',),),
       findsOneWidget,
     );
   });

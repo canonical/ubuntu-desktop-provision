@@ -14,7 +14,7 @@ void main() {
         home: WizardPage(
           bottomBar: WizardBar(
             leading: WizardButton(
-                label: 'action', onActivated: () => activated = true),
+                label: 'action', onActivated: () => activated = true,),
           ),
         ),
       ),
@@ -23,7 +23,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text('action'),
-    ));
+    ),);
     expect(activated, isTrue);
   });
 
@@ -71,7 +71,7 @@ void main() {
     expect(tester.getCenter(header).dy, lessThan(tester.getCenter(content).dy));
     expect(tester.getCenter(back).dx, lessThan(tester.getCenter(content).dx));
     expect(
-        tester.getCenter(next).dx, greaterThan(tester.getCenter(content).dx));
+        tester.getCenter(next).dx, greaterThan(tester.getCenter(content).dx),);
   });
 
   testWidgets('normal/flat/highlighted action', (tester) async {
@@ -115,7 +115,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text('action'),
-    ));
+    ),);
     expect(activated, isFalse);
   });
 
@@ -156,8 +156,8 @@ void main() {
                   ],
                 ),
               );
-            });
-          }),
+            },);
+          },),
           '/last': WizardRoute(builder: (_) {
             return Builder(builder: (context) {
               return const WizardPage(
@@ -168,9 +168,9 @@ void main() {
                   ],
                 ),
               );
-            });
-          }),
-        }),
+            },);
+          },),
+        },),
       ),
     );
 
@@ -246,8 +246,8 @@ void main() {
                   trailing: [NextWizardButton()],
                 ),
               );
-            });
-          }),
+            },);
+          },),
           '/second': WizardRoute(
             builder: (_) {
               return Builder(builder: (context) {
@@ -258,7 +258,7 @@ void main() {
                     trailing: const [NextWizardButton()],
                   ),
                 );
-              });
+              },);
             },
             userData: const WizardRouteData(hasPrevious: false),
           ),
@@ -272,7 +272,7 @@ void main() {
                     trailing: const [NextWizardButton()],
                   ),
                 );
-              });
+              },);
             },
             userData: const WizardRouteData(hasNext: false),
           ),
@@ -285,10 +285,10 @@ void main() {
                     trailing: [NextWizardButton()],
                   ),
                 );
-              });
+              },);
             },
           ),
-        }),
+        },),
       ),
     );
 
@@ -298,7 +298,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text(lang.nextLabel),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(find.text('second'), findsOneWidget);
@@ -306,7 +306,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
       matching: find.text(lang.backLabel),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(wentBack, isFalse);
@@ -314,7 +314,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text(lang.nextLabel),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(find.text('last'), findsOneWidget);
@@ -322,7 +322,7 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<OutlinedButton>(),
       matching: find.text(lang.backLabel),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(wentBack, isTrue);
@@ -330,13 +330,13 @@ void main() {
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text(lang.nextLabel),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     await tester.tap(find.descendant(
       of: find.bySubtype<FilledButton>(),
       matching: find.text(lang.doneLabel),
-    ));
+    ),);
 
     expect(find.text('unreachable'), findsNothing);
   });
@@ -366,7 +366,7 @@ void main() {
     expect(indicatorFinder, findsOneWidget);
     expect(find.text('Page 4 of 7'), findsOneWidget);
     expect((indicatorFinder.evaluate().first.widget as YaruPageIndicator).page,
-        equals(3));
+        equals(3),);
   });
 
   testWidgets('loading indicator', (tester) async {

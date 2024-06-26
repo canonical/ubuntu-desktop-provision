@@ -21,6 +21,6 @@ void main() {
     }); // 1
 
     expect(await userClient.validateUsername('foo'),
-        equals(UsernameValidation.OK));
+        equals(UsernameValidation.OK),);
   });
 }

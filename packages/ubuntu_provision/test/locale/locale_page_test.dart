@@ -26,12 +26,12 @@ void main() {
     expect(languageList, findsOneWidget);
 
     final listItems = find.descendant(
-        of: languageList, matching: find.byType(ListTile), skipOffstage: false);
+        of: languageList, matching: find.byType(ListTile), skipOffstage: false,);
     expect(listItems, findsWidgets);
     for (final language in ['English', 'Français', 'Galego', 'Italiano']) {
       final listItem = find.listTile(language, skipOffstage: false);
       await tester.dragUntilVisible(
-          listItem, languageList, const Offset(0, -10));
+          listItem, languageList, const Offset(0, -10),);
       await tester.pumpAndSettle();
       expect(listItem, findsOneWidget);
     }

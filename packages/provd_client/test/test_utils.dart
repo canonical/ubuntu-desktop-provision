@@ -24,15 +24,15 @@ class MockResponseStream<T> extends Mock implements ResponseStream<T> {
   @override
   Stream<T> asBroadcastStream(
       {void Function(StreamSubscription<T> subscription)? onListen,
-      void Function(StreamSubscription<T> subscription)? onCancel}) {
+      void Function(StreamSubscription<T> subscription)? onCancel,}) {
     return stream.asBroadcastStream(onListen: onListen, onCancel: onCancel);
   }
 
   @override
   StreamSubscription<T> listen(void Function(T value)? onData,
-      {Function? onError, void Function()? onDone, bool? cancelOnError}) {
+      {Function? onError, void Function()? onDone, bool? cancelOnError,}) {
     return stream.listen(onData,
-        onError: onError, onDone: onDone, cancelOnError: cancelOnError);
+        onError: onError, onDone: onDone, cancelOnError: cancelOnError,);
   }
 
   @override

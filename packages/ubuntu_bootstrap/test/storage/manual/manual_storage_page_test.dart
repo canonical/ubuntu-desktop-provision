@@ -34,7 +34,7 @@ final testDisks = <Disk>[
         size: 22,
         mount: '/mnt/2',
         format: 'ext2',
-      )
+      ),
     ],
   ),
   fakeDisk(
@@ -53,7 +53,7 @@ final testDisks = <Disk>[
         size: 44,
         mount: '/mnt/4',
         format: 'ext4',
-      )
+      ),
     ],
   ),
 ];
@@ -91,7 +91,7 @@ void main() {
         );
         expect(find.text(partition.mount!), findsOneWidget);
         expect(
-            find.text(context.formatByteSize(partition.size!)), findsOneWidget);
+            find.text(context.formatByteSize(partition.size!)), findsOneWidget,);
       }
     }
   });
@@ -111,7 +111,7 @@ void main() {
     verify(model.selectStorage(1)).called(1);
 
     await tester.tap(find
-        .text(testDisks.first.partitions.whereType<Partition>().last.mount!));
+        .text(testDisks.first.partitions.whereType<Partition>().last.mount!),);
     await tester.pumpAndSettle();
 
     verify(model.selectStorage(0, 1)).called(1);
@@ -123,7 +123,7 @@ void main() {
         canAddPartition: false,
         canEditPartition: false,
         canRemovePartition: false,
-        canReformatDisk: false);
+        canReformatDisk: false,);
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(ManualStoragePage));
@@ -318,7 +318,7 @@ void main() {
         of: addButton,
         matching: find.byWidgetPredicate((widget) =>
             widget is Tooltip &&
-            widget.message == l10n.tooManyPrimaryPartitions),
+            widget.message == l10n.tooManyPrimaryPartitions,),
       ),
       findsOneWidget,
     );

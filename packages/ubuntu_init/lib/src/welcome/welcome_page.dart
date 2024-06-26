@@ -55,7 +55,7 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
                   ),
                   YaruTile(
                     leading: Icon(YaruIcons.application_bag,
-                        color: theme.primaryColor),
+                        color: theme.primaryColor,),
                     title: Text(l10n.welcomeStoreTitle),
                     subtitle: Text(l10n.welcomeStoreSubtitle),
                   ),

@@ -60,7 +60,7 @@ void main() {
     test('variants=[] and variant=unknown', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
         return testSetup(testLayouts,
-            layout: 'empty-variants', variant: 'unknown');
+            layout: 'empty-variants', variant: 'unknown',);
       });
 
       await model.init();
@@ -71,7 +71,7 @@ void main() {
     test('variant=unknown', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
         return testSetup(testLayouts,
-            layout: 'with-variants', variant: 'unknown');
+            layout: 'with-variants', variant: 'unknown',);
       });
 
       await model.init();
@@ -82,7 +82,7 @@ void main() {
     test('all ok', () async {
       when(service.getKeyboard()).thenAnswer((_) async {
         return testSetup(testLayouts,
-            layout: 'with-variants', variant: 'variant2');
+            layout: 'with-variants', variant: 'variant2',);
       });
 
       await model.init();
@@ -103,12 +103,12 @@ void main() {
           const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
             KeyboardVariant(code: 'baz', name: 'Baz'),
             KeyboardVariant(code: 'qux', name: 'Qux'),
-          ]),
-        ], layout: '', variant: '');
+          ],),
+        ], layout: '', variant: '',);
       });
 
       model = KeyboardModel(service,
-          platform: FakePlatform(environment: {'USERNAME': 'usr'}));
+          platform: FakePlatform(environment: {'USERNAME': 'usr'}),);
       await model.init();
     });
 
@@ -168,30 +168,30 @@ void main() {
     test('selection updates input source', () async {
       await model.selectLayout(0);
       verify(service.setInputSource(const KeyboardSetting(layout: 'bar'),
-              user: 'usr'))
+              user: 'usr',),)
           .called(1);
 
       await model.selectLayout(1);
       verify(service.setInputSource(
               const KeyboardSetting(layout: 'foo', variant: 'baz'),
-              user: 'usr'))
+              user: 'usr',),)
           .called(1);
 
       await model.selectVariant(1);
       verify(service.setInputSource(
               const KeyboardSetting(layout: 'foo', variant: 'qux'),
-              user: 'usr'))
+              user: 'usr',),)
           .called(1);
     });
 
     test('invalid selection throws', () {
       expect(() async => model.selectLayout(-1), throwsAssertionError);
       expect(() async => model.selectLayout(model.layoutCount),
-          throwsAssertionError);
+          throwsAssertionError,);
 
       expect(() async => model.selectVariant(-1), throwsAssertionError);
       expect(() async => model.selectVariant(model.variantCount),
-          throwsAssertionError);
+          throwsAssertionError,);
     });
 
     test('selection is valid', () async {
@@ -225,8 +225,8 @@ void main() {
         const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
           KeyboardVariant(code: 'baz', name: 'Baz'),
           KeyboardVariant(code: 'qux', name: 'Qux'),
-        ]),
-      ], layout: '', variant: '');
+        ],),
+      ], layout: '', variant: '',);
     });
 
     final model = KeyboardModel(service);
@@ -238,7 +238,7 @@ void main() {
 
     await model.save();
     verify(service
-            .setKeyboard(const KeyboardSetting(layout: 'foo', variant: 'qux')))
+            .setKeyboard(const KeyboardSetting(layout: 'foo', variant: 'qux')),)
         .called(1);
   });
 
@@ -249,7 +249,7 @@ void main() {
         const KeyboardLayout(code: 'bbb', name: 'BBB', variants: []),
         const KeyboardLayout(code: 'aaa', name: 'AAA', variants: []),
         const KeyboardLayout(code: 'äää', name: 'ÄÄÄ', variants: []),
-      ], layout: '', variant: '');
+      ], layout: '', variant: '',);
     });
 
     final model = KeyboardModel(service);
@@ -269,8 +269,8 @@ void main() {
         const KeyboardLayout(code: 'foo', name: 'Foo', variants: [
           KeyboardVariant(code: 'baz', name: 'Baz'),
           KeyboardVariant(code: 'qux', name: 'Qux'),
-        ]),
-      ], layout: '', variant: '');
+        ],),
+      ], layout: '', variant: '',);
     });
 
     final model = KeyboardModel(service);

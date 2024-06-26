@@ -75,7 +75,7 @@ void main() {
       'base': 'esab',
       'kind': 'UNKNOWN',
       'seen': true,
-      'oops_id': '123'
+      'oops_id': '123',
     };
     expect(error.toJson(), equals(json));
     expect(ErrorReportRef.fromJson(json), error);
@@ -111,7 +111,7 @@ void main() {
         'base': 'esab',
         'kind': 'UNKNOWN',
         'seen': true,
-        'oops_id': '123'
+        'oops_id': '123',
       },
       'nonreportable_error': <String, dynamic>{
         'cause': 'cause',
@@ -340,7 +340,7 @@ void main() {
       'symbols': ['z'],
       'keycodes': [
         [21, '2'],
-        [44, '3']
+        [44, '3'],
       ],
       '\$type': 'StepPressKey',
     };

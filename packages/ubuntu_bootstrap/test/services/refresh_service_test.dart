@@ -33,7 +33,7 @@ void main() {
         RefreshStatus(availability: RefreshCheckState.UNAVAILABLE);
     when(client.checkRefresh()).thenAnswer((_) async => unavailable);
     expect(
-        await service.check(), equals(const RefreshState.status(unavailable)));
+        await service.check(), equals(const RefreshState.status(unavailable)),);
     verify(client.checkRefresh()).called(1);
 
     final error = Exception('err');

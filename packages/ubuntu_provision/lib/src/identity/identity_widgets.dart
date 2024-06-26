@@ -64,7 +64,7 @@ class HostnameFormField extends ConsumerWidget {
         MaxLengthValidator(
           kMaxHostnameLength,
           errorText: lang.identityHostnameTooLong,
-        )
+        ),
       ]),
       onChanged: (value) {
         final model = ref.read(identityModelProvider);
@@ -103,7 +103,7 @@ class UsernameFormField extends ConsumerWidget {
     final username =
         ref.watch(identityModelProvider.select((model) => model.username));
     final validation = ref.watch(
-        identityModelProvider.select((model) => model.usernameValidation));
+        identityModelProvider.select((model) => model.usernameValidation),);
     final model = ref.read(identityModelProvider);
 
     return ValidatedFormField(
@@ -175,7 +175,7 @@ class ConfirmPasswordFormField extends ConsumerWidget {
     final password =
         ref.watch(identityModelProvider.select((model) => model.password));
     final confirmedPassword = ref.watch(
-        identityModelProvider.select((model) => model.confirmedPassword));
+        identityModelProvider.select((model) => model.confirmedPassword),);
     final showPassword =
         ref.watch(identityModelProvider.select((model) => model.showPassword));
 
@@ -259,9 +259,9 @@ class UseActiveDirectoryCheckButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = IdentityLocalizations.of(context);
     final hasActiveDirectorySupport = ref.watch(identityModelProvider
-        .select((model) => model.hasActiveDirectorySupport));
+        .select((model) => model.hasActiveDirectorySupport),);
     final useActiveDirectory = ref.watch(
-        identityModelProvider.select((model) => model.useActiveDirectory));
+        identityModelProvider.select((model) => model.useActiveDirectory),);
     final isConnected =
         ref.watch(identityModelProvider.select((model) => model.isConnected));
 

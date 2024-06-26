@@ -9,7 +9,7 @@ import 'package:yaru/icons.dart';
 typedef DiskBuilder = Widget Function(BuildContext context, Disk disk);
 typedef GapBuilder = Widget Function(BuildContext context, Disk disk, Gap gap);
 typedef PartitionBuilder = Widget Function(
-    BuildContext context, Disk disk, Partition partition);
+    BuildContext context, Disk disk, Partition partition,);
 
 class StorageColumn {
   const StorageColumn({
@@ -64,7 +64,7 @@ class StorageDeviceColumn extends StorageColumn {
                         ? lang.partitionLimitReached
                         : lang.freeDiskSpace,
                     style: TextStyle(color: color),
-                  )
+                  ),
                 ],
               ),
             );
@@ -74,7 +74,7 @@ class StorageDeviceColumn extends StorageColumn {
               children: [
                 Icon(partition.isEncrypted
                     ? YaruIcons.lock
-                    : YaruIcons.drive_harddisk),
+                    : YaruIcons.drive_harddisk,),
                 const SizedBox(width: 16),
                 Text(partition.sysname),
               ],
@@ -198,7 +198,7 @@ class StorageWipeColumn extends StorageColumn {
                     ? YaruIcons.checkbox_checked_filled
                     : YaruIcons.checkbox,
               );
-            });
+            },);
           },
         );
 

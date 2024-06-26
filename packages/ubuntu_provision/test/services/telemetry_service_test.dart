@@ -64,7 +64,7 @@ void main() {
       'Language': 'fr',
       'Minimal': true,
       'RestrictedAddons': false,
-      'PartitionMethod': 'reinstall_partition'
+      'PartitionMethod': 'reinstall_partition',
     });
   });
 }

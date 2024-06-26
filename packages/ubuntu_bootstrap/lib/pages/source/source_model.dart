@@ -139,7 +139,7 @@ class SourceModel extends SafeChangeNotifier with PropertyStreamNotifier {
     ]).then((_) {
       setProperties(StreamGroup.merge(
         [_power.propertiesChanged, _network.propertiesChanged],
-      ));
+      ),);
       notifyListeners();
     });
   }

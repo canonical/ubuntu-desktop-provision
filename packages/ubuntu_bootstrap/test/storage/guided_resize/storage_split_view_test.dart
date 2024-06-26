@@ -52,7 +52,7 @@ void main() {
     await tester.pumpAndSettle();
 
     final windows = find.ancestor(
-        of: find.text('Windows'), matching: find.byType(StorageButton));
+        of: find.text('Windows'), matching: find.byType(StorageButton),);
     expect(windows, findsOneWidget);
 
     await tester.tap(windows);
@@ -81,7 +81,7 @@ void main() {
     await tester.pumpAndSettle();
 
     final windows = find.ancestor(
-        of: find.text('Ubuntu'), matching: find.byType(StorageButton));
+        of: find.text('Ubuntu'), matching: find.byType(StorageButton),);
     expect(windows, findsOneWidget);
 
     await tester.tap(windows);

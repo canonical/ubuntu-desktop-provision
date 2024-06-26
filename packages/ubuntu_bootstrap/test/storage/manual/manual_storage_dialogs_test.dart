@@ -36,7 +36,7 @@ void main() {
     );
 
     final result = showCreatePartitionDialog(
-        tester.element(find.byType(ManualStoragePage)), disk, gap);
+        tester.element(find.byType(ManualStoragePage)), disk, gap,);
     await tester.pumpAndSettle();
 
     await tester.tap(find.byType(MenuButtonBuilder<DataUnit>));
@@ -66,7 +66,7 @@ void main() {
       size: mibiAlign(12345678, gap.size),
       format: PartitionFormat.btrfs,
       mount: '/tst',
-    )).called(1);
+    ),).called(1);
   });
 
   testWidgets('create partition with invalid mount point', (tester) async {
@@ -110,7 +110,7 @@ void main() {
         preserve: true,
       ),
       const Gap(offset: 123, size: 1000000, usable: GapUsable.YES),
-    ]);
+    ],);
     final model = buildManualStorageModel(selectedDisk: disk);
 
     registerMockService<UdevService>(MockUdevService());
@@ -159,7 +159,7 @@ void main() {
       format: PartitionFormat.btrfs,
       wipe: true,
       mount: '/tst',
-    )).called(1);
+    ),).called(1);
   });
 
   testWidgets('edit partition with invalid mount point', (tester) async {
@@ -176,7 +176,7 @@ void main() {
         preserve: true,
       ),
       const Gap(offset: 123, size: 1000000, usable: GapUsable.YES),
-    ]);
+    ],);
     final model = buildManualStorageModel(selectedDisk: disk);
 
     registerMockService<UdevService>(MockUdevService());

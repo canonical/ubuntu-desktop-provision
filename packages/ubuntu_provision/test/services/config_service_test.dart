@@ -18,7 +18,7 @@ pages:
     visible: true
   accessibility:
     image: "accessibility.png"
-    '''
+    ''',
       },
     );
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -86,7 +86,7 @@ test2:
   test('load from assets', () async {
     final configService = ConfigService(assetBundle: assetBundle);
     final result = await configService.get<Map<String, dynamic>>('test',
-        scopeOverride: 'pages');
+        scopeOverride: 'pages',);
     expect(result, isNotNull);
     expect(result!['image'], 'mascot.png');
     expect(result['visible'], isTrue);
@@ -131,7 +131,7 @@ pages:
     final customConfig = {
       'test': {
         'visible': false,
-      }
+      },
     };
     final result = ConfigService.mergeConfig(defaultConfig, customConfig);
     expect(

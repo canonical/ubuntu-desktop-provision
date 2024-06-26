@@ -7,11 +7,11 @@ const available = RefreshState.status(RefreshStatus(
   availability: RefreshCheckState.AVAILABLE,
   currentSnapVersion: '1.2.3',
   newSnapVersion: '1.2.4',
-));
+),);
 const unavailable = RefreshState.status(RefreshStatus(
   availability: RefreshCheckState.UNAVAILABLE,
   currentSnapVersion: '1.2.3',
-));
+),);
 const notReady = RefreshState.progress(
   Change(
     id: 'not-ready',

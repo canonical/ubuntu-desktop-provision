@@ -8,7 +8,7 @@ final _log = Logger('not_enough_disk_space');
 
 final notEnoughDiskSpaceModelProvider =
     ChangeNotifierProvider<NotEnoughDiskSpaceModel>(
-        (_) => NotEnoughDiskSpaceModel(getService<StorageService>()));
+        (_) => NotEnoughDiskSpaceModel(getService<StorageService>()),);
 
 class NotEnoughDiskSpaceModel extends SafeChangeNotifier {
   NotEnoughDiskSpaceModel(this._service);
@@ -21,7 +21,7 @@ class NotEnoughDiskSpaceModel extends SafeChangeNotifier {
   Future<bool> init() async {
     if (installMinimumSize > largestDiskSize) {
       _log.error(
-          'Largest disk $largestDiskSize vs. min install size: $installMinimumSize');
+          'Largest disk $largestDiskSize vs. min install size: $installMinimumSize',);
       return true;
     }
     return false;

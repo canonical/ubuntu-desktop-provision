@@ -111,7 +111,7 @@ Widget buildNetworkPage({
               : const SizedBox.shrink();
         },
       );
-    }),
+    },),
   );
 }
 
@@ -139,7 +139,7 @@ HiddenWifiModel buildHiddenWifiModel({
   when(model.selectedDevice).thenReturn(selectedDevice);
   when(model.ssid).thenReturn(ssid ?? '');
   when(model.isSelectedDevice(any)).thenAnswer((i) =>
-      selectedDevice != null && selectedDevice == i.positionalArguments.single);
+      selectedDevice != null && selectedDevice == i.positionalArguments.single,);
   return model;
 }
 
@@ -154,7 +154,7 @@ WifiModel buildWifiModel({
   when(model.isEnabled).thenReturn(isEnabled ?? true);
   when(model.selectedDevice).thenReturn(selectedDevice);
   when(model.isSelectedDevice(any)).thenAnswer((i) =>
-      selectedDevice != null && selectedDevice == i.positionalArguments.single);
+      selectedDevice != null && selectedDevice == i.positionalArguments.single,);
   when(model.startPeriodicScanning()).thenReturn(null);
   return model;
 }

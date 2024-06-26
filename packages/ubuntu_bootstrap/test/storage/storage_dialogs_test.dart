@@ -32,7 +32,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     await tester.tap(find.radio(GuidedCapability.ZFS));
@@ -49,7 +49,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     await tester.tap(find.radio(GuidedCapability.LVM));
@@ -66,7 +66,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     await tester.tap(find.radio(GuidedCapability.LVM_LUKS));
@@ -90,7 +90,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     expect(find.radio(GuidedCapability.DIRECT), findsNothing);
@@ -117,7 +117,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
@@ -140,7 +140,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);
@@ -163,7 +163,7 @@ void main() {
     await tester.pumpWidget(buildPage(tester, model));
 
     final result = showAdvancedFeaturesDialog(
-        tester.element(find.byType(StoragePage)), model);
+        tester.element(find.byType(StoragePage)), model,);
     await tester.pumpAndSettle();
 
     final finder = find.radio(GuidedCapability.CORE_BOOT_ENCRYPTED);

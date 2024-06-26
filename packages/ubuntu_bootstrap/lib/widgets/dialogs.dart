@@ -23,7 +23,7 @@ Future<bool> showConfirmationDialog(
         buttonPadding: EdgeInsets.zero,
         content: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 420),
-            child: Text(message)),
+            child: Text(message),),
         actions: <Widget>[
           PushButton.outlined(
             child: Text(lang.cancelLabel),

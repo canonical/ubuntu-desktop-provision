@@ -75,11 +75,11 @@ void main() {
       expect(device.isActive, state == NetworkManagerDeviceState.activated);
       expect(device.isConnecting, connectingStates.contains(state));
       expect(device.isAvailable,
-          equals(state != NetworkManagerDeviceState.unavailable));
+          equals(state != NetworkManagerDeviceState.unavailable),);
       expect(device.isDisconnected,
-          equals(state == NetworkManagerDeviceState.disconnected));
+          equals(state == NetworkManagerDeviceState.disconnected),);
       expect(device.isUnmanaged,
-          equals(state == NetworkManagerDeviceState.unmanaged));
+          equals(state == NetworkManagerDeviceState.unmanaged),);
     }
 
     bool? wasNotified;

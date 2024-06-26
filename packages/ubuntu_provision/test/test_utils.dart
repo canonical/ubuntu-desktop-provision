@@ -99,8 +99,8 @@ class FakeAssetBundle extends CachingAssetBundle {
   Future<ByteData> load(String key) async {
     var bytes = Uint8List(0);
     final fakes = Map.fromEntries(_fakeAssets.keys.map((e) => MapEntry(e, [
-          {'asset': e, 'dpr': 1.0}
-        ])));
+          {'asset': e, 'dpr': 1.0},
+        ]),),);
     switch (key) {
       case 'AssetManifest.bin': // 3.10.0
       case 'AssetManifest.smcbin': // 3.10.1+

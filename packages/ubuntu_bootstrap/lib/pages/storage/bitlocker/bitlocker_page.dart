@@ -31,7 +31,7 @@ class BitLockerPage extends ConsumerWidget with ProvisioningPage {
       children: [
         Text(
           lang.bitlockerDescription(
-              lang.installationTypeErase(flavor.displayName)),
+              lang.installationTypeErase(flavor.displayName),),
         ),
         const SizedBox(height: kWizardSpacing),
         Html(

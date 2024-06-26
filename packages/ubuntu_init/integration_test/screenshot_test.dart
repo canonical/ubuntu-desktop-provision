@@ -24,7 +24,7 @@ Future<void> main() async {
     await tester.testWelcomeInitPage(
       screenshot: '$currentThemeName/welcome',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('locale', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -33,7 +33,7 @@ Future<void> main() async {
     await tester.testLocalePage(
       screenshot: '$currentThemeName/locale',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('accessibility', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -57,7 +57,7 @@ Future<void> main() async {
     await tester.testKeyboardPage(
       screenshot: '$currentThemeName/keyboard',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('network', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -70,7 +70,7 @@ Future<void> main() async {
       mode: ConnectMode.none,
       screenshot: '$currentThemeName/network',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('eula', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -82,7 +82,7 @@ Future<void> main() async {
     await tester.testEulaPage(
       screenshot: '$currentThemeName/eula',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('identity', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -100,7 +100,7 @@ Future<void> main() async {
       password: 'password',
       screenshot: '$currentThemeName/identity',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('ubuntu-pro-onboarding', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -112,7 +112,7 @@ Future<void> main() async {
     await tester.testUbunutuProOnboardingPage(
       screenshot: '$currentThemeName/ubuntu-pro-onboarding',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('ubuntu-pro', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -134,7 +134,7 @@ Future<void> main() async {
     await tester.testUbuntuProPage(
       screenshot: '$currentThemeName/ubuntu-pro',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('ubuntu-pro-success', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -156,7 +156,7 @@ Future<void> main() async {
     await tester.testUbuntuProSuccessAttachProPage(
       screenshot: '$currentThemeName/ubuntu-pro-success',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('timezone', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -168,7 +168,7 @@ Future<void> main() async {
     await tester.testTimezonePage(
       screenshot: '$currentThemeName/timezone',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('telemetry', (tester) async {
     await tester.runApp(() => runInitApp([], theme: currentTheme));
@@ -180,7 +180,7 @@ Future<void> main() async {
     await tester.testTelemetryPage(
       screenshot: '$currentThemeName/telemetry',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 }
 
 ThemeData get currentTheme => themeVariant.currentValue!;

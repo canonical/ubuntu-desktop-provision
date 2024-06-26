@@ -76,7 +76,7 @@ class StorageTable extends StatelessWidget {
             ),
           ),
           for (final column in columns.skip(1))
-            DataCell(column.diskBuilder(context, disk))
+            DataCell(column.diskBuilder(context, disk)),
         ],
       ),
       for (var objectIndex = 0;
@@ -129,7 +129,7 @@ class StorageTable extends StatelessWidget {
                         disk,
                         disk.partitions[objectIndex] as Gap,
                       ),
-              )
+              ),
           ],
         ),
     ];
@@ -161,7 +161,7 @@ class StorageTable extends StatelessWidget {
                   dataTextStyle: theme.textTheme.bodyMedium,
                   columns: columns
                       .map((column) =>
-                          DataColumn(label: column.titleBuilder(context)))
+                          DataColumn(label: column.titleBuilder(context)),)
                       .toList(),
                   rows: List.generate(storages.length, (index) {
                     return _buildDataRows(context, diskIndex: index);
@@ -174,7 +174,7 @@ class StorageTable extends StatelessWidget {
             ),
           ),
         );
-      }),
+      },),
     );
   }
 }

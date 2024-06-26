@@ -66,7 +66,7 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
               ),
             ),
           ],
-        )),
+        ),),
       ),
       bottomBar: const WizardBar(
         leading: BackWizardButton(),

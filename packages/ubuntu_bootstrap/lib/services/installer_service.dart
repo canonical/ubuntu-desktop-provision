@@ -77,7 +77,7 @@ class InstallerService {
                 'source' => InstallationStep.sourceSelection.name,
                 'codecs' || 'drivers' => InstallationStep.codecsAndDrivers.name,
                 _ => 'unknown',
-              })
+              },)
           .whereNot((page) => page == 'unknown')
           .toSet() ??
       {};

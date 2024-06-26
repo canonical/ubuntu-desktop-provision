@@ -44,7 +44,7 @@ Future<void> main() async {
     await tester.testLocalePage(
       screenshot: '$currentThemeName/locale',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('accessibility', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -56,7 +56,7 @@ Future<void> main() async {
     await tester.testAccessibilityPage(
       screenshot: '$currentThemeName/accessibility',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('rst', (tester) async {
     registerService<SubiquityClient>(FakeSubiquityClient.new);
@@ -70,7 +70,7 @@ Future<void> main() async {
     await tester.testRstPage(
       screenshot: '$currentThemeName/rst',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('keyboard', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -82,7 +82,7 @@ Future<void> main() async {
     await tester.testKeyboardPage(
       screenshot: '$currentThemeName/keyboard',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('network', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -95,7 +95,7 @@ Future<void> main() async {
       mode: ConnectMode.none,
       screenshot: '$currentThemeName/network',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('refresh', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -107,7 +107,7 @@ Future<void> main() async {
     await tester.testRefreshPage(
       screenshot: '$currentThemeName/refresh',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('try-or-install', (tester) async {
     await tester
@@ -121,7 +121,7 @@ Future<void> main() async {
       option: TryOrInstallOption.installUbuntu,
       screenshot: '$currentThemeName/try-or-install',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('autoinstall', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -145,7 +145,7 @@ Future<void> main() async {
     await tester.testSourceSelectionPage(
       screenshot: '$currentThemeName/source',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('codecs-and-drivers', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -157,7 +157,7 @@ Future<void> main() async {
     await tester.testCodecsAndDriversPage(
       screenshot: '$currentThemeName/codecs-and-drivers',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -170,12 +170,12 @@ Future<void> main() async {
       type: StorageType.erase,
       screenshot: '$currentThemeName/storage',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage-advanced-features', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -186,12 +186,12 @@ Future<void> main() async {
       guidedCapability: GuidedCapability.LVM,
       screenshot: '$currentThemeName/storage-advanced-features',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage-alongside-windows', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10.json',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -201,13 +201,13 @@ Future<void> main() async {
       type: StorageType.alongside,
       screenshot: '$currentThemeName/storage-alongside-windows',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage-manual', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--',
           '--bootloader=uefi',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -232,14 +232,14 @@ Future<void> main() async {
       ],
       screenshot: '$currentThemeName/storage-manual',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage-guided-resize', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
           '--',
           '--bootloader=uefi',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -253,12 +253,12 @@ Future<void> main() async {
       size: 30,
       screenshot: '$currentThemeName/storage-guided-resize',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('storage-guided-reformat', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/imsm.json',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -271,7 +271,7 @@ Future<void> main() async {
     await tester.testGuidedReformatPage(
       screenshot: '$currentThemeName/storage-guided-reformat',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('not-enough-space', (tester) async {
     final client = FakeSubiquityClient();
@@ -290,12 +290,12 @@ Future<void> main() async {
     await tester.testNotEnoughDiskSpacePage(
       screenshot: '$currentThemeName/not-enough-space',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('bitlocker', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10.json',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -308,12 +308,12 @@ Future<void> main() async {
     await tester.testBitLockerPage(
       screenshot: '$currentThemeName/bitlocker',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('passphrase', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--machine-config=examples/machines/win10-along-ubuntu.json',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -330,7 +330,7 @@ Future<void> main() async {
       passphrase: 'password',
       screenshot: '$currentThemeName/passphrase',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('identity', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -348,7 +348,7 @@ Future<void> main() async {
       password: 'password',
       screenshot: '$currentThemeName/identity',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('active-directory', (tester) async {
     final client = FakeSubiquityClient();
@@ -368,7 +368,7 @@ Future<void> main() async {
       password: 'password',
       screenshot: '$currentThemeName/active-directory',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('timezone', (tester) async {
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
@@ -380,13 +380,13 @@ Future<void> main() async {
     await tester.testTimezonePage(
       screenshot: '$currentThemeName/timezone',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('confirm', (tester) async {
     await tester.runApp(() => runInstallerApp([
           '--',
           '--bootloader=uefi',
-        ], theme: currentTheme));
+        ], theme: currentTheme,),);
     await tester.pumpAndSettle();
 
     await tester.jumpToStorageWizard();
@@ -416,7 +416,7 @@ Future<void> main() async {
     await tester.testConfirmPage(
       screenshot: '$currentThemeName/confirm',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('install', (tester) async {
     await YaruTestWindow.ensureInitialized(
@@ -439,11 +439,11 @@ Future<void> main() async {
         await tester.pump(kThemeAnimationDuration);
       }
     }
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 
   testWidgets('complete', (tester) async {
     registerService<SubiquityClient>(
-        () => FakeSubiquityClient(ApplicationState.DONE));
+        () => FakeSubiquityClient(ApplicationState.DONE),);
 
     await tester.runApp(() => runInstallerApp([], theme: currentTheme));
     await tester.pumpAndSettle();
@@ -454,7 +454,7 @@ Future<void> main() async {
     await tester.testInstallPage(
       screenshot: '$currentThemeName/complete',
     );
-  }, variant: themeVariant);
+  }, variant: themeVariant,);
 }
 
 class FakeActiveDirectoryService extends SubiquityActiveDirectoryService {

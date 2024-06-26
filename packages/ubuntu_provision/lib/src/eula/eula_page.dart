@@ -56,7 +56,7 @@ class _EulaPageState extends ConsumerState<EulaPage> {
               ),
             ).path,
           );
-        });
+        },);
 
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -67,7 +67,7 @@ class _EulaPageState extends ConsumerState<EulaPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(lang.eulaReviewTerms,
-                style: Theme.of(context).textTheme.titleLarge),
+                style: Theme.of(context).textTheme.titleLarge,),
             Text(lang.eulaReadAndAcceptTerms),
             const SizedBox(height: kWizardSpacing),
             Expanded(

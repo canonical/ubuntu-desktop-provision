@@ -60,7 +60,7 @@ void main() {
     await model.selectLocale(Locale.fromSubtags(
         languageCode: lastLocale.languageCode,
         countryCode: lastLocale.countryCode,
-        scriptCode: 'bar'));
+        scriptCode: 'bar',),);
     expect(model.selectedIndex, equals(model.languageCount - 1));
   });
 

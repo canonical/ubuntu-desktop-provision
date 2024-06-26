@@ -51,7 +51,7 @@ void main() {
     final wifiModel = buildWifiModel();
     final hiddenWifiModel = buildHiddenWifiModel();
     final timezoneModel = buildTimezoneModel(
-        selectedLocation: const GeoLocation(timezone: 'UTC'));
+        selectedLocation: const GeoLocation(timezone: 'UTC'),);
     final identityModel = buildIdentityModel(isValid: true);
     final ubuntuProModel =
         buildUbuntuProModel(skipPro: false, isAttached: true);
@@ -177,7 +177,7 @@ void main() {
       InitStep.keyboard.route,
       InitStep.identity.route,
       InitStep.telemetry.route,
-    ]);
+    ],);
     final localeModel = buildLocaleModel();
     final keyboardModel = buildKeyboardModel();
     final identityModel = buildIdentityModel(isValid: true);

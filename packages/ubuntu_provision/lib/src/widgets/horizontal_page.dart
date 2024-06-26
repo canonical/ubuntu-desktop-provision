@@ -32,7 +32,7 @@ class HorizontalPage extends ConsumerWidget {
           'contentFlex has no effect unless managedScrolling is set to false.',
         ),
         assert((bottomBar == null) || (onNext == null && isNextEnabled == true),
-            'either provide a custom `bottomBar` or use the `onNext`, and `isNextEnabled` properties.'),
+            'either provide a custom `bottomBar` or use the `onNext`, and `isNextEnabled` properties.',),
         _contentFlex = contentFlex ?? 1;
 
   /// The title for the title bar.

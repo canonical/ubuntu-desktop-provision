@@ -12,7 +12,7 @@ RefreshModel buildRefreshModel({RefreshState? state}) {
   final model = MockRefreshModel();
   when(model.state).thenReturn(state ??
       const RefreshState.status(
-          RefreshStatus(availability: RefreshCheckState.UNAVAILABLE)));
+          RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),),);
   when(model.init()).thenAnswer((_) async => state?.available ?? false);
   return model;
 }

@@ -28,7 +28,7 @@ void main() {
           username: testIdentity.username,
           hostname: testIdentity.hostname,
           autoLogin: true,
-        )));
+        ),),);
 
     verify(client.getIdentity()).called(1);
     verify(postInstall.get(SubiquityIdentityService.kAutoLoginUser)).called(1);
@@ -44,17 +44,17 @@ void main() {
       hostname: testIdentity.hostname,
       password: 'password',
       autoLogin: true,
-    ));
+    ),);
 
     verify(client.setIdentity(argThat(isA<IdentityData>()
             .having((i) => i.realname, 'realname', testIdentity.realname)
             .having((i) => i.username, 'username', testIdentity.username)
             .having((i) => i.hostname, 'hostname', testIdentity.hostname)
             .having((i) => i.cryptedPassword, 'cryptedPassword',
-                hasLength(greaterThan(8))))))
+                hasLength(greaterThan(8)),),),),)
         .called(1);
     verify(postInstall.set(
-            SubiquityIdentityService.kAutoLoginUser, testIdentity.username))
+            SubiquityIdentityService.kAutoLoginUser, testIdentity.username,),)
         .called(1);
   });
 }

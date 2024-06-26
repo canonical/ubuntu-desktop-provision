@@ -34,13 +34,13 @@ ConfirmModel buildConfirmModel({
   when(model.partitions).thenReturn(partitions ?? <String, List<Partition>>{});
   when(model.getOriginalPartition(any, any)).thenAnswer((i) =>
       originals?[i.positionalArguments.first]?.firstWhereOrNull(
-          (p) => p.number == i.positionalArguments.last as int));
+          (p) => p.number == i.positionalArguments.last as int,),);
   when(model.guidedTarget).thenReturn(
-      guidedTarget ?? const GuidedStorageTargetReformat(diskId: 'diskId'));
+      guidedTarget ?? const GuidedStorageTargetReformat(diskId: 'diskId'),);
   when(model.guidedCapability)
       .thenReturn(guidedCapability ?? GuidedCapability.DIRECT);
   when(model.productInfo).thenReturn(
-      productInfo ?? const ProductInfo(name: 'Ubuntu', version: '24.04 LTS'));
+      productInfo ?? const ProductInfo(name: 'Ubuntu', version: '24.04 LTS'),);
   when(model.existingOS).thenReturn(existingOS);
   return model;
 }

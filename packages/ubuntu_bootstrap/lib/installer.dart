@@ -58,7 +58,7 @@ Future<void> runInstallerApp(
     // This can't be handled by the whitelabel config since if a user clicks
     // try, the next time it opens the installer the page shouldn't show.
     parser.addFlag('try-or-install', aliases: ['welcome']);
-  })!;
+  },)!;
   final liveRun = options['dry-run'] != true;
   final exe = p.basename(Platform.resolvedExecutable);
   final log =
@@ -79,13 +79,13 @@ Future<void> runInstallerApp(
   // conditional registration if not already registered by flavors or tests
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<ActiveDirectoryService>(
-      () => SubiquityActiveDirectoryService(getService<SubiquityClient>()));
+      () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),);
   tryRegisterServiceInstance<ArgResults>(options);
   tryRegisterService<ConfigService>(ConfigService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
   tryRegisterService<IdentityService>(() => SubiquityIdentityService(
-      getService<SubiquityClient>(), getService<PostInstallService>()));
+      getService<SubiquityClient>(), getService<PostInstallService>(),),);
   tryRegisterService<InstallerService>(
     () => InstallerService(
       getService<SubiquityClient>(),
@@ -139,7 +139,7 @@ Future<void> runInstallerApp(
     () => ThemeVariantService(config: tryGetService<ConfigService>()),
   );
   tryRegisterService<TimezoneService>(
-      () => SubiquityTimezoneService(getService<SubiquityClient>()));
+      () => SubiquityTimezoneService(getService<SubiquityClient>()),);
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
 
@@ -185,8 +185,8 @@ Future<void> runInstallerApp(
             .start(args: subiquityArgs)
             .then(_initInstallerApp),
       ),
-    ));
-  }, (error, stack) => log.error('Unhandled exception', error, stack));
+    ),);
+  }, (error, stack) => log.error('Unhandled exception', error, stack),);
 }
 
 class _InstallerApp extends ConsumerWidget {
@@ -234,7 +234,7 @@ class _InstallerApp extends ConsumerWidget {
                 return const ErrorPage(allowRestart: false);
               }
               return InstallerWizard(key: ValueKey(ref.watch(restartProvider)));
-            }),
+            },),
       ),
     );
   }

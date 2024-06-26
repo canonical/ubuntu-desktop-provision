@@ -23,7 +23,7 @@ Future<StepResult?> showDetectKeyboardDialog(BuildContext context) async {
     builder: (context) {
       final detector = KeyboardDetector(service, onResult: (result) {
         Navigator.of(context).pop(result);
-      });
+      },);
       detector.init();
 
       final lang = KeyboardLocalizations.of(context);

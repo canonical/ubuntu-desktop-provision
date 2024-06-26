@@ -33,7 +33,7 @@ class SlideTransitionsTheme extends PageTransitionsTheme {
       : super(builders: const {
           TargetPlatform.linux: _SlideTransitionsBuilder(),
           TargetPlatform.windows: _SlideTransitionsBuilder(),
-        });
+        },);
 }
 
 class _SlideTransitionsBuilder extends PageTransitionsBuilder {

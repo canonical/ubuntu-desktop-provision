@@ -8,7 +8,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
 enum InstallationStep with RouteName {
   loading(LoadingPage.new,
-      discreteStep: false, wizardStep: false, required: true),
+      discreteStep: false, wizardStep: false, required: true,),
   locale(LocalePage.new),
   accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false, required: true),
@@ -27,9 +27,9 @@ enum InstallationStep with RouteName {
   timezone(TimezonePage.new),
   confirm(ConfirmPage.new, required: true),
   install(InstallPage.new,
-      discreteStep: false, wizardStep: false, required: true),
+      discreteStep: false, wizardStep: false, required: true,),
   error(_errorPageFactory,
-      discreteStep: false, wizardStep: false, required: true);
+      discreteStep: false, wizardStep: false, required: true,);
 
   const InstallationStep(
     this.pageFactory, {

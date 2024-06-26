@@ -42,7 +42,7 @@ Future<void> registerInitServices(List<String> args) async {
         'welcome',
         help: 'Show welcome wizard',
       );
-    });
+    },);
     registerServiceInstance<ArgResults>(options!);
   }
 
@@ -69,7 +69,7 @@ Future<void> registerInitServices(List<String> args) async {
   tryRegisterService<ProductService>(ProductService.new);
   tryRegisterService<SessionService>(XdgSessionService.new);
   tryRegisterService<ThemeVariantService>(
-      () => ThemeVariantService(config: tryGetService<ConfigService>()));
+      () => ThemeVariantService(config: tryGetService<ConfigService>()),);
   tryRegisterService<TimezoneService>(ProvdTimezoneService.new);
   tryRegisterService<UdevService>(UdevService.new);
   tryRegisterService(UrlLauncher.new);

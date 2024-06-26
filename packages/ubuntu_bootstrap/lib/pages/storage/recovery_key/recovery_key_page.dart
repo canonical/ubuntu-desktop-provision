@@ -44,7 +44,7 @@ class RecoveryKeyPage extends StatelessWidget {
             widthFactor: kWizardWidthFraction,
             child: Html(
               data: l10n.recoveryKeyWarning(
-                  Theme.of(context).colorScheme.error.toHex()),
+                  Theme.of(context).colorScheme.error.toHex(),),
               style: {
                 'body': Style(margin: Margins.zero),
               },

@@ -8,7 +8,7 @@ abstract class ActiveDirectoryLocalizations
 
   static UbuntuProvisionLocalizations of(BuildContext context) {
     return Localizations.of<UbuntuProvisionLocalizations>(
-        context, UbuntuProvisionLocalizations)!;
+        context, UbuntuProvisionLocalizations,)!;
   }
 }
 

@@ -26,7 +26,7 @@ void main() {
           ref = aref;
           future = const LoadingPage().load(context, ref!);
           return const LoadingPage();
-        }),
+        },),
       ),
     );
     expect(find.byType(LoadingPage), findsOneWidget);

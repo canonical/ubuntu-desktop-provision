@@ -40,25 +40,25 @@ void main() {
     test('setHighContrast', () async {
       await service.setHighContrast(true);
       verify(a11yInterfaceSettings.set(
-              'high-contrast', const DBusBoolean(true)))
+              'high-contrast', const DBusBoolean(true),),)
           .called(1);
     });
     test('setLargeText', () async {
       await service.setLargeText(true);
       verify(interfaceSettings.set(
-              'text-scaling-factor', const DBusDouble(1.25)))
+              'text-scaling-factor', const DBusDouble(1.25),),)
           .called(1);
     });
     test('setScreenReader', () async {
       await service.setScreenReader(true);
       verify(applicationSettings.set(
-              'screen-reader-enabled', const DBusBoolean(true)))
+              'screen-reader-enabled', const DBusBoolean(true),),)
           .called(1);
     });
     test('setReduceAnimation', () async {
       await service.setReduceAnimation(true);
       verify(interfaceSettings.set(
-              'enable-animations', const DBusBoolean(false)))
+              'enable-animations', const DBusBoolean(false),),)
           .called(1);
     });
     test('setVisualAlerts', () async {
@@ -87,7 +87,7 @@ void main() {
     test('setDesktopZoom', () async {
       await service.setDesktopZoom(true);
       verify(applicationSettings.set(
-              'screen-magnifier-enabled', const DBusBoolean(true)))
+              'screen-magnifier-enabled', const DBusBoolean(true),),)
           .called(1);
     });
   });

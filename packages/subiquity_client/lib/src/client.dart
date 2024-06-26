@@ -120,7 +120,7 @@ class SubiquityClient {
   Future<void> setSource(String sourceId, {bool searchDrivers = false}) async {
     final params = {
       'source_id': jsonEncode(sourceId),
-      'search_drivers': '$searchDrivers'
+      'search_drivers': '$searchDrivers',
     };
     final request = await _openUrl('POST', 'source', params);
     await _receive('setSource($sourceId)', request);
@@ -175,7 +175,7 @@ class SubiquityClient {
     final request = await _openUrl('POST', 'mirror');
     request.write(jsonEncode(mirror?.toJson()));
     return _receive(
-        'setMirror($mirror)', request, MirrorPostResponse.values.byName);
+        'setMirror($mirror)', request, MirrorPostResponse.values.byName,);
   }
 
   Future<bool> hasNetwork() async {
@@ -198,7 +198,7 @@ class SubiquityClient {
     final params = {'username': jsonEncode(username)};
     final request = await _openUrl('GET', 'identity/validate_username', params);
     return _receive('identity/validate_username()', request,
-        UsernameValidation.values.byName);
+        UsernameValidation.values.byName,);
   }
 
   Future<TimeZoneInfo> getTimezone() async {
@@ -219,7 +219,7 @@ class SubiquityClient {
       final params = {'cur': jsonEncode(current.name)};
       final request = await _openUrl('GET', 'meta/status', params);
       status = await _receive(
-          'status(${current.name})', request, ApplicationStatus.fromJson);
+          'status(${current.name})', request, ApplicationStatus.fromJson,);
     } else {
       final request = await _openUrl('GET', 'meta/status');
       status = await _receive('status()', request, ApplicationStatus.fromJson);
@@ -275,11 +275,11 @@ class SubiquityClient {
     final params = {'wait': jsonEncode(wait)};
     final request = await _openUrl('GET', 'storage/v2/guided', params);
     return _receive(
-        'getGuidedStorageV2($wait)', request, GuidedStorageResponseV2.fromJson);
+        'getGuidedStorageV2($wait)', request, GuidedStorageResponseV2.fromJson,);
   }
 
   Future<GuidedStorageResponseV2> setGuidedStorageV2(
-      GuidedChoiceV2 choice) async {
+      GuidedChoiceV2 choice,) async {
     final request = await _openUrl('POST', 'storage/v2/guided');
     request.write(jsonEncode(choice.toJson()));
 
@@ -301,7 +301,7 @@ class SubiquityClient {
         configured: guided.configured?.copyWith(
           password: hidePassword(guided.configured?.password),
         ),
-      ));
+      ),);
       return _formatResponseLog(method, json);
     }
 
@@ -316,7 +316,7 @@ class SubiquityClient {
   Future<StorageResponseV2> getOriginalStorageV2() async {
     final request = await _openUrl('GET', 'storage/v2/orig_config');
     return _receive(
-        'getOriginalStorageV2()', request, StorageResponseV2.fromJson);
+        'getOriginalStorageV2()', request, StorageResponseV2.fromJson,);
   }
 
   Future<StorageResponseV2> getStorageV2({bool wait = true}) async {
@@ -336,37 +336,37 @@ class SubiquityClient {
   }
 
   Future<StorageResponseV2> addPartitionV2(
-      Disk disk, Gap gap, Partition partition) async {
+      Disk disk, Gap gap, Partition partition,) async {
     final request = await _openUrl('POST', 'storage/v2/add_partition');
     request.write(jsonEncode(<String, dynamic>{
       'disk_id': disk.id,
       'gap': gap.toJson(),
       'partition': partition.toJson(),
-    }));
+    }),);
     return _receive('addPartition(${disk.id}, $partition)', request,
-        StorageResponseV2.fromJson);
+        StorageResponseV2.fromJson,);
   }
 
   Future<StorageResponseV2> editPartitionV2(
-      Disk disk, Partition partition) async {
+      Disk disk, Partition partition,) async {
     final request = await _openUrl('POST', 'storage/v2/edit_partition');
     request.write(jsonEncode(<String, dynamic>{
       'disk_id': disk.id,
       'partition': partition.toJson(),
-    }));
+    }),);
     return _receive('editPartition(${disk.id}, $partition)', request,
-        StorageResponseV2.fromJson);
+        StorageResponseV2.fromJson,);
   }
 
   Future<StorageResponseV2> deletePartitionV2(
-      Disk disk, Partition partition) async {
+      Disk disk, Partition partition,) async {
     final request = await _openUrl('POST', 'storage/v2/delete_partition');
     request.write(jsonEncode(<String, dynamic>{
       'disk_id': disk.id,
       'partition': partition.toJson(),
-    }));
+    }),);
     return _receive('deletePartition(${disk.id}, $partition)', request,
-        StorageResponseV2.fromJson);
+        StorageResponseV2.fromJson,);
   }
 
   Future<StorageResponseV2> addBootPartitionV2(Disk disk) async {
@@ -374,14 +374,14 @@ class SubiquityClient {
     final request =
         await _openUrl('POST', 'storage/v2/add_boot_partition', params);
     return _receive(
-        'addBootPartitionV2(${disk.id})', request, StorageResponseV2.fromJson);
+        'addBootPartitionV2(${disk.id})', request, StorageResponseV2.fromJson,);
   }
 
   Future<StorageResponseV2> reformatDiskV2(Disk disk) async {
     final request = await _openUrl('POST', 'storage/v2/reformat_disk');
     request.write(jsonEncode({'disk_id': disk.id}));
     return _receive(
-        'reformatDiskV2(${disk.id})', request, StorageResponseV2.fromJson);
+        'reformatDiskV2(${disk.id})', request, StorageResponseV2.fromJson,);
   }
 
   Future<void> reboot({bool immediate = false}) async {
@@ -431,11 +431,11 @@ class SubiquityClient {
   Future<WSLConfigurationAdvanced> wslConfigurationAdvanced() async {
     final request = await _openUrl('GET', 'wslconfadvanced');
     return _receive(
-        'wslconfadvanced()', request, WSLConfigurationAdvanced.fromJson);
+        'wslconfadvanced()', request, WSLConfigurationAdvanced.fromJson,);
   }
 
   Future<void> setWslConfigurationAdvanced(
-      WSLConfigurationAdvanced conf) async {
+      WSLConfigurationAdvanced conf,) async {
     final request = await _openUrl('POST', 'wslconfadvanced');
     request.write(jsonEncode(conf.toJson()));
     await _receive('setWslconfadvanced($conf)', request);
@@ -525,7 +525,7 @@ class SubiquityClient {
   }
 
   Future<List<AdDomainNameValidation>> checkActiveDirectoryDomainName(
-      String domain) async {
+      String domain,) async {
     final request =
         await _openUrl('POST', 'active_directory/check_domain_name');
     request.write(jsonEncode(domain));
@@ -540,16 +540,16 @@ class SubiquityClient {
   }
 
   Future<AdDomainNameValidation> pingActiveDirectoryDomainController(
-      String domain) async {
+      String domain,) async {
     final request =
         await _openUrl('POST', 'active_directory/ping_domain_controller');
     request.write(jsonEncode(domain));
     return _receive('pingActiveDirectoryDomainController($domain)', request,
-        AdDomainNameValidation.values.byName);
+        AdDomainNameValidation.values.byName,);
   }
 
   Future<AdAdminNameValidation> checkActiveDirectoryAdminName(
-      String admin) async {
+      String admin,) async {
     final request = await _openUrl('POST', 'active_directory/check_admin_name');
     request.write(jsonEncode(admin));
     return _receive(
@@ -560,7 +560,7 @@ class SubiquityClient {
   }
 
   Future<AdPasswordValidation> checkActiveDirectoryPassword(
-      String password) async {
+      String password,) async {
     final request = await _openUrl('POST', 'active_directory/check_password');
     request.write(jsonEncode(password));
     return _receive(
@@ -575,7 +575,7 @@ class SubiquityClient {
     final request =
         await _openUrl('GET', 'active_directory/join_result', params);
     return _receive('getActiveDirectoryJoinResult($wait)', request,
-        AdJoinResult.values.byName);
+        AdJoinResult.values.byName,);
   }
 
   Future<void> restart() async {
@@ -586,7 +586,7 @@ class SubiquityClient {
       if (e.message
           .contains('Connection closed before full header was received')) {
         _log.info(
-            'Subiquity closed the connection before the response was received. This is expected.');
+            'Subiquity closed the connection before the response was received. This is expected.',);
       } else {
         rethrow;
       }

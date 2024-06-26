@@ -88,7 +88,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 child: JournalView(journal: model.log),
               ),
             ),
-          )
+          ),
         ],
       ),
       bottomBar: ValueListenableBuilder(
@@ -102,7 +102,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: model.hasError
                       ? Theme.of(context).colorScheme.error
-                      : null),
+                      : null,),
             ),
             subtitle: RepaintBoundary(
               child: YaruLinearProgressIndicator(

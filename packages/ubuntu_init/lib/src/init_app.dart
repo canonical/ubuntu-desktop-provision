@@ -61,8 +61,8 @@ Future<void> runInitApp(
         welcome: welcome,
         flavor: flavorService.flavor,
       ),
-    ));
-  }, (error, stack) => log.error('Unhandled exception', error, stack));
+    ),);
+  }, (error, stack) => log.error('Unhandled exception', error, stack),);
 }
 
 class _InitApp extends ConsumerWidget {

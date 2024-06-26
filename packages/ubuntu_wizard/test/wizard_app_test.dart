@@ -10,7 +10,7 @@ void main() {
       localizationsDelegates: UbuntuLocalizations.localizationsDelegates,
       supportedLocales: UbuntuLocalizations.supportedLocales,
       home: Text('home'),
-    ));
+    ),);
 
     expect(find.byType(YaruTheme), findsOneWidget);
     expect(find.byType(MaterialApp), findsOneWidget);

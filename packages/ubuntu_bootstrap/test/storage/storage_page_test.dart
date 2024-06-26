@@ -70,7 +70,7 @@ void main() {
   testWidgets('two existing OSes', (tester) async {
     final osProbers = [
       const OsProber(long: 'Ubuntu 18.04 LTS', label: 'Ubuntu', type: 'ext4'),
-      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
+      const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
     ];
     const productInfo = ProductInfo(name: 'Ubuntu');
     final model = buildStorageModel(
@@ -87,7 +87,7 @@ void main() {
         productInfo.name,
         osProbers[0].long,
         osProbers[1].long,
-      )),
+      ),),
       findsOneWidget,
     );
   });
@@ -98,7 +98,7 @@ void main() {
       existingOS: [
         const OsProber(long: 'Windows 10', label: 'windows', type: 'ntfs'),
         const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
-        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
       ],
       productInfo: productInfo,
     );
@@ -118,7 +118,7 @@ void main() {
     final model = buildStorageModel(
       existingOS: [
         const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
-        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4')
+        const OsProber(long: 'Ubuntu 20.04 LTS', label: 'Ubuntu', type: 'ext4'),
       ],
       productInfo: productInfo,
     );
@@ -382,7 +382,7 @@ void main() {
     testWidgets('dialog', (tester) async {
       final model = buildStorageModel();
       await tester.pumpWidget(
-          ProviderScope(child: tester.buildApp((_) => buildPage(model))));
+          ProviderScope(child: tester.buildApp((_) => buildPage(model))),);
 
       final context = tester.element(find.byType(StoragePage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -424,7 +424,7 @@ void main() {
       final l10n = UbuntuBootstrapLocalizations.of(context);
 
       expect(find.text(l10n.installationTypeLVMEncryptionSelected),
-          findsOneWidget);
+          findsOneWidget,);
     });
 
     testWidgets('zfs selected', (tester) async {
@@ -452,7 +452,7 @@ void main() {
     final model = buildStorageModel(
         canEraseDisk: false,
         canInstallAlongside: false,
-        canManualPartition: false);
+        canManualPartition: false,);
     await tester.pumpApp((_) => buildPage(model));
 
     expect(find.button(find.nextLabel), isDisabled);

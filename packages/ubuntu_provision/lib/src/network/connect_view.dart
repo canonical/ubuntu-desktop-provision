@@ -20,9 +20,9 @@ class NoConnectView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = NetworkLocalizations.of(context);
     final ethernet = ref.watch(ethernetModelProvider
-        .select((m) => m.isEnabled && m.devices.isNotEmpty));
+        .select((m) => m.isEnabled && m.devices.isNotEmpty),);
     final wifi = ref.watch(
-        wifiModelProvider.select((m) => m.isEnabled && m.devices.isNotEmpty));
+        wifiModelProvider.select((m) => m.isEnabled && m.devices.isNotEmpty),);
 
     return YaruRadioButton<ConnectMode>(
       title: Text(lang.networkNoneOption),

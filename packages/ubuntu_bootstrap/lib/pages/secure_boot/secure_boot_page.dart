@@ -32,7 +32,7 @@ class _SecureBootPageState extends ConsumerState<SecureBootPage> {
       content: LayoutBuilder(
         builder: (context, constraints) {
           final fieldPadding = EdgeInsets.symmetric(
-              horizontal: kWizardPadding.left, vertical: 10);
+              horizontal: kWizardPadding.left, vertical: 10,);
           final fieldWidth = (constraints.maxWidth - fieldPadding.horizontal) *
               kWizardWidthFraction;
 

@@ -22,10 +22,10 @@ class RefreshState with _$RefreshState {
 
   bool get available => maybeWhen(
       status: (s) => s.availability == RefreshCheckState.AVAILABLE,
-      orElse: () => false);
+      orElse: () => false,);
   bool get busy => maybeWhen(progress: (c) => !c.ready, orElse: () => false);
   bool get ready => maybeWhen(
-      progress: (c) => c.ready, done: () => true, orElse: () => false);
+      progress: (c) => c.ready, done: () => true, orElse: () => false,);
 }
 
 class RefreshService {

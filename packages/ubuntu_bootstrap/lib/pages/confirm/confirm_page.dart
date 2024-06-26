@@ -75,7 +75,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                       entries: {
                         lang.confirmEntryDiskSetup: _DiskSetup(),
                         lang.confirmEntryInstallationDisk: _InstallationDisk(),
-                        lang.confirmEntryApplications: _Applications()
+                        lang.confirmEntryApplications: _Applications(),
                       },
                     ),
                     const SizedBox(height: kWizardSpacing),
@@ -104,7 +104,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                               entry.key,
                               partition,
                               model.getOriginalPartition(
-                                  entry.key, partition.number ?? -1),
+                                  entry.key, partition.number ?? -1,),
                             ),
                       ],
                     ),
@@ -242,7 +242,7 @@ class _InstallationDisk extends ConsumerWidget {
               'body': Style(
                 margin: Margins.zero,
                 textAlign: TextAlign.end,
-              )
+              ),
             },
             key: ValueKey(disk),
           ),
@@ -261,7 +261,7 @@ class _Applications extends ConsumerWidget {
             model.sources
                 .singleWhereOrNull((source) => source.id == model.sourceId)
                 ?.localizedTitle(lang) ??
-            ''),
+            '',),
       ),
     );
   }
@@ -292,7 +292,7 @@ class _ProprietarySoftware extends ConsumerWidget {
         sourceModelProvider.select((model) => (
               codecs: model.installCodecs,
               drivers: model.installDrivers,
-            )),
+            ),),
       )) {
         (codecs: true, drivers: true) =>
           lang.confirmProprietarySoftwareCodecsDrivers,

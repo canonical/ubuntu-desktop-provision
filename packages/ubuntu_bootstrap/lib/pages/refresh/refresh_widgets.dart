@@ -82,7 +82,7 @@ class RefreshView extends ConsumerWidget {
         ),
       ),
       const Spacer(flex: 2),
-    ]);
+    ],);
   }
 }
 

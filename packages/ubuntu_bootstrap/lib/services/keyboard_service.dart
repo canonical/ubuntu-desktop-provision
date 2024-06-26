@@ -62,7 +62,7 @@ class SubiquityKeyboardService implements KeyboardService {
         DBusArray(
             DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
             [
-              DBusStruct([const DBusString('xkb'), DBusString(xkbString)])
+              DBusStruct([const DBusString('xkb'), DBusString(xkbString)]),
             ]),
       );
     } on Exception catch (e) {

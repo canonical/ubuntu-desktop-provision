@@ -81,7 +81,7 @@ void main() {
         ),
       );
       expect(
-          find.widgetWithText(SpinBox, (5 * 1000).toString()), findsOneWidget);
+          find.widgetWithText(SpinBox, (5 * 1000).toString()), findsOneWidget,);
     });
 
     testWidgets('in kilobytes', (tester) async {
@@ -95,7 +95,7 @@ void main() {
         ),
       );
       expect(find.widgetWithText(SpinBox, (5 * 1000 * 1000).toString()),
-          findsOneWidget);
+          findsOneWidget,);
     });
   });
 

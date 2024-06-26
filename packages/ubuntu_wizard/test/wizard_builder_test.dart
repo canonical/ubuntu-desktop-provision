@@ -23,7 +23,7 @@ void main() {
           },
         ),
       ),
-    ));
+    ),);
     expect(find.text('loading'), findsOneWidget);
     expect(find.text('replaced'), findsNothing);
     expect(wasReplaced, isFalse);
@@ -74,7 +74,7 @@ void main() {
           predicate: (route) => route != '/skipped',
         ),
       ),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(find.text('loading'), findsNothing);

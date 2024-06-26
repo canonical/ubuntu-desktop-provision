@@ -3,7 +3,7 @@ import 'package:yaru/yaru.dart';
 
 class NetworkTile extends StatelessWidget {
   const NetworkTile(
-      {super.key, this.leading, this.title, this.subtitle, this.trailing});
+      {super.key, this.leading, this.title, this.subtitle, this.trailing,});
 
   final Widget? leading;
   final Widget? title;

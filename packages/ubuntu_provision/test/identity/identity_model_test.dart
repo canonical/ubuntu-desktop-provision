@@ -47,7 +47,7 @@ void main() {
 
     await IOOverrides.runZoned(() async {
       await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    }, createFile: (path) => MockProductNameFile('impish'),);
     verify(service.getIdentity()).called(1);
 
     expect(model.realName, equals(identity.realname));
@@ -82,7 +82,7 @@ void main() {
 
     await IOOverrides.runZoned(() async {
       await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    }, createFile: (path) => MockProductNameFile('impish'),);
 
     expect(model.autoLogin, true);
   });
@@ -110,7 +110,7 @@ void main() {
     );
     await IOOverrides.runZoned(() async {
       await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    }, createFile: (path) => MockProductNameFile('impish'),);
     verify(service.getIdentity()).called(1);
 
     expect(model.hostname, equals('ubuntu-impish'));
@@ -139,7 +139,7 @@ void main() {
     );
     await IOOverrides.runZoned(() async {
       await model.init();
-    }, createFile: (path) => MockProductNameFile('impish'));
+    }, createFile: (path) => MockProductNameFile('impish'),);
 
     expect(model.hostname, equals('user-impish'));
   });
@@ -207,14 +207,14 @@ void main() {
       username: 'someone',
       password: 'not-empty',
       autoLogin: true,
-    ))).called(1);
+    ),),).called(1);
 
     model.autoLogin = false;
     await model.save();
     verify(service.setIdentity(const Identity(
       username: 'someone',
       password: 'not-empty',
-    ))).called(1);
+    ),),).called(1);
   });
 
   test('password strength', () {
@@ -333,7 +333,7 @@ void main() {
     testValid('real', 'host', 'UBUNTU', 'passwd', 'passwd', isFalse);
     testValid('real', 'host', 'inv@lid', 'passwd', 'passwd', isFalse);
     testValid('real', 'host', 'thisusernameislongerthanitshouldbe', 'passwd',
-        'passwd', isFalse);
+        'passwd', isFalse,);
 
     // host name validation
     testValid('real', 'ubuntu-21.10', 'user', 'passwd', 'passwd', isTrue);
@@ -346,7 +346,7 @@ void main() {
         'user',
         'passwd',
         'passwd',
-        isFalse);
+        isFalse,);
 
     // password matching
     testValid('real', 'host', 'user', 'passwd', 'passwd', isTrue);
@@ -360,7 +360,7 @@ void main() {
         'user',
         'passwd',
         'passwd',
-        isFalse);
+        isFalse,);
   });
 
   test('server validation', () async {
@@ -440,7 +440,7 @@ void main() {
 
     await IOOverrides.runZoned(() async {
       await model.init();
-    }, createFile: (path) => MockProductNameFile(''));
+    }, createFile: (path) => MockProductNameFile(''),);
     verify(service.getIdentity()).called(1);
 
     expect(model.realName, equals('User'));

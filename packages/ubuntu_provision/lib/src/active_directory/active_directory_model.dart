@@ -116,7 +116,7 @@ class ActiveDirectoryModel extends SafeChangeNotifier {
       domainName: domainName,
       adminName: adminName,
       password: password,
-    ));
+    ),);
   }
 
   Future<AdJoinResult> getJoinResult() {

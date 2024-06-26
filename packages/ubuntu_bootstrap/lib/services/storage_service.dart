@@ -109,7 +109,7 @@ class StorageService {
         .expand((d) => d.partitions
             .whereType<Partition>()
             .map((p) => p.os)
-            .whereType<OsProber>())
+            .whereType<OsProber>(),)
         .toList();
     return response.disks;
   }

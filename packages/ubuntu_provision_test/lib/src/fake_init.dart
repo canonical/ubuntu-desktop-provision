@@ -32,27 +32,27 @@ Future<void> registerFakeInitServices({
   final keyfile =
       GSettingsKeyfileBackend(file: File('${tempDir.path}/gsettings.ini'));
   registerService<GdmService>(
-      () => ProvdGdmService(client: _FakeProvdGdmClient()));
+      () => ProvdGdmService(client: _FakeProvdGdmClient()),);
   registerServiceFactory<GSettings, String>(
-      (s) => GSettings(s, backend: keyfile));
+      (s) => GSettings(s, backend: keyfile),);
 
   registerService<AccessibilityService>(
-      () => ProvdAccessibilityService(client: _FakeProvdAccessibilityClient()));
+      () => ProvdAccessibilityService(client: _FakeProvdAccessibilityClient()),);
   registerService<IdentityService>(
-      () => ProvdIdentityService(client: FakeProvdUserClient()));
+      () => ProvdIdentityService(client: FakeProvdUserClient()),);
   registerService<KeyboardService>(
-      () => ProvdKeyboardService(client: _FakeProvdKeyboardClient()));
+      () => ProvdKeyboardService(client: _FakeProvdKeyboardClient()),);
   registerService<LocaleService>(
-      () => ProvdLocaleService(client: _FakeProvdLocaleClient()));
+      () => ProvdLocaleService(client: _FakeProvdLocaleClient()),);
   registerService<NetworkService>(() => NetworkService(bus: client));
   registerService<PrivacyService>(FakePrivacyService.new);
   registerService<ProductService>(_FakeProductService.new);
   registerService<ProvdTelemetryService>(
-      () => ProvdTelemetryService(client: _FakeProvdTelemetryClient()));
+      () => ProvdTelemetryService(client: _FakeProvdTelemetryClient()),);
   registerService<TimezoneService>(
-      () => ProvdTimezoneService(client: _FakeProvdTimezoneClient()));
+      () => ProvdTimezoneService(client: _FakeProvdTimezoneClient()),);
   registerService<ProService>(
-      () => ProvdProService(client: _FakeProvdProClient()));
+      () => ProvdProService(client: _FakeProvdProClient()),);
   registerService<UrlLauncher>(_FakeUrlLauncher.new);
   addTearDown(resetAllServices);
 }
@@ -85,7 +85,7 @@ class FakeDBusServer extends DBusServer {
 
     await _client.requestName('org.freedesktop');
     await _client.registerObject(
-        DBusObject(DBusObjectPath('/org/freedesktop'), isObjectManager: true));
+        DBusObject(DBusObjectPath('/org/freedesktop'), isObjectManager: true),);
 
     await _client.requestName('org.freedesktop.NetworkManager');
     await _client.registerObject(_network);
@@ -202,12 +202,12 @@ class _FakeGdmSessionObject extends DBusObject {
       case 'AnswerQuery':
         assert(methodCall.interface == 'org.gnome.DisplayManager.UserVerifier');
         await emitSignal('org.gnome.DisplayManager.Greeter', 'SessionOpened',
-            const [DBusString('gdm-password')]);
+            const [DBusString('gdm-password')],);
         return DBusMethodSuccessResponse();
       case 'BeginVerificationForUser':
         assert(methodCall.interface == 'org.gnome.DisplayManager.UserVerifier');
         await emitSignal('org.gnome.DisplayManager.UserVerifier',
-            'SecretInfoQuery', const [DBusString('gdm-password')]);
+            'SecretInfoQuery', const [DBusString('gdm-password')],);
         return DBusMethodSuccessResponse();
       case 'StartSessionWhenReady':
         assert(methodCall.interface == 'org.gnome.DisplayManager.Greeter');
@@ -420,7 +420,7 @@ class _FakeProvdProClient implements provd.ProvdProClient {
       [
         provd.ProMagicAttachResponse(
             type: provd.ProMagicAttachResponseType.USER_CODE,
-            userCode: '123456'),
+            userCode: '123456',),
         provd.ProMagicAttachResponse(
           type: provd.ProMagicAttachResponseType.SUCCESS,
         ),
@@ -431,6 +431,6 @@ class _FakeProvdProClient implements provd.ProvdProClient {
   @override
   Future<provd.ProAttachResponse> proAttach(String token) {
     return Future.value(provd.ProAttachResponse(
-        type: provd.ProAttachResponse_ProAttachResponseType.SUCCESS));
+        type: provd.ProAttachResponse_ProAttachResponseType.SUCCESS,),);
   }
 }

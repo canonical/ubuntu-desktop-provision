@@ -7,7 +7,7 @@ extension RefreshStateX on RefreshState {
   double? get progress => maybeWhen(
       progress: (change) => change.progress,
       checking: () => null,
-      orElse: () => 0);
+      orElse: () => 0,);
 }
 
 extension ChangeX on Change {

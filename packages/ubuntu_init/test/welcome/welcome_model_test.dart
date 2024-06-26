@@ -30,6 +30,6 @@ void main() {
 
     final model = WelcomeModel(service);
     expect(model.releaseNotesURL(const Locale('de')),
-        'https://wiki.ubuntu.com/Release/de');
+        'https://wiki.ubuntu.com/Release/de',);
   });
 }

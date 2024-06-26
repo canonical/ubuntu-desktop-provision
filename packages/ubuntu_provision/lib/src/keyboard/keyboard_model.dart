@@ -54,7 +54,7 @@ class KeyboardModel extends SafeChangeNotifier {
     _selectedLayoutIndex = index;
     _selectedVariantIndex = _selectedLayout!.variants.isNotEmpty ? variant : -1;
     _log.info(
-        'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
+        'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout',);
     notifyListeners();
     await updateInputSource();
   }
@@ -105,7 +105,7 @@ class KeyboardModel extends SafeChangeNotifier {
     if (_selectedVariantIndex == index) return;
     _selectedVariantIndex = index;
     _log.info(
-        'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
+        'Selected ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout',);
     notifyListeners();
     await updateInputSource();
   }
@@ -130,7 +130,7 @@ class KeyboardModel extends SafeChangeNotifier {
       });
     }
     _log.info(
-        'Initialized ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout');
+        'Initialized ${_selectedLayout?.code} (${_selectedVariant?.code}) keyboard layout',);
     notifyListeners();
   }
 

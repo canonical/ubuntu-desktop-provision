@@ -24,7 +24,7 @@ class InitModel {
       ArgResults? args,
       IdentityService? identityService,
       GdmService? gdmService,
-      ChownService? chownService})
+      ChownService? chownService,})
       : _gdmService = gdmService,
         _identityService = identityService,
         _pageConfig = pageConfig,

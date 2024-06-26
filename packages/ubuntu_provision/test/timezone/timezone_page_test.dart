@@ -22,7 +22,7 @@ Widget buildTimezonePage(TimezoneModel model) {
 void main() {
   testWidgets('saves the location', (tester) async {
     final model = buildTimezoneModel(
-        selectedLocation: const GeoLocation(timezone: 'UTC'));
+        selectedLocation: const GeoLocation(timezone: 'UTC'),);
     when(model.init()).thenAnswer((_) async => '');
     await tester.pumpApp((_) => buildTimezonePage(model));
 
@@ -181,9 +181,9 @@ void main() {
 
     final cityCountry = city.copyWith(country: 'country');
     expect(
-        TimezonePage.formatLocation(cityCountry), contains(cityCountry.name));
+        TimezonePage.formatLocation(cityCountry), contains(cityCountry.name),);
     expect(TimezonePage.formatLocation(cityCountry),
-        contains(cityCountry.country));
+        contains(cityCountry.country),);
 
     final cityAll = city.copyWith(admin: 'admin', country: 'country');
     expect(TimezonePage.formatLocation(cityAll), contains(cityAll.name));

@@ -32,7 +32,7 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
                 final result = await showDetectKeyboardDialog(context);
                 if (result != null) {
                   await model.trySelectLayoutVariant(
-                      result.layout, result.variant);
+                      result.layout, result.variant,);
                 }
               },
             )

@@ -166,7 +166,7 @@ void main() {
 
   testWidgets('core desktop has no continue testing', (tester) async {
     final model = buildInstallModel(
-        isDone: true, provisioningMode: ProvisioningMode.coreDesktop);
+        isDone: true, provisioningMode: ProvisioningMode.coreDesktop,);
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(InstallPage));

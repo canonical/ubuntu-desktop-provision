@@ -12,7 +12,7 @@ void main() {
 
     final geo = MockGeoService();
     when(geo.searchTimezone('Europe/Stockholm')).thenAnswer(
-        (_) async => const [GeoLocation(timezone: 'Europe/Stockholm')]);
+        (_) async => const [GeoLocation(timezone: 'Europe/Stockholm')],);
 
     final model = TimezoneModel(service, geo);
 

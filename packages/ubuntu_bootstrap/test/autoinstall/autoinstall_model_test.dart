@@ -48,7 +48,7 @@ void main() {
         '  late-commands:',
         '    - echo "Hello, World!"',
       ].map((e) => '$e\n').toList(),
-    ));
+    ),);
     final model = AutoinstallModel(
       subiquity,
       subiquityServer,
@@ -66,7 +66,7 @@ void main() {
         .file(p.join(
           fs.systemTempDirectory.absolute.path,
           'autoinstall.yaml',
-        ))
+        ),)
         .readAsStringSync();
     expect(content, isNotEmpty);
     expect(loadYaml(content), isA<YamlMap>());
@@ -103,7 +103,7 @@ void main() {
         .file(p.join(
           fs.systemTempDirectory.absolute.path,
           'autoinstall.yaml',
-        ))
+        ),)
         .readAsStringSync();
     expect(content, isNotEmpty);
     expect(loadYaml(content), isA<YamlMap>());
@@ -121,7 +121,7 @@ void main() {
     final httpClient = createMockHttpClient(
         responseStream: Stream.fromIterable(
       ['<this>', '-is-', '#not#', '*yaml*'].map((e) => '$e\n').toList(),
-    ));
+    ),);
     final model = AutoinstallModel(
       subiquity,
       subiquityServer,
@@ -141,7 +141,7 @@ void main() {
           .file(p.join(
             fs.systemTempDirectory.absolute.path,
             'autoinstall.yaml',
-          ))
+          ),)
           .existsSync(),
       isFalse,
     );
@@ -181,7 +181,7 @@ void main() {
           .file(p.join(
             fs.systemTempDirectory.absolute.path,
             'autoinstall.yaml',
-          ))
+          ),)
           .existsSync(),
       isFalse,
     );

@@ -9,7 +9,7 @@ final _log = Logger('bitlocker');
 
 /// Provider for [BitLockerModel].
 final bitLockerModelProvider = ChangeNotifierProvider((_) =>
-    BitLockerModel(getService<SessionService>(), getService<StorageService>()));
+    BitLockerModel(getService<SessionService>(), getService<StorageService>()),);
 
 /// View model for [BitLockerPage].
 class BitLockerModel extends SafeChangeNotifier {

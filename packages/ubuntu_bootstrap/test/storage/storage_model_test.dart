@@ -175,11 +175,11 @@ void main() {
         GuidedCapability.DD,
         GuidedCapability.LVM,
         GuidedCapability.CORE_BOOT_ENCRYPTED,
-        GuidedCapability.MANUAL
+        GuidedCapability.MANUAL,
       ],
     );
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [reformat]));
+        (_) async => fakeGuidedStorageResponse(targets: [reformat]),);
     await model.init();
 
     expect(model.canInstallAlongside, isFalse);
@@ -213,7 +213,7 @@ void main() {
       allowed: [GuidedCapability.LVM],
     );
     when(service.getGuidedStorage()).thenAnswer(
-        (_) async => fakeGuidedStorageResponse(targets: [reformat]));
+        (_) async => fakeGuidedStorageResponse(targets: [reformat]),);
     await model.init();
     expect(model.canInstallAlongside, isFalse);
     expect(model.canEraseDisk, isTrue);
@@ -262,7 +262,7 @@ void main() {
 
     // all
     when(service.getGuidedStorage()).thenAnswer((_) async =>
-        fakeGuidedStorageResponse(targets: [reformat, resize, gap, manual]));
+        fakeGuidedStorageResponse(targets: [reformat, resize, gap, manual]),);
     await model.init();
     expect(model.canInstallAlongside, isTrue);
     expect(model.canEraseDisk, isTrue);
@@ -314,8 +314,8 @@ void main() {
                 GuidedCapability.LVM,
                 GuidedCapability.LVM_LUKS,
                 GuidedCapability.ZFS,
-              ]),
-            ]));
+              ],),
+            ],),);
     await model.init();
     expect(capability, GuidedCapability.DIRECT);
     expect(model.hasDirect, isTrue);
@@ -327,8 +327,8 @@ void main() {
         .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [
               fakeGuidedStorageTargetReformat(allowed: [
                 GuidedCapability.CORE_BOOT_ENCRYPTED,
-              ]),
-            ]));
+              ],),
+            ],),);
     await model.init();
     expect(capability, GuidedCapability.CORE_BOOT_ENCRYPTED);
     expect(model.hasDirect, isFalse);

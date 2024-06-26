@@ -13,7 +13,7 @@ import 'test_active_directory.dart';
 
 final domainNameValidationVariant = ValueVariant(
     AdDomainNameValidation.values.toSet()
-      ..remove(AdDomainNameValidation.REALM_NOT_FOUND));
+      ..remove(AdDomainNameValidation.REALM_NOT_FOUND),);
 final adminNameValidationVariant =
     ValueVariant(AdAdminNameValidation.values.toSet());
 final passwordValidationVariant =
@@ -57,12 +57,12 @@ void main() {
     if (error.isNotEmpty) {
       expect(find.text(error), findsOneWidget);
     }
-  }, variant: domainNameValidationVariant);
+  }, variant: domainNameValidationVariant,);
 
   testWidgets('admin name input', (tester) async {
     final validation = adminNameValidationVariant.currentValue!;
     final model = buildActiveDirectoryModel(
-        adminName: 'admin', adminNameValidation: validation);
+        adminName: 'admin', adminNameValidation: validation,);
 
     await tester.pumpApp((_) => buildActiveDirectoryPage(model));
     final context = tester.element(find.byType(ActiveDirectoryPage));
@@ -80,12 +80,12 @@ void main() {
     if (error.isNotEmpty) {
       expect(find.text(error), findsOneWidget);
     }
-  }, variant: adminNameValidationVariant);
+  }, variant: adminNameValidationVariant,);
 
   testWidgets('password input', (tester) async {
     final validation = passwordValidationVariant.currentValue!;
     final model = buildActiveDirectoryModel(
-        password: 'password', passwordValidation: validation);
+        password: 'password', passwordValidation: validation,);
 
     await tester.pumpApp((_) => buildActiveDirectoryPage(model));
     final context = tester.element(find.byType(ActiveDirectoryPage));
@@ -101,7 +101,7 @@ void main() {
     if (error.isNotEmpty) {
       expect(find.text(error), findsOneWidget);
     }
-  }, variant: passwordValidationVariant);
+  }, variant: passwordValidationVariant,);
 
   testWidgets('valid input', (tester) async {
     final model = buildActiveDirectoryModel(isValid: true);
@@ -131,7 +131,7 @@ void main() {
 
   testWidgets('AD join error', (tester) async {
     final model = buildActiveDirectoryModel(
-        isValid: true, joinResult: AdJoinResult.JOIN_ERROR);
+        isValid: true, joinResult: AdJoinResult.JOIN_ERROR,);
     await tester.pumpApp((_) => buildActiveDirectoryPage(model));
 
     await tester.tapNext();

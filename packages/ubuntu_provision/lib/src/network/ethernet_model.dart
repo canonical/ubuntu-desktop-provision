@@ -6,7 +6,7 @@ import 'package:ubuntu_provision/src/network/network_device.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 final ethernetModelProvider = ChangeNotifierProvider((_) =>
-    EthernetModel(getService<NetworkService>(), getService<UdevService>()));
+    EthernetModel(getService<NetworkService>(), getService<UdevService>()),);
 
 /// "Use wired connection"
 class EthernetModel extends NetworkDeviceModel<EthernetDevice> {

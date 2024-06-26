@@ -28,7 +28,7 @@ void main() {
       '--source-catalog=examples/sources/mixed.yaml',
       '--storage-version=2',
       '--bootloader=uefi',
-    ]);
+    ],);
     final future = client.getStatus();
     client.open(socketPath);
     await expectLater(future, completes);
@@ -63,7 +63,7 @@ void main() {
       final fut = Future.delayed(const Duration(milliseconds: 50));
       var futAwaited = false;
       final process = SubiquityProcess('bash', ['-c', 'exit 0'],
-          deferStart: fut.then((_) => futAwaited = true));
+          deferStart: fut.then((_) => futAwaited = true),);
       await process.start();
       addTearDown(process.stop);
       expect(futAwaited, isTrue);
@@ -89,7 +89,7 @@ void main() {
         '--source-catalog=examples/sources/mixed.yaml',
         '--storage-version=2',
         '--bootloader=uefi',
-      ]);
+      ],);
       client.open(socketPath);
     });
 
@@ -120,11 +120,11 @@ void main() {
           isA<SourceSelection>()
               .having((s) => s.id, 'id', 'ubuntu-server')
               .having((s) => s.variant, 'variant',
-                  Variant.SERVER.toVariantString()),
+                  Variant.SERVER.toVariantString(),),
           isA<SourceSelection>()
               .having((s) => s.id, 'id', 'ubuntu-desktop')
               .having((s) => s.variant, 'variant',
-                  Variant.DESKTOP.toVariantString())
+                  Variant.DESKTOP.toVariantString(),)
               .having((s) => s.isDefault, 'default', isTrue),
         ]),
       );
@@ -352,7 +352,7 @@ void main() {
 
     test('mirror', () async {
       expect(await client.setMirror(const MirrorPost(elected: 'test')),
-          MirrorPostResponse.OK);
+          MirrorPostResponse.OK,);
       final test = await client.getMirror();
       expect(test.elected, endsWith('test'));
       expect(test.candidates, isNotEmpty);
@@ -393,7 +393,7 @@ void main() {
       // Server now throws exception if invalid username is POST'ed.
       expect(() async {
         await client.setIdentity(newId);
-      }, throwsException);
+      }, throwsException,);
     });
 
     test('identity/validate_username', () async {
@@ -740,7 +740,7 @@ void main() {
       final socketPath = await testServer.start(args: [
         '--autoinstall=examples/autoinstall/interactive.yaml',
         '--machine-config=examples/machines/simple.json',
-      ]);
+      ],);
       client.open(socketPath);
     });
 

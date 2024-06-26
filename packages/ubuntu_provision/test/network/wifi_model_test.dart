@@ -219,7 +219,7 @@ void main() {
       device: wifi.device,
       connection: {},
       accessPoint: ap,
-    )).thenAnswer((_) async => MockNetworkManagerActiveConnection());
+    ),).thenAnswer((_) async => MockNetworkManagerActiveConnection());
 
     final settings = <String, Map<String, DBusValue>>{
       '802-11-wireless': <String, DBusValue>{
@@ -235,7 +235,7 @@ void main() {
       device: wifi.device,
       connection: {},
       accessPoint: ap,
-    ));
+    ),);
 
     // closed
     when(ap.flags).thenReturn([NetworkManagerWifiAccessPointFlag.privacy]);
@@ -244,7 +244,7 @@ void main() {
       device: wifi.device,
       connection: {},
       accessPoint: ap,
-    ));
+    ),);
   });
 
   test('periodic scanning', () async {
@@ -292,7 +292,7 @@ void main() {
       expect(model.devices.first.scanning, isFalse);
       verify(wireless.lastScan).called(1);
       verify(wireless.requestScan(ssids: [kTestSsid])).called(1);
-    }));
+    }),);
 
     final scan = model.requestScan(ssid: ssid);
     wirelessChanged.add(['LastScan']);

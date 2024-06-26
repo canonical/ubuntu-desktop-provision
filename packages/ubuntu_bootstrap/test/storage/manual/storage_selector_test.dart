@@ -22,7 +22,7 @@ void main() {
           ),
         ),
       ),
-    ));
+    ),);
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey(1)), findsOneWidget);
@@ -45,7 +45,7 @@ void main() {
           ),
         ),
       ),
-    ));
+    ),);
 
     await tester.tap(find.byType(StorageSelector));
     await tester.pumpAndSettle();
@@ -77,7 +77,7 @@ void main() {
           ),
         ),
       ),
-    ));
+    ),);
 
     await tester.tap(find.byType(StorageSelector));
     await tester.pumpAndSettle();

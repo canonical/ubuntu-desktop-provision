@@ -59,7 +59,7 @@ Future<void> showCreatePartitionDialog(
                       onUnitSelected: (v) => partitionUnit.value = v,
                     );
                   },
-                )
+                ),
               ],
               [
                 Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
@@ -122,10 +122,10 @@ Future<void> showCreatePartitionDialog(
                         : null,
                     child: Text(UbuntuLocalizations.of(context).okLabel),
                   );
-                }),
+                },),
           ],
         );
-      });
+      },);
     },
   );
 }
@@ -183,7 +183,7 @@ Future<void> showEditPartitionDialog(
                       onUnitSelected: (v) => partitionUnit.value = v,
                     );
                   },
-                )
+                ),
               ],
               [
                 Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
@@ -275,10 +275,10 @@ Future<void> showEditPartitionDialog(
                         : null,
                     child: Text(UbuntuLocalizations.of(context).okLabel),
                   );
-                }),
+                },),
           ],
         );
-      });
+      },);
     },
   );
 }

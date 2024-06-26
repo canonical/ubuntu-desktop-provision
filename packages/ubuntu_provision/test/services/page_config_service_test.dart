@@ -71,7 +71,7 @@ MockConfigService createMockConfigService({
   final mock = MockConfigService();
   final yaml = loadYaml(config)?['pages'] as YamlMap?;
   when(mock.get('mode')).thenAnswer(
-      (_) async => mode != null ? mode.name : ProvisioningMode.standard.name);
+      (_) async => mode != null ? mode.name : ProvisioningMode.standard.name,);
   when(mock.get('pages')).thenAnswer(
     (_) async => config == '' ? null : yaml?.toMap(),
   );

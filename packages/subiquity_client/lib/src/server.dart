@@ -49,7 +49,7 @@ class SubiquityServer {
 
     // allow some time for the server to start responding
     log.info(
-        'Waiting server up to ${(_kWaitDuration * _kWaitTimes).inSeconds} seconds');
+        'Waiting server up to ${(_kWaitDuration * _kWaitTimes).inSeconds} seconds',);
     for (var i = 0; i < _kWaitTimes; ++i) {
       try {
         final request = await client.openUrl(

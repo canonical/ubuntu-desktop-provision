@@ -93,7 +93,7 @@ class AutoinstallModel extends SafeChangeNotifier {
     final file = _fs.file(p.join(
       _fs.systemTempDirectory.absolute.path,
       filename,
-    ));
+    ),);
     await file.writeAsString(content);
     _log.debug('Downloaded $uri to ${file.absolute.path}');
 
@@ -109,7 +109,7 @@ class AutoinstallModel extends SafeChangeNotifier {
         await Process.run('sudo', ['cp', file.absolute.path, targetDir]);
     if (result.exitCode != 0) {
       _log.error(
-          'Failed to move ${file.absolute.path} to $targetDir: ${result.stderr}');
+          'Failed to move ${file.absolute.path} to $targetDir: ${result.stderr}',);
       return;
     }
     _log.debug('Moved ${file.absolute.path} to $targetDir');

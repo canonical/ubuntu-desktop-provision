@@ -69,7 +69,7 @@ class ConfirmModel extends SafeChangeNotifier {
               d.sysname,
               d.partitions.whereType<Partition>().toList(),
             ),
-          )),
+          ),),
         );
     notifyListeners();
   }
@@ -93,7 +93,7 @@ class ConfirmModel extends SafeChangeNotifier {
     _disks = disks
         .where((d) =>
             d.preserve == false ||
-            d.partitions.whereType<Partition>().any(isPartitionModified))
+            d.partitions.whereType<Partition>().any(isPartitionModified),)
         .toList();
     _partitions = Map.fromEntries(
       disks.map((disk) {

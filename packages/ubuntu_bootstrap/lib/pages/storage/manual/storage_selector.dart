@@ -42,7 +42,7 @@ class StorageSelector extends StatelessWidget {
             );
           },
           decoration: InputDecoration(labelText: title),
-        )
+        ),
       ],
     );
   }
