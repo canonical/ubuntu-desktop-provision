@@ -1,3 +1,7 @@
 {
-  "@@locale": "uk"
+  "@@locale": "uk",
+  "close": "Закрити",
+  "@close": {},
+  "restart": "Перезапустити",
+  "@restart": {}
 }
