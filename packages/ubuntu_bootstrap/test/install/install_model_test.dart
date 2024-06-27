@@ -111,6 +111,10 @@ void main() async {
     expect(model.isInstalling, isTrue);
     expect(model.isDone, isFalse);
 
+    await waitForState(ApplicationState.LATE_COMMANDS);
+    expect(model.isInstalling, isTrue);
+    expect(model.isDone, isFalse);
+
     await waitForState(ApplicationState.DONE);
     expect(model.isInstalling, isFalse);
     expect(model.isDone, isTrue);
