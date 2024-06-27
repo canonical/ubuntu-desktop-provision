@@ -33,7 +33,6 @@ ApplicationStatus testStatus(ApplicationState state) {
 final isWaiting = testStatus(ApplicationState.WAITING);
 final isRunning = testStatus(ApplicationState.RUNNING);
 final isDone = testStatus(ApplicationState.DONE);
-final isCancelling = testStatus(ApplicationState.UU_CANCELLING);
 
 @GenerateMocks([HttpClient, HttpClientRequest, HttpClientResponse])
 void main() {
@@ -104,8 +103,6 @@ void main() {
         .thenAnswer((_) async => statusResponse(isRunning));
     when(client.openUrl('GET', wasRunning))
         .thenAnswer((_) async => statusResponse(isDone));
-    when(client.openUrl('GET', wasDone))
-        .thenAnswer((_) async => statusResponse(isCancelling));
 
     final monitor = SubiquityStatusMonitor(client);
 
@@ -115,7 +112,6 @@ void main() {
       monitor.onStatusChanged,
       emitsInOrder([isRunning, isDone]),
     );
-    await expectLater(monitor.onStatusChanged, neverEmits(isCancelling));
   });
 
   test('error', () async {
