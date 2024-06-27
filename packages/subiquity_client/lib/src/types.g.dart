@@ -101,7 +101,7 @@ const _$ApplicationStateEnumMap = {
   ApplicationState.WAITING: 'WAITING',
   ApplicationState.RUNNING: 'RUNNING',
   ApplicationState.UU_RUNNING: 'UU_RUNNING',
-  ApplicationState.UU_CANCELLING: 'UU_CANCELLING',
+  ApplicationState.LATE_COMMANDS: 'LATE_COMMANDS',
   ApplicationState.DONE: 'DONE',
   ApplicationState.ERROR: 'ERROR',
   ApplicationState.EXITED: 'EXITED',
@@ -1389,6 +1389,7 @@ _$MirrorPostImpl _$$MirrorPostImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       staged: json['staged'] as String?,
+      useDuringInstallation: json['use_during_installation'] as bool?,
     );
 
 Map<String, dynamic> _$$MirrorPostImplToJson(_$MirrorPostImpl instance) =>
@@ -1396,6 +1397,7 @@ Map<String, dynamic> _$$MirrorPostImplToJson(_$MirrorPostImpl instance) =>
       'elected': instance.elected,
       'candidates': instance.candidates,
       'staged': instance.staged,
+      'use_during_installation': instance.useDuringInstallation,
     };
 
 _$MirrorGetImpl _$$MirrorGetImplFromJson(Map<String, dynamic> json) =>
@@ -1406,6 +1408,7 @@ _$MirrorGetImpl _$$MirrorGetImplFromJson(Map<String, dynamic> json) =>
           .map((e) => e as String)
           .toList(),
       staged: json['staged'] as String?,
+      useDuringInstallation: json['use_during_installation'] as bool,
     );
 
 Map<String, dynamic> _$$MirrorGetImplToJson(_$MirrorGetImpl instance) =>
@@ -1414,6 +1417,7 @@ Map<String, dynamic> _$$MirrorGetImplToJson(_$MirrorGetImpl instance) =>
       'elected': instance.elected,
       'candidates': instance.candidates,
       'staged': instance.staged,
+      'use_during_installation': instance.useDuringInstallation,
     };
 
 _$AdConnectionInfoImpl _$$AdConnectionInfoImplFromJson(

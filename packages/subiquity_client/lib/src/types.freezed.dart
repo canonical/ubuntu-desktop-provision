@@ -7992,7 +7992,6 @@ mixin _$GuidedChoiceV2 {
   RecoveryKey? get recoveryKey =>
       throw _privateConstructorUsedError; // TODO(Lukas): Change `generator.py` to accommodate for putting the
 // SizingPolicy parameter together with the other required parameters.
-// ignore: always_put_required_named_parameters_first
   SizingPolicy? get sizingPolicy => throw _privateConstructorUsedError;
   bool get resetPartition => throw _privateConstructorUsedError;
   int? get resetPartitionSize => throw _privateConstructorUsedError;
@@ -8196,7 +8195,6 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   final RecoveryKey? recoveryKey;
 // TODO(Lukas): Change `generator.py` to accommodate for putting the
 // SizingPolicy parameter together with the other required parameters.
-// ignore: always_put_required_named_parameters_first
   @override
   final SizingPolicy? sizingPolicy;
   @override
@@ -8273,7 +8271,6 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
   RecoveryKey? get recoveryKey;
   @override // TODO(Lukas): Change `generator.py` to accommodate for putting the
 // SizingPolicy parameter together with the other required parameters.
-// ignore: always_put_required_named_parameters_first
   SizingPolicy? get sizingPolicy;
   @override
   bool get resetPartition;
@@ -14375,6 +14372,7 @@ mixin _$MirrorPost {
   String? get elected => throw _privateConstructorUsedError;
   List<String>? get candidates => throw _privateConstructorUsedError;
   String? get staged => throw _privateConstructorUsedError;
+  bool? get useDuringInstallation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -14388,7 +14386,11 @@ abstract class $MirrorPostCopyWith<$Res> {
           MirrorPost value, $Res Function(MirrorPost) then) =
       _$MirrorPostCopyWithImpl<$Res, MirrorPost>;
   @useResult
-  $Res call({String? elected, List<String>? candidates, String? staged});
+  $Res call(
+      {String? elected,
+      List<String>? candidates,
+      String? staged,
+      bool? useDuringInstallation});
 }
 
 /// @nodoc
@@ -14407,6 +14409,7 @@ class _$MirrorPostCopyWithImpl<$Res, $Val extends MirrorPost>
     Object? elected = freezed,
     Object? candidates = freezed,
     Object? staged = freezed,
+    Object? useDuringInstallation = freezed,
   }) {
     return _then(_value.copyWith(
       elected: freezed == elected
@@ -14421,6 +14424,10 @@ class _$MirrorPostCopyWithImpl<$Res, $Val extends MirrorPost>
           ? _value.staged
           : staged // ignore: cast_nullable_to_non_nullable
               as String?,
+      useDuringInstallation: freezed == useDuringInstallation
+          ? _value.useDuringInstallation
+          : useDuringInstallation // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -14433,7 +14440,11 @@ abstract class _$$MirrorPostImplCopyWith<$Res>
       __$$MirrorPostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? elected, List<String>? candidates, String? staged});
+  $Res call(
+      {String? elected,
+      List<String>? candidates,
+      String? staged,
+      bool? useDuringInstallation});
 }
 
 /// @nodoc
@@ -14450,6 +14461,7 @@ class __$$MirrorPostImplCopyWithImpl<$Res>
     Object? elected = freezed,
     Object? candidates = freezed,
     Object? staged = freezed,
+    Object? useDuringInstallation = freezed,
   }) {
     return _then(_$MirrorPostImpl(
       elected: freezed == elected
@@ -14464,6 +14476,10 @@ class __$$MirrorPostImplCopyWithImpl<$Res>
           ? _value.staged
           : staged // ignore: cast_nullable_to_non_nullable
               as String?,
+      useDuringInstallation: freezed == useDuringInstallation
+          ? _value.useDuringInstallation
+          : useDuringInstallation // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -14472,7 +14488,10 @@ class __$$MirrorPostImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MirrorPostImpl implements _MirrorPost {
   const _$MirrorPostImpl(
-      {this.elected, final List<String>? candidates, this.staged})
+      {this.elected,
+      final List<String>? candidates,
+      this.staged,
+      this.useDuringInstallation})
       : _candidates = candidates;
 
   factory _$MirrorPostImpl.fromJson(Map<String, dynamic> json) =>
@@ -14492,10 +14511,12 @@ class _$MirrorPostImpl implements _MirrorPost {
 
   @override
   final String? staged;
+  @override
+  final bool? useDuringInstallation;
 
   @override
   String toString() {
-    return 'MirrorPost(elected: $elected, candidates: $candidates, staged: $staged)';
+    return 'MirrorPost(elected: $elected, candidates: $candidates, staged: $staged, useDuringInstallation: $useDuringInstallation)';
   }
 
   @override
@@ -14506,13 +14527,19 @@ class _$MirrorPostImpl implements _MirrorPost {
             (identical(other.elected, elected) || other.elected == elected) &&
             const DeepCollectionEquality()
                 .equals(other._candidates, _candidates) &&
-            (identical(other.staged, staged) || other.staged == staged));
+            (identical(other.staged, staged) || other.staged == staged) &&
+            (identical(other.useDuringInstallation, useDuringInstallation) ||
+                other.useDuringInstallation == useDuringInstallation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, elected,
-      const DeepCollectionEquality().hash(_candidates), staged);
+  int get hashCode => Object.hash(
+      runtimeType,
+      elected,
+      const DeepCollectionEquality().hash(_candidates),
+      staged,
+      useDuringInstallation);
 
   @JsonKey(ignore: true)
   @override
@@ -14532,7 +14559,8 @@ abstract class _MirrorPost implements MirrorPost {
   const factory _MirrorPost(
       {final String? elected,
       final List<String>? candidates,
-      final String? staged}) = _$MirrorPostImpl;
+      final String? staged,
+      final bool? useDuringInstallation}) = _$MirrorPostImpl;
 
   factory _MirrorPost.fromJson(Map<String, dynamic> json) =
       _$MirrorPostImpl.fromJson;
@@ -14543,6 +14571,8 @@ abstract class _MirrorPost implements MirrorPost {
   List<String>? get candidates;
   @override
   String? get staged;
+  @override
+  bool? get useDuringInstallation;
   @override
   @JsonKey(ignore: true)
   _$$MirrorPostImplCopyWith<_$MirrorPostImpl> get copyWith =>
@@ -14559,6 +14589,7 @@ mixin _$MirrorGet {
   String? get elected => throw _privateConstructorUsedError;
   List<String> get candidates => throw _privateConstructorUsedError;
   String? get staged => throw _privateConstructorUsedError;
+  bool get useDuringInstallation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -14575,7 +14606,8 @@ abstract class $MirrorGetCopyWith<$Res> {
       {bool relevant,
       String? elected,
       List<String> candidates,
-      String? staged});
+      String? staged,
+      bool useDuringInstallation});
 }
 
 /// @nodoc
@@ -14595,6 +14627,7 @@ class _$MirrorGetCopyWithImpl<$Res, $Val extends MirrorGet>
     Object? elected = freezed,
     Object? candidates = null,
     Object? staged = freezed,
+    Object? useDuringInstallation = null,
   }) {
     return _then(_value.copyWith(
       relevant: null == relevant
@@ -14613,6 +14646,10 @@ class _$MirrorGetCopyWithImpl<$Res, $Val extends MirrorGet>
           ? _value.staged
           : staged // ignore: cast_nullable_to_non_nullable
               as String?,
+      useDuringInstallation: null == useDuringInstallation
+          ? _value.useDuringInstallation
+          : useDuringInstallation // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -14629,7 +14666,8 @@ abstract class _$$MirrorGetImplCopyWith<$Res>
       {bool relevant,
       String? elected,
       List<String> candidates,
-      String? staged});
+      String? staged,
+      bool useDuringInstallation});
 }
 
 /// @nodoc
@@ -14647,6 +14685,7 @@ class __$$MirrorGetImplCopyWithImpl<$Res>
     Object? elected = freezed,
     Object? candidates = null,
     Object? staged = freezed,
+    Object? useDuringInstallation = null,
   }) {
     return _then(_$MirrorGetImpl(
       relevant: null == relevant
@@ -14665,6 +14704,10 @@ class __$$MirrorGetImplCopyWithImpl<$Res>
           ? _value.staged
           : staged // ignore: cast_nullable_to_non_nullable
               as String?,
+      useDuringInstallation: null == useDuringInstallation
+          ? _value.useDuringInstallation
+          : useDuringInstallation // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -14676,7 +14719,8 @@ class _$MirrorGetImpl implements _MirrorGet {
       {required this.relevant,
       required this.elected,
       required final List<String> candidates,
-      required this.staged})
+      required this.staged,
+      required this.useDuringInstallation})
       : _candidates = candidates;
 
   factory _$MirrorGetImpl.fromJson(Map<String, dynamic> json) =>
@@ -14696,10 +14740,12 @@ class _$MirrorGetImpl implements _MirrorGet {
 
   @override
   final String? staged;
+  @override
+  final bool useDuringInstallation;
 
   @override
   String toString() {
-    return 'MirrorGet(relevant: $relevant, elected: $elected, candidates: $candidates, staged: $staged)';
+    return 'MirrorGet(relevant: $relevant, elected: $elected, candidates: $candidates, staged: $staged, useDuringInstallation: $useDuringInstallation)';
   }
 
   @override
@@ -14712,13 +14758,20 @@ class _$MirrorGetImpl implements _MirrorGet {
             (identical(other.elected, elected) || other.elected == elected) &&
             const DeepCollectionEquality()
                 .equals(other._candidates, _candidates) &&
-            (identical(other.staged, staged) || other.staged == staged));
+            (identical(other.staged, staged) || other.staged == staged) &&
+            (identical(other.useDuringInstallation, useDuringInstallation) ||
+                other.useDuringInstallation == useDuringInstallation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, relevant, elected,
-      const DeepCollectionEquality().hash(_candidates), staged);
+  int get hashCode => Object.hash(
+      runtimeType,
+      relevant,
+      elected,
+      const DeepCollectionEquality().hash(_candidates),
+      staged,
+      useDuringInstallation);
 
   @JsonKey(ignore: true)
   @override
@@ -14739,7 +14792,8 @@ abstract class _MirrorGet implements MirrorGet {
       {required final bool relevant,
       required final String? elected,
       required final List<String> candidates,
-      required final String? staged}) = _$MirrorGetImpl;
+      required final String? staged,
+      required final bool useDuringInstallation}) = _$MirrorGetImpl;
 
   factory _MirrorGet.fromJson(Map<String, dynamic> json) =
       _$MirrorGetImpl.fromJson;
@@ -14752,6 +14806,8 @@ abstract class _MirrorGet implements MirrorGet {
   List<String> get candidates;
   @override
   String? get staged;
+  @override
+  bool get useDuringInstallation;
   @override
   @JsonKey(ignore: true)
   _$$MirrorGetImplCopyWith<_$MirrorGetImpl> get copyWith =>

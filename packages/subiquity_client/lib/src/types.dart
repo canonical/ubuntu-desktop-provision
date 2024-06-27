@@ -1,5 +1,5 @@
 // TODO(Lukas): Rename enums to dart style
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, always_put_required_named_parameters_first
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -94,7 +94,7 @@ enum ApplicationState {
   WAITING,
   RUNNING,
   UU_RUNNING,
-  UU_CANCELLING,
+  LATE_COMMANDS,
   DONE,
   ERROR,
   EXITED,
@@ -555,7 +555,6 @@ class GuidedChoiceV2 with _$GuidedChoiceV2 {
     RecoveryKey? recoveryKey,
     // TODO(Lukas): Change `generator.py` to accommodate for putting the
     // SizingPolicy parameter together with the other required parameters.
-    // ignore: always_put_required_named_parameters_first
     required SizingPolicy? sizingPolicy,
     @Default(false) bool resetPartition,
     int? resetPartitionSize,
@@ -1021,6 +1020,7 @@ class MirrorPost with _$MirrorPost {
     String? elected,
     List<String>? candidates,
     String? staged,
+    bool? useDuringInstallation,
   }) = _MirrorPost;
 
   factory MirrorPost.fromJson(Map<String, dynamic> json) =>
@@ -1039,6 +1039,7 @@ class MirrorGet with _$MirrorGet {
     required String? elected,
     required List<String> candidates,
     required String? staged,
+    required bool useDuringInstallation,
   }) = _MirrorGet;
 
   factory MirrorGet.fromJson(Map<String, dynamic> json) =>
