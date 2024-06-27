@@ -159,5 +159,83 @@
   "activeDirectoryDomainNotFound": "Домен не знайдено",
   "@activeDirectoryDomainNotFound": {},
   "activeDirectoryDomainEndHyphen": "Закінчується дефісом (-)",
-  "@activeDirectoryDomainEndHyphen": {}
+  "@activeDirectoryDomainEndHyphen": {},
+  "eulaPageTitle": "Ліцензійна угода",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Переглянути умови ліцензії",
+  "@eulaReviewTerms": {},
+  "eulaReadAndAcceptTerms": "Щоб продовжити налаштування цього пристрою, ви повинні прочитати та прийняти умови ліцензійної угоди.",
+  "@eulaReadAndAcceptTerms": {},
+  "eulaAcceptTerms": "Я прочитав і приймаю ці умови",
+  "@eulaAcceptTerms": {},
+  "accessibilityPageTitle": "Доступність",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Доступність в {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Налаштуйте {DISTRO} відповідно до ваших потреб перед початком роботи. Ви можете змінити їх пізніше в Налаштуваннях системи.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Бачачи",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Чути",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "Друкуючи",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "Наведення та клацання",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "Зум",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Висока контрастність",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityScreenReaderLabel": "Зчитувач з екрану",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Візуальні попередження",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Липкі клавіші",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Повільні клавіші",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Клавіші миші",
+  "@accessibilityMouseKeysLabel": {},
+  "errorPageShowLog": "Показати журнал",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Сховати журнал",
+  "@errorPageHideLog": {},
+  "close": "Закрити",
+  "@close": {},
+  "activeDirectoryHeader": "Увійти в Active Directory?",
+  "@activeDirectoryHeader": {},
+  "networkPageBody": "Під'єднання до Інтернету покращить вашу інсталяцію завдяки перевірці сумісності та додатковим пакетам програмного забезпечення.",
+  "@networkPageBody": {},
+  "accessibilityLargeTextLabel": "Великий текст",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Зменшити анімацію",
+  "@accessibilityReduceAnimationLabel": {},
+  "errorPageUnexpected": "Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезавантажити комп'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageTitle": "Щось пішло не так",
+  "@errorPageTitle": {},
+  "accessibilityDesktopZoomLabel": "Настільний зум",
+  "@accessibilityDesktopZoomLabel": {},
+  "restart": "Перезапустити",
+  "@restart": {},
+  "activeDirectoryInfo": "{DISTRO} розроблено для безперешкодної інтеграції з Active Directory для полегшення адміністрування.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
