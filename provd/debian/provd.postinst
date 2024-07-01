@@ -13,9 +13,7 @@ case "$1" in
         chmod 750 /usr/libexec/launch-desktop-provision-init
 
         # Set ownership and permissions for bin's
-        chown root:provd /usr/libexec/sprovd
         chown root:provd /usr/libexec/provd
-        chmod u+s /usr/libexec/sprovd
         ;;
 esac
 
