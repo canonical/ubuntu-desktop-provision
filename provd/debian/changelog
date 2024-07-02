@@ -1,3 +1,9 @@
+provd (0.1.5~ppa1) noble; urgency=medium
+
+  * Remove Ubuntu Pro and Chmod services
+
+ -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Mon, 1 Jul 2024 14:23:46 +0200
+
 provd (0.1.4) noble; urgency=medium
 
   * Gnome-keyring now unlocked for wifi password prompt to appear during setup.
