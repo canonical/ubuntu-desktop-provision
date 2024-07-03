@@ -91,12 +91,6 @@ accessibility.AccessibilityService:
           isclientstream: false
           isserverstream: false
     metadata: protos/accessibility.proto
-chown.ChownService:
-    methods:
-        - name: ChownSettings
-          isclientstream: false
-          isserverstream: false
-    metadata: protos/chown.proto
 gdm.GdmService:
     methods:
         - name: LaunchDesktopSession
@@ -136,18 +130,6 @@ privacy.PrivacyService:
           isclientstream: false
           isserverstream: false
     metadata: protos/privacy.proto
-pro.ProService:
-    methods:
-        - name: ProAttach
-          isclientstream: false
-          isserverstream: false
-        - name: ProMagicAttach
-          isclientstream: false
-          isserverstream: true
-        - name: ProStatus
-          isclientstream: false
-          isserverstream: false
-    metadata: protos/pro.proto
 telemetry.TelemetryService:
     methods:
         - name: Collect
