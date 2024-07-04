@@ -77,6 +77,7 @@ install-deb:
 	DEB_FILE="../provd_$${DEB_VERSION}_amd64.deb"; \
 	if [ -f "$${DEB_FILE}" ]; then \
 		echo ":: Copying deb file to VM ($(VM_NAME))..."; \
+		lxc exec $(VM_NAME) -- rm /tmp/provd_$${DEB_VERSION}_amd64.deb; \
 		lxc file push "$${DEB_FILE}" $(VM_NAME)/tmp/; \
 		echo ":: Installing deb file on VM ($(VM_NAME))..."; \
 		lxc exec $(VM_NAME) -- dpkg -i /tmp/provd_$${DEB_VERSION}_amd64.deb; \
