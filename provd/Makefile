@@ -1,5 +1,21 @@
 VM_NAME = provd-testing
 
+.PHONY: install-local-tooling
+install-local-tooling:
+	@echo ":: Checking for lxd..."
+	@if ! which lxd ; then \
+		@echo ":: Installing lxd..." ; \
+		snap install lxd ; \
+		@echo ":: Adding user to the lxd group..." ; \
+		getent group lxd | grep -qwF "$$USER" || usermod -aG lxd "$$USER" ; \
+		@echo ":: Please log out and back in, or run 'newgrp lxd' for the change to take effect" ; \
+	fi
+	@echo ":: Checking for virt-viewer..."
+	@if ! which virt-viewer ; then \
+		@echo ":: Installing virt-viewer..." ; \
+		apt install virt-viewer ; \
+	fi
+
 .PHONY: create-or-start-vm
 create-or-start-vm:
 	@if ! lxc info $(VM_NAME) 2>/dev/null ; then \
