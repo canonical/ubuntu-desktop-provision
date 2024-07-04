@@ -5,10 +5,21 @@ set -e
 case "$1" in
     purge)
         # Revert gnome-initial-setup to nogroup
-        usermod -G nogroup gnome-initial-setup
-        
-        # Remove provd group
-        groupdel provd
+        if getent passwd gnome-initial-setup >/dev/null; then
+            usermod -G nogroup gnome-initial-setup
+        fi
+
+        # Remove provd user if it exists
+        if getent passwd provd >/dev/null; then
+            if which deluser >/dev/null 2>&1; then
+                deluser --system provd || echo "Could not remove provd user."
+            fi
+        fi
+
+        # Remove provd group if it exists
+        if getent group provd >/dev/null; then
+            groupdel provd || echo "Could not remove provd group."
+        fi
         ;;
 esac
 

@@ -1,6 +1,7 @@
-provd (0.1.5~ppa1) noble; urgency=medium
+provd (0.1.5~ppa2) noble; urgency=medium
 
   * Remove Ubuntu Pro and Chmod services
+  * Provd user and user group created on install
 
  -- Matthew Gary Hagemann <matt.hagemann@canonical.com>  Mon, 1 Jul 2024 14:23:46 +0200
 
