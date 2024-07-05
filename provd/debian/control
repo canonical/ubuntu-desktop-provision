@@ -17,6 +17,7 @@ Rules-Requires-Root: no
 
 Package: provd
 Architecture: any
+Built-Using: ${misc:Built-Using},
 Pre-Depends: gnome-initial-setup
 Depends: ${misc:Depends},
          ${shlibs:Depends},
