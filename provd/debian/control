@@ -21,6 +21,7 @@ Built-Using: ${misc:Built-Using},
 Pre-Depends: gnome-initial-setup
 Depends: ${misc:Depends},
          ${shlibs:Depends},
+         adduser,
 Description: Ubuntu init backend
  Backend service used by Ubuntu init to
  perform different system setup activities.
