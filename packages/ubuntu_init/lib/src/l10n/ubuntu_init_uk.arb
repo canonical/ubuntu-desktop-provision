@@ -23,16 +23,16 @@
       "distro": {}
     }
   },
-  "telemetryReportLabel": "Подробиці звіту",
+  "telemetryReportLabel": "Показати перший звіт",
   "@telemetryReportLabel": {},
-  "telemetryDescription": "Діліться даними з {distro} анонімно, щоб ми могли покращити ваш досвід.",
+  "telemetryDescription": "Допоможіть нам покращити {distro}, поділившись з нами даними вашої системи. Сюди входять такі речі, як модель вашого комп'ютера, встановлене програмне забезпечення та місце, яке ви вибрали для свого часового поясу.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
       "distro": {}
     }
   },
-  "telemetryLegalLabel": "Правові відомості",
+  "telemetryLegalLabel": "Юридичне повідомлення",
   "@telemetryLegalLabel": {},
   "telemetryReportTitle": "Подробиці звіту",
   "@telemetryReportTitle": {},
@@ -66,5 +66,49 @@
   "privacyLocationEnable": "Сервіси визначення місцезнаходження",
   "@privacyLocationEnable": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "telemetryCollectError": "Не вдалося зібрати телеметричні дані",
+  "@telemetryCollectError": {},
+  "ubuntuProHeader": "Прикріпіть цю машину",
+  "@ubuntuProHeader": {},
+  "ubuntuProMagicAttachInstructions": "Магічне прикріплення з цим кодом за адресою <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProOrAddTokenManually": "або додайте токен вручну",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Токен",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Отримайте найповнішу підписку на захист програмного забезпечення з відкритим кодом",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Завжди безкоштовний для особистого користування. 30-денна пробна версія для підприємств. <a href=\"https://{url}\">Дізнатися більше</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachButton": "Прикріпити",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Недійсний токен",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Дійсний токен",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Недійсний токен, спробуйте ще раз",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Поки що пропустити",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Ви завжди можете увімкнути Ubuntu Pro пізніше за допомогою програми Software & Updates.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Увімкнути Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Приєднайте цей комп'ютер до підписки на Ubuntu Pro, щоб отримати оновлення безпеки для ширшого кола пакунків до 2032 року.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "На цьому комп'ютері ввімкнено Ubuntu Pro",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Ви можете керувати послугами Pro у програмі \"Програмне забезпечення та оновлення\".",
+  "@ubuntuProSucessAttachDescription": {}
 }
