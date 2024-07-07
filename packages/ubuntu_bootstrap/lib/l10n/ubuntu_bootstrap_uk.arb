@@ -480,5 +480,531 @@
   "restartNow": "Перезапустити зараз",
   "@restartNow": {},
   "installationSlidesCreativityTitle": "Розширте творчі можливості",
-  "@installationSlidesCreativityTitle": {}
+  "@installationSlidesCreativityTitle": {},
+  "choosePassphraseBody": "Щоб зашифрувати ваші файли, вам потрібна парольна фраза. Вам буде запропоновано ввести парольну фразу щоразу, коли ви вмикатимете комп'ютер.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Вибрати парольну фразу",
+  "@choosePassphraseHint": {},
+  "installationTypeTPMInfo": "Це експериментальна функція. Вона може не працювати на вашому обладнанні або у майбутніх випусках {DISTRO}. <a href=\"{url}\">Прочитайте про шифрування TPM</a> перед тим, як вибрати цю опцію.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "hideSecurityKey": "Приховати",
+  "@hideSecurityKey": {},
+  "rebootToConfigureWarning": "Щоб продовжити процес встановлення, потрібно перезавантажити комп'ютер.",
+  "@rebootToConfigureWarning": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Кодеки & драйвери",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "restartIntoWindowsDescription": "Ви впевнені, що хочете перезавантажити комп'ютер? Вам потрібно буде перезапустити інсталяцію {DISTRO} пізніше, щоб завершити встановлення {DISTRO}.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityBody": "Якщо ви аніматор, дизайнер, творець відео або розробник ігор, ви можете легко перенести свої робочі процеси в {DISTRO} з підтримкою програмного забезпечення та додатків з відкритим вихідним кодом і галузевих стандартів.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Доступ для всіх",
+  "@installationSlidesAccessibilityTitle": {},
+  "installationSlidesSupportUbuntuPro": "Підтримка корпоративного рівня 24/7 з Ubuntu Pro",
+  "@installationSlidesSupportUbuntuPro": {},
+  "installationSlidesAccessibilityBody": "В основі філософії {DISTRO} лежить віра в те, що комп'ютеризація призначена для всіх. Завдяки вдосконаленим інструментам доступності та опціям зміни мови, кольорів і розміру тексту, {DISTRO} полегшує роботу з комп'ютером - ким би ви не були і де б не знаходилися.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportResources": "Корисні ресурси:",
+  "@installationSlidesSupportResources": {},
+  "installationSlidesSupportDocumentation": "Офіційна документація",
+  "@installationSlidesSupportDocumentation": {},
+  "refreshHeader": "Для інсталятора доступне оновлення",
+  "@refreshHeader": {},
+  "refreshInfo": "Оновіть до останньої версії для підвищення надійності та розширення можливостей.",
+  "@refreshInfo": {},
+  "refreshReady": "Оновлення готове",
+  "@refreshReady": {},
+  "refreshCurrent": "Поточною версією {snap} є {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Оновлення до версії {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "Оновлення {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Будь ласка, закрийте інсталятор і перезапустіть, щоб продовжити",
+  "@refreshRestart": {},
+  "refreshUpToDate": "Поточна версія {version} є актуальною.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Забезпечення {snap} передумов...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "Оновлення {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Перевірка {snap} повторного оновлення...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallTitle": "Тип установки",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Як ви хочете встановити {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Введіть URL-адресу autoinstall.yaml або шлях до локального файлу:",
+  "@autoinstallInstructions": {},
+  "autoinstallInteractiveOption": "Інтерактивна інсталяція",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Для користувачів, які хочуть отримати покрокову інструкцію по встановленню.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Автоматизована установка",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Для досвідчених користувачів, які мають файл autoinstall.yaml для послідовного та повторюваного налаштування системи.",
+  "@autoinstallAutomatedDescription": {},
+  "warningLabel": "Попередження:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Що ви хочете зробити з {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageTitle": "Оптимізувати ваш комп'ютер",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Встановити рекомендоване пропрієтарне програмне забезпечення?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} за замовчуванням постачається без пропрієтарного програмного забезпечення. Встановлення додаткового програмного забезпечення може покращити продуктивність вашого комп'ютера.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "Виявлено відеокарту NVIDIA",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Для найкращої продуктивності відеокарт NVIDIA наполегливо рекомендується встановити додаткові драйвери.",
+  "@codecsAndDriversNvidiaBody": {},
+  "batteryWarning": "Комп'ютер не підключено до джерела живлення.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Парольна фраза диска",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Створити парольну фразу",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseConfirmHint": "Підтвердити парольну фразу",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Необхідна парольна фраза",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Пароль не збігається",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Переконайтеся, що ви зберегли парольну фразу",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Якщо ви втратите парольну фразу, ви втратите всі свої дані.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Створіть парольну фразу",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Підтвердьте парольну фразу",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Як ви бажаєте встановити {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Почніть з нуля на вашому обраному диску.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Експериментально",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Використати LVM",
+  "@installationTypeLVM": {},
+  "installationTypeZFSEncryptionSelected": "Вибрано ZFS та шифрування",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeLVMEncryption": "Використовуйте LVM та шифрування",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Очистіть диск і використовуйте ZFS з шифруванням",
+  "@installationTypeZFSEncryption": {},
+  "selectGuidedStorageInfo": "Почніть з нуля на вашому обраному диску.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Виберіть диск:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Виберіть розділ:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "Виберіть, куди встановити {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSlash": "Точки монтування повинні починатися з \"/\"",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "Точки монтування не можуть містити пробілів",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "tooManyPrimaryPartitions": "Занадто багато первинних розділів",
+  "@tooManyPrimaryPartitions": {},
+  "partitionLimitReached": "Ліміт досягнуто",
+  "@partitionLimitReached": {},
+  "partitionFormatNone": "Залишити без форматування",
+  "@partitionFormatNone": {},
+  "partitionFormatKeep": "Залиште у форматі {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Нічого",
+  "@confirmDiskEncryptionNone": {},
+  "confirmDevicesTitle": "Пристрої",
+  "@confirmDevicesTitle": {},
+  "confirmEntryApplications": "Додатки",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Налаштування диска",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Шифрування диска",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Інсталяційний диск",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Пропрієтарне програмне забезпечення",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmSectionGeneralTitle": "Загально",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Безпека & інше",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmPartitionsTitle": "Розділи",
+  "@confirmPartitionsTitle": {},
+  "confirmProprietarySoftwareCodecs": "Кодеки",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareDrivers": "Драйвери",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "**{system}** було скопійовано на диск",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Доступно:",
+  "@installationSlidesAvailable": {},
+  "installationSlidesIncluded": "Включено:",
+  "@installationSlidesIncluded": {},
+  "installationSlidesTitle": "Ласкаво просимо до {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareBody": "Встановлюйте, керуйте та оновлюйте всі ваші програми у програмному забезпеченні Ubuntu, включно з тисячами програм з Snap Store та архіву {DISTRO}.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Розробляйте з найкращим відкритим кодом",
+  "@installationSlidesDevelopmentTitle": {},
+  "installationSlidesDevelopmentBody": "{DISTRO} - ідеальна робоча станція для розробки додатків та веб розробки, науки про дані та AI/ML, а також для девелопменту та адміністрування. Кожен випуск {DISTRO} містить найновіші набори інструментів і підтримує всі основні IDE.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Чудово підходить для ігор",
+  "@installationSlidesGamingTitle": {},
+  "installationSlidesGamingBody": "{DISTRO} підтримує найновіші драйвери NVIDIA та Mesa для покращення продуктивності та сумісності. Тисячі ігор для Windows чудово відтворюються на {DISTRO} через такі програми, як Steam, без додаткових налаштувань.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityTitle": "Приватно та безпечно",
+  "@installationSlidesSecurityTitle": {},
+  "installationSlidesSecurityBody": "{DISTRO} надає всі інструменти, необхідні для того, щоб залишатися приватним і безпечним в Інтернеті. Вбудований брандмауер і підтримка VPN, а також безліч додатків, орієнтованих на конфіденційність, гарантують повний контроль над вашими даними.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "Усі {DISTRO} випуски LTS постачаються з п'ятьма роками виправлень безпеки, які можна продовжити до десяти років з підпискою на Ubuntu Pro.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityTitle": "Підвищуйте свою продуктивність",
+  "@installationSlidesProductivityTitle": {},
+  "installationSlidesProductivityBody": "{DISTRO} До складу Desktop входить LibreOffice, набір сумісних з Microsoft Office програм з відкритим вихідним кодом для роботи з документами, електронними таблицями та презентаціями. Також доступні популярні інструменти для спільної роботи.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityOrca": "Orca Screen Reader",
+  "@installationSlidesAccessibilityOrca": {},
+  "installationSlidesAccessibilityLanguages": "Мовна підтримка",
+  "@installationSlidesAccessibilityLanguages": {},
+  "installationSlidesSupportTitle": "Допомога та підтримка",
+  "@installationSlidesSupportTitle": {},
+  "installationSlidesSupportHeader": "Офіційна документація {DISTRO} доступна як онлайн, так і за допомогою піктограми Help у док-станції.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu охоплює широкий спектр питань і відповідей, а Ubuntu Discourse містить посібники та обговорення для нових і досвідчених користувачів.",
+  "@installationSlidesSupportCommunity": {},
+  "installationSlidesSupportEnterprise": "Для корпоративних користувачів Canonical надає комерційну підтримку, щоб полегшити встановлення та безпечне керування Ubuntu на робочому місці.",
+  "@installationSlidesSupportEnterprise": {},
+  "refreshUpdateNow": "Оновити зараз",
+  "@refreshUpdateNow": {},
+  "refreshCloseLabel": "Закрити інсталятор",
+  "@refreshCloseLabel": {},
+  "refreshSnapStopServices": "Зупинка сервісів {snap}...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Вилучення псевдонімів {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Від'єднання {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Оновлення активів {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Копіювання даних {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Налаштування {snap} профілів безпеки...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Оновлення командного рядка ядра {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Налаштування автоматичних псевдонімів {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Прибирання {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Перезапустіть, щоб завершити інсталяцію або продовжити тестування.\nБудь-які внесені вами зміни не будуть збережені.",
+  "@restartWarningBody": {},
+  "notEnoughDiskSpaceBody": "На вибраному диску недостатньо місця для встановлення {DISTRO}. Завершіть роботу програми встановлення, щоб звільнити місце, або виберіть інший диск.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "Готуємо {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Завантаження {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Підтвердження {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Монтування {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Зв'язування {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "З'єднання штепсельних роз'ємів і гнізд {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Налаштування псевдонімів {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Запуск {snap} сервісів...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "Ключ відновлення TPM",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Ви можете отримати доступ до ключа відновлення після встановлення за допомогою наступної команди:",
+  "@recoveryKeyCommand": {},
+  "recoveryKeyWarning": "<font color=\"{color}\">Попередження:</font> Якщо ви втратите цей ключ безпеки, всі дані буде втрачено. Якщо вам потрібно, запишіть свій ключ і зберігайте його в безпечному місці.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Підтвердити",
+  "@validate": {}
 }
