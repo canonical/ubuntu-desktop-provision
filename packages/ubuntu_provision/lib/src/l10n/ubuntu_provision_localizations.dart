@@ -354,7 +354,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @errorPageUbuntuBug.
   ///
   /// In en, this message translates to:
-  /// **'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).'**
+  /// **'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).'**
   String errorPageUbuntuBug(String SNAP);
 
   /// No description provided for @errorPageShowLog.
