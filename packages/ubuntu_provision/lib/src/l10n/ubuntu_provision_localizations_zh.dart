@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => '很抱歉，但我们不确定问题所在。您可以尝试重新启动计算机，并再次启动安装进程。您也可以<a>报告问题</a>。';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => '显示日志';
 
   @override

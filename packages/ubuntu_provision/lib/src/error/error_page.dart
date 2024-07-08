@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/src/error/error_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -35,6 +38,8 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
     final linkText = match?.group(1);
     final endText = match?.end != null ? bodyText.substring(match!.end) : '';
     final model = ref.watch(errorModelProvider);
+
+    final snapName = Platform.environment['SNAP_NAME'];
 
     return WizardPage(
       headerPadding: EdgeInsets.zero,
@@ -72,6 +77,16 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                         ],
                       ),
                     ),
+                    if (snapName != null) ...[
+                      const SizedBox(height: 20),
+                      Html(
+                        data: lang.errorPageUbuntuBug(snapName),
+                        style: {
+                          'body': Style(margin: Margins.zero),
+                          'pre': Style(fontFamily: 'Ubuntu Mono')
+                        },
+                      ),
+                    ]
                   ],
                 ),
               ),

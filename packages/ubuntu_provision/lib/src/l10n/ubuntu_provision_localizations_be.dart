@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'Нам вельмі шкада, але мы не ўпэўненыя, якая памылка дакладна адбылася. Вы можаце перазапусціць камп\'ютар і пачаць працэс усталявання яшчэ раз. Вы таксама можаце <a>паведаміць аб праблеме</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Паказаць журнал';
 
   @override

@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'Vi är ledsna, men vi är inte säkra på vad felet är. Du kan prova att starta om datorn och starta installationsprocessen igen. Du kan också <a>rapportera problemet</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Visa logg';
 
   @override

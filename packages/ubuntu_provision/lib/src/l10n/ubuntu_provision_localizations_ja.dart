@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'ログを表示';
 
   @override

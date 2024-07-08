@@ -351,6 +351,12 @@ abstract class UbuntuProvisionLocalizations {
   /// **'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.'**
   String get errorPageUnexpected;
 
+  /// No description provided for @errorPageUbuntuBug.
+  ///
+  /// In en, this message translates to:
+  /// **'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).'**
+  String errorPageUbuntuBug(String SNAP);
+
   /// No description provided for @errorPageShowLog.
   ///
   /// In en, this message translates to:

@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Afichar lo jornal';
 
   @override

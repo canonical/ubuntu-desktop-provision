@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'Nous sommes désolés, mais nous ne sommes pas sûrs de l\'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d\'installation. Vous pouvez également <a> signaler le problème</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Afficher le journal';
 
   @override
