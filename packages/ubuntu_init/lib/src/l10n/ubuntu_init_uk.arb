@@ -32,7 +32,7 @@
       "distro": {}
     }
   },
-  "telemetryLegalLabel": "Юридичне повідомлення",
+  "telemetryLegalLabel": "Правові відомості",
   "@telemetryLegalLabel": {},
   "telemetryReportTitle": "Подробиці звіту",
   "@telemetryReportTitle": {},
@@ -82,9 +82,9 @@
   "@ubuntuProOrAddTokenManually": {},
   "ubuntuProTokenTextfieldHint": "Токен",
   "@ubuntuProTokenTextfieldHint": {},
-  "ubuntuProSubscriptionDescription": "Отримайте найповнішу підписку на захист програмного забезпечення з відкритим кодом",
+  "ubuntuProSubscriptionDescription": "Придбайте найповнішу передплату на захист програмного забезпечення з відкритим кодом",
   "@ubuntuProSubscriptionDescription": {},
-  "ubuntuProSubscriptionFreeForPersonalUse": "Завжди безкоштовний для особистого користування. 30-денна пробна версія для підприємств. <a href=\"https://{url}\">Дізнатися більше</a>",
+  "ubuntuProSubscriptionFreeForPersonalUse": "Завжди безплатно для особистого користування. 30-денна пробна версія для підприємств. <a href=\"https://{url}\">Докладніше</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
@@ -101,14 +101,14 @@
   "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Поки що пропустити",
   "@ubuntuProOnBoardingSkipForNow": {},
-  "ubuntuProOnBoardingSkipForNowDescription": "Ви завжди можете увімкнути Ubuntu Pro пізніше за допомогою програми Software & Updates.",
+  "ubuntuProOnBoardingSkipForNowDescription": "Ви завжди можете увімкнути Ubuntu Pro пізніше за допомогою застосунку Програми та оновлення.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Увімкнути Ubuntu Pro",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Приєднайте цей комп'ютер до підписки на Ubuntu Pro, щоб отримати оновлення безпеки для ширшого кола пакунків до 2032 року.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Приєднайте цей комп'ютер до передплати Ubuntu Pro, щоб отримати оновлення безпеки для ширшого кола пакунків до 2032 року.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "На цьому комп'ютері ввімкнено Ubuntu Pro",
   "@ubuntuProSucessAttachHeader": {},
-  "ubuntuProSucessAttachDescription": "Ви можете керувати послугами Pro у програмі \"Програмне забезпечення та оновлення\".",
+  "ubuntuProSucessAttachDescription": "Ви можете керувати послугами Pro у застосунку \"Програмне забезпечення та оновлення\".",
   "@ubuntuProSucessAttachDescription": {}
 }
