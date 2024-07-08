@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'Kami minta maaf, tetapi kami tidak yakin apa kesalahannya. Anda dapat mencoba menjalankan ulang komputer Anda dan memulai proses instalasi lagi. Anda juga dapat <a>melaporkan masalah</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Tampilkan log';
 
   @override

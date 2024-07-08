@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'Beklager. Finner ikke ut hva feilen er. Etter en omstart kan du starte installasjonsprosessen igjen. Du kan også <a>rapportere en feil</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Vis logg';
 
   @override

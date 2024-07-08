@@ -66,6 +66,11 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get errorPageUnexpected => 'متأسفانه مطمئن نیستیم که خطا از کجاست. می‌توانید رایانه‌تان را دوباره راه انداخته و فرایند نصب را آغاز کنید. همچنین می‌توانید <a>مشکل را گزارش کنید</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'نمایش گزارش‌ها';
 
   @override
