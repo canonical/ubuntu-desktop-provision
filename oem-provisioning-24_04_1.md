@@ -205,8 +205,8 @@ kvm -no-reboot -m 4096 \
 ```
 
 This command boots the system and runs the installation. The installer prompts for a confirmation before modifying the
-disk. To skip the need for a confirmation, interrupt the booting process, and add the `autoinstall` parameter to the 
-kernel command line.
+disk based on the provided `autoinstall`. To skip the need for a confirmation, interrupt the booting process, and add
+the `autoinstall` parameter to the kernel command line.
 
 The installer reboots at the end. The `-no-reboot` option to the `kvm` command instructs `kvm` to exit on reboot.
 
