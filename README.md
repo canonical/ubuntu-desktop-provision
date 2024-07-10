@@ -12,7 +12,7 @@ We use the GitHub issue tracker only for issues related to the development of Ub
 ## 24.04.1 OEM provisioning
 
 For configuring an OEM provisioning flow for Ubuntu 24.04.1 LTS, where user creation and account setup is handled
-seperately to system setup, please refer to [this guide](oem-provisioning-24_04_1.md).
+seperately to system setup, please refer to [this guide](docs/oem-provisioning-24_04_1.md).
 
 ## Configuration
 
@@ -163,7 +163,7 @@ TODO
 
 ## Contributing
 
-See our [contributor guidelines](CONTRIBUTING.md).
+See our [contributor guidelines](docs/CONTRIBUTING.md).
 
 ## License
 
