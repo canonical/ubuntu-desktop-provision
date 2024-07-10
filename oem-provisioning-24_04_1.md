@@ -1,8 +1,8 @@
 # 24.04.1 OEM provisioning flow
 
-To help support installation flows where user account setup is a seperate flow from system installation, we have 
-included this guide on how to invoke Gnome Initial Setup as part of the installation flow, either via an `autoinstall.yaml` or a 
-`whitelabel.yaml`.
+To help support installation flows where user account setup is a seperate flow from system installation, we have
+included this guide on how to invoke Gnome Initial Setup as part of the installation flow, either via an 
+`autoinstall.yaml` or a `whitelabel.yaml`.
 
 The version of Gnome Initial Setup in Ubuntu 24.04.1 LTS has been patched to allow for hostnames to be set during
 account creation and EULA pages to render if present on the system. This is in addition to its existing faeture set
