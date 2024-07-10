@@ -9,6 +9,11 @@
 Please report any bugs related to Ubuntu Desktop Provision on [Launchpad](https://bugs.launchpad.net/ubuntu-desktop-provision).
 We use the GitHub issue tracker only for issues related to the development of Ubuntu Desktop Provision itself.
 
+## 24.04.1 OEM provisioning
+
+For configuring an OEM provisioning flow for Ubuntu 24.04.1 LTS, where user creation and account setup is handled
+seperately to system setup, please refer to [this guide](docs/oem-provisioning-24_04_1.md).
+
 ## Configuration
 
 The full configuration guide can be read [here](https://docs.google.com/document/d/10R0YOj4e8BTv6XPw9OE_y7GDy72xPqA5XP5lu0M7VbE/edit?usp=sharing).
@@ -134,12 +139,6 @@ code: EULA_<langcode>.pdf. If the <langcode> is not available, the default file 
 The language code format is the same as is used for slides, for example: EULA_en_US.pdf, see the [Language code format
 section](#language-code-format) for further details,
 
-### Gnome Initial Setup
-
-To help support installation flows where user account setup is a seperate flow from system installation, we have included
-[this guide](GIS.md) on how to invoke Gnome Initial Setup as part of the installation flow, either via an `autoinstall.yaml` or a 
-`whitelabel.yaml`.
-
 ### Language code format
 
 The language code format that is used is the two-letter language code followed by a two-letter country code
@@ -164,7 +163,7 @@ TODO
 
 ## Contributing
 
-See our [contributor guidelines](CONTRIBUTING.md).
+See our [contributor guidelines](docs/CONTRIBUTING.md).
 
 ## License
 
