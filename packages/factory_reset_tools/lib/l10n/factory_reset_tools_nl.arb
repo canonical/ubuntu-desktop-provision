@@ -1,3 +1,9 @@
 {
-  "@@locale": "nl"
+  "@@locale": "nl",
+  "ok": "OK",
+  "@ok": {},
+  "close": "Sluiten",
+  "@close": {},
+  "restart": "Herstarten",
+  "@restart": {}
 }
