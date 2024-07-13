@@ -237,5 +237,13 @@
         "type": "String"
       }
     }
+  },
+  "errorPageUbuntuBug": "Щоб надіслати автоматичний звіт про ваду з відповідною інформацією про налагодження, виконайте <pre>sudo ubuntu-bug {SNAP}</pre> у терміналі або з командної консолі (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
   }
 }
