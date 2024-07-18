@@ -70,5 +70,29 @@
   "restart": "Riavvia",
   "@restart": {},
   "close": "Chiudi",
-  "@close": {}
+  "@close": {},
+  "accessibilityPageTitle": "Accessibilità",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Accessibilità in {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Personalizza {DISTRO} in base alle tue esigenze prima della configurazione. Puoi modificarli in seguito in Impostazioni di sistema.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHighContrastLabel": "Alto contrasto",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Testo grande",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityScreenReaderLabel": "Lettore di schermo",
+  "@accessibilityScreenReaderLabel": {}
 }
