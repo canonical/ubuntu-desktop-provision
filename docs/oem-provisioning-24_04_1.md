@@ -83,22 +83,25 @@ Finally, the installer can be launched. You should not be prompted for user acco
 ## Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml
 
 These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html),
-updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO
+updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO.
 
 ### Using an autoinstall provided over the network
 
-#### Getting an ISO
+#### Get an ISO
+
 You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop).
 
 #### Mount the ISO
+
 Once downloaded, you can mount the ISO to make it accessible via from a local directory. Change `<version-number>` in 
-the following command to match the release ISO you downloaded :
+the following command to match the release ISO that you downloaded:
 
 ```
 sudo mount -r ~/Downloads/ubuntu-<version-number>-amd64.iso /mnt
 ```
 
-#### Write your autoinstall configuration
+#### Write an autoinstall configuration
+
 Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
 installation:
 
@@ -115,6 +118,8 @@ touch meta-data
 
 #### Serve the cloud-init configuration over HTTP
 
+Change into the directory where the cloud-init configuration was created and start a server:
+
 ```
 cd ~/www
 python3 -m http.server 3003
@@ -123,13 +128,14 @@ python3 -m http.server 3003
 #### Create a target disk
 
 Create the target VM disk for the installation. 25GB is the minimum recommended storage allocation for Ubuntu Desktop:
+
 ```
 truncate -s 25G image.img
 ```
 
 #### Run the installation
 
-Change `<version-number>` in the following command to match the release ISO you downloaded.
+Change `<version-number>` to match the release ISO that you downloaded before running the following command:
 
 ```
 kvm -no-reboot -m 4096 \
@@ -139,26 +145,32 @@ kvm -no-reboot -m 4096 \
     -initrd /mnt/casper/initrd \
     -append 'autoinstall ds=nocloud-net;s=http://_gateway:3003/'
 ```
+
 This command boots the VM, downloads the configuration from the server (prepared in the previous step) and runs the 
-installation. The installer reboots at the end. The `-no-reboot` option to the `kvm` command instructs `kvm` to exit on reboot.
+installation. The installer reboots at the end. The `-no-reboot` flag instructs `kvm` to exit on reboot.
 
 #### Boot the installed system
+
+Run the following command to boot the system in the VM:
 
 ```
 kvm -no-reboot -m 4096 \
     -drive file=image.img,format=raw,cache=none,if=virtio
 ```
-This command boots the system in the VM. You will then be loaded into the Gnome-Initial-Setup session for first time 
+
+You will then be loaded into the Gnome-Initial-Setup session for first time 
 user creation.
 
 ### Using another volume to provide the autoinstall configuration
 
-Use this method to create an installation medium to plug into a computer to have it be installed.
+Use this method to create an installation medium that can be plugged into a computer to trigger installation.
 
 #### Getting an ISO
+
 You can find a desktop ISO to download on the [official Ubuntu website](https://ubuntu.com/download/desktop).
 
-#### Write your autoinstall configuration
+#### Write an autoinstall configuration
+
 Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
 installation:
 
@@ -176,11 +188,13 @@ touch meta-data
 #### Create an ISO to use as a cloud-init data source
 
 Install utilities for working with cloud images:
+
 ```
 sudo apt install cloud-image-utils
 ```
 
 Create the ISO image for cloud-init:
+
 ```
 cloud-localds ~/seed.iso user-data meta-data
 ```
@@ -188,13 +202,15 @@ cloud-localds ~/seed.iso user-data meta-data
 #### Create a target disk
 
 Create the target VM disk for the installation:
+
 ```
 truncate -s 25G image.img
 ```
 
 #### Run the installation
 
-Change `<version-number>` in the following command to match the release ISO you downloaded.
+Run the following command to boot the system and run the installation, making sure to 
+change `<version-number>` to match the release ISO that you downloaded:
 
 ```
 kvm -no-reboot -m 4096 \
@@ -203,21 +219,21 @@ kvm -no-reboot -m 4096 \
     -cdrom ~/Downloads/ubuntu-<version-number>-amd64.iso
 ```
 
-This command boots the system and runs the installation. The installer prompts for a confirmation before modifying the
-disk based on the provided `autoinstall`. To skip the need for a confirmation, interrupt the booting process, and add
-the `autoinstall` parameter to the kernel command line.
+The installer prompts for a confirmation before modifying the disk based on the provided `autoinstall`.
+To skip the need for a confirmation you can interrupt the booting process then add the `autoinstall` 
+parameter to the kernel command line.
 
-The installer reboots at the end. The `-no-reboot` option to the `kvm` command instructs `kvm` to exit on reboot.
+The installer reboots at the end. The `-no-reboot` flag instructs `kvm` to exit on reboot.
 
 #### Boot the installed system
+
+This command will boot the system in the VM:
 
 ```
 kvm -no-reboot -m 4096 \
     -drive file=image.img,format=raw,cache=none,if=virtio
 ```
-
-This command boots the system in the VM. You will then be loaded into the Gnome-Initial-Setup session for first time 
-user creation.
+You will then be loaded into the Gnome-Initial-Setup session for first time user creation.
 
 ## EULA Page configuration
 
