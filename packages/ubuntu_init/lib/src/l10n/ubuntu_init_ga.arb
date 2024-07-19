@@ -1,1 +1,114 @@
-{}
+{
+  "welcomeSecurityTitle": "Slándála feabhsaithe",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "Roghanna nua le haghaidh criptithe crua-earraí nó ZFS.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Féach ar loga athruithe</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "teiliméadracht",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Cabhraigh le {distro} a fheabhsú",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Sea, roinn sonraí córais leis an bhfoireann {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Ní hea, ná roinn sonraí córais",
+  "@telemetryLabelOff": {},
+  "privacyPageTitle": "Seirbhísí suímh",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Cumasaigh seirbhísí suímh?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Cuir do shuíomh geografach in iúl d’fheidhmchláir.\nIs féidir leat é seo a athrú am ar bith i Socruithe an Chórais.",
+  "@privacyLocationSubtitle": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "I gcónaí saor in aisce le haghaidh úsáide pearsanta. Triail 30-lá d’fhiontair. <a href=\"https://{url}\">Foghlaim tuilleadh</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryReportTitle": "Sonraí tuairiscithe",
+  "@telemetryReportTitle": {},
+  "privacyLocationEnable": "Seirbhísí suímh",
+  "@privacyLocationEnable": {},
+  "telemetryCollectError": "Theip ar bhailiú sonraí teiliméadrachta",
+  "@telemetryCollectError": {},
+  "privacyPolicyLink": "Príobháideacht Sonraí",
+  "@privacyPolicyLink": {},
+  "ubuntuProHeader": "Ceangail an meaisín seo",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "nó cuir comhartha isteach de láimh",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Comhartha",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Faigh an síntiús is cuimsithí le haghaidh slándáil bogearraí foinse oscailte",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachButton": "Ceangail",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Comhartha neamhbhailí",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Is féidir leat Ubuntu Pro a chumasú i gcónaí níos déanaí tríd an bhfeidhmchlár Bogearraí & Nuashonruithe.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Ceangail an meaisín seo le síntiús Ubuntu Pro le haghaidh nuashonruithe slándála ar raon níos leithne pacáistí, go dtí 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Tá Ubuntu Pro cumasaithe sa mheaisín seo anois",
+  "@ubuntuProSucessAttachHeader": {},
+  "welcomePageTitle": "Fáilte",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Fáilte go dtí {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "CAD ATÁ NUA?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "Tús sruthlínithe",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Ag tacú le heispéireas socraithe níos glaine.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "App Store cuma nua",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Ní raibh sé riamh níos éasca teacht ar na bogearraí is fearr leat.",
+  "@welcomeStoreSubtitle": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProMagicAttachInstructions": "Ceangail draíocht leis an gcód seo ag <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachSucess": "Comhartha bailí",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Comhartha neamhbhailí, bain triail eile as",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Scipeáil go fóill",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Cumasaigh Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachDescription": "Is féidir leat do sheirbhísí Pro a bhainistiú san fheidhmchlár Bogearraí & Nuashonruithe.",
+  "@ubuntuProSucessAttachDescription": {},
+  "telemetryDescription": "Cabhraigh linn {distro} a fheabhsú trí shonraí do chórais a roinnt linn. Áiríonn sé seo rudaí cosúil le do mhúnla meaisín, bogearraí suiteáilte agus an suíomh a roghnaigh tú do do chrios ama.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "Taispeáin an chéad tuairisc",
+  "@telemetryReportLabel": {},
+  "telemetryLegalLabel": "Fógra dlíthiúil",
+  "@telemetryLegalLabel": {}
+}
