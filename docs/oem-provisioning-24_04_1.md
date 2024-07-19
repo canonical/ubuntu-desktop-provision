@@ -26,8 +26,8 @@ that enables user account creation and setup on provisioned systems.
 
 # How-to provision Ubuntu with Gnome Initial Setup
 
-This guide aims to highlight different ways a system can be provisioned so that Ubuntu is installed but no user 
-account is created, allowing user account creation to be passed off to Gnome-Initial-Setup.
+This guide highlights different methods for provisioning a system so that Ubuntu is installed while no user 
+account is created, thereby allowing user account creation to be passed off to Gnome-Initial-Setup.
 
 ## Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml
 
@@ -45,14 +45,14 @@ mode: oem
 ```
 
 Placing this `whitelabel.yaml` at `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
-to skip user creation during installation, provided you are using the new Ubuntu Desktop Bootstrap installer.
+to skip user creation during installation, provided that you are using the new Ubuntu Desktop Bootstrap installer.
 
 A comprehensive guide to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
 
 ### Using the Flutter installer without modifying the LiveCD
 
 It's possible to test the Gnome Initial Setup user creation flow via the Ubuntu Desktop Bootstrap installer without first 
-editing your LiveCD, provided Gnome Initial Setup is already present on your ISO.
+editing your LiveCD, as long as Gnome Initial Setup is already present on your ISO.
 
 #### Install ubuntu-desktop-bootstrap
 
@@ -82,7 +82,7 @@ Finally, the installer can be launched. You should not be prompted for user acco
 
 ## Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml
 
-These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html),
+These sections are adapted from the Subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html),
 updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO.
 
 ### Using an autoinstall provided over the network
@@ -93,7 +93,7 @@ You can find a desktop ISO to download on the [official Ubuntu website](https://
 
 #### Mount the ISO
 
-Once downloaded, you can mount the ISO to make it accessible via from a local directory. Change `<version-number>` in 
+Once downloaded, you can mount the ISO to make it accessible via a local directory. Change `<version-number>` in 
 the following command to match the release ISO that you downloaded:
 
 ```
@@ -102,7 +102,7 @@ sudo mount -r ~/Downloads/ubuntu-<version-number>-amd64.iso /mnt
 
 #### Write an autoinstall configuration
 
-Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
+Create your cloud-init configuration, making sure to omit the identity section so that no user is created during 
 installation:
 
 ```
@@ -171,7 +171,7 @@ You can find a desktop ISO to download on the [official Ubuntu website](https://
 
 #### Write an autoinstall configuration
 
-Create your cloud-init configuration, making sure to leave the identity section out so that no user is created during 
+Create your cloud-init configuration, making sure to omit the identity section so that no user is created during 
 installation:
 
 ```
