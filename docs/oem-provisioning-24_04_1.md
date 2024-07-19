@@ -1,40 +1,34 @@
 # 24.04.1 OEM provisioning flow
 
-To help support installation flows where user account setup is a seperate flow from system installation, we have
-included this guide on how to invoke Gnome Initial Setup as part of the installation flow, either via an 
-`autoinstall.yaml` or a `whitelabel.yaml`.
+There are use-cases where it does not make sense for system installation and user creation to happen at the same time.
+These require a workflow that skips the user creation step during installation so that it can be handled later, perhaps by a different user.
+
+Ubuntu accomodates this workflow by shipping with Gnome Initial Setup, a program that can safely handle user account 
+creation and configuration. Gnome Initial Setup is started by default when a system is booted and GNOME Display Manager (GDM) is unable to
+detect any user accounts. Instead of taking you to the login screen, a special Gnome Initial Setup user session is started.
+
+> **NOTE:**
+> This is a special integration built into GDM. If you are using a different
+> display manager, you may need to integrate the [Gnome Initial Setup
+> session](https://salsa.debian.org/gnome-team/gnome-initial-setup/-/blob/ubuntu/latest/data/gnome-initial-setup.session.in?ref_type=heads)
+> being invoked by the display manager yourself.
 
 The version of Gnome Initial Setup in Ubuntu 24.04.1 LTS has been patched to allow for hostnames to be set during
-account creation and EULA pages to render if present on the system. This is in addition to its existing faeture set
-that enables user account creation and setup on provisioned system.
+account creation and EULA pages to render if present on the system. This is in addition to its existing feature set
+that enables user account creation and setup on provisioned systems.
 
 ## Table of contents
-- [Gnome Initial Setup](#gnome-initial-setup)
-  - [Why Gnome Initial Setup](#why-gnome-initial-setup)
-  - [Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml](#triggering-gnome-initial-setup-via-the-new-flutter-installer-and-a-whitelabelyaml)
-  - [Triggering Gnome Initial Setup via an autoinstall.yaml](#triggering-gnome-initial-setup-via-an-autoinstallyaml)
+- [How to provision Ubuntu with Gnome Initial Setup](#how-to-provision-ubuntu-with-gnome-initial-setup)
+  - [Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml](#method-1-triggering-gnome-initial-setup-via-the-new-flutter-installer-and-a-whitelabelyaml)
+  - [Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml](#method-2-triggering-gnome-initial-setup-via-an-autoinstallyaml)
 - [EULA page configuration](#eula-page-configuration)
 
-# Gnome Initial Setup
+# How-to provision Ubuntu with Gnome Initial Setup
 
-## Why Gnome Initial Setup
-There are several use cases where it makes sense for system installation and user creation to not happen at the same 
-time. In these instances, it is useful to have a way to skip the user creation step during installation and for it to 
-be handled later, perhaps even by a different user.
-
-To accommodate this workflow Ubuntu ships with Gnome Initial Setup, a program that can safely handle user account 
-creation and configuration. Gnome Initial Setup is started by default when a system is booted and GDM is unable to
-detect any user accounts. Instead of taking you to the login screen, a special Gnome Initial Setup user session is 
-started.
-
-(Note: this is a special integration built into GDM. If you are using a different display manager, you may need to
-integrate the [Gnome Initial Setup session](https://salsa.debian.org/gnome-team/gnome-initial-setup/-/blob/ubuntu/latest/data/gnome-initial-setup.session.in?ref_type=heads)
-being invoked by the display manager yourself.)
-
-This guide aims to highlight some of the ways a system can be provisioned such that Ubuntu is installed, but no user 
+This guide aims to highlight different ways a system can be provisioned so that Ubuntu is installed but no user 
 account is created, allowing user account creation to be passed off to Gnome-Initial-Setup.
 
-## Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml
+## Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml
 
 The new [Ubuntu Desktop Bootstrap](https://github.com/canonical/ubuntu-desktop-provision) Flutter installer can be 
 given a `whitelabel.yaml` file to customize its appearance and behavior. One thing you can configure is the `mode` you 
@@ -52,7 +46,7 @@ mode: oem
 
 A comprehensive guide to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
 
-### Triggering Gnome-Initial-Setup without modifying the LiveCD
+### Using the Flutter installer without modifying the LiveCD
 
 It's possible to test the Gnome Initial Setup user creation flow via the Ubuntu Desktop Bootstrap installer without first 
 editing your LiveCD, provided Gnome Initial Setup is already present on your ISO.
@@ -81,7 +75,7 @@ installer finishes
 /snap/bin/ubuntu-desktop-bootstrap --try-or-install
 ```
 
-## Triggering Gnome Initial Setup via an autoinstall.yaml
+## Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml
 
 These sections are adapted from the subiquity [documentation](https://canonical-subiquity.readthedocs-hosted.com/en/latest/howto/autoinstall-quickstart.html),
 updated for triggering Gnome Initial Setup with the Ubuntu Desktop ISO
