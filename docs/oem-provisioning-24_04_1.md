@@ -32,18 +32,20 @@ account is created, allowing user account creation to be passed off to Gnome-Ini
 ## Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml
 
 The new [Ubuntu Desktop Bootstrap](https://github.com/canonical/ubuntu-desktop-provision) Flutter installer can be 
-given a `whitelabel.yaml` file to customize its appearance and behavior. One thing you can configure is the `mode` you 
-would like to run the installer in. 
+given a `whitelabel.yaml` file to customize its appearance and behaviour. For example, the installer can be configured
+to run in a specific `mode`.
 
-The `oem` mode skips user creation and time zone setup during installation, leaving them to be handled by Gnome Initial 
-Setup post installation.
+When `oem` mode is active, user creation and time zone setup are skipped during installation, leaving them to be handled by Gnome Initial 
+Setup post-installation.
 
-The following `whitelabel.yaml` placed in `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
-to skip user creation during installation, provided you are using the new Ubuntu Desktop Bootstrap installer:
+Enabling `oem` mode only requires the following line to be added to the `whitelabel.yaml`:
 
 ```
 mode: oem
 ```
+
+Placing this `whitelabel.yaml` at `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
+to skip user creation during installation, provided you are using the new Ubuntu Desktop Bootstrap installer.
 
 A comprehensive guide to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
 
@@ -54,14 +56,16 @@ editing your LiveCD, provided Gnome Initial Setup is already present on your ISO
 
 #### Install ubuntu-desktop-bootstrap
 
-The following command installs the Ubuntu Desktop Bootstrap Flutter installer
+The Ubuntu Desktop Bootstrap Flutter installer first needs to be installed:
+
 ```
 sudo snap install ubuntu-desktop-bootstrap --classic
 ```
 
 #### Write a whitelabel.yaml to set OEM mode
 
-These commands create a `whitelabel.yaml` in the location Ubuntu Desktop Bootstrap will look for them.
+A `whitelabel.yaml` with `oem` mode enabled must then be created in a location Ubuntu Desktop Bootstrap will find it:
+
 ```
 sudo mkdir -p /usr/share/desktop-provision
 
@@ -70,8 +74,9 @@ sudo bash -c 'echo "mode: oem" > /usr/share/desktop-provision/whitelabel.yaml'
 
 #### Launch ubuntu-desktop-bootstrap
 
-Finally, launch the installer. You should be no be prompted for user account creation, which will be handled after the 
-installer finishes
+Finally, the installer can be launched. You should be no be prompted for user account creation, which will be handled after the 
+installer finishes:
+
 ```
 /snap/bin/ubuntu-desktop-bootstrap --try-or-install
 ```
