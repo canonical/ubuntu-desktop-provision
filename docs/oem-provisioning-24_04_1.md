@@ -74,8 +74,7 @@ sudo bash -c 'echo "mode: oem" > /usr/share/desktop-provision/whitelabel.yaml'
 
 #### Launch ubuntu-desktop-bootstrap
 
-Finally, the installer can be launched. You should be no be prompted for user account creation, which will be handled after the 
-installer finishes:
+Finally, the installer can be launched. You should not be prompted for user account creation, as this will be handled after the installer finishes.
 
 ```
 /snap/bin/ubuntu-desktop-bootstrap --try-or-install
