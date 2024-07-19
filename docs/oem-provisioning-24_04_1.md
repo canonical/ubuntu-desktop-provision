@@ -21,7 +21,8 @@ that enables user account creation and setup on provisioned systems.
 - [How to provision Ubuntu with Gnome Initial Setup](#how-to-provision-ubuntu-with-gnome-initial-setup)
   - [Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml](#method-1-triggering-gnome-initial-setup-via-the-new-flutter-installer-and-a-whitelabelyaml)
   - [Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml](#method-2-triggering-gnome-initial-setup-via-an-autoinstallyaml)
-- [EULA page configuration](#eula-page-configuration)
+  - [EULA Page configuration](#eula-page-configuration)
+  - [EULA Language code format](#eula-language-code-format)
 
 # How-to provision Ubuntu with Gnome Initial Setup
 
@@ -214,11 +215,15 @@ kvm -no-reboot -m 4096 \
 This command boots the system in the VM. You will then be loaded into the Gnome-Initial-Setup session for first time 
 user creation.
 
+## EULA Page configuration
 
-# EULA page configuration
+EULA assets are expected to reside in `/usr/share/desktop-provision/eula/`, with the file name including the language
+code: `EULA_<langcode>.pdf`. If the `<langcode>` is not available, the default file `EULA.pdf` will be used.
+The language code format is the same as that used for slides, for example: `EULA_en_US.pdf`. See the [EULA Language code format
+section](#eula-language-code-format) for further details. If no EULA file is present, the page will be conditionally skipped.
 
-EULA assets are expected to reside in `/usr/share/desktop-provision/eula/` with the file name including the language
-code: EULA_<langcode>.pdf. If the <langcode> is not available, the default file EULA.pdf will be used.
-The language code format is the same as is used for slides, for example: EULA_en_US.pdf, see the [Language code format
-section](#language-code-format) for further details. If no EULA file is present, the page will be conditionally skipped.
+## EULA Language code format
 
+The language code format that is used is the two-letter language code followed by a two-letter country code (see the ISO 639-1 
+and ISO 3166-1 standards). The language code represents the primary language, while the country code specifies the regional 
+or national variant of that language. For example en_US represents American English and pt_BR represents Brazilian Portuguese.
