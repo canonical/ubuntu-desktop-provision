@@ -3,7 +3,7 @@
 There are use-cases where it does not make sense for system installation and user creation to happen at the same time.
 These require a workflow that skips the user creation step during installation so that it can be handled later, perhaps by a different user.
 
-Ubuntu accomodates this workflow by shipping with Gnome Initial Setup, a program that can safely handle user account 
+Ubuntu accommodates this workflow by shipping with Gnome Initial Setup, a program that can safely handle user account 
 creation and configuration. Gnome Initial Setup is started by default when a system is booted and GNOME Display Manager (GDM) is unable to
 detect any user accounts. Instead of taking you to the login screen, a special Gnome Initial Setup user session is started.
 
