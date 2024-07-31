@@ -24,7 +24,7 @@ class Drive {
   Drive(this.object);
   late final DBusRemoteObject object;
 
-  Future<Partition> format() async {
+  Future<Filesystem> format() async {
     final formatTableParams = [
       const DBusString('gpt'),
       DBusDict.stringVariant({}),
@@ -54,41 +54,54 @@ class Drive {
     );
 
     final objectPath = response.returnValues[0].asObjectPath();
-    final partition = Partition(
+    final fs = Filesystem(
       DBusRemoteObject(
         DBusClient.system(),
         name: 'org.freedesktop.UDisks2',
         path: objectPath,
       ),
     );
-    return partition;
+    return fs;
   }
 
   Future<void> unmountAndRemoveAll() async {
     final dbusClient = DBusClient.system();
+    var hasPartitionTable = true;
+    Iterable<DBusObjectPath> unmountPaths;
     try {
       final partitions = await object.getProperty(
         'org.freedesktop.UDisks2.PartitionTable',
         'Partitions',
         signature: DBusSignature('ao'),
       );
-      for (final partitionObjectPath in partitions.asObjectPathArray()) {
-        final partition = Partition(
-          DBusRemoteObject(
-            dbusClient,
-            name: 'org.freedesktop.UDisks2',
-            path: partitionObjectPath,
-          ),
-        );
-        try {
-          await partition.unmount();
-        } on DBusErrorException {
-          // Partition might not have filesystem, or is already unmounted
-        }
-        await partition.delete();
-      }
+      unmountPaths = partitions.asObjectPathArray();
     } on DBusInvalidArgsException {
-      // partition table might not be in the block device
+      // partition table might not be in the block device, therefore try
+      // unmounting the device itself
+      hasPartitionTable = false;
+      unmountPaths = [object.path];
+    }
+
+    for (final path in unmountPaths) {
+      final object = DBusRemoteObject(
+        dbusClient,
+        name: 'org.freedesktop.UDisks2',
+        path: path,
+      );
+      try {
+        await Filesystem(object).unmount();
+      } on DBusErrorException {
+        // Filter error: partition/blockdev does not have a filesystem, and
+        // therefore there is no unmount method
+      } on DBusMethodResponseException catch (e) {
+        // Filter error: partition/blockdev might be already unmounted
+        if (e.errorName != 'org.freedesktop.UDisks2.Error.NotMounted') {
+          rethrow;
+        }
+      }
+      if (hasPartitionTable) {
+        await Partition(object).delete();
+      }
     }
   }
 
@@ -128,10 +141,9 @@ class Drive {
   }
 }
 
-class Partition {
-  Partition(this.object);
+class Filesystem {
+  Filesystem(this.object);
   final DBusRemoteObject object;
-  String? _devicePath;
 
   Future<String> mount() async {
     final result = await object.callMethod(
@@ -161,30 +173,6 @@ class Partition {
     );
   }
 
-  Future<void> delete() async {
-    await object.callMethod(
-      'org.freedesktop.UDisks2.Partition',
-      'Delete',
-      [
-        DBusDict.stringVariant({}),
-      ],
-    );
-  }
-
-  Future<String> devicePath() async {
-    if (_devicePath != null) {
-      return _devicePath!;
-    }
-    final dp = await object.getProperty(
-      'org.freedesktop.UDisks2.Block',
-      'Device',
-      signature: DBusSignature('ay'),
-    );
-    _devicePath =
-        String.fromCharCodes(dp.asByteArray().where((e) => e != 0), 0, 128);
-    return _devicePath!;
-  }
-
   Future<String> getMountPoint() async {
     final mp = await object.getProperty(
       'org.freedesktop.UDisks2.Filesystem',
@@ -198,7 +186,41 @@ class Partition {
   }
 }
 
-Future<Partition> getResetPartition({String? fsuuid}) async {
+class Partition {
+  Partition(this.object);
+  final DBusRemoteObject object;
+
+  Future<void> delete() async {
+    await object.callMethod(
+      'org.freedesktop.UDisks2.Partition',
+      'Delete',
+      [
+        DBusDict.stringVariant({}),
+      ],
+    );
+  }
+}
+
+class Block {
+  Block(this.object);
+  final DBusRemoteObject object;
+  String? _devicePath;
+  Future<String> devicePath() async {
+    if (_devicePath != null) {
+      return _devicePath!;
+    }
+    final dp = await object.getProperty(
+      'org.freedesktop.UDisks2.Block',
+      'Device',
+      signature: DBusSignature('ay'),
+    );
+    _devicePath =
+        String.fromCharCodes(dp.asByteArray().where((e) => e != 0), 0, 128);
+    return _devicePath!;
+  }
+}
+
+Future<Filesystem> getResetFilesystem({String? fsuuid}) async {
   var targetFSUUID = fsuuid ?? '';
   if (fsuuid == null) {
     targetFSUUID = await File(fsuuidFilePathDefault).readAsString();
@@ -239,7 +261,7 @@ Future<Partition> getResetPartition({String? fsuuid}) async {
     throw Exception('reset partition not found');
   }
 
-  return Partition(targetObject);
+  return Filesystem(targetObject);
 }
 
 Future<int?> getFsUsedSize(String devicePath) async {
@@ -249,14 +271,16 @@ Future<int?> getFsUsedSize(String devicePath) async {
 }
 
 Stream<double> copyPercentageUpdate(
-  Partition resetPartition,
-  Partition targetPartition,
+  Filesystem resetFS,
+  Filesystem targetFS,
 ) async* {
-  final total = (await getFsUsedSize(await resetPartition.devicePath()))!;
+  final resetBlk = Block(resetFS.object);
+  final targetBlk = Block(targetFS.object);
+  final total = (await getFsUsedSize(await resetBlk.devicePath()))!;
   var used = 0;
   var percent = 0.0;
   while (true) {
-    used = (await getFsUsedSize(await targetPartition.devicePath())) ?? used;
+    used = (await getFsUsedSize(await targetBlk.devicePath())) ?? used;
     final newPercent = used / total;
     if (newPercent > 1) {
       percent = 1;
@@ -269,8 +293,8 @@ Stream<double> copyPercentageUpdate(
 }
 
 Stream<ResetMediaCreationProgress> copyAsyncJob(
-  Partition resetPartition,
-  Partition targetPartition,
+  Filesystem resetFS,
+  Filesystem targetFS,
   String rpPath,
   String targetPath, {
   bool rpUnmount = true,
@@ -313,9 +337,9 @@ Stream<ResetMediaCreationProgress> copyAsyncJob(
   }
   try {
     if (rpUnmount) {
-      await resetPartition.unmount();
+      await resetFS.unmount();
     }
-    await targetPartition.unmount();
+    await targetFS.unmount();
     // ignore: avoid_catches_without_on_clauses
   } catch (e) {
     yield ResetMediaCreationProgress(
@@ -347,12 +371,12 @@ Stream<ResetMediaCreationProgress> createResetMedia(
 
   tmpDir.deleteSync();
 
-  Partition? resetPartition;
+  Filesystem? resetFS;
   String rpPath;
   var rpUnmount = true;
   try {
-    resetPartition = await getResetPartition(fsuuid: fsuuid);
-    rpPath = await resetPartition.mount();
+    resetFS = await getResetFilesystem(fsuuid: fsuuid);
+    rpPath = await resetFS.mount();
   } on PathNotFoundException catch (e) {
     yield ResetMediaCreationProgress(
       ResetMediaCreationStatus.failed,
@@ -363,7 +387,7 @@ Stream<ResetMediaCreationProgress> createResetMedia(
   } on DBusMethodResponseException catch (e) {
     if (e.errorName == 'org.freedesktop.UDisks2.Error.AlreadyMounted') {
       rpUnmount = false;
-      rpPath = await resetPartition!.getMountPoint();
+      rpPath = await resetFS!.getMountPoint();
     } else {
       rethrow;
     }
@@ -371,17 +395,17 @@ Stream<ResetMediaCreationProgress> createResetMedia(
 
   final targetDrive = await Drive.fromDevicePath(targetDevicePath);
   await targetDrive.unmountAndRemoveAll();
-  final targetPartition = await targetDrive.format();
-  final targetPath = await targetPartition.mount();
+  final targetFS = await targetDrive.format();
+  final targetPath = await targetFS.mount();
 
   final copyJob = copyAsyncJob(
-    resetPartition,
-    targetPartition,
+    resetFS,
+    targetFS,
     rpPath,
     targetPath,
     rpUnmount: rpUnmount,
   );
-  final copyPercentage = copyPercentageUpdate(resetPartition, targetPartition);
+  final copyPercentage = copyPercentageUpdate(resetFS, targetFS);
   final mergedStreams = StreamGroup.merge([copyJob, copyPercentage]);
 
   await for (final r in mergedStreams) {
