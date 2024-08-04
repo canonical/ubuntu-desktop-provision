@@ -97,5 +97,7 @@
   "telemetryReportLabel": "Mostra il primo rapporto",
   "@telemetryReportLabel": {},
   "telemetryLegalLabel": "Avviso legale",
-  "@telemetryLegalLabel": {}
+  "@telemetryLegalLabel": {},
+  "welcomeSecuritySubtitle": "Nuove opzioni per la crittografia basata su hardware o ZFS.",
+  "@welcomeSecuritySubtitle": {}
 }
