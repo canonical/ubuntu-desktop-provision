@@ -5,82 +5,82 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Доступність';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Доступність в $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Налаштуйте $DISTRO відповідно до ваших потреб перед початком роботи. Ви можете змінити їх пізніше в Налаштуваннях системи.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Бачачи';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Чути';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Друкуючи';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Наведення та клацання';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Зум';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Висока контрастність';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Великий текст';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Зменшити анімацію';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Зчитувач з екрану';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Візуальні попередження';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Липкі клавіші';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Повільні клавіші';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Клавіші миші';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Настільний зум';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Щось пішло не так';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезавантажити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Щоб надіслати автоматичний звіт про ваду з відповідною інформацією про налагодження, виконайте <pre>sudo ubuntu-bug $SNAP</pre> у терміналі або з командної консолі (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Показати журнал';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Сховати журнал';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Перезапустити';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрити';
 
   @override
   String get timezonePageTitle => 'Виберіть часовий пояс';
@@ -217,11 +217,11 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Налаштування Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Увійти в Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO розроблено для безперешкодної інтеграції з Active Directory для полегшення адміністрування.';
   }
 
   @override
@@ -285,7 +285,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Підключення цього комп\'ютера до Інтернету допоможе Ubuntu встановити необхідне додаткове програмне забезпечення та вибрати часовий пояс.\n\nПідключіться за допомогою кабелю Ethernet або виберіть Wi-Fi мережу';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Під\'єднання до Інтернету покращить вашу інсталяцію завдяки перевірці сумісності та додатковим пакетам програмного забезпечення.';
 
   @override
   String get networkWiredOption => 'Використовувати дротове підключення';
@@ -330,14 +330,14 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Я не хочу зараз підключатися до Інтернету';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Ліцензійна угода';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Переглянути умови ліцензії';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Щоб продовжити налаштування цього пристрою, ви повинні прочитати та прийняти умови ліцензійної угоди.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Я прочитав і приймаю ці умови';
 }
