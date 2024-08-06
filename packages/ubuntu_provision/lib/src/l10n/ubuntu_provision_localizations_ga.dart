@@ -77,10 +77,10 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Tosaigh arís';
 
   @override
-  String get close => 'Close';
+  String get close => 'Dún';
 
   @override
   String get timezonePageTitle => 'Select your timezone';

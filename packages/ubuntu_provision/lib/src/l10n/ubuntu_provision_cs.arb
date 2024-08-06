@@ -237,5 +237,13 @@
   "eulaReviewTerms": "Přečtěte si licenční podmínky",
   "@eulaReviewTerms": {},
   "eulaReadAndAcceptTerms": "Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "errorPageUbuntuBug": "Chcete-li odeslat automatické hlášení chyb včetně příslušných ladicích informací, spusťte prosím <pre>sudo ubuntu-bug {SNAP}</pre> v terminálu nebo z příkazové konzole (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

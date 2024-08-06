@@ -237,5 +237,13 @@
   "eulaPageTitle": "Umowa licencyjna",
   "@eulaPageTitle": {},
   "eulaReadAndAcceptTerms": "Aby kontynuować konfigurowanie tego urządzenia, musisz przeczytać i zaakceptować warunki umowy licencyjnej.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "errorPageUbuntuBug": "Aby wysłać zautomatyzowany raport o błędach, w tym odpowiednie informacje o debugowaniu, wykonaj polecenie <pre>sudo ubuntu-bug {SNAP}</pre> w terminalu lub z konsoli poleceń (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
