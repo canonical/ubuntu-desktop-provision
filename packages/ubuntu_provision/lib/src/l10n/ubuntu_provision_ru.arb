@@ -237,5 +237,13 @@
   "eulaReviewTerms": "Ознакомьтесь с условиями лицензии",
   "@eulaReviewTerms": {},
   "eulaReadAndAcceptTerms": "Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "errorPageUbuntuBug": "Чтобы отправлять автоматические отчёты об ошибках, включая соответствующую отладочную информацию, запустите <pre>sudo ubuntu-bug {SNAP}</pre> в терминале или из командной консоли (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

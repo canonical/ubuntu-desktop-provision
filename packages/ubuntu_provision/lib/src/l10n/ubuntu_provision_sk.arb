@@ -126,7 +126,7 @@
   "@activeDirectoryPasswordEmpty": {},
   "activeDirectoryErrorTitle": "Chyba pri konfigurácii pripojenia k Active Directory",
   "@activeDirectoryErrorTitle": {},
-  "activeDirectoryErrorMessage": "Je nám ľúto, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.",
+  "activeDirectoryErrorMessage": "Ľutujeme, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.",
   "@activeDirectoryErrorMessage": {},
   "networkPageTitle": "Pripojenie k internetu",
   "@networkPageTitle": {},
@@ -180,7 +180,7 @@
   "@accessibilityHighContrastLabel": {},
   "accessibilityLargeTextLabel": "Veľký text",
   "@accessibilityLargeTextLabel": {},
-  "accessibilityReduceAnimationLabel": "Redukcia animácie",
+  "accessibilityReduceAnimationLabel": "Obmedziť animáciu",
   "@accessibilityReduceAnimationLabel": {},
   "accessibilityScreenReaderLabel": "Čítačka obrazovky",
   "@accessibilityScreenReaderLabel": {},
@@ -218,7 +218,7 @@
   },
   "accessibilityHearingLabel": "Sluch",
   "@accessibilityHearingLabel": {},
-  "errorPageUnexpected": "Ospravedlňujeme sa, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.",
+  "errorPageUnexpected": "Ľutujeme, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.",
   "@errorPageUnexpected": {},
   "activeDirectoryInfo": "{DISTRO} je navrhnuté tak, aby sa bezproblémovo integrovalo s Active Directory pre jednoduchšiu správu.",
   "@activeDirectoryInfo": {
@@ -237,5 +237,13 @@
   "eulaPageTitle": "Licenčná zmluva",
   "@eulaPageTitle": {},
   "eulaReadAndAcceptTerms": "Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "errorPageUbuntuBug": "Ak chcete odoslať automatizované hlásenie o chybe vrátane relevantných informácií o ladení, spustite <pre>sudo ubuntu-bug {SNAP}</pre> v termináli alebo z príkazovej konzoly (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

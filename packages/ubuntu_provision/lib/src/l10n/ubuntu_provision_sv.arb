@@ -237,5 +237,13 @@
   "eulaReadAndAcceptTerms": "För att fortsätta konfigurera den här maskinen måste du läsa och acceptera villkoren för licensavtalet.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "Jag har läst och accepterar dessa villkor",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "För att skicka en automatiserad buggrapport som inkluderar relevant felsökningsinformation, vänligen kör <pre>sudo ubuntu-bug{SNAP}</pre> i en terminal, eller från kommandokonsolen (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

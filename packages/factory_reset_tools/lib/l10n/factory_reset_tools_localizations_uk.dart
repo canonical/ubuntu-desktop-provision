@@ -5,94 +5,94 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Інструменти для скидання до заводських налаштувань';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Інструменти для скидання до заводських налаштувань';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Що б ви хотіли зробити?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Створити носій для скидання';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Почати скидання до заводських налаштувань';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Створити USB-носій для скидання налаштувань';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Створити USB-носій для відновлення системи, а також налаштувати ваші установки Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Вибрати USB-накопичувач. На диску повинно бути **принаймні 16 ГБ вільного місця.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Флешка буде переформатована і всі дані на ній будуть втрачені.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-носій для скидання налаштувань';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Знімний накопичувач не виявлено';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Для створення носія зі скиданням до заводських налаштувань вам знадобиться USB-накопичувач.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Виберіть опцію для запуску скидання до заводських налаштувань';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Зачекайте, будь ласка, поки ми принесемо диски.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-носій для скидання готовий';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Коли ви захочете скористатися цим, вставте USB-накопичувач у комп\'ютер, який ви хочете перезавантажити, і перезавантажте його.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Виникла помилка під час отримання дисків.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Ініціалізація';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Копіювання';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Завершення';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Завершено';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Не вдалося';
 
   @override
-  String get error => 'Error';
+  String get error => 'Помилка';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Завантаження...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Попередження';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Відновити';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Перезапустити';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Переформатувати';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Не вдалося запустити команду';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрити';
 
   @override
   String get ok => 'OK';

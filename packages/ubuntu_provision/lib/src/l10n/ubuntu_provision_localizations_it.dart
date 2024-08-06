@@ -5,16 +5,16 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsIt([String locale = 'it']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Accessibilità';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Accessibilità in $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Personalizza $DISTRO in base alle tue esigenze prima della configurazione. Puoi modificarli in seguito in Impostazioni di sistema.';
   }
 
   @override
@@ -33,16 +33,16 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Alto contrasto';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Testo grande';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Reduce animation';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Lettore di schermo';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Visual alerts';

@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsGa([String locale = 'ga']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Uirlisí monarchan athshocrú';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Uirlisí monarchan athshocrú';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Céard ba mhaith leat a dhéanamh?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Cruthaigh meáin athshocraithe';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Tosaigh athshocrú monarchan';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Cruthaigh meáin athshocraithe USB';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Cruthaigh meáin athshocraithe USB chun an córas a athchóiriú, chomh maith le do shuiteálacha Ubuntu a shaincheapadh.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Roghnaigh tiomántán USB flash. Caithfidh **16GB ar a laghad de spás a bheith ar an tiomántán.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Déanfar an tiomáint flash a athfhormáidiú agus caillfear na sonraí go léir ar an tiomántán.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Meáin athshocrú USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Ní aimsítear aon stóráil inbhainte';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Teastaíonn stór USB uait chun Meáin Athshocraigh Monarcha a chruthú.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Roghnaigh rogha chun athshocrú mhonarcha a thosú';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Fan le do thoil agus muid ag tabhairt na dtiomántáin.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Tá meáin athshocraithe USB réidh';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Nuair is mian leat é a úsáid, cuir isteach an tiomántán USB isteach sa ríomhaire is mian leat a athshocrú agus é a atosú.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Tharla earráid agus na tiomántáin á bhfáil.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Ag tosú';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Cóipeáil';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Ag críochnú';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Críochnaithe';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Theip';
 
   @override
-  String get error => 'Error';
+  String get error => 'Earráid';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Á lódáil...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Rabhadh';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Athchóirigh';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Tosaigh arís';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Athfhormáid';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Theip ar an ordú a rith';
 
   @override
-  String get close => 'Close';
+  String get close => 'Dún';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ceart go leor';
 }

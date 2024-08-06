@@ -39,7 +39,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Veľký text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Redukcia animácie';
+  String get accessibilityReduceAnimationLabel => 'Obmedziť animáciu';
 
   @override
   String get accessibilityScreenReaderLabel => 'Čítačka obrazovky';
@@ -63,11 +63,11 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Niečo sa pokazilo';
 
   @override
-  String get errorPageUnexpected => 'Ospravedlňujeme sa, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.';
+  String get errorPageUnexpected => 'Ľutujeme, ale nie sme si istí, v čom je chyba. Môžete skúsiť reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Ak chcete odoslať automatizované hlásenie o chybe vrátane relevantných informácií o ladení, spustite <pre>sudo ubuntu-bug $SNAP</pre> v termináli alebo z príkazovej konzoly (Alt+F2).';
   }
 
   @override
@@ -276,7 +276,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'Chyba pri konfigurácii pripojenia k Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Je nám ľúto, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.';
+  String get activeDirectoryErrorMessage => 'Ľutujeme, v tejto chvíli sa nedarí nastaviť službu Active Directory. Po spustení systému navštívte stránku <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získate ďalšie informácie.';
 
   @override
   String get networkPageTitle => 'Pripojenie k internetu';

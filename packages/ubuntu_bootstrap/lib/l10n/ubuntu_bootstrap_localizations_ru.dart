@@ -495,7 +495,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get partitionLocationEnd => 'Конец этого пространства';
 
   @override
-  String get partitionFormatLabel => 'Использовано:';
+  String get partitionFormatLabel => 'Исп. как:';
 
   @override
   String get partitionFormatNone => 'Оставить неформатированным';

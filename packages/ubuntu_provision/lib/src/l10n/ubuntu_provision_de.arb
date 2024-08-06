@@ -237,5 +237,13 @@
   "errorPageUnexpected": "Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Sie können auch das <a>Problem melden</a>.",
   "@errorPageUnexpected": {},
   "accessibilityDesktopZoomLabel": "Schreibtisch-Zoom",
-  "@accessibilityDesktopZoomLabel": {}
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageUbuntuBug": "Um einen automatisierten Fehlerbericht mit relevanten Debug-Informationen zu senden, führen Sie bitte <pre>sudo ubuntu-bug {SNAP}</pre> in einem Terminal oder von der Befehlskonsole (Alt+F2) aus.",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
