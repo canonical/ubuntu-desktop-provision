@@ -237,5 +237,13 @@
   "eulaAcceptTerms": "Mi legis kaj akceptas la jenajn kondiĉojn",
   "@eulaAcceptTerms": {},
   "eulaReadAndAcceptTerms": "Por agordi ĉi tiun komputilon, vi devas legi kaj akcepti la licencajn kondiĉojn.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "errorPageUbuntuBug": "Por sendi aŭtomatan cimraporton inkluzivantan rilatajn sistemajn informojn, bonvolu ruli <pre>sudo ubuntu-bug {SNAP}</pre> en terminalo aŭ en la komandkonzolo (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

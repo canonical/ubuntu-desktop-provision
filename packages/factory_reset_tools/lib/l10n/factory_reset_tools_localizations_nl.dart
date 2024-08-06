@@ -83,7 +83,7 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get restore => 'Restore';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Herstarten';
 
   @override
   String get reformat => 'Reformat';
@@ -92,7 +92,7 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Sluiten';
 
   @override
   String get ok => 'OK';

@@ -67,7 +67,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Por sendi aŭtomatan cimraporton inkluzivantan rilatajn sistemajn informojn, bonvolu ruli <pre>sudo ubuntu-bug $SNAP</pre> en terminalo aŭ en la komandkonzolo (Alt+F2).';
   }
 
   @override

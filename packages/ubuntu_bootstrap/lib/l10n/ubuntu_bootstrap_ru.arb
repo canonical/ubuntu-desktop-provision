@@ -249,7 +249,7 @@
   "@partitionLocationBeginning": {},
   "partitionLocationEnd": "Конец этого пространства",
   "@partitionLocationEnd": {},
-  "partitionFormatLabel": "Использовано:",
+  "partitionFormatLabel": "Исп. как:",
   "@partitionFormatLabel": {},
   "installAlongsideFiles": "Файлы",
   "@installAlongsideFiles": {},

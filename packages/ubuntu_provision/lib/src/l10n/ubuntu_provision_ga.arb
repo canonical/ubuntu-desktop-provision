@@ -10,5 +10,9 @@
   "keyboardPressKeyLabel": "Brúigh cheann de na heochracha se:",
   "@keyboardPressKeyLabel": {},
   "keyboardKeyPresentLabel": "An bhfuil an eochair seo ann ar do mhéarchlár?",
-  "@keyboardKeyPresentLabel": {}
+  "@keyboardKeyPresentLabel": {},
+  "restart": "Tosaigh arís",
+  "@restart": {},
+  "close": "Dún",
+  "@close": {}
 }
