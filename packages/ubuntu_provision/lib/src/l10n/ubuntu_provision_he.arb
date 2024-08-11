@@ -237,5 +237,13 @@
   "eulaReadAndAcceptTerms": "כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "קראתי והתנאים האלה מקובלים עליי",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "כדי לשלוח דיווח אוטומטי על תקלה כולל הפרטים שקשורים אליה, נא להריץ את <pre>sudo ubuntu-bug {SNAP}</pre> במסוף, או ממסוף שורת הפקודה (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
