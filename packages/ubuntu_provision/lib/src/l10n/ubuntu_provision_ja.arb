@@ -237,5 +237,13 @@
   "eulaReadAndAcceptTerms": "マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "よく読んで許諾書条件に同意しました",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "デバッグ情報に関連する情報を含んだ自動バグレポートを送信するには、<pre>sudo ubuntu-bug {SNAP}</pre>をターミナルかコマンドコンソール (Alt+F2)で実行してください。",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
