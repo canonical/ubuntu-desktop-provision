@@ -108,5 +108,7 @@
   "ubuntuProSucessAttachHeader": "このマシンでUbuntu Proを有効にしました",
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "「ソフトウェアとアップデート」アプリでProサービスを設定できます。",
-  "@ubuntuProSucessAttachDescription": {}
+  "@ubuntuProSucessAttachDescription": {},
+  "telemetryCollectError": "テレメトリーデータの収集に失敗",
+  "@telemetryCollectError": {}
 }
