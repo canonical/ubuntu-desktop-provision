@@ -496,7 +496,7 @@
       }
     }
   },
-  "hideSecurityKey": "Приховати",
+  "hideSecurityKey": "Сховати",
   "@hideSecurityKey": {},
   "rebootToConfigureWarning": "Щоб продовжити процес встановлення, потрібно перезапустити комп'ютер.",
   "@rebootToConfigureWarning": {},
@@ -601,7 +601,7 @@
       }
     }
   },
-  "autoinstallTitle": "Тип установки",
+  "autoinstallTitle": "Тип встановлення",
   "@autoinstallTitle": {},
   "autoinstallHeader": "Як ви хочете встановити {DISTRO}?",
   "@autoinstallHeader": {
@@ -613,11 +613,11 @@
   },
   "autoinstallInstructions": "Введіть URL-адресу autoinstall.yaml або шлях до локального файлу:",
   "@autoinstallInstructions": {},
-  "autoinstallInteractiveOption": "Інтерактивна інсталяція",
+  "autoinstallInteractiveOption": "Інтерактивне встановлення",
   "@autoinstallInteractiveOption": {},
-  "autoinstallInteractiveDescription": "Для користувачів, які хочуть отримати покрокову інструкцію по встановленню.",
+  "autoinstallInteractiveDescription": "Для користувачів, які хочуть отримати покрокову інструкцію зі встановлення.",
   "@autoinstallInteractiveDescription": {},
-  "autoinstallAutomatedOption": "Автоматизована установка",
+  "autoinstallAutomatedOption": "Автоматизоване встановлення",
   "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "Для досвідчених користувачів, які мають файл autoinstall.yaml для послідовного та повторюваного налаштування системи.",
   "@autoinstallAutomatedDescription": {},
@@ -631,11 +631,11 @@
       }
     }
   },
-  "codecsAndDriversPageTitle": "Оптимізувати ваш комп'ютер",
+  "codecsAndDriversPageTitle": "Оптимізуйте свій комп'ютер",
   "@codecsAndDriversPageTitle": {},
-  "codecsAndDriversPageDescription": "Встановити рекомендоване пропрієтарне програмне забезпечення?",
+  "codecsAndDriversPageDescription": "Встановити рекомендоване власницьке програмне забезпечення?",
   "@codecsAndDriversPageDescription": {},
-  "codecsAndDriversPageBody": "{DISTRO} за замовчуванням постачається без пропрієтарного програмного забезпечення. Встановлення додаткового програмного забезпечення може покращити продуктивність вашого комп'ютера.",
+  "codecsAndDriversPageBody": "{DISTRO} усталено постачається без власницького програмного забезпечення. Встановлення додаткового програмного забезпечення може підвищити швидкодію вашого комп'ютера.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -645,7 +645,7 @@
   },
   "codecsAndDriversNvidiaNote": "Виявлено відеокарту NVIDIA",
   "@codecsAndDriversNvidiaNote": {},
-  "codecsAndDriversNvidiaBody": "Для найкращої продуктивності відеокарт NVIDIA наполегливо рекомендується встановити додаткові драйвери.",
+  "codecsAndDriversNvidiaBody": "Для найкращої швидкодії відеокарт NVIDIA наполегливо радимо встановити додаткові драйвери.",
   "@codecsAndDriversNvidiaBody": {},
   "batteryWarning": "Комп'ютер не підключено до джерела живлення.",
   "@batteryWarning": {},
