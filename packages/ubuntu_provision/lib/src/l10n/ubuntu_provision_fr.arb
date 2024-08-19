@@ -237,5 +237,13 @@
     }
   },
   "networkPageBody": "Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.",
-  "@networkPageBody": {}
+  "@networkPageBody": {},
+  "errorPageUbuntuBug": "Pour envoyer un rapport de bogue automatisé incluant les informations de débogage pertinentes, veuillez exécuter <pre>sudo ubuntu-bug {SNAP}</pre> dans un terminal ou depuis la console de commande (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

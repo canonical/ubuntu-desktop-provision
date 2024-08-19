@@ -750,7 +750,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Introduza o URL autoinstall.yaml:",
+  "autoinstallInstructions": "Introduza o URL autoinstall.yaml ou a localização do ficheiro local:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Instalação interativa",
   "@autoinstallInteractiveOption": {},

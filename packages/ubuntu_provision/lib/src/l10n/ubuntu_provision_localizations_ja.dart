@@ -67,7 +67,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'デバッグ情報に関連する情報を含んだ自動バグレポートを送信するには、<pre>sudo ubuntu-bug $SNAP</pre>をターミナルかコマンドコンソール (Alt+F2)で実行してください。';
   }
 
   @override

@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsGa([String locale = 'ga']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Suiteálaí Deisce Ubuntu';
 
   @override
   String windowTitle(String RELEASE) {
@@ -13,62 +13,62 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Cineál suiteála';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Conas ba mhaith leat ${DISTRO}a shuiteáil?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'Iontráil URL autoinstall.yaml nó cosán comhaid logánta:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Suiteáil idirghníomhach';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'D\'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Suiteáil uathoibrithe';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'I gcás úsáideoirí chun cinn a bhfuil autoinstall.yaml acu le haghaidh socruithe córais comhsheasmhacha agus in-athdhéanta.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'Athrú';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Scoir den tsuiteáil';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Fáilte go $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return 'Ag ullmhú $DISTRO…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Rabhadh:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'Bain triail as nó suiteáil $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Cad ba mhaith leat a dhéanamh le $DISTRO?';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'Suiteáil deisiúcháin';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'Beidh deisiú reinstall gach bogearraí suiteáilte gan teagmháil doiciméid nó suímh.';
 
   @override
   String tryOption(String RELEASE) {
@@ -77,7 +77,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Is féidir leat triail a bhaint as $RELEASE gan aon athruithe a dhéanamh ar do ríomhaire.';
   }
 
   @override
@@ -87,7 +87,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Suiteáil $RELEASE in éineacht (nó in ionad) do chóras oibriúcháin reatha. Níor cheart go dtógfadh sé seo rófhada.';
   }
 
   @override
@@ -96,426 +96,426 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'Braitheadh RST';
 
   @override
-  String get rstHeader => 'Turn off RST to continue';
+  String get rstHeader => 'Cas as RST chun leanúint ar aghaidh';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing $DISTRO.';
+    return 'Úsáideann an ríomhaire seo Intel RST (Teicneolaíocht Stórála Mear). Ní mór duit RST a mhúchadh in Windows sula suiteálann tú $DISTRO.';
   }
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Le treoracha a fháil, scanadh an cód QR ar ghléas eile nó tabhair cuairt ar: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Cumraigh Tosaithe Slán';
 
   @override
-  String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+  String get configureSecureBootDescription => 'Roghnaigh tú bogearraí tiománaí tríú páirtí a shuiteáil. Éilíonn sé seo Tosaithe Slán a chasadh as.\nChun seo a dhéanamh, ní mór duit eochair slándála a roghnú anois, agus é a chur isteach nuair a thosaíonn an córas.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Cumraigh Tosaithe Slán';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'Roghnaigh eochair slándála';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'Deimhnigh an eochair slándála';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';
+  String get dontInstallDriverSoftwareNow => 'Ná suiteáil na bogearraí tiománaí anois';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'You can install it later from Software & Updates.';
+  String get dontInstallDriverSoftwareNowDescription => 'Is féidir leat é a shuiteáil níos déanaí ó Bogearraí & Nuashonruithe.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'Tá eochair shlándála de dhíth';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'Ní mheaitseálann eochracha slándála';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Taispeáin';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Folaigh';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'Iarratais';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
+  String get updatesOtherSoftwarePageDescription => 'Cad iad na feidhmchláir ar mhaith leat a shuiteáil chun tosú leo?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optamaigh do ríomhaire';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Suiteáil bogearraí dílseánaigh molta?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO longa gan aon bhogearraí dílseánaigh de réir réamhshocraithe. D\'fhéadfadh suiteáil bogearraí breise feidhmíocht do ríomhaire a fheabhsú.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Braitheadh cárta grafaicí NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Maidir leis an bhfeidhmíocht is fearr de chártaí grafacha NVIDIA, moltar go láidir tiománaithe breise a shuiteáil.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Roghnúchán breisithe';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'Rogha as líne d\'uirlisí oifige, fóntais agus brabhsálaí gréasáin.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Roghnú réamhshocraithe';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Díreach na essentials, brabhsálaí gréasáin agus fóntais bhunúsacha.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'Roghanna eile';
 
   @override
-  String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+  String get installThirdPartyTitle => 'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi, chomh maith le formáidí meáin breise';
 
   @override
-  String get installThirdPartySubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installThirdPartySubtitle => 'Tá an bogearraí seo faoi réir téarmaí ceadúnais san áireamh lena dhoiciméadú. Tá cuid acu dílsithe.';
 
   @override
-  String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
+  String get installDriversTitle => 'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'Lena n-áirítear tiománaithe NVIDIA agus tiománaithe';
 
   @override
-  String get installCodecsTitle => 'Download and install support for additional media formats';
+  String get installCodecsTitle => 'Íoslódáil agus suiteáil tacaíocht le haghaidh formáidí meáin breise';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'Lena n-áirítear MP3, MP4, MOV agus';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Níl an ríomhaire plugáilte isteach i bhfoinse cumhachta.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Tá tú as líne faoi láthair';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Pasfhrása diosca';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Cruthaigh pasfhrása';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Roghnaigh pasfhrása';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Deimhnigh an pasfhrása';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Tá pasfhrása de dhíth';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Ní mheaitseálann na pasfhrásaí';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Cinntigh go sábhálann tú do phasfhrása';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do chuid sonraí go léir.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Cruthaigh pasfhrása';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Deimhnigh an pasfhrása';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Socrú diosca';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Conas is mian leat ${DISTRO}a shuiteáil?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'Tá $os ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'Tá $os1 agus $os2 ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'This computer currently has multiple operating systems on it. What would you like to do?';
+  String get installationTypeMultiOSDetected => 'Tá córais oibriúcháin éagsúla ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
 
   @override
-  String get installationTypeNoOSDetected => 'This computer currently has no detected operating systems. What would you like to do?';
+  String get installationTypeNoOSDetected => 'Níl aon chórais oibriúcháin aimsithe ag an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Léirscrios diosca agus suiteáil $DISTRO';
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Tosaigh ón tús ar do dhiosca roghnaithe.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced features...';
+  String get installationTypeAdvancedLabel => 'Gnéithe casta...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Advanced features';
+  String get installationTypeAdvancedTitle => 'Gnéithe casta';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Turgnamhach';
 
   @override
-  String get installationTypeNone => 'None';
+  String get installationTypeNone => 'Ceann ar bith';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Níl aon cheann roghnaithe';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Úsáid LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM roghnaithe';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Úsáid LVM agus criptiú';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String get installationTypeLVMEncryptionSelected => 'LVM agus criptiú roghnaithe';
 
   @override
-  String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
+  String get installationTypeEncryptInfo => 'Roghnóidh tú eochair slándála sa chéad chéim eile.';
 
   @override
-  String get installationTypeZFS => 'Erase disk and use ZFS';
+  String get installationTypeZFS => 'Léirscrios diosca agus úsáid ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Léirscrios diosca agus úsáid ZFS le criptiú';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS roghnaithe';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS agus criptiú roghnaithe';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Cumasaigh criptiú diosca iomlán le tacaíocht crua-earraí';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before your choose this option.';
+    return 'Is gné thurgnamhach é seo. Seans nach n-oibreoidh sé le do chrua-earraí nó le heisiúintí $DISTRO amach anseo. <a href=\"$url\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM roghnaithe';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Léirscrios $os agus reinstall';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Rabhadh:</font> Scriosfaidh sé seo do ríomhchláir, doiciméid, grianghraif, ceol agus comhaid ar bith eile $os.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Suiteáil $product in éineacht le $os';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Suiteáil $product in éineacht le $os1 agus $os2';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside them';
+    return 'Suiteáil $product in éineacht leo';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Suiteáil $product in éineacht le deighiltí eile';
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
+  String get installationTypeAlongsideInfo => 'Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.';
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Suiteáil láimhe';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'D\'úsáideoirí chun cinn ag lorg socruithe diosca saincheaptha.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Léirscrios diosca agus suiteáil $DISTRO';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Tosaigh ón tús ar do dhiosca roghnaithe.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Roghnaigh tiomántán:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Roghnaigh laindéal:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'Úsáidfear an diosca iomlán:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Suiteáil anois';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Roghnaigh cá háit le $DISTRO a shuiteáil';
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';
+  String get installAlongsideSpaceDivider => 'Leithdháileadh spás tiomána tríd an roinnteoir a tharraingt thíos:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return 'Tá $num deighiltí níos lú i bhfolach, bain úsáid as an <a href=\"$url\">uirlis ardroinnte</a> le haghaidh tuilleadh rialaithe';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Athraigh méid na críochdheighilte';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Spás a leithdháileadh';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Comhaid';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Críochdheighilt:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Méid:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Ar fáil:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Deighilt láimhe';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Ní mór pointí Mount tús a chur le \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Ní féidir spásanna a bheith i bpointí feistithe';
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Gléas';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'Cineál';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Pointe feistithe';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Méid';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Úsáidte';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Córas';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Formáid';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Spás saor in aisce';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Tábla nua críochdheighilte';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Críochdheighilt fholamh nua';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+  String get newPartitionTableConfirmationMessage => 'Beidh Cruthú tábla laindéal nua ar gléas ar fad a bhaint gach ceann de na Deighiltí atá ann faoi láthair. Is féidir an oibríocht seo a chealú más gá.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'An iomarca críochdheighiltí bunscoile';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Teorainn bainte amach';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'Gléas le haghaidh suiteáil loader tosaithe';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Cruthaigh críochdheighilt';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Cuir críochdheighilt in eagar';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Méid:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Cineál don laindéal nua:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Bunscoileanna';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Loighciúil';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Suíomh don chríochdheighilt nua:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Tús an spáis seo';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Deireadh an spáis seo';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Úsáidte mar:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Fág gan fhoirm';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Fág formáidithe mar $format';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'Formáidigh an laindéal';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Pointe gléasta:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Réidh le suiteáil';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Déan athbhreithniú ar do chuid roghanna';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -524,40 +524,40 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionZFS => 'LUKS (ZFS)';
 
   @override
-  String get confirmDiskEncryptionTPM => 'TPM';
+  String get confirmDiskEncryptionTPM => 'TPMName';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Ceann ar bith';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Gléasanna';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Iarratais';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Socrú diosca';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Criptiú diosca';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Diosca suiteála';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Bogearraí dílseánaigh';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Ginearálta';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Slándáil & tuilleadh';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Deighiltí';
 
   @override
-  String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
+  String get confirmPartitionTables => 'Athraítear táblaí críochdheighilte na ngléasanna seo a leanas:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -565,402 +565,402 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'The following partition changes are going to be applied:';
+  String get confirmPartitionChanges => 'Tá na hathruithe críochdheighilte seo a leanas le cur i bhfeidhm:';
 
   @override
   String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'partition <b>$sysname</b> resized from <b>$oldsize</b> to <b>$newsize</b>';
+    return 'críochdheighilte <b>$sysname</b> athrú méide ó <b>$oldsize</b> go <b>$newsize</b>';
   }
 
   @override
   String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'partition <b>$sysname</b> formatted as <b>$format</b> used for <b>$mount</b>';
+    return 'deighilt <b>$sysname</b> formáidithe mar <b>$format</b> a úsáidtear le haghaidh <b>$mount</b>';
   }
 
   @override
   String confirmPartitionFormat(String sysname, String format) {
-    return 'partition <b>$sysname</b> formatted as <b>$format</b>';
+    return 'deighilt <b>$sysname</b> formáidithe mar <b>$format</b>';
   }
 
   @override
   String confirmPartitionMount(String sysname, String mount) {
-    return 'partition <b>$sysname</b> used for <b>$mount</b>';
+    return 'deighilt <b>$sysname</b> a úsáidtear le haghaidh <b>$mount</b>';
   }
 
   @override
   String confirmPartitionCreate(String sysname) {
-    return 'partition <b>$sysname</b> created';
+    return 'deighilt <b>$sysname</b> cruthaithe';
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'CodecsName';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs agus tiománaithe';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Tiománaithe';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Suiteáil';
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Suiteáil curtha i gcrích';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return 'Tá $system suiteáilte agus réidh le húsáid';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** cóipeáladh chuig an diosca';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Atosaigh i $system';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Atosaigh chun an tsuiteáil a chríochnú nó leanúint ar aghaidh leis an tástáil.\nNí shábhálfar aon athruithe a dhéanann tú.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Caithfidh tú an ríomhaire a atosú chun leanúint leis an bpróiseas suiteála.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'Múch';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Atosaigh anois';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Leanúint ar aghaidh leis an tástáil';
 
   @override
-  String get bitlockerTitle => 'BitLocker is enabled';
+  String get bitlockerTitle => 'Tá BitLocker cumasaithe';
 
   @override
-  String get bitlockerHeader => 'Turn off BitLocker to continue';
+  String get bitlockerHeader => 'Cas as BitLocker chun leanúint ar aghaidh';
 
   @override
   String bitlockerDescription(String option) {
-    return 'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'$option\' to continue.';
+    return 'Úsáideann an ríomhaire seo criptiú Windows BitLocker.\nNí mór duit Windows a úsáid chun spás saor in aisce a chruthú nó dul ar ais agus \'$option\' a roghnú chun leanúint ar aghaidh.';
   }
 
   @override
   String bitlockerInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Le treoracha a fháil, scanadh an cód QR ar ghléas eile nó tabhair cuairt ar: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Atosaigh isteach Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Atosaigh i Windows?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'An bhfuil tú cinnte go bhfuil fonn ort do ríomhaire a atosú? Beidh ort an tsuiteáil $DISTRO a atosú níos déanaí chun suiteáil $DISTRO a chríochnú.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Fáilte go $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Ar fáil:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'San áireamh:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'Fast, saor in aisce agus lán de ghnéithe nua';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'Déanann an leagan is déanaí de $DISTRO ríomhaireacht níos éasca ná riamh.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Cibé an forbróir, cruthaitheoir, gamer nó riarthóir tú gheobhaidh tú uirlisí nua chun do tháirgiúlacht a fheabhsú agus do thaithí i ${RELEASE}a fheabhsú.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Na hiarratais go léir a theastaíonn uait';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Suiteáil, bainistigh agus nuashonraigh do chuid feidhmchlár go léir i mBogearraí Ubuntu, lena n-áirítear na mílte feidhmchlár ón Snap Store agus ón gcartlann $DISTRO araon.';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Develop with the best of open source';
+  String get installationSlidesDevelopmentTitle => 'Forbairt leis an chuid is fearr de fhoinse oscailte';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return 'Is é $DISTRO an stáisiún oibre idéalach d\'fhorbairt app nó gréasáin, eolaíocht sonraí agus AI / ML chomh maith le devops agus riarachán. Cuimsíonn gach eisiúint $DISTRO na huirlisí is déanaí agus tacaíonn sé le gach IDEs mór.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Feabhas a chur ar do chruthaitheacht';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Más beochantóir, dearthóir, cruthaitheoir físe nó forbróir cluiche tú tá sé éasca do shreabhadh oibre a thabhairt chuig $DISTRO le tacaíocht do bhogearraí agus feidhmchláir caighdeánacha foinse oscailte agus tionscail.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Iontach do chearrbhachas';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'Tacaíonn $DISTRO leis na tiománaithe NVIDIA agus Mesa is déanaí chun feidhmíocht agus comhoiriúnacht a fheabhsú. Imríonn na mílte teideal Windows go hiontach ar $DISTRO trí fheidhmchláir cosúil le Gaile gan aon chumraíocht bhreise.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Príobháideach agus slán';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return 'Soláthraíonn $DISTRO na huirlisí go léir a theastaíonn uait chun fanacht príobháideach agus slán ar líne. Le tacaíocht balla dóiteáin agus VPN tógtha agus a lán feidhmchlár atá dírithe ar phríobháideachas chun a chinntiú go bhfuil smacht iomlán agat ar do chuid sonraí.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Tagann gach eisiúint LTS $DISTRO le cúig bliana de phaisteáil slándála san áireamh, ag síneadh go deich mbliana le síntiús Ubuntu Pro.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Power up your productivity';
+  String get installationSlidesProductivityTitle => 'Cumhacht suas do tháirgiúlacht';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO Áirítear ar an deasc LibreOffice, sraith feidhmchlár foinse oscailte comhoiriúnach Microsoft Office do dhoiciméid, scarbhileoga agus cur i láthair. Tá uirlisí comhoibrithe coitianta ar fáil freisin.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Rochtain do gach duine';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return 'I gcroílár na fealsúnachta $DISTRO tá an creideamh go bhfuil ríomhaireacht do gach duine. Le huirlisí inrochtaineachta chun cinn agus roghanna chun teanga, dathanna agus méid téacs a athrú, déanann $DISTRO ríomhaireacht éasca - cibé duine agus cibé áit a bhfuil tú.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'Léitheoir Scáileáin Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Tacaíocht teanga';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Cabhair agus tacaíocht';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'Tá an doiciméadú oifigiúil $DISTRO ar fáil ar líne agus tríd an deilbhín Cabhair sa duga.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+  String get installationSlidesSupportCommunity => 'Clúdaíonn Ask Ubuntu raon ceisteanna agus freagraí agus soláthraíonn Dioscúrsa Ubuntu treoracha agus plé d\'úsáideoirí nua agus a bhfuil taithí acu.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+  String get installationSlidesSupportEnterprise => 'D\'úsáideoirí fiontair soláthraíonn Canonical tacaíocht tráchtála chun é a dhéanamh éasca le dul ar bord agus Ubuntu a bhainistiú go daingean san ionad oibre.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Acmhainní cabhracha:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Doiciméid oifigiúla';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'Tacaíocht fiontar-grád 24 / 7 le Ubuntu Pro';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Comhaid á gcóipeáil…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'An córas á shuiteáil…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'An córas á bhunú…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Theip ar shuiteáil';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Níl go leor spás diosca ann';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Níl go leor spás diosca le suiteáil $DISTRO';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Níl go leor spáis diosca ag an diosca roghnaithe chun $DISTRO a shuiteáil. Scoir den suiteálaí chun spás a chur ar fáil nó roghnaigh diosca eile.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Ar fáil:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'De Dhíth:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Nuashonrú ar fáil';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Tá nuashonrú ar fáil don suiteálaí';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Nuashonraigh anois';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Nuashonrú ar an leagan is déanaí le haghaidh iontaofacht níos fearr agus gnéithe níos mó.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Nuashonraigh réidh';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'Is é $version an leagan $snap reatha.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Nuashonrú go leagan $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'Tá an leagan reatha $version cothrom le dáta.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snapá nuashonrú...';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'Dún an suiteálaí agus athsheoladh chun leanúint ar aghaidh';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Dún an suiteálaí';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Réamhriachtanais $snap a chinntiú...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'Athnuachan $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Seiceáil $snap ath-athnuachan...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return 'Ag ullmhú $snap...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'Ag íosluchtú $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'Ag bailíochtú $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'Gléasta $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'Ag stopadh seirbhísí $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'Ailiasanna $snap á mbaint...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Ag dínascadh $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Sócmhainní $snap á nuashonrú...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Líne ordaithe eithne $snap á nuashonrú...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'Sonraí $snap á gcóipeáil...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Próifílí slándála $snap á mbunú...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Ag nascadh $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Plocóidí agus sliotáin $snap á nascadh...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Ailiasanna uathoibríocha $snap á socrú...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Ailiasanna $snap á mbunú...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Seirbhísí $snap á thosú...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Ag glanadh suas $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Eochair aisghabhála TPM';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Is féidir leat rochtain a fháil ar d\'eochair a ghnóthú tar éis a shuiteáil leis an ordú seo a leanas:';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Rabhadh:</font> Má chailleann tú an eochair shlándála seo, caillfear na sonraí go léir. Más gá duit, scríobh síos d’eochair agus coinnigh in áit shábháilte í.';
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Bailíochtaigh';
 }
