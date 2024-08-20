@@ -19,8 +19,8 @@ import datetime
 ############################################################
 
 # Product name
-project = 'Documentation starter pack'
-author = 'Canonical Ltd.'
+project = 'Ubuntu Desktop Provision'
+author = 'Canonical Group Ltd.'
 
 # The title you want to display for the documentation in the sidebar.
 # You might want to include a version number here.
@@ -84,26 +84,26 @@ html_context = {
     # Change to the discourse instance you want to be able to link to
     # using the :discourse: metadata at the top of a file
     # (use an empty value if you don't want to link)
-    'discourse': 'https://discourse.ubuntu.com',
+    'discourse': '',
 
     # Change to the Mattermost channel you want to link to
     # (use an empty value if you don't want to link)
-    'mattermost': 'https://chat.canonical.com/canonical/channels/documentation',
+    'mattermost': '',
 
     # Change to the Matrix channel you want to link to
     # (use an empty value if you don't want to link)
-    'matrix': 'https://matrix.to/#/#documentation:ubuntu.com',
+    'matrix': 'https://matrix.to/#/#ubuntu-apps:matrix.org',
 
     # Change to the GitHub URL for your project
     # This is used, for example, to link to the source files and allow creating GitHub issues directly from the documentation.
-    'github_url': 'https://github.com/canonical/sphinx-docs-starter-pack',
+    'github_url': 'https://github.com/canonical/ubuntu-desktop-provision',
 
     # Change to the branch for this version of the documentation
     'github_version': 'main',
 
     # Change to the folder that contains the documentation
     # (usually "/" or "/docs/")
-    'github_folder': '/',
+    'github_folder': '/docs/',
 
     # Change to an empty value if your GitHub repo doesn't have issues enabled.
     # This will disable the feedback button and the issue link in the footer.
@@ -143,6 +143,8 @@ redirects = {}
 # Links to ignore when checking links
 linkcheck_ignore = [
     'http://127.0.0.1:8000'
+    'https://manpages.ubuntu.com'
+    'https://matrix.to/#/#ubuntu-apps:matrix.org'
     ]
 
 # Pages on which to ignore anchors
@@ -158,6 +160,9 @@ custom_linkcheck_anchors_ignore_for_url = []
 
 # Remove this variable to disable the MyST parser extensions.
 custom_myst_extensions = []
+
+# Autogenerate heading anchors down to level 3
+myst_heading_anchors = 3
 
 # Add custom Sphinx extensions as needed.
 # This array contains recommended extensions that should be used.
@@ -188,6 +193,8 @@ custom_required_modules = [
 # Add files or directories that should be excluded from processing.
 custom_excludes = [
     'doc-cheat-sheet*',
+    'cheatsheets',
+    'readme.rst',
     ]
 
 # Add CSS files (located in .sphinx/_static/)

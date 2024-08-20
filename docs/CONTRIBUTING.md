@@ -1,10 +1,12 @@
+(contribute)=
+
 # Contributing to Ubuntu Desktop Provision
 
 A big welcome and thank you for considering contributing to Ubuntu Desktop Provision and Ubuntu! It’s people like you that make it a reality for users in our community.
 
-Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved. It also communicates that you agree to respect the time of the developers managing and developing this project. In return, we will reciprocate that respect by addressing your issue, assessing changes, and helping you finalize your pull requests.
+Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved. It also communicates that you agree to respect the time of the developers managing and developing this project. In return, we will reciprocate that respect by addressing your issue, assessing changes, and helping you finalise your pull requests.
 
-These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+These are mostly guidelines, not rules. Use your best judgement, and feel free to propose changes to this document in a pull request.
 
 ## Quicklinks
 
@@ -33,7 +35,7 @@ We take our community seriously and hold ourselves and other contributors to hig
 
 PRs to our project are always welcome and can be a quick way to get your fix or improvement slated for the next release. In general, PRs should:
 
-* Only fix/add the functionality in question **OR** address wide-spread whitespace/style issues, not both.
+* Only fix/add the functionality in question **OR** address wide-spread empty space/style issues, not both.
 * Add unit or integration tests for fixed or changed functionality.
 * Address a single concern in the least number of changed lines as possible.
 
@@ -41,7 +43,7 @@ For changes that address core functionality or would require breaking changes (e
 
 In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susam/gitpr)
 
-1. Fork the repository to your own Github account
+1. Fork the repository to your own GitHub account
 1. Clone the project to your machine
 1. Create a branch locally with a succinct but descriptive name
 1. Commit changes to the branch
@@ -66,7 +68,7 @@ Translations are managed using [Weblate](https://hosted.weblate.org/projects/ubu
 
 [Install Flutter](https://flutter.dev/docs/get-started/install/linux) - the currently used version is specified in `.tool-versions`. If you're using [asdf](https://asdf-vm.com/) to manage your Flutter SDK, you can simply run `asdf install` to install the required version.
 
-Fetch [subiquity](https://github.com/canonical/subiquity), which is included as a git submodule, by running
+Fetch [Subiquity](https://github.com/canonical/subiquity), which is included as a git sub-module, by running
 ```
 git submodule update --init --recursive
 ```
@@ -89,7 +91,7 @@ melos bootstrap
 
 ### Building and running the binaries
 
-Both `ubuntu-desktop-bootstrap` and `ubuntu-desktop-init` are built as snaps using `source: .` for their flutter-based ui. This works well in a prestine pipeline because there are no aretfacts, but when running locally, host artefacts may taint the snapcraft builder. Let's walk through how to build locally and address these artefact:
+Both `ubuntu-desktop-bootstrap` and `ubuntu-desktop-init` are built as snaps using `source: .` for their flutter-based UI. This works well in a pristine pipeline because there are no artefacts, but when running locally, host artefacts may taint the snapcraft builder. Let's walk through how to build locally and address these artefact:
 
 ```bash
 git clone git@github.com:canonical/ubuntu-desktop-provision.git
@@ -100,7 +102,7 @@ snapcraft
 
 If you then make local edits, subsequent runs of `snapcraft` may fail. Individual situations may differ, but generally you can clear host artefacts and rebuild with:
 
-```base
+```bash
 flutter clean
 snapcraft clean
 rm -rf packages/subiquity_client/subiquity/.subiquity
@@ -115,7 +117,7 @@ Finally, install the local build with `sudo snap install <snap-artefact-name> --
 
 The Dart/Flutter packages in this project use [freezed](https://pub.dev/packages/freezed) and
 [json_serializable](https://pub.dev/packages/json_serializable) to generate
-immutable data classes with JSON serialization support.
+immutable data classes with JSON serialisation support.
 Adding new types or members to classes annotated with `@freezed` or `@JsonSerializable` requires
 the code to be re-generated.
 

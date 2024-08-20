@@ -1,3 +1,5 @@
+(24-04-1)=
+
 # 24.04.1 OEM provisioning flow
 
 There are use-cases where it does not make sense for system installation and user creation to happen at the same time.
@@ -17,14 +19,14 @@ The version of Gnome Initial Setup in Ubuntu 24.04.1 LTS has been patched to all
 account creation and EULA pages to render if present on the system. This is in addition to its existing feature set
 that enables user account creation and setup on provisioned systems.
 
-## Table of contents
-- [How to provision Ubuntu with Gnome Initial Setup](#how-to-provision-ubuntu-with-gnome-initial-setup)
-  - [Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml](#method-1-triggering-gnome-initial-setup-via-the-new-flutter-installer-and-a-whitelabelyaml)
-  - [Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml](#method-2-triggering-gnome-initial-setup-via-an-autoinstallyaml)
-  - [EULA Page configuration](#eula-page-configuration)
-  - [EULA Language code format](#eula-language-code-format)
+% ## Table of contents
+% - [How to provision Ubuntu with Gnome Initial Setup](#how-to-provision-ubuntu-with-gnome-initial-setup)
+%   - [Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml](#method-1-triggering-gnome-initial-setup-via-the-new-flutter-installer-and-a-whitelabelyaml)
+%   - [Method 2: Triggering Gnome Initial Setup via an autoinstall.yaml](#method-2-triggering-gnome-initial-setup-via-an-autoinstallyaml)
+%   - [EULA Page configuration](#eula-page-configuration)
+%   - [EULA Language code format](#eula-language-code-format)
 
-# How-to provision Ubuntu with Gnome Initial Setup
+## How-to provision Ubuntu with Gnome Initial Setup
 
 This guide highlights different methods for provisioning a system so that Ubuntu is installed while no user 
 account is created, thereby allowing user account creation to be passed off to Gnome-Initial-Setup.
@@ -32,7 +34,7 @@ account is created, thereby allowing user account creation to be passed off to G
 ## Method 1: Triggering Gnome Initial Setup via the new Flutter installer and a whitelabel.yaml
 
 The new [Ubuntu Desktop Bootstrap](https://github.com/canonical/ubuntu-desktop-provision) Flutter installer can be 
-given a `whitelabel.yaml` file to customize its appearance and behaviour. For example, the installer can be configured
+given a `whitelabel.yaml` file to customise its appearance and behaviour. For example, the installer can be configured
 to run in a specific `mode`.
 
 When `oem` mode is active, user creation and time zone setup are skipped during installation, leaving them to be handled by Gnome Initial 
@@ -47,7 +49,7 @@ mode: oem
 Placing this `whitelabel.yaml` at `/usr/share/desktop-provision/whitelabel.yaml` on your LiveCD is sufficient 
 to skip user creation during installation, provided that you are using the new Ubuntu Desktop Bootstrap installer.
 
-A comprehensive guide to customizing a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
+A comprehensive guide to customising a LiveCD can be found [here](https://help.ubuntu.com/community/LiveCDCustomization).
 
 ### Using the Flutter installer without modifying the LiveCD
 
