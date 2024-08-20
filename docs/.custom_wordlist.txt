@@ -5,18 +5,22 @@ freezed
 GDM
 hostnames
 init
+json
 LiveCD
 Melos
 mockito
 OEMs
 PRs
 Quicklinks
+repo
 SDK
+serializable
 snapcraft
 Subiquity
 testsuite
 ubuntu
 Weblate
+whitelabel
 Whitelabel
 yaml
 
