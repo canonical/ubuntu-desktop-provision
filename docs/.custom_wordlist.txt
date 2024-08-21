@@ -1,0 +1,26 @@
+# Leave a blank line at the end of this file to support concatenation
+asdf
+autoinstall
+freezed
+GDM
+hostnames
+init
+json
+LiveCD
+Melos
+mockito
+OEMs
+PRs
+Quicklinks
+repo
+SDK
+serializable
+snapcraft
+Subiquity
+testsuite
+ubuntu
+Weblate
+whitelabel
+Whitelabel
+yaml
+

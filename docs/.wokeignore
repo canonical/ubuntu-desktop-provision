@@ -1,0 +1,6 @@
+# the cheat sheets contain a link to a repository with a block word which we
+# cannot avoid for now, ie
+# https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+doc-cheat-sheet*
+CONTRIBUTING.md
+oem-provisioning-24_04_1.md
