@@ -8,7 +8,7 @@
   "@homeTitle": {},
   "resetMediaTitle": "USB-носій для скидання налаштувань",
   "@resetMediaTitle": {},
-  "noMediaDetected": "Знімний накопичувач не виявлено",
+  "noMediaDetected": "Не виявлено знімного накопичувача",
   "@noMediaDetected": {},
   "factoryResetTitle": "Виберіть опцію для запуску скидання до заводських налаштувань",
   "@factoryResetTitle": {},
@@ -36,7 +36,7 @@
   "@failed": {},
   "createUsbTitle": "Створити USB-носій для скидання налаштувань",
   "@createUsbTitle": {},
-  "loadingDrives": "Зачекайте, будь ласка, поки ми принесемо диски.",
+  "loadingDrives": "Зачекайте, будь ласка, поки ми отримуємо диски.",
   "@loadingDrives": {},
   "noMediaDetectedSubtitle": "Для створення носія зі скиданням до заводських налаштувань вам знадобиться USB-накопичувач.",
   "@noMediaDetectedSubtitle": {},
@@ -60,6 +60,6 @@
   "@reformat": {},
   "ok": "OK",
   "@ok": {},
-  "resetMediaReadyBody": "Коли ви захочете скористатися цим, вставте USB-накопичувач у комп'ютер, який ви хочете перезавантажити, і перезавантажте його.",
+  "resetMediaReadyBody": "Коли ви захочете ним скористатися, вставте USB-накопичувач у комп'ютер, який ви хочете скинути, і перезапустіть його.",
   "@resetMediaReadyBody": {}
 }
