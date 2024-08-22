@@ -38,6 +38,7 @@ apps:
       - hardware-observe
       - mount-observe
       - dbus-system-com-canonical-oem-factory-reset-tools-client
+      - polkit
   dbus-daemon:
     command: bin/factory-reset-tools-cli dbus
     daemon: simple
@@ -47,6 +48,7 @@ apps:
       - shutdown
       - hostfs-boot-grub
       - usr-share-desktop-provision-reset-yaml
+      - polkit
 
 parts:
   flutter-git:
@@ -101,18 +103,42 @@ parts:
     plugin: nil
     override-build: |
       set -eux
-      mkdir -p $CRAFT_PART_INSTALL/bin
+      mkdir -p $CRAFT_PART_INSTALL/bin $CRAFT_PART_INSTALL/bin/polkit_agent_helper
       dart pub global activate melos
       dart pub global run melos bootstrap
-      cd packages/factory_reset_tools
+
+      pushd packages/factory_reset_tools
       dart compile exe -o factory-reset-tools-cli lib/dbus/cmdline.dart
       cp factory-reset-tools-cli $CRAFT_PART_INSTALL/bin/
+      popd
+
+      pushd packages/factory_reset_tools/lib/dbus/polkit_agent_helper
+      make helper.so
+      cp helper.so $CRAFT_PART_INSTALL/bin/polkit_agent_helper/
+      popd
     stage-packages:
       - rsync
       - grub2-common
       - uuid-runtime
     build-packages:
       - curl
+  
+  polkit-config:
+    plugin: dump
+    source: packages/factory_reset_tools/data/
+    organize:
+      polkit.com-canonical-oem-factory-reset-tools.policy: meta/polkit/
+
+  # copied from fwupd
+  # https://github.com/fwupd/fwupd/blob/main/contrib/snap/snapcraft.yaml
+  pkttyagent:
+    plugin: nil
+    stage-packages:
+      - polkitd
+      - libpolkit-agent-1-0
+    prime:
+      - usr/bin/pkttyagent
+      - usr/lib/*/libpolkit-agent-1.so*
 
 slots:
   dbus-session-com-canonical-oem-factory-reset-tools-service:
@@ -143,3 +169,5 @@ plugs:
     interface: dbus
     bus: system
     name: com.canonical.oem.FactoryResetTools
+  polkit:
+    action-prefix: com.canonical.oem.FactoryResetTools
