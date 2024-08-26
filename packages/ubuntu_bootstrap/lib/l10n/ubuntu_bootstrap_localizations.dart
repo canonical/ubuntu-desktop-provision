@@ -792,7 +792,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTPMInfo.
   ///
   /// In en, this message translates to:
-  /// **'This is an experimental feature. It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.'**
+  /// **'This is an experimental feature. It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before you choose this option.'**
   String installationTypeTPMInfo(String DISTRO, String url);
 
   /// No description provided for @installationTypeTPMSelected.

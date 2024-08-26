@@ -221,7 +221,7 @@
   "installationTypeZFSSelected": "ZFS selected",
   "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
   "installationTypeTPM": "Enable hardware-backed full disk encryption",
-  "installationTypeTPMInfo": "This is an experimental feature. It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before your choose this option.",
+  "installationTypeTPMInfo": "This is an experimental feature. It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before you choose this option.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
