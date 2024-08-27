@@ -649,7 +649,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Entrez l'URL du autoinstall.yaml :",
+  "autoinstallInstructions": "Saisir l’URL du fichier autoinstall.yaml ou le chemin d’accès local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveDescription": "Pour les utilisateurs qui veulent être guidés étape par étape à travers l'installation.",
   "@autoinstallInteractiveDescription": {},
