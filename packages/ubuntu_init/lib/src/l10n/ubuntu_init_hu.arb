@@ -1,5 +1,5 @@
 {
-  "telemetryDescription": "Adatok névtelen megosztása a(z) {distro} disztribúcióval, hogy javíthassuk az élményét.",
+  "telemetryDescription": "Segítsen nekünk a(z) {distro} továbbfejlesztésében azzal, hogy megosztja velünk a rendszere adatait. Ez olyan dolgokat tartalmaz, mint a gép modellje, a telepített szoftverek és az időzónához választott hely.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -42,7 +42,7 @@
   "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "Fokozott biztonság",
   "@welcomeSecurityTitle": {},
-  "telemetryReportLabel": "Jelentéskészítés részletei",
+  "telemetryReportLabel": "Az első jelentés megjelenítése",
   "@telemetryReportLabel": {},
   "telemetryLabelOn": "Igen, a rendszer adatainak megosztása a(z) {distro} csapatával",
   "@telemetryLabelOn": {
@@ -64,5 +64,51 @@
   "telemetryLabelOff": "Nem, ne ossza meg a rendszer adatait",
   "@telemetryLabelOff": {},
   "welcomeStartSubtitle": "Tisztább beállítási élmény támogatása.",
-  "@welcomeStartSubtitle": {}
+  "@welcomeStartSubtitle": {},
+  "telemetryCollectError": "Nem sikerült összegyűjteni a telemetria adatait",
+  "@telemetryCollectError": {},
+  "ubuntuProMagicAttachInstructions": "Varázslatos csatolás ezzel a kóddal az <a href=\"https://{url}\">{url}</a> oldalon",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenAttachSucess": "Érvényes token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Érvénytelen token, újrapróbálkozás",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Kihagyás most",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Csatolja ezt a gépet egy Ubuntu Pro előfizetéshez, hogy a csomagok szélesebb körére kapjon biztonsági frissítéseket 2032-ig.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Az Ubuntu Pro most már engedélyezve van ezen a gépen",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProHeader": "A gép csatolása",
+  "@ubuntuProHeader": {},
+  "ubuntuProTokenAttachButton": "Csatolás",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Az Ubuntu Pro engedélyezése",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOrAddTokenManually": "vagy token hozzáadása kézzel",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "A legátfogóbb előfizetés beszerzése a nyílt forráskódú szoftverek biztonságához",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Mindig ingyenes személyes használatra. 30 napos próbaidőszak a vállalkozásoknak. <a href=\"https://{url}\">Tudjon meg többet</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachError": "Érvénytelen token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Később bármikor engedélyezheti az Ubuntu Pro használatát a Szoftverek és frissítések alkalmazáson keresztül.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {}
 }
