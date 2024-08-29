@@ -1,6 +1,6 @@
 {
   "@@locale": "hu",
-  "installationTypeTitle": "Telepítés típusa",
+  "installationTypeTitle": "Lemez beállítása",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Ezen a számítógépen jelenleg {os} van. Mit szeretne tenni?",
   "@installationTypeOSDetected": {
@@ -11,7 +11,7 @@
   },
   "partitionFormatLabel": "Használva mint:",
   "@partitionFormatLabel": {},
-  "confirmHeader": "Ha folytatja, akkor az alább felsorolt változtatások a lemezekre lesznek írva. A további változtatásokat kézzel végezheti el.",
+  "confirmHeader": "Választások áttekintése",
   "@confirmHeader": {},
   "installationTypeDualOSDetected": "Ezen a számítógépen jelenleg {os1} és {os2} van. Mit szeretne tenni?",
   "@installationTypeDualOSDetected": {
@@ -41,7 +41,7 @@
   },
   "newPartitionTableConfirmationTitle": "Új üres partíció",
   "@newPartitionTableConfirmationTitle": {},
-  "installationTypeManualInfo": "Létrehozhat vagy átméretezhet partíciókat saját maga, vagy több partíciót is választhat a(z) {DISTRO} telepítéséhez",
+  "installationTypeManualInfo": "Gyakorlottabb felhasználóknak, akik személyre szabott lemezbeállításokat keresnek.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -70,9 +70,9 @@
   "@appTitle": {},
   "changeButtonText": "Változtatás",
   "@changeButtonText": {},
-  "rstDescription": "Ez a számítógép Intel RST (Rapid Storage Technology) technológiát használ. Az RST-t ki kell kapcsolnia a Windowsban az Ubuntu telepítése előtt.",
+  "rstDescription": "Ez a számítógép Intel RST (Rapid Storage Technology – gyors tárolótechnológia) technológiát használ. Ki kell kapcsolnia az RST-t a Windowsban a(z) {DISTRO} telepítése előtt.",
   "@rstDescription": {},
-  "rstInstructions": "Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Az utasításokért olvassa le a QR-kódot egy másik eszközön, vagy látogassa meg ezt az oldalt: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -104,9 +104,9 @@
       "url": {}
     }
   },
-  "rstTitle": "Az RST engedélyezve van",
+  "rstTitle": "RST észlelhető",
   "@rstTitle": {},
-  "dontInstallDriverSoftwareNow": "Egyelőre ne telepítse az illesztőprogramot",
+  "dontInstallDriverSoftwareNow": "Ne telepítse most az illesztőprogramot",
   "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Később a Szoftver és frissítések menüpontból telepítheti.",
   "@dontInstallDriverSoftwareNowDescription": {},
@@ -114,7 +114,7 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "A biztonsági kulcsok nem egyeznek",
   "@secureBootSecurityKeysDontMatch": {},
-  "updatesOtherSoftwarePageTitle": "Alkalmazások és frissítések",
+  "updatesOtherSoftwarePageTitle": "Alkalmazások",
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Milyen alkalmazásokat szeretne telepíteni a kezdéshez?",
   "@updatesOtherSoftwarePageDescription": {},
@@ -132,7 +132,7 @@
   "@installationTypeNone": {},
   "installationTypeEncryptInfo": "Biztonsági kulcsot a következő lépésben fog választani.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "KÍSÉRLETI: lemez törlése és ZFS használata",
+  "installationTypeZFS": "Lemez törlése és ZFS használata",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "A(z) {product} telepítése a(z) {os} mellé",
   "@installationTypeAlongside": {
@@ -142,9 +142,9 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "A dokumentumok, zenék és egyéb személyes fájlok megőrzésre kerülnek. A számítógép minden egyes indításakor kiválaszthatja, hogy melyik operációs rendszert szeretné használni.",
+  "installationTypeAlongsideInfo": "Kiválaszthatja az operációs rendszert a rendszerindítás során.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Kézi particionálás",
+  "installationTypeManual": "Kézi telepítés",
   "@installationTypeManual": {},
   "installationTypeLVMSelected": "LVM kiválasztva",
   "@installationTypeLVMSelected": {},
@@ -236,7 +236,7 @@
   "@shutdown": {},
   "bitlockerTitle": "A BitLocker engedélyezve van",
   "@bitlockerTitle": {},
-  "bitlockerDescription": "Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy a(z) „{option}” választása szükséges a folytatáshoz.",
+  "bitlockerDescription": "Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy menjen vissza, és válassza a(z) „{option}” lehetőséget a folytatáshoz.",
   "@bitlockerDescription": {},
   "bitlockerInstructions": "Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
@@ -350,9 +350,9 @@
   "@installingSystem": {},
   "configuringSystem": "A rendszer beállítása…",
   "@configuringSystem": {},
-  "notEnoughDiskSpaceTitle": "Nincs elegendő hely",
+  "notEnoughDiskSpaceTitle": "Nincs elegendő lemezterület",
   "@notEnoughDiskSpaceTitle": {},
-  "showSecurityKey": "Biztonsági kulcs megjelenítése",
+  "showSecurityKey": "Megjelenítés",
   "@showSecurityKey": {},
   "confirmPartitionCreate": "<b>{sysname}</b> partíció létrehozva",
   "@confirmPartitionCreate": {
@@ -455,13 +455,13 @@
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Vállalati felhasználóknak a Canonical kereskedelmi támogatást nyújt, hogy megkönnyítse az Ubuntu bevezetését és biztonságos kezelését a munkahelyen.",
   "@installationSlidesSupportEnterprise": {},
-  "installDriversSubtitle": "Ezekre az illesztőprogramokra a dokumentációjukban szereplő licencfeltételek vonatkoznak. Kereskedelmi forgalomban kapható tulajdonosi szoftverek.",
+  "installDriversSubtitle": "Beleértve, de nem kizárólagosan az NVIDIA illesztőprogramokat és hasonlókat",
   "@installDriversSubtitle": {},
   "rstHeader": "Az RST kikapcsolása a folytatáshoz",
   "@rstHeader": {},
   "installCodecsTitle": "További médiaformátumok támogatásának letöltése és telepítése",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Erre a szoftverre a dokumentációjában szereplő licencfeltételek vonatkoznak. Néhányuk kereskedelmi forgalomban kapható tulajdonosi szoftver.",
+  "installCodecsSubtitle": "Beleértve, de nem kizárólagosan az MP3, MP4, MOV és hasonló formátumokat",
   "@installCodecsSubtitle": {},
   "offlineWarning": "Jelenleg kapcsolat nélkül van",
   "@offlineWarning": {},
@@ -596,7 +596,7 @@
       "version": {}
     }
   },
-  "refreshSnapUnlink": "A(z) {snap} kapcsolatának megszüntetése…",
+  "refreshSnapUnlink": "A(z) {snap} hozzákapcsolásának megszüntetése…",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
@@ -683,7 +683,7 @@
   },
   "installationTypeTPMSelected": "TPM kiválasztva",
   "@installationTypeTPMSelected": {},
-  "refreshSnapLink": "A(z) {snap} kapcsolása…",
+  "refreshSnapLink": "A(z) {snap} hozzákapcsolása…",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
@@ -711,7 +711,7 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése",
+  "installationTypeTPM": "Hardveresen támogatott teljes lemeztitkosítás engedélyezése",
   "@installationTypeTPM": {},
   "refreshSnapDownload": "A(z) {snap} letöltése…",
   "@refreshSnapDownload": {
@@ -771,7 +771,7 @@
       "snap": {}
     }
   },
-  "refreshRestart": "Indítsa újra a telepítőt.",
+  "refreshRestart": "Zárja be a telepítőt, és indítsa újra a folytatáshoz",
   "@refreshRestart": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.",
   "@recoveryKeyWarning": {
@@ -780,12 +780,189 @@
       "color": {}
     }
   },
-  "fullInstallationSubtitle": "Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok, webböngésző és játékok.",
+  "fullInstallationSubtitle": "Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok és webböngésző.",
   "@fullInstallationSubtitle": {},
-  "minimalInstallationTitle": "Alapértelmezett telepítés",
+  "minimalInstallationTitle": "Alapértelmezett választás",
   "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Csak a legszükségesebbek, webböngésző és alapvető segédprogramok.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationTitle": "Teljes telepítés",
-  "@fullInstallationTitle": {}
+  "fullInstallationTitle": "Kibővített választás",
+  "@fullInstallationTitle": {},
+  "autoinstallTitle": "Telepítés típusa",
+  "@autoinstallTitle": {},
+  "autoinstallHeader": "Hogyan szeretne telepíteni a(z) {DISTRO} disztribúciót?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Adja meg az autoinstall.yaml URL-jét vagy helyi fájlútvonalát:",
+  "@autoinstallInstructions": {},
+  "hideSecurityKey": "Elrejtés",
+  "@hideSecurityKey": {},
+  "installationTypeEraseInfo": "Kezdés a nulláról a kiválasztott lemezen.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Kísérleti",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "LVM használata",
+  "@installationTypeLVM": {},
+  "selectGuidedStorageInfo": "Kezdés a nulláról a kiválasztott lemezen.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Meghajtó kiválasztása:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Partíció kiválasztása:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "A(z) {DISTRO} telepítési helyének kiválasztása",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmSectionSecurityAndMoreTitle": "Biztonság és egyebek",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmProprietarySoftwareCodecs": "Kodekek",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Kodekek és illesztőprogramok",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmSectionGeneralTitle": "Általános",
+  "@confirmSectionGeneralTitle": {},
+  "confirmProprietarySoftwareDrivers": "Illesztőprogramok",
+  "@confirmProprietarySoftwareDrivers": {},
+  "rebootToConfigure": "A(z) **{system}** a lemezre lett másolva",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Újra kell indítania a számítógépet a telepítési folyamat folytatásához.",
+  "@rebootToConfigureWarning": {},
+  "refreshUpdateNow": "Frissítés most",
+  "@refreshUpdateNow": {},
+  "restartWarningBody": "Indítsa újra a telepítés befejezéséhez vagy folytassa a kipróbálást.\nAz elvégzett változtatások nem kerülnek mentésre.",
+  "@restartWarningBody": {},
+  "refreshHeader": "Frissítés érhető el a telepítőhöz",
+  "@refreshHeader": {},
+  "validate": "Ellenőrzés",
+  "@validate": {},
+  "installationTypeTPMInfo": "Ez egy kísérleti funkció. Előfordulhat, hogy nem működik az Ön hardverével vagy a jövőbeli {DISTRO} kiadásokkal. <a href=\"{url}\">Olvasson a TPM-titkosításról</a>, mielőtt ezt a lehetőséget választja.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveOption": "Interaktív telepítés",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallInteractiveDescription": "Olyan felhasználóknak, akik lépésről lépésre történő végigvezetéssel szeretnének telepíteni.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "Automatizált telepítés",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "Gyakorlottabb felhasználóknak, akik autoinstall.yaml fájllal rendelkeznek a következetes és megismételhető rendszerbeállításokhoz.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA grafikus kártya észlelhető",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Az NVIDIA grafikus kártyák legjobb teljesítményéhez erősen ajánlott további illesztőprogramok telepítése.",
+  "@codecsAndDriversNvidiaBody": {},
+  "warningLabel": "Figyelmeztetés:",
+  "@warningLabel": {},
+  "tryOrInstallHeader": "Mit szeretne tenni a(z) {DISTRO} disztribúcióval?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversPageTitle": "A számítógép optimalizálása",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageDescription": "Telepíti az ajánlott tulajdonosi szoftvereket?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversPageBody": "A(z) {DISTRO} alapértelmezetten tulajdonosi szoftverek nélkül érkezik. További szoftverek telepítése javíthatja a számítógép teljesítményét.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryWarning": "A számítógép nincs csatlakoztatva az áramforráshoz.",
+  "@batteryWarning": {},
+  "choosePassphraseTitle": "Lemez jelmondata",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseHeader": "Jelmondat létrehozása",
+  "@choosePassphraseHeader": {},
+  "choosePassphraseBody": "Jelmondatra van szüksége a fájlok titkosításához. A számítógép bekapcsolásakor minden alkalommal meg kell adnia a jelmondatot.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Jelmondat kiválasztása",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "A jelmondat megerősítése",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "A jelmondat megadása kötelező",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "A jelmondatok nem egyeznek",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Győződjön meg arról, hogy elmentette-e a jelmondatot",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Ha elveszíti a jelmondatot, elveszíti az összes adatát.",
+  "@choosePassphraseInfoBody": {},
+  "createPassphrase": "Jelmondat létrehozása",
+  "@createPassphrase": {},
+  "confirmPassphrase": "A jelmondat megerősítése",
+  "@confirmPassphrase": {},
+  "installationTypeHeader": "Hogyan szeretne telepíteni a(z) {DISTRO} disztribúciót?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryption": "LVM és titkosítás használata",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Lemez törlése és ZFS használata titkosítással",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS és titkosítás kiválasztva",
+  "@installationTypeZFSEncryptionSelected": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Nincs",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryApplications": "Alkalmazások",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskSetup": "Lemez beállítása",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryDiskEncryption": "Lemez titkosítása",
+  "@confirmEntryDiskEncryption": {},
+  "confirmEntryInstallationDisk": "Telepítési lemez",
+  "@confirmEntryInstallationDisk": {},
+  "confirmEntryProprietarySoftware": "Tulajdonosi szoftver",
+  "@confirmEntryProprietarySoftware": {},
+  "notEnoughDiskSpaceBody": "A kiválasztott lemezen nincs elegendő lemezterület a(z) {DISTRO} telepítéséhez. Lépjen ki a telepítőből, hogy elérhetővé tegye a helyet, vagy válasszon másik lemezt.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInfo": "Frissítsen a legújabb verzióra a nagyobb megbízhatóság és több funkció érdekében.",
+  "@refreshInfo": {},
+  "refreshReady": "A frissítés kész",
+  "@refreshReady": {},
+  "refreshCloseLabel": "Telepítő bezárása",
+  "@refreshCloseLabel": {}
 }
