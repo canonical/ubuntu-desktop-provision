@@ -1,7 +1,9 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:args/command_runner.dart';
 import 'package:factory_reset_tools/dbus/dbus_daemon.dart';
 import 'package:factory_reset_tools/dbus/factory_reset.dart';
+import 'package:factory_reset_tools/dbus/polkit_agent.dart';
 import 'package:factory_reset_tools/dbus/reset_media.dart';
 
 /// Command line entrypoint of factory-reset-tools
@@ -89,7 +91,13 @@ class RebootCommand extends Command<void> {
       }
       return;
     }
-    await startCommandViaDbus(ResetOptionType.fromString(argResults.rest[0]));
+    final pkttyagent = PkttyAgent();
+    await pkttyagent.start();
+    try {
+      await startCommandViaDbus(ResetOptionType.fromString(argResults.rest[0]));
+    } finally {
+      pkttyagent.stop();
+    }
     exit(0);
   }
 }

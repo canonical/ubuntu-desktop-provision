@@ -19,7 +19,10 @@ class ComCanonicalOemFactoryResetTools extends DBusObject {
   }
 
   /// Implementation of com.canonical.oem.FactoryResetTools.Reboot()
-  Future<DBusMethodResponse> doReboot(String rebootOption) async {
+  Future<DBusMethodResponse> doReboot(
+    String rebootOption,
+    String? sender,
+  ) async {
     return DBusMethodErrorResponse.failed(
       'com.canonical.oem.FactoryResetTools.Reboot() not implemented',
     );
@@ -60,7 +63,7 @@ class ComCanonicalOemFactoryResetTools extends DBusObject {
         if (methodCall.signature != DBusSignature('s')) {
           return DBusMethodErrorResponse.invalidArgs();
         }
-        return doReboot(methodCall.values[0].asString());
+        return doReboot(methodCall.values[0].asString(), methodCall.sender);
       } else {
         return DBusMethodErrorResponse.unknownMethod();
       }
