@@ -1,0 +1,11 @@
+name: Subiquity Check
+
+on:
+  pull_request_target:
+
+jobs:
+  subiquity-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check consistency of subiquity deps in snapcraft.yaml
+        run: scripts/subiquity-check.sh

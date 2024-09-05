@@ -5,7 +5,7 @@ SUBIQUITY_COMMIT=$(git cat-file -p $(yq -r '.parts["ubuntu-bootstrap"]["source-c
 
 has_mismatch=false
 for part in curtin probert; do
-    # Commit hash of the respective part in the subiquity's snapcraft.yaml
+    # Commit hash of the respective part in subiquity's snapcraft.yaml
     part_commit=$(curl -sL https://github.com/canonical/subiquity/raw/$SUBIQUITY_COMMIT/snapcraft.yaml | yq -r ".parts[\"$part\"][\"source-commit\"]")
 
     # Commit hash of the respective part in the local snapcraft.yaml
