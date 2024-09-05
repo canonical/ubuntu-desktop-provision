@@ -38,7 +38,7 @@ apps:
       - hardware-observe
       - mount-observe
       - dbus-system-com-canonical-oem-factory-reset-tools-client
-      - polkit
+      - polkit-com-canonical-oem-factory-reset-tools
   dbus-daemon:
     command: bin/factory-reset-tools-cli dbus
     daemon: simple
@@ -48,7 +48,7 @@ apps:
       - shutdown
       - hostfs-boot-grub
       - usr-share-desktop-provision-reset-yaml
-      - polkit
+      - polkit-com-canonical-oem-factory-reset-tools
 
 parts:
   flutter-git:
@@ -127,7 +127,8 @@ parts:
     plugin: dump
     source: packages/factory_reset_tools/data/
     organize:
-      polkit.com-canonical-oem-factory-reset-tools.policy: meta/polkit/
+      # note that the filename polkit interface takes is "${plug_name}.*.policy"
+      polkit-com-canonical-oem-factory-reset-tools.x.policy: meta/polkit/
 
   # copied from fwupd
   # https://github.com/fwupd/fwupd/blob/main/contrib/snap/snapcraft.yaml
@@ -169,5 +170,6 @@ plugs:
     interface: dbus
     bus: system
     name: com.canonical.oem.FactoryResetTools
-  polkit:
+  polkit-com-canonical-oem-factory-reset-tools:
+    interface: polkit
     action-prefix: com.canonical.oem.FactoryResetTools
