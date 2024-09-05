@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        input: ["init", "bootstrap", "reset-tools"]
+        input: ["init", "reset-tools"]
     steps:
       - uses: actions/checkout@v4
         with:

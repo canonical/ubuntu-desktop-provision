@@ -2,7 +2,9 @@ name: Main Documentation Checks
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - ubuntu/**
   pull_request:
   # Manual trigger
   workflow_dispatch:
