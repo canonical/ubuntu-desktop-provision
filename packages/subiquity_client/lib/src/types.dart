@@ -303,314 +303,6 @@ class NetworkStatus with _$NetworkStatus {
       _$NetworkStatusFromJson(json);
 }
 
-enum ProbeStatus {
-  PROBING,
-  FAILED,
-  DONE,
-}
-
-enum Bootloader {
-  NONE,
-  BIOS,
-  UEFI,
-  PREP,
-}
-
-@freezed
-class OsProber with _$OsProber {
-  const factory OsProber({
-    required String long,
-    required String label,
-    required String type,
-    String? subpath,
-    String? version,
-  }) = _OsProber;
-
-  factory OsProber.fromJson(Map<String, dynamic> json) =>
-      _$OsProberFromJson(json);
-}
-
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
-class PartitionOrGap with _$PartitionOrGap {
-  @FreezedUnionValue('Partition')
-  const factory PartitionOrGap.partition({
-    int? size,
-    int? number,
-    bool? preserve,
-    String? wipe,
-    @Default([]) List<String> annotations,
-    String? mount,
-    String? format,
-    bool? grubDevice,
-    bool? boot,
-    OsProber? os,
-    int? offset,
-    @Default(-1) int? estimatedMinSize,
-    bool? resize,
-    String? path,
-    @Default(false) bool isInUse,
-  }) = Partition;
-
-  @FreezedUnionValue('Gap')
-  const factory PartitionOrGap.gap({
-    required int offset,
-    required int size,
-    required GapUsable usable,
-  }) = Gap;
-
-  factory PartitionOrGap.fromJson(Map<String, dynamic> json) =>
-      _$PartitionOrGapFromJson(json);
-}
-
-@freezed
-class ZFS with _$ZFS {
-  const factory ZFS({
-    required String volume,
-    Map<String, dynamic>? properties,
-  }) = _ZFS;
-
-  factory ZFS.fromJson(Map<String, dynamic> json) => _$ZFSFromJson(json);
-}
-
-@freezed
-class ZPool with _$ZPool {
-  const factory ZPool({
-    required String pool,
-    required String mountpoint,
-    ZFS? zfses,
-    Map<String, dynamic>? poolProperties,
-    Map<String, dynamic>? fsProperties,
-    @Default(true) bool? defaultFeatures,
-  }) = _ZPool;
-
-  factory ZPool.fromJson(Map<String, dynamic> json) => _$ZPoolFromJson(json);
-}
-
-enum GapUsable {
-  YES,
-  TOO_MANY_PRIMARY_PARTS,
-}
-
-@freezed
-class Disk with _$Disk {
-  const factory Disk({
-    required String id,
-    required String label,
-    required String type,
-    required int size,
-    required List<String> usageLabels,
-    required List<PartitionOrGap> partitions,
-    required bool okForGuided,
-    required String? ptable,
-    required bool preserve,
-    required String? path,
-    required bool bootDevice,
-    required bool canBeBootDevice,
-    String? model,
-    String? vendor,
-    @Default(false) bool hasInUsePartition,
-  }) = _Disk;
-
-  factory Disk.fromJson(Map<String, dynamic> json) => _$DiskFromJson(json);
-}
-
-enum GuidedCapability {
-  MANUAL,
-  DIRECT,
-  LVM,
-  LVM_LUKS,
-  ZFS,
-  ZFS_LUKS_KEYSTORE,
-  CORE_BOOT_ENCRYPTED,
-  CORE_BOOT_UNENCRYPTED,
-  CORE_BOOT_PREFER_ENCRYPTED,
-  CORE_BOOT_PREFER_UNENCRYPTED,
-  DD,
-}
-
-enum GuidedDisallowedCapabilityReason {
-  TOO_SMALL,
-  CORE_BOOT_ENCRYPTION_UNAVAILABLE,
-  NOT_UEFI,
-  THIRD_PARTY_DRIVERS,
-}
-
-@freezed
-class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
-  const factory GuidedDisallowedCapability({
-    required GuidedCapability capability,
-    required GuidedDisallowedCapabilityReason reason,
-    String? message,
-  }) = _GuidedDisallowedCapability;
-
-  factory GuidedDisallowedCapability.fromJson(Map<String, dynamic> json) =>
-      _$GuidedDisallowedCapabilityFromJson(json);
-}
-
-@freezed
-class StorageResponse with _$StorageResponse {
-  const factory StorageResponse({
-    required ProbeStatus status,
-    ErrorReportRef? errorReport,
-    Bootloader? bootloader,
-    List<dynamic>? origConfig,
-    List<dynamic>? config,
-    Map<String, dynamic>? dasd,
-    @Default(1) int storageVersion,
-  }) = _StorageResponse;
-
-  factory StorageResponse.fromJson(Map<String, dynamic> json) =>
-      _$StorageResponseFromJson(json);
-}
-
-@freezed
-class StorageResponseV2 with _$StorageResponseV2 {
-  const factory StorageResponseV2({
-    required ProbeStatus status,
-    ErrorReportRef? errorReport,
-    @Default([]) List<Disk> disks,
-    bool? needRoot,
-    bool? needBoot,
-    int? installMinimumSize,
-  }) = _StorageResponseV2;
-
-  factory StorageResponseV2.fromJson(Map<String, dynamic> json) =>
-      _$StorageResponseV2FromJson(json);
-}
-
-enum SizingPolicy {
-  SCALED,
-  ALL,
-}
-
-@freezed
-class GuidedResizeValues with _$GuidedResizeValues {
-  const factory GuidedResizeValues({
-    required int installMax,
-    required int minimum,
-    required int recommended,
-    required int maximum,
-  }) = _GuidedResizeValues;
-
-  factory GuidedResizeValues.fromJson(Map<String, dynamic> json) =>
-      _$GuidedResizeValuesFromJson(json);
-}
-
-@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
-class GuidedStorageTarget with _$GuidedStorageTarget {
-  @FreezedUnionValue('GuidedStorageTargetReformat')
-  const factory GuidedStorageTarget.reformat({
-    required String diskId,
-    @Default([]) List<GuidedCapability> allowed,
-    @Default([]) List<GuidedDisallowedCapability> disallowed,
-  }) = GuidedStorageTargetReformat;
-
-  @FreezedUnionValue('GuidedStorageTargetResize')
-  const factory GuidedStorageTarget.resize({
-    required String diskId,
-    required int partitionNumber,
-    required int newSize,
-    required int? minimum,
-    required int? recommended,
-    required int? maximum,
-    @Default([]) List<GuidedCapability> allowed,
-    @Default([]) List<GuidedDisallowedCapability> disallowed,
-  }) = GuidedStorageTargetResize;
-
-  @FreezedUnionValue('GuidedStorageTargetUseGap')
-  const factory GuidedStorageTarget.useGap({
-    required String diskId,
-    required Gap gap,
-    @Default([]) List<GuidedCapability> allowed,
-    @Default([]) List<GuidedDisallowedCapability> disallowed,
-  }) = GuidedStorageTargetUseGap;
-
-  @FreezedUnionValue('GuidedStorageTargetManual')
-  const factory GuidedStorageTarget.manual({
-    required List<GuidedCapability> allowed,
-    @Default([]) List<GuidedDisallowedCapability> disallowed,
-  }) = GuidedStorageTargetManual;
-
-  factory GuidedStorageTarget.fromJson(Map<String, dynamic> json) =>
-      _$GuidedStorageTargetFromJson(json);
-}
-
-@freezed
-class RecoveryKey with _$RecoveryKey {
-  const factory RecoveryKey({
-    String? liveLocation,
-    String? backupLocation,
-  }) = _RecoveryKey;
-
-  factory RecoveryKey.fromJson(Map<String, dynamic> json) =>
-      _$RecoveryKeyFromJson(json);
-}
-
-@freezed
-class GuidedChoiceV2 with _$GuidedChoiceV2 {
-  const factory GuidedChoiceV2({
-    required GuidedStorageTarget target,
-    required GuidedCapability capability,
-    String? password,
-    RecoveryKey? recoveryKey,
-    // TODO(Lukas): Change `generator.py` to accommodate for putting the
-    // SizingPolicy parameter together with the other required parameters.
-    required SizingPolicy? sizingPolicy,
-    @Default(false) bool resetPartition,
-    int? resetPartitionSize,
-  }) = _GuidedChoiceV2;
-
-  factory GuidedChoiceV2.fromJson(Map<String, dynamic> json) =>
-      _$GuidedChoiceV2FromJson(json);
-}
-
-@freezed
-class GuidedStorageResponseV2 with _$GuidedStorageResponseV2 {
-  const factory GuidedStorageResponseV2({
-    required ProbeStatus status,
-    ErrorReportRef? errorReport,
-    GuidedChoiceV2? configured,
-    @Default([]) List<GuidedStorageTarget> targets,
-  }) = _GuidedStorageResponseV2;
-
-  factory GuidedStorageResponseV2.fromJson(Map<String, dynamic> json) =>
-      _$GuidedStorageResponseV2FromJson(json);
-}
-
-@freezed
-class AddPartitionV2 with _$AddPartitionV2 {
-  const factory AddPartitionV2({
-    required String diskId,
-    required Partition partition,
-    required Gap gap,
-  }) = _AddPartitionV2;
-
-  factory AddPartitionV2.fromJson(Map<String, dynamic> json) =>
-      _$AddPartitionV2FromJson(json);
-}
-
-@freezed
-class ModifyPartitionV2 with _$ModifyPartitionV2 {
-  const factory ModifyPartitionV2({
-    required String diskId,
-    required Partition partition,
-  }) = _ModifyPartitionV2;
-
-  factory ModifyPartitionV2.fromJson(Map<String, dynamic> json) =>
-      _$ModifyPartitionV2FromJson(json);
-}
-
-@freezed
-class ReformatDisk with _$ReformatDisk {
-  const factory ReformatDisk({
-    required String diskId,
-    String? ptable,
-  }) = _ReformatDisk;
-
-  factory ReformatDisk.fromJson(Map<String, dynamic> json) =>
-      _$ReformatDiskFromJson(json);
-}
-
 @freezed
 class IdentityData with _$IdentityData {
   const factory IdentityData({
@@ -900,43 +592,6 @@ enum ShutdownMode {
   POWEROFF,
 }
 
-@freezed
-class WSLConfigurationBase with _$WSLConfigurationBase {
-  const factory WSLConfigurationBase({
-    @Default('/mnt/') String automountRoot,
-    @Default('') String automountOptions,
-    @Default(true) bool networkGeneratehosts,
-    @Default(true) bool networkGenerateresolvconf,
-  }) = _WSLConfigurationBase;
-
-  factory WSLConfigurationBase.fromJson(Map<String, dynamic> json) =>
-      _$WSLConfigurationBaseFromJson(json);
-}
-
-@freezed
-class WSLConfigurationAdvanced with _$WSLConfigurationAdvanced {
-  const factory WSLConfigurationAdvanced({
-    @Default(true) bool automountEnabled,
-    @Default(true) bool automountMountfstab,
-    @Default(true) bool interopEnabled,
-    @Default(true) bool interopAppendwindowspath,
-    @Default(false) bool systemdEnabled,
-  }) = _WSLConfigurationAdvanced;
-
-  factory WSLConfigurationAdvanced.fromJson(Map<String, dynamic> json) =>
-      _$WSLConfigurationAdvancedFromJson(json);
-}
-
-@freezed
-class WSLSetupOptions with _$WSLSetupOptions {
-  const factory WSLSetupOptions({
-    @Default(true) bool installLanguageSupportPackages,
-  }) = _WSLSetupOptions;
-
-  factory WSLSetupOptions.fromJson(Map<String, dynamic> json) =>
-      _$WSLSetupOptionsFromJson(json);
-}
-
 enum TaskStatus {
   DO,
   DOING,
@@ -1094,6 +749,312 @@ enum AdJoinResult {
   EMPTY_HOSTNAME,
   PAM_ERROR,
   UNKNOWN,
+}
+
+enum ProbeStatus {
+  PROBING,
+  FAILED,
+  DONE,
+}
+
+enum Bootloader {
+  NONE,
+  BIOS,
+  UEFI,
+  PREP,
+}
+
+@freezed
+class OsProber with _$OsProber {
+  const factory OsProber({
+    required String long,
+    required String label,
+    required String type,
+    String? subpath,
+    String? version,
+  }) = _OsProber;
+
+  factory OsProber.fromJson(Map<String, dynamic> json) =>
+      _$OsProberFromJson(json);
+}
+
+@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+class PartitionOrGap with _$PartitionOrGap {
+  @FreezedUnionValue('Partition')
+  const factory PartitionOrGap.partition({
+    int? size,
+    int? number,
+    bool? preserve,
+    String? wipe,
+    @Default([]) List<String> annotations,
+    String? mount,
+    String? format,
+    bool? grubDevice,
+    bool? boot,
+    OsProber? os,
+    int? offset,
+    @Default(-1) int? estimatedMinSize,
+    bool? resize,
+    String? path,
+    @Default(false) bool isInUse,
+  }) = Partition;
+
+  @FreezedUnionValue('Gap')
+  const factory PartitionOrGap.gap({
+    required int offset,
+    required int size,
+    required GapUsable usable,
+  }) = Gap;
+
+  factory PartitionOrGap.fromJson(Map<String, dynamic> json) =>
+      _$PartitionOrGapFromJson(json);
+}
+
+@freezed
+class ZFS with _$ZFS {
+  const factory ZFS({
+    required String volume,
+    Map<String, dynamic>? properties,
+  }) = _ZFS;
+
+  factory ZFS.fromJson(Map<String, dynamic> json) => _$ZFSFromJson(json);
+}
+
+@freezed
+class ZPool with _$ZPool {
+  const factory ZPool({
+    required String pool,
+    required String mountpoint,
+    ZFS? zfses,
+    Map<String, dynamic>? poolProperties,
+    Map<String, dynamic>? fsProperties,
+    @Default(true) bool? defaultFeatures,
+  }) = _ZPool;
+
+  factory ZPool.fromJson(Map<String, dynamic> json) => _$ZPoolFromJson(json);
+}
+
+enum GapUsable {
+  YES,
+  TOO_MANY_PRIMARY_PARTS,
+}
+
+@freezed
+class Disk with _$Disk {
+  const factory Disk({
+    required String id,
+    required String label,
+    required String type,
+    required int size,
+    required List<String> usageLabels,
+    required List<PartitionOrGap> partitions,
+    required bool okForGuided,
+    required String? ptable,
+    required bool preserve,
+    required String? path,
+    required bool bootDevice,
+    required bool canBeBootDevice,
+    String? model,
+    String? vendor,
+    @Default(false) bool hasInUsePartition,
+  }) = _Disk;
+
+  factory Disk.fromJson(Map<String, dynamic> json) => _$DiskFromJson(json);
+}
+
+enum GuidedCapability {
+  MANUAL,
+  DIRECT,
+  LVM,
+  LVM_LUKS,
+  ZFS,
+  ZFS_LUKS_KEYSTORE,
+  CORE_BOOT_ENCRYPTED,
+  CORE_BOOT_UNENCRYPTED,
+  CORE_BOOT_PREFER_ENCRYPTED,
+  CORE_BOOT_PREFER_UNENCRYPTED,
+  DD,
+}
+
+enum GuidedDisallowedCapabilityReason {
+  TOO_SMALL,
+  CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+  NOT_UEFI,
+  THIRD_PARTY_DRIVERS,
+}
+
+@freezed
+class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
+  const factory GuidedDisallowedCapability({
+    required GuidedCapability capability,
+    required GuidedDisallowedCapabilityReason reason,
+    String? message,
+  }) = _GuidedDisallowedCapability;
+
+  factory GuidedDisallowedCapability.fromJson(Map<String, dynamic> json) =>
+      _$GuidedDisallowedCapabilityFromJson(json);
+}
+
+@freezed
+class StorageResponse with _$StorageResponse {
+  const factory StorageResponse({
+    required ProbeStatus status,
+    ErrorReportRef? errorReport,
+    Bootloader? bootloader,
+    List<dynamic>? origConfig,
+    List<dynamic>? config,
+    Map<String, dynamic>? dasd,
+    @Default(1) int storageVersion,
+  }) = _StorageResponse;
+
+  factory StorageResponse.fromJson(Map<String, dynamic> json) =>
+      _$StorageResponseFromJson(json);
+}
+
+@freezed
+class StorageResponseV2 with _$StorageResponseV2 {
+  const factory StorageResponseV2({
+    required ProbeStatus status,
+    ErrorReportRef? errorReport,
+    @Default([]) List<Disk> disks,
+    bool? needRoot,
+    bool? needBoot,
+    int? installMinimumSize,
+  }) = _StorageResponseV2;
+
+  factory StorageResponseV2.fromJson(Map<String, dynamic> json) =>
+      _$StorageResponseV2FromJson(json);
+}
+
+enum SizingPolicy {
+  SCALED,
+  ALL,
+}
+
+@freezed
+class GuidedResizeValues with _$GuidedResizeValues {
+  const factory GuidedResizeValues({
+    required int installMax,
+    required int minimum,
+    required int recommended,
+    required int maximum,
+  }) = _GuidedResizeValues;
+
+  factory GuidedResizeValues.fromJson(Map<String, dynamic> json) =>
+      _$GuidedResizeValuesFromJson(json);
+}
+
+@Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
+class GuidedStorageTarget with _$GuidedStorageTarget {
+  @FreezedUnionValue('GuidedStorageTargetReformat')
+  const factory GuidedStorageTarget.reformat({
+    required String diskId,
+    @Default([]) List<GuidedCapability> allowed,
+    @Default([]) List<GuidedDisallowedCapability> disallowed,
+  }) = GuidedStorageTargetReformat;
+
+  @FreezedUnionValue('GuidedStorageTargetResize')
+  const factory GuidedStorageTarget.resize({
+    required String diskId,
+    required int partitionNumber,
+    required int newSize,
+    required int? minimum,
+    required int? recommended,
+    required int? maximum,
+    @Default([]) List<GuidedCapability> allowed,
+    @Default([]) List<GuidedDisallowedCapability> disallowed,
+  }) = GuidedStorageTargetResize;
+
+  @FreezedUnionValue('GuidedStorageTargetUseGap')
+  const factory GuidedStorageTarget.useGap({
+    required String diskId,
+    required Gap gap,
+    @Default([]) List<GuidedCapability> allowed,
+    @Default([]) List<GuidedDisallowedCapability> disallowed,
+  }) = GuidedStorageTargetUseGap;
+
+  @FreezedUnionValue('GuidedStorageTargetManual')
+  const factory GuidedStorageTarget.manual({
+    required List<GuidedCapability> allowed,
+    @Default([]) List<GuidedDisallowedCapability> disallowed,
+  }) = GuidedStorageTargetManual;
+
+  factory GuidedStorageTarget.fromJson(Map<String, dynamic> json) =>
+      _$GuidedStorageTargetFromJson(json);
+}
+
+@freezed
+class RecoveryKey with _$RecoveryKey {
+  const factory RecoveryKey({
+    String? liveLocation,
+    String? backupLocation,
+  }) = _RecoveryKey;
+
+  factory RecoveryKey.fromJson(Map<String, dynamic> json) =>
+      _$RecoveryKeyFromJson(json);
+}
+
+@freezed
+class GuidedChoiceV2 with _$GuidedChoiceV2 {
+  const factory GuidedChoiceV2({
+    required GuidedStorageTarget target,
+    required GuidedCapability capability,
+    String? password,
+    RecoveryKey? recoveryKey,
+    required SizingPolicy? sizingPolicy,
+    @Default(false) bool resetPartition,
+    int? resetPartitionSize,
+  }) = _GuidedChoiceV2;
+
+  factory GuidedChoiceV2.fromJson(Map<String, dynamic> json) =>
+      _$GuidedChoiceV2FromJson(json);
+}
+
+@freezed
+class GuidedStorageResponseV2 with _$GuidedStorageResponseV2 {
+  const factory GuidedStorageResponseV2({
+    required ProbeStatus status,
+    ErrorReportRef? errorReport,
+    GuidedChoiceV2? configured,
+    @Default([]) List<GuidedStorageTarget> targets,
+  }) = _GuidedStorageResponseV2;
+
+  factory GuidedStorageResponseV2.fromJson(Map<String, dynamic> json) =>
+      _$GuidedStorageResponseV2FromJson(json);
+}
+
+@freezed
+class AddPartitionV2 with _$AddPartitionV2 {
+  const factory AddPartitionV2({
+    required String diskId,
+    required Partition partition,
+    required Gap gap,
+  }) = _AddPartitionV2;
+
+  factory AddPartitionV2.fromJson(Map<String, dynamic> json) =>
+      _$AddPartitionV2FromJson(json);
+}
+
+@freezed
+class ModifyPartitionV2 with _$ModifyPartitionV2 {
+  const factory ModifyPartitionV2({
+    required String diskId,
+    required Partition partition,
+  }) = _ModifyPartitionV2;
+
+  factory ModifyPartitionV2.fromJson(Map<String, dynamic> json) =>
+      _$ModifyPartitionV2FromJson(json);
+}
+
+@freezed
+class ReformatDisk with _$ReformatDisk {
+  const factory ReformatDisk({
+    required String diskId,
+    String? ptable,
+  }) = _ReformatDisk;
+
+  factory ReformatDisk.fromJson(Map<String, dynamic> json) =>
+      _$ReformatDiskFromJson(json);
 }
 
 // END GENERATED CODE

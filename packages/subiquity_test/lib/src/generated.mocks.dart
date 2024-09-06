@@ -111,9 +111,8 @@ class _FakeStorageResponseV2_7 extends _i1.SmartFake
         );
 }
 
-class _FakeWSLSetupOptions_8 extends _i1.SmartFake
-    implements _i2.WSLSetupOptions {
-  _FakeWSLSetupOptions_8(
+class _FakeAnyStep_8 extends _i1.SmartFake implements _i2.AnyStep {
+  _FakeAnyStep_8(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -122,41 +121,9 @@ class _FakeWSLSetupOptions_8 extends _i1.SmartFake
         );
 }
 
-class _FakeWSLConfigurationBase_9 extends _i1.SmartFake
-    implements _i2.WSLConfigurationBase {
-  _FakeWSLConfigurationBase_9(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeWSLConfigurationAdvanced_10 extends _i1.SmartFake
-    implements _i2.WSLConfigurationAdvanced {
-  _FakeWSLConfigurationAdvanced_10(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeAnyStep_11 extends _i1.SmartFake implements _i2.AnyStep {
-  _FakeAnyStep_11(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeDriversResponse_12 extends _i1.SmartFake
+class _FakeDriversResponse_9 extends _i1.SmartFake
     implements _i2.DriversResponse {
-  _FakeDriversResponse_12(
+  _FakeDriversResponse_9(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -165,8 +132,8 @@ class _FakeDriversResponse_12 extends _i1.SmartFake
         );
 }
 
-class _FakeCodecsData_13 extends _i1.SmartFake implements _i2.CodecsData {
-  _FakeCodecsData_13(
+class _FakeCodecsData_10 extends _i1.SmartFake implements _i2.CodecsData {
+  _FakeCodecsData_10(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -175,8 +142,8 @@ class _FakeCodecsData_13 extends _i1.SmartFake implements _i2.CodecsData {
         );
 }
 
-class _FakeRefreshStatus_14 extends _i1.SmartFake implements _i2.RefreshStatus {
-  _FakeRefreshStatus_14(
+class _FakeRefreshStatus_11 extends _i1.SmartFake implements _i2.RefreshStatus {
+  _FakeRefreshStatus_11(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -185,8 +152,8 @@ class _FakeRefreshStatus_14 extends _i1.SmartFake implements _i2.RefreshStatus {
         );
 }
 
-class _FakeChange_15 extends _i1.SmartFake implements _i2.Change {
-  _FakeChange_15(
+class _FakeChange_12 extends _i1.SmartFake implements _i2.Change {
+  _FakeChange_12(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -195,9 +162,9 @@ class _FakeChange_15 extends _i1.SmartFake implements _i2.Change {
         );
 }
 
-class _FakeAdConnectionInfo_16 extends _i1.SmartFake
+class _FakeAdConnectionInfo_13 extends _i1.SmartFake
     implements _i2.AdConnectionInfo {
-  _FakeAdConnectionInfo_16(
+  _FakeAdConnectionInfo_13(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -206,8 +173,8 @@ class _FakeAdConnectionInfo_16 extends _i1.SmartFake
         );
 }
 
-class _FakeEndpoint_17 extends _i1.SmartFake implements _i3.Endpoint {
-  _FakeEndpoint_17(
+class _FakeEndpoint_14 extends _i1.SmartFake implements _i3.Endpoint {
+  _FakeEndpoint_14(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -802,97 +769,13 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<void>);
 
   @override
-  _i5.Future<_i2.WSLSetupOptions> wslSetupOptions() => (super.noSuchMethod(
-        Invocation.method(
-          #wslSetupOptions,
-          [],
-        ),
-        returnValue:
-            _i5.Future<_i2.WSLSetupOptions>.value(_FakeWSLSetupOptions_8(
-          this,
-          Invocation.method(
-            #wslSetupOptions,
-            [],
-          ),
-        )),
-      ) as _i5.Future<_i2.WSLSetupOptions>);
-
-  @override
-  _i5.Future<void> setWslSetupOptions(_i2.WSLSetupOptions? options) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setWslSetupOptions,
-          [options],
-        ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
-
-  @override
-  _i5.Future<_i2.WSLConfigurationBase> wslConfigurationBase() =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #wslConfigurationBase,
-          [],
-        ),
-        returnValue: _i5.Future<_i2.WSLConfigurationBase>.value(
-            _FakeWSLConfigurationBase_9(
-          this,
-          Invocation.method(
-            #wslConfigurationBase,
-            [],
-          ),
-        )),
-      ) as _i5.Future<_i2.WSLConfigurationBase>);
-
-  @override
-  _i5.Future<void> setWslConfigurationBase(_i2.WSLConfigurationBase? conf) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setWslConfigurationBase,
-          [conf],
-        ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
-
-  @override
-  _i5.Future<_i2.WSLConfigurationAdvanced> wslConfigurationAdvanced() =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #wslConfigurationAdvanced,
-          [],
-        ),
-        returnValue: _i5.Future<_i2.WSLConfigurationAdvanced>.value(
-            _FakeWSLConfigurationAdvanced_10(
-          this,
-          Invocation.method(
-            #wslConfigurationAdvanced,
-            [],
-          ),
-        )),
-      ) as _i5.Future<_i2.WSLConfigurationAdvanced>);
-
-  @override
-  _i5.Future<void> setWslConfigurationAdvanced(
-          _i2.WSLConfigurationAdvanced? conf) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #setWslConfigurationAdvanced,
-          [conf],
-        ),
-        returnValue: _i5.Future<void>.value(),
-        returnValueForMissingStub: _i5.Future<void>.value(),
-      ) as _i5.Future<void>);
-
-  @override
   _i5.Future<_i2.AnyStep> getKeyboardStep([String? step = r'0']) =>
       (super.noSuchMethod(
         Invocation.method(
           #getKeyboardStep,
           [step],
         ),
-        returnValue: _i5.Future<_i2.AnyStep>.value(_FakeAnyStep_11(
+        returnValue: _i5.Future<_i2.AnyStep>.value(_FakeAnyStep_8(
           this,
           Invocation.method(
             #getKeyboardStep,
@@ -908,7 +791,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
         ),
         returnValue:
-            _i5.Future<_i2.DriversResponse>.value(_FakeDriversResponse_12(
+            _i5.Future<_i2.DriversResponse>.value(_FakeDriversResponse_9(
           this,
           Invocation.method(
             #getDrivers,
@@ -934,7 +817,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           #getCodecs,
           [],
         ),
-        returnValue: _i5.Future<_i2.CodecsData>.value(_FakeCodecsData_13(
+        returnValue: _i5.Future<_i2.CodecsData>.value(_FakeCodecsData_10(
           this,
           Invocation.method(
             #getCodecs,
@@ -962,7 +845,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
           {#wait: wait},
         ),
-        returnValue: _i5.Future<_i2.RefreshStatus>.value(_FakeRefreshStatus_14(
+        returnValue: _i5.Future<_i2.RefreshStatus>.value(_FakeRefreshStatus_11(
           this,
           Invocation.method(
             #checkRefresh,
@@ -994,7 +877,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           #getRefreshProgress,
           [changeId],
         ),
-        returnValue: _i5.Future<_i2.Change>.value(_FakeChange_15(
+        returnValue: _i5.Future<_i2.Change>.value(_FakeChange_12(
           this,
           Invocation.method(
             #getRefreshProgress,
@@ -1019,7 +902,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
         ),
         returnValue:
-            _i5.Future<_i2.AdConnectionInfo>.value(_FakeAdConnectionInfo_16(
+            _i5.Future<_i2.AdConnectionInfo>.value(_FakeAdConnectionInfo_13(
           this,
           Invocation.method(
             #getActiveDirectory,
@@ -1130,7 +1013,7 @@ class MockSubiquityServer extends _i1.Mock implements _i7.SubiquityServer {
   @override
   _i3.Endpoint get endpoint => (super.noSuchMethod(
         Invocation.getter(#endpoint),
-        returnValue: _FakeEndpoint_17(
+        returnValue: _FakeEndpoint_14(
           this,
           Invocation.getter(#endpoint),
         ),
@@ -1150,7 +1033,7 @@ class MockSubiquityServer extends _i1.Mock implements _i7.SubiquityServer {
             #environment: environment,
           },
         ),
-        returnValue: _i5.Future<_i3.Endpoint>.value(_FakeEndpoint_17(
+        returnValue: _i5.Future<_i3.Endpoint>.value(_FakeEndpoint_14(
           this,
           Invocation.method(
             #start,

@@ -292,42 +292,6 @@ void main() {
     expect(GuidedChoiceV2.fromJson(json), choice);
   });
 
-  test('wsl configuration base data', () {
-    const conf = WSLConfigurationBase(
-      automountRoot: '/mnt/',
-      automountOptions: '',
-      networkGeneratehosts: true,
-      networkGenerateresolvconf: true,
-    );
-    const json = <String, dynamic>{
-      'automount_root': '/mnt/',
-      'automount_options': '',
-      'network_generatehosts': true,
-      'network_generateresolvconf': true,
-    };
-    expect(conf.toJson(), equals(json));
-    expect(WSLConfigurationBase.fromJson(json), conf);
-  });
-
-  test('wsl configuration advanced', () {
-    const conf = WSLConfigurationAdvanced(
-      automountEnabled: true,
-      automountMountfstab: true,
-      interopEnabled: true,
-      interopAppendwindowspath: true,
-      systemdEnabled: false,
-    );
-    const json = <String, dynamic>{
-      'automount_enabled': true,
-      'automount_mountfstab': true,
-      'interop_enabled': true,
-      'interop_appendwindowspath': true,
-      'systemd_enabled': false,
-    };
-    expect(conf.toJson(), equals(json));
-    expect(WSLConfigurationAdvanced.fromJson(json), conf);
-  });
-
   test('keyboard layout key press step', () {
     const step = StepPressKey(
       symbols: ['z'],
