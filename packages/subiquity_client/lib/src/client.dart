@@ -452,45 +452,6 @@ class SubiquityClient {
     } on HttpException catch (_) {}
   }
 
-  Future<WSLSetupOptions> wslSetupOptions() async {
-    final request = await _openUrl('GET', 'wslsetupoptions');
-    return _receive('wslsetupoptions()', request, WSLSetupOptions.fromJson);
-  }
-
-  Future<void> setWslSetupOptions(WSLSetupOptions options) async {
-    final request = await _openUrl('POST', 'wslsetupoptions');
-    request.write(jsonEncode(options.toJson()));
-    return _receive('setWslSetupOptions($options)', request);
-  }
-
-  Future<WSLConfigurationBase> wslConfigurationBase() async {
-    final request = await _openUrl('GET', 'wslconfbase');
-    return _receive('wslconfbase()', request, WSLConfigurationBase.fromJson);
-  }
-
-  Future<void> setWslConfigurationBase(WSLConfigurationBase conf) async {
-    final request = await _openUrl('POST', 'wslconfbase');
-    request.write(jsonEncode(conf.toJson()));
-    await _receive('setWslconfbase($conf)', request);
-  }
-
-  Future<WSLConfigurationAdvanced> wslConfigurationAdvanced() async {
-    final request = await _openUrl('GET', 'wslconfadvanced');
-    return _receive(
-      'wslconfadvanced()',
-      request,
-      WSLConfigurationAdvanced.fromJson,
-    );
-  }
-
-  Future<void> setWslConfigurationAdvanced(
-    WSLConfigurationAdvanced conf,
-  ) async {
-    final request = await _openUrl('POST', 'wslconfadvanced');
-    request.write(jsonEncode(conf.toJson()));
-    await _receive('setWslconfadvanced($conf)', request);
-  }
-
   Future<AnyStep> getKeyboardStep([String step = '0']) async {
     final params = {'index': jsonEncode(step)};
     final request = await _openUrl('GET', 'keyboard/steps', params);

@@ -372,6 +372,512 @@ const _$PackageInstallStateEnumMap = {
   PackageInstallState.DONE: 'DONE',
 };
 
+_$IdentityDataImpl _$$IdentityDataImplFromJson(Map<String, dynamic> json) =>
+    _$IdentityDataImpl(
+      realname: json['realname'] as String? ?? '',
+      username: json['username'] as String? ?? '',
+      cryptedPassword: json['crypted_password'] as String? ?? '',
+      hostname: json['hostname'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$IdentityDataImplToJson(_$IdentityDataImpl instance) =>
+    <String, dynamic>{
+      'realname': instance.realname,
+      'username': instance.username,
+      'crypted_password': instance.cryptedPassword,
+      'hostname': instance.hostname,
+    };
+
+_$SSHDataImpl _$$SSHDataImplFromJson(Map<String, dynamic> json) =>
+    _$SSHDataImpl(
+      installServer: json['install_server'] as bool,
+      allowPw: json['allow_pw'] as bool,
+      authorizedKeys: (json['authorized_keys'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+    );
+
+Map<String, dynamic> _$$SSHDataImplToJson(_$SSHDataImpl instance) =>
+    <String, dynamic>{
+      'install_server': instance.installServer,
+      'allow_pw': instance.allowPw,
+      'authorized_keys': instance.authorizedKeys,
+    };
+
+_$SSHIdentityImpl _$$SSHIdentityImplFromJson(Map<String, dynamic> json) =>
+    _$SSHIdentityImpl(
+      keyType: json['key_type'] as String,
+      key: json['key'] as String,
+      keyComment: json['key_comment'] as String,
+      keyFingerprint: json['key_fingerprint'] as String,
+    );
+
+Map<String, dynamic> _$$SSHIdentityImplToJson(_$SSHIdentityImpl instance) =>
+    <String, dynamic>{
+      'key_type': instance.keyType,
+      'key': instance.key,
+      'key_comment': instance.keyComment,
+      'key_fingerprint': instance.keyFingerprint,
+    };
+
+_$SSHFetchIdResponseImpl _$$SSHFetchIdResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SSHFetchIdResponseImpl(
+      status: $enumDecode(_$SSHFetchIdStatusEnumMap, json['status']),
+      identities: (json['identities'] as List<dynamic>?)
+          ?.map((e) => SSHIdentity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      error: json['error'] as String?,
+    );
+
+Map<String, dynamic> _$$SSHFetchIdResponseImplToJson(
+        _$SSHFetchIdResponseImpl instance) =>
+    <String, dynamic>{
+      'status': _$SSHFetchIdStatusEnumMap[instance.status]!,
+      'identities': instance.identities?.map((e) => e.toJson()).toList(),
+      'error': instance.error,
+    };
+
+const _$SSHFetchIdStatusEnumMap = {
+  SSHFetchIdStatus.OK: 'OK',
+  SSHFetchIdStatus.IMPORT_ERROR: 'IMPORT_ERROR',
+  SSHFetchIdStatus.FINGERPRINT_ERROR: 'FINGERPRINT_ERROR',
+};
+
+_$ChannelSnapInfoImpl _$$ChannelSnapInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ChannelSnapInfoImpl(
+      channelName: json['channel_name'] as String,
+      revision: json['revision'] as String,
+      confinement: json['confinement'] as String,
+      version: json['version'] as String,
+      size: (json['size'] as num).toInt(),
+      releasedAt: DateTime.parse(json['released_at'] as String),
+    );
+
+Map<String, dynamic> _$$ChannelSnapInfoImplToJson(
+        _$ChannelSnapInfoImpl instance) =>
+    <String, dynamic>{
+      'channel_name': instance.channelName,
+      'revision': instance.revision,
+      'confinement': instance.confinement,
+      'version': instance.version,
+      'size': instance.size,
+      'released_at': instance.releasedAt.toIso8601String(),
+    };
+
+_$SnapInfoImpl _$$SnapInfoImplFromJson(Map<String, dynamic> json) =>
+    _$SnapInfoImpl(
+      name: json['name'] as String,
+      summary: json['summary'] as String? ?? '',
+      publisher: json['publisher'] as String? ?? '',
+      verified: json['verified'] as bool? ?? false,
+      starred: json['starred'] as bool? ?? false,
+      description: json['description'] as String? ?? '',
+      confinement: json['confinement'] as String? ?? '',
+      license: json['license'] as String? ?? '',
+      channels: (json['channels'] as List<dynamic>?)
+              ?.map((e) => ChannelSnapInfo.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+    );
+
+Map<String, dynamic> _$$SnapInfoImplToJson(_$SnapInfoImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'summary': instance.summary,
+      'publisher': instance.publisher,
+      'verified': instance.verified,
+      'starred': instance.starred,
+      'description': instance.description,
+      'confinement': instance.confinement,
+      'license': instance.license,
+      'channels': instance.channels.map((e) => e.toJson()).toList(),
+    };
+
+_$DriversResponseImpl _$$DriversResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DriversResponseImpl(
+      install: json['install'] as bool,
+      drivers:
+          (json['drivers'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      localOnly: json['local_only'] as bool,
+      searchDrivers: json['search_drivers'] as bool,
+    );
+
+Map<String, dynamic> _$$DriversResponseImplToJson(
+        _$DriversResponseImpl instance) =>
+    <String, dynamic>{
+      'install': instance.install,
+      'drivers': instance.drivers,
+      'local_only': instance.localOnly,
+      'search_drivers': instance.searchDrivers,
+    };
+
+_$OEMResponseImpl _$$OEMResponseImplFromJson(Map<String, dynamic> json) =>
+    _$OEMResponseImpl(
+      metapackages: (json['metapackages'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$$OEMResponseImplToJson(_$OEMResponseImpl instance) =>
+    <String, dynamic>{
+      'metapackages': instance.metapackages,
+    };
+
+_$CodecsDataImpl _$$CodecsDataImplFromJson(Map<String, dynamic> json) =>
+    _$CodecsDataImpl(
+      install: json['install'] as bool,
+    );
+
+Map<String, dynamic> _$$CodecsDataImplToJson(_$CodecsDataImpl instance) =>
+    <String, dynamic>{
+      'install': instance.install,
+    };
+
+_$DriversPayloadImpl _$$DriversPayloadImplFromJson(Map<String, dynamic> json) =>
+    _$DriversPayloadImpl(
+      install: json['install'] as bool,
+    );
+
+Map<String, dynamic> _$$DriversPayloadImplToJson(
+        _$DriversPayloadImpl instance) =>
+    <String, dynamic>{
+      'install': instance.install,
+    };
+
+_$SnapSelectionImpl _$$SnapSelectionImplFromJson(Map<String, dynamic> json) =>
+    _$SnapSelectionImpl(
+      name: json['name'] as String,
+      channel: json['channel'] as String,
+      classic: json['classic'] as bool? ?? false,
+    );
+
+Map<String, dynamic> _$$SnapSelectionImplToJson(_$SnapSelectionImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'channel': instance.channel,
+      'classic': instance.classic,
+    };
+
+_$SnapListResponseImpl _$$SnapListResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SnapListResponseImpl(
+      status: $enumDecode(_$SnapCheckStateEnumMap, json['status']),
+      snaps: (json['snaps'] as List<dynamic>?)
+              ?.map((e) => SnapInfo.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      selections: (json['selections'] as List<dynamic>?)
+              ?.map((e) => SnapSelection.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+    );
+
+Map<String, dynamic> _$$SnapListResponseImplToJson(
+        _$SnapListResponseImpl instance) =>
+    <String, dynamic>{
+      'status': _$SnapCheckStateEnumMap[instance.status]!,
+      'snaps': instance.snaps.map((e) => e.toJson()).toList(),
+      'selections': instance.selections.map((e) => e.toJson()).toList(),
+    };
+
+const _$SnapCheckStateEnumMap = {
+  SnapCheckState.FAILED: 'FAILED',
+  SnapCheckState.LOADING: 'LOADING',
+  SnapCheckState.DONE: 'DONE',
+};
+
+_$TimeZoneInfoImpl _$$TimeZoneInfoImplFromJson(Map<String, dynamic> json) =>
+    _$TimeZoneInfoImpl(
+      timezone: json['timezone'] as String,
+      fromGeoip: json['from_geoip'] as bool,
+    );
+
+Map<String, dynamic> _$$TimeZoneInfoImplToJson(_$TimeZoneInfoImpl instance) =>
+    <String, dynamic>{
+      'timezone': instance.timezone,
+      'from_geoip': instance.fromGeoip,
+    };
+
+_$UbuntuProInfoImpl _$$UbuntuProInfoImplFromJson(Map<String, dynamic> json) =>
+    _$UbuntuProInfoImpl(
+      token: json['token'] as String,
+    );
+
+Map<String, dynamic> _$$UbuntuProInfoImplToJson(_$UbuntuProInfoImpl instance) =>
+    <String, dynamic>{
+      'token': instance.token,
+    };
+
+_$UbuntuProResponseImpl _$$UbuntuProResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProResponseImpl(
+      token: json['token'] as String,
+      hasNetwork: json['has_network'] as bool,
+    );
+
+Map<String, dynamic> _$$UbuntuProResponseImplToJson(
+        _$UbuntuProResponseImpl instance) =>
+    <String, dynamic>{
+      'token': instance.token,
+      'has_network': instance.hasNetwork,
+    };
+
+_$UbuntuProGeneralInfoImpl _$$UbuntuProGeneralInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProGeneralInfoImpl(
+      eolEsmYear: (json['eol_esm_year'] as num?)?.toInt(),
+      universePackages: (json['universe_packages'] as num).toInt(),
+      mainPackages: (json['main_packages'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$$UbuntuProGeneralInfoImplToJson(
+        _$UbuntuProGeneralInfoImpl instance) =>
+    <String, dynamic>{
+      'eol_esm_year': instance.eolEsmYear,
+      'universe_packages': instance.universePackages,
+      'main_packages': instance.mainPackages,
+    };
+
+_$UPCSInitiateResponseImpl _$$UPCSInitiateResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UPCSInitiateResponseImpl(
+      userCode: json['user_code'] as String,
+      validitySeconds: (json['validity_seconds'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$$UPCSInitiateResponseImplToJson(
+        _$UPCSInitiateResponseImpl instance) =>
+    <String, dynamic>{
+      'user_code': instance.userCode,
+      'validity_seconds': instance.validitySeconds,
+    };
+
+_$UPCSWaitResponseImpl _$$UPCSWaitResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UPCSWaitResponseImpl(
+      status: $enumDecode(_$UPCSWaitStatusEnumMap, json['status']),
+      contractToken: json['contract_token'] as String?,
+    );
+
+Map<String, dynamic> _$$UPCSWaitResponseImplToJson(
+        _$UPCSWaitResponseImpl instance) =>
+    <String, dynamic>{
+      'status': _$UPCSWaitStatusEnumMap[instance.status]!,
+      'contract_token': instance.contractToken,
+    };
+
+const _$UPCSWaitStatusEnumMap = {
+  UPCSWaitStatus.SUCCESS: 'SUCCESS',
+  UPCSWaitStatus.TIMEOUT: 'TIMEOUT',
+};
+
+_$UbuntuProServiceImpl _$$UbuntuProServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProServiceImpl(
+      name: json['name'] as String,
+      description: json['description'] as String,
+      autoEnabled: json['auto_enabled'] as bool,
+    );
+
+Map<String, dynamic> _$$UbuntuProServiceImplToJson(
+        _$UbuntuProServiceImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'description': instance.description,
+      'auto_enabled': instance.autoEnabled,
+    };
+
+_$UbuntuProSubscriptionImpl _$$UbuntuProSubscriptionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProSubscriptionImpl(
+      contractName: json['contract_name'] as String,
+      accountName: json['account_name'] as String,
+      contractToken: json['contract_token'] as String,
+      services: (json['services'] as List<dynamic>)
+          .map((e) => UbuntuProService.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$UbuntuProSubscriptionImplToJson(
+        _$UbuntuProSubscriptionImpl instance) =>
+    <String, dynamic>{
+      'contract_name': instance.contractName,
+      'account_name': instance.accountName,
+      'contract_token': instance.contractToken,
+      'services': instance.services.map((e) => e.toJson()).toList(),
+    };
+
+_$UbuntuProCheckTokenAnswerImpl _$$UbuntuProCheckTokenAnswerImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UbuntuProCheckTokenAnswerImpl(
+      status: $enumDecode(_$UbuntuProCheckTokenStatusEnumMap, json['status']),
+      subscription: json['subscription'] == null
+          ? null
+          : UbuntuProSubscription.fromJson(
+              json['subscription'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$UbuntuProCheckTokenAnswerImplToJson(
+        _$UbuntuProCheckTokenAnswerImpl instance) =>
+    <String, dynamic>{
+      'status': _$UbuntuProCheckTokenStatusEnumMap[instance.status]!,
+      'subscription': instance.subscription?.toJson(),
+    };
+
+const _$UbuntuProCheckTokenStatusEnumMap = {
+  UbuntuProCheckTokenStatus.VALID_TOKEN: 'VALID_TOKEN',
+  UbuntuProCheckTokenStatus.INVALID_TOKEN: 'INVALID_TOKEN',
+  UbuntuProCheckTokenStatus.EXPIRED_TOKEN: 'EXPIRED_TOKEN',
+  UbuntuProCheckTokenStatus.UNKNOWN_ERROR: 'UNKNOWN_ERROR',
+};
+
+_$TaskProgressImpl _$$TaskProgressImplFromJson(Map<String, dynamic> json) =>
+    _$TaskProgressImpl(
+      label: json['label'] as String? ?? '',
+      done: (json['done'] as num?)?.toInt() ?? 0,
+      total: (json['total'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$TaskProgressImplToJson(_$TaskProgressImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'done': instance.done,
+      'total': instance.total,
+    };
+
+_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
+      id: json['id'] as String,
+      kind: json['kind'] as String,
+      summary: json['summary'] as String,
+      status: $enumDecode(_$TaskStatusEnumMap, json['status']),
+      progress: TaskProgress.fromJson(json['progress'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'kind': instance.kind,
+      'summary': instance.summary,
+      'status': _$TaskStatusEnumMap[instance.status]!,
+      'progress': instance.progress.toJson(),
+    };
+
+const _$TaskStatusEnumMap = {
+  TaskStatus.DO: 'DO',
+  TaskStatus.DOING: 'DOING',
+  TaskStatus.DONE: 'DONE',
+  TaskStatus.ABORT: 'ABORT',
+  TaskStatus.UNDO: 'UNDO',
+  TaskStatus.UNDOING: 'UNDOING',
+  TaskStatus.HOLD: 'HOLD',
+  TaskStatus.ERROR: 'ERROR',
+};
+
+_$ChangeImpl _$$ChangeImplFromJson(Map<String, dynamic> json) => _$ChangeImpl(
+      id: json['id'] as String,
+      kind: json['kind'] as String,
+      summary: json['summary'] as String,
+      status: $enumDecode(_$TaskStatusEnumMap, json['status']),
+      tasks: (json['tasks'] as List<dynamic>)
+          .map((e) => Task.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      ready: json['ready'] as bool,
+      err: json['err'] as String?,
+      data: json['data'],
+    );
+
+Map<String, dynamic> _$$ChangeImplToJson(_$ChangeImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'kind': instance.kind,
+      'summary': instance.summary,
+      'status': _$TaskStatusEnumMap[instance.status]!,
+      'tasks': instance.tasks.map((e) => e.toJson()).toList(),
+      'ready': instance.ready,
+      'err': instance.err,
+      'data': instance.data,
+    };
+
+_$MirrorCheckResponseImpl _$$MirrorCheckResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MirrorCheckResponseImpl(
+      url: json['url'] as String,
+      status: $enumDecode(_$MirrorCheckStatusEnumMap, json['status']),
+      output: json['output'] as String,
+    );
+
+Map<String, dynamic> _$$MirrorCheckResponseImplToJson(
+        _$MirrorCheckResponseImpl instance) =>
+    <String, dynamic>{
+      'url': instance.url,
+      'status': _$MirrorCheckStatusEnumMap[instance.status]!,
+      'output': instance.output,
+    };
+
+const _$MirrorCheckStatusEnumMap = {
+  MirrorCheckStatus.OK: 'OK',
+  MirrorCheckStatus.RUNNING: 'RUNNING',
+  MirrorCheckStatus.FAILED: 'FAILED',
+};
+
+_$MirrorPostImpl _$$MirrorPostImplFromJson(Map<String, dynamic> json) =>
+    _$MirrorPostImpl(
+      elected: json['elected'] as String?,
+      candidates: (json['candidates'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      staged: json['staged'] as String?,
+      useDuringInstallation: json['use_during_installation'] as bool?,
+    );
+
+Map<String, dynamic> _$$MirrorPostImplToJson(_$MirrorPostImpl instance) =>
+    <String, dynamic>{
+      'elected': instance.elected,
+      'candidates': instance.candidates,
+      'staged': instance.staged,
+      'use_during_installation': instance.useDuringInstallation,
+    };
+
+_$MirrorGetImpl _$$MirrorGetImplFromJson(Map<String, dynamic> json) =>
+    _$MirrorGetImpl(
+      relevant: json['relevant'] as bool,
+      elected: json['elected'] as String?,
+      candidates: (json['candidates'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      staged: json['staged'] as String?,
+      useDuringInstallation: json['use_during_installation'] as bool,
+    );
+
+Map<String, dynamic> _$$MirrorGetImplToJson(_$MirrorGetImpl instance) =>
+    <String, dynamic>{
+      'relevant': instance.relevant,
+      'elected': instance.elected,
+      'candidates': instance.candidates,
+      'staged': instance.staged,
+      'use_during_installation': instance.useDuringInstallation,
+    };
+
+_$AdConnectionInfoImpl _$$AdConnectionInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdConnectionInfoImpl(
+      adminName: json['admin_name'] as String? ?? '',
+      domainName: json['domain_name'] as String? ?? '',
+      password: json['password'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$$AdConnectionInfoImplToJson(
+        _$AdConnectionInfoImpl instance) =>
+    <String, dynamic>{
+      'admin_name': instance.adminName,
+      'domain_name': instance.domainName,
+      'password': instance.password,
+    };
+
 _$OsProberImpl _$$OsProberImplFromJson(Map<String, dynamic> json) =>
     _$OsProberImpl(
       long: json['long'] as String,
@@ -874,564 +1380,4 @@ Map<String, dynamic> _$$ReformatDiskImplToJson(_$ReformatDiskImpl instance) =>
     <String, dynamic>{
       'disk_id': instance.diskId,
       'ptable': instance.ptable,
-    };
-
-_$IdentityDataImpl _$$IdentityDataImplFromJson(Map<String, dynamic> json) =>
-    _$IdentityDataImpl(
-      realname: json['realname'] as String? ?? '',
-      username: json['username'] as String? ?? '',
-      cryptedPassword: json['crypted_password'] as String? ?? '',
-      hostname: json['hostname'] as String? ?? '',
-    );
-
-Map<String, dynamic> _$$IdentityDataImplToJson(_$IdentityDataImpl instance) =>
-    <String, dynamic>{
-      'realname': instance.realname,
-      'username': instance.username,
-      'crypted_password': instance.cryptedPassword,
-      'hostname': instance.hostname,
-    };
-
-_$SSHDataImpl _$$SSHDataImplFromJson(Map<String, dynamic> json) =>
-    _$SSHDataImpl(
-      installServer: json['install_server'] as bool,
-      allowPw: json['allow_pw'] as bool,
-      authorizedKeys: (json['authorized_keys'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-    );
-
-Map<String, dynamic> _$$SSHDataImplToJson(_$SSHDataImpl instance) =>
-    <String, dynamic>{
-      'install_server': instance.installServer,
-      'allow_pw': instance.allowPw,
-      'authorized_keys': instance.authorizedKeys,
-    };
-
-_$SSHIdentityImpl _$$SSHIdentityImplFromJson(Map<String, dynamic> json) =>
-    _$SSHIdentityImpl(
-      keyType: json['key_type'] as String,
-      key: json['key'] as String,
-      keyComment: json['key_comment'] as String,
-      keyFingerprint: json['key_fingerprint'] as String,
-    );
-
-Map<String, dynamic> _$$SSHIdentityImplToJson(_$SSHIdentityImpl instance) =>
-    <String, dynamic>{
-      'key_type': instance.keyType,
-      'key': instance.key,
-      'key_comment': instance.keyComment,
-      'key_fingerprint': instance.keyFingerprint,
-    };
-
-_$SSHFetchIdResponseImpl _$$SSHFetchIdResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SSHFetchIdResponseImpl(
-      status: $enumDecode(_$SSHFetchIdStatusEnumMap, json['status']),
-      identities: (json['identities'] as List<dynamic>?)
-          ?.map((e) => SSHIdentity.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      error: json['error'] as String?,
-    );
-
-Map<String, dynamic> _$$SSHFetchIdResponseImplToJson(
-        _$SSHFetchIdResponseImpl instance) =>
-    <String, dynamic>{
-      'status': _$SSHFetchIdStatusEnumMap[instance.status]!,
-      'identities': instance.identities?.map((e) => e.toJson()).toList(),
-      'error': instance.error,
-    };
-
-const _$SSHFetchIdStatusEnumMap = {
-  SSHFetchIdStatus.OK: 'OK',
-  SSHFetchIdStatus.IMPORT_ERROR: 'IMPORT_ERROR',
-  SSHFetchIdStatus.FINGERPRINT_ERROR: 'FINGERPRINT_ERROR',
-};
-
-_$ChannelSnapInfoImpl _$$ChannelSnapInfoImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ChannelSnapInfoImpl(
-      channelName: json['channel_name'] as String,
-      revision: json['revision'] as String,
-      confinement: json['confinement'] as String,
-      version: json['version'] as String,
-      size: (json['size'] as num).toInt(),
-      releasedAt: DateTime.parse(json['released_at'] as String),
-    );
-
-Map<String, dynamic> _$$ChannelSnapInfoImplToJson(
-        _$ChannelSnapInfoImpl instance) =>
-    <String, dynamic>{
-      'channel_name': instance.channelName,
-      'revision': instance.revision,
-      'confinement': instance.confinement,
-      'version': instance.version,
-      'size': instance.size,
-      'released_at': instance.releasedAt.toIso8601String(),
-    };
-
-_$SnapInfoImpl _$$SnapInfoImplFromJson(Map<String, dynamic> json) =>
-    _$SnapInfoImpl(
-      name: json['name'] as String,
-      summary: json['summary'] as String? ?? '',
-      publisher: json['publisher'] as String? ?? '',
-      verified: json['verified'] as bool? ?? false,
-      starred: json['starred'] as bool? ?? false,
-      description: json['description'] as String? ?? '',
-      confinement: json['confinement'] as String? ?? '',
-      license: json['license'] as String? ?? '',
-      channels: (json['channels'] as List<dynamic>?)
-              ?.map((e) => ChannelSnapInfo.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    );
-
-Map<String, dynamic> _$$SnapInfoImplToJson(_$SnapInfoImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'summary': instance.summary,
-      'publisher': instance.publisher,
-      'verified': instance.verified,
-      'starred': instance.starred,
-      'description': instance.description,
-      'confinement': instance.confinement,
-      'license': instance.license,
-      'channels': instance.channels.map((e) => e.toJson()).toList(),
-    };
-
-_$DriversResponseImpl _$$DriversResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DriversResponseImpl(
-      install: json['install'] as bool,
-      drivers:
-          (json['drivers'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      localOnly: json['local_only'] as bool,
-      searchDrivers: json['search_drivers'] as bool,
-    );
-
-Map<String, dynamic> _$$DriversResponseImplToJson(
-        _$DriversResponseImpl instance) =>
-    <String, dynamic>{
-      'install': instance.install,
-      'drivers': instance.drivers,
-      'local_only': instance.localOnly,
-      'search_drivers': instance.searchDrivers,
-    };
-
-_$OEMResponseImpl _$$OEMResponseImplFromJson(Map<String, dynamic> json) =>
-    _$OEMResponseImpl(
-      metapackages: (json['metapackages'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-    );
-
-Map<String, dynamic> _$$OEMResponseImplToJson(_$OEMResponseImpl instance) =>
-    <String, dynamic>{
-      'metapackages': instance.metapackages,
-    };
-
-_$CodecsDataImpl _$$CodecsDataImplFromJson(Map<String, dynamic> json) =>
-    _$CodecsDataImpl(
-      install: json['install'] as bool,
-    );
-
-Map<String, dynamic> _$$CodecsDataImplToJson(_$CodecsDataImpl instance) =>
-    <String, dynamic>{
-      'install': instance.install,
-    };
-
-_$DriversPayloadImpl _$$DriversPayloadImplFromJson(Map<String, dynamic> json) =>
-    _$DriversPayloadImpl(
-      install: json['install'] as bool,
-    );
-
-Map<String, dynamic> _$$DriversPayloadImplToJson(
-        _$DriversPayloadImpl instance) =>
-    <String, dynamic>{
-      'install': instance.install,
-    };
-
-_$SnapSelectionImpl _$$SnapSelectionImplFromJson(Map<String, dynamic> json) =>
-    _$SnapSelectionImpl(
-      name: json['name'] as String,
-      channel: json['channel'] as String,
-      classic: json['classic'] as bool? ?? false,
-    );
-
-Map<String, dynamic> _$$SnapSelectionImplToJson(_$SnapSelectionImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'channel': instance.channel,
-      'classic': instance.classic,
-    };
-
-_$SnapListResponseImpl _$$SnapListResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SnapListResponseImpl(
-      status: $enumDecode(_$SnapCheckStateEnumMap, json['status']),
-      snaps: (json['snaps'] as List<dynamic>?)
-              ?.map((e) => SnapInfo.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      selections: (json['selections'] as List<dynamic>?)
-              ?.map((e) => SnapSelection.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    );
-
-Map<String, dynamic> _$$SnapListResponseImplToJson(
-        _$SnapListResponseImpl instance) =>
-    <String, dynamic>{
-      'status': _$SnapCheckStateEnumMap[instance.status]!,
-      'snaps': instance.snaps.map((e) => e.toJson()).toList(),
-      'selections': instance.selections.map((e) => e.toJson()).toList(),
-    };
-
-const _$SnapCheckStateEnumMap = {
-  SnapCheckState.FAILED: 'FAILED',
-  SnapCheckState.LOADING: 'LOADING',
-  SnapCheckState.DONE: 'DONE',
-};
-
-_$TimeZoneInfoImpl _$$TimeZoneInfoImplFromJson(Map<String, dynamic> json) =>
-    _$TimeZoneInfoImpl(
-      timezone: json['timezone'] as String,
-      fromGeoip: json['from_geoip'] as bool,
-    );
-
-Map<String, dynamic> _$$TimeZoneInfoImplToJson(_$TimeZoneInfoImpl instance) =>
-    <String, dynamic>{
-      'timezone': instance.timezone,
-      'from_geoip': instance.fromGeoip,
-    };
-
-_$UbuntuProInfoImpl _$$UbuntuProInfoImplFromJson(Map<String, dynamic> json) =>
-    _$UbuntuProInfoImpl(
-      token: json['token'] as String,
-    );
-
-Map<String, dynamic> _$$UbuntuProInfoImplToJson(_$UbuntuProInfoImpl instance) =>
-    <String, dynamic>{
-      'token': instance.token,
-    };
-
-_$UbuntuProResponseImpl _$$UbuntuProResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UbuntuProResponseImpl(
-      token: json['token'] as String,
-      hasNetwork: json['has_network'] as bool,
-    );
-
-Map<String, dynamic> _$$UbuntuProResponseImplToJson(
-        _$UbuntuProResponseImpl instance) =>
-    <String, dynamic>{
-      'token': instance.token,
-      'has_network': instance.hasNetwork,
-    };
-
-_$UbuntuProGeneralInfoImpl _$$UbuntuProGeneralInfoImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UbuntuProGeneralInfoImpl(
-      eolEsmYear: (json['eol_esm_year'] as num?)?.toInt(),
-      universePackages: (json['universe_packages'] as num).toInt(),
-      mainPackages: (json['main_packages'] as num).toInt(),
-    );
-
-Map<String, dynamic> _$$UbuntuProGeneralInfoImplToJson(
-        _$UbuntuProGeneralInfoImpl instance) =>
-    <String, dynamic>{
-      'eol_esm_year': instance.eolEsmYear,
-      'universe_packages': instance.universePackages,
-      'main_packages': instance.mainPackages,
-    };
-
-_$UPCSInitiateResponseImpl _$$UPCSInitiateResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UPCSInitiateResponseImpl(
-      userCode: json['user_code'] as String,
-      validitySeconds: (json['validity_seconds'] as num).toInt(),
-    );
-
-Map<String, dynamic> _$$UPCSInitiateResponseImplToJson(
-        _$UPCSInitiateResponseImpl instance) =>
-    <String, dynamic>{
-      'user_code': instance.userCode,
-      'validity_seconds': instance.validitySeconds,
-    };
-
-_$UPCSWaitResponseImpl _$$UPCSWaitResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UPCSWaitResponseImpl(
-      status: $enumDecode(_$UPCSWaitStatusEnumMap, json['status']),
-      contractToken: json['contract_token'] as String?,
-    );
-
-Map<String, dynamic> _$$UPCSWaitResponseImplToJson(
-        _$UPCSWaitResponseImpl instance) =>
-    <String, dynamic>{
-      'status': _$UPCSWaitStatusEnumMap[instance.status]!,
-      'contract_token': instance.contractToken,
-    };
-
-const _$UPCSWaitStatusEnumMap = {
-  UPCSWaitStatus.SUCCESS: 'SUCCESS',
-  UPCSWaitStatus.TIMEOUT: 'TIMEOUT',
-};
-
-_$UbuntuProServiceImpl _$$UbuntuProServiceImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UbuntuProServiceImpl(
-      name: json['name'] as String,
-      description: json['description'] as String,
-      autoEnabled: json['auto_enabled'] as bool,
-    );
-
-Map<String, dynamic> _$$UbuntuProServiceImplToJson(
-        _$UbuntuProServiceImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'description': instance.description,
-      'auto_enabled': instance.autoEnabled,
-    };
-
-_$UbuntuProSubscriptionImpl _$$UbuntuProSubscriptionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UbuntuProSubscriptionImpl(
-      contractName: json['contract_name'] as String,
-      accountName: json['account_name'] as String,
-      contractToken: json['contract_token'] as String,
-      services: (json['services'] as List<dynamic>)
-          .map((e) => UbuntuProService.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$UbuntuProSubscriptionImplToJson(
-        _$UbuntuProSubscriptionImpl instance) =>
-    <String, dynamic>{
-      'contract_name': instance.contractName,
-      'account_name': instance.accountName,
-      'contract_token': instance.contractToken,
-      'services': instance.services.map((e) => e.toJson()).toList(),
-    };
-
-_$UbuntuProCheckTokenAnswerImpl _$$UbuntuProCheckTokenAnswerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UbuntuProCheckTokenAnswerImpl(
-      status: $enumDecode(_$UbuntuProCheckTokenStatusEnumMap, json['status']),
-      subscription: json['subscription'] == null
-          ? null
-          : UbuntuProSubscription.fromJson(
-              json['subscription'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$UbuntuProCheckTokenAnswerImplToJson(
-        _$UbuntuProCheckTokenAnswerImpl instance) =>
-    <String, dynamic>{
-      'status': _$UbuntuProCheckTokenStatusEnumMap[instance.status]!,
-      'subscription': instance.subscription?.toJson(),
-    };
-
-const _$UbuntuProCheckTokenStatusEnumMap = {
-  UbuntuProCheckTokenStatus.VALID_TOKEN: 'VALID_TOKEN',
-  UbuntuProCheckTokenStatus.INVALID_TOKEN: 'INVALID_TOKEN',
-  UbuntuProCheckTokenStatus.EXPIRED_TOKEN: 'EXPIRED_TOKEN',
-  UbuntuProCheckTokenStatus.UNKNOWN_ERROR: 'UNKNOWN_ERROR',
-};
-
-_$WSLConfigurationBaseImpl _$$WSLConfigurationBaseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$WSLConfigurationBaseImpl(
-      automountRoot: json['automount_root'] as String? ?? '/mnt/',
-      automountOptions: json['automount_options'] as String? ?? '',
-      networkGeneratehosts: json['network_generatehosts'] as bool? ?? true,
-      networkGenerateresolvconf:
-          json['network_generateresolvconf'] as bool? ?? true,
-    );
-
-Map<String, dynamic> _$$WSLConfigurationBaseImplToJson(
-        _$WSLConfigurationBaseImpl instance) =>
-    <String, dynamic>{
-      'automount_root': instance.automountRoot,
-      'automount_options': instance.automountOptions,
-      'network_generatehosts': instance.networkGeneratehosts,
-      'network_generateresolvconf': instance.networkGenerateresolvconf,
-    };
-
-_$WSLConfigurationAdvancedImpl _$$WSLConfigurationAdvancedImplFromJson(
-        Map<String, dynamic> json) =>
-    _$WSLConfigurationAdvancedImpl(
-      automountEnabled: json['automount_enabled'] as bool? ?? true,
-      automountMountfstab: json['automount_mountfstab'] as bool? ?? true,
-      interopEnabled: json['interop_enabled'] as bool? ?? true,
-      interopAppendwindowspath:
-          json['interop_appendwindowspath'] as bool? ?? true,
-      systemdEnabled: json['systemd_enabled'] as bool? ?? false,
-    );
-
-Map<String, dynamic> _$$WSLConfigurationAdvancedImplToJson(
-        _$WSLConfigurationAdvancedImpl instance) =>
-    <String, dynamic>{
-      'automount_enabled': instance.automountEnabled,
-      'automount_mountfstab': instance.automountMountfstab,
-      'interop_enabled': instance.interopEnabled,
-      'interop_appendwindowspath': instance.interopAppendwindowspath,
-      'systemd_enabled': instance.systemdEnabled,
-    };
-
-_$WSLSetupOptionsImpl _$$WSLSetupOptionsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$WSLSetupOptionsImpl(
-      installLanguageSupportPackages:
-          json['install_language_support_packages'] as bool? ?? true,
-    );
-
-Map<String, dynamic> _$$WSLSetupOptionsImplToJson(
-        _$WSLSetupOptionsImpl instance) =>
-    <String, dynamic>{
-      'install_language_support_packages':
-          instance.installLanguageSupportPackages,
-    };
-
-_$TaskProgressImpl _$$TaskProgressImplFromJson(Map<String, dynamic> json) =>
-    _$TaskProgressImpl(
-      label: json['label'] as String? ?? '',
-      done: (json['done'] as num?)?.toInt() ?? 0,
-      total: (json['total'] as num?)?.toInt() ?? 0,
-    );
-
-Map<String, dynamic> _$$TaskProgressImplToJson(_$TaskProgressImpl instance) =>
-    <String, dynamic>{
-      'label': instance.label,
-      'done': instance.done,
-      'total': instance.total,
-    };
-
-_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
-      id: json['id'] as String,
-      kind: json['kind'] as String,
-      summary: json['summary'] as String,
-      status: $enumDecode(_$TaskStatusEnumMap, json['status']),
-      progress: TaskProgress.fromJson(json['progress'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'kind': instance.kind,
-      'summary': instance.summary,
-      'status': _$TaskStatusEnumMap[instance.status]!,
-      'progress': instance.progress.toJson(),
-    };
-
-const _$TaskStatusEnumMap = {
-  TaskStatus.DO: 'DO',
-  TaskStatus.DOING: 'DOING',
-  TaskStatus.DONE: 'DONE',
-  TaskStatus.ABORT: 'ABORT',
-  TaskStatus.UNDO: 'UNDO',
-  TaskStatus.UNDOING: 'UNDOING',
-  TaskStatus.HOLD: 'HOLD',
-  TaskStatus.ERROR: 'ERROR',
-};
-
-_$ChangeImpl _$$ChangeImplFromJson(Map<String, dynamic> json) => _$ChangeImpl(
-      id: json['id'] as String,
-      kind: json['kind'] as String,
-      summary: json['summary'] as String,
-      status: $enumDecode(_$TaskStatusEnumMap, json['status']),
-      tasks: (json['tasks'] as List<dynamic>)
-          .map((e) => Task.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      ready: json['ready'] as bool,
-      err: json['err'] as String?,
-      data: json['data'],
-    );
-
-Map<String, dynamic> _$$ChangeImplToJson(_$ChangeImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'kind': instance.kind,
-      'summary': instance.summary,
-      'status': _$TaskStatusEnumMap[instance.status]!,
-      'tasks': instance.tasks.map((e) => e.toJson()).toList(),
-      'ready': instance.ready,
-      'err': instance.err,
-      'data': instance.data,
-    };
-
-_$MirrorCheckResponseImpl _$$MirrorCheckResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MirrorCheckResponseImpl(
-      url: json['url'] as String,
-      status: $enumDecode(_$MirrorCheckStatusEnumMap, json['status']),
-      output: json['output'] as String,
-    );
-
-Map<String, dynamic> _$$MirrorCheckResponseImplToJson(
-        _$MirrorCheckResponseImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url,
-      'status': _$MirrorCheckStatusEnumMap[instance.status]!,
-      'output': instance.output,
-    };
-
-const _$MirrorCheckStatusEnumMap = {
-  MirrorCheckStatus.OK: 'OK',
-  MirrorCheckStatus.RUNNING: 'RUNNING',
-  MirrorCheckStatus.FAILED: 'FAILED',
-};
-
-_$MirrorPostImpl _$$MirrorPostImplFromJson(Map<String, dynamic> json) =>
-    _$MirrorPostImpl(
-      elected: json['elected'] as String?,
-      candidates: (json['candidates'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      staged: json['staged'] as String?,
-      useDuringInstallation: json['use_during_installation'] as bool?,
-    );
-
-Map<String, dynamic> _$$MirrorPostImplToJson(_$MirrorPostImpl instance) =>
-    <String, dynamic>{
-      'elected': instance.elected,
-      'candidates': instance.candidates,
-      'staged': instance.staged,
-      'use_during_installation': instance.useDuringInstallation,
-    };
-
-_$MirrorGetImpl _$$MirrorGetImplFromJson(Map<String, dynamic> json) =>
-    _$MirrorGetImpl(
-      relevant: json['relevant'] as bool,
-      elected: json['elected'] as String?,
-      candidates: (json['candidates'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      staged: json['staged'] as String?,
-      useDuringInstallation: json['use_during_installation'] as bool,
-    );
-
-Map<String, dynamic> _$$MirrorGetImplToJson(_$MirrorGetImpl instance) =>
-    <String, dynamic>{
-      'relevant': instance.relevant,
-      'elected': instance.elected,
-      'candidates': instance.candidates,
-      'staged': instance.staged,
-      'use_during_installation': instance.useDuringInstallation,
-    };
-
-_$AdConnectionInfoImpl _$$AdConnectionInfoImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AdConnectionInfoImpl(
-      adminName: json['admin_name'] as String? ?? '',
-      domainName: json['domain_name'] as String? ?? '',
-      password: json['password'] as String? ?? '',
-    );
-
-Map<String, dynamic> _$$AdConnectionInfoImplToJson(
-        _$AdConnectionInfoImpl instance) =>
-    <String, dynamic>{
-      'admin_name': instance.adminName,
-      'domain_name': instance.domainName,
-      'password': instance.password,
     };
