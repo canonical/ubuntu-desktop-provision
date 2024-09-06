@@ -229,5 +229,11 @@
     }
   },
   "activeDirectoryHeader": "Logg inn i Active Directory?",
-  "@activeDirectoryHeader": {}
+  "@activeDirectoryHeader": {},
+  "eulaPageTitle": "Lisensavtale",
+  "@eulaPageTitle": {},
+  "eulaReviewTerms": "Vis lisensvilkårene",
+  "@eulaReviewTerms": {},
+  "eulaAcceptTerms": "Jeg har lest og godtatt disse vilkårene",
+  "@eulaAcceptTerms": {}
 }
