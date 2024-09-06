@@ -242,7 +242,7 @@
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.",
   "@newPartitionTableConfirmationMessage": {},
-  "installationTypeTPMInfo": "Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis {DISTRO} berikutnya. <a href=\"{url}\">Baca tentang enkripsi TPM</a> sebelum memilih opsi ini.",
+  "installationTypeTPMInfo": "Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis {DISTRO} berikutnya. <a href=\"{url}\">Baca tentang enkripsi TPM</a> sebelum Anda memilih opsi ini.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
