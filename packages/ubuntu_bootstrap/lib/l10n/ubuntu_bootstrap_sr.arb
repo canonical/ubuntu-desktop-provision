@@ -1,10 +1,10 @@
 {
   "@@locale": "sr",
-  "tryOrInstallTitle": "Испробајте или инсталирајте",
+  "tryOrInstallTitle": "Испробајте или инсталирајте {DISTRO}",
   "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Поправи инсталацију",
   "@tryOrInstallRepairOption": {},
-  "appTitle": "Убунту Десктоп Инсталација",
+  "appTitle": "Убунту десктоп инсталација",
   "@appTitle": {},
   "changeButtonText": "Измени",
   "@changeButtonText": {},
