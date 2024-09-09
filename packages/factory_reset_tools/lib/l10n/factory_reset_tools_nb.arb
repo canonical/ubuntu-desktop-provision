@@ -31,5 +31,7 @@
   "warning": "Advarsel",
   "@warning": {},
   "restore": "Gjenopprett",
-  "@restore": {}
+  "@restore": {},
+  "reformat": "Reformater",
+  "@reformat": {}
 }
