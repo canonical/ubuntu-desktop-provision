@@ -119,7 +119,9 @@ touch meta-data
 ```
 #### Adding additional Language packs
 
-The default Ubuntu ISO only has the English language pack seeded. To have additional languages available in Gnome Initial Setup, you will need to install additional language packs via the `autoinstall.yaml`
+The default Ubuntu ISO only has the English language pack seeded. To have additional languages
+available in Gnome Initial Setup, you will need to install additional language packs via the
+`autoinstall.yaml`
 
 To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands) in the `autoinstall.yaml:
 
@@ -224,7 +226,9 @@ touch meta-data
 
 #### Adding additional Language packs
 
-The default Ubuntu ISO only has the English language pack seeded. To have additional languages available in Gnome Initial Setup, you will need to install additional language packs via the `autoinstall.yaml`
+The default Ubuntu ISO only has the English language pack seeded. To have additional languages
+available in Gnome Initial Setup, you will need to install additional language packs via the
+`autoinstall.yaml`
 
 To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands) in the `autoinstall.yaml:
 
