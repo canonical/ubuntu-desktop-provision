@@ -135,8 +135,7 @@ autoinstall:
       curtin in-target --target=/target -- bash -c '
         # Update the package list
         apt-get update
-        # Installing languages not in seed
-        # Note that firefox and thunderbolt are snap packages, so these are not added here
+        # Installing extra languages
         for lang in "fr" "de"; do
              for pkg in $(check-language-support --show-installed -l "$lang"); do
                   # gimp: not installed by default
@@ -237,8 +236,7 @@ autoinstall:
       curtin in-target --target=/target -- bash -c '
         # Update the package list
         apt-get update
-        # Installing languages not in seed
-        # Note that firefox and thunderbolt are snap packages, so these are not added here
+        # Installing extra languages
         for lang in "fr" "de"; do
              for pkg in $(check-language-support --show-installed -l "$lang"); do
                   # gimp: not installed by default
