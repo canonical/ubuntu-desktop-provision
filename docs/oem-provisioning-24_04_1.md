@@ -135,17 +135,9 @@ autoinstall:
       curtin in-target --target=/target -- bash -c '
         # Update the package list
         apt-get update
-        # Check if LibreOffice is installed
-        if [ $(apt list --installed libreoffice-core 2>/dev/null | wc -l) -gt 1 ]; then
-             LIBREOFFICE_INSTALLED=true
-        else
-             LIBREOFFICE_INSTALLED=false
-        fi
         # Installing languages not in seed
         # Note that firefox and thunderbolt are snap packages, so these are not added here
         for lang in "fr" "de"; do
-             # Pull out which packages are required for LibreOffice.
-             LIBREOFFICE_PACKAGES=$(check-language-support -l "$lang" -p "libreoffice-common" 2>/dev/null)
              for pkg in $(check-language-support --show-installed -l "$lang"); do
                   # gimp: not installed by default
                   # fcitx5: not used by ubuntu as gnome is in use
@@ -153,18 +145,11 @@ autoinstall:
                   if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
                       continue
                   fi
-                  # Skip LibreOffice-related packages if LibreOffice is not installed
-                  if [ "$LIBREOFFICE_INSTALLED" = false ]; then
-                      for libre_pkg in $LIBREOFFICE_PACKAGES; do
-                          if [ "$pkg" = "$libre_pkg" ]; then
-                              continue 2
-                          fi
-                      done
-                  fi
                   apt-get install -y "$pkg"
              done
         done'
 ```
+
 #### Serve the cloud-init configuration over HTTP
 
 Change into the directory where the cloud-init configuration was created and start a server:
@@ -252,31 +237,15 @@ autoinstall:
       curtin in-target --target=/target -- bash -c '
         # Update the package list
         apt-get update
-        # Check if LibreOffice is installed
-        if [ $(apt list --installed libreoffice-core 2>/dev/null | wc -l) -gt 1 ]; then
-             LIBREOFFICE_INSTALLED=true
-        else
-             LIBREOFFICE_INSTALLED=false
-        fi
         # Installing languages not in seed
         # Note that firefox and thunderbolt are snap packages, so these are not added here
         for lang in "fr" "de"; do
-             # Pull out which packages are required for LibreOffice.
-             LIBREOFFICE_PACKAGES=$(check-language-support -l "$lang" -p "libreoffice-common" 2>/dev/null)
              for pkg in $(check-language-support --show-installed -l "$lang"); do
                   # gimp: not installed by default
                   # fcitx5: not used by ubuntu as gnome is in use
                   # mozc-utils-gui: is in universe
                   if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
                       continue
-                  fi
-                  # Skip LibreOffice-related packages if LibreOffice is not installed
-                  if [ "$LIBREOFFICE_INSTALLED" = false ]; then
-                      for libre_pkg in $LIBREOFFICE_PACKAGES; do
-                          if [ "$pkg" = "$libre_pkg" ]; then
-                              continue 2
-                          fi
-                      done
                   fi
                   apt-get install -y "$pkg"
              done
