@@ -117,6 +117,37 @@ autoinstall:
 EOF
 touch meta-data
 ```
+#### Adding additional Language packs
+
+The default Ubuntu ISO seeds multiple languages, but only carries one to the target system. To have
+additional languages available in Gnome Initial Setup, you will need to install additional language
+packs via the `autoinstall.yaml` onto the target system
+
+To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands)
+in the `autoinstall.yaml:
+
+```yaml
+#cloud-config
+autoinstall:
+  version: 1
+  late-commands:
+    - |
+      curtin in-target --target=/target -- bash -c '
+        # Update the package list
+        apt-get update
+        # Installing extra languages
+        for lang in "fr" "de"; do
+             for pkg in $(check-language-support --show-installed -l "$lang"); do
+                  # gimp: not installed by default
+                  # fcitx5: not used by ubuntu as gnome is in use
+                  # mozc-utils-gui: is in universe
+                  if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
+                      continue
+                  fi
+                  apt-get install -y "$pkg"
+             done
+        done'
+```
 
 #### Serve the cloud-init configuration over HTTP
 
@@ -185,6 +216,38 @@ autoinstall:
   version: 1
 EOF
 touch meta-data
+```
+
+#### Adding additional Language packs
+
+The default Ubuntu ISO seeds multiple languages, but only carries one to the target system. To have
+additional languages available in Gnome Initial Setup, you will need to install additional language
+packs via the `autoinstall.yaml` onto the target system
+
+To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands)
+in the `autoinstall.yaml:
+
+```yaml
+#cloud-config
+autoinstall:
+  version: 1
+  late-commands:
+    - |
+      curtin in-target --target=/target -- bash -c '
+        # Update the package list
+        apt-get update
+        # Installing extra languages
+        for lang in "fr" "de"; do
+             for pkg in $(check-language-support --show-installed -l "$lang"); do
+                  # gimp: not installed by default
+                  # fcitx5: not used by ubuntu as gnome is in use
+                  # mozc-utils-gui: is in universe
+                  if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
+                      continue
+                  fi
+                  apt-get install -y "$pkg"
+             done
+        done'
 ```
 
 #### Create an ISO to use as a cloud-init data source
