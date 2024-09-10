@@ -119,11 +119,12 @@ touch meta-data
 ```
 #### Adding additional Language packs
 
-The default Ubuntu ISO only has the English language pack seeded. To have additional languages
-available in Gnome Initial Setup, you will need to install additional language packs via the
-`autoinstall.yaml`
+The default Ubuntu ISO seeds multiple languages, but only carries one to the target system. To have
+additional languages available in Gnome Initial Setup, you will need to install additional language
+packs via the `autoinstall.yaml` onto the target system
 
-To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands) in the `autoinstall.yaml:
+To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands)
+in the `autoinstall.yaml:
 
 ```yaml
 #cloud-config
@@ -132,11 +133,16 @@ autoinstall:
   late-commands:
     - |
       curtin in-target --target=/target -- bash -c '
-        # Update package list
+        # Update the package list
         apt-get update
-
-        # Installing languages not in seed
-        # Add language codes of packs you with to install here 
+        # Check if LibreOffice is installed
+        if [ $(apt list --installed libreoffice-core 2>/dev/null | wc -l) -gt 1 ]; then
+          LIBREOFFICE_INSTALLED=true
+        else
+          LIBREOFFICE_INSTALLED=false
+        fi
+        # Note that firefox and thunderbolt are snap packages, so these are not added here
+        # Installing languages not in seed, add desiresd country codes below
         for lang in "fr" "de"; do
             for pkg in $(check-language-support --show-installed -l "$lang"); do
                 # gimp: not installed by default
@@ -145,12 +151,14 @@ autoinstall:
                 if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
                     continue
                 fi
-                apt-get install -y "$pkg"
-            done
-            for pkg in $(check-language-support --show-installed -l "$lang" -p "ibus,gnome-user-docs,gvfs"); do
-                apt-get install -y "$pkg"
-            done
-            for pkg in $(check-language-support --show-installed -l "$lang" -p "libreoffice-common"); do
+                # Skip LibreOffice-related packages if LibreOffice is not installed
+                if [ "$LIBREOFFICE_INSTALLED" = false ] && \
+                   { [ "$pkg" = "hyphen-$lang" ] || \
+                     [ "$pkg" = "libreoffice-help-$lang" ] || \
+                     [ "$pkg" = "libreoffice-l10n-$lang" ] || \
+                     [ "$pkg" = "mythes-$lang" ]; }; then
+                    continue
+                fi
                 apt-get install -y "$pkg"
             done
         done'
@@ -226,11 +234,12 @@ touch meta-data
 
 #### Adding additional Language packs
 
-The default Ubuntu ISO only has the English language pack seeded. To have additional languages
-available in Gnome Initial Setup, you will need to install additional language packs via the
-`autoinstall.yaml`
+The default Ubuntu ISO seeds multiple languages, but only carries one to the target system. To have
+additional languages available in Gnome Initial Setup, you will need to install additional language
+packs via the `autoinstall.yaml` onto the target system
 
-To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands) in the `autoinstall.yaml:
+To install additional language packs, you can make use of [late commands](https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html#late-commands)
+in the `autoinstall.yaml:
 
 ```yaml
 #cloud-config
@@ -239,11 +248,16 @@ autoinstall:
   late-commands:
     - |
       curtin in-target --target=/target -- bash -c '
-        # Update package list
+        # Update the package list
         apt-get update
-
-        # Installing languages not in seed
-        # Add language codes of packs you with to install here 
+        # Check if LibreOffice is installed
+        if [ $(apt list --installed libreoffice-core 2>/dev/null | wc -l) -gt 1 ]; then
+          LIBREOFFICE_INSTALLED=true
+        else
+          LIBREOFFICE_INSTALLED=false
+        fi
+        # Note that firefox and thunderbolt are snap packages, so these are not added here
+        # Installing languages not in seed, add desiresd country codes below
         for lang in "fr" "de"; do
             for pkg in $(check-language-support --show-installed -l "$lang"); do
                 # gimp: not installed by default
@@ -252,12 +266,14 @@ autoinstall:
                 if [ "${pkg%%-*}" = gimp ] || [ "${pkg%%-*}" = fcitx5 ] || [ "$pkg" = "mozc-utils-gui" ]; then
                     continue
                 fi
-                apt-get install -y "$pkg"
-            done
-            for pkg in $(check-language-support --show-installed -l "$lang" -p "ibus,gnome-user-docs,gvfs"); do
-                apt-get install -y "$pkg"
-            done
-            for pkg in $(check-language-support --show-installed -l "$lang" -p "libreoffice-common"); do
+                # Skip LibreOffice-related packages if LibreOffice is not installed
+                if [ "$LIBREOFFICE_INSTALLED" = false ] && \
+                   { [ "$pkg" = "hyphen-$lang" ] || \
+                     [ "$pkg" = "libreoffice-help-$lang" ] || \
+                     [ "$pkg" = "libreoffice-l10n-$lang" ] || \
+                     [ "$pkg" = "mythes-$lang" ]; }; then
+                    continue
+                fi
                 apt-get install -y "$pkg"
             done
         done'
