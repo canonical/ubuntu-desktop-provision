@@ -18,6 +18,7 @@ apps:
     desktop: usr/share/applications/ubuntu-desktop-init.desktop
     environment:
       LOG_LEVEL: debug
+      HOME: $XDG_RUNTIME_DIR
     plugs:
       - hardware-observe
       - hostfs-usr-share-desktop-provision
