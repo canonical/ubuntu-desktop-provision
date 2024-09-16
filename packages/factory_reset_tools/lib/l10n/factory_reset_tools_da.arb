@@ -58,7 +58,7 @@
   "@createResetMedia": {},
   "restart": "Genstart",
   "@restart": {},
-  "reformat": "Genformatér",
+  "reformat": "Omformatér",
   "@reformat": {},
   "resetMediaFinished": "Fuldført",
   "@resetMediaFinished": {}
