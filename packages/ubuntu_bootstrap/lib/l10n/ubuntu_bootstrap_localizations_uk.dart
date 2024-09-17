@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Тип установки';
+  String get autoinstallTitle => 'Тип встановлення';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -24,13 +24,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => 'Введіть URL-адресу autoinstall.yaml або шлях до локального файлу:';
 
   @override
-  String get autoinstallInteractiveOption => 'Інтерактивна інсталяція';
+  String get autoinstallInteractiveOption => 'Інтерактивне встановлення';
 
   @override
-  String get autoinstallInteractiveDescription => 'Для користувачів, які хочуть отримати покрокову інструкцію по встановленню.';
+  String get autoinstallInteractiveDescription => 'Для користувачів, які хочуть отримати покрокову інструкцію зі встановлення.';
 
   @override
-  String get autoinstallAutomatedOption => 'Автоматизована установка';
+  String get autoinstallAutomatedOption => 'Автоматизоване встановлення';
 
   @override
   String get autoinstallAutomatedDescription => 'Для досвідчених користувачів, які мають файл autoinstall.yaml для послідовного та повторюваного налаштування системи.';
@@ -56,7 +56,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Спробувати або встановити';
+    return 'Спробувати або встановити $DISTRO';
   }
 
   @override
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Цей комп’ютер використовує технологію Intel RST (Rapid Storage Technology). Перед встановленням Ubuntu вам потрібно вимкнути RST у Windows.';
+    return 'Цей комп’ютер використовує технологію Intel RST (Rapid Storage Technology). Перед встановленням $DISTRO вам потрібно вимкнути RST у Windows.';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Показати ключ безпеки';
 
   @override
-  String get hideSecurityKey => 'Приховати';
+  String get hideSecurityKey => 'Сховати';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Оновлення та інше програмне забезпечення';
@@ -151,21 +151,21 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Які програми ви хотіли б встановити для початку?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Оптимізувати ваш комп\'ютер';
+  String get codecsAndDriversPageTitle => 'Оптимізуйте свій комп\'ютер';
 
   @override
-  String get codecsAndDriversPageDescription => 'Встановити рекомендоване пропрієтарне програмне забезпечення?';
+  String get codecsAndDriversPageDescription => 'Встановити рекомендоване власницьке програмне забезпечення?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO за замовчуванням постачається без пропрієтарного програмного забезпечення. Встановлення додаткового програмного забезпечення може покращити продуктивність вашого комп\'ютера.';
+    return '$DISTRO усталено постачається без власницького програмного забезпечення. Встановлення додаткового програмного забезпечення може підвищити швидкодію вашого комп\'ютера.';
   }
 
   @override
   String get codecsAndDriversNvidiaNote => 'Виявлено відеокарту NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Для найкращої продуктивності відеокарт NVIDIA наполегливо рекомендується встановити додаткові драйвери.';
+  String get codecsAndDriversNvidiaBody => 'Для найкращої швидкодії відеокарт NVIDIA наполегливо радимо встановити додаткові драйвери.';
 
   @override
   String get fullInstallationTitle => 'Повна установка';
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Встановити стороннє програмне забезпечення для графіки та обладнання Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Ці драйвери підпадають під дію ліцензійних умов, включених до їх документації. Вони є пропрієтарними..';
+  String get installDriversSubtitle => 'Включаючи, але не обмежуючись драйверами NVIDIA та подібними';
 
   @override
   String get installCodecsTitle => 'Встановити підтримку додаткових медіа-форматів';
 
   @override
-  String get installCodecsSubtitle => 'На це програмне забезпечення поширюються ліцензійні умови, що додаються до його документації. Деякі з них є пропрієтарними.';
+  String get installCodecsSubtitle => 'Включаючи, але не обмежуючись MP3, MP4, MOV та подібними';
 
   @override
   String get batteryWarning => 'Комп\'ютер не підключено до джерела живлення.';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Ви можете створити або змінити розмір розділів самостійно, або вибрати кілька розділів для $DISTRO';
+    return 'Для досвідчених користувачів, які шукають індивідуальні налаштування дисків.';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Записати зміни на диск';
 
   @override
-  String get confirmHeader => 'Якщо ви продовжите, перелічені нижче зміни будуть записані на диски. Ви зможете внести подальші зміни вручну.';
+  String get confirmHeader => 'Переглянути свій вибір';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';

@@ -858,7 +858,7 @@
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Выбраны ZFS и шифрование",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Это экспериментальная функция. Она может не работать с Вашим оборудованием или в будущих выпусках {DISTRO}. <a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.",
+  "installationTypeTPMInfo": "Это экспериментальная функция. Она может не работать с вашим оборудованием или в будущих выпусках {DISTRO}. <a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {

@@ -86,7 +86,7 @@ class FactoryResetToolsLocalizationsDa extends FactoryResetToolsLocalizations {
   String get restart => 'Genstart';
 
   @override
-  String get reformat => 'Genformatér';
+  String get reformat => 'Omformatér';
 
   @override
   String get failed => 'Kunne ikke køre kommando';

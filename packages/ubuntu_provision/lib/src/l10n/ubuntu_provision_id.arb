@@ -238,5 +238,13 @@
   "networkHiddenWifiNameRequired": "Nama jaringan diperlukan",
   "@networkHiddenWifiNameRequired": {},
   "activeDirectoryAdminLabel": "Pengguna untuk bergabung ke domain",
-  "@activeDirectoryAdminLabel": {}
+  "@activeDirectoryAdminLabel": {},
+  "errorPageUbuntuBug": "Untuk mengirim suatu laporan bug secara otomatis yang menyertakan informasi debug yang relevan, harap jalankan <pre>sudo ubuntu-bug {SNAP}</pre> dalam suatu terminal, atau dari konsol perintah (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }

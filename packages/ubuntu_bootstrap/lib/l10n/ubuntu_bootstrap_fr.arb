@@ -24,7 +24,7 @@
   "@tryOrInstallReleaseNotesLabel": {},
   "rstTitle": "RST est activé",
   "@rstTitle": {},
-  "rstDescription": "Cet ordinateur utilise la technologie RST (Rapid Storage Technology) d’Intel. Il est nécessaire de désactiver RST sous Windows avant d’installer Ubuntu.",
+  "rstDescription": "Cet ordinateur utilise la technologie RST (Rapid Storage Technology) d’Intel. Il est nécessaire de désactiver RST dans Windows avant d’installer {DISTRO}.",
   "@rstDescription": {},
   "rstInstructions": "Pour obtenir des instructions, scannez le code QR sur un autre appareil ou visitez le site : <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {},
@@ -649,7 +649,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Entrez l'URL du autoinstall.yaml :",
+  "autoinstallInstructions": "Saisir l’URL du fichier autoinstall.yaml ou le chemin d’accès local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveDescription": "Pour les utilisateurs qui veulent être guidés étape par étape à travers l'installation.",
   "@autoinstallInteractiveDescription": {},

@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Adatok névtelen megosztása a(z) $distro disztribúcióval, hogy javíthassuk az élményét.';
+    return 'Segítsen nekünk a(z) $distro továbbfejlesztésében azzal, hogy megosztja velünk a rendszere adatait. Ez olyan dolgokat tartalmaz, mint a gép modellje, a telepített szoftverek és az időzónához választott hely.';
   }
 
   @override
@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Nem, ne ossza meg a rendszer adatait';
 
   @override
-  String get telemetryReportLabel => 'Jelentéskészítés részletei';
+  String get telemetryReportLabel => 'Az első jelentés megjelenítése';
 
   @override
   String get telemetryReportTitle => 'Jelentéskészítés részletei';
@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Jogi nyilatkozat';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Nem sikerült összegyűjteni a telemetria adatait';
 
   @override
   String get privacyPageTitle => 'Helymeghatározó szolgáltatások';
@@ -88,56 +88,56 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Varázslatos csatolás ezzel a kóddal az <a href=\"https://$url\">$url</a> oldalon';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'A gép csatolása';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'vagy token hozzáadása kézzel';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'A legátfogóbb előfizetés beszerzése a nyílt forráskódú szoftverek biztonságához';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Mindig ingyenes személyes használatra. 30 napos próbaidőszak a vállalkozásoknak. <a href=\"https://$url\">Tudjon meg többet</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Csatolás';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Érvénytelen token';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Érvényes token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Érvénytelen token, újrapróbálkozás';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Kihagyás most';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Később bármikor engedélyezheti az Ubuntu Pro használatát a Szoftverek és frissítések alkalmazáson keresztül.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Az Ubuntu Pro engedélyezése';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Csatolja ezt a gépet egy Ubuntu Pro előfizetéshez, hogy a csomagok szélesebb körére kapjon biztonsági frissítéseket 2032-ig.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Az Ubuntu Pro most már engedélyezve van ezen a gépen';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.';
 }

@@ -651,5 +651,58 @@
     }
   },
   "installationSlidesGamingTitle": "Passer for spilling",
-  "@installationSlidesGamingTitle": {}
+  "@installationSlidesGamingTitle": {},
+  "recoveryKeyTitle": "TPM-gjenopprettingsnøkkel",
+  "@recoveryKeyTitle": {},
+  "refreshUpdating": "Oppgraderer {snap} …",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Rydder opp {snap} …",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "Alle programmene du trenger",
+  "@installationSlidesSoftwareTitle": {},
+  "refreshUpdateNow": "Oppgrader nå",
+  "@refreshUpdateNow": {},
+  "refreshReady": "Oppgradering klar",
+  "@refreshReady": {},
+  "refreshCurrent": "Nåværende {snap}-versjon er {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Oppgrader til versjon {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Monterer {snap} …",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "validate": "Bekreft",
+  "@validate": {}
 }
