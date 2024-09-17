@@ -1,14 +1,14 @@
 {
   "@@locale": "da",
-  "installThirdPartyTitle": "Installér tredjepartssoftware til grafik- og Wi-Fi hardware samt yderligere medieformater",
+  "installThirdPartyTitle": "Installér tredjepartssoftware til grafik- og wi-fi-hardware samt yderligere medieformater",
   "@installThirdPartyTitle": {},
-  "installDriversTitle": "Installér tredjepartssoftware til grafik- og Wi-Fi-hardware",
+  "installDriversTitle": "Installér tredjepartssoftware til grafik- og wi-fi-hardware",
   "@installDriversTitle": {},
   "installDriversSubtitle": "Inkluderer men er ikke begrænset til NVIDIA-drivere og lignende",
   "@installDriversSubtitle": {},
   "installCodecsTitle": "Hent og installér understøttelse af yderligere medieformater",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Inkluderer men er ikke begrænset til MP3, MP$, MOV og lignende",
+  "installCodecsSubtitle": "Inkluderer men er ikke begrænset til MP3, MP4, MOV og lignende",
   "@installCodecsSubtitle": {},
   "onBatteryWarning": "<font color=\"{color}\">Advarsel:</font> Computeren er ikke sluttet til en strømkilde.",
   "@onBatteryWarning": {
@@ -37,7 +37,7 @@
       "RELEASE": {}
     }
   },
-  "tryOrInstallReleaseNotesLabel": "Du kunne nok ønske at læse <a href=\"{url}\">udgivelsesnoter</a>.",
+  "tryOrInstallReleaseNotesLabel": "Du vil måske gerne læse <a href=\"{url}\">udgivelsesnoterne</a>.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
@@ -127,7 +127,7 @@
   "@bitlockerTitle": {},
   "confirmInstallButton": "Installér",
   "@confirmInstallButton": {},
-  "newPartitionTableConfirmationMessage": "Oprettelse af ny partitionstabel på en hel enhed vil fjerne alle dens nuværende partitioner. Denne operation kan fortrydes, hvis det er nødvendigt.",
+  "newPartitionTableConfirmationMessage": "Oprettelse af ny partitionstabel på en hel enhed vil fjerne alle dens nuværende partitioner. Denne handling kan fortrydes, hvis det er nødvendigt.",
   "@newPartitionTableConfirmationMessage": {},
   "installationTypeDualOSDetected": "Denne computer har i øjeblikket {os1} og {os2} installeret. Hvad kunne du tænke dig at gøre?",
   "@installationTypeDualOSDetected": {
@@ -137,7 +137,7 @@
       "os2": {}
     }
   },
-  "installationTypeNoOSDetected": "Der blev ikke fundet nogen operativsystemer på denne computer. Hvad kunne du tænke dig at gøre?",
+  "installationTypeNoOSDetected": "Der blev ikke fundet noget operativsystem på denne computer. Hvad kunne du tænke dig at gøre?",
   "@installationTypeNoOSDetected": {},
   "installationTypeAlongside": "Installér {product} ved siden af {os}",
   "@installationTypeAlongside": {
@@ -222,14 +222,14 @@
       "product": {}
     }
   },
-  "installationTypeManualInfo": "For avancerede brugere, som ønsker brugertilpasset diskopsætning.",
+  "installationTypeManualInfo": "For avancerede brugere som ønsker brugertilpasset diskopsætning.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installAlongsideAllocateSpace": "Allokér plads",
+  "installAlongsideAllocateSpace": "Tildel plads",
   "@installAlongsideAllocateSpace": {},
   "installAlongsidePartition": "Partition:",
   "@installAlongsidePartition": {},
@@ -245,7 +245,7 @@
   "@newPartitionTable": {},
   "bootLoaderDevice": "Enhed til installation af opstartsindlæser",
   "@bootLoaderDevice": {},
-  "freeDiskSpace": "Fri plads",
+  "freeDiskSpace": "Ledig plads",
   "@freeDiskSpace": {},
   "newPartitionTableConfirmationTitle": "Ny tom partition",
   "@newPartitionTableConfirmationTitle": {},
@@ -291,7 +291,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesWelcomeBody": "Hvadenten du er udvikler, forfatter, gamer, eller administrator, vil du finde nye værktøjer, som forbedrer din produktivitet og beriger din oplevelse med {RELEASE}.",
+  "installationSlidesWelcomeBody": "Hvad enten du er udvikler, forfatter, gamer eller administrator, vil du finde nye værktøjer, som forbedrer din produktivitet og beriger din oplevelse med {RELEASE}.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
@@ -328,7 +328,7 @@
   "@installationTypeManual": {},
   "selectGuidedStorageInfoLabel": "Hele disken vil blive brugt:",
   "@selectGuidedStorageInfoLabel": {},
-  "installAlongsideSpaceDivider": "Allokér diskplads ved at trække skellet herunder:",
+  "installAlongsideSpaceDivider": "Tildel diskplads ved at trække i adskilleren herunder:",
   "@installAlongsideSpaceDivider": {},
   "partitionTypeLogical": "Logisk",
   "@partitionTypeLogical": {},
@@ -390,7 +390,7 @@
   "@partitionEditTitle": {},
   "partitionSizeLabel": "Størrelse:",
   "@partitionSizeLabel": {},
-  "partitionLocationLabel": "Placering for ny partition:",
+  "partitionLocationLabel": "Placering af ny partition:",
   "@partitionLocationLabel": {},
   "confirmPartitionsTitle": "Partitioner",
   "@confirmPartitionsTitle": {},
@@ -414,7 +414,7 @@
   "@configuringSystem": {},
   "installationFailed": "Installationen mislykkedes",
   "@installationFailed": {},
-  "partitionErase": "Formatér partition",
+  "partitionErase": "Formatér partitionen",
   "@partitionErase": {},
   "confirmPartitionTables": "Partitionstabellen på de følgende enheder er ændret:",
   "@confirmPartitionTables": {},
@@ -506,7 +506,7 @@
   "@shutdown": {},
   "confirmPartitionChanges": "Følgende partitionsændringer vil blive udført:",
   "@confirmPartitionChanges": {},
-  "installationTypeLVMSelected": "LVM fundet",
+  "installationTypeLVMSelected": "LVM valgt",
   "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryptionSelected": "LVM og kryptering valgt",
   "@installationTypeLVMEncryptionSelected": {},
@@ -517,7 +517,7 @@
       "RELEASE": {}
     }
   },
-  "installationTypeEncryptInfo": "I næste trin vælger du en sikkerhedsnøgle.",
+  "installationTypeEncryptInfo": "I næste trin skal du vælge en sikkerhedsnøgle.",
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "Slet disk og benyt ZFS",
   "@installationTypeZFS": {},
@@ -636,7 +636,7 @@
   "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Adgangskode påkrævet",
   "@choosePassphraseRequired": {},
-  "choosePassphraseMismatch": "Adgangskoderne stemmer ikke",
+  "choosePassphraseMismatch": "Adgangskoderne stemmer ikke overens",
   "@choosePassphraseMismatch": {},
   "choosePassphraseInfoHeader": "Sørg for at gemme din adgangskode",
   "@choosePassphraseInfoHeader": {},
@@ -702,7 +702,7 @@
   "@autoinstallAutomatedOption": {},
   "autoinstallInteractiveDescription": "Til brugere som vil guides gennem installationen et trin ad gangen.",
   "@autoinstallInteractiveDescription": {},
-  "autoinstallAutomatedDescription": "Til avancerede brugere som have en autoinstall.yaml til konsistent og reproducérbar systemopsætning.",
+  "autoinstallAutomatedDescription": "Til avancerede brugere som har en autoinstall.yaml til konsistent og reproducérbar systemopsætning.",
   "@autoinstallAutomatedDescription": {},
   "tryOrInstallHeader": "Hvad vil du gøre med {DISTRO}?",
   "@tryOrInstallHeader": {
