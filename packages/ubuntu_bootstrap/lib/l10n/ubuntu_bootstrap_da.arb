@@ -394,14 +394,14 @@
   "@partitionLocationLabel": {},
   "confirmPartitionsTitle": "Partitioner",
   "@confirmPartitionsTitle": {},
-  "installationSlidesCreativityBody": "Hvadenten du er animator, designer eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO} med understøttelse af industristandarder og open source software.",
+  "installationSlidesCreativityBody": "Hvad enten du er animator, designer eller spiludvikler, så er det nemt at tage dine arbejdsgange med til {DISTRO} med understøttelse af industristandarder og open source software.",
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityBody": "{DISTRO} Skrivebord inkluderer LibreOffice, en pakke Microsoft Office-kompatible programmer med åben kildekode til dokumenter, regneark og præsentationer. Populære kollaborationsværktøjer er også tilgængelige.",
+  "installationSlidesProductivityBody": "{DISTRO} Skrivebord inkluderer LibreOffice, en række Microsoft Office-kompatible programmer med åben kildekode til dokumenter, regneark og præsentationer. Populære samarbejdssværktøjer er også tilgængelige.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
@@ -436,9 +436,9 @@
   },
   "installationSlidesIncluded": "Inkluderet:",
   "@installationSlidesIncluded": {},
-  "installationSlidesSoftwareTitle": "Alle de programmer, du behøver",
+  "installationSlidesSoftwareTitle": "Alle de programmer du behøver",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "Installér, administrér og opdatér alle dine programmer i Ubuntu Software inklusive tusindvis af programmer fra både Snap Store og {DISTRO}s arkiv.",
+  "installationSlidesSoftwareBody": "Installér, håndtér og opdatér alle dine programmer i Ubuntu Software inklusive tusindvis af programmer fra både Snapbutikken og {DISTRO}s arkiv.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
@@ -566,15 +566,15 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Spørg Ubuntu dækker en bred vifte af spørgsmål og svar, og Ubuntu Discourse tilbyder vejledninger og diskussioner for både nye og erfarne brugere.",
+  "installationSlidesSupportCommunity": "Ask Ubuntu dækker en bred vifte af spørgsmål og svar, og Ubuntu Discourse tilbyder vejledninger og diskussioner for både nye og erfarne brugere.",
   "@installationSlidesSupportCommunity": {},
-  "installationSlidesSupportEnterprise": "For entreprise-brugere tilbyder Canonical kommerciel støtte for at gøre det nemt at onboarde og administrere Ubuntu sikkert på arbejdspladsen.",
+  "installationSlidesSupportEnterprise": "For virksomhedsbrugere tilbyder Canonical kommerciel støtte for at gøre det nemt at onboarde og administrere Ubuntu sikkert på arbejdspladsen.",
   "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "Nyttige ressourcer:",
   "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Officiel dokumentation",
   "@installationSlidesSupportDocumentation": {},
-  "installationSlidesSupportUbuntuPro": "24/7 støtte på entreprise-niveau med Ubuntu Pro",
+  "installationSlidesSupportUbuntuPro": "24/7-støtte på virksomhedsniveau med Ubuntu Pro",
   "@installationSlidesSupportUbuntuPro": {},
   "notEnoughDiskSpaceUbuntu": "Der er ikke nok diskplads til at installere {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
@@ -604,7 +604,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Indtast autoinstall.yaml-URL:",
+  "autoinstallInstructions": "Indtast autoinstall.yaml-URL eller lokal filsti:",
   "@autoinstallInstructions": {},
   "warningLabel": "Advarsel:",
   "@warningLabel": {},
@@ -863,7 +863,7 @@
   "@recoveryKeyCommand": {},
   "validate": "Validér",
   "@validate": {},
-  "refreshInfo": "Opdatér til sidste version for at få forbedret stabilitet og flere funktioner.",
+  "refreshInfo": "Opdatér til seneste version for at få forbedret stabilitet og flere funktioner.",
   "@refreshInfo": {},
   "refreshReady": "Opdatering klar",
   "@refreshReady": {},
@@ -886,7 +886,7 @@
       }
     }
   },
-  "refreshSnapUnlink": "Aflinker {snap} …",
+  "refreshSnapUnlink": "Fjerner link til {snap} …",
   "@refreshSnapUnlink": {
     "placeholders": {
       "snap": {
@@ -958,7 +958,7 @@
       }
     }
   },
-  "refreshSnapAutoConnect": "For binder plugs og slots for {snap} …",
+  "refreshSnapAutoConnect": "Forbinder plugs og slots for {snap} …",
   "@refreshSnapAutoConnect": {
     "placeholders": {
       "snap": {
@@ -990,7 +990,7 @@
       }
     }
   },
-  "refreshSnapCleanup": "Renser {snap} …",
+  "refreshSnapCleanup": "Rydder op i {snap} …",
   "@refreshSnapCleanup": {
     "placeholders": {
       "snap": {
