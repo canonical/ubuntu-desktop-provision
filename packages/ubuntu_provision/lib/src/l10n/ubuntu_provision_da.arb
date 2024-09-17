@@ -237,5 +237,13 @@
   "eulaAcceptTerms": "Jeg har læst og accepterer disse betingelser",
   "@eulaAcceptTerms": {},
   "networkPageBody": "En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.",
-  "@networkPageBody": {}
+  "@networkPageBody": {},
+  "errorPageUbuntuBug": "Hvis du vil sende en automatisk fejlrapport med relevante fejlfindingsoplysninger, skal du køre <pre>sudo ubuntu-bug {SNAP}</pre> i en terminal eller fra kommandokonsollen (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
