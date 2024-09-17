@@ -151,9 +151,9 @@ represents Brazilian Portuguese.
 ### Branches and Snap Packages
 
 Active development for all snaps built from this monorepo takes place on the
-`main` branch. To continue supporting Ubuntu releases with bug fixes dedicated
+`main` branch. To continue supporting Ubuntu releases with bug fixes, dedicated
 branches (e.g. `ubuntu/24.04`) are created once development on features for an
-upcomiingrelease begins.
+upcoming release begins.
 Snaps are built from dedicated branches that only contain the snapcraft.yaml
 (and related files) for a given snap.
 In order to create a new snap build on launchpad the `source-commit` in the
