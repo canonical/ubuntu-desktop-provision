@@ -148,11 +148,27 @@ represents Brazilian Portuguese.
 
 ## Repository Structure
 
+### Branches and Snap Packages
+
+Active development for all snaps built from this monorepo takes place on the
+`main` branch. To continue supporting Ubuntu releases with bug fixes dedicated
+branches (e.g. `ubuntu/24.04`) are created once development on features for an
+upcomiingrelease begins.
+Snaps are built from dedicated branches that only contain the snapcraft.yaml
+(and related files) for a given snap.
+In order to create a new snap build on launchpad the `source-commit` in the
+snapcraft.yaml on the corresponding branch (see table below) needs to be updated.
+
+| Snap name | Flutter package | Snap branches |
+| - | - | - |
+| `ubuntu-desktop-bootstrap` | `ubuntu_bootstrap` | `snap/ubuntu-desktop-bootstrap/*` |
+| `ubuntu-desktop-init` | `ubuntu_init` | `snap/ubuntu-desktop-init/*` |
+
 ### Frontend
 
 The UI is written in [Flutter](https://flutter.dev/) and consists of multiple Dart/Flutter packages contained in `packages/`. The most important ones are:
-* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap built from the `ci/bootstrap` branch and replaces the `ubuntu-desktop-installer`.
-* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap built from the `ci/init` branch and serves as a replacement for `gnome-initial-setup`.
+* `ubuntu_bootstrap` - Flutter UI that drives `subiquity` in the 'device bootstrap' stage. This is the core of the `ubuntu-desktop-bootstrap` snap and replaces the `ubuntu-desktop-installer`.
+* `ubuntu_init` - Flutter UI that drives `provd` in the 'first boot initialization' stage. This is the core of the `ubuntu-desktop-init` snap and serves as a replacement for `gnome-initial-setup`.
 * `ubuntu_provision` - Flutter package that contains shared code and pages used by both `ubuntu_bootstrap` and `ubuntu_init`.
 * `ubuntu_wizard` - Flutter package that provides the common wizard-style UI framework.
 * `subiquity_client` and `provd_client` - Dart packages that provide a client library for the different backends.
