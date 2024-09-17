@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# source the management script
+. "$SNAP"/management-script
+
 # store current script directories
 SCRIPT_DIR=`dirname $0`
 
@@ -28,4 +31,17 @@ export SUBIQUITY_ROOT=$SNAP/bin/subiquity
 cd $SCRIPT_DIR/subiquity
 
 args=(--use-os-prober --storage-version=2 --postinst-hooks-dir=$SNAP/etc/subiquity/postinst.d)
+
+block_probing_timeout="$(block_probing_timeout)"
+case "${block_probing_timeout}" in
+    no | none | null)
+        args+=(--no-block-probing-timeout)
+        ;;
+    default)
+        ;;
+    *)
+        args+=(--block-probing-timeout "${block_probing_timeout}")
+        ;;
+esac
+
 $PYTHON -m subiquity.cmd.server "${args[@]}"
