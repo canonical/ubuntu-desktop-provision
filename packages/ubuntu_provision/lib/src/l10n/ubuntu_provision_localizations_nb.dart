@@ -330,14 +330,14 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Jeg ønsker ikke å koble til internett nå';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Lisensavtale';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Vis lisensvilkårene';
 
   @override
   String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Jeg har lest og godtatt disse vilkårene';
 }

@@ -408,6 +408,11 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
   String get errorPageUnexpected => 'Pedimos desculpas, mas não temos certeza qual é o erro. Você pode tentar reiniciar seu computador e iniciar o processo de instalação novamente. Você também pode <a>reportar o problema</a>.';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'Para enviar um relatório de bug automatizado incluindo informações de depuração relevantes, execute <pre>sudo ubuntu-bug $SNAP</pre> em um terminal ou no console de comando (Alt+F2).';
+  }
+
+  @override
   String get errorPageShowLog => 'Exibir o log';
 
   @override

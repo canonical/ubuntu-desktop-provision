@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis $DISTRO berikutnya. <a href=\"$url\">Baca tentang enkripsi TPM</a> sebelum memilih opsi ini.';
+    return 'Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis $DISTRO berikutnya. <a href=\"$url\">Baca tentang enkripsi TPM</a> sebelum Anda memilih opsi ini.';
   }
 
   @override

@@ -5,94 +5,94 @@ class FactoryResetToolsLocalizationsHu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Gyári visszaállítási eszközök';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Gyári visszaállítási eszközök';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Mit szeretne tenni?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Visszaállítási adathordozó létrehozása';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Gyári visszaállítás indítása';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Visszaállítási USB-adathordozó létrehozása';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Visszaállítási USB-adathordozó létrehozása a rendszer helyreállításához, valamint az Ubuntu-telepítések személyre szabásához.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Válasszon egy USB-meghajtót. A meghajtónak **legalább 16 GB tárhellyel** kell rendelkeznie.';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Az USB-meghajtó újraformázásra kerül, és a meghajtón lévő összes adat el fog veszni.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Visszaállítási USB-adathordozó';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nem észlelhető cserélhető tároló';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'USB-tárolóra van szükség a gyári visszaállítási adathordozó létrehozásához.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Válasszon egy lehetőséget a gyári visszaállítás indításához';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Várjon, amíg lekérjük a meghajtókat.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'A visszaállítási USB-adathordozó kész';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Ha használni szeretné, akkor helyezze be az USB-meghajtót a visszaállítani kívánt számítógépbe, és indítsa újra.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Hiba történt a meghajtók lekérése közben.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Előkészítés';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Másolás';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Befejezés';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Befejezve';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Sikertelen';
 
   @override
-  String get error => 'Error';
+  String get error => 'Hiba';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Betöltés…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Figyelmeztetés';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Helyreállítás';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Újraindítás';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Újraformázás';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Nem sikerült parancsot futtatni';
 
   @override
-  String get close => 'Close';
+  String get close => 'Bezárás';
 
   @override
   String get ok => 'OK';

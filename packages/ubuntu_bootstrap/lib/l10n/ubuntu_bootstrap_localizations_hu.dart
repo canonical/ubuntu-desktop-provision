@@ -13,27 +13,27 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Telepítés típusa';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Hogyan szeretne telepíteni a(z) $DISTRO disztribúciót?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'Adja meg az autoinstall.yaml URL-jét vagy helyi fájlútvonalát:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interaktív telepítés';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Olyan felhasználóknak, akik lépésről lépésre történő végigvezetéssel szeretnének telepíteni.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => 'Automatizált telepítés';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Gyakorlottabb felhasználóknak, akik autoinstall.yaml fájllal rendelkeznek a következetes és megismételhető rendszerbeállításokhoz.';
 
   @override
   String get changeButtonText => 'Változtatás';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Figyelmeztetés:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Mit szeretne tenni a(z) $DISTRO disztribúcióval?';
   }
 
   @override
@@ -96,19 +96,19 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'Az RST engedélyezve van';
+  String get rstTitle => 'RST észlelhető';
 
   @override
   String get rstHeader => 'Az RST kikapcsolása a folytatáshoz';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Ez a számítógép Intel RST (Rapid Storage Technology) technológiát használ. Az RST-t ki kell kapcsolnia a Windowsban az Ubuntu telepítése előtt.';
+    return 'Ez a számítógép Intel RST (Rapid Storage Technology – gyors tárolótechnológia) technológiát használ. Ki kell kapcsolnia az RST-t a Windowsban a(z) $DISTRO telepítése előtt.';
   }
 
   @override
   String rstInstructions(String url) {
-    return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
+    return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön, vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -127,7 +127,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'A biztonsági kulcs megerősítése';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Egyelőre ne telepítse az illesztőprogramot';
+  String get dontInstallDriverSoftwareNow => 'Ne telepítse most az illesztőprogramot';
 
   @override
   String get dontInstallDriverSoftwareNowDescription => 'Később a Szoftver és frissítések menüpontból telepítheti.';
@@ -139,42 +139,42 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'A biztonsági kulcsok nem egyeznek';
 
   @override
-  String get showSecurityKey => 'Biztonsági kulcs megjelenítése';
+  String get showSecurityKey => 'Megjelenítés';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Elrejtés';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Alkalmazások és frissítések';
+  String get updatesOtherSoftwarePageTitle => 'Alkalmazások';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'Milyen alkalmazásokat szeretne telepíteni a kezdéshez?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'A számítógép optimalizálása';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Telepíti az ajánlott tulajdonosi szoftvereket?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'A(z) $DISTRO alapértelmezetten tulajdonosi szoftverek nélkül érkezik. További szoftverek telepítése javíthatja a számítógép teljesítményét.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA grafikus kártya észlelhető';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Az NVIDIA grafikus kártyák legjobb teljesítményéhez erősen ajánlott további illesztőprogramok telepítése.';
 
   @override
-  String get fullInstallationTitle => 'Teljes telepítés';
+  String get fullInstallationTitle => 'Kibővített választás';
 
   @override
-  String get fullInstallationSubtitle => 'Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok, webböngésző és játékok.';
+  String get fullInstallationSubtitle => 'Internetkapcsolat nélkül is használható irodai eszközök, segédprogramok és webböngésző.';
 
   @override
-  String get minimalInstallationTitle => 'Alapértelmezett telepítés';
+  String get minimalInstallationTitle => 'Alapértelmezett választás';
 
   @override
   String get minimalInstallationSubtitle => 'Csak a legszükségesebbek, webböngésző és alapvető segédprogramok.';
@@ -192,59 +192,59 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Harmadik féltől származó szoftverek telepítése grafikus és Wi-Fi-hardverekhez';
 
   @override
-  String get installDriversSubtitle => 'Ezekre az illesztőprogramokra a dokumentációjukban szereplő licencfeltételek vonatkoznak. Kereskedelmi forgalomban kapható tulajdonosi szoftverek.';
+  String get installDriversSubtitle => 'Beleértve, de nem kizárólagosan az NVIDIA illesztőprogramokat és hasonlókat';
 
   @override
   String get installCodecsTitle => 'További médiaformátumok támogatásának letöltése és telepítése';
 
   @override
-  String get installCodecsSubtitle => 'Erre a szoftverre a dokumentációjában szereplő licencfeltételek vonatkoznak. Néhányuk kereskedelmi forgalomban kapható tulajdonosi szoftver.';
+  String get installCodecsSubtitle => 'Beleértve, de nem kizárólagosan az MP3, MP4, MOV és hasonló formátumokat';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'A számítógép nincs csatlakoztatva az áramforráshoz.';
 
   @override
   String get offlineWarning => 'Jelenleg kapcsolat nélkül van';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Lemez jelmondata';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Jelmondat létrehozása';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Jelmondatra van szüksége a fájlok titkosításához. A számítógép bekapcsolásakor minden alkalommal meg kell adnia a jelmondatot.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Jelmondat kiválasztása';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'A jelmondat megerősítése';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'A jelmondat megadása kötelező';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'A jelmondatok nem egyeznek';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Győződjön meg arról, hogy elmentette-e a jelmondatot';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Ha elveszíti a jelmondatot, elveszíti az összes adatát.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Jelmondat létrehozása';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'A jelmondat megerősítése';
 
   @override
-  String get installationTypeTitle => 'Telepítés típusa';
+  String get installationTypeTitle => 'Lemez beállítása';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Hogyan szeretne telepíteni a(z) $DISTRO disztribúciót?';
   }
 
   @override
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Kezdés a nulláról a kiválasztott lemezen.';
 
   @override
   String get installationTypeAdvancedLabel => 'Speciális funkciók…';
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Speciális funkciók';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Kísérleti';
 
   @override
   String get installationTypeNone => 'Nincs';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Nincs kiválasztva';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'LVM használata';
 
   @override
   String get installationTypeLVMSelected => 'LVM kiválasztva';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'LVM és titkosítás használata';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM és titkosítás kiválasztva';
@@ -302,23 +302,23 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Biztonsági kulcsot a következő lépésben fog választani.';
 
   @override
-  String get installationTypeZFS => 'KÍSÉRLETI: lemez törlése és ZFS használata';
+  String get installationTypeZFS => 'Lemez törlése és ZFS használata';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Lemez törlése és ZFS használata titkosítással';
 
   @override
   String get installationTypeZFSSelected => 'ZFS kiválasztva';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS és titkosítás kiválasztva';
 
   @override
-  String get installationTypeTPM => 'KÍSÉRLETI: hardveresen támogatott teljes lemeztitkosítás engedélyezése';
+  String get installationTypeTPM => 'Hardveresen támogatott teljes lemeztitkosítás engedélyezése';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return 'Ez egy kísérleti funkció. Előfordulhat, hogy nem működik az Ön hardverével vagy a jövőbeli $DISTRO kiadásokkal. <a href=\"$url\">Olvasson a TPM-titkosításról</a>, mielőtt ezt a lehetőséget választja.';
   }
 
   @override
@@ -355,14 +355,14 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'A dokumentumok, zenék és egyéb személyes fájlok megőrzésre kerülnek. A számítógép minden egyes indításakor kiválaszthatja, hogy melyik operációs rendszert szeretné használni.';
+  String get installationTypeAlongsideInfo => 'Kiválaszthatja az operációs rendszert a rendszerindítás során.';
 
   @override
-  String get installationTypeManual => 'Kézi particionálás';
+  String get installationTypeManual => 'Kézi telepítés';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Létrehozhat vagy átméretezhet partíciókat saját maga, vagy több partíciót is választhat a(z) $DISTRO telepítéséhez';
+    return 'Gyakorlottabb felhasználóknak, akik személyre szabott lemezbeállításokat keresnek.';
   }
 
   @override
@@ -371,13 +371,13 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Kezdés a nulláról a kiválasztott lemezen.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Meghajtó kiválasztása:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Partíció kiválasztása:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'A teljes lemez felhasználásra kerül:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'A(z) $DISTRO telepítési helyének kiválasztása';
   }
 
   @override
@@ -515,7 +515,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Telepítésre kész';
 
   @override
-  String get confirmHeader => 'Ha folytatja, akkor az alább felsorolt változtatások a lemezekre lesznek írva. A további változtatásokat kézzel végezheti el.';
+  String get confirmHeader => 'Választások áttekintése';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -527,31 +527,31 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Nincs';
 
   @override
   String get confirmDevicesTitle => 'Eszközök';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Alkalmazások';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Lemez beállítása';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Lemez titkosítása';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Telepítési lemez';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Tulajdonosi szoftver';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Általános';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Biztonság és egyebek';
 
   @override
   String get confirmPartitionsTitle => 'Partíciók';
@@ -593,13 +593,13 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Kodekek';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Kodekek és illesztőprogramok';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Illesztőprogramok';
 
   @override
   String get confirmInstallButton => 'Telepítés';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return 'A(z) **$system** a lemezre lett másolva';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Indítsa újra a telepítés befejezéséhez vagy folytassa a kipróbálást.\nAz elvégzett változtatások nem kerülnek mentésre.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Újra kell indítania a számítógépet a telepítési folyamat folytatásához.';
 
   @override
   String get shutdown => 'Leállítás';
@@ -645,7 +645,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerDescription(String option) {
-    return 'Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy a(z) „$option” választása szükséges a folytatáshoz.';
+    return 'Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy menjen vissza, és válassza a(z) „$option” lehetőséget a folytatáshoz.';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'A telepítés sikertelen';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Nincs elegendő hely';
+  String get notEnoughDiskSpaceTitle => 'Nincs elegendő lemezterület';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'A kiválasztott lemezen nincs elegendő lemezterület a(z) $DISTRO telepítéséhez. Lépjen ki a telepítőből, hogy elérhetővé tegye a helyet, vagy válasszon másik lemezt.';
   }
 
   @override
@@ -813,16 +813,16 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Frissítés érhető el';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Frissítés érhető el a telepítőhöz';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Frissítés most';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Frissítsen a legújabb verzióra a nagyobb megbízhatóság és több funkció érdekében.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'A frissítés kész';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -845,10 +845,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Indítsa újra a telepítőt.';
+  String get refreshRestart => 'Zárja be a telepítőt, és indítsa újra a folytatáshoz';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Telepítő bezárása';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -897,7 +897,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'A(z) $snap kapcsolatának megszüntetése…';
+    return 'A(z) $snap hozzákapcsolásának megszüntetése…';
   }
 
   @override
@@ -922,7 +922,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapLink(String snap) {
-    return 'A(z) $snap kapcsolása…';
+    return 'A(z) $snap hozzákapcsolása…';
   }
 
   @override
@@ -962,5 +962,5 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Ellenőrzés';
 }

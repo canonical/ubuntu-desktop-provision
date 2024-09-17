@@ -33,7 +33,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get autoinstallAutomatedOption => 'Automatisk installation';
 
   @override
-  String get autoinstallAutomatedDescription => 'Til avancerede brugere som have en autoinstall.yaml til konsistent og reproducérbar systemopsætning.';
+  String get autoinstallAutomatedDescription => 'Til avancerede brugere som har en autoinstall.yaml til konsistent og reproducérbar systemopsætning.';
 
   @override
   String get changeButtonText => 'Ændr';
@@ -92,7 +92,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'Du kunne nok ønske at læse <a href=\"$url\">udgivelsesnoter</a>.';
+    return 'Du vil måske gerne læse <a href=\"$url\">udgivelsesnoterne</a>.';
   }
 
   @override
@@ -183,13 +183,13 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get otherOptions => 'Andre muligheder';
 
   @override
-  String get installThirdPartyTitle => 'Installér tredjepartssoftware til grafik- og Wi-Fi hardware samt yderligere medieformater';
+  String get installThirdPartyTitle => 'Installér tredjepartssoftware til grafik- og wi-fi-hardware samt yderligere medieformater';
 
   @override
   String get installThirdPartySubtitle => 'Denne software er underlagt de licensvilkår, som er inkluderet i dens dokumentation. Nogle er proprietære.';
 
   @override
-  String get installDriversTitle => 'Installér tredjepartssoftware til grafik- og Wi-Fi-hardware';
+  String get installDriversTitle => 'Installér tredjepartssoftware til grafik- og wi-fi-hardware';
 
   @override
   String get installDriversSubtitle => 'Inkluderer men er ikke begrænset til NVIDIA-drivere og lignende';
@@ -198,7 +198,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installCodecsTitle => 'Hent og installér understøttelse af yderligere medieformater';
 
   @override
-  String get installCodecsSubtitle => 'Inkluderer men er ikke begrænset til MP3, MP\$, MOV og lignende';
+  String get installCodecsSubtitle => 'Inkluderer men er ikke begrænset til MP3, MP4, MOV og lignende';
 
   @override
   String get batteryWarning => 'Denne computer er ikke tilsluttet ekstern strømforsyning.';
@@ -225,7 +225,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseRequired => 'Adgangskode påkrævet';
 
   @override
-  String get choosePassphraseMismatch => 'Adgangskoderne stemmer ikke';
+  String get choosePassphraseMismatch => 'Adgangskoderne stemmer ikke overens';
 
   @override
   String get choosePassphraseInfoHeader => 'Sørg for at gemme din adgangskode';
@@ -261,7 +261,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeMultiOSDetected => 'Denne computer har i øjeblikket flere forskellige operativsystemer installeret. Hvad kunne du tænke dig at gøre?';
 
   @override
-  String get installationTypeNoOSDetected => 'Der blev ikke fundet nogen operativsystemer på denne computer. Hvad kunne du tænke dig at gøre?';
+  String get installationTypeNoOSDetected => 'Der blev ikke fundet noget operativsystem på denne computer. Hvad kunne du tænke dig at gøre?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -290,7 +290,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVM => 'Brug LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM fundet';
+  String get installationTypeLVMSelected => 'LVM valgt';
 
   @override
   String get installationTypeLVMEncryption => 'Brug LVM og kryptering';
@@ -299,7 +299,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryptionSelected => 'LVM og kryptering valgt';
 
   @override
-  String get installationTypeEncryptInfo => 'I næste trin vælger du en sikkerhedsnøgle.';
+  String get installationTypeEncryptInfo => 'I næste trin skal du vælge en sikkerhedsnøgle.';
 
   @override
   String get installationTypeZFS => 'Slet disk og benyt ZFS';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For avancerede brugere, som ønsker brugertilpasset diskopsætning.';
+    return 'For avancerede brugere som ønsker brugertilpasset diskopsætning.';
   }
 
   @override
@@ -391,7 +391,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allokér diskplads ved at trække skellet herunder:';
+  String get installAlongsideSpaceDivider => 'Tildel diskplads ved at trække i adskilleren herunder:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -402,7 +402,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installAlongsideResizePartition => 'Ændr størrelse på partition';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allokér plads';
+  String get installAlongsideAllocateSpace => 'Tildel plads';
 
   @override
   String get installAlongsideFiles => 'Filer';
@@ -447,7 +447,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get diskHeadersFormat => 'Format';
 
   @override
-  String get freeDiskSpace => 'Fri plads';
+  String get freeDiskSpace => 'Ledig plads';
 
   @override
   String get newPartitionTable => 'Ny partitionstabel';
@@ -456,7 +456,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => 'Ny tom partition';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Oprettelse af ny partitionstabel på en hel enhed vil fjerne alle dens nuværende partitioner. Denne operation kan fortrydes, hvis det er nødvendigt.';
+  String get newPartitionTableConfirmationMessage => 'Oprettelse af ny partitionstabel på en hel enhed vil fjerne alle dens nuværende partitioner. Denne handling kan fortrydes, hvis det er nødvendigt.';
 
   @override
   String get tooManyPrimaryPartitions => 'For mange primære partitioner';
@@ -486,7 +486,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get partitionTypeLogical => 'Logisk';
 
   @override
-  String get partitionLocationLabel => 'Placering for ny partition:';
+  String get partitionLocationLabel => 'Placering af ny partition:';
 
   @override
   String get partitionLocationBeginning => 'Begyndelse på dette område';
@@ -506,7 +506,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get partitionErase => 'Formatér partition';
+  String get partitionErase => 'Formatér partitionen';
 
   @override
   String get partitionMountPointLabel => 'Monteringspunkt:';
@@ -685,7 +685,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Hvadenten du er udvikler, forfatter, gamer, eller administrator, vil du finde nye værktøjer, som forbedrer din produktivitet og beriger din oplevelse med $RELEASE.';
+    return 'Hvad enten du er udvikler, forfatter, gamer eller administrator, vil du finde nye værktøjer, som forbedrer din produktivitet og beriger din oplevelse med $RELEASE.';
   }
 
   @override

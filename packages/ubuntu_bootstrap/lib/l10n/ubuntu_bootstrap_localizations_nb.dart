@@ -689,7 +689,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Alle programmene du trenger';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -816,22 +816,22 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get refreshHeader => 'An update is available for the installer';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Oppgrader nå';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Oppgradering klar';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'Nåværende $snap-versjon er $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Oppgrader til versjon $version';
   }
 
   @override
@@ -841,7 +841,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'Oppgraderer $snap …';
   }
 
   @override
@@ -882,7 +882,7 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'Monterer $snap …';
   }
 
   @override
@@ -947,11 +947,11 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Rydder opp $snap …';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM-gjenopprettingsnøkkel';
 
   @override
   String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
@@ -962,5 +962,5 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => 'Bekreft';
 }

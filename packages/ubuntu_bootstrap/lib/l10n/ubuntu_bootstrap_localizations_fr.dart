@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Entrez l\'URL du autoinstall.yaml :';
+  String get autoinstallInstructions => 'Saisir l’URL du fichier autoinstall.yaml ou le chemin d’accès local :';
 
   @override
   String get autoinstallInteractiveOption => 'Installation interactive';
@@ -103,7 +103,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'Cet ordinateur utilise la technologie RST (Rapid Storage Technology) d’Intel. Il est nécessaire de désactiver RST sous Windows avant d’installer Ubuntu.';
+    return 'Cet ordinateur utilise la technologie RST (Rapid Storage Technology) d’Intel. Il est nécessaire de désactiver RST dans Windows avant d’installer $DISTRO.';
   }
 
   @override

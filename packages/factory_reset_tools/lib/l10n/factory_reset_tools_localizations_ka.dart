@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'ქარხნულ პარამეტრებზე ჩამოყრის ხელსაწყოები';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'ქარხნულ პარამეტრებზე ჩამოყრის ხელსაწყოები';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'რისი გაკეთება გნებავთ?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'ჩამოყრის მედიის შექმნა';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'ქარხნულ პარამეტრებზე ჩამოყრის დაწყება';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'USB ჩამოყრის მედიის შექმნა';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'შექმენით USB ჩამოყრის მედია სისტემის აღსადგენად და თქვენი Ububtu-ის დაყენებული ვარიანტის მოსარგებად.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'აირჩიეთ USB ფლეშ-დისკი. დისკზე, **მინიმუმ 16 გბ ადგილი უნდა იყოს.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'ფლეშ-დრაივი დაფორმატდება და ზედ არსებული მონაცემები დაიკარგება.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB ჩამოყრის მედია';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'მოხსნადი საცავი აღმოჩენილი არაა';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'ქარხნულ პარამეტრებზე ჩამოყრის მედის შესაქმნელად USB დისკი გჭირდებათ.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'აირჩიეთ ვარიანტი ქარხნულ პარამეტრებზე ჩამოყრის დასაწყებად';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'მოითმინეთ. მიმდინარეობს დისკების გამოთხოვა.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB ჩამოყრის მედია მზადაა';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'როცა მოგინდებათ, გამოიყენოთ ის, შეაერთეთ USB დისკი კომპიუტერში, რომლის ჩამოყრაც გნებავთ, და გადატვირთეთ ის.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'შეცდომა დისკების გამოთხოვისას.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'ინიციალიზაცია';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'კოპირება';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'დასრულება';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'დასრულებულია';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'ჩავარდა';
 
   @override
-  String get error => 'Error';
+  String get error => 'შეცდომა';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ჩატვირთვა...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'გაფრთხილება';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'აღდგენა';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'გადატვირთვა';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'თავიდან დაფორმატება';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'ბრძანების გაშვება ჩავარდა';
 
   @override
-  String get close => 'Close';
+  String get close => 'დახურვა';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'დიახ';
 }

@@ -5,16 +5,16 @@ class FactoryResetToolsLocalizationsNb extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsNb([String locale = 'nb']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Verktøy for fabrikktilbakestilling';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Verktøy for fabrikktilbakestilling';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Hva ønsker du å gjøre?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Opprett tilbakestillingsmedia';
 
   @override
   String get startFactoryReset => 'Start factory reset';
@@ -32,7 +32,7 @@ class FactoryResetToolsLocalizationsNb extends FactoryResetToolsLocalizations {
   String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB-tilbakestillingsmedia';
 
   @override
   String get noMediaDetected => 'No removable storage is detected';
@@ -47,7 +47,7 @@ class FactoryResetToolsLocalizationsNb extends FactoryResetToolsLocalizations {
   String get loadingDrives => 'Please wait while we fetch the drives.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB-tilbakestillingsmedia er klar';
 
   @override
   String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
@@ -59,40 +59,40 @@ class FactoryResetToolsLocalizationsNb extends FactoryResetToolsLocalizations {
   String get resetMediaInitializing => 'Initializing';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopierer …';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Fullfører …';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Fullført';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Mislyktes';
 
   @override
-  String get error => 'Error';
+  String get error => 'Feil';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laster inn …';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Advarsel';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Gjenopprett';
 
   @override
   String get restart => 'Restart';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformater';
 
   @override
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Lukk';
 
   @override
   String get ok => 'OK';

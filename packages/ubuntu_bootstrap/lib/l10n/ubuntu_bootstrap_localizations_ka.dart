@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop-ის დამყენებელი';
+  String get appTitle => 'Ubuntu Desktop-ის დაყენების პროგრამა';
 
   @override
   String windowTitle(String RELEASE) {

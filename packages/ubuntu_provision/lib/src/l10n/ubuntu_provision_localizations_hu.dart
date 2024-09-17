@@ -5,82 +5,82 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Akadálymentesítés';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Akadálymentesítés a(z) $DISTRO disztribúcióban';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Szabja személyre a(z) $DISTRO disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a rendszerbeállításokban.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Látás';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Hallás';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Gépelés';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Mutatás és kattintás';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Nagyítás';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Nagy kontraszt';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Nagy szöveg';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Animáció csökkentése';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Képernyőolvasó';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Vizuális figyelmeztetések';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Ragadós billentyűk';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Lassú billentyűk';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Egérbillentyűk';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Asztal nagyítása';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Valami elromlott';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Elnézést, de nem lehet tudni biztosan, hogy mi a hiba. Megpróbálhatja újraindítani a számítógépet, és újra elindítani a telepítési folyamatot. <a>Jelentheti a problémát is</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'A vonatkozó hibakeresési információkat tartalmazó automatikus hibajelentés elküldéséhez futtassa a <pre>sudo ubuntu-bug $SNAP</pre> parancsot a terminálban vagy a parancskonzolról (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Napló megjelenítése';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Napló elrejtése';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Újraindítás';
 
   @override
-  String get close => 'Close';
+  String get close => 'Bezárás';
 
   @override
   String get timezonePageTitle => 'Időzóna kiválasztása';
@@ -95,7 +95,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Billentyűzetkiosztás';
 
   @override
-  String get keyboardHeader => 'Billentyűzetkiosztás kiválasztása:';
+  String get keyboardHeader => 'Billentyűzetkiosztás kiválasztása';
 
   @override
   String get keyboardTestHint => 'Gépeljen itt a billentyűzet kipróbálásához';
@@ -107,7 +107,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Felismerés';
 
   @override
-  String get keyboardVariantLabel => 'Billentyűzetváltozat:';
+  String get keyboardVariantLabel => 'Billentyűzetváltozat kiválasztása:';
 
   @override
   String get keyboardPressKeyLabel => 'Nyomja meg a következő billentyűk egyikét:';
@@ -136,7 +136,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Nyelv kiválasztása:';
 
   @override
-  String get identityPageTitle => 'A fiók beállítása';
+  String get identityPageTitle => 'Fiók létrehozása';
 
   @override
   String get identityAutoLogin => 'Automatikus bejelentkezés';
@@ -154,7 +154,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Ez a név túl hosszú.';
 
   @override
-  String get identityHostnameLabel => 'Az Ön számítógépének neve';
+  String get identityHostnameLabel => 'A számítógépének neve';
 
   @override
   String get identityHostnameInfo => 'A más számítógépekkel való kommunikáció során használt név.';
@@ -169,7 +169,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'A számítógép neve érvénytelen';
 
   @override
-  String get identityUsernameLabel => 'Felhasználónév választása';
+  String get identityUsernameLabel => 'Az Ön felhasználóneve';
 
   @override
   String get identityUsernameRequired => 'A felhasználónév megadása kötelező';
@@ -190,7 +190,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Ez a név érvénytelen karaktereket tartalmaz.';
 
   @override
-  String get identityPasswordLabel => 'Jelszó választása';
+  String get identityPasswordLabel => 'Jelszó';
 
   @override
   String get identityPasswordRequired => 'A jelszó megadása kötelező';
@@ -214,14 +214,14 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'A tartományt és egyéb részleteket a következő lépésben fogja megadni.';
 
   @override
-  String get activeDirectoryTitle => 'Active Directory beállítása';
+  String get activeDirectoryTitle => 'Bejelentkezés az Active Directory-ba';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Bejelentkezik az Active Directory-ba?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'A(z) $DISTRO arra lett tervezve, hogy tökéletesen integrálódjon az Active Directory-val az egyszerűbb adminisztráció érdekében.';
   }
 
   @override
@@ -279,13 +279,13 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Elnézést, az Active Directory jelenleg nem állítható be. Amint a rendszere elkészült és működik, látogasson el a <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> oldalra a segítségért.';
 
   @override
-  String get networkPageTitle => 'Kapcsolódás hálózathoz';
+  String get networkPageTitle => 'Internetkapcsolat';
 
   @override
-  String get networkPageHeader => 'A számítógép internethez való kapcsolódása segít az Ubuntunak telepíteni a szükséges további szoftvereket, és segít kiválasztani az időzónát.\n\nKapcsolódás Ethernet-kábellel vagy Wi-Fi-hálózat kiválasztása';
+  String get networkPageHeader => 'Kapcsolódás az internethez';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Az internetkapcsolat javítja a telepítést a kompatibilitás-ellenőrzéssel és további szoftvercsomagokkal.';
 
   @override
   String get networkWiredOption => 'Vezetékes kapcsolat használata';
@@ -324,20 +324,20 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameLabel => 'Hálózat neve';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A hálózat neve szükséges';
+  String get networkHiddenWifiNameRequired => 'A hálózatnév megadása kötelező';
 
   @override
-  String get networkNoneOption => 'Most nem szeretnék kapcsolódni az internethez';
+  String get networkNoneOption => 'Ne kapcsolódjon az internethez';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Licencmegállapodás';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'A licencfeltételek áttekintése';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'A gép beállításának folytatásához el kell olvasnia és el kell fogadnia a licencmegállapodás feltételeit.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Elolvastam és elfogadom ezeket a feltételeket';
 }
