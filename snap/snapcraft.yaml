@@ -1,0 +1,175 @@
+name: factory-reset-tools
+version: git
+summary: Factory Reset Tools
+description: |
+  A tool to create reset media and reboot into the factory reset menu, for Ubuntu-preinstalled systems.
+
+base: core22
+confinement: strict
+grade: stable
+
+# for now, only build for amd64, since PC OEM does not have other architectures at the moment...
+architectures:
+- build-on: [amd64]
+
+apps:
+  factory-reset-tools:
+    command: bin/factory-reset-tools
+    extensions: [gnome]
+    plugs:
+      - shutdown
+      - removable-media
+      - etc-reset-partition-fsuuid
+      - usr-share-desktop-provision-reset-yaml
+      - udisks2
+      - hardware-observe
+      - mount-observe
+      - dbus-system-com-canonical-oem-factory-reset-tools-client
+    slots:
+      - dbus-session-com-canonical-oem-factory-reset-tools-service
+  cli:
+    command: bin/factory-reset-tools-cli
+    plugs:
+      - shutdown
+      - removable-media
+      - etc-reset-partition-fsuuid
+      - usr-share-desktop-provision-reset-yaml
+      - udisks2
+      - hardware-observe
+      - mount-observe
+      - dbus-system-com-canonical-oem-factory-reset-tools-client
+      - polkit-com-canonical-oem-factory-reset-tools
+  dbus-daemon:
+    command: bin/factory-reset-tools-cli dbus
+    daemon: simple
+    activates-on:
+      - dbus-system-com-canonical-oem-factory-reset-tools-service
+    plugs:
+      - shutdown
+      - hostfs-boot-grub
+      - usr-share-desktop-provision-reset-yaml
+      - polkit-com-canonical-oem-factory-reset-tools
+
+parts:
+  flutter-git:
+    plugin: nil
+    source: .
+    override-pull: |
+      # necessary when reruns using the same container
+      if [ -d "flutter" ]; then
+        rm -rf "flutter"
+      fi
+
+      craftctl default
+      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+    override-build: |
+      mkdir -p $CRAFT_PART_INSTALL/usr/bin
+      mkdir -p $CRAFT_PART_INSTALL/usr/libexec
+      cp -r $CRAFT_PART_SRC/flutter $CRAFT_PART_INSTALL/usr/libexec/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/flutter $CRAFT_PART_INSTALL/usr/bin/flutter
+      ln -s $CRAFT_PART_INSTALL/usr/libexec/flutter/bin/dart $CRAFT_PART_INSTALL/usr/bin/dart
+      $CRAFT_PART_INSTALL/usr/bin/flutter doctor
+    build-packages:
+      - clang
+      - cmake
+      - curl
+      - libgtk-3-dev
+      - ninja-build
+      - unzip
+      - xz-utils
+      - zip
+    override-prime: ""
+
+  factory-reset-tools:
+    after: [flutter-git]
+    plugin: nil
+    source: .
+    source-type: git
+    build-attributes: [enable-patchelf]
+    override-build: |
+      set -eux
+      mkdir -p $CRAFT_PART_INSTALL/bin
+      
+      dart pub global activate melos
+      dart pub global run melos bootstrap
+      cd packages/factory_reset_tools
+      flutter build linux --release -v
+      cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
+
+  factory-reset-tools-cli:
+    after: [flutter-git]
+    source: .
+    plugin: nil
+    override-build: |
+      set -eux
+      mkdir -p $CRAFT_PART_INSTALL/bin $CRAFT_PART_INSTALL/bin/polkit_agent_helper
+      dart pub global activate melos
+      dart pub global run melos bootstrap
+
+      pushd packages/factory_reset_tools
+      dart compile exe -o factory-reset-tools-cli lib/dbus/cmdline.dart
+      cp factory-reset-tools-cli $CRAFT_PART_INSTALL/bin/
+      popd
+
+      pushd packages/factory_reset_tools/lib/dbus/polkit_agent_helper
+      make helper.so
+      cp helper.so $CRAFT_PART_INSTALL/bin/polkit_agent_helper/
+      popd
+    stage-packages:
+      - rsync
+      - grub2-common
+      - uuid-runtime
+    build-packages:
+      - curl
+  
+  polkit-config:
+    plugin: dump
+    source: packages/factory_reset_tools/data/
+    organize:
+      # note that the filename polkit interface takes is "${plug_name}.*.policy"
+      polkit-com-canonical-oem-factory-reset-tools.x.policy: meta/polkit/
+
+  # copied from fwupd
+  # https://github.com/fwupd/fwupd/blob/main/contrib/snap/snapcraft.yaml
+  pkttyagent:
+    plugin: nil
+    stage-packages:
+      - polkitd
+      - libpolkit-agent-1-0
+    prime:
+      - usr/bin/pkttyagent
+      - usr/lib/*/libpolkit-agent-1.so*
+
+slots:
+  dbus-session-com-canonical-oem-factory-reset-tools-service:
+    interface: dbus
+    bus: session
+    # for the naming, it seems flutter is always trying to use this name,
+    # instead of .FactoryResetTools
+    name: com.canonical.oem.factory-reset-tools
+  dbus-system-com-canonical-oem-factory-reset-tools-service:
+    interface: dbus
+    bus: system
+    name: com.canonical.oem.FactoryResetTools
+
+plugs:
+  hostfs-boot-grub:
+    interface: system-files
+    write:
+    - /var/lib/snapd/hostfs/boot/grub
+  etc-reset-partition-fsuuid:
+    interface: system-files
+    read:
+    - /etc/reset_partition_fsuuid
+  usr-share-desktop-provision-reset-yaml:
+    interface: system-files
+    read:
+    - /usr/share/desktop-provision/reset.yaml
+  dbus-system-com-canonical-oem-factory-reset-tools-client:
+    interface: dbus
+    bus: system
+    name: com.canonical.oem.FactoryResetTools
+  polkit-com-canonical-oem-factory-reset-tools:
+    interface: polkit
+    action-prefix: com.canonical.oem.FactoryResetTools
