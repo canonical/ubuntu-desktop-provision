@@ -163,6 +163,7 @@ snapcraft.yaml on the corresponding branch (see table below) needs to be updated
 | - | - | - |
 | `ubuntu-desktop-bootstrap` | `ubuntu_bootstrap` | `snap/ubuntu-desktop-bootstrap/*` |
 | `ubuntu-desktop-init` | `ubuntu_init` | `snap/ubuntu-desktop-init/*` |
+| `factory-reset-tools` | `factory_reset_tools` | `snap/factory-reset-tools/*` |
 
 ### Frontend
 
