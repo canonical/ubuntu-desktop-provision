@@ -144,9 +144,6 @@ parts:
       - python3.10-minimal
       - ssh-import-id
       - ubuntu-advantage-tools
-      # WSL specifics:
-      - language-selector-common
-      - locales
     prime:
       - -lib/systemd/system/*
 
