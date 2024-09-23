@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:crypt/crypt.dart';
 import 'package:meta/meta.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -5,10 +7,15 @@ import 'package:ubuntu_bootstrap/services/post_install_service.dart';
 import 'package:ubuntu_provision/services.dart';
 
 class SubiquityIdentityService implements IdentityService {
-  const SubiquityIdentityService(this._subiquity, this._postInstall);
+  const SubiquityIdentityService(
+    this._subiquity,
+    this._postInstall, {
+    @visibleForTesting this.testSalt,
+  });
 
   final SubiquityClient _subiquity;
   final PostInstallService _postInstall;
+  final String? testSalt;
 
   /// The auto-login post-install config key for testing purposes.
   @visibleForTesting
@@ -37,7 +44,10 @@ class SubiquityIdentityService implements IdentityService {
       IdentityData(
         realname: identity.realname,
         username: identity.username,
-        cryptedPassword: Crypt.sha512(identity.password).toString(),
+        cryptedPassword: Crypt.sha512(
+          String.fromCharCodes(utf8.encode(identity.password)),
+          salt: testSalt,
+        ).toString(),
         hostname: identity.hostname,
       ),
     );
