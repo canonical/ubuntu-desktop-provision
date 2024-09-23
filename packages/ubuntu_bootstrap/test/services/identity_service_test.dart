@@ -40,13 +40,14 @@ void main() {
   test('set identity', () async {
     final client = MockSubiquityClient();
     final postInstall = MockPostInstallService();
-    final service = SubiquityIdentityService(client, postInstall);
+    final service =
+        SubiquityIdentityService(client, postInstall, testSalt: '12345678');
     await service.setIdentity(
       Identity(
         realname: testIdentity.realname,
         username: testIdentity.username,
         hostname: testIdentity.hostname,
-        password: 'password',
+        password: 'pásswörd',
         autoLogin: true,
       ),
     );
@@ -61,7 +62,8 @@ void main() {
               .having(
                 (i) => i.cryptedPassword,
                 'cryptedPassword',
-                hasLength(greaterThan(8)),
+                // output of: mkpasswd -m sha512crypt pásswörd 12345678
+                '\$6\$12345678\$FQ329IePwMuA9R82gLYtPid4lWfSeq0zCFrg2C8u3J3pv/Js./ZObNOMFT1xLwGV6MnMJGTYAzyFqgDB/zr.d0',
               ),
         ),
       ),
