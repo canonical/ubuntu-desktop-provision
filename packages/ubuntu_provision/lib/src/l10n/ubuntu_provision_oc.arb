@@ -237,5 +237,13 @@
   "eulaReadAndAcceptTerms": "Per contunhar la configuracion d’aquesta maquina, devètz legir e acceptar los tèrmes de l’acòrd de la licéncia.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "Ai legit e accèpti aqueste tèrmes",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "Per mandar un rapòrt d'error automatizat qu’inclutz d'informacions de desbugatge pertinentas, executatz <pre>sudo ubuntu-bug {SNAP}</pre> dins un terminal, o dempuèi la consòla de comanda (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
