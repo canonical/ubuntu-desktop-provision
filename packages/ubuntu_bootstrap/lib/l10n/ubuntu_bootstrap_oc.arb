@@ -815,5 +815,122 @@
   "rebootToConfigureWarning": "Devètz reaviar l’ordenador per contunhar lo processús d’installacion.",
   "@rebootToConfigureWarning": {},
   "recoveryKeyTitle": "Clau de recuperacion del TPM",
-  "@recoveryKeyTitle": {}
+  "@recoveryKeyTitle": {},
+  "installationTypeTPMInfo": "Aquò es una foncionalitat experimentala. Pòt arribar que fonciona pas amb vòstre material o la versions venentas de {DISTRO}. <a href=\"{url}\">Assabentatz-vos tocant lo chiframent TPM</a> abans de causir aquesta opcion.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connexions a las fichas e fendas de {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Atencion :</font> S’oblidetz aquesta clau de seguretat, totas las donadas seràn perdudas. Se cal, notatz vòstra clau e servatz-la dins un endrech segur.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Lo disc seleccionat pas pro d’espaci disc per installar {DISTRO}. Quitatz l’installador per liberar d’espaci o seleccionatz-ne un autre.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Verificacion dels prerequesits de {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Codècs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codècs e pilòts",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "refreshSnapUpdateKernelCommandLine": "Actualizacion de la linha de comanda del nuclèu {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Una mesa a jorn es disponibla per l’installador",
+  "@refreshHeader": {},
+  "refreshInfo": "Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.",
+  "@refreshInfo": {},
+  "refreshSnapRemoveAliases": "Supression dels àlias de {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Desligament {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Actualizacion dels items {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Parametratge dels perfils de seguretat de {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Ligament de {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Parametratge automatic dels àlias de {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Parametratge dels àlias de {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
+  "@recoveryKeyCommand": {}
 }
