@@ -297,7 +297,7 @@
   "@installAlongsideSize": {},
   "installAlongsideAvailable": "Disponible :",
   "@installAlongsideAvailable": {},
-  "notEnoughDiskSpaceTitle": "Pas pro d’espaci",
+  "notEnoughDiskSpaceTitle": "Pas pro d’espaci disc",
   "@notEnoughDiskSpaceTitle": {},
   "installingSystem": "Installacion del sistèma…",
   "@installingSystem": {},
@@ -648,7 +648,7 @@
   },
   "refreshRestart": "Mercés de reaviar l’installador.",
   "@refreshRestart": {},
-  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml :",
+  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Installacion interactiva",
   "@autoinstallInteractiveOption": {},
@@ -743,5 +743,77 @@
   "codecsAndDriversPageDescription": "Installar los logicials proprietaris recomandats ?",
   "@codecsAndDriversPageDescription": {},
   "autoinstallInteractiveDescription": "Pels utilizaires que vòlon una guida estapa per tapa pendent l'installacion.",
-  "@autoinstallInteractiveDescription": {}
+  "@autoinstallInteractiveDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} es fornit sens logicial proprietaris per defaut. L’installacion de logicials suplementaris pòt melhorar la performança de l’ordenador.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseTitle": "Frasa secrèta del disc",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseBody": "Avètz besonh d'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu'aviatz vòstre ordenador.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseInfoBody": "Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.",
+  "@choosePassphraseInfoBody": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Seleccionatz la particion :",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "autoinstallAutomatedDescription": "Pels utilizaires avançats qu’an un fichièr autoinstall.yaml per de configuracions sistèma coerentas e repetiblas.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversNvidiaNote": "Carta grafica NVIDIA detectada",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHint": "Causissètz una frasa secrèta",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Verificatz la frasa secrèta",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Una frasa secrèta es necessària",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Las frasas secrètas correspondon pas",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Asseguratz-vos de salvagardar vòstra frasa secrèta",
+  "@choosePassphraseInfoHeader": {},
+  "createPassphrase": "Crear una frasa secrèta",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Confirmar la frasa secrèta",
+  "@confirmPassphrase": {},
+  "installationTypeEraseInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Experimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Utilizar LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Utilizar LVM e lo chiframent",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Escafar lo disc e utilizar ZFS amb chiframent",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS e chiframent seleccionats",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "@selectGuidedStorageInfo": {},
+  "guidedStoragePageHeader": "Causissètz ont installar {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigure": "**{system}** copiat sul disc",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Tornatz aviar per acabar l'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "Devètz reaviar l’ordenador per contunhar lo processús d’installacion.",
+  "@rebootToConfigureWarning": {},
+  "recoveryKeyTitle": "Clau de recuperacion del TPM",
+  "@recoveryKeyTitle": {}
 }
