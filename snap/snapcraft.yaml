@@ -19,6 +19,8 @@ apps:
     daemon: simple
     restart-condition: always
     environment:
+      APPORT_DATA_DIR_ORIG: $APPORT_DATA_DIR
+      APPORT_DATA_DIR: $SNAP/usr/share/apport
       PATH_ORIG: $PATH
       PYTHONPATH_ORIG: $PYTHONPATH
       LD_LIBRARY_PATH_ORIG: $LD_LIBRARY_PATH
@@ -31,6 +33,8 @@ apps:
     command-chain: [bin/launcher]
     desktop: usr/share/applications/ubuntu-desktop-bootstrap.desktop
     environment:
+      APPORT_DATA_DIR_ORIG: $APPORT_DATA_DIR
+      APPORT_DATA_DIR: $SNAP/usr/share/apport
       PATH: $SNAP/usr/bin:$SNAP/bin:$PATH
       LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri
       GIO_MODULE_DIR: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gio/modules
