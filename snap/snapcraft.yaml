@@ -23,7 +23,6 @@ apps:
       APPORT_DATA_DIR: $SNAP/usr/share/apport
       PATH_ORIG: $PATH
       PYTHONPATH_ORIG: $PYTHONPATH
-      LD_LIBRARY_PATH_ORIG: $LD_LIBRARY_PATH
 
   subiquity-loadkeys:
     command: bin/subiquity/bin/subiquity-loadkeys
