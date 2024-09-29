@@ -58,7 +58,7 @@
   "@diskHeadersDevice": {},
   "diskHeadersType": "Tipe",
   "@diskHeadersType": {},
-  "diskHeadersMountPoint": "Punt de montatge",
+  "diskHeadersMountPoint": "Ponch de montatge",
   "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Talha",
   "@diskHeadersSize": {},
@@ -98,11 +98,11 @@
   "@partitionFormatNone": {},
   "partitionErase": "Formatar la particion",
   "@partitionErase": {},
-  "partitionMountPointLabel": "Punt de montatge :",
+  "partitionMountPointLabel": "Ponch de montatge :",
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Lèst per installacion",
   "@confirmPageTitle": {},
-  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escritas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
+  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
   "@confirmHeader": {},
   "confirmPartitionTables": "Las taulas de particions dels periferics seguents seràn modificadas :",
   "@confirmPartitionTables": {},
@@ -403,7 +403,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSoftwareTitle": "Totas las aplicacions que vos fan mestièr",
+  "installationSlidesSoftwareTitle": "Totas las aplicacions qu’avètz mestièr",
   "@installationSlidesSoftwareTitle": {},
   "installationSlidesSoftwareBody": "Installatz, gerissètz e metatz a jorn vòstras aplicacions dins Ubuntu Software, incluses milierats d’aplicacions venent de Snap Store e dels archius {DISTRO}.",
   "@installationSlidesSoftwareBody": {
@@ -484,14 +484,14 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièra pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
+  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièrs pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas que vos fa mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
+  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas qu’avètz mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -551,7 +551,7 @@
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Installacion per defaut",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Sonque çò essencials, lo navegador web e los utilitaris basics.",
+  "minimalInstallationSubtitle": "Sonque çò essencial, lo navegador web e los utilitaris basics.",
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM seleccionat",
   "@installationTypeTPMSelected": {},
