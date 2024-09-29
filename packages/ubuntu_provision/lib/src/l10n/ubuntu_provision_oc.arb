@@ -78,7 +78,7 @@
   "@identityPasswordLabel": {},
   "identityPasswordRequired": "Un senhal es requerit",
   "@identityPasswordRequired": {},
-  "identityConfirmPasswordLabel": "Confirmar lo senhal",
+  "identityConfirmPasswordLabel": "Confirmatz lo senhal",
   "@identityConfirmPasswordLabel": {},
   "identityPasswordMismatch": "Los senhals correspondon pas",
   "@identityPasswordMismatch": {},
@@ -212,7 +212,7 @@
   "@activeDirectoryHeader": {},
   "networkPageBody": "Una connexion Internet melhorarà l’installacion amb la verificacion de compatibilitat e los paquets logicials addicionals.",
   "@networkPageBody": {},
-  "accessibilityPageBody": "Personalizatz {DISTRO} coma vos fa mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.",
+  "accessibilityPageBody": "Personalizatz {DISTRO} coma avètz mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
