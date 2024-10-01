@@ -1,5 +1,7 @@
 {
   "@@locale": "lt",
   "close": "Užverti",
-  "@close": {}
+  "@close": {},
+  "restart": "Paleisti iš naujo",
+  "@restart": {}
 }
