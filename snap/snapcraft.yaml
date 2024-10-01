@@ -19,9 +19,11 @@ apps:
     daemon: simple
     restart-condition: always
     environment:
-      PATH_ORIG: $PATH
+      APPORT_DATA_DIR_ORIG: $APPORT_DATA_DIR
+      APPORT_DATA_DIR: $SNAP/usr/share/apport
+      PATH_ORIG: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+      PYTHON_ORIG: $PYTHON
       PYTHONPATH_ORIG: $PYTHONPATH
-      LD_LIBRARY_PATH_ORIG: $LD_LIBRARY_PATH
 
   subiquity-loadkeys:
     command: bin/subiquity/bin/subiquity-loadkeys
@@ -31,7 +33,12 @@ apps:
     command-chain: [bin/launcher]
     desktop: usr/share/applications/ubuntu-desktop-bootstrap.desktop
     environment:
+      APPORT_DATA_DIR_ORIG: $APPORT_DATA_DIR
+      APPORT_DATA_DIR: $SNAP/usr/share/apport
+      PATH_ORIG: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
       PATH: $SNAP/usr/bin:$SNAP/bin:$PATH
+      PYTHON_ORIG: $PYTHON
+      PYTHONPATH_ORIG: $PYTHONPATH
       LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri
       GIO_MODULE_DIR: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gio/modules
       LIVE_RUN: 1
