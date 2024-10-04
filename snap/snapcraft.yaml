@@ -48,9 +48,6 @@ apps:
   probert:
     command: bin/probert
 
-  os-prober:
-    command: usr/bin/os-prober
-
 parts:
   ubuntu-bootstrap:
     after: [flutter-git]
@@ -283,15 +280,3 @@ parts:
     stage:
       - usr/lib/${CRAFT_ARCH_TRIPLET}/dri
       - usr/share/drirc.d
-
-  os-prober:
-    plugin: nil
-    stage-packages: [os-prober]
-    build-attributes: [enable-patchelf]
-    override-stage: |
-      craftctl default
-      for file in $(grep -lr /usr | grep 'usr/[^/]*/[^/]*-probe[sr]'); do
-        sed -i 's, \(/usr\), $SNAP\1,' $file
-      done
-      sed -i 's/mkdir "$tmpmnt"/mkdir -p "$tmpmnt"/' \
-          usr/lib/os-probes/50mounted-tests
