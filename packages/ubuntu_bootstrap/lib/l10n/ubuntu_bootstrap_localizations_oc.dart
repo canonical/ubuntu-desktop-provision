@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Picatz l’URL de autoinstall.yaml :';
+  String get autoinstallInstructions => 'Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :';
 
   @override
   String get autoinstallInteractiveOption => 'Installacion interactiva';
@@ -33,7 +33,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallAutomatedOption => 'Installacion automatizada';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => 'Pels utilizaires avançats qu’an un fichièr autoinstall.yaml per de configuracions sistèma coerentas e repetiblas.';
 
   @override
   String get changeButtonText => 'Modificar';
@@ -158,14 +158,14 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO es fornit sens logicial proprietaris per defaut. L’installacion de logicials suplementaris pòt melhorar la performança de l’ordenador.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Carta grafica NVIDIA detectada';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.';
 
   @override
   String get fullInstallationTitle => 'Installacion complèta';
@@ -177,7 +177,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get minimalInstallationTitle => 'Installacion per defaut';
 
   @override
-  String get minimalInstallationSubtitle => 'Sonque çò essencials, lo navegador web e los utilitaris basics.';
+  String get minimalInstallationSubtitle => 'Sonque çò essencial, lo navegador web e los utilitaris basics.';
 
   @override
   String get otherOptions => 'Autras opcions';
@@ -207,37 +207,37 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Sètz fòra linha';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Frasa secrèta del disc';
 
   @override
   String get choosePassphraseHeader => 'Crear un senhal';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Avètz besonh d\'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu\'aviatz vòstre ordenador.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Causissètz una frasa secrèta';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Verificatz la frasa secrèta';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Una frasa secrèta es necessària';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'Las frasas secrètas correspondon pas';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Asseguratz-vos de salvagardar vòstra frasa secrèta';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Crear una frasa secrèta';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Confirmar la frasa secrèta';
 
   @override
   String get installationTypeTitle => 'Tipe d’installacion';
@@ -269,7 +269,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Començatz a partir de zèro sul disc seleccionat.';
 
   @override
   String get installationTypeAdvancedLabel => 'Foncionalitats avançadas...';
@@ -287,13 +287,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'Cap pas seleccionat';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Utilizar LVM';
 
   @override
   String get installationTypeLVMSelected => 'LVM seleccionat';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Utilizar LVM e lo chiframent';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM e chiframent seleccionats';
@@ -305,20 +305,20 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'EXPERIMENTAL : escafar lo disc e utilizar ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Escafar lo disc e utilizar ZFS amb chiframent';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seleccionat';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS e chiframent seleccionats';
 
   @override
   String get installationTypeTPM => 'EXPERIMENTAL : activar lo chiframent material del disc complèt';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return 'Aquò es una foncionalitat experimentala. Pòt arribar que fonciona pas amb vòstre material o la versions venentas de $DISTRO. <a href=\"$url\">Assabentatz-vos tocant lo chiframent TPM</a> abans de causir aquesta opcion.';
   }
 
   @override
@@ -371,13 +371,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Començatz a partir de zèro sul disc seleccionat.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Seleccionatz le disc :';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Seleccionatz la particion :';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Lo disc entièr serà utilizat :';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Causissètz ont installar $DISTRO';
   }
 
   @override
@@ -432,7 +432,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get diskHeadersType => 'Tipe';
 
   @override
-  String get diskHeadersMountPoint => 'Punt de montatge';
+  String get diskHeadersMountPoint => 'Ponch de montatge';
 
   @override
   String get diskHeadersSize => 'Talha';
@@ -509,13 +509,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get partitionErase => 'Formatar la particion';
 
   @override
-  String get partitionMountPointLabel => 'Punt de montatge :';
+  String get partitionMountPointLabel => 'Ponch de montatge :';
 
   @override
   String get confirmPageTitle => 'Lèst per installacion';
 
   @override
-  String get confirmHeader => 'Se contunhatz, las modificacions çai-jos seràn escritas suls disques. Poiretz realizar de cambiaments mai tard a la man.';
+  String get confirmHeader => 'Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -593,10 +593,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Codècs';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Codècs e pilòts';
 
   @override
   String get confirmProprietarySoftwareDrivers => 'Pilòts';
@@ -614,7 +614,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** copiat sul disc';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Tornatz aviar per acabar l\'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Devètz reaviar l’ordenador per contunhar lo processús d’installacion.';
 
   @override
   String get shutdown => 'Atudar';
@@ -689,7 +689,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Totas las aplicacions que vos fan mestièr';
+  String get installationSlidesSoftwareTitle => 'Totas las aplicacions qu’avètz mestièr';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -717,7 +717,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO pren en carga los darrièra pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus $DISTRO via d’aplicacions coma Steam amb cap de configuracion suplementària.';
+    return '$DISTRO pren en carga los darrièrs pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus $DISTRO via d’aplicacions coma Steam amb cap de configuracion suplementària.';
   }
 
   @override
@@ -725,7 +725,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provesís totas las aisinas que vos fa mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.';
+    return '$DISTRO provesís totas las aisinas qu’avètz mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.';
   }
 
   @override
@@ -791,7 +791,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Fracàs de l’installacion';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Pas pro d’espaci';
+  String get notEnoughDiskSpaceTitle => 'Pas pro d’espaci disc';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -800,7 +800,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Lo disc seleccionat pas pro d’espaci disc per installar $DISTRO. Quitatz l’installador per liberar d’espaci o seleccionatz-ne un autre.';
   }
 
   @override
@@ -813,13 +813,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'Mesa a jorn disponible';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Una mesa a jorn es disponibla per l’installador';
 
   @override
   String get refreshUpdateNow => 'Actualizar ara';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.';
 
   @override
   String get refreshReady => 'Mesa a jorn prèsta';
@@ -852,7 +852,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Verificacion dels prerequesits de $snap...';
   }
 
   @override
@@ -892,22 +892,22 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'Supression dels àlias de $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Desligament $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Actualizacion dels items $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Actualizacion de la linha de comanda del nuclèu $snap...';
   }
 
   @override
@@ -917,27 +917,27 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Parametratge dels perfils de seguretat de $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Ligament de $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Connexions a las fichas e fendas de $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Parametratge automatic dels àlias de $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Parametratge dels àlias de $snap...';
   }
 
   @override
@@ -951,14 +951,14 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'Clau de recuperacion del TPM';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">Atencion :</font> S’oblidetz aquesta clau de seguretat, totas las donadas seràn perdudas. Se cal, notatz vòstra clau e servatz-la dins un endrech segur.';
   }
 
   @override
