@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Kirjoita autoinstall.yaml-tiedoston verkko-osoite:';
+  String get autoinstallInstructions => 'Kirjoita autoinstall.yaml-tiedoston verkko-osoite tai paikallinen polku:';
 
   @override
   String get autoinstallInteractiveOption => 'Vuorovaikutteinen asennus';

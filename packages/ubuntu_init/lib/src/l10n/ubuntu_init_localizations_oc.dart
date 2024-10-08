@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Partejatz de donadas anonimas amb $distro perque poscam melhorar vòstra experiéncia.';
+    return 'Ajudatz-nos a melhorar $distro en partejant amb nosautres las donadas de vòstre sistèma. Aquò inclutz causas coma lo modèl de vòstra maqina, los logicials installats e l’emplaçament que causiguèretz per la zòna orària.';
   }
 
   @override
@@ -60,7 +60,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Non, partejar pas cap de donadas sistèma';
 
   @override
-  String get telemetryReportLabel => 'Detalhs del rapòrt';
+  String get telemetryReportLabel => 'Veire lo primièr rapòrt';
 
   @override
   String get telemetryReportTitle => 'Detalhs del rapòrt';
@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Informacions legalas';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Fracàs de la collècta de donadas de telemetria';
 
   @override
   String get privacyPageTitle => 'Servicis de localizacion';
@@ -88,7 +88,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Ligason magica amb aqueste còdi sus <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -104,11 +104,11 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Geton';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Soscrivètz a l’abonament amb la melhora seguretat dels logicials liures';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Totjorn gratuit per un usatge personal. 30 jorns d’ensag per las entrepresas. <a href=\"https://$url\">Ne saber mai</a>';
   }
 
   @override
@@ -127,13 +127,13 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Passar pel moment';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Podètz totjorn activar Ubuntu Pro mai tard dins l’aplicacion Logicials e mesas a jorn.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Activar Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Ligatz aquesta maquina a un abonament Ubuntu Pro per de mesas a jorn de seguretat sus un grand nombre de paquets, fins a 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro es ara activat sus aquesta maquina';

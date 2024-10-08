@@ -857,7 +857,7 @@
   "@refreshReady": {},
   "autoinstallTitle": "Asennuksen tyyppi",
   "@autoinstallTitle": {},
-  "autoinstallInstructions": "Kirjoita autoinstall.yaml-tiedoston verkko-osoite:",
+  "autoinstallInstructions": "Kirjoita autoinstall.yaml-tiedoston verkko-osoite tai paikallinen polku:",
   "@autoinstallInstructions": {},
   "warningLabel": "Varoitus:",
   "@warningLabel": {},

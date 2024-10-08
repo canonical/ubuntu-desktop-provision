@@ -58,7 +58,7 @@
   "@diskHeadersDevice": {},
   "diskHeadersType": "Tipe",
   "@diskHeadersType": {},
-  "diskHeadersMountPoint": "Punt de montatge",
+  "diskHeadersMountPoint": "Ponch de montatge",
   "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Talha",
   "@diskHeadersSize": {},
@@ -98,11 +98,11 @@
   "@partitionFormatNone": {},
   "partitionErase": "Formatar la particion",
   "@partitionErase": {},
-  "partitionMountPointLabel": "Punt de montatge :",
+  "partitionMountPointLabel": "Ponch de montatge :",
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Lèst per installacion",
   "@confirmPageTitle": {},
-  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escritas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
+  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
   "@confirmHeader": {},
   "confirmPartitionTables": "Las taulas de particions dels periferics seguents seràn modificadas :",
   "@confirmPartitionTables": {},
@@ -297,7 +297,7 @@
   "@installAlongsideSize": {},
   "installAlongsideAvailable": "Disponible :",
   "@installAlongsideAvailable": {},
-  "notEnoughDiskSpaceTitle": "Pas pro d’espaci",
+  "notEnoughDiskSpaceTitle": "Pas pro d’espaci disc",
   "@notEnoughDiskSpaceTitle": {},
   "installingSystem": "Installacion del sistèma…",
   "@installingSystem": {},
@@ -403,7 +403,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSoftwareTitle": "Totas las aplicacions que vos fan mestièr",
+  "installationSlidesSoftwareTitle": "Totas las aplicacions qu’avètz mestièr",
   "@installationSlidesSoftwareTitle": {},
   "installationSlidesSoftwareBody": "Installatz, gerissètz e metatz a jorn vòstras aplicacions dins Ubuntu Software, incluses milierats d’aplicacions venent de Snap Store e dels archius {DISTRO}.",
   "@installationSlidesSoftwareBody": {
@@ -484,14 +484,14 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièra pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
+  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièrs pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas que vos fa mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
+  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas qu’avètz mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -551,7 +551,7 @@
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Installacion per defaut",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Sonque çò essencials, lo navegador web e los utilitaris basics.",
+  "minimalInstallationSubtitle": "Sonque çò essencial, lo navegador web e los utilitaris basics.",
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM seleccionat",
   "@installationTypeTPMSelected": {},
@@ -648,7 +648,7 @@
   },
   "refreshRestart": "Mercés de reaviar l’installador.",
   "@refreshRestart": {},
-  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml :",
+  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Installacion interactiva",
   "@autoinstallInteractiveOption": {},
@@ -743,5 +743,194 @@
   "codecsAndDriversPageDescription": "Installar los logicials proprietaris recomandats ?",
   "@codecsAndDriversPageDescription": {},
   "autoinstallInteractiveDescription": "Pels utilizaires que vòlon una guida estapa per tapa pendent l'installacion.",
-  "@autoinstallInteractiveDescription": {}
+  "@autoinstallInteractiveDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} es fornit sens logicial proprietaris per defaut. L’installacion de logicials suplementaris pòt melhorar la performança de l’ordenador.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseTitle": "Frasa secrèta del disc",
+  "@choosePassphraseTitle": {},
+  "choosePassphraseBody": "Avètz besonh d'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu'aviatz vòstre ordenador.",
+  "@choosePassphraseBody": {},
+  "choosePassphraseInfoBody": "Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.",
+  "@choosePassphraseInfoBody": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Seleccionatz la particion :",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "autoinstallAutomatedDescription": "Pels utilizaires avançats qu’an un fichièr autoinstall.yaml per de configuracions sistèma coerentas e repetiblas.",
+  "@autoinstallAutomatedDescription": {},
+  "codecsAndDriversNvidiaNote": "Carta grafica NVIDIA detectada",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseHint": "Causissètz una frasa secrèta",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Verificatz la frasa secrèta",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Una frasa secrèta es necessària",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Las frasas secrètas correspondon pas",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Asseguratz-vos de salvagardar vòstra frasa secrèta",
+  "@choosePassphraseInfoHeader": {},
+  "createPassphrase": "Crear una frasa secrèta",
+  "@createPassphrase": {},
+  "confirmPassphrase": "Confirmar la frasa secrèta",
+  "@confirmPassphrase": {},
+  "installationTypeEraseInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeExperimental": "Experimental",
+  "@installationTypeExperimental": {},
+  "installationTypeLVM": "Utilizar LVM",
+  "@installationTypeLVM": {},
+  "installationTypeLVMEncryption": "Utilizar LVM e lo chiframent",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Escafar lo disc e utilizar ZFS amb chiframent",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS e chiframent seleccionats",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "@selectGuidedStorageInfo": {},
+  "guidedStoragePageHeader": "Causissètz ont installar {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigure": "**{system}** copiat sul disc",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Tornatz aviar per acabar l'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "Devètz reaviar l’ordenador per contunhar lo processús d’installacion.",
+  "@rebootToConfigureWarning": {},
+  "recoveryKeyTitle": "Clau de recuperacion del TPM",
+  "@recoveryKeyTitle": {},
+  "installationTypeTPMInfo": "Aquò es una foncionalitat experimentala. Pòt arribar que fonciona pas amb vòstre material o la versions venentas de {DISTRO}. <a href=\"{url}\">Assabentatz-vos tocant lo chiframent TPM</a> abans de causir aquesta opcion.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connexions a las fichas e fendas de {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyWarning": "<font color=\"{color}\">Atencion :</font> S’oblidetz aquesta clau de seguretat, totas las donadas seràn perdudas. Se cal, notatz vòstra clau e servatz-la dins un endrech segur.",
+  "@recoveryKeyWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "Lo disc seleccionat pas pro d’espaci disc per installar {DISTRO}. Quitatz l’installador per liberar d’espaci o seleccionatz-ne un autre.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Verificacion dels prerequesits de {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Codècs",
+  "@confirmProprietarySoftwareCodecs": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Codècs e pilòts",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "refreshSnapUpdateKernelCommandLine": "Actualizacion de la linha de comanda del nuclèu {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Una mesa a jorn es disponibla per l’installador",
+  "@refreshHeader": {},
+  "refreshInfo": "Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.",
+  "@refreshInfo": {},
+  "refreshSnapRemoveAliases": "Supression dels àlias de {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Desligament {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Actualizacion dels items {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Parametratge dels perfils de seguretat de {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Ligament de {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Parametratge automatic dels àlias de {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Parametratge dels àlias de {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
+  "@recoveryKeyCommand": {}
 }

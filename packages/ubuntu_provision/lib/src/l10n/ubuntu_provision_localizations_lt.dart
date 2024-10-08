@@ -33,16 +33,16 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Didelis kontrastas';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Padidintas tekstas';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Reduce animation';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Teksto skaityklė';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Visual alerts';
@@ -51,7 +51,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get accessibilityStickKeysLabel => 'Sticky keys';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Lėtieji klavišai';
 
   @override
   String get accessibilityMouseKeysLabel => 'Mouse keys';
@@ -60,7 +60,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get accessibilityDesktopZoomLabel => 'Desktop zoom';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Kažkas nutiko';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
@@ -71,13 +71,13 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Rodyti žurnalą';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Slėpti žurnalą';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Paleisti iš naujo';
 
   @override
   String get close => 'Užverti';
@@ -95,7 +95,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Klaviatūros išdėstymas';
 
   @override
-  String get keyboardHeader => 'Pasirinkite klaviatūros išdėstymą:';
+  String get keyboardHeader => 'Pasirinkite klaviatūros išdėstymą';
 
   @override
   String get keyboardTestHint => 'Rašykite čia, norėdami išbandyti klaviatūrą';
@@ -282,7 +282,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Prisijunkite prie interneto';
 
   @override
-  String get networkPageHeader => 'Prijungus šį kompiuterį prie interneto Ubuntu galės įdiegti reikalingą papildomą programinę įrangą ir galės padėti pasirinkti laiko juostą.\n\nPrisijunkite naudodami interneto laidą arba pasirinkite belaidį (Wi-Fi) tinklą';
+  String get networkPageHeader => 'Prisijunkite prie interneto';
 
   @override
   String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
@@ -333,11 +333,11 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get eulaPageTitle => 'License agreement';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Perskaitykite licenciją';
 
   @override
   String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Aš perskaičiau ir sutinku su šiomis sąlygomis';
 }
