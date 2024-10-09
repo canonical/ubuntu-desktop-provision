@@ -78,9 +78,13 @@ final testDisks = <Disk>[
 
 void main() {
   setUp(() {
+    final mockInstallerService = MockInstallerService();
+    when(mockInstallerService.monitorStatus()).thenAnswer(
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.RUNNING)),
+    );
     registerMockService<PageConfigService>(MockPageConfigService());
     registerMockService<ThemeVariantService>(MockThemeVariantService());
-    registerMockService<InstallerService>(MockInstallerService());
+    registerMockService<InstallerService>(mockInstallerService);
     registerMockService<RefreshService>(MockRefreshService());
   });
 
