@@ -159,5 +159,7 @@
   "networkHiddenWifiNameRequired": "네트워크 이름이 필요합니다",
   "@networkHiddenWifiNameRequired": {},
   "networkNoneOption": "지금은 인터넷에 연결하지 않기",
-  "@networkNoneOption": {}
+  "@networkNoneOption": {},
+  "close": "닫기",
+  "@close": {}
 }
