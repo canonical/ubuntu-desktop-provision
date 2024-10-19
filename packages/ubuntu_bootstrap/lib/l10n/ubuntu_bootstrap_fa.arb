@@ -99,7 +99,7 @@
   "@shutdown": {},
   "restartNow": "اکنون دوباره آغاز شود",
   "@restartNow": {},
-  "notEnoughDiskSpaceTitle": "فضای ناکافی",
+  "notEnoughDiskSpaceTitle": "فضای دیسک ناکافی",
   "@notEnoughDiskSpaceTitle": {},
   "installCodecsTitle": "بارگیری و نصب پشتیبانی برای قالب‌های رسانه‌ای بیش‌تر",
   "@installCodecsTitle": {},
@@ -660,8 +660,124 @@
   "@confirmSectionSecurityAndMoreTitle": {},
   "confirmHeader": "بازبینی انتخاب‌هایتان",
   "@confirmHeader": {},
-  "autoinstallInstructions": "‫ورود نشانی ‏autoinstall.yaml‬:",
+  "autoinstallInstructions": "‫ورود نشانی ‏autoinstall.yaml‬ یا مسیر پروندهٔ محلی:",
   "@autoinstallInstructions": {},
   "codecsAndDriversPageDescription": "نصب نرم‌افزارهای مالکیتی پیشنهادی؟",
-  "@codecsAndDriversPageDescription": {}
+  "@codecsAndDriversPageDescription": {},
+  "refreshSnapCheckRerefresh": "بررسی کردن تازه‌سازی دوبارهٔ {snap}…",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "متوقّف کردن خدمت‌های {snap}…",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "partitionFormatKeep": "رها کردن قالب بندی به صورت {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "رونشوت برداشتن از داده‌های {snap}…",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "choosePassphraseRequired": "نیازمند عبارت عبور",
+  "@choosePassphraseRequired": {},
+  "installDriversSubtitle": "از جمله گرداننده‌های انویدیا و مشابه آن‌ها",
+  "@installDriversSubtitle": {},
+  "batteryWarning": "رایانه به منبع نیرو وصل نشده است.",
+  "@batteryWarning": {},
+  "rebootToConfigureWarning": "برای ادامهٔ فرایند نصب باید رایانه را دوباره آغاز کنید.",
+  "@rebootToConfigureWarning": {},
+  "refreshInfo": "به‌روز رسانی به جدیدترین نگارش برای قابلیت اطمینان بهبود یافته و ویژگی‌های بیش‌تر.",
+  "@refreshInfo": {},
+  "codecsAndDriversNvidiaNote": "کارت گرافیک انویدیا تشخیص داده شد",
+  "@codecsAndDriversNvidiaNote": {},
+  "minimalInstallationSubtitle": "فقط واجبات. مرورگر وب و ابزارهای پایه.",
+  "@minimalInstallationSubtitle": {},
+  "fullInstallationSubtitle": "گزینشی برون‌خط از ابزاهای اداری، ابزارها و مرورگر وب.",
+  "@fullInstallationSubtitle": {},
+  "installCodecsSubtitle": "از جمله MP3،‌ MP4، MOV و مشابه این‌ها",
+  "@installCodecsSubtitle": {},
+  "choosePassphraseInfoBody": "اگر عبارت عبورتان را گم کنید، همهٔ داده‌هایتان از دست خواهد رفت.",
+  "@choosePassphraseInfoBody": {},
+  "installationTypeLVMEncryption": "استفاده از LVM و رمزنگاری",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryptionSelected": "رمزنگاری و ZFS گزیده",
+  "@installationTypeZFSEncryptionSelected": {},
+  "refreshHeader": "به‌روز رسانی‌ای برای نصب کننده موجود است",
+  "@refreshHeader": {},
+  "refreshSnapCleanup": "پاک کردن {snap}…",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "به‌روز رسانی به نگارش {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "لطفاً نصب کننده را بسته و برای ادامه دوباره اجرا کنید",
+  "@refreshRestart": {},
+  "refreshSnapRemoveAliases": "برداشتن نام‌های مستعار {snap}…",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "به‌روز کردن محتویات {snap}…",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "آغاز کردن خدمت‌های {snap}…",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "تنظیم کردن خودکار نام‌های مستعار {snap}…",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "برپا کردن نام‌های مستعار {snap}…",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  }
 }
