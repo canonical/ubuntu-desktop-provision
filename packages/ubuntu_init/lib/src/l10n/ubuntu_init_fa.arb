@@ -18,7 +18,7 @@
   },
   "telemetryPageTitle": "گزارش از دور",
   "@telemetryPageTitle": {},
-  "telemetryDescription": "هم‌رسانی ناشناس داده‌ها با {distro} برای بهبود تجربه‌تان.",
+  "telemetryDescription": "کمک در بهبود {distro} با هم‌رسانی داده‌های سامانه‌تان. این داده‌ها شامل چیزهایی چون مدل دستگاهتان، نرم‌افزارهای نصب شده و مکانی که برای منطقهٔ زمانیتان گزیده‌اید هستند.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -34,7 +34,7 @@
   },
   "telemetryReportTitle": "جزییات گزارش",
   "@telemetryReportTitle": {},
-  "telemetryLegalLabel": "حقوقی",
+  "telemetryLegalLabel": "یادداشت حقوقی",
   "@telemetryLegalLabel": {},
   "privacyPageTitle": "خدمات مکانی",
   "@privacyPageTitle": {},
@@ -59,12 +59,41 @@
   },
   "telemetryLabelOff": "نه. داده‌های سامانه هم‌رسانی نشوند",
   "@telemetryLabelOff": {},
-  "telemetryReportLabel": "گزارش کردن جزییات",
+  "telemetryReportLabel": "نمایش نخستین گزارش",
   "@telemetryReportLabel": {},
   "privacyLocationTitle": "به کار انداختن خدمات مکانی؟",
   "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.",
   "@privacyLocationSubtitle": {},
   "ubuntuProPageTitle": "اوبونتوی حرفه‌ای",
-  "@ubuntuProPageTitle": {}
+  "@ubuntuProPageTitle": {},
+  "telemetryCollectError": "شکست در جمع‌آوری داده‌های دورسنجی",
+  "@telemetryCollectError": {},
+  "ubuntuProMagicAttachInstructions": "پیوستن جادویی با این کد در <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProHeader": "پیوستن این دستگاه",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "یا افزودن دستی ژتون",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "ژتون",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProTokenAttachButton": "پیوست",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "ژتون نامعتبر",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "ژتون معتبر",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "ژتون نامعتبر. تلاش دوباره",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "فعلاً پریده شود",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "به کار انداختن اوبونتوی حرفه‌ای",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachHeader": "اوبونتوی حرفه‌ای اکنون روی این دستگاه به کار افتاده",
+  "@ubuntuProSucessAttachHeader": {}
 }
