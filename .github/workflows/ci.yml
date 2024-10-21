@@ -302,6 +302,7 @@ jobs:
 
   tics-coverage:
     name: Convert and upload coverage reports for TiCS
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     needs:
       - flutter-tests
