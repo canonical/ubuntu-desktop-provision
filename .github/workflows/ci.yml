@@ -351,4 +351,5 @@ jobs:
       - name: Upload coverage reports
         uses: actions/upload-artifact@v4
         with:
+          name: tics-coverage-reports
           path: coverage/*
