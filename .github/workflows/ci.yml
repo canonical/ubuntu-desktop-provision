@@ -190,6 +190,12 @@ jobs:
           flags: UI
           token: ${{secrets.CODECOV_TOKEN}}
 
+      - name: Cache coverage files
+        uses: actions/cache@v3
+        with:
+          path: packages/*/coverage/lcov.info
+          key: ${{ github.sha }}-flutter-test-coverage
+
   go-sanity:
     name: "Go: Code sanity"
     runs-on: ubuntu-latest
@@ -246,6 +252,12 @@ jobs:
           flags: provd
           token: ${{secrets.CODECOV_TOKEN}}
 
+      - name: Cache coverage files
+        uses: actions/cache@v3
+        with:
+          path: /tmp/coverage.out
+          key: ${{ github.sha }}-go-test-coverage
+
   build-and-upload:
     if: github.event_name == 'push'
     needs: go-tests
@@ -287,3 +299,55 @@ jobs:
         with:
           name: provd-deb-package-${{ matrix.platform }}
           path: provd-${{ matrix.platform }}.deb
+
+  tics-coverage:
+    name: Convert and upload coverage reports for TiCS
+    runs-on: ubuntu-latest
+    needs:
+      - flutter-tests
+      - go-tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: asdf-vm/actions/install@v3
+      - uses: bluefireteam/melos-action@v3
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: "./provd/go.mod"
+
+      - name: Restore Flutter coverage files from cache
+        uses: actions/cache@v3
+        with:
+          path: packages/*/coverage/lcov.info
+          key: ${{ github.sha }}-flutter-test-coverage
+
+      - name: Restore Go coverage files from cache
+        uses: actions/cache@v3
+        with:
+          path: /tmp/coverage.out
+          key: ${{ github.sha }}-go-test-coverage
+
+      - name: Install dependencies
+        run: |
+          dart pub global activate cobertura
+          go install github.com/axw/gocov/gocov@latest
+          go install github.com/AlekSi/gocov-xml@latest
+
+      - name: Convert Flutter coverage files to cobertura XML
+        run: |
+          mkdir coverage
+          for package in provd_client subiquity_client subiquity_test ubuntu_bootstrap ubuntu_init ubuntu_provision ubuntu_utils ubuntu_wizard; do
+            pushd packages/$package
+            cobertura convert
+            sed -i 's/branches-covered/decisions-covered/g' coverage/cobertura.xml
+            mv coverage/cobertura.xml ../../coverage/$package.xml
+            popd
+          done
+
+      - name: Convert Go coverage files to cobertura XML
+        run: |
+          gocov convert /tmp/coverage.out | gocov-xml > coverage/report_co.xml
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          path: coverage/*
