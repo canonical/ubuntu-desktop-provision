@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'ایجاد رسانهٔ بازنشانی یواس‌بی برای بازگردانی سامانه به همراه سفارشی سازی نصب‌های اوبونتو.';
 
   @override
-  String get createUsbListExplanation => 'گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید کمینه ۱۶ گ‌ب فضا داشته باشد';
+  String get createUsbListExplanation => 'گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید **کمینه ۱۶ گ‌ب** فضا داشته باشد';
 
   @override
   String get createUsbWarning => 'گردانندهٔ فلش باید دوباره قالب‌بندی شده که همهٔ داده‌های رویش از دست خواهند رفت.';
@@ -50,7 +50,7 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'رسانهٔ بازنشانی یواس‌بی آماده است';
 
   @override
-  String get resetMediaReadyBody => 'هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره راه‌اندازیش کنید.';
+  String get resetMediaReadyBody => 'هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره آغازش کنید.';
 
   @override
   String get errorLoadingDrives => 'هنگام واکشی راه‌اندازها خطایی رخ داد.';
@@ -83,10 +83,10 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get restore => 'بازگردانی';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'آغاز دوباره';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'قالب‌بندی دوباره';
 
   @override
   String get failed => 'شکست در اجرای فرمان';

@@ -65,10 +65,10 @@ class UbuntuBootstrapLocalizationsTh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'ซ่อมแซมระบบที่ติดตั้ง';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'การซ่อมแซมจะเป็นการติดตั้งซอฟต์แวร์ทั้งหมดที่ติดตั้งไว้ใหม่อีกครั้งโดยไม่แตะต้องเอกสารหรือการตั้งค่าของคุณ';
 
   @override
   String tryOption(String RELEASE) {
@@ -77,7 +77,7 @@ class UbuntuBootstrapLocalizationsTh extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'คุณสามารถทดลองใช้ $RELEASE โดยไม่ทำการเปลี่ยนแปลงใดกับคอมพิวเตอร์ของคุณได้';
   }
 
   @override
@@ -87,7 +87,7 @@ class UbuntuBootstrapLocalizationsTh extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'ติดตั้ง $RELEASE ควบคู่ (หรือแทนที่) ระบบปฏิบัติการปัจจุบันของคุณ ซึ่งกระบวนการนี้จะใช้เวลาไม่นานมากนัก';
   }
 
   @override
@@ -96,19 +96,19 @@ class UbuntuBootstrapLocalizationsTh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'ตรวจพบ RST';
 
   @override
-  String get rstHeader => 'Turn off RST to continue';
+  String get rstHeader => 'ปิด RST เพื่อดำเนินการต่อ';
 
   @override
   String rstDescription(String DISTRO) {
-    return 'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing $DISTRO.';
+    return 'คอมพิวเตอร์เครื่องนี้ใช้ Intel RST (Rapid Storage Technology) คุณต้องปิด RST ใน Windows ก่อนที่จะติดตั้ง $DISTRO';
   }
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'ถ้าต้องการดูคำแนะนำ ให้สแกนคิวอาร์โค้ดด้วยอุปกรณ์อื่น หรือไปยัง <a href=\"https://$url\">$url</a>';
   }
 
   @override

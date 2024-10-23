@@ -60,7 +60,7 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get accessibilityDesktopZoomLabel => 'Powiększanie pulpitu';
 
   @override
-  String get errorPageTitle => 'Coś poszło źle';
+  String get errorPageTitle => 'Wystąpił problem';
 
   @override
   String get errorPageUnexpected => 'Przepraszamy, ale nie jesteśmy pewni, na czym polega błąd. Możesz spróbować ponownie uruchomić komputer i jeszcze raz rozpocząć proces instalacji. Możesz także <a>zgłosić problem</a>.';
