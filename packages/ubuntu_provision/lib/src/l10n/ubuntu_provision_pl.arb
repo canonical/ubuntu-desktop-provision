@@ -190,7 +190,7 @@
   },
   "accessibilityDesktopZoomLabel": "Powiększanie pulpitu",
   "@accessibilityDesktopZoomLabel": {},
-  "errorPageTitle": "Coś poszło źle",
+  "errorPageTitle": "Wystąpił problem",
   "@errorPageTitle": {},
   "errorPageShowLog": "Pokaż dziennik",
   "@errorPageShowLog": {},

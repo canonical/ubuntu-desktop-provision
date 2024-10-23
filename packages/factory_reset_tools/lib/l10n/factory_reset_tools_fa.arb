@@ -10,7 +10,7 @@
   "@factoryResetTitle": {},
   "loadingDrives": "لطفاً تا واکشی راه‌اندازها شکیبا باشید.",
   "@loadingDrives": {},
-  "createUsbListExplanation": "گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید کمینه ۱۶ گ‌ب فضا داشته باشد",
+  "createUsbListExplanation": "گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید **کمینه ۱۶ گ‌ب** فضا داشته باشد",
   "@createUsbListExplanation": {},
   "createUsbWarning": "گردانندهٔ فلش باید دوباره قالب‌بندی شده که همهٔ داده‌های رویش از دست خواهند رفت.",
   "@createUsbWarning": {},
@@ -58,6 +58,10 @@
   "@noMediaDetectedSubtitle": {},
   "createUsbBody": "ایجاد رسانهٔ بازنشانی یواس‌بی برای بازگردانی سامانه به همراه سفارشی سازی نصب‌های اوبونتو.",
   "@createUsbBody": {},
-  "resetMediaReadyBody": "هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره راه‌اندازیش کنید.",
-  "@resetMediaReadyBody": {}
+  "resetMediaReadyBody": "هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره آغازش کنید.",
+  "@resetMediaReadyBody": {},
+  "restart": "آغاز دوباره",
+  "@restart": {},
+  "reformat": "قالب‌بندی دوباره",
+  "@reformat": {}
 }

@@ -80,7 +80,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => '닫기';
 
   @override
   String get timezonePageTitle => '시간대를 선택하십시오';

@@ -5,49 +5,49 @@ class FactoryResetToolsLocalizationsKo extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => '공장 초기화 도구';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => '공장 초기화 도구';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => '무엇을 하시겠습니까?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => '재설치 미디어 만들기';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => '공장 초기화 시작';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'USB 재설치 미디어 만들기';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Ubuntu 설치를 사용자 정의하거나 시스템 복원을 위해 USB 재설정 미디어를 만듭니다.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'USB 이동식 드라이브를 선택해 주십시오. 드라이브에는 **최소 16GB의 공간**이 있어야 합니다.';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => '이동식 드라이브가 포맷되며 드라이브의 모든 데이터는 삭제됩니다.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB 재설치 미디어';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => '이동식 저장소가 인식되지 않음';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => '공장 초기화 미디어를 만들려면 USB 저장소를 연결해야 합니다.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => '공장 초기화 옵션 선택';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => '드라이브 목록을 불러오는 동안 기다려 주십시오.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB 재설치 미디어가 준비되었습니다';
 
   @override
   String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
@@ -92,7 +92,7 @@ class FactoryResetToolsLocalizationsKo extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => '닫기';
 
   @override
   String get ok => 'OK';
