@@ -81,6 +81,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testIdentityPage(identity: identity, password: 'password');
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -154,6 +158,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage();
     await tester.tapConfirm();
     await tester.pumpAndSettle();
@@ -210,8 +218,11 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.LVM_LUKS,
     );
     await tester.tapNext();
@@ -289,8 +300,11 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS,
     );
     await tester.tapNext();
@@ -364,8 +378,11 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
     await tester.tapNext();
@@ -450,8 +467,11 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
     await tester.tapNext();
@@ -534,6 +554,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.manual);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -628,6 +652,10 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testGuidedResizePage(size: 30);
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -715,6 +743,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.alongside);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 

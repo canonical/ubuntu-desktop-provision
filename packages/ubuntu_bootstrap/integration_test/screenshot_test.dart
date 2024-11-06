@@ -228,8 +228,11 @@ Future<void> main() async {
       await tester.jumpToStorageWizard();
       await tester.pumpAndSettle();
 
-      await tester.testStoragePage(
-        type: StorageType.erase,
+      await tester.testStoragePage(type: StorageType.erase);
+      await tester.tapNext();
+      await tester.pumpAndSettle();
+
+      await tester.testGuidedCapabilityPage(
         guidedCapability: GuidedCapability.LVM,
         screenshot: '$currentThemeName/storage-advanced-features',
       );
@@ -426,6 +429,11 @@ Future<void> main() async {
 
       await tester.testStoragePage(
         type: StorageType.erase,
+      );
+      await tester.tapNext();
+      await tester.pumpAndSettle();
+
+      await tester.testGuidedCapabilityPage(
         guidedCapability: GuidedCapability.LVM_LUKS,
       );
       await tester.tapNext();

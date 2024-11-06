@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
@@ -143,7 +144,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
   Future<void> testStoragePage({
     StorageType? type,
-    GuidedCapability? guidedCapability,
     String? screenshot,
   }) async {
     await pumpUntilPage(StoragePage);
@@ -157,10 +157,26 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       await tapRadio<StorageType>(type);
       await pump();
     }
-    if (guidedCapability != null) {
-      await tapButton(l10n.installationTypeAdvancedLabel);
-      await pumpAndSettle();
 
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+  }
+
+  Future<void> testGuidedCapabilityPage({
+    GuidedCapability? guidedCapability,
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(GuidedCapabilitiesPage);
+
+    final context = element(find.byType(GuidedCapabilitiesPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.installationTypeAdvancedTitle), findsOneWidget);
+
+    if (guidedCapability != null) {
       switch (guidedCapability) {
         case GuidedCapability.DIRECT:
           await tap(find.text(l10n.installationTypeNone));
@@ -177,22 +193,16 @@ extension UbuntuBootstrapPageTester on WidgetTester {
         case GuidedCapability.ZFS_LUKS_KEYSTORE:
           await tap(find.text(l10n.installationTypeZFSEncryption));
           break;
+        case GuidedCapability.CORE_BOOT_ENCRYPTED:
+          await tap(find.text(l10n.installationTypeTPM));
+          break;
         default:
           break;
       }
-
       await pumpAndSettle();
-
-      if (screenshot != null) {
-        await takeScreenshot(screenshot);
-      }
-
-      await tapOk();
     }
 
-    await pumpAndSettle();
-
-    if (guidedCapability == null && screenshot != null) {
+    if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
   }

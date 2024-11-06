@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/installer/installation_step.dart';
 import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
@@ -38,6 +39,9 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
       InstallationStep.storage.route: WizardRoute(
         builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
+      ),
+      StorageSteps.guidedCapabilities.route: WizardRoute(
+        builder: (_) => GuidedCapabilitiesPage(),
       ),
       if (type != StorageType.manual)
         StorageSteps.bitlocker.route: WizardRoute(
