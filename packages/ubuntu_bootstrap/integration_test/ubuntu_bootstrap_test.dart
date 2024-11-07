@@ -43,9 +43,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage(language: language);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(language: language, tester: tester);
     await expectLocale(locale);
 
     await tester.testAccessibilityPage();
@@ -118,9 +116,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -178,9 +174,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -257,9 +251,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -332,9 +324,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -418,9 +408,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -501,9 +489,7 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -592,9 +578,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
@@ -682,7 +666,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
+    await tester.testLocalePage(tester: tester);
     await tester.tapNext();
     await tester.pumpAndSettle();
 
@@ -730,9 +714,7 @@ void main() {
     await tester.runApp(() => app.main(<String>['--welcome']));
     await tester.pumpAndSettle();
 
-    await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tester.testLocalePage(tester: tester);
 
     await tester.testAccessibilityPage();
     await tester.tapNext();
