@@ -36,8 +36,7 @@ Future<void> main() async {
       await tester.runApp(() => runInitApp([], theme: currentTheme));
       await tester.pumpAndSettle();
 
-      await tester.testLocalePage(
-          screenshot: '$currentThemeName/locale', tester: tester);
+      await tester.testLocalePage(screenshot: '$currentThemeName/locale');
     },
     variant: themeVariant,
   );

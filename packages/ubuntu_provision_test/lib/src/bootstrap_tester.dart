@@ -30,6 +30,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testAutoinstallPage({
@@ -47,6 +50,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testRstPage({
@@ -85,6 +91,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapSkip();
+    await pumpAndSettle();
   }
 
   Future<void> testSourceSelectionPage({
@@ -106,6 +115,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testCodecsAndDriversPage({
@@ -124,6 +136,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testNotEnoughDiskSpacePage({
@@ -195,6 +210,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (guidedCapability == null && screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testBitLockerPage({
@@ -218,6 +236,8 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot('$screenshot-confirm');
     }
+
+    await pumpAndSettle();
   }
 
   Future<void> testGuidedReformatPage({
@@ -264,6 +284,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testManualStoragePage({
@@ -319,6 +342,10 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testPassphrasePage({
@@ -346,6 +373,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testRecoveryKeyPage({
@@ -376,6 +406,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapConfirm();
+    await pumpAndSettle();
   }
 
   Future<void> testInstallPage({
@@ -391,5 +424,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
 
     await pumpUntil(find.button(l10n.continueTesting));
+    await pumpAndSettle();
   }
 }

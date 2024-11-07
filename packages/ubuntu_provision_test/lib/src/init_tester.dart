@@ -17,6 +17,9 @@ extension UbuntuInitPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapDone();
+    await pumpAndSettle();
   }
 
   Future<void> testTelemetryPage({
@@ -38,6 +41,9 @@ extension UbuntuInitPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapDone();
+    await pumpAndSettle();
   }
 
   Future<void> testUbuntuProPage({
@@ -75,6 +81,9 @@ extension UbuntuInitPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testUbuntuProSuccessAttachProPage({

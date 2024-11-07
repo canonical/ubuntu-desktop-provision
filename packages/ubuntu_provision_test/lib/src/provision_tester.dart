@@ -11,7 +11,6 @@ extension UbuntuProvisionPageTester on WidgetTester {
   Future<void> testLocalePage({
     String? language,
     String? screenshot,
-    required WidgetTester tester,
   }) async {
     await pumpUntilPage(LocalePage);
 
@@ -36,8 +35,8 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tester.tapNext();
-    await tester.pumpAndSettle();
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testAccessibilityPage({
@@ -58,6 +57,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testKeyboardPage({
@@ -106,6 +108,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
         await pumpAndSettle();
       }
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testNetworkPage({
@@ -127,6 +132,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testEulaPage({
@@ -149,6 +157,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testTimezonePage({
@@ -188,6 +199,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testIdentityPage({
@@ -243,6 +257,9 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testActiveDirectoryPage({

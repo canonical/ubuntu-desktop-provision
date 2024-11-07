@@ -24,25 +24,17 @@ void main() {
 
     await tester.runApp(() => runInitApp([]));
 
-    await tester.testLocalePage(language: 'Deutsch', tester: tester);
+    await tester.testLocalePage(language: 'Deutsch');
     await expectLocale('de_DE.UTF-8');
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(layout: 'Englisch (Britisch)');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectKeyboard(const KeyboardSetting(layout: 'gb'));
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testEulaPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     const identity = Identity(
       realname: 'User',
@@ -53,22 +45,14 @@ void main() {
       identity: identity,
       password: 'password',
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testUbunutuProOnboardingPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testTimezonePage(timezone: 'Europe/Berlin');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectTimezone('Europe/Berlin');
 
     await tester.testTelemetryPage(enabled: false);
-    await tester.tapDone();
-    await tester.pumpAndSettle();
     await expectLater(windowClosed, completes);
   });
 
@@ -78,8 +62,6 @@ void main() {
     await tester.runApp(() => runInitApp(['--welcome']));
 
     await tester.testWelcomeInitPage();
-    await tester.tapDone();
-    await tester.pumpAndSettle();
     await expectLater(windowClosed, completes);
   });
 }

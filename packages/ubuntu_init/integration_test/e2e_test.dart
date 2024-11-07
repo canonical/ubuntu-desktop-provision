@@ -35,11 +35,9 @@ void main() {
       ),
     );
 
-    await tester.testLocalePage(language: 'Deutsch', tester: tester);
+    await tester.testLocalePage(language: 'Deutsch');
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     // TODO: Test accessibility settings
 
     await tester.testKeyboardPage(layout: 'Englisch (Britisch)');
@@ -54,8 +52,6 @@ void main() {
     // TODO: Test gsettings input-sources
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testEulaPage();
     await tester.tapNext();
