@@ -277,8 +277,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.manual);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testManualStoragePage(
         storage: [
@@ -318,8 +316,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.alongside);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testGuidedResizePage(
         size: 30,
@@ -346,8 +342,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.erase);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testGuidedReformatPage(
         screenshot: '$currentThemeName/storage-guided-reformat',
@@ -396,8 +390,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.alongside);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testBitLockerPage(
         screenshot: '$currentThemeName/bitlocker',
@@ -426,8 +418,6 @@ Future<void> main() async {
         type: StorageType.erase,
         guidedCapability: GuidedCapability.LVM_LUKS,
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testPassphrasePage(
         passphrase: 'password',
@@ -519,8 +509,6 @@ Future<void> main() async {
       await tester.testStoragePage(
         type: StorageType.erase,
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testIdentityPage(
         identity: const Identity(
@@ -530,12 +518,8 @@ Future<void> main() async {
         ),
         password: 'password',
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testTimezonePage();
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testConfirmPage(
         screenshot: '$currentThemeName/confirm',
