@@ -343,7 +343,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-
     await tapNext();
     await pumpAndSettle();
   }

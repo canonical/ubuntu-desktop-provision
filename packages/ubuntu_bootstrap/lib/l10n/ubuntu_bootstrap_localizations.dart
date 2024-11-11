@@ -131,15 +131,18 @@ import 'ubuntu_bootstrap_localizations_zh.dart';
 /// be consistent with the languages listed in the UbuntuBootstrapLocalizations.supportedLocales
 /// property.
 abstract class UbuntuBootstrapLocalizations {
-  UbuntuBootstrapLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  UbuntuBootstrapLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
   static UbuntuBootstrapLocalizations of(BuildContext context) {
-    return Localizations.of<UbuntuBootstrapLocalizations>(context, UbuntuBootstrapLocalizations)!;
+    return Localizations.of<UbuntuBootstrapLocalizations>(
+        context, UbuntuBootstrapLocalizations)!;
   }
 
-  static const LocalizationsDelegate<UbuntuBootstrapLocalizations> delegate = _UbuntuBootstrapLocalizationsDelegate();
+  static const LocalizationsDelegate<UbuntuBootstrapLocalizations> delegate =
+      _UbuntuBootstrapLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -151,7 +154,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -1249,7 +1253,8 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>'**
-  String confirmPartitionFormatMount(String sysname, String format, String mount);
+  String confirmPartitionFormatMount(
+      String sysname, String format, String mount);
 
   /// A formatted partition entry
   ///
@@ -1834,120 +1839,271 @@ abstract class UbuntuBootstrapLocalizations {
   String get validate;
 }
 
-class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {
+class _UbuntuBootstrapLocalizationsDelegate
+    extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {
   const _UbuntuBootstrapLocalizationsDelegate();
 
   @override
   Future<UbuntuBootstrapLocalizations> load(Locale locale) {
-    return SynchronousFuture<UbuntuBootstrapLocalizations>(lookupUbuntuBootstrapLocalizations(locale));
+    return SynchronousFuture<UbuntuBootstrapLocalizations>(
+        lookupUbuntuBootstrapLocalizations(locale));
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'am',
+        'ar',
+        'be',
+        'bg',
+        'bn',
+        'bo',
+        'bs',
+        'ca',
+        'cs',
+        'cy',
+        'da',
+        'de',
+        'dz',
+        'el',
+        'en',
+        'eo',
+        'es',
+        'et',
+        'eu',
+        'fa',
+        'fi',
+        'fr',
+        'ga',
+        'gl',
+        'gu',
+        'he',
+        'hi',
+        'hr',
+        'hu',
+        'id',
+        'is',
+        'it',
+        'ja',
+        'ka',
+        'kk',
+        'km',
+        'kn',
+        'ko',
+        'ku',
+        'lo',
+        'lt',
+        'lv',
+        'mk',
+        'ml',
+        'mr',
+        'my',
+        'nb',
+        'ne',
+        'nl',
+        'nn',
+        'oc',
+        'pa',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'se',
+        'si',
+        'sk',
+        'sl',
+        'sq',
+        'sr',
+        'sv',
+        'ta',
+        'te',
+        'tg',
+        'th',
+        'tl',
+        'tr',
+        'ug',
+        'uk',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_UbuntuBootstrapLocalizationsDelegate old) => false;
 }
 
 UbuntuBootstrapLocalizations lookupUbuntuBootstrapLocalizations(Locale locale) {
-
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
-    case 'pt': {
-  switch (locale.countryCode) {
-    case 'BR': return UbuntuBootstrapLocalizationsPtBr();
-   }
-  break;
-   }
-    case 'zh': {
-  switch (locale.countryCode) {
-    case 'TW': return UbuntuBootstrapLocalizationsZhTw();
-   }
-  break;
-   }
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return UbuntuBootstrapLocalizationsPtBr();
+        }
+        break;
+      }
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'TW':
+            return UbuntuBootstrapLocalizationsZhTw();
+        }
+        break;
+      }
   }
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'am': return UbuntuBootstrapLocalizationsAm();
-    case 'ar': return UbuntuBootstrapLocalizationsAr();
-    case 'be': return UbuntuBootstrapLocalizationsBe();
-    case 'bg': return UbuntuBootstrapLocalizationsBg();
-    case 'bn': return UbuntuBootstrapLocalizationsBn();
-    case 'bo': return UbuntuBootstrapLocalizationsBo();
-    case 'bs': return UbuntuBootstrapLocalizationsBs();
-    case 'ca': return UbuntuBootstrapLocalizationsCa();
-    case 'cs': return UbuntuBootstrapLocalizationsCs();
-    case 'cy': return UbuntuBootstrapLocalizationsCy();
-    case 'da': return UbuntuBootstrapLocalizationsDa();
-    case 'de': return UbuntuBootstrapLocalizationsDe();
-    case 'dz': return UbuntuBootstrapLocalizationsDz();
-    case 'el': return UbuntuBootstrapLocalizationsEl();
-    case 'en': return UbuntuBootstrapLocalizationsEn();
-    case 'eo': return UbuntuBootstrapLocalizationsEo();
-    case 'es': return UbuntuBootstrapLocalizationsEs();
-    case 'et': return UbuntuBootstrapLocalizationsEt();
-    case 'eu': return UbuntuBootstrapLocalizationsEu();
-    case 'fa': return UbuntuBootstrapLocalizationsFa();
-    case 'fi': return UbuntuBootstrapLocalizationsFi();
-    case 'fr': return UbuntuBootstrapLocalizationsFr();
-    case 'ga': return UbuntuBootstrapLocalizationsGa();
-    case 'gl': return UbuntuBootstrapLocalizationsGl();
-    case 'gu': return UbuntuBootstrapLocalizationsGu();
-    case 'he': return UbuntuBootstrapLocalizationsHe();
-    case 'hi': return UbuntuBootstrapLocalizationsHi();
-    case 'hr': return UbuntuBootstrapLocalizationsHr();
-    case 'hu': return UbuntuBootstrapLocalizationsHu();
-    case 'id': return UbuntuBootstrapLocalizationsId();
-    case 'is': return UbuntuBootstrapLocalizationsIs();
-    case 'it': return UbuntuBootstrapLocalizationsIt();
-    case 'ja': return UbuntuBootstrapLocalizationsJa();
-    case 'ka': return UbuntuBootstrapLocalizationsKa();
-    case 'kk': return UbuntuBootstrapLocalizationsKk();
-    case 'km': return UbuntuBootstrapLocalizationsKm();
-    case 'kn': return UbuntuBootstrapLocalizationsKn();
-    case 'ko': return UbuntuBootstrapLocalizationsKo();
-    case 'ku': return UbuntuBootstrapLocalizationsKu();
-    case 'lo': return UbuntuBootstrapLocalizationsLo();
-    case 'lt': return UbuntuBootstrapLocalizationsLt();
-    case 'lv': return UbuntuBootstrapLocalizationsLv();
-    case 'mk': return UbuntuBootstrapLocalizationsMk();
-    case 'ml': return UbuntuBootstrapLocalizationsMl();
-    case 'mr': return UbuntuBootstrapLocalizationsMr();
-    case 'my': return UbuntuBootstrapLocalizationsMy();
-    case 'nb': return UbuntuBootstrapLocalizationsNb();
-    case 'ne': return UbuntuBootstrapLocalizationsNe();
-    case 'nl': return UbuntuBootstrapLocalizationsNl();
-    case 'nn': return UbuntuBootstrapLocalizationsNn();
-    case 'oc': return UbuntuBootstrapLocalizationsOc();
-    case 'pa': return UbuntuBootstrapLocalizationsPa();
-    case 'pl': return UbuntuBootstrapLocalizationsPl();
-    case 'pt': return UbuntuBootstrapLocalizationsPt();
-    case 'ro': return UbuntuBootstrapLocalizationsRo();
-    case 'ru': return UbuntuBootstrapLocalizationsRu();
-    case 'se': return UbuntuBootstrapLocalizationsSe();
-    case 'si': return UbuntuBootstrapLocalizationsSi();
-    case 'sk': return UbuntuBootstrapLocalizationsSk();
-    case 'sl': return UbuntuBootstrapLocalizationsSl();
-    case 'sq': return UbuntuBootstrapLocalizationsSq();
-    case 'sr': return UbuntuBootstrapLocalizationsSr();
-    case 'sv': return UbuntuBootstrapLocalizationsSv();
-    case 'ta': return UbuntuBootstrapLocalizationsTa();
-    case 'te': return UbuntuBootstrapLocalizationsTe();
-    case 'tg': return UbuntuBootstrapLocalizationsTg();
-    case 'th': return UbuntuBootstrapLocalizationsTh();
-    case 'tl': return UbuntuBootstrapLocalizationsTl();
-    case 'tr': return UbuntuBootstrapLocalizationsTr();
-    case 'ug': return UbuntuBootstrapLocalizationsUg();
-    case 'uk': return UbuntuBootstrapLocalizationsUk();
-    case 'vi': return UbuntuBootstrapLocalizationsVi();
-    case 'zh': return UbuntuBootstrapLocalizationsZh();
+    case 'am':
+      return UbuntuBootstrapLocalizationsAm();
+    case 'ar':
+      return UbuntuBootstrapLocalizationsAr();
+    case 'be':
+      return UbuntuBootstrapLocalizationsBe();
+    case 'bg':
+      return UbuntuBootstrapLocalizationsBg();
+    case 'bn':
+      return UbuntuBootstrapLocalizationsBn();
+    case 'bo':
+      return UbuntuBootstrapLocalizationsBo();
+    case 'bs':
+      return UbuntuBootstrapLocalizationsBs();
+    case 'ca':
+      return UbuntuBootstrapLocalizationsCa();
+    case 'cs':
+      return UbuntuBootstrapLocalizationsCs();
+    case 'cy':
+      return UbuntuBootstrapLocalizationsCy();
+    case 'da':
+      return UbuntuBootstrapLocalizationsDa();
+    case 'de':
+      return UbuntuBootstrapLocalizationsDe();
+    case 'dz':
+      return UbuntuBootstrapLocalizationsDz();
+    case 'el':
+      return UbuntuBootstrapLocalizationsEl();
+    case 'en':
+      return UbuntuBootstrapLocalizationsEn();
+    case 'eo':
+      return UbuntuBootstrapLocalizationsEo();
+    case 'es':
+      return UbuntuBootstrapLocalizationsEs();
+    case 'et':
+      return UbuntuBootstrapLocalizationsEt();
+    case 'eu':
+      return UbuntuBootstrapLocalizationsEu();
+    case 'fa':
+      return UbuntuBootstrapLocalizationsFa();
+    case 'fi':
+      return UbuntuBootstrapLocalizationsFi();
+    case 'fr':
+      return UbuntuBootstrapLocalizationsFr();
+    case 'ga':
+      return UbuntuBootstrapLocalizationsGa();
+    case 'gl':
+      return UbuntuBootstrapLocalizationsGl();
+    case 'gu':
+      return UbuntuBootstrapLocalizationsGu();
+    case 'he':
+      return UbuntuBootstrapLocalizationsHe();
+    case 'hi':
+      return UbuntuBootstrapLocalizationsHi();
+    case 'hr':
+      return UbuntuBootstrapLocalizationsHr();
+    case 'hu':
+      return UbuntuBootstrapLocalizationsHu();
+    case 'id':
+      return UbuntuBootstrapLocalizationsId();
+    case 'is':
+      return UbuntuBootstrapLocalizationsIs();
+    case 'it':
+      return UbuntuBootstrapLocalizationsIt();
+    case 'ja':
+      return UbuntuBootstrapLocalizationsJa();
+    case 'ka':
+      return UbuntuBootstrapLocalizationsKa();
+    case 'kk':
+      return UbuntuBootstrapLocalizationsKk();
+    case 'km':
+      return UbuntuBootstrapLocalizationsKm();
+    case 'kn':
+      return UbuntuBootstrapLocalizationsKn();
+    case 'ko':
+      return UbuntuBootstrapLocalizationsKo();
+    case 'ku':
+      return UbuntuBootstrapLocalizationsKu();
+    case 'lo':
+      return UbuntuBootstrapLocalizationsLo();
+    case 'lt':
+      return UbuntuBootstrapLocalizationsLt();
+    case 'lv':
+      return UbuntuBootstrapLocalizationsLv();
+    case 'mk':
+      return UbuntuBootstrapLocalizationsMk();
+    case 'ml':
+      return UbuntuBootstrapLocalizationsMl();
+    case 'mr':
+      return UbuntuBootstrapLocalizationsMr();
+    case 'my':
+      return UbuntuBootstrapLocalizationsMy();
+    case 'nb':
+      return UbuntuBootstrapLocalizationsNb();
+    case 'ne':
+      return UbuntuBootstrapLocalizationsNe();
+    case 'nl':
+      return UbuntuBootstrapLocalizationsNl();
+    case 'nn':
+      return UbuntuBootstrapLocalizationsNn();
+    case 'oc':
+      return UbuntuBootstrapLocalizationsOc();
+    case 'pa':
+      return UbuntuBootstrapLocalizationsPa();
+    case 'pl':
+      return UbuntuBootstrapLocalizationsPl();
+    case 'pt':
+      return UbuntuBootstrapLocalizationsPt();
+    case 'ro':
+      return UbuntuBootstrapLocalizationsRo();
+    case 'ru':
+      return UbuntuBootstrapLocalizationsRu();
+    case 'se':
+      return UbuntuBootstrapLocalizationsSe();
+    case 'si':
+      return UbuntuBootstrapLocalizationsSi();
+    case 'sk':
+      return UbuntuBootstrapLocalizationsSk();
+    case 'sl':
+      return UbuntuBootstrapLocalizationsSl();
+    case 'sq':
+      return UbuntuBootstrapLocalizationsSq();
+    case 'sr':
+      return UbuntuBootstrapLocalizationsSr();
+    case 'sv':
+      return UbuntuBootstrapLocalizationsSv();
+    case 'ta':
+      return UbuntuBootstrapLocalizationsTa();
+    case 'te':
+      return UbuntuBootstrapLocalizationsTe();
+    case 'tg':
+      return UbuntuBootstrapLocalizationsTg();
+    case 'th':
+      return UbuntuBootstrapLocalizationsTh();
+    case 'tl':
+      return UbuntuBootstrapLocalizationsTl();
+    case 'tr':
+      return UbuntuBootstrapLocalizationsTr();
+    case 'ug':
+      return UbuntuBootstrapLocalizationsUg();
+    case 'uk':
+      return UbuntuBootstrapLocalizationsUk();
+    case 'vi':
+      return UbuntuBootstrapLocalizationsVi();
+    case 'zh':
+      return UbuntuBootstrapLocalizationsZh();
   }
 
   throw FlutterError(
-    'UbuntuBootstrapLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'UbuntuBootstrapLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }
