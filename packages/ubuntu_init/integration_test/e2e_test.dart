@@ -41,8 +41,6 @@ void main() {
     // TODO: Test accessibility settings
 
     await tester.testKeyboardPage(layout: 'Englisch (Britisch)');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await expectCommand('localectl', [], [
       contains('LANG=de_DE.UTF-8'),
@@ -54,8 +52,6 @@ void main() {
     await tester.testNetworkPage(mode: ConnectMode.none);
 
     await tester.testEulaPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     const identity = Identity(
       realname: 'Test User',
@@ -66,8 +62,6 @@ void main() {
       identity: identity,
       password: 'password',
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await expectCommand('getent', [
       'passwd',
@@ -82,19 +76,13 @@ void main() {
     await expectUser(identity, 'password');
 
     await tester.testUbunutuProOnboardingPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testTimezonePage(timezone: 'Europe/Berlin');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectCommand('timedatectl', [], [
       contains('Time zone: Europe/Berlin'),
     ]);
 
     await tester.testTelemetryPage(enabled: false);
-    await tester.tapDone();
-    await tester.pumpAndSettle();
     await expectLater(windowClosed, completes);
   });
 }
