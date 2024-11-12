@@ -8,6 +8,9 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 
+// TODO: These tests will only pass if run as a group, not individually. This is a known limitation
+// tracked by this issue: https://github.com/canonical/ubuntu-desktop-provision/issues/861
+
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 

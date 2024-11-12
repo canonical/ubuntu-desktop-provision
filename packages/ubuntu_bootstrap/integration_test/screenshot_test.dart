@@ -13,6 +13,9 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+// TODO: These tests will only pass if run as a group, not individually. This is a known limitation
+// tracked by this issue: https://github.com/canonical/ubuntu-desktop-provision/issues/861
+
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   final window = await YaruWindow.ensureInitialized();
