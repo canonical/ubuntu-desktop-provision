@@ -16,17 +16,17 @@ import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 // TODO: move to shared packages
-import '../../ubuntu_provision/test/accessibility/test_accessibility.dart'
+import '../../../packages/ubuntu_provision/test/accessibility/test_accessibility.dart'
     hide MockThemeVariantService;
-import '../../ubuntu_provision/test/identity/test_identity.dart'
+import '../../../packages/ubuntu_provision/test/identity/test_identity.dart'
     hide MockThemeVariantService;
-import '../../ubuntu_provision/test/keyboard/test_keyboard.dart'
+import '../../../packages/ubuntu_provision/test/keyboard/test_keyboard.dart'
     hide MockThemeVariantService;
-import '../../ubuntu_provision/test/locale/test_locale.dart'
+import '../../../packages/ubuntu_provision/test/locale/test_locale.dart'
     hide MockThemeVariantService;
-import '../../ubuntu_provision/test/network/test_network.dart'
+import '../../../packages/ubuntu_provision/test/network/test_network.dart'
     hide MockThemeVariantService;
-import '../../ubuntu_provision/test/timezone/test_timezone.dart'
+import '../../../packages/ubuntu_provision/test/timezone/test_timezone.dart'
     hide MockThemeVariantService;
 import 'telemetry/test_telemetry.dart';
 import 'ubuntu_pro/test_ubuntu_pro.dart';

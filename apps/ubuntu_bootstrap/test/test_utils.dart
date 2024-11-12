@@ -10,9 +10,9 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-import '../../ubuntu_provision/test/test_utils.mocks.dart';
+import '../../../packages/ubuntu_provision/test/test_utils.mocks.dart';
 
-export '../../ubuntu_provision/test/test_utils.mocks.dart';
+export '../../../packages/ubuntu_provision/test/test_utils.mocks.dart';
 export 'test_utils.mocks.dart';
 
 extension WidgetTesterX on WidgetTester {
