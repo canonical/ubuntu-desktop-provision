@@ -63,6 +63,10 @@ void main() {
 
     await tester.testStoragePage(type: StorageType.erase);
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
 
@@ -111,6 +115,10 @@ void main() {
 
     await tester.testStoragePage(type: StorageType.erase);
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testConfirmPage();
 
     await tester.testInstallPage();
@@ -148,8 +156,11 @@ void main() {
 
     await tester.testCodecsAndDriversPage();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.LVM_LUKS,
     );
 
@@ -200,8 +211,11 @@ void main() {
 
     await tester.testCodecsAndDriversPage();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS,
     );
 
@@ -250,8 +264,11 @@ void main() {
 
     await tester.testCodecsAndDriversPage();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
 
@@ -309,8 +326,11 @@ void main() {
 
     await tester.testCodecsAndDriversPage();
 
-    await tester.testStoragePage(
-      type: StorageType.erase,
+    await tester.testStoragePage(type: StorageType.erase);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
@@ -368,6 +388,10 @@ void main() {
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(type: StorageType.manual);
+
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testManualStoragePage(storage: storage);
 
@@ -433,6 +457,10 @@ void main() {
 
     await tester.testStoragePage(type: StorageType.alongside);
 
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
     await tester.testGuidedResizePage(size: 30);
 
     await tester.testIdentityPage(
@@ -495,6 +523,10 @@ void main() {
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(type: StorageType.alongside);
+
+    await tester.testGuidedCapabilityPage();
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testBitLockerPage();
 
