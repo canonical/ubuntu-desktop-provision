@@ -48,7 +48,7 @@ extension UbuntuInitPageTester on WidgetTester {
     }
 
     if (shouldNavigate) {
-      await tapNext();
+      await tapDone();
       await pumpAndSettle();
     }
   }

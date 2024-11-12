@@ -215,11 +215,11 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-      if (shouldNavigate) {
+    if (shouldNavigate) {
       await tapNext();
       await pumpAndSettle();
     }
-}
+  }
 
   Future<void> testIdentityPage({
     Identity? identity,
