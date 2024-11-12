@@ -8,6 +8,9 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 
+// TODO: These tests will only pass if run as a group, not individually. This is a known limitation
+// tracked by this issue: https://github.com/canonical/ubuntu-desktop-provision/issues/861
+
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -25,6 +28,7 @@ Future<void> main() async {
 
       await tester.testWelcomeInitPage(
         screenshot: '$currentThemeName/welcome',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -37,8 +41,7 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testLocalePage(
-        screenshot: '$currentThemeName/locale',
-      );
+          screenshot: '$currentThemeName/locale', shouldNavigate: false);
     },
     variant: themeVariant,
   );
@@ -52,6 +55,7 @@ Future<void> main() async {
 
     await tester.testAccessibilityPage(
       screenshot: '$currentThemeName/accessibility',
+      shouldNavigate: false,
     );
   });
 
@@ -66,6 +70,7 @@ Future<void> main() async {
 
       await tester.testKeyboardPage(
         screenshot: '$currentThemeName/keyboard',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -83,6 +88,7 @@ Future<void> main() async {
       await tester.testNetworkPage(
         mode: ConnectMode.none,
         screenshot: '$currentThemeName/network',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -99,6 +105,7 @@ Future<void> main() async {
 
       await tester.testEulaPage(
         screenshot: '$currentThemeName/eula',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -121,6 +128,7 @@ Future<void> main() async {
         ),
         password: 'password',
         screenshot: '$currentThemeName/identity',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -137,6 +145,7 @@ Future<void> main() async {
 
       await tester.testUbunutuProOnboardingPage(
         screenshot: '$currentThemeName/ubuntu-pro-onboarding',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -205,6 +214,7 @@ Future<void> main() async {
 
       await tester.testTimezonePage(
         screenshot: '$currentThemeName/timezone',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -221,6 +231,7 @@ Future<void> main() async {
 
       await tester.testTelemetryPage(
         screenshot: '$currentThemeName/telemetry',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,

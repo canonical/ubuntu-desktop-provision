@@ -1,11 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
+import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 extension UbuntuInitPageTester on WidgetTester {
   Future<void> testWelcomeInitPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(WelcomePage);
 
@@ -17,11 +19,17 @@ extension UbuntuInitPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    if (shouldNavigate) {
+      await tapDone();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testTelemetryPage({
     bool? enabled,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(TelemetryPage);
 
@@ -37,6 +45,11 @@ extension UbuntuInitPageTester on WidgetTester {
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
+    }
+
+    if (shouldNavigate) {
+      await tapDone();
+      await pumpAndSettle();
     }
   }
 
@@ -57,6 +70,7 @@ extension UbuntuInitPageTester on WidgetTester {
 
   Future<void> testUbunutuProOnboardingPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(UbuntuProOnboardingPage);
 
@@ -74,6 +88,11 @@ extension UbuntuInitPageTester on WidgetTester {
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
+    }
+
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
     }
   }
 

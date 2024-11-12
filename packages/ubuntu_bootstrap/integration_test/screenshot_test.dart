@@ -13,6 +13,9 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+// TODO: These tests will only pass if run as a group, not individually. This is a known limitation
+// tracked by this issue: https://github.com/canonical/ubuntu-desktop-provision/issues/861
+
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   final window = await YaruWindow.ensureInitialized();
@@ -43,9 +46,7 @@ Future<void> main() async {
       await tester.runApp(() => runInstallerApp([], theme: currentTheme));
       await tester.pumpAndSettle();
 
-      await tester.testLocalePage(
-        screenshot: '$currentThemeName/locale',
-      );
+      await tester.testLocalePage(screenshot: '$currentThemeName/locale');
     },
     variant: themeVariant,
   );
@@ -279,8 +280,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.manual);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testManualStoragePage(
         storage: [
@@ -320,8 +319,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.alongside);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testGuidedResizePage(
         size: 30,
@@ -348,8 +345,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.erase);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testGuidedReformatPage(
         screenshot: '$currentThemeName/storage-guided-reformat',
@@ -398,8 +393,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.alongside);
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testBitLockerPage(
         screenshot: '$currentThemeName/bitlocker',
@@ -428,8 +421,6 @@ Future<void> main() async {
         type: StorageType.erase,
         guidedCapability: GuidedCapability.LVM_LUKS,
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testPassphrasePage(
         passphrase: 'password',
@@ -496,6 +487,7 @@ Future<void> main() async {
 
       await tester.testTimezonePage(
         screenshot: '$currentThemeName/timezone',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -521,8 +513,6 @@ Future<void> main() async {
       await tester.testStoragePage(
         type: StorageType.erase,
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testIdentityPage(
         identity: const Identity(
@@ -532,12 +522,8 @@ Future<void> main() async {
         ),
         password: 'password',
       );
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testTimezonePage();
-      await tester.tapNext();
-      await tester.pumpAndSettle();
 
       await tester.testConfirmPage(
         screenshot: '$currentThemeName/confirm',

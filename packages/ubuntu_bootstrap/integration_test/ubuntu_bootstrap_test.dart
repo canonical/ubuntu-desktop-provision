@@ -44,59 +44,34 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage(language: language);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectLocale(locale);
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage(layout: language);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectKeyboard(keyboard);
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.erase);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testTimezonePage(timezone: timezone);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectTimezone(timezone);
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -119,47 +94,26 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.erase);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -179,63 +133,36 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.LVM_LUKS,
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testPassphrasePage(passphrase: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -258,59 +185,34 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.ZFS,
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -333,63 +235,36 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testPassphrasePage(passphrase: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -419,63 +294,38 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(
       type: StorageType.erase,
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRecoveryKeyPage();
     await tester.tapNext();
     await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
-    await tester.tapNext();
-    await tester.pumpAndSettle();
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -502,62 +352,35 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.manual);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testManualStoragePage(storage: storage);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
       password: 'password',
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -593,62 +416,35 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.alongside);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testGuidedResizePage(size: 30);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
       password: 'password',
     );
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testTimezonePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pumpAndSettle();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -683,43 +479,24 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testSourceSelectionPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testCodecsAndDriversPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testStoragePage(type: StorageType.alongside);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testBitLockerPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapRestart();
@@ -731,31 +508,18 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAccessibilityPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testKeyboardPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testRefreshPage();
-    await tester.tapSkip();
-    await tester.pumpAndSettle();
 
     await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testAutoinstallPage();
-    await tester.pumpAndSettle();
   });
 
   testWidgets('semi-automated autoinstall', (tester) async {
@@ -768,15 +532,10 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testNetworkPage();
-    await tester.tapNext();
-    await tester.pumpAndSettle();
 
     await tester.testConfirmPage();
-    await tester.tapConfirm();
-    await tester.pump();
 
     await tester.testInstallPage();
-    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapRestartNow();
