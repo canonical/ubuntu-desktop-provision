@@ -40,7 +40,7 @@ dependencies:
   ubuntu_service: ^0.3.1
   ubuntu_session: ^0.0.4
   ubuntu_utils: ^0.1.0
-  ubuntu_widgets: ^0.5.5
+  ubuntu_widgets: ^0.7.0
   ubuntu_wizard: ^0.1.0
   yaru: 4.1.0
 
