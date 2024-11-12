@@ -1,0 +1,30 @@
+name: Check snap label
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+      - unlabeled
+
+jobs:
+  check-snap-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if the PR is tagged with a snap/* label
+        if: >
+          !contains(github.event.pull_request.labels.*.name, 'snap/ubuntu-desktop-bootstrap') &&
+          !contains(github.event.pull_request.labels.*.name, 'snap/ubuntu-desktop-init') &&
+          !contains(github.event.pull_request.labels.*.name, 'snap/factory-reset-tools') &&
+          !contains(github.event.pull_request.labels.*.name, 'snap/none')
+        run: |
+          echo '::error::No valid snap label found!'
+          echo 'Please tag your PR with one of the following labels:' >> $GITHUB_STEP_SUMMARY
+          echo '' >> $GITHUB_STEP_SUMMARY
+          echo '- `snap/ubuntu-desktop-bootstrap`' >> $GITHUB_STEP_SUMMARY
+          echo '- `snap/ubuntu-desktop-init`' >> $GITHUB_STEP_SUMMARY
+          echo '- `snap/factory-reset-tools`' >> $GITHUB_STEP_SUMMARY
+          echo '- `snap/none`' >> $GITHUB_STEP_SUMMARY
+          exit 1

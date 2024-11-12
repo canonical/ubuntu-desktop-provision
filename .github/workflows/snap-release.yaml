@@ -1,0 +1,94 @@
+name: Release Snaps
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  get-snap-branches:
+    runs-on: ubuntu-latest
+    outputs:
+      branches: ${{ steps.parse-labels.outputs.branches }}
+
+    steps:
+      - name: Parse labels
+        id: parse-labels
+        env:
+          LABELS: ${{ toJson(github.event.pull_request.labels.*.name) }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          case $BASE_REF in
+            main)
+              BASE=main
+              ;;
+            ubuntu/*)
+              BASE=$(echo $BASE_REF | cut -d'/' -f2)
+              ;;
+            *)
+              echo "::error::Unknown base '$BASE_REF'"
+              exit 1
+          esac
+
+          # Appends '/$BASE' to the PR labels that start with 'snap/' and filters out everything else, including 'snap/none'
+          # Example: ['mylabel', 'snap/none', 'snap/ubuntu-desktop-bootstrap'] -> ['snap/ubuntu-desktop-bootstrap/main']
+          BRANCHES=$(echo $LABELS | jq -c "[.[]|select(.!=\"snap/none\")|select(startswith(\"snap/\"))|.+\"/$BASE\"]")
+          echo "Found branches: $BRANCHES" >> $GITHUB_STEP_SUMMARY
+          echo "branches=$BRANCHES" >> $GITHUB_OUTPUT
+
+  release-snaps:
+    runs-on: ubuntu-latest
+    needs: get-snap-branches
+    if: ${{ github.event.pull_request.merged && needs.get-snap-branches.outputs.branches != '[]' }}
+    strategy:
+      matrix:
+        branch: ${{ fromJson(needs.get-snap-branches.outputs.branches) }}
+
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+          fetch-depth: 0
+
+      - name: Bump source-commit in snapcraft.yaml
+        id: bump-deps
+        env:
+          BRANCH: ${{ matrix.branch }}
+          NEW_HASH: ${{ github.sha }}
+        run: |
+          case $BRANCH in
+            snap/ubuntu-desktop-bootstrap/*)
+              PART_NAME='ubuntu-bootstrap'
+              ;;
+            snap/ubuntu-desktop-init/*)
+              PART_NAME='ubuntu-desktop-init'
+              ;;
+            snap/factory-reset-tools/*)
+              PART_NAME='factory-reset-tools'
+              ;;
+            *)
+              echo "::error::Unknown branch '$BRANCH'"
+              exit 1
+          esac
+          echo "part_name=$PART_NAME" >> $GITHUB_OUTPUT
+
+          SNAP_NAME=$(echo $BRANCH | cut -d '/' -f2)
+          echo "snap_name=$SNAP_NAME" >> $GITHUB_OUTPUT
+
+          OLD_HASH=$(yq ".parts[\"$PART_NAME\"][\"source-commit\"]" snap/snapcraft.yaml)
+          echo "old_hash=$OLD_HASH" >> $GITHUB_OUTPUT
+          sed -i "s/$OLD_HASH/$NEW_HASH/" snap/snapcraft.yaml
+          echo "Updating source-commit for part '$PART_NAME' from '$OLD_HASH' to '$NEW_HASH'" >> $GITHUB_STEP_SUMMARY
+          git diff
+
+      - name: Open or update PR on release branch
+        uses: peter-evans/create-pull-request@v7
+        with:
+          sign-commits: true
+          branch: ${{ matrix.branch }}-release
+          commit-message: "chore: bump source-commit"
+          title: "chore: bump source-commit for ${{ steps.bump-deps.outputs.snap_name }}"
+          body: |
+            Updates the `source-commit` for `${{ steps.bump-deps.outputs.part_name }}` in the snapcraft.yaml from ${{ steps.bump-deps.outputs.old_hash }} to ${{ github.sha }} ([diff](${{ github.event.pull_request.base.repo.html_url }}/compare/${{ steps.bump-deps.outputs.old_hash }}...${{ github.sha }}))
+          reviewers: ${{ github.event.sender.login }}
