@@ -181,5 +181,7 @@
   "errorPageTitle": "Kažkas nutiko",
   "@errorPageTitle": {},
   "accessibilityHighContrastLabel": "Didelis kontrastas",
-  "@accessibilityHighContrastLabel": {}
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityPageTitle": "Prieinamumas",
+  "@accessibilityPageTitle": {}
 }

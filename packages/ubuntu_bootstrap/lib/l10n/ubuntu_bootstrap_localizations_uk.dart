@@ -689,11 +689,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Усі необхідні застосунки';
+  String get installationSlidesSoftwareTitle => 'Усі необхідні вам застосунки';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Встановлюйте, керуйте та оновлюйте всі ваші застосунки у програмному забезпеченні Ubuntu, включно з тисячами застосунків зі Snap Store та архіву $DISTRO.';
+    return 'Встановлюйте, оновлюйте усі свої застосунки та керуйте ними в Ubuntu Software, включно з тисячами застосунків зі Snap Store та архіву $DISTRO.';
   }
 
   @override
@@ -701,7 +701,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO - ідеальна робоча станція для розробки застосунків і веброзробки, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск $DISTRO містить найновіші набори інструментів і підтримує всі основні IDE.';
+    return '$DISTRO — ідеальна робоча станція для розробки застосунків та веб, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск $DISTRO містить найновіші набори інструментів та підтримує усі основні IDE.';
   }
 
   @override
@@ -709,7 +709,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Якщо ви аніматор, дизайнер, творець відео або розробник ігор, ви можете легко перенести свої робочі процеси в $DISTRO з підтримкою програмного забезпечення та застосунків з відкритим кодом і галузевих стандартів.';
+    return 'Якщо ви аніматор, дизайнер, відеоредактор або розробник ігор, ви можете з легкістю перенести свої робочі процеси в $DISTRO з підтримкою програмного забезпечення з відкритим кодом та галузевих стандартів.';
   }
 
   @override
@@ -717,7 +717,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово відтворюються на $DISTRO через такі застосунки, як Steam, без додаткових налаштувань.';
+    return '$DISTRO підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово запускаються на $DISTRO через такі застосунки як Steam без додаткових налаштувань.';
   }
 
   @override
@@ -738,7 +738,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return 'До складу $DISTRO для комп\'ютерів входить LibreOffice, набір сумісних з Microsoft Office застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями. Також доступні популярні інструменти для спільної роботи.';
+    return '$DISTRO Desktop містить LibreOffice — набір застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями, сумісними з Microsoft Office. Також доступні популярні інструменти для спільної роботи.';
   }
 
   @override

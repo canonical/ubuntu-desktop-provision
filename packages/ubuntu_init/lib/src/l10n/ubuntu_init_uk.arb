@@ -101,7 +101,7 @@
   "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Поки що пропустити",
   "@ubuntuProOnBoardingSkipForNow": {},
-  "ubuntuProOnBoardingSkipForNowDescription": "Ви завжди можете увімкнути Ubuntu Pro пізніше за допомогою застосунку Програми та оновлення.",
+  "ubuntuProOnBoardingSkipForNowDescription": "Ви зможете завжди увімкнути Ubuntu Pro за допомогою Програм та оновлення.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Увімкнути Ubuntu Pro",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
@@ -109,6 +109,6 @@
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "На цьому комп'ютері ввімкнено Ubuntu Pro",
   "@ubuntuProSucessAttachHeader": {},
-  "ubuntuProSucessAttachDescription": "Ви можете керувати послугами Pro у застосунку \"Програмне забезпечення та оновлення\".",
+  "ubuntuProSucessAttachDescription": "Ви можете керувати Pro-послугами у Програмах та оновленні.",
   "@ubuntuProSucessAttachDescription": {}
 }

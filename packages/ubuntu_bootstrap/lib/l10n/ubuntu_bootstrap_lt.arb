@@ -589,5 +589,23 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "autoinstallTitle": "Įdiegimo tipas",
+  "@autoinstallTitle": {},
+  "autoinstallInteractiveOption": "Interaktyvus įdiegimas",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallAutomatedOption": "Automatizuotas įdiegimas",
+  "@autoinstallAutomatedOption": {},
+  "warningLabel": "Įspėjimas:",
+  "@warningLabel": {},
+  "hideSecurityKey": "Slėpti",
+  "@hideSecurityKey": {},
+  "codecsAndDriversPageDescription": "Įdiegti rekomenduojamą nuosavybinę programinę įrangą?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "Aptikta „NVIDIA“ grafikos plokštė",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Geriausiam „NVIDIA“ grafikos plokštės našumui pasiekti, yra primygtinai rekomenduojama įdiegti papildomas tvarkykles.",
+  "@codecsAndDriversNvidiaBody": {},
+  "choosePassphraseTitle": "Disko slaptafrazė",
+  "@choosePassphraseTitle": {}
 }

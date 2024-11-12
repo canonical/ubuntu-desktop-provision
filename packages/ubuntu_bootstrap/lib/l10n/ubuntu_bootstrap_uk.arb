@@ -455,7 +455,7 @@
       }
     }
   },
-  "installationSlidesSoftwareTitle": "Усі необхідні застосунки",
+  "installationSlidesSoftwareTitle": "Усі необхідні вам застосунки",
   "@installationSlidesSoftwareTitle": {},
   "restartIntoWindowsTitle": "Перезапустити у Windows?",
   "@restartIntoWindowsTitle": {},
@@ -510,7 +510,7 @@
       }
     }
   },
-  "installationSlidesCreativityBody": "Якщо ви аніматор, дизайнер, творець відео або розробник ігор, ви можете легко перенести свої робочі процеси в {DISTRO} з підтримкою програмного забезпечення та застосунків з відкритим кодом і галузевих стандартів.",
+  "installationSlidesCreativityBody": "Якщо ви аніматор, дизайнер, відеоредактор або розробник ігор, ви можете з легкістю перенести свої робочі процеси в {DISTRO} з підтримкою програмного забезпечення з відкритим кодом та галузевих стандартів.",
   "@installationSlidesCreativityBody": {
     "placeholders": {
       "DISTRO": {
@@ -769,7 +769,7 @@
       }
     }
   },
-  "installationSlidesSoftwareBody": "Встановлюйте, керуйте та оновлюйте всі ваші застосунки у програмному забезпеченні Ubuntu, включно з тисячами застосунків зі Snap Store та архіву {DISTRO}.",
+  "installationSlidesSoftwareBody": "Встановлюйте, оновлюйте усі свої застосунки та керуйте ними в Ubuntu Software, включно з тисячами застосунків зі Snap Store та архіву {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "placeholders": {
       "DISTRO": {
@@ -779,7 +779,7 @@
   },
   "installationSlidesDevelopmentTitle": "Розробляйте з найкращим відкритим кодом",
   "@installationSlidesDevelopmentTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} - ідеальна робоча станція для розробки застосунків і веброзробки, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск {DISTRO} містить найновіші набори інструментів і підтримує всі основні IDE.",
+  "installationSlidesDevelopmentBody": "{DISTRO} — ідеальна робоча станція для розробки застосунків та веб, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск {DISTRO} містить найновіші набори інструментів та підтримує усі основні IDE.",
   "@installationSlidesDevelopmentBody": {
     "placeholders": {
       "DISTRO": {
@@ -789,7 +789,7 @@
   },
   "installationSlidesGamingTitle": "Чудово підходить для ігор",
   "@installationSlidesGamingTitle": {},
-  "installationSlidesGamingBody": "{DISTRO} підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово відтворюються на {DISTRO} через такі застосунки, як Steam, без додаткових налаштувань.",
+  "installationSlidesGamingBody": "{DISTRO} підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово запускаються на {DISTRO} через такі застосунки як Steam без додаткових налаштувань.",
   "@installationSlidesGamingBody": {
     "placeholders": {
       "DISTRO": {
@@ -817,7 +817,7 @@
   },
   "installationSlidesProductivityTitle": "Підвищуйте свою продуктивність",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesProductivityBody": "До складу {DISTRO} для комп'ютерів входить LibreOffice, набір сумісних з Microsoft Office застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями. Також доступні популярні інструменти для спільної роботи.",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop містить LibreOffice — набір застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями, сумісними з Microsoft Office. Також доступні популярні інструменти для спільної роботи.",
   "@installationSlidesProductivityBody": {
     "placeholders": {
       "DISTRO": {

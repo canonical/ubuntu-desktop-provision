@@ -127,7 +127,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Поки що пропустити';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Ви завжди можете увімкнути Ubuntu Pro пізніше за допомогою застосунку Програми та оновлення.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Ви зможете завжди увімкнути Ubuntu Pro за допомогою Програм та оновлення.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Увімкнути Ubuntu Pro';
@@ -139,5 +139,5 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get ubuntuProSucessAttachHeader => 'На цьому комп\'ютері ввімкнено Ubuntu Pro';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Ви можете керувати послугами Pro у застосунку \"Програмне забезпечення та оновлення\".';
+  String get ubuntuProSucessAttachDescription => 'Ви можете керувати Pro-послугами у Програмах та оновленні.';
 }
