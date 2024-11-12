@@ -1,6 +1,7 @@
 name: ubuntu_desktop_provision
 
 packages:
+  - apps/**
   - packages/**
 
 command:

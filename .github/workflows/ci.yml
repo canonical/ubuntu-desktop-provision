@@ -54,7 +54,7 @@ jobs:
           # write any setting to force-start dconf.service (via xvfb because dbus-launch needs a display)
           xvfb-run -a gsettings set org.gnome.desktop.interface color-scheme "'default'"
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
-        working-directory: packages/ubuntu_bootstrap
+        working-directory: apps/ubuntu_bootstrap
         env:
           SUBIQUITY_REPLAY_TIMESCALE: 100
 
@@ -102,7 +102,7 @@ jobs:
           sudo chmod go+rw /run/gnome-initial-setup/desktop-provision/init.socket
 
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/e2e_test.dart
-        working-directory: packages/ubuntu_init
+        working-directory: apps/ubuntu_init
 
   init:
     runs-on: ubuntu-22.04
@@ -121,7 +121,7 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install -y clang cmake curl libgtk-3-dev ninja-build pkg-config unzip
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
-        working-directory: packages/ubuntu_init
+        working-directory: apps/ubuntu_init
 
   flutter-mocks:
     runs-on: ubuntu-22.04
@@ -193,7 +193,7 @@ jobs:
       - name: Cache coverage files
         uses: actions/cache@v4
         with:
-          path: packages/*/coverage/lcov.info
+          path: "{apps,packages}/*/coverage/lcov.info"
           key: ${{ github.sha }}-flutter-test-coverage
 
   go-sanity:
@@ -318,7 +318,7 @@ jobs:
       - name: Restore Flutter coverage files from cache
         uses: actions/cache@v4
         with:
-          path: packages/*/coverage/lcov.info
+          path: "{apps,packages}/*/coverage/lcov.info"
           key: ${{ github.sha }}-flutter-test-coverage
 
       - name: Restore Go coverage files from cache
@@ -336,11 +336,19 @@ jobs:
       - name: Convert Flutter coverage files to cobertura XML
         run: |
           mkdir coverage
-          for package in provd_client subiquity_client subiquity_test ubuntu_bootstrap ubuntu_init ubuntu_provision ubuntu_utils ubuntu_wizard; do
+          for package in provd_client subiquity_client subiquity_test ubuntu_provision ubuntu_utils ubuntu_wizard; do
             pushd packages/$package
             cobertura convert
             sed -i 's/branches-covered/decisions-covered/g' coverage/cobertura.xml
             mv coverage/cobertura.xml ../../coverage/$package.xml
+            popd
+          done
+
+          for app in ubuntu_bootstrap ubuntu_init; do
+            pushd apps/$app
+            cobertura convert
+            sed -i 's/branches-covered/decisions-covered/g' coverage/cobertura.xml
+            mv coverage/cobertura.xml ../../coverage/$app.xml
             popd
           done
 
