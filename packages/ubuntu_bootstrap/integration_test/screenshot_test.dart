@@ -484,6 +484,7 @@ Future<void> main() async {
 
       await tester.testTimezonePage(
         screenshot: '$currentThemeName/timezone',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
