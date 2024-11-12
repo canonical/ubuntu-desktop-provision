@@ -91,3 +91,4 @@ jobs:
           title: "chore: bump source-commit for ${{ steps.bump-deps.outputs.snap_name }}"
           body: |
             Updates the `source-commit` for `${{ steps.bump-deps.outputs.part_name }}` in the snapcraft.yaml from ${{ steps.bump-deps.outputs.old_hash }} to ${{ github.sha }} ([diff](${{ github.event.pull_request.base.repo.html_url }}/compare/${{ steps.bump-deps.outputs.old_hash }}...${{ github.sha }}))
+          reviewers: ${{ github.event.sender.login }}
