@@ -25,6 +25,7 @@ Future<void> main() async {
 
       await tester.testWelcomeInitPage(
         screenshot: '$currentThemeName/welcome',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -36,7 +37,8 @@ Future<void> main() async {
       await tester.runApp(() => runInitApp([], theme: currentTheme));
       await tester.pumpAndSettle();
 
-      await tester.testLocalePage(screenshot: '$currentThemeName/locale');
+      await tester.testLocalePage(
+          screenshot: '$currentThemeName/locale', shouldNavigate: false);
     },
     variant: themeVariant,
   );
@@ -50,6 +52,7 @@ Future<void> main() async {
 
     await tester.testAccessibilityPage(
       screenshot: '$currentThemeName/accessibility',
+      shouldNavigate: false,
     );
   });
 
@@ -64,6 +67,7 @@ Future<void> main() async {
 
       await tester.testKeyboardPage(
         screenshot: '$currentThemeName/keyboard',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -81,6 +85,7 @@ Future<void> main() async {
       await tester.testNetworkPage(
         mode: ConnectMode.none,
         screenshot: '$currentThemeName/network',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -97,6 +102,7 @@ Future<void> main() async {
 
       await tester.testEulaPage(
         screenshot: '$currentThemeName/eula',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -119,6 +125,7 @@ Future<void> main() async {
         ),
         password: 'password',
         screenshot: '$currentThemeName/identity',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -135,6 +142,7 @@ Future<void> main() async {
 
       await tester.testUbunutuProOnboardingPage(
         screenshot: '$currentThemeName/ubuntu-pro-onboarding',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -203,6 +211,7 @@ Future<void> main() async {
 
       await tester.testTimezonePage(
         screenshot: '$currentThemeName/timezone',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,
@@ -219,6 +228,7 @@ Future<void> main() async {
 
       await tester.testTelemetryPage(
         screenshot: '$currentThemeName/telemetry',
+        shouldNavigate: false,
       );
     },
     variant: themeVariant,

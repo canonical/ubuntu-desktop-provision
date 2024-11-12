@@ -11,6 +11,7 @@ extension UbuntuProvisionPageTester on WidgetTester {
   Future<void> testLocalePage({
     String? language,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(LocalePage);
 
@@ -34,13 +35,15 @@ extension UbuntuProvisionPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
-
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testAccessibilityPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(AccessibilityPage);
 
@@ -58,14 +61,17 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testKeyboardPage({
     String? layout,
     String? variant,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(KeyboardPage);
 
@@ -109,13 +115,16 @@ extension UbuntuProvisionPageTester on WidgetTester {
       }
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testNetworkPage({
     ConnectMode? mode,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(NetworkPage);
 
@@ -133,12 +142,15 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testEulaPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(EulaPage);
 
@@ -158,14 +170,17 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testTimezonePage({
     String? location,
     String? timezone,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(TimezonePage);
 
@@ -200,14 +215,17 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
-  }
+      if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
+}
 
   Future<void> testIdentityPage({
     Identity? identity,
     String? password,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(IdentityPage);
 
@@ -258,8 +276,10 @@ extension UbuntuProvisionPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testActiveDirectoryPage({

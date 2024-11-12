@@ -7,6 +7,7 @@ import 'package:yaru_test/yaru_test.dart';
 extension UbuntuInitPageTester on WidgetTester {
   Future<void> testWelcomeInitPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(WelcomePage);
 
@@ -19,13 +20,16 @@ extension UbuntuInitPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapDone();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapDone();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testTelemetryPage({
     bool? enabled,
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(TelemetryPage);
 
@@ -43,8 +47,10 @@ extension UbuntuInitPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapDone();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testUbuntuProPage({
@@ -64,6 +70,7 @@ extension UbuntuInitPageTester on WidgetTester {
 
   Future<void> testUbunutuProOnboardingPage({
     String? screenshot,
+    bool shouldNavigate = true,
   }) async {
     await pumpUntilPage(UbuntuProOnboardingPage);
 
@@ -83,8 +90,10 @@ extension UbuntuInitPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapNext();
-    await pumpAndSettle();
+    if (shouldNavigate) {
+      await tapNext();
+      await pumpAndSettle();
+    }
   }
 
   Future<void> testUbuntuProSuccessAttachProPage({
