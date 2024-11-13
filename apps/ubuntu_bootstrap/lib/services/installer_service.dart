@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/installer/installation_step.dart';
+import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/services.dart';
 

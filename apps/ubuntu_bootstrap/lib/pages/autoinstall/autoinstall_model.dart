@@ -10,7 +10,7 @@ import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
-import 'package:ubuntu_bootstrap/installer/installer_model.dart';
+import 'package:ubuntu_bootstrap/app/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';

@@ -5,7 +5,7 @@ import 'dart:async';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/installer/installer_model.dart';
+import 'package:ubuntu_bootstrap/app/installer_model.dart';
 
 import 'test_utils.dart';
 

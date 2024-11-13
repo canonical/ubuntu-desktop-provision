@@ -5,7 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:subiquity_test/subiquity_test.dart';
-import 'package:ubuntu_bootstrap/installer.dart';
+import 'package:ubuntu_bootstrap/app.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
