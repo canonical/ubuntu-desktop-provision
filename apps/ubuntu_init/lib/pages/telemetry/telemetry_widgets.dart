@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
+import 'package:ubuntu_init/pages/telemetry/telemetry_l10n.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:yaru/yaru.dart';
 

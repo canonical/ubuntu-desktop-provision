@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_init/src/telemetry/telemetry_model.dart';
+import 'package:ubuntu_init/pages/telemetry/telemetry_model.dart';
 
 import 'test_telemetry.dart';
 

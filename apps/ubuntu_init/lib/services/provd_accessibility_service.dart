@@ -1,5 +1,5 @@
 import 'package:provd_client/provd_client.dart';
-import 'package:ubuntu_init/src/services/provd_address.dart';
+import 'package:ubuntu_init/services/provd_address.dart';
 import 'package:ubuntu_provision/services.dart';
 
 class ProvdAccessibilityService

@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provd_client/provd_client.dart' as provd;
-import 'package:ubuntu_init/src/services/provd_pro_service.dart';
+import 'package:ubuntu_init/services/provd_pro_service.dart';
 
 import 'provd_pro_service_test.mocks.dart';
 

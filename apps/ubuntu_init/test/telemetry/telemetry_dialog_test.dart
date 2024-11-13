@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ubuntu_init/src/telemetry/telemetry_dialogs.dart';
+import 'package:ubuntu_init/pages/telemetry/telemetry_dialogs.dart';
 
 import 'test_telemetry.dart';
 

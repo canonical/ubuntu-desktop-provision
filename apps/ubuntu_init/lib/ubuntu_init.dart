@@ -1,8 +1,8 @@
 library ubuntu_init;
 
+export 'app.dart';
+export 'app/init_model.dart';
+export 'app/init_wizard.dart';
 export 'l10n.dart';
-export 'src/init_app.dart';
-export 'src/init_model.dart';
-export 'src/init_pages.dart';
-export 'src/init_services.dart';
-export 'src/init_wizard.dart';
+export 'pages.dart';
+export 'services.dart';

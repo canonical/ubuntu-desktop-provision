@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provd_client/provd_client.dart';
-import 'package:ubuntu_init/src/services/provd_accessibility_service.dart';
+import 'package:ubuntu_init/services/provd_accessibility_service.dart';
 
 import 'provd_accessibility_service_test.mocks.dart';
 

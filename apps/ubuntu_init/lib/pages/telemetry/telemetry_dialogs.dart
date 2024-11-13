@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ubuntu_init/src/telemetry/telemetry_l10n.dart';
-import 'package:ubuntu_init/src/telemetry/telemetry_widgets.dart';
+import 'package:ubuntu_init/pages/telemetry/telemetry_l10n.dart';
+import 'package:ubuntu_init/pages/telemetry/telemetry_widgets.dart';
 import 'package:yaru/yaru.dart';
 
 Future<void> showTelemetryDialog(
