@@ -26,8 +26,8 @@ import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart'
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
+import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';

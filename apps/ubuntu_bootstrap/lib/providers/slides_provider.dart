@@ -8,7 +8,7 @@ import 'package:html/parser.dart' show parse;
 import 'package:intl/intl.dart' hide TextDirection;
 import 'package:intl/intl_standalone.dart';
 import 'package:path/path.dart' as path;
-import 'package:ubuntu_bootstrap/slides/slide_html.dart';
+import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 

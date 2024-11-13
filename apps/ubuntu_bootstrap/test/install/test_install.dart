@@ -6,8 +6,8 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
-import 'package:ubuntu_bootstrap/slides/slide_html.dart';
-import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
+import 'package:ubuntu_bootstrap/providers/slide_html.dart';
+import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 
