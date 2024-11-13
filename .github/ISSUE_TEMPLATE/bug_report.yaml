@@ -10,7 +10,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      :note: This repository houses the Flutter code used by the Ubuntu Installer. If your issue involves backend functionality, please report it under the Subiquity project here: [https://bugs.launchpad.net/ubuntu/+source/subiquity](https://bugs.launchpad.net/ubuntu/+source/subiquity).
+      :note: This repository houses the Flutter UI used by the Ubuntu Installer. If your issue involves backend functionality, please report it under the Subiquity project here: [https://bugs.launchpad.net/ubuntu/+source/subiquity](https://bugs.launchpad.net/ubuntu/+source/subiquity).
 body:
 - type: checkboxes
   attributes:

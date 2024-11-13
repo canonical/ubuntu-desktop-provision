@@ -6,7 +6,7 @@
 
 ## Bugs
 
-This repository houses the Flutter code used by the Ubuntu Installer. If you would like to report a UI bug, or make a feature request, please use the templates found [here](https://github.com/canonical/ubuntu-desktop-provision/issues). If your issue involves backend functionality, please report it under the Subiquity project [here](https://bugs.launchpad.net/ubuntu/+source/subiquity).
+This repository houses the Flutter UI used by the Ubuntu Installer. If you would like to report a UI bug, or make a feature request, please use the templates found [here](https://github.com/canonical/ubuntu-desktop-provision/issues). If your issue involves backend functionality, please report it under the Subiquity project [here](https://bugs.launchpad.net/ubuntu/+source/subiquity).
 
 ## 24.04.1 OEM provisioning
 
