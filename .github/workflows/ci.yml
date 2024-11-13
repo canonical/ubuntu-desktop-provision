@@ -193,7 +193,9 @@ jobs:
       - name: Cache coverage files
         uses: actions/cache@v4
         with:
-          path: "{apps,packages}/*/coverage/lcov.info"
+          path: |
+            apps/*/coverage/lcov.info
+            packages/*/coverage/lcov.info
           key: ${{ github.sha }}-flutter-test-coverage
 
   go-sanity:
@@ -318,7 +320,9 @@ jobs:
       - name: Restore Flutter coverage files from cache
         uses: actions/cache@v4
         with:
-          path: "{apps,packages}/*/coverage/lcov.info"
+          path: |
+            apps/*/coverage/lcov.info
+            packages/*/coverage/lcov.info
           key: ${{ github.sha }}-flutter-test-coverage
 
       - name: Restore Go coverage files from cache
