@@ -1,6 +1,6 @@
 library ubuntu_bootstrap;
 
-export 'installer.dart';
+export 'app.dart';
 export 'l10n.dart';
 export 'pages.dart';
 export 'services.dart';

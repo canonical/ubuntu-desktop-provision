@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
-import 'package:ubuntu_bootstrap/installer/installation_step.dart';
+import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';

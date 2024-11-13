@@ -7,7 +7,7 @@ import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
 import 'package:ubuntu_bootstrap/pages/install/done_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
-import 'package:ubuntu_bootstrap/slides/slides_provider.dart';
+import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';

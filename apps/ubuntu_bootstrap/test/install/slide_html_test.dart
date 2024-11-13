@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_bootstrap/slides/slide_html.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
