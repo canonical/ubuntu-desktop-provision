@@ -161,5 +161,7 @@
   "networkNoneOption": "Não pretendo ligar à Internet por agora",
   "@networkNoneOption": {},
   "close": "Fechar",
-  "@close": {}
+  "@close": {},
+  "accessibilityPageTitle": "Acessibilidade",
+  "@accessibilityPageTitle": {}
 }
