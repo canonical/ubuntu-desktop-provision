@@ -8,7 +8,7 @@ import 'dart:ui' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i6;
-import 'package:ubuntu_init/src/welcome/welcome_model.dart' as _i3;
+import 'package:ubuntu_init/pages/welcome/welcome_model.dart' as _i3;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i2;
 
 // ignore_for_file: type=lint

@@ -1,6 +1,6 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_init/src/ubuntu_pro/ubuntu_pro_model.dart';
+import 'package:ubuntu_init/pages/ubuntu_pro/ubuntu_pro_model.dart';
 
 import 'test_ubuntu_pro.mocks.dart';
 export '../test_utils.dart';

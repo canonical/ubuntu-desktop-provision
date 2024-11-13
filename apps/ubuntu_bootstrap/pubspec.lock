@@ -871,7 +871,7 @@ packages:
   provd_client:
     dependency: "direct overridden"
     description:
-      path: "../provd_client"
+      path: "../../packages/provd_client"
       relative: true
     source: path
     version: "0.1.0"
@@ -1051,14 +1051,14 @@ packages:
   subiquity_client:
     dependency: "direct main"
     description:
-      path: "../subiquity_client"
+      path: "../../packages/subiquity_client"
       relative: true
     source: path
     version: "0.1.0"
   subiquity_test:
     dependency: "direct dev"
     description:
-      path: "../subiquity_test"
+      path: "../../packages/subiquity_test"
       relative: true
     source: path
     version: "0.1.0"
@@ -1169,14 +1169,14 @@ packages:
   ubuntu_provision:
     dependency: "direct main"
     description:
-      path: "../ubuntu_provision"
+      path: "../../packages/ubuntu_provision"
       relative: true
     source: path
     version: "0.1.0"
   ubuntu_provision_test:
     dependency: "direct dev"
     description:
-      path: "../ubuntu_provision_test"
+      path: "../../packages/ubuntu_provision_test"
       relative: true
     source: path
     version: "0.1.0"
@@ -1207,7 +1207,7 @@ packages:
   ubuntu_utils:
     dependency: "direct main"
     description:
-      path: "../ubuntu_utils"
+      path: "../../packages/ubuntu_utils"
       relative: true
     source: path
     version: "0.1.0"
@@ -1222,7 +1222,7 @@ packages:
   ubuntu_wizard:
     dependency: "direct main"
     description:
-      path: "../ubuntu_wizard"
+      path: "../../packages/ubuntu_wizard"
       relative: true
     source: path
     version: "0.1.0"

@@ -12,6 +12,10 @@ example_app
    │  └── app_wizard.dart
    ├── app.dart
    ├── example_app.dart
+   ├── l10n
+   │  ├── example_app_en.arb
+   │  └── example_app_localizations_en.dart
+   ├── l10n.dart
    ├── main.dart
    ├── pages
    │  ├── a

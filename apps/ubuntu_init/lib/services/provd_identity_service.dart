@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 import 'package:provd_client/provd_client.dart' as provd;
-import 'package:ubuntu_init/src/services/provd_address.dart';
+import 'package:ubuntu_init/services/provd_address.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 class ProvdIdentityService with ProvdAddress implements IdentityService {

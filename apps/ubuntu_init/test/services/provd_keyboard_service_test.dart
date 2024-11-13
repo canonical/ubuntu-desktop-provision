@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provd_client/provd_client.dart' as provd;
-import 'package:ubuntu_init/src/services/provd_keyboard_service.dart';
+import 'package:ubuntu_init/services/provd_keyboard_service.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 import 'provd_keyboard_service_test.mocks.dart';
