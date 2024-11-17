@@ -48,5 +48,19 @@
     "placeholders": {
       "distro": {}
     }
-  }
+  },
+  "telemetryReportTitle": "වාර්තාවේ විස්තර",
+  "@telemetryReportTitle": {},
+  "privacyLocationTitle": "ස්ථාන සේවාව සබල කරනවා ද?",
+  "@privacyLocationTitle": {},
+  "privacyPolicyLink": "දත්ත රහස්‍යතාව",
+  "@privacyPolicyLink": {},
+  "ubuntuProHeader": "මෙම යන්ත්‍රය අමුණන්න",
+  "@ubuntuProHeader": {},
+  "ubuntuProTokenAttachButton": "අමුණන්න",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProSucessAttachHeader": "මෙම යන්ත්‍රයට දැන් උබුන්ටු ප්‍රෝ සබල කර ඇත",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය.",
+  "@ubuntuProSucessAttachDescription": {}
 }
