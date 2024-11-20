@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Polish (`pl`).
 class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsPl([String locale = 'pl']) : super(locale);

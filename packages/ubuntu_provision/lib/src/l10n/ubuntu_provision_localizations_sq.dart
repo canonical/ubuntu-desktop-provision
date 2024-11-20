@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Albanian (`sq`).
 class UbuntuProvisionLocalizationsSq extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSq([String locale = 'sq']) : super(locale);

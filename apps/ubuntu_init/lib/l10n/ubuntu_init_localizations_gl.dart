@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Galician (`gl`).
 class UbuntuInitLocalizationsGl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsGl([String locale = 'gl']) : super(locale);

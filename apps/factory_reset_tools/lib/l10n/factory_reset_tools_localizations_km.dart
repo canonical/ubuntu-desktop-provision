@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Khmer Central Khmer (`km`).
 class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKm([String locale = 'km']) : super(locale);

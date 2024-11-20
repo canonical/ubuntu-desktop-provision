@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Bengali Bangla (`bn`).
 class FactoryResetToolsLocalizationsBn extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsBn([String locale = 'bn']) : super(locale);

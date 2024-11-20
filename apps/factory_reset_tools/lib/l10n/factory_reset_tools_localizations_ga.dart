@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Irish (`ga`).
 class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsGa([String locale = 'ga']) : super(locale);

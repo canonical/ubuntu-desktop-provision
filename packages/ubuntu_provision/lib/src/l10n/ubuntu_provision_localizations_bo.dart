@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tibetan (`bo`).
 class UbuntuProvisionLocalizationsBo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsBo([String locale = 'bo']) : super(locale);

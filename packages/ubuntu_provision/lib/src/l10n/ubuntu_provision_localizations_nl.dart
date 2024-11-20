@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Dutch Flemish (`nl`).
 class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsNl([String locale = 'nl']) : super(locale);

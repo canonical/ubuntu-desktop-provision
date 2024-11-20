@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Italian (`it`).
 class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsIt([String locale = 'it']) : super(locale);

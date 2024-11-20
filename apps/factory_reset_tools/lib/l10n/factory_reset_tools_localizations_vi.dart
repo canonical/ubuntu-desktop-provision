@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Vietnamese (`vi`).
 class FactoryResetToolsLocalizationsVi extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsVi([String locale = 'vi']) : super(locale);

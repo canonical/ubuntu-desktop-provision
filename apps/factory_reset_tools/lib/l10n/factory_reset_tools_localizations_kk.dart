@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Kazakh (`kk`).
 class FactoryResetToolsLocalizationsKk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKk([String locale = 'kk']) : super(locale);

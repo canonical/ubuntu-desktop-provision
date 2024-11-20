@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for German (`de`).
 class FactoryResetToolsLocalizationsDe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsDe([String locale = 'de']) : super(locale);

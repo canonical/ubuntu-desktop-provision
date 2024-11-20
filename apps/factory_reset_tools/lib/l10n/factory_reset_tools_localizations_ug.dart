@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Uighur Uyghur (`ug`).
 class FactoryResetToolsLocalizationsUg extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsUg([String locale = 'ug']) : super(locale);

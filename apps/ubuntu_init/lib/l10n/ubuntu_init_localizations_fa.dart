@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Persian (`fa`).
 class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFa([String locale = 'fa']) : super(locale);

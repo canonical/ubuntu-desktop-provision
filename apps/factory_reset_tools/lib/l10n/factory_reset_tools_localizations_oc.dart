@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Occitan (`oc`).
 class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsOc([String locale = 'oc']) : super(locale);

@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Irish (`ga`).
 class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsGa([String locale = 'ga']) : super(locale);

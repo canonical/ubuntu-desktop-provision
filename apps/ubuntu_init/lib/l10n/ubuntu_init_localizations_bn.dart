@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Bengali Bangla (`bn`).
 class UbuntuInitLocalizationsBn extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsBn([String locale = 'bn']) : super(locale);

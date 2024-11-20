@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Macedonian (`mk`).
 class FactoryResetToolsLocalizationsMk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsMk([String locale = 'mk']) : super(locale);

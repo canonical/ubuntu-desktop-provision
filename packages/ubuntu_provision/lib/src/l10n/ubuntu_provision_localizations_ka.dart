@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Georgian (`ka`).
 class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKa([String locale = 'ka']) : super(locale);

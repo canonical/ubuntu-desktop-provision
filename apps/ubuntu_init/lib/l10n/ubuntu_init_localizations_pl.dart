@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Polish (`pl`).
 class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsPl([String locale = 'pl']) : super(locale);

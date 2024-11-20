@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Burmese (`my`).
 class UbuntuInitLocalizationsMy extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsMy([String locale = 'my']) : super(locale);

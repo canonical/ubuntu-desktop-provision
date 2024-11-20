@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Hindi (`hi`).
 class UbuntuInitLocalizationsHi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsHi([String locale = 'hi']) : super(locale);

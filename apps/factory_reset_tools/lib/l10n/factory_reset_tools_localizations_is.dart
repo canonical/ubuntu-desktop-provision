@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Icelandic (`is`).
 class FactoryResetToolsLocalizationsIs extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsIs([String locale = 'is']) : super(locale);

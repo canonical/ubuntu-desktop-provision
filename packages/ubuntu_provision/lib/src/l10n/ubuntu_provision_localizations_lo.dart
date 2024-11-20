@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Lao (`lo`).
 class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsLo([String locale = 'lo']) : super(locale);

@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Estonian (`et`).
 class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEt([String locale = 'et']) : super(locale);

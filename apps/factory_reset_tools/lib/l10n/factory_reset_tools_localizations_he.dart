@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Hebrew (`he`).
 class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHe([String locale = 'he']) : super(locale);

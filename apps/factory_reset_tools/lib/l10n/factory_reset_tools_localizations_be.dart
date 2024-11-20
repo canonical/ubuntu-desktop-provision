@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Belarusian (`be`).
 class FactoryResetToolsLocalizationsBe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsBe([String locale = 'be']) : super(locale);

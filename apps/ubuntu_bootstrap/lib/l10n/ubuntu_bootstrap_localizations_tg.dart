@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tajik (`tg`).
 class UbuntuBootstrapLocalizationsTg extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsTg([String locale = 'tg']) : super(locale);

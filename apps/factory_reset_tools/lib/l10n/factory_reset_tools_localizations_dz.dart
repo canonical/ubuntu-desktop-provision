@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Dzongkha (`dz`).
 class FactoryResetToolsLocalizationsDz extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsDz([String locale = 'dz']) : super(locale);

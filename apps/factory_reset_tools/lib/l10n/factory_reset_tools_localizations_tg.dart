@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tajik (`tg`).
 class FactoryResetToolsLocalizationsTg extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTg([String locale = 'tg']) : super(locale);

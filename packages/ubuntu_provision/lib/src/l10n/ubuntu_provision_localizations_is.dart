@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Icelandic (`is`).
 class UbuntuProvisionLocalizationsIs extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsIs([String locale = 'is']) : super(locale);

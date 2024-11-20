@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for English (`en`).
 class FactoryResetToolsLocalizationsEn extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEn([String locale = 'en']) : super(locale);

@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Italian (`it`).
 class FactoryResetToolsLocalizationsIt extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsIt([String locale = 'it']) : super(locale);

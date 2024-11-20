@@ -79,6 +79,8 @@ import 'ubuntu_bootstrap_localizations_uk.dart';
 import 'ubuntu_bootstrap_localizations_vi.dart';
 import 'ubuntu_bootstrap_localizations_zh.dart';
 
+// ignore_for_file: type=lint
+
 /// Callers can lookup localized strings with an instance of UbuntuBootstrapLocalizations
 /// returned by `UbuntuBootstrapLocalizations.of(context)`.
 ///

@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Hindi (`hi`).
 class FactoryResetToolsLocalizationsHi extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHi([String locale = 'hi']) : super(locale);
