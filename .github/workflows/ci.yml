@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   flutter-analyze:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,7 +29,7 @@ jobs:
       - run: melos analyze --fatal-infos
 
   bootstrap:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         target:
@@ -59,7 +59,7 @@ jobs:
           SUBIQUITY_REPLAY_TIMESCALE: 100
 
   flutter-format:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,7 +69,7 @@ jobs:
       - run: melos format:exclude
 
   init-e2e:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -105,7 +105,7 @@ jobs:
         working-directory: apps/ubuntu_init
 
   init:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         target:
@@ -124,7 +124,7 @@ jobs:
         working-directory: apps/ubuntu_init
 
   flutter-mocks:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -146,7 +146,7 @@ jobs:
           delete-branch: true
 
   l10n:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -168,7 +168,7 @@ jobs:
           delete-branch: true
 
   flutter-tests:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -200,7 +200,7 @@ jobs:
 
   go-sanity:
     name: "Go: Code sanity"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Install dependencies
         run: |
@@ -221,7 +221,7 @@ jobs:
 
   go-tests:
     name: "Go: Tests"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Install dependencies
         run: |
@@ -263,7 +263,7 @@ jobs:
   build-and-upload:
     if: github.event_name == 'push'
     needs: go-tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         platform: [x86_64, arm64]
@@ -305,7 +305,7 @@ jobs:
   tics-coverage:
     name: Convert and upload coverage reports for TiCS
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs:
       - flutter-tests
       - go-tests
