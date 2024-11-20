@@ -8,10 +8,10 @@ contact: https://bugs.launchpad.net/ubuntu-desktop-provision
 issues: https://bugs.launchpad.net/ubuntu-desktop-provision
 grade: stable
 confinement: classic
-base: core22
-architectures:
-  - build-on: amd64
-  - build-on: arm64
+base: core24
+platforms:
+  amd64:
+  arm64:
 
 apps:
   subiquity-server:
@@ -89,7 +89,7 @@ parts:
       # See https://discuss.python.org/t/18240
       # As a workaround, we use a fake user install to get the package
       # installed in the expected place.
-      PYTHONUSERBASE="$CRAFT_PART_INSTALL" pip3 install --user --no-dependencies .
+      PYTHONUSERBASE="$CRAFT_PART_INSTALL" pip3 install --user --no-dependencies --break-system-packages .
     build-packages:
       - python3-pip
     organize:
