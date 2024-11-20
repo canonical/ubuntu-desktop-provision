@@ -1,9 +1,9 @@
 name: ubuntu_provision_test
 version: 0.1.0
-publish_to: 'none'
+publish_to: "none"
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.19.2"
 
 dependencies:
@@ -22,11 +22,11 @@ dependencies:
   ubuntu_init: ^0.1.0
   ubuntu_provision: ^0.1.0
   ubuntu_service: ^0.3.1
-  ubuntu_test: ^0.1.0-0
+  ubuntu_test: ^0.2.2
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
-  yaru: 4.1.0
-  yaru_test: ^0.1.6
+  yaru: ^5.3.0
+  yaru_test: ^0.2.0
 
 dev_dependencies:
-  ubuntu_lints: ^0.3.0
+  ubuntu_lints: ^0.4.0
