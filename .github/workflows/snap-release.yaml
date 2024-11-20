@@ -38,6 +38,8 @@ jobs:
 
   release-snaps:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     needs: get-snap-branches
     if: ${{ github.event.pull_request.merged && needs.get-snap-branches.outputs.branches != '[]' }}
     strategy:
