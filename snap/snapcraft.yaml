@@ -122,8 +122,8 @@ parts:
       # there doesn't seem to be any real benefit to listing them separately.
       - iso-codes
       - libpython3-stdlib
-      - libpython3.10-minimal
-      - libpython3.10-stdlib
+      - libpython3.12-minimal
+      - libpython3.12-stdlib
       - libsystemd0
       - lsb-release
       - ntfs-3g
@@ -135,7 +135,9 @@ parts:
       - python3-distro-info
       - python3-jsonschema
       - python3-minimal
+      - python3-more-itertools
       - python3-oauthlib
+      - python3-passlib
       - python3-pkg-resources
       - python3-pyroute2
       - python3-pyrsistent
@@ -146,7 +148,7 @@ parts:
       - python3-urwid
       - python3-yaml
       - python3-yarl
-      - python3.10-minimal
+      - python3.12-minimal
       - ssh-import-id
       - ubuntu-advantage-tools
     prime:
