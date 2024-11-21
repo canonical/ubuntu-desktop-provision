@@ -135,7 +135,9 @@ parts:
       - python3-distro-info
       - python3-jsonschema
       - python3-minimal
+      - python3-more-itertools
       - python3-oauthlib
+      - python3-passlib
       - python3-pkg-resources
       - python3-pyroute2
       - python3-pyrsistent
