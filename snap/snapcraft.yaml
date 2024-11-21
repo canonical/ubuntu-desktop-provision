@@ -53,7 +53,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 9675ade5a0e1b2b86d76c3699bfa6505a7ff966c
+    source-commit: &commit-ref bcd9aa3a6705eddfebd7ce2728363eb7266badc5
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -64,7 +64,7 @@ parts:
 
       dart pub global activate melos
       dart pub global run melos bootstrap
-      cd packages/ubuntu_bootstrap
+      cd apps/ubuntu_bootstrap
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
     override-prime: |
@@ -135,7 +135,9 @@ parts:
       - python3-distro-info
       - python3-jsonschema
       - python3-minimal
+      - python3-more-itertools
       - python3-oauthlib
+      - python3-passlib
       - python3-pkg-resources
       - python3-pyroute2
       - python3-pyrsistent
