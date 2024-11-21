@@ -23,23 +23,19 @@ final eulaPageProvider = FutureProvider<File>((ref) async {
   final localizedEula = File(p.join(directory, 'EULA_$locale.pdf'));
   late final fallbackEula = File(p.join(directory, 'EULA.pdf'));
   final eulaFile = localizedEula.existsSync() ? localizedEula : fallbackEula;
+  assert(eulaFile.existsSync()); // throw error if fallback file doesn't exist
   Logger('eula').debug('EULA file: ${eulaFile.path}');
 
   return eulaFile;
 });
 
-class EulaPage extends ConsumerStatefulWidget with ProvisioningPage {
+final eulaAcceptedProvider = StateProvider<bool>((_) => false);
+
+class EulaPage extends ConsumerWidget with ProvisioningPage {
   const EulaPage({super.key});
 
   @override
-  ConsumerState<EulaPage> createState() => _EulaPageState();
-}
-
-class _EulaPageState extends ConsumerState<EulaPage> {
-  bool _hasAcceptedTerms = false;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final lang = EulaLocalizations.of(context);
     final eulaWidget = ref.watch(eulaPageProvider).when(
           data: (eulaFile) => _EulaPdfViewer(path: eulaFile.path),
@@ -47,15 +43,7 @@ class _EulaPageState extends ConsumerState<EulaPage> {
           error: (error, stackTrace) {
             Logger('eula')
                 .error('Error loading EULA file: $error', error, stackTrace);
-            return _EulaPdfViewer(
-              path: File(
-                p.join(
-                  Platform.environment['DESKTOP_PROVISION_PATH'] ??
-                      defaultFilePath,
-                  'eula/EULA.pdf',
-                ),
-              ).path,
-            );
+            return Placeholder(); // TODO: Implement proper error state in case EULA file can't be loaded
           },
         );
 
@@ -85,10 +73,9 @@ class _EulaPageState extends ConsumerState<EulaPage> {
                         fontWeight: FontWeight.bold,
                       ),
                 ),
-                value: _hasAcceptedTerms,
-                onChanged: (value) => setState(
-                  () => _hasAcceptedTerms = !_hasAcceptedTerms,
-                ),
+                value: ref.watch(eulaAcceptedProvider),
+                onChanged: (value) =>
+                    ref.read(eulaAcceptedProvider.notifier).state = value!,
               ),
             ),
           ],
@@ -98,7 +85,7 @@ class _EulaPageState extends ConsumerState<EulaPage> {
         leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
-            enabled: _hasAcceptedTerms,
+            enabled: ref.watch(eulaAcceptedProvider),
           ),
         ],
       ),
