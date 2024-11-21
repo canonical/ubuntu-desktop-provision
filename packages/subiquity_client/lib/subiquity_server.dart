@@ -1,4 +1,4 @@
-library subiquity_server;
+library;
 
 export 'src/endpoint.dart';
 export 'src/server.dart';

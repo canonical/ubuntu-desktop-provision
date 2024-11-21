@@ -1,4 +1,4 @@
-library ubuntu_bootstrap;
+library;
 
 export 'app.dart';
 export 'l10n.dart';

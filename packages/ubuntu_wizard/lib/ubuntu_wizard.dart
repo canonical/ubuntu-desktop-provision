@@ -1,4 +1,4 @@
-library ubuntu_wizard;
+library;
 
 export 'package:wizard_router/wizard_router.dart';
 

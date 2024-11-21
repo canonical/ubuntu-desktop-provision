@@ -22,7 +22,7 @@ extension WizardFlavorX on UbuntuFlavor {
 extension WizardThemeDataX on ThemeData {
   ThemeData customize() {
     final errorColor = YaruColors.from(brightness).error;
-    final mouseCursor = MaterialStateProperty.all(SystemMouseCursors.basic);
+    final mouseCursor = WidgetStateProperty.all(SystemMouseCursors.basic);
     return copyWith(
       colorScheme: colorScheme.copyWith(error: errorColor),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -37,15 +37,15 @@ extension WizardThemeDataX on ThemeData {
         style: iconButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
       ),
       inputDecorationTheme: inputDecorationTheme.copyWith(
-        floatingLabelStyle: MaterialStateTextStyle.resolveWith((states) {
+        floatingLabelStyle: WidgetStateTextStyle.resolveWith((states) {
           final textStyle = textTheme.bodyLarge ?? const TextStyle();
-          if (states.contains(MaterialState.error)) {
+          if (states.contains(WidgetState.error)) {
             return textStyle.copyWith(color: errorColor);
           }
-          if (states.contains(MaterialState.focused)) {
+          if (states.contains(WidgetState.focused)) {
             return textStyle.copyWith(color: colorScheme.onSurface);
           }
-          if (states.contains(MaterialState.disabled)) {
+          if (states.contains(WidgetState.disabled)) {
             return textStyle.copyWith(
               color: colorScheme.onSurface.withOpacity(0.38),
             );
@@ -90,7 +90,7 @@ extension WizardThemeDataX on ThemeData {
         YaruRadioThemeData(mouseCursor: mouseCursor),
         YaruSwitchThemeData(mouseCursor: mouseCursor),
         YaruTitleBarThemeData(
-          backgroundColor: MaterialStatePropertyAll(colorScheme.background),
+          backgroundColor: WidgetStatePropertyAll(colorScheme.surface),
         ),
         YaruToggleButtonThemeData(mouseCursor: mouseCursor),
       ],

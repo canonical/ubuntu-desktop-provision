@@ -1,4 +1,4 @@
-library ubuntu_provision_test;
+library;
 
 export 'src/bootstrap_tester.dart';
 export 'src/expect.dart';

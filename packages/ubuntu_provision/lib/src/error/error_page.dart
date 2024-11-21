@@ -83,10 +83,10 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                         data: lang.errorPageUbuntuBug(snapName),
                         style: {
                           'body': Style(margin: Margins.zero),
-                          'pre': Style(fontFamily: 'Ubuntu Mono')
+                          'pre': Style(fontFamily: 'Ubuntu Mono'),
                         },
                       ),
-                    ]
+                    ],
                   ],
                 ),
               ),

@@ -95,7 +95,8 @@ class StorageModel extends SafeChangeNotifier {
   /// Whether LVM guided storage targets are available.
   bool get hasLvm => _getTargets<GuidedStorageTargetReformat>().any(
         (t) => t.allowed.any(
-            (c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS),
+          (c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS,
+        ),
       );
 
   /// Whether ZFS guided storage targets are available.

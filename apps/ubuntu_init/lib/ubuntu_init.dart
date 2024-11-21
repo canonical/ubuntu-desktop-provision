@@ -1,4 +1,4 @@
-library ubuntu_init;
+library;
 
 export 'app.dart';
 export 'app/init_model.dart';

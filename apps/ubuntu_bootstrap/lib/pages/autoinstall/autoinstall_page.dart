@@ -113,7 +113,7 @@ class _ValidateButton extends StatelessWidget {
 
     return ElevatedButton(
       style: theme.elevatedButtonTheme.style?.copyWith(
-        minimumSize: MaterialStateProperty.all(kPushButtonSize),
+        minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
       onPressed:
           !model.state.hasError && model.url.isNotEmpty ? model.apply : null,

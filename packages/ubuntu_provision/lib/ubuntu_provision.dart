@@ -1,4 +1,4 @@
-library ubuntu_provision;
+library;
 
 export 'accessibility.dart';
 export 'active_directory.dart';

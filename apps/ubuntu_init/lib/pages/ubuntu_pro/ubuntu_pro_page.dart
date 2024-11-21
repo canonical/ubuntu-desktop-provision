@@ -43,7 +43,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                   onPressed:
                       model.token.isEmpty ? null : model.attachManuallyToken,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(
                       Theme.of(context)
                           .colorScheme
                           .success
