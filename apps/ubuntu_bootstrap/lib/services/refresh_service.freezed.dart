@@ -90,6 +90,9 @@ class _$RefreshStateCopyWithImpl<$Res, $Val extends RefreshState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$RefreshCheckingImplCopyWithImpl<$Res>
   __$$RefreshCheckingImplCopyWithImpl(
       _$RefreshCheckingImpl _value, $Res Function(_$RefreshCheckingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -232,6 +238,8 @@ class __$$RefreshStatusImplCopyWithImpl<$Res>
       _$RefreshStatusImpl _value, $Res Function(_$RefreshStatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,6 +253,8 @@ class __$$RefreshStatusImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RefreshStatusCopyWith<$Res> get status {
@@ -278,7 +288,9 @@ class _$RefreshStatusImpl extends _RefreshStatus {
   @override
   int get hashCode => Object.hash(runtimeType, status);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
@@ -371,7 +383,10 @@ abstract class _RefreshStatus extends RefreshState {
   const _RefreshStatus._() : super._();
 
   RefreshStatus get status;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -395,6 +410,8 @@ class __$$RefreshProgressImplCopyWithImpl<$Res>
       _$RefreshProgressImpl _value, $Res Function(_$RefreshProgressImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -408,6 +425,8 @@ class __$$RefreshProgressImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangeCopyWith<$Res> get change {
@@ -441,7 +460,9 @@ class _$RefreshProgressImpl extends _RefreshProgress {
   @override
   int get hashCode => Object.hash(runtimeType, change);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
@@ -534,7 +555,10 @@ abstract class _RefreshProgress extends RefreshState {
   const _RefreshProgress._() : super._();
 
   Change get change;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -553,6 +577,9 @@ class __$$RefreshDoneImplCopyWithImpl<$Res>
   __$$RefreshDoneImplCopyWithImpl(
       _$RefreshDoneImpl _value, $Res Function(_$RefreshDoneImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -677,6 +704,8 @@ class __$$RefreshErrorImplCopyWithImpl<$Res>
       _$RefreshErrorImpl _value, $Res Function(_$RefreshErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -713,7 +742,9 @@ class _$RefreshErrorImpl extends _RefreshError {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
@@ -805,7 +836,10 @@ abstract class _RefreshError extends RefreshState {
   const _RefreshError._() : super._();
 
   Object? get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
