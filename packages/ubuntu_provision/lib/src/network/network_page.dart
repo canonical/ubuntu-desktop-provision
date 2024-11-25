@@ -41,22 +41,22 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          WizardButton(
-            label: UbuntuLocalizations.of(context).connectLabel,
-            enabled: !model.isConnecting,
-            visible: model.isEnabled && model.canConnect,
-            onActivated: model.connect,
-          ),
-          NextWizardButton(
-            enabled:
-                model.isEnabled && !model.isConnecting && model.isConnected,
-            visible: !model.isEnabled || !model.canConnect,
-            // suspend network activity when proceeding on the next page
-            onNext: model.cleanup,
-            // resume network activity if/when returning back to this page
-            onReturn: model.init,
-            focusNode: ref.watch(_nextFocusNodeProvider),
-          ),
+          if (model.isEnabled && model.canConnect)
+            WizardButton(
+              label: UbuntuLocalizations.of(context).connectLabel,
+              enabled: !model.isConnecting,
+              onActivated: model.connect,
+            ),
+          if (!model.isEnabled || !model.canConnect)
+            NextWizardButton(
+              enabled:
+                  model.isEnabled && !model.isConnecting && model.isConnected,
+              // suspend network activity when proceeding on the next page
+              onNext: model.cleanup,
+              // resume network activity if/when returning back to this page
+              onReturn: model.init,
+              focusNode: ref.watch(_nextFocusNodeProvider),
+            ),
         ],
       ),
       children: <Widget>[
