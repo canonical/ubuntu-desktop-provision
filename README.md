@@ -164,6 +164,17 @@ snapcraft.yaml on the corresponding branch (see table below) needs to be updated
 | `ubuntu-desktop-init` | `ubuntu_init` | `snap/ubuntu-desktop-init/*` |
 | `factory-reset-tools` | `factory_reset_tools` | `snap/factory-reset-tools/*` |
 
+In order to simplify the release process a workflow to automatically bump `source-commit`s and raise a corresponding PR is available.
+PRs targeting the `main` or `ubuntu/*` branches need to be tagged with one of the following labels:
+- `snap/none`
+- `snap/ubuntu-desktop-bootstrap`
+- `snap/ubuntu-desktop-init`
+- `snap/factory-reset-tools`
+
+After successfully merging the PR the workflow will create or update a release PR targeting the corresponding snap branch (e.g. `snap/ubuntu-desktop-bootstrap/main` for a PR targeting `main` tagged with `snap/ubuntu-desktop-bootstrap`, or `snap/factory-reset-tools/24.04` for a PR targeting `ubuntu-24.04` tagged with `snap/factory-reset-tools`).
+Note: currently this works only for PRs raised from a branch within this repository (not from public forks of the repository).
+
+
 ### Frontend
 
 The UI is written in [Flutter](https://flutter.dev/) and consists of multiple Dart/Flutter packages contained in `packages/`. The most important ones are:

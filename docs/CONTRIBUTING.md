@@ -91,25 +91,16 @@ melos bootstrap
 
 ### Building and running the binaries
 
-Both `ubuntu-desktop-bootstrap` and `ubuntu-desktop-init` are built as snaps using `source: .` for their flutter-based UI. This works well in a pristine pipeline because there are no artefacts, but when running locally, host artefacts may taint the snapcraft builder. Let's walk through how to build locally and address these artefact:
-
-```bash
-git clone git@github.com:canonical/ubuntu-desktop-provision.git
-cd ubuntu-desktop-provision
-./ci/snap-build-setup.sh <bootstrap|init>
+In order to build a snap check out the respective branch and run
+```
 snapcraft
 ```
 
-If you then make local edits, subsequent runs of `snapcraft` may fail. Individual situations may differ, but generally you can clear host artefacts and rebuild with:
+Please refer to the top-level README for more details about the snap branches.
 
-```bash
-flutter clean
-snapcraft clean
-rm -rf packages/subiquity_client/subiquity/.subiquity
-rm -rf snap
-./ci/snap-build-setup.sh <bootstrap|init>
-snapcraft
-```
+Note: snaps built from the `snap/ubuntu-desktop-bootstrap/24.04` branch currently need to be built with snapcraft 7.x to be able to run in the live system.
+
+If you want to build a snap containing changes you made to the code base, you first need to update the `source-commit` in the `snapcraft.yaml` to point to the commit with your changes.
 
 Finally, install the local build with `sudo snap install <snap-artefact-name> --devmode`.
 
