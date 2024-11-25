@@ -91,10 +91,12 @@ melos bootstrap
 
 ### Building and running the binaries
 
-In order to build a snap check out the respective branch (see [README](../README.md#branches-and-snap-packages)) and run
+In order to build a snap check out the respective branch and run
 ```
 snapcraft
 ```
+
+Please refer to the top-level README for more details about the snap branches.
 
 Note: snaps built from the `snap/ubuntu-desktop-bootstrap/24.04` branch currently need to be built with snapcraft 7.x to be able to run in the live system.
 
