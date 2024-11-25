@@ -100,7 +100,7 @@ Please refer to the top-level README for more details about the snap branches.
 
 Note: snaps built from the `snap/ubuntu-desktop-bootstrap/24.04` branch currently need to be built with snapcraft 7.x to be able to run in the live system.
 
-If you want to build a snap containing changes you made to the codebase, you first need to update the `source-commit` in the `snapcraft.yaml` to point to the commit with your changes.
+If you want to build a snap containing changes you made to the code base, you first need to update the `source-commit` in the `snapcraft.yaml` to point to the commit with your changes.
 
 Finally, install the local build with `sudo snap install <snap-artefact-name> --devmode`.
 
