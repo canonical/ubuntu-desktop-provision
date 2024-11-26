@@ -142,7 +142,7 @@ class WifiDevice extends NetworkDevice {
   }
 
   NetworkManagerDeviceWireless _wireless;
-  final _accessPoints = <AccessPoint>[];
+  var _accessPoints = <AccessPoint>[];
   final _allAccessPoints = <String, AccessPoint>{};
 
   @override
@@ -218,7 +218,7 @@ class WifiDevice extends NetworkDevice {
   }
 
   void _updateAccessPoints() {
-    _accessPoints.clear();
+    final updatedAps = <AccessPoint>[];
     final previousSelected = _selectedAccessPoint;
     _selectedAccessPoint = null;
     for (final ap in _getAccessPoints()) {
@@ -230,11 +230,12 @@ class WifiDevice extends NetworkDevice {
       } else {
         model._updateAccessPoint(ap);
       }
-      _accessPoints.add(model);
+      updatedAps.add(model);
       if (model == previousSelected) {
         _selectedAccessPoint = model;
       }
     }
+    _accessPoints = updatedAps;
     _selectedAccessPoint ??= activeAccessPoint;
     log.debug(() => 'Update access points: $_accessPoints ($this)');
     notifyListeners();
