@@ -211,7 +211,7 @@ parts:
       # Needed for the dri drivers see https://github.com/canonical/ubuntu-desktop-installer/issues/2391
       - libelf1
       - libgl1
-      - libglib2.0-0
+      - libglib2.0-0t64
       - libglib2.0-dev
       - libgirepository-1.0-1
       - libgtk-3-0
