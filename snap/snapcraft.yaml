@@ -61,15 +61,13 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/bin
       git submodule update --init --recursive
       cp -r packages/subiquity_client/subiquity $CRAFT_PART_INSTALL/bin/
+      cp packages/subiquity_client/subiquity/scripts/management-script $CRAFT_PART_INSTALL/
 
       dart pub global activate melos
       dart pub global run melos bootstrap
       cd apps/ubuntu_bootstrap
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
-    override-prime: |
-      snapcraftctl prime
-      cp $CRAFT_PART_INSTALL/bin/subiquity/scripts/management-script $CRAFT_PRIME/
 
   curtin:
     plugin: nil
