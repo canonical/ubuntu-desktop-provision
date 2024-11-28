@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
+import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -9,7 +11,7 @@ class TokenTextField extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = UbuntuProLocalizations.of(context);
+    final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(ubuntuProModelProvider);
 
     return ValidatedFormField(

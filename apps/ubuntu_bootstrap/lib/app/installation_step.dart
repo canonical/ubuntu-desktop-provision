@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
@@ -34,6 +35,7 @@ enum InstallationStep with RouteName {
     required: true,
   ),
   locale(LocalePage.new),
+  landscape(UbuntuProPage.new, required: true),
   accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false, required: true),
   keyboard(KeyboardPage.new),

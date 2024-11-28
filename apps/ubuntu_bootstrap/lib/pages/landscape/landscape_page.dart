@@ -2,7 +2,10 @@ import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
+import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
+import 'package:ubuntu_bootstrap/pages/landscape/landscape_widgets.dart';
+import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -26,7 +29,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = UbuntuProLocalizations.of(context);
+    final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(ubuntuProModelProvider);
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,

@@ -87,7 +87,7 @@ packages:
     source: hosted
     version: "2.2.8"
   barcode_widget:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: barcode_widget
       sha256: "6f2c5b08659b1a5f4d88d183e6007133ea2f96e50e7b8bb628f03266c3931427"
