@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ubuntu_init/ubuntu_init.dart';
+import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
+import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -16,7 +17,7 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = UbuntuProLocalizations.of(context);
+    final l10n = UbuntuBootstrapLocalizations.of(context);
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
 
