@@ -18,13 +18,15 @@ class UbuntuProModel extends ChangeNotifier {
   final ProService _proService;
 
   String get userCode => _userCode;
-  String _userCode = '';
+  // FIXME: return this default to ''
+  String _userCode = 'ABCD EFGH';
 
   bool get isAttachedThroughMagicAttach => _isAttachedThroughMagicAttach;
   bool _isAttachedThroughMagicAttach = false;
 
   bool get isAttached => _isAttached;
-  bool _isAttached = false;
+  // FIXME: return this default to false
+  bool _isAttached = true;
 
   bool get isAttachedThroughManualAttach => _isAttachedThroughManualAttach;
   bool _isAttachedThroughManualAttach = false;
@@ -57,11 +59,7 @@ class UbuntuProModel extends ChangeNotifier {
 
   // StreamSubscription<ProResponse>? _subscription;
 
-  Future<void> magicAttach() async {
-    print('magicAttach() called');
-  }
+  Future<void> magicAttach() async {}
 
-  Future<void> attachManuallyToken() async {
-    print('attachManuallyToken() called');
-  }
+  Future<void> attachManuallyToken() async {}
 }
