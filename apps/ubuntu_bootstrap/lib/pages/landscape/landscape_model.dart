@@ -14,25 +14,24 @@ final ubuntuProModelProvider = ChangeNotifierProvider(
 class UbuntuProModel extends ChangeNotifier {
   UbuntuProModel({
     required ProService proService,
-  }) : _proService = proService;
-  final ProService _proService;
+  });
 
   String get userCode => _userCode;
   // FIXME: return this default to ''
-  String _userCode = 'ABCD EFGH';
+  final String _userCode = 'ABCD EFGH';
 
   bool get isAttachedThroughMagicAttach => _isAttachedThroughMagicAttach;
-  bool _isAttachedThroughMagicAttach = false;
+  final bool _isAttachedThroughMagicAttach = false;
 
   bool get isAttached => _isAttached;
   // FIXME: return this default to false
   bool _isAttached = true;
 
   bool get isAttachedThroughManualAttach => _isAttachedThroughManualAttach;
-  bool _isAttachedThroughManualAttach = false;
+  final bool _isAttachedThroughManualAttach = false;
 
   bool get hasNoErrorWhenAttachingManually => _hasNoErrorWhenAttachingManually;
-  bool _hasNoErrorWhenAttachingManually = true;
+  final bool _hasNoErrorWhenAttachingManually = true;
 
   bool get skipPro => _skipPro;
   bool _skipPro = false;
