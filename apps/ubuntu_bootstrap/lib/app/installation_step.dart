@@ -6,6 +6,19 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+/// Represents each step or page in the installer workflow.
+///
+/// Each step corresponds to an enum value, which defines the page's behavior
+/// and its role in the installer. The order of the enums determines the sequence
+/// in which the steps appear in the installer.
+///
+/// New pages must be added as additional enums to integrate into the workflow.
+///
+/// Properties:
+/// - `discreteStep`: Indicates whether the step is displayed as a discrete wizard step.
+/// - `wizardStep`: Specifies if the step is part of the wizard flow.
+/// - `required`: Marks the step as mandatory in the workflow.
+/// - `allowedToHide`: Determines if the step can be conditionally hidden.
 enum InstallationStep with RouteName {
   loading(
     LoadingPage.new,

@@ -26,6 +26,18 @@ import 'package:yaru/yaru.dart';
 
 export 'app/installer_wizard.dart';
 
+/// Runs the installer.
+///
+/// This function is the main entrypoint to the installer. It parses command-line arguments,
+/// forwards arguments to subiquity, initializes the backend services used by the different
+/// installation steps and starts the UI.
+///
+/// Command-Line Options:
+/// - `--dry-run`: Runs the Subiquity server in dry-run mode.
+/// - `--dry-run-config`: Path to the configuration file for dry-run mode.
+/// - `--machine-config`: Path to the machine configuration file for dry-run mode.
+/// - `--source-catalog`: Path to the source catalog file for dry-run mode.
+/// - `--try-or-install`: Displays the "Try or Install" page on startup.
 Future<void> runInstallerApp(
   List<String> args, {
   ThemeData? theme,
@@ -79,7 +91,8 @@ Future<void> runInstallerApp(
               .then((dir) => Directory(dir).existsSync() ? dir : null),
         );
 
-  // conditional registration if not already registered by flavors or tests
+  // Conditional registration if not already registered by flavors or tests. All services must be
+  // registered here or their respective providers will fail to find them when building models.
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<ActiveDirectoryService>(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
