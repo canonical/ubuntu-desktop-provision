@@ -55,6 +55,26 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     await pumpAndSettle();
   }
 
+  Future<void> testLandscapePage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(UbuntuProPage);
+
+    final context = element(find.byType(UbuntuProPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
+
+    await pumpAndSettle();
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+
+    await tapNext();
+    await pumpAndSettle();
+  }
+
   Future<void> testRstPage({
     String? screenshot,
   }) async {
