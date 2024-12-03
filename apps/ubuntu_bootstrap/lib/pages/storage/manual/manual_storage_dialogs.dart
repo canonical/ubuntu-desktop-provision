@@ -10,7 +10,6 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 const _inputFieldWidth = 400.0;
-const _validMountPointPattern = r'^(/\S*|)$';
 
 /// Shows a dialog for creating a new partition for the given [disk].
 Future<void> showCreatePartitionDialog(
@@ -101,12 +100,18 @@ Future<void> showCreatePartitionDialog(
                 child: Text(UbuntuLocalizations.of(context).cancelLabel),
               ),
               const SizedBox(width: kWizardBarSpacing),
-              ValueListenableBuilder(
-                valueListenable: partitionMount,
-                builder: (context, value, child) {
+              ListenableBuilder(
+                listenable: Listenable.merge([
+                  partitionMount,
+                  partitionFormat,
+                ]),
+                builder: (context, child) {
                   return PushButton.filled(
-                    onPressed: RegExp(_validMountPointPattern)
-                            .hasMatch(partitionMount.value ?? '')
+                    onPressed: _validateMountedPartition(
+                              partitionMount.value ?? '',
+                              partitionFormat.value,
+                            ) ==
+                            MountedPartitionValidation.success
                         ? () {
                             model.addPartition(
                               disk,
@@ -258,12 +263,18 @@ Future<void> showEditPartitionDialog(
                 child: Text(UbuntuLocalizations.of(context).cancelLabel),
               ),
               const SizedBox(width: kWizardBarSpacing),
-              ValueListenableBuilder(
-                valueListenable: partitionMount,
-                builder: (context, value, child) {
+              ListenableBuilder(
+                listenable: Listenable.merge([
+                  partitionMount,
+                  partitionFormat,
+                ]),
+                builder: (context, child) {
                   return PushButton.filled(
-                    onPressed: RegExp(_validMountPointPattern)
-                            .hasMatch(partitionMount.value ?? '')
+                    onPressed: _validateMountedPartition(
+                              partitionMount.value ?? '',
+                              partitionFormat.value,
+                            ) ==
+                            MountedPartitionValidation.success
                         ? () {
                             model.editPartition(
                               disk,
@@ -335,17 +346,9 @@ class _PartitionMountField extends StatelessWidget {
                 onChanged: (value) => partitionMount.value = value,
                 onFieldSubmitted: (_) => onFieldSubmitted(),
                 autovalidateMode: AutovalidateMode.always,
-                validator: (value) {
-                  if (value?.isEmpty ?? true) {
-                    return null;
-                  } else if (!value!.startsWith('/')) {
-                    return lang.allocateDiskSpaceInvalidMountPointSlash;
-                  } else if (value.contains(' ')) {
-                    return lang.allocateDiskSpaceInvalidMountPointSpace;
-                  } else {
-                    return null;
-                  }
-                },
+                validator: (value) =>
+                    _validateMountedPartition(value!, partitionFormat.value)
+                        .localize(lang),
               );
             },
           );
@@ -353,4 +356,39 @@ class _PartitionMountField extends StatelessWidget {
       ),
     );
   }
+}
+
+MountedPartitionValidation _validateMountedPartition(
+  String mountpoint,
+  PartitionFormat? format,
+) {
+  if (mountpoint.isNotEmpty && !mountpoint.startsWith('/')) {
+    return MountedPartitionValidation.noLeadingSlash;
+  } else if (mountpoint.contains(' ')) {
+    return MountedPartitionValidation.containsSpace;
+  } else if (mountpoint == DefaultMountPoint.boot.path &&
+      format == PartitionFormat.vfat) {
+    return MountedPartitionValidation.bootIsVfat;
+  }
+  return MountedPartitionValidation.success;
+}
+
+enum MountedPartitionValidation {
+  success,
+  noLeadingSlash,
+  containsSpace,
+  bootIsVfat;
+
+  String? localize(UbuntuBootstrapLocalizations l10n) => switch (this) {
+        MountedPartitionValidation.success => null,
+        MountedPartitionValidation.noLeadingSlash =>
+          l10n.allocateDiskSpaceInvalidMountPointSlash,
+        MountedPartitionValidation.containsSpace =>
+          l10n.allocateDiskSpaceInvalidMountPointSpace,
+        MountedPartitionValidation.bootIsVfat =>
+          l10n.allocateDiskSpaceInvalidMountPointFormat(
+            PartitionFormat.vfat.displayName!,
+            DefaultMountPoint.boot.path,
+          ),
+      };
 }
