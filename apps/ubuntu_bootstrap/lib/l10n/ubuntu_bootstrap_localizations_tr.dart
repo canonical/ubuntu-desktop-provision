@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Bağlama noktaları boşluk içeremez';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Cihaz';
 
   @override

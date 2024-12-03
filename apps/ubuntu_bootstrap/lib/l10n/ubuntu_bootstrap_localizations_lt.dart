@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Prijungimo vietos negali turėti tarpų';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Įrenginys';
 
   @override

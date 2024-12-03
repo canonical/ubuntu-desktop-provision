@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Пункты падключэння не могуць змяшчаць прабелы';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Прылада';
 
   @override

@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Монтиране тачке не могу садржати размаке';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Уређај';
 
   @override
