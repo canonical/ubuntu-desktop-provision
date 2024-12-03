@@ -17,18 +17,18 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     return HorizontalPage(
-      windowTitle: l10n.ubuntuProPageTitle,
+      windowTitle: l10n.landscapePageTitle,
       title: '',
       imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            l10n.ubuntuProSubscriptionDescription,
+            l10n.landscapeSubscriptionDescription,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: kWizardSpacing / 2),
           Html(
-            data: l10n.ubuntuProSubscriptionFreeForPersonalUse(
+            data: l10n.landscapeSubscriptionFreeForPersonalUse(
               kUbuntuProUrl.replaceFirst('https://', ''),
             ),
             style: {
@@ -43,14 +43,14 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
       ),
       children: [
         ProOnboardingSelectionTile(
-          label: l10n.ubuntuProOnBoardingSkipForNow,
-          subtitle: l10n.ubuntuProOnBoardingSkipForNowDescription,
+          label: l10n.landscapeOnBoardingSkipForNow,
+          subtitle: l10n.landscapeOnBoardingSkipForNowDescription,
           skipPro: true,
         ),
         const SizedBox(height: kWizardSpacing / 2),
         ProOnboardingSelectionTile(
-          label: l10n.ubuntuProOnBoardingEnableUbuntuPro,
-          subtitle: l10n.ubuntuProOnBoardingEnableUbuntuProDescription,
+          label: l10n.landscapeOnBoardingEnableUbuntuPro,
+          subtitle: l10n.landscapeOnBoardingEnableUbuntuProDescription,
           skipPro: false,
         ),
       ],

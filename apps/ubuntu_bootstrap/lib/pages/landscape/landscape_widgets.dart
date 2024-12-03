@@ -15,7 +15,7 @@ class TokenTextField extends ConsumerWidget {
     final model = ref.watch(landscapeModelProvider);
 
     return ValidatedFormField(
-      labelText: l10n.ubuntuProTokenTextfieldHint,
+      labelText: l10n.landscapeTokenTextfieldHint,
       initialValue: '',
       successWidget: model.isAttached && model.isAttachedThroughManualAttach
           ? Row(
@@ -24,7 +24,7 @@ class TokenTextField extends ConsumerWidget {
                 const SuccessIcon(),
                 const SizedBox(width: kWizardSpacing / 4),
                 Text(
-                  l10n.ubuntuProTokenAttachSucess,
+                  l10n.landscapeTokenAttachSucess,
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium
@@ -43,7 +43,7 @@ class TokenTextField extends ConsumerWidget {
           }
           return false;
         },
-        errorText: l10n.ubuntuProTokenAttachError,
+        errorText: l10n.landscapeTokenAttachError,
       ),
       onChanged: model.setToken,
     );

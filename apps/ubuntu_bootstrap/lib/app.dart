@@ -82,7 +82,7 @@ Future<void> runInstallerApp(
 
   // conditional registration if not already registered by flavors or tests
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
-  tryRegisterService<ProService>(ProvdProService.new);
+  tryRegisterService<LandscapeService>(LandscapeBackendService.new);
   tryRegisterService<ActiveDirectoryService>(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );
