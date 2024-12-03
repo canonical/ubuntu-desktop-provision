@@ -58,12 +58,12 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   Future<void> testLandscapePage({
     String? screenshot,
   }) async {
-    await pumpUntilPage(UbuntuProPage);
+    await pumpUntilPage(LandscapePage);
 
-    final context = element(find.byType(UbuntuProPage));
+    final context = element(find.byType(LandscapePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.ubuntuProPageTitle), findsOneWidget);
+    expect(find.titleBar(l10n.landscapePageTitle), findsOneWidget);
 
     await pumpAndSettle();
 

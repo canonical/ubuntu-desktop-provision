@@ -39,6 +39,6 @@ LandscapeModel buildLandscapeModel({
 Widget buildLandscapePage(LandscapeModel model) {
   return ProviderScope(
     overrides: [landscapeModelProvider.overrideWith((_) => model)],
-    child: LandscapePage(),
+    child: const LandscapePage(),
   );
 }
