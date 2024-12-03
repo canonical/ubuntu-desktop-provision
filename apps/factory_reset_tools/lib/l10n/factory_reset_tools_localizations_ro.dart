@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Romanian Moldavian Moldovan (`ro`).
 class FactoryResetToolsLocalizationsRo extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsRo([String locale = 'ro']) : super(locale);

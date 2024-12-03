@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Gujarati (`gu`).
 class UbuntuInitLocalizationsGu extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsGu([String locale = 'gu']) : super(locale);

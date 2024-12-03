@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Finnish (`fi`).
 class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsFi([String locale = 'fi']) : super(locale);

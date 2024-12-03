@@ -1,4 +1,4 @@
-library subiquity_test;
+library;
 
 export 'src/fakes.dart';
 export 'src/generated.dart';

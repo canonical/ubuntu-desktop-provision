@@ -1,4 +1,4 @@
-library ubuntu_provision;
+library;
 
 export 'src/providers/brightness.dart';
 export 'src/providers/flavor.dart';

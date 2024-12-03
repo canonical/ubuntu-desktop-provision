@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Romanian Moldavian Moldovan (`ro`).
 class UbuntuProvisionLocalizationsRo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsRo([String locale = 'ro']) : super(locale);

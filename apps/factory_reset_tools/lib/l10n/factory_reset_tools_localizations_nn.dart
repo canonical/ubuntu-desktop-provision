@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Norwegian Nynorsk (`nn`).
 class FactoryResetToolsLocalizationsNn extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsNn([String locale = 'nn']) : super(locale);

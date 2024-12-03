@@ -11,15 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
   ubuntu_flavor: ^0.4.0
-  ubuntu_localizations: ^0.3.5
-  ubuntu_widgets: ^0.5.5
+  ubuntu_localizations: ^0.5.0
+  ubuntu_widgets: ^0.7.1
   wizard_router: ^1.2.0
-  yaru: 4.1.0
+  yaru: ^5.3.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ubuntu_lints: ^0.3.0
-  ubuntu_test: ^0.1.0-beta.8
-  yaru_test: ^0.1.6
+  ubuntu_lints: ^0.4.0
+  ubuntu_test: ^0.2.2
+  yaru_test: ^0.2.0

@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Panjabi Punjabi (`pa`).
 class FactoryResetToolsLocalizationsPa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsPa([String locale = 'pa']) : super(locale);

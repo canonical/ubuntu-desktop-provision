@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Russian (`ru`).
 class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsRu([String locale = 'ru']) : super(locale);

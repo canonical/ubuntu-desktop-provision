@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Serbian (`sr`).
 class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsSr([String locale = 'sr']) : super(locale);

@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Khmer Central Khmer (`km`).
 class UbuntuProvisionLocalizationsKm extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKm([String locale = 'km']) : super(locale);

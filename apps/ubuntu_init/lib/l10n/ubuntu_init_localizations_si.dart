@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Sinhala Sinhalese (`si`).
 class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsSi([String locale = 'si']) : super(locale);

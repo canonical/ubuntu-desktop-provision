@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tamil (`ta`).
 class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsTa([String locale = 'ta']) : super(locale);

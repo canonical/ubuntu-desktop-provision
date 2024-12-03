@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Slovak (`sk`).
 class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsSk([String locale = 'sk']) : super(locale);

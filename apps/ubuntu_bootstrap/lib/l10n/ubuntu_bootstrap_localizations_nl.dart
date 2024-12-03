@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Dutch Flemish (`nl`).
 class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsNl([String locale = 'nl']) : super(locale);

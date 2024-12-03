@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Amharic (`am`).
 class UbuntuInitLocalizationsAm extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsAm([String locale = 'am']) : super(locale);

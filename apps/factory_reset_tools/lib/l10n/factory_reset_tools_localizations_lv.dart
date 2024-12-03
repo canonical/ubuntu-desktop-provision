@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Latvian (`lv`).
 class FactoryResetToolsLocalizationsLv extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsLv([String locale = 'lv']) : super(locale);

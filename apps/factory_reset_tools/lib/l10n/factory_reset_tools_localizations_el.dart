@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Modern Greek (`el`).
 class FactoryResetToolsLocalizationsEl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEl([String locale = 'el']) : super(locale);

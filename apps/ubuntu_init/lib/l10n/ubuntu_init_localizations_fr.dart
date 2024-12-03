@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for French (`fr`).
 class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsFr([String locale = 'fr']) : super(locale);

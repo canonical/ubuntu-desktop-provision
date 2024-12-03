@@ -93,7 +93,9 @@ void main() {
         when(bundle.load(pkgAssetPath))
             .thenAnswer((_) async => 'bar'.toByteData());
         expect(
-            await proxy.loadString('packages/qux/$assetName'), equals('bar'));
+          await proxy.loadString('packages/qux/$assetName'),
+          equals('bar'),
+        );
       },
       createFile: MockFileCreator({pkgAssetPath}).call,
     );

@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Gujarati (`gu`).
 class FactoryResetToolsLocalizationsGu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsGu([String locale = 'gu']) : super(locale);

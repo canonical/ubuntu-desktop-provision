@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Esperanto (`eo`).
 class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEo([String locale = 'eo']) : super(locale);

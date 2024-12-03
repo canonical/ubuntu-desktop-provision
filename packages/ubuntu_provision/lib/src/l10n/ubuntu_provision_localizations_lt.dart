@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Lithuanian (`lt`).
 class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsLt([String locale = 'lt']) : super(locale);

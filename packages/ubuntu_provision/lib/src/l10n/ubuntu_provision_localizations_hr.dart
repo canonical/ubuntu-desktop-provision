@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Croatian (`hr`).
 class UbuntuProvisionLocalizationsHr extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsHr([String locale = 'hr']) : super(locale);

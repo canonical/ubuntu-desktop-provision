@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Tagalog (`tl`).
 class FactoryResetToolsLocalizationsTl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTl([String locale = 'tl']) : super(locale);

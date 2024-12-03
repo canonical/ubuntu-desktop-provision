@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Serbian (`sr`).
 class FactoryResetToolsLocalizationsSr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsSr([String locale = 'sr']) : super(locale);

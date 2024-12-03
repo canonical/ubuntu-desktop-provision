@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Vietnamese (`vi`).
 class UbuntuProvisionLocalizationsVi extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsVi([String locale = 'vi']) : super(locale);

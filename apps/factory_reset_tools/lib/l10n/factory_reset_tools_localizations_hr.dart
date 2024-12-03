@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Croatian (`hr`).
 class FactoryResetToolsLocalizationsHr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHr([String locale = 'hr']) : super(locale);

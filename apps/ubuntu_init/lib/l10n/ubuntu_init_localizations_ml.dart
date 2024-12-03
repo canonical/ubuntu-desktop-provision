@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Malayalam (`ml`).
 class UbuntuInitLocalizationsMl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsMl([String locale = 'ml']) : super(locale);

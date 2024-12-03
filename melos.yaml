@@ -10,7 +10,7 @@ command:
     runPubGetInParallel: false
     environment:
       sdk: ">=3.0.0 <4.0.0"
-      flutter: '>=3.19.2'
+      flutter: ">=3.19.2"
 
     dependencies:
       args: ^2.4.2
@@ -29,23 +29,23 @@ command:
       freezed_annotation: ^2.4.1
       gsettings: ^0.2.8
       handy_window: ^0.4.0
-      intl: ^0.18.1
+      intl: ^0.19.0
       json_annotation: ^4.9.0
       meta: ^1.11.0
       nm: ^0.5.0
       package_config: ^2.1.0
       path: ^1.8.3
       platform: ^3.1.2
-      safe_change_notifier: ^0.3.2
+      safe_change_notifier: ^0.4.0
       scroll_to_index: ^3.0.1
       split_view: ^3.2.1
       stdlibc: ^0.1.4
       ubuntu_flavor: ^0.4.0
-      ubuntu_localizations: ^0.3.5
+      ubuntu_localizations: ^0.5.0
       ubuntu_logger: ^0.1.1
       ubuntu_service: ^0.3.1
       ubuntu_session: ^0.0.4
-      ubuntu_widgets: ^0.5.5
+      ubuntu_widgets: ^0.7.1
       udev: ^0.0.3
       upower: ^0.7.0
       url_launcher: ^6.2.5
@@ -53,8 +53,8 @@ command:
       xdg_directories: ^1.0.4
       xdg_locale: ^0.0.1
       yaml: ^3.1.2
-      yaru: 4.1.0
-      yaru_window: 0.2.1
+      yaru: ^5.3.0
+      yaru_window: ^0.2.1
 
     dev_dependencies:
       build_runner: ^2.4.8
@@ -65,10 +65,10 @@ command:
       mockito: 5.4.4
       plugin_platform_interface: ^2.1.8
       test: any
-      ubuntu_lints: ^0.3.0
-      ubuntu_test: ^0.1.0-beta.8
+      ubuntu_lints: ^0.4.0
+      ubuntu_test: ^0.2.2
       url_launcher_platform_interface: ^2.3.2
-      yaru_test: ^0.1.6
+      yaru_test: ^0.2.0
 
 scripts:
   # collect coverage information for all packages

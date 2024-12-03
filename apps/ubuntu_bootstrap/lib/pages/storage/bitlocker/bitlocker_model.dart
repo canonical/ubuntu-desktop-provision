@@ -10,7 +10,9 @@ final _log = Logger('bitlocker');
 /// Provider for [BitLockerModel].
 final bitLockerModelProvider = ChangeNotifierProvider(
   (_) => BitLockerModel(
-      getService<SessionService>(), getService<StorageService>()),
+    getService<SessionService>(),
+    getService<StorageService>(),
+  ),
 );
 
 /// View model for [BitLockerPage].

@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Basque (`eu`).
 class FactoryResetToolsLocalizationsEu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEu([String locale = 'eu']) : super(locale);

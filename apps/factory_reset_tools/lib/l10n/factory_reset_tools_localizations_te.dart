@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Telugu (`te`).
 class FactoryResetToolsLocalizationsTe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTe([String locale = 'te']) : super(locale);

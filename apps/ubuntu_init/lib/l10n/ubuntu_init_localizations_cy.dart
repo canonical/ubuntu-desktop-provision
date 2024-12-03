@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Welsh (`cy`).
 class UbuntuInitLocalizationsCy extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsCy([String locale = 'cy']) : super(locale);

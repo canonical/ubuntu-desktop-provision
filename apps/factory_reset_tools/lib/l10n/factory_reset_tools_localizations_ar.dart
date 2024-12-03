@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Arabic (`ar`).
 class FactoryResetToolsLocalizationsAr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsAr([String locale = 'ar']) : super(locale);

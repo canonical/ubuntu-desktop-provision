@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Slovenian (`sl`).
 class UbuntuInitLocalizationsSl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsSl([String locale = 'sl']) : super(locale);

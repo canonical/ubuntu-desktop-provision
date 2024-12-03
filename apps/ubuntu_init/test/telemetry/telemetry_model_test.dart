@@ -16,7 +16,7 @@ void main() {
     final telemetry = MockProvdTelemetryService();
     final model = TelemetryModel(telemetry);
 
-    model.addListener(expectAsync0(() {}, count: 1));
+    model.addListener(expectAsync0(() {}));
 
     expect(model.enabled, isTrue);
     model.enabled = false;

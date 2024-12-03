@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Spanish Castilian (`es`).
 class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEs([String locale = 'es']) : super(locale);

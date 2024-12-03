@@ -263,7 +263,7 @@ class PartitionButtonRow extends ConsumerWidget {
           ),
         ),
         const Spacer(),
-        ButtonBar(
+        OverflowBar(
           children: [
             OutlinedButton(
               onPressed: model.canReformatDisk

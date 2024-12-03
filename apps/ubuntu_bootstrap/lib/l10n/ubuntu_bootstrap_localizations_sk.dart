@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Slovak (`sk`).
 class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsSk([String locale = 'sk']) : super(locale);

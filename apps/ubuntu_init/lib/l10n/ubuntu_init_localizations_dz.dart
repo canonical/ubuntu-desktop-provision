@@ -1,5 +1,7 @@
 import 'ubuntu_init_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Dzongkha (`dz`).
 class UbuntuInitLocalizationsDz extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsDz([String locale = 'dz']) : super(locale);

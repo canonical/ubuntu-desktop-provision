@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Japanese (`ja`).
 class FactoryResetToolsLocalizationsJa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsJa([String locale = 'ja']) : super(locale);

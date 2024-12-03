@@ -71,7 +71,7 @@ class TelemetryView extends StatelessWidget {
             snapshot.data!,
             style: TextStyle(
               inherit: false,
-              color: theme.colorScheme.onBackground,
+              color: theme.colorScheme.onSurface,
               fontFamily: 'Ubuntu Mono',
               fontSize: theme.textTheme.bodyLarge!.fontSize,
               textBaseline: TextBaseline.alphabetic,

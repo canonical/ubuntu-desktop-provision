@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Korean (`ko`).
 class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKo([String locale = 'ko']) : super(locale);

@@ -1,5 +1,7 @@
 import 'ubuntu_provision_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Belarusian (`be`).
 class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsBe([String locale = 'be']) : super(locale);

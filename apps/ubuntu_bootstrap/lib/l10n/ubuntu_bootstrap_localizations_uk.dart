@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Ukrainian (`uk`).
 class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsUk([String locale = 'uk']) : super(locale);

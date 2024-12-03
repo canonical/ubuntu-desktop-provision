@@ -1,5 +1,7 @@
 import 'factory_reset_tools_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Burmese (`my`).
 class FactoryResetToolsLocalizationsMy extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsMy([String locale = 'my']) : super(locale);
