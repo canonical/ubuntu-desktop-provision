@@ -67,7 +67,7 @@ void main() {
   tearDown(resetAllServices);
 
   testWidgets('try ubuntu', (tester) async {
-    final landscapeModel = buildUbuntuProModel();
+    final landscapeModel = buildLandscapeModel();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -82,7 +82,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
+          landscapeModelProvider.overrideWith((_) => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -137,7 +137,7 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
-    final landscapeModel = buildUbuntuProModel();
+    final landscapeModel = buildLandscapeModel();
     final autoinstallModel = buildAutoinstallModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
@@ -170,7 +170,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
+          landscapeModelProvider.overrideWith((_) => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           autoinstallModelProvider.overrideWith((_) => autoinstallModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
@@ -280,7 +280,7 @@ void main() {
   });
 
   testWidgets('rst', (tester) async {
-    final landscapeModel = buildUbuntuProModel();
+    final landscapeModel = buildLandscapeModel();
     final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final rstModel = buildRstModel(hasRst: true);
@@ -298,7 +298,7 @@ void main() {
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
+          landscapeModelProvider.overrideWith((_) => landscapeModel),
           rstModelProvider.overrideWith((_) => rstModel),
         ],
         child: tester.buildTestWizard(),
@@ -403,7 +403,7 @@ void main() {
   });
 
   testWidgets('exclude pages', (tester) async {
-    final landscapeModel = buildUbuntuProModel();
+    final landscapeModel = buildLandscapeModel();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final secureBootModel = buildSecureBootModel();
@@ -415,7 +415,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
+          landscapeModelProvider.overrideWith((_) => landscapeModel),
           autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),

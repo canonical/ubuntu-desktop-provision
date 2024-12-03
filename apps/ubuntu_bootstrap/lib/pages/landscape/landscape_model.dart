@@ -5,15 +5,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/services/landscape_service.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
-final ubuntuProModelProvider = ChangeNotifierProvider(
-  (ref) => UbuntuProModel(
-    proService: getService<ProService>(),
+final landscapeModelProvider = ChangeNotifierProvider(
+  (ref) => LandscapeModel(
+    landscapeService: getService<LandscapeService>(),
   ),
 );
 
-class UbuntuProModel extends ChangeNotifier {
-  UbuntuProModel({
-    required ProService proService,
+class LandscapeModel extends ChangeNotifier {
+  LandscapeModel({
+    required LandscapeService landscapeService,
   });
 
   String get userCode => _userCode;
