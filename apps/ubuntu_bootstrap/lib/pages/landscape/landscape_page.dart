@@ -32,8 +32,8 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(landscapeModelProvider);
     return HorizontalPage(
-      windowTitle: l10n.ubuntuProPageTitle,
-      title: l10n.ubuntuProHeader,
+      windowTitle: l10n.landscapePageTitle,
+      title: l10n.landscapeHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -54,7 +54,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                     ),
                   ),
                   child: Text(
-                    l10n.ubuntuProTokenAttachButton,
+                    l10n.landscapeTokenAttachButton,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Theme.of(context).colorScheme.onPrimary,
                         ),
@@ -66,12 +66,12 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            l10n.ubuntuProSubscriptionDescription,
+            l10n.landscapeSubscriptionDescription,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: kWizardSpacing / 2),
           Html(
-            data: l10n.ubuntuProSubscriptionFreeForPersonalUse(
+            data: l10n.landscapeSubscriptionFreeForPersonalUse(
               kUbuntuProUrl.replaceFirst('https://', ''),
             ),
             style: {
@@ -89,7 +89,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Html(
-              data: l10n.ubuntuProMagicAttachInstructions(
+              data: l10n.landscapeMagicAttachInstructions(
                 kMagicAttachUrl.replaceFirst('https://', ''),
               ),
               style: {
@@ -142,7 +142,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                                   const SizedBox(width: kWizardSpacing / 4),
                                   Expanded(
                                     child: Text(
-                                      l10n.ubuntuProTokenAttachSucess,
+                                      l10n.landscapeTokenAttachSucess,
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyMedium
@@ -162,7 +162,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                   ),
             const SizedBox(height: kWizardSpacing),
             Text(
-              l10n.ubuntuProOrAddTokenManually,
+              l10n.landscapeOrAddTokenManually,
               style: Theme.of(context)
                   .textTheme
                   .bodyMedium

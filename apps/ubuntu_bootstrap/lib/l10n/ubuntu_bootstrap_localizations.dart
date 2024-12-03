@@ -1961,107 +1961,107 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Validate'**
   String get validate;
 
-  /// No description provided for @ubuntuProMagicAttachInstructions.
+  /// No description provided for @landscapeMagicAttachInstructions.
   ///
   /// In en, this message translates to:
   /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
-  String ubuntuProMagicAttachInstructions(Object url);
+  String landscapeMagicAttachInstructions(Object url);
 
-  /// No description provided for @ubuntuProPageTitle.
+  /// No description provided for @landscapePageTitle.
   ///
   /// In en, this message translates to:
   /// **'Ubuntu Pro'**
-  String get ubuntuProPageTitle;
+  String get landscapePageTitle;
 
-  /// No description provided for @ubuntuProHeader.
+  /// No description provided for @landscapeHeader.
   ///
   /// In en, this message translates to:
   /// **'Attach this machine'**
-  String get ubuntuProHeader;
+  String get landscapeHeader;
 
-  /// No description provided for @ubuntuProOrAddTokenManually.
+  /// No description provided for @landscapeOrAddTokenManually.
   ///
   /// In en, this message translates to:
   /// **'or add a token manually'**
-  String get ubuntuProOrAddTokenManually;
+  String get landscapeOrAddTokenManually;
 
-  /// No description provided for @ubuntuProTokenTextfieldHint.
+  /// No description provided for @landscapeTokenTextfieldHint.
   ///
   /// In en, this message translates to:
   /// **'Token'**
-  String get ubuntuProTokenTextfieldHint;
+  String get landscapeTokenTextfieldHint;
 
-  /// No description provided for @ubuntuProSubscriptionDescription.
+  /// No description provided for @landscapeSubscriptionDescription.
   ///
   /// In en, this message translates to:
   /// **'Get the most comprehensive subscription for open-source software security'**
-  String get ubuntuProSubscriptionDescription;
+  String get landscapeSubscriptionDescription;
 
-  /// No description provided for @ubuntuProSubscriptionFreeForPersonalUse.
+  /// No description provided for @landscapeSubscriptionFreeForPersonalUse.
   ///
   /// In en, this message translates to:
   /// **'Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>'**
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url);
+  String landscapeSubscriptionFreeForPersonalUse(Object url);
 
-  /// No description provided for @ubuntuProTokenAttachButton.
+  /// No description provided for @landscapeTokenAttachButton.
   ///
   /// In en, this message translates to:
   /// **'Attach'**
-  String get ubuntuProTokenAttachButton;
+  String get landscapeTokenAttachButton;
 
-  /// No description provided for @ubuntuProTokenAttachError.
+  /// No description provided for @landscapeTokenAttachError.
   ///
   /// In en, this message translates to:
   /// **'Invalid token'**
-  String get ubuntuProTokenAttachError;
+  String get landscapeTokenAttachError;
 
-  /// No description provided for @ubuntuProTokenAttachSucess.
+  /// No description provided for @landscapeTokenAttachSucess.
   ///
   /// In en, this message translates to:
   /// **'Valid token'**
-  String get ubuntuProTokenAttachSucess;
+  String get landscapeTokenAttachSucess;
 
-  /// No description provided for @ubuntuProTokenAttachErrorVariant.
+  /// No description provided for @landscapeTokenAttachErrorVariant.
   ///
   /// In en, this message translates to:
   /// **'Invalid token, retry'**
-  String get ubuntuProTokenAttachErrorVariant;
+  String get landscapeTokenAttachErrorVariant;
 
-  /// No description provided for @ubuntuProOnBoardingSkipForNow.
+  /// No description provided for @landscapeOnBoardingSkipForNow.
   ///
   /// In en, this message translates to:
   /// **'Skip for now'**
-  String get ubuntuProOnBoardingSkipForNow;
+  String get landscapeOnBoardingSkipForNow;
 
-  /// No description provided for @ubuntuProOnBoardingSkipForNowDescription.
+  /// No description provided for @landscapeOnBoardingSkipForNowDescription.
   ///
   /// In en, this message translates to:
   /// **'You can always enable Ubuntu Pro later via the Software & Updates application.'**
-  String get ubuntuProOnBoardingSkipForNowDescription;
+  String get landscapeOnBoardingSkipForNowDescription;
 
-  /// No description provided for @ubuntuProOnBoardingEnableUbuntuPro.
+  /// No description provided for @landscapeOnBoardingEnableUbuntuPro.
   ///
   /// In en, this message translates to:
   /// **'Enable Ubuntu Pro'**
-  String get ubuntuProOnBoardingEnableUbuntuPro;
+  String get landscapeOnBoardingEnableUbuntuPro;
 
-  /// No description provided for @ubuntuProOnBoardingEnableUbuntuProDescription.
+  /// No description provided for @landscapeOnBoardingEnableUbuntuProDescription.
   ///
   /// In en, this message translates to:
   /// **'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.'**
-  String get ubuntuProOnBoardingEnableUbuntuProDescription;
+  String get landscapeOnBoardingEnableUbuntuProDescription;
 
-  /// No description provided for @ubuntuProSucessAttachHeader.
+  /// No description provided for @landscapeSucessAttachHeader.
   ///
   /// In en, this message translates to:
   /// **'Ubuntu Pro is now enabled in this machine'**
-  String get ubuntuProSucessAttachHeader;
+  String get landscapeSucessAttachHeader;
 
-  /// No description provided for @ubuntuProSucessAttachDescription.
+  /// No description provided for @landscapeSucessAttachDescription.
   ///
   /// In en, this message translates to:
   /// **'You can manage your Pro services in the Software & Updates application.'**
-  String get ubuntuProSucessAttachDescription;
+  String get landscapeSucessAttachDescription;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

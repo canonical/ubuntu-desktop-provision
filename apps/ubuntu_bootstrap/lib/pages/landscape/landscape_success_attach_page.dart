@@ -12,7 +12,7 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    return !ref.watch(ubuntuProModelProvider).skipPro;
+    return !ref.watch(landscapeModelProvider).skipPro;
   }
 
   @override
@@ -23,7 +23,7 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
 
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(l10n.ubuntuProPageTitle),
+        title: Text(l10n.landscapePageTitle),
       ),
       content: Center(
         child: SingleChildScrollView(
@@ -50,14 +50,14 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            l10n.ubuntuProSucessAttachHeader,
+                            l10n.landscapeSucessAttachHeader,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge
                                 ?.copyWith(fontWeight: FontWeight.w500),
                           ),
                           Text(
-                            l10n.ubuntuProSucessAttachDescription,
+                            l10n.landscapeSucessAttachDescription,
                             style: Theme.of(context).textTheme.bodyLarge,
                           ),
                         ],
