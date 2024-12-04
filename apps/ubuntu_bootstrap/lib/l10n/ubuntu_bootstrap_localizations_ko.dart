@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Korean (`ko`).
 class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsKo([String locale = 'ko']) : super(locale);

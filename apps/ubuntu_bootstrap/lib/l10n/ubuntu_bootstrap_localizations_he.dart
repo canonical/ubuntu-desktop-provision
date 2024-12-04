@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Hebrew (`he`).
 class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsHe([String locale = 'he']) : super(locale);

@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Catalan Valencian (`ca`).
 class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsCa([String locale = 'ca']) : super(locale);

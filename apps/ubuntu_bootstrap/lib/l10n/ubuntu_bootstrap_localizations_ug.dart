@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Uighur Uyghur (`ug`).
 class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsUg([String locale = 'ug']) : super(locale);

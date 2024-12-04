@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Telugu (`te`).
 class UbuntuBootstrapLocalizationsTe extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsTe([String locale = 'te']) : super(locale);

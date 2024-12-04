@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Basque (`eu`).
 class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEu([String locale = 'eu']) : super(locale);

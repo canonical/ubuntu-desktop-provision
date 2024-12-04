@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Macedonian (`mk`).
 class UbuntuBootstrapLocalizationsMk extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsMk([String locale = 'mk']) : super(locale);

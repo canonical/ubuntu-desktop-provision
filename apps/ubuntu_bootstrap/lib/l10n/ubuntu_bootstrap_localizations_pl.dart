@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Polish (`pl`).
 class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsPl([String locale = 'pl']) : super(locale);

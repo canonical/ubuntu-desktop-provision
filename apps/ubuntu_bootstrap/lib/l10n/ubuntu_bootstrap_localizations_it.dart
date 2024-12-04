@@ -1,7 +1,5 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
-// ignore_for_file: type=lint
-
 /// The translations for Italian (`it`).
 class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsIt([String locale = 'it']) : super(locale);
