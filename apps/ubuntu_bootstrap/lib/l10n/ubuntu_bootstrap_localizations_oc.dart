@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Occitan (`oc`).
 class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsOc([String locale = 'oc']) : super(locale);

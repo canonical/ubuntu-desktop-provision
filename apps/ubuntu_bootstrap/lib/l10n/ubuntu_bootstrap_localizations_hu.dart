@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Hungarian (`hu`).
 class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsHu([String locale = 'hu']) : super(locale);

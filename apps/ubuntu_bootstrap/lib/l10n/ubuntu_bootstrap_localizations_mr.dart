@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Marathi (`mr`).
 class UbuntuBootstrapLocalizationsMr extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsMr([String locale = 'mr']) : super(locale);

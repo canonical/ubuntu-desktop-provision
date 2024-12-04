@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Modern Greek (`el`).
 class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEl([String locale = 'el']) : super(locale);

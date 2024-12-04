@@ -1,5 +1,7 @@
 import 'ubuntu_bootstrap_localizations.dart';
 
+// ignore_for_file: type=lint
+
 /// The translations for Bosnian (`bs`).
 class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsBs([String locale = 'bs']) : super(locale);
