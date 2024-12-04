@@ -12,7 +12,7 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    return !ref.watch(landscapeModelProvider).skipPro;
+    return !ref.watch(landscapeDataModelProvider).skipPro;
   }
 
   @override

@@ -12,7 +12,9 @@ class TokenTextField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(landscapeModelProvider);
+    final model = ref.watch(landscapeDataModelProvider);
+    final token = ref.watch(tokenNotifierProvider);
+    final tokenNotifier = ref.watch(tokenNotifierProvider.notifier);
 
     return ValidatedFormField(
       labelText: l10n.landscapeTokenTextfieldHint,
@@ -37,7 +39,7 @@ class TokenTextField extends ConsumerWidget {
       validator: CallbackValidator(
         (value) {
           if (model.isAttached ||
-              model.token.isEmpty ||
+              token.isEmpty ||
               model.hasNoErrorWhenAttachingManually) {
             return true;
           }
@@ -45,7 +47,7 @@ class TokenTextField extends ConsumerWidget {
         },
         errorText: l10n.landscapeTokenAttachError,
       ),
-      onChanged: model.setToken,
+      onChanged: tokenNotifier.setToken,
     );
   }
 }
@@ -66,7 +68,8 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final model = ref.watch(landscapeModelProvider);
+    final model = ref.watch(landscapeDataModelProvider);
+    final modelNotifier= ref.watch(landscapeDataModelProvider.notifier);
     final isSelected = skipPro == model.skipPro;
     return Align(
       alignment: AlignmentDirectional.centerStart,
@@ -89,7 +92,7 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
           contentPadding: kWizardTilePadding,
           value: skipPro,
           groupValue: model.skipPro,
-          onChanged: (value) => model.skipPro = value ?? false,
+          onChanged: (value) => modelNotifier.setSkipPro( value ?? false),
         ),
       ),
     );
