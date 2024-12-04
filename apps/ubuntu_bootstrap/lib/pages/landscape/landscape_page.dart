@@ -20,17 +20,19 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    final model = ref.watch(landscapeModelProvider);
+    final model = ref.watch(landscapeDataModelProvider);
     if (model.skipPro) return false;
 
-    await model.magicAttach();
+    await ref.read(landscapeDataModelProvider.notifier).magicAttach();
     return true;
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(landscapeModelProvider);
+    final model = ref.watch(landscapeDataModelProvider);
+    final notifier = ref.watch(landscapeDataModelProvider.notifier);
+    final token = ref.watch(tokenNotifierProvider);
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
@@ -43,14 +45,17 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                   onActivated: Wizard.of(context).next,
                 )
               : PushButton.filled(
-                  onPressed:
-                      model.token.isEmpty ? null : model.attachManuallyToken,
+                  onPressed: token.isEmpty
+                      ? null
+                      : () async {
+                          await notifier.attachManuallyToken();
+                        },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                       Theme.of(context)
                           .colorScheme
                           .success
-                          .withOpacity(model.token.isEmpty ? 0.5 : 1),
+                          .withOpacity(token.isEmpty ? 0.5 : 1),
                     ),
                   ),
                   child: Text(

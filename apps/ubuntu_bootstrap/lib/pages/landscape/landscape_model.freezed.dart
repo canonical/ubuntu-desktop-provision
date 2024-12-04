@@ -23,9 +23,10 @@ mixin _$LandscapeData {
   bool get hasNoErrorWhenAttachingManually =>
       throw _privateConstructorUsedError;
   bool get skipPro => throw _privateConstructorUsedError;
-  String? get token => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LandscapeDataCopyWith<LandscapeData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -42,8 +43,7 @@ abstract class $LandscapeDataCopyWith<$Res> {
       bool isAttached,
       bool isAttachedThroughManualAttach,
       bool hasNoErrorWhenAttachingManually,
-      bool skipPro,
-      String? token});
+      bool skipPro});
 }
 
 /// @nodoc
@@ -56,6 +56,8 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -65,7 +67,6 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
     Object? isAttachedThroughManualAttach = null,
     Object? hasNoErrorWhenAttachingManually = null,
     Object? skipPro = null,
-    Object? token = freezed,
   }) {
     return _then(_value.copyWith(
       userCode: null == userCode
@@ -92,10 +93,6 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
           ? _value.skipPro
           : skipPro // ignore: cast_nullable_to_non_nullable
               as bool,
-      token: freezed == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -114,8 +111,7 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
       bool isAttached,
       bool isAttachedThroughManualAttach,
       bool hasNoErrorWhenAttachingManually,
-      bool skipPro,
-      String? token});
+      bool skipPro});
 }
 
 /// @nodoc
@@ -126,6 +122,8 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
       _$LandscapeDataImpl _value, $Res Function(_$LandscapeDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,7 +133,6 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
     Object? isAttachedThroughManualAttach = null,
     Object? hasNoErrorWhenAttachingManually = null,
     Object? skipPro = null,
-    Object? token = freezed,
   }) {
     return _then(_$LandscapeDataImpl(
       userCode: null == userCode
@@ -162,10 +159,6 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
           ? _value.skipPro
           : skipPro // ignore: cast_nullable_to_non_nullable
               as bool,
-      token: freezed == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -179,8 +172,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
       required this.isAttached,
       required this.isAttachedThroughManualAttach,
       required this.hasNoErrorWhenAttachingManually,
-      required this.skipPro,
-      this.token})
+      required this.skipPro})
       : super._();
 
   @override
@@ -195,12 +187,10 @@ class _$LandscapeDataImpl extends _LandscapeData {
   final bool hasNoErrorWhenAttachingManually;
   @override
   final bool skipPro;
-  @override
-  final String? token;
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, isAttachedThroughMagicAttach: $isAttachedThroughMagicAttach, isAttached: $isAttached, isAttachedThroughManualAttach: $isAttachedThroughManualAttach, hasNoErrorWhenAttachingManually: $hasNoErrorWhenAttachingManually, skipPro: $skipPro, token: $token)';
+    return 'LandscapeData(userCode: $userCode, isAttachedThroughMagicAttach: $isAttachedThroughMagicAttach, isAttached: $isAttached, isAttachedThroughManualAttach: $isAttachedThroughManualAttach, hasNoErrorWhenAttachingManually: $hasNoErrorWhenAttachingManually, skipPro: $skipPro)';
   }
 
   @override
@@ -224,8 +214,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
                     hasNoErrorWhenAttachingManually) ||
                 other.hasNoErrorWhenAttachingManually ==
                     hasNoErrorWhenAttachingManually) &&
-            (identical(other.skipPro, skipPro) || other.skipPro == skipPro) &&
-            (identical(other.token, token) || other.token == token));
+            (identical(other.skipPro, skipPro) || other.skipPro == skipPro));
   }
 
   @override
@@ -236,10 +225,11 @@ class _$LandscapeDataImpl extends _LandscapeData {
       isAttached,
       isAttachedThroughManualAttach,
       hasNoErrorWhenAttachingManually,
-      skipPro,
-      token);
+      skipPro);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LandscapeDataImplCopyWith<_$LandscapeDataImpl> get copyWith =>
@@ -253,8 +243,7 @@ abstract class _LandscapeData extends LandscapeData {
       required final bool isAttached,
       required final bool isAttachedThroughManualAttach,
       required final bool hasNoErrorWhenAttachingManually,
-      required final bool skipPro,
-      final String? token}) = _$LandscapeDataImpl;
+      required final bool skipPro}) = _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
   @override
@@ -269,10 +258,11 @@ abstract class _LandscapeData extends LandscapeData {
   bool get hasNoErrorWhenAttachingManually;
   @override
   bool get skipPro;
+
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String? get token;
-  @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LandscapeDataImplCopyWith<_$LandscapeDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
