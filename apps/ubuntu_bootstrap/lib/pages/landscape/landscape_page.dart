@@ -51,7 +51,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                           await notifier.attachManuallyToken();
                         },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(
                       Theme.of(context)
                           .colorScheme
                           .success
