@@ -82,7 +82,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          landscapeModelProvider.overrideWith((_) => landscapeModel),
+          landscapeDataModelProvider.overrideWith(() => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -170,7 +170,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          landscapeModelProvider.overrideWith((_) => landscapeModel),
+          landscapeDataModelProvider.overrideWith(() => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           autoinstallModelProvider.overrideWith((_) => autoinstallModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
@@ -298,7 +298,7 @@ void main() {
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
-          landscapeModelProvider.overrideWith((_) => landscapeModel),
+          landscapeDataModelProvider.overrideWith(() => landscapeModel),
           rstModelProvider.overrideWith((_) => rstModel),
         ],
         child: tester.buildTestWizard(),
@@ -415,7 +415,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          landscapeModelProvider.overrideWith((_) => landscapeModel),
+          landscapeDataModelProvider.overrideWith(() => landscapeModel),
           autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
