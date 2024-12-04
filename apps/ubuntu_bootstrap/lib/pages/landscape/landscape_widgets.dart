@@ -69,7 +69,7 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final model = ref.watch(landscapeDataModelProvider);
-    final modelNotifier= ref.watch(landscapeDataModelProvider.notifier);
+    final modelNotifier = ref.watch(landscapeDataModelProvider.notifier);
     final isSelected = skipPro == model.skipPro;
     return Align(
       alignment: AlignmentDirectional.centerStart,
@@ -92,7 +92,7 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
           contentPadding: kWizardTilePadding,
           value: skipPro,
           groupValue: model.skipPro,
-          onChanged: (value) => modelNotifier.setSkipPro( value ?? false),
+          onChanged: (value) => modelNotifier.setSkipPro(value ?? false),
         ),
       ),
     );
