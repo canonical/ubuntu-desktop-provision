@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => '마운트 위치는 공백을 포함할 수 없습니다';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => '장치';
 
   @override

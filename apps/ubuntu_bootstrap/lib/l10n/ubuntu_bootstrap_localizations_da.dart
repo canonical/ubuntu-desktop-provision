@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Monteringspunkter må ikke indeholde mellemrum';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Enhed';
 
   @override

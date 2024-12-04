@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Les points de montage ne doivent pas contenir d\'espaces';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Périphérique';
 
   @override

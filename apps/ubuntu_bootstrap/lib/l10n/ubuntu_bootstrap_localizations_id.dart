@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Titik pemasangan tidak dapat mengandung spasi';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'Perangkat';
 
   @override

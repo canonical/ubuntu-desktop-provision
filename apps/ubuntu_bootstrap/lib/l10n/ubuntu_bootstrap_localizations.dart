@@ -965,6 +965,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Mount points cannot contain spaces'**
   String get allocateDiskSpaceInvalidMountPointSpace;
 
+  /// No description provided for @allocateDiskSpaceInvalidMountPointFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'{format} is not a supported filesystem for {mountpoint}'**
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint);
+
   /// No description provided for @diskHeadersDevice.
   ///
   /// In en, this message translates to:

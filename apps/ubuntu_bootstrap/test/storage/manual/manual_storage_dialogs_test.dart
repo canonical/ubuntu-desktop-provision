@@ -213,4 +213,87 @@ void main() {
 
     expect(find.button(find.okLabel), isDisabled);
   });
+
+  testWidgets('prevent creating VFAT-formatted /boot partition',
+      (tester) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(960, 680);
+
+    final disk = fakeDisk();
+    const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    showCreatePartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      gap,
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.menuItem(PartitionFormat.vfat.displayName));
+    await tester.pumpAndSettle();
+
+    await tester.enterText(find.byType(YaruAutocomplete<String>), '/boot');
+    await tester.pump();
+
+    expect(find.button(find.okLabel), isDisabled);
+  });
+
+  testWidgets('prevent formatting existing /boot as VFAT', (tester) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(960, 680);
+
+    final disk = fakeDisk(
+      partitions: [
+        const Partition(
+          number: 1,
+          size: 1234567,
+          format: 'ext4',
+          wipe: 'superblock',
+          mount: '/boot',
+          preserve: true,
+        ),
+        const Gap(offset: 123, size: 1000000, usable: GapUsable.YES),
+      ],
+    );
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    showEditPartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      disk.partitions.whereType<Partition>().first,
+      null,
+      disk.partitions.whereType<Gap>().first,
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.menuItem(PartitionFormat.vfat.displayName));
+    await tester.pumpAndSettle();
+
+    expect(find.button(find.okLabel), isDisabled);
+  });
 }

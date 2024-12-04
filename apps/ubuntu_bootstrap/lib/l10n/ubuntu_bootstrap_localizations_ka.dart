@@ -428,6 +428,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format is not a supported filesystem for $mountpoint';
+  }
+
+  @override
   String get diskHeadersDevice => 'მოწყობილობა';
 
   @override
