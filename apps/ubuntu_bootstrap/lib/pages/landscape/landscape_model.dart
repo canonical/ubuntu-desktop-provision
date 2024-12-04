@@ -1,11 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:ubuntu_bootstrap/services/landscape_service.dart';
-import 'package:ubuntu_service/ubuntu_service.dart';
 
 part 'landscape_model.freezed.dart';
 part 'landscape_model.g.dart';
@@ -42,7 +38,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     if (state.skipPro == value) return;
     state = state.copyWith(skipPro: value);
   }
-  
+
   void setIsAttached(bool value) {
     if (state.isAttached == value) return;
     state = state.copyWith(isAttached: value);
