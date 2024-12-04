@@ -919,5 +919,14 @@
         "type": "String"
       }
     }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} nie jest obsługiwanym systemem plików dla {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   }
 }
