@@ -1,21 +1,34 @@
 # Adding a new page to the installer
 
+This project makes use of the [Model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+architectural pattern.
+
 ## Add your page
+New pages can either be added to `apps/ubuntu_bootstrap/` for the main installer, `apps/ubuntu_init/`
+for the first boot experience, or `packages/ubuntu_provision/` if they need to be shared between
+the two flows. This document will assume you are adding a page to the main installer.
+
 - Under `apps/ubuntu_bootstrap/lib/pages`, create a new directory for the page you would like to add
-ie: `apps/ubuntu_bootstrap/lib/pages/<your-feature>`
-- Create at minimum the following files:
+ie: `apps/ubuntu_bootstrap/lib/pages/<your-feature>`.
+- Create at minimum the following files (see existing pages for what these files should include):
 	- `<your-feature>_page.dart`: Defines the UI for the page you would like to add to the installer.
-	- `<your-feature>_model.dart`: Implements the provider and integrates with backend services to 
-    support your page's functionality.
+    This forms the `view` within the MVVM pattern.
+	- `<your-feature>_model.dart`: Implements the provider and integrates with backend services to
+    support your page's functionality. This forms the `view-model` within the MVVM pattern.
 - Export your page for use in the installer by adding it to `apps/ubuntu_bootstrap/lib/pages.dart`
 - Add your page to the installation steps by adding it as an enum to `InstallationStep` in 
 `apps/ubuntu_bootstrap/lib/app/installation_step.dart`. The order of the `InstallationStep` enums 
 determines the order they appear in the installation process.
 
+Not all wizard pages are standalone. For more complicated flows, instead of adding a page, an 
+embedded wizard can be added to `InstallationStep`. These embedded wizards house their own wizard
+steps, and may share state between multiple pages. See `StorageWizard` in
+`apps/ubuntu_bootstrap/lib/pages/storage/storage_wizard.dart`
+
 ## Add your service
 - Under `apps/ubuntu_bootstrap/lib/services`, create a new file `<your-feature>_service.dart`
 - Within this file, define the backend service that supports your page, and will be called to by 
-your model.
+your model. This forms the `model` within the MVVM pattern.
 - Export your service for use by your model by adding it to
 `apps/ubuntu_bootstrap/lib/services.dart`
 - Register your service for use in the installer by adding a statement 
@@ -52,4 +65,3 @@ break all integration tests.
 To fix this, add a new `Future<void> test<your-feature>Page()` function to 
 `UbuntuBootstrapPageTester` in the `/packages/ubuntu_provision_test/lib/src/bootstrap_tester.dart`
 file. Adding this function in order to each integration test should fix the failing tests.
-

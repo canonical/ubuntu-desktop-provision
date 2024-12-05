@@ -15,10 +15,17 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 /// New pages must be added as additional enums to integrate into the workflow.
 ///
 /// Properties:
-/// - `discreteStep`: Indicates whether the step is displayed as a discrete wizard step.
-/// - `wizardStep`: Specifies if the step is part of the wizard flow.
+/// - `discreteStep`: Indicates whether the step is displayed as a discrete wizard step. Discrete 
+/// steps get their own circle progress indicator at the bottom of the window.
+/// - `wizardStep`: Specifies if the step is part of the wizard flow. Wizard steps appear with 
+/// circle progress indicators and the default step navigation at the bottom of the window.
 /// - `required`: Marks the step as mandatory in the workflow.
 /// - `allowedToHide`: Determines if the step can be conditionally hidden.
+///
+/// References:
+/// - [A discrete, wizard step](https://github.com/canonical/ubuntu-desktop-provision-screenshots/blob/main/bootstrap/light/accessibility.png)
+/// - [A non-discrete, wizard step](https://github.com/canonical/ubuntu-desktop-provision-screenshots/blob/main/bootstrap/light/rst.png)
+/// - [A non-discrete, non-wizard step](https://github.com/canonical/ubuntu-desktop-provision-screenshots/blob/main/bootstrap/light/install-0.png)
 enum InstallationStep with RouteName {
   loading(
     LoadingPage.new,
