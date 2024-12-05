@@ -46,6 +46,8 @@ void main() {
     await tester.testLocalePage(language: language);
     await expectLocale(locale);
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage(layout: language);
@@ -95,6 +97,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -133,6 +137,8 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
 
     await tester.testAccessibilityPage();
 
@@ -186,6 +192,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -235,6 +243,8 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
 
     await tester.testAccessibilityPage();
 
@@ -295,6 +305,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -352,6 +364,8 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
 
     await tester.testAccessibilityPage();
 
@@ -417,6 +431,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -480,6 +496,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -509,6 +527,8 @@ void main() {
 
     await tester.testLocalePage();
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage();
@@ -530,6 +550,8 @@ void main() {
       ]),
     );
     await tester.pumpAndSettle();
+
+    await tester.testLandscapePage();
 
     await tester.testNetworkPage();
 

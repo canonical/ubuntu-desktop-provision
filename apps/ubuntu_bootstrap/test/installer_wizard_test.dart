@@ -65,6 +65,8 @@ void main() {
   tearDown(resetAllServices);
 
   testWidgets('try ubuntu', (tester) async {
+    // final landscapeModel = buildLandscapeModel();
+    // final tokenNotifier = buildTokenNotifier();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -103,6 +105,10 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.byType(LocalePage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(LandscapePage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -207,6 +213,10 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
+    expect(find.byType(LandscapePage), findsOneWidget);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     expect(find.byType(AccessibilityPage), findsOneWidget);
 
     await tester.tapNext();
@@ -294,6 +304,8 @@ void main() {
     );
     await tester.pumpAndSettle();
 
+    await tester.tapNext();
+    await tester.pumpAndSettle();
     await tester.tapNext();
     await tester.pumpAndSettle();
     await tester.tapNext();
@@ -436,6 +448,10 @@ void main() {
     final context = tester.element(find.byType(Wizard));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
+    await tester.pumpAndSettle();
+    expect(find.byType(LandscapePage), findsOneWidget);
+
+    await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(AccessibilityPage), findsOneWidget);
 
