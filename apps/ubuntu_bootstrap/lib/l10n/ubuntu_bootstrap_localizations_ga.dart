@@ -360,6 +360,14 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.';
 
   @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+
+  @override
   String get installationTypeManual => 'Suiteáil láimhe';
 
   @override

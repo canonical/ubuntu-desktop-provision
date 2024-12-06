@@ -360,6 +360,14 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'Вы можаце выбіраць аперацыйную сістэму падчас загрузкі.';
 
   @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+
+  @override
   String get installationTypeManual => 'Усталяванне ўручную';
 
   @override

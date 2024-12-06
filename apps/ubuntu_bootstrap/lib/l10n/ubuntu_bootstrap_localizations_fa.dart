@@ -360,6 +360,14 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'سندها، آهنگ‌ها و دیگرپرونده‌های شخصی حفظ خواهند شد. هر بار که رایانه روشن می‌شود می‌توانید بگزینید که کدام سیستم‌عامل را می‌خواهید.';
 
   @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+
+  @override
   String get installationTypeManual => 'افرازش دستی';
 
   @override

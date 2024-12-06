@@ -360,6 +360,14 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'Kiválaszthatja az operációs rendszert a rendszerindítás során.';
 
   @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+
+  @override
   String get installationTypeManual => 'Kézi telepítés';
 
   @override

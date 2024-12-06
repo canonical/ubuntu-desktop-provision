@@ -360,6 +360,14 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => '문서, 음악, 및 다른 개인 파일이 그대로 유지됩니다. 컴퓨터를 시작할 때 마다 원하는 운영체제를 선택하실 수 있습니다.';
 
   @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+
+  @override
   String get installationTypeManual => '수동 파티셔닝';
 
   @override

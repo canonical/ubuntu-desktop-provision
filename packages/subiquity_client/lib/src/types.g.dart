@@ -1219,6 +1219,34 @@ Map<String, dynamic> _$$GuidedStorageTargetResizeImplToJson(
       r'$type': instance.$type,
     };
 
+_$GuidedStorageTargetEraseInstallImpl
+    _$$GuidedStorageTargetEraseInstallImplFromJson(Map<String, dynamic> json) =>
+        _$GuidedStorageTargetEraseInstallImpl(
+          diskId: json['disk_id'] as String,
+          partitionNumber: (json['partition_number'] as num).toInt(),
+          allowed: (json['allowed'] as List<dynamic>?)
+                  ?.map((e) => $enumDecode(_$GuidedCapabilityEnumMap, e))
+                  .toList() ??
+              const [],
+          disallowed: (json['disallowed'] as List<dynamic>?)
+                  ?.map((e) => GuidedDisallowedCapability.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList() ??
+              const [],
+          $type: json[r'$type'] as String?,
+        );
+
+Map<String, dynamic> _$$GuidedStorageTargetEraseInstallImplToJson(
+        _$GuidedStorageTargetEraseInstallImpl instance) =>
+    <String, dynamic>{
+      'disk_id': instance.diskId,
+      'partition_number': instance.partitionNumber,
+      'allowed':
+          instance.allowed.map((e) => _$GuidedCapabilityEnumMap[e]!).toList(),
+      'disallowed': instance.disallowed.map((e) => e.toJson()).toList(),
+      r'$type': instance.$type,
+    };
+
 _$GuidedStorageTargetUseGapImpl _$$GuidedStorageTargetUseGapImplFromJson(
         Map<String, dynamic> json) =>
     _$GuidedStorageTargetUseGapImpl(

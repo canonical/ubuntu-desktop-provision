@@ -74,12 +74,26 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             title: Text(
               formatAlongside(
                 lang,
-                ref.watch(flavorProvider).displayName,
+                flavor.displayName,
                 model.existingOS ?? [],
               ),
             ),
             subtitle: Text(lang.installationTypeAlongsideInfo),
           ),
+        if (model.canEraseAndInstall)
+          ...model.getEraseInstallOsNames().indexed.map(
+                (elem) => _InstallationTypeTile(
+                  storageType: StorageType.eraseAndInstall,
+                  eraseInstallIndex: elem.$1,
+                  title: Text(
+                    lang.installationTypeEraseAndInstall(
+                      elem.$2,
+                      flavor.displayName,
+                    ),
+                  ),
+                  subtitle: Text(lang.installationTypeAlongsideInfo),
+                ),
+              ),
         if (model.canEraseDisk) ...[
           _InstallationTypeTile(
             storageType: StorageType.erase,
@@ -152,9 +166,11 @@ class _InstallationTypeTile extends ConsumerWidget {
     required this.title,
     this.subtitle,
     this.trailing,
+    this.eraseInstallIndex,
   });
 
   final StorageType storageType;
+  final int? eraseInstallIndex;
   final Widget title;
   final Widget? subtitle;
   final Widget? trailing;
@@ -173,9 +189,12 @@ class _InstallationTypeTile extends ConsumerWidget {
         ),
         contentPadding: kWizardTilePadding,
         isThreeLine: true,
-        value: storageType,
-        groupValue: model.type,
-        onChanged: (value) => model.type = value,
+        value: (storageType, eraseInstallIndex),
+        groupValue: (model.type, model.eraseInstallIndex),
+        onChanged: (value) {
+          model.type = value?.$1;
+          model.eraseInstallIndex = value?.$2;
+        },
       ),
     );
   }

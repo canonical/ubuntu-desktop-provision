@@ -34,6 +34,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final type = ref.watch(storageModelProvider.select((m) => m.type));
 
+    // TODO: is there another page we need to add in here for erase&install?
     final routes = {
       InstallationStep.storage.route: WizardRoute(
         builder: (_) => StoragePage(),
