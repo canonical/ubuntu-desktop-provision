@@ -26,12 +26,8 @@ mixin _$ErrorReportRef {
   bool get seen => throw _privateConstructorUsedError;
   String? get oopsId => throw _privateConstructorUsedError;
 
-  /// Serializes this ErrorReportRef to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ErrorReportRef
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ErrorReportRefCopyWith<ErrorReportRef> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,8 +56,6 @@ class _$ErrorReportRefCopyWithImpl<$Res, $Val extends ErrorReportRef>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ErrorReportRef
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,8 +114,6 @@ class __$$ErrorReportRefImplCopyWithImpl<$Res>
       _$ErrorReportRefImpl _value, $Res Function(_$ErrorReportRefImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ErrorReportRef
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -197,13 +189,11 @@ class _$ErrorReportRefImpl implements _ErrorReportRef {
             (identical(other.oopsId, oopsId) || other.oopsId == oopsId));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, state, base, kind, seen, oopsId);
 
-  /// Create a copy of ErrorReportRef
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorReportRefImplCopyWith<_$ErrorReportRefImpl> get copyWith =>
@@ -239,11 +229,8 @@ abstract class _ErrorReportRef implements ErrorReportRef {
   bool get seen;
   @override
   String? get oopsId;
-
-  /// Create a copy of ErrorReportRef
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ErrorReportRefImplCopyWith<_$ErrorReportRefImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -258,12 +245,8 @@ mixin _$NonReportableError {
   String get message => throw _privateConstructorUsedError;
   String? get details => throw _privateConstructorUsedError;
 
-  /// Serializes this NonReportableError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of NonReportableError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $NonReportableErrorCopyWith<NonReportableError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -287,8 +270,6 @@ class _$NonReportableErrorCopyWithImpl<$Res, $Val extends NonReportableError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of NonReportableError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -332,8 +313,6 @@ class __$$NonReportableErrorImplCopyWithImpl<$Res>
       $Res Function(_$NonReportableErrorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NonReportableError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -389,13 +368,11 @@ class _$NonReportableErrorImpl implements _NonReportableError {
             (identical(other.details, details) || other.details == details));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, cause, message, details);
 
-  /// Create a copy of NonReportableError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NonReportableErrorImplCopyWith<_$NonReportableErrorImpl> get copyWith =>
@@ -425,11 +402,8 @@ abstract class _NonReportableError implements NonReportableError {
   String get message;
   @override
   String? get details;
-
-  /// Create a copy of NonReportableError
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NonReportableErrorImplCopyWith<_$NonReportableErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -451,12 +425,8 @@ mixin _$ApplicationStatus {
   String get logSyslogId => throw _privateConstructorUsedError;
   String get eventSyslogId => throw _privateConstructorUsedError;
 
-  /// Serializes this ApplicationStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ApplicationStatusCopyWith<ApplicationStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -492,8 +462,6 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -547,8 +515,6 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
     ) as $Val);
   }
 
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ErrorReportRefCopyWith<$Res>? get error {
@@ -561,8 +527,6 @@ class _$ApplicationStatusCopyWithImpl<$Res, $Val extends ApplicationStatus>
     });
   }
 
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NonReportableErrorCopyWith<$Res>? get nonreportableError {
@@ -610,8 +574,6 @@ class __$$ApplicationStatusImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationStatusImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -730,7 +692,7 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
                 other.eventSyslogId == eventSyslogId));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -744,9 +706,7 @@ class _$ApplicationStatusImpl implements _ApplicationStatus {
       logSyslogId,
       eventSyslogId);
 
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationStatusImplCopyWith<_$ApplicationStatusImpl> get copyWith =>
@@ -794,11 +754,8 @@ abstract class _ApplicationStatus implements ApplicationStatus {
   String get logSyslogId;
   @override
   String get eventSyslogId;
-
-  /// Create a copy of ApplicationStatus
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ApplicationStatusImplCopyWith<_$ApplicationStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -812,12 +769,8 @@ mixin _$KeyFingerprint {
   String get keytype => throw _privateConstructorUsedError;
   String get fingerprint => throw _privateConstructorUsedError;
 
-  /// Serializes this KeyFingerprint to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeyFingerprint
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeyFingerprintCopyWith<KeyFingerprint> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -841,8 +794,6 @@ class _$KeyFingerprintCopyWithImpl<$Res, $Val extends KeyFingerprint>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeyFingerprint
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -881,8 +832,6 @@ class __$$KeyFingerprintImplCopyWithImpl<$Res>
       _$KeyFingerprintImpl _value, $Res Function(_$KeyFingerprintImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeyFingerprint
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -931,13 +880,11 @@ class _$KeyFingerprintImpl implements _KeyFingerprint {
                 other.fingerprint == fingerprint));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, keytype, fingerprint);
 
-  /// Create a copy of KeyFingerprint
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeyFingerprintImplCopyWith<_$KeyFingerprintImpl> get copyWith =>
@@ -964,11 +911,8 @@ abstract class _KeyFingerprint implements KeyFingerprint {
   String get keytype;
   @override
   String get fingerprint;
-
-  /// Create a copy of KeyFingerprint
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeyFingerprintImplCopyWith<_$KeyFingerprintImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -988,12 +932,8 @@ mixin _$LiveSessionSSHInfo {
   List<KeyFingerprint> get hostKeyFingerprints =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this LiveSessionSSHInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of LiveSessionSSHInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $LiveSessionSSHInfoCopyWith<LiveSessionSSHInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1023,8 +963,6 @@ class _$LiveSessionSSHInfoCopyWithImpl<$Res, $Val extends LiveSessionSSHInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LiveSessionSSHInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1089,8 +1027,6 @@ class __$$LiveSessionSSHInfoImplCopyWithImpl<$Res>
       $Res Function(_$LiveSessionSSHInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LiveSessionSSHInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1202,7 +1138,7 @@ class _$LiveSessionSSHInfoImpl implements _LiveSessionSSHInfo {
                 .equals(other._hostKeyFingerprints, _hostKeyFingerprints));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1213,9 +1149,7 @@ class _$LiveSessionSSHInfoImpl implements _LiveSessionSSHInfo {
       const DeepCollectionEquality().hash(_ips),
       const DeepCollectionEquality().hash(_hostKeyFingerprints));
 
-  /// Create a copy of LiveSessionSSHInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LiveSessionSSHInfoImplCopyWith<_$LiveSessionSSHInfoImpl> get copyWith =>
@@ -1255,11 +1189,8 @@ abstract class _LiveSessionSSHInfo implements LiveSessionSSHInfo {
   List<String> get ips;
   @override
   List<KeyFingerprint> get hostKeyFingerprints;
-
-  /// Create a copy of LiveSessionSSHInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LiveSessionSSHInfoImplCopyWith<_$LiveSessionSSHInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1274,12 +1205,8 @@ mixin _$RefreshStatus {
   String get currentSnapVersion => throw _privateConstructorUsedError;
   String get newSnapVersion => throw _privateConstructorUsedError;
 
-  /// Serializes this RefreshStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RefreshStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RefreshStatusCopyWith<RefreshStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1306,8 +1233,6 @@ class _$RefreshStatusCopyWithImpl<$Res, $Val extends RefreshStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RefreshStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1354,8 +1279,6 @@ class __$$RefreshStatusImplCopyWithImpl<$Res>
       _$RefreshStatusImpl _value, $Res Function(_$RefreshStatusImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RefreshStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1418,14 +1341,12 @@ class _$RefreshStatusImpl implements _RefreshStatus {
                 other.newSnapVersion == newSnapVersion));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, availability, currentSnapVersion, newSnapVersion);
 
-  /// Create a copy of RefreshStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
@@ -1454,11 +1375,8 @@ abstract class _RefreshStatus implements RefreshStatus {
   String get currentSnapVersion;
   @override
   String get newSnapVersion;
-
-  /// Create a copy of RefreshStatus
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1528,8 +1446,6 @@ mixin _$AnyStep {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this AnyStep to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -1548,9 +1464,6 @@ class _$AnyStepCopyWithImpl<$Res, $Val extends AnyStep>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1570,8 +1483,6 @@ class __$$StepPressKeyImplCopyWithImpl<$Res>
       _$StepPressKeyImpl _value, $Res Function(_$StepPressKeyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1639,16 +1550,14 @@ class _$StepPressKeyImpl implements StepPressKey {
             const DeepCollectionEquality().equals(other._keycodes, _keycodes));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_symbols),
       const DeepCollectionEquality().hash(_keycodes));
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StepPressKeyImplCopyWith<_$StepPressKeyImpl> get copyWith =>
@@ -1744,10 +1653,7 @@ abstract class StepPressKey implements AnyStep {
 
   List<String> get symbols;
   Map<int, String> get keycodes;
-
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StepPressKeyImplCopyWith<_$StepPressKeyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1769,8 +1675,6 @@ class __$$StepKeyPresentImplCopyWithImpl<$Res>
       _$StepKeyPresentImpl _value, $Res Function(_$StepKeyPresentImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1833,13 +1737,11 @@ class _$StepKeyPresentImpl implements StepKeyPresent {
             (identical(other.no, no) || other.no == no));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, symbol, yes, no);
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StepKeyPresentImplCopyWith<_$StepKeyPresentImpl> get copyWith =>
@@ -1938,10 +1840,7 @@ abstract class StepKeyPresent implements AnyStep {
   String get symbol;
   String get yes;
   String get no;
-
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StepKeyPresentImplCopyWith<_$StepKeyPresentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1963,8 +1862,6 @@ class __$$StepResultImplCopyWithImpl<$Res>
       _$StepResultImpl _value, $Res Function(_$StepResultImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2016,13 +1913,11 @@ class _$StepResultImpl implements StepResult {
             (identical(other.variant, variant) || other.variant == variant));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, layout, variant);
 
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StepResultImplCopyWith<_$StepResultImpl> get copyWith =>
@@ -2118,10 +2013,7 @@ abstract class StepResult implements AnyStep {
 
   String get layout;
   String get variant;
-
-  /// Create a copy of AnyStep
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StepResultImplCopyWith<_$StepResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2136,12 +2028,8 @@ mixin _$KeyboardSetting {
   String get variant => throw _privateConstructorUsedError;
   String? get toggle => throw _privateConstructorUsedError;
 
-  /// Serializes this KeyboardSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeyboardSetting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeyboardSettingCopyWith<KeyboardSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2165,8 +2053,6 @@ class _$KeyboardSettingCopyWithImpl<$Res, $Val extends KeyboardSetting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeyboardSetting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2210,8 +2096,6 @@ class __$$KeyboardSettingImplCopyWithImpl<$Res>
       _$KeyboardSettingImpl _value, $Res Function(_$KeyboardSettingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeyboardSetting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2268,13 +2152,11 @@ class _$KeyboardSettingImpl implements _KeyboardSetting {
             (identical(other.toggle, toggle) || other.toggle == toggle));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, layout, variant, toggle);
 
-  /// Create a copy of KeyboardSetting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeyboardSettingImplCopyWith<_$KeyboardSettingImpl> get copyWith =>
@@ -2304,11 +2186,8 @@ abstract class _KeyboardSetting implements KeyboardSetting {
   String get variant;
   @override
   String? get toggle;
-
-  /// Create a copy of KeyboardSetting
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeyboardSettingImplCopyWith<_$KeyboardSettingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2322,12 +2201,8 @@ mixin _$KeyboardVariant {
   String get code => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
-  /// Serializes this KeyboardVariant to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeyboardVariant
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeyboardVariantCopyWith<KeyboardVariant> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2351,8 +2226,6 @@ class _$KeyboardVariantCopyWithImpl<$Res, $Val extends KeyboardVariant>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeyboardVariant
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2391,8 +2264,6 @@ class __$$KeyboardVariantImplCopyWithImpl<$Res>
       _$KeyboardVariantImpl _value, $Res Function(_$KeyboardVariantImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeyboardVariant
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2439,13 +2310,11 @@ class _$KeyboardVariantImpl implements _KeyboardVariant {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, code, name);
 
-  /// Create a copy of KeyboardVariant
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeyboardVariantImplCopyWith<_$KeyboardVariantImpl> get copyWith =>
@@ -2472,11 +2341,8 @@ abstract class _KeyboardVariant implements KeyboardVariant {
   String get code;
   @override
   String get name;
-
-  /// Create a copy of KeyboardVariant
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeyboardVariantImplCopyWith<_$KeyboardVariantImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2491,12 +2357,8 @@ mixin _$KeyboardLayout {
   String get name => throw _privateConstructorUsedError;
   List<KeyboardVariant> get variants => throw _privateConstructorUsedError;
 
-  /// Serializes this KeyboardLayout to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeyboardLayout
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeyboardLayoutCopyWith<KeyboardLayout> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2520,8 +2382,6 @@ class _$KeyboardLayoutCopyWithImpl<$Res, $Val extends KeyboardLayout>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeyboardLayout
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2565,8 +2425,6 @@ class __$$KeyboardLayoutImplCopyWithImpl<$Res>
       _$KeyboardLayoutImpl _value, $Res Function(_$KeyboardLayoutImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeyboardLayout
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2630,14 +2488,12 @@ class _$KeyboardLayoutImpl implements _KeyboardLayout {
             const DeepCollectionEquality().equals(other._variants, _variants));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, code, name, const DeepCollectionEquality().hash(_variants));
 
-  /// Create a copy of KeyboardLayout
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeyboardLayoutImplCopyWith<_$KeyboardLayoutImpl> get copyWith =>
@@ -2667,11 +2523,8 @@ abstract class _KeyboardLayout implements KeyboardLayout {
   String get name;
   @override
   List<KeyboardVariant> get variants;
-
-  /// Create a copy of KeyboardLayout
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeyboardLayoutImplCopyWith<_$KeyboardLayoutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2685,12 +2538,8 @@ mixin _$KeyboardSetup {
   KeyboardSetting get setting => throw _privateConstructorUsedError;
   List<KeyboardLayout> get layouts => throw _privateConstructorUsedError;
 
-  /// Serializes this KeyboardSetup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $KeyboardSetupCopyWith<KeyboardSetup> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2716,8 +2565,6 @@ class _$KeyboardSetupCopyWithImpl<$Res, $Val extends KeyboardSetup>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2736,8 +2583,6 @@ class _$KeyboardSetupCopyWithImpl<$Res, $Val extends KeyboardSetup>
     ) as $Val);
   }
 
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KeyboardSettingCopyWith<$Res> get setting {
@@ -2769,8 +2614,6 @@ class __$$KeyboardSetupImplCopyWithImpl<$Res>
       _$KeyboardSetupImpl _value, $Res Function(_$KeyboardSetupImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2824,14 +2667,12 @@ class _$KeyboardSetupImpl implements _KeyboardSetup {
             const DeepCollectionEquality().equals(other._layouts, _layouts));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, setting, const DeepCollectionEquality().hash(_layouts));
 
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$KeyboardSetupImplCopyWith<_$KeyboardSetupImpl> get copyWith =>
@@ -2857,11 +2698,8 @@ abstract class _KeyboardSetup implements KeyboardSetup {
   KeyboardSetting get setting;
   @override
   List<KeyboardLayout> get layouts;
-
-  /// Create a copy of KeyboardSetup
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$KeyboardSetupImplCopyWith<_$KeyboardSetupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2880,12 +2718,8 @@ mixin _$SourceSelection {
   @JsonKey(name: 'default')
   bool get isDefault => throw _privateConstructorUsedError;
 
-  /// Serializes this SourceSelection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SourceSelection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SourceSelectionCopyWith<SourceSelection> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2915,8 +2749,6 @@ class _$SourceSelectionCopyWithImpl<$Res, $Val extends SourceSelection>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SourceSelection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2981,8 +2813,6 @@ class __$$SourceSelectionImplCopyWithImpl<$Res>
       _$SourceSelectionImpl _value, $Res Function(_$SourceSelectionImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SourceSelection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3070,14 +2900,12 @@ class _$SourceSelectionImpl implements _SourceSelection {
                 other.isDefault == isDefault));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, description, id, size, variant, isDefault);
 
-  /// Create a copy of SourceSelection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SourceSelectionImplCopyWith<_$SourceSelectionImpl> get copyWith =>
@@ -3118,11 +2946,8 @@ abstract class _SourceSelection implements SourceSelection {
   @override
   @JsonKey(name: 'default')
   bool get isDefault;
-
-  /// Create a copy of SourceSelection
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SourceSelectionImplCopyWith<_$SourceSelectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3138,12 +2963,8 @@ mixin _$SourceSelectionAndSetting {
   String get currentId => throw _privateConstructorUsedError;
   bool get searchDrivers => throw _privateConstructorUsedError;
 
-  /// Serializes this SourceSelectionAndSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SourceSelectionAndSetting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SourceSelectionAndSettingCopyWith<SourceSelectionAndSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3169,8 +2990,6 @@ class _$SourceSelectionAndSettingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SourceSelectionAndSetting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3218,8 +3037,6 @@ class __$$SourceSelectionAndSettingImplCopyWithImpl<$Res>
       $Res Function(_$SourceSelectionAndSettingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SourceSelectionAndSetting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3286,14 +3103,12 @@ class _$SourceSelectionAndSettingImpl implements _SourceSelectionAndSetting {
                 other.searchDrivers == searchDrivers));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_sources), currentId, searchDrivers);
 
-  /// Create a copy of SourceSelectionAndSetting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SourceSelectionAndSettingImplCopyWith<_$SourceSelectionAndSettingImpl>
@@ -3323,11 +3138,8 @@ abstract class _SourceSelectionAndSetting implements SourceSelectionAndSetting {
   String get currentId;
   @override
   bool get searchDrivers;
-
-  /// Create a copy of SourceSelectionAndSetting
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SourceSelectionAndSettingImplCopyWith<_$SourceSelectionAndSettingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3347,12 +3159,8 @@ mixin _$ZdevInfo {
   bool get failed => throw _privateConstructorUsedError;
   String get names => throw _privateConstructorUsedError;
 
-  /// Serializes this ZdevInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ZdevInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ZdevInfoCopyWith<ZdevInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3383,8 +3191,6 @@ class _$ZdevInfoCopyWithImpl<$Res, $Val extends ZdevInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ZdevInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3461,8 +3267,6 @@ class __$$ZdevInfoImplCopyWithImpl<$Res>
       _$ZdevInfoImpl _value, $Res Function(_$ZdevInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ZdevInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3565,14 +3369,12 @@ class _$ZdevInfoImpl implements _ZdevInfo {
             (identical(other.names, names) || other.names == names));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, on, exists, pers, auto, failed, names);
 
-  /// Create a copy of ZdevInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ZdevInfoImplCopyWith<_$ZdevInfoImpl> get copyWith =>
@@ -3616,11 +3418,8 @@ abstract class _ZdevInfo implements ZdevInfo {
   bool get failed;
   @override
   String get names;
-
-  /// Create a copy of ZdevInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ZdevInfoImplCopyWith<_$ZdevInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3635,12 +3434,8 @@ mixin _$NetworkStatus {
   PackageInstallState get wlanSupportInstallState =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this NetworkStatus to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of NetworkStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $NetworkStatusCopyWith<NetworkStatus> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3665,8 +3460,6 @@ class _$NetworkStatusCopyWithImpl<$Res, $Val extends NetworkStatus>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of NetworkStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3706,8 +3499,6 @@ class __$$NetworkStatusImplCopyWithImpl<$Res>
       _$NetworkStatusImpl _value, $Res Function(_$NetworkStatusImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NetworkStatus
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3765,14 +3556,12 @@ class _$NetworkStatusImpl implements _NetworkStatus {
                 other.wlanSupportInstallState == wlanSupportInstallState));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_devices), wlanSupportInstallState);
 
-  /// Create a copy of NetworkStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NetworkStatusImplCopyWith<_$NetworkStatusImpl> get copyWith =>
@@ -3799,11 +3588,8 @@ abstract class _NetworkStatus implements NetworkStatus {
   List<NetDevInfo> get devices;
   @override
   PackageInstallState get wlanSupportInstallState;
-
-  /// Create a copy of NetworkStatus
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NetworkStatusImplCopyWith<_$NetworkStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3819,12 +3605,8 @@ mixin _$IdentityData {
   String get cryptedPassword => throw _privateConstructorUsedError;
   String get hostname => throw _privateConstructorUsedError;
 
-  /// Serializes this IdentityData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of IdentityData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $IdentityDataCopyWith<IdentityData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3852,8 +3634,6 @@ class _$IdentityDataCopyWithImpl<$Res, $Val extends IdentityData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of IdentityData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3906,8 +3686,6 @@ class __$$IdentityDataImplCopyWithImpl<$Res>
       _$IdentityDataImpl _value, $Res Function(_$IdentityDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of IdentityData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3982,14 +3760,12 @@ class _$IdentityDataImpl implements _IdentityData {
                 other.hostname == hostname));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, realname, username, cryptedPassword, hostname);
 
-  /// Create a copy of IdentityData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$IdentityDataImplCopyWith<_$IdentityDataImpl> get copyWith =>
@@ -4021,11 +3797,8 @@ abstract class _IdentityData implements IdentityData {
   String get cryptedPassword;
   @override
   String get hostname;
-
-  /// Create a copy of IdentityData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$IdentityDataImplCopyWith<_$IdentityDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4040,12 +3813,8 @@ mixin _$SSHData {
   bool get allowPw => throw _privateConstructorUsedError;
   List<String> get authorizedKeys => throw _privateConstructorUsedError;
 
-  /// Serializes this SSHData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SSHData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SSHDataCopyWith<SSHData> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4067,8 +3836,6 @@ class _$SSHDataCopyWithImpl<$Res, $Val extends SSHData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SSHData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4111,8 +3878,6 @@ class __$$SSHDataImplCopyWithImpl<$Res>
       _$SSHDataImpl _value, $Res Function(_$SSHDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SSHData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4179,14 +3944,12 @@ class _$SSHDataImpl implements _SSHData {
                 .equals(other._authorizedKeys, _authorizedKeys));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, installServer, allowPw,
       const DeepCollectionEquality().hash(_authorizedKeys));
 
-  /// Create a copy of SSHData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SSHDataImplCopyWith<_$SSHDataImpl> get copyWith =>
@@ -4214,11 +3977,8 @@ abstract class _SSHData implements SSHData {
   bool get allowPw;
   @override
   List<String> get authorizedKeys;
-
-  /// Create a copy of SSHData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SSHDataImplCopyWith<_$SSHDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4234,12 +3994,8 @@ mixin _$SSHIdentity {
   String get keyComment => throw _privateConstructorUsedError;
   String get keyFingerprint => throw _privateConstructorUsedError;
 
-  /// Serializes this SSHIdentity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SSHIdentity
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SSHIdentityCopyWith<SSHIdentity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4264,8 +4020,6 @@ class _$SSHIdentityCopyWithImpl<$Res, $Val extends SSHIdentity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SSHIdentity
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4315,8 +4069,6 @@ class __$$SSHIdentityImplCopyWithImpl<$Res>
       _$SSHIdentityImpl _value, $Res Function(_$SSHIdentityImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SSHIdentity
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4385,14 +4137,12 @@ class _$SSHIdentityImpl implements _SSHIdentity {
                 other.keyFingerprint == keyFingerprint));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, keyType, key, keyComment, keyFingerprint);
 
-  /// Create a copy of SSHIdentity
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SSHIdentityImplCopyWith<_$SSHIdentityImpl> get copyWith =>
@@ -4424,11 +4174,8 @@ abstract class _SSHIdentity implements SSHIdentity {
   String get keyComment;
   @override
   String get keyFingerprint;
-
-  /// Create a copy of SSHIdentity
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SSHIdentityImplCopyWith<_$SSHIdentityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4443,12 +4190,8 @@ mixin _$SSHFetchIdResponse {
   List<SSHIdentity>? get identities => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
 
-  /// Serializes this SSHFetchIdResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SSHFetchIdResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SSHFetchIdResponseCopyWith<SSHFetchIdResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4473,8 +4216,6 @@ class _$SSHFetchIdResponseCopyWithImpl<$Res, $Val extends SSHFetchIdResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SSHFetchIdResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4519,8 +4260,6 @@ class __$$SSHFetchIdResponseImplCopyWithImpl<$Res>
       $Res Function(_$SSHFetchIdResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SSHFetchIdResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4588,14 +4327,12 @@ class _$SSHFetchIdResponseImpl implements _SSHFetchIdResponse {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, status,
       const DeepCollectionEquality().hash(_identities), error);
 
-  /// Create a copy of SSHFetchIdResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SSHFetchIdResponseImplCopyWith<_$SSHFetchIdResponseImpl> get copyWith =>
@@ -4625,11 +4362,8 @@ abstract class _SSHFetchIdResponse implements SSHFetchIdResponse {
   List<SSHIdentity>? get identities;
   @override
   String? get error;
-
-  /// Create a copy of SSHFetchIdResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SSHFetchIdResponseImplCopyWith<_$SSHFetchIdResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4647,12 +4381,8 @@ mixin _$ChannelSnapInfo {
   int get size => throw _privateConstructorUsedError;
   DateTime get releasedAt => throw _privateConstructorUsedError;
 
-  /// Serializes this ChannelSnapInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChannelSnapInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChannelSnapInfoCopyWith<ChannelSnapInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4682,8 +4412,6 @@ class _$ChannelSnapInfoCopyWithImpl<$Res, $Val extends ChannelSnapInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChannelSnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4748,8 +4476,6 @@ class __$$ChannelSnapInfoImplCopyWithImpl<$Res>
       _$ChannelSnapInfoImpl _value, $Res Function(_$ChannelSnapInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChannelSnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4838,14 +4564,12 @@ class _$ChannelSnapInfoImpl implements _ChannelSnapInfo {
                 other.releasedAt == releasedAt));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, channelName, revision,
       confinement, version, size, releasedAt);
 
-  /// Create a copy of ChannelSnapInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChannelSnapInfoImplCopyWith<_$ChannelSnapInfoImpl> get copyWith =>
@@ -4884,11 +4608,8 @@ abstract class _ChannelSnapInfo implements ChannelSnapInfo {
   int get size;
   @override
   DateTime get releasedAt;
-
-  /// Create a copy of ChannelSnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChannelSnapInfoImplCopyWith<_$ChannelSnapInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4909,12 +4630,8 @@ mixin _$SnapInfo {
   String get license => throw _privateConstructorUsedError;
   List<ChannelSnapInfo> get channels => throw _privateConstructorUsedError;
 
-  /// Serializes this SnapInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SnapInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SnapInfoCopyWith<SnapInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4946,8 +4663,6 @@ class _$SnapInfoCopyWithImpl<$Res, $Val extends SnapInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5030,8 +4745,6 @@ class __$$SnapInfoImplCopyWithImpl<$Res>
       _$SnapInfoImpl _value, $Res Function(_$SnapInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5161,7 +4874,7 @@ class _$SnapInfoImpl implements _SnapInfo {
             const DeepCollectionEquality().equals(other._channels, _channels));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5175,9 +4888,7 @@ class _$SnapInfoImpl implements _SnapInfo {
       license,
       const DeepCollectionEquality().hash(_channels));
 
-  /// Create a copy of SnapInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SnapInfoImplCopyWith<_$SnapInfoImpl> get copyWith =>
@@ -5224,11 +4935,8 @@ abstract class _SnapInfo implements SnapInfo {
   String get license;
   @override
   List<ChannelSnapInfo> get channels;
-
-  /// Create a copy of SnapInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SnapInfoImplCopyWith<_$SnapInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5244,12 +4952,8 @@ mixin _$DriversResponse {
   bool get localOnly => throw _privateConstructorUsedError;
   bool get searchDrivers => throw _privateConstructorUsedError;
 
-  /// Serializes this DriversResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DriversResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DriversResponseCopyWith<DriversResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5277,8 +4981,6 @@ class _$DriversResponseCopyWithImpl<$Res, $Val extends DriversResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DriversResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5331,8 +5033,6 @@ class __$$DriversResponseImplCopyWithImpl<$Res>
       _$DriversResponseImpl _value, $Res Function(_$DriversResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DriversResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5410,14 +5110,12 @@ class _$DriversResponseImpl implements _DriversResponse {
                 other.searchDrivers == searchDrivers));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, install,
       const DeepCollectionEquality().hash(_drivers), localOnly, searchDrivers);
 
-  /// Create a copy of DriversResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DriversResponseImplCopyWith<_$DriversResponseImpl> get copyWith =>
@@ -5450,11 +5148,8 @@ abstract class _DriversResponse implements DriversResponse {
   bool get localOnly;
   @override
   bool get searchDrivers;
-
-  /// Create a copy of DriversResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DriversResponseImplCopyWith<_$DriversResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5467,12 +5162,8 @@ OEMResponse _$OEMResponseFromJson(Map<String, dynamic> json) {
 mixin _$OEMResponse {
   List<String>? get metapackages => throw _privateConstructorUsedError;
 
-  /// Serializes this OEMResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of OEMResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $OEMResponseCopyWith<OEMResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5496,8 +5187,6 @@ class _$OEMResponseCopyWithImpl<$Res, $Val extends OEMResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of OEMResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5531,8 +5220,6 @@ class __$$OEMResponseImplCopyWithImpl<$Res>
       _$OEMResponseImpl _value, $Res Function(_$OEMResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OEMResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5580,14 +5267,12 @@ class _$OEMResponseImpl implements _OEMResponse {
                 .equals(other._metapackages, _metapackages));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_metapackages));
 
-  /// Create a copy of OEMResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$OEMResponseImplCopyWith<_$OEMResponseImpl> get copyWith =>
@@ -5610,11 +5295,8 @@ abstract class _OEMResponse implements OEMResponse {
 
   @override
   List<String>? get metapackages;
-
-  /// Create a copy of OEMResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$OEMResponseImplCopyWith<_$OEMResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5627,12 +5309,8 @@ CodecsData _$CodecsDataFromJson(Map<String, dynamic> json) {
 mixin _$CodecsData {
   bool get install => throw _privateConstructorUsedError;
 
-  /// Serializes this CodecsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CodecsData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CodecsDataCopyWith<CodecsData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5656,8 +5334,6 @@ class _$CodecsDataCopyWithImpl<$Res, $Val extends CodecsData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CodecsData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5691,8 +5367,6 @@ class __$$CodecsDataImplCopyWithImpl<$Res>
       _$CodecsDataImpl _value, $Res Function(_$CodecsDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CodecsData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5731,13 +5405,11 @@ class _$CodecsDataImpl implements _CodecsData {
             (identical(other.install, install) || other.install == install));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, install);
 
-  /// Create a copy of CodecsData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CodecsDataImplCopyWith<_$CodecsDataImpl> get copyWith =>
@@ -5759,11 +5431,8 @@ abstract class _CodecsData implements CodecsData {
 
   @override
   bool get install;
-
-  /// Create a copy of CodecsData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CodecsDataImplCopyWith<_$CodecsDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5776,12 +5445,8 @@ DriversPayload _$DriversPayloadFromJson(Map<String, dynamic> json) {
 mixin _$DriversPayload {
   bool get install => throw _privateConstructorUsedError;
 
-  /// Serializes this DriversPayload to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DriversPayload
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DriversPayloadCopyWith<DriversPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5805,8 +5470,6 @@ class _$DriversPayloadCopyWithImpl<$Res, $Val extends DriversPayload>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DriversPayload
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5840,8 +5503,6 @@ class __$$DriversPayloadImplCopyWithImpl<$Res>
       _$DriversPayloadImpl _value, $Res Function(_$DriversPayloadImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DriversPayload
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5880,13 +5541,11 @@ class _$DriversPayloadImpl implements _DriversPayload {
             (identical(other.install, install) || other.install == install));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, install);
 
-  /// Create a copy of DriversPayload
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DriversPayloadImplCopyWith<_$DriversPayloadImpl> get copyWith =>
@@ -5910,11 +5569,8 @@ abstract class _DriversPayload implements DriversPayload {
 
   @override
   bool get install;
-
-  /// Create a copy of DriversPayload
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DriversPayloadImplCopyWith<_$DriversPayloadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5929,12 +5585,8 @@ mixin _$SnapSelection {
   String get channel => throw _privateConstructorUsedError;
   bool get classic => throw _privateConstructorUsedError;
 
-  /// Serializes this SnapSelection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SnapSelection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SnapSelectionCopyWith<SnapSelection> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5958,8 +5610,6 @@ class _$SnapSelectionCopyWithImpl<$Res, $Val extends SnapSelection>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SnapSelection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6003,8 +5653,6 @@ class __$$SnapSelectionImplCopyWithImpl<$Res>
       _$SnapSelectionImpl _value, $Res Function(_$SnapSelectionImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SnapSelection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6061,13 +5709,11 @@ class _$SnapSelectionImpl implements _SnapSelection {
             (identical(other.classic, classic) || other.classic == classic));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, channel, classic);
 
-  /// Create a copy of SnapSelection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SnapSelectionImplCopyWith<_$SnapSelectionImpl> get copyWith =>
@@ -6096,11 +5742,8 @@ abstract class _SnapSelection implements SnapSelection {
   String get channel;
   @override
   bool get classic;
-
-  /// Create a copy of SnapSelection
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SnapSelectionImplCopyWith<_$SnapSelectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6115,12 +5758,8 @@ mixin _$SnapListResponse {
   List<SnapInfo> get snaps => throw _privateConstructorUsedError;
   List<SnapSelection> get selections => throw _privateConstructorUsedError;
 
-  /// Serializes this SnapListResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SnapListResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SnapListResponseCopyWith<SnapListResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6147,8 +5786,6 @@ class _$SnapListResponseCopyWithImpl<$Res, $Val extends SnapListResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SnapListResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6195,8 +5832,6 @@ class __$$SnapListResponseImplCopyWithImpl<$Res>
       $Res Function(_$SnapListResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SnapListResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6270,7 +5905,7 @@ class _$SnapListResponseImpl implements _SnapListResponse {
                 .equals(other._selections, _selections));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6278,9 +5913,7 @@ class _$SnapListResponseImpl implements _SnapListResponse {
       const DeepCollectionEquality().hash(_snaps),
       const DeepCollectionEquality().hash(_selections));
 
-  /// Create a copy of SnapListResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SnapListResponseImplCopyWith<_$SnapListResponseImpl> get copyWith =>
@@ -6310,11 +5943,8 @@ abstract class _SnapListResponse implements SnapListResponse {
   List<SnapInfo> get snaps;
   @override
   List<SnapSelection> get selections;
-
-  /// Create a copy of SnapListResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SnapListResponseImplCopyWith<_$SnapListResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6328,12 +5958,8 @@ mixin _$TimeZoneInfo {
   String get timezone => throw _privateConstructorUsedError;
   bool get fromGeoip => throw _privateConstructorUsedError;
 
-  /// Serializes this TimeZoneInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TimeZoneInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TimeZoneInfoCopyWith<TimeZoneInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6357,8 +5983,6 @@ class _$TimeZoneInfoCopyWithImpl<$Res, $Val extends TimeZoneInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TimeZoneInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6397,8 +6021,6 @@ class __$$TimeZoneInfoImplCopyWithImpl<$Res>
       _$TimeZoneInfoImpl _value, $Res Function(_$TimeZoneInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TimeZoneInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6447,13 +6069,11 @@ class _$TimeZoneInfoImpl implements _TimeZoneInfo {
                 other.fromGeoip == fromGeoip));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, timezone, fromGeoip);
 
-  /// Create a copy of TimeZoneInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TimeZoneInfoImplCopyWith<_$TimeZoneInfoImpl> get copyWith =>
@@ -6479,11 +6099,8 @@ abstract class _TimeZoneInfo implements TimeZoneInfo {
   String get timezone;
   @override
   bool get fromGeoip;
-
-  /// Create a copy of TimeZoneInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TimeZoneInfoImplCopyWith<_$TimeZoneInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6496,12 +6113,8 @@ UbuntuProInfo _$UbuntuProInfoFromJson(Map<String, dynamic> json) {
 mixin _$UbuntuProInfo {
   String get token => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProInfoCopyWith<UbuntuProInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6525,8 +6138,6 @@ class _$UbuntuProInfoCopyWithImpl<$Res, $Val extends UbuntuProInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6560,8 +6171,6 @@ class __$$UbuntuProInfoImplCopyWithImpl<$Res>
       _$UbuntuProInfoImpl _value, $Res Function(_$UbuntuProInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6600,13 +6209,11 @@ class _$UbuntuProInfoImpl implements _UbuntuProInfo {
             (identical(other.token, token) || other.token == token));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, token);
 
-  /// Create a copy of UbuntuProInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProInfoImplCopyWith<_$UbuntuProInfoImpl> get copyWith =>
@@ -6629,11 +6236,8 @@ abstract class _UbuntuProInfo implements UbuntuProInfo {
 
   @override
   String get token;
-
-  /// Create a copy of UbuntuProInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProInfoImplCopyWith<_$UbuntuProInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6647,12 +6251,8 @@ mixin _$UbuntuProResponse {
   String get token => throw _privateConstructorUsedError;
   bool get hasNetwork => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProResponseCopyWith<UbuntuProResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6676,8 +6276,6 @@ class _$UbuntuProResponseCopyWithImpl<$Res, $Val extends UbuntuProResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6716,8 +6314,6 @@ class __$$UbuntuProResponseImplCopyWithImpl<$Res>
       $Res Function(_$UbuntuProResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6766,13 +6362,11 @@ class _$UbuntuProResponseImpl implements _UbuntuProResponse {
                 other.hasNetwork == hasNetwork));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, token, hasNetwork);
 
-  /// Create a copy of UbuntuProResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProResponseImplCopyWith<_$UbuntuProResponseImpl> get copyWith =>
@@ -6799,11 +6393,8 @@ abstract class _UbuntuProResponse implements UbuntuProResponse {
   String get token;
   @override
   bool get hasNetwork;
-
-  /// Create a copy of UbuntuProResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProResponseImplCopyWith<_$UbuntuProResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6818,12 +6409,8 @@ mixin _$UbuntuProGeneralInfo {
   int get universePackages => throw _privateConstructorUsedError;
   int get mainPackages => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProGeneralInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProGeneralInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProGeneralInfoCopyWith<UbuntuProGeneralInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6848,8 +6435,6 @@ class _$UbuntuProGeneralInfoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProGeneralInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6893,8 +6478,6 @@ class __$$UbuntuProGeneralInfoImplCopyWithImpl<$Res>
       $Res Function(_$UbuntuProGeneralInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProGeneralInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6955,14 +6538,12 @@ class _$UbuntuProGeneralInfoImpl implements _UbuntuProGeneralInfo {
                 other.mainPackages == mainPackages));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, eolEsmYear, universePackages, mainPackages);
 
-  /// Create a copy of UbuntuProGeneralInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProGeneralInfoImplCopyWith<_$UbuntuProGeneralInfoImpl>
@@ -6993,11 +6574,8 @@ abstract class _UbuntuProGeneralInfo implements UbuntuProGeneralInfo {
   int get universePackages;
   @override
   int get mainPackages;
-
-  /// Create a copy of UbuntuProGeneralInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProGeneralInfoImplCopyWith<_$UbuntuProGeneralInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7011,12 +6589,8 @@ mixin _$UPCSInitiateResponse {
   String get userCode => throw _privateConstructorUsedError;
   int get validitySeconds => throw _privateConstructorUsedError;
 
-  /// Serializes this UPCSInitiateResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UPCSInitiateResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UPCSInitiateResponseCopyWith<UPCSInitiateResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7041,8 +6615,6 @@ class _$UPCSInitiateResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UPCSInitiateResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7081,8 +6653,6 @@ class __$$UPCSInitiateResponseImplCopyWithImpl<$Res>
       $Res Function(_$UPCSInitiateResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UPCSInitiateResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7132,13 +6702,11 @@ class _$UPCSInitiateResponseImpl implements _UPCSInitiateResponse {
                 other.validitySeconds == validitySeconds));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, userCode, validitySeconds);
 
-  /// Create a copy of UPCSInitiateResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UPCSInitiateResponseImplCopyWith<_$UPCSInitiateResponseImpl>
@@ -7166,11 +6734,8 @@ abstract class _UPCSInitiateResponse implements UPCSInitiateResponse {
   String get userCode;
   @override
   int get validitySeconds;
-
-  /// Create a copy of UPCSInitiateResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UPCSInitiateResponseImplCopyWith<_$UPCSInitiateResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7184,12 +6749,8 @@ mixin _$UPCSWaitResponse {
   UPCSWaitStatus get status => throw _privateConstructorUsedError;
   String? get contractToken => throw _privateConstructorUsedError;
 
-  /// Serializes this UPCSWaitResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UPCSWaitResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UPCSWaitResponseCopyWith<UPCSWaitResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7213,8 +6774,6 @@ class _$UPCSWaitResponseCopyWithImpl<$Res, $Val extends UPCSWaitResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UPCSWaitResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7253,8 +6812,6 @@ class __$$UPCSWaitResponseImplCopyWithImpl<$Res>
       $Res Function(_$UPCSWaitResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UPCSWaitResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7303,13 +6860,11 @@ class _$UPCSWaitResponseImpl implements _UPCSWaitResponse {
                 other.contractToken == contractToken));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, status, contractToken);
 
-  /// Create a copy of UPCSWaitResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UPCSWaitResponseImplCopyWith<_$UPCSWaitResponseImpl> get copyWith =>
@@ -7336,11 +6891,8 @@ abstract class _UPCSWaitResponse implements UPCSWaitResponse {
   UPCSWaitStatus get status;
   @override
   String? get contractToken;
-
-  /// Create a copy of UPCSWaitResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UPCSWaitResponseImplCopyWith<_$UPCSWaitResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7355,12 +6907,8 @@ mixin _$UbuntuProService {
   String get description => throw _privateConstructorUsedError;
   bool get autoEnabled => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProService to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProService
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProServiceCopyWith<UbuntuProService> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7384,8 +6932,6 @@ class _$UbuntuProServiceCopyWithImpl<$Res, $Val extends UbuntuProService>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProService
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7429,8 +6975,6 @@ class __$$UbuntuProServiceImplCopyWithImpl<$Res>
       $Res Function(_$UbuntuProServiceImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProService
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7490,13 +7034,11 @@ class _$UbuntuProServiceImpl implements _UbuntuProService {
                 other.autoEnabled == autoEnabled));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, description, autoEnabled);
 
-  /// Create a copy of UbuntuProService
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProServiceImplCopyWith<_$UbuntuProServiceImpl> get copyWith =>
@@ -7526,11 +7068,8 @@ abstract class _UbuntuProService implements UbuntuProService {
   String get description;
   @override
   bool get autoEnabled;
-
-  /// Create a copy of UbuntuProService
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProServiceImplCopyWith<_$UbuntuProServiceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7547,12 +7086,8 @@ mixin _$UbuntuProSubscription {
   String get contractToken => throw _privateConstructorUsedError;
   List<UbuntuProService> get services => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProSubscription to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProSubscription
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProSubscriptionCopyWith<UbuntuProSubscription> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7581,8 +7116,6 @@ class _$UbuntuProSubscriptionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProSubscription
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7637,8 +7170,6 @@ class __$$UbuntuProSubscriptionImplCopyWithImpl<$Res>
       $Res Function(_$UbuntuProSubscriptionImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProSubscription
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7714,14 +7245,12 @@ class _$UbuntuProSubscriptionImpl implements _UbuntuProSubscription {
             const DeepCollectionEquality().equals(other._services, _services));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, contractName, accountName,
       contractToken, const DeepCollectionEquality().hash(_services));
 
-  /// Create a copy of UbuntuProSubscription
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProSubscriptionImplCopyWith<_$UbuntuProSubscriptionImpl>
@@ -7755,11 +7284,8 @@ abstract class _UbuntuProSubscription implements UbuntuProSubscription {
   String get contractToken;
   @override
   List<UbuntuProService> get services;
-
-  /// Create a copy of UbuntuProSubscription
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProSubscriptionImplCopyWith<_$UbuntuProSubscriptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7774,12 +7300,8 @@ mixin _$UbuntuProCheckTokenAnswer {
   UbuntuProCheckTokenStatus get status => throw _privateConstructorUsedError;
   UbuntuProSubscription? get subscription => throw _privateConstructorUsedError;
 
-  /// Serializes this UbuntuProCheckTokenAnswer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UbuntuProCheckTokenAnswerCopyWith<UbuntuProCheckTokenAnswer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7807,8 +7329,6 @@ class _$UbuntuProCheckTokenAnswerCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7827,8 +7347,6 @@ class _$UbuntuProCheckTokenAnswerCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UbuntuProSubscriptionCopyWith<$Res>? get subscription {
@@ -7868,8 +7386,6 @@ class __$$UbuntuProCheckTokenAnswerImplCopyWithImpl<$Res>
       $Res Function(_$UbuntuProCheckTokenAnswerImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7918,13 +7434,11 @@ class _$UbuntuProCheckTokenAnswerImpl implements _UbuntuProCheckTokenAnswer {
                 other.subscription == subscription));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, status, subscription);
 
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuProCheckTokenAnswerImplCopyWith<_$UbuntuProCheckTokenAnswerImpl>
@@ -7952,11 +7466,8 @@ abstract class _UbuntuProCheckTokenAnswer implements UbuntuProCheckTokenAnswer {
   UbuntuProCheckTokenStatus get status;
   @override
   UbuntuProSubscription? get subscription;
-
-  /// Create a copy of UbuntuProCheckTokenAnswer
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UbuntuProCheckTokenAnswerImplCopyWith<_$UbuntuProCheckTokenAnswerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7971,12 +7482,8 @@ mixin _$TaskProgress {
   int get done => throw _privateConstructorUsedError;
   int get total => throw _privateConstructorUsedError;
 
-  /// Serializes this TaskProgress to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TaskProgress
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TaskProgressCopyWith<TaskProgress> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8000,8 +7507,6 @@ class _$TaskProgressCopyWithImpl<$Res, $Val extends TaskProgress>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TaskProgress
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8045,8 +7550,6 @@ class __$$TaskProgressImplCopyWithImpl<$Res>
       _$TaskProgressImpl _value, $Res Function(_$TaskProgressImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TaskProgress
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8104,13 +7607,11 @@ class _$TaskProgressImpl implements _TaskProgress {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, label, done, total);
 
-  /// Create a copy of TaskProgress
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TaskProgressImplCopyWith<_$TaskProgressImpl> get copyWith =>
@@ -8139,11 +7640,8 @@ abstract class _TaskProgress implements TaskProgress {
   int get done;
   @override
   int get total;
-
-  /// Create a copy of TaskProgress
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TaskProgressImplCopyWith<_$TaskProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8160,12 +7658,8 @@ mixin _$Task {
   TaskStatus get status => throw _privateConstructorUsedError;
   TaskProgress get progress => throw _privateConstructorUsedError;
 
-  /// Serializes this Task to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TaskCopyWith<Task> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8194,8 +7688,6 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8229,8 +7721,6 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
     ) as $Val);
   }
 
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TaskProgressCopyWith<$Res> get progress {
@@ -8265,8 +7755,6 @@ class __$$TaskImplCopyWithImpl<$Res>
   __$$TaskImplCopyWithImpl(_$TaskImpl _value, $Res Function(_$TaskImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8343,14 +7831,12 @@ class _$TaskImpl implements _Task {
                 other.progress == progress));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, kind, summary, status, progress);
 
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
@@ -8384,11 +7870,8 @@ abstract class _Task implements Task {
   TaskStatus get status;
   @override
   TaskProgress get progress;
-
-  /// Create a copy of Task
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8408,12 +7891,8 @@ mixin _$Change {
   String? get err => throw _privateConstructorUsedError;
   dynamic get data => throw _privateConstructorUsedError;
 
-  /// Serializes this Change to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Change
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangeCopyWith<Change> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8443,8 +7922,6 @@ class _$ChangeCopyWithImpl<$Res, $Val extends Change>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Change
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8520,8 +7997,6 @@ class __$$ChangeImplCopyWithImpl<$Res>
       _$ChangeImpl _value, $Res Function(_$ChangeImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Change
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8631,7 +8106,7 @@ class _$ChangeImpl implements _Change {
             const DeepCollectionEquality().equals(other.data, data));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8644,9 +8119,7 @@ class _$ChangeImpl implements _Change {
       err,
       const DeepCollectionEquality().hash(data));
 
-  /// Create a copy of Change
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeImplCopyWith<_$ChangeImpl> get copyWith =>
@@ -8689,11 +8162,8 @@ abstract class _Change implements Change {
   String? get err;
   @override
   dynamic get data;
-
-  /// Create a copy of Change
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangeImplCopyWith<_$ChangeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8708,12 +8178,8 @@ mixin _$MirrorCheckResponse {
   MirrorCheckStatus get status => throw _privateConstructorUsedError;
   String get output => throw _privateConstructorUsedError;
 
-  /// Serializes this MirrorCheckResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MirrorCheckResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MirrorCheckResponseCopyWith<MirrorCheckResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8737,8 +8203,6 @@ class _$MirrorCheckResponseCopyWithImpl<$Res, $Val extends MirrorCheckResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MirrorCheckResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8782,8 +8246,6 @@ class __$$MirrorCheckResponseImplCopyWithImpl<$Res>
       $Res Function(_$MirrorCheckResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MirrorCheckResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8839,13 +8301,11 @@ class _$MirrorCheckResponseImpl implements _MirrorCheckResponse {
             (identical(other.output, output) || other.output == output));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, url, status, output);
 
-  /// Create a copy of MirrorCheckResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MirrorCheckResponseImplCopyWith<_$MirrorCheckResponseImpl> get copyWith =>
@@ -8875,11 +8335,8 @@ abstract class _MirrorCheckResponse implements MirrorCheckResponse {
   MirrorCheckStatus get status;
   @override
   String get output;
-
-  /// Create a copy of MirrorCheckResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MirrorCheckResponseImplCopyWith<_$MirrorCheckResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8895,12 +8352,8 @@ mixin _$MirrorPost {
   String? get staged => throw _privateConstructorUsedError;
   bool? get useDuringInstallation => throw _privateConstructorUsedError;
 
-  /// Serializes this MirrorPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MirrorPost
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MirrorPostCopyWith<MirrorPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8928,8 +8381,6 @@ class _$MirrorPostCopyWithImpl<$Res, $Val extends MirrorPost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MirrorPost
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8982,8 +8433,6 @@ class __$$MirrorPostImplCopyWithImpl<$Res>
       _$MirrorPostImpl _value, $Res Function(_$MirrorPostImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MirrorPost
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9061,7 +8510,7 @@ class _$MirrorPostImpl implements _MirrorPost {
                 other.useDuringInstallation == useDuringInstallation));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -9070,9 +8519,7 @@ class _$MirrorPostImpl implements _MirrorPost {
       staged,
       useDuringInstallation);
 
-  /// Create a copy of MirrorPost
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MirrorPostImplCopyWith<_$MirrorPostImpl> get copyWith =>
@@ -9104,11 +8551,8 @@ abstract class _MirrorPost implements MirrorPost {
   String? get staged;
   @override
   bool? get useDuringInstallation;
-
-  /// Create a copy of MirrorPost
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MirrorPostImplCopyWith<_$MirrorPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9125,12 +8569,8 @@ mixin _$MirrorGet {
   String? get staged => throw _privateConstructorUsedError;
   bool get useDuringInstallation => throw _privateConstructorUsedError;
 
-  /// Serializes this MirrorGet to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MirrorGet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MirrorGetCopyWith<MirrorGet> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9158,8 +8598,6 @@ class _$MirrorGetCopyWithImpl<$Res, $Val extends MirrorGet>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MirrorGet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9218,8 +8656,6 @@ class __$$MirrorGetImplCopyWithImpl<$Res>
       _$MirrorGetImpl _value, $Res Function(_$MirrorGetImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MirrorGet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9305,7 +8741,7 @@ class _$MirrorGetImpl implements _MirrorGet {
                 other.useDuringInstallation == useDuringInstallation));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -9315,9 +8751,7 @@ class _$MirrorGetImpl implements _MirrorGet {
       staged,
       useDuringInstallation);
 
-  /// Create a copy of MirrorGet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MirrorGetImplCopyWith<_$MirrorGetImpl> get copyWith =>
@@ -9352,11 +8786,8 @@ abstract class _MirrorGet implements MirrorGet {
   String? get staged;
   @override
   bool get useDuringInstallation;
-
-  /// Create a copy of MirrorGet
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MirrorGetImplCopyWith<_$MirrorGetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9371,12 +8802,8 @@ mixin _$AdConnectionInfo {
   String get domainName => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
-  /// Serializes this AdConnectionInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of AdConnectionInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AdConnectionInfoCopyWith<AdConnectionInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9400,8 +8827,6 @@ class _$AdConnectionInfoCopyWithImpl<$Res, $Val extends AdConnectionInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AdConnectionInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9445,8 +8870,6 @@ class __$$AdConnectionInfoImplCopyWithImpl<$Res>
       $Res Function(_$AdConnectionInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AdConnectionInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9508,13 +8931,11 @@ class _$AdConnectionInfoImpl implements _AdConnectionInfo {
                 other.password == password));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, adminName, domainName, password);
 
-  /// Create a copy of AdConnectionInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AdConnectionInfoImplCopyWith<_$AdConnectionInfoImpl> get copyWith =>
@@ -9544,11 +8965,8 @@ abstract class _AdConnectionInfo implements AdConnectionInfo {
   String get domainName;
   @override
   String get password;
-
-  /// Create a copy of AdConnectionInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AdConnectionInfoImplCopyWith<_$AdConnectionInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9565,12 +8983,8 @@ mixin _$OsProber {
   String? get subpath => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
 
-  /// Serializes this OsProber to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of OsProber
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $OsProberCopyWith<OsProber> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9598,8 +9012,6 @@ class _$OsProberCopyWithImpl<$Res, $Val extends OsProber>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of OsProber
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9658,8 +9070,6 @@ class __$$OsProberImplCopyWithImpl<$Res>
       _$OsProberImpl _value, $Res Function(_$OsProberImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of OsProber
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9735,14 +9145,12 @@ class _$OsProberImpl implements _OsProber {
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, long, label, type, subpath, version);
 
-  /// Create a copy of OsProber
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$OsProberImplCopyWith<_$OsProberImpl> get copyWith =>
@@ -9777,11 +9185,8 @@ abstract class _OsProber implements OsProber {
   String? get subpath;
   @override
   String? get version;
-
-  /// Create a copy of OsProber
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$OsProberImplCopyWith<_$OsProberImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9889,13 +9294,8 @@ mixin _$PartitionOrGap {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this PartitionOrGap to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PartitionOrGapCopyWith<PartitionOrGap> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9919,8 +9319,6 @@ class _$PartitionOrGapCopyWithImpl<$Res, $Val extends PartitionOrGap>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9976,8 +9374,6 @@ class __$$PartitionImplCopyWithImpl<$Res>
       _$PartitionImpl _value, $Res Function(_$PartitionImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10061,8 +9457,6 @@ class __$$PartitionImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OsProberCopyWith<$Res>? get os {
@@ -10176,7 +9570,7 @@ class _$PartitionImpl implements Partition {
             (identical(other.isInUse, isInUse) || other.isInUse == isInUse));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -10196,9 +9590,7 @@ class _$PartitionImpl implements Partition {
       path,
       isInUse);
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PartitionImplCopyWith<_$PartitionImpl> get copyWith =>
@@ -10391,11 +9783,8 @@ abstract class Partition implements PartitionOrGap {
   bool? get resize;
   String? get path;
   bool get isInUse;
-
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PartitionImplCopyWith<_$PartitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -10417,8 +9806,6 @@ class __$$GapImplCopyWithImpl<$Res>
   __$$GapImplCopyWithImpl(_$GapImpl _value, $Res Function(_$GapImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10481,13 +9868,11 @@ class _$GapImpl implements Gap {
             (identical(other.usable, usable) || other.usable == usable));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, offset, size, usable);
 
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GapImplCopyWith<_$GapImpl> get copyWith =>
@@ -10624,11 +10009,8 @@ abstract class Gap implements PartitionOrGap {
   @override
   int get size;
   GapUsable get usable;
-
-  /// Create a copy of PartitionOrGap
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GapImplCopyWith<_$GapImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -10642,12 +10024,8 @@ mixin _$ZFS {
   String get volume => throw _privateConstructorUsedError;
   Map<String, dynamic>? get properties => throw _privateConstructorUsedError;
 
-  /// Serializes this ZFS to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ZFS
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ZFSCopyWith<ZFS> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10668,8 +10046,6 @@ class _$ZFSCopyWithImpl<$Res, $Val extends ZFS> implements $ZFSCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ZFS
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10704,8 +10080,6 @@ class __$$ZFSImplCopyWithImpl<$Res> extends _$ZFSCopyWithImpl<$Res, _$ZFSImpl>
   __$$ZFSImplCopyWithImpl(_$ZFSImpl _value, $Res Function(_$ZFSImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ZFS
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10762,14 +10136,12 @@ class _$ZFSImpl implements _ZFS {
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, volume, const DeepCollectionEquality().hash(_properties));
 
-  /// Create a copy of ZFS
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ZFSImplCopyWith<_$ZFSImpl> get copyWith =>
@@ -10794,11 +10166,8 @@ abstract class _ZFS implements ZFS {
   String get volume;
   @override
   Map<String, dynamic>? get properties;
-
-  /// Create a copy of ZFS
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ZFSImplCopyWith<_$ZFSImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -10817,12 +10186,8 @@ mixin _$ZPool {
   Map<String, dynamic>? get fsProperties => throw _privateConstructorUsedError;
   bool? get defaultFeatures => throw _privateConstructorUsedError;
 
-  /// Serializes this ZPool to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ZPoolCopyWith<ZPool> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10852,8 +10217,6 @@ class _$ZPoolCopyWithImpl<$Res, $Val extends ZPool>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10892,8 +10255,6 @@ class _$ZPoolCopyWithImpl<$Res, $Val extends ZPool>
     ) as $Val);
   }
 
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ZFSCopyWith<$Res>? get zfses {
@@ -10934,8 +10295,6 @@ class __$$ZPoolImplCopyWithImpl<$Res>
       _$ZPoolImpl _value, $Res Function(_$ZPoolImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11043,7 +10402,7 @@ class _$ZPoolImpl implements _ZPool {
                 other.defaultFeatures == defaultFeatures));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -11054,9 +10413,7 @@ class _$ZPoolImpl implements _ZPool {
       const DeepCollectionEquality().hash(_fsProperties),
       defaultFeatures);
 
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ZPoolImplCopyWith<_$ZPoolImpl> get copyWith =>
@@ -11093,11 +10450,8 @@ abstract class _ZPool implements ZPool {
   Map<String, dynamic>? get fsProperties;
   @override
   bool? get defaultFeatures;
-
-  /// Create a copy of ZPool
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ZPoolImplCopyWith<_$ZPoolImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11124,12 +10478,8 @@ mixin _$Disk {
   String? get vendor => throw _privateConstructorUsedError;
   bool get hasInUsePartition => throw _privateConstructorUsedError;
 
-  /// Serializes this Disk to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Disk
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DiskCopyWith<Disk> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11166,8 +10516,6 @@ class _$DiskCopyWithImpl<$Res, $Val extends Disk>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Disk
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11284,8 +10632,6 @@ class __$$DiskImplCopyWithImpl<$Res>
   __$$DiskImplCopyWithImpl(_$DiskImpl _value, $Res Function(_$DiskImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Disk
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11473,7 +10819,7 @@ class _$DiskImpl implements _Disk {
                 other.hasInUsePartition == hasInUsePartition));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -11493,9 +10839,7 @@ class _$DiskImpl implements _Disk {
       vendor,
       hasInUsePartition);
 
-  /// Create a copy of Disk
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DiskImplCopyWith<_$DiskImpl> get copyWith =>
@@ -11559,11 +10903,8 @@ abstract class _Disk implements Disk {
   String? get vendor;
   @override
   bool get hasInUsePartition;
-
-  /// Create a copy of Disk
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DiskImplCopyWith<_$DiskImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11580,12 +10921,8 @@ mixin _$GuidedDisallowedCapability {
       throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
 
-  /// Serializes this GuidedDisallowedCapability to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GuidedDisallowedCapability
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GuidedDisallowedCapabilityCopyWith<GuidedDisallowedCapability>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -11614,8 +10951,6 @@ class _$GuidedDisallowedCapabilityCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GuidedDisallowedCapability
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11665,8 +11000,6 @@ class __$$GuidedDisallowedCapabilityImplCopyWithImpl<$Res>
       $Res Function(_$GuidedDisallowedCapabilityImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedDisallowedCapability
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11724,13 +11057,11 @@ class _$GuidedDisallowedCapabilityImpl implements _GuidedDisallowedCapability {
             (identical(other.message, message) || other.message == message));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, capability, reason, message);
 
-  /// Create a copy of GuidedDisallowedCapability
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedDisallowedCapabilityImplCopyWith<_$GuidedDisallowedCapabilityImpl>
@@ -11761,11 +11092,8 @@ abstract class _GuidedDisallowedCapability
   GuidedDisallowedCapabilityReason get reason;
   @override
   String? get message;
-
-  /// Create a copy of GuidedDisallowedCapability
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedDisallowedCapabilityImplCopyWith<_$GuidedDisallowedCapabilityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -11784,12 +11112,8 @@ mixin _$StorageResponse {
   Map<String, dynamic>? get dasd => throw _privateConstructorUsedError;
   int get storageVersion => throw _privateConstructorUsedError;
 
-  /// Serializes this StorageResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StorageResponseCopyWith<StorageResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11822,8 +11146,6 @@ class _$StorageResponseCopyWithImpl<$Res, $Val extends StorageResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11867,8 +11189,6 @@ class _$StorageResponseCopyWithImpl<$Res, $Val extends StorageResponse>
     ) as $Val);
   }
 
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ErrorReportRefCopyWith<$Res>? get errorReport {
@@ -11911,8 +11231,6 @@ class __$$StorageResponseImplCopyWithImpl<$Res>
       _$StorageResponseImpl _value, $Res Function(_$StorageResponseImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12038,7 +11356,7 @@ class _$StorageResponseImpl implements _StorageResponse {
                 other.storageVersion == storageVersion));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12050,9 +11368,7 @@ class _$StorageResponseImpl implements _StorageResponse {
       const DeepCollectionEquality().hash(_dasd),
       storageVersion);
 
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StorageResponseImplCopyWith<_$StorageResponseImpl> get copyWith =>
@@ -12094,11 +11410,8 @@ abstract class _StorageResponse implements StorageResponse {
   Map<String, dynamic>? get dasd;
   @override
   int get storageVersion;
-
-  /// Create a copy of StorageResponse
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StorageResponseImplCopyWith<_$StorageResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12116,12 +11429,8 @@ mixin _$StorageResponseV2 {
   bool? get needBoot => throw _privateConstructorUsedError;
   int? get installMinimumSize => throw _privateConstructorUsedError;
 
-  /// Serializes this StorageResponseV2 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $StorageResponseV2CopyWith<StorageResponseV2> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12153,8 +11462,6 @@ class _$StorageResponseV2CopyWithImpl<$Res, $Val extends StorageResponseV2>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12193,8 +11500,6 @@ class _$StorageResponseV2CopyWithImpl<$Res, $Val extends StorageResponseV2>
     ) as $Val);
   }
 
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ErrorReportRefCopyWith<$Res>? get errorReport {
@@ -12236,8 +11541,6 @@ class __$$StorageResponseV2ImplCopyWithImpl<$Res>
       $Res Function(_$StorageResponseV2Impl) _then)
       : super(_value, _then);
 
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12334,7 +11637,7 @@ class _$StorageResponseV2Impl implements _StorageResponseV2 {
                 other.installMinimumSize == installMinimumSize));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12345,9 +11648,7 @@ class _$StorageResponseV2Impl implements _StorageResponseV2 {
       needBoot,
       installMinimumSize);
 
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$StorageResponseV2ImplCopyWith<_$StorageResponseV2Impl> get copyWith =>
@@ -12386,11 +11687,8 @@ abstract class _StorageResponseV2 implements StorageResponseV2 {
   bool? get needBoot;
   @override
   int? get installMinimumSize;
-
-  /// Create a copy of StorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$StorageResponseV2ImplCopyWith<_$StorageResponseV2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12406,12 +11704,8 @@ mixin _$GuidedResizeValues {
   int get recommended => throw _privateConstructorUsedError;
   int get maximum => throw _privateConstructorUsedError;
 
-  /// Serializes this GuidedResizeValues to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GuidedResizeValues
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GuidedResizeValuesCopyWith<GuidedResizeValues> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12435,8 +11729,6 @@ class _$GuidedResizeValuesCopyWithImpl<$Res, $Val extends GuidedResizeValues>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GuidedResizeValues
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12485,8 +11777,6 @@ class __$$GuidedResizeValuesImplCopyWithImpl<$Res>
       $Res Function(_$GuidedResizeValuesImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedResizeValues
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12555,14 +11845,12 @@ class _$GuidedResizeValuesImpl implements _GuidedResizeValues {
             (identical(other.maximum, maximum) || other.maximum == maximum));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, installMax, minimum, recommended, maximum);
 
-  /// Create a copy of GuidedResizeValues
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedResizeValuesImplCopyWith<_$GuidedResizeValuesImpl> get copyWith =>
@@ -12595,11 +11883,8 @@ abstract class _GuidedResizeValues implements GuidedResizeValues {
   int get recommended;
   @override
   int get maximum;
-
-  /// Create a copy of GuidedResizeValues
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedResizeValuesImplCopyWith<_$GuidedResizeValuesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12610,6 +11895,8 @@ GuidedStorageTarget _$GuidedStorageTargetFromJson(Map<String, dynamic> json) {
       return GuidedStorageTargetReformat.fromJson(json);
     case 'GuidedStorageTargetResize':
       return GuidedStorageTargetResize.fromJson(json);
+    case 'GuidedStorageTargetEraseInstall':
+      return GuidedStorageTargetEraseInstall.fromJson(json);
     case 'GuidedStorageTargetUseGap':
       return GuidedStorageTargetUseGap.fromJson(json);
     case 'GuidedStorageTargetManual':
@@ -12643,6 +11930,12 @@ mixin _$GuidedStorageTarget {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -12667,6 +11960,12 @@ mixin _$GuidedStorageTarget {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12690,6 +11989,12 @@ mixin _$GuidedStorageTarget {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12703,6 +12008,8 @@ mixin _$GuidedStorageTarget {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) =>
@@ -12711,6 +12018,7 @@ mixin _$GuidedStorageTarget {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) =>
@@ -12719,18 +12027,14 @@ mixin _$GuidedStorageTarget {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this GuidedStorageTarget to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GuidedStorageTargetCopyWith<GuidedStorageTarget> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12756,8 +12060,6 @@ class _$GuidedStorageTargetCopyWithImpl<$Res, $Val extends GuidedStorageTarget>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12802,8 +12104,6 @@ class __$$GuidedStorageTargetReformatImplCopyWithImpl<$Res>
       $Res Function(_$GuidedStorageTargetReformatImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12883,7 +12183,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
                 .equals(other._disallowed, _disallowed));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12891,9 +12191,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_disallowed));
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedStorageTargetReformatImplCopyWith<_$GuidedStorageTargetReformatImpl>
@@ -12916,6 +12214,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
     required TResult Function(
             String diskId,
             Gap gap,
@@ -12945,6 +12249,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12971,6 +12281,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12990,6 +12306,8 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13001,6 +12319,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13012,6 +12331,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13045,11 +12365,8 @@ abstract class GuidedStorageTargetReformat implements GuidedStorageTarget {
   List<GuidedCapability> get allowed;
   @override
   List<GuidedDisallowedCapability> get disallowed;
-
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedStorageTargetReformatImplCopyWith<_$GuidedStorageTargetReformatImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13084,8 +12401,6 @@ class __$$GuidedStorageTargetResizeImplCopyWithImpl<$Res>
       $Res Function(_$GuidedStorageTargetResizeImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13211,7 +12526,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
                 .equals(other._disallowed, _disallowed));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13224,9 +12539,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_disallowed));
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedStorageTargetResizeImplCopyWith<_$GuidedStorageTargetResizeImpl>
@@ -13249,6 +12562,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
     required TResult Function(
             String diskId,
             Gap gap,
@@ -13279,6 +12598,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13306,6 +12631,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13326,6 +12657,8 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13337,6 +12670,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13348,6 +12682,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13391,12 +12726,318 @@ abstract class GuidedStorageTargetResize implements GuidedStorageTarget {
   List<GuidedCapability> get allowed;
   @override
   List<GuidedDisallowedCapability> get disallowed;
-
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedStorageTargetResizeImplCopyWith<_$GuidedStorageTargetResizeImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GuidedStorageTargetEraseInstallImplCopyWith<$Res>
+    implements $GuidedStorageTargetCopyWith<$Res> {
+  factory _$$GuidedStorageTargetEraseInstallImplCopyWith(
+          _$GuidedStorageTargetEraseInstallImpl value,
+          $Res Function(_$GuidedStorageTargetEraseInstallImpl) then) =
+      __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String diskId,
+      int partitionNumber,
+      List<GuidedCapability> allowed,
+      List<GuidedDisallowedCapability> disallowed});
+}
+
+/// @nodoc
+class __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<$Res>
+    extends _$GuidedStorageTargetCopyWithImpl<$Res,
+        _$GuidedStorageTargetEraseInstallImpl>
+    implements _$$GuidedStorageTargetEraseInstallImplCopyWith<$Res> {
+  __$$GuidedStorageTargetEraseInstallImplCopyWithImpl(
+      _$GuidedStorageTargetEraseInstallImpl _value,
+      $Res Function(_$GuidedStorageTargetEraseInstallImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? diskId = null,
+    Object? partitionNumber = null,
+    Object? allowed = null,
+    Object? disallowed = null,
+  }) {
+    return _then(_$GuidedStorageTargetEraseInstallImpl(
+      diskId: null == diskId
+          ? _value.diskId
+          : diskId // ignore: cast_nullable_to_non_nullable
+              as String,
+      partitionNumber: null == partitionNumber
+          ? _value.partitionNumber
+          : partitionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+      allowed: null == allowed
+          ? _value._allowed
+          : allowed // ignore: cast_nullable_to_non_nullable
+              as List<GuidedCapability>,
+      disallowed: null == disallowed
+          ? _value._disallowed
+          : disallowed // ignore: cast_nullable_to_non_nullable
+              as List<GuidedDisallowedCapability>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GuidedStorageTargetEraseInstallImpl
+    implements GuidedStorageTargetEraseInstall {
+  const _$GuidedStorageTargetEraseInstallImpl(
+      {required this.diskId,
+      required this.partitionNumber,
+      final List<GuidedCapability> allowed = const [],
+      final List<GuidedDisallowedCapability> disallowed = const [],
+      final String? $type})
+      : _allowed = allowed,
+        _disallowed = disallowed,
+        $type = $type ?? 'GuidedStorageTargetEraseInstall';
+
+  factory _$GuidedStorageTargetEraseInstallImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GuidedStorageTargetEraseInstallImplFromJson(json);
+
+  @override
+  final String diskId;
+  @override
+  final int partitionNumber;
+  final List<GuidedCapability> _allowed;
+  @override
+  @JsonKey()
+  List<GuidedCapability> get allowed {
+    if (_allowed is EqualUnmodifiableListView) return _allowed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_allowed);
+  }
+
+  final List<GuidedDisallowedCapability> _disallowed;
+  @override
+  @JsonKey()
+  List<GuidedDisallowedCapability> get disallowed {
+    if (_disallowed is EqualUnmodifiableListView) return _disallowed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_disallowed);
+  }
+
+  @JsonKey(name: '\$type')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'GuidedStorageTarget.eraseInstall(diskId: $diskId, partitionNumber: $partitionNumber, allowed: $allowed, disallowed: $disallowed)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GuidedStorageTargetEraseInstallImpl &&
+            (identical(other.diskId, diskId) || other.diskId == diskId) &&
+            (identical(other.partitionNumber, partitionNumber) ||
+                other.partitionNumber == partitionNumber) &&
+            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality()
+                .equals(other._disallowed, _disallowed));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      diskId,
+      partitionNumber,
+      const DeepCollectionEquality().hash(_allowed),
+      const DeepCollectionEquality().hash(_disallowed));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GuidedStorageTargetEraseInstallImplCopyWith<
+          _$GuidedStorageTargetEraseInstallImpl>
+      get copyWith => __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<
+          _$GuidedStorageTargetEraseInstallImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        reformat,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
+            Gap gap,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        useGap,
+    required TResult Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        manual,
+  }) {
+    return eraseInstall(diskId, partitionNumber, allowed, disallowed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        reformat,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
+    TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        useGap,
+    TResult? Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        manual,
+  }) {
+    return eraseInstall?.call(diskId, partitionNumber, allowed, disallowed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        reformat,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
+    TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        useGap,
+    TResult Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        manual,
+    required TResult orElse(),
+  }) {
+    if (eraseInstall != null) {
+      return eraseInstall(diskId, partitionNumber, allowed, disallowed);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GuidedStorageTargetReformat value) reformat,
+    required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
+    required TResult Function(GuidedStorageTargetUseGap value) useGap,
+    required TResult Function(GuidedStorageTargetManual value) manual,
+  }) {
+    return eraseInstall(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GuidedStorageTargetReformat value)? reformat,
+    TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
+    TResult? Function(GuidedStorageTargetUseGap value)? useGap,
+    TResult? Function(GuidedStorageTargetManual value)? manual,
+  }) {
+    return eraseInstall?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GuidedStorageTargetReformat value)? reformat,
+    TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
+    TResult Function(GuidedStorageTargetUseGap value)? useGap,
+    TResult Function(GuidedStorageTargetManual value)? manual,
+    required TResult orElse(),
+  }) {
+    if (eraseInstall != null) {
+      return eraseInstall(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GuidedStorageTargetEraseInstallImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class GuidedStorageTargetEraseInstall implements GuidedStorageTarget {
+  const factory GuidedStorageTargetEraseInstall(
+          {required final String diskId,
+          required final int partitionNumber,
+          final List<GuidedCapability> allowed,
+          final List<GuidedDisallowedCapability> disallowed}) =
+      _$GuidedStorageTargetEraseInstallImpl;
+
+  factory GuidedStorageTargetEraseInstall.fromJson(Map<String, dynamic> json) =
+      _$GuidedStorageTargetEraseInstallImpl.fromJson;
+
+  String get diskId;
+  int get partitionNumber;
+  @override
+  List<GuidedCapability> get allowed;
+  @override
+  List<GuidedDisallowedCapability> get disallowed;
+  @override
+  @JsonKey(ignore: true)
+  _$$GuidedStorageTargetEraseInstallImplCopyWith<
+          _$GuidedStorageTargetEraseInstallImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13426,8 +13067,6 @@ class __$$GuidedStorageTargetUseGapImplCopyWithImpl<$Res>
       $Res Function(_$GuidedStorageTargetUseGapImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13515,7 +13154,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
                 .equals(other._disallowed, _disallowed));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13524,9 +13163,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_disallowed));
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedStorageTargetUseGapImplCopyWith<_$GuidedStorageTargetUseGapImpl>
@@ -13549,6 +13186,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
     required TResult Function(
             String diskId,
             Gap gap,
@@ -13578,6 +13221,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13604,6 +13253,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13623,6 +13278,8 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13634,6 +13291,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13645,6 +13303,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13680,11 +13339,8 @@ abstract class GuidedStorageTargetUseGap implements GuidedStorageTarget {
   List<GuidedCapability> get allowed;
   @override
   List<GuidedDisallowedCapability> get disallowed;
-
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedStorageTargetUseGapImplCopyWith<_$GuidedStorageTargetUseGapImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13713,8 +13369,6 @@ class __$$GuidedStorageTargetManualImplCopyWithImpl<$Res>
       $Res Function(_$GuidedStorageTargetManualImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13783,16 +13437,14 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
                 .equals(other._disallowed, _disallowed));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_disallowed));
 
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedStorageTargetManualImplCopyWith<_$GuidedStorageTargetManualImpl>
@@ -13815,6 +13467,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
     required TResult Function(
             String diskId,
             Gap gap,
@@ -13844,6 +13502,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13870,6 +13534,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13889,6 +13559,8 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13900,6 +13572,7 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13911,6 +13584,7 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13942,11 +13616,8 @@ abstract class GuidedStorageTargetManual implements GuidedStorageTarget {
   List<GuidedCapability> get allowed;
   @override
   List<GuidedDisallowedCapability> get disallowed;
-
-  /// Create a copy of GuidedStorageTarget
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedStorageTargetManualImplCopyWith<_$GuidedStorageTargetManualImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13960,12 +13631,8 @@ mixin _$RecoveryKey {
   String? get liveLocation => throw _privateConstructorUsedError;
   String? get backupLocation => throw _privateConstructorUsedError;
 
-  /// Serializes this RecoveryKey to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RecoveryKey
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RecoveryKeyCopyWith<RecoveryKey> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -13989,8 +13656,6 @@ class _$RecoveryKeyCopyWithImpl<$Res, $Val extends RecoveryKey>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RecoveryKey
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14029,8 +13694,6 @@ class __$$RecoveryKeyImplCopyWithImpl<$Res>
       _$RecoveryKeyImpl _value, $Res Function(_$RecoveryKeyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RecoveryKey
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14079,13 +13742,11 @@ class _$RecoveryKeyImpl implements _RecoveryKey {
                 other.backupLocation == backupLocation));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, liveLocation, backupLocation);
 
-  /// Create a copy of RecoveryKey
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RecoveryKeyImplCopyWith<_$RecoveryKeyImpl> get copyWith =>
@@ -14111,11 +13772,8 @@ abstract class _RecoveryKey implements RecoveryKey {
   String? get liveLocation;
   @override
   String? get backupLocation;
-
-  /// Create a copy of RecoveryKey
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RecoveryKeyImplCopyWith<_$RecoveryKeyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14134,12 +13792,8 @@ mixin _$GuidedChoiceV2 {
   bool get resetPartition => throw _privateConstructorUsedError;
   int? get resetPartitionSize => throw _privateConstructorUsedError;
 
-  /// Serializes this GuidedChoiceV2 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GuidedChoiceV2CopyWith<GuidedChoiceV2> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14173,8 +13827,6 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14218,8 +13870,6 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
     ) as $Val);
   }
 
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GuidedStorageTargetCopyWith<$Res> get target {
@@ -14228,8 +13878,6 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
     });
   }
 
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RecoveryKeyCopyWith<$Res>? get recoveryKey {
@@ -14274,8 +13922,6 @@ class __$$GuidedChoiceV2ImplCopyWithImpl<$Res>
       _$GuidedChoiceV2Impl _value, $Res Function(_$GuidedChoiceV2Impl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14376,14 +14022,12 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
                 other.resetPartitionSize == resetPartitionSize));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, target, capability, password,
       recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
 
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedChoiceV2ImplCopyWith<_$GuidedChoiceV2Impl> get copyWith =>
@@ -14425,11 +14069,8 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
   bool get resetPartition;
   @override
   int? get resetPartitionSize;
-
-  /// Create a copy of GuidedChoiceV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedChoiceV2ImplCopyWith<_$GuidedChoiceV2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14446,12 +14087,8 @@ mixin _$GuidedStorageResponseV2 {
   GuidedChoiceV2? get configured => throw _privateConstructorUsedError;
   List<GuidedStorageTarget> get targets => throw _privateConstructorUsedError;
 
-  /// Serializes this GuidedStorageResponseV2 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GuidedStorageResponseV2CopyWith<GuidedStorageResponseV2> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14483,8 +14120,6 @@ class _$GuidedStorageResponseV2CopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14513,8 +14148,6 @@ class _$GuidedStorageResponseV2CopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ErrorReportRefCopyWith<$Res>? get errorReport {
@@ -14527,8 +14160,6 @@ class _$GuidedStorageResponseV2CopyWithImpl<$Res,
     });
   }
 
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GuidedChoiceV2CopyWith<$Res>? get configured {
@@ -14573,8 +14204,6 @@ class __$$GuidedStorageResponseV2ImplCopyWithImpl<$Res>
       $Res Function(_$GuidedStorageResponseV2Impl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14650,14 +14279,12 @@ class _$GuidedStorageResponseV2Impl implements _GuidedStorageResponseV2 {
             const DeepCollectionEquality().equals(other._targets, _targets));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, status, errorReport, configured,
       const DeepCollectionEquality().hash(_targets));
 
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidedStorageResponseV2ImplCopyWith<_$GuidedStorageResponseV2Impl>
@@ -14690,11 +14317,8 @@ abstract class _GuidedStorageResponseV2 implements GuidedStorageResponseV2 {
   GuidedChoiceV2? get configured;
   @override
   List<GuidedStorageTarget> get targets;
-
-  /// Create a copy of GuidedStorageResponseV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GuidedStorageResponseV2ImplCopyWith<_$GuidedStorageResponseV2Impl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -14709,12 +14333,8 @@ mixin _$AddPartitionV2 {
   Partition get partition => throw _privateConstructorUsedError;
   Gap get gap => throw _privateConstructorUsedError;
 
-  /// Serializes this AddPartitionV2 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of AddPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AddPartitionV2CopyWith<AddPartitionV2> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14738,8 +14358,6 @@ class _$AddPartitionV2CopyWithImpl<$Res, $Val extends AddPartitionV2>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14783,8 +14401,6 @@ class __$$AddPartitionV2ImplCopyWithImpl<$Res>
       _$AddPartitionV2Impl _value, $Res Function(_$AddPartitionV2Impl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14840,7 +14456,7 @@ class _$AddPartitionV2Impl implements _AddPartitionV2 {
             const DeepCollectionEquality().equals(other.gap, gap));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -14848,9 +14464,7 @@ class _$AddPartitionV2Impl implements _AddPartitionV2 {
       const DeepCollectionEquality().hash(partition),
       const DeepCollectionEquality().hash(gap));
 
-  /// Create a copy of AddPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddPartitionV2ImplCopyWith<_$AddPartitionV2Impl> get copyWith =>
@@ -14880,11 +14494,8 @@ abstract class _AddPartitionV2 implements AddPartitionV2 {
   Partition get partition;
   @override
   Gap get gap;
-
-  /// Create a copy of AddPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddPartitionV2ImplCopyWith<_$AddPartitionV2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14898,12 +14509,8 @@ mixin _$ModifyPartitionV2 {
   String get diskId => throw _privateConstructorUsedError;
   Partition get partition => throw _privateConstructorUsedError;
 
-  /// Serializes this ModifyPartitionV2 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ModifyPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ModifyPartitionV2CopyWith<ModifyPartitionV2> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14927,8 +14534,6 @@ class _$ModifyPartitionV2CopyWithImpl<$Res, $Val extends ModifyPartitionV2>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ModifyPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14967,8 +14572,6 @@ class __$$ModifyPartitionV2ImplCopyWithImpl<$Res>
       $Res Function(_$ModifyPartitionV2Impl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ModifyPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15016,14 +14619,12 @@ class _$ModifyPartitionV2Impl implements _ModifyPartitionV2 {
             const DeepCollectionEquality().equals(other.partition, partition));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, diskId, const DeepCollectionEquality().hash(partition));
 
-  /// Create a copy of ModifyPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ModifyPartitionV2ImplCopyWith<_$ModifyPartitionV2Impl> get copyWith =>
@@ -15050,11 +14651,8 @@ abstract class _ModifyPartitionV2 implements ModifyPartitionV2 {
   String get diskId;
   @override
   Partition get partition;
-
-  /// Create a copy of ModifyPartitionV2
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ModifyPartitionV2ImplCopyWith<_$ModifyPartitionV2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -15068,12 +14666,8 @@ mixin _$ReformatDisk {
   String get diskId => throw _privateConstructorUsedError;
   String? get ptable => throw _privateConstructorUsedError;
 
-  /// Serializes this ReformatDisk to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReformatDisk
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReformatDiskCopyWith<ReformatDisk> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -15097,8 +14691,6 @@ class _$ReformatDiskCopyWithImpl<$Res, $Val extends ReformatDisk>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReformatDisk
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15137,8 +14729,6 @@ class __$$ReformatDiskImplCopyWithImpl<$Res>
       _$ReformatDiskImpl _value, $Res Function(_$ReformatDiskImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReformatDisk
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15185,13 +14775,11 @@ class _$ReformatDiskImpl implements _ReformatDisk {
             (identical(other.ptable, ptable) || other.ptable == ptable));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, diskId, ptable);
 
-  /// Create a copy of ReformatDisk
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReformatDiskImplCopyWith<_$ReformatDiskImpl> get copyWith =>
@@ -15217,11 +14805,8 @@ abstract class _ReformatDisk implements ReformatDisk {
   String get diskId;
   @override
   String? get ptable;
-
-  /// Create a copy of ReformatDisk
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReformatDiskImplCopyWith<_$ReformatDiskImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

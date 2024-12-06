@@ -8,10 +8,17 @@ import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
+final _log = Logger('storage-model');
+
 /// Available storage types.
 enum StorageType {
   /// Erase entire disk and perform guided partitioning.
   erase,
+
+  /// Erase an existing Ubuntu installation and replace
+  eraseAndInstall,
 
   /// Install alongside existing OS installation.
   alongside,
@@ -43,19 +50,46 @@ class StorageModel extends SafeChangeNotifier {
   final ProductService _product;
 
   StorageType? _type;
+  int? _eraseInstallIndex;
   var _hasBitLocker = false;
   List<GuidedStorageTarget>? _targets;
+  var _disks = <String, Disk>{};
 
   List<GuidedStorageTarget> getAllTargets() => _targets ?? [];
 
   Iterable<T> _getTargets<T extends GuidedStorageTarget>() =>
       _targets?.whereType<T>().where((t) => t.allowed.isNotEmpty) ?? [];
 
+  // FIXME: decide how to handle missing data
+  //  - If any of the EraseInstall targets have an unknown diskId, or if
+  //    the partition they are identifying doesn't have an OS on it then
+  //    we're in a "subiquity gave us malformed state" situation and most
+  //    likely need to error out / crash.
+  Iterable<String> getEraseInstallOsNames() {
+    return _getTargets<GuidedStorageTargetEraseInstall>().map(
+      (target) => _disks[target.diskId]!
+          .partitions
+          .whereType<Partition>()
+          .where((p) => p.number == target.partitionNumber)
+          .first
+          .os!
+          .long,
+    );
+  }
+
   /// The selected storage type.
   StorageType? get type => _type;
   set type(StorageType? type) {
     if (_type == type) return;
     _type = type;
+    notifyListeners();
+  }
+
+  /// The selected erase & install index (if there is one)
+  int? get eraseInstallIndex => _eraseInstallIndex;
+  set eraseInstallIndex(int? index) {
+    if (_eraseInstallIndex == index) return;
+    _eraseInstallIndex = index;
     notifyListeners();
   }
 
@@ -131,6 +165,11 @@ class StorageModel extends SafeChangeNotifier {
         !hasDd;
   }
 
+  /// Whether erase and install is possible i.e. the erase and install target is allowed
+  bool get canEraseAndInstall {
+    return _getTargets<GuidedStorageTargetEraseInstall>().isNotEmpty && !hasDd;
+  }
+
   /// Whether erasing the disk is possible i.e. whether any guided reformat
   /// targets are allowed.
   bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm || hasDd;
@@ -148,18 +187,24 @@ class StorageModel extends SafeChangeNotifier {
   Future<void> init() async {
     await _storage.init();
     await _storage.getGuidedStorage().then((r) => _targets = r.targets);
-    _type ??= canInstallAlongside
-        ? StorageType.alongside
-        : canEraseDisk
-            ? StorageType.erase
-            : canManualPartition
-                ? StorageType.manual
-                : null;
+    _type ??= canEraseAndInstall
+        ? StorageType.eraseAndInstall
+        : canInstallAlongside
+            ? StorageType.alongside
+            : canEraseDisk
+                ? StorageType.erase
+                : canManualPartition
+                    ? StorageType.manual
+                    : null;
     _storage.guidedCapability ??= _targets
         ?.whereType<GuidedStorageTargetReformat>()
         .expand((t) => t.allowed)
         .firstOrNull;
     _hasBitLocker = await _storage.hasBitLocker();
+
+    final disks = await _storage.getStorage();
+    _disks = {for (final disk in disks) disk.id: disk};
+
     notifyListeners();
   }
 
@@ -168,6 +213,12 @@ class StorageModel extends SafeChangeNotifier {
     final partitionMethod = _resolvePartitionMethod();
     if (partitionMethod != null) {
       await _telemetry?.addMetric('PartitionMethod', partitionMethod);
+    }
+    if (_type == StorageType.eraseAndInstall) {
+      final eraseInstallTargets =
+          _getTargets<GuidedStorageTargetEraseInstall>().toList();
+      _log.warning(eraseInstallTargets[_eraseInstallIndex!]);
+      _storage.guidedTarget = eraseInstallTargets[_eraseInstallIndex!];
     }
   }
 
@@ -187,6 +238,8 @@ class StorageModel extends SafeChangeNotifier {
       return 'resize_use_free';
     } else if (type == StorageType.manual) {
       return 'manual';
+    } else if (type == StorageType.eraseAndInstall) {
+      return 'reuse_partition'; // FIXME: is this correct? See TODO below
     }
     // TODO: map upgrading the current Ubuntu installation without
     // wiping the user's home directory (not implemented yet)
@@ -194,7 +247,10 @@ class StorageModel extends SafeChangeNotifier {
     return null;
   }
 
-  Future<void> resetStorage() => _storage.resetStorage();
+  Future<void> resetStorage() async {
+    final disks = await _storage.resetStorage();
+    _disks = {for (final disk in disks) disk.id: disk};
+  }
 
   @override
   String toString() {
@@ -212,6 +268,7 @@ StorageModel(
   hasTpm: $hasTpm,
   hasDd: $hasDd,
   canInstallAlongside: $canInstallAlongside,
+  canEraseAndInstall: $canEraseAndInstall,
   canEraseDisk: $canEraseDisk,
   canManualPartition: $canManualPartition,
   hasAdvancedFeatures: $hasAdvancedFeatures,

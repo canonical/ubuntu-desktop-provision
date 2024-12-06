@@ -123,6 +123,12 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
+  bool get canEraseAndInstall => (super.noSuchMethod(
+        Invocation.getter(#canEraseAndInstall),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get canEraseDisk => (super.noSuchMethod(
         Invocation.getter(#canEraseDisk),
         returnValue: false,

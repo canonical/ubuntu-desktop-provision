@@ -845,6 +845,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'You can choose your operating system during boot.'**
   String get installationTypeAlongsideInfo;
 
+  /// No description provided for @installationTypeEraseAndInstall.
+  ///
+  /// In en, this message translates to:
+  /// **'Erase {os} and install {product}'**
+  String installationTypeEraseAndInstall(String os, String product);
+
+  /// No description provided for @installationTypeEraseAndInstallInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Replace your currently installed OS.'**
+  String get installationTypeEraseAndInstallInfo;
+
   /// No description provided for @installationTypeManual.
   ///
   /// In en, this message translates to:

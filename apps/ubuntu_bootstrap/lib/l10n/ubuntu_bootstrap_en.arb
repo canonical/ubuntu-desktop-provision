@@ -294,6 +294,18 @@
     }
   },
   "installationTypeAlongsideInfo": "You can choose your operating system during boot.",
+  "installationTypeEraseAndInstall": "Erase {os} and install {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Replace your currently installed OS.",
   "installationTypeManual": "Manual installation",
   "installationTypeManualInfo": "For advanced users seeking customized disk setups.",
   "@installationTypeManualInfo": {
