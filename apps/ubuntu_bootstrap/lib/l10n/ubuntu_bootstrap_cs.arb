@@ -964,5 +964,14 @@
         "type": "String"
       }
     }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} není podporovaný souborový systém pro {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   }
 }
