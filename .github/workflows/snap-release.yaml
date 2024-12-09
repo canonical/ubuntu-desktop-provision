@@ -89,7 +89,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           sign-commits: true
-          branch: ${{ matrix.branch }}-release
+          branch: release/${{ matrix.branch }}
           commit-message: "chore: bump source-commit"
           title: "chore: bump source-commit for ${{ steps.bump-deps.outputs.snap_name }}"
           body: |
