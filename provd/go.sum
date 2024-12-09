@@ -77,6 +77,8 @@ github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a h1:VojaxMh5vh94q0u
 github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a/go.mod h1:edGgz97NOqS2oqzbKrZqO9YU9neosRrkEZbVJVQynAA=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac h1:w8/ullxXcbVscMoDk2C7e4eMvimRnrBfhLSZGtuvdRg=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac/go.mod h1:+kTYKcCrcrX8W2/scrDwXO3tyUpe/WZ7fCFDMrTMb7U=
+github.com/ubuntu/ubuntu-report v1.7.4-0.20241126152223-b9c5b9b8cd90 h1:4W11NNA3o/J3y+xDJZNF+cNPko9DbIinukoY9eilLl8=
+github.com/ubuntu/ubuntu-report v1.7.4-0.20241126152223-b9c5b9b8cd90/go.mod h1:aMpCAm5Yw65h+kLOjInFDOle4DwZv0K70QkFnFn3GP4=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
 go.uber.org/multierr v1.11.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=
 golang.org/x/exp v0.0.0-20231006140011-7918f672742d h1:jtJma62tbqLibJ5sFQz8bKtEM8rJBtfilJ2qTU199MI=
