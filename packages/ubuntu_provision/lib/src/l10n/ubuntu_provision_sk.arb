@@ -80,7 +80,7 @@
   "@identityPasswordRequired": {},
   "identityConfirmPasswordLabel": "Zopakujte zadanie hesla",
   "@identityConfirmPasswordLabel": {},
-  "identityPasswordMismatch": "Heslá sa nezhodujú",
+  "identityPasswordMismatch": "Tieto heslá sa nezhodujú",
   "@identityPasswordMismatch": {},
   "identityPasswordShow": "Zobraziť",
   "@identityPasswordShow": {},

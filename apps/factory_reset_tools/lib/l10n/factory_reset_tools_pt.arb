@@ -1,5 +1,7 @@
 {
   "@@locale": "pt",
   "close": "Fechar",
-  "@close": {}
+  "@close": {},
+  "appTitle": "Ferramentas de redefinição de fábrica",
+  "@appTitle": {}
 }

@@ -108,5 +108,7 @@
     "placeholders": {
       "url": {}
     }
-  }
+  },
+  "telemetryCollectError": "無法蒐集遙測資料",
+  "@telemetryCollectError": {}
 }

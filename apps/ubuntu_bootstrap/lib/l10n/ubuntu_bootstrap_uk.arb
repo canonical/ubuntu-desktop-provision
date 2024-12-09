@@ -1006,5 +1006,14 @@
     }
   },
   "validate": "Підтвердити",
-  "@validate": {}
+  "@validate": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} не є підтримуваною файловою системою для {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  }
 }
