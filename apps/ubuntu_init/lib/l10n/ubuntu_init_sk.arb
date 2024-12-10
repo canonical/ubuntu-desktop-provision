@@ -56,7 +56,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Pomôžte nám zlepšiť {distro} zdieľaním svojich systémových údajov s nami. To zahŕňa aj veci, ako je model vášho počítača, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.",
+  "telemetryDescription": "Pomôžte nám zlepšiť {distro} zdieľaním svojich systémových údajov s nami. To zahŕňa veci, ako je model vášho zariadenia, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -94,7 +94,7 @@
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Povoliť Ubuntu Pro",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
-  "ubuntuProSucessAttachHeader": "Ubuntu Pro je teraz povolené v tomto počítači",
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro je teraz povolené v tomto zariadení",
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.",
   "@ubuntuProSucessAttachDescription": {},
@@ -107,7 +107,7 @@
   },
   "ubuntuProOrAddTokenManually": "alebo pridať token ručne",
   "@ubuntuProOrAddTokenManually": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Pripojte tento počítač k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Pripojte toto zariadenie k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "telemetryCollectError": "Zhromažďovanie telemetrických údajov zlyhalo",
   "@telemetryCollectError": {}
