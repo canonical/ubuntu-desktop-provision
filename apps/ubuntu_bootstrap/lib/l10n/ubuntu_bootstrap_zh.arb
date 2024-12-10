@@ -13,7 +13,7 @@
   "@changeButtonText": {},
   "welcome": "欢迎",
   "@welcome": {},
-  "tryOrInstallTitle": "试用或安装{DISTRO}",
+  "tryOrInstallTitle": "试用或安装 {DISTRO}",
   "@tryOrInstallTitle": {},
   "installOption": "安装 {RELEASE}",
   "@installOption": {
@@ -44,7 +44,7 @@
   },
   "installationTypeNoOSDetected": "这台电脑目前没有检测到操作系统。您准备怎么做？",
   "@installationTypeNoOSDetected": {},
-  "installationTypeErase": "擦除磁盘并安装{DISTRO}",
+  "installationTypeErase": "擦除磁盘并安装 {DISTRO}",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
@@ -103,7 +103,7 @@
   "@shutdown": {},
   "bitlockerTitle": "已启用 BitLocker",
   "@bitlockerTitle": {},
-  "bitlockerInstructions": "有关说明，请在另一台设备上扫描QR码或访问该网址：<a href=\"https://{url}\">{url}</a>",
+  "bitlockerInstructions": "有关说明，请在另一台设备上扫描二维码或访问该网址：<a href=\"https://{url}\">{url}</a>",
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
@@ -129,7 +129,7 @@
   "@installationTypeAlongsideInfo": {},
   "tryOrInstallRepairDescription": "修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。",
   "@tryOrInstallRepairDescription": {},
-  "bitlockerDescription": "这台电脑使用了 Windows BitLocker 进行加密。\n您需要用 Windows 创建空闲空间，或者返回选择'{option}'以继续。",
+  "bitlockerDescription": "这台电脑使用了 Windows BitLocker 进行加密。\n您需要用 Windows 创建空闲空间，或者返回选择 '{option}' 以继续。",
   "@bitlockerDescription": {},
   "installationTypeAdvancedTitle": "高级功能",
   "@installationTypeAdvancedTitle": {},
@@ -150,7 +150,7 @@
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "实验性功能：擦除磁盘并使用ZFS",
   "@installationTypeZFS": {},
-  "installationTypeZFSSelected": "已选择 ZFS",
+  "installationTypeZFSSelected": "已选择配置 ZFS",
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "手动分区",
   "@installationTypeManual": {},
@@ -179,7 +179,7 @@
   "@newPartitionTable": {},
   "newPartitionTableConfirmationTitle": "新建空分区",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "在整个设备上创建一个新的分区表，将删除其当前所有的分区。如果需要的话，这个操作可以被撤销。",
+  "newPartitionTableConfirmationMessage": "在整个设备上创建一个新的分区表，将删除其当前所有的分区。此操作可在需要时随时撤销。",
   "@newPartitionTableConfirmationMessage": {},
   "bootLoaderDevice": "用于安装引导程序的设备",
   "@bootLoaderDevice": {},
@@ -253,7 +253,7 @@
       "url": {}
     }
   },
-  "rstInstructions": "有关说明，请在另一台设备上扫描QR码或访问：<a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "有关说明，请在另一台设备上扫描二维码或访问：<a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -447,7 +447,7 @@
   "@installationSlidesIncluded": {},
   "installationSlidesWelcomeTitle": "快捷、自由、功能新颖，让人爱不释手",
   "@installationSlidesWelcomeTitle": {},
-  "installationSlidesWelcomeHeader": "{DISTRO} 最新版本的推出，让计算机的使用变得前所未有的容易。",
+  "installationSlidesWelcomeHeader": "{DISTRO} 的全新版本将让您的计算机变得更加易于使用。",
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
@@ -463,7 +463,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesDevelopmentTitle": "利用最好的开源进行开发",
+  "installationSlidesDevelopmentTitle": "利用最好的开源软件进行开发",
   "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityTitle": "激发你的创造力",
   "@installationSlidesCreativityTitle": {},
@@ -492,13 +492,13 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesAccessibilityOrca": "Orca屏幕阅读器",
+  "installationSlidesAccessibilityOrca": "Orca 屏幕阅读器",
   "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "语言支持",
   "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportTitle": "帮助与支持",
   "@installationSlidesSupportTitle": {},
-  "installationSlidesSupportHeader": "{DISTRO} 的官方文档可以通过在线方式或者在Dock中的帮助图标获取。",
+  "installationSlidesSupportHeader": "{DISTRO} 的官方文档可以通过在线方式或者在 Dock 中的帮助图标获取。",
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
@@ -552,7 +552,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingTitle": "非常适合游戏",
+  "installationSlidesGamingTitle": "出色的游戏体验",
   "@installationSlidesGamingTitle": {},
   "installationSlidesSecurityBody": "{DISTRO} 提供了保持在线隐私和安全所需的所有工具。内置防火墙和 VPN 支持以及大量以隐私为中心的应用程序，可确保您完全控制自己的数据。",
   "@installationSlidesSecurityBody": {
@@ -647,7 +647,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "用所选磁盘从头开始安装。",
+  "installationTypeEraseInfo": "用所选磁盘执行全新安装。",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "实验性",
   "@installationTypeExperimental": {},
@@ -740,7 +740,7 @@
       }
     }
   },
-  "refreshSnapUpdateAssets": "正在更新 {snap} 资产…",
+  "refreshSnapUpdateAssets": "正在更新 {snap} 资源…",
   "@refreshSnapUpdateAssets": {
     "placeholders": {
       "snap": {
@@ -969,7 +969,7 @@
   "@refreshCloseLabel": {},
   "warningLabel": "警告：",
   "@warningLabel": {},
-  "batteryWarning": "计算机未连接到外部电源。",
+  "batteryWarning": "计算机未连接到电源适配器。",
   "@batteryWarning": {},
   "selectGuidedStorageDriveDropdownLabel": "选择驱动器：",
   "@selectGuidedStorageDriveDropdownLabel": {},
@@ -983,7 +983,7 @@
       }
     }
   },
-  "restartWarningBody": "重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会被保存。",
+  "restartWarningBody": "重新启动以完成安装，也可以继续试用。\n您做出的任何更改都不会被保存。",
   "@restartWarningBody": {},
   "notEnoughDiskSpaceBody": "所选磁盘没有足够空间可供安装 {DISTRO}。请退出安装程序以腾出可用空间，或者选择其他磁盘。",
   "@notEnoughDiskSpaceBody": {
@@ -991,6 +991,15 @@
       "DISTRO": {
         "type": "String"
       }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} 不是 {mountpoint} 支持的文件系统",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
     }
   }
 }
