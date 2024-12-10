@@ -53,7 +53,7 @@
   },
   "configureSecureBootTitle": "Nastavit Secure Boot",
   "@configureSecureBootTitle": {},
-  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte vytvořením klíče zabezpečení a jeho\nnásledným zadáním po restartu systému.",
+  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte zvolením klíče zabezpečení nyní a jeho\nnásledným zadáním po restartu systému.",
   "@configureSecureBootDescription": {},
   "configureSecureBootOption": "Nastavit Secure Boot",
   "@configureSecureBootOption": {},
@@ -963,6 +963,15 @@
       "DISTRO": {
         "type": "String"
       }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} není podporovaný souborový systém pro {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
     }
   }
 }
