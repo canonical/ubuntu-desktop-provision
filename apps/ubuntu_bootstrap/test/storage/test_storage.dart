@@ -24,6 +24,7 @@ StorageModel buildStorageModel({
   List<OsProber>? existingOS,
   SecureBootScenarios? scenario,
   bool canInstallAlongside = true,
+  bool canEraseAndInstall = false, // need to add getEraseInstallTargets
   bool canEraseDisk = true,
   bool canManualPartition = true,
   bool hasAdvancedFeatures = true,
@@ -41,6 +42,7 @@ StorageModel buildStorageModel({
   when(model.tpmInfoUrl).thenReturn(tpmInfoUrl);
   when(model.existingOS).thenReturn(existingOS);
   when(model.canInstallAlongside).thenReturn(canInstallAlongside);
+  when(model.canEraseAndInstall).thenReturn(canEraseAndInstall);
   when(model.canEraseDisk).thenReturn(canEraseDisk);
   when(model.canManualPartition).thenReturn(canManualPartition);
   when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures);

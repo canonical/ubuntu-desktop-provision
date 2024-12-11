@@ -9,7 +9,13 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-export 'storage_model.dart' show StorageType;
+export 'storage_model.dart'
+    show
+        StorageType,
+        StorageTypeAlongside,
+        StorageTypeErase,
+        StorageTypeEraseInstall,
+        StorageTypeManual;
 
 /// Select between guided and manual partitioning.
 class StoragePage extends ConsumerWidget with ProvisioningPage {
@@ -81,13 +87,12 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             subtitle: Text(lang.installationTypeAlongsideInfo),
           ),
         if (model.canEraseAndInstall)
-          ...model.getEraseInstallOsNames().indexed.map(
-                (elem) => _InstallationTypeTile(
-                  storageType: StorageType.eraseAndInstall,
-                  eraseInstallIndex: elem.$1,
+          ...model.getEraseInstallTargets().map(
+                (target) => _InstallationTypeTile(
+                  storageType: StorageTypeEraseInstall(target),
                   title: Text(
                     lang.installationTypeEraseAndInstall(
-                      elem.$2,
+                      model.getEraseInstallOsName(target) ?? 'unknown',
                       flavor.displayName,
                     ),
                   ),
@@ -166,11 +171,9 @@ class _InstallationTypeTile extends ConsumerWidget {
     required this.title,
     this.subtitle,
     this.trailing,
-    this.eraseInstallIndex,
   });
 
   final StorageType storageType;
-  final int? eraseInstallIndex;
   final Widget title;
   final Widget? subtitle;
   final Widget? trailing;
@@ -189,12 +192,9 @@ class _InstallationTypeTile extends ConsumerWidget {
         ),
         contentPadding: kWizardTilePadding,
         isThreeLine: true,
-        value: (storageType, eraseInstallIndex),
-        groupValue: (model.type, model.eraseInstallIndex),
-        onChanged: (value) {
-          model.type = value?.$1;
-          model.eraseInstallIndex = value?.$2;
-        },
+        value: storageType,
+        groupValue: model.type,
+        onChanged: (value) => model.type = value,
       ),
     );
   }
