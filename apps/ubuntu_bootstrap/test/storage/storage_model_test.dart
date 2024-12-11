@@ -67,7 +67,7 @@ void main() {
 
     wasNotified = false;
     expect(model.type, isNull);
-    model.type = StorageTypeManual();
+    model.type = StorageType.manual;
     expect(wasNotified, isTrue);
 
     wasNotified = false;
