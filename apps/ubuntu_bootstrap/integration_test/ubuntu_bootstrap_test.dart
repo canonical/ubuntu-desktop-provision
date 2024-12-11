@@ -338,11 +338,12 @@ void main() {
   });
 
   // threebuntu-on-msdos has three existing ubuntu partitions:
-  //   - 20.04.4 on sda1
-  //   - 21.10 on sda5
-  //   - 22.04 on sda6
-  testWidgets('erase and install primary partition', (tester) async {
-    await eraseInstallTest(
+  //   - 20.04.4 on sda1 (primary)
+  //   - 21.10   on sda5 (logical)
+  //   - 22.04   on sda6 (logical)
+  testWidgets(
+    'erase and install primary partition',
+    (tester) => eraseInstallTest(
       tester: tester,
       machineConfig: 'examples/machines/threebuntu-on-msdos.json',
       target: GuidedStorageTargetEraseInstall(
@@ -359,13 +360,14 @@ void main() {
           ],
         ),
       ],
-    );
-  });
+    ),
+  );
 
   // FIXME: this currently fails due to a known Subiquity bug with partition relabelling
-  testWidgets(skip: true, 'erase and install first logical partition',
-      (tester) async {
-    await eraseInstallTest(
+  testWidgets(
+    skip: true,
+    'erase and install first logical partition',
+    (tester) => eraseInstallTest(
       tester: tester,
       machineConfig: 'examples/machines/threebuntu-on-msdos.json',
       target: GuidedStorageTargetEraseInstall(
@@ -382,11 +384,12 @@ void main() {
           ],
         ),
       ],
-    );
-  });
+    ),
+  );
 
-  testWidgets('erase and install last logical partition', (tester) async {
-    await eraseInstallTest(
+  testWidgets(
+    'erase and install last logical partition',
+    (tester) => eraseInstallTest(
       tester: tester,
       machineConfig: 'examples/machines/threebuntu-on-msdos.json',
       target: GuidedStorageTargetEraseInstall(
@@ -403,8 +406,8 @@ void main() {
           ],
         ),
       ],
-    );
-  });
+    ),
+  );
 
   testWidgets('alongside windows', (tester) async {
     await tester.runApp(
@@ -539,12 +542,10 @@ Future<void> eraseInstallTest({
   await tester.testSourceSelectionPage();
   await tester.testCodecsAndDriversPage();
   await tester.testStoragePage(type: StorageTypeEraseInstall(target));
-
   await tester.testIdentityPage(
     identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
     password: 'password',
   );
-
   await tester.testTimezonePage();
   await tester.testConfirmPage();
   await tester.testInstallPage();
