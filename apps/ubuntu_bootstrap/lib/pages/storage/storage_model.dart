@@ -40,7 +40,8 @@ class StorageTypeEraseInstall extends StorageType {
     return identical(this, other) ||
         (other is StorageTypeEraseInstall &&
             other.runtimeType == runtimeType &&
-            other.target == target);
+            other.target.diskId == target.diskId &&
+            other.target.partitionNumber == target.partitionNumber);
   }
 
   @override
