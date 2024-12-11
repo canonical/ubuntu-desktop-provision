@@ -52,15 +52,10 @@ void main() {
     await expectKeyboard(keyboard);
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.erase);
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -70,7 +65,6 @@ void main() {
     await expectTimezone(timezone);
 
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -92,27 +86,16 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.erase);
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -131,21 +114,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -159,9 +134,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -183,21 +156,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -209,9 +174,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -233,21 +196,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -261,9 +216,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -291,22 +244,15 @@ void main() {
         '--bootloader=uefi',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -322,9 +268,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -350,25 +294,15 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.manual);
-
     await tester.testManualStoragePage(storage: storage);
 
     await tester.testIdentityPage(
@@ -377,9 +311,7 @@ void main() {
     );
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -413,26 +345,17 @@ void main() {
         '--bootloader=uefi',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.alongside);
-
     await tester.testGuidedResizePage(size: 30);
 
     await tester.testIdentityPage(
@@ -441,9 +364,7 @@ void main() {
     );
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -476,26 +397,17 @@ void main() {
         '--machine-config=examples/machines/win10.json',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.alongside);
-
     await tester.testBitLockerPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -506,19 +418,12 @@ void main() {
   testWidgets('welcome', (tester) async {
     await tester.runApp(() => app.main(<String>['--welcome']));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
-
     await tester.testAutoinstallPage();
   });
 
@@ -529,12 +434,10 @@ void main() {
         '--autoinstall=examples/autoinstall/interactive.yaml',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testNetworkPage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
