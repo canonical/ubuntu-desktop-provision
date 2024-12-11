@@ -205,7 +205,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Start from scratch on your selected disk.",
+  "installationTypeEraseInfo": "Warning: All data and partitions on the disk will be erased, including operating systems.",
   "installationTypeAdvancedLabel": "Advanced features...",
   "installationTypeAdvancedTitle": "Advanced features",
   "installationTypeExperimental": "Experimental",
@@ -293,7 +293,14 @@
       }
     }
   },
-  "installationTypeAlongsideInfo": "You can choose your operating system during boot.",
+  "installationTypeAlongsideInfo": "Select a partition to resize and create space for {product}. You can choose your operating system during boot.",
+  "@installationTypeAlongsideInfo": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
   "installationTypeEraseAndInstall": "Erase {os} and install {product}",
   "@installationTypeEraseAndInstall": {
     "placeholders": {
@@ -305,7 +312,14 @@
       }
     }
   },
-  "installationTypeEraseAndInstallInfo": "Replace your currently installed OS.",
+  "installationTypeEraseAndInstallInfo": "Warning: All files and data from the existing {os} installation will be permenantly deleted.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
   "installationTypeManual": "Manual installation",
   "installationTypeManualInfo": "For advanced users seeking customized disk setups.",
   "@installationTypeManualInfo": {
