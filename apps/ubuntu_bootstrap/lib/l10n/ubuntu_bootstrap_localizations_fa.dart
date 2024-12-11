@@ -271,7 +271,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'Warning: All data and partitions on the disk will be erased, including operating systems.';
 
   @override
   String get installationTypeAdvancedLabel => 'ویژگی‌های پیش‌رفته…';
@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'سندها، آهنگ‌ها و دیگرپرونده‌های شخصی حفظ خواهند شد. هر بار که رایانه روشن می‌شود می‌توانید بگزینید که کدام سیستم‌عامل را می‌خواهید.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'سندها، آهنگ‌ها و دیگرپرونده‌های شخصی حفظ خواهند شد. هر بار که رایانه روشن می‌شود می‌توانید بگزینید که کدام سیستم‌عامل را می‌خواهید.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'افرازش دستی';

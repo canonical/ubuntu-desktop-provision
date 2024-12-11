@@ -698,7 +698,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeEraseInfo.
   ///
   /// In en, this message translates to:
-  /// **'Start from scratch on your selected disk.'**
+  /// **'Warning: All data and partitions on the disk will be erased, including operating systems.'**
   String get installationTypeEraseInfo;
 
   /// No description provided for @installationTypeAdvancedLabel.
@@ -842,8 +842,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeAlongsideInfo.
   ///
   /// In en, this message translates to:
-  /// **'You can choose your operating system during boot.'**
-  String get installationTypeAlongsideInfo;
+  /// **'Select a partition to resize and create space for {product}. You can choose your operating system during boot.'**
+  String installationTypeAlongsideInfo(String product);
 
   /// No description provided for @installationTypeEraseAndInstall.
   ///
@@ -854,8 +854,8 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeEraseAndInstallInfo.
   ///
   /// In en, this message translates to:
-  /// **'Replace your currently installed OS.'**
-  String get installationTypeEraseAndInstallInfo;
+  /// **'Warning: All files and data from the existing {os} installation will be permenantly deleted.'**
+  String installationTypeEraseAndInstallInfo(String os);
 
   /// No description provided for @installationTypeManual.
   ///

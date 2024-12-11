@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Podrá elegir qué sistema operativo quiere iniciar en cada arranque.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Podrá elegir qué sistema operativo quiere iniciar en cada arranque.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Instalación manual';

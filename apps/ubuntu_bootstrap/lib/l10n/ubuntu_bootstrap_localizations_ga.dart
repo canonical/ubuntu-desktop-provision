@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Suiteáil láimhe';

@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Documentos, músicas e outros ficheiros pessoais serão mantidos. Poderá selecionar qual o sistema operativo a usar cada vez que o computador iniciar.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Documentos, músicas e outros ficheiros pessoais serão mantidos. Poderá selecionar qual o sistema operativo a usar cada vez que o computador iniciar.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Particionamento manual';
@@ -1335,7 +1339,9 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Documentos, músicas, e outros arquivos pessoais serão mantidos. Você poderá selecionar qual sistema operacional usar cada vez que o computador iniciar.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Documentos, músicas, e outros arquivos pessoais serão mantidos. Você poderá selecionar qual sistema operacional usar cada vez que o computador iniciar.';
+  }
 
   @override
   String get installationTypeManual => 'Particionamento manual';

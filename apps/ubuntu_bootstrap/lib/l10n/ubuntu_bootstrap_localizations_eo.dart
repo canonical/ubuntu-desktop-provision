@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Dokumentoj, muziko kaj aliaj personaj dosieroj estas konservotaj. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Dokumentoj, muziko kaj aliaj personaj dosieroj estas konservotaj. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Neaŭtomata instalado';

@@ -54,6 +54,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final theme = Theme.of(context);
 
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
@@ -84,7 +85,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                 model.existingOS ?? [],
               ),
             ),
-            subtitle: Text(lang.installationTypeAlongsideInfo),
+            subtitle: Text(
+              lang.installationTypeAlongsideInfo(flavor.displayName),
+              style: theme.textTheme.bodySmall,
+            ),
           ),
         if (model.canEraseAndInstall)
           ...model.getEraseInstallTargets().map(
@@ -96,14 +100,22 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                       flavor.displayName,
                     ),
                   ),
-                  subtitle: Text(lang.installationTypeAlongsideInfo),
+                  subtitle: Text(
+                    lang.installationTypeEraseAndInstallInfo(
+                      model.getEraseInstallOsName(target) ?? 'unknown',
+                    ),
+                    style: theme.textTheme.bodySmall,
+                  ),
                 ),
               ),
         if (model.canEraseDisk) ...[
           _InstallationTypeTile(
             storageType: StorageType.erase,
             title: Text(lang.installationTypeErase(flavor.displayName)),
-            subtitle: Text(lang.installationTypeEraseInfo),
+            subtitle: Text(
+              lang.installationTypeEraseInfo,
+              style: theme.textTheme.bodySmall,
+            ),
             trailing: model.hasAdvancedFeatures
                 ? Padding(
                     padding: const EdgeInsets.only(top: kWizardSpacing),
@@ -132,7 +144,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
           _InstallationTypeTile(
             storageType: StorageType.manual,
             title: Text(lang.installationTypeManual),
-            subtitle: Text(lang.installationTypeManualInfo(flavor.displayName)),
+            subtitle: Text(
+              lang.installationTypeManualInfo(flavor.displayName),
+              style: theme.textTheme.bodySmall,
+            ),
           ),
       ],
     );

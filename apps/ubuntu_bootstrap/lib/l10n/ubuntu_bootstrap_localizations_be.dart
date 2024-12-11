@@ -357,7 +357,9 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Вы можаце выбіраць аперацыйную сістэму падчас загрузкі.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Вы можаце выбіраць аперацыйную сістэму падчас загрузкі.';
+  }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
@@ -365,7 +367,9 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseAndInstallInfo => 'Replace your currently installed OS.';
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Усталяванне ўручную';
