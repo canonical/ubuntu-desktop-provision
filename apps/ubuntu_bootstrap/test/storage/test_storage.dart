@@ -24,7 +24,7 @@ StorageModel buildStorageModel({
   List<OsProber>? existingOS,
   SecureBootScenarios? scenario,
   bool canInstallAlongside = true,
-  bool canEraseAndInstall = false, // need to add getEraseInstallTargets
+  bool canEraseAndInstall = false,
   bool canEraseDisk = true,
   bool canManualPartition = true,
   bool hasAdvancedFeatures = true,
