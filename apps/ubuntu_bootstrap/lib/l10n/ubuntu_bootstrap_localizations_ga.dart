@@ -368,7 +368,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+    return 'All files and data from the existing $os installation will be permanently deleted.';
   }
 
   @override

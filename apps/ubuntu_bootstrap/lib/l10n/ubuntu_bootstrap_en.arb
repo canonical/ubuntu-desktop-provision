@@ -205,7 +205,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Warning: All data and partitions on the disk will be erased, including operating systems.",
+  "installationTypeEraseInfo": "All data and partitions on the disk will be erased, including operating systems.",
   "installationTypeAdvancedLabel": "Advanced features...",
   "installationTypeAdvancedTitle": "Advanced features",
   "installationTypeExperimental": "Experimental",
@@ -277,7 +277,7 @@
       }
     }
   },
-  "installationTypeAlongsideMulti": "Install {product} alongside them",
+  "installationTypeAlongsideMulti": "Install {product} alongside existing operating systems",
   "@installationTypeAlongsideMulti": {
     "placeholders": {
       "product": {
@@ -312,7 +312,7 @@
       }
     }
   },
-  "installationTypeEraseAndInstallInfo": "Warning: All files and data from the existing {os} installation will be permenantly deleted.",
+  "installationTypeEraseAndInstallInfo": "All files and data from the existing {os} installation will be permanently deleted.",
   "@installationTypeEraseAndInstallInfo": {
     "placeholders": {
       "os": {
