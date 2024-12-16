@@ -100,11 +100,10 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                       flavor.displayName,
                     ),
                   ),
-                  subtitle: Text(
-                    lang.installationTypeEraseAndInstallInfo(
+                  subtitle: _WarningSubtitle(
+                    text: lang.installationTypeEraseAndInstallInfo(
                       model.getEraseInstallOsName(target) ?? 'unknown',
                     ),
-                    style: theme.textTheme.bodySmall,
                   ),
                 ),
               ),
@@ -112,10 +111,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
           _InstallationTypeTile(
             storageType: StorageType.erase,
             title: Text(lang.installationTypeErase(flavor.displayName)),
-            subtitle: Text(
-              lang.installationTypeEraseInfo,
-              style: theme.textTheme.bodySmall,
-            ),
+            subtitle: _WarningSubtitle(text: lang.installationTypeEraseInfo),
             trailing: model.hasAdvancedFeatures
                 ? Padding(
                     padding: const EdgeInsets.only(top: kWizardSpacing),
@@ -210,6 +206,31 @@ class _InstallationTypeTile extends ConsumerWidget {
         value: storageType,
         groupValue: model.type,
         onChanged: (value) => model.type = value,
+      ),
+    );
+  }
+}
+
+class _WarningSubtitle extends ConsumerWidget {
+  const _WarningSubtitle({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+
+    return RichText(
+      text: TextSpan(
+        text: UbuntuLocalizations.of(context).warningLabel,
+        style: theme.textTheme.bodySmall!.copyWith(
+          color: theme.colorScheme.warning,
+          fontWeight: FontWeight.bold,
+        ),
+        children: <TextSpan>[
+          TextSpan(text: ': ', style: theme.textTheme.bodySmall),
+          TextSpan(text: text, style: theme.textTheme.bodySmall),
+        ],
       ),
     );
   }

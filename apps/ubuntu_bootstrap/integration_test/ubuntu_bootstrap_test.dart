@@ -365,8 +365,8 @@ void main() {
 
   // FIXME: this currently fails due to a known Subiquity bug with partition relabelling
   testWidgets(
-    skip: true,
     'erase and install first logical partition',
+    skip: true,
     (tester) => eraseInstallTest(
       tester: tester,
       machineConfig: 'examples/machines/threebuntu-on-msdos.json',

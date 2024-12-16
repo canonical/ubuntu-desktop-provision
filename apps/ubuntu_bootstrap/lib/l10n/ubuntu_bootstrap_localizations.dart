@@ -698,7 +698,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeEraseInfo.
   ///
   /// In en, this message translates to:
-  /// **'Warning: All data and partitions on the disk will be erased, including operating systems.'**
+  /// **'All data and partitions on the disk will be erased, including operating systems.'**
   String get installationTypeEraseInfo;
 
   /// No description provided for @installationTypeAdvancedLabel.
@@ -830,7 +830,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeAlongsideMulti.
   ///
   /// In en, this message translates to:
-  /// **'Install {product} alongside them'**
+  /// **'Install {product} alongside existing operating systems'**
   String installationTypeAlongsideMulti(String product);
 
   /// No description provided for @installationTypeAlongsideUnknown.
@@ -854,7 +854,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeEraseAndInstallInfo.
   ///
   /// In en, this message translates to:
-  /// **'Warning: All files and data from the existing {os} installation will be permenantly deleted.'**
+  /// **'All files and data from the existing {os} installation will be permanently deleted.'**
   String installationTypeEraseAndInstallInfo(String os);
 
   /// No description provided for @installationTypeManual.

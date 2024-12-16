@@ -271,7 +271,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Warning: All data and partitions on the disk will be erased, including operating systems.';
+  String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
   String get installationTypeAdvancedLabel => '고급 기능...';
@@ -368,7 +368,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'Warning: All files and data from the existing $os installation will be permenantly deleted.';
+    return 'All files and data from the existing $os installation will be permanently deleted.';
   }
 
   @override
