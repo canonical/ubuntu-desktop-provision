@@ -51,38 +51,67 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final model = ref.watch(storageModelProvider);
+    // final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
     final theme = Theme.of(context);
 
+    final (
+      canEraseDisk,
+      canEraseAndInstall,
+      canInstallAlongside,
+      canManualPartition,
+      existingOS,
+      guidedCapability,
+      hasAdvancedFeatures,
+      hasBitLocker,
+    ) = ref.watch(
+      storageModelProvider.select(
+        (model) => (
+          model.canEraseDisk,
+          model.canEraseAndInstall,
+          model.canInstallAlongside,
+          model.canManualPartition,
+          model.existingOS,
+          model.guidedCapability,
+          model.hasAdvancedFeatures,
+          model.hasBitLocker
+        ),
+      ),
+    );
+
     return HorizontalPage(
       windowTitle: lang.installationTypeTitle,
       title: lang.installationTypeHeader(flavor.displayName),
-      bottomBar: WizardBar(
-        leading: const BackWizardButton(),
-        trailing: [
-          NextWizardButton(
-            onNext: model.save,
-            enabled: model.canEraseDisk ||
-                model.canInstallAlongside ||
-                model.canManualPartition,
-            // If the user returns back to select another installation type, the
-            // previously configured storage must be reset to make all guided
-            // partitioning targets available.
-            onReturn: model.resetStorage,
-          ),
-        ],
+      bottomBar: Builder(
+        builder: (context) {
+          final notifier = ref.read(storageModelProvider.notifier);
+
+          return WizardBar(
+            leading: const BackWizardButton(),
+            trailing: [
+              NextWizardButton(
+                onNext: notifier.save,
+                enabled:
+                    canEraseDisk || canInstallAlongside || canManualPartition,
+                // If the user returns back to select another installation type, the
+                // previously configured storage must be reset to make all guided
+                // partitioning targets available.
+                onReturn: notifier.resetStorage,
+              ),
+            ],
+          );
+        },
       ),
       children: [
-        if (model.canInstallAlongside || model.hasBitLocker)
+        if (canInstallAlongside || hasBitLocker)
           _InstallationTypeTile(
             storageType: StorageType.alongside,
             title: Text(
               formatAlongside(
                 lang,
                 flavor.displayName,
-                model.existingOS ?? [],
+                existingOS ?? [],
               ),
             ),
             subtitle: Text(
@@ -90,44 +119,57 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
               style: theme.textTheme.bodySmall,
             ),
           ),
-        if (model.canEraseAndInstall)
-          ...model.getEraseInstallTargets().map(
-                (target) => _InstallationTypeTile(
-                  storageType: StorageTypeEraseInstall(target),
-                  title: Text(
-                    lang.installationTypeEraseAndInstall(
-                      model.getEraseInstallOsName(target) ?? 'unknown',
-                      flavor.displayName,
-                    ),
-                  ),
-                  subtitle: _WarningSubtitle(
-                    text: lang.installationTypeEraseAndInstallInfo(
-                      model.getEraseInstallOsName(target) ?? 'unknown',
-                    ),
-                  ),
+        if (canEraseAndInstall)
+          ...ref
+              .read(storageModelProvider.notifier)
+              .getEraseInstallTargets()
+              .map(
+                (target) => Builder(
+                  builder: (context) {
+                    final notifier = ref.read(storageModelProvider.notifier);
+
+                    return _InstallationTypeTile(
+                      storageType: StorageTypeEraseInstall(target),
+                      title: Text(
+                        lang.installationTypeEraseAndInstall(
+                          notifier.getEraseInstallOsName(target) ?? 'unknown',
+                          flavor.displayName,
+                        ),
+                      ),
+                      subtitle: _WarningSubtitle(
+                        text: lang.installationTypeEraseAndInstallInfo(
+                          notifier.getEraseInstallOsName(target) ?? 'unknown',
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
-        if (model.canEraseDisk) ...[
+        if (canEraseDisk) ...[
           _InstallationTypeTile(
             storageType: StorageType.erase,
             title: Text(lang.installationTypeErase(flavor.displayName)),
             subtitle: _WarningSubtitle(text: lang.installationTypeEraseInfo),
-            trailing: model.hasAdvancedFeatures
+            trailing: hasAdvancedFeatures
                 ? Padding(
                     padding: const EdgeInsets.only(top: kWizardSpacing),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         OutlinedButton(
-                          onPressed: model.type == StorageType.erase
-                              ? () => showAdvancedFeaturesDialog(context, model)
+                          onPressed: ref.watch(storageModelProvider).type ==
+                                  StorageType.erase
+                              ? () => showAdvancedFeaturesDialog(
+                                    context,
+                                    ref.watch(storageModelProvider),
+                                  )
                               : null,
                           child: Text(lang.installationTypeAdvancedLabel),
                         ),
                         const SizedBox(width: kWizardSpacing),
                         Flexible(
                           child: Text(
-                            model.guidedCapability?.localize(lang) ?? '',
+                            guidedCapability?.localize(lang) ?? '',
                           ),
                         ),
                       ],
@@ -136,7 +178,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
                 : null,
           ),
         ],
-        if (model.canManualPartition)
+        if (canManualPartition)
           _InstallationTypeTile(
             storageType: StorageType.manual,
             title: Text(lang.installationTypeManual),
@@ -224,7 +266,6 @@ class _WarningSubtitle extends ConsumerWidget {
       text: TextSpan(
         text: UbuntuLocalizations.of(context).warningLabel,
         style: theme.textTheme.bodySmall!.copyWith(
-          color: theme.colorScheme.warning,
           fontWeight: FontWeight.bold,
         ),
         children: <TextSpan>[
