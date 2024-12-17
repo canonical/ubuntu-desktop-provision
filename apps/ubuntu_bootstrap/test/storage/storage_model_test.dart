@@ -293,7 +293,7 @@ void main() {
           path: '',
           bootDevice: false,
           canBeBootDevice: true,
-        )
+        ),
       ],
     );
 
