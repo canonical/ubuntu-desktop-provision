@@ -89,6 +89,13 @@ class MockConfirmModel extends _i1.Mock implements _i3.ConfirmModel {
       )) as _i4.Partition?);
 
   @override
+  String? getEraseInstallOsName(_i4.GuidedStorageTargetEraseInstall? target) =>
+      (super.noSuchMethod(Invocation.method(
+        #getEraseInstallOsName,
+        [target],
+      )) as String?);
+
+  @override
   _i5.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,

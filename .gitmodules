@@ -1,6 +1,4 @@
 [submodule "subiquity"]
 	path = packages/subiquity_client/subiquity
-	; url = https://github.com/canonical/subiquity.git
-	; branch = main
-	url = https://github.com/ogayot/subiquity.git
-	branch = erase-and-install
+	url = https://github.com/canonical/subiquity.git
+	branch = main
