@@ -7,7 +7,6 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
-import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_provision/interfaces.dart';
