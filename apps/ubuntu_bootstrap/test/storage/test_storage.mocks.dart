@@ -123,6 +123,12 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
+  bool get canEraseAndInstall => (super.noSuchMethod(
+        Invocation.getter(#canEraseAndInstall),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get canEraseDisk => (super.noSuchMethod(
         Invocation.getter(#canEraseDisk),
         returnValue: false,
@@ -160,6 +166,23 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         ),
         returnValue: <_i6.GuidedStorageTarget>[],
       ) as List<_i6.GuidedStorageTarget>);
+
+  @override
+  Iterable<_i6.GuidedStorageTargetEraseInstall> getEraseInstallTargets() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getEraseInstallTargets,
+          [],
+        ),
+        returnValue: <_i6.GuidedStorageTargetEraseInstall>[],
+      ) as Iterable<_i6.GuidedStorageTargetEraseInstall>);
+
+  @override
+  String? getEraseInstallOsName(_i6.GuidedStorageTargetEraseInstall? target) =>
+      (super.noSuchMethod(Invocation.method(
+        #getEraseInstallOsName,
+        [target],
+      )) as String?);
 
   @override
   String getReleaseNotesURL(_i7.Locale? locale) => (super.noSuchMethod(

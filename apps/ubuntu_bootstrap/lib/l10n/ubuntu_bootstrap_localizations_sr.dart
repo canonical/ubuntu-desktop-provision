@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Можете изабрати свој оперативни систем током покретања.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Можете изабрати свој оперативни систем током покретања.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Ручна инсталација';

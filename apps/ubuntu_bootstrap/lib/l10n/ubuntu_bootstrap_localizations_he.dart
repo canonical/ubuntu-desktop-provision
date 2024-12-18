@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'המסמכים, המוזיקה וקבצים אישיים נוספים יישמרו. אפשר לבחור איזו מערכת הפעלה תיטען עם כל הפעלה של המחשב.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'המסמכים, המוזיקה וקבצים אישיים נוספים יישמרו. אפשר לבחור איזו מערכת הפעלה תיטען עם כל הפעלה של המחשב.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'חלוקה ידנית למחיצות';

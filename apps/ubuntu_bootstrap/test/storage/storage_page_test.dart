@@ -156,7 +156,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside bitlocker', (tester) async {
@@ -182,7 +182,7 @@ void main() {
     expect(radio, findsOneWidget);
 
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside ubuntu', (tester) async {
@@ -206,7 +206,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside unknown', (tester) async {
@@ -223,7 +223,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside dual os', (tester) async {
@@ -258,7 +258,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside duplicate os', (tester) async {
@@ -289,7 +289,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('alongside multi os', (tester) async {
@@ -326,7 +326,7 @@ void main() {
     );
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.alongside).called(1);
+    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
   testWidgets('can erase disk', (tester) async {
@@ -339,7 +339,7 @@ void main() {
     final radio = find.radioListTile(l10n.installationTypeErase('Ubuntu'));
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.erase).called(1);
+    verify(model.type = argThat(isA<StorageTypeErase>())).called(1);
   });
 
   testWidgets('cannot erase disk', (tester) async {
@@ -354,7 +354,7 @@ void main() {
   });
 
   testWidgets('can manual partition', (tester) async {
-    final model = buildStorageModel(type: StorageType.manual);
+    final model = buildStorageModel(type: StorageTypeManual());
     await tester.pumpApp((_) => buildPage(model));
 
     final context = tester.element(find.byType(StoragePage));
@@ -364,7 +364,7 @@ void main() {
     await tester.ensureVisible(radio);
     expect(radio, findsOneWidget);
     await tester.tap(radio);
-    verify(model.type = StorageType.manual).called(1);
+    verify(model.type = argThat(isA<StorageTypeManual>())).called(1);
 
     expect(find.button(l10n.installationTypeAdvancedLabel), isDisabled);
   });

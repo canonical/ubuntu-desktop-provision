@@ -52,15 +52,10 @@ void main() {
     await expectKeyboard(keyboard);
 
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.erase);
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -70,7 +65,6 @@ void main() {
     await expectTimezone(timezone);
 
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -92,27 +86,16 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.erase);
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -131,21 +114,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -159,9 +134,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -183,21 +156,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -209,9 +174,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -233,21 +196,13 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -261,9 +216,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -291,22 +244,15 @@ void main() {
         '--bootloader=uefi',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
 
     await tester.testStoragePage(
@@ -322,9 +268,7 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -350,25 +294,15 @@ void main() {
 
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.manual);
-
     await tester.testManualStoragePage(storage: storage);
 
     await tester.testIdentityPage(
@@ -377,9 +311,7 @@ void main() {
     );
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -405,6 +337,78 @@ void main() {
     );
   });
 
+  // threebuntu-on-msdos has three existing ubuntu partitions:
+  //   - 20.04.4 on sda1 (primary)
+  //   - 21.10   on sda5 (logical)
+  //   - 22.04   on sda6 (logical)
+  testWidgets(
+    'erase and install primary partition',
+    (tester) => eraseInstallTest(
+      tester: tester,
+      machineConfig: 'examples/machines/threebuntu-on-msdos.json',
+      target: GuidedStorageTargetEraseInstall(
+        diskId: 'disk-sda',
+        partitionNumber: 1,
+      ),
+      disks: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(number: 1, preserve: false, mount: '/'),
+            Partition(number: 5, preserve: true, path: '/dev/sda5'),
+            Partition(number: 6, preserve: true, path: '/dev/sda6'),
+          ],
+        ),
+      ],
+    ),
+  );
+
+  // FIXME: this currently fails due to a known Subiquity bug with partition relabelling
+  testWidgets(
+    'erase and install first logical partition',
+    skip: true,
+    (tester) => eraseInstallTest(
+      tester: tester,
+      machineConfig: 'examples/machines/threebuntu-on-msdos.json',
+      target: GuidedStorageTargetEraseInstall(
+        diskId: 'disk-sda',
+        partitionNumber: 5,
+      ),
+      disks: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(number: 1, preserve: true, path: '/dev/sda1'),
+            Partition(number: 5, preserve: false, mount: '/'),
+            Partition(number: 6, preserve: true, path: '/dev/sda6'),
+          ],
+        ),
+      ],
+    ),
+  );
+
+  testWidgets(
+    'erase and install last logical partition',
+    (tester) => eraseInstallTest(
+      tester: tester,
+      machineConfig: 'examples/machines/threebuntu-on-msdos.json',
+      target: GuidedStorageTargetEraseInstall(
+        diskId: 'disk-sda',
+        partitionNumber: 6,
+      ),
+      disks: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(number: 1, preserve: true, path: '/dev/sda1'),
+            Partition(number: 5, preserve: true, path: '/dev/sda5'),
+            Partition(number: 6, preserve: false, mount: '/'),
+          ],
+        ),
+      ],
+    ),
+  );
+
   testWidgets('alongside windows', (tester) async {
     await tester.runApp(
       () => app.main(<String>[
@@ -413,26 +417,17 @@ void main() {
         '--bootloader=uefi',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.alongside);
-
     await tester.testGuidedResizePage(size: 30);
 
     await tester.testIdentityPage(
@@ -441,9 +436,7 @@ void main() {
     );
 
     await tester.testTimezonePage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -476,26 +469,17 @@ void main() {
         '--machine-config=examples/machines/win10.json',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testAutoinstallPage();
-
     await tester.testSourceSelectionPage();
-
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(type: StorageType.alongside);
-
     await tester.testBitLockerPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
@@ -506,19 +490,12 @@ void main() {
   testWidgets('welcome', (tester) async {
     await tester.runApp(() => app.main(<String>['--welcome']));
     await tester.pumpAndSettle();
-
     await tester.testLocalePage();
-
     await tester.testAccessibilityPage();
-
     await tester.testKeyboardPage();
-
     await tester.testNetworkPage(mode: ConnectMode.none);
-
     await tester.testRefreshPage();
-
     await tester.testTryOrInstallPage(option: TryOrInstallOption.installUbuntu);
-
     await tester.testAutoinstallPage();
   });
 
@@ -529,18 +506,112 @@ void main() {
         '--autoinstall=examples/autoinstall/interactive.yaml',
       ]),
     );
+
     await tester.pumpAndSettle();
-
     await tester.testNetworkPage();
-
     await tester.testConfirmPage();
-
     await tester.testInstallPage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapRestartNow();
     await expectLater(windowClosed, completes);
   });
+}
+
+Future<void> eraseInstallTest({
+  required WidgetTester tester,
+  required String machineConfig,
+  required GuidedStorageTargetEraseInstall target,
+  required List<Disk> disks,
+}) async {
+  await tester.runApp(
+    () => app.main(<String>[
+      '--machine-config=$machineConfig',
+      '--',
+      '--bootloader=uefi',
+    ]),
+  );
+
+  await tester.pumpAndSettle();
+  await tester.testLocalePage();
+  await tester.testAccessibilityPage();
+  await tester.testKeyboardPage();
+  await tester.testNetworkPage(mode: ConnectMode.none);
+  await tester.testRefreshPage();
+  await tester.testAutoinstallPage();
+  await tester.testSourceSelectionPage();
+  await tester.testCodecsAndDriversPage();
+  await tester.testStoragePage(type: StorageTypeEraseInstall(target));
+  await tester.testIdentityPage(
+    identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+    password: 'password',
+  );
+  await tester.testTimezonePage();
+  await tester.testConfirmPage();
+  await tester.testInstallPage();
+
+  final windowClosed = YaruTestWindow.waitForClosed();
+  await tester.tapContinueTesting();
+  await expectLater(windowClosed, completes);
+
+  // Verify that the correct partition was reused and that other partitions
+  // are unmodified.
+
+  final path = await getSubiquityLogFile('autoinstall-user-data');
+  await expectLater(path, existsLater);
+
+  final yaml = loadYaml(File(path).readAsStringSync());
+  final actualStorage = yaml['autoinstall']['storage']['config'] as YamlList;
+
+  for (final disk in disks) {
+    final actualDisk = actualStorage.firstWhereOrNull(
+      (d) => d['type'] == 'disk' && d['path'] == disk.path,
+    );
+    expect(actualDisk, isNotNull);
+
+    for (final p in disk.partitions.whereType<Partition>()) {
+      final actualPartition = actualStorage.firstWhereOrNull(
+        (d) => d['type'] == 'partition' && d['number'] == p.number,
+      );
+      expect(actualPartition, isNotNull);
+      expect(
+        actualPartition['preserve'],
+        equals(p.preserve),
+        reason: 'partition ${p.number} preserve',
+      );
+
+      // 'xxx' is the placeholder used by Subiquity when it is modifying an existing partition
+      final expectedPath = p.path ?? 'xxx';
+      expect(
+        actualPartition['path'],
+        equals(expectedPath),
+        reason: 'partition ${p.number} path',
+      );
+
+      // The storage config section in autoinstall-user-data is a flat list of maps
+      // that vary in type (partition, format & mount) that we need to search through
+      // in order to get back the full information for a given Partition.
+      final id = actualPartition['id'] as String;
+      final format = actualStorage.firstWhereOrNull(
+        (d) => d['type'] == 'format' && d['volume'] == id,
+      );
+
+      if (p.mount == null) {
+        expect(format, isNull);
+      } else {
+        expect(format, isNotNull);
+        final mount = actualStorage.firstWhereOrNull(
+          (d) => d['type'] == 'mount' && d['device'] == format['id'] as String,
+        );
+        expect(mount, isNotNull);
+        expect(
+          mount['path'],
+          equals(p.mount),
+          reason: 'partition ${p.number} mount',
+        );
+      }
+    }
+  }
 }
 
 Future<void> verifySubiquityConfig({

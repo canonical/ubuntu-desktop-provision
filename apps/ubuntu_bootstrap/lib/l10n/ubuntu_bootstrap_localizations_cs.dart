@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Ruční rozdělení na oddíly';

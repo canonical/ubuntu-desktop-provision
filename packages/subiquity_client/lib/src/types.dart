@@ -965,6 +965,14 @@ class GuidedStorageTarget with _$GuidedStorageTarget {
     @Default([]) List<GuidedDisallowedCapability> disallowed,
   }) = GuidedStorageTargetResize;
 
+  @FreezedUnionValue('GuidedStorageTargetEraseInstall')
+  const factory GuidedStorageTarget.eraseInstall({
+    required String diskId,
+    required int partitionNumber,
+    @Default([]) List<GuidedCapability> allowed,
+    @Default([]) List<GuidedDisallowedCapability> disallowed,
+  }) = GuidedStorageTargetEraseInstall;
+
   @FreezedUnionValue('GuidedStorageTargetUseGap')
   const factory GuidedStorageTarget.useGap({
     required String diskId,

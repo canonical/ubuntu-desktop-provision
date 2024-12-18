@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Dokumen, musik, dan berkas-berkas pribadi lain akan disimpan. Anda dapat memilih sistem operasi yang Anda inginkan setiap kali komputer dinyalakan.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Dokumen, musik, dan berkas-berkas pribadi lain akan disimpan. Anda dapat memilih sistem operasi yang Anda inginkan setiap kali komputer dinyalakan.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Sesuatu yang lain';

@@ -3,6 +3,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -10,6 +11,10 @@ class RecoveryKeyPage extends StatelessWidget {
   const RecoveryKeyPage({super.key});
 
   static Future<bool> load(WidgetRef ref) {
+    if (ref.read(storageModelProvider).type == StorageType.manual) {
+      return Future.value(false);
+    }
+
     return ref.read(recoveryKeyModelProvider).init();
   }
 

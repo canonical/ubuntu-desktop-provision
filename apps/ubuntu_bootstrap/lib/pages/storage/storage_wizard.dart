@@ -7,7 +7,6 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
-import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_provision/interfaces.dart';
@@ -32,54 +31,45 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final type = ref.watch(storageModelProvider.select((m) => m.type));
-
     final routes = {
       InstallationStep.storage.route: WizardRoute(
         builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
       ),
-      if (type != StorageType.manual)
-        StorageSteps.bitlocker.route: WizardRoute(
-          builder: (_) => const BitLockerPage(),
-          onLoad: (_) => const BitLockerPage().load(context, ref),
-        ),
-      if (type == StorageType.erase)
-        StorageSteps.guidedReformat.route: WizardRoute(
-          builder: (_) => const GuidedReformatPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => GuidedReformatPage.load(ref),
-          onReplace: (_) => StorageSteps.manual.route,
-        ),
-      if (type == StorageType.alongside)
-        StorageSteps.guidedResize.route: WizardRoute(
-          builder: (_) => const GuidedResizePage(),
-          userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => GuidedResizePage.load(ref),
-          onReplace: (_) => StorageSteps.manual.route,
-        ),
-      if (type == StorageType.manual)
-        StorageSteps.manual.route: WizardRoute(
-          builder: (_) => const ManualStoragePage(),
-          userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => ManualStoragePage.load(ref),
-        ),
-      if (type != StorageType.manual)
-        StorageSteps.passphrase.route: WizardRoute(
-          builder: (_) => const PassphrasePage(),
-          userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => PassphrasePage.load(ref),
-        ),
-      if (type != StorageType.manual)
-        StorageSteps.recoveryKey.route: WizardRoute(
-          builder: (_) => const RecoveryKeyPage(),
-          userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-          onLoad: (_) => RecoveryKeyPage.load(ref),
-        ),
+      StorageSteps.bitlocker.route: WizardRoute(
+        builder: (_) => const BitLockerPage(),
+        onLoad: (_) => const BitLockerPage().load(context, ref),
+      ),
+      StorageSteps.guidedReformat.route: WizardRoute(
+        builder: (_) => const GuidedReformatPage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => GuidedReformatPage.load(ref),
+        onReplace: (_) => StorageSteps.manual.route,
+      ),
+      StorageSteps.guidedResize.route: WizardRoute(
+        builder: (_) => const GuidedResizePage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => GuidedResizePage.load(ref),
+        onReplace: (_) => StorageSteps.manual.route,
+      ),
+      StorageSteps.manual.route: WizardRoute(
+        builder: (_) => const ManualStoragePage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => ManualStoragePage.load(ref),
+      ),
+      StorageSteps.passphrase.route: WizardRoute(
+        builder: (_) => const PassphrasePage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => PassphrasePage.load(ref),
+      ),
+      StorageSteps.recoveryKey.route: WizardRoute(
+        builder: (_) => const RecoveryKeyPage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => RecoveryKeyPage.load(ref),
+      ),
     };
 
     return Wizard(
-      key: ValueKey(type),
       userData: WizardData(
         totalSteps:
             InstallationStep.values.where((value) => value.discreteStep).length,

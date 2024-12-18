@@ -271,7 +271,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
   String get installationTypeAdvancedLabel => 'Gelişmiş özellikler...';
@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Belgeler, müzik ve diğer kişisel dosyalar korunacak. Bilgisayar her başlatıldığında hangi işletim sistemini istediğinizi seçebilirsiniz.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Belgeler, müzik ve diğer kişisel dosyalar korunacak. Bilgisayar her başlatıldığında hangi işletim sistemini istediğinizi seçebilirsiniz.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Elle bölümlendirme';

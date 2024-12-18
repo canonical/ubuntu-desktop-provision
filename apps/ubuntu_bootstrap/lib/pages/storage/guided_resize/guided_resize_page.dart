@@ -4,6 +4,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_slider_view.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -12,6 +13,10 @@ class GuidedResizePage extends ConsumerWidget {
   const GuidedResizePage({super.key});
 
   static Future<bool> load(WidgetRef ref) {
+    if (ref.read(storageModelProvider).type != StorageType.alongside) {
+      return Future.value(false);
+    }
+
     return ref.read(guidedResizeModelProvider).init();
   }
 

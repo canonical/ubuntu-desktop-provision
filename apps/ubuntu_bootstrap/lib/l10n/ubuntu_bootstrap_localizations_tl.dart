@@ -271,7 +271,7 @@ class UbuntuBootstrapLocalizationsTl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
   String get installationTypeAdvancedLabel => 'Advanced features...';
@@ -348,7 +348,7 @@ class UbuntuBootstrapLocalizationsTl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside them';
+    return 'Install $product alongside existing operating systems';
   }
 
   @override
@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsTl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Manual installation';
