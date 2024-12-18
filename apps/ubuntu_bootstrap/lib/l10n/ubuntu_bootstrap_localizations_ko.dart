@@ -15,27 +15,27 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => '설치 유형';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '$DISTRO를 어떻게 설치하시겠습니까?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'autoinstall.yaml URL이나 로컬 파일 경로를 입력하세요:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => '대화형 설치';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => '설치 과정을 단계별로 안내받고 싶은 사용자를 위한 옵션입니다.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automated installation';
+  String get autoinstallAutomatedOption => '자동 설치';
 
   @override
-  String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallAutomatedDescription => '여러 차례의 일관된 시스템 설정을 위해 autoinstall.yaml을 사용하는 고급 사용자를 위한 기능입니다.';
 
   @override
   String get changeButtonText => '바꾸기';
@@ -45,7 +45,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return '$DISTRO사용을 환영합니다';
+    return '$DISTRO 사용을 환영합니다';
   }
 
   @override
@@ -54,7 +54,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => '경고:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -63,7 +63,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO로 무엇을 하고 싶으신가요?';
   }
 
   @override
@@ -79,7 +79,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return '컴퓨터에서 변경사항을 만들지 않고 $RELEASE를 체험하실 수 있습니다.';
+    return '컴퓨터에 변경 사항을 만들지 않고 $RELEASE를 체험하실 수 있습니다.';
   }
 
   @override
@@ -105,7 +105,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return '이 컴퓨터는 Intel RST (Rapid Storage Technology)를 사용합니다. 우분투를 설치하기 전에 Windows 에서 종료해야 합니다.';
+    return '이 컴퓨터는 Intel RST (Rapid Storage Technology)를 사용합니다. $DISTRO를 설치하기 전에 Windows 에서 RST를 비활성화해야 합니다.';
   }
 
   @override
@@ -117,7 +117,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Secure Boot 구성';
 
   @override
-  String get configureSecureBootDescription => '서드파티 드라이버 소프트웨어 설치를 선택 하시려면, Secure Boot를 꺼야 합니다.\n이를 위해 지금 보안 키를 지정하고, 시스템 다시 시작 시 입력해야 합니다.';
+  String get configureSecureBootDescription => '서드파티 드라이버 소프트웨어 설치를 선택하시려면, Secure Boot를 꺼야 합니다.\n이를 위해 지금 보안 키를 지정하고, 시스템 다시 시작 시 입력해야 합니다.';
 
   @override
   String get configureSecureBootOption => 'Secure Boot 구성';
@@ -141,45 +141,45 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => '보안 키가 일치하지 않습니다';
 
   @override
-  String get showSecurityKey => '보안 키 보이기';
+  String get showSecurityKey => '보이기';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => '숨기기';
 
   @override
-  String get updatesOtherSoftwarePageTitle => '애플리케이션 및 업데이트';
+  String get updatesOtherSoftwarePageTitle => '애플리케이션';
 
   @override
   String get updatesOtherSoftwarePageDescription => '어떤 앱을 설치하고 시작하시겠습니까?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => '컴퓨터 최적화하기';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => '권장되는 독점 소프트웨어를 설치하시겠습니까?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO는 기본적으로는 아무런 독점 소프트웨어 없이 제공됩니다. 추가적인 독점 소프트웨어를 설치하면 컴퓨터의 성능을 향상시킬 수 있습니다.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA 그래픽 카드 인식됨';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'NVIDIA 그래픽 카드의 최고의 성능을 발휘하기 위해 가급적이면 추가 드라이버를 설치하는 것이 권장됩니다.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => '더 많은 소프트웨어';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => '오프라인 오피스 툴과 유틸리티, 웹 브라우저.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => '기본 설치';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => '웹 브라우저와 기본 유틸리티 등 필수적인 요소만 설치합니다.';
 
   @override
   String get otherOptions => '기타 설정';
@@ -194,59 +194,59 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => '그래픽과 Wi-Fi 하드웨어를 위한 서드파티 소프트웨어 설치';
 
   @override
-  String get installDriversSubtitle => '이러한 드라이버는 문서에 포함된 라이선스 조건의 적용을 받습니다. 또한 독점 소프트웨어 입니다.';
+  String get installDriversSubtitle => 'NVIDIA 드라이버 또는 유사한 드라이버와 이외 요소 포함';
 
   @override
   String get installCodecsTitle => '추가 미디어 포맷 지원을 내려받아 설치';
 
   @override
-  String get installCodecsSubtitle => '이 소프트웨어는 문서에 포함된 라이선스 조건의 적용을 받습니다. 일부는 독점입니다.';
+  String get installCodecsSubtitle => 'MP3, MP4, MOV 또는 기타 미디어 포맷 포함';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => '컴퓨터가 전원에 연결되어 있지 않습니다.';
 
   @override
-  String get offlineWarning => '현재 오프라인';
+  String get offlineWarning => '현재 오프라인 상태입니다';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => '디스크 암호';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => '암호 만들기';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => '파일을 암호화하려면 암호를 설정해야 합니다. 컴퓨터를 켤 때마다 암호를 묻는 메시지가 표시됩니다.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => '암호 선택';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => '암호 확인';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => '암호가 필요합니다';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => '암호가 일치하지 않습니다';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => '암호를 안전한 곳에 저장해 두세요';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => '암호를 분실하면 모든 데이터를 잃게 됩니다.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => '암호 만들기';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => '암호 확인';
 
   @override
-  String get installationTypeTitle => '설치 형식';
+  String get installationTypeTitle => '디스크 설정';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return '$DISTRO를 어떻게 설치하시겠습니까?';
   }
 
   @override
@@ -256,7 +256,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return '이 컴퓨터에 이미 $os1 및 $os2이(가) 설치되어 있습니다. 어떻게 하시겠습니까?';
+    return '현재 이 컴퓨터에 $os1 및 $os2이(가) 설치되어 있습니다. 어떻게 하시겠습니까?';
   }
 
   @override
@@ -271,7 +271,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Start from scratch on your selected disk.';
+  String get installationTypeEraseInfo => '선택된 디스크를 지우고 설치합니다.';
 
   @override
   String get installationTypeAdvancedLabel => '고급 기능...';
@@ -280,7 +280,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => '고급 기능';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => '고급 설정';
 
   @override
   String get installationTypeNone => '선택 안 함';
@@ -289,42 +289,42 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => '선택 안 함';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'LVM 사용';
 
   @override
   String get installationTypeLVMSelected => 'LVM 선택됨';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'LVM과 암호화 사용';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM및 암호화 선택됨';
+  String get installationTypeLVMEncryptionSelected => 'LVM 및 암호화 선택됨';
 
   @override
   String get installationTypeEncryptInfo => '다음 단계에서 보안 키를 선택합니다.';
 
   @override
-  String get installationTypeZFS => '실험적 기능: 디스크 지우고 ZFS 사용';
+  String get installationTypeZFS => '디스크 지우고 ZFS 사용';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => '디스크를 지우고 ZFS와 암호화 사용';
 
   @override
   String get installationTypeZFSSelected => 'ZFS 선택됨';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS와 암호화 선택됨';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => '하드웨어 기반 전체 디스크 암호화 설정';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return '이것은 실험적인 기능이며 이 하드웨어나 향후 $DISTRO 릴리스에서 작동하지 않을 수 있습니다. 이 옵션을 선택하기 전에 <a href=\"$url\">TPM 암호화에 대해 알아보세요</a>.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM 선택됨';
 
   @override
   String installationTypeReinstall(String os) {
@@ -357,14 +357,14 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => '문서, 음악, 및 다른 개인 파일이 그대로 유지됩니다. 컴퓨터를 시작할 때 마다 원하는 운영체제를 선택하실 수 있습니다.';
+  String get installationTypeAlongsideInfo => '컴퓨터를 시작할 때 원하는 운영체제를 선택하실 수 있습니다.';
 
   @override
-  String get installationTypeManual => '수동 파티셔닝';
+  String get installationTypeManual => '수동 설치';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return '파티션을 직접 만들고 크기를 조절 하거나, $DISTRO에 대해 여러 파티션을 선택할 수 있습니다';
+    return '직접 디스크 설정을 원하는 고급 사용자를 위한 옵션입니다.';
   }
 
   @override
@@ -373,13 +373,13 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => '선택된 디스크를 완전히 지우고 새로 시작합니다.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => '드라이브 선택:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => '파티션 선택:';
 
   @override
   String get selectGuidedStorageInfoLabel => '디스크 전체가 사용됩니다:';
@@ -389,7 +389,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO를 설치할 위치를 선택하세요';
   }
 
   @override
@@ -397,11 +397,11 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num의 작은 파티션이 숨겨져 있음, <a href=\"$url\">고급 파티션 도구</a>에서 더 많은 기능을 사용하십시오';
+    return '$num개의 작은 파티션이 숨겨져 있음, <a href=\"$url\">고급 파티션 도구</a>에서 더 많은 기능을 사용하십시오';
   }
 
   @override
-  String get installAlongsideResizePartition => '파티션 조정';
+  String get installAlongsideResizePartition => '파티션 크기 조정';
 
   @override
   String get installAlongsideAllocateSpace => '공간 할당';
@@ -509,7 +509,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return '$format 포맷 유지하기';
   }
 
   @override
@@ -522,7 +522,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => '설치 준비 완료';
 
   @override
-  String get confirmHeader => '계속 하시면 아래 나열된 변경사항을 디스크에 기록됩니다. 수동으로 추가적인 변경사항을 만드실 수 있습니다.';
+  String get confirmHeader => '선택 사항 다시 확인하기';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -534,37 +534,37 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => '없음';
 
   @override
   String get confirmDevicesTitle => '장치';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => '애플리케이션';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => '디스크 설정';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => '디스크 암호화';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => '설치 디스크';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => '독점 소프트웨어';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => '일반';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => '보안 및 기타';
 
   @override
   String get confirmPartitionsTitle => '파티션';
 
   @override
-  String get confirmPartitionTables => '다음과 같은 장치의 파티션 테이블이 변경되었습니다:';
+  String get confirmPartitionTables => '다음 장치의 파티션 테이블이 변경되었습니다:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -600,13 +600,13 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => '코덱';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => '코덱과 드라이버';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => '드라이버';
 
   @override
   String get confirmInstallButton => '설치';
@@ -621,19 +621,19 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** 이(가) 디스크로 복사되었습니다';
   }
 
   @override
   String restartInto(String system) {
-    return '$system (으)로 다시 시작';
+    return '$system(으)로 다시 시작';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => '설치를 완료하기 위해 다시 시작하거나 체험을 계속할 수 있습니다.\n모든 변경 사항은 저장되지 않습니다.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => '설치 과정을 계속하려면 컴퓨터를 다시 시작해야 합니다.';
 
   @override
   String get shutdown => '시스템 종료';
@@ -673,21 +673,21 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return '$RELEASE사용을 환영합니다';
+    return '$RELEASE 사용을 환영합니다';
   }
 
   @override
-  String get installationSlidesAvailable => '이용가능:';
+  String get installationSlidesAvailable => '이용 가능:';
 
   @override
   String get installationSlidesIncluded => '포함됨:';
 
   @override
-  String get installationSlidesWelcomeTitle => '빠르고, 무료이며 새로운 기능으로 가득합니다';
+  String get installationSlidesWelcomeTitle => '빠르고, 무료이며 새로운 기능으로 가득';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return '최신 버전의 $DISTRO는 컴퓨팅을 그 어느 때보다 쉽게 합니다.';
+    return '최신 버전의 $DISTRO로 컴퓨터를 더욱 쉽게 사용할 수 있습니다.';
   }
 
   @override
@@ -704,11 +704,11 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => '최고의 오픈소스로 개발하십시오';
+  String get installationSlidesDevelopmentTitle => '최고의 오픈소스를 활용하여 개발하기';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO 는 앱 또는 웹 개발, 데이터 과학과 AI/ML 및 DevOps와 시스템 관리에 최적의 워크스테이션 입니다. 모든 $DISTRO 릴리스에는 최신 툴체인과 모든 주요 IDE 지원이 포함되어 있습니다.';
+    return '$DISTRO 앱 또는 웹 개발, 데이터 과학 및 AI / ML뿐만 아니라 devops 및 관리를위한 이상적인 워크 스테이션입니다. 모든 $DISTRO 릴리스에는 최신 툴체인이 포함되어 있으며 모든 주요 IDE를 지원합니다.';
   }
 
   @override
@@ -720,7 +720,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesGamingTitle => '게이밍에 적합합니다';
+  String get installationSlidesGamingTitle => '게이밍에 최적화';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
@@ -728,7 +728,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSecurityTitle => '개인 및 보안';
+  String get installationSlidesSecurityTitle => '개인 정보 및 보안';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
@@ -737,7 +737,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return '모든 $DISTRO LTS 릴리스에는 5년의 보안 패치가 포함되어 있으며, Ubuntu Pro 구독으로 10년 연장됩니다.';
+    return '모든 $DISTRO LTS 릴리스에는 5년의 보안 패치가 포함되어 있으며, Ubuntu Pro 구독으로 10년으로 연장됩니다.';
   }
 
   @override
@@ -763,11 +763,11 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityLanguages => '언어 지원';
 
   @override
-  String get installationSlidesSupportTitle => '도움 & 지원';
+  String get installationSlidesSupportTitle => '도움 및 지원';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return '공식 $DISTRO 문서는 온라인과 독의 도움말로 사용할 수 있습니다.';
+    return '공식 $DISTRO 문서는 온라인과 독의 도움말 아이콘으로 사용할 수 있습니다.';
   }
 
   @override
@@ -807,7 +807,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return '선택한 디스크에는 $DISTRO를 설치할 디스크 공간이 부족합니다. 설치 프로그램을 종료하여 사용 가능한 공간을 확보하거나 다른 디스크를 선택하십시오.';
   }
 
   @override
@@ -817,157 +817,157 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => '필수:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => '업데이트 사용 가능';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => '설치 관리자의 업데이트가 사용 가능합니다';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => '지금 업데이트';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => '향상된 안정성과 더 많은 기능을 위해 최신 버전으로 업데이트하세요.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => '업데이트 준비됨';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return '현재 $snap 버전은 $version입니다.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return '$version 버전으로 업데이트하기';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return '현재 버전 $version은 최신 버전입니다.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap 업데이트 중...';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => '설치 관리자를 닫고 다시 시작하여 계속하세요';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => '설치 관리자 닫기';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap에 필요한 요소를 확인하는 중...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap 새로 고침 중...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap을 다시 새로고침하는 중...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap 준비 중...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap 다운로드 중...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap 검증 중...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap 마운트 중...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap 서비스 중지 중...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap alias 제거 중...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap 링크 해제 중...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap 에셋 업데이트 중...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap 커널 명령줄 업데이트 중...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap 데이터 복사 중...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap 보안 프로필 설정 중...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap 연결 중...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap 플러그 및 슬롯 연결 중...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return '자동 $snap alias 설정 중...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap alias 설정 중...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap 서비스 시작 중...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap 정리하는 중...';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM 복구 키';
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => '설치 후 다음 명령을 사용하여 복구 키에 액세스할 수 있습니다:';
 
   @override
   String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.';
+    return '<font color=\"$color\">경고:</font> 이 보안 키를 분실하면 모든 데이터가 손실됩니다. 필요한 경우 키를 적어서 다른 안전한 곳에 보관하세요.';
   }
 
   @override
-  String get validate => 'Validate';
+  String get validate => '검증';
 }

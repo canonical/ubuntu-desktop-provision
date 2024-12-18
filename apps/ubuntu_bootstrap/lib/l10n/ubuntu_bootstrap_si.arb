@@ -37,7 +37,7 @@
   "@showSecurityKey": {},
   "installationTypeLVMEncryptionSelected": "LVM හා සංකේතනය තෝරා ඇත",
   "@installationTypeLVMEncryptionSelected": {},
-  "selectGuidedStoragePageTitle": "තැටිය මකාදමා {DISTRO} ස්ථාපනය කරන්න",
+  "selectGuidedStoragePageTitle": "තැටිය මකා {DISTRO} ස්ථාපනය කරන්න",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
@@ -70,7 +70,7 @@
   "@dontInstallDriverSoftwareNow": {},
   "secureBootSecurityKeysDontMatch": "ආරක්‍ෂණ යතුරු නොගැළපේ",
   "@secureBootSecurityKeysDontMatch": {},
-  "updatesOtherSoftwarePageTitle": "යාවත්කාල හා වෙනත් මෘදුකාංග",
+  "updatesOtherSoftwarePageTitle": "යෙදුම්",
   "@updatesOtherSoftwarePageTitle": {},
   "otherOptions": "වෙනත් විකල්ප",
   "@otherOptions": {},
@@ -105,7 +105,7 @@
       "os": {}
     }
   },
-  "installationTypeErase": "තැටිය මකාදමා {DISTRO} ස්ථාපනය කරන්න",
+  "installationTypeErase": "තැටිය මකා {DISTRO} ස්ථාපනය කරන්න",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
@@ -204,7 +204,7 @@
   "@installThirdPartySubtitle": {},
   "installationTypeTitle": "තැටිය පිහිටුවීම",
   "@installationTypeTitle": {},
-  "installationTypeManual": "වෙන යමක්",
+  "installationTypeManual": "අතින් ස්ථාපනය",
   "@installationTypeManual": {},
   "tryOrInstallRepairDescription": "ලේඛන හෝ සැකසුම් ස්පර්ශ නොකර ස්ථාපිත සියළුම මෘදුකාංග යළි ස්ථාපනය අළුත්වැඩියාව මගින් සිදුවේ.",
   "@tryOrInstallRepairDescription": {},
@@ -253,7 +253,7 @@
   "@continueTesting": {},
   "partitionFormatLabel": "භාවිතය:",
   "@partitionFormatLabel": {},
-  "bootLoaderDevice": "ඇරඹුම්කාරකය ස්ථාපනයට උපාංගය",
+  "bootLoaderDevice": "ඇරඹුම්කාරකය ස්ථාපනය සඳහා උපාංගය",
   "@bootLoaderDevice": {},
   "installAlongsideAllocateSpace": "ඉඩ වෙන් කරන්න",
   "@installAlongsideAllocateSpace": {},
@@ -272,7 +272,7 @@
   "@diskHeadersFormat": {},
   "installationTypeNoOSDetected": "මෙම පරිගණකයෙහි කිසිදු මෙහෙයුම් පද්ධතියක් අනාවරණය වී නැත. ඔබ කිරීමට කැමති කුමක්ද?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeZFS": "පරීක්‍ෂාත්මක: තැටිය මකාදමා ZFS භාවිතා කරන්න",
+  "installationTypeZFS": "පරීක්‍ෂාත්මක: තැටිය මකා ZFS භාවිතා කරන්න",
   "@installationTypeZFS": {},
   "installationTypeAlongsideInfo": "ලේඛන, ගීත සහ අනෙකුත් පෞද්. ගොනු රඳවා ගැනෙයි. පරිගණකය ආරම්භ වන සැමවිට අවශ්‍ය මෙහෙයුම් පද්ධතිය තේරීමට හැකිය.",
   "@installationTypeAlongsideInfo": {},
@@ -316,7 +316,7 @@
       "product": {}
     }
   },
-  "allocateDiskSpace": "තැටියේ ඉඩ වෙන් කරන්න",
+  "allocateDiskSpace": "අතින් පංගුකරණය",
   "@allocateDiskSpace": {},
   "partitionLocationBeginning": "මෙම ඉඩෙහි ආරම්භය",
   "@partitionLocationBeginning": {},
@@ -328,9 +328,9 @@
   "@installAlongsideResizePartition": {},
   "installAlongsidePartition": "පංගුව:",
   "@installAlongsidePartition": {},
-  "confirmHeader": "ඔබ ඉදිරියට ගියහොත්, පහත ලැයිස්තුගත වෙනස්කම් තැටියට ලියනු ඇත. ඔබට අතින් තවත් වෙනස්කම් සිදු කිරීමට හැකි වනු ඇත.",
+  "confirmHeader": "ඔබගේ තේරීම් සමාලෝචනය කරන්න",
   "@confirmHeader": {},
-  "installationTypeManualInfo": "ඔබටම පංගු සෑදීමට හෝ යළි ප්‍රමාණනයට, හෝ {DISTRO} සඳහා පංගු කිහිපයක් තේරීමට හැකිය",
+  "installationTypeManualInfo": "තැටි(ය) අභිරුචිකරණයට වුවමනා ප්‍රගත පරිශ්‍රීලකයින්ට.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -345,7 +345,7 @@
       "url": {}
     }
   },
-  "newPartitionTableConfirmationMessage": "ඔබ පංගුකරණයට සමස්ත උපාංගයක් තෝරාගෙන ඇත. ඔබ එහි නව පංගු වගුවක් සෑදීමට ගියහොත්, පවතින සියළුම පංගු ඉවත් කෙරෙනු ඇත.\n\nඔබට අවශ්‍ය නම් මෙම මෙහෙයුම පසුව අහෝසි කිරීමට හැකිය.",
+  "newPartitionTableConfirmationMessage": "සමස්ත උපාංගයට නව පංගු වගුවක් සෑදීමේ දී වත්මන් සියළුම පංගු ඉවත් කෙරෙනු ඇත. මෙම මෙහෙයුම අප්‍රතිවර්ත්‍යයි.",
   "@newPartitionTableConfirmationMessage": {},
   "confirmPartitionFormatMount": "#{sysname} පංගුව {mount} සඳහා භාවිතයට {format} ලෙස පවිත්‍රව ඇත",
   "@confirmPartitionFormatMount": {
@@ -366,7 +366,7 @@
   },
   "partitionTypeLabel": "නව පංගුව සඳහා වර්ගය:",
   "@partitionTypeLabel": {},
-  "installationTypeAlongsideUnknown": "අන් පංගුවලට පසකින් {product} ස්ථාපනය කරන්න",
+  "installationTypeAlongsideUnknown": "අනෙක් පංගු වලට පසකින් {product} ස්ථාපනය කරන්න",
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
@@ -377,7 +377,7 @@
   "@diskHeadersMountPoint": {},
   "newPartitionTable": "නව පංගු වගුවක්",
   "@newPartitionTable": {},
-  "newPartitionTableConfirmationTitle": "මෙම උපාංගයෙහි නව හිස් පංගු වගුවක් සාදන්නද?",
+  "newPartitionTableConfirmationTitle": "නව හිස් පංගුවක්",
   "@newPartitionTableConfirmationTitle": {},
   "partitionCreateTitle": "පංගුව සාදන්න",
   "@partitionCreateTitle": {},
@@ -406,7 +406,7 @@
   "@partitionLocationLabel": {},
   "partitionErase": "පංගුව පවිත්‍ර කරන්න",
   "@partitionErase": {},
-  "confirmPartitionTables": "පහත උපාංගවල පංගු වගු වෙනස් වේ:",
+  "confirmPartitionTables": "පහත උපාංග වල පංගු වගු වෙනස් වේ:",
   "@confirmPartitionTables": {},
   "confirmPartitionChanges": "පහත පංගු වෙනස්කම් යෙදෙනු ඇත:",
   "@confirmPartitionChanges": {},
@@ -444,5 +444,255 @@
   "autoinstallTitle": "ස්ථාපන වර්ගය",
   "@autoinstallTitle": {},
   "confirmEntryDiskSetup": "තැටිය පිහිටුවීම",
-  "@confirmEntryDiskSetup": {}
+  "@confirmEntryDiskSetup": {},
+  "autoinstallInteractiveOption": "අන්‍යෝන්‍ය ස්ථාපනය",
+  "@autoinstallInteractiveOption": {},
+  "tryOrInstallHeader": "{DISTRO} සඳහා විකල්පයක් තෝරන්න",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rstHeader": "ඉදිරියට යාමට RST අක්‍රිය කරන්න",
+  "@rstHeader": {},
+  "codecsAndDriversPageTitle": "පරිගණකය ප්‍රශස්ත කරන්න",
+  "@codecsAndDriversPageTitle": {},
+  "minimalInstallationTitle": "පෙරනිමි තේරීම",
+  "@minimalInstallationTitle": {},
+  "fullInstallationTitle": "විස්තීරණ තේරීම",
+  "@fullInstallationTitle": {},
+  "installationTypeHeader": "ඔබ {DISTRO} ස්ථාපනයට කැමති කෙසේද?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVM": "LVM භාවිතා කරන්න",
+  "@installationTypeLVM": {},
+  "installationTypeTPM": "දෘඪාංග පිටුබල පූර්ණ තැටි සංකේතනය සබල කරන්න",
+  "@installationTypeTPM": {},
+  "guidedStoragePageHeader": "{DISTRO} ස්ථාපනය කළ යුතු තැන තෝරන්න",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePartitionDropdownLabel": "පංගුව තෝරන්න:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "confirmDiskEncryptionNone": "කිසිවක් නැත",
+  "@confirmDiskEncryptionNone": {},
+  "confirmEntryInstallationDisk": "ස්ථාපන තැටිය",
+  "@confirmEntryInstallationDisk": {},
+  "confirmSectionGeneralTitle": "ප්‍රධාන",
+  "@confirmSectionGeneralTitle": {},
+  "confirmPartitionsTitle": "පංගු",
+  "@confirmPartitionsTitle": {},
+  "confirmProprietarySoftwareDrivers": "ධාවක",
+  "@confirmProprietarySoftwareDrivers": {},
+  "restartWarningBody": "ස්ථාපනය නිමාවට යළි අරඹන්න හෝ දිගටම අත්හදා බලන්න.\nඔබගේ කිසිදු වෙනස්කමක් සුරැකෙන්නේ නැත.",
+  "@restartWarningBody": {},
+  "bitlockerHeader": "ඉදිරියට යාමට බිට්ලොකර් අක්‍රිය කරන්න",
+  "@bitlockerHeader": {},
+  "restartIntoWindowsTitle": "වින්ඩෝස් වෙත යළි අරඹන්න ද?",
+  "@restartIntoWindowsTitle": {},
+  "installationSlidesTitle": "{RELEASE} වෙත පිළිගනිමු",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "තිබේ:",
+  "@installationSlidesAvailable": {},
+  "installationSlidesAccessibilityOrca": "ඔර්කා තිර කියවනය",
+  "@installationSlidesAccessibilityOrca": {},
+  "installationSlidesAccessibilityLanguages": "භාෂා සහාය",
+  "@installationSlidesAccessibilityLanguages": {},
+  "installationSlidesSupportTitle": "උදව් හා සහාය",
+  "@installationSlidesSupportTitle": {},
+  "installationSlidesSupportResources": "ප්‍රයෝජනවත් සම්පත්:",
+  "@installationSlidesSupportResources": {},
+  "notEnoughDiskSpaceRequired": "වුවමනාය:",
+  "@notEnoughDiskSpaceRequired": {},
+  "refreshHeader": "ස්ථාපකය සඳහා යාවත්කාලයක් තිබේ",
+  "@refreshHeader": {},
+  "notEnoughDiskSpaceAvailable": "තිබේ:",
+  "@notEnoughDiskSpaceAvailable": {},
+  "refreshReady": "යාවත්කාලය සූදානම්",
+  "@refreshReady": {},
+  "refreshSnapValidate": "{snap} වලංගු වෙමින්...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallHeader": "ඔබ {DISTRO} ස්ථාපනයට කැමති කෙසේද?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveDescription": "ස්ථාපනයේ දී පියවරෙන් පියවර මඟ පෙන්වීම සඳහා කැමති පරිශ්‍රීලකයින්ට.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallAutomatedOption": "ස්වයංක්‍රීය ස්ථාපනය",
+  "@autoinstallAutomatedOption": {},
+  "autoinstallAutomatedDescription": "සංස්ථායී සහ පුනරාවර්තන පද්ධති පිහිටුවීම් සඳහා ස්වයංස්ථාපනය.yaml තිබෙන ප්‍රගත පරිශ්‍රීලකයින්ට.",
+  "@autoinstallAutomatedDescription": {},
+  "loadingPageTitle": "{DISTRO} වෙත පිළිගනිමු",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "{DISTRO} සූදානම් වෙමින්…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "අවවාදයයි:",
+  "@warningLabel": {},
+  "hideSecurityKey": "සඟවන්න",
+  "@hideSecurityKey": {},
+  "autoinstallInstructions": "ස්වයංස්ථාපනය.yaml හි ඒ.ස.නි. හෝ ස්ථානීය ගොනුවේ පෙත ලියන්න:",
+  "@autoinstallInstructions": {},
+  "minimalInstallationSubtitle": "අත්‍යවශ්‍ය අතිරික්සුව සහ මූලික උපයෝග පමණි.",
+  "@minimalInstallationSubtitle": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "refreshPageTitle": "යාවත්කාල තිබේ",
+  "@refreshPageTitle": {},
+  "batteryWarning": "පරිගණකය විදුලි බලයට සම්බන්ධ කර නැත.",
+  "@batteryWarning": {},
+  "installationTypeTPMSelected": "TPM තෝරා ඇත",
+  "@installationTypeTPMSelected": {},
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "refreshUpdating": "{snap} යාවත්කාල වෙමින්...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDevicesTitle": "උපාංග",
+  "@confirmDevicesTitle": {},
+  "confirmEntryApplications": "යෙදුම්",
+  "@confirmEntryApplications": {},
+  "confirmEntryDiskEncryption": "තැටිය සංකේතනය",
+  "@confirmEntryDiskEncryption": {},
+  "refreshUpdateNow": "යාවත්කාල කරන්න",
+  "@refreshUpdateNow": {},
+  "refreshCloseLabel": "ස්ථාපකය වසන්න",
+  "@refreshCloseLabel": {},
+  "refreshSnapRefresh": "{snap} නැවුම් වෙමින්...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "{snap} සූදානම් වෙමින්...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "{snap} බාගැනෙමින්...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "NVIDIA චිත්‍රක පතක් අනාවරණය විය",
+  "@codecsAndDriversNvidiaNote": {},
+  "refreshSnapStopServices": "{snap} සේවා නවත්වමින්...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "{snap} දත්ත පිටපත් වෙමින්...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "NVIDIA චිත්‍රක පත් වල හොඳම කාර්ය සාධනය සඳහා අතිරේක ධාවක ස්ථාපනයට තරයේ නිර්දේශ කෙරේ.",
+  "@codecsAndDriversNvidiaBody": {},
+  "codecsAndDriversPageBody": "පෙරනිමි පරිදි ස්වාම්‍ය මෘදුකාංග රහිතව {DISTRO} නිකුත් කරයි. අතිරේක මෘදුකාංග ස්ථාපනයෙන් ඔබගේ පරිගණකයේ කාර්ය සාධනය ඉහළ නංවාලීමට හැකිය.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "fullInstallationSubtitle": "කාර්යාල මෙවලම්, උපයෝග සහ අතිරික්සුවක් සහිත මාර්ග අපගත හිතකාමී තේරීමකි.",
+  "@fullInstallationSubtitle": {},
+  "installationTypeLVMEncryption": "LVM හා සංකේතනය භාවිතා කරන්න",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeExperimental": "පරීක්‍ෂාත්මක",
+  "@installationTypeExperimental": {},
+  "installationTypeZFSEncryption": "තැටිය මකා ZFS සමඟ සංකේතනය භාවිතා කරන්න",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSEncryptionSelected": "ZFS හා සංකේතනය තෝරා ඇත",
+  "@installationTypeZFSEncryptionSelected": {},
+  "codecsAndDriversPageDescription": "නිර්දේශිත ස්වාම්‍ය මෘදුකාංග ස්ථාපනය කරන්නද?",
+  "@codecsAndDriversPageDescription": {},
+  "installationTypeEraseInfo": "ඔබගේ තැටියේ මුල සිට අරඹන්න.",
+  "@installationTypeEraseInfo": {},
+  "confirmEntryProprietarySoftware": "ස්වාම්‍ය මෘදුකාංග",
+  "@confirmEntryProprietarySoftware": {},
+  "selectGuidedStorageInfo": "ඔබගේ තැටියේ මුල සිට අරඹන්න.",
+  "@selectGuidedStorageInfo": {},
+  "installationSlidesSoftwareTitle": "ඔබට වුවමනා සියලුම මෘදුකාංග",
+  "@installationSlidesSoftwareTitle": {},
+  "installationSlidesWelcomeTitle": "වේගවත්, නොමිලේ සහ බොහෝ නවීන විශේෂාංග",
+  "@installationSlidesWelcomeTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "ආරක්‍ෂාව හා වෙනත්",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "partitionFormatKeep": "{format} ලෙස පවිත්‍රව තබන්න",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeHeader": "නවතම {DISTRO} අනුවාදය අන් කවරදාටත් වඩා පරිගණක භාවිතය පහසු කරයි.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }

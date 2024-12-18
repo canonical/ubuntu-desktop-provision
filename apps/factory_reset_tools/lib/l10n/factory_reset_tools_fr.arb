@@ -1,8 +1,8 @@
 {
   "@@locale": "fr",
-  "appTitle": "Outils de réinitialisation usine",
+  "appTitle": "Outils de réinitialisation d'usine",
   "@appTitle": {},
-  "windowTitle": "Outils de réinitialisation usine",
+  "windowTitle": "Outils de réinitialisation d'usine",
   "@windowTitle": {},
   "startFactoryReset": "Commencer la réinitialisation usine",
   "@startFactoryReset": {},

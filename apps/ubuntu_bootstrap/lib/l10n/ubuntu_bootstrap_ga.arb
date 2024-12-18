@@ -1066,5 +1066,14 @@
         "type": "String"
       }
     }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "Ní córas comhaid tacaithe é {format} do {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   }
 }

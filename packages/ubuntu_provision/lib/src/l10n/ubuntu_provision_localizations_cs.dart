@@ -41,7 +41,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Velký text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Snížení animací';
+  String get accessibilityReduceAnimationLabel => 'Odbourání animací';
 
   @override
   String get accessibilityScreenReaderLabel => 'Čtečka obrazovky';
@@ -50,7 +50,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get accessibilityVisualAlertsLabel => 'Vizuální upozornění';
 
   @override
-  String get accessibilityStickKeysLabel => 'Lepicí klávesy';
+  String get accessibilityStickKeysLabel => 'Lepivé klávesy';
 
   @override
   String get accessibilitySlowKeysLabel => 'Pomalé klávesy';

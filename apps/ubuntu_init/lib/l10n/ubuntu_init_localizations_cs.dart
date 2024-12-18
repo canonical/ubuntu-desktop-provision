@@ -50,7 +50,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Pomozte nám zlepšit $distro tím, že s námi budete sdílet svá systémová data. To zahrnuje věci, jako je model vašeho počítače, nainstalovaný software a umístění, které jste vybrali pro své časové pásmo.';
+    return 'Pomozte nám zlepšit $distro tím, že s námi budete sdílet informace o svém systému. To zahrnuje věci, jako je model vašeho počítače, nainstalovaný software a umístění, které jste vybrali pro své časové pásmo.';
   }
 
   @override

@@ -7,10 +7,10 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get appTitle => 'Nástroje pro obnovení továrního nastavení';
+  String get appTitle => 'Nástroje pro vrácení do výchozího nastavení';
 
   @override
-  String get windowTitle => 'Nástroje pro obnovení továrního nastavení';
+  String get windowTitle => 'Nástroje pro vrácení do výchozího nastavení';
 
   @override
   String get homeTitle => 'Co si přejete dělat?';
@@ -19,7 +19,7 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get createResetMedia => 'Vytvořit médium pro resetování';
 
   @override
-  String get startFactoryReset => 'Spustit obnovení továrního nastavení';
+  String get startFactoryReset => 'Spustit vrácení do výchozího nastavení';
 
   @override
   String get createUsbTitle => 'Vytvořit USB médium pro resetování';
@@ -40,10 +40,10 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nezjištěno žádné vyměnitelné úložiště';
 
   @override
-  String get noMediaDetectedSubtitle => 'K vytvoření média pro obnovení továrního nastavení potřebujete úložiště USB.';
+  String get noMediaDetectedSubtitle => 'K vytvoření média pro obnovení do výchozího nastavení potřebujete úložiště USB.';
 
   @override
-  String get factoryResetTitle => 'Vyberte možnost pro zahájení obnovy továrního nastavení';
+  String get factoryResetTitle => 'Vyberte možnost pro zahájení obnovy do výchozího nastavení';
 
   @override
   String get loadingDrives => 'Počkejte prosím, než načteme disky.';
@@ -70,13 +70,13 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get resetMediaFinished => 'Hotovo';
 
   @override
-  String get resetMediaFailed => 'Selhalo';
+  String get resetMediaFailed => 'Nezdařilo se';
 
   @override
   String get error => 'Chyba';
 
   @override
-  String get loading => 'Načítání...';
+  String get loading => 'Načítání…';
 
   @override
   String get warning => 'Varování';
@@ -97,5 +97,5 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get close => 'Zavřít';
 
   @override
-  String get ok => 'Budiž';
+  String get ok => 'OK';
 }

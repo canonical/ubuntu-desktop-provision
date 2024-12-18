@@ -97,5 +97,5 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get close => 'Zavrieť';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ok';
 }

@@ -7,7 +7,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get appTitle => 'אשף התקנת אובונטו לשולחן עבודה';
+  String get appTitle => 'תוכנית התקנת שולחן עבודה אובונטו';
 
   @override
   String windowTitle(String RELEASE) {

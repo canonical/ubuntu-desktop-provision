@@ -919,5 +919,14 @@
         "type": "String"
       }
     }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} ne estas taŭga dosiersistemo por {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   }
 }

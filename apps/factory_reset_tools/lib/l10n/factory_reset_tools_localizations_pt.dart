@@ -7,7 +7,7 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Ferramentas de redefinição de fábrica';
 
   @override
   String get windowTitle => 'Factory reset tools';

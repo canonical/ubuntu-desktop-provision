@@ -201,7 +201,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityConfirmPasswordLabel => 'Zopakujte zadanie hesla';
 
   @override
-  String get identityPasswordMismatch => 'Heslá sa nezhodujú';
+  String get identityPasswordMismatch => 'Tieto heslá sa nezhodujú';
 
   @override
   String get identityPasswordShow => 'Zobraziť';
@@ -338,7 +338,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Prečítajte si licenčné podmienky';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.';
+  String get eulaReadAndAcceptTerms => 'Ak chcete pokračovať v nastavovaní tohto zariadenia, musíte si prečítať a prijať podmienky licenčnej zmluvy.';
 
   @override
   String get eulaAcceptTerms => 'Prečítal(a) som si tieto podmienky a súhlasím s nimi';
