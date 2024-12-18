@@ -71,7 +71,7 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Aviso legal';
 
   @override
-  String get telemetryCollectError => 'No se pudieron recopilar datos de telemetría';
+  String get telemetryCollectError => 'Error al recopilar datos de telemetría';
 
   @override
   String get privacyPageTitle => 'Servicios de ubicación';
@@ -106,11 +106,11 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Consiga la suscripción más completa para la seguridad del software de código abierto';
+  String get ubuntuProSubscriptionDescription => 'Obtenga la suscripción más completa para la seguridad del software de código abierto';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Siempre gratuito para uso personal. 30 días de prueba para empresas. <a href=\"https://$url\">Más información</a>';
+    return 'Siempre gratuito para uso personal. Prueba de 30 días para empresas.<a href=\"https://$url\"> Más información</a>';
   }
 
   @override
@@ -135,11 +135,11 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Activar Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Conecte esta máquina a una suscripción de Ubuntu Pro para obtener actualizaciones de seguridad en una gama más amplia de paquetes, hasta 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Vincule esta máquina a una suscripción de Ubuntu Pro para recibir actualizaciones de seguridad para una mayor cantidad de paquetes hasta 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ya está activado en esta máquina';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Puede gestionar sus servicios Pro en la aplicación Programas y actualizaciones.';
+  String get ubuntuProSucessAttachDescription => 'Puedes administrar tus servicios de Ubuntu Pro en Software y Actualizaciones.';
 }

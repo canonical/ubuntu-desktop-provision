@@ -213,6 +213,9 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get telemetryLegalLabel => '法律聲明';
 
   @override
+  String get telemetryCollectError => '無法蒐集遙測資料';
+
+  @override
   String get privacyPageTitle => '地理位置服務';
 
   @override

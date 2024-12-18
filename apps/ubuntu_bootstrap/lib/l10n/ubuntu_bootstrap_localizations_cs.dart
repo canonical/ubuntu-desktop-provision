@@ -117,7 +117,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Nastavit Secure Boot';
 
   @override
-  String get configureSecureBootDescription => 'Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte vytvořením klíče zabezpečení a jeho\nnásledným zadáním po restartu systému.';
+  String get configureSecureBootDescription => 'Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte zvolením klíče zabezpečení nyní a jeho\nnásledným zadáním po restartu systému.';
 
   @override
   String get configureSecureBootOption => 'Nastavit Secure Boot';
@@ -429,7 +429,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format není podporovaný souborový systém pro $mountpoint';
   }
 
   @override

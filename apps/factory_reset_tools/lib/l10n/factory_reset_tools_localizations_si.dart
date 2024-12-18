@@ -13,7 +13,7 @@ class FactoryResetToolsLocalizationsSi extends FactoryResetToolsLocalizations {
   String get windowTitle => 'Factory reset tools';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'ඔබ කිරීමට කැමති කුමක්ද?';
 
   @override
   String get createResetMedia => 'Create reset media';

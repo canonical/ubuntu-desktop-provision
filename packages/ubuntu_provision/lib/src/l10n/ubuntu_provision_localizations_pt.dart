@@ -7,7 +7,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Acessibilidade';
 
   @override
   String accessibilityPageHeader(String DISTRO) {

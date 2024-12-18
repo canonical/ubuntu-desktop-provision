@@ -410,6 +410,11 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get errorPageUnexpected => '很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。';
 
   @override
+  String errorPageUbuntuBug(String SNAP) {
+    return '若要傳送包含相關除錯資訊的自動化錯誤報告，請在終端機中或從命令控制台（Alt+F2）執行 <pre>sudo ubuntu-bug $SNAP</pre>。';
+  }
+
+  @override
   String get errorPageShowLog => '顯示運行紀錄';
 
   @override

@@ -7,10 +7,10 @@ class FactoryResetToolsLocalizationsFr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appTitle => 'Outils de réinitialisation usine';
+  String get appTitle => 'Outils de réinitialisation d\'usine';
 
   @override
-  String get windowTitle => 'Outils de réinitialisation usine';
+  String get windowTitle => 'Outils de réinitialisation d\'usine';
 
   @override
   String get homeTitle => 'Que voulez-vous faire ?';

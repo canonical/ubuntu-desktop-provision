@@ -429,7 +429,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format no es un sistema de ficheros compatible con $mountpoint';
   }
 
   @override
