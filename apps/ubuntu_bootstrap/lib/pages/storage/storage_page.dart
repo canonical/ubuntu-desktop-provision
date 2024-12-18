@@ -237,17 +237,19 @@ class _InstallationTypeTile extends ConsumerWidget {
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruRadioListTile(
-        title: title,
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [subtitle, trailing].whereNotNull().toList(),
+      child: Material(
+        child: YaruRadioListTile(
+          title: title,
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [subtitle, trailing].whereNotNull().toList(),
+          ),
+          contentPadding: kWizardTilePadding,
+          isThreeLine: true,
+          value: storageType,
+          groupValue: model.type,
+          onChanged: (value) => model.type = value,
         ),
-        contentPadding: kWizardTilePadding,
-        isThreeLine: true,
-        value: storageType,
-        groupValue: model.type,
-        onChanged: (value) => model.type = value,
       ),
     );
   }
