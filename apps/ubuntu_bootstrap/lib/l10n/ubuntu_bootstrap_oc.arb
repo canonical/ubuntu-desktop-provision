@@ -932,5 +932,14 @@
     }
   },
   "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} es pas un sistèma de fichièrs compatible amb {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  }
 }
