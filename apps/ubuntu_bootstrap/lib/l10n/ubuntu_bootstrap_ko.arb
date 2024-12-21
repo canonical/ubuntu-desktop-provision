@@ -972,5 +972,14 @@
         "type": "String"
       }
     }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} 파일 시스템은 {mountpoint}에서 지원하지 않습니다",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   }
 }
