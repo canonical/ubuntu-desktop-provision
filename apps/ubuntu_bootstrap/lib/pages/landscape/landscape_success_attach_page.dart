@@ -7,7 +7,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class UbuntuLandscapeSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
+class UbuntuLandscapeSuccessAttachPage extends ConsumerWidget
+    with ProvisioningPage {
   const UbuntuLandscapeSuccessAttachPage({super.key});
 
   @override

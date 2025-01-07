@@ -12,7 +12,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const kMagicAttachUrl = 'https://ubuntu.com/landscape/attach'; // Placeholder URL
+const kMagicAttachUrl =
+    'https://ubuntu.com/landscape/attach'; // Placeholder URL
 const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
 
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
