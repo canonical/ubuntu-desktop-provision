@@ -29,7 +29,7 @@ class UbuntuProOnboardingPage extends ConsumerWidget with ProvisioningPage {
           const SizedBox(height: kWizardSpacing / 2),
           Html(
             data: l10n.landscapeSubscriptionFreeForPersonalUse(
-              kUbuntuProUrl.replaceFirst('https://', ''),
+              kUbuntuLandscapeUrl.replaceFirst('https://', ''),
             ),
             style: {
               'body': Style(margin: Margins.zero),

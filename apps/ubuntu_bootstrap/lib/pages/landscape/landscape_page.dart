@@ -12,8 +12,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const kMagicAttachUrl = 'https://ubuntu.com/pro/attach';
-const kUbuntuProUrl = 'https://ubuntu.com/pro';
+const kMagicAttachUrl = 'https://ubuntu.com/landscape/attach'; // Placeholder URL
+const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
 
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
   const LandscapePage({super.key});
@@ -77,7 +77,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
           const SizedBox(height: kWizardSpacing / 2),
           Html(
             data: l10n.landscapeSubscriptionFreeForPersonalUse(
-              kUbuntuProUrl.replaceFirst('https://', ''),
+              kUbuntuLandscapeUrl.replaceFirst('https://', ''),
             ),
             style: {
               'body': Style(margin: Margins.zero),

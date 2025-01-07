@@ -7,8 +7,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
-  const UbuntuProSuccessAttachPage({super.key});
+class UbuntuLandscapeSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
+  const UbuntuLandscapeSuccessAttachPage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
