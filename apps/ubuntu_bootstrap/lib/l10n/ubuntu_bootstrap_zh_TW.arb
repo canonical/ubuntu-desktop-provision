@@ -972,5 +972,14 @@
   "refreshCloseLabel": "關閉安裝程式",
   "@refreshCloseLabel": {},
   "refreshInfo": "更新到最新版本以得到改善的可靠性與更多功能。",
-  "@refreshInfo": {}
+  "@refreshInfo": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} 不是 {mountpoint} 支援的檔案系統",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  }
 }
