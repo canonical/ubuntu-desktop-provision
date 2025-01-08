@@ -71,26 +71,22 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
                   Text(lang.autoinstallInstructions),
                   const SizedBox(height: kWizardSpacing),
                   TextFormField(
-                    initialValue: directModel.url,
-                    onChanged: (value) => directModel.url = value,
+                    initialValue: directModel.value,
+                    onChanged: ref
+                        .read(autoinstallDirectModelProvider.notifier)
+                        .setUrl,
                     maxLines: null,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    validator: (_) => directModel.state.maybeWhen(
-                      error: (error, _) {
-                        return switch (error) {
-                          YamlException _ => 'Invalid YAML',
-                          final SocketException e =>
-                            'Network error: ${e.message}',
-                          final ArgumentError e => 'Invalid URL: ${e.message}',
-                          final FormatException e =>
-                            'Invalid Format: ${e.message}',
-                          final FileSystemException e =>
-                            'File system error: ${e.message}',
-                          _ => 'Unknown Error',
-                        };
-                      },
-                      orElse: () => null,
-                    ),
+                    validator: (_) => switch (directModel.error) {
+                      null => null,
+                      YamlException _ => 'Invalid YAML',
+                      final SocketException e => 'Network error: ${e.message}',
+                      final ArgumentError e => 'Invalid URL: ${e.message}',
+                      final FormatException e => 'Invalid Format: ${e.message}',
+                      final FileSystemException e =>
+                        'File system error: ${e.message}',
+                      _ => 'Unknown Error',
+                    },
                   ),
                 ],
               ),
@@ -116,16 +112,20 @@ class _ValidateButton extends ConsumerWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
-      onPressed: !directModel.state.hasError && directModel.url.isNotEmpty
-          ? () async {
-              await directModel.fetch();
-              await autoinstallNotifier.restart();
-            }
-          : null,
+      onPressed:
+          directModel.error == null && (directModel.value?.isNotEmpty ?? false)
+              ? () async {
+                  if (await ref
+                      .read(autoinstallDirectModelProvider.notifier)
+                      .fetchAndWrite()) {
+                    await autoinstallNotifier.restart();
+                  }
+                }
+              : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (directModel.state.isLoading) ...[
+          if (directModel.isLoading) ...[
             SizedBox.square(
               dimension: 16.0,
               child: YaruCircularProgressIndicator(

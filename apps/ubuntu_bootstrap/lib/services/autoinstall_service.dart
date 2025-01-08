@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:file/file.dart';
@@ -7,6 +8,7 @@ import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_client/subiquity_server.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:yaml/yaml.dart';
 
 final _log = Logger('autoinstall_service');
 
@@ -16,10 +18,13 @@ class AutoinstallService {
     this._subiquityServer, {
     bool liveRun = false,
     @visibleForTesting FileSystem? fs,
+    @visibleForTesting HttpClient? httpClient,
   })  : _fs = fs ?? const LocalFileSystem(),
+        _httpClient = httpClient ?? HttpClient(),
         _liveRun = liveRun;
   final SubiquityClient _subiquity;
   final SubiquityServer _subiquityServer;
+  final HttpClient _httpClient;
   final FileSystem _fs;
   final bool _liveRun;
 
@@ -56,6 +61,26 @@ class AutoinstallService {
       return;
     }
     _log.debug('Moved ${file.absolute.path} to $targetDir');
+  }
+
+  Future<void> fetchAndWriteFileFromUrl(String url) async {
+    final uri = Uri.parse(url);
+
+    final String content;
+
+    if (uri.scheme == 'file') {
+      content = await _fs.file(uri.toFilePath()).readAsString();
+    } else {
+      _httpClient.connectionTimeout = const Duration(seconds: 10);
+      content = await _httpClient
+          .getUrl(uri)
+          .then((request) => request.close())
+          .then((httpResponse) => httpResponse.transform(utf8.decoder).join());
+    }
+
+    loadYaml(content);
+
+    await writeFile(content);
   }
 
   Future<String> getFileContent() async {
