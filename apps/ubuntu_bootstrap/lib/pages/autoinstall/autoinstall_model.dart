@@ -1,58 +1,42 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:args/args.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
-import 'package:subiquity_client/subiquity_client.dart';
-import 'package:subiquity_client/subiquity_server.dart';
 import 'package:ubuntu_bootstrap/app/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
+import 'package:ubuntu_bootstrap/services/autoinstall_service.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
-import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:yaml/yaml.dart';
-
-final _log = Logger('autoinstall_model');
 
 final autoinstallModelProvider = ChangeNotifierProvider(
   (ref) => AutoinstallModel(
-    getService<SubiquityClient>(),
-    getService<SubiquityServer>(),
+    getService<AutoinstallService>(),
     () {
       ref.read(restartProvider.notifier).state++;
       ref.invalidate(loadingProvider);
     },
-    dryRun: getService<ArgResults>()['dry-run'] == true,
   ),
 );
 
 class AutoinstallModel extends SafeChangeNotifier {
   AutoinstallModel(
-    this._subiquity,
-    this._subiquityServer,
+    this._autoinstallService,
     this.resetUi, {
     @visibleForTesting FileSystem? fs,
     @visibleForTesting HttpClient? httpClient,
-    @visibleForTesting bool dryRun = false,
   })  : _fs = fs ?? const LocalFileSystem(),
-        _httpClient = httpClient ?? HttpClient(),
-        _dryRun = dryRun {
+        _httpClient = httpClient ?? HttpClient() {
     Listenable.merge([_url, _state]).addListener(notifyListeners);
   }
 
-  static const filename = 'autoinstall.yaml';
-  static const targetDir = '/';
-
-  final SubiquityClient _subiquity;
-  final SubiquityServer _subiquityServer;
+  final AutoinstallService _autoinstallService;
   final VoidCallback resetUi;
   final FileSystem _fs;
   final HttpClient _httpClient;
-  final bool _dryRun;
 
   bool _autoinstall = false;
   bool get autoinstall => _autoinstall;
@@ -90,45 +74,13 @@ class AutoinstallModel extends SafeChangeNotifier {
 
     loadYaml(content);
 
-    final file = _fs.file(
-      p.join(
-        _fs.systemTempDirectory.absolute.path,
-        filename,
-      ),
-    );
-    await file.writeAsString(content);
-    _log.debug('Downloaded $uri to ${file.absolute.path}');
-
-    if (_dryRun) {
-      final dir = _fs.directory(p.join(await getSubiquityPath(), '.subiquity'));
-      if (dir.existsSync()) {
-        file.renameSync(p.join(dir.absolute.path, filename));
-      }
-      return;
-    }
-
-    final result =
-        await Process.run('sudo', ['cp', file.absolute.path, targetDir]);
-    if (result.exitCode != 0) {
-      _log.error(
-        'Failed to move ${file.absolute.path} to $targetDir: ${result.stderr}',
-      );
-      return;
-    }
-    _log.debug('Moved ${file.absolute.path} to $targetDir');
+    await _autoinstallService.writeFile(content);
   }
 
-  Future<String> getFileContent() async {
-    final directory =
-        _dryRun ? p.join(await getSubiquityPath(), '.subiquity') : targetDir;
-    final file = _fs.file(p.join(directory, filename));
-    return file.readAsString();
-  }
+  Future<String> getFileContent() => _autoinstallService.getFileContent();
 
   Future<void> _restart() async {
-    _log.debug('Restarting subiquity');
-    await _subiquity.restart();
-    await _subiquityServer.waitSubiquity();
+    await _autoinstallService.restartSubiquity();
     resetUi();
   }
 

@@ -17,6 +17,7 @@ import 'package:ubuntu_bootstrap/app/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_bootstrap/services/autoinstall_service.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -98,6 +99,13 @@ Future<void> runInstallerApp(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );
   tryRegisterServiceInstance<ArgResults>(options);
+  tryRegisterService<AutoinstallService>(
+    () => AutoinstallService(
+      getService<SubiquityClient>(),
+      getService<SubiquityServer>(),
+      liveRun: liveRun,
+    ),
+  );
   tryRegisterService<ConfigService>(ConfigService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
