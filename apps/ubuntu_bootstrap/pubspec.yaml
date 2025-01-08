@@ -33,6 +33,7 @@ dependencies:
   meta: ^1.11.0
   nm: ^0.5.0
   path: ^1.8.3
+  riverpod_annotation: ^2.6.1
   safe_change_notifier: ^0.4.0
   scroll_to_index: ^3.0.1
   split_view: ^3.2.1
@@ -60,6 +61,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mockito: 5.4.4
+  riverpod_generator: ^2.6.3
   subiquity_test: ^0.1.0
   translations_cleaner: ^0.0.5
   ubuntu_lints: ^0.4.0
