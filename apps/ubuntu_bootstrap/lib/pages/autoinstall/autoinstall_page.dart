@@ -20,7 +20,8 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(autoinstallModelProvider);
+    final directModel = ref.watch(autoinstallDirectModelProvider);
+    final autoinstallModel = ref.watch(autoinstallModelProvider);
     final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
@@ -29,40 +30,40 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          model.autoinstall
-              ? _ValidateButton(model: model)
-              : WizardButton(
+          autoinstallModel.type == AutoinstallType.none
+              ? WizardButton(
                   label: UbuntuLocalizations.of(context).nextLabel,
                   onActivated: Wizard.of(context).next,
-                ),
+                )
+              : _ValidateButton(),
         ],
       ),
       children: [
         OptionButton(
           title: Text(lang.autoinstallInteractiveOption),
           subtitle: Text(lang.autoinstallInteractiveDescription),
-          value: false,
-          groupValue: model.autoinstall,
+          value: AutoinstallType.none,
+          groupValue: autoinstallModel.type,
           onChanged: (value) =>
-              ref.read(autoinstallModelProvider).autoinstall = value ?? false,
+              ref.read(autoinstallModelProvider.notifier).setType(value),
         ),
         const SizedBox(height: kWizardSpacing / 2),
         OptionButton(
           title: Text(lang.autoinstallAutomatedOption),
           subtitle: Text(lang.autoinstallAutomatedDescription),
-          value: true,
-          groupValue: model.autoinstall,
+          value: AutoinstallType.direct,
+          groupValue: autoinstallModel.type,
           onChanged: (value) =>
-              ref.read(autoinstallModelProvider).autoinstall = value ?? false,
+              ref.read(autoinstallModelProvider.notifier).setType(value),
         ),
         const SizedBox(height: kWizardSpacing),
         AnimatedSize(
           duration: const Duration(milliseconds: 300),
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 500),
-            opacity: model.autoinstall ? 1 : 0,
+            opacity: autoinstallModel.type != AutoinstallType.none ? 1 : 0,
             child: SizedBox(
-              height: model.autoinstall ? 160 : 0,
+              height: autoinstallModel.type != AutoinstallType.none ? 160 : 0,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,11 +71,11 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
                   Text(lang.autoinstallInstructions),
                   const SizedBox(height: kWizardSpacing),
                   TextFormField(
-                    initialValue: model.url,
-                    onChanged: (value) => model.url = value,
+                    initialValue: directModel.url,
+                    onChanged: (value) => directModel.url = value,
                     maxLines: null,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    validator: (_) => model.state.maybeWhen(
+                    validator: (_) => directModel.state.maybeWhen(
                       error: (error, _) {
                         return switch (error) {
                           YamlException _ => 'Invalid YAML',
@@ -101,13 +102,13 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
-class _ValidateButton extends StatelessWidget {
-  const _ValidateButton({required this.model});
-
-  final AutoinstallModel model;
+class _ValidateButton extends ConsumerWidget {
+  const _ValidateButton();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final directModel = ref.watch(autoinstallDirectModelProvider);
+    final autoinstallNotifier = ref.read(autoinstallModelProvider.notifier);
     final theme = Theme.of(context);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
@@ -115,12 +116,16 @@ class _ValidateButton extends StatelessWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
-      onPressed:
-          !model.state.hasError && model.url.isNotEmpty ? model.apply : null,
+      onPressed: !directModel.state.hasError && directModel.url.isNotEmpty
+          ? () async {
+              await directModel.fetch();
+              await autoinstallNotifier.restart();
+            }
+          : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (model.state.isLoading) ...[
+          if (directModel.state.isLoading) ...[
             SizedBox.square(
               dimension: 16.0,
               child: YaruCircularProgressIndicator(

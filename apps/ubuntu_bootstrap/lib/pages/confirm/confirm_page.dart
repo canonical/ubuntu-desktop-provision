@@ -27,7 +27,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(confirmModelProvider);
-    final autoinstallModel = ref.watch(autoinstallModelProvider);
+    final autoinstallNotifier = ref.read(autoinstallModelProvider.notifier);
     final status = ref.watch(installerModelProvider.select((m) => m.status));
 
     return HorizontalPage(
@@ -56,7 +56,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           color: Theme.of(context).colorScheme.primaryContainer,
           child: status?.interactive == false
               ? FutureBuilder(
-                  future: autoinstallModel.getFileContent(),
+                  future: autoinstallNotifier.getFileContent(),
                   builder: (_, fileContentSnapShot) {
                     if (fileContentSnapShot.hasData) {
                       return Text(fileContentSnapShot.data ?? '');
