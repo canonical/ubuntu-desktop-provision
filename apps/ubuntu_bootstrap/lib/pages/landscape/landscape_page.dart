@@ -17,20 +17,10 @@ const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
   const LandscapePage({super.key});
 
-//   @override
-//   Future<bool> load(BuildContext context, WidgetRef ref) async {
-//     final model = ref.watch(landscapeDataModelProvider);
-//     if (model.skipPro) return false;
-
-//     await ref.read(landscapeDataModelProvider.notifier).magicAttach();
-//     return true;
-//   }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(landscapeDataModelProvider);
-    final notifier = ref.watch(landscapeDataModelProvider.notifier);
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
