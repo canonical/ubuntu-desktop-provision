@@ -4,6 +4,15 @@ import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart';
 import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
     as pbgrpc;
 
+export 'package:landscape_client/src/generated/google/protobuf/timestamp.pb.dart'
+    show Timestamp;
+export 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
+    show
+        AttachResponse,
+        AttachStatus,
+        WatchAuthenticationResponse,
+        AuthenticationStatus;
+
 class LandscapeClient {
   LandscapeClient(String serverUrl, int port, bool useTls) {
     final channel = ClientChannel(
