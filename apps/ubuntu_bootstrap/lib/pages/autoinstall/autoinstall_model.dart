@@ -22,7 +22,7 @@ class AutoinstallState with _$AutoinstallState {
   }) = _AutoinstallState;
 }
 
-@riverpod
+@Riverpod(keepAlive: true)
 class AutoinstallModel extends _$AutoinstallModel {
   late final _service = getService<AutoinstallService>();
 

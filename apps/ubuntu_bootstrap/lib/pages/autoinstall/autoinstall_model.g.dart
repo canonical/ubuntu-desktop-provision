@@ -6,12 +6,12 @@ part of 'autoinstall_model.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$autoinstallModelHash() => r'659a9879856a99684457d268952554c4b628106a';
+String _$autoinstallModelHash() => r'dfd1c195d1e60c965b188150e30790bbbd8efd2a';
 
 /// See also [AutoinstallModel].
 @ProviderFor(AutoinstallModel)
 final autoinstallModelProvider =
-    AutoDisposeNotifierProvider<AutoinstallModel, AutoinstallState>.internal(
+    NotifierProvider<AutoinstallModel, AutoinstallState>.internal(
   AutoinstallModel.new,
   name: r'autoinstallModelProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -21,7 +21,7 @@ final autoinstallModelProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$AutoinstallModel = AutoDisposeNotifier<AutoinstallState>;
+typedef _$AutoinstallModel = Notifier<AutoinstallState>;
 String _$autoinstallDirectModelHash() =>
     r'eebdca2cb937e8b8b404185e60fff8732540541e';
 

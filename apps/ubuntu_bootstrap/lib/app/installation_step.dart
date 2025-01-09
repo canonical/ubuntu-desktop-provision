@@ -41,6 +41,7 @@ enum InstallationStep with RouteName {
   refresh(RefreshPage.new, allowedToHide: true),
   tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
   autoinstall(AutoinstallPage.new, allowedToHide: true),
+  autoinstallDirect(AutoinstallDirectPage.new),
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
   notEnoughDiskSpace(NotEnoughDiskSpacePage.new, discreteStep: false),
