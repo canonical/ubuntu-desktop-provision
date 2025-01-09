@@ -13,13 +13,12 @@ class TokenTextField extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(landscapeDataModelProvider);
-    final token = ref.watch(tokenNotifierProvider);
-    final tokenNotifier = ref.watch(tokenNotifierProvider.notifier);
 
     return ValidatedFormField(
       labelText: l10n.landscapeTokenTextfieldHint,
       initialValue: '',
-      successWidget: model.isAttached && model.isAttachedThroughManualAttach
+      successWidget: model.authenticationStatus ==
+              AuthenticationStatus.authenticationSuccess
           ? Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -38,16 +37,14 @@ class TokenTextField extends ConsumerWidget {
       autovalidateMode: AutovalidateMode.always,
       validator: CallbackValidator(
         (value) {
-          if (model.isAttached ||
-              token.isEmpty ||
-              model.hasNoErrorWhenAttachingManually) {
+          if (model.authenticationStatus ==
+              AuthenticationStatus.authenticationSuccess) {
             return true;
           }
           return false;
         },
         errorText: l10n.landscapeTokenAttachError,
       ),
-      onChanged: tokenNotifier.setToken,
     );
   }
 }
@@ -70,15 +67,12 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
     final colorScheme = theme.colorScheme;
     final model = ref.watch(landscapeDataModelProvider);
     final modelNotifier = ref.watch(landscapeDataModelProvider.notifier);
-    final isSelected = skipPro == model.skipPro;
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withOpacity(0.2)
-            : colorScheme.primaryContainer,
+        color: colorScheme.primaryContainer,
         border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
+          color: colorScheme.primary,
         ),
         borderRadius: kWizardBorderRadius,
         child: YaruRadioListTile(
@@ -91,8 +85,8 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
           subtitle: Text(subtitle),
           contentPadding: kWizardTilePadding,
           value: skipPro,
-          groupValue: model.skipPro,
-          onChanged: (value) => modelNotifier.setSkipPro(value ?? false),
+          groupValue: false,
+          onChanged: (value) => {},
         ),
       ),
     );

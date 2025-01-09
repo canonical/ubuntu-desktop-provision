@@ -13,59 +13,37 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 const kMagicAttachUrl =
-    'https://ubuntu.com/landscape/attach'; // Placeholder URL
+    'myorg.saas.landscape.canonical.com/attach'; // Placeholder URL
 const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
 
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
   const LandscapePage({super.key});
 
-  @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async {
-    final model = ref.watch(landscapeDataModelProvider);
-    if (model.skipPro) return false;
+//   @override
+//   Future<bool> load(BuildContext context, WidgetRef ref) async {
+//     final model = ref.watch(landscapeDataModelProvider);
+//     if (model.skipPro) return false;
 
-    await ref.read(landscapeDataModelProvider.notifier).magicAttach();
-    return true;
-  }
+//     await ref.read(landscapeDataModelProvider.notifier).magicAttach();
+//     return true;
+//   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(landscapeDataModelProvider);
     final notifier = ref.watch(landscapeDataModelProvider.notifier);
-    final token = ref.watch(tokenNotifierProvider);
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
+        // Trailing to be removed in the future to match designs. Leaving this here for now for easier debugging.
         trailing: [
-          model.isAttached
-              ? WizardButton(
-                  label: UbuntuLocalizations.of(context).nextLabel,
-                  onActivated: Wizard.of(context).next,
-                )
-              : PushButton.filled(
-                  onPressed: token.isEmpty
-                      ? null
-                      : () async {
-                          await notifier.attachManuallyToken();
-                        },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                      Theme.of(context)
-                          .colorScheme
-                          .success
-                          .withOpacity(token.isEmpty ? 0.5 : 1),
-                    ),
-                  ),
-                  child: Text(
-                    l10n.landscapeTokenAttachButton,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Theme.of(context).colorScheme.onPrimary,
-                        ),
-                  ),
-                ),
+          WizardButton(
+            label: UbuntuLocalizations.of(context).nextLabel,
+            onActivated: Wizard.of(context).next,
+          ),
         ],
       ),
       imageTitleWidget: Column(
@@ -138,8 +116,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                             ),
                           ),
                           const SizedBox(width: kWizardSpacing / 2),
-                          if (model.isAttached &&
-                              model.isAttachedThroughMagicAttach)
+                          if (false)
                             Expanded(
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,

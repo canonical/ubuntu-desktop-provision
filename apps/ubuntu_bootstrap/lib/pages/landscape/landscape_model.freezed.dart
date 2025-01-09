@@ -16,13 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LandscapeData {
-  String get userCode => throw _privateConstructorUsedError;
-  bool get isAttachedThroughMagicAttach => throw _privateConstructorUsedError;
-  bool get isAttached => throw _privateConstructorUsedError;
-  bool get isAttachedThroughManualAttach => throw _privateConstructorUsedError;
-  bool get hasNoErrorWhenAttachingManually =>
+  String get userCode =>
+      throw _privateConstructorUsedError; // Swap to optional once we can retrive the status form the service.
+  AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
-  bool get skipPro => throw _privateConstructorUsedError;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -37,13 +34,7 @@ abstract class $LandscapeDataCopyWith<$Res> {
           LandscapeData value, $Res Function(LandscapeData) then) =
       _$LandscapeDataCopyWithImpl<$Res, LandscapeData>;
   @useResult
-  $Res call(
-      {String userCode,
-      bool isAttachedThroughMagicAttach,
-      bool isAttached,
-      bool isAttachedThroughManualAttach,
-      bool hasNoErrorWhenAttachingManually,
-      bool skipPro});
+  $Res call({String userCode, AuthenticationStatus authenticationStatus});
 }
 
 /// @nodoc
@@ -62,37 +53,17 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
   @override
   $Res call({
     Object? userCode = null,
-    Object? isAttachedThroughMagicAttach = null,
-    Object? isAttached = null,
-    Object? isAttachedThroughManualAttach = null,
-    Object? hasNoErrorWhenAttachingManually = null,
-    Object? skipPro = null,
+    Object? authenticationStatus = null,
   }) {
     return _then(_value.copyWith(
       userCode: null == userCode
           ? _value.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
               as String,
-      isAttachedThroughMagicAttach: null == isAttachedThroughMagicAttach
-          ? _value.isAttachedThroughMagicAttach
-          : isAttachedThroughMagicAttach // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAttached: null == isAttached
-          ? _value.isAttached
-          : isAttached // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAttachedThroughManualAttach: null == isAttachedThroughManualAttach
-          ? _value.isAttachedThroughManualAttach
-          : isAttachedThroughManualAttach // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasNoErrorWhenAttachingManually: null == hasNoErrorWhenAttachingManually
-          ? _value.hasNoErrorWhenAttachingManually
-          : hasNoErrorWhenAttachingManually // ignore: cast_nullable_to_non_nullable
-              as bool,
-      skipPro: null == skipPro
-          ? _value.skipPro
-          : skipPro // ignore: cast_nullable_to_non_nullable
-              as bool,
+      authenticationStatus: null == authenticationStatus
+          ? _value.authenticationStatus
+          : authenticationStatus // ignore: cast_nullable_to_non_nullable
+              as AuthenticationStatus,
     ) as $Val);
   }
 }
@@ -105,13 +76,7 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
       __$$LandscapeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String userCode,
-      bool isAttachedThroughMagicAttach,
-      bool isAttached,
-      bool isAttachedThroughManualAttach,
-      bool hasNoErrorWhenAttachingManually,
-      bool skipPro});
+  $Res call({String userCode, AuthenticationStatus authenticationStatus});
 }
 
 /// @nodoc
@@ -128,37 +93,17 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? userCode = null,
-    Object? isAttachedThroughMagicAttach = null,
-    Object? isAttached = null,
-    Object? isAttachedThroughManualAttach = null,
-    Object? hasNoErrorWhenAttachingManually = null,
-    Object? skipPro = null,
+    Object? authenticationStatus = null,
   }) {
     return _then(_$LandscapeDataImpl(
       userCode: null == userCode
           ? _value.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
               as String,
-      isAttachedThroughMagicAttach: null == isAttachedThroughMagicAttach
-          ? _value.isAttachedThroughMagicAttach
-          : isAttachedThroughMagicAttach // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAttached: null == isAttached
-          ? _value.isAttached
-          : isAttached // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAttachedThroughManualAttach: null == isAttachedThroughManualAttach
-          ? _value.isAttachedThroughManualAttach
-          : isAttachedThroughManualAttach // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasNoErrorWhenAttachingManually: null == hasNoErrorWhenAttachingManually
-          ? _value.hasNoErrorWhenAttachingManually
-          : hasNoErrorWhenAttachingManually // ignore: cast_nullable_to_non_nullable
-              as bool,
-      skipPro: null == skipPro
-          ? _value.skipPro
-          : skipPro // ignore: cast_nullable_to_non_nullable
-              as bool,
+      authenticationStatus: null == authenticationStatus
+          ? _value.authenticationStatus
+          : authenticationStatus // ignore: cast_nullable_to_non_nullable
+              as AuthenticationStatus,
     ));
   }
 }
@@ -167,30 +112,18 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
 
 class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
-      {required this.userCode,
-      required this.isAttachedThroughMagicAttach,
-      required this.isAttached,
-      required this.isAttachedThroughManualAttach,
-      required this.hasNoErrorWhenAttachingManually,
-      required this.skipPro})
+      {required this.userCode, required this.authenticationStatus})
       : super._();
 
   @override
   final String userCode;
+// Swap to optional once we can retrive the status form the service.
   @override
-  final bool isAttachedThroughMagicAttach;
-  @override
-  final bool isAttached;
-  @override
-  final bool isAttachedThroughManualAttach;
-  @override
-  final bool hasNoErrorWhenAttachingManually;
-  @override
-  final bool skipPro;
+  final AuthenticationStatus authenticationStatus;
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, isAttachedThroughMagicAttach: $isAttachedThroughMagicAttach, isAttached: $isAttached, isAttachedThroughManualAttach: $isAttachedThroughManualAttach, hasNoErrorWhenAttachingManually: $hasNoErrorWhenAttachingManually, skipPro: $skipPro)';
+    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus)';
   }
 
   @override
@@ -200,32 +133,12 @@ class _$LandscapeDataImpl extends _LandscapeData {
             other is _$LandscapeDataImpl &&
             (identical(other.userCode, userCode) ||
                 other.userCode == userCode) &&
-            (identical(other.isAttachedThroughMagicAttach,
-                    isAttachedThroughMagicAttach) ||
-                other.isAttachedThroughMagicAttach ==
-                    isAttachedThroughMagicAttach) &&
-            (identical(other.isAttached, isAttached) ||
-                other.isAttached == isAttached) &&
-            (identical(other.isAttachedThroughManualAttach,
-                    isAttachedThroughManualAttach) ||
-                other.isAttachedThroughManualAttach ==
-                    isAttachedThroughManualAttach) &&
-            (identical(other.hasNoErrorWhenAttachingManually,
-                    hasNoErrorWhenAttachingManually) ||
-                other.hasNoErrorWhenAttachingManually ==
-                    hasNoErrorWhenAttachingManually) &&
-            (identical(other.skipPro, skipPro) || other.skipPro == skipPro));
+            (identical(other.authenticationStatus, authenticationStatus) ||
+                other.authenticationStatus == authenticationStatus));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      userCode,
-      isAttachedThroughMagicAttach,
-      isAttached,
-      isAttachedThroughManualAttach,
-      hasNoErrorWhenAttachingManually,
-      skipPro);
+  int get hashCode => Object.hash(runtimeType, userCode, authenticationStatus);
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -238,26 +151,16 @@ class _$LandscapeDataImpl extends _LandscapeData {
 
 abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
-      {required final String userCode,
-      required final bool isAttachedThroughMagicAttach,
-      required final bool isAttached,
-      required final bool isAttachedThroughManualAttach,
-      required final bool hasNoErrorWhenAttachingManually,
-      required final bool skipPro}) = _$LandscapeDataImpl;
+          {required final String userCode,
+          required final AuthenticationStatus authenticationStatus}) =
+      _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
   @override
-  String get userCode;
+  String
+      get userCode; // Swap to optional once we can retrive the status form the service.
   @override
-  bool get isAttachedThroughMagicAttach;
-  @override
-  bool get isAttached;
-  @override
-  bool get isAttachedThroughManualAttach;
-  @override
-  bool get hasNoErrorWhenAttachingManually;
-  @override
-  bool get skipPro;
+  AuthenticationStatus get authenticationStatus;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.

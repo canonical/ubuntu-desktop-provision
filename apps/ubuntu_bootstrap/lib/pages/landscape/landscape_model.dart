@@ -1,20 +1,27 @@
-import 'dart:async';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'landscape_model.freezed.dart';
 part 'landscape_model.g.dart';
 
+enum AuthenticationStatus {
+  authenticationPending,
+  authenticationSuccess,
+  errorCodeNotFound,
+  errorCanceledByUser,
+  errorCodeExpired,
+  errorEmployeeLimitExceeded,
+  errorEmployeeDeactivated,
+  errorEmployeeComputerLimitExceeded,
+  errorMissingAutoinstallFile,
+}
+
 @freezed
 class LandscapeData with _$LandscapeData {
   factory LandscapeData({
     required String userCode,
-    required bool isAttachedThroughMagicAttach,
-    required bool isAttached,
-    required bool isAttachedThroughManualAttach,
-    required bool hasNoErrorWhenAttachingManually,
-    required bool skipPro,
+    // Swap to optional once we can retrive the status form the service.
+    required AuthenticationStatus authenticationStatus,
   }) = _LandscapeData;
 
   LandscapeData._();
@@ -26,37 +33,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
   LandscapeData build() {
     return LandscapeData(
       userCode: 'ABCD EFGH',
-      isAttachedThroughMagicAttach: false,
-      isAttached: true,
-      isAttachedThroughManualAttach: false,
-      hasNoErrorWhenAttachingManually: true,
-      skipPro: false,
+      authenticationStatus: AuthenticationStatus.authenticationSuccess,
     );
-  }
-
-  void setSkipPro(bool value) {
-    if (state.skipPro == value) return;
-    state = state.copyWith(skipPro: value);
-  }
-
-  void setIsAttached(bool value) {
-    if (state.isAttached == value) return;
-    state = state.copyWith(isAttached: value);
-  }
-
-  Future<void> magicAttach() async {}
-
-  Future<void> attachManuallyToken() async {}
-}
-
-@riverpod
-class TokenNotifier extends _$TokenNotifier {
-  @override
-  String build() {
-    return '';
-  }
-
-  void setToken(String value) {
-    state = value;
   }
 }

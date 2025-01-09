@@ -12,11 +12,6 @@ class UbuntuLandscapeSuccessAttachPage extends ConsumerWidget
   const UbuntuLandscapeSuccessAttachPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async {
-    return !ref.watch(landscapeDataModelProvider).skipPro;
-  }
-
-  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
