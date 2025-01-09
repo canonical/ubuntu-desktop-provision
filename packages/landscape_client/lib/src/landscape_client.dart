@@ -1,7 +1,8 @@
 import 'package:grpc/grpc.dart';
 import 'package:meta/meta.dart';
 import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart';
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart' as pbgrpc;
+import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
+    as pbgrpc;
 
 class LandscapeClient {
   LandscapeClient(String serverUrl, int port, bool useTls) {
@@ -28,7 +29,7 @@ class LandscapeClient {
     return await _landscapeClient.attach(request);
   }
 
-  Stream<pbgrpc.WatchAuthenticationResponse> watch(String userCode) 
-    => _landscapeClient.watchAuthentication(pbgrpc.WatchAuthenticationRequest(userCode: userCode));
+  Stream<pbgrpc.WatchAuthenticationResponse> watch(String userCode) =>
+      _landscapeClient.watchAuthentication(
+          pbgrpc.WatchAuthenticationRequest(userCode: userCode));
 }
-
