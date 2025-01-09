@@ -4,11 +4,9 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
-import 'package:ubuntu_bootstrap/pages/landscape/landscape_widgets.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
-import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -48,23 +46,17 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
       ),
       imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            l10n.landscapeSubscriptionDescription,
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          const SizedBox(height: kWizardSpacing / 2),
-          Html(
-            data: l10n.landscapeSubscriptionFreeForPersonalUse(
-              kUbuntuLandscapeUrl.replaceFirst('https://', ''),
+          BarcodeWidget(
+            margin: const EdgeInsets.symmetric(
+              vertical: kWizardSpacing,
             ),
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(
-                color: Theme.of(context).colorScheme.link,
-              ),
-            },
-            onLinkTap: (url, _, __) => launchUrl(url!),
+            color: Theme.of(context).colorScheme.onSurface,
+            barcode: Barcode.qrCode(),
+            data: '$kMagicAttachUrl?magic-attach-code=${model.userCode}',
+            width: 200,
+            height: 200,
           ),
         ],
       ),
@@ -97,18 +89,6 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          BarcodeWidget(
-                            margin: const EdgeInsets.symmetric(
-                              vertical: kWizardSpacing,
-                            ),
-                            color: Theme.of(context).colorScheme.onSurface,
-                            barcode: Barcode.qrCode(),
-                            data:
-                                '$kMagicAttachUrl?magic-attach-code=${model.userCode}',
-                            width: 100,
-                            height: 100,
-                          ),
-                          const SizedBox(width: kWizardSpacing),
                           Expanded(
                             child: SelectableText(
                               model.userCode,
@@ -116,43 +96,10 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
                             ),
                           ),
                           const SizedBox(width: kWizardSpacing / 2),
-                          if (false)
-                            Expanded(
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  const SuccessIcon(),
-                                  const SizedBox(width: kWizardSpacing / 4),
-                                  Expanded(
-                                    child: Text(
-                                      l10n.landscapeTokenAttachSucess,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .success,
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                         ],
                       ),
                     ],
                   ),
-            const SizedBox(height: kWizardSpacing),
-            Text(
-              l10n.landscapeOrAddTokenManually,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(height: kWizardSpacing),
-            const TokenTextField(),
           ],
         ),
       ],
