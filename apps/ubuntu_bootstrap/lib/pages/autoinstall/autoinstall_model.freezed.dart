@@ -153,3 +153,182 @@ abstract class _AutoinstallState implements AutoinstallState {
   _$$AutoinstallStateImplCopyWith<_$AutoinstallStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$AutoinstallDirectState {
+  String get url => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
+  Object? get error => throw _privateConstructorUsedError;
+
+  /// Create a copy of AutoinstallDirectState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AutoinstallDirectStateCopyWith<AutoinstallDirectState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AutoinstallDirectStateCopyWith<$Res> {
+  factory $AutoinstallDirectStateCopyWith(AutoinstallDirectState value,
+          $Res Function(AutoinstallDirectState) then) =
+      _$AutoinstallDirectStateCopyWithImpl<$Res, AutoinstallDirectState>;
+  @useResult
+  $Res call({String url, bool isLoading, Object? error});
+}
+
+/// @nodoc
+class _$AutoinstallDirectStateCopyWithImpl<$Res,
+        $Val extends AutoinstallDirectState>
+    implements $AutoinstallDirectStateCopyWith<$Res> {
+  _$AutoinstallDirectStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AutoinstallDirectState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+    Object? isLoading = null,
+    Object? error = freezed,
+  }) {
+    return _then(_value.copyWith(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      error: freezed == error ? _value.error : error,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AutoinstallDirectStateImplCopyWith<$Res>
+    implements $AutoinstallDirectStateCopyWith<$Res> {
+  factory _$$AutoinstallDirectStateImplCopyWith(
+          _$AutoinstallDirectStateImpl value,
+          $Res Function(_$AutoinstallDirectStateImpl) then) =
+      __$$AutoinstallDirectStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String url, bool isLoading, Object? error});
+}
+
+/// @nodoc
+class __$$AutoinstallDirectStateImplCopyWithImpl<$Res>
+    extends _$AutoinstallDirectStateCopyWithImpl<$Res,
+        _$AutoinstallDirectStateImpl>
+    implements _$$AutoinstallDirectStateImplCopyWith<$Res> {
+  __$$AutoinstallDirectStateImplCopyWithImpl(
+      _$AutoinstallDirectStateImpl _value,
+      $Res Function(_$AutoinstallDirectStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AutoinstallDirectState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? url = null,
+    Object? isLoading = null,
+    Object? error = freezed,
+  }) {
+    return _then(_$AutoinstallDirectStateImpl(
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      error: freezed == error ? _value.error : error,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AutoinstallDirectStateImpl
+    with DiagnosticableTreeMixin
+    implements _AutoinstallDirectState {
+  _$AutoinstallDirectStateImpl(
+      {this.url = '', this.isLoading = false, this.error});
+
+  @override
+  @JsonKey()
+  final String url;
+  @override
+  @JsonKey()
+  final bool isLoading;
+  @override
+  final Object? error;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AutoinstallDirectState(url: $url, isLoading: $isLoading, error: $error)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AutoinstallDirectState'))
+      ..add(DiagnosticsProperty('url', url))
+      ..add(DiagnosticsProperty('isLoading', isLoading))
+      ..add(DiagnosticsProperty('error', error));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoinstallDirectStateImpl &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            const DeepCollectionEquality().equals(other.error, error));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, url, isLoading, const DeepCollectionEquality().hash(error));
+
+  /// Create a copy of AutoinstallDirectState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AutoinstallDirectStateImplCopyWith<_$AutoinstallDirectStateImpl>
+      get copyWith => __$$AutoinstallDirectStateImplCopyWithImpl<
+          _$AutoinstallDirectStateImpl>(this, _$identity);
+}
+
+abstract class _AutoinstallDirectState implements AutoinstallDirectState {
+  factory _AutoinstallDirectState(
+      {final String url,
+      final bool isLoading,
+      final Object? error}) = _$AutoinstallDirectStateImpl;
+
+  @override
+  String get url;
+  @override
+  bool get isLoading;
+  @override
+  Object? get error;
+
+  /// Create a copy of AutoinstallDirectState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AutoinstallDirectStateImplCopyWith<_$AutoinstallDirectStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

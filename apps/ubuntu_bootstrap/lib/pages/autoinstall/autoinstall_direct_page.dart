@@ -22,11 +22,10 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final directModel = ref.watch(autoinstallDirectModelProvider);
     final autoinstallModel = ref.watch(autoinstallModelProvider);
-    final flavor = ref.watch(flavorProvider);
 
     return HorizontalPage(
       windowTitle: lang.autoinstallTitle,
-      title: lang.autoinstallHeader(flavor.displayName),
+      title: 'Import autoinstall file',
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -39,22 +38,32 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       children: [
+        if (directModel.error != null) ...[
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text('Error'),
+            child: Text(
+              switch (directModel.error) {
+                YamlException _ => 'Invalid YAML',
+                final SocketException e => 'Network error: ${e.message}',
+                final ArgumentError e => 'Invalid URL: ${e.message}',
+                final FormatException e => 'Invalid Format: ${e.message}',
+                final FileSystemException e =>
+                  'File system error: ${e.message}',
+                _ => 'Unknown Error',
+              },
+            ),
+          ),
+          const SizedBox(height: kWizardSpacing),
+        ],
         Text(lang.autoinstallInstructions),
         const SizedBox(height: kWizardSpacing),
         TextFormField(
-          initialValue: directModel.value,
+          initialValue: directModel.url,
           onChanged: ref.read(autoinstallDirectModelProvider.notifier).setUrl,
           maxLines: null,
           autovalidateMode: AutovalidateMode.onUserInteraction,
-          validator: (_) => switch (directModel.error) {
-            null => null,
-            YamlException _ => 'Invalid YAML',
-            final SocketException e => 'Network error: ${e.message}',
-            final ArgumentError e => 'Invalid URL: ${e.message}',
-            final FormatException e => 'Invalid Format: ${e.message}',
-            final FileSystemException e => 'File system error: ${e.message}',
-            _ => 'Unknown Error',
-          },
+          validator: (_) => directModel.error != null ? '' : null,
         ),
       ],
     );
@@ -75,16 +84,15 @@ class _ValidateButton extends ConsumerWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
-      onPressed:
-          directModel.error == null && (directModel.value?.isNotEmpty ?? false)
-              ? () async {
-                  if (await ref
-                      .read(autoinstallDirectModelProvider.notifier)
-                      .fetchAndWrite()) {
-                    await autoinstallNotifier.restart();
-                  }
-                }
-              : null,
+      onPressed: directModel.error == null && (directModel.url.isNotEmpty)
+          ? () async {
+              if (await ref
+                  .read(autoinstallDirectModelProvider.notifier)
+                  .fetchAndWrite()) {
+                await autoinstallNotifier.restart();
+              }
+            }
+          : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [

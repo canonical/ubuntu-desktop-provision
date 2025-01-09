@@ -71,6 +71,9 @@ class AutoinstallService {
     if (uri.scheme == 'file') {
       content = await _fs.file(uri.toFilePath()).readAsString();
     } else {
+      if (uri.host.isEmpty) {
+        throw FormatException('No host specified in URi $uri');
+      }
       _httpClient.connectionTimeout = const Duration(seconds: 10);
       content = await _httpClient
           .getUrl(uri)

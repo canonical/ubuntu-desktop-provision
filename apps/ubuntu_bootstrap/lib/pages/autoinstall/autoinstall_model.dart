@@ -45,35 +45,39 @@ class AutoinstallModel extends _$AutoinstallModel {
   Future<String> getFileContent() => _service.getFileContent();
 }
 
+@freezed
+class AutoinstallDirectState with _$AutoinstallDirectState {
+  factory AutoinstallDirectState({
+    @Default('') String url,
+    @Default(false) bool isLoading,
+    Object? error,
+  }) = _AutoinstallDirectState;
+}
+
 @riverpod
 class AutoinstallDirectModel extends _$AutoinstallDirectModel {
   @override
-  Future<String> build() async {
-    return '';
-  }
+  AutoinstallDirectState build() => AutoinstallDirectState();
 
   void setUrl(String? url) {
     if (url == null) return;
-    state = AsyncData(url);
+    state = state.copyWith(url: url, error: null);
   }
 
   /// Returns true on success, which indicates that we can restart subiquity and the UI
   Future<bool> fetchAndWrite() async {
-    if (state.value == null) return false;
+    if (state.error != null) return false;
 
-    state = const AsyncValue.loading();
-    final newState = await AsyncValue.guard(() async {
+    state = state.copyWith(isLoading: true);
+
+    try {
       await getService<AutoinstallService>()
-          .fetchAndWriteFileFromUrl(state.value!);
-      return state.value!;
-    });
-
-    // If there was an error, update the state to display it, otherwise remain in the loading state
-    // and wait for UI restart
-    if (newState.hasError) {
-      state = newState;
+          .fetchAndWriteFileFromUrl(state.url);
+    } on Exception catch (e) {
+      state = state.copyWith(error: e, isLoading: false);
       return false;
     }
+
     return true;
   }
 }
