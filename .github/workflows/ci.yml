@@ -218,7 +218,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt install -y libgtk-3-dev debhelper dh-golang golang-go
+          sudo apt install -y gsettings-desktop-schemas libgtk-3-dev debhelper dh-golang golang-go
 
       - name: Checkout code
         uses: actions/checkout@v4
