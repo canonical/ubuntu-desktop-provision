@@ -1039,28 +1039,14 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Ubuntu Pro';
+  String get landscapePageTitle => 'Automated installation';
 
   @override
-  String get landscapeHeader => 'Attach this machine';
-
-  @override
-  String get landscapeOrAddTokenManually => 'or add a token manually';
-
-  @override
-  String get landscapeTokenTextfieldHint => 'Token';
-
-  @override
-  String get landscapeSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
-
-  @override
-  String landscapeSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
-  }
+  String get landscapeHeader => 'Log in to Landscape';
 
   @override
   String get landscapeTokenAttachButton => 'Attach';

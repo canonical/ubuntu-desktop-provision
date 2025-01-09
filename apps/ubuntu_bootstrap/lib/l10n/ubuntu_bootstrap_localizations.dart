@@ -1964,44 +1964,20 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @landscapeMagicAttachInstructions.
   ///
   /// In en, this message translates to:
-  /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
+  /// **'Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>'**
   String landscapeMagicAttachInstructions(Object url);
 
   /// No description provided for @landscapePageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Ubuntu Pro'**
+  /// **'Automated installation'**
   String get landscapePageTitle;
 
   /// No description provided for @landscapeHeader.
   ///
   /// In en, this message translates to:
-  /// **'Attach this machine'**
+  /// **'Log in to Landscape'**
   String get landscapeHeader;
-
-  /// No description provided for @landscapeOrAddTokenManually.
-  ///
-  /// In en, this message translates to:
-  /// **'or add a token manually'**
-  String get landscapeOrAddTokenManually;
-
-  /// No description provided for @landscapeTokenTextfieldHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Token'**
-  String get landscapeTokenTextfieldHint;
-
-  /// No description provided for @landscapeSubscriptionDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Get the most comprehensive subscription for open-source software security'**
-  String get landscapeSubscriptionDescription;
-
-  /// No description provided for @landscapeSubscriptionFreeForPersonalUse.
-  ///
-  /// In en, this message translates to:
-  /// **'Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>'**
-  String landscapeSubscriptionFreeForPersonalUse(Object url);
 
   /// No description provided for @landscapeTokenAttachButton.
   ///

@@ -937,30 +937,17 @@
     }
   },
   "validate": "Validate",
-  "landscapeMagicAttachInstructions": "Magic attach with this code at <a href=\"https://{url}\">{url}</a>",
+  "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
       "url": {}
     }
   },
-  "landscapePageTitle": "Ubuntu Pro",
+  "landscapePageTitle": "Automated installation",
   "@landscapePageTitle": {},
-  "landscapeHeader": "Attach this machine",
+  "landscapeHeader": "Log in to Landscape",
   "@landscapeHeader": {},
-  "landscapeOrAddTokenManually": "or add a token manually",
-  "@landscapeOrAddTokenManually": {},
-  "landscapeTokenTextfieldHint": "Token",
-  "@landscapeTokenTextfieldHint": {},
-  "landscapeSubscriptionDescription": "Get the most comprehensive subscription for open-source software security",
-  "@landscapeSubscriptionDescription": {},
-  "landscapeSubscriptionFreeForPersonalUse": "Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>",
-  "@landscapeSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "landscapeTokenAttachButton": "Attach",
   "@landscapeTokenAttachButton": {},
   "landscapeTokenAttachError": "Invalid token",
