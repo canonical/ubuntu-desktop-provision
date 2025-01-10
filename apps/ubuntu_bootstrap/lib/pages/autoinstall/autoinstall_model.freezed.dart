@@ -157,6 +157,7 @@ abstract class _AutoinstallState implements AutoinstallState {
 /// @nodoc
 mixin _$AutoinstallDirectState {
   String get url => throw _privateConstructorUsedError;
+  Uri? get localPath => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   Object? get error => throw _privateConstructorUsedError;
 
@@ -173,7 +174,7 @@ abstract class $AutoinstallDirectStateCopyWith<$Res> {
           $Res Function(AutoinstallDirectState) then) =
       _$AutoinstallDirectStateCopyWithImpl<$Res, AutoinstallDirectState>;
   @useResult
-  $Res call({String url, bool isLoading, Object? error});
+  $Res call({String url, Uri? localPath, bool isLoading, Object? error});
 }
 
 /// @nodoc
@@ -193,6 +194,7 @@ class _$AutoinstallDirectStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? url = null,
+    Object? localPath = freezed,
     Object? isLoading = null,
     Object? error = freezed,
   }) {
@@ -201,6 +203,10 @@ class _$AutoinstallDirectStateCopyWithImpl<$Res,
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
+      localPath: freezed == localPath
+          ? _value.localPath
+          : localPath // ignore: cast_nullable_to_non_nullable
+              as Uri?,
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -219,7 +225,7 @@ abstract class _$$AutoinstallDirectStateImplCopyWith<$Res>
       __$$AutoinstallDirectStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String url, bool isLoading, Object? error});
+  $Res call({String url, Uri? localPath, bool isLoading, Object? error});
 }
 
 /// @nodoc
@@ -238,6 +244,7 @@ class __$$AutoinstallDirectStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? url = null,
+    Object? localPath = freezed,
     Object? isLoading = null,
     Object? error = freezed,
   }) {
@@ -246,6 +253,10 @@ class __$$AutoinstallDirectStateImplCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
+      localPath: freezed == localPath
+          ? _value.localPath
+          : localPath // ignore: cast_nullable_to_non_nullable
+              as Uri?,
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -261,11 +272,13 @@ class _$AutoinstallDirectStateImpl
     with DiagnosticableTreeMixin
     implements _AutoinstallDirectState {
   _$AutoinstallDirectStateImpl(
-      {this.url = '', this.isLoading = false, this.error});
+      {this.url = '', this.localPath, this.isLoading = false, this.error});
 
   @override
   @JsonKey()
   final String url;
+  @override
+  final Uri? localPath;
   @override
   @JsonKey()
   final bool isLoading;
@@ -274,7 +287,7 @@ class _$AutoinstallDirectStateImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AutoinstallDirectState(url: $url, isLoading: $isLoading, error: $error)';
+    return 'AutoinstallDirectState(url: $url, localPath: $localPath, isLoading: $isLoading, error: $error)';
   }
 
   @override
@@ -283,6 +296,7 @@ class _$AutoinstallDirectStateImpl
     properties
       ..add(DiagnosticsProperty('type', 'AutoinstallDirectState'))
       ..add(DiagnosticsProperty('url', url))
+      ..add(DiagnosticsProperty('localPath', localPath))
       ..add(DiagnosticsProperty('isLoading', isLoading))
       ..add(DiagnosticsProperty('error', error));
   }
@@ -293,14 +307,16 @@ class _$AutoinstallDirectStateImpl
         (other.runtimeType == runtimeType &&
             other is _$AutoinstallDirectStateImpl &&
             (identical(other.url, url) || other.url == url) &&
+            (identical(other.localPath, localPath) ||
+                other.localPath == localPath) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, url, isLoading, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, url, localPath, isLoading,
+      const DeepCollectionEquality().hash(error));
 
   /// Create a copy of AutoinstallDirectState
   /// with the given fields replaced by the non-null parameter values.
@@ -315,11 +331,14 @@ class _$AutoinstallDirectStateImpl
 abstract class _AutoinstallDirectState implements AutoinstallDirectState {
   factory _AutoinstallDirectState(
       {final String url,
+      final Uri? localPath,
       final bool isLoading,
       final Object? error}) = _$AutoinstallDirectStateImpl;
 
   @override
   String get url;
+  @override
+  Uri? get localPath;
   @override
   bool get isLoading;
   @override

@@ -23,7 +23,7 @@ final autoinstallModelProvider =
 
 typedef _$AutoinstallModel = Notifier<AutoinstallState>;
 String _$autoinstallDirectModelHash() =>
-    r'cb21e6c2e9e0a797350577153bed26d01623af25';
+    r'71b17ec1ff1260a153679724da74f85cc22dd499';
 
 /// See also [AutoinstallDirectModel].
 @ProviderFor(AutoinstallDirectModel)

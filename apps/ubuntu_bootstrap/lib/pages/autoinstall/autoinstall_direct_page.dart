@@ -56,17 +56,72 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
           ),
           const SizedBox(height: kWizardSpacing),
         ],
-        Text(lang.autoinstallInstructions),
+        Text('You can enter the URL of an autoinstall file'),
         const SizedBox(height: kWizardSpacing),
         TextFormField(
+          enabled: directModel.localPath == null,
           initialValue: directModel.url,
           onChanged: ref.read(autoinstallDirectModelProvider.notifier).setUrl,
           maxLines: null,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (_) => directModel.error != null ? '' : null,
         ),
+        const SizedBox(height: kWizardSpacing),
+        Text('Or select a local file'),
+        const SizedBox(height: kWizardSpacing),
+        Row(
+          children: [
+            OutlinedButton(
+              onPressed: () => Navigator.of(context, rootNavigator: true).push(
+                DialogRoute(context: context, builder: (_) => _FilePicker()),
+              ),
+              child: Text('Select file...'),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Tooltip(
+                message: directModel.localPath?.path ?? '',
+                child: Text(
+                  directModel.localPath?.pathSegments.last ?? '',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        ),
       ],
     );
+  }
+}
+
+// Custom file picker widget that displays a non-dismissable `ModalBarrier` while awaiting the
+// response from `pickLocalFile`
+class _FilePicker extends ConsumerStatefulWidget {
+  const _FilePicker();
+
+  @override
+  ConsumerState<_FilePicker> createState() => _FilePickerState();
+}
+
+class _FilePickerState extends ConsumerState<_FilePicker> {
+  @override
+  void initState() {
+    super.initState();
+    showPicker();
+  }
+
+  Future<void> showPicker() async {
+    await ref
+        .read(autoinstallDirectModelProvider.notifier)
+        .pickLocalFile('Choose file', 'YAML Files');
+    if (mounted) {
+      Navigator.of(context).pop();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const ModalBarrier(dismissible: false);
   }
 }
 
@@ -84,7 +139,8 @@ class _ValidateButton extends ConsumerWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
-      onPressed: directModel.error == null && (directModel.url.isNotEmpty)
+      onPressed: directModel.error == null &&
+              (directModel.url.isNotEmpty || directModel.localPath != null)
           ? () async {
               if (await ref
                   .read(autoinstallDirectModelProvider.notifier)

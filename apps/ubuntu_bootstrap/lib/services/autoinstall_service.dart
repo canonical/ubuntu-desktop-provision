@@ -63,9 +63,7 @@ class AutoinstallService {
     _log.debug('Moved ${file.absolute.path} to $targetDir');
   }
 
-  Future<void> fetchAndWriteFileFromUrl(String url) async {
-    final uri = Uri.parse(url);
-
+  Future<void> fetchAndWriteFileFromUri(Uri uri) async {
     final String content;
 
     if (uri.scheme == 'file') {
