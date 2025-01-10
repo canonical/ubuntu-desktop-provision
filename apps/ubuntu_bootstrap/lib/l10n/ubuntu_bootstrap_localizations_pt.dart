@@ -15,6 +15,30 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallDirectTitle => 'Automated installation';
+
+  @override
+  String get autoinstallDirectHeader => 'Import autoinstall file';
+
+  @override
+  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+
+  @override
+  String get autoinstallDirectFileLabel => 'Or select a local file:';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => 'Select file...';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => 'Choose file';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
   String get autoinstallTitle => 'Tipo de instalação';
 
   @override
@@ -979,9 +1003,6 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Aviso:</font> Se você perder esta chave de segurança, todos os dados serão perdidos. Se precisar, anote a sua chave e guarde-a num local seguro noutro lugar.';
   }
-
-  @override
-  String get validate => 'Validar';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -1946,7 +1967,4 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Atenção:</font> Se você perder essa chave de segurança, todos os dados serão perdidos. Se precisar, anote sua chave e guarde-a em um lugar seguro externo.';
   }
-
-  @override
-  String get validate => 'Validar';
 }

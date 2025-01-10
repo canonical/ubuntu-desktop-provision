@@ -24,8 +24,8 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
     final autoinstallModel = ref.watch(autoinstallModelProvider);
 
     return HorizontalPage(
-      windowTitle: lang.autoinstallTitle,
-      title: 'Import autoinstall file',
+      windowTitle: lang.autoinstallDirectTitle,
+      title: lang.autoinstallDirectHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
@@ -34,7 +34,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
                   label: UbuntuLocalizations.of(context).nextLabel,
                   onActivated: Wizard.of(context).next,
                 )
-              : _ValidateButton(),
+              : _ImportButton(),
         ],
       ),
       children: [
@@ -56,7 +56,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
           ),
           const SizedBox(height: kWizardSpacing),
         ],
-        Text('You can enter the URL of an autoinstall file'),
+        Text(lang.autoinstallDirectUrlLabel),
         const SizedBox(height: kWizardSpacing),
         TextFormField(
           enabled: directModel.localPath == null,
@@ -67,15 +67,21 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
           validator: (_) => directModel.error != null ? '' : null,
         ),
         const SizedBox(height: kWizardSpacing),
-        Text('Or select a local file'),
+        Text(lang.autoinstallDirectFileLabel),
         const SizedBox(height: kWizardSpacing),
         Row(
           children: [
             OutlinedButton(
               onPressed: () => Navigator.of(context, rootNavigator: true).push(
-                DialogRoute(context: context, builder: (_) => _FilePicker()),
+                DialogRoute(
+                  context: context,
+                  builder: (_) => _FilePicker(
+                    title: lang.autoinstallDirectFilePickerTitle,
+                    filterLabel: lang.autoinstallDirectFilePickerFilterLabel,
+                  ),
+                ),
               ),
-              child: Text('Select file...'),
+              child: Text(lang.autoinstallDirectFileButtonLabel),
             ),
             const SizedBox(width: 8),
             Expanded(
@@ -97,7 +103,13 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
 // Custom file picker widget that displays a non-dismissable `ModalBarrier` while awaiting the
 // response from `pickLocalFile`
 class _FilePicker extends ConsumerStatefulWidget {
-  const _FilePicker();
+  const _FilePicker({
+    required this.title,
+    required this.filterLabel,
+  });
+
+  final String title;
+  final String filterLabel;
 
   @override
   ConsumerState<_FilePicker> createState() => _FilePickerState();
@@ -113,7 +125,7 @@ class _FilePickerState extends ConsumerState<_FilePicker> {
   Future<void> showPicker() async {
     await ref
         .read(autoinstallDirectModelProvider.notifier)
-        .pickLocalFile('Choose file', 'YAML Files');
+        .pickLocalFile(widget.title, widget.filterLabel);
     if (mounted) {
       Navigator.of(context).pop();
     }
@@ -125,8 +137,8 @@ class _FilePickerState extends ConsumerState<_FilePicker> {
   }
 }
 
-class _ValidateButton extends ConsumerWidget {
-  const _ValidateButton();
+class _ImportButton extends ConsumerWidget {
+  const _ImportButton();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -162,7 +174,7 @@ class _ValidateButton extends ConsumerWidget {
             ),
             const SizedBox(width: 8),
           ],
-          Text(lang.validate),
+          Text(lang.autoinstallDirectImportButtonLabel),
         ],
       ),
     );

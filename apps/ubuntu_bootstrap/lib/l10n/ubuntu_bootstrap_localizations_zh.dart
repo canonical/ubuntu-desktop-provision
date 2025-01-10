@@ -15,6 +15,30 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallDirectTitle => 'Automated installation';
+
+  @override
+  String get autoinstallDirectHeader => 'Import autoinstall file';
+
+  @override
+  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+
+  @override
+  String get autoinstallDirectFileLabel => 'Or select a local file:';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => 'Select file...';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => 'Choose file';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
   String get autoinstallTitle => '安装类型';
 
   @override
@@ -979,9 +1003,6 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。';
   }
-
-  @override
-  String get validate => '验证';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1946,7 +1967,4 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
   }
-
-  @override
-  String get validate => '驗證';
 }

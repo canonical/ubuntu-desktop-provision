@@ -15,6 +15,30 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get autoinstallDirectTitle => 'Automated installation';
+
+  @override
+  String get autoinstallDirectHeader => 'Import autoinstall file';
+
+  @override
+  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+
+  @override
+  String get autoinstallDirectFileLabel => 'Or select a local file:';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => 'Select file...';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => 'Choose file';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
   String get autoinstallTitle => 'Installationstype';
 
   @override
@@ -979,7 +1003,4 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Advarsel:</font> Hvis du mister denne sikkerhedsnøgle, tabes alle data. Hvis du har brug for det, så skriv din nøgle ned og gem den på et andet, sikkert sted.';
   }
-
-  @override
-  String get validate => 'Validér';
 }
