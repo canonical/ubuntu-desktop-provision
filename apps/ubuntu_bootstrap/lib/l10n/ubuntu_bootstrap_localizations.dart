@@ -1978,66 +1978,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Log in to Landscape'**
   String get landscapeHeader;
-
-  /// No description provided for @landscapeTokenAttachButton.
-  ///
-  /// In en, this message translates to:
-  /// **'Attach'**
-  String get landscapeTokenAttachButton;
-
-  /// No description provided for @landscapeTokenAttachError.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid token'**
-  String get landscapeTokenAttachError;
-
-  /// No description provided for @landscapeTokenAttachSucess.
-  ///
-  /// In en, this message translates to:
-  /// **'Valid token'**
-  String get landscapeTokenAttachSucess;
-
-  /// No description provided for @landscapeTokenAttachErrorVariant.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid token, retry'**
-  String get landscapeTokenAttachErrorVariant;
-
-  /// No description provided for @landscapeOnBoardingSkipForNow.
-  ///
-  /// In en, this message translates to:
-  /// **'Skip for now'**
-  String get landscapeOnBoardingSkipForNow;
-
-  /// No description provided for @landscapeOnBoardingSkipForNowDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'You can always enable Ubuntu Pro later via the Software & Updates application.'**
-  String get landscapeOnBoardingSkipForNowDescription;
-
-  /// No description provided for @landscapeOnBoardingEnableUbuntuPro.
-  ///
-  /// In en, this message translates to:
-  /// **'Enable Ubuntu Pro'**
-  String get landscapeOnBoardingEnableUbuntuPro;
-
-  /// No description provided for @landscapeOnBoardingEnableUbuntuProDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.'**
-  String get landscapeOnBoardingEnableUbuntuProDescription;
-
-  /// No description provided for @landscapeSucessAttachHeader.
-  ///
-  /// In en, this message translates to:
-  /// **'Ubuntu Pro is now enabled in this machine'**
-  String get landscapeSucessAttachHeader;
-
-  /// No description provided for @landscapeSucessAttachDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'You can manage your Pro services in the Software & Updates application.'**
-  String get landscapeSucessAttachDescription;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

@@ -1047,34 +1047,4 @@ class UbuntuBootstrapLocalizationsIs extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeHeader => 'Log in to Landscape';
-
-  @override
-  String get landscapeTokenAttachButton => 'Attach';
-
-  @override
-  String get landscapeTokenAttachError => 'Invalid token';
-
-  @override
-  String get landscapeTokenAttachSucess => 'Valid token';
-
-  @override
-  String get landscapeTokenAttachErrorVariant => 'Invalid token, retry';
-
-  @override
-  String get landscapeOnBoardingSkipForNow => 'Skip for now';
-
-  @override
-  String get landscapeOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
-
-  @override
-  String get landscapeOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
-
-  @override
-  String get landscapeOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
-
-  @override
-  String get landscapeSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
-
-  @override
-  String get landscapeSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
 }
