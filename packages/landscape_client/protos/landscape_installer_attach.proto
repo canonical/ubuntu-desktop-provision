@@ -1,0 +1,47 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+package landscape_installer_attach;
+
+
+service LandscapeInstallerAttach {
+    rpc Attach(google.protobuf.Empty) returns (AttachResponse);
+    rpc WatchAuthentication(WatchAuthenticationRequest) returns (stream WatchAuthenticationResponse);
+}
+
+message AttachResponse {
+    AttachStatus status = 1;
+    string user_code = 2;
+    google.protobuf.Timestamp valid_until = 3;
+}
+
+
+enum AttachStatus {
+    ATTACH_SUCCESS = 0;
+    ERROR_NOT_ENABLED = 1;
+}
+
+
+message WatchAuthenticationRequest {
+    string user_code = 1;
+}
+
+
+message WatchAuthenticationResponse {
+    AuthenticationStatus status = 1;
+    string autoinstall = 2;
+}
+
+
+enum AuthenticationStatus {
+    AUTHENTICATION_PENDING = 0;
+    AUTHENTICATION_SUCCESS = 1;
+    ERROR_CODE_NOT_FOUND = 2;
+    ERROR_CANCELED_BY_USER = 3;
+    ERROR_CODE_EXPIRED = 4;
+    ERROR_EMPLOYEE_LIMIT_EXCEEDED = 5;
+    ERROR_EMPLOYEE_DEACTIVATED = 6;
+    ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED = 7;
+    ERROR_MISSING_AUTOINSTALL_FILE = 8;
+}
