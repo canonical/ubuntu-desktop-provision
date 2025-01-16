@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -13,9 +14,22 @@ import 'package:yaru/yaru.dart';
 const kMagicAttachUrl =
     'myorg.saas.landscape.canonical.com/attach'; // Placeholder URL
 const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
+final _log = Logger('landscape');
 
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
   const LandscapePage({super.key});
+
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    final model = ref.watch(landscapeDataModelProvider.notifier);
+    try {
+      await model.attach();
+    } on Exception catch (e) {
+      _log.error(e);
+      rethrow;
+    }
+    return true;
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
