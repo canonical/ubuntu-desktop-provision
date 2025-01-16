@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
@@ -63,11 +62,12 @@ Widget buildConfirmPage({
   when(sdb.modelName).thenReturn('SDB');
   when(sdb.vendorName).thenReturn('ATA');
   when(udev.bySysname('sdb')).thenReturn(sdb);
+
+  registerMockAutoinstallService();
   registerMockService<UdevService>(udev);
 
   return ProviderScope(
     overrides: [
-      autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
       confirmModelProvider.overrideWith((_) => confirm),
       storageModelProvider.overrideWith((_) => storage),
       sourceModelProvider.overrideWith((_) => source),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:mockito/annotations.dart';
@@ -16,6 +17,13 @@ export '../../../packages/ubuntu_provision/test/test_utils.mocks.dart';
 export 'test_utils.mocks.dart';
 
 extension WidgetTesterX on WidgetTester {
+  static Type context = WizardPage;
+
+  UbuntuBootstrapLocalizations get lang {
+    final widget = element(find.byType(context).first);
+    return UbuntuBootstrapLocalizations.of(widget);
+  }
+
   Future<void> pumpApp(WidgetBuilder builder) async {
     return pumpWidget(buildApp(builder));
   }
@@ -30,24 +38,26 @@ extension WidgetTesterX on WidgetTester {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
 
-    return MaterialApp(
-      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-      theme: yaruLight,
-      home: Wizard(
-        routes: {
-          '/': WizardRoute(
-            builder: builder,
-            onNext: (settings) => '/next',
-          ),
-          '/next': WizardRoute(
-            builder: (_) => const Row(
-              children: [
-                Text('Next page'),
-                BackWizardButton(),
-              ],
+    return ProviderScope(
+      child: MaterialApp(
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+        theme: yaruLight,
+        home: Wizard(
+          routes: {
+            '/': WizardRoute(
+              builder: builder,
+              onNext: (settings) => '/next',
             ),
-          ),
-        },
+            '/next': WizardRoute(
+              builder: (_) => const Row(
+                children: [
+                  Text('Next page'),
+                  BackWizardButton(),
+                ],
+              ),
+            ),
+          },
+        ),
       ),
     );
   }

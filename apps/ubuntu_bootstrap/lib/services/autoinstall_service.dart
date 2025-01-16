@@ -43,12 +43,11 @@ class AutoinstallService {
 
     if (!_liveRun) {
       final dir = _fs.directory(p.join(await getSubiquityPath(), '.subiquity'));
-      if (dir.existsSync()) {
-        _log.debug(
-          'renaming ${file.path} to ${p.join(dir.absolute.path, filename)}',
-        );
-        file.copySync(p.join(dir.absolute.path, filename));
-      }
+      dir.createSync(recursive: true);
+      _log.debug(
+        'renaming ${file.path} to ${p.join(dir.absolute.path, filename)}',
+      );
+      file.copySync(p.join(dir.absolute.path, filename));
       return;
     }
 

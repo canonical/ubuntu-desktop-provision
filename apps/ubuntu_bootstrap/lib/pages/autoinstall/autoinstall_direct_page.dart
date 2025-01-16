@@ -22,21 +22,13 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final directModel = ref.watch(autoinstallDirectModelProvider);
-    final autoinstallModel = ref.watch(autoinstallModelProvider);
 
     return HorizontalPage(
       windowTitle: lang.autoinstallDirectTitle,
       title: lang.autoinstallDirectHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
-        trailing: [
-          autoinstallModel.type == AutoinstallType.none
-              ? WizardButton(
-                  label: UbuntuLocalizations.of(context).nextLabel,
-                  onActivated: Wizard.of(context).next,
-                )
-              : _ImportButton(),
-        ],
+        trailing: [_ImportButton()],
       ),
       children: [
         if (directModel.error != null) ...[
@@ -120,7 +112,7 @@ class _FilePickerState extends ConsumerState<_FilePicker> {
   @override
   void initState() {
     super.initState();
-    showPicker();
+    WidgetsBinding.instance.addPostFrameCallback((_) => showPicker());
   }
 
   Future<void> showPicker() async {

@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/app/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
-import 'package:ubuntu_bootstrap/services/autoinstall_service.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 
 part 'autoinstall_model.freezed.dart';

@@ -11,7 +11,6 @@ import 'package:ubuntu_bootstrap/app.dart';
 import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
@@ -133,7 +132,6 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
-    final autoinstallModel = buildAutoinstallModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
@@ -160,13 +158,13 @@ void main() {
     final activeDirectoryModel = buildActiveDirectoryModel();
     final installModel = buildInstallModel(isDone: true);
 
+    registerMockAutoinstallService();
     registerMockService<DesktopService>(MockDesktopService());
 
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
-          autoinstallModelProvider.overrideWith((_) => autoinstallModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
           tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
@@ -402,7 +400,6 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          autoinstallModelProvider.overrideWith((_) => buildAutoinstallModel()),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           secureBootModelProvider.overrideWith((_) => secureBootModel),

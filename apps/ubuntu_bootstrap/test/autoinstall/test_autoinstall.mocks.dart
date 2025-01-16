@@ -3,14 +3,35 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i6;
-import 'dart:ui' as _i4;
+import 'dart:async' as _i24;
+import 'dart:typed_data' as _i27;
 
-import 'package:flutter_riverpod/flutter_riverpod.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i5;
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart'
-    as _i3;
+import 'package:mockito/src/dummies.dart' as _i25;
+import 'package:ubuntu_bootstrap/services/autoinstall_service.dart' as _i23;
+import 'package:xdg_desktop_portal/src/xdg_account_portal.dart' as _i2;
+import 'package:xdg_desktop_portal/src/xdg_background_portal.dart' as _i3;
+import 'package:xdg_desktop_portal/src/xdg_camera_portal.dart' as _i4;
+import 'package:xdg_desktop_portal/src/xdg_desktop_portal_client.dart' as _i26;
+import 'package:xdg_desktop_portal/src/xdg_documents_portal.dart' as _i5;
+import 'package:xdg_desktop_portal/src/xdg_email_portal.dart' as _i6;
+import 'package:xdg_desktop_portal/src/xdg_file_chooser_portal.dart' as _i7;
+import 'package:xdg_desktop_portal/src/xdg_file_transfer_portal.dart' as _i13;
+import 'package:xdg_desktop_portal/src/xdg_location_portal.dart' as _i8;
+import 'package:xdg_desktop_portal/src/xdg_memory_monitor_portal.dart' as _i9;
+import 'package:xdg_desktop_portal/src/xdg_network_monitor_portal.dart' as _i10;
+import 'package:xdg_desktop_portal/src/xdg_notification_portal.dart' as _i11;
+import 'package:xdg_desktop_portal/src/xdg_open_uri_portal.dart' as _i12;
+import 'package:xdg_desktop_portal/src/xdg_power_profile_monitor_portal.dart'
+    as _i14;
+import 'package:xdg_desktop_portal/src/xdg_print_portal.dart' as _i15;
+import 'package:xdg_desktop_portal/src/xdg_proxy_resolver_portal.dart' as _i16;
+import 'package:xdg_desktop_portal/src/xdg_remote_desktop_portal.dart' as _i17;
+import 'package:xdg_desktop_portal/src/xdg_screen_cast_portal.dart' as _i18;
+import 'package:xdg_desktop_portal/src/xdg_secret_portal.dart' as _i19;
+import 'package:xdg_desktop_portal/src/xdg_settings_portal.dart' as _i20;
+import 'package:xdg_desktop_portal/src/xdg_trash_portal.dart' as _i21;
+import 'package:xdg_desktop_portal/src/xdg_wallpaper_portal.dart' as _i22;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -25,8 +46,9 @@ import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart'
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeAsyncValue_0<T> extends _i1.SmartFake implements _i2.AsyncValue<T> {
-  _FakeAsyncValue_0(
+class _FakeXdgAccountPortal_0 extends _i1.SmartFake
+    implements _i2.XdgAccountPortal {
+  _FakeXdgAccountPortal_0(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -35,141 +57,797 @@ class _FakeAsyncValue_0<T> extends _i1.SmartFake implements _i2.AsyncValue<T> {
         );
 }
 
-/// A class which mocks [AutoinstallModel].
+class _FakeXdgBackgroundPortal_1 extends _i1.SmartFake
+    implements _i3.XdgBackgroundPortal {
+  _FakeXdgBackgroundPortal_1(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgCameraPortal_2 extends _i1.SmartFake
+    implements _i4.XdgCameraPortal {
+  _FakeXdgCameraPortal_2(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgDocumentsPortal_3 extends _i1.SmartFake
+    implements _i5.XdgDocumentsPortal {
+  _FakeXdgDocumentsPortal_3(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgEmailPortal_4 extends _i1.SmartFake
+    implements _i6.XdgEmailPortal {
+  _FakeXdgEmailPortal_4(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgFileChooserPortal_5 extends _i1.SmartFake
+    implements _i7.XdgFileChooserPortal {
+  _FakeXdgFileChooserPortal_5(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgLocationPortal_6 extends _i1.SmartFake
+    implements _i8.XdgLocationPortal {
+  _FakeXdgLocationPortal_6(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgMemoryMonitorPortal_7 extends _i1.SmartFake
+    implements _i9.XdgMemoryMonitorPortal {
+  _FakeXdgMemoryMonitorPortal_7(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgNetworkMonitorPortal_8 extends _i1.SmartFake
+    implements _i10.XdgNetworkMonitorPortal {
+  _FakeXdgNetworkMonitorPortal_8(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgNotificationPortal_9 extends _i1.SmartFake
+    implements _i11.XdgNotificationPortal {
+  _FakeXdgNotificationPortal_9(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgOpenUriPortal_10 extends _i1.SmartFake
+    implements _i12.XdgOpenUriPortal {
+  _FakeXdgOpenUriPortal_10(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgFileTransferPortal_11 extends _i1.SmartFake
+    implements _i13.XdgFileTransferPortal {
+  _FakeXdgFileTransferPortal_11(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgPowerProfileMonitorPortal_12 extends _i1.SmartFake
+    implements _i14.XdgPowerProfileMonitorPortal {
+  _FakeXdgPowerProfileMonitorPortal_12(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgPrintPortal_13 extends _i1.SmartFake
+    implements _i15.XdgPrintPortal {
+  _FakeXdgPrintPortal_13(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgProxyResolverPortal_14 extends _i1.SmartFake
+    implements _i16.XdgProxyResolverPortal {
+  _FakeXdgProxyResolverPortal_14(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgRemoteDesktopPortal_15 extends _i1.SmartFake
+    implements _i17.XdgRemoteDesktopPortal {
+  _FakeXdgRemoteDesktopPortal_15(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgScreenCastPortal_16 extends _i1.SmartFake
+    implements _i18.XdgScreenCastPortal {
+  _FakeXdgScreenCastPortal_16(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgSecretPortal_17 extends _i1.SmartFake
+    implements _i19.XdgSecretPortal {
+  _FakeXdgSecretPortal_17(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgSettingsPortal_18 extends _i1.SmartFake
+    implements _i20.XdgSettingsPortal {
+  _FakeXdgSettingsPortal_18(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgTrashPortal_19 extends _i1.SmartFake
+    implements _i21.XdgTrashPortal {
+  _FakeXdgTrashPortal_19(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeXdgWallpaperPortal_20 extends _i1.SmartFake
+    implements _i22.XdgWallpaperPortal {
+  _FakeXdgWallpaperPortal_20(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+/// A class which mocks [AutoinstallService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockAutoinstallModel extends _i1.Mock implements _i3.AutoinstallModel {
-  MockAutoinstallModel() {
+class MockAutoinstallService extends _i1.Mock
+    implements _i23.AutoinstallService {
+  MockAutoinstallService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i4.VoidCallback get resetUi => (super.noSuchMethod(
-        Invocation.getter(#resetUi),
-        returnValue: () {},
-      ) as _i4.VoidCallback);
-
-  @override
-  bool get autoinstall => (super.noSuchMethod(
-        Invocation.getter(#autoinstall),
-        returnValue: false,
-      ) as bool);
-
-  @override
-  set autoinstall(bool? value) => super.noSuchMethod(
-        Invocation.setter(
-          #autoinstall,
-          value,
+  _i24.Future<void> writeFile(String? content) => (super.noSuchMethod(
+        Invocation.method(
+          #writeFile,
+          [content],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: _i24.Future<void>.value(),
+        returnValueForMissingStub: _i24.Future<void>.value(),
+      ) as _i24.Future<void>);
 
   @override
-  String get url => (super.noSuchMethod(
-        Invocation.getter(#url),
-        returnValue: _i5.dummyValue<String>(
-          this,
-          Invocation.getter(#url),
+  _i24.Future<void> fetchAndWriteFileFromUri(Uri? uri) => (super.noSuchMethod(
+        Invocation.method(
+          #fetchAndWriteFileFromUri,
+          [uri],
         ),
-      ) as String);
+        returnValue: _i24.Future<void>.value(),
+        returnValueForMissingStub: _i24.Future<void>.value(),
+      ) as _i24.Future<void>);
 
   @override
-  set url(String? value) => super.noSuchMethod(
-        Invocation.setter(
-          #url,
-          value,
-        ),
-        returnValueForMissingStub: null,
-      );
-
-  @override
-  _i2.AsyncValue<void> get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _FakeAsyncValue_0<void>(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i2.AsyncValue<void>);
-
-  @override
-  set state(_i2.AsyncValue<void>? value) => super.noSuchMethod(
-        Invocation.setter(
-          #state,
-          value,
-        ),
-        returnValueForMissingStub: null,
-      );
-
-  @override
-  bool get hasListeners => (super.noSuchMethod(
-        Invocation.getter(#hasListeners),
-        returnValue: false,
-      ) as bool);
-
-  @override
-  bool get isDisposed => (super.noSuchMethod(
-        Invocation.getter(#isDisposed),
-        returnValue: false,
-      ) as bool);
-
-  @override
-  _i6.Future<String> getFileContent() => (super.noSuchMethod(
+  _i24.Future<String> getFileContent() => (super.noSuchMethod(
         Invocation.method(
           #getFileContent,
           [],
         ),
-        returnValue: _i6.Future<String>.value(_i5.dummyValue<String>(
+        returnValue: _i24.Future<String>.value(_i25.dummyValue<String>(
           this,
           Invocation.method(
             #getFileContent,
             [],
           ),
         )),
-      ) as _i6.Future<String>);
+      ) as _i24.Future<String>);
 
   @override
-  _i6.Future<void> apply() => (super.noSuchMethod(
+  _i24.Future<void> restartSubiquity() => (super.noSuchMethod(
         Invocation.method(
-          #apply,
+          #restartSubiquity,
           [],
         ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+        returnValue: _i24.Future<void>.value(),
+        returnValueForMissingStub: _i24.Future<void>.value(),
+      ) as _i24.Future<void>);
+}
+
+/// A class which mocks [XdgDesktopPortalClient].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockXdgDesktopPortalClient extends _i1.Mock
+    implements _i26.XdgDesktopPortalClient {
+  MockXdgDesktopPortalClient() {
+    _i1.throwOnMissingStub(this);
+  }
 
   @override
-  void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
-        Invocation.method(
-          #addListener,
-          [listener],
+  _i2.XdgAccountPortal get account => (super.noSuchMethod(
+        Invocation.getter(#account),
+        returnValue: _FakeXdgAccountPortal_0(
+          this,
+          Invocation.getter(#account),
+        ),
+      ) as _i2.XdgAccountPortal);
+
+  @override
+  set account(_i2.XdgAccountPortal? _account) => super.noSuchMethod(
+        Invocation.setter(
+          #account,
+          _account,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
-        Invocation.method(
-          #removeListener,
-          [listener],
+  _i3.XdgBackgroundPortal get background => (super.noSuchMethod(
+        Invocation.getter(#background),
+        returnValue: _FakeXdgBackgroundPortal_1(
+          this,
+          Invocation.getter(#background),
+        ),
+      ) as _i3.XdgBackgroundPortal);
+
+  @override
+  set background(_i3.XdgBackgroundPortal? _background) => super.noSuchMethod(
+        Invocation.setter(
+          #background,
+          _background,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  void dispose() => super.noSuchMethod(
+  _i4.XdgCameraPortal get camera => (super.noSuchMethod(
+        Invocation.getter(#camera),
+        returnValue: _FakeXdgCameraPortal_2(
+          this,
+          Invocation.getter(#camera),
+        ),
+      ) as _i4.XdgCameraPortal);
+
+  @override
+  set camera(_i4.XdgCameraPortal? _camera) => super.noSuchMethod(
+        Invocation.setter(
+          #camera,
+          _camera,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i5.XdgDocumentsPortal get documents => (super.noSuchMethod(
+        Invocation.getter(#documents),
+        returnValue: _FakeXdgDocumentsPortal_3(
+          this,
+          Invocation.getter(#documents),
+        ),
+      ) as _i5.XdgDocumentsPortal);
+
+  @override
+  set documents(_i5.XdgDocumentsPortal? _documents) => super.noSuchMethod(
+        Invocation.setter(
+          #documents,
+          _documents,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i6.XdgEmailPortal get email => (super.noSuchMethod(
+        Invocation.getter(#email),
+        returnValue: _FakeXdgEmailPortal_4(
+          this,
+          Invocation.getter(#email),
+        ),
+      ) as _i6.XdgEmailPortal);
+
+  @override
+  set email(_i6.XdgEmailPortal? _email) => super.noSuchMethod(
+        Invocation.setter(
+          #email,
+          _email,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i7.XdgFileChooserPortal get fileChooser => (super.noSuchMethod(
+        Invocation.getter(#fileChooser),
+        returnValue: _FakeXdgFileChooserPortal_5(
+          this,
+          Invocation.getter(#fileChooser),
+        ),
+      ) as _i7.XdgFileChooserPortal);
+
+  @override
+  set fileChooser(_i7.XdgFileChooserPortal? _fileChooser) => super.noSuchMethod(
+        Invocation.setter(
+          #fileChooser,
+          _fileChooser,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i8.XdgLocationPortal get location => (super.noSuchMethod(
+        Invocation.getter(#location),
+        returnValue: _FakeXdgLocationPortal_6(
+          this,
+          Invocation.getter(#location),
+        ),
+      ) as _i8.XdgLocationPortal);
+
+  @override
+  set location(_i8.XdgLocationPortal? _location) => super.noSuchMethod(
+        Invocation.setter(
+          #location,
+          _location,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i9.XdgMemoryMonitorPortal get memoryMonitor => (super.noSuchMethod(
+        Invocation.getter(#memoryMonitor),
+        returnValue: _FakeXdgMemoryMonitorPortal_7(
+          this,
+          Invocation.getter(#memoryMonitor),
+        ),
+      ) as _i9.XdgMemoryMonitorPortal);
+
+  @override
+  set memoryMonitor(_i9.XdgMemoryMonitorPortal? _memoryMonitor) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #memoryMonitor,
+          _memoryMonitor,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i10.XdgNetworkMonitorPortal get networkMonitor => (super.noSuchMethod(
+        Invocation.getter(#networkMonitor),
+        returnValue: _FakeXdgNetworkMonitorPortal_8(
+          this,
+          Invocation.getter(#networkMonitor),
+        ),
+      ) as _i10.XdgNetworkMonitorPortal);
+
+  @override
+  set networkMonitor(_i10.XdgNetworkMonitorPortal? _networkMonitor) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #networkMonitor,
+          _networkMonitor,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i11.XdgNotificationPortal get notification => (super.noSuchMethod(
+        Invocation.getter(#notification),
+        returnValue: _FakeXdgNotificationPortal_9(
+          this,
+          Invocation.getter(#notification),
+        ),
+      ) as _i11.XdgNotificationPortal);
+
+  @override
+  set notification(_i11.XdgNotificationPortal? _notification) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #notification,
+          _notification,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i12.XdgOpenUriPortal get openUri => (super.noSuchMethod(
+        Invocation.getter(#openUri),
+        returnValue: _FakeXdgOpenUriPortal_10(
+          this,
+          Invocation.getter(#openUri),
+        ),
+      ) as _i12.XdgOpenUriPortal);
+
+  @override
+  set openUri(_i12.XdgOpenUriPortal? _openUri) => super.noSuchMethod(
+        Invocation.setter(
+          #openUri,
+          _openUri,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i13.XdgFileTransferPortal get fileTransfer => (super.noSuchMethod(
+        Invocation.getter(#fileTransfer),
+        returnValue: _FakeXdgFileTransferPortal_11(
+          this,
+          Invocation.getter(#fileTransfer),
+        ),
+      ) as _i13.XdgFileTransferPortal);
+
+  @override
+  set fileTransfer(_i13.XdgFileTransferPortal? _fileTransfer) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #fileTransfer,
+          _fileTransfer,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i14.XdgPowerProfileMonitorPortal get powerProfileMonitor =>
+      (super.noSuchMethod(
+        Invocation.getter(#powerProfileMonitor),
+        returnValue: _FakeXdgPowerProfileMonitorPortal_12(
+          this,
+          Invocation.getter(#powerProfileMonitor),
+        ),
+      ) as _i14.XdgPowerProfileMonitorPortal);
+
+  @override
+  set powerProfileMonitor(
+          _i14.XdgPowerProfileMonitorPortal? _powerProfileMonitor) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #powerProfileMonitor,
+          _powerProfileMonitor,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i15.XdgPrintPortal get print => (super.noSuchMethod(
+        Invocation.getter(#print),
+        returnValue: _FakeXdgPrintPortal_13(
+          this,
+          Invocation.getter(#print),
+        ),
+      ) as _i15.XdgPrintPortal);
+
+  @override
+  set print(_i15.XdgPrintPortal? _print) => super.noSuchMethod(
+        Invocation.setter(
+          #print,
+          _print,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i16.XdgProxyResolverPortal get proxyResolver => (super.noSuchMethod(
+        Invocation.getter(#proxyResolver),
+        returnValue: _FakeXdgProxyResolverPortal_14(
+          this,
+          Invocation.getter(#proxyResolver),
+        ),
+      ) as _i16.XdgProxyResolverPortal);
+
+  @override
+  set proxyResolver(_i16.XdgProxyResolverPortal? _proxyResolver) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #proxyResolver,
+          _proxyResolver,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i17.XdgRemoteDesktopPortal get remoteDesktop => (super.noSuchMethod(
+        Invocation.getter(#remoteDesktop),
+        returnValue: _FakeXdgRemoteDesktopPortal_15(
+          this,
+          Invocation.getter(#remoteDesktop),
+        ),
+      ) as _i17.XdgRemoteDesktopPortal);
+
+  @override
+  set remoteDesktop(_i17.XdgRemoteDesktopPortal? _remoteDesktop) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #remoteDesktop,
+          _remoteDesktop,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i18.XdgScreenCastPortal get screenCast => (super.noSuchMethod(
+        Invocation.getter(#screenCast),
+        returnValue: _FakeXdgScreenCastPortal_16(
+          this,
+          Invocation.getter(#screenCast),
+        ),
+      ) as _i18.XdgScreenCastPortal);
+
+  @override
+  set screenCast(_i18.XdgScreenCastPortal? _screenCast) => super.noSuchMethod(
+        Invocation.setter(
+          #screenCast,
+          _screenCast,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i19.XdgSecretPortal get secret => (super.noSuchMethod(
+        Invocation.getter(#secret),
+        returnValue: _FakeXdgSecretPortal_17(
+          this,
+          Invocation.getter(#secret),
+        ),
+      ) as _i19.XdgSecretPortal);
+
+  @override
+  set secret(_i19.XdgSecretPortal? _secret) => super.noSuchMethod(
+        Invocation.setter(
+          #secret,
+          _secret,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i20.XdgSettingsPortal get settings => (super.noSuchMethod(
+        Invocation.getter(#settings),
+        returnValue: _FakeXdgSettingsPortal_18(
+          this,
+          Invocation.getter(#settings),
+        ),
+      ) as _i20.XdgSettingsPortal);
+
+  @override
+  set settings(_i20.XdgSettingsPortal? _settings) => super.noSuchMethod(
+        Invocation.setter(
+          #settings,
+          _settings,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i21.XdgTrashPortal get trash => (super.noSuchMethod(
+        Invocation.getter(#trash),
+        returnValue: _FakeXdgTrashPortal_19(
+          this,
+          Invocation.getter(#trash),
+        ),
+      ) as _i21.XdgTrashPortal);
+
+  @override
+  set trash(_i21.XdgTrashPortal? _trash) => super.noSuchMethod(
+        Invocation.setter(
+          #trash,
+          _trash,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i22.XdgWallpaperPortal get wallpaper => (super.noSuchMethod(
+        Invocation.getter(#wallpaper),
+        returnValue: _FakeXdgWallpaperPortal_20(
+          this,
+          Invocation.getter(#wallpaper),
+        ),
+      ) as _i22.XdgWallpaperPortal);
+
+  @override
+  set wallpaper(_i22.XdgWallpaperPortal? _wallpaper) => super.noSuchMethod(
+        Invocation.setter(
+          #wallpaper,
+          _wallpaper,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i24.Future<void> close() => (super.noSuchMethod(
         Invocation.method(
-          #dispose,
+          #close,
           [],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: _i24.Future<void>.value(),
+        returnValueForMissingStub: _i24.Future<void>.value(),
+      ) as _i24.Future<void>);
+}
+
+/// A class which mocks [XdgFileChooserPortal].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockXdgFileChooserPortal extends _i1.Mock
+    implements _i7.XdgFileChooserPortal {
+  MockXdgFileChooserPortal() {
+    _i1.throwOnMissingStub(this);
+  }
 
   @override
-  void notifyListeners() => super.noSuchMethod(
+  _i24.Future<int> getVersion() => (super.noSuchMethod(
         Invocation.method(
-          #notifyListeners,
+          #getVersion,
           [],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: _i24.Future<int>.value(0),
+      ) as _i24.Future<int>);
+
+  @override
+  _i24.Stream<_i7.XdgFileChooserPortalOpenFileResult> openFile({
+    required String? title,
+    String? parentWindow = r'',
+    String? acceptLabel,
+    bool? modal,
+    bool? multiple,
+    bool? directory,
+    Iterable<_i7.XdgFileChooserFilter>? filters = const [],
+    _i7.XdgFileChooserFilter? currentFilter,
+    Iterable<_i7.XdgFileChooserChoice>? choices = const [],
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #openFile,
+          [],
+          {
+            #title: title,
+            #parentWindow: parentWindow,
+            #acceptLabel: acceptLabel,
+            #modal: modal,
+            #multiple: multiple,
+            #directory: directory,
+            #filters: filters,
+            #currentFilter: currentFilter,
+            #choices: choices,
+          },
+        ),
+        returnValue:
+            _i24.Stream<_i7.XdgFileChooserPortalOpenFileResult>.empty(),
+      ) as _i24.Stream<_i7.XdgFileChooserPortalOpenFileResult>);
+
+  @override
+  _i24.Stream<_i7.XdgFileChooserPortalSaveFileResult> saveFile({
+    required String? title,
+    String? parentWindow = r'',
+    String? acceptLabel,
+    bool? modal,
+    Iterable<_i7.XdgFileChooserFilter>? filters = const [],
+    _i7.XdgFileChooserFilter? currentFilter,
+    Iterable<_i7.XdgFileChooserChoice>? choices = const [],
+    String? currentName,
+    _i27.Uint8List? currentFolder,
+    _i27.Uint8List? currentFile,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #saveFile,
+          [],
+          {
+            #title: title,
+            #parentWindow: parentWindow,
+            #acceptLabel: acceptLabel,
+            #modal: modal,
+            #filters: filters,
+            #currentFilter: currentFilter,
+            #choices: choices,
+            #currentName: currentName,
+            #currentFolder: currentFolder,
+            #currentFile: currentFile,
+          },
+        ),
+        returnValue:
+            _i24.Stream<_i7.XdgFileChooserPortalSaveFileResult>.empty(),
+      ) as _i24.Stream<_i7.XdgFileChooserPortalSaveFileResult>);
+
+  @override
+  _i24.Stream<_i7.XdgFileChooserPortalSaveFilesResult> saveFiles({
+    required String? title,
+    String? parentWindow = r'',
+    String? acceptLabel,
+    bool? modal,
+    Iterable<_i7.XdgFileChooserChoice>? choices = const [],
+    _i27.Uint8List? currentFolder,
+    Iterable<_i27.Uint8List>? files = const [],
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #saveFiles,
+          [],
+          {
+            #title: title,
+            #parentWindow: parentWindow,
+            #acceptLabel: acceptLabel,
+            #modal: modal,
+            #choices: choices,
+            #currentFolder: currentFolder,
+            #files: files,
+          },
+        ),
+        returnValue:
+            _i24.Stream<_i7.XdgFileChooserPortalSaveFilesResult>.empty(),
+      ) as _i24.Stream<_i7.XdgFileChooserPortalSaveFilesResult>);
 }
