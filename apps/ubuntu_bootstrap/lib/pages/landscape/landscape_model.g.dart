@@ -7,7 +7,7 @@ part of 'landscape_model.dart';
 // **************************************************************************
 
 String _$landscapeDataModelHash() =>
-    r'6e8a0ed970ee0a11c033fa9d587ab3faddf5357b';
+    r'7b9fb930a1db523ae3ae889d4103f9eb08dac432';
 
 /// See also [LandscapeDataModel].
 @ProviderFor(LandscapeDataModel)
