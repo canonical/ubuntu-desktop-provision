@@ -4,6 +4,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
+import 'package:ubuntu_bootstrap/services.dart' as service;
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -20,21 +21,15 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
   const LandscapePage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async {
-    final model = ref.watch(landscapeDataModelProvider.notifier);
-    try {
-      await model.attach();
-    } on Exception catch (e) {
-      _log.error(e);
-      rethrow;
-    }
-    return true;
-  }
-
-  @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(landscapeDataModelProvider);
+    // log current authentication status when is changes:
+    _log.debug(model.authenticationStatus);
+    if (model.authenticationStatus ==
+        service.AuthenticationStatus.authenticationSuccess) {
+      Wizard.of(context).next();
+    }
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
@@ -108,5 +103,23 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
         ),
       ],
     );
+  }
+
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    final model = ref.watch(landscapeDataModelProvider.notifier);
+    try {
+      await model.attach();
+    } on Exception catch (e) {
+      _log.error(e);
+      rethrow;
+    }
+    try {
+      model.watch();
+    } on Exception catch (e) {
+      _log.error(e);
+      rethrow;
+    }
+    return true;
   }
 }
