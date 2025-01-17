@@ -51,7 +51,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
     final theme = Theme.of(context);
