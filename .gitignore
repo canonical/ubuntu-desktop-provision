@@ -34,3 +34,6 @@ obj-x86_64-linux-gnu/
 
 # Vendor directory (contains vendored dependencies)
 provd/vendor/
+
+# Rust target files for mock landscape server
+packages/landscape_mock_server/target
