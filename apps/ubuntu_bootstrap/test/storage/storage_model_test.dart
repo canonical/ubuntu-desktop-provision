@@ -128,7 +128,8 @@ void main() {
       ),
     );
     await model.save();
-    verify(telemetry.addMetric('PartitionMethod', 'reuse_partition')).called(1);
+    verify(telemetry.addMetric('PartitionMethod', 'replace_partition'))
+        .called(1);
     reset(telemetry);
 
     when(storage.guidedCapability).thenReturn(GuidedCapability.LVM);
