@@ -245,8 +245,12 @@ class StorageModel extends SafeChangeNotifier {
     } else if (type == StorageType.manual) {
       return 'manual';
     } else if (type case StorageTypeEraseInstall()) {
-      return 'reuse_partition';
+      return 'replace_partition';
     }
+    // TODO: map upgrading the current Ubuntu installation without
+    // wiping the user's home directory (not implemented yet)
+    // to the 'reuse_partition' method.
+
     return null;
   }
 
