@@ -64,26 +64,3 @@ Widget buildAutoinstallDirectPage() {
     child: const AutoinstallDirectPage(),
   );
 }
-// AutoinstallDirectModel buildAutoinstallModel({
-//   AsyncValue<void>? state,
-//   String? url,
-//   bool autoinstall = false,
-// }) {
-//   final model = MockAutoinstallModel();
-//   when(model.state).thenReturn(state ?? const AsyncValue<void>.data(null));
-//   when(model.url).thenReturn(url ?? '');
-//   when(model.autoinstall).thenReturn(autoinstall);
-//   when(model.getFileContent()).thenAnswer((_) async => '');
-//   return model;
-// }
-
-// Widget buildAutoinstallPage(AutoinstallDirectModel model) {
-//   registerMockService<ThemeVariantService>(MockThemeVariantService());
-//   registerMockService<PageConfigService>(MockPageConfigService());
-//   return ProviderScope(
-//     overrides: [
-//       autoinstallDirectModelProvider.overrideWith((_) => model),
-//     ],
-//     child: const AutoinstallPage(),
-//   );
-// }
