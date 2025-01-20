@@ -23,11 +23,11 @@ import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart' as _i2;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-/// A class which mocks [UbuntuProModel].
+/// A class which mocks [LandscapeModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUbuntuProModel extends _i1.Mock implements _i2.UbuntuProModel {
-  MockUbuntuProModel() {
+class MockLandscapeModel extends _i1.Mock implements _i2.LandscapeModel {
+  MockLandscapeModel() {
     _i1.throwOnMissingStub(this);
   }
 

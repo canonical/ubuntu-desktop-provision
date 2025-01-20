@@ -12,7 +12,7 @@ class TokenTextField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(ubuntuProModelProvider);
+    final model = ref.watch(landscapeModelProvider);
 
     return ValidatedFormField(
       labelText: l10n.ubuntuProTokenTextfieldHint,
@@ -66,7 +66,7 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final model = ref.watch(ubuntuProModelProvider);
+    final model = ref.watch(landscapeModelProvider);
     final isSelected = skipPro == model.skipPro;
     return Align(
       alignment: AlignmentDirectional.centerStart,

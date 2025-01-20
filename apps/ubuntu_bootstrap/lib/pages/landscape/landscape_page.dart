@@ -15,12 +15,12 @@ import 'package:yaru/yaru.dart';
 const kMagicAttachUrl = 'https://ubuntu.com/pro/attach';
 const kUbuntuProUrl = 'https://ubuntu.com/pro';
 
-class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
-  const UbuntuProPage({super.key});
+class LandscapePage extends ConsumerWidget with ProvisioningPage {
+  const LandscapePage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    final model = ref.watch(ubuntuProModelProvider);
+    final model = ref.watch(landscapeModelProvider);
     if (model.skipPro) return false;
 
     await model.magicAttach();
@@ -30,7 +30,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(ubuntuProModelProvider);
+    final model = ref.watch(landscapeModelProvider);
     return HorizontalPage(
       windowTitle: l10n.ubuntuProPageTitle,
       title: l10n.ubuntuProHeader,

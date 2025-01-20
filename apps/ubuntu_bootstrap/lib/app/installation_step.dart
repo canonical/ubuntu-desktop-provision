@@ -34,7 +34,7 @@ enum InstallationStep with RouteName {
     required: true,
   ),
   locale(LocalePage.new),
-  landscape(UbuntuProPage.new, required: true),
+  landscape(LandscapePage.new, required: true),
   accessibility(AccessibilityPage.new, allowedToHide: true),
   rst(RstPage.new, discreteStep: false, required: true),
   keyboard(KeyboardPage.new),

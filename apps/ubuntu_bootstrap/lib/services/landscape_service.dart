@@ -1,3 +1,3 @@
-abstract class ProService {}
+abstract class LandscapeService {}
 
-class ProvdProService implements ProService {}
+class LandscapeBackendService implements LandscapeService {}

@@ -8,8 +8,8 @@ import 'package:ubuntu_bootstrap/pages/landscape/landscape_page.dart';
 import 'test_landscape.mocks.dart';
 export '../test_utils.dart';
 
-@GenerateMocks([UbuntuProModel])
-UbuntuProModel buildUbuntuProModel({
+@GenerateMocks([LandscapeModel])
+LandscapeModel buildLandscapeModel({
   bool? enabled,
   Stream<String>? collect,
   bool? isAttached,
@@ -17,7 +17,7 @@ UbuntuProModel buildUbuntuProModel({
   String? userCode,
   bool? skipPro,
 }) {
-  final model = MockUbuntuProModel();
+  final model = MockLandscapeModel();
   when(model.isAttachedThroughMagicAttach).thenReturn(true);
   when(model.isAttachedThroughManualAttach).thenReturn(true);
   when(model.hasNoErrorWhenAttachingManually).thenReturn(true);
@@ -36,9 +36,9 @@ UbuntuProModel buildUbuntuProModel({
   return model;
 }
 
-Widget buildUbuntuProPage(UbuntuProModel model) {
+Widget buildLandscapePage(LandscapeModel model) {
   return ProviderScope(
-    overrides: [ubuntuProModelProvider.overrideWith((_) => model)],
-    child: UbuntuProPage(),
+    overrides: [landscapeModelProvider.overrideWith((_) => model)],
+    child: LandscapePage(),
   );
 }
