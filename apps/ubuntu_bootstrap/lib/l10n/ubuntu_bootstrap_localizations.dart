@@ -251,6 +251,54 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Install {RELEASE}'**
   String windowTitle(String RELEASE);
 
+  /// No description provided for @autoinstallDirectTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated installation'**
+  String get autoinstallDirectTitle;
+
+  /// No description provided for @autoinstallDirectHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Import autoinstall file'**
+  String get autoinstallDirectHeader;
+
+  /// No description provided for @autoinstallDirectUrlLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'You can enter the URL of an autoinstall file:'**
+  String get autoinstallDirectUrlLabel;
+
+  /// No description provided for @autoinstallDirectFileLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Or select a local file:'**
+  String get autoinstallDirectFileLabel;
+
+  /// No description provided for @autoinstallDirectFileButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Select file...'**
+  String get autoinstallDirectFileButtonLabel;
+
+  /// No description provided for @autoinstallDirectFilePickerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose file'**
+  String get autoinstallDirectFilePickerTitle;
+
+  /// No description provided for @autoinstallDirectFilePickerFilterLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'YAML files'**
+  String get autoinstallDirectFilePickerFilterLabel;
+
+  /// No description provided for @autoinstallDirectImportButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Import'**
+  String get autoinstallDirectImportButtonLabel;
+
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:
@@ -1846,12 +1894,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
   String recoveryKeyWarning(String color);
-
-  /// No description provided for @validate.
-  ///
-  /// In en, this message translates to:
-  /// **'Validate'**
-  String get validate;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

@@ -8,7 +8,6 @@ import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/app.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -157,6 +156,7 @@ extension on WidgetTester {
     when(config.provisioningMode)
         .thenAnswer((_) async => ProvisioningMode.standard);
 
+    registerMockAutoinstallService();
     registerMockService<ConfigService>(config);
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);
@@ -175,12 +175,9 @@ extension on WidgetTester {
     registerMockService<NetworkService>(MockNetworkService());
     registerMockService<PowerService>(MockPowerService());
 
-    final mockAutoInstallModel = buildAutoinstallModel();
-
     return ProviderScope(
       overrides: [
         slidesProvider.overrideWith((_) => MockSlidesModel()),
-        autoinstallModelProvider.overrideWith((_) => mockAutoInstallModel),
       ],
       child: WizardApp(
         localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,

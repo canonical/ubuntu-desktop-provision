@@ -9,6 +9,14 @@
       }
     }
   },
+  "autoinstallDirectTitle": "Automated installation",
+  "autoinstallDirectHeader": "Import autoinstall file",
+  "autoinstallDirectUrlLabel": "You can enter the URL of an autoinstall file:",
+  "autoinstallDirectFileLabel": "Or select a local file:",
+  "autoinstallDirectFileButtonLabel": "Select file...",
+  "autoinstallDirectFilePickerTitle": "Choose file",
+  "autoinstallDirectFilePickerFilterLabel": "YAML files",
+  "autoinstallDirectImportButtonLabel": "Import",
   "autoinstallTitle": "Type of installation",
   "autoinstallHeader": "How would you like to install {DISTRO}?",
   "@autoinstallHeader": {
@@ -917,6 +925,5 @@
         "type": "String"
       }
     }
-  },
-  "validate": "Validate"
+  }
 }

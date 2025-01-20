@@ -22,6 +22,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
 export 'app/installer_wizard.dart';
@@ -98,6 +99,13 @@ Future<void> runInstallerApp(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );
   tryRegisterServiceInstance<ArgResults>(options);
+  tryRegisterService<AutoinstallService>(
+    () => AutoinstallService(
+      getService<SubiquityClient>(),
+      getService<SubiquityServer>(),
+      liveRun: liveRun,
+    ),
+  );
   tryRegisterService<ConfigService>(ConfigService.new);
   if (liveRun) tryRegisterService<DesktopService>(GnomeService.new);
   tryRegisterServiceFactory<GSettings, String>(GSettings.new);
@@ -164,6 +172,7 @@ Future<void> runInstallerApp(
   );
   tryRegisterService(UdevService.new);
   tryRegisterService(UrlLauncher.new);
+  tryRegisterService(XdgDesktopPortalClient.new);
 
   final subiquityArgs = [
     if (options['dry-run-config'] != null)
