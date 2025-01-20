@@ -947,5 +947,21 @@
         "type": "String"
       }
     }
-  }
+  },
+  "autoinstallDirectHeader": "Importuj plik autoinstalacji",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectFileLabel": "Lub wybierz plik lokalny:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Wybierz plik...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Wybierz plik",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Pliki YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importuj",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectTitle": "Instalacja zautomatyzowana",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectUrlLabel": "Możesz wpisać adres URL pliku autoinstalacji:",
+  "@autoinstallDirectUrlLabel": {}
 }
