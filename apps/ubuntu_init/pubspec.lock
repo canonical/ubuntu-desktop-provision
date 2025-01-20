@@ -488,10 +488,10 @@ packages:
     dependency: transitive
     description:
       name: grpc
-      sha256: e93ee3bce45c134bf44e9728119102358c7cd69de7832d9a874e2e74eb8cab40
+      sha256: "5b99b7a420937d4361ece68b798c9af8e04b5bc128a7859f2a4be87427694813"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.4"
+    version: "4.0.1"
   gsettings:
     dependency: "direct main"
     description:
