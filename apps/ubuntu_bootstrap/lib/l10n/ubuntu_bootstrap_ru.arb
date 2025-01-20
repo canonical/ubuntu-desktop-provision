@@ -72,7 +72,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Вы сможете выбирать операционную систему во время загрузки.",
+  "installationTypeAlongsideInfo": "Выберите раздел для выделения места под {product}. Вы сможете выбирать операционную систему во время загрузки.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManualInfo": "Для опытных пользователей, которым требуется особая настройка дисков.",
   "@installationTypeManualInfo": {},
@@ -308,7 +308,7 @@
       "newsize": {}
     }
   },
-  "installationTypeAlongsideMulti": "Установить {product} вместе с ними",
+  "installationTypeAlongsideMulti": "Установить {product} вместе с другими ОС",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -846,7 +846,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Начните с нуля на выбранном диске.",
+  "installationTypeEraseInfo": "Будут удалены все данные и разделы на диске, в том числе операционные системы.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Экспериментально",
   "@installationTypeExperimental": {},
@@ -922,6 +922,41 @@
     },
     "format": {
       "type": "String"
+    }
+  },
+  "autoinstallDirectTitle": "Автоматизированая установка",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectUrlLabel": "Вы можете ввести URL-адрес файла autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "installationTypeEraseAndInstallInfo": "Будут навсегда удалены все данные с существующей системы {os}.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectHeader": "Импортировать файл autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectFileLabel": "Или выбрать локальный файл:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Выбрать файл…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Выберите файл",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Файлы YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Импортировать",
+  "@autoinstallDirectImportButtonLabel": {},
+  "installationTypeEraseAndInstall": "Стереть {os} и установить {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
     }
   }
 }
