@@ -66,7 +66,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie Internetu. Vďaka vstavanej bráne firewall, podpore VPN a radu aplikácií zameraných na ochranu súkromia máte svoje dáta plne pod kontrolou.",
+  "installationSlidesSecurityBody": "{DISTRO} poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie internetu. Vďaka vstavanej bráne firewall, podpore VPN a rade aplikácií zameraných na ochranu súkromia máte svoje údaje plne pod kontrolou.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -177,7 +177,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Nainštalovať {product} vedľa nich",
+  "installationTypeAlongsideMulti": "Nainštalovať {product} vedľa existujúcich operačných systémov",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -523,7 +523,7 @@
   "@installCodecsTitle": {},
   "installCodecsSubtitle": "Vrátane MP3, MP4, MOV a ďalších ostatných",
   "@installCodecsSubtitle": {},
-  "installationTypeAlongsideInfo": "Počas zavádzania si môžete vybrať operačný systém.",
+  "installationTypeAlongsideInfo": "Vyberte oddiel na zmenu veľkosti a vytvorte priestor pre {product}. Operačný systém si môžete vybrať počas spustenia.",
   "@installationTypeAlongsideInfo": {},
   "installAlongsideHiddenPartitions": "{num} menších oddielov je skrytých. Pokiaľ potrebujete mať nad procesom viac kontroly, použite <a href=\"{url}\">nástroj pre pokročilú správu oddielov</a>",
   "@installAlongsideHiddenPartitions": {
@@ -735,7 +735,7 @@
   },
   "recoveryKeyCommand": "K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:",
   "@recoveryKeyCommand": {},
-  "recoveryKeyWarning": "<font color=\"{color}\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim dátam sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
+  "recoveryKeyWarning": "<font color=\"{color}\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim údajom sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
@@ -842,7 +842,7 @@
   "@codecsAndDriversNvidiaNote": {},
   "choosePassphraseTitle": "Prístupová fráza disku",
   "@choosePassphraseTitle": {},
-  "installationTypeEraseInfo": "Začnite od začiatku na vybranom disku.",
+  "installationTypeEraseInfo": "Všetky údaje a oddiely na disku budú vymazané, vrátane operačných systémov.",
   "@installationTypeEraseInfo": {},
   "choosePassphraseBody": "Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.",
   "@choosePassphraseBody": {},
@@ -981,5 +981,40 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectHeader": "Načítať súbor automatickej inštalácie",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Zadajte URL adresu súboru pre automatickú inštaláciu:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Alebo vyberte miestny súbor:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Vybrať súbor...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML súbory",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importovať",
+  "@autoinstallDirectImportButtonLabel": {},
+  "installationTypeEraseAndInstall": "Vymazať {os} a nainštalovať {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Všetky súbory a údaje z existujúcej inštalácie {os} budú trvalo vymazané.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "Automatická inštalácia",
+  "@autoinstallDirectTitle": {}
 }
