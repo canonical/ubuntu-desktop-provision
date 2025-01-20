@@ -97,9 +97,6 @@ MockPageConfigService setupMockPageConfig({
             ),
       );
 
-  // Debug log the pages being configured
-  debugPrint('Configured Pages: ${pages.keys.join(', ')}');
-
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);

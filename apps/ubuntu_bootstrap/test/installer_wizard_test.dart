@@ -64,8 +64,6 @@ void main() {
   tearDown(resetAllServices);
 
   testWidgets('try ubuntu', (tester) async {
-    // final landscapeModel = buildLandscapeModel();
-    // final tokenNotifier = buildTokenNotifier();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();

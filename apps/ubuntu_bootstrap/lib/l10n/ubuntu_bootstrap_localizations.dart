@@ -1955,12 +1955,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
   String recoveryKeyWarning(String color);
 
-  /// No description provided for @validate.
-  ///
-  /// In en, this message translates to:
-  /// **'Validate'**
-  String get validate;
-
   /// No description provided for @landscapeMagicAttachInstructions.
   ///
   /// In en, this message translates to:

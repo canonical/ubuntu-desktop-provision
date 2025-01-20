@@ -1035,9 +1035,6 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Onayla';
-
-  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
   }

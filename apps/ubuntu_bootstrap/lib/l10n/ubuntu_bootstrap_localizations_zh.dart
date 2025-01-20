@@ -1035,9 +1035,6 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => '验证';
-
-  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
   }
@@ -2005,7 +2002,4 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
   }
-
-  @override
-  String get validate => '驗證';
 }

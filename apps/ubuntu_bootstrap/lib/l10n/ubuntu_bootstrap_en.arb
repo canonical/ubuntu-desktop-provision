@@ -936,7 +936,6 @@
       }
     }
   },
-  "validate": "Validate",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",

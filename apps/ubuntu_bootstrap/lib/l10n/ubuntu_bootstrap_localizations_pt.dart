@@ -1035,9 +1035,6 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get validate => 'Validar';
-
-  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
   }
@@ -2005,7 +2002,4 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Atenção:</font> Se você perder essa chave de segurança, todos os dados serão perdidos. Se precisar, anote sua chave e guarde-a em um lugar seguro externo.';
   }
-
-  @override
-  String get validate => 'Validar';
 }
