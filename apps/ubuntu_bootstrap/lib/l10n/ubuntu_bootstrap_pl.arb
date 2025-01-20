@@ -160,7 +160,7 @@
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Zaszyfruj nową instalację {RELEASE} dla bezpieczeństwa",
   "@installationTypeEncrypt": {},
-  "installationTypeAlongsideInfo": "Dokumenty, muzyka i inne pliki osobiste zostaną zachowane. Przy każdym uruchomieniu komputera można wybrać system operacyjny, który ma być używany.",
+  "installationTypeAlongsideInfo": "Wybierz partycję do zmiany rozmiaru i utworzenia przestrzeni dla {product}. Możesz wybrać swój system operacyjny podczas rozruchu.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ręczne partycjonowanie",
   "@installationTypeManual": {},
@@ -256,7 +256,7 @@
   "@copyingFiles": {},
   "installationFailed": "Instalacja nieudana",
   "@installationFailed": {},
-  "installationTypeAlongsideMulti": "Zainstaluj {product} obok nich",
+  "installationTypeAlongsideMulti": "Zainstaluj {product} obok istniejących systemów operacyjnych",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -791,7 +791,7 @@
   "@installationTypeExperimental": {},
   "installationTypeLVM": "Użyj LVM",
   "@installationTypeLVM": {},
-  "installationTypeEraseInfo": "Zacznij od zera na wybranym dysku.",
+  "installationTypeEraseInfo": "Wszystkie dane i partycje na dysku zostaną wymazane, łącznie z systemami operacyjnymi.",
   "@installationTypeEraseInfo": {},
   "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
   "@installationTypeLVMEncryption": {},
@@ -927,6 +927,25 @@
     },
     "format": {
       "type": "String"
+    }
+  },
+  "installationTypeEraseAndInstall": "Wymaż {os} i zainstaluj {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Wszystkie pliki i dane z istniejącej instalacji {os} zostaną trwale usunięte.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
     }
   }
 }
