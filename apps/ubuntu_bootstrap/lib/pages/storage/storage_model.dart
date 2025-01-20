@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meta/meta.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
@@ -9,15 +10,47 @@ import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 /// Available storage types.
-enum StorageType {
-  /// Erase entire disk and perform guided partitioning.
-  erase,
+@immutable
+sealed class StorageType {
+  const StorageType();
 
-  /// Install alongside existing OS installation.
-  alongside,
+  static const StorageType alongside = StorageTypeAlongside();
+  static const StorageType erase = StorageTypeErase();
+  static const StorageType manual = StorageTypeManual();
+}
 
-  /// Manual partitioning.
-  manual,
+/// Install alongside existing OS installation.
+class StorageTypeAlongside extends StorageType {
+  const StorageTypeAlongside();
+}
+
+/// Erase entire disk and perform guided partitioning.
+class StorageTypeErase extends StorageType {
+  const StorageTypeErase();
+}
+
+/// Erase an existing Ubuntu installation and replace
+class StorageTypeEraseInstall extends StorageType {
+  const StorageTypeEraseInstall(this.target);
+
+  final GuidedStorageTargetEraseInstall target;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is StorageTypeEraseInstall &&
+            other.runtimeType == runtimeType &&
+            other.target.diskId == target.diskId &&
+            other.target.partitionNumber == target.partitionNumber);
+  }
+
+  @override
+  int get hashCode => target.hashCode;
+}
+
+/// Manual partitioning.
+class StorageTypeManual extends StorageType {
+  const StorageTypeManual();
 }
 
 /// Provider for [StorageModel].
@@ -45,11 +78,25 @@ class StorageModel extends SafeChangeNotifier {
   StorageType? _type;
   var _hasBitLocker = false;
   List<GuidedStorageTarget>? _targets;
+  List<Disk> _disks = [];
 
   List<GuidedStorageTarget> getAllTargets() => _targets ?? [];
 
   Iterable<T> _getTargets<T extends GuidedStorageTarget>() =>
       _targets?.whereType<T>().where((t) => t.allowed.isNotEmpty) ?? [];
+
+  Iterable<GuidedStorageTargetEraseInstall> getEraseInstallTargets() =>
+      _getTargets<GuidedStorageTargetEraseInstall>();
+
+  String? getEraseInstallOsName(GuidedStorageTargetEraseInstall target) {
+    return _disks
+        .firstWhere((d) => d.id == target.diskId)
+        .partitions
+        .whereType<Partition>()
+        .firstWhere((p) => p.number == target.partitionNumber)
+        .os
+        ?.long;
+  }
 
   /// The selected storage type.
   StorageType? get type => _type;
@@ -131,6 +178,11 @@ class StorageModel extends SafeChangeNotifier {
         !hasDd;
   }
 
+  /// Whether erase and install is possible i.e. the erase and install target is allowed
+  bool get canEraseAndInstall {
+    return _getTargets<GuidedStorageTargetEraseInstall>().isNotEmpty && !hasDd;
+  }
+
   /// Whether erasing the disk is possible i.e. whether any guided reformat
   /// targets are allowed.
   bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm || hasDd;
@@ -160,6 +212,8 @@ class StorageModel extends SafeChangeNotifier {
         .expand((t) => t.allowed)
         .firstOrNull;
     _hasBitLocker = await _storage.hasBitLocker();
+    _disks = await _storage.getStorage();
+
     notifyListeners();
   }
 
@@ -168,6 +222,9 @@ class StorageModel extends SafeChangeNotifier {
     final partitionMethod = _resolvePartitionMethod();
     if (partitionMethod != null) {
       await _telemetry?.addMetric('PartitionMethod', partitionMethod);
+    }
+    if (_type case StorageTypeEraseInstall(target: final t)) {
+      _storage.guidedTarget = t;
     }
   }
 
@@ -187,14 +244,19 @@ class StorageModel extends SafeChangeNotifier {
       return 'resize_use_free';
     } else if (type == StorageType.manual) {
       return 'manual';
+    } else if (type case StorageTypeEraseInstall()) {
+      return 'replace_partition';
     }
     // TODO: map upgrading the current Ubuntu installation without
     // wiping the user's home directory (not implemented yet)
     // to the 'reuse_partition' method.
+
     return null;
   }
 
-  Future<void> resetStorage() => _storage.resetStorage();
+  Future<void> resetStorage() async {
+    _disks = await _storage.resetStorage();
+  }
 
   @override
   String toString() {
@@ -212,6 +274,7 @@ StorageModel(
   hasTpm: $hasTpm,
   hasDd: $hasDd,
   canInstallAlongside: $canInstallAlongside,
+  canEraseAndInstall: $canEraseAndInstall,
   canEraseDisk: $canEraseDisk,
   canManualPartition: $canManualPartition,
   hasAdvancedFeatures: $hasAdvancedFeatures,

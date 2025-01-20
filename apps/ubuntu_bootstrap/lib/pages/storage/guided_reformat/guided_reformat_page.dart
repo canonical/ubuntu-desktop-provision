@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -14,6 +15,10 @@ class GuidedReformatPage extends ConsumerWidget {
   const GuidedReformatPage({super.key});
 
   static Future<bool> load(WidgetRef ref) {
+    if (ref.read(storageModelProvider).type != StorageType.erase) {
+      return Future.value(false);
+    }
+
     return ref.read(guidedReformatModelProvider.notifier).init();
   }
 

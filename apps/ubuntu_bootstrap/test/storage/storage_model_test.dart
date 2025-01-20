@@ -14,6 +14,7 @@ void main() {
     when(service.hasBitLocker()).thenAnswer((_) async => true);
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
+    when(service.getStorage()).thenAnswer((_) async => []);
 
     final model = StorageModel(
       service,
@@ -120,6 +121,17 @@ void main() {
     verify(telemetry.addMetric('PartitionMethod', 'manual')).called(1);
     reset(telemetry);
 
+    model.type = StorageTypeEraseInstall(
+      GuidedStorageTargetEraseInstall(
+        diskId: 'foo',
+        partitionNumber: 1,
+      ),
+    );
+    await model.save();
+    verify(telemetry.addMetric('PartitionMethod', 'replace_partition'))
+        .called(1);
+    reset(telemetry);
+
     when(storage.guidedCapability).thenReturn(GuidedCapability.LVM);
     await model.save();
     verify(telemetry.addMetric('PartitionMethod', 'use_lvm')).called(1);
@@ -158,6 +170,7 @@ void main() {
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
+    when(service.getStorage()).thenAnswer((_) async => []);
 
     final model = StorageModel(
       service,
@@ -189,10 +202,12 @@ void main() {
     expect(model.hasAdvancedFeatures, isFalse);
   });
 
-  test('can install alongside, erase disk, manual partition', () async {
+  test('can install alongside, erase disk, erase install, manual partition',
+      () async {
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
+    when(service.getStorage()).thenAnswer((_) async => []);
 
     final model = StorageModel(
       service,
@@ -206,6 +221,7 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isFalse);
     expect(model.canEraseDisk, isFalse);
+    expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isFalse);
 
     // reformat
@@ -219,6 +235,7 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isFalse);
     expect(model.canEraseDisk, isTrue);
+    expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isFalse);
 
     // resize
@@ -236,6 +253,7 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isTrue);
     expect(model.canEraseDisk, isFalse);
+    expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isFalse);
 
     // gap
@@ -249,6 +267,41 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isTrue);
     expect(model.canEraseDisk, isFalse);
+    expect(model.canEraseAndInstall, isFalse);
+    expect(model.canManualPartition, isFalse);
+
+    // erase and install
+    const eraseInstall = GuidedStorageTargetEraseInstall(
+      diskId: 'sda',
+      partitionNumber: 1,
+      allowed: [GuidedCapability.LVM],
+    );
+    when(service.getGuidedStorage()).thenAnswer(
+      (_) async => fakeGuidedStorageResponse(targets: [eraseInstall]),
+    );
+    when(service.getStorage()).thenAnswer(
+      (_) async => [
+        Disk(
+          id: 'sda',
+          label: '',
+          type: '',
+          size: 0,
+          usageLabels: [],
+          partitions: [Partition(number: 1)],
+          okForGuided: true,
+          ptable: '',
+          preserve: true,
+          path: '',
+          bootDevice: false,
+          canBeBootDevice: true,
+        ),
+      ],
+    );
+
+    await model.init();
+    expect(model.canInstallAlongside, isFalse);
+    expect(model.canEraseDisk, isFalse);
+    expect(model.canEraseAndInstall, isTrue);
     expect(model.canManualPartition, isFalse);
 
     // manual
@@ -260,6 +313,7 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isFalse);
     expect(model.canEraseDisk, isFalse);
+    expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isTrue);
 
     // all
@@ -270,6 +324,7 @@ void main() {
     await model.init();
     expect(model.canInstallAlongside, isTrue);
     expect(model.canEraseDisk, isTrue);
+    expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isTrue);
   });
 
@@ -295,6 +350,7 @@ void main() {
       capability = i.positionalArguments.single as GuidedCapability?;
     });
     when(storage.hasBitLocker()).thenAnswer((_) async => false);
+    when(storage.getStorage()).thenAnswer((_) async => []);
 
     final model = StorageModel(
       storage,

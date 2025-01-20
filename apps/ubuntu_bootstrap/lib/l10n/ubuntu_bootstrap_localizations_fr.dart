@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => 'Vous pouvez choisir votre système d\'exploitation pendant le démarrage.';
+  String installationTypeAlongsideInfo(String product) {
+    return 'Vous pouvez choisir votre système d\'exploitation pendant le démarrage.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => 'Partitionnement manuel';

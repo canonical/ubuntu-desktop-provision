@@ -57,6 +57,16 @@ class ConfirmModel extends SafeChangeNotifier {
   /// A list of existing OS installations or null if not detected.
   List<OsProber>? get existingOS => _storage.existingOS;
 
+  String? getEraseInstallOsName(GuidedStorageTargetEraseInstall target) {
+    return disks
+        .firstWhere((d) => d.id == target.diskId)
+        .partitions
+        .whereType<Partition>()
+        .firstWhere((p) => p.number == target.partitionNumber)
+        .os
+        ?.long;
+  }
+
   /// Initializes the model.
   Future<void> init() async {
     if (_storage.guidedTarget != null) {

@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => '将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。';
+  String installationTypeAlongsideInfo(String product) {
+    return '将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => '手动分区';
@@ -1327,7 +1339,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get installationTypeAlongsideInfo => '應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。';
+  String installationTypeAlongsideInfo(String product) {
+    return '應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。';
+  }
 
   @override
   String get installationTypeManual => '手動硬碟分割';

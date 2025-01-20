@@ -12610,6 +12610,8 @@ GuidedStorageTarget _$GuidedStorageTargetFromJson(Map<String, dynamic> json) {
       return GuidedStorageTargetReformat.fromJson(json);
     case 'GuidedStorageTargetResize':
       return GuidedStorageTargetResize.fromJson(json);
+    case 'GuidedStorageTargetEraseInstall':
+      return GuidedStorageTargetEraseInstall.fromJson(json);
     case 'GuidedStorageTargetUseGap':
       return GuidedStorageTargetUseGap.fromJson(json);
     case 'GuidedStorageTargetManual':
@@ -12643,6 +12645,12 @@ mixin _$GuidedStorageTarget {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -12667,6 +12675,12 @@ mixin _$GuidedStorageTarget {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12690,6 +12704,12 @@ mixin _$GuidedStorageTarget {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12703,6 +12723,8 @@ mixin _$GuidedStorageTarget {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) =>
@@ -12711,6 +12733,7 @@ mixin _$GuidedStorageTarget {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) =>
@@ -12719,6 +12742,7 @@ mixin _$GuidedStorageTarget {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -12918,6 +12942,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -12945,6 +12975,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12971,6 +13007,12 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -12990,6 +13032,8 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13001,6 +13045,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13012,6 +13057,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13251,6 +13297,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -13279,6 +13331,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13306,6 +13364,12 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13326,6 +13390,8 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13337,6 +13403,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13348,6 +13415,7 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13397,6 +13465,322 @@ abstract class GuidedStorageTargetResize implements GuidedStorageTarget {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GuidedStorageTargetResizeImplCopyWith<_$GuidedStorageTargetResizeImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GuidedStorageTargetEraseInstallImplCopyWith<$Res>
+    implements $GuidedStorageTargetCopyWith<$Res> {
+  factory _$$GuidedStorageTargetEraseInstallImplCopyWith(
+          _$GuidedStorageTargetEraseInstallImpl value,
+          $Res Function(_$GuidedStorageTargetEraseInstallImpl) then) =
+      __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String diskId,
+      int partitionNumber,
+      List<GuidedCapability> allowed,
+      List<GuidedDisallowedCapability> disallowed});
+}
+
+/// @nodoc
+class __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<$Res>
+    extends _$GuidedStorageTargetCopyWithImpl<$Res,
+        _$GuidedStorageTargetEraseInstallImpl>
+    implements _$$GuidedStorageTargetEraseInstallImplCopyWith<$Res> {
+  __$$GuidedStorageTargetEraseInstallImplCopyWithImpl(
+      _$GuidedStorageTargetEraseInstallImpl _value,
+      $Res Function(_$GuidedStorageTargetEraseInstallImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of GuidedStorageTarget
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? diskId = null,
+    Object? partitionNumber = null,
+    Object? allowed = null,
+    Object? disallowed = null,
+  }) {
+    return _then(_$GuidedStorageTargetEraseInstallImpl(
+      diskId: null == diskId
+          ? _value.diskId
+          : diskId // ignore: cast_nullable_to_non_nullable
+              as String,
+      partitionNumber: null == partitionNumber
+          ? _value.partitionNumber
+          : partitionNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+      allowed: null == allowed
+          ? _value._allowed
+          : allowed // ignore: cast_nullable_to_non_nullable
+              as List<GuidedCapability>,
+      disallowed: null == disallowed
+          ? _value._disallowed
+          : disallowed // ignore: cast_nullable_to_non_nullable
+              as List<GuidedDisallowedCapability>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GuidedStorageTargetEraseInstallImpl
+    implements GuidedStorageTargetEraseInstall {
+  const _$GuidedStorageTargetEraseInstallImpl(
+      {required this.diskId,
+      required this.partitionNumber,
+      final List<GuidedCapability> allowed = const [],
+      final List<GuidedDisallowedCapability> disallowed = const [],
+      final String? $type})
+      : _allowed = allowed,
+        _disallowed = disallowed,
+        $type = $type ?? 'GuidedStorageTargetEraseInstall';
+
+  factory _$GuidedStorageTargetEraseInstallImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GuidedStorageTargetEraseInstallImplFromJson(json);
+
+  @override
+  final String diskId;
+  @override
+  final int partitionNumber;
+  final List<GuidedCapability> _allowed;
+  @override
+  @JsonKey()
+  List<GuidedCapability> get allowed {
+    if (_allowed is EqualUnmodifiableListView) return _allowed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_allowed);
+  }
+
+  final List<GuidedDisallowedCapability> _disallowed;
+  @override
+  @JsonKey()
+  List<GuidedDisallowedCapability> get disallowed {
+    if (_disallowed is EqualUnmodifiableListView) return _disallowed;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_disallowed);
+  }
+
+  @JsonKey(name: '\$type')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'GuidedStorageTarget.eraseInstall(diskId: $diskId, partitionNumber: $partitionNumber, allowed: $allowed, disallowed: $disallowed)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GuidedStorageTargetEraseInstallImpl &&
+            (identical(other.diskId, diskId) || other.diskId == diskId) &&
+            (identical(other.partitionNumber, partitionNumber) ||
+                other.partitionNumber == partitionNumber) &&
+            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality()
+                .equals(other._disallowed, _disallowed));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      diskId,
+      partitionNumber,
+      const DeepCollectionEquality().hash(_allowed),
+      const DeepCollectionEquality().hash(_disallowed));
+
+  /// Create a copy of GuidedStorageTarget
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GuidedStorageTargetEraseInstallImplCopyWith<
+          _$GuidedStorageTargetEraseInstallImpl>
+      get copyWith => __$$GuidedStorageTargetEraseInstallImplCopyWithImpl<
+          _$GuidedStorageTargetEraseInstallImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        reformat,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        resize,
+    required TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
+            Gap gap,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        useGap,
+    required TResult Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        manual,
+  }) {
+    return eraseInstall(diskId, partitionNumber, allowed, disallowed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        reformat,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
+    TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        useGap,
+    TResult? Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        manual,
+  }) {
+    return eraseInstall?.call(diskId, partitionNumber, allowed, disallowed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String diskId, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        reformat,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            int newSize,
+            int? minimum,
+            int? recommended,
+            int? maximum,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
+    TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        useGap,
+    TResult Function(List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        manual,
+    required TResult orElse(),
+  }) {
+    if (eraseInstall != null) {
+      return eraseInstall(diskId, partitionNumber, allowed, disallowed);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GuidedStorageTargetReformat value) reformat,
+    required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
+    required TResult Function(GuidedStorageTargetUseGap value) useGap,
+    required TResult Function(GuidedStorageTargetManual value) manual,
+  }) {
+    return eraseInstall(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GuidedStorageTargetReformat value)? reformat,
+    TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
+    TResult? Function(GuidedStorageTargetUseGap value)? useGap,
+    TResult? Function(GuidedStorageTargetManual value)? manual,
+  }) {
+    return eraseInstall?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GuidedStorageTargetReformat value)? reformat,
+    TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
+    TResult Function(GuidedStorageTargetUseGap value)? useGap,
+    TResult Function(GuidedStorageTargetManual value)? manual,
+    required TResult orElse(),
+  }) {
+    if (eraseInstall != null) {
+      return eraseInstall(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GuidedStorageTargetEraseInstallImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class GuidedStorageTargetEraseInstall implements GuidedStorageTarget {
+  const factory GuidedStorageTargetEraseInstall(
+          {required final String diskId,
+          required final int partitionNumber,
+          final List<GuidedCapability> allowed,
+          final List<GuidedDisallowedCapability> disallowed}) =
+      _$GuidedStorageTargetEraseInstallImpl;
+
+  factory GuidedStorageTargetEraseInstall.fromJson(Map<String, dynamic> json) =
+      _$GuidedStorageTargetEraseInstallImpl.fromJson;
+
+  String get diskId;
+  int get partitionNumber;
+  @override
+  List<GuidedCapability> get allowed;
+  @override
+  List<GuidedDisallowedCapability> get disallowed;
+
+  /// Create a copy of GuidedStorageTarget
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GuidedStorageTargetEraseInstallImplCopyWith<
+          _$GuidedStorageTargetEraseInstallImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13551,6 +13935,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -13578,6 +13968,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13604,6 +14000,12 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13623,6 +14025,8 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13634,6 +14038,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13645,6 +14050,7 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),
@@ -13817,6 +14223,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
         resize,
     required TResult Function(
             String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)
+        eraseInstall,
+    required TResult Function(
+            String diskId,
             Gap gap,
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
@@ -13844,6 +14256,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult? Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult? Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13870,6 +14288,12 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
             List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         resize,
+    TResult Function(
+            String diskId,
+            int partitionNumber,
+            List<GuidedCapability> allowed,
+            List<GuidedDisallowedCapability> disallowed)?
+        eraseInstall,
     TResult Function(String diskId, Gap gap, List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         useGap,
@@ -13889,6 +14313,8 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult map<TResult extends Object?>({
     required TResult Function(GuidedStorageTargetReformat value) reformat,
     required TResult Function(GuidedStorageTargetResize value) resize,
+    required TResult Function(GuidedStorageTargetEraseInstall value)
+        eraseInstall,
     required TResult Function(GuidedStorageTargetUseGap value) useGap,
     required TResult Function(GuidedStorageTargetManual value) manual,
   }) {
@@ -13900,6 +14326,7 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(GuidedStorageTargetReformat value)? reformat,
     TResult? Function(GuidedStorageTargetResize value)? resize,
+    TResult? Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult? Function(GuidedStorageTargetUseGap value)? useGap,
     TResult? Function(GuidedStorageTargetManual value)? manual,
   }) {
@@ -13911,6 +14338,7 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GuidedStorageTargetReformat value)? reformat,
     TResult Function(GuidedStorageTargetResize value)? resize,
+    TResult Function(GuidedStorageTargetEraseInstall value)? eraseInstall,
     TResult Function(GuidedStorageTargetUseGap value)? useGap,
     TResult Function(GuidedStorageTargetManual value)? manual,
     required TResult orElse(),

@@ -357,7 +357,19 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeAlongsideInfo => '컴퓨터를 시작할 때 원하는 운영체제를 선택하실 수 있습니다.';
+  String installationTypeAlongsideInfo(String product) {
+    return '컴퓨터를 시작할 때 원하는 운영체제를 선택하실 수 있습니다.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Erase $os and install $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'All files and data from the existing $os installation will be permanently deleted.';
+  }
 
   @override
   String get installationTypeManual => '수동 설치';

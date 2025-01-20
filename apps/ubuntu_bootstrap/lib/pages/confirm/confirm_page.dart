@@ -204,16 +204,22 @@ class _DiskSetup extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final confirmModel = ref.watch(confirmModelProvider);
+    final flavor = ref.watch(flavorProvider);
+
     return Text(
       switch (ref.watch(storageModelProvider.select((s) => s.type))) {
         StorageType.alongside => StoragePage.formatAlongside(
             lang,
-            ref.watch(flavorProvider).displayName,
+            flavor.displayName,
             confirmModel.existingOS ?? [],
           ),
-        StorageType.erase =>
-          lang.installationTypeErase(ref.watch(flavorProvider).displayName),
+        StorageType.erase => lang.installationTypeErase(flavor.displayName),
         StorageType.manual => lang.installationTypeManual,
+        StorageTypeEraseInstall(target: final target) =>
+          lang.installationTypeEraseAndInstall(
+            confirmModel.getEraseInstallOsName(target) ?? 'unknown',
+            flavor.displayName,
+          ),
         _ => '',
       },
       textAlign: TextAlign.end,
