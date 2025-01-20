@@ -634,7 +634,7 @@ packages:
     source: hosted
     version: "4.9.0"
   landscape_client:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "../../packages/landscape_client"
       relative: true
