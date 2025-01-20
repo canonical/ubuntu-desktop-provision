@@ -13,6 +13,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
+import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
@@ -43,6 +44,7 @@ import '../../../packages/ubuntu_provision/test/timezone/test_timezone.dart';
 import 'autoinstall/test_autoinstall.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
+import 'landscape/test_landscape.dart';
 import 'refresh/test_refresh.dart';
 import 'rst/test_rst.dart';
 import 'secure_boot/test_secure_boot.dart';
@@ -64,6 +66,7 @@ void main() {
   tearDown(resetAllServices);
 
   testWidgets('try ubuntu', (tester) async {
+    final landscapeModel = buildUbuntuProModel();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -78,6 +81,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -132,6 +136,7 @@ void main() {
 
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
+    final landscapeModel = buildUbuntuProModel();
     final localeModel = buildLocaleModel();
     final tryOrInstallModel =
         buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
@@ -164,6 +169,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
@@ -202,6 +208,10 @@ void main() {
     expect(find.byType(LocalePage), findsOneWidget);
     // localeModel is not a mock
     // verify(localeModel.init()).called(1);
+
+    // await tester.tapNext();
+    // await tester.pumpAndSettle();
+    // expect(find.byType(UbuntuProPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
@@ -268,6 +278,7 @@ void main() {
   });
 
   testWidgets('rst', (tester) async {
+    final landscapeModel = buildUbuntuProModel();
     final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
     final rstModel = buildRstModel(hasRst: true);
@@ -285,6 +296,7 @@ void main() {
         overrides: [
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
+          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
           rstModelProvider.overrideWith((_) => rstModel),
         ],
         child: tester.buildTestWizard(),
@@ -389,6 +401,7 @@ void main() {
   });
 
   testWidgets('exclude pages', (tester) async {
+    final landscapeModel = buildUbuntuProModel();
     final accessibilityModel = buildAccessibilityModel();
     final keyboardModel = buildKeyboardModel();
     final secureBootModel = buildSecureBootModel();
@@ -400,6 +413,7 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
+          ubuntuProModelProvider.overrideWith((_) => landscapeModel),
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           secureBootModelProvider.overrideWith((_) => secureBootModel),

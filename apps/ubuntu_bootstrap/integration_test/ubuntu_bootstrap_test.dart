@@ -46,6 +46,8 @@ void main() {
     await tester.testLocalePage(language: language);
     await expectLocale(locale);
 
+    await tester.testLandscapePage();
+
     await tester.testAccessibilityPage();
 
     await tester.testKeyboardPage(layout: language);
@@ -87,6 +89,8 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -115,6 +119,8 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -157,6 +163,8 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -197,6 +205,8 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -247,6 +257,8 @@ void main() {
 
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -295,6 +307,8 @@ void main() {
     await tester.runApp(() => app.main(<String>[]));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -420,6 +434,8 @@ void main() {
 
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -472,6 +488,8 @@ void main() {
 
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -491,6 +509,8 @@ void main() {
     await tester.runApp(() => app.main(<String>['--welcome']));
     await tester.pumpAndSettle();
     await tester.testLocalePage();
+
+    await tester.testLandscapePage();
     await tester.testAccessibilityPage();
     await tester.testKeyboardPage();
     await tester.testNetworkPage(mode: ConnectMode.none);
@@ -508,6 +528,8 @@ void main() {
     );
 
     await tester.pumpAndSettle();
+
+    await tester.testLandscapePage();
     await tester.testNetworkPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
