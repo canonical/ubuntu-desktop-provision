@@ -106,6 +106,8 @@ class LandscapeBackendService implements LandscapeService {
     required String serverUrl,
     required int port,
     required bool useTls,
+    // TODO: only create this on attach.
+    // On attach, close existing client, create new one using fqdn
   }) : _client = landscape.LandscapeClient(
           serverUrl,
           port,
