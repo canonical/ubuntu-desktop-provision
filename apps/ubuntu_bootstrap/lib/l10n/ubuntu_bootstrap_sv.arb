@@ -143,7 +143,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokument, musik och andra personliga filer kommer att sparas. Du kan välja vilket operativsystem du vill ha varje gång datorn startar.",
+  "installationTypeAlongsideInfo": "Välj en partition att ändra storlek på och skapa utrymme för {product}. Du kan välja ditt operativsystem under uppstart.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Manuell partitionering",
   "@installationTypeManual": {},
@@ -316,7 +316,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Installera {product} bredvid dem",
+  "installationTypeAlongsideMulti": "Installera {product} tillsammans med befintliga operativsystem",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -842,7 +842,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Börja från början på den valda disken.",
+  "installationTypeEraseInfo": "All data och partitioner på disken kommer att raderas, inklusive operativsystem.",
   "@installationTypeEraseInfo": {},
   "installationTypeLVMEncryption": "Använd LVM och kryptering",
   "@installationTypeLVMEncryption": {},
@@ -972,6 +972,25 @@
     },
     "format": {
       "type": "String"
+    }
+  },
+  "installationTypeEraseAndInstall": "Radera {os} och installera {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Alla filer och data från din befintliga {os} installation kommer att raderas permanent.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
     }
   }
 }
