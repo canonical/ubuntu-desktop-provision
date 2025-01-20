@@ -1033,6 +1033,64 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。';
   }
+
+  @override
+  String get validate => '验证';
+
+  @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Attach this machine';
+
+  @override
+  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => 'Token';
+
+  @override
+  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => 'Attach';
+
+  @override
+  String get ubuntuProTokenAttachError => 'Invalid token';
+
+  @override
+  String get ubuntuProTokenAttachSucess => 'Valid token';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+
+  @override
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+
+  @override
+  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1991,4 +2049,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
   }
+
+  @override
+  String get validate => '驗證';
 }

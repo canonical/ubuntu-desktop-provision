@@ -1033,4 +1033,62 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">경고:</font> 이 보안 키를 분실하면 모든 데이터가 손실됩니다. 필요한 경우 키를 적어서 다른 안전한 곳에 보관하세요.';
   }
+
+  @override
+  String get validate => '검증';
+
+  @override
+  String ubuntuProMagicAttachInstructions(Object url) {
+    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Attach this machine';
+
+  @override
+  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => 'Token';
+
+  @override
+  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => 'Attach';
+
+  @override
+  String get ubuntuProTokenAttachError => 'Invalid token';
+
+  @override
+  String get ubuntuProTokenAttachSucess => 'Valid token';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+
+  @override
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+
+  @override
+  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
 }
