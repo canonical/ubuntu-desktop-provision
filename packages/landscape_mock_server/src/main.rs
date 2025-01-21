@@ -109,13 +109,22 @@ impl LandscapeInstallerAttach for LandscapeService {
                 AuthenticationStatus::AuthenticationSuccess as i32,
             ]
         };
+        let yaml_content = r#"
+        #cloud-config
+        autoinstall:
+            version: 1
+            identity:
+                hostname: hostname
+                username: username
+                password: $crypted_pass
+        "#;
         tokio::spawn(async move {
             for s in statuses {
                 sleep(Duration::from_secs(5)).await;
                 let _ = tx
                     .send(Ok(WatchAuthenticationResponse {
                         status: s,
-                        autoinstall: "example-autoinstall".to_string(),
+                        autoinstall: yaml_content.to_string(),
                     }))
                     .await;
                 sleep(std::time::Duration::from_secs(5)).await;
