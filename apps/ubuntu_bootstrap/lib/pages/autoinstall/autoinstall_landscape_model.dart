@@ -5,8 +5,8 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
-part 'landscape_model.freezed.dart';
-part 'landscape_model.g.dart';
+part 'autoinstall_landscape_model.freezed.dart';
+part 'autoinstall_landscape_model.g.dart';
 
 @freezed
 class LandscapeData with _$LandscapeData {

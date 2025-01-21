@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'landscape_model.dart';
+part of 'autoinstall_landscape_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -16,8 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LandscapeData {
+// TODO: default to ''
   String get userCode =>
       throw _privateConstructorUsedError; // Swap to optional once we can retrive the status form the service.
+// TODO: default to auth pending
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
 
@@ -115,9 +117,11 @@ class _$LandscapeDataImpl extends _LandscapeData {
       {required this.userCode, required this.authenticationStatus})
       : super._();
 
+// TODO: default to ''
   @override
   final String userCode;
 // Swap to optional once we can retrive the status form the service.
+// TODO: default to auth pending
   @override
   final AuthenticationStatus authenticationStatus;
 
@@ -156,9 +160,11 @@ abstract class _LandscapeData extends LandscapeData {
       _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
+// TODO: default to ''
   @override
   String
       get userCode; // Swap to optional once we can retrive the status form the service.
+// TODO: default to auth pending
   @override
   AuthenticationStatus get authenticationStatus;
 

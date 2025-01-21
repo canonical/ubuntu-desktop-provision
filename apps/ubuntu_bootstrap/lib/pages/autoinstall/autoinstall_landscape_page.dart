@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
-import 'package:ubuntu_bootstrap/pages/landscape/landscape_model.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_model.dart';
 import 'package:ubuntu_bootstrap/services.dart' as service;
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
