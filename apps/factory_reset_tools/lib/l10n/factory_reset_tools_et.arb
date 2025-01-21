@@ -1,3 +1,5 @@
 {
-  "@@locale": "et"
+  "@@locale": "et",
+  "close": "Sulge",
+  "@close": {}
 }
