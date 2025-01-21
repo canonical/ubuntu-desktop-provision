@@ -8,14 +8,10 @@ import 'package:ubuntu_bootstrap/services.dart';
 part 'autoinstall_landscape_model.freezed.dart';
 part 'autoinstall_landscape_model.g.dart';
 
-@freezed
 class LandscapeData with _$LandscapeData {
   factory LandscapeData({
-    // TODO: default to ''
-    required String userCode,
-    // Swap to optional once we can retrive the status form the service.
-    // TODO: default to auth pending
-    required AuthenticationStatus authenticationStatus,
+    @Default('') String userCode,
+    @Default(AuthenticationStatus.authenticationPending) AuthenticationStatus authenticationStatus,
   }) = _LandscapeData;
 
   LandscapeData._();
@@ -27,10 +23,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
 
   @override
   LandscapeData build() {
-    return LandscapeData(
-      userCode: '',
-      authenticationStatus: AuthenticationStatus.authenticationPending,
-    );
+    return LandscapeData();
   }
 
   Future<void> attach() async {
@@ -51,11 +44,13 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       return;
     }
 
+      // TODO:
+      // get autoinstall service if success status, write autoinstall and restart subiquity
     _subscription =
         getService<LandscapeService>().watch(state.userCode).listen((event) {
       state = state.copyWith(authenticationStatus: event.status);
-      // TODO:
-      // get autoinstall service if success status, write autoinstall and restart subiquity
     });
   }
 }
+
+

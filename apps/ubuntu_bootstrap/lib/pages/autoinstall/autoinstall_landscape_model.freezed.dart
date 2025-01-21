@@ -16,10 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LandscapeData {
-// TODO: default to ''
-  String get userCode =>
-      throw _privateConstructorUsedError; // Swap to optional once we can retrive the status form the service.
-// TODO: default to auth pending
+  String get userCode => throw _privateConstructorUsedError;
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
 
@@ -114,15 +111,15 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
 
 class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
-      {required this.userCode, required this.authenticationStatus})
+      {this.userCode = '',
+      this.authenticationStatus = AuthenticationStatus.authenticationPending})
       : super._();
 
-// TODO: default to ''
   @override
+  @JsonKey()
   final String userCode;
-// Swap to optional once we can retrive the status form the service.
-// TODO: default to auth pending
   @override
+  @JsonKey()
   final AuthenticationStatus authenticationStatus;
 
   @override
@@ -155,16 +152,12 @@ class _$LandscapeDataImpl extends _LandscapeData {
 
 abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
-          {required final String userCode,
-          required final AuthenticationStatus authenticationStatus}) =
-      _$LandscapeDataImpl;
+      {final String userCode,
+      final AuthenticationStatus authenticationStatus}) = _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
-// TODO: default to ''
   @override
-  String
-      get userCode; // Swap to optional once we can retrive the status form the service.
-// TODO: default to auth pending
+  String get userCode;
   @override
   AuthenticationStatus get authenticationStatus;
 
