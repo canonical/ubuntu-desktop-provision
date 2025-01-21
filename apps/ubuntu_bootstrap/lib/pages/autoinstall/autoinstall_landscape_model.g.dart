@@ -6,8 +6,27 @@ part of 'autoinstall_landscape_model.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+String _$watchResponseHash() => r'0ddbfdff84574a5900f4d1fde0290c606ffede34';
+
+/// See also [watchResponse].
+@ProviderFor(watchResponse)
+final watchResponseProvider =
+    AutoDisposeStreamProvider<WatchAuthenticationResponse>.internal(
+  watchResponse,
+  name: r'watchResponseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$watchResponseHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef WatchResponseRef
+    = AutoDisposeStreamProviderRef<WatchAuthenticationResponse>;
 String _$landscapeDataModelHash() =>
-    r'dc91db19088e9c4c4422935473acea19e3c1abd3';
+    r'40f3569183c989d70e755c543ad232f9060ab664';
 
 /// See also [LandscapeDataModel].
 @ProviderFor(LandscapeDataModel)

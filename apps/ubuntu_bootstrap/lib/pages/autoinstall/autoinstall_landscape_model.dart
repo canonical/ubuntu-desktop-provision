@@ -1,26 +1,39 @@
 import 'dart:async';
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 part 'autoinstall_landscape_model.freezed.dart';
 part 'autoinstall_landscape_model.g.dart';
 
+final _log = Logger();
+
 class LandscapeData with _$LandscapeData {
   factory LandscapeData({
     @Default('') String userCode,
-    @Default(AuthenticationStatus.authenticationPending) AuthenticationStatus authenticationStatus,
+    @Default(AuthenticationStatus.authenticationPending)
+    AuthenticationStatus authenticationStatus,
   }) = _LandscapeData;
 
   LandscapeData._();
 }
 
 @riverpod
-class LandscapeDataModel extends _$LandscapeDataModel {
-  StreamSubscription<WatchAuthenticationResponse>? _subscription;
+Stream<WatchAuthenticationResponse> watchResponse(
+  Ref ref,
+) {
+  final userCode = ref.read(landscapeDataModelProvider).userCode;
 
+  _log.info('Usercode is : $userCode');
+  final landscapeService = getService<LandscapeService>();
+  return landscapeService.watch(userCode);
+}
+
+@riverpod
+class LandscapeDataModel extends _$LandscapeDataModel {
   @override
   LandscapeData build() {
     return LandscapeData();
@@ -33,24 +46,34 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       state = state.copyWith(userCode: response.userCode!);
     }
   }
-  
-  // TODO: add a new provider that is just a method that returns the WatchAuthenticationResponse
-  // see here: https://riverpod.dev/docs/concepts/combining_providers
-  void watch() {
-  //TODO ref.read(autoinstallModelNotifierProvider.restart)
-    _subscription?.cancel();
 
+  void watch() {
     if (state.userCode.isEmpty) {
+      _log.warning('Cannot watch; userCode is empty.');
       return;
     }
 
-      // TODO:
-      // get autoinstall service if success status, write autoinstall and restart subiquity
-    _subscription =
-        getService<LandscapeService>().watch(state.userCode).listen((event) {
-      state = state.copyWith(authenticationStatus: event.status);
-    });
+    ref.listen<AsyncValue<WatchAuthenticationResponse>>(
+      watchResponseProvider,
+      (previous, next) {
+        next.when(
+          data: (value) {
+            _log.info('response.value is: $value');
+            state = state.copyWith(authenticationStatus: value.status);
+
+            if (state.authenticationStatus ==
+                AuthenticationStatus.authenticationSuccess) {
+              _log.info('Auth success!');
+            }
+          },
+          loading: () {
+            _log.info('StreamProvider is still loading...');
+          },
+          error: (err, stack) {
+            _log.error('StreamProvider error: $err');
+          },
+        );
+      },
+    );
   }
 }
-
-
