@@ -941,5 +941,7 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectTitle": "Installacion automatica",
+  "@autoinstallDirectTitle": {}
 }
