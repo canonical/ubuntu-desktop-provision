@@ -19,6 +19,7 @@ mixin _$LandscapeData {
   String get userCode => throw _privateConstructorUsedError;
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
+  String get autoinstall => throw _privateConstructorUsedError;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -33,7 +34,10 @@ abstract class $LandscapeDataCopyWith<$Res> {
           LandscapeData value, $Res Function(LandscapeData) then) =
       _$LandscapeDataCopyWithImpl<$Res, LandscapeData>;
   @useResult
-  $Res call({String userCode, AuthenticationStatus authenticationStatus});
+  $Res call(
+      {String userCode,
+      AuthenticationStatus authenticationStatus,
+      String autoinstall});
 }
 
 /// @nodoc
@@ -53,6 +57,7 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
   $Res call({
     Object? userCode = null,
     Object? authenticationStatus = null,
+    Object? autoinstall = null,
   }) {
     return _then(_value.copyWith(
       userCode: null == userCode
@@ -63,6 +68,10 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
           ? _value.authenticationStatus
           : authenticationStatus // ignore: cast_nullable_to_non_nullable
               as AuthenticationStatus,
+      autoinstall: null == autoinstall
+          ? _value.autoinstall
+          : autoinstall // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -75,7 +84,10 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
       __$$LandscapeDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String userCode, AuthenticationStatus authenticationStatus});
+  $Res call(
+      {String userCode,
+      AuthenticationStatus authenticationStatus,
+      String autoinstall});
 }
 
 /// @nodoc
@@ -93,6 +105,7 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
   $Res call({
     Object? userCode = null,
     Object? authenticationStatus = null,
+    Object? autoinstall = null,
   }) {
     return _then(_$LandscapeDataImpl(
       userCode: null == userCode
@@ -103,6 +116,10 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
           ? _value.authenticationStatus
           : authenticationStatus // ignore: cast_nullable_to_non_nullable
               as AuthenticationStatus,
+      autoinstall: null == autoinstall
+          ? _value.autoinstall
+          : autoinstall // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -112,7 +129,8 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
 class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
       {this.userCode = '',
-      this.authenticationStatus = AuthenticationStatus.authenticationPending})
+      this.authenticationStatus = AuthenticationStatus.authenticationPending,
+      this.autoinstall = ''})
       : super._();
 
   @override
@@ -121,10 +139,13 @@ class _$LandscapeDataImpl extends _LandscapeData {
   @override
   @JsonKey()
   final AuthenticationStatus authenticationStatus;
+  @override
+  @JsonKey()
+  final String autoinstall;
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus)';
+    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall)';
   }
 
   @override
@@ -135,11 +156,14 @@ class _$LandscapeDataImpl extends _LandscapeData {
             (identical(other.userCode, userCode) ||
                 other.userCode == userCode) &&
             (identical(other.authenticationStatus, authenticationStatus) ||
-                other.authenticationStatus == authenticationStatus));
+                other.authenticationStatus == authenticationStatus) &&
+            (identical(other.autoinstall, autoinstall) ||
+                other.autoinstall == autoinstall));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userCode, authenticationStatus);
+  int get hashCode =>
+      Object.hash(runtimeType, userCode, authenticationStatus, autoinstall);
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -153,13 +177,16 @@ class _$LandscapeDataImpl extends _LandscapeData {
 abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
       {final String userCode,
-      final AuthenticationStatus authenticationStatus}) = _$LandscapeDataImpl;
+      final AuthenticationStatus authenticationStatus,
+      final String autoinstall}) = _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
   @override
   String get userCode;
   @override
   AuthenticationStatus get authenticationStatus;
+  @override
+  String get autoinstall;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.

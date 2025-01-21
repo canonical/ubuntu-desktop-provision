@@ -26,10 +26,10 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(landscapeDataModelProvider);
     // log current authentication status when is changes:
     _log.debug(model.authenticationStatus);
-    if (model.authenticationStatus ==
-        service.AuthenticationStatus.authenticationSuccess) {
-      Wizard.of(context).next();
-    }
+    // if (model.authenticationStatus ==
+    //     service.AuthenticationStatus.authenticationSuccess) {
+    //   Wizard.of(context).next();
+    // }
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,

@@ -3,19 +3,24 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:ubuntu_bootstrap/app/installer_model.dart';
+import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:yaml/yaml.dart';
 
 part 'autoinstall_landscape_model.freezed.dart';
 part 'autoinstall_landscape_model.g.dart';
 
 final _log = Logger();
 
+@freezed
 class LandscapeData with _$LandscapeData {
   factory LandscapeData({
     @Default('') String userCode,
     @Default(AuthenticationStatus.authenticationPending)
     AuthenticationStatus authenticationStatus,
+    @Default('') String autoinstall,
   }) = _LandscapeData;
 
   LandscapeData._();
@@ -36,7 +41,24 @@ Stream<WatchAuthenticationResponse> watchResponse(
 class LandscapeDataModel extends _$LandscapeDataModel {
   @override
   LandscapeData build() {
-    return LandscapeData();
+    final data = LandscapeData();
+    _handleAuthenticationStatus(data.authenticationStatus, data.autoinstall);
+    return data;
+  }
+
+  Future<void> _handleAuthenticationStatus(
+    AuthenticationStatus status,
+    String? autoinstall,
+  ) async {
+    if (status == AuthenticationStatus.authenticationSuccess) {
+      _log.info('Authentication successful; loading YAML...');
+      loadYaml(autoinstall!);
+      _log.info('Current autoinstall: $autoinstall');
+      await getService<AutoinstallService>().writeFile(autoinstall);
+      await getService<AutoinstallService>().restartSubiquity();
+      ref.read(restartProvider.notifier).state++;
+      ref.invalidate(loadingProvider);
+    }
   }
 
   Future<void> attach() async {
@@ -47,7 +69,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     }
   }
 
-  void watch() {
+  Future<void> watch() async {
     if (state.userCode.isEmpty) {
       _log.warning('Cannot watch; userCode is empty.');
       return;
@@ -57,14 +79,10 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       watchResponseProvider,
       (previous, next) {
         next.when(
-          data: (value) {
-            _log.info('response.value is: $value');
+          data: (value) async {
+            _log.info('response.value is: ${value.status}');
+            await _handleAuthenticationStatus(value.status, value.autoinstall);
             state = state.copyWith(authenticationStatus: value.status);
-
-            if (state.authenticationStatus ==
-                AuthenticationStatus.authenticationSuccess) {
-              _log.info('Auth success!');
-            }
           },
           loading: () {
             _log.info('StreamProvider is still loading...');
