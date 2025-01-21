@@ -992,5 +992,21 @@
         "type": "String"
       }
     }
-  }
+  },
+  "autoinstallDirectUrlLabel": "Du kan ange URL:en till en automatisk installationsfil:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectHeader": "Importera automatisk installationsfil",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectTitle": "Automatisk installation",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileLabel": "Eller välj en lokal fil:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Välj fil...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Välj fil",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML filer",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importera",
+  "@autoinstallDirectImportButtonLabel": {}
 }
