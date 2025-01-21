@@ -24,9 +24,9 @@
       "url": {}
     }
   },
-  "rstDescription": "Komputer ini menggunakan Intel RST (Rapid Storage Technology). Anda harus mematikan RST di Windows sebelum memasang Ubuntu.",
+  "rstDescription": "Komputer ini menggunakan Intel RST (Rapid Storage Technology). Anda harus mematikan RST di Windows sebelum memasang {DISTRO}.",
   "@rstDescription": {},
-  "rstTitle": "Matikan RST",
+  "rstTitle": "RST terdeteksi",
   "@rstTitle": {},
   "partitionTypeLabel": "Tipe partisi baru:",
   "@partitionTypeLabel": {},
@@ -40,7 +40,7 @@
   "@diskHeadersMountPoint": {},
   "partitionCreateTitle": "Buat partisi",
   "@partitionCreateTitle": {},
-  "installationTypeAdvancedLabel": "Fitur Tingkat Lanjut...",
+  "installationTypeAdvancedLabel": "Fitur tingkat lanjut...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAlongside": "Pasang {product} bersama {os}",
   "@installationTypeAlongside": {
@@ -52,7 +52,7 @@
   },
   "diskHeadersSize": "Ukuran",
   "@diskHeadersSize": {},
-  "installationTypeManualInfo": "Anda dapat membuat atau mengubah ukuran partisi sendiri, atau memilih beberapa partisi untuk {DISTRO}",
+  "installationTypeManualInfo": "Untuk pengguna tingkat lanjut yang mencari pengaturan disk yang disesuaikan.",
   "@installationTypeManualInfo": {},
   "allocateDiskSpace": "Alokasikan ruang disk",
   "@allocateDiskSpace": {},
@@ -60,7 +60,7 @@
   "@diskHeadersFormat": {},
   "partitionSizeLabel": "Ukuran:",
   "@partitionSizeLabel": {},
-  "selectGuidedStorageInstallNow": "Pasang Sekarang",
+  "selectGuidedStorageInstallNow": "Pasang sekarang",
   "@selectGuidedStorageInstallNow": {},
   "diskHeadersDevice": "Perangkat",
   "@diskHeadersDevice": {},
@@ -78,7 +78,7 @@
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Tulis perubahan ke disk",
   "@confirmPageTitle": {},
-  "confirmHeader": "Jika Anda melanjutkan, perubahan yang tercantum di bawah ini akan ditulis ke disk. Anda akan dapat membuat perubahan lebih lanjut secara manual.",
+  "confirmHeader": "Tinjau pilihan Anda",
   "@confirmHeader": {},
   "confirmPartitionTables": "Tabel partisi perangkat berikut diubah:",
   "@confirmPartitionTables": {},
@@ -96,11 +96,11 @@
   "@changeButtonText": {},
   "welcome": "Selamat Datang",
   "@welcome": {},
-  "tryOrInstallTitle": "Coba atau pasang",
+  "tryOrInstallTitle": "Coba atau pasang {DISTRO}",
   "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Perbaiki instalasi",
   "@tryOrInstallRepairOption": {},
-  "tryOrInstallRepairDescription": "Perbaikan akan memasang ulang semua perangkat lunak yang dipasang tanpa menyentuh dokumen atau pengaturan.",
+  "tryOrInstallRepairDescription": "Memperbaiki akan memasang ulang semua perangkat lunak yang dipasang tanpa menyentuh dokumen atau pengaturan.",
   "@tryOrInstallRepairDescription": {},
   "tryOption": "Coba {RELEASE}",
   "@tryOption": {},
@@ -120,7 +120,7 @@
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Kunci keamanan diperlukan",
   "@configureSecureBootSecurityKeyRequired": {},
-  "updatesOtherSoftwarePageTitle": "Pembaruan dan perangkat lunak lainnya",
+  "updatesOtherSoftwarePageTitle": "Aplikasi",
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Aplikasi apa yang ingin Anda pasang untuk memulai?",
   "@updatesOtherSoftwarePageDescription": {},
@@ -130,7 +130,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Perangkat lunak ini tunduk pada persyaratan lisensi disertakan dengan dokumentasinya. Beberapa adalah proprietary.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "Tipe instalasi",
+  "installationTypeTitle": "Penyiapan disk",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "Komputer ini saat ini memiliki {os} di dalamnya. Apa yang ingin Anda lakukan?",
   "@installationTypeOSDetected": {
@@ -151,7 +151,7 @@
   "@installationTypeNoneSelected": {},
   "installationTypeEncryptInfo": "Anda akan memilih kunci keamanan di langkah berikutnya.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EKSPERIMENTAL: Hapus disk dan gunakan ZFS",
+  "installationTypeZFS": "Hapus disk dan gunakan ZFS",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS dipilih",
   "@installationTypeZFSSelected": {},
@@ -170,9 +170,9 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokumen, musik, dan berkas-berkas pribadi lain akan disimpan. Anda dapat memilih sistem operasi yang Anda inginkan setiap kali komputer dinyalakan.",
+  "installationTypeAlongsideInfo": "Pilih partisi untuk diubah ukuran dan mencipta ruang bagi {product}. Anda dapat memilih sistem operasi Anda selama boot.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Sesuatu yang lain",
+  "installationTypeManual": "Instalasi manual",
   "@installationTypeManual": {},
   "selectGuidedStoragePageTitle": "Hapus disk dan pasang {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
@@ -202,7 +202,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Instalasi selesai",
   "@installationCompleteTitle": {},
-  "readyToUse": "{system} telah terpasang dan siap digunakan.",
+  "readyToUse": "{system} telah terpasang dan siap digunakan",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
@@ -238,9 +238,9 @@
       "color": {}
     }
   },
-  "newPartitionTableConfirmationTitle": "Buat suatu tabel partisi baru yang kosong pada peranti ini?",
+  "newPartitionTableConfirmationTitle": "Partisi kosong baru",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.",
+  "newPartitionTableConfirmationMessage": "Membuat tabel partisi baru di seluruh perangkat akan menghapus semua partisi saat ini. Operasi ini tidak bisa dibatalkan jika diperlukan.",
   "@newPartitionTableConfirmationMessage": {},
   "installationTypeTPMInfo": "Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis {DISTRO} berikutnya. <a href=\"{url}\">Baca tentang enkripsi TPM</a> sebelum Anda memilih opsi ini.",
   "@installationTypeTPMInfo": {
@@ -255,11 +255,11 @@
   },
   "autoinstallTitle": "Tipe instalasi",
   "@autoinstallTitle": {},
-  "autoinstallInteractiveOption": "Pemasangan Interaktif",
+  "autoinstallInteractiveOption": "Instalasi interaktif",
   "@autoinstallInteractiveOption": {},
-  "autoinstallInteractiveDescription": "Untuk pengguna yang ingin melalui pemasangan terpandu langkah demi langkah.",
+  "autoinstallInteractiveDescription": "Untuk pengguna yang ingin melalui instalasi terpandu langkah demi langkah.",
   "@autoinstallInteractiveDescription": {},
-  "autoinstallAutomatedOption": "Pemasang Otomatis",
+  "autoinstallAutomatedOption": "Instalasi terotomasi",
   "@autoinstallAutomatedOption": {},
   "quitButtonText": "Keluar dari pemasangan",
   "@quitButtonText": {},
@@ -291,7 +291,7 @@
   },
   "rstHeader": "Nonaktifkan RST untuk melanjutkan",
   "@rstHeader": {},
-  "showSecurityKey": "Tampilkan kunci keamanan",
+  "showSecurityKey": "Tampilkan",
   "@showSecurityKey": {},
   "hideSecurityKey": "Sembunyikan",
   "@hideSecurityKey": {},
@@ -301,9 +301,9 @@
   "@codecsAndDriversNvidiaNote": {},
   "codecsAndDriversNvidiaBody": "Untuk performa kartu grafis NVIDIA terbaik, memasang driver tambahan sangat direkomendasikan.",
   "@codecsAndDriversNvidiaBody": {},
-  "fullInstallationTitle": "Pemilihan luas",
+  "fullInstallationTitle": "Pemilihan yang diperluas",
   "@fullInstallationTitle": {},
-  "fullInstallationSubtitle": "Pilihan yang ramah luring alat kerja kantor, alat dan browser.",
+  "fullInstallationSubtitle": "Pilihan yang ramah luring atas alat kerja kantor, utilitas, dan peramban web.",
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "PIlihan default",
   "@minimalInstallationTitle": {},
@@ -345,7 +345,7 @@
   "@confirmPassphrase": {},
   "installationTypeMultiOSDetected": "Komputer ini memiliki beberapa sistem operasi di dalamnya. Apa yang ingin Anda lakukan?",
   "@installationTypeMultiOSDetected": {},
-  "installationTypeEraseInfo": "Mulai dari awal pada disk terpilih.",
+  "installationTypeEraseInfo": "Semua data dan partisi di disk akan dihapus, termasuk sistem operasi.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Eksperimental",
   "@installationTypeExperimental": {},
@@ -357,7 +357,7 @@
   "@installationTypeLVMEncryptionSelected": {},
   "installationTypeZFSEncryption": "Hapus disk dan gunakan ZFS dengan enkripsi",
   "@installationTypeZFSEncryption": {},
-  "installationTypeZFSEncryptionSelected": "ZFS dan enkripsi terpilih",
+  "installationTypeZFSEncryptionSelected": "ZFS dan enkripsi dipilih",
   "@installationTypeZFSEncryptionSelected": {},
   "installationTypeTPM": "Aktifkan enkripsi disk penuh yang didukung perangkat keras",
   "@installationTypeTPM": {},
@@ -601,7 +601,7 @@
   },
   "restartWarningBody": "Mulai ulang untuk menyelesaikan instalasi atau lanjutkan percobaan.\nPerubahan apapun yang Anda buat tidak akan disimpan.",
   "@restartWarningBody": {},
-  "autoinstallInstructions": "Masukkan URL atau jalur berkas lokal autoinstall.yaml:",
+  "autoinstallInstructions": "Masukkan URL atau path berkas lokal autoinstall.yaml:",
   "@autoinstallInstructions": {},
   "notEnoughDiskSpaceAvailable": "Tersedia:",
   "@notEnoughDiskSpaceAvailable": {},
@@ -788,7 +788,7 @@
       }
     }
   },
-  "autoinstallAutomatedDescription": "Untuk pengguna lanjutan yang memiliki autoinstall.yaml untuk pemasangan yang konsisten dan dapat diulang.",
+  "autoinstallAutomatedDescription": "Bagi pengguna tingkat lanjut yang memiliki autoinstall.yaml untuk penyiapan sistem yang konsisten dan dapat diulang.",
   "@autoinstallAutomatedDescription": {},
   "codecsAndDriversPageDescription": "Pasang perangkat lunak berpemilik yang direkomendasikan?",
   "@codecsAndDriversPageDescription": {},
@@ -907,7 +907,7 @@
   },
   "notEnoughDiskSpaceTitle": "Ruang disk tidak cukup",
   "@notEnoughDiskSpaceTitle": {},
-  "installationTypeAlongsideMulti": "Pasang {product} bersamaan dengan yang lain",
+  "installationTypeAlongsideMulti": "Pasang {product} bersama dengan sistem operasi yang ada",
   "@installationTypeAlongsideMulti": {
     "placeholders": {
       "product": {
@@ -998,5 +998,49 @@
         "type": "String"
       }
     }
-  }
+  },
+  "autoinstallDirectImportButtonLabel": "Impor",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectFileButtonLabel": "Pilih berkas...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} bukan suatu sistem berkas yang didukung untuk {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  },
+  "installationTypeEraseAndInstall": "Hapus {os} dan pasang {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Semua berkas dan data dari instalasi {os} yang ada akan dihapus secara permanen.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "Instalasi terotomasi",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Impor berkas autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Anda dapat memasukkan URL dari berkas autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Atau memilih suatu berkas lokal:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFilePickerTitle": "Pilih berkas",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Berkas YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {}
 }
