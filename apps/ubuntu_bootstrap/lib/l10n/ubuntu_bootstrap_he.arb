@@ -947,5 +947,21 @@
         "type": "String"
       }
     }
-  }
+  },
+  "autoinstallDirectImportButtonLabel": "ייבוא",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectTitle": "התקנה אוטומטית",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "ייבוא קובץ autoinstall (התקנה אוטומטית)",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "אפשר למלא כתובת של קובץ autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "או לבחור בקובץ מקומי:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "בחירת קובץ…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "בחירת קובץ",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "קובצי YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {}
 }
