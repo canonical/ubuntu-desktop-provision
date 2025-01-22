@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -14,13 +15,16 @@ void main() {
       (
         name: 'valid url',
         url: 'https://example.com/autoinstall.yaml',
-        hasError: false,
+        expectedError: null,
         parsedUri: Uri.https('example.com', '/autoinstall.yaml'),
       ),
       (
         name: 'invalidurl ',
         url: '::invalid url::',
-        hasError: true,
+        expectedError: (UbuntuBootstrapLocalizations l10n) => (
+              l10n.autoinstallDirectErrorInvalidUrlTitle,
+              l10n.autoinstallDirectErrorInvalidUrlBody,
+            ),
         parsedUri: null,
       ),
     ]) {
@@ -43,9 +47,19 @@ void main() {
         await tester.tap(importButton);
         await tester.pump();
 
-        if (testCase.hasError) {
+        if (testCase.expectedError != null) {
           await tester.pumpAndSettle();
-          expect(find.byType(YaruInfoBox), findsOneWidget);
+          final errorBox = find.byType(YaruInfoBox);
+          final (title, message) = testCase.expectedError!(tester.lang);
+          expect(errorBox, findsOneWidget);
+          expect(
+            find.descendant(of: errorBox, matching: find.text(title)),
+            findsOneWidget,
+          );
+          expect(
+            find.descendant(of: errorBox, matching: find.text(message)),
+            findsOneWidget,
+          );
           verifyNever(mockService.fetchAndWriteFileFromUri(any));
         } else {
           verify(mockService.fetchAndWriteFileFromUri(testCase.parsedUri))
@@ -116,5 +130,28 @@ void main() {
         }
       });
     }
+  });
+
+  testWidgets('clear local file', (tester) async {
+    registerMockXdgDesktopPortalClient(
+      result: XdgFileChooserPortalOpenFileResult(
+        uris: ['file:///foo/autoinstall.yaml'],
+        currentFilter: null,
+      ),
+    );
+    registerMockAutoinstallService();
+    await tester.pumpApp((_) => buildAutoinstallDirectPage());
+
+    await tester.tap(find.button(tester.lang.autoinstallDirectFileButtonLabel));
+    await tester.pumpAndSettle();
+
+    expect(find.text('autoinstall.yaml'), findsOneWidget);
+    expect(find.byType(TextFormField), isDisabled);
+
+    await tester.tap(find.iconButton(YaruIcons.window_close));
+    await tester.pump();
+
+    expect(find.text('autoinstall.yaml'), findsNothing);
+    expect(find.byType(TextFormField), isEnabled);
   });
 }
