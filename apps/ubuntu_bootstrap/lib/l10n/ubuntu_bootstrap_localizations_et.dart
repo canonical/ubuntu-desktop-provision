@@ -1044,4 +1044,13 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeHeader => 'Log in to Landscape';
+
+  @override
+  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+
+  @override
+  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+
+  @override
+  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
 }

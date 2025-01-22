@@ -1972,6 +1972,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Log in to Landscape'**
   String get landscapeHeader;
+
+  /// No description provided for @landscapeDomainHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Landscape domain (FQDN)'**
+  String get landscapeDomainHeader;
+
+  /// No description provided for @landscapeDomainInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.'**
+  String get landscapeDomainInstructions;
+
+  /// No description provided for @landscapeDomainTextField.
+  ///
+  /// In en, this message translates to:
+  /// **'Landscape domain (FQDN)'**
+  String get landscapeDomainTextField;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

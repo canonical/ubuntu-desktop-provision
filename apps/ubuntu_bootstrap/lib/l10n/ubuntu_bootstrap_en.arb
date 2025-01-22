@@ -946,5 +946,11 @@
   "landscapePageTitle": "Automated installation",
   "@landscapePageTitle": {},
   "landscapeHeader": "Log in to Landscape",
-  "@landscapeHeader": {}
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Enter Landscape domain (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Provide your organization's Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Landscape domain (FQDN)",
+  "@landscapeDomainTextField": {}
 }
