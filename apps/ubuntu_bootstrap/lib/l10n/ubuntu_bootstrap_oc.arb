@@ -943,5 +943,24 @@
     }
   },
   "autoinstallDirectTitle": "Installacion automatica",
-  "@autoinstallDirectTitle": {}
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileButtonLabel": "Seleccionar un fichièr...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importar",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Causissètz un fichièr",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "fichièrs YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "installationTypeEraseAndInstall": "Suprimir {os} e installar {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  }
 }
