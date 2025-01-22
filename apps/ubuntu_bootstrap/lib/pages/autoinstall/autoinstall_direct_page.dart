@@ -19,6 +19,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final directModel = ref.watch(autoinstallDirectModelProvider);
+    final notifier = ref.read(autoinstallDirectModelProvider.notifier);
 
     return HorizontalPage(
       windowTitle: lang.autoinstallDirectTitle,
@@ -41,7 +42,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         TextFormField(
           enabled: directModel.localPath == null,
           initialValue: directModel.url,
-          onChanged: ref.read(autoinstallDirectModelProvider.notifier).setUrl,
+          onChanged: notifier.setUrl,
           maxLines: null,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (_) => directModel.error != null ? '' : null,
@@ -63,16 +64,26 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
               ),
               child: Text(lang.autoinstallDirectFileButtonLabel),
             ),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Tooltip(
-                message: directModel.localPath?.path ?? '',
-                child: Text(
-                  directModel.localPath?.pathSegments.last ?? '',
-                  overflow: TextOverflow.ellipsis,
+            if (directModel.localPath != null) ...[
+              const SizedBox(width: 16),
+              Flexible(
+                child: Tooltip(
+                  message: directModel.localPath!.path,
+                  child: Text(
+                    directModel.localPath!.pathSegments.last,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(width: 8),
+              Tooltip(
+                message: lang.autoinstallDirectFileClearButtonLabel,
+                child: YaruIconButton(
+                  icon: Icon(YaruIcons.window_close),
+                  onPressed: () => notifier.setLocalPath(null),
+                ),
+              ),
+            ],
           ],
         ),
       ],

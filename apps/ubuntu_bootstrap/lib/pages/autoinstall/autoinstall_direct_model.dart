@@ -81,7 +81,7 @@ class AutoinstallDirectModel extends _$AutoinstallDirectModel {
     state = state.copyWith(url: url, localPath: null, error: null);
   }
 
-  void setLocalPath(Uri localPath) {
+  void setLocalPath(Uri? localPath) {
     state = state.copyWith(localPath: localPath, url: '', error: null);
   }
 
