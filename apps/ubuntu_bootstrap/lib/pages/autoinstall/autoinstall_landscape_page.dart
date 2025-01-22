@@ -9,6 +9,7 @@ import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
+import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
@@ -26,10 +27,10 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(landscapeDataModelProvider);
     // log current authentication status when is changes:
     _log.debug(model.authenticationStatus);
-    // if (model.authenticationStatus ==
-    //     service.AuthenticationStatus.authenticationSuccess) {
-    //   Wizard.of(context).next();
-    // }
+    if (model.authenticationStatus ==
+        service.AuthenticationStatus.authenticationSuccess) {
+      Wizard.of(context).next();
+    }
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
@@ -77,26 +78,60 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
               },
               onLinkTap: (url, _, __) => launchUrl(url!),
             ),
+            const SizedBox(height: kWizardSpacing / 2),
             model.userCode.isEmpty
                 ? const Padding(
                     padding: EdgeInsets.all(kWizardBarSpacing * 2),
                     child: YaruCircularProgressIndicator(),
                   )
-                : Column(
+                : Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Expanded(
-                            child: SelectableText(
-                              model.userCode,
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            ),
-                          ),
-                          const SizedBox(width: kWizardSpacing / 2),
-                        ],
+                      SelectableText(
+                        model.userCode,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
+                      const SizedBox(width: kWizardSpacing / 2),
+                      switch (model.authenticationStatus) {
+                        service.AuthenticationStatus.errorCodeExpired => Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const ErrorIcon(),
+                              const SizedBox(width: kWizardSpacing / 4),
+                              Text(
+                                'Code expired, please try again',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(
+                                      color:
+                                          Theme.of(context).colorScheme.error,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        service.AuthenticationStatus.authenticationSuccess ||
+                        service.AuthenticationStatus.authenticationPending =>
+                          SizedBox.shrink(),
+                        _ => Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const ErrorIcon(),
+                              const SizedBox(width: kWizardSpacing / 4),
+                              Text(
+                                'Login failed, please try again',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(
+                                      color:
+                                          Theme.of(context).colorScheme.error,
+                                    ),
+                              ),
+                            ],
+                          ),
+                      },
+                      const SizedBox(width: kWizardSpacing / 2),
                     ],
                   ),
           ],
@@ -115,7 +150,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
       rethrow;
     }
     try {
-      model.watch();
+      await model.watch();
     } on Exception catch (e) {
       _log.error(e);
       rethrow;

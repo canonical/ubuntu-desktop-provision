@@ -42,7 +42,6 @@ class LandscapeDataModel extends _$LandscapeDataModel {
   @override
   LandscapeData build() {
     final data = LandscapeData();
-    _handleAuthenticationStatus(data.authenticationStatus, data.autoinstall);
     return data;
   }
 
