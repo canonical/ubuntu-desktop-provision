@@ -281,6 +281,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Select file...'**
   String get autoinstallDirectFileButtonLabel;
 
+  /// No description provided for @autoinstallDirectFileClearButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear file'**
+  String get autoinstallDirectFileClearButtonLabel;
+
   /// No description provided for @autoinstallDirectFilePickerTitle.
   ///
   /// In en, this message translates to:

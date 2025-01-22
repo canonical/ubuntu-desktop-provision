@@ -14,6 +14,7 @@
   "autoinstallDirectUrlLabel": "You can enter the URL of an autoinstall file:",
   "autoinstallDirectFileLabel": "Or select a local file:",
   "autoinstallDirectFileButtonLabel": "Select file...",
+  "autoinstallDirectFileClearButtonLabel": "Clear file",
   "autoinstallDirectFilePickerTitle": "Choose file",
   "autoinstallDirectFilePickerFilterLabel": "YAML files",
   "autoinstallDirectImportButtonLabel": "Import",

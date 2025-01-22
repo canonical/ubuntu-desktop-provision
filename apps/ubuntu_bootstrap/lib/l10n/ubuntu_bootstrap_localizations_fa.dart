@@ -30,6 +30,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'Select file...';
 
   @override
+  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+
+  @override
   String get autoinstallDirectFilePickerTitle => 'Choose file';
 
   @override
