@@ -299,6 +299,54 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Import'**
   String get autoinstallDirectImportButtonLabel;
 
+  /// No description provided for @autoinstallDirectErrorNetworkTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Autoinstall file is not reachable'**
+  String get autoinstallDirectErrorNetworkTitle;
+
+  /// No description provided for @autoinstallDirectErrorNetworkBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check the URL is correct, check your internet connection, or try later.'**
+  String get autoinstallDirectErrorNetworkBody;
+
+  /// No description provided for @autoinstallDirectErrorInvalidUrlTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid URL'**
+  String get autoinstallDirectErrorInvalidUrlTitle;
+
+  /// No description provided for @autoinstallDirectErrorInvalidUrlBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check the URL is correct or select a local file.'**
+  String get autoinstallDirectErrorInvalidUrlBody;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid autoinstall file'**
+  String get autoinstallDirectErrorInvalidContentTitle;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check or provide a different file.'**
+  String get autoinstallDirectErrorInvalidContentBody;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentFileSystemTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Autoinstall file is not readable'**
+  String get autoinstallDirectErrorInvalidContentFileSystemTitle;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentFileSystemBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check your permissions or provide a different file.'**
+  String get autoinstallDirectErrorInvalidContentFileSystemBody;
+
   /// No description provided for @autoinstallTitle.
   ///
   /// In en, this message translates to:

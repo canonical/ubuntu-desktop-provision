@@ -39,6 +39,30 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Import';
 
   @override
+  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody => 'Please check the URL is correct, check your internet connection, or try later.';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody => 'Please check the URL is correct or select a local file.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody => 'Please check or provide a different file.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentFileSystemTitle => 'Autoinstall file is not readable';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentFileSystemBody => 'Please check your permissions or provide a different file.';
+
+  @override
   String get autoinstallTitle => 'Tipe d’installacion';
 
   @override
