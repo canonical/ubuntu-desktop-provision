@@ -377,17 +377,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'For users who want to be guided step by step through the installation.'**
   String get autoinstallInteractiveDescription;
 
-  /// No description provided for @autoinstallAutomatedOption.
+  /// No description provided for @autoinstallDirectOption.
   ///
   /// In en, this message translates to:
-  /// **'Automated installation'**
-  String get autoinstallAutomatedOption;
+  /// **'Automated with autoinstall file'**
+  String get autoinstallDirectOption;
 
-  /// No description provided for @autoinstallAutomatedDescription.
+  /// No description provided for @autoinstallDirectDescription.
   ///
   /// In en, this message translates to:
   /// **'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.'**
-  String get autoinstallAutomatedDescription;
+  String get autoinstallDirectDescription;
 
   /// No description provided for @changeButtonText.
   ///

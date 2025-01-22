@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => '适用于希望在逐步引导下完成安装的用户。';
 
   @override
-  String get autoinstallAutomatedOption => '自动安装';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => '适用于使用 autoinstall.yaml 文件进行一致重复系统配置的高级用户。';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => '更改';
@@ -1057,12 +1057,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get autoinstallInteractiveDescription => '適用於想要在引導下一步一步地完成安裝的使用者。';
-
-  @override
-  String get autoinstallAutomatedOption => '自動化安裝';
-
-  @override
-  String get autoinstallAutomatedDescription => '適用於備有 autoinstall.yaml 檔案以進行一致且可重現之系統安裝的進階使用者。';
 
   @override
   String get changeButtonText => '變更';

@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'За кориснике који желе да буду вођени корак по корак кроз инсталацију.';
 
   @override
-  String get autoinstallAutomatedOption => 'Аутоматска инсталација';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'За напредне кориснике који имају autoinstall.yaml за конзистентна и поновљива подешавања система.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Измени';

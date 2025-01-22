@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'D\'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.';
 
   @override
-  String get autoinstallAutomatedOption => 'Suiteáil uathoibrithe';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'I gcás úsáideoirí chun cinn a bhfuil autoinstall.yaml acu le haghaidh socruithe córais comhsheasmhacha agus in-athdhéanta.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Athrú';

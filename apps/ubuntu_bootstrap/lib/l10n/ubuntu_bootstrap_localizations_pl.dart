@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Dla użytkowników, którzy chcą być prowadzeni krok po kroku przez instalację.';
 
   @override
-  String get autoinstallAutomatedOption => 'Instalacja zautomatyzowana';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Zmień';

@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Para os utilizadores que pretendem ser guiados passo a passo durante a instalação.';
 
   @override
-  String get autoinstallAutomatedOption => 'Instalação automatizada';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Para utilizadores avançados que têm um autoinstall.yaml para configurações de sistema consistentes e repetíveis.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Alterar';
@@ -1057,12 +1057,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get autoinstallInteractiveDescription => 'Para usuários que desejam ser guiados passo a passo durante a instalação.';
-
-  @override
-  String get autoinstallAutomatedOption => 'Instalação automatizada';
-
-  @override
-  String get autoinstallAutomatedDescription => 'Para usuários avançados que têm um autoinstall.yaml para configurações de sistema consistentes e repetíveis.';
 
   @override
   String get changeButtonText => 'Alterar';

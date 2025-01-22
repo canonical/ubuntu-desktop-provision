@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Por tiuj uzantoj, kiuj volas esti gvidataj paŝon post paŝo tra la instalado.';
 
   @override
-  String get autoinstallAutomatedOption => 'Aŭtomata instalado';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Por tiuj spertaj uzantoj, kiuj havas la dosieron «autoinstall.yaml» por kohere kaj ripeteble agordi la sistemon.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Ŝanĝi';

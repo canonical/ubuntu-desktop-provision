@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Olyan felhasználóknak, akik lépésről lépésre történő végigvezetéssel szeretnének telepíteni.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automatizált telepítés';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Gyakorlottabb felhasználóknak, akik autoinstall.yaml fájllal rendelkeznek a következetes és megismételhető rendszerbeállításokhoz.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Változtatás';

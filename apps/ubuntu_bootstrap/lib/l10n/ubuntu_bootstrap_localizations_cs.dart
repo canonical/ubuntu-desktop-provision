@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automatická instalace';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Změnit';

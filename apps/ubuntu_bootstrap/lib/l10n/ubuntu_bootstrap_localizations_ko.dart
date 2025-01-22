@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => '설치 과정을 단계별로 안내받고 싶은 사용자를 위한 옵션입니다.';
 
   @override
-  String get autoinstallAutomatedOption => '자동 설치';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => '여러 차례의 일관된 시스템 설정을 위해 autoinstall.yaml을 사용하는 고급 사용자를 위한 기능입니다.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => '바꾸기';

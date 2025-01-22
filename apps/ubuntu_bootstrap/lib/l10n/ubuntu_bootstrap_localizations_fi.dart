@@ -80,10 +80,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Käyttäjille, jotka haluvat vaiheittaisesti opastetun asennuksen.';
 
   @override
-  String get autoinstallAutomatedOption => 'Automaattinen asennus';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Edistyneille käyttäjille, joilla on yhtenäisen ja toistettavan asennuksen takaava autoinstall.yaml-tiedosto.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Muuta';
