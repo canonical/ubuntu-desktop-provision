@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
+import 'package:yaml/yaml.dart';
 
 part 'autoinstall_direct_model.freezed.dart';
 part 'autoinstall_direct_model.g.dart';
@@ -15,8 +18,55 @@ class AutoinstallDirectState with _$AutoinstallDirectState {
     @Default('') String url,
     Uri? localPath,
     @Default(false) bool isLoading,
-    Object? error,
+    AutoinstallDirectError? error,
   }) = _AutoinstallDirectState;
+}
+
+@freezed
+sealed class AutoinstallDirectError with _$AutoinstallDirectError {
+  factory AutoinstallDirectError.network() = AutoinstallDirectErrorNetwork;
+  factory AutoinstallDirectError.invalidUrl() =
+      AutoinstallDirectErrorInvalidUrl;
+  factory AutoinstallDirectError.invalidContent() =
+      AutoinstallDirectErrorInvalidContent;
+  factory AutoinstallDirectError.fileSystem() =
+      AutoinstallDirectErrorFileSystem;
+  factory AutoinstallDirectError.unknown({required String rawError}) =
+      AutoinstallDirectErrorUnknown;
+
+  factory AutoinstallDirectError.from(Object? e) => switch (e) {
+        FileSystemException _ => AutoinstallDirectError.fileSystem(),
+        YamlException _ => AutoinstallDirectError.invalidContent(),
+        FormatException _ => AutoinstallDirectError.invalidUrl(),
+        SocketException _ => AutoinstallDirectError.network(),
+        final e => AutoinstallDirectError.unknown(rawError: e.toString()),
+      };
+
+  AutoinstallDirectError._();
+
+  String body(UbuntuBootstrapLocalizations l10n) => switch (this) {
+        AutoinstallDirectErrorNetwork() =>
+          l10n.autoinstallDirectErrorNetworkBody,
+        AutoinstallDirectErrorInvalidUrl() =>
+          l10n.autoinstallDirectErrorInvalidUrlBody,
+        AutoinstallDirectErrorInvalidContent() =>
+          l10n.autoinstallDirectErrorInvalidContentBody,
+        AutoinstallDirectErrorFileSystem() =>
+          l10n.autoinstallDirectErrorInvalidContentFileSystemBody,
+        AutoinstallDirectErrorUnknown(rawError: final rawError) => rawError,
+      };
+
+  String title(UbuntuBootstrapLocalizations l10n) => switch (this) {
+        AutoinstallDirectErrorNetwork() =>
+          l10n.autoinstallDirectErrorNetworkTitle,
+        AutoinstallDirectErrorInvalidUrl() =>
+          l10n.autoinstallDirectErrorInvalidUrlTitle,
+        AutoinstallDirectErrorInvalidContent() =>
+          l10n.autoinstallDirectErrorInvalidContentTitle,
+        AutoinstallDirectErrorFileSystem() =>
+          l10n.autoinstallDirectErrorInvalidContentFileSystemTitle,
+        AutoinstallDirectErrorUnknown(rawError: final rawError) => rawError,
+      };
 }
 
 @riverpod
@@ -57,7 +107,10 @@ class AutoinstallDirectModel extends _$AutoinstallDirectModel {
       state = switch (e) {
         XdgPortalRequestCancelledException _ =>
           state.copyWith(localPath: null, isLoading: false),
-        _ => state.copyWith(error: e, isLoading: false),
+        _ => state.copyWith(
+            error: AutoinstallDirectError.from(e),
+            isLoading: false,
+          ),
       };
     }
   }
@@ -74,7 +127,10 @@ class AutoinstallDirectModel extends _$AutoinstallDirectModel {
       await getService<AutoinstallService>().fetchAndWriteFileFromUri(url);
     } on Exception catch (e) {
       _log.debug('Caught error during fetchAndWrite: $e');
-      state = state.copyWith(error: e, isLoading: false);
+      state = state.copyWith(
+        error: AutoinstallDirectError.from(e),
+        isLoading: false,
+      );
       return false;
     }
 

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -8,7 +6,6 @@ import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
 
 class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
@@ -34,18 +31,8 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         if (directModel.error != null) ...[
           YaruInfoBox(
             yaruInfoType: YaruInfoType.danger,
-            title: Text('Error'),
-            child: Text(
-              switch (directModel.error) {
-                YamlException _ => 'Invalid YAML',
-                final SocketException e => 'Network error: ${e.message}',
-                final ArgumentError e => 'Invalid URL: ${e.message}',
-                final FormatException e => 'Invalid Format: ${e.message}',
-                final FileSystemException e =>
-                  'File system error: ${e.message}',
-                _ => 'Unknown Error',
-              },
-            ),
+            title: Text(directModel.error!.title(lang)),
+            child: Text(directModel.error!.body(lang)),
           ),
           const SizedBox(height: kWizardSpacing),
         ],

@@ -7,7 +7,7 @@ part of 'autoinstall_direct_model.dart';
 // **************************************************************************
 
 String _$autoinstallDirectModelHash() =>
-    r'71b17ec1ff1260a153679724da74f85cc22dd499';
+    r'a7e415f9ea6a80dad454b4c17aeb7bc4ee3331bf';
 
 /// See also [AutoinstallDirectModel].
 @ProviderFor(AutoinstallDirectModel)
