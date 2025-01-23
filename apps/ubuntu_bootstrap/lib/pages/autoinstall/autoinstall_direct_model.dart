@@ -52,7 +52,7 @@ sealed class AutoinstallDirectError with _$AutoinstallDirectError {
         AutoinstallDirectErrorInvalidContent() =>
           l10n.autoinstallDirectErrorInvalidContentBody,
         AutoinstallDirectErrorFileSystem() =>
-          l10n.autoinstallDirectErrorInvalidContentFileSystemBody,
+          l10n.autoinstallDirectErrorFileSystemBody,
         AutoinstallDirectErrorUnknown(rawError: final rawError) => rawError,
       };
 
@@ -64,8 +64,9 @@ sealed class AutoinstallDirectError with _$AutoinstallDirectError {
         AutoinstallDirectErrorInvalidContent() =>
           l10n.autoinstallDirectErrorInvalidContentTitle,
         AutoinstallDirectErrorFileSystem() =>
-          l10n.autoinstallDirectErrorInvalidContentFileSystemTitle,
-        AutoinstallDirectErrorUnknown(rawError: final rawError) => rawError,
+          l10n.autoinstallDirectErrorFileSystemTitle,
+        AutoinstallDirectErrorUnknown() =>
+          l10n.autoinstallDirectErrorUnkownTitle,
       };
 }
 
