@@ -6,7 +6,7 @@ part of 'autoinstall_landscape_model.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$watchResponseHash() => r'4f9b60930c00e7d8f45c83deaca6410f5312dcd0';
+String _$watchResponseHash() => r'e269a136fbbd886415af3cb24eb979937bcc7814';
 
 /// See also [watchResponse].
 @ProviderFor(watchResponse)
@@ -26,7 +26,7 @@ final watchResponseProvider =
 typedef WatchResponseRef
     = AutoDisposeStreamProviderRef<WatchAuthenticationResponse>;
 String _$landscapeDataModelHash() =>
-    r'3ecb05d18036adaa34ed5a4caeee944baa206724';
+    r'1e5220e6781bbe83a041fcf8eb95302e205deae9';
 
 /// See also [LandscapeDataModel].
 @ProviderFor(LandscapeDataModel)

@@ -1,0 +1,97 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
+
+import 'autoinstall_landscape_model.dart';
+
+final _log = Logger();
+
+class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
+  const LandscapeDomainPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+    final landscapeModel = ref.watch(landscapeDataModelProvider);
+    final hasActiveConnection = ref.watch(networkModelProvider).hasActiveConnection;
+
+    return HorizontalPage(
+      windowTitle: l10n.landscapePageTitle,
+      title: l10n.landscapeDomainHeader,
+      bottomBar: WizardBar(
+        leading: const BackWizardButton(),
+        trailing: [_NextButton()],
+      ),
+      children: [
+        if (!hasActiveConnection) ...[
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text('Connect to the internet to continue'),
+            child: Text(
+              'Internet is needed to fetch the autoinstall file from Landscape',
+            ),
+          ),
+          const SizedBox(height: kWizardSpacing),
+        ],
+        Text(l10n.landscapeDomainInstructions),
+        const SizedBox(height: kWizardSpacing),
+        TextFormField(
+          enabled: hasActiveConnection,
+          initialValue: landscapeModel.domainUrl,
+          onChanged: ref.read(landscapeDataModelProvider.notifier).setUrl,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          validator: (_) => landscapeModel.error != null ? 'Invalid domain,please check or contact your IT support' : null,
+        ),
+      ],
+    );
+  }
+}
+
+class _NextButton extends ConsumerWidget {
+  const _NextButton();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final landscapeModel = ref.watch(landscapeDataModelProvider);
+    final theme = Theme.of(context);
+//    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    return ElevatedButton(
+      style: theme.elevatedButtonTheme.style?.copyWith(
+        minimumSize: WidgetStateProperty.all(kPushButtonSize),
+      ),
+      onPressed: landscapeModel.error == null &&
+              (landscapeModel.domainUrl != '')
+          ? () async {
+              if (await ref
+                  .read(landscapeDataModelProvider.notifier)
+                  .attach()) {
+                  if (context.mounted) await Wizard.of(context).next();
+              }
+            }
+          : null,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (landscapeModel.isLoading) ...[
+            SizedBox.square(
+              dimension: 16.0,
+              child: YaruCircularProgressIndicator(
+                color: Theme.of(context).colorScheme.onPrimary,
+                strokeWidth: 2,
+              ),
+            ),
+            const SizedBox(width: 8),
+          ],
+          Text('Next'),
+        ],
+      ),
+    );
+  }
+}
+

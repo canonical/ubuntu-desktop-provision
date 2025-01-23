@@ -21,6 +21,9 @@ class LandscapeData with _$LandscapeData {
     @Default(AuthenticationStatus.authenticationPending)
     AuthenticationStatus authenticationStatus,
     @Default('') String autoinstall,
+    @Default('') String domainUrl,
+    @Default(false) bool isLoading,
+    Object? error,
   }) = _LandscapeData;
 
   LandscapeData._();
@@ -45,6 +48,11 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     return data;
   }
 
+  void setUrl(String? url) {
+    if (url == null) return;
+    state = state.copyWith(domainUrl: url, error: null);
+  }
+
   Future<void> _handleAuthenticationStatus(
     AuthenticationStatus status,
     String? autoinstall,
@@ -60,12 +68,21 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     }
   }
 
-  Future<void> attach() async {
-    final response = await getService<LandscapeService>().attach();
+  Future<bool> attach() async {
+
+    state = state.copyWith(isLoading: true);
+  try {
+    final response = await getService<LandscapeService>().attach(state.domainUrl);
     if (response.status == AttachStatus.attachSuccess &&
         response.userCode != null) {
       state = state.copyWith(userCode: response.userCode!);
+    }}
+    on Exception catch (e) {
+        _log.debug('Caught error during attach: $e');
+        state = state.copyWith(error: e, isLoading: false);
+        return false;
     }
+    return true;
   }
 
   Future<void> watch() async {

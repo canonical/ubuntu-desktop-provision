@@ -20,6 +20,9 @@ mixin _$LandscapeData {
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
   String get autoinstall => throw _privateConstructorUsedError;
+  String get domainUrl => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
+  Object? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -37,7 +40,10 @@ abstract class $LandscapeDataCopyWith<$Res> {
   $Res call(
       {String userCode,
       AuthenticationStatus authenticationStatus,
-      String autoinstall});
+      String autoinstall,
+      String domainUrl,
+      bool isLoading,
+      Object? error});
 }
 
 /// @nodoc
@@ -58,6 +64,9 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
     Object? userCode = null,
     Object? authenticationStatus = null,
     Object? autoinstall = null,
+    Object? domainUrl = null,
+    Object? isLoading = null,
+    Object? error = freezed,
   }) {
     return _then(_value.copyWith(
       userCode: null == userCode
@@ -72,6 +81,15 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
           ? _value.autoinstall
           : autoinstall // ignore: cast_nullable_to_non_nullable
               as String,
+      domainUrl: null == domainUrl
+          ? _value.domainUrl
+          : domainUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      error: freezed == error ? _value.error : error,
     ) as $Val);
   }
 }
@@ -87,7 +105,10 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
   $Res call(
       {String userCode,
       AuthenticationStatus authenticationStatus,
-      String autoinstall});
+      String autoinstall,
+      String domainUrl,
+      bool isLoading,
+      Object? error});
 }
 
 /// @nodoc
@@ -106,6 +127,9 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
     Object? userCode = null,
     Object? authenticationStatus = null,
     Object? autoinstall = null,
+    Object? domainUrl = null,
+    Object? isLoading = null,
+    Object? error = freezed,
   }) {
     return _then(_$LandscapeDataImpl(
       userCode: null == userCode
@@ -120,6 +144,15 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
           ? _value.autoinstall
           : autoinstall // ignore: cast_nullable_to_non_nullable
               as String,
+      domainUrl: null == domainUrl
+          ? _value.domainUrl
+          : domainUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      error: freezed == error ? _value.error : error,
     ));
   }
 }
@@ -130,7 +163,10 @@ class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
       {this.userCode = '',
       this.authenticationStatus = AuthenticationStatus.authenticationPending,
-      this.autoinstall = ''})
+      this.autoinstall = '',
+      this.domainUrl = '',
+      this.isLoading = false,
+      this.error})
       : super._();
 
   @override
@@ -142,10 +178,18 @@ class _$LandscapeDataImpl extends _LandscapeData {
   @override
   @JsonKey()
   final String autoinstall;
+  @override
+  @JsonKey()
+  final String domainUrl;
+  @override
+  @JsonKey()
+  final bool isLoading;
+  @override
+  final Object? error;
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall)';
+    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, error: $error)';
   }
 
   @override
@@ -158,12 +202,23 @@ class _$LandscapeDataImpl extends _LandscapeData {
             (identical(other.authenticationStatus, authenticationStatus) ||
                 other.authenticationStatus == authenticationStatus) &&
             (identical(other.autoinstall, autoinstall) ||
-                other.autoinstall == autoinstall));
+                other.autoinstall == autoinstall) &&
+            (identical(other.domainUrl, domainUrl) ||
+                other.domainUrl == domainUrl) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            const DeepCollectionEquality().equals(other.error, error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, userCode, authenticationStatus, autoinstall);
+  int get hashCode => Object.hash(
+      runtimeType,
+      userCode,
+      authenticationStatus,
+      autoinstall,
+      domainUrl,
+      isLoading,
+      const DeepCollectionEquality().hash(error));
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -178,7 +233,10 @@ abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
       {final String userCode,
       final AuthenticationStatus authenticationStatus,
-      final String autoinstall}) = _$LandscapeDataImpl;
+      final String autoinstall,
+      final String domainUrl,
+      final bool isLoading,
+      final Object? error}) = _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
   @override
@@ -187,6 +245,12 @@ abstract class _LandscapeData extends LandscapeData {
   AuthenticationStatus get authenticationStatus;
   @override
   String get autoinstall;
+  @override
+  String get domainUrl;
+  @override
+  bool get isLoading;
+  @override
+  Object? get error;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
