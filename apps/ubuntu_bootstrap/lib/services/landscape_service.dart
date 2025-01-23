@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 
 abstract class LandscapeService {
   Stream<WatchAuthenticationResponse> watch(String userCode);
-  Future<AttachResponse> attach();
+  Future<AttachResponse> attach(String serverUrl);
 }
 
 enum AuthenticationStatus {
@@ -103,32 +103,33 @@ class AttachResponse {
 
 class LandscapeBackendService implements LandscapeService {
   LandscapeBackendService({
-    required String serverUrl,
     required int port,
     required bool useTls,
-    // TODO: only create this on attach.
-    // On attach, close existing client, create new one using fqdn
-  }) : _client = landscape.LandscapeClient(
-          serverUrl,
-          port,
-          useTls,
-        );
+  }) : _port = port,
+  _useTls = useTls,
+  _client = null;
 
   @visibleForTesting
-  LandscapeBackendService.withClient(this._client);
+  LandscapeBackendService.withClient(this._client, this._useTls, this._port);
 
-  final landscape.LandscapeClient _client;
+  landscape.LandscapeClient? _client;
+  final int _port;
+  final bool _useTls;
 
   @override
   Stream<WatchAuthenticationResponse> watch(String userCode) {
-    final grpcResponse = _client.watch(userCode);
+    if (_client == null) {
+        throw Exception('Client cannot be null');
+    }
+    final grpcResponse = _client!.watch(userCode);
     return grpcResponse
         .map(WatchAuthenticationResponse.watchAuthenticationFromGrpc);
   }
 
   @override
-  Future<AttachResponse> attach() async {
-    final response = await _client.attach();
+  Future<AttachResponse> attach(String serverUrl) async {
+    _client = landscape.LandscapeClient(serverUrl, _port, _useTls);
+    final response = await _client!.attach();
     return AttachResponse.attachFromGrpc(response);
   }
 }
