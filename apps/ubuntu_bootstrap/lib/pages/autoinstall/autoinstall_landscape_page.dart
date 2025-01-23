@@ -13,6 +13,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+import 'autoinstall_model.dart';
+
 const kMagicAttachUrl =
     'myorg.saas.landscape.canonical.com/attach'; // Placeholder URL
 const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
@@ -142,13 +144,10 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    final model = ref.watch(landscapeDataModelProvider.notifier);
-    try {
-      await model.attach();
-    } on Exception catch (e) {
-      _log.error(e);
-      rethrow;
+    if (ref.watch(autoinstallModelProvider).type != AutoinstallType.landscape) {
+      return false;
     }
+    final model = ref.watch(landscapeDataModelProvider.notifier);
     try {
       await model.watch();
     } on Exception catch (e) {

@@ -8,11 +8,17 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 import 'autoinstall_landscape_model.dart';
+import 'autoinstall_model.dart';
 
 final _log = Logger();
 
 class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
   const LandscapeDomainPage({super.key});
+
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) async =>
+      ref.watch(autoinstallModelProvider).type == AutoinstallType.landscape;
+
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
