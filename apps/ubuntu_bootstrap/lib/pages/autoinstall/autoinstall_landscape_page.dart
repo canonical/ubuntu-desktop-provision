@@ -38,13 +38,6 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
       title: l10n.landscapeHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
-        // Trailing to be removed in the future to match designs. Leaving this here for now for easier debugging.
-        trailing: [
-          WizardButton(
-            label: UbuntuLocalizations.of(context).nextLabel,
-            onActivated: Wizard.of(context).next,
-          ),
-        ],
       ),
       imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,

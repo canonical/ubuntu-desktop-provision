@@ -401,6 +401,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.'**
   String get autoinstallDirectDescription;
 
+  /// No description provided for @autoinstallLandscapeOption.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated with Landscape'**
+  String get autoinstallLandscapeOption;
+
+  /// No description provided for @autoinstallLandscapeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'For users in organisations that provide an autoinstall file via Landscape'**
+  String get autoinstallLandscapeDescription;
+
   /// No description provided for @changeButtonText.
   ///
   /// In en, this message translates to:
@@ -1990,6 +2002,30 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Landscape domain (FQDN)'**
   String get landscapeDomainTextField;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @landscapeDomainInvalidDomainWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid domain, please check or contact your IT support'**
+  String get landscapeDomainInvalidDomainWarning;
+
+  /// No description provided for @landscapeDomainNoInternetTitleWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect to the internet to continue'**
+  String get landscapeDomainNoInternetTitleWarning;
+
+  /// No description provided for @landscapeDomainNoInternetDescriptionWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Internet is needed to fetch the autoinstall file from Landscape'**
+  String get landscapeDomainNoInternetDescriptionWarning;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

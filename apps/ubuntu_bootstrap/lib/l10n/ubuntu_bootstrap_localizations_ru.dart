@@ -92,6 +92,12 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
+  String get autoinstallLandscapeOption => 'Automated with Landscape';
+
+  @override
+  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape';
+
+  @override
   String get changeButtonText => 'Изменить';
 
   @override
@@ -1053,4 +1059,16 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+
+  @override
+  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+
+  @override
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
 }

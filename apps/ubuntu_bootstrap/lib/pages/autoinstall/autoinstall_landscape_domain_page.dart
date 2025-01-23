@@ -37,9 +37,9 @@ class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
         if (!hasActiveConnection) ...[
           YaruInfoBox(
             yaruInfoType: YaruInfoType.danger,
-            title: Text('Connect to the internet to continue'),
+            title: Text(l10n.landscapeDomainNoInternetTitleWarning),
             child: Text(
-              'Internet is needed to fetch the autoinstall file from Landscape',
+              l10n.landscapeDomainNoInternetDescriptionWarning,
             ),
           ),
           const SizedBox(height: kWizardSpacing),
@@ -51,7 +51,7 @@ class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
           initialValue: landscapeModel.domainUrl,
           onChanged: ref.read(landscapeDataModelProvider.notifier).setUrl,
           autovalidateMode: AutovalidateMode.onUserInteraction,
-          validator: (_) => landscapeModel.error != null ? 'Invalid domain,please check or contact your IT support' : null,
+          validator: (_) => landscapeModel.error != null ? l10n.landscapeDomainInvalidDomainWarning : null,
         ),
       ],
     );
@@ -65,6 +65,7 @@ class _NextButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final landscapeModel = ref.watch(landscapeDataModelProvider);
     final theme = Theme.of(context);
+    final l10n = UbuntuBootstrapLocalizations.of(context);
 //    final l10n = UbuntuBootstrapLocalizations.of(context);
 
     return ElevatedButton(
@@ -94,10 +95,9 @@ class _NextButton extends ConsumerWidget {
             ),
             const SizedBox(width: 8),
           ],
-          Text('Next'),
+          Text(l10n.next),
         ],
       ),
     );
   }
 }
-

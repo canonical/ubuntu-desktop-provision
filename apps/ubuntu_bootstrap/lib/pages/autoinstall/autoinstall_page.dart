@@ -45,8 +45,8 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
         ),
         const SizedBox(height: kWizardSpacing / 2),
         OptionButton(
-          title: Text('Automated with Landscape'),
-          subtitle: Text('For users in organisations that provide an autoinstall file via Landscape'),
+          title: Text(lang.autoinstallLandscapeOption),
+          subtitle: Text(lang.autoinstallLandscapeDescription),
           value: AutoinstallType.landscape,
           groupValue: autoinstallModel.type,
           onChanged: (value) =>
