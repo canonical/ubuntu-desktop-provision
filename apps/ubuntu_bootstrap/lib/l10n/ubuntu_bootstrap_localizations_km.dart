@@ -60,10 +60,13 @@ class UbuntuBootstrapLocalizationsKm extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorInvalidContentBody => 'Please check or provide a different file.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
 
   @override
-  String get autoinstallDirectErrorInvalidContentFileSystemBody => 'Please check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Please check your permissions or provide a different file.';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
 
   @override
   String get autoinstallTitle => 'Type of installation';

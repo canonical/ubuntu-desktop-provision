@@ -24,8 +24,9 @@
   "autoinstallDirectErrorInvalidUrlBody": "Please check the URL is correct or select a local file.",
   "autoinstallDirectErrorInvalidContentTitle": "Invalid autoinstall file",
   "autoinstallDirectErrorInvalidContentBody": "Please check or provide a different file.",
-  "autoinstallDirectErrorInvalidContentFileSystemTitle": "Autoinstall file is not readable",
-  "autoinstallDirectErrorInvalidContentFileSystemBody": "Please check your permissions or provide a different file.",
+  "autoinstallDirectErrorFileSystemTitle": "Autoinstall file is not readable",
+  "autoinstallDirectErrorFileSystemBody": "Please check your permissions or provide a different file.",
+  "autoinstallDirectErrorUnkownTitle": "Unknown error",
   "autoinstallTitle": "Type of installation",
   "autoinstallHeader": "How would you like to install {DISTRO}?",
   "@autoinstallHeader": {

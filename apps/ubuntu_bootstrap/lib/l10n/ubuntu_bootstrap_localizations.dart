@@ -341,17 +341,23 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Please check or provide a different file.'**
   String get autoinstallDirectErrorInvalidContentBody;
 
-  /// No description provided for @autoinstallDirectErrorInvalidContentFileSystemTitle.
+  /// No description provided for @autoinstallDirectErrorFileSystemTitle.
   ///
   /// In en, this message translates to:
   /// **'Autoinstall file is not readable'**
-  String get autoinstallDirectErrorInvalidContentFileSystemTitle;
+  String get autoinstallDirectErrorFileSystemTitle;
 
-  /// No description provided for @autoinstallDirectErrorInvalidContentFileSystemBody.
+  /// No description provided for @autoinstallDirectErrorFileSystemBody.
   ///
   /// In en, this message translates to:
   /// **'Please check your permissions or provide a different file.'**
-  String get autoinstallDirectErrorInvalidContentFileSystemBody;
+  String get autoinstallDirectErrorFileSystemBody;
+
+  /// No description provided for @autoinstallDirectErrorUnkownTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown error'**
+  String get autoinstallDirectErrorUnkownTitle;
 
   /// No description provided for @autoinstallTitle.
   ///
