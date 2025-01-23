@@ -18,6 +18,7 @@ class PassphraseModel extends SafeChangeNotifier {
       _passphrase,
       _confirmedPassphrase,
       _showPassphrase,
+      _isTpm,
     ]).addListener(notifyListeners);
   }
 
@@ -26,6 +27,7 @@ class PassphraseModel extends SafeChangeNotifier {
   final _passphrase = ValueNotifier('');
   final _confirmedPassphrase = ValueNotifier('');
   final _showPassphrase = ValueNotifier(false);
+  final _isTpm = ValueNotifier(false);
 
   /// The current passphrase.
   String get passphrase => _passphrase.value;
@@ -39,16 +41,32 @@ class PassphraseModel extends SafeChangeNotifier {
   bool get showPassphrase => _showPassphrase.value;
   set showPassphrase(bool value) => _showPassphrase.value = value;
 
+  /// Defines whether or not the user has selected TPM FDE
+  bool get isTpm => _isTpm.value;
+  set isTpm(bool value) => _isTpm.value = value;
+
   /// Whether the current input is valid.
   bool get isValid =>
       passphrase.isNotEmpty && passphrase == confirmedPassphrase;
 
+  /// Whether the user can skip providing a passphrase
+  bool get canSkip => isTpm ? passphrase.isEmpty : false;
+
   /// Initializes the model.
   Future<bool> init() async {
-    if (_service.guidedCapability != GuidedCapability.LVM_LUKS &&
-        _service.guidedCapability != GuidedCapability.ZFS_LUKS_KEYSTORE) {
-      return false;
+    switch (_service.guidedCapability) {
+      case GuidedCapability.LVM_LUKS:
+      case GuidedCapability.ZFS_LUKS_KEYSTORE:
+        isTpm = false;
+
+      case GuidedCapability.CORE_BOOT_ENCRYPTED:
+      case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
+        isTpm = true;
+
+      default:
+        return false;
     }
+
     await loadPassphrase();
     return true;
   }

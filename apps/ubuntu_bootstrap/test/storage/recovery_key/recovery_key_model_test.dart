@@ -8,7 +8,7 @@ import 'test_recovery_key.dart';
 void main() {
   test('init', () async {
     final storage = MockStorageService();
-    final model = RecoveryKeyModel(storage);
+    final model = RecoveryKeyModel(storage: storage);
 
     when(storage.guidedCapability).thenReturn(GuidedCapability.DIRECT);
     expect(await model.init(), isFalse);

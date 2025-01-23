@@ -261,8 +261,58 @@ void main() {
     );
 
     await tester.testRecoveryKeyPage();
-    await tester.tapNext();
+    await tester.testPassphrasePage(passphrase: '', skip: true);
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage();
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+  });
+
+  testWidgets('tpm with passphrase', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(
+      () => app.main([
+        '--source-catalog=examples/sources/tpm.yaml',
+        '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+
     await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+
+    await tester.testRecoveryKeyPage();
+    await tester.testPassphrasePage(passphrase: 'passphrase');
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);

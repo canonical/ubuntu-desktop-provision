@@ -85,4 +85,29 @@ void main() {
     await tester.tapNext();
     verify(model.savePassphrase()).called(1);
   });
+
+  testWidgets('can skip', (tester) async {
+    final model = buildPassphraseModel(isTpm: true);
+    await tester.pumpApp((_) => buildPage(model));
+
+    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), isEnabled);
+    expect(find.button(find.nextLabel), findsNothing);
+  });
+
+  testWidgets('tpm can not skip', (tester) async {
+    final model =
+        buildPassphraseModel(isTpm: true, isValid: false, passphrase: 'foo');
+    await tester.pumpApp((_) => buildPage(model));
+
+    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), findsNothing);
+    expect(find.button(find.nextLabel), isDisabled);
+  });
+
+  testWidgets('luks can not skip', (tester) async {
+    final model = buildPassphraseModel(isTpm: false, isValid: false);
+    await tester.pumpApp((_) => buildPage(model));
+
+    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), findsNothing);
+    expect(find.button(find.nextLabel), isDisabled);
+  });
 }

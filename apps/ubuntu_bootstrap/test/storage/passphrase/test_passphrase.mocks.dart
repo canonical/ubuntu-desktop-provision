@@ -84,8 +84,29 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       );
 
   @override
+  bool get isTpm => (super.noSuchMethod(
+        Invocation.getter(#isTpm),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set isTpm(bool? value) => super.noSuchMethod(
+        Invocation.setter(
+          #isTpm,
+          value,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   bool get isValid => (super.noSuchMethod(
         Invocation.getter(#isValid),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  bool get canSkip => (super.noSuchMethod(
+        Invocation.getter(#canSkip),
         returnValue: false,
       ) as bool);
 

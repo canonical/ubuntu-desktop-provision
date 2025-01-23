@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do chuid sonraí go léir.';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+
+  @override
   String get createPassphrase => 'Cruthaigh pasfhrása';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Eochair aisghabhála TPM';
 
   @override
+  String get recoveryKeyHeader => 'Getting a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => 'Is féidir leat rochtain a fháil ar d\'eochair a ghnóthú tar éis a shuiteáil leis an ordú seo a leanas:';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Rabhadh:</font> Má chailleann tú an eochair shlándála seo, caillfear na sonraí go léir. Más gá duit, scríobh síos d’eochair agus coinnigh in áit shábháilte í.';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

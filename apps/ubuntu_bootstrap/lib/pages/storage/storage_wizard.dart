@@ -57,15 +57,15 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
         onLoad: (_) => ManualStoragePage.load(ref),
       ),
-      StorageSteps.passphrase.route: WizardRoute(
-        builder: (_) => const PassphrasePage(),
-        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-        onLoad: (_) => PassphrasePage.load(ref),
-      ),
       StorageSteps.recoveryKey.route: WizardRoute(
         builder: (_) => const RecoveryKeyPage(),
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
         onLoad: (_) => RecoveryKeyPage.load(ref),
+      ),
+      StorageSteps.passphrase.route: WizardRoute(
+        builder: (_) => const PassphrasePage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => PassphrasePage.load(ref),
       ),
     };
 

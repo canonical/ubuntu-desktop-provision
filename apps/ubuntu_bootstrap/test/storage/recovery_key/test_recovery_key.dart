@@ -10,5 +10,6 @@ export 'test_recovery_key.mocks.dart';
 RecoveryKeyModel buildRecoveryKeyModel({bool? init}) {
   final model = MockRecoveryKeyModel();
   when(model.init()).thenAnswer((_) async => init ?? false);
+  when(model.confirmed).thenReturn(true);
   return model;
 }

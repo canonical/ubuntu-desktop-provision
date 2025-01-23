@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Se vi forgesos vian pasfrazon, vi perdos ĉiom da viaj datenoj.';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+
+  @override
   String get createPassphrase => 'Krei pasfrazon';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Ŝlosilo por aparato-baza ĉifrado';
 
   @override
+  String get recoveryKeyHeader => 'Getting a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => 'Post instalo, vi povas legi vian restaŭran ŝlosilon per la jena komando:';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Averto:</font> Se vi perdos ĉi tiun sekurigan ŝlosilon, vi perdos ĉiom da datenoj. Skribu vian ŝlosilon kaj konservu ĝin en sekura alia loko, se tio necesas.';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

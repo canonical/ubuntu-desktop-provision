@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Ak stratíte prístupovú frázu, stratíte všetky svoje údaje.';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+
+  @override
   String get createPassphrase => 'Vytvoriť prístupovú frázu';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM kľúč na obnovenie';
 
   @override
+  String get recoveryKeyHeader => 'Getting a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => 'K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim dátam sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

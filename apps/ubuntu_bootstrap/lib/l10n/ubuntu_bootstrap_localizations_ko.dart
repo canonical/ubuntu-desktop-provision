@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => '암호를 분실하면 모든 데이터를 잃게 됩니다.';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+
+  @override
   String get createPassphrase => '암호 만들기';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM 복구 키';
 
   @override
+  String get recoveryKeyHeader => 'Getting a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => '설치 후 다음 명령을 사용하여 복구 키에 액세스할 수 있습니다:';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">경고:</font> 이 보안 키를 분실하면 모든 데이터가 손실됩니다. 필요한 경우 키를 적어서 다른 안전한 곳에 보관하세요.';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

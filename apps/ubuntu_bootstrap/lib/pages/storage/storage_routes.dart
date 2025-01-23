@@ -6,5 +6,6 @@ enum StorageSteps with RouteName {
   guidedResize,
   manual,
   passphrase,
+  tpmPassphrase,
   recoveryKey;
 }

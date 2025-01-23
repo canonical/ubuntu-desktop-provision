@@ -21,29 +21,48 @@ class PassphrasePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isTpm = ref.watch(
+      passphraseModelProvider.select((model) => model.isTpm),
+    );
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final l10n = UbuntuLocalizations.of(context);
+
     return HorizontalPage(
       windowTitle: lang.choosePassphraseTitle,
-      title: lang.choosePassphraseHeader,
+      title: isTpm
+          ? lang.chooseOptionalPassphraseHeader
+          : lang.choosePassphraseHeader,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             enabled: ref.watch(
-              passphraseModelProvider.select((model) => model.isValid),
+              passphraseModelProvider
+                  .select((model) => model.isValid || model.canSkip),
             ),
             onNext: ref.read(passphraseModelProvider).savePassphrase,
             onReturn: ref.read(passphraseModelProvider).loadPassphrase,
+            label: ref.watch(
+              passphraseModelProvider.select((model) => model.canSkip),
+            )
+                ? l10n.skipLabel
+                : l10n.nextLabel,
           ),
         ],
       ),
       children: <Widget>[
-        Text(lang.choosePassphraseBody),
+        Text(
+          isTpm ? lang.chooseOptionalPassphraseBody : lang.choosePassphraseBody,
+        ),
         const PassphraseFormField(),
         const ConfirmPassphraseFormField(),
         InfoBox(
-          title: lang.choosePassphraseInfoHeader,
-          subtitle: lang.choosePassphraseInfoBody,
+          title: isTpm
+              ? lang.choosePassphraseInfoHeader
+              : lang.choosePassphraseInfoHeader,
+          subtitle: isTpm
+              ? lang.chooseOptionalPassphraseInfoBody
+              : lang.choosePassphraseInfoBody,
           type: InfoBoxType.warning,
           isThreeLine: true,
         ),

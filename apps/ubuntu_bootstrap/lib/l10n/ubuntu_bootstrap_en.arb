@@ -185,6 +185,10 @@
   "choosePassphraseMismatch": "The passphrases do not match",
   "choosePassphraseInfoHeader": "Make sure you save your passphrase",
   "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
+  "chooseOptionalPassphraseHeader": "Create a passphrase (Optional)",
+  "chooseOptionalPassphraseBody": "A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.",
+  "chooseOptionalPassphraseInfoHeader": "A passphrase does not replace your recovery keys",
+  "chooseOptionalPassphraseInfoBody": "Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.",
   "createPassphrase": "Create a passphrase",
   "confirmPassphrase": "Confirm the passphrase",
   "installationTypeTitle": "Disk setup",
@@ -929,15 +933,19 @@
     }
   },
   "recoveryKeyTitle": "TPM recovery key",
-  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
-  "recoveryKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
-  "@recoveryKeyWarning": {
+  "recoveryKeyHeader": "Getting a recovery key",
+  "recoveryKeyInfoHeader": "You might lose all of your data without a recovery key",
+  "recoveryKeyInfoBody": "Get a recovery key as soon as you first boot into {distro} and store it somewhere safe.",
+  "@recoveryKeyInfoBody": {
     "placeholders": {
-      "color": {
+      "distro": {
         "type": "String"
       }
     }
   },
+  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
+  "recoveryKeyStorageAdvice": "Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.",
+  "recoveryKeyConfirmation": "I understand that I may lose all of my data if I do not have a recovery key",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",

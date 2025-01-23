@@ -23,12 +23,8 @@ mixin _$PageConfigEntry {
   String? get image => throw _privateConstructorUsedError;
   bool get visible => throw _privateConstructorUsedError;
 
-  /// Serializes this PageConfigEntry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PageConfigEntryCopyWith<PageConfigEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,8 +48,6 @@ class _$PageConfigEntryCopyWithImpl<$Res, $Val extends PageConfigEntry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,8 +86,6 @@ class __$$PageConfigEntryImplCopyWithImpl<$Res>
       _$PageConfigEntryImpl _value, $Res Function(_$PageConfigEntryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,13 +133,11 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
             (identical(other.visible, visible) || other.visible == visible));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, image, visible);
 
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PageConfigEntryImplCopyWith<_$PageConfigEntryImpl> get copyWith =>
@@ -173,11 +163,8 @@ abstract class _PageConfigEntry implements PageConfigEntry {
   String? get image;
   @override
   bool get visible;
-
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PageConfigEntryImplCopyWith<_$PageConfigEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -191,12 +178,8 @@ mixin _$PageConfig {
   @PageConfigEntryConverter()
   Map<String, PageConfigEntry> get pages => throw _privateConstructorUsedError;
 
-  /// Serializes this PageConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PageConfigCopyWith<PageConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -220,8 +203,6 @@ class _$PageConfigCopyWithImpl<$Res, $Val extends PageConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,8 +236,6 @@ class __$$PageConfigImplCopyWithImpl<$Res>
       _$PageConfigImpl _value, $Res Function(_$PageConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,14 +284,12 @@ class _$PageConfigImpl implements _PageConfig {
             const DeepCollectionEquality().equals(other._pages, _pages));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_pages));
 
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PageConfigImplCopyWith<_$PageConfigImpl> get copyWith =>
@@ -337,11 +314,8 @@ abstract class _PageConfig implements PageConfig {
   @override
   @PageConfigEntryConverter()
   Map<String, PageConfigEntry> get pages;
-
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PageConfigImplCopyWith<_$PageConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

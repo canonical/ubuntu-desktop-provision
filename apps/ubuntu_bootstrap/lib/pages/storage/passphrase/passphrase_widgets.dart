@@ -6,6 +6,8 @@ import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart'
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru/icons.dart';
 
+// TODO: this will need to be conditionally hooked up to the /storage/v2/calculate_entropy
+//       endpoint in Subiquity once it is available
 class PassphraseFormField extends ConsumerWidget {
   const PassphraseFormField({super.key, this.fieldWidth});
 

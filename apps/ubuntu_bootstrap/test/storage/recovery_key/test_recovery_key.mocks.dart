@@ -4,6 +4,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
+import 'dart:ui' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart'
@@ -31,6 +32,33 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
   }
 
   @override
+  bool get confirmed => (super.noSuchMethod(
+        Invocation.getter(#confirmed),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  bool get hasListeners => (super.noSuchMethod(
+        Invocation.getter(#hasListeners),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  bool get isDisposed => (super.noSuchMethod(
+        Invocation.getter(#isDisposed),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  void setConfirmed(bool? confirmed) => super.noSuchMethod(
+        Invocation.method(
+          #setConfirmed,
+          [confirmed],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   _i3.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
@@ -38,4 +66,40 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
         ),
         returnValue: _i3.Future<bool>.value(false),
       ) as _i3.Future<bool>);
+
+  @override
+  void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+        Invocation.method(
+          #addListener,
+          [listener],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+        Invocation.method(
+          #removeListener,
+          [listener],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void dispose() => super.noSuchMethod(
+        Invocation.method(
+          #dispose,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void notifyListeners() => super.noSuchMethod(
+        Invocation.method(
+          #notifyListeners,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
 }
