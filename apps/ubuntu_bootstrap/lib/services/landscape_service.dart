@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 
 abstract class LandscapeService {
   Stream<WatchAuthenticationResponse> watch(String userCode);
-  Future<AttachResponse> attach(String serverUrl);
+  Future<AttachResponse> attach(String serverUrl, {@visibleForTesting landscape.LandscapeClient? mockClient});
 }
 
 enum AuthenticationStatus {
@@ -105,9 +105,9 @@ class LandscapeBackendService implements LandscapeService {
   LandscapeBackendService({
     required int port,
     required bool useTls,
-  }) : _port = port,
-  _useTls = useTls,
-  _client = null;
+  })  : _port = port,
+        _useTls = useTls,
+        _client = null;
 
   @visibleForTesting
   LandscapeBackendService.withClient(this._client, this._useTls, this._port);
@@ -119,7 +119,7 @@ class LandscapeBackendService implements LandscapeService {
   @override
   Stream<WatchAuthenticationResponse> watch(String userCode) {
     if (_client == null) {
-        throw Exception('Client cannot be null');
+      throw Exception('Client cannot be null');
     }
     final grpcResponse = _client!.watch(userCode);
     return grpcResponse
@@ -127,8 +127,12 @@ class LandscapeBackendService implements LandscapeService {
   }
 
   @override
-  Future<AttachResponse> attach(String serverUrl) async {
-    _client = landscape.LandscapeClient(serverUrl, _port, _useTls);
+  Future<AttachResponse> attach(
+    String serverUrl, {
+    @visibleForTesting landscape.LandscapeClient? mockClient,
+  }) async {
+    _client =
+        mockClient ?? landscape.LandscapeClient(serverUrl, _port, _useTls);
     final response = await _client!.attach();
     return AttachResponse.attachFromGrpc(response);
   }
