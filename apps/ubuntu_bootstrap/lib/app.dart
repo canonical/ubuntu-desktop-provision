@@ -103,7 +103,11 @@ Future<void> runInstallerApp(
   // registered here or their respective providers will fail to find them when building models.
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
   tryRegisterService<LandscapeService>(
-      () => LandscapeBackendService(port: 50051, useTls: false,),);
+    () => LandscapeBackendService(
+      port: 50051,
+      useTls: false,
+    ),
+  );
   tryRegisterService<ActiveDirectoryService>(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );

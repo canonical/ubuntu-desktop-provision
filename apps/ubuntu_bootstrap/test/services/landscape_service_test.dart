@@ -5,9 +5,8 @@ import 'package:mockito/annotations.dart';
 import 'landscape_service_test.mocks.dart';
 
 @GenerateMocks([
-    LandscapeClient,
+  LandscapeClient,
 ])
-
 void main() {
   const autoinstallContent = '''
 autoinstall:
@@ -34,10 +33,9 @@ autoinstall:
 ''';
   const invalidContent = 'foo: :';
 
-test('attach to landscape server', () async {
+  test('attach to landscape server', () async {
     final landscapeClient = MockLandscapeClient();
-    
-});
+  });
 
   // test('restart subiquity', () async {
   //   final subqiuityClient = MockSubiquityClient();
@@ -82,5 +80,4 @@ test('attach to landscape server', () async {
 //     final response = await _client!.attach();
 //     return AttachResponse.attachFromGrpc(response);
 //   }
-
 }

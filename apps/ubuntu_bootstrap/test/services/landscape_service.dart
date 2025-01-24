@@ -87,13 +87,18 @@ void main() {
               emitsInOrder(
                 [
                   // Make sure you map to your own service-layer types or compare directly if they match
-                  predicate<service.WatchAuthenticationResponse>((resp) =>
-                      resp.status ==
-                      service.AuthenticationStatus.authenticationPending,),
-                  predicate<service.WatchAuthenticationResponse>((resp) =>
-                      resp.status ==
-                          service.AuthenticationStatus.authenticationSuccess &&
-                      resp.autoinstall == 'foo',),
+                  predicate<service.WatchAuthenticationResponse>(
+                    (resp) =>
+                        resp.status ==
+                        service.AuthenticationStatus.authenticationPending,
+                  ),
+                  predicate<service.WatchAuthenticationResponse>(
+                    (resp) =>
+                        resp.status ==
+                            service
+                                .AuthenticationStatus.authenticationSuccess &&
+                        resp.autoinstall == 'foo',
+                  ),
                 ],
               ),
             );

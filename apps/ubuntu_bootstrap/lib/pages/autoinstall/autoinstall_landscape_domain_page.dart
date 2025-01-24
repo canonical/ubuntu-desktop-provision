@@ -19,12 +19,12 @@ class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
   Future<bool> load(BuildContext context, WidgetRef ref) async =>
       ref.watch(autoinstallModelProvider).type == AutoinstallType.landscape;
 
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     final landscapeModel = ref.watch(landscapeDataModelProvider);
-    final hasActiveConnection = ref.watch(networkModelProvider).hasActiveConnection;
+    final hasActiveConnection =
+        ref.watch(networkModelProvider).hasActiveConnection;
 
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
@@ -51,7 +51,9 @@ class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
           initialValue: landscapeModel.domainUrl,
           onChanged: ref.read(landscapeDataModelProvider.notifier).setUrl,
           autovalidateMode: AutovalidateMode.onUserInteraction,
-          validator: (_) => landscapeModel.error != null ? l10n.landscapeDomainInvalidDomainWarning : null,
+          validator: (_) => landscapeModel.error != null
+              ? l10n.landscapeDomainInvalidDomainWarning
+              : null,
         ),
       ],
     );
@@ -72,16 +74,16 @@ class _NextButton extends ConsumerWidget {
       style: theme.elevatedButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
-      onPressed: landscapeModel.error == null &&
-              (landscapeModel.domainUrl != '')
-          ? () async {
-              if (await ref
-                  .read(landscapeDataModelProvider.notifier)
-                  .attach()) {
-                  if (context.mounted) await Wizard.of(context).next();
-              }
-            }
-          : null,
+      onPressed:
+          landscapeModel.error == null && (landscapeModel.domainUrl != '')
+              ? () async {
+                  if (await ref
+                      .read(landscapeDataModelProvider.notifier)
+                      .attach()) {
+                    if (context.mounted) await Wizard.of(context).next();
+                  }
+                }
+              : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
