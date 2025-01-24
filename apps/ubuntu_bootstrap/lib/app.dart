@@ -73,6 +73,12 @@ Future<void> runInstallerApp(
       // This can't be handled by the whitelabel config since if a user clicks
       // try, the next time it opens the installer the page shouldn't show.
       parser.addFlag('try-or-install', aliases: ['welcome']);
+      parser.addOption(
+        'experimental-features',
+        valueHelp: 'featureA,featureB',
+        defaultsTo: '',
+        help: 'Comma-separated list of experimental features to enable',
+      );
     },
   )!;
   final liveRun = options['dry-run'] != true;
@@ -119,6 +125,8 @@ Future<void> runInstallerApp(
     () => InstallerService(
       getService<SubiquityClient>(),
       pageConfig: getService<PageConfigService>(),
+      experimentalFeatures:
+          (options['experimental-features'] as String?)?.split(',') ?? [],
     ),
   );
   tryRegisterService(JournalService.new);

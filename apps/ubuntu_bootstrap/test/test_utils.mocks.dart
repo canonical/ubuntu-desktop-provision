@@ -233,6 +233,12 @@ class MockInstallerService extends _i1.Mock implements _i10.InstallerService {
       ) as _i3.PageConfigService);
 
   @override
+  List<String> get experimentalFeatures => (super.noSuchMethod(
+        Invocation.getter(#experimentalFeatures),
+        returnValue: <String>[],
+      ) as List<String>);
+
+  @override
   _i9.Future<void> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
