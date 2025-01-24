@@ -4,16 +4,14 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_model.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/services.dart' as service;
-import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-
-import 'autoinstall_model.dart';
 
 const kMagicAttachUrl =
     'myorg.saas.landscape.canonical.com/attach'; // Placeholder URL

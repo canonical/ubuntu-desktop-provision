@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 abstract class LandscapeService {
   Stream<WatchAuthenticationResponse> watch(String userCode);
   Future<AttachResponse> attach(String serverUrl,
-      {@visibleForTesting landscape.LandscapeClient? mockClient});
+      {@visibleForTesting landscape.LandscapeClient? mockClient,});
 }
 
 enum AuthenticationStatus {

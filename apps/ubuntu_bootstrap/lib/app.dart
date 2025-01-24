@@ -17,7 +17,6 @@ import 'package:ubuntu_bootstrap/app/installer_wizard.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_bootstrap/services/landscape_service.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';

@@ -11,7 +11,6 @@ import 'package:ubuntu_bootstrap/app.dart';
 import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_page.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';

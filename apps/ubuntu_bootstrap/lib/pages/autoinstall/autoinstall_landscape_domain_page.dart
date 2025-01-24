@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_model.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
-
-import 'autoinstall_landscape_model.dart';
-import 'autoinstall_model.dart';
-
-final _log = Logger();
 
 class LandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
   const LandscapeDomainPage({super.key});

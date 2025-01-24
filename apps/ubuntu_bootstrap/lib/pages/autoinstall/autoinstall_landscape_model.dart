@@ -34,8 +34,6 @@ Stream<WatchAuthenticationResponse> watchResponse(
   Ref ref,
 ) {
   final userCode = ref.read(landscapeDataModelProvider).userCode;
-
-  _log.info('Usercode is : $userCode');
   final landscapeService = getService<LandscapeService>();
   return landscapeService.watch(userCode);
 }
@@ -58,9 +56,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     String? autoinstall,
   ) async {
     if (status == AuthenticationStatus.authenticationSuccess) {
-      _log.info('Authentication successful; loading YAML...');
       loadYaml(autoinstall!);
-      _log.info('Current autoinstall: $autoinstall');
       await getService<AutoinstallService>().writeFile(autoinstall);
       await getService<AutoinstallService>().restartSubiquity();
       ref.read(restartProvider.notifier).state++;
@@ -87,7 +83,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
 
   Future<void> watch() async {
     if (state.userCode.isEmpty) {
-      _log.warning('Cannot watch; userCode is empty.');
+      _log.debug('Cannot watch; userCode is empty.');
       return;
     }
 
@@ -96,15 +92,14 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       (previous, next) {
         next.when(
           data: (value) async {
-            _log.info('response.value is: ${value.status}');
             await _handleAuthenticationStatus(value.status, value.autoinstall);
             state = state.copyWith(authenticationStatus: value.status);
           },
           loading: () {
-            _log.info('StreamProvider is still loading...');
+            _log.debug('watchResponseProvider is still loading...');
           },
           error: (err, stack) {
-            _log.error('StreamProvider error: $err');
+            _log.debug('watchResponseProvider error');
           },
         );
       },
