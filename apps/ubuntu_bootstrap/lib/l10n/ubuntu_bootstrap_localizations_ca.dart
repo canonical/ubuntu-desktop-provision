@@ -45,25 +45,25 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Please check the URL is correct, check your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Please check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Please check or provide a different file.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Please check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Unknown error';

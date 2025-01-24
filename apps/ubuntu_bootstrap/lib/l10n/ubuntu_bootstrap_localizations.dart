@@ -314,7 +314,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallDirectErrorNetworkBody.
   ///
   /// In en, this message translates to:
-  /// **'Please check the URL is correct, check your internet connection, or try later.'**
+  /// **'Check the URL is correct, test your internet connection, or try later.'**
   String get autoinstallDirectErrorNetworkBody;
 
   /// No description provided for @autoinstallDirectErrorInvalidUrlTitle.
@@ -326,7 +326,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallDirectErrorInvalidUrlBody.
   ///
   /// In en, this message translates to:
-  /// **'Please check the URL is correct or select a local file.'**
+  /// **'Check the URL is correct or select a local file.'**
   String get autoinstallDirectErrorInvalidUrlBody;
 
   /// No description provided for @autoinstallDirectErrorInvalidContentTitle.
@@ -338,7 +338,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallDirectErrorInvalidContentBody.
   ///
   /// In en, this message translates to:
-  /// **'Please check or provide a different file.'**
+  /// **'Check the file or provide a different one.'**
   String get autoinstallDirectErrorInvalidContentBody;
 
   /// No description provided for @autoinstallDirectErrorFileSystemTitle.
@@ -350,7 +350,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallDirectErrorFileSystemBody.
   ///
   /// In en, this message translates to:
-  /// **'Please check your permissions or provide a different file.'**
+  /// **'Check your permissions or provide a different file.'**
   String get autoinstallDirectErrorFileSystemBody;
 
   /// No description provided for @autoinstallDirectErrorUnkownTitle.
