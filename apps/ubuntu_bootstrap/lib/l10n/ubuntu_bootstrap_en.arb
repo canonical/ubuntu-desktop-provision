@@ -183,12 +183,12 @@
   "choosePassphraseConfirmHint": "Confirm the passphrase",
   "choosePassphraseRequired": "A passphrase is required",
   "choosePassphraseMismatch": "The passphrases do not match",
-  "choosePassphraseInfoHeader": "Make sure you save your passphrase",
-  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
-  "chooseOptionalPassphraseHeader": "Create a passphrase (Optional)",
-  "chooseOptionalPassphraseBody": "A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.",
-  "chooseOptionalPassphraseInfoHeader": "A passphrase does not replace your recovery keys",
-  "chooseOptionalPassphraseInfoBody": "Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.",
+  "choosePassphraseInfoHeader": "Store your passphrase somewhere safe",
+  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all your data.",
+  "chooseOptionalPassphraseHeader": "Create a passphrase (optional)",
+  "chooseOptionalPassphraseBody": "A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later",
+  "chooseOptionalPassphraseInfoHeader": "Store your passphrase and recovery key somewhere safe",
+  "chooseOptionalPassphraseInfoBody": "If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.",
   "createPassphrase": "Create a passphrase",
   "confirmPassphrase": "Confirm the passphrase",
   "installationTypeTitle": "Disk setup",
@@ -933,9 +933,9 @@
     }
   },
   "recoveryKeyTitle": "TPM recovery key",
-  "recoveryKeyHeader": "Getting a recovery key",
-  "recoveryKeyInfoHeader": "You might lose all of your data without a recovery key",
-  "recoveryKeyInfoBody": "Get a recovery key as soon as you first boot into {distro} and store it somewhere safe.",
+  "recoveryKeyHeader": "Get a recovery key",
+  "recoveryKeyInfoHeader": "You may lose all your data without a recovery key",
+  "recoveryKeyInfoBody": "Get a recovery key as soon as you first log into {distro} and store it somewhere safe.",
   "@recoveryKeyInfoBody": {
     "placeholders": {
       "distro": {
@@ -943,9 +943,9 @@
       }
     }
   },
-  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
-  "recoveryKeyStorageAdvice": "Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.",
-  "recoveryKeyConfirmation": "I understand that I may lose all of my data if I do not have a recovery key",
+  "recoveryKeyCommand": "To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:",
+  "recoveryKeyStorageAdvice": "Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.",
+  "recoveryKeyConfirmation": "I understand I may lose all my data if I don't have a recovery key",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",

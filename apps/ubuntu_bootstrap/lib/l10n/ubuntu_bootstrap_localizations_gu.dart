@@ -290,22 +290,22 @@ class UbuntuBootstrapLocalizationsGu extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'The passphrases do not match';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure you save your passphrase';
+  String get choosePassphraseInfoHeader => 'Store your passphrase somewhere safe';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all of your data.';
+  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all your data.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
 
   @override
   String get createPassphrase => 'Create a passphrase';
@@ -1045,24 +1045,24 @@ class UbuntuBootstrapLocalizationsGu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM recovery key';
 
   @override
-  String get recoveryKeyHeader => 'Getting a recovery key';
+  String get recoveryKeyHeader => 'Get a recovery key';
 
   @override
-  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
   }
 
   @override
-  String get recoveryKeyCommand => 'You can access your recovery key after installation with the following command:';
+  String get recoveryKeyCommand => 'To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
+  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

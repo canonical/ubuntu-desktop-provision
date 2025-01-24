@@ -296,16 +296,16 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => '암호를 분실하면 모든 데이터를 잃게 됩니다.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (Optional)';
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will be able to change the passphrase later but not remove it.';
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'A passphrase does not replace your recovery keys';
+  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Save both of them somewhere safe: if you lose them, you will lose all of your data. You can manage your passphrase and recovery keys with the snap command in the terminal.';
+  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
 
   @override
   String get createPassphrase => '암호 만들기';
@@ -1045,24 +1045,24 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM 복구 키';
 
   @override
-  String get recoveryKeyHeader => 'Getting a recovery key';
+  String get recoveryKeyHeader => 'Get a recovery key';
 
   @override
-  String get recoveryKeyInfoHeader => 'You might lose all of your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first boot into $distro and store it somewhere safe.';
+    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
   }
 
   @override
   String get recoveryKeyCommand => '설치 후 다음 명령을 사용하여 복구 키에 액세스할 수 있습니다:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Recovery keys let you decrypt the disk if the system detects any hardware changes on boot.';
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand that I may lose all of my data if I do not have a recovery key';
+  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
