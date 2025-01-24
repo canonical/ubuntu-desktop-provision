@@ -18,7 +18,6 @@ class PassphraseModel extends SafeChangeNotifier {
       _passphrase,
       _confirmedPassphrase,
       _showPassphrase,
-      _isTpm,
     ]).addListener(notifyListeners);
   }
 
@@ -27,7 +26,6 @@ class PassphraseModel extends SafeChangeNotifier {
   final _passphrase = ValueNotifier('');
   final _confirmedPassphrase = ValueNotifier('');
   final _showPassphrase = ValueNotifier(false);
-  final _isTpm = ValueNotifier(false);
 
   /// The current passphrase.
   String get passphrase => _passphrase.value;
@@ -42,8 +40,10 @@ class PassphraseModel extends SafeChangeNotifier {
   set showPassphrase(bool value) => _showPassphrase.value = value;
 
   /// Defines whether or not the user has selected TPM FDE
-  bool get isTpm => _isTpm.value;
-  set isTpm(bool value) => _isTpm.value = value;
+  bool get isTpm => [
+        GuidedCapability.CORE_BOOT_ENCRYPTED,
+        GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+      ].contains(_service.guidedCapability);
 
   /// Whether the current input is valid.
   bool get isValid =>
@@ -57,18 +57,14 @@ class PassphraseModel extends SafeChangeNotifier {
     switch (_service.guidedCapability) {
       case GuidedCapability.LVM_LUKS:
       case GuidedCapability.ZFS_LUKS_KEYSTORE:
-        isTpm = false;
-
       case GuidedCapability.CORE_BOOT_ENCRYPTED:
       case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
-        isTpm = true;
+        await loadPassphrase();
+        return true;
 
       default:
         return false;
     }
-
-    await loadPassphrase();
-    return true;
   }
 
   /// Loads the passphrase from the service.
