@@ -7,11 +7,18 @@ import 'package:ubuntu_provision/services.dart';
 final _log = Logger('installer_service');
 
 class InstallerService {
-  InstallerService(this._client, {required this.pageConfig});
+  InstallerService(
+    this._client, {
+    required this.pageConfig,
+    List<String>? experimentalFeatures,
+  }) : _experimentalFeatures = experimentalFeatures;
 
   final SubiquityClient _client;
   final PageConfigService pageConfig;
+  final List<String>? _experimentalFeatures;
   late Set<String> _pages;
+
+  List<String> get experimentalFeatures => _experimentalFeatures ?? [];
 
   Future<void> init() async {
     await _client.setVariant(Variant.DESKTOP);

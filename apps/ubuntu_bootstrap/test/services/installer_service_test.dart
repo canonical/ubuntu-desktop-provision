@@ -204,4 +204,13 @@ void main() {
 
     expect(service.hasRoute('identity'), isFalse);
   });
+
+  test('Experimental features', () async {
+    final service = InstallerService(
+      MockSubiquityClient(),
+      pageConfig: MockPageConfigService(),
+      experimentalFeatures: ['foo', 'bar'],
+    );
+    expect(service.experimentalFeatures, equals(['foo', 'bar']));
+  });
 }
