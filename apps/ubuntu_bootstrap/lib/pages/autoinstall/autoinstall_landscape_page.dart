@@ -13,9 +13,6 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const kMagicAttachUrl =
-    'myorg.saas.landscape.canonical.com/attach'; // Placeholder URL
-const kUbuntuLandscapeUrl = 'https://ubuntu.com/landscape';
 final _log = Logger('landscape');
 
 class LandscapePage extends ConsumerWidget with ProvisioningPage {
@@ -47,7 +44,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
             ),
             color: Theme.of(context).colorScheme.onSurface,
             barcode: Barcode.qrCode(),
-            data: '$kMagicAttachUrl?magic-attach-code=${model.userCode}',
+            data: '${model.domainUrl}?magic-attach-code=${model.userCode}',
             width: 200,
             height: 200,
           ),
@@ -59,7 +56,7 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
           children: [
             Html(
               data: l10n.landscapeMagicAttachInstructions(
-                kMagicAttachUrl.replaceFirst('https://', ''),
+                model.domainUrl.replaceFirst('https://', ''),
               ),
               style: {
                 'body':
