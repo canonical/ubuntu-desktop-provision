@@ -30,6 +30,9 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'Select file...';
 
   @override
+  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+
+  @override
   String get autoinstallDirectFilePickerTitle => 'Choose file';
 
   @override
@@ -37,6 +40,33 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
+  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+
+  @override
+  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+
+  @override
+  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
 
   @override
   String get autoinstallTitle => '설치 유형';
@@ -56,10 +86,10 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => '설치 과정을 단계별로 안내받고 싶은 사용자를 위한 옵션입니다.';
 
   @override
-  String get autoinstallAutomatedOption => '자동 설치';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => '여러 차례의 일관된 시스템 설정을 위해 autoinstall.yaml을 사용하는 고급 사용자를 위한 기능입니다.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => '바꾸기';

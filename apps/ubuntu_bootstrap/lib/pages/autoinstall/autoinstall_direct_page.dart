@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -8,7 +6,6 @@ import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaml/yaml.dart';
 import 'package:yaru/yaru.dart';
 
 class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
@@ -22,6 +19,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final directModel = ref.watch(autoinstallDirectModelProvider);
+    final notifier = ref.read(autoinstallDirectModelProvider.notifier);
 
     return HorizontalPage(
       windowTitle: lang.autoinstallDirectTitle,
@@ -34,18 +32,8 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         if (directModel.error != null) ...[
           YaruInfoBox(
             yaruInfoType: YaruInfoType.danger,
-            title: Text('Error'),
-            child: Text(
-              switch (directModel.error) {
-                YamlException _ => 'Invalid YAML',
-                final SocketException e => 'Network error: ${e.message}',
-                final ArgumentError e => 'Invalid URL: ${e.message}',
-                final FormatException e => 'Invalid Format: ${e.message}',
-                final FileSystemException e =>
-                  'File system error: ${e.message}',
-                _ => 'Unknown Error',
-              },
-            ),
+            title: Text(directModel.error!.title(lang)),
+            child: Text(directModel.error!.body(lang)),
           ),
           const SizedBox(height: kWizardSpacing),
         ],
@@ -54,7 +42,7 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         TextFormField(
           enabled: directModel.localPath == null,
           initialValue: directModel.url,
-          onChanged: ref.read(autoinstallDirectModelProvider.notifier).setUrl,
+          onChanged: notifier.setUrl,
           maxLines: null,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (_) => directModel.error != null ? '' : null,
@@ -76,16 +64,26 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
               ),
               child: Text(lang.autoinstallDirectFileButtonLabel),
             ),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Tooltip(
-                message: directModel.localPath?.path ?? '',
-                child: Text(
-                  directModel.localPath?.pathSegments.last ?? '',
-                  overflow: TextOverflow.ellipsis,
+            if (directModel.localPath != null) ...[
+              const SizedBox(width: 16),
+              Flexible(
+                child: Tooltip(
+                  message: directModel.localPath!.path,
+                  child: Text(
+                    directModel.localPath!.pathSegments.last,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(width: 8),
+              Tooltip(
+                message: lang.autoinstallDirectFileClearButtonLabel,
+                child: YaruIconButton(
+                  icon: Icon(YaruIcons.window_close),
+                  onPressed: () => notifier.setLocalPath(null),
+                ),
+              ),
+            ],
           ],
         ),
       ],

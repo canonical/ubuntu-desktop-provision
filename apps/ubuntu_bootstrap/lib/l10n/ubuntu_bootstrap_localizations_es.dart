@@ -30,6 +30,9 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'Select file...';
 
   @override
+  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+
+  @override
   String get autoinstallDirectFilePickerTitle => 'Choose file';
 
   @override
@@ -37,6 +40,33 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
+  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+
+  @override
+  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+
+  @override
+  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
 
   @override
   String get autoinstallTitle => 'Tipo de instalación';
@@ -56,10 +86,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Para usuarios que quieran ser guiados paso a paso durante la instalación.';
 
   @override
-  String get autoinstallAutomatedOption => 'Instalación automatizada';
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
 
   @override
-  String get autoinstallAutomatedDescription => 'Para usuarios avanzados que tienen un archivo autoinstall.yaml para configuraciones del sistema consistentes y repetibles.';
+  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
   String get changeButtonText => 'Cambiar';

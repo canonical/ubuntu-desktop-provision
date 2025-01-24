@@ -36,8 +36,8 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
         ),
         const SizedBox(height: kWizardSpacing / 2),
         OptionButton(
-          title: Text(lang.autoinstallAutomatedOption),
-          subtitle: Text(lang.autoinstallAutomatedDescription),
+          title: Text(lang.autoinstallDirectOption),
+          subtitle: Text(lang.autoinstallDirectDescription),
           value: AutoinstallType.direct,
           groupValue: autoinstallModel.type,
           onChanged: (value) =>

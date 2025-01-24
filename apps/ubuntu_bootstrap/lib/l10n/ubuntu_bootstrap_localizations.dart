@@ -281,6 +281,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Select file...'**
   String get autoinstallDirectFileButtonLabel;
 
+  /// No description provided for @autoinstallDirectFileClearButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear file'**
+  String get autoinstallDirectFileClearButtonLabel;
+
   /// No description provided for @autoinstallDirectFilePickerTitle.
   ///
   /// In en, this message translates to:
@@ -298,6 +304,60 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Import'**
   String get autoinstallDirectImportButtonLabel;
+
+  /// No description provided for @autoinstallDirectErrorNetworkTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Autoinstall file is not reachable'**
+  String get autoinstallDirectErrorNetworkTitle;
+
+  /// No description provided for @autoinstallDirectErrorNetworkBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the URL is correct, test your internet connection, or try later.'**
+  String get autoinstallDirectErrorNetworkBody;
+
+  /// No description provided for @autoinstallDirectErrorInvalidUrlTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid URL'**
+  String get autoinstallDirectErrorInvalidUrlTitle;
+
+  /// No description provided for @autoinstallDirectErrorInvalidUrlBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the URL is correct or select a local file.'**
+  String get autoinstallDirectErrorInvalidUrlBody;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid autoinstall file'**
+  String get autoinstallDirectErrorInvalidContentTitle;
+
+  /// No description provided for @autoinstallDirectErrorInvalidContentBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the file or provide a different one.'**
+  String get autoinstallDirectErrorInvalidContentBody;
+
+  /// No description provided for @autoinstallDirectErrorFileSystemTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Autoinstall file is not readable'**
+  String get autoinstallDirectErrorFileSystemTitle;
+
+  /// No description provided for @autoinstallDirectErrorFileSystemBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your permissions or provide a different file.'**
+  String get autoinstallDirectErrorFileSystemBody;
+
+  /// No description provided for @autoinstallDirectErrorUnkownTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown error'**
+  String get autoinstallDirectErrorUnkownTitle;
 
   /// No description provided for @autoinstallTitle.
   ///
@@ -329,17 +389,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'For users who want to be guided step by step through the installation.'**
   String get autoinstallInteractiveDescription;
 
-  /// No description provided for @autoinstallAutomatedOption.
+  /// No description provided for @autoinstallDirectOption.
   ///
   /// In en, this message translates to:
-  /// **'Automated installation'**
-  String get autoinstallAutomatedOption;
+  /// **'Automated with autoinstall file'**
+  String get autoinstallDirectOption;
 
-  /// No description provided for @autoinstallAutomatedDescription.
+  /// No description provided for @autoinstallDirectDescription.
   ///
   /// In en, this message translates to:
   /// **'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.'**
-  String get autoinstallAutomatedDescription;
+  String get autoinstallDirectDescription;
 
   /// No description provided for @changeButtonText.
   ///
