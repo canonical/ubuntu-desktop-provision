@@ -437,7 +437,7 @@
       "product": {}
     }
   },
-  "installationTypeAlongsideInfo": "應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。",
+  "installationTypeAlongsideInfo": "選擇一個分割區來調整大小並為{product}建立空間。您可以在啟動時選擇作業系統。",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "手動硬碟分割",
   "@installationTypeManual": {},
@@ -981,5 +981,15 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectTitle": "自動安裝",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "導入自動安裝檔案",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "您可以輸入自動安裝檔案的 URL：",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "或選擇本機檔案：",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "選擇檔案...",
+  "@autoinstallDirectFileButtonLabel": {}
 }
