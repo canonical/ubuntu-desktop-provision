@@ -410,7 +410,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallLandscapeDescription.
   ///
   /// In en, this message translates to:
-  /// **'For users in organisations that provide an autoinstall file via Landscape'**
+  /// **'For users in organisations that provide an autoinstall file via Landscape.'**
   String get autoinstallLandscapeDescription;
 
   /// No description provided for @changeButtonText.

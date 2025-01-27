@@ -44,7 +44,7 @@ enum InstallationStep with RouteName {
   tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
   autoinstall(AutoinstallPage.new, allowedToHide: true),
   autoinstallLandscapeDomain(LandscapeDomainPage.new),
-  landscape(LandscapePage.new, required: true),
+  autoinstallLandscapeQR(LandscapePage.new, required: true),
   autoinstallDirect(AutoinstallDirectPage.new),
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
