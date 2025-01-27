@@ -59,11 +59,11 @@ void main() {
 
         if (testCase.networkWarning) {
           expect(find.text(tester.lang.landscapeDomainNoInternetTitleWarning),
-              findsOneWidget);
+              findsOneWidget,);
           expect(
               find.text(
-                  tester.lang.landscapeDomainNoInternetDescriptionWarning),
-              findsOneWidget);
+                  tester.lang.landscapeDomainNoInternetDescriptionWarning,),
+              findsOneWidget,);
           verifyNever(mockService.attach(testCase.fqdn));
           expect(nextButton, isDisabled);
           return;
@@ -76,7 +76,7 @@ void main() {
         await tester.pump();
 
         expect(find.text(tester.lang.landscapeDomainInvalidDomainWarning),
-            findsNothing);
+            findsNothing,);
         expect(nextButton, isEnabled);
 
         await tester.tap(nextButton);
@@ -85,7 +85,7 @@ void main() {
         verify(mockService.attach(testCase.fqdn)).called(1);
         if (testCase.expectError) {
           expect(find.text(tester.lang.landscapeDomainInvalidDomainWarning),
-              findsOneWidget);
+              findsOneWidget,);
           expect(nextButton, isDisabled);
         }
       });
