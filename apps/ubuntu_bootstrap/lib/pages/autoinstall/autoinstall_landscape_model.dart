@@ -40,10 +40,21 @@ Stream<WatchAuthenticationResponse> watchResponse(
 
 @riverpod
 class LandscapeDataModel extends _$LandscapeDataModel {
+  ProviderSubscription<AsyncValue<WatchAuthenticationResponse>>? _stream;
+
   @override
   LandscapeData build() {
     final data = LandscapeData();
     return data;
+  }
+
+  void cancelStream() {
+    if (_stream == null) {
+      return;
+    }
+    _stream?.close();
+    state = state.copyWith(
+        authenticationStatus: AuthenticationStatus.authenticationPending);
   }
 
   void setUrl(String? url) {
@@ -87,7 +98,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       return;
     }
 
-    ref.listen<AsyncValue<WatchAuthenticationResponse>>(
+    _stream = ref.listen<AsyncValue<WatchAuthenticationResponse>>(
       watchResponseProvider,
       (previous, next) {
         next.when(

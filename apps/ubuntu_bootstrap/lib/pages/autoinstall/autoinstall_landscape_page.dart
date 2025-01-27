@@ -32,7 +32,9 @@ class LandscapePage extends ConsumerWidget with ProvisioningPage {
       windowTitle: l10n.landscapePageTitle,
       title: l10n.landscapeHeader,
       bottomBar: WizardBar(
-        leading: const BackWizardButton(),
+        leading: BackWizardButton(
+          onBack: ref.watch(landscapeDataModelProvider.notifier).cancelStream,
+        ),
       ),
       imageTitleWidget: Column(
         mainAxisSize: MainAxisSize.min,
