@@ -67,7 +67,7 @@ class _NextButton extends ConsumerWidget {
 //    final l10n = UbuntuBootstrapLocalizations.of(context);
 
     return ElevatedButton(
-      style: theme.elevatedButtonTheme.style?.copyWith(
+      style: theme.filledButtonTheme.style?.copyWith(
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
       onPressed:
@@ -87,13 +87,12 @@ class _NextButton extends ConsumerWidget {
             SizedBox.square(
               dimension: 16.0,
               child: YaruCircularProgressIndicator(
-                color: Theme.of(context).colorScheme.onPrimary,
                 strokeWidth: 2,
               ),
             ),
             const SizedBox(width: 8),
           ],
-          Text(l10n.next),
+          if (!landscapeModel.isLoading) Text(l10n.next),
         ],
       ),
     );
