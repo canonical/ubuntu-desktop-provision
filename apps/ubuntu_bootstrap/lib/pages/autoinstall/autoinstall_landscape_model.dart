@@ -34,7 +34,7 @@ Stream<WatchAuthenticationResponse> watchResponse(
   Ref ref,
 ) {
   final userCode = ref.read(landscapeDataModelProvider).userCode;
-  final landscapeService = getService<LandscapeService>();
+  final landscapeService = getService<LandscapeBackendService>();
   return landscapeService.watch(userCode);
 }
 
@@ -79,10 +79,15 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     state = state.copyWith(isLoading: true);
     try {
       final response =
-          await getService<LandscapeService>().attach(state.domainUrl);
+          await getService<LandscapeBackendService>().attach(state.domainUrl);
       if (response.status == AttachStatus.attachSuccess &&
           response.userCode != null) {
-        state = state.copyWith(userCode: response.userCode!);
+        state = state.copyWith(userCode: response.userCode!, isLoading: false);
+      } else {
+        // FIXME: Designs have this land on the error page.
+        final e = Exception('Landscape is not enabled on this account');
+        _log.debug('Through error during attach: $e');
+        throw Exception(e);
       }
     } on Exception catch (e) {
       _log.debug('Caught error during attach: $e');
