@@ -54,7 +54,8 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     }
     _stream?.close();
     state = state.copyWith(
-        authenticationStatus: AuthenticationStatus.authenticationPending,);
+      authenticationStatus: AuthenticationStatus.authenticationPending,
+    );
   }
 
   void setUrl(String? url) {
