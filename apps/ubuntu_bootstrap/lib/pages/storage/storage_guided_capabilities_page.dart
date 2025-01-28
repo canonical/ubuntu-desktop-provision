@@ -67,7 +67,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                 visible: model.showAdvanced,
                 child: Column(
                   children: [
-                    const SizedBox(height: kWizardSpacing/4),
+                    const SizedBox(height: kWizardSpacing / 4),
                     Divider(
                       color: theme.dividerColor,
                     ),
@@ -113,7 +113,9 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
               OutlinedButton(
                 onPressed: model.toggleShowAdvanced,
                 child: Text(
-                  model.showAdvanced ? lang.hideSecurityKey : lang.installationTypeAdvancedLabel,
+                  model.showAdvanced
+                      ? lang.hideSecurityKey
+                      : lang.installationTypeAdvancedLabel,
                 ),
               ),
             ],
