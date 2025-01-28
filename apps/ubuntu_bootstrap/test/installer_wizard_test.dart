@@ -495,6 +495,7 @@ extension on WidgetTester {
     bool includeTryOrInstall = false,
   }) {
     final installer = MockInstallerService();
+    when(installer.experimentalFeatures).thenReturn(List.from(['landscape']));
     when(installer.hasRoute(any)).thenAnswer((i) {
       return !excludedPages.contains(
         (i.positionalArguments.first as String).replaceFirst('/', ''),
