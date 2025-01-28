@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Ничего';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => 'Ничего не выбрано';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Использовать LVM и шифрование';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'LVM и шифрование выбраны';
 
   @override
@@ -384,6 +390,9 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => 'Стереть диск и использовать ZFS с шифрованием';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'Выбрана ZFS';

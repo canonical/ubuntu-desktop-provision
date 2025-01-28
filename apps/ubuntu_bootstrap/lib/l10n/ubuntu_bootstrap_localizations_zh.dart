@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => '空';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => '尚未选择任何安装选项';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => '使用 LVM（逻辑卷管理）与加密';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
 
   @override
@@ -384,6 +390,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => '擦除硬盘，并使用加密的 ZFS';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => '已选择配置 ZFS';

@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'هیچ‌کدام';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => 'هیچ‌کدام گزیده نشدند';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'استفاده از LVM و رمزنگاری';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'استفاده از LVM و رمزنگاری گزیده شد';
 
   @override
@@ -383,7 +389,10 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'آزمایشی: پاک کردن دیسک و استفاده از ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Encrypt with a passphrase using ZFS (experimental)';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'استفاده از ZFS گزیده شد';
@@ -392,11 +401,11 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'رمزنگاری و ZFS گزیده';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Hardware-backed encryption (experimental)';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return 'It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
   }
 
   @override

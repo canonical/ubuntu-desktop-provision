@@ -860,13 +860,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeAdvancedLabel.
   ///
   /// In en, this message translates to:
-  /// **'Advanced features...'**
+  /// **'Show advanced options...'**
   String get installationTypeAdvancedLabel;
 
   /// No description provided for @installationTypeAdvancedTitle.
   ///
   /// In en, this message translates to:
-  /// **'Advanced features'**
+  /// **'Encryption and file system'**
   String get installationTypeAdvancedTitle;
 
   /// No description provided for @installationTypeExperimental.
@@ -878,8 +878,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeNone.
   ///
   /// In en, this message translates to:
-  /// **'None'**
+  /// **'No encryption'**
   String get installationTypeNone;
+
+  /// No description provided for @installationTypeNoneInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Standard file system without encryption.'**
+  String get installationTypeNoneInfo;
 
   /// No description provided for @installationTypeNoneSelected.
   ///
@@ -890,7 +896,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeLVM.
   ///
   /// In en, this message translates to:
-  /// **'Use LVM'**
+  /// **'Use LVM without encryption'**
   String get installationTypeLVM;
 
   /// No description provided for @installationTypeLVMSelected.
@@ -902,8 +908,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeLVMEncryption.
   ///
   /// In en, this message translates to:
-  /// **'Use LVM and encryption'**
+  /// **'Encrypt with a passphrase'**
   String get installationTypeLVMEncryption;
+
+  /// No description provided for @installationTypeLVMEncryptionInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.'**
+  String get installationTypeLVMEncryptionInfo;
 
   /// No description provided for @installationTypeLVMEncryptionSelected.
   ///
@@ -920,14 +932,20 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeZFS.
   ///
   /// In en, this message translates to:
-  /// **'Erase disk and use ZFS'**
+  /// **'Use ZFS without encryption (experimental)'**
   String get installationTypeZFS;
 
   /// No description provided for @installationTypeZFSEncryption.
   ///
   /// In en, this message translates to:
-  /// **'Erase disk and use ZFS with encryption'**
+  /// **'Encrypt with a passphrase using ZFS (experimental)'**
   String get installationTypeZFSEncryption;
+
+  /// No description provided for @installationTypeZFSEncryptionInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.'**
+  String get installationTypeZFSEncryptionInfo;
 
   /// No description provided for @installationTypeZFSSelected.
   ///
@@ -944,13 +962,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTPM.
   ///
   /// In en, this message translates to:
-  /// **'Enable hardware-backed full disk encryption'**
+  /// **'Hardware-backed encryption (experimental)'**
   String get installationTypeTPM;
 
   /// No description provided for @installationTypeTPMInfo.
   ///
   /// In en, this message translates to:
-  /// **'This is an experimental feature. It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before you choose this option.'**
+  /// **'It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before you choose this option.'**
   String installationTypeTPMInfo(String DISTRO, String url);
 
   /// No description provided for @installationTypeTPMSelected.

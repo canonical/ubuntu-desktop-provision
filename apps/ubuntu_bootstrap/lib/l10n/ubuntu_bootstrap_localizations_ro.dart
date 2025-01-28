@@ -350,28 +350,34 @@ class UbuntuBootstrapLocalizationsRo extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced features...';
+  String get installationTypeAdvancedLabel => 'Show advanced options...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Advanced features';
+  String get installationTypeAdvancedTitle => 'Encryption and file system';
 
   @override
   String get installationTypeExperimental => 'Experimental';
 
   @override
-  String get installationTypeNone => 'None';
+  String get installationTypeNone => 'No encryption';
+
+  @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
 
   @override
   String get installationTypeNoneSelected => 'None selected';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Use LVM without encryption';
 
   @override
   String get installationTypeLVMSelected => 'LVM selected';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM and encryption';
+  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+
+  @override
+  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
@@ -380,10 +386,13 @@ class UbuntuBootstrapLocalizationsRo extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
 
   @override
-  String get installationTypeZFS => 'Erase disk and use ZFS';
+  String get installationTypeZFS => 'Use ZFS without encryption (experimental)';
 
   @override
-  String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
+  String get installationTypeZFSEncryption => 'Encrypt with a passphrase using ZFS (experimental)';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS selected';
@@ -392,11 +401,11 @@ class UbuntuBootstrapLocalizationsRo extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
 
   @override
-  String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
+  String get installationTypeTPM => 'Hardware-backed encryption (experimental)';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'This is an experimental feature. It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return 'It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
   }
 
   @override
