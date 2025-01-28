@@ -1,8 +1,8 @@
 module github.com/canonical/ubuntu-desktop-provision/provd
 
-go 1.22.0
+go 1.23
 
-toolchain go1.22.11
+toolchain go1.23.5
 
 require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
@@ -11,7 +11,7 @@ require (
 	github.com/spf13/viper v1.18.2
 	github.com/stretchr/testify v1.9.0
 	github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a
-	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
+	github.com/ubuntu/ubuntu-report v1.7.4-0.20241126152223-b9c5b9b8cd90
 	google.golang.org/grpc v1.63.2
 	google.golang.org/protobuf v1.33.0
 	gopkg.in/yaml.v3 v3.0.1
