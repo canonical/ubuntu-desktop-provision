@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/widgets/bitlocker_warning.dart';
@@ -29,6 +30,20 @@ void main() {
         pageImagesProvider.overrideWith((_) => pageImages),
       ],
       child: StoragePage(),
+    );
+  }
+
+  Widget buildAdvancedPage(StorageModel model) {
+    final pageImages = PageImages.internal(
+      MockPageConfigService(),
+      MockThemeVariantService(),
+    );
+    return ProviderScope(
+      overrides: [
+        storageModelProvider.overrideWith((_) => model),
+        pageImagesProvider.overrideWith((_) => pageImages),
+      ],
+      child: GuidedCapabilitiesPage(),
     );
   }
 
@@ -401,6 +416,118 @@ void main() {
 
     final radio = find.radioListTile(l10n.installationTypeManual);
     expect(radio, findsNothing);
+  });
+
+  group('advanced features', () {
+    testWidgets('none', (tester) async {
+      final model = buildStorageModel(
+        showAdvanced: false,
+        guidedCapability: GuidedCapability.LVM_LUKS,
+      );
+
+      await tester.pumpApp((_) => buildAdvancedPage(model));
+
+      final context = tester.element(find.byType(GuidedCapabilitiesPage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsOneWidget);
+      expect(find.text(l10n.installationTypeNone), findsOneWidget);
+
+      await tester.tap(find.text(l10n.installationTypeNone));
+
+      verify(model.guidedCapability = GuidedCapability.DIRECT).called(1);
+    });
+
+    testWidgets('lvm luks', (tester) async {
+      final model = buildStorageModel(showAdvanced: true);
+
+      await tester.pumpApp((_) => buildAdvancedPage(model));
+
+      final context = tester.element(find.byType(GuidedCapabilitiesPage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+      expect(find.text(l10n.installationTypeLVMEncryption), findsOneWidget);
+
+      await tester.tap(find.text(l10n.installationTypeLVMEncryption));
+
+      verify(model.guidedCapability = GuidedCapability.LVM_LUKS).called(1);
+    });
+
+    testWidgets('lvm', (tester) async {
+      final model = buildStorageModel(showAdvanced: true);
+
+      await tester.pumpApp((_) => buildAdvancedPage(model));
+
+      final context = tester.element(find.byType(GuidedCapabilitiesPage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+      expect(find.text(l10n.installationTypeLVM), findsOneWidget);
+
+      await tester.tap(find.text(l10n.installationTypeLVM));
+
+      verify(model.guidedCapability = GuidedCapability.LVM).called(1);
+    });
+
+    testWidgets('zfs', (tester) async {
+      final model = buildStorageModel(showAdvanced: true);
+
+      await tester.pumpApp((_) => buildAdvancedPage(model));
+
+      final context = tester.element(find.byType(GuidedCapabilitiesPage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      await tester.scrollUntilVisible(
+        find.text(l10n.installationTypeZFS),
+        -kMinInteractiveDimension / 2,
+        scrollable: find.byType(Scrollable).last,
+      );
+
+      await tester.pump();
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+      expect(find.text(l10n.installationTypeZFS), findsOneWidget);
+
+      await tester.tap(find.text(l10n.installationTypeZFS));
+
+      verify(model.guidedCapability = GuidedCapability.ZFS).called(1);
+    });
+
+    testWidgets('zfs luks', (tester) async {
+      final model = buildStorageModel(showAdvanced: true);
+
+      await tester.pumpApp((_) => buildAdvancedPage(model));
+
+      final context = tester.element(find.byType(GuidedCapabilitiesPage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      await tester.scrollUntilVisible(
+        find.text(l10n.installationTypeZFSEncryption),
+        -kMinInteractiveDimension / 2,
+        scrollable: find.byType(Scrollable).last,
+      );
+
+      await tester.pump();
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+      expect(find.text(l10n.installationTypeZFSEncryption), findsOneWidget);
+
+      await tester.tap(find.text(l10n.installationTypeZFSEncryption));
+
+      verify(model.guidedCapability = GuidedCapability.ZFS_LUKS_KEYSTORE)
+          .called(1);
+    });
+
+    testWidgets('no advanced features', (tester) async {
+      final model = buildStorageModel(hasAdvancedFeatures: false);
+      await tester.pumpApp((_) => buildPage(model));
+
+      final context = tester.element(find.byType(StoragePage));
+      final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+    });
   });
 
   testWidgets('no capabilities', (tester) async {
