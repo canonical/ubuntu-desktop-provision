@@ -33,7 +33,7 @@ pages:
   storage:
     image: "assets/images/disk.svg"
   guided-capabilities:
-    image: "assets/images/disk.svg"
+    image: "assets/images/encryption.svg"
   eula:
   guided-resize:
     image: "assets/images/disk.svg"
