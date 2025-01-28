@@ -57,6 +57,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
@@ -95,6 +96,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase);
+    await tester.testGuidedCapabilityPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
 
@@ -125,8 +127,16 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.LVM_LUKS,
     );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testPassphrasePage(passphrase: 'password');
 
@@ -167,8 +177,17 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS,
     );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
@@ -207,8 +226,16 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testPassphrasePage(passphrase: 'password');
 
@@ -257,8 +284,17 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
 
     await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: '', skip: true);
@@ -353,6 +389,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.manual);
+    await tester.testGuidedCapabilityPage();
     await tester.testManualStoragePage(storage: storage);
 
     await tester.testIdentityPage(
@@ -592,6 +629,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.alongside);
+    await tester.testGuidedCapabilityPage();
     await tester.testGuidedResizePage(size: 30);
 
     await tester.testIdentityPage(
@@ -782,6 +820,7 @@ Future<void> eraseInstallTest({
   await tester.testSourceSelectionPage();
   await tester.testCodecsAndDriversPage();
   await tester.testStoragePage(type: StorageTypeEraseInstall(target));
+  await tester.testGuidedCapabilityPage();
   await tester.testIdentityPage(
     identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
     password: 'password',
