@@ -45,6 +45,21 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
   }
 
   @override
+  bool get showAdvanced => (super.noSuchMethod(
+        Invocation.getter(#showAdvanced),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  set showAdvanced(bool? _showAdvanced) => super.noSuchMethod(
+        Invocation.setter(
+          #showAdvanced,
+          _showAdvanced,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   String get tpmInfoUrl => (super.noSuchMethod(
         Invocation.getter(#tpmInfoUrl),
         returnValue: _i4.dummyValue<String>(
@@ -157,6 +172,15 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
+  @override
+  void toggleShowAdvanced() => super.noSuchMethod(
+        Invocation.method(
+          #toggleShowAdvanced,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   List<_i6.GuidedStorageTarget> getAllTargets() => (super.noSuchMethod(

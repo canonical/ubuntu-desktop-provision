@@ -23,6 +23,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_m
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
@@ -239,6 +240,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(StoragePage), findsOneWidget);
     verify(storageModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(GuidedCapabilitiesPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
