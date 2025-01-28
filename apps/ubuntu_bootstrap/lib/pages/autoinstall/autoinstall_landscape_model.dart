@@ -12,7 +12,7 @@ import 'package:yaml/yaml.dart';
 part 'autoinstall_landscape_model.freezed.dart';
 part 'autoinstall_landscape_model.g.dart';
 
-final _log = Logger();
+final _log = Logger('landscape_model');
 
 @freezed
 class LandscapeData with _$LandscapeData {

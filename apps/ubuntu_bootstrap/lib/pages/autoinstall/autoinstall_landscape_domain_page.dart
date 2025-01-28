@@ -64,7 +64,6 @@ class _NextButton extends ConsumerWidget {
     final landscapeModel = ref.watch(landscapeDataModelProvider);
     final theme = Theme.of(context);
     final l10n = UbuntuBootstrapLocalizations.of(context);
-//    final l10n = UbuntuBootstrapLocalizations.of(context);
 
     return ElevatedButton(
       style: theme.filledButtonTheme.style?.copyWith(
