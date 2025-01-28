@@ -1015,5 +1015,25 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectImportButtonLabel": "Імпорт",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectFileClearButtonLabel": "Очистити файл",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Обрати файл",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Файли YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Файл автоматичного встановлення недоступний",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectTitle": "Автоматизоване встановлення",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Імпорт файлу автоматичного встановлення",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Ви можете ввести URL-адресу файлу автоматичного встановлення:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Або виберіть локальний файл:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Вибрати файл...",
+  "@autoinstallDirectFileButtonLabel": {}
 }
