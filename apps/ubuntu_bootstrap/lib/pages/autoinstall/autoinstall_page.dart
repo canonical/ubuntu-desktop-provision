@@ -43,15 +43,17 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
           onChanged: (value) =>
               ref.read(autoinstallModelProvider.notifier).setType(value),
         ),
-        const SizedBox(height: kWizardSpacing / 2),
-        OptionButton(
-          title: Text(lang.autoinstallLandscapeOption),
-          subtitle: Text(lang.autoinstallLandscapeDescription),
-          value: AutoinstallType.landscape,
-          groupValue: autoinstallModel.type,
-          onChanged: (value) =>
-              ref.read(autoinstallModelProvider.notifier).setType(value),
-        ),
+        if (ref.watch(autoinstallModelProvider.notifier).showLandscape) ...[
+          const SizedBox(height: kWizardSpacing / 2),
+          OptionButton(
+            title: Text(lang.autoinstallLandscapeOption),
+            subtitle: Text(lang.autoinstallLandscapeDescription),
+            value: AutoinstallType.landscape,
+            groupValue: autoinstallModel.type,
+            onChanged: (value) =>
+                ref.read(autoinstallModelProvider.notifier).setType(value),
+          ),
+        ],
       ],
     );
   }
