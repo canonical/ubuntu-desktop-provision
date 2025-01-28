@@ -25,8 +25,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final experimentalBadgeText =
-        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
+    final theme = Theme.of(context);
 
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
@@ -40,15 +39,6 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
-        // OptionButton(
-        //   title: Text(lang.autoinstallInteractiveOption),
-        //   subtitle: Text(lang.autoinstallInteractiveDescription),
-        //   value: AutoinstallType.none,
-        //   groupValue: autoinstallModel.type,
-        //   onChanged: (value) =>
-        //       ref.read(autoinstallModelProvider.notifier).setType(value),
-        // ),
-
       children: [
         SizedBox(
           width: kWizardDialogWidth,
@@ -59,59 +49,76 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
               if (model.hasDirect)
                 OptionButton(
                   title: Text(lang.installationTypeNone),
-                  subtitle: Text('foo'),
+                  subtitle: Text(lang.installationTypeNoneInfo),
                   value: GuidedCapability.DIRECT,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              if (model.hasLvm) ...[
-                OptionButton(
-                  title: Text(lang.installationTypeLVM),
-                  subtitle: Text('foo'),
-                  value: GuidedCapability.LVM,
-                  groupValue: model.guidedCapability,
-                  onChanged: (v) => model.guidedCapability = v!.clean(),
-                ),
+              const SizedBox(height: kWizardSpacing),
+              if (model.hasLvm)
                 OptionButton(
                   title: Text(lang.installationTypeLVMEncryption),
-                  subtitle: Text('foo'),
+                  subtitle: Text(lang.installationTypeLVMEncryptionInfo),
                   value: GuidedCapability.LVM_LUKS,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              ],
-              if (model.hasZfs) ...[
-                OptionButton(
-                  title: Wrap(
-                    children: [
-                      Text(lang.installationTypeZFS),
-                      InfoBadge(title: experimentalBadgeText),
+              Visibility(
+                visible: model.showAdvanced,
+                child: Column(
+                  children: [
+                    const SizedBox(height: kWizardSpacing/4),
+                    Divider(
+                      color: theme.dividerColor,
+                    ),
+                    if (model.hasLvm)
+                      OptionButton(
+                        title: Text(lang.installationTypeLVM),
+                        subtitle: Text(''),
+                        value: GuidedCapability.LVM,
+                        groupValue: model.guidedCapability,
+                        onChanged: (v) => model.guidedCapability = v!.clean(),
+                      ),
+                    if (model.hasZfs) ...[
+                      OptionButton(
+                        title: Wrap(
+                          children: [
+                            Text(lang.installationTypeZFSEncryption),
+                          ],
+                        ),
+                        subtitle: Text(lang.installationTypeZFSEncryptionInfo),
+                        value: GuidedCapability.ZFS_LUKS_KEYSTORE,
+                        groupValue: model.guidedCapability,
+                        onChanged: (v) => model.guidedCapability = v!.clean(),
+                      ),
+                      OptionButton(
+                        title: Wrap(
+                          children: [
+                            Text(lang.installationTypeZFS),
+                          ],
+                        ),
+                        subtitle: Text(''),
+                        value: GuidedCapability.ZFS,
+                        groupValue: model.guidedCapability,
+                        onChanged: (v) => model.guidedCapability = v!.clean(),
+                      ),
                     ],
-                  ),
-                  subtitle: Text('foo'),
-                  value: GuidedCapability.ZFS,
-                  groupValue: model.guidedCapability,
-                  onChanged: (v) => model.guidedCapability = v!.clean(),
+                    TpmOption(
+                      model: model,
+                    ),
+                  ].withSpacing(kWizardSpacing),
                 ),
-                OptionButton(
-                  title: Wrap(
-                    children: [
-                      Text(lang.installationTypeZFSEncryption),
-                      InfoBadge(title: experimentalBadgeText),
-                    ],
-                  ),
-                  subtitle: Text('foo'),
-                  value: GuidedCapability.ZFS_LUKS_KEYSTORE,
-                  groupValue: model.guidedCapability,
-                  onChanged: (v) => model.guidedCapability = v!.clean(),
-                ),
-              ],
-              TpmOption(
-                model: model,
               ),
-            ].withSpacing(kWizardSpacing),
+              const SizedBox(height: kWizardSpacing),
+              OutlinedButton(
+                onPressed: model.toggleShowAdvanced,
+                child: Text(
+                  model.showAdvanced ? lang.hideSecurityKey : lang.installationTypeAdvancedLabel,
+                ),
+              ),
+            ],
           ),
-        )
+        ),
       ],
     );
   }
@@ -128,8 +135,6 @@ class TpmOption extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
-    final experimentalBadgeText =
-        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
     final target = model
         .getAllTargets()
@@ -139,43 +144,29 @@ class TpmOption extends ConsumerWidget {
 
     final tpmInfo =
         lang.installationTypeTPMInfo(flavor.displayName, model.tpmInfoUrl);
-    final disallowedCapability = target.disallowed.firstWhereOrNull(
-      (e) =>
-          e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-          e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-    );
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        YaruRadioButton<GuidedCapability>(
+        OptionButton<GuidedCapability?>(
           title: Wrap(
             children: [
               Text(lang.installationTypeTPM),
-              InfoBadge(title: experimentalBadgeText),
             ],
           ),
-          subtitle: disallowedCapability?.message == null
-              ? null
-              : Text(disallowedCapability!.message!),
+          subtitle: Html(
+            data: tpmInfo,
+            style: {
+              'body': Style(margin: Margins.zero),
+              'a': Style(color: Theme.of(context).colorScheme.link),
+            },
+            onLinkTap: (url, _, __) => launchUrl(url!),
+          ),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
           groupValue: model.guidedCapability,
           onChanged: model.hasTpm ? (v) => model.guidedCapability = v : null,
         ),
-        if (model.guidedCapability == GuidedCapability.CORE_BOOT_ENCRYPTED) ...[
-          const SizedBox(height: kWizardSpacing),
-          InfoBox(
-            child: Html(
-              data: tpmInfo,
-              style: {
-                'body': Style(margin: Margins.zero),
-                'a': Style(color: Theme.of(context).colorScheme.link),
-              },
-              onLinkTap: (url, _, __) => launchUrl(url!),
-            ),
-          ),
-        ],
       ],
     );
   }
