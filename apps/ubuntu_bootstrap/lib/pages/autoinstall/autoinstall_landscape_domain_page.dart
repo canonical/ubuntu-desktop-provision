@@ -8,7 +8,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class AutoinstallLandscapeDomainPage extends ConsumerWidget with ProvisioningPage {
+class AutoinstallLandscapeDomainPage extends ConsumerWidget
+    with ProvisioningPage {
   const AutoinstallLandscapeDomainPage({super.key});
 
   @override

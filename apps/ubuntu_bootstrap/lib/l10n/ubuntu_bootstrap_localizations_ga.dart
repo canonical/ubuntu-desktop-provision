@@ -1071,4 +1071,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+
+  @override
+  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+
+  @override
+  String get landscapeLoginFailedWarning => 'Login failed, please try again';
 }

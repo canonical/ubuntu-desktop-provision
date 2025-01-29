@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_page.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
@@ -59,9 +58,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   Future<void> testLandscapePage({
     String? screenshot,
   }) async {
-    await pumpUntilPage(LandscapePage);
+    await pumpUntilPage(AutoinstallLandscapeQrPage);
 
-    final context = element(find.byType(LandscapePage));
+    final context = element(find.byType(AutoinstallLandscapeQrPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.landscapePageTitle), findsOneWidget);

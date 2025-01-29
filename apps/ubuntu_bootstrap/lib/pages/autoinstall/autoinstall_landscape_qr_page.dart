@@ -91,7 +91,7 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
                               const ErrorIcon(),
                               const SizedBox(width: kWizardSpacing / 4),
                               Text(
-                                'Code expired, please try again',
+                                l10n.landscapeCodeExpiredWarning,
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium
@@ -111,7 +111,7 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
                               const ErrorIcon(),
                               const SizedBox(width: kWizardSpacing / 4),
                               Text(
-                                'Login failed, please try again',
+                                l10n.landscapeLoginFailedWarning,
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium

@@ -1071,6 +1071,12 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+
+  @override
+  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+
+  @override
+  String get landscapeLoginFailedWarning => 'Login failed, please try again';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

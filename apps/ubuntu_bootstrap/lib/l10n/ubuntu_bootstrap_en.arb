@@ -962,5 +962,9 @@
   "landscapeDomainNoInternetTitleWarning": "Connect to the internet to continue",
   "@landscapeDomainNoInternetTitleWarning": {},
   "landscapeDomainNoInternetDescriptionWarning": "Internet is needed to fetch the autoinstall file from Landscape",
-  "@landscapeDomainNoInternetDescriptionWarning": {}
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeCodeExpiredWarning": "Code expired, please try again",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Login failed, please try again",
+  "@landscapeLoginFailedWarning": {}
 }

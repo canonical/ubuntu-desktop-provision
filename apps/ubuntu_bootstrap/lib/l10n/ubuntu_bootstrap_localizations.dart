@@ -2026,6 +2026,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Internet is needed to fetch the autoinstall file from Landscape'**
   String get landscapeDomainNoInternetDescriptionWarning;
+
+  /// No description provided for @landscapeCodeExpiredWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Code expired, please try again'**
+  String get landscapeCodeExpiredWarning;
+
+  /// No description provided for @landscapeLoginFailedWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Login failed, please try again'**
+  String get landscapeLoginFailedWarning;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {
