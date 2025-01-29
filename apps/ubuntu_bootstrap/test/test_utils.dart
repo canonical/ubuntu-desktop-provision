@@ -96,7 +96,6 @@ MockPageConfigService setupMockPageConfig({
               (step) => MapEntry(step.name, const PageConfigEntry()),
             ),
       );
-
   final pageConfigService = MockPageConfigService();
   registerMockService<PageConfigService>(pageConfigService);
   when(pageConfigService.pages).thenReturn(pages);
