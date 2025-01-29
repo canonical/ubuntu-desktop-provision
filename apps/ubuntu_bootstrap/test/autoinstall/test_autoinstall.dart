@@ -28,7 +28,7 @@ Widget buildLandscaepDomainPage({List<Override>? overrides}) {
 
   return ProviderScope(
     overrides: overrides ?? [],
-    child: const LandscapeDomainPage(),
+    child: const AutoinstallLandscapeDomainPage(),
   );
 }
 

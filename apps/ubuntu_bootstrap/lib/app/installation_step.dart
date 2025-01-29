@@ -2,8 +2,6 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_domain_page.dart';
-import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_page.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -43,8 +41,8 @@ enum InstallationStep with RouteName {
   refresh(RefreshPage.new, allowedToHide: true),
   tryOrInstall(TryOrInstallPage.new, discreteStep: false, allowedToHide: true),
   autoinstall(AutoinstallPage.new, allowedToHide: true),
-  autoinstallLandscapeDomain(LandscapeDomainPage.new),
-  autoinstallLandscapeQR(LandscapePage.new, required: true),
+  autoinstallLandscapeDomain(AutoinstallLandscapeDomainPage.new),
+  autoinstallLandscapeQr(AutoinstallLandscapeQrPage.new, required: true),
   autoinstallDirect(AutoinstallDirectPage.new),
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),

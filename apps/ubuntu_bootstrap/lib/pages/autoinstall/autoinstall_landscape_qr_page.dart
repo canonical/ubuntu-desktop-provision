@@ -15,8 +15,8 @@ import 'package:yaru/yaru.dart';
 
 final _log = Logger('landscape');
 
-class LandscapePage extends ConsumerWidget with ProvisioningPage {
-  const LandscapePage({super.key});
+class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
+  const AutoinstallLandscapeQrPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
