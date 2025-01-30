@@ -140,6 +140,8 @@ class PageImages {
       'try-or-install.svg',
       'logo-light.svg',
       'logo-dark.svg',
+      'landscape-dark.svg',
+      'landscape-light.svg',
     ];
 
     final extension = path.extension(imagePath);

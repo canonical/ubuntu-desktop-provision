@@ -92,6 +92,12 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
+  String get autoinstallLandscapeOption => 'Automated with Landscape';
+
+  @override
+  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+
+  @override
   String get changeButtonText => 'Changer';
 
   @override
@@ -1033,4 +1039,42 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">Attention :</font> Si vous oubliez cette clé de sécurité, toutes les données seront perdues. Si vous avez besoin, notez votre clé et conservez-la dans un endroit sûr.';
   }
+
+  @override
+  String landscapeMagicAttachInstructions(Object url) {
+    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get landscapePageTitle => 'Automated installation';
+
+  @override
+  String get landscapeHeader => 'Log in to Landscape';
+
+  @override
+  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+
+  @override
+  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+
+  @override
+  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+
+  @override
+  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+
+  @override
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+
+  @override
+  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+
+  @override
+  String get landscapeLoginFailedWarning => 'Login failed, please try again';
 }

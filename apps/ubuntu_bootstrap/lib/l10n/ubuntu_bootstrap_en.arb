@@ -41,6 +41,8 @@
   "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
   "autoinstallDirectOption": "Automated with autoinstall file",
   "autoinstallDirectDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+  "autoinstallLandscapeOption": "Automated with Landscape",
+  "autoinstallLandscapeDescription": "For users in organisations that provide an autoinstall file via Landscape.",
   "changeButtonText": "Change",
   "quitButtonText": "Quit installation",
   "loadingPageTitle": "Welcome to {DISTRO}",
@@ -935,5 +937,34 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Automated installation",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Log in to Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Enter Landscape domain (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Provide your organization's Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Landscape domain (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Next",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Invalid domain, please check or contact your IT support",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Connect to the internet to continue",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet is needed to fetch the autoinstall file from Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeCodeExpiredWarning": "Code expired, please try again",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Login failed, please try again",
+  "@landscapeLoginFailedWarning": {}
 }

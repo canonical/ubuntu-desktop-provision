@@ -17,6 +17,9 @@ pages:
     image: "assets/images/disk.svg"
   autoinstall-direct:
     image: "assets/images/disk.svg"
+  autoinstall-landscape-domain:
+    image: "assets/images/landscape.svg"
+  autoinstall-landscape-qr:
   source-selection:
     image: "assets/images/applications.svg"
   codecs-and-drivers:

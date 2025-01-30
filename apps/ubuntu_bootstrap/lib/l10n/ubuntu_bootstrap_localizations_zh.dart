@@ -92,6 +92,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
+  String get autoinstallLandscapeOption => 'Automated with Landscape';
+
+  @override
+  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+
+  @override
   String get changeButtonText => '更改';
 
   @override
@@ -1033,6 +1039,44 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String recoveryKeyWarning(String color) {
     return '<font color=\"$color\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。';
   }
+
+  @override
+  String landscapeMagicAttachInstructions(Object url) {
+    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get landscapePageTitle => 'Automated installation';
+
+  @override
+  String get landscapeHeader => 'Log in to Landscape';
+
+  @override
+  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+
+  @override
+  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+
+  @override
+  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+
+  @override
+  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+
+  @override
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+
+  @override
+  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+
+  @override
+  String get landscapeLoginFailedWarning => 'Login failed, please try again';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

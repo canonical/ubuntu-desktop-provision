@@ -1,0 +1,17 @@
+[package]
+name = "landscape_mock_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.39"
+clap = { version = "4.5.26", features = ["derive"] }
+prost = "0.13.4"
+prost-types = "0.13.4"
+protobuf = "3.7.1"
+tokio = { version = "1.43.0", features = ["rt", "rt-multi-thread", "macros"]  }
+tokio-stream = "0.1.17"
+tonic = "0.12.3"
+
+[build-dependencies]
+tonic-build = { version = "0.12.0", features = ["prost"] }
