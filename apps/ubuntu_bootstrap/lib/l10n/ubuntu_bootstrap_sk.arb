@@ -992,7 +992,7 @@
   "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
   "@autoinstallDirectFilePickerTitle": {},
-  "autoinstallDirectFilePickerFilterLabel": "YAML súbory",
+  "autoinstallDirectFilePickerFilterLabel": "Súbory YAML",
   "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectImportButtonLabel": "Importovať",
   "@autoinstallDirectImportButtonLabel": {},
