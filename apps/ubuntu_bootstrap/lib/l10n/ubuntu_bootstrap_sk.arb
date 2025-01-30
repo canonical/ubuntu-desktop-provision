@@ -733,7 +733,7 @@
       "snap": {}
     }
   },
-  "recoveryKeyCommand": "K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:",
+  "recoveryKeyCommand": "Aby ste získali obnovovací kľúč, dokončite inštaláciu, reštartujte počítač a spustite tento príkaz v termináli:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim údajom sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
   "@recoveryKeyWarning": {
@@ -1021,7 +1021,7 @@
   "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectFileClearButtonLabel": "Vymazať súbor",
   "@autoinstallDirectFileClearButtonLabel": {},
-  "autoinstallDirectOption": "Automatická so súborom autoinštalácie",
+  "autoinstallDirectOption": "Automaticky so súborom autoinštalácie",
   "@autoinstallDirectOption": {},
   "autoinstallDirectErrorNetworkBody": "Skontrolujte správnosť URL, overte internetové pripojenie alebo to skúste neskôr.",
   "@autoinstallDirectErrorNetworkBody": {},
@@ -1076,8 +1076,26 @@
   "@autoinstallLandscapeOption": {},
   "chooseOptionalPassphraseBody": "Prístupová fráza môže pomôcť chrániť vaše údaje, aj keď bude vaše zariadenie kompromitované. Budete ju musieť zadať vždy, keď zapnete počítač. Neskôr ju nebude možné odstrániť",
   "@chooseOptionalPassphraseBody": {},
-  "chooseOptionalPassphraseHeader": "Vytvorte prístupovú frázu (voliteľné)",
+  "chooseOptionalPassphraseHeader": "Vytvorenie prístupovej frázy (voliteľné)",
   "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto",
-  "@chooseOptionalPassphraseInfoHeader": {}
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "recoveryKeyHeader": "Získanie obnovovacieho kľúča",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyStorageAdvice": "Uložte obnovovací kľúč na bezpečné miesto. Použite ho na dešifrovanie disku v prípade určitých zmien v systéme. Napríklad ho môžete potrebovať, ak zmeníte komponenty vo vašom počítači alebo aktualizujete firmvér.",
+  "@recoveryKeyStorageAdvice": {},
+  "recoveryKeyInfoHeader": "Bez obnovovacieho kľúča môžete prísť o všetky svoje údaje",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč",
+  "@recoveryKeyConfirmation": {},
+  "chooseOptionalPassphraseInfoBody": "Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje. Prístupová fráza nenahrádza obnovovací kľúč ani vaše používateľské heslo.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyInfoBody": "Získajte obnovovací kľúč hneď po prvom prihlásení do {distro} a uložte ho na bezpečné miesto.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  }
 }
