@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+
+  @override
   String get createPassphrase => '创建密码';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM 恢复密钥';
 
   @override
+  String get recoveryKeyHeader => 'Get a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => '在安装完成后，您可以使用如下命令获取恢复密钥：';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">警告：</font>如果您丢失了恢复密钥，所有数据都将丢失。如果需要，请写下恢复密钥，将其保存在其他安全的地方。';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
@@ -2030,9 +2054,4 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get recoveryKeyCommand => '安裝後，您可以透過以下指令來取得您的復原密鑰：';
-
-  @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。';
-  }
 }

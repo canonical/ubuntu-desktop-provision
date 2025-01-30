@@ -183,8 +183,12 @@
   "choosePassphraseConfirmHint": "Confirm the passphrase",
   "choosePassphraseRequired": "A passphrase is required",
   "choosePassphraseMismatch": "The passphrases do not match",
-  "choosePassphraseInfoHeader": "Make sure you save your passphrase",
-  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all of your data.",
+  "choosePassphraseInfoHeader": "Store your passphrase somewhere safe",
+  "choosePassphraseInfoBody": "If you lose your passphrase, you will lose all your data.",
+  "chooseOptionalPassphraseHeader": "Create a passphrase (optional)",
+  "chooseOptionalPassphraseBody": "A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later",
+  "chooseOptionalPassphraseInfoHeader": "Store your passphrase and recovery key somewhere safe",
+  "chooseOptionalPassphraseInfoBody": "If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.",
   "createPassphrase": "Create a passphrase",
   "confirmPassphrase": "Confirm the passphrase",
   "installationTypeTitle": "Disk setup",
@@ -929,15 +933,19 @@
     }
   },
   "recoveryKeyTitle": "TPM recovery key",
-  "recoveryKeyCommand": "You can access your recovery key after installation with the following command:",
-  "recoveryKeyWarning": "<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.",
-  "@recoveryKeyWarning": {
+  "recoveryKeyHeader": "Get a recovery key",
+  "recoveryKeyInfoHeader": "You may lose all your data without a recovery key",
+  "recoveryKeyInfoBody": "Get a recovery key as soon as you first log into {distro} and store it somewhere safe.",
+  "@recoveryKeyInfoBody": {
     "placeholders": {
-      "color": {
+      "distro": {
         "type": "String"
       }
     }
   },
+  "recoveryKeyCommand": "To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:",
+  "recoveryKeyStorageAdvice": "Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.",
+  "recoveryKeyConfirmation": "I understand I may lose all my data if I don't have a recovery key",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",

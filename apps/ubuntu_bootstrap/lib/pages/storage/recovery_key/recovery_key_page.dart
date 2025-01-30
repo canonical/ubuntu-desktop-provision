@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/widgets/info_box.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class RecoveryKeyPage extends StatelessWidget {
+class RecoveryKeyPage extends ConsumerWidget {
   const RecoveryKeyPage({super.key});
 
   static Future<bool> load(WidgetRef ref) {
@@ -19,51 +21,51 @@ class RecoveryKeyPage extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    return WizardPage(
-      title: YaruWindowTitleBar(
-        title: Text(l10n.recoveryKeyTitle),
-      ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(l10n.recoveryKeyCommand),
-          const SizedBox(height: kWizardSpacing / 2),
-          Container(
-            color: Theme.of(context).highlightColor,
-            padding:
-                const EdgeInsetsDirectional.only(start: 4, top: 2, bottom: 3),
-            child: SelectableText(
-              kRecoveryKeyCommand,
-              style: TextStyle(
-                inherit: false,
-                fontFamily: 'Ubuntu Mono',
-                fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
-                textBaseline: TextBaseline.alphabetic,
-              ),
-            ),
-          ),
-          const SizedBox(height: kWizardSpacing),
-          FractionallySizedBox(
-            widthFactor: kWizardWidthFraction,
-            child: Html(
-              data: l10n.recoveryKeyWarning(
-                Theme.of(context).colorScheme.error.toHex(),
-              ),
-              style: {
-                'body': Style(margin: Margins.zero),
-              },
-            ),
-          ),
-        ],
-      ),
-      bottomBar: const WizardBar(
-        leading: BackWizardButton(),
+    final model = ref.watch(recoveryKeyModelProvider);
+    final flavor = ref.watch(flavorProvider);
+
+    return HorizontalPage(
+      windowTitle: l10n.recoveryKeyTitle,
+      title: l10n.recoveryKeyHeader,
+      bottomBar: WizardBar(
+        leading: const BackWizardButton(),
         trailing: [
-          NextWizardButton(),
+          NextWizardButton(
+            enabled: ref.watch(
+              recoveryKeyModelProvider.select((model) => model.confirmed),
+            ),
+          ),
         ],
       ),
+      children: <Widget>[
+        InfoBox(
+          title: l10n.recoveryKeyInfoHeader,
+          subtitle: l10n.recoveryKeyInfoBody(flavor.displayName),
+          type: InfoBoxType.warning,
+          isThreeLine: true,
+        ),
+        Text(l10n.recoveryKeyCommand),
+        SelectableText(
+          kRecoveryKeyCommand,
+          style: TextStyle(
+            fontFamily: 'Ubuntu Mono',
+            fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
+            textBaseline: TextBaseline.alphabetic,
+          ),
+        ),
+        Text(l10n.recoveryKeyStorageAdvice),
+        YaruCheckButton(
+          title: Text(
+            l10n.recoveryKeyConfirmation,
+            maxLines: 2,
+          ),
+          contentPadding: kWizardPadding,
+          value: model.confirmed,
+          onChanged: model.setConfirmed,
+        ),
+      ].withSpacing(kWizardSpacing),
     );
   }
 }

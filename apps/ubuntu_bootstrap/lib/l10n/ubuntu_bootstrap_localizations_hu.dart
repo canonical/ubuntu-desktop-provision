@@ -296,6 +296,18 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Ha elveszíti a jelmondatot, elveszíti az összes adatát.';
 
   @override
+  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+
+  @override
+  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+
+  @override
   String get createPassphrase => 'Jelmondat létrehozása';
 
   @override
@@ -1033,12 +1045,24 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM helyreállítási kulcs';
 
   @override
+  String get recoveryKeyHeader => 'Get a recovery key';
+
+  @override
+  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+  }
+
+  @override
   String get recoveryKeyCommand => 'A helyreállítási kulcsot a telepítés után érheti el a következő paranccsal:';
 
   @override
-  String recoveryKeyWarning(String color) {
-    return '<font color=\"$color\">Figyelmeztetés:</font> ha elveszíti ezt a biztonsági kulcsot, akkor az összes adat elvész. Ha szükséges, írja le a kulcsot, és tartsa valahol máshol egy biztonságos helyen.';
-  }
+  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+
+  @override
+  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

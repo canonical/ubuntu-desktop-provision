@@ -39,6 +39,8 @@ pages:
     image: "assets/images/disk.svg"
   passphrase:
     image: "assets/images/passphrase.svg"
+  recovery-key:
+    image: "assets/images/passphrase.svg"
   confirm:
     image: "assets/images/summary.svg"
   identity:

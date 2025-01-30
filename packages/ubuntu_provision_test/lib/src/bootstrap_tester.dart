@@ -370,6 +370,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   Future<void> testPassphrasePage({
     required String passphrase,
     String? screenshot,
+    bool skip = false,
   }) async {
     await pumpUntilPage(PassphrasePage);
 
@@ -377,6 +378,12 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.choosePassphraseTitle), findsOneWidget);
+
+    if (skip) {
+      await tapSkip();
+      await pumpAndSettle();
+      return;
+    }
 
     await enterText(
       find.textField(l10n.choosePassphraseHint),
@@ -410,6 +417,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
+
+    final checkbox = find.text(l10n.recoveryKeyConfirmation);
+    await tap(checkbox);
+    await pumpAndSettle();
+
+    await tapNext();
+    await pumpAndSettle();
   }
 
   Future<void> testConfirmPage({

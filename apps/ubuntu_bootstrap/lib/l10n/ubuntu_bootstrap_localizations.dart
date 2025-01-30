@@ -752,14 +752,38 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @choosePassphraseInfoHeader.
   ///
   /// In en, this message translates to:
-  /// **'Make sure you save your passphrase'**
+  /// **'Store your passphrase somewhere safe'**
   String get choosePassphraseInfoHeader;
 
   /// No description provided for @choosePassphraseInfoBody.
   ///
   /// In en, this message translates to:
-  /// **'If you lose your passphrase, you will lose all of your data.'**
+  /// **'If you lose your passphrase, you will lose all your data.'**
   String get choosePassphraseInfoBody;
+
+  /// No description provided for @chooseOptionalPassphraseHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a passphrase (optional)'**
+  String get chooseOptionalPassphraseHeader;
+
+  /// No description provided for @chooseOptionalPassphraseBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later'**
+  String get chooseOptionalPassphraseBody;
+
+  /// No description provided for @chooseOptionalPassphraseInfoHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Store your passphrase and recovery key somewhere safe'**
+  String get chooseOptionalPassphraseInfoHeader;
+
+  /// No description provided for @chooseOptionalPassphraseInfoBody.
+  ///
+  /// In en, this message translates to:
+  /// **'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.'**
+  String get chooseOptionalPassphraseInfoBody;
 
   /// No description provided for @createPassphrase.
   ///
@@ -1955,17 +1979,41 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'TPM recovery key'**
   String get recoveryKeyTitle;
 
+  /// No description provided for @recoveryKeyHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Get a recovery key'**
+  String get recoveryKeyHeader;
+
+  /// No description provided for @recoveryKeyInfoHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'You may lose all your data without a recovery key'**
+  String get recoveryKeyInfoHeader;
+
+  /// No description provided for @recoveryKeyInfoBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Get a recovery key as soon as you first log into {distro} and store it somewhere safe.'**
+  String recoveryKeyInfoBody(String distro);
+
   /// No description provided for @recoveryKeyCommand.
   ///
   /// In en, this message translates to:
-  /// **'You can access your recovery key after installation with the following command:'**
+  /// **'To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:'**
   String get recoveryKeyCommand;
 
-  /// No description provided for @recoveryKeyWarning.
+  /// No description provided for @recoveryKeyStorageAdvice.
   ///
   /// In en, this message translates to:
-  /// **'<font color=\"{color}\">Warning:</font> If you lose this security key, all data will be lost. If you need to, write down your key and keep it in a safe place elsewhere.'**
-  String recoveryKeyWarning(String color);
+  /// **'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.'**
+  String get recoveryKeyStorageAdvice;
+
+  /// No description provided for @recoveryKeyConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'I understand I may lose all my data if I don\'t have a recovery key'**
+  String get recoveryKeyConfirmation;
 
   /// No description provided for @landscapeMagicAttachInstructions.
   ///
