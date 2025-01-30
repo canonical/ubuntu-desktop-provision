@@ -15,31 +15,31 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automatisierte Installation';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Autoinstall-Datei importieren';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Sie können die URL einer autoinstall-Datei eingeben:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Oder wählen Sie eine lokale Datei aus:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Datei auswählen...';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Clear file';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Datei auswählen';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-Dateien';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importieren';
 
   @override
   String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
@@ -343,7 +343,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Auf der von Ihnen ausgewählten Festplatte von vorne beginnen.';
+  String get installationTypeEraseInfo => 'Alle Daten und Partitionen auf der Festplatte, einschließlich der Betriebssysteme, werden gelöscht.';
 
   @override
   String get installationTypeAdvancedLabel => 'Erweiterte Funktionen ...';
@@ -420,7 +420,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return '$product neben diesen installieren';
+    return '$product neben bestehenden Betriebssystemen installieren';
   }
 
   @override
@@ -430,17 +430,17 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Dokumente, Musik und andere persönliche Dateien bleiben erhalten. Sie können bei jedem Start des Computers auswählen, welches Betriebssystem Sie verwenden möchten.';
+    return 'Wählen Sie eine Partition zur Größenänderung aus, um Platz für $product zu schaffen. Sie können Ihr Betriebssystem beim Hochfahren auswählen.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os löschen und $product installieren';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Alle Dateien und Daten der bestehenden Installation von $os werden endgültig gelöscht.';
   }
 
   @override
