@@ -1040,5 +1040,38 @@
   "autoinstallDirectDescription": "Pre skúsených používateľov, ktorí používajú autoinstall.yaml na zabezpečenie konzistentných a opakovateľných nastavení systému.",
   "@autoinstallDirectDescription": {},
   "autoinstallDirectErrorInvalidUrlBody": "Skontrolujte, či je URL správna, alebo vyberte miestny súbor.",
-  "@autoinstallDirectErrorInvalidUrlBody": {}
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor na automatickú inštaláciu prostredníctvom Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeMagicAttachInstructions": "Naskenujte QR kód alebo zadajte kód nižšie na <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Automatická inštalácia",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Prihláste sa do Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Zadajte doménu Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Zadajte doménu Landscape vašej organizácie na prihlásenie a získanie súboru na automatickú inštaláciu. FQDN vám môže poskytnúť vaše IT oddelenie.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Doména Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Ďalej",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Neplatná doména, prosím skontrolujte ju alebo kontaktujte vaše IT oddelenie",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Pripojte sa na internet, aby ste mohli pokračovať",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeCodeExpiredWarning": "Kód vypršal, prosím skúste to znova",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Prihlásenie zlyhalo, prosím skúste to znova",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallLandscapeOption": "Automaticky pomocou Landscape",
+  "@autoinstallLandscapeOption": {}
 }
