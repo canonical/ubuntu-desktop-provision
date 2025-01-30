@@ -50,7 +50,7 @@ class PassphraseModel extends SafeChangeNotifier {
       passphrase.isNotEmpty && passphrase == confirmedPassphrase;
 
   /// Whether the user can skip providing a passphrase
-  bool get canSkip => isTpm ? passphrase.isEmpty : false;
+  bool get canSkip => isTpm && passphrase.isEmpty;
 
   /// Initializes the model.
   Future<bool> init() async {

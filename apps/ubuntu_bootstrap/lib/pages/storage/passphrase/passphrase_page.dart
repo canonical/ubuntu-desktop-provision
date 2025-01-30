@@ -25,7 +25,7 @@ class PassphrasePage extends ConsumerWidget {
       passphraseModelProvider.select((model) => model.isTpm),
     );
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final l10n = UbuntuLocalizations.of(context);
+    final ulang = UbuntuLocalizations.of(context);
 
     return HorizontalPage(
       windowTitle: lang.choosePassphraseTitle,
@@ -45,8 +45,8 @@ class PassphrasePage extends ConsumerWidget {
             label: ref.watch(
               passphraseModelProvider.select((model) => model.canSkip),
             )
-                ? l10n.skipLabel
-                : l10n.nextLabel,
+                ? ulang.skipLabel
+                : ulang.nextLabel,
           ),
         ],
       ),
