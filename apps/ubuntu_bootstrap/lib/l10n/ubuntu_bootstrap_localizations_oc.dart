@@ -15,7 +15,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Installacion automatica';
 
   @override
   String get autoinstallDirectHeader => 'Import autoinstall file';
@@ -27,19 +27,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileLabel => 'Or select a local file:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Seleccionar un fichièr...';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Clear file';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Causissètz un fichièr';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'fichièrs YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importar';
 
   @override
   String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
@@ -435,7 +435,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Suprimir $os e installar $product';
   }
 
   @override
@@ -513,7 +513,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format es pas un sistèma de fichièrs compatible amb $mountpoint';
   }
 
   @override

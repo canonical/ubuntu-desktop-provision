@@ -72,7 +72,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Вы сможете выбирать операционную систему во время загрузки.",
+  "installationTypeAlongsideInfo": "Выберите раздел для выделения места под {product}. Вы сможете выбирать операционную систему во время загрузки.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManualInfo": "Для опытных пользователей, которым требуется особая настройка дисков.",
   "@installationTypeManualInfo": {},
@@ -308,7 +308,7 @@
       "newsize": {}
     }
   },
-  "installationTypeAlongsideMulti": "Установить {product} вместе с ними",
+  "installationTypeAlongsideMulti": "Установить {product} вместе с другими ОС",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -846,7 +846,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Начните с нуля на выбранном диске.",
+  "installationTypeEraseInfo": "Будут удалены все данные и разделы на диске, в том числе операционные системы.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Экспериментально",
   "@installationTypeExperimental": {},
@@ -923,5 +923,97 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectTitle": "Автоматизированая установка",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectUrlLabel": "Вы можете ввести URL-адрес файла autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "installationTypeEraseAndInstallInfo": "Будут навсегда удалены все данные с существующей системы {os}.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectHeader": "Импортировать файл autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectFileLabel": "Или выбрать локальный файл:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Выбрать файл…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Выберите файл",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Файлы YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Импортировать",
+  "@autoinstallDirectImportButtonLabel": {},
+  "installationTypeEraseAndInstall": "Стереть {os} и установить {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeLoginFailedWarning": "Вход в систему не удался, попробуйте еще раз",
+  "@landscapeLoginFailedWarning": {},
+  "landscapeDomainInvalidDomainWarning": "Неверный домен, проверьте или обратитесь в службу ИТ-поддержки",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeMagicAttachInstructions": "Отсканируйте QR-код или введите код ниже на сайте <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainInstructions": "Укажите домен ландшафта вашей организации для входа в систему и получения файла автоустановки. FQDN можно получить в службе ИТ-поддержки.",
+  "@landscapeDomainInstructions": {},
+  "landscapeCodeExpiredWarning": "Код истек, пожалуйста, попробуйте еще раз",
+  "@landscapeCodeExpiredWarning": {},
+  "autoinstallLandscapeOption": "Автоматизированный с ландшафтом",
+  "@autoinstallLandscapeOption": {},
+  "landscapeHeader": "Войдите в систему, чтобы узнать о ландшафте",
+  "@landscapeHeader": {},
+  "autoinstallLandscapeDescription": "Для пользователей в организациях, которые предоставляют файл автоустановки через ландшафт.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapePageTitle": "Автоматическая установка",
+  "@landscapePageTitle": {},
+  "landscapeDomainHeader": "Введите домен ландшафта (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Домен ландшафта (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Следующий",
+  "@next": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Интернет необходим для получения файла автоустановки из ландшафта",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Подключитесь к Интернету, чтобы продолжить",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "autoinstallDirectFileClearButtonLabel": "Очистить файл",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Файл автоматической установки недоступен",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Проверьте правильность URL-адреса, проверьте подключение к Интернету или попробуйте позже.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Недопустимый URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Проверьте правильность URL-адреса или выберите локальный файл.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Неверный файл автоустановки",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Проверьте файл или предоставьте другой.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Файл автоустановки не доступен для чтения",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Проверьте права доступа или предоставьте другой файл.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Неизвестная ошибка",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Автоматизировано с помощью файла автоустановки",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.",
+  "@autoinstallDirectDescription": {}
 }

@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Sulge';
 
   @override
   String get timezonePageTitle => 'Select your timezone';

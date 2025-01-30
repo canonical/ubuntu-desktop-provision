@@ -932,5 +932,35 @@
     }
   },
   "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} es pas un sistèma de fichièrs compatible amb {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  },
+  "autoinstallDirectTitle": "Installacion automatica",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileButtonLabel": "Seleccionar un fichièr...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importar",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Causissètz un fichièr",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "fichièrs YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "installationTypeEraseAndInstall": "Suprimir {os} e installar {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  }
 }

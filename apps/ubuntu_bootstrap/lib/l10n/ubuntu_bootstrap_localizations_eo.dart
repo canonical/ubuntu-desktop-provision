@@ -15,58 +15,58 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Aŭtomata instalado';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Enporti dosieron de aŭtomata instalado';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Vi povas tajpi la retadreson de dosiero de aŭtomata instalado:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Aŭ elekti lokan dosieron:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Elekti dosieron…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Forviŝi dosieron';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Elekti dosieron';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-dosieroj';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Enporti';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Ne povas atingi dosieron de aŭtomata instalado';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Kontrolu, ĉu la retadreso estas ĝusta, aŭ testu vian Interretan konekton, aŭ reprovu poste.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Nevalida retadreso';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Kontrolu, ĉu la retadreso estas ĝusta, aŭ elektu lokan dosieron.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Nevalida dosiero por aŭtomata instalado';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Kontrolu la dosieron, aŭ elektu alian.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Ne povas legi dosieron por aŭtomata instalado';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Kontrolu la permesojn, aŭ provizu alian dosieron.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Nekonata eraro';
 
   @override
   String get autoinstallTitle => 'Speco de instalado';
@@ -86,10 +86,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Por tiuj uzantoj, kiuj volas esti gvidataj paŝon post paŝo tra la instalado.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Aŭtomatigita per dosiero de aŭtomata instalado';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Por tiuj spertuloj, kiuj havas dosieron autoinstall.yaml por kohera kaj ripetebla sistemo-starigo.';
 
   @override
   String get autoinstallLandscapeOption => 'Automated with Landscape';
@@ -343,7 +343,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Komencu denule forviŝinte vian elektitan diskon.';
+  String get installationTypeEraseInfo => 'Ĉiuj datenoj kaj subdiskoj sur la disko estas forviŝotaj, inkluzive de mastrumaj sistemoj.';
 
   @override
   String get installationTypeAdvancedLabel => 'Funkcioj por spertuloj…';
@@ -420,7 +420,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Instali $product apud ili';
+    return 'Instali $product apud ekzistantaj mastrumaj sistemoj';
   }
 
   @override
@@ -430,17 +430,17 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Dokumentoj, muziko kaj aliaj personaj dosieroj estas konservotaj. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.';
+    return 'Elektu la subdiskon, kies grando estas ŝanĝota, kreonte spacon por $product. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Forviŝi $os kaj instali $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Ĉiuj dosieroj kaj datenoj en la ekzistanta instalo de $os estas nemalfareble forviŝotaj.';
   }
 
   @override

@@ -65,7 +65,7 @@
       "url": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokumentoj, muziko kaj aliaj personaj dosieroj estas konservotaj. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.",
+  "installationTypeAlongsideInfo": "Elektu la subdiskon, kies grando estas ŝanĝota, kreonte spacon por {product}. Vi povos elekti tiun mastruman sistemon, kiun vi volas, kiam la komputilo startas.",
   "@installationTypeAlongsideInfo": {},
   "installThirdPartyTitle": "Instali triapartiajn programojn por grafiko kaj sendrataj retaj aparatoj, kune kun kromajn videaj dosierformoj",
   "@installThirdPartyTitle": {},
@@ -278,7 +278,7 @@
   "@installAlongsideAvailable": {},
   "installAlongsideFiles": "Dosieroj",
   "@installAlongsideFiles": {},
-  "installationTypeAlongsideMulti": "Instali {product} apud ili",
+  "installationTypeAlongsideMulti": "Instali {product} apud ekzistantaj mastrumaj sistemoj",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -861,7 +861,7 @@
   "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryption": "Forviŝi la diskon kaj uzi ZFS kun ĉifrado",
   "@installationTypeZFSEncryption": {},
-  "installationTypeEraseInfo": "Komencu denule forviŝinte vian elektitan diskon.",
+  "installationTypeEraseInfo": "Ĉiuj datenoj kaj subdiskoj sur la disko estas forviŝotaj, inkluzive de mastrumaj sistemoj.",
   "@installationTypeEraseInfo": {},
   "selectGuidedStorageInfo": "Komencu denule forviŝinte vian elektitan diskon.",
   "@selectGuidedStorageInfo": {},
@@ -928,5 +928,64 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectFilePickerFilterLabel": "YAML-dosieroj",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectFilePickerTitle": "Elekti dosieron",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Nevalida retadreso",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Kontrolu la dosieron, aŭ elektu alian.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemBody": "Kontrolu la permesojn, aŭ provizu alian dosieron.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectFileClearButtonLabel": "Forviŝi dosieron",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "installationTypeEraseAndInstall": "Forviŝi {os} kaj instali {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectImportButtonLabel": "Enporti",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Nevalida dosiero por aŭtomata instalado",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorFileSystemTitle": "Ne povas legi dosieron por aŭtomata instalado",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorNetworkTitle": "Ne povas atingi dosieron de aŭtomata instalado",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Kontrolu, ĉu la retadreso estas ĝusta, aŭ testu vian Interretan konekton, aŭ reprovu poste.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Kontrolu, ĉu la retadreso estas ĝusta, aŭ elektu lokan dosieron.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Nekonata eraro",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Aŭtomatigita per dosiero de aŭtomata instalado",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Por tiuj spertuloj, kiuj havas dosieron autoinstall.yaml por kohera kaj ripetebla sistemo-starigo.",
+  "@autoinstallDirectDescription": {},
+  "installationTypeEraseAndInstallInfo": "Ĉiuj dosieroj kaj datenoj en la ekzistanta instalo de {os} estas nemalfareble forviŝotaj.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "Aŭtomata instalado",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileButtonLabel": "Elekti dosieron…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectHeader": "Enporti dosieron de aŭtomata instalado",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Vi povas tajpi la retadreson de dosiero de aŭtomata instalado:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Aŭ elekti lokan dosieron:",
+  "@autoinstallDirectFileLabel": {}
 }

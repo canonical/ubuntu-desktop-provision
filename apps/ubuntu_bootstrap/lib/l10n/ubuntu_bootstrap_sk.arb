@@ -4,7 +4,7 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií",
   "@installThirdPartyTitle": {},
-  "installThirdPartySubtitle": "Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú poprietárne.",
+  "installThirdPartySubtitle": "Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.",
   "@installThirdPartySubtitle": {},
   "rstInstructions": "Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
@@ -66,7 +66,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie Internetu. Vďaka vstavanej bráne firewall, podpore VPN a radu aplikácií zameraných na ochranu súkromia máte svoje dáta plne pod kontrolou.",
+  "installationSlidesSecurityBody": "{DISTRO} poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie internetu. Vďaka vstavanej bráne firewall, podpore VPN a rade aplikácií zameraných na ochranu súkromia máte svoje údaje plne pod kontrolou.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -177,7 +177,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Nainštalovať {product} vedľa nich",
+  "installationTypeAlongsideMulti": "Nainštalovať {product} vedľa existujúcich operačných systémov",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -464,7 +464,7 @@
   "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Bude použitý celý disk:",
   "@selectGuidedStorageInfoLabel": {},
-  "installationTypeManualInfo": "Pre pokročilých používateľov, ktorí hľadajú prispôsobené nastavenia disku.",
+  "installationTypeManualInfo": "Pre skúsených používateľov, ktorí hľadajú prispôsobené nastavenia disku.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -523,7 +523,7 @@
   "@installCodecsTitle": {},
   "installCodecsSubtitle": "Vrátane MP3, MP4, MOV a ďalších ostatných",
   "@installCodecsSubtitle": {},
-  "installationTypeAlongsideInfo": "Počas zavádzania si môžete vybrať operačný systém.",
+  "installationTypeAlongsideInfo": "Vyberte oddiel na zmenu veľkosti a vytvorte priestor pre {product}. Operačný systém si môžete vybrať počas spustenia.",
   "@installationTypeAlongsideInfo": {},
   "installAlongsideHiddenPartitions": "{num} menších oddielov je skrytých. Pokiaľ potrebujete mať nad procesom viac kontroly, použite <a href=\"{url}\">nástroj pre pokročilú správu oddielov</a>",
   "@installAlongsideHiddenPartitions": {
@@ -570,7 +570,7 @@
   "@restartNow": {},
   "bitlockerTitle": "BitLocker je zapnutý",
   "@bitlockerTitle": {},
-  "installationSlidesSupportCommunity": "Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj pokročilých používateľov.",
+  "installationSlidesSupportCommunity": "Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj skúsených používateľov.",
   "@installationSlidesSupportCommunity": {},
   "tooManyPrimaryPartitions": "Príliš veľa primárnych oddielov",
   "@tooManyPrimaryPartitions": {},
@@ -735,7 +735,7 @@
   },
   "recoveryKeyCommand": "K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:",
   "@recoveryKeyCommand": {},
-  "recoveryKeyWarning": "<font color=\"{color}\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim dátam sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
+  "recoveryKeyWarning": "<font color=\"{color}\">Upozornenie:</font> Pokiaľ tento bezpečnostný kľúč zabudnete, k svojim údajom sa už nedostanete. Ak vám to pomôže, bezpečnostný kľúč si zapíšte na papier a ten si bezpečne uložte niekam mimo počítača.",
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
@@ -798,7 +798,7 @@
   "@fullInstallationTitle": {},
   "validate": "Overiť",
   "@validate": {},
-  "autoinstallInstructions": "Zadajte autoinstall.yaml URL alebo cestu k lokálnemu súboru:",
+  "autoinstallInstructions": "Zadajte autoinstall.yaml URL alebo cestu k miestnemu súboru:",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Interaktívna inštalácia",
   "@autoinstallInteractiveOption": {},
@@ -814,7 +814,7 @@
   "@choosePassphraseHeader": {},
   "choosePassphraseMismatch": "Prístupové frázy sa nezhodujú",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Uistite sa, že ste si uložili svoju prístupovú frázu",
+  "choosePassphraseInfoHeader": "Uložte svoju prístupovú frázu na bezpečné miesto",
   "@choosePassphraseInfoHeader": {},
   "installationTypeHeader": "Ako chcete nainštalovať {DISTRO}?",
   "@installationTypeHeader": {
@@ -830,7 +830,7 @@
   "@createPassphrase": {},
   "installationTypeLVMEncryption": "Použiť LVM a šifrovanie",
   "@installationTypeLVMEncryption": {},
-  "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia dodatočného softvéru môže zlepšiť výkon vášho počítača.",
+  "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -842,7 +842,7 @@
   "@codecsAndDriversNvidiaNote": {},
   "choosePassphraseTitle": "Prístupová fráza disku",
   "@choosePassphraseTitle": {},
-  "installationTypeEraseInfo": "Začnite od začiatku na vybranom disku.",
+  "installationTypeEraseInfo": "Všetky údaje a oddiely na disku budú vymazané, vrátane operačných systémov.",
   "@installationTypeEraseInfo": {},
   "choosePassphraseBody": "Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.",
   "@choosePassphraseBody": {},
@@ -850,7 +850,7 @@
   "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Je potrebné zadať prístupovú frázu",
   "@choosePassphraseRequired": {},
-  "choosePassphraseInfoBody": "Ak stratíte prístupovú frázu, stratíte všetky svoje údaje.",
+  "choosePassphraseInfoBody": "Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje.",
   "@choosePassphraseInfoBody": {},
   "installationTypeExperimental": "Experimentálne",
   "@installationTypeExperimental": {},
@@ -981,5 +981,103 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectHeader": "Načítať súbor autoinštalácie",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Zadajte URL súboru pre autoinštaláciu:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Alebo vyberte miestny súbor:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Vybrať súbor...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML súbory",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importovať",
+  "@autoinstallDirectImportButtonLabel": {},
+  "installationTypeEraseAndInstall": "Vymazať {os} a nainštalovať {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Všetky súbory a údaje z existujúcej inštalácie {os} budú trvalo vymazané.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "Automatická inštalácia",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectErrorFileSystemTitle": "Súbor autoinštalácie nie je čitateľný",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectFileClearButtonLabel": "Vymazať súbor",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectOption": "Automatická so súborom autoinštalácie",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectErrorNetworkBody": "Skontrolujte správnosť URL, overte internetové pripojenie alebo to skúste neskôr.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Neplatná URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorNetworkTitle": "Súbor autoinštalácie nie je dostupný",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Skontrolujte súbor alebo zadajte iný.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemBody": "Skontrolujte svoje oprávnenia alebo poskytnite iný súbor.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Neznáma chyba",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Neplatný súbor autoinštalácie",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectDescription": "Pre skúsených používateľov, ktorí používajú autoinstall.yaml na zabezpečenie konzistentných a opakovateľných nastavení systému.",
+  "@autoinstallDirectDescription": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Skontrolujte, či je URL správna, alebo vyberte miestny súbor.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor na automatickú inštaláciu prostredníctvom Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeMagicAttachInstructions": "Naskenujte QR kód alebo zadajte kód nižšie na <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Automatická inštalácia",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Prihláste sa do Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Zadajte doménu Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Zadajte doménu Landscape vašej organizácie na prihlásenie a získanie súboru na automatickú inštaláciu. FQDN vám môže poskytnúť vaše IT oddelenie.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Doména Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Ďalej",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Neplatná doména, prosím skontrolujte ju alebo kontaktujte vaše IT oddelenie",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Pripojte sa na internet, aby ste mohli pokračovať",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeCodeExpiredWarning": "Kód vypršal, prosím skúste to znova",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Prihlásenie zlyhalo, prosím skúste to znova",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallLandscapeOption": "Automaticky pomocou Landscape",
+  "@autoinstallLandscapeOption": {},
+  "chooseOptionalPassphraseBody": "Prístupová fráza môže pomôcť chrániť vaše údaje, aj keď bude vaše zariadenie kompromitované. Budete ju musieť zadať vždy, keď zapnete počítač. Neskôr ju nebude možné odstrániť",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseHeader": "Vytvorte prístupovú frázu (voliteľné)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto",
+  "@chooseOptionalPassphraseInfoHeader": {}
 }

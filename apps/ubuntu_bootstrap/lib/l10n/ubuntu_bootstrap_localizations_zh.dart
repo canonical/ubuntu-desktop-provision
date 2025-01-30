@@ -1116,6 +1116,21 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
+  String get autoinstallDirectTitle => '自動安裝';
+
+  @override
+  String get autoinstallDirectHeader => '導入自動安裝檔案';
+
+  @override
+  String get autoinstallDirectUrlLabel => '您可以輸入自動安裝檔案的 URL：';
+
+  @override
+  String get autoinstallDirectFileLabel => '或選擇本機檔案：';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => '選擇檔案...';
+
+  @override
   String get autoinstallTitle => '安裝類型';
 
   @override
@@ -1453,7 +1468,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return '應用程式、音樂等個人檔案將會被保留，您可以在每次電腦啟動時選擇其中一個作業系統。';
+    return '選擇一個分割區來調整大小並為$product建立空間。您可以在啟動時選擇作業系統。';
   }
 
   @override
@@ -1523,6 +1538,11 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace => '掛載點不可包含空白字元';
+
+  @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format 不是 $mountpoint 支援的檔案系統';
+  }
 
   @override
   String get diskHeadersDevice => '裝置';

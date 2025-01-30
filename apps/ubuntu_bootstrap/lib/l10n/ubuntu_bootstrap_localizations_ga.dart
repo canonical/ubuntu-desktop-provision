@@ -15,58 +15,58 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Suiteáil uathoibrithe';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Iompórtáil comhad a shuiteáil uathoibríoch';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Is féidir leat URL an chomhaid uathshuiteála a chur isteach:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Nó roghnaigh comhad áitiúil:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Roghnaigh comhad...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Glan an comhad';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Roghnaigh comhad';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'Comhaid YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Iompórtáil';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Níl an comhad uathshuiteála inrochtana';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Seiceáil go bhfuil an URL i gceart, déan do nasc idirlín a thástáil, nó bain triail eile as ar ball.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL neamhbhailí';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Seiceáil go bhfuil an URL ceart nó roghnaigh comhad áitiúil.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Comhad uathshuiteála neamhbhailí';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Seiceáil an comhad nó cuir ceann eile ar fáil.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Níl an comhad uathshuiteála inléite';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Seiceáil do cheadanna nó cuir comhad eile ar fáil.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Earráid anaithnid';
 
   @override
   String get autoinstallTitle => 'Cineál suiteála';
@@ -86,10 +86,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'D\'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Uathoibríoch le comhad uathshuiteála';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.';
 
   @override
   String get autoinstallLandscapeOption => 'Automated with Landscape';
@@ -343,7 +343,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Tosaigh ón tús ar do dhiosca roghnaithe.';
+  String get installationTypeEraseInfo => 'Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.';
 
   @override
   String get installationTypeAdvancedLabel => 'Gnéithe casta...';
@@ -420,7 +420,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Suiteáil $product in éineacht leo';
+    return 'Suiteáil $product taobh le córais oibriúcháin atá ann cheana';
   }
 
   @override
@@ -430,17 +430,17 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.';
+    return 'Roghnaigh deighilt chun méid a athrú agus spás a chruthú do $product. Is féidir leat do chóras oibriúcháin a roghnú le linn tosaithe.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Scrios $os agus suiteáil $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Scriosfar go buan gach comhad agus sonraí ón suiteáil $os atá ann cheana féin.';
   }
 
   @override

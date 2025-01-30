@@ -1058,5 +1058,14 @@
   "recoveryKeyTitle": "TPM кључ за опоравак",
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Можете приступити свом кључу за опоравак након инсталације помоћу следеће команде:",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} није подржан фајл систем за {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  }
 }

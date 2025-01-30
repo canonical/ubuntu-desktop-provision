@@ -15,31 +15,31 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'התקנה אוטומטית';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'ייבוא קובץ autoinstall (התקנה אוטומטית)';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'אפשר למלא כתובת של קובץ autoinstall:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'או לבחור בקובץ מקומי:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'בחירת קובץ…';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Clear file';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'בחירת קובץ';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'קובצי YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'ייבוא';
 
   @override
   String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
@@ -343,7 +343,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'התחלה מאפס בכונן לבחירתך.';
+  String get installationTypeEraseInfo => 'כל הנתונים והמחיצות בכונן יימחקו, כולל מערכות ההפעלה.';
 
   @override
   String get installationTypeAdvancedLabel => 'יכולות מתקדמות…';
@@ -420,7 +420,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'להתקין את $product לצדם';
+    return 'להתקין את $product לצד מערכות הפעלה קיימות';
   }
 
   @override
@@ -430,17 +430,17 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'המסמכים, המוזיקה וקבצים אישיים נוספים יישמרו. אפשר לבחור איזו מערכת הפעלה תיטען עם כל הפעלה של המחשב.';
+    return 'נא לבחור לאיזו מחיצה לשנות את הגודל וליצור מקום עבור $product. אפשר לבחור את מערכת ההפעלה שלך במהלך הטעינה.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'מחיקת $os והתקנת $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'כל הקבצים והנתונים מההתקנה הקיימת של $os יימחקו לצמיתות.';
   }
 
   @override
@@ -513,7 +513,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format היא אינה מערכת קבצים נתמכת עבור $mountpoint';
   }
 
   @override

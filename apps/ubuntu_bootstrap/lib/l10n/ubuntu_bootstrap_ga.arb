@@ -163,7 +163,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Tosaigh ón tús ar do dhiosca roghnaithe.",
+  "installationTypeEraseInfo": "Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.",
   "@installationTypeEraseInfo": {},
   "installationTypeAdvancedLabel": "Gnéithe casta...",
   "@installationTypeAdvancedLabel": {},
@@ -228,7 +228,7 @@
       }
     }
   },
-  "installationTypeAlongsideMulti": "Suiteáil {product} in éineacht leo",
+  "installationTypeAlongsideMulti": "Suiteáil {product} taobh le córais oibriúcháin atá ann cheana",
   "@installationTypeAlongsideMulti": {
     "placeholders": {
       "product": {
@@ -244,7 +244,7 @@
       }
     }
   },
-  "installationTypeAlongsideInfo": "Is féidir leat a roghnú do chóras oibriúcháin le linn tosaithe.",
+  "installationTypeAlongsideInfo": "Roghnaigh deighilt chun méid a athrú agus spás a chruthú do {product}. Is féidir leat do chóras oibriúcháin a roghnú le linn tosaithe.",
   "@installationTypeAlongsideInfo": {},
   "selectGuidedStoragePageTitle": "Léirscrios diosca agus suiteáil {DISTRO}",
   "@selectGuidedStoragePageTitle": {
@@ -1075,5 +1075,64 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "installationTypeEraseAndInstallInfo": "Scriosfar go buan gach comhad agus sonraí ón suiteáil {os} atá ann cheana féin.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "Scrios {os} agus suiteáil {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectHeader": "Iompórtáil comhad a shuiteáil uathoibríoch",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Is féidir leat URL an chomhaid uathshuiteála a chur isteach:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectTitle": "Suiteáil uathoibrithe",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Comhaid YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectFileButtonLabel": "Roghnaigh comhad...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFileLabel": "Nó roghnaigh comhad áitiúil:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFilePickerTitle": "Roghnaigh comhad",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectImportButtonLabel": "Iompórtáil",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Seiceáil go bhfuil an URL ceart nó roghnaigh comhad áitiúil.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectFileClearButtonLabel": "Glan an comhad",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Níl an comhad uathshuiteála inrochtana",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Seiceáil go bhfuil an URL i gceart, déan do nasc idirlín a thástáil, nó bain triail eile as ar ball.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "URL neamhbhailí",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Comhad uathshuiteála neamhbhailí",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Seiceáil an comhad nó cuir ceann eile ar fáil.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Níl an comhad uathshuiteála inléite",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Seiceáil do cheadanna nó cuir comhad eile ar fáil.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Earráid anaithnid",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Uathoibríoch le comhad uathshuiteála",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.",
+  "@autoinstallDirectDescription": {}
 }

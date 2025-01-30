@@ -160,7 +160,7 @@
   "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Zaszyfruj nową instalację {RELEASE} dla bezpieczeństwa",
   "@installationTypeEncrypt": {},
-  "installationTypeAlongsideInfo": "Dokumenty, muzyka i inne pliki osobiste zostaną zachowane. Przy każdym uruchomieniu komputera można wybrać system operacyjny, który ma być używany.",
+  "installationTypeAlongsideInfo": "Wybierz partycję do zmiany rozmiaru i utworzenia przestrzeni dla {product}. Możesz wybrać swój system operacyjny podczas rozruchu.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ręczne partycjonowanie",
   "@installationTypeManual": {},
@@ -256,7 +256,7 @@
   "@copyingFiles": {},
   "installationFailed": "Instalacja nieudana",
   "@installationFailed": {},
-  "installationTypeAlongsideMulti": "Zainstaluj {product} obok nich",
+  "installationTypeAlongsideMulti": "Zainstaluj {product} obok istniejących systemów operacyjnych",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -791,7 +791,7 @@
   "@installationTypeExperimental": {},
   "installationTypeLVM": "Użyj LVM",
   "@installationTypeLVM": {},
-  "installationTypeEraseInfo": "Zacznij od zera na wybranym dysku.",
+  "installationTypeEraseInfo": "Wszystkie dane i partycje na dysku zostaną wymazane, łącznie z systemami operacyjnymi.",
   "@installationTypeEraseInfo": {},
   "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
   "@installationTypeLVMEncryption": {},
@@ -928,5 +928,97 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "installationTypeEraseAndInstall": "Wymaż {os} i zainstaluj {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Wszystkie pliki i dane z istniejącej instalacji {os} zostaną trwale usunięte.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectHeader": "Importuj plik autoinstalacji",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectFileLabel": "Lub wybierz plik lokalny:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Wybierz plik...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Wybierz plik",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Pliki YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importuj",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectTitle": "Instalacja zautomatyzowana",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectUrlLabel": "Możesz wpisać adres URL pliku autoinstalacji:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Plik autoinstalacji jest niedostępny",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Nieprawidłowy adres URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Nieprawidłowy plik autoinstalacji",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Sprawdź plik lub podaj inny.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Plik autoinstalacji jest nieczytelny",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Sprawdź swoje uprawnienia lub prześlij inny plik.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Nieznany błąd",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Zautomatyzowana za pomocą pliku autoinstalacji",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml w celu zapewnienia spójnej i powtarzalnej konfiguracji systemu.",
+  "@autoinstallDirectDescription": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Sprawdź, czy adres URL jest poprawny lub wybierz plik lokalny.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorNetworkBody": "Sprawdź poprawność adresu URL, przetestuj połączenie internetowe lub spróbuj później.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectFileClearButtonLabel": "Wyczyść plik",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "landscapeMagicAttachInstructions": "Zeskanuj kod QR lub wprowadź poniższy kod na <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "autoinstallLandscapeOption": "Zautomatyzowana za pomocą Landscape",
+  "@autoinstallLandscapeOption": {},
+  "landscapeCodeExpiredWarning": "Kod wygasł, spróbuj ponownie",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Logowanie nie powiodło się, spróbuj ponownie",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallLandscapeDescription": "Dla użytkowników w organizacjach udostępniających plik autoinstalacji za pośrednictwem Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapePageTitle": "Instalacja zautomatyzowana",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Zaloguj się do Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Wprowadź domenę Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Domena Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Dalej",
+  "@next": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Do pobrania pliku autoinstalacji z Landscape potrzebny jest Internet",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Połącz się z Internetem, aby kontynuować",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainInvalidDomainWarning": "Nieprawidłowa domena, sprawdź lub skontaktuj się ze swoją pomocą techniczną",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainInstructions": "Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od swojej pomocy technicznej.",
+  "@landscapeDomainInstructions": {}
 }

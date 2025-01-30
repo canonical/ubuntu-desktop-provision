@@ -7,76 +7,76 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => '접근성';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO의 접근성';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return '설치 전에 $DISTRO를 원하는 대로 사용자화할 수 있습니다. 설치 후에도 시스템 설정에서 변경할 수 있습니다.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => '시각';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => '청각';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => '키 입력';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => '포인팅과 클릭';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => '화면 확대';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => '고대비';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => '큰 텍스트';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => '애니메이션 줄이기';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => '화면 읽어주기';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => '시각적 알림';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => '고정 키';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => '느린 키 입력';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => '마우스 키';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => '데스크톱 확대';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => '알 수 없는 오류가 발생했습니다';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => '죄송합니다, 알 수 없는 오류가 발생했습니다. 컴퓨터를 다시 시작하고 설치 과정을 다시 시작해 보세요. 또한 <a>이 문제를 제보할 수</a> 있습니다.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return '연관된 디버그 정보를 포함한 자동 버그 신고를 이용하시려면 터미널 또는 명령 콘솔(ALT+F2)에서 <pre>sudo ubuntu-bug $SNAP</pre>를 실행하세요.';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => '로그 보이기';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => '로그 숨기기';
 
   @override
   String get restart => 'Restart';
@@ -97,10 +97,10 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get keyboardTitle => '키보드 레이아웃';
 
   @override
-  String get keyboardHeader => '키보드 레이아웃을 선택하십시오:';
+  String get keyboardHeader => '키보드 레이아웃을 선택하십시오';
 
   @override
-  String get keyboardTestHint => '키보드를 테스트 해보려면 이 곳을 사용하십시오';
+  String get keyboardTestHint => '키보드를 테스트해 보려면 이 곳을 사용하십시오';
 
   @override
   String get keyboardDetectTitle => '키보드 레이아웃 감지';
@@ -109,7 +109,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => '감지';
 
   @override
-  String get keyboardVariantLabel => '키보드 유형:';
+  String get keyboardVariantLabel => '키보드 유형을 선택하십시오:';
 
   @override
   String get keyboardPressKeyLabel => '다음 키 중 하나를 누르십시오:';
@@ -131,7 +131,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return '$DISTRO사용을 환영합니다';
+    return '$DISTRO 사용을 환영합니다';
   }
 
   @override
@@ -144,7 +144,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityAutoLogin => '자동으로 로그인';
 
   @override
-  String get identityRequirePassword => '로그인 할 때 암호 요구';
+  String get identityRequirePassword => '로그인할 때 암호 요구';
 
   @override
   String get identityRealNameLabel => '이름';
@@ -159,7 +159,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => '컴퓨터 이름';
 
   @override
-  String get identityHostnameInfo => '다른 컴퓨터와 통신할 때 사용하는 이름 입니다.';
+  String get identityHostnameInfo => '다른 컴퓨터와 통신할 때 사용하는 이름입니다.';
 
   @override
   String get identityHostnameRequired => '컴퓨터 이름이 필요합니다';
@@ -168,16 +168,16 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityHostnameTooLong => '너무 긴 컴퓨터 이름입니다.';
 
   @override
-  String get identityInvalidHostname => '올바르지 않은 컴퓨터 이름 입니다';
+  String get identityInvalidHostname => '올바르지 않은 컴퓨터 이름입니다';
 
   @override
-  String get identityUsernameLabel => '사용자 이름 선택';
+  String get identityUsernameLabel => '사용자 이름';
 
   @override
   String get identityUsernameRequired => '사용자 이름이 필요합니다';
 
   @override
-  String get identityInvalidUsername => '올바르지 않은 사용자 이름 입니다';
+  String get identityInvalidUsername => '올바르지 않은 사용자 이름입니다';
 
   @override
   String get identityUsernameInUse => '해당 사용자 이름이 이미 존재합니다.';
@@ -192,7 +192,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => '사용자 이름에 허용되지 않은 문자가 포함되어 있습니다.';
 
   @override
-  String get identityPasswordLabel => '암호 선택';
+  String get identityPasswordLabel => '암호';
 
   @override
   String get identityPasswordRequired => '암호가 필요합니다';
@@ -216,14 +216,14 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => '다음 단계에서 도메인 및 기타 세부 사항을 입력합니다.';
 
   @override
-  String get activeDirectoryTitle => '액티브 디렉토리 구성';
+  String get activeDirectoryTitle => '액티브 디렉토리에 로그인';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => '액티브 디렉토리로 로그인하시겠습니까?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO는 쉬운 관리를 위해 액티브 디렉토리와 자연스럽게 통합되도록 설계되어 있습니다.';
   }
 
   @override
@@ -269,25 +269,25 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminInvalidChars => '유효하지 않은 문자';
 
   @override
-  String get activeDirectoryPasswordLabel => '비밀 번호';
+  String get activeDirectoryPasswordLabel => '비밀번호';
 
   @override
   String get activeDirectoryPasswordEmpty => '필수';
 
   @override
-  String get activeDirectoryErrorTitle => 'Active Directory 연결 구성 오류';
+  String get activeDirectoryErrorTitle => '액티브 디렉토리 연결을 구성하던 중 오류가 발생했습니다';
 
   @override
-  String get activeDirectoryErrorMessage => '죄송합니다, 현재 Active Directory를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
+  String get activeDirectoryErrorMessage => '죄송합니다, 현재 액티브 디렉토리를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
 
   @override
-  String get networkPageTitle => '네트워크에 연결하기';
+  String get networkPageTitle => '인터넷 연결';
 
   @override
-  String get networkPageHeader => '이 컴퓨터를 인터넷에 연결하면 우분투에 필요한 추가 소프트웨어 설치나 시간대 선택에 도움이 됩니다.\n\n이더넷 케이블이나, Wi-Fi 네트워크를 선택하여 연결하십시오';
+  String get networkPageHeader => '인터넷에 연결하기';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => '인터넷에 연결하면 호환성 체크와 추가 소프트웨어 패키지 등 설치 경험을 향상시킬 수 있습니다.';
 
   @override
   String get networkWiredOption => '유선 연결 사용';
@@ -299,7 +299,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkWiredOff => '유선 연결이 꺼져 있음';
 
   @override
-  String get networkWiredDisabled => '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화 되어야 합니다';
+  String get networkWiredDisabled => '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화되어야 합니다';
 
   @override
   String get networkWiredEnable => '유선 연결 활성화';
@@ -332,7 +332,7 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkNoneOption => '지금은 인터넷에 연결하지 않기';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => '라이선스 동의서';
 
   @override
   String get eulaReviewTerms => 'Review the license terms';

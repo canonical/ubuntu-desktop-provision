@@ -1,3 +1,7 @@
 {
-  "@@locale": "et"
+  "@@locale": "et",
+  "close": "Sulge",
+  "@close": {},
+  "ok": "Sobib",
+  "@ok": {}
 }

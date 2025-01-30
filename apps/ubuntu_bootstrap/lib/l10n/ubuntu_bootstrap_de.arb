@@ -126,7 +126,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokumente, Musik und andere persönliche Dateien bleiben erhalten. Sie können bei jedem Start des Computers auswählen, welches Betriebssystem Sie verwenden möchten.",
+  "installationTypeAlongsideInfo": "Wählen Sie eine Partition zur Größenänderung aus, um Platz für {product} zu schaffen. Sie können Ihr Betriebssystem beim Hochfahren auswählen.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Manuelle Installation",
   "@installationTypeManual": {},
@@ -276,7 +276,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "{product} neben diesen installieren",
+  "installationTypeAlongsideMulti": "{product} neben bestehenden Betriebssystemen installieren",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -830,7 +830,7 @@
   },
   "installationTypeExperimental": "Experimentell",
   "@installationTypeExperimental": {},
-  "installationTypeEraseInfo": "Auf der von Ihnen ausgewählten Festplatte von vorne beginnen.",
+  "installationTypeEraseInfo": "Alle Daten und Partitionen auf der Festplatte, einschließlich der Betriebssysteme, werden gelöscht.",
   "@installationTypeEraseInfo": {},
   "installationTypeLVM": "LVM verwenden",
   "@installationTypeLVM": {},
@@ -929,5 +929,40 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectTitle": "Automatisierte Installation",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectUrlLabel": "Sie können die URL einer autoinstall-Datei eingeben:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFilePickerTitle": "Datei auswählen",
+  "@autoinstallDirectFilePickerTitle": {},
+  "installationTypeEraseAndInstall": "{os} löschen und {product} installieren",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectFilePickerFilterLabel": "YAML-Dateien",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importieren",
+  "@autoinstallDirectImportButtonLabel": {},
+  "installationTypeEraseAndInstallInfo": "Alle Dateien und Daten der bestehenden Installation von {os} werden endgültig gelöscht.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectHeader": "Autoinstall-Datei importieren",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectFileLabel": "Oder wählen Sie eine lokale Datei aus:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Datei auswählen...",
+  "@autoinstallDirectFileButtonLabel": {}
 }

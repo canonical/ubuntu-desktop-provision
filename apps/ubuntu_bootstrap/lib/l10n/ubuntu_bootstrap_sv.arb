@@ -143,7 +143,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokument, musik och andra personliga filer kommer att sparas. Du kan välja vilket operativsystem du vill ha varje gång datorn startar.",
+  "installationTypeAlongsideInfo": "Välj en partition att ändra storlek på och skapa utrymme för {product}. Du kan välja ditt operativsystem under uppstart.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Manuell partitionering",
   "@installationTypeManual": {},
@@ -316,7 +316,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Installera {product} bredvid dem",
+  "installationTypeAlongsideMulti": "Installera {product} tillsammans med befintliga operativsystem",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -842,7 +842,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Börja från början på den valda disken.",
+  "installationTypeEraseInfo": "All data och partitioner på disken kommer att raderas, inklusive operativsystem.",
   "@installationTypeEraseInfo": {},
   "installationTypeLVMEncryption": "Använd LVM och kryptering",
   "@installationTypeLVMEncryption": {},
@@ -973,5 +973,64 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "installationTypeEraseAndInstall": "Radera {os} och installera {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Alla filer och data från din befintliga {os} installation kommer att raderas permanent.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectUrlLabel": "Du kan ange URL:en till en automatisk installationsfil:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectHeader": "Importera automatisk installationsfil",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectTitle": "Automatisk installation",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileLabel": "Eller välj en lokal fil:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Välj fil...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Välj fil",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML filer",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importera",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectOption": "Automatiserad med automatisk installationsfil",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Kontrollera att webbadressen är korrekt eller välj en lokal fil.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Okänt fel",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectDescription": "För avancerade användare som har en autoinstall.yaml för konsekventa och repeterbara systemkonfigurationer.",
+  "@autoinstallDirectDescription": {},
+  "autoinstallDirectErrorNetworkTitle": "Automatisk installationsfil kan inte nås",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Kontrollera att webbadressen är korrekt, testa din internetanslutning eller försök senare.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectFileClearButtonLabel": "Rensa fil",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Ogiltig webbadress",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Ogiltig automatisk installationsfil",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Kontrollera filen eller ange en annan.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Filen för automatisk installation är inte läsbar",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Kontrollera dina behörigheter eller ange en annan fil.",
+  "@autoinstallDirectErrorFileSystemBody": {}
 }

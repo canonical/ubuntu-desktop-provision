@@ -201,7 +201,7 @@
   "@bootLoaderDevice": {},
   "partitionCreateTitle": "יצירת מחיצה",
   "@partitionCreateTitle": {},
-  "installationTypeAlongsideInfo": "המסמכים, המוזיקה וקבצים אישיים נוספים יישמרו. אפשר לבחור איזו מערכת הפעלה תיטען עם כל הפעלה של המחשב.",
+  "installationTypeAlongsideInfo": "נא לבחור לאיזו מחיצה לשנות את הגודל וליצור מקום עבור {product}. אפשר לבחור את מערכת ההפעלה שלך במהלך הטעינה.",
   "@installationTypeAlongsideInfo": {},
   "partitionTypeLabel": "סוג המחיצה החדשה:",
   "@partitionTypeLabel": {},
@@ -286,7 +286,7 @@
   "@installAlongsideResizePartition": {},
   "installAlongsideAllocateSpace": "הקצאת מקום",
   "@installAlongsideAllocateSpace": {},
-  "installationTypeAlongsideMulti": "להתקין את {product} לצדם",
+  "installationTypeAlongsideMulti": "להתקין את {product} לצד מערכות הפעלה קיימות",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -803,7 +803,7 @@
   "@choosePassphraseInfoBody": {},
   "createPassphrase": "יצירת מילת צופן",
   "@createPassphrase": {},
-  "installationTypeEraseInfo": "התחלה מאפס בכונן לבחירתך.",
+  "installationTypeEraseInfo": "כל הנתונים והמחיצות בכונן יימחקו, כולל מערכות ההפעלה.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "ניסיוני",
   "@installationTypeExperimental": {},
@@ -919,5 +919,49 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} היא אינה מערכת קבצים נתמכת עבור {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  },
+  "installationTypeEraseAndInstall": "מחיקת {os} והתקנת {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "כל הקבצים והנתונים מההתקנה הקיימת של {os} יימחקו לצמיתות.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectImportButtonLabel": "ייבוא",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectTitle": "התקנה אוטומטית",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "ייבוא קובץ autoinstall (התקנה אוטומטית)",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "אפשר למלא כתובת של קובץ autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "או לבחור בקובץ מקומי:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "בחירת קובץ…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "בחירת קובץ",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "קובצי YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {}
 }
