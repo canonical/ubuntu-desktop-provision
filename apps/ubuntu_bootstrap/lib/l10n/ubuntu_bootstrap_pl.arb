@@ -987,5 +987,38 @@
   "autoinstallDirectErrorNetworkBody": "Sprawdź poprawność adresu URL, przetestuj połączenie internetowe lub spróbuj później.",
   "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectFileClearButtonLabel": "Wyczyść plik",
-  "@autoinstallDirectFileClearButtonLabel": {}
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "landscapeMagicAttachInstructions": "Zeskanuj kod QR lub wprowadź poniższy kod na <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "autoinstallLandscapeOption": "Zautomatyzowana za pomocą Landscape",
+  "@autoinstallLandscapeOption": {},
+  "landscapeCodeExpiredWarning": "Kod wygasł, spróbuj ponownie",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Logowanie nie powiodło się, spróbuj ponownie",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallLandscapeDescription": "Dla użytkowników w organizacjach udostępniających plik autoinstalacji za pośrednictwem Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapePageTitle": "Instalacja zautomatyzowana",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Zaloguj się do Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Wprowadź domenę Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Domena Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Dalej",
+  "@next": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Do pobrania pliku autoinstalacji z Landscape potrzebny jest Internet",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Połącz się z Internetem, aby kontynuować",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainInvalidDomainWarning": "Nieprawidłowa domena, sprawdź lub skontaktuj się ze swoją pomocą techniczną",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainInstructions": "Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od swojej pomocy technicznej.",
+  "@landscapeDomainInstructions": {}
 }
