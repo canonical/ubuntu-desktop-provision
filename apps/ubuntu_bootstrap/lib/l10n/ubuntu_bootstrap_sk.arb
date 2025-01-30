@@ -814,7 +814,7 @@
   "@choosePassphraseHeader": {},
   "choosePassphraseMismatch": "Prístupové frázy sa nezhodujú",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Uistite sa, že ste si uložili svoju prístupovú frázu",
+  "choosePassphraseInfoHeader": "Uložte svoju prístupovú frázu na bezpečné miesto",
   "@choosePassphraseInfoHeader": {},
   "installationTypeHeader": "Ako chcete nainštalovať {DISTRO}?",
   "@installationTypeHeader": {
@@ -850,7 +850,7 @@
   "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Je potrebné zadať prístupovú frázu",
   "@choosePassphraseRequired": {},
-  "choosePassphraseInfoBody": "Ak stratíte prístupovú frázu, stratíte všetky svoje údaje.",
+  "choosePassphraseInfoBody": "Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje.",
   "@choosePassphraseInfoBody": {},
   "installationTypeExperimental": "Experimentálne",
   "@installationTypeExperimental": {},
@@ -1073,5 +1073,11 @@
   "landscapeLoginFailedWarning": "Prihlásenie zlyhalo, prosím skúste to znova",
   "@landscapeLoginFailedWarning": {},
   "autoinstallLandscapeOption": "Automaticky pomocou Landscape",
-  "@autoinstallLandscapeOption": {}
+  "@autoinstallLandscapeOption": {},
+  "chooseOptionalPassphraseBody": "Prístupová fráza môže pomôcť chrániť vaše údaje, aj keď bude vaše zariadenie kompromitované. Budete ju musieť zadať vždy, keď zapnete počítač. Neskôr ju nebude možné odstrániť",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseHeader": "Vytvorte prístupovú frázu (voliteľné)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto",
+  "@chooseOptionalPassphraseInfoHeader": {}
 }
