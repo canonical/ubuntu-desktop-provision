@@ -335,7 +335,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Frasa sandi tidak cocok",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Pastikan Anda menyimpan frasa sandi Anda",
+  "choosePassphraseInfoHeader": "Simpan frasa sandi Anda di suatu tempat yang aman",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda.",
   "@choosePassphraseInfoBody": {},
