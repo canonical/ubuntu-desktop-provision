@@ -165,7 +165,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String rstDescription(String DISTRO) {
-    return 'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing $DISTRO.';
+    return 'This computer uses Intel RST (Rapid Storage Technology). On dual boot systems, you can turn off RST in Windows before installing $DISTRO - otherwise, please boot into your system\'s BIOS setup and disable RST there before installing $DISTRO.';
   }
 
   @override
