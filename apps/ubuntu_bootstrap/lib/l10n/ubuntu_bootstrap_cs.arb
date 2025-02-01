@@ -973,5 +973,17 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectFileClearButtonLabel": "Vyčistit soubor",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectTitle": "Automatická instalace",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Importovat soubor autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Můžete zadat adresu URL souboru autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Nebo vyberte místní soubor:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Vybrat soubor...",
+  "@autoinstallDirectFileButtonLabel": {}
 }
