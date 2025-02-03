@@ -358,6 +358,9 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Ingen';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => 'Ingen valgt';
 
   @override
@@ -370,6 +373,9 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Brug LVM og kryptering';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'LVM og kryptering valgt';
 
   @override
@@ -380,6 +386,9 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => 'Slet disk og benyt ZFS med kryptering';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valgt';
