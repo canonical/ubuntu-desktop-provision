@@ -39,7 +39,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
         builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
       ),
-      if (type != StorageType.manual)
+      if (type != StorageType.manual && type != StorageType.erase)
         StorageSteps.bitlocker.route: WizardRoute(
           builder: (_) => const BitLockerPage(),
           onLoad: (_) => const BitLockerPage().load(context, ref),

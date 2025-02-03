@@ -257,7 +257,9 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(ConfirmPage), findsOneWidget);
-    verify(bitLockerModel.init()).called(1); // skipped
+    verifyNever(
+      bitLockerModel.init(),
+    ); // don't show bitlocker page when erasing the entire disk
     verify(guidedReformatModel.init()).called(1); // skipped
     verify(passphraseModel.init()).called(1); // skipped
     verify(recoveryKeyModel.init()).called(1); // skipped
