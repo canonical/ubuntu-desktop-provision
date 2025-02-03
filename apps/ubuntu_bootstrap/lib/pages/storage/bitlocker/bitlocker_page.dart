@@ -15,7 +15,8 @@ class BitLockerPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
-    if (ref.read(storageModelProvider).type == StorageType.manual) {
+    final type = ref.read(storageModelProvider).type;
+    if (type == StorageType.manual || type == StorageType.erase) {
       return Future.value(false);
     }
 
