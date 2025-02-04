@@ -1040,5 +1040,7 @@
     }
   },
   "landscapeDomainNoInternetDescriptionWarning": "Internet est nécessaire pour récupérer le fichier autoinstall de Landscape",
-  "@landscapeDomainNoInternetDescriptionWarning": {}
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallDirectFileClearButtonLabel": "Effacer fichier",
+  "@autoinstallDirectFileClearButtonLabel": {}
 }
