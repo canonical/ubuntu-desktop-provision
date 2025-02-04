@@ -114,9 +114,9 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Ní mheaitseálann na pasfhrásaí",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Cinntigh go sábhálann tú do phasfhrása",
+  "choosePassphraseInfoHeader": "Stóráil do phasfhrása áit éigin sábháilte",
   "@choosePassphraseInfoHeader": {},
-  "choosePassphraseInfoBody": "Má chailleann tú do phasfhrása, caillfidh tú do chuid sonraí go léir.",
+  "choosePassphraseInfoBody": "Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.",
   "@choosePassphraseInfoBody": {},
   "createPassphrase": "Cruthaigh pasfhrása",
   "@createPassphrase": {},
@@ -555,7 +555,7 @@
       }
     }
   },
-  "recoveryKeyCommand": "Is féidir leat rochtain a fháil ar d'eochair a ghnóthú tar éis a shuiteáil leis an ordú seo a leanas:",
+  "recoveryKeyCommand": "Chun eochair athshlánaithe a fháil, cuir an tsuiteáil i gcrích, atosaigh do ríomhaire, agus rith an t-ordú seo sa teirminéal:",
   "@recoveryKeyCommand": {},
   "validate": "Bailíochtaigh",
   "@validate": {},
@@ -1134,5 +1134,62 @@
   "autoinstallDirectOption": "Uathoibríoch le comhad uathshuiteála",
   "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.",
-  "@autoinstallDirectDescription": {}
+  "@autoinstallDirectDescription": {},
+  "chooseOptionalPassphraseBody": "Is féidir le pasfhrása cabhrú le do shonraí a chosaint fiú má chuirtear isteach ar do chrua-earraí. Beidh ort an pasfhrása a chur isteach gach uair a chasann tú ar do ríomhaire. Ní bheidh tú in ann é a bhaint níos déanaí",
+  "@chooseOptionalPassphraseBody": {},
+  "recoveryKeyHeader": "Faigh eochair athshlánaithe",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe",
+  "@recoveryKeyInfoHeader": {},
+  "autoinstallLandscapeOption": "Uathoibrithe le Tírdhreach",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "recoveryKeyStorageAdvice": "Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapePageTitle": "Suiteáil uathoibrithe",
+  "@landscapePageTitle": {},
+  "next": "Ar aghaidh",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Fearann neamhbhailí, seiceáil le do thoil nó déan teagmháil le do thacaíocht TF",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Tá gá leis an Idirlíon chun an comhad uathshuiteála a fháil ó Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeLoginFailedWarning": "Theip ar logáil isteach, bain triail eile as",
+  "@landscapeLoginFailedWarning": {},
+  "landscapeHeader": "Logáil isteach ar an Tírdhreach",
+  "@landscapeHeader": {},
+  "chooseOptionalPassphraseHeader": "Cruthaigh pasfhrása (roghnach)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseInfoBody": "Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyInfoBody": "Faigh eochair athshlánaithe chomh luath agus a logálann tú isteach i {distro} den chéad uair agus stóráil áit éigin sábháilte í.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "Tuigim go mb'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam",
+  "@recoveryKeyConfirmation": {},
+  "landscapeMagicAttachInstructions": "Scan an cód QR nó cuir isteach an cód thíos ag <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainHeader": "Cuir isteach fearann Tírdhreacha (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainNoInternetTitleWarning": "Ceangail leis an idirlíon chun leanúint ar aghaidh",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeCodeExpiredWarning": "Chuaigh an cód in éag, bain triail eile as",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeDomainInstructions": "Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Fearann tírdhreacha (FQDN)",
+  "@landscapeDomainTextField": {}
 }
