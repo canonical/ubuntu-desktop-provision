@@ -724,7 +724,7 @@
   },
   "recoveryKeyTitle": "Ŝlosilo por aparato-baza ĉifrado",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Post instalo, vi povas legi vian restaŭran ŝlosilon per la jena komando:",
+  "recoveryKeyCommand": "Por akiri restaŭran ŝlosilon, finu la instaladon, restartigu vian komputilon, kaj rulu la jenon en la terminalo:",
   "@recoveryKeyCommand": {},
   "installationTypeTPM": "EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon",
   "@installationTypeTPM": {},
@@ -837,7 +837,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "La pasfrazoj ne kongruas",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Certigu, ke vi konservas vian pasfrazon",
+  "choosePassphraseInfoHeader": "Konservu vian pasfrazon ie sekure",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Se vi forgesos vian pasfrazon, vi perdos ĉiom da viaj datenoj.",
   "@choosePassphraseInfoBody": {},
@@ -987,5 +987,62 @@
   "autoinstallDirectUrlLabel": "Vi povas tajpi la retadreson de dosiero de aŭtomata instalado:",
   "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectFileLabel": "Aŭ elekti lokan dosieron:",
-  "@autoinstallDirectFileLabel": {}
+  "@autoinstallDirectFileLabel": {},
+  "landscapePageTitle": "Aŭtomata instalado",
+  "@landscapePageTitle": {},
+  "landscapeDomainInstructions": "Provizu la nomregnon Landscape de via organizaĵo por saluti kaj elŝuti aŭtomatan instalan dosieron. La informadika subtena teamo de via organizaĵo povas provizi la plene kvalifikitan nomregnon.",
+  "@landscapeDomainInstructions": {},
+  "chooseOptionalPassphraseInfoHeader": "Konservu vian pasfrazon kaj restaŭran ŝlosilon ie sekure",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "recoveryKeyHeader": "Akiri restaŭran ŝlosilon",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Vi eble perdos ĉiom da viaj datenoj sen restaŭra ŝlosilo",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyInfoBody": "Akiru restaŭran ŝlosilon tuj post unua saluto al {distro}, kaj konservu ĝin ie sekure.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "Mi komprenas, ke mi povos perdi ĉiom da miaj datenoj, se mi ne havos restaŭran ŝlosilon",
+  "@recoveryKeyConfirmation": {},
+  "recoveryKeyStorageAdvice": "Konservu la restaŭran ŝlosilon ie sekure. Uzu ĝin por malĉifri la diskon por kelkaj sistemaj ŝanĝoj. Ekzemple, oni bezonos ĝin, se oni ŝanĝos la komponantojn de via komputilo aŭ ĝisdatigos la mikroprogramaron.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainHeader": "Tajpu nomregnon de Landscape (plene kvalifikitan nomregnon)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Nomregno Landscape (plene kvalifikita nomregno)",
+  "@landscapeDomainTextField": {},
+  "landscapeDomainNoInternetTitleWarning": "Konektu al Interreto por daŭrigi",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainInvalidDomainWarning": "Nevalida nomregno. Bonvolu kontroli aŭ kontakti vian informadikan subtenan teamon",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeCodeExpiredWarning": "La kodo eksvalidiĝis; bonvolu reprovi",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Salutado malsukcesis; bonvolu reprovi",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallLandscapeOption": "Aŭtomatigite per Landscape",
+  "@autoinstallLandscapeOption": {},
+  "chooseOptionalPassphraseHeader": "Krei pasfrazon (nedevige)",
+  "@chooseOptionalPassphraseHeader": {},
+  "next": "Sekven",
+  "@next": {},
+  "landscapeHeader": "Saluti al Landscape",
+  "@landscapeHeader": {},
+  "chooseOptionalPassphraseInfoBody": "Se vi perdos vian pasfrazon, vi perdos ĉiom da viaj datenoj. La pasfrazo ne anstataŭigas la restaŭran ŝlosilon nek la pasvorton de la uzanto.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "autoinstallLandscapeDescription": "Por uzanto en organizaĵo provizanta aŭtomatan instalan dosieron per Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeMagicAttachInstructions": "Skanu la QR-kodon aŭ tajpu la ĉi suban kodon ĉe <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainNoInternetDescriptionWarning": "Interreto necesas por elŝuti la aŭtomatan instalan dosieron el Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "chooseOptionalPassphraseBody": "Pasfrazo povas helpi protekti viajn datenojn, eĉ se via aparato estas minacata. Vi devos tajpi la pasfrazon po unu fojo, kiam la komputilo startas. Vi ne povos forigi la pasfrazon poste",
+  "@chooseOptionalPassphraseBody": {}
 }

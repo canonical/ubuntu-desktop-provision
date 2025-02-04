@@ -335,7 +335,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Frasa sandi tidak cocok",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Pastikan Anda menyimpan frasa sandi Anda",
+  "choosePassphraseInfoHeader": "Simpan frasa sandi Anda di suatu tempat yang aman",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda.",
   "@choosePassphraseInfoBody": {},
@@ -989,7 +989,7 @@
   "@selectGuidedStoragePartitionDropdownLabel": {},
   "recoveryKeyTitle": "Kunci pemulihan TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Anda dapat mengakses kunci keamanan setelah instalasi dengan perintah berikut:",
+  "recoveryKeyCommand": "Untuk mendapatkan kunci pemulihan, selesaikan instalasi, restart komputer Anda, dan jalankan perintah ini di terminal:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Peringatan:</font> Jika Anda kehilangan kunci keamanan, semua data akan hilang. Jika perlu, tuliskan kunci Anda dan simpan di tempat yang aman.",
   "@recoveryKeyWarning": {
@@ -1066,5 +1066,62 @@
   "autoinstallDirectErrorFileSystemTitle": "Berkas autoinstall tidak bisa dibaca",
   "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorUnkownTitle": "Kesalahan tidak dikenal",
-  "@autoinstallDirectErrorUnkownTitle": {}
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "chooseOptionalPassphraseBody": "Frasa sandi dapat membantu melindungi data Anda bahkan jika perangkat keras Anda terkompromi. Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda. Anda tidak akan dapat menghapusnya nanti",
+  "@chooseOptionalPassphraseBody": {},
+  "recoveryKeyStorageAdvice": "Simpan kunci pemulihan di suatu tempat aman. Gunakan untuk mengenkripsi disk jika terjadi perubahan sistem tertentu. Misalnya, Anda mungkin perlu jika Anda mengubah komponen di komputer atau memperbarui firmware.",
+  "@recoveryKeyStorageAdvice": {},
+  "chooseOptionalPassphraseInfoBody": "Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda. Frasa sandi tidak menggantikan kunci pemulihan atau kata sandi pengguna Anda.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "autoinstallLandscapeOption": "Diotomasi dengan Landscape",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "Bagi pengguna dalam organisasi yang menyediakan berkas autoinstall melalui Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeHeader": "Log masuk ke Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Masukkan domain (FQDN) Landscape",
+  "@landscapeDomainHeader": {},
+  "landscapeMagicAttachInstructions": "Pindai kode QR atau masukkan kode di bawah pada <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Instalasi terotomasi",
+  "@landscapePageTitle": {},
+  "chooseOptionalPassphraseHeader": "Buat frasa sandi (opsional)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Simpan frasa sandi dan kunci pemulihan Anda di suatu tempat aman",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "recoveryKeyHeader": "Dapatkan kunci pemulihan",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Anda bisa kehilangan semua data Anda tanpa kunci pemulihan",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyInfoBody": "Dapatkan kunci pemulihan segera setelah Anda log masuk pertama ke {distro} dan menyimpannya di suatu tempat aman.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "Saya mengerti saya mungkin kehilangan semua data saya jika saya tidak memiliki kunci pemulihan",
+  "@recoveryKeyConfirmation": {},
+  "landscapeDomainInstructions": "Sediakan domain Landscape organisasi Anda untuk log masuk dan mengambil berkas autoinstall. Anda bisa mendapatkan FQDN dari dukungan TI Anda.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Domain (FQDN) Landscape",
+  "@landscapeDomainTextField": {},
+  "next": "Selanjutnya",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Domain tidak valid, silakan periksa atau menghubungi dukungan TI Anda",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Sambung ke internet untuk melanjutkan",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet diperlukan untuk mengambil berkas autoinstall dari Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeCodeExpiredWarning": "Kode kedaluwarsa, silakan coba lagi",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Log masuk gagal, silakan coba lagi",
+  "@landscapeLoginFailedWarning": {}
 }
