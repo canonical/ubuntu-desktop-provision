@@ -512,7 +512,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstDescription.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.'**
+  /// **'This computer uses Intel RST (Rapid Storage Technology). On dual boot systems, you can turn off RST in Windows before installing {DISTRO} - otherwise, please boot into your system\'s BIOS setup and disable RST there before installing {DISTRO}.'**
   String rstDescription(String DISTRO);
 
   /// No description provided for @rstInstructions.
