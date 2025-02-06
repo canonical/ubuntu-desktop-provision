@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Cas as RST chun leanúint ar aghaidh';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'Úsáideann an ríomhaire seo Intel RST (Teicneolaíocht Stórála Mear). Ní mór duit RST a mhúchadh in Windows sula suiteálann tú $DISTRO.';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -743,6 +747,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String bitlockerInstructions(String url) {
     return 'Le treoracha a fháil, scanadh an cód QR ar ghléas eile nó tabhair cuairt ar: <a href=\"https://$url\">$url</a>';
   }
+
+  @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
 
   @override
   String get restartIntoWindows => 'Atosaigh isteach Windows';

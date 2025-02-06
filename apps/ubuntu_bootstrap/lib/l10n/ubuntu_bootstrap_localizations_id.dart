@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Nonaktifkan RST untuk melanjutkan';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'Komputer ini menggunakan Intel RST (Rapid Storage Technology). Anda harus mematikan RST di Windows sebelum memasang $DISTRO.';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -743,6 +747,12 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String bitlockerInstructions(String url) {
     return 'Untuk petunjuk, pindai kode QR pada perangkat lain atau kunjungi: <a href=\"https://$url\">$url</a>';
   }
+
+  @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
 
   @override
   String get restartIntoWindows => 'Mulai Ulang Ke Windows';

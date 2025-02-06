@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Az RST kikapcsolása a folytatáshoz';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'Ez a számítógép Intel RST (Rapid Storage Technology – gyors tárolótechnológia) technológiát használ. Ki kell kapcsolnia az RST-t a Windowsban a(z) $DISTRO telepítése előtt.';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -743,6 +747,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String bitlockerInstructions(String url) {
     return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
   }
+
+  @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
 
   @override
   String get restartIntoWindows => 'Újraindítás és Windows használata';
