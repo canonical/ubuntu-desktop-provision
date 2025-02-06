@@ -21,7 +21,7 @@ void main() {
     final context = tester.element(find.byType(RstPage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    final restartButton = find.button(l10n.restartIntoWindows);
+    final restartButton = find.button(l10n.restartComputer);
     expect(restartButton, findsOneWidget);
 
     final windowClosed = YaruTestWindow.waitForClosed();

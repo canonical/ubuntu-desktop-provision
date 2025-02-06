@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Skru av RST for å fortsette';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'Denne datamaskinen bruker Intel RST (Rapid Storage Technology). Du må slå av RST i Windows før du installerer Ubuntu.';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -743,6 +747,12 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String bitlockerInstructions(String url) {
     return 'Instruks er tilgjengelig hvis du åpner denne siden på en telefon eller en annen enhet: <a href=\"https://$url\"></a>';
   }
+
+  @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
 
   @override
   String get restartIntoWindows => 'Omstart til Windows';

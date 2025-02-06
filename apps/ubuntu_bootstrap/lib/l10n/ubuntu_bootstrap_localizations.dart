@@ -506,14 +506,26 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @rstHeader.
   ///
   /// In en, this message translates to:
-  /// **'Turn off RST to continue'**
+  /// **'You must disable RST to continue installation'**
   String get rstHeader;
 
-  /// No description provided for @rstDescription.
+  /// No description provided for @rstDisable.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.'**
-  String rstDescription(String DISTRO);
+  /// **'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:'**
+  String get rstDisable;
+
+  /// No description provided for @rstDisableWindows.
+  ///
+  /// In en, this message translates to:
+  /// **'Windows, if you are using a dual boot setup with Windows'**
+  String get rstDisableWindows;
+
+  /// No description provided for @rstDisableBios.
+  ///
+  /// In en, this message translates to:
+  /// **'The BIOS settings'**
+  String get rstDisableBios;
 
   /// No description provided for @rstInstructions.
   ///
@@ -1534,6 +1546,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>'**
   String bitlockerInstructions(String url);
+
+  /// No description provided for @restartComputer.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart computer'**
+  String get restartComputer;
+
+  /// No description provided for @restartComputerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart computer?'**
+  String get restartComputerTitle;
 
   /// No description provided for @restartIntoWindows.
   ///

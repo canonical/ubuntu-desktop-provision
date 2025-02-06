@@ -121,15 +121,10 @@
     }
   },
   "rstTitle": "RST detected",
-  "rstHeader": "Turn off RST to continue",
-  "rstDescription": "This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing {DISTRO}.",
-  "@rstDescription": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
+  "rstHeader": "You must disable RST to continue installation",
+  "rstDisable": "Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:",
+  "rstDisableWindows": "Windows, if you are using a dual boot setup with Windows",
+  "rstDisableBios": "The BIOS settings",
   "rstInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "placeholders": {
@@ -583,6 +578,8 @@
       }
     }
   },
+  "restartComputer": "Restart computer",
+  "restartComputerTitle": "Restart computer?",
   "restartIntoWindows": "Restart into Windows",
   "restartIntoWindowsTitle": "Restart into Windows?",
   "restartIntoWindowsDescription": "Are you sure you want to restart your computer? You will need to restart the {DISTRO} installation later to finish installing {DISTRO}.",

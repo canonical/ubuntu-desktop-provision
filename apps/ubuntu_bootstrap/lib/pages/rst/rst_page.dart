@@ -33,7 +33,10 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
         leading: BackWizardButton(),
       ),
       children: [
-        Text(lang.rstDescription(flavor.displayName)),
+        Html(
+          data:
+              '${lang.rstDisable}<ul><li>${lang.rstDisableWindows}</li><li>${lang.rstDisableBios}</li></ul>',
+        ),
         const SizedBox(height: kWizardSpacing),
         Html(
           data: lang.rstInstructions('help.ubuntu.com/rst'),
@@ -49,7 +52,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
             final window = YaruWindow.of(context);
             final confirmed = await showConfirmationDialog(
               context,
-              title: lang.restartIntoWindowsTitle,
+              title: lang.restartComputerTitle,
               message: lang.restartIntoWindowsDescription(flavor.displayName),
               okLabel: UbuntuLocalizations.of(context).restartLabel,
               okElevated: true,
@@ -59,7 +62,7 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
             }
           },
           child: Text(
-            lang.restartIntoWindows,
+            lang.restartComputer,
           ),
         ),
       ],

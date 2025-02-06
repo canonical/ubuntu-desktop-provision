@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Desligue a RST para continuar';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'Este computador usa Intel RST (Rapid Storage Technology). Precisa de desligar a RST no Windows antes de instalar o $DISTRO..';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -745,6 +749,12 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
+
+  @override
   String get restartIntoWindows => 'Reiniciar no Windows';
 
   @override
@@ -1197,11 +1207,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get rstHeader => 'Desligue o RST para continuar';
-
-  @override
-  String rstDescription(String DISTRO) {
-    return 'Este computador usa Intel RST (Rapid Storage Technology). Você precisa desligar a RST no Windows antes de instalar o $DISTRO.';
-  }
 
   @override
   String rstInstructions(String url) {

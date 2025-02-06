@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get rstHeader => '关闭 RST 以继续';
 
   @override
-  String rstDescription(String DISTRO) {
-    return '此计算机使用了英特尔 RST（快速存储技术）。在安装 $DISTRO 之前，您需要在 Windows 中关闭 RST。';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -745,6 +749,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
+
+  @override
   String get restartIntoWindows => '重启进入 Windows';
 
   @override
@@ -1212,11 +1222,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get rstHeader => '關閉 RST 以繼續安裝';
-
-  @override
-  String rstDescription(String DISTRO) {
-    return '本電腦正在使用 Intel 快速儲存技術 (Rapid Storage Technology)，在安裝 $DISTRO 之前您需要先在 Windows 下關閉該功能。';
-  }
 
   @override
   String rstInstructions(String url) {

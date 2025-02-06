@@ -164,9 +164,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'برای ادامه RST را خاموش کنید';
 
   @override
-  String rstDescription(String DISTRO) {
-    return 'این رایانه از RST (فناوری ذخیره‌سازی سریع) اینتل استفاده می‌کند. باید پیش از نصب $DISTRO در ویندوز خاموشش کنید.';
-  }
+  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
 
   @override
   String rstInstructions(String url) {
@@ -743,6 +747,12 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String bitlockerInstructions(String url) {
     return 'برای دستورالعمل‌ها، رمز پاس را روی افزاره‌ای دیگر پوییده یا ببینید: <a href=\"https://$url\">$url</a>';
   }
+
+  @override
+  String get restartComputer => 'Restart computer';
+
+  @override
+  String get restartComputerTitle => 'Restart computer?';
 
   @override
   String get restartIntoWindows => 'آغاز دوباره به ویندوز';

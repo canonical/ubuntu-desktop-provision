@@ -89,7 +89,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       await takeScreenshot(screenshot);
     }
 
-    await tapButton(l10n.restartIntoWindows);
+    await tapButton(l10n.restartComputer);
     await pumpAndSettle();
     expect(find.byType(AlertDialog), findsOneWidget);
 
