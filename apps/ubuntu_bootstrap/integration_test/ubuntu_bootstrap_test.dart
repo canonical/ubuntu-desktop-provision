@@ -312,6 +312,9 @@ void main() {
     await tester.testStoragePage(
       type: StorageType.erase,
     );
+    await tester.testGuidedCapabilityPage(
+      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
 
     await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: 'passphrase');
