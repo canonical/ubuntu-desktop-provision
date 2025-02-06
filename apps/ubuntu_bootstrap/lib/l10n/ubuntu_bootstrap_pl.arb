@@ -516,7 +516,7 @@
   "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceRequired": "Wymagana:",
   "@notEnoughDiskSpaceRequired": {},
-  "rstHeader": "Wyłącz funkcję RST, aby kontynuować",
+  "rstHeader": "Musisz wyłącz funkcję RST, aby kontynuować",
   "@rstHeader": {},
   "restartIntoWindowsDescription": "Czy na pewno chcesz ponownie uruchomić komputer? Później należy ponownie uruchomić instalację {DISTRO}, aby zakończyć instalowanie {DISTRO}.",
   "@restartIntoWindowsDescription": {
@@ -1044,5 +1044,15 @@
   "recoveryKeyConfirmation": "Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania",
   "@recoveryKeyConfirmation": {},
   "recoveryKeyStorageAdvice": "Przechowuj klucz odzyskiwania w bezpiecznym miejscu. Używaj go do odszyfrowania dysku w przypadku niektórych zmian w systemie. Przykładowo możesz go potrzebować, jeśli zmienisz komponenty w komputerze lub zaktualizujesz oprogramowanie układowe.",
-  "@recoveryKeyStorageAdvice": {}
+  "@recoveryKeyStorageAdvice": {},
+  "restartComputer": "Uruchom ponownie komputer",
+  "@restartComputer": {},
+  "rstDisableWindows": "Windows, jeśli korzystasz z konfiguracji podwójnego rozruchu z tym systemem",
+  "@rstDisableWindows": {},
+  "restartComputerTitle": "Uruchomić ponownie komputer?",
+  "@restartComputerTitle": {},
+  "rstDisable": "Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:",
+  "@rstDisable": {},
+  "rstDisableBios": "Ustawieniach BIOS-u",
+  "@rstDisableBios": {}
 }
