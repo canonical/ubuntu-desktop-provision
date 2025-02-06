@@ -119,7 +119,7 @@
   "@diskHeadersMountPoint": {},
   "newPartitionTable": "Nová tabuľka oddielov",
   "@newPartitionTable": {},
-  "rstHeader": "Ak chcete pokračovať, vypnite RST",
+  "rstHeader": "Ak chcete pokračovať v inštalácii, musíte vypnúť RST",
   "@rstHeader": {},
   "showSecurityKey": "Zobraziť",
   "@showSecurityKey": {},
@@ -1097,5 +1097,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "rstDisableWindows": "Vo Windowse, ak používate nastavenie duálneho spúšťania s Windowsom",
+  "@rstDisableWindows": {},
+  "rstDisable": "Váš počítač používa technológiu Intel RST (Rapid Storage Technology). RST môžete zakázať buď:",
+  "@rstDisable": {},
+  "rstDisableBios": "Alebo v nastaveniach BIOSu",
+  "@rstDisableBios": {},
+  "restartComputerTitle": "Reštartovať počítač?",
+  "@restartComputerTitle": {},
+  "restartComputer": "Reštartovať počítač",
+  "@restartComputer": {}
 }
