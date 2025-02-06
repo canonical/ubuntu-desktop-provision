@@ -323,3 +323,14 @@ jobs:
         with:
           name: tics-coverage-reports
           path: coverage/*
+
+      - name: Run TICS analysis
+        # if: github.event_name == 'push'
+        uses: tiobe/tics-github-action@v3
+        with:
+          mode: qserver
+          project: ubuntu-desktop-provision
+          viewerUrl: https://canonical.tiobe.com/tiobeweb/TICS/api/cfg?name=default
+          ticsAuthToken: ${{ secrets.TICSAUTHTOKEN }}
+          installTics: true
+          branchname: main
