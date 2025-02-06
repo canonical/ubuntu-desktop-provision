@@ -311,7 +311,6 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
-      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
     await tester.testRecoveryKeyPage();
