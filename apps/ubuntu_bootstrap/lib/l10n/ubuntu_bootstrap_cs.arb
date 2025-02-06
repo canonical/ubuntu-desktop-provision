@@ -561,7 +561,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Aby bylo možné pokračovat, vypněte RST",
+  "rstHeader": "Aby bylo možné pokračovat v instalaci, musíte vypnout RST",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
   "@restartIntoWindowsTitle": {},
@@ -1089,5 +1089,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "rstDisableBios": "Nastavení BIOSu",
+  "@rstDisableBios": {},
+  "restartComputer": "Restartovat počítač",
+  "@restartComputer": {},
+  "restartComputerTitle": "Restartovat počítač?",
+  "@restartComputerTitle": {},
+  "rstDisableWindows": "Windows, pokud používáte dual boot se systémem Windows",
+  "@rstDisableWindows": {},
+  "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:",
+  "@rstDisable": {}
 }
