@@ -6,6 +6,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_provision/interfaces.dart';
@@ -33,6 +34,9 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
       InstallationStep.storage.route: WizardRoute(
         builder: (_) => StoragePage(),
         userData: WizardRouteData(step: InstallationStep.secureBoot.pageIndex),
+      ),
+      StorageSteps.guidedCapabilities.route: WizardRoute(
+        builder: (_) => GuidedCapabilitiesPage(),
       ),
       StorageSteps.guidedReformat.route: WizardRoute(
         builder: (_) => const GuidedReformatPage(),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -160,32 +159,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             storageType: StorageType.erase,
             title: Text(lang.installationTypeErase(flavor.displayName)),
             subtitle: _WarningSubtitle(text: lang.installationTypeEraseInfo),
-            trailing: hasAdvancedFeatures
-                ? Padding(
-                    padding: const EdgeInsets.only(top: kWizardSpacing),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        OutlinedButton(
-                          onPressed: ref.watch(storageModelProvider).type ==
-                                  StorageType.erase
-                              ? () => showAdvancedFeaturesDialog(
-                                    context,
-                                    ref.watch(storageModelProvider),
-                                  )
-                              : null,
-                          child: Text(lang.installationTypeAdvancedLabel),
-                        ),
-                        const SizedBox(width: kWizardSpacing),
-                        Flexible(
-                          child: Text(
-                            guidedCapability?.localize(lang) ?? '',
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                : null,
           ),
         ],
         if (canManualPartition)
@@ -202,26 +175,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
-extension _GuidedCapabilityL10n on GuidedCapability {
-  String localize(UbuntuBootstrapLocalizations lang) {
-    switch (this) {
-      case GuidedCapability.LVM:
-        return lang.installationTypeLVMSelected;
-      case GuidedCapability.LVM_LUKS:
-        return lang.installationTypeLVMEncryptionSelected;
-      case GuidedCapability.ZFS:
-        return lang.installationTypeZFSSelected;
-      case GuidedCapability.ZFS_LUKS_KEYSTORE:
-        return lang.installationTypeZFSEncryptionSelected;
-      case GuidedCapability.CORE_BOOT_ENCRYPTED:
-      case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
-        return lang.installationTypeTPMSelected;
-      default:
-        return lang.installationTypeNoneSelected;
-    }
-  }
-}
-
 extension _OsProberList on List<OsProber> {
   /// Whether the system has any OS installed multiple times.
   bool get hasDuplicates =>
@@ -233,14 +186,12 @@ class _InstallationTypeTile extends ConsumerWidget {
     required this.storageType,
     required this.title,
     this.subtitle,
-    this.trailing,
     this.enabled = true,
   });
 
   final StorageType storageType;
   final Widget title;
   final Widget? subtitle;
-  final Widget? trailing;
   final bool enabled;
 
   @override
@@ -256,7 +207,7 @@ class _InstallationTypeTile extends ConsumerWidget {
           title: title,
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [subtitle, trailing].whereNotNull().toList(),
+            children: [subtitle].whereNotNull().toList(),
           ),
           contentPadding: kWizardTilePadding,
           isThreeLine: true,
