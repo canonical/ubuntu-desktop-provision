@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -24,6 +25,8 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final theme = Theme.of(context);
+    final experimentalBadgeText =
+        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
@@ -52,7 +55,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              const SizedBox(height: kWizardSpacing),
+              const SizedBox(height: kWizardSpacing / 2),
               if (model.hasLvm)
                 OptionButton(
                   title: Text(lang.installationTypeLVMEncryption),
@@ -65,14 +68,14 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                 visible: model.showAdvanced,
                 child: Column(
                   children: [
-                    const SizedBox(height: kWizardSpacing / 4),
+                    const SizedBox(height: kWizardSpacing / 8),
                     Divider(
                       color: theme.dividerColor,
                     ),
                     if (model.hasLvm)
                       OptionButton(
                         title: Text(lang.installationTypeLVM),
-                        subtitle: Text(''),
+                        isThreeLines: false,
                         value: GuidedCapability.LVM,
                         groupValue: model.guidedCapability,
                         onChanged: (v) => model.guidedCapability = v!.clean(),
@@ -82,9 +85,10 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         title: Wrap(
                           children: [
                             Text(lang.installationTypeZFSEncryption),
+                            InfoBadge(title: experimentalBadgeText),
                           ],
                         ),
-                        subtitle: Text(lang.installationTypeZFSEncryptionInfo),
+                        isThreeLines: false,
                         value: GuidedCapability.ZFS_LUKS_KEYSTORE,
                         groupValue: model.guidedCapability,
                         onChanged: (v) => model.guidedCapability = v!.clean(),
@@ -93,9 +97,10 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         title: Wrap(
                           children: [
                             Text(lang.installationTypeZFS),
+                            InfoBadge(title: experimentalBadgeText),
                           ],
                         ),
-                        subtitle: Text(''),
+                        isThreeLines: false,
                         value: GuidedCapability.ZFS,
                         groupValue: model.guidedCapability,
                         onChanged: (v) => model.guidedCapability = v!.clean(),
@@ -104,16 +109,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                     TpmOption(
                       model: model,
                     ),
-                  ].withSpacing(kWizardSpacing),
-                ),
-              ),
-              const SizedBox(height: kWizardSpacing),
-              OutlinedButton(
-                onPressed: model.toggleShowAdvanced,
-                child: Text(
-                  model.showAdvanced
-                      ? lang.hideSecurityKey
-                      : lang.installationTypeAdvancedLabel,
+                  ].withSpacing(kWizardSpacing / 2),
                 ),
               ),
             ],
@@ -135,6 +131,8 @@ class TpmOption extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final experimentalBadgeText =
+        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
     final target = model
         .getAllTargets()
@@ -153,6 +151,7 @@ class TpmOption extends ConsumerWidget {
           title: Wrap(
             children: [
               Text(lang.installationTypeTPM),
+              InfoBadge(title: experimentalBadgeText),
             ],
           ),
           subtitle: Html(
