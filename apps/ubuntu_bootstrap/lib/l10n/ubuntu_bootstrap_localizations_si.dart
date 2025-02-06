@@ -377,7 +377,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'LVM හා සංකේතනය භාවිතා කරන්න';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM හා සංකේතනය තෝරා ඇත';
@@ -405,7 +405,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
   }
 
   @override

@@ -377,7 +377,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Käytä LVM:ää ja salausta';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';

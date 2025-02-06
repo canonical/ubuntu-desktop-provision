@@ -914,7 +914,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeLVMEncryptionInfo.
   ///
   /// In en, this message translates to:
-  /// **'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.'**
+  /// **'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.'**
   String get installationTypeLVMEncryptionInfo;
 
   /// No description provided for @installationTypeLVMEncryptionSelected.
@@ -932,13 +932,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeZFS.
   ///
   /// In en, this message translates to:
-  /// **'Use ZFS without encryption (experimental)'**
+  /// **'Use ZFS without encryption'**
   String get installationTypeZFS;
 
   /// No description provided for @installationTypeZFSEncryption.
   ///
   /// In en, this message translates to:
-  /// **'Encrypt with a passphrase using ZFS (experimental)'**
+  /// **'Encrypt with a passphrase using ZFS'**
   String get installationTypeZFSEncryption;
 
   /// No description provided for @installationTypeZFSEncryptionInfo.
@@ -962,13 +962,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeTPM.
   ///
   /// In en, this message translates to:
-  /// **'Hardware-backed encryption (experimental)'**
+  /// **'Use hardware-backed encryption'**
   String get installationTypeTPM;
 
   /// No description provided for @installationTypeTPMInfo.
   ///
   /// In en, this message translates to:
-  /// **'It may not work with your hardware or future {DISTRO} releases. <a href=\"{url}\">Read about TPM encryption</a> before you choose this option.'**
+  /// **'<a href=\"{url}\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future {DISTRO} releases.'**
   String installationTypeTPMInfo(String DISTRO, String url);
 
   /// No description provided for @installationTypeTPMSelected.

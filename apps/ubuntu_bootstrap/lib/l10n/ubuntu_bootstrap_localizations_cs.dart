@@ -377,7 +377,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Použít LVM a šifrování';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';

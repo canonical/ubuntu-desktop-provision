@@ -377,7 +377,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'استفاده از LVM و رمزنگاری';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Native encryption with LVM. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'استفاده از LVM و رمزنگاری گزیده شد';
@@ -389,7 +389,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFS => 'آزمایشی: پاک کردن دیسک و استفاده از ZFS';
 
   @override
-  String get installationTypeZFSEncryption => 'Encrypt with a passphrase using ZFS (experimental)';
+  String get installationTypeZFSEncryption => 'Encrypt with a passphrase using ZFS';
 
   @override
   String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'رمزنگاری و ZFS گزیده';
 
   @override
-  String get installationTypeTPM => 'Hardware-backed encryption (experimental)';
+  String get installationTypeTPM => 'Use hardware-backed encryption';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
   }
 
   @override

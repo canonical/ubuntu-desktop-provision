@@ -426,7 +426,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'You will choose a security key in the next step.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption (experimental)';
+  String get installationTypeZFS => 'Use ZFS without encryption';
 
   @override
   String get installationTypeZFSEncryption =>
@@ -444,11 +444,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'ZFS and encryption selected';
 
   @override
-  String get installationTypeTPM => 'Hardware-backed encryption (experimental)';
+  String get installationTypeTPM => 'Use hardware-backed encryption';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'It may not work with your hardware or future $DISTRO releases. <a href=\"$url\">Read about TPM encryption</a> before you choose this option.';
+    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
   }
 
   @override
@@ -534,7 +534,6 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider =>
       'Allocate drive space by dragging the divider below:';
 
   @override

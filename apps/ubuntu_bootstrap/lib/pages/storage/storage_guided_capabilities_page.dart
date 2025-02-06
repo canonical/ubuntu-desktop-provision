@@ -84,18 +84,6 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                       OptionButton(
                         title: Wrap(
                           children: [
-                            Text(lang.installationTypeZFSEncryption),
-                            InfoBadge(title: experimentalBadgeText),
-                          ],
-                        ),
-                        isThreeLines: false,
-                        value: GuidedCapability.ZFS_LUKS_KEYSTORE,
-                        groupValue: model.guidedCapability,
-                        onChanged: (v) => model.guidedCapability = v!.clean(),
-                      ),
-                      OptionButton(
-                        title: Wrap(
-                          children: [
                             Text(lang.installationTypeZFS),
                             InfoBadge(title: experimentalBadgeText),
                           ],
@@ -105,11 +93,37 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         groupValue: model.guidedCapability,
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
+                      OptionButton(
+                        title: Wrap(
+                          children: [
+                            Text(lang.installationTypeZFSEncryption),
+                            InfoBadge(title: experimentalBadgeText),
+                          ],
+                        ),
+                        isThreeLines: false,
+                        value: GuidedCapability.ZFS_LUKS_KEYSTORE,
+                        groupValue: model.guidedCapability,
+                        onChanged: (v) => model.guidedCapability = v!.clean(),
+                      ),
                     ],
                     TpmOption(
                       model: model,
                     ),
                   ].withSpacing(kWizardSpacing / 2),
+                ),
+              ),
+              Visibility(
+                visible: !model.showAdvanced,
+                child: Column(
+                  children: [
+                    const SizedBox(height: kWizardSpacing),
+                    OutlinedButton(
+                      onPressed: model.toggleShowAdvanced,
+                      child: Text(
+                        lang.installationTypeAdvancedLabel,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
