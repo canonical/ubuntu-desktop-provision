@@ -560,24 +560,6 @@
   "shutdown": "Shut Down",
   "restartNow": "Restart now",
   "continueTesting": "Continue testing",
-  "bitlockerTitle": "BitLocker is enabled",
-  "bitlockerHeader": "Turn off BitLocker to continue",
-  "bitlockerDescription": "This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose '{option}' to continue.",
-  "@bitlockerDescription": {
-    "placeholders": {
-      "option": {
-        "type": "String"
-      }
-    }
-  },
-  "bitlockerInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
-  "@bitlockerInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "bitlockerInfoTitle": "BitLocker detected",
   "bitlockerInfoDescription": "One or more partitions are encrypted with BitLocker.",
   "bitlockerInfoDisable": "To install alongside Windows, disable BitLocker in Windows.",

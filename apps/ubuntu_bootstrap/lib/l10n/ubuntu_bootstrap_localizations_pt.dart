@@ -733,20 +733,24 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Continuar a testar';
 
   @override
-  String get bitlockerTitle => 'O BitLocker está ativo';
+  String get bitlockerInfoTitle => 'BitLocker detected';
 
   @override
-  String get bitlockerHeader => 'Desligue o BitLocker para continuar';
+  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
 
   @override
-  String bitlockerDescription(String option) {
-    return 'Este computador usa encriptação BitLocker do Windows.\nPrecisa de usar o Windows para libertar espaço ou escolha \'$option\' para continuar.';
+  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+
+  @override
+  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
   }
 
   @override
-  String bitlockerInstructions(String url) {
-    return 'Para obter instruções, digitalize o código QR noutro dispositivo ou visite: <a href=\"https://$url\">$url</a>';
-  }
+  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
   String get restartComputer => 'Restart computer';
@@ -1740,22 +1744,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get continueTesting => 'Continuar testando';
-
-  @override
-  String get bitlockerTitle => 'BitLocker está habilitado';
-
-  @override
-  String get bitlockerHeader => 'Desligue o BitLocker para continuar';
-
-  @override
-  String bitlockerDescription(String option) {
-    return 'Este computador usa criptografia BitLocker do Windows.\nVocê precisa usar o Windows para liberar espaço ou escolher \'$option\' para continuar .';
-  }
-
-  @override
-  String bitlockerInstructions(String url) {
-    return 'Para instruções, escaneie o código QR em outro dispositivo ou visite: <a href=\"https://$url\">$url</a>';
-  }
 
   @override
   String get restartIntoWindows => 'Reiniciar no Windows';

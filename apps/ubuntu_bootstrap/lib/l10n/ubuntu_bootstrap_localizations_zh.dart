@@ -733,20 +733,24 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get continueTesting => '继续试用';
 
   @override
-  String get bitlockerTitle => '已启用 BitLocker';
+  String get bitlockerInfoTitle => 'BitLocker detected';
 
   @override
-  String get bitlockerHeader => '关闭 BitLocker 以继续';
+  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
 
   @override
-  String bitlockerDescription(String option) {
-    return '这台电脑使用了 Windows BitLocker 进行加密。\n您需要用 Windows 创建空闲空间，或者返回选择 \'$option\' 以继续。';
+  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+
+  @override
+  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
   }
 
   @override
-  String bitlockerInstructions(String url) {
-    return '有关说明，请在另一台设备上扫描二维码或访问该网址：<a href=\"https://$url\">$url</a>';
-  }
+  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
   String get restartComputer => 'Restart computer';
@@ -1760,22 +1764,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get continueTesting => '繼續試用';
-
-  @override
-  String get bitlockerTitle => 'BitLocker 已啟用';
-
-  @override
-  String get bitlockerHeader => '請關閉 BitLocker 以繼續安裝';
-
-  @override
-  String bitlockerDescription(String option) {
-    return '本電腦正在使用 Windows 的 BitLocker 儲存空間加密。\n您必須使用 Windows 來挪出可用空間，或是回到上一步並選擇「option」選項繼續。';
-  }
-
-  @override
-  String bitlockerInstructions(String url) {
-    return '請用其他裝置掃描 QR Code 或造訪 <a href=\"https://$url\">$url</a> 以取得詳細步驟';
-  }
 
   @override
   String get restartIntoWindows => '重啟進入 Windows';
