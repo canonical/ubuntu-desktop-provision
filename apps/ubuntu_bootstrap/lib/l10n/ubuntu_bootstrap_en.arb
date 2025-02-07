@@ -578,6 +578,19 @@
       }
     }
   },
+  "bitlockerInfoTitle": "BitLocker detected",
+  "bitlockerInfoDescription": "One or more partitions are encrypted with BitLocker.",
+  "bitlockerInfoDisable": "To install alongside Windows, disable BitLocker in Windows.",
+  "bitlockerInfoRecovery": "Windows may request recovery keys on boot after installation.",
+  "bitlockerInfoInstructions": "For instructions, visit the <a href=\"{url}\">BitLocker guide</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "You may lose all your data without BitLocker recovery keys",
   "restartComputer": "Restart computer",
   "restartComputerTitle": "Restart computer?",
   "restartIntoWindows": "Restart into Windows",
