@@ -2,7 +2,7 @@ module github.com/canonical/ubuntu-desktop-provision/provd/tools
 
 go 1.21.0
 
-toolchain go1.22.5
+toolchain go1.22.12
 
 require (
 	github.com/golangci/golangci-lint v1.57.2
