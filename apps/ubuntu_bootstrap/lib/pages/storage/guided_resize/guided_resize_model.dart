@@ -11,20 +11,23 @@ final guidedResizeModelProvider = ChangeNotifierProvider(
   (_) => GuidedResizeModel(
     getService<StorageService>(),
     getService<ProductService>(),
+    getService<SessionService>(),
   ),
 );
 
 /// View model for [GuidedResizePage].
 class GuidedResizeModel extends SafeChangeNotifier {
   /// Creates a new model with the given service.
-  GuidedResizeModel(this._storage, this._product);
+  GuidedResizeModel(this._storage, this._product, this._session);
 
   final StorageService _storage;
   final ProductService _product;
+  final SessionService _session;
   var _storages = <GuidedStorageTargetResize>[];
   var _disks = <String, Disk>{};
   int? _selectedIndex;
   int? _currentSize;
+  var _hasBitLocker = false;
 
   /// Detailed info of the product being installed.
   ProductInfo get productInfo => _product.getProductInfo();
@@ -58,6 +61,9 @@ class GuidedResizeModel extends SafeChangeNotifier {
 
   /// The partition of the currently selected guided storage.
   Partition? get selectedPartition => getPartition(_selectedIndex ?? -1);
+
+  /// Whether BitLocker is detected.
+  bool get hasBitLocker => _hasBitLocker;
 
   /// The currently selected guided storage.
   GuidedStorageTargetResize? get selectedStorage {
@@ -126,7 +132,8 @@ class GuidedResizeModel extends SafeChangeNotifier {
 
   /// Loads the targets available for guided resizing and returns true if there
   /// there are any available.
-  Future<bool> init() {
+  Future<bool> init() async {
+    _hasBitLocker = await _storage.hasBitLocker();
     return _storage.getStorage().then((disks) async {
       _disks = {for (final disk in disks) disk.id: disk};
       final response = await _storage.getGuidedStorage();
@@ -155,4 +162,6 @@ class GuidedResizeModel extends SafeChangeNotifier {
         .resetStorage()
         .then((_) => _storage.getGuidedStorage().then(_updateStorage));
   }
+
+  Future<void> reboot() => _session.reboot(immediate: true);
 }

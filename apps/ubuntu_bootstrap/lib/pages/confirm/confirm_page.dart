@@ -11,6 +11,7 @@ import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -50,6 +51,10 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       children: [
+        if (model.hasBitLocker) ...[
+          BitlockerInfoBox(yaruInfoType: YaruInfoType.warning),
+          const SizedBox(height: kWizardSpacing),
+        ],
         YaruBorderContainer(
           padding: kWizardTilePadding,
           borderRadius: kWizardBorderRadius,

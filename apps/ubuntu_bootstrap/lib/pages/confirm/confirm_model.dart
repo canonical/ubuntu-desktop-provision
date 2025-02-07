@@ -12,6 +12,7 @@ final confirmModelProvider = ChangeNotifierProvider(
     getService<StorageService>(),
     getService<NetworkService>(),
     getService<ProductService>(),
+    getService<SessionService>(),
   ),
 );
 
@@ -23,12 +24,14 @@ class ConfirmModel extends SafeChangeNotifier {
     this._storage,
     this._network,
     this._product,
+    this._session,
   );
 
   final InstallerService _installer;
   final StorageService _storage;
   final NetworkService _network;
   final ProductService _product;
+  final SessionService _session;
   List<Disk>? _disks;
   Map<String, List<Partition>>? _partitions;
   Map<String, List<Partition>>? _originals;
@@ -39,6 +42,8 @@ class ConfirmModel extends SafeChangeNotifier {
 
   /// A map of changed partitions per each disk (sysname).
   Map<String, List<Partition>> get partitions => _partitions ?? {};
+
+  var _hasBitLocker = false;
 
   /// Returns the original configuration of the specified partition.
   Partition? getOriginalPartition(String sysname, int number) {
@@ -57,6 +62,9 @@ class ConfirmModel extends SafeChangeNotifier {
   /// A list of existing OS installations or null if not detected.
   List<OsProber>? get existingOS => _storage.existingOS;
 
+  /// Whether BitLocker is detected.
+  bool get hasBitLocker => _hasBitLocker;
+
   String? getEraseInstallOsName(GuidedStorageTargetEraseInstall target) {
     return disks
         .firstWhere((d) => d.id == target.diskId)
@@ -69,6 +77,7 @@ class ConfirmModel extends SafeChangeNotifier {
 
   /// Initializes the model.
   Future<void> init() async {
+    _hasBitLocker = await _storage.hasBitLocker();
     if (_storage.guidedTarget != null) {
       await _storage.setGuidedStorage();
     }
@@ -120,4 +129,6 @@ class ConfirmModel extends SafeChangeNotifier {
     );
     notifyListeners();
   }
+
+  Future<void> reboot() => _session.reboot(immediate: true);
 }

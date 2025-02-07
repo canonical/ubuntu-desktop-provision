@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_slider_view.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -63,6 +64,13 @@ class GuidedResizePage extends ConsumerWidget {
         ],
       ),
       children: <Widget>[
+        if (model.hasBitLocker) ...[
+          BitlockerInfoBox(
+            canInstallAlongside: false,
+            onPressed: ref.read(guidedResizeModelProvider.notifier).reboot,
+          ),
+          SizedBox(height: kWizardSpacing),
+        ],
         StorageSelector(
           count: model.storageCount,
           selectedIndex: model.selectedIndex,
