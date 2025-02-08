@@ -634,7 +634,7 @@
   },
   "rstTitle": "Braitheadh RST",
   "@rstTitle": {},
-  "rstHeader": "Cas as RST chun leanúint ar aghaidh",
+  "rstHeader": "Ní mór duit RST a dhíchumasú chun leanúint leis an tsuiteáil",
   "@rstHeader": {},
   "rstDescription": "Úsáideann an ríomhaire seo Intel RST (Teicneolaíocht Stórála Mear). Ní mór duit RST a mhúchadh in Windows sula suiteálann tú {DISTRO}.",
   "@rstDescription": {
@@ -1191,5 +1191,15 @@
   "landscapeDomainInstructions": "Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.",
   "@landscapeDomainInstructions": {},
   "landscapeDomainTextField": "Fearann tírdhreacha (FQDN)",
-  "@landscapeDomainTextField": {}
+  "@landscapeDomainTextField": {},
+  "rstDisable": "Úsáideann do ríomhaire Intel RST (Teicneolaíocht Stórála Mear). Is féidir leat RST a dhíchumasú ceachtar i:",
+  "@rstDisable": {},
+  "restartComputer": "Atosaigh ríomhaire",
+  "@restartComputer": {},
+  "restartComputerTitle": "Atosaigh ríomhaire?",
+  "@restartComputerTitle": {},
+  "rstDisableWindows": "Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "Socruithe BIOS",
+  "@rstDisableBios": {}
 }
