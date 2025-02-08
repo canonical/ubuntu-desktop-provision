@@ -520,7 +520,7 @@
   "@installationSlidesDevelopmentTitle": {},
   "installationSlidesAccessibilityOrca": "Orca-Screenreader",
   "@installationSlidesAccessibilityOrca": {},
-  "rstHeader": "Schalten Sie RST aus, um fortzufahren",
+  "rstHeader": "Zum Fortsetzen der Installation müssen Sie RST deaktivieren",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Neustart in Windows hinein?",
   "@restartIntoWindowsTitle": {},
@@ -1045,5 +1045,15 @@
   "autoinstallDirectErrorUnkownTitle": "Unbekannter Fehler",
   "@autoinstallDirectErrorUnkownTitle": {},
   "autoinstallDirectOption": "Automatisiert mit autoinstall-Datei",
-  "@autoinstallDirectOption": {}
+  "@autoinstallDirectOption": {},
+  "rstDisable": "Ihr Computer verwendet Intel RST (Rapid Storage Technology). Sie können RST entweder deaktivieren in:",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windows, wenn Sie eine Dual-Boot-Konfiguration mit Windows verwenden",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "Die BIOS-Einstellungen",
+  "@rstDisableBios": {},
+  "restartComputer": "Computer neu starten",
+  "@restartComputer": {},
+  "restartComputerTitle": "Computer neu starten?",
+  "@restartComputerTitle": {}
 }
