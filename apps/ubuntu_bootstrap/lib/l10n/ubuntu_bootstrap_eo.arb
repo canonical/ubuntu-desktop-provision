@@ -516,7 +516,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Malŝaltu RST por daŭrigi",
+  "rstHeader": "Vi devas malŝalti RST por daŭrigi instaladon",
   "@rstHeader": {},
   "bitlockerHeader": "Malŝaltu BitLocker por daŭrigi",
   "@bitlockerHeader": {},
@@ -1044,5 +1044,15 @@
   "landscapeDomainNoInternetDescriptionWarning": "Interreto necesas por elŝuti la aŭtomatan instalan dosieron el Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
   "chooseOptionalPassphraseBody": "Pasfrazo povas helpi protekti viajn datenojn, eĉ se via aparato estas minacata. Vi devos tajpi la pasfrazon po unu fojo, kiam la komputilo startas. Vi ne povos forigi la pasfrazon poste",
-  "@chooseOptionalPassphraseBody": {}
+  "@chooseOptionalPassphraseBody": {},
+  "rstDisableBios": "La agordoj de BIOS",
+  "@rstDisableBios": {},
+  "rstDisableWindows": "Windows, se vi uzas Windows kun aliaj mastrumaj sistemoj",
+  "@rstDisableWindows": {},
+  "restartComputerTitle": "Ĉu restartigi komputilon?",
+  "@restartComputerTitle": {},
+  "restartComputer": "Restartigi komputilon",
+  "@restartComputer": {},
+  "rstDisable": "Via komputilo uzas Intel RST (Rapid-Stokan Teknikon). Vi povas malŝalti RST aŭ en:",
+  "@rstDisable": {}
 }
