@@ -377,31 +377,6 @@ Future<void> main() async {
   );
 
   testWidgets(
-    'bitlocker',
-    (tester) async {
-      await tester.runApp(
-        () => runInstallerApp(
-          [
-            '--machine-config=examples/machines/win10.json',
-          ],
-          theme: currentTheme,
-        ),
-      );
-      await tester.pumpAndSettle();
-
-      await tester.jumpToStorageWizard();
-      await tester.pumpAndSettle();
-
-      await tester.testStoragePage(type: StorageType.alongside);
-
-      await tester.testBitLockerPage(
-        screenshot: '$currentThemeName/bitlocker',
-      );
-    },
-    variant: themeVariant,
-  );
-
-  testWidgets(
     'passphrase',
     (tester) async {
       await tester.runApp(

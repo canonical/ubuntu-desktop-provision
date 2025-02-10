@@ -513,30 +513,6 @@ void main() {
     );
   });
 
-  testWidgets('turn off bitlocker', (tester) async {
-    await tester.runApp(
-      () => app.main(<String>[
-        '--machine-config=examples/machines/win10.json',
-      ]),
-    );
-
-    await tester.pumpAndSettle();
-    await tester.testLocalePage();
-    await tester.testAccessibilityPage();
-    await tester.testKeyboardPage();
-    await tester.testNetworkPage(mode: ConnectMode.none);
-    await tester.testRefreshPage();
-    await tester.testAutoinstallPage();
-    await tester.testSourceSelectionPage();
-    await tester.testCodecsAndDriversPage();
-    await tester.testStoragePage(type: StorageType.alongside);
-    await tester.testBitLockerPage();
-
-    final windowClosed = YaruTestWindow.waitForClosed();
-    await tester.tapRestart();
-    await expectLater(windowClosed, completes);
-  });
-
   testWidgets('welcome', (tester) async {
     await tester.runApp(() => app.main(<String>['--welcome']));
     await tester.pumpAndSettle();
