@@ -511,7 +511,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Для продолжения отключите RST",
+  "rstHeader": "Для продолжения установки отключите RST",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Перезагрузить в Windows?",
   "@restartIntoWindowsTitle": {},
@@ -1039,5 +1039,15 @@
         "type": "String"
       }
     }
-  }
+  },
+  "rstDisableBios": "Настройках BIOS",
+  "@rstDisableBios": {},
+  "restartComputerTitle": "Перезагрузить компьютер?",
+  "@restartComputerTitle": {},
+  "rstDisable": "На вашем компьютере используется технология Intel RST (технология быстрого хранения). Вы можете отключить RST в:",
+  "@rstDisable": {},
+  "restartComputer": "Перезагрузить компьютер",
+  "@restartComputer": {},
+  "rstDisableWindows": "Windows, если у вас установлено несколько операционных систем, включая Windows",
+  "@rstDisableWindows": {}
 }
