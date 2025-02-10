@@ -11,8 +11,7 @@ import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 
-import '../storage/bitlocker/test_bitlocker.dart';
-import 'test_install.mocks.dart';
+import 'test_install.dart';
 export '../test_utils.dart';
 export 'test_install.mocks.dart';
 

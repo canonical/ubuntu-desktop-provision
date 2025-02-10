@@ -27,6 +27,7 @@ ConfirmModel buildConfirmModel({
   GuidedCapability? guidedCapability,
   ProductInfo? productInfo,
   List<OsProber>? existingOS,
+  bool? hasBitLocker,
 }) {
   final model = MockConfirmModel();
   when(model.disks).thenReturn(disks ?? <Disk>[]);
@@ -45,6 +46,7 @@ ConfirmModel buildConfirmModel({
     productInfo ?? const ProductInfo(name: 'Ubuntu', version: '24.04 LTS'),
   );
   when(model.existingOS).thenReturn(existingOS);
+  when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
   return model;
 }
 

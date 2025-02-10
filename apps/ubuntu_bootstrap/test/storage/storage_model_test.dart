@@ -20,6 +20,7 @@ void main() {
       service,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
     await model.init();
 
@@ -48,6 +49,7 @@ void main() {
       service,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
     expect(model.existingOS, equals([ubuntu2110, ubuntu2204]));
   });
@@ -60,6 +62,7 @@ void main() {
       storage,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
 
     var wasNotified = false;
@@ -88,6 +91,7 @@ void main() {
       MockStorageService(),
       MockTelemetryService(),
       product,
+      MockSessionService(),
     );
     expect(model.productInfo.name, 'Ubuntu');
     expect(model.productInfo.version, '24.04 LTS');
@@ -103,6 +107,7 @@ void main() {
       storage,
       telemetry,
       MockProductService(),
+      MockSessionService(),
     );
     verifyNever(telemetry.addMetric('PartitionMethod', any));
 
@@ -157,6 +162,7 @@ void main() {
       storage,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
 
     model.guidedCapability = GuidedCapability.LVM;
@@ -176,6 +182,7 @@ void main() {
       service,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
 
     // none
@@ -213,6 +220,7 @@ void main() {
       service,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
 
     // none
@@ -336,6 +344,7 @@ void main() {
       service,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
     await model.resetStorage();
     verify(service.resetStorage()).called(1);
@@ -356,6 +365,7 @@ void main() {
       storage,
       MockTelemetryService(),
       MockProductService(),
+      MockSessionService(),
     );
 
     when(storage.getGuidedStorage())

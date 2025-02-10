@@ -8,6 +8,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
+import 'package:ubuntu_bootstrap/widgets/bitlocker_warning.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -159,7 +160,7 @@ void main() {
     verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
   });
 
-  testWidgets('alongside bitlocker', (tester) async {
+  testWidgets('fake alongside bitlocker', (tester) async {
     const osProber = OsProber(
       long: 'Windows 11',
       label: 'WIN11',
@@ -180,9 +181,33 @@ void main() {
       l10n.installationTypeAlongside('Ubuntu', osProber.long),
     );
     expect(radio, findsOneWidget);
+    expect(radio, isDisabled);
+    expect(find.byType(BitlockerInfoBox), findsOneWidget);
+  });
 
-    await tester.tap(radio);
-    verify(model.type = argThat(isA<StorageTypeAlongside>())).called(1);
+  testWidgets('alongside bitlocker', (tester) async {
+    const osProber = OsProber(
+      long: 'Windows 11',
+      label: 'WIN11',
+      version: '11',
+      type: 'BitLocker',
+    );
+    final model = buildStorageModel(
+      existingOS: [osProber],
+      canInstallAlongside: true,
+      hasBitLocker: true,
+    );
+    await tester.pumpApp((_) => buildPage(model));
+
+    final context = tester.element(find.byType(StoragePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    final radio = find.radioListTile(
+      l10n.installationTypeAlongside('Ubuntu', osProber.long),
+    );
+    expect(radio, findsOneWidget);
+    expect(radio, isEnabled);
+    expect(find.byType(BitlockerInfoBox), findsOneWidget);
   });
 
   testWidgets('alongside ubuntu', (tester) async {

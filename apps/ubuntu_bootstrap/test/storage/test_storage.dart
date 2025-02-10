@@ -7,7 +7,6 @@ import 'package:ubuntu_provision/services.dart';
 import 'test_storage.mocks.dart';
 
 export '../test_utils.dart';
-export 'bitlocker/test_bitlocker.dart';
 export 'guided_reformat/test_guided_reformat.dart';
 export 'guided_resize/test_guided_resize.dart';
 export 'manual/test_manual_storage.dart';

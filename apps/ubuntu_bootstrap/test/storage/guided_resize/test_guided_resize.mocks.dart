@@ -89,6 +89,12 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
       ) as int);
 
   @override
+  bool get hasBitLocker => (super.noSuchMethod(
+        Invocation.getter(#hasBitLocker),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
@@ -174,6 +180,16 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
   _i5.Future<void> reset() => (super.noSuchMethod(
         Invocation.method(
           #reset,
+          [],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<void> reboot() => (super.noSuchMethod(
+        Invocation.method(
+          #reboot,
           [],
         ),
         returnValue: _i5.Future<void>.value(),

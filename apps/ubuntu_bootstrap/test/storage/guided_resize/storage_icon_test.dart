@@ -6,7 +6,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 
-import '../bitlocker/test_bitlocker.dart';
+import 'test_guided_resize.dart';
 
 void main() {
   testWidgets('Windows 10', (tester) async {

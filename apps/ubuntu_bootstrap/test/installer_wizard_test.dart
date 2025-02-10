@@ -19,8 +19,8 @@ import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
-import 'package:ubuntu_bootstrap/pages/storage/bitlocker/bitlocker_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
@@ -146,7 +146,6 @@ void main() {
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel();
     final storageModel = buildStorageModel();
-    final bitLockerModel = buildBitLockerModel();
     final guidedReformatModel = buildGuidedReformatModel();
     final passphraseModel = buildPassphraseModel(usePassphrase: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
@@ -180,7 +179,6 @@ void main() {
               .overrideWith((_) => notEnoughDiskSpaceModel),
           secureBootModelProvider.overrideWith((_) => secureBootModel),
           storageModelProvider.overrideWith((_) => storageModel),
-          bitLockerModelProvider.overrideWith((_) => bitLockerModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
           passphraseModelProvider.overrideWith((_) => passphraseModel),
           recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
@@ -255,9 +253,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(ConfirmPage), findsOneWidget);
-    verifyNever(
-      bitLockerModel.init(),
-    ); // don't show bitlocker page when erasing the entire disk
     verify(guidedReformatModel.init()).called(1); // skipped
     verify(passphraseModel.init()).called(1); // skipped
     verify(recoveryKeyModel.init()).called(1); // skipped
@@ -331,11 +326,13 @@ void main() {
     verify(secureBootModel.hasSecureBoot()).called(1);
   });
 
-  testWidgets('bitlocker', (tester) async {
+  testWidgets('alongside bitlocker', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
-    final storageModel = buildStorageModel(type: StorageType.alongside);
-    final bitlockerModel = buildBitLockerModel(hasBitLocker: true);
+    final storageModel =
+        buildStorageModel(type: StorageType.alongside, hasBitLocker: true);
+    final guidedResizeModel =
+        buildGuidedResizeModel(isUsed: true, hasBitLocker: true);
 
     final storage = MockStorageService();
     when(storage.guidedTarget).thenReturn(null);
@@ -350,7 +347,7 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           localeModelProvider.overrideWith((_) => localeModel),
           storageModelProvider.overrideWith((_) => storageModel),
-          bitLockerModelProvider.overrideWith((_) => bitlockerModel),
+          guidedResizeModelProvider.overrideWith((_) => guidedResizeModel),
         ],
         child: tester.buildTestWizard(),
       ),
@@ -360,8 +357,9 @@ void main() {
 
     await tester.tapNext();
     await tester.pumpAndSettle();
-    expect(find.byType(BitLockerPage), findsOneWidget);
-    verify(bitlockerModel.init()).called(1);
+
+    expect(find.byType(GuidedResizePage), findsOneWidget);
+    verify(guidedResizeModel.init()).called(1);
   });
 
   testWidgets('active directory', (tester) async {

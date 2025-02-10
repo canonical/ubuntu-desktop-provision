@@ -64,6 +64,12 @@ class MockConfirmModel extends _i1.Mock implements _i3.ConfirmModel {
       ) as _i2.ProductInfo);
 
   @override
+  bool get hasBitLocker => (super.noSuchMethod(
+        Invocation.getter(#hasBitLocker),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
@@ -119,6 +125,16 @@ class MockConfirmModel extends _i1.Mock implements _i3.ConfirmModel {
   _i5.Future<void> markNetworkConfigured() => (super.noSuchMethod(
         Invocation.method(
           #markNetworkConfigured,
+          [],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
+  _i5.Future<void> reboot() => (super.noSuchMethod(
+        Invocation.method(
+          #reboot,
           [],
         ),
         returnValue: _i5.Future<void>.value(),
