@@ -459,6 +459,120 @@ void main() {
     ),
   );
 
+  testWidgets('erase windows with bitlocker', (tester) async {
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win10.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+    await tester.testStoragePage(type: StorageType.erase, hasBitLocker: true);
+
+    await tester.testIdentityPage(
+      identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+      password: 'password',
+    );
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage(hasBitLocker: true);
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+  });
+
+  testWidgets('use gap alongside windows with bitlocker', (tester) async {
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win11-and-free-space.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+    await tester.testStoragePage(
+      type: StorageType.alongside,
+      hasBitLocker: true,
+    );
+
+    await tester.testIdentityPage(
+      identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+      password: 'password',
+    );
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage(hasBitLocker: true);
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    // size of sda4 - size of sda3 - start of sda4 from machine config
+    final gapSize = 512 * (267100160 - 122880000 - 239616);
+
+    await verifySubiquityConfig(
+      storage: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(
+              number: 1,
+              size: mibiAlign(512 * 204800),
+              path: '/dev/sda1',
+              preserve: true,
+            ),
+            Partition(
+              number: 2,
+              size: mibiAlign(512 * 32768),
+              path: '/dev/sda2',
+              preserve: true,
+            ),
+            Partition(
+              number: 3,
+              size: mibiAlign(512 * 122880000),
+              path: '/dev/sda3',
+              preserve: true,
+            ),
+            Partition(
+              number: 4,
+              size: mibiAlign(512 * 1331200),
+              path: '/dev/sda4',
+              preserve: true,
+            ),
+            Partition(
+              number: 5,
+              size: mibiAlign(gapSize),
+              path: 'xxx',
+              mount: '/',
+            ),
+          ],
+        ),
+      ],
+    );
+  });
+
   testWidgets('alongside windows', (tester) async {
     await tester.runApp(
       () => app.main(<String>[
@@ -507,6 +621,106 @@ void main() {
               size: mibiAlign(totalSize - newPartitionSize, totalSize),
             ),
             Partition(number: 6, size: newPartitionSize, mount: '/'),
+          ],
+        ),
+      ],
+    );
+  });
+
+  testWidgets('resize existing ubuntu alongside windows with bitlocker',
+      (tester) async {
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win11-along-ubuntu.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+    await tester.testStoragePage(
+      type: StorageType.alongside,
+      hasBitLocker: true,
+    );
+    await tester.testGuidedResizePage(
+      size: 30,
+      hasBitLocker: true,
+      existingOS: [
+        OsProber(
+          long: 'Windows Boot Manager',
+          label: 'Windows',
+          type: 'efi',
+        ),
+        OsProber(
+          long: 'Ubuntu Plucky Puffin',
+          label: 'Ubuntu',
+          version: '25.04',
+          type: 'linux',
+        ),
+      ],
+    );
+
+    await tester.testIdentityPage(
+      identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
+      password: 'password',
+    );
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage(hasBitLocker: true);
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    const totalSize =
+        512 * 135788544; // total size of sda5 from the machine config
+    final resizedSize = mibiAlign(totalSize - toBytes(30, DataUnit.gigabytes));
+
+    await verifySubiquityConfig(
+      storage: [
+        fakeDisk(
+          path: '/dev/sda',
+          partitions: [
+            Partition(
+              number: 1,
+              size: mibiAlign(512 * 204800),
+              path: '/dev/sda1',
+            ),
+            Partition(
+              number: 2,
+              size: mibiAlign(512 * 32768),
+              path: '/dev/sda2',
+            ),
+            Partition(
+              number: 3,
+              size: mibiAlign(512 * 131072000),
+              path: '/dev/sda3',
+            ),
+            Partition(
+              number: 4,
+              size: mibiAlign(512 * 1331200),
+              path: '/dev/sda4',
+            ),
+            Partition(
+              number: 5,
+              size: mibiAlign(resizedSize),
+              path: '/dev/sda5',
+            ),
+            Partition(
+              number: 6,
+              size: mibiAlign(totalSize - resizedSize),
+              path: 'xxx',
+              mount: '/',
+            ),
           ],
         ),
       ],

@@ -257,6 +257,7 @@ Future<void> main() async {
       await tester.testStoragePage(
         type: StorageType.alongside,
         screenshot: '$currentThemeName/storage-alongside-windows',
+        hasBitLocker: true,
       );
     },
     variant: themeVariant,
