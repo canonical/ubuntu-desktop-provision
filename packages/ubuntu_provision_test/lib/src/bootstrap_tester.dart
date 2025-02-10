@@ -235,31 +235,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     await pumpAndSettle();
   }
 
-  Future<void> testBitLockerPage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(BitLockerPage);
-
-    final context = element(find.byType(BitLockerPage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
-    expect(find.titleBar(l10n.bitlockerTitle), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-
-    await tapButton(l10n.restartIntoWindows);
-    await pumpAndSettle();
-    expect(find.byType(AlertDialog), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot('$screenshot-confirm');
-    }
-
-    await pumpAndSettle();
-  }
-
   Future<void> testGuidedReformatPage({
     String? screenshot,
   }) async {
