@@ -520,7 +520,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "יש לכבות את ה־RST כדי להמשיך",
+  "rstHeader": "יש לכבות את ה־RST כדי להמשיך בהתקנה",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "לעלות מחדש ל־Windows?",
   "@restartIntoWindowsTitle": {},
@@ -1040,5 +1040,19 @@
   "autoinstallDirectOption": "מצב אוטומטי עם קובץ התקנה אוטומטית (autoinstall)",
   "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "למשתמשים מתקדמים שיש להם autoinstall.yaml להתקנות עקביות ומחזוריות.",
-  "@autoinstallDirectDescription": {}
+  "@autoinstallDirectDescription": {},
+  "rstDisable": "המחשב שלך משתמש ב־RST (טכנולוגיית אחסון מהיר) של אינטל. אפשר להשבית את RST דרך:",
+  "@rstDisable": {},
+  "recoveryKeyStorageAdvice": "יש לאחסן את מפתח השחזור במקום אחר. אפשר להשתמש בו כדי להצפין את הכונן במקרה של שינויים מסוימים במערכת. למשל, יכול להיות שהוא נחוץ במקרה של שינוי הרכיבים במחשב שלך או שדרוג קושחה.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainInstructions": "נא לספק את שם התחום של הארגון שלך ב־Landscape כדי להיכנס ולמשוך קובץ התקנה אוטומטית (autoinstall). אפשר לקבל את שם התחום המלא (FQDN) שלך מתמיכת המחשוב.",
+  "@landscapeDomainInstructions": {},
+  "rstDisableBios": "הגדרות ה־BIOS",
+  "@rstDisableBios": {},
+  "restartComputer": "להפעיל את המחשב מחדש",
+  "@restartComputer": {},
+  "restartComputerTitle": "להפעיל את המחשב מחדש?",
+  "@restartComputerTitle": {},
+  "rstDisableWindows": "Windows, אם יש לך מערכת נוספת בטעינה עם Windows",
+  "@rstDisableWindows": {}
 }
