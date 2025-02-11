@@ -120,13 +120,18 @@ class ManualStorageModel extends SafeChangeNotifier {
   ChangeNotifier selectionChangedNotifier = ChangeNotifier();
 
   /// Whether a partition can be added for the currently selected disk.
-  bool get canAddPartition => selectedGap?.usable == GapUsable.YES;
+  bool get canAddPartition =>
+      selectedGap?.usable == GapUsable.YES &&
+      !(selectedDisk?.requiresReformat ?? false);
 
   /// Whether the currently selected partition can be removed.
-  bool get canRemovePartition => selectedPartition != null;
+  bool get canRemovePartition =>
+      selectedPartition != null && !(selectedDisk?.requiresReformat ?? false);
 
   /// Whether the currently selected partition can be edited.
-  bool get canEditPartition => selectedPartition?.canEdit ?? false;
+  bool get canEditPartition =>
+      (selectedPartition?.canEdit ?? false) &&
+      !(selectedDisk?.requiresReformat ?? false);
 
   /// Whether the currently selected disk can be reformatted.
   bool get canReformatDisk => selectedDisk != null && selectedObject == null;
