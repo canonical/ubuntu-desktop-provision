@@ -233,6 +233,7 @@ void main() {
       model: 'QEMU',
       vendor: 'ATA',
       hasInUsePartition: true,
+      requiresReformat: false,
     );
 
     expect(disk.sysname, equals('path'));
@@ -256,6 +257,7 @@ void main() {
       'model': 'QEMU',
       'vendor': 'ATA',
       'has_in_use_partition': true,
+      'requires_reformat': false,
     };
 
     expect(disk.toJson(), equals(json));
@@ -268,17 +270,21 @@ void main() {
         diskId: '0',
         allowed: [],
         disallowed: [],
+        ptable: null,
       ),
       capability: GuidedCapability.LVM,
       password: '2',
       sizingPolicy: SizingPolicy.ALL,
       resetPartition: false,
+      pin: null,
+      recoveryKey: null,
     );
     const json = <String, dynamic>{
       'target': {
         'disk_id': '0',
         'allowed': [],
         'disallowed': [],
+        'ptable': null,
         '\$type': 'GuidedStorageTargetReformat',
       },
       'capability': 'LVM',
@@ -287,6 +293,7 @@ void main() {
       'sizing_policy': 'ALL',
       'reset_partition': false,
       'reset_partition_size': null,
+      'pin': null,
     };
     expect(choice.toJson(), equals(json));
     expect(GuidedChoiceV2.fromJson(json), choice);

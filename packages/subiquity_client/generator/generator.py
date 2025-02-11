@@ -268,6 +268,7 @@ def dart_type(node: ast.AST):
         "dict": "Map<String, dynamic>",
         "list": "List<dynamic>",
         "str": "String",
+        "float": "double",
     }.get(type, type)
 
 
