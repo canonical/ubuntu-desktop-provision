@@ -276,7 +276,7 @@ void main() {
       password: '2',
       sizingPolicy: SizingPolicy.ALL,
       resetPartition: false,
-      pin: '0000',
+      pin: null,
       recoveryKey: null,
     );
     const json = <String, dynamic>{
@@ -293,7 +293,7 @@ void main() {
       'sizing_policy': 'ALL',
       'reset_partition': false,
       'reset_partition_size': null,
-      'pin': '0000',
+      'pin': null,
     };
     expect(choice.toJson(), equals(json));
     expect(GuidedChoiceV2.fromJson(json), choice);
