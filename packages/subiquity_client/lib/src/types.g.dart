@@ -1011,6 +1011,7 @@ _$DiskImpl _$$DiskImplFromJson(Map<String, dynamic> json) => _$DiskImpl(
       model: json['model'] as String?,
       vendor: json['vendor'] as String?,
       hasInUsePartition: json['has_in_use_partition'] as bool? ?? false,
+      requiresReformat: json['requires_reformat'] as bool?,
     );
 
 Map<String, dynamic> _$$DiskImplToJson(_$DiskImpl instance) =>
@@ -1030,6 +1031,7 @@ Map<String, dynamic> _$$DiskImplToJson(_$DiskImpl instance) =>
       'model': instance.model,
       'vendor': instance.vendor,
       'has_in_use_partition': instance.hasInUsePartition,
+      'requires_reformat': instance.requiresReformat,
     };
 
 _$GuidedDisallowedCapabilityImpl _$$GuidedDisallowedCapabilityImplFromJson(
@@ -1161,6 +1163,7 @@ _$GuidedStorageTargetReformatImpl _$$GuidedStorageTargetReformatImplFromJson(
         Map<String, dynamic> json) =>
     _$GuidedStorageTargetReformatImpl(
       diskId: json['disk_id'] as String,
+      ptable: json['ptable'] as String?,
       allowed: (json['allowed'] as List<dynamic>?)
               ?.map((e) => $enumDecode(_$GuidedCapabilityEnumMap, e))
               .toList() ??
@@ -1177,6 +1180,7 @@ Map<String, dynamic> _$$GuidedStorageTargetReformatImplToJson(
         _$GuidedStorageTargetReformatImpl instance) =>
     <String, dynamic>{
       'disk_id': instance.diskId,
+      'ptable': instance.ptable,
       'allowed':
           instance.allowed.map((e) => _$GuidedCapabilityEnumMap[e]!).toList(),
       'disallowed': instance.disallowed.map((e) => e.toJson()).toList(),
@@ -1316,6 +1320,7 @@ _$GuidedChoiceV2Impl _$$GuidedChoiceV2ImplFromJson(Map<String, dynamic> json) =>
           GuidedStorageTarget.fromJson(json['target'] as Map<String, dynamic>),
       capability: $enumDecode(_$GuidedCapabilityEnumMap, json['capability']),
       password: json['password'] as String?,
+      pin: json['pin'] as String?,
       recoveryKey: json['recovery_key'] == null
           ? null
           : RecoveryKey.fromJson(json['recovery_key'] as Map<String, dynamic>),
@@ -1331,6 +1336,7 @@ Map<String, dynamic> _$$GuidedChoiceV2ImplToJson(
       'target': instance.target.toJson(),
       'capability': _$GuidedCapabilityEnumMap[instance.capability]!,
       'password': instance.password,
+      'pin': instance.pin,
       'recovery_key': instance.recoveryKey?.toJson(),
       'sizing_policy': _$SizingPolicyEnumMap[instance.sizingPolicy],
       'reset_partition': instance.resetPartition,
@@ -1408,4 +1414,18 @@ Map<String, dynamic> _$$ReformatDiskImplToJson(_$ReformatDiskImpl instance) =>
     <String, dynamic>{
       'disk_id': instance.diskId,
       'ptable': instance.ptable,
+    };
+
+_$EntropyResponseImpl _$$EntropyResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EntropyResponseImpl(
+      entropy: (json['entropy'] as num).toDouble(),
+      minimumRequired: (json['minimum_required'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$$EntropyResponseImplToJson(
+        _$EntropyResponseImpl instance) =>
+    <String, dynamic>{
+      'entropy': instance.entropy,
+      'minimum_required': instance.minimumRequired,
     };

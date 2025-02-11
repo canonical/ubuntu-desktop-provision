@@ -11123,6 +11123,7 @@ mixin _$Disk {
   String? get model => throw _privateConstructorUsedError;
   String? get vendor => throw _privateConstructorUsedError;
   bool get hasInUsePartition => throw _privateConstructorUsedError;
+  bool? get requiresReformat => throw _privateConstructorUsedError;
 
   /// Serializes this Disk to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11153,7 +11154,8 @@ abstract class $DiskCopyWith<$Res> {
       bool canBeBootDevice,
       String? model,
       String? vendor,
-      bool hasInUsePartition});
+      bool hasInUsePartition,
+      bool? requiresReformat});
 }
 
 /// @nodoc
@@ -11186,6 +11188,7 @@ class _$DiskCopyWithImpl<$Res, $Val extends Disk>
     Object? model = freezed,
     Object? vendor = freezed,
     Object? hasInUsePartition = null,
+    Object? requiresReformat = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -11248,6 +11251,10 @@ class _$DiskCopyWithImpl<$Res, $Val extends Disk>
           ? _value.hasInUsePartition
           : hasInUsePartition // ignore: cast_nullable_to_non_nullable
               as bool,
+      requiresReformat: freezed == requiresReformat
+          ? _value.requiresReformat
+          : requiresReformat // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -11274,7 +11281,8 @@ abstract class _$$DiskImplCopyWith<$Res> implements $DiskCopyWith<$Res> {
       bool canBeBootDevice,
       String? model,
       String? vendor,
-      bool hasInUsePartition});
+      bool hasInUsePartition,
+      bool? requiresReformat});
 }
 
 /// @nodoc
@@ -11304,6 +11312,7 @@ class __$$DiskImplCopyWithImpl<$Res>
     Object? model = freezed,
     Object? vendor = freezed,
     Object? hasInUsePartition = null,
+    Object? requiresReformat = freezed,
   }) {
     return _then(_$DiskImpl(
       id: null == id
@@ -11366,6 +11375,10 @@ class __$$DiskImplCopyWithImpl<$Res>
           ? _value.hasInUsePartition
           : hasInUsePartition // ignore: cast_nullable_to_non_nullable
               as bool,
+      requiresReformat: freezed == requiresReformat
+          ? _value.requiresReformat
+          : requiresReformat // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -11388,7 +11401,8 @@ class _$DiskImpl implements _Disk {
       required this.canBeBootDevice,
       this.model,
       this.vendor,
-      this.hasInUsePartition = false})
+      this.hasInUsePartition = false,
+      this.requiresReformat})
       : _usageLabels = usageLabels,
         _partitions = partitions;
 
@@ -11438,10 +11452,12 @@ class _$DiskImpl implements _Disk {
   @override
   @JsonKey()
   final bool hasInUsePartition;
+  @override
+  final bool? requiresReformat;
 
   @override
   String toString() {
-    return 'Disk(id: $id, label: $label, type: $type, size: $size, usageLabels: $usageLabels, partitions: $partitions, okForGuided: $okForGuided, ptable: $ptable, preserve: $preserve, path: $path, bootDevice: $bootDevice, canBeBootDevice: $canBeBootDevice, model: $model, vendor: $vendor, hasInUsePartition: $hasInUsePartition)';
+    return 'Disk(id: $id, label: $label, type: $type, size: $size, usageLabels: $usageLabels, partitions: $partitions, okForGuided: $okForGuided, ptable: $ptable, preserve: $preserve, path: $path, bootDevice: $bootDevice, canBeBootDevice: $canBeBootDevice, model: $model, vendor: $vendor, hasInUsePartition: $hasInUsePartition, requiresReformat: $requiresReformat)';
   }
 
   @override
@@ -11470,7 +11486,9 @@ class _$DiskImpl implements _Disk {
             (identical(other.model, model) || other.model == model) &&
             (identical(other.vendor, vendor) || other.vendor == vendor) &&
             (identical(other.hasInUsePartition, hasInUsePartition) ||
-                other.hasInUsePartition == hasInUsePartition));
+                other.hasInUsePartition == hasInUsePartition) &&
+            (identical(other.requiresReformat, requiresReformat) ||
+                other.requiresReformat == requiresReformat));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -11491,7 +11509,8 @@ class _$DiskImpl implements _Disk {
       canBeBootDevice,
       model,
       vendor,
-      hasInUsePartition);
+      hasInUsePartition,
+      requiresReformat);
 
   /// Create a copy of Disk
   /// with the given fields replaced by the non-null parameter values.
@@ -11525,7 +11544,8 @@ abstract class _Disk implements Disk {
       required final bool canBeBootDevice,
       final String? model,
       final String? vendor,
-      final bool hasInUsePartition}) = _$DiskImpl;
+      final bool hasInUsePartition,
+      final bool? requiresReformat}) = _$DiskImpl;
 
   factory _Disk.fromJson(Map<String, dynamic> json) = _$DiskImpl.fromJson;
 
@@ -11559,6 +11579,8 @@ abstract class _Disk implements Disk {
   String? get vendor;
   @override
   bool get hasInUsePartition;
+  @override
+  bool? get requiresReformat;
 
   /// Create a copy of Disk
   /// with the given fields replaced by the non-null parameter values.
@@ -12630,7 +12652,10 @@ mixin _$GuidedStorageTarget {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -12662,7 +12687,10 @@ mixin _$GuidedStorageTarget {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -12691,7 +12719,10 @@ mixin _$GuidedStorageTarget {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -12812,6 +12843,7 @@ abstract class _$$GuidedStorageTargetReformatImplCopyWith<$Res>
   @useResult
   $Res call(
       {String diskId,
+      String? ptable,
       List<GuidedCapability> allowed,
       List<GuidedDisallowedCapability> disallowed});
 }
@@ -12832,6 +12864,7 @@ class __$$GuidedStorageTargetReformatImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? diskId = null,
+    Object? ptable = freezed,
     Object? allowed = null,
     Object? disallowed = null,
   }) {
@@ -12840,6 +12873,10 @@ class __$$GuidedStorageTargetReformatImplCopyWithImpl<$Res>
           ? _value.diskId
           : diskId // ignore: cast_nullable_to_non_nullable
               as String,
+      ptable: freezed == ptable
+          ? _value.ptable
+          : ptable // ignore: cast_nullable_to_non_nullable
+              as String?,
       allowed: null == allowed
           ? _value._allowed
           : allowed // ignore: cast_nullable_to_non_nullable
@@ -12857,6 +12894,7 @@ class __$$GuidedStorageTargetReformatImplCopyWithImpl<$Res>
 class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   const _$GuidedStorageTargetReformatImpl(
       {required this.diskId,
+      this.ptable,
       final List<GuidedCapability> allowed = const [],
       final List<GuidedDisallowedCapability> disallowed = const [],
       final String? $type})
@@ -12870,6 +12908,8 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
 
   @override
   final String diskId;
+  @override
+  final String? ptable;
   final List<GuidedCapability> _allowed;
   @override
   @JsonKey()
@@ -12893,7 +12933,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
 
   @override
   String toString() {
-    return 'GuidedStorageTarget.reformat(diskId: $diskId, allowed: $allowed, disallowed: $disallowed)';
+    return 'GuidedStorageTarget.reformat(diskId: $diskId, ptable: $ptable, allowed: $allowed, disallowed: $disallowed)';
   }
 
   @override
@@ -12902,6 +12942,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
         (other.runtimeType == runtimeType &&
             other is _$GuidedStorageTargetReformatImpl &&
             (identical(other.diskId, diskId) || other.diskId == diskId) &&
+            (identical(other.ptable, ptable) || other.ptable == ptable) &&
             const DeepCollectionEquality().equals(other._allowed, _allowed) &&
             const DeepCollectionEquality()
                 .equals(other._disallowed, _disallowed));
@@ -12912,6 +12953,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   int get hashCode => Object.hash(
       runtimeType,
       diskId,
+      ptable,
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_disallowed));
 
@@ -12927,7 +12969,10 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -12956,13 +13001,16 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedDisallowedCapability> disallowed)
         manual,
   }) {
-    return reformat(diskId, allowed, disallowed);
+    return reformat(diskId, ptable, allowed, disallowed);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -12988,13 +13036,16 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
             List<GuidedDisallowedCapability> disallowed)?
         manual,
   }) {
-    return reformat?.call(diskId, allowed, disallowed);
+    return reformat?.call(diskId, ptable, allowed, disallowed);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -13022,7 +13073,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
     required TResult orElse(),
   }) {
     if (reformat != null) {
-      return reformat(diskId, allowed, disallowed);
+      return reformat(diskId, ptable, allowed, disallowed);
     }
     return orElse();
   }
@@ -13079,6 +13130,7 @@ class _$GuidedStorageTargetReformatImpl implements GuidedStorageTargetReformat {
 abstract class GuidedStorageTargetReformat implements GuidedStorageTarget {
   const factory GuidedStorageTargetReformat(
           {required final String diskId,
+          final String? ptable,
           final List<GuidedCapability> allowed,
           final List<GuidedDisallowedCapability> disallowed}) =
       _$GuidedStorageTargetReformatImpl;
@@ -13087,6 +13139,7 @@ abstract class GuidedStorageTargetReformat implements GuidedStorageTarget {
       _$GuidedStorageTargetReformatImpl.fromJson;
 
   String get diskId;
+  String? get ptable;
   @override
   List<GuidedCapability> get allowed;
   @override
@@ -13282,7 +13335,10 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -13318,7 +13374,10 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -13351,7 +13410,10 @@ class _$GuidedStorageTargetResizeImpl implements GuidedStorageTargetResize {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -13608,7 +13670,10 @@ class _$GuidedStorageTargetEraseInstallImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -13643,7 +13708,10 @@ class _$GuidedStorageTargetEraseInstallImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -13675,7 +13743,10 @@ class _$GuidedStorageTargetEraseInstallImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -13920,7 +13991,10 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -13955,7 +14029,10 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -13987,7 +14064,10 @@ class _$GuidedStorageTargetUseGapImpl implements GuidedStorageTargetUseGap {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -14208,7 +14288,10 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String diskId, List<GuidedCapability> allowed,
+    required TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)
         reformat,
     required TResult Function(
@@ -14243,7 +14326,10 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String diskId, List<GuidedCapability> allowed,
+    TResult? Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult? Function(
@@ -14275,7 +14361,10 @@ class _$GuidedStorageTargetManualImpl implements GuidedStorageTargetManual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String diskId, List<GuidedCapability> allowed,
+    TResult Function(
+            String diskId,
+            String? ptable,
+            List<GuidedCapability> allowed,
             List<GuidedDisallowedCapability> disallowed)?
         reformat,
     TResult Function(
@@ -14557,6 +14646,7 @@ mixin _$GuidedChoiceV2 {
   GuidedStorageTarget get target => throw _privateConstructorUsedError;
   GuidedCapability get capability => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
+  String? get pin => throw _privateConstructorUsedError;
   RecoveryKey? get recoveryKey => throw _privateConstructorUsedError;
   SizingPolicy? get sizingPolicy => throw _privateConstructorUsedError;
   bool get resetPartition => throw _privateConstructorUsedError;
@@ -14582,6 +14672,7 @@ abstract class $GuidedChoiceV2CopyWith<$Res> {
       {GuidedStorageTarget target,
       GuidedCapability capability,
       String? password,
+      String? pin,
       RecoveryKey? recoveryKey,
       SizingPolicy? sizingPolicy,
       bool resetPartition,
@@ -14609,6 +14700,7 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
     Object? target = null,
     Object? capability = null,
     Object? password = freezed,
+    Object? pin = freezed,
     Object? recoveryKey = freezed,
     Object? sizingPolicy = freezed,
     Object? resetPartition = null,
@@ -14626,6 +14718,10 @@ class _$GuidedChoiceV2CopyWithImpl<$Res, $Val extends GuidedChoiceV2>
       password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pin: freezed == pin
+          ? _value.pin
+          : pin // ignore: cast_nullable_to_non_nullable
               as String?,
       recoveryKey: freezed == recoveryKey
           ? _value.recoveryKey
@@ -14683,6 +14779,7 @@ abstract class _$$GuidedChoiceV2ImplCopyWith<$Res>
       {GuidedStorageTarget target,
       GuidedCapability capability,
       String? password,
+      String? pin,
       RecoveryKey? recoveryKey,
       SizingPolicy? sizingPolicy,
       bool resetPartition,
@@ -14710,6 +14807,7 @@ class __$$GuidedChoiceV2ImplCopyWithImpl<$Res>
     Object? target = null,
     Object? capability = null,
     Object? password = freezed,
+    Object? pin = freezed,
     Object? recoveryKey = freezed,
     Object? sizingPolicy = freezed,
     Object? resetPartition = null,
@@ -14727,6 +14825,10 @@ class __$$GuidedChoiceV2ImplCopyWithImpl<$Res>
       password: freezed == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pin: freezed == pin
+          ? _value.pin
+          : pin // ignore: cast_nullable_to_non_nullable
               as String?,
       recoveryKey: freezed == recoveryKey
           ? _value.recoveryKey
@@ -14755,6 +14857,7 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
       {required this.target,
       required this.capability,
       this.password,
+      this.pin,
       this.recoveryKey,
       required this.sizingPolicy,
       this.resetPartition = false,
@@ -14770,6 +14873,8 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   @override
   final String? password;
   @override
+  final String? pin;
+  @override
   final RecoveryKey? recoveryKey;
   @override
   final SizingPolicy? sizingPolicy;
@@ -14781,7 +14886,7 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
 
   @override
   String toString() {
-    return 'GuidedChoiceV2(target: $target, capability: $capability, password: $password, recoveryKey: $recoveryKey, sizingPolicy: $sizingPolicy, resetPartition: $resetPartition, resetPartitionSize: $resetPartitionSize)';
+    return 'GuidedChoiceV2(target: $target, capability: $capability, password: $password, pin: $pin, recoveryKey: $recoveryKey, sizingPolicy: $sizingPolicy, resetPartition: $resetPartition, resetPartitionSize: $resetPartitionSize)';
   }
 
   @override
@@ -14794,6 +14899,7 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
                 other.capability == capability) &&
             (identical(other.password, password) ||
                 other.password == password) &&
+            (identical(other.pin, pin) || other.pin == pin) &&
             (identical(other.recoveryKey, recoveryKey) ||
                 other.recoveryKey == recoveryKey) &&
             (identical(other.sizingPolicy, sizingPolicy) ||
@@ -14807,7 +14913,7 @@ class _$GuidedChoiceV2Impl implements _GuidedChoiceV2 {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, target, capability, password,
-      recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
+      pin, recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
 
   /// Create a copy of GuidedChoiceV2
   /// with the given fields replaced by the non-null parameter values.
@@ -14831,6 +14937,7 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
       {required final GuidedStorageTarget target,
       required final GuidedCapability capability,
       final String? password,
+      final String? pin,
       final RecoveryKey? recoveryKey,
       required final SizingPolicy? sizingPolicy,
       final bool resetPartition,
@@ -14845,6 +14952,8 @@ abstract class _GuidedChoiceV2 implements GuidedChoiceV2 {
   GuidedCapability get capability;
   @override
   String? get password;
+  @override
+  String? get pin;
   @override
   RecoveryKey? get recoveryKey;
   @override
@@ -15651,5 +15760,175 @@ abstract class _ReformatDisk implements ReformatDisk {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReformatDiskImplCopyWith<_$ReformatDiskImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EntropyResponse _$EntropyResponseFromJson(Map<String, dynamic> json) {
+  return _EntropyResponse.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EntropyResponse {
+  double get entropy => throw _privateConstructorUsedError;
+  double get minimumRequired => throw _privateConstructorUsedError;
+
+  /// Serializes this EntropyResponse to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of EntropyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EntropyResponseCopyWith<EntropyResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EntropyResponseCopyWith<$Res> {
+  factory $EntropyResponseCopyWith(
+          EntropyResponse value, $Res Function(EntropyResponse) then) =
+      _$EntropyResponseCopyWithImpl<$Res, EntropyResponse>;
+  @useResult
+  $Res call({double entropy, double minimumRequired});
+}
+
+/// @nodoc
+class _$EntropyResponseCopyWithImpl<$Res, $Val extends EntropyResponse>
+    implements $EntropyResponseCopyWith<$Res> {
+  _$EntropyResponseCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of EntropyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? entropy = null,
+    Object? minimumRequired = null,
+  }) {
+    return _then(_value.copyWith(
+      entropy: null == entropy
+          ? _value.entropy
+          : entropy // ignore: cast_nullable_to_non_nullable
+              as double,
+      minimumRequired: null == minimumRequired
+          ? _value.minimumRequired
+          : minimumRequired // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$EntropyResponseImplCopyWith<$Res>
+    implements $EntropyResponseCopyWith<$Res> {
+  factory _$$EntropyResponseImplCopyWith(_$EntropyResponseImpl value,
+          $Res Function(_$EntropyResponseImpl) then) =
+      __$$EntropyResponseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double entropy, double minimumRequired});
+}
+
+/// @nodoc
+class __$$EntropyResponseImplCopyWithImpl<$Res>
+    extends _$EntropyResponseCopyWithImpl<$Res, _$EntropyResponseImpl>
+    implements _$$EntropyResponseImplCopyWith<$Res> {
+  __$$EntropyResponseImplCopyWithImpl(
+      _$EntropyResponseImpl _value, $Res Function(_$EntropyResponseImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EntropyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? entropy = null,
+    Object? minimumRequired = null,
+  }) {
+    return _then(_$EntropyResponseImpl(
+      entropy: null == entropy
+          ? _value.entropy
+          : entropy // ignore: cast_nullable_to_non_nullable
+              as double,
+      minimumRequired: null == minimumRequired
+          ? _value.minimumRequired
+          : minimumRequired // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EntropyResponseImpl implements _EntropyResponse {
+  const _$EntropyResponseImpl(
+      {required this.entropy, required this.minimumRequired});
+
+  factory _$EntropyResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EntropyResponseImplFromJson(json);
+
+  @override
+  final double entropy;
+  @override
+  final double minimumRequired;
+
+  @override
+  String toString() {
+    return 'EntropyResponse(entropy: $entropy, minimumRequired: $minimumRequired)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EntropyResponseImpl &&
+            (identical(other.entropy, entropy) || other.entropy == entropy) &&
+            (identical(other.minimumRequired, minimumRequired) ||
+                other.minimumRequired == minimumRequired));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, entropy, minimumRequired);
+
+  /// Create a copy of EntropyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EntropyResponseImplCopyWith<_$EntropyResponseImpl> get copyWith =>
+      __$$EntropyResponseImplCopyWithImpl<_$EntropyResponseImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EntropyResponseImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EntropyResponse implements EntropyResponse {
+  const factory _EntropyResponse(
+      {required final double entropy,
+      required final double minimumRequired}) = _$EntropyResponseImpl;
+
+  factory _EntropyResponse.fromJson(Map<String, dynamic> json) =
+      _$EntropyResponseImpl.fromJson;
+
+  @override
+  double get entropy;
+  @override
+  double get minimumRequired;
+
+  /// Create a copy of EntropyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EntropyResponseImplCopyWith<_$EntropyResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
