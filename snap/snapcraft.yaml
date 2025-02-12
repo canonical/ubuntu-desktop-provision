@@ -54,7 +54,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref cb53ce933bcdc4b4a420231fb0a21f6bfa971ae4
+    source-commit: &commit-ref 39296be8e3b7604c64251ae76616deb70362434f
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -74,7 +74,7 @@ parts:
     plugin: nil
     source: https://git.launchpad.net/curtin
     source-type: git
-    source-commit: 2ddb94d6b3bd4c62a51efb0fdc0471acf25e2058
+    source-commit: 446c6cb0e2e70f5068d92879bc97198723a5e56b
     override-pull: |
       craftctl default
       PACKAGED_VERSION="$(git describe --long --abbrev=9 --match=[0-9][0-9]*)"
