@@ -92,10 +92,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Uathoibrithe le Tírdhreach';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.';
 
   @override
   String get changeButtonText => 'Athrú';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Braitheadh RST';
 
   @override
-  String get rstHeader => 'Cas as RST chun leanúint ar aghaidh';
+  String get rstHeader => 'Ní mór duit RST a dhíchumasú chun leanúint leis an tsuiteáil';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Úsáideann do ríomhaire Intel RST (Teicneolaíocht Stórála Mear). Is féidir leat RST a dhíchumasú ceachtar i:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Socruithe BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Ní mheaitseálann na pasfhrásaí';
 
   @override
-  String get choosePassphraseInfoHeader => 'Cinntigh go sábhálann tú do phasfhrása';
+  String get choosePassphraseInfoHeader => 'Stóráil do phasfhrása áit éigin sábháilte';
 
   @override
-  String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do chuid sonraí go léir.';
+  String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Cruthaigh pasfhrása (roghnach)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Is féidir le pasfhrása cabhrú le do shonraí a chosaint fiú má chuirtear isteach ar do chrua-earraí. Beidh ort an pasfhrása a chur isteach gach uair a chasann tú ar do ríomhaire. Ní bheidh tú in ann é a bhaint níos déanaí';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.';
 
   @override
   String get createPassphrase => 'Cruthaigh pasfhrása';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Atosaigh ríomhaire';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Atosaigh ríomhaire?';
 
   @override
   String get restartIntoWindows => 'Atosaigh isteach Windows';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Eochair aisghabhála TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Faigh eochair athshlánaithe';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Faigh eochair athshlánaithe chomh luath agus a logálann tú isteach i $distro den chéad uair agus stóráil áit éigin sábháilte í.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Is féidir leat rochtain a fháil ar d\'eochair a ghnóthú tar éis a shuiteáil leis an ordú seo a leanas:';
+  String get recoveryKeyCommand => 'Chun eochair athshlánaithe a fháil, cuir an tsuiteáil i gcrích, atosaigh do ríomhaire, agus rith an t-ordú seo sa teirminéal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b\'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Tuigim go mb\'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Scan an cód QR nó cuir isteach an cód thíos ag <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Suiteáil uathoibrithe';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Logáil isteach ar an Tírdhreach';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Cuir isteach fearann Tírdhreacha (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Fearann tírdhreacha (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Ar aghaidh';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Fearann neamhbhailí, seiceáil le do thoil nó déan teagmháil le do thacaíocht TF';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Ceangail leis an idirlíon chun leanúint ar aghaidh';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Tá gá leis an Idirlíon chun an comhad uathshuiteála a fháil ó Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Chuaigh an cód in éag, bain triail eile as';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Theip ar logáil isteach, bain triail eile as';
 }

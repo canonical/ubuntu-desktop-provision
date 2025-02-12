@@ -92,10 +92,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'Bagi pengguna tingkat lanjut yang memiliki autoinstall.yaml untuk penyiapan sistem yang konsisten dan dapat diulang.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Diotomasi dengan Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Bagi pengguna dalam organisasi yang menyediakan berkas autoinstall melalui Landscape.';
 
   @override
   String get changeButtonText => 'Ubah';
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Frasa sandi tidak cocok';
 
   @override
-  String get choosePassphraseInfoHeader => 'Pastikan Anda menyimpan frasa sandi Anda';
+  String get choosePassphraseInfoHeader => 'Simpan frasa sandi Anda di suatu tempat yang aman';
 
   @override
   String get choosePassphraseInfoBody => 'Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Buat frasa sandi (opsional)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Frasa sandi dapat membantu melindungi data Anda bahkan jika perangkat keras Anda terkompromi. Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda. Anda tidak akan dapat menghapusnya nanti';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Simpan frasa sandi dan kunci pemulihan Anda di suatu tempat aman';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda. Frasa sandi tidak menggantikan kunci pemulihan atau kata sandi pengguna Anda.';
 
   @override
   String get createPassphrase => 'Buat frasa sandi';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Kunci pemulihan TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Dapatkan kunci pemulihan';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Anda bisa kehilangan semua data Anda tanpa kunci pemulihan';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Dapatkan kunci pemulihan segera setelah Anda log masuk pertama ke $distro dan menyimpannya di suatu tempat aman.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Anda dapat mengakses kunci keamanan setelah instalasi dengan perintah berikut:';
+  String get recoveryKeyCommand => 'Untuk mendapatkan kunci pemulihan, selesaikan instalasi, restart komputer Anda, dan jalankan perintah ini di terminal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Simpan kunci pemulihan di suatu tempat aman. Gunakan untuk mengenkripsi disk jika terjadi perubahan sistem tertentu. Misalnya, Anda mungkin perlu jika Anda mengubah komponen di komputer atau memperbarui firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Saya mengerti saya mungkin kehilangan semua data saya jika saya tidak memiliki kunci pemulihan';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Pindai kode QR atau masukkan kode di bawah pada <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Instalasi terotomasi';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Log masuk ke Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Masukkan domain (FQDN) Landscape';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Sediakan domain Landscape organisasi Anda untuk log masuk dan mengambil berkas autoinstall. Anda bisa mendapatkan FQDN dari dukungan TI Anda.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Domain (FQDN) Landscape';
 
   @override
-  String get next => 'Next';
+  String get next => 'Selanjutnya';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Domain tidak valid, silakan periksa atau menghubungi dukungan TI Anda';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Sambung ke internet untuk melanjutkan';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet diperlukan untuk mengambil berkas autoinstall dari Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Kode kedaluwarsa, silakan coba lagi';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Log masuk gagal, silakan coba lagi';
 }

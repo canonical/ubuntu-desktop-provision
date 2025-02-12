@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'בחירת קובץ…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'פינוי קובץ';
 
   @override
   String get autoinstallDirectFilePickerTitle => 'בחירת קובץ';
@@ -42,31 +42,31 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'ייבוא';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'קובץ ההתקנה האוטומטית (Autoinstall) לא נגיש';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'נא לבדוק שהכתובת נכונה, שהחיבור שלך לאינטרנט תקין או לנסות מאוחר יותר.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'כתובת שגויה';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'נא לבדוק שהכתובת נכונה או לבחור קובץ מקומי.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'קובץ התקנה אוטומטית (autoinstall) שגוי';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'נא לבדוק שהקובץ תקין או לספק אחד חלופי.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'קובץ ההתקנה האוטומטית (autoinstall) אינו קריא';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'נא לבדוק את ההרשאות שלך או לספק קובץ חלופי.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'שגיאה לא ידועה';
 
   @override
   String get autoinstallTitle => 'סוג ההתקנה';
@@ -86,16 +86,16 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'למשתמשים שצריכים הדרכה שלב אחר שלב במהלך ההתקנה.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'מצב אוטומטי עם קובץ התקנה אוטומטית (autoinstall)';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'למשתמשים מתקדמים שיש להם autoinstall.yaml להתקנות עקביות ומחזוריות.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'אוטומציה עם Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'למשתמשים בארגונים שמספקים קובץ התקנה אוטומטית (autoinstall) דרך Landscape.';
 
   @override
   String get changeButtonText => 'שינוי';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST פעיל';
 
   @override
-  String get rstHeader => 'יש לכבות את ה־RST כדי להמשיך';
+  String get rstHeader => 'יש לכבות את ה־RST כדי להמשיך בהתקנה';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'המחשב שלך משתמש ב־RST (טכנולוגיית אחסון מהיר) של אינטל. אפשר להשבית את RST דרך:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, אם יש לך מערכת נוספת בטעינה עם Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'הגדרות ה־BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'מילות הצופן לא תואמות';
 
   @override
-  String get choosePassphraseInfoHeader => 'נא לוודא ששמרת לך את מילת הצופן במקום בטוח';
+  String get choosePassphraseInfoHeader => 'נא לאחסן את מילת הצופן שלך במקום בטוח';
 
   @override
   String get choosePassphraseInfoBody => 'אובדן מילת הצופן יוביל לאובדן המידע שלך.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'יצירת מילת צופן (רשות)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'מילת צופן יכולה לסייע בהגנה על הנתונים שלך אפילו אם מתעסקים בחומרה שלך. צריך למלא את מילת הצופן עם כל הפעלה של המחשב. לא תהיה אפשרות להסיר אותה בהמשך';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'נא לאחסן את מילת הצופן ואת מפתח הגיבוי שלך במקום בטוח';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'אובדן מילת הצופן שלך תוביל לאובדן כל הנתונים שלך. מילת הצופן אינה מחליפה את קוד השחזור או את הסיסמה שלך.';
 
   @override
   String get createPassphrase => 'יצירת מילת צופן';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'להפעיל את המחשב מחדש';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'להפעיל את המחשב מחדש?';
 
   @override
   String get restartIntoWindows => 'להפעיל מחדש אל Windows';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'מפתח שחזור TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'קבלת קוד שחזור';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'הנתונים שלך עלולים ללכת לאיבוד ללא מפתח שחזור';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'אפשר לקבל מפתח שחזור עם הכניסה הראשונה ל־$distro ולאחסן אותו במקום בטוח.';
   }
 
   @override
-  String get recoveryKeyCommand => 'הגישה למפתח השחזור שלך לאחר ההתקנה אפשרית באמצעות הפקודה:';
+  String get recoveryKeyCommand => 'כדי לקבל מפתח שחזור, יש להשלים את ההתקנה, להפעיל את המחשב מחדש ולהריץ את הפקודה הזאת במסוף:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'יש לאחסן את מפתח השחזור במקום אחר. אפשר להשתמש בו כדי להצפין את הכונן במקרה של שינויים מסוימים במערכת. למשל, יכול להיות שהוא נחוץ במקרה של שינוי הרכיבים במחשב שלך או שדרוג קושחה.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'ברור לי שכל הנתונים שלי יאבדו אם אין לי מפתח שחזור';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'נא לסרוק את ה־QR או למלא את הקוד להלן דרך <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'התקנה אוטומטית';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'כניסה ל־Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'נא למלא שם תחום ל־Landscape‏ (מלא/FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'נא לספק את שם התחום של הארגון שלך ב־Landscape כדי להיכנס ולמשוך קובץ התקנה אוטומטית (autoinstall). אפשר לקבל את שם התחום המלא (FQDN) שלך מתמיכת המחשוב.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'שם תחום ב־Landscape (מלא/FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'הבא';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'שם תחום שגוי, נא לבדוק מול התמיכה הטכנית של המערכת';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'יש להתחבר לאינטרנט כדי להמשיך';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'צריך חיבור לאינטרנט כדי למשוך את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'תוקף הקוד פג, נא לנסות שוב';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'הכניסה נכשלה, נא לנסות שוב';
 }

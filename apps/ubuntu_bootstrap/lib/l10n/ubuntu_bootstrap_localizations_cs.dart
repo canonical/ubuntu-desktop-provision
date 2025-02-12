@@ -15,58 +15,58 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automatická instalace';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Importovat soubor autoinstall';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Můžete zadat adresu URL souboru autoinstall:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Nebo vyberte místní soubor:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Vybrat soubor...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Vyčistit soubor';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Zvolit soubor';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'Soubory YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importovat';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Soubor autoinstall není dostupný';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná adresa URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Zkontrolujte správnost adresy URL nebo vyberte místní soubor.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Neplatný soubor autoinstall';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Zkontrolujte soubor nebo poskytněte jiný.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Soubor autoinstall není čitelný';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Zkontrolujte svá oprávnění nebo poskytněte jiný soubor.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Neznámá chyba';
 
   @override
   String get autoinstallTitle => 'Typ instalace';
@@ -86,16 +86,16 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automatizováno souborem autoinstall';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automatizováno Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Pro uživatele v organizacích, které poskytují soubor autoinstall prostřednictvím Landscape.';
 
   @override
   String get changeButtonText => 'Změnit';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST je zapnuté';
 
   @override
-  String get rstHeader => 'Aby bylo možné pokračovat, vypněte RST';
+  String get rstHeader => 'Aby bylo možné pokračovat v instalaci, musíte vypnout RST';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, pokud používáte dual boot se systémem Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Nastavení BIOSu';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Přístupová hesla se neshodují';
 
   @override
-  String get choosePassphraseInfoHeader => 'Ujistěte se, že jste si uložili své přístupové heslo';
+  String get choosePassphraseInfoHeader => 'Uložte si své přístupové heslo na bezpečném místě';
 
   @override
   String get choosePassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte všechna svá data.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Vytvořit přístupové heslo (volitelné)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Přístupové heslo může pomoci chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte všechna svá data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.';
 
   @override
   String get createPassphrase => 'Vytvořit přístupové heslo';
@@ -347,7 +347,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Začít od začátku na zvoleném disku.';
+  String get installationTypeEraseInfo => 'Všechna data a oddíly na disku budou vymazány, včetně operačních systémů.';
 
   @override
   String get installationTypeAdvancedLabel => 'Pokročilé funkce…';
@@ -424,7 +424,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Nainstalovat $product vedle nich';
+    return 'Nainstalovat $product vedle stávajících operačních systémů';
   }
 
   @override
@@ -434,17 +434,17 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.';
+    return 'Vyberte oddíl, jehož velikost chcete změnit, a vytvořte místo pro $product. Operační systém si můžete vybrat během spouštění.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Vymazat $os a nainstalovat $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Všechny soubory a data ze stávající instalace $os budou trvale smazány.';
   }
 
   @override
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Restartovat počítač';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Restartovat počítač?';
 
   @override
   String get restartIntoWindows => 'Restartovat do Windows';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Obnovovací klíč k TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Získat obnovovací klíč';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Bez klíče pro obnovení můžete přijít o všechna data';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Získejte obnovovací klíč, jakmile se poprvé přihlásíte do $distro a uložte jej na bezpečném místě.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Po dokončení instalace je možné si nechat obnovovací klíč zobrazit pomocí následujícího příkazu:';
+  String get recoveryKeyCommand => 'Pro získání obnovovacího klíče dokončete instalaci, restartujte počítač a v terminálu spusťte tento příkaz:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Uložte klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Rozumím, že pokud nebudu mít klíč pro obnovení, mohu ztratit všechna svá data';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Naskenujte QR kód nebo zadejte kód níže na <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Automatická instalace';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Přihlásit se k Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Zadejte doménu Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Zadejte doménu Landscape vaší organizace, abyste se mohli přihlásit a načíst soubor autoinstall. FQDN můžete získat od vaší IT podpory.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Doména Landscape (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Další';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Neplatná doména, zkontrolujte nebo kontaktujte IT podporu';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Chcete-li pokračovat, připojte se k internetu';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'K načtení souboru autoinstall z Landscape je potřeba internet';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Kód vypršel, zkuste to znovu';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Přihlášení se nezdařilo, zkuste to znovu';
 }

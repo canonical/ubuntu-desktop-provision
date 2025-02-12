@@ -18,19 +18,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => 'Installacion automatica';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Importar fichièr autoinstall';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Podètz picar l’URL d’un fichièr autoinstall :';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'O seleccionatz un fichièr local :';
 
   @override
   String get autoinstallDirectFileButtonLabel => 'Seleccionar un fichièr...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Escafar lo fichièr';
 
   @override
   String get autoinstallDirectFilePickerTitle => 'Causissètz un fichièr';
@@ -42,19 +42,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Importar';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Fichièr autoinstall non accessible';
 
   @override
   String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL invalida';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Fichièr autoinstall invalid';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
@@ -63,10 +63,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Verificatz las permissions o fornissètz un fichièr diferent.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Error desconeguda';
 
   @override
   String get autoinstallTitle => 'Tipe d’installacion';
@@ -86,13 +86,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Pels utilizaires que vòlon una guida estapa per tapa pendent l\'installacion.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automatizat amb fichièr autoinstall';
 
   @override
   String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Aitomatizat ambé Landscape';
 
   @override
   String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
@@ -1059,7 +1059,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Clau de recuperacion del TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Obténer una clau de recuperacion';
 
   @override
   String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
@@ -1084,7 +1084,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Installacion automatizada';
 
   @override
   String get landscapeHeader => 'Log in to Landscape';
@@ -1096,23 +1096,23 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Domeni Landscape (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Seguent';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Domeni invalid, volgatz verificar o contactar l\'assisténcia informatica';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Connectatz-vos a Internet per contunhar';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Còdi expirat, volgatz tornar ensajar';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Fracàs de la connexion, volgatz tornar ensajar';
 }

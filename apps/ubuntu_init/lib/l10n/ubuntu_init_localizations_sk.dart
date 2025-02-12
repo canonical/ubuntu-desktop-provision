@@ -100,7 +100,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Pripojiť toto zariadenie';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'alebo pridať token ručne';
+  String get ubuntuProOrAddTokenManually => 'alebo pridať token manuálne';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
