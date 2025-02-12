@@ -129,7 +129,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.",
+  "installationTypeAlongsideInfo": "Vyberte oddíl, jehož velikost chcete změnit, a vytvořte místo pro {product}. Operační systém si můžete vybrat během spouštění.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ruční rozdělení na oddíly",
   "@installationTypeManual": {},
@@ -360,7 +360,7 @@
   },
   "showSecurityKey": "Zobrazit klíč zabezpečení",
   "@showSecurityKey": {},
-  "installationTypeAlongsideMulti": "Nainstalovat {product} vedle nich",
+  "installationTypeAlongsideMulti": "Nainstalovat {product} vedle stávajících operačních systémů",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -561,7 +561,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Aby bylo možné pokračovat, vypněte RST",
+  "rstHeader": "Aby bylo možné pokračovat v instalaci, musíte vypnout RST",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
   "@restartIntoWindowsTitle": {},
@@ -771,7 +771,7 @@
   },
   "recoveryKeyTitle": "Obnovovací klíč k TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Po dokončení instalace je možné si nechat obnovovací klíč zobrazit pomocí následujícího příkazu:",
+  "recoveryKeyCommand": "Pro získání obnovovacího klíče dokončete instalaci, restartujte počítač a v terminálu spusťte tento příkaz:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Varování:</font> Pokud klíč k zabezpečení ztratíte, budou veškerá data ztracena. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.",
   "@recoveryKeyWarning": {
@@ -852,7 +852,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Přístupová hesla se neshodují",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Ujistěte se, že jste si uložili své přístupové heslo",
+  "choosePassphraseInfoHeader": "Uložte si své přístupové heslo na bezpečném místě",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte všechna svá data.",
   "@choosePassphraseInfoBody": {},
@@ -868,7 +868,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Začít od začátku na zvoleném disku.",
+  "installationTypeEraseInfo": "Všechna data a oddíly na disku budou vymazány, včetně operačních systémů.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimentální",
   "@installationTypeExperimental": {},
@@ -973,5 +973,131 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallDirectFileClearButtonLabel": "Vyčistit soubor",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectTitle": "Automatická instalace",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Importovat soubor autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Můžete zadat adresu URL souboru autoinstall:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Nebo vyberte místní soubor:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Vybrat soubor...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Neplatný soubor autoinstall",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "landscapeDomainNoInternetDescriptionWarning": "K načtení souboru autoinstall z Landscape je potřeba internet",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallDirectErrorUnkownTitle": "Neznámá chyba",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "landscapeDomainNoInternetTitleWarning": "Chcete-li pokračovat, připojte se k internetu",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "autoinstallDirectErrorInvalidContentBody": "Zkontrolujte soubor nebo poskytněte jiný.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "chooseOptionalPassphraseBody": "Přístupové heslo může pomoci chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit",
+  "@chooseOptionalPassphraseBody": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Zkontrolujte správnost adresy URL nebo vyberte místní soubor.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallLandscapeOption": "Automatizováno Landscape",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "Pro uživatele v organizacích, které poskytují soubor autoinstall prostřednictvím Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "next": "Další",
+  "@next": {},
+  "landscapeDomainTextField": "Doména Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "chooseOptionalPassphraseHeader": "Vytvořit přístupové heslo (volitelné)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte všechna svá data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyHeader": "Získat obnovovací klíč",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Bez klíče pro obnovení můžete přijít o všechna data",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyInfoBody": "Získejte obnovovací klíč, jakmile se poprvé přihlásíte do {distro} a uložte jej na bezpečném místě.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "Rozumím, že pokud nebudu mít klíč pro obnovení, mohu ztratit všechna svá data",
+  "@recoveryKeyConfirmation": {},
+  "landscapeMagicAttachInstructions": "Naskenujte QR kód nebo zadejte kód níže na <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Automatická instalace",
+  "@landscapePageTitle": {},
+  "landscapeDomainHeader": "Zadejte doménu Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Zadejte doménu Landscape vaší organizace, abyste se mohli přihlásit a načíst soubor autoinstall. FQDN můžete získat od vaší IT podpory.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainInvalidDomainWarning": "Neplatná doména, zkontrolujte nebo kontaktujte IT podporu",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeCodeExpiredWarning": "Kód vypršel, zkuste to znovu",
+  "@landscapeCodeExpiredWarning": {},
+  "autoinstallDirectFilePickerTitle": "Zvolit soubor",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Soubory YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importovat",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Soubor autoinstall není dostupný",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Neplatná adresa URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorFileSystemTitle": "Soubor autoinstall není čitelný",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Zkontrolujte svá oprávnění nebo poskytněte jiný soubor.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectOption": "Automatizováno souborem autoinstall",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
+  "@autoinstallDirectDescription": {},
+  "landscapeHeader": "Přihlásit se k Landscape",
+  "@landscapeHeader": {},
+  "landscapeLoginFailedWarning": "Přihlášení se nezdařilo, zkuste to znovu",
+  "@landscapeLoginFailedWarning": {},
+  "recoveryKeyStorageAdvice": "Uložte klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.",
+  "@recoveryKeyStorageAdvice": {},
+  "installationTypeEraseAndInstall": "Vymazat {os} a nainstalovat {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Všechny soubory a data ze stávající instalace {os} budou trvale smazány.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "rstDisableBios": "Nastavení BIOSu",
+  "@rstDisableBios": {},
+  "restartComputer": "Restartovat počítač",
+  "@restartComputer": {},
+  "restartComputerTitle": "Restartovat počítač?",
+  "@restartComputerTitle": {},
+  "rstDisableWindows": "Windows, pokud používáte dual boot se systémem Windows",
+  "@rstDisableWindows": {},
+  "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:",
+  "@rstDisable": {}
 }

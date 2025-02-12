@@ -36,7 +36,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFilePickerTitle => 'Zvoľte súbor';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML súbory';
+  String get autoinstallDirectFilePickerFilterLabel => 'Súbory YAML';
 
   @override
   String get autoinstallDirectImportButtonLabel => 'Importovať';
@@ -86,7 +86,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Pre používateľov, ktorí chcú byť prevedení inštaláciou krok za krokom.';
 
   @override
-  String get autoinstallDirectOption => 'Automatická so súborom autoinštalácie';
+  String get autoinstallDirectOption => 'Automaticky so súborom autoinštalácie';
 
   @override
   String get autoinstallDirectDescription => 'Pre skúsených používateľov, ktorí používajú autoinstall.yaml na zabezpečenie konzistentných a opakovateľných nastavení systému.';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Zistené RST';
 
   @override
-  String get rstHeader => 'Ak chcete pokračovať, vypnite RST';
+  String get rstHeader => 'Ak chcete pokračovať v inštalácii, musíte vypnúť RST';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Váš počítač používa technológiu Intel RST (Rapid Storage Technology). RST môžete zakázať buď:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Vo Windowse, ak používate nastavenie duálneho spúšťania s Windowsom';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Alebo v nastaveniach BIOSu';
 
   @override
   String rstInstructions(String url) {
@@ -300,7 +300,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Vytvorte prístupovú frázu (voliteľné)';
+  String get chooseOptionalPassphraseHeader => 'Vytvorenie prístupovej frázy (voliteľné)';
 
   @override
   String get chooseOptionalPassphraseBody => 'Prístupová fráza môže pomôcť chrániť vaše údaje, aj keď bude vaše zariadenie kompromitované. Budete ju musieť zadať vždy, keď zapnete počítač. Neskôr ju nebude možné odstrániť';
@@ -309,7 +309,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get chooseOptionalPassphraseInfoHeader => 'Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje. Prístupová fráza nenahrádza obnovovací kľúč ani vaše používateľské heslo.';
 
   @override
   String get createPassphrase => 'Vytvoriť prístupovú frázu';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Reštartovať počítač';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Reštartovať počítač?';
 
   @override
   String get restartIntoWindows => 'Reštartovať do Windows';
@@ -1059,24 +1059,24 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM kľúč na obnovenie';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Získanie obnovovacieho kľúča';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Bez obnovovacieho kľúča môžete prísť o všetky svoje údaje';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Získajte obnovovací kľúč hneď po prvom prihlásení do $distro a uložte ho na bezpečné miesto.';
   }
 
   @override
-  String get recoveryKeyCommand => 'K obnovovaciemu kľúču sa dostanete po inštalácii pomocou nasledujúceho príkazu:';
+  String get recoveryKeyCommand => 'Aby ste získali obnovovací kľúč, dokončite inštaláciu, reštartujte počítač a spustite tento príkaz v termináli:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Uložte obnovovací kľúč na bezpečné miesto. Použite ho na dešifrovanie disku v prípade určitých zmien v systéme. Napríklad ho môžete potrebovať, ak zmeníte komponenty vo vašom počítači alebo aktualizujete firmvér.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

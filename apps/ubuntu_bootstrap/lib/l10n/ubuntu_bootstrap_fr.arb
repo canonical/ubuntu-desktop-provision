@@ -158,7 +158,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Vous pouvez choisir votre système d'exploitation pendant le démarrage.",
+  "installationTypeAlongsideInfo": "Sélectionnez une partition à redimensionner et créez de l’espace pour {product}. Vous pouvez choisir votre système d’exploitation pendant le démarrage.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManualInfo": "Pour les utilisateurs avancés recherchant des configurations de disque personnalisées.",
   "@installationTypeManualInfo": {},
@@ -246,7 +246,7 @@
   "@installAlongsideSize": {},
   "installAlongsideAvailable": "Disponible :",
   "@installAlongsideAvailable": {},
-  "installationTypeAlongsideMulti": "Installer {product} à côté d’eux",
+  "installationTypeAlongsideMulti": "Installer {product} à côté des systèmes d’exploitation existants",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -637,7 +637,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Commencez à partir de zéro sur votre disque sélectionné.",
+  "installationTypeEraseInfo": "Toutes les données et partitions du disque seront effacées, y compris les systèmes d’exploitation.",
   "@installationTypeEraseInfo": {},
   "autoinstallTitle": "Type d’installation",
   "@autoinstallTitle": {},
@@ -745,7 +745,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Les phrases secrètes ne correspondent pas",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Assurez-vous de sauvegarder votre phrase secrète",
+  "choosePassphraseInfoHeader": "Stockez votre phrase secrète en lieu sûr",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Si vous perdez votre phrase secrète, vous perdrez toutes vos données.",
   "@choosePassphraseInfoBody": {},
@@ -916,7 +916,7 @@
       }
     }
   },
-  "recoveryKeyCommand": "Vous pouvez accéder à votre clé de récupération après l'installation avec la commande suivante :",
+  "recoveryKeyCommand": "Pour obtenir une clé de récupération, terminer l’installation, redémarrer votre ordinateur puis exécuter cette commande dans le terminal :",
   "@recoveryKeyCommand": {},
   "allocateDiskSpaceInvalidMountPointFormat": "{format} n’est pas un système de fichiers supporté pour {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
@@ -926,5 +926,121 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "landscapeDomainHeader": "Entrer le domaine Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInvalidDomainWarning": "Domaine non valide, veuillez vérifier ou contacter votre support informatique",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Connectez-vous à Internet pour continuer",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainTextField": "Domaine Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Suivant",
+  "@next": {},
+  "landscapeCodeExpiredWarning": "Code expiré, veuillez réessayer",
+  "@landscapeCodeExpiredWarning": {},
+  "autoinstallLandscapeOption": "Automatisé avec Landscape",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "Pour les utilisateurs des organisations qui fournissent un fichier autoinstall via Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "recoveryKeyHeader": "Obtenir une clé de récupération",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Vous risquez de perdre toutes vos données sans clé de récupération",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyStorageAdvice": "Stocker la clé de récupération en lieu sûr. Utilisez-la pour déchiffrer le disque en cas de certains changements du système. Par exemple, vous pourriez en avoir besoin si vous changez les composants de votre ordinateur ou mettez à jour le micrologiciel.",
+  "@recoveryKeyStorageAdvice": {},
+  "recoveryKeyConfirmation": "Je comprends que je pourrais perdre toutes mes données si je n’ai pas de clé de récupération",
+  "@recoveryKeyConfirmation": {},
+  "landscapeMagicAttachInstructions": "Scanner le code QR ou saisir le code ci-dessous à <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "installation automatisée",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Ouvrir une session Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainInstructions": "Fournir le domaine Landscape de votre organisation afin d'ouvrir une session et de récupérer un fichier autoinstall. Vous pouvez obtenir le nom de domaine complet auprès de votre équipe informatique.",
+  "@landscapeDomainInstructions": {},
+  "landscapeLoginFailedWarning": "Échec de connexion, veuillez réessayer",
+  "@landscapeLoginFailedWarning": {},
+  "autoinstallDirectImportButtonLabel": "Importer",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Fichier autoinstall non accessible",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Vérifiez que l’URL est correcte, testez votre connexion internet ou essayez plus tard.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "URL invalide",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Vérifier que l’URL est correcte ou sélectionner un fichier local.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Fichier autoinstall invalide",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Vérifier le fichier ou en fournir un autre.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Fichier autoinstall non lisible",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Vérifiez vos autorisations ou fournissez un fichier différent.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Erreur inconnue",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Automatisé avec fichier autoinstall",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Pour les utilisateurs avancés qui ont un autoinstall.yaml pour des configurations de système cohérentes et reproductibles.",
+  "@autoinstallDirectDescription": {},
+  "installationTypeEraseAndInstallInfo": "Tous les fichiers et données de l’installation existante {os} seront définitivement supprimés.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "installation automatisée",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Importer fichier autoinstall",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Vous pouvez saisir l’URL d’un fichier autoinstall :",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Ou sélectionnez un fichier local :",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFilePickerTitle": "Choisir fichier",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "Fichiers YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "chooseOptionalPassphraseHeader": "Créer une phrase de passe (facultatif)",
+  "@chooseOptionalPassphraseHeader": {},
+  "recoveryKeyInfoBody": "Obtenez une clé de récupération dès que vous vous connectez à {distro} et conservez-la en lieu sûr.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoHeader": "Conservez votre phrase de passe et la clé de récupération en lieu sûr",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "autoinstallDirectFileButtonLabel": "Sélection fichier...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "chooseOptionalPassphraseBody": "Une phrase de passe peut aider à protéger vos données même si votre matériel est compromis. Vous devrez entrer la phrase de passe chaque fois que vous allumez votre ordinateur. Vous ne serez pas en mesure de la supprimer plus tard",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseInfoBody": "Si vous perdez votre phrase de passe, vous perdrez toutes vos données. La phrase de passe ne remplace pas la clé de récupération ni votre mot de passe utilisateur.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "installationTypeEraseAndInstall": "Effacer {os} et installer {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainNoInternetDescriptionWarning": "Internet est nécessaire pour récupérer le fichier autoinstall de Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallDirectFileClearButtonLabel": "Effacer fichier",
+  "@autoinstallDirectFileClearButtonLabel": {}
 }

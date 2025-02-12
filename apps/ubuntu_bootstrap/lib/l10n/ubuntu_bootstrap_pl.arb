@@ -516,7 +516,7 @@
   "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceRequired": "Wymagana:",
   "@notEnoughDiskSpaceRequired": {},
-  "rstHeader": "Wyłącz funkcję RST, aby kontynuować",
+  "rstHeader": "Musisz wyłącz funkcję RST, aby kontynuować",
   "@rstHeader": {},
   "restartIntoWindowsDescription": "Czy na pewno chcesz ponownie uruchomić komputer? Później należy ponownie uruchomić instalację {DISTRO}, aby zakończyć instalowanie {DISTRO}.",
   "@restartIntoWindowsDescription": {
@@ -612,7 +612,7 @@
   },
   "recoveryKeyTitle": "Klucz odzyskiwania modułu TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Możesz uzyskać dostęp do klucza odzyskiwania po instalacji za pomocą następującego polecenia:",
+  "recoveryKeyCommand": "Aby uzyskać klucz odzyskiwania, zakończ instalację, uruchom ponownie komputer i uruchom to polecenie w terminalu:",
   "@recoveryKeyCommand": {},
   "installationTypeTPM": "EKSPERYMENTALNE: włącz sprzętowe szyfrowanie całego dysku",
   "@installationTypeTPM": {},
@@ -775,7 +775,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Hasła nie pasują do siebie",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Pamiętaj, aby zapisać swoje hasło",
+  "choosePassphraseInfoHeader": "Przechowuj hasło w bezpiecznym miejscu",
   "@choosePassphraseInfoHeader": {},
   "createPassphrase": "Utwórz hasło",
   "@createPassphrase": {},
@@ -1017,8 +1017,42 @@
   "@landscapeDomainNoInternetDescriptionWarning": {},
   "landscapeDomainNoInternetTitleWarning": "Połącz się z Internetem, aby kontynuować",
   "@landscapeDomainNoInternetTitleWarning": {},
-  "landscapeDomainInvalidDomainWarning": "Nieprawidłowa domena, sprawdź lub skontaktuj się ze swoją pomocą techniczną",
+  "landscapeDomainInvalidDomainWarning": "Nieprawidłowa domena, sprawdź lub skontaktuj się z pomocą techniczną",
   "@landscapeDomainInvalidDomainWarning": {},
-  "landscapeDomainInstructions": "Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od swojej pomocy technicznej.",
-  "@landscapeDomainInstructions": {}
+  "landscapeDomainInstructions": "Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od pomocy technicznej.",
+  "@landscapeDomainInstructions": {},
+  "chooseOptionalPassphraseHeader": "Utwórz hasło (opcjonalnie)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Przechowuj hasło i klucz odzyskiwania w bezpiecznym miejscu",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseInfoBody": "Jeśli zgubisz hasło, stracisz wszystkie dane. Hasło nie zastępuje klucza odzyskiwania ani hasła użytkownika.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyInfoBody": "Zaraz po pierwszym zalogowaniu do {distro} uzyskaj klucz odzyskiwania i przechowuj go w bezpiecznym miejscu.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseBody": "Hasło może pomóc chronić dane, nawet jeśli sprzęt zostanie naruszony. Konieczne będzie wprowadzanie hasła za każdym razem po włączeniu komputera. Nie będzie można go później usunąć",
+  "@chooseOptionalPassphraseBody": {},
+  "recoveryKeyHeader": "Uzyskaj klucz odzyskiwania",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyInfoHeader": "Bez klucza odzyskiwania możesz utracić wszystkie swoje dane",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania",
+  "@recoveryKeyConfirmation": {},
+  "recoveryKeyStorageAdvice": "Przechowuj klucz odzyskiwania w bezpiecznym miejscu. Używaj go do odszyfrowania dysku w przypadku niektórych zmian w systemie. Przykładowo możesz go potrzebować, jeśli zmienisz komponenty w komputerze lub zaktualizujesz oprogramowanie układowe.",
+  "@recoveryKeyStorageAdvice": {},
+  "restartComputer": "Uruchom ponownie komputer",
+  "@restartComputer": {},
+  "rstDisableWindows": "Windows, jeśli korzystasz z konfiguracji podwójnego rozruchu z tym systemem",
+  "@rstDisableWindows": {},
+  "restartComputerTitle": "Uruchomić ponownie komputer?",
+  "@restartComputerTitle": {},
+  "rstDisable": "Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:",
+  "@rstDisable": {},
+  "rstDisableBios": "Ustawieniach BIOS-u",
+  "@rstDisableBios": {}
 }

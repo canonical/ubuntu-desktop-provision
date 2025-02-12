@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Wykryto RST';
 
   @override
-  String get rstHeader => 'Wyłącz funkcję RST, aby kontynuować';
+  String get rstHeader => 'Musisz wyłącz funkcję RST, aby kontynuować';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, jeśli korzystasz z konfiguracji podwójnego rozruchu z tym systemem';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Ustawieniach BIOS-u';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Hasła nie pasują do siebie';
 
   @override
-  String get choosePassphraseInfoHeader => 'Pamiętaj, aby zapisać swoje hasło';
+  String get choosePassphraseInfoHeader => 'Przechowuj hasło w bezpiecznym miejscu';
 
   @override
   String get choosePassphraseInfoBody => 'Jeśli zgubisz hasło, utracisz wszystkie swoje dane.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Utwórz hasło (opcjonalnie)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Hasło może pomóc chronić dane, nawet jeśli sprzęt zostanie naruszony. Konieczne będzie wprowadzanie hasła za każdym razem po włączeniu komputera. Nie będzie można go później usunąć';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Przechowuj hasło i klucz odzyskiwania w bezpiecznym miejscu';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Jeśli zgubisz hasło, stracisz wszystkie dane. Hasło nie zastępuje klucza odzyskiwania ani hasła użytkownika.';
 
   @override
   String get createPassphrase => 'Utwórz hasło';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Uruchom ponownie komputer';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Uruchomić ponownie komputer?';
 
   @override
   String get restartIntoWindows => 'Uruchom ponownie do Windows';
@@ -1059,24 +1059,24 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Klucz odzyskiwania modułu TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Uzyskaj klucz odzyskiwania';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Bez klucza odzyskiwania możesz utracić wszystkie swoje dane';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Zaraz po pierwszym zalogowaniu do $distro uzyskaj klucz odzyskiwania i przechowuj go w bezpiecznym miejscu.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Możesz uzyskać dostęp do klucza odzyskiwania po instalacji za pomocą następującego polecenia:';
+  String get recoveryKeyCommand => 'Aby uzyskać klucz odzyskiwania, zakończ instalację, uruchom ponownie komputer i uruchom to polecenie w terminalu:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Przechowuj klucz odzyskiwania w bezpiecznym miejscu. Używaj go do odszyfrowania dysku w przypadku niektórych zmian w systemie. Przykładowo możesz go potrzebować, jeśli zmienisz komponenty w komputerze lub zaktualizujesz oprogramowanie układowe.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Wprowadź domenę Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od swojej pomocy technicznej.';
+  String get landscapeDomainInstructions => 'Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od pomocy technicznej.';
 
   @override
   String get landscapeDomainTextField => 'Domena Landscape (FQDN)';
@@ -1102,7 +1102,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get next => 'Dalej';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Nieprawidłowa domena, sprawdź lub skontaktuj się ze swoją pomocą techniczną';
+  String get landscapeDomainInvalidDomainWarning => 'Nieprawidłowa domena, sprawdź lub skontaktuj się z pomocą techniczną';
 
   @override
   String get landscapeDomainNoInternetTitleWarning => 'Połącz się z Internetem, aby kontynuować';

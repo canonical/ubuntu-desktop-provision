@@ -30,7 +30,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'Datei auswählen...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Datei leeren';
 
   @override
   String get autoinstallDirectFilePickerTitle => 'Datei auswählen';
@@ -42,31 +42,31 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Importieren';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall-Datei ist nicht erreichbar';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Überprüfen Sie, ob die URL korrekt ist, testen Sie Ihre Internetverbindung oder versuchen Sie es später.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Ungültige URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Überprüfen Sie, ob die URL korrekt ist, oder wählen Sie eine lokale Datei aus.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Ungültige autoinstall-Datei';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Überprüfen Sie die Datei oder stellen Sie eine andere Datei bereit.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall-Datei ist nicht lesbar';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Überprüfen Sie Ihre Berechtigungen oder stellen Sie eine andere Datei bereit.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Unbekannter Fehler';
 
   @override
   String get autoinstallTitle => 'Art der Installation';
@@ -86,16 +86,16 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Für Benutzer, die Schritt für Schritt durch die Installation geführt werden möchten.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automatisiert mit autoinstall-Datei';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Für fortgeschrittene Benutzer, die eine autoinstall.yaml für konsistente und wiederholbare Systemeinrichtungen haben.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automatisiert mit Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Für Benutzer in Organisationen, die eine autoinstall-Datei über Landscape bereitstellen.';
 
   @override
   String get changeButtonText => 'Ändern';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST ist aktiviert';
 
   @override
-  String get rstHeader => 'Schalten Sie RST aus, um fortzufahren';
+  String get rstHeader => 'Zum Fortsetzen der Installation müssen Sie RST deaktivieren';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Ihr Computer verwendet Intel RST (Rapid Storage Technology). Sie können RST entweder deaktivieren in:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, wenn Sie eine Dual-Boot-Konfiguration mit Windows verwenden';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Die BIOS-Einstellungen';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Die Passphrasen stimmen nicht überein';
 
   @override
-  String get choosePassphraseInfoHeader => 'Stellen Sie sicher, dass Sie Ihre Passphrase speichern';
+  String get choosePassphraseInfoHeader => 'Bewahren Sie Ihre Passphrase an einem sicheren Ort auf';
 
   @override
   String get choosePassphraseInfoBody => 'Wenn Sie Ihre Passphrase verlieren, verlieren Sie alle Ihre Daten.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Passphrase erstellen (optional)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Mit einer Passphrase können Sie Ihre Daten schützen, selbst wenn Ihre Hardware kompromittiert wird. Sie müssen die Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Sie können sie später nicht mehr entfernen';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Bewahren Sie Ihre Passphrase und Ihren Wiederherstellungsschlüssel an einem sicheren Ort auf';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Wenn Sie Ihre Passphrase verlieren, verlieren Sie alle Ihre Daten. Die Passphrase ersetzt nicht den Wiederherstellungsschlüssel oder Ihr Benutzerpasswort.';
 
   @override
   String get createPassphrase => 'Passphrase erstellen';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Computer neu starten';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Computer neu starten?';
 
   @override
   String get restartIntoWindows => 'Neustart in Windows';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM-Wiederherstellungsschlüssel';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Wiederherstellungsschlüssel erhalten';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Ohne einen Wiederherstellungsschlüssel können Sie alle Ihre Daten verlieren';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Besorgen Sie sich einen Wiederherstellungsschlüssel, sobald Sie sich zum ersten Mal bei $distro anmelden, und bewahren Sie ihn an einem sicheren Ort auf.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Sie können nach der Installation mit folgendem Befehl auf Ihren Wiederherstellungsschlüssel zugreifen:';
+  String get recoveryKeyCommand => 'Um einen Wiederherstellungsschlüssel zu erhalten, schließen Sie die Installation ab, starten Sie Ihren Computer neu und führen Sie diesen Befehl im Terminal aus:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Bewahren Sie den Wiederherstellungsschlüssel an einem sicheren Ort auf. Verwenden Sie ihn zum Entschlüsseln der Festplatte im Falle bestimmter Systemänderungen. Sie benötigen ihn zum Beispiel, wenn Sie die Komponenten in Ihrem Computer ändern oder die Firmware aktualisieren.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Ich verstehe, dass ich alle meine Daten verlieren kann, wenn ich keinen Wiederherstellungsschlüssel habe';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Scannen Sie den QR-Code oder geben Sie den unten stehenden Code unter <a href=\"https://$url\">$url</a> ein';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Automatisierte Installation';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Bei Landscape anmelden';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Landscape-Domain (FQDN) eingeben';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Geben Sie die Landscape-Domain Ihrer Organisation an, um sich anzumelden und eine autoinstall-Datei abzurufen. Sie erhalten die FQDN von Ihrem IT-Support.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape-Domain (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Weiter';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Ungültige Domain, bitte überprüfen oder kontaktieren Sie Ihren IT-Support';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Stellen Sie eine Internetverbindung her, um fortzufahren';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet wird benötigt, um die autoinstall-Datei von Landscape abzurufen';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Code abgelaufen, bitte versuchen Sie es erneut';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut';
 }

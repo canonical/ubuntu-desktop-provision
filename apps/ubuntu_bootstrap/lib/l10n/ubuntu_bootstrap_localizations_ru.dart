@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Обнаружен RST';
 
   @override
-  String get rstHeader => 'Для продолжения отключите RST';
+  String get rstHeader => 'Для продолжения установки отключите RST';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'На вашем компьютере используется технология Intel RST (технология быстрого хранения). Вы можете отключить RST в:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, если у вас установлено несколько операционных систем, включая Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Настройках BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Парольные фразы не совпадают';
 
   @override
-  String get choosePassphraseInfoHeader => 'Обязательно сохраните парольную фразу';
+  String get choosePassphraseInfoHeader => 'Сохраните свою парольную фразу в надёжном месте';
 
   @override
-  String get choosePassphraseInfoBody => 'Если Вы потеряете парольную фразу, Вы потеряете все свои данные.';
+  String get choosePassphraseInfoBody => 'Если вы потеряете парольную фразу, то потеряете все свои данные.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Создать фразу (необязательно)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Парольная фраза поможет защитить Ваши данные даже в том случае, если оборудование будет взломано. Пароль нужно будет вводить каждый раз, когда Вы включаете компьютер. Удалить её впоследствии будет невозможно';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Храните парольную фразу и ключ восстановления в безопасном месте';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Если потеряете парольную фразу, Вы потеряете все свои данные. Парольная фраза не заменяет ключ восстановления или пароль пользователя.';
 
   @override
   String get createPassphrase => 'Создать парольную фразу';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Перезагрузить компьютер';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Перезагрузить компьютер?';
 
   @override
   String get restartIntoWindows => 'Перезагрузить в Windows';
@@ -1059,24 +1059,24 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Ключ восстановления TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Получить ключ восстановления';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Без ключа восстановления вы можете потерять все свои данные';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Получите ключ восстановления сразу же после первого входа в систему $distro и храните его в надежном месте.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Вы можете получить доступ к ключу восстановления после установки с помощью следующей команды:';
+  String get recoveryKeyCommand => 'Чтобы получить ключ восстановления, завершите установку, перезапустите компьютер и выполните следующую команду в терминале:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Храните ключ восстановления в безопасном месте. Используйте его для расшифровки диска в случае некоторых изменений в системе. Например, он может понадобиться при замене компонентов в компьютере или обновлении прошивки.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Я понимаю, что могу потерять все свои данные, если у меня нет ключа восстановления';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {

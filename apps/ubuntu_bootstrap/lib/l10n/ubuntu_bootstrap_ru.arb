@@ -511,7 +511,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Для продолжения отключите RST",
+  "rstHeader": "Для продолжения установки отключите RST",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Перезагрузить в Windows?",
   "@restartIntoWindowsTitle": {},
@@ -714,7 +714,7 @@
   },
   "recoveryKeyTitle": "Ключ восстановления TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Вы можете получить доступ к ключу восстановления после установки с помощью следующей команды:",
+  "recoveryKeyCommand": "Чтобы получить ключ восстановления, завершите установку, перезапустите компьютер и выполните следующую команду в терминале:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Предупреждение:</font> Если вы потеряете этот ключ безопасности, то все данные будут потеряны. Если вам нужно, запишите свой ключ и храните его в любом безопасном месте.",
   "@recoveryKeyWarning": {
@@ -738,7 +738,7 @@
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Расширенная установка",
   "@fullInstallationTitle": {},
-  "choosePassphraseInfoBody": "Если Вы потеряете парольную фразу, Вы потеряете все свои данные.",
+  "choosePassphraseInfoBody": "Если вы потеряете парольную фразу, то потеряете все свои данные.",
   "@choosePassphraseInfoBody": {},
   "confirmEntryDiskEncryption": "Шифрование дисков",
   "@confirmEntryDiskEncryption": {},
@@ -832,7 +832,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Парольные фразы не совпадают",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Обязательно сохраните парольную фразу",
+  "choosePassphraseInfoHeader": "Сохраните свою парольную фразу в надёжном месте",
   "@choosePassphraseInfoHeader": {},
   "createPassphrase": "Создать парольную фразу",
   "@createPassphrase": {},
@@ -1015,5 +1015,39 @@
   "autoinstallDirectOption": "Автоматизировано с помощью файла автоустановки",
   "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.",
-  "@autoinstallDirectDescription": {}
+  "@autoinstallDirectDescription": {},
+  "chooseOptionalPassphraseHeader": "Создать фразу (необязательно)",
+  "@chooseOptionalPassphraseHeader": {},
+  "recoveryKeyInfoHeader": "Без ключа восстановления вы можете потерять все свои данные",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Я понимаю, что могу потерять все свои данные, если у меня нет ключа восстановления",
+  "@recoveryKeyConfirmation": {},
+  "recoveryKeyHeader": "Получить ключ восстановления",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyStorageAdvice": "Храните ключ восстановления в безопасном месте. Используйте его для расшифровки диска в случае некоторых изменений в системе. Например, он может понадобиться при замене компонентов в компьютере или обновлении прошивки.",
+  "@recoveryKeyStorageAdvice": {},
+  "chooseOptionalPassphraseBody": "Парольная фраза поможет защитить Ваши данные даже в том случае, если оборудование будет взломано. Пароль нужно будет вводить каждый раз, когда Вы включаете компьютер. Удалить её впоследствии будет невозможно",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseInfoBody": "Если потеряете парольную фразу, Вы потеряете все свои данные. Парольная фраза не заменяет ключ восстановления или пароль пользователя.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "chooseOptionalPassphraseInfoHeader": "Храните парольную фразу и ключ восстановления в безопасном месте",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "recoveryKeyInfoBody": "Получите ключ восстановления сразу же после первого входа в систему {distro} и храните его в надежном месте.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "rstDisableBios": "Настройках BIOS",
+  "@rstDisableBios": {},
+  "restartComputerTitle": "Перезагрузить компьютер?",
+  "@restartComputerTitle": {},
+  "rstDisable": "На вашем компьютере используется технология Intel RST (технология быстрого хранения). Вы можете отключить RST в:",
+  "@rstDisable": {},
+  "restartComputer": "Перезагрузить компьютер",
+  "@restartComputer": {},
+  "rstDisableWindows": "Windows, если у вас установлено несколько операционных систем, включая Windows",
+  "@rstDisableWindows": {}
 }

@@ -92,10 +92,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'Por tiuj spertuloj, kiuj havas dosieron autoinstall.yaml por kohera kaj ripetebla sistemo-starigo.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Aŭtomatigite per Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Por uzanto en organizaĵo provizanta aŭtomatan instalan dosieron per Landscape.';
 
   @override
   String get changeButtonText => 'Ŝanĝi';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Rapid-Konserveja Tekniko (RST) troviĝis';
 
   @override
-  String get rstHeader => 'Malŝaltu RST por daŭrigi';
+  String get rstHeader => 'Vi devas malŝalti RST por daŭrigi instaladon';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Via komputilo uzas Intel RST (Rapid-Stokan Teknikon). Vi povas malŝalti RST aŭ en:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, se vi uzas Windows kun aliaj mastrumaj sistemoj';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'La agordoj de BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'La pasfrazoj ne kongruas';
 
   @override
-  String get choosePassphraseInfoHeader => 'Certigu, ke vi konservas vian pasfrazon';
+  String get choosePassphraseInfoHeader => 'Konservu vian pasfrazon ie sekure';
 
   @override
   String get choosePassphraseInfoBody => 'Se vi forgesos vian pasfrazon, vi perdos ĉiom da viaj datenoj.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Krei pasfrazon (nedevige)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Pasfrazo povas helpi protekti viajn datenojn, eĉ se via aparato estas minacata. Vi devos tajpi la pasfrazon po unu fojo, kiam la komputilo startas. Vi ne povos forigi la pasfrazon poste';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Konservu vian pasfrazon kaj restaŭran ŝlosilon ie sekure';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Se vi perdos vian pasfrazon, vi perdos ĉiom da viaj datenoj. La pasfrazo ne anstataŭigas la restaŭran ŝlosilon nek la pasvorton de la uzanto.';
 
   @override
   String get createPassphrase => 'Krei pasfrazon';
@@ -753,10 +753,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Restartigi komputilon';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Ĉu restartigi komputilon?';
 
   @override
   String get restartIntoWindows => 'Restartigi al Windows';
@@ -1059,60 +1059,60 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Ŝlosilo por aparato-baza ĉifrado';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Akiri restaŭran ŝlosilon';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Vi eble perdos ĉiom da viaj datenoj sen restaŭra ŝlosilo';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Akiru restaŭran ŝlosilon tuj post unua saluto al $distro, kaj konservu ĝin ie sekure.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Post instalo, vi povas legi vian restaŭran ŝlosilon per la jena komando:';
+  String get recoveryKeyCommand => 'Por akiri restaŭran ŝlosilon, finu la instaladon, restartigu vian komputilon, kaj rulu la jenon en la terminalo:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Konservu la restaŭran ŝlosilon ie sekure. Uzu ĝin por malĉifri la diskon por kelkaj sistemaj ŝanĝoj. Ekzemple, oni bezonos ĝin, se oni ŝanĝos la komponantojn de via komputilo aŭ ĝisdatigos la mikroprogramaron.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Mi komprenas, ke mi povos perdi ĉiom da miaj datenoj, se mi ne havos restaŭran ŝlosilon';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Skanu la QR-kodon aŭ tajpu la ĉi suban kodon ĉe <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Aŭtomata instalado';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Saluti al Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Tajpu nomregnon de Landscape (plene kvalifikitan nomregnon)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Provizu la nomregnon Landscape de via organizaĵo por saluti kaj elŝuti aŭtomatan instalan dosieron. La informadika subtena teamo de via organizaĵo povas provizi la plene kvalifikitan nomregnon.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Nomregno Landscape (plene kvalifikita nomregno)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Sekven';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Nevalida nomregno. Bonvolu kontroli aŭ kontakti vian informadikan subtenan teamon';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Konektu al Interreto por daŭrigi';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Interreto necesas por elŝuti la aŭtomatan instalan dosieron el Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'La kodo eksvalidiĝis; bonvolu reprovi';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Salutado malsukcesis; bonvolu reprovi';
 }
