@@ -185,7 +185,7 @@ jobs:
           sudo systemctl start user@$UID.service
           echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
       - run: melos coverage
-      - uses: codecov/codecov-action@v4
+      - uses: codecov/codecov-action@v5
         with:
           flags: UI
           token: ${{secrets.CODECOV_TOKEN}}
@@ -248,7 +248,7 @@ jobs:
           go test -race ./...
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: /tmp/coverage.out
           flags: provd
