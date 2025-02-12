@@ -6,7 +6,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.",
   "@installThirdPartySubtitle": {},
-  "rstInstructions": "Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Pre inštrukcie naskenujte QR kód na inom zariadení alebo navštívte: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -1107,5 +1107,23 @@
   "restartComputerTitle": "Reštartovať počítač?",
   "@restartComputerTitle": {},
   "restartComputer": "Reštartovať počítač",
-  "@restartComputer": {}
+  "@restartComputer": {},
+  "bitlockerInfoInstructions": "Pre inštrukcie navštívte <a href=\"{url}\">sprievodcu BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "Zistený BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerWarningTitle": "Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDescription": "Jedna alebo viacero partícií je šifrovaných pomocou BitLockeru.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.",
+  "@bitlockerInfoRecovery": {}
 }
