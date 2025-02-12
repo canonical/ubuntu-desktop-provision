@@ -24,6 +24,8 @@ GuidedResizeModel buildGuidedResizeModel({
   int? minimumSize,
   int? maximumSize,
   int? totalSize,
+  bool? hasBitLocker,
+  bool? isUsed,
 }) {
   final model = MockGuidedResizeModel();
   when(model.storageCount).thenReturn(storageCount ?? 0);
@@ -50,5 +52,7 @@ GuidedResizeModel buildGuidedResizeModel({
   when(model.minimumSize).thenReturn(minimumSize ?? 0);
   when(model.maximumSize).thenReturn(maximumSize ?? 1);
   when(model.totalSize).thenReturn(totalSize ?? 0);
+  when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
+  when(model.init()).thenAnswer((_) async => isUsed ?? false);
   return model;
 }

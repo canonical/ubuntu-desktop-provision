@@ -59,6 +59,7 @@ final storageModelProvider = ChangeNotifierProvider(
     getService<StorageService>(),
     tryGetService<TelemetryService>(),
     getService<ProductService>(),
+    getService<SessionService>(),
   ),
 );
 
@@ -69,11 +70,13 @@ class StorageModel extends SafeChangeNotifier {
     this._storage,
     this._telemetry,
     this._product,
+    this._session,
   );
 
   final StorageService _storage;
   final TelemetryService? _telemetry;
   final ProductService _product;
+  final SessionService _session;
 
   StorageType? _type;
   var _hasBitLocker = false;
@@ -257,6 +260,8 @@ class StorageModel extends SafeChangeNotifier {
   Future<void> resetStorage() async {
     _disks = await _storage.resetStorage();
   }
+
+  Future<void> reboot() => _session.reboot(immediate: true);
 
   @override
   String toString() {

@@ -33,7 +33,11 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [fakeDisk()]);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
 
     final gap1 = fakeGuidedStorageTargetUseGap(gap: fakeGap(size: 1));
     final gap2 = fakeGuidedStorageTargetUseGap(gap: fakeGap(size: 2));
@@ -42,6 +46,7 @@ void main() {
     // single gap
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse(targets: [gap1]));
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
     expect(await model.init(), isFalse);
     verify(service.guidedTarget = gap1).called(1);
 
@@ -49,6 +54,7 @@ void main() {
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [gap2, gap3, gap1]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
     expect(await model.init(), isFalse);
     verify(service.guidedTarget = gap3).called(1);
 
@@ -57,6 +63,7 @@ void main() {
       (_) async =>
           fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
     expect(await model.init(), isTrue);
     verifyNever(service.guidedTarget = any);
   });
@@ -68,8 +75,13 @@ void main() {
       (_) async =>
           fakeGuidedStorageResponse(targets: [fakeGuidedStorageTargetResize()]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     expect(model.selectedIndex, isNull);
 
     await model.init();
@@ -96,8 +108,13 @@ void main() {
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [resize1, resize2]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     await model.init();
 
     model.selectStorage(1);
@@ -115,7 +132,11 @@ void main() {
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     await model.reset();
     verifyInOrder([service.resetStorage(), service.getGuidedStorage()]);
   });
@@ -124,7 +145,11 @@ void main() {
     final service = MockStorageService();
     when(service.existingOS).thenReturn([ubuntu2110, ubuntu2204]);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     expect(model.existingOS, equals([ubuntu2110, ubuntu2204]));
   });
 
@@ -132,7 +157,11 @@ void main() {
     final service = MockProductService();
     when(service.getProductInfo()).thenReturn(const ProductInfo(name: 'Foo'));
 
-    final model = GuidedResizeModel(MockStorageService(), service);
+    final model = GuidedResizeModel(
+      MockStorageService(),
+      service,
+      MockSessionService(),
+    );
     expect(model.productInfo.name, 'Foo');
   });
 
@@ -154,8 +183,13 @@ void main() {
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     expect(model.storageCount, isZero);
     expect(model.getDisk(0), isNull);
     expect(model.getDisk(1), isNull);
@@ -196,8 +230,13 @@ void main() {
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     expect(model.storageCount, isZero);
     expect(model.selectedIndex, isNull);
     expect(model.selectedStorage, isNull);
@@ -265,8 +304,13 @@ void main() {
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [storage1, storage2]),
     );
+    when(service.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = GuidedResizeModel(service, MockProductService());
+    final model = GuidedResizeModel(
+      service,
+      MockProductService(),
+      MockSessionService(),
+    );
     await model.init();
     expect(model.selectedIndex, equals(0));
 

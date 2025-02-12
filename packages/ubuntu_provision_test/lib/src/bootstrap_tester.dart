@@ -179,6 +179,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   Future<void> testStoragePage({
     StorageType? type,
     GuidedCapability? guidedCapability,
+    bool hasBitLocker = false,
     String? screenshot,
   }) async {
     await pumpUntilPage(StoragePage);
@@ -187,6 +188,11 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.installationTypeTitle), findsOneWidget);
+
+    expect(
+      find.byType(BitlockerInfoBox),
+      hasBitLocker ? findsOneWidget : findsNothing,
+    );
 
     if (type != null) {
       await tapRadio<StorageType>(type);
@@ -235,31 +241,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     await pumpAndSettle();
   }
 
-  Future<void> testBitLockerPage({
-    String? screenshot,
-  }) async {
-    await pumpUntilPage(BitLockerPage);
-
-    final context = element(find.byType(BitLockerPage));
-    final l10n = UbuntuBootstrapLocalizations.of(context);
-
-    expect(find.titleBar(l10n.bitlockerTitle), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot(screenshot);
-    }
-
-    await tapButton(l10n.restartIntoWindows);
-    await pumpAndSettle();
-    expect(find.byType(AlertDialog), findsOneWidget);
-
-    if (screenshot != null) {
-      await takeScreenshot('$screenshot-confirm');
-    }
-
-    await pumpAndSettle();
-  }
-
   Future<void> testGuidedReformatPage({
     String? screenshot,
   }) async {
@@ -280,6 +261,8 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
   Future<void> testGuidedResizePage({
     int? size,
+    bool hasBitLocker = false,
+    List<OsProber>? existingOS,
     String? screenshot,
   }) async {
     await pumpUntilPage(GuidedResizePage);
@@ -290,9 +273,26 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     final productInfo = getService<ProductService>().getProductInfo();
     expect(
       find.titleBar(
-        l10n.installationTypeAlongsideUnknown(productInfo.toString()),
+        switch (existingOS?.length ?? 0) {
+          0 => l10n.installationTypeAlongsideUnknown(productInfo.toString()),
+          1 => l10n.installationTypeAlongside(
+              productInfo.toString(),
+              existingOS!.single.long,
+            ),
+          2 => l10n.installationTypeAlongsideDual(
+              productInfo.toString(),
+              existingOS!.first.long,
+              existingOS.last.long,
+            ),
+          _ => l10n.installationTypeAlongsideMulti(productInfo.toString()),
+        },
       ),
       findsOneWidget,
+    );
+
+    expect(
+      find.byType(BitlockerInfoBox),
+      hasBitLocker ? findsOneWidget : findsNothing,
     );
 
     if (size != null) {
@@ -428,6 +428,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
   Future<void> testConfirmPage({
     String? screenshot,
+    bool hasBitLocker = false,
   }) async {
     await pumpUntilPage(ConfirmPage);
 
@@ -435,6 +436,11 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(find.titleBar(l10n.confirmPageTitle), findsOneWidget);
+
+    expect(
+      find.byType(BitlockerInfoBox),
+      hasBitLocker ? findsOneWidget : findsNothing,
+    );
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);

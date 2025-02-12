@@ -257,6 +257,7 @@ Future<void> main() async {
       await tester.testStoragePage(
         type: StorageType.alongside,
         screenshot: '$currentThemeName/storage-alongside-windows',
+        hasBitLocker: true,
       );
     },
     variant: themeVariant,
@@ -371,31 +372,6 @@ Future<void> main() async {
 
       await tester.testNotEnoughDiskSpacePage(
         screenshot: '$currentThemeName/not-enough-space',
-      );
-    },
-    variant: themeVariant,
-  );
-
-  testWidgets(
-    'bitlocker',
-    (tester) async {
-      await tester.runApp(
-        () => runInstallerApp(
-          [
-            '--machine-config=examples/machines/win10.json',
-          ],
-          theme: currentTheme,
-        ),
-      );
-      await tester.pumpAndSettle();
-
-      await tester.jumpToStorageWizard();
-      await tester.pumpAndSettle();
-
-      await tester.testStoragePage(type: StorageType.alongside);
-
-      await tester.testBitLockerPage(
-        screenshot: '$currentThemeName/bitlocker',
       );
     },
     variant: themeVariant,

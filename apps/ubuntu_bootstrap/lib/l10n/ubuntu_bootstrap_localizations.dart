@@ -1523,29 +1523,41 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Continue testing'**
   String get continueTesting;
 
-  /// No description provided for @bitlockerTitle.
+  /// No description provided for @bitlockerInfoTitle.
   ///
   /// In en, this message translates to:
-  /// **'BitLocker is enabled'**
-  String get bitlockerTitle;
+  /// **'BitLocker detected'**
+  String get bitlockerInfoTitle;
 
-  /// No description provided for @bitlockerHeader.
+  /// No description provided for @bitlockerInfoDescription.
   ///
   /// In en, this message translates to:
-  /// **'Turn off BitLocker to continue'**
-  String get bitlockerHeader;
+  /// **'One or more partitions are encrypted with BitLocker.'**
+  String get bitlockerInfoDescription;
 
-  /// No description provided for @bitlockerDescription.
+  /// No description provided for @bitlockerInfoDisable.
   ///
   /// In en, this message translates to:
-  /// **'This computer uses Windows BitLocker encryption.\nYou need to use Windows to create free space or go back and choose \'{option}\' to continue.'**
-  String bitlockerDescription(String option);
+  /// **'To install alongside Windows, disable BitLocker in Windows.'**
+  String get bitlockerInfoDisable;
 
-  /// No description provided for @bitlockerInstructions.
+  /// No description provided for @bitlockerInfoRecovery.
   ///
   /// In en, this message translates to:
-  /// **'For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>'**
-  String bitlockerInstructions(String url);
+  /// **'Windows may request recovery keys on boot after installation.'**
+  String get bitlockerInfoRecovery;
+
+  /// No description provided for @bitlockerInfoInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'For instructions, visit the <a href=\"{url}\">BitLocker guide</a>.'**
+  String bitlockerInfoInstructions(String url);
+
+  /// No description provided for @bitlockerWarningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You may lose all your data without BitLocker recovery keys'**
+  String get bitlockerWarningTitle;
 
   /// No description provided for @restartComputer.
   ///

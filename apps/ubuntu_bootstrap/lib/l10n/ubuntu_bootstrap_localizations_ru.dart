@@ -733,20 +733,24 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Продолжить тестирование';
 
   @override
-  String get bitlockerTitle => 'BitLocker включён';
+  String get bitlockerInfoTitle => 'BitLocker detected';
 
   @override
-  String get bitlockerHeader => 'Для продолжения отключите BitLocker';
+  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
 
   @override
-  String bitlockerDescription(String option) {
-    return 'На этом компьютере используется шифрование Windows BitLocker.\nВам нужно использовать Windows для создания свободного пространства или вернуться назад и выбрать \'$option\', чтобы продолжить.';
+  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+
+  @override
+  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
   }
 
   @override
-  String bitlockerInstructions(String url) {
-    return 'Чтобы получить инструкции, отсканируйте QR-код на другом устройстве или посетите: <a href=\"https://$url\">$url</a>';
-  }
+  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
   String get restartComputer => 'Restart computer';

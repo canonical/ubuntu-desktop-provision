@@ -5,6 +5,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -103,6 +104,13 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
         },
       ),
       children: [
+        if (hasBitLocker)
+          BitlockerInfoBox(
+            canInstallAlongside: canInstallAlongside,
+            onPressed: canInstallAlongside
+                ? null
+                : ref.read(storageModelProvider.notifier).reboot,
+          ),
         if (canInstallAlongside || hasBitLocker)
           _InstallationTypeTile(
             storageType: StorageType.alongside,
@@ -115,8 +123,11 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
             subtitle: Text(
               lang.installationTypeAlongsideInfo(flavor.displayName),
-              style: theme.textTheme.bodySmall,
+              style: theme.textTheme.bodySmall!.copyWith(
+                color: canInstallAlongside ? null : theme.disabledColor,
+              ),
             ),
+            enabled: canInstallAlongside,
           ),
         if (canEraseAndInstall)
           ...ref
@@ -223,16 +234,20 @@ class _InstallationTypeTile extends ConsumerWidget {
     required this.title,
     this.subtitle,
     this.trailing,
+    this.enabled = true,
   });
 
   final StorageType storageType;
   final Widget title;
   final Widget? subtitle;
   final Widget? trailing;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
+
+    void onChanged(StorageType? value) => model.type = value;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
@@ -247,7 +262,7 @@ class _InstallationTypeTile extends ConsumerWidget {
           isThreeLine: true,
           value: storageType,
           groupValue: model.type,
-          onChanged: (value) => model.type = value,
+          onChanged: enabled ? onChanged : null,
         ),
       ),
     );

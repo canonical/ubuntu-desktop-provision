@@ -230,6 +230,16 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as _i8.Future<void>);
 
   @override
+  _i8.Future<void> reboot() => (super.noSuchMethod(
+        Invocation.method(
+          #reboot,
+          [],
+        ),
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
+
+  @override
   void addListener(_i7.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,

@@ -58,11 +58,13 @@ void main() {
     final storage = MockStorageService();
     final network = MockNetworkService();
     final product = MockProductService();
+    final session = MockSessionService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
+    when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = ConfirmModel(installer, storage, network, product);
+    final model = ConfirmModel(installer, storage, network, product, session);
     await model.init();
     verifyInOrder([
       storage.getStorage(),
@@ -97,13 +99,15 @@ void main() {
     final storage = MockStorageService();
     final network = MockNetworkService();
     final product = MockProductService();
+    final session = MockSessionService();
     when(storage.guidedTarget).thenReturn(target);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
+    when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = ConfirmModel(installer, storage, network, product);
+    final model = ConfirmModel(installer, storage, network, product, session);
     await model.init();
     verify(storage.setGuidedStorage()).called(1);
   });
@@ -113,12 +117,14 @@ void main() {
     final storage = MockStorageService();
     final network = MockNetworkService();
     final product = MockProductService();
+    final session = MockSessionService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
+    when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = ConfirmModel(installer, storage, network, product);
+    final model = ConfirmModel(installer, storage, network, product, session);
     await model.init();
     await model.startInstallation();
 
@@ -132,12 +138,14 @@ void main() {
     final storage = MockStorageService();
     final network = MockNetworkService();
     final product = MockProductService();
+    final session = MockSessionService();
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
     when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
+    when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
-    final model = ConfirmModel(installer, storage, network, product);
+    final model = ConfirmModel(installer, storage, network, product, session);
     await model.init();
     await model.markNetworkConfigured();
 

@@ -733,20 +733,24 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Kipróbálás folytatása';
 
   @override
-  String get bitlockerTitle => 'A BitLocker engedélyezve van';
+  String get bitlockerInfoTitle => 'BitLocker detected';
 
   @override
-  String get bitlockerHeader => 'A BitLocker kikapcsolása a folytatáshoz';
+  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
 
   @override
-  String bitlockerDescription(String option) {
-    return 'Ez a számítógép Windows BitLocker titkosítást használ.\nWindowst kell használnia a szabad terület létrehozásához, vagy menjen vissza, és válassza a(z) „$option” lehetőséget a folytatáshoz.';
+  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+
+  @override
+  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
   }
 
   @override
-  String bitlockerInstructions(String url) {
-    return 'Az utasításokért olvassa le a QR-kódot egy másik eszközön vagy látogassa meg ezt az oldalt: <a href=\"https://$url\">$url</a>';
-  }
+  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
 
   @override
   String get restartComputer => 'Restart computer';
