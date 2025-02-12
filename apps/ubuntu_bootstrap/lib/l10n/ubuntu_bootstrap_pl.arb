@@ -1054,5 +1054,23 @@
   "rstDisable": "Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:",
   "@rstDisable": {},
   "rstDisableBios": "Ustawieniach BIOS-u",
-  "@rstDisableBios": {}
+  "@rstDisableBios": {},
+  "bitlockerInfoInstructions": "Instrukcje znajdziesz w <a href=\"{url}\">przewodniku po funkcji BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDisable": "Aby przeprowadzić instalację obok systemu Windows, wyłącz funkcję BitLocker w systemie Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerWarningTitle": "Bez kluczy odzyskiwania funkcji BitLocker możesz utracić wszystkie swoje dane",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoRecovery": "Po instalacji system Windows może zażądać kluczy odzyskiwania podczas rozruchu.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoDescription": "Jedna lub więcej partycji są szyfrowane za pomocą funkcji BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoTitle": "Wykryto funkcję BitLocker",
+  "@bitlockerInfoTitle": {}
 }
