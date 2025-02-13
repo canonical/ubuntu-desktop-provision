@@ -1120,7 +1120,7 @@
   "@bitlockerInfoTitle": {},
   "bitlockerWarningTitle": "Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker",
   "@bitlockerWarningTitle": {},
-  "bitlockerInfoDescription": "Jedna alebo viacero partícií je šifrovaných pomocou BitLockeru.",
+  "bitlockerInfoDescription": "Jeden alebo viacero oddielov je šifrovaných pomocou BitLockeru.",
   "@bitlockerInfoDescription": {},
   "bitlockerInfoDisable": "Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.",
   "@bitlockerInfoDisable": {},
