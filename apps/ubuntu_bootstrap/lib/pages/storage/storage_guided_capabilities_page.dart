@@ -13,11 +13,14 @@ import 'package:yaru/yaru.dart';
 
 /// Select advanced installation features
 class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
-  GuidedCapabilitiesPage({super.key});
+  const GuidedCapabilitiesPage({super.key});
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
-    return ref.read(storageModelProvider.notifier).init().then((_) => true);
+    final hasAdvancedFeatures =
+        ref.read(storageModelProvider).hasAdvancedFeatures;
+
+    return Future.value(hasAdvancedFeatures);
   }
 
   @override
@@ -36,7 +39,6 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
         trailing: [
           NextWizardButton(
             onNext: model.save,
-            enabled: model.hasAdvancedFeatures,
           ),
         ],
       ),
@@ -47,7 +49,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              if (model.hasDirect)
+              if (model.currentTargetSupportsDirect)
                 OptionButton(
                   title: Text(lang.installationTypeNone),
                   subtitle: Text(lang.installationTypeNoneInfo),
@@ -56,7 +58,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
               const SizedBox(height: kWizardSpacing / 2),
-              if (model.hasLvm)
+              if (model.currentTargetSupportsLvm)
                 OptionButton(
                   title: Text(lang.installationTypeLVMEncryption),
                   subtitle: Text(lang.installationTypeLVMEncryptionInfo),
@@ -72,7 +74,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                     Divider(
                       color: theme.dividerColor,
                     ),
-                    if (model.hasLvm)
+                    if (model.currentTargetSupportsLvm)
                       OptionButton(
                         title: Text(lang.installationTypeLVM),
                         isThreeLines: false,
@@ -80,7 +82,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         groupValue: model.guidedCapability,
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
-                    if (model.hasZfs) ...[
+                    if (model.currentTargetSupportsZfs) ...[
                       OptionButton(
                         title: Wrap(
                           children: [
@@ -106,9 +108,10 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
                     ],
-                    TpmOption(
-                      model: model,
-                    ),
+                    if (model.currentTargetSupportsTpm ||
+                        model.guidedTarget?.tpmDisallowedReason != null) ...[
+                      TpmOption(model: model),
+                    ],
                   ].withSpacing(kWizardSpacing / 2),
                 ),
               ),
@@ -148,13 +151,9 @@ class TpmOption extends ConsumerWidget {
     final experimentalBadgeText =
         UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
-    final target = model
-        .getAllTargets()
-        .firstWhereOrNull((t) => t is GuidedStorageTargetReformat);
-
-    if (target == null) return const SizedBox();
-
-    final tpmInfo =
+    // If TPM is explicitly disallowed we display the reason why, otherwise we show
+    // the link for learning more about TPM FDE.
+    final tpmInfo = model.guidedTarget?.tpmDisallowedReason ??
         lang.installationTypeTPMInfo(flavor.displayName, model.tpmInfoUrl);
 
     return Column(
@@ -178,7 +177,9 @@ class TpmOption extends ConsumerWidget {
           ),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
           groupValue: model.guidedCapability,
-          onChanged: model.hasTpm ? (v) => model.guidedCapability = v : null,
+          onChanged: model.currentTargetSupportsTpm
+              ? (v) => model.guidedCapability = v
+              : null,
         ),
       ],
     );
@@ -193,4 +194,14 @@ extension on GuidedCapability {
           GuidedCapability.CORE_BOOT_ENCRYPTED,
         _ => this,
       };
+}
+
+extension on GuidedStorageTarget {
+  String? get tpmDisallowedReason => disallowed
+      .firstWhereOrNull(
+        (e) =>
+            e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+            e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+      )
+      ?.message;
 }

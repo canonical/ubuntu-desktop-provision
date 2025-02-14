@@ -38,6 +38,7 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
       StorageSteps.guidedCapabilities.route: WizardRoute(
         builder: (_) => GuidedCapabilitiesPage(),
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => const GuidedCapabilitiesPage().load(context, ref),
       ),
       StorageSteps.guidedReformat.route: WizardRoute(
         builder: (_) => const GuidedReformatPage(),

@@ -106,7 +106,7 @@ class MockTimezoneModel extends _i1.Mock implements _i2.TimezoneModel {
 
   @override
   _i4.Future<Iterable<_i3.GeoLocation>> searchCoordinates(
-          _i3.LatLng? coordinates) =>
+          dynamic coordinates) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchCoordinates,

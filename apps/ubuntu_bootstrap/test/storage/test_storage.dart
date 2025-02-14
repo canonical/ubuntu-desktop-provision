@@ -48,9 +48,9 @@ StorageModel buildStorageModel({
   when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures);
   when(model.hasBitLocker).thenReturn(hasBitLocker);
   when(model.hasDirect).thenReturn(hasDirect);
-  when(model.hasLvm).thenReturn(hasLvm);
-  when(model.hasZfs).thenReturn(hasZfs);
-  when(model.hasTpm).thenReturn(hasTpm);
+  when(model.currentTargetSupportsLvm).thenReturn(hasLvm);
+  when(model.currentTargetSupportsZfs).thenReturn(hasZfs);
+  when(model.currentTargetSupportsTpm).thenReturn(hasTpm);
   when(model.hasDd).thenReturn(hasDd);
   when(model.showAdvanced).thenReturn(showAdvanced);
   when(model.toggleShowAdvanced()).thenAnswer((_) {

@@ -372,10 +372,10 @@ void main() {
         .thenAnswer((_) async => fakeGuidedStorageResponse());
     await model.init();
     expect(capability, isNull);
-    expect(model.hasDirect, isFalse);
-    expect(model.hasLvm, isFalse);
-    expect(model.hasZfs, isFalse);
-    expect(model.hasTpm, isFalse);
+    expect(model.currentTargetSupportsDirect, isFalse);
+    expect(model.currentTargetSupportsLvm, isFalse);
+    expect(model.currentTargetSupportsZfs, isFalse);
+    expect(model.currentTargetSupportsTpm, isFalse);
 
     when(storage.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(
@@ -393,10 +393,10 @@ void main() {
     );
     await model.init();
     expect(capability, GuidedCapability.DIRECT);
-    expect(model.hasDirect, isTrue);
-    expect(model.hasLvm, isTrue);
-    expect(model.hasZfs, isTrue);
-    expect(model.hasTpm, isFalse);
+    expect(model.currentTargetSupportsDirect, isTrue);
+    expect(model.currentTargetSupportsLvm, isTrue);
+    expect(model.currentTargetSupportsZfs, isTrue);
+    expect(model.currentTargetSupportsTpm, isFalse);
 
     when(storage.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(
@@ -411,9 +411,9 @@ void main() {
     );
     await model.init();
     expect(capability, GuidedCapability.CORE_BOOT_ENCRYPTED);
-    expect(model.hasDirect, isFalse);
-    expect(model.hasLvm, isFalse);
-    expect(model.hasZfs, isFalse);
-    expect(model.hasTpm, isTrue);
+    expect(model.currentTargetSupportsDirect, isFalse);
+    expect(model.currentTargetSupportsLvm, isFalse);
+    expect(model.currentTargetSupportsZfs, isFalse);
+    expect(model.currentTargetSupportsTpm, isTrue);
   });
 }
