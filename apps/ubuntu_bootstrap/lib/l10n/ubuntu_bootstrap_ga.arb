@@ -1201,5 +1201,23 @@
   "rstDisableWindows": "Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows",
   "@rstDisableWindows": {},
   "rstDisableBios": "Socruithe BIOS",
-  "@rstDisableBios": {}
+  "@rstDisableBios": {},
+  "bitlockerInfoDescription": "Tá deighilt amháin nó níos mó criptithe le BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoRecovery": "Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Le treoracha a fháil, tabhair cuairt ar an <a href=\"{url}\">Treoir BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "Braitheadh BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDisable": "Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerWarningTitle": "Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker",
+  "@bitlockerWarningTitle": {}
 }
