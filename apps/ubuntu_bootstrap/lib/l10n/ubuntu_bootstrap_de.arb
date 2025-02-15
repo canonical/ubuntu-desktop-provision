@@ -1055,5 +1055,23 @@
   "restartComputer": "Computer neu starten",
   "@restartComputer": {},
   "restartComputerTitle": "Computer neu starten?",
-  "@restartComputerTitle": {}
+  "@restartComputerTitle": {},
+  "bitlockerInfoTitle": "BitLocker erkannt",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Eine oder mehrere Partitionen sind mit BitLocker verschlüsselt.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoRecovery": "Windows kann beim Hochfahren nach der Installation Wiederherstellungsschlüssel anfordern.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Anleitungen finden Sie im <a href=\"{url}\">BitLocker-Handbuch</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Ohne BitLocker-Wiederherstellungsschlüssel können Sie alle Ihre Daten verlieren",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDisable": "Für die Installation neben Windows müssen Sie BitLocker in Windows deaktivieren.",
+  "@bitlockerInfoDisable": {}
 }
