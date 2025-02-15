@@ -1049,5 +1049,23 @@
   "restartComputer": "Перезагрузить компьютер",
   "@restartComputer": {},
   "rstDisableWindows": "Windows, если у вас установлено несколько операционных систем, включая Windows",
-  "@rstDisableWindows": {}
+  "@rstDisableWindows": {},
+  "bitlockerInfoDescription": "Один или несколько разделов зашифрованы с помощью Bitlocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Чтобы выполнить установку рядом с Windows, отключите в Windows функцию Bitlocker.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoTitle": "BitLocker обнаружен",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoRecovery": "Windows может запросить ключи восстановления во время загрузки после завершения установки.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Инструкции можно найти в <a href=\"{url}\">Руководство по использованию BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Без ключей восстановления BitLocker вы можете потерять все свои данные",
+  "@bitlockerWarningTitle": {}
 }
