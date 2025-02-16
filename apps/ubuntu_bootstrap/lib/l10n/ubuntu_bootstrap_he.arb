@@ -1054,5 +1054,11 @@
   "restartComputerTitle": "להפעיל את המחשב מחדש?",
   "@restartComputerTitle": {},
   "rstDisableWindows": "Windows, אם יש לך מערכת נוספת בטעינה עם Windows",
-  "@rstDisableWindows": {}
+  "@rstDisableWindows": {},
+  "bitlockerInfoTitle": "זוהה BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "מחיצה אחת או יותר מוצפנות ב־BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "כדי להתקין לצד Windows, יש להשבית את BitLocker ב־Windows.",
+  "@bitlockerInfoDisable": {}
 }
