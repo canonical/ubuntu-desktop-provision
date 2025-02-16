@@ -1054,5 +1054,23 @@
   "restartComputer": "Restartigi komputilon",
   "@restartComputer": {},
   "rstDisable": "Via komputilo uzas Intel RST (Rapid-Stokan Teknikon). Vi povas malŝalti RST aŭ en:",
-  "@rstDisable": {}
+  "@rstDisable": {},
+  "bitlockerInfoTitle": "Troviĝis BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Unu aŭ pluraj subdisko(j) estis ĉifrita(j) per BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Por instali apud Windows, malŝaltu BitLocker en Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoInstructions": "Por instrukcioj, vizitu <a href=\"{url}\">la helpilon pri BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Vi povas perdi ĉiom da datenoj sen restaŭraj ŝlosiloj de BitLocker",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoRecovery": "Windows povas peti restaŭrajn ŝlosilojn dum startado post instalo.",
+  "@bitlockerInfoRecovery": {}
 }
