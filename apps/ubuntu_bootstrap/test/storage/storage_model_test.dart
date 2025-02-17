@@ -173,10 +173,22 @@ void main() {
   });
 
   test('DD images only allow to erase disk, nothing else', () async {
+    // reformat
+    const reformat = GuidedStorageTargetReformat(
+      diskId: '',
+      allowed: [
+        GuidedCapability.DD,
+        GuidedCapability.LVM,
+        GuidedCapability.CORE_BOOT_ENCRYPTED,
+        GuidedCapability.MANUAL,
+      ],
+    );
+
     final service = MockStorageService();
     when(service.guidedCapability).thenReturn(null);
     when(service.hasBitLocker()).thenAnswer((_) async => false);
     when(service.getStorage()).thenAnswer((_) async => []);
+    when(service.guidedTarget).thenReturn(reformat);
 
     final model = StorageModel(
       service,
@@ -188,16 +200,6 @@ void main() {
     // none
     when(service.getGuidedStorage())
         .thenAnswer((_) async => fakeGuidedStorageResponse());
-    // reformat
-    const reformat = GuidedStorageTargetReformat(
-      diskId: '',
-      allowed: [
-        GuidedCapability.DD,
-        GuidedCapability.LVM,
-        GuidedCapability.CORE_BOOT_ENCRYPTED,
-        GuidedCapability.MANUAL,
-      ],
-    );
     when(service.getGuidedStorage()).thenAnswer(
       (_) async => fakeGuidedStorageResponse(targets: [reformat]),
     );

@@ -47,7 +47,7 @@ StorageModel buildStorageModel({
   when(model.canManualPartition).thenReturn(canManualPartition);
   when(model.hasAdvancedFeatures).thenReturn(hasAdvancedFeatures);
   when(model.hasBitLocker).thenReturn(hasBitLocker);
-  when(model.hasDirect).thenReturn(hasDirect);
+  when(model.currentTargetSupportsDirect).thenReturn(hasDirect);
   when(model.currentTargetSupportsLvm).thenReturn(hasLvm);
   when(model.currentTargetSupportsZfs).thenReturn(hasZfs);
   when(model.currentTargetSupportsTpm).thenReturn(hasTpm);
@@ -57,6 +57,15 @@ StorageModel buildStorageModel({
     final currentValue = model.showAdvanced;
     when(model.showAdvanced).thenReturn(!currentValue);
   });
+  when(model.guidedTarget).thenAnswer(
+    (_) => switch (scenario) {
+      SecureBootScenarios.supported => supported,
+      SecureBootScenarios.noTpm => noTpm,
+      SecureBootScenarios.bios => bios,
+      SecureBootScenarios.thirdPartyDrivers => thirdPartyDrivers,
+      _ => null,
+    },
+  );
   when(model.getAllTargets()).thenAnswer(
     (_) => switch (scenario) {
       SecureBootScenarios.supported => [supported],
