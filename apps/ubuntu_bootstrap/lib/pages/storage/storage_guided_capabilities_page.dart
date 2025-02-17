@@ -37,9 +37,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          NextWizardButton(
-            onNext: model.save,
-          ),
+          NextWizardButton(),
         ],
       ),
       children: [
