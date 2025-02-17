@@ -246,8 +246,9 @@ class StorageModel extends SafeChangeNotifier {
       StorageTypeAlongside() => _firstTarget<GuidedStorageTargetResize>() ??
           _firstTarget<GuidedStorageTargetUseGap>(),
       StorageTypeErase() => _firstTarget<GuidedStorageTargetReformat>(),
-      StorageTypeManual() => _firstTarget<GuidedStorageTargetManual>(),
       StorageTypeEraseInstall(target: final t) => t,
+      // in the manual install case there is no guided target by definition
+      StorageTypeManual() => null,
       null => null,
     };
   }

@@ -358,7 +358,6 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.manual);
-    await tester.testGuidedCapabilityPage();
     await tester.testManualStoragePage(storage: storage);
 
     await tester.testIdentityPage(
@@ -484,6 +483,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase, hasBitLocker: true);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -521,6 +521,7 @@ void main() {
       type: StorageType.alongside,
       hasBitLocker: true,
     );
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -598,8 +599,8 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.alongside);
-    await tester.testGuidedCapabilityPage();
     await tester.testGuidedResizePage(size: 30);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -674,6 +675,7 @@ void main() {
         ),
       ],
     );
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
