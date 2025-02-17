@@ -282,8 +282,6 @@ Future<void> main() async {
 
       await tester.testStoragePage(type: StorageType.manual);
 
-      await tester.testGuidedCapabilityPage();
-
       await tester.testManualStoragePage(
         storage: [
           fakeDisk(
@@ -323,8 +321,6 @@ Future<void> main() async {
 
       await tester.testStoragePage(type: StorageType.alongside);
 
-      await tester.testGuidedCapabilityPage();
-
       await tester.testGuidedResizePage(
         size: 30,
         screenshot: '$currentThemeName/storage-guided-resize',
@@ -350,8 +346,6 @@ Future<void> main() async {
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(type: StorageType.erase);
-
-      await tester.testGuidedCapabilityPage();
 
       await tester.testGuidedReformatPage(
         screenshot: '$currentThemeName/storage-guided-reformat',
