@@ -11,6 +11,8 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+final showAdvancedProvider = StateProvider((_) => false);
+
 /// Select advanced installation features
 class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
   const GuidedCapabilitiesPage({super.key});
@@ -65,7 +67,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
               Visibility(
-                visible: model.showAdvanced,
+                visible: ref.watch(showAdvancedProvider),
                 child: Column(
                   children: [
                     const SizedBox(height: kWizardSpacing / 8),
@@ -114,12 +116,13 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                 ),
               ),
               Visibility(
-                visible: !model.showAdvanced,
+                visible: !ref.watch(showAdvancedProvider),
                 child: Column(
                   children: [
                     const SizedBox(height: kWizardSpacing),
                     OutlinedButton(
-                      onPressed: model.toggleShowAdvanced,
+                      onPressed: () =>
+                          ref.read(showAdvancedProvider.notifier).state = true,
                       child: Text(
                         lang.installationTypeAdvancedLabel,
                       ),

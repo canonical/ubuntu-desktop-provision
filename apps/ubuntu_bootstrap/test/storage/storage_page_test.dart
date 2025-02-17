@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/storage/storage_guided_capabilities_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/widgets/bitlocker_warning.dart';
@@ -33,7 +33,7 @@ void main() {
     );
   }
 
-  Widget buildAdvancedPage(StorageModel model) {
+  Widget buildGuidedCapabilitiesPage(StorageModel model) {
     final pageImages = PageImages.internal(
       MockPageConfigService(),
       MockThemeVariantService(),
@@ -425,7 +425,7 @@ void main() {
         guidedCapability: GuidedCapability.LVM_LUKS,
       );
 
-      await tester.pumpApp((_) => buildAdvancedPage(model));
+      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -441,7 +441,7 @@ void main() {
     testWidgets('lvm luks', (tester) async {
       final model = buildStorageModel(showAdvanced: true);
 
-      await tester.pumpApp((_) => buildAdvancedPage(model));
+      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -457,7 +457,7 @@ void main() {
     testWidgets('lvm', (tester) async {
       final model = buildStorageModel(showAdvanced: true);
 
-      await tester.pumpApp((_) => buildAdvancedPage(model));
+      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -473,7 +473,7 @@ void main() {
     testWidgets('zfs', (tester) async {
       final model = buildStorageModel(showAdvanced: true);
 
-      await tester.pumpApp((_) => buildAdvancedPage(model));
+      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -497,7 +497,7 @@ void main() {
     testWidgets('zfs luks', (tester) async {
       final model = buildStorageModel(showAdvanced: true);
 
-      await tester.pumpApp((_) => buildAdvancedPage(model));
+      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);

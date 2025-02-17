@@ -72,18 +72,12 @@ class StorageModel extends SafeChangeNotifier {
     this._telemetry,
     this._product,
     this._session,
-  ) : showAdvanced = false;
+  );
 
   final StorageService _storage;
   final TelemetryService? _telemetry;
   final ProductService _product;
   final SessionService _session;
-  bool showAdvanced;
-
-  void toggleShowAdvanced() {
-    showAdvanced = !showAdvanced;
-    notifyListeners();
-  }
 
   StorageType? _type;
   var _hasBitLocker = false;
