@@ -1099,5 +1099,23 @@
   "recoveryKeyStorageAdvice": "Förvara återställningsnyckeln på ett säkert ställe. Använd den för att dekryptera disken vid vissa systemändringar. Du kan till exempel behöva det om du byter komponenter i din dator eller uppdaterar fast programvara.",
   "@recoveryKeyStorageAdvice": {},
   "restartComputer": "Starta om datorn",
-  "@restartComputer": {}
+  "@restartComputer": {},
+  "bitlockerInfoRecovery": "Windows kan begära återställningsnycklar vid uppstart efter installationen.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoTitle": "BitLocker upptäckt",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "En eller flera partitioner är krypterade med BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoInstructions": "För instruktioner, besök vår <a href=\"{url}\">BitLocker guide</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Du kan förlora all din data utan BitLocker-återställningsnycklar",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDisable": "För att installera bredvid med Windows, inaktivera BitLocker i Windows.",
+  "@bitlockerInfoDisable": {}
 }
