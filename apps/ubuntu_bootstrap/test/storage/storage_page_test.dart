@@ -33,7 +33,10 @@ void main() {
     );
   }
 
-  Widget buildGuidedCapabilitiesPage(StorageModel model) {
+  Widget buildGuidedCapabilitiesPage(
+    StorageModel model, {
+    bool showAdvanced = false,
+  }) {
     final pageImages = PageImages.internal(
       MockPageConfigService(),
       MockThemeVariantService(),
@@ -42,6 +45,7 @@ void main() {
       overrides: [
         storageModelProvider.overrideWith((_) => model),
         pageImagesProvider.overrideWith((_) => pageImages),
+        showAdvancedProvider.overrideWith((_) => showAdvanced),
       ],
       child: GuidedCapabilitiesPage(),
     );
@@ -421,7 +425,6 @@ void main() {
   group('advanced features', () {
     testWidgets('none', (tester) async {
       final model = buildStorageModel(
-        showAdvanced: false,
         guidedCapability: GuidedCapability.LVM_LUKS,
       );
 
@@ -439,9 +442,11 @@ void main() {
     });
 
     testWidgets('lvm luks', (tester) async {
-      final model = buildStorageModel(showAdvanced: true);
+      final model = buildStorageModel();
 
-      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
+      await tester.pumpApp(
+        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+      );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -455,9 +460,11 @@ void main() {
     });
 
     testWidgets('lvm', (tester) async {
-      final model = buildStorageModel(showAdvanced: true);
+      final model = buildStorageModel();
 
-      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
+      await tester.pumpApp(
+        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+      );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -471,9 +478,11 @@ void main() {
     });
 
     testWidgets('zfs', (tester) async {
-      final model = buildStorageModel(showAdvanced: true);
+      final model = buildStorageModel();
 
-      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
+      await tester.pumpApp(
+        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+      );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -495,9 +504,11 @@ void main() {
     });
 
     testWidgets('zfs luks', (tester) async {
-      final model = buildStorageModel(showAdvanced: true);
+      final model = buildStorageModel();
 
-      await tester.pumpApp((_) => buildGuidedCapabilitiesPage(model));
+      await tester.pumpApp(
+        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+      );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);

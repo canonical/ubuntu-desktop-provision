@@ -33,7 +33,6 @@ StorageModel buildStorageModel({
   bool hasZfs = true,
   bool hasTpm = false,
   bool hasDd = false,
-  bool showAdvanced = true,
 }) {
   final model = MockStorageModel();
   when(model.type).thenReturn(type);
@@ -52,11 +51,6 @@ StorageModel buildStorageModel({
   when(model.currentTargetSupportsZfs).thenReturn(hasZfs);
   when(model.currentTargetSupportsTpm).thenReturn(hasTpm);
   when(model.hasDd).thenReturn(hasDd);
-  when(model.showAdvanced).thenReturn(showAdvanced);
-  when(model.toggleShowAdvanced()).thenAnswer((_) {
-    final currentValue = model.showAdvanced;
-    when(model.showAdvanced).thenReturn(!currentValue);
-  });
   when(model.guidedTarget).thenAnswer(
     (_) => switch (scenario) {
       SecureBootScenarios.supported => supported,
