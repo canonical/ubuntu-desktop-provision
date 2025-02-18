@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meta/meta.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
@@ -91,6 +92,9 @@ class StorageModel extends SafeChangeNotifier {
   Iterable<GuidedStorageTargetEraseInstall> getEraseInstallTargets() =>
       _getTargets<GuidedStorageTargetEraseInstall>();
 
+  T? _firstTarget<T extends GuidedStorageTarget>() =>
+      _getTargets<T>().firstOrNull;
+
   String? getEraseInstallOsName(GuidedStorageTargetEraseInstall target) {
     return _disks
         .firstWhere((d) => d.id == target.diskId)
@@ -139,35 +143,35 @@ class StorageModel extends SafeChangeNotifier {
   bool get hasBitLocker => _hasBitLocker;
 
   /// Whether direct guided storage targets are available.
-  bool get hasDirect => _getTargets<GuidedStorageTargetReformat>()
-      .any((t) => t.allowed.contains(GuidedCapability.DIRECT));
+  bool get currentTargetSupportsDirect =>
+      guidedTarget?.allowed.contains(GuidedCapability.DIRECT) ?? false;
 
-  /// Whether LVM guided storage targets are available.
-  bool get hasLvm => _getTargets<GuidedStorageTargetReformat>().any(
-        (t) => t.allowed.any(
-          (c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS,
-        ),
-      );
+  /// Whether or not the current guided storage target supports LVM guided capabilities.
+  bool get currentTargetSupportsLvm =>
+      guidedTarget?.allowed.any(
+        (c) => c == GuidedCapability.LVM || c == GuidedCapability.LVM_LUKS,
+      ) ??
+      false;
 
-  /// Whether ZFS guided storage targets are available.
-  bool get hasZfs => _getTargets<GuidedStorageTargetReformat>().any(
-        (t) => t.allowed.any(
-          (c) =>
-              c == GuidedCapability.ZFS ||
-              c == GuidedCapability.ZFS_LUKS_KEYSTORE,
-        ),
-      );
+  /// Whether or not the current guided storage target supports ZFS guided capabilities.
+  bool get currentTargetSupportsZfs =>
+      guidedTarget?.allowed.any(
+        (c) =>
+            c == GuidedCapability.ZFS ||
+            c == GuidedCapability.ZFS_LUKS_KEYSTORE,
+      ) ??
+      false;
 
-  /// Whether TPM is detected.
-  bool get hasTpm => _getTargets<GuidedStorageTargetReformat>().any(
-        (t) => t.allowed.any(
-          (c) =>
-              c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-              c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-        ),
-      );
+  /// Whether or not the current guided storage target supports TPM guided capabilities.
+  bool get currentTargetSupportsTpm =>
+      guidedTarget?.allowed.any(
+        (c) =>
+            c == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+            c == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+      ) ??
+      false;
 
-  /// Whether DD guided storage targets are available.
+  /// Whether DD guided capabilities are present in any guided storage target.
   bool get hasDd => _getTargets<GuidedStorageTargetReformat>()
       .any((t) => t.allowed.contains(GuidedCapability.DD));
 
@@ -188,7 +192,8 @@ class StorageModel extends SafeChangeNotifier {
 
   /// Whether erasing the disk is possible i.e. whether any guided reformat
   /// targets are allowed.
-  bool get canEraseDisk => hasDirect || hasLvm || hasZfs || hasTpm || hasDd;
+  bool get canEraseDisk =>
+      _getTargets<GuidedStorageTargetReformat>().isNotEmpty;
 
   /// Whether manual partitioning is possible i.e. whether a manual partitioning
   /// target is allowed.
@@ -197,7 +202,11 @@ class StorageModel extends SafeChangeNotifier {
   }
 
   /// Whether any advanced features are available.
-  bool get hasAdvancedFeatures => (hasLvm || hasZfs || hasTpm) && !hasDd;
+  bool get hasAdvancedFeatures =>
+      (currentTargetSupportsLvm ||
+          currentTargetSupportsZfs ||
+          currentTargetSupportsTpm) &&
+      !hasDd;
 
   /// Initializes the model.
   Future<void> init() async {
@@ -226,9 +235,16 @@ class StorageModel extends SafeChangeNotifier {
     if (partitionMethod != null) {
       await _telemetry?.addMetric('PartitionMethod', partitionMethod);
     }
-    if (_type case StorageTypeEraseInstall(target: final t)) {
-      _storage.guidedTarget = t;
-    }
+
+    _storage.guidedTarget = switch (_type) {
+      StorageTypeAlongside() => _firstTarget<GuidedStorageTargetResize>() ??
+          _firstTarget<GuidedStorageTargetUseGap>(),
+      StorageTypeErase() => _firstTarget<GuidedStorageTargetReformat>(),
+      StorageTypeEraseInstall(target: final t) => t,
+      // in the manual install case there is no guided target by definition
+      StorageTypeManual() => null,
+      null => null,
+    };
   }
 
   String? _resolvePartitionMethod() {
@@ -273,10 +289,10 @@ StorageModel(
   productInfo: $productInfo,
   existingOS: $existingOS,
   hasBitLocker: $hasBitLocker,
-  hasDirect: $hasDirect,
-  hasLvm: $hasLvm,
-  hasZfs: $hasZfs,
-  hasTpm: $hasTpm,
+  hasDirect: $currentTargetSupportsDirect,
+  hasLvm: $currentTargetSupportsLvm,
+  hasZfs: $currentTargetSupportsZfs,
+  hasTpm: $currentTargetSupportsTpm,
   hasDd: $hasDd,
   canInstallAlongside: $canInstallAlongside,
   canEraseAndInstall: $canEraseAndInstall,

@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Ceann ar bith';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => 'Níl aon cheann roghnaithe';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Úsáid LVM agus criptiú';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'LVM agus criptiú roghnaithe';
 
   @override
@@ -384,6 +390,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => 'Léirscrios diosca agus úsáid ZFS le criptiú';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS roghnaithe';

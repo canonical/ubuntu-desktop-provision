@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Nincs';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => 'Nincs kiválasztva';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'LVM és titkosítás használata';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'LVM és titkosítás kiválasztva';
 
   @override
@@ -384,6 +390,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => 'Lemez törlése és ZFS használata titkosítással';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS kiválasztva';

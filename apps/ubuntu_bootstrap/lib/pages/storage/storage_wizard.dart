@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/app/installation_step.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
@@ -50,6 +51,11 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
         builder: (_) => const ManualStoragePage(),
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
         onLoad: (_) => ManualStoragePage.load(ref),
+      ),
+      StorageSteps.guidedCapabilities.route: WizardRoute(
+        builder: (_) => GuidedCapabilitiesPage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => const GuidedCapabilitiesPage().load(context, ref),
       ),
       StorageSteps.recoveryKey.route: WizardRoute(
         builder: (_) => const RecoveryKeyPage(),

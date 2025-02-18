@@ -57,6 +57,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
@@ -95,6 +96,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase);
+    await tester.testGuidedCapabilityPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
 
@@ -122,12 +124,59 @@ void main() {
     await tester.testAutoinstallPage();
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.LVM_LUKS,
     );
+    await tester.testPassphrasePage(passphrase: 'password');
 
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage();
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.LVM_LUKS,
+    );
+  });
+
+  testWidgets('LVM Encrypted alongside Windows', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win10-along-ubuntu.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+    await tester.testStoragePage(type: StorageType.alongside);
+    await tester.testGuidedResizePage(size: 30);
+    await tester.testGuidedCapabilityPage(
+      guidedCapability: GuidedCapability.LVM_LUKS,
+    );
     await tester.testPassphrasePage(passphrase: 'password');
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -164,12 +213,12 @@ void main() {
     await tester.testAutoinstallPage();
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS,
     );
-
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
 
@@ -204,12 +253,12 @@ void main() {
     await tester.testAutoinstallPage();
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
-
     await tester.testPassphrasePage(passphrase: 'password');
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -254,9 +303,10 @@ void main() {
     await tester.testAutoinstallPage();
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
-
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
@@ -308,6 +358,8 @@ void main() {
 
     await tester.testStoragePage(
       type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
@@ -478,6 +530,7 @@ void main() {
     await tester.testSourceSelectionPage();
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.erase, hasBitLocker: true);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -515,6 +568,7 @@ void main() {
       type: StorageType.alongside,
       hasBitLocker: true,
     );
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -593,6 +647,7 @@ void main() {
     await tester.testCodecsAndDriversPage();
     await tester.testStoragePage(type: StorageType.alongside);
     await tester.testGuidedResizePage(size: 30);
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -667,6 +722,7 @@ void main() {
         ),
       ],
     );
+    await tester.testGuidedCapabilityPage();
 
     await tester.testIdentityPage(
       identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
@@ -782,6 +838,7 @@ Future<void> eraseInstallTest({
   await tester.testSourceSelectionPage();
   await tester.testCodecsAndDriversPage();
   await tester.testStoragePage(type: StorageTypeEraseInstall(target));
+  await tester.testGuidedCapabilityPage();
   await tester.testIdentityPage(
     identity: const Identity(realname: 'a', hostname: 'b', username: 'c'),
     password: 'password',

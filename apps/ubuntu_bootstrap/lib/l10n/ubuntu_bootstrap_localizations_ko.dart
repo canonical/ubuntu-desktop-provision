@@ -362,6 +362,9 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => '선택 안 함';
 
   @override
+  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+
+  @override
   String get installationTypeNoneSelected => '선택 안 함';
 
   @override
@@ -374,6 +377,9 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'LVM과 암호화 사용';
 
   @override
+  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+
+  @override
   String get installationTypeLVMEncryptionSelected => 'LVM 및 암호화 선택됨';
 
   @override
@@ -384,6 +390,9 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryption => '디스크를 지우고 ZFS와 암호화 사용';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS 선택됨';

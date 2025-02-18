@@ -87,26 +87,26 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
-  bool get hasDirect => (super.noSuchMethod(
-        Invocation.getter(#hasDirect),
+  bool get currentTargetSupportsDirect => (super.noSuchMethod(
+        Invocation.getter(#currentTargetSupportsDirect),
         returnValue: false,
       ) as bool);
 
   @override
-  bool get hasLvm => (super.noSuchMethod(
-        Invocation.getter(#hasLvm),
+  bool get currentTargetSupportsLvm => (super.noSuchMethod(
+        Invocation.getter(#currentTargetSupportsLvm),
         returnValue: false,
       ) as bool);
 
   @override
-  bool get hasZfs => (super.noSuchMethod(
-        Invocation.getter(#hasZfs),
+  bool get currentTargetSupportsZfs => (super.noSuchMethod(
+        Invocation.getter(#currentTargetSupportsZfs),
         returnValue: false,
       ) as bool);
 
   @override
-  bool get hasTpm => (super.noSuchMethod(
-        Invocation.getter(#hasTpm),
+  bool get currentTargetSupportsTpm => (super.noSuchMethod(
+        Invocation.getter(#currentTargetSupportsTpm),
         returnValue: false,
       ) as bool);
 

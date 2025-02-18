@@ -19,6 +19,7 @@ import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/not_enough_disk_space/not_enough_disk_space_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
@@ -239,6 +240,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(StoragePage), findsOneWidget);
     verify(storageModel.init()).called(1);
+
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+    expect(find.byType(GuidedCapabilitiesPage), findsOneWidget);
 
     await tester.tapNext();
     await tester.pumpAndSettle();
