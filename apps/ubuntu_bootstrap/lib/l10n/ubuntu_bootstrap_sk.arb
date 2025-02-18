@@ -156,11 +156,11 @@
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Pokročilé funkcie…",
+  "installationTypeAdvancedLabel": "Zobraziť rozšírené možnosti...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Pokročilé funkcie",
+  "installationTypeAdvancedTitle": "Šifrovanie a súborový systém",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Žiadne",
+  "installationTypeNone": "Bez šifrovania",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nič nevybrané",
   "@installationTypeNoneSelected": {},
@@ -450,7 +450,7 @@
   },
   "installationTypeEncryptInfo": "V nasledujúcom kroku si zvolíte bezpečnostný kľúč.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Vymazať disk a použiť ZFS",
+  "installationTypeZFS": "Použiť ZFS bez šifrovania",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Nainštalovať {product} vedľa {os}",
   "@installationTypeAlongside": {
@@ -600,7 +600,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Zapnúť hardvérovo zálohované šifrovanie celého disku",
+  "installationTypeTPM": "Použiť šifrovanie podporované hardvérom",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Vybrané TPM",
   "@installationTypeTPMSelected": {},
@@ -828,7 +828,7 @@
   "@confirmPassphrase": {},
   "createPassphrase": "Vytvoriť prístupovú frázu",
   "@createPassphrase": {},
-  "installationTypeLVMEncryption": "Použiť LVM a šifrovanie",
+  "installationTypeLVMEncryption": "Šifrovať pomocou prístupovej frázy",
   "@installationTypeLVMEncryption": {},
   "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.",
   "@codecsAndDriversPageBody": {
@@ -854,13 +854,13 @@
   "@choosePassphraseInfoBody": {},
   "installationTypeExperimental": "Experimentálne",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Použiť LVM",
+  "installationTypeLVM": "Použiť LVM bez šifrovania",
   "@installationTypeLVM": {},
-  "installationTypeZFSEncryption": "Vymazať disk a použiť ZFS so šifrovaním",
+  "installationTypeZFSEncryption": "Šifrovať pomocou prístupovej frázy pomocou ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybrané ZFS a šifrovanie",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom alebo budúcimi vydaniami {DISTRO}. <a href=\"{url}\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Prečítajte si o šifrovaní TPM</a>, než si vyberiete túto možnosť. Možno nebude fungovať s vaším hardvérom alebo budúcimi verziami {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1125,5 +1125,11 @@
   "bitlockerInfoDisable": "Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.",
   "@bitlockerInfoDisable": {},
   "bitlockerInfoRecovery": "Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.",
-  "@bitlockerInfoRecovery": {}
+  "@bitlockerInfoRecovery": {},
+  "installationTypeNoneInfo": "Štandardný súborový systém bez šifrovania.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.",
+  "@installationTypeZFSEncryptionInfo": {}
 }
