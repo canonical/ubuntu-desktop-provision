@@ -149,6 +149,53 @@ void main() {
     );
   });
 
+  testWidgets('LVM Encrypted alongside Windows', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(
+      () => app.main(<String>[
+        '--machine-config=examples/machines/win10-along-ubuntu.json',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+    await tester.testStoragePage(type: StorageType.alongside);
+    await tester.testGuidedResizePage(size: 30);
+    await tester.testGuidedCapabilityPage(
+      guidedCapability: GuidedCapability.LVM_LUKS,
+    );
+    await tester.testPassphrasePage(passphrase: 'password');
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage();
+    await tester.testInstallPage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.LVM_LUKS,
+    );
+  });
+
   testWidgets('ZFS unencrypted', (tester) async {
     const identity = Identity(
       realname: 'User',
