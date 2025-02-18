@@ -62,7 +62,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "Стереть диск и использовать ZFS",
+  "installationTypeZFS": "Использовать ZFS без шифрования",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Установить {product} вместе с {os}",
   "@installationTypeAlongside": {
@@ -151,7 +151,7 @@
   "@otherOptions": {},
   "installationTypeAdvancedLabel": "Дополнительные возможности...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Дополнительные возможности",
+  "installationTypeAdvancedTitle": "Файловая система и шифрование",
   "@installationTypeAdvancedTitle": {},
   "newPartitionTableConfirmationTitle": "Новый пустой раздел",
   "@newPartitionTableConfirmationTitle": {},
@@ -237,7 +237,7 @@
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "Ручная установка",
   "@installationTypeManual": {},
-  "installationTypeNone": "Ничего",
+  "installationTypeNone": "Без шифрования",
   "@installationTypeNone": {},
   "allocateDiskSpace": "Создание разделов вручную",
   "@allocateDiskSpace": {},
@@ -535,7 +535,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Включить аппаратное шифрование диска",
+  "installationTypeTPM": "Использовать аппаратное шифрование диска",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM выбран",
   "@installationTypeTPMSelected": {},
@@ -850,15 +850,15 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Экспериментально",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Использовать LVM",
+  "installationTypeLVM": "Использовать LVM без шифрования",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Использовать LVM и шифрование",
+  "installationTypeLVMEncryption": "Использовать шифрование с паролем",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Стереть диск и использовать ZFS с шифрованием",
+  "installationTypeZFSEncryption": "Зашифровать с паролем, используя ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Выбраны ZFS и шифрование",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Это экспериментальная функция. Она может не работать с вашим оборудованием или в будущих выпусках {DISTRO}. <a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать эту опцию. Она может не работать с вашим оборудованием или в будущих выпусках {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1067,5 +1067,11 @@
     }
   },
   "bitlockerWarningTitle": "Без ключей восстановления BitLocker вы можете потерять все свои данные",
-  "@bitlockerWarningTitle": {}
+  "@bitlockerWarningTitle": {},
+  "installationTypeNoneInfo": "Стандартная файловая система без шифрования.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeZFSEncryptionInfo": "Встроенное шифрование с помощью ZFS. Вам нужно будет вводить кодовую фразу каждый раз при включении компьютера.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeLVMEncryptionInfo": "Вам нужно будет вводить пароль каждый раз при включении компьютера. Эта функция использует шифрование LUKS с LVM.",
+  "@installationTypeLVMEncryptionInfo": {}
 }
