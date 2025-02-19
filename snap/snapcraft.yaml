@@ -270,6 +270,7 @@ parts:
       - -usr/lib/*/pkgconfig
       - -usr/lib/pkgconfig
       - -usr/share/pkgconfig
+      - -usr/lib/${CRAFT_ARCH_TRIPLET}/libgallium*
 
   dri-no-patchelf:
     after: [libraries]
@@ -281,3 +282,4 @@ parts:
     stage:
       - usr/lib/${CRAFT_ARCH_TRIPLET}/dri
       - usr/share/drirc.d
+      - usr/lib/${CRAFT_ARCH_TRIPLET}/libgallium*
