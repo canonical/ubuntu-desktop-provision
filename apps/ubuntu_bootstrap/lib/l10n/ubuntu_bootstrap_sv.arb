@@ -40,11 +40,11 @@
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Avancerade funktioner...",
+  "installationTypeAdvancedLabel": "Visa avancerade alternativ...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Avancerade funktioner",
+  "installationTypeAdvancedTitle": "Kryptering och filsystem",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Inga",
+  "installationTypeNone": "Ingen kryptering",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Inga valda",
   "@installationTypeNoneSelected": {},
@@ -116,7 +116,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "EXPERIMENTELLT: Radera disk och använd ZFS",
+  "installationTypeZFS": "Använd ZFS utan kryptering",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS valt",
   "@installationTypeZFSSelected": {},
@@ -692,7 +692,7 @@
   },
   "refreshRestart": "Vänligen stäng installationsprogrammet och starta om för att fortsätta",
   "@refreshRestart": {},
-  "installationTypeTPM": "EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering",
+  "installationTypeTPM": "Använd hårdvarustödd kryptering",
   "@installationTypeTPM": {},
   "refreshSnapPrerequisites": "Säkerställer {snap} förutsättningar...",
   "@refreshSnapPrerequisites": {
@@ -844,11 +844,11 @@
   },
   "installationTypeEraseInfo": "All data och partitioner på disken kommer att raderas, inklusive operativsystem.",
   "@installationTypeEraseInfo": {},
-  "installationTypeLVMEncryption": "Använd LVM och kryptering",
+  "installationTypeLVMEncryption": "Kryptera med en lösenfras",
   "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS och kryptering vald",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara eller med framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer det alternativet.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ. Detta kanske inte fungerar med din hårdvara eller framtida {DISTRO} släpp.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -897,9 +897,9 @@
   "@createPassphrase": {},
   "installationTypeExperimental": "Experimentell",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Använd LVM",
+  "installationTypeLVM": "Använd LVM utan kryptering",
   "@installationTypeLVM": {},
-  "installationTypeZFSEncryption": "Radera disk och använd ZFS med kryptering",
+  "installationTypeZFSEncryption": "Kryptera med en lösenfras med ZFS",
   "@installationTypeZFSEncryption": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
@@ -1117,5 +1117,11 @@
   "bitlockerWarningTitle": "Du kan förlora all din data utan BitLocker-återställningsnycklar",
   "@bitlockerWarningTitle": {},
   "bitlockerInfoDisable": "För att installera bredvid med Windows, inaktivera BitLocker i Windows.",
-  "@bitlockerInfoDisable": {}
+  "@bitlockerInfoDisable": {},
+  "installationTypeLVMEncryptionInfo": "Du måste ange en lösenordsfras varje gång du slår på din dator. Detta använder LUKS-kryptering med LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Inbyggd kryptering med ZFS. Du måste ange en lösenordsfras varje gång du slår på din dator.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeNoneInfo": "Standard filsystem utan kryptering.",
+  "@installationTypeNoneInfo": {}
 }
