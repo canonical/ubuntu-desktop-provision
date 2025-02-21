@@ -42,7 +42,7 @@
   "autoinstallDirectOption": "Automated with autoinstall file",
   "autoinstallDirectDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
   "autoinstallLandscapeOption": "Automated with Landscape",
-  "autoinstallLandscapeDescription": "For users in organisations that provide an autoinstall file via Landscape.",
+  "autoinstallLandscapeDescription": "For users in organizations that provide an autoinstall file via Landscape.",
   "changeButtonText": "Change",
   "quitButtonText": "Quit installation",
   "loadingPageTitle": "Welcome to {DISTRO}",

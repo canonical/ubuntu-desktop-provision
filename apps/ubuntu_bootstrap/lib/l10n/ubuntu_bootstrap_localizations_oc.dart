@@ -95,7 +95,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallLandscapeOption => 'Aitomatizat ambé Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organisations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'For users in organizations that provide an autoinstall file via Landscape.';
 
   @override
   String get changeButtonText => 'Modificar';
