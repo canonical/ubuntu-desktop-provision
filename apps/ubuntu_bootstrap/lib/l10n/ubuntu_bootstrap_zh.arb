@@ -125,15 +125,15 @@
   "@configureSecureBootDescription": {},
   "rstDescription": "此计算机使用了英特尔 RST（快速存储技术）。在安装 {DISTRO} 之前，您需要在 Windows 中关闭 RST。",
   "@rstDescription": {},
-  "installationTypeAlongsideInfo": "将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。",
+  "installationTypeAlongsideInfo": "选择一个分区来重新调整大小并为 {product} 创建空间。您可以在启动时选择您的操作系统。",
   "@installationTypeAlongsideInfo": {},
   "tryOrInstallRepairDescription": "修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。",
   "@tryOrInstallRepairDescription": {},
   "bitlockerDescription": "这台电脑使用了 Windows BitLocker 进行加密。\n您需要用 Windows 创建空闲空间，或者返回选择 '{option}' 以继续。",
   "@bitlockerDescription": {},
-  "installationTypeAdvancedTitle": "高级功能",
+  "installationTypeAdvancedTitle": "加密和文件系统",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "空",
+  "installationTypeNone": "无加密",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "尚未选择任何安装选项",
   "@installationTypeNoneSelected": {},
@@ -148,7 +148,7 @@
   },
   "installationTypeEncryptInfo": "您将在下一步中选择一个安全密钥。",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "实验性功能：擦除磁盘并使用ZFS",
+  "installationTypeZFS": "使用无加密的 ZFS",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "已选择配置 ZFS",
   "@installationTypeZFSSelected": {},
@@ -276,7 +276,7 @@
   "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "安全密钥不匹配",
   "@secureBootSecurityKeysDontMatch": {},
-  "installationTypeAdvancedLabel": "高级功能...",
+  "installationTypeAdvancedLabel": "显示高级选项…",
   "@installationTypeAdvancedLabel": {},
   "partitionTypeLabel": "指定新分区的类型：",
   "@partitionTypeLabel": {},
@@ -299,7 +299,7 @@
   },
   "copyingFiles": "正在复制文件……",
   "@copyingFiles": {},
-  "installationTypeAlongsideMulti": "安装 {product} 并与它们共存",
+  "installationTypeAlongsideMulti": "安装 {product} 并与现有的操作系统共存",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -561,7 +561,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "关闭 RST 以继续",
+  "rstHeader": "您必须关闭 RST 以继续安装",
   "@rstHeader": {},
   "bitlockerHeader": "关闭 BitLocker 以继续",
   "@bitlockerHeader": {},
@@ -633,7 +633,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "密码不匹配",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "确保您已记下密码",
+  "choosePassphraseInfoHeader": "将您的密码保存在安全的地方",
   "@choosePassphraseInfoHeader": {},
   "createPassphrase": "创建密码",
   "@createPassphrase": {},
@@ -647,15 +647,15 @@
       }
     }
   },
-  "installationTypeEraseInfo": "用所选磁盘执行全新安装。",
+  "installationTypeEraseInfo": "磁盘上的所有数据和分区都将被擦除，包括操作系统。",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "实验性",
   "@installationTypeExperimental": {},
-  "installationTypeLVMEncryption": "使用 LVM（逻辑卷管理）与加密",
+  "installationTypeLVMEncryption": "用密码加密",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "擦除硬盘，并使用加密的 ZFS",
+  "installationTypeZFSEncryption": "使用 ZFS 密码加密",
   "@installationTypeZFSEncryption": {},
-  "installationTypeTPM": "启用硬件支持的全盘加密",
+  "installationTypeTPM": "启用硬件支持的加密",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "已选择 TPM",
   "@installationTypeTPMSelected": {},
@@ -695,7 +695,7 @@
   "@validate": {},
   "recoveryKeyTitle": "TPM 恢复密钥",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "在安装完成后，您可以使用如下命令获取恢复密钥：",
+  "recoveryKeyCommand": "要获取恢复密钥，完成安装，重新启动计算机，然后在终端内执行此命令：",
   "@recoveryKeyCommand": {},
   "refreshCurrent": "目前 {snap} 的版本是 {version}。",
   "@refreshCurrent": {
@@ -944,9 +944,9 @@
   },
   "rebootToConfigureWarning": "您需要重新启动计算机，以继续完成安装。",
   "@rebootToConfigureWarning": {},
-  "installationTypeLVM": "使用 LVM（逻辑卷管理）",
+  "installationTypeLVM": "使用无加密的 LVM（逻辑卷管理）",
   "@installationTypeLVM": {},
-  "installationTypeTPMInfo": "这是一个实验性功能。您的硬件可能无法使用此功能，未来的 {DISTRO} 发行版也可能不支持。在选择此选项前，请先<a href=\"{url}\">了解 TPM 加密</a>。",
+  "installationTypeTPMInfo": "在您选择此选项前请<a href=\"{url}\">了解 TPM 加密</a>。这可能与您的硬件或者未来的 {DISTRO} 更新不兼容。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1057,5 +1057,99 @@
   "autoinstallDirectFileLabel": "或选择本地文件：",
   "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "选择文件…",
-  "@autoinstallDirectFileButtonLabel": {}
+  "@autoinstallDirectFileButtonLabel": {},
+  "rstDisableWindows": "Windows，如果您与其采用双启动",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "BIOS 设置",
+  "@rstDisableBios": {},
+  "chooseOptionalPassphraseInfoHeader": "将您的密码和恢复密钥保存在安全的地方",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "installationTypeLVMEncryptionInfo": "您每次打开计算机都将需要输入密码。这将同 LVM 一同使用 LUKS 加密。",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeEraseAndInstall": "擦除 {os} 并安装 {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "我明白我可能会在没有恢复密钥的情况下丢失所有数据",
+  "@recoveryKeyConfirmation": {},
+  "autoinstallLandscapeDescription": "给通过 Landscape 提供自动安装文件的组织内用户。",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeCodeExpiredWarning": "代码已过期，请重试",
+  "@landscapeCodeExpiredWarning": {},
+  "recoveryKeyInfoBody": "在您登入 {distro} 时立刻获取恢复密钥并将其存储在安全的地方。",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyStorageAdvice": "将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。",
+  "@recoveryKeyStorageAdvice": {},
+  "next": "下一步",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "域无效，请检查或联系您的技术支持。",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "autoinstallDirectErrorFileSystemBody": "检查您的权限或者换个文件。",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorInvalidContentBody": "检查文件或者换个文件。",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "chooseOptionalPassphraseHeader": "创建密码（可选）",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseBody": "密码可以在您的硬件遭到损坏时保护您的数据。您每次开机时都需要输入密码。您以后将不能移除它。",
+  "@chooseOptionalPassphraseBody": {},
+  "rstDisable": "您的计算机使用 Intel RST（快速存储技术）。您可以在下面的位置禁用 RST：",
+  "@rstDisable": {},
+  "installationTypeEraseAndInstallInfo": "来自现存的 {os} 安装的文件和数据都将被永久删除。",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoInstructions": "指引请参阅 <a href=\"{url}\">BitLocker 指南</a>。",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoBody": "如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "landscapeMagicAttachInstructions": "扫二维码然后在下面输入代码。<a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "自动安装",
+  "@landscapePageTitle": {},
+  "landscapeDomainHeader": "输入 Landscape 域 (FQDN)",
+  "@landscapeDomainHeader": {},
+  "autoinstallDirectDescription": "给那些为持续和可重复系统配置而拥有 autoinstall.yaml 的高级用户。",
+  "@autoinstallDirectDescription": {},
+  "landscapeHeader": "登入 Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainNoInternetTitleWarning": "连接到互联网来继续",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainInstructions": "提供您组织的 Landscape 域来登录并获取自动安装文件。您可以从您的技术支持处获取 FQDN。",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Landscape 域 (FQDN)",
+  "@landscapeDomainTextField": {},
+  "landscapeDomainNoInternetDescriptionWarning": "必须连接到互联网以从 Landscape 获取自动安装文件",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeLoginFailedWarning": "登录失败，请重试",
+  "@landscapeLoginFailedWarning": {},
+  "bitlockerInfoTitle": "已检测到 BitLocker",
+  "@bitlockerInfoTitle": {}
 }
