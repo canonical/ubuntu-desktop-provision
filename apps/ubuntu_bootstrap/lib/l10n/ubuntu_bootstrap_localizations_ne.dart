@@ -1102,6 +1102,9 @@ class UbuntuBootstrapLocalizationsNe extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
 
   @override

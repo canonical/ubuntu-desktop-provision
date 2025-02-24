@@ -1102,6 +1102,9 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Ange Landscape domän (FQDN)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'Ange din organisations landscape domän för att logga in och hämta en autoinstallationsfil. Du kan få FQDN från din IT-support.';
 
   @override

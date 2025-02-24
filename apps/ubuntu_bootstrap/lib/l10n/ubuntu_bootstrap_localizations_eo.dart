@@ -1102,6 +1102,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Tajpu nomregnon de Landscape (plene kvalifikitan nomregnon)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'Provizu la nomregnon Landscape de via organizaĵo por saluti kaj elŝuti aŭtomatan instalan dosieron. La informadika subtena teamo de via organizaĵo povas provizi la plene kvalifikitan nomregnon.';
 
   @override

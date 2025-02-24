@@ -2093,6 +2093,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Enter Landscape domain (FQDN)'**
   String get landscapeDomainHeader;
 
+  /// No description provided for @landscapeDomainHintText.
+  ///
+  /// In en, this message translates to:
+  /// **'Landscape domain (FQDN)'**
+  String get landscapeDomainHintText;
+
   /// No description provided for @landscapeDomainInstructions.
   ///
   /// In en, this message translates to:
