@@ -46,6 +46,8 @@ class StorageSizeBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final minBytes = fromBytes(minimum, unit);
+    final maxBytes = fromBytes(maximum, unit);
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -55,9 +57,10 @@ class StorageSizeBox extends StatelessWidget {
             width: 240,
             child: SpinBox(
               value: fromBytes(size, unit),
-              min: fromBytes(minimum, unit),
-              max: fromBytes(maximum, unit),
-              onChanged: (value) => onSizeChanged(toBytes(value, unit)),
+              min: minBytes,
+              max: maxBytes,
+              onChanged: (value) =>
+                  onSizeChanged(toBytes(value.clamp(minBytes, maxBytes), unit)),
               autofocus: autofocus,
             ),
           ),

@@ -99,4 +99,34 @@ void main() {
 
     expect(await result, isNull);
   });
+
+  testWidgets('respect minimum size', (tester) async {
+    await tester.pumpApp((_) => const Scaffold());
+
+    final result = showStorageSizeDialog(
+      tester.element(find.byType(Scaffold)),
+      title: 'Test title',
+      name: 'Test storage',
+      path: '/dev/sda1',
+      initialSize: toBytes(100, DataUnit.megabytes),
+      minimumSize: toBytes(50, DataUnit.megabytes),
+      maximumSize: toBytes(200, DataUnit.megabytes),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('Test title'), findsOneWidget);
+    expect(find.text('/dev/sda1 (Test storage)'), findsOneWidget);
+    expect(find.text('50-200 MB'), findsOneWidget);
+
+    expect(find.byType(StorageSizeBox), findsOneWidget);
+    expect(find.byType(EditableText), findsOneWidget);
+
+    await tester.enterText(find.byType(StorageSizeBox), '10');
+    await tester.pump();
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.enter);
+    await tester.pump();
+
+    expect(await result, toBytes(50, DataUnit.megabytes));
+  });
 }
