@@ -156,7 +156,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Zobraziť rozšírené možnosti...",
+  "installationTypeAdvancedLabel": "Zobraziť rozšírené možnosti…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Šifrovanie a súborový systém",
   "@installationTypeAdvancedTitle": {},
@@ -619,84 +619,84 @@
       "version": {}
     }
   },
-  "refreshSnapRefresh": "Obnovuje sa {snap}...",
+  "refreshSnapRefresh": "Obnovuje sa {snap}…",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshUpdating": "Aktualizuje sa {snap}...",
+  "refreshUpdating": "Aktualizuje sa {snap}…",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapPrerequisites": "Kontrolujú sa súčasti {snap}...",
+  "refreshSnapPrerequisites": "Kontrolujú sa súčasti {snap}…",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapCheckRerefresh": "Kontroluje sa opätovné obnovenie {snap}...",
+  "refreshSnapCheckRerefresh": "Kontroluje sa opätovné obnovenie {snap}…",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapPrepare": "Pripravuje sa {snap}...",
+  "refreshSnapPrepare": "Pripravuje sa {snap}…",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapDownload": "Sťahuje sa {snap}...",
+  "refreshSnapDownload": "Sťahuje sa {snap}…",
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapValidate": "Overuje sa {snap}...",
+  "refreshSnapValidate": "Overuje sa {snap}…",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapMount": "Pripája sa {snap}...",
+  "refreshSnapMount": "Pripája sa {snap}…",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapRemoveAliases": "Odstraňuje sa alias {snap}...",
+  "refreshSnapRemoveAliases": "Odstraňuje sa alias {snap}…",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapUpdateKernelCommandLine": "Aktualizuje sa príkazový riadok jadra {snap}...",
+  "refreshSnapUpdateKernelCommandLine": "Aktualizuje sa príkazový riadok jadra {snap}…",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapCopyData": "Kopírujú sa údaje {snap}...",
+  "refreshSnapCopyData": "Kopírujú sa údaje {snap}…",
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapSetupProfiles": "Nastavujú sa bezpečnostné profily {snap}...",
+  "refreshSnapSetupProfiles": "Nastavujú sa bezpečnostné profily {snap}…",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
@@ -753,7 +753,7 @@
   },
   "refreshRestart": "Ak chcete pokračovať, zatvorte prosím inštalátor a znova ho spustite",
   "@refreshRestart": {},
-  "refreshSnapStopServices": "Zastavujú sa služby {snap}...",
+  "refreshSnapStopServices": "Zastavujú sa služby {snap}…",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
@@ -767,7 +767,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUnlink": "Odpája sa {snap}...",
+  "refreshSnapUnlink": "Odpája sa {snap}…",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
@@ -781,7 +781,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUpdateAssets": "Aktualizujú sa položky {snap}...",
+  "refreshSnapUpdateAssets": "Aktualizujú sa položky {snap}…",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
@@ -988,7 +988,7 @@
   "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectFileLabel": "Alebo vyberte miestny súbor:",
   "@autoinstallDirectFileLabel": {},
-  "autoinstallDirectFileButtonLabel": "Vybrať súbor...",
+  "autoinstallDirectFileButtonLabel": "Vybrať súbor…",
   "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
   "@autoinstallDirectFilePickerTitle": {},
