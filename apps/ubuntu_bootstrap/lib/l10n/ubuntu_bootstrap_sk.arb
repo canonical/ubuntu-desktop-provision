@@ -703,21 +703,21 @@
       "snap": {}
     }
   },
-  "refreshSnapSetAutoAliases": "Nastavujú sa automatické aliasy {snap}...",
+  "refreshSnapSetAutoAliases": "Nastavujú sa automatické aliasy {snap}…",
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap}...",
+  "refreshSnapSetupAliases": "Nastavujú sa aliasy {snap}…",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
       "snap": {}
     }
   },
-  "refreshSnapStartServices": "Spúšťajú sa služby {snap}...",
+  "refreshSnapStartServices": "Spúšťajú sa služby {snap}…",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
@@ -726,7 +726,7 @@
   },
   "recoveryKeyTitle": "TPM kľúč na obnovenie",
   "@recoveryKeyTitle": {},
-  "refreshSnapCleanup": "Čistí sa {snap}...",
+  "refreshSnapCleanup": "Čistí sa {snap}…",
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
@@ -760,7 +760,7 @@
       "snap": {}
     }
   },
-  "refreshSnapLink": "Prepája sa {snap}...",
+  "refreshSnapLink": "Prepája sa {snap}…",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
@@ -774,7 +774,7 @@
       "snap": {}
     }
   },
-  "refreshSnapAutoConnect": "Pripájajú sa zástrčky a sloty {snap}...",
+  "refreshSnapAutoConnect": "Pripájajú sa zástrčky a sloty {snap}…",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
