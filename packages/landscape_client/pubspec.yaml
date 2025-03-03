@@ -8,6 +8,6 @@ environment:
 dependencies:
   grpc: ^4.0.1
 dev_dependencies:
-  mockito: 5.4.4
+  mockito: 5.4.5
   build_runner: ^2.4.8
   test: any
