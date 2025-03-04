@@ -917,6 +917,7 @@ _$PartitionImpl _$$PartitionImplFromJson(Map<String, dynamic> json) =>
       estimatedMinSize: (json['estimated_min_size'] as num?)?.toInt() ?? -1,
       resize: json['resize'] as bool?,
       path: json['path'] as String?,
+      name: json['name'] as String?,
       isInUse: json['is_in_use'] as bool? ?? false,
       $type: json[r'$type'] as String?,
     );
@@ -937,6 +938,7 @@ Map<String, dynamic> _$$PartitionImplToJson(_$PartitionImpl instance) =>
       'estimated_min_size': instance.estimatedMinSize,
       'resize': instance.resize,
       'path': instance.path,
+      'name': instance.name,
       'is_in_use': instance.isInUse,
       r'$type': instance.$type,
     };
