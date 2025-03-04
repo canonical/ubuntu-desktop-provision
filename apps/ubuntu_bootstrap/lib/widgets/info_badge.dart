@@ -3,14 +3,15 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class InfoBadge extends StatelessWidget {
-  const InfoBadge({required this.title, this.padding, super.key});
+  const InfoBadge({required this.title, this.padding, this.color, super.key});
 
   final String title;
   final EdgeInsets? padding;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
-    const baseColor = YaruColors.blue;
+    final baseColor = color ?? YaruColors.blue;
     final theme = Theme.of(context);
 
     return Padding(
