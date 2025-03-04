@@ -170,6 +170,7 @@ void main() {
       path: '/dev/sda2',
       estimatedMinSize: 123,
       isInUse: true,
+      name: 'GPT name',
     );
 
     expect(partition.sysname, equals('sda2'));
@@ -196,6 +197,7 @@ void main() {
       'path': '/dev/sda2',
       'estimated_min_size': 123,
       'is_in_use': true,
+      'name': 'GPT name',
       '\$type': 'Partition',
     };
     expect(partition.toJson(), equals(json));

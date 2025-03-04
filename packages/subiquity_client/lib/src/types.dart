@@ -796,6 +796,7 @@ class PartitionOrGap with _$PartitionOrGap {
     @Default(-1) int? estimatedMinSize,
     bool? resize,
     String? path,
+    String? name,
     @Default(false) bool isInUse,
   }) = Partition;
 

@@ -9820,6 +9820,7 @@ mixin _$PartitionOrGap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
@@ -9842,6 +9843,7 @@ mixin _$PartitionOrGap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
@@ -9864,6 +9866,7 @@ mixin _$PartitionOrGap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
@@ -9963,6 +9966,7 @@ abstract class _$$PartitionImplCopyWith<$Res>
       int? estimatedMinSize,
       bool? resize,
       String? path,
+      String? name,
       bool isInUse});
 
   $OsProberCopyWith<$Res>? get os;
@@ -9995,6 +9999,7 @@ class __$$PartitionImplCopyWithImpl<$Res>
     Object? estimatedMinSize = freezed,
     Object? resize = freezed,
     Object? path = freezed,
+    Object? name = freezed,
     Object? isInUse = null,
   }) {
     return _then(_$PartitionImpl(
@@ -10054,6 +10059,10 @@ class __$$PartitionImplCopyWithImpl<$Res>
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
       isInUse: null == isInUse
           ? _value.isInUse
           : isInUse // ignore: cast_nullable_to_non_nullable
@@ -10094,6 +10103,7 @@ class _$PartitionImpl implements Partition {
       this.estimatedMinSize = -1,
       this.resize,
       this.path,
+      this.name,
       this.isInUse = false,
       final String? $type})
       : _annotations = annotations,
@@ -10139,6 +10149,8 @@ class _$PartitionImpl implements Partition {
   @override
   final String? path;
   @override
+  final String? name;
+  @override
   @JsonKey()
   final bool isInUse;
 
@@ -10147,7 +10159,7 @@ class _$PartitionImpl implements Partition {
 
   @override
   String toString() {
-    return 'PartitionOrGap.partition(size: $size, number: $number, preserve: $preserve, wipe: $wipe, annotations: $annotations, mount: $mount, format: $format, grubDevice: $grubDevice, boot: $boot, os: $os, offset: $offset, estimatedMinSize: $estimatedMinSize, resize: $resize, path: $path, isInUse: $isInUse)';
+    return 'PartitionOrGap.partition(size: $size, number: $number, preserve: $preserve, wipe: $wipe, annotations: $annotations, mount: $mount, format: $format, grubDevice: $grubDevice, boot: $boot, os: $os, offset: $offset, estimatedMinSize: $estimatedMinSize, resize: $resize, path: $path, name: $name, isInUse: $isInUse)';
   }
 
   @override
@@ -10173,6 +10185,7 @@ class _$PartitionImpl implements Partition {
                 other.estimatedMinSize == estimatedMinSize) &&
             (identical(other.resize, resize) || other.resize == resize) &&
             (identical(other.path, path) || other.path == path) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.isInUse, isInUse) || other.isInUse == isInUse));
   }
 
@@ -10194,6 +10207,7 @@ class _$PartitionImpl implements Partition {
       estimatedMinSize,
       resize,
       path,
+      name,
       isInUse);
 
   /// Create a copy of PartitionOrGap
@@ -10222,12 +10236,28 @@ class _$PartitionImpl implements Partition {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
   }) {
-    return partition(size, number, preserve, wipe, annotations, mount, format,
-        grubDevice, boot, os, offset, estimatedMinSize, resize, path, isInUse);
+    return partition(
+        size,
+        number,
+        preserve,
+        wipe,
+        annotations,
+        mount,
+        format,
+        grubDevice,
+        boot,
+        os,
+        offset,
+        estimatedMinSize,
+        resize,
+        path,
+        name,
+        isInUse);
   }
 
   @override
@@ -10248,6 +10278,7 @@ class _$PartitionImpl implements Partition {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
@@ -10267,6 +10298,7 @@ class _$PartitionImpl implements Partition {
         estimatedMinSize,
         resize,
         path,
+        name,
         isInUse);
   }
 
@@ -10288,6 +10320,7 @@ class _$PartitionImpl implements Partition {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
@@ -10309,6 +10342,7 @@ class _$PartitionImpl implements Partition {
           estimatedMinSize,
           resize,
           path,
+          name,
           isInUse);
     }
     return orElse();
@@ -10369,6 +10403,7 @@ abstract class Partition implements PartitionOrGap {
       final int? estimatedMinSize,
       final bool? resize,
       final String? path,
+      final String? name,
       final bool isInUse}) = _$PartitionImpl;
 
   factory Partition.fromJson(Map<String, dynamic> json) =
@@ -10390,6 +10425,7 @@ abstract class Partition implements PartitionOrGap {
   int? get estimatedMinSize;
   bool? get resize;
   String? get path;
+  String? get name;
   bool get isInUse;
 
   /// Create a copy of PartitionOrGap
@@ -10511,6 +10547,7 @@ class _$GapImpl implements Gap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
@@ -10536,6 +10573,7 @@ class _$GapImpl implements Gap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
@@ -10561,6 +10599,7 @@ class _$GapImpl implements Gap {
             int? estimatedMinSize,
             bool? resize,
             String? path,
+            String? name,
             bool isInUse)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
