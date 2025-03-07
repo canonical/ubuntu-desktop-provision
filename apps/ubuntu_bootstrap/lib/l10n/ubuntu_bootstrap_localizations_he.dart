@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'השינויים הבאים יחולו על המחיצות:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'הגודל של מחיצה <b>$sysname</b> ישתנה מ־<b>$oldsize</b> ל־<b>$newsize</b>';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'מחיצה <b>$sysname</b> פורמטה כ־<b>$format</b> ומשמשת עבור <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return 'מחיצה <b>$sysname</b> פורמטה בתור <b>$format</b>';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return 'מחיצה <b>$sysname</b> תשמש עבור <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return 'המחיצה <b>$sysname</b> נוצרה';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'מפענחים';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'התקנה';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'ההתקנה הושלמה';

@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => '将应用以下分区更改：';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '分区<b>$sysname</b> 从<b>$oldsize</b> 调整为<b>$newsize</b>';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '分区<b>$sysname</b> 格式化为<b>$format</b> 并挂载到<b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '分区<b>$sysname</b> 格式化为<b>$format</b>';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '分区 <b>$sysname</b> 挂载到 <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '分区 <b>$sysname</b> 已创建';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => '编解码器';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => '安装';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => '安装完成';
@@ -1699,34 +1702,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String confirmPartitionTable(String serial, String path) {
     return '$serial ($path)';
-  }
-
-  @override
-  String get confirmPartitionChanges => '下列分割區的修改將會套用：';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '分割區 <b>$sysname</b> 的大小從 <b>$oldsize</b> 調整為 <b>$newsize</b>';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '分割區 <b>$sysname</b> 格式化為 <b>$format</b> 並掛載到 <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '分割區 <b>$sysname</b> 格式化為 <b>$format</b>';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '分割區 <b>$sysname</b> 掛載到 <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '分割區 <b>$sysname</b> 將被建立';
   }
 
   @override

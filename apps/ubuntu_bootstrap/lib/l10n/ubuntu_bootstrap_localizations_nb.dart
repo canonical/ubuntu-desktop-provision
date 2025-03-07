@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'Følgende partisjonsendringer vil bli utført:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'endret størrelse på partisjon <b>$sysname</b> fra <b>$oldsize</b> til <b>$newsize</b>';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'partisjon <b>$sysname</b> formatert som <b>$format</b> og brukt som <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return 'partisjon <b>$sysname</b> formatert som <b>$format</b>';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return 'partisjon <b>$sysname</b> brukt til <b>$mount</b>';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return 'partisjon <b>$sysname</b> opprettet';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'Kodek';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'Installer';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'Installasjon fullført';

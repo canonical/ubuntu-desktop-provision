@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'تغییرهای افراز زیرمی‌خواهند اعمال شوند:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'اندازهٔ افراز <b>$sysname</b> از <b>$oldsize</b> به <b>$newsize</b> تغییر کرد';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'افراز <b>$sysname</b> به صورت <b>$format</b> برای <b>$mount</b> قالب‌بندی شد';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return 'افراز <b>$sysname</b> به صورت <b>$format</b> قالب‌بندی شد';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return 'افراز <b>$sysname</b> برای <b>$mount</b> استفاده شد';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return 'افراز <b>$sysname</b> ایجاد شد';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'رمزینه‌ها';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'نصب';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'نصب کامل شد';

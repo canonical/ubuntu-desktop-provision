@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Uygulamalar';
 
   @override
-  String get confirmEntryDiskSetup => 'Disk setup';
+  String get confirmEntryDiskSetup => 'Type of installation';
 
   @override
   String get confirmEntryDiskEncryption => 'Disk şifreleme';
@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'Aşağıdaki bölüm değişiklikleri uygulanacak:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '<b>$sysname</b> bölümü <b>$oldsize</b> boyutundan <b>$newsize</b> boyutuna yeniden boyutlandırıldı';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '<b>$format </b> biçimindeki <b>$sysname</b> bölümü <b>$mount</b> için kullanıldı';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '<b>$sysname</b> bölümü <b>$format</b> olarak biçimlendirildi';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '<b>$sysname</b> bölümü <b>$mount</b> için kullanıldı';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '<b>$sysname</b> bölümü oluşturuldu';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'Kod çözücüler';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'Kur';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'Kurulum tamamlandı';

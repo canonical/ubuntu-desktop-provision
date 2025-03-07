@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'පහත පංගු වෙනස්කම් යෙදෙනු ඇත:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '#$sysname පංගුව $oldsize සිට $newsize දක්වා ප්‍රමාණනය කෙරිණි';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '#$sysname පංගුව $mount සඳහා භාවිතයට $format ලෙස පවිත්‍රව ඇත';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '#$sysname පංගුව $format ලෙස පවිත්‍රව ඇත';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '#$sysname පංගුව $mount සඳහා භාවිතා වේ';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '#$sysname පංගුව සෑදිණි';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'Codecs';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'ස්ථාපනය අරඹන්න';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'ස්ථාපනය සම්පූර්ණයි';
