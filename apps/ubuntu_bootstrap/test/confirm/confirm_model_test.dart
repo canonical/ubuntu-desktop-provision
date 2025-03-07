@@ -46,13 +46,6 @@ void main() {
     ),
   ];
 
-  final modifiedDisks = <Disk>[
-    testDisks[0],
-    testDisks[1],
-    testDisks[2],
-    testDisks[3],
-  ];
-
   test('get storage', () async {
     final installer = MockInstallerService();
     final storage = MockStorageService();
@@ -72,17 +65,27 @@ void main() {
     ]);
     verifyNever(storage.setGuidedStorage());
 
-    expect(model.disks, equals(modifiedDisks));
+    expect(model.disks, equals(testDisks));
     expect(
       model.partitions,
       equals({
         'sda': [const Partition(number: 1, preserve: false)],
-        'sdb': [const Partition(number: 2, preserve: false)],
-        'sdc': [const Partition(number: 3, preserve: false)],
+        'sdb': [
+          const Partition(number: 1),
+          const Partition(number: 2, preserve: false),
+        ],
+        'sdc': [
+          const Partition(number: 3, preserve: false),
+          const Partition(number: 4, grubDevice: false),
+        ],
         'sdd': [
+          const Partition(number: 1, preserve: true),
           const Partition(number: 2, mount: '/mnt'),
           const Partition(number: 3, wipe: 'superblock'),
           const Partition(number: 4, resize: true),
+        ],
+        'sde': [
+          const Partition(number: 1, preserve: true),
         ],
       }),
     );
@@ -121,7 +124,7 @@ void main() {
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
-    when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
+    when(storage.setStorage()).thenAnswer((_) async => testDisks);
     when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
     final model = ConfirmModel(installer, storage, network, product, session);
@@ -142,7 +145,7 @@ void main() {
     when(storage.guidedTarget).thenReturn(null);
     when(storage.getStorage()).thenAnswer((_) async => testDisks);
     when(storage.getOriginalStorage()).thenAnswer((_) async => testDisks);
-    when(storage.setStorage()).thenAnswer((_) async => modifiedDisks);
+    when(storage.setStorage()).thenAnswer((_) async => testDisks);
     when(storage.hasBitLocker()).thenAnswer((_) async => false);
 
     final model = ConfirmModel(installer, storage, network, product, session);
