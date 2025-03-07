@@ -445,7 +445,7 @@
   "confirmDiskEncryptionNone": "None",
   "confirmDevicesTitle": "Devices",
   "confirmEntryApplications": "Applications",
-  "confirmEntryDiskSetup": "Disk setup",
+  "confirmEntryDiskSetup": "Type of installation",
   "confirmEntryDiskEncryption": "Disk encryption",
   "confirmEntryInstallationDisk": "Installation disk",
   "confirmEntryProprietarySoftware": "Proprietary software",
