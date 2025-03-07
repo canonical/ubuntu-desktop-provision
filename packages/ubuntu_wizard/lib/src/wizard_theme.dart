@@ -20,11 +20,9 @@ extension WizardFlavorX on UbuntuFlavor {
 }
 
 extension WizardThemeDataX on ThemeData {
-  ThemeData customize() {
-    final errorColor = YaruColors.from(brightness).error;
+  ThemeData _customizeCursor() {
     final mouseCursor = WidgetStateProperty.all(SystemMouseCursors.basic);
     return copyWith(
-      colorScheme: colorScheme.copyWith(error: errorColor),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: elevatedButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
       ),
@@ -35,6 +33,39 @@ extension WizardThemeDataX on ThemeData {
           floatingActionButtonTheme.copyWith(mouseCursor: mouseCursor),
       iconButtonTheme: IconButtonThemeData(
         style: iconButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
+      ),
+      listTileTheme: listTileTheme.copyWith(mouseCursor: mouseCursor),
+      menuButtonTheme: MenuButtonThemeData(
+        style: MenuItemButton.styleFrom(
+          enabledMouseCursor: SystemMouseCursors.basic,
+          disabledMouseCursor: SystemMouseCursors.basic,
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: outlinedButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
+      ),
+      popupMenuTheme: popupMenuTheme.copyWith(mouseCursor: mouseCursor),
+      sliderTheme: sliderTheme.copyWith(
+        mouseCursor: mouseCursor,
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: textButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
+      ),
+      extensions: [
+        YaruCheckboxThemeData(mouseCursor: mouseCursor),
+        YaruPageIndicatorThemeData(mouseCursor: mouseCursor),
+        YaruRadioThemeData(mouseCursor: mouseCursor),
+        YaruSwitchThemeData(mouseCursor: mouseCursor),
+        YaruToggleButtonThemeData(mouseCursor: mouseCursor),
+      ],
+    );
+  }
+
+  ThemeData _customizeColors() {
+    final errorColor = YaruColors.from(brightness).error;
+    return copyWith(
+      colorScheme: colorScheme.copyWith(
+        error: errorColor,
       ),
       inputDecorationTheme: inputDecorationTheme.copyWith(
         floatingLabelStyle: WidgetStateTextStyle.resolveWith((states) {
@@ -54,46 +85,43 @@ extension WizardThemeDataX on ThemeData {
         }),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: colorScheme.onSurface),
-          borderRadius: BorderRadius.circular(kYaruButtonRadius),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: errorColor),
-          borderRadius: BorderRadius.circular(kYaruButtonRadius),
         ),
       ),
-      listTileTheme: listTileTheme.copyWith(mouseCursor: mouseCursor),
-      menuButtonTheme: MenuButtonThemeData(
-        style: MenuItemButton.styleFrom(
-          enabledMouseCursor: SystemMouseCursors.basic,
-          disabledMouseCursor: SystemMouseCursors.basic,
-        ),
-      ),
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: outlinedButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
-      ),
-      popupMenuTheme: popupMenuTheme.copyWith(mouseCursor: mouseCursor),
       sliderTheme: sliderTheme.copyWith(
-        mouseCursor: mouseCursor,
         valueIndicatorColor: colorScheme.inverseSurface,
         valueIndicatorStrokeColor: colorScheme.onInverseSurface,
         valueIndicatorTextStyle:
             textTheme.bodyMedium!.copyWith(color: colorScheme.onInverseSurface),
-        valueIndicatorShape: const RectangularSliderValueIndicatorShape(),
-      ),
-      textButtonTheme: TextButtonThemeData(
-        style: textButtonTheme.style!.copyWith(mouseCursor: mouseCursor),
       ),
       extensions: [
         ...extensions.values,
-        YaruCheckboxThemeData(mouseCursor: mouseCursor),
-        YaruPageIndicatorThemeData(mouseCursor: mouseCursor),
-        YaruRadioThemeData(mouseCursor: mouseCursor),
-        YaruSwitchThemeData(mouseCursor: mouseCursor),
         YaruTitleBarThemeData(
           backgroundColor: WidgetStatePropertyAll(colorScheme.surface),
         ),
-        YaruToggleButtonThemeData(mouseCursor: mouseCursor),
       ],
     );
+  }
+
+  ThemeData _customizeShapes() {
+    return copyWith(
+      inputDecorationTheme: inputDecorationTheme.copyWith(
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
+        ),
+      ),
+      sliderTheme: sliderTheme.copyWith(
+        valueIndicatorShape: const RectangularSliderValueIndicatorShape(),
+      ),
+    );
+  }
+
+  ThemeData customize() {
+    return _customizeCursor()._customizeColors()._customizeShapes();
   }
 }
