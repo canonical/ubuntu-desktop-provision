@@ -108,10 +108,8 @@ void main() {
     expect(find.text(l10n.installationTypeErase('Ubuntu')), findsOneWidget);
 
     for (final disk in testDisks) {
-      expect(find.byKey(ValueKey(disk)), findsOneWidget);
-
       for (final partition in disk.partitions.whereType<Partition>()) {
-        expect(find.byKey(ValueKey(partition)), findsOneWidget);
+        expect(find.text(partition.sysname), findsOneWidget);
       }
     }
 
@@ -163,22 +161,26 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.html(l10n.confirmPartitionFormatMount('sdb3', 'ext3', '/mnt/3')),
+      find.html(
+        l10n.confirmTableCreatedFormattedMounted(
+          'ext3'.bold(),
+          '/mnt/3'.bold(),
+        ),
+      ),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmPartitionFormat('sdb4', 'ext4')),
+      find.html(l10n.confirmTableFormatted('ext4'.bold())),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmPartitionMount('sdb5', '/mnt/5')),
+      find.html(l10n.confirmTableMounted('/mnt/5'.bold())),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmPartitionResize('sdb6', '123 B', '66 B')),
+      find.html(l10n.confirmTableResized('123 B'.bold(), '66 B'.bold())),
       findsOneWidget,
     );
-    expect(find.html(l10n.confirmPartitionCreate('sdb7')), findsOneWidget);
   });
 
   testWidgets('starts installation', (tester) async {

@@ -9,9 +9,11 @@ import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_x.dart';
+import 'package:ubuntu_bootstrap/pages/storage/guided_resize/storage_icon.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
+import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -99,20 +101,37 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     const SizedBox(height: kWizardSpacing / 2),
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Table(
+                      border: TableBorder(
+                        horizontalInside:
+                            BorderSide(color: Theme.of(context).dividerColor),
+                      ),
                       children: [
                         for (final entry in model.partitions.entries)
-                          for (final partition in entry.value)
-                            _PartitionLabel(
-                              entry.key,
-                              partition,
-                              model.getOriginalPartition(
+                          for (final partition in entry.value) ...[
+                            if (model.guidedTarget
+                                    is GuidedStorageTargetEraseInstall &&
+                                !(partition.preserve ?? false))
+                              _PartitionRow(
+                                sysname: entry.key,
+                                partition: partition,
+                                original: model.getOriginalPartition(
+                                  entry.key,
+                                  partition.number ?? -1,
+                                ),
+                                productInfo: model.productInfo,
+                                showOriginal: true,
+                              ),
+                            _PartitionRow(
+                              sysname: entry.key,
+                              partition: partition,
+                              original: model.getOriginalPartition(
                                 entry.key,
                                 partition.number ?? -1,
                               ),
+                              productInfo: model.productInfo,
                             ),
+                          ],
                       ],
                     ),
                   ],
@@ -123,51 +142,162 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
-class _PartitionLabel extends StatelessWidget {
-  _PartitionLabel(this.sysname, this.partition, this.original)
-      : super(key: ValueKey(partition));
+class _PartitionRow extends TableRow {
+  _PartitionRow({
+    required String sysname,
+    required Partition partition,
+    required ProductInfo productInfo,
+    Partition? original,
+    EdgeInsets padding = const EdgeInsets.symmetric(vertical: 8.0),
+    bool showOriginal = false,
+  }) : super(
+          children: [
+            Padding(
+              padding: padding,
+              child: _PartitionLabel(
+                sysname,
+                partition,
+                original,
+                productInfo,
+                showOriginal,
+              ),
+            ),
+            Padding(
+              padding: padding,
+              child: _PartitionProperties(
+                sysname,
+                partition,
+                original,
+                productInfo,
+                showOriginal,
+              ),
+            ),
+          ],
+        );
+}
+
+class _PartitionProperties extends StatelessWidget {
+  const _PartitionProperties(
+    this.sysname,
+    this.partition,
+    this.original,
+    this.productInfo,
+    this.showOriginal,
+  );
 
   final String sysname;
   final Partition partition;
   final Partition? original;
+  final ProductInfo productInfo;
+  final bool showOriginal;
 
-  String formatPartition(BuildContext context) {
-    final lang = UbuntuBootstrapLocalizations.of(context);
+  String? properties(BuildContext context) {
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+    if (showOriginal && !(partition.preserve ?? false)) {
+      return l10n.confirmTableErased;
+    }
     if (partition.resize ?? false) {
-      return lang.confirmPartitionResize(
-        partition.sysname,
-        context.formatByteSize(original?.size ?? 0),
-        context.formatByteSize(partition.size ?? 0),
+      return l10n.confirmTableResized(
+        context.formatByteSize(original?.size ?? 0).bold(),
+        context.formatByteSize(partition.size ?? 0).bold(),
+      );
+    } else if (!(partition.preserve ?? false) &&
+        (partition.mount?.isNotEmpty ?? false) &&
+        partition.format != null) {
+      return l10n.confirmTableCreatedFormattedMounted(
+        partition.format!.bold(),
+        partition.mount!.bold(),
       );
     } else if (partition.wipe != null &&
-        (partition.mount?.isNotEmpty ?? false)) {
-      return lang.confirmPartitionFormatMount(
-        partition.sysname,
-        partition.format ?? '',
-        partition.mount ?? '',
+        (partition.mount?.isNotEmpty ?? false) &&
+        partition.format != null) {
+      return l10n.confirmTableFormattedMounted(
+        partition.format!.bold(),
+        partition.mount!.bold(),
       );
-    } else if (partition.wipe != null &&
-        (partition.format?.isNotEmpty ?? false)) {
-      return lang.confirmPartitionFormat(
-        partition.sysname,
-        partition.format ?? '',
+    } else if (partition.wipe != null && partition.format != null) {
+      return l10n.confirmTableFormatted(
+        partition.format!.bold(),
       );
     } else if (partition.mount?.isNotEmpty ?? false) {
-      return lang.confirmPartitionMount(
-        partition.sysname,
-        partition.mount ?? '',
-      );
-    } else {
-      assert(partition.preserve == false);
-      return lang.confirmPartitionCreate(partition.sysname);
+      return l10n.confirmTableMounted(partition.mount!.bold());
     }
+    return l10n.confirmTableUnchanged;
   }
 
   @override
   Widget build(BuildContext context) {
     return Html(
-      data: formatPartition(context),
-      style: {'body': Style(margin: Margins.zero)},
+      data: properties(context) ?? '',
+      style: {
+        'body': Style(margin: Margins.zero),
+      },
+    );
+  }
+}
+
+class _PartitionLabel extends StatelessWidget {
+  const _PartitionLabel(
+    this.sysname,
+    this.partition,
+    this.original,
+    this.productInfo,
+    this.showOriginal,
+  );
+
+  final String sysname;
+  final Partition partition;
+  final Partition? original;
+  final ProductInfo productInfo;
+  final bool showOriginal;
+
+  @override
+  Widget build(BuildContext context) {
+    final String? name;
+
+    if (showOriginal) {
+      name = original?.os?.long ?? original?.name ?? original?.format ?? '';
+    } else if (!(partition.preserve ?? false) && partition.mount == '/') {
+      name = productInfo.toString();
+    } else {
+      name = partition.os?.long ?? partition.name ?? '';
+    }
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 2, right: 4),
+          child: SizedBox.square(
+            dimension: 16,
+            child: StorageIcon(name: name),
+          ),
+        ),
+        Flexible(
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(text: name),
+                WidgetSpan(child: const SizedBox(width: 4)),
+                WidgetSpan(
+                  alignment: PlaceholderAlignment.baseline,
+                  baseline: TextBaseline.alphabetic,
+                  child: Baseline(
+                    baseline: 15,
+                    baselineType: TextBaseline.alphabetic,
+                    child: InfoBadge(
+                      title: partition.sysname,
+                      padding: EdgeInsets.zero,
+                      color: Theme.of(context).colorScheme.surfaceContainerHigh,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+      ],
     );
   }
 }
@@ -320,4 +450,8 @@ class _ProprietarySoftware extends ConsumerWidget {
       },
     );
   }
+}
+
+extension HtmlX on String {
+  String bold() => '<b>$this</b>';
 }

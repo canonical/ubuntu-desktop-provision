@@ -104,26 +104,10 @@ class ConfirmModel extends SafeChangeNotifier {
   Future<void> markNetworkConfigured() => _network.markConfigured();
 
   void _updateDisks(List<Disk> disks) {
-    bool isPartitionModified(Partition p) {
-      return p.wipe != null ||
-          p.mount != null ||
-          (p.resize ?? false) ||
-          p.preserve == false;
-    }
-
-    _disks = disks
-        .where(
-          (d) =>
-              d.preserve == false ||
-              d.partitions.whereType<Partition>().any(isPartitionModified),
-        )
-        .toList();
+    _disks = disks;
     _partitions = Map.fromEntries(
       disks.map((disk) {
-        final partitions = disk.partitions
-            .whereType<Partition>()
-            .where(isPartitionModified)
-            .toList();
+        final partitions = disk.partitions.whereType<Partition>().toList();
         return MapEntry(disk.sysname, partitions);
       }).where((entry) => entry.value.isNotEmpty),
     );
