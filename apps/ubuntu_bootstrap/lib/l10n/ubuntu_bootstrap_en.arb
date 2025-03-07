@@ -395,12 +395,12 @@
   "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
   "allocateDiskSpaceInvalidMountPointFormat": "{format} is not a supported filesystem for {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
-      "mountpoint": {
-        "type": "String"
-      },
-      "format": {
-        "type": "String"
-      }
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   },
   "diskHeadersDevice": "Device",
   "diskHeadersType": "Type",
@@ -465,14 +465,15 @@
       }
     }
   },
-  "confirmPartitionChanges": "The following partition changes are going to be applied:",
-  "confirmPartitionResize": "partition <b>{sysname}</b> resized from <b>{oldsize}</b> to <b>{newsize}</b>",
-  "@confirmPartitionResize": {
-    "description": "A resized partition entry",
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
+  "confirmProprietarySoftwareDrivers": "Drivers",
+  "confirmInstallButton": "Install",
+  "confirmTableErased": "Erased",
+  "confirmTableUnchanged": "Unchanged",
+  "confirmTableResized": "Resized from {oldsize} to {newsize}",
+  "@confirmTableResized": {
     "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
       "oldsize": {
         "type": "String"
       },
@@ -481,58 +482,44 @@
       }
     }
   },
-  "confirmPartitionFormatMount": "partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>",
-  "@confirmPartitionFormatMount": {
-    "description": "A formatted and mounted partition entry",
+  "confirmTableCreatedFormattedMounted": "Created and formatted as {format} used for{mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
     "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
       "format": {
         "type": "String"
       },
-      "mount": {
+      "mountpoint": {
         "type": "String"
       }
     }
   },
-  "confirmPartitionFormat": "partition <b>{sysname}</b> formatted as <b>{format}</b>",
-  "@confirmPartitionFormat": {
-    "description": "A formatted partition entry",
+  "confirmTableFormattedMounted": "Formatted as {format} used for{mountpoint}",
+  "@confirmTableFormattedMounted": {
     "placeholders": {
-      "sysname": {
+      "format": {
         "type": "String"
       },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Used for {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatted as {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
       "format": {
         "type": "String"
       }
     }
   },
-  "confirmPartitionMount": "partition <b>{sysname}</b> used for <b>{mount}</b>",
-  "@confirmPartitionMount": {
-    "description": "A mounted partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
-      "mount": {
-        "type": "String"
-      }
-    }
-  },
-  "confirmPartitionCreate": "partition <b>{sysname}</b> created",
-  "@confirmPartitionCreate": {
-    "description": "A created partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      }
-    }
-  },
-  "confirmProprietarySoftwareCodecs": "Codecs",
-  "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
-  "confirmProprietarySoftwareDrivers": "Drivers",
-  "confirmInstallButton": "Install",
   "installationCompleteTitle": "Installation complete",
   "readyToUse": "{system} is installed and ready to use",
   "@readyToUse": {
