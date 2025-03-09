@@ -164,7 +164,7 @@
   "@close": {},
   "restart": "重新啟動",
   "@restart": {},
-  "accessibilityPageBody": "在您完成安裝之前根據您的需求自訂 {DISTRO}。您亦可以於安裝後在「系統設定」中變更這些設定。",
+  "accessibilityPageBody": "在設定之前，請依照您的需求自訂 {DISTRO}。您也可以安裝後在「系統設定」中變更這些設定。",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -188,7 +188,7 @@
   "@eulaReviewTerms": {},
   "eulaReadAndAcceptTerms": "要完成這部機器的設定，您必須審閱並同意下列授權協議內容。",
   "@eulaReadAndAcceptTerms": {},
-  "eulaAcceptTerms": "我以審閱並同意這些條款",
+  "eulaAcceptTerms": "我已閱讀並接受這些條款",
   "@eulaAcceptTerms": {},
   "accessibilityPageTitle": "無障礙功能",
   "@accessibilityPageTitle": {},
