@@ -26,13 +26,25 @@ class MascotAvatar extends StatelessWidget {
           ),
           child: image,
         ),
-        if (progress != null && progress! > 0 && progress! < 1)
+        if (progress != null && progress! > 0 && progress! < 1) ...[
+          Container(
+            constraints: BoxConstraints.tight(
+              Size(size.width - 17, size.height - 17),
+            ),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.black.withOpacity(0.25),
+            ),
+          ),
           Positioned(
             child: Text(
               '${(progress! * 100).ceil()}%',
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    color: Colors.white,
+                  ),
             ),
           ),
+        ],
         Positioned.fill(
           top: 3.75,
           left: 3.75,
