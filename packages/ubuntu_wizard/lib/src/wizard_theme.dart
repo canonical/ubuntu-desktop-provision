@@ -89,6 +89,8 @@ extension WizardThemeDataX on ThemeData {
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: errorColor),
         ),
+        fillColor: colorScheme.surface,
+        hoverColor: colorScheme.surface,
       ),
       sliderTheme: sliderTheme.copyWith(
         valueIndicatorColor: colorScheme.inverseSurface,
