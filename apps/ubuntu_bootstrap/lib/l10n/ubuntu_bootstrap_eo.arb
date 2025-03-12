@@ -763,7 +763,7 @@
   "@confirmEntryDiskEncryption": {},
   "confirmEntryInstallationDisk": "Instala disko",
   "@confirmEntryInstallationDisk": {},
-  "confirmEntryDiskSetup": "Agordado de disko",
+  "confirmEntryDiskSetup": "Speco de instalo",
   "@confirmEntryDiskSetup": {},
   "confirmEntryProprietarySoftware": "Neliberaj programoj",
   "@confirmEntryProprietarySoftware": {},
@@ -1078,5 +1078,58 @@
   "installationTypeLVMEncryptionInfo": "Vi bezonis tajpi pasfrazon por startigi la komputilon. Tio uzas LUKS-ĉifradon kun LVM.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeZFSEncryptionInfo": "Ĉifrado indiĝena al ZFS. Vi bezonos tajpi pasfrazon por startigi la komputilon.",
-  "@installationTypeZFSEncryptionInfo": {}
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Forviŝita",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Neŝanĝita",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Grando ŝanĝiĝis de {oldsize} al {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Uzota por {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Kreita kaj strukturita kiel {format} kaj uzota por {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Restrukturita kiel {format} uzota por {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Restrukturita kiel {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  }
 }
