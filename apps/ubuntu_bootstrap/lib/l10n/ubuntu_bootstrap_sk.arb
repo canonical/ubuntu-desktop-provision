@@ -893,7 +893,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Aplikácie",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Nastavenie disku",
+  "confirmEntryDiskSetup": "Typ inštalácie",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Šifrovanie disku",
   "@confirmEntryDiskEncryption": {},
@@ -1131,5 +1131,9 @@
   "installationTypeLVMEncryptionInfo": "Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeZFSEncryptionInfo": "Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.",
-  "@installationTypeZFSEncryptionInfo": {}
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Vymazané",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Nezmenené",
+  "@confirmTableUnchanged": {}
 }
