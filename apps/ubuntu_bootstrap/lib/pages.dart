@@ -1,5 +1,6 @@
 export 'pages/autoinstall/autoinstall_direct_page.dart';
 export 'pages/autoinstall/autoinstall_landscape_domain_page.dart';
+export 'pages/autoinstall/autoinstall_landscape_error_page.dart';
 export 'pages/autoinstall/autoinstall_landscape_qr_page.dart';
 export 'pages/autoinstall/autoinstall_page.dart';
 export 'pages/confirm/confirm_page.dart';

@@ -20,9 +20,11 @@ class LandscapeData with _$LandscapeData {
     @Default('') String userCode,
     @Default(AuthenticationStatus.authenticationPending)
     AuthenticationStatus authenticationStatus,
+    AttachStatus? attachStatus,
     @Default('') String autoinstall,
     @Default('') String domainUrl,
     @Default(false) bool isLoading,
+    @Default(false) bool unretryableError,
     Object? error,
   }) = _LandscapeData;
 
@@ -67,12 +69,38 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     AuthenticationStatus status,
     String? autoinstall,
   ) async {
-    if (status == AuthenticationStatus.authenticationSuccess) {
-      loadYaml(autoinstall!);
-      await getService<AutoinstallService>().writeFile(autoinstall);
-      await getService<AutoinstallService>().restartSubiquity();
-      ref.read(restartProvider.notifier).state++;
-      ref.invalidate(loadingProvider);
+    switch (status) {
+      case AuthenticationStatus.authenticationSuccess:
+        loadYaml(autoinstall!);
+        await getService<AutoinstallService>().writeFile(autoinstall);
+        await getService<AutoinstallService>().restartSubiquity();
+        ref.read(restartProvider.notifier).state++;
+        ref.invalidate(loadingProvider);
+      case AuthenticationStatus.authenticationPending:
+      case AuthenticationStatus.errorCodeNotFound:
+      case AuthenticationStatus.errorCanceledByUser:
+      case AuthenticationStatus.errorCodeExpired:
+        break;
+      case AuthenticationStatus.errorEmployeeLimitExceeded:
+        state = state.copyWith(
+          unretryableError: true,
+          error: Exception('Employee limit exceeded'),
+        );
+      case AuthenticationStatus.errorEmployeeDeactivated:
+        state = state.copyWith(
+          unretryableError: true,
+          error: Exception('Employee deactivated'),
+        );
+      case AuthenticationStatus.errorEmployeeComputerLimitExceeded:
+        state = state.copyWith(
+          unretryableError: true,
+          error: Exception('Employee computer limit exceeded'),
+        );
+      case AuthenticationStatus.errorMissingAutoinstallFile:
+        state = state.copyWith(
+          unretryableError: true,
+          error: Exception('Missing autoinstall file'),
+        );
     }
   }
 
@@ -92,6 +120,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       }
     } on Exception catch (e) {
       _log.debug('Caught error during attach: $e');
+
       state = state.copyWith(error: e, isLoading: false);
       return false;
     }
@@ -121,5 +150,9 @@ class LandscapeDataModel extends _$LandscapeDataModel {
         );
       },
     );
+  }
+
+  void resetUnretryableError() {
+    state = state.copyWith(domainUrl: '', unretryableError: false, error: null);
   }
 }

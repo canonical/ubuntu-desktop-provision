@@ -3,18 +3,26 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_model.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+final _log = Logger('landscape_model');
 
 class AutoinstallLandscapeDomainPage extends ConsumerWidget
     with ProvisioningPage {
   const AutoinstallLandscapeDomainPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async =>
-      ref.watch(autoinstallModelProvider).type == AutoinstallType.landscape;
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    // log the unretrybale state
+    _log.debug(ref.watch(landscapeDataModelProvider).unretryableError);
+    return ref.watch(autoinstallModelProvider).type ==
+            AutoinstallType.landscape &&
+        !ref.watch(landscapeDataModelProvider).unretryableError;
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,6 +30,9 @@ class AutoinstallLandscapeDomainPage extends ConsumerWidget
     final landscapeModel = ref.watch(landscapeDataModelProvider);
     final hasActiveConnection =
         ref.watch(networkModelProvider).hasActiveConnection;
+    if (landscapeModel.unretryableError) {
+        Wizard.of(context).back();
+    }
 
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
