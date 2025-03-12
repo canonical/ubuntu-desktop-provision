@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => '다음과 같은 파티션 변경사항이 적용됩니다:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '파티션 <b>$sysname</b>의 크기를 <b>$oldsize</b>에서 <b>$newsize</b>로 조정';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '파티션 <b>$sysname</b> 을(를) <b>$format</b>(으)로 포맷하고 <b>$mount</b>에 마운트';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '파티션 <b>$sysname</b>을(를) <b>$format</b> (으)로 포맷함';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '파티션 <b>$sysname</b>을(를) <b>$mount</b>에 사용';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '파티션 <b>$sysname</b> 생성됨';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => '코덱';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => '설치';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => '설치 완료';

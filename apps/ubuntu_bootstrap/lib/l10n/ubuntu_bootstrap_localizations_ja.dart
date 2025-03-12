@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => '以下のパーティション変更が適用されます：';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return 'パーティション<b>$sysname</b>のサイズが<b>$oldsize</b>から<b>$newsize</b>に変更されます';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされ、<b>$mount</b>として使用されます';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return 'パーティション<b>$sysname</b>は<b>$format</b>としてフォーマットされます';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return 'パーティション<b>$sysname</b>は<b>$mount</b>として使用されます';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return 'パーティション<b>$sysname</b>が作成されました';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'コーデック';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'インストール';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'インストールが完了しました';

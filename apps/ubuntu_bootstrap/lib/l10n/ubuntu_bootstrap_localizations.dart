@@ -1376,7 +1376,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @confirmEntryDiskSetup.
   ///
   /// In en, this message translates to:
-  /// **'Disk setup'**
+  /// **'Type of installation'**
   String get confirmEntryDiskSetup;
 
   /// No description provided for @confirmEntryDiskEncryption.
@@ -1427,42 +1427,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'{serial} ({path})'**
   String confirmPartitionTable(String serial, String path);
 
-  /// No description provided for @confirmPartitionChanges.
-  ///
-  /// In en, this message translates to:
-  /// **'The following partition changes are going to be applied:'**
-  String get confirmPartitionChanges;
-
-  /// A resized partition entry
-  ///
-  /// In en, this message translates to:
-  /// **'partition <b>{sysname}</b> resized from <b>{oldsize}</b> to <b>{newsize}</b>'**
-  String confirmPartitionResize(String sysname, String oldsize, String newsize);
-
-  /// A formatted and mounted partition entry
-  ///
-  /// In en, this message translates to:
-  /// **'partition <b>{sysname}</b> formatted as <b>{format}</b> used for <b>{mount}</b>'**
-  String confirmPartitionFormatMount(String sysname, String format, String mount);
-
-  /// A formatted partition entry
-  ///
-  /// In en, this message translates to:
-  /// **'partition <b>{sysname}</b> formatted as <b>{format}</b>'**
-  String confirmPartitionFormat(String sysname, String format);
-
-  /// A mounted partition entry
-  ///
-  /// In en, this message translates to:
-  /// **'partition <b>{sysname}</b> used for <b>{mount}</b>'**
-  String confirmPartitionMount(String sysname, String mount);
-
-  /// A created partition entry
-  ///
-  /// In en, this message translates to:
-  /// **'partition <b>{sysname}</b> created'**
-  String confirmPartitionCreate(String sysname);
-
   /// No description provided for @confirmProprietarySoftwareCodecs.
   ///
   /// In en, this message translates to:
@@ -1486,6 +1450,48 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Install'**
   String get confirmInstallButton;
+
+  /// No description provided for @confirmTableErased.
+  ///
+  /// In en, this message translates to:
+  /// **'Erased'**
+  String get confirmTableErased;
+
+  /// No description provided for @confirmTableUnchanged.
+  ///
+  /// In en, this message translates to:
+  /// **'Unchanged'**
+  String get confirmTableUnchanged;
+
+  /// No description provided for @confirmTableResized.
+  ///
+  /// In en, this message translates to:
+  /// **'Resized from {oldsize} to {newsize}'**
+  String confirmTableResized(String oldsize, String newsize);
+
+  /// No description provided for @confirmTableCreatedFormattedMounted.
+  ///
+  /// In en, this message translates to:
+  /// **'Created and formatted as {format} used for {mountpoint}'**
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint);
+
+  /// No description provided for @confirmTableFormattedMounted.
+  ///
+  /// In en, this message translates to:
+  /// **'Formatted as {format} used for {mountpoint}'**
+  String confirmTableFormattedMounted(String format, String mountpoint);
+
+  /// No description provided for @confirmTableMounted.
+  ///
+  /// In en, this message translates to:
+  /// **'Used for {mountpoint}'**
+  String confirmTableMounted(String mountpoint);
+
+  /// No description provided for @confirmTableFormatted.
+  ///
+  /// In en, this message translates to:
+  /// **'Formatted as {format}'**
+  String confirmTableFormatted(String format);
 
   /// No description provided for @installationCompleteTitle.
   ///

@@ -669,34 +669,6 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmPartitionChanges => 'A következő partícióváltoztatások kerülnek alkalmazásra:';
-
-  @override
-  String confirmPartitionResize(String sysname, String oldsize, String newsize) {
-    return '<b>$sysname</b> partíció átméretezve <b>$oldsize</b> méretről <b>$newsize</b> méretre';
-  }
-
-  @override
-  String confirmPartitionFormatMount(String sysname, String format, String mount) {
-    return '<b>$sysname</b> partíció <b>$format</b> formátumra formázva, <b>$mount</b> helyre csatolva';
-  }
-
-  @override
-  String confirmPartitionFormat(String sysname, String format) {
-    return '<b>$sysname</b> partíció <b>$format</b> formátumra formázva';
-  }
-
-  @override
-  String confirmPartitionMount(String sysname, String mount) {
-    return '<b>$sysname</b> partíció <b>$mount</b> helyre csatolva';
-  }
-
-  @override
-  String confirmPartitionCreate(String sysname) {
-    return '<b>$sysname</b> partíció létrehozva';
-  }
-
-  @override
   String get confirmProprietarySoftwareCodecs => 'Kodekek';
 
   @override
@@ -707,6 +679,37 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmInstallButton => 'Telepítés';
+
+  @override
+  String get confirmTableErased => 'Erased';
+
+  @override
+  String get confirmTableUnchanged => 'Unchanged';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Resized from $oldsize to $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Created and formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatted as $format used for $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Used for $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatted as $format';
+  }
 
   @override
   String get installationCompleteTitle => 'A telepítés befejeződött';
