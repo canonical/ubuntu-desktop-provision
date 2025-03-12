@@ -30,9 +30,6 @@ class AutoinstallLandscapeDomainPage extends ConsumerWidget
     final landscapeModel = ref.watch(landscapeDataModelProvider);
     final hasActiveConnection =
         ref.watch(networkModelProvider).hasActiveConnection;
-    if (landscapeModel.unretriableError) {
-      Wizard.of(context).back();
-    }
 
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,

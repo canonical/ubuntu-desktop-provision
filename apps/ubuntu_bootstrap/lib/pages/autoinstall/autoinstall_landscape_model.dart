@@ -20,7 +20,6 @@ class LandscapeData with _$LandscapeData {
     @Default('') String userCode,
     @Default(AuthenticationStatus.authenticationPending)
     AuthenticationStatus authenticationStatus,
-    AttachStatus? attachStatus,
     @Default('') String autoinstall,
     @Default('') String domainUrl,
     @Default(false) bool isLoading,

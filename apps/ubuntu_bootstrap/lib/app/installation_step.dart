@@ -110,6 +110,9 @@ enum InstallationStep with RouteName {
         }
         return false;
       },
+      onBack: this == InstallationStep.autoinstallLandscapeError
+          ? (_) => InstallationStep.autoinstall.route
+          : null,
     );
   }
 

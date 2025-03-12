@@ -19,7 +19,6 @@ mixin _$LandscapeData {
   String get userCode => throw _privateConstructorUsedError;
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
-  AttachStatus? get attachStatus => throw _privateConstructorUsedError;
   String get autoinstall => throw _privateConstructorUsedError;
   String get domainUrl => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
@@ -42,7 +41,6 @@ abstract class $LandscapeDataCopyWith<$Res> {
   $Res call(
       {String userCode,
       AuthenticationStatus authenticationStatus,
-      AttachStatus? attachStatus,
       String autoinstall,
       String domainUrl,
       bool isLoading,
@@ -67,7 +65,6 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
   $Res call({
     Object? userCode = null,
     Object? authenticationStatus = null,
-    Object? attachStatus = freezed,
     Object? autoinstall = null,
     Object? domainUrl = null,
     Object? isLoading = null,
@@ -83,10 +80,6 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
           ? _value.authenticationStatus
           : authenticationStatus // ignore: cast_nullable_to_non_nullable
               as AuthenticationStatus,
-      attachStatus: freezed == attachStatus
-          ? _value.attachStatus
-          : attachStatus // ignore: cast_nullable_to_non_nullable
-              as AttachStatus?,
       autoinstall: null == autoinstall
           ? _value.autoinstall
           : autoinstall // ignore: cast_nullable_to_non_nullable
@@ -119,7 +112,6 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
   $Res call(
       {String userCode,
       AuthenticationStatus authenticationStatus,
-      AttachStatus? attachStatus,
       String autoinstall,
       String domainUrl,
       bool isLoading,
@@ -142,7 +134,6 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
   $Res call({
     Object? userCode = null,
     Object? authenticationStatus = null,
-    Object? attachStatus = freezed,
     Object? autoinstall = null,
     Object? domainUrl = null,
     Object? isLoading = null,
@@ -158,10 +149,6 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
           ? _value.authenticationStatus
           : authenticationStatus // ignore: cast_nullable_to_non_nullable
               as AuthenticationStatus,
-      attachStatus: freezed == attachStatus
-          ? _value.attachStatus
-          : attachStatus // ignore: cast_nullable_to_non_nullable
-              as AttachStatus?,
       autoinstall: null == autoinstall
           ? _value.autoinstall
           : autoinstall // ignore: cast_nullable_to_non_nullable
@@ -189,7 +176,6 @@ class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
       {this.userCode = '',
       this.authenticationStatus = AuthenticationStatus.authenticationPending,
-      this.attachStatus,
       this.autoinstall = '',
       this.domainUrl = '',
       this.isLoading = false,
@@ -203,8 +189,6 @@ class _$LandscapeDataImpl extends _LandscapeData {
   @override
   @JsonKey()
   final AuthenticationStatus authenticationStatus;
-  @override
-  final AttachStatus? attachStatus;
   @override
   @JsonKey()
   final String autoinstall;
@@ -222,7 +206,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, attachStatus: $attachStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
+    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
   }
 
   @override
@@ -234,8 +218,6 @@ class _$LandscapeDataImpl extends _LandscapeData {
                 other.userCode == userCode) &&
             (identical(other.authenticationStatus, authenticationStatus) ||
                 other.authenticationStatus == authenticationStatus) &&
-            (identical(other.attachStatus, attachStatus) ||
-                other.attachStatus == attachStatus) &&
             (identical(other.autoinstall, autoinstall) ||
                 other.autoinstall == autoinstall) &&
             (identical(other.domainUrl, domainUrl) ||
@@ -252,7 +234,6 @@ class _$LandscapeDataImpl extends _LandscapeData {
       runtimeType,
       userCode,
       authenticationStatus,
-      attachStatus,
       autoinstall,
       domainUrl,
       isLoading,
@@ -272,7 +253,6 @@ abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
       {final String userCode,
       final AuthenticationStatus authenticationStatus,
-      final AttachStatus? attachStatus,
       final String autoinstall,
       final String domainUrl,
       final bool isLoading,
@@ -284,8 +264,6 @@ abstract class _LandscapeData extends LandscapeData {
   String get userCode;
   @override
   AuthenticationStatus get authenticationStatus;
-  @override
-  AttachStatus? get attachStatus;
   @override
   String get autoinstall;
   @override
