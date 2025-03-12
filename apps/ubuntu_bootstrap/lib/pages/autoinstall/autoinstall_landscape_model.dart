@@ -24,7 +24,7 @@ class LandscapeData with _$LandscapeData {
     @Default('') String autoinstall,
     @Default('') String domainUrl,
     @Default(false) bool isLoading,
-    @Default(false) bool unretryableError,
+    @Default(false) bool unretriableError,
     Object? error,
   }) = _LandscapeData;
 
@@ -86,7 +86,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       case AuthenticationStatus.errorEmployeeComputerLimitExceeded:
       case AuthenticationStatus.errorMissingAutoinstallFile:
         state = state.copyWith(
-          unretryableError: true,
+          unretriableError: true,
         );
     }
   }
@@ -139,7 +139,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     );
   }
 
-  void resetUnretryableError() {
-    state = state.copyWith(domainUrl: '', unretryableError: false, error: null);
+  void resetUnretriableError() {
+    state = state.copyWith(domainUrl: '', unretriableError: false, error: null);
   }
 }

@@ -37,7 +37,7 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Wizard.of(context).next();
       });
-      if (model.unretryableError) {
+      if (model.unretriableError) {
         Wizard.of(context).back();
       }
     }
@@ -148,10 +148,10 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
     _log.debug(
-      'unretryableError: ${ref.watch(landscapeDataModelProvider).unretryableError}',
+      'unretryableError: ${ref.watch(landscapeDataModelProvider).unretriableError}',
     );
     if (ref.watch(autoinstallModelProvider).type != AutoinstallType.landscape ||
-        ref.watch(landscapeDataModelProvider).unretryableError) {
+        ref.watch(landscapeDataModelProvider).unretriableError) {
       return false;
     }
     final model = ref.watch(landscapeDataModelProvider.notifier);

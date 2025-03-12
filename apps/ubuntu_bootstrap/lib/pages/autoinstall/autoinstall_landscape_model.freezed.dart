@@ -23,7 +23,7 @@ mixin _$LandscapeData {
   String get autoinstall => throw _privateConstructorUsedError;
   String get domainUrl => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
-  bool get unretryableError => throw _privateConstructorUsedError;
+  bool get unretriableError => throw _privateConstructorUsedError;
   Object? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of LandscapeData
@@ -46,7 +46,7 @@ abstract class $LandscapeDataCopyWith<$Res> {
       String autoinstall,
       String domainUrl,
       bool isLoading,
-      bool unretryableError,
+      bool unretriableError,
       Object? error});
 }
 
@@ -71,7 +71,7 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
     Object? autoinstall = null,
     Object? domainUrl = null,
     Object? isLoading = null,
-    Object? unretryableError = null,
+    Object? unretriableError = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -99,9 +99,9 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      unretryableError: null == unretryableError
-          ? _value.unretryableError
-          : unretryableError // ignore: cast_nullable_to_non_nullable
+      unretriableError: null == unretriableError
+          ? _value.unretriableError
+          : unretriableError // ignore: cast_nullable_to_non_nullable
               as bool,
       error: freezed == error ? _value.error : error,
     ) as $Val);
@@ -123,7 +123,7 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
       String autoinstall,
       String domainUrl,
       bool isLoading,
-      bool unretryableError,
+      bool unretriableError,
       Object? error});
 }
 
@@ -146,7 +146,7 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
     Object? autoinstall = null,
     Object? domainUrl = null,
     Object? isLoading = null,
-    Object? unretryableError = null,
+    Object? unretriableError = null,
     Object? error = freezed,
   }) {
     return _then(_$LandscapeDataImpl(
@@ -174,9 +174,9 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      unretryableError: null == unretryableError
-          ? _value.unretryableError
-          : unretryableError // ignore: cast_nullable_to_non_nullable
+      unretriableError: null == unretriableError
+          ? _value.unretriableError
+          : unretriableError // ignore: cast_nullable_to_non_nullable
               as bool,
       error: freezed == error ? _value.error : error,
     ));
@@ -193,7 +193,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
       this.autoinstall = '',
       this.domainUrl = '',
       this.isLoading = false,
-      this.unretryableError = false,
+      this.unretriableError = false,
       this.error})
       : super._();
 
@@ -216,13 +216,13 @@ class _$LandscapeDataImpl extends _LandscapeData {
   final bool isLoading;
   @override
   @JsonKey()
-  final bool unretryableError;
+  final bool unretriableError;
   @override
   final Object? error;
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, attachStatus: $attachStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretryableError: $unretryableError, error: $error)';
+    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, attachStatus: $attachStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
   }
 
   @override
@@ -242,8 +242,8 @@ class _$LandscapeDataImpl extends _LandscapeData {
                 other.domainUrl == domainUrl) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
-            (identical(other.unretryableError, unretryableError) ||
-                other.unretryableError == unretryableError) &&
+            (identical(other.unretriableError, unretriableError) ||
+                other.unretriableError == unretriableError) &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -256,7 +256,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
       autoinstall,
       domainUrl,
       isLoading,
-      unretryableError,
+      unretriableError,
       const DeepCollectionEquality().hash(error));
 
   /// Create a copy of LandscapeData
@@ -276,7 +276,7 @@ abstract class _LandscapeData extends LandscapeData {
       final String autoinstall,
       final String domainUrl,
       final bool isLoading,
-      final bool unretryableError,
+      final bool unretriableError,
       final Object? error}) = _$LandscapeDataImpl;
   _LandscapeData._() : super._();
 
@@ -293,7 +293,7 @@ abstract class _LandscapeData extends LandscapeData {
   @override
   bool get isLoading;
   @override
-  bool get unretryableError;
+  bool get unretriableError;
   @override
   Object? get error;
 

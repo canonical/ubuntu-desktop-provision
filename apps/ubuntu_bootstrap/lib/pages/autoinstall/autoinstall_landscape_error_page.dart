@@ -13,7 +13,7 @@ class AutoinstallLandscapeErrorPage extends ConsumerWidget
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async =>
       ref.watch(autoinstallModelProvider).type == AutoinstallType.landscape &&
-      ref.watch(landscapeDataModelProvider).unretryableError;
+      ref.watch(landscapeDataModelProvider).unretriableError;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

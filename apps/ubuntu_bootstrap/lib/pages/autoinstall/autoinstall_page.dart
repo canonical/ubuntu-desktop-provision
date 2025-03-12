@@ -30,7 +30,7 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
           NextWizardButton(
             onNext: () => ref
                 .read(landscapeDataModelProvider.notifier)
-                .resetUnretryableError(),
+                .resetUnretriableError(),
           ),
         ],
       ),

@@ -18,10 +18,10 @@ class AutoinstallLandscapeDomainPage extends ConsumerWidget
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
     // log the unretrybale state
-    _log.debug(ref.watch(landscapeDataModelProvider).unretryableError);
+    _log.debug(ref.watch(landscapeDataModelProvider).unretriableError);
     return ref.watch(autoinstallModelProvider).type ==
             AutoinstallType.landscape &&
-        !ref.watch(landscapeDataModelProvider).unretryableError;
+        !ref.watch(landscapeDataModelProvider).unretriableError;
   }
 
   @override
@@ -30,7 +30,7 @@ class AutoinstallLandscapeDomainPage extends ConsumerWidget
     final landscapeModel = ref.watch(landscapeDataModelProvider);
     final hasActiveConnection =
         ref.watch(networkModelProvider).hasActiveConnection;
-    if (landscapeModel.unretryableError) {
+    if (landscapeModel.unretriableError) {
       Wizard.of(context).back();
     }
 
