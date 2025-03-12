@@ -148,7 +148,8 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
     _log.debug(
-        'unretryableError: ${ref.watch(landscapeDataModelProvider).unretryableError}',);
+      'unretryableError: ${ref.watch(landscapeDataModelProvider).unretryableError}',
+    );
     if (ref.watch(autoinstallModelProvider).type != AutoinstallType.landscape ||
         ref.watch(landscapeDataModelProvider).unretryableError) {
       return false;

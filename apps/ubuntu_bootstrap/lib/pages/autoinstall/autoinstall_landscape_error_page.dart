@@ -29,8 +29,11 @@ class AutoinstallLandscapeErrorPage extends ConsumerWidget
       children: [
         Text(l10n.landscapeErrorPageBody),
         const SizedBox(height: kWizardSpacing),
-        Text(l10n.landscapeErrorPageCode(
-            landscapeModel.authenticationStatus.toString(),),),
+        Text(
+          l10n.landscapeErrorPageCode(
+            landscapeModel.authenticationStatus.toString(),
+          ),
+        ),
       ],
     );
   }
