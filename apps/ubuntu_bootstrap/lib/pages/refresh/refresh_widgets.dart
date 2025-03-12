@@ -47,7 +47,7 @@ class RefreshView extends ConsumerWidget {
               state.progress! > 0 &&
               state.progress! < 1,
           child: Text(
-            '${(state.progress! * 100).ceil()}%',
+            '${(state.progress ?? 0 * 100).ceil()}%',
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
