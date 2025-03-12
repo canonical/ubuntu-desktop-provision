@@ -1135,5 +1135,54 @@
   "confirmTableErased": "Vymazané",
   "@confirmTableErased": {},
   "confirmTableUnchanged": "Nezmenené",
-  "@confirmTableUnchanged": {}
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Veľkosť bola zmenená z {oldsize} na {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formátované ako {format} použité pre {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Používa sa pre {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Naformátované ako {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Vytvorené a naformátované ako {format} použité pre {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  }
 }
