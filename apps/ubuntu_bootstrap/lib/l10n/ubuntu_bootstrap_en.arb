@@ -482,7 +482,7 @@
       }
     }
   },
-  "confirmTableCreatedFormattedMounted": "Created and formatted as {format} used for{mountpoint}",
+  "confirmTableCreatedFormattedMounted": "Created and formatted as {format} used for {mountpoint}",
   "@confirmTableCreatedFormattedMounted": {
     "placeholders": {
       "format": {
@@ -493,7 +493,7 @@
       }
     }
   },
-  "confirmTableFormattedMounted": "Formatted as {format} used for{mountpoint}",
+  "confirmTableFormattedMounted": "Formatted as {format} used for {mountpoint}",
   "@confirmTableFormattedMounted": {
     "placeholders": {
       "format": {
