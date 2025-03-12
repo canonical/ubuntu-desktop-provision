@@ -127,7 +127,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "התכניות האלו כפופות לתנאי אישוי שנכללים בתיעוד שלהן. חלקן קנייניות.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "סוג ההתקנה",
+  "installationTypeTitle": "הקמת הכונן",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "במחשב זה מותקנת כרגע {os}. מה לעשות?",
   "@installationTypeOSDetected": {
@@ -884,7 +884,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "יישומים",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "הכנת הכונן",
+  "confirmEntryDiskSetup": "סוג ההתקנה",
   "@confirmEntryDiskSetup": {},
   "confirmProprietarySoftwareCodecsDrivers": "מפענחים ומנהלי התקנים",
   "@confirmProprietarySoftwareCodecsDrivers": {},
@@ -1078,5 +1078,58 @@
     }
   },
   "bitlockerWarningTitle": "כל הנתונים שלך עלולים ללכת לאיבוד ללא מפתחות שחזור BitLocker",
-  "@bitlockerWarningTitle": {}
+  "@bitlockerWarningTitle": {},
+  "confirmTableMounted": "משמש עבור {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "נמחק",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "ללא שינוי",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "הגודל השתנה מ־{oldsize} ל־{newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "נוצר ופורמט ל־{format} ומשמש עבור {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "פורמט ל־{format} ומשמש עבור {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "פורמט ל־{format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  }
 }
