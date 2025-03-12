@@ -813,7 +813,7 @@
       }
     }
   },
-  "confirmEntryDiskSetup": "Konfiguracja dysku",
+  "confirmEntryDiskSetup": "Rodzaj instalacji",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Szyfrowanie dysku",
   "@confirmEntryDiskEncryption": {},
@@ -1078,5 +1078,58 @@
   "installationTypeZFSEncryptionInfo": "Natywne szyfrowanie z ZFS. Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera.",
   "@installationTypeZFSEncryptionInfo": {},
   "installationTypeLVMEncryptionInfo": "Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera. Używa szyfrowania LUKS z LVM.",
-  "@installationTypeLVMEncryptionInfo": {}
+  "@installationTypeLVMEncryptionInfo": {},
+  "confirmTableResized": "Zmieniono rozmiar z {oldsize} na {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "Wymazano",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Nie zmieniono",
+  "@confirmTableUnchanged": {},
+  "confirmTableCreatedFormattedMounted": "Utworzono i sformatowano jako {format} do użycia dla {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Sformatowano jako {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Do użyciu dla {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Sformatowano jako {format} do użycia dla {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  }
 }
