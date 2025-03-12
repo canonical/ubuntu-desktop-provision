@@ -61,7 +61,7 @@ extension WizardThemeDataX on ThemeData {
     );
   }
 
-  ThemeData _customizeColors() {
+  ThemeData _customizeColors(bool highContrast) {
     final errorColor = YaruColors.from(brightness).error;
     return copyWith(
       colorScheme: colorScheme.copyWith(
@@ -98,6 +98,11 @@ extension WizardThemeDataX on ThemeData {
         valueIndicatorTextStyle:
             textTheme.bodyMedium!.copyWith(color: colorScheme.onInverseSurface),
       ),
+      listTileTheme: highContrast
+          ? listTileTheme.copyWith(
+              textColor: colorScheme.onSurface,
+            )
+          : null,
       extensions: [
         ...extensions.values,
         YaruTitleBarThemeData(
@@ -123,7 +128,7 @@ extension WizardThemeDataX on ThemeData {
     );
   }
 
-  ThemeData customize() {
-    return _customizeCursor()._customizeColors()._customizeShapes();
+  ThemeData customize({bool highContrast = false}) {
+    return _customizeCursor()._customizeColors(highContrast)._customizeShapes();
   }
 }
