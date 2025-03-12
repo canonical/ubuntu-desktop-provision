@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -20,18 +21,40 @@ class StorageSelector extends ConsumerWidget {
   final int? selectedIndex;
   final ValueChanged<int?>? onSelected;
 
-  static String formatStorage(BuildContext context, WidgetRef ref, int index) {
-    final model = ref.read(guidedResizeModelProvider);
-    final partition = model.getPartition(index);
-    final os = model.getOS(index);
-
+  static String formatPartition(
+    BuildContext context,
+    Partition? partition,
+  ) {
     // "sda1 - Ubuntu 22.04 LTS - 123 GB"
     final parts = [
       partition?.sysname,
-      if (os != null) os.long,
+      partition?.os?.long ?? partition?.format,
       if (partition?.size != null) context.formatByteSize(partition!.size!),
     ];
-    return parts.join(' - ');
+    return parts.whereNotNull().join(' - ');
+  }
+
+  static String formatStorage(BuildContext context, WidgetRef ref, int index) {
+    final model = ref.read(guidedResizeModelProvider);
+    final partition = model.getPartition(index);
+
+    return formatPartition(context, partition);
+  }
+
+  static List<MenuButtonEntry<int>> bitLockerEntries(
+    BuildContext context,
+    WidgetRef ref,
+  ) {
+    final model = ref.read(guidedResizeModelProvider);
+    return model.bitLockerPartitions
+        .map(
+          (partition) => MenuButtonEntry(
+            value: -1,
+            enabled: false,
+            child: Text(formatPartition(context, partition)),
+          ),
+        )
+        .toList();
   }
 
   @override
@@ -43,7 +66,11 @@ class StorageSelector extends ConsumerWidget {
         const SizedBox(width: kWizardSpacing),
         Expanded(
           child: MenuButtonBuilder<int>(
-            values: List.generate(count, (index) => index),
+            entries: [
+              ...List.generate(count, (index) => index)
+                  .map((i) => MenuButtonEntry(value: i)),
+              ...bitLockerEntries(context, ref),
+            ],
             selected: selectedIndex != null &&
                     selectedIndex! >= 0 &&
                     selectedIndex! < count

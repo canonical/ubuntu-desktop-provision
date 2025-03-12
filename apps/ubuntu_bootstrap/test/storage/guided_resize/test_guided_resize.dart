@@ -25,6 +25,7 @@ GuidedResizeModel buildGuidedResizeModel({
   int? maximumSize,
   int? totalSize,
   bool? hasBitLocker,
+  List<Partition>? bitLockerPartitions,
   bool? isUsed,
 }) {
   final model = MockGuidedResizeModel();
@@ -53,6 +54,7 @@ GuidedResizeModel buildGuidedResizeModel({
   when(model.maximumSize).thenReturn(maximumSize ?? 1);
   when(model.totalSize).thenReturn(totalSize ?? 0);
   when(model.hasBitLocker).thenReturn(hasBitLocker ?? false);
+  when(model.bitLockerPartitions).thenReturn(bitLockerPartitions ?? []);
   when(model.init()).thenAnswer((_) async => isUsed ?? false);
   return model;
 }
