@@ -38,6 +38,19 @@ class RefreshView extends ConsumerWidget {
           image: pageImages.get(InstallationStep.refresh.name),
           progress: state.progress,
         ),
+        const SizedBox(height: 8),
+        Visibility(
+          maintainSize: true,
+          maintainState: true,
+          maintainAnimation: true,
+          visible: state.progress != null &&
+              state.progress! > 0 &&
+              state.progress! < 1,
+          child: Text(
+            '${(state.progress ?? 0 * 100).ceil()}%',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+        ),
         const Spacer(),
         Text(
           state.whenOrNull(
