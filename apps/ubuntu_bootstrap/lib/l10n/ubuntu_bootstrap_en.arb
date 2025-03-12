@@ -971,5 +971,18 @@
   "landscapeCodeExpiredWarning": "Code expired, please try again",
   "@landscapeCodeExpiredWarning": {},
   "landscapeLoginFailedWarning": "Login failed, please try again",
-  "@landscapeLoginFailedWarning": {}
+  "@landscapeLoginFailedWarning": {},
+
+  "landscapeErrorPageTitle": "Automated install is not available for your account",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Contact your IT support or try a different installation option.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Error code: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  }
 }

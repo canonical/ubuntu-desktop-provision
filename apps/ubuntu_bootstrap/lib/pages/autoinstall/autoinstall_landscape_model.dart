@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/app/installer_model.dart';
+import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -82,24 +83,11 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       case AuthenticationStatus.errorCodeExpired:
         break;
       case AuthenticationStatus.errorEmployeeLimitExceeded:
-        state = state.copyWith(
-          unretryableError: true,
-          error: Exception('Employee limit exceeded'),
-        );
       case AuthenticationStatus.errorEmployeeDeactivated:
-        state = state.copyWith(
-          unretryableError: true,
-          error: Exception('Employee deactivated'),
-        );
       case AuthenticationStatus.errorEmployeeComputerLimitExceeded:
-        state = state.copyWith(
-          unretryableError: true,
-          error: Exception('Employee computer limit exceeded'),
-        );
       case AuthenticationStatus.errorMissingAutoinstallFile:
         state = state.copyWith(
           unretryableError: true,
-          error: Exception('Missing autoinstall file'),
         );
     }
   }

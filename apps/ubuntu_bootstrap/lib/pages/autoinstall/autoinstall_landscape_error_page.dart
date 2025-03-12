@@ -22,15 +22,15 @@ class AutoinstallLandscapeErrorPage extends ConsumerWidget
 
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
-      title: landscapeModel.error?.toString() ?? '',
+      title: l10n.landscapeErrorPageTitle,
       bottomBar: WizardBar(
-        leading: const BackWizardButton(
-        ),
+        leading: const BackWizardButton(),
       ),
       children: [
-        Text('Contact your IT support or try a different installation option.'),
+        Text(l10n.landscapeErrorPageBody),
         const SizedBox(height: kWizardSpacing),
-        Text('Error code: ${landscapeModel.authenticationStatus}'),
+        Text(l10n.landscapeErrorPageCode(
+            landscapeModel.authenticationStatus.toString())),
       ],
     );
   }

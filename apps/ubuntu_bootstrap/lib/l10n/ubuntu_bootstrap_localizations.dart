@@ -2146,6 +2146,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Login failed, please try again'**
   String get landscapeLoginFailedWarning;
+
+  /// No description provided for @landscapeErrorPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated install is not available for your account'**
+  String get landscapeErrorPageTitle;
+
+  /// No description provided for @landscapeErrorPageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact your IT support or try a different installation option.'**
+  String get landscapeErrorPageBody;
+
+  /// No description provided for @landscapeErrorPageCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Error code: {code}'**
+  String landscapeErrorPageCode(String code);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

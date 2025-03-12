@@ -37,9 +37,9 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Wizard.of(context).next();
       });
-    if (model.unretryableError) {
+      if (model.unretryableError) {
         Wizard.of(context).back();
-    }
+      }
     }
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
