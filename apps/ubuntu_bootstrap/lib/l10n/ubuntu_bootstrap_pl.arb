@@ -1145,5 +1145,9 @@
   "landscapeDomainHintText": "Domena Landscape (FQDN)",
   "@landscapeDomainHintText": {},
   "landscapeErrorPageTitle": "Automatyczna instalacja nie jest dostępna dla Twojego konta",
-  "@landscapeErrorPageTitle": {}
+  "@landscapeErrorPageTitle": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu zostanie zainstalowany z konfiguracją dostarczoną przez Twoją organizację",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Poniżej możesz przejrzeć plik autoinstalacji zaimportowany z Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
