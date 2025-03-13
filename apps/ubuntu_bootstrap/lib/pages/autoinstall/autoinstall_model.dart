@@ -35,6 +35,10 @@ class AutoinstallModel extends _$AutoinstallModel {
     state = state.copyWith(type: type);
   }
 
+  AutoinstallType? getType() {
+    return state.type;
+  }
+
   Future<void> restart() async {
     await _service.restartSubiquity();
     ref.read(restartProvider.notifier).state++;

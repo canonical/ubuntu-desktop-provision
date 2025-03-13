@@ -2170,6 +2170,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Error code: {code}'**
   String landscapeErrorPageCode(String code);
+
+  /// No description provided for @landscapeConfirmPageSuccessInfoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu will install with the configuration provided by your organization'**
+  String get landscapeConfirmPageSuccessInfoTitle;
+
+  /// No description provided for @landscapeConfirmPageSuccessInfoContent.
+  ///
+  /// In en, this message translates to:
+  /// **'You can review the autoinstall file imported from Landscape below.'**
+  String get landscapeConfirmPageSuccessInfoContent;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate extends LocalizationsDelegate<UbuntuBootstrapLocalizations> {

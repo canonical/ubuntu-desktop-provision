@@ -1141,6 +1141,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String landscapeErrorPageCode(String code) {
     return 'Error code: $code';
   }
+
+  @override
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+
+  @override
+  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
