@@ -1198,5 +1198,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeConfirmPageSuccessInfoContent": "Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou",
+  "@landscapeConfirmPageSuccessInfoTitle": {}
 }
