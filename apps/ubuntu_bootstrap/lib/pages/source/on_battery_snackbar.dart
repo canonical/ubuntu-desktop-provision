@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_bootstrap/l10n/ubuntu_bootstrap_localizations.dart';
+import 'package:yaru/yaru.dart';
 
 class OnBatterySnackBar extends SnackBar {
   OnBatterySnackBar({super.key})
@@ -13,7 +14,6 @@ class OnBatterySnackBar extends SnackBar {
           showCloseIcon: true,
           content: Builder(
             builder: (context) {
-              final theme = Theme.of(context);
               final lang = UbuntuBootstrapLocalizations.of(context);
 
               return Text.rich(
@@ -21,7 +21,9 @@ class OnBatterySnackBar extends SnackBar {
                   children: [
                     TextSpan(
                       text: lang.warningLabel,
-                      style: TextStyle(color: theme.colorScheme.error),
+                      style: TextStyle(
+                        color: YaruColors.from(Brightness.dark).error,
+                      ),
                     ),
                     const TextSpan(text: ' '),
                     TextSpan(text: lang.batteryWarning),
