@@ -6,7 +6,7 @@ part of 'autoinstall_model.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$autoinstallModelHash() => r'53d6aafb16546df4e852255589a2154895f08b38';
+String _$autoinstallModelHash() => r'858a8c90350f013c367e32867c2d3dcd63cdb1c1';
 
 /// See also [AutoinstallModel].
 @ProviderFor(AutoinstallModel)

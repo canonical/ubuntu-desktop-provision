@@ -959,7 +959,6 @@
   "@landscapeCodeExpiredWarning": {},
   "landscapeLoginFailedWarning": "Login failed, please try again",
   "@landscapeLoginFailedWarning": {},
-
   "landscapeErrorPageTitle": "Automated install is not available for your account",
   "@landscapeErrorPageTitle": {},
   "landscapeErrorPageBody": "Contact your IT support or try a different installation option.",
@@ -971,5 +970,9 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu will install with the configuration provided by your organization",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "You can review the autoinstall file imported from Landscape below.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }

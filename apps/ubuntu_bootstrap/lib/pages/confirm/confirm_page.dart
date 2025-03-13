@@ -57,85 +57,107 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           BitlockerInfoBox(yaruInfoType: YaruInfoType.warning),
           const SizedBox(height: kWizardSpacing),
         ],
-        YaruBorderContainer(
-          padding: kWizardTilePadding,
-          borderRadius: kWizardBorderRadius,
-          color: Theme.of(context).colorScheme.primaryContainer,
-          child: status?.interactive == false
-              ? FutureBuilder(
-                  future: autoinstallNotifier.getFileContent(),
-                  builder: (_, fileContentSnapShot) {
-                    if (fileContentSnapShot.hasData) {
-                      return Text(fileContentSnapShot.data ?? '');
-                    } else if (fileContentSnapShot.hasError) {
-                      return Text(fileContentSnapShot.error.toString());
-                    } else {
-                      return const YaruCircularProgressIndicator();
-                    }
-                  },
-                )
-              : Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _SummarySection(
-                      title: lang.confirmSectionGeneralTitle,
-                      entries: {
-                        lang.confirmEntryDiskSetup: _DiskSetup(),
-                        lang.confirmEntryInstallationDisk: _InstallationDisk(),
-                        lang.confirmEntryApplications: _Applications(),
-                      },
-                    ),
-                    const SizedBox(height: kWizardSpacing),
-                    _SummarySection(
-                      title: lang.confirmSectionSecurityAndMoreTitle,
-                      entries: {
-                        lang.confirmEntryDiskEncryption: _DiskEncryption(),
-                        lang.confirmEntryProprietarySoftware: Consumer(
-                          builder: (_, ref, __) => _ProprietarySoftware(),
-                        ),
-                      },
-                    ),
-                    const SizedBox(height: kWizardSpacing),
-                    Text(
-                      lang.confirmPartitionsTitle,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: kWizardSpacing / 2),
-                    Table(
-                      border: TableBorder(
-                        horizontalInside:
-                            BorderSide(color: Theme.of(context).dividerColor),
-                      ),
-                      children: [
-                        for (final entry in model.partitions.entries)
-                          for (final partition in entry.value) ...[
-                            if (model.guidedTarget
-                                    is GuidedStorageTargetEraseInstall &&
-                                !(partition.preserve ?? false))
-                              _PartitionRow(
-                                sysname: entry.key,
-                                partition: partition,
-                                original: model.getOriginalPartition(
-                                  entry.key,
-                                  partition.number ?? -1,
-                                ),
-                                productInfo: model.productInfo,
-                                showOriginal: true,
+        if (status?.interactive == false &&
+            autoinstallNotifier.getType() == AutoinstallType.landscape) ...[
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.success,
+            title: Text(lang.landscapeConfirmPageSuccessInfoTitle),
+            child: Text(
+              lang.landscapeConfirmPageSuccessInfoContent,
+            ),
+          ),
+          const SizedBox(height: kWizardSpacing),
+        ],
+        Row(
+          children: [
+            Expanded(
+              child: YaruBorderContainer(
+                constraints: BoxConstraints(minHeight: 300),
+                padding:
+                    status?.interactive == false ? null : kWizardTilePadding,
+                borderRadius: kWizardBorderRadius,
+                color: Theme.of(context).colorScheme.primaryContainer,
+                child: status?.interactive == false
+                    ? FutureBuilder(
+                        future: autoinstallNotifier.getFileContent(),
+                        builder: (_, fileContentSnapShot) {
+                          if (fileContentSnapShot.hasData) {
+                            return Text(fileContentSnapShot.data ?? '');
+                          } else if (fileContentSnapShot.hasError) {
+                            return Text(fileContentSnapShot.error.toString());
+                          } else {
+                            return const YaruCircularProgressIndicator();
+                          }
+                        },
+                      )
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _SummarySection(
+                            title: lang.confirmSectionGeneralTitle,
+                            entries: {
+                              lang.confirmEntryDiskSetup: _DiskSetup(),
+                              lang.confirmEntryInstallationDisk:
+                                  _InstallationDisk(),
+                              lang.confirmEntryApplications: _Applications(),
+                            },
+                          ),
+                          const SizedBox(height: kWizardSpacing),
+                          _SummarySection(
+                            title: lang.confirmSectionSecurityAndMoreTitle,
+                            entries: {
+                              lang.confirmEntryDiskEncryption:
+                                  _DiskEncryption(),
+                              lang.confirmEntryProprietarySoftware: Consumer(
+                                builder: (_, ref, __) => _ProprietarySoftware(),
                               ),
-                            _PartitionRow(
-                              sysname: entry.key,
-                              partition: partition,
-                              original: model.getOriginalPartition(
-                                entry.key,
-                                partition.number ?? -1,
+                            },
+                          ),
+                          const SizedBox(height: kWizardSpacing),
+                          Text(
+                            lang.confirmPartitionsTitle,
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: kWizardSpacing / 2),
+                          Table(
+                            border: TableBorder(
+                              horizontalInside: BorderSide(
+                                color: Theme.of(context).dividerColor,
                               ),
-                              productInfo: model.productInfo,
                             ),
-                          ],
-                      ],
-                    ),
-                  ],
-                ),
+                            children: [
+                              for (final entry in model.partitions.entries)
+                                for (final partition in entry.value) ...[
+                                  if (model.guidedTarget
+                                          is GuidedStorageTargetEraseInstall &&
+                                      !(partition.preserve ?? false))
+                                    _PartitionRow(
+                                      sysname: entry.key,
+                                      partition: partition,
+                                      original: model.getOriginalPartition(
+                                        entry.key,
+                                        partition.number ?? -1,
+                                      ),
+                                      productInfo: model.productInfo,
+                                      showOriginal: true,
+                                    ),
+                                  _PartitionRow(
+                                    sysname: entry.key,
+                                    partition: partition,
+                                    original: model.getOriginalPartition(
+                                      entry.key,
+                                      partition.number ?? -1,
+                                    ),
+                                    productInfo: model.productInfo,
+                                  ),
+                                ],
+                            ],
+                          ),
+                        ],
+                      ),
+              ),
+            ),
+          ],
         ),
       ],
     );
