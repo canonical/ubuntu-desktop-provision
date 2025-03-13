@@ -62,6 +62,11 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           YaruInfoBox(
             yaruInfoType: YaruInfoType.success,
             title: Text(lang.landscapeConfirmPageSuccessInfoTitle),
+            titleTextStyle: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16.0,
+                  height: 1.3,
+                ),
             child: Text(
               lang.landscapeConfirmPageSuccessInfoContent,
             ),
