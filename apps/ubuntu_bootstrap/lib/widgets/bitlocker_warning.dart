@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class BitlockerInfoBox extends StatelessWidget {
@@ -42,9 +43,13 @@ class BitlockerInfoBox extends StatelessWidget {
                 onLinkTap: (url, _, __) => launchUrl(url!),
               ),
               if (onPressed != null)
-                OutlinedButton(
-                  onPressed: onPressed,
-                  child: Text(l10n.restartIntoWindows),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: kWizardSpacing / 2),
+                  child: OutlinedButton(
+                    onPressed: onPressed,
+                    child: Text(l10n.restartIntoWindows),
+                  ),
                 ),
             ],
           ),
