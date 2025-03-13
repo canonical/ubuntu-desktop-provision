@@ -1043,7 +1043,7 @@
   "@autoinstallDirectErrorInvalidUrlBody": {},
   "landscapeDomainNoInternetDescriptionWarning": "Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
-  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor na automatickú inštaláciu prostredníctvom Landscape.",
+  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie cez Landscape.",
   "@autoinstallLandscapeDescription": {},
   "landscapeMagicAttachInstructions": "Naskenujte QR kód alebo zadajte kód nižšie na <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
@@ -1181,6 +1181,20 @@
         "type": "String"
       },
       "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Automatická inštalácia nie je dostupná pre váš účet",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Landscape doména (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Kontaktujte svoju IT podporu alebo vyskúšajte inú možnosť inštalácie.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Chybový kód: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
         "type": "String"
       }
     }
