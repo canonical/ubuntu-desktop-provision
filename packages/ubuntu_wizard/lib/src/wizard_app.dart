@@ -39,8 +39,10 @@ class WizardApp extends StatelessWidget {
           theme: (theme ?? flavor?.theme ?? yaru.theme)?.customize(),
           darkTheme:
               (darkTheme ?? flavor?.darkTheme ?? yaru.darkTheme)?.customize(),
-          highContrastTheme: yaruHighContrastLight.customize(),
-          highContrastDarkTheme: yaruHighContrastDark.customize(),
+          highContrastTheme:
+              yaruHighContrastLight.customize(highContrast: true),
+          highContrastDarkTheme:
+              yaruHighContrastDark.customize(highContrast: true),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: localizationsDelegates,
           supportedLocales: supportedLocales,
