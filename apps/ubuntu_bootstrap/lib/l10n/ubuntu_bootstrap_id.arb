@@ -40,7 +40,7 @@
   "@diskHeadersMountPoint": {},
   "partitionCreateTitle": "Buat partisi",
   "@partitionCreateTitle": {},
-  "installationTypeAdvancedLabel": "Fitur tingkat lanjut...",
+  "installationTypeAdvancedLabel": "Tampilkan opsi tingkat lanjut...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAlongside": "Pasang {product} bersama {os}",
   "@installationTypeAlongside": {
@@ -143,15 +143,15 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Hapus disk dan pasang {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeAdvancedTitle": "Fitur-fitur tingkat lanjut",
+  "installationTypeAdvancedTitle": "Enkripsi dan sistem berkas",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Nihil",
+  "installationTypeNone": "Tanpa enkripsi",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Tidak ada yang dipilih",
   "@installationTypeNoneSelected": {},
   "installationTypeEncryptInfo": "Anda akan memilih kunci keamanan di langkah berikutnya.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Hapus disk dan gunakan ZFS",
+  "installationTypeZFS": "Gunakan ZFS tanpa enkripsi",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS dipilih",
   "@installationTypeZFSSelected": {},
@@ -242,7 +242,7 @@
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Membuat tabel partisi baru di seluruh perangkat akan menghapus semua partisi saat ini. Operasi ini tidak bisa dibatalkan jika diperlukan.",
   "@newPartitionTableConfirmationMessage": {},
-  "installationTypeTPMInfo": "Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis {DISTRO} berikutnya. <a href=\"{url}\">Baca tentang enkripsi TPM</a> sebelum Anda memilih opsi ini.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Bacalah tentang enkripsi TPM</a> sebelum Anda memilih opsi ini. Ini mungkin tidak bekerja dengan perangkat keras atau rilis {DISTRO} di masa depan.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -289,7 +289,7 @@
       }
     }
   },
-  "rstHeader": "Nonaktifkan RST untuk melanjutkan",
+  "rstHeader": "Anda harus menonaktifkan RST untuk melanjutkan instalasi",
   "@rstHeader": {},
   "showSecurityKey": "Tampilkan",
   "@showSecurityKey": {},
@@ -349,17 +349,17 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Eksperimental",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Gunakan LVM",
+  "installationTypeLVM": "Gunakan LVM tanpa enkripsi",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Gunakan LVM dan enkripsi",
+  "installationTypeLVMEncryption": "Enkripsi dengan frasa sandi",
   "@installationTypeLVMEncryption": {},
   "installationTypeLVMEncryptionSelected": "LVM dan enkripsi terpilih",
   "@installationTypeLVMEncryptionSelected": {},
-  "installationTypeZFSEncryption": "Hapus disk dan gunakan ZFS dengan enkripsi",
+  "installationTypeZFSEncryption": "Enkripsi dengan frasa sandi menggunakan ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS dan enkripsi dipilih",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPM": "Aktifkan enkripsi disk penuh yang didukung perangkat keras",
+  "installationTypeTPM": "Gunakan enkripsi yang didukung oleh perangkat keras",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM dipilih",
   "@installationTypeTPMSelected": {},
@@ -415,7 +415,7 @@
   "@confirmDevicesTitle": {},
   "confirmEntryApplications": "Aplikasi",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Penyiapan disk",
+  "confirmEntryDiskSetup": "Tipe instalasi",
   "@confirmEntryDiskSetup": {},
   "confirmEntryInstallationDisk": "Disk instalasi",
   "@confirmEntryInstallationDisk": {},
@@ -1123,5 +1123,106 @@
   "landscapeCodeExpiredWarning": "Kode kedaluwarsa, silakan coba lagi",
   "@landscapeCodeExpiredWarning": {},
   "landscapeLoginFailedWarning": "Log masuk gagal, silakan coba lagi",
-  "@landscapeLoginFailedWarning": {}
+  "@landscapeLoginFailedWarning": {},
+  "installationTypeLVMEncryptionInfo": "Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda. Ini menggunakan enkripsi LUKS dengan LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "confirmTableErased": "Dihapus",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Tidak berubah",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Diubah ukuran dari {oldsize} ke {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Diformat sebagai {format} yang digunakan untuk {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Digunakan untuk {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Pemasangan terotomasi tidak tersedia untuk akun Anda",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageCode": "Kode galat: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDescription": "Satu atau lebih partisi dienkripsi dengan BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoInstructions": "Untuk instruksi, kunjungi <a href=\"{url}\">panduan BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Anda bisa kehilangan semua data Anda tanpa kunci pemulihan BitLocker",
+  "@bitlockerWarningTitle": {},
+  "confirmTableCreatedFormattedMounted": "Dibuat dan diformat sebagai {format} yang digunakan untuk {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Diformat sebagai {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "BitLocker terdeteksi",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDisable": "Untuk memasang berdampingan dengan Windows, nonaktifkan BitLocker di Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows mungkin meminta kunci pemulihan saat boot setelah instalasi.",
+  "@bitlockerInfoRecovery": {},
+  "landscapeDomainHintText": "Domain (FQDN) Landscape",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Hubungi dukungan TI Anda atau cobalah opsi instalasi lain.",
+  "@landscapeErrorPageBody": {},
+  "installationTypeZFSEncryptionInfo": "Enkripsi native dengan ZFS. Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeNoneInfo": "Sistem berkas standar tanpa enkripsi.",
+  "@installationTypeNoneInfo": {},
+  "restartComputer": "Jalankan ulang komputer",
+  "@restartComputer": {},
+  "restartComputerTitle": "Jalankan ulang komputer?",
+  "@restartComputerTitle": {},
+  "rstDisable": "Komputer Anda memakai Intel RST (Rapid Storage Technology). Anda dapat menonaktifkan RST dalam:",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windows, jika Anda menggunakan setup dual boot dengan Windows",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "Pengaturan BIOS",
+  "@rstDisableBios": {}
 }
