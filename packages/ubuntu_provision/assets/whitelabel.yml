@@ -20,6 +20,8 @@ pages:
   autoinstall-landscape-domain:
     image: "assets/images/landscape.svg"
   autoinstall-landscape-qr:
+  autoinstall-landscape-error:
+    image: "assets/images/error.svg"
   source-selection:
     image: "assets/images/applications.svg"
   codecs-and-drivers:

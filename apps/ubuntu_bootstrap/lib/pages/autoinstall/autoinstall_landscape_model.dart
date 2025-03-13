@@ -23,6 +23,7 @@ class LandscapeData with _$LandscapeData {
     @Default('') String autoinstall,
     @Default('') String domainUrl,
     @Default(false) bool isLoading,
+    @Default(false) bool unretriableError,
     Object? error,
   }) = _LandscapeData;
 
@@ -67,12 +68,25 @@ class LandscapeDataModel extends _$LandscapeDataModel {
     AuthenticationStatus status,
     String? autoinstall,
   ) async {
-    if (status == AuthenticationStatus.authenticationSuccess) {
-      loadYaml(autoinstall!);
-      await getService<AutoinstallService>().writeFile(autoinstall);
-      await getService<AutoinstallService>().restartSubiquity();
-      ref.read(restartProvider.notifier).state++;
-      ref.invalidate(loadingProvider);
+    switch (status) {
+      case AuthenticationStatus.authenticationSuccess:
+        loadYaml(autoinstall!);
+        await getService<AutoinstallService>().writeFile(autoinstall);
+        await getService<AutoinstallService>().restartSubiquity();
+        ref.read(restartProvider.notifier).state++;
+        ref.invalidate(loadingProvider);
+      case AuthenticationStatus.authenticationPending:
+      case AuthenticationStatus.errorCodeNotFound:
+      case AuthenticationStatus.errorCanceledByUser:
+      case AuthenticationStatus.errorCodeExpired:
+        break;
+      case AuthenticationStatus.errorEmployeeLimitExceeded:
+      case AuthenticationStatus.errorEmployeeDeactivated:
+      case AuthenticationStatus.errorEmployeeComputerLimitExceeded:
+      case AuthenticationStatus.errorMissingAutoinstallFile:
+        state = state.copyWith(
+          unretriableError: true,
+        );
     }
   }
 
@@ -92,6 +106,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       }
     } on Exception catch (e) {
       _log.debug('Caught error during attach: $e');
+
       state = state.copyWith(error: e, isLoading: false);
       return false;
     }
@@ -121,5 +136,9 @@ class LandscapeDataModel extends _$LandscapeDataModel {
         );
       },
     );
+  }
+
+  void resetUnretriableError() {
+    state = state.copyWith(domainUrl: '', unretriableError: false, error: null);
   }
 }

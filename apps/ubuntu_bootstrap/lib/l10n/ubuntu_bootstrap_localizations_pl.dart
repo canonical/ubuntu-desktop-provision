@@ -1105,6 +1105,9 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Wprowadź domenę Landscape (FQDN)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od pomocy technicznej.';
 
   @override
@@ -1127,4 +1130,15 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeLoginFailedWarning => 'Logowanie nie powiodło się, spróbuj ponownie';
+
+  @override
+  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+
+  @override
+  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+
+  @override
+  String landscapeErrorPageCode(String code) {
+    return 'Error code: $code';
+  }
 }

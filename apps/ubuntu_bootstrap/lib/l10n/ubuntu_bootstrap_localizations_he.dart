@@ -1105,6 +1105,9 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'נא למלא שם תחום ל־Landscape‏ (מלא/FQDN)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'נא לספק את שם התחום של הארגון שלך ב־Landscape כדי להיכנס ולמשוך קובץ התקנה אוטומטית (autoinstall). אפשר לקבל את שם התחום המלא (FQDN) שלך מתמיכת המחשוב.';
 
   @override
@@ -1127,4 +1130,15 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeLoginFailedWarning => 'הכניסה נכשלה, נא לנסות שוב';
+
+  @override
+  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+
+  @override
+  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+
+  @override
+  String landscapeErrorPageCode(String code) {
+    return 'Error code: $code';
+  }
 }

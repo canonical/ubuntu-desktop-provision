@@ -25,8 +25,18 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
     // log current authentication status when is changes:
     _log.debug(model.authenticationStatus);
     if (model.authenticationStatus ==
-        service.AuthenticationStatus.authenticationSuccess) {
-      Wizard.of(context).next();
+            service.AuthenticationStatus.authenticationSuccess ||
+        model.authenticationStatus ==
+            service.AuthenticationStatus.errorEmployeeLimitExceeded ||
+        model.authenticationStatus ==
+            service.AuthenticationStatus.errorEmployeeDeactivated ||
+        model.authenticationStatus ==
+            service.AuthenticationStatus.errorEmployeeComputerLimitExceeded ||
+        model.authenticationStatus ==
+            service.AuthenticationStatus.errorMissingAutoinstallFile) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Wizard.of(context).next();
+      });
     }
     return HorizontalPage(
       windowTitle: l10n.landscapePageTitle,
@@ -134,7 +144,11 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) async {
-    if (ref.watch(autoinstallModelProvider).type != AutoinstallType.landscape) {
+    _log.debug(
+      'unretryableError: ${ref.watch(landscapeDataModelProvider).unretriableError}',
+    );
+    if (ref.watch(autoinstallModelProvider).type != AutoinstallType.landscape ||
+        ref.watch(landscapeDataModelProvider).unretriableError) {
       return false;
     }
     final model = ref.watch(landscapeDataModelProvider.notifier);

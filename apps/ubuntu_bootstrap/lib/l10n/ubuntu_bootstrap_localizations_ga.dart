@@ -1105,6 +1105,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Cuir isteach fearann Tírdhreacha (FQDN)';
 
   @override
+  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+
+  @override
   String get landscapeDomainInstructions => 'Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.';
 
   @override
@@ -1127,4 +1130,15 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeLoginFailedWarning => 'Theip ar logáil isteach, bain triail eile as';
+
+  @override
+  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+
+  @override
+  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+
+  @override
+  String landscapeErrorPageCode(String code) {
+    return 'Error code: $code';
+  }
 }

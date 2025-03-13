@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_landscape_model.dart';
 import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -10,7 +11,9 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
   const AutoinstallPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) async => true;
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    return true;
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,7 +26,13 @@ class AutoinstallPage extends ConsumerWidget with ProvisioningPage {
       title: lang.autoinstallHeader(flavor.displayName),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
-        trailing: const [NextWizardButton()],
+        trailing: [
+          NextWizardButton(
+            onNext: () => ref
+                .read(landscapeDataModelProvider.notifier)
+                .resetUnretriableError(),
+          ),
+        ],
       ),
       children: [
         OptionButton(

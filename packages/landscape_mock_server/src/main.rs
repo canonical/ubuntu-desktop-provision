@@ -20,6 +20,8 @@ struct CliArgs {
     #[arg(long)]
     watch_error: bool,
     #[arg(long)]
+    watch_unretriable_error: bool,
+    #[arg(long)]
     attach_error: bool,
     #[arg(long)]
     watch_fail: bool,
@@ -30,6 +32,7 @@ struct CliArgs {
 #[derive(Clone, Default)]
 pub struct LandscapeService {
     watch_error: bool,
+    watch_unretriable_error: bool,
     attach_error: bool,
     watch_fail: bool,
     attach_fail: bool,
@@ -39,6 +42,7 @@ impl LandscapeService {
     fn new(args: &CliArgs) -> Self {
         Self {
             watch_error: args.watch_error,
+            watch_unretriable_error: args.watch_unretriable_error,
             attach_error: args.attach_error,
             watch_fail: args.watch_fail,
             attach_fail: args.attach_fail,
@@ -101,6 +105,12 @@ impl LandscapeInstallerAttach for LandscapeService {
             vec![
                 AuthenticationStatus::AuthenticationPending as i32,
                 AuthenticationStatus::ErrorCodeNotFound as i32,
+            ]
+        } else if self.watch_unretriable_error {
+            println!("Simulated watch unretriable error");
+            vec![
+                AuthenticationStatus::AuthenticationPending as i32,
+                AuthenticationStatus::ErrorEmployeeDeactivated as i32,
             ]
         } else {
             println!("Simulated watch success");

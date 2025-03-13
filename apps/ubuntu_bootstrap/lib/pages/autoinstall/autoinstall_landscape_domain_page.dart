@@ -51,6 +51,9 @@ class AutoinstallLandscapeDomainPage extends ConsumerWidget
           validator: (_) => landscapeModel.error != null
               ? l10n.landscapeDomainInvalidDomainWarning
               : null,
+          decoration: InputDecoration(
+            hintText: l10n.landscapeDomainHintText,
+          ),
         ),
       ],
     );

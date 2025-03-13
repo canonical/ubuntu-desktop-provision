@@ -43,6 +43,11 @@ enum InstallationStep with RouteName {
   autoinstall(AutoinstallPage.new, allowedToHide: true),
   autoinstallLandscapeDomain(AutoinstallLandscapeDomainPage.new),
   autoinstallLandscapeQr(AutoinstallLandscapeQrPage.new),
+  autoinstallLandscapeError(
+    AutoinstallLandscapeErrorPage.new,
+    discreteStep: false,
+    onBackOverride: autoinstall,
+  ),
   autoinstallDirect(AutoinstallDirectPage.new),
   sourceSelection(SourceSelectionPage.new, allowedToHide: true),
   codecsAndDrivers(CodecsAndDriversPage.new),
@@ -72,6 +77,7 @@ enum InstallationStep with RouteName {
     this.wizardStep = true,
     this.allowedToHide = false,
     this.required = false,
+    this.onBackOverride,
   });
 
   final ProvisioningPage Function() pageFactory;
@@ -87,6 +93,9 @@ enum InstallationStep with RouteName {
 
   /// Whether the page is required.
   final bool required;
+
+  /// Installation step to navigate to when back is pressed.
+  final InstallationStep? onBackOverride;
 
   /// Gets all the pages that should be handled by the wizard.
   static Iterable<InstallationStep> get wizardSteps =>
@@ -106,6 +115,7 @@ enum InstallationStep with RouteName {
         }
         return false;
       },
+      onBack: onBackOverride != null ? (_) => onBackOverride!.route : null,
     );
   }
 

@@ -26,7 +26,7 @@ final watchResponseProvider =
 typedef WatchResponseRef
     = AutoDisposeStreamProviderRef<WatchAuthenticationResponse>;
 String _$landscapeDataModelHash() =>
-    r'f57c793ee1d4c5bc5de3ed3d8d41b877d8bc18cd';
+    r'49f60fe43129e9a5107be7e88baf319803d93869';
 
 /// See also [LandscapeDataModel].
 @ProviderFor(LandscapeDataModel)
