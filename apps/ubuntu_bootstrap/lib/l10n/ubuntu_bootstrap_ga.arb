@@ -756,7 +756,7 @@
   "@confirmDevicesTitle": {},
   "confirmEntryApplications": "Iarratais",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Socrú diosca",
+  "confirmEntryDiskSetup": "Cineál a shuiteáil",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Criptiú diosca",
   "@confirmEntryDiskEncryption": {},
@@ -1225,5 +1225,72 @@
   "installationTypeLVMEncryptionInfo": "Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeZFSEncryptionInfo": "Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.",
-  "@installationTypeZFSEncryptionInfo": {}
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Scriosta",
+  "@confirmTableErased": {},
+  "confirmTableResized": "Athmhéadaithe ó {oldsize} go {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Úsáidte le haghaidh {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageCode": "Cód earráide: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Cruthaithe agus formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formáidithe mar {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableUnchanged": "Gan athrú",
+  "@confirmTableUnchanged": {},
+  "landscapeErrorPageBody": "Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageTitle": "Níl suiteáil uathoibrithe ar fáil le do chuntas",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Fearann tírdhreacha (FQDN)",
+  "@landscapeDomainHintText": {}
 }
