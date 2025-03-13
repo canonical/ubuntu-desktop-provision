@@ -11,6 +11,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:yaru_test/yaru_test.dart';
 
 import 'guided_resize_model_test.dart';
 import 'test_guided_resize.dart';
@@ -76,6 +77,36 @@ void main() {
     await tester.pump();
 
     verify(model.selectStorage(2)).called(1);
+  });
+
+  testWidgets('storage selction - BitLocker', (tester) async {
+    final model = buildGuidedResizeModel(
+      storageCount: 5,
+      selectedIndex: 1,
+      bitLockerPartitions: [
+        Partition(number: 7, size: 123, format: 'BitLocker'),
+      ],
+    );
+    await tester.pumpApp((_) => buildPage(model));
+
+    await tester.tap(find.byType(MenuButtonBuilder<int>));
+    await tester.pumpAndSettle();
+
+    final bitLockerEntry = find.ancestor(
+      of: find.byWidgetPredicate(
+        (widget) =>
+            widget is Text && widget.data!.toLowerCase().contains('bitlocker'),
+      ),
+      matching: find.byType(MenuItemButton),
+    );
+
+    expect(bitLockerEntry, findsOneWidget);
+    expect(bitLockerEntry, isDisabled);
+
+    await tester.ensureVisible(bitLockerEntry);
+    await tester.tap(bitLockerEntry);
+
+    verifyNever(model.selectStorage(any));
   });
 
   testWidgets('storage resize', (tester) async {

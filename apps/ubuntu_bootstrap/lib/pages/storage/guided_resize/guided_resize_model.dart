@@ -28,6 +28,7 @@ class GuidedResizeModel extends SafeChangeNotifier {
   int? _selectedIndex;
   int? _currentSize;
   var _hasBitLocker = false;
+  var _bitLockerPartitions = <Partition>[];
 
   /// Detailed info of the product being installed.
   ProductInfo get productInfo => _product.getProductInfo();
@@ -64,6 +65,8 @@ class GuidedResizeModel extends SafeChangeNotifier {
 
   /// Whether BitLocker is detected.
   bool get hasBitLocker => _hasBitLocker;
+
+  List<Partition> get bitLockerPartitions => _bitLockerPartitions;
 
   /// The currently selected guided storage.
   GuidedStorageTargetResize? get selectedStorage {
@@ -130,6 +133,17 @@ class GuidedResizeModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
+  void _updateBitLockerPartitions(List<Disk> disks) {
+    _bitLockerPartitions = disks
+        .map(
+          (d) => d.partitions
+              .whereType<Partition>()
+              .where((p) => p.format?.toLowerCase() == 'bitlocker'),
+        )
+        .expand((e) => e)
+        .toList();
+  }
+
   /// Loads the targets available for guided resizing and returns true if there
   /// there are any available.
   Future<bool> init() async {
@@ -137,6 +151,7 @@ class GuidedResizeModel extends SafeChangeNotifier {
     return _storage.getStorage().then((disks) async {
       _disks = {for (final disk in disks) disk.id: disk};
       final response = await _storage.getGuidedStorage();
+      _updateBitLockerPartitions(disks);
       _updateStorage(response);
       final gaps = response.targets
           .whereType<GuidedStorageTargetUseGap>()

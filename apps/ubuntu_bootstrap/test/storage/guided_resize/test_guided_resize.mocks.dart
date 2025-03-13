@@ -95,6 +95,12 @@ class MockGuidedResizeModel extends _i1.Mock implements _i3.GuidedResizeModel {
       ) as bool);
 
   @override
+  List<_i4.Partition> get bitLockerPartitions => (super.noSuchMethod(
+        Invocation.getter(#bitLockerPartitions),
+        returnValue: <_i4.Partition>[],
+      ) as List<_i4.Partition>);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
