@@ -1131,5 +1131,19 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeErrorPageBody": "Skontaktuj się ze swoim wsparciem IT lub wypróbuj inną opcję instalacji.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Kod błędu: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Domena Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Automatyczna instalacja nie jest dostępna dla Twojego konta",
+  "@landscapeErrorPageTitle": {}
 }
