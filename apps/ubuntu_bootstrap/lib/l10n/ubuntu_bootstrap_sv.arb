@@ -911,7 +911,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Program",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Diskinställningar",
+  "confirmEntryDiskSetup": "Typ av installation",
   "@confirmEntryDiskSetup": {},
   "confirmSectionSecurityAndMoreTitle": "Säkerhet & mer",
   "@confirmSectionSecurityAndMoreTitle": {},
@@ -1123,5 +1123,76 @@
   "installationTypeZFSEncryptionInfo": "Inbyggd kryptering med ZFS. Du måste ange en lösenordsfras varje gång du slår på din dator.",
   "@installationTypeZFSEncryptionInfo": {},
   "installationTypeNoneInfo": "Standard filsystem utan kryptering.",
-  "@installationTypeNoneInfo": {}
+  "@installationTypeNoneInfo": {},
+  "confirmTableErased": "Raderad",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Oförändrad",
+  "@confirmTableUnchanged": {},
+  "confirmTableMounted": "Används för {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Landscape domän (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageCode": "Felkod: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu kommer att installeras med den konfiguration som tillhandahålls av din organisation",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "confirmTableFormattedMounted": "Formaterad som {format} används för {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Kontakta din IT-support eller prova ett annat installationsalternativ.",
+  "@landscapeErrorPageBody": {},
+  "confirmTableFormatted": "Formaterad som {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "Ändrat storlek från {oldsize} till {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Automatisk installation är inte tillgänglig för ditt konto",
+  "@landscapeErrorPageTitle": {},
+  "confirmTableCreatedFormattedMounted": "Skapad och formaterad som {format} används för {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoContent": "Du kan granska autoinstallationsfilen som importeras från Landscape nedan.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
