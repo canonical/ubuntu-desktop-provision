@@ -959,9 +959,9 @@
       }
     }
   },
-  "landscapeLoginFailedWarning": "Вход в систему не удался, попробуйте еще раз",
+  "landscapeLoginFailedWarning": "Вход в систему не удался, попробуйте ещё раз",
   "@landscapeLoginFailedWarning": {},
-  "landscapeDomainInvalidDomainWarning": "Неверный домен, проверьте или обратитесь в службу ИТ-поддержки",
+  "landscapeDomainInvalidDomainWarning": "Неверный домен, проверьте или обратитесь в службу технической поддержки",
   "@landscapeDomainInvalidDomainWarning": {},
   "landscapeMagicAttachInstructions": "Отсканируйте QR-код или введите код ниже на сайте <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
@@ -970,25 +970,25 @@
       "url": {}
     }
   },
-  "landscapeDomainInstructions": "Укажите домен ландшафта вашей организации для входа в систему и получения файла автоустановки. FQDN можно получить в службе ИТ-поддержки.",
+  "landscapeDomainInstructions": "Укажите домен Landscape вашей организации для входа в систему и получения файла автоматической установки. FQDN можно получить в службе технической поддержки.",
   "@landscapeDomainInstructions": {},
-  "landscapeCodeExpiredWarning": "Код истек, пожалуйста, попробуйте еще раз",
+  "landscapeCodeExpiredWarning": "Код устарел, пожалуйста, попробуйте ещё раз",
   "@landscapeCodeExpiredWarning": {},
-  "autoinstallLandscapeOption": "Автоматизированный с ландшафтом",
+  "autoinstallLandscapeOption": "Автоматизированный с Landscape",
   "@autoinstallLandscapeOption": {},
-  "landscapeHeader": "Войдите в систему, чтобы узнать о ландшафте",
+  "landscapeHeader": "Войдите в систему, чтобы узнать о Landscape",
   "@landscapeHeader": {},
-  "autoinstallLandscapeDescription": "Для пользователей в организациях, которые предоставляют файл автоустановки через ландшафт.",
+  "autoinstallLandscapeDescription": "Для пользователей организаций, которые предоставляют файл автоматической установки через Landscape.",
   "@autoinstallLandscapeDescription": {},
   "landscapePageTitle": "Автоматическая установка",
   "@landscapePageTitle": {},
-  "landscapeDomainHeader": "Введите домен ландшафта (FQDN)",
+  "landscapeDomainHeader": "Введите домен Landscape (FQDN)",
   "@landscapeDomainHeader": {},
-  "landscapeDomainTextField": "Домен ландшафта (FQDN)",
+  "landscapeDomainTextField": "Домен Landscape (FQDN)",
   "@landscapeDomainTextField": {},
   "next": "Следующий",
   "@next": {},
-  "landscapeDomainNoInternetDescriptionWarning": "Интернет необходим для получения файла автоустановки из ландшафта",
+  "landscapeDomainNoInternetDescriptionWarning": "Интернет необходим для получения файла автоустановки из Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
   "landscapeDomainNoInternetTitleWarning": "Подключитесь к Интернету, чтобы продолжить",
   "@landscapeDomainNoInternetTitleWarning": {},
@@ -1073,5 +1073,74 @@
   "installationTypeZFSEncryptionInfo": "Встроенное шифрование с помощью ZFS. Вам нужно будет вводить кодовую фразу каждый раз при включении компьютера.",
   "@installationTypeZFSEncryptionInfo": {},
   "installationTypeLVMEncryptionInfo": "Вам нужно будет вводить пароль каждый раз при включении компьютера. Эта функция использует шифрование LUKS с LVM.",
-  "@installationTypeLVMEncryptionInfo": {}
+  "@installationTypeLVMEncryptionInfo": {},
+  "confirmTableResized": "Размер изменён с {oldsize} на {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Обратитесь в службу технической поддержки или попробуйте другой вариант установки.",
+  "@landscapeErrorPageBody": {},
+  "confirmTableUnchanged": "Без изменений",
+  "@confirmTableUnchanged": {},
+  "confirmTableFormattedMounted": "Отформатировано как {format}, использовано для {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Отформатировано как {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Использовано для {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Создано и отформатировано как {format}, использовано для {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageCode": "Код ошибки: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Автоматическая установка недоступна для вашей учётной записи",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Домен Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu будет установлена с конфигурацией, предоставленной вашей организацией",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Ниже вы можете просмотреть файл автоматической установки, импортированный из Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
