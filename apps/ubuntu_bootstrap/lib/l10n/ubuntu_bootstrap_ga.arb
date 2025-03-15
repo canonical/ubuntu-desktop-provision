@@ -165,33 +165,33 @@
   },
   "installationTypeEraseInfo": "Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.",
   "@installationTypeEraseInfo": {},
-  "installationTypeAdvancedLabel": "Gnéithe casta...",
+  "installationTypeAdvancedLabel": "Taispeáin ardroghanna...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Gnéithe casta",
+  "installationTypeAdvancedTitle": "Criptiú agus córas comhaid",
   "@installationTypeAdvancedTitle": {},
   "installationTypeExperimental": "Turgnamhach",
   "@installationTypeExperimental": {},
   "installationTypeNoneSelected": "Níl aon cheann roghnaithe",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Úsáid LVM",
+  "installationTypeLVM": "Bain úsáid as LVM gan criptiú",
   "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM roghnaithe",
   "@installationTypeLVMSelected": {},
-  "installationTypeLVMEncryption": "Úsáid LVM agus criptiú",
+  "installationTypeLVMEncryption": "Criptigh le pasfhrása",
   "@installationTypeLVMEncryption": {},
   "installationTypeLVMEncryptionSelected": "LVM agus criptiú roghnaithe",
   "@installationTypeLVMEncryptionSelected": {},
   "installationTypeEncryptInfo": "Roghnóidh tú eochair slándála sa chéad chéim eile.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Léirscrios diosca agus úsáid ZFS",
+  "installationTypeZFS": "Bain úsáid as ZFS gan criptiú",
   "@installationTypeZFS": {},
-  "installationTypeZFSEncryption": "Léirscrios diosca agus úsáid ZFS le criptiú",
+  "installationTypeZFSEncryption": "Criptigh le pasfhrása ag baint úsáide as ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSSelected": "ZFS roghnaithe",
   "@installationTypeZFSSelected": {},
   "installationTypeZFSEncryptionSelected": "ZFS agus criptiú roghnaithe",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPM": "Cumasaigh criptiú diosca iomlán le tacaíocht crua-earraí",
+  "installationTypeTPM": "Bain úsáid as criptiúchán crua-earraí",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM roghnaithe",
   "@installationTypeTPMSelected": {},
@@ -684,7 +684,7 @@
   "@offlineWarning": {},
   "choosePassphraseTitle": "Pasfhrása diosca",
   "@choosePassphraseTitle": {},
-  "installationTypeNone": "Ceann ar bith",
+  "installationTypeNone": "Gan criptiú",
   "@installationTypeNone": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Rabhadh:</font> Scriosfaidh sé seo do ríomhchláir, doiciméid, grianghraif, ceol agus comhaid ar bith eile {os}.",
   "@installationTypeReinstallWarning": {
@@ -756,7 +756,7 @@
   "@confirmDevicesTitle": {},
   "confirmEntryApplications": "Iarratais",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Socrú diosca",
+  "confirmEntryDiskSetup": "Cineál a shuiteáil",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Criptiú diosca",
   "@confirmEntryDiskEncryption": {},
@@ -1056,7 +1056,7 @@
       }
     }
   },
-  "installationTypeTPMInfo": "Is gné thurgnamhach é seo. Seans nach n-oibreoidh sé le do chrua-earraí nó le heisiúintí {DISTRO} amach anseo. <a href=\"{url}\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo. Seans nach n-oibreoidh sé seo le do chrua-earraí nó le heisiúintí {DISTRO} amach anseo.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1201,5 +1201,96 @@
   "rstDisableWindows": "Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows",
   "@rstDisableWindows": {},
   "rstDisableBios": "Socruithe BIOS",
-  "@rstDisableBios": {}
+  "@rstDisableBios": {},
+  "bitlockerInfoDescription": "Tá deighilt amháin nó níos mó criptithe le BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoRecovery": "Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Le treoracha a fháil, tabhair cuairt ar an <a href=\"{url}\">Treoir BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "Braitheadh BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDisable": "Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerWarningTitle": "Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker",
+  "@bitlockerWarningTitle": {},
+  "installationTypeNoneInfo": "Córas comhad caighdeánach gan criptiú.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Scriosta",
+  "@confirmTableErased": {},
+  "confirmTableResized": "Athmhéadaithe ó {oldsize} go {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Úsáidte le haghaidh {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageCode": "Cód earráide: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Cruthaithe agus formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formáidithe mar {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableUnchanged": "Gan athrú",
+  "@confirmTableUnchanged": {},
+  "landscapeErrorPageBody": "Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageTitle": "Níl suiteáil uathoibrithe ar fáil le do chuntas",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Fearann tírdhreacha (FQDN)",
+  "@landscapeDomainHintText": {}
 }

@@ -6,7 +6,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.",
   "@installThirdPartySubtitle": {},
-  "rstInstructions": "Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Pre inštrukcie naskenujte QR kód na inom zariadení alebo navštívte: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -156,11 +156,11 @@
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Pokročilé funkcie…",
+  "installationTypeAdvancedLabel": "Zobraziť rozšírené možnosti...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Pokročilé funkcie",
+  "installationTypeAdvancedTitle": "Šifrovanie a súborový systém",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Žiadne",
+  "installationTypeNone": "Bez šifrovania",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nič nevybrané",
   "@installationTypeNoneSelected": {},
@@ -236,7 +236,7 @@
   },
   "installationSlidesAccessibilityOrca": "Čítačka obrazovky Orca",
   "@installationSlidesAccessibilityOrca": {},
-  "installationSlidesSupportHeader": "Oficiálna dokumentácia k {DISTRO} je k dispozícii online aj cez ikonu Pomocník na paneli.",
+  "installationSlidesSupportHeader": "Oficiálna dokumentácia {DISTRO} je k dispozícii online aj cez ikonu Pomocník v doku.",
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
@@ -450,7 +450,7 @@
   },
   "installationTypeEncryptInfo": "V nasledujúcom kroku si zvolíte bezpečnostný kľúč.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Vymazať disk a použiť ZFS",
+  "installationTypeZFS": "Použiť ZFS bez šifrovania",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Nainštalovať {product} vedľa {os}",
   "@installationTypeAlongside": {
@@ -600,7 +600,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Zapnúť hardvérovo zálohované šifrovanie celého disku",
+  "installationTypeTPM": "Použiť hardvérové šifrovanie",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Vybrané TPM",
   "@installationTypeTPMSelected": {},
@@ -828,7 +828,7 @@
   "@confirmPassphrase": {},
   "createPassphrase": "Vytvoriť prístupovú frázu",
   "@createPassphrase": {},
-  "installationTypeLVMEncryption": "Použiť LVM a šifrovanie",
+  "installationTypeLVMEncryption": "Šifrovať prístupovou frázou",
   "@installationTypeLVMEncryption": {},
   "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.",
   "@codecsAndDriversPageBody": {
@@ -854,13 +854,13 @@
   "@choosePassphraseInfoBody": {},
   "installationTypeExperimental": "Experimentálne",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Použiť LVM",
+  "installationTypeLVM": "Použiť LVM bez šifrovania",
   "@installationTypeLVM": {},
-  "installationTypeZFSEncryption": "Vymazať disk a použiť ZFS so šifrovaním",
+  "installationTypeZFSEncryption": "Šifrovať prístupovou frázou v ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybrané ZFS a šifrovanie",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom alebo budúcimi vydaniami {DISTRO}. <a href=\"{url}\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Prečítajte si o šifrovaní TPM</a>, než si vyberiete túto možnosť. Možno nebude fungovať s vaším hardvérom alebo budúcimi verziami {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -893,7 +893,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Aplikácie",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Nastavenie disku",
+  "confirmEntryDiskSetup": "Typ inštalácie",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Šifrovanie disku",
   "@confirmEntryDiskEncryption": {},
@@ -1043,7 +1043,7 @@
   "@autoinstallDirectErrorInvalidUrlBody": {},
   "landscapeDomainNoInternetDescriptionWarning": "Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
-  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor na automatickú inštaláciu prostredníctvom Landscape.",
+  "autoinstallLandscapeDescription": "Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie cez Landscape.",
   "@autoinstallLandscapeDescription": {},
   "landscapeMagicAttachInstructions": "Naskenujte QR kód alebo zadajte kód nižšie na <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
@@ -1107,5 +1107,100 @@
   "restartComputerTitle": "Reštartovať počítač?",
   "@restartComputerTitle": {},
   "restartComputer": "Reštartovať počítač",
-  "@restartComputer": {}
+  "@restartComputer": {},
+  "bitlockerInfoInstructions": "Pre inštrukcie navštívte <a href=\"{url}\">sprievodcu BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "Zistený BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerWarningTitle": "Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDescription": "Jeden alebo viacero oddielov je šifrovaných pomocou BitLockeru.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.",
+  "@bitlockerInfoRecovery": {},
+  "installationTypeNoneInfo": "Štandardný súborový systém bez šifrovania.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Vymazané",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Nezmenené",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Veľkosť bola zmenená z {oldsize} na {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formátované ako {format} použité pre {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Používa sa pre {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Naformátované ako {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Vytvorené a naformátované ako {format} použité pre {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Automatická inštalácia nie je dostupná pre váš účet",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Landscape doména (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Kontaktujte svoju IT podporu alebo vyskúšajte inú možnosť inštalácie.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Chybový kód: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoContent": "Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou",
+  "@landscapeConfirmPageSuccessInfoTitle": {}
 }
