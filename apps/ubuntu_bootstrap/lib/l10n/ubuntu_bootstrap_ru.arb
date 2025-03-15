@@ -1142,5 +1142,7 @@
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu будет установлена с конфигурацией, предоставленной вашей организацией",
   "@landscapeConfirmPageSuccessInfoTitle": {},
   "landscapeConfirmPageSuccessInfoContent": "Ниже вы можете просмотреть файл автоматической установки, импортированный из Landscape.",
-  "@landscapeConfirmPageSuccessInfoContent": {}
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "confirmTableErased": "Очищено",
+  "@confirmTableErased": {}
 }
