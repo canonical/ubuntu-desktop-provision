@@ -88,7 +88,7 @@
       "system": {}
     }
   },
-  "installationTypeAdvancedLabel": "Додаткові можливості...",
+  "installationTypeAdvancedLabel": "Показати додаткові параметри...",
   "@installationTypeAdvancedLabel": {},
   "installAlongsideHiddenPartitions": "{num} менших розділів приховано, скористайтеся <a href=\"{url}\">розширеним інструментом розбиття на розділи</a> для більшого контролю",
   "@installAlongsideHiddenPartitions": {
@@ -149,7 +149,7 @@
   },
   "installationTypeNoOSDetected": "На Вашому комп'ютері не виявлено жодної операційної системи. Що Ви бажаєте зробити?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeNone": "Немає",
+  "installationTypeNone": "Немає шифрування",
   "@installationTypeNone": {},
   "onBatteryWarning": "<font color=\"{color}\">Попередження</font>: комп'ютер не підключено до джерела живлення.",
   "@onBatteryWarning": {
@@ -257,14 +257,14 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "Встановити {product} поряд з ними",
+  "installationTypeAlongsideMulti": "Встановити {product} разом з наявними операційними системами",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
       "product": {}
     }
   },
-  "installationTypeAlongsideInfo": "Документи, музика та інші особисті файли будуть збережені. Ви можете вибрати, яку операційну систему ви бажаєте використовувати при кожному запуску комп'ютера.",
+  "installationTypeAlongsideInfo": "Вибрати розділ для зміни розміру та створення місця для {product}. Ви можете вибрати операційну систему під час завантаження.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Щось інше",
   "@installationTypeManual": {},
@@ -324,7 +324,7 @@
   },
   "installationTypeEncryptInfo": "Ключ захисту можна буде вибрати на наступному кроці.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "ЕКСПЕРИМЕНТАЛЬНО: Витерти диск і скористатися ZFS",
+  "installationTypeZFS": "Використання ZFS без шифрування",
   "@installationTypeZFS": {},
   "selectGuidedStoragePageTitle": "Стерти диск і встановити {DISTRO}",
   "@selectGuidedStoragePageTitle": {
@@ -370,7 +370,7 @@
   "@installCodecsTitle": {},
   "installCodecsSubtitle": "Включаючи, але не обмежуючись MP3, MP4, MOV та подібними",
   "@installCodecsSubtitle": {},
-  "installationTypeAdvancedTitle": "Додаткові можливості",
+  "installationTypeAdvancedTitle": "Шифрування та файлова система",
   "@installationTypeAdvancedTitle": {},
   "installationTypeReinstall": "Видалити {os} і встановити заново",
   "@installationTypeReinstall": {
@@ -431,11 +431,11 @@
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM обрано",
   "@installationTypeTPMSelected": {},
-  "installationTypeTPM": "ЕКСПЕРИМЕНТАЛЬНО: Увімкнути апаратне шифрування диска",
+  "installationTypeTPM": "Використовуйте апаратне шифрування",
   "@installationTypeTPM": {},
   "fullInstallationTitle": "Повна установка",
   "@fullInstallationTitle": {},
-  "rstHeader": "Вимкніть RST для продовженя",
+  "rstHeader": "Ви повинні вимкнути RST, щоб продовжити встановлення",
   "@rstHeader": {},
   "installationSlidesWelcomeTitle": "Швидка, вільна та повна нових функцій",
   "@installationSlidesWelcomeTitle": {},
@@ -485,7 +485,7 @@
   "@choosePassphraseBody": {},
   "choosePassphraseHint": "Вибрати парольну фразу",
   "@choosePassphraseHint": {},
-  "installationTypeTPMInfo": "Це експериментальна функція. Вона може не працювати на вашому обладнанні або у майбутніх випусках {DISTRO}. <a href=\"{url}\">Прочитайте про шифрування TPM</a> перед тим, як вибрати цю опцію.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Прочитайте про шифрування TPM</a>, перш ніж вибрати цей параметр. Це може не працювати на вашому обладнанні або у майбутніх випусках {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -659,7 +659,7 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Парольні фрази не збігаються",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Переконайтеся, що ви зберегли парольну фразу",
+  "choosePassphraseInfoHeader": "Зберігайте свою парольну фразу в безпечному місці",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Якщо ви втратите парольну фразу, ви втратите всі свої дані.",
   "@choosePassphraseInfoBody": {},
@@ -675,17 +675,17 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Почніть з нуля на вашому обраному диску.",
+  "installationTypeEraseInfo": "Всі дані та розділи на диску будуть стерті, включно з операційними системами.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Експериментально",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Використати LVM",
+  "installationTypeLVM": "Використання LVM без шифрування",
   "@installationTypeLVM": {},
   "installationTypeZFSEncryptionSelected": "Вибрано ZFS та шифрування",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeLVMEncryption": "Використовуйте LVM та шифрування",
+  "installationTypeLVMEncryption": "Шифрування за допомогою ключової фрази",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Очистіть диск і використовуйте ZFS з шифруванням",
+  "installationTypeZFSEncryption": "Шифрування за допомогою ключової фрази за допомогою ZFS",
   "@installationTypeZFSEncryption": {},
   "selectGuidedStorageInfo": "Почніть з нуля на вашому обраному диску.",
   "@selectGuidedStorageInfo": {},
@@ -731,7 +731,7 @@
   "@confirmDevicesTitle": {},
   "confirmEntryApplications": "Застосунки",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Налаштування диска",
+  "confirmEntryDiskSetup": "Тип установки",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Шифрування диска",
   "@confirmEntryDiskEncryption": {},
@@ -995,7 +995,7 @@
   },
   "recoveryKeyTitle": "Ключ відновлення TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Ви можете отримати доступ до ключа відновлення після встановлення за допомогою такої команди:",
+  "recoveryKeyCommand": "Щоб отримати ключ відновлення, завершіть встановлення, перезавантажте комп'ютер і виконайте цю команду в терміналі:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Попередження:</font> Якщо ви втратите цей ключ безпеки, всі дані буде втрачено. Якщо вам потрібно, запишіть свій ключ і зберігайте його в безпечному місці.",
   "@recoveryKeyWarning": {
@@ -1035,5 +1035,206 @@
   "autoinstallDirectFileLabel": "Або виберіть локальний файл:",
   "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Вибрати файл...",
-  "@autoinstallDirectFileButtonLabel": {}
+  "@autoinstallDirectFileButtonLabel": {},
+  "restartComputer": "Перезавантажити комп'ютер",
+  "@restartComputer": {},
+  "recoveryKeyConfirmation": "Я розумію, що можу втратити всі свої дані, якщо у мене немає ключа відновлення",
+  "@recoveryKeyConfirmation": {},
+  "recoveryKeyInfoHeader": "Без ключа відновлення ви можете втратити всі свої дані",
+  "@recoveryKeyInfoHeader": {},
+  "autoinstallLandscapeDescription": "Для користувачів в організаціях, які надають файл автоматичної інсталяції через Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "autoinstallDirectErrorFileSystemBody": "Перевірте права доступу або надайте інший файл.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "installationTypeLVMEncryptionInfo": "Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикаєте комп'ютер. Для цього використовується шифрування LUKS за допомогою LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "landscapeDomainHintText": "Домен Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Зверніться до служби ІТ-підтримки або спробуйте інший варіант встановлення.",
+  "@landscapeErrorPageBody": {},
+  "chooseOptionalPassphraseHeader": "Створити парольну фразу (необов'язково)",
+  "@chooseOptionalPassphraseHeader": {},
+  "restartComputerTitle": "Перезавантажити комп'ютер?",
+  "@restartComputerTitle": {},
+  "chooseOptionalPassphraseInfoBody": "Якщо ви втратите парольну фразу, ви втратите всі свої дані. Парольна фраза не замінює ключ відновлення або пароль користувача.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "autoinstallDirectOption": "Автоматизовано за допомогою файлу автоматичної інсталяції",
+  "@autoinstallDirectOption": {},
+  "rstDisable": "Ваш комп'ютер використовує технологію Intel RST (Rapid Storage Technology). Ви можете вимкнути RST або в:",
+  "@rstDisable": {},
+  "autoinstallDirectDescription": "Для досвідчених користувачів, які мають файл autoinstall.yaml для послідовного та повторюваного налаштування системи.",
+  "@autoinstallDirectDescription": {},
+  "rstDisableWindows": "Windows, якщо ви використовуєте подвійне завантаження з Windows",
+  "@rstDisableWindows": {},
+  "bitlockerInfoDescription": "Один або декілька розділів зашифровано за допомогою BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "rstDisableBios": "Налаштування BIOS",
+  "@rstDisableBios": {},
+  "chooseOptionalPassphraseBody": "Парольна фраза може допомогти захистити ваші дані, навіть якщо ваше обладнання буде скомпрометовано. Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикатимете комп'ютер. Ви не зможете вилучити її пізніше",
+  "@chooseOptionalPassphraseBody": {},
+  "confirmTableFormattedMounted": "Відформатовано як {format}, що використовується для {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoHeader": "Зберігайте пароль і ключ відновлення в безпечному місці",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "confirmTableResized": "Змінено розмір з {oldsize} на {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Створено та відформатовано як {format}, що використовується для {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyStorageAdvice": "Зберігайте ключ відновлення в надійному місці. Використовуйте його, щоб розшифрувати диск у разі певних змін у системі. Наприклад, він може знадобитися, якщо ви заміните компоненти в комп'ютері або оновите прошивку.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeErrorPageTitle": "Автоматичне встановлення недоступне для вашого облікового запису",
+  "@landscapeErrorPageTitle": {},
+  "installationTypeNoneInfo": "Стандартна файлова система без шифрування.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeZFSEncryptionInfo": "Нативне шифрування за допомогою ZFS. Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикаєте комп'ютер.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "bitlockerInfoTitle": "Виявлено BitLocker",
+  "@bitlockerInfoTitle": {},
+  "recoveryKeyInfoBody": "Отримайте ключ відновлення одразу після першого входу до {distro} і зберігайте його у безпечному місці.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHeader": "Введіть домен Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainInstructions": "Вкажіть домен Landscape вашої організації для входу та отримання файлу автоматичної інсталяції. Ви можете отримати FQDN від своєї ІТ-підтримки.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Для отримання файлу автоматичної інсталяції з Landscape потрібен доступ до Інтернету",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "autoinstallLandscapeOption": "Автоматизовано за допомогою Landscape",
+  "@autoinstallLandscapeOption": {},
+  "landscapeDomainTextField": "Домен Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Наступне",
+  "@next": {},
+  "landscapeDomainNoInternetTitleWarning": "Під'єднайтеся до Інтернету, щоб продовжити",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainInvalidDomainWarning": "Недійсний домен, перевірте або зверніться до служби ІТ-підтримки",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "recoveryKeyHeader": "Отримати ключ відновлення",
+  "@recoveryKeyHeader": {},
+  "landscapePageTitle": "Автоматизоване встановлення",
+  "@landscapePageTitle": {},
+  "landscapeLoginFailedWarning": "Не вдалося увійти, будь ласка, спробуйте ще раз",
+  "@landscapeLoginFailedWarning": {},
+  "landscapeCodeExpiredWarning": "Термін дії коду закінчився, будь ласка, спробуйте ще раз",
+  "@landscapeCodeExpiredWarning": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Перевірте правильність URL-адреси або виберіть локальний файл.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorNetworkBody": "Перевірте правильність URL-адреси, перевірте інтернет-з'єднання або спробуйте пізніше.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Невірна URL-адреса",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Неправильний файл автоматичної інсталяції",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Перевірте файл або надайте інший.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Файл автоінсталяції не читається",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorUnkownTitle": "Невідома помилка",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "confirmTableErased": "Стерто",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Не змінено",
+  "@confirmTableUnchanged": {},
+  "confirmTableMounted": "Використано для {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Відформатовано як {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeMagicAttachInstructions": "Відскануйте QR-код або введіть код нижче за посиланням <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeHeader": "Увійдіть до Landscape",
+  "@landscapeHeader": {},
+  "landscapeErrorPageCode": "Код помилки: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDisable": "Щоб встановити разом з Windows, вимкніть BitLocker у Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows може запитувати ключі відновлення під час завантаження після встановлення.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Для отримання інструкцій відвідайте <a href=\"{url}\">Довідник BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Без ключів відновлення BitLocker ви можете втратити всі свої дані",
+  "@bitlockerWarningTitle": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu буде встановлено з конфігурацією, наданою вашою організацією",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Нижче ви можете переглянути файл автоматичної інсталяції, імпортований з Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "installationTypeEraseAndInstall": "Зітріть {os} і встановіть {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Всі файли і дані з існуючої інсталяції {os} буде назавжди видалено.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  }
 }
