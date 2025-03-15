@@ -55,7 +55,7 @@
   "@installCodecsSubtitle": {},
   "offlineWarning": "您目前處於離線狀態",
   "@offlineWarning": {},
-  "installationTypeTitle": "安裝磁碟設定",
+  "installationTypeTitle": "磁碟設定",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "本電腦目前已安裝了 {os}，請問您想要怎麼處理？",
   "@installationTypeOSDetected": {
@@ -68,7 +68,7 @@
   "@installationTypeMultiOSDetected": {},
   "installationTypeAdvancedLabel": "進階功能……",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeNone": "無",
+  "installationTypeNone": "無加密",
   "@installationTypeNone": {},
   "partitionSizeLabel": "大小：",
   "@partitionSizeLabel": {},
@@ -157,7 +157,7 @@
       "color": {}
     }
   },
-  "updatesOtherSoftwarePageDescription": "你首先想安裝些什麼程式？",
+  "updatesOtherSoftwarePageDescription": "您想先安裝哪些應用程式？",
   "@updatesOtherSoftwarePageDescription": {},
   "tryOrInstallReleaseNotesLabel": "您也可以閱覽<a href=\"{url}\">產品發布說明</a>。",
   "@tryOrInstallReleaseNotesLabel": {
@@ -829,15 +829,15 @@
   },
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
-  "choosePassphraseHeader": "創建一個密語",
+  "choosePassphraseHeader": "建立密碼",
   "@choosePassphraseHeader": {},
-  "choosePassphraseBody": "您需要一個密語來加密您的檔案。您會於每次啟動您的電腦時被要求輸入您的解密密語。",
+  "choosePassphraseBody": "您需要一個密碼來加密您的檔案。每次開啟電腦時，系統都會提示您輸入密碼。",
   "@choosePassphraseBody": {},
-  "choosePassphraseHint": "選擇一個密語",
+  "choosePassphraseHint": "選擇密碼",
   "@choosePassphraseHint": {},
-  "choosePassphraseConfirmHint": "確認您所輸入的密語是否正確",
+  "choosePassphraseConfirmHint": "確認密碼",
   "@choosePassphraseConfirmHint": {},
-  "choosePassphraseRequired": "需要一個密語",
+  "choosePassphraseRequired": "需要密碼",
   "@choosePassphraseRequired": {},
   "installationTypeHeader": "您要如何安裝 {DISTRO}？",
   "@installationTypeHeader": {
@@ -891,17 +891,17 @@
   "@codecsAndDriversNvidiaBody": {},
   "batteryWarning": "這台電腦並沒有連接電源。",
   "@batteryWarning": {},
-  "choosePassphraseTitle": "磁碟解密密語",
+  "choosePassphraseTitle": "磁碟密碼",
   "@choosePassphraseTitle": {},
-  "choosePassphraseMismatch": "您輸入之密語並不吻合",
+  "choosePassphraseMismatch": "密碼不符合",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "確保您妥善保存您的密語",
+  "choosePassphraseInfoHeader": "將您的密碼存放在安全的地方",
   "@choosePassphraseInfoHeader": {},
-  "choosePassphraseInfoBody": "如果您遺失了您的密語，您將會丟失您所有的資料。",
+  "choosePassphraseInfoBody": "如果弄丟密碼，您將會失去所有資料。",
   "@choosePassphraseInfoBody": {},
-  "createPassphrase": "創建一個密語",
+  "createPassphrase": "建立密碼",
   "@createPassphrase": {},
-  "confirmPassphrase": "確認您的密語輸入正確",
+  "confirmPassphrase": "確認密碼",
   "@confirmPassphrase": {},
   "installationTypeExperimental": "實驗性功能",
   "@installationTypeExperimental": {},
@@ -1023,5 +1023,46 @@
   "autoinstallDirectErrorUnkownTitle": "未知錯誤",
   "@autoinstallDirectErrorUnkownTitle": {},
   "autoinstallDirectErrorFileSystemTitle": "無法讀取自動安裝檔",
-  "@autoinstallDirectErrorFileSystemTitle": {}
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "rstDisableWindows": "Windows，如果您和它採用雙重開機設定",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "BIOS 設定",
+  "@rstDisableBios": {},
+  "chooseOptionalPassphraseHeader": "建立密碼（可選）",
+  "@chooseOptionalPassphraseHeader": {},
+  "rstDisable": "您的電腦使用 Intel RST（快速儲存技術）。您可以在下列任一選項中停用 RST：",
+  "@rstDisable": {},
+  "chooseOptionalPassphraseBody": "即使您的硬體受到攻擊，密碼也能保護您的資料。每次開啟電腦時，您都需要輸入密碼。之後您將無法移除它",
+  "@chooseOptionalPassphraseBody": {},
+  "installationTypeNoneInfo": "無加密的標準檔案系統。",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "使用 ZFS 進行原生加密。每次開啟電腦時，您都需要輸入密碼。",
+  "@installationTypeZFSEncryptionInfo": {},
+  "autoinstallLandscapeDescription": "供給透過 Landscape 提供自動安裝檔的組織中使用者。",
+  "@autoinstallLandscapeDescription": {},
+  "chooseOptionalPassphraseInfoBody": "如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "chooseOptionalPassphraseInfoHeader": "將您的密碼和復原金鑰存放在安全的地方",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "installationTypeEraseAndInstall": "刪除 {os} 並安裝 {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "現有 {os} 安裝中的所有檔案和資料將被永久刪除。",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  }
 }
