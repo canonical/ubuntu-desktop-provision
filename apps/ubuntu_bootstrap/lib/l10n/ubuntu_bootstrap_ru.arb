@@ -758,7 +758,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Приложения",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Настройка дисков",
+  "confirmEntryDiskSetup": "Тип установки",
   "@confirmEntryDiskSetup": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
