@@ -236,7 +236,7 @@
   },
   "installationSlidesAccessibilityOrca": "Čítačka obrazovky Orca",
   "@installationSlidesAccessibilityOrca": {},
-  "installationSlidesSupportHeader": "Oficiálna dokumentácia k {DISTRO} je k dispozícii online aj cez ikonu Pomocník na paneli.",
+  "installationSlidesSupportHeader": "Oficiálna dokumentácia {DISTRO} je k dispozícii online aj cez ikonu Pomocník v doku.",
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
