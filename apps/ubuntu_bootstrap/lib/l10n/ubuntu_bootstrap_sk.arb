@@ -600,7 +600,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Použiť šifrovanie podporované hardvérom",
+  "installationTypeTPM": "Použiť hardvérové šifrovanie",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Vybrané TPM",
   "@installationTypeTPMSelected": {},
@@ -828,7 +828,7 @@
   "@confirmPassphrase": {},
   "createPassphrase": "Vytvoriť prístupovú frázu",
   "@createPassphrase": {},
-  "installationTypeLVMEncryption": "Šifrovať pomocou prístupovej frázy",
+  "installationTypeLVMEncryption": "Šifrovať prístupovou frázou",
   "@installationTypeLVMEncryption": {},
   "codecsAndDriversPageBody": "{DISTRO} sa štandardne dodáva bez proprietárneho softvéru. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.",
   "@codecsAndDriversPageBody": {
@@ -856,7 +856,7 @@
   "@installationTypeExperimental": {},
   "installationTypeLVM": "Použiť LVM bez šifrovania",
   "@installationTypeLVM": {},
-  "installationTypeZFSEncryption": "Šifrovať pomocou prístupovej frázy pomocou ZFS",
+  "installationTypeZFSEncryption": "Šifrovať prístupovou frázou v ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybrané ZFS a šifrovanie",
   "@installationTypeZFSEncryptionSelected": {},
