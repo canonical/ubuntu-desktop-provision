@@ -1131,5 +1131,23 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeErrorPageBody": "Kontaktu vian teknikan subtenon, aŭ provu alian opcion por instali.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Erarkodo: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Nomregno Landscape (plene kvalifikita nomregno)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Aŭtomata instalo ne disponiĝas por via konto",
+  "@landscapeErrorPageTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Vi povas revizii la aŭtomatan instalan dosieron el Landscape ĉi-sube.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instaliĝos laŭ la agordoj provizitaj de via organizaĵo",
+  "@landscapeConfirmPageSuccessInfoTitle": {}
 }
