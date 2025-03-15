@@ -860,7 +860,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Anwendungen",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Festplatteneinrichtung",
+  "confirmEntryDiskSetup": "Art der Installation",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Festplattenverschlüsselung",
   "@confirmEntryDiskEncryption": {},
@@ -1079,5 +1079,76 @@
   "installationTypeLVMEncryptionInfo": "Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben. Dies verwendet LUKS-Verschlüsselung mit LVM.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeNoneInfo": "Standard-Dateisystem ohne Verschlüsselung.",
-  "@installationTypeNoneInfo": {}
+  "@installationTypeNoneInfo": {},
+  "confirmTableUnchanged": "Unverändert",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Größe von {oldsize} auf {newsize} geändert",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Als {format} formatiert, verwendet für {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Automatisierte Installation ist für Ihr Konto nicht verfügbar",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageCode": "Fehlercode: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "Gelöscht",
+  "@confirmTableErased": {},
+  "confirmTableCreatedFormattedMounted": "Erstellt und als {format} formatiert, verwendet für {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Verwendet für {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Als {format} formatiert",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Landscape-Domäne (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Wenden Sie sich an Ihren IT-Support oder versuchen Sie eine andere Installationsoption.",
+  "@landscapeErrorPageBody": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu wird mit der von Ihrer Organisation bereitgestellten Konfiguration installiert",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Sie können die aus Landscape importierte autoinstall-Datei unten einsehen.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
