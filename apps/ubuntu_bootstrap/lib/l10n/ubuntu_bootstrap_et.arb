@@ -1,3 +1,91 @@
 {
-  "@@locale": "et"
+  "@@locale": "et",
+  "confirmTableUnchanged": "Muutmata",
+  "@confirmTableUnchanged": {},
+  "confirmInstallButton": "Paigalda",
+  "@confirmInstallButton": {},
+  "rebootToConfigureWarning": "Paigaldusprotsessi jätkamiseks pead arvuti uuesti käivitama.",
+  "@rebootToConfigureWarning": {},
+  "shutdown": "Seiska",
+  "@shutdown": {},
+  "readyToUse": "{system} on paigaldatud ja valmis kasutamiseks",
+  "@readyToUse": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDisable": "Paigaldamaks kõrvuti Windowsiga, palun lülita BitLocker Windowsist välja.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoTitle": "Tuvastasime BitLockeri",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Üks või enam partitsiooni on krüptitud BitLockeriga.",
+  "@bitlockerInfoDescription": {},
+  "installAlongsideResizePartition": "Muuda partitsiooni suurust",
+  "@installAlongsideResizePartition": {},
+  "confirmProprietarySoftwareCodecs": "Koodekid",
+  "@confirmProprietarySoftwareCodecs": {},
+  "autoinstallDirectFileClearButtonLabel": "Eemalda fail",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Vali fail",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML-failid",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Impordi",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Automaatse paigalduse juhtfail pole leitav",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Palun kontrolli, et võrguaadress oleks õige ja võrguühendus toimib või proovi hiljem uuesti.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Vigane võrguaadress",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "appTitle": "Ubuntu töölauaversiooni paigaldaja",
+  "@appTitle": {},
+  "windowTitle": "Paigalda {RELEASE}",
+  "@windowTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "restartInto": "Käivita uuesti kui {system}",
+  "@restartInto": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Paigaldamise lõpetamiseks käivita arvuti või jätka testimist.\nViimasel juhul jäävad sinu tehtud muudatused salvestamata.",
+  "@restartWarningBody": {},
+  "rebootToConfigure": "**{system}** on kopeeritud andmekandjale",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareDrivers": "Draiverid",
+  "@confirmProprietarySoftwareDrivers": {},
+  "continueTesting": "Jätka proovisessioni",
+  "@continueTesting": {},
+  "confirmProprietarySoftwareCodecsDrivers": "Koodekid ja draiverid",
+  "@confirmProprietarySoftwareCodecsDrivers": {},
+  "confirmTableErased": "Kustutatud",
+  "@confirmTableErased": {},
+  "restartNow": "Taaskäivita kohe",
+  "@restartNow": {},
+  "autoinstallDirectTitle": "Automaatne paigaldus",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Impordi automaatse paigalduse juhtfail",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Sa võid sisestada automaatse paigalduse juhtfaili võrguaadressi:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Või vali fail kohalikust seadmest:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Vali fail...",
+  "@autoinstallDirectFileButtonLabel": {}
 }
