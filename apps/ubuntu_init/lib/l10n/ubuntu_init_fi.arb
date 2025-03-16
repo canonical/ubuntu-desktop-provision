@@ -86,7 +86,7 @@
   },
   "ubuntuProSubscriptionDescription": "Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu",
   "@ubuntuProSubscriptionDescription": {},
-  "ubuntuProTokenAttachSucess": "Virheellinen koodi",
+  "ubuntuProTokenAttachSucess": "Kelvollinen koodi",
   "@ubuntuProTokenAttachSucess": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Henkilökohtaiseen käyttöön ilmainen, 30 päivän kokeilujakso yrityksille. <a href=\"https://{url}\">Lue lisää</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
