@@ -552,7 +552,7 @@
   "@confirmPageTitle": {},
   "confirmPartitionsTitle": "分割區",
   "@confirmPartitionsTitle": {},
-  "confirmHeader": "審閱您的選擇",
+  "confirmHeader": "檢視您的選擇",
   "@confirmHeader": {},
   "confirmPartitionTables": "下列裝置的分割區將被修改：",
   "@confirmPartitionTables": {},
