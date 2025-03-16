@@ -1131,5 +1131,23 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeErrorPageTitle": "התקנה אוטומטית אינה זמינה לחשבון שלך",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "נא לפנות למחלקת המחשוב/IT שלך או לנסות אפשרות התקנה אחרת.",
+  "@landscapeErrorPageBody": {},
+  "landscapeDomainHintText": "שם תחום ב־Landscape‏ (FQDN - מלא)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageCode": "קוד שגיאה: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "מערכת אובונטו תותקן עם ההגדרות שסופקו על ידי הארגון שלך",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "אפשר לסקור את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape להלן.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
