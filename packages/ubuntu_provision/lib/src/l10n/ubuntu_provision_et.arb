@@ -1,4 +1,24 @@
 {
   "close": "Sulge",
-  "@close": {}
+  "@close": {},
+  "timezoneLocationLabel": "Asukoht",
+  "@timezoneLocationLabel": {},
+  "keyboardTestHint": "Klahvistiku proovimiseks kirjuta siia",
+  "@keyboardTestHint": {},
+  "timezoneTimezoneLabel": "Ajavöönd",
+  "@timezoneTimezoneLabel": {},
+  "keyboardTitle": "Klahvistiku paigutus",
+  "@keyboardTitle": {},
+  "keyboardHeader": "Vali sobilik klahvistiku paigutus",
+  "@keyboardHeader": {},
+  "keyboardDetectTitle": "Tuvasta klahvistiku paigutus",
+  "@keyboardDetectTitle": {},
+  "keyboardDetectButton": "Tuvasta",
+  "@keyboardDetectButton": {},
+  "keyboardVariantLabel": "Vali oma klaviatuuri variant:",
+  "@keyboardVariantLabel": {},
+  "keyboardPressKeyLabel": "Vajuta ühte järgnevatest klahvidest:",
+  "@keyboardPressKeyLabel": {},
+  "timezonePageTitle": "Vali oma ajavöönd",
+  "@timezonePageTitle": {}
 }
