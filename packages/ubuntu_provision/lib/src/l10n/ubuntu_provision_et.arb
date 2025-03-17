@@ -20,5 +20,101 @@
   "keyboardPressKeyLabel": "Vajuta ühte järgnevatest klahvidest:",
   "@keyboardPressKeyLabel": {},
   "timezonePageTitle": "Vali oma ajavöönd",
-  "@timezonePageTitle": {}
+  "@timezonePageTitle": {},
+  "keyboardKeyPresentLabel": "Kas järgnev klahv leidub klahvistikul?",
+  "@keyboardKeyPresentLabel": {},
+  "themePageTitle": "Vali kujundus",
+  "@themePageTitle": {},
+  "themePageHeader": "Saad seda alati hiljem muuta välimuse seadistustest.",
+  "@themePageHeader": {},
+  "identityAutoLogin": "Logi sisse automaatselt",
+  "@identityAutoLogin": {},
+  "identityRealNameLabel": "Sinu nimi",
+  "@identityRealNameLabel": {},
+  "identityRealNameRequired": "Nime sisestamine on kohustuslik",
+  "@identityRealNameRequired": {},
+  "identityHostnameLabel": "Sinu arvuti nimi",
+  "@identityHostnameLabel": {},
+  "identityHostnameInfo": "Selle arvuti nimi teiste arvutitega suhtlemisel.",
+  "@identityHostnameInfo": {},
+  "identityHostnameRequired": "Arvuti nime sisestamine on kohustuslik",
+  "@identityHostnameRequired": {},
+  "identityHostnameTooLong": "See arvutinimi on liiga pikk.",
+  "@identityHostnameTooLong": {},
+  "identityInvalidHostname": "See arvutinimi on vigane",
+  "@identityInvalidHostname": {},
+  "identityUsernameLabel": "Sinu kasutajanimi",
+  "@identityUsernameLabel": {},
+  "identityUsernameRequired": "Kasutajanime sisestamine on kohustuslik",
+  "@identityUsernameRequired": {},
+  "identityInvalidUsername": "See kasutajanimi on vigane",
+  "@identityInvalidUsername": {},
+  "identityUsernameInUse": "Selline kasutajanimi on juba olemas.",
+  "@identityUsernameInUse": {},
+  "identityUsernameSystemReserved": "Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.",
+  "@identityUsernameSystemReserved": {},
+  "identityPasswordLabel": "Salasõna",
+  "@identityPasswordLabel": {},
+  "identityPasswordRequired": "Salasõna on kohustuslik",
+  "@identityPasswordRequired": {},
+  "identityActiveDirectoryInfo": "Sa sisestad domeeni ja muud andmed järgmises sammus.",
+  "@identityActiveDirectoryInfo": {},
+  "accessibilityPageTitle": "Hõlpsus",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Hõlpsus, juurdepääsetavus ja {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Enne paigaldaamist säti {DISTRO} vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageShowLog": "Näita logi",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "Peida logi",
+  "@errorPageHideLog": {},
+  "restart": "Käivita arvuti uuesti",
+  "@restart": {},
+  "identityRequirePassword": "Sisselogimiseks küsi salasõna",
+  "@identityRequirePassword": {},
+  "identityUsernameTooLong": "See nimi on liiga pikk.",
+  "@identityUsernameTooLong": {},
+  "identityConfirmPasswordLabel": "Korda salasõna",
+  "@identityConfirmPasswordLabel": {},
+  "identityPasswordShow": "Näita",
+  "@identityPasswordShow": {},
+  "identityPasswordHide": "Peida",
+  "@identityPasswordHide": {},
+  "identityPasswordMismatch": "Salasõnad ei klapi",
+  "@identityPasswordMismatch": {},
+  "themeLight": "Hele kujundus",
+  "@themeLight": {},
+  "themeDark": "Tume kujundus",
+  "@themeDark": {},
+  "localeHeader": "Vali oma keel:",
+  "@localeHeader": {},
+  "localePageTitle": "Tere tulemast, see on {DISTRO}",
+  "@localePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "identityPageTitle": "Loo oma kasutajakonto",
+  "@identityPageTitle": {},
+  "identityRealNameTooLong": "See nimi on liiga pikk.",
+  "@identityRealNameTooLong": {},
+  "identityUsernameInvalidChars": "Selles nimes on keelatud tähemärke.",
+  "@identityUsernameInvalidChars": {},
+  "identityActiveDirectoryOption": "Kasuta Active Directory teenuseid",
+  "@identityActiveDirectoryOption": {}
 }
