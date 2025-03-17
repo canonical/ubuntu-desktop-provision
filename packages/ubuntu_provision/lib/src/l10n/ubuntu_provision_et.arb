@@ -134,5 +134,35 @@
   "eulaReadAndAcceptTerms": "Jätkamaks paigaldust selles arvutis pead sa olema lugenud litsentsilepingut ja nõustunud tema tingimustega.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "Ma olen lugenud litsentsilepingut ja nõustun tema tingimustega",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "accessibilityHighContrastLabel": "Väga kontrastne",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Suur tekst",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "Vähenda animatsioone",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "Ekraanivaate ettelugeja",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityVisualAlertsLabel": "Visuaalsed hoiatused",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "Kleepuvad klahvid",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "Aeglased klahvid",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Hiireklahvid",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Töölaua suurendamine",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Midagi läks valesti",
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "Vabandust, aga me ei tea, mis veaga on tegemist. Sa võid proovida, kas arvuti uuesti käivitamine ja paigalduse uuesti alustamine parandab selle vea. Lisaks saad sa veast <a>ka meile teada anda</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageUbuntuBug": "Automaatse veateate koostamiseks koos asjakohase lisainfoga palun käivita terminalis või käsureapõhisest konsoolist (Alt+F2) <pre>sudo ubuntu-bug {SNAP}</pre>.",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  }
 }
