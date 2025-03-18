@@ -89,5 +89,25 @@
   "autoinstallDirectFileButtonLabel": "Vali fail...",
   "@autoinstallDirectFileButtonLabel": {},
   "installationSlidesAccessibilityOrca": "Ekraanivaate ettelugeja Orca",
-  "@installationSlidesAccessibilityOrca": {}
+  "@installationSlidesAccessibilityOrca": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Palun kontrolli, kas võrguaadress on korrektne või vali kohalik fail.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Vigane automaatse paigalduse juhtfail",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Kontrolli, kas fail on korrektne või asenda ta mõne muu failiga.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "changeButtonText": "Muuda",
+  "@changeButtonText": {},
+  "quitButtonText": "Lõpeta paigaldus",
+  "@quitButtonText": {},
+  "loadingPageTitle": "Tere tulemast, see on {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectErrorFileSystemTitle": "Automaatse paigalduse juhtfail pole loetav",
+  "@autoinstallDirectErrorFileSystemTitle": {}
 }
