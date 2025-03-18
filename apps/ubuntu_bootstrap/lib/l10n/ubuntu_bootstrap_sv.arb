@@ -40,11 +40,11 @@
       "DISTRO": {}
     }
   },
-  "installationTypeAdvancedLabel": "Avancerade funktioner...",
+  "installationTypeAdvancedLabel": "Visa avancerade alternativ...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Avancerade funktioner",
+  "installationTypeAdvancedTitle": "Kryptering och filsystem",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Inga",
+  "installationTypeNone": "Ingen kryptering",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Inga valda",
   "@installationTypeNoneSelected": {},
@@ -116,7 +116,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "EXPERIMENTELLT: Radera disk och använd ZFS",
+  "installationTypeZFS": "Använd ZFS utan kryptering",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS valt",
   "@installationTypeZFSSelected": {},
@@ -692,7 +692,7 @@
   },
   "refreshRestart": "Vänligen stäng installationsprogrammet och starta om för att fortsätta",
   "@refreshRestart": {},
-  "installationTypeTPM": "EXPERIMENTELLT: Aktivera hårdvarustöd fullständig diskkryptering",
+  "installationTypeTPM": "Använd hårdvarustödd kryptering",
   "@installationTypeTPM": {},
   "refreshSnapPrerequisites": "Säkerställer {snap} förutsättningar...",
   "@refreshSnapPrerequisites": {
@@ -844,11 +844,11 @@
   },
   "installationTypeEraseInfo": "All data och partitioner på disken kommer att raderas, inklusive operativsystem.",
   "@installationTypeEraseInfo": {},
-  "installationTypeLVMEncryption": "Använd LVM och kryptering",
+  "installationTypeLVMEncryption": "Kryptera med en lösenfras",
   "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS och kryptering vald",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Detta är en experimentell funktion. Det kanske inte fungerar med din hårdvara eller med framtida {DISTRO} släpp. <a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer det alternativet.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Läs om TPM kryptering</a> innan du väljer detta alternativ. Detta kanske inte fungerar med din hårdvara eller framtida {DISTRO} släpp.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -897,9 +897,9 @@
   "@createPassphrase": {},
   "installationTypeExperimental": "Experimentell",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Använd LVM",
+  "installationTypeLVM": "Använd LVM utan kryptering",
   "@installationTypeLVM": {},
-  "installationTypeZFSEncryption": "Radera disk och använd ZFS med kryptering",
+  "installationTypeZFSEncryption": "Kryptera med en lösenfras med ZFS",
   "@installationTypeZFSEncryption": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
@@ -911,7 +911,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Program",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Diskinställningar",
+  "confirmEntryDiskSetup": "Typ av installation",
   "@confirmEntryDiskSetup": {},
   "confirmSectionSecurityAndMoreTitle": "Säkerhet & mer",
   "@confirmSectionSecurityAndMoreTitle": {},
@@ -1099,5 +1099,100 @@
   "recoveryKeyStorageAdvice": "Förvara återställningsnyckeln på ett säkert ställe. Använd den för att dekryptera disken vid vissa systemändringar. Du kan till exempel behöva det om du byter komponenter i din dator eller uppdaterar fast programvara.",
   "@recoveryKeyStorageAdvice": {},
   "restartComputer": "Starta om datorn",
-  "@restartComputer": {}
+  "@restartComputer": {},
+  "bitlockerInfoRecovery": "Windows kan begära återställningsnycklar vid uppstart efter installationen.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoTitle": "BitLocker upptäckt",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "En eller flera partitioner är krypterade med BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoInstructions": "För instruktioner, besök vår <a href=\"{url}\">BitLocker guide</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Du kan förlora all din data utan BitLocker-återställningsnycklar",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDisable": "För att installera bredvid med Windows, inaktivera BitLocker i Windows.",
+  "@bitlockerInfoDisable": {},
+  "installationTypeLVMEncryptionInfo": "Du måste ange en lösenordsfras varje gång du slår på din dator. Detta använder LUKS-kryptering med LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Inbyggd kryptering med ZFS. Du måste ange en lösenordsfras varje gång du slår på din dator.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeNoneInfo": "Standard filsystem utan kryptering.",
+  "@installationTypeNoneInfo": {},
+  "confirmTableErased": "Raderad",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Oförändrad",
+  "@confirmTableUnchanged": {},
+  "confirmTableMounted": "Används för {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Landscape domän (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageCode": "Felkod: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu kommer att installeras med den konfiguration som tillhandahålls av din organisation",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "confirmTableFormattedMounted": "Formaterad som {format} används för {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Kontakta din IT-support eller prova ett annat installationsalternativ.",
+  "@landscapeErrorPageBody": {},
+  "confirmTableFormatted": "Formaterad som {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "Ändrat storlek från {oldsize} till {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Automatisk installation är inte tillgänglig för ditt konto",
+  "@landscapeErrorPageTitle": {},
+  "confirmTableCreatedFormattedMounted": "Skapad och formaterad som {format} används för {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoContent": "Du kan granska autoinstallationsfilen som importeras från Landscape nedan.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }

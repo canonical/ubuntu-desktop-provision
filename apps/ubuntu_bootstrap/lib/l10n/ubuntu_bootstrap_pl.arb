@@ -60,7 +60,7 @@
   "@diskHeadersFormat": {},
   "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Wymaż dysk i użyj ZFS",
+  "installationTypeZFS": "Użyj ZFS bez szyfrowania",
   "@installationTypeZFS": {},
   "installationTypeManualInfo": "Dla zaawansowanych użytkowników preferujących niestandardowe konfiguracje dysków.",
   "@installationTypeManualInfo": {},
@@ -148,11 +148,11 @@
   },
   "installationTypeNoOSDetected": "Na tym komputerze nie ma obecnie wykrytych systemów operacyjnych. Co chcesz zrobić?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeAdvancedLabel": "Zaawansowane funkcje…",
+  "installationTypeAdvancedLabel": "Pokaż opcje zaawansowane...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Zaawansowane funkcje",
+  "installationTypeAdvancedTitle": "Szyfrowanie i system plików",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Brak",
+  "installationTypeNone": "Bez szyfrowania",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nie wybrano",
   "@installationTypeNoneSelected": {},
@@ -614,7 +614,7 @@
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Aby uzyskać klucz odzyskiwania, zakończ instalację, uruchom ponownie komputer i uruchom to polecenie w terminalu:",
   "@recoveryKeyCommand": {},
-  "installationTypeTPM": "EKSPERYMENTALNE: włącz sprzętowe szyfrowanie całego dysku",
+  "installationTypeTPM": "Użyj szyfrowania sprzętowego",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Wybrano moduł TPM",
   "@installationTypeTPMSelected": {},
@@ -789,13 +789,13 @@
   },
   "installationTypeExperimental": "Eksperymentalne",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Użyj LVM",
+  "installationTypeLVM": "Użyj LVM bez szyfrowania",
   "@installationTypeLVM": {},
   "installationTypeEraseInfo": "Wszystkie dane i partycje na dysku zostaną wymazane, łącznie z systemami operacyjnymi.",
   "@installationTypeEraseInfo": {},
-  "installationTypeLVMEncryption": "Użyj LVM i szyfrowania",
+  "installationTypeLVMEncryption": "Zaszyfruj przy użyciu hasła",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Wymaż dysk i użyj ZFS z szyfrowaniem",
+  "installationTypeZFSEncryption": "Szyfruj za pomocą hasła przy użyciu ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Wybrano ZFS i szyfrowanie",
   "@installationTypeZFSEncryptionSelected": {},
@@ -813,7 +813,7 @@
       }
     }
   },
-  "confirmEntryDiskSetup": "Konfiguracja dysku",
+  "confirmEntryDiskSetup": "Rodzaj instalacji",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Szyfrowanie dysku",
   "@confirmEntryDiskEncryption": {},
@@ -893,7 +893,7 @@
   "@choosePassphraseInfoBody": {},
   "confirmPassphrase": "Potwierdź hasło",
   "@confirmPassphrase": {},
-  "installationTypeTPMInfo": "Jest to funkcja eksperymentalna. Może nie działać z tym sprzętem lub przyszłymi wydaniami {DISTRO}. <a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a>, zanim wybierzesz tę opcję.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a> przed wyborem tej opcji. Może ona nie działać z tym sprzętem lub przyszłymi wersjami {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1054,5 +1054,100 @@
   "rstDisable": "Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:",
   "@rstDisable": {},
   "rstDisableBios": "Ustawieniach BIOS-u",
-  "@rstDisableBios": {}
+  "@rstDisableBios": {},
+  "bitlockerInfoInstructions": "Instrukcje znajdziesz w <a href=\"{url}\">przewodniku po funkcji BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDisable": "Aby przeprowadzić instalację obok systemu Windows, wyłącz funkcję BitLocker w systemie Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerWarningTitle": "Bez kluczy odzyskiwania funkcji BitLocker możesz utracić wszystkie swoje dane",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoRecovery": "Po instalacji system Windows może zażądać kluczy odzyskiwania podczas rozruchu.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoDescription": "Jedna lub więcej partycji są szyfrowane za pomocą funkcji BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoTitle": "Wykryto funkcję BitLocker",
+  "@bitlockerInfoTitle": {},
+  "installationTypeNoneInfo": "Standardowy system plików bez szyfrowania.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeZFSEncryptionInfo": "Natywne szyfrowanie z ZFS. Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeLVMEncryptionInfo": "Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera. Używa szyfrowania LUKS z LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "confirmTableResized": "Zmieniono rozmiar z {oldsize} na {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "Wymazano",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Nie zmieniono",
+  "@confirmTableUnchanged": {},
+  "confirmTableCreatedFormattedMounted": "Utworzono i sformatowano jako {format} do użycia dla {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Sformatowano jako {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Do użyciu dla {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Sformatowano jako {format} do użycia dla {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Skontaktuj się ze swoim wsparciem IT lub wypróbuj inną opcję instalacji.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Kod błędu: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Domena Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Automatyczna instalacja nie jest dostępna dla Twojego konta",
+  "@landscapeErrorPageTitle": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu zostanie zainstalowany z konfiguracją dostarczoną przez Twoją organizację",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Poniżej możesz przejrzeć plik autoinstalacji zaimportowany z Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }

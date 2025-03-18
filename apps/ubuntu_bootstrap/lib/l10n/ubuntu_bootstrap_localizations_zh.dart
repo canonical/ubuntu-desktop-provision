@@ -15,58 +15,58 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => '自动安装';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => '导入自动安装文件';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => '您可以输入自动安装文件的 URL：';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => '或选择本地文件：';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => '选择文件…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => '清除文件';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => '选择文件';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML 文件';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => '导入';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => '自动安装文件不可达';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => '请检查 URL 是否正确，测试您的网络连接，或者稍后再试。';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => '无效的 URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => '检查 URL 是否正确或者选择本地文件。';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => '无效的自动安装文件';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => '检查文件或者换个文件。';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => '自动安装文件无法读取';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => '检查您的权限或者换个文件。';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => '未知错误';
 
   @override
   String get autoinstallTitle => '安装类型';
@@ -80,22 +80,22 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => '输入 autoinstall.yaml 的 URL：';
 
   @override
-  String get autoinstallInteractiveOption => '交互安装';
+  String get autoinstallInteractiveOption => '交互式安装';
 
   @override
   String get autoinstallInteractiveDescription => '适用于希望在逐步引导下完成安装的用户。';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => '由自动安装文件自动化';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => '给那些为持续和可重复系统配置而拥有 autoinstall.yaml 的高级用户。';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => '由 Landscape 自动化';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organizations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => '给通过 Landscape 提供自动安装文件的组织内用户。';
 
   @override
   String get changeButtonText => '更改';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get rstTitle => '检测到 RST';
 
   @override
-  String get rstHeader => '关闭 RST 以继续';
+  String get rstHeader => '您必须关闭 RST 以继续安装';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => '您的计算机使用 Intel RST（快速存储技术）。您可以在下面的位置禁用 RST：';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows，如果您与其采用双启动';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOS 设置';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => '密码不匹配';
 
   @override
-  String get choosePassphraseInfoHeader => '确保您已记下密码';
+  String get choosePassphraseInfoHeader => '将您的密码保存在安全的地方';
 
   @override
   String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => '创建密码（可选）';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => '密码可以在您的硬件遭到损坏时保护您的数据。您每次开机时都需要输入密码。您以后将不能移除它。';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => '将您的密码和恢复密钥保存在安全的地方';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => '如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。';
 
   @override
   String get createPassphrase => '创建密码';
@@ -347,37 +347,37 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => '用所选磁盘执行全新安装。';
+  String get installationTypeEraseInfo => '磁盘上的所有数据和分区都将被擦除，包括操作系统。';
 
   @override
-  String get installationTypeAdvancedLabel => '高级功能...';
+  String get installationTypeAdvancedLabel => '显示高级选项…';
 
   @override
-  String get installationTypeAdvancedTitle => '高级功能';
+  String get installationTypeAdvancedTitle => '加密和文件系统';
 
   @override
   String get installationTypeExperimental => '实验性';
 
   @override
-  String get installationTypeNone => '空';
+  String get installationTypeNone => '无加密';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => '无加密的标准文件系统。';
 
   @override
   String get installationTypeNoneSelected => '尚未选择任何安装选项';
 
   @override
-  String get installationTypeLVM => '使用 LVM（逻辑卷管理）';
+  String get installationTypeLVM => '使用无加密的 LVM（逻辑卷管理）';
 
   @override
   String get installationTypeLVMSelected => '已选择配置 LVM';
 
   @override
-  String get installationTypeLVMEncryption => '使用 LVM（逻辑卷管理）与加密';
+  String get installationTypeLVMEncryption => '用密码加密';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => '您每次打开计算机都将需要输入密码。这将同 LVM 一同使用 LUKS 加密。';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => '您将在下一步中选择一个安全密钥。';
 
   @override
-  String get installationTypeZFS => '实验性功能：擦除磁盘并使用ZFS';
+  String get installationTypeZFS => '使用无加密的 ZFS';
 
   @override
-  String get installationTypeZFSEncryption => '擦除硬盘，并使用加密的 ZFS';
+  String get installationTypeZFSEncryption => '使用 ZFS 密码加密';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => '使用 ZFS 进行本地加密。您每次打开计算机时都将需要输入密码。';
 
   @override
   String get installationTypeZFSSelected => '已选择配置 ZFS';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => '已选择使用加密 ZFS';
 
   @override
-  String get installationTypeTPM => '启用硬件支持的全盘加密';
+  String get installationTypeTPM => '启用硬件支持的加密';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '这是一个实验性功能。您的硬件可能无法使用此功能，未来的 $DISTRO 发行版也可能不支持。在选择此选项前，请先<a href=\"$url\">了解 TPM 加密</a>。';
+    return '在您选择此选项前请<a href=\"$url\">了解 TPM 加密</a>。这可能与您的硬件或者未来的 $DISTRO 更新不兼容。';
   }
 
   @override
@@ -433,7 +433,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return '安装 $product 并与它们共存';
+    return '安装 $product 并与现有的操作系统共存';
   }
 
   @override
@@ -443,17 +443,17 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return '将保存文件、音乐和其他个人文件。每次启动时，您可以选择所需的操作系统。';
+    return '选择一个分区来重新调整大小并为 $product 创建空间。您可以在启动时选择您的操作系统。';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '擦除 $os 并安装 $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return '来自现存的 $os 安装的文件和数据都将被永久删除。';
   }
 
   @override
@@ -745,30 +745,30 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get continueTesting => '继续试用';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => '已检测到 BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => '一个或多个分区由 BitLocker 加密。';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => '要与 Windows 共存安装，在 Windows 中禁用 BitLocker。';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => '安装后 Windows 可能在启动时要求输入恢复密钥。';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return '指引请参阅 <a href=\"$url\">BitLocker 指南</a>。';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => '没有 BitLocker 恢复密钥，您可能丢失所有数据';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => '重新启动计算机';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => '重新启动计算机？';
 
   @override
   String get restartIntoWindows => '重启进入 Windows';
@@ -1071,65 +1071,65 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM 恢复密钥';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => '获取恢复密钥';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => '没有恢复密钥，您可能丢失所有数据';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return '在您登入 $distro 时立刻获取恢复密钥并将其存储在安全的地方。';
   }
 
   @override
-  String get recoveryKeyCommand => '在安装完成后，您可以使用如下命令获取恢复密钥：';
+  String get recoveryKeyCommand => '要获取恢复密钥，完成安装，重新启动计算机，然后在终端内执行此命令：';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => '将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => '我明白我可能会在没有恢复密钥的情况下丢失所有数据';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return '扫二维码然后在下面输入代码。<a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => '自动安装';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => '登入 Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => '输入 Landscape 域 (FQDN)';
 
   @override
   String get landscapeDomainHintText => 'Landscape domain (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => '提供您组织的 Landscape 域来登录并获取自动安装文件。您可以从您的技术支持处获取 FQDN。';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape 域 (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => '下一步';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => '域无效，请检查或联系您的技术支持。';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => '连接到互联网来继续';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => '必须连接到互联网以从 Landscape 获取自动安装文件';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => '代码已过期，请重试';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => '登录失败，请重试';
 
   @override
   String get landscapeErrorPageTitle => 'Automated install is not available for your account';
@@ -1165,16 +1165,55 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get autoinstallDirectTitle => '自動安裝';
 
   @override
-  String get autoinstallDirectHeader => '導入自動安裝檔案';
+  String get autoinstallDirectHeader => '匯入自動安裝檔';
 
   @override
-  String get autoinstallDirectUrlLabel => '您可以輸入自動安裝檔案的 URL：';
+  String get autoinstallDirectUrlLabel => '您可以輸入自動安裝檔的 URL：';
 
   @override
   String get autoinstallDirectFileLabel => '或選擇本機檔案：';
 
   @override
   String get autoinstallDirectFileButtonLabel => '選擇檔案...';
+
+  @override
+  String get autoinstallDirectFileClearButtonLabel => '清除檔案';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => '選擇檔案';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML 檔';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => '匯入';
+
+  @override
+  String get autoinstallDirectErrorNetworkTitle => '無法存取自動安裝檔';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody => '檢查 URL 是否正確、測試您的網路連線，或稍後再試。';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => '無效 URL';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody => '檢查 URL 是否正確或選擇本機檔案。';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle => '無效的自動安裝檔';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody => '檢查檔案或提供其他檔案。';
+
+  @override
+  String get autoinstallDirectErrorFileSystemTitle => '無法讀取自動安裝檔';
+
+  @override
+  String get autoinstallDirectErrorFileSystemBody => '檢查您的權限或提供其他檔案。';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => '未知錯誤';
 
   @override
   String get autoinstallTitle => '安裝類型';
@@ -1192,6 +1231,18 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get autoinstallInteractiveDescription => '適用於想要在引導下一步一步地完成安裝的使用者。';
+
+  @override
+  String get autoinstallDirectOption => '透過自動安裝檔實現自動化';
+
+  @override
+  String get autoinstallDirectDescription => '對於擁有 autoinstall.yaml 的進階使用者，可以獲得一致且可重複的系統設定。';
+
+  @override
+  String get autoinstallLandscapeOption => '使用 Landscape 實現自動化';
+
+  @override
+  String get autoinstallLandscapeDescription => '供給透過 Landscape 提供自動安裝檔的組織中使用者。';
 
   @override
   String get changeButtonText => '變更';
@@ -1260,6 +1311,15 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get rstHeader => '關閉 RST 以繼續安裝';
 
   @override
+  String get rstDisable => '您的電腦使用 Intel RST（快速儲存技術）。您可以在下列任一選項中停用 RST：';
+
+  @override
+  String get rstDisableWindows => 'Windows，如果您和它採用雙重開機設定';
+
+  @override
+  String get rstDisableBios => 'BIOS 設定';
+
+  @override
   String rstInstructions(String url) {
     return '請用其他裝置掃描 QR Code 或造訪 <a href=\"https://$url\">$url</a> 以取得詳細步驟';
   }
@@ -1301,7 +1361,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get updatesOtherSoftwarePageTitle => '應用程式與更新';
 
   @override
-  String get updatesOtherSoftwarePageDescription => '你首先想安裝些什麼程式？';
+  String get updatesOtherSoftwarePageDescription => '您想先安裝哪些應用程式？';
 
   @override
   String get codecsAndDriversPageTitle => '最佳化您的電腦';
@@ -1360,40 +1420,52 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get offlineWarning => '您目前處於離線狀態';
 
   @override
-  String get choosePassphraseTitle => '磁碟解密密語';
+  String get choosePassphraseTitle => '磁碟密碼';
 
   @override
-  String get choosePassphraseHeader => '創建一個密語';
+  String get choosePassphraseHeader => '建立密碼';
 
   @override
-  String get choosePassphraseBody => '您需要一個密語來加密您的檔案。您會於每次啟動您的電腦時被要求輸入您的解密密語。';
+  String get choosePassphraseBody => '您需要一個密碼來加密您的檔案。每次開啟電腦時，系統都會提示您輸入密碼。';
 
   @override
-  String get choosePassphraseHint => '選擇一個密語';
+  String get choosePassphraseHint => '選擇密碼';
 
   @override
-  String get choosePassphraseConfirmHint => '確認您所輸入的密語是否正確';
+  String get choosePassphraseConfirmHint => '確認密碼';
 
   @override
-  String get choosePassphraseRequired => '需要一個密語';
+  String get choosePassphraseRequired => '需要密碼';
 
   @override
-  String get choosePassphraseMismatch => '您輸入之密語並不吻合';
+  String get choosePassphraseMismatch => '密碼不符合';
 
   @override
-  String get choosePassphraseInfoHeader => '確保您妥善保存您的密語';
+  String get choosePassphraseInfoHeader => '將您的密碼存放在安全的地方';
 
   @override
-  String get choosePassphraseInfoBody => '如果您遺失了您的密語，您將會丟失您所有的資料。';
+  String get choosePassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。';
 
   @override
-  String get createPassphrase => '創建一個密語';
+  String get chooseOptionalPassphraseHeader => '建立密碼（可選）';
 
   @override
-  String get confirmPassphrase => '確認您的密語輸入正確';
+  String get chooseOptionalPassphraseBody => '即使您的硬體受到攻擊，密碼也能保護您的資料。每次開啟電腦時，您都需要輸入密碼。之後您將無法移除它';
 
   @override
-  String get installationTypeTitle => '安裝磁碟設定';
+  String get chooseOptionalPassphraseInfoHeader => '將您的密碼和復原金鑰存放在安全的地方';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。';
+
+  @override
+  String get createPassphrase => '建立密碼';
+
+  @override
+  String get confirmPassphrase => '確認密碼';
+
+  @override
+  String get installationTypeTitle => '磁碟設定';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -1434,7 +1506,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeExperimental => '實驗性功能';
 
   @override
-  String get installationTypeNone => '無';
+  String get installationTypeNone => '無加密';
+
+  @override
+  String get installationTypeNoneInfo => '無加密的標準檔案系統。';
 
   @override
   String get installationTypeNoneSelected => '未選擇';
@@ -1449,6 +1524,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeLVMEncryption => '使用 LVM 磁碟配置與磁碟加密';
 
   @override
+  String get installationTypeLVMEncryptionInfo => '每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。';
+
+  @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';
 
   @override
@@ -1459,6 +1537,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeZFSEncryption => '清除磁碟並使用帶加密的 ZFS 儲存系統';
+
+  @override
+  String get installationTypeZFSEncryptionInfo => '使用 ZFS 進行原生加密。每次開啟電腦時，您都需要輸入密碼。';
 
   @override
   String get installationTypeZFSSelected => '已選用 ZFS';
@@ -1510,6 +1591,16 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String installationTypeAlongsideInfo(String product) {
     return '選擇一個分割區來調整大小並為$product建立空間。您可以在啟動時選擇作業系統。';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return '刪除 $os 並安裝 $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return '現有 $os 安裝中的所有檔案和資料將被永久刪除。';
   }
 
   @override
@@ -1675,7 +1766,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmPageTitle => '準備開始安裝';
 
   @override
-  String get confirmHeader => '審閱您的選擇';
+  String get confirmHeader => '檢視您的選擇';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';

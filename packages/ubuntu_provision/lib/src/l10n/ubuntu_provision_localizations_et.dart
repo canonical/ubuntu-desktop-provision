@@ -7,213 +7,213 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Hõlpsus';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Hõlpsus, juurdepääsetavus ja $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Enne paigaldaamist säti $DISTRO vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Nägemine';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Kuulmine';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Trükkimine ja kirjutamine';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Osutamine ja klõpsimine';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Suumimine';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Väga kontrastne';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Suur tekst';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Vähenda animatsioone';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Ekraanivaate ettelugeja';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Visuaalsed hoiatused';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Kleepuvad klahvid';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Aeglased klahvid';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Hiireklahvid';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Töölaua suurendamine';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Midagi läks valesti';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Vabandust, aga me ei tea, mis veaga on tegemist. Sa võid proovida, kas arvuti uuesti käivitamine ja paigalduse uuesti alustamine parandab selle vea. Lisaks saad sa veast <a>ka meile teada anda</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Automaatse veateate koostamiseks koos asjakohase lisainfoga palun käivita terminalis või käsureapõhisest konsoolist (Alt+F2) <pre>sudo ubuntu-bug $SNAP</pre>.';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Näita logi';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Peida logi';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Käivita arvuti uuesti';
 
   @override
   String get close => 'Sulge';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'Vali oma ajavöönd';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'Asukoht';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'Ajavöönd';
 
   @override
-  String get keyboardTitle => 'Keyboard layout';
+  String get keyboardTitle => 'Klahvistiku paigutus';
 
   @override
-  String get keyboardHeader => 'Select your keyboard layout';
+  String get keyboardHeader => 'Vali sobilik klahvistiku paigutus';
 
   @override
-  String get keyboardTestHint => 'Type here to test your keyboard';
+  String get keyboardTestHint => 'Klahvistiku proovimiseks kirjuta siia';
 
   @override
-  String get keyboardDetectTitle => 'Detect keyboard layout';
+  String get keyboardDetectTitle => 'Tuvasta klahvistiku paigutus';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Tuvasta';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Vali oma klaviatuuri variant:';
 
   @override
-  String get keyboardPressKeyLabel => 'Please press one of the following keys:';
+  String get keyboardPressKeyLabel => 'Vajuta ühte järgnevatest klahvidest:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Is the following key present on your keyboard?';
+  String get keyboardKeyPresentLabel => 'Kas järgnev klahv leidub klahvistikul?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'Vali kujundus';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'Saad seda alati hiljem muuta välimuse seadistustest.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Tume kujundus';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Hele kujundus';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Tere tulemast, see on $DISTRO';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'Vali oma keel:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'Loo oma kasutajakonto';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'Logi sisse automaatselt';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'Sisselogimiseks küsi salasõna';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Sinu nimi';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'Nime sisestamine on kohustuslik';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'See nimi on liiga pikk.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'Sinu arvuti nimi';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'Selle arvuti nimi teiste arvutitega suhtlemisel.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'Arvuti nime sisestamine on kohustuslik';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'See arvutinimi on liiga pikk.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'See arvutinimi on vigane';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'Sinu kasutajanimi';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'Kasutajanime sisestamine on kohustuslik';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'See kasutajanimi on vigane';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'Selline kasutajanimi on juba olemas.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'See nimi on liiga pikk.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'Selles nimes on keelatud tähemärke.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'Salasõna';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'Salasõna on kohustuslik';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'Korda salasõna';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Salasõnad ei klapi';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Näita';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Peida';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Kasuta Active Directory teenuseid';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'Sa sisestad domeeni ja muud andmed järgmises sammus.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -332,14 +332,14 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Do not connect to the internet';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Litsentsileping';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Tutvu litsentsilepingu tingimustega';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Jätkamaks paigaldust selles arvutis pead sa olema lugenud litsentsilepingut ja nõustunud tema tingimustega.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Ma olen lugenud litsentsilepingut ja nõustun tema tingimustega';
 }

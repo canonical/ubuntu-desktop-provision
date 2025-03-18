@@ -10,7 +10,7 @@
   "@installationCompleteTitle": {},
   "otherOptions": "Aliaj opcioj",
   "@otherOptions": {},
-  "installationTypeAdvancedTitle": "Funkcioj por spertuloj",
+  "installationTypeAdvancedTitle": "Ĉifrado kaj dosiersistemo",
   "@installationTypeAdvancedTitle": {},
   "selectGuidedStorageInstallNow": "Ekinstali",
   "@selectGuidedStorageInstallNow": {},
@@ -27,7 +27,7 @@
       "system": {}
     }
   },
-  "installationTypeAdvancedLabel": "Funkcioj por spertuloj…",
+  "installationTypeAdvancedLabel": "Montri funkciojn por spertuloj…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeNoneSelected": "Nenio elektita",
   "@installationTypeNoneSelected": {},
@@ -114,7 +114,7 @@
   "@configureSecureBootOption": {},
   "installThirdPartySubtitle": "Tiuj programoj estas disponeblaj laŭ permesiloj inkluzivitaj en siaj dokumentaroj. Kelkaj el ili estas neliberaj.",
   "@installThirdPartySubtitle": {},
-  "installationTypeNone": "Nenio",
+  "installationTypeNone": "Sen ĉifrado",
   "@installationTypeNone": {},
   "installationTypeErase": "Forviŝi la diskon kaj instali {DISTRO}",
   "@installationTypeErase": {},
@@ -122,7 +122,7 @@
   "@installationTypeZFSSelected": {},
   "installationTypeLVMSelected": "LVM elektita",
   "@installationTypeLVMSelected": {},
-  "installationTypeZFS": "EKSPERIMENTE: Forviŝi la diskon kaj uzi la dosiersistemon ZFS",
+  "installationTypeZFS": "Uzi ZFS sen ĉifrado",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Instali {product} apud {os}",
   "@installationTypeAlongside": {
@@ -726,7 +726,7 @@
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Por akiri restaŭran ŝlosilon, finu la instaladon, restartigu vian komputilon, kaj rulu la jenon en la terminalo:",
   "@recoveryKeyCommand": {},
-  "installationTypeTPM": "EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon",
+  "installationTypeTPM": "Uzi aparato-bazan ĉifradon",
   "@installationTypeTPM": {},
   "refreshSnapStopServices": "Haltigante servojn de {snap}…",
   "@refreshSnapStopServices": {
@@ -763,7 +763,7 @@
   "@confirmEntryDiskEncryption": {},
   "confirmEntryInstallationDisk": "Instala disko",
   "@confirmEntryInstallationDisk": {},
-  "confirmEntryDiskSetup": "Agordado de disko",
+  "confirmEntryDiskSetup": "Speco de instalo",
   "@confirmEntryDiskSetup": {},
   "confirmEntryProprietarySoftware": "Neliberaj programoj",
   "@confirmEntryProprietarySoftware": {},
@@ -855,17 +855,17 @@
   "@choosePassphraseBody": {},
   "installationTypeExperimental": "Eksperimenta",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Uzi LVM",
+  "installationTypeLVM": "Uzi LVM sen ĉifrado",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Uzi LVM kaj ĉifradon",
+  "installationTypeLVMEncryption": "Ĉifri kun pasfrazo",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Forviŝi la diskon kaj uzi ZFS kun ĉifrado",
+  "installationTypeZFSEncryption": "Ĉifri kun pasfrazo per ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeEraseInfo": "Ĉiuj datenoj kaj subdiskoj sur la disko estas forviŝotaj, inkluzive de mastrumaj sistemoj.",
   "@installationTypeEraseInfo": {},
   "selectGuidedStorageInfo": "Komencu denule forviŝinte vian elektitan diskon.",
   "@selectGuidedStorageInfo": {},
-  "installationTypeTPMInfo": "Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo aŭ estontaj versioj de {DISTRO}. <a href=\"{url}\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion. Tio eble ne funkcios kun via komputilo aŭ estontaj versioj de {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1054,5 +1054,100 @@
   "restartComputer": "Restartigi komputilon",
   "@restartComputer": {},
   "rstDisable": "Via komputilo uzas Intel RST (Rapid-Stokan Teknikon). Vi povas malŝalti RST aŭ en:",
-  "@rstDisable": {}
+  "@rstDisable": {},
+  "bitlockerInfoTitle": "Troviĝis BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Unu aŭ pluraj subdisko(j) estis ĉifrita(j) per BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Por instali apud Windows, malŝaltu BitLocker en Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoInstructions": "Por instrukcioj, vizitu <a href=\"{url}\">la helpilon pri BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Vi povas perdi ĉiom da datenoj sen restaŭraj ŝlosiloj de BitLocker",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoRecovery": "Windows povas peti restaŭrajn ŝlosilojn dum startado post instalo.",
+  "@bitlockerInfoRecovery": {},
+  "installationTypeNoneInfo": "Ordinara dosiersistemo sen ĉifrado.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Vi bezonis tajpi pasfrazon por startigi la komputilon. Tio uzas LUKS-ĉifradon kun LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Ĉifrado indiĝena al ZFS. Vi bezonos tajpi pasfrazon por startigi la komputilon.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableErased": "Forviŝita",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Neŝanĝita",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Grando ŝanĝiĝis de {oldsize} al {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Uzota por {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Kreita kaj strukturita kiel {format} kaj uzota por {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Restrukturita kiel {format} uzota por {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Restrukturita kiel {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Kontaktu vian teknikan subtenon, aŭ provu alian opcion por instali.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Erarkodo: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Nomregno Landscape (plene kvalifikita nomregno)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Aŭtomata instalo ne disponiĝas por via konto",
+  "@landscapeErrorPageTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Vi povas revizii la aŭtomatan instalan dosieron el Landscape ĉi-sube.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instaliĝos laŭ la agordoj provizitaj de via organizaĵo",
+  "@landscapeConfirmPageSuccessInfoTitle": {}
 }

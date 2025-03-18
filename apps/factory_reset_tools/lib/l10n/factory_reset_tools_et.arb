@@ -3,5 +3,7 @@
   "close": "Sulge",
   "@close": {},
   "ok": "Sobib",
-  "@ok": {}
+  "@ok": {},
+  "restart": "Käivita arvuti uuesti",
+  "@restart": {}
 }

@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST est activé';
 
   @override
-  String get rstHeader => 'Désactivez RST pour continuer';
+  String get rstHeader => 'Vous devez RST pour continuer l\'installation';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Votre ordinateur utilise Intel RST (Rapid Storage Technology). Vous pouvez désactiver RST dans :';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, si vous utilisez une configuration à double démarrage avec Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Les réglages du BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Toutes les données et partitions du disque seront effacées, y compris les systèmes d’exploitation.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Fonctions avancées…';
+  String get installationTypeAdvancedLabel => 'Montrer fonctions avancées…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Fonctions avancées';
+  String get installationTypeAdvancedTitle => 'Chiffrement et système de fichiers';
 
   @override
   String get installationTypeExperimental => 'Expérimental';
 
   @override
-  String get installationTypeNone => 'Aucune';
+  String get installationTypeNone => 'Pas de chiffrement';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Système de fichiers standard sans chiffrement.';
 
   @override
   String get installationTypeNoneSelected => 'Aucune sélectionnée';
 
   @override
-  String get installationTypeLVM => 'Utiliser LVM';
+  String get installationTypeLVM => 'Utiliser LVM sans chiffrement';
 
   @override
   String get installationTypeLVMSelected => 'LVM sélectionné';
 
   @override
-  String get installationTypeLVMEncryption => 'Utiliser LVM et le chiffrement';
+  String get installationTypeLVMEncryption => 'Chiffrer avec une phrase de passe';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Vous devrez entrer un mot de passe chaque fois que vous allumerez votre ordinateur. Il utilise le chiffrement LUKS avec LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM et chiffrement sélectionnés';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Vous allez choisir une clé de sécurité à l’étape suivante.';
 
   @override
-  String get installationTypeZFS => 'EXPERIMENTAL : Effacer le disque et utiliser ZFS';
+  String get installationTypeZFS => 'Utiliser ZFS sans chiffrement';
 
   @override
-  String get installationTypeZFSEncryption => 'Effacer le disque et utiliser ZFS avec chiffrement';
+  String get installationTypeZFSEncryption => 'Chiffrer avec une phrase secrète en utilisant ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Chiffrement natif avec ZFS. Vous devrez entrer un mot de passe chaque fois que vous allumerez votre ordinateur.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS sélectionné';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS et chiffrement sélectionnés';
 
   @override
-  String get installationTypeTPM => 'Activer le chiffrement matériel complet du disque';
+  String get installationTypeTPM => 'Utiliser le chiffrement par matériel';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'C\'est une fonctionnalité expérimentale. Elle peut ne pas fonctionner avec votre matériel ou de futures versions de $DISTRO. <a href=\"$url\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option.';
+    return '<a href=\"$url\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option. Cela risque de ne pas fonctionner avec votre matériel ou les futures versions de $DISTRO.';
   }
 
   @override
@@ -745,30 +745,30 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Continuer à tester';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker detecté';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Une ou plusieurs partitions sont chiffrées avec BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Pour installer à côté de Windows, désactivez BitLocker dans Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows pourrait demander des clés de récupération au démarrage après l’installation.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Pour des instructions, visitez le <a href=\"$url\">guide BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Vous risquez de perdre toutes vos données sans les clés de récupération BitLocker';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Redémarrer l\'ordinateur';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Redémarrer l\'ordinateur ?';
 
   @override
   String get restartIntoWindows => 'Redémarrer sous Windows';

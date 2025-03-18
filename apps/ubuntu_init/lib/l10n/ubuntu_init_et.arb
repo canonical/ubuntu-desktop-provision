@@ -1,1 +1,114 @@
-{}
+{
+  "telemetryHeader": "Aita meid {distro} parandamisel",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Jagades meiega selle süsteemi andmeid, aita meid {distro} parandamisel . Andmete hulgas on arvuti mudel, paigaldatud tarkvara ja asukoht, mille määrasid ajavööndi valimiseks.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeSecurityTitle": "Parem turvalisus",
+  "@welcomeSecurityTitle": {},
+  "privacyLocationEnable": "Asukohateenused",
+  "@privacyLocationEnable": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProMagicAttachInstructions": "Liitu imeväel selle koodi abil aadressil <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro on nüüd selles arvutis või seadmes kasutusel",
+  "@ubuntuProSucessAttachHeader": {},
+  "welcomePageTitle": "Tere tulemast",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Tere tulemast, see on {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "MIDA ON SIIN UUT?",
+  "@welcomeWhatsNew": {},
+  "telemetryLabelOn": "Jah, jaga süsteemi andmeid {distro} arendustiimiga",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Ei, ära jaga süsteemi andmeid",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Näita esimesena saadetavat aruannet",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Aruande üksikasjad",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "Juriidiline märkus",
+  "@telemetryLegalLabel": {},
+  "telemetryCollectError": "Telemeetriaandmete kogumine ei õnnestunud",
+  "@telemetryCollectError": {},
+  "privacyPageTitle": "Asukohateenused",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Kas lülitame asukohateenused sisse?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Sellega lubad rakendustel teada sinu geograafilist asukohta.\nSeda saad süsteemi seadistustest alati muuta.",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "Andmekaitse",
+  "@privacyPolicyLink": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Vaata muudatuste logi</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemeetria",
+  "@telemetryPageTitle": {},
+  "welcomeStartTitle": "Tõhusam kasutuselvõtmine",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Senisest parem paigaldusliides.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Rakendustepoe uus välimus",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Sinu lemmikrakenduste leidmine pole kunagi olnud nii lihtne.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecuritySubtitle": "Uued raudvara- või ZFSi-põhise krüptimise valikud.",
+  "@welcomeSecuritySubtitle": {},
+  "ubuntuProHeader": "Liida see arvuti või seade",
+  "@ubuntuProHeader": {},
+  "ubuntuProTokenTextfieldHint": "Ligipääsutunnus",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProOrAddTokenManually": "või lisa ligipääsutunnus käsitsi",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenAttachButton": "Lisa",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Vigane ligipääsutunnus",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProSubscriptionDescription": "Võta kasutusele kõige mitmekülgsem avatud lähtekoodiga tarkvara turvalahendus",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Alati tasuta erakasutuseks. 30-päevane prooviperiood ärikasutuseks. <a href=\"https://{url}\">Vaata lisateavet</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachSucess": "Kehtiv ligipääsutunnus",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Vigane ligipääsutunnus, proovi uuesti",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Jäta praegu vahele",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Hiljem saad sa alati Ubuntu Pro kasutusele võtta rakenduses „Tarkvara ja uuendused“.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Võta Ubuntu Pro kasutusele",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Lisa see arvuti või seade Ubuntu Pro tellimusele, mis tagab paljude pakettide turvauuendused kuni 2032. aastani.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachDescription": "Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.",
+  "@ubuntuProSucessAttachDescription": {}
+}

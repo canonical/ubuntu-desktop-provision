@@ -62,7 +62,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "Стереть диск и использовать ZFS",
+  "installationTypeZFS": "Использовать ZFS без шифрования",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "Установить {product} вместе с {os}",
   "@installationTypeAlongside": {
@@ -151,7 +151,7 @@
   "@otherOptions": {},
   "installationTypeAdvancedLabel": "Дополнительные возможности...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Дополнительные возможности",
+  "installationTypeAdvancedTitle": "Файловая система и шифрование",
   "@installationTypeAdvancedTitle": {},
   "newPartitionTableConfirmationTitle": "Новый пустой раздел",
   "@newPartitionTableConfirmationTitle": {},
@@ -237,7 +237,7 @@
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "Ручная установка",
   "@installationTypeManual": {},
-  "installationTypeNone": "Ничего",
+  "installationTypeNone": "Без шифрования",
   "@installationTypeNone": {},
   "allocateDiskSpace": "Создание разделов вручную",
   "@allocateDiskSpace": {},
@@ -535,7 +535,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Включить аппаратное шифрование диска",
+  "installationTypeTPM": "Использовать аппаратное шифрование диска",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM выбран",
   "@installationTypeTPMSelected": {},
@@ -758,7 +758,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Приложения",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Настройка дисков",
+  "confirmEntryDiskSetup": "Тип установки",
   "@confirmEntryDiskSetup": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
@@ -850,15 +850,15 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Экспериментально",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Использовать LVM",
+  "installationTypeLVM": "Использовать LVM без шифрования",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Использовать LVM и шифрование",
+  "installationTypeLVMEncryption": "Использовать шифрование с паролем",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Стереть диск и использовать ZFS с шифрованием",
+  "installationTypeZFSEncryption": "Зашифровать с паролем, используя ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Выбраны ZFS и шифрование",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Это экспериментальная функция. Она может не работать с вашим оборудованием или в будущих выпусках {DISTRO}. <a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Прочитайте о шифровании TPM</a>, прежде чем выбрать эту опцию. Она может не работать с вашим оборудованием или в будущих выпусках {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -959,9 +959,9 @@
       }
     }
   },
-  "landscapeLoginFailedWarning": "Вход в систему не удался, попробуйте еще раз",
+  "landscapeLoginFailedWarning": "Вход в систему не удался, попробуйте ещё раз",
   "@landscapeLoginFailedWarning": {},
-  "landscapeDomainInvalidDomainWarning": "Неверный домен, проверьте или обратитесь в службу ИТ-поддержки",
+  "landscapeDomainInvalidDomainWarning": "Неверный домен, проверьте или обратитесь в службу технической поддержки",
   "@landscapeDomainInvalidDomainWarning": {},
   "landscapeMagicAttachInstructions": "Отсканируйте QR-код или введите код ниже на сайте <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
@@ -970,25 +970,25 @@
       "url": {}
     }
   },
-  "landscapeDomainInstructions": "Укажите домен ландшафта вашей организации для входа в систему и получения файла автоустановки. FQDN можно получить в службе ИТ-поддержки.",
+  "landscapeDomainInstructions": "Укажите домен Landscape вашей организации для входа в систему и получения файла автоматической установки. FQDN можно получить в службе технической поддержки.",
   "@landscapeDomainInstructions": {},
-  "landscapeCodeExpiredWarning": "Код истек, пожалуйста, попробуйте еще раз",
+  "landscapeCodeExpiredWarning": "Код устарел, пожалуйста, попробуйте ещё раз",
   "@landscapeCodeExpiredWarning": {},
-  "autoinstallLandscapeOption": "Автоматизированный с ландшафтом",
+  "autoinstallLandscapeOption": "Автоматизированный с Landscape",
   "@autoinstallLandscapeOption": {},
-  "landscapeHeader": "Войдите в систему, чтобы узнать о ландшафте",
+  "landscapeHeader": "Войдите в систему, чтобы узнать о Landscape",
   "@landscapeHeader": {},
-  "autoinstallLandscapeDescription": "Для пользователей в организациях, которые предоставляют файл автоустановки через ландшафт.",
+  "autoinstallLandscapeDescription": "Для пользователей организаций, которые предоставляют файл автоматической установки через Landscape.",
   "@autoinstallLandscapeDescription": {},
   "landscapePageTitle": "Автоматическая установка",
   "@landscapePageTitle": {},
-  "landscapeDomainHeader": "Введите домен ландшафта (FQDN)",
+  "landscapeDomainHeader": "Введите домен Landscape (FQDN)",
   "@landscapeDomainHeader": {},
-  "landscapeDomainTextField": "Домен ландшафта (FQDN)",
+  "landscapeDomainTextField": "Домен Landscape (FQDN)",
   "@landscapeDomainTextField": {},
   "next": "Следующий",
   "@next": {},
-  "landscapeDomainNoInternetDescriptionWarning": "Интернет необходим для получения файла автоустановки из ландшафта",
+  "landscapeDomainNoInternetDescriptionWarning": "Интернет необходим для получения файла автоустановки из Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
   "landscapeDomainNoInternetTitleWarning": "Подключитесь к Интернету, чтобы продолжить",
   "@landscapeDomainNoInternetTitleWarning": {},
@@ -1049,5 +1049,100 @@
   "restartComputer": "Перезагрузить компьютер",
   "@restartComputer": {},
   "rstDisableWindows": "Windows, если у вас установлено несколько операционных систем, включая Windows",
-  "@rstDisableWindows": {}
+  "@rstDisableWindows": {},
+  "bitlockerInfoDescription": "Один или несколько разделов зашифрованы с помощью Bitlocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Чтобы выполнить установку рядом с Windows, отключите в Windows функцию Bitlocker.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoTitle": "BitLocker обнаружен",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoRecovery": "Windows может запросить ключи восстановления во время загрузки после завершения установки.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Инструкции можно найти в <a href=\"{url}\">Руководство по использованию BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Без ключей восстановления BitLocker вы можете потерять все свои данные",
+  "@bitlockerWarningTitle": {},
+  "installationTypeNoneInfo": "Стандартная файловая система без шифрования.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeZFSEncryptionInfo": "Встроенное шифрование с помощью ZFS. Вам нужно будет вводить кодовую фразу каждый раз при включении компьютера.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeLVMEncryptionInfo": "Вам нужно будет вводить пароль каждый раз при включении компьютера. Эта функция использует шифрование LUKS с LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "confirmTableResized": "Размер изменён с {oldsize} на {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageBody": "Обратитесь в службу технической поддержки или попробуйте другой вариант установки.",
+  "@landscapeErrorPageBody": {},
+  "confirmTableUnchanged": "Без изменений",
+  "@confirmTableUnchanged": {},
+  "confirmTableFormattedMounted": "Отформатировано как {format}, использовано для {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Отформатировано как {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Использовано для {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Создано и отформатировано как {format}, использовано для {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageCode": "Код ошибки: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Автоматическая установка недоступна для вашей учётной записи",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainHintText": "Домен Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu будет установлена с конфигурацией, предоставленной вашей организацией",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Ниже вы можете просмотреть файл автоматической установки, импортированный из Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "confirmTableErased": "Очищено",
+  "@confirmTableErased": {}
 }

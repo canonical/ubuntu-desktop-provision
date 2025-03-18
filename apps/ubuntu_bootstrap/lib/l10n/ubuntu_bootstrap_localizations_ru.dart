@@ -92,10 +92,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectDescription => 'Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.';
 
   @override
-  String get autoinstallLandscapeOption => 'Автоматизированный с ландшафтом';
+  String get autoinstallLandscapeOption => 'Автоматизированный с Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'Для пользователей в организациях, которые предоставляют файл автоустановки через ландшафт.';
+  String get autoinstallLandscapeDescription => 'Для пользователей организаций, которые предоставляют файл автоматической установки через Landscape.';
 
   @override
   String get changeButtonText => 'Изменить';
@@ -353,31 +353,31 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedLabel => 'Дополнительные возможности...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Дополнительные возможности';
+  String get installationTypeAdvancedTitle => 'Файловая система и шифрование';
 
   @override
   String get installationTypeExperimental => 'Экспериментально';
 
   @override
-  String get installationTypeNone => 'Ничего';
+  String get installationTypeNone => 'Без шифрования';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Стандартная файловая система без шифрования.';
 
   @override
   String get installationTypeNoneSelected => 'Ничего не выбрано';
 
   @override
-  String get installationTypeLVM => 'Использовать LVM';
+  String get installationTypeLVM => 'Использовать LVM без шифрования';
 
   @override
   String get installationTypeLVMSelected => 'Выбран LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Использовать LVM и шифрование';
+  String get installationTypeLVMEncryption => 'Использовать шифрование с паролем';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Вам нужно будет вводить пароль каждый раз при включении компьютера. Эта функция использует шифрование LUKS с LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM и шифрование выбраны';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'На следующем шаге выберите ключ безопасности.';
 
   @override
-  String get installationTypeZFS => 'Стереть диск и использовать ZFS';
+  String get installationTypeZFS => 'Использовать ZFS без шифрования';
 
   @override
-  String get installationTypeZFSEncryption => 'Стереть диск и использовать ZFS с шифрованием';
+  String get installationTypeZFSEncryption => 'Зашифровать с паролем, используя ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Встроенное шифрование с помощью ZFS. Вам нужно будет вводить кодовую фразу каждый раз при включении компьютера.';
 
   @override
   String get installationTypeZFSSelected => 'Выбрана ZFS';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Выбраны ZFS и шифрование';
 
   @override
-  String get installationTypeTPM => 'Включить аппаратное шифрование диска';
+  String get installationTypeTPM => 'Использовать аппаратное шифрование диска';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Это экспериментальная функция. Она может не работать с вашим оборудованием или в будущих выпусках $DISTRO. <a href=\"$url\">Прочитайте о шифровании TPM</a>, прежде чем выбрать этот вариант.';
+    return '<a href=\"$url\">Прочитайте о шифровании TPM</a>, прежде чем выбрать эту опцию. Она может не работать с вашим оборудованием или в будущих выпусках $DISTRO.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Приложения';
 
   @override
-  String get confirmEntryDiskSetup => 'Настройка дисков';
+  String get confirmEntryDiskSetup => 'Тип установки';
 
   @override
   String get confirmEntryDiskEncryption => 'Шифрование дисков';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Установить';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Очищено';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Без изменений';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Размер изменён с $oldsize на $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Создано и отформатировано как $format, использовано для $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Отформатировано как $format, использовано для $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Использовано для $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Отформатировано как $format';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Продолжить тестирование';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker обнаружен';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Один или несколько разделов зашифрованы с помощью Bitlocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Чтобы выполнить установку рядом с Windows, отключите в Windows функцию Bitlocker.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows может запросить ключи восстановления во время загрузки после завершения установки.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Инструкции можно найти в <a href=\"$url\">Руководство по использованию BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Без ключей восстановления BitLocker вы можете потерять все свои данные';
 
   @override
   String get restartComputer => 'Перезагрузить компьютер';
@@ -1099,52 +1099,52 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get landscapePageTitle => 'Автоматическая установка';
 
   @override
-  String get landscapeHeader => 'Войдите в систему, чтобы узнать о ландшафте';
+  String get landscapeHeader => 'Войдите в систему, чтобы узнать о Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Введите домен ландшафта (FQDN)';
+  String get landscapeDomainHeader => 'Введите домен Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Домен Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Укажите домен ландшафта вашей организации для входа в систему и получения файла автоустановки. FQDN можно получить в службе ИТ-поддержки.';
+  String get landscapeDomainInstructions => 'Укажите домен Landscape вашей организации для входа в систему и получения файла автоматической установки. FQDN можно получить в службе технической поддержки.';
 
   @override
-  String get landscapeDomainTextField => 'Домен ландшафта (FQDN)';
+  String get landscapeDomainTextField => 'Домен Landscape (FQDN)';
 
   @override
   String get next => 'Следующий';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Неверный домен, проверьте или обратитесь в службу ИТ-поддержки';
+  String get landscapeDomainInvalidDomainWarning => 'Неверный домен, проверьте или обратитесь в службу технической поддержки';
 
   @override
   String get landscapeDomainNoInternetTitleWarning => 'Подключитесь к Интернету, чтобы продолжить';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Интернет необходим для получения файла автоустановки из ландшафта';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Интернет необходим для получения файла автоустановки из Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Код истек, пожалуйста, попробуйте еще раз';
+  String get landscapeCodeExpiredWarning => 'Код устарел, пожалуйста, попробуйте ещё раз';
 
   @override
-  String get landscapeLoginFailedWarning => 'Вход в систему не удался, попробуйте еще раз';
+  String get landscapeLoginFailedWarning => 'Вход в систему не удался, попробуйте ещё раз';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Автоматическая установка недоступна для вашей учётной записи';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Обратитесь в службу технической поддержки или попробуйте другой вариант установки.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Код ошибки: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu будет установлена с конфигурацией, предоставленной вашей организацией';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Ниже вы можете просмотреть файл автоматической установки, импортированный из Landscape.';
 }

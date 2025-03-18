@@ -44,7 +44,7 @@
   "@rstTitle": {},
   "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné {DISTRO} nainstalovat, je třeba ve Windows funkci RST vypnout.",
   "@rstDescription": {},
-  "rstInstructions": "Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -90,11 +90,11 @@
   },
   "installationTypeNoOSDetected": "Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeAdvancedLabel": "Pokročilé funkce…",
+  "installationTypeAdvancedLabel": "Zobrazit pokročilé možnosti…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Pokročilé funkce",
+  "installationTypeAdvancedTitle": "Šifrování a souborový systém",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Žádné",
+  "installationTypeNone": "Žádné šifrování",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nic nevybráno",
   "@installationTypeNoneSelected": {},
@@ -104,7 +104,7 @@
   "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "Vybráno ZFS",
   "@installationTypeZFSSelected": {},
-  "installationTypeZFS": "Vymazat disk a použít souborový systém ZFS",
+  "installationTypeZFS": "Použít ZFS bez šifrování",
   "@installationTypeZFS": {},
   "installationTypeReinstall": "Vymazat {os} a přeinstalovat",
   "@installationTypeReinstall": {
@@ -613,7 +613,7 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "Zapnout na hardware založené šifrování celého disku",
+  "installationTypeTPM": "Použít na hardware založené šifrování",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM vybráno",
   "@installationTypeTPMSelected": {},
@@ -872,15 +872,15 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimentální",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Použít LVM",
+  "installationTypeLVM": "Použít LVM bez šifrování",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Použít LVM a šifrování",
+  "installationTypeLVMEncryption": "Šifrovat pomocí přístupového hesla",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Vymazat disk a použít ZFS se šifrováním",
+  "installationTypeZFSEncryption": "Šifrovat s přístupovým heslem pomocí ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybráno ZFS a šifrování",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních {DISTRO}. Než zvolíte tuto možnost, <a href=\"{url}\">přečtěte si o šifrování TPM</a>.",
+  "installationTypeTPMInfo": "Než zvolíte tuto možnost, <a href=\"{url}\">Přečtěte si o šifrování TPM</a>. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -1099,5 +1099,29 @@
   "rstDisableWindows": "Windows, pokud používáte dual boot se systémem Windows",
   "@rstDisableWindows": {},
   "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:",
-  "@rstDisable": {}
+  "@rstDisable": {},
+  "bitlockerInfoTitle": "Zjištěn BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Jeden nebo více oddílů je šifrováno pomocí nástroje BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "installationTypeLVMEncryptionInfo": "Při každém zapnutí počítače budete muset zadat přístupové heslo. Toto používá šifrování LUKS s LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeNoneInfo": "Standardní souborový systém bez šifrování.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeZFSEncryptionInfo": "Nativní šifrování pomocí ZFS. Při každém zapnutí počítače budete muset zadat přístupové heslo.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "bitlockerWarningTitle": "Bez obnovovacích klíčů nástroje BitLocker můžete přijít o všechna data",
+  "@bitlockerWarningTitle": {},
+  "bitlockerInfoDisable": "Pro instalaci spolu se systémem Windows vypněte ve Windows nástroj BitLocker.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Systém Windows může po instalaci vyžadovat obnovovací klíče při spuštění.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Pokyny naleznete v <a href=\"{url}\">průvodci nástrojem BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  }
 }

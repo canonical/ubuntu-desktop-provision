@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Ĉiuj datenoj kaj subdiskoj sur la disko estas forviŝotaj, inkluzive de mastrumaj sistemoj.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Funkcioj por spertuloj…';
+  String get installationTypeAdvancedLabel => 'Montri funkciojn por spertuloj…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Funkcioj por spertuloj';
+  String get installationTypeAdvancedTitle => 'Ĉifrado kaj dosiersistemo';
 
   @override
   String get installationTypeExperimental => 'Eksperimenta';
 
   @override
-  String get installationTypeNone => 'Nenio';
+  String get installationTypeNone => 'Sen ĉifrado';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Ordinara dosiersistemo sen ĉifrado.';
 
   @override
   String get installationTypeNoneSelected => 'Nenio elektita';
 
   @override
-  String get installationTypeLVM => 'Uzi LVM';
+  String get installationTypeLVM => 'Uzi LVM sen ĉifrado';
 
   @override
   String get installationTypeLVMSelected => 'LVM elektita';
 
   @override
-  String get installationTypeLVMEncryption => 'Uzi LVM kaj ĉifradon';
+  String get installationTypeLVMEncryption => 'Ĉifri kun pasfrazo';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Vi bezonis tajpi pasfrazon por startigi la komputilon. Tio uzas LUKS-ĉifradon kun LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM kaj ĉifrado elektitaj';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Vi elektos sekurigan ŝlosilon dum la sekva paŝo.';
 
   @override
-  String get installationTypeZFS => 'EKSPERIMENTE: Forviŝi la diskon kaj uzi la dosiersistemon ZFS';
+  String get installationTypeZFS => 'Uzi ZFS sen ĉifrado';
 
   @override
-  String get installationTypeZFSEncryption => 'Forviŝi la diskon kaj uzi ZFS kun ĉifrado';
+  String get installationTypeZFSEncryption => 'Ĉifri kun pasfrazo per ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Ĉifrado indiĝena al ZFS. Vi bezonos tajpi pasfrazon por startigi la komputilon.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS elektita';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS kaj ĉifrado elektitaj';
 
   @override
-  String get installationTypeTPM => 'EKSPERIMENTE: Ŝalti aparato-bazan plendiskan ĉifradon';
+  String get installationTypeTPM => 'Uzi aparato-bazan ĉifradon';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Jen eksperimenta funkcio, kiu eble ne funkcios kun via komputilo aŭ estontaj versioj de $DISTRO. <a href=\"$url\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion.';
+    return '<a href=\"$url\">Legu pri TPM-ĉifrado</a> antaŭ ol vi elektas ĉi tiun opcion. Tio eble ne funkcios kun via komputilo aŭ estontaj versioj de $DISTRO.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Programoj';
 
   @override
-  String get confirmEntryDiskSetup => 'Agordado de disko';
+  String get confirmEntryDiskSetup => 'Speco de instalo';
 
   @override
   String get confirmEntryDiskEncryption => 'Diska ĉifrado';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Instali';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Forviŝita';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Neŝanĝita';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Grando ŝanĝiĝis de $oldsize al $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Kreita kaj strukturita kiel $format kaj uzota por $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Restrukturita kiel $format uzota por $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Uzota por $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Restrukturita kiel $format';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Daŭre elprovi';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Troviĝis BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Unu aŭ pluraj subdisko(j) estis ĉifrita(j) per BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Por instali apud Windows, malŝaltu BitLocker en Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows povas peti restaŭrajn ŝlosilojn dum startado post instalo.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Por instrukcioj, vizitu <a href=\"$url\">la helpilon pri BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Vi povas perdi ĉiom da datenoj sen restaŭraj ŝlosiloj de BitLocker';
 
   @override
   String get restartComputer => 'Restartigi komputilon';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Tajpu nomregnon de Landscape (plene kvalifikitan nomregnon)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Nomregno Landscape (plene kvalifikita nomregno)';
 
   @override
   String get landscapeDomainInstructions => 'Provizu la nomregnon Landscape de via organizaĵo por saluti kaj elŝuti aŭtomatan instalan dosieron. La informadika subtena teamo de via organizaĵo povas provizi la plene kvalifikitan nomregnon.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Salutado malsukcesis; bonvolu reprovi';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Aŭtomata instalo ne disponiĝas por via konto';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Kontaktu vian teknikan subtenon, aŭ provu alian opcion por instali.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Erarkodo: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu instaliĝos laŭ la agordoj provizitaj de via organizaĵo';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Vi povas revizii la aŭtomatan instalan dosieron el Landscape ĉi-sube.';
 }

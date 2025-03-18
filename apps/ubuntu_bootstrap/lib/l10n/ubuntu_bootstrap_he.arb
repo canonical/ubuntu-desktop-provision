@@ -99,9 +99,9 @@
   },
   "shutdown": "כיבוי",
   "@shutdown": {},
-  "installationTypeAdvancedLabel": "יכולות מתקדמות…",
+  "installationTypeAdvancedLabel": "הצגת אפשרויות מתקדמות…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "יכולות מתקדמות",
+  "installationTypeAdvancedTitle": "הצפנה ומערכת קבצים",
   "@installationTypeAdvancedTitle": {},
   "installationTypeErase": "למחוק את הכונן ולהתקין את {DISTRO}",
   "@installationTypeErase": {},
@@ -127,7 +127,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "התכניות האלו כפופות לתנאי אישוי שנכללים בתיעוד שלהן. חלקן קנייניות.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "סוג ההתקנה",
+  "installationTypeTitle": "הקמת הכונן",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "במחשב זה מותקנת כרגע {os}. מה לעשות?",
   "@installationTypeOSDetected": {
@@ -138,7 +138,7 @@
   },
   "installationTypeNoOSDetected": "לא זוהו מערכות הפעלה כלשהן במחשב זה. מה לעשות?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeNone": "אין",
+  "installationTypeNone": "ללא הצפנה",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "לא נבחרו",
   "@installationTypeNoneSelected": {},
@@ -148,7 +148,7 @@
   "@installationTypeEncrypt": {},
   "installationTypeEncryptInfo": "בשלב הבא ניתן לבחור מפתח אבטחה.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "ניסיוני: למחוק את הכונן ולהשתמש ב־ZFS",
+  "installationTypeZFS": "להשתמש ב־ZFS בלי הצפנה",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "נבחר ZFS",
   "@installationTypeZFSSelected": {},
@@ -551,7 +551,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "ניסיוני: להפעיל הצפנת מלוא הכונן בגיבוי חומרה",
+  "installationTypeTPM": "להשתמש בהצפנה מגובית חומרה",
   "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM נבחר",
   "@installationTypeTPMSelected": {},
@@ -807,7 +807,7 @@
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "ניסיוני",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "להשתמש ב־LVM",
+  "installationTypeLVM": "להשתמש ב־LVM בלי הצפנה",
   "@installationTypeLVM": {},
   "autoinstallAutomatedDescription": "למשתמשים מתקדמים שיש להם autoinstall.yaml להתקנות אחידות ובכמויות גדולות.",
   "@autoinstallAutomatedDescription": {},
@@ -821,9 +821,9 @@
   "@choosePassphraseHeader": {},
   "choosePassphraseBody": "צריך מילת צופן כדי להצפין את הקבצים שלך. תופיע בקשה למילוי מילת הצופן עם כל הפעלה של המחשב.",
   "@choosePassphraseBody": {},
-  "installationTypeLVMEncryption": "להשתמש ב־LVM והצפנה",
+  "installationTypeLVMEncryption": "הצפנה עם מילת צופן",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "למחוק את הכונן ולהשתמש ב־ZFS עם הצפנה",
+  "installationTypeZFSEncryption": "הצפנה עם מילת צופן באמצעות ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "נבחרו ZFS והצפנה",
   "@installationTypeZFSEncryptionSelected": {},
@@ -851,7 +851,7 @@
       }
     }
   },
-  "installationTypeTPMInfo": "זאת יכולת ניסיונית. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של {DISTRO}. <a href=\"{url}\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -884,7 +884,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "יישומים",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "הכנת הכונן",
+  "confirmEntryDiskSetup": "סוג ההתקנה",
   "@confirmEntryDiskSetup": {},
   "confirmProprietarySoftwareCodecsDrivers": "מפענחים ומנהלי התקנים",
   "@confirmProprietarySoftwareCodecsDrivers": {},
@@ -1054,5 +1054,100 @@
   "restartComputerTitle": "להפעיל את המחשב מחדש?",
   "@restartComputerTitle": {},
   "rstDisableWindows": "Windows, אם יש לך מערכת נוספת בטעינה עם Windows",
-  "@rstDisableWindows": {}
+  "@rstDisableWindows": {},
+  "bitlockerInfoTitle": "זוהה BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "מחיצה אחת או יותר מוצפנות ב־BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "כדי להתקין לצד Windows, יש להשבית את BitLocker ב־Windows.",
+  "@bitlockerInfoDisable": {},
+  "installationTypeLVMEncryptionInfo": "יש למלא מילת צופן עם כל הדלקה של המחשב. משתמש בהצפנת LUKS עם LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "הצפנה מובנית עם ZFS. יהיה למלא מילת צופן עם כל הדלקה של המחשב.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeNoneInfo": "מערכת קבצים רגילה בלי הצפנה.",
+  "@installationTypeNoneInfo": {},
+  "bitlockerInfoRecovery": "Windows עשוי לבקש מפתחות שחזור עם העלייה לאחר ההתקנה.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "להנחיות, אפשר לפנות אל <a href=\"{url}\">הדרכת BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "כל הנתונים שלך עלולים ללכת לאיבוד ללא מפתחות שחזור BitLocker",
+  "@bitlockerWarningTitle": {},
+  "confirmTableMounted": "משמש עבור {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "נמחק",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "ללא שינוי",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "הגודל השתנה מ־{oldsize} ל־{newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "נוצר ופורמט ל־{format} ומשמש עבור {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "פורמט ל־{format} ומשמש עבור {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "פורמט ל־{format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "התקנה אוטומטית אינה זמינה לחשבון שלך",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "נא לפנות למחלקת המחשוב/IT שלך או לנסות אפשרות התקנה אחרת.",
+  "@landscapeErrorPageBody": {},
+  "landscapeDomainHintText": "שם תחום ב־Landscape‏ (FQDN - מלא)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageCode": "קוד שגיאה: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "מערכת אובונטו תותקן עם ההגדרות שסופקו על ידי הארגון שלך",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "אפשר לסקור את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape להלן.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }

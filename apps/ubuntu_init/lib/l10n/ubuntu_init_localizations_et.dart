@@ -7,139 +7,139 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Tere tulemast';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Tere tulemast, see on $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'MIDA ON SIIN UUT?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Tõhusam kasutuselvõtmine';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Senisest parem paigaldusliides.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Rakendustepoe uus välimus';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Sinu lemmikrakenduste leidmine pole kunagi olnud nii lihtne.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Parem turvalisus';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Uued raudvara- või ZFSi-põhise krüptimise valikud.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Vaata muudatuste logi</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemeetria';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Aita meid $distro parandamisel';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'Jagades meiega selle süsteemi andmeid, aita meid $distro parandamisel . Andmete hulgas on arvuti mudel, paigaldatud tarkvara ja asukoht, mille määrasid ajavööndi valimiseks.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Jah, jaga süsteemi andmeid $distro arendustiimiga';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Ei, ära jaga süsteemi andmeid';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'Näita esimesena saadetavat aruannet';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Aruande üksikasjad';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Juriidiline märkus';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Telemeetriaandmete kogumine ei õnnestunud';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Asukohateenused';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Kas lülitame asukohateenused sisse?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Sellega lubad rakendustel teada sinu geograafilist asukohta.\nSeda saad süsteemi seadistustest alati muuta.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Asukohateenused';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Andmekaitse';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Liitu imeväel selle koodi abil aadressil <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Liida see arvuti või seade';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'või lisa ligipääsutunnus käsitsi';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Ligipääsutunnus';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Võta kasutusele kõige mitmekülgsem avatud lähtekoodiga tarkvara turvalahendus';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Alati tasuta erakasutuseks. 30-päevane prooviperiood ärikasutuseks. <a href=\"https://$url\">Vaata lisateavet</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Lisa';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Vigane ligipääsutunnus';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Kehtiv ligipääsutunnus';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Vigane ligipääsutunnus, proovi uuesti';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Jäta praegu vahele';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Hiljem saad sa alati Ubuntu Pro kasutusele võtta rakenduses „Tarkvara ja uuendused“.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Võta Ubuntu Pro kasutusele';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Lisa see arvuti või seade Ubuntu Pro tellimusele, mis tagab paljude pakettide turvauuendused kuni 2032. aastani.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro on nüüd selles arvutis või seadmes kasutusel';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.';
 }

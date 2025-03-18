@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST terdeteksi';
 
   @override
-  String get rstHeader => 'Nonaktifkan RST untuk melanjutkan';
+  String get rstHeader => 'Anda harus menonaktifkan RST untuk melanjutkan instalasi';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Komputer Anda memakai Intel RST (Rapid Storage Technology). Anda dapat menonaktifkan RST dalam:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, jika Anda menggunakan setup dual boot dengan Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Pengaturan BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Semua data dan partisi di disk akan dihapus, termasuk sistem operasi.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Fitur tingkat lanjut...';
+  String get installationTypeAdvancedLabel => 'Tampilkan opsi tingkat lanjut...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Fitur-fitur tingkat lanjut';
+  String get installationTypeAdvancedTitle => 'Enkripsi dan sistem berkas';
 
   @override
   String get installationTypeExperimental => 'Eksperimental';
 
   @override
-  String get installationTypeNone => 'Nihil';
+  String get installationTypeNone => 'Tanpa enkripsi';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Sistem berkas standar tanpa enkripsi.';
 
   @override
   String get installationTypeNoneSelected => 'Tidak ada yang dipilih';
 
   @override
-  String get installationTypeLVM => 'Gunakan LVM';
+  String get installationTypeLVM => 'Gunakan LVM tanpa enkripsi';
 
   @override
   String get installationTypeLVMSelected => 'LVM dipilih';
 
   @override
-  String get installationTypeLVMEncryption => 'Gunakan LVM dan enkripsi';
+  String get installationTypeLVMEncryption => 'Enkripsi dengan frasa sandi';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda. Ini menggunakan enkripsi LUKS dengan LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM dan enkripsi terpilih';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Anda akan memilih kunci keamanan di langkah berikutnya.';
 
   @override
-  String get installationTypeZFS => 'Hapus disk dan gunakan ZFS';
+  String get installationTypeZFS => 'Gunakan ZFS tanpa enkripsi';
 
   @override
-  String get installationTypeZFSEncryption => 'Hapus disk dan gunakan ZFS dengan enkripsi';
+  String get installationTypeZFSEncryption => 'Enkripsi dengan frasa sandi menggunakan ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Enkripsi native dengan ZFS. Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS dipilih';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS dan enkripsi dipilih';
 
   @override
-  String get installationTypeTPM => 'Aktifkan enkripsi disk penuh yang didukung perangkat keras';
+  String get installationTypeTPM => 'Gunakan enkripsi yang didukung oleh perangkat keras';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Ini adalah fitur eksperimental. Mungkin tidak bekerja dengan perangkat keras Anda atau rilis $DISTRO berikutnya. <a href=\"$url\">Baca tentang enkripsi TPM</a> sebelum Anda memilih opsi ini.';
+    return '<a href=\"$url\">Bacalah tentang enkripsi TPM</a> sebelum Anda memilih opsi ini. Ini mungkin tidak bekerja dengan perangkat keras atau rilis $DISTRO di masa depan.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Aplikasi';
 
   @override
-  String get confirmEntryDiskSetup => 'Penyiapan disk';
+  String get confirmEntryDiskSetup => 'Tipe instalasi';
 
   @override
   String get confirmEntryDiskEncryption => 'Enkripsi disk';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Pasang';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Dihapus';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Tidak berubah';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Diubah ukuran dari $oldsize ke $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Dibuat dan diformat sebagai $format yang digunakan untuk $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Diformat sebagai $format yang digunakan untuk $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Digunakan untuk $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Diformat sebagai $format';
   }
 
   @override
@@ -745,30 +745,30 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Lanjutkan mencoba';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker terdeteksi';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Satu atau lebih partisi dienkripsi dengan BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Untuk memasang berdampingan dengan Windows, nonaktifkan BitLocker di Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows mungkin meminta kunci pemulihan saat boot setelah instalasi.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Untuk instruksi, kunjungi <a href=\"$url\">panduan BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Anda bisa kehilangan semua data Anda tanpa kunci pemulihan BitLocker';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Jalankan ulang komputer';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Jalankan ulang komputer?';
 
   @override
   String get restartIntoWindows => 'Mulai Ulang Ke Windows';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Masukkan domain (FQDN) Landscape';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Domain (FQDN) Landscape';
 
   @override
   String get landscapeDomainInstructions => 'Sediakan domain Landscape organisasi Anda untuk log masuk dan mengambil berkas autoinstall. Anda bisa mendapatkan FQDN dari dukungan TI Anda.';
@@ -1132,14 +1132,14 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Log masuk gagal, silakan coba lagi';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Pemasangan terotomasi tidak tersedia untuk akun Anda';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Hubungi dukungan TI Anda atau cobalah opsi instalasi lain.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Kode galat: $code';
   }
 
   @override
