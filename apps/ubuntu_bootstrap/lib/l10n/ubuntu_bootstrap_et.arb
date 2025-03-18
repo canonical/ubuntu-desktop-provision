@@ -109,5 +109,135 @@
     }
   },
   "autoinstallDirectErrorFileSystemTitle": "Automaatse paigalduse juhtfail pole loetav",
-  "@autoinstallDirectErrorFileSystemTitle": {}
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "installationCompleteTitle": "Paigaldamine on lõppenud",
+  "@installationCompleteTitle": {},
+  "tryOrInstallRepairOption": "Paranda paigaldus",
+  "@tryOrInstallRepairOption": {},
+  "tryOrInstallRepairDescription": "Parandamise käigus paigaldatakse kogu senipaigaldatud tarkvara uuesti, kuid nii dokumendid kui seadistused jäävad muutmata.",
+  "@tryOrInstallRepairDescription": {},
+  "autoinstallLandscapeOption": "Landscape'i põhine automaatne paigaldus",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "Kasutajatele organisatsioonides, kus on olemas Landscape'i põhine automaatse paigalduse teenus.",
+  "@autoinstallLandscapeDescription": {},
+  "tryOption": "Proovi {RELEASE}t",
+  "@tryOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "tryDescription": "Sa võid proovida {RELEASE}t ilma arvutisse muudatusi tegemata.",
+  "@tryDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "rstInstructions": "Skaneerides QR-koodi mõne muu seadmega leiad teemakohase juhendi. Või lihtsalt vaata veebilehte <a href=\"https://{url}\">{url}</a>",
+  "@rstInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityLanguages": "Erinevate keelte tugi",
+  "@installationSlidesAccessibilityLanguages": {},
+  "autoinstallDirectErrorFileSystemBody": "Kontrolli vajalikke õigusi või otsi mõni muu fail.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Tundmatu viga",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallInteractiveOption": "Interaktiivne paigaldus",
+  "@autoinstallInteractiveOption": {},
+  "autoinstallDirectOption": "Juhtfailipõhine automaatne paigaldus",
+  "@autoinstallDirectOption": {},
+  "autoinstallInteractiveDescription": "Kasutajatele, kes soovivad sammhaaval juhendamist paigalduse ajal.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallDirectDescription": "Asjatundjatele, kes soovivad kasutada autoinstall.yaml faili järjekindlate ja korratavate paigalduste jaoks.",
+  "@autoinstallDirectDescription": {},
+  "loadingHeader": "{DISTRO} on ettevalmistamisel…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Hoiatus:",
+  "@warningLabel": {},
+  "tryOrInstallReleaseNotesLabel": "Huvi korral saad lugeda ka <a href=\"{url}\">selle versiooni väljalasketeadet</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installOption": "Paigalda {RELEASE}",
+  "@installOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installDescription": "Paigalda {RELEASE} hetkel arvutis olemasoleva operatsioonisüsteemi kõrvale või asemele. Selleks ei tohiks liiga palju aega kuluda.",
+  "@installDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "rstTitle": "RST on kasutusel",
+  "@rstTitle": {},
+  "rstHeader": "Paigaldusega jätkamiseks pead RST välja lülitama",
+  "@rstHeader": {},
+  "autoinstallHeader": "Kuidas sa sooviksid {DISTRO}t paigaldada?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallTitle": "Paigalduse tüüp",
+  "@autoinstallTitle": {},
+  "autoinstallInstructions": "Sisesta autoinstall.yaml faili võrguaadress või vali kohalik asukoht:",
+  "@autoinstallInstructions": {},
+  "tryOrInstallTitle": "{DISTRO} - proovi või paigalda",
+  "@tryOrInstallTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportHeader": "{DISTRO} ametlik dokumentatsioon leidub nii võrgus, kui doki abiteave ikooni kaudu.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportTitle": "Abiteave ja kasutajatugi",
+  "@installationSlidesSupportTitle": {},
+  "rstDisable": "Sinu arvutis on kasutusel Inteli RST (Rapid Storage Technology). Sa võid RST välja lülitada kas:",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windowsist, kui kasutad arvutis mitut operatsioonisüsteemi, millest üks on Windows",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "BIOSi seadistustest",
+  "@rstDisableBios": {},
+  "tryOrInstallHeader": "Mida sa sooviksid teha {DISTRO}ga?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
