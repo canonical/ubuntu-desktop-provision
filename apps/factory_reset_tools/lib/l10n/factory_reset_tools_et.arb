@@ -29,5 +29,11 @@
   "noMediaDetected": "Ühtegi eemaldatavat andmekandjat ei õnnestunud tuvastada",
   "@noMediaDetected": {},
   "noMediaDetectedSubtitle": "Tehaseseadistuste taastamise tarviku jaoks vajad sa USB-põhist andmekandjat.",
-  "@noMediaDetectedSubtitle": {}
+  "@noMediaDetectedSubtitle": {},
+  "error": "Viga",
+  "@error": {},
+  "loading": "Laadime...",
+  "@loading": {},
+  "warning": "Hoiatus",
+  "@warning": {}
 }
