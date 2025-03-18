@@ -164,5 +164,35 @@
         "type": "String"
       }
     }
-  }
+  },
+  "activeDirectoryTitle": "Logi sisse Active Directory teenusega",
+  "@activeDirectoryTitle": {},
+  "activeDirectoryTestConnection": "Testi domeeni ühenduvust",
+  "@activeDirectoryTestConnection": {},
+  "activeDirectoryDomainLabel": "Domeen",
+  "@activeDirectoryDomainLabel": {},
+  "activeDirectoryDomainTooLong": "Liiga pikk",
+  "@activeDirectoryDomainTooLong": {},
+  "activeDirectoryDomainInvalidChars": "Vigased tähemärgid",
+  "@activeDirectoryDomainInvalidChars": {},
+  "activeDirectoryDomainStartDot": "Algab punktiga (.)",
+  "@activeDirectoryDomainStartDot": {},
+  "activeDirectoryDomainEndDot": "Lõppeb punktiga (.)",
+  "@activeDirectoryDomainEndDot": {},
+  "activeDirectoryDomainStartHyphen": "Algab sidekriipsuga (-)",
+  "@activeDirectoryDomainStartHyphen": {},
+  "activeDirectoryDomainEndHyphen": "Lõppeb sidekriipsuga (-)",
+  "@activeDirectoryDomainEndHyphen": {},
+  "activeDirectoryDomainEmpty": "Nõutav",
+  "@activeDirectoryDomainEmpty": {},
+  "activeDirectoryInfo": "Lihtsama haldamise nimel on {DISTRO} loodud sujuvalt liidestuma Active Directory teenusega.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryHeader": "Kas logime sisse Active Directory teenusega?",
+  "@activeDirectoryHeader": {}
 }
