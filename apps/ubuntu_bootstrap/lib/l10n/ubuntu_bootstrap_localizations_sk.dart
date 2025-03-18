@@ -95,7 +95,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallLandscapeOption => 'Automaticky pomocou Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'Pre používateľov v organizáciách, ktoré poskytujú súbor na automatickú inštaláciu prostredníctvom Landscape.';
+  String get autoinstallLandscapeDescription => 'Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie cez Landscape.';
 
   @override
   String get changeButtonText => 'Zmeniť';
@@ -174,7 +174,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://$url\">$url</a>';
+    return 'Pre inštrukcie naskenujte QR kód na inom zariadení alebo navštívte: <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Všetky údaje a oddiely na disku budú vymazané, vrátane operačných systémov.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Pokročilé funkcie…';
+  String get installationTypeAdvancedLabel => 'Zobraziť rozšírené možnosti...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Pokročilé funkcie';
+  String get installationTypeAdvancedTitle => 'Šifrovanie a súborový systém';
 
   @override
   String get installationTypeExperimental => 'Experimentálne';
 
   @override
-  String get installationTypeNone => 'Žiadne';
+  String get installationTypeNone => 'Bez šifrovania';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Štandardný súborový systém bez šifrovania.';
 
   @override
   String get installationTypeNoneSelected => 'Nič nevybrané';
 
   @override
-  String get installationTypeLVM => 'Použiť LVM';
+  String get installationTypeLVM => 'Použiť LVM bez šifrovania';
 
   @override
   String get installationTypeLVMSelected => 'Vybrané LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Použiť LVM a šifrovanie';
+  String get installationTypeLVMEncryption => 'Šifrovať prístupovou frázou';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybrané LVM a šifrovanie';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'V nasledujúcom kroku si zvolíte bezpečnostný kľúč.';
 
   @override
-  String get installationTypeZFS => 'Vymazať disk a použiť ZFS';
+  String get installationTypeZFS => 'Použiť ZFS bez šifrovania';
 
   @override
-  String get installationTypeZFSEncryption => 'Vymazať disk a použiť ZFS so šifrovaním';
+  String get installationTypeZFSEncryption => 'Šifrovať prístupovou frázou v ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.';
 
   @override
   String get installationTypeZFSSelected => 'Vybrané ZFS';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Vybrané ZFS a šifrovanie';
 
   @override
-  String get installationTypeTPM => 'Zapnúť hardvérovo zálohované šifrovanie celého disku';
+  String get installationTypeTPM => 'Použiť hardvérové šifrovanie';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Toto je experimentálna funkcia. Nemusí fungovať s vaším hardvérom alebo budúcimi vydaniami $DISTRO. <a href=\"$url\">Prečítajte si o šifrovaní TPM</a> predtým, než si vyberiete túto možnosť.';
+    return '<a href=\"$url\">Prečítajte si o šifrovaní TPM</a>, než si vyberiete túto možnosť. Možno nebude fungovať s vaším hardvérom alebo budúcimi verziami $DISTRO.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Aplikácie';
 
   @override
-  String get confirmEntryDiskSetup => 'Nastavenie disku';
+  String get confirmEntryDiskSetup => 'Typ inštalácie';
 
   @override
   String get confirmEntryDiskEncryption => 'Šifrovanie disku';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Inštalácia';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Vymazané';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Nezmenené';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Veľkosť bola zmenená z $oldsize na $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Vytvorené a naformátované ako $format použité pre $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Formátované ako $format použité pre $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Používa sa pre $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Naformátované ako $format';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Pokračovať v skúšaní';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Zistený BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Jeden alebo viacero oddielov je šifrovaných pomocou BitLockeru.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Pre inštrukcie navštívte <a href=\"$url\">sprievodcu BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker';
 
   @override
   String get restartComputer => 'Reštartovať počítač';
@@ -877,7 +877,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Oficiálna dokumentácia k $DISTRO je k dispozícii online aj cez ikonu Pomocník na paneli.';
+    return 'Oficiálna dokumentácia $DISTRO je k dispozícii online aj cez ikonu Pomocník v doku.';
   }
 
   @override
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Zadajte doménu Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape doména (FQDN)';
 
   @override
   String get landscapeDomainInstructions => 'Zadajte doménu Landscape vašej organizácie na prihlásenie a získanie súboru na automatickú inštaláciu. FQDN vám môže poskytnúť vaše IT oddelenie.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Prihlásenie zlyhalo, prosím skúste to znova';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Automatická inštalácia nie je dostupná pre váš účet';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Kontaktujte svoju IT podporu alebo vyskúšajte inú možnosť inštalácie.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Chybový kód: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.';
 }

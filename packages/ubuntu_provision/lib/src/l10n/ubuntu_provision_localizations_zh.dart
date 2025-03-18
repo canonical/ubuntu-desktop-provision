@@ -69,7 +69,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return '若要发送包含有关调试信息的自动化错误报告，请在终端中或从命令控制台（Alt+F2）执行 <pre>sudo ubuntu-bug $SNAP</pre>。';
   }
 
   @override
@@ -358,7 +358,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return '在您完成安裝之前根據您的需求自訂 $DISTRO。您亦可以於安裝後在「系統設定」中變更這些設定。';
+    return '在設定之前，請依照您的需求自訂 $DISTRO。您也可以安裝後在「系統設定」中變更這些設定。';
   }
 
   @override
@@ -623,10 +623,10 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get activeDirectoryErrorMessage => '抱歉，無法立即設定 Active Directory。當您的系統安裝完成時，請造訪 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 以取得協助。';
 
   @override
-  String get networkPageTitle => '連接到網際網路';
+  String get networkPageTitle => '網路連線';
 
   @override
-  String get networkPageHeader => '連接到網際網路';
+  String get networkPageHeader => '連線到網際網路';
 
   @override
   String get networkPageBody => '有效的網際網路連線可以透過硬體相容性檢查與安裝額外的軟體包來改進您的安裝體驗。';
@@ -635,19 +635,19 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get networkWiredOption => '使用有線網路';
 
   @override
-  String get networkWiredNone => '未偵測到有線網路連接';
+  String get networkWiredNone => '未偵測到有線網路連線';
 
   @override
   String get networkWiredOff => '有線網路連線已關閉';
 
   @override
-  String get networkWiredDisabled => '為了在本電腦上使用有線網路，必須啟用有線網路連接';
+  String get networkWiredDisabled => '為了在本電腦上使用有線網路，必須啟用有線網路連線';
 
   @override
-  String get networkWiredEnable => '啟用有線網路連接';
+  String get networkWiredEnable => '啟用有線網路連線';
 
   @override
-  String get networkWifiOption => '連接到 Wi-Fi 網路';
+  String get networkWifiOption => '連線到 Wi-Fi 網路';
 
   @override
   String get networkWifiOff => '無線網路已關閉';
@@ -662,7 +662,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get networkWifiEnable => '啟用 Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => '連接到隱藏的 Wi-Fi 網路';
+  String get networkHiddenWifiOption => '連線到隱藏的 Wi-Fi 網路';
 
   @override
   String get networkHiddenWifiNameLabel => '網路名稱';
@@ -671,17 +671,17 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get networkHiddenWifiNameRequired => '網路名稱為必填欄位';
 
   @override
-  String get networkNoneOption => '我現在不想要連接網路';
+  String get networkNoneOption => '我現在不想要連線到網路';
 
   @override
-  String get eulaPageTitle => '授權協議';
+  String get eulaPageTitle => '授權合約';
 
   @override
-  String get eulaReviewTerms => '審閱授權協議內容';
+  String get eulaReviewTerms => '檢視授權條款';
 
   @override
-  String get eulaReadAndAcceptTerms => '要完成這部機器的設定，您必須審閱並同意下列授權協議內容。';
+  String get eulaReadAndAcceptTerms => '若要繼續設定本機，您必須閱讀並接受授權合約條款。';
 
   @override
-  String get eulaAcceptTerms => '我以審閱並同意這些條款';
+  String get eulaAcceptTerms => '我已閱讀並接受這些條款';
 }

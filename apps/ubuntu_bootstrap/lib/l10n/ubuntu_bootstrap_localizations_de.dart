@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Alle Daten und Partitionen auf der Festplatte, einschließlich der Betriebssysteme, werden gelöscht.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Erweiterte Funktionen ...';
+  String get installationTypeAdvancedLabel => 'Erweiterte Optionen anzeigen ...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Erweiterte Funktionen';
+  String get installationTypeAdvancedTitle => 'Verschlüsselung und Dateisystem';
 
   @override
   String get installationTypeExperimental => 'Experimentell';
 
   @override
-  String get installationTypeNone => 'Keine';
+  String get installationTypeNone => 'Keine Verschlüsselung';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Standard-Dateisystem ohne Verschlüsselung.';
 
   @override
   String get installationTypeNoneSelected => 'Keine ausgewählt';
 
   @override
-  String get installationTypeLVM => 'LVM verwenden';
+  String get installationTypeLVM => 'LVM ohne Verschlüsselung verwenden';
 
   @override
   String get installationTypeLVMSelected => 'LVM ausgewählt';
 
   @override
-  String get installationTypeLVMEncryption => 'LVM und Verschlüsselung verwenden';
+  String get installationTypeLVMEncryption => 'Mit einer Passphrase verschlüsseln';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben. Dies verwendet LUKS-Verschlüsselung mit LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM und Verschlüsselung ausgewählt';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Im nächsten Schritt wählen Sie einen Sicherheitsschlüssel aus.';
 
   @override
-  String get installationTypeZFS => 'EXPERIMENTELL: Festplatte löschen und ZFS verwenden';
+  String get installationTypeZFS => 'ZFS ohne Verschlüsselung verwenden';
 
   @override
-  String get installationTypeZFSEncryption => 'Festplatte löschen und ZFS mit Verschlüsselung verwenden';
+  String get installationTypeZFSEncryption => 'Mit einer Passphrase verschlüsseln unter Verwendung von ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Native Verschlüsselung mit ZFS. Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS ausgewählt';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS und Verschlüsselung ausgewählt';
 
   @override
-  String get installationTypeTPM => 'EXPERIMENTELL: Hardwaregestützte vollständige Festplattenverschlüsselung aktivieren';
+  String get installationTypeTPM => 'Hardwaregestützte Verschlüsselung verwenden';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Dies ist eine experimentelle Funktion. Sie funktioniert möglicherweise nicht mit Ihrer Hardware oder zukünftigen Versionen von $DISTRO. <a href=\"$url\">Informieren Sie sich über TPM-Verschlüsselung</a>, bevor Sie diese Option auswählen.';
+    return '<a href=\"$url\">Informieren Sie sich über TPM-Verschlüsselung</a>, bevor Sie diese Option wählen. Dies funktioniert möglicherweise nicht mit Ihrer Hardware oder zukünftigen $DISTRO-Versionen.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Anwendungen';
 
   @override
-  String get confirmEntryDiskSetup => 'Festplatteneinrichtung';
+  String get confirmEntryDiskSetup => 'Art der Installation';
 
   @override
   String get confirmEntryDiskEncryption => 'Festplattenverschlüsselung';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Installieren';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Gelöscht';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Unverändert';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Größe von $oldsize auf $newsize geändert';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Erstellt und als $format formatiert, verwendet für $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Als $format formatiert, verwendet für $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Verwendet für $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Als $format formatiert';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Testen fortsetzen';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker erkannt';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Eine oder mehrere Partitionen sind mit BitLocker verschlüsselt.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Für die Installation neben Windows müssen Sie BitLocker in Windows deaktivieren.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows kann beim Hochfahren nach der Installation Wiederherstellungsschlüssel anfordern.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Anleitungen finden Sie im <a href=\"$url\">BitLocker-Handbuch</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Ohne BitLocker-Wiederherstellungsschlüssel können Sie alle Ihre Daten verlieren';
 
   @override
   String get restartComputer => 'Computer neu starten';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Landscape-Domain (FQDN) eingeben';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape-Domäne (FQDN)';
 
   @override
   String get landscapeDomainInstructions => 'Geben Sie die Landscape-Domain Ihrer Organisation an, um sich anzumelden und eine autoinstall-Datei abzurufen. Sie erhalten die FQDN von Ihrem IT-Support.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Automatisierte Installation ist für Ihr Konto nicht verfügbar';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Wenden Sie sich an Ihren IT-Support oder versuchen Sie eine andere Installationsoption.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Fehlercode: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu wird mit der von Ihrer Organisation bereitgestellten Konfiguration installiert';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Sie können die aus Landscape importierte autoinstall-Datei unten einsehen.';
 }

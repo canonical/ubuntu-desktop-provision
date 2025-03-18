@@ -71,7 +71,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => '法律通知';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => '未能收集遥测数据';
 
   @override
   String get privacyPageTitle => '位置信息服务';
@@ -90,58 +90,58 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return '在 <a href=\"https://$url\">$url</a> 用此代码将系统绑定到 Ubuntu Pro';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => '绑定本机';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => '或手动添加令牌';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => '令牌';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => '为开源软件安全获取最为包罗万象的订阅';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return '个人使用永远免费。企业可获得 30 天免费试用。<a href=\"https://$url\">了解更多</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => '绑定';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => '令牌无效';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => '令牌有效';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => '令牌无效，请重试';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => '暂时跳过';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => '您可以稍后在“软件与更新”应用中启用 Ubuntu Pro。';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => '启用 Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => '将此机器绑定到 Ubuntu Pro 以在 2032 年前获得更多软件安全更新。';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => '此机器现已启用 Ubuntu Pro';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => '您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -222,7 +222,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get privacyLocationTitle => '是否開啟地理位置服務？';
 
   @override
-  String get privacyLocationSubtitle => '讓應用程式知道您的地理位置，\n您可以在「系統設定」中隨時變更。';
+  String get privacyLocationSubtitle => '讓應用軟體知道您的地理位置，\n您可以在「系統設定」中隨時變更。';
 
   @override
   String get privacyLocationEnable => '地理位置';
@@ -239,7 +239,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => '綁定主機到支援服務';
+  String get ubuntuProHeader => '綁定本機';
 
   @override
   String get ubuntuProOrAddTokenManually => '或是手動添加一個驗證碼';
@@ -271,7 +271,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProOnBoardingSkipForNow => '先暫時跳過';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => '您可以稍後隨時於「軟體與更新」應用軟體啟用 Ubuntu Pro。';
+  String get ubuntuProOnBoardingSkipForNowDescription => '您稍後可以隨時在「軟體與更新」中啟用 Ubuntu Pro。';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => '啟用 Ubuntu Pro';
@@ -283,5 +283,5 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro 現已於此機器啟用';
 
   @override
-  String get ubuntuProSucessAttachDescription => '您可以於「軟體與更新」應用軟體中管理您的 Ubuntu Pro 支援服務。';
+  String get ubuntuProSucessAttachDescription => '您可以在「軟體與更新」中管理您的 Ubuntu Pro 支援服務。';
 }

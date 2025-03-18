@@ -85,7 +85,7 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   String get restore => 'Restore';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Käivita arvuti uuesti';
 
   @override
   String get reformat => 'Reformat';

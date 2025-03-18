@@ -318,7 +318,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'אישור מילת הצופן';
 
   @override
-  String get installationTypeTitle => 'סוג ההתקנה';
+  String get installationTypeTitle => 'הקמת הכונן';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'כל הנתונים והמחיצות בכונן יימחקו, כולל מערכות ההפעלה.';
 
   @override
-  String get installationTypeAdvancedLabel => 'יכולות מתקדמות…';
+  String get installationTypeAdvancedLabel => 'הצגת אפשרויות מתקדמות…';
 
   @override
-  String get installationTypeAdvancedTitle => 'יכולות מתקדמות';
+  String get installationTypeAdvancedTitle => 'הצפנה ומערכת קבצים';
 
   @override
   String get installationTypeExperimental => 'ניסיוני';
 
   @override
-  String get installationTypeNone => 'אין';
+  String get installationTypeNone => 'ללא הצפנה';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'מערכת קבצים רגילה בלי הצפנה.';
 
   @override
   String get installationTypeNoneSelected => 'לא נבחרו';
 
   @override
-  String get installationTypeLVM => 'להשתמש ב־LVM';
+  String get installationTypeLVM => 'להשתמש ב־LVM בלי הצפנה';
 
   @override
   String get installationTypeLVMSelected => 'נבחר מנהל כרכים לוגי';
 
   @override
-  String get installationTypeLVMEncryption => 'להשתמש ב־LVM והצפנה';
+  String get installationTypeLVMEncryption => 'הצפנה עם מילת צופן';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'יש למלא מילת צופן עם כל הדלקה של המחשב. משתמש בהצפנת LUKS עם LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'בשלב הבא ניתן לבחור מפתח אבטחה.';
 
   @override
-  String get installationTypeZFS => 'ניסיוני: למחוק את הכונן ולהשתמש ב־ZFS';
+  String get installationTypeZFS => 'להשתמש ב־ZFS בלי הצפנה';
 
   @override
-  String get installationTypeZFSEncryption => 'למחוק את הכונן ולהשתמש ב־ZFS עם הצפנה';
+  String get installationTypeZFSEncryption => 'הצפנה עם מילת צופן באמצעות ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'הצפנה מובנית עם ZFS. יהיה למלא מילת צופן עם כל הדלקה של המחשב.';
 
   @override
   String get installationTypeZFSSelected => 'נבחר ZFS';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'נבחרו ZFS והצפנה';
 
   @override
-  String get installationTypeTPM => 'ניסיוני: להפעיל הצפנת מלוא הכונן בגיבוי חומרה';
+  String get installationTypeTPM => 'להשתמש בהצפנה מגובית חומרה';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'זאת יכולת ניסיונית. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של $DISTRO. <a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת.';
+    return '<a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של $DISTRO.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'יישומים';
 
   @override
-  String get confirmEntryDiskSetup => 'הכנת הכונן';
+  String get confirmEntryDiskSetup => 'סוג ההתקנה';
 
   @override
   String get confirmEntryDiskEncryption => 'הצפנת הכונן';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'התקנה';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'נמחק';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'ללא שינוי';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'הגודל השתנה מ־$oldsize ל־$newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'נוצר ופורמט ל־$format ומשמש עבור $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'פורמט ל־$format ומשמש עבור $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'משמש עבור $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'פורמט ל־$format';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'להמשיך לבחון';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'זוהה BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'מחיצה אחת או יותר מוצפנות ב־BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'כדי להתקין לצד Windows, יש להשבית את BitLocker ב־Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows עשוי לבקש מפתחות שחזור עם העלייה לאחר ההתקנה.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'להנחיות, אפשר לפנות אל <a href=\"$url\">הדרכת BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'כל הנתונים שלך עלולים ללכת לאיבוד ללא מפתחות שחזור BitLocker';
 
   @override
   String get restartComputer => 'להפעיל את המחשב מחדש';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'נא למלא שם תחום ל־Landscape‏ (מלא/FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'שם תחום ב־Landscape‏ (FQDN - מלא)';
 
   @override
   String get landscapeDomainInstructions => 'נא לספק את שם התחום של הארגון שלך ב־Landscape כדי להיכנס ולמשוך קובץ התקנה אוטומטית (autoinstall). אפשר לקבל את שם התחום המלא (FQDN) שלך מתמיכת המחשוב.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'הכניסה נכשלה, נא לנסות שוב';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'התקנה אוטומטית אינה זמינה לחשבון שלך';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'נא לפנות למחלקת המחשוב/IT שלך או לנסות אפשרות התקנה אחרת.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'קוד שגיאה: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'מערכת אובונטו תותקן עם ההגדרות שסופקו על ידי הארגון שלך';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'אפשר לסקור את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape להלן.';
 }

@@ -7,48 +7,48 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Ubuntu töölauaversiooni paigaldaja';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Paigalda $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automaatne paigaldus';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Impordi automaatse paigalduse juhtfail';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Sa võid sisestada automaatse paigalduse juhtfaili võrguaadressi:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Või vali fail kohalikust seadmest:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Vali fail...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Eemalda fail';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Vali fail';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-failid';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Impordi';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Automaatse paigalduse juhtfail pole leitav';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Palun kontrolli, et võrguaadress oleks õige ja võrguühendus toimib või proovi hiljem uuesti.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Vigane võrguaadress';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
@@ -498,7 +498,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Muuda partitsiooni suurust';
 
   @override
   String get installAlongsideAllocateSpace => 'Allocate space';
@@ -669,22 +669,22 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Koodekid';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Koodekid ja draiverid';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Draiverid';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Paigalda';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Kustutatud';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Muutmata';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
@@ -716,42 +716,42 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system on paigaldatud ja valmis kasutamiseks';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** on kopeeritud andmekandjale';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Käivita uuesti kui $system';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Paigaldamise lõpetamiseks käivita arvuti või jätka testimist.\nViimasel juhul jäävad sinu tehtud muudatused salvestamata.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Paigaldusprotsessi jätkamiseks pead arvuti uuesti käivitama.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'Seiska';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Taaskäivita kohe';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Jätka proovisessioni';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Tuvastasime BitLockeri';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Üks või enam partitsiooni on krüptitud BitLockeriga.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Paigaldamaks kõrvuti Windowsiga, palun lülita BitLocker Windowsist välja.';
 
   @override
   String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
@@ -867,7 +867,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'Ekraanivaate ettelugeja Orca';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'Language support';

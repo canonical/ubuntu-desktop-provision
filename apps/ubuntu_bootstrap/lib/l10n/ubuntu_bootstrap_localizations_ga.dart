@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Gnéithe casta...';
+  String get installationTypeAdvancedLabel => 'Taispeáin ardroghanna...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Gnéithe casta';
+  String get installationTypeAdvancedTitle => 'Criptiú agus córas comhaid';
 
   @override
   String get installationTypeExperimental => 'Turgnamhach';
 
   @override
-  String get installationTypeNone => 'Ceann ar bith';
+  String get installationTypeNone => 'Gan criptiú';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Córas comhad caighdeánach gan criptiú.';
 
   @override
   String get installationTypeNoneSelected => 'Níl aon cheann roghnaithe';
 
   @override
-  String get installationTypeLVM => 'Úsáid LVM';
+  String get installationTypeLVM => 'Bain úsáid as LVM gan criptiú';
 
   @override
   String get installationTypeLVMSelected => 'LVM roghnaithe';
 
   @override
-  String get installationTypeLVMEncryption => 'Úsáid LVM agus criptiú';
+  String get installationTypeLVMEncryption => 'Criptigh le pasfhrása';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM agus criptiú roghnaithe';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Roghnóidh tú eochair slándála sa chéad chéim eile.';
 
   @override
-  String get installationTypeZFS => 'Léirscrios diosca agus úsáid ZFS';
+  String get installationTypeZFS => 'Bain úsáid as ZFS gan criptiú';
 
   @override
-  String get installationTypeZFSEncryption => 'Léirscrios diosca agus úsáid ZFS le criptiú';
+  String get installationTypeZFSEncryption => 'Criptigh le pasfhrása ag baint úsáide as ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS roghnaithe';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS agus criptiú roghnaithe';
 
   @override
-  String get installationTypeTPM => 'Cumasaigh criptiú diosca iomlán le tacaíocht crua-earraí';
+  String get installationTypeTPM => 'Bain úsáid as criptiúchán crua-earraí';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Is gné thurgnamhach é seo. Seans nach n-oibreoidh sé le do chrua-earraí nó le heisiúintí $DISTRO amach anseo. <a href=\"$url\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo.';
+    return '<a href=\"$url\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo. Seans nach n-oibreoidh sé seo le do chrua-earraí nó le heisiúintí $DISTRO amach anseo.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Iarratais';
 
   @override
-  String get confirmEntryDiskSetup => 'Socrú diosca';
+  String get confirmEntryDiskSetup => 'Cineál a shuiteáil';
 
   @override
   String get confirmEntryDiskEncryption => 'Criptiú diosca';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Suiteáil';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Scriosta';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Gan athrú';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Athmhéadaithe ó $oldsize go $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Cruthaithe agus formáidithe mar $format a úsáidtear le haghaidh $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Formáidithe mar $format a úsáidtear le haghaidh $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Úsáidte le haghaidh $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Formáidithe mar $format';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Leanúint ar aghaidh leis an tástáil';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Braitheadh BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Tá deighilt amháin nó níos mó criptithe le BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Le treoracha a fháil, tabhair cuairt ar an <a href=\"$url\">Treoir BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker';
 
   @override
   String get restartComputer => 'Atosaigh ríomhaire';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Cuir isteach fearann Tírdhreacha (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Fearann tírdhreacha (FQDN)';
 
   @override
   String get landscapeDomainInstructions => 'Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.';
@@ -1132,14 +1132,14 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Theip ar logáil isteach, bain triail eile as';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Níl suiteáil uathoibrithe ar fáil le do chuntas';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Cód earráide: $code';
   }
 
   @override

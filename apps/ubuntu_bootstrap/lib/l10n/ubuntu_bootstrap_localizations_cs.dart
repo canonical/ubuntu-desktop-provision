@@ -174,7 +174,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://$url\">$url</a>';
+    return 'Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -350,34 +350,34 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'Všechna data a oddíly na disku budou vymazány, včetně operačních systémů.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Pokročilé funkce…';
+  String get installationTypeAdvancedLabel => 'Zobrazit pokročilé možnosti…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Pokročilé funkce';
+  String get installationTypeAdvancedTitle => 'Šifrování a souborový systém';
 
   @override
   String get installationTypeExperimental => 'Experimentální';
 
   @override
-  String get installationTypeNone => 'Žádné';
+  String get installationTypeNone => 'Žádné šifrování';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Standardní souborový systém bez šifrování.';
 
   @override
   String get installationTypeNoneSelected => 'Nic nevybráno';
 
   @override
-  String get installationTypeLVM => 'Použít LVM';
+  String get installationTypeLVM => 'Použít LVM bez šifrování';
 
   @override
   String get installationTypeLVMSelected => 'Vybráno LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Použít LVM a šifrování';
+  String get installationTypeLVMEncryption => 'Šifrovat pomocí přístupového hesla';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Při každém zapnutí počítače budete muset zadat přístupové heslo. Toto používá šifrování LUKS s LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'V následujícím kroku si zvolíte šifrovací klíč.';
 
   @override
-  String get installationTypeZFS => 'Vymazat disk a použít souborový systém ZFS';
+  String get installationTypeZFS => 'Použít ZFS bez šifrování';
 
   @override
-  String get installationTypeZFSEncryption => 'Vymazat disk a použít ZFS se šifrováním';
+  String get installationTypeZFSEncryption => 'Šifrovat s přístupovým heslem pomocí ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Nativní šifrování pomocí ZFS. Při každém zapnutí počítače budete muset zadat přístupové heslo.';
 
   @override
   String get installationTypeZFSSelected => 'Vybráno ZFS';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Vybráno ZFS a šifrování';
 
   @override
-  String get installationTypeTPM => 'Zapnout na hardware založené šifrování celého disku';
+  String get installationTypeTPM => 'Použít na hardware založené šifrování';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Toto je experimentální funkce. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních $DISTRO. Než zvolíte tuto možnost, <a href=\"$url\">přečtěte si o šifrování TPM</a>.';
+    return 'Než zvolíte tuto možnost, <a href=\"$url\">Přečtěte si o šifrování TPM</a>. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních $DISTRO.';
   }
 
   @override
@@ -745,24 +745,24 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Pokračovat ve zkoušení';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Zjištěn BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Jeden nebo více oddílů je šifrováno pomocí nástroje BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Pro instalaci spolu se systémem Windows vypněte ve Windows nástroj BitLocker.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Systém Windows může po instalaci vyžadovat obnovovací klíče při spuštění.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Pokyny naleznete v <a href=\"$url\">průvodci nástrojem BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Bez obnovovacích klíčů nástroje BitLocker můžete přijít o všechna data';
 
   @override
   String get restartComputer => 'Restartovat počítač';
