@@ -87,5 +87,7 @@
   "autoinstallDirectFileLabel": "Või vali fail kohalikust seadmest:",
   "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Vali fail...",
-  "@autoinstallDirectFileButtonLabel": {}
+  "@autoinstallDirectFileButtonLabel": {},
+  "installationSlidesAccessibilityOrca": "Ekraanivaate ettelugeja Orca",
+  "@installationSlidesAccessibilityOrca": {}
 }
