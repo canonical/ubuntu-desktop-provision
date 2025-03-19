@@ -239,5 +239,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "configureSecureBootTitle": "Seadista Secure Boot",
+  "@configureSecureBootTitle": {}
 }
