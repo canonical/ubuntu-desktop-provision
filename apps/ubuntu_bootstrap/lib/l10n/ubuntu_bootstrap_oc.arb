@@ -1000,5 +1000,13 @@
   "landscapeDomainNoInternetTitleWarning": "Connectatz-vos a Internet per contunhar",
   "@landscapeDomainNoInternetTitleWarning": {},
   "landscapeDomainTextField": "Domeni Landscape (FQDN)",
-  "@landscapeDomainTextField": {}
+  "@landscapeDomainTextField": {},
+  "autoinstallDirectErrorNetworkBody": "Verificatz que l'URL es corrècta, provatz la connexion Internet, o ensajatz mai tard.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Verificatz que l'URL es corrècta o seleccionatz un fichièr local.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Fichièr autoinstall illegible",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Verificatz lo fichièr o fornissètz-ne un autre.",
+  "@autoinstallDirectErrorInvalidContentBody": {}
 }
