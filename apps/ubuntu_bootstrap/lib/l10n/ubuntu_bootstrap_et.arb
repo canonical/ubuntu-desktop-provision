@@ -267,5 +267,21 @@
   "updatesOtherSoftwarePageTitle": "Rakendused",
   "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Mis rakendusi sa tahaksid paigaldamisel lisada?",
-  "@updatesOtherSoftwarePageDescription": {}
+  "@updatesOtherSoftwarePageDescription": {},
+  "codecsAndDriversNvidiaBody": "Tagamaks parimat jõudlust NVIDIA graafikakaartidega, soovitame täiendavate draiverite paigaldamist.",
+  "@codecsAndDriversNvidiaBody": {},
+  "codecsAndDriversPageDescription": "Kas soovid paigaldada ka soovituslikku suletud ja omanduslikku tarkvara?",
+  "@codecsAndDriversPageDescription": {},
+  "codecsAndDriversNvidiaNote": "Tuvastasime NVIDIA graafikakaardi",
+  "@codecsAndDriversNvidiaNote": {},
+  "fullInstallationTitle": "Laiendatud valik",
+  "@fullInstallationTitle": {},
+  "codecsAndDriversPageBody": "{DISTRO} dsitributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
