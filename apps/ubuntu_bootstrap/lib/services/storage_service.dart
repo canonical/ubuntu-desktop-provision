@@ -87,6 +87,7 @@ class StorageService {
 
   /// Sets the selected target for guided partitioning.
   Future<void> setGuidedStorage() async {
+    await _client.resetStorageV2();
     await _client.setGuidedStorageV2(
       GuidedChoiceV2(
         target: guidedTarget!,
