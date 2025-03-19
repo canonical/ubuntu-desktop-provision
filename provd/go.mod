@@ -10,7 +10,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
 	github.com/stretchr/testify v1.9.0
-	github.com/ubuntu/decorate v0.0.0-20231211084900-69db9a41777a
+	github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19
 	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
 	google.golang.org/grpc v1.63.2
 	google.golang.org/protobuf v1.33.0
