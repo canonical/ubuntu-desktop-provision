@@ -34,6 +34,8 @@ void main() {
         state: ApplicationState.RUNNING,
       ),
     );
+    when(client.resetStorageV2())
+        .thenAnswer((_) async => fakeStorageResponse());
   });
 
   test('get guided storage', () async {
@@ -62,6 +64,7 @@ void main() {
     final service = StorageService(client);
     service.guidedTarget = target;
     await service.setGuidedStorage();
+    verify(client.resetStorageV2()).called(1);
     verify(client.setGuidedStorageV2(choice)).called(1);
     verify(client.setStorageV2()).called(1);
   });
@@ -85,6 +88,7 @@ void main() {
 
     service.guidedTarget = target;
     await service.setGuidedStorage();
+    verify(client.resetStorageV2()).called(1);
     verify(client.setGuidedStorageV2(choice)).called(1);
     verify(client.setStorageV2()).called(1);
   });
