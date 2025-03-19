@@ -5,7 +5,7 @@ go 1.21.0
 toolchain go1.22.12
 
 require (
-	github.com/golangci/golangci-lint v1.57.2
+	github.com/golangci/golangci-lint v1.64.8
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.3.0
 	google.golang.org/protobuf v1.33.0
 )
