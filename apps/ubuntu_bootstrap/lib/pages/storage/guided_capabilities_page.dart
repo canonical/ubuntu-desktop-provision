@@ -84,11 +84,17 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                       ),
                     if (model.currentTargetSupportsZfs) ...[
                       OptionButton(
-                        title: Wrap(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(lang.installationTypeZFS),
-                            InfoBadge(title: experimentalBadgeText),
-                          ],
+                            Expanded(
+                              flex: 100,
+                              child: Text(lang.installationTypeZFS),
+                            ),
+                            InfoBadge(
+                              title: experimentalBadgeText,
+                            ),
+                          ].withSpacing(kWizardSpacing / 2),
                         ),
                         isThreeLines: false,
                         value: GuidedCapability.ZFS,
@@ -96,11 +102,17 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
                       OptionButton(
-                        title: Wrap(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(lang.installationTypeZFSEncryption),
-                            InfoBadge(title: experimentalBadgeText),
-                          ],
+                            Expanded(
+                              flex: 100,
+                              child: Text(lang.installationTypeZFSEncryption),
+                            ),
+                            InfoBadge(
+                              title: experimentalBadgeText,
+                            ),
+                          ].withSpacing(kWizardSpacing / 2),
                         ),
                         isThreeLines: false,
                         value: GuidedCapability.ZFS_LUKS_KEYSTORE,
@@ -162,11 +174,17 @@ class TpmOption extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         OptionButton<GuidedCapability?>(
-          title: Wrap(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(lang.installationTypeTPM),
-              InfoBadge(title: experimentalBadgeText),
-            ],
+              Expanded(
+                flex: 100,
+                child: Text(lang.installationTypeTPM),
+              ),
+              InfoBadge(
+                title: experimentalBadgeText,
+              ),
+            ].withSpacing(kWizardSpacing / 2),
           ),
           subtitle: Html(
             data: tpmInfo,
