@@ -115,6 +115,12 @@ class MockManualStorageModel extends _i1.Mock
       ) as bool);
 
   @override
+  bool get waitingForReply => (super.noSuchMethod(
+        Invocation.getter(#waitingForReply),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
