@@ -327,5 +327,60 @@
   "choosePassphraseInfoBody": "Kui unustad salafraasi siis kaotad ligipääsu kõikidele oma andmetele.",
   "@choosePassphraseInfoBody": {},
   "chooseOptionalPassphraseHeader": "Loo salafraas (valikuline)",
-  "@chooseOptionalPassphraseHeader": {}
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Salvesta salafraas ja taastevõti turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseBody": "Salafraas võimaldab kaitsta sinu andmeid olukorras, kus see arvuti või seade satub valedesse kätesse. Pead salafraasi sisestama igal arvuti käivitamisel ning sa ei saa seda hiljem eemaldada",
+  "@chooseOptionalPassphraseBody": {},
+  "installationTypeMultiOSDetected": "Selles arvutis on juba on olemas üsna mitu operatsioonisüsteemi. Mida sa tahad teha?",
+  "@installationTypeMultiOSDetected": {},
+  "installationTypeNoOSDetected": "Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?",
+  "@installationTypeNoOSDetected": {},
+  "installationTypeErase": "Kustuta ja vorminda ketas ning paigaldada ${DISTRO}",
+  "@installationTypeErase": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Kõik andmed ja partitsioonid sellelt kettalt saavad järgnevaga kustutatud, sealhulgas operatsioonisüsteemid.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeAdvancedLabel": "Näita lisavalikuid...",
+  "@installationTypeAdvancedLabel": {},
+  "createPassphrase": "Loo salafraas",
+  "@createPassphrase": {},
+  "installationTypeHeader": "Kuidas sa tahad {DISTRO} paigaldada?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPassphrase": "Korda salafraasi",
+  "@confirmPassphrase": {},
+  "installationTypeTitle": "Kettaseadistus",
+  "@installationTypeTitle": {},
+  "chooseOptionalPassphraseInfoBody": "Kui unustad salafraasi, siis kaotad ligipääsu oma andmetele. Salafraas ei asenda taastevõtit ega kasutajakonto salasõna.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "installationTypeOSDetected": "Selles arvutis on juba on olemas {os}. Mida sa tahad teha?",
+  "@installationTypeOSDetected": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeDualOSDetected": "Selles arvutis on juba on olemas {os1} ja {os2}. Mida sa tahad teha?",
+  "@installationTypeDualOSDetected": {
+    "placeholders": {
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  }
 }
