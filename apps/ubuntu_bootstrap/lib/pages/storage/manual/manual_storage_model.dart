@@ -59,6 +59,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   var _selectedDiskIndex = -1;
   var _selectedObjectIndex = -1;
   int _bootDiskIndex = -1;
+  var _waitingForReply = false;
 
   /// Whether the current input is valid.
   bool get isValid => !_service.needRoot && !_service.needBoot;
@@ -136,6 +137,11 @@ class ManualStorageModel extends SafeChangeNotifier {
   /// Whether the currently selected disk can be reformatted.
   bool get canReformatDisk => selectedDisk != null && selectedObject == null;
 
+  /// Whether we're waiting for a reply from subiquity. Currently this is only
+  /// needed for [deletePartition] in order to prevent sending multiple
+  /// requests when subiquity is slow to respond.
+  bool get waitingForReply => _waitingForReply;
+
   /// Adds a partition.
   Future<void> addPartition(
     Disk disk,
@@ -179,6 +185,8 @@ class ManualStorageModel extends SafeChangeNotifier {
 
   /// Deletes a partition.
   Future<void> deletePartition(Disk disk, Partition partition) async {
+    _waitingForReply = true;
+    notifyListeners();
     await _service.deletePartition(disk, partition).then(_updateDisks);
   }
 
@@ -225,7 +233,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   }
 
   /// Creates a new partition on the disk.
-  Future<void> reformatDisk(Disk disk) {
+  Future<void> reformatDisk(Disk disk) async {
     return _service.reformatDisk(disk).then(_updateDisks);
   }
 
@@ -236,6 +244,7 @@ class ManualStorageModel extends SafeChangeNotifier {
       selectStorage(disks.isEmpty ? -1 : 0);
     }
     _bootDiskIndex = disks.indexWhere((disk) => disk.bootDevice == true);
+    _waitingForReply = false;
     notifyListeners();
   }
 
