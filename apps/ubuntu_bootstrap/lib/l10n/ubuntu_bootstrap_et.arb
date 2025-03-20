@@ -336,7 +336,7 @@
   "@installationTypeMultiOSDetected": {},
   "installationTypeNoOSDetected": "Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?",
   "@installationTypeNoOSDetected": {},
-  "installationTypeErase": "Kustuta ja vorminda ketas ning paigaldada ${DISTRO}",
+  "installationTypeErase": "Kustuta ja vorminda ketas ning paigaldada {DISTRO}",
   "@installationTypeErase": {
     "placeholders": {
       "DISTRO": {
@@ -379,6 +379,821 @@
         "type": "String"
       },
       "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMSelected": "TPM on valitud",
+  "@installationTypeTPMSelected": {},
+  "freeDiskSpace": "Vaba ruum",
+  "@freeDiskSpace": {},
+  "installAlongsideHiddenPartitions": "{num} väiksem(at) partitsioon(i) on peidetud, detailsemaks halduseks kasuta <a href=\"{url}\">üksikasjalikku partitsioonide loojat</a>",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmEntryInstallationDisk": "Paigaldusmeedia",
+  "@confirmEntryInstallationDisk": {},
+  "confirmTableCreatedFormattedMounted": "Loodud ja vormindatud kui {format} „{mountpoint}“ haakepunkti jaoks",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesTitle": "Tere tulemast - see on {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmEntryDiskEncryption": "Ketta krüptimine",
+  "@confirmEntryDiskEncryption": {},
+  "diskHeadersType": "Tüüp",
+  "@diskHeadersType": {},
+  "confirmTableMounted": "Kasutusel „{mountpoint}“ haakepunkti jaoks",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Vormindatud kui {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityBody": "{DISTRO} filosoofia põhineb arusaamal, et arvutid sobivad kõigile. Laia valiku hõlbustustarvikute ning võimaluste abil kohendada keelt, värve ja teksti suurust tagab {DISTRO} arvutikasutuse mugavuse kõigile, kes iganes te pole või kus iganes te ka ei viibi.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "Praegune versioon {version} ongi kõige uuem.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainNoInternetDescriptionWarning": "Internetiühendus on vajalik automaatse paigalduse juhtfaili laadimiseks Landscape'i teenusest",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "installationTypeNoneInfo": "Standardne failisüsteem ilma krüptimiseta.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel LUKS ja LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel ZFS-i sisseehitatud liidestus.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Hoiatus:</font> järgnevaga kustutad kõik {os} operatsioonisüsteemi programmid, dokumendid, fotod, muusika ja kõik muud failid.",
+  "@installationTypeReinstallWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePartitionDropdownLabel": "Vali partitsioon:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "selectGuidedStorageInfoLabel": "Kasuta kogu ketast:",
+  "@selectGuidedStorageInfoLabel": {},
+  "installAlongsideAllocateSpace": "Eralda andmeruumi",
+  "@installAlongsideAllocateSpace": {},
+  "installAlongsideAvailable": "Saadaval:",
+  "@installAlongsideAvailable": {},
+  "allocateDiskSpaceInvalidMountPointSlash": "Haakepunkti alguses peab olema kaldkriips „/“",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "diskHeadersSize": "Suurus",
+  "@diskHeadersSize": {},
+  "newPartitionTableConfirmationTitle": "Uus tühi partitsioon",
+  "@newPartitionTableConfirmationTitle": {},
+  "partitionEditTitle": "Muuda partitsiooni",
+  "@partitionEditTitle": {},
+  "partitionTypeLabel": "Uue partitsiooni tüüp:",
+  "@partitionTypeLabel": {},
+  "partitionLocationLabel": "Uue partitsiooni asukoht:",
+  "@partitionLocationLabel": {},
+  "partitionLocationEnd": "Selle andmeruumi lõpus",
+  "@partitionLocationEnd": {},
+  "partitionFormatLabel": "Kasutusel kui:",
+  "@partitionFormatLabel": {},
+  "partitionFormatKeep": "Kasuta {format} vormindust",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmDiskEncryptionTPM": "TPM",
+  "@confirmDiskEncryptionTPM": {},
+  "confirmDiskEncryptionNone": "Pole kasutusel",
+  "@confirmDiskEncryptionNone": {},
+  "confirmDevicesTitle": "Seadmed",
+  "@confirmDevicesTitle": {},
+  "confirmPartitionsTitle": "Partitsioonid",
+  "@confirmPartitionsTitle": {},
+  "confirmPartitionTables": "Järgnevate seadmete partitsioonitabelid on muudetud:",
+  "@confirmPartitionTables": {},
+  "bitlockerInfoRecovery": "Peale paigaldamist võib Windows järgmisel alglaadimisel küsida taastevõtmeid.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Täpsem teave leidub <a href=\"{url}\">BitLockeri juhendis</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Ilma BitLockeri taastevõtmeteta võid kaotada ligipääsu kõikidele oma andmetele",
+  "@bitlockerWarningTitle": {},
+  "installationSlidesWelcomeBody": "Olenemata sellest, kas sa oled arendaja, sisulooja, arvutimängude huviline või süsteemihaldur, siis {RELEASE} versioonis leidub uusi töövahendeid, mis parandavad sinu tõhusust ja kasutuskogemust.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Arenda parimate avatud lähtekoodil põhinevate töövahenditega",
+  "@installationSlidesDevelopmentTitle": {},
+  "installationSlidesDevelopmentBody": "{DISTRO} ideaalne tööjaam rakenduste või veebiarendusteks, andmeteaduse ja tehisintellektiga seotud tööde jaoks ning loomulikult devopsi ja süsteemihalduse jaoks. Iga {DISTRO} viimane versioon sisaldab uusimaid arendustarvikuid ning toetab kõiki suurimaid lõimitud arenduskeskondi.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityBody": "Kas sa oled animatsioonide tegija, kujundaja, videolooja või mänguarendaja, siis {DISTRO} toetab sinu töövoogu nii avatud lähtekoodil põhineva, kui valdkonnale omase tarkvara ja rakendustega.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingBody": "Parema jõudluse ja ühilduvuse nimel toetab {DISTRO} uusimaid NVIDIA ja Mesa draivereid. Steami ja muude sarnaste rakenduste abil on tuhanded Windowsi mängud sobilikud {DISTRO} jaoks ilma täiendava seadistamiseta.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "Kõikide {DISTRO} LTS-versioonidega kaasneb viieaastane turvaparanduste tugi, mida Ubuntu Pro tellimusega on võimalik pikendada kümne aastani.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityBody": "{DISTRO} valikus leiduvad kõik töövahendid püsimaks tänapäevases võrgumaailmas privaatsena ja turvalisena. Sisseehitatud tulemüür ja VPN-ide tugi ning pinu privaatsuskeskseid rakendusi tagavad, et sul on täielik kontroll oma andmete üle.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Hõlbustus ja ligipääs kõigile",
+  "@installationSlidesAccessibilityTitle": {},
+  "installationSlidesSupportResources": "Kasulikku teavet leiad siit:",
+  "@installationSlidesSupportResources": {},
+  "installationSlidesSupportCommunity": "Ask Ubuntu veebisaidist leiad laias valikus küsimusi koos vastustega ning Ubuntu Discourse'i põhine kogukonnafoorum sisaldab juhendeid ja vestlusi nii uutele, kui kogenud kasutajatele.",
+  "@installationSlidesSupportCommunity": {},
+  "installationSlidesSupportEnterprise": "Suurklientidele ja äriklientidele pakub Canonical teenusepõhist kasutajatuge, mis teeb töökohal Ubuntu turvalise kasutuselevõtmise ja haldamise lihtsaks.",
+  "@installationSlidesSupportEnterprise": {},
+  "installationSlidesSupportDocumentation": "Ametlik dokumentatsioon",
+  "@installationSlidesSupportDocumentation": {},
+  "notEnoughDiskSpaceTitle": "Pole piisavalt kettaruumi",
+  "@notEnoughDiskSpaceTitle": {},
+  "notEnoughDiskSpaceUbuntu": "{DISTRO} paigaldamiseks pole piisavalt kettaruumi",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshReady": "Uuendus on valmis",
+  "@refreshReady": {},
+  "refreshSnapDownload": "Laadime paketti alla: {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Seadistame paketi aliasi: {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Eemaldame paketi linke: {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeReinstall": "Kustuta {os} ja paigalda uuesti",
+  "@installationTypeReinstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeManualInfo": "Sobib asjatundjatele, kes soovivad kettaid kohandada vastavalt oma üksikasjalikele eelistustele.",
+  "@installationTypeManualInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Saadaval:",
+  "@installationSlidesAvailable": {},
+  "installationSlidesSoftwareBody": "Paigalda, halda ja uuenda kõiki oma rakendusi Ubuntu Tarkvarast, sealhulgas tuhandeid rakendusi, mis leiduvad nii Snap Store'is kui {DISTRO} distributsiooni arhiivis.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityBody": "{DISTRO} töölaual leidub LibreOffice, mis on Microsoft Office'iga ühilduv avatud lähtekoodil põhinev kontoritarkvarapakett tekstitöötluse, tabelarvutuse ja esitluste jaoks. Lisaks on olemas paljud laialt kasutusel olevad ühistöörakendused.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHeader": "Sisesta Landscape'i domeen (FQDN ehk täielik domeeninimi)",
+  "@landscapeDomainHeader": {},
+  "installationTypeLVMSelected": "LVM on valitud",
+  "@installationTypeLVMSelected": {},
+  "installationTypeLVMEncryption": "Krüpti salafraasiga",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeLVM": "Kasuta ilma krüptimata LVM-i",
+  "@installationTypeLVM": {},
+  "installationTypeTPM": "Kasuta raudvarapõhist krüptimist",
+  "@installationTypeTPM": {},
+  "selectGuidedStorageInstallNow": "Paiglada nüüd",
+  "@selectGuidedStorageInstallNow": {},
+  "guidedStoragePageHeader": "Vali, kuhu soovid {DISTRO} paigaldada",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpace": "Käsitsi partitsioneerimine",
+  "@allocateDiskSpace": {},
+  "diskHeadersSystem": "Süsteem",
+  "@diskHeadersSystem": {},
+  "newPartitionTable": "Uus kettajaotustabel",
+  "@newPartitionTable": {},
+  "installationSlidesSupportUbuntuPro": "Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi",
+  "@installationSlidesSupportUbuntuPro": {},
+  "refreshRestart": "Jätkamaks palun sulge paigaldusrakendus ning käivita ta uuesti",
+  "@refreshRestart": {},
+  "refreshUpdating": "Uuendame paketti: {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCloseLabel": "Sulge paigaldusrakendus",
+  "@refreshCloseLabel": {},
+  "refreshSnapMount": "Haagime paketti: {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Uuendame paketi käsurida süsteemi tuuma jaoks: {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Seadistame paketi turvaprofiile: {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyInfoHeader": "Ilma taastevõtmeta võid kaotada ligipääsu kõikidele oma andmetele",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Ma mõistan, et ilma taastevõtmeta võin kaotada ligipääsu kõikidele oma andmetele",
+  "@recoveryKeyConfirmation": {},
+  "landscapePageTitle": "Automaatne paigaldus",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Logi sisse Landscape'i teenusesse",
+  "@landscapeHeader": {},
+  "landscapeDomainInvalidDomainWarning": "Vigane domeen. Palun kontrolli tema õigsust või küsi abi oma IT-kasutajatoelt",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "installationTypeAdvancedTitle": "Krüptimine ja failisüsteem",
+  "@installationTypeAdvancedTitle": {},
+  "installationTypeExperimental": "Katseline",
+  "@installationTypeExperimental": {},
+  "installationTypeNone": "Krüptimata",
+  "@installationTypeNone": {},
+  "installationTypeEncryptInfo": "Krüptovõtme saad sisestada järgmises sammus.",
+  "@installationTypeEncryptInfo": {},
+  "installationTypeLVMEncryptionSelected": "Krüptitud LVM on valitud",
+  "@installationTypeLVMEncryptionSelected": {},
+  "installationTypeZFSEncryption": "Krüpti salafraasiga kasutades ZFS failisüsteemi",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeZFSSelected": "ZFS on valitud",
+  "@installationTypeZFSSelected": {},
+  "installationTypeZFS": "Kasuta ilma krüptimata ZFS-i",
+  "@installationTypeZFS": {},
+  "installationTypeAlongsideMulti": "Paigalda {product} kõrvuti kõikide olemasolevate operatsioonisüsteemidega",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideSpaceDivider": "Eralda vajalik kettaruum nihutades märkejoont järgneval skeemil:",
+  "@installAlongsideSpaceDivider": {},
+  "installAlongsideFiles": "Failid",
+  "@installAlongsideFiles": {},
+  "installAlongsidePartition": "Partitsioon:",
+  "@installAlongsidePartition": {},
+  "installAlongsideSize": "Suurus:",
+  "@installAlongsideSize": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} pole toetatud failisüsteem „{mountpoint}“ haakepunkti jaoks",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  },
+  "diskHeadersMountPoint": "Haakepunkt",
+  "@diskHeadersMountPoint": {},
+  "partitionTypePrimary": "Primaarne partitsioon",
+  "@partitionTypePrimary": {},
+  "partitionTypeLogical": "Loogiline partitsioon",
+  "@partitionTypeLogical": {},
+  "partitionFormatNone": "Jäta vormindamata",
+  "@partitionFormatNone": {},
+  "partitionErase": "Vorminda partitsioon",
+  "@partitionErase": {},
+  "partitionMountPointLabel": "Haakepunkt:",
+  "@partitionMountPointLabel": {},
+  "restartIntoWindowsTitle": "Kas taaskäivitame arvuti ja laadime Windowsi?",
+  "@restartIntoWindowsTitle": {},
+  "restartIntoWindowsDescription": "Kas sa oled kindel, et soovid arvuti uuesti käivitada? Lõpetamaks {DISTRO} paigaldust, pead tema paigalduse hiljem uuesti alustama.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeHeader": "{DISTRO} viimane versioon teeb arvutikasutuse lihtsamaks, kui ealeski varem.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Suurepärane mängimiseks",
+  "@installationSlidesGamingTitle": {},
+  "installationSlidesSecurityTitle": "Privaatne ja turvaline",
+  "@installationSlidesSecurityTitle": {},
+  "refreshUpdateNow": "Uuenda kohe",
+  "@refreshUpdateNow": {},
+  "refreshInstall": "Uuenda versioonini {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "TPM-i taastevõti",
+  "@recoveryKeyTitle": {},
+  "recoveryKeyCommand": "Taastevõtme loomiseks lõpeta paigaldus, käivita arvuti uuesti ning käsurealt käivita järgnev käsk:",
+  "@recoveryKeyCommand": {},
+  "installationTypeAlongside": "Paigalda {product} kõrvuti operatsioonisüsteemiga {os}",
+  "@installationTypeAlongside": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideDual": "Paigalda {product} kõrvuti operatsioonisüsteemidega {os1} ja {os2}",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "Paigalda {product} kõrvuti olemasolevate partitsioonidega",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePageTitle": "Kustuta ja vorminda ketas ning paigaldada {DISTRO}",
+  "@selectGuidedStoragePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Alusta valitud kettaga nullist.",
+  "@selectGuidedStorageInfo": {},
+  "allocateDiskSpaceInvalidMountPointSpace": "Haakepunktis ei tohi olla tühikuid",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "diskHeadersDevice": "Seade",
+  "@diskHeadersDevice": {},
+  "bootLoaderDevice": "Seade alglaaduri paigaldamiseks",
+  "@bootLoaderDevice": {},
+  "partitionCreateTitle": "Loo partitsioon",
+  "@partitionCreateTitle": {},
+  "partitionSizeLabel": "Suurus:",
+  "@partitionSizeLabel": {},
+  "partitionLocationBeginning": "Selle andmeruumi alguses",
+  "@partitionLocationBeginning": {},
+  "confirmPageTitle": "Valmis paigaldamiseks",
+  "@confirmPageTitle": {},
+  "confirmHeader": "Vaata oma valikud üle",
+  "@confirmHeader": {},
+  "diskHeadersUsed": "Kasutusel",
+  "@diskHeadersUsed": {},
+  "diskHeadersFormat": "Vorming",
+  "@diskHeadersFormat": {},
+  "newPartitionTableConfirmationMessage": "Uue kettajaotustabeli (partitsioonitabeli) loomine kogu seadmele eemaldab kõik senised partitsioonid. Seda tegevust ei saa hiljem tagasi pöörata.",
+  "@newPartitionTableConfirmationMessage": {},
+  "tooManyPrimaryPartitions": "Liiga palju primaarseid partitsioone",
+  "@tooManyPrimaryPartitions": {},
+  "partitionLimitReached": "Ülempiir on käes",
+  "@partitionLimitReached": {},
+  "confirmEntryDiskSetup": "Paigalduse tüüp",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryProprietarySoftware": "Suletud lähtekoodiga tarkvara",
+  "@confirmEntryProprietarySoftware": {},
+  "installationSlidesWelcomeTitle": "Kiire, vaba ja paljude uute võimalustega",
+  "@installationSlidesWelcomeTitle": {},
+  "installationSlidesIncluded": "Sisaldab:",
+  "@installationSlidesIncluded": {},
+  "configuringSystem": "Seadistame süsteemi…",
+  "@configuringSystem": {},
+  "copyingFiles": "Kopeerime faile…",
+  "@copyingFiles": {},
+  "installingSystem": "Paigaldame süsteemi…",
+  "@installingSystem": {},
+  "installationFailed": "Paigaldamine ei õnnestunud",
+  "@installationFailed": {},
+  "refreshPageTitle": "Uuendus on saadaval",
+  "@refreshPageTitle": {},
+  "refreshHeader": "Paigaldajale on saadaval uuendus",
+  "@refreshHeader": {},
+  "notEnoughDiskSpaceAvailable": "Saadaval:",
+  "@notEnoughDiskSpaceAvailable": {},
+  "notEnoughDiskSpaceRequired": "Vaja:",
+  "@notEnoughDiskSpaceRequired": {},
+  "refreshInfo": "Parema töökindluse ja lisafunktsionaalsuste nimel uuenda viimase versioonini.",
+  "@refreshInfo": {},
+  "refreshSnapLink": "Lingime paketti: {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Ühendame paketi pistikuid ja slotte: {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Eemaldame paketi paigaldusandmeid: {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMInfo": "Enne selle valiku tegemist <a href=\"{url}\">loe lisateavet TPM-i põhise krüptimise kohta</a>. See ei pruugi toimida sinu arvuti raudvaraga ega {DISTRO} tulevaste versioonidega.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeNoneSelected": "Ühtegi pole valitud",
+  "@installationTypeNoneSelected": {},
+  "installationTypeZFSEncryptionSelected": "Krüptitud ZFS on valitud",
+  "@installationTypeZFSEncryptionSelected": {},
+  "selectGuidedStorageDriveDropdownLabel": "Vali ketas:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "confirmEntryApplications": "Rakendused",
+  "@confirmEntryApplications": {},
+  "confirmSectionGeneralTitle": "Üldine",
+  "@confirmSectionGeneralTitle": {},
+  "confirmSectionSecurityAndMoreTitle": "Turvalisus ja muu",
+  "@confirmSectionSecurityAndMoreTitle": {},
+  "confirmPartitionTable": "{serial} ({path})",
+  "@confirmPartitionTable": {
+    "description": "An entry for a disk whose partition table is being changed",
+    "placeholders": {
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Valideerime paketti: {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Uuendame paketi komponente: {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Kopeerime paketi andmeid: {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Seadistame paketi automaatseid aliasi: {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyHeader": "Loo endale taastevõti",
+  "@recoveryKeyHeader": {},
+  "refreshSnapStartServices": "Käivitame paketi teenuseid: {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyInfoBody": "Loo oma taastevõti niipea, kui esimest korda logid sisse {distro} operatsioonisüsteemi ning palun märgi ta üles ning hoia turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyStorageAdvice": "Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis. Mõnede süsteemimuudatuste puhul pead teda kasutama andmekandja dekrüptimiseks. Näiteks võib teda vaja olla, kui muudad oma arvuti raudvaralisi komponente või uuendad püsivara.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainTextField": "Landscape'i domeen (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Edasi",
+  "@next": {},
+  "landscapeDomainNoInternetTitleWarning": "Jätkamiseks lisa internetiühendus",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "confirmTableResized": "Suurus on muudetud: {oldsize} → {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Vormindatud kui {format} „{mountpoint}“ haakepunkti jaoks",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "restartComputer": "Taaskäivita arvuti",
+  "@restartComputer": {},
+  "restartComputerTitle": "Kas taaskäivitame arvuti?",
+  "@restartComputerTitle": {},
+  "restartIntoWindows": "Taaskäivita arvuti ja laadi Windows",
+  "@restartIntoWindows": {},
+  "installationSlidesSoftwareTitle": "Kõik rakendused, mida sa vajad",
+  "@installationSlidesSoftwareTitle": {},
+  "installationSlidesCreativityTitle": "Lase loovusel lennata",
+  "@installationSlidesCreativityTitle": {},
+  "installationSlidesProductivityTitle": "Tõhusam töökorraldus",
+  "@installationSlidesProductivityTitle": {},
+  "notEnoughDiskSpaceBody": "Valitud andmekandjal pole piisavalt ruumi {DISTRO} paigaldamiseks. Palun välju paigaldajast ning lisa piisavalt ruumi või vali mõni muu andmekandja.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCurrent": "{snap} paketi praegune versioon on {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "Uuendame paketti: {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeCodeExpiredWarning": "Kood aegus, palun proovi uuesti",
+  "@landscapeCodeExpiredWarning": {},
+  "refreshSnapCheckRerefresh": "Kontrollime paketi täiendava uuenduse vajadust: {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeLoginFailedWarning": "Sisselogimine ei õnnestunud, palun proovi uuesti",
+  "@landscapeLoginFailedWarning": {},
+  "refreshSnapPrepare": "Valmistame paketti ette: {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Peatame paketi teenuseid: {snap}...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Eemaldame paketi aliasi: {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeMagicAttachInstructions": "Skaneeri QR-koodi või sisesta järgnev kood veebilehel <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainInstructions": "Logimaks oma organisatsiooni Landscape'i teenusesse ja laadimaks automaatse paigalduse juhtfaili, sisesta domeeni nimi. Täieliku domeeninime saad oma IT-kasutajatoelt.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainHintText": "Landscape'i domeen (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Sinu kasutajakonto jaoks pole automaatne paigaldus saadaval",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Küsi abi oma IT-kasutajatoelt või proovi mõnda muud paigaldusviisi.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Veakood: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu jätkab paigaldust sinu organisatsiooni poolt etteantud seadistuste alusel",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Landscape'i teenusest imporditud automaatse paigalduse juhtfaili sisu saad vaadata alljärgnevalt.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "installationTypeManual": "Käsitsi paigaldus",
+  "@installationTypeManual": {},
+  "installationTypeAlongsideInfo": "Vali partitsioon, mille suuruse muutmisega saad luua ruumi {product} jaoks. Konkreetselt kasutatava operatsioonisüsteemi saad valida arvuti käivitamisel.",
+  "@installationTypeAlongsideInfo": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "Kustuta {os} ja paigalda {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Kõik {os} operatsioonisüsteemi olemasolevad failid ja andmed saavad järgnevaga olema jäädavalt kustutatud.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrerequisites": "Kontrollime, et {snap} paketi eeldused oleks täidetud...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
         "type": "String"
       }
     }
