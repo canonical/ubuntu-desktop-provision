@@ -313,5 +313,19 @@
   "otherOptions": "Muud valikud",
   "@otherOptions": {},
   "choosePassphraseBody": "Vajad salafraasi failide krüptimiseks. Pead selle sisestama igal arvuti käivituskorral.",
-  "@choosePassphraseBody": {}
+  "@choosePassphraseBody": {},
+  "choosePassphraseHint": "Vali salafraas",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Korda salafraasi",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseRequired": "Salafraas on nõutav",
+  "@choosePassphraseRequired": {},
+  "choosePassphraseMismatch": "Salafraasid ei klapi omavahel",
+  "@choosePassphraseMismatch": {},
+  "choosePassphraseInfoHeader": "Salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis",
+  "@choosePassphraseInfoHeader": {},
+  "choosePassphraseInfoBody": "Kui unustad salafraasi siis kaotad ligipääsu kõikidele oma andmetele.",
+  "@choosePassphraseInfoBody": {},
+  "chooseOptionalPassphraseHeader": "Loo salafraas (valikuline)",
+  "@chooseOptionalPassphraseHeader": {}
 }
