@@ -233,7 +233,7 @@ class PartitionButtonRow extends ConsumerWidget {
                     side: BorderSide.none,
                     shape: const RoundedRectangleBorder(),
                   ),
-                  onPressed: model.canRemovePartition
+                  onPressed: model.canRemovePartition && !model.waitingForReply
                       ? () => model.deletePartition(
                             model.selectedDisk!,
                             model.selectedPartition!,

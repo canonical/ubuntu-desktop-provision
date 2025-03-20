@@ -200,6 +200,26 @@ void main() {
     verify(model.deletePartition(disk, partition)).called(1);
   });
 
+  testWidgets('waiting for reply', (tester) async {
+    final disk = testDisks.first;
+    final partition = disk.partitions.whereType<Partition>().first;
+    final model = buildManualStorageModel(
+      disks: testDisks,
+      selectedDisk: disk,
+      selectedPartition: partition,
+      canRemovePartition: true,
+      waitingForReply: true,
+    );
+    await tester.pumpApp((_) => buildPage(model));
+
+    final removeButton = find.iconButton(Icons.remove);
+    expect(removeButton, findsOneWidget);
+    expect(removeButton, isDisabled);
+
+    await tester.tap(removeButton);
+    verifyNever(model.deletePartition(disk, partition));
+  });
+
   testWidgets('can reset', (tester) async {
     final disk = testDisks.first;
     final model = buildManualStorageModel(

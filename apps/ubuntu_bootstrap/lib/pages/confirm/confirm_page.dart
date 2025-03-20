@@ -314,7 +314,6 @@ class _PartitionLabel extends StatelessWidget {
                     baselineType: TextBaseline.alphabetic,
                     child: InfoBadge(
                       title: partition.sysname,
-                      padding: EdgeInsets.zero,
                       color: Theme.of(context).colorScheme.surfaceContainerHigh,
                     ),
                   ),

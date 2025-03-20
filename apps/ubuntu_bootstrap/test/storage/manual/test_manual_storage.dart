@@ -23,6 +23,7 @@ ManualStorageModel buildManualStorageModel({
   bool? canEditPartition,
   bool? canReformatDisk,
   int? bootDiskIndex,
+  bool? waitingForReply,
 }) {
   final model = MockManualStorageModel();
   when(model.isValid).thenReturn(isValid ?? false);
@@ -48,5 +49,6 @@ ManualStorageModel buildManualStorageModel({
   when(model.canReformatDisk).thenReturn(canReformatDisk ?? false);
 
   when(model.bootDiskIndex).thenReturn(bootDiskIndex);
+  when(model.waitingForReply).thenReturn(waitingForReply ?? false);
   return model;
 }
