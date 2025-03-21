@@ -1,1 +1,114 @@
-{}
+{
+  "welcomePageHeader": "{டிச்ட்ரோ க்கு க்கு வருக",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "புதியது என்ன?",
+  "@welcomeWhatsNew": {},
+  "welcomeChangelogLabel": "<a href = \"{url}\"> சேஞ்ச்லாக் காண்க </a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "welcomeStoreTitle": "புதிய தோற்ற ஆப் கடை",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "உங்களுக்கு பிடித்த மென்பொருளை கண்டுபிடிப்பது ஒருபோதும் எளிதாக இல்லை.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "மேம்பட்ட பாதுகாப்பு",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "வன்பொருள் உதவி அல்லது ZFS குறியாக்கத்திற்கான புதிய விருப்பங்கள்.",
+  "@welcomeSecuritySubtitle": {},
+  "telemetryHeader": "{distro} ஐ மேம்படுத்த உதவுங்கள்",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "உங்கள் கணினி தரவை எங்களுடன் பகிர்வதன் மூலம் {distro} ஐ மேம்படுத்த எங்களுக்கு உதவுங்கள். உங்கள் இயந்திர மாதிரி, நிறுவப்பட்ட மென்பொருள் மற்றும் உங்கள் நேர மண்டலத்திற்காக நீங்கள் தேர்ந்தெடுத்த இடம் போன்ற விசயங்கள் இதில் அடங்கும்.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryReportLabel": "முதல் அறிக்கையைக் காட்டு",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "விவரங்கள் விவரங்கள்",
+  "@telemetryReportTitle": {},
+  "telemetryLegalLabel": "சட்ட அறிவிப்பு",
+  "@telemetryLegalLabel": {},
+  "telemetryCollectError": "டெலிமெட்ரி தரவை சேகரிப்பதில் தோல்வி",
+  "@telemetryCollectError": {},
+  "privacyLocationTitle": "இருப்பிட சேவைகளை இயக்கவா?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "பயன்பாடுகள் உங்கள் புவியியல் இருப்பிடத்தை அறியட்டும்.\n கணினி அமைப்புகளில் எப்போது வேண்டுமானாலும் இதை மாற்றலாம்.",
+  "@privacyLocationSubtitle": {},
+  "privacyPolicyLink": "தரவு தனியுரிமை",
+  "@privacyPolicyLink": {},
+  "ubuntuProHeader": "இந்த இயந்திரத்தை இணைக்கவும்",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "அல்லது ஒரு கிள்ளாக்கை கைமுறையாக சேர்க்கவும்",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "கிள்ளாக்கு",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "திறந்த மூல மென்பொருள் பாதுகாப்பிற்கான மிக விரிவான சந்தாவைப் பெறுங்கள்",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "தனிப்பட்ட பயன்பாட்டிற்கு எப்போதும் இலவசம். நிறுவனங்களுக்கான 30 நாட்கள் சோதனை. <a href = \"https: // {url}\"> மேலும் அறிக </a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProTokenAttachErrorVariant": "தவறான கிள்ளாக்கு, மீண்டும் முயற்சிக்கவும்",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "இப்போதைக்கு தவிர்க்கவும்",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "உபுண்டு புரோவை இயக்கவும்",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "2032 வரை, பரந்த அளவிலான தொகுப்புகளில் பாதுகாப்பு புதுப்பிப்புகளுக்காக இந்த இயந்திரத்தை உபுண்டு புரோ சந்தாவுடன் இணைக்கவும்.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "உபுண்டு புரோ இப்போது இந்த கணினியில் இயக்கப்பட்டிருக்கிறது",
+  "@ubuntuProSucessAttachHeader": {},
+  "welcomePageTitle": "வரவேற்கிறோம்",
+  "@welcomePageTitle": {},
+  "welcomeStartTitle": "ஒரு நெறிப்படுத்தப்பட்ட தொடக்க",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "தூய்மையான அமைப்பு அனுபவத்தை ஆதரிக்கிறது.",
+  "@welcomeStartSubtitle": {},
+  "telemetryPageTitle": "டெலிமெட்ரி",
+  "@telemetryPageTitle": {},
+  "telemetryLabelOn": "ஆம், கணினி தரவை {distro} குழுவுடன் பகிர்ந்து கொள்ளுங்கள்",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "இல்லை, கணினி தரவைப் பகிர வேண்டாம்",
+  "@telemetryLabelOff": {},
+  "privacyPageTitle": "இருப்பிட சேவைகள்",
+  "@privacyPageTitle": {},
+  "privacyLocationEnable": "இருப்பிட சேவைகள்",
+  "@privacyLocationEnable": {},
+  "ubuntuProMagicAttachInstructions": "இந்த குறியீட்டைக் கொண்டு <a href = \"https: // {url}\"> {url} </a> இல் மேசிக் இணைக்கவும்",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "ubuntuProPageTitle": "உபுண்டு புரோ",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProTokenAttachButton": "இணைக்கவும்",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "தவறான கிள்ளாக்கு",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "செல்லுபடியாகும் கிள்ளாக்கு",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாடு வழியாக நீங்கள் எப்போதும் உபுண்டு புரோவை இயக்கலாம்.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProSucessAttachDescription": "மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாட்டில் உங்கள் புரோ சேவைகளை நிர்வகிக்கலாம்.",
+  "@ubuntuProSucessAttachDescription": {}
+}
