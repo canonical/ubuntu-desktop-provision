@@ -48,5 +48,7 @@
   "identityConfirmPasswordLabel": "உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்",
   "@identityConfirmPasswordLabel": {},
   "identityPasswordMismatch": "கடவுச்சொற்கள் பொருந்தவில்லை",
-  "@identityPasswordMismatch": {}
+  "@identityPasswordMismatch": {},
+  "close": "மூடு",
+  "@close": {}
 }
