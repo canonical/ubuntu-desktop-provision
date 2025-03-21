@@ -1,3 +1,7 @@
 {
-  "@@locale": "ta"
+  "@@locale": "ta",
+  "close": "மூடு",
+  "@close": {},
+  "ok": "சரி",
+  "@ok": {}
 }
