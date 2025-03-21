@@ -915,7 +915,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Aplikace",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Nastavení disku",
+  "confirmEntryDiskSetup": "Typ instalace",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Šifrování disku",
   "@confirmEntryDiskEncryption": {},
@@ -1123,5 +1123,76 @@
         "type": "String"
       }
     }
-  }
+  },
+  "confirmTableErased": "Vymazáno",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Nezměněno",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Změněna velikost z {oldsize} na {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Vytvořeno a naformátováno jako {format} použito pro {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Naformátováno jako {format} použito pro {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Použito pro {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Naformátováno jako {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Doména Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Automatizovaná instalace není pro váš účet k dispozici",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Obraťte se na svou IT podporu nebo zkuste jinou možnost instalace.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Kód chyby: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainstalováno s nastaveními, poskytnutými vaší organizací",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Níže je možné prohlédnout si soubor s nastaveními pro automatickou instalaci, naimportovaný z Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
