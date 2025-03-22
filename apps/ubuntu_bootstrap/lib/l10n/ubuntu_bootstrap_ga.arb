@@ -1292,5 +1292,9 @@
   "landscapeErrorPageTitle": "Níl suiteáil uathoibrithe ar fáil le do chuntas",
   "@landscapeErrorPageTitle": {},
   "landscapeDomainHintText": "Fearann tírdhreacha (FQDN)",
-  "@landscapeDomainHintText": {}
+  "@landscapeDomainHintText": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Suiteáilfidh Ubuntu leis an gcumraíocht a sholáthraíonn d'eagraíocht",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
