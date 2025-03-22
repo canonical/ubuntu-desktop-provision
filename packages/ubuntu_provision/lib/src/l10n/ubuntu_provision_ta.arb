@@ -50,5 +50,75 @@
   "identityPasswordMismatch": "கடவுச்சொற்கள் பொருந்தவில்லை",
   "@identityPasswordMismatch": {},
   "close": "மூடு",
-  "@close": {}
+  "@close": {},
+  "accessibilityPageHeader": "{டிச்ட்ரோ on இல் அணுகல்",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "நீங்கள் அமைப்பதற்கு முன் உங்கள் தேவைகளுக்கு தனிப்பயன் {டிச்ட்ரோ. கணினி அமைப்புகளில் அவற்றை பின்னர் மாற்றலாம்.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityHearingLabel": "கேட்பு",
+  "@accessibilityHearingLabel": {},
+  "accessibilityTypingLabel": "தட்டச்சு",
+  "@accessibilityTypingLabel": {},
+  "accessibilityPointingLabel": "சுட்டிக்காட்டுதல் மற்றும் சொடுக்கு செய்தல்",
+  "@accessibilityPointingLabel": {},
+  "accessibilityZoomLabel": "பெரிதாக்கு",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "உயர் வேறுபாடு",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "பெரிய உரை",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityReduceAnimationLabel": "அனிமேசனைக் குறைக்கவும்",
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityScreenReaderLabel": "திரை ரீடர்",
+  "@accessibilityScreenReaderLabel": {},
+  "accessibilityDesktopZoomLabel": "டெச்க்டாப் சூம்",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "ஏதோ தவறு நடந்தது",
+  "@errorPageTitle": {},
+  "errorPageUnexpected": "மன்னிக்கவும், ஆனால் பிழை என்னவென்று எங்களுக்குத் தெரியவில்லை. உங்கள் கணினியை மறுதொடக்கம் செய்ய முயற்சி செய்யலாம் மற்றும் நிறுவல் செயல்முறையை மீண்டும் தொடங்கலாம். </a> பிரச்சினையை நீங்கள் புகாரளிக்கலாம்.",
+  "@errorPageUnexpected": {},
+  "errorPageUbuntuBug": "தொடர்புடைய பிழைத்திருத்த செய்தி உட்பட தானியங்கி பிழை அறிக்கையை அனுப்ப, தயவுசெய்து <முன்> சுடோ உபுண்டு-பக் {SNAP} </pre> ஒரு முனையத்தில் அல்லது கட்டளை கன்சோலில் (ALT+F2) இயக்கவும்.",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageShowLog": "பதிவைக் காட்டு",
+  "@errorPageShowLog": {},
+  "errorPageHideLog": "பதிவை மறைக்க",
+  "@errorPageHideLog": {},
+  "restart": "மறுதொடக்கம்",
+  "@restart": {},
+  "timezonePageTitle": "உங்கள் நேர மண்டலத்தைத் தேர்ந்தெடுக்கவும்",
+  "@timezonePageTitle": {},
+  "timezoneLocationLabel": "இடம்",
+  "@timezoneLocationLabel": {},
+  "timezoneTimezoneLabel": "நேர மண்டலம்",
+  "@timezoneTimezoneLabel": {},
+  "accessibilityPageTitle": "அணுகல்",
+  "@accessibilityPageTitle": {},
+  "accessibilitySeeingLabel": "பார்ப்பது",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityVisualAlertsLabel": "காட்சி எச்சரிக்கைகள்",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilityStickKeysLabel": "ஒட்டும் விசைகள்",
+  "@accessibilityStickKeysLabel": {},
+  "accessibilitySlowKeysLabel": "மெதுவான விசைகள்",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "சுட்டி விசைகள்",
+  "@accessibilityMouseKeysLabel": {}
 }
