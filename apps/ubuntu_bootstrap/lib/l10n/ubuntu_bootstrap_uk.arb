@@ -264,7 +264,7 @@
       "product": {}
     }
   },
-  "installationTypeAlongsideInfo": "Вибрати розділ для зміни розміру та створення місця для {product}. Ви можете вибрати операційну систему під час завантаження.",
+  "installationTypeAlongsideInfo": "Вибрати розділ для зміни розміру та створення простору для {product}. Ви можете вибрати операційну систему під час завантаження.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Щось інше",
   "@installationTypeManual": {},
@@ -324,7 +324,7 @@
   },
   "installationTypeEncryptInfo": "Ключ захисту можна буде вибрати на наступному кроці.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Використання ZFS без шифрування",
+  "installationTypeZFS": "Використовувати ZFS без шифрування",
   "@installationTypeZFS": {},
   "selectGuidedStoragePageTitle": "Стерти диск і встановити {DISTRO}",
   "@selectGuidedStoragePageTitle": {
@@ -431,7 +431,7 @@
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM обрано",
   "@installationTypeTPMSelected": {},
-  "installationTypeTPM": "Використовуйте апаратне шифрування",
+  "installationTypeTPM": "Використовувати апаратне шифрування",
   "@installationTypeTPM": {},
   "fullInstallationTitle": "Повна установка",
   "@fullInstallationTitle": {},
@@ -995,7 +995,7 @@
   },
   "recoveryKeyTitle": "Ключ відновлення TPM",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "Щоб отримати ключ відновлення, завершіть встановлення, перезавантажте комп'ютер і виконайте цю команду в терміналі:",
+  "recoveryKeyCommand": "Щоб отримати ключ відновлення, завершіть встановлення, перезапустіть комп'ютер і виконайте цю команду в терміналі:",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Попередження:</font> Якщо ви втратите цей ключ безпеки, всі дані буде втрачено. Якщо вам потрібно, запишіть свій ключ і зберігайте його в безпечному місці.",
   "@recoveryKeyWarning": {
@@ -1036,13 +1036,13 @@
   "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Вибрати файл...",
   "@autoinstallDirectFileButtonLabel": {},
-  "restartComputer": "Перезавантажити комп'ютер",
+  "restartComputer": "Перезапустити комп'ютер",
   "@restartComputer": {},
   "recoveryKeyConfirmation": "Я розумію, що можу втратити всі свої дані, якщо у мене немає ключа відновлення",
   "@recoveryKeyConfirmation": {},
   "recoveryKeyInfoHeader": "Без ключа відновлення ви можете втратити всі свої дані",
   "@recoveryKeyInfoHeader": {},
-  "autoinstallLandscapeDescription": "Для користувачів в організаціях, які надають файл автоматичної інсталяції через Landscape.",
+  "autoinstallLandscapeDescription": "Для користувачів в організаціях, які надають файл автоматичного встановлення через Landscape.",
   "@autoinstallLandscapeDescription": {},
   "autoinstallDirectErrorFileSystemBody": "Перевірте права доступу або надайте інший файл.",
   "@autoinstallDirectErrorFileSystemBody": {},
@@ -1054,11 +1054,11 @@
   "@landscapeErrorPageBody": {},
   "chooseOptionalPassphraseHeader": "Створити парольну фразу (необов'язково)",
   "@chooseOptionalPassphraseHeader": {},
-  "restartComputerTitle": "Перезавантажити комп'ютер?",
+  "restartComputerTitle": "Перезапустити комп'ютер?",
   "@restartComputerTitle": {},
   "chooseOptionalPassphraseInfoBody": "Якщо ви втратите парольну фразу, ви втратите всі свої дані. Парольна фраза не замінює ключ відновлення або пароль користувача.",
   "@chooseOptionalPassphraseInfoBody": {},
-  "autoinstallDirectOption": "Автоматизовано за допомогою файлу автоматичної інсталяції",
+  "autoinstallDirectOption": "Автоматизовано за допомогою файлу автоматичного встановлення",
   "@autoinstallDirectOption": {},
   "rstDisable": "Ваш комп'ютер використовує технологію Intel RST (Rapid Storage Technology). Ви можете вимкнути RST або в:",
   "@rstDisable": {},
@@ -1127,7 +1127,7 @@
   },
   "landscapeDomainHeader": "Введіть домен Landscape (FQDN)",
   "@landscapeDomainHeader": {},
-  "landscapeDomainInstructions": "Вкажіть домен Landscape вашої організації для входу та отримання файлу автоматичної інсталяції. Ви можете отримати FQDN від своєї ІТ-підтримки.",
+  "landscapeDomainInstructions": "Вкажіть домен Landscape вашої організації для входу та отримання файлу автоматичного встановлення. Ви можете отримати FQDN від своєї ІТ-підтримки.",
   "@landscapeDomainInstructions": {},
   "landscapeDomainNoInternetDescriptionWarning": "Щоб отримати файл автоматичного встановлення з Landscape потрібен доступ до інтернету",
   "@landscapeDomainNoInternetDescriptionWarning": {},
@@ -1155,11 +1155,11 @@
   "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectErrorInvalidUrlTitle": "Недійсна URL-адреса",
   "@autoinstallDirectErrorInvalidUrlTitle": {},
-  "autoinstallDirectErrorInvalidContentTitle": "Неправильний файл автоматичної інсталяції",
+  "autoinstallDirectErrorInvalidContentTitle": "Неправильний файл автоматичного встановлення",
   "@autoinstallDirectErrorInvalidContentTitle": {},
   "autoinstallDirectErrorInvalidContentBody": "Перевірте файл або надайте інший.",
   "@autoinstallDirectErrorInvalidContentBody": {},
-  "autoinstallDirectErrorFileSystemTitle": "Файл автоінсталяції не читається",
+  "autoinstallDirectErrorFileSystemTitle": "Файл автовстановлення нечитабельний",
   "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorUnkownTitle": "Невідома помилка",
   "@autoinstallDirectErrorUnkownTitle": {},
@@ -1218,7 +1218,7 @@
   "@landscapeConfirmPageSuccessInfoTitle": {},
   "landscapeConfirmPageSuccessInfoContent": "Нижче ви можете переглянути файл автоматичного встановлення, імпортований з Landscape.",
   "@landscapeConfirmPageSuccessInfoContent": {},
-  "installationTypeEraseAndInstall": "Зітріть {os} і встановіть {product}",
+  "installationTypeEraseAndInstall": "Стерти {os} і встановити {product}",
   "@installationTypeEraseAndInstall": {
     "placeholders": {
       "os": {
@@ -1229,7 +1229,7 @@
       }
     }
   },
-  "installationTypeEraseAndInstallInfo": "Всі файли і дані з існуючої інсталяції {os} буде назавжди видалено.",
+  "installationTypeEraseAndInstallInfo": "Усі файли та дані з наявної установки {os} буде видалено назавжди.",
   "@installationTypeEraseAndInstallInfo": {
     "placeholders": {
       "os": {
