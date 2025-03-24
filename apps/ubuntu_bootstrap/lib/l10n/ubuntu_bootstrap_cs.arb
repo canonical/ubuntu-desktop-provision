@@ -1,6 +1,6 @@
 {
   "@@locale": "cs",
-  "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.",
+  "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Nebude to zdlouhavé.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
@@ -40,11 +40,11 @@
       "url": {}
     }
   },
-  "rstTitle": "RST je zapnuté",
+  "rstTitle": "Zjištěno RST",
   "@rstTitle": {},
   "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné {DISTRO} nainstalovat, je třeba ve Windows funkci RST vypnout.",
   "@rstDescription": {},
-  "rstInstructions": "Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo navštivte: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -241,7 +241,7 @@
       "RELEASE": {}
     }
   },
-  "tryDescription": "Můžete si vyzkoušet {RELEASE} aniž by se v počítači cokoli měnilo.",
+  "tryDescription": "Můžete si {RELEASE} vyzkoušet, aniž by se v počítači cokoli změnilo.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
@@ -561,7 +561,7 @@
       "DISTRO": {}
     }
   },
-  "rstHeader": "Aby bylo možné pokračovat v instalaci, musíte vypnout RST",
+  "rstHeader": "Aby mohla instalace pokračovat, musíte RST vypnout",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
   "@restartIntoWindowsTitle": {},
@@ -788,7 +788,7 @@
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Plná instalace",
   "@fullInstallationTitle": {},
-  "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.",
+  "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být instalací provedeni krok za krokem.",
   "@autoinstallInteractiveDescription": {},
   "autoinstallTitle": "Typ instalace",
   "@autoinstallTitle": {},
@@ -810,7 +810,7 @@
   "@autoinstallAutomatedDescription": {},
   "warningLabel": "Varování:",
   "@warningLabel": {},
-  "tryOrInstallHeader": "Co chcete dělat s {DISTRO}?",
+  "tryOrInstallHeader": "Co chcete s {DISTRO} udělat?",
   "@tryOrInstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -1000,7 +1000,7 @@
   "@chooseOptionalPassphraseBody": {},
   "autoinstallDirectErrorInvalidUrlBody": "Zkontrolujte správnost adresy URL nebo vyberte místní soubor.",
   "@autoinstallDirectErrorInvalidUrlBody": {},
-  "autoinstallLandscapeOption": "Automatizováno Landscape",
+  "autoinstallLandscapeOption": "Automatizováno podle Landscape",
   "@autoinstallLandscapeOption": {},
   "autoinstallLandscapeDescription": "Pro uživatele v organizacích, které poskytují soubor autoinstall prostřednictvím Landscape.",
   "@autoinstallLandscapeDescription": {},
@@ -1051,7 +1051,7 @@
   "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectImportButtonLabel": "Importovat",
   "@autoinstallDirectImportButtonLabel": {},
-  "autoinstallDirectErrorNetworkTitle": "Soubor autoinstall není dostupný",
+  "autoinstallDirectErrorNetworkTitle": "K souboru autoinstall nelze přistoupit",
   "@autoinstallDirectErrorNetworkTitle": {},
   "autoinstallDirectErrorNetworkBody": "Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.",
   "@autoinstallDirectErrorNetworkBody": {},
@@ -1061,7 +1061,7 @@
   "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorFileSystemBody": "Zkontrolujte svá oprávnění nebo poskytněte jiný soubor.",
   "@autoinstallDirectErrorFileSystemBody": {},
-  "autoinstallDirectOption": "Automatizováno souborem autoinstall",
+  "autoinstallDirectOption": "Automatizováno podle souboru autoinstall",
   "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
   "@autoinstallDirectDescription": {},
@@ -1098,7 +1098,7 @@
   "@restartComputerTitle": {},
   "rstDisableWindows": "Windows, pokud používáte dual boot se systémem Windows",
   "@rstDisableWindows": {},
-  "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:",
+  "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete vypnout buď v:",
   "@rstDisable": {},
   "bitlockerInfoTitle": "Zjištěn BitLocker",
   "@bitlockerInfoTitle": {},
