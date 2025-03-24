@@ -53,21 +53,21 @@
   },
   "configureSecureBootTitle": "Nastavit Secure Boot",
   "@configureSecureBootTitle": {},
-  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte zvolením klíče zabezpečení nyní a jeho\nnásledným zadáním po restartu systému.",
+  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Musíte si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.",
   "@configureSecureBootDescription": {},
   "configureSecureBootOption": "Nastavit Secure Boot",
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Zvolte si klíč zabezpečení",
   "@chooseSecurityKey": {},
-  "confirmSecurityKey": "Zopakujte zadání klíče zabezpečení (prevence překlepu)",
+  "confirmSecurityKey": "Zopakujte klíč zabezpečení",
   "@confirmSecurityKey": {},
-  "dontInstallDriverSoftwareNow": "Nyní ovladač ještě neinstalovat",
+  "dontInstallDriverSoftwareNow": "Zatím ještě ovladač neinstalovat",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Je možné ho nainstalovat kdykoli později pomocí nástroje „Software a aktualizace“.",
+  "dontInstallDriverSoftwareNowDescription": "Můžete ho později nainstalovat pomocí nástroje Software a aktualizace.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Je třeba zadat klíč zabezpečení",
   "@configureSecureBootSecurityKeyRequired": {},
-  "secureBootSecurityKeysDontMatch": "Do každé z kolonek pro klíč zabezpečení jste napsali něco jiného",
+  "secureBootSecurityKeysDontMatch": "Klíče zabezpečení se liší",
   "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageTitle": "Aplikace a aktualizace",
   "@updatesOtherSoftwarePageTitle": {},
@@ -75,9 +75,9 @@
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Další možnosti",
   "@otherOptions": {},
-  "installThirdPartyTitle": "Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových (Wi-Fi) sítí, stejně tak dodatečné kodeky multimédií",
+  "installThirdPartyTitle": "Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových sítí (Wi-Fi), a také dodatečné kodeky multimédií",
   "@installThirdPartyTitle": {},
-  "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání, obsažených v dokumentaci k němu. Některý je proprietární.",
+  "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některá jsou proprietární.",
   "@installThirdPartySubtitle": {},
   "installationTypeTitle": "Nastavení disku",
   "@installationTypeTitle": {},
@@ -88,13 +88,13 @@
       "os": {}
     }
   },
-  "installationTypeNoOSDetected": "Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?",
+  "installationTypeNoOSDetected": "Na tomto počítači nebyl zjištěn žádný operační systém. Co si přejete udělat?",
   "@installationTypeNoOSDetected": {},
   "installationTypeAdvancedLabel": "Zobrazit pokročilé možnosti…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Šifrování a souborový systém",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Žádné šifrování",
+  "installationTypeNone": "Bez šifrování",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nic nevybráno",
   "@installationTypeNoneSelected": {},
@@ -113,7 +113,7 @@
       "os": {}
     }
   },
-  "installationTypeReinstallWarning": "<font color=\"{color}\">VAROVÁNÍ:</font> Toto smaže veškeré aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory), nacházející se v rámci {os}.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Varování:</font> Tímto se smažou veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -129,13 +129,13 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Vyberte oddíl, jehož velikost chcete změnit, a vytvořte místo pro {product}. Operační systém si můžete vybrat během spouštění.",
+  "installationTypeAlongsideInfo": "Vyberte oddíl, jehož velikost chcete změnit, aby se vytvořilo místo pro {product}. Operační systém si můžete vybrat při spuštění počítače.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Ruční rozdělení na oddíly",
+  "installationTypeManual": "Ruční instalace",
   "@installationTypeManual": {},
   "selectGuidedStorageDropdownLabel": "Vyberte jednotku:",
   "@selectGuidedStorageDropdownLabel": {},
-  "selectGuidedStorageInfoLabel": "Bude použit celý disk:",
+  "selectGuidedStorageInfoLabel": "Použije se celý disk:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Nainstalovat nyní",
   "@selectGuidedStorageInstallNow": {},
@@ -269,7 +269,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.",
+  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří chtějí nastavení disků upravit vlastnoručně.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -295,7 +295,7 @@
       "os2": {}
     }
   },
-  "installationTypeMultiOSDetected": "Na tomto počítači se v současnosti nachází vícero operačních systémů. Co si přejete udělat?",
+  "installationTypeMultiOSDetected": "Na tomto počítači se už nachází několik operačních systémů. Co si přejete udělat?",
   "@installationTypeMultiOSDetected": {},
   "copyingFiles": "Kopírování souborů…",
   "@copyingFiles": {},
@@ -358,7 +358,7 @@
       "mount": {}
     }
   },
-  "showSecurityKey": "Zobrazit klíč zabezpečení",
+  "showSecurityKey": "Zobrazit",
   "@showSecurityKey": {},
   "installationTypeAlongsideMulti": "Nainstalovat {product} vedle stávajících operačních systémů",
   "@installationTypeAlongsideMulti": {
@@ -399,15 +399,15 @@
       "format": {}
     }
   },
-  "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a Wi-Fi síťová rozhraní",
+  "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a síťová rozhraní Wi-Fi",
   "@installDriversTitle": {},
-  "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další formáty médií",
+  "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další multimediální formáty",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Včetně, ale nejen MP3, MP4, MOV a podobné",
+  "installCodecsSubtitle": "Obsahuje mimo jiné MP3, MP4, MOV a podobné",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Včetně, ale nejen, ovladačů NVIDIA a podobných",
+  "installDriversSubtitle": "Obsahuje mimo jiné ovladače NVIDIA a podobné",
   "@installDriversSubtitle": {},
-  "offlineWarning": "V tu chvíli nejste připojení k Internetu",
+  "offlineWarning": "Nejste připojení k Internetu",
   "@offlineWarning": {},
   "restartNow": "Restartovat nyní",
   "@restartNow": {},
@@ -613,9 +613,9 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "Použít na hardware založené šifrování",
+  "installationTypeTPM": "Použít hardwarové šifrování",
   "@installationTypeTPM": {},
-  "installationTypeTPMSelected": "TPM vybráno",
+  "installationTypeTPMSelected": "Vybráno TPM",
   "@installationTypeTPMSelected": {},
   "refreshPageTitle": "Je k dispozici aktualizace",
   "@refreshPageTitle": {},
@@ -780,13 +780,13 @@
       "color": {}
     }
   },
-  "fullInstallationSubtitle": "Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.",
+  "fullInstallationSubtitle": "Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících internet.",
   "@fullInstallationSubtitle": {},
-  "minimalInstallationTitle": "Výchozí instalace",
+  "minimalInstallationTitle": "Výchozí výběr",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Pouze nezbytné, webový prohlížeč a základní nástroje.",
+  "minimalInstallationSubtitle": "Jen to nejnutnější, webový prohlížeč a základní nástroje.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationTitle": "Plná instalace",
+  "fullInstallationTitle": "Rozšířená instalace",
   "@fullInstallationTitle": {},
   "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být instalací provedeni krok za krokem.",
   "@autoinstallInteractiveDescription": {},
@@ -820,7 +820,7 @@
   },
   "hideSecurityKey": "Skrýt",
   "@hideSecurityKey": {},
-  "codecsAndDriversPageTitle": "Optimalizovat váš počítač",
+  "codecsAndDriversPageTitle": "Optimalizovat počítač",
   "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageDescription": "Instalovat doporučený proprietární software?",
   "@codecsAndDriversPageDescription": {},
@@ -842,25 +842,25 @@
   "@choosePassphraseTitle": {},
   "choosePassphraseHeader": "Vytvořit přístupové heslo",
   "@choosePassphraseHeader": {},
-  "choosePassphraseBody": "K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí počítače budete vyzváni k zadání tohoto hesla.",
+  "choosePassphraseBody": "K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí vás počítač vyzve k zadání tohoto hesla.",
   "@choosePassphraseBody": {},
-  "choosePassphraseHint": "Vybrat přístupové heslo",
+  "choosePassphraseHint": "Zvolte přístupové heslo",
   "@choosePassphraseHint": {},
-  "choosePassphraseConfirmHint": "Potvrdit přístupové heslo",
+  "choosePassphraseConfirmHint": "Potvrďte přístupové heslo",
   "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Je vyžadováno přístupové heslo",
   "@choosePassphraseRequired": {},
-  "choosePassphraseMismatch": "Přístupová hesla se neshodují",
+  "choosePassphraseMismatch": "Přístupová hesla se liší",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Uložte si své přístupové heslo na bezpečném místě",
+  "choosePassphraseInfoHeader": "Přístupové heslo si uložte na bezpečném místě",
   "@choosePassphraseInfoHeader": {},
-  "choosePassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte všechna svá data.",
+  "choosePassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte i všechna data.",
   "@choosePassphraseInfoBody": {},
-  "createPassphrase": "Vytvořit přístupové heslo",
+  "createPassphrase": "Vytvořte přístupové heslo",
   "@createPassphrase": {},
-  "confirmPassphrase": "Potvrdit přístupové heslo",
+  "confirmPassphrase": "Potvrďte přístupové heslo",
   "@confirmPassphrase": {},
-  "installationTypeHeader": "Jak chcete nainstalovat {DISTRO}?",
+  "installationTypeHeader": "Jak chcete {DISTRO} nainstalovat?",
   "@installationTypeHeader": {
     "placeholders": {
       "DISTRO": {
@@ -868,7 +868,7 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Všechna data a oddíly na disku budou vymazány, včetně operačních systémů.",
+  "installationTypeEraseInfo": "Všechna data a oddíly na disku budou smazány, včetně operačních systémů.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimentální",
   "@installationTypeExperimental": {},
@@ -891,13 +891,13 @@
       }
     }
   },
-  "selectGuidedStorageInfo": "Začněte od začátku na zvoleném disku.",
+  "selectGuidedStorageInfo": "Začněte na zvoleném disku od nuly.",
   "@selectGuidedStorageInfo": {},
   "selectGuidedStorageDriveDropdownLabel": "Vyberte disk:",
   "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStoragePartitionDropdownLabel": "Vyberte oddíl:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "guidedStoragePageHeader": "Vyberte, kam nainstalovat {DISTRO}",
+  "guidedStoragePageHeader": "Vyberte, kam {DISTRO} nainstalovat",
   "@guidedStoragePageHeader": {
     "placeholders": {
       "DISTRO": {
@@ -996,7 +996,7 @@
   "@landscapeDomainNoInternetTitleWarning": {},
   "autoinstallDirectErrorInvalidContentBody": "Zkontrolujte soubor nebo poskytněte jiný.",
   "@autoinstallDirectErrorInvalidContentBody": {},
-  "chooseOptionalPassphraseBody": "Přístupové heslo může pomoci chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit",
+  "chooseOptionalPassphraseBody": "Přístupové heslo pomůže chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit",
   "@chooseOptionalPassphraseBody": {},
   "autoinstallDirectErrorInvalidUrlBody": "Zkontrolujte správnost adresy URL nebo vyberte místní soubor.",
   "@autoinstallDirectErrorInvalidUrlBody": {},
@@ -1012,7 +1012,7 @@
   "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě",
   "@chooseOptionalPassphraseInfoHeader": {},
-  "chooseOptionalPassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte všechna svá data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.",
+  "chooseOptionalPassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte i všechna data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.",
   "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyHeader": "Získat obnovovací klíč",
   "@recoveryKeyHeader": {},
@@ -1104,7 +1104,7 @@
   "@bitlockerInfoTitle": {},
   "bitlockerInfoDescription": "Jeden nebo více oddílů je šifrováno pomocí nástroje BitLocker.",
   "@bitlockerInfoDescription": {},
-  "installationTypeLVMEncryptionInfo": "Při každém zapnutí počítače budete muset zadat přístupové heslo. Toto používá šifrování LUKS s LVM.",
+  "installationTypeLVMEncryptionInfo": "Při každém zapnutí počítače budete muset zadat přístupové heslo. Používá se šifrování LUKS s LVM.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeNoneInfo": "Standardní souborový systém bez šifrování.",
   "@installationTypeNoneInfo": {},
