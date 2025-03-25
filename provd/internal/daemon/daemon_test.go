@@ -69,7 +69,7 @@ func TestNew(t *testing.T) {
 			}
 			manualSocketPath := filepath.Join(t.TempDir(), "manual.sock")
 
-			// Setup socket environment based
+			// Setup socket environment based.
 			var args []daemon.Option
 			switch tc.socketType {
 			case systemdActivationListener:
@@ -303,6 +303,7 @@ func createClientConnection(t *testing.T, socketPath string) (success bool, disc
 	go func() {
 		defer close(connected)
 		var err error
+		//nolint:staticcheck //This is still supported through 1.x., and we may depricated this before then.
 		conn, err = grpc.Dial("unix://"+socketPath, grpc.WithBlock(), grpc.WithTransportCredentials(insecure.NewCredentials()))
 		require.NoError(t, err, "Could not connect to grpc server")
 	}()

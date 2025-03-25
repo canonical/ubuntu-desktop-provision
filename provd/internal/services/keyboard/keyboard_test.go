@@ -336,7 +336,7 @@ func newKeyboardClient(t *testing.T, opts ...keyboard.Option) pb.KeyboardService
 		<-done
 	})
 
-	conn, err := grpc.Dial("unix://"+socketPath, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient("unix://"+socketPath, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	require.NoError(t, err, "Setup: Could not connect to GRPC server")
 	t.Cleanup(func() { _ = conn.Close() })
 

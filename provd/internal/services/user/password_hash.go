@@ -13,7 +13,7 @@ import (
 	"unsafe"
 )
 
-// hashPassword hashes a password using the C function make_crypted with an optional salt
+// hashPassword hashes a password using the C function make_crypted with an optional salt.
 func hashPassword(password string, salt *string) (string, error) {
 	if password == "" {
 		return "", errors.New("password cannot be empty")
