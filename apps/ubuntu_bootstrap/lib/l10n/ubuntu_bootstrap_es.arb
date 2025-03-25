@@ -984,5 +984,168 @@
   "autoinstallDirectFileButtonLabel": "Seleccionar archivo…",
   "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Elija archivo",
-  "@autoinstallDirectFilePickerTitle": {}
+  "@autoinstallDirectFilePickerTitle": {},
+  "installationTypeNoneInfo": "Es sistema de archivo estándar sin cifrado.",
+  "@installationTypeNoneInfo": {},
+  "bitlockerInfoTitle": "BitLocker detectado",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Una o más particiones están cifradas con BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "recoveryKeyInfoHeader": "Puede perder todos sus datos sin una clave de recuperación",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Comprendo que puedo perder todos mis datos si no tengo una clave de recuperación",
+  "@recoveryKeyConfirmation": {},
+  "next": "Siguiente",
+  "@next": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet es necesario para obtener el archivo autoinstall desde Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeMagicAttachInstructions": "Analiza el código QR o introduzca el código a continuación en <a href=\"https://{url}\">",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Instalación automática",
+  "@landscapePageTitle": {},
+  "landscapeDomainTextField": "Dominio Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "landscapeDomainInvalidDomainWarning": "Dominio no válido, compruebe o contacte con su mantenimiento de IT",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "recoveryKeyInfoBody": "Obtenga una clave de recuperación tan pronto como su primer acceso a {distro} y almacénela en algún lugar seguro.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeHeader": "Acceder a Landscape",
+  "@landscapeHeader": {},
+  "landscapeLoginFailedWarning": "Acceso erróneo, inténtelo de nuevo",
+  "@landscapeLoginFailedWarning": {},
+  "installationTypeEraseAndInstallInfo": "Todos los archivos y datos desde la instalación del {os} existente serán borrados permanentemente.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "restartComputer": "Reiniciar equipo",
+  "@restartComputer": {},
+  "confirmTableFormatted": "Formateado como {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "Redimensionado desde {oldsize} hasta {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoBody": "Si pierde su frase secreta, perderá todos sus datos. La frase de contraseña no remplaza la llave de recuperación o su contraseña de usuario.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "confirmTableCreatedFormattedMounted": "Creado y formateado como {format} utilizado para {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHeader": "Introduzca el dominio de Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainNoInternetTitleWarning": "Conecte a Internet para continuar",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeErrorPageCode": "Código de error: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeZFSEncryptionInfo": "El cifrado nativo con ZFS. Necesitará introducir una frase secreta cada vez que encienda su equipo.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableFormattedMounted": "Formateado como {format} utilizado para {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyStorageAdvice": "Almacene la clave de recuperación donde sea seguro. Utilícela para cifrar el disco en caso de ciertos cambios del sistema. Por ejemplo, puede necesitarlo si cambia los componentes en su equipo o actualice el firmware.",
+  "@recoveryKeyStorageAdvice": {},
+  "installationTypeLVMEncryptionInfo": "Necesitará introducir una frase secreta cada vez que encienda su equipo. Esto utiliza el cifrado LUKS con LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "landscapeCodeExpiredWarning": "Código caducado, inténtelo de nuevo",
+  "@landscapeCodeExpiredWarning": {},
+  "confirmTableErased": "Borrado",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "No modificado",
+  "@confirmTableUnchanged": {},
+  "confirmTableMounted": "Utilizado para {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyHeader": "Obtenga una clave de recuperación",
+  "@recoveryKeyHeader": {},
+  "landscapeDomainHintText": "Dominio Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Instalación automática no disponible para su cuenta",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Contacte con su mantenimiento IT o intente una opción de instalación diferente.",
+  "@landscapeErrorPageBody": {},
+  "bitlockerInfoDisable": "Para instalar junto a Windows, desactive BitLocker en Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows puede solicitar claves de recuperación en el arranque tras la instalación.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Para instrucciones, visite la <a href=\"{url}\">Guía de BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Puede perder todos sus datos sin las claves de recuperación de BitLocker",
+  "@bitlockerWarningTitle": {},
+  "restartComputerTitle": "¿Reiniciar equipo?",
+  "@restartComputerTitle": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instalará con la configuración proporcionada por su organización",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Puede revisar el archivo autoinstall importado desde Landscape a continuación.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "installationTypeEraseAndInstall": "Elimine {os} e instañe {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  }
 }
