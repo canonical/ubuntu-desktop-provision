@@ -139,7 +139,7 @@
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Nainstalovat nyní",
   "@selectGuidedStorageInstallNow": {},
-  "allocateDiskSpace": "Ruční rozdělení",
+  "allocateDiskSpace": "Ruční dělení",
   "@allocateDiskSpace": {},
   "confirmInstallButton": "Instalace",
   "@confirmInstallButton": {},
@@ -159,9 +159,9 @@
   "@diskHeadersFormat": {},
   "freeDiskSpace": "Volné místo",
   "@freeDiskSpace": {},
-  "newPartitionTable": "Nová tabulka rozdělení na oddíly",
+  "newPartitionTable": "Nová tabulka dělení oddílů",
   "@newPartitionTable": {},
-  "bootLoaderDevice": "Zařízení na které nainstalovat zavaděč systému",
+  "bootLoaderDevice": "Zařízení kam nainstalovat zavaděč systému",
   "@bootLoaderDevice": {},
   "partitionCreateTitle": "Vytvořit oddíl",
   "@partitionCreateTitle": {},
@@ -183,7 +183,7 @@
   "@partitionTypeLogical": {},
   "partitionTypePrimary": "Primární",
   "@partitionTypePrimary": {},
-  "partitionTypeLabel": "Zadejte typ pro nový oddíl:",
+  "partitionTypeLabel": "Typ nového oddílu:",
   "@partitionTypeLabel": {},
   "partitionSizeLabel": "Velikost:",
   "@partitionSizeLabel": {},
@@ -207,7 +207,7 @@
   "@installationCompleteTitle": {},
   "confirmPartitionChanges": "Budou provedeny následující změny na oddílech:",
   "@confirmPartitionChanges": {},
-  "confirmPartitionTables": "Budou změněny tabulky rozdělení na oddíly následujících zařízení:",
+  "confirmPartitionTables": "Tabulky dělení oddílů se na následujících zařízení změní:",
   "@confirmPartitionTables": {},
   "confirmHeader": "Zkontrolujte své volby",
   "@confirmHeader": {},
@@ -278,7 +278,7 @@
   },
   "newPartitionTableConfirmationTitle": "Nový prázdný oddíl",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení z něj odebere veškeré stávající oddíly. V případě potřeby lze v tomto kroku ještě tuto operaci vzít zpět (ovšem po zapsání změn už pak ne).",
+  "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení odebere veškeré stávající oddíly. V tomto kroku ještě lze tuto operaci vzít zpět.",
   "@newPartitionTableConfirmationMessage": {},
   "onBatteryWarning": "<font color=\"{color}\">Upozornění:</font> Počítač není připojen k napájení ze zásuvky.",
   "@onBatteryWarning": {
@@ -324,7 +324,7 @@
   "@notEnoughDiskSpaceTitle": {},
   "installationTypeLVMEncryptionSelected": "Vybráno LVM a šifrování",
   "@installationTypeLVMEncryptionSelected": {},
-  "installAlongsideHiddenPartitions": "{num} menších oddílů skryto. Pokud potřebujete mít nad procesem více kontroly, použijte <a href=\"{url}\">nástroj pro pokročilou správu oddílů</a>",
+  "installAlongsideHiddenPartitions": "{num} menších oddílů skryto. Pokud potřebujete postup více upravit, použijte <a href=\"{url}\">nástroj pro pokročilou správu oddílů</a>",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -432,16 +432,16 @@
   "@confirmPartitionsTitle": {},
   "installationSlidesAvailable": "K dispozici:",
   "@installationSlidesAvailable": {},
-  "installationSlidesWelcomeBody": "Ať už jste vývojáři, tvůrci, hráči či správci, naleznete zde nové nástroje zvyšující vaši produktivitu a vylepšující váš dojem z používání {RELEASE}.",
+  "installationSlidesWelcomeBody": "Ať už jste vývojáři, tvůrci, hráči či správci, v {RELEASE} naleznete nové nástroje, které vám zvýší produktivitu a zpříjemní používání systému.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "installationSlidesSoftwareTitle": "Všechny aplikace které potřebujete",
+  "installationSlidesSoftwareTitle": "Všechny aplikace, které potřebujete",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "Instalujte, spravujte a aktualizujte vámi používané aplikace v Ubuntu Software, obsahujícího tisíce aplikací jak ze Snap Store, tak z archivu balíčků {DISTRO}.",
+  "installationSlidesSoftwareBody": "V Centru aplikací můžete instalovat, spravovat a aktualizovat všechny aplikace, včetně tisíců aplikací z obchodu Snap i z archivu {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
@@ -509,7 +509,7 @@
   },
   "installationSlidesIncluded": "Obsaženo:",
   "@installationSlidesIncluded": {},
-  "installationSlidesWelcomeTitle": "Rychlé, svobodné a plné nových funkcí",
+  "installationSlidesWelcomeTitle": "Rychlé, bezplatné a plné nových funkcí",
   "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeHeader": "Nejnovější verze {DISTRO} usnadňuje používání počítače víc než kdy dříve.",
   "@installationSlidesWelcomeHeader": {
@@ -520,7 +520,7 @@
   },
   "installationSlidesCreativityTitle": "Buďte tvořivější",
   "@installationSlidesCreativityTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci / strojové učení, stejně tak pro devops a správu systémů. Každé vydání {DISTRO} obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí.",
+  "installationSlidesDevelopmentBody": "{DISTRO} je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci (AI/ML), a také pro devops a správu systémů. Každé vydání {DISTRO} obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí (IDE).",
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
@@ -565,7 +565,7 @@
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
   "@restartIntoWindowsTitle": {},
-  "restartIntoWindowsDescription": "Opravdu chcete váš počítač restartovat? Pokud poté budete chtít dokončit instalaci {DISTRO}, bude třeba znovu spustit instalaci {DISTRO}.",
+  "restartIntoWindowsDescription": "Opravdu chcete počítač restartovat? Pokud pak budete chtít instalaci {DISTRO} dokončit, bude třeba instalaci {DISTRO} spustit znovu.",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
@@ -574,7 +574,7 @@
   },
   "bitlockerHeader": "Aby bylo možné pokračovat, vypněte BitLocker",
   "@bitlockerHeader": {},
-  "allocateDiskSpaceInvalidMountPointSlash": "Je třeba, aby přípojné body začínaly na „/“ (dopředné lomítko)",
+  "allocateDiskSpaceInvalidMountPointSlash": "Je třeba, aby přípojné body začínaly na „/“",
   "@allocateDiskSpaceInvalidMountPointSlash": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Přípojné body nemohou obsahovat mezery",
   "@allocateDiskSpaceInvalidMountPointSpace": {},
@@ -933,7 +933,7 @@
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Ovladače",
   "@confirmProprietarySoftwareDrivers": {},
-  "rebootToConfigure": "**{system}** byl zkopírován na disk",
+  "rebootToConfigure": "**{system}** bylo zkopírováno na disk",
   "@rebootToConfigure": {
     "placeholders": {
       "system": {
@@ -941,7 +941,7 @@
       }
     }
   },
-  "restartWarningBody": "Restartujte pro dokončení instalace nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
+  "restartWarningBody": "Restartujte, aby se dokončila instalace, nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
   "@restartWarningBody": {},
   "rebootToConfigureWarning": "Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.",
   "@rebootToConfigureWarning": {},
@@ -1112,9 +1112,9 @@
   "@installationTypeZFSEncryptionInfo": {},
   "bitlockerWarningTitle": "Bez obnovovacích klíčů nástroje BitLocker můžete přijít o všechna data",
   "@bitlockerWarningTitle": {},
-  "bitlockerInfoDisable": "Pro instalaci spolu se systémem Windows vypněte ve Windows nástroj BitLocker.",
+  "bitlockerInfoDisable": "Pro instalaci vedle systému Windows vypněte ve Windows nástroj BitLocker.",
   "@bitlockerInfoDisable": {},
-  "bitlockerInfoRecovery": "Systém Windows může po instalaci vyžadovat obnovovací klíče při spuštění.",
+  "bitlockerInfoRecovery": "Po instalaci může systém Windows při spuštění vyžadovat obnovovací klíče.",
   "@bitlockerInfoRecovery": {},
   "bitlockerInfoInstructions": "Pokyny naleznete v <a href=\"{url}\">průvodci nástrojem BitLocker</a>.",
   "@bitlockerInfoInstructions": {
@@ -1139,7 +1139,7 @@
       }
     }
   },
-  "confirmTableCreatedFormattedMounted": "Vytvořeno a naformátováno jako {format} použito pro {mountpoint}",
+  "confirmTableCreatedFormattedMounted": "Vytvořeno a naformátováno jako {format}, použito pro {mountpoint}",
   "@confirmTableCreatedFormattedMounted": {
     "placeholders": {
       "format": {
@@ -1150,7 +1150,7 @@
       }
     }
   },
-  "confirmTableFormattedMounted": "Naformátováno jako {format} použito pro {mountpoint}",
+  "confirmTableFormattedMounted": "Naformátováno jako {format}, použito pro {mountpoint}",
   "@confirmTableFormattedMounted": {
     "placeholders": {
       "format": {
