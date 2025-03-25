@@ -4,7 +4,7 @@ go 1.24.0
 
 require (
 	github.com/golangci/golangci-lint v1.64.8
-	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.3.0
+	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.5.1
 	google.golang.org/protobuf v1.36.5
 )
 
