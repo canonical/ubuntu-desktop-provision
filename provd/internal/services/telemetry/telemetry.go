@@ -66,7 +66,7 @@ func (s *Service) Collect(ctx context.Context, _ *emptypb.Empty) (*pb.CollectRes
 
 	if err != nil {
 		slog.Error(fmt.Sprintf("failed to collect metrics: %v", err))
-		return nil, status.Errorf(codes.Internal, fmt.Sprintf("faild to collect metrics: %v", err))
+		return nil, status.Errorf(codes.Internal, "faild to collect metrics: %v", err)
 	}
 
 	return &pb.CollectResponse{Metrics: string(metrics)}, nil
