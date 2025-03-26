@@ -461,14 +461,14 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityLts": "Všechna {DISTRO} LTS vydání dostávají po dobu pěti let opravy zabezpečení s tím, že je možné prodloužit na deset let předplatným Ubuntu Pro.",
+  "installationSlidesSecurityLts": "Všechna vydání {DISTRO} LTS dostávají opravy zabezpečení po dobu pěti let, nebo prodloužené na deset let předplatným Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikaci, kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikací kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
@@ -488,7 +488,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Web Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
+  "installationSlidesSupportCommunity": "Stránka Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Pro firemní uživatele Canonical poskytuje komerční podporu, díky které je snadné zavést a spravovat Ubuntu na pracovišti.",
   "@installationSlidesSupportEnterprise": {},
@@ -496,7 +496,7 @@
   "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Oficiální dokumentace",
   "@installationSlidesSupportDocumentation": {},
-  "installationSlidesSupportUbuntuPro": "Podpora 24/7 na podnikové úrovni s Ubuntu Pro",
+  "installationSlidesSupportUbuntuPro": "Nepřetržitá podpora na podnikové úrovni s Ubuntu Pro",
   "@installationSlidesSupportUbuntuPro": {},
   "notEnoughDiskSpaceRequired": "Vyžadováno:",
   "@notEnoughDiskSpaceRequired": {},
@@ -534,7 +534,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače od NVIDIA (to stejné ty z Mesa), což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
+  "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače NVIDIA a Mesa, což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
@@ -543,7 +543,7 @@
   },
   "installationSlidesProductivityTitle": "Zvyšte svou produktivitu",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesAccessibilityBody": "V srdci filozofie {DISTRO} je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění hendikepovaným a možnosti změnit jazyk, barvy a velikost textu rozhraní, {DISTRO} činí používání počítače snadné – ať už jste kdokoli a žijete kdekoli.",
+  "installationSlidesAccessibilityBody": "V jádru filozofie {DISTRO} je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění a možnostem změnit jazyk, barvy a velikost textu rozhraní usnadňuje {DISTRO} používání počítače, ať už jste kdokoli a kdekoli.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
@@ -634,7 +634,7 @@
       "version": {}
     }
   },
-  "refreshSnapCheckRerefresh": "Zjišťování opětovného znovunačítání {snap}…",
+  "refreshSnapCheckRerefresh": "Kontrola opětovného znovunačítání {snap}…",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
@@ -671,7 +671,7 @@
       "snap": {}
     }
   },
-  "refreshSnapStartServices": "Start služeb {snap}…",
+  "refreshSnapStartServices": "Spouštění služeb {snap}…",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
@@ -706,7 +706,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUnlink": "Rušení odkazování na {snap}…",
+  "refreshSnapUnlink": "Rušení odkazů na {snap}…",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
@@ -720,7 +720,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů pro spouštění jádra systému {snap}…",
+  "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů {snap} pro spouštění jádra systému…",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
@@ -957,7 +957,7 @@
   "@refreshCloseLabel": {},
   "validate": "Ověřit",
   "@validate": {},
-  "notEnoughDiskSpaceBody": "Vybraný disk nemá dostatek místa pro instalaci {DISTRO}. Ukončete instalační program, abyste uvolnili místo, nebo vyberte jiný disk.",
+  "notEnoughDiskSpaceBody": "Vybraný disk nemá pro instalaci {DISTRO} dostatek místa. Ukončete instalační program a uvolněte místo, nebo vyberte jiný disk.",
   "@notEnoughDiskSpaceBody": {
     "placeholders": {
       "DISTRO": {
@@ -1018,7 +1018,7 @@
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Bez klíče pro obnovení můžete přijít o všechna data",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyInfoBody": "Získejte obnovovací klíč, jakmile se poprvé přihlásíte do {distro} a uložte jej na bezpečném místě.",
+  "recoveryKeyInfoBody": "Jakmile se poprvé přihlásíte do {distro}, získejte obnovovací klíč a uložte si jej na bezpečném místě.",
   "@recoveryKeyInfoBody": {
     "placeholders": {
       "distro": {
@@ -1069,7 +1069,7 @@
   "@landscapeHeader": {},
   "landscapeLoginFailedWarning": "Přihlášení se nezdařilo, zkuste to znovu",
   "@landscapeLoginFailedWarning": {},
-  "recoveryKeyStorageAdvice": "Uložte klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.",
+  "recoveryKeyStorageAdvice": "Uložte si klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.",
   "@recoveryKeyStorageAdvice": {},
   "installationTypeEraseAndInstall": "Vymazat {os} a nainstalovat {product}",
   "@installationTypeEraseAndInstall": {
@@ -1191,8 +1191,8 @@
       }
     }
   },
-  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainstalováno s nastaveními, poskytnutými vaší organizací",
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainstalováno s nastavením, které poskytuje vaše organizace",
   "@landscapeConfirmPageSuccessInfoTitle": {},
-  "landscapeConfirmPageSuccessInfoContent": "Níže je možné prohlédnout si soubor s nastaveními pro automatickou instalaci, naimportovaný z Landscape.",
+  "landscapeConfirmPageSuccessInfoContent": "Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape.",
   "@landscapeConfirmPageSuccessInfoContent": {}
 }
