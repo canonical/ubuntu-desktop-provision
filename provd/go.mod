@@ -9,7 +9,7 @@ require (
 	github.com/spf13/viper v1.20.0
 	github.com/stretchr/testify v1.10.0
 	github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19
-	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
+	github.com/ubuntu/ubuntu-report v1.7.4-0.20241126152223-b9c5b9b8cd90
 	google.golang.org/grpc v1.71.0
 	google.golang.org/protobuf v1.36.5
 	gopkg.in/yaml.v3 v3.0.1
