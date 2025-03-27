@@ -23,6 +23,7 @@ class JournalView extends StatelessWidget {
         enabledBorder: InputBorder.none,
         focusedBorder: InputBorder.none,
         fillColor: Colors.transparent,
+        hoverColor: Colors.transparent,
       ),
       background: BoxDecoration(color: Theme.of(context).shadowColor),
     );
