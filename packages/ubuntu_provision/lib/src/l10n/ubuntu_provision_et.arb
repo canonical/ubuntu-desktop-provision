@@ -69,7 +69,7 @@
       }
     }
   },
-  "accessibilityPageBody": "Enne paigaldaamist säti {DISTRO} vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.",
+  "accessibilityPageBody": "Enne paigaldamist säti {DISTRO} vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
