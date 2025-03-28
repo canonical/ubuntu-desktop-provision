@@ -542,7 +542,7 @@
   },
   "installationSlidesDevelopmentTitle": "Arenda parimate avatud lähtekoodil põhinevate töövahenditega",
   "@installationSlidesDevelopmentTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} ideaalne tööjaam rakenduste või veebiarendusteks, andmeteaduse ja tehisintellektiga seotud tööde jaoks ning loomulikult devopsi ja süsteemihalduse jaoks. Iga {DISTRO} viimane versioon sisaldab uusimaid arendustarvikuid ning toetab kõiki suurimaid lõimitud arenduskeskondi.",
+  "installationSlidesDevelopmentBody": "{DISTRO} on ideaalne tööjaam rakenduste või veebiteenuste arendusteks, andmeteaduse ja tehisintellektiga seotud tööde jaoks ning loomulikult devopsi ja süsteemihalduse jaoks. Iga {DISTRO} viimane versioon sisaldab uusimaid arendustarvikuid ning toetab kõiki suurimaid lõimitud arenduskeskondi.",
   "@installationSlidesDevelopmentBody": {
     "placeholders": {
       "DISTRO": {
