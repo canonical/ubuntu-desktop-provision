@@ -693,7 +693,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Applications",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Configuration du disque",
+  "confirmEntryDiskSetup": "Type d'installation",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Chiffrement du disque",
   "@confirmEntryDiskEncryption": {},
@@ -1076,5 +1076,76 @@
   "bitlockerInfoTitle": "BitLocker detecté",
   "@bitlockerInfoTitle": {},
   "bitlockerInfoDescription": "Une ou plusieurs partitions sont chiffrées avec BitLocker.",
-  "@bitlockerInfoDescription": {}
+  "@bitlockerInfoDescription": {},
+  "confirmTableCreatedFormattedMounted": "Créé(e) et formaté(e) en {format} utilisé(e) pour {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Utilisé(e) pour {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableUnchanged": "Inchangé(e)",
+  "@confirmTableUnchanged": {},
+  "confirmTableErased": "Effacé(e)",
+  "@confirmTableErased": {},
+  "confirmTableResized": "Redimensionné de {oldsize} à {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formaté(e) en {format} utilisé(e) pour {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatté(e) en {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Domaine Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "L’installation automatisée n’est pas disponible pour votre compte",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Contactez votre support informatique ou essayez une autre option d’installation.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Code d'erreur : {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu s’installera avec la configuration fournie par votre organisation",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Vous pouvez consulter ci-dessous le fichier d’installation automatique importé de Landscape.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
