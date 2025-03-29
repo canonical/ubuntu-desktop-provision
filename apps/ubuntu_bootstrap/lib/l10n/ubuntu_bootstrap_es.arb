@@ -140,7 +140,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "Borrar disco y usar ZFS",
+  "installationTypeZFS": "Utilizar ZFS sin cifrado",
   "@installationTypeZFS": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Atención:</font> esto eliminará todos sus programas, documentos, fotos, música y cualquier otro archivo de {os}.",
   "@installationTypeReinstallWarning": {
@@ -161,15 +161,15 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Borrar disco e instalar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeAdvancedLabel": "Funcionalidades avanzadas…",
+  "installationTypeAdvancedLabel": "Mostrar opciones avanzadas…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Funcionalidades avanzadas",
+  "installationTypeAdvancedTitle": "Cifrado y sistema de archivo",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Ninguno",
+  "installationTypeNone": "Sin cifrado",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nada seleccionado",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Usar LVM",
+  "installationTypeLVM": "Utilice LVM sin cifrado",
   "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM seleccionado",
   "@installationTypeLVMSelected": {},
@@ -193,7 +193,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Podrá elegir qué sistema operativo quiere iniciar en cada arranque.",
+  "installationTypeAlongsideInfo": "Seleccione una partición para redimensionar y crear espacio para {product}. Puede elegir su sistema operativo durante el arranque.",
   "@installationTypeAlongsideInfo": {},
   "partitionEditTitle": "Editar partición",
   "@partitionEditTitle": {},
@@ -277,7 +277,7 @@
       "url": {}
     }
   },
-  "installationTypeAlongsideMulti": "Instalar {product} junto a estos",
+  "installationTypeAlongsideMulti": "Instalar {product} junto a sistemas operativos existentes",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -518,7 +518,7 @@
   "@installationSlidesProductivityTitle": {},
   "installationSlidesSupportEnterprise": "Para entornos empresariales, Canonical ofrece asistencia comercial para facilitar la instalación y gestión segura de Ubuntu en su lugar de trabajo.",
   "@installationSlidesSupportEnterprise": {},
-  "rstHeader": "Desactive RST para continuar",
+  "rstHeader": "Debe desactivar RST para continuar la instalación",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "¿Quiere reiniciar en Windows?",
   "@restartIntoWindowsTitle": {},
@@ -549,7 +549,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Activar cifrado por hárdwer de todo el disco",
+  "installationTypeTPM": "Utilizar cifrado con backend en hardware",
   "@installationTypeTPM": {},
   "refreshSnapCopyData": "Copiando los datos {snap}...",
   "@refreshSnapCopyData": {
@@ -707,7 +707,7 @@
       "snap": {}
     }
   },
-  "recoveryKeyCommand": "Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:",
+  "recoveryKeyCommand": "Puede obtener una llave de recuperación, complete la instalación, reinicie su equipo, y ejecute este comando dentro del terminal:",
   "@recoveryKeyCommand": {},
   "refreshSnapPrerequisites": "Comprobando cumplimento de prerrequisitos de {snap}…",
   "@refreshSnapPrerequisites": {
@@ -801,7 +801,7 @@
   "@choosePassphraseHeader": {},
   "choosePassphraseTitle": "Contraseña del disco",
   "@choosePassphraseTitle": {},
-  "choosePassphraseInfoHeader": "Asegúrate de guardar tu contraseña",
+  "choosePassphraseInfoHeader": "Almacene su frase secreta en algún lugar seguro",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Si pierde su contraseña, perderá todos sus datos.",
   "@choosePassphraseInfoBody": {},
@@ -823,17 +823,17 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Comience desde cero en el disco seleccionado.",
+  "installationTypeEraseInfo": "Todos los datos y particiones en el disco serán borradas, incluyendo es sistema operativo.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimental",
   "@installationTypeExperimental": {},
-  "installationTypeLVMEncryption": "Usar LVM y cifrado",
+  "installationTypeLVMEncryption": "Cifrado con frase contraseña",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Borrar disco y usar ZFS con cifrado",
+  "installationTypeZFSEncryption": "Cifrar con una frase contraseña utilizando ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Esta es una característica experimental. Es posible que no funcione con su hardware o con futuras versiones de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción. Esto puede no funcionar con su hardware o publicaciones futuras de la {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -862,7 +862,7 @@
   "@confirmDiskEncryptionZFS": {},
   "confirmDiskEncryptionNone": "Ninguna",
   "@confirmDiskEncryptionNone": {},
-  "confirmEntryDiskSetup": "Configuración del disco",
+  "confirmEntryDiskSetup": "Tipo de instalación",
   "@confirmEntryDiskSetup": {},
   "confirmEntryApplications": "Aplicaciones",
   "@confirmEntryApplications": {},
@@ -999,7 +999,7 @@
   "@next": {},
   "landscapeDomainNoInternetDescriptionWarning": "Internet es necesario para obtener el archivo autoinstall desde Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
-  "landscapeMagicAttachInstructions": "Analiza el código QR o introduzca el código a continuación en <a href=\"https://{url}\">",
+  "landscapeMagicAttachInstructions": "Analiza el código QR o introduzca el código a continuación en <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
@@ -1147,5 +1147,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "landscapeDomainInstructions": "Proporcione su dominio de Landscape de la organización para acceder y obtener un archivo de auto-instalación. Puede obtener es FQDN desde su proveedor IT.",
+  "@landscapeDomainInstructions": {}
 }
