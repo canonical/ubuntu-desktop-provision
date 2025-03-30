@@ -1,12 +1,12 @@
 {
   "@@locale": "nl",
-  "appTitle": "Ubuntu Desktop instalatie programma",
+  "appTitle": "Ubuntu Desktop instalatieprogramma",
   "@appTitle": {},
   "windowTitle": "{RELEASE} installeren",
   "@windowTitle": {},
   "welcome": "Welkom",
   "@welcome": {},
-  "tryOrInstallTitle": "Uitproberen of installeren",
+  "tryOrInstallTitle": "{DISTRO} uitproberen of installeren",
   "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Repareer de installatie",
   "@tryOrInstallRepairOption": {},
@@ -27,5 +27,115 @@
   "rstDescription": "Deze computer maakt gebruik van Intel RST (Rapid Storage Technology). Om Ubuntu te installeren, is het noodzakelijk om dit uit te schakelen.",
   "@rstDescription": {},
   "rstInstructions": "Voor instructies, open de volgende website op uw telefoon of op een ander apparaat: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {}
+  "@rstInstructions": {},
+  "configureSecureBootOption": "Secure Boot configureren",
+  "@configureSecureBootOption": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Controleer of de URL correct is of selecteer een lokaal bestand.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallLandscapeDescription": "Voor gebruikers in organisaties die een automatisch installatiebestand leveren via Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "autoinstallLandscapeOption": "Geautomatiseerd met Landscape",
+  "@autoinstallLandscapeOption": {},
+  "dontInstallDriverSoftwareNow": "Stuurprogramma's voorlopig niet installeren",
+  "@dontInstallDriverSoftwareNow": {},
+  "confirmSecurityKey": "De beveiligingssleutel bevestigen",
+  "@confirmSecurityKey": {},
+  "autoinstallDirectFileClearButtonLabel": "Bestand wissen",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML-bestanden",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importeren",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Autom. installatiebestand is onbereikbaar",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Controleer of de URL correct is, test de internetverbinding of probeer het later.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Ongeldige URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Ongeldig autom. installatiebestand",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Controleer het bestand of geef een ander bestand op.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Autom. installatiebestand is niet leesbaar",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Controleer je machtigingen of biedt een ander bestand aan.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Onbekende fout",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallHeader": "Hoe wilt je {DISTRO} installeren?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "{DISTRO} voorbereiden…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Waarschuwing:",
+  "@warningLabel": {},
+  "autoinstallInstructions": "Voer de URL van de autoinstall.yaml of het lokale bestandspad in:",
+  "@autoinstallInstructions": {},
+  "autoinstallDirectOption": "Geautomatiseerd met autom. installatiebestand",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Voor gevorderde gebruikers die een autoinstall.yaml hebben voor consistente en reproduceerbare systeeminstellingen.",
+  "@autoinstallDirectDescription": {},
+  "quitButtonText": "Installatie afbreken",
+  "@quitButtonText": {},
+  "chooseSecurityKey": "Kies een beveiligingssleutel",
+  "@chooseSecurityKey": {},
+  "configureSecureBootDescription": "Je hebt ervoor gekozen om stuurprogramma's van derden te installeren. Hiervoor moet Secure Boot worden uitgeschakeld.\nOm dit te doen, moet je nu een beveiligingssleutel kiezen en deze invoeren wanneer het systeem opnieuw wordt opgestart.",
+  "@configureSecureBootDescription": {},
+  "autoinstallTitle": "Type installatie",
+  "@autoinstallTitle": {},
+  "autoinstallInteractiveOption": "Interactieve installatie",
+  "@autoinstallInteractiveOption": {},
+  "configureSecureBootTitle": "Secure Boot configureren",
+  "@configureSecureBootTitle": {},
+  "tryOrInstallHeader": "Wat wil je doen met {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInteractiveDescription": "Voor gebruikers die stap voor stap door de installatie geleid willen worden.",
+  "@autoinstallInteractiveDescription": {},
+  "changeButtonText": "Veranderen",
+  "@changeButtonText": {},
+  "loadingPageTitle": "Welkom bij {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rstHeader": "RST moet uitgeschakeld worden om door te gaan met de installatie",
+  "@rstHeader": {},
+  "rstDisable": "Je computer maakt gebruik van Intel RST (Rapid Storage Technology). Je kunt RST uitschakelen in:",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windows, als je een dual-boot-opstelling met Windows gebruikt",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "De BIOS-instellingen",
+  "@rstDisableBios": {},
+  "autoinstallDirectTitle": "Geautomatiseerde installatie",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Autom. installatiebestand importeren",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Je kunt de URL van een autom. installatiebestand invoeren:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Of selecteer een lokaal bestand:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Bestand selecteren…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Bestand kiezen",
+  "@autoinstallDirectFilePickerTitle": {}
 }
