@@ -1064,5 +1064,143 @@
         "type": "String"
       }
     }
-  }
+  },
+  "recoveryKeyInfoBody": "當您第一次登入 {distro} 時，請立即取得還原金鑰，並將它存放在安全的地方。",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "我知道如果沒有復原金鑰，我可能會遺失所有資料",
+  "@recoveryKeyConfirmation": {},
+  "landscapeMagicAttachInstructions": "掃描 QR code 或在 <a href=\"https://{url}\">{url}</a> 輸入以下代碼",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainTextField": "Landscape 網域 (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "下一步",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "網域無效，請檢查或聯絡您的 IT 支援人員",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeCodeExpiredWarning": "代碼已過期，請重試",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "登入失敗，請重試",
+  "@landscapeLoginFailedWarning": {},
+  "bitlockerInfoInstructions": "如需說明，請造 <a href=\"{url}\">BitLocker 指南</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "如果沒有 BitLocker 復原金鑰，您可能會遺失所有資料",
+  "@bitlockerWarningTitle": {},
+  "recoveryKeyInfoHeader": "如果沒有復原金鑰，您可能會遺失所有資料",
+  "@recoveryKeyInfoHeader": {},
+  "landscapeDomainInstructions": "提供您組織的 Landscape 網域以登入並獲取自動安裝檔案。您可以從 IT 支援取得 FQDN。",
+  "@landscapeDomainInstructions": {},
+  "confirmTableMounted": "用於 {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "格式化為 {format} 用於 {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableErased": "已刪除",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "未變更",
+  "@confirmTableUnchanged": {},
+  "confirmTableCreatedFormattedMounted": "已建立並格式化為 {format} 用於 {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoRecovery": "安裝完成後，Windows 可能會在開機時要求復原金鑰。",
+  "@bitlockerInfoRecovery": {},
+  "restartComputer": "重新啟動電腦",
+  "@restartComputer": {},
+  "restartComputerTitle": "重新啟動電腦？",
+  "@restartComputerTitle": {},
+  "confirmTableFormatted": "格式化為 {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "從 {oldsize} 調整為 {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Landscape 網域 (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "您的帳號無法使用自動安裝功能",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "請聯絡您的 IT 支援或嘗試其他安裝選項。",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "錯誤代碼：{code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "偵測到 BitLocker",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "一個或多個磁碟分割區已使用 BitLocker 加密。",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "若要與 Windows 並存的方式安裝，請停用 Windows 中的 BitLocker。",
+  "@bitlockerInfoDisable": {},
+  "landscapeDomainNoInternetDescriptionWarning": "需要透過網際網路從 Landscape 取得自動安裝檔案",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "recoveryKeyHeader": "取得復原金鑰",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyStorageAdvice": "將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapePageTitle": "自動安裝",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "登入 Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "輸入 Landscape 網域 (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainNoInternetTitleWarning": "連線至網際網路以繼續",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu 將以您的組織所提供的配置安裝",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "您可以在下方檢視從 Landscape 匯入的自動安裝檔案。",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
