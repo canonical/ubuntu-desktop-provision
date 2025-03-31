@@ -1,17 +1,15 @@
 import 'package:grpc/grpc.dart';
 import 'package:meta/meta.dart';
-import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart';
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
-    as pbgrpc;
 
-export 'package:landscape_client/src/generated/google/protobuf/timestamp.pb.dart'
-    show Timestamp;
-export 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
+import 'package:landscape_stubs/landscape_stubs.dart' as pbgrpc;
+export 'package:landscape_stubs/landscape_stubs.dart'
     show
         AttachResponse,
         AttachStatus,
         WatchAuthenticationResponse,
-        AuthenticationStatus;
+        AuthenticationStatus,
+        Empty,
+        Timestamp;
 
 class LandscapeClient {
   LandscapeClient(String serverUrl, int port, bool useTls) {
@@ -34,7 +32,7 @@ class LandscapeClient {
   late pbgrpc.LandscapeInstallerAttachClient _landscapeClient;
 
   Future<pbgrpc.AttachResponse> attach() async {
-    final request = Empty();
+    final request = pbgrpc.Empty();
     return await _landscapeClient.attach(request);
   }
 

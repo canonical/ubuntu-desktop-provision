@@ -1,8 +1,6 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
-    as pbgrpc;
-import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart';
+import 'package:landscape_stubs/landscape_stubs.dart' as pbgrpc;
 import 'package:landscape_client/src/landscape_client.dart';
 import 'package:test/test.dart';
 
@@ -26,7 +24,7 @@ void main() {
     final response = await landscapeClient.attach();
 
     expect(response.status, pbgrpc.AttachStatus.ATTACH_SUCCESS);
-    verify(mockLandscapeClient.attach(Empty())).called(1);
+    verify(mockLandscapeClient.attach(pbgrpc.Empty())).called(1);
   });
 
   test('watch authentication', () {
