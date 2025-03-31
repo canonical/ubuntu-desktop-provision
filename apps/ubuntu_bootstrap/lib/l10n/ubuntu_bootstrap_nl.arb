@@ -151,5 +151,25 @@
   "updatesOtherSoftwarePageTitle": "Toepassingen",
   "@updatesOtherSoftwarePageTitle": {},
   "hideSecurityKey": "Verbergen",
-  "@hideSecurityKey": {}
+  "@hideSecurityKey": {},
+  "codecsAndDriversNvidiaNote": "NVIDIA grafische kaart gedetecteerd",
+  "@codecsAndDriversNvidiaNote": {},
+  "codecsAndDriversNvidiaBody": "Voor de beste prestaties van NVIDIA grafische kaarten wordt het installeren van extra stuurprogramma's sterk aanbevolen.",
+  "@codecsAndDriversNvidiaBody": {},
+  "minimalInstallationTitle": "Standaard-selectie",
+  "@minimalInstallationTitle": {},
+  "fullInstallationSubtitle": "Een offline-vriendelijke selectie van kantoorsoftware, hulpprogramma's en webbrowsers.",
+  "@fullInstallationSubtitle": {},
+  "codecsAndDriversPageTitle": "Optimaliseer je computer",
+  "@codecsAndDriversPageTitle": {},
+  "codecsAndDriversPageBody": "{DISTRO} wordt standaard geleverd zonder propriëtaire software. Het installeren van extra software kan de prestaties van je computer verbeteren.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "fullInstallationTitle": "Uitgebreide selectie",
+  "@fullInstallationTitle": {}
 }
