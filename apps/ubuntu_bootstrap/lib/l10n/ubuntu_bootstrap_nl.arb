@@ -171,5 +171,303 @@
     }
   },
   "fullInstallationTitle": "Uitgebreide selectie",
-  "@fullInstallationTitle": {}
+  "@fullInstallationTitle": {},
+  "installationTypeNoneInfo": "Standaard bestandssysteem zonder versleuteling.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Lokale versleuteling met ZFS. Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Partitie selecteren:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "selectGuidedStorageInstallNow": "Nu installeren",
+  "@selectGuidedStorageInstallNow": {},
+  "guidedStoragePageHeader": "Kies waar je {DISTRO} wilt installeren",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSlash": "Bevestigingspunten moeten beginnen met \"/\"",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "installationTypeLVMEncryptionSelected": "LVM en versleuteling geselecteerd",
+  "@installationTypeLVMEncryptionSelected": {},
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Waarschuwing:</font> Hiermee worden alle {os}-programma's, documenten, foto's, muziek en andere bestanden verwijderd.",
+  "@installationTypeReinstallWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfoLabel": "De hele schijf wordt gebruikt:",
+  "@selectGuidedStorageInfoLabel": {},
+  "installThirdPartyTitle": "Software van derde partijen installeren voor grafische en Wi-Fi-hardware en extra mediaformaten",
+  "@installThirdPartyTitle": {},
+  "installDriversSubtitle": "Met inbegrip van, maar niet beperkt tot, NVIDIA-stuurprogramma's en dergelijke",
+  "@installDriversSubtitle": {},
+  "installCodecsSubtitle": "Inclusief maar niet beperkt tot MP3, MP4, MOV en dergelijke",
+  "@installCodecsSubtitle": {},
+  "choosePassphraseBody": "Je hebt een wachtwoordzin nodig om je bestanden te versleutelen. Elke keer dat je de computer aanzet, wordt je om je wachtwoordzin gevraagd.",
+  "@choosePassphraseBody": {},
+  "createPassphrase": "Wachtwoordzin aanmaken",
+  "@createPassphrase": {},
+  "choosePassphraseInfoBody": "Als je de wachtwoordzin verliest, verlies je al je gegevens.",
+  "@choosePassphraseInfoBody": {},
+  "confirmPassphrase": "Wachtwoordzin bevestigen",
+  "@confirmPassphrase": {},
+  "installationTypeErase": "De schijf wissen en {DISTRO} installeren",
+  "@installationTypeErase": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Alle gegevens en partities op de schijf worden gewist, inclusief besturingssystemen.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeAdvancedTitle": "Versleuteling en bestandssysteem",
+  "@installationTypeAdvancedTitle": {},
+  "installationTypeNoneSelected": "Niets geselecteerd",
+  "@installationTypeNoneSelected": {},
+  "installationTypeLVM": "LVM gebruiken zonder versleuteling",
+  "@installationTypeLVM": {},
+  "installationTypeLVMSelected": "LVM geselecteerd",
+  "@installationTypeLVMSelected": {},
+  "installationTypeTPMInfo": "<a href=\"{url}\">Lees meer over TPM-versleuteling</a> voordat je deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van {DISTRO}.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMSelected": "TPM geselecteerd",
+  "@installationTypeTPMSelected": {},
+  "installationTypeManual": "Handmatige installatie",
+  "@installationTypeManual": {},
+  "installationTypeEraseAndInstallInfo": "Alle bestanden en gegevens van de bestaande {os}-installatie worden permanent verwijderd.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideAvailable": "Beschikbaar:",
+  "@installAlongsideAvailable": {},
+  "allocateDiskSpace": "Handmatige partitionering",
+  "@allocateDiskSpace": {},
+  "codecsAndDriversPageDescription": "Aanbevolen propriëtaire software installeren?",
+  "@codecsAndDriversPageDescription": {},
+  "otherOptions": "Andere opties",
+  "@otherOptions": {},
+  "choosePassphraseMismatch": "De wachtwoordzinnen komen niet overeen",
+  "@choosePassphraseMismatch": {},
+  "installationTypeZFS": "ZFS gebruiken zonder versleuteling",
+  "@installationTypeZFS": {},
+  "installationTypeEncryptInfo": "In de volgende stap kies je een beveiligingssleutel.",
+  "@installationTypeEncryptInfo": {},
+  "installationTypeZFSEncryptionSelected": "ZFS en versleuteling geselecteerd",
+  "@installationTypeZFSEncryptionSelected": {},
+  "installationTypeReinstall": "{os} wissen en opnieuw installeren",
+  "@installationTypeReinstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongside": "{product} naast {os} installeren",
+  "@installationTypeAlongside": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideAllocateSpace": "Ruimte toewijzen",
+  "@installAlongsideAllocateSpace": {},
+  "installationTypeTPM": "Hardwarematige versleuteling gebruiken",
+  "@installationTypeTPM": {},
+  "installationTypeAdvancedLabel": "Geavanceerde opties weergeven…",
+  "@installationTypeAdvancedLabel": {},
+  "choosePassphraseHeader": "Wachtwoordzin aanmaken",
+  "@choosePassphraseHeader": {},
+  "installationTypeMultiOSDetected": "Op deze computer staan momenteel meerdere besturingssystemen. Wat zou je willen doen?",
+  "@installationTypeMultiOSDetected": {},
+  "minimalInstallationSubtitle": "Alleen de essentie, webbrowser en basishulpprogramma's.",
+  "@minimalInstallationSubtitle": {},
+  "installCodecsTitle": "Ondersteuning voor extra media-indelingen downloaden en installeren",
+  "@installCodecsTitle": {},
+  "choosePassphraseTitle": "Wachtwoordzin voor de schijf",
+  "@choosePassphraseTitle": {},
+  "installAlongsidePartition": "Partitie:",
+  "@installAlongsidePartition": {},
+  "installationTypeExperimental": "Experimenteel",
+  "@installationTypeExperimental": {},
+  "installationTypeZFSSelected": "ZFS geselecteerd",
+  "@installationTypeZFSSelected": {},
+  "choosePassphraseRequired": "Een wachtwoordzin is vereist",
+  "@choosePassphraseRequired": {},
+  "installationTypeDualOSDetected": "Op deze computer staan momenteel {os1} en {os2}. Wat zou je willen doen?",
+  "@installationTypeDualOSDetected": {
+    "placeholders": {
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeOSDetected": "Op deze computer staat momenteel {os}. Wat zou je willen doen?",
+  "@installationTypeOSDetected": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeNoOSDetected": "Deze computer heeft momenteel geen gedetecteerde besturingssystemen. Wat zou je willen doen?",
+  "@installationTypeNoOSDetected": {},
+  "installationTypeAlongsideDual": "{product} naast {os1} en {os2} installeren",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideResizePartition": "Grootte van de partitie wijzigen",
+  "@installAlongsideResizePartition": {},
+  "selectGuidedStorageDriveDropdownLabel": "Schijf selecteren:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStorageInfo": "Helemaal opnieuw beginnen op de geselecteerde schijf.",
+  "@selectGuidedStorageInfo": {},
+  "installAlongsideSpaceDivider": "Wijs schijfruimte toe door hieronder de scheidingslijn te verslepen:",
+  "@installAlongsideSpaceDivider": {},
+  "installAlongsideHiddenPartitions": "{num} kleinere partities zijn verborgen, gebruik dan de <a href=\"{url}\">geavanceerde partitionering</a> voor meer controle",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "batteryWarning": "De computer is niet aangesloten op een stroombron.",
+  "@batteryWarning": {},
+  "offlineWarning": "Je bent momenteel offline",
+  "@offlineWarning": {},
+  "choosePassphraseHint": "Kies een wachtwoordzin",
+  "@choosePassphraseHint": {},
+  "choosePassphraseConfirmHint": "Wachtwoordzin bevestigen",
+  "@choosePassphraseConfirmHint": {},
+  "choosePassphraseInfoHeader": "Bewaar je wachtwoordzin op een veilige plek",
+  "@choosePassphraseInfoHeader": {},
+  "chooseOptionalPassphraseHeader": "Wachtwoordzin aanmaken (optioneel)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseBody": "Een wachtwoordzin kan helpen je gegevens te beschermen, zelfs als jouw hardware wordt gecompromitteerd. Je moet de wachtwoordzin elke keer invoeren wanneer je de computer aanzet. Je kunt het later niet meer verwijderen",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseInfoHeader": "Bewaar jouw wachtwoordzin en herstelsleutel op een veilige plek",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseInfoBody": "Als je de wachtwoordzin verliest, verlies je al je gegevens. De wachtwoordzin is niet de herstelcode of het wachtwoord van je gebruiker.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "installationTypeTitle": "Schijfindeling",
+  "@installationTypeTitle": {},
+  "installationTypeHeader": "Hoe wil je {DISTRO} installeren?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryption": "Versleutelen met een wachtwoordzin",
+  "@installationTypeLVMEncryption": {},
+  "installationTypeZFSEncryption": "Versleutelen met een wachtwoordzin met ZFS",
+  "@installationTypeZFSEncryption": {},
+  "installationTypeAlongsideMulti": "{product} naast bestaande besturingssystemen installeren",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "{product} naast andere partities installeren",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "{os} wissen en {product} installeren",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeManualInfo": "Voor gevorderde gebruikers die op zoek zijn naar aangepaste schijfconfiguraties.",
+  "@installationTypeManualInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePageTitle": "Schijf wissen en {DISTRO} installeren",
+  "@selectGuidedStoragePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideInfo": "Selecteer een partitie om de grootte te wijzigen en ruimte te maken voor {product}. Je kunt bij het opstarten je besturingssysteem kiezen.",
+  "@installationTypeAlongsideInfo": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSpace": "Bevestigingspunten mogen geen spaties bevatten",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "installThirdPartySubtitle": "Deze software is onderworpen aan licentievoorwaarden die bij de documentatie zijn inbegrepen. Een deel ervan is gepatenteerd.",
+  "@installThirdPartySubtitle": {},
+  "installDriversTitle": "Software van derden installeren voor grafische en Wi-Fi-hardware",
+  "@installDriversTitle": {},
+  "installAlongsideFiles": "Bestanden",
+  "@installAlongsideFiles": {},
+  "installationTypeNone": "Geen versleuteling",
+  "@installationTypeNone": {},
+  "installAlongsideSize": "Grootte:",
+  "@installAlongsideSize": {}
 }
