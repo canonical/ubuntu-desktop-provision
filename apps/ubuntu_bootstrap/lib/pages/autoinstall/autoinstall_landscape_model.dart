@@ -18,6 +18,7 @@ final _log = Logger('landscape_model');
 class LandscapeData with _$LandscapeData {
   factory LandscapeData({
     @Default('') String userCode,
+    @Default('') String token,
     @Default(AuthenticationStatus.authenticationPending)
     AuthenticationStatus authenticationStatus,
     @Default('') String autoinstall,
@@ -34,9 +35,9 @@ class LandscapeData with _$LandscapeData {
 Stream<WatchAuthenticationResponse> watchResponse(
   Ref ref,
 ) {
-  final userCode = ref.read(landscapeDataModelProvider).userCode;
+  final model = ref.read(landscapeDataModelProvider);
   final landscapeService = getService<LandscapeBackendService>();
-  return landscapeService.watch(userCode);
+  return landscapeService.watch(model.userCode, model.token);
 }
 
 @riverpod
@@ -96,8 +97,13 @@ class LandscapeDataModel extends _$LandscapeDataModel {
       final response =
           await getService<LandscapeBackendService>().attach(state.domainUrl);
       if (response.status == AttachStatus.attachSuccess &&
-          response.userCode != null) {
-        state = state.copyWith(userCode: response.userCode!, isLoading: false);
+          response.userCode != null &&
+          response.token != null) {
+        state = state.copyWith(
+          userCode: response.userCode!,
+          token: response.token!,
+          isLoading: false,
+        );
       } else {
         // FIXME: Designs have this land on the error page.
         final e = Exception('Landscape is not enabled on this account');

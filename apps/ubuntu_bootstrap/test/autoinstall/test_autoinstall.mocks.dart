@@ -355,11 +355,17 @@ class MockLandscapeBackendService extends _i1.Mock
   }
 
   @override
-  _i25.Stream<_i2.WatchAuthenticationResponse> watch(String? userCode) =>
+  _i25.Stream<_i2.WatchAuthenticationResponse> watch(
+    String? userCode,
+    String? token,
+  ) =>
       (super.noSuchMethod(
         Invocation.method(
           #watch,
-          [userCode],
+          [
+            userCode,
+            token,
+          ],
         ),
         returnValue: _i25.Stream<_i2.WatchAuthenticationResponse>.empty(),
       ) as _i25.Stream<_i2.WatchAuthenticationResponse>);
