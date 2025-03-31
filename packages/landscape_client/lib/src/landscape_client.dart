@@ -36,7 +36,12 @@ class LandscapeClient {
     return await _landscapeClient.attach(request);
   }
 
-  Stream<pbgrpc.WatchAuthenticationResponse> watch(String userCode) =>
+  Stream<pbgrpc.WatchAuthenticationResponse> watch(
+          String userCode, String token) =>
       _landscapeClient.watchAuthentication(
-          pbgrpc.WatchAuthenticationRequest(userCode: userCode));
+        pbgrpc.WatchAuthenticationRequest(
+          userCode: userCode,
+          token: token,
+        ),
+      );
 }

@@ -16,14 +16,14 @@ void main() {
     when(mockLandscapeClient.attach(any)).thenAnswer((_) {
       return MockResponseFuture(
         pbgrpc.AttachResponse(
-          status: pbgrpc.AttachStatus.ATTACH_SUCCESS,
-        ),
+            status: pbgrpc.AttachStatus.ATTACH_SUCCESS, token: 'test_token'),
       );
     });
 
     final response = await landscapeClient.attach();
 
     expect(response.status, pbgrpc.AttachStatus.ATTACH_SUCCESS);
+    expect(response.token, 'test_token');
     verify(mockLandscapeClient.attach(pbgrpc.Empty())).called(1);
   });
 
@@ -42,9 +42,10 @@ void main() {
     });
 
     final userCode = '12345';
+    final token = 'test_token';
 
     expect(
-      landscapeClient.watch(userCode),
+      landscapeClient.watch(userCode, token),
       emitsInOrder(
         [
           pbgrpc.WatchAuthenticationResponse(
@@ -57,7 +58,8 @@ void main() {
       ),
     );
     verify(mockLandscapeClient.watchAuthentication(
-      pbgrpc.WatchAuthenticationRequest(userCode: userCode),
+      pbgrpc.WatchAuthenticationRequest(
+          userCode: userCode, token: 'test_token'),
     )).called(1);
   });
 }
