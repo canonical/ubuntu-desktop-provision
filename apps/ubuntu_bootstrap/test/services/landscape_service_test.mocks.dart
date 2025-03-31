@@ -5,9 +5,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i4;
 
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
-    as _i2;
 import 'package:landscape_client/src/landscape_client.dart' as _i3;
+import 'package:landscape_stubs/landscape_stubs.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -58,11 +57,17 @@ class MockLandscapeClient extends _i1.Mock implements _i3.LandscapeClient {
       ) as _i4.Future<_i2.AttachResponse>);
 
   @override
-  _i4.Stream<_i2.WatchAuthenticationResponse> watch(String? userCode) =>
+  _i4.Stream<_i2.WatchAuthenticationResponse> watch(
+    String? userCode,
+    String? token,
+  ) =>
       (super.noSuchMethod(
         Invocation.method(
           #watch,
-          [userCode],
+          [
+            userCode,
+            token,
+          ],
         ),
         returnValue: _i4.Stream<_i2.WatchAuthenticationResponse>.empty(),
       ) as _i4.Stream<_i2.WatchAuthenticationResponse>);

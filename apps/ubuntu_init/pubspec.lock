@@ -608,6 +608,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  landscape_stubs:
+    dependency: "direct overridden"
+    description:
+      path: "../../packages/landscape_stubs"
+      relative: true
+    source: path
+    version: "0.0.1"
   latlong2:
     dependency: transitive
     description:

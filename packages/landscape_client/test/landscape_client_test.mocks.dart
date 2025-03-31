@@ -7,11 +7,11 @@ import 'dart:async' as _i7;
 
 import 'package:grpc/service_api.dart' as _i2;
 import 'package:grpc/src/client/call.dart' as _i3;
-import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart'
+import 'package:landscape_stubs/src/generated/google/protobuf/empty.pb.dart'
     as _i6;
-import 'package:landscape_client/src/generated/landscape_installer_attach.pb.dart'
+import 'package:landscape_stubs/src/generated/landscape_installer_attach.pb.dart'
     as _i5;
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
+import 'package:landscape_stubs/src/generated/landscape_installer_attach.pbgrpc.dart'
     as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 

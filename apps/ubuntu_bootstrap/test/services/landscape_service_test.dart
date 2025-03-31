@@ -47,11 +47,11 @@ void main() {
         // Set up mock responses
         if (!testCase.nullClient) {
           if (testCase.expectedError) {
-            when(mockClient!.watch(any))
+            when(mockClient!.watch(any, any))
                 .thenThrow(Exception('Mocked gRPC failure'));
           } else {
             // Return a proper Stream directly rather than a MockResponseStream
-            when(mockClient!.watch(any)).thenAnswer(
+            when(mockClient!.watch(any, any)).thenAnswer(
               (_) => Stream.fromIterable([
                 landscape.WatchAuthenticationResponse(
                   status: landscape.AuthenticationStatus.AUTHENTICATION_PENDING,
@@ -68,7 +68,7 @@ void main() {
           Stream<service.WatchAuthenticationResponse>? response;
           Object? caughtError;
           try {
-            response = landscapeService.watch('bar');
+            response = landscapeService.watch('bar', 'foo');
           } on Exception catch (e) {
             caughtError = e;
           }

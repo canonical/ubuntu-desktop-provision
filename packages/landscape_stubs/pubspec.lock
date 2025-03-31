@@ -294,13 +294,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.9.0"
-  landscape_stubs:
-    dependency: "direct main"
-    description:
-      path: "../landscape_stubs"
-      relative: true
-    source: path
-    version: "0.0.1"
   logging:
     dependency: transitive
     description:
@@ -341,14 +334,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
-  mockito:
-    dependency: "direct dev"
-    description:
-      name: mockito
-      sha256: "6841eed20a7befac0ce07df8116c8b8233ed1f4486a7647c7fc5a02ae6163917"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.4.4"
   node_preamble:
     dependency: transitive
     description:
@@ -437,14 +422,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  source_gen:
-    dependency: transitive
-    description:
-      name: source_gen
-      sha256: "14658ba5f669685cd3d63701d01b31ea748310f7ab854e471962670abcf57832"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.5.0"
   source_map_stack_trace:
     dependency: transitive
     description:
