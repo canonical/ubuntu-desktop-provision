@@ -137,5 +137,19 @@
   "autoinstallDirectFileButtonLabel": "Bestand selecteren…",
   "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Bestand kiezen",
-  "@autoinstallDirectFilePickerTitle": {}
+  "@autoinstallDirectFilePickerTitle": {},
+  "configureSecureBootSecurityKeyRequired": "Beveiligingssleutel is vereist",
+  "@configureSecureBootSecurityKeyRequired": {},
+  "secureBootSecurityKeysDontMatch": "Beveiligingssleutels komen niet overeen",
+  "@secureBootSecurityKeysDontMatch": {},
+  "updatesOtherSoftwarePageDescription": "Welke apps zou je om te beginnen willen installeren?",
+  "@updatesOtherSoftwarePageDescription": {},
+  "dontInstallDriverSoftwareNowDescription": "Je kunt het later installeren vanuit Software & Updates.",
+  "@dontInstallDriverSoftwareNowDescription": {},
+  "showSecurityKey": "Weergeven",
+  "@showSecurityKey": {},
+  "updatesOtherSoftwarePageTitle": "Toepassingen",
+  "@updatesOtherSoftwarePageTitle": {},
+  "hideSecurityKey": "Verbergen",
+  "@hideSecurityKey": {}
 }
