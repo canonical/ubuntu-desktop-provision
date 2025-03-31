@@ -389,7 +389,7 @@
   "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseBody": "Een wachtwoordzin kan helpen je gegevens te beschermen, zelfs als jouw hardware wordt gecompromitteerd. Je moet de wachtwoordzin elke keer invoeren wanneer je de computer aanzet. Je kunt het later niet meer verwijderen",
   "@chooseOptionalPassphraseBody": {},
-  "chooseOptionalPassphraseInfoHeader": "Bewaar jouw wachtwoordzin en herstelsleutel op een veilige plek",
+  "chooseOptionalPassphraseInfoHeader": "Bewaar je wachtwoordzin en herstelcodes op een veilige plek",
   "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "Als je de wachtwoordzin verliest, verlies je al je gegevens. De wachtwoordzin is niet de herstelcode of het wachtwoord van je gebruiker.",
   "@chooseOptionalPassphraseInfoBody": {},
@@ -596,5 +596,562 @@
   "tooManyPrimaryPartitions": "Te veel primaire partities",
   "@tooManyPrimaryPartitions": {},
   "diskHeadersUsed": "Gebruikt",
-  "@diskHeadersUsed": {}
+  "@diskHeadersUsed": {},
+  "bitlockerInfoTitle": "Bitlocker gedetecteerd",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoInstructions": "Ga voor instructies naar de <a href=\"{url}\">BitLocker handleiding</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoRecovery": "Na installatie kan Windows bij het opstarten om herstelcodes vragen.",
+  "@bitlockerInfoRecovery": {},
+  "installationSlidesTitle": "Welkom bij {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityLanguages": "Taalondersteuning",
+  "@installationSlidesAccessibilityLanguages": {},
+  "notEnoughDiskSpaceAvailable": "Beschikbaar:",
+  "@notEnoughDiskSpaceAvailable": {},
+  "refreshInfo": "Bijwerken naar de nieuwste versie voor verbeterde betrouwbaarheid en meer functies.",
+  "@refreshInfo": {},
+  "refreshReady": "Update klaar",
+  "@refreshReady": {},
+  "refreshSnapRefresh": "{snap} vernieuwen…",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "{snap} bevestigen…",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "{snap} voorbereiden…",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "{snap}-beveiligingsprofielen instellen…",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "{snap}-kernel Opdrachtregel bijwerken...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "{snap}-gegevens kopiëren…",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "{snap} koppelen…",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "{snap}-diensten starten…",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyInfoHeader": "Zonder herstelcode kun je al je gegevens verliezen",
+  "@recoveryKeyInfoHeader": {},
+  "landscapeDomainHeader": "Landscape-domain invoeren (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Landscape-domein (FQDN)",
+  "@landscapeDomainTextField": {},
+  "landscapeMagicAttachInstructions": "Scan de QR-code of voer de onderstaande code in op <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainInvalidDomainWarning": "Ongeldig domein, controleer het of neem contact op met je IT-ondersteuning",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeCodeExpiredWarning": "Code verlopen, probeer het opnieuw",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Inloggen mislukt, probeer het opnieuw",
+  "@landscapeLoginFailedWarning": {},
+  "installationSlidesSupportTitle": "Hulp en ondersteuning",
+  "@installationSlidesSupportTitle": {},
+  "installationSlidesSupportHeader": "De officiële {DISTRO}-documentatie is zowel online beschikbaar als via het Help-pictogram in het dok.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Vernieuwing van {snap} opnieuw controleren…",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapePageTitle": "Geautomatiseerde installatie",
+  "@landscapePageTitle": {},
+  "landscapeDomainInstructions": "Geef het Landscape-domein van je organisatie op om aan te melden en een automatisch installatiebestand op te halen. Je kunt de FQDN verkrijgen bij je IT-ondersteuning.",
+  "@landscapeDomainInstructions": {},
+  "installationSlidesWelcomeTitle": "Snel, gratis en vol nieuwe functies",
+  "@installationSlidesWelcomeTitle": {},
+  "recoveryKeyHeader": "Herstelcode opvragen",
+  "@recoveryKeyHeader": {},
+  "landscapeHeader": "Inloggen bij Landscape",
+  "@landscapeHeader": {},
+  "restartInto": "Opnieuw opstarten naar {system}",
+  "@restartInto": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Start opnieuw op om de installatie te voltooien of ga door met testen.\nWijzigingen die u aanbrengt, worden niet opgeslagen.",
+  "@restartWarningBody": {},
+  "rebootToConfigure": "**{system}** is naar de schijf gekopieerd",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartIntoWindowsDescription": "Weet je zeker dat je jouw computer opnieuw wilt opstarten? Je moet de installatie van {DISTRO} later opnieuw opstarten om de installatie van {DISTRO} te voltooien.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Beschikbaar:",
+  "@installationSlidesAvailable": {},
+  "restartIntoWindowsTitle": "Opnieuw starten naar Windows?",
+  "@restartIntoWindowsTitle": {},
+  "installationSlidesAccessibilityOrca": "Orca Screen Reader",
+  "@installationSlidesAccessibilityOrca": {},
+  "installationSlidesSecurityTitle": "Privé en veilig",
+  "@installationSlidesSecurityTitle": {},
+  "notEnoughDiskSpaceUbuntu": "Niet genoeg schijfruimte om {DISTRO} te installeren",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Sluit het installatieprogramma en start het opnieuw op om door te gaan",
+  "@refreshRestart": {},
+  "refreshSnapDownload": "{snap} downloaden…",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "restartIntoWindows": "Opnieuw starten naar Windows",
+  "@restartIntoWindows": {},
+  "installationSlidesSoftwareTitle": "Alle toepassingen die je nodig hebt",
+  "@installationSlidesSoftwareTitle": {},
+  "refreshCloseLabel": "Installatieprogramma sluiten",
+  "@refreshCloseLabel": {},
+  "refreshSnapPrerequisites": "Vereisten voor {snap} worden gecontroleerd…",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "{snap}-diensten beëindigen…",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "{snap}-materialen bijwerken…",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshPageTitle": "Update beschikbaar",
+  "@refreshPageTitle": {},
+  "installationSlidesWelcomeHeader": "De nieuwste versie van {DISTRO} maakt computergebruik eenvoudiger dan ooit.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en het Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.",
+  "@installationSlidesSupportCommunity": {},
+  "recoveryKeyTitle": "TPM-herstelcode",
+  "@recoveryKeyTitle": {},
+  "installingSystem": "Systeem installeren…",
+  "@installingSystem": {},
+  "installationSlidesSecurityBody": "{DISTRO} biedt alle tools die je nodig hebt om online privé en veilig te blijven. Met ingebouwde firewall- en VPN-ondersteuning en een groot aantal privacygerichte applicaties om ervoor te zorgen dat je volledige controle houdt over jouw gegevens.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdateNow": "Nu bijwerken",
+  "@refreshUpdateNow": {},
+  "refreshSnapValidate": "{snap} valideren…",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigureWarning": "Je moet de computer opnieuw opstarten om het installatieproces voort te zetten.",
+  "@rebootToConfigureWarning": {},
+  "installationSlidesProductivityBody": "{DISTRO} Desktop bevat LibreOffice, een suite van Microsoft Office-compatibele open source-applicaties voor documenten, spreadsheets en presentaties. Populaire samenwerkingstools zijn ook beschikbaar.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityBody": "De kern van de {DISTRO}-filosofie is de overtuiging dat computers voor iedereen zijn. Met geavanceerde toegankelijkheidstools en opties om taal, kleuren en tekstgrootte te wijzigen, maakt {DISTRO} computergebruik eenvoudig, wie en waar je ook bent.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshHeader": "Er is een update beschikbaar voor het installatieprogramma",
+  "@refreshHeader": {},
+  "refreshSnapAutoConnect": "{snap}-stekkers en -sleuven aansluiten…",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Automatische {snap}-aliassen instellen…",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "copyingFiles": "Bestanden kopiëren…",
+  "@copyingFiles": {},
+  "bitlockerInfoDescription": "Een of meer partities zijn versleuteld met BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Voor een installatie naast Windows moet BitLocker in Windows uitgeschakeld worden.",
+  "@bitlockerInfoDisable": {},
+  "confirmTableCreatedFormattedMounted": "Aangemaakt en geformatteerd als {format} gebruikt voor {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportEnterprise": "Voor zakelijke gebruikers biedt Canonical commerciële ondersteuning om het gemakkelijk te maken om Ubuntu veilig op de werkplek in te voeren en te beheren.",
+  "@installationSlidesSupportEnterprise": {},
+  "installationSlidesSoftwareBody": "Installeer, beheer en update al je apps in Ubuntu Software, inclusief duizenden applicaties uit zowel de Snap Store als het {DISTRO}-archief.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationCompleteTitle": "Installatie voltooid",
+  "@installationCompleteTitle": {},
+  "continueTesting": "Doorgaan met testen",
+  "@continueTesting": {},
+  "installationSlidesCreativityTitle": "Vergroot je creativiteit",
+  "@installationSlidesCreativityTitle": {},
+  "installationSlidesAccessibilityTitle": "Toegang voor iedereen",
+  "@installationSlidesAccessibilityTitle": {},
+  "installationSlidesProductivityTitle": "Verhoog je productiviteit",
+  "@installationSlidesProductivityTitle": {},
+  "installationSlidesSupportDocumentation": "Officiële documentatie",
+  "@installationSlidesSupportDocumentation": {},
+  "configuringSystem": "Systeem instellen…",
+  "@configuringSystem": {},
+  "notEnoughDiskSpaceTitle": "Niet genoeg schijfruimte",
+  "@notEnoughDiskSpaceTitle": {},
+  "refreshUpdating": "{snap} bijwerken…",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "{snap}-aliassen inrichten…",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "De geselecteerde schijf heeft niet genoeg schijfruimte om {DISTRO} te installeren. Sluit het installatieprogramma om ruimte vrij te maken of selecteer een andere schijf.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceRequired": "Vereist:",
+  "@notEnoughDiskSpaceRequired": {},
+  "refreshInstall": "Bijwerken naar versie {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "De huidige versie {version} is up-to-date.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainNoInternetDescriptionWarning": "Internet is nodig om het automatische installatiebestand op te halen van Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "recoveryKeyStorageAdvice": "Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. Je kunt hem bijvoorbeeld nodig hebben als je bepaalde onderdelen in je computer vervangt of de firmware bijwerkt.",
+  "@recoveryKeyStorageAdvice": {},
+  "installationSlidesWelcomeBody": "Of je nu een ontwikkelaar bent of maker of gamer of beheerder, in {RELEASE} vind je nieuwe hulpmiddelen om je productiviteit en je ervaring te verbeteren.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "Grootte aangepast van {oldsize} naar {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Geformatteerd als {format} gebruikt voor {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Geformatteerd als {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "Alle {DISTRO} LTS-releases worden uitgegeven met vijf jaar beveiligingsupdates, verlengd tot tien jaar met een Ubuntu Pro-abonnement.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Zonder BitLocker-herstelcodes kun je al je gegevens kwijtraken",
+  "@bitlockerWarningTitle": {},
+  "installationSlidesSupportUbuntuPro": "24/7 ondersteuning op bedrijfsniveau met Ubuntu Pro",
+  "@installationSlidesSupportUbuntuPro": {},
+  "refreshSnapRemoveAliases": "{snap}-aliassen verwijderen…",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "Landscape-domein (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageBody": "Neem contact op met uw IT-ondersteuning of probeer een andere installatieoptie.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Foutcode: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu wordt geïnstalleerd met de door jouw organisatie verstrekte configuratie",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Je kunt het automatische installatiebestand dat uit Landscape is geïmporteerd hieronder bekijken.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "restartComputer": "Computer opnieuw starten",
+  "@restartComputer": {},
+  "restartComputerTitle": "Computer opnieuw starten?",
+  "@restartComputerTitle": {},
+  "installationSlidesIncluded": "Inbegrepen:",
+  "@installationSlidesIncluded": {},
+  "installationSlidesDevelopmentTitle": "Ontwikkel enmet het beste van open source",
+  "@installationSlidesDevelopmentTitle": {},
+  "installationSlidesCreativityBody": "Of je een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om je workflows naar {DISTRO} te brengen met ondersteuning voor open source en industriestandaard software en applicaties.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Geweldig voor gamen",
+  "@installationSlidesGamingTitle": {},
+  "installationSlidesSupportResources": "Nuttige bronnen:",
+  "@installationSlidesSupportResources": {},
+  "refreshCurrent": "De huidige {snap}-versie is {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyInfoBody": "Vraag een herstelcode op zodra je je voor het eerst aanmeldt bij {distro} en bewaar deze op een veilige plek.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "next": "Verder",
+  "@next": {},
+  "recoveryKeyConfirmation": "Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb",
+  "@recoveryKeyConfirmation": {},
+  "shutdown": "Afsluiten",
+  "@shutdown": {},
+  "refreshSnapUnlink": "{snap} loskoppelen…",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "readyToUse": "{system} is geïnstalleerd en klaar voor gebruik",
+  "@readyToUse": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "{snap} opschonen…",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Gebruikt voor {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "restartNow": "Nu opnieuw starten",
+  "@restartNow": {},
+  "installationSlidesDevelopmentBody": "{DISTRO} is het ideale werkstation voor app- of webontwikkeling, data science en AI/ML, maar ook voor devops en beheer. Elke {DISTRO}-release bevat de nieuwste toolchains en ondersteunt alle belangrijke IDE's.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "Geautomatiseerde installatie is niet beschikbaar voor dit account",
+  "@landscapeErrorPageTitle": {},
+  "recoveryKeyCommand": "Om een herstelcode te krijgen, moet je de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:",
+  "@recoveryKeyCommand": {},
+  "installationSlidesGamingBody": "{DISTRO} ondersteunt de nieuwste NVIDIA- en Mesa-stuurprogramma's om de prestaties en compatibiliteit te verbeteren. Duizenden Windows-titels spelen geweldig op {DISTRO} via applicaties zoals Steam, zonder extra configuratie.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationFailed": "Installatie mislukt",
+  "@installationFailed": {},
+  "landscapeDomainNoInternetTitleWarning": "Maak verbinding met internet om door te gaan",
+  "@landscapeDomainNoInternetTitleWarning": {}
 }
