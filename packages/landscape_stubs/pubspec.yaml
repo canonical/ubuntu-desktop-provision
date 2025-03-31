@@ -1,4 +1,4 @@
-name: landscape_client
+name: landscape_stubs
 description: Dart client for the Landscape Magic Attach service
 version: 0.0.1
 
@@ -7,8 +7,6 @@ environment:
   flutter: ">=3.19.2"
 dependencies:
   grpc: ^4.0.1
-  landscape_stubs: ^0.0.1
 dev_dependencies:
-  mockito: 5.4.4
   build_runner: ^2.4.8
   test: any

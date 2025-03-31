@@ -40,6 +40,7 @@ const AuthenticationStatus$json = {
     {'1': 'ERROR_EMPLOYEE_DEACTIVATED', '2': 6},
     {'1': 'ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED', '2': 7},
     {'1': 'ERROR_MISSING_AUTOINSTALL_FILE', '2': 8},
+    {'1': 'ERROR_INVALID_TOKEN', '2': 9},
   ],
 };
 
@@ -50,7 +51,7 @@ final $typed_data.Uint8List authenticationStatusDescriptor = $convert.base64Deco
     'T1JfQ0FOQ0VMRURfQllfVVNFUhADEhYKEkVSUk9SX0NPREVfRVhQSVJFRBAEEiEKHUVSUk9SX0'
     'VNUExPWUVFX0xJTUlUX0VYQ0VFREVEEAUSHgoaRVJST1JfRU1QTE9ZRUVfREVBQ1RJVkFURUQQ'
     'BhIqCiZFUlJPUl9FTVBMT1lFRV9DT01QVVRFUl9MSU1JVF9FWENFRURFRBAHEiIKHkVSUk9SX0'
-    '1JU1NJTkdfQVVUT0lOU1RBTExfRklMRRAI');
+    '1JU1NJTkdfQVVUT0lOU1RBTExfRklMRRAIEhcKE0VSUk9SX0lOVkFMSURfVE9LRU4QCQ==');
 
 @$core.Deprecated('Use attachResponseDescriptor instead')
 const AttachResponse$json = {
@@ -59,6 +60,7 @@ const AttachResponse$json = {
     {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.landscape_installer_attach.AttachStatus', '10': 'status'},
     {'1': 'user_code', '3': 2, '4': 1, '5': 9, '10': 'userCode'},
     {'1': 'valid_until', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'validUntil'},
+    {'1': 'token', '3': 4, '4': 1, '5': 9, '10': 'token'},
   ],
 };
 
@@ -67,20 +69,21 @@ final $typed_data.Uint8List attachResponseDescriptor = $convert.base64Decode(
     'Cg5BdHRhY2hSZXNwb25zZRJACgZzdGF0dXMYASABKA4yKC5sYW5kc2NhcGVfaW5zdGFsbGVyX2'
     'F0dGFjaC5BdHRhY2hTdGF0dXNSBnN0YXR1cxIbCgl1c2VyX2NvZGUYAiABKAlSCHVzZXJDb2Rl'
     'EjsKC3ZhbGlkX3VudGlsGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKdmFsaW'
-    'RVbnRpbA==');
+    'RVbnRpbBIUCgV0b2tlbhgEIAEoCVIFdG9rZW4=');
 
 @$core.Deprecated('Use watchAuthenticationRequestDescriptor instead')
 const WatchAuthenticationRequest$json = {
   '1': 'WatchAuthenticationRequest',
   '2': [
     {'1': 'user_code', '3': 1, '4': 1, '5': 9, '10': 'userCode'},
+    {'1': 'token', '3': 2, '4': 1, '5': 9, '10': 'token'},
   ],
 };
 
 /// Descriptor for `WatchAuthenticationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List watchAuthenticationRequestDescriptor = $convert.base64Decode(
     'ChpXYXRjaEF1dGhlbnRpY2F0aW9uUmVxdWVzdBIbCgl1c2VyX2NvZGUYASABKAlSCHVzZXJDb2'
-    'Rl');
+    'RlEhQKBXRva2VuGAIgASgJUgV0b2tlbg==');
 
 @$core.Deprecated('Use watchAuthenticationResponseDescriptor instead')
 const WatchAuthenticationResponse$json = {

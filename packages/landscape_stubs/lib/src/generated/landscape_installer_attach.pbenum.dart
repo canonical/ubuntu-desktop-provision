@@ -38,6 +38,7 @@ class AuthenticationStatus extends $pb.ProtobufEnum {
   static const AuthenticationStatus ERROR_EMPLOYEE_DEACTIVATED = AuthenticationStatus._(6, _omitEnumNames ? '' : 'ERROR_EMPLOYEE_DEACTIVATED');
   static const AuthenticationStatus ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED = AuthenticationStatus._(7, _omitEnumNames ? '' : 'ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED');
   static const AuthenticationStatus ERROR_MISSING_AUTOINSTALL_FILE = AuthenticationStatus._(8, _omitEnumNames ? '' : 'ERROR_MISSING_AUTOINSTALL_FILE');
+  static const AuthenticationStatus ERROR_INVALID_TOKEN = AuthenticationStatus._(9, _omitEnumNames ? '' : 'ERROR_INVALID_TOKEN');
 
   static const $core.List<AuthenticationStatus> values = <AuthenticationStatus> [
     AUTHENTICATION_PENDING,
@@ -49,6 +50,7 @@ class AuthenticationStatus extends $pb.ProtobufEnum {
     ERROR_EMPLOYEE_DEACTIVATED,
     ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED,
     ERROR_MISSING_AUTOINSTALL_FILE,
+    ERROR_INVALID_TOKEN,
   ];
 
   static final $core.Map<$core.int, AuthenticationStatus> _byValue = $pb.ProtobufEnum.initByValue(values);

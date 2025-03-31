@@ -2,6 +2,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/canonical/ubuntu-installer-landscape-attach";
 package landscape_installer_attach;
 
 
@@ -14,6 +15,7 @@ message AttachResponse {
     AttachStatus status = 1;
     string user_code = 2;
     google.protobuf.Timestamp valid_until = 3;
+    string token = 4;
 }
 
 
@@ -25,6 +27,7 @@ enum AttachStatus {
 
 message WatchAuthenticationRequest {
     string user_code = 1;
+    string token = 2;
 }
 
 
@@ -44,4 +47,5 @@ enum AuthenticationStatus {
     ERROR_EMPLOYEE_DEACTIVATED = 6;
     ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED = 7;
     ERROR_MISSING_AUTOINSTALL_FILE = 8;
+    ERROR_INVALID_TOKEN = 9;
 }

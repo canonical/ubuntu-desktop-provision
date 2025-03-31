@@ -76,6 +76,7 @@ class AttachResponse {
   AttachResponse({
     required this.status,
     this.userCode,
+    this.token,
     this.validUntil,
   });
   factory AttachResponse.attachFromGrpc(landscape.AttachResponse response) =>
@@ -83,6 +84,7 @@ class AttachResponse {
         landscape.AttachStatus.ATTACH_SUCCESS => AttachResponse(
             status: AttachStatus.attachSuccess,
             userCode: response.userCode,
+            token: response.token,
             validUntil: response.validUntil.toDateTime(),
           ),
         landscape.AttachStatus.ERROR_NOT_ENABLED => AttachResponse(
@@ -93,6 +95,7 @@ class AttachResponse {
 
   final AttachStatus status;
   final String? userCode;
+  final String? token;
   final DateTime? validUntil;
 }
 
@@ -111,11 +114,11 @@ class LandscapeBackendService {
   final int _port;
   final bool _useTls;
 
-  Stream<WatchAuthenticationResponse> watch(String userCode) {
+  Stream<WatchAuthenticationResponse> watch(String userCode, String token) {
     if (_client == null) {
       throw Exception('Client cannot be null');
     }
-    final grpcResponse = _client!.watch(userCode);
+    final grpcResponse = _client!.watch(userCode, token);
     return grpcResponse
         .map(WatchAuthenticationResponse.watchAuthenticationFromGrpc);
   }

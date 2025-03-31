@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$LandscapeData {
   String get userCode => throw _privateConstructorUsedError;
+  String get token => throw _privateConstructorUsedError;
   AuthenticationStatus get authenticationStatus =>
       throw _privateConstructorUsedError;
   String get autoinstall => throw _privateConstructorUsedError;
@@ -40,6 +41,7 @@ abstract class $LandscapeDataCopyWith<$Res> {
   @useResult
   $Res call(
       {String userCode,
+      String token,
       AuthenticationStatus authenticationStatus,
       String autoinstall,
       String domainUrl,
@@ -64,6 +66,7 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
   @override
   $Res call({
     Object? userCode = null,
+    Object? token = null,
     Object? authenticationStatus = null,
     Object? autoinstall = null,
     Object? domainUrl = null,
@@ -75,6 +78,10 @@ class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
       userCode: null == userCode
           ? _value.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      token: null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
               as String,
       authenticationStatus: null == authenticationStatus
           ? _value.authenticationStatus
@@ -111,6 +118,7 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
   @useResult
   $Res call(
       {String userCode,
+      String token,
       AuthenticationStatus authenticationStatus,
       String autoinstall,
       String domainUrl,
@@ -133,6 +141,7 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? userCode = null,
+    Object? token = null,
     Object? authenticationStatus = null,
     Object? autoinstall = null,
     Object? domainUrl = null,
@@ -144,6 +153,10 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
       userCode: null == userCode
           ? _value.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      token: null == token
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
               as String,
       authenticationStatus: null == authenticationStatus
           ? _value.authenticationStatus
@@ -175,6 +188,7 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
 class _$LandscapeDataImpl extends _LandscapeData {
   _$LandscapeDataImpl(
       {this.userCode = '',
+      this.token = '',
       this.authenticationStatus = AuthenticationStatus.authenticationPending,
       this.autoinstall = '',
       this.domainUrl = '',
@@ -186,6 +200,9 @@ class _$LandscapeDataImpl extends _LandscapeData {
   @override
   @JsonKey()
   final String userCode;
+  @override
+  @JsonKey()
+  final String token;
   @override
   @JsonKey()
   final AuthenticationStatus authenticationStatus;
@@ -206,7 +223,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
+    return 'LandscapeData(userCode: $userCode, token: $token, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
   }
 
   @override
@@ -216,6 +233,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
             other is _$LandscapeDataImpl &&
             (identical(other.userCode, userCode) ||
                 other.userCode == userCode) &&
+            (identical(other.token, token) || other.token == token) &&
             (identical(other.authenticationStatus, authenticationStatus) ||
                 other.authenticationStatus == authenticationStatus) &&
             (identical(other.autoinstall, autoinstall) ||
@@ -233,6 +251,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
   int get hashCode => Object.hash(
       runtimeType,
       userCode,
+      token,
       authenticationStatus,
       autoinstall,
       domainUrl,
@@ -252,6 +271,7 @@ class _$LandscapeDataImpl extends _LandscapeData {
 abstract class _LandscapeData extends LandscapeData {
   factory _LandscapeData(
       {final String userCode,
+      final String token,
       final AuthenticationStatus authenticationStatus,
       final String autoinstall,
       final String domainUrl,
@@ -262,6 +282,8 @@ abstract class _LandscapeData extends LandscapeData {
 
   @override
   String get userCode;
+  @override
+  String get token;
   @override
   AuthenticationStatus get authenticationStatus;
   @override

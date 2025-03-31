@@ -23,6 +23,7 @@ class AttachResponse extends $pb.GeneratedMessage {
     AttachStatus? status,
     $core.String? userCode,
     $2.Timestamp? validUntil,
+    $core.String? token,
   }) {
     final $result = create();
     if (status != null) {
@@ -34,6 +35,9 @@ class AttachResponse extends $pb.GeneratedMessage {
     if (validUntil != null) {
       $result.validUntil = validUntil;
     }
+    if (token != null) {
+      $result.token = token;
+    }
     return $result;
   }
   AttachResponse._() : super();
@@ -44,6 +48,7 @@ class AttachResponse extends $pb.GeneratedMessage {
     ..e<AttachStatus>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: AttachStatus.ATTACH_SUCCESS, valueOf: AttachStatus.valueOf, enumValues: AttachStatus.values)
     ..aOS(2, _omitFieldNames ? '' : 'userCode')
     ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'validUntil', subBuilder: $2.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'token')
     ..hasRequiredFields = false
   ;
 
@@ -96,15 +101,28 @@ class AttachResponse extends $pb.GeneratedMessage {
   void clearValidUntil() => clearField(3);
   @$pb.TagNumber(3)
   $2.Timestamp ensureValidUntil() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get token => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set token($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearToken() => clearField(4);
 }
 
 class WatchAuthenticationRequest extends $pb.GeneratedMessage {
   factory WatchAuthenticationRequest({
     $core.String? userCode,
+    $core.String? token,
   }) {
     final $result = create();
     if (userCode != null) {
       $result.userCode = userCode;
+    }
+    if (token != null) {
+      $result.token = token;
     }
     return $result;
   }
@@ -114,6 +132,7 @@ class WatchAuthenticationRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WatchAuthenticationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'landscape_installer_attach'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'userCode')
+    ..aOS(2, _omitFieldNames ? '' : 'token')
     ..hasRequiredFields = false
   ;
 
@@ -146,6 +165,15 @@ class WatchAuthenticationRequest extends $pb.GeneratedMessage {
   $core.bool hasUserCode() => $_has(0);
   @$pb.TagNumber(1)
   void clearUserCode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get token => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set token($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearToken() => clearField(2);
 }
 
 class WatchAuthenticationResponse extends $pb.GeneratedMessage {
