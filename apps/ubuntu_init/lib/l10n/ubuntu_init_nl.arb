@@ -1,7 +1,7 @@
 {
   "ubuntuProPageTitle": "Ubuntu Pro",
   "@ubuntuProPageTitle": {},
-  "telemetryCollectError": "Geen telemetriegegevens kunnen verzamelen",
+  "telemetryCollectError": "Fout bij het verzamelen van telemetriegegevens",
   "@telemetryCollectError": {},
   "welcomePageTitle": "Welkom",
   "@welcomePageTitle": {},
