@@ -21,6 +21,7 @@ export 'test_confirm.mocks.dart';
 @GenerateMocks([ConfirmModel])
 ConfirmModel buildConfirmModel({
   List<Disk>? disks,
+  List<Disk>? modifiedDisks,
   Map<String, List<Partition>>? partitions,
   Map<String, List<Partition>>? originals,
   GuidedStorageTarget? guidedTarget,
@@ -31,6 +32,7 @@ ConfirmModel buildConfirmModel({
 }) {
   final model = MockConfirmModel();
   when(model.disks).thenReturn(disks ?? <Disk>[]);
+  when(model.modifiedDisks).thenReturn(modifiedDisks ?? disks ?? <Disk>[]);
   when(model.partitions).thenReturn(partitions ?? <String, List<Partition>>{});
   when(model.getOriginalPartition(any, any)).thenAnswer(
     (i) => originals?[i.positionalArguments.first]?.firstWhereOrNull(

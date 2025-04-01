@@ -404,7 +404,7 @@ class _InstallationDisk extends ConsumerWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        for (final disk in model.disks)
+        for (final disk in model.modifiedDisks)
           Html(
             data: _prettyFormatDisk(disk),
             style: {

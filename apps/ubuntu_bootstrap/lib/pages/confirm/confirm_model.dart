@@ -36,9 +36,26 @@ class ConfirmModel extends SafeChangeNotifier {
   Map<String, List<Partition>>? _partitions;
   Map<String, List<Partition>>? _originals;
 
+  /// The list of all disks
+  List<Disk> get disks => _disks ?? [];
+
   /// The list of non-preserved disks, and preserved disks with any modified
   /// partitions.
-  List<Disk> get disks => _disks ?? [];
+  List<Disk> get modifiedDisks =>
+      _disks
+          ?.where(
+            (d) =>
+                d.preserve == false ||
+                d.partitions.whereType<Partition>().any(
+                      (p) =>
+                          p.wipe != null ||
+                          p.mount != null ||
+                          (p.resize ?? false) ||
+                          p.preserve == false,
+                    ),
+          )
+          .toList() ??
+      [];
 
   /// A map of changed partitions per each disk (sysname).
   Map<String, List<Partition>> get partitions => _partitions ?? {};
