@@ -49,6 +49,12 @@ class MockConfirmModel extends _i1.Mock implements _i3.ConfirmModel {
       ) as List<_i4.Disk>);
 
   @override
+  List<_i4.Disk> get modifiedDisks => (super.noSuchMethod(
+        Invocation.getter(#modifiedDisks),
+        returnValue: <_i4.Disk>[],
+      ) as List<_i4.Disk>);
+
+  @override
   Map<String, List<_i4.Partition>> get partitions => (super.noSuchMethod(
         Invocation.getter(#partitions),
         returnValue: <String, List<_i4.Partition>>{},
