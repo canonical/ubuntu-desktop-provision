@@ -65,5 +65,10 @@ void main() {
     verify(service.passphrase).called(1);
     expect(model.passphrase, 'bar456');
     expect(model.confirmedPassphrase, 'bar456');
+
+    await model.clearPassphrase();
+    verify(service.passphrase = null).called(1);
+    expect(model.passphrase, '');
+    expect(model.confirmedPassphrase, '');
   });
 }

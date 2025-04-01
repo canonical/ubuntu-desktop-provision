@@ -143,6 +143,16 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       ) as _i4.Future<void>);
 
   @override
+  _i4.Future<void> clearPassphrase() => (super.noSuchMethod(
+        Invocation.method(
+          #clearPassphrase,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,

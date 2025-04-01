@@ -63,6 +63,7 @@ class PassphraseModel extends SafeChangeNotifier {
         return true;
 
       default:
+        await clearPassphrase();
         return false;
     }
   }
@@ -75,6 +76,13 @@ class PassphraseModel extends SafeChangeNotifier {
   /// Saves the passphrase to the service and clears the local values.
   Future<void> savePassphrase() async {
     _service.passphrase = passphrase;
+    _passphrase.value = '';
+    _confirmedPassphrase.value = '';
+  }
+
+  /// Clears the passphrase in the service and the local values,
+  Future<void> clearPassphrase() async {
+    _service.passphrase = null;
     _passphrase.value = '';
     _confirmedPassphrase.value = '';
   }
