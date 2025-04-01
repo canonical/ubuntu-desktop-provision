@@ -190,7 +190,7 @@
       }
     }
   },
-  "allocateDiskSpaceInvalidMountPointSlash": "Bevestigingspunten moeten beginnen met \"/\"",
+  "allocateDiskSpaceInvalidMountPointSlash": "Aankoppelpunten moeten beginnen met \"/\"",
   "@allocateDiskSpaceInvalidMountPointSlash": {},
   "installationTypeLVMEncryptionSelected": "LVM en versleuteling geselecteerd",
   "@installationTypeLVMEncryptionSelected": {},
@@ -458,7 +458,7 @@
       }
     }
   },
-  "allocateDiskSpaceInvalidMountPointSpace": "Bevestigingspunten mogen geen spaties bevatten",
+  "allocateDiskSpaceInvalidMountPointSpace": "Aankoppelpunten mogen geen spaties bevatten",
   "@allocateDiskSpaceInvalidMountPointSpace": {},
   "installThirdPartySubtitle": "Deze software is onderworpen aan licentievoorwaarden die bij de documentatie zijn inbegrepen. Een deel ervan is gepatenteerd.",
   "@installThirdPartySubtitle": {},
@@ -470,7 +470,7 @@
   "@installationTypeNone": {},
   "installAlongsideSize": "Grootte:",
   "@installAlongsideSize": {},
-  "diskHeadersMountPoint": "Bevestigingspunt",
+  "diskHeadersMountPoint": "Aankoppelpunt",
   "@diskHeadersMountPoint": {},
   "confirmEntryDiskSetup": "Type installatie",
   "@confirmEntryDiskSetup": {},
@@ -573,7 +573,7 @@
   "@confirmTableUnchanged": {},
   "partitionEditTitle": "Partitie bewerken",
   "@partitionEditTitle": {},
-  "partitionMountPointLabel": "Bevestigingspunt:",
+  "partitionMountPointLabel": "Aankoppelpunt:",
   "@partitionMountPointLabel": {},
   "newPartitionTableConfirmationMessage": "Bij de aanmaak van een nieuwe partitietabel op een heel apparaat, worden alle huidige partities verwijderd. Deze handeling kan indien nodig ongedaan worden gemaakt.",
   "@newPartitionTableConfirmationMessage": {},
@@ -633,7 +633,7 @@
       }
     }
   },
-  "refreshSnapMount": "{snap} bevestigen…",
+  "refreshSnapMount": "{snap} aankoppelen…",
   "@refreshSnapMount": {
     "placeholders": {
       "snap": {
