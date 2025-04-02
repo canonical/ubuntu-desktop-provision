@@ -7,8 +7,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     std::fs::create_dir_all("./src/protos")?;
 
-    let files = &["../landscape_client/protos/landscape_installer_attach.proto"];
-    let include_dirs = &["../landscape_client/protos"];
+    let files = &["../landscape_stubs/protos/landscape_installer_attach.proto"];
+    let include_dirs = &["../landscape_stubs/protos"];
 
     tonic_build::configure()
         .build_server(true)

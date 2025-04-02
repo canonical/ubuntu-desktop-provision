@@ -124,40 +124,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                           const SizedBox(height: kWizardSpacing / 2),
-                          Table(
-                            border: TableBorder(
-                              horizontalInside: BorderSide(
-                                color: Theme.of(context).dividerColor,
-                              ),
-                            ),
-                            children: [
-                              for (final entry in model.partitions.entries)
-                                for (final partition in entry.value) ...[
-                                  if (model.guidedTarget
-                                          is GuidedStorageTargetEraseInstall &&
-                                      !(partition.preserve ?? false))
-                                    _PartitionRow(
-                                      sysname: entry.key,
-                                      partition: partition,
-                                      original: model.getOriginalPartition(
-                                        entry.key,
-                                        partition.number ?? -1,
-                                      ),
-                                      productInfo: model.productInfo,
-                                      showOriginal: true,
-                                    ),
-                                  _PartitionRow(
-                                    sysname: entry.key,
-                                    partition: partition,
-                                    original: model.getOriginalPartition(
-                                      entry.key,
-                                      partition.number ?? -1,
-                                    ),
-                                    productInfo: model.productInfo,
-                                  ),
-                                ],
-                            ],
-                          ),
+                          _PartitionTable(),
                         ],
                       ),
               ),
@@ -165,6 +132,54 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           ],
         ),
       ],
+    );
+  }
+}
+
+class _PartitionTable extends ConsumerWidget {
+  const _PartitionTable();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final model = ref.watch(confirmModelProvider);
+    final rows = <TableRow>[];
+    for (final entry in model.partitions.entries) {
+      for (final partition in entry.value) {
+        final original = model.getOriginalPartition(
+          entry.key,
+          partition.number ?? -1,
+        );
+        if (model.guidedTarget is GuidedStorageTargetEraseInstall &&
+            !(partition.preserve ?? false) &&
+            original != null) {
+          rows.add(
+            _PartitionRow(
+              sysname: entry.key,
+              partition: partition,
+              original: original,
+              productInfo: model.productInfo,
+              showOriginal: true,
+            ),
+          );
+        }
+        rows.add(
+          _PartitionRow(
+            sysname: entry.key,
+            partition: partition,
+            original: original,
+            productInfo: model.productInfo,
+          ),
+        );
+      }
+    }
+
+    return Table(
+      border: TableBorder(
+        horizontalInside: BorderSide(
+          color: Theme.of(context).dividerColor,
+        ),
+      ),
+      children: rows,
     );
   }
 }
@@ -220,7 +235,11 @@ class _PartitionProperties extends StatelessWidget {
 
   String? properties(BuildContext context) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    if (showOriginal && !(partition.preserve ?? false)) {
+    final mount = partition.mount ?? partition.effectiveMount;
+    final format = partition.format ?? partition.effectiveFormat;
+    final preserve = partition.preserve ?? false;
+
+    if (showOriginal && !preserve) {
       return l10n.confirmTableErased;
     }
     if (partition.resize ?? false) {
@@ -228,28 +247,26 @@ class _PartitionProperties extends StatelessWidget {
         context.formatByteSize(original?.size ?? 0).bold(),
         context.formatByteSize(partition.size ?? 0).bold(),
       );
-    } else if (!(partition.preserve ?? false) &&
-        (partition.mount?.isNotEmpty ?? false) &&
-        partition.format != null) {
+    } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
       return l10n.confirmTableCreatedFormattedMounted(
-        partition.format!.bold(),
-        partition.mount!.bold(),
+        format.bold(),
+        mount!.bold(),
       );
-    } else if (partition.wipe != null &&
-        (partition.mount?.isNotEmpty ?? false) &&
-        partition.format != null) {
+    } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
       return l10n.confirmTableFormattedMounted(
-        partition.format!.bold(),
-        partition.mount!.bold(),
+        format.bold(),
+        mount!.bold(),
       );
-    } else if (partition.wipe != null && partition.format != null) {
+    } else if (!preserve && format != null) {
       return l10n.confirmTableFormatted(
-        partition.format!.bold(),
+        format.bold(),
       );
-    } else if (partition.mount?.isNotEmpty ?? false) {
-      return l10n.confirmTableMounted(partition.mount!.bold());
+    } else if (mount?.isNotEmpty ?? false) {
+      return l10n.confirmTableMounted(mount!.bold());
+    } else if (preserve) {
+      return l10n.confirmTableUnchanged;
     }
-    return l10n.confirmTableUnchanged;
+    return null;
   }
 
   @override
@@ -281,10 +298,11 @@ class _PartitionLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String? name;
+    final mount = partition.mount ?? partition.effectiveMount;
 
     if (showOriginal) {
-      name = original?.os?.long ?? original?.name ?? original?.format ?? '';
-    } else if (!(partition.preserve ?? false) && partition.mount == '/') {
+      name = original?.os?.long ?? original?.name ?? '';
+    } else if (!(partition.preserve ?? false) && mount == '/') {
       name = productInfo.toString();
     } else {
       name = partition.os?.long ?? partition.name ?? '';
@@ -335,26 +353,31 @@ class _SummarySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Table(
       children: [
-        Text(
-          title,
-          style: Theme.of(context).textTheme.titleMedium,
+        TableRow(
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(),
+          ],
         ),
-        const SizedBox(height: kWizardSpacing / 2),
-        for (final entry in entries.entries)
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        for (final entry in entries.entries) ...[
+          TableRow(
             children: [
-              Text(entry.key),
-              const Spacer(),
-              Flexible(
-                flex: 2,
-                child: entry.value,
-              ),
+              SizedBox(height: 8.0),
+              const SizedBox(),
             ],
           ),
+          TableRow(
+            children: [
+              Text(entry.key),
+              entry.value,
+            ],
+          ),
+        ],
       ],
     );
   }
@@ -383,7 +406,6 @@ class _DiskSetup extends ConsumerWidget {
           ),
         _ => '',
       },
-      textAlign: TextAlign.end,
     );
   }
 }
@@ -402,15 +424,13 @@ class _InstallationDisk extends ConsumerWidget {
     final model = ref.watch(confirmModelProvider);
     return Column(
       mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        for (final disk in model.disks)
+        for (final disk in model.modifiedDisks)
           Html(
             data: _prettyFormatDisk(disk),
             style: {
               'body': Style(
                 margin: Margins.zero,
-                textAlign: TextAlign.end,
               ),
             },
             key: ValueKey(disk),

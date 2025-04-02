@@ -135,9 +135,8 @@ scripts:
 
   protoc:
     run: |
-      rm -rf ./packages/provd_client/lib/src/generated/* ./packages/landscape_client/lib/src/generated/* &&
+      rm -rf ./packages/provd_client/lib/src/generated/* ./packages/landscape_stubs/lib/src/generated/* &&
       protoc --dart_out=grpc:./packages/provd_client/lib/src/generated \
         -I./provd/protos ./provd/protos/*.proto google/protobuf/empty.proto google/protobuf/wrappers.proto &&
-      protoc --dart_out=grpc:./packages/landscape_client/lib/src/generated \
-        -I./packages/landscape_client/protos ./packages/landscape_client/protos/*.proto google/protobuf/timestamp.proto google/protobuf/empty.proto
-
+      protoc --dart_out=grpc:./packages/landscape_stubs/lib/src/generated \
+        -I./packages/landscape_stubs/protos ./packages/landscape_stubs/protos/*.proto google/protobuf/timestamp.proto google/protobuf/empty.proto

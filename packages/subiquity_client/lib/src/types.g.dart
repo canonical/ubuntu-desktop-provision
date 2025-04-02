@@ -919,6 +919,9 @@ _$PartitionImpl _$$PartitionImplFromJson(Map<String, dynamic> json) =>
       path: json['path'] as String?,
       name: json['name'] as String?,
       isInUse: json['is_in_use'] as bool? ?? false,
+      effectiveMount: json['effective_mount'] as String?,
+      effectiveFormat: json['effective_format'] as String?,
+      effectivelyEncrypted: json['effectively_encrypted'] as bool?,
       $type: json[r'$type'] as String?,
     );
 
@@ -940,6 +943,9 @@ Map<String, dynamic> _$$PartitionImplToJson(_$PartitionImpl instance) =>
       'path': instance.path,
       'name': instance.name,
       'is_in_use': instance.isInUse,
+      'effective_mount': instance.effectiveMount,
+      'effective_format': instance.effectiveFormat,
+      'effectively_encrypted': instance.effectivelyEncrypted,
       r'$type': instance.$type,
     };
 

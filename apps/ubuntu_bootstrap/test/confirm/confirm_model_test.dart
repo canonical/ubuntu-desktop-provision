@@ -46,6 +46,8 @@ void main() {
     ),
   ];
 
+  final modifiedDisks = testDisks.sublist(0, 4);
+
   test('get storage', () async {
     final installer = MockInstallerService();
     final storage = MockStorageService();
@@ -66,6 +68,7 @@ void main() {
     verifyNever(storage.setGuidedStorage());
 
     expect(model.disks, equals(testDisks));
+    expect(model.modifiedDisks, equals(modifiedDisks));
     expect(
       model.partitions,
       equals({

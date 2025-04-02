@@ -14,6 +14,8 @@ use tonic::{transport::Server, Request, Response, Status};
 
 pub mod protos;
 
+const TOKEN: &str = "my_token";
+
 #[derive(Parser)]
 #[command(author, version, about)]
 struct CliArgs {
@@ -74,6 +76,7 @@ impl LandscapeInstallerAttach for LandscapeService {
         let reply = AttachResponse {
             status,
             user_code: "ABCDEF".to_string(),
+            token: TOKEN.to_string(),
             valid_until,
         };
         println!(
@@ -97,8 +100,11 @@ impl LandscapeInstallerAttach for LandscapeService {
         }
 
         let (tx, rx) = mpsc::channel(5);
-        let user_code = request.into_inner().user_code;
-        println!("Received watch request for user_code: {}", user_code);
+        let request = request.into_inner();
+        println!(
+            "Received watch request for user_code: {} and token: {}",
+            request.user_code, request.token
+        );
 
         let statuses = if self.watch_error {
             println!("Simulated watch error");
@@ -112,6 +118,9 @@ impl LandscapeInstallerAttach for LandscapeService {
                 AuthenticationStatus::AuthenticationPending as i32,
                 AuthenticationStatus::ErrorEmployeeDeactivated as i32,
             ]
+        } else if request.token != TOKEN {
+            println!("Received invalid token");
+            vec![AuthenticationStatus::ErrorInvalidToken as i32]
         } else {
             println!("Simulated watch success");
             vec![

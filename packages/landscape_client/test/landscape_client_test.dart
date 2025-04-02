@@ -1,8 +1,6 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:landscape_client/src/generated/landscape_installer_attach.pbgrpc.dart'
-    as pbgrpc;
-import 'package:landscape_client/src/generated/google/protobuf/empty.pb.dart';
+import 'package:landscape_stubs/landscape_stubs.dart' as pbgrpc;
 import 'package:landscape_client/src/landscape_client.dart';
 import 'package:test/test.dart';
 
@@ -18,15 +16,15 @@ void main() {
     when(mockLandscapeClient.attach(any)).thenAnswer((_) {
       return MockResponseFuture(
         pbgrpc.AttachResponse(
-          status: pbgrpc.AttachStatus.ATTACH_SUCCESS,
-        ),
+            status: pbgrpc.AttachStatus.ATTACH_SUCCESS, token: 'test_token'),
       );
     });
 
     final response = await landscapeClient.attach();
 
     expect(response.status, pbgrpc.AttachStatus.ATTACH_SUCCESS);
-    verify(mockLandscapeClient.attach(Empty())).called(1);
+    expect(response.token, 'test_token');
+    verify(mockLandscapeClient.attach(pbgrpc.Empty())).called(1);
   });
 
   test('watch authentication', () {
@@ -44,9 +42,10 @@ void main() {
     });
 
     final userCode = '12345';
+    final token = 'test_token';
 
     expect(
-      landscapeClient.watch(userCode),
+      landscapeClient.watch(userCode, token),
       emitsInOrder(
         [
           pbgrpc.WatchAuthenticationResponse(
@@ -59,7 +58,8 @@ void main() {
       ),
     );
     verify(mockLandscapeClient.watchAuthentication(
-      pbgrpc.WatchAuthenticationRequest(userCode: userCode),
+      pbgrpc.WatchAuthenticationRequest(
+          userCode: userCode, token: 'test_token'),
     )).called(1);
   });
 }

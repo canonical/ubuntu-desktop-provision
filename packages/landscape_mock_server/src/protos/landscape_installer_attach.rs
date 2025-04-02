@@ -7,11 +7,15 @@ pub struct AttachResponse {
     pub user_code: ::prost::alloc::string::String,
     #[prost(message, optional, tag = "3")]
     pub valid_until: ::core::option::Option<::prost_types::Timestamp>,
+    #[prost(string, tag = "4")]
+    pub token: ::prost::alloc::string::String,
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WatchAuthenticationRequest {
     #[prost(string, tag = "1")]
     pub user_code: ::prost::alloc::string::String,
+    #[prost(string, tag = "2")]
+    pub token: ::prost::alloc::string::String,
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WatchAuthenticationResponse {
@@ -58,6 +62,7 @@ pub enum AuthenticationStatus {
     ErrorEmployeeDeactivated = 6,
     ErrorEmployeeComputerLimitExceeded = 7,
     ErrorMissingAutoinstallFile = 8,
+    ErrorInvalidToken = 9,
 }
 impl AuthenticationStatus {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -77,6 +82,7 @@ impl AuthenticationStatus {
                 "ERROR_EMPLOYEE_COMPUTER_LIMIT_EXCEEDED"
             }
             Self::ErrorMissingAutoinstallFile => "ERROR_MISSING_AUTOINSTALL_FILE",
+            Self::ErrorInvalidToken => "ERROR_INVALID_TOKEN",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -93,6 +99,7 @@ impl AuthenticationStatus {
                 Some(Self::ErrorEmployeeComputerLimitExceeded)
             }
             "ERROR_MISSING_AUTOINSTALL_FILE" => Some(Self::ErrorMissingAutoinstallFile),
+            "ERROR_INVALID_TOKEN" => Some(Self::ErrorInvalidToken),
             _ => None,
         }
     }
