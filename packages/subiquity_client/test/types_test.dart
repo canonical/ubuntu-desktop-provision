@@ -155,8 +155,10 @@ void main() {
       wipe: 'superblock',
       annotations: ['3', '4', '5'],
       mount: '/foo',
+      effectiveMount: '/effective_foo',
       boot: false,
       format: 'bar',
+      effectiveFormat: 'effective_bar',
       grubDevice: false,
       os: OsProber(
         long: 'Windows Boot Manager',
@@ -171,6 +173,7 @@ void main() {
       estimatedMinSize: 123,
       isInUse: true,
       name: 'GPT name',
+      effectivelyEncrypted: true,
     );
 
     expect(partition.sysname, equals('sda2'));
@@ -182,7 +185,9 @@ void main() {
       'wipe': 'superblock',
       'annotations': ['3', '4', '5'],
       'mount': '/foo',
+      'effective_mount': '/effective_foo',
       'format': 'bar',
+      'effective_format': 'effective_bar',
       'grub_device': false,
       'boot': false,
       'os': {
@@ -198,6 +203,7 @@ void main() {
       'estimated_min_size': 123,
       'is_in_use': true,
       'name': 'GPT name',
+      'effectively_encrypted': true,
       '\$type': 'Partition',
     };
     expect(partition.toJson(), equals(json));

@@ -9821,7 +9821,10 @@ mixin _$PartitionOrGap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
   }) =>
@@ -9844,7 +9847,10 @@ mixin _$PartitionOrGap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
   }) =>
@@ -9867,7 +9873,10 @@ mixin _$PartitionOrGap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
     required TResult orElse(),
@@ -9967,7 +9976,10 @@ abstract class _$$PartitionImplCopyWith<$Res>
       bool? resize,
       String? path,
       String? name,
-      bool isInUse});
+      bool isInUse,
+      String? effectiveMount,
+      String? effectiveFormat,
+      bool? effectivelyEncrypted});
 
   $OsProberCopyWith<$Res>? get os;
 }
@@ -10001,6 +10013,9 @@ class __$$PartitionImplCopyWithImpl<$Res>
     Object? path = freezed,
     Object? name = freezed,
     Object? isInUse = null,
+    Object? effectiveMount = freezed,
+    Object? effectiveFormat = freezed,
+    Object? effectivelyEncrypted = freezed,
   }) {
     return _then(_$PartitionImpl(
       size: freezed == size
@@ -10067,6 +10082,18 @@ class __$$PartitionImplCopyWithImpl<$Res>
           ? _value.isInUse
           : isInUse // ignore: cast_nullable_to_non_nullable
               as bool,
+      effectiveMount: freezed == effectiveMount
+          ? _value.effectiveMount
+          : effectiveMount // ignore: cast_nullable_to_non_nullable
+              as String?,
+      effectiveFormat: freezed == effectiveFormat
+          ? _value.effectiveFormat
+          : effectiveFormat // ignore: cast_nullable_to_non_nullable
+              as String?,
+      effectivelyEncrypted: freezed == effectivelyEncrypted
+          ? _value.effectivelyEncrypted
+          : effectivelyEncrypted // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 
@@ -10105,6 +10132,9 @@ class _$PartitionImpl implements Partition {
       this.path,
       this.name,
       this.isInUse = false,
+      this.effectiveMount,
+      this.effectiveFormat,
+      this.effectivelyEncrypted,
       final String? $type})
       : _annotations = annotations,
         $type = $type ?? 'Partition';
@@ -10153,13 +10183,19 @@ class _$PartitionImpl implements Partition {
   @override
   @JsonKey()
   final bool isInUse;
+  @override
+  final String? effectiveMount;
+  @override
+  final String? effectiveFormat;
+  @override
+  final bool? effectivelyEncrypted;
 
   @JsonKey(name: '\$type')
   final String $type;
 
   @override
   String toString() {
-    return 'PartitionOrGap.partition(size: $size, number: $number, preserve: $preserve, wipe: $wipe, annotations: $annotations, mount: $mount, format: $format, grubDevice: $grubDevice, boot: $boot, os: $os, offset: $offset, estimatedMinSize: $estimatedMinSize, resize: $resize, path: $path, name: $name, isInUse: $isInUse)';
+    return 'PartitionOrGap.partition(size: $size, number: $number, preserve: $preserve, wipe: $wipe, annotations: $annotations, mount: $mount, format: $format, grubDevice: $grubDevice, boot: $boot, os: $os, offset: $offset, estimatedMinSize: $estimatedMinSize, resize: $resize, path: $path, name: $name, isInUse: $isInUse, effectiveMount: $effectiveMount, effectiveFormat: $effectiveFormat, effectivelyEncrypted: $effectivelyEncrypted)';
   }
 
   @override
@@ -10186,29 +10222,39 @@ class _$PartitionImpl implements Partition {
             (identical(other.resize, resize) || other.resize == resize) &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.isInUse, isInUse) || other.isInUse == isInUse));
+            (identical(other.isInUse, isInUse) || other.isInUse == isInUse) &&
+            (identical(other.effectiveMount, effectiveMount) ||
+                other.effectiveMount == effectiveMount) &&
+            (identical(other.effectiveFormat, effectiveFormat) ||
+                other.effectiveFormat == effectiveFormat) &&
+            (identical(other.effectivelyEncrypted, effectivelyEncrypted) ||
+                other.effectivelyEncrypted == effectivelyEncrypted));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      size,
-      number,
-      preserve,
-      wipe,
-      const DeepCollectionEquality().hash(_annotations),
-      mount,
-      format,
-      grubDevice,
-      boot,
-      os,
-      offset,
-      estimatedMinSize,
-      resize,
-      path,
-      name,
-      isInUse);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        size,
+        number,
+        preserve,
+        wipe,
+        const DeepCollectionEquality().hash(_annotations),
+        mount,
+        format,
+        grubDevice,
+        boot,
+        os,
+        offset,
+        estimatedMinSize,
+        resize,
+        path,
+        name,
+        isInUse,
+        effectiveMount,
+        effectiveFormat,
+        effectivelyEncrypted
+      ]);
 
   /// Create a copy of PartitionOrGap
   /// with the given fields replaced by the non-null parameter values.
@@ -10237,7 +10283,10 @@ class _$PartitionImpl implements Partition {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
   }) {
@@ -10257,7 +10306,10 @@ class _$PartitionImpl implements Partition {
         resize,
         path,
         name,
-        isInUse);
+        isInUse,
+        effectiveMount,
+        effectiveFormat,
+        effectivelyEncrypted);
   }
 
   @override
@@ -10279,7 +10331,10 @@ class _$PartitionImpl implements Partition {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
   }) {
@@ -10299,7 +10354,10 @@ class _$PartitionImpl implements Partition {
         resize,
         path,
         name,
-        isInUse);
+        isInUse,
+        effectiveMount,
+        effectiveFormat,
+        effectivelyEncrypted);
   }
 
   @override
@@ -10321,7 +10379,10 @@ class _$PartitionImpl implements Partition {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
     required TResult orElse(),
@@ -10343,7 +10404,10 @@ class _$PartitionImpl implements Partition {
           resize,
           path,
           name,
-          isInUse);
+          isInUse,
+          effectiveMount,
+          effectiveFormat,
+          effectivelyEncrypted);
     }
     return orElse();
   }
@@ -10404,7 +10468,10 @@ abstract class Partition implements PartitionOrGap {
       final bool? resize,
       final String? path,
       final String? name,
-      final bool isInUse}) = _$PartitionImpl;
+      final bool isInUse,
+      final String? effectiveMount,
+      final String? effectiveFormat,
+      final bool? effectivelyEncrypted}) = _$PartitionImpl;
 
   factory Partition.fromJson(Map<String, dynamic> json) =
       _$PartitionImpl.fromJson;
@@ -10427,6 +10494,9 @@ abstract class Partition implements PartitionOrGap {
   String? get path;
   String? get name;
   bool get isInUse;
+  String? get effectiveMount;
+  String? get effectiveFormat;
+  bool? get effectivelyEncrypted;
 
   /// Create a copy of PartitionOrGap
   /// with the given fields replaced by the non-null parameter values.
@@ -10548,7 +10618,10 @@ class _$GapImpl implements Gap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)
         partition,
     required TResult Function(int offset, int size, GapUsable usable) gap,
   }) {
@@ -10574,7 +10647,10 @@ class _$GapImpl implements Gap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult? Function(int offset, int size, GapUsable usable)? gap,
   }) {
@@ -10600,7 +10676,10 @@ class _$GapImpl implements Gap {
             bool? resize,
             String? path,
             String? name,
-            bool isInUse)?
+            bool isInUse,
+            String? effectiveMount,
+            String? effectiveFormat,
+            bool? effectivelyEncrypted)?
         partition,
     TResult Function(int offset, int size, GapUsable usable)? gap,
     required TResult orElse(),
