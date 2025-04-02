@@ -124,40 +124,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                           const SizedBox(height: kWizardSpacing / 2),
-                          Table(
-                            border: TableBorder(
-                              horizontalInside: BorderSide(
-                                color: Theme.of(context).dividerColor,
-                              ),
-                            ),
-                            children: [
-                              for (final entry in model.partitions.entries)
-                                for (final partition in entry.value) ...[
-                                  if (model.guidedTarget
-                                          is GuidedStorageTargetEraseInstall &&
-                                      !(partition.preserve ?? false))
-                                    _PartitionRow(
-                                      sysname: entry.key,
-                                      partition: partition,
-                                      original: model.getOriginalPartition(
-                                        entry.key,
-                                        partition.number ?? -1,
-                                      ),
-                                      productInfo: model.productInfo,
-                                      showOriginal: true,
-                                    ),
-                                  _PartitionRow(
-                                    sysname: entry.key,
-                                    partition: partition,
-                                    original: model.getOriginalPartition(
-                                      entry.key,
-                                      partition.number ?? -1,
-                                    ),
-                                    productInfo: model.productInfo,
-                                  ),
-                                ],
-                            ],
-                          ),
+                          _PartitionTable(),
                         ],
                       ),
               ),
@@ -165,6 +132,54 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           ],
         ),
       ],
+    );
+  }
+}
+
+class _PartitionTable extends ConsumerWidget {
+  const _PartitionTable();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final model = ref.watch(confirmModelProvider);
+    final rows = <TableRow>[];
+    for (final entry in model.partitions.entries) {
+      for (final partition in entry.value) {
+        final original = model.getOriginalPartition(
+          entry.key,
+          partition.number ?? -1,
+        );
+        if (model.guidedTarget is GuidedStorageTargetEraseInstall &&
+            !(partition.preserve ?? false) &&
+            original != null) {
+          rows.add(
+            _PartitionRow(
+              sysname: entry.key,
+              partition: partition,
+              original: original,
+              productInfo: model.productInfo,
+              showOriginal: true,
+            ),
+          );
+        }
+        rows.add(
+          _PartitionRow(
+            sysname: entry.key,
+            partition: partition,
+            original: original,
+            productInfo: model.productInfo,
+          ),
+        );
+      }
+    }
+
+    return Table(
+      border: TableBorder(
+        horizontalInside: BorderSide(
+          color: Theme.of(context).dividerColor,
+        ),
+      ),
+      children: rows,
     );
   }
 }
