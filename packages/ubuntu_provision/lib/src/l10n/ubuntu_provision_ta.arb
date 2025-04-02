@@ -51,7 +51,7 @@
   "@identityPasswordMismatch": {},
   "close": "மூடு",
   "@close": {},
-  "accessibilityPageHeader": "{டிச்ட்ரோ on இல் அணுகல்",
+  "accessibilityPageHeader": "Accessibility in {DISTRO}",
   "@accessibilityPageHeader": {
     "placeholders": {
       "DISTRO": {
@@ -59,7 +59,7 @@
       }
     }
   },
-  "accessibilityPageBody": "நீங்கள் அமைப்பதற்கு முன் உங்கள் தேவைகளுக்கு தனிப்பயன் {டிச்ட்ரோ. கணினி அமைப்புகளில் அவற்றை பின்னர் மாற்றலாம்.",
+  "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -87,9 +87,9 @@
   "@accessibilityDesktopZoomLabel": {},
   "errorPageTitle": "ஏதோ தவறு நடந்தது",
   "@errorPageTitle": {},
-  "errorPageUnexpected": "மன்னிக்கவும், ஆனால் பிழை என்னவென்று எங்களுக்குத் தெரியவில்லை. உங்கள் கணினியை மறுதொடக்கம் செய்ய முயற்சி செய்யலாம் மற்றும் நிறுவல் செயல்முறையை மீண்டும் தொடங்கலாம். </a> பிரச்சினையை நீங்கள் புகாரளிக்கலாம்.",
+  "errorPageUnexpected": "We're sorry, but we're not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.",
   "@errorPageUnexpected": {},
-  "errorPageUbuntuBug": "தொடர்புடைய பிழைத்திருத்த செய்தி உட்பட தானியங்கி பிழை அறிக்கையை அனுப்ப, தயவுசெய்து <முன்> சுடோ உபுண்டு-பக் {SNAP} </pre> ஒரு முனையத்தில் அல்லது கட்டளை கன்சோலில் (ALT+F2) இயக்கவும்.",
+  "errorPageUbuntuBug": "To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).",
   "@errorPageUbuntuBug": {
     "placeholders": {
       "SNAP": {
@@ -157,7 +157,7 @@
   "@activeDirectoryAdminInvalidChars": {},
   "activeDirectoryErrorTitle": "செயலில் உள்ள கோப்பகத்திற்கான இணைப்பை உள்ளமைப்பதில் பிழை",
   "@activeDirectoryErrorTitle": {},
-  "activeDirectoryErrorMessage": "மன்னிக்கவும், செயலில் உள்ள கோப்பகத்தை இந்த நேரத்தில் அமைக்க முடியாது. உங்கள் கணினி முடிந்ததும், <a href = \"https://help.ubuntu.com/actidedirectory\"> உதவிக்கு உதவுகிறது.",
+  "activeDirectoryErrorMessage": "Sorry, Active Directory can't be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.",
   "@activeDirectoryErrorMessage": {},
   "networkPageBody": "இணைய இணைப்பு உங்கள் நிறுவலை பொருந்தக்கூடிய சோதனை மற்றும் கூடுதல் மென்பொருள் தொகுப்புகளுடன் மேம்படுத்தும்.",
   "@networkPageBody": {},
@@ -185,7 +185,7 @@
   "@eulaReviewTerms": {},
   "themeLight": "ஒளி",
   "@themeLight": {},
-  "localePageTitle": "{டிச்ட்ரோ க்கு க்கு வருக",
+  "localePageTitle": "Welcome to {DISTRO}",
   "@localePageTitle": {
     "placeholders": {
       "DISTRO": {
