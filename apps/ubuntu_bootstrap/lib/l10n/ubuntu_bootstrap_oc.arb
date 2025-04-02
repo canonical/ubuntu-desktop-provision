@@ -1040,9 +1040,9 @@
   },
   "autoinstallDirectDescription": "Pels utilizaires avançats qu’an un autoinstall.yaml per de configuracions de sistèma coerentas e reproductiblas.",
   "@autoinstallDirectDescription": {},
-  "confirmTableErased": "Espotit",
+  "confirmTableErased": "Espotida",
   "@confirmTableErased": {},
-  "confirmTableUnchanged": "Non modificat",
+  "confirmTableUnchanged": "Non modificada",
   "@confirmTableUnchanged": {},
   "bitlockerInfoRecovery": "Windows poiriá demandar de claus de recuperacion a l’aviada aprèp l’installacion.",
   "@bitlockerInfoRecovery": {},
@@ -1063,5 +1063,67 @@
   "chooseOptionalPassphraseInfoHeader": "Gardatz vòstra frasa secrèta e clau de restauracion en luòc segur",
   "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseBody": "Una frasa secrèta pot ajudar a protegir las donadas amai lo material es compromés. Deuretz picar la frasa secrèta a cada aviada de l'ordenador. La poiretz pas levar mai tard.",
-  "@chooseOptionalPassphraseBody": {}
+  "@chooseOptionalPassphraseBody": {},
+  "installationTypeLVMEncryptionInfo": "Deuretz picar una frasa secrèta cada còp qu'alucatz l'ordenador. Emplega lo chiframent LUKS amb LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "bitlockerInfoTitle": "BitLocker detectat",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Una o mai d'una particion son chifrada amb BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "restartComputer": "Reaviar l'ordenador",
+  "@restartComputer": {},
+  "recoveryKeyInfoHeader": "Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion",
+  "@recoveryKeyInfoHeader": {},
+  "confirmTableMounted": "Utilizada per {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatada en {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formatada en {format} utilizada per {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Creada e formatada en {format} utilizada per {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Riscatz de pèrdre totas vòstras donadas sens las claus de recuperacion BitLocker",
+  "@bitlockerWarningTitle": {},
+  "restartComputerTitle": "Reaviar l'ordenador ?",
+  "@restartComputerTitle": {},
+  "recoveryKeyInfoBody": "Obtenètz una clau de recuperacion tre la primièra connexion a {distro} e gardatz-la en luòc segur.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoBody": "Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de restauracion o lo senhal utilizaire.",
+  "@chooseOptionalPassphraseInfoBody": {}
 }
