@@ -1061,5 +1061,7 @@
   "rstDisableWindows": "Windows, s’utilizatz una configuracion mantun sistèma operatiu amb Windows",
   "@rstDisableWindows": {},
   "chooseOptionalPassphraseInfoHeader": "Gardatz vòstra frasa secrèta e clau de restauracion en luòc segur",
-  "@chooseOptionalPassphraseInfoHeader": {}
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseBody": "Una frasa secrèta pot ajudar a protegir las donadas amai lo material es compromés. Deuretz picar la frasa secrèta a cada aviada de l'ordenador. La poiretz pas levar mai tard.",
+  "@chooseOptionalPassphraseBody": {}
 }
