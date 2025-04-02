@@ -54,7 +54,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 95f3d758230582d2c2cbfc2217b53f6baa434b09
+    source-commit: &commit-ref dedf1f370ead5cecb219240ee7b28cbbf9d9feed
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -98,7 +98,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/probert.git
     source-type: git
-    source-commit: 329d4f6af4d183e56f14d33285bf41ff179cca68
+    source-commit: 2e5ec81f1623f3cfc64b3fe21c2072c4f608ea9e
     override-build: *pyinstall
     build-packages:
       - build-essential
