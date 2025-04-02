@@ -798,6 +798,9 @@ class PartitionOrGap with _$PartitionOrGap {
     String? path,
     String? name,
     @Default(false) bool isInUse,
+    String? effectiveMount,
+    String? effectiveFormat,
+    bool? effectivelyEncrypted,
   }) = Partition;
 
   @FreezedUnionValue('Gap')
