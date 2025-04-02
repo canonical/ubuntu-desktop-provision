@@ -1,5 +1,5 @@
 {
-  "welcomePageHeader": "{டிச்ட்ரோ க்கு க்கு வருக",
+  "welcomePageHeader": "Welcome to {distro}",
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "புதியது என்ன?",
   "@welcomeWhatsNew": {},
