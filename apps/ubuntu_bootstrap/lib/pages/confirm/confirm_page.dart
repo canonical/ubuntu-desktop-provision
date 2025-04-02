@@ -335,26 +335,31 @@ class _SummarySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Table(
       children: [
-        Text(
-          title,
-          style: Theme.of(context).textTheme.titleMedium,
+        TableRow(
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(),
+          ],
         ),
-        const SizedBox(height: kWizardSpacing / 2),
-        for (final entry in entries.entries)
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        for (final entry in entries.entries) ...[
+          TableRow(
             children: [
-              Text(entry.key),
-              const Spacer(),
-              Flexible(
-                flex: 2,
-                child: entry.value,
-              ),
+              SizedBox(height: 8.0),
+              const SizedBox(),
             ],
           ),
+          TableRow(
+            children: [
+              Text(entry.key),
+              entry.value,
+            ],
+          ),
+        ],
       ],
     );
   }
@@ -383,7 +388,6 @@ class _DiskSetup extends ConsumerWidget {
           ),
         _ => '',
       },
-      textAlign: TextAlign.end,
     );
   }
 }
@@ -402,7 +406,6 @@ class _InstallationDisk extends ConsumerWidget {
     final model = ref.watch(confirmModelProvider);
     return Column(
       mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         for (final disk in model.modifiedDisks)
           Html(
@@ -410,7 +413,6 @@ class _InstallationDisk extends ConsumerWidget {
             style: {
               'body': Style(
                 margin: Margins.zero,
-                textAlign: TextAlign.end,
               ),
             },
             key: ValueKey(disk),
