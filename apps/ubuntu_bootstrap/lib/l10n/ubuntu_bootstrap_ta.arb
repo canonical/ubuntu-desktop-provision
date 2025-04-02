@@ -64,7 +64,7 @@
   },
   "welcome": "நல்வரவு",
   "@welcome": {},
-  "tryOrInstallTitle": "சோதி அல்லது நிறுவு",
+  "tryOrInstallTitle": "Try or install {DISTRO}",
   "@tryOrInstallTitle": {},
   "tryOption": "சோதி {RELEASE}",
   "@tryOption": {
@@ -126,7 +126,7 @@
   "@autoinstallInteractiveDescription": {},
   "autoinstallDirectOption": "ஆட்டோஇன்ச்டால் கோப்புடன் தானியங்கி",
   "@autoinstallDirectOption": {},
-  "loadingPageTitle": "{டிச்ட்ரோ க்கு க்கு வருக",
+  "loadingPageTitle": "Welcome to {DISTRO}",
   "@loadingPageTitle": {
     "placeholders": {
       "DISTRO": {
@@ -229,7 +229,7 @@
       }
     }
   },
-  "installationTypeAlongside": "{Os with உடன் {product} ஐ நிறுவவும்",
+  "installationTypeAlongside": "Install {product} alongside {os}",
   "@installationTypeAlongside": {
     "placeholders": {
       "product": {
@@ -256,7 +256,7 @@
       }
     }
   },
-  "installationTypeAlongsideInfo": "மறுஅளவிடுவதற்கு ஒரு பகிர்வைத் தேர்ந்தெடுத்து {தயாரிப்பு க்கு க்கான இடத்தை உருவாக்கவும். துவக்கத்தின் போது உங்கள் இயக்க முறைமையைத் தேர்வு செய்யலாம்.",
+  "installationTypeAlongsideInfo": "Select a partition to resize and create space for {product}. You can choose your operating system during boot.",
   "@installationTypeAlongsideInfo": {
     "placeholders": {
       "product": {
@@ -280,7 +280,7 @@
   "@installAlongsideAvailable": {},
   "allocateDiskSpaceInvalidMountPointSpace": "மவுண்ட் புள்ளிகளில் இடைவெளிகளைக் கொண்டிருக்க முடியாது",
   "@allocateDiskSpaceInvalidMountPointSpace": {},
-  "allocateDiskSpaceInvalidMountPointFormat": "{வடிவம் {{மவுண்ட் பாயிண்ட் க்கு க்கான உதவி கோப்பு முறைமை அல்ல",
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} is not a supported filesystem for {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
     "mountpoint": {
       "type": "String"
@@ -319,7 +319,7 @@
   "@confirmSectionGeneralTitle": {},
   "confirmInstallButton": "நிறுவவும்",
   "@confirmInstallButton": {},
-  "confirmTableFormattedMounted": "{மவுண்ட் பாயிண்ட் க்கு க்கு பயன்படுத்தப்படும் {வடிவமாக வடிவமைக்கப்பட்டுள்ளது",
+  "confirmTableFormattedMounted": "Formatted as {format} used for {mountpoint}",
   "@confirmTableFormattedMounted": {
     "placeholders": {
       "format": {
@@ -352,7 +352,7 @@
   "@installationSlidesAvailable": {},
   "installationSlidesWelcomeTitle": "வேகமான, இலவச மற்றும் புதிய நற்பொருத்தங்கள் நிறைந்தவை",
   "@installationSlidesWelcomeTitle": {},
-  "installationSlidesWelcomeHeader": "{டிச்ட்ரோ of இன் அண்மைக் கால பதிப்பு முன்னெப்போதையும் விட கம்ப்யூட்டிங் எளிதாக்குகிறது.",
+  "installationSlidesWelcomeHeader": "The latest version of {DISTRO} makes computing easier than ever.",
   "@installationSlidesWelcomeHeader": {
     "placeholders": {
       "DISTRO": {
@@ -382,7 +382,7 @@
   },
   "installationSlidesCreativityTitle": "உங்கள் படைப்பாற்றலை மேம்படுத்தவும்",
   "@installationSlidesCreativityTitle": {},
-  "installationSlidesCreativityBody": "நீங்கள் ஒரு அனிமேட்டர், வடிவமைப்பாளர், வீடியோ உருவாக்கியவர் அல்லது விளையாட்டு உருவாக்குநராக இருந்தால், திறந்த மூல மற்றும் தொழில் நிலையான மென்பொருள் மற்றும் பயன்பாடுகளுக்கான ஆதரவுடன் உங்கள் பணிப்பாய்வுகளை {டிச்ட்ரோ க்கு க்கு கொண்டு வருவது எளிது.",
+  "installationSlidesCreativityBody": "If you're an animator, designer, video creator or game developer it's easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.",
   "@installationSlidesCreativityBody": {
     "placeholders": {
       "DISTRO": {
@@ -390,7 +390,7 @@
       }
     }
   },
-  "installationSlidesGamingBody": "செயல்திறன் மற்றும் பொருந்தக்கூடிய தன்மையை மேம்படுத்த அண்மைக் கால என்விடியா மற்றும் மெசா இயக்கிகளை {DISTRO} ஆதரிக்கிறது. கூடுதல் உள்ளமைவு இல்லாத நீராவி போன்ற பயன்பாடுகள் வழியாக ஆயிரக்கணக்கான சாளரங்கள் தலைப்புகள் {டிச்ட்ரோ on இல் சிறப்பாக விளையாடுகின்றன.",
+  "installationSlidesGamingBody": "{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.",
   "@installationSlidesGamingBody": {
     "placeholders": {
       "DISTRO": {
@@ -398,7 +398,7 @@
       }
     }
   },
-  "installationSlidesSecurityBody": "{டிச்ட்ரோ the ஆன்லைனில் தனிப்பட்ட மற்றும் பாதுகாப்பாக இருக்க வேண்டிய அனைத்து கருவிகளையும் வழங்குகிறது. ஃபயர்வால் மற்றும் வி.பி.என் உதவி மற்றும் உங்கள் தரவின் முழு கட்டுப்பாட்டில் இருப்பதை உறுதிசெய்ய தனியுரிமை மையமாகக் கொண்ட பயன்பாடுகளின் தொகுப்புடன் கட்டப்பட்டுள்ளது.",
+  "installationSlidesSecurityBody": "{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.",
   "@installationSlidesSecurityBody": {
     "placeholders": {
       "DISTRO": {
@@ -518,7 +518,7 @@
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "மீட்பு விசை இல்லாமல் உங்கள் எல்லா தரவையும் இழக்க நேரிடும்",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyInfoBody": "நீங்கள் முதலில் {டிச்ட்ரோ at இல் உள்நுழைந்து அதை எங்காவது பாதுகாப்பாக சேமித்து வைத்தவுடன் மீட்பு விசையைப் பெறுங்கள்.",
+  "recoveryKeyInfoBody": "Get a recovery key as soon as you first log into {distro} and store it somewhere safe.",
   "@recoveryKeyInfoBody": {
     "placeholders": {
       "distro": {
@@ -792,7 +792,7 @@
       }
     }
   },
-  "installationTypeAlongsideDual": "{product} மற்றும் {OS2 with உடன் {os1} ஐ நிறுவவும்",
+  "installationTypeAlongsideDual": "Install {product} alongside {os1} and {os2}",
   "@installationTypeAlongsideDual": {
     "placeholders": {
       "product": {
@@ -850,7 +850,7 @@
       }
     }
   },
-  "restartInto": "{கணினி by இல் மறுதொடக்கம் செய்யுங்கள்",
+  "restartInto": "Restart into {system}",
   "@restartInto": {
     "placeholders": {
       "system": {
@@ -1058,7 +1058,7 @@
       }
     }
   },
-  "confirmTableCreatedFormattedMounted": "{மவுண்ட் பாயிண்ட் க்கு க்கு பயன்படுத்தப்படும் {வடிவமாக உருவாக்கப்பட்டது மற்றும் வடிவமைக்கப்பட்டுள்ளது",
+  "confirmTableCreatedFormattedMounted": "Created and formatted as {format} used for {mountpoint}",
   "@confirmTableCreatedFormattedMounted": {
     "placeholders": {
       "format": {
@@ -1073,7 +1073,7 @@
   "@confirmTableErased": {},
   "confirmTableUnchanged": "மாறாமல்",
   "@confirmTableUnchanged": {},
-  "confirmTableMounted": "{மவுண்ட் பாயிண்ட் க்கு க்கு பயன்படுத்தப்படுகிறது",
+  "confirmTableMounted": "Used for {mountpoint}",
   "@confirmTableMounted": {
     "placeholders": {
       "mountpoint": {
@@ -1117,7 +1117,7 @@
   },
   "bitlockerWarningTitle": "பிட்லாக்கர் மீட்பு விசைகள் இல்லாமல் உங்கள் எல்லா தரவையும் இழக்க நேரிடும்",
   "@bitlockerWarningTitle": {},
-  "installationSlidesWelcomeBody": "நீங்கள் ஒரு உருவாக்குபவர், படைப்பாளி, விளையாட்டாளர் அல்லது நிர்வாகியாக இருந்தாலும், உங்கள் உற்பத்தித்திறனை மேம்படுத்தவும், உங்கள் அனுபவத்தை {வெளியீட்டில் மேம்படுத்தவும் புதிய கருவிகளைக் காண்பீர்கள்.",
+  "installationSlidesWelcomeBody": "Whether you're a developer, creator, gamer or administrator you'll find new tools to improve your productivity and enhance your experience in {RELEASE}.",
   "@installationSlidesWelcomeBody": {
     "placeholders": {
       "RELEASE": {
