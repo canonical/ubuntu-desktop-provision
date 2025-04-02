@@ -220,7 +220,11 @@ class _PartitionProperties extends StatelessWidget {
 
   String? properties(BuildContext context) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
-    if (showOriginal && !(partition.preserve ?? false)) {
+    final mount = partition.mount ?? partition.effectiveMount;
+    final format = partition.format ?? partition.effectiveFormat;
+    final preserve = partition.preserve ?? false;
+
+    if (showOriginal && !preserve) {
       return l10n.confirmTableErased;
     }
     if (partition.resize ?? false) {
@@ -228,28 +232,26 @@ class _PartitionProperties extends StatelessWidget {
         context.formatByteSize(original?.size ?? 0).bold(),
         context.formatByteSize(partition.size ?? 0).bold(),
       );
-    } else if (!(partition.preserve ?? false) &&
-        (partition.mount?.isNotEmpty ?? false) &&
-        partition.format != null) {
+    } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
       return l10n.confirmTableCreatedFormattedMounted(
-        partition.format!.bold(),
-        partition.mount!.bold(),
+        format.bold(),
+        mount!.bold(),
       );
-    } else if (partition.wipe != null &&
-        (partition.mount?.isNotEmpty ?? false) &&
-        partition.format != null) {
+    } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
       return l10n.confirmTableFormattedMounted(
-        partition.format!.bold(),
-        partition.mount!.bold(),
+        format.bold(),
+        mount!.bold(),
       );
-    } else if (partition.wipe != null && partition.format != null) {
+    } else if (!preserve && format != null) {
       return l10n.confirmTableFormatted(
-        partition.format!.bold(),
+        format.bold(),
       );
-    } else if (partition.mount?.isNotEmpty ?? false) {
-      return l10n.confirmTableMounted(partition.mount!.bold());
+    } else if (mount?.isNotEmpty ?? false) {
+      return l10n.confirmTableMounted(mount!.bold());
+    } else if (preserve) {
+      return l10n.confirmTableUnchanged;
     }
-    return l10n.confirmTableUnchanged;
+    return null;
   }
 
   @override
@@ -281,10 +283,11 @@ class _PartitionLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String? name;
+    final mount = partition.mount ?? partition.effectiveMount;
 
     if (showOriginal) {
-      name = original?.os?.long ?? original?.name ?? original?.format ?? '';
-    } else if (!(partition.preserve ?? false) && partition.mount == '/') {
+      name = original?.os?.long ?? original?.name ?? '';
+    } else if (!(partition.preserve ?? false) && mount == '/') {
       name = productInfo.toString();
     } else {
       name = partition.os?.long ?? partition.name ?? '';
