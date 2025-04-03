@@ -931,7 +931,7 @@
       }
     }
   },
-  "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
+  "recoveryKeyCommand": "Per obténer la clau de recuperacion, acabatz l’installacion, reaviatz l’ordenador puèi executatz la comanda seguenta dins un terminal :",
   "@recoveryKeyCommand": {},
   "allocateDiskSpaceInvalidMountPointFormat": "{format} es pas un sistèma de fichièrs compatible amb {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
@@ -1060,7 +1060,7 @@
   "@rstDisable": {},
   "rstDisableWindows": "Windows, s’utilizatz una configuracion mantun sistèma operatiu amb Windows",
   "@rstDisableWindows": {},
-  "chooseOptionalPassphraseInfoHeader": "Gardatz vòstra frasa secrèta e clau de restauracion en luòc segur",
+  "chooseOptionalPassphraseInfoHeader": "Gardatz vòstra frasa secrèta e clau de recuperacion en luòc segur",
   "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseBody": "Una frasa secrèta pot ajudar a protegir las donadas amai lo material es compromés. Deuretz picar la frasa secrèta a cada aviada de l'ordenador. La poiretz pas levar mai tard.",
   "@chooseOptionalPassphraseBody": {},
@@ -1124,6 +1124,8 @@
       }
     }
   },
-  "chooseOptionalPassphraseInfoBody": "Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de restauracion o lo senhal utilizaire.",
-  "@chooseOptionalPassphraseInfoBody": {}
+  "chooseOptionalPassphraseInfoBody": "Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyStorageAdvice": "Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.",
+  "@recoveryKeyStorageAdvice": {}
 }
