@@ -7,7 +7,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'அணுகல்';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
@@ -20,49 +20,49 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'பார்ப்பது';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'கேட்பு';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'தட்டச்சு';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'சுட்டிக்காட்டுதல் மற்றும் சொடுக்கு செய்தல்';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'பெரிதாக்கு';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'உயர் வேறுபாடு';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'பெரிய உரை';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'அனிமேசனைக் குறைக்கவும்';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'திரை ரீடர்';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'காட்சி எச்சரிக்கைகள்';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'ஒட்டும் விசைகள்';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'மெதுவான விசைகள்';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'சுட்டி விசைகள்';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'டெச்க்டாப் சூம்';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'ஏதோ தவறு நடந்தது';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
@@ -73,25 +73,25 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'பதிவைக் காட்டு';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'பதிவை மறைக்க';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'மறுதொடக்கம்';
 
   @override
-  String get close => 'Close';
+  String get close => 'மூடு';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'உங்கள் நேர மண்டலத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'இடம்';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'நேர மண்டலம்';
 
   @override
   String get keyboardTitle => 'விசைப்பலகை அமைப்பு';
@@ -106,10 +106,10 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'விசைப்பலகையின் அமைப்பைக் கண்டறியவும்';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'கண்டறியவும்';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'உங்கள் விசைப்பலகை மாறுபாட்டைத் தேர்ந்தெடுக்கவும்:';
 
   @override
   String get keyboardPressKeyLabel => 'பின்வரும் விசைகளில் ஒன்றை அழுத்துங்கள்:';
@@ -127,7 +127,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get themeDark => 'கருமை';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'ஒளி';
 
   @override
   String localePageTitle(String DISTRO) {
@@ -135,7 +135,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'உங்கள் மொழியைத் தேர்வுசெய்க:';
 
   @override
   String get identityPageTitle => 'நீங்கள் யார்?';
@@ -153,7 +153,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityRealNameRequired => 'ஒரு பெயர் தேவை';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'அந்த பெயர் மிக நீளமானது.';
 
   @override
   String get identityHostnameLabel => 'உங்கள் கணினியின் பெயர்';
@@ -165,7 +165,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'கணினி பெயர் தேவை';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'அந்த கணினி பெயர் மிக நீளமானது.';
 
   @override
   String get identityInvalidHostname => 'கணினியின் பெயர் தவறானது';
@@ -180,16 +180,16 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityInvalidUsername => 'பயனர்பெயர் தவறானது';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'அந்த பயனர் பெயர் ஏற்கனவே உள்ளது.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'கணினி பயன்பாட்டிற்காக அந்த பெயர் ஒதுக்கப்பட்டுள்ளது.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'அந்த பெயர் மிக நீளமானது.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'அந்த பெயரில் தவறான எழுத்துக்கள் உள்ளன.';
 
   @override
   String get identityPasswordLabel => 'கடவுச்சொல்லை தேர்வு செய்யவும்';
@@ -204,142 +204,142 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get identityPasswordMismatch => 'கடவுச்சொற்கள் பொருந்தவில்லை';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'காட்டு';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'மறை';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'செயலில் உள்ள கோப்பகத்தைப் பயன்படுத்தவும்';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'அடுத்த கட்டத்தில் டொமைனையும் பிற விவரங்களையும் உள்ளிடுவீர்கள்.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'செயலில் உள்ள கோப்பகத்தில் உள்நுழைக';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'செயலில் உள்ள கோப்பகத்தில் உள்நுழைகவா?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO எளிதான நிர்வாகத்திற்கான செயலில் உள்ள கோப்பகத்துடன் தடையின்றி ஒருங்கிணைக்க வடிவமைக்கப்பட்டுள்ளது.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'டொமைன் இணைப்பை சோதிக்கவும்';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'டொமைன்';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'தேவை';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'மிக நீண்ட';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'தவறான எழுத்துக்கள்';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'ஒரு புள்ளியுடன் தொடங்குகிறது (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'ஒரு புள்ளியுடன் முடிவடைகிறது (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'ஒரு ஐபனுடன் தொடங்குகிறது (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'ஒரு ஐபனுடன் முடிவடைகிறது (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'பல வரிசைப்படுத்தப்பட்ட புள்ளிகள் உள்ளன (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'டொமைன் கிடைக்கவில்லை';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'டொமைன் பயனருடன் சேரவும்';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'தேவை';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'தவறான எழுத்துக்கள்';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'கடவுச்சொல்';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'தேவை';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'செயலில் உள்ள கோப்பகத்திற்கான இணைப்பை உள்ளமைப்பதில் பிழை';
 
   @override
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'இணைய இணைப்பு';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'இணையத்துடன் இணைக்கவும்';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'இணைய இணைப்பு உங்கள் நிறுவலை பொருந்தக்கூடிய சோதனை மற்றும் கூடுதல் மென்பொருள் தொகுப்புகளுடன் மேம்படுத்தும்.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'கம்பி இணைப்பைப் பயன்படுத்தவும்';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'கம்பி இணைப்பு எதுவும் கண்டறியப்படவில்லை';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'கம்பி இணைப்பு அணைக்கப்பட்டுள்ளது';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'இந்த கணினியில் ஈதர்நெட்டைப் பயன்படுத்த, கம்பி இணைப்பு இயக்கப்பட வேண்டும்';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'கம்பி இயக்கு';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'வைஃபை நெட்வொர்க்குடன் இணைக்கவும்';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'வயர்லெச் நெட்வொர்க்கிங் முடக்கப்பட்டது';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'வைஃபை சாதனங்கள் எதுவும் கண்டறியப்படவில்லை';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'இந்த கணினியில் வைஃபை பயன்படுத்த, வயர்லெச் நெட்வொர்க்கிங் இயக்கப்பட வேண்டும்';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'வைஃபை இயக்கவும்';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'மறைக்கப்பட்ட வைஃபை நெட்வொர்க்குடன் இணைக்கவும்';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'பிணைய பெயர்';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'பிணைய பெயர் தேவை';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'இணையத்துடன் இணைக்க வேண்டாம்';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'உரிம ஒப்பந்தத்தின்';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'உரிம விதிமுறைகளை மதிப்பாய்வு செய்யவும்';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'இந்த இயந்திரத்தை தொடர்ந்து அமைக்க, உரிம ஒப்பந்த விதிமுறைகளைப் படித்து ஏற்றுக்கொள்ள வேண்டும்.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'இந்த விதிமுறைகளைப் படித்து ஏற்றுக்கொண்டேன்';
 }

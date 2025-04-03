@@ -54,13 +54,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorInvalidUrlBody => 'Перевірте правильність URL-адреси або виберіть локальний файл.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Неправильний файл автоматичної інсталяції';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Неправильний файл автоматичного встановлення';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody => 'Перевірте файл або надайте інший.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Файл автоінсталяції не читається';
+  String get autoinstallDirectErrorFileSystemTitle => 'Файл автовстановлення нечитабельний';
 
   @override
   String get autoinstallDirectErrorFileSystemBody => 'Перевірте права доступу або надайте інший файл.';
@@ -86,7 +86,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Для користувачів, які хочуть отримати покрокову інструкцію зі встановлення.';
 
   @override
-  String get autoinstallDirectOption => 'Автоматизовано за допомогою файлу автоматичної інсталяції';
+  String get autoinstallDirectOption => 'Автоматизовано за допомогою файлу автоматичного встановлення';
 
   @override
   String get autoinstallDirectDescription => 'Для досвідчених користувачів, які мають файл autoinstall.yaml для послідовного та повторюваного налаштування системи.';
@@ -95,7 +95,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get autoinstallLandscapeOption => 'Автоматизовано за допомогою Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'Для користувачів в організаціях, які надають файл автоматичної інсталяції через Landscape.';
+  String get autoinstallLandscapeDescription => 'Для користувачів в організаціях, які надають файл автоматичного встановлення через Landscape.';
 
   @override
   String get changeButtonText => 'Змінити';
@@ -386,7 +386,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Ключ захисту можна буде вибрати на наступному кроці.';
 
   @override
-  String get installationTypeZFS => 'Використання ZFS без шифрування';
+  String get installationTypeZFS => 'Використовувати ZFS без шифрування';
 
   @override
   String get installationTypeZFSEncryption => 'Шифрування за допомогою ключової фрази за допомогою ZFS';
@@ -401,7 +401,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Вибрано ZFS та шифрування';
 
   @override
-  String get installationTypeTPM => 'Використовуйте апаратне шифрування';
+  String get installationTypeTPM => 'Використовувати апаратне шифрування';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
@@ -443,17 +443,17 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Вибрати розділ для зміни розміру та створення місця для $product. Ви можете вибрати операційну систему під час завантаження.';
+    return 'Вибрати розділ для зміни розміру та створення простору для $product. Ви можете вибрати операційну систему під час завантаження.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Зітріть $os і встановіть $product';
+    return 'Стерти $os і встановити $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'Всі файли і дані з існуючої інсталяції $os буде назавжди видалено.';
+    return 'Усі файли та дані з наявної установки $os буде видалено назавжди.';
   }
 
   @override
@@ -765,10 +765,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get bitlockerWarningTitle => 'Без ключів відновлення BitLocker ви можете втратити всі свої дані';
 
   @override
-  String get restartComputer => 'Перезавантажити комп\'ютер';
+  String get restartComputer => 'Перезапустити комп\'ютер';
 
   @override
-  String get restartComputerTitle => 'Перезавантажити комп\'ютер?';
+  String get restartComputerTitle => 'Перезапустити комп\'ютер?';
 
   @override
   String get restartIntoWindows => 'Перезапустити у Windows';
@@ -1082,7 +1082,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyCommand => 'Щоб отримати ключ відновлення, завершіть встановлення, перезавантажте комп\'ютер і виконайте цю команду в терміналі:';
+  String get recoveryKeyCommand => 'Щоб отримати ключ відновлення, завершіть встановлення, перезапустіть комп\'ютер і виконайте цю команду в терміналі:';
 
   @override
   String get recoveryKeyStorageAdvice => 'Зберігайте ключ відновлення в надійному місці. Використовуйте його, щоб розшифрувати диск у разі певних змін у системі. Наприклад, він може знадобитися, якщо ви заміните компоненти в комп\'ютері або оновите прошивку.';
@@ -1108,7 +1108,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Домен Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Вкажіть домен Landscape вашої організації для входу та отримання файлу автоматичної інсталяції. Ви можете отримати FQDN від своєї ІТ-підтримки.';
+  String get landscapeDomainInstructions => 'Вкажіть домен Landscape вашої організації для входу та отримання файлу автоматичного встановлення. Ви можете отримати FQDN від своєї ІТ-підтримки.';
 
   @override
   String get landscapeDomainTextField => 'Домен Landscape (FQDN)';
