@@ -22,16 +22,16 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   String get startFactoryReset => 'Iniciar restablecimiento de fábrica';
 
   @override
-  String get createUsbTitle => 'Crear un soporte USB de restablecimiento';
+  String get createUsbTitle => 'Crear un medio USB de restablecimiento';
 
   @override
-  String get createUsbBody => 'Cree un soporte USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
+  String get createUsbBody => 'Cree un medio USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Seleccione una unidad de almacenamiento USB. La unidad debe tener **al menos 16 GB de espacio.**';
+  String get createUsbListExplanation => 'Seleccione una unidad de almacenamiento USB. La unidad debe tener **al menos 16 GB de espacio.**';
 
   @override
-  String get createUsbWarning => 'La unidad de almacenamiento se reformateará y se perderán todos los datos que contenga.';
+  String get createUsbWarning => 'La unidad de almacenamiento se dará formato y se perderán todos los datos que contenga.';
 
   @override
   String get resetMediaTitle => 'Soporte USB de restablecimiento';
@@ -40,7 +40,7 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'No se detectó ningún almacenamiento extraíble';
 
   @override
-  String get noMediaDetectedSubtitle => 'Necesita un almacenamiento USB para crear un soporte de restablecimiento de fábrica.';
+  String get noMediaDetectedSubtitle => 'Necesita un almacenamiento USB para crear un medio de restablecimiento de fábrica.';
 
   @override
   String get factoryResetTitle => 'Seleccione una opción para comenzar el restablecimiento de fábrica';

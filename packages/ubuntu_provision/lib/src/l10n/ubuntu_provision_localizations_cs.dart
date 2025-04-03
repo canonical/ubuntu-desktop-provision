@@ -16,7 +16,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Před nastavením si $DISTRO přizpůsobte svým potřebám. Vaše volby můžete později změnit v Nastavení systému.';
+    return 'Před nastavením si $DISTRO přizpůsobte svým potřebám. Volby si můžete později změnit v Nastavení systému.';
   }
 
   @override
@@ -41,7 +41,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Velký text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Odbourání animací';
+  String get accessibilityReduceAnimationLabel => 'Omezení animací';
 
   @override
   String get accessibilityScreenReaderLabel => 'Čtečka obrazovky';
@@ -69,7 +69,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'Chcete-li odeslat automatické hlášení chyb včetně příslušných ladicích informací, spusťte prosím <pre>sudo ubuntu-bug $SNAP</pre> v terminálu nebo z příkazové konzole (Alt+F2).';
+    return 'Chcete-li odeslat automatické hlášení chyb včetně příslušných ladicích informací, zadejte prosím do terminálu nebo do příkazové konzole (Alt+F2) příkaz <pre>sudo ubuntu-bug $SNAP</pre>.';
   }
 
   @override
@@ -100,7 +100,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Zvolte si rozvržení klávesnice';
 
   @override
-  String get keyboardTestHint => 'Správné fungování rozvržení si můžete vyzkoušet zde';
+  String get keyboardTestHint => 'Rozvržení si vyzkoušejte zde';
 
   @override
   String get keyboardDetectTitle => 'Zjistit rozvržení klávesnice';
@@ -109,7 +109,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Zjistit';
 
   @override
-  String get keyboardVariantLabel => 'Varianta klávesnice:';
+  String get keyboardVariantLabel => 'Vyberte variantu své klávesnice:';
 
   @override
   String get keyboardPressKeyLabel => 'Stiskněte některou z následujících kláves:';
@@ -121,7 +121,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'Zvolte si motiv vzhledu';
 
   @override
-  String get themePageHeader => 'Toto je možné později kdykoli změnit v nastavení vzhledu.';
+  String get themePageHeader => 'Toto je pak možné kdykoli změnit v nastavení vzhledu.';
 
   @override
   String get themeDark => 'Tmavý';
@@ -135,19 +135,19 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get localeHeader => 'Zvolte svůj jazyk:';
+  String get localeHeader => 'Zvolte si jazyk:';
 
   @override
-  String get identityPageTitle => 'Nastavení vašeho účtu';
+  String get identityPageTitle => 'Vytvořte si účet';
 
   @override
   String get identityAutoLogin => 'Přihlásit se automaticky';
 
   @override
-  String get identityRequirePassword => 'Při přihlašování se vyžadovat heslo';
+  String get identityRequirePassword => 'Při přihlašování vyžadovat heslo';
 
   @override
-  String get identityRealNameLabel => '(Vaše) jméno';
+  String get identityRealNameLabel => 'Vaše jméno';
 
   @override
   String get identityRealNameRequired => 'Je třeba zadat jméno';
@@ -165,43 +165,43 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'Je třeba zadat název pro počítač';
 
   @override
-  String get identityHostnameTooLong => 'Takový název počítače je příliš dlouhý.';
+  String get identityHostnameTooLong => 'Název počítače je příliš dlouhý.';
 
   @override
-  String get identityInvalidHostname => 'Daný název pro počítač nelze použít (neplatný znak)';
+  String get identityInvalidHostname => 'Tento název pro počítač nelze použít';
 
   @override
-  String get identityUsernameLabel => 'Zvolte si uživatelské jméno';
+  String get identityUsernameLabel => 'Vaše uživatelské jméno';
 
   @override
   String get identityUsernameRequired => 'Je třeba zadat uživatelské jméno';
 
   @override
-  String get identityInvalidUsername => 'Dané uživatelské jméno nelze použít (neplatný znak)';
+  String get identityInvalidUsername => 'Toto uživatelské jméno nelze použít';
 
   @override
-  String get identityUsernameInUse => 'Takové uživatelské jméno už existuje.';
+  String get identityUsernameInUse => 'Toto uživatelské jméno už existuje.';
 
   @override
-  String get identityUsernameSystemReserved => 'Takové jméno je rezervováno pro využití systémem.';
+  String get identityUsernameSystemReserved => 'Toto jméno je vyhrazeno pro využití systémem.';
 
   @override
-  String get identityUsernameTooLong => 'Takové jméno je příliš dlouhé.';
+  String get identityUsernameTooLong => 'Toto jméno je příliš dlouhé.';
 
   @override
-  String get identityUsernameInvalidChars => 'Takové jméno obsahuje neplatné znaky.';
+  String get identityUsernameInvalidChars => 'Toto jméno obsahuje neplatné znaky.';
 
   @override
-  String get identityPasswordLabel => 'Zvolte si heslo';
+  String get identityPasswordLabel => 'Heslo';
 
   @override
   String get identityPasswordRequired => 'Je třeba zadat heslo';
 
   @override
-  String get identityConfirmPasswordLabel => 'Zopakujte zadání hesla (prevence překlepu)';
+  String get identityConfirmPasswordLabel => 'Zopakujte heslo';
 
   @override
-  String get identityPasswordMismatch => 'Do každé z kolonek pro heslo jste napsali něco jiného';
+  String get identityPasswordMismatch => 'Hesla se navzájem liší';
 
   @override
   String get identityPasswordShow => 'Zobrazit';
@@ -216,14 +216,14 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'V dalším kroku zadáte doménu a další podrobnosti.';
 
   @override
-  String get activeDirectoryTitle => 'Nastavit pro Active Directory';
+  String get activeDirectoryTitle => 'Přihlásit se do Active Directory';
 
   @override
   String get activeDirectoryHeader => 'Přihlásit se do Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO je navrženo tak, aby se hladce integrovalo se službou Active Directory pro snadnější správu.';
+    return '$DISTRO je pro snadnější správu navrženo, aby se hladce propojovalo se službou Active Directory.';
   }
 
   @override
@@ -242,16 +242,16 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainInvalidChars => 'Neplatné znaky';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Začíná na tečku (.)';
+  String get activeDirectoryDomainStartDot => 'Začíná tečkou (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Končí na tečku (.)';
+  String get activeDirectoryDomainEndDot => 'Končí tečkou (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Začíná na spojovník/pomlčku (-)';
+  String get activeDirectoryDomainStartHyphen => 'Začíná pomlčkou (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Končí na spojovník/pomlčku (-)';
+  String get activeDirectoryDomainEndHyphen => 'Končí pomlčkou (-)';
 
   @override
   String get activeDirectoryDomainMultipleDots => 'Obsahuje několik teček za sebou (..)';
@@ -275,19 +275,19 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Vyžadováno';
 
   @override
-  String get activeDirectoryErrorTitle => 'Chyba při nastavování pro Active Directory';
+  String get activeDirectoryErrorTitle => 'Chyba při nastavování připojení k Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Je nám líto, v tuto chvíli se nedaří nastavit pro Active Directory. Po nastartování nového systému pak navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
+  String get activeDirectoryErrorMessage => 'Bohužel se teď nedaří Active Directory nastavit. Po spuštění nového systému navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
 
   @override
-  String get networkPageTitle => 'Připojit k síti';
+  String get networkPageTitle => 'Připojení k síti';
 
   @override
   String get networkPageHeader => 'Připojit k internetu';
 
   @override
-  String get networkPageBody => 'Připojení k internetu zlepší vaši instalaci pomocí kontroly kompatibility a dalších softwarových balíčků.';
+  String get networkPageBody => 'Připojení k internetu vylepší instalaci kontrolou kompatibility a dodatečnými softwarovými balíčky.';
 
   @override
   String get networkWiredOption => 'Použít drátové připojení';
@@ -305,13 +305,13 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkWiredEnable => 'Zapnout drátové';
 
   @override
-  String get networkWifiOption => 'Připojit k Wi-Fi síti';
+  String get networkWifiOption => 'Připojit k síti Wi-Fi';
 
   @override
   String get networkWifiOff => 'Bezdrátové připojení je vypnuté';
 
   @override
-  String get networkWifiNone => 'Nevybrána žádná Wi-Fi zařízení';
+  String get networkWifiNone => 'Nezjištěna žádná zařízení Wi-Fi';
 
   @override
   String get networkWifiDisabled => 'Aby na tomto počítači bylo možné použít rozhraní Wi-Fi, je třeba zapnout bezdrátové připojení';
@@ -320,7 +320,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkWifiEnable => 'Zapnout Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Připojit ke skryté Wi-Fi síti';
+  String get networkHiddenWifiOption => 'Připojit ke skryté síti Wi-Fi';
 
   @override
   String get networkHiddenWifiNameLabel => 'Název sítě';
@@ -329,7 +329,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Je vyžadován název sítě';
 
   @override
-  String get networkNoneOption => 'V tuto chvíli se nechci připojovat k Internetu';
+  String get networkNoneOption => 'Nepřipojovat k Internetu';
 
   @override
   String get eulaPageTitle => 'Licenční smlouva';

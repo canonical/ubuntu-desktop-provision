@@ -166,7 +166,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get welcomeStartSubtitle => '提供更加簡潔的安裝體驗。';
 
   @override
-  String get welcomeStoreTitle => '商店新介面';
+  String get welcomeStoreTitle => '全新外觀的 App Store';
 
   @override
   String get welcomeStoreSubtitle => '尋找您喜愛的軟體從未如此簡單。';
@@ -277,10 +277,10 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProOnBoardingEnableUbuntuPro => '啟用 Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => '將此機器綁定到 Ubuntu Pro 訂閱以獲得直至 2032 年之更廣範圍軟體包的安全更新。';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => '將這台機器綁定到 Ubuntu Pro 訂閱，以獲得更多軟體包的安全更新，直至 2032 年。';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro 現已於此機器啟用';
+  String get ubuntuProSucessAttachHeader => '此機器已啟用 Ubuntu Pro';
 
   @override
   String get ubuntuProSucessAttachDescription => '您可以在「軟體與更新」中管理您的 Ubuntu Pro 支援服務。';

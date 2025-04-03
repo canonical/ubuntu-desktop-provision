@@ -1828,6 +1828,37 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmInstallButton => '開始安裝';
 
   @override
+  String get confirmTableErased => '已刪除';
+
+  @override
+  String get confirmTableUnchanged => '未變更';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return '從 $oldsize 調整為 $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return '已建立並格式化為 $format 用於 $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return '格式化為 $format 用於 $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return '用於 $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return '格式化為 $format';
+  }
+
+  @override
   String get installationCompleteTitle => '安裝完成';
 
   @override
@@ -1859,6 +1890,32 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get continueTesting => '繼續試用';
+
+  @override
+  String get bitlockerInfoTitle => '偵測到 BitLocker';
+
+  @override
+  String get bitlockerInfoDescription => '一個或多個磁碟分割區已使用 BitLocker 加密。';
+
+  @override
+  String get bitlockerInfoDisable => '若要與 Windows 並存的方式安裝，請停用 Windows 中的 BitLocker。';
+
+  @override
+  String get bitlockerInfoRecovery => '安裝完成後，Windows 可能會在開機時要求復原金鑰。';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return '如需說明，請造 <a href=\"$url\">BitLocker 指南</a>.';
+  }
+
+  @override
+  String get bitlockerWarningTitle => '如果沒有 BitLocker 復原金鑰，您可能會遺失所有資料';
+
+  @override
+  String get restartComputer => '重新啟動電腦';
+
+  @override
+  String get restartComputerTitle => '重新啟動電腦？';
 
   @override
   String get restartIntoWindows => '重啟進入 Windows';
@@ -2161,5 +2218,80 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get recoveryKeyTitle => 'TPM 復原密鑰';
 
   @override
+  String get recoveryKeyHeader => '取得復原金鑰';
+
+  @override
+  String get recoveryKeyInfoHeader => '如果沒有復原金鑰，您可能會遺失所有資料';
+
+  @override
+  String recoveryKeyInfoBody(String distro) {
+    return '當您第一次登入 $distro 時，請立即取得還原金鑰，並將它存放在安全的地方。';
+  }
+
+  @override
   String get recoveryKeyCommand => '安裝後，您可以透過以下指令來取得您的復原密鑰：';
+
+  @override
+  String get recoveryKeyStorageAdvice => '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
+
+  @override
+  String get recoveryKeyConfirmation => '我知道如果沒有復原金鑰，我可能會遺失所有資料';
+
+  @override
+  String landscapeMagicAttachInstructions(Object url) {
+    return '掃描 QR code 或在 <a href=\"https://$url\">$url</a> 輸入以下代碼';
+  }
+
+  @override
+  String get landscapePageTitle => '自動安裝';
+
+  @override
+  String get landscapeHeader => '登入 Landscape';
+
+  @override
+  String get landscapeDomainHeader => '輸入 Landscape 網域 (FQDN)';
+
+  @override
+  String get landscapeDomainHintText => 'Landscape 網域 (FQDN)';
+
+  @override
+  String get landscapeDomainInstructions => '提供您組織的 Landscape 網域以登入並獲取自動安裝檔案。您可以從 IT 支援取得 FQDN。';
+
+  @override
+  String get landscapeDomainTextField => 'Landscape 網域 (FQDN)';
+
+  @override
+  String get next => '下一步';
+
+  @override
+  String get landscapeDomainInvalidDomainWarning => '網域無效，請檢查或聯絡您的 IT 支援人員';
+
+  @override
+  String get landscapeDomainNoInternetTitleWarning => '連線至網際網路以繼續';
+
+  @override
+  String get landscapeDomainNoInternetDescriptionWarning => '需要透過網際網路從 Landscape 取得自動安裝檔案';
+
+  @override
+  String get landscapeCodeExpiredWarning => '代碼已過期，請重試';
+
+  @override
+  String get landscapeLoginFailedWarning => '登入失敗，請重試';
+
+  @override
+  String get landscapeErrorPageTitle => '您的帳號無法使用自動安裝功能';
+
+  @override
+  String get landscapeErrorPageBody => '請聯絡您的 IT 支援或嘗試其他安裝選項。';
+
+  @override
+  String landscapeErrorPageCode(String code) {
+    return '錯誤代碼：$code';
+  }
+
+  @override
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu 將以您的組織所提供的配置安裝';
+
+  @override
+  String get landscapeConfirmPageSuccessInfoContent => '您可以在下方檢視從 Landscape 匯入的自動安裝檔案。';
 }

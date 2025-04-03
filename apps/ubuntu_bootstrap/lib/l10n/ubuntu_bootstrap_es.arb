@@ -140,7 +140,7 @@
       "os": {}
     }
   },
-  "installationTypeZFS": "Borrar disco y usar ZFS",
+  "installationTypeZFS": "Utilizar ZFS sin cifrado",
   "@installationTypeZFS": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Atención:</font> esto eliminará todos sus programas, documentos, fotos, música y cualquier otro archivo de {os}.",
   "@installationTypeReinstallWarning": {
@@ -161,15 +161,15 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Borrar disco e instalar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeAdvancedLabel": "Funcionalidades avanzadas…",
+  "installationTypeAdvancedLabel": "Mostrar opciones avanzadas…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Funcionalidades avanzadas",
+  "installationTypeAdvancedTitle": "Cifrado y sistema de archivo",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Ninguno",
+  "installationTypeNone": "Sin cifrado",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nada seleccionado",
   "@installationTypeNoneSelected": {},
-  "installationTypeLVM": "Usar LVM",
+  "installationTypeLVM": "Utilice LVM sin cifrado",
   "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM seleccionado",
   "@installationTypeLVMSelected": {},
@@ -193,7 +193,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Podrá elegir qué sistema operativo quiere iniciar en cada arranque.",
+  "installationTypeAlongsideInfo": "Seleccione una partición para redimensionar y crear espacio para {product}. Puede elegir su sistema operativo durante el arranque.",
   "@installationTypeAlongsideInfo": {},
   "partitionEditTitle": "Editar partición",
   "@partitionEditTitle": {},
@@ -277,7 +277,7 @@
       "url": {}
     }
   },
-  "installationTypeAlongsideMulti": "Instalar {product} junto a estos",
+  "installationTypeAlongsideMulti": "Instalar {product} junto a sistemas operativos existentes",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -518,7 +518,7 @@
   "@installationSlidesProductivityTitle": {},
   "installationSlidesSupportEnterprise": "Para entornos empresariales, Canonical ofrece asistencia comercial para facilitar la instalación y gestión segura de Ubuntu en su lugar de trabajo.",
   "@installationSlidesSupportEnterprise": {},
-  "rstHeader": "Desactive RST para continuar",
+  "rstHeader": "Debe desactivar RST para continuar la instalación",
   "@rstHeader": {},
   "restartIntoWindowsTitle": "¿Quiere reiniciar en Windows?",
   "@restartIntoWindowsTitle": {},
@@ -549,7 +549,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeTPM": "Activar cifrado por hárdwer de todo el disco",
+  "installationTypeTPM": "Utilizar cifrado con backend en hardware",
   "@installationTypeTPM": {},
   "refreshSnapCopyData": "Copiando los datos {snap}...",
   "@refreshSnapCopyData": {
@@ -707,7 +707,7 @@
       "snap": {}
     }
   },
-  "recoveryKeyCommand": "Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:",
+  "recoveryKeyCommand": "Puede obtener una llave de recuperación, complete la instalación, reinicie su equipo, y ejecute este comando dentro del terminal:",
   "@recoveryKeyCommand": {},
   "refreshSnapPrerequisites": "Comprobando cumplimento de prerrequisitos de {snap}…",
   "@refreshSnapPrerequisites": {
@@ -801,7 +801,7 @@
   "@choosePassphraseHeader": {},
   "choosePassphraseTitle": "Contraseña del disco",
   "@choosePassphraseTitle": {},
-  "choosePassphraseInfoHeader": "Asegúrate de guardar tu contraseña",
+  "choosePassphraseInfoHeader": "Almacene su frase secreta en algún lugar seguro",
   "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Si pierde su contraseña, perderá todos sus datos.",
   "@choosePassphraseInfoBody": {},
@@ -823,17 +823,17 @@
       }
     }
   },
-  "installationTypeEraseInfo": "Comience desde cero en el disco seleccionado.",
+  "installationTypeEraseInfo": "Todos los datos y particiones en el disco serán borradas, incluyendo es sistema operativo.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimental",
   "@installationTypeExperimental": {},
-  "installationTypeLVMEncryption": "Usar LVM y cifrado",
+  "installationTypeLVMEncryption": "Cifrado con frase contraseña",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Borrar disco y usar ZFS con cifrado",
+  "installationTypeZFSEncryption": "Cifrar con una frase contraseña utilizando ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS y cifrado seleccionados",
   "@installationTypeZFSEncryptionSelected": {},
-  "installationTypeTPMInfo": "Esta es una característica experimental. Es posible que no funcione con su hardware o con futuras versiones de {DISTRO}. <a href=\"{url}\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción. Esto puede no funcionar con su hardware o publicaciones futuras de la {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -862,7 +862,7 @@
   "@confirmDiskEncryptionZFS": {},
   "confirmDiskEncryptionNone": "Ninguna",
   "@confirmDiskEncryptionNone": {},
-  "confirmEntryDiskSetup": "Configuración del disco",
+  "confirmEntryDiskSetup": "Tipo de instalación",
   "@confirmEntryDiskSetup": {},
   "confirmEntryApplications": "Aplicaciones",
   "@confirmEntryApplications": {},
@@ -928,5 +928,226 @@
     "format": {
       "type": "String"
     }
-  }
+  },
+  "autoinstallLandscapeOption": "Automático con Landscape",
+  "@autoinstallLandscapeOption": {},
+  "autoinstallLandscapeDescription": "Para usuarios en organización que proporciona un archivo autoinstall a través de Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "chooseOptionalPassphraseHeader": "Cree una frase secreta (opcional)",
+  "@chooseOptionalPassphraseHeader": {},
+  "autoinstallDirectFileClearButtonLabel": "Vaciar archivo",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerFilterLabel": "Archivos YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importar",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Archivo auto-instalar no es alcanzable",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Compruebe si la URL es correcta, pruebe su conexión a Internet, o inténtelo más tarde.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "El archivo auto-instalar no es legible",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorFileSystemBody": "Compruebe sus permisos o proporcione un archivo diferente.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "rstDisableWindows": "Windows, si está utilizando una configuración de arranque dual con Windows",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "Los parámetros de la BIOS",
+  "@rstDisableBios": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "URL no válida",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Compruebe si es correcta la URL o seleccione un archivo local.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "rstDisable": "Su equipo utiliza Intel RDT (Rapid Storage Technology). Puede desactivar RTS en:",
+  "@rstDisable": {},
+  "autoinstallDirectErrorInvalidContentBody": "Compruebe el archivo o proporcione uno diferente.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Archivo de auto-instalación no válido",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectOption": "Automático con archivo autoinstall",
+  "@autoinstallDirectOption": {},
+  "chooseOptionalPassphraseBody": "Una frase secreta puede ayudar a proteger sus datos incluso si el hardware se compromete. Necesitará introducir la frase secreta cada vez que encienda su equipo. No será capaz de retirarla posteriormente",
+  "@chooseOptionalPassphraseBody": {},
+  "autoinstallDirectDescription": "Para usuarios avanzados quienes tengan un autoinstall.yaml para configuraciones del sistema consistente y repetible.",
+  "@autoinstallDirectDescription": {},
+  "autoinstallDirectErrorUnkownTitle": "Error desconocido",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "chooseOptionalPassphraseInfoHeader": "Almacena su frase secreta y recupere la clave donde esté seguro",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "autoinstallDirectTitle": "Instalación automática",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Importar archivo de autoinstalador",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Puede introducir la URL de un archivo auto-instalador:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "O seleccione un archivo local:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Seleccionar archivo…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Elija archivo",
+  "@autoinstallDirectFilePickerTitle": {},
+  "installationTypeNoneInfo": "Es sistema de archivo estándar sin cifrado.",
+  "@installationTypeNoneInfo": {},
+  "bitlockerInfoTitle": "BitLocker detectado",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Una o más particiones están cifradas con BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "recoveryKeyInfoHeader": "Puede perder todos sus datos sin una clave de recuperación",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyConfirmation": "Comprendo que puedo perder todos mis datos si no tengo una clave de recuperación",
+  "@recoveryKeyConfirmation": {},
+  "next": "Siguiente",
+  "@next": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet es necesario para obtener el archivo autoinstall desde Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeMagicAttachInstructions": "Analiza el código QR o introduzca el código a continuación en <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Instalación automática",
+  "@landscapePageTitle": {},
+  "landscapeDomainTextField": "Dominio Landscape (FQDN)",
+  "@landscapeDomainTextField": {},
+  "landscapeDomainInvalidDomainWarning": "Dominio no válido, compruebe o contacte con su mantenimiento de IT",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "recoveryKeyInfoBody": "Obtenga una clave de recuperación tan pronto como su primer acceso a {distro} y almacénela en algún lugar seguro.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeHeader": "Acceder a Landscape",
+  "@landscapeHeader": {},
+  "landscapeLoginFailedWarning": "Acceso erróneo, inténtelo de nuevo",
+  "@landscapeLoginFailedWarning": {},
+  "installationTypeEraseAndInstallInfo": "Todos los archivos y datos desde la instalación del {os} existente serán borrados permanentemente.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "restartComputer": "Reiniciar equipo",
+  "@restartComputer": {},
+  "confirmTableFormatted": "Formateado como {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableResized": "Redimensionado desde {oldsize} hasta {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoBody": "Si pierde su frase secreta, perderá todos sus datos. La frase de contraseña no remplaza la llave de recuperación o su contraseña de usuario.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "confirmTableCreatedFormattedMounted": "Creado y formateado como {format} utilizado para {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHeader": "Introduzca el dominio de Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainNoInternetTitleWarning": "Conecte a Internet para continuar",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeErrorPageCode": "Código de error: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeZFSEncryptionInfo": "El cifrado nativo con ZFS. Necesitará introducir una frase secreta cada vez que encienda su equipo.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableFormattedMounted": "Formateado como {format} utilizado para {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyStorageAdvice": "Almacene la clave de recuperación donde sea seguro. Utilícela para cifrar el disco en caso de ciertos cambios del sistema. Por ejemplo, puede necesitarlo si cambia los componentes en su equipo o actualice el firmware.",
+  "@recoveryKeyStorageAdvice": {},
+  "installationTypeLVMEncryptionInfo": "Necesitará introducir una frase secreta cada vez que encienda su equipo. Esto utiliza el cifrado LUKS con LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "landscapeCodeExpiredWarning": "Código caducado, inténtelo de nuevo",
+  "@landscapeCodeExpiredWarning": {},
+  "confirmTableErased": "Borrado",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "No modificado",
+  "@confirmTableUnchanged": {},
+  "confirmTableMounted": "Utilizado para {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyHeader": "Obtenga una clave de recuperación",
+  "@recoveryKeyHeader": {},
+  "landscapeDomainHintText": "Dominio Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Instalación automática no disponible para su cuenta",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Contacte con su mantenimiento IT o intente una opción de instalación diferente.",
+  "@landscapeErrorPageBody": {},
+  "bitlockerInfoDisable": "Para instalar junto a Windows, desactive BitLocker en Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows puede solicitar claves de recuperación en el arranque tras la instalación.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Para instrucciones, visite la <a href=\"{url}\">Guía de BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Puede perder todos sus datos sin las claves de recuperación de BitLocker",
+  "@bitlockerWarningTitle": {},
+  "restartComputerTitle": "¿Reiniciar equipo?",
+  "@restartComputerTitle": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instalará con la configuración proporcionada por su organización",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Puede revisar el archivo autoinstall importado desde Landscape a continuación.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "installationTypeEraseAndInstall": "Elimine {os} e instañe {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainInstructions": "Proporcione su dominio de Landscape de la organización para acceder y obtener un archivo de auto-instalación. Puede obtener es FQDN desde su proveedor IT.",
+  "@landscapeDomainInstructions": {}
 }

@@ -1,1 +1,114 @@
-{}
+{
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "telemetryCollectError": "Fout bij het verzamelen van telemetriegegevens",
+  "@telemetryCollectError": {},
+  "welcomePageTitle": "Welkom",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Welkom bij {distro}",
+  "@welcomePageHeader": {},
+  "welcomeWhatsNew": "WAT IS ER NIEUW?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "Een optimale start",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Ondersteuning voor een schonere inrichting.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "Nieuw uiterlijk voor de App Store",
+  "@welcomeStoreTitle": {},
+  "welcomeStoreSubtitle": "Het is nog nooit zo eenvoudig geweest om je favoriete software te vinden.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Verbeterde beveiliging",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "Nieuwe opties voor hardwarematige of ZFS-codering.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">Wijzigingen bekijken</a>",
+  "@welcomeChangelogLabel": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryPageTitle": "Telemetrie",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Help mee om {distro} te verbeteren",
+  "@telemetryHeader": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryDescription": "Help ons {distro} te verbeteren door jouw systeemgegevens met ons te delen. Dit omvat zaken als je computermodel, geïnstalleerde software en de locatie die je voor jouw tijdzone heeft gekozen.",
+  "@telemetryDescription": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOn": "Ja, systeemgegevens delen met het {distro}-team",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "telemetryLabelOff": "Nee, geen systeemgegevens delen",
+  "@telemetryLabelOff": {},
+  "telemetryReportTitle": "Details van de rapportage",
+  "@telemetryReportTitle": {},
+  "privacyPageTitle": "Locatie-diensten",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Locatie-diensten inschakelen?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Laat applicaties jouw geografische locatie weten.\nJe kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Locatie-diensten",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Privacy van gegevens",
+  "@privacyPolicyLink": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProOrAddTokenManually": "of handmatig een token toevoegen",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProSubscriptionDescription": "Neem het meest uitgebreide abonnement voor open-source softwarebeveiliging",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProTokenAttachError": "Ongeldig token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Geldig token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Ongeldig token, opnieuw proberen",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Voorlopig overslaan",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro activeren",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Deze machine koppelen aan een Ubuntu Pro-abonnement voor beveiligingsupdates op een breder scala aan pakketten, tot 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro is nu ingeschakeld op deze machine",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Je kunt je Pro-diensten beheren in de applicatie Software & Updates.",
+  "@ubuntuProSucessAttachDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Altijd gratis voor persoonlijk gebruik. 30 dagen proefversie voor ondernemingen. <a href=\"https://{url}\">Meer informatie</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "telemetryLegalLabel": "Juridische mededeling",
+  "@telemetryLegalLabel": {},
+  "ubuntuProTokenAttachButton": "Koppelen",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Je kunt Ubuntu Pro later altijd inschakelen via de applicatie Software & Updates.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "telemetryReportLabel": "De eerste rapportage tonen",
+  "@telemetryReportLabel": {},
+  "ubuntuProHeader": "Dit apparaat verbinden",
+  "@ubuntuProHeader": {},
+  "ubuntuProMagicAttachInstructions": "Magisch verbinden met deze code op <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
+}

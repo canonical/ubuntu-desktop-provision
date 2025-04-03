@@ -15,58 +15,58 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Instalación automática';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Importar archivo de autoinstalador';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Puede introducir la URL de un archivo auto-instalador:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'O seleccione un archivo local:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Seleccionar archivo…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Vaciar archivo';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Elija archivo';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'Archivos YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importar';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Archivo auto-instalar no es alcanzable';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Compruebe si la URL es correcta, pruebe su conexión a Internet, o inténtelo más tarde.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL no válida';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Compruebe si es correcta la URL o seleccione un archivo local.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Archivo de auto-instalación no válido';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Compruebe el archivo o proporcione uno diferente.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'El archivo auto-instalar no es legible';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Compruebe sus permisos o proporcione un archivo diferente.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Error desconocido';
 
   @override
   String get autoinstallTitle => 'Tipo de instalación';
@@ -86,16 +86,16 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Para usuarios que quieran ser guiados paso a paso durante la instalación.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automático con archivo autoinstall';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Para usuarios avanzados quienes tengan un autoinstall.yaml para configuraciones del sistema consistente y repetible.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automático con Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organizations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Para usuarios en organización que proporciona un archivo autoinstall a través de Landscape.';
 
   @override
   String get changeButtonText => 'Cambiar';
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST detectado';
 
   @override
-  String get rstHeader => 'Desactive RST para continuar';
+  String get rstHeader => 'Debe desactivar RST para continuar la instalación';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Su equipo utiliza Intel RDT (Rapid Storage Technology). Puede desactivar RTS en:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, si está utilizando una configuración de arranque dual con Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'Los parámetros de la BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -294,22 +294,22 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Las contraseña no coinciden';
 
   @override
-  String get choosePassphraseInfoHeader => 'Asegúrate de guardar tu contraseña';
+  String get choosePassphraseInfoHeader => 'Almacene su frase secreta en algún lugar seguro';
 
   @override
   String get choosePassphraseInfoBody => 'Si pierde su contraseña, perderá todos sus datos.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Cree una frase secreta (opcional)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Una frase secreta puede ayudar a proteger sus datos incluso si el hardware se compromete. Necesitará introducir la frase secreta cada vez que encienda su equipo. No será capaz de retirarla posteriormente';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Almacena su frase secreta y recupere la clave donde esté seguro';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Si pierde su frase secreta, perderá todos sus datos. La frase de contraseña no remplaza la llave de recuperación o su contraseña de usuario.';
 
   @override
   String get createPassphrase => 'Crear una contraseña';
@@ -347,37 +347,37 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Comience desde cero en el disco seleccionado.';
+  String get installationTypeEraseInfo => 'Todos los datos y particiones en el disco serán borradas, incluyendo es sistema operativo.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Funcionalidades avanzadas…';
+  String get installationTypeAdvancedLabel => 'Mostrar opciones avanzadas…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Funcionalidades avanzadas';
+  String get installationTypeAdvancedTitle => 'Cifrado y sistema de archivo';
 
   @override
   String get installationTypeExperimental => 'Experimental';
 
   @override
-  String get installationTypeNone => 'Ninguno';
+  String get installationTypeNone => 'Sin cifrado';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Es sistema de archivo estándar sin cifrado.';
 
   @override
   String get installationTypeNoneSelected => 'Nada seleccionado';
 
   @override
-  String get installationTypeLVM => 'Usar LVM';
+  String get installationTypeLVM => 'Utilice LVM sin cifrado';
 
   @override
   String get installationTypeLVMSelected => 'LVM seleccionado';
 
   @override
-  String get installationTypeLVMEncryption => 'Usar LVM y cifrado';
+  String get installationTypeLVMEncryption => 'Cifrado con frase contraseña';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Necesitará introducir una frase secreta cada vez que encienda su equipo. Esto utiliza el cifrado LUKS con LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM y cifrado seleccionado';
@@ -386,13 +386,13 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Elegirá una clave de seguridad en el siguiente paso.';
 
   @override
-  String get installationTypeZFS => 'Borrar disco y usar ZFS';
+  String get installationTypeZFS => 'Utilizar ZFS sin cifrado';
 
   @override
-  String get installationTypeZFSEncryption => 'Borrar disco y usar ZFS con cifrado';
+  String get installationTypeZFSEncryption => 'Cifrar con una frase contraseña utilizando ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'El cifrado nativo con ZFS. Necesitará introducir una frase secreta cada vez que encienda su equipo.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seleccionado';
@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFS y cifrado seleccionados';
 
   @override
-  String get installationTypeTPM => 'Activar cifrado por hárdwer de todo el disco';
+  String get installationTypeTPM => 'Utilizar cifrado con backend en hardware';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Esta es una característica experimental. Es posible que no funcione con su hardware o con futuras versiones de $DISTRO. <a href=\"$url\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción.';
+    return '<a href=\"$url\">Lea sobre el cifrado de TPM</a> antes de elegir esta opción. Esto puede no funcionar con su hardware o publicaciones futuras de la $DISTRO.';
   }
 
   @override
@@ -433,7 +433,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Instalar $product junto a estos';
+    return 'Instalar $product junto a sistemas operativos existentes';
   }
 
   @override
@@ -443,17 +443,17 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Podrá elegir qué sistema operativo quiere iniciar en cada arranque.';
+    return 'Seleccione una partición para redimensionar y crear espacio para $product. Puede elegir su sistema operativo durante el arranque.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Elimine $os e instañe $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Todos los archivos y datos desde la instalación del $os existente serán borrados permanentemente.';
   }
 
   @override
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Aplicaciones';
 
   @override
-  String get confirmEntryDiskSetup => 'Configuración del disco';
+  String get confirmEntryDiskSetup => 'Tipo de instalación';
 
   @override
   String get confirmEntryDiskEncryption => 'Cifrado del disco';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Instalar';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Borrado';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'No modificado';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Redimensionado desde $oldsize hasta $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Creado y formateado como $format utilizado para $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Formateado como $format utilizado para $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Utilizado para $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Formateado como $format';
   }
 
   @override
@@ -745,30 +745,30 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Continuar probando';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker detectado';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Una o más particiones están cifradas con BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Para instalar junto a Windows, desactive BitLocker en Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows puede solicitar claves de recuperación en el arranque tras la instalación.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Para instrucciones, visite la <a href=\"$url\">Guía de BitLocker</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Puede perder todos sus datos sin las claves de recuperación de BitLocker';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Reiniciar equipo';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => '¿Reiniciar equipo?';
 
   @override
   String get restartIntoWindows => 'Reiniciar en Windows';
@@ -1071,80 +1071,80 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Clave de recuperación para el TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Obtenga una clave de recuperación';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Puede perder todos sus datos sin una clave de recuperación';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Obtenga una clave de recuperación tan pronto como su primer acceso a $distro y almacénela en algún lugar seguro.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:';
+  String get recoveryKeyCommand => 'Puede obtener una llave de recuperación, complete la instalación, reinicie su equipo, y ejecute este comando dentro del terminal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Almacene la clave de recuperación donde sea seguro. Utilícela para cifrar el disco en caso de ciertos cambios del sistema. Por ejemplo, puede necesitarlo si cambia los componentes en su equipo o actualice el firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Comprendo que puedo perder todos mis datos si no tengo una clave de recuperación';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Analiza el código QR o introduzca el código a continuación en <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Instalación automática';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Acceder a Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Introduzca el dominio de Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Dominio Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Proporcione su dominio de Landscape de la organización para acceder y obtener un archivo de auto-instalación. Puede obtener es FQDN desde su proveedor IT.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Dominio Landscape (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Siguiente';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Dominio no válido, compruebe o contacte con su mantenimiento de IT';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Conecte a Internet para continuar';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet es necesario para obtener el archivo autoinstall desde Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Código caducado, inténtelo de nuevo';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Acceso erróneo, inténtelo de nuevo';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Instalación automática no disponible para su cuenta';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Contacte con su mantenimiento IT o intente una opción de instalación diferente.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Código de error: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu instalará con la configuración proporcionada por su organización';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Puede revisar el archivo autoinstall importado desde Landscape a continuación.';
 }

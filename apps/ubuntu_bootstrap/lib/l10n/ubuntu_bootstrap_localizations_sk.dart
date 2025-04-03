@@ -688,12 +688,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Veľkosť bola zmenená z $oldsize na $newsize';
+    return 'Veľkosť zmenená z $oldsize na $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Vytvorené a naformátované ako $format použité pre $mountpoint';
+    return 'Vytvorené a formátované ako $format použité pre $mountpoint';
   }
 
   @override
@@ -703,12 +703,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Používa sa pre $mountpoint';
+    return 'Použité pre $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Naformátované ako $format';
+    return 'Formátované ako $format';
   }
 
   @override

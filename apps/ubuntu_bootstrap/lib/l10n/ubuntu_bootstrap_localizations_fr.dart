@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Applications';
 
   @override
-  String get confirmEntryDiskSetup => 'Configuration du disque';
+  String get confirmEntryDiskSetup => 'Type d\'installation';
 
   @override
   String get confirmEntryDiskEncryption => 'Chiffrement du disque';
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Installer';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Effacé(e)';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Inchangé(e)';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Redimensionné de $oldsize à $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Créé(e) et formaté(e) en $format utilisé(e) pour $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Formaté(e) en $format utilisé(e) pour $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Utilisé(e) pour $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Formatté(e) en $format';
   }
 
   @override
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Entrer le domaine Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Domaine Landscape (FQDN)';
 
   @override
   String get landscapeDomainInstructions => 'Fournir le domaine Landscape de votre organisation afin d\'ouvrir une session et de récupérer un fichier autoinstall. Vous pouvez obtenir le nom de domaine complet auprès de votre équipe informatique.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Échec de connexion, veuillez réessayer';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'L’installation automatisée n’est pas disponible pour votre compte';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Contactez votre support informatique ou essayez une autre option d’installation.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Code d\'erreur : $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu s’installera avec la configuration fournie par votre organisation';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Vous pouvez consulter ci-dessous le fichier d’installation automatique importé de Landscape.';
 }

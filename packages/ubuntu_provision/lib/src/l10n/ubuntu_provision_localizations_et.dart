@@ -16,7 +16,7 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Enne paigaldaamist säti $DISTRO vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.';
+    return 'Enne paigaldamist säti $DISTRO vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.';
   }
 
   @override
@@ -216,120 +216,120 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'Sa sisestad domeeni ja muud andmed järgmises sammus.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Logi sisse Active Directory teenusega';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Kas logime sisse Active Directory teenusega?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'Lihtsama haldamise nimel on $DISTRO loodud sujuvalt liidestuma Active Directory teenusega.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'Testi domeeni ühenduvust';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Domeen';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Nõutav';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Liiga pikk';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Vigased tähemärgid';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Algab punktiga (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Lõppeb punktiga (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Algab sidekriipsuga (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Lõppeb sidekriipsuga (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Sisaldab mitut järjestikku punkti (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Domeeni ei leidu';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Kasutajanimi arvuti lisamiseks domeeni';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Nõutav';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Vigased tähemärgid';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Salasõna';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Nõutav';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Viga Active Directory teenuse ühenduse seadistamisel';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Vabandust, Active Directory teenuse ühendust ei õnnestu praegu seadistada. Kui arvuti paigaldus on lõppenud, siis palun loe abiteavet <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> lehelt.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'Internetiühendus';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'Lisa internetiühendus';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Internetiühendus võimaldab võrgust laadida andmeid ühilduvuskontrolli jaoks ja täiendavaid tarkvarapakette.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'Kasuta kaabliga internetiühendust';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'Ühtegi kaabliga internetiühendust ei õnnestunud tuvastada';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'Kaabliga internetiühendus on välja lülitatud';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'Kui soovid siin arvutis Etherneti-võrku kasutada, siis kaabliga võrguühendus peab olema sisse lülitatud';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'Lülita kaabliga internetiühendus sisse';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Lisa ühendus WiFi-võrguga';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'Traadita võrguühendus on välja lülitatud';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'Ühtegi WiFi-võrku ei õnnestunud tuvastada';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'Kui soovid siin arvutis WiFi-võrku kasutada, siis traadita võrguühendus peab olema sisse lülitatud';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Lülita WiFi sisse';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'Lisa ühendus peidetud WiFi-võrguga';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'WiFi-võrgu nimi';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'WiFi-võrgu nimi on nõutav';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'Ära lisa internetiühendust';
 
   @override
   String get eulaPageTitle => 'Litsentsileping';

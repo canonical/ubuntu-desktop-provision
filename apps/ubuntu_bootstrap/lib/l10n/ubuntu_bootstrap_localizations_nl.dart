@@ -7,7 +7,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop instalatie programma';
+  String get appTitle => 'Ubuntu Desktop instalatieprogramma';
 
   @override
   String windowTitle(String RELEASE) {
@@ -15,115 +15,115 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Geautomatiseerde installatie';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Autom. installatiebestand importeren';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Je kunt de URL van een autom. installatiebestand invoeren:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Of selecteer een lokaal bestand:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Bestand selecteren…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Bestand wissen';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Bestand kiezen';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-bestanden';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importeren';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Autom. installatiebestand is onbereikbaar';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Controleer of de URL correct is, test de internetverbinding of probeer het later.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Ongeldige URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Controleer of de URL correct is of selecteer een lokaal bestand.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Ongeldig autom. installatiebestand';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Controleer het bestand of geef een ander bestand op.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Autom. installatiebestand is niet leesbaar';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Controleer je machtigingen of biedt een ander bestand aan.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Onbekende fout';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Type installatie';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Hoe wilt je $DISTRO installeren?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'Voer de URL van de autoinstall.yaml of het lokale bestandspad in:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interactieve installatie';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Voor gebruikers die stap voor stap door de installatie geleid willen worden.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Geautomatiseerd met autom. installatiebestand';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Voor gevorderde gebruikers die een autoinstall.yaml hebben voor consistente en reproduceerbare systeeminstellingen.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Geautomatiseerd met Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organizations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Voor gebruikers in organisaties die een automatisch installatiebestand leveren via Landscape.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'Veranderen';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Installatie afbreken';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Welkom bij $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO voorbereiden…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Waarschuwing:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Uitproberen of installeren';
+    return '$DISTRO uitproberen of installeren';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Wat wil je doen met $DISTRO?';
   }
 
   @override
@@ -161,16 +161,16 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST uitschakelen';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader => 'RST moet uitgeschakeld worden om door te gaan met de installatie';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Je computer maakt gebruik van Intel RST (Rapid Storage Technology). Je kunt RST uitschakelen in:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windows, als je een dual-boot-opstelling met Windows gebruikt';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'De BIOS-instellingen';
 
   @override
   String rstInstructions(String url) {
@@ -178,448 +178,448 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Secure Boot configureren';
 
   @override
-  String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+  String get configureSecureBootDescription => 'Je hebt ervoor gekozen om stuurprogramma\'s van derden te installeren. Hiervoor moet Secure Boot worden uitgeschakeld.\nOm dit te doen, moet je nu een beveiligingssleutel kiezen en deze invoeren wanneer het systeem opnieuw wordt opgestart.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Secure Boot configureren';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'Kies een beveiligingssleutel';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'De beveiligingssleutel bevestigen';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';
+  String get dontInstallDriverSoftwareNow => 'Stuurprogramma\'s voorlopig niet installeren';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'You can install it later from Software & Updates.';
+  String get dontInstallDriverSoftwareNowDescription => 'Je kunt het later installeren vanuit Software & Updates.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'Beveiligingssleutel is vereist';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'Beveiligingssleutels komen niet overeen';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Weergeven';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Verbergen';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'Toepassingen';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
+  String get updatesOtherSoftwarePageDescription => 'Welke apps zou je om te beginnen willen installeren?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimaliseer je computer';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Aanbevolen propriëtaire software installeren?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO wordt standaard geleverd zonder propriëtaire software. Het installeren van extra software kan de prestaties van je computer verbeteren.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA grafische kaart gedetecteerd';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Voor de beste prestaties van NVIDIA grafische kaarten wordt het installeren van extra stuurprogramma\'s sterk aanbevolen.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Uitgebreide selectie';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'Een offline-vriendelijke selectie van kantoorsoftware, hulpprogramma\'s en webbrowsers.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Standaard-selectie';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Alleen de essentie, webbrowser en basishulpprogramma\'s.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'Andere opties';
 
   @override
-  String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+  String get installThirdPartyTitle => 'Software van derde partijen installeren voor grafische en Wi-Fi-hardware en extra mediaformaten';
 
   @override
-  String get installThirdPartySubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installThirdPartySubtitle => 'Deze software is onderworpen aan licentievoorwaarden die bij de documentatie zijn inbegrepen. Een deel ervan is gepatenteerd.';
 
   @override
-  String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
+  String get installDriversTitle => 'Software van derden installeren voor grafische en Wi-Fi-hardware';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'Met inbegrip van, maar niet beperkt tot, NVIDIA-stuurprogramma\'s en dergelijke';
 
   @override
-  String get installCodecsTitle => 'Download and install support for additional media formats';
+  String get installCodecsTitle => 'Ondersteuning voor extra media-indelingen downloaden en installeren';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'Inclusief maar niet beperkt tot MP3, MP4, MOV en dergelijke';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'De computer is niet aangesloten op een stroombron.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Je bent momenteel offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
+  String get choosePassphraseTitle => 'Wachtwoordzin voor de schijf';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Wachtwoordzin aanmaken';
 
   @override
-  String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
+  String get choosePassphraseBody => 'Je hebt een wachtwoordzin nodig om je bestanden te versleutelen. Elke keer dat je de computer aanzet, wordt je om je wachtwoordzin gevraagd.';
 
   @override
-  String get choosePassphraseHint => 'Choose a passphrase';
+  String get choosePassphraseHint => 'Kies een wachtwoordzin';
 
   @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
+  String get choosePassphraseConfirmHint => 'Wachtwoordzin bevestigen';
 
   @override
-  String get choosePassphraseRequired => 'A passphrase is required';
+  String get choosePassphraseRequired => 'Een wachtwoordzin is vereist';
 
   @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
+  String get choosePassphraseMismatch => 'De wachtwoordzinnen komen niet overeen';
 
   @override
-  String get choosePassphraseInfoHeader => 'Store your passphrase somewhere safe';
+  String get choosePassphraseInfoHeader => 'Bewaar je wachtwoordzin op een veilige plek';
 
   @override
-  String get choosePassphraseInfoBody => 'If you lose your passphrase, you will lose all your data.';
+  String get choosePassphraseInfoBody => 'Als je de wachtwoordzin verliest, verlies je al je gegevens.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Wachtwoordzin aanmaken (optioneel)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Een wachtwoordzin kan helpen je gegevens te beschermen, zelfs als jouw hardware wordt gecompromitteerd. Je moet de wachtwoordzin elke keer invoeren wanneer je de computer aanzet. Je kunt het later niet meer verwijderen';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Bewaar je wachtwoordzin en herstelcodes op een veilige plek';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Als je de wachtwoordzin verliest, verlies je al je gegevens. De wachtwoordzin is niet de herstelcode of het wachtwoord van je gebruiker.';
 
   @override
-  String get createPassphrase => 'Create a passphrase';
+  String get createPassphrase => 'Wachtwoordzin aanmaken';
 
   @override
-  String get confirmPassphrase => 'Confirm the passphrase';
+  String get confirmPassphrase => 'Wachtwoordzin bevestigen';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Schijfindeling';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Hoe wil je $DISTRO installeren?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'Op deze computer staat momenteel $os. Wat zou je willen doen?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'Op deze computer staan momenteel $os1 en $os2. Wat zou je willen doen?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'This computer currently has multiple operating systems on it. What would you like to do?';
+  String get installationTypeMultiOSDetected => 'Op deze computer staan momenteel meerdere besturingssystemen. Wat zou je willen doen?';
 
   @override
-  String get installationTypeNoOSDetected => 'This computer currently has no detected operating systems. What would you like to do?';
+  String get installationTypeNoOSDetected => 'Deze computer heeft momenteel geen gedetecteerde besturingssystemen. Wat zou je willen doen?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'De schijf wissen en $DISTRO installeren';
   }
 
   @override
-  String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
+  String get installationTypeEraseInfo => 'Alle gegevens en partities op de schijf worden gewist, inclusief besturingssystemen.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Show advanced options...';
+  String get installationTypeAdvancedLabel => 'Geavanceerde opties weergeven…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Encryption and file system';
+  String get installationTypeAdvancedTitle => 'Versleuteling en bestandssysteem';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Experimenteel';
 
   @override
-  String get installationTypeNone => 'No encryption';
+  String get installationTypeNone => 'Geen versleuteling';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Standaard bestandssysteem zonder versleuteling.';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Niets geselecteerd';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'LVM gebruiken zonder versleuteling';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM geselecteerd';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption => 'Versleutelen met een wachtwoordzin';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String get installationTypeLVMEncryptionSelected => 'LVM en versleuteling geselecteerd';
 
   @override
-  String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
+  String get installationTypeEncryptInfo => 'In de volgende stap kies je een beveiligingssleutel.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'ZFS gebruiken zonder versleuteling';
 
   @override
-  String get installationTypeZFSEncryption => 'Encrypt with a passphrase using ZFS';
+  String get installationTypeZFSEncryption => 'Versleutelen met een wachtwoordzin met ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'Lokale versleuteling met ZFS. Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren.';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS geselecteerd';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS en versleuteling geselecteerd';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM => 'Hardwarematige versleuteling gebruiken';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
+    return '<a href=\"$url\">Lees meer over TPM-versleuteling</a> voordat je deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van $DISTRO.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM geselecteerd';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return '$os wissen en opnieuw installeren';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Waarschuwing:</font> Hiermee worden alle $os-programma\'s, documenten, foto\'s, muziek en andere bestanden verwijderd.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return '$product naast $os installeren';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return '$product naast $os1 en $os2 installeren';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return '$product naast bestaande besturingssystemen installeren';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return '$product naast andere partities installeren';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return 'Selecteer een partitie om de grootte te wijzigen en ruimte te maken voor $product. Je kunt bij het opstarten je besturingssysteem kiezen.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os wissen en $product installeren';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Alle bestanden en gegevens van de bestaande $os-installatie worden permanent verwijderd.';
   }
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Handmatige installatie';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Voor gevorderde gebruikers die op zoek zijn naar aangepaste schijfconfiguraties.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Schijf wissen en $DISTRO installeren';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Helemaal opnieuw beginnen op de geselecteerde schijf.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Schijf selecteren:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Partitie selecteren:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'De hele schijf wordt gebruikt:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Nu installeren';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Kies waar je $DISTRO wilt installeren';
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';
+  String get installAlongsideSpaceDivider => 'Wijs schijfruimte toe door hieronder de scheidingslijn te verslepen:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num kleinere partities zijn verborgen, gebruik dan de <a href=\"$url\">geavanceerde partitionering</a> voor meer controle';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Grootte van de partitie wijzigen';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Ruimte toewijzen';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Bestanden';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Partitie:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Grootte:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Beschikbaar:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Handmatige partitionering';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Aankoppelpunten moeten beginnen met \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Aankoppelpunten mogen geen spaties bevatten';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format is geen ondersteund bestandssysteem voor $mountpoint';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Apparaat';
 
   @override
   String get diskHeadersType => 'Type';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Aankoppelpunt';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Grootte';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Gebruikt';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Systeem';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Formatteren';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Vrije ruimte';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Nieuwe partitietabel';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Nieuwe lege partitie';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+  String get newPartitionTableConfirmationMessage => 'Bij de aanmaak van een nieuwe partitietabel op een heel apparaat, worden alle huidige partities verwijderd. Deze handeling kan indien nodig ongedaan worden gemaakt.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Te veel primaire partities';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Limiet bereikt';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'Apparaat voor installatie van bootloader';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Partitie aanmaken';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Partitie bewerken';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Grootte:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Typ voor de nieuwe partitie:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Primair';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Logisch';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Locatie voor de nieuwe partitie:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Begin van deze ruimte';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Einde van deze ruimte';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Gebruikt als:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Ongeformatteerd laten';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Als $format geformatteerd laten';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'De partitie formatteren';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Aankoppelpunt:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Klaar voor installatie';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Bekijk uw keuzes';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -631,37 +631,37 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Geen';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Apparaten';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Toepassingen';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'Type installatie';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Versleuteling van de schijf';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Installatieschijf';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Propriëtaire software';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Algemeen';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Beveiliging & meer';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Partities';
 
   @override
-  String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
+  String get confirmPartitionTables => 'De partitietabellen van de volgende apparaten worden gewijzigd:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -672,479 +672,479 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareCodecs => 'Codecs';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & stuurprogramma\'s';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Stuurprogramma\'s';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Installeren';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Gewist';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Onveranderd';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Grootte aangepast van $oldsize naar $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Aangemaakt en geformatteerd als $format gebruikt voor $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Geformatteerd als $format gebruikt voor $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Gebruikt voor $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Geformatteerd als $format';
   }
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Installatie voltooid';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system is geïnstalleerd en klaar voor gebruik';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** is naar de schijf gekopieerd';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Opnieuw opstarten naar $system';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Start opnieuw op om de installatie te voltooien of ga door met testen.\nWijzigingen die u aanbrengt, worden niet opgeslagen.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Je moet de computer opnieuw opstarten om het installatieproces voort te zetten.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'Afsluiten';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Nu opnieuw starten';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Doorgaan met testen';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Bitlocker gedetecteerd';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Een of meer partities zijn versleuteld met BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Voor een installatie naast Windows moet BitLocker in Windows uitgeschakeld worden.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Na installatie kan Windows bij het opstarten om herstelcodes vragen.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Ga voor instructies naar de <a href=\"$url\">BitLocker handleiding</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Zonder BitLocker-herstelcodes kun je al je gegevens kwijtraken';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Computer opnieuw starten';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Computer opnieuw starten?';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Opnieuw starten naar Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Opnieuw starten naar Windows?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Weet je zeker dat je jouw computer opnieuw wilt opstarten? Je moet de installatie van $DISTRO later opnieuw opstarten om de installatie van $DISTRO te voltooien.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Welkom bij $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Beschikbaar:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Inbegrepen:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'Snel, gratis en vol nieuwe functies';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'De nieuwste versie van $DISTRO maakt computergebruik eenvoudiger dan ooit.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Of je nu een ontwikkelaar bent of maker of gamer of beheerder, in $RELEASE vind je nieuwe hulpmiddelen om je productiviteit en je ervaring te verbeteren.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Alle toepassingen die je nodig hebt';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Installeer, beheer en update al je apps in Ubuntu Software, inclusief duizenden applicaties uit zowel de Snap Store als het $DISTRO-archief.';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Develop with the best of open source';
+  String get installationSlidesDevelopmentTitle => 'Ontwikkel enmet het beste van open source';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return '$DISTRO is het ideale werkstation voor app- of webontwikkeling, data science en AI/ML, maar ook voor devops en beheer. Elke $DISTRO-release bevat de nieuwste toolchains en ondersteunt alle belangrijke IDE\'s.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Vergroot je creativiteit';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Of je een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om je workflows naar $DISTRO te brengen met ondersteuning voor open source en industriestandaard software en applicaties.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Geweldig voor gamen';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return '$DISTRO ondersteunt de nieuwste NVIDIA- en Mesa-stuurprogramma\'s om de prestaties en compatibiliteit te verbeteren. Duizenden Windows-titels spelen geweldig op $DISTRO via applicaties zoals Steam, zonder extra configuratie.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Privé en veilig';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '$DISTRO biedt alle tools die je nodig hebt om online privé en veilig te blijven. Met ingebouwde firewall- en VPN-ondersteuning en een groot aantal privacygerichte applicaties om ervoor te zorgen dat je volledige controle houdt over jouw gegevens.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Alle $DISTRO LTS-releases worden uitgegeven met vijf jaar beveiligingsupdates, verlengd tot tien jaar met een Ubuntu Pro-abonnement.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Power up your productivity';
+  String get installationSlidesProductivityTitle => 'Verhoog je productiviteit';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO Desktop bevat LibreOffice, een suite van Microsoft Office-compatibele open source-applicaties voor documenten, spreadsheets en presentaties. Populaire samenwerkingstools zijn ook beschikbaar.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Toegang voor iedereen';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return 'De kern van de $DISTRO-filosofie is de overtuiging dat computers voor iedereen zijn. Met geavanceerde toegankelijkheidstools en opties om taal, kleuren en tekstgrootte te wijzigen, maakt $DISTRO computergebruik eenvoudig, wie en waar je ook bent.';
   }
 
   @override
   String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Taalondersteuning';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Hulp en ondersteuning';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'De officiële $DISTRO-documentatie is zowel online beschikbaar als via het Help-pictogram in het dok.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+  String get installationSlidesSupportCommunity => 'Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en het Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+  String get installationSlidesSupportEnterprise => 'Voor zakelijke gebruikers biedt Canonical commerciële ondersteuning om het gemakkelijk te maken om Ubuntu veilig op de werkplek in te voeren en te beheren.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Nuttige bronnen:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Officiële documentatie';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => '24/7 ondersteuning op bedrijfsniveau met Ubuntu Pro';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Bestanden kopiëren…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'Systeem installeren…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'Systeem instellen…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Installatie mislukt';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Niet genoeg schijfruimte';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Niet genoeg schijfruimte om $DISTRO te installeren';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'De geselecteerde schijf heeft niet genoeg schijfruimte om $DISTRO te installeren. Sluit het installatieprogramma om ruimte vrij te maken of selecteer een andere schijf.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Beschikbaar:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Vereist:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Update beschikbaar';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Er is een update beschikbaar voor het installatieprogramma';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Nu bijwerken';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Bijwerken naar de nieuwste versie voor verbeterde betrouwbaarheid en meer functies.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Update klaar';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'De huidige $snap-versie is $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Bijwerken naar versie $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'De huidige versie $version is up-to-date.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap bijwerken…';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'Sluit het installatieprogramma en start het opnieuw op om door te gaan';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Installatieprogramma sluiten';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Vereisten voor $snap worden gecontroleerd…';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap vernieuwen…';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Vernieuwing van $snap opnieuw controleren…';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap voorbereiden…';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap downloaden…';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap valideren…';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap aankoppelen…';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap-diensten beëindigen…';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap-aliassen verwijderen…';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap loskoppelen…';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap-materialen bijwerken…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap-kernel Opdrachtregel bijwerken...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap-gegevens kopiëren…';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap-beveiligingsprofielen instellen…';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap koppelen…';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap-stekkers en -sleuven aansluiten…';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Automatische $snap-aliassen instellen…';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap-aliassen inrichten…';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap-diensten starten…';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap opschonen…';
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM recovery key';
+  String get recoveryKeyTitle => 'TPM-herstelcode';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Herstelcode opvragen';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Zonder herstelcode kun je al je gegevens verliezen';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Vraag een herstelcode op zodra je je voor het eerst aanmeldt bij $distro en bewaar deze op een veilige plek.';
   }
 
   @override
-  String get recoveryKeyCommand => 'To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:';
+  String get recoveryKeyCommand => 'Om een herstelcode te krijgen, moet je de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. Je kunt hem bijvoorbeeld nodig hebben als je bepaalde onderdelen in je computer vervangt of de firmware bijwerkt.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Scan de QR-code of voer de onderstaande code in op <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Geautomatiseerde installatie';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Inloggen bij Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Landscape-domain invoeren (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape-domein (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Geef het Landscape-domein van je organisatie op om aan te melden en een automatisch installatiebestand op te halen. Je kunt de FQDN verkrijgen bij je IT-ondersteuning.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape-domein (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Verder';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Ongeldig domein, controleer het of neem contact op met je IT-ondersteuning';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Maak verbinding met internet om door te gaan';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is nodig om het automatische installatiebestand op te halen van Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Code verlopen, probeer het opnieuw';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Inloggen mislukt, probeer het opnieuw';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Geautomatiseerde installatie is niet beschikbaar voor dit account';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Neem contact op met uw IT-ondersteuning of probeer een andere installatieoptie.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Foutcode: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu wordt geïnstalleerd met de door jouw organisatie verstrekte configuratie';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Je kunt het automatische installatiebestand dat uit Landscape is geïmporteerd hieronder bekijken.';
 }
