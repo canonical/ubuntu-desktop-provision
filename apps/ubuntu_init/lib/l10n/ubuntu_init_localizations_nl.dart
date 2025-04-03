@@ -7,139 +7,139 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Welkom';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Welkom bij $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'WAT IS ER NIEUW?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Een optimale start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Ondersteuning voor een schonere inrichting.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Nieuw uiterlijk voor de App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Het is nog nooit zo eenvoudig geweest om je favoriete software te vinden.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Verbeterde beveiliging';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'Nieuwe opties voor hardwarematige of ZFS-codering.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Wijzigingen bekijken</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetrie';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'Help mee om $distro te verbeteren';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'Help ons $distro te verbeteren door jouw systeemgegevens met ons te delen. Dit omvat zaken als je computermodel, geïnstalleerde software en de locatie die je voor jouw tijdzone heeft gekozen.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Ja, systeemgegevens delen met het $distro-team';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Nee, geen systeemgegevens delen';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'De eerste rapportage tonen';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Details van de rapportage';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Juridische mededeling';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Fout bij het verzamelen van telemetriegegevens';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Locatie-diensten';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Locatie-diensten inschakelen?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'Laat applicaties jouw geografische locatie weten.\nJe kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Locatie-diensten';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Privacy van gegevens';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Magisch verbinden met deze code op <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Dit apparaat verbinden';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'of handmatig een token toevoegen';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'Neem het meest uitgebreide abonnement voor open-source softwarebeveiliging';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Altijd gratis voor persoonlijk gebruik. 30 dagen proefversie voor ondernemingen. <a href=\"https://$url\">Meer informatie</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Koppelen';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Ongeldig token';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Geldig token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'Ongeldig token, opnieuw proberen';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Voorlopig overslaan';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Je kunt Ubuntu Pro later altijd inschakelen via de applicatie Software & Updates.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro activeren';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Deze machine koppelen aan een Ubuntu Pro-abonnement voor beveiligingsupdates op een breder scala aan pakketten, tot 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is nu ingeschakeld op deze machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Je kunt je Pro-diensten beheren in de applicatie Software & Updates.';
 }

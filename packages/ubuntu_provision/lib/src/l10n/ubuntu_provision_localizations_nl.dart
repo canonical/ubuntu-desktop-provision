@@ -97,7 +97,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Toetsenbordindeling';
 
   @override
-  String get keyboardHeader => 'Kies uw toetsenbordindeling:';
+  String get keyboardHeader => 'Kies de indeling van het toetsenbord';
 
   @override
   String get keyboardTestHint => 'Type hieronder om het toetsenbord te testen';
