@@ -124,15 +124,15 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Erre a szoftverre a dokumentációjában szereplő licencfeltételek vonatkoznak. Néhányuk kereskedelmi forgalomban kapható tulajdonosi szoftver.",
   "@installThirdPartySubtitle": {},
-  "installationTypeAdvancedLabel": "Speciális funkciók…",
+  "installationTypeAdvancedLabel": "Speciális beállítások megjelenítése…",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Speciális funkciók",
+  "installationTypeAdvancedTitle": "Titkosítás és fájlrendszer",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Nincs",
+  "installationTypeNone": "Nincs titkosítás",
   "@installationTypeNone": {},
   "installationTypeEncryptInfo": "Biztonsági kulcsot a következő lépésben fog választani.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "Lemez törlése és ZFS használata",
+  "installationTypeZFS": "ZFS használata titkosítás nélkül",
   "@installationTypeZFS": {},
   "installationTypeAlongside": "A(z) {product} telepítése a(z) {os} mellé",
   "@installationTypeAlongside": {
@@ -142,7 +142,7 @@
       "os": {}
     }
   },
-  "installationTypeAlongsideInfo": "Kiválaszthatja az operációs rendszert a rendszerindítás során.",
+  "installationTypeAlongsideInfo": "Partíció kiválasztása az átméretezéshez és a(z) {product} számára szükséges hely létrehozásához. Kiválaszthatja az operációs rendszert a rendszerindítás során.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Kézi telepítés",
   "@installationTypeManual": {},
@@ -310,7 +310,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "A(z) {product} telepítése melléjük",
+  "installationTypeAlongsideMulti": "A(z) {product} telepítése a meglévő operációs rendszerek mellé",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -457,7 +457,7 @@
   "@installationSlidesSupportEnterprise": {},
   "installDriversSubtitle": "Beleértve, de nem kizárólagosan az NVIDIA illesztőprogramokat és hasonlókat",
   "@installDriversSubtitle": {},
-  "rstHeader": "Az RST kikapcsolása a folytatáshoz",
+  "rstHeader": "Le kell tiltania az RST-t a telepítés folytatásához",
   "@rstHeader": {},
   "installCodecsTitle": "További médiaformátumok támogatásának letöltése és telepítése",
   "@installCodecsTitle": {},
@@ -711,7 +711,7 @@
       "snap": {}
     }
   },
-  "installationTypeTPM": "Hardveresen támogatott teljes lemeztitkosítás engedélyezése",
+  "installationTypeTPM": "Hardveresen támogatott titkosítás használata",
   "@installationTypeTPM": {},
   "refreshSnapDownload": "A(z) {snap} letöltése…",
   "@refreshSnapDownload": {
@@ -741,7 +741,7 @@
       "snap": {}
     }
   },
-  "recoveryKeyCommand": "A helyreállítási kulcsot a telepítés után érheti el a következő paranccsal:",
+  "recoveryKeyCommand": "A helyreállítási kulcs beszerzéséhez fejezze be a telepítést, indítsa újra a számítógépet, majd futtassa ezt a parancsot a terminálban:",
   "@recoveryKeyCommand": {},
   "refreshSnapSetupAliases": "A(z) {snap} álneveinek beállítása…",
   "@refreshSnapSetupAliases": {
@@ -802,11 +802,11 @@
   "@autoinstallInstructions": {},
   "hideSecurityKey": "Elrejtés",
   "@hideSecurityKey": {},
-  "installationTypeEraseInfo": "Kezdés a nulláról a kiválasztott lemezen.",
+  "installationTypeEraseInfo": "A lemezen lévő összes adat és partíció törlésre kerül, beleértve az operációs rendszereket is.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Kísérleti",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "LVM használata",
+  "installationTypeLVM": "LVM használata titkosítás nélkül",
   "@installationTypeLVM": {},
   "selectGuidedStorageInfo": "Kezdés a nulláról a kiválasztott lemezen.",
   "@selectGuidedStorageInfo": {},
@@ -854,7 +854,7 @@
   "@refreshHeader": {},
   "validate": "Ellenőrzés",
   "@validate": {},
-  "installationTypeTPMInfo": "Ez egy kísérleti funkció. Előfordulhat, hogy nem működik az Ön hardverével vagy a jövőbeli {DISTRO} kiadásokkal. <a href=\"{url}\">Olvasson a TPM-titkosításról</a>, mielőtt ezt a lehetőséget választja.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Olvasson a TPM-titkosításról</a>, mielőtt ezt a lehetőséget választja. Előfordulhat, hogy nem működik az Ön hardverével vagy a jövőbeli {DISTRO} kiadásokkal.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -915,9 +915,9 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "A jelmondatok nem egyeznek",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Győződjön meg arról, hogy elmentette-e a jelmondatot",
+  "choosePassphraseInfoHeader": "Tárolja a jelmondatát biztonságos helyen",
   "@choosePassphraseInfoHeader": {},
-  "choosePassphraseInfoBody": "Ha elveszíti a jelmondatot, elveszíti az összes adatát.",
+  "choosePassphraseInfoBody": "Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát.",
   "@choosePassphraseInfoBody": {},
   "createPassphrase": "Jelmondat létrehozása",
   "@createPassphrase": {},
@@ -931,9 +931,9 @@
       }
     }
   },
-  "installationTypeLVMEncryption": "LVM és titkosítás használata",
+  "installationTypeLVMEncryption": "Titkosítás jelmondattal",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Lemez törlése és ZFS használata titkosítással",
+  "installationTypeZFSEncryption": "Titkosítás jelmondattal, ZFS használatával",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS és titkosítás kiválasztva",
   "@installationTypeZFSEncryptionSelected": {},
@@ -943,7 +943,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Alkalmazások",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Lemez beállítása",
+  "confirmEntryDiskSetup": "Telepítés típusa",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Lemez titkosítása",
   "@confirmEntryDiskEncryption": {},
@@ -964,5 +964,235 @@
   "refreshReady": "A frissítés kész",
   "@refreshReady": {},
   "refreshCloseLabel": "Telepítő bezárása",
-  "@refreshCloseLabel": {}
+  "@refreshCloseLabel": {},
+  "installationTypeNoneInfo": "Szabványos fájlrendszer titkosítás nélkül.",
+  "@installationTypeNoneInfo": {},
+  "installationTypeLVMEncryptionInfo": "Jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet. Ez LUKS titkosítást használ LVM-mel.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "Natív titkosítás ZFS-sel. Jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeEraseAndInstallInfo": "A meglévő {os} telepítésből származó összes fájl és adat véglegesen törlésre kerül.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoTitle": "BitLocker észlelhető",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDisable": "A Windows mellé történő telepítéshez tiltsa le a BitLockert a Windowsban.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "A Windows helyreállítási kulcsokat kérhet a telepítés utáni rendszerindításkor.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Az utasításokért nézze meg a <a href=\"{url}\">BitLocker útmutatóját</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "BitLocker helyreállítási kulcsok nélkül elveszítheti az összes adatát",
+  "@bitlockerWarningTitle": {},
+  "recoveryKeyInfoHeader": "Helyreállítási kulcs nélkül elveszítheti az összes adatát",
+  "@recoveryKeyInfoHeader": {},
+  "recoveryKeyInfoBody": "Szerezzen be egy helyreállítási kulcsot, amint először bejelentkezik a(z) {distro} rendszerbe, és tárolja azt biztonságos helyen.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainInstructions": "Adja meg a szervezete Landscape-tartományát a bejelentkezéshez és egy automatikus telepítőfájl letöltéséhez. Az FQDN-t az IT-támogatástól kaphatja meg.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainInvalidDomainWarning": "Érvénytelen tartomány, ellenőrizze, vagy vegye fel a kapcsolatot az IT-támogatással",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "autoinstallLandscapeOption": "Automatizálva a Landscape-pel",
+  "@autoinstallLandscapeOption": {},
+  "landscapeDomainHeader": "Landscape-tartomány (FQDN) megadása",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainTextField": "Landscape-tartomány (FQDN)",
+  "@landscapeDomainTextField": {},
+  "chooseOptionalPassphraseHeader": "Jelmondat létrehozása (választható)",
+  "@chooseOptionalPassphraseHeader": {},
+  "chooseOptionalPassphraseInfoHeader": "Tárolja a jelmondatát és a helyreállítási kulcsot biztonságos helyen",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "recoveryKeyHeader": "Helyreállítási kulcs beszerzése",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyConfirmation": "Megértem, hogy elveszíthetem az összes adatomat, ha nincs helyreállítási kulcsom",
+  "@recoveryKeyConfirmation": {},
+  "landscapeMagicAttachInstructions": "Olvassa be a QR-kódot, vagy adja meg a lenti kódot a(z) <a href=\"https://{url}\">{url}</a> oldalon",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapePageTitle": "Automatizált telepítés",
+  "@landscapePageTitle": {},
+  "landscapeDomainNoInternetTitleWarning": "Kapcsolódjon az internetre a folytatáshoz",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "autoinstallDirectFileClearButtonLabel": "Fájl törlése",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Fájl kiválasztása",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML-fájlok",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectImportButtonLabel": "Importálás",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "Az automatikus telepítőfájl nem érhető el",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Ellenőrizze, hogy az URL helyes-e, tesztelje az internetkapcsolatát, vagy próbálja meg később.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorFileSystemBody": "Ellenőrizze a jogosultságait, vagy adjon meg egy másik fájlt.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectErrorUnkownTitle": "Ismeretlen hiba",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "autoinstallDirectOption": "Automatizálva automatikus telepítőfájllal",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectDescription": "Gyakorlottabb felhasználóknak, akik autoinstall.yaml fájllal rendelkeznek a következetes és megismételhető rendszerbeállításokhoz.",
+  "@autoinstallDirectDescription": {},
+  "installationTypeEraseAndInstall": "A(z) {os} törlése és a(z) {product} telepítése",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "A(z) {format} nem támogatott fájlrendszer a(z) {mountpoint} csatolási ponthoz",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
+  },
+  "landscapeHeader": "Bejelentkezés a Landscape-be",
+  "@landscapeHeader": {},
+  "landscapeDomainHintText": "Landscape-tartomány (FQDN)",
+  "@landscapeDomainHintText": {},
+  "next": "Következő",
+  "@next": {},
+  "landscapeCodeExpiredWarning": "A kód lejárt, próbálja meg újra",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "A bejelentkezés nem sikerült, próbálja meg újra",
+  "@landscapeLoginFailedWarning": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Az Ubuntu a szervezete által megadott beállításokkal fog települni",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Az alábbiakban áttekintheti a Landscape-ből importált automatikus telepítőfájlt.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "restartComputer": "Számítógép újraindítása",
+  "@restartComputer": {},
+  "restartComputerTitle": "Újraindítja a számítógépet?",
+  "@restartComputerTitle": {},
+  "rstDisable": "A számítógépe Intel RST (Rapid Storage Technology) technológiát használ. Az RST-t a következő módokon tilthatja le:",
+  "@rstDisable": {},
+  "rstDisableWindows": "A Windowsban, ha kettős rendszerindítású telepítést használ Windows rendszerrel",
+  "@rstDisableWindows": {},
+  "chooseOptionalPassphraseBody": "A jelmondat segíthet megvédeni az adatokat még akkor is, ha a hardver veszélybe kerül. A jelmondatot minden alkalommal meg kell adnia, amikor bekapcsolja a számítógépet. Később nem lesz képes eltávolítani a jelmondatot.",
+  "@chooseOptionalPassphraseBody": {},
+  "chooseOptionalPassphraseInfoBody": "Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát. A jelszó nem helyettesíti a helyreállítási kulcsot vagy a felhasználói jelszavát.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "autoinstallDirectTitle": "Automatizált telepítés",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectHeader": "Automatikus telepítőfájl importálása",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectUrlLabel": "Megadhatja egy automatikus telepítőfájl URL-jét:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Vagy válasszon egy helyi fájlt:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Fájl kiválasztása…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Érvénytelen URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Ellenőrizze, hogy az URL helyes-e, vagy válasszon egy helyi fájlt.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Érvénytelen automatikus telepítőfájl",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Ellenőrizze a fájlt, vagy adjon meg egy másikat.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Az automatikus telepítőfájl nem olvasható",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallLandscapeDescription": "Olyan szervezetekben lévő felhasználóknak, amelyek automatikus telepítőfájlt biztosítanak a Landscape-en keresztül.",
+  "@autoinstallLandscapeDescription": {},
+  "rstDisableBios": "A BIOS beállításaiban",
+  "@rstDisableBios": {},
+  "confirmTableErased": "Törölve",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Változatlanul hagyva",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "Átméretezve {oldsize} méretről {newsize} méretre",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Létrehozva és {format} formátumra formázva, {mountpoint} csatolási ponthoz használva",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "{format} formátumra formázva, {mountpoint} csatolási ponthoz használva",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "{mountpoint} csatolási ponthoz használva",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "{format} formátumra formázva",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerInfoDescription": "Egy vagy több partíció BitLocker használatával van titkosítva.",
+  "@bitlockerInfoDescription": {},
+  "recoveryKeyStorageAdvice": "Tárolja a helyreállítási kulcsot biztonságos helyen. Használja azt a lemez bizonyos rendszerváltozások esetén történő visszafejtéséhez. Például szüksége lehet rá, ha megváltoztatja a számítógépben lévő alkatrészeket vagy frissíti a belső vezérlőprogramot.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internetre van szükség, hogy letöltse az automatikus telepítőfájlt a Landscape-ből",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeErrorPageTitle": "Az automatizált telepítés nem érhető el a fiókjában",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Vegye fel a kapcsolatot az IT-támogatással, vagy próbáljon más telepítési lehetőséget.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Hibakód: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -1143,8 +1143,8 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu akan dipasang dengan konfigurasi yang disediakan oleh organisasi Anda';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Anda dapat meninjau berkas autoinstall yang diimpor dari Landscape di bawah ini.';
 }

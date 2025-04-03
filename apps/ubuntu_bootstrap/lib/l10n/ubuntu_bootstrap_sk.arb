@@ -1136,7 +1136,7 @@
   "@confirmTableErased": {},
   "confirmTableUnchanged": "Nezmenené",
   "@confirmTableUnchanged": {},
-  "confirmTableResized": "Veľkosť bola zmenená z {oldsize} na {newsize}",
+  "confirmTableResized": "Veľkosť zmenená z {oldsize} na {newsize}",
   "@confirmTableResized": {
     "placeholders": {
       "oldsize": {
@@ -1158,7 +1158,7 @@
       }
     }
   },
-  "confirmTableMounted": "Používa sa pre {mountpoint}",
+  "confirmTableMounted": "Použité pre {mountpoint}",
   "@confirmTableMounted": {
     "placeholders": {
       "mountpoint": {
@@ -1166,7 +1166,7 @@
       }
     }
   },
-  "confirmTableFormatted": "Naformátované ako {format}",
+  "confirmTableFormatted": "Formátované ako {format}",
   "@confirmTableFormatted": {
     "placeholders": {
       "format": {
@@ -1174,7 +1174,7 @@
       }
     }
   },
-  "confirmTableCreatedFormattedMounted": "Vytvorené a naformátované ako {format} použité pre {mountpoint}",
+  "confirmTableCreatedFormattedMounted": "Vytvorené a formátované ako {format} použité pre {mountpoint}",
   "@confirmTableCreatedFormattedMounted": {
     "placeholders": {
       "format": {

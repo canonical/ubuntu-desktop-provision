@@ -15,19 +15,19 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => '자동화된 설치';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => '자동으로 설치된 파일을 가져옵니다.';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => '자동으로 설치된 파일의 경로를 입력 해주세요:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => '혹은 로컬 파일을 선택하세요:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => '파일을 선택하세요...';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Clear file';

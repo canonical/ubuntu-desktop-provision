@@ -27,13 +27,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileLabel => 'Nebo vyberte místní soubor:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Vybrat soubor...';
+  String get autoinstallDirectFileButtonLabel => 'Vybrat soubor…';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Vyčistit soubor';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Zvolit soubor';
+  String get autoinstallDirectFilePickerTitle => 'Vybrat soubor';
 
   @override
   String get autoinstallDirectFilePickerFilterLabel => 'Soubory YAML';
@@ -42,7 +42,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Importovat';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Soubor autoinstall není dostupný';
+  String get autoinstallDirectErrorNetworkTitle => 'K souboru autoinstall nelze přistoupit';
 
   @override
   String get autoinstallDirectErrorNetworkBody => 'Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.';
@@ -83,16 +83,16 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveOption => 'Interaktivní instalace';
 
   @override
-  String get autoinstallInteractiveDescription => 'Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.';
+  String get autoinstallInteractiveDescription => 'Pro uživatele, kteří chtějí být instalací provedeni krok za krokem.';
 
   @override
-  String get autoinstallDirectOption => 'Automatizováno souborem autoinstall';
+  String get autoinstallDirectOption => 'Automatizováno podle souboru autoinstall';
 
   @override
   String get autoinstallDirectDescription => 'Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automatizováno Landscape';
+  String get autoinstallLandscapeOption => 'Automatizováno podle Landscape';
 
   @override
   String get autoinstallLandscapeDescription => 'Pro uživatele v organizacích, které poskytují soubor autoinstall prostřednictvím Landscape.';
@@ -123,7 +123,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'Co chcete dělat s $DISTRO?';
+    return 'Co chcete s $DISTRO udělat?';
   }
 
   @override
@@ -139,7 +139,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Můžete si vyzkoušet $RELEASE aniž by se v počítači cokoli měnilo.';
+    return 'Můžete si $RELEASE vyzkoušet, aniž by se v počítači cokoli změnilo.';
   }
 
   @override
@@ -149,7 +149,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.';
+    return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Nebude to zdlouhavé.';
   }
 
   @override
@@ -158,13 +158,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST je zapnuté';
+  String get rstTitle => 'Zjištěno RST';
 
   @override
-  String get rstHeader => 'Aby bylo možné pokračovat v instalaci, musíte vypnout RST';
+  String get rstHeader => 'Aby mohla instalace pokračovat, musíte RST vypnout';
 
   @override
-  String get rstDisable => 'Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete zakázat buď v:';
+  String get rstDisable => 'Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete vypnout buď v:';
 
   @override
   String get rstDisableWindows => 'Windows, pokud používáte dual boot se systémem Windows';
@@ -174,14 +174,14 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://$url\">$url</a>';
+    return 'Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo navštivte: <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get configureSecureBootTitle => 'Nastavit Secure Boot';
 
   @override
-  String get configureSecureBootDescription => 'Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte zvolením klíče zabezpečení nyní a jeho\nnásledným zadáním po restartu systému.';
+  String get configureSecureBootDescription => 'Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Musíte si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.';
 
   @override
   String get configureSecureBootOption => 'Nastavit Secure Boot';
@@ -190,22 +190,22 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get chooseSecurityKey => 'Zvolte si klíč zabezpečení';
 
   @override
-  String get confirmSecurityKey => 'Zopakujte zadání klíče zabezpečení (prevence překlepu)';
+  String get confirmSecurityKey => 'Zopakujte klíč zabezpečení';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Nyní ovladač ještě neinstalovat';
+  String get dontInstallDriverSoftwareNow => 'Zatím ještě ovladač neinstalovat';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Je možné ho nainstalovat kdykoli později pomocí nástroje „Software a aktualizace“.';
+  String get dontInstallDriverSoftwareNowDescription => 'Můžete ho později nainstalovat pomocí nástroje Software a aktualizace.';
 
   @override
   String get configureSecureBootSecurityKeyRequired => 'Je třeba zadat klíč zabezpečení';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Do každé z kolonek pro klíč zabezpečení jste napsali něco jiného';
+  String get secureBootSecurityKeysDontMatch => 'Klíče zabezpečení se liší';
 
   @override
-  String get showSecurityKey => 'Zobrazit klíč zabezpečení';
+  String get showSecurityKey => 'Zobrazit';
 
   @override
   String get hideSecurityKey => 'Skrýt';
@@ -217,7 +217,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Které aplikace chcete mít hned od začátku nainstalované?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimalizovat váš počítač';
+  String get codecsAndDriversPageTitle => 'Optimalizovat počítač';
 
   @override
   String get codecsAndDriversPageDescription => 'Instalovat doporučený proprietární software?';
@@ -234,43 +234,43 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaBody => 'Pro nejlepší výkon grafických karet NVIDIA se důrazně doporučuje nainstalovat dodatečné ovladače.';
 
   @override
-  String get fullInstallationTitle => 'Plná instalace';
+  String get fullInstallationTitle => 'Rozšířená instalace';
 
   @override
-  String get fullInstallationSubtitle => 'Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.';
+  String get fullInstallationSubtitle => 'Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících internet.';
 
   @override
-  String get minimalInstallationTitle => 'Výchozí instalace';
+  String get minimalInstallationTitle => 'Výchozí výběr';
 
   @override
-  String get minimalInstallationSubtitle => 'Pouze nezbytné, webový prohlížeč a základní nástroje.';
+  String get minimalInstallationSubtitle => 'Jen to nejnutnější, webový prohlížeč a základní nástroje.';
 
   @override
   String get otherOptions => 'Další možnosti';
 
   @override
-  String get installThirdPartyTitle => 'Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových (Wi-Fi) sítí, stejně tak dodatečné kodeky multimédií';
+  String get installThirdPartyTitle => 'Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových sítí (Wi-Fi), a také dodatečné kodeky multimédií';
 
   @override
-  String get installThirdPartySubtitle => 'Tento software je předmětem licenčních ujednání, obsažených v dokumentaci k němu. Některý je proprietární.';
+  String get installThirdPartySubtitle => 'Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některá jsou proprietární.';
 
   @override
-  String get installDriversTitle => 'Nainstalovat ovladače od třetích stran pro grafické čipy a Wi-Fi síťová rozhraní';
+  String get installDriversTitle => 'Nainstalovat ovladače od třetích stran pro grafické čipy a síťová rozhraní Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Včetně, ale nejen, ovladačů NVIDIA a podobných';
+  String get installDriversSubtitle => 'Obsahuje mimo jiné ovladače NVIDIA a podobné';
 
   @override
-  String get installCodecsTitle => 'Stáhnout a nainstalovat podporu pro další formáty médií';
+  String get installCodecsTitle => 'Stáhnout a nainstalovat podporu pro další multimediální formáty';
 
   @override
-  String get installCodecsSubtitle => 'Včetně, ale nejen MP3, MP4, MOV a podobné';
+  String get installCodecsSubtitle => 'Obsahuje mimo jiné MP3, MP4, MOV a podobné';
 
   @override
   String get batteryWarning => 'Počítač není připojen ke zdroji napájení.';
 
   @override
-  String get offlineWarning => 'V tu chvíli nejste připojení k Internetu';
+  String get offlineWarning => 'Nejste připojení k Internetu';
 
   @override
   String get choosePassphraseTitle => 'Přístupové heslo disku';
@@ -279,50 +279,50 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Vytvořit přístupové heslo';
 
   @override
-  String get choosePassphraseBody => 'K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí počítače budete vyzváni k zadání tohoto hesla.';
+  String get choosePassphraseBody => 'K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí vás počítač vyzve k zadání tohoto hesla.';
 
   @override
-  String get choosePassphraseHint => 'Vybrat přístupové heslo';
+  String get choosePassphraseHint => 'Zvolte přístupové heslo';
 
   @override
-  String get choosePassphraseConfirmHint => 'Potvrdit přístupové heslo';
+  String get choosePassphraseConfirmHint => 'Potvrďte přístupové heslo';
 
   @override
   String get choosePassphraseRequired => 'Je vyžadováno přístupové heslo';
 
   @override
-  String get choosePassphraseMismatch => 'Přístupová hesla se neshodují';
+  String get choosePassphraseMismatch => 'Přístupová hesla se liší';
 
   @override
-  String get choosePassphraseInfoHeader => 'Uložte si své přístupové heslo na bezpečném místě';
+  String get choosePassphraseInfoHeader => 'Přístupové heslo si uložte na bezpečném místě';
 
   @override
-  String get choosePassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte všechna svá data.';
+  String get choosePassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte i všechna data.';
 
   @override
   String get chooseOptionalPassphraseHeader => 'Vytvořit přístupové heslo (volitelné)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'Přístupové heslo může pomoci chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit';
+  String get chooseOptionalPassphraseBody => 'Přístupové heslo pomůže chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit';
 
   @override
   String get chooseOptionalPassphraseInfoHeader => 'Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte všechna svá data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.';
+  String get chooseOptionalPassphraseInfoBody => 'Pokud ztratíte přístupové heslo, ztratíte i všechna data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.';
 
   @override
-  String get createPassphrase => 'Vytvořit přístupové heslo';
+  String get createPassphrase => 'Vytvořte přístupové heslo';
 
   @override
-  String get confirmPassphrase => 'Potvrdit přístupové heslo';
+  String get confirmPassphrase => 'Potvrďte přístupové heslo';
 
   @override
   String get installationTypeTitle => 'Nastavení disku';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'Jak chcete nainstalovat $DISTRO?';
+    return 'Jak chcete $DISTRO nainstalovat?';
   }
 
   @override
@@ -336,10 +336,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Na tomto počítači se v současnosti nachází vícero operačních systémů. Co si přejete udělat?';
+  String get installationTypeMultiOSDetected => 'Na tomto počítači se už nachází několik operačních systémů. Co si přejete udělat?';
 
   @override
-  String get installationTypeNoOSDetected => 'Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?';
+  String get installationTypeNoOSDetected => 'Na tomto počítači nebyl zjištěn žádný operační systém. Co si přejete udělat?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -347,7 +347,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Všechna data a oddíly na disku budou vymazány, včetně operačních systémů.';
+  String get installationTypeEraseInfo => 'Všechna data a oddíly na disku budou smazány, včetně operačních systémů.';
 
   @override
   String get installationTypeAdvancedLabel => 'Zobrazit pokročilé možnosti…';
@@ -359,7 +359,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeExperimental => 'Experimentální';
 
   @override
-  String get installationTypeNone => 'Žádné šifrování';
+  String get installationTypeNone => 'Bez šifrování';
 
   @override
   String get installationTypeNoneInfo => 'Standardní souborový systém bez šifrování.';
@@ -377,7 +377,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Šifrovat pomocí přístupového hesla';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Při každém zapnutí počítače budete muset zadat přístupové heslo. Toto používá šifrování LUKS s LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Při každém zapnutí počítače budete muset zadat přístupové heslo. Používá se šifrování LUKS s LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';
@@ -401,7 +401,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Vybráno ZFS a šifrování';
 
   @override
-  String get installationTypeTPM => 'Použít na hardware založené šifrování';
+  String get installationTypeTPM => 'Použít hardwarové šifrování';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
@@ -409,7 +409,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM vybráno';
+  String get installationTypeTPMSelected => 'Vybráno TPM';
 
   @override
   String installationTypeReinstall(String os) {
@@ -418,7 +418,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">VAROVÁNÍ:</font> Toto smaže veškeré aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory), nacházející se v rámci $os.';
+    return '<font color=\"$color\">Varování:</font> Tímto se smažou veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému $os.';
   }
 
   @override
@@ -443,7 +443,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Vyberte oddíl, jehož velikost chcete změnit, a vytvořte místo pro $product. Operační systém si můžete vybrat během spouštění.';
+    return 'Vyberte oddíl, jehož velikost chcete změnit, aby se vytvořilo místo pro $product. Operační systém si můžete vybrat při spuštění počítače.';
   }
 
   @override
@@ -457,11 +457,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeManual => 'Ruční rozdělení na oddíly';
+  String get installationTypeManual => 'Ruční instalace';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.';
+    return 'Pro pokročilé uživatele, kteří chtějí nastavení disků upravit vlastnoručně.';
   }
 
   @override
@@ -470,7 +470,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Začněte od začátku na zvoleném disku.';
+  String get selectGuidedStorageInfo => 'Začněte na zvoleném disku od nuly.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Vyberte disk:';
@@ -479,14 +479,14 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get selectGuidedStoragePartitionDropdownLabel => 'Vyberte oddíl:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'Bude použit celý disk:';
+  String get selectGuidedStorageInfoLabel => 'Použije se celý disk:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Nainstalovat nyní';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Vyberte, kam nainstalovat $DISTRO';
+    return 'Vyberte, kam $DISTRO nainstalovat';
   }
 
   @override
@@ -494,7 +494,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num menších oddílů skryto. Pokud potřebujete mít nad procesem více kontroly, použijte <a href=\"$url\">nástroj pro pokročilou správu oddílů</a>';
+    return '$num menších oddílů skryto. Pokud potřebujete postup více upravit, použijte <a href=\"$url\">nástroj pro pokročilou správu oddílů</a>';
   }
 
   @override
@@ -516,10 +516,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'K dispozici:';
 
   @override
-  String get allocateDiskSpace => 'Ruční rozdělení';
+  String get allocateDiskSpace => 'Ruční dělení';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Je třeba, aby přípojné body začínaly na „/“ (dopředné lomítko)';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Je třeba, aby přípojné body začínaly na „/“';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace => 'Přípojné body nemohou obsahovat mezery';
@@ -554,13 +554,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get freeDiskSpace => 'Volné místo';
 
   @override
-  String get newPartitionTable => 'Nová tabulka rozdělení na oddíly';
+  String get newPartitionTable => 'Nová tabulka dělení oddílů';
 
   @override
   String get newPartitionTableConfirmationTitle => 'Nový prázdný oddíl';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Vytvoření nové tabulky oddílů na celém zařízení z něj odebere veškeré stávající oddíly. V případě potřeby lze v tomto kroku ještě tuto operaci vzít zpět (ovšem po zapsání změn už pak ne).';
+  String get newPartitionTableConfirmationMessage => 'Vytvoření nové tabulky oddílů na celém zařízení odebere veškeré stávající oddíly. V tomto kroku ještě lze tuto operaci vzít zpět.';
 
   @override
   String get tooManyPrimaryPartitions => 'Příliš mnoho primárních oddílů';
@@ -569,7 +569,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get partitionLimitReached => 'Dosaženo limitu';
 
   @override
-  String get bootLoaderDevice => 'Zařízení na které nainstalovat zavaděč systému';
+  String get bootLoaderDevice => 'Zařízení kam nainstalovat zavaděč systému';
 
   @override
   String get partitionCreateTitle => 'Vytvořit oddíl';
@@ -581,7 +581,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get partitionSizeLabel => 'Velikost:';
 
   @override
-  String get partitionTypeLabel => 'Zadejte typ pro nový oddíl:';
+  String get partitionTypeLabel => 'Typ nového oddílu:';
 
   @override
   String get partitionTypePrimary => 'Primární';
@@ -640,7 +640,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Aplikace';
 
   @override
-  String get confirmEntryDiskSetup => 'Nastavení disku';
+  String get confirmEntryDiskSetup => 'Typ instalace';
 
   @override
   String get confirmEntryDiskEncryption => 'Šifrování disku';
@@ -661,7 +661,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Oddíly';
 
   @override
-  String get confirmPartitionTables => 'Budou změněny tabulky rozdělení na oddíly následujících zařízení:';
+  String get confirmPartitionTables => 'Tabulky dělení oddílů se na následujících zařízení změní:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -681,34 +681,34 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Instalace';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Vymazáno';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Nezměněno';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Změněna velikost z $oldsize na $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Vytvořeno a naformátováno jako $format, použito pro $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Naformátováno jako $format, použito pro $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Použito pro $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Naformátováno jako $format';
   }
 
   @override
@@ -721,7 +721,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** byl zkopírován na disk';
+    return '**$system** bylo zkopírováno na disk';
   }
 
   @override
@@ -730,7 +730,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restartujte pro dokončení instalace nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.';
+  String get restartWarningBody => 'Restartujte, aby se dokončila instalace, nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.';
 
   @override
   String get rebootToConfigureWarning => 'Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.';
@@ -751,10 +751,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get bitlockerInfoDescription => 'Jeden nebo více oddílů je šifrováno pomocí nástroje BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'Pro instalaci spolu se systémem Windows vypněte ve Windows nástroj BitLocker.';
+  String get bitlockerInfoDisable => 'Pro instalaci vedle systému Windows vypněte ve Windows nástroj BitLocker.';
 
   @override
-  String get bitlockerInfoRecovery => 'Systém Windows může po instalaci vyžadovat obnovovací klíče při spuštění.';
+  String get bitlockerInfoRecovery => 'Po instalaci může systém Windows při spuštění vyžadovat obnovovací klíče.';
 
   @override
   String bitlockerInfoInstructions(String url) {
@@ -778,7 +778,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Opravdu chcete váš počítač restartovat? Pokud poté budete chtít dokončit instalaci $DISTRO, bude třeba znovu spustit instalaci $DISTRO.';
+    return 'Opravdu chcete počítač restartovat? Pokud pak budete chtít instalaci $DISTRO dokončit, bude třeba instalaci $DISTRO spustit znovu.';
   }
 
   @override
@@ -793,7 +793,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Obsaženo:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Rychlé, svobodné a plné nových funkcí';
+  String get installationSlidesWelcomeTitle => 'Rychlé, bezplatné a plné nových funkcí';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -802,15 +802,15 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Ať už jste vývojáři, tvůrci, hráči či správci, naleznete zde nové nástroje zvyšující vaši produktivitu a vylepšující váš dojem z používání $RELEASE.';
+    return 'Ať už jste vývojáři, tvůrci, hráči či správci, v $RELEASE naleznete nové nástroje, které vám zvýší produktivitu a zpříjemní používání systému.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Všechny aplikace které potřebujete';
+  String get installationSlidesSoftwareTitle => 'Všechny aplikace, které potřebujete';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Instalujte, spravujte a aktualizujte vámi používané aplikace v Ubuntu Software, obsahujícího tisíce aplikací jak ze Snap Store, tak z archivu balíčků $DISTRO.';
+    return 'V Centru aplikací můžete instalovat, spravovat a aktualizovat všechny aplikace, včetně tisíců aplikací z obchodu Snap i z archivu $DISTRO.';
   }
 
   @override
@@ -818,7 +818,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci / strojové učení, stejně tak pro devops a správu systémů. Každé vydání $DISTRO obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí.';
+    return '$DISTRO je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci (AI/ML), a také pro devops a správu systémů. Každé vydání $DISTRO obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí (IDE).';
   }
 
   @override
@@ -834,7 +834,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO podporuje nejnovější ovladače od NVIDIA (to stejné ty z Mesa), což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na $DISTRO prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.';
+    return '$DISTRO podporuje nejnovější ovladače NVIDIA a Mesa, což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na $DISTRO prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.';
   }
 
   @override
@@ -847,7 +847,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'Všechna $DISTRO LTS vydání dostávají po dobu pěti let opravy zabezpečení s tím, že je možné prodloužit na deset let předplatným Ubuntu Pro.';
+    return 'Všechna vydání $DISTRO LTS dostávají opravy zabezpečení po dobu pěti let, nebo prodloužené na deset let předplatným Ubuntu Pro.';
   }
 
   @override
@@ -855,7 +855,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop obsahuje LibreOffice – sadu open source aplikaci, kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.';
+    return '$DISTRO Desktop obsahuje LibreOffice – sadu open source aplikací kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.';
   }
 
   @override
@@ -863,7 +863,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'V srdci filozofie $DISTRO je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění hendikepovaným a možnosti změnit jazyk, barvy a velikost textu rozhraní, $DISTRO činí používání počítače snadné – ať už jste kdokoli a žijete kdekoli.';
+    return 'V jádru filozofie $DISTRO je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění a možnostem změnit jazyk, barvy a velikost textu rozhraní usnadňuje $DISTRO používání počítače, ať už jste kdokoli a kdekoli.';
   }
 
   @override
@@ -881,7 +881,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Web Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.';
+  String get installationSlidesSupportCommunity => 'Stránka Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.';
 
   @override
   String get installationSlidesSupportEnterprise => 'Pro firemní uživatele Canonical poskytuje komerční podporu, díky které je snadné zavést a spravovat Ubuntu na pracovišti.';
@@ -893,7 +893,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => 'Oficiální dokumentace';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Podpora 24/7 na podnikové úrovni s Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'Nepřetržitá podpora na podnikové úrovni s Ubuntu Pro';
 
   @override
   String get copyingFiles => 'Kopírování souborů…';
@@ -917,7 +917,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'Vybraný disk nemá dostatek místa pro instalaci $DISTRO. Ukončete instalační program, abyste uvolnili místo, nebo vyberte jiný disk.';
+    return 'Vybraný disk nemá pro instalaci $DISTRO dostatek místa. Ukončete instalační program a uvolněte místo, nebo vyberte jiný disk.';
   }
 
   @override
@@ -979,7 +979,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Zjišťování opětovného znovunačítání $snap…';
+    return 'Kontrola opětovného znovunačítání $snap…';
   }
 
   @override
@@ -1014,7 +1014,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Rušení odkazování na $snap…';
+    return 'Rušení odkazů na $snap…';
   }
 
   @override
@@ -1024,7 +1024,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Aktualizace parametrů pro spouštění jádra systému $snap…';
+    return 'Aktualizace parametrů $snap pro spouštění jádra systému…';
   }
 
   @override
@@ -1059,7 +1059,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Start služeb $snap…';
+    return 'Spouštění služeb $snap…';
   }
 
   @override
@@ -1078,14 +1078,14 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Získejte obnovovací klíč, jakmile se poprvé přihlásíte do $distro a uložte jej na bezpečném místě.';
+    return 'Jakmile se poprvé přihlásíte do $distro, získejte obnovovací klíč a uložte si jej na bezpečném místě.';
   }
 
   @override
   String get recoveryKeyCommand => 'Pro získání obnovovacího klíče dokončete instalaci, restartujte počítač a v terminálu spusťte tento příkaz:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Uložte klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.';
+  String get recoveryKeyStorageAdvice => 'Uložte si klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.';
 
   @override
   String get recoveryKeyConfirmation => 'Rozumím, že pokud nebudu mít klíč pro obnovení, mohu ztratit všechna svá data';
@@ -1105,7 +1105,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => 'Zadejte doménu Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Doména Landscape (FQDN)';
 
   @override
   String get landscapeDomainInstructions => 'Zadejte doménu Landscape vaší organizace, abyste se mohli přihlásit a načíst soubor autoinstall. FQDN můžete získat od vaší IT podpory.';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Přihlášení se nezdařilo, zkuste to znovu';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Automatizovaná instalace není pro váš účet k dispozici';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Obraťte se na svou IT podporu nebo zkuste jinou možnost instalace.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Kód chyby: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu bude nainstalováno s nastavením, které poskytuje vaše organizace';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape.';
 }

@@ -1143,8 +1143,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Suiteáilfidh Ubuntu leis an gcumraíocht a sholáthraíonn d\'eagraíocht';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.';
 }

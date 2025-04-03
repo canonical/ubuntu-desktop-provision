@@ -172,7 +172,7 @@
   },
   "configureSecureBootDescription": "Avètz causit d’installar de pilòts tèrces. Aquò requerís la desactivacion de l’amorçatge segur.\nPer aquò far, devètz causir una clau de seguretat ara, e la picar quand lo sistèma avia.",
   "@configureSecureBootDescription": {},
-  "installationTypeAlongsideInfo": "Los documents, la musica e los autres fichièrs personals seràn gardats. Podètz causir quin sistèma operatiu volètz cada que l’ordenador s’aluca.",
+  "installationTypeAlongsideInfo": "Seleccionatz una particion de redimensionar e creatz l’espaci per {product}. Podètz causir quin sistèma operatiu volètz cada que l’ordenador s’aluca.",
   "@installationTypeAlongsideInfo": {},
   "configureSecureBootOption": "Configurar l’amorçatge segur",
   "@configureSecureBootOption": {},
@@ -188,11 +188,11 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Escafar lo disc e installar {DISTRO}",
   "@installationTypeErase": {},
-  "installationTypeAdvancedLabel": "Foncionalitats avançadas...",
+  "installationTypeAdvancedLabel": "Mostrar las opcions avançadas...",
   "@installationTypeAdvancedLabel": {},
-  "installationTypeAdvancedTitle": "Foncionalitats avançadas",
+  "installationTypeAdvancedTitle": "Chiframent e sistèma de fichièrs",
   "@installationTypeAdvancedTitle": {},
-  "installationTypeNone": "Cap",
+  "installationTypeNone": "Cap de chiframent",
   "@installationTypeNone": {},
   "installationTypeNoneSelected": "Cap pas seleccionat",
   "@installationTypeNoneSelected": {},
@@ -202,7 +202,7 @@
   "@installationTypeEncrypt": {},
   "installationTypeEncryptInfo": "Causiretz una clau de seguretat a l’etapa seguenta.",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "EXPERIMENTAL : escafar lo disc e utilizar ZFS",
+  "installationTypeZFS": "Utilizar ZFS sens chiframent",
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "ZFS seleccionat",
   "@installationTypeZFSSelected": {},
@@ -260,7 +260,7 @@
   "@installationFailed": {},
   "installAlongsidePartition": "Particion :",
   "@installAlongsidePartition": {},
-  "installationTypeAlongsideMulti": "Installar {product} a lor costat",
+  "installationTypeAlongsideMulti": "Installar {product} a costat dels sistèmas operatius existissents",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -516,7 +516,7 @@
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Per las entrepresas Canonical fornís una assisténcia comerciala per facilitar l’integracion e la gestion d’Ubuntu en tota seguretat al lòc de trabalh.",
   "@installationSlidesSupportEnterprise": {},
-  "rstHeader": "Desactivatz lo RST per contunhar",
+  "rstHeader": "Devètz desactivar lo RST per contunhar l’installacion",
   "@rstHeader": {},
   "bitlockerHeader": "Desactivatz BitLocker per contunhar",
   "@bitlockerHeader": {},
@@ -555,7 +555,7 @@
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM seleccionat",
   "@installationTypeTPMSelected": {},
-  "installationTypeTPM": "EXPERIMENTAL : activar lo chiframent material del disc complèt",
+  "installationTypeTPM": "Utilizar lo chiframent material",
   "@installationTypeTPM": {},
   "fullInstallationTitle": "Installacion complèta",
   "@fullInstallationTitle": {},
@@ -722,7 +722,7 @@
   "@choosePassphraseHeader": {},
   "confirmEntryApplications": "Aplicacions",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "Configuracion del disc",
+  "confirmEntryDiskSetup": "Tipe d’installacion",
   "@confirmEntryDiskSetup": {},
   "confirmSectionGeneralTitle": "General",
   "@confirmSectionGeneralTitle": {},
@@ -774,21 +774,21 @@
   "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Las frasas secrètas correspondon pas",
   "@choosePassphraseMismatch": {},
-  "choosePassphraseInfoHeader": "Asseguratz-vos de salvagardar vòstra frasa secrèta",
+  "choosePassphraseInfoHeader": "Gardatz vòstra frasa secrèta en luòc segur",
   "@choosePassphraseInfoHeader": {},
   "createPassphrase": "Crear una frasa secrèta",
   "@createPassphrase": {},
   "confirmPassphrase": "Confirmar la frasa secrèta",
   "@confirmPassphrase": {},
-  "installationTypeEraseInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "installationTypeEraseInfo": "Totas las donadas sul disc seràn espotidas, tanben los sistèmas operatius.",
   "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimental",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "Utilizar LVM",
+  "installationTypeLVM": "Utilizar LVM sens chiframent",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "Utilizar LVM e lo chiframent",
+  "installationTypeLVMEncryption": "Chifrar amb frasa secrèta",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "Escafar lo disc e utilizar ZFS amb chiframent",
+  "installationTypeZFSEncryption": "Chifrar amb una frasa secrèta en utilizant ZFS",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "ZFS e chiframent seleccionats",
   "@installationTypeZFSEncryptionSelected": {},
@@ -816,7 +816,7 @@
   "@rebootToConfigureWarning": {},
   "recoveryKeyTitle": "Clau de recuperacion del TPM",
   "@recoveryKeyTitle": {},
-  "installationTypeTPMInfo": "Aquò es una foncionalitat experimentala. Pòt arribar que fonciona pas amb vòstre material o la versions venentas de {DISTRO}. <a href=\"{url}\">Assabentatz-vos tocant lo chiframent TPM</a> abans de causir aquesta opcion.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Assabentatz-vos tocant lo chiframent TPM</a> abans de causir aquesta opcion. Aquò pòt foncionar pas amb vòstre material o futuras versions de {DISTRO}.",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -931,7 +931,7 @@
       }
     }
   },
-  "recoveryKeyCommand": "Podètz accedir a vòstra clau de recuperacion aprèp l’installacion amb la comanda seguenta :",
+  "recoveryKeyCommand": "Per obténer la clau de recuperacion, acabatz l’installacion, reaviatz l’ordenador puèi executatz la comanda seguenta dins un terminal :",
   "@recoveryKeyCommand": {},
   "allocateDiskSpaceInvalidMountPointFormat": "{format} es pas un sistèma de fichièrs compatible amb {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
@@ -1000,5 +1000,132 @@
   "landscapeDomainNoInternetTitleWarning": "Connectatz-vos a Internet per contunhar",
   "@landscapeDomainNoInternetTitleWarning": {},
   "landscapeDomainTextField": "Domeni Landscape (FQDN)",
-  "@landscapeDomainTextField": {}
+  "@landscapeDomainTextField": {},
+  "autoinstallDirectErrorNetworkBody": "Verificatz que l'URL es corrècta, provatz la connexion Internet, o ensajatz mai tard.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Verificatz que l'URL es corrècta o seleccionatz un fichièr local.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Fichièr autoinstall illegible",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorInvalidContentBody": "Verificatz lo fichièr o fornissètz-ne un autre.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "rstDisableBios": "Los paramètres del BIOS",
+  "@rstDisableBios": {},
+  "installationTypeZFSEncryptionInfo": "Chiframent natiu amb ZDS. Deuretz picar un senhal cada còp qu’alucaretz l’ordenador.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "confirmTableResized": "Redimensionada de {oldsize} cap a {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeNoneInfo": "Sistèma de fichièrs estandard sens chiframent.",
+  "@installationTypeNoneInfo": {},
+  "autoinstallLandscapeDescription": "Pels utilizaires d’organizacions que fornisson un fichièr autoinstal via Landscape.",
+  "@autoinstallLandscapeDescription": {},
+  "chooseOptionalPassphraseHeader": "Crear una frasa secrèta (facultatiu)",
+  "@chooseOptionalPassphraseHeader": {},
+  "installationTypeEraseAndInstallInfo": "Totes los fichièrs e donadas de l’installacion existenta de {os} seràn suprimits per totjorn.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectDescription": "Pels utilizaires avançats qu’an un autoinstall.yaml per de configuracions de sistèma coerentas e reproductiblas.",
+  "@autoinstallDirectDescription": {},
+  "confirmTableErased": "Espotida",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Non modificada",
+  "@confirmTableUnchanged": {},
+  "bitlockerInfoRecovery": "Windows poiriá demandar de claus de recuperacion a l’aviada aprèp l’installacion.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoDisable": "Per installar a costat de Windows, desactivatz BitLocker dins Windows.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoInstructions": "Per las consignas, consultatz <a href=\"{url}\">la guida BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "rstDisable": "Vòstre ordenador utiliza Intel RST (Rapid Storage Technology). Podètz desactivar RST dins :",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windows, s’utilizatz una configuracion mantun sistèma operatiu amb Windows",
+  "@rstDisableWindows": {},
+  "chooseOptionalPassphraseInfoHeader": "Gardatz vòstra frasa secrèta e clau de recuperacion en luòc segur",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "chooseOptionalPassphraseBody": "Una frasa secrèta pot ajudar a protegir las donadas amai lo material es compromés. Deuretz picar la frasa secrèta a cada aviada de l'ordenador. La poiretz pas levar mai tard.",
+  "@chooseOptionalPassphraseBody": {},
+  "installationTypeLVMEncryptionInfo": "Deuretz picar una frasa secrèta cada còp qu'alucatz l'ordenador. Emplega lo chiframent LUKS amb LVM.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "bitlockerInfoTitle": "BitLocker detectat",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Una o mai d'una particion son chifrada amb BitLocker.",
+  "@bitlockerInfoDescription": {},
+  "restartComputer": "Reaviar l'ordenador",
+  "@restartComputer": {},
+  "recoveryKeyInfoHeader": "Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion",
+  "@recoveryKeyInfoHeader": {},
+  "confirmTableMounted": "Utilizada per {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatada en {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formatada en {format} utilizada per {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Creada e formatada en {format} utilizada per {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Riscatz de pèrdre totas vòstras donadas sens las claus de recuperacion BitLocker",
+  "@bitlockerWarningTitle": {},
+  "restartComputerTitle": "Reaviar l'ordenador ?",
+  "@restartComputerTitle": {},
+  "recoveryKeyInfoBody": "Obtenètz una clau de recuperacion tre la primièra connexion a {distro} e gardatz-la en luòc segur.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseInfoBody": "Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "recoveryKeyStorageAdvice": "Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.",
+  "@recoveryKeyStorageAdvice": {}
 }

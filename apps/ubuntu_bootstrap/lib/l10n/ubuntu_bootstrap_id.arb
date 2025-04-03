@@ -1224,5 +1224,9 @@
   "rstDisableWindows": "Windows, jika Anda menggunakan setup dual boot dengan Windows",
   "@rstDisableWindows": {},
   "rstDisableBios": "Pengaturan BIOS",
-  "@rstDisableBios": {}
+  "@rstDisableBios": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu akan dipasang dengan konfigurasi yang disediakan oleh organisasi Anda",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "Anda dapat meninjau berkas autoinstall yang diimpor dari Landscape di bawah ini.",
+  "@landscapeConfirmPageSuccessInfoContent": {}
 }
