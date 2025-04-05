@@ -1076,7 +1076,7 @@
   "@bitlockerInfoDisable": {},
   "installationTypeZFSEncryptionInfo": "Native Verschlüsselung mit ZFS. Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben.",
   "@installationTypeZFSEncryptionInfo": {},
-  "installationTypeLVMEncryptionInfo": "Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben. Dies verwendet LUKS-Verschlüsselung mit LVM.",
+  "installationTypeLVMEncryptionInfo": "Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben. Hierbei wird LUKS-Verschlüsselung mit LVM verwendet.",
   "@installationTypeLVMEncryptionInfo": {},
   "installationTypeNoneInfo": "Standard-Dateisystem ohne Verschlüsselung.",
   "@installationTypeNoneInfo": {},
