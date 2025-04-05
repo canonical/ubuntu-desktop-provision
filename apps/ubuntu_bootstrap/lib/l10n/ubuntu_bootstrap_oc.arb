@@ -1127,5 +1127,40 @@
   "chooseOptionalPassphraseInfoBody": "Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.",
   "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyStorageAdvice": "Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.",
-  "@recoveryKeyStorageAdvice": {}
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet es necessari per recuperar lo fichièr de Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu s'installarà amb la configuracion provesida per vòstra organizacion",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeMagicAttachInstructions": "Numerizatz lo còdi QR o picatz lo còdi çai jos <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  },
+  "landscapeDomainHeader": "Picatz lo domeni Landscape (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainHintText": "Domeni Landscape (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageTitle": "Installacion automatica indisponibla per vòstre compte",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageCode": "Còdi d'error : {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainInstructions": "Fornissètz lo domeni Landscape de vòstra organizacion per vos i connectar e recuperar lo fichièr autoinstall. Podètz obténer lo FQDN al prèp de vòstra assisténcia informatica.",
+  "@landscapeDomainInstructions": {},
+  "landscapeErrorPageBody": "Contactatz vòstra assisténcia informatica p ensajatz una opcion d'installacion diferenta.",
+  "@landscapeErrorPageBody": {},
+  "landscapeConfirmPageSuccessInfoContent": "Podètz repassar lo fichièr d'autoinstall importat de Landscape çai jos.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "recoveryKeyConfirmation": "Compreni que pòdi pèrdre totas mas donadas s'ai pas de clau de recuperacion",
+  "@recoveryKeyConfirmation": {},
+  "landscapeHeader": "Accedir a Landscape",
+  "@landscapeHeader": {}
 }
