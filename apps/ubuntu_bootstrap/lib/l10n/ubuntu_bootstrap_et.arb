@@ -276,7 +276,7 @@
   "@codecsAndDriversNvidiaNote": {},
   "fullInstallationTitle": "Laiendatud valik",
   "@fullInstallationTitle": {},
-  "codecsAndDriversPageBody": "{DISTRO} dsitributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.",
+  "codecsAndDriversPageBody": "{DISTRO} distributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -612,7 +612,7 @@
       }
     }
   },
-  "refreshSnapSetupAliases": "Seadistame paketi aliasi: {snap}...",
+  "refreshSnapSetupAliases": "Seadistan paketi aliasi: {snap}...",
   "@refreshSnapSetupAliases": {
     "placeholders": {
       "snap": {
@@ -718,7 +718,7 @@
       }
     }
   },
-  "refreshSnapSetupProfiles": "Seadistame paketi turvaprofiile: {snap}...",
+  "refreshSnapSetupProfiles": "Seadistan paketi turvaprofiile: {snap}...",
   "@refreshSnapSetupProfiles": {
     "placeholders": {
       "snap": {
@@ -902,11 +902,11 @@
   "@installationSlidesWelcomeTitle": {},
   "installationSlidesIncluded": "Sisaldab:",
   "@installationSlidesIncluded": {},
-  "configuringSystem": "Seadistame süsteemi…",
+  "configuringSystem": "Seadistan süsteemi…",
   "@configuringSystem": {},
-  "copyingFiles": "Kopeerime faile…",
+  "copyingFiles": "Kopeerin faile…",
   "@copyingFiles": {},
-  "installingSystem": "Paigaldame süsteemi…",
+  "installingSystem": "Paigaldan süsteemi…",
   "@installingSystem": {},
   "installationFailed": "Paigaldamine ei õnnestunud",
   "@installationFailed": {},
@@ -995,7 +995,7 @@
       }
     }
   },
-  "refreshSnapCopyData": "Kopeerime paketi andmeid: {snap}...",
+  "refreshSnapCopyData": "Kopeerin paketi andmeid: {snap}...",
   "@refreshSnapCopyData": {
     "placeholders": {
       "snap": {
@@ -1003,7 +1003,7 @@
       }
     }
   },
-  "refreshSnapSetAutoAliases": "Seadistame paketi automaatseid aliasi: {snap}...",
+  "refreshSnapSetAutoAliases": "Seadistan paketi automaatseid aliasi: {snap}...",
   "@refreshSnapSetAutoAliases": {
     "placeholders": {
       "snap": {
