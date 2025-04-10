@@ -66,7 +66,7 @@
   },
   "installationTypeMultiOSDetected": "本電腦目前已安裝多個作業系統，請問您想要怎麼處理？",
   "@installationTypeMultiOSDetected": {},
-  "installationTypeAdvancedLabel": "進階功能……",
+  "installationTypeAdvancedLabel": "顯示進階選項...",
   "@installationTypeAdvancedLabel": {},
   "installationTypeNone": "無加密",
   "@installationTypeNone": {},
@@ -172,7 +172,7 @@
   "@installThirdPartyTitle": {},
   "rstTitle": "快速儲存技術 (RST) 已啟用",
   "@rstTitle": {},
-  "rstHeader": "關閉 RST 以繼續安裝",
+  "rstHeader": "您必須停用 RST 才能繼續安裝",
   "@rstHeader": {},
   "rstDescription": "本電腦正在使用 Intel 快速儲存技術 (Rapid Storage Technology)，在安裝 {DISTRO} 之前您需要先在 Windows 下關閉該功能。",
   "@rstDescription": {},
@@ -350,7 +350,7 @@
   },
   "recoveryKeyTitle": "TPM 復原密鑰",
   "@recoveryKeyTitle": {},
-  "recoveryKeyCommand": "安裝後，您可以透過以下指令來取得您的復原密鑰：",
+  "recoveryKeyCommand": "若要取得復原金鑰，請完成安裝，重新啟動電腦，然後在終端機執行此命令：",
   "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">警告：</font>若您遺失此安全密鑰，您將無法存取您的資料。若有必要，請將安全密鑰寫下，並保存在安全的地方。",
   "@recoveryKeyWarning": {
@@ -359,7 +359,7 @@
       "color": {}
     }
   },
-  "installationTypeAdvancedTitle": "進階功能",
+  "installationTypeAdvancedTitle": "加密和檔案系統",
   "@installationTypeAdvancedTitle": {},
   "installationTypeNoneSelected": "未選擇",
   "@installationTypeNoneSelected": {},
@@ -378,9 +378,9 @@
   },
   "installationTypeEncryptInfo": "在下一步中您需要輸入安全密鑰。",
   "@installationTypeEncryptInfo": {},
-  "installationTypeZFS": "實驗功能：清除硬碟並使用 ZFS",
+  "installationTypeZFS": "使用未加密的 ZFS",
   "@installationTypeZFS": {},
-  "installationTypeTPM": "實驗功能：使用 TPM 支援的全硬碟加密",
+  "installationTypeTPM": "使用硬體支援的加密",
   "@installationTypeTPM": {},
   "refreshSnapSetAutoAliases": "正在設定 {snap} 的自動命令別名……",
   "@refreshSnapSetAutoAliases": {
@@ -423,7 +423,7 @@
       "os2": {}
     }
   },
-  "installationTypeAlongsideMulti": "安裝 {product} 與其它系統共存",
+  "installationTypeAlongsideMulti": "安裝 {product} 並與現有的作業系統共存",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
@@ -796,7 +796,7 @@
   "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "完整安裝",
   "@fullInstallationTitle": {},
-  "installationTypeTPMInfo": "這是一個實驗性的功能。它可能無法跟您的硬體或是未來的 {DISTRO} 版本上正常運作。在您選擇這個選項前<a href=\"{url}\">請先詳閱 TPM 加密的相關細節</a>。",
+  "installationTypeTPMInfo": "在您選擇此選項之前，請<a href=\"{url}\">閱讀有關 TPM 加密</a>的資訊。此選項可能不適用於您的硬體或未來的 {DISTRO} 版本。",
   "@installationTypeTPMInfo": {
     "placeholders": {
       "DISTRO": {
@@ -849,7 +849,7 @@
   },
   "confirmProprietarySoftwareCodecsDrivers": "影音編解碼器及驅動程式",
   "@confirmProprietarySoftwareCodecsDrivers": {},
-  "installationTypeEraseInfo": "在您選擇的磁碟上從零開始。",
+  "installationTypeEraseInfo": "磁碟上的所有資料和磁碟分割區都會被刪除，包括作業系統。",
   "@installationTypeEraseInfo": {},
   "autoinstallTitle": "安裝類型",
   "@autoinstallTitle": {},
@@ -905,11 +905,11 @@
   "@confirmPassphrase": {},
   "installationTypeExperimental": "實驗性功能",
   "@installationTypeExperimental": {},
-  "installationTypeLVM": "使用 LVM 磁碟配置",
+  "installationTypeLVM": "使用未加密的 LVM",
   "@installationTypeLVM": {},
-  "installationTypeLVMEncryption": "使用 LVM 磁碟配置與磁碟加密",
+  "installationTypeLVMEncryption": "使用密碼加密",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryption": "清除磁碟並使用帶加密的 ZFS 儲存系統",
+  "installationTypeZFSEncryption": "使用 ZFS 以密碼加密",
   "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "已選擇 ZFS 以及加密設定",
   "@installationTypeZFSEncryptionSelected": {},
@@ -925,7 +925,7 @@
   "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "應用軟體",
   "@confirmEntryApplications": {},
-  "confirmEntryDiskSetup": "磁碟設定",
+  "confirmEntryDiskSetup": "安裝類型",
   "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "磁碟加密",
   "@confirmEntryDiskEncryption": {},
