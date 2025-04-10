@@ -224,7 +224,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO dsitributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.';
+    return '$DISTRO distributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.';
   }
 
   @override
@@ -896,13 +896,13 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportUbuntuPro => 'Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi';
 
   @override
-  String get copyingFiles => 'Kopeerime faile…';
+  String get copyingFiles => 'Kopeerin faile…';
 
   @override
-  String get installingSystem => 'Paigaldame süsteemi…';
+  String get installingSystem => 'Paigaldan süsteemi…';
 
   @override
-  String get configuringSystem => 'Seadistame süsteemi…';
+  String get configuringSystem => 'Seadistan süsteemi…';
 
   @override
   String get installationFailed => 'Paigaldamine ei õnnestunud';
@@ -1029,12 +1029,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Kopeerime paketi andmeid: $snap...';
+    return 'Kopeerin paketi andmeid: $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Seadistame paketi turvaprofiile: $snap...';
+    return 'Seadistan paketi turvaprofiile: $snap...';
   }
 
   @override
@@ -1049,12 +1049,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Seadistame paketi automaatseid aliasi: $snap...';
+    return 'Seadistan paketi automaatseid aliasi: $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Seadistame paketi aliasi: $snap...';
+    return 'Seadistan paketi aliasi: $snap...';
   }
 
   @override

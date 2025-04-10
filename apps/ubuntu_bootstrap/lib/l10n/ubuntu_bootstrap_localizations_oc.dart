@@ -264,7 +264,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installCodecsTitle => 'Telecargar e installar la presa en carga addicionala pels formats multimèdia';
 
   @override
-  String get installCodecsSubtitle => 'Aqueste logicial es somés a de tèrmes de licéncia incluses dins sa documentacion. Certans son proprietaris.';
+  String get installCodecsSubtitle => 'Inclutz sens se limitar als MP3, MP4, MOV e similars.';
 
   @override
   String get batteryWarning => 'L’ordenador es pas branca a una font d’alimentacion.';
@@ -1088,27 +1088,27 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyStorageAdvice => 'Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Compreni que pòdi pèrdre totas mas donadas s\'ai pas de clau de recuperacion';
 
   @override
   String landscapeMagicAttachInstructions(Object url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Numerizatz lo còdi QR o picatz lo còdi çai jos <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get landscapePageTitle => 'Installacion automatizada';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Accedir a Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Picatz lo domeni Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Domeni Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Fornissètz lo domeni Landscape de vòstra organizacion per vos i connectar e recuperar lo fichièr autoinstall. Podètz obténer lo FQDN al prèp de vòstra assisténcia informatica.';
 
   @override
   String get landscapeDomainTextField => 'Domeni Landscape (FQDN)';
@@ -1123,7 +1123,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get landscapeDomainNoInternetTitleWarning => 'Connectatz-vos a Internet per contunhar';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet es necessari per recuperar lo fichièr de Landscape';
 
   @override
   String get landscapeCodeExpiredWarning => 'Còdi expirat, volgatz tornar ensajar';
@@ -1132,19 +1132,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => 'Fracàs de la connexion, volgatz tornar ensajar';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Installacion automatica indisponibla per vòstre compte';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Contactatz vòstra assisténcia informatica p ensajatz una opcion d\'installacion diferenta.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Còdi d\'error : $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu s\'installarà amb la configuracion provesida per vòstra organizacion';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Podètz repassar lo fichièr d\'autoinstall importat de Landscape çai jos.';
 }
