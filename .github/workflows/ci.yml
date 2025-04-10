@@ -289,37 +289,46 @@ jobs:
           path: /tmp/coverage.out
           key: ${{ github.sha }}-go-test-coverage
 
-      - name: Install dependencies
-        run: |
-          dart pub global activate cobertura
-          go install github.com/axw/gocov/gocov@latest
-          go install github.com/AlekSi/gocov-xml@latest
-
-      - name: Convert Flutter coverage files to cobertura XML
+      - name: Process Flutter coverage output
         run: |
           mkdir coverage
           for package in provd_client subiquity_client subiquity_test ubuntu_provision ubuntu_utils ubuntu_wizard; do
             pushd packages/$package
-            cobertura convert
-            sed -i 's/branches-covered/decisions-covered/g' coverage/cobertura.xml
-            mv coverage/cobertura.xml ../../coverage/$package.xml
+            sed -i "s|lib/|$(pwd)/lib/|g" coverage/lcov.info
+            mv coverage/lcov.info ../../coverage/$package.info
             popd
           done
 
           for app in ubuntu_bootstrap ubuntu_init; do
             pushd apps/$app
-            cobertura convert
-            sed -i 's/branches-covered/decisions-covered/g' coverage/cobertura.xml
-            mv coverage/cobertura.xml ../../coverage/$app.xml
+            sed -i "s|lib/|$(pwd)/lib/|g" coverage/lcov.info
+            mv coverage/lcov.info ../../coverage/$app.info
             popd
           done
 
       - name: Convert Go coverage files to cobertura XML
         run: |
+          go install github.com/axw/gocov/gocov@latest
+          go install github.com/AlekSi/gocov-xml@latest
           gocov convert /tmp/coverage.out | gocov-xml > coverage/report_co.xml
+
+      - name: Cleanup
+        run: |
+          melos clean
+          melos exec -c 1 flutter clean
+          rm -rf .fvm
 
       - name: Upload coverage reports
         uses: actions/upload-artifact@v4
         with:
           name: tics-coverage-reports
           path: coverage/*
+
+      - name: Run TICS analysis
+        uses: tiobe/tics-github-action@v3
+        with:
+          mode: qserver
+          project: ubuntu-desktop-provision
+          viewerUrl: https://canonical.tiobe.com/tiobeweb/TICS/api/cfg?name=default
+          ticsAuthToken: ${{ secrets.TICSAUTHTOKEN }}
+          installTics: true
