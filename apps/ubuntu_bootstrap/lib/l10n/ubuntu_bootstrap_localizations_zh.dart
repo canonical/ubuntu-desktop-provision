@@ -1308,7 +1308,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get rstTitle => '快速儲存技術 (RST) 已啟用';
 
   @override
-  String get rstHeader => '關閉 RST 以繼續安裝';
+  String get rstHeader => '您必須停用 RST 才能繼續安裝';
 
   @override
   String get rstDisable => '您的電腦使用 Intel RST（快速儲存技術）。您可以在下列任一選項中停用 RST：';
@@ -1494,13 +1494,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get installationTypeEraseInfo => '在您選擇的磁碟上從零開始。';
+  String get installationTypeEraseInfo => '磁碟上的所有資料和磁碟分割區都會被刪除，包括作業系統。';
 
   @override
-  String get installationTypeAdvancedLabel => '進階功能……';
+  String get installationTypeAdvancedLabel => '顯示進階選項...';
 
   @override
-  String get installationTypeAdvancedTitle => '進階功能';
+  String get installationTypeAdvancedTitle => '加密和檔案系統';
 
   @override
   String get installationTypeExperimental => '實驗性功能';
@@ -1515,13 +1515,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeNoneSelected => '未選擇';
 
   @override
-  String get installationTypeLVM => '使用 LVM 磁碟配置';
+  String get installationTypeLVM => '使用未加密的 LVM';
 
   @override
   String get installationTypeLVMSelected => '已選用 LVM';
 
   @override
-  String get installationTypeLVMEncryption => '使用 LVM 磁碟配置與磁碟加密';
+  String get installationTypeLVMEncryption => '使用密碼加密';
 
   @override
   String get installationTypeLVMEncryptionInfo => '每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。';
@@ -1533,10 +1533,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeEncryptInfo => '在下一步中您需要輸入安全密鑰。';
 
   @override
-  String get installationTypeZFS => '實驗功能：清除硬碟並使用 ZFS';
+  String get installationTypeZFS => '使用未加密的 ZFS';
 
   @override
-  String get installationTypeZFSEncryption => '清除磁碟並使用帶加密的 ZFS 儲存系統';
+  String get installationTypeZFSEncryption => '使用 ZFS 以密碼加密';
 
   @override
   String get installationTypeZFSEncryptionInfo => '使用 ZFS 進行原生加密。每次開啟電腦時，您都需要輸入密碼。';
@@ -1548,11 +1548,11 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeZFSEncryptionSelected => '已選擇 ZFS 以及加密設定';
 
   @override
-  String get installationTypeTPM => '實驗功能：使用 TPM 支援的全硬碟加密';
+  String get installationTypeTPM => '使用硬體支援的加密';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '這是一個實驗性的功能。它可能無法跟您的硬體或是未來的 $DISTRO 版本上正常運作。在您選擇這個選項前<a href=\"$url\">請先詳閱 TPM 加密的相關細節</a>。';
+    return '在您選擇此選項之前，請<a href=\"$url\">閱讀有關 TPM 加密</a>的資訊。此選項可能不適用於您的硬體或未來的 $DISTRO 版本。';
   }
 
   @override
@@ -1580,7 +1580,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return '安裝 $product 與其它系統共存';
+    return '安裝 $product 並與現有的作業系統共存';
   }
 
   @override
@@ -1787,7 +1787,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmEntryApplications => '應用軟體';
 
   @override
-  String get confirmEntryDiskSetup => '磁碟設定';
+  String get confirmEntryDiskSetup => '安裝類型';
 
   @override
   String get confirmEntryDiskEncryption => '磁碟加密';
@@ -2229,7 +2229,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get recoveryKeyCommand => '安裝後，您可以透過以下指令來取得您的復原密鑰：';
+  String get recoveryKeyCommand => '若要取得復原金鑰，請完成安裝，重新啟動電腦，然後在終端機執行此命令：';
 
   @override
   String get recoveryKeyStorageAdvice => '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
