@@ -1237,7 +1237,7 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/timezone_map"
-      ref: HEAD
+      ref: "55c3a2ac"
       resolved-ref: "55c3a2ac2cfc26a5ff9cf00fee745e619aebc054"
       url: "https://github.com/canonical/ubuntu-flutter-plugins.git"
     source: git
