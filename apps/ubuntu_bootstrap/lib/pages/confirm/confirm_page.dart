@@ -238,6 +238,7 @@ class _PartitionProperties extends StatelessWidget {
     final mount = partition.mount ?? partition.effectiveMount;
     final format = partition.format ?? partition.effectiveFormat;
     final preserve = partition.preserve ?? false;
+    final wipe = partition.wipe != null;
 
     if (showOriginal && !preserve) {
       return l10n.confirmTableErased;
@@ -252,12 +253,12 @@ class _PartitionProperties extends StatelessWidget {
         format.bold(),
         mount!.bold(),
       );
-    } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
+    } else if (wipe && (mount?.isNotEmpty ?? false) && format != null) {
       return l10n.confirmTableFormattedMounted(
         format.bold(),
         mount!.bold(),
       );
-    } else if (!preserve && format != null) {
+    } else if (wipe && format != null) {
       return l10n.confirmTableFormatted(
         format.bold(),
       );
